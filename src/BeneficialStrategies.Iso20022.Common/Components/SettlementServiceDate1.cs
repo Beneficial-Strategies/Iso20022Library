@@ -23,7 +23,7 @@ public record SettlementServiceDate1
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RequestedSettlementDate { get; init; }
+    public DateOnly? RequestedSettlementDate { get; init; }
 
     /// <summary>
     /// Actual date of settlement.
@@ -33,7 +33,7 @@ public record SettlementServiceDate1
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? SettlementDate { get; init; }
+    public DateOnly? SettlementDate { get; init; }
 
     /// <summary>
     /// Actual time of settlement.
@@ -42,7 +42,7 @@ public record SettlementServiceDate1
     [DisplayName("Settlement Time")]
     [IsoXmlTag("SttlmTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? SettlementTime { get; init; }
+    public ISOTime? SettlementTime { get; init; }
 
     /// <summary>
     /// Identifies the settlement period, cycle or group. May contain settlement frequency or the identification of specific settlement period. For example, daily, monthly or settlementperiod123acd.
@@ -52,7 +52,7 @@ public record SettlementServiceDate1
     [IsoXmlTag("SttlmPrd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SettlementPeriod { get; init; }
+    public Max35Text? SettlementPeriod { get; init; }
 
     /// <summary>
     /// Identifies the effective end time of the settlement date and/or period.
@@ -61,5 +61,5 @@ public record SettlementServiceDate1
     [DisplayName("Settlement Cut Off Time")]
     [IsoXmlTag("SttlmCutOffTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? SettlementCutOffTime { get; init; }
+    public ISODateTime? SettlementCutOffTime { get; init; }
 }

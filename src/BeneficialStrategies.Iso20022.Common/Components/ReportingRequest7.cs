@@ -42,7 +42,7 @@ public record ReportingRequest7
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax35Text? Identification { get; init; }
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Reporting Period.
@@ -70,7 +70,7 @@ public record ReportingRequest7
     /// </summary>
     [DisplayName("Requested Message Name Identification")]
     [IsoXmlTag("ReqdMsgNmId")]
-    public required IsoMax35Text RequestedMessageNameIdentification { get; init; }
+    public required Max35Text RequestedMessageNameIdentification { get; init; }
 
     /// <summary>
     /// Requested Transaction Type.

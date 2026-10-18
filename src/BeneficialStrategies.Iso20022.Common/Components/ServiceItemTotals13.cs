@@ -22,7 +22,7 @@ public record ServiceItemTotals13
     [IsoId("_xPChQUw0EfCpsI1b9uv5FQ")]
     [DisplayName("Item Type")]
     [IsoXmlTag("ItmTp")]
-    public required IsoMax20AlphaNumericText ItemType { get; init; }
+    public required Max20AlphaNumericText ItemType { get; init; }
 
     /// <summary>
     /// Description of the service item.
@@ -30,7 +30,7 @@ public record ServiceItemTotals13
     [IsoId("_xPChQ0w0EfCpsI1b9uv5FQ")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax350Text? Description { get; init; }
+    public Max350Text? Description { get; init; }
 
     /// <summary>
     /// Specifies whether the correction is a debit or credit.
@@ -46,7 +46,7 @@ public record ServiceItemTotals13
     [IsoId("_xPChR0w0EfCpsI1b9uv5FQ")]
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
-    public required IsoNumber Quantity { get; init; }
+    public required Number Quantity { get; init; }
 
     /// <summary>
     /// Specifies the price per unit of the service item.

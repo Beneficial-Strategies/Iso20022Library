@@ -22,7 +22,7 @@ public record NonFinancialInstitutionSector2
     [IsoId("_Q2aJAcDyEeW6TPUXKSV6dQ")]
     [DisplayName("Sector")]
     [IsoXmlTag("Sctr")]
-    public SimpleValueList<IsoNACEDomainIdentifier> Sector { get; init; } = [];
+    public SimpleValueList<NACEDomainIdentifier> Sector { get; init; } = [];
 
     /// <summary>
     /// Information whether the reporting counterparty is above the clearing threshold.
@@ -31,7 +31,7 @@ public record NonFinancialInstitutionSector2
     [DisplayName("Clearing Threshold")]
     [IsoXmlTag("ClrThrshld")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ClearingThreshold { get; init; }
+    public TrueFalseIndicator? ClearingThreshold { get; init; }
 
     /// <summary>
     /// Directly linked to commercial activity or treasury financing: Information on whether the contract is objectively measurable as directly linked to the reporting counterparty&apos;s commercial or treasury financing activity.
@@ -40,5 +40,5 @@ public record NonFinancialInstitutionSector2
     [DisplayName("Directly Linked Activity")]
     [IsoXmlTag("DrctlyLkdActvty")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? DirectlyLinkedActivity { get; init; }
+    public TrueFalseIndicator? DirectlyLinkedActivity { get; init; }
 }

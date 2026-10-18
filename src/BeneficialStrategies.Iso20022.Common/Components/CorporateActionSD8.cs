@@ -24,7 +24,7 @@ public record CorporateActionSD8
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text PlaceAndName { get; init; }
+    public required Max350Text PlaceAndName { get; init; }
 
     /// <summary>
     /// DTC generated number to distinguish between the series of lotteries run against a particular redemption.
@@ -33,5 +33,5 @@ public record CorporateActionSD8
     [DisplayName("Lottery Sequence Number")]
     [IsoXmlTag("LtrySeqNb")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public IsoMax3NumericText? LotterySequenceNumber { get; init; }
+    public Max3NumericText? LotterySequenceNumber { get; init; }
 }

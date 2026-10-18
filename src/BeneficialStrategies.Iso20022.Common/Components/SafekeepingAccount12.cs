@@ -24,7 +24,7 @@ public record SafekeepingAccount12
     [IsoXmlTag("AcctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text AccountIdentification { get; init; }
+    public required Max35Text AccountIdentification { get; init; }
 
     /// <summary>
     /// Party that legally owns the account.
@@ -42,7 +42,7 @@ public record SafekeepingAccount12
     [IsoXmlTag("SubAcctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SubAccountIdentification { get; init; }
+    public Max35Text? SubAccountIdentification { get; init; }
 
     /// <summary>
     /// Quantity of securities in the sub-balance.

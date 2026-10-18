@@ -23,7 +23,7 @@ public record StatisticsPerActionType1
     [DisplayName("All")]
     [IsoXmlTag("All")]
     [IsoSimpleType(IsoSimpleType.Max20PositiveNumber)]
-    public required IsoMax20PositiveNumber All { get; init; }
+    public required Max20PositiveNumber All { get; init; }
 
     /// <summary>
     /// Number of derivatives which have been reported as new.
@@ -32,7 +32,7 @@ public record StatisticsPerActionType1
     [DisplayName("New")]
     [IsoXmlTag("New")]
     [IsoSimpleType(IsoSimpleType.Max20PositiveNumber)]
-    public required IsoMax20PositiveNumber New { get; init; }
+    public required Max20PositiveNumber New { get; init; }
 
     /// <summary>
     /// Number of derivatives which have been reported as modified.
@@ -41,5 +41,5 @@ public record StatisticsPerActionType1
     [DisplayName("Modification")]
     [IsoXmlTag("Mod")]
     [IsoSimpleType(IsoSimpleType.Max20PositiveNumber)]
-    public required IsoMax20PositiveNumber Modification { get; init; }
+    public required Max20PositiveNumber Modification { get; init; }
 }

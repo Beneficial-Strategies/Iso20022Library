@@ -22,7 +22,7 @@ public record ProcessingResult31
     [IsoId("_zIqosROGEfC1ZfCQz0xB3g")]
     [DisplayName("Response Source Identification")]
     [IsoXmlTag("RspnSrcId")]
-    public IsoMax35Text? ResponseSourceIdentification { get; init; }
+    public Max35Text? ResponseSourceIdentification { get; init; }
 
     /// <summary>
     /// Type of response source.
@@ -46,7 +46,7 @@ public record ProcessingResult31
     [IsoId("_zIqoxxOGEfC1ZfCQz0xB3g")]
     [DisplayName("Response Source Name")]
     [IsoXmlTag("RspnSrcNm")]
-    public IsoMax35Text? ResponseSourceName { get; init; }
+    public Max35Text? ResponseSourceName { get; init; }
 
     /// <summary>
     /// Detailed results of the processing, conforming to ISO 8583 Response codes list.
@@ -70,7 +70,7 @@ public record ProcessingResult31
     [IsoId("_zIqo0ROGEfC1ZfCQz0xB3g")]
     [DisplayName("Approval Code")]
     [IsoXmlTag("ApprvlCd")]
-    public IsoExact6AlphaNumericText? ApprovalCode { get; init; }
+    public Exact6AlphaNumericText? ApprovalCode { get; init; }
 
     /// <summary>
     /// Contains the reason of the response.
@@ -78,7 +78,7 @@ public record ProcessingResult31
     [IsoId("_b_G5MUMHEfCQAqQ9lolFUg")]
     [DisplayName("Response Reason")]
     [IsoXmlTag("RspnRsn")]
-    public IsoMax35Text? ResponseReason { get; init; }
+    public Max35Text? ResponseReason { get; init; }
 
     /// <summary>
     /// Reserved for private data.
@@ -86,7 +86,7 @@ public record ProcessingResult31
     [IsoId("_ru__skVbEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -94,5 +94,5 @@ public record ProcessingResult31
     [IsoId("_ru__s0VbEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

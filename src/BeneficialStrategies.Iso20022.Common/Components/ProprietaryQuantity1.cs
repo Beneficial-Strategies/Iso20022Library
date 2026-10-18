@@ -24,7 +24,7 @@ public record ProprietaryQuantity1
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Type { get; init; }
+    public required Max35Text Type { get; init; }
 
     /// <summary>
     /// Provides the proprietary quantity in free format.
@@ -34,5 +34,5 @@ public record ProprietaryQuantity1
     [IsoXmlTag("Qty")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Quantity { get; init; }
+    public required Max35Text Quantity { get; init; }
 }

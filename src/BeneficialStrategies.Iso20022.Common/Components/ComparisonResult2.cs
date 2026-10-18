@@ -23,7 +23,7 @@ public record ComparisonResult2
     [DisplayName("Element Sequence Number")]
     [IsoXmlTag("ElmtSeqNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber ElementSequenceNumber { get; init; }
+    public required Number ElementSequenceNumber { get; init; }
 
     /// <summary>
     /// Specifies from the root of the message the complete path of the element.
@@ -33,7 +33,7 @@ public record ComparisonResult2
     [IsoXmlTag("ElmtPth")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text ElementPath { get; init; }
+    public required Max350Text ElementPath { get; init; }
 
     /// <summary>
     /// Name of the element.
@@ -43,7 +43,7 @@ public record ComparisonResult2
     [IsoXmlTag("ElmtNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ElementName { get; init; }
+    public required Max35Text ElementName { get; init; }
 
     /// <summary>
     /// Replacement of an existing content by a different one.

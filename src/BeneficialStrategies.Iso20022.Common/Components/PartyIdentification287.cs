@@ -56,14 +56,14 @@ public record PartyIdentification287
     /// </summary>
     [DisplayName("Date Of Birth")]
     [IsoXmlTag("DtOfBirth")]
-    public IsoISODate? DateOfBirth { get; init; }
+    public DateOnly? DateOfBirth { get; init; }
 
     /// <summary>
     /// Designation.
     /// </summary>
     [DisplayName("Designation")]
     [IsoXmlTag("Dsgnt")]
-    public IsoMax2NumericText? Designation { get; init; }
+    public Max2NumericText? Designation { get; init; }
 
     /// <summary>
     /// Financial Institution.
@@ -77,7 +77,7 @@ public record PartyIdentification287
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax35Text? Identification { get; init; }
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Local Data.

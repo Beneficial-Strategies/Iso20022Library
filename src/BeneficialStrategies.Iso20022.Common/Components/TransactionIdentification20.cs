@@ -24,7 +24,7 @@ public record TransactionIdentification20
     [IsoXmlTag("TxRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TransactionReference { get; init; }
+    public Max35Text? TransactionReference { get; init; }
 
     /// <summary>
     /// Local date and time the transaction takes place at the card acceptor location.
@@ -34,7 +34,7 @@ public record TransactionIdentification20
     [DisplayName("Transmission Date Time")]
     [IsoXmlTag("TrnsmssnDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime TransmissionDateTime { get; init; }
+    public required ISODateTime TransmissionDateTime { get; init; }
 
     /// <summary>
     /// Number assigned by a transaction originator to assist in identifying a transaction uniquely. The trace number remains unchanged for all messages within a two-message exchange (for example, request/repeat and response).
@@ -44,7 +44,7 @@ public record TransactionIdentification20
     [DisplayName("System Trace Audit Number")]
     [IsoXmlTag("SysTracAudtNb")]
     [IsoSimpleType(IsoSimpleType.Max12NumericText)]
-    public required IsoMax12NumericText SystemTraceAuditNumber { get; init; }
+    public required Max12NumericText SystemTraceAuditNumber { get; init; }
 
     /// <summary>
     /// Reference supplied by the system retaining the original source information and used to assist in locating that information or a copy thereof.
@@ -54,7 +54,7 @@ public record TransactionIdentification20
     [DisplayName("Retrieval Reference Number")]
     [IsoXmlTag("RtrvlRefNb")]
     [IsoSimpleType(IsoSimpleType.Exact12Text)]
-    public IsoExact12Text? RetrievalReferenceNumber { get; init; }
+    public Exact12Text? RetrievalReferenceNumber { get; init; }
 
     /// <summary>
     /// Unique global identification structure used to match transactions throughout their lifecycle.
@@ -74,7 +74,7 @@ public record TransactionIdentification20
     [IsoXmlTag("AcqrrRefData")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? AcquirerReferenceData { get; init; }
+    public Max140Text? AcquirerReferenceData { get; init; }
 
     /// <summary>
     /// Data supplied by an acquirer to assist in identifying a transaction (for example, for researching retrievals and chargebacks).
@@ -84,7 +84,7 @@ public record TransactionIdentification20
     [DisplayName("Acquirer Reference Number")]
     [IsoXmlTag("AcqrrRefNb")]
     [IsoSimpleType(IsoSimpleType.Max23NumericText)]
-    public IsoMax23NumericText? AcquirerReferenceNumber { get; init; }
+    public Max23NumericText? AcquirerReferenceNumber { get; init; }
 
     /// <summary>
     /// Data supplied by a card issuer in an authorisation response, financial response message or in a chargeback transaction that the acquirer may be required to provide in subsequent transactions.
@@ -95,7 +95,7 @@ public record TransactionIdentification20
     [IsoXmlTag("CardIssrRefData")]
     [IsoSimpleType(IsoSimpleType.Max1000Text)]
     [StringLength(maximumLength: 1000, MinimumLength = 1)]
-    public IsoMax1000Text? CardIssuerReferenceData { get; init; }
+    public Max1000Text? CardIssuerReferenceData { get; init; }
 
     /// <summary>
     /// Data elements contained in the original message.

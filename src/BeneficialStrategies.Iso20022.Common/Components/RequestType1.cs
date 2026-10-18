@@ -24,7 +24,7 @@ public record RequestType1
     [IsoXmlTag("Nb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Number { get; init; }
+    public required Max35Text Number { get; init; }
 
     /// <summary>
     /// Identifies the type of information request related to an original transaction number as a code.
@@ -44,5 +44,5 @@ public record RequestType1
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public IsoMax500Text? AdditionalInformation { get; init; }
+    public Max500Text? AdditionalInformation { get; init; }
 }

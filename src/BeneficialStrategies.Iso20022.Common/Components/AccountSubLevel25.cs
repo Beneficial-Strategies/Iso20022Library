@@ -28,7 +28,7 @@ public record AccountSubLevel25
     /// </summary>
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
-    public IsoMax35Text? SafekeepingAccount { get; init; }
+    public Max35Text? SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Shareholding Balance.

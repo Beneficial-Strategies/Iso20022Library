@@ -22,7 +22,7 @@ public record CardPaymentTransaction154
     [IsoId("_ZM8btbZXEfCUZfsQO4rYeA")]
     [DisplayName("Sale Reference Identification")]
     [IsoXmlTag("SaleRefId")]
-    public IsoMax35Text? SaleReferenceIdentification { get; init; }
+    public Max35Text? SaleReferenceIdentification { get; init; }
 
     /// <summary>
     /// Unique identification of the transaction assigned by the POI (Point Of Interaction).
@@ -38,7 +38,7 @@ public record CardPaymentTransaction154
     [IsoId("_ZM8bwbZXEfCUZfsQO4rYeA")]
     [DisplayName("Initiator Transaction Identification")]
     [IsoXmlTag("InitrTxId")]
-    public IsoMax35Text? InitiatorTransactionIdentification { get; init; }
+    public Max35Text? InitiatorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of the transaction assigned by the recipient party for the initiating party.
@@ -46,7 +46,7 @@ public record CardPaymentTransaction154
     [IsoId("_ZM8bx7ZXEfCUZfsQO4rYeA")]
     [DisplayName("Recipient Transaction Identification")]
     [IsoXmlTag("RcptTxId")]
-    public IsoMax140Text? RecipientTransactionIdentification { get; init; }
+    public Max140Text? RecipientTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification of the reconciliation period between the acceptor and the acquirer.
@@ -54,7 +54,7 @@ public record CardPaymentTransaction154
     [IsoId("_ZM8bzbZXEfCUZfsQO4rYeA")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
-    public IsoMax35Text? ReconciliationIdentification { get; init; }
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Interchange information related to the card scheme.
@@ -62,7 +62,7 @@ public record CardPaymentTransaction154
     [IsoId("_ZM8b07ZXEfCUZfsQO4rYeA")]
     [DisplayName("Interchange Data")]
     [IsoXmlTag("IntrchngData")]
-    public IsoMax140Text? InterchangeData { get; init; }
+    public Max140Text? InterchangeData { get; init; }
 
     /// <summary>
     /// Detail of the transaction transported.
@@ -78,7 +78,7 @@ public record CardPaymentTransaction154
     [IsoId("_ZM8b37ZXEfCUZfsQO4rYeA")]
     [DisplayName("Merchant Reference Data")]
     [IsoXmlTag("MrchntRefData")]
-    public IsoMax70Text? MerchantReferenceData { get; init; }
+    public Max70Text? MerchantReferenceData { get; init; }
 
     /// <summary>
     /// Message from a merchant to be displayed on the cardholder bank statement.

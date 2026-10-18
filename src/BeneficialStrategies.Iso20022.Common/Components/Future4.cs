@@ -23,7 +23,7 @@ public record Future4
     [DisplayName("Contract Size")]
     [IsoXmlTag("CtrctSz")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? ContractSize { get; init; }
+    public BaseOneRate? ContractSize { get; init; }
 
     /// <summary>
     /// Predetermined price at which the holder of a Future will have to buy or sell the underlying instrument.
@@ -40,7 +40,7 @@ public record Future4
     [DisplayName("Future Date")]
     [IsoXmlTag("FutrDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? FutureDate { get; init; }
+    public ISODateTime? FutureDate { get; init; }
 
     /// <summary>
     /// Specifies the minimum ratio or multiply factor used to convert from contracts to shares.

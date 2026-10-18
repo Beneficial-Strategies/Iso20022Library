@@ -22,7 +22,7 @@ public record IndividualOrderConfirmationStatusAndReason3
     [IsoId("1eb5ba7e-8fb9-454a-a0de-d7a0be4678cb")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for the order, as assigned by the instructing party.
@@ -30,7 +30,7 @@ public record IndividualOrderConfirmationStatusAndReason3
     [IsoId("647f2ffa-9525-4074-97ad-decd97a4045f")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
-    public required IsoMax35Text OrderReference { get; init; }
+    public required Max35Text OrderReference { get; init; }
 
     /// <summary>
     /// Status of the order confirmation cancellation.
@@ -46,7 +46,7 @@ public record IndividualOrderConfirmationStatusAndReason3
     [IsoId("cab6aaf3-b1da-4944-ae1a-c9f3707a7590")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
-    public IsoMax35Text? ClientReference { get; init; }
+    public Max35Text? ClientReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for the order execution, as assigned by the confirming party.
@@ -54,7 +54,7 @@ public record IndividualOrderConfirmationStatusAndReason3
     [IsoId("90837be8-61d4-41e0-a436-58fa433c4c9c")]
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
-    public IsoMax35Text? DealReference { get; init; }
+    public Max35Text? DealReference { get; init; }
 
     /// <summary>
     /// Unambiguous identification of a random or semi-random number used once (NONCE) generated in the frame of a cryptographic communication.
@@ -62,7 +62,7 @@ public record IndividualOrderConfirmationStatusAndReason3
     [IsoId("15ef5add-25d0-4a2e-8f64-a523eaec8471")]
     [DisplayName("Nonce Identification")]
     [IsoXmlTag("NonceId")]
-    public IsoMax35Text? NonceIdentification { get; init; }
+    public Max35Text? NonceIdentification { get; init; }
 
     /// <summary>
     /// Party that initiates the status of the order confirmation.

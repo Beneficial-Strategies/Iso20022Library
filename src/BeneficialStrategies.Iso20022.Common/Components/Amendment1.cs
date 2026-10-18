@@ -24,7 +24,7 @@ public record Amendment1
     [IsoXmlTag("SeqNb")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public required IsoMax4AlphaNumericText SequenceNumber { get; init; }
+    public required Max4AlphaNumericText SequenceNumber { get; init; }
 
     /// <summary>
     /// Date on which the proposed amendment is issued.
@@ -33,7 +33,7 @@ public record Amendment1
     [DisplayName("Date Of Issuance")]
     [IsoXmlTag("DtOfIssnc")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate DateOfIssuance { get; init; }
+    public required DateOnly DateOfIssuance { get; init; }
 
     /// <summary>
     /// Identification of the undertaking.
@@ -114,7 +114,7 @@ public record Amendment1
     [DisplayName("Beneficiary Consent Request Indicator")]
     [IsoXmlTag("BnfcryCnsntReqInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? BeneficiaryConsentRequestIndicator { get; init; }
+    public YesNoIndicator? BeneficiaryConsentRequestIndicator { get; init; }
 
     /// <summary>
     /// Communication channel for delivery of the proposed amendment.

@@ -32,7 +32,7 @@ public record ContactDetails2
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Name { get; init; }
+    public Max140Text? Name { get; init; }
 
     /// <summary>
     /// Collection of information that identifies a phone number, as defined by telecom services.
@@ -41,7 +41,7 @@ public record ContactDetails2
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? PhoneNumber { get; init; }
+    public PhoneNumber? PhoneNumber { get; init; }
 
     /// <summary>
     /// Collection of information that identifies a mobile phone number, as defined by telecom services.
@@ -50,7 +50,7 @@ public record ContactDetails2
     [DisplayName("Mobile Number")]
     [IsoXmlTag("MobNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? MobileNumber { get; init; }
+    public PhoneNumber? MobileNumber { get; init; }
 
     /// <summary>
     /// Collection of information that identifies a FAX number, as defined by telecom services.
@@ -59,7 +59,7 @@ public record ContactDetails2
     [DisplayName("Fax Number")]
     [IsoXmlTag("FaxNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? FaxNumber { get; init; }
+    public PhoneNumber? FaxNumber { get; init; }
 
     /// <summary>
     /// Address for electronic mail (e-mail).
@@ -69,7 +69,7 @@ public record ContactDetails2
     [IsoXmlTag("EmailAdr")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
     [StringLength(maximumLength: 2048, MinimumLength = 1)]
-    public IsoMax2048Text? EmailAddress { get; init; }
+    public Max2048Text? EmailAddress { get; init; }
 
     /// <summary>
     /// Contact details in another form.
@@ -79,5 +79,5 @@ public record ContactDetails2
     [IsoXmlTag("Othr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Other { get; init; }
+    public Max35Text? Other { get; init; }
 }

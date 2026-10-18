@@ -31,5 +31,5 @@ public record VoteTypeAndQuantity1
     [DisplayName("Vote Quantity")]
     [IsoXmlTag("VoteQty")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber VoteQuantity { get; init; }
+    public required Number VoteQuantity { get; init; }
 }

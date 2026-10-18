@@ -33,7 +33,7 @@ public record Transaction152
     [IsoXmlTag("TxSubTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TransactionSubType { get; init; }
+    public Max35Text? TransactionSubType { get; init; }
 
     /// <summary>
     /// Reason or purpose to send the message.
@@ -50,7 +50,7 @@ public record Transaction152
     [IsoId("_8Y2kl4dPEeuBS50MFjViNw")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
-    public SimpleValueList<IsoMax256Text> AlternateMessageReason { get; init; } = [];
+    public SimpleValueList<Max256Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Additional functions or services to be performed in conjunction with the transaction.

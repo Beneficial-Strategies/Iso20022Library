@@ -35,21 +35,21 @@ public record ATMTransaction37
     /// </summary>
     [DisplayName("Completion Required")]
     [IsoXmlTag("CmpltnReqrd")]
-    public IsoTrueFalseIndicator? CompletionRequired { get; init; }
+    public TrueFalseIndicator? CompletionRequired { get; init; }
 
     /// <summary>
     /// ICC Related Data.
     /// </summary>
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
-    public IsoMax10000Binary? ICCRelatedData { get; init; }
+    public Max10000Binary? ICCRelatedData { get; init; }
 
     /// <summary>
     /// Reconciliation Identification.
     /// </summary>
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
-    public IsoMax35Text? ReconciliationIdentification { get; init; }
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Transaction Identification.

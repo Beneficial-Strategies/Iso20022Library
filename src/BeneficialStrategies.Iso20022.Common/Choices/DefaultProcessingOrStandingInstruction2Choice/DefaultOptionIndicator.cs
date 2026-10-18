@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.DefaultProcessingOrStandingInstr
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("DfltOptnInd")]
-        public required IsoYesNoIndicator Value { get; init; }
+        public required YesNoIndicator Value { get; init; }
     }
 }

@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification147Choice
         /// </summary>
         [IsoXmlTag("BICFI")]
         [IsoSimpleType(IsoSimpleType.BICFIDec2014Identifier)]
-        public required IsoBICFIDec2014Identifier Value { get; init; }
+        public required BICFIDec2014Identifier Value { get; init; }
     }
 }

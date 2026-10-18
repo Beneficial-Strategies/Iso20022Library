@@ -40,7 +40,7 @@ public record LoyaltyResponse3
     [IsoXmlTag("POIRcncltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? POIReconciliationIdentification { get; init; }
+    public Max35Text? POIReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Data related to the result of a processed loyalty transaction.

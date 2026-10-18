@@ -24,7 +24,7 @@ public record SaleItem2
     [IsoXmlTag("PdctTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProductType { get; init; }
+    public Max35Text? ProductType { get; init; }
 
     /// <summary>
     /// Product code of the item.
@@ -34,7 +34,7 @@ public record SaleItem2
     [IsoXmlTag("PdctCd")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? ProductCode { get; init; }
+    public Max70Text? ProductCode { get; init; }
 
     /// <summary>
     /// Contains a list of codes used to identify a product.
@@ -52,7 +52,7 @@ public record SaleItem2
     [IsoXmlTag("AddtlPdctCd")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AdditionalProductCode { get; init; }
+    public Max70Text? AdditionalProductCode { get; init; }
 
     /// <summary>
     /// Additional type of codification  used to identify a product.
@@ -62,7 +62,7 @@ public record SaleItem2
     [IsoXmlTag("AddtlPdctCdTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AdditionalProductCodeType { get; init; }
+    public Max35Text? AdditionalProductCodeType { get; init; }
 
     /// <summary>
     /// Code discriminator between a product code and its format to uniquely identify a specific product (for example, Item or pack of same items).
@@ -71,7 +71,7 @@ public record SaleItem2
     [DisplayName("Product Code Modifier")]
     [IsoXmlTag("PdctCdModfr")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? ProductCodeModifier { get; init; }
+    public DecimalNumber? ProductCodeModifier { get; init; }
 
     /// <summary>
     /// Description of the product or item.
@@ -81,7 +81,7 @@ public record SaleItem2
     [IsoXmlTag("PdctDesc")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? ProductDescription { get; init; }
+    public Max140Text? ProductDescription { get; init; }
 
     /// <summary>
     /// Unit of measure of the item purchased.
@@ -99,7 +99,7 @@ public record SaleItem2
     [IsoXmlTag("OthrUnitOfMeasr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherUnitOfMeasure { get; init; }
+    public Max35Text? OtherUnitOfMeasure { get; init; }
 
     /// <summary>
     /// Quantity of product or item.
@@ -108,7 +108,7 @@ public record SaleItem2
     [DisplayName("Product Quantity")]
     [IsoXmlTag("PdctQty")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? ProductQuantity { get; init; }
+    public DecimalNumber? ProductQuantity { get; init; }
 
     /// <summary>
     /// Original, non-adjusted cost of one unit of the product or service before discounts and taxes.
@@ -149,7 +149,7 @@ public record SaleItem2
     [DisplayName("Insurance Indicator")]
     [IsoXmlTag("InsrncInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? InsuranceIndicator { get; init; }
+    public TrueFalseIndicator? InsuranceIndicator { get; init; }
 
     /// <summary>
     /// Cost of the insurance purchased.

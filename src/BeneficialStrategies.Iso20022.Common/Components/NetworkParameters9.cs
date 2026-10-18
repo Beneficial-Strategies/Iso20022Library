@@ -32,5 +32,5 @@ public record NetworkParameters9
     [IsoXmlTag("AdrVal")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public required IsoMax500Text AddressValue { get; init; }
+    public required Max500Text AddressValue { get; init; }
 }

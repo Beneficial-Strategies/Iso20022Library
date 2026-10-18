@@ -23,7 +23,7 @@ public record DigestedData2
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Version { get; init; }
+    public Number? Version { get; init; }
 
     /// <summary>
     /// Identification of a digest algorithm.
@@ -51,5 +51,5 @@ public record DigestedData2
     [IsoXmlTag("Dgst")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text Digest { get; init; }
+    public required Max140Text Digest { get; init; }
 }

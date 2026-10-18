@@ -31,7 +31,7 @@ public record Charge11
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate Rate { get; init; }
+    public required PercentageRate Rate { get; init; }
 
     /// <summary>
     /// Type of service for which a charge is asked or paid.

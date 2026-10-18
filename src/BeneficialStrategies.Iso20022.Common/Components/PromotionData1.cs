@@ -30,7 +30,7 @@ public record PromotionData1
     [IsoId("_PdFikXn7EfCmC4yYaU27Kg")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public IsoMax35Text? Type { get; init; }
+    public Max35Text? Type { get; init; }
 
     /// <summary>
     /// Detail description of the promotion.
@@ -38,7 +38,7 @@ public record PromotionData1
     [IsoId("_PdFilXn7EfCmC4yYaU27Kg")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax140Text? Description { get; init; }
+    public Max140Text? Description { get; init; }
 
     /// <summary>
     /// Unique code assigned to the promotion.
@@ -46,7 +46,7 @@ public record PromotionData1
     [IsoId("_PdFimXn7EfCmC4yYaU27Kg")]
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
-    public IsoMax35Text? Code { get; init; }
+    public Max35Text? Code { get; init; }
 
     /// <summary>
     /// Date and time when promotion begins.
@@ -54,7 +54,7 @@ public record PromotionData1
     [IsoId("_92rlMHn9EfCmC4yYaU27Kg")]
     [DisplayName("Start")]
     [IsoXmlTag("Start")]
-    public IsoISODateTime? Start { get; init; }
+    public ISODateTime? Start { get; init; }
 
     /// <summary>
     /// Date and time when promotion ends.
@@ -62,7 +62,7 @@ public record PromotionData1
     [IsoId("_M-9L4Hn-EfCmC4yYaU27Kg")]
     [DisplayName("End")]
     [IsoXmlTag("End")]
-    public IsoISODateTime? End { get; init; }
+    public ISODateTime? End { get; init; }
 
     /// <summary>
     /// Contains amount of the promotion.
@@ -78,7 +78,7 @@ public record PromotionData1
     [IsoId("_FLyDIHoBEfCmC4yYaU27Kg")]
     [DisplayName("Redemption Method")]
     [IsoXmlTag("RedMtd")]
-    public IsoMax35Text? RedemptionMethod { get; init; }
+    public Max35Text? RedemptionMethod { get; init; }
 
     /// <summary>
     /// The channel through which the promotion is offered.
@@ -86,7 +86,7 @@ public record PromotionData1
     [IsoId("_weI58HoBEfCmC4yYaU27Kg")]
     [DisplayName("Channel")]
     [IsoXmlTag("Chanl")]
-    public IsoMax35Text? Channel { get; init; }
+    public Max35Text? Channel { get; init; }
 
     /// <summary>
     /// A classification of the promotion based on the type of goods or services involved.
@@ -94,7 +94,7 @@ public record PromotionData1
     [IsoId("_5FETgHoBEfCmC4yYaU27Kg")]
     [DisplayName("Category")]
     [IsoXmlTag("Ctgy")]
-    public IsoMax35Text? Category { get; init; }
+    public Max35Text? Category { get; init; }
 
     /// <summary>
     /// Specifies whether this promotion can be combined with other promotions in the same transaction.
@@ -102,7 +102,7 @@ public record PromotionData1
     [IsoId("__zCAUHoBEfCmC4yYaU27Kg")]
     [DisplayName("Stackable")]
     [IsoXmlTag("Stckbl")]
-    public IsoTrueFalseIndicator? Stackable { get; init; }
+    public TrueFalseIndicator? Stackable { get; init; }
 
     /// <summary>
     /// A URL linking to the rules or full terms and conditions of the promotion.
@@ -110,5 +110,5 @@ public record PromotionData1
     [IsoId("_HrTkIHoCEfCmC4yYaU27Kg")]
     [DisplayName("Terms URL")]
     [IsoXmlTag("TermsURL")]
-    public IsoMax256Text? TermsURL { get; init; }
+    public Max256Text? TermsURL { get; init; }
 }

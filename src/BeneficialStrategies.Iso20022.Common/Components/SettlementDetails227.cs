@@ -22,7 +22,7 @@ public record SettlementDetails227
     [IsoId("_Qsr3aZaFEfC2_67yGLymgA")]
     [DisplayName("Hold Indicator")]
     [IsoXmlTag("HldInd")]
-    public IsoYesNoIndicator? HoldIndicator { get; init; }
+    public YesNoIndicator? HoldIndicator { get; init; }
 
     /// <summary>
     /// Conditions under which the order/trade is to be settled.
@@ -142,5 +142,5 @@ public record SettlementDetails227
     [IsoId("_QssesZaFEfC2_67yGLymgA")]
     [DisplayName("Eligible For Collateral")]
     [IsoXmlTag("ElgblForColl")]
-    public IsoYesNoIndicator? EligibleForCollateral { get; init; }
+    public YesNoIndicator? EligibleForCollateral { get; init; }
 }

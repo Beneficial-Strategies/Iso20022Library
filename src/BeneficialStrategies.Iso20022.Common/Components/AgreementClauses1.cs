@@ -24,7 +24,7 @@ public record AgreementClauses1
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Description { get; init; }
+    public Max256Text? Description { get; init; }
 
     /// <summary>
     /// External reference to the document, containing agreement clauses, where it is stored.
@@ -34,5 +34,5 @@ public record AgreementClauses1
     [IsoXmlTag("DocURL")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? DocumentURL { get; init; }
+    public Max350Text? DocumentURL { get; init; }
 }

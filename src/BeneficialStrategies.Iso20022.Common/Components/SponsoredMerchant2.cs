@@ -32,7 +32,7 @@ public record SponsoredMerchant2
     [IsoXmlTag("CmonNm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? CommonName { get; init; }
+    public Max140Text? CommonName { get; init; }
 
     /// <summary>
     /// Legal Corporate Name of the sponsored merchant.
@@ -42,7 +42,7 @@ public record SponsoredMerchant2
     [IsoXmlTag("LglCorpNm")]
     [IsoSimpleType(IsoSimpleType.Max99Text)]
     [StringLength(maximumLength: 99, MinimumLength = 1)]
-    public IsoMax99Text? LegalCorporateName { get; init; }
+    public Max99Text? LegalCorporateName { get; init; }
 
     /// <summary>
     /// Address of the sponsored merchant.
@@ -60,7 +60,7 @@ public record SponsoredMerchant2
     [IsoXmlTag("AddtlAdrInf")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? AdditionalAddressInformation { get; init; }
+    public Max256Text? AdditionalAddressInformation { get; init; }
 
     /// <summary>
     /// Location of the acceptor in latitude/longitude decimal degrees.
@@ -69,7 +69,7 @@ public record SponsoredMerchant2
     [DisplayName("Geographic Location")]
     [IsoXmlTag("GeogcLctn")]
     [IsoSimpleType(IsoSimpleType.GeographicPointInDecimalDegrees)]
-    public IsoGeographicPointInDecimalDegrees? GeographicLocation { get; init; }
+    public GeographicPointInDecimalDegrees? GeographicLocation { get; init; }
 
     /// <summary>
     /// Additional sponsored merchant data.

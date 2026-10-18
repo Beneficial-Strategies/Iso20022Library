@@ -24,7 +24,7 @@ public record Vehicle2
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Type { get; init; }
+    public Max35Text? Type { get; init; }
 
     /// <summary>
     /// Entry mode of the information.
@@ -42,5 +42,5 @@ public record Vehicle2
     [IsoXmlTag("Data")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Data { get; init; }
+    public required Max35Text Data { get; init; }
 }

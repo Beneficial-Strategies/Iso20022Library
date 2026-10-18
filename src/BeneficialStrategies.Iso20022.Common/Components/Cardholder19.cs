@@ -61,7 +61,7 @@ public record Cardholder19
     [DisplayName("Date Of Birth")]
     [IsoXmlTag("DtOfBirth")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DateOfBirth { get; init; }
+    public DateOnly? DateOfBirth { get; init; }
 
     /// <summary>
     /// Identifies a cardholder that is a highly valued individual (e.g., Very Important Person).
@@ -70,7 +70,7 @@ public record Cardholder19
     [DisplayName("High Value Customer Indicator")]
     [IsoXmlTag("HghValCstmrInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? HighValueCustomerIndicator { get; init; }
+    public TrueFalseIndicator? HighValueCustomerIndicator { get; init; }
 
     /// <summary>
     /// Additional cardholder data.

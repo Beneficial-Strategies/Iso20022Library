@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StressSize1Choice
         [IsoXmlTag("Unit")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text Unit { get; init; }
+        public required Max35Text Unit { get; init; }
 
         /// <summary>
         /// Number of units of measure shifted.
@@ -33,6 +33,6 @@ namespace BeneficialStrategies.Iso20022.Choices.StressSize1Choice
         [DisplayName("Quantity")]
         [IsoXmlTag("Qty")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public required IsoNumber Quantity { get; init; }
+        public required Number Quantity { get; init; }
     }
 }

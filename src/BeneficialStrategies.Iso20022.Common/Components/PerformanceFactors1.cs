@@ -23,7 +23,7 @@ public record PerformanceFactors1
     [DisplayName("Corporate Action Factor")]
     [IsoXmlTag("CorpActnFctr")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? CorporateActionFactor { get; init; }
+    public DecimalNumber? CorporateActionFactor { get; init; }
 
     /// <summary>
     /// Value of the NAV before a corporate event, divided by the value of the NAV after the corporate event, accumulated for a number of corporate events over the defined period of time.
@@ -32,7 +32,7 @@ public record PerformanceFactors1
     [DisplayName("Cumulative Corporate Action Factor")]
     [IsoXmlTag("CmltvCorpActnFctr")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? CumulativeCorporateActionFactor { get; init; }
+    public DecimalNumber? CumulativeCorporateActionFactor { get; init; }
 
     /// <summary>
     /// Period of time for the calculation of the cumulative corporate action factor.
@@ -49,5 +49,5 @@ public record PerformanceFactors1
     [DisplayName("Normal Performance")]
     [IsoXmlTag("NrmlPrfrmnc")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? NormalPerformance { get; init; }
+    public DecimalNumber? NormalPerformance { get; init; }
 }

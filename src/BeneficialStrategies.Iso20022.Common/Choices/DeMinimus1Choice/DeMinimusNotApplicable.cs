@@ -23,6 +23,6 @@ namespace BeneficialStrategies.Iso20022.Choices.DeMinimus1Choice
         [IsoXmlTag("RstrctdPrsnRsn")]
         [IsoSimpleType(IsoSimpleType.Max350Text)]
         [StringLength(maximumLength: 350, MinimumLength = 1)]
-        public required IsoMax350Text RestrictedPersonReason { get; init; }
+        public required Max350Text RestrictedPersonReason { get; init; }
     }
 }

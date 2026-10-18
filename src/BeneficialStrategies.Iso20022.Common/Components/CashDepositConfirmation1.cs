@@ -38,5 +38,5 @@ public record CashDepositConfirmation1
     [IsoId("_f2dHUNEnEfCHIpLhE5dmGg")]
     [DisplayName("Discrepancy Identification")]
     [IsoXmlTag("DscrpncyId")]
-    public IsoMax35Text? DiscrepancyIdentification { get; init; }
+    public Max35Text? DiscrepancyIdentification { get; init; }
 }

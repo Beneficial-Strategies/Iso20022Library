@@ -24,7 +24,7 @@ public record CurrencyConversion20
     [IsoXmlTag("CcyConvsId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CurrencyConversionIdentification { get; init; }
+    public Max35Text? CurrencyConversionIdentification { get; init; }
 
     /// <summary>
     /// Currency into which the amount is converted (ISO 4217, 3 alphanumeric characters).
@@ -49,7 +49,7 @@ public record CurrencyConversion20
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate ExchangeRate { get; init; }
+    public required PercentageRate ExchangeRate { get; init; }
 
     /// <summary>
     /// Exchange rate, expressed as a percentage, applied to convert the resulting amount into the original amount.
@@ -58,7 +58,7 @@ public record CurrencyConversion20
     [DisplayName("Inverted Exchange Rate")]
     [IsoXmlTag("NvrtdXchgRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? InvertedExchangeRate { get; init; }
+    public PercentageRate? InvertedExchangeRate { get; init; }
 
     /// <summary>
     /// Date and time at which the exchange rate has been quoted.
@@ -67,7 +67,7 @@ public record CurrencyConversion20
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? QuotationDate { get; init; }
+    public ISODateTime? QuotationDate { get; init; }
 
     /// <summary>
     /// Validity limit of the exchange rate.
@@ -76,7 +76,7 @@ public record CurrencyConversion20
     [DisplayName("Valid Until")]
     [IsoXmlTag("VldUntil")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? ValidUntil { get; init; }
+    public ISODateTime? ValidUntil { get; init; }
 
     /// <summary>
     /// Currency from which the amount is converted (ISO 4217, 3 alphanumeric characters).

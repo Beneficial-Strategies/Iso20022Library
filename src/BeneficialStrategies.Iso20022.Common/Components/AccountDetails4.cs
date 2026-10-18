@@ -21,14 +21,14 @@ public record AccountDetails4
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax70Text? Identification { get; init; }
+    public Max70Text? Identification { get; init; }
 
     /// <summary>
     /// Name.
     /// </summary>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax70Text? Name { get; init; }
+    public Max70Text? Name { get; init; }
 
     /// <summary>
     /// Type.

@@ -32,7 +32,7 @@ public record UnderlyingPaymentTransaction1
     [IsoXmlTag("OrgnlInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.
@@ -42,7 +42,7 @@ public record UnderlyingPaymentTransaction1
     [IsoXmlTag("OrgnlEndToEndId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original first instructing agent, to unambiguously identify the transaction.
@@ -52,7 +52,7 @@ public record UnderlyingPaymentTransaction1
     [IsoXmlTag("OrgnlTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalTransactionIdentification { get; init; }
+    public Max35Text? OriginalTransactionIdentification { get; init; }
 
     /// <summary>
     /// Amount of money, as provided in the original transaction, to be moved between the instructing agent and the instructed agent.
@@ -69,5 +69,5 @@ public record UnderlyingPaymentTransaction1
     [DisplayName("Original Interbank Settlement Date")]
     [IsoXmlTag("OrgnlIntrBkSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate OriginalInterbankSettlementDate { get; init; }
+    public required DateOnly OriginalInterbankSettlementDate { get; init; }
 }

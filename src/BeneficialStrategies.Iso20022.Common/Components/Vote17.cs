@@ -24,7 +24,7 @@ public record Vote17
     [IsoXmlTag("IssrLabl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text IssuerLabel { get; init; }
+    public required Max35Text IssuerLabel { get; init; }
 
     /// <summary>
     /// Language, title and textual description of an agenda resolution.
@@ -155,5 +155,5 @@ public record Vote17
     [DisplayName("Withdrawn")]
     [IsoXmlTag("Wdrwn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? Withdrawn { get; init; }
+    public YesNoIndicator? Withdrawn { get; init; }
 }

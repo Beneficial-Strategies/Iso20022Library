@@ -30,7 +30,7 @@ public record PenaltyRate1
     [IsoId("_PRiB4DkaEem897H7zB2RJg")]
     [DisplayName("SME Growth Market")]
     [IsoXmlTag("SMEGrwthMkt")]
-    public IsoTrueFalseIndicator? SMEGrowthMarket { get; init; }
+    public TrueFalseIndicator? SMEGrowthMarket { get; init; }
 
     /// <summary>
     /// Penalty rate applicable for the asset type.
@@ -38,5 +38,5 @@ public record PenaltyRate1
     [IsoId("_UC1NsDkaEem897H7zB2RJg")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
-    public required IsoPercentageRate Rate { get; init; }
+    public required PercentageRate Rate { get; init; }
 }

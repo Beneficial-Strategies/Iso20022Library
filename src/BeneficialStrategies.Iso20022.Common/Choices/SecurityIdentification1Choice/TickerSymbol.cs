@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification1Choice
         /// </summary>
         [IsoXmlTag("TckrSymb")]
         [IsoSimpleType(IsoSimpleType.TickerIdentifier)]
-        public required IsoTickerIdentifier Value { get; init; }
+        public required TickerIdentifier Value { get; init; }
     }
 }

@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient13Choice
         /// </summary>
         [IsoXmlTag("SbjtKeyIdr")]
         [IsoSimpleType(IsoSimpleType.Max140Binary)]
-        public required IsoMax140Binary Value { get; init; }
+        public required Max140Binary Value { get; init; }
     }
 }

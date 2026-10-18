@@ -72,7 +72,7 @@ public record PayInCallV02 : IOuterRecord
     [DisplayName("Settlement Session Identifier")]
     [IsoXmlTag("SttlmSsnIdr")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    public IsoExact4AlphaNumericText? SettlementSessionIdentifier { get; init; }
+    public Exact4AlphaNumericText? SettlementSessionIdentifier { get; init; }
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.

@@ -21,35 +21,35 @@ public record SettlementTypeAndAdditionalParameters23
     /// </summary>
     [DisplayName("Client Collateral Instruction Identification")]
     [IsoXmlTag("ClntCollInstrId")]
-    public IsoMax35Text? ClientCollateralInstructionIdentification { get; init; }
+    public Max35Text? ClientCollateralInstructionIdentification { get; init; }
 
     /// <summary>
     /// Client Triparty Collateral Transaction Identification.
     /// </summary>
     [DisplayName("Client Triparty Collateral Transaction Identification")]
     [IsoXmlTag("ClntTrptyCollTxId")]
-    public IsoMax35Text? ClientTripartyCollateralTransactionIdentification { get; init; }
+    public Max35Text? ClientTripartyCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Common Identification.
     /// </summary>
     [DisplayName("Common Identification")]
     [IsoXmlTag("CmonId")]
-    public IsoMax35Text? CommonIdentification { get; init; }
+    public Max35Text? CommonIdentification { get; init; }
 
     /// <summary>
     /// Corporate Action Event Identification.
     /// </summary>
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
-    public IsoMax35Text? CorporateActionEventIdentification { get; init; }
+    public Max35Text? CorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Nonce Identification.
     /// </summary>
     [DisplayName("Nonce Identification")]
     [IsoXmlTag("NonceId")]
-    public IsoMax35Text? NonceIdentification { get; init; }
+    public Max35Text? NonceIdentification { get; init; }
 
     /// <summary>
     /// Payment.
@@ -63,7 +63,7 @@ public record SettlementTypeAndAdditionalParameters23
     /// </summary>
     [DisplayName("Reconciliation Indicator")]
     [IsoXmlTag("RcncltnInd")]
-    public IsoYesNoIndicator? ReconciliationIndicator { get; init; }
+    public YesNoIndicator? ReconciliationIndicator { get; init; }
 
     /// <summary>
     /// Securities Movement Type.
@@ -77,12 +77,12 @@ public record SettlementTypeAndAdditionalParameters23
     /// </summary>
     [DisplayName("Triparty Agent Service Provider Collateral Instruction Identification")]
     [IsoXmlTag("TrptyAgtSvcPrvdrCollInstrId")]
-    public IsoMax35Text? TripartyAgentServiceProviderCollateralInstructionIdentification { get; init; }
+    public Max35Text? TripartyAgentServiceProviderCollateralInstructionIdentification { get; init; }
 
     /// <summary>
     /// Triparty Agent Service Provider Collateral Transaction Identification.
     /// </summary>
     [DisplayName("Triparty Agent Service Provider Collateral Transaction Identification")]
     [IsoXmlTag("TrptyAgtSvcPrvdrCollTxId")]
-    public IsoMax35Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; }
+    public Max35Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; }
 }

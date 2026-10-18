@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeFrame4Choice
         /// </summary>
         [IsoXmlTag("RPlus")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public required IsoNumber Value { get; init; }
+        public required Number Value { get; init; }
     }
 }

@@ -31,7 +31,7 @@ public record EncapsulatedBusinessMessage1
     [DisplayName("Prefix")]
     [IsoXmlTag("Prfx")]
     [IsoSimpleType(IsoSimpleType.ID)]
-    public IsoID? Prefix { get; init; }
+    public XsdID? Prefix { get; init; }
 
     /// <summary>
     /// If yes, the Msg element contains only a subset of the original message.
@@ -40,7 +40,7 @@ public record EncapsulatedBusinessMessage1
     [DisplayName("Partial")]
     [IsoXmlTag("Prtl")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator Partial { get; init; }
+    public required YesNoIndicator Partial { get; init; }
 
     /// <summary>
     /// The encapsulated ISO 20022 message.

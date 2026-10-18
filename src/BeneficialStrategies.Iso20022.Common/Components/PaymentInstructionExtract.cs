@@ -24,7 +24,7 @@ public record PaymentInstructionExtract
     [IsoXmlTag("AssgnrInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AssignerInstructionIdentification { get; init; }
+    public Max35Text? AssignerInstructionIdentification { get; init; }
 
     /// <summary>
     /// Identification of the payment instruction (eg, field 20 of an MT 103) when meaningful to the case assignee.
@@ -34,7 +34,7 @@ public record PaymentInstructionExtract
     [IsoXmlTag("AssgneInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AssigneeInstructionIdentification { get; init; }
+    public Max35Text? AssigneeInstructionIdentification { get; init; }
 
     /// <summary>
     /// Amount of the payment. Depending on the context it can be either the amount settled (UnableToApply) or the instructed amount (RequestToCancel, RequestToModify, ClaimNonReceipt).
@@ -51,5 +51,5 @@ public record PaymentInstructionExtract
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? ValueDate { get; init; }
+    public ISODateTime? ValueDate { get; init; }
 }

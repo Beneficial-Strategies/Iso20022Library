@@ -21,7 +21,7 @@ public record SecuritiesTradeDetails148
     /// </summary>
     [DisplayName("Common Identification")]
     [IsoXmlTag("CmonId")]
-    public IsoMax35Text? CommonIdentification { get; init; }
+    public Max35Text? CommonIdentification { get; init; }
 
     /// <summary>
     /// Delivering Settlement Parties.
@@ -49,21 +49,21 @@ public record SecuritiesTradeDetails148
     /// </summary>
     [DisplayName("Notification Receiver Transaction Identification")]
     [IsoXmlTag("NtfctnRcvrTxId")]
-    public IsoMax35Text? NotificationReceiverTransactionIdentification { get; init; }
+    public Max35Text? NotificationReceiverTransactionIdentification { get; init; }
 
     /// <summary>
     /// Notification Sender Transaction Identification.
     /// </summary>
     [DisplayName("Notification Sender Transaction Identification")]
     [IsoXmlTag("NtfctnSndrTxId")]
-    public IsoMax35Text? NotificationSenderTransactionIdentification { get; init; }
+    public Max35Text? NotificationSenderTransactionIdentification { get; init; }
 
     /// <summary>
     /// Number Of Days Accrued.
     /// </summary>
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
-    public IsoMax3Number? NumberOfDaysAccrued { get; init; }
+    public Max3Number? NumberOfDaysAccrued { get; init; }
 
     /// <summary>
     /// Other Amounts.

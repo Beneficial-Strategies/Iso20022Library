@@ -28,7 +28,7 @@ public record SecurityParameters16
     /// </summary>
     [DisplayName("POI Challenge")]
     [IsoXmlTag("POIChllng")]
-    public IsoMax140Binary? POIChallenge { get; init; }
+    public Max140Binary? POIChallenge { get; init; }
 
     /// <summary>
     /// Security Element.
@@ -42,12 +42,12 @@ public record SecurityParameters16
     /// </summary>
     [DisplayName("TM Challenge")]
     [IsoXmlTag("TMChllng")]
-    public IsoMax140Binary? TMChallenge { get; init; }
+    public Max140Binary? TMChallenge { get; init; }
 
     /// <summary>
     /// Version.
     /// </summary>
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
-    public required IsoMax256Text Version { get; init; }
+    public required Max256Text Version { get; init; }
 }

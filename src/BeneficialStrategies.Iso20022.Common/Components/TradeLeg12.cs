@@ -28,7 +28,7 @@ public record TradeLeg12
     /// </summary>
     [DisplayName("Allocation Identification")]
     [IsoXmlTag("AllcnId")]
-    public IsoMax35Text? AllocationIdentification { get; init; }
+    public Max35Text? AllocationIdentification { get; init; }
 
     /// <summary>
     /// Broker.
@@ -70,7 +70,7 @@ public record TradeLeg12
     /// </summary>
     [DisplayName("Derivative Related Trade")]
     [IsoXmlTag("DerivRltdTrad")]
-    public IsoYesNoIndicator? DerivativeRelatedTrade { get; init; }
+    public YesNoIndicator? DerivativeRelatedTrade { get; init; }
 
     /// <summary>
     /// Financial Instrument Identification.
@@ -105,7 +105,7 @@ public record TradeLeg12
     /// </summary>
     [DisplayName("Order Identification")]
     [IsoXmlTag("OrdrId")]
-    public IsoMax35Text? OrderIdentification { get; init; }
+    public Max35Text? OrderIdentification { get; init; }
 
     /// <summary>
     /// Place Of Listing.
@@ -154,28 +154,28 @@ public record TradeLeg12
     /// </summary>
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
-    public required IsoISODateTime TradeDate { get; init; }
+    public required ISODateTime TradeDate { get; init; }
 
     /// <summary>
     /// Trade Execution Identification.
     /// </summary>
     [DisplayName("Trade Execution Identification")]
     [IsoXmlTag("TradExctnId")]
-    public IsoMax35Text? TradeExecutionIdentification { get; init; }
+    public Max35Text? TradeExecutionIdentification { get; init; }
 
     /// <summary>
     /// Trade Identification.
     /// </summary>
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    public IsoMax35Text? TradeIdentification { get; init; }
+    public Max35Text? TradeIdentification { get; init; }
 
     /// <summary>
     /// Trade Leg Identification.
     /// </summary>
     [DisplayName("Trade Leg Identification")]
     [IsoXmlTag("TradLegId")]
-    public required IsoMax35Text TradeLegIdentification { get; init; }
+    public required Max35Text TradeLegIdentification { get; init; }
 
     /// <summary>
     /// Trade Posting Code.
@@ -196,7 +196,7 @@ public record TradeLeg12
     /// </summary>
     [DisplayName("Trade Registration Origin")]
     [IsoXmlTag("TradRegnOrgn")]
-    public IsoMax35Text? TradeRegistrationOrigin { get; init; }
+    public Max35Text? TradeRegistrationOrigin { get; init; }
 
     /// <summary>
     /// Trade Type.
@@ -238,12 +238,12 @@ public record TradeLeg12
     /// </summary>
     [DisplayName("Transaction Date And Time")]
     [IsoXmlTag("TxDtAndTm")]
-    public IsoISODateTime? TransactionDateAndTime { get; init; }
+    public ISODateTime? TransactionDateAndTime { get; init; }
 
     /// <summary>
     /// Unique Transaction Identifier.
     /// </summary>
     [DisplayName("Unique Transaction Identifier")]
     [IsoXmlTag("UnqTxIdr")]
-    public IsoUTIIdentifier? UniqueTransactionIdentifier { get; init; }
+    public UTIIdentifier? UniqueTransactionIdentifier { get; init; }
 }

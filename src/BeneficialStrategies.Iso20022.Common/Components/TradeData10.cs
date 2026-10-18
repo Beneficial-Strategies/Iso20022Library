@@ -24,7 +24,7 @@ public record TradeData10
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Party that assigned the status to the foreign exchange trade.
@@ -34,7 +34,7 @@ public record TradeData10
     [IsoXmlTag("StsOrgtr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? StatusOriginator { get; init; }
+    public Max35Text? StatusOriginator { get; init; }
 
     /// <summary>
     /// Specifies the new status of the trade.
@@ -59,7 +59,7 @@ public record TradeData10
     [DisplayName("Current Status Date Time")]
     [IsoXmlTag("CurStsDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CurrentStatusDateTime { get; init; }
+    public required ISODateTime CurrentStatusDateTime { get; init; }
 
     /// <summary>
     /// Specifies the previous status of a trade.
@@ -85,5 +85,5 @@ public record TradeData10
     [IsoXmlTag("PdctTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProductType { get; init; }
+    public Max35Text? ProductType { get; init; }
 }

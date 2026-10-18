@@ -23,7 +23,7 @@ public record CreditDefaultSwapIndex2
     [DisplayName("Series")]
     [IsoXmlTag("Srs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Series { get; init; }
+    public Number? Series { get; init; }
 
     /// <summary>
     /// New version of a series is issued if one of the constituents defaults and the index has to be re-weighted to account for the new number of total constituents within the index.
@@ -32,7 +32,7 @@ public record CreditDefaultSwapIndex2
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Version { get; init; }
+    public Number? Version { get; init; }
 
     /// <summary>
     /// All months when the roll is expected as established by the index provider for a given year. Field should be repeated for each month in the roll.
@@ -52,7 +52,7 @@ public record CreditDefaultSwapIndex2
     [DisplayName("Next Roll Date")]
     [IsoXmlTag("NxtRollDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? NextRollDate { get; init; }
+    public DateOnly? NextRollDate { get; init; }
 
     /// <summary>
     /// Currency in which the notional is denominated.

@@ -55,5 +55,5 @@ public record ForeignExchangeTerms10
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public required IsoBaseOneRate ExchangeRate { get; init; }
+    public required BaseOneRate ExchangeRate { get; init; }
 }

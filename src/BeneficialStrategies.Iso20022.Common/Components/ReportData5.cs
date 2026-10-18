@@ -24,7 +24,7 @@ public record ReportData5
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Date by which the amount(s) requested must be settled.
@@ -33,7 +33,7 @@ public record ReportData5
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ValueDate { get; init; }
+    public required DateOnly ValueDate { get; init; }
 
     /// <summary>
     /// Date and time on which the report is generated. The offset with UTC may also be specified.
@@ -42,7 +42,7 @@ public record ReportData5
     [DisplayName("Date And Time Stamp")]
     [IsoXmlTag("DtAndTmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime DateAndTimeStamp { get; init; }
+    public required ISODateTime DateAndTimeStamp { get; init; }
 
     /// <summary>
     /// Specifies the type of the Pay In Call.
@@ -67,7 +67,7 @@ public record ReportData5
     [DisplayName("Settlement Session Identifier")]
     [IsoXmlTag("SttlmSsnIdr")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    public IsoExact4AlphaNumericText? SettlementSessionIdentifier { get; init; }
+    public Exact4AlphaNumericText? SettlementSessionIdentifier { get; init; }
 
     /// <summary>
     /// Specifies the requested amount in multiple currencies.

@@ -40,7 +40,7 @@ public record AdditionalParameters12
     [IsoXmlTag("PrvsPrtlConfId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PreviousPartialConfirmationIdentification { get; init; }
+    public Max35Text? PreviousPartialConfirmationIdentification { get; init; }
 
     /// <summary>
     /// Unique reference identifying the triparty collateral management transaction from the triparty agent&apos;s point of view.
@@ -50,7 +50,7 @@ public record AdditionalParameters12
     [IsoXmlTag("TrptyAgtCollTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TripartyAgentCollateralTransactionIdentification { get; init; }
+    public Max35Text? TripartyAgentCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique reference identifying the triparty collateral management transaction from the client&apos;s point of view.
@@ -60,5 +60,5 @@ public record AdditionalParameters12
     [IsoXmlTag("ClntTrptyCollTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClientTripartyCollateralTransactionIdentification { get; init; }
+    public Max35Text? ClientTripartyCollateralTransactionIdentification { get; init; }
 }

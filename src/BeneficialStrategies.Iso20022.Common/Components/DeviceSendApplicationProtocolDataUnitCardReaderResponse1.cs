@@ -23,7 +23,7 @@ public record DeviceSendApplicationProtocolDataUnitCardReaderResponse1
     [DisplayName("Data")]
     [IsoXmlTag("Data")]
     [IsoSimpleType(IsoSimpleType.Min1Max256Binary)]
-    public IsoMin1Max256Binary? Data { get; init; }
+    public Min1Max256Binary? Data { get; init; }
 
     /// <summary>
     /// Status of a smartcard response to a command (SW1-SW2). Reference: ISO 7816-4.
@@ -32,5 +32,5 @@ public record DeviceSendApplicationProtocolDataUnitCardReaderResponse1
     [DisplayName("Card Status")]
     [IsoXmlTag("CardSts")]
     [IsoSimpleType(IsoSimpleType.Min1Max256Binary)]
-    public required IsoMin1Max256Binary CardStatus { get; init; }
+    public required Min1Max256Binary CardStatus { get; init; }
 }

@@ -24,7 +24,7 @@ public record Contact9
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text Name { get; init; }
+    public required Max140Text Name { get; init; }
 
     /// <summary>
     /// Phone number of the person responsible for the report.
@@ -33,7 +33,7 @@ public record Contact9
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public required IsoPhoneNumber PhoneNumber { get; init; }
+    public required PhoneNumber PhoneNumber { get; init; }
 
     /// <summary>
     /// Electronic mail (e-mail) address of the of the person responsible for the report.
@@ -43,7 +43,7 @@ public record Contact9
     [IsoXmlTag("EmailAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public required IsoMax256Text EmailAddress { get; init; }
+    public required Max256Text EmailAddress { get; init; }
 
     /// <summary>
     /// Function of the person responsible for the report.
@@ -53,5 +53,5 @@ public record Contact9
     [IsoXmlTag("Fctn")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Function { get; init; }
+    public Max140Text? Function { get; init; }
 }

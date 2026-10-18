@@ -31,7 +31,7 @@ public record CardTransaction13
     [DisplayName("Initiator Date Time")]
     [IsoXmlTag("InitrDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime InitiatorDateTime { get; init; }
+    public required ISODateTime InitiatorDateTime { get; init; }
 
     /// <summary>
     /// Key that must be created and sent in the response, or that must be verified.

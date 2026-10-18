@@ -35,7 +35,7 @@ public record SafekeepingAccount17
     /// </summary>
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
-    public required IsoMax35Text SafekeepingAccount { get; init; }
+    public required Max35Text SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Shareholding Balance On Client Account.

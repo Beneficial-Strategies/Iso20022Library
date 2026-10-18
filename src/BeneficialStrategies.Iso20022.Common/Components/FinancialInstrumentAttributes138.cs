@@ -102,7 +102,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMDYag6EfCXwLUUylXgrQ")]
     [DisplayName("Coupon Date")]
     [IsoXmlTag("CpnDt")]
-    public IsoISODate? CouponDate { get; init; }
+    public DateOnly? CouponDate { get; init; }
 
     /// <summary>
     /// Date on which a privilege expires.
@@ -110,7 +110,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMDbag6EfCXwLUUylXgrQ")]
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
-    public IsoISODate? ExpiryDate { get; init; }
+    public DateOnly? ExpiryDate { get; init; }
 
     /// <summary>
     /// Date at which the interest rate of an interest bearing security will be calculated and reset.
@@ -118,7 +118,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMDeag6EfCXwLUUylXgrQ")]
     [DisplayName("Floating Rate Fixing Date")]
     [IsoXmlTag("FltgRateFxgDt")]
-    public IsoISODate? FloatingRateFixingDate { get; init; }
+    public DateOnly? FloatingRateFixingDate { get; init; }
 
     /// <summary>
     /// Planned final repayment date at the time of issuance.
@@ -126,7 +126,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMDhag6EfCXwLUUylXgrQ")]
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
-    public IsoISODate? MaturityDate { get; init; }
+    public DateOnly? MaturityDate { get; init; }
 
     /// <summary>
     /// Date at which the security was made available.
@@ -134,7 +134,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMDkag6EfCXwLUUylXgrQ")]
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
-    public IsoISODate? IssueDate { get; init; }
+    public DateOnly? IssueDate { get; init; }
 
     /// <summary>
     /// Next date at which the issuer has the right to pay the security prior to maturity.
@@ -142,7 +142,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMDnag6EfCXwLUUylXgrQ")]
     [DisplayName("Next Callable Date")]
     [IsoXmlTag("NxtCllblDt")]
-    public IsoISODate? NextCallableDate { get; init; }
+    public DateOnly? NextCallableDate { get; init; }
 
     /// <summary>
     /// Date at which the holder has the right to ask for redemption of the security prior to final maturity.
@@ -150,7 +150,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMDqag6EfCXwLUUylXgrQ")]
     [DisplayName("Putable Date")]
     [IsoXmlTag("PutblDt")]
-    public IsoISODate? PutableDate { get; init; }
+    public DateOnly? PutableDate { get; init; }
 
     /// <summary>
     /// First date at which a security begins to accrue interest.
@@ -158,7 +158,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMDtag6EfCXwLUUylXgrQ")]
     [DisplayName("Dated Date")]
     [IsoXmlTag("DtdDt")]
-    public IsoISODate? DatedDate { get; init; }
+    public DateOnly? DatedDate { get; init; }
 
     /// <summary>
     /// Date at which the first interest payment is due to holders of the security.
@@ -166,7 +166,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMDwag6EfCXwLUUylXgrQ")]
     [DisplayName("First Payment Date")]
     [IsoXmlTag("FrstPmtDt")]
-    public IsoISODate? FirstPaymentDate { get; init; }
+    public DateOnly? FirstPaymentDate { get; init; }
 
     /// <summary>
     /// Rate expressed as a decimal between 0 and 1 that was applicable before the current factor.
@@ -174,7 +174,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMDzag6EfCXwLUUylXgrQ")]
     [DisplayName("Previous Factor")]
     [IsoXmlTag("PrvsFctr")]
-    public IsoBaseOneRate? PreviousFactor { get; init; }
+    public BaseOneRate? PreviousFactor { get; init; }
 
     /// <summary>
     /// Rate expressed as a decimal between 0 and 1 defining the outstanding principal of the financial instrument.
@@ -182,7 +182,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMD2ag6EfCXwLUUylXgrQ")]
     [DisplayName("Current Factor")]
     [IsoXmlTag("CurFctr")]
-    public IsoBaseOneRate? CurrentFactor { get; init; }
+    public BaseOneRate? CurrentFactor { get; init; }
 
     /// <summary>
     /// Rate expressed as a decimal between 0 and 1 that will be applicable as of the next factor date.
@@ -190,7 +190,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMD5ag6EfCXwLUUylXgrQ")]
     [DisplayName("Next Factor")]
     [IsoXmlTag("NxtFctr")]
-    public IsoBaseOneRate? NextFactor { get; init; }
+    public BaseOneRate? NextFactor { get; init; }
 
     /// <summary>
     /// Per annum ratio of interest paid to the principal amount of the financial instrument for a specific period of time.
@@ -198,7 +198,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMD8ag6EfCXwLUUylXgrQ")]
     [DisplayName("Interest Rate")]
     [IsoXmlTag("IntrstRate")]
-    public IsoPercentageRate? InterestRate { get; init; }
+    public PercentageRate? InterestRate { get; init; }
 
     /// <summary>
     /// Rate of return anticipated on a bond when held until maturity date.
@@ -206,7 +206,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMD_ag6EfCXwLUUylXgrQ")]
     [DisplayName("Yield To Maturity Rate")]
     [IsoXmlTag("YldToMtrtyRate")]
-    public IsoPercentageRate? YieldToMaturityRate { get; init; }
+    public PercentageRate? YieldToMaturityRate { get; init; }
 
     /// <summary>
     /// Interest rate applicable to the next interest payment period in relation to variable rate instruments.
@@ -214,7 +214,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMEA6g6EfCXwLUUylXgrQ")]
     [DisplayName("Next Interest Rate")]
     [IsoXmlTag("NxtIntrstRate")]
-    public IsoPercentageRate? NextInterestRate { get; init; }
+    public PercentageRate? NextInterestRate { get; init; }
 
     /// <summary>
     /// Specifies the reference rate for fixed income instruments where the price of the instrument is indexed to the price of an underlying benchmark.
@@ -222,7 +222,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMED6g6EfCXwLUUylXgrQ")]
     [DisplayName("Index Rate Basis")]
     [IsoXmlTag("IndxRateBsis")]
-    public IsoPercentageRate? IndexRateBasis { get; init; }
+    public PercentageRate? IndexRateBasis { get; init; }
 
     /// <summary>
     /// Number of the coupon attached to the physical security.
@@ -246,7 +246,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMEM6g6EfCXwLUUylXgrQ")]
     [DisplayName("Variable Rate Indicator")]
     [IsoXmlTag("VarblRateInd")]
-    public IsoYesNoIndicator? VariableRateIndicator { get; init; }
+    public YesNoIndicator? VariableRateIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the issuer has the right to pay the security prior to maturity.
@@ -254,7 +254,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMEP6g6EfCXwLUUylXgrQ")]
     [DisplayName("Callable Indicator")]
     [IsoXmlTag("CllblInd")]
-    public IsoYesNoIndicator? CallableIndicator { get; init; }
+    public YesNoIndicator? CallableIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the holder has the right to ask for redemption of the security prior to final maturity.
@@ -262,7 +262,7 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMES6g6EfCXwLUUylXgrQ")]
     [DisplayName("Putable Indicator")]
     [IsoXmlTag("PutblInd")]
-    public IsoYesNoIndicator? PutableIndicator { get; init; }
+    public YesNoIndicator? PutableIndicator { get; init; }
 
     /// <summary>
     /// Value of the price, for example, as a currency and value per unit or as a percentage.
@@ -334,5 +334,5 @@ public record FinancialInstrumentAttributes138
     [IsoId("_kPMEt6g6EfCXwLUUylXgrQ")]
     [DisplayName("Financial Instrument Attribute Additional Details")]
     [IsoXmlTag("FinInstrmAttrAddtlDtls")]
-    public IsoMax350Text? FinancialInstrumentAttributeAdditionalDetails { get; init; }
+    public Max350Text? FinancialInstrumentAttributeAdditionalDetails { get; init; }
 }

@@ -25,7 +25,7 @@ public record GroupHeader104
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the message was created.
@@ -34,7 +34,7 @@ public record GroupHeader104
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// Number of individual settlement requests contained in the message.
@@ -43,7 +43,7 @@ public record GroupHeader104
     [DisplayName("Number Of Settlement Requests")]
     [IsoXmlTag("NbOfSttlmReqs")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText NumberOfSettlementRequests { get; init; }
+    public required Max15NumericText NumberOfSettlementRequests { get; init; }
 
     /// <summary>
     /// Total of all individual amounts included in the message, irrespective of currencies.
@@ -52,7 +52,7 @@ public record GroupHeader104
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? ControlSum { get; init; }
+    public DecimalNumber? ControlSum { get; init; }
 
     /// <summary>
     /// Specifies the details on how the settlement of the transaction(s) between the instructing agent and the market infrastructure is completed.

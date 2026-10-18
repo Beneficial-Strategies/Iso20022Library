@@ -29,7 +29,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BeneficialStrategies.Iso20022.Primitives\BeneficialStrategies.Iso20022.Primitives.csproj" />
-    <Compile Include="..\Shared\PrimitiveAliases.cs" Link="PrimitiveAliases.cs" />
   </ItemGroup>
 
 </Project>

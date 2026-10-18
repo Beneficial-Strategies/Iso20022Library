@@ -40,5 +40,5 @@ public record TradeClearing3
     [DisplayName("Intra Group")]
     [IsoXmlTag("IntraGrp")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? IntraGroup { get; init; }
+    public TrueFalseIndicator? IntraGroup { get; init; }
 }

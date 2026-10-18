@@ -23,7 +23,7 @@ public record BondDerivative2
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public required IsoLEIIdentifier Issuer { get; init; }
+    public required LEIIdentifier Issuer { get; init; }
 
     /// <summary>
     /// Date of maturity of the underlying bond. This field applies to debt instruments with defined maturity.
@@ -32,7 +32,7 @@ public record BondDerivative2
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? MaturityDate { get; init; }
+    public DateOnly? MaturityDate { get; init; }
 
     /// <summary>
     /// Populated with the issuance date of the underlying bond.
@@ -41,5 +41,5 @@ public record BondDerivative2
     [DisplayName("Issuance Date")]
     [IsoXmlTag("IssncDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? IssuanceDate { get; init; }
+    public DateOnly? IssuanceDate { get; init; }
 }

@@ -32,7 +32,7 @@ public record CardPaymentTransactionDetails8
     [IsoXmlTag("ICCRltdData")]
     [IsoSimpleType(IsoSimpleType.Max1025Text)]
     [StringLength(maximumLength: 1025, MinimumLength = 1)]
-    public IsoMax1025Text? ICCRelatedData { get; init; }
+    public Max1025Text? ICCRelatedData { get; init; }
 
     /// <summary>
     /// Context of the card payment transaction.
@@ -50,7 +50,7 @@ public record CardPaymentTransactionDetails8
     [IsoXmlTag("MrchntCtgyCd")]
     [IsoSimpleType(IsoSimpleType.Min3Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 3)]
-    public IsoMin3Max4Text? MerchantCategoryCode { get; init; }
+    public Min3Max4Text? MerchantCategoryCode { get; init; }
 
     /// <summary>
     /// Local date and time of the transaction assigned by the POI (Point Of Interaction).
@@ -59,7 +59,7 @@ public record CardPaymentTransactionDetails8
     [DisplayName("Transaction Date Time")]
     [IsoXmlTag("TxDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? TransactionDateTime { get; init; }
+    public ISODateTime? TransactionDateTime { get; init; }
 
     /// <summary>
     /// Identification of a sale transaction assigned by the sale system.
@@ -69,7 +69,7 @@ public record CardPaymentTransactionDetails8
     [IsoXmlTag("SaleRefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SaleReferenceNumber { get; init; }
+    public Max35Text? SaleReferenceNumber { get; init; }
 
     /// <summary>
     /// Reason for representment of a card transaction.
@@ -95,5 +95,5 @@ public record CardPaymentTransactionDetails8
     [IsoXmlTag("TxRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TransactionReference { get; init; }
+    public Max35Text? TransactionReference { get; init; }
 }

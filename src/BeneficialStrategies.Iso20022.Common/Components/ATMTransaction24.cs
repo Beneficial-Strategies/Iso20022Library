@@ -32,7 +32,7 @@ public record ATMTransaction24
     [IsoXmlTag("RcncltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReconciliationIdentification { get; init; }
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Description of the transfer for the creditor.
@@ -42,7 +42,7 @@ public record ATMTransaction24
     [IsoXmlTag("CdtrLabl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CreditorLabel { get; init; }
+    public Max35Text? CreditorLabel { get; init; }
 
     /// <summary>
     /// Description of the transfer for the debtor.
@@ -52,7 +52,7 @@ public record ATMTransaction24
     [IsoXmlTag("DbtrLabl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DebtorLabel { get; init; }
+    public Max35Text? DebtorLabel { get; init; }
 
     /// <summary>
     /// Identifier of the approved transfer transaction for the bank.
@@ -62,7 +62,7 @@ public record ATMTransaction24
     [IsoXmlTag("TrfIdr")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? TransferIdentifier { get; init; }
+    public Max70Text? TransferIdentifier { get; init; }
 
     /// <summary>
     /// Reference of the payment.
@@ -72,7 +72,7 @@ public record ATMTransaction24
     [IsoXmlTag("PmtRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PaymentReference { get; init; }
+    public Max35Text? PaymentReference { get; init; }
 
     /// <summary>
     /// Result of the fund transfer request.
@@ -169,7 +169,7 @@ public record ATMTransaction24
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RequestedExecutionDate { get; init; }
+    public DateOnly? RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Proposed date of the execution of the transfer.
@@ -178,7 +178,7 @@ public record ATMTransaction24
     [DisplayName("Proposed Execution Date")]
     [IsoXmlTag("PropsdExctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ProposedExecutionDate { get; init; }
+    public DateOnly? ProposedExecutionDate { get; init; }
 
     /// <summary>
     /// Identifies the instant transfer program.
@@ -188,7 +188,7 @@ public record ATMTransaction24
     [IsoXmlTag("InstntTrfPrgm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? InstantTransferProgram { get; init; }
+    public Max35Text? InstantTransferProgram { get; init; }
 
     /// <summary>
     /// Information for reccurring transfer or standing orders.
@@ -213,7 +213,7 @@ public record ATMTransaction24
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
     [IsoSimpleType(IsoSimpleType.Max10000Binary)]
-    public IsoMax10000Binary? ICCRelatedData { get; init; }
+    public Max10000Binary? ICCRelatedData { get; init; }
 
     /// <summary>
     /// Maintenance command to perform on the ATM.

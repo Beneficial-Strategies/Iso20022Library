@@ -24,7 +24,7 @@ public record PaymentTransaction77
     [IsoXmlTag("RvslId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReversalIdentification { get; init; }
+    public Max35Text? ReversalIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original instructing party for the original instructed party, to unambiguously identify the original instruction.
@@ -34,7 +34,7 @@ public record PaymentTransaction77
     [IsoXmlTag("OrgnlInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.
@@ -44,7 +44,7 @@ public record PaymentTransaction77
     [IsoXmlTag("OrgnlEndToEndId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Amount of money, as provided in the original transaction, to be moved between the debtor and the creditor, before deduction of charges, expressed in the currency, as ordered by the original initiating party.

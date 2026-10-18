@@ -28,7 +28,7 @@ public record TimeFrame9
     /// </summary>
     [DisplayName("Other Time Frame Description")]
     [IsoXmlTag("OthrTmFrameDesc")]
-    public IsoMax350Text? OtherTimeFrameDescription { get; init; }
+    public Max350Text? OtherTimeFrameDescription { get; init; }
 
     /// <summary>
     /// Refer To Order Desk.
@@ -42,5 +42,5 @@ public record TimeFrame9
     /// </summary>
     [DisplayName("Trade Minus")]
     [IsoXmlTag("TMns")]
-    public IsoNumber? TradeMinus { get; init; }
+    public Number? TradeMinus { get; init; }
 }

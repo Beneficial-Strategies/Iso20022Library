@@ -22,7 +22,7 @@ public record FundSettlementParameters22
     [IsoId("70c0ab80-a06e-42fd-81b5-81e75e690336")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public IsoISODate? SettlementDate { get; init; }
+    public DateOnly? SettlementDate { get; init; }
 
     /// <summary>
     /// Place where the settlement of the transaction will take place.
@@ -46,7 +46,7 @@ public record FundSettlementParameters22
     [IsoId("a3b8ddcc-75d2-4590-a771-ef4c52a1e881")]
     [DisplayName("Securities Settlement System Identification")]
     [IsoXmlTag("SctiesSttlmSysId")]
-    public IsoMax35Text? SecuritiesSettlementSystemIdentification { get; init; }
+    public Max35Text? SecuritiesSettlementSystemIdentification { get; init; }
 
     /// <summary>
     /// Condition under which the order/trade is to be/was executed.

@@ -98,7 +98,7 @@ public record OriginalTransactionReference41
     /// </summary>
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
-    public IsoISODate? InterbankSettlementDate { get; init; }
+    public DateOnly? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Mandate Related Information.
@@ -140,7 +140,7 @@ public record OriginalTransactionReference41
     /// </summary>
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
-    public IsoISODate? RequestedCollectionDate { get; init; }
+    public DateOnly? RequestedCollectionDate { get; init; }
 
     /// <summary>
     /// Requested Execution Date.

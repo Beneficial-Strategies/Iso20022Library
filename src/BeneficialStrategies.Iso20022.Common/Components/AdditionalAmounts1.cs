@@ -33,7 +33,7 @@ public record AdditionalAmounts1
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Amount of one occurrence of the breakdown amount.
@@ -51,5 +51,5 @@ public record AdditionalAmounts1
     [IsoXmlTag("Labl")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Label { get; init; }
+    public Max70Text? Label { get; init; }
 }

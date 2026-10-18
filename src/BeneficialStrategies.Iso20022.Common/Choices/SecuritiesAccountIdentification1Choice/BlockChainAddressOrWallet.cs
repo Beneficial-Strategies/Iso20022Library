@@ -9,6 +9,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAccountIdentification1
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("BlckChainAdrOrWllt")]
-        public required IsoMax140Text Value { get; init; }
+        public required Max140Text Value { get; init; }
     }
 }

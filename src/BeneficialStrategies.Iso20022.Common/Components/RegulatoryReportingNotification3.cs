@@ -24,7 +24,7 @@ public record RegulatoryReportingNotification3
     [IsoXmlTag("TxNtfctnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransactionNotificationIdentification { get; init; }
+    public required Max35Text TransactionNotificationIdentification { get; init; }
 
     /// <summary>
     /// Party that legally owns the cash account.

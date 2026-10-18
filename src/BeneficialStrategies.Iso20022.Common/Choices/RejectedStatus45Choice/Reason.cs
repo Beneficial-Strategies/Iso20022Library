@@ -32,6 +32,6 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedStatus45Choice
         [IsoXmlTag("AddtlRsnInf")]
         [IsoSimpleType(IsoSimpleType.RestrictedFINMax210Text)]
         [StringLength(maximumLength: 210, MinimumLength = 1)]
-        public IsoRestrictedFINMax210Text? AdditionalReasonInformation { get; init; }
+        public RestrictedFINMax210Text? AdditionalReasonInformation { get; init; }
     }
 }

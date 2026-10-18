@@ -32,7 +32,7 @@ public record TransactionDetails76
     [IsoXmlTag("AcctSvcrTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountServicerTransactionIdentification { get; init; }
+    public Max35Text? AccountServicerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
@@ -42,7 +42,7 @@ public record TransactionDetails76
     [IsoXmlTag("MktInfrstrctrTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MarketInfrastructureTransactionIdentification { get; init; }
+    public Max35Text? MarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of the transaction assigned by the processor of the instruction other than the account owner the account servicer and the market infrastructure.
@@ -52,7 +52,7 @@ public record TransactionDetails76
     [IsoXmlTag("PrcrTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProcessorTransactionIdentification { get; init; }
+    public Max35Text? ProcessorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of a transaction that cannot be identified using a standard reference element present in the message.
@@ -62,7 +62,7 @@ public record TransactionDetails76
     [IsoXmlTag("OthrTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherTransactionIdentification { get; init; }
+    public Max35Text? OtherTransactionIdentification { get; init; }
 
     /// <summary>
     /// Party that legally owns the account.

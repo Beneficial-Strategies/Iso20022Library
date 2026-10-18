@@ -24,7 +24,7 @@ public record RegisteredContract8
     [IsoXmlTag("OrgnlCtrctRegnReq")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalContractRegistrationRequest { get; init; }
+    public Max35Text? OriginalContractRegistrationRequest { get; init; }
 
     /// <summary>
     /// Financial institution of the issuer of the contract.
@@ -125,7 +125,7 @@ public record RegisteredContract8
     [DisplayName("Estimated Date Indicator")]
     [IsoXmlTag("EstmtdDtInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator EstimatedDateIndicator { get; init; }
+    public required TrueFalseIndicator EstimatedDateIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether loan in which both the lender and the borrower are divisions of the same corporation or not.
@@ -136,7 +136,7 @@ public record RegisteredContract8
     [DisplayName("Inter Company Loan")]
     [IsoXmlTag("IntrCpnyLn")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator InterCompanyLoan { get; init; }
+    public required TrueFalseIndicator InterCompanyLoan { get; init; }
 
     /// <summary>
     /// Further information on the registered contract.
@@ -146,5 +146,5 @@ public record RegisteredContract8
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max1025Text)]
     [StringLength(maximumLength: 1025, MinimumLength = 1)]
-    public IsoMax1025Text? AdditionalInformation { get; init; }
+    public Max1025Text? AdditionalInformation { get; init; }
 }

@@ -32,7 +32,7 @@ public record FinancialInstrument36
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Name { get; init; }
+    public Max350Text? Name { get; init; }
 
     /// <summary>
     /// Account held in the name of a party that is not the name of the beneficial owner of the shares.

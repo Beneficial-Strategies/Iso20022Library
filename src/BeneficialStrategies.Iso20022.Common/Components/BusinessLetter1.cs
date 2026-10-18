@@ -30,7 +30,7 @@ public record BusinessLetter1
     [IsoXmlTag("ApplCntxt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ApplicationContext { get; init; }
+    public Max35Text? ApplicationContext { get; init; }
 
     /// <summary>
     /// Unambiguous identifier for this letter.
@@ -47,7 +47,7 @@ public record BusinessLetter1
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate Date { get; init; }
+    public required DateOnly Date { get; init; }
 
     /// <summary>
     /// Identifier of a related letter.
@@ -71,7 +71,7 @@ public record BusinessLetter1
     [IsoId("_OTgzMjA5-AOSNFX-8224491")]
     [DisplayName("Content Identifier")]
     [IsoXmlTag("CnttIdr")]
-    public SimpleValueList<IsoMax35Text> ContentIdentifier { get; init; } = [];
+    public SimpleValueList<Max35Text> ContentIdentifier { get; init; } = [];
 
     /// <summary>
     /// Urgency or order of importance that the originator would like the recipient of the business letter to apply to the processing of the letter.
@@ -173,7 +173,7 @@ public record BusinessLetter1
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max2000Text)]
     [StringLength(maximumLength: 2000, MinimumLength = 1)]
-    public IsoMax2000Text? AdditionalInformation { get; init; }
+    public Max2000Text? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Free form information unrelated to the message for example advertising or a service notice.
@@ -183,7 +183,7 @@ public record BusinessLetter1
     [IsoXmlTag("Ntce")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Notice { get; init; }
+    public Max350Text? Notice { get; init; }
 
     /// <summary>
     /// Status of referenced messages or letters.

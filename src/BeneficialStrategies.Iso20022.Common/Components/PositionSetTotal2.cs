@@ -35,7 +35,7 @@ public record PositionSetTotal2
     /// </summary>
     [DisplayName("Number Of Trades")]
     [IsoXmlTag("NbOfTrds")]
-    public IsoMax20PositiveNumber? NumberOfTrades { get; init; }
+    public Max20PositiveNumber? NumberOfTrades { get; init; }
 
     /// <summary>
     /// Other Payment Amount.

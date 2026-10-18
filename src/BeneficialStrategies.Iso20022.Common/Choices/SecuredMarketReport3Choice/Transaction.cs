@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuredMarketReport3Choice
         [DisplayName("Branch Identification")]
         [IsoXmlTag("BrnchId")]
         [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-        public IsoLEIIdentifier? BranchIdentification { get; init; }
+        public LEIIdentifier? BranchIdentification { get; init; }
 
         /// <summary>
         /// Unique transaction identifier will be created at the time a transaction is first executed, shared with all registered entities and counterparties involved in the transaction, and used to track that particular transaction during its lifetime.
@@ -43,7 +43,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuredMarketReport3Choice
         [IsoXmlTag("UnqTxIdr")]
         [IsoSimpleType(IsoSimpleType.Max105Text)]
         [StringLength(maximumLength: 105, MinimumLength = 1)]
-        public IsoMax105Text? UniqueTransactionIdentifier { get; init; }
+        public Max105Text? UniqueTransactionIdentifier { get; init; }
 
         /// <summary>
         /// Internal unique transaction identifier used by the reporting agent for each transaction.
@@ -53,7 +53,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuredMarketReport3Choice
         [IsoXmlTag("PrtryTxId")]
         [IsoSimpleType(IsoSimpleType.Max105Text)]
         [StringLength(maximumLength: 105, MinimumLength = 1)]
-        public required IsoMax105Text ProprietaryTransactionIdentification { get; init; }
+        public required Max105Text ProprietaryTransactionIdentification { get; init; }
 
         /// <summary>
         /// Internal unique proprietary transaction identifier as assigned by the counterparty of the reporting agent for each transaction.
@@ -63,7 +63,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuredMarketReport3Choice
         [IsoXmlTag("CtrPtyPrtryTxId")]
         [IsoSimpleType(IsoSimpleType.Max105Text)]
         [StringLength(maximumLength: 105, MinimumLength = 1)]
-        public IsoMax105Text? CounterpartyProprietaryTransactionIdentification { get; init; }
+        public Max105Text? CounterpartyProprietaryTransactionIdentification { get; init; }
 
         /// <summary>
         /// Identification of the counterparty of the reporting agent for the reported transaction.
@@ -80,7 +80,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuredMarketReport3Choice
         [DisplayName("Triparty Agent Identification")]
         [IsoXmlTag("TrptyAgtId")]
         [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-        public IsoLEIIdentifier? TripartyAgentIdentification { get; init; }
+        public LEIIdentifier? TripartyAgentIdentification { get; init; }
 
         /// <summary>
         /// Date and time on which the parties entered into the reported transaction.
@@ -103,7 +103,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuredMarketReport3Choice
         [DisplayName("Settlement Date")]
         [IsoXmlTag("SttlmDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate SettlementDate { get; init; }
+        public required DateOnly SettlementDate { get; init; }
 
         /// <summary>
         /// Date on which the repurchase will be executed, that is the date on which the amount of money is due to be returned or received versus the asset pledged or received as collateral.
@@ -112,7 +112,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuredMarketReport3Choice
         [DisplayName("Maturity Date")]
         [IsoXmlTag("MtrtyDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate MaturityDate { get; init; }
+        public required DateOnly MaturityDate { get; init; }
 
         /// <summary>
         /// Defines whether the transaction is a cash borrowing or cash lending transaction.

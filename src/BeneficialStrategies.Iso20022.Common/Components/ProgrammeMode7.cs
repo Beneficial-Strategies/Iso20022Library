@@ -22,7 +22,7 @@ public record ProgrammeMode7
     [IsoId("_Jy0jsSHxEfCkq6-p7S3J1Q")]
     [DisplayName("Proposed Identification")]
     [IsoXmlTag("PropsdId")]
-    public SimpleValueList<IsoMax35Text> ProposedIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> ProposedIdentification { get; init; } = [];
 
     /// <summary>
     /// Identification of Programme, network, or brand actually applied to the transaction.
@@ -30,7 +30,7 @@ public record ProgrammeMode7
     [IsoId("_Jy0jsyHxEfCkq6-p7S3J1Q")]
     [DisplayName("Applied Identification")]
     [IsoXmlTag("ApldId")]
-    public IsoMax35Text? AppliedIdentification { get; init; }
+    public Max35Text? AppliedIdentification { get; init; }
 
     /// <summary>
     /// Identification of the programme, network, or brand.
@@ -46,7 +46,7 @@ public record ProgrammeMode7
     [IsoId("_Ty4sMkVYEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -54,5 +54,5 @@ public record ProgrammeMode7
     [IsoId("_Ty4sM0VYEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

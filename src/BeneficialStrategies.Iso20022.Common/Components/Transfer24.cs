@@ -31,7 +31,7 @@ public record Transfer24
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RequestedSettlementDate { get; init; }
+    public DateOnly? RequestedSettlementDate { get; init; }
 
     /// <summary>
     /// Date and time at which the securities were exchanged at the International Central Securities Depository (ICSD) or Central Securities Depository (CSD).
@@ -90,7 +90,7 @@ public record Transfer24
     [DisplayName("Portfolio Transfer Out Rate")]
     [IsoXmlTag("PrtflTrfOutRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? PortfolioTransferOutRate { get; init; }
+    public PercentageRate? PortfolioTransferOutRate { get; init; }
 
     /// <summary>
     /// Indicates the rounding direction applied to nearest unit.
@@ -115,7 +115,7 @@ public record Transfer24
     [DisplayName("Own Account Transfer Indicator")]
     [IsoXmlTag("OwnAcctTrfInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? OwnAccountTransferIndicator { get; init; }
+    public YesNoIndicator? OwnAccountTransferIndicator { get; init; }
 
     /// <summary>
     /// Additional specific settlement information for non-regulated traded funds.
@@ -125,7 +125,7 @@ public record Transfer24
     [IsoXmlTag("NonStdSttlmInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? NonStandardSettlementInformation { get; init; }
+    public Max350Text? NonStandardSettlementInformation { get; init; }
 
     /// <summary>
     /// Party that receives securities from the delivering agent via the place of settlement, for example, securities central depository.

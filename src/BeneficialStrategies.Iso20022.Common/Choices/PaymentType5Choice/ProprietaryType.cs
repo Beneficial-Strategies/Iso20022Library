@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentType5Choice
         [IsoXmlTag("PrtryTp")]
         [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
         [StringLength(maximumLength: 4, MinimumLength = 1)]
-        public required IsoMax4AlphaNumericText Value { get; init; }
+        public required Max4AlphaNumericText Value { get; init; }
     }
 }

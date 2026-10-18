@@ -63,7 +63,7 @@ public record PartyIdentificationAndAccount223
     /// </summary>
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
-    public IsoLEIIdentifier? LEI { get; init; }
+    public LEIIdentifier? LEI { get; init; }
 
     /// <summary>
     /// Tax Account.

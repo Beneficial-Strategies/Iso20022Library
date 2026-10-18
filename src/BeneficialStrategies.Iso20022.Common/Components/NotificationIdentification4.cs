@@ -24,7 +24,7 @@ public record NotificationIdentification4
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax16Text Identification { get; init; }
+    public required RestrictedFINXMax16Text Identification { get; init; }
 
     /// <summary>
     /// Date and time at which the last notification document (message) was created by the sender.

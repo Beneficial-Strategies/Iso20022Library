@@ -24,7 +24,7 @@ public record RequestGroupInformation1
     [IsoXmlTag("GrpId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text GroupIdentification { get; init; }
+    public required Max35Text GroupIdentification { get; init; }
 
     /// <summary>
     /// Date and time on which the invoice financing request was created.
@@ -33,7 +33,7 @@ public record RequestGroupInformation1
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// User identification or any user key that allows to check if the financing requestor is allowed to ask for invoice financing.||Usage: the content is not of a technical nature, but reflects the organisational structure at the requesting side.|The authorisation element can typically be used in case the financing requestor acts on behalf of one or more suppliers.
@@ -53,7 +53,7 @@ public record RequestGroupInformation1
     [DisplayName("Number Of Invoice Requests")]
     [IsoXmlTag("NbOfInvcReqs")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public IsoMax15NumericText? NumberOfInvoiceRequests { get; init; }
+    public Max15NumericText? NumberOfInvoiceRequests { get; init; }
 
     /// <summary>
     /// Total amount of the bulk invoice financing request. It is composed by the sum of the total amounts of all invoices included in the financing request.
@@ -79,7 +79,7 @@ public record RequestGroupInformation1
     [IsoXmlTag("FincgAgrmt")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? FinancingAgreement { get; init; }
+    public Max350Text? FinancingAgreement { get; init; }
 
     /// <summary>
     /// Party that requests the invoice financing, on behalf of a creditor.

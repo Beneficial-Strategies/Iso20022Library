@@ -24,7 +24,7 @@ public record DocumentToSend1
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text Type { get; init; }
+    public required Max140Text Type { get; init; }
 
     /// <summary>
     /// Party that should receive the document.
@@ -50,5 +50,5 @@ public record DocumentToSend1
     [IsoXmlTag("XtndedMtdOfTrnsmssn")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoExtended350Code ExtendedMethodOfTransmission { get; init; }
+    public required Extended350Code ExtendedMethodOfTransmission { get; init; }
 }

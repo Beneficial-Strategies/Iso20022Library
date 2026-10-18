@@ -24,7 +24,7 @@ public record VehicleRentalCompany1
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Name { get; init; }
+    public Max70Text? Name { get; init; }
 
     /// <summary>
     /// Identification of the vehicle rental company.
@@ -58,7 +58,7 @@ public record VehicleRentalCompany1
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
     [IsoSimpleType(IsoSimpleType.Min2Max3AlphaText)]
-    public IsoMin2Max3AlphaText? Country { get; init; }
+    public Min2Max3AlphaText? Country { get; init; }
 
     /// <summary>
     /// Type of vehicle rental activity.
@@ -76,5 +76,5 @@ public record VehicleRentalCompany1
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 }

@@ -22,7 +22,7 @@ public record FleetVehicleData1
     [IsoId("_MPx7gUYmEfCJpvfyM9roFQ")]
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
-    public IsoMax35NumericText? Number { get; init; }
+    public Max35NumericText? Number { get; init; }
 
     /// <summary>
     /// Number that uniquely identifies the vehicle as assigned by the vehicle manufacturer.
@@ -30,7 +30,7 @@ public record FleetVehicleData1
     [IsoId("_MPx7g0YmEfCJpvfyM9roFQ")]
     [DisplayName("Identification Number")]
     [IsoXmlTag("IdNb")]
-    public IsoMax35NumericText? IdentificationNumber { get; init; }
+    public Max35NumericText? IdentificationNumber { get; init; }
 
     /// <summary>
     /// Fleet number.
@@ -38,7 +38,7 @@ public record FleetVehicleData1
     [IsoId("_MPx7hUYmEfCJpvfyM9roFQ")]
     [DisplayName("Fleet Number")]
     [IsoXmlTag("FleetNb")]
-    public IsoMax10Text? FleetNumber { get; init; }
+    public Max10Text? FleetNumber { get; init; }
 
     /// <summary>
     /// Sub fleet number.
@@ -46,7 +46,7 @@ public record FleetVehicleData1
     [IsoId("_MPx7h0YmEfCJpvfyM9roFQ")]
     [DisplayName("Sub Fleet Number")]
     [IsoXmlTag("SubFleetNb")]
-    public IsoMax35Text? SubFleetNumber { get; init; }
+    public Max35Text? SubFleetNumber { get; init; }
 
     /// <summary>
     /// Identification of the unit number of the vehicle in the fleet.
@@ -54,7 +54,7 @@ public record FleetVehicleData1
     [IsoId("_MPx7iUYmEfCJpvfyM9roFQ")]
     [DisplayName("Unit Number")]
     [IsoXmlTag("UnitNb")]
-    public IsoMax35NumericText? UnitNumber { get; init; }
+    public Max35NumericText? UnitNumber { get; init; }
 
     /// <summary>
     /// Identification number assigned to the trailer.
@@ -62,7 +62,7 @@ public record FleetVehicleData1
     [IsoId("_MPx7i0YmEfCJpvfyM9roFQ")]
     [DisplayName("Trailer Number")]
     [IsoXmlTag("TrlrNb")]
-    public IsoMax35NumericText? TrailerNumber { get; init; }
+    public Max35NumericText? TrailerNumber { get; init; }
 
     /// <summary>
     /// Registration tag of the vehicle.
@@ -70,7 +70,7 @@ public record FleetVehicleData1
     [IsoId("_MPx7jUYmEfCJpvfyM9roFQ")]
     [DisplayName("Tag")]
     [IsoXmlTag("Tag")]
-    public IsoMax35Text? Tag { get; init; }
+    public Max35Text? Tag { get; init; }
 
     /// <summary>
     /// Entry mode of the registration tag.
@@ -86,7 +86,7 @@ public record FleetVehicleData1
     [IsoId("_MPx7kUYmEfCJpvfyM9roFQ")]
     [DisplayName("Replacement")]
     [IsoXmlTag("Rplcmnt")]
-    public IsoTrueFalseIndicator? Replacement { get; init; }
+    public TrueFalseIndicator? Replacement { get; init; }
 
     /// <summary>
     /// Odometer reading value indicating the distance travelled by the vehicle.
@@ -94,7 +94,7 @@ public record FleetVehicleData1
     [IsoId("_MPx7k0YmEfCJpvfyM9roFQ")]
     [DisplayName("Odometer")]
     [IsoXmlTag("Odmtr")]
-    public IsoDecimalNumber? Odometer { get; init; }
+    public DecimalNumber? Odometer { get; init; }
 
     /// <summary>
     /// Hubometer reading value indicating the distance travelled by the trailer.
@@ -102,7 +102,7 @@ public record FleetVehicleData1
     [IsoId("_MPx7lUYmEfCJpvfyM9roFQ")]
     [DisplayName("Hubometer")]
     [IsoXmlTag("Hbmtr")]
-    public IsoDecimalNumber? Hubometer { get; init; }
+    public DecimalNumber? Hubometer { get; init; }
 
     /// <summary>
     /// Identification assigned to the vehicle related to maintenance.
@@ -110,7 +110,7 @@ public record FleetVehicleData1
     [IsoId("_MPx7l0YmEfCJpvfyM9roFQ")]
     [DisplayName("Maintenance Identification")]
     [IsoXmlTag("MntncId")]
-    public IsoMax35Text? MaintenanceIdentification { get; init; }
+    public Max35Text? MaintenanceIdentification { get; init; }
 
     /// <summary>
     /// Data captured from on board diagnostic systems.
@@ -134,7 +134,7 @@ public record FleetVehicleData1
     [IsoId("__sCHEkYlEfCJpvfyM9roFQ")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -142,5 +142,5 @@ public record FleetVehicleData1
     [IsoId("__sCHE0YlEfCJpvfyM9roFQ")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

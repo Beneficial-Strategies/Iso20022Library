@@ -22,7 +22,7 @@ public record CardPaymentTransaction146
     [IsoId("_NHHwdZ_9EfC4Q_xhaK1hdQ")]
     [DisplayName("Transaction Capture")]
     [IsoXmlTag("TxCaptr")]
-    public required IsoTrueFalseIndicator TransactionCapture { get; init; }
+    public required TrueFalseIndicator TransactionCapture { get; init; }
 
     /// <summary>
     /// Type of transaction being undertaken for the main service.
@@ -54,7 +54,7 @@ public record CardPaymentTransaction146
     [IsoId("_NHHwjZ_9EfC4Q_xhaK1hdQ")]
     [DisplayName("Last Transaction Flag")]
     [IsoXmlTag("LastTxFlg")]
-    public IsoTrueFalseIndicator? LastTransactionFlag { get; init; }
+    public TrueFalseIndicator? LastTransactionFlag { get; init; }
 
     /// <summary>
     /// Category code conform to ISO 18245, related to the type of services or goods the merchant provides for the transaction.
@@ -62,7 +62,7 @@ public record CardPaymentTransaction146
     [IsoId("_NHHwk5_9EfC4Q_xhaK1hdQ")]
     [DisplayName("Merchant Category Code")]
     [IsoXmlTag("MrchntCtgyCd")]
-    public IsoMin3Max4Text? MerchantCategoryCode { get; init; }
+    public Min3Max4Text? MerchantCategoryCode { get; init; }
 
     /// <summary>
     /// Indicates whether the consent of the customer was explicitly obtained for a given service.
@@ -70,7 +70,7 @@ public record CardPaymentTransaction146
     [IsoId("_NHHwmZ_9EfC4Q_xhaK1hdQ")]
     [DisplayName("Customer Consent")]
     [IsoXmlTag("CstmrCnsnt")]
-    public IsoTrueFalseIndicator? CustomerConsent { get; init; }
+    public TrueFalseIndicator? CustomerConsent { get; init; }
 
     /// <summary>
     /// Specifies the card program proposed by a retailer to a cardholder.
@@ -78,7 +78,7 @@ public record CardPaymentTransaction146
     [IsoId("_NHHwn5_9EfC4Q_xhaK1hdQ")]
     [DisplayName("Card Programme Proposed")]
     [IsoXmlTag("CardPrgrmmPropsd")]
-    public SimpleValueList<IsoMax35Text> CardProgrammeProposed { get; init; } = [];
+    public SimpleValueList<Max35Text> CardProgrammeProposed { get; init; } = [];
 
     /// <summary>
     /// Specifies the card program actually selected by the cardholder.
@@ -86,7 +86,7 @@ public record CardPaymentTransaction146
     [IsoId("_NHHwpZ_9EfC4Q_xhaK1hdQ")]
     [DisplayName("Card Programme Applied")]
     [IsoXmlTag("CardPrgrmmApld")]
-    public IsoMax35Text? CardProgrammeApplied { get; init; }
+    public Max35Text? CardProgrammeApplied { get; init; }
 
     /// <summary>
     /// Global reference of the sale transaction for the sale system.
@@ -94,7 +94,7 @@ public record CardPaymentTransaction146
     [IsoId("_NHHwq5_9EfC4Q_xhaK1hdQ")]
     [DisplayName("Sale Reference Identification")]
     [IsoXmlTag("SaleRefId")]
-    public IsoMax35Text? SaleReferenceIdentification { get; init; }
+    public Max35Text? SaleReferenceIdentification { get; init; }
 
     /// <summary>
     /// Identification of the transaction assigned by the POI (Point Of Interaction).
@@ -118,7 +118,7 @@ public record CardPaymentTransaction146
     [IsoId("_NHHwvZ_9EfC4Q_xhaK1hdQ")]
     [DisplayName("Initiator Transaction Identification")]
     [IsoXmlTag("InitrTxId")]
-    public IsoMax35Text? InitiatorTransactionIdentification { get; init; }
+    public Max35Text? InitiatorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification of the reconciliation period between the acceptor and the acquirer.
@@ -126,7 +126,7 @@ public record CardPaymentTransaction146
     [IsoId("_NHHww5_9EfC4Q_xhaK1hdQ")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
-    public IsoMax35Text? ReconciliationIdentification { get; init; }
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Identification, given by the Issuer, of the transaction processed with the cardholder that legitimates this merchant initiated transaction.
@@ -134,7 +134,7 @@ public record CardPaymentTransaction146
     [IsoId("_NHHwyZ_9EfC4Q_xhaK1hdQ")]
     [DisplayName("Issuer CIT Identification")]
     [IsoXmlTag("IssrCITId")]
-    public IsoMax140Text? IssuerCITIdentification { get; init; }
+    public Max140Text? IssuerCITIdentification { get; init; }
 
     /// <summary>
     /// Identification, given by the merchant, of the transaction processed with the cardholder that legitimates this merchant initiated transaction.
@@ -142,7 +142,7 @@ public record CardPaymentTransaction146
     [IsoId("_NHHwz5_9EfC4Q_xhaK1hdQ")]
     [DisplayName("Merchant CIT Identification")]
     [IsoXmlTag("MrchntCITId")]
-    public IsoMax140Text? MerchantCITIdentification { get; init; }
+    public Max140Text? MerchantCITIdentification { get; init; }
 
     /// <summary>
     /// Details of the transaction.
@@ -158,7 +158,7 @@ public record CardPaymentTransaction146
     [IsoId("_NHHw25_9EfC4Q_xhaK1hdQ")]
     [DisplayName("Merchant Reference Data")]
     [IsoXmlTag("MrchntRefData")]
-    public IsoMax70Text? MerchantReferenceData { get; init; }
+    public Max70Text? MerchantReferenceData { get; init; }
 
     /// <summary>
     /// Information relevant to the account where the money is taken from.
@@ -182,7 +182,7 @@ public record CardPaymentTransaction146
     [IsoId("_NHHw7Z_9EfC4Q_xhaK1hdQ")]
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
-    public SimpleValueList<IsoMax70Text> AdditionalTransactionData { get; init; } = [];
+    public SimpleValueList<Max70Text> AdditionalTransactionData { get; init; } = [];
 
     /// <summary>
     /// Message from a merchant to be displayed on the cardholder bank statement.

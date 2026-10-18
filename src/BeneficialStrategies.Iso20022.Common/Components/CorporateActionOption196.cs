@@ -56,7 +56,7 @@ public record CorporateActionOption196
     [IsoXmlTag("SfkpgAcct")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SafekeepingAccount { get; init; }
+    public Max35Text? SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Blockchain address or wallet where digital assets are maintained. This is the equivalent of safekeeping account for digital assets.
@@ -66,7 +66,7 @@ public record CorporateActionOption196
     [IsoXmlTag("BlckChainAdrOrWllt")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? BlockChainAddressOrWallet { get; init; }
+    public Max140Text? BlockChainAddressOrWallet { get; init; }
 
     /// <summary>
     /// Account on which a securities entry is made.
@@ -147,5 +147,5 @@ public record CorporateActionOption196
     [DisplayName("Solicitation Dealer Fee Indicator")]
     [IsoXmlTag("SlctnDealrFeeInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? SolicitationDealerFeeIndicator { get; init; }
+    public YesNoIndicator? SolicitationDealerFeeIndicator { get; init; }
 }

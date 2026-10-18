@@ -21,12 +21,12 @@ public record UniqueTransactionIdentifier3
     /// </summary>
     [DisplayName("Prior Unique Transaction Identifier")]
     [IsoXmlTag("PrrUnqTxIdr")]
-    public ValueList<IsoUTIIdentifier> PriorUniqueTransactionIdentifier { get; init; } = [];
+    public ValueList<UTIIdentifier> PriorUniqueTransactionIdentifier { get; init; } = [];
 
     /// <summary>
     /// Unique Transaction Identifier.
     /// </summary>
     [DisplayName("Unique Transaction Identifier")]
     [IsoXmlTag("UnqTxIdr")]
-    public required IsoUTIIdentifier UniqueTransactionIdentifier { get; init; }
+    public required UTIIdentifier UniqueTransactionIdentifier { get; init; }
 }

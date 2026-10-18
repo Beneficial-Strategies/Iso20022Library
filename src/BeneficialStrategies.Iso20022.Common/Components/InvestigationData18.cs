@@ -22,7 +22,7 @@ public record InvestigationData18
     [IsoId("ffc0f974-339c-48ae-964c-36e424b25921")]
     [DisplayName("Original Investigation Sequence")]
     [IsoXmlTag("OrgnlInvstgtnSeq")]
-    public IsoMax3Number? OriginalInvestigationSequence { get; init; }
+    public Max3Number? OriginalInvestigationSequence { get; init; }
 
     /// <summary>
     /// Original investigation reason as provided in the investigation request.

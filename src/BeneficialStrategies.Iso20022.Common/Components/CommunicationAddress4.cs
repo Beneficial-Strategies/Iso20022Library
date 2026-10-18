@@ -24,7 +24,7 @@ public record CommunicationAddress4
     [IsoXmlTag("EmailAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? EmailAddress { get; init; }
+    public Max256Text? EmailAddress { get; init; }
 
     /// <summary>
     /// Address for the Universal Resource Locator (URL), eg, used over the www (HTTP) service.
@@ -34,5 +34,5 @@ public record CommunicationAddress4
     [IsoXmlTag("URLAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? URLAddress { get; init; }
+    public Max256Text? URLAddress { get; init; }
 }

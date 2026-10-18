@@ -21,14 +21,14 @@ public record TransactionTypeAndAdditionalParameters21
     /// </summary>
     [DisplayName("Common Identification")]
     [IsoXmlTag("CmonId")]
-    public IsoMax35Text? CommonIdentification { get; init; }
+    public Max35Text? CommonIdentification { get; init; }
 
     /// <summary>
     /// Nonce Identification.
     /// </summary>
     [DisplayName("Nonce Identification")]
     [IsoXmlTag("NonceId")]
-    public IsoMax35Text? NonceIdentification { get; init; }
+    public Max35Text? NonceIdentification { get; init; }
 
     /// <summary>
     /// Payment.
@@ -42,7 +42,7 @@ public record TransactionTypeAndAdditionalParameters21
     /// </summary>
     [DisplayName("Reconciliation Indicator")]
     [IsoXmlTag("RcncltnInd")]
-    public IsoYesNoIndicator? ReconciliationIndicator { get; init; }
+    public YesNoIndicator? ReconciliationIndicator { get; init; }
 
     /// <summary>
     /// Securities Financing Transaction Type.

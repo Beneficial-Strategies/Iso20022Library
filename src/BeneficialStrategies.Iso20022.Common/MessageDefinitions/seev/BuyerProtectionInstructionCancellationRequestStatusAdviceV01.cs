@@ -87,7 +87,7 @@ public record BuyerProtectionInstructionCancellationRequestStatusAdviceV01 : IOu
     [IsoXmlTag("PrcrTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProcessorTransactionIdentification { get; init; }
+    public Max35Text? ProcessorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Related Settlement Instruction.

@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ExecutionType1Choice
         /// </summary>
         [IsoXmlTag("Tm")]
         [IsoSimpleType(IsoSimpleType.ISOTime)]
-        public required IsoISOTime Value { get; init; }
+        public required ISOTime Value { get; init; }
     }
 }

@@ -24,7 +24,7 @@ public record BillingTaxIdentification2
     [IsoXmlTag("VATRegnNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? VATRegistrationNumber { get; init; }
+    public Max35Text? VATRegistrationNumber { get; init; }
 
     /// <summary>
     /// Tax registration number (TRN) as provided by the tax region’s local taxing authority.
@@ -34,7 +34,7 @@ public record BillingTaxIdentification2
     [IsoXmlTag("TaxRegnNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TaxRegistrationNumber { get; init; }
+    public Max35Text? TaxRegistrationNumber { get; init; }
 
     /// <summary>
     /// Specifies financial institution&apos;s contact details for the tax region. This contact works for the financial institution, not the tax region.

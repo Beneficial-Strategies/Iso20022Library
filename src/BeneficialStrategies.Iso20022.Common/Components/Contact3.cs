@@ -23,7 +23,7 @@ public record Contact3
     [DisplayName("Central Phone Number")]
     [IsoXmlTag("CntrlPhneNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? CentralPhoneNumber { get; init; }
+    public PhoneNumber? CentralPhoneNumber { get; init; }
 
     /// <summary>
     /// Property phone number for the contact.
@@ -32,7 +32,7 @@ public record Contact3
     [DisplayName("Property Phone Number")]
     [IsoXmlTag("PrprtyPhneNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? PropertyPhoneNumber { get; init; }
+    public PhoneNumber? PropertyPhoneNumber { get; init; }
 
     /// <summary>
     /// Toll-free phone number for the contact.
@@ -41,7 +41,7 @@ public record Contact3
     [DisplayName("Toll Free Phone Number")]
     [IsoXmlTag("TollFreePhneNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? TollFreePhoneNumber { get; init; }
+    public PhoneNumber? TollFreePhoneNumber { get; init; }
 
     /// <summary>
     /// Email address of contact.
@@ -51,7 +51,7 @@ public record Contact3
     [IsoXmlTag("Email")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Email { get; init; }
+    public Max256Text? Email { get; init; }
 
     /// <summary>
     /// Fax phone number.
@@ -60,7 +60,7 @@ public record Contact3
     [DisplayName("Fax Number")]
     [IsoXmlTag("FaxNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? FaxNumber { get; init; }
+    public PhoneNumber? FaxNumber { get; init; }
 
     /// <summary>
     /// Universal Resource Locator (URL) address.
@@ -70,7 +70,7 @@ public record Contact3
     [IsoXmlTag("URLAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? URLAddress { get; init; }
+    public Max256Text? URLAddress { get; init; }
 
     /// <summary>
     /// Language of the contact.

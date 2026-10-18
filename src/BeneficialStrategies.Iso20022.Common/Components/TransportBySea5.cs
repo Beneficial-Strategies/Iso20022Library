@@ -24,7 +24,7 @@ public record TransportBySea5
     [IsoXmlTag("PortOfLoadng")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text PortOfLoading { get; init; }
+    public required Max35Text PortOfLoading { get; init; }
 
     /// <summary>
     /// Identifies the port where the goods are discharged.
@@ -34,7 +34,7 @@ public record TransportBySea5
     [IsoXmlTag("PortOfDschrge")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text PortOfDischarge { get; init; }
+    public required Max35Text PortOfDischarge { get; init; }
 
     /// <summary>
     /// Name of a vessel.
@@ -44,7 +44,7 @@ public record TransportBySea5
     [IsoXmlTag("VsslNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? VesselName { get; init; }
+    public Max70Text? VesselName { get; init; }
 
     /// <summary>
     /// Identifies the party that is responsible for the conveyance of the goods from one place to another.
@@ -54,7 +54,7 @@ public record TransportBySea5
     [IsoXmlTag("SeaCrrierNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? SeaCarrierName { get; init; }
+    public Max70Text? SeaCarrierName { get; init; }
 
     /// <summary>
     /// Country in which the carrier of the goods, for example, shipping company, is located or registered.
@@ -72,7 +72,7 @@ public record TransportBySea5
     [IsoXmlTag("CrrierAgtNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? CarrierAgentName { get; init; }
+    public Max70Text? CarrierAgentName { get; init; }
 
     /// <summary>
     /// Country of registration of the carrier&apos;s (for example, shipping company&apos;s) agent that acts on behalf of the carrier and may be the issuer of transport documents relating to the underlying shipment.
@@ -90,7 +90,7 @@ public record TransportBySea5
     [IsoXmlTag("MstrNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? MasterName { get; init; }
+    public Max70Text? MasterName { get; init; }
 
     /// <summary>
     /// Name of the company or individual that signs a charter party bill of lading that evidences shipment of the goods from a port of loading to a port of discharge and acts in the capacity of charterer.
@@ -100,7 +100,7 @@ public record TransportBySea5
     [IsoXmlTag("ChrtrrNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? ChartererName { get; init; }
+    public Max70Text? ChartererName { get; init; }
 
     /// <summary>
     /// Name of the company or individual that signs a charter party bill of lading that evidences shipment of the goods from a port of loading to a port of discharge and acts in the capacity of owner;.
@@ -110,7 +110,7 @@ public record TransportBySea5
     [IsoXmlTag("OwnrNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? OwnerName { get; init; }
+    public Max70Text? OwnerName { get; init; }
 
     /// <summary>
     /// International Maritime Organisation identification of a ship. The IMO identification number scheme was introduced in 1987 as a measure aimed at enhancing maritime safety and pollution prevention and to facilitate the prevention of maritime fraud. It assigns a permanent number to each vessel for identification purposes. This number remains unchanged upon transfer of the vessel to other flag(s) and is inserted in all vessel certificates. The IMO identification number is made up of the three letters &quot;IMO&quot; followed by a seven-digit number assigned to all vessels by IHS FairPlay (formerly known as Lloyd&apos;s Register-Fairplay). This is a unique seven digit number that is assigned to vessels and aids banks in determining whether a vessel is subject to an order that would not permit a bank to handle a certain transaction under local or international laws.
@@ -119,7 +119,7 @@ public record TransportBySea5
     [DisplayName("IMO Number")]
     [IsoXmlTag("IMONb")]
     [IsoSimpleType(IsoSimpleType.Exact7NumericText)]
-    public IsoExact7NumericText? IMONumber { get; init; }
+    public Exact7NumericText? IMONumber { get; init; }
 
     /// <summary>
     /// Identifies the voyage by sea.
@@ -129,5 +129,5 @@ public record TransportBySea5
     [IsoXmlTag("VygNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? VoyageNumber { get; init; }
+    public Max35Text? VoyageNumber { get; init; }
 }

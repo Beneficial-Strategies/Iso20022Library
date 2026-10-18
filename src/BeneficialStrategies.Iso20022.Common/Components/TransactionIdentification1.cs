@@ -24,5 +24,5 @@ public record TransactionIdentification1
     [IsoXmlTag("MktInfrstrctrTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINMax35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoRestrictedFINMax35Text MarketInfrastructureTransactionIdentification { get; init; }
+    public required RestrictedFINMax35Text MarketInfrastructureTransactionIdentification { get; init; }
 }

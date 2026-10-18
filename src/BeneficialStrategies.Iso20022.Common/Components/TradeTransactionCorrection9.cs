@@ -24,7 +24,7 @@ public record TradeTransactionCorrection9
     [IsoXmlTag("TechRcrdId")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? TechnicalRecordIdentification { get; init; }
+    public Max140Text? TechnicalRecordIdentification { get; init; }
 
     /// <summary>
     /// Data specific to counterparties and related fields.

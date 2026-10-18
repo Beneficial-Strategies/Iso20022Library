@@ -28,7 +28,7 @@ public record StatementGroup5
     /// </summary>
     [DisplayName("Group Identification")]
     [IsoXmlTag("GrpId")]
-    public required IsoMax35Text GroupIdentification { get; init; }
+    public required Max35Text GroupIdentification { get; init; }
 
     /// <summary>
     /// Receiver.

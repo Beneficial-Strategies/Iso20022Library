@@ -38,7 +38,7 @@ public record InvoiceLegalIssue5
     [IsoId("_2s3LtTEyEe6g-ffJsqGiSA")]
     [DisplayName("Invoice Legal Statement")]
     [IsoXmlTag("InvcLglStmt")]
-    public IsoMax210Text? InvoiceLegalStatement { get; init; }
+    public Max210Text? InvoiceLegalStatement { get; init; }
 
     /// <summary>
     /// Method of payment for the remittance of the CSD or NCB to the invoicing party.

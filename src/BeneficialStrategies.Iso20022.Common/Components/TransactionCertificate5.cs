@@ -31,7 +31,7 @@ public record TransactionCertificate5
     [DisplayName("Transaction Date")]
     [IsoXmlTag("TxDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate TransactionDate { get; init; }
+    public required DateOnly TransactionDate { get; init; }
 
     /// <summary>
     /// Type of the transaction.
@@ -40,7 +40,7 @@ public record TransactionCertificate5
     [DisplayName("Transaction Type")]
     [IsoXmlTag("TxTp")]
     [IsoSimpleType(IsoSimpleType.Exact1NumericText)]
-    public IsoExact1NumericText? TransactionType { get; init; }
+    public Exact1NumericText? TransactionType { get; init; }
 
     /// <summary>
     /// User community specific instrument.
@@ -50,7 +50,7 @@ public record TransactionCertificate5
     [DisplayName("Local Instrument")]
     [IsoXmlTag("LclInstrm")]
     [IsoSimpleType(IsoSimpleType.Exact5NumericText)]
-    public required IsoExact5NumericText LocalInstrument { get; init; }
+    public required Exact5NumericText LocalInstrument { get; init; }
 
     /// <summary>
     /// Amount as provided in the transaction to be recorded under the contract.

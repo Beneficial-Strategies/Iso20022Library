@@ -24,7 +24,7 @@ public record CorporateActionNotificationSD2
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text PlaceAndName { get; init; }
+    public required Max350Text PlaceAndName { get; init; }
 
     /// <summary>
     /// Status of a notice of change.
@@ -42,7 +42,7 @@ public record CorporateActionNotificationSD2
     [IsoXmlTag("DerivXchg")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public required IsoMax4AlphaNumericText DerivativeExchange { get; init; }
+    public required Max4AlphaNumericText DerivativeExchange { get; init; }
 
     /// <summary>
     /// Date when the notice of change to the derivative is published by the exchange.
@@ -51,7 +51,7 @@ public record CorporateActionNotificationSD2
     [DisplayName("Derivative Publication Date")]
     [IsoXmlTag("DerivPblctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DerivativePublicationDate { get; init; }
+    public DateOnly? DerivativePublicationDate { get; init; }
 
     /// <summary>
     /// Effective date of the adjustment to the derivative contract.
@@ -60,7 +60,7 @@ public record CorporateActionNotificationSD2
     [DisplayName("Derivative Adjustment Date")]
     [IsoXmlTag("DerivAdjstmntDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate DerivativeAdjustmentDate { get; init; }
+    public required DateOnly DerivativeAdjustmentDate { get; init; }
 
     /// <summary>
     /// Method (usually a formula) that will be used to calculate the adjustment factor that will be applied to the derivative to account for the impact of a corporate action event on the underlying equity.
@@ -70,7 +70,7 @@ public record CorporateActionNotificationSD2
     [IsoXmlTag("DerivClctnMtd")]
     [IsoSimpleType(IsoSimpleType.Max1025Text)]
     [StringLength(maximumLength: 1025, MinimumLength = 1)]
-    public IsoMax1025Text? DerivativeCalculationMethod { get; init; }
+    public Max1025Text? DerivativeCalculationMethod { get; init; }
 
     /// <summary>
     /// Adjustment factor to be applied to the derivative contract to account for the impact of a corporate action event on the underlying equity. Derived by using the calculation method.
@@ -79,7 +79,7 @@ public record CorporateActionNotificationSD2
     [DisplayName("Derivative Factor")]
     [IsoXmlTag("DerivFctr")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? DerivativeFactor { get; init; }
+    public DecimalNumber? DerivativeFactor { get; init; }
 
     /// <summary>
     /// Indicates whether the deliverable stock amount on the derivative contract will be changed.
@@ -88,7 +88,7 @@ public record CorporateActionNotificationSD2
     [DisplayName("Lot Size Change Flag")]
     [IsoXmlTag("LotSzChngFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? LotSizeChangeFlag { get; init; }
+    public YesNoIndicator? LotSizeChangeFlag { get; init; }
 
     /// <summary>
     /// Method that is used to calculate the new stock deliverable on the derivative contract. Usually multiplication or division by a stated figure but may include explanatory text and examples.
@@ -98,7 +98,7 @@ public record CorporateActionNotificationSD2
     [IsoXmlTag("LotAdjstmntMtd")]
     [IsoSimpleType(IsoSimpleType.Max1025Text)]
     [StringLength(maximumLength: 1025, MinimumLength = 1)]
-    public IsoMax1025Text? LotAdjustmentMethod { get; init; }
+    public Max1025Text? LotAdjustmentMethod { get; init; }
 
     /// <summary>
     /// Indicates whether there is a new strike price for the change of the derivative contract as a result of the corporate action.
@@ -107,7 +107,7 @@ public record CorporateActionNotificationSD2
     [DisplayName("Strike Price Change Flag")]
     [IsoXmlTag("StrkPricChngFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? StrikePriceChangeFlag { get; init; }
+    public YesNoIndicator? StrikePriceChangeFlag { get; init; }
 
     /// <summary>
     /// Method that will be used to adjust the strike price. May include the number of decimal places and rounding rules, example up or down.
@@ -117,7 +117,7 @@ public record CorporateActionNotificationSD2
     [IsoXmlTag("StrkPricRndgMtd")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public IsoMax500Text? StrikePriceRoundingMethod { get; init; }
+    public Max500Text? StrikePriceRoundingMethod { get; init; }
 
     /// <summary>
     /// Indicates whether a residual cash is paid on the derivative contract. For example, this may be a cash element that is included in the terms of a takeover that the underlying equity is subject to.
@@ -126,7 +126,7 @@ public record CorporateActionNotificationSD2
     [DisplayName("Residual Cash Flag")]
     [IsoXmlTag("RsdlCshFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ResidualCashFlag { get; init; }
+    public YesNoIndicator? ResidualCashFlag { get; init; }
 
     /// <summary>
     /// Price of the security to be used in factor calculations. Usually the closing price of the underlying equity on the effective date of the contract adjustment.
@@ -135,7 +135,7 @@ public record CorporateActionNotificationSD2
     [DisplayName("Reference Price")]
     [IsoXmlTag("RefPric")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? ReferencePrice { get; init; }
+    public DecimalNumber? ReferencePrice { get; init; }
 
     /// <summary>
     /// Currency associated with the reference price.
@@ -152,5 +152,5 @@ public record CorporateActionNotificationSD2
     [DisplayName("Approved Flag")]
     [IsoXmlTag("ApprvdFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ApprovedFlag { get; init; }
+    public YesNoIndicator? ApprovedFlag { get; init; }
 }

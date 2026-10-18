@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification50Choice
         [IsoXmlTag("SfkpgAcct")]
         [IsoSimpleType(IsoSimpleType.RestrictedFINXMax35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoRestrictedFINXMax35Text? SafekeepingAccount { get; init; }
+        public RestrictedFINXMax35Text? SafekeepingAccount { get; init; }
 
         /// <summary>
         /// Blockchain address or wallet where digital assets are maintained. This is the equivalent of safekeeping account for digital assets.
@@ -34,7 +34,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification50Choice
         [IsoXmlTag("BlckChainAdrOrWllt")]
         [IsoSimpleType(IsoSimpleType.RestrictedFINXMax140Text)]
         [StringLength(maximumLength: 140, MinimumLength = 1)]
-        public IsoRestrictedFINXMax140Text? BlockChainAddressOrWallet { get; init; }
+        public RestrictedFINXMax140Text? BlockChainAddressOrWallet { get; init; }
 
         /// <summary>
         /// Party that legally owns the account.

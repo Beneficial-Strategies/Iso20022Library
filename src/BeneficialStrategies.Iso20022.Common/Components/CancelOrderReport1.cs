@@ -21,5 +21,5 @@ public record CancelOrderReport1
     /// </summary>
     [DisplayName("Report Identification")]
     [IsoXmlTag("RptId")]
-    public required IsoMax140Text ReportIdentification { get; init; }
+    public required Max140Text ReportIdentification { get; init; }
 }

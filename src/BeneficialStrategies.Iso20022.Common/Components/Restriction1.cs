@@ -31,7 +31,7 @@ public record Restriction1
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime ValidFrom { get; init; }
+    public required ISODateTime ValidFrom { get; init; }
 
     /// <summary>
     /// Date until when the restriction is valid.
@@ -40,5 +40,5 @@ public record Restriction1
     [DisplayName("Valid Until")]
     [IsoXmlTag("VldUntil")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? ValidUntil { get; init; }
+    public ISODateTime? ValidUntil { get; init; }
 }

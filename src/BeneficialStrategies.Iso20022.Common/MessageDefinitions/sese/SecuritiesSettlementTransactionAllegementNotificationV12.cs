@@ -74,7 +74,7 @@ public record SecuritiesSettlementTransactionAllegementNotificationV12 : IOuterR
     [IsoXmlTag("CtrPtyMktInfrstrctrTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CounterpartyMarketInfrastructureTransactionIdentification { get; init; }
+    public Max35Text? CounterpartyMarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identifies the chain of delivering settlement parties.
@@ -111,7 +111,7 @@ public record SecuritiesSettlementTransactionAllegementNotificationV12 : IOuterR
     [IsoXmlTag("MktInfrstrctrTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MarketInfrastructureTransactionIdentification { get; init; }
+    public Max35Text? MarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Other amounts than the settlement amount.
@@ -190,5 +190,5 @@ public record SecuritiesSettlementTransactionAllegementNotificationV12 : IOuterR
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransactionIdentification { get; init; }
+    public required Max35Text TransactionIdentification { get; init; }
 }

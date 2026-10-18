@@ -23,7 +23,7 @@ public record NumberOfReportsPerStatus2
     [DisplayName("Detailed Number Of Reports")]
     [IsoXmlTag("DtldNbOfRpts")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText DetailedNumberOfReports { get; init; }
+    public required Max15NumericText DetailedNumberOfReports { get; init; }
 
     /// <summary>
     /// Common report status for all individual reports sent / received.

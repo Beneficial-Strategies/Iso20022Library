@@ -42,7 +42,7 @@ public record TransportByAir5
     [IsoXmlTag("AirCrrierNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AirCarrierName { get; init; }
+    public Max70Text? AirCarrierName { get; init; }
 
     /// <summary>
     /// Country in which the carrier of the goods, for example, shipping company, is located or registered.
@@ -60,7 +60,7 @@ public record TransportByAir5
     [IsoXmlTag("CrrierAgtNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? CarrierAgentName { get; init; }
+    public Max70Text? CarrierAgentName { get; init; }
 
     /// <summary>
     /// Country of registration of the carrier&apos;s (for example, shipping company&apos;s) agent that acts on behalf of the carrier and may be the issuer of transport documents relating to the underlying shipment.

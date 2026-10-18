@@ -21,7 +21,7 @@ public record LocalData10
     /// </summary>
     [DisplayName("Additional Contact")]
     [IsoXmlTag("AddtlCtct")]
-    public IsoMax512Text? AdditionalContact { get; init; }
+    public Max512Text? AdditionalContact { get; init; }
 
     /// <summary>
     /// Additional Data.
@@ -42,7 +42,7 @@ public record LocalData10
     /// </summary>
     [DisplayName("Encoding Format")]
     [IsoXmlTag("NcodgFrmt")]
-    public IsoMax35Text? EncodingFormat { get; init; }
+    public Max35Text? EncodingFormat { get; init; }
 
     /// <summary>
     /// Language.
@@ -56,5 +56,5 @@ public record LocalData10
     /// </summary>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax70Text? Name { get; init; }
+    public Max70Text? Name { get; init; }
 }

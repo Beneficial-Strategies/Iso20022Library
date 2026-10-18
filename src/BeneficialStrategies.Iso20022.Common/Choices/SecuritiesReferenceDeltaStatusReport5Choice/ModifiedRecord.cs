@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesReferenceDeltaStatusRe
         [IsoXmlTag("TechRcrdId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? TechnicalRecordIdentification { get; init; }
+        public Max35Text? TechnicalRecordIdentification { get; init; }
 
         /// <summary>
         /// Attributes and characteristics of the financial instrument.
@@ -43,7 +43,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesReferenceDeltaStatusRe
         [DisplayName("Issuer")]
         [IsoXmlTag("Issr")]
         [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-        public required IsoLEIIdentifier Issuer { get; init; }
+        public required LEIIdentifier Issuer { get; init; }
 
         /// <summary>
         /// Traded venue related attributes.

@@ -11,6 +11,6 @@ namespace BeneficialStrategies.Iso20022.Choices.EndPoint2Choice
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("LastPmtDt")]
-        public required IsoISODate Value { get; init; }
+        public required DateOnly Value { get; init; }
     }
 }

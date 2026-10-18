@@ -33,7 +33,7 @@ public record UnitPrice15
     [IsoXmlTag("XtndedTp")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoExtended350Code ExtendedType { get; init; }
+    public required Extended350Code ExtendedType { get; init; }
 
     /// <summary>
     /// Type of pricing calculation method.
@@ -68,7 +68,7 @@ public record UnitPrice15
     [DisplayName("For Execution Indicator")]
     [IsoXmlTag("ForExctnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ForExecutionIndicator { get; init; }
+    public required YesNoIndicator ForExecutionIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the dividend is included, ie, cum-dividend, in the price. When the dividend is not included, the price will be ex-dividend.
@@ -77,7 +77,7 @@ public record UnitPrice15
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator CumDividendIndicator { get; init; }
+    public required YesNoIndicator CumDividendIndicator { get; init; }
 
     /// <summary>
     /// Ratio applied on the non-adjusted price.
@@ -86,7 +86,7 @@ public record UnitPrice15
     [DisplayName("Calculation Basis")]
     [IsoXmlTag("ClctnBsis")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? CalculationBasis { get; init; }
+    public PercentageRate? CalculationBasis { get; init; }
 
     /// <summary>
     /// Indicates whether the price is an estimated price.
@@ -95,7 +95,7 @@ public record UnitPrice15
     [DisplayName("Estimated Price Indicator")]
     [IsoXmlTag("EstmtdPricInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator EstimatedPriceIndicator { get; init; }
+    public required YesNoIndicator EstimatedPriceIndicator { get; init; }
 
     /// <summary>
     /// Specifies the number of days from trade date that the counterparty on the other side of the trade should &quot;given up&quot; or divulged.
@@ -104,7 +104,7 @@ public record UnitPrice15
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NumberOfDaysAccrued { get; init; }
+    public Number? NumberOfDaysAccrued { get; init; }
 
     /// <summary>
     /// Amount included in the NAV that corresponds to gains directly or indirectly derived from interest payment in the scope of the European Directive on taxation of savings income in the form of interest payments.
@@ -130,7 +130,7 @@ public record UnitPrice15
     [IsoXmlTag("XtndedTaxblIncmPerShrClctd")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedTaxableIncomePerShareCalculated { get; init; }
+    public Extended350Code? ExtendedTaxableIncomePerShareCalculated { get; init; }
 
     /// <summary>
     /// Amount included in the dividend that corresponds to gains directly or indirectly derived from interest payment in the scope of the European Directive on taxation of savings income in the form of interest payments.
@@ -156,7 +156,7 @@ public record UnitPrice15
     [IsoXmlTag("XtndedEUDvddSts")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedEUDividendStatus { get; init; }
+    public Extended350Code? ExtendedEUDividendStatus { get; init; }
 
     /// <summary>
     /// Amount of money associated with a service.

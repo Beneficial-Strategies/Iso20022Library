@@ -23,7 +23,7 @@ public record MissingCover2
     [DisplayName("Missing Cover Indicator")]
     [IsoXmlTag("MssngCoverInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator MissingCoverIndicator { get; init; }
+    public required YesNoIndicator MissingCoverIndicator { get; init; }
 
     /// <summary>
     /// Set of elements provided to update incorrect settlement information for the cover related to the received payment instruction.

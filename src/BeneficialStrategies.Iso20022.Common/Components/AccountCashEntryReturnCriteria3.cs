@@ -23,7 +23,7 @@ public record AccountCashEntryReturnCriteria3
     [DisplayName("Entry Reference Indicator")]
     [IsoXmlTag("NtryRefInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? EntryReferenceIndicator { get; init; }
+    public RequestedIndicator? EntryReferenceIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the account type is requested.
@@ -32,7 +32,7 @@ public record AccountCashEntryReturnCriteria3
     [DisplayName("Account Type Indicator")]
     [IsoXmlTag("AcctTpInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? AccountTypeIndicator { get; init; }
+    public RequestedIndicator? AccountTypeIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the entry amount is requested.
@@ -41,7 +41,7 @@ public record AccountCashEntryReturnCriteria3
     [DisplayName("Entry Amount Indicator")]
     [IsoXmlTag("NtryAmtInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? EntryAmountIndicator { get; init; }
+    public RequestedIndicator? EntryAmountIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the account currency is requested.
@@ -50,7 +50,7 @@ public record AccountCashEntryReturnCriteria3
     [DisplayName("Account Currency Indicator")]
     [IsoXmlTag("AcctCcyInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? AccountCurrencyIndicator { get; init; }
+    public RequestedIndicator? AccountCurrencyIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the entry status is requested.
@@ -59,7 +59,7 @@ public record AccountCashEntryReturnCriteria3
     [DisplayName("Entry Status Indicator")]
     [IsoXmlTag("NtryStsInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? EntryStatusIndicator { get; init; }
+    public RequestedIndicator? EntryStatusIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the entry date is requested.
@@ -68,7 +68,7 @@ public record AccountCashEntryReturnCriteria3
     [DisplayName("Entry Date Indicator")]
     [IsoXmlTag("NtryDtInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? EntryDateIndicator { get; init; }
+    public RequestedIndicator? EntryDateIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the account servicer is requested.
@@ -77,7 +77,7 @@ public record AccountCashEntryReturnCriteria3
     [DisplayName("Account Servicer Indicator")]
     [IsoXmlTag("AcctSvcrInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? AccountServicerIndicator { get; init; }
+    public RequestedIndicator? AccountServicerIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the account owner is requested.
@@ -86,5 +86,5 @@ public record AccountCashEntryReturnCriteria3
     [DisplayName("Account Owner Indicator")]
     [IsoXmlTag("AcctOwnrInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? AccountOwnerIndicator { get; init; }
+    public RequestedIndicator? AccountOwnerIndicator { get; init; }
 }

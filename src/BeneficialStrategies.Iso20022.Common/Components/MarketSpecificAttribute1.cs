@@ -24,7 +24,7 @@ public record MarketSpecificAttribute1
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Name { get; init; }
+    public required Max35Text Name { get; init; }
 
     /// <summary>
     /// Specifies the value of the market-specific attribute.
@@ -34,5 +34,5 @@ public record MarketSpecificAttribute1
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text Value { get; init; }
+    public required Max350Text Value { get; init; }
 }

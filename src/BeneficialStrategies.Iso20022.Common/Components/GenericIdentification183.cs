@@ -24,7 +24,7 @@ public record GenericIdentification183
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Type of identified entity.
@@ -42,7 +42,7 @@ public record GenericIdentification183
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Entity type in charge of assigning an identification.
@@ -68,5 +68,5 @@ public record GenericIdentification183
     [IsoXmlTag("ShrtNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ShortName { get; init; }
+    public Max35Text? ShortName { get; init; }
 }

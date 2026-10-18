@@ -24,7 +24,7 @@ public record TransferReference10
     [IsoXmlTag("MstrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for a transfer instruction, as assigned by the instructing party.
@@ -34,7 +34,7 @@ public record TransferReference10
     [IsoXmlTag("TrfRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TransferReference { get; init; }
+    public Max35Text? TransferReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor&apos;s identification of a transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.
@@ -52,7 +52,7 @@ public record TransferReference10
     [IsoXmlTag("TrfConfRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TransferConfirmationReference { get; init; }
+    public Max35Text? TransferConfirmationReference { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the transfer allocated by the counterparty.

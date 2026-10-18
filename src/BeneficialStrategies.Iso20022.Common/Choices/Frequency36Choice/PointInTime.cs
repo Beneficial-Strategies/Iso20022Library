@@ -29,6 +29,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Frequency36Choice
         /// </summary>
         [IsoXmlTag("PtInTm")]
         [IsoSimpleType(IsoSimpleType.Exact2NumericText)]
-        public required IsoExact2NumericText Value { get; init; }
+        public required Exact2NumericText Value { get; init; }
     }
 }

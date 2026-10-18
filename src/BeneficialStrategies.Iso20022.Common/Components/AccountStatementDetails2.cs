@@ -23,7 +23,7 @@ public record AccountStatementDetails2
     [DisplayName("Transaction Date")]
     [IsoXmlTag("TxDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate TransactionDate { get; init; }
+    public required DateOnly TransactionDate { get; init; }
 
     /// <summary>
     /// True indicates transaction is pending.
@@ -34,7 +34,7 @@ public record AccountStatementDetails2
     [DisplayName("Pending Indicator")]
     [IsoXmlTag("PdgInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? PendingIndicator { get; init; }
+    public TrueFalseIndicator? PendingIndicator { get; init; }
 
     /// <summary>
     /// Posting date of the transaction.
@@ -43,7 +43,7 @@ public record AccountStatementDetails2
     [DisplayName("Transaction Posting Date")]
     [IsoXmlTag("TxPstngDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TransactionPostingDate { get; init; }
+    public DateOnly? TransactionPostingDate { get; init; }
 
     /// <summary>
     /// Amount of the transaction.
@@ -77,7 +77,7 @@ public record AccountStatementDetails2
     [IsoXmlTag("AccptrNmAndLctn")]
     [IsoSimpleType(IsoSimpleType.Max99Text)]
     [StringLength(maximumLength: 99, MinimumLength = 1)]
-    public IsoMax99Text? AcceptorNameAndLocation { get; init; }
+    public Max99Text? AcceptorNameAndLocation { get; init; }
 
     /// <summary>
     /// Short transaction description to print or display.
@@ -87,7 +87,7 @@ public record AccountStatementDetails2
     [IsoXmlTag("ShrtTxDesc")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? ShortTransactionDescription { get; init; }
+    public Max70Text? ShortTransactionDescription { get; init; }
 
     /// <summary>
     /// Long transaction description to print or display.
@@ -97,5 +97,5 @@ public record AccountStatementDetails2
     [IsoXmlTag("LngTxDesc")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? LongTransactionDescription { get; init; }
+    public Max256Text? LongTransactionDescription { get; init; }
 }

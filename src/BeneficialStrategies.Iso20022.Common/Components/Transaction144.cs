@@ -32,7 +32,7 @@ public record Transaction144
     [IsoXmlTag("OthrAdmstvTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherAdministrativeType { get; init; }
+    public Max35Text? OtherAdministrativeType { get; init; }
 
     /// <summary>
     /// Reason or purpose to send the message.
@@ -49,7 +49,7 @@ public record Transaction144
     [IsoId("_vIt87TNJEeylu6lH-gut-A")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
-    public SimpleValueList<IsoMax256Text> AlternateMessageReason { get; init; } = [];
+    public SimpleValueList<Max256Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Additional functions or services to be performed in conjunction with the transaction.
@@ -66,7 +66,7 @@ public record Transaction144
     [DisplayName("Associated Data Indicator")]
     [IsoXmlTag("AssoctdDataInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? AssociatedDataIndicator { get; init; }
+    public TrueFalseIndicator? AssociatedDataIndicator { get; init; }
 
     /// <summary>
     /// Reference to additional transaction details to be conveyed separately from this message.
@@ -76,7 +76,7 @@ public record Transaction144
     [IsoXmlTag("AssoctdDataRef")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AssociatedDataReference { get; init; }
+    public Max70Text? AssociatedDataReference { get; init; }
 
     /// <summary>
     /// Destination value to be used in the subsequent addendum message.
@@ -86,7 +86,7 @@ public record Transaction144
     [IsoXmlTag("AssoctdDataDstn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AssociatedDataDestination { get; init; }
+    public Max35Text? AssociatedDataDestination { get; init; }
 
     /// <summary>
     /// Data to qualify for incentive or other related programmes.
@@ -113,7 +113,7 @@ public record Transaction144
     [IsoXmlTag("TxtMsg")]
     [IsoSimpleType(IsoSimpleType.Max20KText)]
     [StringLength(maximumLength: 20000, MinimumLength = 1)]
-    public IsoMax20KText? TextMessage { get; init; }
+    public Max20KText? TextMessage { get; init; }
 
     /// <summary>
     /// Additional Information in local language.
@@ -133,7 +133,7 @@ public record Transaction144
     [IsoXmlTag("TxDesc")]
     [IsoSimpleType(IsoSimpleType.Max1000Text)]
     [StringLength(maximumLength: 1000, MinimumLength = 1)]
-    public IsoMax1000Text? TransactionDescription { get; init; }
+    public Max1000Text? TransactionDescription { get; init; }
 
     /// <summary>
     /// Contains additional data.

@@ -85,7 +85,7 @@ public record SecuritiesTransactionCancellationRequest002V06 : IOuterRecord
     [IsoXmlTag("AcctSvcrTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? AccountServicerTransactionIdentification { get; init; }
+    public RestrictedFINXMax16Text? AccountServicerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
@@ -95,7 +95,7 @@ public record SecuritiesTransactionCancellationRequest002V06 : IOuterRecord
     [IsoXmlTag("MktInfrstrctrTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? MarketInfrastructureTransactionIdentification { get; init; }
+    public RestrictedFINXMax16Text? MarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Message Reference identifying the Processor of the transaction.
@@ -105,7 +105,7 @@ public record SecuritiesTransactionCancellationRequest002V06 : IOuterRecord
     [IsoXmlTag("PrcrTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? ProcessorTransactionIdentification { get; init; }
+    public RestrictedFINXMax16Text? ProcessorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Party that legally owns the account.

@@ -22,7 +22,7 @@ public record GroupHeader109
     /// </summary>
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).
@@ -52,5 +52,5 @@ public record GroupHeader109
     /// </remarks>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 }

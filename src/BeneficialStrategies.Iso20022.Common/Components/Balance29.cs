@@ -28,14 +28,14 @@ public record Balance29
     /// </summary>
     [DisplayName("Balance Date")]
     [IsoXmlTag("BalDt")]
-    public IsoISODate? BalanceDate { get; init; }
+    public DateOnly? BalanceDate { get; init; }
 
     /// <summary>
     /// Cardholder Currency.
     /// </summary>
     [DisplayName("Cardholder Currency")]
     [IsoXmlTag("CrdhldrCcy")]
-    public IsoTrueFalseIndicator? CardholderCurrency { get; init; }
+    public TrueFalseIndicator? CardholderCurrency { get; init; }
 
     /// <summary>
     /// Credit Debit.
@@ -56,7 +56,7 @@ public record Balance29
     /// </summary>
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Type.

@@ -176,7 +176,7 @@ public record CreditTransferTransactionInformation1
     [IsoXmlTag("InstrForDbtrAgt")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? InstructionForDebtorAgent { get; init; }
+    public Max140Text? InstructionForDebtorAgent { get; init; }
 
     /// <summary>
     /// Underlying reason for the payment transaction, eg, a charity payment, or a commercial agreement between the creditor and the debtor. ||Usage: purpose is used by the end-customers, ie originating party, initiating party, debtor, creditor, final party, to provide information concerning the nature of the payment transaction. Purpose is a content element, which is not used for processing by any of the agents involved in the payment chain.

@@ -64,7 +64,7 @@ public record KeyExchangeInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
-    public ValueList<IsoMax256Text> AlternateMessageReason { get; init; } = [];
+    public ValueList<Max256Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Header.
@@ -106,7 +106,7 @@ public record KeyExchangeInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Life Cycle Identification")]
     [IsoXmlTag("LifeCyclId")]
-    public IsoExact15Text? LifeCycleIdentification { get; init; }
+    public Exact15Text? LifeCycleIdentification { get; init; }
 
     /// <summary>
     /// Message Reason.
@@ -120,14 +120,14 @@ public record KeyExchangeInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Other Key Exchange Function")]
     [IsoXmlTag("OthrKeyXchgFctn")]
-    public IsoMax35Text? OtherKeyExchangeFunction { get; init; }
+    public Max35Text? OtherKeyExchangeFunction { get; init; }
 
     /// <summary>
     /// Other Key Exchange Type.
     /// </summary>
     [DisplayName("Other Key Exchange Type")]
     [IsoXmlTag("OthrKeyXchgTp")]
-    public IsoMax35Text? OtherKeyExchangeType { get; init; }
+    public Max35Text? OtherKeyExchangeType { get; init; }
 
     /// <summary>
     /// Processing Result.
@@ -162,7 +162,7 @@ public record KeyExchangeInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("Retrieval Reference Number")]
     [IsoXmlTag("RtrvlRefNb")]
-    public IsoExact12Text? RetrievalReferenceNumber { get; init; }
+    public Exact12Text? RetrievalReferenceNumber { get; init; }
 
     /// <summary>
     /// Security Trailer.
@@ -190,12 +190,12 @@ public record KeyExchangeInitiationV04 : IOuterRecord
     /// </summary>
     [DisplayName("System Trace Audit Number")]
     [IsoXmlTag("SysTracAudtNb")]
-    public required IsoMax12NumericText SystemTraceAuditNumber { get; init; }
+    public required Max12NumericText SystemTraceAuditNumber { get; init; }
 
     /// <summary>
     /// Transmission Date Time.
     /// </summary>
     [DisplayName("Transmission Date Time")]
     [IsoXmlTag("TrnsmssnDtTm")]
-    public required IsoISODateTime TransmissionDateTime { get; init; }
+    public required ISODateTime TransmissionDateTime { get; init; }
 }

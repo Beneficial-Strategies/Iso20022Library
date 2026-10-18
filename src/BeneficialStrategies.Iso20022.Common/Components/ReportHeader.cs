@@ -24,7 +24,7 @@ public record ReportHeader
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Party reporting the status of the case.
@@ -33,7 +33,7 @@ public record ReportHeader
     [DisplayName("From")]
     [IsoXmlTag("Fr")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public required IsoAnyBICIdentifier From { get; init; }
+    public required AnyBICIdentifier From { get; init; }
 
     /// <summary>
     /// Party to which the status of the case is reported.
@@ -42,7 +42,7 @@ public record ReportHeader
     [DisplayName("To")]
     [IsoXmlTag("To")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public required IsoAnyBICIdentifier To { get; init; }
+    public required AnyBICIdentifier To { get; init; }
 
     /// <summary>
     /// Creation date and time of the report generation.
@@ -51,5 +51,5 @@ public record ReportHeader
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 }

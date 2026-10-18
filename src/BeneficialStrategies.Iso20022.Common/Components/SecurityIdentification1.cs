@@ -33,7 +33,7 @@ public record SecurityIdentification1
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text Name { get; init; }
+    public required Max350Text Name { get; init; }
 
     /// <summary>
     /// Features of units offered by a fund. For example, a unit may have a specific load structure, eg, front end or back end, an income policy, eg, pay out or accumulate, or a trailer policy, eg, with or without. Fund classes are typically denoted by a single character, eg, &apos;Class A&apos;, &apos;Class 2&apos;.
@@ -43,7 +43,7 @@ public record SecurityIdentification1
     [IsoXmlTag("ClssTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClassType { get; init; }
+    public Max35Text? ClassType { get; init; }
 
     /// <summary>
     /// Name of the umbrella fund in which financial instrument is contained.
@@ -53,7 +53,7 @@ public record SecurityIdentification1
     [IsoXmlTag("UmbrllNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? UmbrellaName { get; init; }
+    public Max35Text? UmbrellaName { get; init; }
 
     /// <summary>
     /// Currency of the investment fund class.

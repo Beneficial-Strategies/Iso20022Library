@@ -24,5 +24,5 @@ public record Deletion1
     [IsoXmlTag("DeltdVal")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text DeletedValue { get; init; }
+    public required Max140Text DeletedValue { get; init; }
 }

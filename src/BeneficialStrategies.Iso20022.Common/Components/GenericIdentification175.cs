@@ -24,7 +24,7 @@ public record GenericIdentification175
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max72Text)]
     [StringLength(maximumLength: 72, MinimumLength = 1)]
-    public required IsoMax72Text Identification { get; init; }
+    public required Max72Text Identification { get; init; }
 
     /// <summary>
     /// Name of the identification scheme.
@@ -34,7 +34,7 @@ public record GenericIdentification175
     [IsoXmlTag("SchmeNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SchemeName { get; init; }
+    public Max35Text? SchemeName { get; init; }
 
     /// <summary>
     /// Entity that assigns the identification.
@@ -44,5 +44,5 @@ public record GenericIdentification175
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Issuer { get; init; }
+    public Max35Text? Issuer { get; init; }
 }

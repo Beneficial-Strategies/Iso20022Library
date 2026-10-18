@@ -23,7 +23,7 @@ public record FinancialInstitutionIdentification16
     [DisplayName("BICFI")]
     [IsoXmlTag("BICFI")]
     [IsoSimpleType(IsoSimpleType.BICFIDec2014Identifier)]
-    public IsoBICFIDec2014Identifier? BICFI { get; init; }
+    public BICFIDec2014Identifier? BICFI { get; init; }
 
     /// <summary>
     /// Information used to identify a member within a clearing system.
@@ -48,7 +48,7 @@ public record FinancialInstitutionIdentification16
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? LEI { get; init; }
+    public LEIIdentifier? LEI { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.
@@ -58,7 +58,7 @@ public record FinancialInstitutionIdentification16
     [IsoXmlTag("PrtryId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProprietaryIdentification { get; init; }
+    public Max35Text? ProprietaryIdentification { get; init; }
 
     /// <summary>
     /// Identification of a specific branch of the financial institution.

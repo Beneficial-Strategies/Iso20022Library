@@ -39,5 +39,5 @@ public record FinancialInstitutionIdentification6
     [DisplayName("BIC")]
     [IsoXmlTag("BIC")]
     [IsoSimpleType(IsoSimpleType.BICIdentifier)]
-    public IsoBICIdentifier? BIC { get; init; }
+    public BICIdentifier? BIC { get; init; }
 }

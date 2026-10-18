@@ -24,7 +24,7 @@ public record SecuritiesTransactionTransmission2
     [DisplayName("Transmission Indicator")]
     [IsoXmlTag("TrnsmssnInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator TransmissionIndicator { get; init; }
+    public required TrueFalseIndicator TransmissionIndicator { get; init; }
 
     /// <summary>
     /// Identifies the buyer transmitting the order to the reporting firm.
@@ -34,7 +34,7 @@ public record SecuritiesTransactionTransmission2
     [DisplayName("Transmitting Buyer")]
     [IsoXmlTag("TrnsmttgBuyr")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? TransmittingBuyer { get; init; }
+    public LEIIdentifier? TransmittingBuyer { get; init; }
 
     /// <summary>
     /// Identifies the seller transmitting the order to the reporting firm.
@@ -44,5 +44,5 @@ public record SecuritiesTransactionTransmission2
     [DisplayName("Transmitting Seller")]
     [IsoXmlTag("TrnsmttgSellr")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? TransmittingSeller { get; init; }
+    public LEIIdentifier? TransmittingSeller { get; init; }
 }

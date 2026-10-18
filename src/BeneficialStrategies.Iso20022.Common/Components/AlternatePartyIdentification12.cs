@@ -38,7 +38,7 @@ public record AlternatePartyIdentification12
     [IsoId("_OYoQLK3pEfCN-rGCydxGUA")]
     [DisplayName("Alternate Identification")]
     [IsoXmlTag("AltrnId")]
-    public required IsoMax35Text AlternateIdentification { get; init; }
+    public required Max35Text AlternateIdentification { get; init; }
 
     /// <summary>
     /// Legal entity identification of the party.
@@ -46,5 +46,5 @@ public record AlternatePartyIdentification12
     [IsoId("_PdXqoa3pEfCN-rGCydxGUA")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
-    public IsoLEIIdentifier? LEI { get; init; }
+    public LEIIdentifier? LEI { get; init; }
 }

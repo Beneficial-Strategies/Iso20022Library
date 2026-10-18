@@ -24,7 +24,7 @@ public record SubscriptionOrder7
     [IsoXmlTag("OrdrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OrderReference { get; init; }
+    public required Max35Text OrderReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor&apos;s identification of an order. This reference can typically be used in a hub scenario to give the reference of the order as assigned by the underlying client.
@@ -34,7 +34,7 @@ public record SubscriptionOrder7
     [IsoXmlTag("ClntRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClientReference { get; init; }
+    public Max35Text? ClientReference { get; init; }
 
     /// <summary>
     /// Specifies the category of the investment fund order.
@@ -93,7 +93,7 @@ public record SubscriptionOrder7
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? CashSettlementDate { get; init; }
+    public DateOnly? CashSettlementDate { get; init; }
 
     /// <summary>
     /// Method by which the transaction is settled.
@@ -143,7 +143,7 @@ public record SubscriptionOrder7
     [IsoXmlTag("LttrInttRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LetterIntentReference { get; init; }
+    public Max35Text? LetterIntentReference { get; init; }
 
     /// <summary>
     /// Reference of an accumulation right program, in which sales commissions are based on a customer&apos;s present purchases of shares and the aggregate quantity previously purchased by the customer. An accumulation rights program is mainly used in the US market.
@@ -153,7 +153,7 @@ public record SubscriptionOrder7
     [IsoXmlTag("AcmltnRghtRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccumulationRightReference { get; init; }
+    public Max35Text? AccumulationRightReference { get; init; }
 
     /// <summary>
     /// Charge for the placement of an order.
@@ -194,7 +194,7 @@ public record SubscriptionOrder7
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator PhysicalDeliveryIndicator { get; init; }
+    public required YesNoIndicator PhysicalDeliveryIndicator { get; init; }
 
     /// <summary>
     /// Information related to physical delivery of the securities.
@@ -220,7 +220,7 @@ public record SubscriptionOrder7
     [IsoXmlTag("NonStdSttlmInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? NonStandardSettlementInformation { get; init; }
+    public Max350Text? NonStandardSettlementInformation { get; init; }
 
     /// <summary>
     /// Breakdown of the net amount per type of order.

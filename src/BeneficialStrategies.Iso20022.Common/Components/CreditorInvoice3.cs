@@ -23,7 +23,7 @@ public record CreditorInvoice3
     [DisplayName("Limited Presentment Indicator")]
     [IsoXmlTag("LtdPresntmntInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator LimitedPresentmentIndicator { get; init; }
+    public required TrueFalseIndicator LimitedPresentmentIndicator { get; init; }
 
     /// <summary>
     /// Unique and unambiguous type of the identification of the debtor required by the creditor, for example  the reference number or customer number. Unique identification provided by the web bank or web payment services user, with which the creditor may identify the debtor in its system.
@@ -57,7 +57,7 @@ public record CreditorInvoice3
     [IsoXmlTag("CdtrInstr")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public IsoMax500Text? CreditorInstruction { get; init; }
+    public Max500Text? CreditorInstruction { get; init; }
 
     /// <summary>
     /// Creditor&apos;s service provider address to which the debtor activation has to be delivered.

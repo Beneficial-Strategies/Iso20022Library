@@ -32,5 +32,5 @@ public record RelativeDistinguishedName1
     [IsoXmlTag("AttrVal")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text AttributeValue { get; init; }
+    public required Max140Text AttributeValue { get; init; }
 }

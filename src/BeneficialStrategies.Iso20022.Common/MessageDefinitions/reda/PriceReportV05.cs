@@ -52,7 +52,7 @@ public record PriceReportV05 : IOuterRecord
     [IsoXmlTag("CxlId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CancellationIdentification { get; init; }
+    public Max35Text? CancellationIdentification { get; init; }
 
     /// <summary>
     /// Extension.
@@ -103,7 +103,7 @@ public record PriceReportV05 : IOuterRecord
     [IsoXmlTag("PricRptId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text PriceReportIdentification { get; init; }
+    public required Max35Text PriceReportIdentification { get; init; }
 
     /// <summary>
     /// Price Valuation Details.

@@ -39,5 +39,5 @@ public record DebitAuthorisationDetails
     [DisplayName("Value Date To Debit")]
     [IsoXmlTag("ValDtToDbt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ValueDateToDebit { get; init; }
+    public DateOnly? ValueDateToDebit { get; init; }
 }

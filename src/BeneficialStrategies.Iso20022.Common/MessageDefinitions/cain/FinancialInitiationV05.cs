@@ -211,7 +211,7 @@ public record FinancialInitiationV05 : IOuterRecord
     /// </summary>
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
-    public IsoMax10KHexBinaryText? ICCRelatedData { get; init; }
+    public Max10KHexBinaryText? ICCRelatedData { get; init; }
 
     /// <summary>
     /// Instalment.

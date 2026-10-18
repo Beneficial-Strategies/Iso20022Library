@@ -32,7 +32,7 @@ public record PartyIdentification269
     [IsoXmlTag("EmailAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? EmailAddress { get; init; }
+    public Max256Text? EmailAddress { get; init; }
 
     /// <summary>
     /// Identification of the party.
@@ -50,7 +50,7 @@ public record PartyIdentification269
     [IsoXmlTag("CpnyRegrShrhldrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CompanyRegisterShareholderIdentification { get; init; }
+    public Max35Text? CompanyRegisterShareholderIdentification { get; init; }
 
     /// <summary>
     /// Country in which the company is incorporated or legally registered.

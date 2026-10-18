@@ -40,5 +40,5 @@ public record AdditionalBalanceInformation2
     [IsoXmlTag("XtndedSubBalTp")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoExtended350Code ExtendedSubBalanceType { get; init; }
+    public required Extended350Code ExtendedSubBalanceType { get; init; }
 }

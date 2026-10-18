@@ -21,7 +21,7 @@ public record TrackerPaymentTransaction14
     /// </summary>
     [DisplayName("Acceptance Date Time")]
     [IsoXmlTag("AccptncDtTm")]
-    public IsoISODateTime? AcceptanceDateTime { get; init; }
+    public ISODateTime? AcceptanceDateTime { get; init; }
 
     /// <summary>
     /// Charge Bearer.
@@ -70,7 +70,7 @@ public record TrackerPaymentTransaction14
     /// </summary>
     [DisplayName("Debit Confirmation URL Address")]
     [IsoXmlTag("DbtConfURLAdr")]
-    public IsoMax2048Text? DebitConfirmationURLAddress { get; init; }
+    public Max2048Text? DebitConfirmationURLAddress { get; init; }
 
     /// <summary>
     /// Debtor.
@@ -168,7 +168,7 @@ public record TrackerPaymentTransaction14
     /// </summary>
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
-    public IsoISODate? InterbankSettlementDate { get; init; }
+    public DateOnly? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Intermediary Agent1.
@@ -217,14 +217,14 @@ public record TrackerPaymentTransaction14
     /// </summary>
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Original Instruction Identification.
     /// </summary>
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
-    public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Payment Identification.
@@ -252,7 +252,7 @@ public record TrackerPaymentTransaction14
     /// </summary>
     [DisplayName("Pooling Adjustment Date")]
     [IsoXmlTag("PoolgAdjstmntDt")]
-    public IsoISODate? PoolingAdjustmentDate { get; init; }
+    public DateOnly? PoolingAdjustmentDate { get; init; }
 
     /// <summary>
     /// Previous Instructing Agent1.
@@ -406,14 +406,14 @@ public record TrackerPaymentTransaction14
     /// </summary>
     [DisplayName("Technical Receiver")]
     [IsoXmlTag("TechRcvr")]
-    public IsoBICFIDec2014Identifier? TechnicalReceiver { get; init; }
+    public BICFIDec2014Identifier? TechnicalReceiver { get; init; }
 
     /// <summary>
     /// Technical Sender.
     /// </summary>
     [DisplayName("Technical Sender")]
     [IsoXmlTag("TechSndr")]
-    public IsoBICFIDec2014Identifier? TechnicalSender { get; init; }
+    public BICFIDec2014Identifier? TechnicalSender { get; init; }
 
     /// <summary>
     /// Tracked Message Identification.

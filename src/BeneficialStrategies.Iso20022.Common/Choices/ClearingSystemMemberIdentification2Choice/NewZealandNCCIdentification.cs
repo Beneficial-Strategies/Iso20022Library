@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
         /// </summary>
         [IsoXmlTag("NZNCC")]
         [IsoSimpleType(IsoSimpleType.NewZealandNCCIdentifier)]
-        public required IsoNewZealandNCCIdentifier Value { get; init; }
+        public required NewZealandNCCIdentifier Value { get; init; }
     }
 }

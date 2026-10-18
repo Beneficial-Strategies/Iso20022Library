@@ -31,7 +31,7 @@ public record SettlementInformation17
     [DisplayName("Contract Settlement Month")]
     [IsoXmlTag("CtrctSttlmMnth")]
     [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
-    public IsoISOYearMonth? ContractSettlementMonth { get; init; }
+    public ISOYearMonth? ContractSettlementMonth { get; init; }
 
     /// <summary>
     /// Indicates the minimum quantity (unit or nominal) of a security.

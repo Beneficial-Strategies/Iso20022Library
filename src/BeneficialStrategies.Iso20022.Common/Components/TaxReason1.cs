@@ -24,7 +24,7 @@ public record TaxReason1
     [IsoXmlTag("Cd")]
     [IsoSimpleType(IsoSimpleType.Max10Text)]
     [StringLength(maximumLength: 10, MinimumLength = 1)]
-    public required IsoMax10Text Code { get; init; }
+    public required Max10Text Code { get; init; }
 
     /// <summary>
     /// Reason why the service is taxed, in a free-text form.
@@ -34,5 +34,5 @@ public record TaxReason1
     [IsoXmlTag("Expltn")]
     [IsoSimpleType(IsoSimpleType.Max105Text)]
     [StringLength(maximumLength: 105, MinimumLength = 1)]
-    public required IsoMax105Text Explanation { get; init; }
+    public required Max105Text Explanation { get; init; }
 }

@@ -23,7 +23,7 @@ public record PaymentTerms3
     [DisplayName("Due Date")]
     [IsoXmlTag("DueDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DueDate { get; init; }
+    public DateOnly? DueDate { get; init; }
 
     /// <summary>
     /// Payment period specified for these payment terms.
@@ -39,7 +39,7 @@ public record PaymentTerms3
     [IsoId("_TCHyEAEcEeCQm6a_G2yO_w_202278077")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public SimpleValueList<IsoMax140Text> Description { get; init; } = [];
+    public SimpleValueList<Max140Text> Description { get; init; } = [];
 
     /// <summary>
     /// Partial payment, expressed as a percentage, for the payment terms.
@@ -48,7 +48,7 @@ public record PaymentTerms3
     [DisplayName("Partial Payment Percent")]
     [IsoXmlTag("PrtlPmtPct")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? PartialPaymentPercent { get; init; }
+    public PercentageRate? PartialPaymentPercent { get; init; }
 
     /// <summary>
     /// Direct debit mandate identification specified for these payment terms.
@@ -56,7 +56,7 @@ public record PaymentTerms3
     [IsoId("_TCRjAQEcEeCQm6a_G2yO_w_-1812933723")]
     [DisplayName("Direct Debit Mandate Identification")]
     [IsoXmlTag("DrctDbtMndtId")]
-    public SimpleValueList<IsoMax35Text> DirectDebitMandateIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> DirectDebitMandateIdentification { get; init; } = [];
 
     /// <summary>
     /// Monetary value used as a basis to calculate the discount in these payment terms.
@@ -73,7 +73,7 @@ public record PaymentTerms3
     [DisplayName("Discount Percent Rate")]
     [IsoXmlTag("DscntPctRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? DiscountPercentRate { get; init; }
+    public PercentageRate? DiscountPercentRate { get; init; }
 
     /// <summary>
     /// Monetary value used as a basis to calculate the discount in these payment terms.
@@ -98,7 +98,7 @@ public record PaymentTerms3
     [DisplayName("Penalty Percent Rate")]
     [IsoXmlTag("PnltyPctRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? PenaltyPercentRate { get; init; }
+    public PercentageRate? PenaltyPercentRate { get; init; }
 
     /// <summary>
     /// Amount used as a basis to calculate the penalty amount.

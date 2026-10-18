@@ -38,5 +38,5 @@ public record StatusReasonInformation12
     [IsoId("_FD25WW49EeiU9cctagi5ow")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public SimpleValueList<IsoMax105Text> AdditionalInformation { get; init; } = [];
+    public SimpleValueList<Max105Text> AdditionalInformation { get; init; } = [];
 }

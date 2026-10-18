@@ -24,7 +24,7 @@ public record BatchInformation2
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MessageIdentification { get; init; }
+    public Max35Text? MessageIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by a sending party, to unambiguously identify the payment information group within the message.
@@ -34,7 +34,7 @@ public record BatchInformation2
     [IsoXmlTag("PmtInfId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PaymentInformationIdentification { get; init; }
+    public Max35Text? PaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Number of individual transactions included in the batch.
@@ -43,7 +43,7 @@ public record BatchInformation2
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public IsoMax15NumericText? NumberOfTransactions { get; init; }
+    public Max15NumericText? NumberOfTransactions { get; init; }
 
     /// <summary>
     /// Total amount of money reported in the batch entry.

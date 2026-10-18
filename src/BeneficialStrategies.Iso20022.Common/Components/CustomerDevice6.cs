@@ -22,7 +22,7 @@ public record CustomerDevice6
     [IsoId("_sR_wETJ4EfCLfeKcVPKw8g")]
     [DisplayName("Manufacturer")]
     [IsoXmlTag("Manfctr")]
-    public IsoMax70Text? Manufacturer { get; init; }
+    public Max70Text? Manufacturer { get; init; }
 
     /// <summary>
     /// Manufacturer's identification of the model.
@@ -30,7 +30,7 @@ public record CustomerDevice6
     [IsoId("_sR_wEzJ4EfCLfeKcVPKw8g")]
     [DisplayName("Manufacturer Model Identification")]
     [IsoXmlTag("ManfctrMdlId")]
-    public IsoMax70Text? ManufacturerModelIdentification { get; init; }
+    public Max70Text? ManufacturerModelIdentification { get; init; }
 
     /// <summary>
     /// Type of customer device. P000-P999 reserved for private use, N000-N999 reserved for national use.
@@ -54,7 +54,7 @@ public record CustomerDevice6
     [IsoId("_sR_wGzJ4EfCLfeKcVPKw8g")]
     [DisplayName("Phone")]
     [IsoXmlTag("Phne")]
-    public IsoPhoneNumber? Phone { get; init; }
+    public PhoneNumber? Phone { get; init; }
 
     /// <summary>
     /// Geographical location of the device.
@@ -62,7 +62,7 @@ public record CustomerDevice6
     [IsoId("_sR_wHTJ4EfCLfeKcVPKw8g")]
     [DisplayName("Geographic Location")]
     [IsoXmlTag("GeogcLctn")]
-    public IsoGeographicPointInDecimalDegreesText? GeographicLocation { get; init; }
+    public GeographicPointInDecimalDegreesText? GeographicLocation { get; init; }
 
     /// <summary>
     /// Country of the location.
@@ -78,7 +78,7 @@ public record CustomerDevice6
     [IsoId("_sR_wITJ4EfCLfeKcVPKw8g")]
     [DisplayName("IP Address")]
     [IsoXmlTag("IPAdr")]
-    public IsoMax70Text? IPAddress { get; init; }
+    public Max70Text? IPAddress { get; init; }
 
     /// <summary>
     /// Electronic mail address associated with the device.
@@ -86,7 +86,7 @@ public record CustomerDevice6
     [IsoId("_sR_wIzJ4EfCLfeKcVPKw8g")]
     [DisplayName("Email")]
     [IsoXmlTag("Email")]
-    public IsoMax256Text? Email { get; init; }
+    public Max256Text? Email { get; init; }
 
     /// <summary>
     /// Customer's name of the device.
@@ -94,7 +94,7 @@ public record CustomerDevice6
     [IsoId("_sR_wJTJ4EfCLfeKcVPKw8g")]
     [DisplayName("Device Name")]
     [IsoXmlTag("DvcNm")]
-    public IsoMax100Text? DeviceName { get; init; }
+    public Max100Text? DeviceName { get; init; }
 
     /// <summary>
     /// Customer assigned device name, normalized.
@@ -102,7 +102,7 @@ public record CustomerDevice6
     [IsoId("_sR_wJzJ4EfCLfeKcVPKw8g")]
     [DisplayName("Device Name Normalized")]
     [IsoXmlTag("DvcNmNrmlzd")]
-    public IsoMax100Text? DeviceNameNormalized { get; init; }
+    public Max100Text? DeviceNameNormalized { get; init; }
 
     /// <summary>
     /// Identification of the device.
@@ -118,7 +118,7 @@ public record CustomerDevice6
     [IsoId("_sR_wKzJ4EfCLfeKcVPKw8g")]
     [DisplayName("Operating System Identification")]
     [IsoXmlTag("OprgSysId")]
-    public IsoMax70Text? OperatingSystemIdentification { get; init; }
+    public Max70Text? OperatingSystemIdentification { get; init; }
 
     /// <summary>
     /// Type of device operating system. P000-P999 reserved for private use, N000-N999 reserved for national use.
@@ -134,7 +134,7 @@ public record CustomerDevice6
     [IsoId("_sR_wMTJ4EfCLfeKcVPKw8g")]
     [DisplayName("Operating System Version")]
     [IsoXmlTag("OprgSysVrsn")]
-    public IsoMax35Text? OperatingSystemVersion { get; init; }
+    public Max35Text? OperatingSystemVersion { get; init; }
 
     /// <summary>
     /// Build of the device operating system.
@@ -142,7 +142,7 @@ public record CustomerDevice6
     [IsoId("_sR_wMzJ4EfCLfeKcVPKw8g")]
     [DisplayName("Operating System Build")]
     [IsoXmlTag("OprgSysBld")]
-    public IsoMax70Text? OperatingSystemBuild { get; init; }
+    public Max70Text? OperatingSystemBuild { get; init; }
 
     /// <summary>
     /// Provider of the customer device.
@@ -150,7 +150,7 @@ public record CustomerDevice6
     [IsoId("_sR_wNTJ4EfCLfeKcVPKw8g")]
     [DisplayName("Provider")]
     [IsoXmlTag("Prvdr")]
-    public IsoMax35Text? Provider { get; init; }
+    public Max35Text? Provider { get; init; }
 
     /// <summary>
     /// The source of geographic location source.
@@ -158,7 +158,7 @@ public record CustomerDevice6
     [IsoId("_PauF8DJ8EfCLfeKcVPKw8g")]
     [DisplayName("Geographic Location Source")]
     [IsoXmlTag("GeogcLctnSrc")]
-    public IsoMax35Text? GeographicLocationSource { get; init; }
+    public Max35Text? GeographicLocationSource { get; init; }
 
     /// <summary>
     /// Contain the time zone of the device.
@@ -166,7 +166,7 @@ public record CustomerDevice6
     [IsoId("_VzkeYDJ8EfCLfeKcVPKw8g")]
     [DisplayName("Device Time Zone")]
     [IsoXmlTag("DvcTmZone")]
-    public IsoMax70Text? DeviceTimeZone { get; init; }
+    public Max70Text? DeviceTimeZone { get; init; }
 
     /// <summary>
     /// Contains the source of device time zone.
@@ -174,7 +174,7 @@ public record CustomerDevice6
     [IsoId("_gAgzgDJ8EfCLfeKcVPKw8g")]
     [DisplayName("Device Time Zone Source")]
     [IsoXmlTag("DvcTmZoneSrc")]
-    public IsoMax35Text? DeviceTimeZoneSource { get; init; }
+    public Max35Text? DeviceTimeZoneSource { get; init; }
 
     /// <summary>
     /// Reserved for private data. The use of this data element is determined by bilateral agreement.
@@ -182,7 +182,7 @@ public record CustomerDevice6
     [IsoId("_Gyrv0kVZEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -190,5 +190,5 @@ public record CustomerDevice6
     [IsoId("_Gyrv00VZEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

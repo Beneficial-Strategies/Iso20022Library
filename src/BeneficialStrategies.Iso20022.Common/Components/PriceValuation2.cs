@@ -24,7 +24,7 @@ public record PriceValuation2
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Date and time of the price valuation for the investment fund/fund class.
@@ -97,7 +97,7 @@ public record PriceValuation2
     [DisplayName("Suspended Indicator")]
     [IsoXmlTag("SspdInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator SuspendedIndicator { get; init; }
+    public required YesNoIndicator SuspendedIndicator { get; init; }
 
     /// <summary>
     /// Amount of money for which goods or services are offered, sold, or bought.

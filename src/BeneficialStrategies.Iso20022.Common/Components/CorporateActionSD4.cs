@@ -24,7 +24,7 @@ public record CorporateActionSD4
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text PlaceAndName { get; init; }
+    public required Max350Text PlaceAndName { get; init; }
 
     /// <summary>
     /// New par value of a security.
@@ -49,7 +49,7 @@ public record CorporateActionSD4
     [DisplayName("Exchange Fee Required Flag")]
     [IsoXmlTag("XchgFeeReqrdFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ExchangeFeeRequiredFlag { get; init; }
+    public YesNoIndicator? ExchangeFeeRequiredFlag { get; init; }
 
     /// <summary>
     /// GCA VS-specific flag that indicates whether a composite record has been generated as a result of custodian information that has not yet been confirmed in the market.
@@ -58,7 +58,7 @@ public record CorporateActionSD4
     [DisplayName("Custodian Shell Flag")]
     [IsoXmlTag("CtdnShellFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? CustodianShellFlag { get; init; }
+    public YesNoIndicator? CustodianShellFlag { get; init; }
 
     /// <summary>
     /// Indicates whether the issuer requires a holder to present the entire account balance in order to be eligible for the offer.
@@ -67,7 +67,7 @@ public record CorporateActionSD4
     [DisplayName("Must All Shares Be Submitted Flag")]
     [IsoXmlTag("MustAllShrsBeSubmittdFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? MustAllSharesBeSubmittedFlag { get; init; }
+    public YesNoIndicator? MustAllSharesBeSubmittedFlag { get; init; }
 
     /// <summary>
     /// Provides details about the lottery that has been drawn as a part of the corporate action event.
@@ -93,7 +93,7 @@ public record CorporateActionSD4
     [IsoXmlTag("SrvvgCpny")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? SurvivingCompany { get; init; }
+    public Max70Text? SurvivingCompany { get; init; }
 
     /// <summary>
     /// Indicates when all or part of the distribution is paid from foreign sourced income of the issuer.
@@ -102,5 +102,5 @@ public record CorporateActionSD4
     [DisplayName("Foreign Income Source Flag")]
     [IsoXmlTag("FrgnIncmSrcFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ForeignIncomeSourceFlag { get; init; }
+    public YesNoIndicator? ForeignIncomeSourceFlag { get; init; }
 }

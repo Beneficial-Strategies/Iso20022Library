@@ -39,7 +39,7 @@ public record ProcessingResult18
     [DisplayName("Approval Code")]
     [IsoXmlTag("ApprvlCd")]
     [IsoSimpleType(IsoSimpleType.Exact6AlphaNumericText)]
-    public IsoExact6AlphaNumericText? ApprovalCode { get; init; }
+    public Exact6AlphaNumericText? ApprovalCode { get; init; }
 
     /// <summary>
     /// Error detail information.
@@ -66,7 +66,7 @@ public record ProcessingResult18
     [DisplayName("Action Required")]
     [IsoXmlTag("ActnReqrd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ActionRequired { get; init; }
+    public YesNoIndicator? ActionRequired { get; init; }
 
     /// <summary>
     /// Set of actions to be performed.

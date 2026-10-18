@@ -40,7 +40,7 @@ public record PaymentCard21
     [IsoXmlTag("PmtAcctRef")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? PaymentAccountReference { get; init; }
+    public Max70Text? PaymentAccountReference { get; init; }
 
     /// <summary>
     /// Bank identifier number of the issuer for routing purpose.
@@ -49,7 +49,7 @@ public record PaymentCard21
     [DisplayName("Issuer BIN")]
     [IsoXmlTag("IssrBIN")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public IsoMax15NumericText? IssuerBIN { get; init; }
+    public Max15NumericText? IssuerBIN { get; init; }
 
     /// <summary>
     /// Country code assigned to the card by the card issuer.
@@ -59,7 +59,7 @@ public record PaymentCard21
     [IsoXmlTag("CardCtryCd")]
     [IsoSimpleType(IsoSimpleType.Max3Text)]
     [StringLength(maximumLength: 3, MinimumLength = 1)]
-    public IsoMax3Text? CardCountryCode { get; init; }
+    public Max3Text? CardCountryCode { get; init; }
 
     /// <summary>
     /// Currency code of the card issuer (ISO 4217 numeric code).
@@ -68,7 +68,7 @@ public record PaymentCard21
     [DisplayName("Card Currency Code")]
     [IsoXmlTag("CardCcyCd")]
     [IsoSimpleType(IsoSimpleType.Exact3AlphaNumericText)]
-    public IsoExact3AlphaNumericText? CardCurrencyCode { get; init; }
+    public Exact3AlphaNumericText? CardCurrencyCode { get; init; }
 
     /// <summary>
     /// Defines a category of cards related to the acceptance processing rules defined by the acquirer.
@@ -78,7 +78,7 @@ public record PaymentCard21
     [IsoXmlTag("CardPdctPrfl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CardProductProfile { get; init; }
+    public Max35Text? CardProductProfile { get; init; }
 
     /// <summary>
     /// Brand name of the card.
@@ -88,7 +88,7 @@ public record PaymentCard21
     [IsoXmlTag("CardBrnd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CardBrand { get; init; }
+    public Max35Text? CardBrand { get; init; }
 
     /// <summary>
     /// True if the card may be used abroad.
@@ -97,7 +97,7 @@ public record PaymentCard21
     [DisplayName("International Card")]
     [IsoXmlTag("IntrnlCard")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? InternationalCard { get; init; }
+    public TrueFalseIndicator? InternationalCard { get; init; }
 
     /// <summary>
     /// Product that can be purchased with the card.
@@ -105,7 +105,7 @@ public record PaymentCard21
     [IsoId("_0bwMUJZqEeWuSaWgzo19MQ")]
     [DisplayName("Allowed Product")]
     [IsoXmlTag("AllwdPdct")]
-    public SimpleValueList<IsoMax70Text> AllowedProduct { get; init; } = [];
+    public SimpleValueList<Max70Text> AllowedProduct { get; init; } = [];
 
     /// <summary>
     /// Options to the service provided by the card.
@@ -115,7 +115,7 @@ public record PaymentCard21
     [IsoXmlTag("SvcOptn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ServiceOption { get; init; }
+    public Max35Text? ServiceOption { get; init; }
 
     /// <summary>
     /// Additional card issuer specific data.
@@ -125,5 +125,5 @@ public record PaymentCard21
     [IsoXmlTag("AddtlCardData")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AdditionalCardData { get; init; }
+    public Max70Text? AdditionalCardData { get; init; }
 }

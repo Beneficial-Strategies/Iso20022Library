@@ -32,7 +32,7 @@ public record MessageAndBusinessReference12
     [IsoXmlTag("MstrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identification of the transfer, as assigned by the instructing party.
@@ -42,7 +42,7 @@ public record MessageAndBusinessReference12
     [IsoXmlTag("TrfRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransferReference { get; init; }
+    public required Max35Text TransferReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor&apos;s identification of the transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.
@@ -60,7 +60,7 @@ public record MessageAndBusinessReference12
     [IsoXmlTag("CxlRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CancellationReference { get; init; }
+    public Max35Text? CancellationReference { get; init; }
 
     /// <summary>
     /// Investment account information of the transfer message for which the status is requested.

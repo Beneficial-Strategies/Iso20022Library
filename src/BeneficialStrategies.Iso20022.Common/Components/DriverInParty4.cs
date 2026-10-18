@@ -22,7 +22,7 @@ public record DriverInParty4
     [IsoId("_ZoVBkVN6EfC0lMwgjvMClw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax105Text? Name { get; init; }
+    public Max105Text? Name { get; init; }
 
     /// <summary>
     /// First name of the cardholder.
@@ -30,7 +30,7 @@ public record DriverInParty4
     [IsoId("_sVg5c1N6EfC0lMwgjvMClw")]
     [DisplayName("Given Name")]
     [IsoXmlTag("GvnNm")]
-    public IsoMax35Text? GivenName { get; init; }
+    public Max35Text? GivenName { get; init; }
 
     /// <summary>
     /// Middle name or initials present in the name of a person.
@@ -38,7 +38,7 @@ public record DriverInParty4
     [IsoId("_sVg5dFN6EfC0lMwgjvMClw")]
     [DisplayName("Middle Name")]
     [IsoXmlTag("MddlNm")]
-    public IsoMax35Text? MiddleName { get; init; }
+    public Max35Text? MiddleName { get; init; }
 
     /// <summary>
     /// Family name of the cardholder.
@@ -46,7 +46,7 @@ public record DriverInParty4
     [IsoId("_sVg5dVN6EfC0lMwgjvMClw")]
     [DisplayName("Last Name")]
     [IsoXmlTag("LastNm")]
-    public IsoMax35Text? LastName { get; init; }
+    public Max35Text? LastName { get; init; }
 
     /// <summary>
     /// Address of driver in party.
@@ -70,7 +70,7 @@ public record DriverInParty4
     [IsoId("_ZoVBl1N6EfC0lMwgjvMClw")]
     [DisplayName("Date Of Birth")]
     [IsoXmlTag("DtOfBirth")]
-    public IsoISODate? DateOfBirth { get; init; }
+    public DateOnly? DateOfBirth { get; init; }
 
     /// <summary>
     /// Age of driver.
@@ -78,7 +78,7 @@ public record DriverInParty4
     [IsoId("_ZoVBmVN6EfC0lMwgjvMClw")]
     [DisplayName("Age")]
     [IsoXmlTag("Age")]
-    public IsoMax2NumericText? Age { get; init; }
+    public Max2NumericText? Age { get; init; }
 
     /// <summary>
     /// Credential used by the driver for identification.
@@ -94,7 +94,7 @@ public record DriverInParty4
     [IsoId("_ZoVBnVN6EfC0lMwgjvMClw")]
     [DisplayName("License Type")]
     [IsoXmlTag("LicTp")]
-    public IsoMax70Text? LicenseType { get; init; }
+    public Max70Text? LicenseType { get; init; }
 
     /// <summary>
     /// Form of driving license.
@@ -110,7 +110,7 @@ public record DriverInParty4
     [IsoId("_ZoVBoVN6EfC0lMwgjvMClw")]
     [DisplayName("License Identification")]
     [IsoXmlTag("LicId")]
-    public IsoMax70Text? LicenseIdentification { get; init; }
+    public Max70Text? LicenseIdentification { get; init; }
 
     /// <summary>
     /// Authority assigning an identification to a driver license.
@@ -126,7 +126,7 @@ public record DriverInParty4
     [IsoId("_ZoVBpVN6EfC0lMwgjvMClw")]
     [DisplayName("License Issuance Date")]
     [IsoXmlTag("LicIssncDt")]
-    public IsoISODate? LicenseIssuanceDate { get; init; }
+    public DateOnly? LicenseIssuanceDate { get; init; }
 
     /// <summary>
     /// Expiration date of the driving license (if and when relevant).
@@ -134,7 +134,7 @@ public record DriverInParty4
     [IsoId("_ZoVBp1N6EfC0lMwgjvMClw")]
     [DisplayName("License Expiration Date")]
     [IsoXmlTag("LicXprtnDt")]
-    public IsoISODate? LicenseExpirationDate { get; init; }
+    public DateOnly? LicenseExpirationDate { get; init; }
 
     /// <summary>
     /// Country issuing the driver license.
@@ -166,5 +166,5 @@ public record DriverInParty4
     [IsoId("_ZoVBr1N6EfC0lMwgjvMClw")]
     [DisplayName("License Other Authority")]
     [IsoXmlTag("LicOthrAuthrty")]
-    public IsoMax16Text? LicenseOtherAuthority { get; init; }
+    public Max16Text? LicenseOtherAuthority { get; init; }
 }

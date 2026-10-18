@@ -24,7 +24,7 @@ public record TimeFrame7
     [IsoXmlTag("OthrTmFrameDesc")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? OtherTimeFrameDescription { get; init; }
+    public Max350Text? OtherTimeFrameDescription { get; init; }
 
     /// <summary>
     /// Number of days after the trade date (T) used for the standard timeframe for the issue of a deal confirmation.
@@ -33,7 +33,7 @@ public record TimeFrame7
     [DisplayName("Trade Plus")]
     [IsoXmlTag("TPlus")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? TradePlus { get; init; }
+    public Number? TradePlus { get; init; }
 
     /// <summary>
     /// Convention used for adjusting a date when it is not a business day.

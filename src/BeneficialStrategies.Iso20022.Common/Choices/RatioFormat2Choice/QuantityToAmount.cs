@@ -31,6 +31,6 @@ namespace BeneficialStrategies.Iso20022.Choices.RatioFormat2Choice
         [DisplayName("Quantity")]
         [IsoXmlTag("Qty")]
         [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-        public required IsoDecimalNumber Quantity { get; init; }
+        public required DecimalNumber Quantity { get; init; }
     }
 }

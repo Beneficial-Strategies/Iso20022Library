@@ -57,7 +57,7 @@ public record CardTransactionDetail3
     [DisplayName("Validity Date")]
     [IsoXmlTag("VldtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ValidityDate { get; init; }
+    public DateOnly? ValidityDate { get; init; }
 
     /// <summary>
     /// Transaction category level on an unattended terminal.
@@ -66,7 +66,7 @@ public record CardTransactionDetail3
     [DisplayName("Unattended Level Category")]
     [IsoXmlTag("UattnddLvlCtgy")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public IsoMax35NumericText? UnattendedLevelCategory { get; init; }
+    public Max35NumericText? UnattendedLevelCategory { get; init; }
 
     /// <summary>
     /// Way to identify a customer account or a relationship to its account affected for debits, inquiries and the “from” account for transfers.
@@ -108,5 +108,5 @@ public record CardTransactionDetail3
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
     [IsoSimpleType(IsoSimpleType.Max10000Binary)]
-    public IsoMax10000Binary? ICCRelatedData { get; init; }
+    public Max10000Binary? ICCRelatedData { get; init; }
 }

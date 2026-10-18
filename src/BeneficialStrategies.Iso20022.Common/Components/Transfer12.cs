@@ -73,7 +73,7 @@ public record Transfer12
     [DisplayName("Own Account Transfer Indicator")]
     [IsoXmlTag("OwnAcctTrfInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? OwnAccountTransferIndicator { get; init; }
+    public YesNoIndicator? OwnAccountTransferIndicator { get; init; }
 
     /// <summary>
     /// Additional specific settlement information for non-regulated traded funds.
@@ -83,5 +83,5 @@ public record Transfer12
     [IsoXmlTag("NonStdSttlmInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? NonStandardSettlementInformation { get; init; }
+    public Max350Text? NonStandardSettlementInformation { get; init; }
 }

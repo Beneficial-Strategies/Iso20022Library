@@ -22,7 +22,7 @@ public record AuctionTradingSystemData1
     [IsoId("_xRzKEGIcEfCeoPFCHQnhvA")]
     [DisplayName("Indicative Price Date Time")]
     [IsoXmlTag("IndctvPricDtTm")]
-    public required IsoISODateTime IndicativePriceDateTime { get; init; }
+    public required ISODateTime IndicativePriceDateTime { get; init; }
 
     /// <summary>
     /// Data related to the auction price for the auction trading system.
@@ -38,5 +38,5 @@ public record AuctionTradingSystemData1
     [IsoId("_1Va2sGlSEfCI49VeRStxJw")]
     [DisplayName("Auction Volume")]
     [IsoXmlTag("AuctnVol")]
-    public IsoDecimalNumber? AuctionVolume { get; init; }
+    public DecimalNumber? AuctionVolume { get; init; }
 }

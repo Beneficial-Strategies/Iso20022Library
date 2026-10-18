@@ -24,7 +24,7 @@ public record ContractDocument1
     [IsoXmlTag("Ref")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Reference { get; init; }
+    public required Max35Text Reference { get; init; }
 
     /// <summary>
     /// Signoff date of the document.
@@ -33,7 +33,7 @@ public record ContractDocument1
     [DisplayName("Sign Off Date")]
     [IsoXmlTag("SgnOffDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? SignOffDate { get; init; }
+    public DateOnly? SignOffDate { get; init; }
 
     /// <summary>
     /// Identification of the version of the contract.
@@ -43,5 +43,5 @@ public record ContractDocument1
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Max6Text)]
     [StringLength(maximumLength: 6, MinimumLength = 1)]
-    public IsoMax6Text? Version { get; init; }
+    public Max6Text? Version { get; init; }
 }

@@ -28,7 +28,7 @@ public record ATMTransaction46
     /// </summary>
     [DisplayName("Cash Dispensed")]
     [IsoXmlTag("CshDspnsd")]
-    public IsoTrueFalseIndicator? CashDispensed { get; init; }
+    public TrueFalseIndicator? CashDispensed { get; init; }
 
     /// <summary>
     /// Currency Conversion Result.
@@ -49,7 +49,7 @@ public record ATMTransaction46
     /// </summary>
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
-    public IsoMax10000Binary? ICCRelatedData { get; init; }
+    public Max10000Binary? ICCRelatedData { get; init; }
 
     /// <summary>
     /// Protected Account Data.
@@ -63,14 +63,14 @@ public record ATMTransaction46
     /// </summary>
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
-    public IsoMax35Text? ReconciliationIdentification { get; init; }
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Requested Receipt.
     /// </summary>
     [DisplayName("Requested Receipt")]
     [IsoXmlTag("ReqdRct")]
-    public IsoTrueFalseIndicator? RequestedReceipt { get; init; }
+    public TrueFalseIndicator? RequestedReceipt { get; init; }
 
     /// <summary>
     /// Selected Mix.
@@ -84,7 +84,7 @@ public record ATMTransaction46
     /// </summary>
     [DisplayName("Selected Mix Type")]
     [IsoXmlTag("SelctdMixTp")]
-    public IsoMax35Text? SelectedMixType { get; init; }
+    public Max35Text? SelectedMixType { get; init; }
 
     /// <summary>
     /// Total Requested Amount.

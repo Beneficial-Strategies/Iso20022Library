@@ -22,7 +22,7 @@ public record TradingSystemData1
     [IsoId("_xvy7cGFdEfC-1NkZ9TkdKA")]
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
-    public required IsoMICIdentifier TradingVenue { get; init; }
+    public required MICIdentifier TradingVenue { get; init; }
 
     /// <summary>
     /// Data related to the status of the trading system.
@@ -46,7 +46,7 @@ public record TradingSystemData1
     [IsoId("_HZ01oKUPEfCmoeslmyBN5Q")]
     [DisplayName("Status Start Date Time")]
     [IsoXmlTag("StsStartDtTm")]
-    public required IsoISODateTime StatusStartDateTime { get; init; }
+    public required ISODateTime StatusStartDateTime { get; init; }
 
     /// <summary>
     /// Date and time on which the data are disseminated by the Consolidated Tape Provider (CTP).
@@ -56,5 +56,5 @@ public record TradingSystemData1
     [IsoId("_5Kt04GFdEfC-1NkZ9TkdKA")]
     [DisplayName("Dissemination Date Time")]
     [IsoXmlTag("DssmntnDtTm")]
-    public IsoISODateTime? DisseminationDateTime { get; init; }
+    public ISODateTime? DisseminationDateTime { get; init; }
 }

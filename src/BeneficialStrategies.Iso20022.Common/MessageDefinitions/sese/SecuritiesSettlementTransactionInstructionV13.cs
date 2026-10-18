@@ -197,5 +197,5 @@ public record SecuritiesSettlementTransactionInstructionV13 : IOuterRecord
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransactionIdentification { get; init; }
+    public required Max35Text TransactionIdentification { get; init; }
 }

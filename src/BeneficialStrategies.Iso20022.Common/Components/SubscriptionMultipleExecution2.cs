@@ -32,7 +32,7 @@ public record SubscriptionMultipleExecution2
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? OrderDateTime { get; init; }
+    public ISODateTime? OrderDateTime { get; init; }
 
     /// <summary>
     /// Cancellation right of an investor with respect to an investment fund order.

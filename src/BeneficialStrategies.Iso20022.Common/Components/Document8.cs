@@ -32,7 +32,7 @@ public record Document8
     [IsoXmlTag("Wrdg")]
     [IsoSimpleType(IsoSimpleType.Max20000Text)]
     [StringLength(maximumLength: 20000, MinimumLength = 1)]
-    public IsoMax20000Text? Wording { get; init; }
+    public Max20000Text? Wording { get; init; }
 
     /// <summary>
     /// Details related to an electronic presentation.

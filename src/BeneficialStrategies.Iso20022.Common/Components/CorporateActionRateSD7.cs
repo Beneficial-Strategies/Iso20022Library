@@ -24,7 +24,7 @@ public record CorporateActionRateSD7
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text PlaceAndName { get; init; }
+    public required Max350Text PlaceAndName { get; init; }
 
     /// <summary>
     /// Corresponding rate of the security disbursed by CSD (for an example in US, DTC The Depository Trust Corporation).
@@ -41,7 +41,7 @@ public record CorporateActionRateSD7
     [DisplayName("Estimated Rate Flag")]
     [IsoXmlTag("EstmtdRateFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? EstimatedRateFlag { get; init; }
+    public YesNoIndicator? EstimatedRateFlag { get; init; }
 
     /// <summary>
     /// Rate at which a fee will be charged to a DTC (The Depository Trust Corporation) participant.

@@ -24,7 +24,7 @@ public record ATMContext16
     [IsoXmlTag("SsnRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SessionReference { get; init; }
+    public Max35Text? SessionReference { get; init; }
 
     /// <summary>
     /// Context in which the transaction is performed.

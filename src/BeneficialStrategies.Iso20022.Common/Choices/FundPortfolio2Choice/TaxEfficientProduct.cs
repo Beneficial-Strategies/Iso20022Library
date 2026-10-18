@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio2Choice
         [DisplayName("Cash Component Indicator")]
         [IsoXmlTag("CshCmpntInd")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? CashComponentIndicator { get; init; }
+        public YesNoIndicator? CashComponentIndicator { get; init; }
 
         /// <summary>
         /// Investment plans issued during previous years.
@@ -49,7 +49,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio2Choice
         [DisplayName("Date Of First Subscription")]
         [IsoXmlTag("DtOfFrstSbcpt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? DateOfFirstSubscription { get; init; }
+        public DateOnly? DateOfFirstSubscription { get; init; }
 
         /// <summary>
         /// Amounts already subscribed for the current year.

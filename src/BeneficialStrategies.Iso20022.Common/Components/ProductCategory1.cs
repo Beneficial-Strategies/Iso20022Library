@@ -32,5 +32,5 @@ public record ProductCategory1
     [IsoXmlTag("Ctgy")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Category { get; init; }
+    public required Max35Text Category { get; init; }
 }

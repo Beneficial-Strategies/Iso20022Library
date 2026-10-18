@@ -24,7 +24,7 @@ public record AdditionalInformation24
     [IsoXmlTag("CollInstr")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? CollateralInstruction { get; init; }
+    public Max350Text? CollateralInstruction { get; init; }
 
     /// <summary>
     /// Narrative information visible to other parties.
@@ -34,5 +34,5 @@ public record AdditionalInformation24
     [IsoXmlTag("Note")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Note { get; init; }
+    public Max350Text? Note { get; init; }
 }

@@ -24,7 +24,7 @@ public record ProprietaryReference1
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Type { get; init; }
+    public required Max35Text Type { get; init; }
 
     /// <summary>
     /// Proprietary reference specification related to the underlying transaction.
@@ -34,5 +34,5 @@ public record ProprietaryReference1
     [IsoXmlTag("Ref")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Reference { get; init; }
+    public required Max35Text Reference { get; init; }
 }

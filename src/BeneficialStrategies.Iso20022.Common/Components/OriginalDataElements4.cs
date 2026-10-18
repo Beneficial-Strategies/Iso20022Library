@@ -21,7 +21,7 @@ public record OriginalDataElements4
     /// </summary>
     [DisplayName("Acquirer Identification")]
     [IsoXmlTag("AcqrrId")]
-    public IsoMax11NumericText? AcquirerIdentification { get; init; }
+    public Max11NumericText? AcquirerIdentification { get; init; }
 
     /// <summary>
     /// Message Class.
@@ -49,7 +49,7 @@ public record OriginalDataElements4
     /// </summary>
     [DisplayName("Sender Identification")]
     [IsoXmlTag("SndrId")]
-    public IsoMax11NumericText? SenderIdentification { get; init; }
+    public Max11NumericText? SenderIdentification { get; init; }
 
     /// <summary>
     /// Transaction Identification.

@@ -73,7 +73,7 @@ public record Transfer14
     [DisplayName("Portfolio Transfer Out Rate")]
     [IsoXmlTag("PrtflTrfOutRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? PortfolioTransferOutRate { get; init; }
+    public PercentageRate? PortfolioTransferOutRate { get; init; }
 
     /// <summary>
     /// Indicates the rounding direction applied to nearest unit.
@@ -98,7 +98,7 @@ public record Transfer14
     [DisplayName("Own Account Transfer Indicator")]
     [IsoXmlTag("OwnAcctTrfInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? OwnAccountTransferIndicator { get; init; }
+    public YesNoIndicator? OwnAccountTransferIndicator { get; init; }
 
     /// <summary>
     /// Additional specific settlement information for non-regulated traded funds.
@@ -108,5 +108,5 @@ public record Transfer14
     [IsoXmlTag("NonStdSttlmInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? NonStandardSettlementInformation { get; init; }
+    public Max350Text? NonStandardSettlementInformation { get; init; }
 }

@@ -28,7 +28,7 @@ public record GeneralInformation9
     /// </summary>
     [DisplayName("Block Indicator")]
     [IsoXmlTag("BlckInd")]
-    public IsoYesNoIndicator? BlockIndicator { get; init; }
+    public YesNoIndicator? BlockIndicator { get; init; }
 
     /// <summary>
     /// Broker Identification.
@@ -49,7 +49,7 @@ public record GeneralInformation9
     /// </summary>
     [DisplayName("Brokers Reference")]
     [IsoXmlTag("BrkrsRef")]
-    public IsoMax35Text? BrokersReference { get; init; }
+    public Max35Text? BrokersReference { get; init; }
 
     /// <summary>
     /// Calculation Agent.
@@ -70,7 +70,7 @@ public record GeneralInformation9
     /// </summary>
     [DisplayName("Counterparty Reference")]
     [IsoXmlTag("CtrPtyRef")]
-    public IsoMax35Text? CounterpartyReference { get; init; }
+    public Max35Text? CounterpartyReference { get; init; }
 
     /// <summary>
     /// Dealing Branch Counterparty Side.
@@ -98,7 +98,7 @@ public record GeneralInformation9
     /// </summary>
     [DisplayName("Definitions Year")]
     [IsoXmlTag("DefsYr")]
-    public IsoISOYear? DefinitionsYear { get; init; }
+    public ISOYear? DefinitionsYear { get; init; }
 
     /// <summary>
     /// Payment Clearing Centre.
@@ -112,12 +112,12 @@ public record GeneralInformation9
     /// </summary>
     [DisplayName("Related Trade Reference")]
     [IsoXmlTag("RltdTradRef")]
-    public IsoMax35Text? RelatedTradeReference { get; init; }
+    public Max35Text? RelatedTradeReference { get; init; }
 
     /// <summary>
     /// Sender To Receiver Information.
     /// </summary>
     [DisplayName("Sender To Receiver Information")]
     [IsoXmlTag("SndrToRcvrInf")]
-    public IsoMax210Text? SenderToReceiverInformation { get; init; }
+    public Max210Text? SenderToReceiverInformation { get; init; }
 }

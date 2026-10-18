@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature4Choice
         [DisplayName("Sector")]
         [IsoXmlTag("Sctr")]
         [IsoSimpleType(IsoSimpleType.NACEDomainIdentifier)]
-        public IsoNACEDomainIdentifier? Sector { get; init; }
+        public NACEDomainIdentifier? Sector { get; init; }
 
         /// <summary>
         /// Information whether the reporting counterparty is above the clearing threshold referred to the regulation.
@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature4Choice
         [DisplayName("Clearing Threshold")]
         [IsoXmlTag("ClrThrshld")]
         [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-        public required IsoTrueFalseIndicator ClearingThreshold { get; init; }
+        public required TrueFalseIndicator ClearingThreshold { get; init; }
 
         /// <summary>
         /// Directly linked to commercial activity or treasury financing: Information on whether the contract is objectively measurable as directly linked to the reporting counterparty&apos;s commercial or treasury financing activity.
@@ -41,6 +41,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature4Choice
         [DisplayName("Directly Linked Activity")]
         [IsoXmlTag("DrctlyLkdActvty")]
         [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-        public required IsoTrueFalseIndicator DirectlyLinkedActivity { get; init; }
+        public required TrueFalseIndicator DirectlyLinkedActivity { get; init; }
     }
 }

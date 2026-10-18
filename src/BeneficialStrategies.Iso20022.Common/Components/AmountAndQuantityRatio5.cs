@@ -31,5 +31,5 @@ public record AmountAndQuantityRatio5
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINDecimalNumber)]
-    public required IsoRestrictedFINDecimalNumber Quantity { get; init; }
+    public required RestrictedFINDecimalNumber Quantity { get; init; }
 }

@@ -49,7 +49,7 @@ public record CashOption108
     /// </summary>
     [DisplayName("Estimated Rate Indicator")]
     [IsoXmlTag("EstmtdRateInd")]
-    public IsoYesNoIndicator? EstimatedRateIndicator { get; init; }
+    public YesNoIndicator? EstimatedRateIndicator { get; init; }
 
     /// <summary>
     /// Exemption Type.
@@ -84,7 +84,7 @@ public record CashOption108
     /// </summary>
     [DisplayName("NRA Tax Reportable Indicator")]
     [IsoXmlTag("NRATaxRptblInd")]
-    public IsoYesNoIndicator? NRATaxReportableIndicator { get; init; }
+    public YesNoIndicator? NRATaxReportableIndicator { get; init; }
 
     /// <summary>
     /// Other Income Type.

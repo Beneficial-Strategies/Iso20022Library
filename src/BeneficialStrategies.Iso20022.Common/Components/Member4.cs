@@ -24,7 +24,7 @@ public record Member4
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Name { get; init; }
+    public Max35Text? Name { get; init; }
 
     /// <summary>
     /// Physical/logical address belonging to a member, segregated from its main address that is used for normal operations. The fund return address is used to route messages that require specific attention/exception handling, for example returns or rejects.

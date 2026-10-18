@@ -23,7 +23,7 @@ public record CashAll1
     [DisplayName("Indicator")]
     [IsoXmlTag("Ind")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator Indicator { get; init; }
+    public required YesNoIndicator Indicator { get; init; }
 
     /// <summary>
     /// Currency of the cash.

@@ -22,7 +22,7 @@ public record InvestmentFundOrder14
     [IsoId("a7b783f4-9b7e-4278-a10e-f8783a7d2ab6")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
-    public required IsoMax35Text OrderReference { get; init; }
+    public required Max35Text OrderReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor's identification of the order.
@@ -30,7 +30,7 @@ public record InvestmentFundOrder14
     [IsoId("29772961-18d1-429f-9e25-5cc7cc144278")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
-    public IsoMax35Text? ClientReference { get; init; }
+    public Max35Text? ClientReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for the order execution, as assigned by the confirming party.
@@ -38,7 +38,7 @@ public record InvestmentFundOrder14
     [IsoId("7e58176c-858b-4a63-ad20-3868c396f71d")]
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
-    public IsoMax35Text? DealReference { get; init; }
+    public Max35Text? DealReference { get; init; }
 
     /// <summary>
     /// Unambiguous identification of a random or semi-random number used once (NONCE) generated in the frame of a cryptographic communication.
@@ -46,7 +46,7 @@ public record InvestmentFundOrder14
     [IsoId("0ca82dbb-0937-4130-b769-f13fa262c4a8")]
     [DisplayName("Nonce Identification")]
     [IsoXmlTag("NonceId")]
-    public IsoMax35Text? NonceIdentification { get; init; }
+    public Max35Text? NonceIdentification { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for the order confirmation cancellation, as assigned by the confirming party.
@@ -54,7 +54,7 @@ public record InvestmentFundOrder14
     [IsoId("90dab6d3-15f7-414d-8ba9-26eeec245ff6")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
-    public IsoMax35Text? CancellationReference { get; init; }
+    public Max35Text? CancellationReference { get; init; }
 
     /// <summary>
     /// Reason for the cancellation of the confirmation.

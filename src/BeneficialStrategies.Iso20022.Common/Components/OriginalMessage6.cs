@@ -21,35 +21,35 @@ public record OriginalMessage6
     /// </summary>
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
-    public IsoISODateTime? OriginalCreationDateTime { get; init; }
+    public ISODateTime? OriginalCreationDateTime { get; init; }
 
     /// <summary>
     /// Original Message Identification.
     /// </summary>
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
-    public required IsoMax35Text OriginalMessageIdentification { get; init; }
+    public required Max35Text OriginalMessageIdentification { get; init; }
 
     /// <summary>
     /// Original Message Name Identification.
     /// </summary>
     [DisplayName("Original Message Name Identification")]
     [IsoXmlTag("OrgnlMsgNmId")]
-    public required IsoMax35Text OriginalMessageNameIdentification { get; init; }
+    public required Max35Text OriginalMessageNameIdentification { get; init; }
 
     /// <summary>
     /// Original Package Identification.
     /// </summary>
     [DisplayName("Original Package Identification")]
     [IsoXmlTag("OrgnlPackgId")]
-    public IsoMax35Text? OriginalPackageIdentification { get; init; }
+    public Max35Text? OriginalPackageIdentification { get; init; }
 
     /// <summary>
     /// Original Record Identification.
     /// </summary>
     [DisplayName("Original Record Identification")]
     [IsoXmlTag("OrgnlRcrdId")]
-    public required IsoMax35Text OriginalRecordIdentification { get; init; }
+    public required Max35Text OriginalRecordIdentification { get; init; }
 
     /// <summary>
     /// Original Sender.

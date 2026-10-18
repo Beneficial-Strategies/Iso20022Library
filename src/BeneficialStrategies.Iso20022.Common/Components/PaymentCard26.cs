@@ -40,7 +40,7 @@ public record PaymentCard26
     [IsoXmlTag("PmtAcctRef")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? PaymentAccountReference { get; init; }
+    public Max70Text? PaymentAccountReference { get; init; }
 
     /// <summary>
     /// Masked PAN to be printed the payment receipts or displayed to the cardholder. Masked digits may be absent or replaced by another character as &apos;*&apos;.
@@ -49,7 +49,7 @@ public record PaymentCard26
     [DisplayName("Masked PAN")]
     [IsoXmlTag("MskdPAN")]
     [IsoSimpleType(IsoSimpleType.Max30Text)]
-    public IsoMax30Text? MaskedPAN { get; init; }
+    public Max30Text? MaskedPAN { get; init; }
 
     /// <summary>
     /// Bank identifier number of the issuer for routing purpose.
@@ -58,7 +58,7 @@ public record PaymentCard26
     [DisplayName("Issuer BIN")]
     [IsoXmlTag("IssrBIN")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public IsoMax15NumericText? IssuerBIN { get; init; }
+    public Max15NumericText? IssuerBIN { get; init; }
 
     /// <summary>
     /// Country code assigned to the card by the card issuer.
@@ -68,7 +68,7 @@ public record PaymentCard26
     [IsoXmlTag("CardCtryCd")]
     [IsoSimpleType(IsoSimpleType.Max3Text)]
     [StringLength(maximumLength: 3, MinimumLength = 1)]
-    public IsoMax3Text? CardCountryCode { get; init; }
+    public Max3Text? CardCountryCode { get; init; }
 
     /// <summary>
     /// Currency code of the card issuer (ISO 4217 numeric code).
@@ -77,7 +77,7 @@ public record PaymentCard26
     [DisplayName("Card Currency Code")]
     [IsoXmlTag("CardCcyCd")]
     [IsoSimpleType(IsoSimpleType.Exact3AlphaNumericText)]
-    public IsoExact3AlphaNumericText? CardCurrencyCode { get; init; }
+    public Exact3AlphaNumericText? CardCurrencyCode { get; init; }
 
     /// <summary>
     /// Defines a category of cards related to the acceptance processing rules defined by the acquirer.
@@ -87,7 +87,7 @@ public record PaymentCard26
     [IsoXmlTag("CardPdctPrfl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CardProductProfile { get; init; }
+    public Max35Text? CardProductProfile { get; init; }
 
     /// <summary>
     /// Brand name of the card.
@@ -97,7 +97,7 @@ public record PaymentCard26
     [IsoXmlTag("CardBrnd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CardBrand { get; init; }
+    public Max35Text? CardBrand { get; init; }
 
     /// <summary>
     /// Type of card product.
@@ -115,7 +115,7 @@ public record PaymentCard26
     [IsoXmlTag("AddtlCardData")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AdditionalCardData { get; init; }
+    public Max70Text? AdditionalCardData { get; init; }
 
     /// <summary>
     /// Additionnal information to identify CardProduct.
@@ -125,5 +125,5 @@ public record PaymentCard26
     [IsoXmlTag("CardPdctSubTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CardProductSubType { get; init; }
+    public Max35Text? CardProductSubType { get; init; }
 }

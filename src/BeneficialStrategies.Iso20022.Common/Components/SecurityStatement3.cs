@@ -23,7 +23,7 @@ public record SecurityStatement3
     [DisplayName("System Date")]
     [IsoXmlTag("SysDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate SystemDate { get; init; }
+    public required DateOnly SystemDate { get; init; }
 
     /// <summary>
     /// Provides information on the actual change occurred to a financial instrument.

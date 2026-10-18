@@ -31,7 +31,7 @@ public record CashDeposit1
     [DisplayName("Number Of Notes")]
     [IsoXmlTag("NbOfNotes")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText NumberOfNotes { get; init; }
+    public required Max15NumericText NumberOfNotes { get; init; }
 
     /// <summary>
     /// Specifies the total amount of money in the cash deposit, that is the note denomination times the number of notes.

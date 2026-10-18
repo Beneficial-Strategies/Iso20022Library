@@ -63,7 +63,7 @@ public record CollateralAmount18
     [DisplayName("Interest Payment Delay")]
     [IsoXmlTag("IntrstPmtDely")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public IsoMax3NumericText? InterestPaymentDelay { get; init; }
+    public Max3NumericText? InterestPaymentDelay { get; init; }
 
     /// <summary>
     /// Breakdown of transaction amount (required value for the exposure)  into market value lots based on the underlying trades.

@@ -25,7 +25,7 @@ public record PartyIdentification204
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Entity in charge of assigning an identification to a party.
@@ -35,7 +35,7 @@ public record PartyIdentification204
     [IsoXmlTag("Assgnr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Assigner { get; init; }
+    public Max35Text? Assigner { get; init; }
 
     /// <summary>
     /// Country of the party.
@@ -53,7 +53,7 @@ public record PartyIdentification204
     [IsoXmlTag("ShrtNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ShortName { get; init; }
+    public Max35Text? ShortName { get; init; }
 
     /// <summary>
     /// Additional identification assigned to the party.
@@ -63,7 +63,7 @@ public record PartyIdentification204
     [IsoXmlTag("AddtlId")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AdditionalIdentification { get; init; }
+    public Max70Text? AdditionalIdentification { get; init; }
 
     /// <summary>
     /// Name and location of the card acceptor as appearing on the receipt or the statement of account of the cardholder. May contain location information relevant to the cardholder.
@@ -74,5 +74,5 @@ public record PartyIdentification204
     [IsoXmlTag("NmAndLctn")]
     [IsoSimpleType(IsoSimpleType.Max99Text)]
     [StringLength(maximumLength: 99, MinimumLength = 1)]
-    public required IsoMax99Text NameAndLocation { get; init; }
+    public required Max99Text NameAndLocation { get; init; }
 }

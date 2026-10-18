@@ -42,5 +42,5 @@ public record TransportByAir3
     [IsoXmlTag("AirCrrierNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AirCarrierName { get; init; }
+    public Max35Text? AirCarrierName { get; init; }
 }

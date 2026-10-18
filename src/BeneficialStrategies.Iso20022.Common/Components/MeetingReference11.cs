@@ -22,7 +22,7 @@ public record MeetingReference11
     [IsoId("_ZD4eQajNEfCzuLlmLrhIvA")]
     [DisplayName("Meeting Identification")]
     [IsoXmlTag("MtgId")]
-    public required IsoMax35Text MeetingIdentification { get; init; }
+    public required Max35Text MeetingIdentification { get; init; }
 
     /// <summary>
     /// Identification assigned to the meeting by the issuer.
@@ -30,7 +30,7 @@ public record MeetingReference11
     [IsoId("_ZD4eQ6jNEfCzuLlmLrhIvA")]
     [DisplayName("Issuer Meeting Identification")]
     [IsoXmlTag("IssrMtgId")]
-    public IsoMax35Text? IssuerMeetingIdentification { get; init; }
+    public Max35Text? IssuerMeetingIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the meeting will take place.
@@ -38,7 +38,7 @@ public record MeetingReference11
     [IsoId("_ZD4eRajNEfCzuLlmLrhIvA")]
     [DisplayName("Meeting Date And Time")]
     [IsoXmlTag("MtgDtAndTm")]
-    public required IsoISODateTime MeetingDateAndTime { get; init; }
+    public required ISODateTime MeetingDateAndTime { get; init; }
 
     /// <summary>
     /// Date at which the positions are struck to record which parties will receive the entitlement.

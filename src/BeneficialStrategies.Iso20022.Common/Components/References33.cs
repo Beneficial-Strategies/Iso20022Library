@@ -22,7 +22,7 @@ public record References33
     [IsoId("_pnpGMeSmEe-qVZLXW4RRBw")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
-    public IsoMax35Text? AccountOwnerTransactionIdentification { get; init; }
+    public Max35Text? AccountOwnerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the transaction as known by the account servicer.
@@ -30,7 +30,7 @@ public record References33
     [IsoId("_pnpGOeSmEe-qVZLXW4RRBw")]
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
-    public IsoMax35Text? AccountServicerTransactionIdentification { get; init; }
+    public Max35Text? AccountServicerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of a transaction assigned by a market infrastructure other than a central securities depository.
@@ -38,7 +38,7 @@ public record References33
     [IsoId("_pnpGQeSmEe-qVZLXW4RRBw")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
-    public IsoMax35Text? MarketInfrastructureTransactionIdentification { get; init; }
+    public Max35Text? MarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of a counterparty transaction assigned by a market infrastructure other than a central securities depository.
@@ -46,7 +46,7 @@ public record References33
     [IsoId("_hhYwweSmEe-qVZLXW4RRBw")]
     [DisplayName("Counterparty Market Infrastructure Transaction Identification")]
     [IsoXmlTag("CtrPtyMktInfrstrctrTxId")]
-    public IsoMax35Text? CounterpartyMarketInfrastructureTransactionIdentification { get; init; }
+    public Max35Text? CounterpartyMarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of the transaction assigned by the processor of the instruction.
@@ -54,7 +54,7 @@ public record References33
     [IsoId("_pnpGSeSmEe-qVZLXW4RRBw")]
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
-    public IsoMax35Text? ProcessorTransactionIdentification { get; init; }
+    public Max35Text? ProcessorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Collective reference identifying a set of messages.
@@ -62,5 +62,5 @@ public record References33
     [IsoId("_pnpGS-SmEe-qVZLXW4RRBw")]
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
-    public IsoMax35Text? PoolIdentification { get; init; }
+    public Max35Text? PoolIdentification { get; init; }
 }

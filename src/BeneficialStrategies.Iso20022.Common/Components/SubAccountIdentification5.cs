@@ -31,7 +31,7 @@ public record SubAccountIdentification5
     [DisplayName("Fungible Indicator")]
     [IsoXmlTag("FngbInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator FungibleIndicator { get; init; }
+    public required YesNoIndicator FungibleIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether there is activity reported in the statement.
@@ -40,7 +40,7 @@ public record SubAccountIdentification5
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ActivityIndicator { get; init; }
+    public required YesNoIndicator ActivityIndicator { get; init; }
 
     /// <summary>
     /// Net position of a segregated holding, in a single security, within the overall position held in a securities account.

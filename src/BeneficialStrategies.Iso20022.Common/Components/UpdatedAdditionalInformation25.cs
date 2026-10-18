@@ -21,7 +21,7 @@ public record UpdatedAdditionalInformation25
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public ValueList<IsoRestrictedFINXMax350Text> AdditionalInformation { get; init; } = [];
+    public ValueList<RestrictedFINXMax350Text> AdditionalInformation { get; init; } = [];
 
     /// <summary>
     /// Language.

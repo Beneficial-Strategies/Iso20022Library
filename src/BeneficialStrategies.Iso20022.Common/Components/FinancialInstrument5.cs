@@ -32,7 +32,7 @@ public record FinancialInstrument5
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Name { get; init; }
+    public Max350Text? Name { get; init; }
 
     /// <summary>
     /// Additional information about a financial instrument to help identify the instrument.
@@ -42,7 +42,7 @@ public record FinancialInstrument5
     [IsoXmlTag("SplmtryId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SupplementaryIdentification { get; init; }
+    public Max35Text? SupplementaryIdentification { get; init; }
 
     /// <summary>
     /// Currency to be used for pricing the fund. This currency must be among the set of currencies in which the price may be expressed, as stated in the prospectus.
@@ -60,7 +60,7 @@ public record FinancialInstrument5
     [IsoXmlTag("ClssTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClassType { get; init; }
+    public Max35Text? ClassType { get; init; }
 
     /// <summary>
     /// Form, ie, ownership, of the security, eg, registered or bearer.
@@ -85,5 +85,5 @@ public record FinancialInstrument5
     [DisplayName("Dual Fund Indicator")]
     [IsoXmlTag("DualFndInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator DualFundIndicator { get; init; }
+    public required YesNoIndicator DualFundIndicator { get; init; }
 }

@@ -24,7 +24,7 @@ public record Discrepancy1
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Description of the discrepancy.
@@ -34,5 +34,5 @@ public record Discrepancy1
     [IsoXmlTag("Nrrtv")]
     [IsoSimpleType(IsoSimpleType.Max20000Text)]
     [StringLength(maximumLength: 20000, MinimumLength = 1)]
-    public required IsoMax20000Text Narrative { get; init; }
+    public required Max20000Text Narrative { get; init; }
 }

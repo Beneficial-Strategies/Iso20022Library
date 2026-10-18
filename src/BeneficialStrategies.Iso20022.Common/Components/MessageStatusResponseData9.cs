@@ -21,7 +21,7 @@ public record MessageStatusResponseData9
     /// </summary>
     [DisplayName("Exchange Identification")]
     [IsoXmlTag("XchgId")]
-    public required IsoMax35Text ExchangeIdentification { get; init; }
+    public required Max35Text ExchangeIdentification { get; init; }
 
     /// <summary>
     /// Initiating Party.

@@ -28,7 +28,7 @@ public record TelecomServicesLineItem3
     /// </summary>
     [DisplayName("Call From City")]
     [IsoXmlTag("CallFrCity")]
-    public IsoMax35Text? CallFromCity { get; init; }
+    public Max35Text? CallFromCity { get; init; }
 
     /// <summary>
     /// Call From Country.
@@ -56,14 +56,14 @@ public record TelecomServicesLineItem3
     /// </summary>
     [DisplayName("Call From Other Type")]
     [IsoXmlTag("CallFrOthrTp")]
-    public IsoMax70Text? CallFromOtherType { get; init; }
+    public Max70Text? CallFromOtherType { get; init; }
 
     /// <summary>
     /// Call From Phone.
     /// </summary>
     [DisplayName("Call From Phone")]
     [IsoXmlTag("CallFrPhne")]
-    public IsoPhoneNumber? CallFromPhone { get; init; }
+    public PhoneNumber? CallFromPhone { get; init; }
 
     /// <summary>
     /// Call From Type.
@@ -77,7 +77,7 @@ public record TelecomServicesLineItem3
     /// </summary>
     [DisplayName("Call To City")]
     [IsoXmlTag("CallToCity")]
-    public IsoMax35Text? CallToCity { get; init; }
+    public Max35Text? CallToCity { get; init; }
 
     /// <summary>
     /// Call To Country.
@@ -105,14 +105,14 @@ public record TelecomServicesLineItem3
     /// </summary>
     [DisplayName("Call To Other Type")]
     [IsoXmlTag("CallToOthrTp")]
-    public IsoMax70Text? CallToOtherType { get; init; }
+    public Max70Text? CallToOtherType { get; init; }
 
     /// <summary>
     /// Call To Phone.
     /// </summary>
     [DisplayName("Call To Phone")]
     [IsoXmlTag("CallToPhne")]
-    public IsoPhoneNumber? CallToPhone { get; init; }
+    public PhoneNumber? CallToPhone { get; init; }
 
     /// <summary>
     /// Call To Type.
@@ -133,21 +133,21 @@ public record TelecomServicesLineItem3
     /// </summary>
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax256Text? Description { get; init; }
+    public Max256Text? Description { get; init; }
 
     /// <summary>
     /// Duration.
     /// </summary>
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
-    public IsoISOTime? Duration { get; init; }
+    public ISOTime? Duration { get; init; }
 
     /// <summary>
     /// Start Date Time.
     /// </summary>
     [DisplayName("Start Date Time")]
     [IsoXmlTag("StartDtTm")]
-    public IsoISODate? StartDateTime { get; init; }
+    public DateOnly? StartDateTime { get; init; }
 
     /// <summary>
     /// Tax.
@@ -161,7 +161,7 @@ public record TelecomServicesLineItem3
     /// </summary>
     [DisplayName("Time Period")]
     [IsoXmlTag("TmPrd")]
-    public IsoMax35Text? TimePeriod { get; init; }
+    public Max35Text? TimePeriod { get; init; }
 
     /// <summary>
     /// Total Amount.

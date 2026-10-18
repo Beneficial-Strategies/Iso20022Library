@@ -28,7 +28,7 @@ public record ProgrammeMode4
     /// </summary>
     [DisplayName("Applied Identification")]
     [IsoXmlTag("ApldId")]
-    public IsoMax35Text? AppliedIdentification { get; init; }
+    public Max35Text? AppliedIdentification { get; init; }
 
     /// <summary>
     /// Identification Selected By.
@@ -42,5 +42,5 @@ public record ProgrammeMode4
     /// </summary>
     [DisplayName("Proposed Identification")]
     [IsoXmlTag("PropsdId")]
-    public ValueList<IsoMax35Text> ProposedIdentification { get; init; } = [];
+    public ValueList<Max35Text> ProposedIdentification { get; init; } = [];
 }

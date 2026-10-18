@@ -23,7 +23,7 @@ public record DetailedStatisticsPerCounterparty5
     [DisplayName("Reference Date")]
     [IsoXmlTag("RefDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ReferenceDate { get; init; }
+    public required DateOnly ReferenceDate { get; init; }
 
     /// <summary>
     /// Data specific to counterparties and related fields.

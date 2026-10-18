@@ -23,7 +23,7 @@ public record CopyInformation5
     [DisplayName("Copy Indicator")]
     [IsoXmlTag("CpyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator CopyIndicator { get; init; }
+    public required YesNoIndicator CopyIndicator { get; init; }
 
     /// <summary>
     /// Original receiver of the message, if this message is a copy.
@@ -32,5 +32,5 @@ public record CopyInformation5
     [DisplayName("Original Receiver")]
     [IsoXmlTag("OrgnlRcvr")]
     [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
-    public IsoAnyBICDec2014Identifier? OriginalReceiver { get; init; }
+    public AnyBICDec2014Identifier? OriginalReceiver { get; init; }
 }

@@ -24,7 +24,7 @@ public record CorporateActionConfirmationSecuritiesMovementDetailsSD6
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Indicates whether the value is a debit or a credit.
@@ -74,7 +74,7 @@ public record CorporateActionConfirmationSecuritiesMovementDetailsSD6
     [IsoXmlTag("ContraPtcptNb")]
     [IsoSimpleType(IsoSimpleType.Max8Text)]
     [StringLength(maximumLength: 8, MinimumLength = 1)]
-    public IsoMax8Text? ContraParticipantNumber { get; init; }
+    public Max8Text? ContraParticipantNumber { get; init; }
 
     /// <summary>
     /// Date on which a financial instrument becomes due and assets are to be repaid.
@@ -83,7 +83,7 @@ public record CorporateActionConfirmationSecuritiesMovementDetailsSD6
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? MaturityDate { get; init; }
+    public DateOnly? MaturityDate { get; init; }
 
     /// <summary>
     /// Date/Time on which the posting /draft of the securities took place.
@@ -100,7 +100,7 @@ public record CorporateActionConfirmationSecuritiesMovementDetailsSD6
     [DisplayName("Tax Adjustment Rate")]
     [IsoXmlTag("TaxAdjstmntRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? TaxAdjustmentRate { get; init; }
+    public PercentageRate? TaxAdjustmentRate { get; init; }
 
     /// <summary>
     /// Unique DTCC legacy reference used for matching and reconciling legacy CCF records. The element will be populated to all levels of the message (event details, options, movements) where applicable to indicate how values are sourced from CCF legacy files. For example: event has 2 related activity types 74, and 54. If event details and cash option are sourced from the activity type 74, then activity type 74 will be in RDP reference number in event details, and also on the cash option. The activity type 54 will be &quot;on&quot; the security option. Also, usage rules will specify the different layouts of the RDP reference number based on DTCC event group (reorganization, distribution, or redemption).
@@ -109,7 +109,7 @@ public record CorporateActionConfirmationSecuritiesMovementDetailsSD6
     [DisplayName("RDP Reference Number")]
     [IsoXmlTag("RDPRefNb")]
     [IsoSimpleType(IsoSimpleType.Exact32AlphaNumericText)]
-    public IsoExact32AlphaNumericText? RDPReferenceNumber { get; init; }
+    public Exact32AlphaNumericText? RDPReferenceNumber { get; init; }
 
     /// <summary>
     /// Decimal above which numbers are rounded. For an example if rounding factor is 0.6 this means that fractional units greater than or equal to 6 will be rounded up and less than 6 will be rounded down.
@@ -118,5 +118,5 @@ public record CorporateActionConfirmationSecuritiesMovementDetailsSD6
     [DisplayName("Rounding Factor")]
     [IsoXmlTag("RndgFctr")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? RoundingFactor { get; init; }
+    public DecimalNumber? RoundingFactor { get; init; }
 }

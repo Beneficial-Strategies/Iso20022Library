@@ -22,7 +22,7 @@ public record AcceptorConfigurationContent15
     [IsoId("_qSy4p7ZzEfCUZfsQO4rYeA")]
     [DisplayName("Replace Configuration")]
     [IsoXmlTag("RplcCfgtn")]
-    public IsoTrueFalseIndicator? ReplaceConfiguration { get; init; }
+    public TrueFalseIndicator? ReplaceConfiguration { get; init; }
 
     /// <summary>
     /// Configuration parameters of the TMS protocol between a POI and a terminal manager.

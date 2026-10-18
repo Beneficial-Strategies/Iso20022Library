@@ -24,7 +24,7 @@ public record TaxParty1
     [IsoXmlTag("TaxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TaxIdentification { get; init; }
+    public Max35Text? TaxIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by an organisation, to unambiguously identify a party.
@@ -34,7 +34,7 @@ public record TaxParty1
     [IsoXmlTag("RegnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RegistrationIdentification { get; init; }
+    public Max35Text? RegistrationIdentification { get; init; }
 
     /// <summary>
     /// Type of tax payer.
@@ -44,5 +44,5 @@ public record TaxParty1
     [IsoXmlTag("TaxTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TaxType { get; init; }
+    public Max35Text? TaxType { get; init; }
 }

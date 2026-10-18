@@ -22,7 +22,7 @@ public record CurrencyConversion35
     [IsoId("_OoR6ZbZoEfCUZfsQO4rYeA")]
     [DisplayName("Accepted By Cardholder")]
     [IsoXmlTag("AccptdByCrdhldr")]
-    public IsoTrueFalseIndicator? AcceptedByCardholder { get; init; }
+    public TrueFalseIndicator? AcceptedByCardholder { get; init; }
 
     /// <summary>
     /// Conversion between the currency of a card acceptor and the currency of a cardholder, provided by a dedicated service provider.

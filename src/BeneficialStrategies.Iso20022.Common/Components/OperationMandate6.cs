@@ -35,14 +35,14 @@ public record OperationMandate6
     /// </summary>
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
-    public IsoISODate? EndDate { get; init; }
+    public DateOnly? EndDate { get; init; }
 
     /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Mandate Holder.
@@ -63,19 +63,19 @@ public record OperationMandate6
     /// </summary>
     [DisplayName("Required Signature Number")]
     [IsoXmlTag("ReqrdSgntrNb")]
-    public required IsoMax15PlusSignedNumericText RequiredSignatureNumber { get; init; }
+    public required Max15PlusSignedNumericText RequiredSignatureNumber { get; init; }
 
     /// <summary>
     /// Signature Order Indicator.
     /// </summary>
     [DisplayName("Signature Order Indicator")]
     [IsoXmlTag("SgntrOrdrInd")]
-    public required IsoYesNoIndicator SignatureOrderIndicator { get; init; }
+    public required YesNoIndicator SignatureOrderIndicator { get; init; }
 
     /// <summary>
     /// Start Date.
     /// </summary>
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
-    public IsoISODate? StartDate { get; init; }
+    public DateOnly? StartDate { get; init; }
 }

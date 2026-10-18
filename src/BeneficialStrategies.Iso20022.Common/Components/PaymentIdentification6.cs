@@ -25,7 +25,7 @@ public record PaymentIdentification6
     [IsoXmlTag("InstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? InstructionIdentification { get; init; }
+    public Max35Text? InstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification assigned by the initiating party to unambiguously identify the transaction. This identification is passed on, unchanged, throughout the entire end-to-end chain.
@@ -36,7 +36,7 @@ public record PaymentIdentification6
     [IsoXmlTag("EndToEndId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text EndToEndIdentification { get; init; }
+    public required Max35Text EndToEndIdentification { get; init; }
 
     /// <summary>
     /// Universally unique identifier to provide an end-to-end reference of a payment transaction.
@@ -45,5 +45,5 @@ public record PaymentIdentification6
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
     [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
-    public IsoUUIDv4Identifier? UETR { get; init; }
+    public UUIDv4Identifier? UETR { get; init; }
 }

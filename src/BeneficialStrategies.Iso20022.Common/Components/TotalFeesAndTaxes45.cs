@@ -46,7 +46,7 @@ public record TotalFeesAndTaxes45
     [IsoId("fa973eea-5daf-45e7-9811-5d717474149f")]
     [DisplayName("Commercial Agreement Reference")]
     [IsoXmlTag("ComrclAgrmtRef")]
-    public IsoMax35Text? CommercialAgreementReference { get; init; }
+    public Max35Text? CommercialAgreementReference { get; init; }
 
     /// <summary>
     /// Individual fee (charge/commission).

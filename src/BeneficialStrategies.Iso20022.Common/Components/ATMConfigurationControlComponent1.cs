@@ -28,14 +28,14 @@ public record ATMConfigurationControlComponent1
     /// </summary>
     [DisplayName("Activation Date")]
     [IsoXmlTag("ActvtnDt")]
-    public IsoISODateTime? ActivationDate { get; init; }
+    public ISODateTime? ActivationDate { get; init; }
 
     /// <summary>
     /// Configuration Version.
     /// </summary>
     [DisplayName("Configuration Version")]
     [IsoXmlTag("CfgtnVrsn")]
-    public IsoMax35Text? ConfigurationVersion { get; init; }
+    public Max35Text? ConfigurationVersion { get; init; }
 
     /// <summary>
     /// Environment.

@@ -21,7 +21,7 @@ public record OriginalItemAndStatus8
     /// </summary>
     [DisplayName("Additional Status Information")]
     [IsoXmlTag("AddtlStsInf")]
-    public IsoMax105Text? AdditionalStatusInformation { get; init; }
+    public Max105Text? AdditionalStatusInformation { get; init; }
 
     /// <summary>
     /// Amount.
@@ -35,7 +35,7 @@ public record OriginalItemAndStatus8
     /// </summary>
     [DisplayName("Expected Value Date")]
     [IsoXmlTag("XpctdValDt")]
-    public IsoISODate? ExpectedValueDate { get; init; }
+    public DateOnly? ExpectedValueDate { get; init; }
 
     /// <summary>
     /// Item Status.
@@ -49,14 +49,14 @@ public record OriginalItemAndStatus8
     /// </summary>
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Original Item Identification.
     /// </summary>
     [DisplayName("Original Item Identification")]
     [IsoXmlTag("OrgnlItmId")]
-    public required IsoMax35Text OriginalItemIdentification { get; init; }
+    public required Max35Text OriginalItemIdentification { get; init; }
 
     /// <summary>
     /// Original Item Reference.
@@ -70,5 +70,5 @@ public record OriginalItemAndStatus8
     /// </summary>
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
-    public IsoUUIDv4Identifier? OriginalUETR { get; init; }
+    public UUIDv4Identifier? OriginalUETR { get; init; }
 }

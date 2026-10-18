@@ -40,7 +40,7 @@ public record StoredValueAccount1
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Identification { get; init; }
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Brand to which belong the account.
@@ -50,7 +50,7 @@ public record StoredValueAccount1
     [IsoXmlTag("Brnd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Brand { get; init; }
+    public Max35Text? Brand { get; init; }
 
     /// <summary>
     /// Provider of the Stored Value Account.
@@ -60,7 +60,7 @@ public record StoredValueAccount1
     [IsoXmlTag("Prvdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Provider { get; init; }
+    public Max35Text? Provider { get; init; }
 
     /// <summary>
     /// Owner name of an account.
@@ -70,7 +70,7 @@ public record StoredValueAccount1
     [IsoXmlTag("OwnrNm")]
     [IsoSimpleType(IsoSimpleType.Max45Text)]
     [StringLength(maximumLength: 45, MinimumLength = 1)]
-    public IsoMax45Text? OwnerName { get; init; }
+    public Max45Text? OwnerName { get; init; }
 
     /// <summary>
     /// Expiry date of the account of card.
@@ -80,7 +80,7 @@ public record StoredValueAccount1
     [IsoXmlTag("XpryDt")]
     [IsoSimpleType(IsoSimpleType.Max10Text)]
     [StringLength(maximumLength: 10, MinimumLength = 1)]
-    public IsoMax10Text? ExpiryDate { get; init; }
+    public Max10Text? ExpiryDate { get; init; }
 
     /// <summary>
     /// Standard or last entry mode to access the Stored Value account or card.

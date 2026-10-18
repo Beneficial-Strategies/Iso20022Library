@@ -32,7 +32,7 @@ public record PaymentCard25
     [IsoXmlTag("Nb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Number { get; init; }
+    public required Max35Text Number { get; init; }
 
     /// <summary>
     /// Party entitled by a card issuer to use a card.
@@ -42,7 +42,7 @@ public record PaymentCard25
     [IsoXmlTag("HldrNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text HolderName { get; init; }
+    public required Max35Text HolderName { get; init; }
 
     /// <summary>
     /// Year and month the card is available for use.
@@ -51,7 +51,7 @@ public record PaymentCard25
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
-    public IsoISOYearMonth? StartDate { get; init; }
+    public ISOYearMonth? StartDate { get; init; }
 
     /// <summary>
     /// Year and month the card expires.
@@ -60,7 +60,7 @@ public record PaymentCard25
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
     [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
-    public required IsoISOYearMonth ExpiryDate { get; init; }
+    public required ISOYearMonth ExpiryDate { get; init; }
 
     /// <summary>
     /// Party that issues a payment card, as expressed by a numeric identification of the card issuer according to ISO/IEC 7812-1.
@@ -70,7 +70,7 @@ public record PaymentCard25
     [IsoXmlTag("CardIssrNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CardIssuerName { get; init; }
+    public Max35Text? CardIssuerName { get; init; }
 
     /// <summary>
     /// Party that issues a payment card, as expressed by a numeric identification of the card issuer according to ISO/IEC 7812-1.
@@ -88,7 +88,7 @@ public record PaymentCard25
     [IsoXmlTag("SctyCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SecurityCode { get; init; }
+    public Max35Text? SecurityCode { get; init; }
 
     /// <summary>
     /// Number distinguishing two or more payment cards with the same account number.
@@ -98,5 +98,5 @@ public record PaymentCard25
     [IsoXmlTag("SeqNb")]
     [IsoSimpleType(IsoSimpleType.Max3Text)]
     [StringLength(maximumLength: 3, MinimumLength = 1)]
-    public IsoMax3Text? SequenceNumber { get; init; }
+    public Max3Text? SequenceNumber { get; init; }
 }

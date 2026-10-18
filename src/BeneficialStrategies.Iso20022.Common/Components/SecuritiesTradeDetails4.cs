@@ -24,7 +24,7 @@ public record SecuritiesTradeDetails4
     [IsoXmlTag("AcctOwnrTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountOwnerTransactionIdentification { get; init; }
+    public Max35Text? AccountOwnerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of the transaction as known by the account servicer.
@@ -34,7 +34,7 @@ public record SecuritiesTradeDetails4
     [IsoXmlTag("AcctSvcrTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountServicerTransactionIdentification { get; init; }
+    public Max35Text? AccountServicerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
@@ -44,7 +44,7 @@ public record SecuritiesTradeDetails4
     [IsoXmlTag("MktInfrstrctrTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MarketInfrastructureTransactionIdentification { get; init; }
+    public Max35Text? MarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Reference assigned to the trade by the investor or the trading party. This reference will be used throughout the trade life cycle to access/update the trade details.
@@ -52,7 +52,7 @@ public record SecuritiesTradeDetails4
     [IsoId("_S9lJedp-Ed-ak6NoX_4Aeg_1590303490")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    public SimpleValueList<IsoMax35Text> TradeIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> TradeIdentification { get; init; } = [];
 
     /// <summary>
     /// Unique reference agreed upon by the two trade counterparties to identify the trade.
@@ -62,7 +62,7 @@ public record SecuritiesTradeDetails4
     [IsoXmlTag("CmonId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CommonIdentification { get; init; }
+    public Max35Text? CommonIdentification { get; init; }
 
     /// <summary>
     /// Collective reference identifying a set of messages.
@@ -72,7 +72,7 @@ public record SecuritiesTradeDetails4
     [IsoXmlTag("PoolId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PoolIdentification { get; init; }
+    public Max35Text? PoolIdentification { get; init; }
 
     /// <summary>
     /// Unambiguous identification of a collateral transaction as assigned by the instructing party.
@@ -80,7 +80,7 @@ public record SecuritiesTradeDetails4
     [IsoId("_S9lJfNp-Ed-ak6NoX_4Aeg_-1158247577")]
     [DisplayName("Collateral Transaction Identification")]
     [IsoXmlTag("CollTxId")]
-    public SimpleValueList<IsoMax35Text> CollateralTransactionIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> CollateralTransactionIdentification { get; init; } = [];
 
     /// <summary>
     /// Specifies if the movement on a securities account results from a deliver or a receive instruction.
@@ -121,7 +121,7 @@ public record SecuritiesTradeDetails4
     [DisplayName("Place Of Clearing")]
     [IsoXmlTag("PlcOfClr")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public IsoAnyBICIdentifier? PlaceOfClearing { get; init; }
+    public AnyBICIdentifier? PlaceOfClearing { get; init; }
 
     /// <summary>
     /// Specifies the date/time on which the trade was executed.
@@ -162,7 +162,7 @@ public record SecuritiesTradeDetails4
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
     [IsoSimpleType(IsoSimpleType.Max3Number)]
-    public IsoMax3Number? NumberOfDaysAccrued { get; init; }
+    public Max3Number? NumberOfDaysAccrued { get; init; }
 
     /// <summary>
     /// Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.

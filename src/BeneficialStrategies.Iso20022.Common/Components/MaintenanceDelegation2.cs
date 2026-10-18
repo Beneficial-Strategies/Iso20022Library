@@ -42,7 +42,7 @@ public record MaintenanceDelegation2
     [IsoXmlTag("RspnRsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ResponseReason { get; init; }
+    public Max35Text? ResponseReason { get; init; }
 
     /// <summary>
     /// Subset of the terminal estate for the delegated actions, for instance for pilot or key deactivation). The subset may be expressed as a list of POI or terminal estate subset identifier.
@@ -50,7 +50,7 @@ public record MaintenanceDelegation2
     [IsoId("__16ctWqGEeS8RZDTbvnB_A")]
     [DisplayName("POI Subset")]
     [IsoXmlTag("POISubset")]
-    public SimpleValueList<IsoMax35Text> POISubset { get; init; } = [];
+    public SimpleValueList<Max35Text> POISubset { get; init; } = [];
 
     /// <summary>
     /// Identification of the parameters subset assigned by the MTM.
@@ -60,7 +60,7 @@ public record MaintenanceDelegation2
     [IsoXmlTag("ParamsSubsetId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ParametersSubsetIdentification { get; init; }
+    public Max35Text? ParametersSubsetIdentification { get; init; }
 
     /// <summary>
     /// Definition of the subset of application parameters, for instance the range of application profiles, the RID (registered application provider identification).
@@ -69,7 +69,7 @@ public record MaintenanceDelegation2
     [DisplayName("Parameters Subset Definition")]
     [IsoXmlTag("ParamsSubsetDef")]
     [IsoSimpleType(IsoSimpleType.Max3000Binary)]
-    public IsoMax3000Binary? ParametersSubsetDefinition { get; init; }
+    public Max3000Binary? ParametersSubsetDefinition { get; init; }
 
     /// <summary>
     /// Proof of delegation to be verified by the POI, when performing the delegated actions.
@@ -78,7 +78,7 @@ public record MaintenanceDelegation2
     [DisplayName("Delegation Proof")]
     [IsoXmlTag("DlgtnProof")]
     [IsoSimpleType(IsoSimpleType.Max5000Binary)]
-    public IsoMax5000Binary? DelegationProof { get; init; }
+    public Max5000Binary? DelegationProof { get; init; }
 
     /// <summary>
     /// Protected proof of delegation.

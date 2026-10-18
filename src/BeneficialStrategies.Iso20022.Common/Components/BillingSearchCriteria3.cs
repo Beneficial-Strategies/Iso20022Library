@@ -30,7 +30,7 @@ public record BillingSearchCriteria3
     [IsoId("_VDLwsQzWEemZov7BpFCU4Q")]
     [DisplayName("Billing Identification")]
     [IsoXmlTag("BllgId")]
-    public IsoMax35Text? BillingIdentification { get; init; }
+    public Max35Text? BillingIdentification { get; init; }
 
     /// <summary>
     /// General information for each invoice invoicing request or month end billing event is stored.

@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification6Choice
         [IsoXmlTag("Desc")]
         [IsoSimpleType(IsoSimpleType.Max350Text)]
         [StringLength(maximumLength: 350, MinimumLength = 1)]
-        public IsoMax350Text? Description { get; init; }
+        public Max350Text? Description { get; init; }
 
         /// <summary>
         /// Classification type of the financial instrument, as per the ISO Classification of Financial Instrument (CFI) codification, eg, common share with voting rights, fully paid, or registered.
@@ -41,7 +41,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification6Choice
         [DisplayName("Place Of Listing")]
         [IsoXmlTag("PlcOfListg")]
         [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-        public IsoMICIdentifier? PlaceOfListing { get; init; }
+        public MICIdentifier? PlaceOfListing { get; init; }
 
         /// <summary>
         /// Exercise date/time of a derivative contract.
@@ -50,7 +50,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification6Choice
         [DisplayName("Exercise Date")]
         [IsoXmlTag("ExrcDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? ExerciseDate { get; init; }
+        public DateOnly? ExerciseDate { get; init; }
 
         /// <summary>
         /// Maturity date/time at which an interest bearing security becomes due.
@@ -59,7 +59,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification6Choice
         [DisplayName("Maturity Date")]
         [IsoXmlTag("MtrtyDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? MaturityDate { get; init; }
+        public DateOnly? MaturityDate { get; init; }
 
         /// <summary>
         /// Specifies whether it is a call option (right to purchase a specific underlying asset) or a put option (right to sell a specific underlying asset).
@@ -84,6 +84,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification6Choice
         [DisplayName("Multiplier")]
         [IsoXmlTag("Mltplr")]
         [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-        public IsoBaseOneRate? Multiplier { get; init; }
+        public BaseOneRate? Multiplier { get; init; }
     }
 }

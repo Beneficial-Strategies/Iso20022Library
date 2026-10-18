@@ -30,5 +30,5 @@ public record RecommendationAction2
     [IsoId("_RSYHtRNaEfC1ZfCQz0xB3g")]
     [DisplayName("Details")]
     [IsoXmlTag("Dtls")]
-    public IsoMax256Text? Details { get; init; }
+    public Max256Text? Details { get; init; }
 }

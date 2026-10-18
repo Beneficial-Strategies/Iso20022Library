@@ -55,7 +55,7 @@ public record FinancingAgreementItem1
     [DisplayName("Rating")]
     [IsoXmlTag("Ratg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator Rating { get; init; }
+    public required YesNoIndicator Rating { get; init; }
 
     /// <summary>
     /// Set to yes if the agreement was rejected and needs to be re-opened for arbitrage.
@@ -64,7 +64,7 @@ public record FinancingAgreementItem1
     [DisplayName("Reopen Indication")]
     [IsoXmlTag("ReopIndctn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ReopenIndication { get; init; }
+    public required YesNoIndicator ReopenIndication { get; init; }
 
     /// <summary>
     /// Issuers, amounts and periods to be guaranteed. At a given date, the sum of all issuers is guaranteed, covered as specified by rank/position and excess. For each period, the maximum value at a given date is used.

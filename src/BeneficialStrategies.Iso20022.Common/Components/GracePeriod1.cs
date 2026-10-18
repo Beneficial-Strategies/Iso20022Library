@@ -23,7 +23,7 @@ public record GracePeriod1
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public required IsoMax3NumericText Time { get; init; }
+    public required Max3NumericText Time { get; init; }
 
     /// <summary>
     /// Grace period unit type.
@@ -41,5 +41,5 @@ public record GracePeriod1
     [IsoXmlTag("OthrUnitTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherUnitType { get; init; }
+    public Max35Text? OtherUnitType { get; init; }
 }

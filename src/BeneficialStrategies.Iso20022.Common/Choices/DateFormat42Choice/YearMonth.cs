@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.DateFormat42Choice
         /// </summary>
         [IsoXmlTag("YrMnth")]
         [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
-        public required IsoISOYearMonth Value { get; init; }
+        public required ISOYearMonth Value { get; init; }
     }
 }

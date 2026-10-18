@@ -23,7 +23,7 @@ public record PaymentContext28
     [DisplayName("Card Present")]
     [IsoXmlTag("CardPres")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CardPresent { get; init; }
+    public TrueFalseIndicator? CardPresent { get; init; }
 
     /// <summary>
     /// Indicates whether the transaction has been initiated in presence of the cardholder or not.
@@ -32,7 +32,7 @@ public record PaymentContext28
     [DisplayName("Cardholder Present")]
     [IsoXmlTag("CrdhldrPres")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CardholderPresent { get; init; }
+    public TrueFalseIndicator? CardholderPresent { get; init; }
 
     /// <summary>
     /// On-line or off-line context of the transaction.
@@ -41,7 +41,7 @@ public record PaymentContext28
     [DisplayName("On Line Context")]
     [IsoXmlTag("OnLineCntxt")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? OnLineContext { get; init; }
+    public TrueFalseIndicator? OnLineContext { get; init; }
 
     /// <summary>
     /// Human attendance at the POI (Point Of Interaction) location during the transaction.
@@ -82,7 +82,7 @@ public record PaymentContext28
     [DisplayName("Attendant Message Capable")]
     [IsoXmlTag("AttndntMsgCpbl")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? AttendantMessageCapable { get; init; }
+    public TrueFalseIndicator? AttendantMessageCapable { get; init; }
 
     /// <summary>
     /// Language used to display messages to the attendant.

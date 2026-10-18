@@ -24,7 +24,7 @@ public record PartyDetail1
     [IsoXmlTag("FullNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? FullName { get; init; }
+    public Max350Text? FullName { get; init; }
 
     /// <summary>
     /// Country of the party as recorded in the registration in its legal jurisdiction.
@@ -42,7 +42,7 @@ public record PartyDetail1
     [IsoXmlTag("PtyTp")]
     [IsoSimpleType(IsoSimpleType.Max10Text)]
     [StringLength(maximumLength: 10, MinimumLength = 1)]
-    public required IsoMax10Text PartyType { get; init; }
+    public required Max10Text PartyType { get; init; }
 
     /// <summary>
     /// Information detail about the institution supervising the party under the local regulation.
@@ -76,5 +76,5 @@ public record PartyDetail1
     [IsoXmlTag("Cmnt")]
     [IsoSimpleType(IsoSimpleType.Max20000Text)]
     [StringLength(maximumLength: 20000, MinimumLength = 1)]
-    public IsoMax20000Text? Comment { get; init; }
+    public Max20000Text? Comment { get; init; }
 }

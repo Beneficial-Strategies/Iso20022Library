@@ -22,7 +22,7 @@ public record AcquirerData1
     [IsoId("_6O-N0RUXEfC_aaedwHHlmw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax11NumericText Identification { get; init; }
+    public required Max11NumericText Identification { get; init; }
 
     /// <summary>
     /// Business or client identification for the acquirer.
@@ -30,7 +30,7 @@ public record AcquirerData1
     [IsoId("_N_kqgBUYEfC_aaedwHHlmw")]
     [DisplayName("Business Identification")]
     [IsoXmlTag("BizId")]
-    public IsoMax15AlphaNumericText? BusinessIdentification { get; init; }
+    public Max15AlphaNumericText? BusinessIdentification { get; init; }
 
     /// <summary>
     /// Country of the acquirer.
@@ -46,7 +46,7 @@ public record AcquirerData1
     [IsoId("_6O-N3RUXEfC_aaedwHHlmw")]
     [DisplayName("Business Name")]
     [IsoXmlTag("BizNm")]
-    public IsoMax35Text? BusinessName { get; init; }
+    public Max35Text? BusinessName { get; init; }
 
     /// <summary>
     /// Legal Corporate Name of the acquirer.
@@ -54,7 +54,7 @@ public record AcquirerData1
     [IsoId("_6O-N3xUXEfC_aaedwHHlmw")]
     [DisplayName("Legal Corporate Name")]
     [IsoXmlTag("LglCorpNm")]
-    public IsoMax99Text? LegalCorporateName { get; init; }
+    public Max99Text? LegalCorporateName { get; init; }
 
     /// <summary>
     /// Address of the acquirer.

@@ -22,7 +22,7 @@ public record StoredValueData9
     [IsoId("_5XNuVbZYEfCUZfsQO4rYeA")]
     [DisplayName("Provider")]
     [IsoXmlTag("Prvdr")]
-    public IsoMax35Text? Provider { get; init; }
+    public Max35Text? Provider { get; init; }
 
     /// <summary>
     /// Identification of operation to proceed on the stored value account or the stored value card.
@@ -54,7 +54,7 @@ public record StoredValueData9
     [IsoId("_5XNubbZYEfCUZfsQO4rYeA")]
     [DisplayName("Product Code")]
     [IsoXmlTag("PdctCd")]
-    public IsoMax35Text? ProductCode { get; init; }
+    public Max35Text? ProductCode { get; init; }
 
     /// <summary>
     /// Standard European Article Number Universal Product Code of item purchased with the transaction.
@@ -62,7 +62,7 @@ public record StoredValueData9
     [IsoId("_5XNuc7ZYEfCUZfsQO4rYeA")]
     [DisplayName("EANUPC")]
     [IsoXmlTag("EANUPC")]
-    public IsoMax35NumericText? EANUPC { get; init; }
+    public Max35NumericText? EANUPC { get; init; }
 
     /// <summary>
     /// Total amount of the item line.

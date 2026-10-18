@@ -24,7 +24,7 @@ public record Organisation34
     [IsoXmlTag("FullLglNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? FullLegalName { get; init; }
+    public Max350Text? FullLegalName { get; init; }
 
     /// <summary>
     /// Unique and unambiguous way of identifying an organisation.

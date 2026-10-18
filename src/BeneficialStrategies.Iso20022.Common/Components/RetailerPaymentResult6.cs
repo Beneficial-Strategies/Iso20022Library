@@ -49,14 +49,14 @@ public record RetailerPaymentResult6
     /// </summary>
     [DisplayName("Merchant Override Flag")]
     [IsoXmlTag("MrchntOvrrdFlg")]
-    public IsoTrueFalseIndicator? MerchantOverrideFlag { get; init; }
+    public TrueFalseIndicator? MerchantOverrideFlag { get; init; }
 
     /// <summary>
     /// Online Flag.
     /// </summary>
     [DisplayName("Online Flag")]
     [IsoXmlTag("OnlnFlg")]
-    public IsoTrueFalseIndicator? OnlineFlag { get; init; }
+    public TrueFalseIndicator? OnlineFlag { get; init; }
 
     /// <summary>
     /// Protected Captured Signature.

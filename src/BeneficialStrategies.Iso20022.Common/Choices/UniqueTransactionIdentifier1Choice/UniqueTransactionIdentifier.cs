@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.UniqueTransactionIdentifier1Choi
         /// </summary>
         [IsoXmlTag("UnqTxIdr")]
         [IsoSimpleType(IsoSimpleType.UTIIdentifier)]
-        public required IsoUTIIdentifier Value { get; init; }
+        public required UTIIdentifier Value { get; init; }
     }
 }

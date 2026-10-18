@@ -55,7 +55,7 @@ public record CertificateDataSet2
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate IssueDate { get; init; }
+    public required DateOnly IssueDate { get; init; }
 
     /// <summary>
     /// Place where the certificate was issued.
@@ -88,7 +88,7 @@ public record CertificateDataSet2
     [DisplayName("Authorised Inspector Indicator")]
     [IsoXmlTag("AuthrsdInspctrInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AuthorisedInspectorIndicator { get; init; }
+    public YesNoIndicator? AuthorisedInspectorIndicator { get; init; }
 
     /// <summary>
     /// Unique identifier of the document.
@@ -98,7 +98,7 @@ public record CertificateDataSet2
     [IsoXmlTag("CertId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text CertificateIdentification { get; init; }
+    public required Max35Text CertificateIdentification { get; init; }
 
     /// <summary>
     /// Transport information relative to the goods that are covered by the certificate.
@@ -116,7 +116,7 @@ public record CertificateDataSet2
     [IsoXmlTag("GoodsDesc")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? GoodsDescription { get; init; }
+    public Max70Text? GoodsDescription { get; init; }
 
     /// <summary>
     /// Party responsible for dispatching the goods.
@@ -148,5 +148,5 @@ public record CertificateDataSet2
     [IsoId("_2nSbjzANEeOKib24wnHaFg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public SimpleValueList<IsoMax350Text> AdditionalInformation { get; init; } = [];
+    public SimpleValueList<Max350Text> AdditionalInformation { get; init; } = [];
 }

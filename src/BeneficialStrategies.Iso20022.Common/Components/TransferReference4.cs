@@ -24,7 +24,7 @@ public record TransferReference4
     [IsoXmlTag("TrfRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransferReference { get; init; }
+    public required Max35Text TransferReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for a transfer cancellation, as assigned by the instructing party.
@@ -34,5 +34,5 @@ public record TransferReference4
     [IsoXmlTag("CxlRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CancellationReference { get; init; }
+    public Max35Text? CancellationReference { get; init; }
 }

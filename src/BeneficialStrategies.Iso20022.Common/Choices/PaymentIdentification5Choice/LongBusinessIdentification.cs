@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification5Choice
         [IsoXmlTag("TxId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text TransactionIdentification { get; init; }
+        public required Max35Text TransactionIdentification { get; init; }
 
         /// <summary>
         /// Amount of money moved between the instructing agent and the instructed agent.
@@ -41,7 +41,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification5Choice
         [DisplayName("Inter Bank Settlement Date")]
         [IsoXmlTag("IntrBkSttlmDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate InterBankSettlementDate { get; init; }
+        public required DateOnly InterBankSettlementDate { get; init; }
 
         /// <summary>
         /// Message type with which the instruction has been initiated.
@@ -74,7 +74,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification5Choice
         [DisplayName("Entry Type")]
         [IsoXmlTag("NtryTp")]
         [IsoSimpleType(IsoSimpleType.EntryTypeIdentifier)]
-        public IsoEntryTypeIdentifier? EntryType { get; init; }
+        public EntryTypeIdentifier? EntryType { get; init; }
 
         /// <summary>
         /// Unique identification, as assigned by the initiating party, to unambiguously identify the transaction. This identification is passed on, unchanged, throughout the entire end-to-end chain.|Usage: The end-to-end identification can be used for reconciliation or to link tasks relating to the transaction.|It can be included in several messages related to the transaction.|Usage: this is the former RelatedReference.
@@ -84,6 +84,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification5Choice
         [IsoXmlTag("EndToEndId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? EndToEndIdentification { get; init; }
+        public Max35Text? EndToEndIdentification { get; init; }
     }
 }

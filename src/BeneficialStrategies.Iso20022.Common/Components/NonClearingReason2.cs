@@ -35,5 +35,5 @@ public record NonClearingReason2
     [IsoXmlTag("NonClrRsnInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? NonClearingReasonInformation { get; init; }
+    public Max350Text? NonClearingReasonInformation { get; init; }
 }

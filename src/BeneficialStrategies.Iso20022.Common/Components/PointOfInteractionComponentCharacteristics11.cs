@@ -38,7 +38,7 @@ public record PointOfInteractionComponentCharacteristics11
     [IsoId("_FaNnYbZzEfCUZfsQO4rYeA")]
     [DisplayName("Security Access Modules")]
     [IsoXmlTag("SctyAccsMdls")]
-    public IsoNumber? SecurityAccessModules { get; init; }
+    public Number? SecurityAccessModules { get; init; }
 
     /// <summary>
     /// Number of subscriber identity modules (SIM).
@@ -46,7 +46,7 @@ public record PointOfInteractionComponentCharacteristics11
     [IsoId("_FaNnZ7ZzEfCUZfsQO4rYeA")]
     [DisplayName("Subscriber Identity Modules")]
     [IsoXmlTag("SbcbrIdntyMdls")]
-    public IsoNumber? SubscriberIdentityModules { get; init; }
+    public Number? SubscriberIdentityModules { get; init; }
 
     /// <summary>
     /// Security characteristics of the component.

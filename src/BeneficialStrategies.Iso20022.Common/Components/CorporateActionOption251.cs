@@ -22,7 +22,7 @@ public record CorporateActionOption251
     [IsoId("d1f71578-0ea3-4368-bca3-a98aa0199f2b")]
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
-    public required IsoExact3NumericText OptionNumber { get; init; }
+    public required Exact3NumericText OptionNumber { get; init; }
 
     /// <summary>
     /// Specifies the corporate action options available to the account owner.
@@ -118,7 +118,7 @@ public record CorporateActionOption251
     [IsoId("ec819d17-55f8-4adc-b0fd-e860d8d3d187")]
     [DisplayName("Charges Applied Indicator")]
     [IsoXmlTag("ChrgsApldInd")]
-    public IsoYesNoIndicator? ChargesAppliedIndicator { get; init; }
+    public YesNoIndicator? ChargesAppliedIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether certification/breakdown is required from the account owner.
@@ -126,7 +126,7 @@ public record CorporateActionOption251
     [IsoId("71dcbf78-64e7-4d74-9644-a8e6d80e5f75")]
     [DisplayName("Certification Breakdown Indicator")]
     [IsoXmlTag("CertfctnBrkdwnInd")]
-    public IsoYesNoIndicator? CertificationBreakdownIndicator { get; init; }
+    public YesNoIndicator? CertificationBreakdownIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether withdrawal of instruction is allowed.
@@ -134,7 +134,7 @@ public record CorporateActionOption251
     [IsoId("f085f63b-f6fc-420e-8f36-0c6e2ebaa15e")]
     [DisplayName("Withdrawal Allowed Indicator")]
     [IsoXmlTag("WdrwlAllwdInd")]
-    public IsoYesNoIndicator? WithdrawalAllowedIndicator { get; init; }
+    public YesNoIndicator? WithdrawalAllowedIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether change of instruction is allowed.
@@ -142,7 +142,7 @@ public record CorporateActionOption251
     [IsoId("4fb26afd-bf53-4583-923c-2e658161a611")]
     [DisplayName("Change Allowed Indicator")]
     [IsoXmlTag("ChngAllwdInd")]
-    public IsoYesNoIndicator? ChangeAllowedIndicator { get; init; }
+    public YesNoIndicator? ChangeAllowedIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the option, different from the default one, shall be applied by the account owner.
@@ -150,7 +150,7 @@ public record CorporateActionOption251
     [IsoId("f2f7680a-591c-411c-856e-b24a06dcf7a0")]
     [DisplayName("Applied Option Indicator")]
     [IsoXmlTag("ApldOptnInd")]
-    public IsoYesNoIndicator? AppliedOptionIndicator { get; init; }
+    public YesNoIndicator? AppliedOptionIndicator { get; init; }
 
     /// <summary>
     /// Identifies the financial instrument.

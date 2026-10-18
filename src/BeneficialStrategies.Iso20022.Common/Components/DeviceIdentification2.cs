@@ -30,7 +30,7 @@ public record DeviceIdentification2
     [IsoId("_f1IilXbbEfCmC4yYaU27Kg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax70Text? Identification { get; init; }
+    public Max70Text? Identification { get; init; }
 
     /// <summary>
     /// Entity that assigned the identification.
@@ -38,5 +38,5 @@ public record DeviceIdentification2
     [IsoId("_f1Iil3bbEfCmC4yYaU27Kg")]
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
-    public IsoMax70Text? Assigner { get; init; }
+    public Max70Text? Assigner { get; init; }
 }

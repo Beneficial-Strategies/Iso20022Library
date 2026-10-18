@@ -24,7 +24,7 @@ public record FinancialInstrument85
     [IsoXmlTag("LineId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LineIdentification { get; init; }
+    public Max35Text? LineIdentification { get; init; }
 
     /// <summary>
     /// Identification of the asset.

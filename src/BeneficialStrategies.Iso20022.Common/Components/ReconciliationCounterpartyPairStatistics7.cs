@@ -35,5 +35,5 @@ public record ReconciliationCounterpartyPairStatistics7
     /// </summary>
     [DisplayName("Total Number Of Transactions")]
     [IsoXmlTag("TtlNbOfTxs")]
-    public required IsoNumber TotalNumberOfTransactions { get; init; }
+    public required Number TotalNumberOfTransactions { get; init; }
 }

@@ -23,7 +23,7 @@ public record AgreementConditions1
     [DisplayName("Agreement Code")]
     [IsoXmlTag("AgrmtCd")]
     [IsoSimpleType(IsoSimpleType.Max6AlphaText)]
-    public required IsoMax6AlphaText AgreementCode { get; init; }
+    public required Max6AlphaText AgreementCode { get; init; }
 
     /// <summary>
     /// Specifies the date of the agreement.
@@ -32,7 +32,7 @@ public record AgreementConditions1
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Specifies the version of the agreement.
@@ -41,5 +41,5 @@ public record AgreementConditions1
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Exact4NumericText)]
-    public IsoExact4NumericText? Version { get; init; }
+    public Exact4NumericText? Version { get; init; }
 }

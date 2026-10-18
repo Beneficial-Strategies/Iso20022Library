@@ -31,5 +31,5 @@ public record QuantityAndAvailability2
     [DisplayName("Availability Indicator")]
     [IsoXmlTag("AvlbtyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator AvailabilityIndicator { get; init; }
+    public required YesNoIndicator AvailabilityIndicator { get; init; }
 }

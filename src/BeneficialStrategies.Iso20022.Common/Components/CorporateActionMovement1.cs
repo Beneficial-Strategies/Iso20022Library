@@ -31,7 +31,7 @@ public record CorporateActionMovement1
     [DisplayName("High Priority Indicator")]
     [IsoXmlTag("HghPrtyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator HighPriorityIndicator { get; init; }
+    public required YesNoIndicator HighPriorityIndicator { get; init; }
 
     /// <summary>
     /// Number identifying the available corporate action options.
@@ -40,7 +40,7 @@ public record CorporateActionMovement1
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public IsoExact3NumericText? OptionNumber { get; init; }
+    public Exact3NumericText? OptionNumber { get; init; }
 
     /// <summary>
     /// Specifies the corporate action options available to the account owner.
@@ -57,7 +57,7 @@ public record CorporateActionMovement1
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate RequestedExecutionDate { get; init; }
+    public required DateOnly RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Identification of the party that owns the account.
@@ -75,7 +75,7 @@ public record CorporateActionMovement1
     [IsoXmlTag("AcctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountIdentification { get; init; }
+    public Max35Text? AccountIdentification { get; init; }
 
     /// <summary>
     /// Quantity of securities in the confirmed balance, ie, the balance to which the credit of the outturned resources applies.

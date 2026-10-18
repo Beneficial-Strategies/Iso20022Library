@@ -40,7 +40,7 @@ public record CardholderAuthentication3
     [IsoXmlTag("AuthntcnVal")]
     [IsoSimpleType(IsoSimpleType.Max40Text)]
     [StringLength(maximumLength: 40, MinimumLength = 1)]
-    public IsoMax40Text? AuthenticationValue { get; init; }
+    public Max40Text? AuthenticationValue { get; init; }
 
     /// <summary>
     /// Encrypted personal identification number (PIN) and related information.
@@ -58,5 +58,5 @@ public record CardholderAuthentication3
     [IsoXmlTag("AuthntcnColltnInd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AuthenticationCollectionIndicator { get; init; }
+    public Max35Text? AuthenticationCollectionIndicator { get; init; }
 }

@@ -23,7 +23,7 @@ public record RetailerEvent3
     [DisplayName("Event Time Stamp")]
     [IsoXmlTag("EvtTmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime EventTimeStamp { get; init; }
+    public required ISODateTime EventTimeStamp { get; init; }
 
     /// <summary>
     /// Event the POI notifies to the Sale System.
@@ -49,5 +49,5 @@ public record RetailerEvent3
     [IsoXmlTag("AddtlEvtInf")]
     [IsoSimpleType(IsoSimpleType.Max1025Text)]
     [StringLength(maximumLength: 1025, MinimumLength = 1)]
-    public IsoMax1025Text? AdditionalEventInformation { get; init; }
+    public Max1025Text? AdditionalEventInformation { get; init; }
 }

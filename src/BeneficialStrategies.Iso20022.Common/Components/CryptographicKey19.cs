@@ -22,7 +22,7 @@ public record CryptographicKey19
     [IsoId("_FMs6xaABEfC4Q_xhaK1hdQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax350Text? Identification { get; init; }
+    public Max350Text? Identification { get; init; }
 
     /// <summary>
     /// Name of the cryptographic key.
@@ -30,7 +30,7 @@ public record CryptographicKey19
     [IsoId("_zZ7jo7ZwEfCUZfsQO4rYeA")]
     [DisplayName("Key Identification")]
     [IsoXmlTag("KeyId")]
-    public IsoMax350Text? KeyIdentification { get; init; }
+    public Max350Text? KeyIdentification { get; init; }
 
     /// <summary>
     /// Additional identification of the key.
@@ -38,7 +38,7 @@ public record CryptographicKey19
     [IsoId("_FMs6y6ABEfC4Q_xhaK1hdQ")]
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
-    public IsoMax35Binary? AdditionalIdentification { get; init; }
+    public Max35Binary? AdditionalIdentification { get; init; }
 
     /// <summary>
     /// Name of the Cryptographic Element.
@@ -46,7 +46,7 @@ public record CryptographicKey19
     [IsoId("_FMs60aABEfC4Q_xhaK1hdQ")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax256Text? Name { get; init; }
+    public Max256Text? Name { get; init; }
 
     /// <summary>
     /// Identification of the set of security elements to which this element belongs.
@@ -54,7 +54,7 @@ public record CryptographicKey19
     [IsoId("_FMs616ABEfC4Q_xhaK1hdQ")]
     [DisplayName("Security Profile")]
     [IsoXmlTag("SctyPrfl")]
-    public IsoMax35Text? SecurityProfile { get; init; }
+    public Max35Text? SecurityProfile { get; init; }
 
     /// <summary>
     /// Hierarchical identification of a key inside all the key system.
@@ -62,7 +62,7 @@ public record CryptographicKey19
     [IsoId("_FMs63aABEfC4Q_xhaK1hdQ")]
     [DisplayName("Item Number")]
     [IsoXmlTag("ItmNb")]
-    public IsoMax35Text? ItemNumber { get; init; }
+    public Max35Text? ItemNumber { get; init; }
 
     /// <summary>
     /// Sequence number of the cryptographic key.
@@ -70,7 +70,7 @@ public record CryptographicKey19
     [IsoId("_apcJIKABEfC4Q_xhaK1hdQ")]
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
-    public IsoNumber? SequenceNumber { get; init; }
+    public Number? SequenceNumber { get; init; }
 
     /// <summary>
     /// Version of the cryptographic key.
@@ -78,7 +78,7 @@ public record CryptographicKey19
     [IsoId("_FMs646ABEfC4Q_xhaK1hdQ")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
-    public IsoMax256Text? Version { get; init; }
+    public Max256Text? Version { get; init; }
 
     /// <summary>
     /// Version of the cryptographic key.
@@ -86,7 +86,7 @@ public record CryptographicKey19
     [IsoId("_8byls7ZwEfCUZfsQO4rYeA")]
     [DisplayName("Key Version")]
     [IsoXmlTag("KeyVrsn")]
-    public IsoMax256Text? KeyVersion { get; init; }
+    public Max256Text? KeyVersion { get; init; }
 
     /// <summary>
     /// Type of algorithm used by the cryptographic key.
@@ -110,7 +110,7 @@ public record CryptographicKey19
     [IsoId("_FMs69aABEfC4Q_xhaK1hdQ")]
     [DisplayName("Activation Date")]
     [IsoXmlTag("ActvtnDt")]
-    public IsoISODateTime? ActivationDate { get; init; }
+    public ISODateTime? ActivationDate { get; init; }
 
     /// <summary>
     /// Date and time on which the key must be deactivated.
@@ -118,7 +118,7 @@ public record CryptographicKey19
     [IsoId("_FMs6-6ABEfC4Q_xhaK1hdQ")]
     [DisplayName("Deactivation Date")]
     [IsoXmlTag("DeactvtnDt")]
-    public IsoISODateTime? DeactivationDate { get; init; }
+    public ISODateTime? DeactivationDate { get; init; }
 
     /// <summary>
     /// Encrypted cryptographic key.
@@ -150,7 +150,7 @@ public record CryptographicKey19
     [IsoId("_FMs7C6ABEfC4Q_xhaK1hdQ")]
     [DisplayName("Key Check Value")]
     [IsoXmlTag("KeyChckVal")]
-    public IsoMax35Binary? KeyCheckValue { get; init; }
+    public Max35Binary? KeyCheckValue { get; init; }
 
     /// <summary>
     /// Additional Information needed by the receiver to securely process the management of the security element.
@@ -166,7 +166,7 @@ public record CryptographicKey19
     [IsoId("_FiAm8KACEfC4Q_xhaK1hdQ")]
     [DisplayName("Derivation Algorithm Identifier")]
     [IsoXmlTag("DerivtnAlgoIdr")]
-    public IsoMax140Text? DerivationAlgorithmIdentifier { get; init; }
+    public Max140Text? DerivationAlgorithmIdentifier { get; init; }
 
     /// <summary>
     /// Identification of the algorithm and mode that must be used.
@@ -174,5 +174,5 @@ public record CryptographicKey19
     [IsoId("_LgEg0KACEfC4Q_xhaK1hdQ")]
     [DisplayName("Algorithm Identifier")]
     [IsoXmlTag("AlgoIdr")]
-    public IsoMax140Text? AlgorithmIdentifier { get; init; }
+    public Max140Text? AlgorithmIdentifier { get; init; }
 }

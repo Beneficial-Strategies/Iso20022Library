@@ -23,7 +23,7 @@ public record PartyLockStatus1
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ValidFrom { get; init; }
+    public DateOnly? ValidFrom { get; init; }
 
     /// <summary>
     /// Lock status of the party.
@@ -39,5 +39,5 @@ public record PartyLockStatus1
     [IsoId("_JfT99GjMEeiRg5NzP0jkQg")]
     [DisplayName("Lock Reason")]
     [IsoXmlTag("LckRsn")]
-    public SimpleValueList<IsoMax35Text> LockReason { get; init; } = [];
+    public SimpleValueList<Max35Text> LockReason { get; init; } = [];
 }

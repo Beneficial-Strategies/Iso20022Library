@@ -24,7 +24,7 @@ public record PassengerTransportSummary2
     [IsoXmlTag("DocNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DocumentNumber { get; init; }
+    public Max35Text? DocumentNumber { get; init; }
 
     /// <summary>
     /// Reservation number or identifier.
@@ -42,7 +42,7 @@ public record PassengerTransportSummary2
     [IsoXmlTag("TrvlAuthstnCd")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? TravelAuthorisationCode { get; init; }
+    public Max70Text? TravelAuthorisationCode { get; init; }
 
     /// <summary>
     /// Name of the issuing ticket agent.
@@ -52,7 +52,7 @@ public record PassengerTransportSummary2
     [IsoXmlTag("TcktIssr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TicketIssuer { get; init; }
+    public Max35Text? TicketIssuer { get; init; }
 
     /// <summary>
     /// Indicates whether or not the ticket is open or restricted.
@@ -61,7 +61,7 @@ public record PassengerTransportSummary2
     [DisplayName("Open Ticket Indicator")]
     [IsoXmlTag("OpnTcktInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? OpenTicketIndicator { get; init; }
+    public TrueFalseIndicator? OpenTicketIndicator { get; init; }
 
     /// <summary>
     /// Contains Customer Reference Values provided for this transaction and used for various reference processing at the customer site. These values represent information most prevalently provided by travel agencies for transactions booked against a lodged account or central travel account.
@@ -94,7 +94,7 @@ public record PassengerTransportSummary2
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
     [IsoSimpleType(IsoSimpleType.Max4NumericText)]
-    public IsoMax4NumericText? Duration { get; init; }
+    public Max4NumericText? Duration { get; init; }
 
     /// <summary>
     /// Indicates whether or not insurance was purchased.
@@ -103,7 +103,7 @@ public record PassengerTransportSummary2
     [DisplayName("Insurance Indicator")]
     [IsoXmlTag("InsrncInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? InsuranceIndicator { get; init; }
+    public TrueFalseIndicator? InsuranceIndicator { get; init; }
 
     /// <summary>
     /// Total amount.
@@ -121,7 +121,7 @@ public record PassengerTransportSummary2
     [IsoXmlTag("SummryCmmdtyId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SummaryCommodityIdentification { get; init; }
+    public Max35Text? SummaryCommodityIdentification { get; init; }
 
     /// <summary>
     /// Loyalty programme details.
@@ -139,5 +139,5 @@ public record PassengerTransportSummary2
     [IsoXmlTag("AddtlData")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AdditionalData { get; init; }
+    public Max350Text? AdditionalData { get; init; }
 }

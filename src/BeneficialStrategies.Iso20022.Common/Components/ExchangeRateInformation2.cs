@@ -24,7 +24,7 @@ public record ExchangeRateInformation2
     [IsoXmlTag("Prvdr")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Provider { get; init; }
+    public Max70Text? Provider { get; init; }
 
     /// <summary>
     /// Identification of the specific rate, table or file that contains the rate information.
@@ -34,7 +34,7 @@ public record ExchangeRateInformation2
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Identification { get; init; }
+    public Max70Text? Identification { get; init; }
 
     /// <summary>
     /// The date the exchange rate data is effective.
@@ -43,7 +43,7 @@ public record ExchangeRateInformation2
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// The time the exchange rate data is effective.
@@ -52,7 +52,7 @@ public record ExchangeRateInformation2
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? Time { get; init; }
+    public ISOTime? Time { get; init; }
 
     /// <summary>
     /// Details of a specific exchange rate

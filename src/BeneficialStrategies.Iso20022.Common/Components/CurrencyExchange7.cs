@@ -23,7 +23,7 @@ public record CurrencyExchange7
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public required IsoBaseOneRate ExchangeRate { get; init; }
+    public required BaseOneRate ExchangeRate { get; init; }
 
     /// <summary>
     /// Currency into which the base currency is converted, in a currency exchange.
@@ -40,5 +40,5 @@ public record CurrencyExchange7
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime QuotationDate { get; init; }
+    public required ISODateTime QuotationDate { get; init; }
 }

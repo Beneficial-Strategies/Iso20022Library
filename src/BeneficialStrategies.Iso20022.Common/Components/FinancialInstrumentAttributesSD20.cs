@@ -24,7 +24,7 @@ public record FinancialInstrumentAttributesSD20
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Indicates that the underlying security is a money market instrument.
@@ -33,5 +33,5 @@ public record FinancialInstrumentAttributesSD20
     [DisplayName("Money Market Instrument Flag")]
     [IsoXmlTag("MnyMktInstrmFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? MoneyMarketInstrumentFlag { get; init; }
+    public YesNoIndicator? MoneyMarketInstrumentFlag { get; init; }
 }

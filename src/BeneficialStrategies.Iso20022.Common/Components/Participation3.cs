@@ -23,7 +23,7 @@ public record Participation3
     [DisplayName("Total Number Of Voting Rights")]
     [IsoXmlTag("TtlNbOfVtngRghts")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? TotalNumberOfVotingRights { get; init; }
+    public Number? TotalNumberOfVotingRights { get; init; }
 
     /// <summary>
     /// Percentage of rights participating to the vote versus total voting rights.
@@ -32,7 +32,7 @@ public record Participation3
     [DisplayName("Percentage Of Voting Rights")]
     [IsoXmlTag("PctgOfVtngRghts")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? PercentageOfVotingRights { get; init; }
+    public PercentageRate? PercentageOfVotingRights { get; init; }
 
     /// <summary>
     /// Number of securities admitted to the vote, expressed as an amount and a currency.
@@ -49,5 +49,5 @@ public record Participation3
     [DisplayName("Calculation Date")]
     [IsoXmlTag("ClctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? CalculationDate { get; init; }
+    public DateOnly? CalculationDate { get; init; }
 }

@@ -32,5 +32,5 @@ public record PendingReason1
     [IsoXmlTag("AddtlRsnInf")]
     [IsoSimpleType(IsoSimpleType.Max210Text)]
     [StringLength(maximumLength: 210, MinimumLength = 1)]
-    public IsoMax210Text? AdditionalReasonInformation { get; init; }
+    public Max210Text? AdditionalReasonInformation { get; init; }
 }

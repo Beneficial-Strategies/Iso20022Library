@@ -222,7 +222,7 @@ public record SettlementInstructionQueryCriteria4
     [IsoId("_Wp8Zh6gzEfCXwLUUylXgrQ")]
     [DisplayName("Conditional Securities Delivery")]
     [IsoXmlTag("CondlSctiesDlvry")]
-    public IsoYesNoIndicator? ConditionalSecuritiesDelivery { get; init; }
+    public YesNoIndicator? ConditionalSecuritiesDelivery { get; init; }
 
     /// <summary>
     /// Primary market or country where a security is issued by the issuer or its agent.

@@ -24,7 +24,7 @@ public record Transfer8
     [IsoXmlTag("MstrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for a transfer instruction, as assigned by the instructing party.
@@ -34,7 +34,7 @@ public record Transfer8
     [IsoXmlTag("TrfRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransferReference { get; init; }
+    public required Max35Text TransferReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor&apos;s identification of a transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.
@@ -44,7 +44,7 @@ public record Transfer8
     [IsoXmlTag("ClntRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClientReference { get; init; }
+    public Max35Text? ClientReference { get; init; }
 
     /// <summary>
     /// Requested date at which the instructing party places the transfer instruction.
@@ -69,7 +69,7 @@ public record Transfer8
     [DisplayName("Portfolio Transfer Out Rate")]
     [IsoXmlTag("PrtflTrfOutRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate PortfolioTransferOutRate { get; init; }
+    public required PercentageRate PortfolioTransferOutRate { get; init; }
 
     /// <summary>
     /// Information about the units to be transferred.
@@ -94,7 +94,7 @@ public record Transfer8
     [DisplayName("Own Account Transfer Indicator")]
     [IsoXmlTag("OwnAcctTrfInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? OwnAccountTransferIndicator { get; init; }
+    public YesNoIndicator? OwnAccountTransferIndicator { get; init; }
 
     /// <summary>
     /// Value of a security, as booked in an account. Book value is often different from the current market value of the security.
@@ -112,5 +112,5 @@ public record Transfer8
     [IsoXmlTag("NonStdSttlmInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? NonStandardSettlementInformation { get; init; }
+    public Max350Text? NonStandardSettlementInformation { get; init; }
 }

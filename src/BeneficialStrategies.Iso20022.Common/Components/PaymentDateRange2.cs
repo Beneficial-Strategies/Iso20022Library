@@ -24,7 +24,7 @@ public record PaymentDateRange2
     [IsoXmlTag("PmtSchdlId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PaymentScheduleIdentification { get; init; }
+    public Max35Text? PaymentScheduleIdentification { get; init; }
 
     /// <summary>
     /// Amount that must be paid no sooner than the expected payment date and no later than the due date.
@@ -41,7 +41,7 @@ public record PaymentDateRange2
     [DisplayName("Expected Date")]
     [IsoXmlTag("XpctdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ExpectedDate { get; init; }
+    public DateOnly? ExpectedDate { get; init; }
 
     /// <summary>
     /// Latest date whereby the amount of money must be paid.
@@ -50,5 +50,5 @@ public record PaymentDateRange2
     [DisplayName("Due Date")]
     [IsoXmlTag("DueDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate DueDate { get; init; }
+    public required DateOnly DueDate { get; init; }
 }

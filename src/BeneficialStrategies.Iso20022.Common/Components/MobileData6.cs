@@ -28,21 +28,21 @@ public record MobileData6
     /// </summary>
     [DisplayName("Mobile Country Code")]
     [IsoXmlTag("MobCtryCd")]
-    public IsoMin2Max3AlphaText? MobileCountryCode { get; init; }
+    public Min2Max3AlphaText? MobileCountryCode { get; init; }
 
     /// <summary>
     /// Mobile Masked MSISDN.
     /// </summary>
     [DisplayName("Mobile Masked MSISDN")]
     [IsoXmlTag("MobMskdMSISDN")]
-    public IsoMax35Text? MobileMaskedMSISDN { get; init; }
+    public Max35Text? MobileMaskedMSISDN { get; init; }
 
     /// <summary>
     /// Mobile Network Code.
     /// </summary>
     [DisplayName("Mobile Network Code")]
     [IsoXmlTag("MobNtwkCd")]
-    public IsoMin2Max3NumericText? MobileNetworkCode { get; init; }
+    public Min2Max3NumericText? MobileNetworkCode { get; init; }
 
     /// <summary>
     /// Protected Mobile Data.

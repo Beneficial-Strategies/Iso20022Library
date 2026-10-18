@@ -9,6 +9,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification263Choice
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("AnyBIC")]
-        public required IsoAnyBICDec2014Identifier Value { get; init; }
+        public required AnyBICDec2014Identifier Value { get; init; }
     }
 }

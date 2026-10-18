@@ -22,7 +22,7 @@ public record CorporateActionGeneralInformation197
     [IsoId("_iPvbJakgEfCG_LQaXOxwew")]
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
-    public required IsoMax35Text CorporateActionEventIdentification { get; init; }
+    public required Max35Text CorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Official and unique reference assigned by the official central body/entity within each market at the beginning of a corporate action event.
@@ -30,7 +30,7 @@ public record CorporateActionGeneralInformation197
     [IsoId("_iPvbLakgEfCG_LQaXOxwew")]
     [DisplayName("Official Corporate Action Event Identification")]
     [IsoXmlTag("OffclCorpActnEvtId")]
-    public IsoMax35Text? OfficialCorporateActionEventIdentification { get; init; }
+    public Max35Text? OfficialCorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Reference assigned by a court to a class action.
@@ -38,7 +38,7 @@ public record CorporateActionGeneralInformation197
     [IsoId("_iPvbNakgEfCG_LQaXOxwew")]
     [DisplayName("Class Action Number")]
     [IsoXmlTag("ClssActnNb")]
-    public IsoMax35Text? ClassActionNumber { get; init; }
+    public Max35Text? ClassActionNumber { get; init; }
 
     /// <summary>
     /// Buyer Protection instruction identification assigned by the CSD when an instruction has been entered by the buyer.
@@ -46,7 +46,7 @@ public record CorporateActionGeneralInformation197
     [IsoId("_LF3YsKkkEfCG_LQaXOxwew")]
     [DisplayName("Buyer Protection Instruction Identification")]
     [IsoXmlTag("BuyrPrtcnInstrId")]
-    public IsoMax35Text? BuyerProtectionInstructionIdentification { get; init; }
+    public Max35Text? BuyerProtectionInstructionIdentification { get; init; }
 
     /// <summary>
     /// Type of corporate action event.

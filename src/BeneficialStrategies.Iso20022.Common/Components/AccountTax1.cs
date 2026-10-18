@@ -32,7 +32,7 @@ public record AccountTax1
     [IsoXmlTag("Rgn")]
     [IsoSimpleType(IsoSimpleType.Max40Text)]
     [StringLength(maximumLength: 40, MinimumLength = 1)]
-    public IsoMax40Text? Region { get; init; }
+    public Max40Text? Region { get; init; }
 
     /// <summary>
     /// Specifies the country of residence, when the account owner does not reside in the account&apos;s tax region.||Usage: If present, the account owner does not reside in the account&apos;s tax region.

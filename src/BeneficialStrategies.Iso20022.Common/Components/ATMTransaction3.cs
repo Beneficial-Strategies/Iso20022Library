@@ -39,7 +39,7 @@ public record ATMTransaction3
     [DisplayName("Multi Bundle")]
     [IsoXmlTag("MultiBndl")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? MultiBundle { get; init; }
+    public TrueFalseIndicator? MultiBundle { get; init; }
 
     /// <summary>
     /// Amount per bundle in the currency of the total presented amount, in the order of the presentation.
@@ -71,7 +71,7 @@ public record ATMTransaction3
     [IsoId("_nDZfgCvMEeW-qbryg71zJw")]
     [DisplayName("Incident Detail")]
     [IsoXmlTag("IncdntDtl")]
-    public SimpleValueList<IsoMax70Text> IncidentDetail { get; init; } = [];
+    public SimpleValueList<Max70Text> IncidentDetail { get; init; } = [];
 
     /// <summary>
     /// Identification of the reconciliation period assigned by the ATM.
@@ -81,7 +81,7 @@ public record ATMTransaction3
     [IsoXmlTag("RcncltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReconciliationIdentification { get; init; }
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Unprotected account information.
@@ -154,7 +154,7 @@ public record ATMTransaction3
     [DisplayName("Requested Receipt")]
     [IsoXmlTag("ReqdRct")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? RequestedReceipt { get; init; }
+    public TrueFalseIndicator? RequestedReceipt { get; init; }
 
     /// <summary>
     /// True if a receipt has been printed and presented to the customer.
@@ -163,7 +163,7 @@ public record ATMTransaction3
     [DisplayName("Receipt Printed")]
     [IsoXmlTag("RctPrtd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ReceiptPrinted { get; init; }
+    public TrueFalseIndicator? ReceiptPrinted { get; init; }
 
     /// <summary>
     /// True when the card was captured by the ATM.
@@ -172,7 +172,7 @@ public record ATMTransaction3
     [DisplayName("Captured Card")]
     [IsoXmlTag("CaptrdCard")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CapturedCard { get; init; }
+    public TrueFalseIndicator? CapturedCard { get; init; }
 
     /// <summary>
     /// Limit of amounts for the customer.
@@ -197,7 +197,7 @@ public record ATMTransaction3
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
     [IsoSimpleType(IsoSimpleType.Max10000Binary)]
-    public IsoMax10000Binary? ICCRelatedData { get; init; }
+    public Max10000Binary? ICCRelatedData { get; init; }
 
     /// <summary>
     /// Current totals of the ATM.

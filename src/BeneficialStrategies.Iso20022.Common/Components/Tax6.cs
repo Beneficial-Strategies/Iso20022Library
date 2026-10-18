@@ -39,7 +39,7 @@ public record Tax6
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate Rate { get; init; }
+    public required PercentageRate Rate { get; init; }
 
     /// <summary>
     /// Party that receives the tax. The recipient of, and the party entitled to, the tax may be two different parties.
@@ -56,7 +56,7 @@ public record Tax6
     [DisplayName("Exemption Indicator")]
     [IsoXmlTag("XmptnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ExemptionIndicator { get; init; }
+    public required YesNoIndicator ExemptionIndicator { get; init; }
 
     /// <summary>
     /// Reason for a tax exemption.

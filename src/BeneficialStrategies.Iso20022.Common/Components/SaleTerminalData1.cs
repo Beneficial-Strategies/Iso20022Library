@@ -32,5 +32,5 @@ public record SaleTerminalData1
     [IsoXmlTag("SaleRcncltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SaleReconciliationIdentification { get; init; }
+    public Max35Text? SaleReconciliationIdentification { get; init; }
 }

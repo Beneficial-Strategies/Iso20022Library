@@ -24,7 +24,7 @@ public record Agreement3
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Description { get; init; }
+    public Max350Text? Description { get; init; }
 
     /// <summary>
     /// Numeric representation of the day of the month and year.
@@ -33,7 +33,7 @@ public record Agreement3
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? Date { get; init; }
+    public ISODateTime? Date { get; init; }
 
     /// <summary>
     /// Contractual currency forming the basis of a financing agreement and associated transactions. Usually, but not always, the same as the trade currency.
@@ -58,7 +58,7 @@ public record Agreement3
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? StartDate { get; init; }
+    public ISODateTime? StartDate { get; init; }
 
     /// <summary>
     /// Identifies type of settlement.
@@ -75,5 +75,5 @@ public record Agreement3
     [DisplayName("Margin Ratio")]
     [IsoXmlTag("MrgnRatio")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? MarginRatio { get; init; }
+    public PercentageRate? MarginRatio { get; init; }
 }

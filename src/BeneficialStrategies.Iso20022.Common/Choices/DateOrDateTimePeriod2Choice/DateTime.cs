@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateOrDateTimePeriod2Choice
         [DisplayName("From Date Time")]
         [IsoXmlTag("FrDtTm")]
         [IsoSimpleType(IsoSimpleType.ISODateTime)]
-        public required IsoISODateTime FromDateTime { get; init; }
+        public required ISODateTime FromDateTime { get; init; }
 
         /// <summary>
         /// Date and time at which the range ends.
@@ -32,6 +32,6 @@ namespace BeneficialStrategies.Iso20022.Choices.DateOrDateTimePeriod2Choice
         [DisplayName("To Date Time")]
         [IsoXmlTag("ToDtTm")]
         [IsoSimpleType(IsoSimpleType.ISODateTime)]
-        public required IsoISODateTime ToDateTime { get; init; }
+        public required ISODateTime ToDateTime { get; init; }
     }
 }

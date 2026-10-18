@@ -24,7 +24,7 @@ public record LoanData113
     [IsoXmlTag("UnqTradIdr")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public required IsoMax52Text UniqueTradeIdentifier { get; init; }
+    public required Max52Text UniqueTradeIdentifier { get; init; }
 
     /// <summary>
     /// Date on which the reportable event pertaining to the transaction and captured by the report took place. In the case of action types valuation update, collateral update, reuse update, margin update, the date for which the information contained in the report is provided.
@@ -33,7 +33,7 @@ public record LoanData113
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate EventDate { get; init; }
+    public required DateOnly EventDate { get; init; }
 
     /// <summary>
     /// Market value of the securities or commodities on loan or borrowed.

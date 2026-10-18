@@ -25,7 +25,7 @@ public record SwitchOrder7
     [IsoXmlTag("MstrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Date and time the order is placed by the investor or its agent.
@@ -34,7 +34,7 @@ public record SwitchOrder7
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? OrderDateTime { get; init; }
+    public ISODateTime? OrderDateTime { get; init; }
 
     /// <summary>
     /// Market in which the advised trade transaction was executed.
@@ -52,7 +52,7 @@ public record SwitchOrder7
     [IsoXmlTag("OrdrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OrderReference { get; init; }
+    public required Max35Text OrderReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor&apos;s identification of the order. This reference can typically be used in a hub scenario to give the reference of the order as assigned by the underlying client.
@@ -62,7 +62,7 @@ public record SwitchOrder7
     [IsoXmlTag("ClntRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClientReference { get; init; }
+    public Max35Text? ClientReference { get; init; }
 
     /// <summary>
     /// Account impacted by the investment fund order.
@@ -89,7 +89,7 @@ public record SwitchOrder7
     [DisplayName("Requested Future Trade Date")]
     [IsoXmlTag("ReqdFutrTradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RequestedFutureTradeDate { get; init; }
+    public DateOnly? RequestedFutureTradeDate { get; init; }
 
     /// <summary>
     /// Total amount of money paid /to be paid or received in exchange for the financial instrument in the individual order.
@@ -106,7 +106,7 @@ public record SwitchOrder7
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? CashSettlementDate { get; init; }
+    public DateOnly? CashSettlementDate { get; init; }
 
     /// <summary>
     /// Method by which the transaction is settled.

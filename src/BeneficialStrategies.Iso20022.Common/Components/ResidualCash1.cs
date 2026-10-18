@@ -23,7 +23,7 @@ public record ResidualCash1
     [DisplayName("Residual Cash Indicator")]
     [IsoXmlTag("RsdlCshInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ResidualCashIndicator { get; init; }
+    public required YesNoIndicator ResidualCashIndicator { get; init; }
 
     /// <summary>
     /// Currency of the cash.

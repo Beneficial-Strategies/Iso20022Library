@@ -24,7 +24,7 @@ public record Amendment3
     [IsoXmlTag("ApplcntReqNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ApplicantRequestNumber { get; init; }
+    public required Max35Text ApplicantRequestNumber { get; init; }
 
     /// <summary>
     /// Identification of the undertaking.

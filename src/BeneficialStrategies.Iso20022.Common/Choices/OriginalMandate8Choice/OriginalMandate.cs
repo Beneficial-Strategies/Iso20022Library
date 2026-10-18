@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalMandate8Choice
         [IsoXmlTag("MndtId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? MandateIdentification { get; init; }
+        public Max35Text? MandateIdentification { get; init; }
 
         /// <summary>
         /// Identification for the mandate request, as assigned by the initiating party.
@@ -34,7 +34,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalMandate8Choice
         [IsoXmlTag("MndtReqId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? MandateRequestIdentification { get; init; }
+        public Max35Text? MandateRequestIdentification { get; init; }
 
         /// <summary>
         /// Specifies the transport authentication details related to the mandate.
@@ -67,7 +67,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalMandate8Choice
         [DisplayName("Tracking Indicator")]
         [IsoXmlTag("TrckgInd")]
         [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-        public required IsoTrueFalseIndicator TrackingIndicator { get; init; }
+        public required TrueFalseIndicator TrackingIndicator { get; init; }
 
         /// <summary>
         /// Amount different from the collection amount, as it includes the costs associated with the first debited amount.
@@ -189,7 +189,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalMandate8Choice
         [IsoXmlTag("MndtRef")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? MandateReference { get; init; }
+        public Max35Text? MandateReference { get; init; }
 
         /// <summary>
         /// Provides information to identify the underlying documents associated with the mandate.

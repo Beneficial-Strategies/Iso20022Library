@@ -23,7 +23,7 @@ public record TaxAmount3
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Rate { get; init; }
+    public PercentageRate? Rate { get; init; }
 
     /// <summary>
     /// Amount of money on which the tax is based.

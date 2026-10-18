@@ -23,7 +23,7 @@ public record ProcessTiming2
     [DisplayName("Waiting Time")]
     [IsoXmlTag("WtgTm")]
     [IsoSimpleType(IsoSimpleType.Max9NumericText)]
-    public IsoMax9NumericText? WaitingTime { get; init; }
+    public Max9NumericText? WaitingTime { get; init; }
 
     /// <summary>
     /// Date and time to start the action.
@@ -32,7 +32,7 @@ public record ProcessTiming2
     [DisplayName("Start Time")]
     [IsoXmlTag("StartTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? StartTime { get; init; }
+    public ISODateTime? StartTime { get; init; }
 
     /// <summary>
     /// Date and time after which the action cannot be processed.
@@ -41,7 +41,7 @@ public record ProcessTiming2
     [DisplayName("End Time")]
     [IsoXmlTag("EndTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? EndTime { get; init; }
+    public ISODateTime? EndTime { get; init; }
 
     /// <summary>
     /// Period delay between cyclic action activation in months, days, hours and minutes, leading zeros could be omitted.
@@ -50,7 +50,7 @@ public record ProcessTiming2
     [DisplayName("Period")]
     [IsoXmlTag("Prd")]
     [IsoSimpleType(IsoSimpleType.Max9NumericText)]
-    public IsoMax9NumericText? Period { get; init; }
+    public Max9NumericText? Period { get; init; }
 
     /// <summary>
     /// Maximum number of cyclic calls.
@@ -59,7 +59,7 @@ public record ProcessTiming2
     [DisplayName("Maximum Number")]
     [IsoXmlTag("MaxNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaximumNumber { get; init; }
+    public Number? MaximumNumber { get; init; }
 
     /// <summary>
     /// Definition of retry process if activation of the action fails.

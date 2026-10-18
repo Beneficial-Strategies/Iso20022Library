@@ -22,7 +22,7 @@ public record Transfer38
     [IsoId("6d917cdb-cf8d-49db-8f32-847fe70d913a")]
     [DisplayName("Transfer Confirmation Reference")]
     [IsoXmlTag("TrfConfRef")]
-    public required IsoMax35Text TransferConfirmationReference { get; init; }
+    public required Max35Text TransferConfirmationReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for the transfer instruction, as assigned by the instructing party.
@@ -30,7 +30,7 @@ public record Transfer38
     [IsoId("6bd116c8-39cb-4f7f-861a-7614e6ce9889")]
     [DisplayName("Transfer Reference")]
     [IsoXmlTag("TrfRef")]
-    public required IsoMax35Text TransferReference { get; init; }
+    public required Max35Text TransferReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor's identification of the transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.
@@ -62,7 +62,7 @@ public record Transfer38
     [IsoId("abe9a551-7127-4a82-9dbc-f944f043c599")]
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
-    public IsoISODate? RequestedSettlementDate { get; init; }
+    public DateOnly? RequestedSettlementDate { get; init; }
 
     /// <summary>
     /// Date and time at which the transfer was executed.
@@ -94,7 +94,7 @@ public record Transfer38
     [IsoId("fd6f3b1e-58ed-4682-aeb8-49149d583d4e")]
     [DisplayName("Transfer Order Date Form")]
     [IsoXmlTag("TrfOrdrDtForm")]
-    public IsoISODate? TransferOrderDateForm { get; init; }
+    public DateOnly? TransferOrderDateForm { get; init; }
 
     /// <summary>
     /// Reason for the transfer.
@@ -134,7 +134,7 @@ public record Transfer38
     [IsoId("570ee1b9-d9c7-4b90-87cb-d4b84f2c433e")]
     [DisplayName("Transfer Rate")]
     [IsoXmlTag("TrfRate")]
-    public IsoPercentageRate? TransferRate { get; init; }
+    public PercentageRate? TransferRate { get; init; }
 
     /// <summary>
     /// Breakdown of units transferred.
@@ -182,7 +182,7 @@ public record Transfer38
     [IsoId("820fa702-2ae0-4805-b10c-384bfe61b6d7")]
     [DisplayName("Average Date")]
     [IsoXmlTag("AvrgDt")]
-    public IsoISODate? AverageDate { get; init; }
+    public DateOnly? AverageDate { get; init; }
 
     /// <summary>
     /// Trade date of the average weighted data of units in the account after the transfer was executed.
@@ -190,7 +190,7 @@ public record Transfer38
     [IsoId("887ecd01-91d2-4c20-811b-ebe8e5f5b098")]
     [DisplayName("New Average Date")]
     [IsoXmlTag("NewAvrgDt")]
-    public IsoISODate? NewAverageDate { get; init; }
+    public DateOnly? NewAverageDate { get; init; }
 
     /// <summary>
     /// Currency used to transfer the holdings. Some transfer agents register holdings grouped by currency in addition to using the ISIN for multi-currency fund shares.
@@ -206,7 +206,7 @@ public record Transfer38
     [IsoId("4809f539-9208-4c6c-bddb-68145e3257f1")]
     [DisplayName("Own Account Transfer Indicator")]
     [IsoXmlTag("OwnAcctTrfInd")]
-    public IsoYesNoIndicator? OwnAccountTransferIndicator { get; init; }
+    public YesNoIndicator? OwnAccountTransferIndicator { get; init; }
 
     /// <summary>
     /// Additional specific settlement information for non-regulated traded funds.
@@ -214,7 +214,7 @@ public record Transfer38
     [IsoId("203bcd1e-7201-40bb-9ad3-c41ad45cc9c2")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
-    public IsoMax350Text? NonStandardSettlementInformation { get; init; }
+    public Max350Text? NonStandardSettlementInformation { get; init; }
 
     /// <summary>
     /// Specifies how the payment of fees and taxes as a result of the transfer is covered, that is, whether by cash or the redemption of units.

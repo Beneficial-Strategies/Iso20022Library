@@ -31,6 +31,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Frequency36Choice
         [DisplayName("Count Per Period")]
         [IsoXmlTag("CntPerPrd")]
         [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-        public required IsoDecimalNumber CountPerPeriod { get; init; }
+        public required DecimalNumber CountPerPeriod { get; init; }
     }
 }

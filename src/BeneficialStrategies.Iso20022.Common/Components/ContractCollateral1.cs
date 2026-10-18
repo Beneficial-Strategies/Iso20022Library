@@ -40,5 +40,5 @@ public record ContractCollateral1
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max1025Text)]
     [StringLength(maximumLength: 1025, MinimumLength = 1)]
-    public IsoMax1025Text? AdditionalInformation { get; init; }
+    public Max1025Text? AdditionalInformation { get; init; }
 }

@@ -32,7 +32,7 @@ public record MasterAgreement8
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Max50Text)]
     [StringLength(maximumLength: 50, MinimumLength = 1)]
-    public IsoMax50Text? Version { get; init; }
+    public Max50Text? Version { get; init; }
 
     /// <summary>
     /// Additional information specifying the other type of the master agreement.
@@ -42,5 +42,5 @@ public record MasterAgreement8
     [IsoXmlTag("OthrMstrAgrmtDtls")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? OtherMasterAgreementDetails { get; init; }
+    public Max350Text? OtherMasterAgreementDetails { get; init; }
 }

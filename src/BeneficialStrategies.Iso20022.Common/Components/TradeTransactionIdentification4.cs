@@ -40,7 +40,7 @@ public record TradeTransactionIdentification4
     [IsoXmlTag("UnqTradIdr")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoMax52Text? UniqueTradeIdentifier { get; init; }
+    public Max52Text? UniqueTradeIdentifier { get; init; }
 
     /// <summary>
     /// Details related to the master agreement.

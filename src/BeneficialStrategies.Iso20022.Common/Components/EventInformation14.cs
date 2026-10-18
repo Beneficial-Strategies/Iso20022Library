@@ -24,7 +24,7 @@ public record EventInformation14
     [IsoXmlTag("CorpActnEvtId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax16Text CorporateActionEventIdentification { get; init; }
+    public required RestrictedFINXMax16Text CorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Provides the reference of the linked official corporate action event.
@@ -34,7 +34,7 @@ public record EventInformation14
     [IsoXmlTag("OffclCorpActnEvtId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? OfficialCorporateActionEventIdentification { get; init; }
+    public RestrictedFINXMax16Text? OfficialCorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Type of corporate action event.

@@ -48,7 +48,7 @@ public record PriceInformation2
     [IsoXmlTag("XtndedTp")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoExtended350Code ExtendedType { get; init; }
+    public required Extended350Code ExtendedType { get; init; }
 
     /// <summary>
     /// Place from which the price was obtained.
@@ -73,5 +73,5 @@ public record PriceInformation2
     [DisplayName("Yielded")]
     [IsoXmlTag("Yldd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? Yielded { get; init; }
+    public YesNoIndicator? Yielded { get; init; }
 }

@@ -22,7 +22,7 @@ public record OrderStatusAndReason11
     [IsoId("e5b401d7-d23a-48c9-a81d-0fab9550b322")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Status of a 'bulk' of orders. Can be used if all the individual orders conveyed in a bulk or multiple order message have the same status.

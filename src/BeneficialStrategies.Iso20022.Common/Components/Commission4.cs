@@ -39,5 +39,5 @@ public record Commission4
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate Rate { get; init; }
+    public required PercentageRate Rate { get; init; }
 }

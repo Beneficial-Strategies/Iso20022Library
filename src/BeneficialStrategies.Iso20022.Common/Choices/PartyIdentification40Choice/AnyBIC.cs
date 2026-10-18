@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification40Choice
         /// </summary>
         [IsoXmlTag("AnyBIC")]
         [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-        public required IsoAnyBICIdentifier Value { get; init; }
+        public required AnyBICIdentifier Value { get; init; }
     }
 }

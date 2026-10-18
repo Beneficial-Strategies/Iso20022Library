@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AddressOrParty1Choice
         [IsoXmlTag("Nm")]
         [IsoSimpleType(IsoSimpleType.Max140Text)]
         [StringLength(maximumLength: 140, MinimumLength = 1)]
-        public required IsoMax140Text Name { get; init; }
+        public required Max140Text Name { get; init; }
 
         /// <summary>
         /// Postal address of a party.

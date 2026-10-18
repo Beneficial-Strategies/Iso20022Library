@@ -40,7 +40,7 @@ public record PartyIdentificationAndAccount37
     [IsoXmlTag("SfkpgAcct")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SafekeepingAccount { get; init; }
+    public Max35Text? SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the transaction for the party identified.
@@ -50,7 +50,7 @@ public record PartyIdentificationAndAccount37
     [IsoXmlTag("PrcgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProcessingIdentification { get; init; }
+    public Max35Text? ProcessingIdentification { get; init; }
 
     /// <summary>
     /// Provides additional information regarding the party.

@@ -39,7 +39,7 @@ public record InstrumentLeg6
     [DisplayName("Leg Settlement Date")]
     [IsoXmlTag("LegSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime LegSettlementDate { get; init; }
+    public required ISODateTime LegSettlementDate { get; init; }
 
     /// <summary>
     /// Execution price of trade leg.
@@ -72,7 +72,7 @@ public record InstrumentLeg6
     [DisplayName("Leg Forward Points")]
     [IsoXmlTag("LegFwdPts")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public required IsoDecimalNumber LegForwardPoints { get; init; }
+    public required DecimalNumber LegForwardPoints { get; init; }
 
     /// <summary>
     /// Used for the calculated quantity of the other side of the currency trade. Can be derived from leg order quantity and leg last price.
@@ -105,7 +105,7 @@ public record InstrumentLeg6
     [DisplayName("Leg Value Date")]
     [IsoXmlTag("LegValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate LegValueDate { get; init; }
+    public required DateOnly LegValueDate { get; init; }
 
     /// <summary>
     /// Currency trade is conducted.
@@ -123,7 +123,7 @@ public record InstrumentLeg6
     [IsoXmlTag("LegSymb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text LegSymbol { get; init; }
+    public required Max35Text LegSymbol { get; init; }
 
     /// <summary>
     /// Security identification of the leg trade.

@@ -30,7 +30,7 @@ public record FinancialInstrumentIdentification11
     [IsoId("118bf13f-1191-48b5-a569-2629609498c9")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax350Text? Name { get; init; }
+    public Max350Text? Name { get; init; }
 
     /// <summary>
     /// Financial Instrument Short Name (FISN) expressed in conformance with the ISO 18774 standard.
@@ -38,7 +38,7 @@ public record FinancialInstrumentIdentification11
     [IsoId("411f0a9b-e1dd-45b1-b2c0-7ee25c3ebd06")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
-    public IsoMax35Text? ShortName { get; init; }
+    public Max35Text? ShortName { get; init; }
 
     /// <summary>
     /// Type of security.

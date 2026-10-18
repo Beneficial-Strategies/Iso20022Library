@@ -39,7 +39,7 @@ public record AccountRole1
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? StartDate { get; init; }
+    public DateOnly? StartDate { get; init; }
 
     /// <summary>
     /// End date related to the role.
@@ -48,5 +48,5 @@ public record AccountRole1
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? EndDate { get; init; }
+    public DateOnly? EndDate { get; init; }
 }

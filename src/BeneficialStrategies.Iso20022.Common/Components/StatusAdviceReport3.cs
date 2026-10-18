@@ -39,7 +39,7 @@ public record StatusAdviceReport3
     [DisplayName("Message Date")]
     [IsoXmlTag("MsgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? MessageDate { get; init; }
+    public DateOnly? MessageDate { get; init; }
 
     /// <summary>
     /// Statistical information on the results of the records processing.

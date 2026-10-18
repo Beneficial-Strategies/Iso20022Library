@@ -24,7 +24,7 @@ public record ATMService5
     [IsoXmlTag("SvcRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ServiceReference { get; init; }
+    public Max35Text? ServiceReference { get; init; }
 
     /// <summary>
     /// Codification of the type of service for the ATM.
@@ -34,7 +34,7 @@ public record ATMService5
     [IsoXmlTag("ATMSvcCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ATMServiceCode { get; init; }
+    public Max35Text? ATMServiceCode { get; init; }
 
     /// <summary>
     /// Describes the type of inquiry selected by the customer or the ATM.

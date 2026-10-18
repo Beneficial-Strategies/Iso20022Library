@@ -22,7 +22,7 @@ public record DocumentIdentification57
     [IsoId("_iux5MRSDEfCR0f9NGJICbA")]
     [DisplayName("Buyer Protection Instruction Identification")]
     [IsoXmlTag("BuyrPrtcnInstrId")]
-    public required IsoMax35Text BuyerProtectionInstructionIdentification { get; init; }
+    public required Max35Text BuyerProtectionInstructionIdentification { get; init; }
 
     /// <summary>
     /// Identification of the instruction assigned by the processor of the instruction other than the account owner, the account servicer and the market infrastructure.
@@ -30,5 +30,5 @@ public record DocumentIdentification57
     [IsoId("_nysfAhSDEfCR0f9NGJICbA")]
     [DisplayName("Processor Instruction Identification")]
     [IsoXmlTag("PrcrInstrId")]
-    public IsoMax35Text? ProcessorInstructionIdentification { get; init; }
+    public Max35Text? ProcessorInstructionIdentification { get; init; }
 }

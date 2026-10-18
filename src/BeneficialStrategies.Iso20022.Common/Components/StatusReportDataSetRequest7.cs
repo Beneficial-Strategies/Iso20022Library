@@ -30,7 +30,7 @@ public record StatusReportDataSetRequest7
     [IsoId("_f-RUS7YEEfCUZfsQO4rYeA")]
     [DisplayName("Sequence Counter")]
     [IsoXmlTag("SeqCntr")]
-    public IsoMax9NumericText? SequenceCounter { get; init; }
+    public Max9NumericText? SequenceCounter { get; init; }
 
     /// <summary>
     /// Indication of the last sequence in case of split messages.
@@ -38,7 +38,7 @@ public record StatusReportDataSetRequest7
     [IsoId("_f-RUUbYEEfCUZfsQO4rYeA")]
     [DisplayName("Last Sequence")]
     [IsoXmlTag("LastSeq")]
-    public IsoTrueFalseIndicator? LastSequence { get; init; }
+    public TrueFalseIndicator? LastSequence { get; init; }
 
     /// <summary>
     /// Content of the status report.

@@ -30,7 +30,7 @@ public record AdditionalService3
     [IsoId("_cIp1IBUEEfC_aaedwHHlmw")]
     [DisplayName("Sub Type")]
     [IsoXmlTag("SubTp")]
-    public IsoMax10Text? SubType { get; init; }
+    public Max10Text? SubType { get; init; }
 
     /// <summary>
     /// Result from performing the identified service.

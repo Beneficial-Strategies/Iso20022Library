@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.EncryptedData1Choice
         /// </summary>
         [IsoXmlTag("BinryData")]
         [IsoSimpleType(IsoSimpleType.Max100KBinary)]
-        public required IsoMax100KBinary Value { get; init; }
+        public required Max100KBinary Value { get; init; }
     }
 }

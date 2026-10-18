@@ -23,7 +23,7 @@ public record InvestmentAccountInformationType1
     [DisplayName("Investment Account")]
     [IsoXmlTag("InvstmtAcct")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator InvestmentAccount { get; init; }
+    public required YesNoIndicator InvestmentAccount { get; init; }
 
     /// <summary>
     /// Indicates if the information about account parties must be selected.
@@ -32,7 +32,7 @@ public record InvestmentAccountInformationType1
     [DisplayName("Account Parties")]
     [IsoXmlTag("AcctPties")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator AccountParties { get; init; }
+    public required YesNoIndicator AccountParties { get; init; }
 
     /// <summary>
     /// Indicates if the information about the intermediaries must be selected.
@@ -41,7 +41,7 @@ public record InvestmentAccountInformationType1
     [DisplayName("Intermediaries")]
     [IsoXmlTag("Intrmies")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator Intermediaries { get; init; }
+    public required YesNoIndicator Intermediaries { get; init; }
 
     /// <summary>
     /// Indicates if the information about the investment plan(s) must be selected.
@@ -50,7 +50,7 @@ public record InvestmentAccountInformationType1
     [DisplayName("Investment Plan")]
     [IsoXmlTag("InvstmtPlan")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator InvestmentPlan { get; init; }
+    public required YesNoIndicator InvestmentPlan { get; init; }
 
     /// <summary>
     /// Indicates if the cash settlement information must be selected.
@@ -59,7 +59,7 @@ public record InvestmentAccountInformationType1
     [DisplayName("Cash Settlement")]
     [IsoXmlTag("CshSttlm")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator CashSettlement { get; init; }
+    public required YesNoIndicator CashSettlement { get; init; }
 
     /// <summary>
     /// Indicates if the Service Level Agreement information must be selected.
@@ -68,5 +68,5 @@ public record InvestmentAccountInformationType1
     [DisplayName("Service Level Agreement")]
     [IsoXmlTag("SvcLvlAgrmt")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ServiceLevelAgreement { get; init; }
+    public required YesNoIndicator ServiceLevelAgreement { get; init; }
 }

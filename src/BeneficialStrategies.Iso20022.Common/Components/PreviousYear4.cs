@@ -31,5 +31,5 @@ public record PreviousYear4
     [DisplayName("Cash Component Indicator")]
     [IsoXmlTag("CshCmpntInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? CashComponentIndicator { get; init; }
+    public YesNoIndicator? CashComponentIndicator { get; init; }
 }

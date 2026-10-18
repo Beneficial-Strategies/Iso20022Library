@@ -31,7 +31,7 @@ public record OriginalTransactionReference23
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RequestedExecutionDate { get; init; }
+    public DateOnly? RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Set of elements used to further specify the type of transaction.

@@ -28,7 +28,7 @@ public record Rate41
     /// </summary>
     [DisplayName("Applicable Rate")]
     [IsoXmlTag("AplblRate")]
-    public IsoPercentage14Rate? ApplicableRate { get; init; }
+    public decimal? ApplicableRate { get; init; }
 
     /// <summary>
     /// Charges Fees.
@@ -63,7 +63,7 @@ public record Rate41
     /// </summary>
     [DisplayName("Fiscal Stamp")]
     [IsoXmlTag("FsclStmp")]
-    public IsoPercentage14Rate? FiscalStamp { get; init; }
+    public decimal? FiscalStamp { get; init; }
 
     /// <summary>
     /// Gross Distribution Rate.
@@ -120,14 +120,14 @@ public record Rate41
     /// </summary>
     [DisplayName("Tax On Profits")]
     [IsoXmlTag("TaxOnPrfts")]
-    public IsoPercentage14Rate? TaxOnProfits { get; init; }
+    public decimal? TaxOnProfits { get; init; }
 
     /// <summary>
     /// Tax Reclaim Rate.
     /// </summary>
     [DisplayName("Tax Reclaim Rate")]
     [IsoXmlTag("TaxRclmRate")]
-    public IsoPercentage14Rate? TaxReclaimRate { get; init; }
+    public decimal? TaxReclaimRate { get; init; }
 
     /// <summary>
     /// Third Party Incentive Rate.

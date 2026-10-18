@@ -28,7 +28,7 @@ public record CardAccount21
     /// </summary>
     [DisplayName("Account Name")]
     [IsoXmlTag("AcctNm")]
-    public IsoMax70Text? AccountName { get; init; }
+    public Max70Text? AccountName { get; init; }
 
     /// <summary>
     /// Account Owner.
@@ -42,7 +42,7 @@ public record CardAccount21
     /// </summary>
     [DisplayName("Account Sequence Number")]
     [IsoXmlTag("AcctSeqNb")]
-    public IsoNumber? AccountSequenceNumber { get; init; }
+    public Number? AccountSequenceNumber { get; init; }
 
     /// <summary>
     /// Balance.
@@ -56,14 +56,14 @@ public record CardAccount21
     /// </summary>
     [DisplayName("Balance Display Flag")]
     [IsoXmlTag("BalDispFlg")]
-    public IsoTrueFalseIndicator? BalanceDisplayFlag { get; init; }
+    public TrueFalseIndicator? BalanceDisplayFlag { get; init; }
 
     /// <summary>
     /// Credit Reference.
     /// </summary>
     [DisplayName("Credit Reference")]
     [IsoXmlTag("CdtRef")]
-    public IsoMax35Text? CreditReference { get; init; }
+    public Max35Text? CreditReference { get; init; }
 
     /// <summary>
     /// Currency.
@@ -77,7 +77,7 @@ public record CardAccount21
     /// </summary>
     [DisplayName("Default Account Indicator")]
     [IsoXmlTag("DfltAcctInd")]
-    public IsoTrueFalseIndicator? DefaultAccountIndicator { get; init; }
+    public TrueFalseIndicator? DefaultAccountIndicator { get; init; }
 
     /// <summary>
     /// Limits.

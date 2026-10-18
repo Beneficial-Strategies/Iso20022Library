@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationSource2Choice
         /// </summary>
         [IsoXmlTag("Prtry")]
         [IsoSimpleType(IsoSimpleType.RestrictedFINExact2Text)]
-        public required IsoRestrictedFINExact2Text Value { get; init; }
+        public required RestrictedFINExact2Text Value { get; init; }
     }
 }

@@ -25,7 +25,7 @@ public record FinancingAgreementList1
     [IsoXmlTag("Idr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identifier { get; init; }
+    public required Max35Text Identifier { get; init; }
 
     /// <summary>
     /// Creation date of this list.
@@ -34,7 +34,7 @@ public record FinancingAgreementList1
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate Date { get; init; }
+    public required DateOnly Date { get; init; }
 
     /// <summary>
     /// Reference to related document.
@@ -109,7 +109,7 @@ public record FinancingAgreementList1
     [DisplayName("Item Count")]
     [IsoXmlTag("ItmCnt")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText ItemCount { get; init; }
+    public required Max15NumericText ItemCount { get; init; }
 
     /// <summary>
     /// Total of all individual amounts included in the list, irrespective of currencies.
@@ -118,7 +118,7 @@ public record FinancingAgreementList1
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? ControlSum { get; init; }
+    public DecimalNumber? ControlSum { get; init; }
 
     /// <summary>
     /// Additional proprietary formal information concerning the list.
@@ -128,7 +128,7 @@ public record FinancingAgreementList1
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max2000Text)]
     [StringLength(maximumLength: 2000, MinimumLength = 1)]
-    public IsoMax2000Text? AdditionalInformation { get; init; }
+    public Max2000Text? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Validation status of the list.

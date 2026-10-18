@@ -22,7 +22,7 @@ public record FinancialInstrument112
     [IsoId("734dc235-97bd-4938-b9db-6bbcd03a2a2a")]
     [DisplayName("Line Identification")]
     [IsoXmlTag("LineId")]
-    public IsoMax35Text? LineIdentification { get; init; }
+    public Max35Text? LineIdentification { get; init; }
 
     /// <summary>
     /// Identification of the asset.
@@ -46,7 +46,7 @@ public record FinancialInstrument112
     [IsoId("636d7feb-82d5-4bc8-b04e-9f416ccbfb31")]
     [DisplayName("Partial Instructed Quantity")]
     [IsoXmlTag("PrtlInstdQty")]
-    public IsoYesNoIndicator? PartialInstructedQuantity { get; init; }
+    public YesNoIndicator? PartialInstructedQuantity { get; init; }
 
     /// <summary>
     /// Percentage rate of assets transferred, as originally instructed.
@@ -54,7 +54,7 @@ public record FinancialInstrument112
     [IsoId("742bb955-3e7a-459a-be77-3cde75cea160")]
     [DisplayName("Original Percentage Instructed")]
     [IsoXmlTag("OrgnlPctgInstd")]
-    public IsoPercentageRate? OriginalPercentageInstructed { get; init; }
+    public PercentageRate? OriginalPercentageInstructed { get; init; }
 
     /// <summary>
     /// Specifies how the financial instrument were transferred.
@@ -70,7 +70,7 @@ public record FinancialInstrument112
     [IsoId("e0bbbd22-35e7-4cd6-b5f9-1a1397aeafa1")]
     [DisplayName("Additional Asset")]
     [IsoXmlTag("AddtlAsst")]
-    public IsoYesNoIndicator? AdditionalAsset { get; init; }
+    public YesNoIndicator? AdditionalAsset { get; init; }
 
     /// <summary>
     /// Indicates the asset is no longer available at the transferor party.
@@ -78,7 +78,7 @@ public record FinancialInstrument112
     [IsoId("e2a430c8-d7cc-4fb8-b42d-1b3d550b7bb1")]
     [DisplayName("Not Available")]
     [IsoXmlTag("NotAvlbl")]
-    public IsoYesNoIndicator? NotAvailable { get; init; }
+    public YesNoIndicator? NotAvailable { get; init; }
 
     /// <summary>
     /// Security was converted from another security before transfer.
@@ -190,7 +190,7 @@ public record FinancialInstrument112
     [IsoId("51781afb-300c-4955-9a2e-55ac9632a374")]
     [DisplayName("Requested Trade Date")]
     [IsoXmlTag("ReqdTradDt")]
-    public IsoISODate? RequestedTradeDate { get; init; }
+    public DateOnly? RequestedTradeDate { get; init; }
 
     /// <summary>
     /// Date on which the securities were to be exchanged at the ICSD or CSD.
@@ -198,7 +198,7 @@ public record FinancialInstrument112
     [IsoId("88e8beab-0588-4907-9265-f3f901078926")]
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
-    public IsoISODate? RequestedSettlementDate { get; init; }
+    public DateOnly? RequestedSettlementDate { get; init; }
 
     /// <summary>
     /// Date and time at which the transfer was executed.
@@ -254,7 +254,7 @@ public record FinancialInstrument112
     [IsoId("86101889-6a6f-4d0b-806b-ccae9165809a")]
     [DisplayName("Assets Held In Own Name")]
     [IsoXmlTag("AsstsHeldInOwnNm")]
-    public IsoYesNoIndicator? AssetsHeldInOwnName { get; init; }
+    public YesNoIndicator? AssetsHeldInOwnName { get; init; }
 
     /// <summary>
     /// Indicates whether the transfer resulted in a change of beneficial owner.
@@ -262,7 +262,7 @@ public record FinancialInstrument112
     [IsoId("409ecf13-f136-4608-a832-6368e395cd4c")]
     [DisplayName("Transfer Results In Change Of Beneficial Owner")]
     [IsoXmlTag("TrfRsltsInChngOfBnfclOwnr")]
-    public IsoYesNoIndicator? TransferResultsInChangeOfBeneficialOwner { get; init; }
+    public YesNoIndicator? TransferResultsInChangeOfBeneficialOwner { get; init; }
 
     /// <summary>
     /// Additional information about the financial instrument.

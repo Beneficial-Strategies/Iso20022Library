@@ -23,7 +23,7 @@ public record SecuritiesTransactionPrice4
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.LongFraction21DecimalNumber)]
-    public IsoLongFraction21DecimalNumber? Value { get; init; }
+    public LongFraction21DecimalNumber? Value { get; init; }
 
     /// <summary>
     /// Notation of the price.
@@ -33,5 +33,5 @@ public record SecuritiesTransactionPrice4
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Type { get; init; }
+    public Max35Text? Type { get; init; }
 }

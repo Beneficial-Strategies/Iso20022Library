@@ -31,7 +31,7 @@ public record TaxEfficientProduct6
     [DisplayName("Current Year")]
     [IsoXmlTag("CurYr")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? CurrentYear { get; init; }
+    public YesNoIndicator? CurrentYear { get; init; }
 
     /// <summary>
     /// Indicates whether the product contains a cash asset for transfer.
@@ -40,7 +40,7 @@ public record TaxEfficientProduct6
     [DisplayName("Cash Component Indicator")]
     [IsoXmlTag("CshCmpntInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? CashComponentIndicator { get; init; }
+    public YesNoIndicator? CashComponentIndicator { get; init; }
 
     /// <summary>
     /// Investment plans issued during previous years.

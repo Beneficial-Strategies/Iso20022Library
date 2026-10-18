@@ -24,7 +24,7 @@ public record CompareMax350Text1
     [IsoXmlTag("Val1")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Value1 { get; init; }
+    public Max350Text? Value1 { get; init; }
 
     /// <summary>
     /// Information for the second side of the transaction.
@@ -34,5 +34,5 @@ public record CompareMax350Text1
     [IsoXmlTag("Val2")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Value2 { get; init; }
+    public Max350Text? Value2 { get; init; }
 }

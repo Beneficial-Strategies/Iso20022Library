@@ -22,7 +22,7 @@ public record CreditTransfer12
     [IsoId("b5a12345-0001-0001-0001-94360db3d49d")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
-    public IsoMax35Text? Reference { get; init; }
+    public Max35Text? Reference { get; init; }
 
     /// <summary>
     /// Party that owes an amount of money to the (ultimate) creditor.

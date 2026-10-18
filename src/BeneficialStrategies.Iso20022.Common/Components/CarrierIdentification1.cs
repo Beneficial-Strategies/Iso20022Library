@@ -24,7 +24,7 @@ public record CarrierIdentification1
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Name { get; init; }
+    public Max70Text? Name { get; init; }
 
     /// <summary>
     /// Identifies the operator (company providing service).
@@ -34,7 +34,7 @@ public record CarrierIdentification1
     [IsoXmlTag("Cd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Code { get; init; }
+    public Max35Text? Code { get; init; }
 
     /// <summary>
     /// Contains the International Air Transport Association (IATA) code identifying the company that purchased the ticket.
@@ -44,5 +44,5 @@ public record CarrierIdentification1
     [IsoXmlTag("IATACd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? IATACode { get; init; }
+    public Max35Text? IATACode { get; init; }
 }

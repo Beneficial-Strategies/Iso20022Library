@@ -30,7 +30,7 @@ public record AdditionalFee4
     [IsoId("_IssnRRRKEfC_aaedwHHlmw")]
     [DisplayName("Program")]
     [IsoXmlTag("Prgm")]
-    public IsoMax35Text? Program { get; init; }
+    public Max35Text? Program { get; init; }
 
     /// <summary>
     /// Identification of specific fee.
@@ -38,7 +38,7 @@ public record AdditionalFee4
     [IsoId("_IssnRxRKEfC_aaedwHHlmw")]
     [DisplayName("Descriptor")]
     [IsoXmlTag("Dscrptr")]
-    public IsoMax35Text? Descriptor { get; init; }
+    public Max35Text? Descriptor { get; init; }
 
     /// <summary>
     /// Fee rate.
@@ -46,7 +46,7 @@ public record AdditionalFee4
     [IsoId("_u4eT4BRMEfC_aaedwHHlmw")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
-    public IsoBaseOneRate? Rate { get; init; }
+    public BaseOneRate? Rate { get; init; }
 
     /// <summary>
     /// Fix amount per transaction in currency for the type of amount.
@@ -102,7 +102,7 @@ public record AdditionalFee4
     [IsoId("_IssnXxRKEfC_aaedwHHlmw")]
     [DisplayName("Reconciliation Effective Exchange Rate")]
     [IsoXmlTag("RcncltnFctvXchgRate")]
-    public IsoBaseOne25Rate? ReconciliationEffectiveExchangeRate { get; init; }
+    public BaseOne25Rate? ReconciliationEffectiveExchangeRate { get; init; }
 
     /// <summary>
     /// A code to identify the type of party who assign the fee.
@@ -118,5 +118,5 @@ public record AdditionalFee4
     [IsoId("_IssncRRKEfC_aaedwHHlmw")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax140Text? Description { get; init; }
+    public Max140Text? Description { get; init; }
 }

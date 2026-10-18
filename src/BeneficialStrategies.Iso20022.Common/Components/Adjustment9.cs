@@ -24,7 +24,7 @@ public record Adjustment9
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Type { get; init; }
+    public Max35Text? Type { get; init; }
 
     /// <summary>
     /// Additional information to specify the type of adjustment.
@@ -34,7 +34,7 @@ public record Adjustment9
     [IsoXmlTag("AddtlTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AdditionalType { get; init; }
+    public Max35Text? AdditionalType { get; init; }
 
     /// <summary>
     /// Description of the adjustment.
@@ -44,7 +44,7 @@ public record Adjustment9
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Description { get; init; }
+    public Max70Text? Description { get; init; }
 
     /// <summary>
     /// Reason for the adjustment.
@@ -54,7 +54,7 @@ public record Adjustment9
     [IsoXmlTag("Rsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Reason { get; init; }
+    public Max35Text? Reason { get; init; }
 
     /// <summary>
     /// Promotion or adjustment code.
@@ -64,7 +64,7 @@ public record Adjustment9
     [IsoXmlTag("PrmtnCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PromotionCode { get; init; }
+    public Max35Text? PromotionCode { get; init; }
 
     /// <summary>
     /// Contains the percentage value of the discount (when applicable).
@@ -73,7 +73,7 @@ public record Adjustment9
     [DisplayName("Percentage")]
     [IsoXmlTag("Pctg")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Percentage { get; init; }
+    public PercentageRate? Percentage { get; init; }
 
     /// <summary>
     /// Contains amount of the adjustment, exclusive of tax.
@@ -91,5 +91,5 @@ public record Adjustment9
     [DisplayName("Tax Calculated On Original Amount")]
     [IsoXmlTag("TaxClctdOnOrgnlAmt")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? TaxCalculatedOnOriginalAmount { get; init; }
+    public TrueFalseIndicator? TaxCalculatedOnOriginalAmount { get; init; }
 }

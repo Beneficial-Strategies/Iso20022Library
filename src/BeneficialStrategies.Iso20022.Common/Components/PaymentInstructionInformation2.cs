@@ -25,7 +25,7 @@ public record PaymentInstructionInformation2
     [IsoXmlTag("PmtInfId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PaymentInformationIdentification { get; init; }
+    public Max35Text? PaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Specifies the means of payment that will be used to move the amount of money.
@@ -50,7 +50,7 @@ public record PaymentInstructionInformation2
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate RequestedCollectionDate { get; init; }
+    public required DateOnly RequestedCollectionDate { get; init; }
 
     /// <summary>
     /// Party to which an amount of money is due.

@@ -39,7 +39,7 @@ public record RateDetails32
     [DisplayName("Fiscal Stamp")]
     [IsoXmlTag("FsclStmp")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? FiscalStamp { get; init; }
+    public PercentageRate? FiscalStamp { get; init; }
 
     /// <summary>
     /// Cash dividend amount per equity before deductions or allowances have been made.
@@ -89,7 +89,7 @@ public record RateDetails32
     [DisplayName("Applicable Rate")]
     [IsoXmlTag("AplblRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? ApplicableRate { get; init; }
+    public PercentageRate? ApplicableRate { get; init; }
 
     /// <summary>
     /// Rate of the cash premium made available if the securities holder consents or participates to an event, for example consent fees or solicitation fee.
@@ -138,7 +138,7 @@ public record RateDetails32
     [DisplayName("Tax On Profits")]
     [IsoXmlTag("TaxOnPrfts")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? TaxOnProfits { get; init; }
+    public PercentageRate? TaxOnProfits { get; init; }
 
     /// <summary>
     /// Percentage of cash that was paid in excess of actual tax obligation and was reclaimed.
@@ -147,7 +147,7 @@ public record RateDetails32
     [DisplayName("Tax Reclaim Rate")]
     [IsoXmlTag("TaxRclmRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? TaxReclaimRate { get; init; }
+    public PercentageRate? TaxReclaimRate { get; init; }
 
     /// <summary>
     /// Portion of the fund distribution which represents the average accrued income included in the purchase price for units bought during the account period.

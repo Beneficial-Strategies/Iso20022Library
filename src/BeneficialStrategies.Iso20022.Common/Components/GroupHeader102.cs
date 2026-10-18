@@ -24,7 +24,7 @@ public record GroupHeader102
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the message was created.
@@ -33,7 +33,7 @@ public record GroupHeader102
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// Number of individual charges record contained in the message.
@@ -42,7 +42,7 @@ public record GroupHeader102
     [DisplayName("Number Of Charges Records")]
     [IsoXmlTag("NbOfChrgsRcrds")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText NumberOfChargesRecords { get; init; }
+    public required Max15NumericText NumberOfChargesRecords { get; init; }
 
     /// <summary>
     /// Total of all individual amounts included in the message, irrespective of currencies.
@@ -51,7 +51,7 @@ public record GroupHeader102
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? ControlSum { get; init; }
+    public DecimalNumber? ControlSum { get; init; }
 
     /// <summary>
     /// Total amount of charges claimed through this message.

@@ -31,7 +31,7 @@ public record PartyAndCertificate1
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
     [IsoSimpleType(IsoSimpleType.Max10KBinary)]
-    public IsoMax10KBinary? Certificate { get; init; }
+    public Max10KBinary? Certificate { get; init; }
 
     /// <summary>
     /// Order in which the mandate holder has to sign.
@@ -40,7 +40,7 @@ public record PartyAndCertificate1
     [DisplayName("Signature Order")]
     [IsoXmlTag("SgntrOrdr")]
     [IsoSimpleType(IsoSimpleType.Max15PlusSignedNumericText)]
-    public IsoMax15PlusSignedNumericText? SignatureOrder { get; init; }
+    public Max15PlusSignedNumericText? SignatureOrder { get; init; }
 
     /// <summary>
     /// Authorisation granted to a mandate holder.

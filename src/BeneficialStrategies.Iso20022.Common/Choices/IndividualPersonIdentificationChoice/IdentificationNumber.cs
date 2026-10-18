@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IndividualPersonIdentificationCh
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text Identification { get; init; }
+        public required Max35Text Identification { get; init; }
 
         /// <summary>
         /// Specifies the nature of the identification.
@@ -42,6 +42,6 @@ namespace BeneficialStrategies.Iso20022.Choices.IndividualPersonIdentificationCh
         [IsoXmlTag("XtndedIdTp")]
         [IsoSimpleType(IsoSimpleType.Extended350Code)]
         [StringLength(maximumLength: 350, MinimumLength = 1)]
-        public required IsoExtended350Code ExtendedIdentificationType { get; init; }
+        public required Extended350Code ExtendedIdentificationType { get; init; }
     }
 }

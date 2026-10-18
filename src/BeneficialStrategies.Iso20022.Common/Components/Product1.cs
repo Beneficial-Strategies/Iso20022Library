@@ -24,7 +24,7 @@ public record Product1
     [IsoXmlTag("PdctCd")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public required IsoMax70Text ProductCode { get; init; }
+    public required Max70Text ProductCode { get; init; }
 
     /// <summary>
     /// Unit of measure of the item purchased.
@@ -41,7 +41,7 @@ public record Product1
     [DisplayName("Product Quantity")]
     [IsoXmlTag("PdctQty")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? ProductQuantity { get; init; }
+    public DecimalNumber? ProductQuantity { get; init; }
 
     /// <summary>
     /// Price per unit of product.
@@ -67,7 +67,7 @@ public record Product1
     [IsoXmlTag("TaxTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TaxType { get; init; }
+    public Max35Text? TaxType { get; init; }
 
     /// <summary>
     /// Additional information related to the product.
@@ -77,5 +77,5 @@ public record Product1
     [IsoXmlTag("AddtlPdctInf")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AdditionalProductInformation { get; init; }
+    public Max35Text? AdditionalProductInformation { get; init; }
 }

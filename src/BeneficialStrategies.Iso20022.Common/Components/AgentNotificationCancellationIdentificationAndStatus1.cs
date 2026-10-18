@@ -21,14 +21,14 @@ public record AgentNotificationCancellationIdentificationAndStatus1
     /// </summary>
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
-    public IsoISODateTime? CreationDateTime { get; init; }
+    public ISODateTime? CreationDateTime { get; init; }
 
     /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Status.

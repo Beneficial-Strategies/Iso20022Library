@@ -24,7 +24,7 @@ public record CardPaymentTransaction126
     [IsoXmlTag("SaleRefId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SaleReferenceIdentification { get; init; }
+    public Max35Text? SaleReferenceIdentification { get; init; }
 
     /// <summary>
     /// Unique identification of the transaction assigned by the POI (Point Of Interaction).

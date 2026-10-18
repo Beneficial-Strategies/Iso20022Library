@@ -22,7 +22,7 @@ public record PaymentTransaction174
     [IsoId("55329938-f4bc-4ec9-9237-81eacc16d67a")]
     [DisplayName("Reversal Identification")]
     [IsoXmlTag("RvslId")]
-    public IsoMax35Text? ReversalIdentification { get; init; }
+    public Max35Text? ReversalIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original instructing party for the original instructed party, to unambiguously identify the original instruction.
@@ -30,7 +30,7 @@ public record PaymentTransaction174
     [IsoId("add55857-515b-4ebb-8ce3-f27e28c82d78")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
-    public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.
@@ -38,7 +38,7 @@ public record PaymentTransaction174
     [IsoId("77ddcaf9-6866-4cac-a56c-103abeb6b1bd")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Universally unique identifier to provide the original end-to-end reference of a payment transaction.
@@ -46,7 +46,7 @@ public record PaymentTransaction174
     [IsoId("eeba10c8-660d-496f-bff7-54235fee3db6")]
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
-    public IsoUUIDv4Identifier? OriginalUETR { get; init; }
+    public UUIDv4Identifier? OriginalUETR { get; init; }
 
     /// <summary>
     /// Amount of money, as provided in the original transaction, to be moved between the debtor and the creditor, before deduction of charges.

@@ -154,7 +154,7 @@ public record Baseline3
     [DisplayName("Latest Match Date")]
     [IsoXmlTag("LatstMtchDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? LatestMatchDate { get; init; }
+    public DateOnly? LatestMatchDate { get; init; }
 
     /// <summary>
     /// Specifies that a commercial data set is required for each shipment part of the transaction.
@@ -203,5 +203,5 @@ public record Baseline3
     [DisplayName("Intent To Pay Expected")]
     [IsoXmlTag("InttToPayXpctd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator IntentToPayExpected { get; init; }
+    public required YesNoIndicator IntentToPayExpected { get; init; }
 }

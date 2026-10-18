@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.LocalInstrument1Choice
         [IsoXmlTag("Cd")]
         [IsoSimpleType(IsoSimpleType.ExternalLocalInstrumentCode_Obsolete)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoExternalLocalInstrumentCode_Obsolete Value { get; init; }
+        public required ExternalLocalInstrumentCode_Obsolete Value { get; init; }
     }
 }

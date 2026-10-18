@@ -30,5 +30,5 @@ public record RejectedStatus13
     [IsoId("a3550f7b-413d-4e22-9cc8-60d0995a1e27")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public IsoMax350Text? AdditionalInformation { get; init; }
+    public Max350Text? AdditionalInformation { get; init; }
 }

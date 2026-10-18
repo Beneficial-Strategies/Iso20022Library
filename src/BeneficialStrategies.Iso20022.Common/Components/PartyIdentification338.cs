@@ -30,5 +30,5 @@ public record PartyIdentification338
     [IsoId("_f8eq4KnXEfC5VNwixU6YfQ")]
     [DisplayName("Blocking Reference")]
     [IsoXmlTag("BlckgRef")]
-    public IsoMax35Text? BlockingReference { get; init; }
+    public Max35Text? BlockingReference { get; init; }
 }

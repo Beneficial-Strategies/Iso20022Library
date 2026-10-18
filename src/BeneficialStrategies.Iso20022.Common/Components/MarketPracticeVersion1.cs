@@ -24,7 +24,7 @@ public record MarketPracticeVersion1
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Name { get; init; }
+    public required Max35Text Name { get; init; }
 
     /// <summary>
     /// Year and month, for example, 2013-06.
@@ -33,7 +33,7 @@ public record MarketPracticeVersion1
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
-    public IsoISOYearMonth? Date { get; init; }
+    public ISOYearMonth? Date { get; init; }
 
     /// <summary>
     /// Version of the market practice.
@@ -43,5 +43,5 @@ public record MarketPracticeVersion1
     [IsoXmlTag("Nb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Number { get; init; }
+    public Max35Text? Number { get; init; }
 }

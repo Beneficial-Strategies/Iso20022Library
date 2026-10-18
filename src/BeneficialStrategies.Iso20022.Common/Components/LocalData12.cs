@@ -21,7 +21,7 @@ public record LocalData12
     /// </summary>
     [DisplayName("Additional Address")]
     [IsoXmlTag("AddtlAdr")]
-    public IsoMax512Text? AdditionalAddress { get; init; }
+    public Max512Text? AdditionalAddress { get; init; }
 
     /// <summary>
     /// Additional Data.
@@ -42,14 +42,14 @@ public record LocalData12
     /// </summary>
     [DisplayName("Common Name")]
     [IsoXmlTag("CmonNm")]
-    public IsoMax280Text? CommonName { get; init; }
+    public Max280Text? CommonName { get; init; }
 
     /// <summary>
     /// Encoding Format.
     /// </summary>
     [DisplayName("Encoding Format")]
     [IsoXmlTag("NcodgFrmt")]
-    public IsoMax35Text? EncodingFormat { get; init; }
+    public Max35Text? EncodingFormat { get; init; }
 
     /// <summary>
     /// Language.
@@ -63,12 +63,12 @@ public record LocalData12
     /// </summary>
     [DisplayName("Legal Corporate Name")]
     [IsoXmlTag("LglCorpNm")]
-    public IsoMax210Text? LegalCorporateName { get; init; }
+    public Max210Text? LegalCorporateName { get; init; }
 
     /// <summary>
     /// Short Name.
     /// </summary>
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
-    public IsoMax70Text? ShortName { get; init; }
+    public Max70Text? ShortName { get; init; }
 }

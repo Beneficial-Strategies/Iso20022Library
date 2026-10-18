@@ -24,7 +24,7 @@ public record StatusReportRecord3
     [IsoXmlTag("OrgnlRcrdId")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text OriginalRecordIdentification { get; init; }
+    public required Max140Text OriginalRecordIdentification { get; init; }
 
     /// <summary>
     /// Defines status of the reported transaction.

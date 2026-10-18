@@ -21,7 +21,7 @@ public record SponsoredMerchant3
     /// </summary>
     [DisplayName("Additional Address")]
     [IsoXmlTag("AddtlAdr")]
-    public IsoMax256Text? AdditionalAddress { get; init; }
+    public Max256Text? AdditionalAddress { get; init; }
 
     /// <summary>
     /// Additional Data.
@@ -49,14 +49,14 @@ public record SponsoredMerchant3
     /// </summary>
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
-    public IsoMax35Text? Assigner { get; init; }
+    public Max35Text? Assigner { get; init; }
 
     /// <summary>
     /// Common Name.
     /// </summary>
     [DisplayName("Common Name")]
     [IsoXmlTag("CmonNm")]
-    public IsoMax140Text? CommonName { get; init; }
+    public Max140Text? CommonName { get; init; }
 
     /// <summary>
     /// Country.
@@ -70,28 +70,28 @@ public record SponsoredMerchant3
     /// </summary>
     [DisplayName("Foreign")]
     [IsoXmlTag("Frgn")]
-    public IsoTrueFalseIndicator? Foreign { get; init; }
+    public TrueFalseIndicator? Foreign { get; init; }
 
     /// <summary>
     /// Geographic Location.
     /// </summary>
     [DisplayName("Geographic Location")]
     [IsoXmlTag("GeogcLctn")]
-    public IsoGeographicPointInDecimalDegrees? GeographicLocation { get; init; }
+    public GeographicPointInDecimalDegrees? GeographicLocation { get; init; }
 
     /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Legal Corporate Name.
     /// </summary>
     [DisplayName("Legal Corporate Name")]
     [IsoXmlTag("LglCorpNm")]
-    public IsoMax99Text? LegalCorporateName { get; init; }
+    public Max99Text? LegalCorporateName { get; init; }
 
     /// <summary>
     /// Local Data.
@@ -105,5 +105,5 @@ public record SponsoredMerchant3
     /// </summary>
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
-    public IsoMax35Text? ShortName { get; init; }
+    public Max35Text? ShortName { get; init; }
 }

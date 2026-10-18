@@ -21,7 +21,7 @@ public record InputData6
     /// </summary>
     [DisplayName("Beep Key Flag")]
     [IsoXmlTag("BeepKeyFlg")]
-    public IsoTrueFalseIndicator? BeepKeyFlag { get; init; }
+    public TrueFalseIndicator? BeepKeyFlag { get; init; }
 
     /// <summary>
     /// Device Type.
@@ -35,35 +35,35 @@ public record InputData6
     /// </summary>
     [DisplayName("Disable Cancel Flag")]
     [IsoXmlTag("DsblCclFlg")]
-    public IsoTrueFalseIndicator? DisableCancelFlag { get; init; }
+    public TrueFalseIndicator? DisableCancelFlag { get; init; }
 
     /// <summary>
     /// Disable Correct Flag.
     /// </summary>
     [DisplayName("Disable Correct Flag")]
     [IsoXmlTag("DsblCrrctFlg")]
-    public IsoTrueFalseIndicator? DisableCorrectFlag { get; init; }
+    public TrueFalseIndicator? DisableCorrectFlag { get; init; }
 
     /// <summary>
     /// Disable Valid Flag.
     /// </summary>
     [DisplayName("Disable Valid Flag")]
     [IsoXmlTag("DsblVldFlg")]
-    public IsoTrueFalseIndicator? DisableValidFlag { get; init; }
+    public TrueFalseIndicator? DisableValidFlag { get; init; }
 
     /// <summary>
     /// Global Correction Flag.
     /// </summary>
     [DisplayName("Global Correction Flag")]
     [IsoXmlTag("GblCrrctnFlg")]
-    public IsoTrueFalseIndicator? GlobalCorrectionFlag { get; init; }
+    public TrueFalseIndicator? GlobalCorrectionFlag { get; init; }
 
     /// <summary>
     /// Immediate Response Flag.
     /// </summary>
     [DisplayName("Immediate Response Flag")]
     [IsoXmlTag("ImdtRspnFlg")]
-    public IsoTrueFalseIndicator? ImmediateResponseFlag { get; init; }
+    public TrueFalseIndicator? ImmediateResponseFlag { get; init; }
 
     /// <summary>
     /// Information Qualifier.
@@ -91,26 +91,26 @@ public record InputData6
     /// </summary>
     [DisplayName("Maximum Input Time")]
     [IsoXmlTag("MaxInptTm")]
-    public IsoNumber? MaximumInputTime { get; init; }
+    public Number? MaximumInputTime { get; init; }
 
     /// <summary>
     /// Menu Back Flag.
     /// </summary>
     [DisplayName("Menu Back Flag")]
     [IsoXmlTag("MenuBckFlg")]
-    public IsoTrueFalseIndicator? MenuBackFlag { get; init; }
+    public TrueFalseIndicator? MenuBackFlag { get; init; }
 
     /// <summary>
     /// Notify Card Input Flag.
     /// </summary>
     [DisplayName("Notify Card Input Flag")]
     [IsoXmlTag("NtfyCardInptFlg")]
-    public required IsoTrueFalseIndicator NotifyCardInputFlag { get; init; }
+    public required TrueFalseIndicator NotifyCardInputFlag { get; init; }
 
     /// <summary>
     /// Wait User Validation Flag.
     /// </summary>
     [DisplayName("Wait User Validation Flag")]
     [IsoXmlTag("WaitUsrVldtnFlg")]
-    public IsoTrueFalseIndicator? WaitUserValidationFlag { get; init; }
+    public TrueFalseIndicator? WaitUserValidationFlag { get; init; }
 }

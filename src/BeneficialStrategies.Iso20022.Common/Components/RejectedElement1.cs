@@ -23,7 +23,7 @@ public record RejectedElement1
     [DisplayName("Element Sequence Number")]
     [IsoXmlTag("ElmtSeqNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber ElementSequenceNumber { get; init; }
+    public required Number ElementSequenceNumber { get; init; }
 
     /// <summary>
     /// Reason for rejecting an individual element.
@@ -33,5 +33,5 @@ public record RejectedElement1
     [IsoXmlTag("IndvRjctnRsn")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text IndividualRejectionReason { get; init; }
+    public required Max140Text IndividualRejectionReason { get; init; }
 }

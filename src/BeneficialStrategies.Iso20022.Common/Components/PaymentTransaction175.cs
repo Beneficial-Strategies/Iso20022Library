@@ -22,7 +22,7 @@ public record PaymentTransaction175
     [IsoId("36d16ae9-745e-451c-9874-fdf39d996a6c")]
     [DisplayName("Cancellation Status Identification")]
     [IsoXmlTag("CxlStsId")]
-    public IsoMax35Text? CancellationStatusIdentification { get; init; }
+    public Max35Text? CancellationStatusIdentification { get; init; }
 
     /// <summary>
     /// Identifies the resolved case.
@@ -38,7 +38,7 @@ public record PaymentTransaction175
     [IsoId("f2493cbc-a2f7-40b9-b175-e196e8c08309")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
-    public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.
@@ -46,7 +46,7 @@ public record PaymentTransaction175
     [IsoId("9dc2493b-b147-4676-b077-d1d305be02ca")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Universally unique identifier to provide an end-to-end reference of a payment transaction.
@@ -54,7 +54,7 @@ public record PaymentTransaction175
     [IsoId("7e8d314c-ff80-497e-93a3-d8074bfb75a2")]
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
-    public IsoUUIDv4Identifier? UETR { get; init; }
+    public UUIDv4Identifier? UETR { get; init; }
 
     /// <summary>
     /// Specifies the status of the transaction cancellation request.
@@ -94,7 +94,7 @@ public record PaymentTransaction175
     [IsoId("83e9c75d-f7a6-481c-8227-01a7e51eed22")]
     [DisplayName("Original Requested Collection Date")]
     [IsoXmlTag("OrgnlReqdColltnDt")]
-    public IsoISODate? OriginalRequestedCollectionDate { get; init; }
+    public DateOnly? OriginalRequestedCollectionDate { get; init; }
 
     /// <summary>
     /// Key elements used to identify the original transaction that is being referred to.

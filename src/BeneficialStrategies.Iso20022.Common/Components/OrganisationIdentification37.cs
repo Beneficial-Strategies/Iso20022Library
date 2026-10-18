@@ -23,7 +23,7 @@ public record OrganisationIdentification37
     [DisplayName("Any BIC")]
     [IsoXmlTag("AnyBIC")]
     [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
-    public IsoAnyBICDec2014Identifier? AnyBIC { get; init; }
+    public AnyBICDec2014Identifier? AnyBIC { get; init; }
 
     /// <summary>
     /// Legal entity identification as an alternate identification for a party.
@@ -32,7 +32,7 @@ public record OrganisationIdentification37
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? LEI { get; init; }
+    public LEIIdentifier? LEI { get; init; }
 
     /// <summary>
     /// Address for electronic mail (e-mail).
@@ -42,7 +42,7 @@ public record OrganisationIdentification37
     [IsoXmlTag("EmailAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? EmailAddress { get; init; }
+    public Max256Text? EmailAddress { get; init; }
 
     /// <summary>
     /// Unique identification of an organisation, as assigned by an institution, using an identification scheme.

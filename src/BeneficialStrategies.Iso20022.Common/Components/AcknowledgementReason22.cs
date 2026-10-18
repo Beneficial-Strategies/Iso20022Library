@@ -30,5 +30,5 @@ public record AcknowledgementReason22
     [IsoId("_XLTbVo5bEfC_4ZEXsY0Xyg")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
-    public IsoMax210Text? AdditionalReasonInformation { get; init; }
+    public Max210Text? AdditionalReasonInformation { get; init; }
 }

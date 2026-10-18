@@ -39,7 +39,7 @@ public record ForeignExchangeTerms28
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public required IsoBaseOneRate ExchangeRate { get; init; }
+    public required BaseOneRate ExchangeRate { get; init; }
 
     /// <summary>
     /// Counter value of a foreign exchange conversion.

@@ -24,7 +24,7 @@ public record IntraPositionDetails4
     [IsoXmlTag("PoolId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PoolIdentification { get; init; }
+    public Max35Text? PoolIdentification { get; init; }
 
     /// <summary>
     /// Party that legally owns the account.

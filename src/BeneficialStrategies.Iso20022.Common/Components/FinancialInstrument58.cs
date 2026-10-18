@@ -23,7 +23,7 @@ public record FinancialInstrument58
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public IsoISINOct2015Identifier? ISIN { get; init; }
+    public ISINOct2015Identifier? ISIN { get; init; }
 
     /// <summary>
     /// Name of the index on which the financial instrument is based.

@@ -40,7 +40,7 @@ public record Statement75
     [IsoXmlTag("StmtId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax16Text StatementIdentification { get; init; }
+    public required RestrictedFINXMax16Text StatementIdentification { get; init; }
 
     /// <summary>
     /// Indicates the period of instruction details within the statement.
@@ -57,7 +57,7 @@ public record Statement75
     [DisplayName("Report Number")]
     [IsoXmlTag("RptNb")]
     [IsoSimpleType(IsoSimpleType.Max5NumericText)]
-    public IsoMax5NumericText? ReportNumber { get; init; }
+    public Max5NumericText? ReportNumber { get; init; }
 
     /// <summary>
     /// Date of the statement.
@@ -90,7 +90,7 @@ public record Statement75
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ActivityIndicator { get; init; }
+    public required YesNoIndicator ActivityIndicator { get; init; }
 
     /// <summary>
     /// Period during which identification deadline has been set.

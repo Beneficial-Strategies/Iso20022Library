@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio7Choice
         [DisplayName("Current Year")]
         [IsoXmlTag("CurYr")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? CurrentYear { get; init; }
+        public YesNoIndicator? CurrentYear { get; init; }
 
         /// <summary>
         /// Indicates whether, for the current year, the product contains a cash asset for transfer.
@@ -41,7 +41,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio7Choice
         [DisplayName("Cash Component Indicator")]
         [IsoXmlTag("CshCmpntInd")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? CashComponentIndicator { get; init; }
+        public YesNoIndicator? CashComponentIndicator { get; init; }
 
         /// <summary>
         /// Investment plans issued during previous years.
@@ -74,7 +74,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio7Choice
         [DisplayName("Date Of First Subscription")]
         [IsoXmlTag("DtOfFrstSbcpt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? DateOfFirstSubscription { get; init; }
+        public DateOnly? DateOfFirstSubscription { get; init; }
 
         /// <summary>
         /// Amounts already subscribed for the current year.
@@ -99,7 +99,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio7Choice
         [DisplayName("Withdrawal For Residential Purchase Progress")]
         [IsoXmlTag("WdrwlForResdtlPurchsPrgrs")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? WithdrawalForResidentialPurchaseProgress { get; init; }
+        public YesNoIndicator? WithdrawalForResidentialPurchaseProgress { get; init; }
 
         /// <summary>
         /// Alternative identification for the transferor (ceding party), for example, the &apos;ISA manager Z reference&apos; in the UK.
@@ -109,7 +109,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio7Choice
         [IsoXmlTag("TrfrAltrnId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? TransferorAlternateIdentification { get; init; }
+        public Max35Text? TransferorAlternateIdentification { get; init; }
 
         /// <summary>
         /// Total amount subscribed over the lifetime of the product.
@@ -134,7 +134,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio7Choice
         [DisplayName("Date First Qualifying Addition")]
         [IsoXmlTag("DtFrstQlfygAddtn")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? DateFirstQualifyingAddition { get; init; }
+        public DateOnly? DateFirstQualifyingAddition { get; init; }
 
         /// <summary>
         /// Identification of the investor as assigned by a tax authority.

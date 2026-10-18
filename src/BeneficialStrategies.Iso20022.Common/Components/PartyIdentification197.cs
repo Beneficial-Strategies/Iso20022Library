@@ -24,7 +24,7 @@ public record PartyIdentification197
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Entity in charge of assigning an identification to a party.
@@ -34,7 +34,7 @@ public record PartyIdentification197
     [IsoXmlTag("Assgnr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Assigner { get; init; }
+    public Max35Text? Assigner { get; init; }
 
     /// <summary>
     /// Country of the party.
@@ -52,7 +52,7 @@ public record PartyIdentification197
     [IsoXmlTag("ShrtNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ShortName { get; init; }
+    public Max35Text? ShortName { get; init; }
 
     /// <summary>
     /// Additional identification of the party.
@@ -62,5 +62,5 @@ public record PartyIdentification197
     [IsoXmlTag("AddtlId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AdditionalIdentification { get; init; }
+    public Max35Text? AdditionalIdentification { get; init; }
 }

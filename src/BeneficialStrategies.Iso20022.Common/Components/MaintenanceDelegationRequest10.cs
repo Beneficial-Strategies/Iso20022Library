@@ -35,14 +35,14 @@ public record MaintenanceDelegationRequest10
     /// </summary>
     [DisplayName("TM Challenge Value")]
     [IsoXmlTag("TMChllngVal")]
-    public required IsoMax140Binary TMChallengeValue { get; init; }
+    public required Max140Binary TMChallengeValue { get; init; }
 
     /// <summary>
     /// TM Date Time.
     /// </summary>
     [DisplayName("TM Date Time")]
     [IsoXmlTag("TMDtTm")]
-    public required IsoISODateTime TMDateTime { get; init; }
+    public required ISODateTime TMDateTime { get; init; }
 
     /// <summary>
     /// TM Identification.

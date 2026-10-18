@@ -28,5 +28,5 @@ public record PercentagePrice3
     /// </summary>
     [DisplayName("Price Value")]
     [IsoXmlTag("PricVal")]
-    public required IsoPercentage14Rate PriceValue { get; init; }
+    public required decimal PriceValue { get; init; }
 }

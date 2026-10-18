@@ -32,7 +32,7 @@ public record BalanceAdjustment1
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max105Text)]
     [StringLength(maximumLength: 105, MinimumLength = 1)]
-    public required IsoMax105Text Description { get; init; }
+    public required Max105Text Description { get; init; }
 
     /// <summary>
     /// Amount of the adjustment. If the amount would reduce the underlying balance then the amount should be negatively signed. Expressed in the Account currency.
@@ -57,7 +57,7 @@ public record BalanceAdjustment1
     [DisplayName("Error Date")]
     [IsoXmlTag("ErrDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ErrorDate { get; init; }
+    public DateOnly? ErrorDate { get; init; }
 
     /// <summary>
     /// Date on which the error was corrected in the cash account. If the date is not know then use the last day of the month in which the error was corrected.
@@ -66,7 +66,7 @@ public record BalanceAdjustment1
     [DisplayName("Posting Date")]
     [IsoXmlTag("PstngDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate PostingDate { get; init; }
+    public required DateOnly PostingDate { get; init; }
 
     /// <summary>
     /// Number of days within the period to which the adjustment applies.
@@ -75,7 +75,7 @@ public record BalanceAdjustment1
     [DisplayName("Days")]
     [IsoXmlTag("Days")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? Days { get; init; }
+    public DecimalNumber? Days { get; init; }
 
     /// <summary>
     /// Earnings credit adjustment, debit or credit, resulting from this adjustment’s effect on the average collected balance. If the amount would reduce the credit due then the amount should be negatively signed.

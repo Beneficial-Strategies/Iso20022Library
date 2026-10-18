@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification97Choice
         /// </summary>
         [IsoXmlTag("LglNttyIdr")]
         [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-        public required IsoLEIIdentifier Value { get; init; }
+        public required LEIIdentifier Value { get; init; }
     }
 }

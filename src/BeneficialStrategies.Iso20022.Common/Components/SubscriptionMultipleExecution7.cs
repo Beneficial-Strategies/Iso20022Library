@@ -22,7 +22,7 @@ public record SubscriptionMultipleExecution7
     [IsoId("323a0eb6-e15b-4de9-9ec7-48e975229e5d")]
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
-    public IsoYesNoIndicator? AmendmentIndicator { get; init; }
+    public YesNoIndicator? AmendmentIndicator { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for a group of individual orders, as assigned by the instructing party. This identifier links the individual orders together.
@@ -30,7 +30,7 @@ public record SubscriptionMultipleExecution7
     [IsoId("1b078b69-8cde-463d-9e20-b0d5cc554dc4")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Market in which the advised trade transaction was executed.
@@ -46,7 +46,7 @@ public record SubscriptionMultipleExecution7
     [IsoId("fe68da0b-4e77-4149-962d-2bab7480aaa2")]
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
-    public IsoISODateTime? OrderDateTime { get; init; }
+    public ISODateTime? OrderDateTime { get; init; }
 
     /// <summary>
     /// Date and time the order was received by the executing party, for example, the transfer agent.
@@ -54,7 +54,7 @@ public record SubscriptionMultipleExecution7
     [IsoId("497dbd82-2a4d-40cf-a58e-d4029c951253")]
     [DisplayName("Received Date Time")]
     [IsoXmlTag("RcvdDtTm")]
-    public IsoISODateTime? ReceivedDateTime { get; init; }
+    public ISODateTime? ReceivedDateTime { get; init; }
 
     /// <summary>
     /// Future date at which the investor requests the order to be executed.
@@ -62,7 +62,7 @@ public record SubscriptionMultipleExecution7
     [IsoId("3fb689c1-83d0-4784-b08d-66674cac399f")]
     [DisplayName("Requested Future Trade Date")]
     [IsoXmlTag("ReqdFutrTradDt")]
-    public IsoISODate? RequestedFutureTradeDate { get; init; }
+    public DateOnly? RequestedFutureTradeDate { get; init; }
 
     /// <summary>
     /// Cancellation right of the investor with respect to the investment fund order.

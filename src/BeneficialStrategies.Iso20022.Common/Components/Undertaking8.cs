@@ -24,7 +24,7 @@ public record Undertaking8
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Party that issues the undertaking.
@@ -42,7 +42,7 @@ public record Undertaking8
     [IsoXmlTag("ApplcntRefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ApplicantReferenceNumber { get; init; }
+    public Max35Text? ApplicantReferenceNumber { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier assigned by the beneficiary to the undertaking.
@@ -52,5 +52,5 @@ public record Undertaking8
     [IsoXmlTag("BnfcryRefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? BeneficiaryReferenceNumber { get; init; }
+    public Max35Text? BeneficiaryReferenceNumber { get; init; }
 }

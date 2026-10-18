@@ -23,7 +23,7 @@ public record NonExtension1
     [DisplayName("Notification Period")]
     [IsoXmlTag("NtfctnPrd")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NotificationPeriod { get; init; }
+    public Number? NotificationPeriod { get; init; }
 
     /// <summary>
     /// Method by which the notice of non-extension is intended to be delivered.
@@ -49,7 +49,7 @@ public record NonExtension1
     [IsoXmlTag("NtfctnRcptNm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? NotificationRecipientName { get; init; }
+    public Max140Text? NotificationRecipientName { get; init; }
 
     /// <summary>
     /// Address of party to whom the notice of non-extension is intended to be delivered.

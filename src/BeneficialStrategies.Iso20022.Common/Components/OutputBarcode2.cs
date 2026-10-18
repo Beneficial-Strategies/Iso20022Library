@@ -32,7 +32,7 @@ public record OutputBarcode2
     [IsoXmlTag("BrcdVal")]
     [IsoSimpleType(IsoSimpleType.Max8000Text)]
     [StringLength(maximumLength: 8000, MinimumLength = 1)]
-    public IsoMax8000Text? BarcodeValue { get; init; }
+    public Max8000Text? BarcodeValue { get; init; }
 
     /// <summary>
     /// Use for binary and Kanji Quick Respone Code.
@@ -41,7 +41,7 @@ public record OutputBarcode2
     [DisplayName("QR Code Binary Value")]
     [IsoXmlTag("QRCdBinryVal")]
     [IsoSimpleType(IsoSimpleType.Max3000Binary)]
-    public IsoMax3000Binary? QRCodeBinaryValue { get; init; }
+    public Max3000Binary? QRCodeBinaryValue { get; init; }
 
     /// <summary>
     /// Version of the Quick Response Code.
@@ -51,7 +51,7 @@ public record OutputBarcode2
     [IsoXmlTag("QRCdVrsn")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoMax16Text? QRCodeVersion { get; init; }
+    public Max16Text? QRCodeVersion { get; init; }
 
     /// <summary>
     /// Encoding Mode of Quick Response Code.

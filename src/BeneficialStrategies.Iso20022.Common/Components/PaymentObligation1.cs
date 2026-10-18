@@ -47,7 +47,7 @@ public record PaymentObligation1
     [DisplayName("Percentage")]
     [IsoXmlTag("Pctg")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate Percentage { get; init; }
+    public required PercentageRate Percentage { get; init; }
 
     /// <summary>
     /// Amount of the charges taken by the obligor bank.
@@ -64,7 +64,7 @@ public record PaymentObligation1
     [DisplayName("Charges Percentage")]
     [IsoXmlTag("ChrgsPctg")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? ChargesPercentage { get; init; }
+    public PercentageRate? ChargesPercentage { get; init; }
 
     /// <summary>
     /// Date at which the obligation will expire.
@@ -73,7 +73,7 @@ public record PaymentObligation1
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ExpiryDate { get; init; }
+    public required DateOnly ExpiryDate { get; init; }
 
     /// <summary>
     /// Country of which the law governs the bank payment obligation.

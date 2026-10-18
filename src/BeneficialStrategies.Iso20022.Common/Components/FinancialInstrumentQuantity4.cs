@@ -23,5 +23,5 @@ public record FinancialInstrumentQuantity4
     [DisplayName("Unit")]
     [IsoXmlTag("Unit")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINDecimalNumber)]
-    public required IsoRestrictedFINDecimalNumber Unit { get; init; }
+    public required RestrictedFINDecimalNumber Unit { get; init; }
 }

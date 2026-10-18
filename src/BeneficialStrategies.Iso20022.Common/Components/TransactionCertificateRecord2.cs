@@ -24,7 +24,7 @@ public record TransactionCertificateRecord2
     [IsoXmlTag("CertRcrdId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text CertificateRecordIdentification { get; init; }
+    public required Max35Text CertificateRecordIdentification { get; init; }
 
     /// <summary>
     /// Indication of procedure for submitting documents.
@@ -33,7 +33,7 @@ public record TransactionCertificateRecord2
     [DisplayName("Document Submitting Procedure")]
     [IsoXmlTag("DocSubmitgPrcdr")]
     [IsoSimpleType(IsoSimpleType.Exact1NumericText)]
-    public IsoExact1NumericText? DocumentSubmittingProcedure { get; init; }
+    public Exact1NumericText? DocumentSubmittingProcedure { get; init; }
 
     /// <summary>
     /// Details of the transaction for which the record has been generated.

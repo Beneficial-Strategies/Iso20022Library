@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorrectiveTransaction1Choice
         [IsoXmlTag("InstrId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? InstructionIdentification { get; init; }
+        public Max35Text? InstructionIdentification { get; init; }
 
         /// <summary>
         /// Unique identification, as assigned by the initiating party, to unambiguously identify the transaction. This identification is passed on, unchanged, throughout the entire end-to-end chain.||Usage: The end-to-end identification can be used for reconciliation or to link tasks relating to the transaction. It can be included in several messages related to the transaction.||Usage: In case there are technical limitations to pass on multiple references, the end-to-end identification must be passed on throughout the entire end-to-end chain.
@@ -42,7 +42,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorrectiveTransaction1Choice
         [IsoXmlTag("EndToEndId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? EndToEndIdentification { get; init; }
+        public Max35Text? EndToEndIdentification { get; init; }
 
         /// <summary>
         /// Unique identification, as assigned by the first instructing agent, to unambiguously identify the transaction that is passed on, unchanged, throughout the entire interbank chain. |Usage: The transaction identification can be used for reconciliation, tracking or to link tasks relating to the transaction on the interbank level. |Usage: The instructing agent has to make sure that the transaction identification is unique for a pre-agreed period.
@@ -52,7 +52,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorrectiveTransaction1Choice
         [IsoXmlTag("TxId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? TransactionIdentification { get; init; }
+        public Max35Text? TransactionIdentification { get; init; }
 
         /// <summary>
         /// Amount of money moved between the instructing agent and the instructed agent.
@@ -69,6 +69,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CorrectiveTransaction1Choice
         [DisplayName("Interbank Settlement Date")]
         [IsoXmlTag("IntrBkSttlmDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate InterbankSettlementDate { get; init; }
+        public required DateOnly InterbankSettlementDate { get; init; }
     }
 }

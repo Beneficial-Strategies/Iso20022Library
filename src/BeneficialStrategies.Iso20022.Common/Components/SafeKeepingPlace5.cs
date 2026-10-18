@@ -21,7 +21,7 @@ public record SafeKeepingPlace5
     /// </summary>
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
-    public IsoLEIIdentifier? LEI { get; init; }
+    public LEIIdentifier? LEI { get; init; }
 
     /// <summary>
     /// Safekeeping Place Format.

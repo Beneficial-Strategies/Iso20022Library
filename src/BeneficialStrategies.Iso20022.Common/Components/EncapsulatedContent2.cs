@@ -31,5 +31,5 @@ public record EncapsulatedContent2
     [DisplayName("Content")]
     [IsoXmlTag("Cntt")]
     [IsoSimpleType(IsoSimpleType.Max100KBinary)]
-    public IsoMax100KBinary? Content { get; init; }
+    public Max100KBinary? Content { get; init; }
 }

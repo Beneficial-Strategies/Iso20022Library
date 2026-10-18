@@ -24,7 +24,7 @@ public record SwitchOrderConfirmation1
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator AmendmentIndicator { get; init; }
+    public required YesNoIndicator AmendmentIndicator { get; init; }
 
     /// <summary>
     /// Information related to a switch execution.

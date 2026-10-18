@@ -21,7 +21,7 @@ public record LocalData17
     /// </summary>
     [DisplayName("Encoding Format")]
     [IsoXmlTag("NcodgFrmt")]
-    public IsoMax35Text? EncodingFormat { get; init; }
+    public Max35Text? EncodingFormat { get; init; }
 
     /// <summary>
     /// Language.
@@ -35,5 +35,5 @@ public record LocalData17
     /// </summary>
     [DisplayName("Text Message")]
     [IsoXmlTag("TxtMsg")]
-    public required IsoMax40KText TextMessage { get; init; }
+    public required Max40KText TextMessage { get; init; }
 }

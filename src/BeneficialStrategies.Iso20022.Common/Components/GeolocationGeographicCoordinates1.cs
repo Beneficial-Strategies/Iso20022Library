@@ -25,7 +25,7 @@ public record GeolocationGeographicCoordinates1
     [IsoXmlTag("Lat")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Latitude { get; init; }
+    public required Max35Text Latitude { get; init; }
 
     /// <summary>
     /// Angular measurement of the distance of a location on the earth east or west of the Greenwich observatory.
@@ -36,5 +36,5 @@ public record GeolocationGeographicCoordinates1
     [IsoXmlTag("Long")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Longitude { get; init; }
+    public required Max35Text Longitude { get; init; }
 }

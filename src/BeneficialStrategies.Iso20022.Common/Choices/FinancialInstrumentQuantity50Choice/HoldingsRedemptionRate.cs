@@ -11,6 +11,6 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity50Cho
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("HldgsRedRate")]
-        public required IsoPercentageRate Value { get; init; }
+        public required PercentageRate Value { get; init; }
     }
 }

@@ -23,7 +23,7 @@ public record InvoiceLineItem2
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Invoice order date.
@@ -32,7 +32,7 @@ public record InvoiceLineItem2
     [DisplayName("Order Date")]
     [IsoXmlTag("OrdrDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? OrderDate { get; init; }
+    public DateOnly? OrderDate { get; init; }
 
     /// <summary>
     /// Contains the corporate contract number.
@@ -42,7 +42,7 @@ public record InvoiceLineItem2
     [IsoXmlTag("CtrctNb")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? ContractNumber { get; init; }
+    public Max70Text? ContractNumber { get; init; }
 
     /// <summary>
     /// Shipping date of the product or the date services rendered.
@@ -51,7 +51,7 @@ public record InvoiceLineItem2
     [DisplayName("Shipping Date")]
     [IsoXmlTag("ShppgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ShippingDate { get; init; }
+    public DateOnly? ShippingDate { get; init; }
 
     /// <summary>
     /// Rebilling indicator.
@@ -60,7 +60,7 @@ public record InvoiceLineItem2
     [DisplayName("Rebilling Indicator")]
     [IsoXmlTag("RbllgInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? RebillingIndicator { get; init; }
+    public TrueFalseIndicator? RebillingIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether or not the invoice line item represents a medical service.
@@ -69,7 +69,7 @@ public record InvoiceLineItem2
     [DisplayName("Medical Services Indicator")]
     [IsoXmlTag("MdclSvcsInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? MedicalServicesIndicator { get; init; }
+    public TrueFalseIndicator? MedicalServicesIndicator { get; init; }
 
     /// <summary>
     /// Contains the health industry number to which the medical services are being shipped (for example, Medical Services ship to Health Industry Number).
@@ -79,7 +79,7 @@ public record InvoiceLineItem2
     [IsoXmlTag("ShipToIndstryCd")]
     [IsoSimpleType(IsoSimpleType.Max50Text)]
     [StringLength(maximumLength: 50, MinimumLength = 1)]
-    public IsoMax50Text? ShipToIndustryCode { get; init; }
+    public Max50Text? ShipToIndustryCode { get; init; }
 
     /// <summary>
     /// Product code of the item.
@@ -89,7 +89,7 @@ public record InvoiceLineItem2
     [IsoXmlTag("PdctCd")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? ProductCode { get; init; }
+    public Max70Text? ProductCode { get; init; }
 
     /// <summary>
     /// Contains a code that identifies the product number qualifier of the product (for example, medical services).
@@ -99,7 +99,7 @@ public record InvoiceLineItem2
     [IsoXmlTag("PdctQlfr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProductQualifier { get; init; }
+    public Max35Text? ProductQualifier { get; init; }
 
     /// <summary>
     /// May contain further clarifying data, such as event name, etc.
@@ -109,7 +109,7 @@ public record InvoiceLineItem2
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Description { get; init; }
+    public Max256Text? Description { get; init; }
 
     /// <summary>
     /// Indicates whether the purchase is categorized
@@ -120,7 +120,7 @@ public record InvoiceLineItem2
     [IsoXmlTag("TpOfSpply")]
     [IsoSimpleType(IsoSimpleType.Max10Text)]
     [StringLength(maximumLength: 10, MinimumLength = 1)]
-    public IsoMax10Text? TypeOfSupply { get; init; }
+    public Max10Text? TypeOfSupply { get; init; }
 
     /// <summary>
     /// Unit of measure of the item purchased.
@@ -138,7 +138,7 @@ public record InvoiceLineItem2
     [IsoXmlTag("OthrUnitOfMeasr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherUnitOfMeasure { get; init; }
+    public Max35Text? OtherUnitOfMeasure { get; init; }
 
     /// <summary>
     /// Contains the price for one unit of the product or service.
@@ -155,7 +155,7 @@ public record InvoiceLineItem2
     [DisplayName("Product Quantity")]
     [IsoXmlTag("PdctQty")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? ProductQuantity { get; init; }
+    public DecimalNumber? ProductQuantity { get; init; }
 
     /// <summary>
     /// Total line item amount, inclusive of adjustments and exclusive of taxes.
@@ -172,7 +172,7 @@ public record InvoiceLineItem2
     [DisplayName("Insurance Indicator")]
     [IsoXmlTag("InsrncInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? InsuranceIndicator { get; init; }
+    public TrueFalseIndicator? InsuranceIndicator { get; init; }
 
     /// <summary>
     /// Cost of the insurance purchased.
@@ -198,7 +198,7 @@ public record InvoiceLineItem2
     [IsoXmlTag("UnqVATInvcRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? UniqueVATInvoiceReference { get; init; }
+    public Max35Text? UniqueVATInvoiceReference { get; init; }
 
     /// <summary>
     /// Total amount of line item, inclusive of any applicable adjustments and taxes.
@@ -225,7 +225,7 @@ public record InvoiceLineItem2
     [DisplayName("Zero Cost To Customer Indicator")]
     [IsoXmlTag("ZeroCostToCstmrInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ZeroCostToCustomerIndicator { get; init; }
+    public TrueFalseIndicator? ZeroCostToCustomerIndicator { get; init; }
 
     /// <summary>
     /// Additional data.
@@ -235,5 +235,5 @@ public record InvoiceLineItem2
     [IsoXmlTag("AddtlData")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AdditionalData { get; init; }
+    public Max350Text? AdditionalData { get; init; }
 }

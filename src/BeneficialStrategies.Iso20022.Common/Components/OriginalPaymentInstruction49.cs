@@ -35,14 +35,14 @@ public record OriginalPaymentInstruction49
     /// </summary>
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
-    public IsoDecimalNumber? ControlSum { get; init; }
+    public DecimalNumber? ControlSum { get; init; }
 
     /// <summary>
     /// Number Of Transactions.
     /// </summary>
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
-    public IsoMax15NumericText? NumberOfTransactions { get; init; }
+    public Max15NumericText? NumberOfTransactions { get; init; }
 
     /// <summary>
     /// Original Group Information.
@@ -56,21 +56,21 @@ public record OriginalPaymentInstruction49
     /// </summary>
     [DisplayName("Original Payment Information Identification")]
     [IsoXmlTag("OrgnlPmtInfId")]
-    public required IsoMax35Text OriginalPaymentInformationIdentification { get; init; }
+    public required Max35Text OriginalPaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Payment Cancellation Identification.
     /// </summary>
     [DisplayName("Payment Cancellation Identification")]
     [IsoXmlTag("PmtCxlId")]
-    public IsoMax35Text? PaymentCancellationIdentification { get; init; }
+    public Max35Text? PaymentCancellationIdentification { get; init; }
 
     /// <summary>
     /// Payment Information Cancellation.
     /// </summary>
     [DisplayName("Payment Information Cancellation")]
     [IsoXmlTag("PmtInfCxl")]
-    public IsoGroupCancellationIndicator? PaymentInformationCancellation { get; init; }
+    public GroupCancellationIndicator? PaymentInformationCancellation { get; init; }
 
     /// <summary>
     /// Transaction Information.

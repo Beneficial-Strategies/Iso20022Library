@@ -39,5 +39,5 @@ public record MeetingContactPerson3
     [DisplayName("Place Of Listing")]
     [IsoXmlTag("PlcOfListg")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public IsoMICIdentifier? PlaceOfListing { get; init; }
+    public MICIdentifier? PlaceOfListing { get; init; }
 }

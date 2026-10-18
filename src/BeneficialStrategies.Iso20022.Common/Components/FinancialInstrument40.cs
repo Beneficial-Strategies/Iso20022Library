@@ -32,7 +32,7 @@ public record FinancialInstrument40
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Name { get; init; }
+    public Max350Text? Name { get; init; }
 
     /// <summary>
     /// Specifies whether the financial instrument is transferred as an asset or as cash.
@@ -113,5 +113,5 @@ public record FinancialInstrument40
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RequestedSettlementDate { get; init; }
+    public DateOnly? RequestedSettlementDate { get; init; }
 }

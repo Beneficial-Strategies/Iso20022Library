@@ -23,7 +23,7 @@ public record SecurityIdentificationAndAmount1
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public required IsoISINOct2015Identifier Identification { get; init; }
+    public required ISINOct2015Identifier Identification { get; init; }
 
     /// <summary>
     /// Value of the outright investment according to the CCP’s system of record.

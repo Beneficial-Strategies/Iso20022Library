@@ -39,7 +39,7 @@ public record ATMCommand10
     [DisplayName("Date Time")]
     [IsoXmlTag("DtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? DateTime { get; init; }
+    public ISODateTime? DateTime { get; init; }
 
     /// <summary>
     /// Identification of the entity issuing the command.
@@ -73,7 +73,7 @@ public record ATMCommand10
     [IsoXmlTag("AddtlRsnInf")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AdditionalReasonInformation { get; init; }
+    public Max70Text? AdditionalReasonInformation { get; init; }
 
     /// <summary>
     /// Specific parameters attached to the command.

@@ -22,7 +22,7 @@ public record BenefitSupportingData1
     [IsoId("_8TjN8Cq-EfCD0_iZ8tw-zA")]
     [DisplayName("Administrator Identification")]
     [IsoXmlTag("AdmstrId")]
-    public IsoMax35Text? AdministratorIdentification { get; init; }
+    public Max35Text? AdministratorIdentification { get; init; }
 
     /// <summary>
     /// The defined standard code for healthcare treatment or service type related to the benefit.
@@ -30,7 +30,7 @@ public record BenefitSupportingData1
     [IsoId("_RjUXUCq_EfCD0_iZ8tw-zA")]
     [DisplayName("Service Type")]
     [IsoXmlTag("SvcTp")]
-    public IsoMax35Text? ServiceType { get; init; }
+    public Max35Text? ServiceType { get; init; }
 
     /// <summary>
     /// Identification of the health insurance provider.
@@ -38,7 +38,7 @@ public record BenefitSupportingData1
     [IsoId("_t-nTQCq_EfCD0_iZ8tw-zA")]
     [DisplayName("Provider Identification")]
     [IsoXmlTag("PrvdrId")]
-    public IsoMax35Text? ProviderIdentification { get; init; }
+    public Max35Text? ProviderIdentification { get; init; }
 
     /// <summary>
     /// Contains the reason of approval or declines of benefit eligibility inquiry.
@@ -46,5 +46,5 @@ public record BenefitSupportingData1
     [IsoId("_9g-08Cq_EfCD0_iZ8tw-zA")]
     [DisplayName("Decision Reason")]
     [IsoXmlTag("DcsnRsn")]
-    public IsoMax35Text? DecisionReason { get; init; }
+    public Max35Text? DecisionReason { get; init; }
 }

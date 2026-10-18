@@ -24,7 +24,7 @@ public record ReorganisationInstructionDetailsSD3
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Identifies the reorganisation withdrawal transaction type.
@@ -42,7 +42,7 @@ public record ReorganisationInstructionDetailsSD3
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.Max15Text)]
     [StringLength(maximumLength: 15, MinimumLength = 1)]
-    public IsoMax15Text? TransactionIdentification { get; init; }
+    public Max15Text? TransactionIdentification { get; init; }
 
     /// <summary>
     /// Number which further identifies DTC instruction reference number. Not applicable to reorganisation / custody deposits.
@@ -51,7 +51,7 @@ public record ReorganisationInstructionDetailsSD3
     [DisplayName("Transaction Sequence Number")]
     [IsoXmlTag("TxSeqNb")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public IsoMax3NumericText? TransactionSequenceNumber { get; init; }
+    public Max3NumericText? TransactionSequenceNumber { get; init; }
 
     /// <summary>
     /// Identifies the protect itself or of that is being covered. It is required for the function types cover protect (COVR), cover protect directly to agent (COVA) and cover on behalf of another participant (COVP).
@@ -61,7 +61,7 @@ public record ReorganisationInstructionDetailsSD3
     [IsoXmlTag("PrtctId")]
     [IsoSimpleType(IsoSimpleType.Max15Text)]
     [StringLength(maximumLength: 15, MinimumLength = 1)]
-    public IsoMax15Text? ProtectIdentification { get; init; }
+    public Max15Text? ProtectIdentification { get; init; }
 
     /// <summary>
     /// For cover protect instructions whereby one safekeeping account is covering on behalf of another safekeeping account. The protect safekeeping account will be the account which submitted the original protect instruction.
@@ -71,7 +71,7 @@ public record ReorganisationInstructionDetailsSD3
     [IsoXmlTag("PrtctSfkpgAcct")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINMax35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoRestrictedFINMax35Text? ProtectSafekeepingAccount { get; init; }
+    public RestrictedFINMax35Text? ProtectSafekeepingAccount { get; init; }
 
     /// <summary>
     /// Provides information about securities quantity linked to a corporate action option.
@@ -96,7 +96,7 @@ public record ReorganisationInstructionDetailsSD3
     [DisplayName("Customer Reference Identification")]
     [IsoXmlTag("CstmrRefId")]
     [IsoSimpleType(IsoSimpleType.Max30Text)]
-    public IsoMax30Text? CustomerReferenceIdentification { get; init; }
+    public Max30Text? CustomerReferenceIdentification { get; init; }
 
     /// <summary>
     /// Unique identification of the transaction used by the transmitting party.
@@ -106,5 +106,5 @@ public record ReorganisationInstructionDetailsSD3
     [IsoXmlTag("UsrRefNb")]
     [IsoSimpleType(IsoSimpleType.Max6Text)]
     [StringLength(maximumLength: 6, MinimumLength = 1)]
-    public IsoMax6Text? UserReferenceNumber { get; init; }
+    public Max6Text? UserReferenceNumber { get; init; }
 }

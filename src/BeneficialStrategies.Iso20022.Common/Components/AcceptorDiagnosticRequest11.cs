@@ -31,5 +31,5 @@ public record AcceptorDiagnosticRequest11
     [DisplayName("Acquirer Availability Requested")]
     [IsoXmlTag("AcqrrAvlbtyReqd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? AcquirerAvailabilityRequested { get; init; }
+    public TrueFalseIndicator? AcquirerAvailabilityRequested { get; init; }
 }

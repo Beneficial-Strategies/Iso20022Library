@@ -55,7 +55,7 @@ public record CorporateActionOption57
     [DisplayName("Eligible For Collateral Indicator")]
     [IsoXmlTag("ElgblForCollInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? EligibleForCollateralIndicator { get; init; }
+    public YesNoIndicator? EligibleForCollateralIndicator { get; init; }
 
     /// <summary>
     /// Account servicer is instructed to buy the indicated currency after the receipt of cash proceeds.

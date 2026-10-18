@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.InstrumentIdentification1Choice
         [IsoXmlTag("AltrntvInstrmId")]
         [IsoSimpleType(IsoSimpleType.Max52Text)]
         [StringLength(maximumLength: 52, MinimumLength = 1)]
-        public required IsoMax52Text Value { get; init; }
+        public required Max52Text Value { get; init; }
     }
 }

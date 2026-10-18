@@ -92,7 +92,7 @@ public record IntraBalanceMovementModificationRequestStatusAdviceV02 : IOuterRec
     /// </summary>
     [DisplayName("Request Reference")]
     [IsoXmlTag("ReqRef")]
-    public required IsoMax35Text RequestReference { get; init; }
+    public required Max35Text RequestReference { get; init; }
 
     /// <summary>
     /// Supplementary Data.

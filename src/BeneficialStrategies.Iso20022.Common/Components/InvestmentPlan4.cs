@@ -33,7 +33,7 @@ public record InvestmentPlan4
     [IsoXmlTag("XtndedFrqcy")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoExtended350Code ExtendedFrequency { get; init; }
+    public required Extended350Code ExtendedFrequency { get; init; }
 
     /// <summary>
     /// Date the investment plan starts.
@@ -42,7 +42,7 @@ public record InvestmentPlan4
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate StartDate { get; init; }
+    public required DateOnly StartDate { get; init; }
 
     /// <summary>
     /// Date the investment plan stops.
@@ -51,7 +51,7 @@ public record InvestmentPlan4
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? EndDate { get; init; }
+    public DateOnly? EndDate { get; init; }
 
     /// <summary>
     /// Currency and amount of the periodical payments.
@@ -68,7 +68,7 @@ public record InvestmentPlan4
     [DisplayName("Gross Amount Indicator")]
     [IsoXmlTag("GrssAmtInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? GrossAmountIndicator { get; init; }
+    public YesNoIndicator? GrossAmountIndicator { get; init; }
 
     /// <summary>
     /// Dividend option chosen by the account owner based on the options offered in the prospectus.
@@ -85,7 +85,7 @@ public record InvestmentPlan4
     [DisplayName("Initial Number Of Instalment")]
     [IsoXmlTag("InitlNbOfInstlmt")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? InitialNumberOfInstalment { get; init; }
+    public Number? InitialNumberOfInstalment { get; init; }
 
     /// <summary>
     /// Total number of times the amount must be invested at the predefined frequency as of the start date of the investment plan.
@@ -94,7 +94,7 @@ public record InvestmentPlan4
     [DisplayName("Total Number Of Instalment")]
     [IsoXmlTag("TtlNbOfInstlmt")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? TotalNumberOfInstalment { get; init; }
+    public Number? TotalNumberOfInstalment { get; init; }
 
     /// <summary>
     /// Indicates the rounding direction when an amount is to be spread over several funds.

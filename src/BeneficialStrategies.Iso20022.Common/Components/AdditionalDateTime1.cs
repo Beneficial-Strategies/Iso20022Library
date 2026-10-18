@@ -22,19 +22,19 @@ public record AdditionalDateTime1
     /// </summary>
     [DisplayName("Acceptance Date Time")]
     [IsoXmlTag("AccptncDtTm")]
-    public IsoISODateTime? AcceptanceDateTime { get; init; }
+    public ISODateTime? AcceptanceDateTime { get; init; }
 
     /// <summary>
     /// Date and time on which the payment should be expired if it has not settled.
     /// </summary>
     [DisplayName("Expiry Date Time")]
     [IsoXmlTag("XpryDtTm")]
-    public IsoISODateTime? ExpiryDateTime { get; init; }
+    public ISODateTime? ExpiryDateTime { get; init; }
 
     /// <summary>
     /// Date used for the correction of the value date of a cash pool movement that has been posted with a different value date.
     /// </summary>
     [DisplayName("Pooling Adjustment Date")]
     [IsoXmlTag("PoolgAdjstmntDt")]
-    public IsoISODate? PoolingAdjustmentDate { get; init; }
+    public DateOnly? PoolingAdjustmentDate { get; init; }
 }

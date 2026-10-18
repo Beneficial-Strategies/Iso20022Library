@@ -32,5 +32,5 @@ public record CashAccountType2
     [IsoXmlTag("Prtry")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Proprietary { get; init; }
+    public required Max35Text Proprietary { get; init; }
 }

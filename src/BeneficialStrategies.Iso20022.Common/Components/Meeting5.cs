@@ -39,7 +39,7 @@ public record Meeting5
     [DisplayName("Quorum Required")]
     [IsoXmlTag("QrmReqrd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator QuorumRequired { get; init; }
+    public required YesNoIndicator QuorumRequired { get; init; }
 
     /// <summary>
     /// Location at which the meeting will take place.
@@ -67,5 +67,5 @@ public record Meeting5
     [IsoXmlTag("URLAdr")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
     [StringLength(maximumLength: 2048, MinimumLength = 1)]
-    public IsoMax2048Text? URLAddress { get; init; }
+    public Max2048Text? URLAddress { get; init; }
 }

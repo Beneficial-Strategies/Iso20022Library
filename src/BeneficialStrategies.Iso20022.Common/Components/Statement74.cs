@@ -32,7 +32,7 @@ public record Statement74
     [IsoXmlTag("QryRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? QueryReference { get; init; }
+    public Max35Text? QueryReference { get; init; }
 
     /// <summary>
     /// Reference common to all pages of a statement.
@@ -42,7 +42,7 @@ public record Statement74
     [IsoXmlTag("StmtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? StatementIdentification { get; init; }
+    public Max35Text? StatementIdentification { get; init; }
 
     /// <summary>
     /// Date and time of the statement.
@@ -83,7 +83,7 @@ public record Statement74
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ActivityIndicator { get; init; }
+    public required YesNoIndicator ActivityIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the statement is audited or not.
@@ -92,7 +92,7 @@ public record Statement74
     [DisplayName("Audited Indicator")]
     [IsoXmlTag("AudtdInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator AuditedIndicator { get; init; }
+    public required YesNoIndicator AuditedIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the statement reports holdings at subsafekeeping account level.
@@ -101,7 +101,7 @@ public record Statement74
     [DisplayName("Sub Account Indicator")]
     [IsoXmlTag("SubAcctInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator SubAccountIndicator { get; init; }
+    public required YesNoIndicator SubAccountIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the statement contains tax lot details.
@@ -110,7 +110,7 @@ public record Statement74
     [DisplayName("Tax Lot Indicator")]
     [IsoXmlTag("TaxLotInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? TaxLotIndicator { get; init; }
+    public YesNoIndicator? TaxLotIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the holdings on the account are subject to security interest, lien or right of set-off.
@@ -119,5 +119,5 @@ public record Statement74
     [DisplayName("Security Interest Or Set Off")]
     [IsoXmlTag("SctyIntrstOrSetOff")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? SecurityInterestOrSetOff { get; init; }
+    public YesNoIndicator? SecurityInterestOrSetOff { get; init; }
 }

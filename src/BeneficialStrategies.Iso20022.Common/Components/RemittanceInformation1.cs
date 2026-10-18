@@ -22,7 +22,7 @@ public record RemittanceInformation1
     [IsoId("_QFsWWNp-Ed-ak6NoX_4Aeg_-92384592")]
     [DisplayName("Unstructured")]
     [IsoXmlTag("Ustrd")]
-    public SimpleValueList<IsoMax140Text> Unstructured { get; init; } = [];
+    public SimpleValueList<Max140Text> Unstructured { get; init; } = [];
 
     /// <summary>
     /// Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, eg, commercial invoices in an accounts&apos; receivable system in a structured form.

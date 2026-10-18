@@ -21,7 +21,7 @@ public record CreditTransferTransaction64
     /// </summary>
     [DisplayName("Acceptance Date Time")]
     [IsoXmlTag("AccptncDtTm")]
-    public IsoISODateTime? AcceptanceDateTime { get; init; }
+    public ISODateTime? AcceptanceDateTime { get; init; }
 
     /// <summary>
     /// Charge Bearer.
@@ -98,7 +98,7 @@ public record CreditTransferTransaction64
     /// </summary>
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
-    public IsoBaseOneRate? ExchangeRate { get; init; }
+    public BaseOneRate? ExchangeRate { get; init; }
 
     /// <summary>
     /// Initiating Party.
@@ -154,7 +154,7 @@ public record CreditTransferTransaction64
     /// </summary>
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
-    public IsoISODate? InterbankSettlementDate { get; init; }
+    public DateOnly? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Intermediary Agent1.
@@ -224,7 +224,7 @@ public record CreditTransferTransaction64
     /// </summary>
     [DisplayName("Pooling Adjustment Date")]
     [IsoXmlTag("PoolgAdjstmntDt")]
-    public IsoISODate? PoolingAdjustmentDate { get; init; }
+    public DateOnly? PoolingAdjustmentDate { get; init; }
 
     /// <summary>
     /// Previous Instructing Agent1.

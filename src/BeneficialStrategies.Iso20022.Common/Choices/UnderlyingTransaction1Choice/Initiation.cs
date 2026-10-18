@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction1Choice
         [IsoXmlTag("OrgnlPmtInfId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? OriginalPaymentInformationIdentification { get; init; }
+        public Max35Text? OriginalPaymentInformationIdentification { get; init; }
 
         /// <summary>
         /// Unique identification, as assigned by the original instructing party for the original instructed party, to unambiguously identify the original instruction.
@@ -42,7 +42,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction1Choice
         [IsoXmlTag("OrgnlInstrId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+        public Max35Text? OriginalInstructionIdentification { get; init; }
 
         /// <summary>
         /// Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.
@@ -52,7 +52,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction1Choice
         [IsoXmlTag("OrgnlEndToEndId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+        public Max35Text? OriginalEndToEndIdentification { get; init; }
 
         /// <summary>
         /// Amount of money, as provided in the original transaction, to be moved between the debtor and the creditor, before deduction of charges, expressed in the currency, as ordered by the original initiating party.
@@ -69,7 +69,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction1Choice
         [DisplayName("Requested Execution Date")]
         [IsoXmlTag("ReqdExctnDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? RequestedExecutionDate { get; init; }
+        public DateOnly? RequestedExecutionDate { get; init; }
 
         /// <summary>
         /// Date at which the creditor requests the amount of money to be collected from the debtor.
@@ -78,6 +78,6 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction1Choice
         [DisplayName("Requested Collection Date")]
         [IsoXmlTag("ReqdColltnDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? RequestedCollectionDate { get; init; }
+        public DateOnly? RequestedCollectionDate { get; init; }
     }
 }

@@ -192,7 +192,7 @@ public record SettlementDetails144
     [DisplayName("Eligible For Collateral")]
     [IsoXmlTag("ElgblForColl")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? EligibleForCollateral { get; init; }
+    public YesNoIndicator? EligibleForCollateral { get; init; }
 
     /// <summary>
     /// Specifies the securities sub balance type indicator (example restriction type for a market infrastructure).

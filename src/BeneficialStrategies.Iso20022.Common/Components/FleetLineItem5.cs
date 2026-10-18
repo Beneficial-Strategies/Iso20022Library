@@ -28,63 +28,63 @@ public record FleetLineItem5
     /// </summary>
     [DisplayName("Fuel")]
     [IsoXmlTag("Fuel")]
-    public required IsoTrueFalseIndicator Fuel { get; init; }
+    public required TrueFalseIndicator Fuel { get; init; }
 
     /// <summary>
     /// Fuel Brand Code.
     /// </summary>
     [DisplayName("Fuel Brand Code")]
     [IsoXmlTag("FuelBrndCd")]
-    public IsoMax4Text? FuelBrandCode { get; init; }
+    public Max4Text? FuelBrandCode { get; init; }
 
     /// <summary>
     /// Non Taxable.
     /// </summary>
     [DisplayName("Non Taxable")]
     [IsoXmlTag("NonTaxbl")]
-    public IsoTrueFalseIndicator? NonTaxable { get; init; }
+    public TrueFalseIndicator? NonTaxable { get; init; }
 
     /// <summary>
     /// Other Unit Of Measure.
     /// </summary>
     [DisplayName("Other Unit Of Measure")]
     [IsoXmlTag("OthrUnitOfMeasr")]
-    public IsoMax35Text? OtherUnitOfMeasure { get; init; }
+    public Max35Text? OtherUnitOfMeasure { get; init; }
 
     /// <summary>
     /// Product Category.
     /// </summary>
     [DisplayName("Product Category")]
     [IsoXmlTag("PdctCtgy")]
-    public IsoMax35Text? ProductCategory { get; init; }
+    public Max35Text? ProductCategory { get; init; }
 
     /// <summary>
     /// Product Code.
     /// </summary>
     [DisplayName("Product Code")]
     [IsoXmlTag("PdctCd")]
-    public IsoMax4Text? ProductCode { get; init; }
+    public Max4Text? ProductCode { get; init; }
 
     /// <summary>
     /// Product Code Assigner.
     /// </summary>
     [DisplayName("Product Code Assigner")]
     [IsoXmlTag("PdctCdAssgnr")]
-    public IsoMax35Text? ProductCodeAssigner { get; init; }
+    public Max35Text? ProductCodeAssigner { get; init; }
 
     /// <summary>
     /// Product Qualifier.
     /// </summary>
     [DisplayName("Product Qualifier")]
     [IsoXmlTag("PdctQlfr")]
-    public IsoMax6Text? ProductQualifier { get; init; }
+    public Max6Text? ProductQualifier { get; init; }
 
     /// <summary>
     /// Product Quantity.
     /// </summary>
     [DisplayName("Product Quantity")]
     [IsoXmlTag("PdctQty")]
-    public IsoDecimalNumber? ProductQuantity { get; init; }
+    public DecimalNumber? ProductQuantity { get; init; }
 
     /// <summary>
     /// Service Type.
@@ -133,5 +133,5 @@ public record FleetLineItem5
     /// </summary>
     [DisplayName("Unit Price Tax")]
     [IsoXmlTag("UnitPricTax")]
-    public IsoTrueFalseIndicator? UnitPriceTax { get; init; }
+    public TrueFalseIndicator? UnitPriceTax { get; init; }
 }

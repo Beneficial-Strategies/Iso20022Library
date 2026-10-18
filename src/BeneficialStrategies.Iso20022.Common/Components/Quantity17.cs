@@ -23,7 +23,7 @@ public record Quantity17
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public required IsoDecimalNumber Value { get; init; }
+    public required DecimalNumber Value { get; init; }
 
     /// <summary>
     /// Unit of measure in which the quantity is expressed.

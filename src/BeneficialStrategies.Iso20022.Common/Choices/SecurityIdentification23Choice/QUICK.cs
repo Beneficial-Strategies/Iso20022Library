@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification23Choice
         /// </summary>
         [IsoXmlTag("QUICK")]
         [IsoSimpleType(IsoSimpleType.QUICKIdentifier)]
-        public required IsoQUICKIdentifier Value { get; init; }
+        public required QUICKIdentifier Value { get; init; }
     }
 }

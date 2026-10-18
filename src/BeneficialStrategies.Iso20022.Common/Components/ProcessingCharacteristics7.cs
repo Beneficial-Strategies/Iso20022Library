@@ -39,7 +39,7 @@ public record ProcessingCharacteristics7
     [DisplayName("Amount Indicator")]
     [IsoXmlTag("AmtInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AmountIndicator { get; init; }
+    public YesNoIndicator? AmountIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether a redemption can be instructed as a number of units.
@@ -48,7 +48,7 @@ public record ProcessingCharacteristics7
     [DisplayName("Units Indicator")]
     [IsoXmlTag("UnitsInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? UnitsIndicator { get; init; }
+    public YesNoIndicator? UnitsIndicator { get; init; }
 
     /// <summary>
     /// Indicates the rounding direction applied to nearest unit.
@@ -65,7 +65,7 @@ public record ProcessingCharacteristics7
     [DisplayName("Percentage Indicator")]
     [IsoXmlTag("PctgInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PercentageIndicator { get; init; }
+    public YesNoIndicator? PercentageIndicator { get; init; }
 
     /// <summary>
     /// Location of the main fund order desk.
@@ -91,7 +91,7 @@ public record ProcessingCharacteristics7
     [IsoXmlTag("DealgFrqcyDesc")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? DealingFrequencyDescription { get; init; }
+    public Max350Text? DealingFrequencyDescription { get; init; }
 
     /// <summary>
     /// Latest time at which an order to redeem can be given.
@@ -100,7 +100,7 @@ public record ProcessingCharacteristics7
     [DisplayName("Dealing Cut Off Time")]
     [IsoXmlTag("DealgCutOffTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? DealingCutOffTime { get; init; }
+    public ISOTime? DealingCutOffTime { get; init; }
 
     /// <summary>
     /// Dealing cut-off timeframe.
@@ -117,7 +117,7 @@ public record ProcessingCharacteristics7
     [DisplayName("Deal Confirmation Time")]
     [IsoXmlTag("DealConfTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? DealConfirmationTime { get; init; }
+    public ISOTime? DealConfirmationTime { get; init; }
 
     /// <summary>
     /// Time frame within which the deal confirmation is issued.
@@ -135,7 +135,7 @@ public record ProcessingCharacteristics7
     [IsoXmlTag("LtdPrd")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? LimitedPeriod { get; init; }
+    public Max350Text? LimitedPeriod { get; init; }
 
     /// <summary>
     /// Settlement timing.

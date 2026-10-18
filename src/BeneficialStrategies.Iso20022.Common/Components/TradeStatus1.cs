@@ -23,7 +23,7 @@ public record TradeStatus1
     [DisplayName("Alleged Trade")]
     [IsoXmlTag("AllgdTrad")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AllegedTrade { get; init; }
+    public YesNoIndicator? AllegedTrade { get; init; }
 
     /// <summary>
     /// Reference to the unique identification assigned to a trade by a central matching system.
@@ -33,7 +33,7 @@ public record TradeStatus1
     [IsoXmlTag("MtchgSysUnqRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MatchingSystemUniqueReference { get; init; }
+    public required Max35Text MatchingSystemUniqueReference { get; init; }
 
     /// <summary>
     /// Specifies the status of a trade.
@@ -51,7 +51,7 @@ public record TradeStatus1
     [IsoXmlTag("XtndedSts")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedStatus { get; init; }
+    public Extended350Code? ExtendedStatus { get; init; }
 
     /// <summary>
     /// Additional information on the status of a trade in a central system.
@@ -61,7 +61,7 @@ public record TradeStatus1
     [IsoXmlTag("StsSubTp")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? StatusSubType { get; init; }
+    public Max70Text? StatusSubType { get; init; }
 
     /// <summary>
     /// Specifies the time at which a status was assigned.
@@ -70,7 +70,7 @@ public record TradeStatus1
     [DisplayName("Status Time")]
     [IsoXmlTag("StsTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? StatusTime { get; init; }
+    public ISODateTime? StatusTime { get; init; }
 
     /// <summary>
     /// Identifies the party which assigned a status to a treasury trade.
@@ -80,5 +80,5 @@ public record TradeStatus1
     [IsoXmlTag("StsOrgtr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? StatusOriginator { get; init; }
+    public Max35Text? StatusOriginator { get; init; }
 }

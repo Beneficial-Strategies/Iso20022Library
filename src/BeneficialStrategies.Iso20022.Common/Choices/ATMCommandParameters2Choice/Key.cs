@@ -31,7 +31,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMCommandParameters2Choice
         [DisplayName("Host Challenge")]
         [IsoXmlTag("HstChllng")]
         [IsoSimpleType(IsoSimpleType.Max140Binary)]
-        public IsoMax140Binary? HostChallenge { get; init; }
+        public Max140Binary? HostChallenge { get; init; }
 
         /// <summary>
         /// Ordered certificate chain of the asymmetric key encryption key, starting with the host certificate.
@@ -40,7 +40,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMCommandParameters2Choice
         [DisplayName("Certificate")]
         [IsoXmlTag("Cert")]
         [IsoSimpleType(IsoSimpleType.Max5000Binary)]
-        public IsoMax5000Binary? Certificate { get; init; }
+        public Max5000Binary? Certificate { get; init; }
 
         /// <summary>
         /// Cryptographic key involved in the security command.

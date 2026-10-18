@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedTransactionStatistics6Ch
         [DisplayName("Total Number Of Transactions")]
         [IsoXmlTag("TtlNbOfTxs")]
         [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-        public required IsoMax15NumericText TotalNumberOfTransactions { get; init; }
+        public required Max15NumericText TotalNumberOfTransactions { get; init; }
 
         /// <summary>
         /// Total number of transactions accepted.

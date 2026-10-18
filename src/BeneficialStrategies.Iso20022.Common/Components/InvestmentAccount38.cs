@@ -40,7 +40,7 @@ public record InvestmentAccount38
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Name { get; init; }
+    public Max35Text? Name { get; init; }
 
     /// <summary>
     /// Supplementary registration information applying to a specific block of units for dealing and reporting purposes. The supplementary registration information may be used when all the units are registered, for example, to a funds supermarket, but holdings for each investor have to reconciled individually.
@@ -50,7 +50,7 @@ public record InvestmentAccount38
     [IsoXmlTag("Dsgnt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Designation { get; init; }
+    public Max35Text? Designation { get; init; }
 
     /// <summary>
     /// Purpose of the account/source fund type. This is typically linked to an investment product, for example, wrapper, ISA.
@@ -140,7 +140,7 @@ public record InvestmentAccount38
     [IsoXmlTag("AcmltnRghtRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccumulationRightReference { get; init; }
+    public Max35Text? AccumulationRightReference { get; init; }
 
     /// <summary>
     /// Number of account owners or related parties required to authorise transactions on the account.
@@ -149,7 +149,7 @@ public record InvestmentAccount38
     [DisplayName("Required Signatories Number")]
     [IsoXmlTag("ReqrdSgntriesNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? RequiredSignatoriesNumber { get; init; }
+    public Number? RequiredSignatoriesNumber { get; init; }
 
     /// <summary>
     /// Name of the investment fund family.
@@ -159,7 +159,7 @@ public record InvestmentAccount38
     [IsoXmlTag("FndFmlyNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? FundFamilyName { get; init; }
+    public Max350Text? FundFamilyName { get; init; }
 
     /// <summary>
     /// Parameters to be applied on deal amount for orders when the amount is a fractional number.

@@ -24,7 +24,7 @@ public record TechnicalAttributes5
     [IsoXmlTag("TechRcrdId")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? TechnicalRecordIdentification { get; init; }
+    public Max140Text? TechnicalRecordIdentification { get; init; }
 
     /// <summary>
     /// List of possible values for TRs reconciliation purposes.
@@ -41,5 +41,5 @@ public record TechnicalAttributes5
     [DisplayName("Report Receipt Time Stamp")]
     [IsoXmlTag("RptRctTmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? ReportReceiptTimeStamp { get; init; }
+    public ISODateTime? ReportReceiptTimeStamp { get; init; }
 }

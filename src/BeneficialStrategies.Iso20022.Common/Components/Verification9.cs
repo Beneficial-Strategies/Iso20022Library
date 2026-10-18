@@ -30,7 +30,7 @@ public record Verification9
     [IsoId("_W9QE9Wl_EfCyxsm1jzUNug")]
     [DisplayName("Sub Type")]
     [IsoXmlTag("SubTp")]
-    public IsoMax35Text? SubType { get; init; }
+    public Max35Text? SubType { get; init; }
 
     /// <summary>
     /// Entity who actually performed the verification. P000-P999 reserved for private use, N000-N999 reserved for national use.
@@ -54,7 +54,7 @@ public record Verification9
     [IsoId("_W9QE_2l_EfCyxsm1jzUNug")]
     [DisplayName("Result Details")]
     [IsoXmlTag("RsltDtls")]
-    public SimpleValueList<IsoATICALaxProcessing> ResultDetails { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> ResultDetails { get; init; } = [];
 
     /// <summary>
     /// Additional information about the verification.
@@ -62,5 +62,5 @@ public record Verification9
     [IsoId("_W9QFAWl_EfCyxsm1jzUNug")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public IsoMax35Text? AdditionalInformation { get; init; }
+    public Max35Text? AdditionalInformation { get; init; }
 }

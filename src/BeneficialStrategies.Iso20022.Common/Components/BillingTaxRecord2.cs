@@ -22,7 +22,7 @@ public record BillingTaxRecord2
     [IsoId("_DySvAfsYEemYNq6Sxm5nlg")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
-    public required IsoPercentageRate Rate { get; init; }
+    public required PercentageRate Rate { get; init; }
 
     /// <summary>
     /// Name used to describe the tax (such as the national value added tax).
@@ -30,7 +30,7 @@ public record BillingTaxRecord2
     [IsoId("_DySvA_sYEemYNq6Sxm5nlg")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax40Text? Description { get; init; }
+    public Max40Text? Description { get; init; }
 
     /// <summary>
     /// Amount subject to tax.

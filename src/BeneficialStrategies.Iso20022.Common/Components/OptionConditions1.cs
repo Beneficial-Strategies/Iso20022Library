@@ -23,7 +23,7 @@ public record OptionConditions1
     [DisplayName("Condition Number")]
     [IsoXmlTag("CondNb")]
     [IsoSimpleType(IsoSimpleType.Max1Number)]
-    public required IsoMax1Number ConditionNumber { get; init; }
+    public required Max1Number ConditionNumber { get; init; }
 
     /// <summary>
     /// Description of the condition.
@@ -33,7 +33,7 @@ public record OptionConditions1
     [IsoXmlTag("CondTxt")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax520Text)]
     [StringLength(maximumLength: 520, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax520Text ConditionText { get; init; }
+    public required RestrictedFINXMax520Text ConditionText { get; init; }
 
     /// <summary>
     /// States whether the condition must be acknowledged. Conditions with a No (&quot;false&quot; or &quot;0&quot;) do not need acknowledgement.
@@ -42,5 +42,5 @@ public record OptionConditions1
     [DisplayName("Condition Required Flag")]
     [IsoXmlTag("CondReqrdFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ConditionRequiredFlag { get; init; }
+    public required YesNoIndicator ConditionRequiredFlag { get; init; }
 }

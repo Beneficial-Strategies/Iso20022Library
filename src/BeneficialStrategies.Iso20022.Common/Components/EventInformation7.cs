@@ -24,7 +24,7 @@ public record EventInformation7
     [IsoXmlTag("CorpActnEvtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text CorporateActionEventIdentification { get; init; }
+    public required Max35Text CorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Provides the reference of the linked official corporate action event.
@@ -34,7 +34,7 @@ public record EventInformation7
     [IsoXmlTag("OffclCorpActnEvtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OfficialCorporateActionEventIdentification { get; init; }
+    public Max35Text? OfficialCorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Type of corporate action event.

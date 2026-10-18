@@ -24,7 +24,7 @@ public record AccountBalanceSD10
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Position that is concerned in transaction.
@@ -42,5 +42,5 @@ public record AccountBalanceSD10
     [IsoXmlTag("ContraPtcptNb")]
     [IsoSimpleType(IsoSimpleType.Max8Text)]
     [StringLength(maximumLength: 8, MinimumLength = 1)]
-    public IsoMax8Text? ContraParticipantNumber { get; init; }
+    public Max8Text? ContraParticipantNumber { get; init; }
 }

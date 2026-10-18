@@ -32,5 +32,5 @@ public record WithdrawalReason1
     [IsoXmlTag("WdrwlRsnSubCd")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4Text? WithdrawalReasonSubCode { get; init; }
+    public Max4Text? WithdrawalReasonSubCode { get; init; }
 }

@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedStatusReason9Choice
         [IsoXmlTag("XtndedRsn")]
         [IsoSimpleType(IsoSimpleType.Extended350Code)]
         [StringLength(maximumLength: 350, MinimumLength = 1)]
-        public required IsoExtended350Code Value { get; init; }
+        public required Extended350Code Value { get; init; }
     }
 }

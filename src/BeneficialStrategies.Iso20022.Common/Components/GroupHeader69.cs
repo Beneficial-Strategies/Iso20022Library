@@ -24,7 +24,7 @@ public record GroupHeader69
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Date at which the status report was created.
@@ -33,7 +33,7 @@ public record GroupHeader69
     [DisplayName("Issued Date")]
     [IsoXmlTag("IssdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate IssuedDate { get; init; }
+    public required DateOnly IssuedDate { get; init; }
 
     /// <summary>
     /// Specifies if the report is based on debit invoice, credit invoice, card transaction or cash transaction.
@@ -59,7 +59,7 @@ public record GroupHeader69
     [IsoXmlTag("OrgnlId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalIdentification { get; init; }
+    public Max35Text? OriginalIdentification { get; init; }
 
     /// <summary>
     /// Details of tax representative. The corporate (seller) is allowed to use a tax representative for value added tax responsibilities in case the seller is not registered in a specific value added tax registry.

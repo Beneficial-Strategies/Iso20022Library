@@ -31,7 +31,7 @@ public record ProprietaryQuantity3
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public required IsoDecimalNumber Quantity { get; init; }
+    public required DecimalNumber Quantity { get; init; }
 
     /// <summary>
     /// Identifies the type of proprietary quantity reported.
@@ -40,7 +40,7 @@ public record ProprietaryQuantity3
     [DisplayName("Quantity Type")]
     [IsoXmlTag("QtyTp")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    public required IsoExact4AlphaNumericText QuantityType { get; init; }
+    public required Exact4AlphaNumericText QuantityType { get; init; }
 
     /// <summary>
     /// Provides information related to issuer in free format.
@@ -50,7 +50,7 @@ public record ProprietaryQuantity3
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Issuer { get; init; }
+    public required Max35Text Issuer { get; init; }
 
     /// <summary>
     /// Name of the identification scheme.
@@ -60,5 +60,5 @@ public record ProprietaryQuantity3
     [IsoXmlTag("SchmeNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SchemeName { get; init; }
+    public Max35Text? SchemeName { get; init; }
 }

@@ -32,7 +32,7 @@ public record InvestmentAccount54
     [IsoXmlTag("AcctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text AccountIdentification { get; init; }
+    public required Max35Text AccountIdentification { get; init; }
 
     /// <summary>
     /// Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner.
@@ -42,7 +42,7 @@ public record InvestmentAccount54
     [IsoXmlTag("AcctNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountName { get; init; }
+    public Max35Text? AccountName { get; init; }
 
     /// <summary>
     /// Supplementary registration information applying to a specific block of units for dealing and reporting purposes. The supplementary registration information may be used when all the units are registered, for example, to a funds supermarket, but holdings for each investor have to reconciled individually.
@@ -52,7 +52,7 @@ public record InvestmentAccount54
     [IsoXmlTag("AcctDsgnt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountDesignation { get; init; }
+    public Max35Text? AccountDesignation { get; init; }
 
     /// <summary>
     /// Identification of a related party or intermediary.
@@ -77,7 +77,7 @@ public record InvestmentAccount54
     [DisplayName("Dematerialised Indicator")]
     [IsoXmlTag("DmtrlsdInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? DematerialisedIndicator { get; init; }
+    public YesNoIndicator? DematerialisedIndicator { get; init; }
 
     /// <summary>
     /// Dividend option chosen by the account owner based on the options offered in the prospectus.

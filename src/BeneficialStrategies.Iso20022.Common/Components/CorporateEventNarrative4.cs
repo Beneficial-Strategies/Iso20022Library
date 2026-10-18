@@ -30,5 +30,5 @@ public record CorporateEventNarrative4
     [IsoId("_pSdwkRreEeyhRdHRjakS2w")]
     [DisplayName("Processing Text For Next Intermediary")]
     [IsoXmlTag("PrcgTxtForNxtIntrmy")]
-    public SimpleValueList<IsoMax8000Text> ProcessingTextForNextIntermediary { get; init; } = [];
+    public SimpleValueList<Max8000Text> ProcessingTextForNextIntermediary { get; init; } = [];
 }

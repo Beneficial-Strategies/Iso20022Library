@@ -40,5 +40,5 @@ public record TradeTransactionIdentification8
     [IsoXmlTag("CollPrtflId")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public required IsoMax52Text CollateralPortfolioIdentification { get; init; }
+    public required Max52Text CollateralPortfolioIdentification { get; init; }
 }

@@ -23,5 +23,5 @@ public record SettlementTimeRequest1
     [DisplayName("CLS Time")]
     [IsoXmlTag("CLSTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public required IsoISOTime CLSTime { get; init; }
+    public required ISOTime CLSTime { get; init; }
 }

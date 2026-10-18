@@ -33,7 +33,7 @@ public record Transaction156
     [IsoXmlTag("TxSubTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TransactionSubType { get; init; }
+    public Max35Text? TransactionSubType { get; init; }
 
     /// <summary>
     /// Indicates the previous fee collection message is cancelled.
@@ -42,7 +42,7 @@ public record Transaction156
     [DisplayName("Cancellation Indicator")]
     [IsoXmlTag("CxlInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CancellationIndicator { get; init; }
+    public TrueFalseIndicator? CancellationIndicator { get; init; }
 
     /// <summary>
     /// Reason or purpose to send the message.
@@ -59,7 +59,7 @@ public record Transaction156
     [IsoId("_Hff8R4gpEeu8-LhY4KPfWg")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
-    public SimpleValueList<IsoMax256Text> AlternateMessageReason { get; init; } = [];
+    public SimpleValueList<Max256Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Data to qualify for incentive or other related programmes.
@@ -117,7 +117,7 @@ public record Transaction156
     [DisplayName("Fee Collection Cycle")]
     [IsoXmlTag("FeeColltnCycl")]
     [IsoSimpleType(IsoSimpleType.Exact1NumericText)]
-    public IsoExact1NumericText? FeeCollectionCycle { get; init; }
+    public Exact1NumericText? FeeCollectionCycle { get; init; }
 
     /// <summary>
     /// Reference for the Fee Collection.

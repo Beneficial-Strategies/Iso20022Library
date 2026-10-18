@@ -28,5 +28,5 @@ public record ATMContext27
     /// </summary>
     [DisplayName("Session Reference")]
     [IsoXmlTag("SsnRef")]
-    public IsoMax35Text? SessionReference { get; init; }
+    public Max35Text? SessionReference { get; init; }
 }

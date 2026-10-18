@@ -93,7 +93,7 @@ public record ForeignExchangeTradeConfirmationRequestCancellationRequestV01 : IO
     [IsoXmlTag("TradId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TradeIdentification { get; init; }
+    public required Max35Text TradeIdentification { get; init; }
 
     /// <summary>
     /// Specifies the underlying product type.

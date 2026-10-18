@@ -21,7 +21,7 @@ public record TotalCharges8
     /// </summary>
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
-    public IsoDecimalNumber? ControlSum { get; init; }
+    public DecimalNumber? ControlSum { get; init; }
 
     /// <summary>
     /// Credit Debit Indicator.
@@ -35,7 +35,7 @@ public record TotalCharges8
     /// </summary>
     [DisplayName("Number Of Charges Breakdown Items")]
     [IsoXmlTag("NbOfChrgsBrkdwnItms")]
-    public required IsoMax15NumericText NumberOfChargesBreakdownItems { get; init; }
+    public required Max15NumericText NumberOfChargesBreakdownItems { get; init; }
 
     /// <summary>
     /// Total Charges Amount.

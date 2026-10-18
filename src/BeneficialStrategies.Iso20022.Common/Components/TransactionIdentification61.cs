@@ -30,7 +30,7 @@ public record TransactionIdentification61
     [IsoId("_7xkC5WPwEfCX7uJiAWHfoQ")]
     [DisplayName("Purchase Identifier")]
     [IsoXmlTag("PurchsIdr")]
-    public IsoMax99Text? PurchaseIdentifier { get; init; }
+    public Max99Text? PurchaseIdentifier { get; init; }
 
     /// <summary>
     /// Date and time expressed in UTC of the message as sent by the initiator.
@@ -38,7 +38,7 @@ public record TransactionIdentification61
     [IsoId("_7xkC52PwEfCX7uJiAWHfoQ")]
     [DisplayName("Transmission Date Time")]
     [IsoXmlTag("TrnsmssnDtTm")]
-    public required IsoISODateTime TransmissionDateTime { get; init; }
+    public required ISODateTime TransmissionDateTime { get; init; }
 
     /// <summary>
     /// Number assigned by a transaction originator to assist in identifying a transaction uniquely. The trace number remains unchanged for all messages within a two-message exchange.
@@ -46,7 +46,7 @@ public record TransactionIdentification61
     [IsoId("_7xkC6WPwEfCX7uJiAWHfoQ")]
     [DisplayName("System Trace Audit Number")]
     [IsoXmlTag("SysTracAudtNb")]
-    public IsoMax12NumericText? SystemTraceAuditNumber { get; init; }
+    public Max12NumericText? SystemTraceAuditNumber { get; init; }
 
     /// <summary>
     /// A reference supplied by the system retaining the original source information and used to assist in locating that information or a copy thereof.
@@ -54,7 +54,7 @@ public record TransactionIdentification61
     [IsoId("_7xkC62PwEfCX7uJiAWHfoQ")]
     [DisplayName("Retrieval Reference Number")]
     [IsoXmlTag("RtrvlRefNb")]
-    public IsoExact12Text? RetrievalReferenceNumber { get; init; }
+    public Exact12Text? RetrievalReferenceNumber { get; init; }
 
     /// <summary>
     /// Transaction lifecycle identification.
@@ -62,7 +62,7 @@ public record TransactionIdentification61
     [IsoId("_7xkC7WPwEfCX7uJiAWHfoQ")]
     [DisplayName("Life Cycle Identification")]
     [IsoXmlTag("LifeCyclId")]
-    public IsoExact15Text? LifeCycleIdentification { get; init; }
+    public Exact15Text? LifeCycleIdentification { get; init; }
 
     /// <summary>
     /// Indicates that additional data will be provided in a separate addendum message.
@@ -70,7 +70,7 @@ public record TransactionIdentification61
     [IsoId("_7xkC9WPwEfCX7uJiAWHfoQ")]
     [DisplayName("Associated Data")]
     [IsoXmlTag("AssoctdData")]
-    public IsoTrueFalseIndicator? AssociatedData { get; init; }
+    public TrueFalseIndicator? AssociatedData { get; init; }
 
     /// <summary>
     /// Reference to additional transaction details to be conveyed separately from this message.
@@ -78,7 +78,7 @@ public record TransactionIdentification61
     [IsoId("_7xkC92PwEfCX7uJiAWHfoQ")]
     [DisplayName("Associated Data Reference")]
     [IsoXmlTag("AssoctdDataRef")]
-    public IsoMax70Text? AssociatedDataReference { get; init; }
+    public Max70Text? AssociatedDataReference { get; init; }
 
     /// <summary>
     /// Destination value to be used in the subsequent addendum message.
@@ -86,7 +86,7 @@ public record TransactionIdentification61
     [IsoId("_7xkC-WPwEfCX7uJiAWHfoQ")]
     [DisplayName("Associated Data Destination")]
     [IsoXmlTag("AssoctdDataDstn")]
-    public IsoMax35Text? AssociatedDataDestination { get; init; }
+    public Max35Text? AssociatedDataDestination { get; init; }
 
     /// <summary>
     /// Reserved for private data. The use of this data element is determined by bilateral agreement.
@@ -94,7 +94,7 @@ public record TransactionIdentification61
     [IsoId("_-UcPUmPwEfCX7uJiAWHfoQ")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -102,5 +102,5 @@ public record TransactionIdentification61
     [IsoId("_-UcPU2PwEfCX7uJiAWHfoQ")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

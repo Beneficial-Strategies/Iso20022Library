@@ -24,7 +24,7 @@ public record LineItem16
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Identification { get; init; }
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Something that is produced and sold as the result of an industrial process.
@@ -161,7 +161,7 @@ public record LineItem16
     [DisplayName("Package Quantity")]
     [IsoXmlTag("PackgQty")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? PackageQuantity { get; init; }
+    public DecimalNumber? PackageQuantity { get; init; }
 
     /// <summary>
     /// Number of units per package in this line item for a supply chain trade delivery.
@@ -210,7 +210,7 @@ public record LineItem16
     [DisplayName("Measure Date Time Start")]
     [IsoXmlTag("MeasrDtTmStart")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? MeasureDateTimeStart { get; init; }
+    public ISODateTime? MeasureDateTimeStart { get; init; }
 
     /// <summary>
     /// Date/time on which the clock time measure ended for a line item.
@@ -219,7 +219,7 @@ public record LineItem16
     [DisplayName("Measure Date Time End")]
     [IsoXmlTag("MeasrDtTmEnd")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? MeasureDateTimeEnd { get; init; }
+    public ISODateTime? MeasureDateTimeEnd { get; init; }
 
     /// <summary>
     /// Party to whom the goods must be delivered in the end.
@@ -244,7 +244,7 @@ public record LineItem16
     [DisplayName("Delivery Date Time")]
     [IsoXmlTag("DlvryDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? DeliveryDateTime { get; init; }
+    public ISODateTime? DeliveryDateTime { get; init; }
 
     /// <summary>
     /// Delivery note related to the delivery of the products and/or services for this line item.

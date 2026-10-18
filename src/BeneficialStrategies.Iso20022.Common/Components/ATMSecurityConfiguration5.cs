@@ -31,5 +31,5 @@ public record ATMSecurityConfiguration5
     [DisplayName("PIN Length Capabilities")]
     [IsoXmlTag("PINLngthCpblties")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? PINLengthCapabilities { get; init; }
+    public Number? PINLengthCapabilities { get; init; }
 }

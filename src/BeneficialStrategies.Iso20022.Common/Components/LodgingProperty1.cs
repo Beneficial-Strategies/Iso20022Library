@@ -32,7 +32,7 @@ public record LodgingProperty1
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Identifier that describes the lodging establishment as a prestigious property.
@@ -42,7 +42,7 @@ public record LodgingProperty1
     [IsoXmlTag("PrstgsPrprty")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PrestigiousProperty { get; init; }
+    public Max35Text? PrestigiousProperty { get; init; }
 
     /// <summary>
     /// Name of the property.
@@ -52,7 +52,7 @@ public record LodgingProperty1
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Name { get; init; }
+    public Max35Text? Name { get; init; }
 
     /// <summary>
     /// Identification of the lodging company.
@@ -94,7 +94,7 @@ public record LodgingProperty1
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
     [IsoSimpleType(IsoSimpleType.Min2Max3AlphaText)]
-    public IsoMin2Max3AlphaText? Country { get; init; }
+    public Min2Max3AlphaText? Country { get; init; }
 
     /// <summary>
     /// Indicates whether or not the lodging facility complies with the US Hotel and Motel Fire Safety Act of 1990 (PL101-391) or similar legislation.
@@ -105,5 +105,5 @@ public record LodgingProperty1
     [DisplayName("Fire Safety Act Indicator")]
     [IsoXmlTag("FireSftyActInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? FireSafetyActIndicator { get; init; }
+    public TrueFalseIndicator? FireSafetyActIndicator { get; init; }
 }

@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty15Choic
         [DisplayName("Reference Date")]
         [IsoXmlTag("RefDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate ReferenceDate { get; init; }
+        public required DateOnly ReferenceDate { get; init; }
 
         /// <summary>
         /// Different categories of statuses for a derivative.
@@ -40,7 +40,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty15Choic
         [DisplayName("Total Number Of Transactions")]
         [IsoXmlTag("TtlNbOfTxs")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public IsoNumber? TotalNumberOfTransactions { get; init; }
+        public Number? TotalNumberOfTransactions { get; init; }
 
         /// <summary>
         /// Details of derivatives submitted for reconciliation per counterparty pair.

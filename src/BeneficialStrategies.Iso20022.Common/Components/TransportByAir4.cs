@@ -40,7 +40,7 @@ public record TransportByAir4
     [IsoXmlTag("FlghtNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? FlightNumber { get; init; }
+    public Max35Text? FlightNumber { get; init; }
 
     /// <summary>
     /// Identifies the party that is responsible for the conveyance of the goods from one place to another.
@@ -50,7 +50,7 @@ public record TransportByAir4
     [IsoXmlTag("AirCrrierNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AirCarrierName { get; init; }
+    public Max70Text? AirCarrierName { get; init; }
 
     /// <summary>
     /// Country in which the carrier of the goods, for example, shipping company, is located or registered.
@@ -68,7 +68,7 @@ public record TransportByAir4
     [IsoXmlTag("CrrierAgtNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? CarrierAgentName { get; init; }
+    public Max70Text? CarrierAgentName { get; init; }
 
     /// <summary>
     /// Country of registration of the carrier&apos;s (for example, shipping company&apos;s) agent that acts on behalf of the carrier and may be the issuer of transport documents relating to the underlying shipment.

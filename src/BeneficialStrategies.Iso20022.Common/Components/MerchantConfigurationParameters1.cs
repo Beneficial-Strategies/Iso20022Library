@@ -24,7 +24,7 @@ public record MerchantConfigurationParameters1
     [IsoXmlTag("MrchntId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MerchantIdentification { get; init; }
+    public Max35Text? MerchantIdentification { get; init; }
 
     /// <summary>
     /// Version of the merchant parameters.
@@ -34,7 +34,7 @@ public record MerchantConfigurationParameters1
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public required IsoMax256Text Version { get; init; }
+    public required Max256Text Version { get; init; }
 
     /// <summary>
     /// Merchant parameters.
@@ -43,5 +43,5 @@ public record MerchantConfigurationParameters1
     [DisplayName("Parameters")]
     [IsoXmlTag("Params")]
     [IsoSimpleType(IsoSimpleType.Max10000Binary)]
-    public required IsoMax10000Binary Parameters { get; init; }
+    public required Max10000Binary Parameters { get; init; }
 }

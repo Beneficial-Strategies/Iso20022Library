@@ -49,7 +49,7 @@ public record HostCommunicationParameter7
     /// </summary>
     [DisplayName("Host Identification")]
     [IsoXmlTag("HstId")]
-    public required IsoMax35Text HostIdentification { get; init; }
+    public required Max35Text HostIdentification { get; init; }
 
     /// <summary>
     /// Key.

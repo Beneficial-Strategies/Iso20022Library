@@ -38,7 +38,7 @@ public record BillingReport6
     [IsoId("_2mCyBTEyEe6g-ffJsqGiSA")]
     [DisplayName("Invoice Date")]
     [IsoXmlTag("InvcDt")]
-    public required IsoISODate InvoiceDate { get; init; }
+    public required DateOnly InvoiceDate { get; init; }
 
     /// <summary>
     /// Unique identification of the billing report.
@@ -46,7 +46,7 @@ public record BillingReport6
     [IsoId("_2mCyBzEyEe6g-ffJsqGiSA")]
     [DisplayName("Billing Identification")]
     [IsoXmlTag("BllgId")]
-    public required IsoMax35Text BillingIdentification { get; init; }
+    public required Max35Text BillingIdentification { get; init; }
 
     /// <summary>
     /// Date period for which the report data is valid.

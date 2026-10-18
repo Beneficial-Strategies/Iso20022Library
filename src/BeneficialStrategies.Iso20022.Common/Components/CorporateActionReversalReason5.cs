@@ -32,5 +32,5 @@ public record CorporateActionReversalReason5
     [IsoXmlTag("AddtlRsnInf")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? AdditionalReasonInformation { get; init; }
+    public Max256Text? AdditionalReasonInformation { get; init; }
 }

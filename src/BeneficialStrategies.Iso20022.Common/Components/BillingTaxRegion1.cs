@@ -24,7 +24,7 @@ public record BillingTaxRegion1
     [IsoXmlTag("RgnNb")]
     [IsoSimpleType(IsoSimpleType.Max40Text)]
     [StringLength(maximumLength: 40, MinimumLength = 1)]
-    public required IsoMax40Text RegionNumber { get; init; }
+    public required Max40Text RegionNumber { get; init; }
 
     /// <summary>
     /// Name associated with a specific tax region number.
@@ -34,7 +34,7 @@ public record BillingTaxRegion1
     [IsoXmlTag("RgnNm")]
     [IsoSimpleType(IsoSimpleType.Max40Text)]
     [StringLength(maximumLength: 40, MinimumLength = 1)]
-    public required IsoMax40Text RegionName { get; init; }
+    public required Max40Text RegionName { get; init; }
 
     /// <summary>
     /// Specifies the financial institution’s customer tax identification number. ||Usage: |This is the number passed from the financial institution to the taxing authority to indicate the specific customer tied to the taxes calculated for this tax region and group of delivered services. It is typically the tax identification tied to a customer’s account.
@@ -44,7 +44,7 @@ public record BillingTaxRegion1
     [IsoXmlTag("CstmrTaxId")]
     [IsoSimpleType(IsoSimpleType.Max40Text)]
     [StringLength(maximumLength: 40, MinimumLength = 1)]
-    public required IsoMax40Text CustomerTaxIdentification { get; init; }
+    public required Max40Text CustomerTaxIdentification { get; init; }
 
     /// <summary>
     /// Date on which the tax calculation was performed. ||Usage: |This date can be used to verify the tax rate value on the calculation date.
@@ -53,7 +53,7 @@ public record BillingTaxRegion1
     [DisplayName("Point Date")]
     [IsoXmlTag("PtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? PointDate { get; init; }
+    public DateOnly? PointDate { get; init; }
 
     /// <summary>
     /// Tax information that relates to the sending financial institution.
@@ -71,7 +71,7 @@ public record BillingTaxRegion1
     [IsoXmlTag("InvcNb")]
     [IsoSimpleType(IsoSimpleType.Max40Text)]
     [StringLength(maximumLength: 40, MinimumLength = 1)]
-    public IsoMax40Text? InvoiceNumber { get; init; }
+    public Max40Text? InvoiceNumber { get; init; }
 
     /// <summary>
     /// Tax values are based on tax calculation method C.

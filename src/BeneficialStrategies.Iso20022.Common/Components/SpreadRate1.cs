@@ -23,7 +23,7 @@ public record SpreadRate1
     [DisplayName("Sign")]
     [IsoXmlTag("Sgn")]
     [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
-    public required IsoPlusOrMinusIndicator Sign { get; init; }
+    public required PlusOrMinusIndicator Sign { get; init; }
 
     /// <summary>
     /// Specifies if the spreadf is expressed as an amount or a rate.

@@ -22,7 +22,7 @@ public record TransactionDetails177
     [IsoId("bc4e3872-28fe-433d-91e3-4213f3947b01")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    public SimpleValueList<IsoMax35Text> TradeIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> TradeIdentification { get; init; } = [];
 
     /// <summary>
     /// Unique Transaction Identifier (UTI) as agreed with the other counterparty.
@@ -30,7 +30,7 @@ public record TransactionDetails177
     [IsoId("bc4e3872-28fe-433d-91e3-4213f3947b02")]
     [DisplayName("Unique Transaction Identifier")]
     [IsoXmlTag("UnqTxIdr")]
-    public IsoUTIIdentifier? UniqueTransactionIdentifier { get; init; }
+    public UTIIdentifier? UniqueTransactionIdentifier { get; init; }
 
     /// <summary>
     /// Collective reference identifying a set of messages.
@@ -38,7 +38,7 @@ public record TransactionDetails177
     [IsoId("bc4e3872-28fe-433d-91e3-4213f3947b03")]
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
-    public IsoMax35Text? PoolIdentification { get; init; }
+    public Max35Text? PoolIdentification { get; init; }
 
     /// <summary>
     /// Identification assigned by the account servicer to unambiguously identify a corporate action event.
@@ -46,7 +46,7 @@ public record TransactionDetails177
     [IsoId("bc4e3872-28fe-433d-91e3-4213f3947b04")]
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
-    public IsoMax35Text? CorporateActionEventIdentification { get; init; }
+    public Max35Text? CorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Unique identification identifying the triparty collateral management transaction from the triparty-agent's/service-provider's point of view.
@@ -54,7 +54,7 @@ public record TransactionDetails177
     [IsoId("bc4e3872-28fe-433d-91e3-4213f3947b05")]
     [DisplayName("Triparty Agent Service Provider Collateral Transaction Identification")]
     [IsoXmlTag("TrptyAgtSvcPrvdrCollTxId")]
-    public IsoMax35Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; }
+    public Max35Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique reference identifying the triparty collateral management transaction from the client's point of view.
@@ -62,7 +62,7 @@ public record TransactionDetails177
     [IsoId("bc4e3872-28fe-433d-91e3-4213f3947b06")]
     [DisplayName("Client Triparty Collateral Transaction Identification")]
     [IsoXmlTag("ClntTrptyCollTxId")]
-    public IsoMax35Text? ClientTripartyCollateralTransactionIdentification { get; init; }
+    public Max35Text? ClientTripartyCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification assigned to the instruction by the client.
@@ -70,7 +70,7 @@ public record TransactionDetails177
     [IsoId("bc4e3872-28fe-433d-91e3-4213f3947b07")]
     [DisplayName("Client Collateral Instruction Identification")]
     [IsoXmlTag("ClntCollInstrId")]
-    public IsoMax35Text? ClientCollateralInstructionIdentification { get; init; }
+    public Max35Text? ClientCollateralInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification assigned to the instruction by the triparty-agent/service-provider.
@@ -78,7 +78,7 @@ public record TransactionDetails177
     [IsoId("bc4e3872-28fe-433d-91e3-4213f3947b08")]
     [DisplayName("Triparty Agent Service Provider Collateral Instruction Identification")]
     [IsoXmlTag("TrptyAgtSvcPrvdrCollInstrId")]
-    public IsoMax35Text? TripartyAgentServiceProviderCollateralInstructionIdentification { get; init; }
+    public Max35Text? TripartyAgentServiceProviderCollateralInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unambiguous identification of a random or semi-random number used once (NONCE) generated in the frame of a cryptographic communication.
@@ -86,7 +86,7 @@ public record TransactionDetails177
     [IsoId("bc4e3872-28fe-433d-91e3-4213f3947b09")]
     [DisplayName("Nonce Identification")]
     [IsoXmlTag("NonceId")]
-    public IsoMax35Text? NonceIdentification { get; init; }
+    public Max35Text? NonceIdentification { get; init; }
 
     /// <summary>
     /// Party that legally owns the account.
@@ -222,7 +222,7 @@ public record TransactionDetails177
     [IsoId("bc4e3872-28fe-433d-91e3-4213f3947b26")]
     [DisplayName("Acknowledged Status Time Stamp")]
     [IsoXmlTag("AckdStsTmStmp")]
-    public IsoISODateTime? AcknowledgedStatusTimeStamp { get; init; }
+    public ISODateTime? AcknowledgedStatusTimeStamp { get; init; }
 
     /// <summary>
     /// Time stamp on when the transaction is matched.
@@ -230,7 +230,7 @@ public record TransactionDetails177
     [IsoId("bc4e3872-28fe-433d-91e3-4213f3947b27")]
     [DisplayName("Matched Status Time Stamp")]
     [IsoXmlTag("MtchdStsTmStmp")]
-    public IsoISODateTime? MatchedStatusTimeStamp { get; init; }
+    public ISODateTime? MatchedStatusTimeStamp { get; init; }
 
     /// <summary>
     /// Specifies if the movement on a securities account results from a deliver or a receive instruction.
@@ -294,5 +294,5 @@ public record TransactionDetails177
     [IsoId("bc4e3872-28fe-433d-91e3-4213f3947b35")]
     [DisplayName("Settlement Instruction Processing Additional Details")]
     [IsoXmlTag("SttlmInstrPrcgAddtlDtls")]
-    public IsoMax350Text? SettlementInstructionProcessingAdditionalDetails { get; init; }
+    public Max350Text? SettlementInstructionProcessingAdditionalDetails { get; init; }
 }

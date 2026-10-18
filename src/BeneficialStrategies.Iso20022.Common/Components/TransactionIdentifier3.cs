@@ -21,19 +21,19 @@ public record TransactionIdentifier3
     /// </summary>
     [DisplayName("Host Transaction Date Time")]
     [IsoXmlTag("HstTxDtTm")]
-    public IsoISODateTime? HostTransactionDateTime { get; init; }
+    public ISODateTime? HostTransactionDateTime { get; init; }
 
     /// <summary>
     /// Transaction Date Time.
     /// </summary>
     [DisplayName("Transaction Date Time")]
     [IsoXmlTag("TxDtTm")]
-    public required IsoISODateTime TransactionDateTime { get; init; }
+    public required ISODateTime TransactionDateTime { get; init; }
 
     /// <summary>
     /// Transaction Reference.
     /// </summary>
     [DisplayName("Transaction Reference")]
     [IsoXmlTag("TxRef")]
-    public required IsoMax35Text TransactionReference { get; init; }
+    public required Max35Text TransactionReference { get; init; }
 }

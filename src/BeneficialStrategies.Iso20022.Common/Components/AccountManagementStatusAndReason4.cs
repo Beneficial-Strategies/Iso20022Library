@@ -32,7 +32,7 @@ public record AccountManagementStatusAndReason4
     [IsoXmlTag("AcctApplId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountApplicationIdentification { get; init; }
+    public Max35Text? AccountApplicationIdentification { get; init; }
 
     /// <summary>
     /// Account to which the account opening is related.
@@ -42,5 +42,5 @@ public record AccountManagementStatusAndReason4
     [IsoXmlTag("ExstgAcctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ExistingAccountIdentification { get; init; }
+    public Max35Text? ExistingAccountIdentification { get; init; }
 }

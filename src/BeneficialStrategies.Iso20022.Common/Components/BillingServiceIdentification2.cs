@@ -24,7 +24,7 @@ public record BillingServiceIdentification2
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Defines the financial institution sub-service identification if the financial institution service identification code is used for more than one service.
@@ -42,5 +42,5 @@ public record BillingServiceIdentification2
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public required IsoMax70Text Description { get; init; }
+    public required Max70Text Description { get; init; }
 }

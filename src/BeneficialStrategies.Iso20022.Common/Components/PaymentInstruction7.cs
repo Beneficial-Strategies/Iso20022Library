@@ -25,7 +25,7 @@ public record PaymentInstruction7
     [IsoXmlTag("PmtInfId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text PaymentInformationIdentification { get; init; }
+    public required Max35Text PaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Specifies the means of payment that will be used to move the amount of money.
@@ -42,7 +42,7 @@ public record PaymentInstruction7
     [DisplayName("Batch Booking")]
     [IsoXmlTag("BtchBookg")]
     [IsoSimpleType(IsoSimpleType.BatchBookingIndicator)]
-    public IsoBatchBookingIndicator? BatchBooking { get; init; }
+    public BatchBookingIndicator? BatchBooking { get; init; }
 
     /// <summary>
     /// Number of individual transactions contained in the payment information group.
@@ -51,7 +51,7 @@ public record PaymentInstruction7
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public IsoMax15NumericText? NumberOfTransactions { get; init; }
+    public Max15NumericText? NumberOfTransactions { get; init; }
 
     /// <summary>
     /// Total of all individual amounts included in the group, irrespective of currencies.
@@ -60,7 +60,7 @@ public record PaymentInstruction7
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? ControlSum { get; init; }
+    public DecimalNumber? ControlSum { get; init; }
 
     /// <summary>
     /// Set of elements used to further specify the type of transaction.
@@ -77,7 +77,7 @@ public record PaymentInstruction7
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate RequestedCollectionDate { get; init; }
+    public required DateOnly RequestedCollectionDate { get; init; }
 
     /// <summary>
     /// Party to which an amount of money is due.

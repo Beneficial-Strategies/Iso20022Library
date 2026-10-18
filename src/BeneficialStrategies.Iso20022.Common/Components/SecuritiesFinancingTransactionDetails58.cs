@@ -35,7 +35,7 @@ public record SecuritiesFinancingTransactionDetails58
     /// </summary>
     [DisplayName("Closing Leg Identification")]
     [IsoXmlTag("ClsgLegId")]
-    public IsoMax35Text? ClosingLegIdentification { get; init; }
+    public Max35Text? ClosingLegIdentification { get; init; }
 
     /// <summary>
     /// Commission Calculation Date.
@@ -77,7 +77,7 @@ public record SecuritiesFinancingTransactionDetails58
     /// </summary>
     [DisplayName("Interest Payment")]
     [IsoXmlTag("IntrstPmt")]
-    public IsoYesNoIndicator? InterestPayment { get; init; }
+    public YesNoIndicator? InterestPayment { get; init; }
 
     /// <summary>
     /// Legal Framework.
@@ -98,7 +98,7 @@ public record SecuritiesFinancingTransactionDetails58
     /// </summary>
     [DisplayName("Maturity Date Modification")]
     [IsoXmlTag("MtrtyDtMod")]
-    public IsoYesNoIndicator? MaturityDateModification { get; init; }
+    public YesNoIndicator? MaturityDateModification { get; init; }
 
     /// <summary>
     /// Premium Amount.
@@ -147,21 +147,21 @@ public record SecuritiesFinancingTransactionDetails58
     /// </summary>
     [DisplayName("Second Leg Narrative")]
     [IsoXmlTag("ScndLegNrrtv")]
-    public IsoMax140Text? SecondLegNarrative { get; init; }
+    public Max140Text? SecondLegNarrative { get; init; }
 
     /// <summary>
     /// Securities Financing Trade Identification.
     /// </summary>
     [DisplayName("Securities Financing Trade Identification")]
     [IsoXmlTag("SctiesFincgTradId")]
-    public IsoMax35Text? SecuritiesFinancingTradeIdentification { get; init; }
+    public Max35Text? SecuritiesFinancingTradeIdentification { get; init; }
 
     /// <summary>
     /// Securities Financing Unique Transaction Identifier.
     /// </summary>
     [DisplayName("Securities Financing Unique Transaction Identifier")]
     [IsoXmlTag("SctiesFincgUnqTxIdr")]
-    public IsoUTIIdentifier? SecuritiesFinancingUniqueTransactionIdentifier { get; init; }
+    public UTIIdentifier? SecuritiesFinancingUniqueTransactionIdentifier { get; init; }
 
     /// <summary>
     /// Securities Haircut.
@@ -210,14 +210,14 @@ public record SecuritiesFinancingTransactionDetails58
     /// </summary>
     [DisplayName("Total Number Of Collateral Instructions")]
     [IsoXmlTag("TtlNbOfCollInstrs")]
-    public IsoExact3NumericText? TotalNumberOfCollateralInstructions { get; init; }
+    public Exact3NumericText? TotalNumberOfCollateralInstructions { get; init; }
 
     /// <summary>
     /// Transaction Call Delay.
     /// </summary>
     [DisplayName("Transaction Call Delay")]
     [IsoXmlTag("TxCallDely")]
-    public IsoExact3NumericText? TransactionCallDelay { get; init; }
+    public Exact3NumericText? TransactionCallDelay { get; init; }
 
     /// <summary>
     /// Variable Rate Support.

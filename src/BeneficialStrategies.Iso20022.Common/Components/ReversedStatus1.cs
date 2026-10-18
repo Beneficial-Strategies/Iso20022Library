@@ -24,7 +24,7 @@ public record ReversedStatus1
     [IsoXmlTag("Rsn")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text Reason { get; init; }
+    public required Max350Text Reason { get; init; }
 
     /// <summary>
     /// Proprietary identification of the reason for the reversed status.

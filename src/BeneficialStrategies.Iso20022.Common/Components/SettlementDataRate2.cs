@@ -23,7 +23,7 @@ public record SettlementDataRate2
     [DisplayName("Volume")]
     [IsoXmlTag("Vol")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate Volume { get; init; }
+    public required PercentageRate Volume { get; init; }
 
     /// <summary>
     /// Specifies the rate, in terms of value, of the failed settlement instructions compared to the total value of settlement instructions performed (settled and failed) during the period covered by the report.
@@ -32,5 +32,5 @@ public record SettlementDataRate2
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate Value { get; init; }
+    public required PercentageRate Value { get; init; }
 }

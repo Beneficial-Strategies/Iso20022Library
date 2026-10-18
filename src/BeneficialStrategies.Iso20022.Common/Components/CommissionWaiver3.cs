@@ -32,7 +32,7 @@ public record CommissionWaiver3
     [IsoXmlTag("XtndedInstrBsis")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoExtended350Code ExtendedInstructionBasis { get; init; }
+    public required Extended350Code ExtendedInstructionBasis { get; init; }
 
     /// <summary>
     /// Proportion of the commission that is waived, ie, if the commission is 5% and half is waived, 2.5% should be stated in this field.
@@ -41,5 +41,5 @@ public record CommissionWaiver3
     [DisplayName("Waived Rate")]
     [IsoXmlTag("WvdRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate WaivedRate { get; init; }
+    public required PercentageRate WaivedRate { get; init; }
 }

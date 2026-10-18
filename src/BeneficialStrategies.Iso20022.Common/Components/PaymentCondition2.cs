@@ -23,14 +23,14 @@ public record PaymentCondition2
     /// </summary>
     [DisplayName("Amount Modification Allowed")]
     [IsoXmlTag("AmtModAllwd")]
-    public IsoTrueFalseIndicator? AmountModificationAllowed { get; init; }
+    public TrueFalseIndicator? AmountModificationAllowed { get; init; }
 
     /// <summary>
     /// Penalty to be applied for a delayed payment, that is when the payment is made after the requested execution date.
     /// </summary>
     [DisplayName("Delay Penalty")]
     [IsoXmlTag("DelyPnlty")]
-    public IsoMax140Text? DelayPenalty { get; init; }
+    public Max140Text? DelayPenalty { get; init; }
 
     /// <summary>
     /// Indicates if the debtor is allowed to pay before the requested execution date.
@@ -38,7 +38,7 @@ public record PaymentCondition2
     /// </summary>
     [DisplayName("Early Payment Allowed")]
     [IsoXmlTag("EarlyPmtAllwd")]
-    public IsoTrueFalseIndicator? EarlyPaymentAllowed { get; init; }
+    public TrueFalseIndicator? EarlyPaymentAllowed { get; init; }
 
     /// <summary>
     /// Indicates if a payment guarantee is requested, assuming a payment guarantee contract exists between the different actors.
@@ -46,7 +46,7 @@ public record PaymentCondition2
     /// </summary>
     [DisplayName("Guaranteed Payment Requested")]
     [IsoXmlTag("GrntedPmtReqd")]
-    public IsoTrueFalseIndicator? GuaranteedPaymentRequested { get; init; }
+    public TrueFalseIndicator? GuaranteedPaymentRequested { get; init; }
 
     /// <summary>
     /// Discount rate applied for immediate payment upon receipt of the request.

@@ -24,7 +24,7 @@ public record MaintenanceIdentificationAssociation1
     [IsoXmlTag("MstrTMId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MasterTMIdentification { get; init; }
+    public required Max35Text MasterTMIdentification { get; init; }
 
     /// <summary>
     /// Identifier for the terminal manager requesting the delegation.
@@ -34,5 +34,5 @@ public record MaintenanceIdentificationAssociation1
     [IsoXmlTag("TMId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TMIdentification { get; init; }
+    public required Max35Text TMIdentification { get; init; }
 }

@@ -42,7 +42,7 @@ public record MaintenanceDelegation12
     [IsoXmlTag("RspnRsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ResponseReason { get; init; }
+    public Max35Text? ResponseReason { get; init; }
 
     /// <summary>
     /// Type of delegation action.
@@ -58,7 +58,7 @@ public record MaintenanceDelegation12
     [IsoId("_mfBNWS8lEeu125Ip9zFcsQ")]
     [DisplayName("POI Subset")]
     [IsoXmlTag("POISubset")]
-    public SimpleValueList<IsoMax35Text> POISubset { get; init; } = [];
+    public SimpleValueList<Max35Text> POISubset { get; init; } = [];
 
     /// <summary>
     /// Identification of the parameters subset assigned by the MTM.
@@ -68,7 +68,7 @@ public record MaintenanceDelegation12
     [IsoXmlTag("DlgtnScpId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DelegationScopeIdentification { get; init; }
+    public Max35Text? DelegationScopeIdentification { get; init; }
 
     /// <summary>
     /// This element contains all information relevant to the DelegationScopeIdentification. The format of this element is out of scope of this definition.
@@ -77,7 +77,7 @@ public record MaintenanceDelegation12
     [DisplayName("Delegation Scope Definition")]
     [IsoXmlTag("DlgtnScpDef")]
     [IsoSimpleType(IsoSimpleType.Max3000Binary)]
-    public IsoMax3000Binary? DelegationScopeDefinition { get; init; }
+    public Max3000Binary? DelegationScopeDefinition { get; init; }
 
     /// <summary>
     /// This element contains the necessary information to secure the management of the Delegation. The format of this element is out of scope of this definition.
@@ -86,7 +86,7 @@ public record MaintenanceDelegation12
     [DisplayName("Delegation Proof")]
     [IsoXmlTag("DlgtnProof")]
     [IsoSimpleType(IsoSimpleType.Max5000Binary)]
-    public IsoMax5000Binary? DelegationProof { get; init; }
+    public Max5000Binary? DelegationProof { get; init; }
 
     /// <summary>
     /// Protected proof of delegation.

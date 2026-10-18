@@ -31,7 +31,7 @@ public record EventNotificationData4
     [DisplayName("Maintenance Required Flag")]
     [IsoXmlTag("MntncReqrdFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? MaintenanceRequiredFlag { get; init; }
+    public TrueFalseIndicator? MaintenanceRequiredFlag { get; init; }
 
     /// <summary>
     /// Language of the Customer

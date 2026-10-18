@@ -40,7 +40,7 @@ public record AdministrativeRequest5
     [IsoXmlTag("AdmstvSvcId")]
     [IsoSimpleType(IsoSimpleType.Max20000Text)]
     [StringLength(maximumLength: 20000, MinimumLength = 1)]
-    public IsoMax20000Text? AdministrativeServiceIdentification { get; init; }
+    public Max20000Text? AdministrativeServiceIdentification { get; init; }
 
     /// <summary>
     /// Additional information incorporated as an extension to the message.

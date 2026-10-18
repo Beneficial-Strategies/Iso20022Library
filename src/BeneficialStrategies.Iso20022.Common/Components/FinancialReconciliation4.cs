@@ -46,5 +46,5 @@ public record FinancialReconciliation4
     [IsoId("_eXZ76WP5EfCX7uJiAWHfoQ")]
     [DisplayName("Count")]
     [IsoXmlTag("Cnt")]
-    public required IsoNumber Count { get; init; }
+    public required Number Count { get; init; }
 }

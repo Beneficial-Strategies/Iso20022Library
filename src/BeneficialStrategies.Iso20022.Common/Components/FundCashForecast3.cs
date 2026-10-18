@@ -24,7 +24,7 @@ public record FundCashForecast3
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Date and, if required, the time, at which the price has been applied.
@@ -89,7 +89,7 @@ public record FundCashForecast3
     [DisplayName("Total NAV Change Rate")]
     [IsoXmlTag("TtlNAVChngRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? TotalNAVChangeRate { get; init; }
+    public PercentageRate? TotalNAVChangeRate { get; init; }
 
     /// <summary>
     /// Currency of the investment fund class.
@@ -106,7 +106,7 @@ public record FundCashForecast3
     [DisplayName("Exceptional Net Cash Flow Indicator")]
     [IsoXmlTag("XcptnlNetCshFlowInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ExceptionalNetCashFlowIndicator { get; init; }
+    public required YesNoIndicator ExceptionalNetCashFlowIndicator { get; init; }
 
     /// <summary>
     /// Cash movements into the fund as a result of investment funds transactions, eg, subscriptions or switch-in.

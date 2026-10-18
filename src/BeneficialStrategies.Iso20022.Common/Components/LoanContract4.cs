@@ -56,7 +56,7 @@ public record LoanContract4
     /// </summary>
     [DisplayName("Duration Code")]
     [IsoXmlTag("DrtnCd")]
-    public IsoExact1NumericText? DurationCode { get; init; }
+    public Exact1NumericText? DurationCode { get; init; }
 
     /// <summary>
     /// Interest Rate.
@@ -77,21 +77,21 @@ public record LoanContract4
     /// </summary>
     [DisplayName("Intra Company Loan")]
     [IsoXmlTag("IntraCpnyLn")]
-    public required IsoTrueFalseIndicator IntraCompanyLoan { get; init; }
+    public required TrueFalseIndicator IntraCompanyLoan { get; init; }
 
     /// <summary>
     /// Loan Type Identification.
     /// </summary>
     [DisplayName("Loan Type Identification")]
     [IsoXmlTag("LnTpId")]
-    public IsoMax35Text? LoanTypeIdentification { get; init; }
+    public Max35Text? LoanTypeIdentification { get; init; }
 
     /// <summary>
     /// Maturity Date.
     /// </summary>
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
-    public IsoISODate? MaturityDate { get; init; }
+    public DateOnly? MaturityDate { get; init; }
 
     /// <summary>
     /// Payment Schedule.
@@ -105,7 +105,7 @@ public record LoanContract4
     /// </summary>
     [DisplayName("Prolongation Flag")]
     [IsoXmlTag("PrlngtnFlg")]
-    public IsoTrueFalseIndicator? ProlongationFlag { get; init; }
+    public TrueFalseIndicator? ProlongationFlag { get; init; }
 
     /// <summary>
     /// Seller.
@@ -133,7 +133,7 @@ public record LoanContract4
     /// </summary>
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
-    public IsoISODate? StartDate { get; init; }
+    public DateOnly? StartDate { get; init; }
 
     /// <summary>
     /// Syndicated Loan.

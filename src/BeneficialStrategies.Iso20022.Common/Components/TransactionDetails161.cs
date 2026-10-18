@@ -22,7 +22,7 @@ public record TransactionDetails161
     [IsoId("_f99ymTi8Eeydid5dcNPKvg")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    public SimpleValueList<IsoRestrictedFINXMax52Text> TradeIdentification { get; init; } = [];
+    public SimpleValueList<RestrictedFINXMax52Text> TradeIdentification { get; init; } = [];
 
     /// <summary>
     /// Collective reference identifying a set of messages.
@@ -32,7 +32,7 @@ public record TransactionDetails161
     [IsoXmlTag("PoolId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? PoolIdentification { get; init; }
+    public RestrictedFINXMax16Text? PoolIdentification { get; init; }
 
     /// <summary>
     /// Identification assigned by the account servicer to unambiguously identify a corporate action event.
@@ -42,7 +42,7 @@ public record TransactionDetails161
     [IsoXmlTag("CorpActnEvtId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? CorporateActionEventIdentification { get; init; }
+    public RestrictedFINXMax16Text? CorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Unique identification identifying the triparty collateral management transaction from the triparty-agent&apos;s/service-provider&apos;s point of view.
@@ -52,7 +52,7 @@ public record TransactionDetails161
     [IsoXmlTag("TrptyAgtSvcPrvdrCollTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; }
+    public RestrictedFINXMax16Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique reference identifying the triparty collateral management transaction from the client&apos;s point of view.
@@ -62,7 +62,7 @@ public record TransactionDetails161
     [IsoXmlTag("ClntTrptyCollTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? ClientTripartyCollateralTransactionIdentification { get; init; }
+    public RestrictedFINXMax16Text? ClientTripartyCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification assigned to the instruction by the client.
@@ -72,7 +72,7 @@ public record TransactionDetails161
     [IsoXmlTag("ClntCollInstrId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? ClientCollateralInstructionIdentification { get; init; }
+    public RestrictedFINXMax16Text? ClientCollateralInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification assigned to the instruction by the triparty-agent/service-provider.
@@ -82,7 +82,7 @@ public record TransactionDetails161
     [IsoXmlTag("TrptyAgtSvcPrvdrCollInstrId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? TripartyAgentServiceProviderCollateralInstructionIdentification { get; init; }
+    public RestrictedFINXMax16Text? TripartyAgentServiceProviderCollateralInstructionIdentification { get; init; }
 
     /// <summary>
     /// Party that legally owns the account.
@@ -211,7 +211,7 @@ public record TransactionDetails161
     [DisplayName("Acknowledged Status Time Stamp")]
     [IsoXmlTag("AckdStsTmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? AcknowledgedStatusTimeStamp { get; init; }
+    public ISODateTime? AcknowledgedStatusTimeStamp { get; init; }
 
     /// <summary>
     /// Time stamp on when the transaction is matched.
@@ -220,7 +220,7 @@ public record TransactionDetails161
     [DisplayName("Matched Status Time Stamp")]
     [IsoXmlTag("MtchdStsTmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? MatchedStatusTimeStamp { get; init; }
+    public ISODateTime? MatchedStatusTimeStamp { get; init; }
 
     /// <summary>
     /// Specifies if the movement on a securities account results from a deliver or a receive instruction.
@@ -286,5 +286,5 @@ public record TransactionDetails161
     [IsoXmlTag("SttlmInstrPrcgAddtlDtls")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? SettlementInstructionProcessingAdditionalDetails { get; init; }
+    public RestrictedFINXMax350Text? SettlementInstructionProcessingAdditionalDetails { get; init; }
 }

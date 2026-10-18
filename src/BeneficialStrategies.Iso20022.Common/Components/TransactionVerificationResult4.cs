@@ -48,5 +48,5 @@ public record TransactionVerificationResult4
     [IsoXmlTag("AddtlRslt")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public IsoMax500Text? AdditionalResult { get; init; }
+    public Max500Text? AdditionalResult { get; init; }
 }

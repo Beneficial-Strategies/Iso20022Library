@@ -40,7 +40,7 @@ public record InvestmentAccount27
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Name { get; init; }
+    public Max35Text? Name { get; init; }
 
     /// <summary>
     /// Supplementary registration information applying to a specific block of units for dealing and reporting purposes. The supplementary registration information may be used when all the units are registered, for example, to a funds supermarket, but holdings for each investor have to reconciled individually.
@@ -50,7 +50,7 @@ public record InvestmentAccount27
     [IsoXmlTag("Dsgnt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Designation { get; init; }
+    public Max35Text? Designation { get; init; }
 
     /// <summary>
     /// Purpose of the account/source fund type. This is typically linked to an investment product, eg, wrapper, PEP, ISA.
@@ -68,7 +68,7 @@ public record InvestmentAccount27
     [IsoXmlTag("XtndedTp")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedType { get; init; }
+    public Extended350Code? ExtendedType { get; init; }
 
     /// <summary>
     /// Ownership status of the account, eg, joint owners.
@@ -86,7 +86,7 @@ public record InvestmentAccount27
     [IsoXmlTag("XtndedOwnrshTp")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoExtended350Code ExtendedOwnershipType { get; init; }
+    public required Extended350Code ExtendedOwnershipType { get; init; }
 
     /// <summary>
     /// Tax advantage specific to the account.
@@ -104,7 +104,7 @@ public record InvestmentAccount27
     [IsoXmlTag("XtndedTaxXmptnRsn")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedTaxExemptionReason { get; init; }
+    public Extended350Code? ExtendedTaxExemptionReason { get; init; }
 
     /// <summary>
     /// Regularity at which a statement is issued.
@@ -122,7 +122,7 @@ public record InvestmentAccount27
     [IsoXmlTag("XtndedStmtFrqcy")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedStatementFrequency { get; init; }
+    public Extended350Code? ExtendedStatementFrequency { get; init; }
 
     /// <summary>
     /// Currency chosen for reporting purposes by the account owner in agreement with the account servicer.
@@ -164,7 +164,7 @@ public record InvestmentAccount27
     [IsoXmlTag("LttrInttRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LetterIntentReference { get; init; }
+    public Max35Text? LetterIntentReference { get; init; }
 
     /// <summary>
     /// Reference of an accumulation rights program, in which sales commissions are based on a customer&apos;s present purchases of shares and the aggregate quantity previously purchased by the customer. An accumulation rights program is mainly used in the US market.
@@ -174,7 +174,7 @@ public record InvestmentAccount27
     [IsoXmlTag("AcmltnRghtRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccumulationRightReference { get; init; }
+    public Max35Text? AccumulationRightReference { get; init; }
 
     /// <summary>
     /// Number of account owners or related parties required to authorise transactions on the account.
@@ -183,7 +183,7 @@ public record InvestmentAccount27
     [DisplayName("Required Signatories Number")]
     [IsoXmlTag("ReqrdSgntriesNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? RequiredSignatoriesNumber { get; init; }
+    public Number? RequiredSignatoriesNumber { get; init; }
 
     /// <summary>
     /// Name of the investment fund family.
@@ -193,7 +193,7 @@ public record InvestmentAccount27
     [IsoXmlTag("FndFmlyNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? FundFamilyName { get; init; }
+    public Max350Text? FundFamilyName { get; init; }
 
     /// <summary>
     /// Parameters to be applied on deal amount for orders when the amount is a fractional number.

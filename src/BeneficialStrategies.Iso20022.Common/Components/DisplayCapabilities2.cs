@@ -31,7 +31,7 @@ public record DisplayCapabilities2
     [DisplayName("Number Of Lines")]
     [IsoXmlTag("NbOfLines")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber NumberOfLines { get; init; }
+    public required Number NumberOfLines { get; init; }
 
     /// <summary>
     /// Number of columns of the display component.
@@ -40,5 +40,5 @@ public record DisplayCapabilities2
     [DisplayName("Line Width")]
     [IsoXmlTag("LineWidth")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber LineWidth { get; init; }
+    public required Number LineWidth { get; init; }
 }

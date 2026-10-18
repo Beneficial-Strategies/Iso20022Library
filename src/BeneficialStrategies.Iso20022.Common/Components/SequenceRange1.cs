@@ -24,7 +24,7 @@ public record SequenceRange1
     [IsoXmlTag("FrSeq")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text FromSequence { get; init; }
+    public required Max35Text FromSequence { get; init; }
 
     /// <summary>
     /// End sequence of the range.
@@ -34,5 +34,5 @@ public record SequenceRange1
     [IsoXmlTag("ToSeq")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ToSequence { get; init; }
+    public required Max35Text ToSequence { get; init; }
 }

@@ -68,7 +68,7 @@ public record SecuritiesSettlementTransactionModificationRequestStatusAdvice002V
     [IsoXmlTag("ModReqRef")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax16Text ModificationRequestReference { get; init; }
+    public required RestrictedFINXMax16Text ModificationRequestReference { get; init; }
 
     /// <summary>
     /// Party that legally owns the account.

@@ -28,5 +28,5 @@ public record ProprietaryAgent5
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required IsoMax35Text Type { get; init; }
+    public required Max35Text Type { get; init; }
 }

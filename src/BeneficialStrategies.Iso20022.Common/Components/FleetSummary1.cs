@@ -47,7 +47,7 @@ public record FleetSummary1
     [DisplayName("Card Fuel Prompt Code")]
     [IsoXmlTag("CardFuelPrmptCd")]
     [IsoSimpleType(IsoSimpleType.Max1Number)]
-    public IsoMax1Number? CardFuelPromptCode { get; init; }
+    public Max1Number? CardFuelPromptCode { get; init; }
 
     /// <summary>
     /// Currently known as &quot;TransactionNumber&quot;. An identification code assigned by an agent.  This code can be used after applying for and awaiting the appropriate prompt value to be defined.
@@ -57,7 +57,7 @@ public record FleetSummary1
     [IsoXmlTag("AgtFuelPrmptCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AgentFuelPromptCode { get; init; }
+    public Max35Text? AgentFuelPromptCode { get; init; }
 
     /// <summary>
     /// Contains the details related to an individual trip.

@@ -31,7 +31,7 @@ public record ContractValuationData8
     [DisplayName("Time Stamp")]
     [IsoXmlTag("TmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? TimeStamp { get; init; }
+    public ISODateTime? TimeStamp { get; init; }
 
     /// <summary>
     /// Indicates the source and method used for the valuation of the transaction by the reporting counterparty.
@@ -51,5 +51,5 @@ public record ContractValuationData8
     [DisplayName("Delta")]
     [IsoXmlTag("Dlta")]
     [IsoSimpleType(IsoSimpleType.LongFraction19DecimalNumber)]
-    public IsoLongFraction19DecimalNumber? Delta { get; init; }
+    public LongFraction19DecimalNumber? Delta { get; init; }
 }

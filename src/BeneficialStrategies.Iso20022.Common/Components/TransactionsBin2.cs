@@ -23,7 +23,7 @@ public record TransactionsBin2
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber NumberOfTransactions { get; init; }
+    public required Number NumberOfTransactions { get; init; }
 
     /// <summary>
     /// Total notional amount traded represented by all transactions executed on the reporting day which size lies in the bin&apos;s range, expressed in the currency as specified in the local regulation (except for emission allowances and emission allowance derivatives: tons of carbon dioxide). Transactions that have been cancelled should be excluded from the reported figure.
@@ -32,7 +32,7 @@ public record TransactionsBin2
     [DisplayName("Total Notional Amount")]
     [IsoXmlTag("TtlNtnlAmt")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public required IsoDecimalNumber TotalNotionalAmount { get; init; }
+    public required DecimalNumber TotalNotionalAmount { get; init; }
 
     /// <summary>
     /// Specific range the quantitative data relates to. Only allowed ranges must be used.

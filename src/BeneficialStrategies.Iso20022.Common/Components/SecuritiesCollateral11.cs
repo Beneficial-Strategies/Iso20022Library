@@ -24,7 +24,7 @@ public record SecuritiesCollateral11
     [IsoXmlTag("CollId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CollateralIdentification { get; init; }
+    public Max35Text? CollateralIdentification { get; init; }
 
     /// <summary>
     /// Identifies the register number of the collateral deposit assigned by the central counterparty.
@@ -34,7 +34,7 @@ public record SecuritiesCollateral11
     [IsoXmlTag("AsstNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AssetNumber { get; init; }
+    public Max35Text? AssetNumber { get; init; }
 
     /// <summary>
     /// Identification of a security.
@@ -59,7 +59,7 @@ public record SecuritiesCollateral11
     [DisplayName("Limited Coverage Indicator")]
     [IsoXmlTag("LtdCvrgInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? LimitedCoverageIndicator { get; init; }
+    public YesNoIndicator? LimitedCoverageIndicator { get; init; }
 
     /// <summary>
     /// Quantity of securities collateral.
@@ -92,7 +92,7 @@ public record SecuritiesCollateral11
     [DisplayName("Haircut")]
     [IsoXmlTag("Hrcut")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Haircut { get; init; }
+    public PercentageRate? Haircut { get; init; }
 
     /// <summary>
     /// Value of the collateral after taking into account the haircut.
@@ -109,7 +109,7 @@ public record SecuritiesCollateral11
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ValueDate { get; init; }
+    public DateOnly? ValueDate { get; init; }
 
     /// <summary>
     /// Account to or from which a securities entry is made.

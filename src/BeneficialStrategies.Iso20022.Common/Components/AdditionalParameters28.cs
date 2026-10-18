@@ -40,7 +40,7 @@ public record AdditionalParameters28
     [IsoXmlTag("TrptyAgtCollTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? TripartyAgentCollateralTransactionIdentification { get; init; }
+    public RestrictedFINXMax16Text? TripartyAgentCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique reference identifying the triparty collateral management transaction from the client&apos;s point of view.
@@ -50,5 +50,5 @@ public record AdditionalParameters28
     [IsoXmlTag("ClntTrptyCollTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? ClientTripartyCollateralTransactionIdentification { get; init; }
+    public RestrictedFINXMax16Text? ClientTripartyCollateralTransactionIdentification { get; init; }
 }

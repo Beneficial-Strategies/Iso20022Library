@@ -24,7 +24,7 @@ public record CardProgrammeMode2
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Type { get; init; }
+    public Max35Text? Type { get; init; }
 
     /// <summary>
     /// Identification of the card programme or brand.

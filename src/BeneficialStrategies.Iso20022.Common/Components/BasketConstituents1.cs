@@ -31,7 +31,7 @@ public record BasketConstituents1
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
     [IsoSimpleType(IsoSimpleType.LongFraction19DecimalNumber)]
-    public IsoLongFraction19DecimalNumber? Quantity { get; init; }
+    public LongFraction19DecimalNumber? Quantity { get; init; }
 
     /// <summary>
     /// Specifies the unit of measure in which the number of units of a particular custom basket constituent is expressed.

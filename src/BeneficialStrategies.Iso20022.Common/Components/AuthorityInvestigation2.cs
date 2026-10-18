@@ -48,5 +48,5 @@ public record AuthorityInvestigation2
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public IsoMax500Text? AdditionalInformation { get; init; }
+    public Max500Text? AdditionalInformation { get; init; }
 }

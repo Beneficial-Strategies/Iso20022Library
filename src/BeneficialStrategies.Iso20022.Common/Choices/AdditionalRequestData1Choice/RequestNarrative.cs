@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalRequestData1Choice
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("ReqNrrtv")]
-        public required IsoMax500Text Value { get; init; }
+        public required Max500Text Value { get; init; }
     }
 }

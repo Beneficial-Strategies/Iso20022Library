@@ -21,14 +21,14 @@ public record PartyIdentification288
     /// </summary>
     [DisplayName("Additional Address")]
     [IsoXmlTag("AddtlAdr")]
-    public IsoMax256Text? AdditionalAddress { get; init; }
+    public Max256Text? AdditionalAddress { get; init; }
 
     /// <summary>
     /// Additional Contact.
     /// </summary>
     [DisplayName("Additional Contact")]
     [IsoXmlTag("AddtlCtct")]
-    public IsoMax256Text? AdditionalContact { get; init; }
+    public Max256Text? AdditionalContact { get; init; }
 
     /// <summary>
     /// Additional Data.
@@ -49,7 +49,7 @@ public record PartyIdentification288
     /// </summary>
     [DisplayName("Additional Transaction Reference Number")]
     [IsoXmlTag("AddtlTxRefNb")]
-    public IsoMax70Text? AdditionalTransactionReferenceNumber { get; init; }
+    public Max70Text? AdditionalTransactionReferenceNumber { get; init; }
 
     /// <summary>
     /// Address.
@@ -63,42 +63,42 @@ public record PartyIdentification288
     /// </summary>
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
-    public IsoMax35Text? Assigner { get; init; }
+    public Max35Text? Assigner { get; init; }
 
     /// <summary>
     /// Business Type.
     /// </summary>
     [DisplayName("Business Type")]
     [IsoXmlTag("BizTp")]
-    public IsoMax35Text? BusinessType { get; init; }
+    public Max35Text? BusinessType { get; init; }
 
     /// <summary>
     /// Business Type Provided By.
     /// </summary>
     [DisplayName("Business Type Provided By")]
     [IsoXmlTag("BizTpPrvddBy")]
-    public IsoMax35Text? BusinessTypeProvidedBy { get; init; }
+    public Max35Text? BusinessTypeProvidedBy { get; init; }
 
     /// <summary>
     /// Certification Type.
     /// </summary>
     [DisplayName("Certification Type")]
     [IsoXmlTag("CertfctnTp")]
-    public IsoMax35Text? CertificationType { get; init; }
+    public Max35Text? CertificationType { get; init; }
 
     /// <summary>
     /// Certification Type Provided By.
     /// </summary>
     [DisplayName("Certification Type Provided By")]
     [IsoXmlTag("CertfctnTpPrvddBy")]
-    public IsoMax35Text? CertificationTypeProvidedBy { get; init; }
+    public Max35Text? CertificationTypeProvidedBy { get; init; }
 
     /// <summary>
     /// Corporate Tax Identification.
     /// </summary>
     [DisplayName("Corporate Tax Identification")]
     [IsoXmlTag("CorpTaxId")]
-    public IsoMax35Text? CorporateTaxIdentification { get; init; }
+    public Max35Text? CorporateTaxIdentification { get; init; }
 
     /// <summary>
     /// Corporate Tax Identification Type.
@@ -112,35 +112,35 @@ public record PartyIdentification288
     /// </summary>
     [DisplayName("Customer Service")]
     [IsoXmlTag("CstmrSvc")]
-    public IsoMax35Text? CustomerService { get; init; }
+    public Max35Text? CustomerService { get; init; }
 
     /// <summary>
     /// Email.
     /// </summary>
     [DisplayName("Email")]
     [IsoXmlTag("Email")]
-    public IsoMax256Text? Email { get; init; }
+    public Max256Text? Email { get; init; }
 
     /// <summary>
     /// Geographic Location.
     /// </summary>
     [DisplayName("Geographic Location")]
     [IsoXmlTag("GeogcLctn")]
-    public IsoGeographicPointInDecimalDegrees? GeographicLocation { get; init; }
+    public GeographicPointInDecimalDegrees? GeographicLocation { get; init; }
 
     /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Legal Corporate Name.
     /// </summary>
     [DisplayName("Legal Corporate Name")]
     [IsoXmlTag("LglCorpNm")]
-    public IsoMax99Text? LegalCorporateName { get; init; }
+    public Max99Text? LegalCorporateName { get; init; }
 
     /// <summary>
     /// Local Data.
@@ -154,49 +154,49 @@ public record PartyIdentification288
     /// </summary>
     [DisplayName("Name And Location")]
     [IsoXmlTag("NmAndLctn")]
-    public required IsoMax99Text NameAndLocation { get; init; }
+    public required Max99Text NameAndLocation { get; init; }
 
     /// <summary>
     /// Owner Ethnicity Type.
     /// </summary>
     [DisplayName("Owner Ethnicity Type")]
     [IsoXmlTag("OwnrEthnctyTp")]
-    public IsoMax35Text? OwnerEthnicityType { get; init; }
+    public Max35Text? OwnerEthnicityType { get; init; }
 
     /// <summary>
     /// Owner Ethnicity Type Provided By.
     /// </summary>
     [DisplayName("Owner Ethnicity Type Provided By")]
     [IsoXmlTag("OwnrEthnctyTpPrvddBy")]
-    public IsoMax35Text? OwnerEthnicityTypeProvidedBy { get; init; }
+    public Max35Text? OwnerEthnicityTypeProvidedBy { get; init; }
 
     /// <summary>
     /// Owner Type.
     /// </summary>
     [DisplayName("Owner Type")]
     [IsoXmlTag("OwnrTp")]
-    public IsoMax35Text? OwnerType { get; init; }
+    public Max35Text? OwnerType { get; init; }
 
     /// <summary>
     /// Owner Type Provided By.
     /// </summary>
     [DisplayName("Owner Type Provided By")]
     [IsoXmlTag("OwnrTpPrvddBy")]
-    public IsoMax35Text? OwnerTypeProvidedBy { get; init; }
+    public Max35Text? OwnerTypeProvidedBy { get; init; }
 
     /// <summary>
     /// Phone.
     /// </summary>
     [DisplayName("Phone")]
     [IsoXmlTag("Phne")]
-    public IsoMax35Text? Phone { get; init; }
+    public Max35Text? Phone { get; init; }
 
     /// <summary>
     /// Short Name.
     /// </summary>
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
-    public IsoMax35Text? ShortName { get; init; }
+    public Max35Text? ShortName { get; init; }
 
     /// <summary>
     /// Sponsored Merchant.
@@ -210,12 +210,12 @@ public record PartyIdentification288
     /// </summary>
     [DisplayName("Tax Registration Identification")]
     [IsoXmlTag("TaxRegnId")]
-    public IsoMax35Text? TaxRegistrationIdentification { get; init; }
+    public Max35Text? TaxRegistrationIdentification { get; init; }
 
     /// <summary>
     /// URL.
     /// </summary>
     [DisplayName("URL")]
     [IsoXmlTag("URL")]
-    public IsoMax256Text? URL { get; init; }
+    public Max256Text? URL { get; init; }
 }

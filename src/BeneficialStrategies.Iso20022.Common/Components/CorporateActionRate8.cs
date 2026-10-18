@@ -23,7 +23,7 @@ public record CorporateActionRate8
     [DisplayName("Proposed Rate")]
     [IsoXmlTag("PropsdRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? ProposedRate { get; init; }
+    public PercentageRate? ProposedRate { get; init; }
 
     /// <summary>
     /// Rate of allowed over-subscription.
@@ -40,5 +40,5 @@ public record CorporateActionRate8
     [DisplayName("Requested Taxation Rate")]
     [IsoXmlTag("ReqdTaxtnRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? RequestedTaxationRate { get; init; }
+    public PercentageRate? RequestedTaxationRate { get; init; }
 }

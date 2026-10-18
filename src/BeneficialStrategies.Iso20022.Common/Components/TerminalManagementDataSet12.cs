@@ -31,7 +31,7 @@ public record TerminalManagementDataSet12
     [DisplayName("POI Challenge")]
     [IsoXmlTag("POIChllng")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public IsoMax140Binary? POIChallenge { get; init; }
+    public Max140Binary? POIChallenge { get; init; }
 
     /// <summary>
     /// Terminal manager challenge for cryptographic key injection.
@@ -40,7 +40,7 @@ public record TerminalManagementDataSet12
     [DisplayName("TM Challenge")]
     [IsoXmlTag("TMChllng")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public IsoMax140Binary? TMChallenge { get; init; }
+    public Max140Binary? TMChallenge { get; init; }
 
     /// <summary>
     /// Temporary encryption key that the host will use for protecting keys to download.

@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.IncentivePremiumType1Choice
         /// </summary>
         [IsoXmlTag("PerScty")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public required IsoNumber Value { get; init; }
+        public required Number Value { get; init; }
     }
 }

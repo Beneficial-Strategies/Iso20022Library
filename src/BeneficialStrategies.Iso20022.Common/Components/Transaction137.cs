@@ -33,7 +33,7 @@ public record Transaction137
     [IsoXmlTag("TxSubTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TransactionSubType { get; init; }
+    public Max35Text? TransactionSubType { get; init; }
 
     /// <summary>
     /// Attribute of the transaction.
@@ -53,7 +53,7 @@ public record Transaction137
     [IsoXmlTag("OthrTxAttr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherTransactionAttribute { get; init; }
+    public Max35Text? OtherTransactionAttribute { get; init; }
 
     /// <summary>
     /// Additional functions or services to be performed in conjunction with the transaction.
@@ -136,7 +136,7 @@ public record Transaction137
     [IsoXmlTag("TxDesc")]
     [IsoSimpleType(IsoSimpleType.Max1000Text)]
     [StringLength(maximumLength: 1000, MinimumLength = 1)]
-    public IsoMax1000Text? TransactionDescription { get; init; }
+    public Max1000Text? TransactionDescription { get; init; }
 
     /// <summary>
     /// Contains additional data.

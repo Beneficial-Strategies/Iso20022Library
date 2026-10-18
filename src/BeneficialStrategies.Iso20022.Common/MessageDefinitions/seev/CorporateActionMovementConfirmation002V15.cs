@@ -106,7 +106,7 @@ public record CorporateActionMovementConfirmation002V15 : IOuterRecord
     /// </summary>
     [DisplayName("Movement Confirmation Identification")]
     [IsoXmlTag("MvmntConfId")]
-    public IsoRestrictedFINXMax16Text? MovementConfirmationIdentification { get; init; }
+    public RestrictedFINXMax16Text? MovementConfirmationIdentification { get; init; }
 
     /// <summary>
     /// Movement Preliminary Advice Identification.

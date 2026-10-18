@@ -24,7 +24,7 @@ public record PaymentTransaction82
     [IsoXmlTag("StsId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? StatusIdentification { get; init; }
+    public Max35Text? StatusIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original instructing party for the original instructed party, to unambiguously identify the original instruction.
@@ -34,7 +34,7 @@ public record PaymentTransaction82
     [IsoXmlTag("OrgnlInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.
@@ -44,7 +44,7 @@ public record PaymentTransaction82
     [IsoXmlTag("OrgnlEndToEndId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Specifies the status of a transaction, in a coded form.
@@ -77,7 +77,7 @@ public record PaymentTransaction82
     [DisplayName("Acceptance Date Time")]
     [IsoXmlTag("AccptncDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? AcceptanceDateTime { get; init; }
+    public ISODateTime? AcceptanceDateTime { get; init; }
 
     /// <summary>
     /// Unique reference, as assigned by the account servicing institution, to unambiguously identify the instruction.
@@ -87,7 +87,7 @@ public record PaymentTransaction82
     [IsoXmlTag("AcctSvcrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountServicerReference { get; init; }
+    public Max35Text? AccountServicerReference { get; init; }
 
     /// <summary>
     /// Unique reference, as assigned by a clearing system, to unambiguously identify the instruction.
@@ -97,7 +97,7 @@ public record PaymentTransaction82
     [IsoXmlTag("ClrSysRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClearingSystemReference { get; init; }
+    public Max35Text? ClearingSystemReference { get; init; }
 
     /// <summary>
     /// Key elements used to identify the original transaction that is being referred to.

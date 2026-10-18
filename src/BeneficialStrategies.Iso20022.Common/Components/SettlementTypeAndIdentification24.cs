@@ -24,7 +24,7 @@ public record SettlementTypeAndIdentification24
     [IsoXmlTag("AcctOwnrTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax16Text AccountOwnerTransactionIdentification { get; init; }
+    public required RestrictedFINXMax16Text AccountOwnerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the transaction as known by the account servicer.
@@ -34,7 +34,7 @@ public record SettlementTypeAndIdentification24
     [IsoXmlTag("AcctSvcrTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? AccountServicerTransactionIdentification { get; init; }
+    public RestrictedFINXMax16Text? AccountServicerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
@@ -44,7 +44,7 @@ public record SettlementTypeAndIdentification24
     [IsoXmlTag("MktInfrstrctrTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? MarketInfrastructureTransactionIdentification { get; init; }
+    public RestrictedFINXMax16Text? MarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of the transaction assigned by the processor of the instruction other than the account owner the account servicer and the market infrastructure.
@@ -54,7 +54,7 @@ public record SettlementTypeAndIdentification24
     [IsoXmlTag("PrcrTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? ProcessorTransactionIdentification { get; init; }
+    public RestrictedFINXMax16Text? ProcessorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Specifies if the movement on a securities account results from a deliver or a receive instruction.
@@ -80,7 +80,7 @@ public record SettlementTypeAndIdentification24
     [IsoXmlTag("CmonId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? CommonIdentification { get; init; }
+    public RestrictedFINXMax16Text? CommonIdentification { get; init; }
 
     /// <summary>
     /// Collective reference identifying a set of messages.
@@ -90,7 +90,7 @@ public record SettlementTypeAndIdentification24
     [IsoXmlTag("PoolId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? PoolIdentification { get; init; }
+    public RestrictedFINXMax16Text? PoolIdentification { get; init; }
 
     /// <summary>
     /// Identification assigned by the account servicer to unambiguously identify a corporate action event.
@@ -100,5 +100,5 @@ public record SettlementTypeAndIdentification24
     [IsoXmlTag("CorpActnEvtId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? CorporateActionEventIdentification { get; init; }
+    public RestrictedFINXMax16Text? CorporateActionEventIdentification { get; init; }
 }

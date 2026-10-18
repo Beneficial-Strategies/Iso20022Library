@@ -24,7 +24,7 @@ public record Transaction63
     [IsoXmlTag("AcctOwnrTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax16Text AccountOwnerTransactionIdentification { get; init; }
+    public required RestrictedFINXMax16Text AccountOwnerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the transaction as known by the account servicer.
@@ -34,7 +34,7 @@ public record Transaction63
     [IsoXmlTag("AcctSvcrTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? AccountServicerTransactionIdentification { get; init; }
+    public RestrictedFINXMax16Text? AccountServicerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
@@ -44,7 +44,7 @@ public record Transaction63
     [IsoXmlTag("MktInfrstrctrTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? MarketInfrastructureTransactionIdentification { get; init; }
+    public RestrictedFINXMax16Text? MarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of the transaction assigned by the processor of the instruction other than the account owner the account servicer and the market infrastructure.
@@ -54,7 +54,7 @@ public record Transaction63
     [IsoXmlTag("PrcrTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? ProcessorTransactionIdentification { get; init; }
+    public RestrictedFINXMax16Text? ProcessorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Reference assigned to the trade by the investor or the trading party. This reference will be used throughout the trade life cycle to access/update the trade details.
@@ -62,7 +62,7 @@ public record Transaction63
     [IsoId("_7k6AR832Eee5nJBZsW8MFQ")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    public SimpleValueList<IsoRestrictedFINXMax16Text> TradeIdentification { get; init; } = [];
+    public SimpleValueList<RestrictedFINXMax16Text> TradeIdentification { get; init; } = [];
 
     /// <summary>
     /// Collective reference identifying a set of messages.
@@ -72,7 +72,7 @@ public record Transaction63
     [IsoXmlTag("PoolId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? PoolIdentification { get; init; }
+    public RestrictedFINXMax16Text? PoolIdentification { get; init; }
 
     /// <summary>
     /// Unique reference agreed upon by the two trade counterparties to identify the trade.
@@ -82,7 +82,7 @@ public record Transaction63
     [IsoXmlTag("CmonId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? CommonIdentification { get; init; }
+    public RestrictedFINXMax16Text? CommonIdentification { get; init; }
 
     /// <summary>
     /// Identification assigned by the account servicer to unambiguously identify a corporate action event.
@@ -92,7 +92,7 @@ public record Transaction63
     [IsoXmlTag("CorpActnEvtId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? CorporateActionEventIdentification { get; init; }
+    public RestrictedFINXMax16Text? CorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Unique identification identifying the triparty collateral management transaction from the triparty-agent&apos;s/service-provider&apos;s point of view.
@@ -102,7 +102,7 @@ public record Transaction63
     [IsoXmlTag("TrptyAgtSvcPrvdrCollTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; }
+    public RestrictedFINXMax16Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique reference identifying the triparty collateral management transaction from the client&apos;s point of view.
@@ -112,7 +112,7 @@ public record Transaction63
     [IsoXmlTag("ClntTrptyCollTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? ClientTripartyCollateralTransactionIdentification { get; init; }
+    public RestrictedFINXMax16Text? ClientTripartyCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification assigned to the instruction by the client.
@@ -122,7 +122,7 @@ public record Transaction63
     [IsoXmlTag("ClntCollInstrId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? ClientCollateralInstructionIdentification { get; init; }
+    public RestrictedFINXMax16Text? ClientCollateralInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification assigned to the instruction by the triparty-agent/service-provider.
@@ -132,7 +132,7 @@ public record Transaction63
     [IsoXmlTag("TrptyAgtSvcPrvdrCollInstrId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? TripartyAgentServiceProviderCollateralInstructionIdentification { get; init; }
+    public RestrictedFINXMax16Text? TripartyAgentServiceProviderCollateralInstructionIdentification { get; init; }
 
     /// <summary>
     /// Identifies the details of the transaction.

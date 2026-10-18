@@ -32,7 +32,7 @@ public record InterestRateDetails1
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Contains instalment period
@@ -49,5 +49,5 @@ public record InterestRateDetails1
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public required IsoBaseOneRate Rate { get; init; }
+    public required BaseOneRate Rate { get; init; }
 }

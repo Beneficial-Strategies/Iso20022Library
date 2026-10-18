@@ -32,7 +32,7 @@ public record InvestmentAccount25
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Name { get; init; }
+    public Max35Text? Name { get; init; }
 
     /// <summary>
     /// Supplementary registration information applying to a specific block of units for dealing and reporting purposes. The supplementary registration information may be used when all the units are registered, for example, to a funds supermarket, but holdings for each investor have to reconciled individually.
@@ -42,7 +42,7 @@ public record InvestmentAccount25
     [IsoXmlTag("Dsgnt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Designation { get; init; }
+    public Max35Text? Designation { get; init; }
 
     /// <summary>
     /// Party that provides services relating to financial products to investors, eg, advice on products and placement of orders for the investment fund.

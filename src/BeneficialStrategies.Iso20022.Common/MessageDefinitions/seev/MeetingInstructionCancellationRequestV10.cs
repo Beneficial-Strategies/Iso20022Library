@@ -57,7 +57,7 @@ public record MeetingInstructionCancellationRequestV10 : IOuterRecord
     /// </summary>
     [DisplayName("Meeting Instruction Identification")]
     [IsoXmlTag("MtgInstrId")]
-    public required IsoMax35Text MeetingInstructionIdentification { get; init; }
+    public required Max35Text MeetingInstructionIdentification { get; init; }
 
     /// <summary>
     /// Meeting Reference.

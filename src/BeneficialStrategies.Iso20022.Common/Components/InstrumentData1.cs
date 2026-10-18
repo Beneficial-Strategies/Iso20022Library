@@ -38,7 +38,7 @@ public record InstrumentData1
     [IsoId("_jZh3MKUOEfCmoeslmyBN5Q")]
     [DisplayName("Status Start Date Time")]
     [IsoXmlTag("StsStartDtTm")]
-    public required IsoISODateTime StatusStartDateTime { get; init; }
+    public required ISODateTime StatusStartDateTime { get; init; }
 
     /// <summary>
     /// Identification of the trading venue on which the instrument status is valid.
@@ -46,7 +46,7 @@ public record InstrumentData1
     [IsoId("_FUcn0GFTEfC91ZUW7iS7ww")]
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
-    public required IsoMICIdentifier TradingVenue { get; init; }
+    public required MICIdentifier TradingVenue { get; init; }
 
     /// <summary>
     /// Information about the trading system where the instrument is traded.
@@ -63,7 +63,7 @@ public record InstrumentData1
     [IsoId("_MNjNoGFTEfC91ZUW7iS7ww")]
     [DisplayName("Most Relevant Market")]
     [IsoXmlTag("MostRlvntMkt")]
-    public IsoTrueFalseIndicator? MostRelevantMarket { get; init; }
+    public TrueFalseIndicator? MostRelevantMarket { get; init; }
 
     /// <summary>
     /// Date and time from which the instrument status or the data are disseminated by the Consolidated Tape Provider (CTP).
@@ -73,5 +73,5 @@ public record InstrumentData1
     [IsoId("_QxbogGFTEfC91ZUW7iS7ww")]
     [DisplayName("Dissemination Date Time")]
     [IsoXmlTag("DssmntnDtTm")]
-    public IsoISODateTime? DisseminationDateTime { get; init; }
+    public ISODateTime? DisseminationDateTime { get; init; }
 }

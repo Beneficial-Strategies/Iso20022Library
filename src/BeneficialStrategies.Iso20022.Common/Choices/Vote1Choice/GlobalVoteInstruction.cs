@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote1Choice
         [IsoXmlTag("IssrLabl")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text IssuerLabel { get; init; }
+        public required Max35Text IssuerLabel { get; init; }
 
         /// <summary>
         /// Specifies the different instructions which can be used to vote.

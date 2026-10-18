@@ -46,5 +46,5 @@ public record ReturnReasonInformation5
     [IsoId("_TPdjodp-Ed-ak6NoX_4Aeg_335312008")]
     [DisplayName("Additional Return Reason Information")]
     [IsoXmlTag("AddtlRtrRsnInf")]
-    public SimpleValueList<IsoMax105Text> AdditionalReturnReasonInformation { get; init; } = [];
+    public SimpleValueList<Max105Text> AdditionalReturnReasonInformation { get; init; } = [];
 }

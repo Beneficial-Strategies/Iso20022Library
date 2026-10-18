@@ -24,7 +24,7 @@ public record BillingServicesTax3
     [IsoXmlTag("Nb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Number { get; init; }
+    public required Max35Text Number { get; init; }
 
     /// <summary>
     /// Name used to describe the tax (such as the national value added tax).
@@ -34,7 +34,7 @@ public record BillingServicesTax3
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max40Text)]
     [StringLength(maximumLength: 40, MinimumLength = 1)]
-    public IsoMax40Text? Description { get; init; }
+    public Max40Text? Description { get; init; }
 
     /// <summary>
     /// Rate used to calculate the tax.
@@ -43,7 +43,7 @@ public record BillingServicesTax3
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public required IsoDecimalNumber Rate { get; init; }
+    public required DecimalNumber Rate { get; init; }
 
     /// <summary>
     /// Specifies the tax obligation for taxable services within a tax region for a specific tax identifier (such as national value added tax equals 34,00), and expressed in the tax region’s host currency.

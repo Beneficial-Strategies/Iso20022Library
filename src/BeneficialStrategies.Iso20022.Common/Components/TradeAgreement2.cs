@@ -23,7 +23,7 @@ public record TradeAgreement2
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate TradeDate { get; init; }
+    public required DateOnly TradeDate { get; init; }
 
     /// <summary>
     /// Identification of a notification.This identification must be unique amongst all notifications of same type confirmed by the same party.
@@ -33,7 +33,7 @@ public record TradeAgreement2
     [IsoXmlTag("NtfctnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text NotificationIdentification { get; init; }
+    public required Max35Text NotificationIdentification { get; init; }
 
     /// <summary>
     /// Reference common to the parties of a trade.
@@ -43,7 +43,7 @@ public record TradeAgreement2
     [IsoXmlTag("CmonRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CommonReference { get; init; }
+    public Max35Text? CommonReference { get; init; }
 
     /// <summary>
     /// Describes the reason for the cancellation or the amendment.
@@ -53,7 +53,7 @@ public record TradeAgreement2
     [IsoXmlTag("AmdOrCclRsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AmendOrCancelReason { get; init; }
+    public Max35Text? AmendOrCancelReason { get; init; }
 
     /// <summary>
     /// Refers to the identification of a previous event in the life of a trade which is amended or cancelled.
@@ -63,5 +63,5 @@ public record TradeAgreement2
     [IsoXmlTag("RltdRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text RelatedReference { get; init; }
+    public required Max35Text RelatedReference { get; init; }
 }

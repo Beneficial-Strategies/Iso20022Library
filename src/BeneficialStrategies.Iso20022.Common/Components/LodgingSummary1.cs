@@ -24,7 +24,7 @@ public record LodgingSummary1
     [IsoXmlTag("FolioNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? FolioNumber { get; init; }
+    public Max35Text? FolioNumber { get; init; }
 
     /// <summary>
     /// Details of the lodging property.
@@ -49,7 +49,7 @@ public record LodgingSummary1
     [DisplayName("Number Of Rooms")]
     [IsoXmlTag("NbOfRooms")]
     [IsoSimpleType(IsoSimpleType.Max4NumericText)]
-    public IsoMax4NumericText? NumberOfRooms { get; init; }
+    public Max4NumericText? NumberOfRooms { get; init; }
 
     /// <summary>
     /// Contains the room details.
@@ -66,7 +66,7 @@ public record LodgingSummary1
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
     [IsoSimpleType(IsoSimpleType.Max4NumericText)]
-    public IsoMax4NumericText? Duration { get; init; }
+    public Max4NumericText? Duration { get; init; }
 
     /// <summary>
     /// Lodging transaction details.
@@ -91,7 +91,7 @@ public record LodgingSummary1
     [DisplayName("No Show Indicator")]
     [IsoXmlTag("NoShowInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? NoShowIndicator { get; init; }
+    public TrueFalseIndicator? NoShowIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether or not insurance was purchased.
@@ -100,7 +100,7 @@ public record LodgingSummary1
     [DisplayName("Insurance Indicator")]
     [IsoXmlTag("InsrncInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? InsuranceIndicator { get; init; }
+    public TrueFalseIndicator? InsuranceIndicator { get; init; }
 
     /// <summary>
     /// Amount of insurance.
@@ -142,7 +142,7 @@ public record LodgingSummary1
     [IsoXmlTag("SummryCmmdtyId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SummaryCommodityIdentification { get; init; }
+    public Max35Text? SummaryCommodityIdentification { get; init; }
 
     /// <summary>
     /// Loyalty programme details.
@@ -160,5 +160,5 @@ public record LodgingSummary1
     [IsoXmlTag("AddtlData")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AdditionalData { get; init; }
+    public Max350Text? AdditionalData { get; init; }
 }

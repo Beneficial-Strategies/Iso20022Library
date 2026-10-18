@@ -47,7 +47,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties7Choice
         [DisplayName("Ownership Beneficiary Rate")]
         [IsoXmlTag("OwnrshBnfcryRate")]
         [IsoSimpleType(IsoSimpleType.PercentageRate)]
-        public IsoPercentageRate? OwnershipBeneficiaryRate { get; init; }
+        public PercentageRate? OwnershipBeneficiaryRate { get; init; }
 
         /// <summary>
         /// Unique identification, as assigned by an organisation, to unambiguously identify a party.
@@ -57,7 +57,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties7Choice
         [IsoXmlTag("ClntId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? ClientIdentification { get; init; }
+        public Max35Text? ClientIdentification { get; init; }
 
         /// <summary>
         /// Indicates whether an owner of an investment account may benefit from a fiscal exemption or amnesty for instance for declaring overseas investments.
@@ -66,7 +66,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties7Choice
         [DisplayName("Fiscal Exemption")]
         [IsoXmlTag("FsclXmptn")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? FiscalExemption { get; init; }
+        public YesNoIndicator? FiscalExemption { get; init; }
 
         /// <summary>
         /// Indicates whether the signature of the account owner is required to authorise transactions on the account.
@@ -75,7 +75,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties7Choice
         [DisplayName("Signatory Right Indicator")]
         [IsoXmlTag("SgntryRghtInd")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? SignatoryRightIndicator { get; init; }
+        public YesNoIndicator? SignatoryRightIndicator { get; init; }
 
         /// <summary>
         /// Details about the MiFID classification of the account owner.

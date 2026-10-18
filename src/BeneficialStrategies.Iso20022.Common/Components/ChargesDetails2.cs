@@ -32,7 +32,7 @@ public record ChargesDetails2
     [IsoXmlTag("OthrChrgsTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OtherChargesType { get; init; }
+    public required Max35Text OtherChargesType { get; init; }
 
     /// <summary>
     /// Amount of money asked or paid for the charge.

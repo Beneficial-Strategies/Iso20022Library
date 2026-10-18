@@ -47,7 +47,7 @@ public record InputData2
     [DisplayName("Notify Card Input Flag")]
     [IsoXmlTag("NtfyCardInptFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator NotifyCardInputFlag { get; init; }
+    public required TrueFalseIndicator NotifyCardInputFlag { get; init; }
 
     /// <summary>
     /// Maximum input time in seconds.
@@ -56,7 +56,7 @@ public record InputData2
     [DisplayName("Maximum Input Time")]
     [IsoXmlTag("MaxInptTm")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaximumInputTime { get; init; }
+    public Number? MaximumInputTime { get; init; }
 
     /// <summary>
     /// Text value set for an input command.
@@ -73,7 +73,7 @@ public record InputData2
     [DisplayName("Immediate Response Flag")]
     [IsoXmlTag("ImdtRspnFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ImmediateResponseFlag { get; init; }
+    public TrueFalseIndicator? ImmediateResponseFlag { get; init; }
 
     /// <summary>
     /// Flag to confirm by the user the entered characters, when the maximum allowed length is reached.
@@ -82,7 +82,7 @@ public record InputData2
     [DisplayName("Wait User Validation Flag")]
     [IsoXmlTag("WaitUsrVldtnFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? WaitUserValidationFlag { get; init; }
+    public TrueFalseIndicator? WaitUserValidationFlag { get; init; }
 
     /// <summary>
     /// Flag to indicate that when the user press a key, a beep has to be generated.
@@ -91,7 +91,7 @@ public record InputData2
     [DisplayName("Beep Key Flag")]
     [IsoXmlTag("BeepKeyFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? BeepKeyFlag { get; init; }
+    public TrueFalseIndicator? BeepKeyFlag { get; init; }
 
     /// <summary>
     /// Flag to correct all characters (True) or just the last one (False).
@@ -100,7 +100,7 @@ public record InputData2
     [DisplayName("Global Correction Flag")]
     [IsoXmlTag("GblCrrctnFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? GlobalCorrectionFlag { get; init; }
+    public TrueFalseIndicator? GlobalCorrectionFlag { get; init; }
 
     /// <summary>
     /// Flag to deactivate the &quot;Cancel&quot; function key.
@@ -109,7 +109,7 @@ public record InputData2
     [DisplayName("Disable Cancel Flag")]
     [IsoXmlTag("DsblCclFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? DisableCancelFlag { get; init; }
+    public TrueFalseIndicator? DisableCancelFlag { get; init; }
 
     /// <summary>
     /// Flag to deactivate the &quot;Correct&quot; function key.
@@ -118,7 +118,7 @@ public record InputData2
     [DisplayName("Disable Correct Flag")]
     [IsoXmlTag("DsblCrrctFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? DisableCorrectFlag { get; init; }
+    public TrueFalseIndicator? DisableCorrectFlag { get; init; }
 
     /// <summary>
     /// Flag to disable the &quot;Valid&quot; function key.
@@ -127,7 +127,7 @@ public record InputData2
     [DisplayName("Disable Valid Flag")]
     [IsoXmlTag("DsblVldFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? DisableValidFlag { get; init; }
+    public TrueFalseIndicator? DisableValidFlag { get; init; }
 
     /// <summary>
     /// Flag to enable the &quot;Back&quot; function key to go the upper level.
@@ -136,5 +136,5 @@ public record InputData2
     [DisplayName("Menu Back Flag")]
     [IsoXmlTag("MenuBckFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? MenuBackFlag { get; init; }
+    public TrueFalseIndicator? MenuBackFlag { get; init; }
 }

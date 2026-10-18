@@ -28,14 +28,14 @@ public record CorporateActionOptionSD16
     /// </summary>
     [DisplayName("Back End Odd Lot Quantity Flag")]
     [IsoXmlTag("BckEndOddLotQtyFlg")]
-    public IsoYesNoIndicator? BackEndOddLotQuantityFlag { get; init; }
+    public YesNoIndicator? BackEndOddLotQuantityFlag { get; init; }
 
     /// <summary>
     /// Default Option Flag.
     /// </summary>
     [DisplayName("Default Option Flag")]
     [IsoXmlTag("DfltOptnFlg")]
-    public IsoYesNoIndicator? DefaultOptionFlag { get; init; }
+    public YesNoIndicator? DefaultOptionFlag { get; init; }
 
     /// <summary>
     /// Extended Option Features.
@@ -49,28 +49,28 @@ public record CorporateActionOptionSD16
     /// </summary>
     [DisplayName("Front End Odd Lot Quantity Flag")]
     [IsoXmlTag("FrntEndOddLotQtyFlg")]
-    public IsoYesNoIndicator? FrontEndOddLotQuantityFlag { get; init; }
+    public YesNoIndicator? FrontEndOddLotQuantityFlag { get; init; }
 
     /// <summary>
     /// Full Condition Flag.
     /// </summary>
     [DisplayName("Full Condition Flag")]
     [IsoXmlTag("FullCondFlg")]
-    public IsoYesNoIndicator? FullConditionFlag { get; init; }
+    public YesNoIndicator? FullConditionFlag { get; init; }
 
     /// <summary>
     /// Number Of Conditions.
     /// </summary>
     [DisplayName("Number Of Conditions")]
     [IsoXmlTag("NbOfConds")]
-    public IsoMax2NumericText? NumberOfConditions { get; init; }
+    public Max2NumericText? NumberOfConditions { get; init; }
 
     /// <summary>
     /// Optional Dividend Supplementary Data Required Flag.
     /// </summary>
     [DisplayName("Optional Dividend Supplementary Data Required Flag")]
     [IsoXmlTag("OptnlDvddSplmtryDataReqrdFlg")]
-    public IsoYesNoIndicator? OptionalDividendSupplementaryDataRequiredFlag { get; init; }
+    public YesNoIndicator? OptionalDividendSupplementaryDataRequiredFlag { get; init; }
 
     /// <summary>
     /// Option Conditions.
@@ -84,21 +84,21 @@ public record CorporateActionOptionSD16
     /// </summary>
     [DisplayName("Oversubscription Charge Flag")]
     [IsoXmlTag("OvrsbcptChrgFlg")]
-    public IsoYesNoIndicator? OversubscriptionChargeFlag { get; init; }
+    public YesNoIndicator? OversubscriptionChargeFlag { get; init; }
 
     /// <summary>
     /// Place And Name.
     /// </summary>
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Proration Fraction.
     /// </summary>
     [DisplayName("Proration Fraction")]
     [IsoXmlTag("PrratnFrctn")]
-    public IsoDecimalNumber? ProrationFraction { get; init; }
+    public DecimalNumber? ProrationFraction { get; init; }
 
     /// <summary>
     /// Proration Return Minimum Quantity Treatment.
@@ -119,28 +119,28 @@ public record CorporateActionOptionSD16
     /// </summary>
     [DisplayName("Protect Charge Flag")]
     [IsoXmlTag("PrtctChrgFlg")]
-    public IsoYesNoIndicator? ProtectChargeFlag { get; init; }
+    public YesNoIndicator? ProtectChargeFlag { get; init; }
 
     /// <summary>
     /// RDP Reference Number.
     /// </summary>
     [DisplayName("RDP Reference Number")]
     [IsoXmlTag("RDPRefNb")]
-    public IsoExact32AlphaNumericText? RDPReferenceNumber { get; init; }
+    public Exact32AlphaNumericText? RDPReferenceNumber { get; init; }
 
     /// <summary>
     /// Step Up Charge Flag.
     /// </summary>
     [DisplayName("Step Up Charge Flag")]
     [IsoXmlTag("StepUpChrgFlg")]
-    public IsoYesNoIndicator? StepUpChargeFlag { get; init; }
+    public YesNoIndicator? StepUpChargeFlag { get; init; }
 
     /// <summary>
     /// Subscription Charge Flag.
     /// </summary>
     [DisplayName("Subscription Charge Flag")]
     [IsoXmlTag("SbcptChrgFlg")]
-    public IsoYesNoIndicator? SubscriptionChargeFlag { get; init; }
+    public YesNoIndicator? SubscriptionChargeFlag { get; init; }
 
     /// <summary>
     /// Tax Category.

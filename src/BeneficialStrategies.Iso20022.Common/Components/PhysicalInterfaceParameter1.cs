@@ -24,7 +24,7 @@ public record PhysicalInterfaceParameter1
     [IsoXmlTag("IntrfcNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text InterfaceName { get; init; }
+    public required Max35Text InterfaceName { get; init; }
 
     /// <summary>
     /// Identification of the physical link layer.
@@ -42,7 +42,7 @@ public record PhysicalInterfaceParameter1
     [IsoXmlTag("UsrNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? UserName { get; init; }
+    public Max35Text? UserName { get; init; }
 
     /// <summary>
     /// Optional access code to provide to use this interface.
@@ -51,7 +51,7 @@ public record PhysicalInterfaceParameter1
     [DisplayName("Access Code")]
     [IsoXmlTag("AccsCd")]
     [IsoSimpleType(IsoSimpleType.Max35Binary)]
-    public IsoMax35Binary? AccessCode { get; init; }
+    public Max35Binary? AccessCode { get; init; }
 
     /// <summary>
     /// Identification of the optional security profile to use with this interface.
@@ -61,7 +61,7 @@ public record PhysicalInterfaceParameter1
     [IsoXmlTag("SctyPrfl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SecurityProfile { get; init; }
+    public Max35Text? SecurityProfile { get; init; }
 
     /// <summary>
     /// Any other parameters relevant for this interface.
@@ -70,5 +70,5 @@ public record PhysicalInterfaceParameter1
     [DisplayName("Additional Parameters")]
     [IsoXmlTag("AddtlParams")]
     [IsoSimpleType(IsoSimpleType.Max2KBinary)]
-    public IsoMax2KBinary? AdditionalParameters { get; init; }
+    public Max2KBinary? AdditionalParameters { get; init; }
 }

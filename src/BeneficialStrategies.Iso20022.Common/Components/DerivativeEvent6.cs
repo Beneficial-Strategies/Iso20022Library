@@ -48,5 +48,5 @@ public record DerivativeEvent6
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? AmendmentIndicator { get; init; }
+    public TrueFalseIndicator? AmendmentIndicator { get; init; }
 }

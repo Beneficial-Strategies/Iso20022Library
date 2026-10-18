@@ -35,21 +35,21 @@ public record SecuritiesFinancingTransactionDetails57
     /// </summary>
     [DisplayName("Client Triparty Collateral Transaction Identification")]
     [IsoXmlTag("ClntTrptyCollTxId")]
-    public IsoMax35Text? ClientTripartyCollateralTransactionIdentification { get; init; }
+    public Max35Text? ClientTripartyCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Closing Leg Identification.
     /// </summary>
     [DisplayName("Closing Leg Identification")]
     [IsoXmlTag("ClsgLegId")]
-    public IsoMax35Text? ClosingLegIdentification { get; init; }
+    public Max35Text? ClosingLegIdentification { get; init; }
 
     /// <summary>
     /// Corporate Action Event Identification.
     /// </summary>
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
-    public IsoMax35Text? CorporateActionEventIdentification { get; init; }
+    public Max35Text? CorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Delivering Settlement Parties.
@@ -126,7 +126,7 @@ public record SecuritiesFinancingTransactionDetails57
     /// </summary>
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
-    public IsoMax35Text? PoolIdentification { get; init; }
+    public Max35Text? PoolIdentification { get; init; }
 
     /// <summary>
     /// Pricing Rate.
@@ -182,7 +182,7 @@ public record SecuritiesFinancingTransactionDetails57
     /// </summary>
     [DisplayName("Securities Financing Trade Identification")]
     [IsoXmlTag("SctiesFincgTradId")]
-    public IsoMax35Text? SecuritiesFinancingTradeIdentification { get; init; }
+    public Max35Text? SecuritiesFinancingTradeIdentification { get; init; }
 
     /// <summary>
     /// Securities Financing Transaction Type.
@@ -196,7 +196,7 @@ public record SecuritiesFinancingTransactionDetails57
     /// </summary>
     [DisplayName("Securities Financing Unique Transaction Identifier")]
     [IsoXmlTag("SctiesFincgUnqTxIdr")]
-    public IsoUTIIdentifier? SecuritiesFinancingUniqueTransactionIdentifier { get; init; }
+    public UTIIdentifier? SecuritiesFinancingUniqueTransactionIdentifier { get; init; }
 
     /// <summary>
     /// Securities Haircut.
@@ -217,7 +217,7 @@ public record SecuritiesFinancingTransactionDetails57
     /// </summary>
     [DisplayName("Settlement Instruction Processing Additional Details")]
     [IsoXmlTag("SttlmInstrPrcgAddtlDtls")]
-    public IsoMax350Text? SettlementInstructionProcessingAdditionalDetails { get; init; }
+    public Max350Text? SettlementInstructionProcessingAdditionalDetails { get; init; }
 
     /// <summary>
     /// Settlement Parameters.
@@ -273,7 +273,7 @@ public record SecuritiesFinancingTransactionDetails57
     /// </summary>
     [DisplayName("Triparty Agent Service Provider Collateral Transaction Identification")]
     [IsoXmlTag("TrptyAgtSvcPrvdrCollTxId")]
-    public IsoMax35Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; }
+    public Max35Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Variable Rate Support.

@@ -24,7 +24,7 @@ public record PaymentTransactionInformation4
     [IsoXmlTag("RvslId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReversalIdentification { get; init; }
+    public Max35Text? ReversalIdentification { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier of the original payment information block as assigned by the original sending party.
@@ -34,7 +34,7 @@ public record PaymentTransactionInformation4
     [IsoXmlTag("OrgnlPmtInfId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalPaymentInformationIdentification { get; init; }
+    public Max35Text? OriginalPaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Original unique instruction identification as assigned by an instructing party for an instructed party to unambiguously identify the original instruction.||Usage: the original instruction identification is the original point to point reference used between the instructing party and the instructed party to refer to the original instruction.
@@ -44,7 +44,7 @@ public record PaymentTransactionInformation4
     [IsoXmlTag("OrgnlInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Original unique identification assigned by the initiating party to unambiguously identify the original transaction. This identification is passed on, unchanged, throughout the entire end-to-end chain.
@@ -54,7 +54,7 @@ public record PaymentTransactionInformation4
     [IsoXmlTag("OrgnlEndToEndId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Amount of money to be moved between the debtor and the creditor, before deduction of charges, expressed in the currency as ordered by the initiating party in the original transaction.

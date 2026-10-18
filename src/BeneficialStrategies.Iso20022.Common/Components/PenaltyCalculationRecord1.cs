@@ -22,7 +22,7 @@ public record PenaltyCalculationRecord1
     [IsoId("_qVHWQDkVEem897H7zB2RJg")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public required IsoISODate Date { get; init; }
+    public required DateOnly Date { get; init; }
 
     /// <summary>
     /// Information provided for penalties where there is missing reference data on this business day.
@@ -30,7 +30,7 @@ public record PenaltyCalculationRecord1
     [IsoId("_woNsADkVEem897H7zB2RJg")]
     [DisplayName("Missing Reference Data")]
     [IsoXmlTag("MssngRefData")]
-    public IsoTrueFalseIndicator? MissingReferenceData { get; init; }
+    public TrueFalseIndicator? MissingReferenceData { get; init; }
 
     /// <summary>
     /// Further details on the financial instrument reported.

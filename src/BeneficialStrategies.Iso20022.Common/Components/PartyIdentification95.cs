@@ -31,5 +31,5 @@ public record PartyIdentification95
     [DisplayName("Legal Entity Identifier")]
     [IsoXmlTag("LglNttyIdr")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? LegalEntityIdentifier { get; init; }
+    public LEIIdentifier? LegalEntityIdentifier { get; init; }
 }

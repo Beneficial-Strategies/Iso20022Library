@@ -42,7 +42,7 @@ public record InvestigationData6
     /// </summary>
     [DisplayName("Original Investigation Sequence")]
     [IsoXmlTag("OrgnlInvstgtnSeq")]
-    public IsoMax3Number? OriginalInvestigationSequence { get; init; }
+    public Max3Number? OriginalInvestigationSequence { get; init; }
 
     /// <summary>
     /// Related File Data.

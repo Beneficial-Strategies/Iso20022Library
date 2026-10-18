@@ -24,7 +24,7 @@ public record TradingVenueIdentification2
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max50Text)]
     [StringLength(maximumLength: 50, MinimumLength = 1)]
-    public required IsoMax50Text Identification { get; init; }
+    public required Max50Text Identification { get; init; }
 
     /// <summary>
     /// Code list of venues to populate free form text identification.

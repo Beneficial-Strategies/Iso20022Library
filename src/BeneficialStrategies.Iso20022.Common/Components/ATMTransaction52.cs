@@ -42,7 +42,7 @@ public record ATMTransaction52
     /// </summary>
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
-    public required IsoMax35Text ReconciliationIdentification { get; init; }
+    public required Max35Text ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Transaction Identification.

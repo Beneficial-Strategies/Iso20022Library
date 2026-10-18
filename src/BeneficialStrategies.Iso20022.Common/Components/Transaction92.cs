@@ -24,7 +24,7 @@ public record Transaction92
     [IsoXmlTag("AssoctdDataRef")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AssociatedDataReference { get; init; }
+    public Max70Text? AssociatedDataReference { get; init; }
 
     /// <summary>
     /// Identification of the transaction.
@@ -50,7 +50,7 @@ public record Transaction92
     [IsoXmlTag("TxDesc")]
     [IsoSimpleType(IsoSimpleType.Max1000Text)]
     [StringLength(maximumLength: 1000, MinimumLength = 1)]
-    public IsoMax1000Text? TransactionDescription { get; init; }
+    public Max1000Text? TransactionDescription { get; init; }
 
     /// <summary>
     /// Contains additional data.

@@ -24,7 +24,7 @@ public record AdditionalData1
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Type { get; init; }
+    public Max35Text? Type { get; init; }
 
     /// <summary>
     /// Value of a specific type of data.
@@ -34,5 +34,5 @@ public record AdditionalData1
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
     [StringLength(maximumLength: 2048, MinimumLength = 1)]
-    public IsoMax2048Text? Value { get; init; }
+    public Max2048Text? Value { get; init; }
 }

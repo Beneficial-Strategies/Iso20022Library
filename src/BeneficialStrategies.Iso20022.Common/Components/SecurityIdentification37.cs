@@ -32,7 +32,7 @@ public record SecurityIdentification37
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text Name { get; init; }
+    public required Max350Text Name { get; init; }
 
     /// <summary>
     /// Financial Instrument Short Name (FISN) expressed in conformance with the ISO 18774 standard.
@@ -42,7 +42,7 @@ public record SecurityIdentification37
     [IsoXmlTag("ShrtNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ShortName { get; init; }
+    public Max35Text? ShortName { get; init; }
 
     /// <summary>
     /// Features of units offered by a fund. For example, a unit may have a specific load structure, for example, front end or back end, an income policy, for example, pay out or accumulate, or a trailer policy, for example, with or without. Fund classes are typically denoted by a single character, for example, &apos;Class A&apos;, &apos;Class 2&apos;.
@@ -52,7 +52,7 @@ public record SecurityIdentification37
     [IsoXmlTag("ClssTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClassType { get; init; }
+    public Max35Text? ClassType { get; init; }
 
     /// <summary>
     /// Name of the umbrella fund in which the financial instrument is contained.
@@ -62,7 +62,7 @@ public record SecurityIdentification37
     [IsoXmlTag("UmbrllNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? UmbrellaName { get; init; }
+    public Max35Text? UmbrellaName { get; init; }
 
     /// <summary>
     /// Indicates whether the financial instrument is part of a new umbrella.
@@ -71,7 +71,7 @@ public record SecurityIdentification37
     [DisplayName("New Umbrella")]
     [IsoXmlTag("NewUmbrll")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? NewUmbrella { get; init; }
+    public YesNoIndicator? NewUmbrella { get; init; }
 
     /// <summary>
     /// Classification type of the financial instrument, as per the ISO Classification of Financial Instrument (CFI) codification, for example, common share with voting rights, fully paid, or registered.
@@ -137,7 +137,7 @@ public record SecurityIdentification37
     [IsoXmlTag("PdctCtgy")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? ProductCategory { get; init; }
+    public Max140Text? ProductCategory { get; init; }
 
     /// <summary>
     /// Designation of the respective product category or nature for Germany.
@@ -148,7 +148,7 @@ public record SecurityIdentification37
     [IsoXmlTag("PdctCtgyDE")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? ProductCategoryGermany { get; init; }
+    public Max140Text? ProductCategoryGermany { get; init; }
 
     /// <summary>
     /// Specifies whether the financial instrument is unit based or notional (nominal). When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 00085.
@@ -174,7 +174,7 @@ public record SecurityIdentification37
     [DisplayName("Leveraged Or Contigent Liability")]
     [IsoXmlTag("LvrgdOrCntgntLblty")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? LeveragedOrContigentLiability { get; init; }
+    public YesNoIndicator? LeveragedOrContigentLiability { get; init; }
 
     /// <summary>
     /// Indicates whether the share class does not pay retrocession fees and commissions. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 00110.
@@ -183,7 +183,7 @@ public record SecurityIdentification37
     [DisplayName("No Retrocession Indicator")]
     [IsoXmlTag("NoRtrcssnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? NoRetrocessionIndicator { get; init; }
+    public YesNoIndicator? NoRetrocessionIndicator { get; init; }
 
     /// <summary>
     /// Specifies the basis for ex-post calculations. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 00120.

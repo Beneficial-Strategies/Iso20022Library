@@ -24,7 +24,7 @@ public record AccountReport12
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Provides details on the page number of the report.
@@ -42,7 +42,7 @@ public record AccountReport12
     [DisplayName("Electronic Sequence Number")]
     [IsoXmlTag("ElctrncSeqNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? ElectronicSequenceNumber { get; init; }
+    public Number? ElectronicSequenceNumber { get; init; }
 
     /// <summary>
     /// Legal sequential number of the report, as assigned by the account servicer. It is increased incrementally for each report sent.
@@ -51,7 +51,7 @@ public record AccountReport12
     [DisplayName("Legal Sequence Number")]
     [IsoXmlTag("LglSeqNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? LegalSequenceNumber { get; init; }
+    public Number? LegalSequenceNumber { get; init; }
 
     /// <summary>
     /// Date and time at which the message was created.
@@ -60,7 +60,7 @@ public record AccountReport12
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// Range of time between a start date and an end date for which the account report is issued.
@@ -142,5 +142,5 @@ public record AccountReport12
     [IsoXmlTag("AddtlRptInf")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public IsoMax500Text? AdditionalReportInformation { get; init; }
+    public Max500Text? AdditionalReportInformation { get; init; }
 }

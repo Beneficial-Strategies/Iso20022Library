@@ -24,7 +24,7 @@ public record FinancialInstrumentAttributesSD21
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Represents the &apos;original&apos; security identifier of the event. It is used in the scenarios like &quot;partial call&quot; where there are 2 events. The first event distributes into the Contra CUSIP, a temporary security; and on the second event that temporary security becomes the underlying security of the event. This element is used in the second event to point to the original CUSIP.
@@ -41,5 +41,5 @@ public record FinancialInstrumentAttributesSD21
     [DisplayName("Money Market Instrument Flag")]
     [IsoXmlTag("MnyMktInstrmFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? MoneyMarketInstrumentFlag { get; init; }
+    public YesNoIndicator? MoneyMarketInstrumentFlag { get; init; }
 }

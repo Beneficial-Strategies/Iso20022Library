@@ -32,7 +32,7 @@ public record Customer4
     [IsoXmlTag("RefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReferenceNumber { get; init; }
+    public Max35Text? ReferenceNumber { get; init; }
 
     /// <summary>
     /// Identification of the customer recognized by the taxation authority.
@@ -40,7 +40,7 @@ public record Customer4
     [IsoId("_oDA8jfJjEeiJn9rM2Znz2w")]
     [DisplayName("Tax Registration Identification")]
     [IsoXmlTag("TaxRegnId")]
-    public SimpleValueList<IsoMax70Text> TaxRegistrationIdentification { get; init; } = [];
+    public SimpleValueList<Max70Text> TaxRegistrationIdentification { get; init; } = [];
 
     /// <summary>
     /// Contact at the company.
@@ -50,7 +50,7 @@ public record Customer4
     [IsoXmlTag("AuthrsdCtctCpny")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AuthorisedContactCompany { get; init; }
+    public Max70Text? AuthorisedContactCompany { get; init; }
 
     /// <summary>
     /// Corporate individual or company (cardholder or their company) to be contacted for authorised purchases.
@@ -60,7 +60,7 @@ public record Customer4
     [IsoXmlTag("AuthrsdCtctNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AuthorisedContactName { get; init; }
+    public Max70Text? AuthorisedContactName { get; init; }
 
     /// <summary>
     /// Phone number of an individual or
@@ -70,7 +70,7 @@ public record Customer4
     [DisplayName("Authorised Contact Phone Number")]
     [IsoXmlTag("AuthrsdCtctPhneNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? AuthorisedContactPhoneNumber { get; init; }
+    public PhoneNumber? AuthorisedContactPhoneNumber { get; init; }
 
     /// <summary>
     /// Very Important Person indicator.
@@ -79,7 +79,7 @@ public record Customer4
     [DisplayName("VIP Indicator")]
     [IsoXmlTag("VIPInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? VIPIndicator { get; init; }
+    public TrueFalseIndicator? VIPIndicator { get; init; }
 
     /// <summary>
     /// Customer relationship identifier.
@@ -89,5 +89,5 @@ public record Customer4
     [IsoXmlTag("CstmrRltsh")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CustomerRelationship { get; init; }
+    public Max35Text? CustomerRelationship { get; init; }
 }

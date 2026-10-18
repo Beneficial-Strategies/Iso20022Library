@@ -30,7 +30,7 @@ public record TaxCalculationInformation12
     [IsoId("61b9a6d5-pcdc-0001-0002-0ca6a9409801")]
     [DisplayName("Percentage Of Debt Claim")]
     [IsoXmlTag("PctgOfDbtClm")]
-    public IsoPercentageRate? PercentageOfDebtClaim { get; init; }
+    public PercentageRate? PercentageOfDebtClaim { get; init; }
 
     /// <summary>
     /// Percentage of grandfathered debt claim.
@@ -38,7 +38,7 @@ public record TaxCalculationInformation12
     [IsoId("61b9a6d5-pggd-0001-0003-0ca6a9409801")]
     [DisplayName("Percentage Grandfathered Debt")]
     [IsoXmlTag("PctgGrndfthrdDbt")]
-    public IsoPercentageRate? PercentageGrandfatheredDebt { get; init; }
+    public PercentageRate? PercentageGrandfatheredDebt { get; init; }
 
     /// <summary>
     /// Amount included in the dividend that corresponds to gains directly or indirectly derived from interest payment in the scope of the European Directive on taxation of savings income in the form of interest payments.

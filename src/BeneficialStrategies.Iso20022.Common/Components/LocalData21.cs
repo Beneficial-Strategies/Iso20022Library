@@ -30,7 +30,7 @@ public record LocalData21
     [IsoId("_bVIt8yz0EfCD0_iZ8tw-zA")]
     [DisplayName("Encoding Format")]
     [IsoXmlTag("NcodgFrmt")]
-    public IsoMax35Text? EncodingFormat { get; init; }
+    public Max35Text? EncodingFormat { get; init; }
 
     /// <summary>
     /// Name of the financial customer in the local language.
@@ -46,7 +46,7 @@ public record LocalData21
     [IsoId("_hmvO4Cz0EfCD0_iZ8tw-zA")]
     [DisplayName("Alias Name")]
     [IsoXmlTag("AliasNm")]
-    public IsoMax140Text? AliasName { get; init; }
+    public Max140Text? AliasName { get; init; }
 
     /// <summary>
     /// Occupation of the customer in local language.
@@ -54,7 +54,7 @@ public record LocalData21
     [IsoId("_yGqlACz0EfCD0_iZ8tw-zA")]
     [DisplayName("Occupation")]
     [IsoXmlTag("Ocptn")]
-    public IsoMax70Text? Occupation { get; init; }
+    public Max70Text? Occupation { get; init; }
 
     /// <summary>
     /// Structured postal address in the local language.
@@ -70,7 +70,7 @@ public record LocalData21
     [IsoId("_4ap6UkVYEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -78,5 +78,5 @@ public record LocalData21
     [IsoId("_4ap6U0VYEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

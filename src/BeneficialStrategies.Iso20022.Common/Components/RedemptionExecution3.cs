@@ -24,7 +24,7 @@ public record RedemptionExecution3
     [IsoXmlTag("OrdrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OrderReference { get; init; }
+    public required Max35Text OrderReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for an order execution, as assigned by a confirming party.
@@ -34,7 +34,7 @@ public record RedemptionExecution3
     [IsoXmlTag("DealRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text DealReference { get; init; }
+    public required Max35Text DealReference { get; init; }
 
     /// <summary>
     /// Specifies the category of the investment fund order.
@@ -91,7 +91,7 @@ public record RedemptionExecution3
     [DisplayName("Holdings Redemption Rate")]
     [IsoXmlTag("HldgsRedRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? HoldingsRedemptionRate { get; init; }
+    public PercentageRate? HoldingsRedemptionRate { get; init; }
 
     /// <summary>
     /// Amount of money paid to the investor as a result of the redemption, including all charges, commissions, and tax.
@@ -124,7 +124,7 @@ public record RedemptionExecution3
     [DisplayName("Partially Executed Indicator")]
     [IsoXmlTag("PrtlyExctdInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator PartiallyExecutedIndicator { get; init; }
+    public required YesNoIndicator PartiallyExecutedIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the dividend is included, ie, cum-dividend, in the executed price. When the dividend is not included, the price will be ex-dividend.
@@ -133,7 +133,7 @@ public record RedemptionExecution3
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator CumDividendIndicator { get; init; }
+    public required YesNoIndicator CumDividendIndicator { get; init; }
 
     /// <summary>
     /// Part of the price deemed as accrued income or profit rather than capital. The interim profit amount is used for tax purposes.
@@ -206,7 +206,7 @@ public record RedemptionExecution3
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator PhysicalDeliveryIndicator { get; init; }
+    public required YesNoIndicator PhysicalDeliveryIndicator { get; init; }
 
     /// <summary>
     /// Parameters of a physical delivery.

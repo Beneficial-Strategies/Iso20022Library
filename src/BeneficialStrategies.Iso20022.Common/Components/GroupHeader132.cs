@@ -23,7 +23,7 @@ public record GroupHeader132
     [IsoId("_fqxu8be4Ee-Dk_aQVAan8Q")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the message was created.
@@ -31,7 +31,7 @@ public record GroupHeader132
     [IsoId("_fqxu87e4Ee-Dk_aQVAan8Q")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// Party that requests the cash deposit.
@@ -55,7 +55,7 @@ public record GroupHeader132
     [IsoId("_QVH44uSBEe-NFYIkYc90gw")]
     [DisplayName("Number Of Requests")]
     [IsoXmlTag("NbOfReqs")]
-    public IsoMax15NumericText? NumberOfRequests { get; init; }
+    public Max15NumericText? NumberOfRequests { get; init; }
 
     /// <summary>
     /// Total of all individual amounts included in the message, irrespective of currencies.
@@ -63,5 +63,5 @@ public record GroupHeader132
     [IsoId("_QVH44-SBEe-NFYIkYc90gw")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
-    public IsoDecimalNumber? ControlSum { get; init; }
+    public DecimalNumber? ControlSum { get; init; }
 }

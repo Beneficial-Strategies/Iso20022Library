@@ -28,7 +28,7 @@ public record AdditionalFeeReconciliation3
     /// </summary>
     [DisplayName("Count")]
     [IsoXmlTag("Cnt")]
-    public required IsoNumber Count { get; init; }
+    public required Number Count { get; init; }
 
     /// <summary>
     /// Impact.
@@ -42,7 +42,7 @@ public record AdditionalFeeReconciliation3
     /// </summary>
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Type.

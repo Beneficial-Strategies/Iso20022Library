@@ -24,7 +24,7 @@ public record BillingServiceCommonIdentification1
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.Max6Text)]
     [StringLength(maximumLength: 6, MinimumLength = 1)]
-    public required IsoMax6Text Issuer { get; init; }
+    public required Max6Text Issuer { get; init; }
 
     /// <summary>
     /// Standard reference code used to uniquely identify this service across financial institutions. This is not the financial institution’s internal bank service identification.
@@ -34,5 +34,5 @@ public record BillingServiceCommonIdentification1
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max8Text)]
     [StringLength(maximumLength: 8, MinimumLength = 1)]
-    public required IsoMax8Text Identification { get; init; }
+    public required Max8Text Identification { get; init; }
 }

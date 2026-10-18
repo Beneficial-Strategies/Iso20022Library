@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.AirportName1Choice
         [IsoXmlTag("AirprtCd")]
         [IsoSimpleType(IsoSimpleType.Max6Text)]
         [StringLength(maximumLength: 6, MinimumLength = 1)]
-        public required IsoMax6Text Value { get; init; }
+        public required Max6Text Value { get; init; }
     }
 }

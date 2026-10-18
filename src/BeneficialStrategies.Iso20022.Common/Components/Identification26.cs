@@ -24,7 +24,7 @@ public record Identification26
     [IsoXmlTag("AcctOwnrTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text AccountOwnerTransactionIdentification { get; init; }
+    public required Max35Text AccountOwnerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the transaction as known by the account servicer.
@@ -34,7 +34,7 @@ public record Identification26
     [IsoXmlTag("AcctSvcrTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountServicerTransactionIdentification { get; init; }
+    public Max35Text? AccountServicerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
@@ -44,7 +44,7 @@ public record Identification26
     [IsoXmlTag("MktInfrstrctrTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MarketInfrastructureTransactionIdentification { get; init; }
+    public Max35Text? MarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of the transaction assigned by the processor of the instruction other than the account owner, the account servicer and the market infrastructure.
@@ -54,7 +54,7 @@ public record Identification26
     [IsoXmlTag("PrcrTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProcessorTransactionIdentification { get; init; }
+    public Max35Text? ProcessorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique reference agreed upon by the two trade counterparties to identify the trade.
@@ -64,7 +64,7 @@ public record Identification26
     [IsoXmlTag("CmonId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CommonIdentification { get; init; }
+    public Max35Text? CommonIdentification { get; init; }
 
     /// <summary>
     /// Reference assigned to the trade by the investor or the trading party. This reference will be used throughout the trade life cycle to access/update the trade details.
@@ -72,7 +72,7 @@ public record Identification26
     [IsoId("_9a8sRdBxEeihG9bKfarOOA")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    public SimpleValueList<IsoMax52Text> TradeIdentification { get; init; } = [];
+    public SimpleValueList<Max52Text> TradeIdentification { get; init; } = [];
 
     /// <summary>
     /// Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.
@@ -82,7 +82,7 @@ public record Identification26
     [IsoXmlTag("MstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MasterIdentification { get; init; }
+    public Max35Text? MasterIdentification { get; init; }
 
     /// <summary>
     /// Identification of a basket trade.
@@ -92,7 +92,7 @@ public record Identification26
     [IsoXmlTag("BsktId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? BasketIdentification { get; init; }
+    public Max35Text? BasketIdentification { get; init; }
 
     /// <summary>
     /// Reference identifying an index trade.
@@ -102,7 +102,7 @@ public record Identification26
     [IsoXmlTag("IndxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? IndexIdentification { get; init; }
+    public Max35Text? IndexIdentification { get; init; }
 
     /// <summary>
     /// Unique identifier for a list, as assigned by the trading party. The identifier must be unique within a single trading day.
@@ -112,7 +112,7 @@ public record Identification26
     [IsoXmlTag("ListId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ListIdentification { get; init; }
+    public Max35Text? ListIdentification { get; init; }
 
     /// <summary>
     /// Program reference which identifies a program trade.
@@ -122,7 +122,7 @@ public record Identification26
     [IsoXmlTag("PrgmId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProgramIdentification { get; init; }
+    public Max35Text? ProgramIdentification { get; init; }
 
     /// <summary>
     /// Collective reference identifying a set of messages.
@@ -132,7 +132,7 @@ public record Identification26
     [IsoXmlTag("PoolId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PoolIdentification { get; init; }
+    public Max35Text? PoolIdentification { get; init; }
 
     /// <summary>
     /// Identification assigned by the account servicer to unambiguously identify a corporate action event.
@@ -142,5 +142,5 @@ public record Identification26
     [IsoXmlTag("CorpActnEvtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CorporateActionEventIdentification { get; init; }
+    public Max35Text? CorporateActionEventIdentification { get; init; }
 }

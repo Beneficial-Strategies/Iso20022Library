@@ -24,7 +24,7 @@ public record OptionTransactionDetailsSD4
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Unique number assigned by the depository. Transaction identification will be either the DTC Instruction reference number for reorganisation instructions (VOI) or the DAM reference number for custody / reorganisation deposits.
@@ -34,7 +34,7 @@ public record OptionTransactionDetailsSD4
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.Max15Text)]
     [StringLength(maximumLength: 15, MinimumLength = 1)]
-    public required IsoMax15Text TransactionIdentification { get; init; }
+    public required Max15Text TransactionIdentification { get; init; }
 
     /// <summary>
     /// Number which further identifies DTC instruction reference number. Not applicable to reorganisation / custody deposits.
@@ -43,7 +43,7 @@ public record OptionTransactionDetailsSD4
     [DisplayName("Transaction Sequence Number")]
     [IsoXmlTag("TxSeqNb")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public IsoMax3NumericText? TransactionSequenceNumber { get; init; }
+    public Max3NumericText? TransactionSequenceNumber { get; init; }
 
     /// <summary>
     /// Instruction date and time for reorganisation instructions or the deposit date for reorganisation / custody deposits.
@@ -52,7 +52,7 @@ public record OptionTransactionDetailsSD4
     [DisplayName("Transaction Identification Date")]
     [IsoXmlTag("TxIdDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime TransactionIdentificationDate { get; init; }
+    public required ISODateTime TransactionIdentificationDate { get; init; }
 
     /// <summary>
     /// Instructed quantity for reorganisation instructions or the deposit quantity for reorganisation / custody deposits.
@@ -165,7 +165,7 @@ public record OptionTransactionDetailsSD4
     [DisplayName("Customer Reference Identification")]
     [IsoXmlTag("CstmrRefId")]
     [IsoSimpleType(IsoSimpleType.Max30Text)]
-    public IsoMax30Text? CustomerReferenceIdentification { get; init; }
+    public Max30Text? CustomerReferenceIdentification { get; init; }
 
     /// <summary>
     /// Quantity entered by the agent on PUT (Mortgage Backed) instructions to be paid. This quantity can be for the full or partial instructed quantity.
@@ -183,5 +183,5 @@ public record OptionTransactionDetailsSD4
     [IsoXmlTag("InstrCmnts")]
     [IsoSimpleType(IsoSimpleType.Max210Text)]
     [StringLength(maximumLength: 210, MinimumLength = 1)]
-    public IsoMax210Text? InstructionComments { get; init; }
+    public Max210Text? InstructionComments { get; init; }
 }

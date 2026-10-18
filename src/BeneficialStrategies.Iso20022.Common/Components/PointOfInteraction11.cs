@@ -32,7 +32,7 @@ public record PointOfInteraction11
     [IsoXmlTag("SysNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? SystemName { get; init; }
+    public Max70Text? SystemName { get; init; }
 
     /// <summary>
     /// Identifier assigned by the merchant identifying a set of POI (Point Of Interaction) terminals performing some categories of transactions.
@@ -42,7 +42,7 @@ public record PointOfInteraction11
     [IsoXmlTag("GrpId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? GroupIdentification { get; init; }
+    public Max35Text? GroupIdentification { get; init; }
 
     /// <summary>
     /// Capabilities of the POI (Point Of Interaction) performing the transaction.
@@ -60,7 +60,7 @@ public record PointOfInteraction11
     [IsoXmlTag("TmZone")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? TimeZone { get; init; }
+    public Max70Text? TimeZone { get; init; }
 
     /// <summary>
     /// Indicates the type of integration of the POI terminal in the sale environment.

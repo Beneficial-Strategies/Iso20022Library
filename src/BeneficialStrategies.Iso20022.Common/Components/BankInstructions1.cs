@@ -34,5 +34,5 @@ public record BankInstructions1
     [DisplayName("Last Date For Response")]
     [IsoXmlTag("LastDtForRspn")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? LastDateForResponse { get; init; }
+    public DateOnly? LastDateForResponse { get; init; }
 }

@@ -23,7 +23,7 @@ public record LocalDateTime1
     [DisplayName("From Date Time")]
     [IsoXmlTag("FrDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? FromDateTime { get; init; }
+    public ISODateTime? FromDateTime { get; init; }
 
     /// <summary>
     /// Date time of the end of the period (exclusive).
@@ -32,7 +32,7 @@ public record LocalDateTime1
     [DisplayName("To Date Time")]
     [IsoXmlTag("ToDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? ToDateTime { get; init; }
+    public ISODateTime? ToDateTime { get; init; }
 
     /// <summary>
     /// UTC offset in minutes, of the local time during the period. For instance, 120 for Central European Time, -720 for Central Standard Time (North America).
@@ -41,5 +41,5 @@ public record LocalDateTime1
     [DisplayName("UTC Offset")]
     [IsoXmlTag("UTCOffset")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber UTCOffset { get; init; }
+    public required Number UTCOffset { get; init; }
 }

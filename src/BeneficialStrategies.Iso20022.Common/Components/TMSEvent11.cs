@@ -28,7 +28,7 @@ public record TMSEvent11
     /// </summary>
     [DisplayName("Additional Error Information")]
     [IsoXmlTag("AddtlErrInf")]
-    public IsoMax70Text? AdditionalErrorInformation { get; init; }
+    public Max70Text? AdditionalErrorInformation { get; init; }
 
     /// <summary>
     /// Device Response.
@@ -49,12 +49,12 @@ public record TMSEvent11
     /// </summary>
     [DisplayName("Terminal Manager Identification")]
     [IsoXmlTag("TermnlMgrId")]
-    public IsoMax35Text? TerminalManagerIdentification { get; init; }
+    public Max35Text? TerminalManagerIdentification { get; init; }
 
     /// <summary>
     /// Time Stamp.
     /// </summary>
     [DisplayName("Time Stamp")]
     [IsoXmlTag("TmStmp")]
-    public required IsoISODateTime TimeStamp { get; init; }
+    public required ISODateTime TimeStamp { get; init; }
 }

@@ -31,7 +31,7 @@ public record StructuredRemittanceInformation6
     [DisplayName("Referred Document Related Date")]
     [IsoXmlTag("RfrdDocRltdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ReferredDocumentRelatedDate { get; init; }
+    public DateOnly? ReferredDocumentRelatedDate { get; init; }
 
     /// <summary>
     /// Amount of money and currency of a document referred to in the remittance section. The amount is typically either the original amount due and payable, or the amount actually remitted for the referred document.
@@ -73,5 +73,5 @@ public record StructuredRemittanceInformation6
     [IsoXmlTag("AddtlRmtInf")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? AdditionalRemittanceInformation { get; init; }
+    public Max140Text? AdditionalRemittanceInformation { get; init; }
 }

@@ -21,14 +21,14 @@ public record Software1
     /// </summary>
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Sub Type.
     /// </summary>
     [DisplayName("Sub Type")]
     [IsoXmlTag("SubTp")]
-    public IsoMax35Text? SubType { get; init; }
+    public Max35Text? SubType { get; init; }
 
     /// <summary>
     /// Type.
@@ -42,5 +42,5 @@ public record Software1
     /// </summary>
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
-    public IsoMax256Text? Version { get; init; }
+    public Max256Text? Version { get; init; }
 }

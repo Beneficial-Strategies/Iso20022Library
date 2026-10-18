@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportContent2Choice
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("Txt")]
-        public required IsoMax10MbText Value { get; init; }
+        public required Max10MbText Value { get; init; }
     }
 }

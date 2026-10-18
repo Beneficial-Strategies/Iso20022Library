@@ -21,14 +21,14 @@ public record PaymentCard36
     /// </summary>
     [DisplayName("Card Country Code")]
     [IsoXmlTag("CardCtryCd")]
-    public IsoMax3Text? CardCountryCode { get; init; }
+    public Max3Text? CardCountryCode { get; init; }
 
     /// <summary>
     /// Card Currency Code.
     /// </summary>
     [DisplayName("Card Currency Code")]
     [IsoXmlTag("CardCcyCd")]
-    public IsoExact3AlphaNumericText? CardCurrencyCode { get; init; }
+    public Exact3AlphaNumericText? CardCurrencyCode { get; init; }
 
     /// <summary>
     /// Card Data Entry Mode.
@@ -42,7 +42,7 @@ public record PaymentCard36
     /// </summary>
     [DisplayName("Fallback Indicator")]
     [IsoXmlTag("FllbckInd")]
-    public IsoTrueFalseIndicator? FallbackIndicator { get; init; }
+    public TrueFalseIndicator? FallbackIndicator { get; init; }
 
     /// <summary>
     /// Plain Card Data.

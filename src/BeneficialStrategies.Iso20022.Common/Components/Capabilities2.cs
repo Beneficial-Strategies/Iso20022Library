@@ -39,7 +39,7 @@ public record Capabilities2
     [DisplayName("PIN Length Capability")]
     [IsoXmlTag("PINLngthCpblty")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? PINLengthCapability { get; init; }
+    public Number? PINLengthCapability { get; init; }
 
     /// <summary>
     /// Security characteristic of the PIN Entry device solution.
@@ -57,7 +57,7 @@ public record Capabilities2
     [IsoXmlTag("OthrPINNtrySctyChrtc")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherPINEntrySecurityCharacteristic { get; init; }
+    public Max35Text? OtherPINEntrySecurityCharacteristic { get; init; }
 
     /// <summary>
     /// Maximum number of characters of the approval code that the acquirer is able to manage.
@@ -66,7 +66,7 @@ public record Capabilities2
     [DisplayName("Approval Code Length")]
     [IsoXmlTag("ApprvlCdLngth")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? ApprovalCodeLength { get; init; }
+    public Number? ApprovalCodeLength { get; init; }
 
     /// <summary>
     /// Maximum data length in bytes that a card issuer can return to the ICC at the terminal.
@@ -75,7 +75,7 @@ public record Capabilities2
     [DisplayName("Max Script Length")]
     [IsoXmlTag("MxScrptLngth")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaxScriptLength { get; init; }
+    public Number? MaxScriptLength { get; init; }
 
     /// <summary>
     /// Indicates whether the terminal can capture cards or not.
@@ -86,7 +86,7 @@ public record Capabilities2
     [DisplayName("Card Capture Capable")]
     [IsoXmlTag("CardCaptrCpbl")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CardCaptureCapable { get; init; }
+    public TrueFalseIndicator? CardCaptureCapable { get; init; }
 
     /// <summary>
     /// Capability of the terminal to go online.
@@ -121,5 +121,5 @@ public record Capabilities2
     [DisplayName("Temporary Secure Card Data Storage")]
     [IsoXmlTag("TempScrCardDataStorg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? TemporarySecureCardDataStorage { get; init; }
+    public TrueFalseIndicator? TemporarySecureCardDataStorage { get; init; }
 }

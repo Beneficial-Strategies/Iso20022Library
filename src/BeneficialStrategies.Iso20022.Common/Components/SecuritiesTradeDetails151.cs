@@ -22,7 +22,7 @@ public record SecuritiesTradeDetails151
     [IsoId("b8f36680-b7b8-40db-bfbf-474233b531f8")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    public SimpleValueList<IsoMax35Text> TradeIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> TradeIdentification { get; init; } = [];
 
     /// <summary>
     /// Unique Transaction Identifier (UTI) as agreed with the other counterparty.
@@ -30,7 +30,7 @@ public record SecuritiesTradeDetails151
     [IsoId("2145eae0-06ae-48b1-ba40-0c70018a9af8")]
     [DisplayName("Unique Transaction Identifier")]
     [IsoXmlTag("UnqTxIdr")]
-    public IsoUTIIdentifier? UniqueTransactionIdentifier { get; init; }
+    public UTIIdentifier? UniqueTransactionIdentifier { get; init; }
 
     /// <summary>
     /// Unambiguous identification of a collateral transaction as assigned by the instructing party.
@@ -38,7 +38,7 @@ public record SecuritiesTradeDetails151
     [IsoId("27c9ae5f-1602-4fcd-b0b9-0f4df5233e55")]
     [DisplayName("Collateral Transaction Identification")]
     [IsoXmlTag("CollTxId")]
-    public SimpleValueList<IsoMax35Text> CollateralTransactionIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> CollateralTransactionIdentification { get; init; } = [];
 
     /// <summary>
     /// Identification of an account owner transaction that could potentially match with the allegement notified.
@@ -46,7 +46,7 @@ public record SecuritiesTradeDetails151
     [IsoId("06f44ef4-cfb6-44eb-ab37-0052fcbc938c")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
-    public SimpleValueList<IsoMax35Text> AccountOwnerTransactionIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> AccountOwnerTransactionIdentification { get; init; } = [];
 
     /// <summary>
     /// Identification of the transaction assigned by the processor of the instruction other than the account owner, the account servicer and the market infrastructure.
@@ -54,7 +54,7 @@ public record SecuritiesTradeDetails151
     [IsoId("62d22c3a-9006-42d2-a925-aead90d2c21d")]
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
-    public IsoMax35Text? ProcessorTransactionIdentification { get; init; }
+    public Max35Text? ProcessorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Market in which a trade transaction has been executed.
@@ -102,7 +102,7 @@ public record SecuritiesTradeDetails151
     [IsoId("a3f7ee66-ac41-423a-b626-8ac8f8c4652d")]
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
-    public IsoMax3Number? NumberOfDaysAccrued { get; init; }
+    public Max3Number? NumberOfDaysAccrued { get; init; }
 
     /// <summary>
     /// Indicates the conditions under which the order/trade is to be/was executed.

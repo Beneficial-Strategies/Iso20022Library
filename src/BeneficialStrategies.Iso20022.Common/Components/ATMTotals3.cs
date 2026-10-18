@@ -24,7 +24,7 @@ public record ATMTotals3
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public required IsoMax70Text Identification { get; init; }
+    public required Max70Text Identification { get; init; }
 
     /// <summary>
     /// Additional identification of the type of transaction. The following values are predefined: Vodaphone, TMobile, Verizon.
@@ -34,7 +34,7 @@ public record ATMTotals3
     [IsoXmlTag("AddtlId")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AdditionalIdentification { get; init; }
+    public Max70Text? AdditionalIdentification { get; init; }
 
     /// <summary>
     /// Period of computation for the counters.
@@ -59,7 +59,7 @@ public record ATMTotals3
     [DisplayName("Count")]
     [IsoXmlTag("Cnt")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber Count { get; init; }
+    public required Number Count { get; init; }
 
     /// <summary>
     /// Amount of transaction with the defined currency.

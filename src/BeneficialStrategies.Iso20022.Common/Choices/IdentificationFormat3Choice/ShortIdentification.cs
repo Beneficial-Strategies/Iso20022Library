@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationFormat3Choice
         /// </summary>
         [IsoXmlTag("ShrtId")]
         [IsoSimpleType(IsoSimpleType.Exact3UpperCaseAlphaNumericText)]
-        public required IsoExact3UpperCaseAlphaNumericText Value { get; init; }
+        public required Exact3UpperCaseAlphaNumericText Value { get; init; }
     }
 }

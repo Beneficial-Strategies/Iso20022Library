@@ -24,7 +24,7 @@ public record TransactionTotals1
     [IsoXmlTag("POIGrpId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? POIGroupIdentification { get; init; }
+    public Max35Text? POIGroupIdentification { get; init; }
 
     /// <summary>
     /// Category of cards related the acceptance processing rules defined by the acquirer.
@@ -33,7 +33,7 @@ public record TransactionTotals1
     [DisplayName("Card Product Profile")]
     [IsoXmlTag("CardPdctPrfl")]
     [IsoSimpleType(IsoSimpleType.Exact4NumericText)]
-    public IsoExact4NumericText? CardProductProfile { get; init; }
+    public Exact4NumericText? CardProductProfile { get; init; }
 
     /// <summary>
     /// Currency associated with the transaction totals.
@@ -58,7 +58,7 @@ public record TransactionTotals1
     [DisplayName("Total Number")]
     [IsoXmlTag("TtlNb")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public required IsoMax35NumericText TotalNumber { get; init; }
+    public required Max35NumericText TotalNumber { get; init; }
 
     /// <summary>
     /// Total amount of a collection of transactions.

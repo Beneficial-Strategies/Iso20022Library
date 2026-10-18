@@ -24,7 +24,7 @@ public record PartyIdentification215
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text Name { get; init; }
+    public required Max350Text Name { get; init; }
 
     /// <summary>
     /// Identification of the party.

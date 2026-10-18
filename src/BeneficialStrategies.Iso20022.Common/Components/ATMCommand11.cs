@@ -31,7 +31,7 @@ public record ATMCommand11
     [DisplayName("Required Date Time")]
     [IsoXmlTag("ReqrdDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? RequiredDateTime { get; init; }
+    public ISODateTime? RequiredDateTime { get; init; }
 
     /// <summary>
     /// Date time on which the command has been performed.
@@ -40,7 +40,7 @@ public record ATMCommand11
     [DisplayName("Processed Date Time")]
     [IsoXmlTag("PrcdDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime ProcessedDateTime { get; init; }
+    public required ISODateTime ProcessedDateTime { get; init; }
 
     /// <summary>
     /// Identification of the entity issuing the command.
@@ -66,5 +66,5 @@ public record ATMCommand11
     [IsoXmlTag("AddtlErrInf")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? AdditionalErrorInformation { get; init; }
+    public Max140Text? AdditionalErrorInformation { get; init; }
 }

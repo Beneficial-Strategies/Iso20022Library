@@ -24,7 +24,7 @@ public record PlainCardData20
     [IsoXmlTag("DrvrOrVhclId")]
     [IsoSimpleType(IsoSimpleType.Max20Text)]
     [StringLength(maximumLength: 20, MinimumLength = 1)]
-    public IsoMax20Text? DriverOrVehicleIdentification { get; init; }
+    public Max20Text? DriverOrVehicleIdentification { get; init; }
 
     /// <summary>
     /// Additional card specific data.
@@ -34,5 +34,5 @@ public record PlainCardData20
     [IsoXmlTag("AddtlCardData")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AdditionalCardData { get; init; }
+    public Max35Text? AdditionalCardData { get; init; }
 }

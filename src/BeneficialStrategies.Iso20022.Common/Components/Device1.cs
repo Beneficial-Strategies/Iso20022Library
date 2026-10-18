@@ -32,7 +32,7 @@ public record Device1
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Preferred language set on the device
@@ -49,7 +49,7 @@ public record Device1
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? PhoneNumber { get; init; }
+    public PhoneNumber? PhoneNumber { get; init; }
 
     /// <summary>
     /// Geographical location of the device.
@@ -67,7 +67,7 @@ public record Device1
     [IsoXmlTag("IPAdr")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? IPAddress { get; init; }
+    public Max70Text? IPAddress { get; init; }
 
     /// <summary>
     /// Electronic mail address associated with the device.
@@ -77,5 +77,5 @@ public record Device1
     [IsoXmlTag("Email")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Email { get; init; }
+    public Max256Text? Email { get; init; }
 }

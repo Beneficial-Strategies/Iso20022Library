@@ -22,7 +22,7 @@ public record SecuritiesTradeDetails150
     [IsoId("3c6fd793-d1cb-4584-a017-adde4a71fa7d")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    public SimpleValueList<IsoMax35Text> TradeIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> TradeIdentification { get; init; } = [];
 
     /// <summary>
     /// Unique Transaction Identifier (UTI) as agreed with the other counterparty.
@@ -30,7 +30,7 @@ public record SecuritiesTradeDetails150
     [IsoId("3a7b37d2-ee86-4e2f-b5e1-f4677f0d6c52")]
     [DisplayName("Unique Transaction Identifier")]
     [IsoXmlTag("UnqTxIdr")]
-    public IsoUTIIdentifier? UniqueTransactionIdentifier { get; init; }
+    public UTIIdentifier? UniqueTransactionIdentifier { get; init; }
 
     /// <summary>
     /// Unambiguous identification of a collateral transaction as assigned by the instructing party.
@@ -38,7 +38,7 @@ public record SecuritiesTradeDetails150
     [IsoId("62995e18-fa0d-4c7f-be75-765d540062f9")]
     [DisplayName("Collateral Transaction Identification")]
     [IsoXmlTag("CollTxId")]
-    public SimpleValueList<IsoMax35Text> CollateralTransactionIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> CollateralTransactionIdentification { get; init; } = [];
 
     /// <summary>
     /// Market in which a trade transaction has been executed.
@@ -94,7 +94,7 @@ public record SecuritiesTradeDetails150
     [IsoId("e2cf7677-a4b9-4e3b-8c76-905143228071")]
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
-    public IsoMax3Number? NumberOfDaysAccrued { get; init; }
+    public Max3Number? NumberOfDaysAccrued { get; init; }
 
     /// <summary>
     /// Specifies additional information relative to the processing of the trade.
@@ -150,7 +150,7 @@ public record SecuritiesTradeDetails150
     [IsoId("ef68e74f-7120-4293-b317-a87e1bbb4872")]
     [DisplayName("FX Additional Details")]
     [IsoXmlTag("FxAddtlDtls")]
-    public IsoMax350Text? FXAdditionalDetails { get; init; }
+    public Max350Text? FXAdditionalDetails { get; init; }
 
     /// <summary>
     /// Provides additional settlement processing information which cannot be included within the structured fields of the message.
@@ -158,5 +158,5 @@ public record SecuritiesTradeDetails150
     [IsoId("a1202e23-e7b9-4df9-8b1d-474859560645")]
     [DisplayName("Settlement Instruction Processing Additional Details")]
     [IsoXmlTag("SttlmInstrPrcgAddtlDtls")]
-    public IsoMax350Text? SettlementInstructionProcessingAdditionalDetails { get; init; }
+    public Max350Text? SettlementInstructionProcessingAdditionalDetails { get; init; }
 }

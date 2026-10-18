@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditDefaultSwapsDerivative4Cho
         [DisplayName("Underlying Credit Default Swap Identification")]
         [IsoXmlTag("UndrlygCdtDfltSwpId")]
         [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-        public IsoISINOct2015Identifier? UnderlyingCreditDefaultSwapIdentification { get; init; }
+        public ISINOct2015Identifier? UnderlyingCreditDefaultSwapIdentification { get; init; }
 
         /// <summary>
         /// Describes the Credit Default Swap Index specific details the derivative is being made on.

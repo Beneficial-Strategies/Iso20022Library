@@ -25,7 +25,7 @@ public record StatementGroup1
     [IsoXmlTag("GrpId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text GroupIdentification { get; init; }
+    public required Max35Text GroupIdentification { get; init; }
 
     /// <summary>
     /// Originating financial institution sending the statement.

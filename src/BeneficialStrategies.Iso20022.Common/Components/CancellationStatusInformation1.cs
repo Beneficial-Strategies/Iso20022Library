@@ -38,5 +38,5 @@ public record CancellationStatusInformation1
     [IsoId("_RX8oYdp-Ed-ak6NoX_4Aeg_-377525729")]
     [DisplayName("Additional Status Reason Information")]
     [IsoXmlTag("AddtlStsRsnInf")]
-    public SimpleValueList<IsoMax105Text> AdditionalStatusReasonInformation { get; init; } = [];
+    public SimpleValueList<Max105Text> AdditionalStatusReasonInformation { get; init; } = [];
 }

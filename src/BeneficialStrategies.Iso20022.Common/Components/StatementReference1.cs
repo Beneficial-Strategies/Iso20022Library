@@ -24,7 +24,7 @@ public record StatementReference1
     [IsoXmlTag("StmtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text StatementIdentification { get; init; }
+    public required Max35Text StatementIdentification { get; init; }
 
     /// <summary>
     /// Date and time the statement was created.

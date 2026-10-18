@@ -39,7 +39,7 @@ public record Intermediary13
     [DisplayName("Waived Trailer Commission Indicator")]
     [IsoXmlTag("WvdTrlrComssnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? WaivedTrailerCommissionIndicator { get; init; }
+    public YesNoIndicator? WaivedTrailerCommissionIndicator { get; init; }
 
     /// <summary>
     /// Role or function performed by an intermediary in a given situation.
@@ -57,7 +57,7 @@ public record Intermediary13
     [IsoXmlTag("XtndedRole")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedRole { get; init; }
+    public Extended350Code? ExtendedRole { get; init; }
 
     /// <summary>
     /// Communication device number or electronic address used for communication.

@@ -63,21 +63,21 @@ public record NotificationItem9
     /// </summary>
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
-    public IsoMax35Text? EndToEndIdentification { get; init; }
+    public Max35Text? EndToEndIdentification { get; init; }
 
     /// <summary>
     /// Expected Value Date.
     /// </summary>
     [DisplayName("Expected Value Date")]
     [IsoXmlTag("XpctdValDt")]
-    public IsoISODate? ExpectedValueDate { get; init; }
+    public DateOnly? ExpectedValueDate { get; init; }
 
     /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Intermediary Agent.
@@ -119,7 +119,7 @@ public record NotificationItem9
     /// </summary>
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
-    public IsoUUIDv4Identifier? UETR { get; init; }
+    public UUIDv4Identifier? UETR { get; init; }
 
     /// <summary>
     /// Underlying Allocation.

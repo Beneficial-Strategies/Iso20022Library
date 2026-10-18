@@ -57,7 +57,7 @@ public record CorporateActionNarrativeV09 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public ValueList<IsoMax8000Text> AdditionalInformation { get; init; } = [];
+    public ValueList<Max8000Text> AdditionalInformation { get; init; } = [];
 
     /// <summary>
     /// Corporate Action General Information.

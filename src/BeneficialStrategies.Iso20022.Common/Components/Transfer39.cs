@@ -22,7 +22,7 @@ public record Transfer39
     [IsoId("fab83d91-8b7b-4dcf-bebe-d785e49bf902")]
     [DisplayName("Transfer Reference")]
     [IsoXmlTag("TrfRef")]
-    public required IsoMax35Text TransferReference { get; init; }
+    public required Max35Text TransferReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor's identification of the transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.
@@ -62,7 +62,7 @@ public record Transfer39
     [IsoId("f97bd3c4-dea7-4187-87e9-c2cb0f1ace73")]
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
-    public IsoISODate? RequestedSettlementDate { get; init; }
+    public DateOnly? RequestedSettlementDate { get; init; }
 
     /// <summary>
     /// Date on which the investor signed the transfer order form.
@@ -70,7 +70,7 @@ public record Transfer39
     [IsoId("f2b158ff-c9fa-4fb4-8c0b-35ca06f28b0e")]
     [DisplayName("Transfer Order Date Form")]
     [IsoXmlTag("TrfOrdrDtForm")]
-    public IsoISODate? TransferOrderDateForm { get; init; }
+    public DateOnly? TransferOrderDateForm { get; init; }
 
     /// <summary>
     /// Reason for the transfer.
@@ -150,7 +150,7 @@ public record Transfer39
     [IsoId("b089fc1a-fae3-4bac-a14f-25192190985a")]
     [DisplayName("Own Account Transfer Indicator")]
     [IsoXmlTag("OwnAcctTrfInd")]
-    public IsoYesNoIndicator? OwnAccountTransferIndicator { get; init; }
+    public YesNoIndicator? OwnAccountTransferIndicator { get; init; }
 
     /// <summary>
     /// Additional specific settlement information for the fund.
@@ -158,7 +158,7 @@ public record Transfer39
     [IsoId("e3e940f4-b858-49c2-abbc-c10fbaaa6261")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
-    public IsoMax350Text? NonStandardSettlementInformation { get; init; }
+    public Max350Text? NonStandardSettlementInformation { get; init; }
 
     /// <summary>
     /// Specifies how the payment of fees and taxes as a result of the transfer is covered, that is, whether by cash or the redemption of units.

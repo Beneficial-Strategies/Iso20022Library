@@ -24,7 +24,7 @@ public record AdditionalReferences
     [IsoXmlTag("Ref")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Reference { get; init; }
+    public required Max35Text Reference { get; init; }
 
     /// <summary>
     /// Name of the message which contained the given additional reference as its message reference.
@@ -34,7 +34,7 @@ public record AdditionalReferences
     [IsoXmlTag("MsgNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MessageName { get; init; }
+    public Max35Text? MessageName { get; init; }
 
     /// <summary>
     /// Party that initially assigned the given additional reference.

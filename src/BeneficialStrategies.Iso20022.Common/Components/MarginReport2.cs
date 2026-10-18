@@ -40,7 +40,7 @@ public record MarginReport2
     [DisplayName("Collateralised Margin Account Indicator")]
     [IsoXmlTag("CollsdMrgnAcctInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? CollateralisedMarginAccountIndicator { get; init; }
+    public YesNoIndicator? CollateralisedMarginAccountIndicator { get; init; }
 
     /// <summary>
     /// Provides details about the non clearing member identification and account.

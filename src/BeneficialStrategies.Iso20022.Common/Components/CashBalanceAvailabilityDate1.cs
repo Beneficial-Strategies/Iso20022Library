@@ -23,7 +23,7 @@ public record CashBalanceAvailabilityDate1
     [DisplayName("Number Of Days")]
     [IsoXmlTag("NbOfDays")]
     [IsoSimpleType(IsoSimpleType.Max15PlusSignedNumericText)]
-    public required IsoMax15PlusSignedNumericText NumberOfDays { get; init; }
+    public required Max15PlusSignedNumericText NumberOfDays { get; init; }
 
     /// <summary>
     /// Identifies the actual availability date.
@@ -32,5 +32,5 @@ public record CashBalanceAvailabilityDate1
     [DisplayName("Actual Date")]
     [IsoXmlTag("ActlDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ActualDate { get; init; }
+    public required DateOnly ActualDate { get; init; }
 }

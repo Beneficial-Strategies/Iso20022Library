@@ -30,7 +30,7 @@ public record TransactorData1
     [IsoId("_PvJdQSq6EfCD0_iZ8tw-zA")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax11NumericText Identification { get; init; }
+    public required Max11NumericText Identification { get; init; }
 
     /// <summary>
     /// Business or client identification for the issuer.
@@ -38,7 +38,7 @@ public record TransactorData1
     [IsoId("_PvJdSSq6EfCD0_iZ8tw-zA")]
     [DisplayName("Business Identification")]
     [IsoXmlTag("BizId")]
-    public IsoMax15AlphaNumericText? BusinessIdentification { get; init; }
+    public Max15AlphaNumericText? BusinessIdentification { get; init; }
 
     /// <summary>
     /// Business name of the issuer.
@@ -46,7 +46,7 @@ public record TransactorData1
     [IsoId("_PvJdTSq6EfCD0_iZ8tw-zA")]
     [DisplayName("Business Name")]
     [IsoXmlTag("BizNm")]
-    public IsoMax35Text? BusinessName { get; init; }
+    public Max35Text? BusinessName { get; init; }
 
     /// <summary>
     /// Legal Corporate Name of the issuer.
@@ -54,7 +54,7 @@ public record TransactorData1
     [IsoId("_PvJdTyq6EfCD0_iZ8tw-zA")]
     [DisplayName("Legal Corporate Name")]
     [IsoXmlTag("LglCorpNm")]
-    public IsoMax99Text? LegalCorporateName { get; init; }
+    public Max99Text? LegalCorporateName { get; init; }
 
     /// <summary>
     /// Address of the issuer.
@@ -70,7 +70,7 @@ public record TransactorData1
     [IsoId("__ZD_YlwsEfCoP_h9uwd39Q")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -78,7 +78,7 @@ public record TransactorData1
     [IsoId("__ZD_Y1wsEfCoP_h9uwd39Q")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 
     /// <summary>
     /// Contains local language equivalent(s) of data in the current component.

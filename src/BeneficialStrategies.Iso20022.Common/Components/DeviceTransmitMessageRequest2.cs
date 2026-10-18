@@ -31,7 +31,7 @@ public record DeviceTransmitMessageRequest2
     [DisplayName("Maximum Transmission Time")]
     [IsoXmlTag("MaxTrnsmssnTm")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber MaximumTransmissionTime { get; init; }
+    public required Number MaximumTransmissionTime { get; init; }
 
     /// <summary>
     /// Defines the timeout to receive an answer.
@@ -40,7 +40,7 @@ public record DeviceTransmitMessageRequest2
     [DisplayName("Maximum Waiting Time")]
     [IsoXmlTag("MaxWtgTm")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaximumWaitingTime { get; init; }
+    public Number? MaximumWaitingTime { get; init; }
 
     /// <summary>
     /// Content of the message to be transmitted.
@@ -49,5 +49,5 @@ public record DeviceTransmitMessageRequest2
     [DisplayName("Message To Send")]
     [IsoXmlTag("MsgToSnd")]
     [IsoSimpleType(IsoSimpleType.Max100KBinary)]
-    public required IsoMax100KBinary MessageToSend { get; init; }
+    public required Max100KBinary MessageToSend { get; init; }
 }

@@ -31,5 +31,5 @@ public record ExpectedExecutionDetails4
     [DisplayName("Expected Cash Settlement Date")]
     [IsoXmlTag("XpctdCshSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ExpectedCashSettlementDate { get; init; }
+    public DateOnly? ExpectedCashSettlementDate { get; init; }
 }

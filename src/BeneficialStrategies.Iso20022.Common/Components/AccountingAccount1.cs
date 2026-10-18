@@ -24,7 +24,7 @@ public record AccountingAccount1
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Template describing the mask of the structure for the format of the accounting account identifier for example AABBBBCC where AA represents the country, BBBB the service classification, CC the sales area.
@@ -34,5 +34,5 @@ public record AccountingAccount1
     [IsoXmlTag("CostRefPttrn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CostReferencePattern { get; init; }
+    public Max35Text? CostReferencePattern { get; init; }
 }

@@ -40,7 +40,7 @@ public record FinancialInstrumentAttributes31
     [IsoXmlTag("CertNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CertificateNumber { get; init; }
+    public Max35Text? CertificateNumber { get; init; }
 
     /// <summary>
     /// Specifies the computation method of (accrued) interest of the security.
@@ -113,7 +113,7 @@ public record FinancialInstrumentAttributes31
     [DisplayName("Coupon Date")]
     [IsoXmlTag("CpnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? CouponDate { get; init; }
+    public DateOnly? CouponDate { get; init; }
 
     /// <summary>
     /// Date on which a privilege expires.
@@ -122,7 +122,7 @@ public record FinancialInstrumentAttributes31
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ExpiryDate { get; init; }
+    public DateOnly? ExpiryDate { get; init; }
 
     /// <summary>
     /// Date at which the interest rate of an interest bearing security will be calculated and reset, according to the terms of the issue.
@@ -131,7 +131,7 @@ public record FinancialInstrumentAttributes31
     [DisplayName("Floating Rate Fixing Date")]
     [IsoXmlTag("FltgRateFxgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? FloatingRateFixingDate { get; init; }
+    public DateOnly? FloatingRateFixingDate { get; init; }
 
     /// <summary>
     /// Planned final repayment date at the time of issuance.
@@ -140,7 +140,7 @@ public record FinancialInstrumentAttributes31
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? MaturityDate { get; init; }
+    public DateOnly? MaturityDate { get; init; }
 
     /// <summary>
     /// Date at which the security was made available.
@@ -149,7 +149,7 @@ public record FinancialInstrumentAttributes31
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? IssueDate { get; init; }
+    public DateOnly? IssueDate { get; init; }
 
     /// <summary>
     /// Next date at which the issuer has the right to pay the security prior to maturity.
@@ -158,7 +158,7 @@ public record FinancialInstrumentAttributes31
     [DisplayName("Next Callable Date")]
     [IsoXmlTag("NxtCllblDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? NextCallableDate { get; init; }
+    public DateOnly? NextCallableDate { get; init; }
 
     /// <summary>
     /// Deadline by which a convertible security must be converted according to the terms of the issue.
@@ -167,7 +167,7 @@ public record FinancialInstrumentAttributes31
     [DisplayName("Conversion Date")]
     [IsoXmlTag("ConvsDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ConversionDate { get; init; }
+    public DateOnly? ConversionDate { get; init; }
 
     /// <summary>
     /// Date at which the holder has the right to ask for redemption of the security prior to final maturity.
@@ -176,7 +176,7 @@ public record FinancialInstrumentAttributes31
     [DisplayName("Putable Date")]
     [IsoXmlTag("PutblDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? PutableDate { get; init; }
+    public DateOnly? PutableDate { get; init; }
 
     /// <summary>
     /// First date at which a security begins to accrue interest.
@@ -185,7 +185,7 @@ public record FinancialInstrumentAttributes31
     [DisplayName("Dated Date")]
     [IsoXmlTag("DtdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DatedDate { get; init; }
+    public DateOnly? DatedDate { get; init; }
 
     /// <summary>
     /// Date at which the first interest payment is due to holders of the security.
@@ -194,7 +194,7 @@ public record FinancialInstrumentAttributes31
     [DisplayName("First Payment Date")]
     [IsoXmlTag("FrstPmtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? FirstPaymentDate { get; init; }
+    public DateOnly? FirstPaymentDate { get; init; }
 
     /// <summary>
     /// Date on which the current factor will be changed to the next factor.
@@ -203,7 +203,7 @@ public record FinancialInstrumentAttributes31
     [DisplayName("Next Factor Date")]
     [IsoXmlTag("NxtFctrDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? NextFactorDate { get; init; }
+    public DateOnly? NextFactorDate { get; init; }
 
     /// <summary>
     /// Rate expressed as a decimal between 0 and 1 that was applicable before the current factor and defines the outstanding principal of the financial instrument (for factored securities).
@@ -212,7 +212,7 @@ public record FinancialInstrumentAttributes31
     [DisplayName("Previous Factor")]
     [IsoXmlTag("PrvsFctr")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? PreviousFactor { get; init; }
+    public BaseOneRate? PreviousFactor { get; init; }
 
     /// <summary>
     /// Rate expressed as a decimal between 0 and 1 defining the outstanding principal of the financial instrument (for factored securities).
@@ -221,7 +221,7 @@ public record FinancialInstrumentAttributes31
     [DisplayName("Current Factor")]
     [IsoXmlTag("CurFctr")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? CurrentFactor { get; init; }
+    public BaseOneRate? CurrentFactor { get; init; }
 
     /// <summary>
     /// Rate expressed as a decimal between 0 and 1 that will be applicable as of the next factor date and defines the outstanding principal of the financial instrument (for factored securities).
@@ -230,7 +230,7 @@ public record FinancialInstrumentAttributes31
     [DisplayName("Next Factor")]
     [IsoXmlTag("NxtFctr")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? NextFactor { get; init; }
+    public BaseOneRate? NextFactor { get; init; }
 
     /// <summary>
     /// End ratio of principal outstanding to the original balance.
@@ -239,7 +239,7 @@ public record FinancialInstrumentAttributes31
     [DisplayName("End Factor")]
     [IsoXmlTag("EndFctr")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? EndFactor { get; init; }
+    public BaseOneRate? EndFactor { get; init; }
 
     /// <summary>
     /// Per annum ratio of interest paid to the principal amount of the financial instrument for a specific period of time.
@@ -248,7 +248,7 @@ public record FinancialInstrumentAttributes31
     [DisplayName("Interest Rate")]
     [IsoXmlTag("IntrstRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? InterestRate { get; init; }
+    public PercentageRate? InterestRate { get; init; }
 
     /// <summary>
     /// Interest rate applicable to the next interest payment period in relation to variable rate instruments.
@@ -257,7 +257,7 @@ public record FinancialInstrumentAttributes31
     [DisplayName("Next Interest Rate")]
     [IsoXmlTag("NxtIntrstRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? NextInterestRate { get; init; }
+    public PercentageRate? NextInterestRate { get; init; }
 
     /// <summary>
     /// Specifies the reference rate for fixed income instruments where the |price of the instrument is indexed to the price of an underlying benchmark.
@@ -266,7 +266,7 @@ public record FinancialInstrumentAttributes31
     [DisplayName("Index Rate Basis")]
     [IsoXmlTag("IndxRateBsis")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? IndexRateBasis { get; init; }
+    public PercentageRate? IndexRateBasis { get; init; }
 
     /// <summary>
     /// Percentage of the underlying assets of a fund that represents a debt and is in the scope of the EU Savings directive.
@@ -275,7 +275,7 @@ public record FinancialInstrumentAttributes31
     [DisplayName("Percentage Of Debt Claims")]
     [IsoXmlTag("PctgOfDebtClms")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? PercentageOfDebtClaims { get; init; }
+    public PercentageRate? PercentageOfDebtClaims { get; init; }
 
     /// <summary>
     /// Number of the coupon attached to the physical security.
@@ -308,7 +308,7 @@ public record FinancialInstrumentAttributes31
     [DisplayName("Convertible Indicator")]
     [IsoXmlTag("ConvtblInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ConvertibleIndicator { get; init; }
+    public YesNoIndicator? ConvertibleIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the interest rate of an interest bearing instrument is reset periodically.
@@ -317,7 +317,7 @@ public record FinancialInstrumentAttributes31
     [DisplayName("Variable Rate Indicator")]
     [IsoXmlTag("VarblRateInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? VariableRateIndicator { get; init; }
+    public YesNoIndicator? VariableRateIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the underlying security is owned by the writer of the entitlement.
@@ -326,7 +326,7 @@ public record FinancialInstrumentAttributes31
     [DisplayName("Covered Indicator")]
     [IsoXmlTag("CvrdInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? CoveredIndicator { get; init; }
+    public YesNoIndicator? CoveredIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the issuer has the right to pay the security prior to maturity. Also called RetractableIndicator.
@@ -335,7 +335,7 @@ public record FinancialInstrumentAttributes31
     [DisplayName("Callable Indicator")]
     [IsoXmlTag("CllblInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? CallableIndicator { get; init; }
+    public YesNoIndicator? CallableIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the holder has the right to ask for redemption of the security prior to final maturity. Also called RedeemableIndicator.
@@ -344,7 +344,7 @@ public record FinancialInstrumentAttributes31
     [DisplayName("Putable Indicator")]
     [IsoXmlTag("PutblInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PutableIndicator { get; init; }
+    public YesNoIndicator? PutableIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the warrants on a financial instrument (which has been traded cum warrants) will be attached on delivery.
@@ -353,7 +353,7 @@ public record FinancialInstrumentAttributes31
     [DisplayName("Warrant Attached On Delivery")]
     [IsoXmlTag("WarrtAttchdOnDlvry")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? WarrantAttachedOnDelivery { get; init; }
+    public YesNoIndicator? WarrantAttachedOnDelivery { get; init; }
 
     /// <summary>
     /// Indicates whether the payment of the coupon (interest) on an interest bearing instrument is off the normal schedule.
@@ -362,7 +362,7 @@ public record FinancialInstrumentAttributes31
     [DisplayName("Odd Coupon Indicator")]
     [IsoXmlTag("OddCpnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? OddCouponIndicator { get; init; }
+    public YesNoIndicator? OddCouponIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether, in the case of a debt security subject to redemption before maturity, such redemption could have an impact on the yield.
@@ -371,7 +371,7 @@ public record FinancialInstrumentAttributes31
     [DisplayName("Redemption Yield Impact")]
     [IsoXmlTag("RedYldImpct")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? RedemptionYieldImpact { get; init; }
+    public YesNoIndicator? RedemptionYieldImpact { get; init; }
 
     /// <summary>
     /// Indicates whether the actual yield of an asset-backed security may vary according to the rate at which the underlying receivables or other financial assets are prepaid.
@@ -380,7 +380,7 @@ public record FinancialInstrumentAttributes31
     [DisplayName("Yield Variance")]
     [IsoXmlTag("YldVar")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? YieldVariance { get; init; }
+    public YesNoIndicator? YieldVariance { get; init; }
 
     /// <summary>
     /// Predetermined price at which the holder of a derivative will buy or sell the underlying instrument.
@@ -462,5 +462,5 @@ public record FinancialInstrumentAttributes31
     [IsoXmlTag("FinInstrmAttrAddtlDtls")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? FinancialInstrumentAttributeAdditionalDetails { get; init; }
+    public Max350Text? FinancialInstrumentAttributeAdditionalDetails { get; init; }
 }

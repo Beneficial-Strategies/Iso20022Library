@@ -24,7 +24,7 @@ public record MessageHeader10
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the message was created.
@@ -33,7 +33,7 @@ public record MessageHeader10
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? CreationDateTime { get; init; }
+    public ISODateTime? CreationDateTime { get; init; }
 
     /// <summary>
     /// Recalls the criteria (search and return criteria) defined in a preceding query.
@@ -43,5 +43,5 @@ public record MessageHeader10
     [IsoXmlTag("QryNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? QueryName { get; init; }
+    public Max35Text? QueryName { get; init; }
 }

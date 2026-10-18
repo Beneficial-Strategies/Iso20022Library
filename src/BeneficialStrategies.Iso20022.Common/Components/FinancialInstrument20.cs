@@ -23,7 +23,7 @@ public record FinancialInstrument20
     [DisplayName("Physical Bearer Securities")]
     [IsoXmlTag("PhysBrScties")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator PhysicalBearerSecurities { get; init; }
+    public required YesNoIndicator PhysicalBearerSecurities { get; init; }
 
     /// <summary>
     /// Indicate whether or not it is possible to hold bearer units/shares in paperless form.
@@ -32,7 +32,7 @@ public record FinancialInstrument20
     [DisplayName("Dematerialised Bearer Securities")]
     [IsoXmlTag("DmtrlsdBrScties")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator DematerialisedBearerSecurities { get; init; }
+    public required YesNoIndicator DematerialisedBearerSecurities { get; init; }
 
     /// <summary>
     /// Indicate whether or not it is possible to hold registered units/shares in this class in paperless form.
@@ -41,7 +41,7 @@ public record FinancialInstrument20
     [DisplayName("Physical Registered Securities")]
     [IsoXmlTag("PhysRegdScties")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator PhysicalRegisteredSecurities { get; init; }
+    public required YesNoIndicator PhysicalRegisteredSecurities { get; init; }
 
     /// <summary>
     /// Indicate whether or not it is possible to hold registered units/shares in this class in paperless form.
@@ -50,7 +50,7 @@ public record FinancialInstrument20
     [DisplayName("Dematerialised Registered Securities")]
     [IsoXmlTag("DmtrlsdRegdScties")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator DematerialisedRegisteredSecurities { get; init; }
+    public required YesNoIndicator DematerialisedRegisteredSecurities { get; init; }
 
     /// <summary>
     /// Income policy relating to a class type, ie, if income is paid out or retained in the fund.
@@ -91,7 +91,7 @@ public record FinancialInstrument20
     [DisplayName("Front End Load")]
     [IsoXmlTag("FrntEndLd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator FrontEndLoad { get; init; }
+    public required YesNoIndicator FrontEndLoad { get; init; }
 
     /// <summary>
     /// Exit charge (eg. CDSC) on redemption orders for this class can be applied.
@@ -100,7 +100,7 @@ public record FinancialInstrument20
     [DisplayName("Back End Load")]
     [IsoXmlTag("BckEndLd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator BackEndLoad { get; init; }
+    public required YesNoIndicator BackEndLoad { get; init; }
 
     /// <summary>
     /// If a separate fee for switching between sub-funds of the same umbrella can be applied.
@@ -109,7 +109,7 @@ public record FinancialInstrument20
     [DisplayName("Switch Fee")]
     [IsoXmlTag("SwtchFee")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator SwitchFee { get; init; }
+    public required YesNoIndicator SwitchFee { get; init; }
 
     /// <summary>
     /// Indicates whether the investment fund class is subject to the European Union Saving Directive.

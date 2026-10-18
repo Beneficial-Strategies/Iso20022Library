@@ -42,21 +42,21 @@ public record Plan3
     /// </summary>
     [DisplayName("Customer Selected Grace Period")]
     [IsoXmlTag("CstmrSelctdGracePrd")]
-    public IsoTrueFalseIndicator? CustomerSelectedGracePeriod { get; init; }
+    public TrueFalseIndicator? CustomerSelectedGracePeriod { get; init; }
 
     /// <summary>
     /// Deferred.
     /// </summary>
     [DisplayName("Deferred")]
     [IsoXmlTag("Dfrrd")]
-    public IsoTrueFalseIndicator? Deferred { get; init; }
+    public TrueFalseIndicator? Deferred { get; init; }
 
     /// <summary>
     /// Deferred Periods.
     /// </summary>
     [DisplayName("Deferred Periods")]
     [IsoXmlTag("DfrrdPrds")]
-    public IsoNumber? DeferredPeriods { get; init; }
+    public Number? DeferredPeriods { get; init; }
 
     /// <summary>
     /// First Amount.
@@ -70,7 +70,7 @@ public record Plan3
     /// </summary>
     [DisplayName("First Payment Date")]
     [IsoXmlTag("FrstPmtDt")]
-    public IsoISODate? FirstPaymentDate { get; init; }
+    public DateOnly? FirstPaymentDate { get; init; }
 
     /// <summary>
     /// Grace Period Unit Type.
@@ -91,7 +91,7 @@ public record Plan3
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax70Text? Identification { get; init; }
+    public Max70Text? Identification { get; init; }
 
     /// <summary>
     /// Interest Rate.
@@ -112,28 +112,28 @@ public record Plan3
     /// </summary>
     [DisplayName("Number Of Grace Period Units")]
     [IsoXmlTag("NbOfGracePrdUnits")]
-    public IsoMax3NumericText? NumberOfGracePeriodUnits { get; init; }
+    public Max3NumericText? NumberOfGracePeriodUnits { get; init; }
 
     /// <summary>
     /// Number Of Periods.
     /// </summary>
     [DisplayName("Number Of Periods")]
     [IsoXmlTag("NbOfPrds")]
-    public IsoNumber? NumberOfPeriods { get; init; }
+    public Number? NumberOfPeriods { get; init; }
 
     /// <summary>
     /// Other Grace Period Unit Type.
     /// </summary>
     [DisplayName("Other Grace Period Unit Type")]
     [IsoXmlTag("OthrGracePrdUnitTp")]
-    public IsoMax35Text? OtherGracePeriodUnitType { get; init; }
+    public Max35Text? OtherGracePeriodUnitType { get; init; }
 
     /// <summary>
     /// Other Owner.
     /// </summary>
     [DisplayName("Other Owner")]
     [IsoXmlTag("OthrOwnr")]
-    public IsoMax35Text? OtherOwner { get; init; }
+    public Max35Text? OtherOwner { get; init; }
 
     /// <summary>
     /// Owner.
@@ -147,14 +147,14 @@ public record Plan3
     /// </summary>
     [DisplayName("Owner Name")]
     [IsoXmlTag("OwnrNm")]
-    public IsoMax256Text? OwnerName { get; init; }
+    public Max256Text? OwnerName { get; init; }
 
     /// <summary>
     /// Payment Type.
     /// </summary>
     [DisplayName("Payment Type")]
     [IsoXmlTag("PmtTp")]
-    public IsoMax35Text? PaymentType { get; init; }
+    public Max35Text? PaymentType { get; init; }
 
     /// <summary>
     /// Period Unit.
@@ -168,12 +168,12 @@ public record Plan3
     /// </summary>
     [DisplayName("Registration System Identification")]
     [IsoXmlTag("RegnSysId")]
-    public IsoMax35Text? RegistrationSystemIdentification { get; init; }
+    public Max35Text? RegistrationSystemIdentification { get; init; }
 
     /// <summary>
     /// Total Number Of Payments.
     /// </summary>
     [DisplayName("Total Number Of Payments")]
     [IsoXmlTag("TtlNbOfPmts")]
-    public IsoNumber? TotalNumberOfPayments { get; init; }
+    public Number? TotalNumberOfPayments { get; init; }
 }

@@ -24,7 +24,7 @@ public record RedemptionOrder4
     [IsoXmlTag("OrdrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OrderReference { get; init; }
+    public required Max35Text OrderReference { get; init; }
 
     /// <summary>
     /// Specifies the category of the investment fund order.
@@ -65,7 +65,7 @@ public record RedemptionOrder4
     [DisplayName("Holdings Redemption Rate")]
     [IsoXmlTag("HldgsRedRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate HoldingsRedemptionRate { get; init; }
+    public required PercentageRate HoldingsRedemptionRate { get; init; }
 
     /// <summary>
     /// Indicates the rounding direction applied to nearest unit.
@@ -146,7 +146,7 @@ public record RedemptionOrder4
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator PhysicalDeliveryIndicator { get; init; }
+    public required YesNoIndicator PhysicalDeliveryIndicator { get; init; }
 
     /// <summary>
     /// Information related to physical delivery of the securities.

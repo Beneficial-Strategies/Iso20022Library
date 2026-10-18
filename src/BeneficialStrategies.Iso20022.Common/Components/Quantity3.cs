@@ -33,7 +33,7 @@ public record Quantity3
     [IsoXmlTag("OthrUnitOfMeasr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OtherUnitOfMeasure { get; init; }
+    public required Max35Text OtherUnitOfMeasure { get; init; }
 
     /// <summary>
     /// Quantity of a product on a line specified by a number. For example, 100 (kgs), 50 (pieces).
@@ -42,5 +42,5 @@ public record Quantity3
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public required IsoDecimalNumber Value { get; init; }
+    public required DecimalNumber Value { get; init; }
 }

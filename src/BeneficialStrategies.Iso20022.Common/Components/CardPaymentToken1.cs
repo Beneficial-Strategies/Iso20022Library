@@ -22,7 +22,7 @@ public record CardPaymentToken1
     [IsoId("_GB7asGkhEeSTIuB9A-QJ6g")]
     [DisplayName("Token Characteristic")]
     [IsoXmlTag("TknChrtc")]
-    public SimpleValueList<IsoMax35Text> TokenCharacteristic { get; init; } = [];
+    public SimpleValueList<Max35Text> TokenCharacteristic { get; init; } = [];
 
     /// <summary>
     /// Identifier of a token provider requestor.

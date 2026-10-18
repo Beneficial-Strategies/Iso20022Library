@@ -70,7 +70,7 @@ public record MeetingResultDisseminationV08 : IOuterRecord
     [IsoXmlTag("MtgRsltDssmntnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MeetingResultDisseminationIdentification { get; init; }
+    public Max35Text? MeetingResultDisseminationIdentification { get; init; }
 
     /// <summary>
     /// Type of dissemination report, that is, whether the report is new or a replacement.
@@ -88,7 +88,7 @@ public record MeetingResultDisseminationV08 : IOuterRecord
     [IsoXmlTag("PrvsMtgRsltsDssmntnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PreviousMeetingResultsDisseminationIdentification { get; init; }
+    public Max35Text? PreviousMeetingResultsDisseminationIdentification { get; init; }
 
     /// <summary>
     /// Set of elements to allow the unambiguous identification of a meeting.

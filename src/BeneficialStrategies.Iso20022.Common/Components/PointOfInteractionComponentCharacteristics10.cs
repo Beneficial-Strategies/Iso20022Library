@@ -35,7 +35,7 @@ public record PointOfInteractionComponentCharacteristics10
     /// </summary>
     [DisplayName("Security Access Modules")]
     [IsoXmlTag("SctyAccsMdls")]
-    public IsoNumber? SecurityAccessModules { get; init; }
+    public Number? SecurityAccessModules { get; init; }
 
     /// <summary>
     /// Security Element.
@@ -49,5 +49,5 @@ public record PointOfInteractionComponentCharacteristics10
     /// </summary>
     [DisplayName("Subscriber Identity Modules")]
     [IsoXmlTag("SbcbrIdntyMdls")]
-    public IsoNumber? SubscriberIdentityModules { get; init; }
+    public Number? SubscriberIdentityModules { get; init; }
 }

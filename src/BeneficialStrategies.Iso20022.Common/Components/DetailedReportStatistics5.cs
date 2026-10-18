@@ -23,7 +23,7 @@ public record DetailedReportStatistics5
     [DisplayName("Total Number Of Reports")]
     [IsoXmlTag("TtlNbOfRpts")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText TotalNumberOfReports { get; init; }
+    public required Max15NumericText TotalNumberOfReports { get; init; }
 
     /// <summary>
     /// Total number of reports accepted.
@@ -32,7 +32,7 @@ public record DetailedReportStatistics5
     [DisplayName("Total Number Of Reports Accepted")]
     [IsoXmlTag("TtlNbOfRptsAccptd")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText TotalNumberOfReportsAccepted { get; init; }
+    public required Max15NumericText TotalNumberOfReportsAccepted { get; init; }
 
     /// <summary>
     /// Total number of reports rejected.
@@ -41,7 +41,7 @@ public record DetailedReportStatistics5
     [DisplayName("Total Number Of Reports Rejected")]
     [IsoXmlTag("TtlNbOfRptsRjctd")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText TotalNumberOfReportsRejected { get; init; }
+    public required Max15NumericText TotalNumberOfReportsRejected { get; init; }
 
     /// <summary>
     /// Number of reports rejected per error code.

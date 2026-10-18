@@ -31,7 +31,7 @@ public record PartyAndAuthorisation1
     [DisplayName("Signature Order")]
     [IsoXmlTag("SgntrOrdr")]
     [IsoSimpleType(IsoSimpleType.Max15PlusSignedNumericText)]
-    public IsoMax15PlusSignedNumericText? SignatureOrder { get; init; }
+    public Max15PlusSignedNumericText? SignatureOrder { get; init; }
 
     /// <summary>
     /// Authorisation granted to a mandate holder.

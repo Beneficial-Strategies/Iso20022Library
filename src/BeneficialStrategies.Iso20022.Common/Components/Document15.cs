@@ -29,14 +29,14 @@ public record Document15
     /// </summary>
     [DisplayName("Enclosure")]
     [IsoXmlTag("Nclsr")]
-    public required IsoMax10MbBinary Enclosure { get; init; }
+    public required Max10MbBinary Enclosure { get; init; }
 
     /// <summary>
     /// Technical name of the file.
     /// </summary>
     [DisplayName("File Name")]
     [IsoXmlTag("FileNm")]
-    public IsoMax140Text? FileName { get; init; }
+    public Max140Text? FileName { get; init; }
 
     /// <summary>
     /// Format of the document or template, such as PDF, XML, XSLT.
@@ -50,7 +50,7 @@ public record Document15
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Issue date or date time of the document.
@@ -71,7 +71,7 @@ public record Document15
     /// </summary>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax140Text? Name { get; init; }
+    public Max140Text? Name { get; init; }
 
     /// <summary>
     /// Type of document or template.

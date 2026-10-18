@@ -24,6 +24,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ExerciseDate1Choice
         /// </summary>
         [IsoXmlTag("FrstExrcDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate Value { get; init; }
+        public required DateOnly Value { get; init; }
     }
 }

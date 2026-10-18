@@ -23,7 +23,7 @@ public record SpecificInstructionRequest1
     [DisplayName("Participation Registration")]
     [IsoXmlTag("PrtcptnRegn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ParticipationRegistration { get; init; }
+    public YesNoIndicator? ParticipationRegistration { get; init; }
 
     /// <summary>
     /// Request to block the securities.
@@ -32,7 +32,7 @@ public record SpecificInstructionRequest1
     [DisplayName("Blocking Securities")]
     [IsoXmlTag("BlckgScties")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? BlockingSecurities { get; init; }
+    public YesNoIndicator? BlockingSecurities { get; init; }
 
     /// <summary>
     /// Request to register the securities for the meeting.
@@ -41,5 +41,5 @@ public record SpecificInstructionRequest1
     [DisplayName("Securities Registration")]
     [IsoXmlTag("SctiesRegn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? SecuritiesRegistration { get; init; }
+    public YesNoIndicator? SecuritiesRegistration { get; init; }
 }

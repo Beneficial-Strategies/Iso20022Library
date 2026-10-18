@@ -31,6 +31,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentCodeOrOther1Choice
         [DisplayName("Number Of Days")]
         [IsoXmlTag("NbOfDays")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public IsoNumber? NumberOfDays { get; init; }
+        public Number? NumberOfDays { get; init; }
     }
 }

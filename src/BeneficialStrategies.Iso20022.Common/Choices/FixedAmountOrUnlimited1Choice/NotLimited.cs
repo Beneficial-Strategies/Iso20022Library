@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.FixedAmountOrUnlimited1Choice
         /// </summary>
         [IsoXmlTag("NotLtd")]
         [IsoSimpleType(IsoSimpleType.Unlimited9Text)]
-        public required IsoUnlimited9Text Value { get; init; }
+        public required Unlimited9Text Value { get; init; }
     }
 }

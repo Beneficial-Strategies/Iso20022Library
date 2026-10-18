@@ -21,7 +21,7 @@ public record IndividualPerson44
     /// </summary>
     [DisplayName("Birth Date")]
     [IsoXmlTag("BirthDt")]
-    public IsoISODate? BirthDate { get; init; }
+    public DateOnly? BirthDate { get; init; }
 
     /// <summary>
     /// Citizenship Information.
@@ -35,7 +35,7 @@ public record IndividualPerson44
     /// </summary>
     [DisplayName("City Of Birth")]
     [IsoXmlTag("CityOfBirth")]
-    public IsoMax35Text? CityOfBirth { get; init; }
+    public Max35Text? CityOfBirth { get; init; }
 
     /// <summary>
     /// Country And Residential Status.
@@ -112,7 +112,7 @@ public record IndividualPerson44
     /// </summary>
     [DisplayName("Province Of Birth")]
     [IsoXmlTag("PrvcOfBirth")]
-    public IsoMax35Text? ProvinceOfBirth { get; init; }
+    public Max35Text? ProvinceOfBirth { get; init; }
 
     /// <summary>
     /// Secondary Communication Address.
@@ -126,7 +126,7 @@ public record IndividualPerson44
     /// </summary>
     [DisplayName("Social Security Number")]
     [IsoXmlTag("SclSctyNb")]
-    public IsoMax35Text? SocialSecurityNumber { get; init; }
+    public Max35Text? SocialSecurityNumber { get; init; }
 
     /// <summary>
     /// Taxation Country.

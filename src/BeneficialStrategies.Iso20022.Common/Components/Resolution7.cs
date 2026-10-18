@@ -35,21 +35,21 @@ public record Resolution7
     /// </summary>
     [DisplayName("For Information Only")]
     [IsoXmlTag("ForInfOnly")]
-    public required IsoYesNoIndicator ForInformationOnly { get; init; }
+    public required YesNoIndicator ForInformationOnly { get; init; }
 
     /// <summary>
     /// Issuer Label.
     /// </summary>
     [DisplayName("Issuer Label")]
     [IsoXmlTag("IssrLabl")]
-    public required IsoMax35Text IssuerLabel { get; init; }
+    public required Max35Text IssuerLabel { get; init; }
 
     /// <summary>
     /// Listing Group Resolution Label.
     /// </summary>
     [DisplayName("Listing Group Resolution Label")]
     [IsoXmlTag("ListgGrpRsltnLabl")]
-    public IsoMax35Text? ListingGroupResolutionLabel { get; init; }
+    public Max35Text? ListingGroupResolutionLabel { get; init; }
 
     /// <summary>
     /// Management Recommendation.
@@ -70,7 +70,7 @@ public record Resolution7
     /// </summary>
     [DisplayName("Right To Withdraw Indicator")]
     [IsoXmlTag("RghtToWdrwInd")]
-    public IsoYesNoIndicator? RightToWithdrawIndicator { get; init; }
+    public YesNoIndicator? RightToWithdrawIndicator { get; init; }
 
     /// <summary>
     /// Status.
@@ -84,7 +84,7 @@ public record Resolution7
     /// </summary>
     [DisplayName("Submitted By Security Holder")]
     [IsoXmlTag("SubmittdBySctyHldr")]
-    public IsoYesNoIndicator? SubmittedBySecurityHolder { get; init; }
+    public YesNoIndicator? SubmittedBySecurityHolder { get; init; }
 
     /// <summary>
     /// Type.
@@ -98,7 +98,7 @@ public record Resolution7
     /// </summary>
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
-    public IsoMax2048Text? URLAddress { get; init; }
+    public Max2048Text? URLAddress { get; init; }
 
     /// <summary>
     /// Vote Instruction Type.

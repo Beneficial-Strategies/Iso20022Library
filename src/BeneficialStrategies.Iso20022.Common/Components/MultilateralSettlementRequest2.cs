@@ -25,7 +25,7 @@ public record MultilateralSettlementRequest2
     [IsoXmlTag("InstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text InstructionIdentification { get; init; }
+    public required Max35Text InstructionIdentification { get; init; }
 
     /// <summary>
     /// Indicator of the urgency or order of importance that the instructing agent would like the market infrastructure to apply to the processing of the instruction.
@@ -62,7 +62,7 @@ public record MultilateralSettlementRequest2
     [IsoXmlTag("SttlmCycl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SettlementCycle { get; init; }
+    public Max35Text? SettlementCycle { get; init; }
 
     /// <summary>
     /// Indicator of the number of movement records contained in an individual settlement request.
@@ -71,7 +71,7 @@ public record MultilateralSettlementRequest2
     [DisplayName("Number Of Movement Records")]
     [IsoXmlTag("NbOfMvmntRcrds")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NumberOfMovementRecords { get; init; }
+    public Number? NumberOfMovementRecords { get; init; }
 
     /// <summary>
     /// Credit or debit transaction contained in an individual settlement request.

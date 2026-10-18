@@ -24,7 +24,7 @@ public record MeetingNotice4
     [IsoXmlTag("MtgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MeetingIdentification { get; init; }
+    public Max35Text? MeetingIdentification { get; init; }
 
     /// <summary>
     /// Identification assigned to the meeting by the issuer. It must be unique for the issuer.
@@ -34,7 +34,7 @@ public record MeetingNotice4
     [IsoXmlTag("IssrMtgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? IssuerMeetingIdentification { get; init; }
+    public Max35Text? IssuerMeetingIdentification { get; init; }
 
     /// <summary>
     /// Specifies the type of security holders meeting.
@@ -59,7 +59,7 @@ public record MeetingNotice4
     [DisplayName("Announcement Date")]
     [IsoXmlTag("AnncmntDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? AnnouncementDate { get; init; }
+    public DateOnly? AnnouncementDate { get; init; }
 
     /// <summary>
     /// Indicates whether physical participation to the meeting is required in order to be allowed to vote.
@@ -68,7 +68,7 @@ public record MeetingNotice4
     [DisplayName("Attendance Required")]
     [IsoXmlTag("AttndncReqrd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AttendanceRequired { get; init; }
+    public YesNoIndicator? AttendanceRequired { get; init; }
 
     /// <summary>
     /// Indicates how to order the attendance card or to give notice of attendance.
@@ -78,7 +78,7 @@ public record MeetingNotice4
     [IsoXmlTag("AttndncConfInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AttendanceConfirmationInformation { get; init; }
+    public Max350Text? AttendanceConfirmationInformation { get; init; }
 
     /// <summary>
     /// Date and time by which the beneficial owner or agent must notify of its intention to participate in the meeting. This deadline is set by an intermediary.
@@ -112,7 +112,7 @@ public record MeetingNotice4
     [IsoXmlTag("AddtlDcmnttnURLAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? AdditionalDocumentationURLAddress { get; init; }
+    public Max256Text? AdditionalDocumentationURLAddress { get; init; }
 
     /// <summary>
     /// Additional procedural information about the general meeting, specifying the participation requirements and the voting procedures. Alternatively, this may indicate where such information may be obtained.
@@ -139,7 +139,7 @@ public record MeetingNotice4
     [DisplayName("Total Number Of Voting Rights")]
     [IsoXmlTag("TtlNbOfVtngRghts")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? TotalNumberOfVotingRights { get; init; }
+    public Number? TotalNumberOfVotingRights { get; init; }
 
     /// <summary>
     /// Address where the information on the proxy should be sent.

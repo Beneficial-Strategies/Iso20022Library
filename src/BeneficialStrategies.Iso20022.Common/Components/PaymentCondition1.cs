@@ -23,7 +23,7 @@ public record PaymentCondition1
     [DisplayName("Amount Modification Allowed")]
     [IsoXmlTag("AmtModAllwd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator AmountModificationAllowed { get; init; }
+    public required TrueFalseIndicator AmountModificationAllowed { get; init; }
 
     /// <summary>
     /// Indicates if the debtor is allowed to pay before the requested execution date.
@@ -32,7 +32,7 @@ public record PaymentCondition1
     [DisplayName("Early Payment Allowed")]
     [IsoXmlTag("EarlyPmtAllwd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator EarlyPaymentAllowed { get; init; }
+    public required TrueFalseIndicator EarlyPaymentAllowed { get; init; }
 
     /// <summary>
     /// Penalty to be applied for a delayed payment, that is when the payment is made after the requested execution date.
@@ -42,7 +42,7 @@ public record PaymentCondition1
     [IsoXmlTag("DelyPnlty")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? DelayPenalty { get; init; }
+    public Max140Text? DelayPenalty { get; init; }
 
     /// <summary>
     /// Discount rate applied for immediate payment upon receipt of the request.
@@ -59,5 +59,5 @@ public record PaymentCondition1
     [DisplayName("Guaranteed Payment Requested")]
     [IsoXmlTag("GrntedPmtReqd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator GuaranteedPaymentRequested { get; init; }
+    public required TrueFalseIndicator GuaranteedPaymentRequested { get; init; }
 }

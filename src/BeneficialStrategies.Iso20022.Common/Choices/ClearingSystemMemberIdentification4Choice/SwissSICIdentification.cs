@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
         /// </summary>
         [IsoXmlTag("CHSIC")]
         [IsoSimpleType(IsoSimpleType.SwissSICIdentifier)]
-        public required IsoSwissSICIdentifier Value { get; init; }
+        public required SwissSICIdentifier Value { get; init; }
     }
 }

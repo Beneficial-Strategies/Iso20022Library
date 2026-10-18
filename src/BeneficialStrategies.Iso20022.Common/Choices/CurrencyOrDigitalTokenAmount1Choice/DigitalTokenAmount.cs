@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrencyOrDigitalTokenAmount1Cho
         [DisplayName("Identifier")]
         [IsoXmlTag("Idr")]
         [IsoSimpleType(IsoSimpleType.DTI2021Identifier)]
-        public IsoDTI2021Identifier? Identifier { get; init; }
+        public DTI2021Identifier? Identifier { get; init; }
 
         /// <summary>
         /// Quantity of digital tokens expressed as a number, for example, a number of blockchain tokens.
@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrencyOrDigitalTokenAmount1Cho
         [DisplayName("Unit")]
         [IsoXmlTag("Unit")]
         [IsoSimpleType(IsoSimpleType.Max30DecimalNumber)]
-        public required IsoMax30DecimalNumber Unit { get; init; }
+        public required Max30DecimalNumber Unit { get; init; }
 
         /// <summary>
         /// Provides a description of the digital token identifier.
@@ -41,6 +41,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrencyOrDigitalTokenAmount1Cho
         [DisplayName("Description")]
         [IsoXmlTag("Desc")]
         [IsoSimpleType(IsoSimpleType.Max30Text)]
-        public IsoMax30Text? Description { get; init; }
+        public Max30Text? Description { get; init; }
     }
 }

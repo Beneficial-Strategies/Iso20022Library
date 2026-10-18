@@ -24,7 +24,7 @@ public record GenericIdentification48
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Version of the identification.
@@ -34,7 +34,7 @@ public record GenericIdentification48
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Version { get; init; }
+    public required Max35Text Version { get; init; }
 
     /// <summary>
     /// Entity that assigns the identification.
@@ -44,5 +44,5 @@ public record GenericIdentification48
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Issuer { get; init; }
+    public required Max35Text Issuer { get; init; }
 }

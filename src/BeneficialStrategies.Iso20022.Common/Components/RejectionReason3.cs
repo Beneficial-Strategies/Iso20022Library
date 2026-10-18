@@ -32,7 +32,7 @@ public record RejectionReason3
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? AdditionalInformation { get; init; }
+    public Max140Text? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Linked previous reference that is invalid or unrecognised, of the message being rejected.

@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
         /// </summary>
         [IsoXmlTag("PTNCC")]
         [IsoSimpleType(IsoSimpleType.PortugueseNCCIdentifier)]
-        public required IsoPortugueseNCCIdentifier Value { get; init; }
+        public required PortugueseNCCIdentifier Value { get; init; }
     }
 }

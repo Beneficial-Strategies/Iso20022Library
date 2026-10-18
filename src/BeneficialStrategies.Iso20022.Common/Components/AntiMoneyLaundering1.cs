@@ -24,7 +24,7 @@ public record AntiMoneyLaundering1
     [IsoXmlTag("SndrNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? SenderName { get; init; }
+    public Max70Text? SenderName { get; init; }
 
     /// <summary>
     /// Address of the sender.
@@ -42,7 +42,7 @@ public record AntiMoneyLaundering1
     [IsoXmlTag("SndrNtlIdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SenderNationalIdentifier { get; init; }
+    public Max35Text? SenderNationalIdentifier { get; init; }
 
     /// <summary>
     /// Country of the national identifier (ISO 3166-1 alpha-2 or alpha-3).
@@ -51,7 +51,7 @@ public record AntiMoneyLaundering1
     [DisplayName("National Identifier Country")]
     [IsoXmlTag("NtlIdrCtry")]
     [IsoSimpleType(IsoSimpleType.Min2Max3AlphaText)]
-    public IsoMin2Max3AlphaText? NationalIdentifierCountry { get; init; }
+    public Min2Max3AlphaText? NationalIdentifierCountry { get; init; }
 
     /// <summary>
     /// Passport number of the sender.
@@ -61,7 +61,7 @@ public record AntiMoneyLaundering1
     [IsoXmlTag("SndrPsptNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SenderPassportNumber { get; init; }
+    public Max35Text? SenderPassportNumber { get; init; }
 
     /// <summary>
     /// Country issuing the passport (ISO 3166-1 alpha-2 or alpha-3).
@@ -70,7 +70,7 @@ public record AntiMoneyLaundering1
     [DisplayName("Passport Issuing Country")]
     [IsoXmlTag("PsptIssgCtry")]
     [IsoSimpleType(IsoSimpleType.Min2Max3AlphaText)]
-    public IsoMin2Max3AlphaText? PassportIssuingCountry { get; init; }
+    public Min2Max3AlphaText? PassportIssuingCountry { get; init; }
 
     /// <summary>
     /// Tax identifier of the sender.
@@ -80,7 +80,7 @@ public record AntiMoneyLaundering1
     [IsoXmlTag("SndrTaxIdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SenderTaxIdentifier { get; init; }
+    public Max35Text? SenderTaxIdentifier { get; init; }
 
     /// <summary>
     /// Country of the tax (ISO 3166-1 alpha-2 or alpha-3).
@@ -89,7 +89,7 @@ public record AntiMoneyLaundering1
     [DisplayName("Tax Country")]
     [IsoXmlTag("TaxCtry")]
     [IsoSimpleType(IsoSimpleType.Min2Max3AlphaText)]
-    public IsoMin2Max3AlphaText? TaxCountry { get; init; }
+    public Min2Max3AlphaText? TaxCountry { get; init; }
 
     /// <summary>
     /// Customer identifier of the sender.
@@ -99,7 +99,7 @@ public record AntiMoneyLaundering1
     [IsoXmlTag("SndrCstmrIdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SenderCustomerIdentifier { get; init; }
+    public Max35Text? SenderCustomerIdentifier { get; init; }
 
     /// <summary>
     /// Date and place of birth of the sender.
@@ -117,7 +117,7 @@ public record AntiMoneyLaundering1
     [IsoXmlTag("RcvrNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? ReceiverName { get; init; }
+    public Max70Text? ReceiverName { get; init; }
 
     /// <summary>
     /// Unique transaction reference number for sender and the receiver.
@@ -127,5 +127,5 @@ public record AntiMoneyLaundering1
     [IsoXmlTag("TxRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TransactionReference { get; init; }
+    public Max35Text? TransactionReference { get; init; }
 }

@@ -32,7 +32,7 @@ public record EntitlementAdvice1
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public required IsoExact3NumericText OptionNumber { get; init; }
+    public required Exact3NumericText OptionNumber { get; init; }
 
     /// <summary>
     /// Date on which the holders of securities are/will be recorded for the income being paid or for entitlement to the rights or offer/privilege.

@@ -63,5 +63,5 @@ public record ConcentrationAccount1
     [DisplayName("Late Payment Confirmation")]
     [IsoXmlTag("LatePmtConf")]
     [IsoSimpleType(IsoSimpleType.Max10NumericText)]
-    public required IsoMax10NumericText LatePaymentConfirmation { get; init; }
+    public required Max10NumericText LatePaymentConfirmation { get; init; }
 }

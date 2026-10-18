@@ -31,7 +31,7 @@ public record Confirmation1
     [DisplayName("Confirmation Time")]
     [IsoXmlTag("ConfTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? ConfirmationTime { get; init; }
+    public ISODateTime? ConfirmationTime { get; init; }
 
     /// <summary>
     /// Time that the trade party confirms the trade.
@@ -40,7 +40,7 @@ public record Confirmation1
     [DisplayName("Trade Party Confirmation Time")]
     [IsoXmlTag("TradPtyConfTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? TradePartyConfirmationTime { get; init; }
+    public ISODateTime? TradePartyConfirmationTime { get; init; }
 
     /// <summary>
     /// Time that the initiating party confirms the trade.
@@ -49,7 +49,7 @@ public record Confirmation1
     [DisplayName("Initiating Party Confirmation Time")]
     [IsoXmlTag("InitgPtyConfTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? InitiatingPartyConfirmationTime { get; init; }
+    public ISODateTime? InitiatingPartyConfirmationTime { get; init; }
 
     /// <summary>
     /// Identifies the type of confirmation message being sent.
@@ -74,7 +74,7 @@ public record Confirmation1
     [DisplayName("Query Start Number")]
     [IsoXmlTag("QryStartNb")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public required IsoMax35NumericText QueryStartNumber { get; init; }
+    public required Max35NumericText QueryStartNumber { get; init; }
 
     /// <summary>
     /// Total number of reports returned in response to a request.
@@ -83,7 +83,7 @@ public record Confirmation1
     [DisplayName("Total Number Of Reports")]
     [IsoXmlTag("TtlNbOfRpts")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber TotalNumberOfReports { get; init; }
+    public required Number TotalNumberOfReports { get; init; }
 
     /// <summary>
     /// Query results will be grouped with fixed number. The field indicates that the total number of groups.
@@ -92,7 +92,7 @@ public record Confirmation1
     [DisplayName("Page Number")]
     [IsoXmlTag("PgNb")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public required IsoMax35NumericText PageNumber { get; init; }
+    public required Max35NumericText PageNumber { get; init; }
 
     /// <summary>
     /// Page number in request result.
@@ -101,7 +101,7 @@ public record Confirmation1
     [DisplayName("Query Page Number")]
     [IsoXmlTag("QryPgNb")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public required IsoMax35NumericText QueryPageNumber { get; init; }
+    public required Max35NumericText QueryPageNumber { get; init; }
 
     /// <summary>
     /// Number of messages in current page.
@@ -110,7 +110,7 @@ public record Confirmation1
     [DisplayName("Message Number Of Current Page")]
     [IsoXmlTag("MsgNbOfCurPg")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber MessageNumberOfCurrentPage { get; init; }
+    public required Number MessageNumberOfCurrentPage { get; init; }
 
     /// <summary>
     /// Number of reports at current page.
@@ -119,7 +119,7 @@ public record Confirmation1
     [DisplayName("List Order Number")]
     [IsoXmlTag("ListOrdrNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber ListOrderNumber { get; init; }
+    public required Number ListOrderNumber { get; init; }
 
     /// <summary>
     /// Indicate whether the current message is the last one of the current page or not.
@@ -128,7 +128,7 @@ public record Confirmation1
     [DisplayName("Last Page Indicator")]
     [IsoXmlTag("LastPgInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator LastPageIndicator { get; init; }
+    public required YesNoIndicator LastPageIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether this message is that last report message in response to a request.
@@ -137,5 +137,5 @@ public record Confirmation1
     [DisplayName("Last Report Requested")]
     [IsoXmlTag("LastRptReqd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator LastReportRequested { get; init; }
+    public required YesNoIndicator LastReportRequested { get; init; }
 }

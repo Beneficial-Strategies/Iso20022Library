@@ -47,7 +47,7 @@ public record RateDetails7
     [DisplayName("Fiscal Stamp")]
     [IsoXmlTag("FsclStmp")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? FiscalStamp { get; init; }
+    public PercentageRate? FiscalStamp { get; init; }
 
     /// <summary>
     /// Rate resulting from a fully franked dividend paid by a company; rate includes tax credit for companies that have made sufficient tax payments during fiscal period.
@@ -72,7 +72,7 @@ public record RateDetails7
     [DisplayName("Early Solicitation Fee Rate")]
     [IsoXmlTag("EarlySlctnFeeRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? EarlySolicitationFeeRate { get; init; }
+    public PercentageRate? EarlySolicitationFeeRate { get; init; }
 
     /// <summary>
     /// Rate of the cash premium made available if the securities holder consents or participates to an event, for example, consent fees.
@@ -81,7 +81,7 @@ public record RateDetails7
     [DisplayName("Cash Incentive Rate")]
     [IsoXmlTag("CshIncntivRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? CashIncentiveRate { get; init; }
+    public PercentageRate? CashIncentiveRate { get; init; }
 
     /// <summary>
     /// Actual interest rate used for the payment of the interest for the specified interest period.
@@ -123,7 +123,7 @@ public record RateDetails7
     [DisplayName("Applicable Rate")]
     [IsoXmlTag("AplblRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? ApplicableRate { get; init; }
+    public PercentageRate? ApplicableRate { get; init; }
 
     /// <summary>
     /// Cash rate made available in an offer in order to encourage participation in the offer.
@@ -132,7 +132,7 @@ public record RateDetails7
     [DisplayName("Solicitation Fee Rate")]
     [IsoXmlTag("SlctnFeeRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? SolicitationFeeRate { get; init; }
+    public PercentageRate? SolicitationFeeRate { get; init; }
 
     /// <summary>
     /// Amount of money per equity allocated as the result of a tax credit.
@@ -157,7 +157,7 @@ public record RateDetails7
     [DisplayName("Withholding Tax Rate")]
     [IsoXmlTag("WhldgTaxRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? WithholdingTaxRate { get; init; }
+    public PercentageRate? WithholdingTaxRate { get; init; }
 
     /// <summary>
     /// Taxation applied on an amount clearly identified as an income.
@@ -166,7 +166,7 @@ public record RateDetails7
     [DisplayName("Tax On Income")]
     [IsoXmlTag("TaxOnIncm")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? TaxOnIncome { get; init; }
+    public PercentageRate? TaxOnIncome { get; init; }
 
     /// <summary>
     /// Taxation applied on an amount clearly identified as capital profits, capital gains.
@@ -175,7 +175,7 @@ public record RateDetails7
     [DisplayName("Tax On Profits")]
     [IsoXmlTag("TaxOnPrfts")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? TaxOnProfits { get; init; }
+    public PercentageRate? TaxOnProfits { get; init; }
 
     /// <summary>
     /// Percentage of cash that was paid in excess of actual tax obligation and was reclaimed.
@@ -184,7 +184,7 @@ public record RateDetails7
     [DisplayName("Tax Reclaim Rate")]
     [IsoXmlTag("TaxRclmRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? TaxReclaimRate { get; init; }
+    public PercentageRate? TaxReclaimRate { get; init; }
 
     /// <summary>
     /// Rate at which the income will be withheld by the jurisdiction in which the income was originally paid, for which relief at source and/or reclaim may be possible.

@@ -31,7 +31,7 @@ public record Option15
     [DisplayName("Conversion Date")]
     [IsoXmlTag("ConvsDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? ConversionDate { get; init; }
+    public ISODateTime? ConversionDate { get; init; }
 
     /// <summary>
     /// Amount of money for which goods, services or assets are offered, sold, or bought.
@@ -80,7 +80,7 @@ public record Option15
     [DisplayName("Strike Value")]
     [IsoXmlTag("StrkVal")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? StrikeValue { get; init; }
+    public Number? StrikeValue { get; init; }
 
     /// <summary>
     /// Used for derivatives. Multiplier applied to the strike price for the purpose of calculating the settlement value.
@@ -89,7 +89,7 @@ public record Option15
     [DisplayName("Strike Multiplier")]
     [IsoXmlTag("StrkMltplr")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? StrikeMultiplier { get; init; }
+    public Number? StrikeMultiplier { get; init; }
 
     /// <summary>
     /// Method under which assignment was conducted.
@@ -106,7 +106,7 @@ public record Option15
     [DisplayName("Version Number")]
     [IsoXmlTag("VrsnNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? VersionNumber { get; init; }
+    public Number? VersionNumber { get; init; }
 
     /// <summary>
     /// Financial center where option expires.
@@ -116,7 +116,7 @@ public record Option15
     [IsoXmlTag("XpryLctn")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4AlphaNumericText? ExpiryLocation { get; init; }
+    public Max4AlphaNumericText? ExpiryLocation { get; init; }
 
     /// <summary>
     /// Specifies whether the terms of the security (underlying instruments, expiration date, contract size) are defined according to the exchange specifications or whether they can be user defined.
@@ -141,7 +141,7 @@ public record Option15
     [DisplayName("Contract Size")]
     [IsoXmlTag("CtrctSz")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? ContractSize { get; init; }
+    public BaseOneRate? ContractSize { get; init; }
 
     /// <summary>
     /// Provides more information about the underlying instrument.

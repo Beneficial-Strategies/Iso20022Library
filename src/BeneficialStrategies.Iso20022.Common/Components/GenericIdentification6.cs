@@ -24,7 +24,7 @@ public record GenericIdentification6
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.Max8Text)]
     [StringLength(maximumLength: 8, MinimumLength = 1)]
-    public required IsoMax8Text Issuer { get; init; }
+    public required Max8Text Issuer { get; init; }
 
     /// <summary>
     /// Proprietary information, often a code, issued by the data source scheme issuer.
@@ -33,7 +33,7 @@ public record GenericIdentification6
     [DisplayName("Information")]
     [IsoXmlTag("Inf")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    public required IsoExact4AlphaNumericText Information { get; init; }
+    public required Exact4AlphaNumericText Information { get; init; }
 
     /// <summary>
     /// Value of the balance.
@@ -42,5 +42,5 @@ public record GenericIdentification6
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber Balance { get; init; }
+    public required Number Balance { get; init; }
 }

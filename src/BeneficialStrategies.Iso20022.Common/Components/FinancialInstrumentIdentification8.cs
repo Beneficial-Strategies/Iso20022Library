@@ -30,7 +30,7 @@ public record FinancialInstrumentIdentification8
     [IsoId("1cfbf440-58c0-441b-8090-b1a434798ee7")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax350Text? Name { get; init; }
+    public Max350Text? Name { get; init; }
 
     /// <summary>
     /// Financial Instrument Short Name (FISN) expressed in conformance with the ISO 18774 standard.
@@ -38,7 +38,7 @@ public record FinancialInstrumentIdentification8
     [IsoId("c34a5aec-ff0e-42a3-9113-35e54e35a5a1")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
-    public IsoMax35Text? ShortName { get; init; }
+    public Max35Text? ShortName { get; init; }
 
     /// <summary>
     /// Type of security.
@@ -54,7 +54,7 @@ public record FinancialInstrumentIdentification8
     [IsoId("a84909b7-cdc7-4d74-a681-87cb6766602c")]
     [DisplayName("Restricted Indicator")]
     [IsoXmlTag("RstrctdInd")]
-    public IsoYesNoIndicator? RestrictedIndicator { get; init; }
+    public YesNoIndicator? RestrictedIndicator { get; init; }
 
     /// <summary>
     /// Alternative security offered in place of a restricted security.

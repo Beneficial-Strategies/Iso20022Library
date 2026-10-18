@@ -21,7 +21,7 @@ public record OrderIdentification2
     /// </summary>
     [DisplayName("Date Of Receipt")]
     [IsoXmlTag("DtOfRct")]
-    public IsoISODate? DateOfReceipt { get; init; }
+    public DateOnly? DateOfReceipt { get; init; }
 
     /// <summary>
     /// Event Type.
@@ -42,14 +42,14 @@ public record OrderIdentification2
     /// </summary>
     [DisplayName("Order Book Identification")]
     [IsoXmlTag("OrdrBookId")]
-    public required IsoMax35Text OrderBookIdentification { get; init; }
+    public required Max35Text OrderBookIdentification { get; init; }
 
     /// <summary>
     /// Order Identification.
     /// </summary>
     [DisplayName("Order Identification")]
     [IsoXmlTag("OrdrId")]
-    public IsoMax50Text? OrderIdentification { get; init; }
+    public Max50Text? OrderIdentification { get; init; }
 
     /// <summary>
     /// Order Restriction.
@@ -70,28 +70,28 @@ public record OrderIdentification2
     /// </summary>
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
-    public required IsoPositiveNumber SequenceNumber { get; init; }
+    public required PositiveNumber SequenceNumber { get; init; }
 
     /// <summary>
     /// Time Stamp.
     /// </summary>
     [DisplayName("Time Stamp")]
     [IsoXmlTag("TmStmp")]
-    public required IsoISODateTime TimeStamp { get; init; }
+    public required ISODateTime TimeStamp { get; init; }
 
     /// <summary>
     /// Trade Venue.
     /// </summary>
     [DisplayName("Trade Venue")]
     [IsoXmlTag("TradVn")]
-    public required IsoMICIdentifier TradeVenue { get; init; }
+    public required MICIdentifier TradeVenue { get; init; }
 
     /// <summary>
     /// Validity Date Time.
     /// </summary>
     [DisplayName("Validity Date Time")]
     [IsoXmlTag("VldtyDtTm")]
-    public IsoISODateTime? ValidityDateTime { get; init; }
+    public ISODateTime? ValidityDateTime { get; init; }
 
     /// <summary>
     /// Validity Period.

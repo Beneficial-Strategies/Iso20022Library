@@ -23,7 +23,7 @@ public record SettlementAllowanceCharge1
     [DisplayName("Allowance Charge Indicator")]
     [IsoXmlTag("AllwncChrgInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AllowanceChargeIndicator { get; init; }
+    public YesNoIndicator? AllowanceChargeIndicator { get; init; }
 
     /// <summary>
     /// Actual monetary amount specified for the allowance or charge.

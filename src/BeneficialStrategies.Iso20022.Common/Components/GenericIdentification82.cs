@@ -24,7 +24,7 @@ public record GenericIdentification82
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Type of identification.
@@ -42,7 +42,7 @@ public record GenericIdentification82
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Issuer { get; init; }
+    public Max35Text? Issuer { get; init; }
 
     /// <summary>
     /// Date at which the identification was issued.
@@ -51,7 +51,7 @@ public record GenericIdentification82
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? IssueDate { get; init; }
+    public DateOnly? IssueDate { get; init; }
 
     /// <summary>
     /// Date at which the identification expires.
@@ -60,7 +60,7 @@ public record GenericIdentification82
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ExpiryDate { get; init; }
+    public DateOnly? ExpiryDate { get; init; }
 
     /// <summary>
     /// Name of the state, county or country sub-division that issued the identification document.
@@ -70,7 +70,7 @@ public record GenericIdentification82
     [IsoXmlTag("Stat")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? State { get; init; }
+    public Max70Text? State { get; init; }
 
     /// <summary>
     /// Country that issued the identification document.

@@ -104,7 +104,7 @@ public record IntraPositionMovementDetails12
     [IsoXmlTag("InstrPrcgAddtlDtls")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? InstructionProcessingAdditionalDetails { get; init; }
+    public RestrictedFINXMax350Text? InstructionProcessingAdditionalDetails { get; init; }
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.

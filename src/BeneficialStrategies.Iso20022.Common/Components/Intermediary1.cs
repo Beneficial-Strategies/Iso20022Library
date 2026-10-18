@@ -40,5 +40,5 @@ public record Intermediary1
     [IsoXmlTag("Role")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Role { get; init; }
+    public Max35Text? Role { get; init; }
 }

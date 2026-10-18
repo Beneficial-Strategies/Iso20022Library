@@ -21,14 +21,14 @@ public record Participation6
     /// </summary>
     [DisplayName("Calculation Date")]
     [IsoXmlTag("ClctnDt")]
-    public IsoISODate? CalculationDate { get; init; }
+    public DateOnly? CalculationDate { get; init; }
 
     /// <summary>
     /// Percentage Of Voting Rights.
     /// </summary>
     [DisplayName("Percentage Of Voting Rights")]
     [IsoXmlTag("PctgOfVtngRghts")]
-    public IsoPercentage14Rate? PercentageOfVotingRights { get; init; }
+    public decimal? PercentageOfVotingRights { get; init; }
 
     /// <summary>
     /// Total Number Of Securities Outstanding.
@@ -42,5 +42,5 @@ public record Participation6
     /// </summary>
     [DisplayName("Total Number Of Voting Rights")]
     [IsoXmlTag("TtlNbOfVtngRghts")]
-    public IsoNumber? TotalNumberOfVotingRights { get; init; }
+    public Number? TotalNumberOfVotingRights { get; init; }
 }

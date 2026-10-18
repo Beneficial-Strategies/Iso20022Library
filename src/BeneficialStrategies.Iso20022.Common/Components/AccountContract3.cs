@@ -23,7 +23,7 @@ public record AccountContract3
     [DisplayName("Target Go Live Date")]
     [IsoXmlTag("TrgtGoLiveDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TargetGoLiveDate { get; init; }
+    public DateOnly? TargetGoLiveDate { get; init; }
 
     /// <summary>
     /// Date on which the account and related services are expected to cease to be operational for the account owner.
@@ -32,7 +32,7 @@ public record AccountContract3
     [DisplayName("Target Closing Date")]
     [IsoXmlTag("TrgtClsgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TargetClosingDate { get; init; }
+    public DateOnly? TargetClosingDate { get; init; }
 
     /// <summary>
     /// Date on which the account and related basic services are effectively operational for the account owner.
@@ -41,7 +41,7 @@ public record AccountContract3
     [DisplayName("Go Live Date")]
     [IsoXmlTag("GoLiveDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? GoLiveDate { get; init; }
+    public DateOnly? GoLiveDate { get; init; }
 
     /// <summary>
     /// Date on which the account and related services cease effectively to be operational for the account owner.
@@ -50,7 +50,7 @@ public record AccountContract3
     [DisplayName("Closing Date")]
     [IsoXmlTag("ClsgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ClosingDate { get; init; }
+    public DateOnly? ClosingDate { get; init; }
 
     /// <summary>
     /// Indicator that the account opening/maintenance/closing process needs to be treated urgently, that is, sooner than the terms established by the service level agreed between the account holder customer and the account servicing institution.
@@ -59,7 +59,7 @@ public record AccountContract3
     [DisplayName("Urgency Flag")]
     [IsoXmlTag("UrgcyFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? UrgencyFlag { get; init; }
+    public YesNoIndicator? UrgencyFlag { get; init; }
 
     /// <summary>
     /// Indicates removal of the account. After removal, an account will not appear anymore in reports.
@@ -68,5 +68,5 @@ public record AccountContract3
     [DisplayName("Removal Indicator")]
     [IsoXmlTag("RmvlInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? RemovalIndicator { get; init; }
+    public YesNoIndicator? RemovalIndicator { get; init; }
 }

@@ -31,7 +31,7 @@ public record PartyIdentification232
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? LEI { get; init; }
+    public LEIIdentifier? LEI { get; init; }
 
     /// <summary>
     /// Alternate identification for a party.

@@ -22,7 +22,7 @@ public record FraudulentTransactionData4
     [IsoId("_VXnH4XR3EfC68Y4jZPNEug")]
     [DisplayName("Authorisation")]
     [IsoXmlTag("Authstn")]
-    public IsoTrueFalseIndicator? Authorisation { get; init; }
+    public TrueFalseIndicator? Authorisation { get; init; }
 
     /// <summary>
     /// Indicates the entity which authorised the transaction (if relevant).
@@ -46,7 +46,7 @@ public record FraudulentTransactionData4
     [IsoId("_VXnH-3R3EfC68Y4jZPNEug")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
-    public SimpleValueList<IsoMax35Text> AlternateMessageReason { get; init; } = [];
+    public SimpleValueList<Max35Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Indicates the cycle of presentment or of the chargeback.
@@ -54,7 +54,7 @@ public record FraudulentTransactionData4
     [IsoId("_VXnH53R3EfC68Y4jZPNEug")]
     [DisplayName("Presentment Cycle")]
     [IsoXmlTag("PresntmntCycl")]
-    public IsoExact1NumericText? PresentmentCycle { get; init; }
+    public Exact1NumericText? PresentmentCycle { get; init; }
 
     /// <summary>
     /// Condition of the dispute.
@@ -62,7 +62,7 @@ public record FraudulentTransactionData4
     [IsoId("_VXnH6XR3EfC68Y4jZPNEug")]
     [DisplayName("Dispute Condition")]
     [IsoXmlTag("DsptCond")]
-    public IsoMax35Text? DisputeCondition { get; init; }
+    public Max35Text? DisputeCondition { get; init; }
 
     /// <summary>
     /// Bundle dispute case reference assigned by agent.
@@ -70,7 +70,7 @@ public record FraudulentTransactionData4
     [IsoId("_Dm_JdHR4EfC68Y4jZPNEug")]
     [DisplayName("Agent Dispute Bundle Case Reference")]
     [IsoXmlTag("AgtDsptBndlCaseRef")]
-    public IsoMax20Text? AgentDisputeBundleCaseReference { get; init; }
+    public Max20Text? AgentDisputeBundleCaseReference { get; init; }
 
     /// <summary>
     /// Dispute case reference assigned by agent.
@@ -78,7 +78,7 @@ public record FraudulentTransactionData4
     [IsoId("_Dm_JdXR4EfC68Y4jZPNEug")]
     [DisplayName("Agent Dispute Case Reference")]
     [IsoXmlTag("AgtDsptCaseRef")]
-    public IsoMax20Text? AgentDisputeCaseReference { get; init; }
+    public Max20Text? AgentDisputeCaseReference { get; init; }
 
     /// <summary>
     /// Dispute case reference assigned by acquirer.
@@ -86,7 +86,7 @@ public record FraudulentTransactionData4
     [IsoId("_Dm_JdnR4EfC68Y4jZPNEug")]
     [DisplayName("Acquirer Dispute Case Reference")]
     [IsoXmlTag("AcqrrDsptCaseRef")]
-    public IsoMax20Text? AcquirerDisputeCaseReference { get; init; }
+    public Max20Text? AcquirerDisputeCaseReference { get; init; }
 
     /// <summary>
     /// Dispute case reference assigned by issuer.
@@ -94,7 +94,7 @@ public record FraudulentTransactionData4
     [IsoId("_Dm_Jd3R4EfC68Y4jZPNEug")]
     [DisplayName("Issuer Dispute Case Reference")]
     [IsoXmlTag("IssrDsptCaseRef")]
-    public IsoMax20Text? IssuerDisputeCaseReference { get; init; }
+    public Max20Text? IssuerDisputeCaseReference { get; init; }
 
     /// <summary>
     /// Complete or partial details of the original message identified as fraudulent.
@@ -102,5 +102,5 @@ public record FraudulentTransactionData4
     [IsoId("_VXnH_XR3EfC68Y4jZPNEug")]
     [DisplayName("Fraudulent Message")]
     [IsoXmlTag("FrdlntMsg")]
-    public IsoMax100KBinary? FraudulentMessage { get; init; }
+    public Max100KBinary? FraudulentMessage { get; init; }
 }

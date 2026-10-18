@@ -22,7 +22,7 @@ public record Record4
     [IsoId("_dqd1gW7-EfC68Y4jZPNEug")]
     [DisplayName("Sequence Counter")]
     [IsoXmlTag("SeqCntr")]
-    public required IsoNumber SequenceCounter { get; init; }
+    public required Number SequenceCounter { get; init; }
 
     /// <summary>
     /// Value of the record to use for the computation of the checksum of the batch.
@@ -30,7 +30,7 @@ public record Record4
     [IsoId("_dqd1g27-EfC68Y4jZPNEug")]
     [DisplayName("Record Checksum Input Value")]
     [IsoXmlTag("RcrdChcksmInptVal")]
-    public IsoMax140Binary? RecordChecksumInputValue { get; init; }
+    public Max140Binary? RecordChecksumInputValue { get; init; }
 
     /// <summary>
     /// Identification of the originator of the transaction.
@@ -38,7 +38,7 @@ public record Record4
     [IsoId("_dqd1hW7-EfC68Y4jZPNEug")]
     [DisplayName("Originator Identification")]
     [IsoXmlTag("OrgtrId")]
-    public IsoMax35Text? OriginatorIdentification { get; init; }
+    public Max35Text? OriginatorIdentification { get; init; }
 
     /// <summary>
     /// Identification of the entity assigning the originator identification.
@@ -46,7 +46,7 @@ public record Record4
     [IsoId("_dqd1h27-EfC68Y4jZPNEug")]
     [DisplayName("Originator Assigner")]
     [IsoXmlTag("OrgtrAssgnr")]
-    public IsoMax35Text? OriginatorAssigner { get; init; }
+    public Max35Text? OriginatorAssigner { get; init; }
 
     /// <summary>
     /// Country of the originator.
@@ -62,7 +62,7 @@ public record Record4
     [IsoId("_dqd1i27-EfC68Y4jZPNEug")]
     [DisplayName("Originator Short Name")]
     [IsoXmlTag("OrgtrShrtNm")]
-    public IsoMax35Text? OriginatorShortName { get; init; }
+    public Max35Text? OriginatorShortName { get; init; }
 
     /// <summary>
     /// Identification of the destination of the transaction.
@@ -70,7 +70,7 @@ public record Record4
     [IsoId("_dqd1jW7-EfC68Y4jZPNEug")]
     [DisplayName("Destination Identification")]
     [IsoXmlTag("DstnId")]
-    public IsoMax35Text? DestinationIdentification { get; init; }
+    public Max35Text? DestinationIdentification { get; init; }
 
     /// <summary>
     /// Identification of the entity assigning the destination identification.
@@ -78,7 +78,7 @@ public record Record4
     [IsoId("_dqd1j27-EfC68Y4jZPNEug")]
     [DisplayName("Destination Assigner")]
     [IsoXmlTag("DstnAssgnr")]
-    public IsoMax35Text? DestinationAssigner { get; init; }
+    public Max35Text? DestinationAssigner { get; init; }
 
     /// <summary>
     /// Country of the destination.
@@ -94,7 +94,7 @@ public record Record4
     [IsoId("_dqd1k27-EfC68Y4jZPNEug")]
     [DisplayName("Destination Short Name")]
     [IsoXmlTag("DstnShrtNm")]
-    public IsoMax35Text? DestinationShortName { get; init; }
+    public Max35Text? DestinationShortName { get; init; }
 
     /// <summary>
     /// Type of clearing of the transaction.
@@ -110,7 +110,7 @@ public record Record4
     [IsoId("_dqd1mW7-EfC68Y4jZPNEug")]
     [DisplayName("Clearing Priority")]
     [IsoXmlTag("ClrPrty")]
-    public IsoMax35Text? ClearingPriority { get; init; }
+    public Max35Text? ClearingPriority { get; init; }
 
     /// <summary>
     /// Date of clearing.
@@ -118,7 +118,7 @@ public record Record4
     [IsoId("_dqd1m27-EfC68Y4jZPNEug")]
     [DisplayName("Clearing Date")]
     [IsoXmlTag("ClrDt")]
-    public IsoISODate? ClearingDate { get; init; }
+    public DateOnly? ClearingDate { get; init; }
 
     /// <summary>
     /// Net clearing amount.

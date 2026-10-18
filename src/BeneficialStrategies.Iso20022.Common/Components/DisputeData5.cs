@@ -22,7 +22,7 @@ public record DisputeData5
     [IsoId("_pq7goRT_EfC_aaedwHHlmw")]
     [DisplayName("Cycle")]
     [IsoXmlTag("Cycl")]
-    public IsoExact1NumericText? Cycle { get; init; }
+    public Exact1NumericText? Cycle { get; init; }
 
     /// <summary>
     /// Condition of the dispute.
@@ -30,7 +30,7 @@ public record DisputeData5
     [IsoId("_pq7goxT_EfC_aaedwHHlmw")]
     [DisplayName("Condition")]
     [IsoXmlTag("Cond")]
-    public IsoMax35Text? Condition { get; init; }
+    public Max35Text? Condition { get; init; }
 
     /// <summary>
     /// Status of dispute.
@@ -38,7 +38,7 @@ public record DisputeData5
     [IsoId("_pq7gpRT_EfC_aaedwHHlmw")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
-    public IsoMax35Text? Status { get; init; }
+    public Max35Text? Status { get; init; }
 
     /// <summary>
     /// Partial dispute indicator.
@@ -46,7 +46,7 @@ public record DisputeData5
     [IsoId("_pq7gpxT_EfC_aaedwHHlmw")]
     [DisplayName("Partial")]
     [IsoXmlTag("Prtl")]
-    public IsoTrueFalseIndicator? Partial { get; init; }
+    public TrueFalseIndicator? Partial { get; init; }
 
     /// <summary>
     /// Bundle dispute case reference assigned by agent.
@@ -54,7 +54,7 @@ public record DisputeData5
     [IsoId("_2bohERUBEfC_aaedwHHlmw")]
     [DisplayName("Agent Bundle Case Reference")]
     [IsoXmlTag("AgtBndlCaseRef")]
-    public IsoMax20Text? AgentBundleCaseReference { get; init; }
+    public Max20Text? AgentBundleCaseReference { get; init; }
 
     /// <summary>
     /// Dispute case reference assigned by agent.
@@ -62,7 +62,7 @@ public record DisputeData5
     [IsoId("_1mYUEBUBEfC_aaedwHHlmw")]
     [DisplayName("Agent Case Reference")]
     [IsoXmlTag("AgtCaseRef")]
-    public IsoMax20Text? AgentCaseReference { get; init; }
+    public Max20Text? AgentCaseReference { get; init; }
 
     /// <summary>
     /// Dispute case reference assigned by acquirer.
@@ -70,7 +70,7 @@ public record DisputeData5
     [IsoId("_4CyFERUBEfC_aaedwHHlmw")]
     [DisplayName("Acquirer Case Reference")]
     [IsoXmlTag("AcqrrCaseRef")]
-    public IsoMax20Text? AcquirerCaseReference { get; init; }
+    public Max20Text? AcquirerCaseReference { get; init; }
 
     /// <summary>
     /// Dispute case reference assigned by issuer.
@@ -78,7 +78,7 @@ public record DisputeData5
     [IsoId("_4qDgcRUBEfC_aaedwHHlmw")]
     [DisplayName("Issuer Case Reference")]
     [IsoXmlTag("IssrCaseRef")]
-    public IsoMax20Text? IssuerCaseReference { get; init; }
+    public Max20Text? IssuerCaseReference { get; init; }
 
     /// <summary>
     /// Status of the dispute documentation.
@@ -86,7 +86,7 @@ public record DisputeData5
     [IsoId("_pq7gqxT_EfC_aaedwHHlmw")]
     [DisplayName("Documentation Status")]
     [IsoXmlTag("DcmnttnSts")]
-    public IsoMax35Text? DocumentationStatus { get; init; }
+    public Max35Text? DocumentationStatus { get; init; }
 
     /// <summary>
     /// Reason for rejecting a dispute.
@@ -94,7 +94,7 @@ public record DisputeData5
     [IsoId("_pq7grRT_EfC_aaedwHHlmw")]
     [DisplayName("Reject Reason")]
     [IsoXmlTag("RjctRsn")]
-    public SimpleValueList<IsoMax35Text> RejectReason { get; init; } = [];
+    public SimpleValueList<Max35Text> RejectReason { get; init; } = [];
 
     /// <summary>
     /// Provides transaction chargeback eligibility conditions.
@@ -102,7 +102,7 @@ public record DisputeData5
     [IsoId("_pq7grxT_EfC_aaedwHHlmw")]
     [DisplayName("Chargeback Eligibility")]
     [IsoXmlTag("ChrgbckElgblty")]
-    public IsoMax35Text? ChargebackEligibility { get; init; }
+    public Max35Text? ChargebackEligibility { get; init; }
 
     /// <summary>
     /// Brief unformatted text describing a dispute.
@@ -110,7 +110,7 @@ public record DisputeData5
     [IsoId("_6kgs4BT_EfC_aaedwHHlmw")]
     [DisplayName("Message Text")]
     [IsoXmlTag("MsgTxt")]
-    public IsoMax50Text? MessageText { get; init; }
+    public Max50Text? MessageText { get; init; }
 
     /// <summary>
     /// Reserved for private data. The use of this data element is determined by bilateral agreement.
@@ -118,7 +118,7 @@ public record DisputeData5
     [IsoId("_lxWUwmvXEfCyxsm1jzUNug")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -126,5 +126,5 @@ public record DisputeData5
     [IsoId("_lxWUw2vXEfCyxsm1jzUNug")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

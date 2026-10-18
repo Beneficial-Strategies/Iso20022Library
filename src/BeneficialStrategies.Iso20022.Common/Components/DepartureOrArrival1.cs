@@ -24,7 +24,7 @@ public record DepartureOrArrival1
     [IsoXmlTag("Lctn")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Location { get; init; }
+    public Max70Text? Location { get; init; }
 
     /// <summary>
     /// Specific explanation of the location or directions.
@@ -34,7 +34,7 @@ public record DepartureOrArrival1
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Description { get; init; }
+    public Max256Text? Description { get; init; }
 
     /// <summary>
     /// Departure or arrival date.
@@ -43,7 +43,7 @@ public record DepartureOrArrival1
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Departure or arrival time.
@@ -52,5 +52,5 @@ public record DepartureOrArrival1
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? Time { get; init; }
+    public ISOTime? Time { get; init; }
 }

@@ -34,6 +34,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature15Choice
         [DisplayName("Clearing Threshold")]
         [IsoXmlTag("ClrThrshld")]
         [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-        public IsoTrueFalseIndicator? ClearingThreshold { get; init; }
+        public TrueFalseIndicator? ClearingThreshold { get; init; }
     }
 }

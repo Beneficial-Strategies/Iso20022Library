@@ -22,7 +22,7 @@ public record SecurityIdentification50
     [IsoId("e2e9b966-a089-4f72-9f81-9e973c36e53d")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
-    public IsoISINOct2015Identifier? ISIN { get; init; }
+    public ISINOct2015Identifier? ISIN { get; init; }
 
     /// <summary>
     /// Identification of a security by proprietary or domestic identification scheme.
@@ -38,5 +38,5 @@ public record SecurityIdentification50
     [IsoId("9268ef9b-1cc0-4187-955c-36f76e5bcd19")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax140Text? Description { get; init; }
+    public Max140Text? Description { get; init; }
 }

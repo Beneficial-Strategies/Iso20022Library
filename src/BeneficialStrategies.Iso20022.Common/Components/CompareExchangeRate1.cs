@@ -23,7 +23,7 @@ public record CompareExchangeRate1
     [DisplayName("Value")]
     [IsoXmlTag("Val1")]
     [IsoSimpleType(IsoSimpleType.BaseOne18Rate)]
-    public IsoBaseOne18Rate? Value1 { get; init; }
+    public BaseOne18Rate? Value1 { get; init; }
 
     /// <summary>
     /// Information for the second side of the transaction.
@@ -32,5 +32,5 @@ public record CompareExchangeRate1
     [DisplayName("Value")]
     [IsoXmlTag("Val2")]
     [IsoSimpleType(IsoSimpleType.BaseOne18Rate)]
-    public IsoBaseOne18Rate? Value2 { get; init; }
+    public BaseOne18Rate? Value2 { get; init; }
 }

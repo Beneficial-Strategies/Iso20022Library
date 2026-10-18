@@ -31,7 +31,7 @@ public record PartyIdentification162
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? LEI { get; init; }
+    public LEIIdentifier? LEI { get; init; }
 
     /// <summary>
     /// Alternate identification for a party.
@@ -57,7 +57,7 @@ public record PartyIdentification162
     [IsoXmlTag("PrcgId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? ProcessingIdentification { get; init; }
+    public RestrictedFINXMax16Text? ProcessingIdentification { get; init; }
 
     /// <summary>
     /// Provides additional information to a party identification.

@@ -32,7 +32,7 @@ public record SwitchLegReferences2
     [IsoXmlTag("LegRjctnRsn")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? LegRejectionReason { get; init; }
+    public Max350Text? LegRejectionReason { get; init; }
 
     /// <summary>
     /// Elements from the original individual order that have been repaired so that the order can be accepted.

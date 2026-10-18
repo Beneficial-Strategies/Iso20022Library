@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditDefaultSwapsDerivative3Cho
         [DisplayName("Underlying Index Identification")]
         [IsoXmlTag("UndrlygIndxId")]
         [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-        public IsoISINOct2015Identifier? UnderlyingIndexIdentification { get; init; }
+        public ISINOct2015Identifier? UnderlyingIndexIdentification { get; init; }
 
         /// <summary>
         /// To be populated for derivatives on a CDS index with the standardized name of the index.
@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditDefaultSwapsDerivative3Cho
         [IsoXmlTag("IndxNm")]
         [IsoSimpleType(IsoSimpleType.Max25Text)]
         [StringLength(maximumLength: 25, MinimumLength = 1)]
-        public required IsoMax25Text IndexName { get; init; }
+        public required Max25Text IndexName { get; init; }
 
         /// <summary>
         /// Describes the Index specific details the derivative is being made on.

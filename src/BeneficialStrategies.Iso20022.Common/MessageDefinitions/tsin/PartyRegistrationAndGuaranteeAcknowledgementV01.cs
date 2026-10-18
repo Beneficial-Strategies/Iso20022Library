@@ -74,7 +74,7 @@ public record PartyRegistrationAndGuaranteeAcknowledgementV01 : IOuterRecord
     [DisplayName("Acknowledgement Count")]
     [IsoXmlTag("AckCnt")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText AcknowledgementCount { get; init; }
+    public required Max15NumericText AcknowledgementCount { get; init; }
 
     /// <summary>
     /// Total number of individual items in all lists.
@@ -83,7 +83,7 @@ public record PartyRegistrationAndGuaranteeAcknowledgementV01 : IOuterRecord
     [DisplayName("Item Count")]
     [IsoXmlTag("ItmCnt")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public IsoMax15NumericText? ItemCount { get; init; }
+    public Max15NumericText? ItemCount { get; init; }
 
     /// <summary>
     /// Total of all individual amounts included in all lists, irrespective of currencies or direction.
@@ -92,7 +92,7 @@ public record PartyRegistrationAndGuaranteeAcknowledgementV01 : IOuterRecord
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? ControlSum { get; init; }
+    public DecimalNumber? ControlSum { get; init; }
 
     /// <summary>
     /// Referenced or related business message.

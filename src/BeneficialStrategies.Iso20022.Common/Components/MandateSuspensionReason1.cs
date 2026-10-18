@@ -38,5 +38,5 @@ public record MandateSuspensionReason1
     [IsoId("_W8oMIH5qEea7cqFPsAF3tQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public SimpleValueList<IsoMax105Text> AdditionalInformation { get; init; } = [];
+    public SimpleValueList<Max105Text> AdditionalInformation { get; init; } = [];
 }

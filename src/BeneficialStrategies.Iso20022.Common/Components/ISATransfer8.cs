@@ -24,7 +24,7 @@ public record ISATransfer8
     [IsoXmlTag("MstrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Identification assigned by the new plan manager to each transfer of asset.
@@ -34,7 +34,7 @@ public record ISATransfer8
     [IsoXmlTag("TrfId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransferIdentification { get; init; }
+    public required Max35Text TransferIdentification { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for a transfer cancellation, as assigned by the instructing party.
@@ -44,7 +44,7 @@ public record ISATransfer8
     [IsoXmlTag("CxlRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CancellationReference { get; init; }
+    public Max35Text? CancellationReference { get; init; }
 
     /// <summary>
     /// Indicates whether there is cash in the account that is awaiting investment.
@@ -69,7 +69,7 @@ public record ISATransfer8
     [DisplayName("All Other Cash")]
     [IsoXmlTag("AllOthrCsh")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator AllOtherCash { get; init; }
+    public required YesNoIndicator AllOtherCash { get; init; }
 
     /// <summary>
     /// Specifies the underlying assets for the ISA or portfolio.

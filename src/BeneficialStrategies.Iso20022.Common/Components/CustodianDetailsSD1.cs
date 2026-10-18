@@ -24,7 +24,7 @@ public record CustodianDetailsSD1
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text PlaceAndName { get; init; }
+    public required Max350Text PlaceAndName { get; init; }
 
     /// <summary>
     /// Unique identifier of a custodian corporate action record. Applicable to custodian service only.
@@ -34,7 +34,7 @@ public record CustodianDetailsSD1
     [IsoXmlTag("CtdnCorpActnRcrdId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text CustodianCorporateActionRecordIdentification { get; init; }
+    public required Max35Text CustodianCorporateActionRecordIdentification { get; init; }
 
     /// <summary>
     /// Indicates the state of the agreement of the custodian record when compared to composite record. Applicable to custodian service only.
@@ -75,7 +75,7 @@ public record CustodianDetailsSD1
     [DisplayName("Receiving BIC")]
     [IsoXmlTag("RcvgBIC")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public required IsoAnyBICIdentifier ReceivingBIC { get; init; }
+    public required AnyBICIdentifier ReceivingBIC { get; init; }
 
     /// <summary>
     /// BIC which is configured as a sender of the custodian record. Applicable to custodian service only.
@@ -84,7 +84,7 @@ public record CustodianDetailsSD1
     [DisplayName("Originating BIC")]
     [IsoXmlTag("OrgtgBIC")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public required IsoAnyBICIdentifier OriginatingBIC { get; init; }
+    public required AnyBICIdentifier OriginatingBIC { get; init; }
 
     /// <summary>
     /// Indicates whether the event security of the corresponding composite record is on SOI (security of interest) subscription. Applicable to custodian service only.
@@ -93,7 +93,7 @@ public record CustodianDetailsSD1
     [DisplayName("Composite Not In Subscription Flag")]
     [IsoXmlTag("CmpsitNotInSbcptFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator CompositeNotInSubscriptionFlag { get; init; }
+    public required YesNoIndicator CompositeNotInSubscriptionFlag { get; init; }
 
     /// <summary>
     /// Provides selected corporate action events message details extracted from the related custodian messages received. Applicable to custodian service only.

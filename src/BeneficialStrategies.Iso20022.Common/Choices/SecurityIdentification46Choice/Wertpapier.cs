@@ -9,6 +9,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification46Choice
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Wrtppr")]
-        public required IsoWertpapierIdentifier Value { get; init; }
+        public required WertpapierIdentifier Value { get; init; }
     }
 }

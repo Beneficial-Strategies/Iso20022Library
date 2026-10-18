@@ -24,7 +24,7 @@ public record SwitchSubscriptionLegExecution3
     [IsoXmlTag("LegId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LegIdentification { get; init; }
+    public Max35Text? LegIdentification { get; init; }
 
     /// <summary>
     /// Unique identifier for an instance of a leg execution within a switch confirmation.
@@ -34,7 +34,7 @@ public record SwitchSubscriptionLegExecution3
     [IsoXmlTag("LegExctnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LegExecutionIdentification { get; init; }
+    public Max35Text? LegExecutionIdentification { get; init; }
 
     /// <summary>
     /// Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, eg, dividend option or valuation currency.
@@ -99,7 +99,7 @@ public record SwitchSubscriptionLegExecution3
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator CumDividendIndicator { get; init; }
+    public required YesNoIndicator CumDividendIndicator { get; init; }
 
     /// <summary>
     /// Part of the price deemed as accrued income or profit rather than capital. The interim profit amount is used for tax purposes.
@@ -172,7 +172,7 @@ public record SwitchSubscriptionLegExecution3
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator PhysicalDeliveryIndicator { get; init; }
+    public required YesNoIndicator PhysicalDeliveryIndicator { get; init; }
 
     /// <summary>
     /// Information related to physical delivery of the securities.
@@ -190,7 +190,7 @@ public record SwitchSubscriptionLegExecution3
     [IsoXmlTag("NonStdSttlmInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? NonStandardSettlementInformation { get; init; }
+    public Max350Text? NonStandardSettlementInformation { get; init; }
 
     /// <summary>
     /// Part of an investor&apos;s subscription amount that is held by the fund in order to pay incentive / performance fees at the end of the fiscal year.

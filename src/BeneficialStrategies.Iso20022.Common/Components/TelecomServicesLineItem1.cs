@@ -23,7 +23,7 @@ public record TelecomServicesLineItem1
     [DisplayName("Start Date Time")]
     [IsoXmlTag("StartDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? StartDateTime { get; init; }
+    public DateOnly? StartDateTime { get; init; }
 
     /// <summary>
     /// Describes the period (such as peak or off peak) of the phone call.
@@ -33,7 +33,7 @@ public record TelecomServicesLineItem1
     [IsoXmlTag("TmPrd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TimePeriod { get; init; }
+    public Max35Text? TimePeriod { get; init; }
 
     /// <summary>
     /// Duration of phone call expressed in HHMMSS format.
@@ -42,7 +42,7 @@ public record TelecomServicesLineItem1
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? Duration { get; init; }
+    public ISOTime? Duration { get; init; }
 
     /// <summary>
     /// Contains the location description for the originator of the telephone call and the number from which the call was made.
@@ -92,7 +92,7 @@ public record TelecomServicesLineItem1
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Description { get; init; }
+    public Max256Text? Description { get; init; }
 
     /// <summary>
     /// Additional user-defined data pertaining to the telecommunications services.
@@ -102,5 +102,5 @@ public record TelecomServicesLineItem1
     [IsoXmlTag("AddtlData")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AdditionalData { get; init; }
+    public Max350Text? AdditionalData { get; init; }
 }

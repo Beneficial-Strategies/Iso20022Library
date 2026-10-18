@@ -30,7 +30,7 @@ public record LocalData19
     [IsoId("_y5hpExT9EfC_aaedwHHlmw")]
     [DisplayName("Encoding Format")]
     [IsoXmlTag("NcodgFrmt")]
-    public IsoMax35Text? EncodingFormat { get; init; }
+    public Max35Text? EncodingFormat { get; init; }
 
     /// <summary>
     /// Business name of the acceptor in the local language.
@@ -38,7 +38,7 @@ public record LocalData19
     [IsoId("_y5hpFRT9EfC_aaedwHHlmw")]
     [DisplayName("Business Name")]
     [IsoXmlTag("BizNm")]
-    public IsoMax70Text? BusinessName { get; init; }
+    public Max70Text? BusinessName { get; init; }
 
     /// <summary>
     /// Legal Corporate Name of the party in the local language.
@@ -46,7 +46,7 @@ public record LocalData19
     [IsoId("_y5hpFxT9EfC_aaedwHHlmw")]
     [DisplayName("Legal Corporate Name")]
     [IsoXmlTag("LglCorpNm")]
-    public IsoMax210Text? LegalCorporateName { get; init; }
+    public Max210Text? LegalCorporateName { get; init; }
 
     /// <summary>
     /// Name and location of acceptor in the local language. May only contain name when the location is specified elsewhere.
@@ -54,7 +54,7 @@ public record LocalData19
     [IsoId("_y5hpGRT9EfC_aaedwHHlmw")]
     [DisplayName("Name And Location")]
     [IsoXmlTag("NmAndLctn")]
-    public IsoMax200Text? NameAndLocation { get; init; }
+    public Max200Text? NameAndLocation { get; init; }
 
     /// <summary>
     /// Structured postal address in the local language.
@@ -78,7 +78,7 @@ public record LocalData19
     [IsoId("_y5hpLxT9EfC_aaedwHHlmw")]
     [DisplayName("Additional Address")]
     [IsoXmlTag("AddtlAdr")]
-    public IsoMax512Text? AdditionalAddress { get; init; }
+    public Max512Text? AdditionalAddress { get; init; }
 
     /// <summary>
     /// Additional information used to facilitate contact with the card acceptor.
@@ -86,7 +86,7 @@ public record LocalData19
     [IsoId("_y5hpNxT9EfC_aaedwHHlmw")]
     [DisplayName("Additional Contact")]
     [IsoXmlTag("AddtlCtct")]
-    public IsoMax512Text? AdditionalContact { get; init; }
+    public Max512Text? AdditionalContact { get; init; }
 
     /// <summary>
     /// Reserved for private data. The use of this data element is determined by bilateral agreement.
@@ -94,7 +94,7 @@ public record LocalData19
     [IsoId("_UvgWIkhxEfCMZJtj4J7UGQ")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -102,5 +102,5 @@ public record LocalData19
     [IsoId("_UvgWI0hxEfCMZJtj4J7UGQ")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

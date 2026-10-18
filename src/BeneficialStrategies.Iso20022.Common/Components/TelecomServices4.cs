@@ -22,7 +22,7 @@ public record TelecomServices4
     [IsoId("_mkgbEUhsEfCMZJtj4J7UGQ-cacn")]
     [DisplayName("Customer Account Number")]
     [IsoXmlTag("CstmrAcctNb")]
-    public IsoMax35Text? CustomerAccountNumber { get; init; }
+    public Max35Text? CustomerAccountNumber { get; init; }
 
     /// <summary>
     /// Name of the customer.
@@ -30,7 +30,7 @@ public record TelecomServices4
     [IsoId("_mkgbEUhsEfCMZJtj4J7UGQ-csnm")]
     [DisplayName("Customer Name")]
     [IsoXmlTag("CstmrNm")]
-    public IsoMax105Text? CustomerName { get; init; }
+    public Max105Text? CustomerName { get; init; }
 
     /// <summary>
     /// Customer's primary contact phone number.
@@ -38,7 +38,7 @@ public record TelecomServices4
     [IsoId("_mkgbEUhsEfCMZJtj4J7UGQ-cspn")]
     [DisplayName("Customer Phone")]
     [IsoXmlTag("CstmrPhne")]
-    public IsoPhoneNumber? CustomerPhone { get; init; }
+    public PhoneNumber? CustomerPhone { get; init; }
 
     /// <summary>
     /// Contains the billing period start date for telecommunication or related services.
@@ -46,7 +46,7 @@ public record TelecomServices4
     [IsoId("_mkgbEUhsEfCMZJtj4J7UGQ-blst")]
     [DisplayName("Billing Start")]
     [IsoXmlTag("BlgStart")]
-    public IsoISODate? BillingStart { get; init; }
+    public DateOnly? BillingStart { get; init; }
 
     /// <summary>
     /// Contains the billing period end date for telecommunication or related services.
@@ -54,7 +54,7 @@ public record TelecomServices4
     [IsoId("_mkgbEUhsEfCMZJtj4J7UGQ-blen")]
     [DisplayName("Billing End")]
     [IsoXmlTag("BlgEnd")]
-    public IsoISODate? BillingEnd { get; init; }
+    public DateOnly? BillingEnd { get; init; }
 
     /// <summary>
     /// Summary of the charges associated with the billing event.
@@ -94,7 +94,7 @@ public record TelecomServices4
     [IsoId("_mkgbEUhsEfCMZJtj4J7UGQ-pvdt")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -102,5 +102,5 @@ public record TelecomServices4
     [IsoId("_mkgbEUhsEfCMZJtj4J7UGQ-ntdt")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

@@ -22,7 +22,7 @@ public record SecurityIdentificationQueryCriteria1
     [IsoId("_2unO9xvYEeWeg9zOuV6DZQ")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
-    public SimpleValueList<IsoISINOct2015Identifier> ISIN { get; init; } = [];
+    public SimpleValueList<ISINOct2015Identifier> ISIN { get; init; } = [];
 
     /// <summary>
     /// Proprietary identification of a security assigned by an institution or organisation.
@@ -30,5 +30,5 @@ public record SecurityIdentificationQueryCriteria1
     [IsoId("_2unO9hvYEeWeg9zOuV6DZQ")]
     [DisplayName("Alternative Instrument Identification")]
     [IsoXmlTag("AltrntvInstrmId")]
-    public SimpleValueList<IsoMax52Text> AlternativeInstrumentIdentification { get; init; } = [];
+    public SimpleValueList<Max52Text> AlternativeInstrumentIdentification { get; init; } = [];
 }

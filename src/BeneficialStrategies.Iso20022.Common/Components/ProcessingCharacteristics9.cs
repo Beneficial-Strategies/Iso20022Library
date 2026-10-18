@@ -28,14 +28,14 @@ public record ProcessingCharacteristics9
     /// </summary>
     [DisplayName("Amount Indicator")]
     [IsoXmlTag("AmtInd")]
-    public IsoYesNoIndicator? AmountIndicator { get; init; }
+    public YesNoIndicator? AmountIndicator { get; init; }
 
     /// <summary>
     /// Deal Confirmation Time.
     /// </summary>
     [DisplayName("Deal Confirmation Time")]
     [IsoXmlTag("DealConfTm")]
-    public IsoISOTime? DealConfirmationTime { get; init; }
+    public ISOTime? DealConfirmationTime { get; init; }
 
     /// <summary>
     /// Deal Confirmation Time Frame.
@@ -56,7 +56,7 @@ public record ProcessingCharacteristics9
     /// </summary>
     [DisplayName("Dealing Cut Off Time")]
     [IsoXmlTag("DealgCutOffTm")]
-    public IsoISOTime? DealingCutOffTime { get; init; }
+    public ISOTime? DealingCutOffTime { get; init; }
 
     /// <summary>
     /// Dealing Cut Off Time Frame.
@@ -77,14 +77,14 @@ public record ProcessingCharacteristics9
     /// </summary>
     [DisplayName("Dealing Frequency Description")]
     [IsoXmlTag("DealgFrqcyDesc")]
-    public IsoMax350Text? DealingFrequencyDescription { get; init; }
+    public Max350Text? DealingFrequencyDescription { get; init; }
 
     /// <summary>
     /// Limited Period.
     /// </summary>
     [DisplayName("Limited Period")]
     [IsoXmlTag("LtdPrd")]
-    public IsoMax350Text? LimitedPeriod { get; init; }
+    public Max350Text? LimitedPeriod { get; init; }
 
     /// <summary>
     /// Main Fund Order Desk Location.
@@ -119,5 +119,5 @@ public record ProcessingCharacteristics9
     /// </summary>
     [DisplayName("Units Indicator")]
     [IsoXmlTag("UnitsInd")]
-    public IsoYesNoIndicator? UnitsIndicator { get; init; }
+    public YesNoIndicator? UnitsIndicator { get; init; }
 }

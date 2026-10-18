@@ -24,7 +24,7 @@ public record PortfolioIdentification3
     [IsoXmlTag("Cd")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public required IsoMax52Text Code { get; init; }
+    public required Max52Text Code { get; init; }
 
     /// <summary>
     /// Indicates whether the collateral portfolio includes transactions exempt from reporting.
@@ -34,5 +34,5 @@ public record PortfolioIdentification3
     [DisplayName("Portfolio Transaction Exemption")]
     [IsoXmlTag("PrtflTxXmptn")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? PortfolioTransactionExemption { get; init; }
+    public TrueFalseIndicator? PortfolioTransactionExemption { get; init; }
 }

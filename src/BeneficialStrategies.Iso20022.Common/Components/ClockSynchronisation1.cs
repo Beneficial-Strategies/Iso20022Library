@@ -24,7 +24,7 @@ public record ClockSynchronisation1
     [IsoXmlTag("POITmZone")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public required IsoMax70Text POITimeZone { get; init; }
+    public required Max70Text POITimeZone { get; init; }
 
     /// <summary>
     /// Parameters to contact a time server.

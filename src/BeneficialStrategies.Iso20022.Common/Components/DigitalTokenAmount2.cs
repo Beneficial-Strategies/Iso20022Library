@@ -23,7 +23,7 @@ public record DigitalTokenAmount2
     [DisplayName("Identifier")]
     [IsoXmlTag("Idr")]
     [IsoSimpleType(IsoSimpleType.DTI2021Identifier)]
-    public required IsoDTI2021Identifier Identifier { get; init; }
+    public required DTI2021Identifier Identifier { get; init; }
 
     /// <summary>
     /// Quantity of digital tokens expressed as a number, for example, a number of blockchain tokens.
@@ -32,7 +32,7 @@ public record DigitalTokenAmount2
     [DisplayName("Unit")]
     [IsoXmlTag("Unit")]
     [IsoSimpleType(IsoSimpleType.Max30DecimalNumber)]
-    public IsoMax30DecimalNumber? Unit { get; init; }
+    public Max30DecimalNumber? Unit { get; init; }
 
     /// <summary>
     /// Provides a description of the digital token identifier.
@@ -41,5 +41,5 @@ public record DigitalTokenAmount2
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max30Text)]
-    public IsoMax30Text? Description { get; init; }
+    public Max30Text? Description { get; init; }
 }

@@ -23,7 +23,7 @@ public record RecordTechnicalData3
     [DisplayName("Inconsistency Indicator")]
     [IsoXmlTag("IncnsstncyInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? InconsistencyIndicator { get; init; }
+    public TrueFalseIndicator? InconsistencyIndicator { get; init; }
 
     /// <summary>
     /// Last date for which data was received for this instrument.
@@ -32,7 +32,7 @@ public record RecordTechnicalData3
     [DisplayName("Last Update")]
     [IsoXmlTag("LastUpd")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? LastUpdate { get; init; }
+    public ISODateTime? LastUpdate { get; init; }
 
     /// <summary>
     /// Defines the date and time when this instrument was originally received at the submission destination.
@@ -41,7 +41,7 @@ public record RecordTechnicalData3
     [DisplayName("Submission Date Time")]
     [IsoXmlTag("SubmissnDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? SubmissionDateTime { get; init; }
+    public ISODateTime? SubmissionDateTime { get; init; }
 
     /// <summary>
     /// Country code of the relevant competent authority of the instrument.
@@ -66,5 +66,5 @@ public record RecordTechnicalData3
     [DisplayName("Never Published")]
     [IsoXmlTag("NvrPblshd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? NeverPublished { get; init; }
+    public TrueFalseIndicator? NeverPublished { get; init; }
 }

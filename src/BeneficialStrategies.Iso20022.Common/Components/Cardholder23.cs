@@ -22,7 +22,7 @@ public record Cardholder23
     [IsoId("_L64o5FN0EfC0lMwgjvMClw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax105Text? Name { get; init; }
+    public Max105Text? Name { get; init; }
 
     /// <summary>
     /// First name of the cardholder.
@@ -30,7 +30,7 @@ public record Cardholder23
     [IsoId("_L64o5VN0EfC0lMwgjvMClw")]
     [DisplayName("Given Name")]
     [IsoXmlTag("GvnNm")]
-    public IsoMax35Text? GivenName { get; init; }
+    public Max35Text? GivenName { get; init; }
 
     /// <summary>
     /// Family name of the cardholder.
@@ -38,7 +38,7 @@ public record Cardholder23
     [IsoId("_L64o51N0EfC0lMwgjvMClw")]
     [DisplayName("Last Name")]
     [IsoXmlTag("LastNm")]
-    public IsoMax35Text? LastName { get; init; }
+    public Max35Text? LastName { get; init; }
 
     /// <summary>
     /// Middle name or initials present in the name of a person.
@@ -46,7 +46,7 @@ public record Cardholder23
     [IsoId("_L64o5lN0EfC0lMwgjvMClw")]
     [DisplayName("Middle Name")]
     [IsoXmlTag("MddlNm")]
-    public IsoMax35Text? MiddleName { get; init; }
+    public Max35Text? MiddleName { get; init; }
 
     /// <summary>
     /// Identifies the specific cardholder when multiple cardholders are associated with the same account.
@@ -54,7 +54,7 @@ public record Cardholder23
     [IsoId("_dhuw2jTVEfCLfeKcVPKw8g")]
     [DisplayName("Designation")]
     [IsoXmlTag("Dsgnt")]
-    public IsoMax2NumericText? Designation { get; init; }
+    public Max2NumericText? Designation { get; init; }
 
     /// <summary>
     /// Identification of the cardholder.
@@ -78,7 +78,7 @@ public record Cardholder23
     [IsoId("_M6CB8DTZEfCLfeKcVPKw8g")]
     [DisplayName("Compressed Address")]
     [IsoXmlTag("CmprssdAdr")]
-    public IsoMax35Text? CompressedAddress { get; init; }
+    public Max35Text? CompressedAddress { get; init; }
 
     /// <summary>
     /// Complete shipping address of the cardholder.
@@ -102,7 +102,7 @@ public record Cardholder23
     [IsoId("_9SthGTTTEfCLfeKcVPKw8g")]
     [DisplayName("Date Of Birth")]
     [IsoXmlTag("DtOfBirth")]
-    public IsoISODate? DateOfBirth { get; init; }
+    public DateOnly? DateOfBirth { get; init; }
 
     /// <summary>
     /// Identifies a cardholder that is a highly valued individual.
@@ -110,7 +110,7 @@ public record Cardholder23
     [IsoId("_9SthGzTTEfCLfeKcVPKw8g")]
     [DisplayName("High Value")]
     [IsoXmlTag("HghVal")]
-    public IsoTrueFalseIndicator? HighValue { get; init; }
+    public TrueFalseIndicator? HighValue { get; init; }
 
     /// <summary>
     /// Alias name of the payer.
@@ -118,7 +118,7 @@ public record Cardholder23
     [IsoId("_JF-B0jTWEfCLfeKcVPKw8g")]
     [DisplayName("Alias Name")]
     [IsoXmlTag("AliasNm")]
-    public IsoMax70Text? AliasName { get; init; }
+    public Max70Text? AliasName { get; init; }
 
     /// <summary>
     /// The occupation of the payer.
@@ -126,7 +126,7 @@ public record Cardholder23
     [IsoId("_JF-B0zTWEfCLfeKcVPKw8g")]
     [DisplayName("Occupation")]
     [IsoXmlTag("Ocptn")]
-    public IsoMax35Text? Occupation { get; init; }
+    public Max35Text? Occupation { get; init; }
 
     /// <summary>
     /// Reserved for private data.

@@ -24,7 +24,7 @@ public record ATMReject1
     [IsoXmlTag("RjctInitrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RejectInitiatorIdentification { get; init; }
+    public Max35Text? RejectInitiatorIdentification { get; init; }
 
     /// <summary>
     /// High level information allowing the sender of a request or an advice to know the types of error, and handle them accordingly.
@@ -43,7 +43,7 @@ public record ATMReject1
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public IsoMax500Text? AdditionalInformation { get; init; }
+    public Max500Text? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Maintenance command to perform on the ATM.
@@ -60,5 +60,5 @@ public record ATMReject1
     [DisplayName("Message In Error")]
     [IsoXmlTag("MsgInErr")]
     [IsoSimpleType(IsoSimpleType.Max100KBinary)]
-    public IsoMax100KBinary? MessageInError { get; init; }
+    public Max100KBinary? MessageInError { get; init; }
 }

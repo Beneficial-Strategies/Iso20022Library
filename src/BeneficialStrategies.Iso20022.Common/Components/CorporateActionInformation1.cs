@@ -32,7 +32,7 @@ public record CorporateActionInformation1
     [IsoXmlTag("IssrCorpActnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? IssuerCorporateActionIdentification { get; init; }
+    public Max35Text? IssuerCorporateActionIdentification { get; init; }
 
     /// <summary>
     /// Reference assigned by the account servicer to unambiguously identify a corporate action event.
@@ -42,7 +42,7 @@ public record CorporateActionInformation1
     [IsoXmlTag("CorpActnPrcgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CorporateActionProcessingIdentification { get; init; }
+    public Max35Text? CorporateActionProcessingIdentification { get; init; }
 
     /// <summary>
     /// Type of corporate action event.

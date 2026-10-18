@@ -24,7 +24,7 @@ public record CreditorReferenceInformation3
     /// </summary>
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
-    public IsoMax35Text? Reference { get; init; }
+    public Max35Text? Reference { get; init; }
 
     /// <summary>
     /// Specifies the type of creditor reference.

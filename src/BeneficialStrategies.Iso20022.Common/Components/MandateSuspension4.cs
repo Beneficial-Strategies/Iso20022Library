@@ -49,5 +49,5 @@ public record MandateSuspension4
     /// </summary>
     [DisplayName("Suspension Request Identification")]
     [IsoXmlTag("SspnsnReqId")]
-    public required IsoMax35Text SuspensionRequestIdentification { get; init; }
+    public required Max35Text SuspensionRequestIdentification { get; init; }
 }

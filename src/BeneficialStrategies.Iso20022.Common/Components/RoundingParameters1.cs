@@ -23,7 +23,7 @@ public record RoundingParameters1
     [DisplayName("Rounding Modulus")]
     [IsoXmlTag("RndgMdlus")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? RoundingModulus { get; init; }
+    public DecimalNumber? RoundingModulus { get; init; }
 
     /// <summary>
     /// Rounding direction applied to fractional numbers, eg, round up.

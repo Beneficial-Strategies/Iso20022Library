@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification23Choice
         /// </summary>
         [IsoXmlTag("Wrtppr")]
         [IsoSimpleType(IsoSimpleType.WertpapierIdentifier)]
-        public required IsoWertpapierIdentifier Value { get; init; }
+        public required WertpapierIdentifier Value { get; init; }
     }
 }

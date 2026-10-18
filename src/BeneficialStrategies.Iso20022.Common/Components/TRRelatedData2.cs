@@ -31,5 +31,5 @@ public record TRRelatedData2
     [DisplayName("TR Block")]
     [IsoXmlTag("TRBlck")]
     [IsoSimpleType(IsoSimpleType.Max100KBinary)]
-    public IsoMax100KBinary? TRBlock { get; init; }
+    public Max100KBinary? TRBlock { get; init; }
 }

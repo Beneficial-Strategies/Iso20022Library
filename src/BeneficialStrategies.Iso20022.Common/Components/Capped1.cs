@@ -23,7 +23,7 @@ public record Capped1
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? StartDate { get; init; }
+    public DateOnly? StartDate { get; init; }
 
     /// <summary>
     /// Income limit for the current period.

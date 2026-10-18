@@ -24,7 +24,7 @@ public record CorporateActionNarrative1
     [IsoXmlTag("InfConds")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? InformationConditions { get; init; }
+    public Max350Text? InformationConditions { get; init; }
 
     /// <summary>
     /// Provides information conditions to the account owner that are to be complied with, eg, not open to US/Canadian residents, QIB or SIL to be provided.
@@ -34,7 +34,7 @@ public record CorporateActionNarrative1
     [IsoXmlTag("InfToCmplyWth")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? InformationToComplyWith { get; init; }
+    public Max350Text? InformationToComplyWith { get; init; }
 
     /// <summary>
     /// Provides taxation conditions that cannot be included within the structured fields of this message.
@@ -44,7 +44,7 @@ public record CorporateActionNarrative1
     [IsoXmlTag("TaxtnConds")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? TaxationConditions { get; init; }
+    public Max350Text? TaxationConditions { get; init; }
 
     /// <summary>
     /// Provide the new name of a company following a name change.
@@ -54,7 +54,7 @@ public record CorporateActionNarrative1
     [IsoXmlTag("NewCpnyNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? NewCompanyName { get; init; }
+    public Max350Text? NewCompanyName { get; init; }
 
     /// <summary>
     /// Provides the entity making the offer and is different from the issuing company.
@@ -72,7 +72,7 @@ public record CorporateActionNarrative1
     [IsoXmlTag("URLAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? URLAddress { get; init; }
+    public Max256Text? URLAddress { get; init; }
 
     /// <summary>
     /// Provides additional information or specifies in more detail the content of a|message.
@@ -82,5 +82,5 @@ public record CorporateActionNarrative1
     [IsoXmlTag("AddtlTxt")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AdditionalText { get; init; }
+    public Max350Text? AdditionalText { get; init; }
 }

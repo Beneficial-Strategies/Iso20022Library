@@ -41,5 +41,5 @@ public record FloatingInterestRate6
     [DisplayName("Basis Point Spread")]
     [IsoXmlTag("BsisPtSprd")]
     [IsoSimpleType(IsoSimpleType.Max5Number)]
-    public required IsoMax5Number BasisPointSpread { get; init; }
+    public required Max5Number BasisPointSpread { get; init; }
 }

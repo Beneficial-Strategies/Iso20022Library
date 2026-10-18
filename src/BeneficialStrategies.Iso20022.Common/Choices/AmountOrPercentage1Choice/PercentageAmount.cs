@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AmountOrPercentage1Choice
         [DisplayName("Rate")]
         [IsoXmlTag("Rate")]
         [IsoSimpleType(IsoSimpleType.PercentageRate)]
-        public required IsoPercentageRate Rate { get; init; }
+        public required PercentageRate Rate { get; init; }
 
         /// <summary>
         /// Indication of what the percentage is relative to.

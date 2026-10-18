@@ -23,7 +23,7 @@ public record ActivityDetails1
     [DisplayName("Date Time")]
     [IsoXmlTag("DtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime DateTime { get; init; }
+    public required ISODateTime DateTime { get; init; }
 
     /// <summary>
     /// Description of the reported activities.

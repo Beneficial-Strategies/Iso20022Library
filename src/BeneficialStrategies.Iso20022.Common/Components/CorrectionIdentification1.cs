@@ -23,7 +23,7 @@ public record CorrectionIdentification1
     [DisplayName("Indicator")]
     [IsoXmlTag("Ind")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? Indicator { get; init; }
+    public TrueFalseIndicator? Indicator { get; init; }
 
     /// <summary>
     /// Contains the date of the update.
@@ -32,7 +32,7 @@ public record CorrectionIdentification1
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Contains the time of the update.
@@ -41,5 +41,5 @@ public record CorrectionIdentification1
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? Time { get; init; }
+    public ISOTime? Time { get; init; }
 }

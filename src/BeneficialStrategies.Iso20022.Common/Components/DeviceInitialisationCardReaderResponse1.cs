@@ -39,5 +39,5 @@ public record DeviceInitialisationCardReaderResponse1
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max10000Binary)]
-    public IsoMax10000Binary? AdditionalInformation { get; init; }
+    public Max10000Binary? AdditionalInformation { get; init; }
 }

@@ -32,6 +32,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityOrOperationalError4Choic
         [IsoXmlTag("Desc")]
         [IsoSimpleType(IsoSimpleType.Max140Text)]
         [StringLength(maximumLength: 140, MinimumLength = 1)]
-        public IsoMax140Text? Description { get; init; }
+        public Max140Text? Description { get; init; }
     }
 }

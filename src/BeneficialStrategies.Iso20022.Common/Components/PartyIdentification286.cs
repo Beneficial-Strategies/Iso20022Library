@@ -28,7 +28,7 @@ public record PartyIdentification286
     /// </summary>
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
-    public IsoMax35Text? Assigner { get; init; }
+    public Max35Text? Assigner { get; init; }
 
     /// <summary>
     /// Country.
@@ -42,14 +42,14 @@ public record PartyIdentification286
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax11NumericText Identification { get; init; }
+    public required Max11NumericText Identification { get; init; }
 
     /// <summary>
     /// Legal Corporate Name.
     /// </summary>
     [DisplayName("Legal Corporate Name")]
     [IsoXmlTag("LglCorpNm")]
-    public IsoMax99Text? LegalCorporateName { get; init; }
+    public Max99Text? LegalCorporateName { get; init; }
 
     /// <summary>
     /// Local Data.
@@ -63,5 +63,5 @@ public record PartyIdentification286
     /// </summary>
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
-    public IsoMax35Text? ShortName { get; init; }
+    public Max35Text? ShortName { get; init; }
 }

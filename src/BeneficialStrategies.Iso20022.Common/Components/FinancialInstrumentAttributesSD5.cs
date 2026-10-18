@@ -24,7 +24,7 @@ public record FinancialInstrumentAttributesSD5
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text PlaceAndName { get; init; }
+    public required Max350Text PlaceAndName { get; init; }
 
     /// <summary>
     /// Matching security identifier for the disbursed security that is used to match the customer&apos;s SOI (Security of Interest) to the GCA VS Security Cross Reference.

@@ -23,7 +23,7 @@ public record PostTradeRiskReductionIdentifier1
     [DisplayName("Structurer")]
     [IsoXmlTag("Strr")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public required IsoLEIIdentifier Structurer { get; init; }
+    public required LEIIdentifier Structurer { get; init; }
 
     /// <summary>
     /// Post trade risk reduction identifier assigned by the structurer allowing to link the constituents.
@@ -33,5 +33,5 @@ public record PostTradeRiskReductionIdentifier1
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public required IsoMax52Text Identification { get; init; }
+    public required Max52Text Identification { get; init; }
 }

@@ -24,7 +24,7 @@ public record CommunicationAddress7
     [IsoXmlTag("Email")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
     [StringLength(maximumLength: 2048, MinimumLength = 1)]
-    public IsoMax2048Text? Email { get; init; }
+    public Max2048Text? Email { get; init; }
 
     /// <summary>
     /// Collection of information that identifies a phone number, as defined by telecom services.
@@ -33,7 +33,7 @@ public record CommunicationAddress7
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? PhoneNumber { get; init; }
+    public PhoneNumber? PhoneNumber { get; init; }
 
     /// <summary>
     /// Collection of information that identifies a mobile phone number, as defined by telecom services.
@@ -42,7 +42,7 @@ public record CommunicationAddress7
     [DisplayName("Mobile Number")]
     [IsoXmlTag("MobNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? MobileNumber { get; init; }
+    public PhoneNumber? MobileNumber { get; init; }
 
     /// <summary>
     /// Collection of information that identifies a FAX number, as defined by telecom services.
@@ -51,7 +51,7 @@ public record CommunicationAddress7
     [DisplayName("Fax Number")]
     [IsoXmlTag("FaxNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? FaxNumber { get; init; }
+    public PhoneNumber? FaxNumber { get; init; }
 
     /// <summary>
     /// Address for a telex machine.
@@ -61,7 +61,7 @@ public record CommunicationAddress7
     [IsoXmlTag("TlxAdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TelexAddress { get; init; }
+    public Max35Text? TelexAddress { get; init; }
 
     /// <summary>
     /// Address for the Universal Resource Locator (URL), for example, used over the www (HTTP) service.
@@ -71,5 +71,5 @@ public record CommunicationAddress7
     [IsoXmlTag("URLAdr")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
     [StringLength(maximumLength: 2048, MinimumLength = 1)]
-    public IsoMax2048Text? URLAddress { get; init; }
+    public Max2048Text? URLAddress { get; init; }
 }

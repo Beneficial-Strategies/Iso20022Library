@@ -24,7 +24,7 @@ public record NetObligation1
     [IsoXmlTag("OblgtnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ObligationIdentification { get; init; }
+    public required Max35Text ObligationIdentification { get; init; }
 
     /// <summary>
     /// Amount and currency of the obligation.
@@ -81,5 +81,5 @@ public record NetObligation1
     [DisplayName("Transactions Number")]
     [IsoXmlTag("TxsNb")]
     [IsoSimpleType(IsoSimpleType.Max10NumericText)]
-    public IsoMax10NumericText? TransactionsNumber { get; init; }
+    public Max10NumericText? TransactionsNumber { get; init; }
 }

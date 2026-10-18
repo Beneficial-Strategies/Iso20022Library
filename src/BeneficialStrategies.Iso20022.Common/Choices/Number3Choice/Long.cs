@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Number3Choice
         /// </summary>
         [IsoXmlTag("Lng")]
         [IsoSimpleType(IsoSimpleType.Exact5NumericText)]
-        public required IsoExact5NumericText Value { get; init; }
+        public required Exact5NumericText Value { get; init; }
     }
 }

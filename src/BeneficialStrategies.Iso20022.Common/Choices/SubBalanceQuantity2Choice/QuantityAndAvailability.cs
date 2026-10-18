@@ -31,6 +31,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SubBalanceQuantity2Choice
         [DisplayName("Availability Indicator")]
         [IsoXmlTag("AvlbtyInd")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public required IsoYesNoIndicator AvailabilityIndicator { get; init; }
+        public required YesNoIndicator AvailabilityIndicator { get; init; }
     }
 }

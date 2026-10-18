@@ -32,5 +32,5 @@ public record ActionMessage5
     [IsoXmlTag("MsgCntt")]
     [IsoSimpleType(IsoSimpleType.Max20000Text)]
     [StringLength(maximumLength: 20000, MinimumLength = 1)]
-    public required IsoMax20000Text MessageContent { get; init; }
+    public required Max20000Text MessageContent { get; init; }
 }

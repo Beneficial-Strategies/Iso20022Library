@@ -39,5 +39,5 @@ public record Tax20
     [DisplayName("Exemption Indicator")]
     [IsoXmlTag("XmptnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ExemptionIndicator { get; init; }
+    public required YesNoIndicator ExemptionIndicator { get; init; }
 }

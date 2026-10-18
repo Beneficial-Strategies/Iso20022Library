@@ -31,5 +31,5 @@ public record StatusAndSubStatus2
     [DisplayName("Sub Status Code")]
     [IsoXmlTag("SubStsCd")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    public IsoExact4AlphaNumericText? SubStatusCode { get; init; }
+    public Exact4AlphaNumericText? SubStatusCode { get; init; }
 }

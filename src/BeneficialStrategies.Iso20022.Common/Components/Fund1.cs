@@ -24,7 +24,7 @@ public record Fund1
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Name { get; init; }
+    public Max350Text? Name { get; init; }
 
     /// <summary>
     /// Identification of the fund/sub fund with a Legal Entity Identifier. This is a code allocated to a party as described in ISO 17442 &quot;Financial Services - Legal Entity Identifier (LEI)&quot;.
@@ -33,7 +33,7 @@ public record Fund1
     [DisplayName("Legal Entity Identifier")]
     [IsoXmlTag("LglNttyIdr")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? LegalEntityIdentifier { get; init; }
+    public LEIIdentifier? LegalEntityIdentifier { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for the fund/sub fund, assigned under a formal or proprietary identification scheme.
@@ -106,7 +106,7 @@ public record Fund1
     [DisplayName("Estimated Percentage Of Fund Total NAV")]
     [IsoXmlTag("EstmtdPctgOfFndTtlNAV")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? EstimatedPercentageOfFundTotalNAV { get; init; }
+    public PercentageRate? EstimatedPercentageOfFundTotalNAV { get; init; }
 
     /// <summary>
     /// Estimated cash movement into the fund/sub fund.

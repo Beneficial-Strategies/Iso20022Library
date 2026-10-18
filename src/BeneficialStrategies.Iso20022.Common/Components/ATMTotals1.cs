@@ -55,7 +55,7 @@ public record ATMTotals1
     [DisplayName("ATM Balance Number")]
     [IsoXmlTag("ATMBalNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? ATMBalanceNumber { get; init; }
+    public Number? ATMBalanceNumber { get; init; }
 
     /// <summary>
     /// Total number of units for non-valued media, excluding reject cassette.
@@ -64,5 +64,5 @@ public record ATMTotals1
     [DisplayName("ATM Current Number")]
     [IsoXmlTag("ATMCurNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? ATMCurrentNumber { get; init; }
+    public Number? ATMCurrentNumber { get; init; }
 }

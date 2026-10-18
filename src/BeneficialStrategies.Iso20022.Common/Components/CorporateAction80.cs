@@ -21,7 +21,7 @@ public record CorporateAction80
     /// </summary>
     [DisplayName("Accrued Interest Indicator")]
     [IsoXmlTag("AcrdIntrstInd")]
-    public IsoYesNoIndicator? AccruedInterestIndicator { get; init; }
+    public YesNoIndicator? AccruedInterestIndicator { get; init; }
 
     /// <summary>
     /// Additional Business Process Indicator.
@@ -50,7 +50,7 @@ public record CorporateAction80
     /// </summary>
     [DisplayName("Certification Breakdown Indicator")]
     [IsoXmlTag("CertfctnBrkdwnInd")]
-    public IsoYesNoIndicator? CertificationBreakdownIndicator { get; init; }
+    public YesNoIndicator? CertificationBreakdownIndicator { get; init; }
 
     /// <summary>
     /// Certification Type.
@@ -71,7 +71,7 @@ public record CorporateAction80
     /// </summary>
     [DisplayName("Charges Applied Indicator")]
     [IsoXmlTag("ChrgsApldInd")]
-    public IsoYesNoIndicator? ChargesAppliedIndicator { get; init; }
+    public YesNoIndicator? ChargesAppliedIndicator { get; init; }
 
     /// <summary>
     /// Consent Type.
@@ -134,7 +134,7 @@ public record CorporateAction80
     /// </summary>
     [DisplayName("Interest Accrued Number Of Days")]
     [IsoXmlTag("IntrstAcrdNbOfDays")]
-    public IsoMax3Number? InterestAccruedNumberOfDays { get; init; }
+    public Max3Number? InterestAccruedNumberOfDays { get; init; }
 
     /// <summary>
     /// Intermediate Securities Distribution Type.
@@ -148,7 +148,7 @@ public record CorporateAction80
     /// </summary>
     [DisplayName("Letter Of Guaranteed Delivery Indicator")]
     [IsoXmlTag("LttrOfGrntedDlvryInd")]
-    public IsoYesNoIndicator? LetterOfGuaranteedDeliveryIndicator { get; init; }
+    public YesNoIndicator? LetterOfGuaranteedDeliveryIndicator { get; init; }
 
     /// <summary>
     /// Lottery Type.
@@ -162,7 +162,7 @@ public record CorporateAction80
     /// </summary>
     [DisplayName("New Place Of Incorporation")]
     [IsoXmlTag("NewPlcOfIncorprtn")]
-    public IsoMax350Text? NewPlaceOfIncorporation { get; init; }
+    public Max350Text? NewPlaceOfIncorporation { get; init; }
 
     /// <summary>
     /// Occurrence Type.
@@ -211,7 +211,7 @@ public record CorporateAction80
     /// </summary>
     [DisplayName("Restriction Indicator")]
     [IsoXmlTag("RstrctnInd")]
-    public IsoYesNoIndicator? RestrictionIndicator { get; init; }
+    public YesNoIndicator? RestrictionIndicator { get; init; }
 
     /// <summary>
     /// Securities Quantity.
@@ -225,7 +225,7 @@ public record CorporateAction80
     /// </summary>
     [DisplayName("Shareholder Rights Directive Indicator")]
     [IsoXmlTag("ShrhldrRghtsDrctvInd")]
-    public IsoYesNoIndicator? ShareholderRightsDirectiveIndicator { get; init; }
+    public YesNoIndicator? ShareholderRightsDirectiveIndicator { get; init; }
 
     /// <summary>
     /// Taxable Income Per Share Calculated.

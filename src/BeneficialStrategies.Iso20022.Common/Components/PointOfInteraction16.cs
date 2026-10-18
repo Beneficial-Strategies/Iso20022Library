@@ -30,7 +30,7 @@ public record PointOfInteraction16
     [IsoId("_QcAEW7Z0EfCUZfsQO4rYeA")]
     [DisplayName("System Name")]
     [IsoXmlTag("SysNm")]
-    public IsoMax70Text? SystemName { get; init; }
+    public Max70Text? SystemName { get; init; }
 
     /// <summary>
     /// Identifier assigned by the merchant identifying a set of POI (Point Of Interaction) terminals performing some categories of transactions.
@@ -38,7 +38,7 @@ public record PointOfInteraction16
     [IsoId("_QcAEYbZ0EfCUZfsQO4rYeA")]
     [DisplayName("Group Identification")]
     [IsoXmlTag("GrpId")]
-    public IsoMax35Text? GroupIdentification { get; init; }
+    public Max35Text? GroupIdentification { get; init; }
 
     /// <summary>
     /// Capabilities of the POI (Point Of Interaction) performing the transaction.
@@ -54,7 +54,7 @@ public record PointOfInteraction16
     [IsoId("_QcAEbbZ0EfCUZfsQO4rYeA")]
     [DisplayName("Time Zone")]
     [IsoXmlTag("TmZone")]
-    public IsoMax70Text? TimeZone { get; init; }
+    public Max70Text? TimeZone { get; init; }
 
     /// <summary>
     /// Indicates the type of integration of the POI terminal in the sale environment.

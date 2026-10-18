@@ -86,5 +86,5 @@ public record StructuredRemittanceInformation22
     [IsoId("a58c069f-f64a-40e8-bccf-9f64dc1c1edf")]
     [DisplayName("Additional Remittance Information")]
     [IsoXmlTag("AddtlRmtInf")]
-    public SimpleValueList<IsoMax140Text> AdditionalRemittanceInformation { get; init; } = [];
+    public SimpleValueList<Max140Text> AdditionalRemittanceInformation { get; init; } = [];
 }

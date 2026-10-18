@@ -30,5 +30,5 @@ public record PenaltyStatusReason2
     [IsoId("_vEVX0x-DEeuwwezkzufkMw")]
     [DisplayName("Additional Status Reason")]
     [IsoXmlTag("AddtlStsRsn")]
-    public IsoMax210Text? AdditionalStatusReason { get; init; }
+    public Max210Text? AdditionalStatusReason { get; init; }
 }

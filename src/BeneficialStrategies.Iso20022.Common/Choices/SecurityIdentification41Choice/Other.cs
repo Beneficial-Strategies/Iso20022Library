@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification41Choice
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.Max210Text)]
         [StringLength(maximumLength: 210, MinimumLength = 1)]
-        public required IsoMax210Text Identification { get; init; }
+        public required Max210Text Identification { get; init; }
 
         /// <summary>
         /// Indicates the source of the identifier that represent the underlier.
@@ -34,6 +34,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification41Choice
         [IsoXmlTag("Src")]
         [IsoSimpleType(IsoSimpleType.Max100Text)]
         [StringLength(maximumLength: 100, MinimumLength = 1)]
-        public required IsoMax100Text Source { get; init; }
+        public required Max100Text Source { get; init; }
     }
 }

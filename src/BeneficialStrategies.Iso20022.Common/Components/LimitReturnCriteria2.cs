@@ -23,7 +23,7 @@ public record LimitReturnCriteria2
     [DisplayName("Start Date Time Indicator")]
     [IsoXmlTag("StartDtTmInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? StartDateTimeIndicator { get; init; }
+    public RequestedIndicator? StartDateTimeIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the limit status is requested.
@@ -32,7 +32,7 @@ public record LimitReturnCriteria2
     [DisplayName("Status Indicator")]
     [IsoXmlTag("StsInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? StatusIndicator { get; init; }
+    public RequestedIndicator? StatusIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the limit used amount is requested.
@@ -41,7 +41,7 @@ public record LimitReturnCriteria2
     [DisplayName("Used Amount Indicator")]
     [IsoXmlTag("UsdAmtInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? UsedAmountIndicator { get; init; }
+    public RequestedIndicator? UsedAmountIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the limit used percentage is requested.
@@ -50,5 +50,5 @@ public record LimitReturnCriteria2
     [DisplayName("Used Percentage Indicator")]
     [IsoXmlTag("UsdPctgInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? UsedPercentageIndicator { get; init; }
+    public RequestedIndicator? UsedPercentageIndicator { get; init; }
 }

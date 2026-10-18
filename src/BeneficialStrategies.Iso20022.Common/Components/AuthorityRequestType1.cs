@@ -24,7 +24,7 @@ public record AuthorityRequestType1
     [IsoXmlTag("MsgNmId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MessageNameIdentification { get; init; }
+    public required Max35Text MessageNameIdentification { get; init; }
 
     /// <summary>
     /// Specifies the message name.
@@ -34,5 +34,5 @@ public record AuthorityRequestType1
     [IsoXmlTag("MsgNm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? MessageName { get; init; }
+    public Max140Text? MessageName { get; init; }
 }

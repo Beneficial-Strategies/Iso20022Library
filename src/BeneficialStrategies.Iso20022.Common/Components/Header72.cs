@@ -30,7 +30,7 @@ public record Header72
     [IsoId("_XYNnIx7XEfCkq6-p7S3J1Q")]
     [DisplayName("Protocol Version")]
     [IsoXmlTag("PrtcolVrsn")]
-    public IsoMax2048Text? ProtocolVersion { get; init; }
+    public Max2048Text? ProtocolVersion { get; init; }
 
     /// <summary>
     /// Unique identification of an exchange of messages between two parties.
@@ -38,7 +38,7 @@ public record Header72
     [IsoId("_XYNnJR7XEfCkq6-p7S3J1Q")]
     [DisplayName("Exchange Identification")]
     [IsoXmlTag("XchgId")]
-    public IsoMax35Text? ExchangeIdentification { get; init; }
+    public Max35Text? ExchangeIdentification { get; init; }
 
     /// <summary>
     /// Number of retransmission of the message. Incremented by one for each retransmission.
@@ -46,7 +46,7 @@ public record Header72
     [IsoId("_XYNnJx7XEfCkq6-p7S3J1Q")]
     [DisplayName("Re Transmission Counter")]
     [IsoXmlTag("ReTrnsmssnCntr")]
-    public IsoMax3NumericText? ReTransmissionCounter { get; init; }
+    public Max3NumericText? ReTransmissionCounter { get; init; }
 
     /// <summary>
     /// Date and time at which the message was sent.
@@ -54,7 +54,7 @@ public record Header72
     [IsoId("_XYNnKR7XEfCkq6-p7S3J1Q")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
-    public IsoISODateTime? CreationDateTime { get; init; }
+    public ISODateTime? CreationDateTime { get; init; }
 
     /// <summary>
     /// Identification of the collection to which the batch belongs.
@@ -62,7 +62,7 @@ public record Header72
     [IsoId("_fNEOFB7YEfCkq6-p7S3J1Q")]
     [DisplayName("Collection Identification")]
     [IsoXmlTag("ColltnId")]
-    public IsoMax35Text? CollectionIdentification { get; init; }
+    public Max35Text? CollectionIdentification { get; init; }
 
     /// <summary>
     /// Identification of the batch to which the message belongs.
@@ -70,7 +70,7 @@ public record Header72
     [IsoId("_fNEOFR7YEfCkq6-p7S3J1Q")]
     [DisplayName("Batch Identification")]
     [IsoXmlTag("BtchId")]
-    public IsoMax35Text? BatchIdentification { get; init; }
+    public Max35Text? BatchIdentification { get; init; }
 
     /// <summary>
     /// Sequence number of the message inside the batch.
@@ -78,7 +78,7 @@ public record Header72
     [IsoId("_fNEOFh7YEfCkq6-p7S3J1Q")]
     [DisplayName("Message Sequence Number")]
     [IsoXmlTag("MsgSeqNb")]
-    public IsoMax15NumericText? MessageSequenceNumber { get; init; }
+    public Max15NumericText? MessageSequenceNumber { get; init; }
 
     /// <summary>
     /// Value of the message to use for the computation of the checksum of the batch or collection of messages.
@@ -86,7 +86,7 @@ public record Header72
     [IsoId("_fNEOFx7YEfCkq6-p7S3J1Q")]
     [DisplayName("Message Checksum Input Value")]
     [IsoXmlTag("MsgChcksmInptVal")]
-    public IsoMax140Binary? MessageChecksumInputValue { get; init; }
+    public Max140Binary? MessageChecksumInputValue { get; init; }
 
     /// <summary>
     /// Unique identification of the partner that has initiated the exchange.
@@ -94,7 +94,7 @@ public record Header72
     [IsoId("_XYNnLR7XEfCkq6-p7S3J1Q")]
     [DisplayName("Initiating Party Identification")]
     [IsoXmlTag("InitgPtyId")]
-    public IsoMax35Text? InitiatingPartyIdentification { get; init; }
+    public Max35Text? InitiatingPartyIdentification { get; init; }
 
     /// <summary>
     /// Unique identification of the partner that is the recipient of the message exchange.
@@ -102,7 +102,7 @@ public record Header72
     [IsoId("_XYNnLx7XEfCkq6-p7S3J1Q")]
     [DisplayName("Recipient Party Identification")]
     [IsoXmlTag("RcptPtyId")]
-    public IsoMax35Text? RecipientPartyIdentification { get; init; }
+    public Max35Text? RecipientPartyIdentification { get; init; }
 
     /// <summary>
     /// Information sent in the request message to be returned in the response one, for instance to help in the retrieval of the context of the exchange.
@@ -110,5 +110,5 @@ public record Header72
     [IsoId("_XYNnMR7XEfCkq6-p7S3J1Q")]
     [DisplayName("Trace Data")]
     [IsoXmlTag("TracData")]
-    public IsoMax70Text? TraceData { get; init; }
+    public Max70Text? TraceData { get; init; }
 }

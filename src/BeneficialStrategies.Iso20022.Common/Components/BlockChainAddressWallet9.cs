@@ -24,7 +24,7 @@ public record BlockChainAddressWallet9
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax140Text Identification { get; init; }
+    public required RestrictedFINXMax140Text Identification { get; init; }
 
     /// <summary>
     /// Specifies the type of securities account.
@@ -42,5 +42,5 @@ public record BlockChainAddressWallet9
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoRestrictedFINXMax70Text? Name { get; init; }
+    public RestrictedFINXMax70Text? Name { get; init; }
 }

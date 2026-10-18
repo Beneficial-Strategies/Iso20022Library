@@ -31,7 +31,7 @@ public record CardTransactionRiskIndicator1
     [DisplayName("Level")]
     [IsoXmlTag("Lvl")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber Level { get; init; }
+    public required Number Level { get; init; }
 
     /// <summary>
     /// Recommended action for the issuer.

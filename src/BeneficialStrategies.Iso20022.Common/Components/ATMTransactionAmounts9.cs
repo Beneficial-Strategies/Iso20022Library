@@ -39,7 +39,7 @@ public record ATMTransactionAmounts9
     [DisplayName("Minimum Number")]
     [IsoXmlTag("MinNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MinimumNumber { get; init; }
+    public Number? MinimumNumber { get; init; }
 
     /// <summary>
     /// Maximum number of media.
@@ -48,7 +48,7 @@ public record ATMTransactionAmounts9
     [DisplayName("Maximum Number")]
     [IsoXmlTag("MaxNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaximumNumber { get; init; }
+    public Number? MaximumNumber { get; init; }
 
     /// <summary>
     /// True if limits may be displayed to the customer on the ATM.
@@ -57,5 +57,5 @@ public record ATMTransactionAmounts9
     [DisplayName("Display Flag")]
     [IsoXmlTag("DispFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? DisplayFlag { get; init; }
+    public TrueFalseIndicator? DisplayFlag { get; init; }
 }

@@ -32,7 +32,7 @@ public record PartyIdentificationAndAccount124
     [IsoXmlTag("AcctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountIdentification { get; init; }
+    public Max35Text? AccountIdentification { get; init; }
 
     /// <summary>
     /// Specifies the reference of the transaction at the party identified in the sequence.
@@ -42,7 +42,7 @@ public record PartyIdentificationAndAccount124
     [IsoXmlTag("PrcgRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProcessingReference { get; init; }
+    public Max35Text? ProcessingReference { get; init; }
 
     /// <summary>
     /// Date and optionally the time, at which this transaction was processed by the party identified in this sequence.

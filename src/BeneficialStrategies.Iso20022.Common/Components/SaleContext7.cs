@@ -24,7 +24,7 @@ public record SaleContext7
     [IsoXmlTag("SaleId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SaleIdentification { get; init; }
+    public Max35Text? SaleIdentification { get; init; }
 
     /// <summary>
     /// Global reference of the sale transaction for the sale system.
@@ -34,7 +34,7 @@ public record SaleContext7
     [IsoXmlTag("SaleRefId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SaleReferenceIdentification { get; init; }
+    public Max35Text? SaleReferenceIdentification { get; init; }
 
     /// <summary>
     /// Identify a sale transaction assigned by the sale system.
@@ -44,7 +44,7 @@ public record SaleContext7
     [IsoXmlTag("SaleRefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SaleReferenceNumber { get; init; }
+    public Max35Text? SaleReferenceNumber { get; init; }
 
     /// <summary>
     /// Type of goods and/or services.
@@ -70,7 +70,7 @@ public record SaleContext7
     [IsoXmlTag("GoodAndSvcsOthrSubTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? GoodAndServicesOtherSubType { get; init; }
+    public Max35Text? GoodAndServicesOtherSubType { get; init; }
 
     /// <summary>
     /// Also referred to as split tender. Indicates whether the payment transaction is a partial payment of the sale transaction.
@@ -81,7 +81,7 @@ public record SaleContext7
     [DisplayName("Split Payment Indicator")]
     [IsoXmlTag("SpltPmtInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? SplitPaymentIndicator { get; init; }
+    public TrueFalseIndicator? SplitPaymentIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether a receipt from the goods or services provider was requested.
@@ -92,7 +92,7 @@ public record SaleContext7
     [DisplayName("Receipt Request Indicator")]
     [IsoXmlTag("RctReqInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ReceiptRequestIndicator { get; init; }
+    public TrueFalseIndicator? ReceiptRequestIndicator { get; init; }
 
     /// <summary>
     /// Type of receipt requested or communication channel used.
@@ -110,5 +110,5 @@ public record SaleContext7
     [IsoXmlTag("RctDstn")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? ReceiptDestination { get; init; }
+    public Max70Text? ReceiptDestination { get; init; }
 }

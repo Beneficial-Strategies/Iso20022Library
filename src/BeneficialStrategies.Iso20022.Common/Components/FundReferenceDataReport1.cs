@@ -24,7 +24,7 @@ public record FundReferenceDataReport1
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Identification { get; init; }
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Version Number. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 00001 and is the version of the template for which the EMT data is provided. In EMT v1, this element is not supported.
@@ -41,7 +41,7 @@ public record FundReferenceDataReport1
     [DisplayName("General Reference Date")]
     [IsoXmlTag("GnlRefDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate GeneralReferenceDate { get; init; }
+    public required DateOnly GeneralReferenceDate { get; init; }
 
     /// <summary>
     /// Identification of the security.

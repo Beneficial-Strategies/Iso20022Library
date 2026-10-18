@@ -23,7 +23,7 @@ public record VoteParameters4
     [DisplayName("Securities Quantity Required To Vote")]
     [IsoXmlTag("SctiesQtyReqrdToVote")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? SecuritiesQuantityRequiredToVote { get; init; }
+    public DecimalNumber? SecuritiesQuantityRequiredToVote { get; init; }
 
     /// <summary>
     /// Specifies whether it is allowed to only vote on a part of the entire holding, leaving part of the position un-voted.
@@ -32,7 +32,7 @@ public record VoteParameters4
     [DisplayName("Partial Vote Allowed")]
     [IsoXmlTag("PrtlVoteAllwd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator PartialVoteAllowed { get; init; }
+    public required YesNoIndicator PartialVoteAllowed { get; init; }
 
     /// <summary>
     /// Specifies whether it is allowed to vote in different directions for the entire holding.
@@ -41,7 +41,7 @@ public record VoteParameters4
     [DisplayName("Split Vote Allowed")]
     [IsoXmlTag("SpltVoteAllwd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator SplitVoteAllowed { get; init; }
+    public required YesNoIndicator SplitVoteAllowed { get; init; }
 
     /// <summary>
     /// Date and time by which the vote instructions should be submitted to the intermediary.
@@ -122,7 +122,7 @@ public record VoteParameters4
     [DisplayName("Beneficial Owner Disclosure")]
     [IsoXmlTag("BnfclOwnrDsclsr")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator BeneficialOwnerDisclosure { get; init; }
+    public required YesNoIndicator BeneficialOwnerDisclosure { get; init; }
 
     /// <summary>
     /// Identifies the possible types of voting instructions. When used at the resolution level, it supersedes the value specified in the meeting notice.
@@ -190,7 +190,7 @@ public record VoteParameters4
     [IsoXmlTag("AddtlVtngRqrmnts")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AdditionalVotingRequirements { get; init; }
+    public Max350Text? AdditionalVotingRequirements { get; init; }
 
     /// <summary>
     /// Indicates whether the previously sent instructions becomes invalid after a market deadline extension.
@@ -199,5 +199,5 @@ public record VoteParameters4
     [DisplayName("Previous Instruction Invalidity Indicator")]
     [IsoXmlTag("PrvsInstrInvldtyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PreviousInstructionInvalidityIndicator { get; init; }
+    public YesNoIndicator? PreviousInstructionInvalidityIndicator { get; init; }
 }

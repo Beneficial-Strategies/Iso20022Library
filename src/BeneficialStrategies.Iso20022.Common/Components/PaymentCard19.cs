@@ -40,7 +40,7 @@ public record PaymentCard19
     [IsoXmlTag("PmtAcctRef")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? PaymentAccountReference { get; init; }
+    public Max70Text? PaymentAccountReference { get; init; }
 
     /// <summary>
     /// Masked PAN to be printed on payment receipts or displayed to the cardholder. Masked digits may be absent or replaced by another character as &apos;*&apos;.
@@ -49,7 +49,7 @@ public record PaymentCard19
     [DisplayName("Masked PAN")]
     [IsoXmlTag("MskdPAN")]
     [IsoSimpleType(IsoSimpleType.Max30Text)]
-    public IsoMax30Text? MaskedPAN { get; init; }
+    public Max30Text? MaskedPAN { get; init; }
 
     /// <summary>
     /// Brand name of the card.
@@ -59,7 +59,7 @@ public record PaymentCard19
     [IsoXmlTag("CardBrnd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CardBrand { get; init; }
+    public Max35Text? CardBrand { get; init; }
 
     /// <summary>
     /// Type of card product.

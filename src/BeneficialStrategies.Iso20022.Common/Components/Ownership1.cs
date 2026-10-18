@@ -31,7 +31,7 @@ public record Ownership1
     [DisplayName("Ownership Percentage")]
     [IsoXmlTag("OwnrshPctg")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? OwnershipPercentage { get; init; }
+    public PercentageRate? OwnershipPercentage { get; init; }
 
     /// <summary>
     /// Percentage of usufruct that a person has on an asset.
@@ -40,5 +40,5 @@ public record Ownership1
     [DisplayName("Usufruct Percentage")]
     [IsoXmlTag("UsfrctPctg")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? UsufructPercentage { get; init; }
+    public PercentageRate? UsufructPercentage { get; init; }
 }

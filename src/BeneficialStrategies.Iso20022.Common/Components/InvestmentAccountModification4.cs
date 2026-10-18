@@ -24,7 +24,7 @@ public record InvestmentAccountModification4
     [IsoXmlTag("ModRsn")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? ModificationReason { get; init; }
+    public Max350Text? ModificationReason { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier of the account modification request.
@@ -34,7 +34,7 @@ public record InvestmentAccountModification4
     [IsoXmlTag("AcctApplId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountApplicationIdentification { get; init; }
+    public Max35Text? AccountApplicationIdentification { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor&apos;s identification of a transfer.
@@ -44,7 +44,7 @@ public record InvestmentAccountModification4
     [IsoXmlTag("ClntRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClientReference { get; init; }
+    public Max35Text? ClientReference { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the transaction, for example, a transfer, as allocated by the counterparty.

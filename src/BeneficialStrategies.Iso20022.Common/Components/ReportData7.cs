@@ -28,14 +28,14 @@ public record ReportData7
     /// </summary>
     [DisplayName("Continuation Indicator")]
     [IsoXmlTag("ConttnInd")]
-    public IsoTrueFalseIndicator? ContinuationIndicator { get; init; }
+    public TrueFalseIndicator? ContinuationIndicator { get; init; }
 
     /// <summary>
     /// Date.
     /// </summary>
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Format.
@@ -56,47 +56,47 @@ public record ReportData7
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax140Text? Identification { get; init; }
+    public Max140Text? Identification { get; init; }
 
     /// <summary>
     /// Name.
     /// </summary>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax140Text? Name { get; init; }
+    public Max140Text? Name { get; init; }
 
     /// <summary>
     /// Other Format.
     /// </summary>
     [DisplayName("Other Format")]
     [IsoXmlTag("OthrFrmt")]
-    public IsoMax35Text? OtherFormat { get; init; }
+    public Max35Text? OtherFormat { get; init; }
 
     /// <summary>
     /// Qualifier.
     /// </summary>
     [DisplayName("Qualifier")]
     [IsoXmlTag("Qlfr")]
-    public IsoMax70Text? Qualifier { get; init; }
+    public Max70Text? Qualifier { get; init; }
 
     /// <summary>
     /// Sequence.
     /// </summary>
     [DisplayName("Sequence")]
     [IsoXmlTag("Seq")]
-    public IsoMax5NumericText? Sequence { get; init; }
+    public Max5NumericText? Sequence { get; init; }
 
     /// <summary>
     /// Time.
     /// </summary>
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
-    public IsoISOTime? Time { get; init; }
+    public ISOTime? Time { get; init; }
 
     /// <summary>
     /// Total Occurrences.
     /// </summary>
     [DisplayName("Total Occurrences")]
     [IsoXmlTag("TtlOcrncs")]
-    public IsoMax5NumericText? TotalOccurrences { get; init; }
+    public Max5NumericText? TotalOccurrences { get; init; }
 }

@@ -48,7 +48,7 @@ public record Authority1
     [IsoXmlTag("CtrySubDvsnMjrNm")]
     [IsoSimpleType(IsoSimpleType.Max50Text)]
     [StringLength(maximumLength: 50, MinimumLength = 1)]
-    public IsoMax50Text? CountrySubDivisionMajorName { get; init; }
+    public Max50Text? CountrySubDivisionMajorName { get; init; }
 
     /// <summary>
     /// Name of a minor subdivision of a country, for instance county, prefecture.
@@ -58,7 +58,7 @@ public record Authority1
     [IsoXmlTag("CtrySubDvsnMnrNm")]
     [IsoSimpleType(IsoSimpleType.Max50Text)]
     [StringLength(maximumLength: 50, MinimumLength = 1)]
-    public IsoMax50Text? CountrySubDivisionMinorName { get; init; }
+    public Max50Text? CountrySubDivisionMinorName { get; init; }
 
     /// <summary>
     /// City name
@@ -68,5 +68,5 @@ public record Authority1
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max50Text)]
     [StringLength(maximumLength: 50, MinimumLength = 1)]
-    public IsoMax50Text? Name { get; init; }
+    public Max50Text? Name { get; init; }
 }

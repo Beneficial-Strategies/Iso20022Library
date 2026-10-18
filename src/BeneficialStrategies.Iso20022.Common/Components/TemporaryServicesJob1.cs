@@ -24,7 +24,7 @@ public record TemporaryServicesJob1
     [IsoXmlTag("JobCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? JobCode { get; init; }
+    public Max35Text? JobCode { get; init; }
 
     /// <summary>
     /// Contains the description of the job or task of the individual working in a temporary capacity.
@@ -34,7 +34,7 @@ public record TemporaryServicesJob1
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Description { get; init; }
+    public Max256Text? Description { get; init; }
 
     /// <summary>
     /// Contains the start date of the job.
@@ -43,7 +43,7 @@ public record TemporaryServicesJob1
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? StartDate { get; init; }
+    public DateOnly? StartDate { get; init; }
 
     /// <summary>
     /// Duration of the job expressed in number of days.
@@ -52,7 +52,7 @@ public record TemporaryServicesJob1
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
     [IsoSimpleType(IsoSimpleType.Max5NumericText)]
-    public IsoMax5NumericText? Duration { get; init; }
+    public Max5NumericText? Duration { get; init; }
 
     /// <summary>
     /// Contains the end date of the job.
@@ -61,5 +61,5 @@ public record TemporaryServicesJob1
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? EndDate { get; init; }
+    public DateOnly? EndDate { get; init; }
 }

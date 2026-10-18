@@ -33,7 +33,7 @@ public record Transaction153
     [IsoXmlTag("TxSubTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TransactionSubType { get; init; }
+    public Max35Text? TransactionSubType { get; init; }
 
     /// <summary>
     /// Additional functions or services to be performed in conjunction with the transaction.

@@ -24,7 +24,7 @@ public record Organisation26
     [IsoXmlTag("CmonNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public required IsoMax70Text CommonName { get; init; }
+    public required Max70Text CommonName { get; init; }
 
     /// <summary>
     /// Location of the merchant.
@@ -34,7 +34,7 @@ public record Organisation26
     [IsoXmlTag("Adr")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Address { get; init; }
+    public Max140Text? Address { get; init; }
 
     /// <summary>
     /// Country of the merchant.
@@ -52,7 +52,7 @@ public record Organisation26
     [IsoXmlTag("MrchntCtgyCd")]
     [IsoSimpleType(IsoSimpleType.Min3Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 3)]
-    public required IsoMin3Max4Text MerchantCategoryCode { get; init; }
+    public required Min3Max4Text MerchantCategoryCode { get; init; }
 
     /// <summary>
     /// Identifier of the sponsored merchant assigned by the payment facilitator of their acquirer.
@@ -62,5 +62,5 @@ public record Organisation26
     [IsoXmlTag("RegdIdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text RegisteredIdentifier { get; init; }
+    public required Max35Text RegisteredIdentifier { get; init; }
 }

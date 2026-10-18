@@ -21,14 +21,14 @@ public record VoteParameters9
     /// </summary>
     [DisplayName("Additional Voting Requirements")]
     [IsoXmlTag("AddtlVtngRqrmnts")]
-    public IsoMax350Text? AdditionalVotingRequirements { get; init; }
+    public Max350Text? AdditionalVotingRequirements { get; init; }
 
     /// <summary>
     /// Beneficial Owner Disclosure.
     /// </summary>
     [DisplayName("Beneficial Owner Disclosure")]
     [IsoXmlTag("BnfclOwnrDsclsr")]
-    public IsoYesNoIndicator? BeneficialOwnerDisclosure { get; init; }
+    public YesNoIndicator? BeneficialOwnerDisclosure { get; init; }
 
     /// <summary>
     /// Early Incentive Premium.
@@ -56,14 +56,14 @@ public record VoteParameters9
     /// </summary>
     [DisplayName("Partial Vote Allowed")]
     [IsoXmlTag("PrtlVoteAllwd")]
-    public required IsoYesNoIndicator PartialVoteAllowed { get; init; }
+    public required YesNoIndicator PartialVoteAllowed { get; init; }
 
     /// <summary>
     /// Previous Instruction Invalidity Indicator.
     /// </summary>
     [DisplayName("Previous Instruction Invalidity Indicator")]
     [IsoXmlTag("PrvsInstrInvldtyInd")]
-    public IsoYesNoIndicator? PreviousInstructionInvalidityIndicator { get; init; }
+    public YesNoIndicator? PreviousInstructionInvalidityIndicator { get; init; }
 
     /// <summary>
     /// Revocability Deadline.
@@ -91,7 +91,7 @@ public record VoteParameters9
     /// </summary>
     [DisplayName("Split Vote Allowed")]
     [IsoXmlTag("SpltVoteAllwd")]
-    public required IsoYesNoIndicator SplitVoteAllowed { get; init; }
+    public required YesNoIndicator SplitVoteAllowed { get; init; }
 
     /// <summary>
     /// Vote Deadline.

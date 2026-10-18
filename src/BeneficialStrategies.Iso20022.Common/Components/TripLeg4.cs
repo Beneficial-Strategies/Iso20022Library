@@ -22,7 +22,7 @@ public record TripLeg4
     [IsoId("_2id1IUiDEfCMZJtj4J7UGQ")]
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
-    public IsoMax35NumericText? SequenceNumber { get; init; }
+    public Max35NumericText? SequenceNumber { get; init; }
 
     /// <summary>
     /// Contains the ticket number.
@@ -30,7 +30,7 @@ public record TripLeg4
     [IsoId("_2id1I0iDEfCMZJtj4J7UGQ")]
     [DisplayName("Ticket Number")]
     [IsoXmlTag("TcktNb")]
-    public IsoMax35Text? TicketNumber { get; init; }
+    public Max35Text? TicketNumber { get; init; }
 
     /// <summary>
     /// Name of the issuing ticket agent.
@@ -38,7 +38,7 @@ public record TripLeg4
     [IsoId("_2id1JUiDEfCMZJtj4J7UGQ")]
     [DisplayName("Ticket Issuer")]
     [IsoXmlTag("TcktIssr")]
-    public IsoMax35Text? TicketIssuer { get; init; }
+    public Max35Text? TicketIssuer { get; init; }
 
     /// <summary>
     /// Date the ticket was issued.
@@ -46,7 +46,7 @@ public record TripLeg4
     [IsoId("_2id1J0iDEfCMZJtj4J7UGQ")]
     [DisplayName("Ticket Issue Date")]
     [IsoXmlTag("TcktIsseDt")]
-    public IsoISODate? TicketIssueDate { get; init; }
+    public DateOnly? TicketIssueDate { get; init; }
 
     /// <summary>
     /// Location where ticket was issued.
@@ -54,7 +54,7 @@ public record TripLeg4
     [IsoId("_2id1KUiDEfCMZJtj4J7UGQ")]
     [DisplayName("Ticket Issue Location")]
     [IsoXmlTag("TcktIsseLctn")]
-    public IsoMax140Text? TicketIssueLocation { get; init; }
+    public Max140Text? TicketIssueLocation { get; init; }
 
     /// <summary>
     /// Number of a ticket that contains additional coupons for an itinerary that contains more than four segments.
@@ -62,7 +62,7 @@ public record TripLeg4
     [IsoId("_2id1K0iDEfCMZJtj4J7UGQ")]
     [DisplayName("Conjunction Ticket Number")]
     [IsoXmlTag("CnjnctnTcktNb")]
-    public IsoMax35Text? ConjunctionTicketNumber { get; init; }
+    public Max35Text? ConjunctionTicketNumber { get; init; }
 
     /// <summary>
     /// Indicates whether or not restrictions apply to the ticket.
@@ -70,7 +70,7 @@ public record TripLeg4
     [IsoId("_2id1LUiDEfCMZJtj4J7UGQ")]
     [DisplayName("Restricted Ticket")]
     [IsoXmlTag("RstrctdTckt")]
-    public IsoTrueFalseIndicator? RestrictedTicket { get; init; }
+    public TrueFalseIndicator? RestrictedTicket { get; init; }
 
     /// <summary>
     /// Indicates whether or not the ticket is open-ended.
@@ -78,7 +78,7 @@ public record TripLeg4
     [IsoId("_2id1L0iDEfCMZJtj4J7UGQ")]
     [DisplayName("Open Ticket")]
     [IsoXmlTag("OpnTckt")]
-    public IsoTrueFalseIndicator? OpenTicket { get; init; }
+    public TrueFalseIndicator? OpenTicket { get; init; }
 
     /// <summary>
     /// Contains the specific restriction applicable to the ticket.
@@ -86,7 +86,7 @@ public record TripLeg4
     [IsoId("_2id1MUiDEfCMZJtj4J7UGQ")]
     [DisplayName("Ticket Restrictions")]
     [IsoXmlTag("TcktRstrctns")]
-    public IsoMax70Text? TicketRestrictions { get; init; }
+    public Max70Text? TicketRestrictions { get; init; }
 
     /// <summary>
     /// Indicates whether or not the ticket was exchanged (reissued or new ticket generated).
@@ -94,7 +94,7 @@ public record TripLeg4
     [IsoId("_2id1M0iDEfCMZJtj4J7UGQ")]
     [DisplayName("Exchanged Ticket")]
     [IsoXmlTag("XchgdTckt")]
-    public IsoTrueFalseIndicator? ExchangedTicket { get; init; }
+    public TrueFalseIndicator? ExchangedTicket { get; init; }
 
     /// <summary>
     /// Contains the original ticket number that was replaced by the new ticket number.
@@ -102,7 +102,7 @@ public record TripLeg4
     [IsoId("_2id1NUiDEfCMZJtj4J7UGQ")]
     [DisplayName("Exchanged Ticket Number")]
     [IsoXmlTag("XchgdTcktNb")]
-    public IsoMax35Text? ExchangedTicketNumber { get; init; }
+    public Max35Text? ExchangedTicketNumber { get; init; }
 
     /// <summary>
     /// Ticket record locator number.
@@ -110,7 +110,7 @@ public record TripLeg4
     [IsoId("_2id1N0iDEfCMZJtj4J7UGQ")]
     [DisplayName("Record Locator Number")]
     [IsoXmlTag("RcrdLctrNb")]
-    public IsoMax35Text? RecordLocatorNumber { get; init; }
+    public Max35Text? RecordLocatorNumber { get; init; }
 
     /// <summary>
     /// Computerised reservation system used to make the reservation and purchase the ticket.
@@ -118,7 +118,7 @@ public record TripLeg4
     [IsoId("_2id1OUiDEfCMZJtj4J7UGQ")]
     [DisplayName("Reservation System")]
     [IsoXmlTag("RsvatnSys")]
-    public IsoMax4Text? ReservationSystem { get; init; }
+    public Max4Text? ReservationSystem { get; init; }
 
     /// <summary>
     /// Value that uniquely identifies the reservation.
@@ -126,7 +126,7 @@ public record TripLeg4
     [IsoId("_2id1O0iDEfCMZJtj4J7UGQ")]
     [DisplayName("Reservation Number")]
     [IsoXmlTag("RsvatnNb")]
-    public IsoMax35Text? ReservationNumber { get; init; }
+    public Max35Text? ReservationNumber { get; init; }
 
     /// <summary>
     /// System code that identifies the original reservation system used to make the reservation and purchase the ticket.
@@ -134,7 +134,7 @@ public record TripLeg4
     [IsoId("_2id1PUiDEfCMZJtj4J7UGQ")]
     [DisplayName("Original Reservation System")]
     [IsoXmlTag("OrgnlRsvatnSys")]
-    public IsoMax4Text? OriginalReservationSystem { get; init; }
+    public Max4Text? OriginalReservationSystem { get; init; }
 
     /// <summary>
     /// Value that identifies the original reservation generated during the original reservation and purchase of the ticket.
@@ -142,7 +142,7 @@ public record TripLeg4
     [IsoId("_2id1P0iDEfCMZJtj4J7UGQ")]
     [DisplayName("Original Reservation Number")]
     [IsoXmlTag("OrgnlRsvatnNb")]
-    public IsoMax35Text? OriginalReservationNumber { get; init; }
+    public Max35Text? OriginalReservationNumber { get; init; }
 
     /// <summary>
     /// Provides the reference documentation.
@@ -150,7 +150,7 @@ public record TripLeg4
     [IsoId("_2id1QUiDEfCMZJtj4J7UGQ")]
     [DisplayName("Document")]
     [IsoXmlTag("Doc")]
-    public IsoATICALaxProcessing? Document { get; init; }
+    public ATICALaxProcessing? Document { get; init; }
 
     /// <summary>
     /// Type of transportation. P000-P999 reserved for private use, N000-N999 reserved for national use.
@@ -166,7 +166,7 @@ public record TripLeg4
     [IsoId("_2id1R0iDEfCMZJtj4J7UGQ")]
     [DisplayName("Commodity Code")]
     [IsoXmlTag("CmmdtyCd")]
-    public IsoMax4Text? CommodityCode { get; init; }
+    public Max4Text? CommodityCode { get; init; }
 
     /// <summary>
     /// Name of the transportation carrier.
@@ -174,7 +174,7 @@ public record TripLeg4
     [IsoId("_2id1SUiDEfCMZJtj4J7UGQ")]
     [DisplayName("Carrier Name")]
     [IsoXmlTag("CrrierNm")]
-    public IsoMax70Text? CarrierName { get; init; }
+    public Max70Text? CarrierName { get; init; }
 
     /// <summary>
     /// Identifies the operator (company providing service).
@@ -182,7 +182,7 @@ public record TripLeg4
     [IsoId("_2id1S0iDEfCMZJtj4J7UGQ")]
     [DisplayName("Carrier Code")]
     [IsoXmlTag("CrrierCd")]
-    public IsoMax35Text? CarrierCode { get; init; }
+    public Max35Text? CarrierCode { get; init; }
 
     /// <summary>
     /// Contains the International Air Transport Association (IATA) code identifying the company that purchased the ticket.
@@ -190,7 +190,7 @@ public record TripLeg4
     [IsoId("_2id1TUiDEfCMZJtj4J7UGQ")]
     [DisplayName("IATA Code")]
     [IsoXmlTag("IATACd")]
-    public IsoMax35Text? IATACode { get; init; }
+    public Max35Text? IATACode { get; init; }
 
     /// <summary>
     /// Route number as specified by the transportation carrier (for example, flight number, bus number, train route or number, etc.)
@@ -198,7 +198,7 @@ public record TripLeg4
     [IsoId("_2id1T0iDEfCMZJtj4J7UGQ")]
     [DisplayName("Route Number")]
     [IsoXmlTag("RouteNb")]
-    public IsoMax35Text? RouteNumber { get; init; }
+    public Max35Text? RouteNumber { get; init; }
 
     /// <summary>
     /// Indicates the service class (for example, coach or first class).
@@ -206,7 +206,7 @@ public record TripLeg4
     [IsoId("_2id1UUiDEfCMZJtj4J7UGQ")]
     [DisplayName("Service Class")]
     [IsoXmlTag("SvcClss")]
-    public IsoMax35Text? ServiceClass { get; init; }
+    public Max35Text? ServiceClass { get; init; }
 
     /// <summary>
     /// Contains departure location, date and time.
@@ -230,7 +230,7 @@ public record TripLeg4
     [IsoId("_2id1V0iDEfCMZJtj4J7UGQ")]
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
-    public IsoMax4NumericText? Duration { get; init; }
+    public Max4NumericText? Duration { get; init; }
 
     /// <summary>
     /// Indicator that specifies whether the mode of transportation was a direct or non-direct route on the same ticket number.
@@ -238,7 +238,7 @@ public record TripLeg4
     [IsoId("_2id1WUiDEfCMZJtj4J7UGQ")]
     [DisplayName("Stop Over")]
     [IsoXmlTag("StopOver")]
-    public IsoTrueFalseIndicator? StopOver { get; init; }
+    public TrueFalseIndicator? StopOver { get; init; }
 
     /// <summary>
     /// Indicates a non-direct route between the origin and the destination.
@@ -246,7 +246,7 @@ public record TripLeg4
     [IsoId("_2id1W0iDEfCMZJtj4J7UGQ")]
     [DisplayName("Non Direct Route Code")]
     [IsoXmlTag("NonDrctRouteCd")]
-    public IsoMax35Text? NonDirectRouteCode { get; init; }
+    public Max35Text? NonDirectRouteCode { get; init; }
 
     /// <summary>
     /// Code that transportation companies assign to a particular ticket type, such as business class or discounted or non-refundable tickets.
@@ -254,7 +254,7 @@ public record TripLeg4
     [IsoId("_2id1XUiDEfCMZJtj4J7UGQ")]
     [DisplayName("Fair Basis Code")]
     [IsoXmlTag("FairBsisCd")]
-    public IsoMax35Text? FairBasisCode { get; init; }
+    public Max35Text? FairBasisCode { get; init; }
 
     /// <summary>
     /// Indicates whether or not insurance was purchased.
@@ -262,7 +262,7 @@ public record TripLeg4
     [IsoId("_2id1X0iDEfCMZJtj4J7UGQ")]
     [DisplayName("Insurance")]
     [IsoXmlTag("Insrnc")]
-    public IsoTrueFalseIndicator? Insurance { get; init; }
+    public TrueFalseIndicator? Insurance { get; init; }
 
     /// <summary>
     /// Contains trip leg amount information.
@@ -278,7 +278,7 @@ public record TripLeg4
     [IsoId("_2id1Y0iDEfCMZJtj4J7UGQ")]
     [DisplayName("Credit Reason Code")]
     [IsoXmlTag("CdtRsnCd")]
-    public IsoMax35Text? CreditReasonCode { get; init; }
+    public Max35Text? CreditReasonCode { get; init; }
 
     /// <summary>
     /// Contains identification of the rail server procedure or the order in which the service was booked or a cancellation was completed.
@@ -286,7 +286,7 @@ public record TripLeg4
     [IsoId("_2id1ZUiDEfCMZJtj4J7UGQ")]
     [DisplayName("Procedure Identification")]
     [IsoXmlTag("PrcdrId")]
-    public IsoMax35Text? ProcedureIdentification { get; init; }
+    public Max35Text? ProcedureIdentification { get; init; }
 
     /// <summary>
     /// Loyalty programme details.
@@ -302,7 +302,7 @@ public record TripLeg4
     [IsoId("_03GfgkiDEfCMZJtj4J7UGQ")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -310,5 +310,5 @@ public record TripLeg4
     [IsoId("_03Gfg0iDEfCMZJtj4J7UGQ")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

@@ -24,7 +24,7 @@ public record Replacement1
     [IsoXmlTag("CurVal")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text CurrentValue { get; init; }
+    public required Max140Text CurrentValue { get; init; }
 
     /// <summary>
     /// Content of the new element.
@@ -34,5 +34,5 @@ public record Replacement1
     [IsoXmlTag("PropsdVal")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text ProposedValue { get; init; }
+    public required Max140Text ProposedValue { get; init; }
 }

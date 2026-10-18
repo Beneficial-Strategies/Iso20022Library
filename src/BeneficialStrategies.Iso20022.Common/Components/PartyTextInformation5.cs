@@ -24,7 +24,7 @@ public record PartyTextInformation5
     [IsoXmlTag("DclrtnDtls")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? DeclarationDetails { get; init; }
+    public Max350Text? DeclarationDetails { get; init; }
 
     /// <summary>
     /// Provides additional information regarding the party, eg, the contact unit or person responsible for the transaction identified in the message.
@@ -34,5 +34,5 @@ public record PartyTextInformation5
     [IsoXmlTag("PtyCtctDtls")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? PartyContactDetails { get; init; }
+    public Max140Text? PartyContactDetails { get; init; }
 }

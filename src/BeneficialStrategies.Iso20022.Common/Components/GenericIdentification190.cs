@@ -21,19 +21,19 @@ public record GenericIdentification190
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax350Text Identification { get; init; }
+    public required Max350Text Identification { get; init; }
 
     /// <summary>
     /// Issuer.
     /// </summary>
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
-    public IsoMax35Text? Issuer { get; init; }
+    public Max35Text? Issuer { get; init; }
 
     /// <summary>
     /// Scheme Name.
     /// </summary>
     [DisplayName("Scheme Name")]
     [IsoXmlTag("SchmeNm")]
-    public IsoMax35Text? SchemeName { get; init; }
+    public Max35Text? SchemeName { get; init; }
 }

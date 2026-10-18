@@ -22,7 +22,7 @@ public record Mandate7
     [IsoId("_acF8Nx77EeSxevWRRWxNAg")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
-    public SimpleValueList<IsoMax35Text> MandateIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> MandateIdentification { get; init; } = [];
 
     /// <summary>
     /// Identification for the mandate request, as assigned by the initiating party.
@@ -32,7 +32,7 @@ public record Mandate7
     [IsoXmlTag("MndtReqId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MandateRequestIdentification { get; init; }
+    public required Max35Text MandateRequestIdentification { get; init; }
 
     /// <summary>
     /// Specifies the type of mandate, such as paper, electronic or scheme.

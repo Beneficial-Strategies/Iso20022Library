@@ -28,7 +28,7 @@ public record ReferredDocumentInformation8
     /// </summary>
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
-    public IsoMax35Text? Number { get; init; }
+    public Max35Text? Number { get; init; }
 
     /// <summary>
     /// Related Date.

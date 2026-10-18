@@ -24,7 +24,7 @@ public record RentalDetails2
     [IsoXmlTag("RntlId")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? RentalIdentification { get; init; }
+    public Max70Text? RentalIdentification { get; init; }
 
     /// <summary>
     /// Date and time of registration of car rental service as  per folio.
@@ -33,7 +33,7 @@ public record RentalDetails2
     [DisplayName("Rental Date Time")]
     [IsoXmlTag("RntlDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? RentalDateTime { get; init; }
+    public ISODateTime? RentalDateTime { get; init; }
 
     /// <summary>
     /// Details of the vehicle at the start of the rental period.
@@ -66,7 +66,7 @@ public record RentalDetails2
     [DisplayName("Time Period Unit")]
     [IsoXmlTag("TmPrdUnit")]
     [IsoSimpleType(IsoSimpleType.Max4NumericText)]
-    public IsoMax4NumericText? TimePeriodUnit { get; init; }
+    public Max4NumericText? TimePeriodUnit { get; init; }
 
     /// <summary>
     /// Rate for the time period.

@@ -24,7 +24,7 @@ public record CollateralConfirmation1
     [IsoXmlTag("CollSbstitnReqId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text CollateralSubstitutionRequestIdentification { get; init; }
+    public required Max35Text CollateralSubstitutionRequestIdentification { get; init; }
 
     /// <summary>
     /// Reference to the collateral substitution response identification.
@@ -34,7 +34,7 @@ public record CollateralConfirmation1
     [IsoXmlTag("CollSbstitnRspnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CollateralSubstitutionResponseIdentification { get; init; }
+    public Max35Text? CollateralSubstitutionResponseIdentification { get; init; }
 
     /// <summary>
     /// Provides details about the status of the collateral substitution, either released or returned.
@@ -52,5 +52,5 @@ public record CollateralConfirmation1
     [IsoXmlTag("Cmnt")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Comment { get; init; }
+    public Max140Text? Comment { get; init; }
 }

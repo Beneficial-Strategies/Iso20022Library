@@ -56,7 +56,7 @@ public record IntraBalanceModification6
     [IsoXmlTag("ReqRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text RequestReference { get; init; }
+    public required Max35Text RequestReference { get; init; }
 
     /// <summary>
     /// Date and time at which the status was assigned.
@@ -65,7 +65,7 @@ public record IntraBalanceModification6
     [DisplayName("Status Date")]
     [IsoXmlTag("StsDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? StatusDate { get; init; }
+    public ISODateTime? StatusDate { get; init; }
 
     /// <summary>
     /// Details of the request providing the changes and references of the instruction for which the modification is requested.

@@ -23,7 +23,7 @@ public record SettlementDetails10
     [DisplayName("Hold Indicator")]
     [IsoXmlTag("HldInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? HoldIndicator { get; init; }
+    public YesNoIndicator? HoldIndicator { get; init; }
 
     /// <summary>
     /// Conditions under which the order/trade is to be settled.
@@ -137,7 +137,7 @@ public record SettlementDetails10
     [DisplayName("Partial Settlement Indicator")]
     [IsoXmlTag("PrtlSttlmInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PartialSettlementIndicator { get; init; }
+    public YesNoIndicator? PartialSettlementIndicator { get; init; }
 
     /// <summary>
     /// Specifies whether securities should be included in the pool of securities eligible for collateral purposes.
@@ -146,5 +146,5 @@ public record SettlementDetails10
     [DisplayName("Eligible For Collateral")]
     [IsoXmlTag("ElgblForColl")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? EligibleForCollateral { get; init; }
+    public YesNoIndicator? EligibleForCollateral { get; init; }
 }

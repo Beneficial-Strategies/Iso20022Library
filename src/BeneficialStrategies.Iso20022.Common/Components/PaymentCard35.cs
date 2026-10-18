@@ -21,49 +21,49 @@ public record PaymentCard35
     /// </summary>
     [DisplayName("Additional Card Data")]
     [IsoXmlTag("AddtlCardData")]
-    public IsoMax70Text? AdditionalCardData { get; init; }
+    public Max70Text? AdditionalCardData { get; init; }
 
     /// <summary>
     /// Allowed Product.
     /// </summary>
     [DisplayName("Allowed Product")]
     [IsoXmlTag("AllwdPdct")]
-    public ValueList<IsoMax70Text> AllowedProduct { get; init; } = [];
+    public ValueList<Max70Text> AllowedProduct { get; init; } = [];
 
     /// <summary>
     /// Card Brand.
     /// </summary>
     [DisplayName("Card Brand")]
     [IsoXmlTag("CardBrnd")]
-    public IsoMax35Text? CardBrand { get; init; }
+    public Max35Text? CardBrand { get; init; }
 
     /// <summary>
     /// Card Country Code.
     /// </summary>
     [DisplayName("Card Country Code")]
     [IsoXmlTag("CardCtryCd")]
-    public IsoMax3Text? CardCountryCode { get; init; }
+    public Max3Text? CardCountryCode { get; init; }
 
     /// <summary>
     /// Card Currency Code.
     /// </summary>
     [DisplayName("Card Currency Code")]
     [IsoXmlTag("CardCcyCd")]
-    public IsoExact3AlphaNumericText? CardCurrencyCode { get; init; }
+    public Exact3AlphaNumericText? CardCurrencyCode { get; init; }
 
     /// <summary>
     /// Card Product Profile.
     /// </summary>
     [DisplayName("Card Product Profile")]
     [IsoXmlTag("CardPdctPrfl")]
-    public IsoMax35Text? CardProductProfile { get; init; }
+    public Max35Text? CardProductProfile { get; init; }
 
     /// <summary>
     /// Card Product Sub Type.
     /// </summary>
     [DisplayName("Card Product Sub Type")]
     [IsoXmlTag("CardPdctSubTp")]
-    public IsoMax35Text? CardProductSubType { get; init; }
+    public Max35Text? CardProductSubType { get; init; }
 
     /// <summary>
     /// Card Product Type.
@@ -77,28 +77,28 @@ public record PaymentCard35
     /// </summary>
     [DisplayName("International Card")]
     [IsoXmlTag("IntrnlCard")]
-    public IsoTrueFalseIndicator? InternationalCard { get; init; }
+    public TrueFalseIndicator? InternationalCard { get; init; }
 
     /// <summary>
     /// Issuer BIN.
     /// </summary>
     [DisplayName("Issuer BIN")]
     [IsoXmlTag("IssrBIN")]
-    public IsoMax15NumericText? IssuerBIN { get; init; }
+    public Max15NumericText? IssuerBIN { get; init; }
 
     /// <summary>
     /// Masked PAN.
     /// </summary>
     [DisplayName("Masked PAN")]
     [IsoXmlTag("MskdPAN")]
-    public IsoMax30Text? MaskedPAN { get; init; }
+    public Max30Text? MaskedPAN { get; init; }
 
     /// <summary>
     /// Payment Account Reference.
     /// </summary>
     [DisplayName("Payment Account Reference")]
     [IsoXmlTag("PmtAcctRef")]
-    public IsoMax70Text? PaymentAccountReference { get; init; }
+    public Max70Text? PaymentAccountReference { get; init; }
 
     /// <summary>
     /// Plain Card Data.
@@ -112,7 +112,7 @@ public record PaymentCard35
     /// </summary>
     [DisplayName("Private Card Data")]
     [IsoXmlTag("PrvtCardData")]
-    public IsoMax100KBinary? PrivateCardData { get; init; }
+    public Max100KBinary? PrivateCardData { get; init; }
 
     /// <summary>
     /// Protected Card Data.
@@ -126,5 +126,5 @@ public record PaymentCard35
     /// </summary>
     [DisplayName("Service Option")]
     [IsoXmlTag("SvcOptn")]
-    public IsoMax35Text? ServiceOption { get; init; }
+    public Max35Text? ServiceOption { get; init; }
 }

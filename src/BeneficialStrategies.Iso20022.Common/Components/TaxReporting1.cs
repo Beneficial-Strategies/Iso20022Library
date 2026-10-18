@@ -31,7 +31,7 @@ public record TaxReporting1
     [DisplayName("Tax Rate")]
     [IsoXmlTag("TaxRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? TaxRate { get; init; }
+    public PercentageRate? TaxRate { get; init; }
 
     /// <summary>
     /// Party that pays the tax.
@@ -65,5 +65,5 @@ public record TaxReporting1
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Description { get; init; }
+    public Max350Text? Description { get; init; }
 }

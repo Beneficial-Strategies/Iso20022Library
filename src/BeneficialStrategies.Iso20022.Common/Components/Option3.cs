@@ -47,7 +47,7 @@ public record Option3
     [DisplayName("Earliest Exercise Date")]
     [IsoXmlTag("EarlstExrcDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? EarliestExerciseDate { get; init; }
+    public DateOnly? EarliestExerciseDate { get; init; }
 
     /// <summary>
     /// Date on which a privilege (eg, option, right, warrant.) expires. If it is an European option, the option holder can only exercise the right or let it lapse on expiry date. If it is an American option, the option holder can exercise the right up to the expiry date.
@@ -56,7 +56,7 @@ public record Option3
     [DisplayName("Expiry Date And Time")]
     [IsoXmlTag("XpryDtAndTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime ExpiryDateAndTime { get; init; }
+    public required ISODateTime ExpiryDateAndTime { get; init; }
 
     /// <summary>
     /// Financial center where option expires.
@@ -66,7 +66,7 @@ public record Option3
     [IsoXmlTag("XpryLctn")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public required IsoMax4AlphaNumericText ExpiryLocation { get; init; }
+    public required Max4AlphaNumericText ExpiryLocation { get; init; }
 
     /// <summary>
     /// Indicates whether the trade is to be settled as principal or netted off against another trade.
@@ -84,7 +84,7 @@ public record Option3
     [IsoXmlTag("AddtlOptnInf")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? AdditionalOptionInformation { get; init; }
+    public Max140Text? AdditionalOptionInformation { get; init; }
 
     /// <summary>
     /// Specifies the amount of the premium of a foreign exchange option trade and its settlement place.

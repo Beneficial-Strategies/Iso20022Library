@@ -23,7 +23,7 @@ public record SensitiveMobileData1
     [DisplayName("MSISDN")]
     [IsoXmlTag("MSISDN")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public required IsoMax35NumericText MSISDN { get; init; }
+    public required Max35NumericText MSISDN { get; init; }
 
     /// <summary>
     /// International Mobile Subscriber Identity is a unique number associated with the mobile phone user, containing the Mobile Country Code (MCC), the Mobile Network Code (MNC), and the Mobile Identification Number (MSIN).
@@ -32,7 +32,7 @@ public record SensitiveMobileData1
     [DisplayName("IMSI")]
     [IsoXmlTag("IMSI")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public IsoMax35NumericText? IMSI { get; init; }
+    public Max35NumericText? IMSI { get; init; }
 
     /// <summary>
     /// International Mobile Equipment Identity is a number usually unique to identify a mobile phone.
@@ -41,5 +41,5 @@ public record SensitiveMobileData1
     [DisplayName("IMEI")]
     [IsoXmlTag("IMEI")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public IsoMax35NumericText? IMEI { get; init; }
+    public Max35NumericText? IMEI { get; init; }
 }

@@ -23,7 +23,7 @@ public record SettlementDetails173
     [DisplayName("Hold Indicator")]
     [IsoXmlTag("HldInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? HoldIndicator { get; init; }
+    public YesNoIndicator? HoldIndicator { get; init; }
 
     /// <summary>
     /// Conditions under which the order/trade is to be settled.
@@ -145,5 +145,5 @@ public record SettlementDetails173
     [DisplayName("Eligible For Collateral")]
     [IsoXmlTag("ElgblForColl")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? EligibleForCollateral { get; init; }
+    public YesNoIndicator? EligibleForCollateral { get; init; }
 }

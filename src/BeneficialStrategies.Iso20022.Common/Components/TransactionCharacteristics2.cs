@@ -28,14 +28,14 @@ public record TransactionCharacteristics2
     /// </summary>
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
-    public ValueList<IsoMax256Text> AlternateMessageReason { get; init; } = [];
+    public ValueList<Max256Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Cancellation.
     /// </summary>
     [DisplayName("Cancellation")]
     [IsoXmlTag("Cxl")]
-    public IsoTrueFalseIndicator? Cancellation { get; init; }
+    public TrueFalseIndicator? Cancellation { get; init; }
 
     /// <summary>
     /// Message Reason.
@@ -49,14 +49,14 @@ public record TransactionCharacteristics2
     /// </summary>
     [DisplayName("Transaction Description")]
     [IsoXmlTag("TxDesc")]
-    public IsoMax1000Text? TransactionDescription { get; init; }
+    public Max1000Text? TransactionDescription { get; init; }
 
     /// <summary>
     /// Transaction Sub Type.
     /// </summary>
     [DisplayName("Transaction Sub Type")]
     [IsoXmlTag("TxSubTp")]
-    public IsoMax35Text? TransactionSubType { get; init; }
+    public Max35Text? TransactionSubType { get; init; }
 
     /// <summary>
     /// Transaction Type.

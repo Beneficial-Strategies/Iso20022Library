@@ -24,7 +24,7 @@ public record GroupHeader51
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the message was created.
@@ -33,7 +33,7 @@ public record GroupHeader51
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// Identifies whether a single entry per individual transaction or a batch entry for the sum of the amounts of all transactions within the group of a message is requested.|Usage: Batch booking is used to request and not order a possible batch booking.
@@ -42,7 +42,7 @@ public record GroupHeader51
     [DisplayName("Batch Booking")]
     [IsoXmlTag("BtchBookg")]
     [IsoSimpleType(IsoSimpleType.BatchBookingIndicator)]
-    public IsoBatchBookingIndicator? BatchBooking { get; init; }
+    public BatchBookingIndicator? BatchBooking { get; init; }
 
     /// <summary>
     /// Number of individual transactions contained in the message.
@@ -51,7 +51,7 @@ public record GroupHeader51
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText NumberOfTransactions { get; init; }
+    public required Max15NumericText NumberOfTransactions { get; init; }
 
     /// <summary>
     /// Total of all individual amounts included in the message, irrespective of currencies.
@@ -60,7 +60,7 @@ public record GroupHeader51
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? ControlSum { get; init; }
+    public DecimalNumber? ControlSum { get; init; }
 
     /// <summary>
     /// Total amount of money moved between the instructing agent and the instructed agent.
@@ -77,7 +77,7 @@ public record GroupHeader51
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? InterbankSettlementDate { get; init; }
+    public DateOnly? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Specifies the details on how the settlement of the transaction(s) between the instructing agent and the instructed agent is completed.

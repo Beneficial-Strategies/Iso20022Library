@@ -24,7 +24,7 @@ public record TradeTransactionIdentification24
     [IsoXmlTag("TechRcrdId")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? TechnicalRecordIdentification { get; init; }
+    public Max140Text? TechnicalRecordIdentification { get; init; }
 
     /// <summary>
     /// Indication of the action type of the transaction.
@@ -41,7 +41,7 @@ public record TradeTransactionIdentification24
     [DisplayName("Reporting Time Stamp")]
     [IsoXmlTag("RptgTmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? ReportingTimeStamp { get; init; }
+    public ISODateTime? ReportingTimeStamp { get; init; }
 
     /// <summary>
     /// Classification of derivative event type.

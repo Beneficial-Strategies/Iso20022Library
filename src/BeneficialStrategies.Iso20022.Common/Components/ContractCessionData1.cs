@@ -32,7 +32,7 @@ public record ContractCessionData1
     [IsoXmlTag("DocNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DocumentNumber { get; init; }
+    public Max35Text? DocumentNumber { get; init; }
 
     /// <summary>
     /// Date of the document under which the cession is made.
@@ -41,5 +41,5 @@ public record ContractCessionData1
     [DisplayName("Document Date")]
     [IsoXmlTag("DocDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DocumentDate { get; init; }
+    public DateOnly? DocumentDate { get; init; }
 }

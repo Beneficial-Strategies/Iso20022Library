@@ -21,7 +21,7 @@ public record EntryTransaction15
     /// </summary>
     [DisplayName("Additional Transaction Information")]
     [IsoXmlTag("AddtlTxInf")]
-    public IsoMax500Text? AdditionalTransactionInformation { get; init; }
+    public Max500Text? AdditionalTransactionInformation { get; init; }
 
     /// <summary>
     /// Amount.
@@ -91,7 +91,7 @@ public record EntryTransaction15
     /// </summary>
     [DisplayName("Instruction Copy")]
     [IsoXmlTag("InstrCpy")]
-    public IsoMax20000Text? InstructionCopy { get; init; }
+    public Max20000Text? InstructionCopy { get; init; }
 
     /// <summary>
     /// Interest.

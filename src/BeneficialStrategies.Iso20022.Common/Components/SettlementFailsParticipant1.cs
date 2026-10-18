@@ -23,7 +23,7 @@ public record SettlementFailsParticipant1
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public required IsoLEIIdentifier LEI { get; init; }
+    public required LEIIdentifier LEI { get; init; }
 
     /// <summary>
     /// Ranking of the top participants with the highest rate of settlement fails.
@@ -32,7 +32,7 @@ public record SettlementFailsParticipant1
     [DisplayName("Rank")]
     [IsoXmlTag("Rank")]
     [IsoSimpleType(IsoSimpleType.Max2NumericText)]
-    public required IsoMax2NumericText Rank { get; init; }
+    public required Max2NumericText Rank { get; init; }
 
     /// <summary>
     /// Aggregated data of the settlement instructions.

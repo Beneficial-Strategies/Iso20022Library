@@ -30,7 +30,7 @@ public record IntraPositionReport7
     [IsoId("_ZWzqm2dCEemvNLufWGIVOQ")]
     [DisplayName("Query Reference")]
     [IsoXmlTag("QryRef")]
-    public IsoMax35Text? QueryReference { get; init; }
+    public Max35Text? QueryReference { get; init; }
 
     /// <summary>
     /// Reference common to all pages of a statement.
@@ -38,7 +38,7 @@ public record IntraPositionReport7
     [IsoId("_ZWzqo2dCEemvNLufWGIVOQ")]
     [DisplayName("Report Identification")]
     [IsoXmlTag("RptId")]
-    public IsoMax35Text? ReportIdentification { get; init; }
+    public Max35Text? ReportIdentification { get; init; }
 
     /// <summary>
     /// Date and time when the report was created.
@@ -78,5 +78,5 @@ public record IntraPositionReport7
     [IsoId("_ZWzqxWdCEemvNLufWGIVOQ")]
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
-    public required IsoYesNoIndicator ActivityIndicator { get; init; }
+    public required YesNoIndicator ActivityIndicator { get; init; }
 }

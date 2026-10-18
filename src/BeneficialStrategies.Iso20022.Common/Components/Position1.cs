@@ -24,7 +24,7 @@ public record Position1
     [IsoXmlTag("PdctId")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public required IsoMax256Text ProductIdentification { get; init; }
+    public required Max256Text ProductIdentification { get; init; }
 
     /// <summary>
     /// Obligations of a clearing member with respect to a central counterparty based on the position at end of day.
@@ -73,7 +73,7 @@ public record Position1
     [DisplayName("Gross Delta Equivalent Quantity")]
     [IsoXmlTag("GrssDltaEqvtQty")]
     [IsoSimpleType(IsoSimpleType.NonNegativeFraction5DecimalNumber)]
-    public IsoNonNegativeFraction5DecimalNumber? GrossDeltaEquivalentQuantity { get; init; }
+    public NonNegativeFraction5DecimalNumber? GrossDeltaEquivalentQuantity { get; init; }
 
     /// <summary>
     /// Net weighted quantity of the lots in the position weighted by the delta of the contracts in the position.
@@ -82,7 +82,7 @@ public record Position1
     [DisplayName("Net Delta Equivalent Quantity")]
     [IsoXmlTag("NetDltaEqvtQty")]
     [IsoSimpleType(IsoSimpleType.Fraction5DecimalNumber)]
-    public IsoFraction5DecimalNumber? NetDeltaEquivalentQuantity { get; init; }
+    public Fraction5DecimalNumber? NetDeltaEquivalentQuantity { get; init; }
 
     /// <summary>
     /// Gross market value of the positions of the product without netting of long/short positions.

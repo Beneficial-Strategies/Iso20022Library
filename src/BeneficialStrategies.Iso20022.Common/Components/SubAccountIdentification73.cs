@@ -28,7 +28,7 @@ public record SubAccountIdentification73
     /// </summary>
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
-    public required IsoYesNoIndicator ActivityIndicator { get; init; }
+    public required YesNoIndicator ActivityIndicator { get; init; }
 
     /// <summary>
     /// Block Chain Address Or Wallet.

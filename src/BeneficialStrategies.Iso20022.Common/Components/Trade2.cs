@@ -24,7 +24,7 @@ public record Trade2
     [IsoXmlTag("TradId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TradeIdentification { get; init; }
+    public required Max35Text TradeIdentification { get; init; }
 
     /// <summary>
     /// Specifies the date on which the trade was executed.
@@ -33,7 +33,7 @@ public record Trade2
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate TradeDate { get; init; }
+    public required DateOnly TradeDate { get; init; }
 
     /// <summary>
     /// Specifies the underlying product type.
@@ -91,7 +91,7 @@ public record Trade2
     [IsoXmlTag("Symb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Symbol { get; init; }
+    public Max35Text? Symbol { get; init; }
 
     /// <summary>
     /// Infrastructure where the trade confirmation will take place.
@@ -100,7 +100,7 @@ public record Trade2
     [DisplayName("Place Of Confirmation")]
     [IsoXmlTag("PlcOfConf")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public IsoAnyBICIdentifier? PlaceOfConfirmation { get; init; }
+    public AnyBICIdentifier? PlaceOfConfirmation { get; init; }
 
     /// <summary>
     /// Provides details of the foreign exchange trade including Spot Forward and NDF.
@@ -132,5 +132,5 @@ public record Trade2
     [IsoId("_BLgREA2JEeSwB74WgTbh4Q")]
     [DisplayName("Associated Trade Reference")]
     [IsoXmlTag("AssoctdTradRef")]
-    public SimpleValueList<IsoMax70Text> AssociatedTradeReference { get; init; } = [];
+    public SimpleValueList<Max70Text> AssociatedTradeReference { get; init; } = [];
 }

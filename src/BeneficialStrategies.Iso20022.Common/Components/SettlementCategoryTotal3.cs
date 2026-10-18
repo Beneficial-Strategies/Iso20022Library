@@ -28,7 +28,7 @@ public record SettlementCategoryTotal3
     /// </summary>
     [DisplayName("Count")]
     [IsoXmlTag("Cnt")]
-    public IsoNumber? Count { get; init; }
+    public Number? Count { get; init; }
 
     /// <summary>
     /// Credit Debit.

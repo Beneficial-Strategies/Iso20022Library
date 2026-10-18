@@ -23,7 +23,7 @@ public record TransactionIdentifier1
     [DisplayName("Transaction Date Time")]
     [IsoXmlTag("TxDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime TransactionDateTime { get; init; }
+    public required ISODateTime TransactionDateTime { get; init; }
 
     /// <summary>
     /// Identification of the transaction that has to be unique for a time period.
@@ -33,5 +33,5 @@ public record TransactionIdentifier1
     [IsoXmlTag("TxRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransactionReference { get; init; }
+    public required Max35Text TransactionReference { get; init; }
 }

@@ -24,7 +24,7 @@ public record Acquirer7
     [IsoXmlTag("AcqrgInstn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AcquiringInstitution { get; init; }
+    public Max35Text? AcquiringInstitution { get; init; }
 
     /// <summary>
     /// Identification of the acquirer branch.
@@ -34,5 +34,5 @@ public record Acquirer7
     [IsoXmlTag("Brnch")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Branch { get; init; }
+    public Max35Text? Branch { get; init; }
 }

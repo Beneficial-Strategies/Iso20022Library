@@ -35,7 +35,7 @@ public record InvestigationResponse9
     /// </summary>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Next Responder.
@@ -49,5 +49,5 @@ public record InvestigationResponse9
     /// </summary>
     [DisplayName("Responder Investigation Identification")]
     [IsoXmlTag("RspndrInvstgtnId")]
-    public IsoMax35Text? ResponderInvestigationIdentification { get; init; }
+    public Max35Text? ResponderInvestigationIdentification { get; init; }
 }

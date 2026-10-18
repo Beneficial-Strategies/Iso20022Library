@@ -30,7 +30,7 @@ public record TransactionCharacteristics5
     [IsoId("_fbZ6KR7aEfCkq6-p7S3J1Q")]
     [DisplayName("Transaction Sub Type")]
     [IsoXmlTag("TxSubTp")]
-    public IsoMax35Text? TransactionSubType { get; init; }
+    public Max35Text? TransactionSubType { get; init; }
 
     /// <summary>
     /// Attribute of the transaction. P000-P999 reserved for private use, N000-N999 reserved for national use.
@@ -46,7 +46,7 @@ public record TransactionCharacteristics5
     [IsoId("_fbZ6Ox7aEfCkq6-p7S3J1Q")]
     [DisplayName("Cancellation")]
     [IsoXmlTag("Cxl")]
-    public IsoTrueFalseIndicator? Cancellation { get; init; }
+    public TrueFalseIndicator? Cancellation { get; init; }
 
     /// <summary>
     /// Indicates the finanical message is the collection only, no clearing and settlement required.
@@ -54,7 +54,7 @@ public record TransactionCharacteristics5
     [IsoId("_EnQDsWDcEfCoP_h9uwd39Q")]
     [DisplayName("Collection")]
     [IsoXmlTag("Colltn")]
-    public IsoTrueFalseIndicator? Collection { get; init; }
+    public TrueFalseIndicator? Collection { get; init; }
 
     /// <summary>
     /// Indicates the type of transaction that will follow an approved InquiryVerificationResponse or AuthorizationResponse.
@@ -78,7 +78,7 @@ public record TransactionCharacteristics5
     [IsoId("_fbZ6Sx7aEfCkq6-p7S3J1Q")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
-    public SimpleValueList<IsoMax256Text> AlternateMessageReason { get; init; } = [];
+    public SimpleValueList<Max256Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Contains the period (expressed in minutes) within which a merchant is expected to complete the transaction.
@@ -86,7 +86,7 @@ public record TransactionCharacteristics5
     [IsoId("_fbZ6TR7aEfCkq6-p7S3J1Q")]
     [DisplayName("Pre Authorisation Time Limit")]
     [IsoXmlTag("PreAuthstnTmLmt")]
-    public IsoMax6NumericText? PreAuthorisationTimeLimit { get; init; }
+    public Max6NumericText? PreAuthorisationTimeLimit { get; init; }
 
     /// <summary>
     /// Transaction data related to programmes and services, content and format based on bilateral agreements.
@@ -94,7 +94,7 @@ public record TransactionCharacteristics5
     [IsoId("_fbZ6VR7aEfCkq6-p7S3J1Q")]
     [DisplayName("Transaction Description")]
     [IsoXmlTag("TxDesc")]
-    public IsoMax1000Text? TransactionDescription { get; init; }
+    public Max1000Text? TransactionDescription { get; init; }
 
     /// <summary>
     /// Indicate which routing table acquirer used to determine the network/program Id. 
@@ -102,7 +102,7 @@ public record TransactionCharacteristics5
     [IsoId("_WHJpEGDcEfCoP_h9uwd39Q")]
     [DisplayName("Routing Table Identification")]
     [IsoXmlTag("RtgTblId")]
-    public IsoMax35Text? RoutingTableIdentification { get; init; }
+    public Max35Text? RoutingTableIdentification { get; init; }
 
     /// <summary>
     /// Reserved for private data. The use of this data element is determined by bilateral agreement.
@@ -110,7 +110,7 @@ public record TransactionCharacteristics5
     [IsoId("_s2H5YkYXEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications. 
@@ -118,7 +118,7 @@ public record TransactionCharacteristics5
     [IsoId("_s2H5Y0YXEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 
     /// <summary>
     /// Contains local language equivalent(s) of data in the current component.

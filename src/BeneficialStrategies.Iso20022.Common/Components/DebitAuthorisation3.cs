@@ -28,7 +28,7 @@ public record DebitAuthorisation3
     /// </summary>
     [DisplayName("Additional Cancellation Reason Information")]
     [IsoXmlTag("AddtlCxlRsnInf")]
-    public ValueList<IsoMax140Text> AdditionalCancellationReasonInformation { get; init; } = [];
+    public ValueList<Max140Text> AdditionalCancellationReasonInformation { get; init; } = [];
 
     /// <summary>
     /// Amount To Debit.
@@ -49,5 +49,5 @@ public record DebitAuthorisation3
     /// </summary>
     [DisplayName("Value Date To Debit")]
     [IsoXmlTag("ValDtToDbt")]
-    public IsoISODate? ValueDateToDebit { get; init; }
+    public DateOnly? ValueDateToDebit { get; init; }
 }

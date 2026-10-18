@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification37Choice
         /// </summary>
         [IsoXmlTag("ISIN")]
         [IsoSimpleType(IsoSimpleType.ISIN2021Identifier)]
-        public required IsoISIN2021Identifier Value { get; init; }
+        public required ISIN2021Identifier Value { get; init; }
     }
 }

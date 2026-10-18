@@ -21,19 +21,19 @@ public record PayloadData2
     /// </summary>
     [DisplayName("Creation Date And Time")]
     [IsoXmlTag("CreDtAndTm")]
-    public required IsoISODateTime CreationDateAndTime { get; init; }
+    public required ISODateTime CreationDateAndTime { get; init; }
 
     /// <summary>
     /// Payload Identifier.
     /// </summary>
     [DisplayName("Payload Identifier")]
     [IsoXmlTag("PyldIdr")]
-    public required IsoMax35Text PayloadIdentifier { get; init; }
+    public required Max35Text PayloadIdentifier { get; init; }
 
     /// <summary>
     /// Possible Duplicate Flag.
     /// </summary>
     [DisplayName("Possible Duplicate Flag")]
     [IsoXmlTag("PssblDplctFlg")]
-    public IsoTrueFalseIndicator? PossibleDuplicateFlag { get; init; }
+    public TrueFalseIndicator? PossibleDuplicateFlag { get; init; }
 }

@@ -31,7 +31,7 @@ public record PaymentCard4
     [DisplayName("Card Country Code")]
     [IsoXmlTag("CardCtryCd")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public IsoExact3NumericText? CardCountryCode { get; init; }
+    public Exact3NumericText? CardCountryCode { get; init; }
 
     /// <summary>
     /// Brand name of the card.
@@ -49,5 +49,5 @@ public record PaymentCard4
     [IsoXmlTag("AddtlCardData")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AdditionalCardData { get; init; }
+    public Max70Text? AdditionalCardData { get; init; }
 }

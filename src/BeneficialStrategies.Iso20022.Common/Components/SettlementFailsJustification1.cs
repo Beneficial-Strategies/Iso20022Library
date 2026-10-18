@@ -23,7 +23,7 @@ public record SettlementFailsJustification1
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.Max20PositiveDecimalNumber)]
-    public required IsoMax20PositiveDecimalNumber Value { get; init; }
+    public required Max20PositiveDecimalNumber Value { get; init; }
 
     /// <summary>
     /// Specifies the rate of settlement fails, which does not exceed the limits rate as specified in the local regulation.

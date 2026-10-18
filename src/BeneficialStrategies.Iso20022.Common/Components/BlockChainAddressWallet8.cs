@@ -24,7 +24,7 @@ public record BlockChainAddressWallet8
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax140Text Identification { get; init; }
+    public required RestrictedFINXMax140Text Identification { get; init; }
 
     /// <summary>
     /// Specifies the type of securities account.
@@ -42,7 +42,7 @@ public record BlockChainAddressWallet8
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoRestrictedFINXMax70Text? Name { get; init; }
+    public RestrictedFINXMax70Text? Name { get; init; }
 
     /// <summary>
     /// Supplementary registration information applying to a specific block of units for dealing and reporting purposes. The supplementary registration information may be used when all the units are registered, for example, to a funds supermarket, but holdings for each investor have to be reconciled individually.
@@ -52,5 +52,5 @@ public record BlockChainAddressWallet8
     [IsoXmlTag("Dsgnt")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? Designation { get; init; }
+    public RestrictedFINXMax16Text? Designation { get; init; }
 }

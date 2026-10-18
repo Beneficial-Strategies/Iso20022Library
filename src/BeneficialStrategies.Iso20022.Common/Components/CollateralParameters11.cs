@@ -63,7 +63,7 @@ public record CollateralParameters11
     [DisplayName("Transfer Title")]
     [IsoXmlTag("TrfTitl")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? TransferTitle { get; init; }
+    public YesNoIndicator? TransferTitle { get; init; }
 
     /// <summary>
     /// Specifies the settlement process in which the collateral will be settled.

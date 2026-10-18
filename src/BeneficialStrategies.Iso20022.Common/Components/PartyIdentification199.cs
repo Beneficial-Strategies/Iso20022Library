@@ -25,7 +25,7 @@ public record PartyIdentification199
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Identification { get; init; }
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Identification of the entity assigning an identification to the acceptor.
@@ -35,7 +35,7 @@ public record PartyIdentification199
     [IsoXmlTag("Assgnr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Assigner { get; init; }
+    public Max35Text? Assigner { get; init; }
 
     /// <summary>
     /// Country code of the acceptor.
@@ -54,7 +54,7 @@ public record PartyIdentification199
     [IsoXmlTag("ShrtNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ShortName { get; init; }
+    public Max35Text? ShortName { get; init; }
 
     /// <summary>
     /// Additional identification assigned by an agent to an acceptor.
@@ -64,7 +64,7 @@ public record PartyIdentification199
     [IsoXmlTag("AddtlId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AdditionalIdentification { get; init; }
+    public Max35Text? AdditionalIdentification { get; init; }
 
     /// <summary>
     /// Name and location of acceptor.
@@ -75,7 +75,7 @@ public record PartyIdentification199
     [IsoXmlTag("NmAndLctn")]
     [IsoSimpleType(IsoSimpleType.Max99Text)]
     [StringLength(maximumLength: 99, MinimumLength = 1)]
-    public IsoMax99Text? NameAndLocation { get; init; }
+    public Max99Text? NameAndLocation { get; init; }
 
     /// <summary>
     /// Address of the entity.
@@ -93,7 +93,7 @@ public record PartyIdentification199
     [IsoXmlTag("Email")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Email { get; init; }
+    public Max256Text? Email { get; init; }
 
     /// <summary>
     /// Universal Resource Locator (URL) address.
@@ -103,7 +103,7 @@ public record PartyIdentification199
     [IsoXmlTag("URLAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? URLAddress { get; init; }
+    public Max256Text? URLAddress { get; init; }
 
     /// <summary>
     /// Collection of information that identifies  a phone number as defined by telecom services.
@@ -113,7 +113,7 @@ public record PartyIdentification199
     [IsoXmlTag("PhneNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PhoneNumber { get; init; }
+    public Max35Text? PhoneNumber { get; init; }
 
     /// <summary>
     /// Phone number of the customer service.
@@ -123,7 +123,7 @@ public record PartyIdentification199
     [IsoXmlTag("CstmrSvc")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CustomerService { get; init; }
+    public Max35Text? CustomerService { get; init; }
 
     /// <summary>
     /// Additional information used to facilitate contact with the card acceptor, for instance sales agent name, dispute manager name.
@@ -133,7 +133,7 @@ public record PartyIdentification199
     [IsoXmlTag("AddtlCtctInf")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? AdditionalContactInformation { get; init; }
+    public Max256Text? AdditionalContactInformation { get; init; }
 
     /// <summary>
     /// Identification of a party by its tax registration number.
@@ -143,5 +143,5 @@ public record PartyIdentification199
     [IsoXmlTag("TaxRegnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TaxRegistrationIdentification { get; init; }
+    public Max35Text? TaxRegistrationIdentification { get; init; }
 }

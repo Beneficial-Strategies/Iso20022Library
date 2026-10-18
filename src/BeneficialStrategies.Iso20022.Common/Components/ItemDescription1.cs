@@ -32,7 +32,7 @@ public record ItemDescription1
     [IsoXmlTag("Titl")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Title { get; init; }
+    public Max350Text? Title { get; init; }
 
     /// <summary>
     /// Free textual description of the item in the specified language.
@@ -42,5 +42,5 @@ public record ItemDescription1
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max1025Text)]
     [StringLength(maximumLength: 1025, MinimumLength = 1)]
-    public IsoMax1025Text? Description { get; init; }
+    public Max1025Text? Description { get; init; }
 }

@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractTerm6Choice
         /// </summary>
         [IsoXmlTag("Opn")]
         [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-        public required IsoTrueFalseIndicator Value { get; init; }
+        public required TrueFalseIndicator Value { get; init; }
     }
 }

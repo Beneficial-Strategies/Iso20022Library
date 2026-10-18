@@ -23,7 +23,7 @@ public record ConcentrationAgent1
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public required IsoLEIIdentifier Identification { get; init; }
+    public required LEIIdentifier Identification { get; init; }
 
     /// <summary>
     /// Inflows and outflows to and from the CCP’s concentration accounts aggregated across all business lines / waterfalls.

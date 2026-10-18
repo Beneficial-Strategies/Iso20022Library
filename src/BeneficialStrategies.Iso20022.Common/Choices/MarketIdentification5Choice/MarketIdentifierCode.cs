@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketIdentification5Choice
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("MktIdrCd")]
-        public required IsoMICIdentifier Value { get; init; }
+        public required MICIdentifier Value { get; init; }
     }
 }

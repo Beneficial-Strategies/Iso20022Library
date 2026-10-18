@@ -28,7 +28,7 @@ public record PaymentReceipt6
     /// </summary>
     [DisplayName("Integrated Print Flag")]
     [IsoXmlTag("IntgrtdPrtFlg")]
-    public IsoTrueFalseIndicator? IntegratedPrintFlag { get; init; }
+    public TrueFalseIndicator? IntegratedPrintFlag { get; init; }
 
     /// <summary>
     /// Output Content.
@@ -42,5 +42,5 @@ public record PaymentReceipt6
     /// </summary>
     [DisplayName("Required Signature Flag")]
     [IsoXmlTag("ReqrdSgntrFlg")]
-    public IsoTrueFalseIndicator? RequiredSignatureFlag { get; init; }
+    public TrueFalseIndicator? RequiredSignatureFlag { get; init; }
 }

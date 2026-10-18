@@ -30,7 +30,7 @@ public record PartyIdentification341
     [IsoId("_Nj238K5wEfCUHaCK5HWOhg")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public IsoMax35Text? AccountIdentification { get; init; }
+    public Max35Text? AccountIdentification { get; init; }
 
     /// <summary>
     /// Address for electronic mail (e-mail).
@@ -38,7 +38,7 @@ public record PartyIdentification341
     [IsoId("_9GWjs65vEfCUHaCK5HWOhg")]
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
-    public IsoMax256Text? EmailAddress { get; init; }
+    public Max256Text? EmailAddress { get; init; }
 
     /// <summary>
     /// Identification of the party.
@@ -54,7 +54,7 @@ public record PartyIdentification341
     [IsoId("_9GWjt65vEfCUHaCK5HWOhg")]
     [DisplayName("Company Register Shareholder Identification")]
     [IsoXmlTag("CpnyRegrShrhldrId")]
-    public IsoMax35Text? CompanyRegisterShareholderIdentification { get; init; }
+    public Max35Text? CompanyRegisterShareholderIdentification { get; init; }
 
     /// <summary>
     /// Country in which the company is incorporated or legally registered.

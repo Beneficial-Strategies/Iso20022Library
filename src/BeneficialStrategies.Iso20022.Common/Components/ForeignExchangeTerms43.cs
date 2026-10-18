@@ -21,7 +21,7 @@ public record ForeignExchangeTerms43
     /// </summary>
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
-    public required IsoBaseOne14Rate ExchangeRate { get; init; }
+    public required BaseOne14Rate ExchangeRate { get; init; }
 
     /// <summary>
     /// Quoted Currency.

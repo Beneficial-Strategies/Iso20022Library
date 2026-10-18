@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PlaceOfTradeIdentification3Choic
         [IsoXmlTag("OverTheCntr")]
         [IsoSimpleType(IsoSimpleType.RestrictedFINMax30Text)]
         [StringLength(maximumLength: 30, MinimumLength = 1)]
-        public required IsoRestrictedFINMax30Text Value { get; init; }
+        public required RestrictedFINMax30Text Value { get; init; }
     }
 }

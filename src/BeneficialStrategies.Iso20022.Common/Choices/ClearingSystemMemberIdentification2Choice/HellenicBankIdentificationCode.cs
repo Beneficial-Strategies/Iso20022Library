@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
         /// </summary>
         [IsoXmlTag("GRHEBIC")]
         [IsoSimpleType(IsoSimpleType.HellenicBankIdentificationCodeIdentifier)]
-        public required IsoHellenicBankIdentificationCodeIdentifier Value { get; init; }
+        public required HellenicBankIdentificationCodeIdentifier Value { get; init; }
     }
 }

@@ -22,7 +22,7 @@ public record SwitchOrder8
     [IsoId("906f2c3f-mstr-0001-0001-44d8780df86b")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Date and time the order is placed by the investor or its agent.
@@ -30,7 +30,7 @@ public record SwitchOrder8
     [IsoId("906f2c3f-ordr-0001-0002-44d8780df86b")]
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
-    public IsoISODateTime? OrderDateTime { get; init; }
+    public ISODateTime? OrderDateTime { get; init; }
 
     /// <summary>
     /// Market in which the advised trade transaction was executed.
@@ -46,7 +46,7 @@ public record SwitchOrder8
     [IsoId("906f2c3f-orrf-0001-0004-44d8780df86b")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
-    public required IsoMax35Text OrderReference { get; init; }
+    public required Max35Text OrderReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor's identification of the order. This reference can typically be used in a hub scenario to give the reference of the order as assigned by the underlying client.
@@ -54,7 +54,7 @@ public record SwitchOrder8
     [IsoId("906f2c3f-clnt-0001-0005-44d8780df86b")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
-    public IsoMax35Text? ClientReference { get; init; }
+    public Max35Text? ClientReference { get; init; }
 
     /// <summary>
     /// Unambiguous identification of a random or semi-random number used once (NONCE) generated in the frame of a cryptographic communication.
@@ -62,7 +62,7 @@ public record SwitchOrder8
     [IsoId("906f2c3f-nonc-0001-0006-44d8780df86b")]
     [DisplayName("Nonce Identification")]
     [IsoXmlTag("NonceId")]
-    public IsoMax35Text? NonceIdentification { get; init; }
+    public Max35Text? NonceIdentification { get; init; }
 
     /// <summary>
     /// Account impacted by the investment fund order.
@@ -86,7 +86,7 @@ public record SwitchOrder8
     [IsoId("906f2c3f-reqd-0001-0009-44d8780df86b")]
     [DisplayName("Requested Future Trade Date")]
     [IsoXmlTag("ReqdFutrTradDt")]
-    public IsoISODate? RequestedFutureTradeDate { get; init; }
+    public DateOnly? RequestedFutureTradeDate { get; init; }
 
     /// <summary>
     /// Total amount of money paid /to be paid or received in exchange for the financial instrument in the individual order.
@@ -102,7 +102,7 @@ public record SwitchOrder8
     [IsoId("906f2c3f-cash-0001-0011-44d8780df86b")]
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
-    public IsoISODate? CashSettlementDate { get; init; }
+    public DateOnly? CashSettlementDate { get; init; }
 
     /// <summary>
     /// Method by which the transaction is settled.

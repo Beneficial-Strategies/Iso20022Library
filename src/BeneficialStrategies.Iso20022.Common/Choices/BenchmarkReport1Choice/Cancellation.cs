@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BenchmarkReport1Choice
         [IsoXmlTag("TechRcrdId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? TechnicalRecordIdentification { get; init; }
+        public Max35Text? TechnicalRecordIdentification { get; init; }
 
         /// <summary>
         /// Identification of the benchmark to be cancelled.

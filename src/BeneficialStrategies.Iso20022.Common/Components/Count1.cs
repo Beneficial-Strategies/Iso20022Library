@@ -23,5 +23,5 @@ public record Count1
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber Number { get; init; }
+    public required Number Number { get; init; }
 }

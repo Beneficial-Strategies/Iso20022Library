@@ -47,7 +47,7 @@ public record CreditTransferTransactionInformation11
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? InterbankSettlementDate { get; init; }
+    public DateOnly? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Indicator of the urgency or order of importance that the instructing party would like the instructed party to apply to the processing of the settlement instruction.
@@ -80,7 +80,7 @@ public record CreditTransferTransactionInformation11
     [DisplayName("Acceptance Date Time")]
     [IsoXmlTag("AccptncDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? AcceptanceDateTime { get; init; }
+    public ISODateTime? AcceptanceDateTime { get; init; }
 
     /// <summary>
     /// Date used for the correction of the value date of a cash pool movement that has been posted with a different value date.
@@ -89,7 +89,7 @@ public record CreditTransferTransactionInformation11
     [DisplayName("Pooling Adjustment Date")]
     [IsoXmlTag("PoolgAdjstmntDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? PoolingAdjustmentDate { get; init; }
+    public DateOnly? PoolingAdjustmentDate { get; init; }
 
     /// <summary>
     /// Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.
@@ -106,7 +106,7 @@ public record CreditTransferTransactionInformation11
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? ExchangeRate { get; init; }
+    public BaseOneRate? ExchangeRate { get; init; }
 
     /// <summary>
     /// Specifies which party/parties will bear the charges associated with the processing of the payment transaction.

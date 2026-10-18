@@ -64,7 +64,7 @@ public record PartyDataSearchCriteria2
     [IsoXmlTag("RstrctnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RestrictionIdentification { get; init; }
+    public Max35Text? RestrictionIdentification { get; init; }
 
     /// <summary>
     /// Specifies the date when the restriction for the party has been issued.

@@ -34,7 +34,7 @@ public record RequiredSubmission6
     [DisplayName("Certificate Type")]
     [IsoXmlTag("CertTp")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    public required IsoExact4AlphaNumericText CertificateType { get; init; }
+    public required Exact4AlphaNumericText CertificateType { get; init; }
 
     /// <summary>
     /// Description of the certificate type required.
@@ -44,5 +44,5 @@ public record RequiredSubmission6
     [IsoXmlTag("CertTpDesc")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text CertificateTypeDescription { get; init; }
+    public required Max140Text CertificateTypeDescription { get; init; }
 }

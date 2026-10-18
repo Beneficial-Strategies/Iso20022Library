@@ -24,7 +24,7 @@ public record Notification2
     [IsoXmlTag("NtfctnTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text NotificationType { get; init; }
+    public required Max35Text NotificationType { get; init; }
 
     /// <summary>
     /// Indicates whether the notification is required.
@@ -33,7 +33,7 @@ public record Notification2
     [DisplayName("Required")]
     [IsoXmlTag("Reqrd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator Required { get; init; }
+    public required YesNoIndicator Required { get; init; }
 
     /// <summary>
     /// Specifies how the notification is sent.

@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedTransactionStatistics2Ch
         [DisplayName("Total Number Of Transactions")]
         [IsoXmlTag("TtlNbOfTxs")]
         [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-        public required IsoMax15NumericText TotalNumberOfTransactions { get; init; }
+        public required Max15NumericText TotalNumberOfTransactions { get; init; }
 
         /// <summary>
         /// Total number of transactions accepted.
@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedTransactionStatistics2Ch
         [DisplayName("Total Number Of Transactions Accepted")]
         [IsoXmlTag("TtlNbOfTxsAccptd")]
         [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-        public required IsoMax15NumericText TotalNumberOfTransactionsAccepted { get; init; }
+        public required Max15NumericText TotalNumberOfTransactionsAccepted { get; init; }
 
         /// <summary>
         /// Total number of transactions rejected.
@@ -41,7 +41,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedTransactionStatistics2Ch
         [DisplayName("Total Number Of Transactions Rejected")]
         [IsoXmlTag("TtlNbOfTxsRjctd")]
         [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-        public required IsoMax15NumericText TotalNumberOfTransactionsRejected { get; init; }
+        public required Max15NumericText TotalNumberOfTransactionsRejected { get; init; }
 
         /// <summary>
         /// Details on transactions rejected per error code.

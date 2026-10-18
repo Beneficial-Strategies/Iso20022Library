@@ -24,7 +24,7 @@ public record PaymentTokenIdentifiers1
     [IsoXmlTag("PrvdrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ProviderIdentification { get; init; }
+    public required Max35Text ProviderIdentification { get; init; }
 
     /// <summary>
     /// Identifier of the token requestor.
@@ -34,5 +34,5 @@ public record PaymentTokenIdentifiers1
     [IsoXmlTag("RqstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text RequestorIdentification { get; init; }
+    public required Max35Text RequestorIdentification { get; init; }
 }

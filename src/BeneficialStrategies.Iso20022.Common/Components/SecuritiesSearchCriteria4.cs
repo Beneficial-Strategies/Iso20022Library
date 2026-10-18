@@ -31,7 +31,7 @@ public record SecuritiesSearchCriteria4
     [DisplayName("Classification Financial Instrument")]
     [IsoXmlTag("ClssfctnFinInstrm")]
     [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
-    public IsoCFIOct2015Identifier? ClassificationFinancialInstrument { get; init; }
+    public CFIOct2015Identifier? ClassificationFinancialInstrument { get; init; }
 
     /// <summary>
     /// Planned final repayment date at the time of issuance.

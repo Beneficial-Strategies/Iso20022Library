@@ -25,7 +25,7 @@ public record Statement8
     [IsoXmlTag("Ref")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Reference { get; init; }
+    public required Max35Text Reference { get; init; }
 
     /// <summary>
     /// Period on which the statement is reporting.
@@ -66,7 +66,7 @@ public record Statement8
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ActivityIndicator { get; init; }
+    public required YesNoIndicator ActivityIndicator { get; init; }
 
     /// <summary>
     /// Sequential number of the statement.
@@ -75,5 +75,5 @@ public record Statement8
     [DisplayName("Report Number")]
     [IsoXmlTag("RptNb")]
     [IsoSimpleType(IsoSimpleType.Max5NumericText)]
-    public IsoMax5NumericText? ReportNumber { get; init; }
+    public Max5NumericText? ReportNumber { get; init; }
 }

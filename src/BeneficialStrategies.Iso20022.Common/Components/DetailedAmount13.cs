@@ -40,5 +40,5 @@ public record DetailedAmount13
     [IsoXmlTag("Labl")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Label { get; init; }
+    public Max70Text? Label { get; init; }
 }

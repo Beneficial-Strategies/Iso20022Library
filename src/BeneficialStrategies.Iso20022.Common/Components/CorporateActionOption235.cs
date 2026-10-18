@@ -21,7 +21,7 @@ public record CorporateActionOption235
     /// </summary>
     [DisplayName("Acceptance Priority Level")]
     [IsoXmlTag("AccptncPrtyLvl")]
-    public IsoExact3UpperCaseAlphaNumericText? AcceptancePriorityLevel { get; init; }
+    public Exact3UpperCaseAlphaNumericText? AcceptancePriorityLevel { get; init; }
 
     /// <summary>
     /// Additional Information.
@@ -42,7 +42,7 @@ public record CorporateActionOption235
     /// </summary>
     [DisplayName("Certification Breakdown Indicator")]
     [IsoXmlTag("CertfctnBrkdwnInd")]
-    public IsoYesNoIndicator? CertificationBreakdownIndicator { get; init; }
+    public YesNoIndicator? CertificationBreakdownIndicator { get; init; }
 
     /// <summary>
     /// Certification Breakdown Type.
@@ -71,7 +71,7 @@ public record CorporateActionOption235
     /// </summary>
     [DisplayName("Default Option Indicator")]
     [IsoXmlTag("DfltOptnInd")]
-    public required IsoYesNoIndicator DefaultOptionIndicator { get; init; }
+    public required YesNoIndicator DefaultOptionIndicator { get; init; }
 
     /// <summary>
     /// Financial Instrument Identification.
@@ -113,7 +113,7 @@ public record CorporateActionOption235
     /// </summary>
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
-    public required IsoExact3NumericText OptionNumber { get; init; }
+    public required Exact3NumericText OptionNumber { get; init; }
 
     /// <summary>
     /// Option Type.
@@ -127,7 +127,7 @@ public record CorporateActionOption235
     /// </summary>
     [DisplayName("Oversubscription Charge Indicator")]
     [IsoXmlTag("OvrsbcptChrgInd")]
-    public IsoYesNoIndicator? OversubscriptionChargeIndicator { get; init; }
+    public YesNoIndicator? OversubscriptionChargeIndicator { get; init; }
 
     /// <summary>
     /// Period Details.
@@ -155,7 +155,7 @@ public record CorporateActionOption235
     /// </summary>
     [DisplayName("Proration Fraction")]
     [IsoXmlTag("PrratnFrctn")]
-    public IsoDecimalNumber? ProrationFraction { get; init; }
+    public DecimalNumber? ProrationFraction { get; init; }
 
     /// <summary>
     /// Proration Return Minimum Quantity Treatment.
@@ -176,7 +176,7 @@ public record CorporateActionOption235
     /// </summary>
     [DisplayName("Protect Charge Indicator")]
     [IsoXmlTag("PrtctChrgInd")]
-    public IsoYesNoIndicator? ProtectChargeIndicator { get; init; }
+    public YesNoIndicator? ProtectChargeIndicator { get; init; }
 
     /// <summary>
     /// Rate And Amount Details.
@@ -204,14 +204,14 @@ public record CorporateActionOption235
     /// </summary>
     [DisplayName("Step Up Charge Indicator")]
     [IsoXmlTag("StepUpChrgInd")]
-    public IsoYesNoIndicator? StepUpChargeIndicator { get; init; }
+    public YesNoIndicator? StepUpChargeIndicator { get; init; }
 
     /// <summary>
     /// Subscription Charge Indicator.
     /// </summary>
     [DisplayName("Subscription Charge Indicator")]
     [IsoXmlTag("SbcptChrgInd")]
-    public IsoYesNoIndicator? SubscriptionChargeIndicator { get; init; }
+    public YesNoIndicator? SubscriptionChargeIndicator { get; init; }
 
     /// <summary>
     /// Supplementary Option Features.
@@ -232,5 +232,5 @@ public record CorporateActionOption235
     /// </summary>
     [DisplayName("Withdrawal Allowed Indicator")]
     [IsoXmlTag("WdrwlAllwdInd")]
-    public IsoYesNoIndicator? WithdrawalAllowedIndicator { get; init; }
+    public YesNoIndicator? WithdrawalAllowedIndicator { get; init; }
 }

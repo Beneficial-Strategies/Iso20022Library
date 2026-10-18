@@ -21,7 +21,7 @@ public record TradingSideTransactionReporting3
     /// </summary>
     [DisplayName("Reporting Jurisdiction")]
     [IsoXmlTag("RptgJursdctn")]
-    public IsoMax35Text? ReportingJurisdiction { get; init; }
+    public Max35Text? ReportingJurisdiction { get; init; }
 
     /// <summary>
     /// Reporting Party.

@@ -23,7 +23,7 @@ public record AggregationTransaction2
     [DisplayName("First Payment Date Time")]
     [IsoXmlTag("FrstPmtDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? FirstPaymentDateTime { get; init; }
+    public ISODateTime? FirstPaymentDateTime { get; init; }
 
     /// <summary>
     /// Date and time of the last payment.
@@ -32,7 +32,7 @@ public record AggregationTransaction2
     [DisplayName("Last Payment Date Time")]
     [IsoXmlTag("LastPmtDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? LastPaymentDateTime { get; init; }
+    public ISODateTime? LastPaymentDateTime { get; init; }
 
     /// <summary>
     /// Total number of payments that has been aggregated.
@@ -41,7 +41,7 @@ public record AggregationTransaction2
     [DisplayName("Number Of Payments")]
     [IsoXmlTag("NbOfPmts")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NumberOfPayments { get; init; }
+    public Number? NumberOfPayments { get; init; }
 
     /// <summary>
     /// Individual payment that has been aggregated.

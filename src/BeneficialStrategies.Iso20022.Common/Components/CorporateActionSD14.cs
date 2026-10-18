@@ -24,7 +24,7 @@ public record CorporateActionSD14
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text PlaceAndName { get; init; }
+    public required Max350Text PlaceAndName { get; init; }
 
     /// <summary>
     /// Indicates whether the notice received was universal or specific to securities registered in DTC&apos;s nominee name.
@@ -49,7 +49,7 @@ public record CorporateActionSD14
     [DisplayName("Number Of Shares To Be Issued")]
     [IsoXmlTag("NbOfShrsToBeIssd")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? NumberOfSharesToBeIssued { get; init; }
+    public DecimalNumber? NumberOfSharesToBeIssued { get; init; }
 
     /// <summary>
     /// Total number of shares that are part of the offer for example subscription offer.
@@ -58,7 +58,7 @@ public record CorporateActionSD14
     [DisplayName("Total Number Of Shares Offered")]
     [IsoXmlTag("TtlNbOfShrsOfferd")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? TotalNumberOfSharesOffered { get; init; }
+    public DecimalNumber? TotalNumberOfSharesOffered { get; init; }
 
     /// <summary>
     /// Number of additional days used to establish a DTC processing cut-off date. For example, DTC typically adds a cut-off off day (making it one business day prior) to the record date for issues with agents outside NYC. This allows time for DTC to deliver the securities.
@@ -67,7 +67,7 @@ public record CorporateActionSD14
     [DisplayName("Cut Off Days")]
     [IsoXmlTag("CutOffDays")]
     [IsoSimpleType(IsoSimpleType.Max3Number)]
-    public IsoMax3Number? CutOffDays { get; init; }
+    public Max3Number? CutOffDays { get; init; }
 
     /// <summary>
     /// Indicator that identifies the type of interface an event agent has with DTC (The Depository Trust Corporation). It defines how time sensitive instruction and withdrawal process is. Offline (non automated) agent will have earlier deadlines which will be reflected in response deadlines but importantly withdrawal procedures for manual agent require hard copy sign off from the agent that has to be delivered to DTC to proceed with withdrawal.
@@ -108,7 +108,7 @@ public record CorporateActionSD14
     [DisplayName("Conditional Payment Applicable Flag")]
     [IsoXmlTag("CondlPmtAplblFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ConditionalPaymentApplicableFlag { get; init; }
+    public YesNoIndicator? ConditionalPaymentApplicableFlag { get; init; }
 
     /// <summary>
     /// Indicates whether there is a solicitation fee on the event. This fee is paid by the soliciting dealer.
@@ -117,7 +117,7 @@ public record CorporateActionSD14
     [DisplayName("Solicitation Dealer Fee Flag")]
     [IsoXmlTag("SlctnDealrFeeFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? SolicitationDealerFeeFlag { get; init; }
+    public YesNoIndicator? SolicitationDealerFeeFlag { get; init; }
 
     /// <summary>
     /// Indicates whether positions held in Custody program are eligible for instruction processing at DTC (The Depository Trust Corporation).
@@ -126,7 +126,7 @@ public record CorporateActionSD14
     [DisplayName("DTC Custody Eligible Flag")]
     [IsoXmlTag("DTCCtdyElgblFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? DTCCustodyEligibleFlag { get; init; }
+    public YesNoIndicator? DTCCustodyEligibleFlag { get; init; }
 
     /// <summary>
     /// Indicates whether the event is eligible for Custody Reorganisation service at DTC (The Depository Trust Corporation).
@@ -135,7 +135,7 @@ public record CorporateActionSD14
     [DisplayName("DTC Reorganisation Custody Eligible Flag")]
     [IsoXmlTag("DTCReorgCtdyElgblFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? DTCReorganisationCustodyEligibleFlag { get; init; }
+    public YesNoIndicator? DTCReorganisationCustodyEligibleFlag { get; init; }
 
     /// <summary>
     /// Indicates whether the event is eligible for Reorganisation Deposit Service at DTC (The Depository Trust Corporation).
@@ -144,7 +144,7 @@ public record CorporateActionSD14
     [DisplayName("DTC Reorganisation Deposit Eligible Flag")]
     [IsoXmlTag("DTCReorgDpstElgblFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? DTCReorganisationDepositEligibleFlag { get; init; }
+    public YesNoIndicator? DTCReorganisationDepositEligibleFlag { get; init; }
 
     /// <summary>
     /// Indicates whether shares outside of DTC need to be delivered to the agent in order to receive entitlement.
@@ -153,7 +153,7 @@ public record CorporateActionSD14
     [DisplayName("Surrender Shares To Agent Flag")]
     [IsoXmlTag("SrrndrShrsToAgtFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? SurrenderSharesToAgentFlag { get; init; }
+    public YesNoIndicator? SurrenderSharesToAgentFlag { get; init; }
 
     /// <summary>
     /// Indicates that the holder has the privilege to buy additional rights. Upon exercising this privilege, the holder may subscribe to one additional share of the new security in lieu of fractional shares to which the holder might otherwise be entitled.
@@ -162,7 +162,7 @@ public record CorporateActionSD14
     [DisplayName("Step Up Privilege Flag")]
     [IsoXmlTag("StepUpPrvlgFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? StepUpPrivilegeFlag { get; init; }
+    public YesNoIndicator? StepUpPrivilegeFlag { get; init; }
 
     /// <summary>
     /// Indicates whether holders of rights will be afforded the opportunity to subscribe to purchase extra shares that are not picked up by the remaining holders.
@@ -171,7 +171,7 @@ public record CorporateActionSD14
     [DisplayName("Rights Oversubscription Flag")]
     [IsoXmlTag("RghtsOvrsbcptFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? RightsOversubscriptionFlag { get; init; }
+    public YesNoIndicator? RightsOversubscriptionFlag { get; init; }
 
     /// <summary>
     /// Indicates whether the shareholder will be able to round up his/her subscription in the event his/her rights are less than the requirement.
@@ -180,7 +180,7 @@ public record CorporateActionSD14
     [DisplayName("Rights Round Up Privilege Flag")]
     [IsoXmlTag("RghtsRndUpPrvlgFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? RightsRoundUpPrivilegeFlag { get; init; }
+    public YesNoIndicator? RightsRoundUpPrivilegeFlag { get; init; }
 
     /// <summary>
     /// Indicates whether rights can be transferred.
@@ -189,7 +189,7 @@ public record CorporateActionSD14
     [DisplayName("Rights Transferable Flag")]
     [IsoXmlTag("RghtsTrfblFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? RightsTransferableFlag { get; init; }
+    public YesNoIndicator? RightsTransferableFlag { get; init; }
 
     /// <summary>
     /// Provides details of certificates that have been called for redemption.
@@ -214,5 +214,5 @@ public record CorporateActionSD14
     [DisplayName("RDP Reference Number")]
     [IsoXmlTag("RDPRefNb")]
     [IsoSimpleType(IsoSimpleType.Exact32AlphaNumericText)]
-    public IsoExact32AlphaNumericText? RDPReferenceNumber { get; init; }
+    public Exact32AlphaNumericText? RDPReferenceNumber { get; init; }
 }

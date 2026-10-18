@@ -39,7 +39,7 @@ public record Tax32
     [DisplayName("Informative Rate")]
     [IsoXmlTag("InftvRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? InformativeRate { get; init; }
+    public PercentageRate? InformativeRate { get; init; }
 
     /// <summary>
     /// Country where the tax is due.
@@ -56,7 +56,7 @@ public record Tax32
     [DisplayName("Exemption Indicator")]
     [IsoXmlTag("XmptnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ExemptionIndicator { get; init; }
+    public required YesNoIndicator ExemptionIndicator { get; init; }
 
     /// <summary>
     /// Reason for the tax exemption.

@@ -55,7 +55,7 @@ public record CorporateActionRate113
     [DisplayName("Fiscal Stamp")]
     [IsoXmlTag("FsclStmp")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? FiscalStamp { get; init; }
+    public PercentageRate? FiscalStamp { get; init; }
 
     /// <summary>
     /// Rate applicable to the event announced, for example, redemption rate for a redemption event.
@@ -64,7 +64,7 @@ public record CorporateActionRate113
     [DisplayName("Applicable Rate")]
     [IsoXmlTag("AplblRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? ApplicableRate { get; init; }
+    public PercentageRate? ApplicableRate { get; init; }
 
     /// <summary>
     /// Amount of money per equity allocated as the result of a tax credit.
@@ -81,7 +81,7 @@ public record CorporateActionRate113
     [DisplayName("Financial Transaction Tax Rate")]
     [IsoXmlTag("FinTxTaxRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? FinancialTransactionTaxRate { get; init; }
+    public PercentageRate? FinancialTransactionTaxRate { get; init; }
 
     /// <summary>
     /// Percentage of a cash distribution that will be withheld by the tax authorities of the jurisdiction of the issuer, for which a relief at source and/or reclaim may be possible.

@@ -31,5 +31,5 @@ public record SafekeepingPlaceTypeAndAnyBICIdentifier1
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public required IsoAnyBICIdentifier Identification { get; init; }
+    public required AnyBICIdentifier Identification { get; init; }
 }

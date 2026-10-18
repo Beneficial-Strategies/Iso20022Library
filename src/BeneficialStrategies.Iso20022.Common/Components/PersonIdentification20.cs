@@ -28,7 +28,7 @@ public record PersonIdentification20
     /// </summary>
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
-    public IsoMax256Text? EmailAddress { get; init; }
+    public Max256Text? EmailAddress { get; init; }
 
     /// <summary>
     /// Other.

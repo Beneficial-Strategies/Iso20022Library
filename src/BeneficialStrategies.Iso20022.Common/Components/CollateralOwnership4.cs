@@ -23,7 +23,7 @@ public record CollateralOwnership4
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator Proprietary { get; init; }
+    public required YesNoIndicator Proprietary { get; init; }
 
     /// <summary>
     /// Indicates that the client owns the collateral.

@@ -50,7 +50,7 @@ public record TMSProtocolParameters3
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public required IsoMax256Text Version { get; init; }
+    public required Max256Text Version { get; init; }
 
     /// <summary>
     /// Identification of applications which may be managed by the TM, partially or globally.
@@ -58,7 +58,7 @@ public record TMSProtocolParameters3
     [IsoId("_2QsgKdqFEeearpaEPXv9UA")]
     [DisplayName("Application Identification")]
     [IsoXmlTag("ApplId")]
-    public SimpleValueList<IsoMax35Text> ApplicationIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> ApplicationIdentification { get; init; } = [];
 
     /// <summary>
     /// Identification of the terminal manager host.
@@ -68,7 +68,7 @@ public record TMSProtocolParameters3
     [IsoXmlTag("HstId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text HostIdentification { get; init; }
+    public required Max35Text HostIdentification { get; init; }
 
     /// <summary>
     /// New identification of the POI for the terminal manager.
@@ -78,7 +78,7 @@ public record TMSProtocolParameters3
     [IsoXmlTag("POIId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? POIIdentification { get; init; }
+    public Max35Text? POIIdentification { get; init; }
 
     /// <summary>
     /// New identification of the initiating party to set in TMS messages with this terminal manager.
@@ -88,7 +88,7 @@ public record TMSProtocolParameters3
     [IsoXmlTag("InitgPtyId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? InitiatingPartyIdentification { get; init; }
+    public Max35Text? InitiatingPartyIdentification { get; init; }
 
     /// <summary>
     /// New identification of the recipient party to set in TMS messages with this terminal manager.
@@ -98,7 +98,7 @@ public record TMSProtocolParameters3
     [IsoXmlTag("RcptPtyId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RecipientPartyIdentification { get; init; }
+    public Max35Text? RecipientPartyIdentification { get; init; }
 
     /// <summary>
     /// Configuration parameters are exchanged per file transfer protocol rather than per message.
@@ -107,7 +107,7 @@ public record TMSProtocolParameters3
     [DisplayName("File Transfer")]
     [IsoXmlTag("FileTrf")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? FileTransfer { get; init; }
+    public TrueFalseIndicator? FileTransfer { get; init; }
 
     /// <summary>
     /// Configuration of a message item.

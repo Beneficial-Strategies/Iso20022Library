@@ -24,7 +24,7 @@ public record Rating1
     [IsoXmlTag("RatgSchme")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text RatingScheme { get; init; }
+    public required Max35Text RatingScheme { get; init; }
 
     /// <summary>
     /// Date/time as from which the rating is valid.
@@ -33,7 +33,7 @@ public record Rating1
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime ValueDate { get; init; }
+    public required ISODateTime ValueDate { get; init; }
 
     /// <summary>
     /// Specifies the rating, which has been assigned to a security by a rating agency.
@@ -42,5 +42,5 @@ public record Rating1
     [DisplayName("Value Identification")]
     [IsoXmlTag("ValId")]
     [IsoSimpleType(IsoSimpleType.RatingValueIdentifier)]
-    public required IsoRatingValueIdentifier ValueIdentification { get; init; }
+    public required RatingValueIdentifier ValueIdentification { get; init; }
 }

@@ -22,7 +22,7 @@ public record RedemptionOrder17
     [IsoId("4f2dbd9b-522c-4d0e-a09f-80d3f4785a39")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
-    public required IsoMax35Text OrderReference { get; init; }
+    public required Max35Text OrderReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor's identification of the order.
@@ -30,7 +30,7 @@ public record RedemptionOrder17
     [IsoId("95a7fb2a-c3d1-45b3-bdf1-4091ad20e0b6")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
-    public IsoMax35Text? ClientReference { get; init; }
+    public Max35Text? ClientReference { get; init; }
 
     /// <summary>
     /// Unambiguous identification of a random or semi-random number used once (NONCE).
@@ -38,7 +38,7 @@ public record RedemptionOrder17
     [IsoId("5202809d-353b-408c-b73f-3a24b0fe38f4")]
     [DisplayName("Nonce Identification")]
     [IsoXmlTag("NonceId")]
-    public IsoMax35Text? NonceIdentification { get; init; }
+    public Max35Text? NonceIdentification { get; init; }
 
     /// <summary>
     /// Account impacted by the investment fund order.
@@ -94,7 +94,7 @@ public record RedemptionOrder17
     [IsoId("bbdacacf-fe10-48f3-a6af-d393a2ec5027")]
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
-    public IsoISODate? CashSettlementDate { get; init; }
+    public DateOnly? CashSettlementDate { get; init; }
 
     /// <summary>
     /// Method by which the transaction is settled.
@@ -150,7 +150,7 @@ public record RedemptionOrder17
     [IsoId("eb3c5249-a217-4cdd-a825-55a35dbb88dd")]
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
-    public required IsoYesNoIndicator PhysicalDeliveryIndicator { get; init; }
+    public required YesNoIndicator PhysicalDeliveryIndicator { get; init; }
 
     /// <summary>
     /// Information related to the physical delivery of the securities.
@@ -182,7 +182,7 @@ public record RedemptionOrder17
     [IsoId("7a9bdbde-9794-412a-9591-ebecad445c07")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
-    public IsoMax350Text? NonStandardSettlementInformation { get; init; }
+    public Max350Text? NonStandardSettlementInformation { get; init; }
 
     /// <summary>
     /// Breakdown of the net amount per type of order.

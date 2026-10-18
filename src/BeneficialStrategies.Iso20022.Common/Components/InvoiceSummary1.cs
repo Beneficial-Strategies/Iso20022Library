@@ -24,7 +24,7 @@ public record InvoiceSummary1
     [IsoXmlTag("InvcNb")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? InvoiceNumber { get; init; }
+    public Max70Text? InvoiceNumber { get; init; }
 
     /// <summary>
     /// Supplier or the provider of the goods or services.
@@ -49,7 +49,7 @@ public record InvoiceSummary1
     [DisplayName("Invoice Date")]
     [IsoXmlTag("InvcDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? InvoiceDate { get; init; }
+    public DateOnly? InvoiceDate { get; init; }
 
     /// <summary>
     /// Contains the date and time the electronic invoice was created.
@@ -58,7 +58,7 @@ public record InvoiceSummary1
     [DisplayName("Invoice Creation Date Time")]
     [IsoXmlTag("InvcCreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? InvoiceCreationDateTime { get; init; }
+    public ISODateTime? InvoiceCreationDateTime { get; init; }
 
     /// <summary>
     /// Provides the identifier assigned by the card acceptor that best categorizes the items being purchased in a standardized commodity group.
@@ -68,7 +68,7 @@ public record InvoiceSummary1
     [IsoXmlTag("SummryCmmdtyId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SummaryCommodityIdentification { get; init; }
+    public Max35Text? SummaryCommodityIdentification { get; init; }
 
     /// <summary>
     /// Contains the freight charges for the entire purchase.
@@ -102,5 +102,5 @@ public record InvoiceSummary1
     [IsoXmlTag("AddtlData")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AdditionalData { get; init; }
+    public Max350Text? AdditionalData { get; init; }
 }

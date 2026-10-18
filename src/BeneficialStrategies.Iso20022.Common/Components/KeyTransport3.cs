@@ -23,7 +23,7 @@ public record KeyTransport3
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Version { get; init; }
+    public Number? Version { get; init; }
 
     /// <summary>
     /// Transport key or key encryption key (KEK) for the recipient.
@@ -48,5 +48,5 @@ public record KeyTransport3
     [DisplayName("Encrypted Key")]
     [IsoXmlTag("NcrptdKey")]
     [IsoSimpleType(IsoSimpleType.Max3000Binary)]
-    public required IsoMax3000Binary EncryptedKey { get; init; }
+    public required Max3000Binary EncryptedKey { get; init; }
 }

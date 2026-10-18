@@ -23,7 +23,7 @@ public record IssuerCSDIdentification1
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? LEI { get; init; }
+    public LEIIdentifier? LEI { get; init; }
 
     /// <summary>
     /// Identifies the jurisdiction relevant for the financial instrument based on the first two characters of its instrument identification code.
@@ -32,7 +32,7 @@ public record IssuerCSDIdentification1
     [DisplayName("First Two Characters Instrument Identification")]
     [IsoXmlTag("FrstTwoCharsInstrmId")]
     [IsoSimpleType(IsoSimpleType.Exact2UpperCaseAlphaText)]
-    public required IsoExact2UpperCaseAlphaText FirstTwoCharactersInstrumentIdentification { get; init; }
+    public required Exact2UpperCaseAlphaText FirstTwoCharactersInstrumentIdentification { get; init; }
 
     /// <summary>
     /// Identifies the country code of the Issuer CSD, using ISO 3166 2-character code.

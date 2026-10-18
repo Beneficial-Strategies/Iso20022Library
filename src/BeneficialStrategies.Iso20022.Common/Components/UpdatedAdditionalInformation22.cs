@@ -21,5 +21,5 @@ public record UpdatedAdditionalInformation22
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public required IsoRestrictedFINXMax350Text AdditionalInformation { get; init; }
+    public required RestrictedFINXMax350Text AdditionalInformation { get; init; }
 }

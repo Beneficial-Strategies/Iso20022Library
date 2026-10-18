@@ -24,7 +24,7 @@ public record SettlementSubTotalCalculatedTax2
     [IsoXmlTag("TpCd")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4Text? TypeCode { get; init; }
+    public Max4Text? TypeCode { get; init; }
 
     /// <summary>
     /// Rate used to calculate the amount of this tax, levy or duty.
@@ -33,7 +33,7 @@ public record SettlementSubTotalCalculatedTax2
     [DisplayName("Calculated Rate")]
     [IsoXmlTag("ClctdRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? CalculatedRate { get; init; }
+    public PercentageRate? CalculatedRate { get; init; }
 
     /// <summary>
     /// Monetary value used as the basis on which this tax, levy or duty is calculated.
@@ -59,7 +59,7 @@ public record SettlementSubTotalCalculatedTax2
     [IsoXmlTag("XmptnRsnCd")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4Text? ExemptionReasonCode { get; init; }
+    public Max4Text? ExemptionReasonCode { get; init; }
 
     /// <summary>
     /// Reason for a tax exemption, if invoice or card transaction is out of tax processing.
@@ -69,7 +69,7 @@ public record SettlementSubTotalCalculatedTax2
     [IsoXmlTag("XmptnRsnTxt")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public IsoMax500Text? ExemptionReasonText { get; init; }
+    public Max500Text? ExemptionReasonText { get; init; }
 
     /// <summary>
     /// If tax currency in tax calculation is different from invoice currency, then applied exchange rate is given in this message structure.

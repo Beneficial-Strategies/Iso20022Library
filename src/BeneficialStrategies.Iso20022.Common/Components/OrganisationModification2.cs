@@ -47,7 +47,7 @@ public record OrganisationModification2
     [DisplayName("Registration Date")]
     [IsoXmlTag("RegnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RegistrationDate { get; init; }
+    public DateOnly? RegistrationDate { get; init; }
 
     /// <summary>
     /// Specifies an operational address, for example, of a shared services centre.

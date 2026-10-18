@@ -102,7 +102,7 @@ public record RetailerPaymentResult8
     [IsoId("_s8YQCbYMEfCUZfsQO4rYeA")]
     [DisplayName("Merchant Override Flag")]
     [IsoXmlTag("MrchntOvrrdFlg")]
-    public IsoTrueFalseIndicator? MerchantOverrideFlag { get; init; }
+    public TrueFalseIndicator? MerchantOverrideFlag { get; init; }
 
     /// <summary>
     /// Language used to display messages to the customer.
@@ -118,5 +118,5 @@ public record RetailerPaymentResult8
     [IsoId("_s8YQFbYMEfCUZfsQO4rYeA")]
     [DisplayName("Online Flag")]
     [IsoXmlTag("OnlnFlg")]
-    public IsoTrueFalseIndicator? OnlineFlag { get; init; }
+    public TrueFalseIndicator? OnlineFlag { get; init; }
 }

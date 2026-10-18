@@ -22,7 +22,7 @@ public record RecurringPaymentData1
     [IsoId("__IvvcF5xEfCoP_h9uwd39Q")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public IsoExact1NumericText? Type { get; init; }
+    public Exact1NumericText? Type { get; init; }
 
     /// <summary>
     /// Indicate the type of payment amount per transaction.
@@ -30,7 +30,7 @@ public record RecurringPaymentData1
     [IsoId("_ziKRYF5yEfCoP_h9uwd39Q")]
     [DisplayName("Per Transaction Amount Indicator")]
     [IsoXmlTag("PerTxAmtInd")]
-    public IsoExact1NumericText? PerTransactionAmountIndicator { get; init; }
+    public Exact1NumericText? PerTransactionAmountIndicator { get; init; }
 
     /// <summary>
     /// Contain the number of recurring payment.
@@ -38,7 +38,7 @@ public record RecurringPaymentData1
     [IsoId("_MX-UYF5zEfCoP_h9uwd39Q")]
     [DisplayName("Number Of Recurring Payment")]
     [IsoXmlTag("NbOfRcrngPmt")]
-    public IsoExact2NumericText? NumberOfRecurringPayment { get; init; }
+    public Exact2NumericText? NumberOfRecurringPayment { get; init; }
 
     /// <summary>
     /// Indicate the frequency of the recurring payment.
@@ -46,7 +46,7 @@ public record RecurringPaymentData1
     [IsoId("_mEhyIF5zEfCoP_h9uwd39Q")]
     [DisplayName("Frequency")]
     [IsoXmlTag("Frqcy")]
-    public IsoExact2NumericText? Frequency { get; init; }
+    public Exact2NumericText? Frequency { get; init; }
 
     /// <summary>
     /// Reference number of the recurring payment agreement assigned by the merchant.
@@ -54,7 +54,7 @@ public record RecurringPaymentData1
     [IsoId("_Dj0FMF51EfCoP_h9uwd39Q")]
     [DisplayName("Registration Reference Number")]
     [IsoXmlTag("RegnRefNb")]
-    public IsoMax35Text? RegistrationReferenceNumber { get; init; }
+    public Max35Text? RegistrationReferenceNumber { get; init; }
 
     /// <summary>
     /// Contain the maximum recurring payment amount.
@@ -70,7 +70,7 @@ public record RecurringPaymentData1
     [IsoId("_mOhJsF51EfCoP_h9uwd39Q")]
     [DisplayName("Validation Indicator")]
     [IsoXmlTag("VldtnInd")]
-    public IsoExact1NumericText? ValidationIndicator { get; init; }
+    public Exact1NumericText? ValidationIndicator { get; init; }
 
     /// <summary>
     /// Reserved for private data.
@@ -78,7 +78,7 @@ public record RecurringPaymentData1
     [IsoId("_xX-fgl53EfCoP_h9uwd39Q")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -86,5 +86,5 @@ public record RecurringPaymentData1
     [IsoId("_xX-fg153EfCoP_h9uwd39Q")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

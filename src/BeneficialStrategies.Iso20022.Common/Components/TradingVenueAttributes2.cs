@@ -23,7 +23,7 @@ public record TradingVenueAttributes2
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public required IsoMICIdentifier Identification { get; init; }
+    public required MICIdentifier Identification { get; init; }
 
     /// <summary>
     /// Indicates whether the issuer of the financial instrument has requested or approved the trading or admission to trading of their financial instruments on a trading venue.
@@ -33,7 +33,7 @@ public record TradingVenueAttributes2
     [DisplayName("Issuer Request")]
     [IsoXmlTag("IssrReq")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? IssuerRequest { get; init; }
+    public TrueFalseIndicator? IssuerRequest { get; init; }
 
     /// <summary>
     /// Date and time the issuer has approved the admission to trading or trading of its financial instruments on the trading venue.
@@ -42,7 +42,7 @@ public record TradingVenueAttributes2
     [DisplayName("Admission Approval Date By Issuer")]
     [IsoXmlTag("AdmssnApprvlDtByIssr")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? AdmissionApprovalDateByIssuer { get; init; }
+    public ISODateTime? AdmissionApprovalDateByIssuer { get; init; }
 
     /// <summary>
     /// Date and time when the request for admission on the trading venue was made for the instrument.
@@ -51,7 +51,7 @@ public record TradingVenueAttributes2
     [DisplayName("Request For Admission Date")]
     [IsoXmlTag("ReqForAdmssnDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? RequestForAdmissionDate { get; init; }
+    public ISODateTime? RequestForAdmissionDate { get; init; }
 
     /// <summary>
     /// Date and time of the admission to trading on the trading venue or the date and time when the instrument was first traded or an order or quote was first received by the trading venue.
@@ -60,7 +60,7 @@ public record TradingVenueAttributes2
     [DisplayName("First Trade Date")]
     [IsoXmlTag("FrstTradDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? FirstTradeDate { get; init; }
+    public ISODateTime? FirstTradeDate { get; init; }
 
     /// <summary>
     /// Date and time when the financial instrument ceases to be traded or to be admitted to trading on the trading venue. Where this date and time is unavailable, the field shall not be populated.
@@ -69,5 +69,5 @@ public record TradingVenueAttributes2
     [DisplayName("Termination Date")]
     [IsoXmlTag("TermntnDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? TerminationDate { get; init; }
+    public ISODateTime? TerminationDate { get; init; }
 }

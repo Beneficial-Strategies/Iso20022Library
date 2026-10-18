@@ -9,6 +9,6 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationDataRecord12Choice
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("RspnNrrtv")]
-        public required IsoMax500Text Value { get; init; }
+        public required Max500Text Value { get; init; }
     }
 }

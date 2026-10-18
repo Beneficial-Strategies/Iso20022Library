@@ -31,7 +31,7 @@ public record FinancialInstrument106
     [IsoId("63415e65-e8c5-4228-8b56-b82f354331ae")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax350Text? Name { get; init; }
+    public Max350Text? Name { get; init; }
 
     /// <summary>
     /// Financial Instrument Short Name (FISN) expressed in conformance with the ISO 18774 standard.
@@ -39,7 +39,7 @@ public record FinancialInstrument106
     [IsoId("0edf31fe-cca2-488e-a56c-a3d8b2e5a727")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
-    public IsoMax35Text? ShortName { get; init; }
+    public Max35Text? ShortName { get; init; }
 
     /// <summary>
     /// Additional information about a financial instrument to help identify the instrument.
@@ -47,7 +47,7 @@ public record FinancialInstrument106
     [IsoId("31646637-279d-4810-9738-949b207fcabf")]
     [DisplayName("Supplementary Identification")]
     [IsoXmlTag("SplmtryId")]
-    public IsoMax35Text? SupplementaryIdentification { get; init; }
+    public Max35Text? SupplementaryIdentification { get; init; }
 
     /// <summary>
     /// Currency in which a security is issued or redenominated.
@@ -63,7 +63,7 @@ public record FinancialInstrument106
     [IsoId("34c89cd1-d2a5-43b6-a1e1-7565cdd37a09")]
     [DisplayName("Class Type")]
     [IsoXmlTag("ClssTp")]
-    public IsoMax35Text? ClassType { get; init; }
+    public Max35Text? ClassType { get; init; }
 
     /// <summary>
     /// Form, that is, ownership, of the security.
@@ -87,7 +87,7 @@ public record FinancialInstrument106
     [IsoId("2e38e21d-63bb-4e28-9cff-097144bf2b4e")]
     [DisplayName("Dual Fund Indicator")]
     [IsoXmlTag("DualFndInd")]
-    public required IsoYesNoIndicator DualFundIndicator { get; init; }
+    public required YesNoIndicator DualFundIndicator { get; init; }
 
     /// <summary>
     /// Company specific description of a group of funds.
@@ -95,7 +95,7 @@ public record FinancialInstrument106
     [IsoId("be22437d-5338-4c13-b168-01e37cf53a41")]
     [DisplayName("Product Group")]
     [IsoXmlTag("PdctGrp")]
-    public IsoMax140Text? ProductGroup { get; init; }
+    public Max140Text? ProductGroup { get; init; }
 
     /// <summary>
     /// Source of the identification, that is, domestic (national) or proprietary.

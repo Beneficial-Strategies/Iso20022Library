@@ -23,7 +23,7 @@ public record AmountAndDirection35
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
     [IsoSimpleType(IsoSimpleType.NonNegativeDecimalNumber)]
-    public required IsoNonNegativeDecimalNumber Amount { get; init; }
+    public required NonNegativeDecimalNumber Amount { get; init; }
 
     /// <summary>
     /// Indicates whether the amount is a credit or a debit amount.

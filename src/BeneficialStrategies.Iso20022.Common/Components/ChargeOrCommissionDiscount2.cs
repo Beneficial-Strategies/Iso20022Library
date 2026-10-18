@@ -31,7 +31,7 @@ public record ChargeOrCommissionDiscount2
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Rate { get; init; }
+    public PercentageRate? Rate { get; init; }
 
     /// <summary>
     /// Form of the discount or rebate.

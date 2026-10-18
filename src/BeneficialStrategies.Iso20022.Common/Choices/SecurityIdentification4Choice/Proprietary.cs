@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification4Choice
         [IsoXmlTag("Tp")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text Type { get; init; }
+        public required Max35Text Type { get; init; }
 
         /// <summary>
         /// Unique and unambiguous identifier of a security.
@@ -34,6 +34,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification4Choice
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text Identification { get; init; }
+        public required Max35Text Identification { get; init; }
     }
 }

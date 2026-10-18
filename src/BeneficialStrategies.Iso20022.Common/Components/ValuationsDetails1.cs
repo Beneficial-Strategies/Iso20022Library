@@ -79,7 +79,7 @@ public record ValuationsDetails1
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NumberOfDaysAccrued { get; init; }
+    public Number? NumberOfDaysAccrued { get; init; }
 
     /// <summary>
     /// Number of days since the last pricing update.
@@ -88,5 +88,5 @@ public record ValuationsDetails1
     [DisplayName("Quotation Age")]
     [IsoXmlTag("QtnAge")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? QuotationAge { get; init; }
+    public Number? QuotationAge { get; init; }
 }

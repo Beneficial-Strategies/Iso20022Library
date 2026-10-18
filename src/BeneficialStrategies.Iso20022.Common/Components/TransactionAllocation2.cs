@@ -54,7 +54,7 @@ public record TransactionAllocation2
     [IsoId("_eP7wK7pXEfCPZvweyV2nEg")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
-    public required IsoMax35Text Reference { get; init; }
+    public required Max35Text Reference { get; init; }
 
     /// <summary>
     /// Reference relating to the allocation which is meaningful to both parties (for example the original Securities Settlement Transaction Identification).

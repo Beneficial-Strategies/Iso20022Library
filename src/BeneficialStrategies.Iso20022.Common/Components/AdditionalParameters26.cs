@@ -40,5 +40,5 @@ public record AdditionalParameters26
     [IsoXmlTag("PrvsPrtlConfId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? PreviousPartialConfirmationIdentification { get; init; }
+    public RestrictedFINXMax16Text? PreviousPartialConfirmationIdentification { get; init; }
 }

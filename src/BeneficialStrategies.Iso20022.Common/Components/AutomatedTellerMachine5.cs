@@ -24,7 +24,7 @@ public record AutomatedTellerMachine5
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// ATM terminal device identification for the ATM manager.
@@ -34,7 +34,7 @@ public record AutomatedTellerMachine5
     [IsoXmlTag("AddtlId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AdditionalIdentification { get; init; }
+    public Max35Text? AdditionalIdentification { get; init; }
 
     /// <summary>
     /// ATM terminal device identification for the branch.
@@ -44,7 +44,7 @@ public record AutomatedTellerMachine5
     [IsoXmlTag("SeqNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SequenceNumber { get; init; }
+    public Max35Text? SequenceNumber { get; init; }
 
     /// <summary>
     /// Reference currency of the ATM.

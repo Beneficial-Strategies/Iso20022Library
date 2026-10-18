@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationValue1Choice
         [IsoXmlTag("TxtVal")]
         [IsoSimpleType(IsoSimpleType.Max2048Text)]
         [StringLength(maximumLength: 2048, MinimumLength = 1)]
-        public required IsoMax2048Text Value { get; init; }
+        public required Max2048Text Value { get; init; }
     }
 }

@@ -24,7 +24,7 @@ public record LodgingRoom1
     [IsoXmlTag("RoomTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RoomType { get; init; }
+    public Max35Text? RoomType { get; init; }
 
     /// <summary>
     /// Contains the room location information (for example,ocean view, lake view, level, etc.)
@@ -34,7 +34,7 @@ public record LodgingRoom1
     [IsoXmlTag("RoomLctn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RoomLocation { get; init; }
+    public Max35Text? RoomLocation { get; init; }
 
     /// <summary>
     /// Contain the type of bed in room (for example, single, double, king, etc.)
@@ -44,7 +44,7 @@ public record LodgingRoom1
     [IsoXmlTag("BedTp")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? BedType { get; init; }
+    public Max70Text? BedType { get; init; }
 
     /// <summary>
     /// Contains the number of guests in the room.
@@ -53,7 +53,7 @@ public record LodgingRoom1
     [DisplayName("Guests Per Room")]
     [IsoXmlTag("GstsPerRoom")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public IsoMax3NumericText? GuestsPerRoom { get; init; }
+    public Max3NumericText? GuestsPerRoom { get; init; }
 
     /// <summary>
     /// Contains the number of adult guests in the room.
@@ -62,7 +62,7 @@ public record LodgingRoom1
     [DisplayName("Adults In Room")]
     [IsoXmlTag("AdltsInRoom")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public IsoMax3NumericText? AdultsInRoom { get; init; }
+    public Max3NumericText? AdultsInRoom { get; init; }
 
     /// <summary>
     /// Contains the number of child guests in the room.
@@ -71,7 +71,7 @@ public record LodgingRoom1
     [DisplayName("Children In Room")]
     [IsoXmlTag("ChldrnInRoom")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public IsoMax3NumericText? ChildrenInRoom { get; init; }
+    public Max3NumericText? ChildrenInRoom { get; init; }
 
     /// <summary>
     /// Daily rate being charged for the room.

@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument20Choice
         [IsoXmlTag("Nb")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? Number { get; init; }
+        public Max35Text? Number { get; init; }
 
         /// <summary>
         /// Party to which a cheque is made payable.

@@ -42,7 +42,7 @@ public record CreditorInvoice6
     /// </summary>
     [DisplayName("Creditor Instruction")]
     [IsoXmlTag("CdtrInstr")]
-    public IsoMax500Text? CreditorInstruction { get; init; }
+    public Max500Text? CreditorInstruction { get; init; }
 
     /// <summary>
     /// Customer Identification Type.
@@ -56,5 +56,5 @@ public record CreditorInvoice6
     /// </summary>
     [DisplayName("Limited Presentment Indicator")]
     [IsoXmlTag("LtdPresntmntInd")]
-    public required IsoTrueFalseIndicator LimitedPresentmentIndicator { get; init; }
+    public required TrueFalseIndicator LimitedPresentmentIndicator { get; init; }
 }

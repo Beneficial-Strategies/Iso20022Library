@@ -23,7 +23,7 @@ public record VoteMethods
     [DisplayName("Vote Through Network")]
     [IsoXmlTag("VoteThrghNtwk")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public IsoAnyBICIdentifier? VoteThroughNetwork { get; init; }
+    public AnyBICIdentifier? VoteThroughNetwork { get; init; }
 
     /// <summary>
     /// Specifies the address where voting ballot can be sent.
@@ -49,5 +49,5 @@ public record VoteMethods
     [IsoXmlTag("VoteByTel")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? VoteByTelephone { get; init; }
+    public Max35Text? VoteByTelephone { get; init; }
 }

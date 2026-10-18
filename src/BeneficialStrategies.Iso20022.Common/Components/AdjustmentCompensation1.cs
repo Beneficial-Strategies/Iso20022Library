@@ -56,7 +56,7 @@ public record AdjustmentCompensation1
     /// </summary>
     [DisplayName("Interest Rate")]
     [IsoXmlTag("IntrstRate")]
-    public IsoPercentageRate? InterestRate { get; init; }
+    public PercentageRate? InterestRate { get; init; }
 
     /// <summary>
     /// Period.
@@ -70,5 +70,5 @@ public record AdjustmentCompensation1
     /// </summary>
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public IsoMax140Text? Reason { get; init; }
+    public Max140Text? Reason { get; init; }
 }

@@ -32,5 +32,5 @@ public record CorporateActionPreliminaryAdviceType2
     [DisplayName("Eligibility Indicator")]
     [IsoXmlTag("ElgbltyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? EligibilityIndicator { get; init; }
+    public YesNoIndicator? EligibilityIndicator { get; init; }
 }

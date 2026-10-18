@@ -40,5 +40,5 @@ public record CommonTradeDataReport37
     [IsoXmlTag("ActnTpDtls")]
     [IsoSimpleType(IsoSimpleType.Max50Text)]
     [StringLength(maximumLength: 50, MinimumLength = 1)]
-    public IsoMax50Text? ActionTypeDetails { get; init; }
+    public Max50Text? ActionTypeDetails { get; init; }
 }

@@ -38,7 +38,7 @@ public record DirectDebitMandate9
     [IsoId("c6223f8a-cee2-445b-ad32-a3bfe5e07236")]
     [DisplayName("Debtor Tax Identification Number")]
     [IsoXmlTag("DbtrTaxIdNb")]
-    public IsoMax35Text? DebtorTaxIdentificationNumber { get; init; }
+    public Max35Text? DebtorTaxIdentificationNumber { get; init; }
 
     /// <summary>
     /// Number assigned by a national registration authority to an entity.
@@ -46,7 +46,7 @@ public record DirectDebitMandate9
     [IsoId("9f6b5810-7906-4a12-acb6-83669cf12a7d")]
     [DisplayName("Debtor National Registration Number")]
     [IsoXmlTag("DbtrNtlRegnNb")]
-    public IsoMax35Text? DebtorNationalRegistrationNumber { get; init; }
+    public Max35Text? DebtorNationalRegistrationNumber { get; init; }
 
     /// <summary>
     /// Party that receives an amount of money from the debtor. In the context of the payment model, the creditor is also the credit account owner.
@@ -94,7 +94,7 @@ public record DirectDebitMandate9
     [IsoId("c839fe41-ab38-4632-8d9b-d3fc163092ce")]
     [DisplayName("Registration Identification")]
     [IsoXmlTag("RegnId")]
-    public IsoMax35Text? RegistrationIdentification { get; init; }
+    public Max35Text? RegistrationIdentification { get; init; }
 
     /// <summary>
     /// Reference of the direct debit mandate that has been agreed upon by the debtor and creditor.
@@ -102,5 +102,5 @@ public record DirectDebitMandate9
     [IsoId("d656854b-08c5-4ac7-aeb4-5e803ffc7cad")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
-    public IsoMax35Text? MandateIdentification { get; init; }
+    public Max35Text? MandateIdentification { get; init; }
 }

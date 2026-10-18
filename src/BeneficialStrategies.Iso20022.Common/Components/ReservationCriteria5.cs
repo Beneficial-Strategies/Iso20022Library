@@ -24,7 +24,7 @@ public record ReservationCriteria5
     [IsoXmlTag("NewQryNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? NewQueryName { get; init; }
+    public Max35Text? NewQueryName { get; init; }
 
     /// <summary>
     /// Defines the criteria to extract the reservation information.

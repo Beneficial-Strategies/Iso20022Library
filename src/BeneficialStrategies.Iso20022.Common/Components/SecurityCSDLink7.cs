@@ -39,7 +39,7 @@ public record SecurityCSDLink7
     [DisplayName("Security Maintenance")]
     [IsoXmlTag("SctyMntnc")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? SecurityMaintenance { get; init; }
+    public YesNoIndicator? SecurityMaintenance { get; init; }
 
     /// <summary>
     /// CSD Issuer of a security.

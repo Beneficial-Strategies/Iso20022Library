@@ -31,7 +31,7 @@ public record MasterAgreement1
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.ISORestrictedYear)]
-    public IsoISORestrictedYear? Version { get; init; }
+    public ISORestrictedYear? Version { get; init; }
 
     /// <summary>
     /// Additional information specifying the other type of the master agreement.
@@ -41,5 +41,5 @@ public record MasterAgreement1
     [IsoXmlTag("OthrMstrAgrmtDtls")]
     [IsoSimpleType(IsoSimpleType.Max50Text)]
     [StringLength(maximumLength: 50, MinimumLength = 1)]
-    public IsoMax50Text? OtherMasterAgreementDetails { get; init; }
+    public Max50Text? OtherMasterAgreementDetails { get; init; }
 }

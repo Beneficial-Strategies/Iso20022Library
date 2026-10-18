@@ -24,7 +24,7 @@ public record Amount13
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Type { get; init; }
+    public Max35Text? Type { get; init; }
 
     /// <summary>
     /// Additional information about the amount.
@@ -34,7 +34,7 @@ public record Amount13
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Description { get; init; }
+    public Max35Text? Description { get; init; }
 
     /// <summary>
     /// Contains the amount.

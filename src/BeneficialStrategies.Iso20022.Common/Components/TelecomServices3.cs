@@ -28,7 +28,7 @@ public record TelecomServices3
     /// </summary>
     [DisplayName("Billing End")]
     [IsoXmlTag("BllgEnd")]
-    public IsoISODate? BillingEnd { get; init; }
+    public DateOnly? BillingEnd { get; init; }
 
     /// <summary>
     /// Billing Event.
@@ -42,28 +42,28 @@ public record TelecomServices3
     /// </summary>
     [DisplayName("Billing Start")]
     [IsoXmlTag("BllgStart")]
-    public IsoISODate? BillingStart { get; init; }
+    public DateOnly? BillingStart { get; init; }
 
     /// <summary>
     /// Customer Account Number.
     /// </summary>
     [DisplayName("Customer Account Number")]
     [IsoXmlTag("CstmrAcctNb")]
-    public IsoMax35Text? CustomerAccountNumber { get; init; }
+    public Max35Text? CustomerAccountNumber { get; init; }
 
     /// <summary>
     /// Customer Name.
     /// </summary>
     [DisplayName("Customer Name")]
     [IsoXmlTag("CstmrNm")]
-    public IsoMax70Text? CustomerName { get; init; }
+    public Max70Text? CustomerName { get; init; }
 
     /// <summary>
     /// Customer Phone.
     /// </summary>
     [DisplayName("Customer Phone")]
     [IsoXmlTag("CstmrPhne")]
-    public IsoPhoneNumber? CustomerPhone { get; init; }
+    public PhoneNumber? CustomerPhone { get; init; }
 
     /// <summary>
     /// Line Item.

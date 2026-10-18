@@ -24,7 +24,7 @@ public record ClaimInformation1
     [IsoXmlTag("ClmCrdntls")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public IsoMax500Text? ClaimCredentials { get; init; }
+    public Max500Text? ClaimCredentials { get; init; }
 
     /// <summary>
     /// Entity issuing the claim credential.
@@ -34,5 +34,5 @@ public record ClaimInformation1
     [IsoXmlTag("Assgnr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Assigner { get; init; }
+    public Max35Text? Assigner { get; init; }
 }

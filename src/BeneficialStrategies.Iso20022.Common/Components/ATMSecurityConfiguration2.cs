@@ -23,7 +23,7 @@ public record ATMSecurityConfiguration2
     [DisplayName("Maximum Symmetric Key")]
     [IsoXmlTag("MaxSmmtrcKey")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaximumSymmetricKey { get; init; }
+    public Number? MaximumSymmetricKey { get; init; }
 
     /// <summary>
     /// Maximum number of asymmetric keys the security module is able to manage.
@@ -32,7 +32,7 @@ public record ATMSecurityConfiguration2
     [DisplayName("Maximum Asymmetric Key")]
     [IsoXmlTag("MaxAsmmtrcKey")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaximumAsymmetricKey { get; init; }
+    public Number? MaximumAsymmetricKey { get; init; }
 
     /// <summary>
     /// Maximum RSA key length (in number of bytes), the security module is able to manage.
@@ -41,7 +41,7 @@ public record ATMSecurityConfiguration2
     [DisplayName("Maximum RSA Key Length")]
     [IsoXmlTag("MaxRSAKeyLngth")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaximumRSAKeyLength { get; init; }
+    public Number? MaximumRSAKeyLength { get; init; }
 
     /// <summary>
     /// Maximum RSA root key length (in number of bytes), the security module is able to manage, if different from the maximum RSA key length.
@@ -50,5 +50,5 @@ public record ATMSecurityConfiguration2
     [DisplayName("Maximum Root Key Length")]
     [IsoXmlTag("MaxRootKeyLngth")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaximumRootKeyLength { get; init; }
+    public Number? MaximumRootKeyLength { get; init; }
 }

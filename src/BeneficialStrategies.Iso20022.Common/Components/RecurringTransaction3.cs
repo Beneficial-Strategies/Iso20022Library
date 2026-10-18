@@ -23,7 +23,7 @@ public record RecurringTransaction3
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate StartDate { get; init; }
+    public required DateOnly StartDate { get; init; }
 
     /// <summary>
     /// Number of transfers to perform.
@@ -32,7 +32,7 @@ public record RecurringTransaction3
     [DisplayName("Number Of Occurrences")]
     [IsoXmlTag("NbOfOcrncs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NumberOfOccurrences { get; init; }
+    public Number? NumberOfOccurrences { get; init; }
 
     /// <summary>
     /// Date of last transfer.
@@ -41,7 +41,7 @@ public record RecurringTransaction3
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate EndDate { get; init; }
+    public required DateOnly EndDate { get; init; }
 
     /// <summary>
     /// Period of the recurring transfer.
@@ -58,5 +58,5 @@ public record RecurringTransaction3
     [DisplayName("Interval Day")]
     [IsoXmlTag("IntrvlDay")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? IntervalDay { get; init; }
+    public Number? IntervalDay { get; init; }
 }

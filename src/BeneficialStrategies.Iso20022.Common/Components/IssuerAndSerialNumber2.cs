@@ -31,5 +31,5 @@ public record IssuerAndSerialNumber2
     [DisplayName("Serial Number")]
     [IsoXmlTag("SrlNb")]
     [IsoSimpleType(IsoSimpleType.Max500Binary)]
-    public required IsoMax500Binary SerialNumber { get; init; }
+    public required Max500Binary SerialNumber { get; init; }
 }

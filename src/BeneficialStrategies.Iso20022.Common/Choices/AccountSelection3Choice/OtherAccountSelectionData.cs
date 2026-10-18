@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountSelection3Choice
         [IsoXmlTag("Nm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? Name { get; init; }
+        public Max35Text? Name { get; init; }
 
         /// <summary>
         /// Supplementary registration information applying to a specific block of units for dealing and reporting purposes. The supplementary registration information may be used when all the units are registered, for example, to a funds supermarket, but holdings for each investor have to be reconciled individually.
@@ -34,7 +34,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountSelection3Choice
         [IsoXmlTag("Dsgnt")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? Designation { get; init; }
+        public Max35Text? Designation { get; init; }
 
         /// <summary>
         /// Legal form of the fund, for example, UCITS, SICAV, OEIC, Unit Trust, and FCP.
@@ -44,7 +44,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountSelection3Choice
         [IsoXmlTag("FndTp")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? FundType { get; init; }
+        public Max35Text? FundType { get; init; }
 
         /// <summary>
         /// Name of the investment fund family.
@@ -54,7 +54,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountSelection3Choice
         [IsoXmlTag("FndFmlyNm")]
         [IsoSimpleType(IsoSimpleType.Max350Text)]
         [StringLength(maximumLength: 350, MinimumLength = 1)]
-        public IsoMax350Text? FundFamilyName { get; init; }
+        public Max350Text? FundFamilyName { get; init; }
 
         /// <summary>
         /// Detailed information about the investment fund associated to the account.

@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyIdentification3Choic
         [IsoXmlTag("Nm")]
         [IsoSimpleType(IsoSimpleType.Max70Text)]
         [StringLength(maximumLength: 70, MinimumLength = 1)]
-        public required IsoMax70Text Name { get; init; }
+        public required Max70Text Name { get; init; }
 
         /// <summary>
         /// Location of the country in which the counterparty is incorporated.

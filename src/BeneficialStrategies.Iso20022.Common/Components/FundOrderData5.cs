@@ -39,7 +39,7 @@ public record FundOrderData5
     [DisplayName("Units Number")]
     [IsoXmlTag("UnitsNb")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? UnitsNumber { get; init; }
+    public DecimalNumber? UnitsNumber { get; init; }
 
     /// <summary>
     /// When the status message is used for a subscription, this is the amount of money to be invested in the fund.
@@ -70,7 +70,7 @@ public record FundOrderData5
     [DisplayName("Holdings Redemption Rate")]
     [IsoXmlTag("HldgsRedRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? HoldingsRedemptionRate { get; init; }
+    public PercentageRate? HoldingsRedemptionRate { get; init; }
 
     /// <summary>
     /// Total amount of money paid /to be paid or received in exchange for the financial instrument in the individual order.

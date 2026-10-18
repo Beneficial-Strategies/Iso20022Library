@@ -32,7 +32,7 @@ public record UnitOfMeasure2
     [IsoXmlTag("OthrUnitOfMeasr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherUnitOfMeasure { get; init; }
+    public Max35Text? OtherUnitOfMeasure { get; init; }
 
     /// <summary>
     /// Number of units.
@@ -41,5 +41,5 @@ public record UnitOfMeasure2
     [DisplayName("Number Of Units")]
     [IsoXmlTag("NbOfUnits")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? NumberOfUnits { get; init; }
+    public DecimalNumber? NumberOfUnits { get; init; }
 }

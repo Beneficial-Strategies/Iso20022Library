@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationValue1Choice
         /// </summary>
         [IsoXmlTag("BinryVal")]
         [IsoSimpleType(IsoSimpleType.Max5000Binary)]
-        public required IsoMax5000Binary Value { get; init; }
+        public required Max5000Binary Value { get; init; }
     }
 }

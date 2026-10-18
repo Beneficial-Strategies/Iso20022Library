@@ -47,7 +47,7 @@ public record Fee1
     [DisplayName("Standard Rate")]
     [IsoXmlTag("StdRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? StandardRate { get; init; }
+    public PercentageRate? StandardRate { get; init; }
 
     /// <summary>
     /// Discount or waiver applied to the fee (charge/commission).
@@ -72,7 +72,7 @@ public record Fee1
     [DisplayName("Requested Rate")]
     [IsoXmlTag("ReqdRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? RequestedRate { get; init; }
+    public PercentageRate? RequestedRate { get; init; }
 
     /// <summary>
     /// Reference to a sales agreement that overrides normal processing or the Service Level Agreement (SLA), such as a fee (charge/commission).
@@ -82,7 +82,7 @@ public record Fee1
     [IsoXmlTag("NonStdSLARef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? NonStandardSLAReference { get; init; }
+    public Max35Text? NonStandardSLAReference { get; init; }
 
     /// <summary>
     /// Party entitled to the amount of money resulting from a fee (charge/commission).

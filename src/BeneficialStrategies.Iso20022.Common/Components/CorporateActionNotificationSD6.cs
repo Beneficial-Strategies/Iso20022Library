@@ -24,7 +24,7 @@ public record CorporateActionNotificationSD6
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text PlaceAndName { get; init; }
+    public required Max350Text PlaceAndName { get; init; }
 
     /// <summary>
     /// Workflow status of the event.
@@ -41,7 +41,7 @@ public record CorporateActionNotificationSD6
     [DisplayName("Approved Date")]
     [IsoXmlTag("ApprvdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ApprovedDate { get; init; }
+    public DateOnly? ApprovedDate { get; init; }
 
     /// <summary>
     /// Date used to match records from multiple vendors to the same event. It is typically the first key date on the event.
@@ -50,7 +50,7 @@ public record CorporateActionNotificationSD6
     [DisplayName("Match Date")]
     [IsoXmlTag("MtchDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? MatchDate { get; init; }
+    public DateOnly? MatchDate { get; init; }
 
     /// <summary>
     /// Date until which the event will remain in an active status on DTCC (The Depository Trust and Clearing Corporation) system.
@@ -59,7 +59,7 @@ public record CorporateActionNotificationSD6
     [DisplayName("Active Until Date")]
     [IsoXmlTag("ActvUntilDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ActiveUntilDate { get; init; }
+    public DateOnly? ActiveUntilDate { get; init; }
 
     /// <summary>
     /// Start date and end date of the service level agreement.
@@ -77,5 +77,5 @@ public record CorporateActionNotificationSD6
     [IsoXmlTag("VldtnNotSpprtdRsn")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4AlphaNumericText? ValidationNotSupportedReason { get; init; }
+    public Max4AlphaNumericText? ValidationNotSupportedReason { get; init; }
 }

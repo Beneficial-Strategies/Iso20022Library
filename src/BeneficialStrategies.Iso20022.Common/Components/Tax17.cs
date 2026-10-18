@@ -32,7 +32,7 @@ public record Tax17
     [IsoXmlTag("XtndedTp")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoExtended350Code ExtendedType { get; init; }
+    public required Extended350Code ExtendedType { get; init; }
 
     /// <summary>
     /// Amount of money resulting from the calculation of the tax.
@@ -51,7 +51,7 @@ public record Tax17
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Rate { get; init; }
+    public PercentageRate? Rate { get; init; }
 
     /// <summary>
     /// Country where the tax is due.

@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralValueCriteriaDefinitio
         [IsoXmlTag("QryNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? QueryName { get; init; }
+        public Max35Text? QueryName { get; init; }
 
         /// <summary>
         /// Defines the criteria to be used to extract the account information.

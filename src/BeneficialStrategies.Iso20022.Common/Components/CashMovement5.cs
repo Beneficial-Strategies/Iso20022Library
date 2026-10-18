@@ -39,7 +39,7 @@ public record CashMovement5
     [DisplayName("Collateral Movement")]
     [IsoXmlTag("CollMvmnt")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator CollateralMovement { get; init; }
+    public required YesNoIndicator CollateralMovement { get; init; }
 
     /// <summary>
     /// Reference assigned by party A to the cash movement.
@@ -49,7 +49,7 @@ public record CashMovement5
     [IsoXmlTag("ClntCshMvmntId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClientCashMovementIdentification { get; init; }
+    public Max35Text? ClientCashMovementIdentification { get; init; }
 
     /// <summary>
     /// Reference assigned by the triparty agent to the cash movement.
@@ -59,5 +59,5 @@ public record CashMovement5
     [IsoXmlTag("TrptyAgtSvcPrvdrCshMvmntId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TripartyAgentServiceProviderCashMovementIdentification { get; init; }
+    public Max35Text? TripartyAgentServiceProviderCashMovementIdentification { get; init; }
 }

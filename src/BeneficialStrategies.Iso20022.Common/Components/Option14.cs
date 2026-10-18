@@ -49,7 +49,7 @@ public record Option14
     [DisplayName("Barrier Indicator")]
     [IsoXmlTag("BrrrInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? BarrierIndicator { get; init; }
+    public TrueFalseIndicator? BarrierIndicator { get; init; }
 
     /// <summary>
     /// Specifies the event in the life of the option.

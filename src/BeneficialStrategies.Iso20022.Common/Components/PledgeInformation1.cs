@@ -47,5 +47,5 @@ public record PledgeInformation1
     [DisplayName("Return Securities Indicator")]
     [IsoXmlTag("RtrSctiesInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ReturnSecuritiesIndicator { get; init; }
+    public YesNoIndicator? ReturnSecuritiesIndicator { get; init; }
 }

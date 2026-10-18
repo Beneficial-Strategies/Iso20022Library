@@ -71,7 +71,7 @@ public record TripartyCollateralTransactionInstructionProcessingStatusAdviceV01 
     [IsoXmlTag("CxlReqRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CancellationRequestReference { get; init; }
+    public Max35Text? CancellationRequestReference { get; init; }
 
     /// <summary>
     /// Page number of the message and continuation indicator to indicate that the multi-part preliminary advice is to continue or that the message is the last page of the multi-part preliminary advice.

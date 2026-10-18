@@ -24,7 +24,7 @@ public record MeetingNotice6
     [IsoXmlTag("MtgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MeetingIdentification { get; init; }
+    public required Max35Text MeetingIdentification { get; init; }
 
     /// <summary>
     /// Identification assigned to the meeting by the issuer. It must be unique for the issuer.
@@ -34,7 +34,7 @@ public record MeetingNotice6
     [IsoXmlTag("IssrMtgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? IssuerMeetingIdentification { get; init; }
+    public Max35Text? IssuerMeetingIdentification { get; init; }
 
     /// <summary>
     /// Type of security holders meeting.
@@ -67,7 +67,7 @@ public record MeetingNotice6
     [DisplayName("One Man One Vote Indicator")]
     [IsoXmlTag("OneManOneVoteInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? OneManOneVoteIndicator { get; init; }
+    public YesNoIndicator? OneManOneVoteIndicator { get; init; }
 
     /// <summary>
     /// Method of voting participation to the general meeting and related voting deadline per method of participation.
@@ -91,7 +91,7 @@ public record MeetingNotice6
     [IsoId("_9tCCUfKvEeqRfth943bvEA")]
     [DisplayName("Additional Documentation URL Address")]
     [IsoXmlTag("AddtlDcmnttnURLAdr")]
-    public SimpleValueList<IsoMax2048Text> AdditionalDocumentationURLAddress { get; init; } = [];
+    public SimpleValueList<Max2048Text> AdditionalDocumentationURLAddress { get; init; } = [];
 
     /// <summary>
     /// Additional procedural information about the general meeting, specifying the participation requirements and the voting procedures. Alternatively, this may indicate where such information may be obtained.
@@ -118,7 +118,7 @@ public record MeetingNotice6
     [DisplayName("Total Number Of Voting Rights")]
     [IsoXmlTag("TtlNbOfVtngRghts")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? TotalNumberOfVotingRights { get; init; }
+    public Number? TotalNumberOfVotingRights { get; init; }
 
     /// <summary>
     /// Address where the information on the proxy should be sent.
@@ -161,7 +161,7 @@ public record MeetingNotice6
     [DisplayName("Securities Blocking Period End Date")]
     [IsoXmlTag("SctiesBlckgPrdEndDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? SecuritiesBlockingPeriodEndDate { get; init; }
+    public ISODateTime? SecuritiesBlockingPeriodEndDate { get; init; }
 
     /// <summary>
     /// Date at which the positions are struck to record which parties will receive the entitlement, for example, record date, book close date.

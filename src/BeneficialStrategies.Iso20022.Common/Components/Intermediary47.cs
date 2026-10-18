@@ -31,7 +31,7 @@ public record Intermediary47
     [DisplayName("Legal Entity Identifier")]
     [IsoXmlTag("LglNttyIdr")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? LegalEntityIdentifier { get; init; }
+    public LEIIdentifier? LegalEntityIdentifier { get; init; }
 
     /// <summary>
     /// Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.

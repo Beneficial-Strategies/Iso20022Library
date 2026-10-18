@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LotteryTypeFormat5Choice
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-        public required IsoExact4AlphaNumericText Identification { get; init; }
+        public required Exact4AlphaNumericText Identification { get; init; }
 
         /// <summary>
         /// Entity that assigns the identification.
@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LotteryTypeFormat5Choice
         [IsoXmlTag("Issr")]
         [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
         [StringLength(maximumLength: 4, MinimumLength = 1)]
-        public required IsoMax4AlphaNumericText Issuer { get; init; }
+        public required Max4AlphaNumericText Issuer { get; init; }
 
         /// <summary>
         /// Short textual description of the scheme.
@@ -43,6 +43,6 @@ namespace BeneficialStrategies.Iso20022.Choices.LotteryTypeFormat5Choice
         [IsoXmlTag("SchmeNm")]
         [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
         [StringLength(maximumLength: 4, MinimumLength = 1)]
-        public IsoMax4AlphaNumericText? SchemeName { get; init; }
+        public Max4AlphaNumericText? SchemeName { get; init; }
     }
 }

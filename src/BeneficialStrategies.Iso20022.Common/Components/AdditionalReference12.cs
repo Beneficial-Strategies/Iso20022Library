@@ -24,7 +24,7 @@ public record AdditionalReference12
     [IsoXmlTag("Ref")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax35Text Reference { get; init; }
+    public required RestrictedFINXMax35Text Reference { get; init; }
 
     /// <summary>
     /// Issuer of the reference.
@@ -42,5 +42,5 @@ public record AdditionalReference12
     [IsoXmlTag("MsgNm")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoRestrictedFINXMax35Text? MessageName { get; init; }
+    public RestrictedFINXMax35Text? MessageName { get; init; }
 }

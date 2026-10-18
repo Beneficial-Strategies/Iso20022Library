@@ -24,7 +24,7 @@ public record SettlementFailureReason2
     [IsoXmlTag("MainRsns")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
     [StringLength(maximumLength: 2048, MinimumLength = 1)]
-    public required IsoMax2048Text MainReasons { get; init; }
+    public required Max2048Text MainReasons { get; init; }
 
     /// <summary>
     /// Measures to improve settlement efficiency.
@@ -34,5 +34,5 @@ public record SettlementFailureReason2
     [IsoXmlTag("EffcncyImprvmt")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
     [StringLength(maximumLength: 2048, MinimumLength = 1)]
-    public required IsoMax2048Text EfficiencyImprovement { get; init; }
+    public required Max2048Text EfficiencyImprovement { get; init; }
 }

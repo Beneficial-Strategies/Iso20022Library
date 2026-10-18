@@ -38,5 +38,5 @@ public record MarginRatePortfolio1
     [IsoId("_6LJEQND0EfCCRJ-TKQa7sQ")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public required IsoMax2000Text Description { get; init; }
+    public required Max2000Text Description { get; init; }
 }

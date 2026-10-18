@@ -22,7 +22,7 @@ public record FinancialInstrument111
     [IsoId("b5200e0b-29f5-487c-8d6d-25cd9b9893dc")]
     [DisplayName("Line Identification")]
     [IsoXmlTag("LineId")]
-    public IsoMax35Text? LineIdentification { get; init; }
+    public Max35Text? LineIdentification { get; init; }
 
     /// <summary>
     /// Identification of the asset.
@@ -78,7 +78,7 @@ public record FinancialInstrument111
     [IsoId("dc42a27c-db96-4ec6-8a10-c87e3356c728")]
     [DisplayName("Assets Held In Own Name")]
     [IsoXmlTag("AsstsHeldInOwnNm")]
-    public IsoYesNoIndicator? AssetsHeldInOwnName { get; init; }
+    public YesNoIndicator? AssetsHeldInOwnName { get; init; }
 
     /// <summary>
     /// Indicates whether the transfer results in a change of beneficial owner.
@@ -86,7 +86,7 @@ public record FinancialInstrument111
     [IsoId("7fc1f74e-8669-4ca0-a1da-46dcf83ad7ec")]
     [DisplayName("Transfer Results In Change Of Beneficial Owner")]
     [IsoXmlTag("TrfRsltsInChngOfBnfclOwnr")]
-    public IsoYesNoIndicator? TransferResultsInChangeOfBeneficialOwner { get; init; }
+    public YesNoIndicator? TransferResultsInChangeOfBeneficialOwner { get; init; }
 
     /// <summary>
     /// Additional information about the financial instrument.

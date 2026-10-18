@@ -24,7 +24,7 @@ public record ReportData4
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Value date for which the pay-in schedule is generated.
@@ -33,7 +33,7 @@ public record ReportData4
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ValueDate { get; init; }
+    public required DateOnly ValueDate { get; init; }
 
     /// <summary>
     /// Date and time on which the report is generated. The offset with UTC may also be specified.
@@ -42,7 +42,7 @@ public record ReportData4
     [DisplayName("Date And Time Stamp")]
     [IsoXmlTag("DtAndTmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime DateAndTimeStamp { get; init; }
+    public required ISODateTime DateAndTimeStamp { get; init; }
 
     /// <summary>
     /// Type of pay-in schedule.
@@ -59,7 +59,7 @@ public record ReportData4
     [DisplayName("Schedule Type")]
     [IsoXmlTag("SchdlTp")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    public required IsoExact4AlphaNumericText ScheduleType { get; init; }
+    public required Exact4AlphaNumericText ScheduleType { get; init; }
 
     /// <summary>
     /// To indicate the requested CLS Settlement Session that the related trade is part of.
@@ -68,5 +68,5 @@ public record ReportData4
     [DisplayName("Settlement Session Identifier")]
     [IsoXmlTag("SttlmSsnIdr")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    public IsoExact4AlphaNumericText? SettlementSessionIdentifier { get; init; }
+    public Exact4AlphaNumericText? SettlementSessionIdentifier { get; init; }
 }

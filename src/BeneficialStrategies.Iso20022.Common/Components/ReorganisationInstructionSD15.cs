@@ -49,7 +49,7 @@ public record ReorganisationInstructionSD15
     /// </summary>
     [DisplayName("Customer Reference Identification")]
     [IsoXmlTag("CstmrRefId")]
-    public IsoMax30Text? CustomerReferenceIdentification { get; init; }
+    public Max30Text? CustomerReferenceIdentification { get; init; }
 
     /// <summary>
     /// Deceased Beneficial Owner Details.
@@ -63,7 +63,7 @@ public record ReorganisationInstructionSD15
     /// </summary>
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Protect Transaction Status.
@@ -91,14 +91,14 @@ public record ReorganisationInstructionSD15
     /// </summary>
     [DisplayName("Shareholder Number")]
     [IsoXmlTag("ShrhldrNb")]
-    public IsoRestrictedFINXMax25Text? ShareholderNumber { get; init; }
+    public RestrictedFINXMax25Text? ShareholderNumber { get; init; }
 
     /// <summary>
     /// Transaction Identification.
     /// </summary>
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
-    public IsoMax15Text? TransactionIdentification { get; init; }
+    public Max15Text? TransactionIdentification { get; init; }
 
     /// <summary>
     /// Transaction Identification Status.
@@ -112,7 +112,7 @@ public record ReorganisationInstructionSD15
     /// </summary>
     [DisplayName("Transaction Record Number")]
     [IsoXmlTag("TxRcrdNb")]
-    public IsoMax10NumericText? TransactionRecordNumber { get; init; }
+    public Max10NumericText? TransactionRecordNumber { get; init; }
 
     /// <summary>
     /// Transaction Sequence.
@@ -126,7 +126,7 @@ public record ReorganisationInstructionSD15
     /// </summary>
     [DisplayName("User Reference Number")]
     [IsoXmlTag("UsrRefNb")]
-    public IsoMax6Text? UserReferenceNumber { get; init; }
+    public Max6Text? UserReferenceNumber { get; init; }
 
     /// <summary>
     /// Warrant Subscription Charge Amount.

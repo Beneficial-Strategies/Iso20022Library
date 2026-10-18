@@ -25,7 +25,7 @@ public record PaymentInstruction19
     [IsoXmlTag("PmtInfId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PaymentInformationIdentification { get; init; }
+    public Max35Text? PaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Specifies the means of payment that will be used to move the amount of money.
@@ -51,7 +51,7 @@ public record PaymentInstruction19
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate RequestedExecutionDate { get; init; }
+    public required DateOnly RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Party that owes an amount of money to the (ultimate) creditor.

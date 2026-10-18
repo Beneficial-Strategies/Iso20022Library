@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.Max34Text)]
         [StringLength(maximumLength: 34, MinimumLength = 1)]
-        public required IsoMax34Text Identification { get; init; }
+        public required Max34Text Identification { get; init; }
 
         /// <summary>
         /// Name of the identification scheme.
@@ -42,6 +42,6 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice
         [IsoXmlTag("Issr")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? Issuer { get; init; }
+        public Max35Text? Issuer { get; init; }
     }
 }

@@ -41,5 +41,5 @@ public record AccountAndParties2
     [IsoId("_dQJnUC_9EeOKib24wnHaFg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public SimpleValueList<IsoMax256Text> AdditionalInformation { get; init; } = [];
+    public SimpleValueList<Max256Text> AdditionalInformation { get; init; } = [];
 }

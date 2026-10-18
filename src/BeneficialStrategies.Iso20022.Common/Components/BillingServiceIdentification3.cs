@@ -24,7 +24,7 @@ public record BillingServiceIdentification3
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Defines the financial institution sub-service identification if the financial institution service identification code is used for more than one service.
@@ -42,7 +42,7 @@ public record BillingServiceIdentification3
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public required IsoMax70Text Description { get; init; }
+    public required Max70Text Description { get; init; }
 
     /// <summary>
     /// Standard reference code used to uniquely identify this service across financial institutions. This is not the financial institution’s internal bank service identification.
@@ -68,5 +68,5 @@ public record BillingServiceIdentification3
     [IsoXmlTag("SvcTp")]
     [IsoSimpleType(IsoSimpleType.Max12Text)]
     [StringLength(maximumLength: 12, MinimumLength = 1)]
-    public IsoMax12Text? ServiceType { get; init; }
+    public Max12Text? ServiceType { get; init; }
 }

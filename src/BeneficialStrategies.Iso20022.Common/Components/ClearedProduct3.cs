@@ -23,7 +23,7 @@ public record ClearedProduct3
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
     [MinLength(1)]
-    public SimpleValueList<IsoMICIdentifier> TradingVenue { get; init; } = [];
+    public SimpleValueList<MICIdentifier> TradingVenue { get; init; } = [];
 
     /// <summary>
     /// CCP's unique identification for product cleared.
@@ -63,7 +63,7 @@ public record ClearedProduct3
     [IsoId("_AHfY29DzEfCCRJ-TKQa7sQ")]
     [DisplayName("Trades Cleared")]
     [IsoXmlTag("TrdsClrd")]
-    public IsoNonNegativeNumber? TradesCleared { get; init; }
+    public NonNegativeNumber? TradesCleared { get; init; }
 
     /// <summary>
     /// Gross notional amount that was cleared for that product on the report date.

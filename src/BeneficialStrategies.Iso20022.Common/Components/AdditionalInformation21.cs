@@ -48,5 +48,5 @@ public record AdditionalInformation21
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.Max20KText)]
     [StringLength(maximumLength: 20000, MinimumLength = 1)]
-    public required IsoMax20KText Value { get; init; }
+    public required Max20KText Value { get; init; }
 }

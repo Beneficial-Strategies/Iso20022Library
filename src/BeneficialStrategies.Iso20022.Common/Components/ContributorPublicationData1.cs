@@ -22,7 +22,7 @@ public record ContributorPublicationData1
     [IsoId("_W28FwGIlEfCeoPFCHQnhvA")]
     [DisplayName("Publication Date Time")]
     [IsoXmlTag("PblctnDtTm")]
-    public required IsoISODateTime PublicationDateTime { get; init; }
+    public required ISODateTime PublicationDateTime { get; init; }
 
     /// <summary>
     /// Identifies the trading venue and Approved Publication Arrangement (APA) publishing the transaction.
@@ -30,7 +30,7 @@ public record ContributorPublicationData1
     [IsoId("_d3APMGIlEfCeoPFCHQnhvA")]
     [DisplayName("Publication Venue Identification")]
     [IsoXmlTag("PblctnVnId")]
-    public required IsoMICIdentifier PublicationVenueIdentification { get; init; }
+    public required MICIdentifier PublicationVenueIdentification { get; init; }
 
     /// <summary>
     /// Date and time when the transaction report was received by an Approved Publication Arrangement (APA).
@@ -39,5 +39,5 @@ public record ContributorPublicationData1
     [IsoId("_sCyrsKUREfCmoeslmyBN5Q")]
     [DisplayName("Reception Date Time")]
     [IsoXmlTag("RcptnDtTm")]
-    public IsoISODateTime? ReceptionDateTime { get; init; }
+    public ISODateTime? ReceptionDateTime { get; init; }
 }

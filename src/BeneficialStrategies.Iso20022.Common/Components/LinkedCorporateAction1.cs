@@ -48,7 +48,7 @@ public record LinkedCorporateAction1
     [IsoXmlTag("LkdIssrCorpActnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LinkedIssuerCorporateActionIdentification { get; init; }
+    public Max35Text? LinkedIssuerCorporateActionIdentification { get; init; }
 
     /// <summary>
     /// Reference assigned by the CSD to the linked coporate avent.
@@ -58,5 +58,5 @@ public record LinkedCorporateAction1
     [IsoXmlTag("LkdCorpActnPrcgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LinkedCorporateActionProcessingIdentification { get; init; }
+    public Max35Text? LinkedCorporateActionProcessingIdentification { get; init; }
 }

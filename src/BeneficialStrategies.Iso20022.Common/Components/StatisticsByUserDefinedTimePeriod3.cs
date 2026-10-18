@@ -54,5 +54,5 @@ public record StatisticsByUserDefinedTimePeriod3
     [IsoId("827722bb-eb5d-48b0-afa1-bfc242dab654")]
     [DisplayName("Yield")]
     [IsoXmlTag("Yld")]
-    public IsoPercentageRate? Yield { get; init; }
+    public PercentageRate? Yield { get; init; }
 }

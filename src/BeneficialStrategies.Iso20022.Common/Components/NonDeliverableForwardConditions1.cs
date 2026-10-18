@@ -23,7 +23,7 @@ public record NonDeliverableForwardConditions1
     [DisplayName("Opening Indicator")]
     [IsoXmlTag("OpngInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator OpeningIndicator { get; init; }
+    public required YesNoIndicator OpeningIndicator { get; init; }
 
     /// <summary>
     /// Specifies either the conditions for an NDF oepning or an NDF fixing confirmation.

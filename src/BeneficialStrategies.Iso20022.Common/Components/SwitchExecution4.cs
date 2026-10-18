@@ -25,7 +25,7 @@ public record SwitchExecution4
     [IsoXmlTag("MstrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Date and time at which the order was placed by the investor.
@@ -34,7 +34,7 @@ public record SwitchExecution4
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? OrderDateTime { get; init; }
+    public ISODateTime? OrderDateTime { get; init; }
 
     /// <summary>
     /// Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.
@@ -52,7 +52,7 @@ public record SwitchExecution4
     [IsoXmlTag("DealRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text DealReference { get; init; }
+    public required Max35Text DealReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for an order, as assigned by the instructing party.
@@ -62,7 +62,7 @@ public record SwitchExecution4
     [IsoXmlTag("OrdrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OrderReference { get; init; }
+    public required Max35Text OrderReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor&apos;s identification of an order. This reference can typically be used in a hub scenario to give the reference of the order as assigned by the underlying client.
@@ -72,7 +72,7 @@ public record SwitchExecution4
     [IsoXmlTag("ClntRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClientReference { get; init; }
+    public Max35Text? ClientReference { get; init; }
 
     /// <summary>
     /// Amount of money used to determine the quantity of investment fund units to be redeemed.
@@ -107,7 +107,7 @@ public record SwitchExecution4
     [DisplayName("Requested Future Trade Date")]
     [IsoXmlTag("ReqdFutrTradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RequestedFutureTradeDate { get; init; }
+    public DateOnly? RequestedFutureTradeDate { get; init; }
 
     /// <summary>
     /// Additional amount of money paid by the investor in addition to the switch redemption amount.
@@ -140,7 +140,7 @@ public record SwitchExecution4
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? CashSettlementDate { get; init; }
+    public DateOnly? CashSettlementDate { get; init; }
 
     /// <summary>
     /// Method by which the transaction is settled.

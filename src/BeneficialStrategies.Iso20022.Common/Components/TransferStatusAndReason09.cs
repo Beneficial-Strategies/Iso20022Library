@@ -22,7 +22,7 @@ public record TransferStatusAndReason09
     [IsoId("30a7fb95-c436-4763-ad21-ce22ab52e55f")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identification of the transfer, as assigned by the instructing party.
@@ -46,7 +46,7 @@ public record TransferStatusAndReason09
     [IsoId("f7873ada-a5a9-45d1-b05e-0e8219a24a2b")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
-    public IsoMax35Text? CancellationReference { get; init; }
+    public Max35Text? CancellationReference { get; init; }
 
     /// <summary>
     /// Type of event for which the message is sent.
@@ -94,7 +94,7 @@ public record TransferStatusAndReason09
     [IsoId("6a8dae3c-d1e1-4ce6-92fc-be1b00873bc6")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
-    public IsoISODate? TradeDate { get; init; }
+    public DateOnly? TradeDate { get; init; }
 
     /// <summary>
     /// Date at which the securities are to be exchanged or were exchanged at the International Central Securities Depository (ICSD) or Central Securities Depository (CSD).
@@ -102,7 +102,7 @@ public record TransferStatusAndReason09
     [IsoId("0b234e04-0203-46ff-8be8-2de650c44538")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public IsoISODate? SettlementDate { get; init; }
+    public DateOnly? SettlementDate { get; init; }
 
     /// <summary>
     /// Date on which the document, for example, the application form, was sent.
@@ -110,7 +110,7 @@ public record TransferStatusAndReason09
     [IsoId("521ceaa7-1297-4439-af3e-eb11d5543685")]
     [DisplayName("Send Out Date")]
     [IsoXmlTag("SndOutDt")]
-    public IsoISODate? SendOutDate { get; init; }
+    public DateOnly? SendOutDate { get; init; }
 
     /// <summary>
     /// Date on which cash is available.
@@ -118,7 +118,7 @@ public record TransferStatusAndReason09
     [IsoId("d2721621-4d25-4152-b912-21cd64e272cd")]
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
-    public IsoISODate? CashSettlementDate { get; init; }
+    public DateOnly? CashSettlementDate { get; init; }
 
     /// <summary>
     /// Number of units to be transferred.
@@ -126,7 +126,7 @@ public record TransferStatusAndReason09
     [IsoId("baefca67-646a-41b9-a742-f705b5fb9fab")]
     [DisplayName("Total Units Number")]
     [IsoXmlTag("TtlUnitsNb")]
-    public IsoDecimalNumber? TotalUnitsNumber { get; init; }
+    public DecimalNumber? TotalUnitsNumber { get; init; }
 
     /// <summary>
     /// Weighted average price of the units in the account. The average price may also be known as the average acquisition price.
@@ -198,7 +198,7 @@ public record TransferStatusAndReason09
     [IsoId("f3147b52-3021-483f-8de7-a8aa3bb0de10")]
     [DisplayName("Query Response")]
     [IsoXmlTag("QryRspn")]
-    public SimpleValueList<IsoMax350Text> QueryResponse { get; init; } = [];
+    public SimpleValueList<Max350Text> QueryResponse { get; init; } = [];
 
     /// <summary>
     /// Party that initiates the status.

@@ -32,7 +32,7 @@ public record BillingServiceAdjustment1
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text Description { get; init; }
+    public required Max140Text Description { get; init; }
 
     /// <summary>
     /// Amount of the adjustment, expressed in the settlement currency.||Usage: If the amount would reduce charges due then the amount should be negatively signed.
@@ -57,7 +57,7 @@ public record BillingServiceAdjustment1
     [DisplayName("Error Date")]
     [IsoXmlTag("ErrDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ErrorDate { get; init; }
+    public DateOnly? ErrorDate { get; init; }
 
     /// <summary>
     /// Financial institution&apos;s own, internal service identification code, used to uniquely identify the service within the financial institution.
@@ -67,7 +67,7 @@ public record BillingServiceAdjustment1
     [IsoXmlTag("AdjstmntId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AdjustmentIdentification { get; init; }
+    public Max35Text? AdjustmentIdentification { get; init; }
 
     /// <summary>
     /// Defines the financial institution sub-service identification if the financial institution service identification code is used for more than one service.
@@ -108,7 +108,7 @@ public record BillingServiceAdjustment1
     [DisplayName("Volume Change")]
     [IsoXmlTag("VolChng")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? VolumeChange { get; init; }
+    public DecimalNumber? VolumeChange { get; init; }
 
     /// <summary>
     /// Original service volume.
@@ -117,7 +117,7 @@ public record BillingServiceAdjustment1
     [DisplayName("Original Volume")]
     [IsoXmlTag("OrgnlVol")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? OriginalVolume { get; init; }
+    public DecimalNumber? OriginalVolume { get; init; }
 
     /// <summary>
     /// New, adjusted service volume.
@@ -126,7 +126,7 @@ public record BillingServiceAdjustment1
     [DisplayName("New Volume")]
     [IsoXmlTag("NewVol")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? NewVolume { get; init; }
+    public DecimalNumber? NewVolume { get; init; }
 
     /// <summary>
     /// Service charge that was applied to the service, prior to the change, expressed in the pricing currency.

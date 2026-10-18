@@ -24,7 +24,7 @@ public record OtherContact1
     [IsoXmlTag("ChanlTp")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public required IsoMax4Text ChannelType { get; init; }
+    public required Max4Text ChannelType { get; init; }
 
     /// <summary>
     /// Communication value such as phone number or email address.
@@ -34,5 +34,5 @@ public record OtherContact1
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max128Text)]
     [StringLength(maximumLength: 128, MinimumLength = 1)]
-    public IsoMax128Text? Identification { get; init; }
+    public Max128Text? Identification { get; init; }
 }

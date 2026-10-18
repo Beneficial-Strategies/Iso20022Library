@@ -24,7 +24,7 @@ public record CorporateActionInstructedBalanceOptionInstructionSD5
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Number identifying the available corporate action options.
@@ -42,7 +42,7 @@ public record CorporateActionInstructedBalanceOptionInstructionSD5
     [IsoXmlTag("PrtctId")]
     [IsoSimpleType(IsoSimpleType.Max15Text)]
     [StringLength(maximumLength: 15, MinimumLength = 1)]
-    public IsoMax15Text? ProtectIdentification { get; init; }
+    public Max15Text? ProtectIdentification { get; init; }
 
     /// <summary>
     /// Contra CUSIP Identification of the option instruction.

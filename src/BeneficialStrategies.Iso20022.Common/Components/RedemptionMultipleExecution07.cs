@@ -22,7 +22,7 @@ public record RedemptionMultipleExecution07
     [IsoId("02c06fad-80de-4f20-bc5c-31115ea94736")]
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
-    public IsoYesNoIndicator? AmendmentIndicator { get; init; }
+    public YesNoIndicator? AmendmentIndicator { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for a group of individual orders, as assigned by the instructing party.
@@ -30,7 +30,7 @@ public record RedemptionMultipleExecution07
     [IsoId("388ae1d9-84a4-47a5-a696-1bd317872bf6")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Market in which the advised trade transaction was executed.
@@ -46,7 +46,7 @@ public record RedemptionMultipleExecution07
     [IsoId("35a22808-6c5f-4ee7-bc76-f5bc939d9bb7")]
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
-    public IsoISODateTime? OrderDateTime { get; init; }
+    public ISODateTime? OrderDateTime { get; init; }
 
     /// <summary>
     /// Date and time the order was received by the executing party.
@@ -54,7 +54,7 @@ public record RedemptionMultipleExecution07
     [IsoId("a9053750-9f5b-4aa2-abe2-9f9c567a710f")]
     [DisplayName("Received Date Time")]
     [IsoXmlTag("RcvdDtTm")]
-    public IsoISODateTime? ReceivedDateTime { get; init; }
+    public ISODateTime? ReceivedDateTime { get; init; }
 
     /// <summary>
     /// Future date at which the investor requests the order to be executed.
@@ -62,7 +62,7 @@ public record RedemptionMultipleExecution07
     [IsoId("47a67305-2a86-4f08-b905-afea293d5806")]
     [DisplayName("Requested Future Trade Date")]
     [IsoXmlTag("ReqdFutrTradDt")]
-    public IsoISODate? RequestedFutureTradeDate { get; init; }
+    public DateOnly? RequestedFutureTradeDate { get; init; }
 
     /// <summary>
     /// Cancellation right of the investor with respect to the investment fund order.

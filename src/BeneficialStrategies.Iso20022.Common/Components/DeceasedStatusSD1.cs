@@ -24,7 +24,7 @@ public record DeceasedStatusSD1
     [IsoXmlTag("BnfclOwnrNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text BeneficialOwnerName { get; init; }
+    public required Max35Text BeneficialOwnerName { get; init; }
 
     /// <summary>
     /// Date of death of the beneficial owner.
@@ -33,7 +33,7 @@ public record DeceasedStatusSD1
     [DisplayName("Death Date")]
     [IsoXmlTag("DthDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DeathDate { get; init; }
+    public DateOnly? DeathDate { get; init; }
 
     /// <summary>
     /// Death certificate number of the beneficial owner.
@@ -42,7 +42,7 @@ public record DeceasedStatusSD1
     [DisplayName("Death Certificate Serial Number")]
     [IsoXmlTag("DthCertSrlNb")]
     [IsoSimpleType(IsoSimpleType.Max30Text)]
-    public IsoMax30Text? DeathCertificateSerialNumber { get; init; }
+    public Max30Text? DeathCertificateSerialNumber { get; init; }
 
     /// <summary>
     /// Jurisdiction by which the certificate of deposit was issued.
@@ -52,5 +52,5 @@ public record DeceasedStatusSD1
     [IsoXmlTag("IssgJursdctn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? IssuingJurisdiction { get; init; }
+    public Max35Text? IssuingJurisdiction { get; init; }
 }

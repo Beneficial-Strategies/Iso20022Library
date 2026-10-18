@@ -24,7 +24,7 @@ public record CompareText2
     [IsoXmlTag("Val1")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoMax52Text? Value1 { get; init; }
+    public Max52Text? Value1 { get; init; }
 
     /// <summary>
     /// Information for the second side of the transaction.
@@ -34,5 +34,5 @@ public record CompareText2
     [IsoXmlTag("Val2")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoMax52Text? Value2 { get; init; }
+    public Max52Text? Value2 { get; init; }
 }

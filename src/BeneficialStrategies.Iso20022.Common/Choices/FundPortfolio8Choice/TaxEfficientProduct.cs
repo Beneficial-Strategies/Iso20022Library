@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio8Choice
         [DisplayName("Current Year")]
         [IsoXmlTag("CurYr")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? CurrentYear { get; init; }
+        public YesNoIndicator? CurrentYear { get; init; }
 
         /// <summary>
         /// Indicates whether the product contains a cash asset for transfer.
@@ -41,7 +41,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio8Choice
         [DisplayName("Cash Component Indicator")]
         [IsoXmlTag("CshCmpntInd")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? CashComponentIndicator { get; init; }
+        public YesNoIndicator? CashComponentIndicator { get; init; }
 
         /// <summary>
         /// Investment plans issued during previous years.

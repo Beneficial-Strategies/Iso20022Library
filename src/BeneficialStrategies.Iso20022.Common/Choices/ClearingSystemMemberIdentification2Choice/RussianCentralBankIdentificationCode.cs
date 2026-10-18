@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
         /// </summary>
         [IsoXmlTag("RUCB")]
         [IsoSimpleType(IsoSimpleType.RussianCentralBankIdentificationCodeIdentifier)]
-        public required IsoRussianCentralBankIdentificationCodeIdentifier Value { get; init; }
+        public required RussianCentralBankIdentificationCodeIdentifier Value { get; init; }
     }
 }

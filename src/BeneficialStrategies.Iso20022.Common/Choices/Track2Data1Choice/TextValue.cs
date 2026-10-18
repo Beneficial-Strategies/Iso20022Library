@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Track2Data1Choice
         [IsoXmlTag("TxtVal")]
         [IsoSimpleType(IsoSimpleType.Max37Text)]
         [StringLength(maximumLength: 37, MinimumLength = 1)]
-        public required IsoMax37Text Value { get; init; }
+        public required Max37Text Value { get; init; }
     }
 }

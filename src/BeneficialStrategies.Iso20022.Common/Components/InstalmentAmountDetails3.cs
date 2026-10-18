@@ -35,21 +35,21 @@ public record InstalmentAmountDetails3
     /// </summary>
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Percentage.
     /// </summary>
     [DisplayName("Percentage")]
     [IsoXmlTag("Pctg")]
-    public IsoPercentageRate? Percentage { get; init; }
+    public PercentageRate? Percentage { get; init; }
 
     /// <summary>
     /// Sub Type.
     /// </summary>
     [DisplayName("Sub Type")]
     [IsoXmlTag("SubTp")]
-    public IsoMax35Text? SubType { get; init; }
+    public Max35Text? SubType { get; init; }
 
     /// <summary>
     /// Type.

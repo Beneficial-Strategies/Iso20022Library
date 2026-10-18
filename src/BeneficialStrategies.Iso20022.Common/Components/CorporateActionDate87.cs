@@ -23,7 +23,7 @@ public record CorporateActionDate87
     [DisplayName("Posting Date")]
     [IsoXmlTag("PstngDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate PostingDate { get; init; }
+    public required DateOnly PostingDate { get; init; }
 
     /// <summary>
     /// Date/time when calculating economic benefit for a cash amount.
@@ -32,7 +32,7 @@ public record CorporateActionDate87
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ValueDate { get; init; }
+    public DateOnly? ValueDate { get; init; }
 
     /// <summary>
     /// Date/time at which a foreign exchange rate will be determined.
@@ -49,7 +49,7 @@ public record CorporateActionDate87
     [DisplayName("Earliest Payment Date")]
     [IsoXmlTag("EarlstPmtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? EarliestPaymentDate { get; init; }
+    public DateOnly? EarliestPaymentDate { get; init; }
 
     /// <summary>
     /// Date on which the distribution is due to take place (cash and/or securities).
@@ -58,5 +58,5 @@ public record CorporateActionDate87
     [DisplayName("Payment Date")]
     [IsoXmlTag("PmtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? PaymentDate { get; init; }
+    public DateOnly? PaymentDate { get; init; }
 }

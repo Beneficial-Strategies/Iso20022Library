@@ -32,7 +32,7 @@ public record DetailedAmount19
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Detailed amount expressed in the transaction currency.
@@ -66,5 +66,5 @@ public record DetailedAmount19
     [IsoXmlTag("Labl")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Label { get; init; }
+    public Max70Text? Label { get; init; }
 }

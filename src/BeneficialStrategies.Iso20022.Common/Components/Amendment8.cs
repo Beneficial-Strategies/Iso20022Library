@@ -24,7 +24,7 @@ public record Amendment8
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Sequence number assigned by the issuer to each amendment of the undertaking.
@@ -34,7 +34,7 @@ public record Amendment8
     [IsoXmlTag("SeqNb")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public required IsoMax4AlphaNumericText SequenceNumber { get; init; }
+    public required Max4AlphaNumericText SequenceNumber { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier assigned by the beneficiary to the undertaking.
@@ -44,7 +44,7 @@ public record Amendment8
     [IsoXmlTag("BnfcryRefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? BeneficiaryReferenceNumber { get; init; }
+    public Max35Text? BeneficiaryReferenceNumber { get; init; }
 
     /// <summary>
     /// Party that issues the undertaking.

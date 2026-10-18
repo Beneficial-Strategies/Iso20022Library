@@ -24,7 +24,7 @@ public record IncentivePremium2
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Description { get; init; }
+    public Max350Text? Description { get; init; }
 
     /// <summary>
     /// Cash premium paid per security, per vote or per attendee.
@@ -41,7 +41,7 @@ public record IncentivePremium2
     [DisplayName("Per Security")]
     [IsoXmlTag("PerScty")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber PerSecurity { get; init; }
+    public required Number PerSecurity { get; init; }
 
     /// <summary>
     /// Number of votes giving right to a premium.
@@ -50,7 +50,7 @@ public record IncentivePremium2
     [DisplayName("Per Vote")]
     [IsoXmlTag("PerVote")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber PerVote { get; init; }
+    public required Number PerVote { get; init; }
 
     /// <summary>
     /// Indicates that the premium is given per attendee.
@@ -59,7 +59,7 @@ public record IncentivePremium2
     [DisplayName("Per Attendee")]
     [IsoXmlTag("PerAttndee")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator PerAttendee { get; init; }
+    public required YesNoIndicator PerAttendee { get; init; }
 
     /// <summary>
     /// Date/time for the payment of the premium.

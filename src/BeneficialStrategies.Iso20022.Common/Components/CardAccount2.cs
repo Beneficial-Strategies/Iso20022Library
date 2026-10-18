@@ -33,7 +33,7 @@ public record CardAccount2
     [IsoXmlTag("AcctNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AccountName { get; init; }
+    public Max70Text? AccountName { get; init; }
 
     /// <summary>
     /// Party that legally owns the account.
@@ -82,5 +82,5 @@ public record CardAccount2
     [DisplayName("Balance Date")]
     [IsoXmlTag("BalDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? BalanceDate { get; init; }
+    public DateOnly? BalanceDate { get; init; }
 }

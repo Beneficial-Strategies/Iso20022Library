@@ -39,7 +39,7 @@ public record DisplayCapabilities6
     [DisplayName("Number Of Lines")]
     [IsoXmlTag("NbOfLines")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NumberOfLines { get; init; }
+    public Number? NumberOfLines { get; init; }
 
     /// <summary>
     /// Number of columns of the display or printer.
@@ -48,7 +48,7 @@ public record DisplayCapabilities6
     [DisplayName("Line Width")]
     [IsoXmlTag("LineWidth")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? LineWidth { get; init; }
+    public Number? LineWidth { get; init; }
 
     /// <summary>
     /// Available language for the message. Reference ISO 639-1 (alpha-2) et ISO 639-2 (alpha-3).

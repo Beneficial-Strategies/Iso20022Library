@@ -32,7 +32,7 @@ public record Transaction104
     [IsoXmlTag("OthrSttlmRptTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherSettlementReportType { get; init; }
+    public Max35Text? OtherSettlementReportType { get; init; }
 
     /// <summary>
     /// Reason to send the message.
@@ -42,7 +42,7 @@ public record Transaction104
     [IsoId("_4TGikmqCEemXfKijhrqa-Q")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
-    public SimpleValueList<IsoExact4NumericText> MessageReason { get; init; } = [];
+    public SimpleValueList<Exact4NumericText> MessageReason { get; init; } = [];
 
     /// <summary>
     /// Supports message reason codes that are not defined in external code list.
@@ -50,7 +50,7 @@ public record Transaction104
     [IsoId("_4TGik2qCEemXfKijhrqa-Q")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
-    public SimpleValueList<IsoMax35Text> AlternateMessageReason { get; init; } = [];
+    public SimpleValueList<Max35Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Identification of the transaction.
@@ -92,7 +92,7 @@ public record Transaction104
     [IsoXmlTag("TxDesc")]
     [IsoSimpleType(IsoSimpleType.Max1000Text)]
     [StringLength(maximumLength: 1000, MinimumLength = 1)]
-    public IsoMax1000Text? TransactionDescription { get; init; }
+    public Max1000Text? TransactionDescription { get; init; }
 
     /// <summary>
     /// Contains additional data.

@@ -32,7 +32,7 @@ public record SettlementTypeAndIdentification26
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax16Text TransactionIdentification { get; init; }
+    public required RestrictedFINXMax16Text TransactionIdentification { get; init; }
 
     /// <summary>
     /// Identifies the intended settlement date.

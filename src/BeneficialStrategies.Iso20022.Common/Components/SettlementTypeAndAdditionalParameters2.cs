@@ -40,5 +40,5 @@ public record SettlementTypeAndAdditionalParameters2
     [IsoXmlTag("CmonId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CommonIdentification { get; init; }
+    public Max35Text? CommonIdentification { get; init; }
 }

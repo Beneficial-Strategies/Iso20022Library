@@ -46,5 +46,5 @@ public record AdditionalFeeReconciliation4
     [IsoId("__YCEOWP5EfCX7uJiAWHfoQ")]
     [DisplayName("Count")]
     [IsoXmlTag("Cnt")]
-    public required IsoNumber Count { get; init; }
+    public required Number Count { get; init; }
 }

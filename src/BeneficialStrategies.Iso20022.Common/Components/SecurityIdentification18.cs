@@ -32,5 +32,5 @@ public record SecurityIdentification18
     [IsoXmlTag("SctyId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text SecurityIdentification { get; init; }
+    public required Max35Text SecurityIdentification { get; init; }
 }

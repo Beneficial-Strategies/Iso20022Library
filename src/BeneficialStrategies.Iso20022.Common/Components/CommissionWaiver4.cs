@@ -31,5 +31,5 @@ public record CommissionWaiver4
     [DisplayName("Waived Rate")]
     [IsoXmlTag("WvdRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate WaivedRate { get; init; }
+    public required PercentageRate WaivedRate { get; init; }
 }

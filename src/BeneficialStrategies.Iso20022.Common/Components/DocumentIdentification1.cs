@@ -24,7 +24,7 @@ public record DocumentIdentification1
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the version of a set of data. Example: Version 1.
@@ -33,7 +33,7 @@ public record DocumentIdentification1
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber Version { get; init; }
+    public required Number Version { get; init; }
 
     /// <summary>
     /// Uniquely identifies the financial institution which has submitted the set of data by using a BIC.

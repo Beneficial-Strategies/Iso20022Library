@@ -32,7 +32,7 @@ public record InvestmentAccount14
     [IsoXmlTag("AcctNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountName { get; init; }
+    public Max35Text? AccountName { get; init; }
 
     /// <summary>
     /// Supplementary registration information applying to a specific block of units for dealing and reporting purposes. The supplementary registration information may be used when all the units are registered, for example, to a funds supermarket, but holdings for each investor have to reconciled individually.
@@ -42,7 +42,7 @@ public record InvestmentAccount14
     [IsoXmlTag("AcctDsgnt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountDesignation { get; init; }
+    public Max35Text? AccountDesignation { get; init; }
 
     /// <summary>
     /// Identification of an individual person whom legally owns the account.

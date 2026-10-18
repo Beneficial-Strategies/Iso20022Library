@@ -31,7 +31,7 @@ public record TradeDelivery3
     [DisplayName("Delivery Date Time")]
     [IsoXmlTag("DlvryDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? DeliveryDateTime { get; init; }
+    public ISODateTime? DeliveryDateTime { get; init; }
 
     /// <summary>
     /// Party from whom the goods are dispatched.

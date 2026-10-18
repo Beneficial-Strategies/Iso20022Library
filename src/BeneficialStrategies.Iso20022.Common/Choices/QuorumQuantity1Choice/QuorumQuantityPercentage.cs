@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.QuorumQuantity1Choice
         /// </summary>
         [IsoXmlTag("QrmQtyPctg")]
         [IsoSimpleType(IsoSimpleType.PercentageRate)]
-        public required IsoPercentageRate Value { get; init; }
+        public required PercentageRate Value { get; init; }
     }
 }

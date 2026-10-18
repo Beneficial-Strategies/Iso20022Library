@@ -24,7 +24,7 @@ public record CancellationRequestInformation1
     [IsoXmlTag("OrgnlGrpId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OriginalGroupIdentification { get; init; }
+    public required Max35Text OriginalGroupIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the original financing request message was created.
@@ -33,7 +33,7 @@ public record CancellationRequestInformation1
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime OriginalCreationDateTime { get; init; }
+    public required ISODateTime OriginalCreationDateTime { get; init; }
 
     /// <summary>
     /// Specifies the number of single invoice financing requests included in the original financing request message.
@@ -42,7 +42,7 @@ public record CancellationRequestInformation1
     [DisplayName("Number Of Invoice Requests")]
     [IsoXmlTag("NbOfInvcReqs")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public IsoMax15NumericText? NumberOfInvoiceRequests { get; init; }
+    public Max15NumericText? NumberOfInvoiceRequests { get; init; }
 
     /// <summary>
     /// Total amount of the bulk invoice financing request. It is composed by the sum of the total amounts of all invoices included in the original financing request message.
@@ -60,7 +60,7 @@ public record CancellationRequestInformation1
     [IsoXmlTag("CxlRsn")]
     [IsoSimpleType(IsoSimpleType.Max105Text)]
     [StringLength(maximumLength: 105, MinimumLength = 1)]
-    public required IsoMax105Text CancellationReason { get; init; }
+    public required Max105Text CancellationReason { get; init; }
 
     /// <summary>
     /// Party that requests the cancellation of a financing request previously sent.

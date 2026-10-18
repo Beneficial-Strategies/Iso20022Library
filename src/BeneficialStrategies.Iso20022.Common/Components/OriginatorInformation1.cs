@@ -22,5 +22,5 @@ public record OriginatorInformation1
     [IsoId("_RHj98OCyEee83LAjB5Kqdw")]
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
-    public SimpleValueList<IsoMax5000Binary> Certificate { get; init; } = [];
+    public SimpleValueList<Max5000Binary> Certificate { get; init; } = [];
 }

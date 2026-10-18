@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument21Choice
         [IsoXmlTag("Ref")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? Reference { get; init; }
+        public Max35Text? Reference { get; init; }
 
         /// <summary>
         /// Party that owes an amount of money to the (ultimate) creditor. In the context of the payment model, the debtor is also the debit account owner.

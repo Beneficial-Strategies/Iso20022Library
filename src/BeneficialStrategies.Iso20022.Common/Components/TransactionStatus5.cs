@@ -31,7 +31,7 @@ public record TransactionStatus5
     [DisplayName("Change Date Time")]
     [IsoXmlTag("ChngDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime ChangeDateTime { get; init; }
+    public required ISODateTime ChangeDateTime { get; init; }
 
     /// <summary>
     /// Additional information on the reason for the time-out.
@@ -41,5 +41,5 @@ public record TransactionStatus5
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Description { get; init; }
+    public Max140Text? Description { get; init; }
 }

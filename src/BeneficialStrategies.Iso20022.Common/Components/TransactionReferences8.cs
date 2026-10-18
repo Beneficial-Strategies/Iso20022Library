@@ -28,40 +28,40 @@ public record TransactionReferences8
     /// </summary>
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
-    public required IsoMax35Text EndToEndIdentification { get; init; }
+    public required Max35Text EndToEndIdentification { get; init; }
 
     /// <summary>
     /// Instruction Identification.
     /// </summary>
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
-    public IsoMax35Text? InstructionIdentification { get; init; }
+    public Max35Text? InstructionIdentification { get; init; }
 
     /// <summary>
     /// Mandate Identification.
     /// </summary>
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
-    public IsoMax35Text? MandateIdentification { get; init; }
+    public Max35Text? MandateIdentification { get; init; }
 
     /// <summary>
     /// Payment Information Identification.
     /// </summary>
     [DisplayName("Payment Information Identification")]
     [IsoXmlTag("PmtInfId")]
-    public IsoMax35Text? PaymentInformationIdentification { get; init; }
+    public Max35Text? PaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Transaction Identification.
     /// </summary>
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
-    public IsoMax35Text? TransactionIdentification { get; init; }
+    public Max35Text? TransactionIdentification { get; init; }
 
     /// <summary>
     /// UETR.
     /// </summary>
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
-    public IsoUUIDv4Identifier? UETR { get; init; }
+    public UUIDv4Identifier? UETR { get; init; }
 }

@@ -30,7 +30,7 @@ public record UnderlyingPaymentInstruction11
     [IsoId("_MBQtB7vHEfCYYbmqNrQFSg")]
     [DisplayName("Original Payment Information Identification")]
     [IsoXmlTag("OrgnlPmtInfId")]
-    public IsoMax35Text? OriginalPaymentInformationIdentification { get; init; }
+    public Max35Text? OriginalPaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original instructing party for the original instructed party, to unambiguously identify the original instruction.
@@ -38,7 +38,7 @@ public record UnderlyingPaymentInstruction11
     [IsoId("_MBQtCbvHEfCYYbmqNrQFSg")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
-    public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.
@@ -46,7 +46,7 @@ public record UnderlyingPaymentInstruction11
     [IsoId("_MBQtC7vHEfCYYbmqNrQFSg")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Universally unique identifier to provide the original end-to-end reference of a payment transaction.
@@ -54,7 +54,7 @@ public record UnderlyingPaymentInstruction11
     [IsoId("_MBQtDbvHEfCYYbmqNrQFSg")]
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
-    public IsoUUIDv4Identifier? OriginalUETR { get; init; }
+    public UUIDv4Identifier? OriginalUETR { get; init; }
 
     /// <summary>
     /// Amount of money, as provided in the original transaction, to be moved between the debtor and the creditor, before deduction of charges, expressed in the currency, as ordered by the original initiating party.
@@ -78,7 +78,7 @@ public record UnderlyingPaymentInstruction11
     [IsoId("_MBQtE7vHEfCYYbmqNrQFSg")]
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
-    public IsoISODate? RequestedCollectionDate { get; init; }
+    public DateOnly? RequestedCollectionDate { get; init; }
 
     /// <summary>
     /// Key elements used to identify the original transaction that is being referred to.

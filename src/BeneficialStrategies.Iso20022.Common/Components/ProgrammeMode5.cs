@@ -28,5 +28,5 @@ public record ProgrammeMode5
     /// </summary>
     [DisplayName("Applied Identification")]
     [IsoXmlTag("ApldId")]
-    public required IsoMax35Text AppliedIdentification { get; init; }
+    public required Max35Text AppliedIdentification { get; init; }
 }

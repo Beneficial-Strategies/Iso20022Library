@@ -54,5 +54,5 @@ public record PenaltyNetMovementRecord1
     [IsoId("_OHxcpwAcEeqxkL65N306OA")]
     [DisplayName("Number Of Entries")]
     [IsoXmlTag("NbOfNtries")]
-    public IsoNumber? NumberOfEntries { get; init; }
+    public Number? NumberOfEntries { get; init; }
 }

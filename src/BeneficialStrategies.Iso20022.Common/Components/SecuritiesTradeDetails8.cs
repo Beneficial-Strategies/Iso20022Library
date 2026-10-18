@@ -22,7 +22,7 @@ public record SecuritiesTradeDetails8
     [IsoId("_S7pPzdp-Ed-ak6NoX_4Aeg_-546856590")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    public SimpleValueList<IsoMax35Text> TradeIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> TradeIdentification { get; init; } = [];
 
     /// <summary>
     /// Unambiguous identification of a collateral transaction as assigned by the instructing party.
@@ -30,7 +30,7 @@ public record SecuritiesTradeDetails8
     [IsoId("_S7yZsNp-Ed-ak6NoX_4Aeg_-546856477")]
     [DisplayName("Collateral Transaction Identification")]
     [IsoXmlTag("CollTxId")]
-    public SimpleValueList<IsoMax35Text> CollateralTransactionIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> CollateralTransactionIdentification { get; init; } = [];
 
     /// <summary>
     /// Identification of an account owner transaction that could potentially match with the allegement notified.
@@ -38,7 +38,7 @@ public record SecuritiesTradeDetails8
     [IsoId("_S7yZsdp-Ed-ak6NoX_4Aeg_1640865534")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
-    public SimpleValueList<IsoMax35Text> AccountOwnerTransactionIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> AccountOwnerTransactionIdentification { get; init; } = [];
 
     /// <summary>
     /// Market in which a trade transaction has been executed.
@@ -55,7 +55,7 @@ public record SecuritiesTradeDetails8
     [DisplayName("Place Of Clearing")]
     [IsoXmlTag("PlcOfClr")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public IsoAnyBICIdentifier? PlaceOfClearing { get; init; }
+    public AnyBICIdentifier? PlaceOfClearing { get; init; }
 
     /// <summary>
     /// Specifies the date/time on which the trade was executed.
@@ -96,7 +96,7 @@ public record SecuritiesTradeDetails8
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
     [IsoSimpleType(IsoSimpleType.Max3Number)]
-    public IsoMax3Number? NumberOfDaysAccrued { get; init; }
+    public Max3Number? NumberOfDaysAccrued { get; init; }
 
     /// <summary>
     /// Specifies additional information relative to the processing of the trade.

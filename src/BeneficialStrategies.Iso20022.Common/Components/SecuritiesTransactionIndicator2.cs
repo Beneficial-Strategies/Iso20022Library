@@ -47,7 +47,7 @@ public record SecuritiesTransactionIndicator2
     [DisplayName("Risk Reducing Transaction")]
     [IsoXmlTag("RskRdcgTx")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? RiskReducingTransaction { get; init; }
+    public TrueFalseIndicator? RiskReducingTransaction { get; init; }
 
     /// <summary>
     /// Indicates whether the transaction falls within the scope of activity to be reported under the Securities Financing Transactions Regulation.
@@ -56,5 +56,5 @@ public record SecuritiesTransactionIndicator2
     [DisplayName("Securities Financing Transaction Indicator")]
     [IsoXmlTag("SctiesFincgTxInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator SecuritiesFinancingTransactionIndicator { get; init; }
+    public required TrueFalseIndicator SecuritiesFinancingTransactionIndicator { get; init; }
 }

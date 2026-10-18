@@ -59,7 +59,7 @@ public record InformationRequestOpeningV01 : IOuterRecord
     [IsoXmlTag("InvstgtnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text InvestigationIdentification { get; init; }
+    public required Max35Text InvestigationIdentification { get; init; }
 
     /// <summary>
     /// Provides details on the legal basis of the request.
@@ -76,7 +76,7 @@ public record InformationRequestOpeningV01 : IOuterRecord
     [DisplayName("Confidentiality Status")]
     [IsoXmlTag("CnfdtltySts")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ConfidentialityStatus { get; init; }
+    public required YesNoIndicator ConfidentialityStatus { get; init; }
 
     /// <summary>
     /// Specifies the date by when the financial institutiion needs to provide a response.

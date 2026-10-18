@@ -28,5 +28,5 @@ public record Terminal8
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax16Text Identification { get; init; }
+    public required Max16Text Identification { get; init; }
 }

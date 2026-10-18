@@ -47,7 +47,7 @@ public record StatusReportContent3
     [DisplayName("POI Date Time")]
     [IsoXmlTag("POIDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime POIDateTime { get; init; }
+    public required ISODateTime POIDateTime { get; init; }
 
     /// <summary>
     /// Request the terminal management system to answer with the identified data set.
@@ -71,5 +71,5 @@ public record StatusReportContent3
     [IsoId("_jGKqLTV8EeODSIIQsYYKhw")]
     [DisplayName("Errors")]
     [IsoXmlTag("Errs")]
-    public SimpleValueList<IsoMax140Text> Errors { get; init; } = [];
+    public SimpleValueList<Max140Text> Errors { get; init; } = [];
 }

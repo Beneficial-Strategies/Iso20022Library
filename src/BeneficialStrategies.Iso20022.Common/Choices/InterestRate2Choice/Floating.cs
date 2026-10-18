@@ -42,6 +42,6 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate2Choice
         [DisplayName("Basis Point Spread")]
         [IsoXmlTag("BsisPtSprd")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public required IsoNumber BasisPointSpread { get; init; }
+        public required Number BasisPointSpread { get; init; }
     }
 }

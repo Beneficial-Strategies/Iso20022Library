@@ -24,7 +24,7 @@ public record OriginalPaymentInstruction36
     [IsoXmlTag("PmtCxlId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PaymentCancellationIdentification { get; init; }
+    public Max35Text? PaymentCancellationIdentification { get; init; }
 
     /// <summary>
     /// Identifies the case.
@@ -42,7 +42,7 @@ public record OriginalPaymentInstruction36
     [IsoXmlTag("OrgnlPmtInfId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OriginalPaymentInformationIdentification { get; init; }
+    public required Max35Text OriginalPaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Information concerning the original group of transactions, to which the message refers.
@@ -59,7 +59,7 @@ public record OriginalPaymentInstruction36
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public IsoMax15NumericText? NumberOfTransactions { get; init; }
+    public Max15NumericText? NumberOfTransactions { get; init; }
 
     /// <summary>
     /// Total of all individual amounts included in the cancellation payment information group, irrespective of currencies.
@@ -68,7 +68,7 @@ public record OriginalPaymentInstruction36
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? ControlSum { get; init; }
+    public DecimalNumber? ControlSum { get; init; }
 
     /// <summary>
     /// Indicates whether or not the cancellation applies to a whole group of transactions or to individual transactions within the original group.
@@ -77,7 +77,7 @@ public record OriginalPaymentInstruction36
     [DisplayName("Payment Information Cancellation")]
     [IsoXmlTag("PmtInfCxl")]
     [IsoSimpleType(IsoSimpleType.GroupCancellationIndicator)]
-    public IsoGroupCancellationIndicator? PaymentInformationCancellation { get; init; }
+    public GroupCancellationIndicator? PaymentInformationCancellation { get; init; }
 
     /// <summary>
     /// Detailed information on the cancellation reason.

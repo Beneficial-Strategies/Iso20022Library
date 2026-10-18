@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AirportName1Choice
         [IsoXmlTag("Twn")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text Town { get; init; }
+        public required Max35Text Town { get; init; }
 
         /// <summary>
         /// Identifies the airport by its name. For example: Heathrow.
@@ -34,6 +34,6 @@ namespace BeneficialStrategies.Iso20022.Choices.AirportName1Choice
         [IsoXmlTag("AirprtNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? AirportName { get; init; }
+        public Max35Text? AirportName { get; init; }
     }
 }

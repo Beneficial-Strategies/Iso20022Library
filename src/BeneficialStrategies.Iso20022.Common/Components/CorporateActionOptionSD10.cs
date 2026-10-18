@@ -24,7 +24,7 @@ public record CorporateActionOptionSD10
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text PlaceAndName { get; init; }
+    public required Max350Text PlaceAndName { get; init; }
 
     /// <summary>
     /// Used for options that have particular proprietary feature that cannot be represented in standard ISO message.
@@ -41,7 +41,7 @@ public record CorporateActionOptionSD10
     [DisplayName("Default Option Flag")]
     [IsoXmlTag("DfltOptnFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? DefaultOptionFlag { get; init; }
+    public YesNoIndicator? DefaultOptionFlag { get; init; }
 
     /// <summary>
     /// Indicates whether optional dividend supplementary data are required in the ISO 20022 CAIN instructions for this event.
@@ -50,7 +50,7 @@ public record CorporateActionOptionSD10
     [DisplayName("Optional Dividend Supplementary Data Required Flag")]
     [IsoXmlTag("OptnlDvddSplmtryDataReqrdFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? OptionalDividendSupplementaryDataRequiredFlag { get; init; }
+    public YesNoIndicator? OptionalDividendSupplementaryDataRequiredFlag { get; init; }
 
     /// <summary>
     /// Unique DTCC legacy reference used for matching and reconciling legacy CCF records. The element will be populated to all levels of the message (Event Details, Options, Movements) where applicable to indicate how values are sourced from CCF legacy files. For example: event has 2 related Activity Types 74, and 54. If event details and cash option are sourced from the Activity Type 74, then Activity Type 74 will be in RDP Reference Number in event details, and also on the cash option. The activity type 54 will be &quot;on&quot; the security option. Also, usage rules will specify the different layouts of the RDP Reference Number based on DTCC event group (reorganization, distribution, or redemption).
@@ -59,5 +59,5 @@ public record CorporateActionOptionSD10
     [DisplayName("RDP Reference Number")]
     [IsoXmlTag("RDPRefNb")]
     [IsoSimpleType(IsoSimpleType.Exact32AlphaNumericText)]
-    public IsoExact32AlphaNumericText? RDPReferenceNumber { get; init; }
+    public Exact32AlphaNumericText? RDPReferenceNumber { get; init; }
 }

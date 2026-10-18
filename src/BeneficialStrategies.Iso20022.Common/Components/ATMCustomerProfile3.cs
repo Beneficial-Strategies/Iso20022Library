@@ -24,7 +24,7 @@ public record ATMCustomerProfile3
     [IsoXmlTag("PrflRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProfileReference { get; init; }
+    public Max35Text? ProfileReference { get; init; }
 
     /// <summary>
     /// Identification of the customer for the bank.
@@ -34,7 +34,7 @@ public record ATMCustomerProfile3
     [IsoXmlTag("CstmrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CustomerIdentification { get; init; }
+    public Max35Text? CustomerIdentification { get; init; }
 
     /// <summary>
     /// Description of the customer&apos;s profile in plaintext.
@@ -44,7 +44,7 @@ public record ATMCustomerProfile3
     [IsoXmlTag("PrflDesc")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? ProfileDescription { get; init; }
+    public Max70Text? ProfileDescription { get; init; }
 
     /// <summary>
     /// Services allowed for the customer&apos;s profile.

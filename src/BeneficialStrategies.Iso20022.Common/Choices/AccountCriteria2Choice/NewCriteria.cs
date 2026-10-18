@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountCriteria2Choice
         [IsoXmlTag("NewQryNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? NewQueryName { get; init; }
+        public Max35Text? NewQueryName { get; init; }
 
         /// <summary>
         /// Defines the criteria to be used to extract the account information.

@@ -32,7 +32,7 @@ public record Commission10
     [IsoXmlTag("XtndedTp")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedType { get; init; }
+    public Extended350Code? ExtendedType { get; init; }
 
     /// <summary>
     /// Basis upon which a commission is charged, eg, flat fee.
@@ -50,7 +50,7 @@ public record Commission10
     [IsoXmlTag("XtndedBsis")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedBasis { get; init; }
+    public Extended350Code? ExtendedBasis { get; init; }
 
     /// <summary>
     /// Commission expressed as an amount of money.
@@ -67,7 +67,7 @@ public record Commission10
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Rate { get; init; }
+    public PercentageRate? Rate { get; init; }
 
     /// <summary>
     /// Party entitled to the amount of money resulting from a commission.
@@ -85,7 +85,7 @@ public record Commission10
     [IsoXmlTag("ComrclAgrmtRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CommercialAgreementReference { get; init; }
+    public Max35Text? CommercialAgreementReference { get; init; }
 
     /// <summary>
     /// Voluntary non-enforcement of the right to all or part of a commission.

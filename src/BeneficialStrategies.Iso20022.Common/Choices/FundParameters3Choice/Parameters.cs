@@ -39,7 +39,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundParameters3Choice
         [DisplayName("Date From")]
         [IsoXmlTag("DtFr")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? DateFrom { get; init; }
+        public DateOnly? DateFrom { get; init; }
 
         /// <summary>
         /// Country where the fund has legal domicile as reflected in the ISIN classification.

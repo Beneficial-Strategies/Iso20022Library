@@ -23,7 +23,7 @@ public record ConsolidatedTapeProviderData1
     [IsoId("_qVZ0IGImEfCeoPFCHQnhvA")]
     [DisplayName("Reception Date Time")]
     [IsoXmlTag("RcptnDtTm")]
-    public required IsoISODateTime ReceptionDateTime { get; init; }
+    public required ISODateTime ReceptionDateTime { get; init; }
 
     /// <summary>
     /// Date and time when the transaction was published by the Consolidated Tape Provider (CTP).
@@ -32,5 +32,5 @@ public record ConsolidatedTapeProviderData1
     [IsoId("_vbztQGImEfCeoPFCHQnhvA")]
     [DisplayName("Dissemination Date Time")]
     [IsoXmlTag("DssmntnDtTm")]
-    public required IsoISODateTime DisseminationDateTime { get; init; }
+    public required ISODateTime DisseminationDateTime { get; init; }
 }

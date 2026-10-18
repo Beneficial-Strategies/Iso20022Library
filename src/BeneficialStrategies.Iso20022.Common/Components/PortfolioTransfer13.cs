@@ -21,7 +21,7 @@ public record PortfolioTransfer13
     /// </summary>
     [DisplayName("Actual Transfer Date")]
     [IsoXmlTag("ActlTrfDt")]
-    public IsoISODate? ActualTransferDate { get; init; }
+    public DateOnly? ActualTransferDate { get; init; }
 
     /// <summary>
     /// Additional Information.
@@ -57,7 +57,7 @@ public record PortfolioTransfer13
     /// </summary>
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Payment Details.
@@ -85,19 +85,19 @@ public record PortfolioTransfer13
     /// </summary>
     [DisplayName("Tax Date")]
     [IsoXmlTag("TaxDt")]
-    public IsoISODate? TaxDate { get; init; }
+    public DateOnly? TaxDate { get; init; }
 
     /// <summary>
     /// Transfer Completion Identification.
     /// </summary>
     [DisplayName("Transfer Completion Identification")]
     [IsoXmlTag("TrfCmpltnId")]
-    public required IsoMax35Text TransferCompletionIdentification { get; init; }
+    public required Max35Text TransferCompletionIdentification { get; init; }
 
     /// <summary>
     /// Transfer Instruction Reference.
     /// </summary>
     [DisplayName("Transfer Instruction Reference")]
     [IsoXmlTag("TrfInstrRef")]
-    public required IsoMax35Text TransferInstructionReference { get; init; }
+    public required Max35Text TransferInstructionReference { get; init; }
 }

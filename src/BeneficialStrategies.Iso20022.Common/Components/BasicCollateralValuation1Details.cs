@@ -23,7 +23,7 @@ public record BasicCollateralValuation1Details
     [DisplayName("Valuation Haircut")]
     [IsoXmlTag("ValtnHrcut")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate ValuationHaircut { get; init; }
+    public required PercentageRate ValuationHaircut { get; init; }
 
     /// <summary>
     /// Place where the valuation haircut was calculated.

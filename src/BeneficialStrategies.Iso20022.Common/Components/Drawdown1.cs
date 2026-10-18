@@ -39,7 +39,7 @@ public record Drawdown1
     [DisplayName("Percentage Of Total Transfer Value")]
     [IsoXmlTag("PctgOfTtlTrfVal")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? PercentageOfTotalTransferValue { get; init; }
+    public PercentageRate? PercentageOfTotalTransferValue { get; init; }
 
     /// <summary>
     /// Amount that was originally designated for drawdown.
@@ -56,7 +56,7 @@ public record Drawdown1
     [DisplayName("Additional Funds Designated")]
     [IsoXmlTag("AddtlFndsDsgntd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AdditionalFundsDesignated { get; init; }
+    public YesNoIndicator? AdditionalFundsDesignated { get; init; }
 
     /// <summary>
     /// Drawdown allowance check. For pensions that have a lifetime allowance, a check is made of the maximum value of benefits that may be taken from the pension without incurring a special tax. (This check or &apos;event&apos; is known as the benefit crystallisation event in the UK market.)
@@ -81,7 +81,7 @@ public record Drawdown1
     [DisplayName("Pension Commencement Lump Sum Date")]
     [IsoXmlTag("PnsnCmcmntLumpSumDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? PensionCommencementLumpSumDate { get; init; }
+    public DateOnly? PensionCommencementLumpSumDate { get; init; }
 
     /// <summary>
     /// Indicates there have been multiple pension commencement lump sum (PCLS) payments.
@@ -90,7 +90,7 @@ public record Drawdown1
     [DisplayName("Multiple Pension Commencement Lump Sums")]
     [IsoXmlTag("MltplPnsnCmcmntLumpSums")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? MultiplePensionCommencementLumpSums { get; init; }
+    public YesNoIndicator? MultiplePensionCommencementLumpSums { get; init; }
 
     /// <summary>
     /// Percentage of the lifetime allowance (LTA) used.
@@ -99,7 +99,7 @@ public record Drawdown1
     [DisplayName("Lifetime Allowance")]
     [IsoXmlTag("LftmAllwnc")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? LifetimeAllowance { get; init; }
+    public PercentageRate? LifetimeAllowance { get; init; }
 
     /// <summary>
     /// Indicates a person other than the original pension holder is the receiver of the drawdown payment.
@@ -108,7 +108,7 @@ public record Drawdown1
     [DisplayName("Recipient Of Drawdown Indicator")]
     [IsoXmlTag("RcptOfDrwdwnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? RecipientOfDrawdownIndicator { get; init; }
+    public YesNoIndicator? RecipientOfDrawdownIndicator { get; init; }
 
     /// <summary>
     /// Information about the recipient of the drawdown, when not the original pension holder.
@@ -133,7 +133,7 @@ public record Drawdown1
     [DisplayName("Flexible Drawdown Triggered Date")]
     [IsoXmlTag("FlxblDrwdwnTrggrdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? FlexibleDrawdownTriggeredDate { get; init; }
+    public DateOnly? FlexibleDrawdownTriggeredDate { get; init; }
 
     /// <summary>
     /// Additional information about the drawdown.

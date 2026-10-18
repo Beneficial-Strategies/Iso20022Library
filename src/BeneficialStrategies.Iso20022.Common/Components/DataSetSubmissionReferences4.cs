@@ -24,7 +24,7 @@ public record DataSetSubmissionReferences4
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransactionIdentification { get; init; }
+    public required Max35Text TransactionIdentification { get; init; }
 
     /// <summary>
     /// Reference to the purchase order of the underlying transaction.
@@ -51,7 +51,7 @@ public record DataSetSubmissionReferences4
     [DisplayName("Forced Match")]
     [IsoXmlTag("ForcdMtch")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ForcedMatch { get; init; }
+    public required YesNoIndicator ForcedMatch { get; init; }
 
     /// <summary>
     /// Unique identification assigned by the matching engine to the baseline when it is established.

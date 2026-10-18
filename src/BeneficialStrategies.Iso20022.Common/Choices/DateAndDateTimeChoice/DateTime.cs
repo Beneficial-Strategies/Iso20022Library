@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.DateAndDateTimeChoice
         /// </summary>
         [IsoXmlTag("DtTm")]
         [IsoSimpleType(IsoSimpleType.ISODateTime)]
-        public required IsoISODateTime Value { get; init; }
+        public required ISODateTime Value { get; init; }
     }
 }

@@ -48,7 +48,7 @@ public record CashAccount38
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Name { get; init; }
+    public Max70Text? Name { get; init; }
 
     /// <summary>
     /// Specifies an alternate assumed name for the identification of the account.

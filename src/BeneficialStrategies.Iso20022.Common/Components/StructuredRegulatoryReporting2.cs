@@ -24,7 +24,7 @@ public record StructuredRegulatoryReporting2
     [IsoXmlTag("Cd")]
     [IsoSimpleType(IsoSimpleType.Max3Text)]
     [StringLength(maximumLength: 3, MinimumLength = 1)]
-    public IsoMax3Text? Code { get; init; }
+    public Max3Text? Code { get; init; }
 
     /// <summary>
     /// Amount of money to be reported for regulatory and statutory requirements.
@@ -42,5 +42,5 @@ public record StructuredRegulatoryReporting2
     [IsoXmlTag("Inf")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Information { get; init; }
+    public Max35Text? Information { get; init; }
 }

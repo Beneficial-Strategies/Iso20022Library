@@ -24,7 +24,7 @@ public record TemporaryServicesCompany2
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Name { get; init; }
+    public Max70Text? Name { get; init; }
 
     /// <summary>
     /// Contains the name of the department at the contracting company in which the temporary staff will be working.
@@ -34,7 +34,7 @@ public record TemporaryServicesCompany2
     [IsoXmlTag("Dept")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Department { get; init; }
+    public Max70Text? Department { get; init; }
 
     /// <summary>
     /// Identification of the temporary services company.
@@ -52,5 +52,5 @@ public record TemporaryServicesCompany2
     [IsoXmlTag("Sprvsr")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Supervisor { get; init; }
+    public Max70Text? Supervisor { get; init; }
 }

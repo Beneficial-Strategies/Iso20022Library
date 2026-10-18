@@ -22,7 +22,7 @@ public record PortfolioTransfer15
     [IsoId("fc010481-f9b8-4211-b23a-d8bc92ecc158")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Identification assigned to the transfer of assets.
@@ -30,7 +30,7 @@ public record PortfolioTransfer15
     [IsoId("6ec1beee-76ca-447f-b521-f4405a312096")]
     [DisplayName("Transfer Instruction Reference")]
     [IsoXmlTag("TrfInstrRef")]
-    public required IsoMax35Text TransferInstructionReference { get; init; }
+    public required Max35Text TransferInstructionReference { get; init; }
 
     /// <summary>
     /// Identification of the confirmation assigned by the transferor to the transfer.
@@ -38,7 +38,7 @@ public record PortfolioTransfer15
     [IsoId("937847c8-d44f-43ea-b1ad-9b9191de5573")]
     [DisplayName("Transfer Confirmation Identification")]
     [IsoXmlTag("TrfConfId")]
-    public required IsoMax35Text TransferConfirmationIdentification { get; init; }
+    public required Max35Text TransferConfirmationIdentification { get; init; }
 
     /// <summary>
     /// Date the portfolio transfer instruction was executed.
@@ -46,7 +46,7 @@ public record PortfolioTransfer15
     [IsoId("7c34b54d-9611-45cf-b6b8-2bfec860bf65")]
     [DisplayName("Actual Transfer Date")]
     [IsoXmlTag("ActlTrfDt")]
-    public IsoISODate? ActualTransferDate { get; init; }
+    public DateOnly? ActualTransferDate { get; init; }
 
     /// <summary>
     /// Choice of tax efficient product, general investment or pension.
@@ -86,7 +86,7 @@ public record PortfolioTransfer15
     [IsoId("529df0fa-9d34-4ebe-84a8-e611c0afd192")]
     [DisplayName("Tax Date")]
     [IsoXmlTag("TaxDt")]
-    public IsoISODate? TaxDate { get; init; }
+    public DateOnly? TaxDate { get; init; }
 
     /// <summary>
     /// Payment process for the transfer of cash from the debtor to the creditor.

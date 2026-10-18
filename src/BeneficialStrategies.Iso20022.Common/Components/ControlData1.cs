@@ -23,7 +23,7 @@ public record ControlData1
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText NumberOfTransactions { get; init; }
+    public required Max15NumericText NumberOfTransactions { get; init; }
 
     /// <summary>
     /// Total of all individual amounts included in the message, irrespective of currencies.
@@ -32,5 +32,5 @@ public record ControlData1
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? ControlSum { get; init; }
+    public DecimalNumber? ControlSum { get; init; }
 }

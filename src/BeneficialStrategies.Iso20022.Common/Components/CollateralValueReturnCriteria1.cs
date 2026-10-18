@@ -23,7 +23,7 @@ public record CollateralValueReturnCriteria1
     [DisplayName("Cash Account Owner Indicator")]
     [IsoXmlTag("CshAcctOwnrInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? CashAccountOwnerIndicator { get; init; }
+    public RequestedIndicator? CashAccountOwnerIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the cash account servicer information is requested.
@@ -32,7 +32,7 @@ public record CollateralValueReturnCriteria1
     [DisplayName("Cash Account Servicer Indicator")]
     [IsoXmlTag("CshAcctSvcrInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? CashAccountServicerIndicator { get; init; }
+    public RequestedIndicator? CashAccountServicerIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the securities account owner information is requested.
@@ -41,7 +41,7 @@ public record CollateralValueReturnCriteria1
     [DisplayName("Securities Account Owner Indicator")]
     [IsoXmlTag("SctiesAcctOwnrInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? SecuritiesAccountOwnerIndicator { get; init; }
+    public RequestedIndicator? SecuritiesAccountOwnerIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the securities account servicer information is requested.
@@ -50,7 +50,7 @@ public record CollateralValueReturnCriteria1
     [DisplayName("Securities Account Servicer Indicator")]
     [IsoXmlTag("SctiesAcctSvcrInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? SecuritiesAccountServicerIndicator { get; init; }
+    public RequestedIndicator? SecuritiesAccountServicerIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the total value of the collateral valuation information is requested..
@@ -59,7 +59,7 @@ public record CollateralValueReturnCriteria1
     [DisplayName("Total Collateral Valuation Indicator")]
     [IsoXmlTag("TtlCollValtnInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? TotalCollateralValuationIndicator { get; init; }
+    public RequestedIndicator? TotalCollateralValuationIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the securities account information is requested.
@@ -68,7 +68,7 @@ public record CollateralValueReturnCriteria1
     [DisplayName("Securities Account Indicator")]
     [IsoXmlTag("SctiesAcctInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? SecuritiesAccountIndicator { get; init; }
+    public RequestedIndicator? SecuritiesAccountIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the securities account information is requested.
@@ -77,5 +77,5 @@ public record CollateralValueReturnCriteria1
     [DisplayName("Securities")]
     [IsoXmlTag("Scties")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? Securities { get; init; }
+    public RequestedIndicator? Securities { get; init; }
 }

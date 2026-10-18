@@ -23,7 +23,7 @@ public record Commission18
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate Rate { get; init; }
+    public required PercentageRate Rate { get; init; }
 
     /// <summary>
     /// Additional information about the type of markup.
@@ -33,5 +33,5 @@ public record Commission18
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AdditionalInformation { get; init; }
+    public Max350Text? AdditionalInformation { get; init; }
 }

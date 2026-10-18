@@ -21,7 +21,7 @@ public record DetailedInstructionStatus19
     /// </summary>
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public IsoMax35Text? AccountIdentification { get; init; }
+    public Max35Text? AccountIdentification { get; init; }
 
     /// <summary>
     /// Account Owner.
@@ -56,21 +56,21 @@ public record DetailedInstructionStatus19
     /// </summary>
     [DisplayName("Single Instruction Identification")]
     [IsoXmlTag("SnglInstrId")]
-    public required IsoMax35Text SingleInstructionIdentification { get; init; }
+    public required Max35Text SingleInstructionIdentification { get; init; }
 
     /// <summary>
     /// Standing Instruction.
     /// </summary>
     [DisplayName("Standing Instruction")]
     [IsoXmlTag("StgInstr")]
-    public IsoYesNoIndicator? StandingInstruction { get; init; }
+    public YesNoIndicator? StandingInstruction { get; init; }
 
     /// <summary>
     /// Sub Account Identification.
     /// </summary>
     [DisplayName("Sub Account Identification")]
     [IsoXmlTag("SubAcctId")]
-    public IsoMax35Text? SubAccountIdentification { get; init; }
+    public Max35Text? SubAccountIdentification { get; init; }
 
     /// <summary>
     /// Vote Per Resolution.

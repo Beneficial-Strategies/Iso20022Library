@@ -21,7 +21,7 @@ public record ContractRegistrationStatementRequest3
     /// </summary>
     [DisplayName("Registered Contract Identification")]
     [IsoXmlTag("RegdCtrctId")]
-    public required IsoMax35Text RegisteredContractIdentification { get; init; }
+    public required Max35Text RegisteredContractIdentification { get; init; }
 
     /// <summary>
     /// Registration Agent.
@@ -56,7 +56,7 @@ public record ContractRegistrationStatementRequest3
     /// </summary>
     [DisplayName("Statement Request Identification")]
     [IsoXmlTag("StmtReqId")]
-    public required IsoMax35Text StatementRequestIdentification { get; init; }
+    public required Max35Text StatementRequestIdentification { get; init; }
 
     /// <summary>
     /// Supplementary Data.

@@ -31,7 +31,7 @@ public record SecuritiesCountryIdentification2
     [DisplayName("EEA Country")]
     [IsoXmlTag("EEACtry")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator EEACountry { get; init; }
+    public required TrueFalseIndicator EEACountry { get; init; }
 
     /// <summary>
     /// Modification status for the record compared to the previous report.
@@ -56,5 +56,5 @@ public record SecuritiesCountryIdentification2
     [DisplayName("Last Updated")]
     [IsoXmlTag("LastUpdtd")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? LastUpdated { get; init; }
+    public DateOnly? LastUpdated { get; init; }
 }

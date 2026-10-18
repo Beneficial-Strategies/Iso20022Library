@@ -31,7 +31,7 @@ public record InputResultData4
     [DisplayName("Confirmed Flag")]
     [IsoXmlTag("ConfdFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ConfirmedFlag { get; init; }
+    public TrueFalseIndicator? ConfirmedFlag { get; init; }
 
     /// <summary>
     /// The number of the function key which is typed by the Customer on the POI system or the Cashier on the Sale System.
@@ -40,7 +40,7 @@ public record InputResultData4
     [DisplayName("Function Key")]
     [IsoXmlTag("FctnKey")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? FunctionKey { get; init; }
+    public Number? FunctionKey { get; init; }
 
     /// <summary>
     /// The input text and data given by the POI or the Sale System.
@@ -50,7 +50,7 @@ public record InputResultData4
     [IsoXmlTag("InptMsg")]
     [IsoSimpleType(IsoSimpleType.Max20000Text)]
     [StringLength(maximumLength: 20000, MinimumLength = 1)]
-    public IsoMax20000Text? InputMessage { get; init; }
+    public Max20000Text? InputMessage { get; init; }
 
     /// <summary>
     /// An enciphered password typed by the Customer on the POI system or the Cashier on the Sale system.

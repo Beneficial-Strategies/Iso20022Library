@@ -24,7 +24,7 @@ public record ShortPaymentIdentification1
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransactionIdentification { get; init; }
+    public required Max35Text TransactionIdentification { get; init; }
 
     /// <summary>
     /// Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.
@@ -33,7 +33,7 @@ public record ShortPaymentIdentification1
     [DisplayName("Inter Bank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate InterBankSettlementDate { get; init; }
+    public required DateOnly InterBankSettlementDate { get; init; }
 
     /// <summary>
     /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).

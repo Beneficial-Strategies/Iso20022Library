@@ -24,7 +24,7 @@ public record PointOfInteraction6
     [IsoXmlTag("ManfctrIdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ManufacturerIdentifier { get; init; }
+    public required Max35Text ManufacturerIdentifier { get; init; }
 
     /// <summary>
     /// Identifier of the terminal model.
@@ -34,7 +34,7 @@ public record PointOfInteraction6
     [IsoXmlTag("Mdl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Model { get; init; }
+    public required Max35Text Model { get; init; }
 
     /// <summary>
     /// Serial number of the terminal manufacturer.
@@ -44,5 +44,5 @@ public record PointOfInteraction6
     [IsoXmlTag("SrlNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text SerialNumber { get; init; }
+    public required Max35Text SerialNumber { get; init; }
 }

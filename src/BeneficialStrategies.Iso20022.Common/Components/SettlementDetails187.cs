@@ -23,7 +23,7 @@ public record SettlementDetails187
     [DisplayName("Hold Indicator")]
     [IsoXmlTag("HldInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? HoldIndicator { get; init; }
+    public YesNoIndicator? HoldIndicator { get; init; }
 
     /// <summary>
     /// Identifies the type of securities transaction.

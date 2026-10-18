@@ -21,7 +21,7 @@ public record CorporateActionNotification11
     /// </summary>
     [DisplayName("Notification Identification")]
     [IsoXmlTag("NtfctnId")]
-    public IsoRestrictedFINXMax16Text? NotificationIdentification { get; init; }
+    public RestrictedFINXMax16Text? NotificationIdentification { get; init; }
 
     /// <summary>
     /// Notification Type.

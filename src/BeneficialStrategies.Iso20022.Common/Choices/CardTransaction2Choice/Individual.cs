@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardTransaction2Choice
         [IsoXmlTag("ICCRltdData")]
         [IsoSimpleType(IsoSimpleType.Max1025Text)]
         [StringLength(maximumLength: 1025, MinimumLength = 1)]
-        public IsoMax1025Text? ICCRelatedData { get; init; }
+        public Max1025Text? ICCRelatedData { get; init; }
 
         /// <summary>
         /// Context of the card payment transaction.
@@ -59,7 +59,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardTransaction2Choice
         [IsoXmlTag("SaleRcncltnId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? SaleReconciliationIdentification { get; init; }
+        public Max35Text? SaleReconciliationIdentification { get; init; }
 
         /// <summary>
         /// Unique reference of the sales as provided by the merchant.
@@ -69,7 +69,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardTransaction2Choice
         [IsoXmlTag("SaleRefNb")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? SaleReferenceNumber { get; init; }
+        public Max35Text? SaleReferenceNumber { get; init; }
 
         /// <summary>
         /// Reason for representment of a card transaction.
@@ -87,7 +87,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardTransaction2Choice
         [IsoXmlTag("SeqNb")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? SequenceNumber { get; init; }
+        public Max35Text? SequenceNumber { get; init; }
 
         /// <summary>
         /// Identification of the transaction assigned by the POI (Point Of Interaction).
@@ -112,7 +112,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardTransaction2Choice
         [DisplayName("Validation Date")]
         [IsoXmlTag("VldtnDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? ValidationDate { get; init; }
+        public DateOnly? ValidationDate { get; init; }
 
         /// <summary>
         /// Sequential number of the validation of the cash deposit.
@@ -123,6 +123,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CardTransaction2Choice
         [IsoXmlTag("VldtnSeqNb")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? ValidationSequenceNumber { get; init; }
+        public Max35Text? ValidationSequenceNumber { get; init; }
     }
 }

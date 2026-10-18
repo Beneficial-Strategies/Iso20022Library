@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio3Choice
         [DisplayName("Cash Component Indicator")]
         [IsoXmlTag("CshCmpntInd")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? CashComponentIndicator { get; init; }
+        public YesNoIndicator? CashComponentIndicator { get; init; }
 
         /// <summary>
         /// Investment plans issued during previous years.

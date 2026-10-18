@@ -24,7 +24,7 @@ public record FinancialInstrumentAttributesSD3
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text PlaceAndName { get; init; }
+    public required Max350Text PlaceAndName { get; init; }
 
     /// <summary>
     /// Indicates whether or not the newly issued securities are transferable by the agent. This flag is specific to DTC (The Depository Trust Corporation).
@@ -33,7 +33,7 @@ public record FinancialInstrumentAttributesSD3
     [DisplayName("DTC Security Transferable Flag")]
     [IsoXmlTag("DTCSctyTrfblFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? DTCSecurityTransferableFlag { get; init; }
+    public YesNoIndicator? DTCSecurityTransferableFlag { get; init; }
 
     /// <summary>
     /// Details of security that DTC will distribute as part of the entitlement.
@@ -66,7 +66,7 @@ public record FinancialInstrumentAttributesSD3
     [DisplayName("Baby Bond Denomination")]
     [IsoXmlTag("BabyBdDnmtn")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? BabyBondDenomination { get; init; }
+    public DecimalNumber? BabyBondDenomination { get; init; }
 
     /// <summary>
     /// Indicates whether the disbursed security is eligible at CSD (for example in the US - DTC, The Depository Trust Corporation).
@@ -75,5 +75,5 @@ public record FinancialInstrumentAttributesSD3
     [DisplayName("Disbursed Security Eligibility Flag")]
     [IsoXmlTag("DsbrsdSctyElgbltyFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? DisbursedSecurityEligibilityFlag { get; init; }
+    public YesNoIndicator? DisbursedSecurityEligibilityFlag { get; init; }
 }

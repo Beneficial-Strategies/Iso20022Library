@@ -31,7 +31,7 @@ public record Equity3
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? MaturityDate { get; init; }
+    public ISODateTime? MaturityDate { get; init; }
 
     /// <summary>
     /// Nominal amount which is not paid yet.
@@ -56,5 +56,5 @@ public record Equity3
     [DisplayName("Voting Rights Per Share")]
     [IsoXmlTag("VtngRghtsPerShr")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? VotingRightsPerShare { get; init; }
+    public Number? VotingRightsPerShare { get; init; }
 }

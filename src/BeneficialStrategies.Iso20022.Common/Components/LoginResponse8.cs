@@ -22,7 +22,7 @@ public record LoginResponse8
     [IsoId("_ub7TNbZdEfCUZfsQO4rYeA")]
     [DisplayName("POI Date Time")]
     [IsoXmlTag("POIDtTm")]
-    public required IsoISODateTime POIDateTime { get; init; }
+    public required ISODateTime POIDateTime { get; init; }
 
     /// <summary>
     /// Information related to the software of the POI System which manages the Sale to POI protocol.

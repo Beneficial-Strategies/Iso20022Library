@@ -28,7 +28,7 @@ public record AccountNotification22
     /// </summary>
     [DisplayName("Additional Notification Information")]
     [IsoXmlTag("AddtlNtfctnInf")]
-    public IsoMax500Text? AdditionalNotificationInformation { get; init; }
+    public Max500Text? AdditionalNotificationInformation { get; init; }
 
     /// <summary>
     /// Copy Duplicate Indicator.
@@ -42,14 +42,14 @@ public record AccountNotification22
     /// </summary>
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
-    public IsoISODateTime? CreationDateTime { get; init; }
+    public ISODateTime? CreationDateTime { get; init; }
 
     /// <summary>
     /// Electronic Sequence Number.
     /// </summary>
     [DisplayName("Electronic Sequence Number")]
     [IsoXmlTag("ElctrncSeqNb")]
-    public IsoNumber? ElectronicSequenceNumber { get; init; }
+    public Number? ElectronicSequenceNumber { get; init; }
 
     /// <summary>
     /// Entry.
@@ -70,7 +70,7 @@ public record AccountNotification22
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Interest.
@@ -84,7 +84,7 @@ public record AccountNotification22
     /// </summary>
     [DisplayName("Legal Sequence Number")]
     [IsoXmlTag("LglSeqNb")]
-    public IsoNumber? LegalSequenceNumber { get; init; }
+    public Number? LegalSequenceNumber { get; init; }
 
     /// <summary>
     /// Notification Pagination.

@@ -24,7 +24,7 @@ public record ValuationData2
     [IsoXmlTag("ValtnRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ValuationReference { get; init; }
+    public required Max35Text ValuationReference { get; init; }
 
     /// <summary>
     /// Specifies the currency in which the non deliverable trade has to be settled ie the deliverable currency.
@@ -42,7 +42,7 @@ public record ValuationData2
     [IsoXmlTag("AddtlValtnInf")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? AdditionalValuationInformation { get; init; }
+    public Max140Text? AdditionalValuationInformation { get; init; }
 
     /// <summary>
     /// Party through which the settlement will take place. It may contain the BIC of a central settlement system eg CLSBUS33.

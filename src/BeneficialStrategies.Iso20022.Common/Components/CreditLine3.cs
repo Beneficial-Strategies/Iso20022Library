@@ -23,7 +23,7 @@ public record CreditLine3
     [DisplayName("Included")]
     [IsoXmlTag("Incl")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator Included { get; init; }
+    public required TrueFalseIndicator Included { get; init; }
 
     /// <summary>
     /// Type of the credit line provided when multiple credit lines may be provided.

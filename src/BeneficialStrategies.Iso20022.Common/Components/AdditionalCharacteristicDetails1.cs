@@ -24,7 +24,7 @@ public record AdditionalCharacteristicDetails1
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Type { get; init; }
+    public required Max35Text Type { get; init; }
 
     /// <summary>
     /// Party that provided the type information.
@@ -34,5 +34,5 @@ public record AdditionalCharacteristicDetails1
     [IsoXmlTag("PrvddBy")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProvidedBy { get; init; }
+    public Max35Text? ProvidedBy { get; init; }
 }

@@ -35,7 +35,7 @@ public record InstrumentLeg7
     /// </summary>
     [DisplayName("Leg Forward Points")]
     [IsoXmlTag("LegFwdPts")]
-    public required IsoDecimalNumber LegForwardPoints { get; init; }
+    public required DecimalNumber LegForwardPoints { get; init; }
 
     /// <summary>
     /// Leg Last Price.
@@ -77,7 +77,7 @@ public record InstrumentLeg7
     /// </summary>
     [DisplayName("Leg Settlement Date")]
     [IsoXmlTag("LegSttlmDt")]
-    public required IsoISODateTime LegSettlementDate { get; init; }
+    public required ISODateTime LegSettlementDate { get; init; }
 
     /// <summary>
     /// Leg Settlement Type.
@@ -98,7 +98,7 @@ public record InstrumentLeg7
     /// </summary>
     [DisplayName("Leg Symbol")]
     [IsoXmlTag("LegSymb")]
-    public required IsoMax35Text LegSymbol { get; init; }
+    public required Max35Text LegSymbol { get; init; }
 
     /// <summary>
     /// Leg Valuation Rate.
@@ -112,5 +112,5 @@ public record InstrumentLeg7
     /// </summary>
     [DisplayName("Leg Value Date")]
     [IsoXmlTag("LegValDt")]
-    public required IsoISODate LegValueDate { get; init; }
+    public required DateOnly LegValueDate { get; init; }
 }

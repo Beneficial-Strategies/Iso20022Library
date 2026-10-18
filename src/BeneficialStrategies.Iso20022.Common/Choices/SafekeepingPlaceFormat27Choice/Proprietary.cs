@@ -32,6 +32,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormat27Choice
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.RestrictedFINXMax30Text)]
         [StringLength(maximumLength: 30, MinimumLength = 1)]
-        public IsoRestrictedFINXMax30Text? Identification { get; init; }
+        public RestrictedFINXMax30Text? Identification { get; init; }
     }
 }

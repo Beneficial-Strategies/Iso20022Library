@@ -22,7 +22,7 @@ public record SwitchOrderStatusAndReason3
     [IsoId("33efad92-mstr-0001-0001-871593f70002")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for the order, as assigned by the instructing party.
@@ -30,7 +30,7 @@ public record SwitchOrderStatusAndReason3
     [IsoId("33efad92-ordr-0001-0002-871593f70002")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
-    public required IsoMax35Text OrderReference { get; init; }
+    public required Max35Text OrderReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor's identification of the order. This reference can typically be used in a hub scenario to give the reference of the order as assigned by the underlying client.
@@ -38,7 +38,7 @@ public record SwitchOrderStatusAndReason3
     [IsoId("33efad92-clnt-0001-0003-871593f70002")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
-    public IsoMax35Text? ClientReference { get; init; }
+    public Max35Text? ClientReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for the order execution, as assigned by the confirming party.
@@ -46,7 +46,7 @@ public record SwitchOrderStatusAndReason3
     [IsoId("33efad92-deal-0001-0004-871593f70002")]
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
-    public IsoMax35Text? DealReference { get; init; }
+    public Max35Text? DealReference { get; init; }
 
     /// <summary>
     /// Unambiguous identification of a random or semi-random number used once (NONCE) generated in the frame of a cryptographic communication.
@@ -54,7 +54,7 @@ public record SwitchOrderStatusAndReason3
     [IsoId("33efad92-nonc-0001-0005-871593f70002")]
     [DisplayName("Nonce Identification")]
     [IsoXmlTag("NonceId")]
-    public IsoMax35Text? NonceIdentification { get; init; }
+    public Max35Text? NonceIdentification { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for the order cancellation, as assigned by the instructing party.
@@ -62,7 +62,7 @@ public record SwitchOrderStatusAndReason3
     [IsoId("33efad92-cxlr-0001-0006-871593f70002")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
-    public IsoMax35Text? CancellationReference { get; init; }
+    public Max35Text? CancellationReference { get; init; }
 
     /// <summary>
     /// Status of the switch order.

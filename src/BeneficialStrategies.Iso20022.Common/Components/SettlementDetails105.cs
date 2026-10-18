@@ -23,7 +23,7 @@ public record SettlementDetails105
     [DisplayName("Hold Indicator")]
     [IsoXmlTag("HldInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? HoldIndicator { get; init; }
+    public YesNoIndicator? HoldIndicator { get; init; }
 
     /// <summary>
     /// Specifies whether the transaction is to be executed with a high priority.
@@ -177,5 +177,5 @@ public record SettlementDetails105
     [DisplayName("Eligible For Collateral")]
     [IsoXmlTag("ElgblForColl")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? EligibleForCollateral { get; init; }
+    public YesNoIndicator? EligibleForCollateral { get; init; }
 }

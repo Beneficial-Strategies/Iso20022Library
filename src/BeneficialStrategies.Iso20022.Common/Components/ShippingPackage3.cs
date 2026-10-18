@@ -35,35 +35,35 @@ public record ShippingPackage3
     /// </summary>
     [DisplayName("Delivery Date")]
     [IsoXmlTag("DlvryDt")]
-    public IsoISODate? DeliveryDate { get; init; }
+    public DateOnly? DeliveryDate { get; init; }
 
     /// <summary>
     /// Delivery Instructions.
     /// </summary>
     [DisplayName("Delivery Instructions")]
     [IsoXmlTag("DlvryInstrs")]
-    public IsoMax350Text? DeliveryInstructions { get; init; }
+    public Max350Text? DeliveryInstructions { get; init; }
 
     /// <summary>
     /// Delivery Note Number.
     /// </summary>
     [DisplayName("Delivery Note Number")]
     [IsoXmlTag("DlvryNoteNb")]
-    public IsoMax35Text? DeliveryNoteNumber { get; init; }
+    public Max35Text? DeliveryNoteNumber { get; init; }
 
     /// <summary>
     /// Delivery Time.
     /// </summary>
     [DisplayName("Delivery Time")]
     [IsoXmlTag("DlvryTm")]
-    public IsoISOTime? DeliveryTime { get; init; }
+    public ISOTime? DeliveryTime { get; init; }
 
     /// <summary>
     /// Insurance.
     /// </summary>
     [DisplayName("Insurance")]
     [IsoXmlTag("Insrnc")]
-    public IsoTrueFalseIndicator? Insurance { get; init; }
+    public TrueFalseIndicator? Insurance { get; init; }
 
     /// <summary>
     /// Insurance Amount.
@@ -77,28 +77,28 @@ public record ShippingPackage3
     /// </summary>
     [DisplayName("Number Of Units")]
     [IsoXmlTag("NbOfUnits")]
-    public IsoDecimalNumber? NumberOfUnits { get; init; }
+    public DecimalNumber? NumberOfUnits { get; init; }
 
     /// <summary>
     /// Other Weight Unit.
     /// </summary>
     [DisplayName("Other Weight Unit")]
     [IsoXmlTag("OthrWghtUnit")]
-    public IsoMax35Text? OtherWeightUnit { get; init; }
+    public Max35Text? OtherWeightUnit { get; init; }
 
     /// <summary>
     /// Pickup Date.
     /// </summary>
     [DisplayName("Pickup Date")]
     [IsoXmlTag("PckpDt")]
-    public IsoISODate? PickupDate { get; init; }
+    public DateOnly? PickupDate { get; init; }
 
     /// <summary>
     /// Pickup Time.
     /// </summary>
     [DisplayName("Pickup Time")]
     [IsoXmlTag("PckpTm")]
-    public IsoISOTime? PickupTime { get; init; }
+    public ISOTime? PickupTime { get; init; }
 
     /// <summary>
     /// Product.
@@ -133,21 +133,21 @@ public record ShippingPackage3
     /// </summary>
     [DisplayName("Supplier Instructions")]
     [IsoXmlTag("SpplrInstrs")]
-    public IsoMax350Text? SupplierInstructions { get; init; }
+    public Max350Text? SupplierInstructions { get; init; }
 
     /// <summary>
     /// Supplier Name.
     /// </summary>
     [DisplayName("Supplier Name")]
     [IsoXmlTag("SpplrNm")]
-    public IsoMax70Text? SupplierName { get; init; }
+    public Max70Text? SupplierName { get; init; }
 
     /// <summary>
     /// Tracking Number.
     /// </summary>
     [DisplayName("Tracking Number")]
     [IsoXmlTag("TrckgNb")]
-    public IsoMax70Text? TrackingNumber { get; init; }
+    public Max70Text? TrackingNumber { get; init; }
 
     /// <summary>
     /// Weight Unit.

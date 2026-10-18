@@ -32,7 +32,7 @@ public record SubAccount4
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Name { get; init; }
+    public Max35Text? Name { get; init; }
 
     /// <summary>
     /// Specifies additional properties of the account.
@@ -42,5 +42,5 @@ public record SubAccount4
     [IsoXmlTag("Chrtc")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Characteristic { get; init; }
+    public Max35Text? Characteristic { get; init; }
 }

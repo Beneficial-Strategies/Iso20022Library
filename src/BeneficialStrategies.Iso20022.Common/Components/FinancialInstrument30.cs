@@ -32,7 +32,7 @@ public record FinancialInstrument30
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Name { get; init; }
+    public Max350Text? Name { get; init; }
 
     /// <summary>
     /// Specifies the quantity of assets to be transferred in units or in a percentage rate.

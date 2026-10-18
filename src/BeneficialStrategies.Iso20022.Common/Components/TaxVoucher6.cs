@@ -22,7 +22,7 @@ public record TaxVoucher6
     [IsoId("_VWACAajzEfCG_LQaXOxwew-tvrf")]
     [DisplayName("Tax Voucher Reference")]
     [IsoXmlTag("TaxVchrRef")]
-    public IsoMax35Text? TaxVoucherReference { get; init; }
+    public Max35Text? TaxVoucherReference { get; init; }
 
     /// <summary>
     /// Unique reference assigned by the account owner to the tax documentation sent to the account servicer for processing.
@@ -30,7 +30,7 @@ public record TaxVoucher6
     [IsoId("_VWACAajzEfCG_LQaXOxwew-trdr")]
     [DisplayName("Tax Reclaim Documentation Reference")]
     [IsoXmlTag("TaxRclmDocRef")]
-    public IsoMax35Text? TaxReclaimDocumentationReference { get; init; }
+    public Max35Text? TaxReclaimDocumentationReference { get; init; }
 
     /// <summary>
     /// Unique reference identifying the beneficial owner the refund applies to, as assigned by the account owner to the tax documentation sent to the account servicer for processing.
@@ -38,5 +38,5 @@ public record TaxVoucher6
     [IsoId("_VWACAajzEfCG_LQaXOxwew-borf")]
     [DisplayName("Beneficial Owner Reference")]
     [IsoXmlTag("BnfclOwnrRef")]
-    public IsoMax35Text? BeneficialOwnerReference { get; init; }
+    public Max35Text? BeneficialOwnerReference { get; init; }
 }

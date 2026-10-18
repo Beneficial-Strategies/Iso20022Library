@@ -47,7 +47,7 @@ public record Trade3
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate SettlementDate { get; init; }
+    public required DateOnly SettlementDate { get; init; }
 
     /// <summary>
     /// Specifies the valuation rate used for the trade.
@@ -64,7 +64,7 @@ public record Trade3
     [DisplayName("Forward Points")]
     [IsoXmlTag("FwdPts")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? ForwardPoints { get; init; }
+    public DecimalNumber? ForwardPoints { get; init; }
 
     /// <summary>
     /// Amount of trade in corresponding currency.
@@ -81,7 +81,7 @@ public record Trade3
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ValueDate { get; init; }
+    public required DateOnly ValueDate { get; init; }
 
     /// <summary>
     /// Measurement of the amount of the trade values converted in the US dollars.
@@ -114,7 +114,7 @@ public record Trade3
     [DisplayName("Fixing Date")]
     [IsoXmlTag("FxgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? FixingDate { get; init; }
+    public DateOnly? FixingDate { get; init; }
 
     /// <summary>
     /// Indicates whether the spot trade is produced by the option.
@@ -123,7 +123,7 @@ public record Trade3
     [DisplayName("Option Indicator")]
     [IsoXmlTag("OptnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? OptionIndicator { get; init; }
+    public YesNoIndicator? OptionIndicator { get; init; }
 
     /// <summary>
     /// Indicate the trade whether it&apos;s exchange delta.
@@ -132,7 +132,7 @@ public record Trade3
     [DisplayName("Delta Indicator")]
     [IsoXmlTag("DltaInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? DeltaIndicator { get; init; }
+    public YesNoIndicator? DeltaIndicator { get; init; }
 
     /// <summary>
     /// Some associated trade reference needs to be specified.
@@ -140,5 +140,5 @@ public record Trade3
     [IsoId("_CP330YaNEeSzIqahkBT6cQ")]
     [DisplayName("Associated Trade Reference")]
     [IsoXmlTag("AssoctdTradRef")]
-    public SimpleValueList<IsoMax70Text> AssociatedTradeReference { get; init; } = [];
+    public SimpleValueList<Max70Text> AssociatedTradeReference { get; init; } = [];
 }

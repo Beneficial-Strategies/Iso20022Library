@@ -31,5 +31,5 @@ public record NotificationRejectionReason3
     [IsoId("_9vzBg6UoEfCnE_wCEfCqTA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public IsoMax350Text? AdditionalInformation { get; init; }
+    public Max350Text? AdditionalInformation { get; init; }
 }

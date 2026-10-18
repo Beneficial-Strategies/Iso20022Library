@@ -71,5 +71,5 @@ public record LiquidityDebitTransfer3
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? SettlementDate { get; init; }
+    public DateOnly? SettlementDate { get; init; }
 }

@@ -77,7 +77,7 @@ public record SettlementDetails219
     /// </summary>
     [DisplayName("Eligible For Collateral")]
     [IsoXmlTag("ElgblForColl")]
-    public IsoYesNoIndicator? EligibleForCollateral { get; init; }
+    public YesNoIndicator? EligibleForCollateral { get; init; }
 
     /// <summary>
     /// Exposure Type.
@@ -175,7 +175,7 @@ public record SettlementDetails219
     /// </summary>
     [DisplayName("Return Leg")]
     [IsoXmlTag("RtrLeg")]
-    public IsoYesNoIndicator? ReturnLeg { get; init; }
+    public YesNoIndicator? ReturnLeg { get; init; }
 
     /// <summary>
     /// Securities RTGS.

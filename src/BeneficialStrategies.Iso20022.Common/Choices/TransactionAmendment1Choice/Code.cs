@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionAmendment1Choice
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("Cd")]
-        public required IsoMax4Text Value { get; init; }
+        public required Max4Text Value { get; init; }
     }
 }

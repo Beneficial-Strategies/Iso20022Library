@@ -30,7 +30,7 @@ public record DataSetRequest7
     [IsoId("_cSPH-7ZzEfCUZfsQO4rYeA")]
     [DisplayName("POI Challenge")]
     [IsoXmlTag("POIChllng")]
-    public IsoMax140Binary? POIChallenge { get; init; }
+    public Max140Binary? POIChallenge { get; init; }
 
     /// <summary>
     /// Terminal manager challenge for cryptographic key injection.
@@ -38,7 +38,7 @@ public record DataSetRequest7
     [IsoId("_cSPIAbZzEfCUZfsQO4rYeA")]
     [DisplayName("TM Challenge")]
     [IsoXmlTag("TMChllng")]
-    public IsoMax140Binary? TMChallenge { get; init; }
+    public Max140Binary? TMChallenge { get; init; }
 
     /// <summary>
     /// Temporary encryption key that the host will use for protecting keys to download.
@@ -54,7 +54,7 @@ public record DataSetRequest7
     [IsoId("_cSPIDbZzEfCUZfsQO4rYeA")]
     [DisplayName("Delegation Proof")]
     [IsoXmlTag("DlgtnProof")]
-    public IsoMax5000Binary? DelegationProof { get; init; }
+    public Max5000Binary? DelegationProof { get; init; }
 
     /// <summary>
     /// Protected proof of delegation.

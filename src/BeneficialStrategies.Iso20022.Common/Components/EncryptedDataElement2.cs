@@ -35,12 +35,12 @@ public record EncryptedDataElement2
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax35Text? Identification { get; init; }
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Other Clear Text Format.
     /// </summary>
     [DisplayName("Other Clear Text Format")]
     [IsoXmlTag("OthrClearTxtFrmt")]
-    public IsoMax35Text? OtherClearTextFormat { get; init; }
+    public Max35Text? OtherClearTextFormat { get; init; }
 }

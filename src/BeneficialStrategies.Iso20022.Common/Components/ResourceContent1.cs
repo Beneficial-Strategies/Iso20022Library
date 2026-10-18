@@ -48,5 +48,5 @@ public record ResourceContent1
     [IsoXmlTag("RsrcRef")]
     [IsoSimpleType(IsoSimpleType.Max1025Text)]
     [StringLength(maximumLength: 1025, MinimumLength = 1)]
-    public IsoMax1025Text? ResourceReference { get; init; }
+    public Max1025Text? ResourceReference { get; init; }
 }

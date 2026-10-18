@@ -24,7 +24,7 @@ public record AccountIdentification35
     [IsoXmlTag("SfkpgAcct")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax35Text SafekeepingAccount { get; init; }
+    public required RestrictedFINXMax35Text SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Party that legally owns the account.

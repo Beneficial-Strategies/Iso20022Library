@@ -21,7 +21,7 @@ public record SettlementObligation10
     /// </summary>
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax35Text? Description { get; init; }
+    public Max35Text? Description { get; init; }
 
     /// <summary>
     /// Net Position Price.
@@ -63,7 +63,7 @@ public record SettlementObligation10
     /// </summary>
     [DisplayName("Related Settlement Obligation Identification")]
     [IsoXmlTag("RltdSttlmOblgtnId")]
-    public IsoMax35Text? RelatedSettlementObligationIdentification { get; init; }
+    public Max35Text? RelatedSettlementObligationIdentification { get; init; }
 
     /// <summary>
     /// Securities Movement Type.
@@ -84,14 +84,14 @@ public record SettlementObligation10
     /// </summary>
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public required IsoISODate SettlementDate { get; init; }
+    public required DateOnly SettlementDate { get; init; }
 
     /// <summary>
     /// Trade Date.
     /// </summary>
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
-    public IsoISODate? TradeDate { get; init; }
+    public DateOnly? TradeDate { get; init; }
 
     /// <summary>
     /// Trading Currency.

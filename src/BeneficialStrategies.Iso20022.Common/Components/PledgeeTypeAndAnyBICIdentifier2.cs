@@ -23,7 +23,7 @@ public record PledgeeTypeAndAnyBICIdentifier2
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
-    public required IsoAnyBICDec2014Identifier Identification { get; init; }
+    public required AnyBICDec2014Identifier Identification { get; init; }
 
     /// <summary>
     /// Entity to which the financial instruments are pledged expressed as a code.

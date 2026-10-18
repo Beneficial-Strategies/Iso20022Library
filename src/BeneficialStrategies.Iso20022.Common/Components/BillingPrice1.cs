@@ -48,5 +48,5 @@ public record BillingPrice1
     [IsoXmlTag("Rule")]
     [IsoSimpleType(IsoSimpleType.Max20Text)]
     [StringLength(maximumLength: 20, MinimumLength = 1)]
-    public IsoMax20Text? Rule { get; init; }
+    public Max20Text? Rule { get; init; }
 }

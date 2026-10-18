@@ -24,7 +24,7 @@ public record CryptographicKey6
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Name { get; init; }
+    public Max140Text? Name { get; init; }
 
     /// <summary>
     /// Name of the cryptographic key.
@@ -34,7 +34,7 @@ public record CryptographicKey6
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text Identification { get; init; }
+    public required Max140Text Identification { get; init; }
 
     /// <summary>
     /// Version of the cryptographic key.
@@ -44,7 +44,7 @@ public record CryptographicKey6
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Version { get; init; }
+    public Max256Text? Version { get; init; }
 
     /// <summary>
     /// Type of algorithm used by the cryptographic key.
@@ -71,7 +71,7 @@ public record CryptographicKey6
     [DisplayName("Activation Date")]
     [IsoXmlTag("ActvtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? ActivationDate { get; init; }
+    public ISODateTime? ActivationDate { get; init; }
 
     /// <summary>
     /// Date and time on which the key must be deactivated.
@@ -80,7 +80,7 @@ public record CryptographicKey6
     [DisplayName("Deactivation Date")]
     [IsoXmlTag("DeactvtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? DeactivationDate { get; init; }
+    public ISODateTime? DeactivationDate { get; init; }
 
     /// <summary>
     /// Encrypted value of the key present as CMS structure EnvelopedData.
@@ -96,7 +96,7 @@ public record CryptographicKey6
     [IsoId("_VzAv4HvPEeSCJdwgzb6SFw")]
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
-    public SimpleValueList<IsoMax5000Binary> Certificate { get; init; } = [];
+    public SimpleValueList<Max5000Binary> Certificate { get; init; } = [];
 
     /// <summary>
     /// Chip card protection of the key.
@@ -105,5 +105,5 @@ public record CryptographicKey6
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
     [IsoSimpleType(IsoSimpleType.Max5000Binary)]
-    public IsoMax5000Binary? ICCRelatedData { get; init; }
+    public Max5000Binary? ICCRelatedData { get; init; }
 }

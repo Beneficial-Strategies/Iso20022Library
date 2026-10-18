@@ -56,14 +56,14 @@ public record BookingConfirmation5
     /// </summary>
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
-    public IsoBaseOneRate? ExchangeRate { get; init; }
+    public BaseOneRate? ExchangeRate { get; init; }
 
     /// <summary>
     /// Reason.
     /// </summary>
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public IsoMax140Text? Reason { get; init; }
+    public Max140Text? Reason { get; init; }
 
     /// <summary>
     /// References.

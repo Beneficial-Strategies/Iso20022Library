@@ -23,7 +23,7 @@ public record Unit12
     [DisplayName("Units Number")]
     [IsoXmlTag("UnitsNb")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public required IsoDecimalNumber UnitsNumber { get; init; }
+    public required DecimalNumber UnitsNumber { get; init; }
 
     /// <summary>
     /// Date the investor or its agent placed the original order.
@@ -32,7 +32,7 @@ public record Unit12
     [DisplayName("Order Date")]
     [IsoXmlTag("OrdrDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? OrderDate { get; init; }
+    public DateOnly? OrderDate { get; init; }
 
     /// <summary>
     /// Date the investor purchased the financial instrument.
@@ -41,7 +41,7 @@ public record Unit12
     [DisplayName("Acquisition Date")]
     [IsoXmlTag("AcqstnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? AcquisitionDate { get; init; }
+    public DateOnly? AcquisitionDate { get; init; }
 
     /// <summary>
     /// Certificate representing the security that is delivered.
@@ -49,7 +49,7 @@ public record Unit12
     [IsoId("_aGhRqZECEem7fvtoGpNpow")]
     [DisplayName("Certificate Number")]
     [IsoXmlTag("CertNb")]
-    public SimpleValueList<IsoMax35Text> CertificateNumber { get; init; } = [];
+    public SimpleValueList<Max35Text> CertificateNumber { get; init; } = [];
 
     /// <summary>
     /// Tax group to which the purchased investment fund units belong. The investor indicates to the intermediary operating pooled nominees, which type of unit is to be sold.
@@ -67,7 +67,7 @@ public record Unit12
     [IsoXmlTag("Ref")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Reference { get; init; }
+    public Max35Text? Reference { get; init; }
 
     /// <summary>
     /// Information related to the price. This may specify the price of original order confirmation.

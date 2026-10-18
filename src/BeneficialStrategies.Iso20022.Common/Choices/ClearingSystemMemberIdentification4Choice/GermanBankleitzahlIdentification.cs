@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
         /// </summary>
         [IsoXmlTag("DEBLZ")]
         [IsoSimpleType(IsoSimpleType.GermanBankleitzahlIdentifier)]
-        public required IsoGermanBankleitzahlIdentifier Value { get; init; }
+        public required GermanBankleitzahlIdentifier Value { get; init; }
     }
 }

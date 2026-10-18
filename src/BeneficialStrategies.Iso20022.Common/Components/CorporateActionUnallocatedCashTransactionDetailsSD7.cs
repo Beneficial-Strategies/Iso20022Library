@@ -31,7 +31,7 @@ public record CorporateActionUnallocatedCashTransactionDetailsSD7
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public IsoExact3NumericText? OptionNumber { get; init; }
+    public Exact3NumericText? OptionNumber { get; init; }
 
     /// <summary>
     /// Corporate action options available to the account owner.
@@ -73,7 +73,7 @@ public record CorporateActionUnallocatedCashTransactionDetailsSD7
     [IsoXmlTag("ContraPtcptNb")]
     [IsoSimpleType(IsoSimpleType.Max8Text)]
     [StringLength(maximumLength: 8, MinimumLength = 1)]
-    public IsoMax8Text? ContraParticipantNumber { get; init; }
+    public Max8Text? ContraParticipantNumber { get; init; }
 
     /// <summary>
     /// Date/time at which the movement was due to take place (cash and/or securities).

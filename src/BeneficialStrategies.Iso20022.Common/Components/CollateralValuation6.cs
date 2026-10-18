@@ -31,5 +31,5 @@ public record CollateralValuation6
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public required IsoISINOct2015Identifier ISIN { get; init; }
+    public required ISINOct2015Identifier ISIN { get; init; }
 }

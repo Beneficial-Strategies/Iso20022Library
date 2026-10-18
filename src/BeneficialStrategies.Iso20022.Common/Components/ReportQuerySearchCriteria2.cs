@@ -41,7 +41,7 @@ public record ReportQuerySearchCriteria2
     [IsoXmlTag("RptNm")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4AlphaNumericText? ReportName { get; init; }
+    public Max4AlphaNumericText? ReportName { get; init; }
 
     /// <summary>
     /// Specifies the query message name identifier to which the message refers.
@@ -51,7 +51,7 @@ public record ReportQuerySearchCriteria2
     [IsoXmlTag("MsgNmId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MessageNameIdentification { get; init; }
+    public Max35Text? MessageNameIdentification { get; init; }
 
     /// <summary>
     /// Report owning party.

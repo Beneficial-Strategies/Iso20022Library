@@ -22,7 +22,7 @@ public record MeetingNotice10
     [IsoId("_WPfn4ajJEfCzuLlmLrhIvA")]
     [DisplayName("Meeting Identification")]
     [IsoXmlTag("MtgId")]
-    public required IsoMax35Text MeetingIdentification { get; init; }
+    public required Max35Text MeetingIdentification { get; init; }
 
     /// <summary>
     /// Identification assigned to the meeting by the issuer.
@@ -30,7 +30,7 @@ public record MeetingNotice10
     [IsoId("_WPfn46jJEfCzuLlmLrhIvA")]
     [DisplayName("Issuer Meeting Identification")]
     [IsoXmlTag("IssrMtgId")]
-    public IsoMax35Text? IssuerMeetingIdentification { get; init; }
+    public Max35Text? IssuerMeetingIdentification { get; init; }
 
     /// <summary>
     /// Type of security holders meeting.
@@ -62,7 +62,7 @@ public record MeetingNotice10
     [IsoId("_WPfn66jJEfCzuLlmLrhIvA")]
     [DisplayName("One Man One Vote Indicator")]
     [IsoXmlTag("OneManOneVoteInd")]
-    public IsoYesNoIndicator? OneManOneVoteIndicator { get; init; }
+    public YesNoIndicator? OneManOneVoteIndicator { get; init; }
 
     /// <summary>
     /// Method of voting participation to the general meeting and related voting deadline per method of participation.
@@ -86,7 +86,7 @@ public record MeetingNotice10
     [IsoId("_WPfn8ajJEfCzuLlmLrhIvA")]
     [DisplayName("Additional Documentation URL Address")]
     [IsoXmlTag("AddtlDcmnttnURLAdr")]
-    public SimpleValueList<IsoMax2048Text> AdditionalDocumentationURLAddress { get; init; } = [];
+    public SimpleValueList<Max2048Text> AdditionalDocumentationURLAddress { get; init; } = [];
 
     /// <summary>
     /// Web address containing information solely intended for the immediate account holder to enable or facilitate event processing.
@@ -94,7 +94,7 @@ public record MeetingNotice10
     [IsoId("_WPfn86jJEfCzuLlmLrhIvA")]
     [DisplayName("Event Processing Web Site Address")]
     [IsoXmlTag("EvtPrcgWebSiteAdr")]
-    public IsoMax2048Text? EventProcessingWebSiteAddress { get; init; }
+    public Max2048Text? EventProcessingWebSiteAddress { get; init; }
 
     /// <summary>
     /// Additional procedural information about the general meeting, specifying the participation requirements and the voting procedures.
@@ -118,7 +118,7 @@ public record MeetingNotice10
     [IsoId("_WPfn-ajJEfCzuLlmLrhIvA")]
     [DisplayName("Total Number Of Voting Rights")]
     [IsoXmlTag("TtlNbOfVtngRghts")]
-    public IsoNumber? TotalNumberOfVotingRights { get; init; }
+    public Number? TotalNumberOfVotingRights { get; init; }
 
     /// <summary>
     /// Address where the information on the proxy should be sent.

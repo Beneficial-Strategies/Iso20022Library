@@ -31,7 +31,7 @@ public record CardholderAuthentication9
     [DisplayName("Authentication Value")]
     [IsoXmlTag("AuthntcnVal")]
     [IsoSimpleType(IsoSimpleType.Max5000Binary)]
-    public IsoMax5000Binary? AuthenticationValue { get; init; }
+    public Max5000Binary? AuthenticationValue { get; init; }
 
     /// <summary>
     /// Protection of the authentication value.

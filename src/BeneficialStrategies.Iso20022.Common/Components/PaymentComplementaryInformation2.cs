@@ -24,7 +24,7 @@ public record PaymentComplementaryInformation2
     [IsoXmlTag("InstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? InstructionIdentification { get; init; }
+    public Max35Text? InstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the initiating party, to unambiguously identify the transaction. This identification is passed on, unchanged, throughout the entire end-to-end chain.||Usage: The end-to-end identification can be used for reconciliation or to link tasks relating to the transaction. It can be included in several messages related to the transaction.||Usage: In case there are technical limitations to pass on multiple references, the end-to-end identification must be passed on throughout the entire end-to-end chain.
@@ -34,7 +34,7 @@ public record PaymentComplementaryInformation2
     [IsoXmlTag("EndToEndId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? EndToEndIdentification { get; init; }
+    public Max35Text? EndToEndIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the first instructing agent, to unambiguously identify the transaction that is passed on, unchanged, throughout the entire interbank chain. |Usage: The transaction identification can be used for reconciliation, tracking or to link tasks relating to the transaction on the interbank level. |Usage: The instructing agent has to make sure that the transaction identification is unique for a pre-agreed period.
@@ -44,7 +44,7 @@ public record PaymentComplementaryInformation2
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TransactionIdentification { get; init; }
+    public Max35Text? TransactionIdentification { get; init; }
 
     /// <summary>
     /// Set of elements used to further specify the type of transaction.
@@ -61,7 +61,7 @@ public record PaymentComplementaryInformation2
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RequestedExecutionDate { get; init; }
+    public DateOnly? RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Date and time at which the creditor requests that the amount of money is to be collected from the debtor.
@@ -70,7 +70,7 @@ public record PaymentComplementaryInformation2
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RequestedCollectionDate { get; init; }
+    public DateOnly? RequestedCollectionDate { get; init; }
 
     /// <summary>
     /// Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.
@@ -79,7 +79,7 @@ public record PaymentComplementaryInformation2
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? InterbankSettlementDate { get; init; }
+    public DateOnly? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.
@@ -257,7 +257,7 @@ public record PaymentComplementaryInformation2
     [IsoXmlTag("InstrForDbtrAgt")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? InstructionForDebtorAgent { get; init; }
+    public Max140Text? InstructionForDebtorAgent { get; init; }
 
     /// <summary>
     /// Agent immediately prior to the instructing agent.

@@ -23,7 +23,7 @@ public record CardPaymentTransaction85
     [DisplayName("Transaction Capture")]
     [IsoXmlTag("TxCaptr")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? TransactionCapture { get; init; }
+    public TrueFalseIndicator? TransactionCapture { get; init; }
 
     /// <summary>
     /// Type of transaction being undertaken for the main service.
@@ -57,7 +57,7 @@ public record CardPaymentTransaction85
     [IsoXmlTag("MrchntCtgyCd")]
     [IsoSimpleType(IsoSimpleType.Min3Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 3)]
-    public required IsoMin3Max4Text MerchantCategoryCode { get; init; }
+    public required Min3Max4Text MerchantCategoryCode { get; init; }
 
     /// <summary>
     /// Global reference of the sale transaction for the sale system.
@@ -67,7 +67,7 @@ public record CardPaymentTransaction85
     [IsoXmlTag("SaleRefId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SaleReferenceIdentification { get; init; }
+    public Max35Text? SaleReferenceIdentification { get; init; }
 
     /// <summary>
     /// Identification of the transaction assigned by the POI (Point Of Interaction).
@@ -99,5 +99,5 @@ public record CardPaymentTransaction85
     [IsoId("_GYmK0_a0EeerBJ4shjAzSA")]
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
-    public SimpleValueList<IsoMax70Text> AdditionalTransactionData { get; init; } = [];
+    public SimpleValueList<Max70Text> AdditionalTransactionData { get; init; } = [];
 }

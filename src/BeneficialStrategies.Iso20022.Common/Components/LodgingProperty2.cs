@@ -32,7 +32,7 @@ public record LodgingProperty2
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Identifier that describes the lodging establishment as a prestigious property.
@@ -42,7 +42,7 @@ public record LodgingProperty2
     [IsoXmlTag("PrstgsPrprty")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PrestigiousProperty { get; init; }
+    public Max35Text? PrestigiousProperty { get; init; }
 
     /// <summary>
     /// Name of the property.
@@ -52,7 +52,7 @@ public record LodgingProperty2
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Name { get; init; }
+    public Max35Text? Name { get; init; }
 
     /// <summary>
     /// Identification of the lodging company.
@@ -104,5 +104,5 @@ public record LodgingProperty2
     [DisplayName("Fire Safety Act Indicator")]
     [IsoXmlTag("FireSftyActInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? FireSafetyActIndicator { get; init; }
+    public TrueFalseIndicator? FireSafetyActIndicator { get; init; }
 }

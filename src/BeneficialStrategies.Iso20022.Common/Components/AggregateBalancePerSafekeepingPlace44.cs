@@ -86,7 +86,7 @@ public record AggregateBalancePerSafekeepingPlace44
     [IsoId("_P50CY6g2EfCXwLUUylXgrQ")]
     [DisplayName("Days Accrued")]
     [IsoXmlTag("DaysAcrd")]
-    public IsoNumber? DaysAccrued { get; init; }
+    public Number? DaysAccrued { get; init; }
 
     /// <summary>
     /// Valuation amounts provided in the base currency of the account.
@@ -142,5 +142,5 @@ public record AggregateBalancePerSafekeepingPlace44
     [IsoId("_P50Csag2EfCXwLUUylXgrQ")]
     [DisplayName("Holding Additional Details")]
     [IsoXmlTag("HldgAddtlDtls")]
-    public IsoMax350Text? HoldingAdditionalDetails { get; init; }
+    public Max350Text? HoldingAdditionalDetails { get; init; }
 }

@@ -21,7 +21,7 @@ public record DigestedData6
     /// </summary>
     [DisplayName("Digest")]
     [IsoXmlTag("Dgst")]
-    public required IsoMax140Binary Digest { get; init; }
+    public required Max140Binary Digest { get; init; }
 
     /// <summary>
     /// Digest Algorithm.
@@ -42,5 +42,5 @@ public record DigestedData6
     /// </summary>
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
-    public IsoNumber? Version { get; init; }
+    public Number? Version { get; init; }
 }

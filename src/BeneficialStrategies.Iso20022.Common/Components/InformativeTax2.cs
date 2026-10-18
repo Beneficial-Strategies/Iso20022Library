@@ -42,7 +42,7 @@ public record InformativeTax2
     /// </summary>
     [DisplayName("Percentage Of Debt Claim")]
     [IsoXmlTag("PctgOfDebtClm")]
-    public IsoPercentageRate? PercentageOfDebtClaim { get; init; }
+    public PercentageRate? PercentageOfDebtClaim { get; init; }
 
     /// <summary>
     /// Taxable Income Per Dividend.

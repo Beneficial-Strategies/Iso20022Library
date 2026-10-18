@@ -21,7 +21,7 @@ public record EligiblePosition19
     /// </summary>
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public IsoMax35Text? AccountIdentification { get; init; }
+    public Max35Text? AccountIdentification { get; init; }
 
     /// <summary>
     /// Account Owner.
@@ -35,7 +35,7 @@ public record EligiblePosition19
     /// </summary>
     [DisplayName("Block Chain Address Or Wallet")]
     [IsoXmlTag("BlckChainAdrOrWllt")]
-    public IsoMax140Text? BlockChainAddressOrWallet { get; init; }
+    public Max140Text? BlockChainAddressOrWallet { get; init; }
 
     /// <summary>
     /// Holding Balance.

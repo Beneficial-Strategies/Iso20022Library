@@ -24,7 +24,7 @@ public record AccountStatement11
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Provides details on the page number of the statement.
@@ -42,7 +42,7 @@ public record AccountStatement11
     [DisplayName("Electronic Sequence Number")]
     [IsoXmlTag("ElctrncSeqNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? ElectronicSequenceNumber { get; init; }
+    public Number? ElectronicSequenceNumber { get; init; }
 
     /// <summary>
     /// Specifies the range of identification sequence numbers, as provided in the request.
@@ -59,7 +59,7 @@ public record AccountStatement11
     [DisplayName("Legal Sequence Number")]
     [IsoXmlTag("LglSeqNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? LegalSequenceNumber { get; init; }
+    public Number? LegalSequenceNumber { get; init; }
 
     /// <summary>
     /// Date and time at which the statement was created.
@@ -68,7 +68,7 @@ public record AccountStatement11
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? CreationDateTime { get; init; }
+    public ISODateTime? CreationDateTime { get; init; }
 
     /// <summary>
     /// Range of time between a start date and an end date for which the account statement is issued.
@@ -156,5 +156,5 @@ public record AccountStatement11
     [IsoXmlTag("AddtlStmtInf")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public IsoMax500Text? AdditionalStatementInformation { get; init; }
+    public Max500Text? AdditionalStatementInformation { get; init; }
 }

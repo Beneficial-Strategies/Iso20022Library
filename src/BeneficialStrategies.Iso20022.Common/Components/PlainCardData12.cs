@@ -23,7 +23,7 @@ public record PlainCardData12
     [DisplayName("PAN")]
     [IsoXmlTag("PAN")]
     [IsoSimpleType(IsoSimpleType.Min8Max28NumericText)]
-    public required IsoMin8Max28NumericText PAN { get; init; }
+    public required Min8Max28NumericText PAN { get; init; }
 
     /// <summary>
     /// Identify a card or a payment token inside a set of cards with the same PAN or token.
@@ -32,7 +32,7 @@ public record PlainCardData12
     [DisplayName("Card Sequence Number")]
     [IsoXmlTag("CardSeqNb")]
     [IsoSimpleType(IsoSimpleType.Min2Max3NumericText)]
-    public IsoMin2Max3NumericText? CardSequenceNumber { get; init; }
+    public Min2Max3NumericText? CardSequenceNumber { get; init; }
 
     /// <summary>
     /// Expiry date of the card or the payment token expressed either in the YYYY-MM format, or in the YYYY-MM-DD format.
@@ -42,5 +42,5 @@ public record PlainCardData12
     [IsoXmlTag("XpryDt")]
     [IsoSimpleType(IsoSimpleType.Max10Text)]
     [StringLength(maximumLength: 10, MinimumLength = 1)]
-    public IsoMax10Text? ExpiryDate { get; init; }
+    public Max10Text? ExpiryDate { get; init; }
 }

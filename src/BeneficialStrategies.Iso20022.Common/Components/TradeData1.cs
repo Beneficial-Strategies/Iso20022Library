@@ -24,7 +24,7 @@ public record TradeData1
     [IsoXmlTag("NtfctnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text NotificationIdentification { get; init; }
+    public required Max35Text NotificationIdentification { get; init; }
 
     /// <summary>
     /// Reference to the unique identification assigned to a trade by a central matching system.
@@ -34,7 +34,7 @@ public record TradeData1
     [IsoXmlTag("MtchgSysUnqRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MatchingSystemUniqueReference { get; init; }
+    public required Max35Text MatchingSystemUniqueReference { get; init; }
 
     /// <summary>
     /// Identifies the party which assigned a status to a treasury trade.
@@ -44,7 +44,7 @@ public record TradeData1
     [IsoXmlTag("StsOrgtr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? StatusOriginator { get; init; }
+    public Max35Text? StatusOriginator { get; init; }
 
     /// <summary>
     /// Specifies the new status of a trade.
@@ -62,7 +62,7 @@ public record TradeData1
     [IsoXmlTag("XtndedCurSts")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoExtended350Code ExtendedCurrentStatus { get; init; }
+    public required Extended350Code ExtendedCurrentStatus { get; init; }
 
     /// <summary>
     /// Additional information on the current status of a trade in a central system.
@@ -72,7 +72,7 @@ public record TradeData1
     [IsoXmlTag("CurStsSubTp")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? CurrentStatusSubType { get; init; }
+    public Max70Text? CurrentStatusSubType { get; init; }
 
     /// <summary>
     /// Specifies the time at which the current status was assigned.
@@ -81,7 +81,7 @@ public record TradeData1
     [DisplayName("Current Status Time")]
     [IsoXmlTag("CurStsTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? CurrentStatusTime { get; init; }
+    public ISODateTime? CurrentStatusTime { get; init; }
 
     /// <summary>
     /// Specifies the previous status of a trade.
@@ -99,7 +99,7 @@ public record TradeData1
     [IsoXmlTag("XtndedPrvsSts")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedPreviousStatus { get; init; }
+    public Extended350Code? ExtendedPreviousStatus { get; init; }
 
     /// <summary>
     /// Additional information on the previous status of a trade in a central system.
@@ -109,7 +109,7 @@ public record TradeData1
     [IsoXmlTag("PrvsStsSubTp")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? PreviousStatusSubType { get; init; }
+    public Max70Text? PreviousStatusSubType { get; init; }
 
     /// <summary>
     /// Specifies the time at which the previous status was assigned.
@@ -118,7 +118,7 @@ public record TradeData1
     [DisplayName("Previous Status Time")]
     [IsoXmlTag("PrvsStsTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? PreviousStatusTime { get; init; }
+    public ISODateTime? PreviousStatusTime { get; init; }
 
     /// <summary>
     /// Specifies the product for which the status of the confirmation is reported.
@@ -128,5 +128,5 @@ public record TradeData1
     [IsoXmlTag("PdctTp")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4AlphaNumericText? ProductType { get; init; }
+    public Max4AlphaNumericText? ProductType { get; init; }
 }

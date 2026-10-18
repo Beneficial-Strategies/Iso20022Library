@@ -32,7 +32,7 @@ public record ReconciliationRequestData1
     [IsoXmlTag("AcqrrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AcquirerIdentification { get; init; }
+    public Max35Text? AcquirerIdentification { get; init; }
 
     /// <summary>
     /// Identification of the reconciliation period between Sale and POI.
@@ -42,5 +42,5 @@ public record ReconciliationRequestData1
     [IsoXmlTag("POIRcncltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? POIReconciliationIdentification { get; init; }
+    public Max35Text? POIReconciliationIdentification { get; init; }
 }

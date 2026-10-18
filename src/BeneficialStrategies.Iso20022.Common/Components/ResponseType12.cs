@@ -21,7 +21,7 @@ public record ResponseType12
     /// </summary>
     [DisplayName("Additional Response Information")]
     [IsoXmlTag("AddtlRspnInf")]
-    public IsoMax140Text? AdditionalResponseInformation { get; init; }
+    public Max140Text? AdditionalResponseInformation { get; init; }
 
     /// <summary>
     /// Response.

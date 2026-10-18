@@ -44,5 +44,5 @@ public record CounterpartyDetailsType1
     [IsoXmlTag("AbbrvtdLclLangSctyNm")]
     [IsoSimpleType(IsoSimpleType.Max240Text)]
     [StringLength(maximumLength: 240, MinimumLength = 1)]
-    public required IsoMax240Text AbbreviatedLocalLanguageSecurityName { get; init; }
+    public required Max240Text AbbreviatedLocalLanguageSecurityName { get; init; }
 }

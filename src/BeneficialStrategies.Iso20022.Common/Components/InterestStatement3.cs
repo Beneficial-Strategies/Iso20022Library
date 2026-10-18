@@ -47,7 +47,7 @@ public record InterestStatement3
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ValueDate { get; init; }
+    public required DateOnly ValueDate { get; init; }
 
     /// <summary>
     /// Provides the reference to the interest payment request.
@@ -57,7 +57,7 @@ public record InterestStatement3
     [IsoXmlTag("IntrstPmtReqId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? InterestPaymentRequestIdentification { get; init; }
+    public Max35Text? InterestPaymentRequestIdentification { get; init; }
 
     /// <summary>
     /// Provides the details of the interest calculation.

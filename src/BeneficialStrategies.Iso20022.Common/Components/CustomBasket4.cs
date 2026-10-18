@@ -23,7 +23,7 @@ public record CustomBasket4
     [DisplayName("Structurer")]
     [IsoXmlTag("Strr")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? Structurer { get; init; }
+    public LEIIdentifier? Structurer { get; init; }
 
     /// <summary>
     /// Identifier of the custom basket assigned by the structurer allowing to link the constituents of the basket of indexes.
@@ -33,7 +33,7 @@ public record CustomBasket4
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoMax52Text? Identification { get; init; }
+    public Max52Text? Identification { get; init; }
 
     /// <summary>
     /// Identifier of the underliers that represent the constituents of a custom basket.

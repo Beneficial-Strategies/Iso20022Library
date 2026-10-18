@@ -21,7 +21,7 @@ public record Option16
     /// </summary>
     [DisplayName("Additional Option Information")]
     [IsoXmlTag("AddtlOptnInf")]
-    public required IsoMax140Text AdditionalOptionInformation { get; init; }
+    public required Max140Text AdditionalOptionInformation { get; init; }
 
     /// <summary>
     /// Data.
@@ -35,7 +35,7 @@ public record Option16
     /// </summary>
     [DisplayName("Derivative Option Identification")]
     [IsoXmlTag("DerivOptnId")]
-    public required IsoMax35Text DerivativeOptionIdentification { get; init; }
+    public required Max35Text DerivativeOptionIdentification { get; init; }
 
     /// <summary>
     /// Exercise Status.
@@ -56,14 +56,14 @@ public record Option16
     /// </summary>
     [DisplayName("Expiry Date And Time")]
     [IsoXmlTag("XpryDtAndTm")]
-    public required IsoISODateTime ExpiryDateAndTime { get; init; }
+    public required ISODateTime ExpiryDateAndTime { get; init; }
 
     /// <summary>
     /// Expiry Location.
     /// </summary>
     [DisplayName("Expiry Location")]
     [IsoXmlTag("XpryLctn")]
-    public required IsoMax4AlphaNumericText ExpiryLocation { get; init; }
+    public required Max4AlphaNumericText ExpiryLocation { get; init; }
 
     /// <summary>
     /// Option Amounts.
@@ -133,5 +133,5 @@ public record Option16
     /// </summary>
     [DisplayName("Volatility Margin")]
     [IsoXmlTag("VoltlyMrgn")]
-    public required IsoPercentageRate VolatilityMargin { get; init; }
+    public required PercentageRate VolatilityMargin { get; init; }
 }

@@ -48,7 +48,7 @@ public record CertificateManagementRequest2
     [IsoXmlTag("SctyDomn")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? SecurityDomain { get; init; }
+    public Max70Text? SecurityDomain { get; init; }
 
     /// <summary>
     /// PKCS#10 (Public Key Certificate Standard 10) certification request coded in base64 ASN.1/DER (Abstract Syntax Notation 1, Distinguished Encoding Rules) or PEM (Privacy Enhanced Message) format.
@@ -58,7 +58,7 @@ public record CertificateManagementRequest2
     [IsoXmlTag("BinryCertfctnReq")]
     [IsoSimpleType(IsoSimpleType.Max20000Text)]
     [StringLength(maximumLength: 20000, MinimumLength = 1)]
-    public IsoMax20000Text? BinaryCertificationRequest { get; init; }
+    public Max20000Text? BinaryCertificationRequest { get; init; }
 
     /// <summary>
     /// Certification request PKCS#10 (Public Key Certificate Standard 10) for creation or renewal of an X.509 certificate.
@@ -75,7 +75,7 @@ public record CertificateManagementRequest2
     [DisplayName("Client Certificate")]
     [IsoXmlTag("ClntCert")]
     [IsoSimpleType(IsoSimpleType.Max10KBinary)]
-    public IsoMax10KBinary? ClientCertificate { get; init; }
+    public Max10KBinary? ClientCertificate { get; init; }
 
     /// <summary>
     /// Identification of the white list element, for white list addition or removal.

@@ -30,5 +30,5 @@ public record MessageReconciliation4
     [IsoId("_3WGOFWP5EfCX7uJiAWHfoQ")]
     [DisplayName("Count")]
     [IsoXmlTag("Cnt")]
-    public required IsoNumber Count { get; init; }
+    public required Number Count { get; init; }
 }

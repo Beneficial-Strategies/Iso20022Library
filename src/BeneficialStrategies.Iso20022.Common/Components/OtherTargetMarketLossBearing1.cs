@@ -24,7 +24,7 @@ public record OtherTargetMarketLossBearing1
     [IsoXmlTag("AbltyToBearLossesTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AbilityToBearLossesType { get; init; }
+    public Max35Text? AbilityToBearLossesType { get; init; }
 
     /// <summary>
     /// Choice of formats for the specification of whether the product is aimed at the type of loss bearing.

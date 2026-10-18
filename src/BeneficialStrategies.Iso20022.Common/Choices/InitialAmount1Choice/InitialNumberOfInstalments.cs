@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.InitialAmount1Choice
         /// </summary>
         [IsoXmlTag("InitlNbOfInstlmts")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public required IsoNumber Value { get; init; }
+        public required Number Value { get; init; }
     }
 }

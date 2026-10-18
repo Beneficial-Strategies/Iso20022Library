@@ -21,21 +21,21 @@ public record OriginalTransactionReference43
     /// </summary>
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
-    public IsoISODateTime? CreationDateTime { get; init; }
+    public ISODateTime? CreationDateTime { get; init; }
 
     /// <summary>
     /// Message Identification.
     /// </summary>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
-    public IsoMax35Text? MessageIdentification { get; init; }
+    public Max35Text? MessageIdentification { get; init; }
 
     /// <summary>
     /// Message Name Identification.
     /// </summary>
     [DisplayName("Message Name Identification")]
     [IsoXmlTag("MsgNmId")]
-    public IsoMax35Text? MessageNameIdentification { get; init; }
+    public Max35Text? MessageNameIdentification { get; init; }
 
     /// <summary>
     /// Original Transaction.

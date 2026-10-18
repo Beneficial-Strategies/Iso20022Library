@@ -38,7 +38,7 @@ public record Fee12
     [IsoId("19414b64-5d11-479f-918e-fecdf13acc5a")]
     [DisplayName("Repaired Standard Rate")]
     [IsoXmlTag("RprdStdRate")]
-    public IsoPercentageRate? RepairedStandardRate { get; init; }
+    public PercentageRate? RepairedStandardRate { get; init; }
 
     /// <summary>
     /// Modified value of the discount amount applied on the order.
@@ -54,7 +54,7 @@ public record Fee12
     [IsoId("311b1045-c96e-4d4e-9dc6-8ed1bba59b85")]
     [DisplayName("Repaired Discount Rate")]
     [IsoXmlTag("RprdDscntRate")]
-    public IsoPercentageRate? RepairedDiscountRate { get; init; }
+    public PercentageRate? RepairedDiscountRate { get; init; }
 
     /// <summary>
     /// Modified value of the requested fee (charge/commission) amount applied on the order.
@@ -70,7 +70,7 @@ public record Fee12
     [IsoId("7dd5d494-bc9a-46c2-bd6d-093bbd44a4d6")]
     [DisplayName("Repaired Requested Rate")]
     [IsoXmlTag("RprdReqdRate")]
-    public IsoPercentageRate? RepairedRequestedRate { get; init; }
+    public PercentageRate? RepairedRequestedRate { get; init; }
 
     /// <summary>
     /// Reference to the agreement established between the fund and another party.
@@ -78,7 +78,7 @@ public record Fee12
     [IsoId("8e76bd3d-4c75-4fd1-89ed-85aa3c1aa8d9")]
     [DisplayName("Commercial Agreement Reference")]
     [IsoXmlTag("ComrclAgrmtRef")]
-    public IsoMax35Text? CommercialAgreementReference { get; init; }
+    public Max35Text? CommercialAgreementReference { get; init; }
 
     /// <summary>
     /// Indicates if the CommercialAgreementReference is a new reference or not.
@@ -86,5 +86,5 @@ public record Fee12
     [IsoId("d5aac0c8-949b-4830-8169-b347e43aedb6")]
     [DisplayName("New Commercial Agreement Reference Indicator")]
     [IsoXmlTag("NewComrclAgrmtRefInd")]
-    public IsoYesNoIndicator? NewCommercialAgreementReferenceIndicator { get; init; }
+    public YesNoIndicator? NewCommercialAgreementReferenceIndicator { get; init; }
 }

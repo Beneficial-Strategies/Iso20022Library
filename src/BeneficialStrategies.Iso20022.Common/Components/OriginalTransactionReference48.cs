@@ -38,7 +38,7 @@ public record OriginalTransactionReference48
     [IsoId("_MITwNbvHEfCYYbmqNrQFSg")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
-    public IsoISODate? InterbankSettlementDate { get; init; }
+    public DateOnly? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Date and time at which the creditor requests that the amount of money is to be collected from the debtor.
@@ -46,7 +46,7 @@ public record OriginalTransactionReference48
     [IsoId("_MITwN7vHEfCYYbmqNrQFSg")]
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
-    public IsoISODate? RequestedCollectionDate { get; init; }
+    public DateOnly? RequestedCollectionDate { get; init; }
 
     /// <summary>
     /// Date at which the initiating party requests the clearing agent to process the payment.

@@ -32,7 +32,7 @@ public record TaxCalculationInformation4
     [IsoXmlTag("XtndedEUCptlGn")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedEUCapitalGain { get; init; }
+    public Extended350Code? ExtendedEUCapitalGain { get; init; }
 
     /// <summary>
     /// Percentage of the underlying assets of the funds that represents a debt and is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June).
@@ -41,7 +41,7 @@ public record TaxCalculationInformation4
     [DisplayName("Percentage Of Debt Claim")]
     [IsoXmlTag("PctgOfDebtClm")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? PercentageOfDebtClaim { get; init; }
+    public PercentageRate? PercentageOfDebtClaim { get; init; }
 
     /// <summary>
     /// Percentage of grandfathered debt claim.
@@ -50,7 +50,7 @@ public record TaxCalculationInformation4
     [DisplayName("Percentage Grandfathered Debt")]
     [IsoXmlTag("PctgGrdfthdDebt")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? PercentageGrandfatheredDebt { get; init; }
+    public PercentageRate? PercentageGrandfatheredDebt { get; init; }
 
     /// <summary>
     /// Amount included in the dividend that corresponds to gains directly or indirectly derived from interest payment in the scope of the European Directive on taxation of savings income in the form of interest payments.
@@ -76,5 +76,5 @@ public record TaxCalculationInformation4
     [IsoXmlTag("XtndedEUDvddSts")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedEUDividendStatus { get; init; }
+    public Extended350Code? ExtendedEUDividendStatus { get; init; }
 }

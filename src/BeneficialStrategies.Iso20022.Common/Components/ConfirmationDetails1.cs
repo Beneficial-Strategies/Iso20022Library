@@ -24,5 +24,5 @@ public record ConfirmationDetails1
     [IsoXmlTag("PayInSchdlRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text PayInScheduleReference { get; init; }
+    public required Max35Text PayInScheduleReference { get; init; }
 }

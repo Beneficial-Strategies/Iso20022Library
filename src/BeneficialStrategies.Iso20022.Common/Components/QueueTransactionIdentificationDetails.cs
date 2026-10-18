@@ -24,7 +24,7 @@ public record QueueTransactionIdentificationDetails
     [IsoXmlTag("QId")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoMax16Text QueueIdentification { get; init; }
+    public required Max16Text QueueIdentification { get; init; }
 
     /// <summary>
     /// Position of the payment instruction within the identified queue.
@@ -34,5 +34,5 @@ public record QueueTransactionIdentificationDetails
     [IsoXmlTag("PosInQ")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoMax16Text PositionInQueue { get; init; }
+    public required Max16Text PositionInQueue { get; init; }
 }

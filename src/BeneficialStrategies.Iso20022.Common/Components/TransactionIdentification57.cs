@@ -21,70 +21,70 @@ public record TransactionIdentification57
     /// </summary>
     [DisplayName("Acquirer Reference Data")]
     [IsoXmlTag("AcqrrRefData")]
-    public IsoMax140Text? AcquirerReferenceData { get; init; }
+    public Max140Text? AcquirerReferenceData { get; init; }
 
     /// <summary>
     /// Acquirer Reference Number.
     /// </summary>
     [DisplayName("Acquirer Reference Number")]
     [IsoXmlTag("AcqrrRefNb")]
-    public IsoMax23NumericText? AcquirerReferenceNumber { get; init; }
+    public Max23NumericText? AcquirerReferenceNumber { get; init; }
 
     /// <summary>
     /// Associated Data.
     /// </summary>
     [DisplayName("Associated Data")]
     [IsoXmlTag("AssoctdData")]
-    public IsoTrueFalseIndicator? AssociatedData { get; init; }
+    public TrueFalseIndicator? AssociatedData { get; init; }
 
     /// <summary>
     /// Associated Data Destination.
     /// </summary>
     [DisplayName("Associated Data Destination")]
     [IsoXmlTag("AssoctdDataDstn")]
-    public IsoMax35Text? AssociatedDataDestination { get; init; }
+    public Max35Text? AssociatedDataDestination { get; init; }
 
     /// <summary>
     /// Associated Data Reference.
     /// </summary>
     [DisplayName("Associated Data Reference")]
     [IsoXmlTag("AssoctdDataRef")]
-    public IsoMax70Text? AssociatedDataReference { get; init; }
+    public Max70Text? AssociatedDataReference { get; init; }
 
     /// <summary>
     /// Authentication Token.
     /// </summary>
     [DisplayName("Authentication Token")]
     [IsoXmlTag("AuthntcnTkn")]
-    public IsoMax35Text? AuthenticationToken { get; init; }
+    public Max35Text? AuthenticationToken { get; init; }
 
     /// <summary>
     /// Authorisation Sequence Number.
     /// </summary>
     [DisplayName("Authorisation Sequence Number")]
     [IsoXmlTag("AuthstnSeqNb")]
-    public IsoExact2NumericText? AuthorisationSequenceNumber { get; init; }
+    public Exact2NumericText? AuthorisationSequenceNumber { get; init; }
 
     /// <summary>
     /// Issuer Reference Data.
     /// </summary>
     [DisplayName("Issuer Reference Data")]
     [IsoXmlTag("IssrRefData")]
-    public IsoMax1000Text? IssuerReferenceData { get; init; }
+    public Max1000Text? IssuerReferenceData { get; init; }
 
     /// <summary>
     /// Life Cycle Identification.
     /// </summary>
     [DisplayName("Life Cycle Identification")]
     [IsoXmlTag("LifeCyclId")]
-    public IsoExact15Text? LifeCycleIdentification { get; init; }
+    public Exact15Text? LifeCycleIdentification { get; init; }
 
     /// <summary>
     /// Life Cycle Identification Missing.
     /// </summary>
     [DisplayName("Life Cycle Identification Missing")]
     [IsoXmlTag("LifeCyclIdMssng")]
-    public IsoMax70Text? LifeCycleIdentificationMissing { get; init; }
+    public Max70Text? LifeCycleIdentificationMissing { get; init; }
 
     /// <summary>
     /// Life Cycle Support.
@@ -98,42 +98,42 @@ public record TransactionIdentification57
     /// </summary>
     [DisplayName("Local Date")]
     [IsoXmlTag("LclDt")]
-    public IsoISODate? LocalDate { get; init; }
+    public DateOnly? LocalDate { get; init; }
 
     /// <summary>
     /// Local Time.
     /// </summary>
     [DisplayName("Local Time")]
     [IsoXmlTag("LclTm")]
-    public IsoISOTime? LocalTime { get; init; }
+    public ISOTime? LocalTime { get; init; }
 
     /// <summary>
     /// Other Purchase Identifier Type.
     /// </summary>
     [DisplayName("Other Purchase Identifier Type")]
     [IsoXmlTag("OthrPurchsIdrTp")]
-    public IsoMax35Text? OtherPurchaseIdentifierType { get; init; }
+    public Max35Text? OtherPurchaseIdentifierType { get; init; }
 
     /// <summary>
     /// Presentment Sequence Count.
     /// </summary>
     [DisplayName("Presentment Sequence Count")]
     [IsoXmlTag("PresntmntSeqCnt")]
-    public IsoExact2NumericText? PresentmentSequenceCount { get; init; }
+    public Exact2NumericText? PresentmentSequenceCount { get; init; }
 
     /// <summary>
     /// Presentment Sequence Number.
     /// </summary>
     [DisplayName("Presentment Sequence Number")]
     [IsoXmlTag("PresntmntSeqNb")]
-    public IsoExact2NumericText? PresentmentSequenceNumber { get; init; }
+    public Exact2NumericText? PresentmentSequenceNumber { get; init; }
 
     /// <summary>
     /// Purchase Identifier.
     /// </summary>
     [DisplayName("Purchase Identifier")]
     [IsoXmlTag("PurchsIdr")]
-    public IsoMax99Text? PurchaseIdentifier { get; init; }
+    public Max99Text? PurchaseIdentifier { get; init; }
 
     /// <summary>
     /// Purchase Identifier Type.
@@ -147,26 +147,26 @@ public record TransactionIdentification57
     /// </summary>
     [DisplayName("Retrieval Reference Number")]
     [IsoXmlTag("RtrvlRefNb")]
-    public required IsoExact12Text RetrievalReferenceNumber { get; init; }
+    public required Exact12Text RetrievalReferenceNumber { get; init; }
 
     /// <summary>
     /// System Trace Audit Number.
     /// </summary>
     [DisplayName("System Trace Audit Number")]
     [IsoXmlTag("SysTracAudtNb")]
-    public required IsoMax12NumericText SystemTraceAuditNumber { get; init; }
+    public required Max12NumericText SystemTraceAuditNumber { get; init; }
 
     /// <summary>
     /// Time Zone.
     /// </summary>
     [DisplayName("Time Zone")]
     [IsoXmlTag("TmZone")]
-    public IsoMax70Text? TimeZone { get; init; }
+    public Max70Text? TimeZone { get; init; }
 
     /// <summary>
     /// Transmission Date Time.
     /// </summary>
     [DisplayName("Transmission Date Time")]
     [IsoXmlTag("TrnsmssnDtTm")]
-    public IsoISODateTime? TransmissionDateTime { get; init; }
+    public ISODateTime? TransmissionDateTime { get; init; }
 }

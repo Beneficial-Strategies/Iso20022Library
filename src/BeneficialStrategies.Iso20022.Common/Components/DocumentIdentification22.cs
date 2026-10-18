@@ -24,7 +24,7 @@ public record DocumentIdentification22
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Date of issuance of the document.
@@ -33,5 +33,5 @@ public record DocumentIdentification22
     [DisplayName("Date Of Issue")]
     [IsoXmlTag("DtOfIsse")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DateOfIssue { get; init; }
+    public DateOnly? DateOfIssue { get; init; }
 }

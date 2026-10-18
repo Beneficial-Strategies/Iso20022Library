@@ -32,7 +32,7 @@ public record Charge17
     [IsoXmlTag("XtndedTp")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoExtended350Code ExtendedType { get; init; }
+    public required Extended350Code ExtendedType { get; init; }
 
     /// <summary>
     /// Method used to calculate a charge.
@@ -50,7 +50,7 @@ public record Charge17
     [IsoXmlTag("XtndedChrgBsis")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedChargeBasis { get; init; }
+    public Extended350Code? ExtendedChargeBasis { get; init; }
 
     /// <summary>
     /// Amount of money asked or paid for the charge.
@@ -67,7 +67,7 @@ public record Charge17
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate Rate { get; init; }
+    public required PercentageRate Rate { get; init; }
 
     /// <summary>
     /// Party entitled to the amount of money resulting from a charge.

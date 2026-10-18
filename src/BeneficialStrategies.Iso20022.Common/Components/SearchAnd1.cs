@@ -24,7 +24,7 @@ public record SearchAnd1
     [IsoXmlTag("Trgt")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public required IsoMax500Text Target { get; init; }
+    public required Max500Text Target { get; init; }
 
     /// <summary>
     /// Comparison operator used to evaluate matching transactions vs criteria.
@@ -42,5 +42,5 @@ public record SearchAnd1
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public required IsoMax500Text Value { get; init; }
+    public required Max500Text Value { get; init; }
 }

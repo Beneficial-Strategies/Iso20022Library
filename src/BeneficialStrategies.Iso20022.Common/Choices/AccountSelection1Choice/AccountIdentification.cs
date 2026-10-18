@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountSelection1Choice
         [IsoXmlTag("AcctId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text Value { get; init; }
+        public required Max35Text Value { get; init; }
     }
 }

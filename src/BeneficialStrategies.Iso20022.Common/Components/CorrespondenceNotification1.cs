@@ -28,7 +28,7 @@ public record CorrespondenceNotification1
     /// </summary>
     [DisplayName("Notification Narrative")]
     [IsoXmlTag("NtfctnNrrtv")]
-    public ValueList<IsoMax2000Text> NotificationNarrative { get; init; } = [];
+    public ValueList<Max2000Text> NotificationNarrative { get; init; } = [];
 
     /// <summary>
     /// Notification Sub Type.
@@ -56,5 +56,5 @@ public record CorrespondenceNotification1
     /// </summary>
     [DisplayName("Sender Notification Identification")]
     [IsoXmlTag("SndrNtfctnId")]
-    public required IsoMax35Text SenderNotificationIdentification { get; init; }
+    public required Max35Text SenderNotificationIdentification { get; init; }
 }

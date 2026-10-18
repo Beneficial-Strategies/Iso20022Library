@@ -23,7 +23,7 @@ public record FinancialInstitutionIdentification19
     [DisplayName("BICFI")]
     [IsoXmlTag("BICFI")]
     [IsoSimpleType(IsoSimpleType.BICFIDec2014Identifier)]
-    public IsoBICFIDec2014Identifier? BICFI { get; init; }
+    public BICFIDec2014Identifier? BICFI { get; init; }
 
     /// <summary>
     /// Information used to identify a member within a clearing system.
@@ -40,7 +40,7 @@ public record FinancialInstitutionIdentification19
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? LEI { get; init; }
+    public LEIIdentifier? LEI { get; init; }
 
     /// <summary>
     /// Unique identification of an agent, as assigned by an institution, using an identification scheme.

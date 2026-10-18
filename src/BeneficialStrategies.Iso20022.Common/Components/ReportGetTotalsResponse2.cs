@@ -21,7 +21,7 @@ public record ReportGetTotalsResponse2
     /// </summary>
     [DisplayName("POI Reconciliation Identification")]
     [IsoXmlTag("POIRcncltnId")]
-    public required IsoMax35Text POIReconciliationIdentification { get; init; }
+    public required Max35Text POIReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Transaction Totals Set.

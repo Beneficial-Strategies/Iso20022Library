@@ -24,7 +24,7 @@ public record Adjustment10
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Type { get; init; }
+    public Max35Text? Type { get; init; }
 
     /// <summary>
     /// Additional information to specify the type of adjustment.
@@ -34,7 +34,7 @@ public record Adjustment10
     [IsoXmlTag("AddtlTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AdditionalType { get; init; }
+    public Max35Text? AdditionalType { get; init; }
 
     /// <summary>
     /// Description of the adjustment.
@@ -44,7 +44,7 @@ public record Adjustment10
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Description { get; init; }
+    public Max70Text? Description { get; init; }
 
     /// <summary>
     /// Reason for the adjustment.
@@ -54,7 +54,7 @@ public record Adjustment10
     [IsoXmlTag("Rsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Reason { get; init; }
+    public Max35Text? Reason { get; init; }
 
     /// <summary>
     /// Identifies when the item is eligible or prohibited from a discount or adjustment.
@@ -63,7 +63,7 @@ public record Adjustment10
     [DisplayName("Promotion Eligibility")]
     [IsoXmlTag("PrmtnElgblty")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? PromotionEligibility { get; init; }
+    public TrueFalseIndicator? PromotionEligibility { get; init; }
 
     /// <summary>
     /// Promotion or adjustment code.
@@ -73,7 +73,7 @@ public record Adjustment10
     [IsoXmlTag("PrmtnCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PromotionCode { get; init; }
+    public Max35Text? PromotionCode { get; init; }
 
     /// <summary>
     /// May contain coupon number, discount code, etc.
@@ -83,7 +83,7 @@ public record Adjustment10
     [IsoXmlTag("PrmtnCpnNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PromotionCouponNumber { get; init; }
+    public Max35Text? PromotionCouponNumber { get; init; }
 
     /// <summary>
     /// Identifies the quantity of the item that is adjusted (can be less than the total quantity of the item being purchased).
@@ -92,7 +92,7 @@ public record Adjustment10
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? Quantity { get; init; }
+    public DecimalNumber? Quantity { get; init; }
 
     /// <summary>
     /// Contains the adjusted unit price (does not include tax).
@@ -109,7 +109,7 @@ public record Adjustment10
     [DisplayName("Percentage")]
     [IsoXmlTag("Pctg")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Percentage { get; init; }
+    public PercentageRate? Percentage { get; init; }
 
     /// <summary>
     /// Contains amount of the adjustment, exclusive of tax.
@@ -127,5 +127,5 @@ public record Adjustment10
     [DisplayName("Tax Calculated On Original Amount")]
     [IsoXmlTag("TaxClctdOnOrgnlAmt")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? TaxCalculatedOnOriginalAmount { get; init; }
+    public TrueFalseIndicator? TaxCalculatedOnOriginalAmount { get; init; }
 }

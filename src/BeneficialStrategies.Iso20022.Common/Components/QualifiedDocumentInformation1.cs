@@ -31,7 +31,7 @@ public record QualifiedDocumentInformation1
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.ID)]
-    public required IsoID Identification { get; init; }
+    public required XsdID Identification { get; init; }
 
     /// <summary>
     /// Party issuing the reference.
@@ -49,7 +49,7 @@ public record QualifiedDocumentInformation1
     [IsoXmlTag("ItmListIdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ItemListIdentifier { get; init; }
+    public Max35Text? ItemListIdentifier { get; init; }
 
     /// <summary>
     /// Unambiguous identifier relative to the issuing party of an item (independent of any list).
@@ -59,7 +59,7 @@ public record QualifiedDocumentInformation1
     [IsoXmlTag("ItmIdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ItemIdentifier { get; init; }
+    public Max35Text? ItemIdentifier { get; init; }
 
     /// <summary>
     /// Date of document or element. This may be used as a control value to indicate a specific version.
@@ -68,7 +68,7 @@ public record QualifiedDocumentInformation1
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Identification of the version of the document or element. This may be used as a control value to indicate a specific version.
@@ -78,7 +78,7 @@ public record QualifiedDocumentInformation1
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Max6Text)]
     [StringLength(maximumLength: 6, MinimumLength = 1)]
-    public IsoMax6Text? Version { get; init; }
+    public Max6Text? Version { get; init; }
 
     /// <summary>
     /// If true, document is in its original form, otherwise it is a scanned version.
@@ -87,7 +87,7 @@ public record QualifiedDocumentInformation1
     [DisplayName("Electronic Original")]
     [IsoXmlTag("ElctrncOrgnl")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ElectronicOriginal { get; init; }
+    public required YesNoIndicator ElectronicOriginal { get; init; }
 
     /// <summary>
     /// Cryptographic hash of the document.
@@ -115,7 +115,7 @@ public record QualifiedDocumentInformation1
     [IsoXmlTag("URL")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
     [StringLength(maximumLength: 2048, MinimumLength = 1)]
-    public IsoMax2048Text? URL { get; init; }
+    public Max2048Text? URL { get; init; }
 
     /// <summary>
     /// Attached file for this document. The file must be in a self-describing format.

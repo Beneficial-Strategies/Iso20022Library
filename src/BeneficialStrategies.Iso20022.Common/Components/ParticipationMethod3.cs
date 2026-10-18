@@ -30,7 +30,7 @@ public record ParticipationMethod3
     [IsoId("_y0Zy0KjJEfCzuLlmLrhIvA")]
     [DisplayName("Attendee Email Required Indicator")]
     [IsoXmlTag("AttndeeEmailReqrdInd")]
-    public IsoYesNoIndicator? AttendeeEmailRequiredIndicator { get; init; }
+    public YesNoIndicator? AttendeeEmailRequiredIndicator { get; init; }
 
     /// <summary>
     /// Deadline for voting on agenda resolutions at the general meeting.
@@ -46,7 +46,7 @@ public record ParticipationMethod3
     [IsoId("_hKYBFajJEfCzuLlmLrhIvA")]
     [DisplayName("Supported By Account Servicer")]
     [IsoXmlTag("SpprtdByAcctSvcr")]
-    public IsoYesNoIndicator? SupportedByAccountServicer { get; init; }
+    public YesNoIndicator? SupportedByAccountServicer { get; init; }
 
     /// <summary>
     /// Account servicer deadline for voting on agenda resolutions at the general meeting.

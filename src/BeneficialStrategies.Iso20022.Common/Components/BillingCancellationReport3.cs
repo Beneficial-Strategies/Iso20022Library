@@ -38,7 +38,7 @@ public record BillingCancellationReport3
     [IsoId("_2qnwBTEyEe6g-ffJsqGiSA")]
     [DisplayName("Invoice Date")]
     [IsoXmlTag("InvcDt")]
-    public required IsoISODate InvoiceDate { get; init; }
+    public required DateOnly InvoiceDate { get; init; }
 
     /// <summary>
     /// Identification of the billing report.
@@ -46,7 +46,7 @@ public record BillingCancellationReport3
     [IsoId("_2qnwBzEyEe6g-ffJsqGiSA")]
     [DisplayName("Billing Identification")]
     [IsoXmlTag("BllgId")]
-    public required IsoMax35Text BillingIdentification { get; init; }
+    public required Max35Text BillingIdentification { get; init; }
 
     /// <summary>
     /// Date period which for which the report data is valid.

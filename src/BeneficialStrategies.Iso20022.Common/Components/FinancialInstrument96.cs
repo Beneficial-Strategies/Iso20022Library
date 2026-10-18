@@ -23,7 +23,7 @@ public record FinancialInstrument96
     [DisplayName("Physical Bearer Securities")]
     [IsoXmlTag("PhysBrScties")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PhysicalBearerSecurities { get; init; }
+    public YesNoIndicator? PhysicalBearerSecurities { get; init; }
 
     /// <summary>
     /// Indicates whether it is possible to hold bearer units/shares in paperless form.
@@ -32,7 +32,7 @@ public record FinancialInstrument96
     [DisplayName("Dematerialised Bearer Securities")]
     [IsoXmlTag("DmtrlsdBrScties")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? DematerialisedBearerSecurities { get; init; }
+    public YesNoIndicator? DematerialisedBearerSecurities { get; init; }
 
     /// <summary>
     /// Indicates whether it is possible to hold registered units/shares in this class in paperless form.
@@ -41,7 +41,7 @@ public record FinancialInstrument96
     [DisplayName("Physical Registered Securities")]
     [IsoXmlTag("PhysRegdScties")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PhysicalRegisteredSecurities { get; init; }
+    public YesNoIndicator? PhysicalRegisteredSecurities { get; init; }
 
     /// <summary>
     /// Indicates whether it is possible to hold registered units/shares in this class in paperless form.
@@ -50,7 +50,7 @@ public record FinancialInstrument96
     [DisplayName("Dematerialised Registered Securities")]
     [IsoXmlTag("DmtrlsdRegdScties")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? DematerialisedRegisteredSecurities { get; init; }
+    public YesNoIndicator? DematerialisedRegisteredSecurities { get; init; }
 
     /// <summary>
     /// Income policy relating to the class type, that is, if income is paid out or retained in the fund.
@@ -91,7 +91,7 @@ public record FinancialInstrument96
     [DisplayName("Front End Load")]
     [IsoXmlTag("FrntEndLd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? FrontEndLoad { get; init; }
+    public YesNoIndicator? FrontEndLoad { get; init; }
 
     /// <summary>
     /// Indicates whether an exit charge (for example, CDSC) on redemption orders for this class can be applied.
@@ -100,7 +100,7 @@ public record FinancialInstrument96
     [DisplayName("Back End Load")]
     [IsoXmlTag("BckEndLd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? BackEndLoad { get; init; }
+    public YesNoIndicator? BackEndLoad { get; init; }
 
     /// <summary>
     /// Indicates whether a separate fee for switching between sub-funds of the same umbrella can be applied.
@@ -109,7 +109,7 @@ public record FinancialInstrument96
     [DisplayName("Switch Fee")]
     [IsoXmlTag("SwtchFee")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? SwitchFee { get; init; }
+    public YesNoIndicator? SwitchFee { get; init; }
 
     /// <summary>
     /// Indicates whether the investment fund class is subject to the European Union Saving Directive.
@@ -126,7 +126,7 @@ public record FinancialInstrument96
     [DisplayName("Launch Date")]
     [IsoXmlTag("LnchDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? LaunchDate { get; init; }
+    public DateOnly? LaunchDate { get; init; }
 
     /// <summary>
     /// Date on which the fund is closed to investment.
@@ -135,7 +135,7 @@ public record FinancialInstrument96
     [DisplayName("Fund End Date")]
     [IsoXmlTag("FndEndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? FundEndDate { get; init; }
+    public DateOnly? FundEndDate { get; init; }
 
     /// <summary>
     /// Date the fund closes.
@@ -144,7 +144,7 @@ public record FinancialInstrument96
     [DisplayName("Termination Date")]
     [IsoXmlTag("TermntnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TerminationDate { get; init; }
+    public DateOnly? TerminationDate { get; init; }
 
     /// <summary>
     /// Date on which the discount period of the newly launched investment fund ends.
@@ -153,7 +153,7 @@ public record FinancialInstrument96
     [DisplayName("Initial Offer End Date")]
     [IsoXmlTag("InitlOfferEndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? InitialOfferEndDate { get; init; }
+    public DateOnly? InitialOfferEndDate { get; init; }
 
     /// <summary>
     /// Date on which valuation of the investment fund class is suspended.
@@ -162,7 +162,7 @@ public record FinancialInstrument96
     [DisplayName("Suspension Start Date")]
     [IsoXmlTag("SspnsnStartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? SuspensionStartDate { get; init; }
+    public DateOnly? SuspensionStartDate { get; init; }
 
     /// <summary>
     /// Date on which valuation of the investment fund class is unsuspended.
@@ -171,7 +171,7 @@ public record FinancialInstrument96
     [DisplayName("Suspension End Date")]
     [IsoXmlTag("SspnsnEndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? SuspensionEndDate { get; init; }
+    public DateOnly? SuspensionEndDate { get; init; }
 
     /// <summary>
     /// Maturity date of the product. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 00065.
@@ -180,7 +180,7 @@ public record FinancialInstrument96
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? MaturityDate { get; init; }
+    public DateOnly? MaturityDate { get; init; }
 
     /// <summary>
     /// Specifies whether the product may be terminated early. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 00067.
@@ -197,7 +197,7 @@ public record FinancialInstrument96
     [DisplayName("Closed End Fund")]
     [IsoXmlTag("ClsdEndFnd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ClosedEndFund { get; init; }
+    public YesNoIndicator? ClosedEndFund { get; init; }
 
     /// <summary>
     /// Indicates whether equalisation is applied.
@@ -206,7 +206,7 @@ public record FinancialInstrument96
     [DisplayName("Equalisation")]
     [IsoXmlTag("Equlstn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? Equalisation { get; init; }
+    public YesNoIndicator? Equalisation { get; init; }
 
     /// <summary>
     /// Indicates whether the fund is eligible for a tax efficient product.
@@ -215,7 +215,7 @@ public record FinancialInstrument96
     [DisplayName("Tax Efficient Product Eligible")]
     [IsoXmlTag("TaxEffcntPdctElgbl")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? TaxEfficientProductEligible { get; init; }
+    public YesNoIndicator? TaxEfficientProductEligible { get; init; }
 
     /// <summary>
     /// Indicates whether the fund is authorised by the regulatory compliance authority.
@@ -224,7 +224,7 @@ public record FinancialInstrument96
     [DisplayName("Authorised")]
     [IsoXmlTag("Authrsd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? Authorised { get; init; }
+    public YesNoIndicator? Authorised { get; init; }
 
     /// <summary>
     /// Indicates whether the fund is compliant with the Retail Distribution Review (RDR).
@@ -233,7 +233,7 @@ public record FinancialInstrument96
     [DisplayName("RDR Compliant")]
     [IsoXmlTag("RDRCmplnt")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? RDRCompliant { get; init; }
+    public YesNoIndicator? RDRCompliant { get; init; }
 
     /// <summary>
     /// Specifies from where the management fee is taken.
@@ -250,7 +250,7 @@ public record FinancialInstrument96
     [DisplayName("Performance Fee")]
     [IsoXmlTag("PrfrmncFee")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PerformanceFee { get; init; }
+    public YesNoIndicator? PerformanceFee { get; init; }
 
     /// <summary>
     /// Additional information about the fund.

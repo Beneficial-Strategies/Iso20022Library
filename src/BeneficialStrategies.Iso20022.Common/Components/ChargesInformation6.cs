@@ -55,7 +55,7 @@ public record ChargesInformation6
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Rate { get; init; }
+    public PercentageRate? Rate { get; init; }
 
     /// <summary>
     /// Specifies which party/parties will bear the charges associated with the processing of the payment transaction.

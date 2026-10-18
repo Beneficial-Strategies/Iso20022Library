@@ -28,12 +28,12 @@ public record RecommendationAction1
     /// </summary>
     [DisplayName("Details")]
     [IsoXmlTag("Dtls")]
-    public ValueList<IsoMax256Text> Details { get; init; } = [];
+    public ValueList<Max256Text> Details { get; init; } = [];
 
     /// <summary>
     /// Other Action.
     /// </summary>
     [DisplayName("Other Action")]
     [IsoXmlTag("OthrActn")]
-    public IsoMax35Text? OtherAction { get; init; }
+    public Max35Text? OtherAction { get; init; }
 }

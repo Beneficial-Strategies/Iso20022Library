@@ -21,12 +21,12 @@ public record DateTime2
     /// </summary>
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public required IsoISODate Date { get; init; }
+    public required DateOnly Date { get; init; }
 
     /// <summary>
     /// Time.
     /// </summary>
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
-    public IsoISOTime? Time { get; init; }
+    public ISOTime? Time { get; init; }
 }

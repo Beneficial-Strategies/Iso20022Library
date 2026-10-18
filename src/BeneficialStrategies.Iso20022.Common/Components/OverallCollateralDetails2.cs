@@ -31,7 +31,7 @@ public record OverallCollateralDetails2
     [DisplayName("Margin Rate")]
     [IsoXmlTag("MrgnRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? MarginRate { get; init; }
+    public PercentageRate? MarginRate { get; init; }
 
     /// <summary>
     /// Provides the status after comparing the total collateral required and the total collateral value of all transactions covered in the message.
@@ -57,5 +57,5 @@ public record OverallCollateralDetails2
     [IsoXmlTag("CollAddtlDtls")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? CollateralAdditionalDetails { get; init; }
+    public Max350Text? CollateralAdditionalDetails { get; init; }
 }

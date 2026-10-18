@@ -24,7 +24,7 @@ public record SecuritiesFinancingTransactionDetails29
     [IsoXmlTag("SctiesFincgTradId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SecuritiesFinancingTradeIdentification { get; init; }
+    public Max35Text? SecuritiesFinancingTradeIdentification { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the second leg of the transaction as known by the account owner (or the instructing party acting on its behalf).
@@ -34,7 +34,7 @@ public record SecuritiesFinancingTransactionDetails29
     [IsoXmlTag("ClsgLegId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClosingLegIdentification { get; init; }
+    public Max35Text? ClosingLegIdentification { get; init; }
 
     /// <summary>
     /// Closing date/time or maturity date/time of the transaction.
@@ -67,7 +67,7 @@ public record SecuritiesFinancingTransactionDetails29
     [DisplayName("Maturity Date Modification")]
     [IsoXmlTag("MtrtyDtMod")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? MaturityDateModification { get; init; }
+    public YesNoIndicator? MaturityDateModification { get; init; }
 
     /// <summary>
     /// Specifies whether the interest is to be paid to the collateral taker. If set to no, the interest is paid to the collateral giver.
@@ -76,7 +76,7 @@ public record SecuritiesFinancingTransactionDetails29
     [DisplayName("Interest Payment")]
     [IsoXmlTag("IntrstPmt")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? InterestPayment { get; init; }
+    public YesNoIndicator? InterestPayment { get; init; }
 
     /// <summary>
     /// Index or support rate used together with the spread to calculate the|repurchase rate.
@@ -101,7 +101,7 @@ public record SecuritiesFinancingTransactionDetails29
     [DisplayName("Transaction Call Delay")]
     [IsoXmlTag("TxCallDely")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public IsoExact3NumericText? TransactionCallDelay { get; init; }
+    public Exact3NumericText? TransactionCallDelay { get; init; }
 
     /// <summary>
     /// Interest amount that has accrued in between coupon payment periods.
@@ -127,5 +127,5 @@ public record SecuritiesFinancingTransactionDetails29
     [IsoXmlTag("ScndLegNrrtv")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? SecondLegNarrative { get; init; }
+    public Max140Text? SecondLegNarrative { get; init; }
 }

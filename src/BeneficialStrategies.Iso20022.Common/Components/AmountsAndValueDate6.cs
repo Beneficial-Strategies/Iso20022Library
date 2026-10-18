@@ -39,5 +39,5 @@ public record AmountsAndValueDate6
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate SettlementDate { get; init; }
+    public required DateOnly SettlementDate { get; init; }
 }

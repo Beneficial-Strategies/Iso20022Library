@@ -30,7 +30,7 @@ public record SecuritiesTransactionReport5
     [IsoId("_M8_xC2p-EemmaZLSPtWX5A")]
     [DisplayName("Query Reference")]
     [IsoXmlTag("QryRef")]
-    public IsoMax35Text? QueryReference { get; init; }
+    public Max35Text? QueryReference { get; init; }
 
     /// <summary>
     /// Reference common to all pages of a statement.
@@ -38,7 +38,7 @@ public record SecuritiesTransactionReport5
     [IsoId("_M8_xE2p-EemmaZLSPtWX5A")]
     [DisplayName("Report Identification")]
     [IsoXmlTag("RptId")]
-    public IsoMax35Text? ReportIdentification { get; init; }
+    public Max35Text? ReportIdentification { get; init; }
 
     /// <summary>
     /// Date and time when the report was created.
@@ -86,5 +86,5 @@ public record SecuritiesTransactionReport5
     [IsoId("_M8_xPWp-EemmaZLSPtWX5A")]
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
-    public required IsoYesNoIndicator ActivityIndicator { get; init; }
+    public required YesNoIndicator ActivityIndicator { get; init; }
 }

@@ -52,7 +52,7 @@ public record PriceReportCancellationV05 : IOuterRecord
     [IsoXmlTag("CxlId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text CancellationIdentification { get; init; }
+    public required Max35Text CancellationIdentification { get; init; }
 
     /// <summary>
     /// Cancellation Reason.
@@ -61,7 +61,7 @@ public record PriceReportCancellationV05 : IOuterRecord
     [IsoXmlTag("CxlRsn")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? CancellationReason { get; init; }
+    public Max350Text? CancellationReason { get; init; }
 
     /// <summary>
     /// Cancelled Price Valuation Details.
@@ -76,7 +76,7 @@ public record PriceReportCancellationV05 : IOuterRecord
     [DisplayName("Complete Price Cancellation")]
     [IsoXmlTag("CmpltPricCxl")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator CompletePriceCancellation { get; init; }
+    public required YesNoIndicator CompletePriceCancellation { get; init; }
 
     /// <summary>
     /// Expected Price Correction Date.
@@ -127,5 +127,5 @@ public record PriceReportCancellationV05 : IOuterRecord
     [IsoXmlTag("PricRptId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text PriceReportIdentification { get; init; }
+    public required Max35Text PriceReportIdentification { get; init; }
 }

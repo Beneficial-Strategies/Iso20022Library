@@ -23,7 +23,7 @@ public record LineItemAllowanceCharge2
     [DisplayName("Charge Indicator")]
     [IsoXmlTag("ChrgInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ChargeIndicator { get; init; }
+    public YesNoIndicator? ChargeIndicator { get; init; }
 
     /// <summary>
     /// Actual monetary value of this allowance charge.
@@ -48,7 +48,7 @@ public record LineItemAllowanceCharge2
     [DisplayName("Calculation Percent")]
     [IsoXmlTag("ClctnPct")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? CalculationPercent { get; init; }
+    public PercentageRate? CalculationPercent { get; init; }
 
     /// <summary>
     /// Specifies the order in which the allowance or charge is applied.
@@ -57,7 +57,7 @@ public record LineItemAllowanceCharge2
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? SequenceNumber { get; init; }
+    public Number? SequenceNumber { get; init; }
 
     /// <summary>
     /// Reason, expressed as text, for this allowance charge.

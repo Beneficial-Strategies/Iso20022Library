@@ -22,7 +22,7 @@ public record Customer10
     [IsoId("_e-WaIVNxEfC0lMwgjvMClw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax105Text? Name { get; init; }
+    public Max105Text? Name { get; init; }
 
     /// <summary>
     /// First name of the cardholder.
@@ -30,7 +30,7 @@ public record Customer10
     [IsoId("_eC0Jg1NyEfC0lMwgjvMClw")]
     [DisplayName("Given Name")]
     [IsoXmlTag("GvnNm")]
-    public IsoMax35Text? GivenName { get; init; }
+    public Max35Text? GivenName { get; init; }
 
     /// <summary>
     /// Middle name or initials present in the name of a person.
@@ -38,7 +38,7 @@ public record Customer10
     [IsoId("_eC0JhFNyEfC0lMwgjvMClw")]
     [DisplayName("Middle Name")]
     [IsoXmlTag("MddlNm")]
-    public IsoMax35Text? MiddleName { get; init; }
+    public Max35Text? MiddleName { get; init; }
 
     /// <summary>
     /// Family name of the cardholder.
@@ -46,7 +46,7 @@ public record Customer10
     [IsoId("_eC0JhVNyEfC0lMwgjvMClw")]
     [DisplayName("Last Name")]
     [IsoXmlTag("LastNm")]
-    public IsoMax35Text? LastName { get; init; }
+    public Max35Text? LastName { get; init; }
 
     /// <summary>
     /// Details of the party identification.
@@ -62,7 +62,7 @@ public record Customer10
     [IsoId("_e-WaJVNxEfC0lMwgjvMClw")]
     [DisplayName("Customer File Reference Number")]
     [IsoXmlTag("CstmrFileRefNb")]
-    public IsoMax70Text? CustomerFileReferenceNumber { get; init; }
+    public Max70Text? CustomerFileReferenceNumber { get; init; }
 
     /// <summary>
     /// Age of the customer.
@@ -70,7 +70,7 @@ public record Customer10
     [IsoId("_e-WaJ1NxEfC0lMwgjvMClw")]
     [DisplayName("Age")]
     [IsoXmlTag("Age")]
-    public IsoMax2NumericText? Age { get; init; }
+    public Max2NumericText? Age { get; init; }
 
     /// <summary>
     /// Address details of the customer.

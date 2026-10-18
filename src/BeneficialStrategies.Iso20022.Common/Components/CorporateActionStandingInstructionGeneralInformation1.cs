@@ -48,7 +48,7 @@ public record CorporateActionStandingInstructionGeneralInformation1
     [IsoXmlTag("ClntStgInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ClientStandingInstructionIdentification { get; init; }
+    public required Max35Text ClientStandingInstructionIdentification { get; init; }
 
     /// <summary>
     /// Provides information about the account to which the standing instruction can apply.

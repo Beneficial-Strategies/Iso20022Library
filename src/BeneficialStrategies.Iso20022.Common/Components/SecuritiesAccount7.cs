@@ -32,5 +32,5 @@ public record SecuritiesAccount7
     [IsoXmlTag("AcctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text AccountIdentification { get; init; }
+    public required Max35Text AccountIdentification { get; init; }
 }

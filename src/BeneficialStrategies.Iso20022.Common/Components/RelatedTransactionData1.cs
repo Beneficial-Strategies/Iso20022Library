@@ -21,12 +21,12 @@ public record RelatedTransactionData1
     /// </summary>
     [DisplayName("Master UETR")]
     [IsoXmlTag("MstrUETR")]
-    public IsoUUIDv4Identifier? MasterUETR { get; init; }
+    public UUIDv4Identifier? MasterUETR { get; init; }
 
     /// <summary>
     /// Sub UETR.
     /// </summary>
     [DisplayName("Sub UETR")]
     [IsoXmlTag("SubUETR")]
-    public ValueList<IsoUUIDv4Identifier> SubUETR { get; init; } = [];
+    public ValueList<UUIDv4Identifier> SubUETR { get; init; } = [];
 }

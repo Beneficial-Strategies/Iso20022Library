@@ -24,7 +24,7 @@ public record TradeTransaction24
     [IsoXmlTag("UnqTradIdr")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public required IsoMax52Text UniqueTradeIdentifier { get; init; }
+    public required Max52Text UniqueTradeIdentifier { get; init; }
 
     /// <summary>
     /// Unique number to indicate a group of reports which relate to the same execution.
@@ -34,7 +34,7 @@ public record TradeTransaction24
     [IsoXmlTag("RptTrckgNb")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoMax52Text? ReportTrackingNumber { get; init; }
+    public Max52Text? ReportTrackingNumber { get; init; }
 
     /// <summary>
     /// Identification, internal to the reporting firm to identify all the reports related to the same execution of a combination of financial instruments. The code must be unique for the firm for the group of reports for the execution.
@@ -45,7 +45,7 @@ public record TradeTransaction24
     [IsoXmlTag("CmplxTradId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ComplexTradeIdentification { get; init; }
+    public Max35Text? ComplexTradeIdentification { get; init; }
 
     /// <summary>
     /// Venue of execution identified by a unique code for this venue.
@@ -55,7 +55,7 @@ public record TradeTransaction24
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public IsoMICIdentifier? TradingVenue { get; init; }
+    public MICIdentifier? TradingVenue { get; init; }
 
     /// <summary>
     /// Identifies whether the contract results from a compression operation or not.
@@ -64,7 +64,7 @@ public record TradeTransaction24
     [DisplayName("Compression")]
     [IsoXmlTag("Cmprssn")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? Compression { get; init; }
+    public TrueFalseIndicator? Compression { get; init; }
 
     /// <summary>
     /// Indicates the price per derivative excluding, where applicable, commission and accrued interest.
@@ -90,7 +90,7 @@ public record TradeTransaction24
     [DisplayName("Price Multiplier")]
     [IsoXmlTag("PricMltplr")]
     [IsoSimpleType(IsoSimpleType.LongFraction21DecimalNumber)]
-    public required IsoLongFraction21DecimalNumber PriceMultiplier { get; init; }
+    public required LongFraction21DecimalNumber PriceMultiplier { get; init; }
 
     /// <summary>
     /// Number of units of the financial instrument, that is, the nominal value.
@@ -124,7 +124,7 @@ public record TradeTransaction24
     [DisplayName("Execution Date Time")]
     [IsoXmlTag("ExctnDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? ExecutionDateTime { get; init; }
+    public ISODateTime? ExecutionDateTime { get; init; }
 
     /// <summary>
     /// Indicates the date when obligations under the contract come into effect.
@@ -133,7 +133,7 @@ public record TradeTransaction24
     [DisplayName("Effective Date")]
     [IsoXmlTag("FctvDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? EffectiveDate { get; init; }
+    public DateOnly? EffectiveDate { get; init; }
 
     /// <summary>
     /// Indicates the original date of expiry of the reported contract.
@@ -144,7 +144,7 @@ public record TradeTransaction24
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? MaturityDate { get; init; }
+    public DateOnly? MaturityDate { get; init; }
 
     /// <summary>
     /// Indicates the date in the case of an early termination of the reported contract.
@@ -153,7 +153,7 @@ public record TradeTransaction24
     [DisplayName("Termination Date")]
     [IsoXmlTag("TermntnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TerminationDate { get; init; }
+    public DateOnly? TerminationDate { get; init; }
 
     /// <summary>
     /// Indicates the date of settlement of the underlying.
@@ -161,7 +161,7 @@ public record TradeTransaction24
     [IsoId("_GOLiDw1IEeqV4s5SpzR1dQ")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public SimpleValueList<IsoISODate> SettlementDate { get; init; } = [];
+    public SimpleValueList<DateOnly> SettlementDate { get; init; } = [];
 
     /// <summary>
     /// Details related to the master agreement.

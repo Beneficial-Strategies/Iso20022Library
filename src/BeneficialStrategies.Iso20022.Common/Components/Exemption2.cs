@@ -21,7 +21,7 @@ public record Exemption2
     /// </summary>
     [DisplayName("Reason Not Honored")]
     [IsoXmlTag("RsnNotHnrd")]
-    public ValueList<IsoMax4Text> ReasonNotHonored { get; init; } = [];
+    public ValueList<Max4Text> ReasonNotHonored { get; init; } = [];
 
     /// <summary>
     /// Type.

@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PlaceOfTradeIdentification4Choic
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("Pty")]
-        public required IsoAnyBICDec2014Identifier Value { get; init; }
+        public required AnyBICDec2014Identifier Value { get; init; }
     }
 }

@@ -32,7 +32,7 @@ public record CurrencyConversion18
     [IsoXmlTag("RsltRsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ResultReason { get; init; }
+    public Max35Text? ResultReason { get; init; }
 
     /// <summary>
     /// Information about the conversion of currency.

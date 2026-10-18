@@ -47,7 +47,7 @@ public record CurrencyConversion5
     [DisplayName("Target Currency Numeric")]
     [IsoXmlTag("TrgtCcyNmrc")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public required IsoExact3NumericText TargetCurrencyNumeric { get; init; }
+    public required Exact3NumericText TargetCurrencyNumeric { get; init; }
 
     /// <summary>
     /// Currency exchange rate.
@@ -56,7 +56,7 @@ public record CurrencyConversion5
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public required IsoBaseOneRate Rate { get; init; }
+    public required BaseOneRate Rate { get; init; }
 
     /// <summary>
     /// Resulting calculated amount is in target currency.

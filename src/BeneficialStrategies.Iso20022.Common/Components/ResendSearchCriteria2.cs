@@ -23,7 +23,7 @@ public record ResendSearchCriteria2
     [DisplayName("Business Date")]
     [IsoXmlTag("BizDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? BusinessDate { get; init; }
+    public DateOnly? BusinessDate { get; init; }
 
     /// <summary>
     /// Independent counter for message sequence, which is available once per party technical address.|Specifies the identification sequence number for a specific couple sender/receiver.
@@ -33,7 +33,7 @@ public record ResendSearchCriteria2
     [IsoXmlTag("SeqNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SequenceNumber { get; init; }
+    public Max35Text? SequenceNumber { get; init; }
 
     /// <summary>
     /// Independent counter for a range of message sequences, which are available once per party technical address.
@@ -52,7 +52,7 @@ public record ResendSearchCriteria2
     [IsoXmlTag("OrgnlMsgNmId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalMessageNameIdentification { get; init; }
+    public Max35Text? OriginalMessageNameIdentification { get; init; }
 
     /// <summary>
     /// String of characters that uniquely identifies the file, which was delivered by the sender.
@@ -62,7 +62,7 @@ public record ResendSearchCriteria2
     [IsoXmlTag("FileRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? FileReference { get; init; }
+    public Max35Text? FileReference { get; init; }
 
     /// <summary>
     /// Unique identification to unambiguously identify the recipient of the report message.

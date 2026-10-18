@@ -35,7 +35,7 @@ public record PointOfInteraction14
     /// </summary>
     [DisplayName("Group Identification")]
     [IsoXmlTag("GrpId")]
-    public IsoMax35Text? GroupIdentification { get; init; }
+    public Max35Text? GroupIdentification { get; init; }
 
     /// <summary>
     /// Identification.
@@ -49,7 +49,7 @@ public record PointOfInteraction14
     /// </summary>
     [DisplayName("System Name")]
     [IsoXmlTag("SysNm")]
-    public IsoMax70Text? SystemName { get; init; }
+    public Max70Text? SystemName { get; init; }
 
     /// <summary>
     /// Terminal Integration.
@@ -63,5 +63,5 @@ public record PointOfInteraction14
     /// </summary>
     [DisplayName("Time Zone")]
     [IsoXmlTag("TmZone")]
-    public IsoMax70Text? TimeZone { get; init; }
+    public Max70Text? TimeZone { get; init; }
 }

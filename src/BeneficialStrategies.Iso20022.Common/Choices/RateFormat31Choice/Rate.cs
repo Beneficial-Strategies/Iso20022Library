@@ -9,6 +9,6 @@ namespace BeneficialStrategies.Iso20022.Choices.RateFormat31Choice
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Rate")]
-        public required IsoPercentage14Rate Value { get; init; }
+        public required decimal Value { get; init; }
     }
 }

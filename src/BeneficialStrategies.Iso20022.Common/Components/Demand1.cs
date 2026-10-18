@@ -24,7 +24,7 @@ public record Demand1
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Type of demand.
@@ -58,7 +58,7 @@ public record Demand1
     [IsoXmlTag("AdvsgPtyRefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AdvisingPartyReferenceNumber { get; init; }
+    public Max35Text? AdvisingPartyReferenceNumber { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier assigned by the second advising party to the undertaking.
@@ -68,7 +68,7 @@ public record Demand1
     [IsoXmlTag("ScndAdvsgPtyRefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SecondAdvisingPartyReferenceNumber { get; init; }
+    public Max35Text? SecondAdvisingPartyReferenceNumber { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier assigned by the confirmer to the undertaking.
@@ -78,7 +78,7 @@ public record Demand1
     [IsoXmlTag("CnfrmrRefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ConfirmerReferenceNumber { get; init; }
+    public Max35Text? ConfirmerReferenceNumber { get; init; }
 
     /// <summary>
     /// Details related to the settlement account.
@@ -103,7 +103,7 @@ public record Demand1
     [DisplayName("Requested Expiry Date")]
     [IsoXmlTag("ReqdXpryDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RequestedExpiryDate { get; init; }
+    public DateOnly? RequestedExpiryDate { get; init; }
 
     /// <summary>
     /// Document(s) presented for examination.

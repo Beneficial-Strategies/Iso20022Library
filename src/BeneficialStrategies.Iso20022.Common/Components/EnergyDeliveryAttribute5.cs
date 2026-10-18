@@ -23,7 +23,7 @@ public record EnergyDeliveryAttribute5
     [DisplayName("Delivery Interval")]
     [IsoXmlTag("DlvryIntrvl")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? DeliveryInterval { get; init; }
+    public ISOTime? DeliveryInterval { get; init; }
 
     /// <summary>
     /// Definition of delivery start datetime and end datetime.
@@ -80,5 +80,5 @@ public record EnergyDeliveryAttribute5
     [DisplayName("Price Time Interval Quantity")]
     [IsoXmlTag("PricTmIntrvlQty")]
     [IsoSimpleType(IsoSimpleType.LongFraction19DecimalNumber)]
-    public IsoLongFraction19DecimalNumber? PriceTimeIntervalQuantity { get; init; }
+    public LongFraction19DecimalNumber? PriceTimeIntervalQuantity { get; init; }
 }

@@ -40,7 +40,7 @@ public record AccountManagementStatusAndReason5
     [IsoXmlTag("AcctApplId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountApplicationIdentification { get; init; }
+    public Max35Text? AccountApplicationIdentification { get; init; }
 
     /// <summary>
     /// Account to which the account opening is related.
@@ -58,7 +58,7 @@ public record AccountManagementStatusAndReason5
     [IsoXmlTag("AcctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountIdentification { get; init; }
+    public Max35Text? AccountIdentification { get; init; }
 
     /// <summary>
     /// Status of the account.
@@ -83,7 +83,7 @@ public record AccountManagementStatusAndReason5
     [DisplayName("FATCA Reporting Date")]
     [IsoXmlTag("FATCARptgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? FATCAReportingDate { get; init; }
+    public DateOnly? FATCAReportingDate { get; init; }
 
     /// <summary>
     /// Date provided by the account owner to inform the account servicer of the date on which the holdings must be reported before the account is subsequently closed.
@@ -92,5 +92,5 @@ public record AccountManagementStatusAndReason5
     [DisplayName("CRS Reporting Date")]
     [IsoXmlTag("CRSRptgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? CRSReportingDate { get; init; }
+    public DateOnly? CRSReportingDate { get; init; }
 }

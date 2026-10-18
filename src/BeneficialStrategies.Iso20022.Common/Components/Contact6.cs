@@ -23,7 +23,7 @@ public record Contact6
     [DisplayName("Home Phone Number")]
     [IsoXmlTag("HomePhneNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? HomePhoneNumber { get; init; }
+    public PhoneNumber? HomePhoneNumber { get; init; }
 
     /// <summary>
     /// Business phone number of contact.
@@ -32,7 +32,7 @@ public record Contact6
     [DisplayName("Business Phone Number")]
     [IsoXmlTag("BizPhneNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? BusinessPhoneNumber { get; init; }
+    public PhoneNumber? BusinessPhoneNumber { get; init; }
 
     /// <summary>
     /// Mobile phone number of contact.
@@ -41,7 +41,7 @@ public record Contact6
     [DisplayName("Mobile Phone Number")]
     [IsoXmlTag("MobPhneNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? MobilePhoneNumber { get; init; }
+    public PhoneNumber? MobilePhoneNumber { get; init; }
 
     /// <summary>
     /// Other phone number of contact.
@@ -50,7 +50,7 @@ public record Contact6
     [DisplayName("Other Phone Number")]
     [IsoXmlTag("OthrPhneNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? OtherPhoneNumber { get; init; }
+    public PhoneNumber? OtherPhoneNumber { get; init; }
 
     /// <summary>
     /// Personal email address of contact.
@@ -60,7 +60,7 @@ public record Contact6
     [IsoXmlTag("PrsnlEmailAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? PersonalEmailAddress { get; init; }
+    public Max256Text? PersonalEmailAddress { get; init; }
 
     /// <summary>
     /// Business email address of contact.
@@ -70,7 +70,7 @@ public record Contact6
     [IsoXmlTag("BizEmailAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? BusinessEmailAddress { get; init; }
+    public Max256Text? BusinessEmailAddress { get; init; }
 
     /// <summary>
     /// Other email address of contact.
@@ -80,7 +80,7 @@ public record Contact6
     [IsoXmlTag("OthrEmailAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? OtherEmailAddress { get; init; }
+    public Max256Text? OtherEmailAddress { get; init; }
 
     /// <summary>
     /// Home fax number, as defined by telecom services.
@@ -89,7 +89,7 @@ public record Contact6
     [DisplayName("Home Fax Number")]
     [IsoXmlTag("HomeFaxNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? HomeFaxNumber { get; init; }
+    public PhoneNumber? HomeFaxNumber { get; init; }
 
     /// <summary>
     /// Business fax number, as defined by telecom services.
@@ -98,7 +98,7 @@ public record Contact6
     [DisplayName("Business Fax Number")]
     [IsoXmlTag("BizFaxNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? BusinessFaxNumber { get; init; }
+    public PhoneNumber? BusinessFaxNumber { get; init; }
 
     /// <summary>
     /// Universal Resource Locator (URL) address.
@@ -108,7 +108,7 @@ public record Contact6
     [IsoXmlTag("URLAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? URLAddress { get; init; }
+    public Max256Text? URLAddress { get; init; }
 
     /// <summary>
     /// Language of the contact.

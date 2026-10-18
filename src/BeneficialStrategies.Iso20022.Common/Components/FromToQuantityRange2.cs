@@ -23,7 +23,7 @@ public record FromToQuantityRange2
     [DisplayName("From Quantity")]
     [IsoXmlTag("FrQty")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public required IsoDecimalNumber FromQuantity { get; init; }
+    public required DecimalNumber FromQuantity { get; init; }
 
     /// <summary>
     /// Upper boundary of a range of quantity values.
@@ -32,5 +32,5 @@ public record FromToQuantityRange2
     [DisplayName("To Quantity")]
     [IsoXmlTag("ToQty")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public required IsoDecimalNumber ToQuantity { get; init; }
+    public required DecimalNumber ToQuantity { get; init; }
 }

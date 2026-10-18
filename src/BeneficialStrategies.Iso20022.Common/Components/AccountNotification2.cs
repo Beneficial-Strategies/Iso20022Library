@@ -24,7 +24,7 @@ public record AccountNotification2
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Sequential number of the notification, as assigned by the account servicer. |Usage: The sequential number is increased incrementally for each notification sent electronically.
@@ -33,7 +33,7 @@ public record AccountNotification2
     [DisplayName("Electronic Sequence Number")]
     [IsoXmlTag("ElctrncSeqNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? ElectronicSequenceNumber { get; init; }
+    public Number? ElectronicSequenceNumber { get; init; }
 
     /// <summary>
     /// Legal sequential number of the notification, as assigned by the account servicer. It is increased incrementally for each notification sent.
@@ -42,7 +42,7 @@ public record AccountNotification2
     [DisplayName("Legal Sequence Number")]
     [IsoXmlTag("LglSeqNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? LegalSequenceNumber { get; init; }
+    public Number? LegalSequenceNumber { get; init; }
 
     /// <summary>
     /// Date and time at which the message was created.
@@ -51,7 +51,7 @@ public record AccountNotification2
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// Range of time between a start date and an end date for which the account notification is issued.
@@ -125,5 +125,5 @@ public record AccountNotification2
     [IsoXmlTag("AddtlNtfctnInf")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public IsoMax500Text? AdditionalNotificationInformation { get; init; }
+    public Max500Text? AdditionalNotificationInformation { get; init; }
 }

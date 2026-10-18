@@ -99,7 +99,7 @@ public record SettlementObligation9
     /// </summary>
     [DisplayName("Settlement Obligation Identification")]
     [IsoXmlTag("SttlmOblgtnId")]
-    public required IsoMax35Text SettlementObligationIdentification { get; init; }
+    public required Max35Text SettlementObligationIdentification { get; init; }
 
     /// <summary>
     /// Settlement Parties.

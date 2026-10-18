@@ -21,7 +21,7 @@ public record RejectedStatusReason54
     /// </summary>
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
-    public IsoMax350Text? AdditionalReasonInformation { get; init; }
+    public Max350Text? AdditionalReasonInformation { get; init; }
 
     /// <summary>
     /// Reason Code.

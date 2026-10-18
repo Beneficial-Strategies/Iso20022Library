@@ -24,7 +24,7 @@ public record TotalFilter1
     [IsoXmlTag("POIId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? POIIdentification { get; init; }
+    public Max35Text? POIIdentification { get; init; }
 
     /// <summary>
     /// Identification of the sale terminal (electronic cash register or point of sale terminal) or the sale system.
@@ -34,7 +34,7 @@ public record TotalFilter1
     [IsoXmlTag("SaleId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SaleIdentification { get; init; }
+    public Max35Text? SaleIdentification { get; init; }
 
     /// <summary>
     /// Identification of the cashier who carried out the transaction.
@@ -44,7 +44,7 @@ public record TotalFilter1
     [IsoXmlTag("CshrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CashierIdentification { get; init; }
+    public Max35Text? CashierIdentification { get; init; }
 
     /// <summary>
     /// Identifies the shift of the cashier.
@@ -54,7 +54,7 @@ public record TotalFilter1
     [IsoXmlTag("ShftNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ShiftNumber { get; init; }
+    public Max35Text? ShiftNumber { get; init; }
 
     /// <summary>
     /// Identification of a group of transaction on a POI Terminal, having the same Sale features.
@@ -64,5 +64,5 @@ public record TotalFilter1
     [IsoXmlTag("TtlsGrpId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TotalsGroupIdentification { get; init; }
+    public Max35Text? TotalsGroupIdentification { get; init; }
 }

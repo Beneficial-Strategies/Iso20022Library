@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification5Choice
         [IsoXmlTag("QId")]
         [IsoSimpleType(IsoSimpleType.Max16Text)]
         [StringLength(maximumLength: 16, MinimumLength = 1)]
-        public required IsoMax16Text Value { get; init; }
+        public required Max16Text Value { get; init; }
 
         /// <summary>
         /// Position of the payment instruction within the identified queue.
@@ -32,6 +32,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification5Choice
         [IsoXmlTag("PosInQ")]
         [IsoSimpleType(IsoSimpleType.Max16Text)]
         [StringLength(maximumLength: 16, MinimumLength = 1)]
-        public required IsoMax16Text PositionInQueue { get; init; }
+        public required Max16Text PositionInQueue { get; init; }
     }
 }

@@ -30,7 +30,7 @@ public record FinancialInstrumentAttributes139
     [IsoId("_NTWcaatzEfCqjuqNaaNXgw")]
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
-    public IsoDecimalNumber? Quantity { get; init; }
+    public DecimalNumber? Quantity { get; init; }
 
     /// <summary>
     /// Specifies whether terms of the event allow resale of the rights.

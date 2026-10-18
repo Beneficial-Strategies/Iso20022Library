@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
         /// </summary>
         [IsoXmlTag("PLKNR")]
         [IsoSimpleType(IsoSimpleType.PolishNationalClearingCodeIdentifier)]
-        public required IsoPolishNationalClearingCodeIdentifier Value { get; init; }
+        public required PolishNationalClearingCodeIdentifier Value { get; init; }
     }
 }

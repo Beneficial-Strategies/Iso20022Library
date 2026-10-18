@@ -35,7 +35,7 @@ public record Document28
     /// </summary>
     [DisplayName("Historical Data")]
     [IsoXmlTag("HstrclData")]
-    public IsoTrueFalseIndicator? HistoricalData { get; init; }
+    public TrueFalseIndicator? HistoricalData { get; init; }
 
     /// <summary>
     /// Home Country.
@@ -56,7 +56,7 @@ public record Document28
     /// </summary>
     [DisplayName("Personal Data")]
     [IsoXmlTag("PrsnlData")]
-    public IsoTrueFalseIndicator? PersonalData { get; init; }
+    public TrueFalseIndicator? PersonalData { get; init; }
 
     /// <summary>
     /// Publication Period.
@@ -105,7 +105,7 @@ public record Document28
     /// </summary>
     [DisplayName("Submission Date Time")]
     [IsoXmlTag("SubmissnDtTm")]
-    public IsoISODateTime? SubmissionDateTime { get; init; }
+    public ISODateTime? SubmissionDateTime { get; init; }
 
     /// <summary>
     /// Submission Type.
@@ -119,19 +119,19 @@ public record Document28
     /// </summary>
     [DisplayName("Technical Record Identifier")]
     [IsoXmlTag("TechRcrdIdr")]
-    public IsoMax140Text? TechnicalRecordIdentifier { get; init; }
+    public Max140Text? TechnicalRecordIdentifier { get; init; }
 
     /// <summary>
     /// Version.
     /// </summary>
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
-    public IsoPositiveNumber? Version { get; init; }
+    public PositiveNumber? Version { get; init; }
 
     /// <summary>
     /// Voluntary.
     /// </summary>
     [DisplayName("Voluntary")]
     [IsoXmlTag("Vlntry")]
-    public IsoTrueFalseIndicator? Voluntary { get; init; }
+    public TrueFalseIndicator? Voluntary { get; init; }
 }

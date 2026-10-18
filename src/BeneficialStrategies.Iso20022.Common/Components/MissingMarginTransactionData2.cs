@@ -31,5 +31,5 @@ public record MissingMarginTransactionData2
     [DisplayName("Collateral Time Stamp")]
     [IsoXmlTag("CollTmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? CollateralTimeStamp { get; init; }
+    public ISODateTime? CollateralTimeStamp { get; init; }
 }

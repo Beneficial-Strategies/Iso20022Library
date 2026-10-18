@@ -56,7 +56,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio5Choice
         [IsoXmlTag("DrwdwnTrchId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? DrawdownTrancheIdentification { get; init; }
+        public Max35Text? DrawdownTrancheIdentification { get; init; }
 
         /// <summary>
         /// Drawdown status of the pension.
@@ -89,7 +89,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio5Choice
         [DisplayName("Block Transfer")]
         [IsoXmlTag("BlckTrf")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? BlockTransfer { get; init; }
+        public YesNoIndicator? BlockTransfer { get; init; }
 
         /// <summary>
         /// When the transfer is part of a block transfer, reference to link several items.
@@ -99,7 +99,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio5Choice
         [IsoXmlTag("BlckTrfRef")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? BlockTransferReference { get; init; }
+        public Max35Text? BlockTransferReference { get; init; }
 
         /// <summary>
         /// Indicates whether the tax-free cash is protected when the pension policy, plan or scheme is transferred.
@@ -108,7 +108,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio5Choice
         [DisplayName("Tax Free Cash Protection")]
         [IsoXmlTag("TaxFreeCshPrtcn")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? TaxFreeCashProtection { get; init; }
+        public YesNoIndicator? TaxFreeCashProtection { get; init; }
 
         /// <summary>
         /// Amount of cash that is tax free.
@@ -133,7 +133,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio5Choice
         [DisplayName("Retirement Age Protection")]
         [IsoXmlTag("RtrmntAgePrtcn")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? RetirementAgeProtection { get; init; }
+        public YesNoIndicator? RetirementAgeProtection { get; init; }
 
         /// <summary>
         /// Age at which the pension policy, plan or scheme holder retires.
@@ -142,7 +142,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio5Choice
         [DisplayName("Retirement Age")]
         [IsoXmlTag("RtrmntAge")]
         [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-        public IsoDecimalNumber? RetirementAge { get; init; }
+        public DecimalNumber? RetirementAge { get; init; }
 
         /// <summary>
         /// Indicates whether the pension benefits are shared.
@@ -151,7 +151,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio5Choice
         [DisplayName("Sharing")]
         [IsoXmlTag("Shrg")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? Sharing { get; init; }
+        public YesNoIndicator? Sharing { get; init; }
 
         /// <summary>
         /// Type of lump sum paid to a member of the pension policy, plan or scheme.
@@ -176,7 +176,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio5Choice
         [DisplayName("Ring Fenced Drawdown Assets")]
         [IsoXmlTag("RingFncdDrwdwnAssts")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? RingFencedDrawdownAssets { get; init; }
+        public YesNoIndicator? RingFencedDrawdownAssets { get; init; }
 
         /// <summary>
         /// Money Purchase Annual Allowance (MPAA) details.
@@ -193,7 +193,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio5Choice
         [DisplayName("Safeguard Benefit")]
         [IsoXmlTag("SfgrdBnft")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? SafeguardBenefit { get; init; }
+        public YesNoIndicator? SafeguardBenefit { get; init; }
 
         /// <summary>
         /// Indicates whether the pension policy, plan or scheme has non-safeguarded guaranteed benefits.
@@ -202,7 +202,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio5Choice
         [DisplayName("Non Safeguarded Guaranteed Benefits")]
         [IsoXmlTag("NonSfgrddGrntedBnfts")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? NonSafeguardedGuaranteedBenefits { get; init; }
+        public YesNoIndicator? NonSafeguardedGuaranteedBenefits { get; init; }
 
         /// <summary>
         /// Indicates whether the pension policy, plan or scheme has lifetime allowance protection.
@@ -211,7 +211,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio5Choice
         [DisplayName("Lifetime Allowance Protection")]
         [IsoXmlTag("LftmAllwncPrtcn")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? LifetimeAllowanceProtection { get; init; }
+        public YesNoIndicator? LifetimeAllowanceProtection { get; init; }
 
         /// <summary>
         /// Indicates whether the client has any lifetime allowance protection.
@@ -220,7 +220,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio5Choice
         [DisplayName("Client Lifetime Allowance Protection")]
         [IsoXmlTag("ClntLftmAllwncPrtcn")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? ClientLifetimeAllowanceProtection { get; init; }
+        public YesNoIndicator? ClientLifetimeAllowanceProtection { get; init; }
 
         /// <summary>
         /// Indicates whether a benefit crystallisation event (BCE) has occurred. This includes ‘age 75 checks’.
@@ -229,7 +229,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio5Choice
         [DisplayName("Benefit Crystallisation Event Occurred")]
         [IsoXmlTag("BnftCrstllstnEvtOcrd")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? BenefitCrystallisationEventOccurred { get; init; }
+        public YesNoIndicator? BenefitCrystallisationEventOccurred { get; init; }
 
         /// <summary>
         /// Additional information about the pension policy, plan or scheme.

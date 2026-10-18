@@ -24,7 +24,7 @@ public record GenericIdentification7
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.Max8Text)]
     [StringLength(maximumLength: 8, MinimumLength = 1)]
-    public required IsoMax8Text Issuer { get; init; }
+    public required Max8Text Issuer { get; init; }
 
     /// <summary>
     /// Proprietary information, often a code, issued by the data source scheme issuer.
@@ -34,5 +34,5 @@ public record GenericIdentification7
     [IsoXmlTag("Inf")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Information { get; init; }
+    public required Max35Text Information { get; init; }
 }

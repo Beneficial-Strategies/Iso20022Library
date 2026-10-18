@@ -31,7 +31,7 @@ public record GDPRData1
     [DisplayName("Consent Indicator")]
     [IsoXmlTag("CnsntInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ConsentIndicator { get; init; }
+    public required YesNoIndicator ConsentIndicator { get; init; }
 
     /// <summary>
     /// Date of the consent.
@@ -40,5 +40,5 @@ public record GDPRData1
     [DisplayName("Consent Date")]
     [IsoXmlTag("CnsntDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ConsentDate { get; init; }
+    public required DateOnly ConsentDate { get; init; }
 }

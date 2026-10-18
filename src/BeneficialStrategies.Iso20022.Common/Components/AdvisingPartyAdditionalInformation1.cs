@@ -24,7 +24,7 @@ public record AdvisingPartyAdditionalInformation1
     [IsoXmlTag("RefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReferenceNumber { get; init; }
+    public Max35Text? ReferenceNumber { get; init; }
 
     /// <summary>
     /// Additional information specific to the bank-to-beneficiary communication.

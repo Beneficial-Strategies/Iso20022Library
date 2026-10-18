@@ -32,7 +32,7 @@ public record PartiallySettledStatus1
     [IsoXmlTag("XtndedRsn")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoExtended350Code ExtendedReason { get; init; }
+    public required Extended350Code ExtendedReason { get; init; }
 
     /// <summary>
     /// Proprietary identification of the reason for the partially settled status in the report.
@@ -50,5 +50,5 @@ public record PartiallySettledStatus1
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AdditionalInformation { get; init; }
+    public Max350Text? AdditionalInformation { get; init; }
 }

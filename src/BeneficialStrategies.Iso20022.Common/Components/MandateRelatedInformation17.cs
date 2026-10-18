@@ -21,21 +21,21 @@ public record MandateRelatedInformation17
     /// </summary>
     [DisplayName("Date Of Signature")]
     [IsoXmlTag("DtOfSgntr")]
-    public IsoISODate? DateOfSignature { get; init; }
+    public DateOnly? DateOfSignature { get; init; }
 
     /// <summary>
     /// Mandate Identification.
     /// </summary>
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
-    public required IsoMax35Text MandateIdentification { get; init; }
+    public required Max35Text MandateIdentification { get; init; }
 
     /// <summary>
     /// Mandate Image.
     /// </summary>
     [DisplayName("Mandate Image")]
     [IsoXmlTag("MndtImg")]
-    public IsoMax2MBBinary? MandateImage { get; init; }
+    public Max2MBBinary? MandateImage { get; init; }
 
     /// <summary>
     /// Protected Mandate Image.

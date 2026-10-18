@@ -42,7 +42,7 @@ public record CardholderAuthentication17
     /// </summary>
     [DisplayName("Authentication Level")]
     [IsoXmlTag("AuthntcnLvl")]
-    public IsoMax35Text? AuthenticationLevel { get; init; }
+    public Max35Text? AuthenticationLevel { get; init; }
 
     /// <summary>
     /// Authentication Method.
@@ -63,14 +63,14 @@ public record CardholderAuthentication17
     /// </summary>
     [DisplayName("Authentication Type")]
     [IsoXmlTag("AuthntcnTp")]
-    public IsoMax35Text? AuthenticationType { get; init; }
+    public Max35Text? AuthenticationType { get; init; }
 
     /// <summary>
     /// Authentication Value.
     /// </summary>
     [DisplayName("Authentication Value")]
     [IsoXmlTag("AuthntcnVal")]
-    public IsoMax5000Binary? AuthenticationValue { get; init; }
+    public Max5000Binary? AuthenticationValue { get; init; }
 
     /// <summary>
     /// Cardholder Identification.

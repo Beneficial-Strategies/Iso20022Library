@@ -22,7 +22,7 @@ public record DetailedInstructionCancellationStatus16
     [IsoId("_hjmLg68uEfCx2aBifPEdRg")]
     [DisplayName("Single Instruction Cancellation Identification")]
     [IsoXmlTag("SnglInstrCxlId")]
-    public required IsoMax35Text SingleInstructionCancellationIdentification { get; init; }
+    public required Max35Text SingleInstructionCancellationIdentification { get; init; }
 
     /// <summary>
     /// Identification of the securities account.
@@ -30,7 +30,7 @@ public record DetailedInstructionCancellationStatus16
     [IsoId("_hjmLha8uEfCx2aBifPEdRg")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public IsoMax35Text? AccountIdentification { get; init; }
+    public Max35Text? AccountIdentification { get; init; }
 
     /// <summary>
     /// Identification of the subaccount within the safekeeping account.
@@ -38,7 +38,7 @@ public record DetailedInstructionCancellationStatus16
     [IsoId("_hjmLh68uEfCx2aBifPEdRg")]
     [DisplayName("Sub Account Identification")]
     [IsoXmlTag("SubAcctId")]
-    public IsoMax35Text? SubAccountIdentification { get; init; }
+    public Max35Text? SubAccountIdentification { get; init; }
 
     /// <summary>
     /// Status of an individual meeting instruction cancellation request.

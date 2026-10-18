@@ -63,7 +63,7 @@ public record FinancialInstrumentAttributes65
     [DisplayName("Next Coupon Date")]
     [IsoXmlTag("NxtCpnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? NextCouponDate { get; init; }
+    public DateOnly? NextCouponDate { get; init; }
 
     /// <summary>
     /// Date on which an order expires or at which a privilege or offer terminates.
@@ -72,7 +72,7 @@ public record FinancialInstrumentAttributes65
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ExpiryDate { get; init; }
+    public DateOnly? ExpiryDate { get; init; }
 
     /// <summary>
     /// Date on which the interest rate or redemption price will be/was calculated according to the terms of the issue.
@@ -81,7 +81,7 @@ public record FinancialInstrumentAttributes65
     [DisplayName("Floating Rate Fixing Date")]
     [IsoXmlTag("FltgRateFxgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? FloatingRateFixingDate { get; init; }
+    public DateOnly? FloatingRateFixingDate { get; init; }
 
     /// <summary>
     /// Date on which a financial instrument becomes due and assets are to be repaid.
@@ -90,7 +90,7 @@ public record FinancialInstrumentAttributes65
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? MaturityDate { get; init; }
+    public DateOnly? MaturityDate { get; init; }
 
     /// <summary>
     /// Date on which the financial instrument is issued.
@@ -99,7 +99,7 @@ public record FinancialInstrumentAttributes65
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? IssueDate { get; init; }
+    public DateOnly? IssueDate { get; init; }
 
     /// <summary>
     /// Date on which a financial instrument is called away/redeemed before its scheduled maturity.
@@ -108,7 +108,7 @@ public record FinancialInstrumentAttributes65
     [DisplayName("Next Callable Date")]
     [IsoXmlTag("NxtCllblDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? NextCallableDate { get; init; }
+    public DateOnly? NextCallableDate { get; init; }
 
     /// <summary>
     /// Date on which a holder of a financial instrument has the right to request redemption of the principal amount prior to its scheduled maturity date.
@@ -117,7 +117,7 @@ public record FinancialInstrumentAttributes65
     [DisplayName("Putable Date")]
     [IsoXmlTag("PutblDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? PutableDate { get; init; }
+    public DateOnly? PutableDate { get; init; }
 
     /// <summary>
     /// Date on which an interest bearing financial instrument begins to accrue interest.
@@ -126,7 +126,7 @@ public record FinancialInstrumentAttributes65
     [DisplayName("Dated Date")]
     [IsoXmlTag("DtdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DatedDate { get; init; }
+    public DateOnly? DatedDate { get; init; }
 
     /// <summary>
     /// Deadline by which a convertible security must be converted, according to the terms of the issue.
@@ -135,7 +135,7 @@ public record FinancialInstrumentAttributes65
     [DisplayName("Conversion Date")]
     [IsoXmlTag("ConvsDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ConversionDate { get; init; }
+    public DateOnly? ConversionDate { get; init; }
 
     /// <summary>
     /// Factor used to calculate the value of the outstanding principal of the financial instrument (for factored securities) until the next redemption (factor) date.
@@ -144,7 +144,7 @@ public record FinancialInstrumentAttributes65
     [DisplayName("Previous Factor")]
     [IsoXmlTag("PrvsFctr")]
     [IsoSimpleType(IsoSimpleType.BaseOne14Rate)]
-    public IsoBaseOne14Rate? PreviousFactor { get; init; }
+    public BaseOne14Rate? PreviousFactor { get; init; }
 
     /// <summary>
     /// Factor used to calculate the value of the outstanding principal of the financial instrument (for factored securities) that will applicable after the redemption (factor) date.
@@ -153,7 +153,7 @@ public record FinancialInstrumentAttributes65
     [DisplayName("Next Factor")]
     [IsoXmlTag("NxtFctr")]
     [IsoSimpleType(IsoSimpleType.BaseOne14Rate)]
-    public IsoBaseOne14Rate? NextFactor { get; init; }
+    public BaseOne14Rate? NextFactor { get; init; }
 
     /// <summary>
     /// Annual rate of a financial instrument.
@@ -162,7 +162,7 @@ public record FinancialInstrumentAttributes65
     [DisplayName("Interest Rate")]
     [IsoXmlTag("IntrstRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? InterestRate { get; init; }
+    public PercentageRate? InterestRate { get; init; }
 
     /// <summary>
     /// Interest rate applicable to the next interest payment period in relation to variable rate instruments.
@@ -171,7 +171,7 @@ public record FinancialInstrumentAttributes65
     [DisplayName("Next Interest Rate")]
     [IsoXmlTag("NxtIntrstRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? NextInterestRate { get; init; }
+    public PercentageRate? NextInterestRate { get; init; }
 
     /// <summary>
     /// Minimum nominal quantity of financial instrument.

@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalEnrolment2Choice
         [IsoXmlTag("CdtrTradgNm")]
         [IsoSimpleType(IsoSimpleType.Max140Text)]
         [StringLength(maximumLength: 140, MinimumLength = 1)]
-        public IsoMax140Text? CreditorTradingName { get; init; }
+        public Max140Text? CreditorTradingName { get; init; }
 
         /// <summary>
         /// Party to which an amount of money is due.
@@ -57,7 +57,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalEnrolment2Choice
         [DisplayName("Merchant Category Code")]
         [IsoXmlTag("MrchntCtgyCd")]
         [IsoSimpleType(IsoSimpleType.MerchantCategoryCodeIdentifier)]
-        public required IsoMerchantCategoryCodeIdentifier MerchantCategoryCode { get; init; }
+        public required MerchantCategoryCodeIdentifier MerchantCategoryCode { get; init; }
 
         /// <summary>
         /// Commercial logo of the creditor.
@@ -66,6 +66,6 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalEnrolment2Choice
         [DisplayName("Creditor Logo")]
         [IsoXmlTag("CdtrLogo")]
         [IsoSimpleType(IsoSimpleType.Max10KBinary)]
-        public IsoMax10KBinary? CreditorLogo { get; init; }
+        public Max10KBinary? CreditorLogo { get; init; }
     }
 }

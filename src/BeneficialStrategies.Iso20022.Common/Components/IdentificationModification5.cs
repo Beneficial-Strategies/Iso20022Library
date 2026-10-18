@@ -21,14 +21,14 @@ public record IdentificationModification5
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public IsoMax140Text? AdditionalInformation { get; init; }
+    public Max140Text? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Original Party And Account Identification.

@@ -24,7 +24,7 @@ public record AbortData5
     [IsoXmlTag("XchgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ExchangeIdentification { get; init; }
+    public required Max35Text ExchangeIdentification { get; init; }
 
     /// <summary>
     /// Reason of aborting a transaction.
@@ -34,7 +34,7 @@ public record AbortData5
     [IsoXmlTag("AbrtRsn")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text AbortReason { get; init; }
+    public required Max140Text AbortReason { get; init; }
 
     /// <summary>
     /// To display an abort message to the Customer.
@@ -51,5 +51,5 @@ public record AbortData5
     [DisplayName("Transaction Success")]
     [IsoXmlTag("TxSucss")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? TransactionSuccess { get; init; }
+    public TrueFalseIndicator? TransactionSuccess { get; init; }
 }

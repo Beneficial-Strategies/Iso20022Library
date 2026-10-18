@@ -24,7 +24,7 @@ public record FinancialInstrument69
     [IsoXmlTag("LineId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LineIdentification { get; init; }
+    public Max35Text? LineIdentification { get; init; }
 
     /// <summary>
     /// Identification of the asset.
@@ -138,7 +138,7 @@ public record FinancialInstrument69
     [DisplayName("Requested Transfer Date")]
     [IsoXmlTag("ReqdTrfDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RequestedTransferDate { get; init; }
+    public DateOnly? RequestedTransferDate { get; init; }
 
     /// <summary>
     /// Date to be used as the trade date when securities are settled through an International Central Securities Depository (ICSD) or Central Securities Depository (CSD).
@@ -147,7 +147,7 @@ public record FinancialInstrument69
     [DisplayName("Requested Trade Date")]
     [IsoXmlTag("ReqdTradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RequestedTradeDate { get; init; }
+    public DateOnly? RequestedTradeDate { get; init; }
 
     /// <summary>
     /// Date at which the securities are to be exchanged at the International Central Securities Depository (ICSD) or Central Securities Depository (CSD).
@@ -156,7 +156,7 @@ public record FinancialInstrument69
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RequestedSettlementDate { get; init; }
+    public DateOnly? RequestedSettlementDate { get; init; }
 
     /// <summary>
     /// Payment process for the transfer of cash from the debtor to the creditor.

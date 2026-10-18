@@ -23,7 +23,7 @@ public record OriginalReportStatistics3
     [DisplayName("Total Number Of Records")]
     [IsoXmlTag("TtlNbOfRcrds")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText TotalNumberOfRecords { get; init; }
+    public required Max15NumericText TotalNumberOfRecords { get; init; }
 
     /// <summary>
     /// Detailed information on the number of records for each records status.

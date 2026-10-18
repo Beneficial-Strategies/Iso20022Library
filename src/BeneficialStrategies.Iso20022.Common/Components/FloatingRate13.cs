@@ -23,7 +23,7 @@ public record FloatingRate13
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public IsoISINOct2015Identifier? Identification { get; init; }
+    public ISINOct2015Identifier? Identification { get; init; }
 
     /// <summary>
     /// The full name of the interest rate as assigned by the index provider.
@@ -33,7 +33,7 @@ public record FloatingRate13
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Name { get; init; }
+    public Max350Text? Name { get; init; }
 
     /// <summary>
     /// Indication of the floating rate used.

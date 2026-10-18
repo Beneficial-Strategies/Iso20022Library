@@ -23,7 +23,7 @@ public record FixedRate11
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Rate { get; init; }
+    public PercentageRate? Rate { get; init; }
 
     /// <summary>
     /// Method for calculating the accrued interest on the principal amount for a fixed rate.

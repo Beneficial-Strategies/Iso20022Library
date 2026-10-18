@@ -22,7 +22,7 @@ public record InstrumentReport1
     [IsoId("_qBNgIGFSEfC91ZUW7iS7ww")]
     [DisplayName("Report Identification")]
     [IsoXmlTag("RptId")]
-    public IsoMax140Text? ReportIdentification { get; init; }
+    public Max140Text? ReportIdentification { get; init; }
 
     /// <summary>
     /// Information about the status of a financial instrument.

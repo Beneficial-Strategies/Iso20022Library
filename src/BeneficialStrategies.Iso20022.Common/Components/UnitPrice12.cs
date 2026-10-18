@@ -32,7 +32,7 @@ public record UnitPrice12
     [IsoXmlTag("XtndedTp")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoExtended350Code ExtendedType { get; init; }
+    public required Extended350Code ExtendedType { get; init; }
 
     /// <summary>
     /// Value of the price, eg, as a currency and value.
@@ -65,7 +65,7 @@ public record UnitPrice12
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NumberOfDaysAccrued { get; init; }
+    public Number? NumberOfDaysAccrued { get; init; }
 
     /// <summary>
     /// Amount included in the NAV that corresponds to gains directly or indirectly derived from interest payment in the scope of the European Directive on taxation of savings income in the form of interest payments.

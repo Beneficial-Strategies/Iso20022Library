@@ -23,7 +23,7 @@ public record ClearingTotals2
     [DisplayName("Count")]
     [IsoXmlTag("Cnt")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber Count { get; init; }
+    public required Number Count { get; init; }
 
     /// <summary>
     /// Gross clearing accumulated amount.

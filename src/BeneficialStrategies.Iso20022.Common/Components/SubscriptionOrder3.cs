@@ -24,7 +24,7 @@ public record SubscriptionOrder3
     [IsoXmlTag("OrdrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OrderReference { get; init; }
+    public required Max35Text OrderReference { get; init; }
 
     /// <summary>
     /// Specifies the category of the investment fund order.
@@ -106,7 +106,7 @@ public record SubscriptionOrder3
     [IsoXmlTag("LttrInttRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LetterIntentReference { get; init; }
+    public Max35Text? LetterIntentReference { get; init; }
 
     /// <summary>
     /// Reference of an accumulation right program, in which sales commissions are based on a customer&apos;s present purchases of shares and the aggregate quantity previously purchased by the customer. An accumulation rights program is mainly used in the US market.
@@ -116,7 +116,7 @@ public record SubscriptionOrder3
     [IsoXmlTag("AcmltnRghtRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccumulationRightReference { get; init; }
+    public Max35Text? AccumulationRightReference { get; init; }
 
     /// <summary>
     /// Charge for the placement of an order.
@@ -157,7 +157,7 @@ public record SubscriptionOrder3
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator PhysicalDeliveryIndicator { get; init; }
+    public required YesNoIndicator PhysicalDeliveryIndicator { get; init; }
 
     /// <summary>
     /// Information related to physical delivery of the securities.

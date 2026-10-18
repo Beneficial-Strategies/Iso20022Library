@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.OrganisationIdentification8Choic
         /// </summary>
         [IsoXmlTag("AnyBIC")]
         [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
-        public required IsoAnyBICDec2014Identifier Value { get; init; }
+        public required AnyBICDec2014Identifier Value { get; init; }
     }
 }

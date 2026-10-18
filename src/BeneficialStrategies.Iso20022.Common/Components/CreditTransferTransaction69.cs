@@ -77,7 +77,7 @@ public record CreditTransferTransaction69
     /// </summary>
     [DisplayName("Expiry Date Time")]
     [IsoXmlTag("XpryDtTm")]
-    public IsoISODateTime? ExpiryDateTime { get; init; }
+    public ISODateTime? ExpiryDateTime { get; init; }
 
     /// <summary>
     /// Instructed Agent.
@@ -119,7 +119,7 @@ public record CreditTransferTransaction69
     /// </summary>
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
-    public IsoISODate? InterbankSettlementDate { get; init; }
+    public DateOnly? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Intermediary Agent1.

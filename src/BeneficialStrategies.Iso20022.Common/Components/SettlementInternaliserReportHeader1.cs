@@ -23,7 +23,7 @@ public record SettlementInternaliserReportHeader1
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// Last day of the reporting period.
@@ -32,7 +32,7 @@ public record SettlementInternaliserReportHeader1
     [DisplayName("Reporting Date")]
     [IsoXmlTag("RptgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ReportingDate { get; init; }
+    public required DateOnly ReportingDate { get; init; }
 
     /// <summary>
     /// Specifies the currency of the reported transactions.

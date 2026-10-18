@@ -102,7 +102,7 @@ public record CashOption115
     [IsoId("_jWRpEaLfEfCHi7w3_0pcpw")]
     [DisplayName("Estimated Rate Indicator")]
     [IsoXmlTag("EstmtdRateInd")]
-    public IsoYesNoIndicator? EstimatedRateIndicator { get; init; }
+    public YesNoIndicator? EstimatedRateIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the income event is subject to withholding tax if paid to a non-U.S. resident alien (NRA).
@@ -110,7 +110,7 @@ public record CashOption115
     [IsoId("_jWRpGaLfEfCHi7w3_0pcpw")]
     [DisplayName("NRA Tax Reportable Indicator")]
     [IsoXmlTag("NRATaxRptblInd")]
-    public IsoYesNoIndicator? NRATaxReportableIndicator { get; init; }
+    public YesNoIndicator? NRATaxReportableIndicator { get; init; }
 
     /// <summary>
     /// Provides information about the corporate action option.

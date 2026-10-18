@@ -24,7 +24,7 @@ public record PersonalInformation1
     [IsoXmlTag("NmOfFthr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? NameOfFather { get; init; }
+    public Max35Text? NameOfFather { get; init; }
 
     /// <summary>
     /// Maiden (unmarried) name of the mother of the individual person.
@@ -34,7 +34,7 @@ public record PersonalInformation1
     [IsoXmlTag("MdnNmOfMthr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MaidenNameOfMother { get; init; }
+    public Max35Text? MaidenNameOfMother { get; init; }
 
     /// <summary>
     /// Name of the partner of the individual person.
@@ -44,5 +44,5 @@ public record PersonalInformation1
     [IsoXmlTag("NmOfPrtnr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? NameOfPartner { get; init; }
+    public Max35Text? NameOfPartner { get; init; }
 }

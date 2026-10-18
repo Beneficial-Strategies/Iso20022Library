@@ -46,7 +46,7 @@ public record IntraPositionMovement10
     [IsoId("_Ydgnb-SkEe-qVZLXW4RRBw")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
-    public required IsoMax35Text AccountOwnerTransactionIdentification { get; init; }
+    public required Max35Text AccountOwnerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the transaction as known by the account servicer.
@@ -54,7 +54,7 @@ public record IntraPositionMovement10
     [IsoId("_Ydgnd-SkEe-qVZLXW4RRBw")]
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
-    public IsoMax35Text? AccountServicerTransactionIdentification { get; init; }
+    public Max35Text? AccountServicerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
@@ -62,7 +62,7 @@ public record IntraPositionMovement10
     [IsoId("_Ydgnf-SkEe-qVZLXW4RRBw")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
-    public IsoMax35Text? MarketInfrastructureTransactionIdentification { get; init; }
+    public Max35Text? MarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of the transaction as assigned by the processor.
@@ -70,7 +70,7 @@ public record IntraPositionMovement10
     [IsoId("_Ydgnh-SkEe-qVZLXW4RRBw")]
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
-    public IsoMax35Text? ProcessorTransactionIdentification { get; init; }
+    public Max35Text? ProcessorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Collective reference identifying a set of messages.
@@ -78,7 +78,7 @@ public record IntraPositionMovement10
     [IsoId("_YdgnieSkEe-qVZLXW4RRBw")]
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
-    public IsoMax35Text? PoolIdentification { get; init; }
+    public Max35Text? PoolIdentification { get; init; }
 
     /// <summary>
     /// Identification assigned by the account servicer to unambiguously identify a corporate action event.
@@ -86,7 +86,7 @@ public record IntraPositionMovement10
     [IsoId("_YdhOcuSkEe-qVZLXW4RRBw")]
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
-    public IsoMax35Text? CorporateActionEventIdentification { get; init; }
+    public Max35Text? CorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Identifies additional details of the transaction.

@@ -23,7 +23,7 @@ public record CardPaymentTransaction26
     [DisplayName("Transaction Capture")]
     [IsoXmlTag("TxCaptr")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? TransactionCapture { get; init; }
+    public TrueFalseIndicator? TransactionCapture { get; init; }
 
     /// <summary>
     /// Category code conform to ISO 18245, related to the type of services or goods the merchant provides for the transaction.
@@ -33,7 +33,7 @@ public record CardPaymentTransaction26
     [IsoXmlTag("MrchntCtgyCd")]
     [IsoSimpleType(IsoSimpleType.Min3Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 3)]
-    public required IsoMin3Max4Text MerchantCategoryCode { get; init; }
+    public required Min3Max4Text MerchantCategoryCode { get; init; }
 
     /// <summary>
     /// Global reference of the sale transaction for the sale system.
@@ -43,7 +43,7 @@ public record CardPaymentTransaction26
     [IsoXmlTag("SaleRefId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SaleReferenceIdentification { get; init; }
+    public Max35Text? SaleReferenceIdentification { get; init; }
 
     /// <summary>
     /// Unique identification of the transaction assigned by the POI (Point Of Interaction).
@@ -69,7 +69,7 @@ public record CardPaymentTransaction26
     [IsoXmlTag("RcncltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReconciliationIdentification { get; init; }
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Details of the transaction.
@@ -85,5 +85,5 @@ public record CardPaymentTransaction26
     [IsoId("_VpyZHTJREeO58eY-wGOnqw")]
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
-    public SimpleValueList<IsoMax70Text> AdditionalTransactionData { get; init; } = [];
+    public SimpleValueList<Max70Text> AdditionalTransactionData { get; init; } = [];
 }

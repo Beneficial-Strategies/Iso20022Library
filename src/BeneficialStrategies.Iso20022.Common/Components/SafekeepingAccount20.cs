@@ -22,7 +22,7 @@ public record SafekeepingAccount20
     [IsoId("_gFPIea5wEfCUHaCK5HWOhg")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public IsoMax35Text? AccountIdentification { get; init; }
+    public Max35Text? AccountIdentification { get; init; }
 
     /// <summary>
     /// Blockchain address or wallet where digital assets are maintained.
@@ -30,7 +30,7 @@ public record SafekeepingAccount20
     [IsoId("_gFPIe65wEfCUHaCK5HWOhg")]
     [DisplayName("Block Chain Address Or Wallet")]
     [IsoXmlTag("BlckChainAdrOrWllt")]
-    public IsoMax140Text? BlockChainAddressOrWallet { get; init; }
+    public Max140Text? BlockChainAddressOrWallet { get; init; }
 
     /// <summary>
     /// Party that legally owns the account.
@@ -46,7 +46,7 @@ public record SafekeepingAccount20
     [IsoId("_gFPIf65wEfCUHaCK5HWOhg")]
     [DisplayName("Sub Account Identification")]
     [IsoXmlTag("SubAcctId")]
-    public IsoMax35Text? SubAccountIdentification { get; init; }
+    public Max35Text? SubAccountIdentification { get; init; }
 
     /// <summary>
     /// Quantity of securities to which this instruction applies.

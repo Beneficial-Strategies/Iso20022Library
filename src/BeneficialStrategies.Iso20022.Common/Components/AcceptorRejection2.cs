@@ -32,7 +32,7 @@ public record AcceptorRejection2
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public IsoMax500Text? AdditionalInformation { get; init; }
+    public Max500Text? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Original request that caused the recipient party to reject it.
@@ -41,5 +41,5 @@ public record AcceptorRejection2
     [DisplayName("Message In Error")]
     [IsoXmlTag("MsgInErr")]
     [IsoSimpleType(IsoSimpleType.Max100KBinary)]
-    public IsoMax100KBinary? MessageInError { get; init; }
+    public Max100KBinary? MessageInError { get; init; }
 }

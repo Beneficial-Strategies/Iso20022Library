@@ -23,7 +23,7 @@ public record MarketDetail2
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public required IsoMICIdentifier Identification { get; init; }
+    public required MICIdentifier Identification { get; init; }
 
     /// <summary>
     /// Average daily number of transactions that have been performed on the most relevant market in terms of liquidity.
@@ -32,5 +32,5 @@ public record MarketDetail2
     [DisplayName("Average Daily Number Of Transactions")]
     [IsoXmlTag("AvrgDalyNbOfTxs")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? AverageDailyNumberOfTransactions { get; init; }
+    public DecimalNumber? AverageDailyNumberOfTransactions { get; init; }
 }

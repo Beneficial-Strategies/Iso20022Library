@@ -40,7 +40,7 @@ public record AdditionalParameters22
     [IsoXmlTag("PrvsPrtlConfId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PreviousPartialConfirmationIdentification { get; init; }
+    public Max35Text? PreviousPartialConfirmationIdentification { get; init; }
 
     /// <summary>
     /// Unique reference identifying the triparty collateral management transaction from the triparty agent&apos;s point of view.
@@ -50,7 +50,7 @@ public record AdditionalParameters22
     [IsoXmlTag("TrptyAgtCollTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TripartyAgentCollateralTransactionIdentification { get; init; }
+    public Max35Text? TripartyAgentCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique reference identifying the triparty collateral management transaction from the client&apos;s point of view.
@@ -60,7 +60,7 @@ public record AdditionalParameters22
     [IsoXmlTag("ClntTrptyCollTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClientTripartyCollateralTransactionIdentification { get; init; }
+    public Max35Text? ClientTripartyCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification assigned to the instruction by the client.
@@ -70,7 +70,7 @@ public record AdditionalParameters22
     [IsoXmlTag("ClntCollInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClientCollateralInstructionIdentification { get; init; }
+    public Max35Text? ClientCollateralInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification assigned to the instruction by the triparty agent.
@@ -80,5 +80,5 @@ public record AdditionalParameters22
     [IsoXmlTag("TrptyCollInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TripartyCollateralInstructionIdentification { get; init; }
+    public Max35Text? TripartyCollateralInstructionIdentification { get; init; }
 }

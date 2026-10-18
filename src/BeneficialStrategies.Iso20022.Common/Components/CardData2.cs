@@ -24,7 +24,7 @@ public record CardData2
     [DisplayName("PAN")]
     [IsoXmlTag("PAN")]
     [IsoSimpleType(IsoSimpleType.Max19NumericText)]
-    public IsoMax19NumericText? PAN { get; init; }
+    public Max19NumericText? PAN { get; init; }
 
     /// <summary>
     /// Distinguishes between instances of the same payment card.
@@ -34,7 +34,7 @@ public record CardData2
     [DisplayName("Card Sequence Number")]
     [IsoXmlTag("CardSeqNb")]
     [IsoSimpleType(IsoSimpleType.Min2Max3NumericText)]
-    public IsoMin2Max3NumericText? CardSequenceNumber { get; init; }
+    public Min2Max3NumericText? CardSequenceNumber { get; init; }
 
     /// <summary>
     /// Unique non-financial reference assigned to a given PAN. May be used to link the transaction activity to that PAN.
@@ -47,7 +47,7 @@ public record CardData2
     [IsoXmlTag("PmtAcctRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PaymentAccountReference { get; init; }
+    public Max35Text? PaymentAccountReference { get; init; }
 
     /// <summary>
     /// Identifies the card portfolio.
@@ -57,5 +57,5 @@ public record CardData2
     [IsoXmlTag("CardPrtflIdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CardPortfolioIdentifier { get; init; }
+    public Max35Text? CardPortfolioIdentifier { get; init; }
 }

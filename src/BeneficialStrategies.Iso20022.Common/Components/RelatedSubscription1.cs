@@ -56,5 +56,5 @@ public record RelatedSubscription1
     /// </summary>
     [DisplayName("Related Quantity")]
     [IsoXmlTag("RltdQty")]
-    public IsoDecimalNumber? RelatedQuantity { get; init; }
+    public DecimalNumber? RelatedQuantity { get; init; }
 }

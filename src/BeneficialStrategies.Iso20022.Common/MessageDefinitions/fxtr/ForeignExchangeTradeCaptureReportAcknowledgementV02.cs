@@ -57,7 +57,7 @@ public record ForeignExchangeTradeCaptureReportAcknowledgementV02 : IOuterRecord
     /// </summary>
     [DisplayName("Deal Ticket Identification")]
     [IsoXmlTag("DealTcktId")]
-    public IsoMax35Text? DealTicketIdentification { get; init; }
+    public Max35Text? DealTicketIdentification { get; init; }
 
     /// <summary>
     /// Reference.
@@ -85,5 +85,5 @@ public record ForeignExchangeTradeCaptureReportAcknowledgementV02 : IOuterRecord
     /// </summary>
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    public required IsoMax35Text TradeIdentification { get; init; }
+    public required Max35Text TradeIdentification { get; init; }
 }

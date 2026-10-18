@@ -24,7 +24,7 @@ public record FinancialInstrument86
     [IsoXmlTag("LineId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LineIdentification { get; init; }
+    public Max35Text? LineIdentification { get; init; }
 
     /// <summary>
     /// Identification of the asset.
@@ -49,7 +49,7 @@ public record FinancialInstrument86
     [DisplayName("Partial Instructed Quantity")]
     [IsoXmlTag("PrtlInstdQty")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PartialInstructedQuantity { get; init; }
+    public YesNoIndicator? PartialInstructedQuantity { get; init; }
 
     /// <summary>
     /// Specifies how the financial instrument is transferred.
@@ -66,7 +66,7 @@ public record FinancialInstrument86
     [DisplayName("Additional Asset")]
     [IsoXmlTag("AddtlAsst")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AdditionalAsset { get; init; }
+    public YesNoIndicator? AdditionalAsset { get; init; }
 
     /// <summary>
     /// Indicates the asset is no longer available at the transferor party (ceding party).
@@ -75,7 +75,7 @@ public record FinancialInstrument86
     [DisplayName("Not Available")]
     [IsoXmlTag("NotAvlbl")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? NotAvailable { get; init; }
+    public YesNoIndicator? NotAvailable { get; init; }
 
     /// <summary>
     /// Security is to be converted into another security before transfer.
@@ -173,7 +173,7 @@ public record FinancialInstrument86
     [DisplayName("Requested Transfer Date")]
     [IsoXmlTag("ReqdTrfDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RequestedTransferDate { get; init; }
+    public DateOnly? RequestedTransferDate { get; init; }
 
     /// <summary>
     /// Date to be used as the trade date when securities are settled through an International Central Securities Depository (ICSD) or Central Securities Depository (CSD).
@@ -182,7 +182,7 @@ public record FinancialInstrument86
     [DisplayName("Requested Trade Date")]
     [IsoXmlTag("ReqdTradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RequestedTradeDate { get; init; }
+    public DateOnly? RequestedTradeDate { get; init; }
 
     /// <summary>
     /// Date at which the securities are to be exchanged at the International Central Securities Depository (ICSD) or Central Securities Depository (CSD).
@@ -191,7 +191,7 @@ public record FinancialInstrument86
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RequestedSettlementDate { get; init; }
+    public DateOnly? RequestedSettlementDate { get; init; }
 
     /// <summary>
     /// Payment process for the transfer of cash from the debtor to the creditor.

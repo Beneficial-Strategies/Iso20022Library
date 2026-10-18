@@ -21,7 +21,7 @@ public record TravelAgencyPackage2
     /// </summary>
     [DisplayName("Credit Card Slip Number")]
     [IsoXmlTag("CdtCardSlipNb")]
-    public IsoMax35Text? CreditCardSlipNumber { get; init; }
+    public Max35Text? CreditCardSlipNumber { get; init; }
 
     /// <summary>
     /// Customer Reference.
@@ -35,14 +35,14 @@ public record TravelAgencyPackage2
     /// </summary>
     [DisplayName("Data Source")]
     [IsoXmlTag("DataSrc")]
-    public IsoMax35Text? DataSource { get; init; }
+    public Max35Text? DataSource { get; init; }
 
     /// <summary>
     /// Delivery Order Number.
     /// </summary>
     [DisplayName("Delivery Order Number")]
     [IsoXmlTag("DlvryOrdrNb")]
-    public IsoMax35Text? DeliveryOrderNumber { get; init; }
+    public Max35Text? DeliveryOrderNumber { get; init; }
 
     /// <summary>
     /// Fee.
@@ -56,7 +56,7 @@ public record TravelAgencyPackage2
     /// </summary>
     [DisplayName("Insurance")]
     [IsoXmlTag("Insrnc")]
-    public IsoTrueFalseIndicator? Insurance { get; init; }
+    public TrueFalseIndicator? Insurance { get; init; }
 
     /// <summary>
     /// Insurance Amount.
@@ -70,19 +70,19 @@ public record TravelAgencyPackage2
     /// </summary>
     [DisplayName("Number In Party")]
     [IsoXmlTag("NbInPty")]
-    public IsoMax10NumericText? NumberInParty { get; init; }
+    public Max10NumericText? NumberInParty { get; init; }
 
     /// <summary>
     /// Reservation Number.
     /// </summary>
     [DisplayName("Reservation Number")]
     [IsoXmlTag("RsvatnNb")]
-    public IsoMax35Text? ReservationNumber { get; init; }
+    public Max35Text? ReservationNumber { get; init; }
 
     /// <summary>
     /// Type.
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public IsoMax70Text? Type { get; init; }
+    public Max70Text? Type { get; init; }
 }

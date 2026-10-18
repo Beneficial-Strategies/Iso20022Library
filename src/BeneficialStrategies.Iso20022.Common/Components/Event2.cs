@@ -24,7 +24,7 @@ public record Event2
     [IsoXmlTag("EvtCd")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public required IsoMax4AlphaNumericText EventCode { get; init; }
+    public required Max4AlphaNumericText EventCode { get; init; }
 
     /// <summary>
     /// Describes the parameters of an event which occurred in a system.
@@ -32,7 +32,7 @@ public record Event2
     [IsoId("_w2BtI07TEeSGH6dwL1uJcg")]
     [DisplayName("Event Parameter")]
     [IsoXmlTag("EvtParam")]
-    public SimpleValueList<IsoMax35Text> EventParameter { get; init; } = [];
+    public SimpleValueList<Max35Text> EventParameter { get; init; } = [];
 
     /// <summary>
     /// Free text used to describe an event which occurred in a system.
@@ -42,7 +42,7 @@ public record Event2
     [IsoXmlTag("EvtDesc")]
     [IsoSimpleType(IsoSimpleType.Max1000Text)]
     [StringLength(maximumLength: 1000, MinimumLength = 1)]
-    public IsoMax1000Text? EventDescription { get; init; }
+    public Max1000Text? EventDescription { get; init; }
 
     /// <summary>
     /// Date and time at which the event occurred.
@@ -51,5 +51,5 @@ public record Event2
     [DisplayName("Event Time")]
     [IsoXmlTag("EvtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? EventTime { get; init; }
+    public ISODateTime? EventTime { get; init; }
 }

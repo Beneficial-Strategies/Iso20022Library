@@ -48,7 +48,7 @@ public record CreditDerivative4
     [IsoXmlTag("ClctnBsis")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CalculationBasis { get; init; }
+    public Max35Text? CalculationBasis { get; init; }
 
     /// <summary>
     /// Indicates the series number of the composition of the index if applicable.
@@ -57,7 +57,7 @@ public record CreditDerivative4
     [DisplayName("Series")]
     [IsoXmlTag("Srs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Series { get; init; }
+    public Number? Series { get; init; }
 
     /// <summary>
     /// New version of a series is issued if one of the constituents defaults and the index has to be re-weighted to account for the new number of total constituents within the index.
@@ -66,7 +66,7 @@ public record CreditDerivative4
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Version { get; init; }
+    public Number? Version { get; init; }
 
     /// <summary>
     /// Factor to apply to the actual notional to adjust it to all the previous credit events in the index series.
@@ -76,7 +76,7 @@ public record CreditDerivative4
     [DisplayName("Index Factor")]
     [IsoXmlTag("IndxFctr")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? IndexFactor { get; init; }
+    public PercentageRate? IndexFactor { get; init; }
 
     /// <summary>
     /// Indicates whether the derivative contract is tranched or not.

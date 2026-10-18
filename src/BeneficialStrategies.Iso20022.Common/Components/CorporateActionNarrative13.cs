@@ -22,7 +22,7 @@ public record CorporateActionNarrative13
     [IsoId("_WZOJ5dp-Ed-ak6NoX_4Aeg_1845305224")]
     [DisplayName("Information To Comply With")]
     [IsoXmlTag("InfToCmplyWth")]
-    public SimpleValueList<IsoRestrictedFINXMax350Text> InformationToComplyWith { get; init; } = [];
+    public SimpleValueList<RestrictedFINXMax350Text> InformationToComplyWith { get; init; } = [];
 
     /// <summary>
     /// Provides additional information on the delivery details of the outturned (derived) securities. This narrative is only to be used in case the securities are not eligible at the agent/custodian, and may not be used for settlement instructions.
@@ -30,7 +30,7 @@ public record CorporateActionNarrative13
     [IsoId("_WZOJ5tp-Ed-ak6NoX_4Aeg_1617142961")]
     [DisplayName("Delivery Details")]
     [IsoXmlTag("DlvryDtls")]
-    public SimpleValueList<IsoRestrictedFINXMax350Text> DeliveryDetails { get; init; } = [];
+    public SimpleValueList<RestrictedFINXMax350Text> DeliveryDetails { get; init; } = [];
 
     /// <summary>
     /// Provides additional details pertaining to foreign exchange instructions.
@@ -38,7 +38,7 @@ public record CorporateActionNarrative13
     [IsoId("_WZOJ59p-Ed-ak6NoX_4Aeg_-263162679")]
     [DisplayName("Foreign Exchange Instructions Additional Information")]
     [IsoXmlTag("FXInstrsAddtlInf")]
-    public SimpleValueList<IsoRestrictedFINXMax350Text> ForeignExchangeInstructionsAdditionalInformation { get; init; } =
+    public SimpleValueList<RestrictedFINXMax350Text> ForeignExchangeInstructionsAdditionalInformation { get; init; } =
         [];
 
     /// <summary>
@@ -47,7 +47,7 @@ public record CorporateActionNarrative13
     [IsoId("_WZOJ6Np-Ed-ak6NoX_4Aeg_-1374074098")]
     [DisplayName("Disclaimer")]
     [IsoXmlTag("Dsclmr")]
-    public SimpleValueList<IsoRestrictedFINXMax350Text> Disclaimer { get; init; } = [];
+    public SimpleValueList<RestrictedFINXMax350Text> Disclaimer { get; init; } = [];
 
     /// <summary>
     /// Provides additional details pertaining to the corporate action instruction.
@@ -55,6 +55,6 @@ public record CorporateActionNarrative13
     [IsoId("_WZX64Np-Ed-ak6NoX_4Aeg_-1744370468")]
     [DisplayName("Instruction Additional Information")]
     [IsoXmlTag("InstrAddtlInf")]
-    public SimpleValueList<IsoRestrictedFINXMax350Text> InstructionAdditionalInformation { get; init; } =
+    public SimpleValueList<RestrictedFINXMax350Text> InstructionAdditionalInformation { get; init; } =
         [];
 }

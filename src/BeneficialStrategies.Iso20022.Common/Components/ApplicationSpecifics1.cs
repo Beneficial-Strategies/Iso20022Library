@@ -24,7 +24,7 @@ public record ApplicationSpecifics1
     [IsoXmlTag("SysUsr")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? SystemUser { get; init; }
+    public Max140Text? SystemUser { get; init; }
 
     /// <summary>
     /// Contains the digital signature of the Business Entity authorised to sign this Business File.
@@ -41,5 +41,5 @@ public record ApplicationSpecifics1
     [DisplayName("Total Number Of Documents")]
     [IsoXmlTag("TtlNbOfDocs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber TotalNumberOfDocuments { get; init; }
+    public required Number TotalNumberOfDocuments { get; init; }
 }

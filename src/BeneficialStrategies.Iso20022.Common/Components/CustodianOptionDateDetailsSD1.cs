@@ -24,7 +24,7 @@ public record CustodianOptionDateDetailsSD1
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text PlaceAndName { get; init; }
+    public required Max350Text PlaceAndName { get; init; }
 
     /// <summary>
     /// Custodian deadline date for the option instructions. Applicable to custodian service only.
@@ -33,7 +33,7 @@ public record CustodianOptionDateDetailsSD1
     [DisplayName("Agent Deadline Date")]
     [IsoXmlTag("AgtDdlnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? AgentDeadlineDate { get; init; }
+    public DateOnly? AgentDeadlineDate { get; init; }
 
     /// <summary>
     /// Custodian deadline time for the option instructions. Applicable to custodian service only.
@@ -42,5 +42,5 @@ public record CustodianOptionDateDetailsSD1
     [DisplayName("Agent Deadline Time")]
     [IsoXmlTag("AgtDdlnTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? AgentDeadlineTime { get; init; }
+    public ISOTime? AgentDeadlineTime { get; init; }
 }

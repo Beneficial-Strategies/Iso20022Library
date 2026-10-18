@@ -24,7 +24,7 @@ public record AcquirerHostConfiguration7
     [IsoXmlTag("HstId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text HostIdentification { get; init; }
+    public required Max35Text HostIdentification { get; init; }
 
     /// <summary>
     /// Types of message to sent to this host.
@@ -42,5 +42,5 @@ public record AcquirerHostConfiguration7
     [IsoXmlTag("PrtcolVrsn")]
     [IsoSimpleType(IsoSimpleType.Max8Text)]
     [StringLength(maximumLength: 8, MinimumLength = 1)]
-    public IsoMax8Text? ProtocolVersion { get; init; }
+    public Max8Text? ProtocolVersion { get; init; }
 }

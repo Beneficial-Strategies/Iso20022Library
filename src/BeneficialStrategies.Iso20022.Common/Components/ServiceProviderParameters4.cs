@@ -28,7 +28,7 @@ public record ServiceProviderParameters4
     /// </summary>
     [DisplayName("Application Identification")]
     [IsoXmlTag("ApplId")]
-    public ValueList<IsoMax35Text> ApplicationIdentification { get; init; } = [];
+    public ValueList<Max35Text> ApplicationIdentification { get; init; } = [];
 
     /// <summary>
     /// Host.
@@ -56,5 +56,5 @@ public record ServiceProviderParameters4
     /// </summary>
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
-    public required IsoMax256Text Version { get; init; }
+    public required Max256Text Version { get; init; }
 }

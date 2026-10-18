@@ -21,7 +21,7 @@ public record ExchangeRateInformation3
     /// </summary>
     [DisplayName("Contract Identification")]
     [IsoXmlTag("CtrctId")]
-    public IsoMax35Text? ContractIdentification { get; init; }
+    public Max35Text? ContractIdentification { get; init; }
 
     /// <summary>
     /// Rate Type.

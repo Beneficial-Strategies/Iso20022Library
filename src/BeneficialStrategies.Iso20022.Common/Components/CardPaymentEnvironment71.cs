@@ -31,7 +31,7 @@ public record CardPaymentEnvironment71
     [DisplayName("Acquirer Availability Requested")]
     [IsoXmlTag("AcqrrAvlbtyReqd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? AcquirerAvailabilityRequested { get; init; }
+    public TrueFalseIndicator? AcquirerAvailabilityRequested { get; init; }
 
     /// <summary>
     /// Identification of the merchant requesting the diagnostic.
@@ -64,5 +64,5 @@ public record CardPaymentEnvironment71
     [DisplayName("Acquirer Available")]
     [IsoXmlTag("AcqrrAvlbl")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? AcquirerAvailable { get; init; }
+    public TrueFalseIndicator? AcquirerAvailable { get; init; }
 }

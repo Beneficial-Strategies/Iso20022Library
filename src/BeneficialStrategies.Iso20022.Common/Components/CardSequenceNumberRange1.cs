@@ -24,7 +24,7 @@ public record CardSequenceNumberRange1
     [IsoXmlTag("FrstTx")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? FirstTransaction { get; init; }
+    public Max35Text? FirstTransaction { get; init; }
 
     /// <summary>
     /// CardSequenceNumberRange1: LastTransactionSequenceNumberMessage element to be finalised once feedback from Card SEG has been received.
@@ -34,5 +34,5 @@ public record CardSequenceNumberRange1
     [IsoXmlTag("LastTx")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LastTransaction { get; init; }
+    public Max35Text? LastTransaction { get; init; }
 }

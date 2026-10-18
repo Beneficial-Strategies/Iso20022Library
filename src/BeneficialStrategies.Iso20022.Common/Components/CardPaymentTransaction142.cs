@@ -21,42 +21,42 @@ public record CardPaymentTransaction142
     /// </summary>
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
-    public ValueList<IsoMax70Text> AdditionalTransactionData { get; init; } = [];
+    public ValueList<Max70Text> AdditionalTransactionData { get; init; } = [];
 
     /// <summary>
     /// Card Programme Applied.
     /// </summary>
     [DisplayName("Card Programme Applied")]
     [IsoXmlTag("CardPrgrmmApld")]
-    public IsoMax35Text? CardProgrammeApplied { get; init; }
+    public Max35Text? CardProgrammeApplied { get; init; }
 
     /// <summary>
     /// Card Programme Proposed.
     /// </summary>
     [DisplayName("Card Programme Proposed")]
     [IsoXmlTag("CardPrgrmmPropsd")]
-    public ValueList<IsoMax35Text> CardProgrammeProposed { get; init; } = [];
+    public ValueList<Max35Text> CardProgrammeProposed { get; init; } = [];
 
     /// <summary>
     /// Customer Consent.
     /// </summary>
     [DisplayName("Customer Consent")]
     [IsoXmlTag("CstmrCnsnt")]
-    public IsoTrueFalseIndicator? CustomerConsent { get; init; }
+    public TrueFalseIndicator? CustomerConsent { get; init; }
 
     /// <summary>
     /// Initiator Transaction Identification.
     /// </summary>
     [DisplayName("Initiator Transaction Identification")]
     [IsoXmlTag("InitrTxId")]
-    public IsoMax35Text? InitiatorTransactionIdentification { get; init; }
+    public Max35Text? InitiatorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Merchant Category Code.
     /// </summary>
     [DisplayName("Merchant Category Code")]
     [IsoXmlTag("MrchntCtgyCd")]
-    public required IsoMin3Max4Text MerchantCategoryCode { get; init; }
+    public required Min3Max4Text MerchantCategoryCode { get; init; }
 
     /// <summary>
     /// Original Transaction.
@@ -70,28 +70,28 @@ public record CardPaymentTransaction142
     /// </summary>
     [DisplayName("Recipient Transaction Identification")]
     [IsoXmlTag("RcptTxId")]
-    public IsoMax140Text? RecipientTransactionIdentification { get; init; }
+    public Max140Text? RecipientTransactionIdentification { get; init; }
 
     /// <summary>
     /// Reconciliation Identification.
     /// </summary>
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
-    public IsoMax35Text? ReconciliationIdentification { get; init; }
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Sale Reference Identification.
     /// </summary>
     [DisplayName("Sale Reference Identification")]
     [IsoXmlTag("SaleRefId")]
-    public IsoMax35Text? SaleReferenceIdentification { get; init; }
+    public Max35Text? SaleReferenceIdentification { get; init; }
 
     /// <summary>
     /// Transaction Capture.
     /// </summary>
     [DisplayName("Transaction Capture")]
     [IsoXmlTag("TxCaptr")]
-    public IsoTrueFalseIndicator? TransactionCapture { get; init; }
+    public TrueFalseIndicator? TransactionCapture { get; init; }
 
     /// <summary>
     /// Transaction Details.

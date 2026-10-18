@@ -39,7 +39,7 @@ public record DevicePrintRequest5
     [DisplayName("Integrated Print Flag")]
     [IsoXmlTag("IntgrtdPrtFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? IntegratedPrintFlag { get; init; }
+    public TrueFalseIndicator? IntegratedPrintFlag { get; init; }
 
     /// <summary>
     /// Flag to require a physical signature by the Customer.
@@ -48,7 +48,7 @@ public record DevicePrintRequest5
     [DisplayName("Required Signature Flag")]
     [IsoXmlTag("ReqrdSgntrFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? RequiredSignatureFlag { get; init; }
+    public TrueFalseIndicator? RequiredSignatureFlag { get; init; }
 
     /// <summary>
     /// Content of the message to print.

@@ -37,35 +37,35 @@ public record OriginalGroupHeader22
     /// </summary>
     [DisplayName("Original Control Sum")]
     [IsoXmlTag("OrgnlCtrlSum")]
-    public IsoDecimalNumber? OriginalControlSum { get; init; }
+    public DecimalNumber? OriginalControlSum { get; init; }
 
     /// <summary>
     /// Date and time at which the original message was created.
     /// </summary>
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
-    public IsoISODateTime? OriginalCreationDateTime { get; init; }
+    public ISODateTime? OriginalCreationDateTime { get; init; }
 
     /// <summary>
     /// Point to point reference, as assigned by the original instructing party, to unambiguously identify the original message.
     /// </summary>
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
-    public required IsoMax35Text OriginalMessageIdentification { get; init; }
+    public required Max35Text OriginalMessageIdentification { get; init; }
 
     /// <summary>
     /// Specifies the original message name identifier to which the message refers.
     /// </summary>
     [DisplayName("Original Message Name Identification")]
     [IsoXmlTag("OrgnlMsgNmId")]
-    public required IsoMax35Text OriginalMessageNameIdentification { get; init; }
+    public required Max35Text OriginalMessageNameIdentification { get; init; }
 
     /// <summary>
     /// Number of individual transactions contained in the original message.
     /// </summary>
     [DisplayName("Original Number Of Transactions")]
     [IsoXmlTag("OrgnlNbOfTxs")]
-    public IsoMax15NumericText? OriginalNumberOfTransactions { get; init; }
+    public Max15NumericText? OriginalNumberOfTransactions { get; init; }
 
     /// <summary>
     /// Provides detailed information on the status reason.

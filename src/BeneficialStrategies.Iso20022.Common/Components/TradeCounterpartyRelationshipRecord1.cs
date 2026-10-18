@@ -50,5 +50,5 @@ public record TradeCounterpartyRelationshipRecord1
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max1000Text)]
     [StringLength(maximumLength: 1000, MinimumLength = 1)]
-    public IsoMax1000Text? Description { get; init; }
+    public Max1000Text? Description { get; init; }
 }

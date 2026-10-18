@@ -24,7 +24,7 @@ public record MessageStatusRequestData2
     [IsoXmlTag("XchgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ExchangeIdentification { get; init; }
+    public required Max35Text ExchangeIdentification { get; init; }
 
     /// <summary>
     /// Initiating Party information.
@@ -41,7 +41,7 @@ public record MessageStatusRequestData2
     [DisplayName("Receipt Reprint Flag")]
     [IsoXmlTag("RctRprntFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ReceiptReprintFlag { get; init; }
+    public TrueFalseIndicator? ReceiptReprintFlag { get; init; }
 
     /// <summary>
     /// Customer or Cashier Receipt.

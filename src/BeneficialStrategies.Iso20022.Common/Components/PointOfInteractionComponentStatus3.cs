@@ -24,7 +24,7 @@ public record PointOfInteractionComponentStatus3
     [IsoXmlTag("VrsnNb")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? VersionNumber { get; init; }
+    public Max256Text? VersionNumber { get; init; }
 
     /// <summary>
     /// Current status of the component.
@@ -41,5 +41,5 @@ public record PointOfInteractionComponentStatus3
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ExpiryDate { get; init; }
+    public DateOnly? ExpiryDate { get; init; }
 }

@@ -24,7 +24,7 @@ public record GroupHeader9
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which a (group of) payment instruction(s) was created by the instructing party.
@@ -33,7 +33,7 @@ public record GroupHeader9
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// User identification or any user key that allows to check if the initiating party is allowed to initiate transactions from the account specified in the initiation.||Usage: the content is not of a technical nature, but reflects the organisational structure at the initiating side.|The authorisation element can typically be used in relay scenarios, payment initiations, payment returns or payment reversals that are initiated on behalf of a different party than the initiating party.
@@ -53,7 +53,7 @@ public record GroupHeader9
     [DisplayName("Batch Booking")]
     [IsoXmlTag("BtchBookg")]
     [IsoSimpleType(IsoSimpleType.BatchBookingIndicator)]
-    public IsoBatchBookingIndicator? BatchBooking { get; init; }
+    public BatchBookingIndicator? BatchBooking { get; init; }
 
     /// <summary>
     /// Number of individual transactions contained in the message.
@@ -62,7 +62,7 @@ public record GroupHeader9
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText NumberOfTransactions { get; init; }
+    public required Max15NumericText NumberOfTransactions { get; init; }
 
     /// <summary>
     /// Total of all individual amounts included in the message, irrespective of currencies.
@@ -71,7 +71,7 @@ public record GroupHeader9
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? ControlSum { get; init; }
+    public DecimalNumber? ControlSum { get; init; }
 
     /// <summary>
     /// Indicates whether the reversal applies to the whole group of transactions or to individual transactions within the original group.
@@ -80,7 +80,7 @@ public record GroupHeader9
     [DisplayName("Group Reversal")]
     [IsoXmlTag("GrpRvsl")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? GroupReversal { get; init; }
+    public TrueFalseIndicator? GroupReversal { get; init; }
 
     /// <summary>
     /// Total reversed amount of money transferred between the instructing agent and the instructed agent in the reversal message.
@@ -97,7 +97,7 @@ public record GroupHeader9
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? InterbankSettlementDate { get; init; }
+    public DateOnly? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Specifies the details on how the settlement of the transaction(s) between the instructing agent and the instructed agent is completed.

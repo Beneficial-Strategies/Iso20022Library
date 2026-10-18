@@ -42,19 +42,19 @@ public record Quantity50
     /// </summary>
     [DisplayName("Other Asset")]
     [IsoXmlTag("OthrAsst")]
-    public IsoMax35Text? OtherAsset { get; init; }
+    public Max35Text? OtherAsset { get; init; }
 
     /// <summary>
     /// Percentage Rate.
     /// </summary>
     [DisplayName("Percentage Rate")]
     [IsoXmlTag("PctgRate")]
-    public IsoPercentageRate? PercentageRate { get; init; }
+    public PercentageRate? PercentageRate { get; init; }
 
     /// <summary>
     /// Unit.
     /// </summary>
     [DisplayName("Unit")]
     [IsoXmlTag("Unit")]
-    public IsoDecimalNumber? Unit { get; init; }
+    public DecimalNumber? Unit { get; init; }
 }

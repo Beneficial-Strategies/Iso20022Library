@@ -31,7 +31,7 @@ public record TaxCalculationInformation2
     [DisplayName("Percentage Of Debt Claim")]
     [IsoXmlTag("PctgOfDebtClm")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? PercentageOfDebtClaim { get; init; }
+    public PercentageRate? PercentageOfDebtClaim { get; init; }
 
     /// <summary>
     /// Percentage of grandfathered debt claim.
@@ -40,5 +40,5 @@ public record TaxCalculationInformation2
     [DisplayName("Percentage Grandfathered Debt")]
     [IsoXmlTag("PctgGrdfthdDebt")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? PercentageGrandfatheredDebt { get; init; }
+    public PercentageRate? PercentageGrandfatheredDebt { get; init; }
 }

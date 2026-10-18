@@ -32,7 +32,7 @@ public record IndividualPerson11
     [IsoXmlTag("XtndedNmPrfx")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedNamePrefix { get; init; }
+    public Extended350Code? ExtendedNamePrefix { get; init; }
 
     /// <summary>
     /// First name of a person.
@@ -42,7 +42,7 @@ public record IndividualPerson11
     [IsoXmlTag("GvnNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text GivenName { get; init; }
+    public required Max35Text GivenName { get; init; }
 
     /// <summary>
     /// Second name of a person.
@@ -52,7 +52,7 @@ public record IndividualPerson11
     [IsoXmlTag("MddlNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MiddleName { get; init; }
+    public Max35Text? MiddleName { get; init; }
 
     /// <summary>
     /// Name by which a party is known and which is usually used to identify that party.
@@ -62,7 +62,7 @@ public record IndividualPerson11
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text Name { get; init; }
+    public required Max350Text Name { get; init; }
 
     /// <summary>
     /// Additional information about a person that follows a person&apos;s name, eg, qualification such as Doctor of Philosophy (PhD).
@@ -72,7 +72,7 @@ public record IndividualPerson11
     [IsoXmlTag("NmSfx")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? NameSuffix { get; init; }
+    public Max35Text? NameSuffix { get; init; }
 
     /// <summary>
     /// Specifies the gender of the person.
@@ -97,7 +97,7 @@ public record IndividualPerson11
     [DisplayName("Birth Date")]
     [IsoXmlTag("BirthDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate BirthDate { get; init; }
+    public required DateOnly BirthDate { get; init; }
 
     /// <summary>
     /// Country where a person was born.
@@ -115,7 +115,7 @@ public record IndividualPerson11
     [IsoXmlTag("PrvcOfBirth")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProvinceOfBirth { get; init; }
+    public Max35Text? ProvinceOfBirth { get; init; }
 
     /// <summary>
     /// City where a person was born.
@@ -125,7 +125,7 @@ public record IndividualPerson11
     [IsoXmlTag("CityOfBirth")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CityOfBirth { get; init; }
+    public Max35Text? CityOfBirth { get; init; }
 
     /// <summary>
     /// Name of the occupation or job of a person.
@@ -135,7 +135,7 @@ public record IndividualPerson11
     [IsoXmlTag("Prfssn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Profession { get; init; }
+    public Max35Text? Profession { get; init; }
 
     /// <summary>
     /// Country of taxation of an individual person or an organisation.
@@ -161,7 +161,7 @@ public record IndividualPerson11
     [IsoXmlTag("BizFctn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? BusinessFunction { get; init; }
+    public Max35Text? BusinessFunction { get; init; }
 
     /// <summary>
     /// Organisation represented by a person, or for which a person works.
@@ -171,7 +171,7 @@ public record IndividualPerson11
     [IsoXmlTag("EmplngCpny")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? EmployingCompany { get; init; }
+    public Max140Text? EmployingCompany { get; init; }
 
     /// <summary>
     /// Address information to be either inserted, updated or deleted.

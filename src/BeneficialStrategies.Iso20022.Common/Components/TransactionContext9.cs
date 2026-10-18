@@ -32,7 +32,7 @@ public record TransactionContext9
     [IsoXmlTag("MrchntCtgySpcfcData")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MerchantCategorySpecificData { get; init; }
+    public Max35Text? MerchantCategorySpecificData { get; init; }
 
     /// <summary>
     /// Indicates a deferred delivery as defined by each specific implementation.
@@ -44,7 +44,7 @@ public record TransactionContext9
     [DisplayName("Deferred Delivery Indicator")]
     [IsoXmlTag("DfrrdDlvryInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? DeferredDeliveryIndicator { get; init; }
+    public TrueFalseIndicator? DeferredDeliveryIndicator { get; init; }
 
     /// <summary>
     /// Indicates the partial shipment.
@@ -53,7 +53,7 @@ public record TransactionContext9
     [DisplayName("Partial Shipment Indicator")]
     [IsoXmlTag("PrtlShipmntInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? PartialShipmentIndicator { get; init; }
+    public TrueFalseIndicator? PartialShipmentIndicator { get; init; }
 
     /// <summary>
     /// Indicates a delayed charge.
@@ -62,7 +62,7 @@ public record TransactionContext9
     [DisplayName("Delayed Charges Indicator")]
     [IsoXmlTag("DelydChrgsInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? DelayedChargesIndicator { get; init; }
+    public TrueFalseIndicator? DelayedChargesIndicator { get; init; }
 
     /// <summary>
     /// Indicates that the cardholder failed to arrive at the property and was therefore charged a no-show fee; property was not actually rented.
@@ -71,7 +71,7 @@ public record TransactionContext9
     [DisplayName("No Show Indicator")]
     [IsoXmlTag("NoShowInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? NoShowIndicator { get; init; }
+    public TrueFalseIndicator? NoShowIndicator { get; init; }
 
     /// <summary>
     /// Indicates a reauthorisation.
@@ -80,7 +80,7 @@ public record TransactionContext9
     [DisplayName("Reauthorisation Indicator")]
     [IsoXmlTag("ReauthstnInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ReauthorisationIndicator { get; init; }
+    public TrueFalseIndicator? ReauthorisationIndicator { get; init; }
 
     /// <summary>
     /// Indicates a resubmission.
@@ -89,7 +89,7 @@ public record TransactionContext9
     [DisplayName("Re Submission Indicator")]
     [IsoXmlTag("ReSubmissnInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ReSubmissionIndicator { get; init; }
+    public TrueFalseIndicator? ReSubmissionIndicator { get; init; }
 
     /// <summary>
     /// Identifies the transaction initiator.
@@ -106,7 +106,7 @@ public record TransactionContext9
     [DisplayName("Authentication Outage Indicator")]
     [IsoXmlTag("AuthntcnOutgInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? AuthenticationOutageIndicator { get; init; }
+    public TrueFalseIndicator? AuthenticationOutageIndicator { get; init; }
 
     /// <summary>
     /// Card programme or brand related to the transaction.
@@ -148,7 +148,7 @@ public record TransactionContext9
     [DisplayName("Capture Date")]
     [IsoXmlTag("CaptrDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? CaptureDate { get; init; }
+    public DateOnly? CaptureDate { get; init; }
 
     /// <summary>
     /// The date on which the sale or purchase is expected to occur.
@@ -157,7 +157,7 @@ public record TransactionContext9
     [DisplayName("Date Anticipated")]
     [IsoXmlTag("DtAntcptd")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DateAnticipated { get; init; }
+    public DateOnly? DateAnticipated { get; init; }
 
     /// <summary>
     /// Additional transaction context data.

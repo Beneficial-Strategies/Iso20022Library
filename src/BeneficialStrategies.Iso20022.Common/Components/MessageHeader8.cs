@@ -24,7 +24,7 @@ public record MessageHeader8
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the message was created.
@@ -33,7 +33,7 @@ public record MessageHeader8
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? CreationDateTime { get; init; }
+    public ISODateTime? CreationDateTime { get; init; }
 
     /// <summary>
     /// Pagination of the message.|Usage: the pagination of the message is only allowed when agreed between the parties.
@@ -67,5 +67,5 @@ public record MessageHeader8
     [IsoXmlTag("QryNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? QueryName { get; init; }
+    public Max35Text? QueryName { get; init; }
 }

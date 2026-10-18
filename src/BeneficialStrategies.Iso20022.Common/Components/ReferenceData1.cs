@@ -28,5 +28,5 @@ public record ReferenceData1
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public IsoMax350Text? Type { get; init; }
+    public Max350Text? Type { get; init; }
 }

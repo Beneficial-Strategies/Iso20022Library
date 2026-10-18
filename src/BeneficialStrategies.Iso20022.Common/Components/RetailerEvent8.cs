@@ -22,7 +22,7 @@ public record RetailerEvent8
     [IsoId("_4nHdZbZ0EfCUZfsQO4rYeA")]
     [DisplayName("Event Time Stamp")]
     [IsoXmlTag("EvtTmStmp")]
-    public required IsoISODateTime EventTimeStamp { get; init; }
+    public required ISODateTime EventTimeStamp { get; init; }
 
     /// <summary>
     /// Event the POI notifies to the Sale System.
@@ -46,5 +46,5 @@ public record RetailerEvent8
     [IsoId("_4nHdd7Z0EfCUZfsQO4rYeA")]
     [DisplayName("Additional Event Information")]
     [IsoXmlTag("AddtlEvtInf")]
-    public IsoMax1025Text? AdditionalEventInformation { get; init; }
+    public Max1025Text? AdditionalEventInformation { get; init; }
 }

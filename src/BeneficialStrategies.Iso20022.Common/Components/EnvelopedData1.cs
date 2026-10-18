@@ -23,7 +23,7 @@ public record EnvelopedData1
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Version { get; init; }
+    public Number? Version { get; init; }
 
     /// <summary>
     /// Transport key or key encryption key (KEK) identification for the recipient.

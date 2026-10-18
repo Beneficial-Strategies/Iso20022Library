@@ -35,5 +35,5 @@ public record RetailerReversalResult6
     /// </summary>
     [DisplayName("POI Reconciliation Identification")]
     [IsoXmlTag("POIRcncltnId")]
-    public IsoMax35Text? POIReconciliationIdentification { get; init; }
+    public Max35Text? POIReconciliationIdentification { get; init; }
 }

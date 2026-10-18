@@ -78,7 +78,7 @@ public record Penalty4
     [IsoId("_xQ9UXagzEfCXwLUUylXgrQ")]
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
-    public IsoISODate? CashSettlementDate { get; init; }
+    public DateOnly? CashSettlementDate { get; init; }
 
     /// <summary>
     /// Reference of the penalty payment.
@@ -86,7 +86,7 @@ public record Penalty4
     [IsoId("_xQ9UX6gzEfCXwLUUylXgrQ")]
     [DisplayName("Cash Penalty Identification")]
     [IsoXmlTag("CshPnltyId")]
-    public IsoMax35Text? CashPenaltyIdentification { get; init; }
+    public Max35Text? CashPenaltyIdentification { get; init; }
 
     /// <summary>
     /// Number of counterparties involved in the penalty.
@@ -94,7 +94,7 @@ public record Penalty4
     [IsoId("_xQ9UYagzEfCXwLUUylXgrQ")]
     [DisplayName("Number Of Counterparties")]
     [IsoXmlTag("NbOfCtrPties")]
-    public IsoNumber? NumberOfCounterparties { get; init; }
+    public Number? NumberOfCounterparties { get; init; }
 
     /// <summary>
     /// Claims (penalties) in a currency and of a date reported for a given party.

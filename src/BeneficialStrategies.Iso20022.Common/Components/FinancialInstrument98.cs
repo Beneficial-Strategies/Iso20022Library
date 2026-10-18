@@ -23,7 +23,7 @@ public record FinancialInstrument98
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
     [IsoSimpleType(IsoSimpleType.ISIN2021Identifier)]
-    public IsoISIN2021Identifier? ISIN { get; init; }
+    public ISIN2021Identifier? ISIN { get; init; }
 
     /// <summary>
     /// Name of the index on which the financial instrument is based.

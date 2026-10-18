@@ -30,7 +30,7 @@ public record AcceptorConfigurationContent2
     [IsoId("_8LlfhQvbEeK9Xewg3qiFQA")]
     [DisplayName("Merchant Parameters")]
     [IsoXmlTag("MrchntParams")]
-    public SimpleValueList<IsoMax10000Binary> MerchantParameters { get; init; } = [];
+    public SimpleValueList<Max10000Binary> MerchantParameters { get; init; } = [];
 
     /// <summary>
     /// Manufacturer configuration parameters of the point of interaction.
@@ -38,7 +38,7 @@ public record AcceptorConfigurationContent2
     [IsoId("_SrV3YCmnEeKIjpr--01h3Q")]
     [DisplayName("Terminal Parameters")]
     [IsoXmlTag("TermnlParams")]
-    public SimpleValueList<IsoMax10000Binary> TerminalParameters { get; init; } = [];
+    public SimpleValueList<Max10000Binary> TerminalParameters { get; init; } = [];
 
     /// <summary>
     /// Acceptor parameters dedicated to a payment application of the point of interaction.

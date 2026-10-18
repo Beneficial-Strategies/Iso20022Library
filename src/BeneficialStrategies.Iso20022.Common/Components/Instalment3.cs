@@ -23,7 +23,7 @@ public record Instalment3
     [DisplayName("Payment Sequence Number")]
     [IsoXmlTag("PmtSeqNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? PaymentSequenceNumber { get; init; }
+    public Number? PaymentSequenceNumber { get; init; }
 
     /// <summary>
     /// Attributes of the instalment plan.

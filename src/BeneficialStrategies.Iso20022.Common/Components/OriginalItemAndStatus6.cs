@@ -24,7 +24,7 @@ public record OriginalItemAndStatus6
     [IsoXmlTag("OrgnlItmId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OriginalItemIdentification { get; init; }
+    public required Max35Text OriginalItemIdentification { get; init; }
 
     /// <summary>
     /// Unique identification as assigned by the debtor to unambiguously identify the original underlying transaction to the creditor.
@@ -34,7 +34,7 @@ public record OriginalItemAndStatus6
     [IsoXmlTag("OrgnlEndToEndId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Universally unique identifier to provide the original end-to-end reference of a payment transaction.
@@ -43,7 +43,7 @@ public record OriginalItemAndStatus6
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
     [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
-    public IsoUUIDv4Identifier? OriginalUETR { get; init; }
+    public UUIDv4Identifier? OriginalUETR { get; init; }
 
     /// <summary>
     /// Amount of money expected to be credited to the account, as per the original notification to receive.
@@ -60,7 +60,7 @@ public record OriginalItemAndStatus6
     [DisplayName("Expected Value Date")]
     [IsoXmlTag("XpctdValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ExpectedValueDate { get; init; }
+    public DateOnly? ExpectedValueDate { get; init; }
 
     /// <summary>
     /// Specifies the status of the notification item.
@@ -78,7 +78,7 @@ public record OriginalItemAndStatus6
     [IsoXmlTag("AddtlStsInf")]
     [IsoSimpleType(IsoSimpleType.Max105Text)]
     [StringLength(maximumLength: 105, MinimumLength = 1)]
-    public IsoMax105Text? AdditionalStatusInformation { get; init; }
+    public Max105Text? AdditionalStatusInformation { get; init; }
 
     /// <summary>
     /// Provides further information in order to identify a previous payment notification.

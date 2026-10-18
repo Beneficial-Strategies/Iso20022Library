@@ -23,7 +23,7 @@ public record InstructionStatusReturnCriteria1
     [DisplayName("Payment Instruction Status Indicator")]
     [IsoXmlTag("PmtInstrStsInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator PaymentInstructionStatusIndicator { get; init; }
+    public required RequestedIndicator PaymentInstructionStatusIndicator { get; init; }
 
     /// <summary>
     /// Indicates if the status date and time are requested.
@@ -32,7 +32,7 @@ public record InstructionStatusReturnCriteria1
     [DisplayName("Payment Instruction Status Date Time Indicator")]
     [IsoXmlTag("PmtInstrStsDtTmInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? PaymentInstructionStatusDateTimeIndicator { get; init; }
+    public RequestedIndicator? PaymentInstructionStatusDateTimeIndicator { get; init; }
 
     /// <summary>
     /// Indicates if the status reason is requested.
@@ -41,5 +41,5 @@ public record InstructionStatusReturnCriteria1
     [DisplayName("Payment Instruction Status Reason Indicator")]
     [IsoXmlTag("PmtInstrStsRsnInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? PaymentInstructionStatusReasonIndicator { get; init; }
+    public RequestedIndicator? PaymentInstructionStatusReasonIndicator { get; init; }
 }

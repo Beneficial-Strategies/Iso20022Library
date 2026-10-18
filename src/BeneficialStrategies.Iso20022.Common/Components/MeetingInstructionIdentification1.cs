@@ -24,7 +24,7 @@ public record MeetingInstructionIdentification1
     [IsoXmlTag("MtgInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MeetingInstructionIdentification { get; init; }
+    public required Max35Text MeetingInstructionIdentification { get; init; }
 
     /// <summary>
     /// Identification of the individual instruction for which the cancellation was requested.
@@ -34,5 +34,5 @@ public record MeetingInstructionIdentification1
     [IsoXmlTag("SnglInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text SingleInstructionIdentification { get; init; }
+    public required Max35Text SingleInstructionIdentification { get; init; }
 }

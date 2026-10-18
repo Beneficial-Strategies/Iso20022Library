@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat84Choice
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("IndxPts")]
-        public required IsoRestrictedFINDecimalNumber Value { get; init; }
+        public required RestrictedFINDecimalNumber Value { get; init; }
     }
 }

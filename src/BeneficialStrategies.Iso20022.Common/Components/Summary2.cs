@@ -71,7 +71,7 @@ public record Summary2
     [DisplayName("Valuation Date Time")]
     [IsoXmlTag("ValtnDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime ValuationDateTime { get; init; }
+    public required ISODateTime ValuationDateTime { get; init; }
 
     /// <summary>
     /// Date on which the instructing party requests settlement of the collateral to take place.
@@ -80,7 +80,7 @@ public record Summary2
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RequestedSettlementDate { get; init; }
+    public DateOnly? RequestedSettlementDate { get; init; }
 
     /// <summary>
     /// Additional details on the valuation of the collateral that is posted.

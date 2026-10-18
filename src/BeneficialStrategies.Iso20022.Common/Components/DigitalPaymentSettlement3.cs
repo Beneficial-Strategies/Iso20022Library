@@ -38,5 +38,5 @@ public record DigitalPaymentSettlement3
     [IsoId("54fcb8ad-eba4-4c72-ba57-5169403c6b53")]
     [DisplayName("Digital Ledger Identification")]
     [IsoXmlTag("DgtlLdgrId")]
-    public required IsoDTI2024Identifier DigitalLedgerIdentification { get; init; }
+    public required DTI2024Identifier DigitalLedgerIdentification { get; init; }
 }

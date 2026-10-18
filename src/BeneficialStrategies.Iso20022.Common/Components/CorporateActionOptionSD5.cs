@@ -24,7 +24,7 @@ public record CorporateActionOptionSD5
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text PlaceAndName { get; init; }
+    public required Max350Text PlaceAndName { get; init; }
 
     /// <summary>
     /// Workflow status of the specified option based on the consistency of the issuer declared data elements (excluding DTC data elements).
@@ -41,7 +41,7 @@ public record CorporateActionOptionSD5
     [DisplayName("Random Lot Preference Flag")]
     [IsoXmlTag("RandLotPrefFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? RandomLotPreferenceFlag { get; init; }
+    public YesNoIndicator? RandomLotPreferenceFlag { get; init; }
 
     /// <summary>
     /// Date on which the new shares to be issued will be distributed, as opposed to the &quot;declared payable date.&quot; This date is typically used in some Asian markets.
@@ -50,5 +50,5 @@ public record CorporateActionOptionSD5
     [DisplayName("New Share Dispatched Date")]
     [IsoXmlTag("NewShrDsptchdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? NewShareDispatchedDate { get; init; }
+    public DateOnly? NewShareDispatchedDate { get; init; }
 }

@@ -40,5 +40,5 @@ public record Presentation3
     [IsoXmlTag("Adr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Address { get; init; }
+    public Max256Text? Address { get; init; }
 }

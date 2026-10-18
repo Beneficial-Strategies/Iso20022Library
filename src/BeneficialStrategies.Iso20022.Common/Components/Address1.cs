@@ -24,7 +24,7 @@ public record Address1
     [IsoXmlTag("AdrLine1")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AddressLine1 { get; init; }
+    public Max70Text? AddressLine1 { get; init; }
 
     /// <summary>
     /// Second line of information that locates and identifies a specific address, as defined by postal services.
@@ -34,7 +34,7 @@ public record Address1
     [IsoXmlTag("AdrLine2")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AddressLine2 { get; init; }
+    public Max70Text? AddressLine2 { get; init; }
 
     /// <summary>
     /// Name of a street or thoroughfare.
@@ -44,7 +44,7 @@ public record Address1
     [IsoXmlTag("StrtNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? StreetName { get; init; }
+    public Max70Text? StreetName { get; init; }
 
     /// <summary>
     /// Number that identifies the position of a building on a street.
@@ -54,7 +54,7 @@ public record Address1
     [IsoXmlTag("BldgNb")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoMax16Text? BuildingNumber { get; init; }
+    public Max16Text? BuildingNumber { get; init; }
 
     /// <summary>
     /// Identifier consisting of a group of letters and/or numbers that is added to a postal address to assist the sorting of mail.
@@ -64,7 +64,7 @@ public record Address1
     [IsoXmlTag("PstlCd")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoMax16Text? PostalCode { get; init; }
+    public Max16Text? PostalCode { get; init; }
 
     /// <summary>
     /// Name of a built-up area, with defined boundaries, and a local government.
@@ -74,7 +74,7 @@ public record Address1
     [IsoXmlTag("TwnNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TownName { get; init; }
+    public Max35Text? TownName { get; init; }
 
     /// <summary>
     /// Identifies a minor subdivision of a country, for instance county, prefecture.
@@ -84,7 +84,7 @@ public record Address1
     [IsoXmlTag("CtrySubDvsnMnr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CountrySubDivisionMinor { get; init; }
+    public Max35Text? CountrySubDivisionMinor { get; init; }
 
     /// <summary>
     /// Identifies a major subdivision of a country, for instance state, province.
@@ -94,7 +94,7 @@ public record Address1
     [IsoXmlTag("CtrySubDvsnMjr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CountrySubDivisionMajor { get; init; }
+    public Max35Text? CountrySubDivisionMajor { get; init; }
 
     /// <summary>
     /// Nation with its own government occupying a particular territory.
@@ -103,5 +103,5 @@ public record Address1
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
     [IsoSimpleType(IsoSimpleType.Min2Max3AlphaText)]
-    public IsoMin2Max3AlphaText? Country { get; init; }
+    public Min2Max3AlphaText? Country { get; init; }
 }

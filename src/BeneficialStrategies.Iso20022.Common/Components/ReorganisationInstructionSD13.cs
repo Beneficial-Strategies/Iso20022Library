@@ -24,7 +24,7 @@ public record ReorganisationInstructionSD13
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Identifies the reorganisation transaction type.
@@ -76,7 +76,7 @@ public record ReorganisationInstructionSD13
     [IsoXmlTag("UsrRefNb")]
     [IsoSimpleType(IsoSimpleType.Max6Text)]
     [StringLength(maximumLength: 6, MinimumLength = 1)]
-    public IsoMax6Text? UserReferenceNumber { get; init; }
+    public Max6Text? UserReferenceNumber { get; init; }
 
     /// <summary>
     /// Warrant subscription amount entered by client when instructing on a warrant exercise instruction.
@@ -95,7 +95,7 @@ public record ReorganisationInstructionSD13
     [DisplayName("Non Exempt Instructions Allowed Indicator")]
     [IsoXmlTag("NonXmptInstrsAllwdInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? NonExemptInstructionsAllowedIndicator { get; init; }
+    public YesNoIndicator? NonExemptInstructionsAllowedIndicator { get; init; }
 
     /// <summary>
     /// Certificate information for a given instruction.
@@ -120,5 +120,5 @@ public record ReorganisationInstructionSD13
     [DisplayName("Customer Reference Identification")]
     [IsoXmlTag("CstmrRefId")]
     [IsoSimpleType(IsoSimpleType.Max30Text)]
-    public IsoMax30Text? CustomerReferenceIdentification { get; init; }
+    public Max30Text? CustomerReferenceIdentification { get; init; }
 }

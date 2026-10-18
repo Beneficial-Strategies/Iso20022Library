@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralFlag13Choice
         [DisplayName("Collateral Value Date")]
         [IsoXmlTag("CollValDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? CollateralValueDate { get; init; }
+        public DateOnly? CollateralValueDate { get; init; }
 
         /// <summary>
         /// Specification on the type of asset used as collateral.
@@ -40,7 +40,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralFlag13Choice
         [DisplayName("Net Exposure Collateralisation Indicator")]
         [IsoXmlTag("NetXpsrCollstnInd")]
         [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-        public IsoTrueFalseIndicator? NetExposureCollateralisationIndicator { get; init; }
+        public TrueFalseIndicator? NetExposureCollateralisationIndicator { get; init; }
 
         /// <summary>
         /// Identification of the collateral basket.

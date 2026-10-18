@@ -23,7 +23,7 @@ public record Jurisdiction2
     [DisplayName("Domestic Indicator")]
     [IsoXmlTag("DmstInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? DomesticIndicator { get; init; }
+    public TrueFalseIndicator? DomesticIndicator { get; init; }
 
     /// <summary>
     /// Identifies the reason the transaction is considered to be domestic or non-domestic.
@@ -33,5 +33,5 @@ public record Jurisdiction2
     [IsoXmlTag("DmstQlfctn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DomesticQualification { get; init; }
+    public Max35Text? DomesticQualification { get; init; }
 }

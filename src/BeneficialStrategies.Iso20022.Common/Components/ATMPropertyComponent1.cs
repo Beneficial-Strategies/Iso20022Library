@@ -21,7 +21,7 @@ public record ATMPropertyComponent1
     /// </summary>
     [DisplayName("Property Name")]
     [IsoXmlTag("PrprtyNm")]
-    public required IsoMax70Text PropertyName { get; init; }
+    public required Max70Text PropertyName { get; init; }
 
     /// <summary>
     /// Property Type.
@@ -35,5 +35,5 @@ public record ATMPropertyComponent1
     /// </summary>
     [DisplayName("Property Value")]
     [IsoXmlTag("PrprtyVal")]
-    public required IsoMax2000Text PropertyValue { get; init; }
+    public required Max2000Text PropertyValue { get; init; }
 }

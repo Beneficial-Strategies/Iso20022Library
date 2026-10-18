@@ -71,7 +71,7 @@ public record CashAccountCharacteristics1
     [DisplayName("Delayed Debit Date")]
     [IsoXmlTag("DelydDbtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DelayedDebitDate { get; init; }
+    public DateOnly? DelayedDebitDate { get; init; }
 
     /// <summary>
     /// Free form message advising the customer about the settlement of charges and taxes due.
@@ -81,7 +81,7 @@ public record CashAccountCharacteristics1
     [IsoXmlTag("SttlmAdvc")]
     [IsoSimpleType(IsoSimpleType.Max105Text)]
     [StringLength(maximumLength: 105, MinimumLength = 1)]
-    public IsoMax105Text? SettlementAdvice { get; init; }
+    public Max105Text? SettlementAdvice { get; init; }
 
     /// <summary>
     /// Currency used to specify the account&apos;s balance currency.

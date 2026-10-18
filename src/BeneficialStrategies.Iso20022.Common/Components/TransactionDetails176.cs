@@ -35,7 +35,7 @@ public record TransactionDetails176
     /// </summary>
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
-    public IsoMax35Text? AccountServicerTransactionIdentification { get; init; }
+    public Max35Text? AccountServicerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Block Chain Address Or Wallet.
@@ -49,21 +49,21 @@ public record TransactionDetails176
     /// </summary>
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
-    public IsoMax35Text? MarketInfrastructureTransactionIdentification { get; init; }
+    public Max35Text? MarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Other Transaction Identification.
     /// </summary>
     [DisplayName("Other Transaction Identification")]
     [IsoXmlTag("OthrTxId")]
-    public IsoMax35Text? OtherTransactionIdentification { get; init; }
+    public Max35Text? OtherTransactionIdentification { get; init; }
 
     /// <summary>
     /// Processor Transaction Identification.
     /// </summary>
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
-    public IsoMax35Text? ProcessorTransactionIdentification { get; init; }
+    public Max35Text? ProcessorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Safekeeping Account.

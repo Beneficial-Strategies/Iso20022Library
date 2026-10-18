@@ -21,7 +21,7 @@ public record AdministrativeRequest8
     /// </summary>
     [DisplayName("Administrative Service Identification")]
     [IsoXmlTag("AdmstvSvcId")]
-    public IsoMax20000Text? AdministrativeServiceIdentification { get; init; }
+    public Max20000Text? AdministrativeServiceIdentification { get; init; }
 
     /// <summary>
     /// Context.

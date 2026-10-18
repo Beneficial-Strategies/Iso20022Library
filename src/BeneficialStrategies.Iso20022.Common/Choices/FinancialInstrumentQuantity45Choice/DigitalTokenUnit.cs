@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity45Cho
         /// </summary>
         [IsoXmlTag("DgtlTknUnit")]
         [IsoSimpleType(IsoSimpleType.Max30DecimalNumber)]
-        public required IsoMax30DecimalNumber Value { get; init; }
+        public required Max30DecimalNumber Value { get; init; }
     }
 }

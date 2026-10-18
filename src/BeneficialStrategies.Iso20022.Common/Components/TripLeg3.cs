@@ -42,35 +42,35 @@ public record TripLeg3
     /// </summary>
     [DisplayName("Carrier Code")]
     [IsoXmlTag("CrrierCd")]
-    public IsoMax35Text? CarrierCode { get; init; }
+    public Max35Text? CarrierCode { get; init; }
 
     /// <summary>
     /// Carrier Name.
     /// </summary>
     [DisplayName("Carrier Name")]
     [IsoXmlTag("CrrierNm")]
-    public IsoMax70Text? CarrierName { get; init; }
+    public Max70Text? CarrierName { get; init; }
 
     /// <summary>
     /// Commodity Code.
     /// </summary>
     [DisplayName("Commodity Code")]
     [IsoXmlTag("CmmdtyCd")]
-    public IsoMax4Text? CommodityCode { get; init; }
+    public Max4Text? CommodityCode { get; init; }
 
     /// <summary>
     /// Conjunction Ticket Number.
     /// </summary>
     [DisplayName("Conjunction Ticket Number")]
     [IsoXmlTag("CnjnctnTcktNb")]
-    public IsoMax35Text? ConjunctionTicketNumber { get; init; }
+    public Max35Text? ConjunctionTicketNumber { get; init; }
 
     /// <summary>
     /// Credit Reason Code.
     /// </summary>
     [DisplayName("Credit Reason Code")]
     [IsoXmlTag("CdtRsnCd")]
-    public IsoMax35Text? CreditReasonCode { get; init; }
+    public Max35Text? CreditReasonCode { get; init; }
 
     /// <summary>
     /// Departure.
@@ -91,42 +91,42 @@ public record TripLeg3
     /// </summary>
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
-    public IsoMax4NumericText? Duration { get; init; }
+    public Max4NumericText? Duration { get; init; }
 
     /// <summary>
     /// Exchanged Ticket.
     /// </summary>
     [DisplayName("Exchanged Ticket")]
     [IsoXmlTag("XchgdTckt")]
-    public IsoTrueFalseIndicator? ExchangedTicket { get; init; }
+    public TrueFalseIndicator? ExchangedTicket { get; init; }
 
     /// <summary>
     /// Exchanged Ticket Number.
     /// </summary>
     [DisplayName("Exchanged Ticket Number")]
     [IsoXmlTag("XchgdTcktNb")]
-    public IsoMax35Text? ExchangedTicketNumber { get; init; }
+    public Max35Text? ExchangedTicketNumber { get; init; }
 
     /// <summary>
     /// Fair Basis Code.
     /// </summary>
     [DisplayName("Fair Basis Code")]
     [IsoXmlTag("FairBsisCd")]
-    public IsoMax35Text? FairBasisCode { get; init; }
+    public Max35Text? FairBasisCode { get; init; }
 
     /// <summary>
     /// IATA Code.
     /// </summary>
     [DisplayName("IATA Code")]
     [IsoXmlTag("IATACd")]
-    public IsoMax35Text? IATACode { get; init; }
+    public Max35Text? IATACode { get; init; }
 
     /// <summary>
     /// Insurance.
     /// </summary>
     [DisplayName("Insurance")]
     [IsoXmlTag("Insrnc")]
-    public IsoTrueFalseIndicator? Insurance { get; init; }
+    public TrueFalseIndicator? Insurance { get; init; }
 
     /// <summary>
     /// Loyalty Programme.
@@ -140,133 +140,133 @@ public record TripLeg3
     /// </summary>
     [DisplayName("Non Direct Route Code")]
     [IsoXmlTag("NonDrctRouteCd")]
-    public IsoMax35Text? NonDirectRouteCode { get; init; }
+    public Max35Text? NonDirectRouteCode { get; init; }
 
     /// <summary>
     /// Open Ticket.
     /// </summary>
     [DisplayName("Open Ticket")]
     [IsoXmlTag("OpnTckt")]
-    public IsoTrueFalseIndicator? OpenTicket { get; init; }
+    public TrueFalseIndicator? OpenTicket { get; init; }
 
     /// <summary>
     /// Original Reservation Number.
     /// </summary>
     [DisplayName("Original Reservation Number")]
     [IsoXmlTag("OrgnlRsvatnNb")]
-    public IsoMax35Text? OriginalReservationNumber { get; init; }
+    public Max35Text? OriginalReservationNumber { get; init; }
 
     /// <summary>
     /// Original Reservation System.
     /// </summary>
     [DisplayName("Original Reservation System")]
     [IsoXmlTag("OrgnlRsvatnSys")]
-    public IsoMax4Text? OriginalReservationSystem { get; init; }
+    public Max4Text? OriginalReservationSystem { get; init; }
 
     /// <summary>
     /// Other Transport Type.
     /// </summary>
     [DisplayName("Other Transport Type")]
     [IsoXmlTag("OthrTrnsprtTp")]
-    public IsoMax35Text? OtherTransportType { get; init; }
+    public Max35Text? OtherTransportType { get; init; }
 
     /// <summary>
     /// Procedure Identification.
     /// </summary>
     [DisplayName("Procedure Identification")]
     [IsoXmlTag("PrcdrId")]
-    public IsoMax35Text? ProcedureIdentification { get; init; }
+    public Max35Text? ProcedureIdentification { get; init; }
 
     /// <summary>
     /// Record Locator Number.
     /// </summary>
     [DisplayName("Record Locator Number")]
     [IsoXmlTag("RcrdLctrNb")]
-    public IsoMax35Text? RecordLocatorNumber { get; init; }
+    public Max35Text? RecordLocatorNumber { get; init; }
 
     /// <summary>
     /// Reservation Number.
     /// </summary>
     [DisplayName("Reservation Number")]
     [IsoXmlTag("RsvatnNb")]
-    public IsoMax35Text? ReservationNumber { get; init; }
+    public Max35Text? ReservationNumber { get; init; }
 
     /// <summary>
     /// Reservation System.
     /// </summary>
     [DisplayName("Reservation System")]
     [IsoXmlTag("RsvatnSys")]
-    public IsoMax4Text? ReservationSystem { get; init; }
+    public Max4Text? ReservationSystem { get; init; }
 
     /// <summary>
     /// Restricted Ticket.
     /// </summary>
     [DisplayName("Restricted Ticket")]
     [IsoXmlTag("RstrctdTckt")]
-    public IsoTrueFalseIndicator? RestrictedTicket { get; init; }
+    public TrueFalseIndicator? RestrictedTicket { get; init; }
 
     /// <summary>
     /// Route Number.
     /// </summary>
     [DisplayName("Route Number")]
     [IsoXmlTag("RouteNb")]
-    public IsoMax35Text? RouteNumber { get; init; }
+    public Max35Text? RouteNumber { get; init; }
 
     /// <summary>
     /// Sequence Number.
     /// </summary>
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
-    public IsoMax35NumericText? SequenceNumber { get; init; }
+    public Max35NumericText? SequenceNumber { get; init; }
 
     /// <summary>
     /// Service Class.
     /// </summary>
     [DisplayName("Service Class")]
     [IsoXmlTag("SvcClss")]
-    public IsoMax35Text? ServiceClass { get; init; }
+    public Max35Text? ServiceClass { get; init; }
 
     /// <summary>
     /// Stop Over.
     /// </summary>
     [DisplayName("Stop Over")]
     [IsoXmlTag("StopOver")]
-    public IsoTrueFalseIndicator? StopOver { get; init; }
+    public TrueFalseIndicator? StopOver { get; init; }
 
     /// <summary>
     /// Ticket Issue Date.
     /// </summary>
     [DisplayName("Ticket Issue Date")]
     [IsoXmlTag("TcktIsseDt")]
-    public IsoISODate? TicketIssueDate { get; init; }
+    public DateOnly? TicketIssueDate { get; init; }
 
     /// <summary>
     /// Ticket Issue Location.
     /// </summary>
     [DisplayName("Ticket Issue Location")]
     [IsoXmlTag("TcktIsseLctn")]
-    public IsoMax140Text? TicketIssueLocation { get; init; }
+    public Max140Text? TicketIssueLocation { get; init; }
 
     /// <summary>
     /// Ticket Issuer.
     /// </summary>
     [DisplayName("Ticket Issuer")]
     [IsoXmlTag("TcktIssr")]
-    public IsoMax35Text? TicketIssuer { get; init; }
+    public Max35Text? TicketIssuer { get; init; }
 
     /// <summary>
     /// Ticket Number.
     /// </summary>
     [DisplayName("Ticket Number")]
     [IsoXmlTag("TcktNb")]
-    public IsoMax35Text? TicketNumber { get; init; }
+    public Max35Text? TicketNumber { get; init; }
 
     /// <summary>
     /// Ticket Restrictions.
     /// </summary>
     [DisplayName("Ticket Restrictions")]
     [IsoXmlTag("TcktRstrctns")]
-    public IsoMax70Text? TicketRestrictions { get; init; }
+    public Max70Text? TicketRestrictions { get; init; }
 
     /// <summary>
     /// Transport Type.

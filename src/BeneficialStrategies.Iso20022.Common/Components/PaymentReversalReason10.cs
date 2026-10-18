@@ -22,7 +22,7 @@ public record PaymentReversalReason10
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public ValueList<IsoMax105Text> AdditionalInformation { get; init; } = [];
+    public ValueList<Max105Text> AdditionalInformation { get; init; } = [];
 
     /// <summary>
     /// Party that issues the reversal.

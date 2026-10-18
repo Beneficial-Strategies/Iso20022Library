@@ -26,7 +26,7 @@ public record TransparencyDataReport16
     [IsoXmlTag("TechRcrdId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TechnicalRecordIdentification { get; init; }
+    public Max35Text? TechnicalRecordIdentification { get; init; }
 
     /// <summary>
     /// Identifies the financial instrument using an ISIN.
@@ -35,7 +35,7 @@ public record TransparencyDataReport16
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public required IsoISINOct2015Identifier Identification { get; init; }
+    public required ISINOct2015Identifier Identification { get; init; }
 
     /// <summary>
     /// Full name or description of the financial instrument.
@@ -45,7 +45,7 @@ public record TransparencyDataReport16
     [IsoXmlTag("FullNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? FullName { get; init; }
+    public Max350Text? FullName { get; init; }
 
     /// <summary>
     /// Segment MIC for the trading venue where applicable, otherwise the operational MIC.
@@ -54,7 +54,7 @@ public record TransparencyDataReport16
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public IsoMICIdentifier? TradingVenue { get; init; }
+    public MICIdentifier? TradingVenue { get; init; }
 
     /// <summary>
     /// Date this information is reported in relation to.
@@ -63,7 +63,7 @@ public record TransparencyDataReport16
     [DisplayName("Reporting Date")]
     [IsoXmlTag("RptgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ReportingDate { get; init; }
+    public DateOnly? ReportingDate { get; init; }
 
     /// <summary>
     /// Maturity date of the financial instrument. Field applicable for the asset classes of bonds, interest rate derivatives, equity derivatives, commodity derivatives, foreign exchange derivatives, credit derivatives, C10 derivatives and derivatives on emission allowances.
@@ -72,7 +72,7 @@ public record TransparencyDataReport16
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? MaturityDate { get; init; }
+    public DateOnly? MaturityDate { get; init; }
 
     /// <summary>
     /// Identification of non-equity financial instruments.

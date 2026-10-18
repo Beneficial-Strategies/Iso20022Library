@@ -23,7 +23,7 @@ public record CompareNumber6
     [DisplayName("Value")]
     [IsoXmlTag("Val1")]
     [IsoSimpleType(IsoSimpleType.Max5Number)]
-    public IsoMax5Number? Value1 { get; init; }
+    public Max5Number? Value1 { get; init; }
 
     /// <summary>
     /// Information for the second side of the transaction.
@@ -32,5 +32,5 @@ public record CompareNumber6
     [DisplayName("Value")]
     [IsoXmlTag("Val2")]
     [IsoSimpleType(IsoSimpleType.Max5Number)]
-    public IsoMax5Number? Value2 { get; init; }
+    public Max5Number? Value2 { get; init; }
 }

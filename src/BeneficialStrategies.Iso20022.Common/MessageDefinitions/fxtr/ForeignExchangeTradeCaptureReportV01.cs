@@ -110,7 +110,7 @@ public record ForeignExchangeTradeCaptureReportV01 : IOuterRecord
     [DisplayName("Request Responder")]
     [IsoXmlTag("ReqRspndr")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator RequestResponder { get; init; }
+    public required YesNoIndicator RequestResponder { get; init; }
 
     /// <summary>
     /// Indicates if this report is a rejection report for responding to a capture request.
@@ -119,7 +119,7 @@ public record ForeignExchangeTradeCaptureReportV01 : IOuterRecord
     [DisplayName("Request Rejected")]
     [IsoXmlTag("ReqRjctd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? RequestRejected { get; init; }
+    public YesNoIndicator? RequestRejected { get; init; }
 
     /// <summary>
     /// Reason of rejection.
@@ -129,7 +129,7 @@ public record ForeignExchangeTradeCaptureReportV01 : IOuterRecord
     [IsoXmlTag("QryRjctRsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? QueryRejectReason { get; init; }
+    public Max35Text? QueryRejectReason { get; init; }
 
     /// <summary>
     /// Indicates the total number of trades.
@@ -138,7 +138,7 @@ public record ForeignExchangeTradeCaptureReportV01 : IOuterRecord
     [DisplayName("Total Number Trades")]
     [IsoXmlTag("TtlNbTrds")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? TotalNumberTrades { get; init; }
+    public Number? TotalNumberTrades { get; init; }
 
     /// <summary>
     /// Indicates if this report is the last report sent for responding to one capture request.
@@ -147,7 +147,7 @@ public record ForeignExchangeTradeCaptureReportV01 : IOuterRecord
     [DisplayName("Last Report Requested")]
     [IsoXmlTag("LastRptReqd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? LastReportRequested { get; init; }
+    public YesNoIndicator? LastReportRequested { get; init; }
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.

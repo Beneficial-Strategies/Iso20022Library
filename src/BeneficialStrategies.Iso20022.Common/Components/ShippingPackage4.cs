@@ -22,7 +22,7 @@ public record ShippingPackage4
     [IsoId("_tIpbgUiCEfCMZJtj4J7UGQ")]
     [DisplayName("Tracking Number")]
     [IsoXmlTag("TrckgNb")]
-    public IsoMax70Text? TrackingNumber { get; init; }
+    public Max70Text? TrackingNumber { get; init; }
 
     /// <summary>
     /// Name of the supplier
@@ -30,7 +30,7 @@ public record ShippingPackage4
     [IsoId("_tIpbg0iCEfCMZJtj4J7UGQ")]
     [DisplayName("Supplier Name")]
     [IsoXmlTag("SpplrNm")]
-    public IsoMax70Text? SupplierName { get; init; }
+    public Max70Text? SupplierName { get; init; }
 
     /// <summary>
     /// Identification of the supplier.
@@ -38,7 +38,7 @@ public record ShippingPackage4
     [IsoId("_pqQpFUiCEfCMZJtj4J7UGQ")]
     [DisplayName("Supplier Identification")]
     [IsoXmlTag("SpplrId")]
-    public IsoMax35Text? SupplierIdentification { get; init; }
+    public Max35Text? SupplierIdentification { get; init; }
 
     /// <summary>
     /// Business name of the supplier.
@@ -46,7 +46,7 @@ public record ShippingPackage4
     [IsoId("_pqQpFkiCEfCMZJtj4J7UGQ")]
     [DisplayName("Supplier Business Name")]
     [IsoXmlTag("SpplrBizNm")]
-    public IsoMax35Text? SupplierBusinessName { get; init; }
+    public Max35Text? SupplierBusinessName { get; init; }
 
     /// <summary>
     /// Legal Corporate Name of the supplier.
@@ -54,7 +54,7 @@ public record ShippingPackage4
     [IsoId("_pqQpF0iCEfCMZJtj4J7UGQ")]
     [DisplayName("Supplier Legal Corporate Name")]
     [IsoXmlTag("SpplrLglCorpNm")]
-    public IsoMax99Text? SupplierLegalCorporateName { get; init; }
+    public Max99Text? SupplierLegalCorporateName { get; init; }
 
     /// <summary>
     /// Address of the supplier.
@@ -86,7 +86,7 @@ public record ShippingPackage4
     [IsoId("_tIpbi0iCEfCMZJtj4J7UGQ")]
     [DisplayName("Supplier Instructions")]
     [IsoXmlTag("SpplrInstrs")]
-    public IsoMax350Text? SupplierInstructions { get; init; }
+    public Max350Text? SupplierInstructions { get; init; }
 
     /// <summary>
     /// Contains the date the package is picked up.
@@ -94,7 +94,7 @@ public record ShippingPackage4
     [IsoId("_tIpbjUiCEfCMZJtj4J7UGQ")]
     [DisplayName("Pickup Date")]
     [IsoXmlTag("PckpDt")]
-    public IsoISODate? PickupDate { get; init; }
+    public DateOnly? PickupDate { get; init; }
 
     /// <summary>
     /// Contains the time the package is picked up.
@@ -102,7 +102,7 @@ public record ShippingPackage4
     [IsoId("_tIpbj0iCEfCMZJtj4J7UGQ")]
     [DisplayName("Pickup Time")]
     [IsoXmlTag("PckpTm")]
-    public IsoISOTime? PickupTime { get; init; }
+    public ISOTime? PickupTime { get; init; }
 
     /// <summary>
     /// Contains the number identifying an individual delivery note. 
@@ -110,7 +110,7 @@ public record ShippingPackage4
     [IsoId("_tIpbkUiCEfCMZJtj4J7UGQ")]
     [DisplayName("Delivery Note Number")]
     [IsoXmlTag("DlvryNoteNb")]
-    public IsoMax35Text? DeliveryNoteNumber { get; init; }
+    public Max35Text? DeliveryNoteNumber { get; init; }
 
     /// <summary>
     /// Delivery address.
@@ -134,7 +134,7 @@ public record ShippingPackage4
     [IsoId("_tIpbl0iCEfCMZJtj4J7UGQ")]
     [DisplayName("Delivery Instructions")]
     [IsoXmlTag("DlvryInstrs")]
-    public IsoMax350Text? DeliveryInstructions { get; init; }
+    public Max350Text? DeliveryInstructions { get; init; }
 
     /// <summary>
     /// Contains the package delivery date.
@@ -142,7 +142,7 @@ public record ShippingPackage4
     [IsoId("_tIpbmUiCEfCMZJtj4J7UGQ")]
     [DisplayName("Delivery Date")]
     [IsoXmlTag("DlvryDt")]
-    public IsoISODate? DeliveryDate { get; init; }
+    public DateOnly? DeliveryDate { get; init; }
 
     /// <summary>
     /// Contains the package delivery time.
@@ -150,7 +150,7 @@ public record ShippingPackage4
     [IsoId("_tIpbm0iCEfCMZJtj4J7UGQ")]
     [DisplayName("Delivery Time")]
     [IsoXmlTag("DlvryTm")]
-    public IsoISOTime? DeliveryTime { get; init; }
+    public ISOTime? DeliveryTime { get; init; }
 
     /// <summary>
     /// Unit of measure of the item being shipped.
@@ -166,7 +166,7 @@ public record ShippingPackage4
     [IsoId("_tIpbn0iCEfCMZJtj4J7UGQ")]
     [DisplayName("Other Weight Unit")]
     [IsoXmlTag("OthrWghtUnit")]
-    public IsoMax35Text? OtherWeightUnit { get; init; }
+    public Max35Text? OtherWeightUnit { get; init; }
 
     /// <summary>
     /// Number of units.
@@ -174,7 +174,7 @@ public record ShippingPackage4
     [IsoId("_tIpboUiCEfCMZJtj4J7UGQ")]
     [DisplayName("Number Of Units")]
     [IsoXmlTag("NbOfUnits")]
-    public IsoDecimalNumber? NumberOfUnits { get; init; }
+    public DecimalNumber? NumberOfUnits { get; init; }
 
     /// <summary>
     /// Contains the product details.
@@ -190,7 +190,7 @@ public record ShippingPackage4
     [IsoId("_tIpbpUiCEfCMZJtj4J7UGQ")]
     [DisplayName("Insurance")]
     [IsoXmlTag("Insrnc")]
-    public IsoTrueFalseIndicator? Insurance { get; init; }
+    public TrueFalseIndicator? Insurance { get; init; }
 
     /// <summary>
     /// Amount of insurance.

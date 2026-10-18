@@ -24,7 +24,7 @@ public record FraudCaseDetails1
     [IsoXmlTag("MktSgmt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MarketSegment { get; init; }
+    public Max35Text? MarketSegment { get; init; }
 
     /// <summary>
     /// Locator reference.
@@ -34,7 +34,7 @@ public record FraudCaseDetails1
     [IsoXmlTag("LctrNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LocatorNumber { get; init; }
+    public Max35Text? LocatorNumber { get; init; }
 
     /// <summary>
     /// Reference to fraudulent case.
@@ -44,7 +44,7 @@ public record FraudCaseDetails1
     [IsoXmlTag("CaseRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CaseReference { get; init; }
+    public Max35Text? CaseReference { get; init; }
 
     /// <summary>
     /// Indicates whether the party that committed fraud was arrested or not.
@@ -56,5 +56,5 @@ public record FraudCaseDetails1
     [DisplayName("Arrest Indicator")]
     [IsoXmlTag("ArrstInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ArrestIndicator { get; init; }
+    public TrueFalseIndicator? ArrestIndicator { get; init; }
 }

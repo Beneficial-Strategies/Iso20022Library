@@ -63,5 +63,5 @@ public record InvestigationReason2
     /// </summary>
     [DisplayName("Sequence")]
     [IsoXmlTag("Seq")]
-    public IsoMax3Number? Sequence { get; init; }
+    public Max3Number? Sequence { get; init; }
 }

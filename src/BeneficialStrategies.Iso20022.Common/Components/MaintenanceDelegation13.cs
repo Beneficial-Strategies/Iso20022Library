@@ -41,7 +41,7 @@ public record MaintenanceDelegation13
     [DisplayName("Partial Delegation")]
     [IsoXmlTag("PrtlDlgtn")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? PartialDelegation { get; init; }
+    public TrueFalseIndicator? PartialDelegation { get; init; }
 
     /// <summary>
     /// Subset of the terminal estate for the delegated actions, for instance for pilot or key deactivation). The subset may be expressed as a list of POI or terminal estate subset identifier.
@@ -49,7 +49,7 @@ public record MaintenanceDelegation13
     [IsoId("_82x4xU6nEeyGi9JAv6wq7Q")]
     [DisplayName("POI Subset")]
     [IsoXmlTag("POISubset")]
-    public SimpleValueList<IsoMax35Text> POISubset { get; init; } = [];
+    public SimpleValueList<Max35Text> POISubset { get; init; } = [];
 
     /// <summary>
     /// Information for the MTM to build or include delegated actions in the management plan of the POI.
@@ -67,7 +67,7 @@ public record MaintenanceDelegation13
     [IsoXmlTag("DlgtnScpId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DelegationScopeIdentification { get; init; }
+    public Max35Text? DelegationScopeIdentification { get; init; }
 
     /// <summary>
     /// This element contains all information relevant to the DelegationScopeIdentification. The format of this element is out of scope of this definition.
@@ -76,7 +76,7 @@ public record MaintenanceDelegation13
     [DisplayName("Delegation Scope Definition")]
     [IsoXmlTag("DlgtnScpDef")]
     [IsoSimpleType(IsoSimpleType.Max3000Binary)]
-    public IsoMax3000Binary? DelegationScopeDefinition { get; init; }
+    public Max3000Binary? DelegationScopeDefinition { get; init; }
 
     /// <summary>
     /// Certificate path of the terminal manager.
@@ -84,7 +84,7 @@ public record MaintenanceDelegation13
     [IsoId("_82x4zU6nEeyGi9JAv6wq7Q")]
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
-    public SimpleValueList<IsoMax10KBinary> Certificate { get; init; } = [];
+    public SimpleValueList<Max10KBinary> Certificate { get; init; } = [];
 
     /// <summary>
     /// Association of the TM identifier and the MTM identifier of a POI.

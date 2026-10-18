@@ -23,7 +23,7 @@ public record TargetMarket2
     [DisplayName("Reference Date")]
     [IsoXmlTag("RefDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ReferenceDate { get; init; }
+    public DateOnly? ReferenceDate { get; init; }
 
     /// <summary>
     /// Investor for which the financial instrument is targeted.

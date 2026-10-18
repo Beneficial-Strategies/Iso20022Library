@@ -24,7 +24,7 @@ public record IncludedAccount1
     [IsoXmlTag("SctiesAcctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text SecuritiesAccountIdentification { get; init; }
+    public required Max35Text SecuritiesAccountIdentification { get; init; }
 
     /// <summary>
     /// Indicates whether the account is impacted or not by the standing instruction.||Yes = The account is impacted by the standing instruction.|No = The account is not impacted by the standing instruction.
@@ -33,5 +33,5 @@ public record IncludedAccount1
     [DisplayName("Included Indicator")]
     [IsoXmlTag("InclInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator IncludedIndicator { get; init; }
+    public required YesNoIndicator IncludedIndicator { get; init; }
 }

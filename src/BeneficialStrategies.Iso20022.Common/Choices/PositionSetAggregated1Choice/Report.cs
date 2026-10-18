@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PositionSetAggregated1Choice
         [DisplayName("Reference Date")]
         [IsoXmlTag("RefDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate ReferenceDate { get; init; }
+        public required DateOnly ReferenceDate { get; init; }
 
         /// <summary>
         /// Aggregation of outstanding derivatives with similar dimensions. Numerous positions sets that are produced according to the combination of dimensions used to stratify the derivatives, and different metrics are used to represent the aggregations.

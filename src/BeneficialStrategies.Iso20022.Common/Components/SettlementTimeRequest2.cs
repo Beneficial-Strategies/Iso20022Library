@@ -23,7 +23,7 @@ public record SettlementTimeRequest2
     [DisplayName("CLS Time")]
     [IsoXmlTag("CLSTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? CLSTime { get; init; }
+    public ISOTime? CLSTime { get; init; }
 
     /// <summary>
     /// Time until when the payment may be settled.
@@ -32,7 +32,7 @@ public record SettlementTimeRequest2
     [DisplayName("Till Time")]
     [IsoXmlTag("TillTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? TillTime { get; init; }
+    public ISOTime? TillTime { get; init; }
 
     /// <summary>
     /// Time as from when the payment may be settled.
@@ -41,7 +41,7 @@ public record SettlementTimeRequest2
     [DisplayName("From Time")]
     [IsoXmlTag("FrTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? FromTime { get; init; }
+    public ISOTime? FromTime { get; init; }
 
     /// <summary>
     /// Time by when the payment must be settled to avoid rejection.
@@ -50,5 +50,5 @@ public record SettlementTimeRequest2
     [DisplayName("Reject Time")]
     [IsoXmlTag("RjctTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? RejectTime { get; init; }
+    public ISOTime? RejectTime { get; init; }
 }

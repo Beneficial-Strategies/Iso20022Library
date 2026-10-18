@@ -68,7 +68,7 @@ public record SecuritiesSettlementTransactionAllegementNotification002V10 : IOut
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax16Text TransactionIdentification { get; init; }
+    public required RestrictedFINXMax16Text TransactionIdentification { get; init; }
 
     /// <summary>
     /// Provides settlement type and identification information.
@@ -86,7 +86,7 @@ public record SecuritiesSettlementTransactionAllegementNotification002V10 : IOut
     [IsoXmlTag("MktInfrstrctrTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? MarketInfrastructureTransactionIdentification { get; init; }
+    public RestrictedFINXMax16Text? MarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of a counterparty transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
@@ -96,7 +96,7 @@ public record SecuritiesSettlementTransactionAllegementNotification002V10 : IOut
     [IsoXmlTag("CtrPtyMktInfrstrctrTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CounterpartyMarketInfrastructureTransactionIdentification { get; init; }
+    public Max35Text? CounterpartyMarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Details of the trade.

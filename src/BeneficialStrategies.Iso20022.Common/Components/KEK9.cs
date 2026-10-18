@@ -21,7 +21,7 @@ public record KEK9
     /// </summary>
     [DisplayName("Encrypted Key")]
     [IsoXmlTag("NcrptdKey")]
-    public IsoMax500Binary? EncryptedKey { get; init; }
+    public Max500Binary? EncryptedKey { get; init; }
 
     /// <summary>
     /// KEK Identification.
@@ -42,5 +42,5 @@ public record KEK9
     /// </summary>
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
-    public IsoNumber? Version { get; init; }
+    public Number? Version { get; init; }
 }

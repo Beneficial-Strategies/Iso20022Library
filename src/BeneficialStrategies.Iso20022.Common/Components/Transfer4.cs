@@ -24,7 +24,7 @@ public record Transfer4
     [IsoXmlTag("TrfConfRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransferConfirmationReference { get; init; }
+    public required Max35Text TransferConfirmationReference { get; init; }
 
     /// <summary>
     /// Reference that identifies the transfer in transaction.
@@ -34,7 +34,7 @@ public record Transfer4
     [IsoXmlTag("TrfRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransferReference { get; init; }
+    public required Max35Text TransferReference { get; init; }
 
     /// <summary>
     /// Date and optionally time at which a transaction is completed and cleared, ie, securities are delivered.
@@ -51,7 +51,7 @@ public record Transfer4
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate TradeDate { get; init; }
+    public required DateOnly TradeDate { get; init; }
 
     /// <summary>
     /// Total quantity of securities settled.
@@ -76,7 +76,7 @@ public record Transfer4
     [DisplayName("Own Account Transfer Indicator")]
     [IsoXmlTag("OwnAcctTrfInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator OwnAccountTransferIndicator { get; init; }
+    public required YesNoIndicator OwnAccountTransferIndicator { get; init; }
 
     /// <summary>
     /// Value of a security, as booked in an account. Book value is often different from the current market value of the security.

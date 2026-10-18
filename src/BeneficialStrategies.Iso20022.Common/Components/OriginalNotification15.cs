@@ -21,7 +21,7 @@ public record OriginalNotification15
     /// </summary>
     [DisplayName("Additional Status Information")]
     [IsoXmlTag("AddtlStsInf")]
-    public IsoMax140Text? AdditionalStatusInformation { get; init; }
+    public Max140Text? AdditionalStatusInformation { get; init; }
 
     /// <summary>
     /// Notification Status.
@@ -35,21 +35,21 @@ public record OriginalNotification15
     /// </summary>
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
-    public IsoISODateTime? OriginalCreationDateTime { get; init; }
+    public ISODateTime? OriginalCreationDateTime { get; init; }
 
     /// <summary>
     /// Original Message Identification.
     /// </summary>
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
-    public required IsoMax35Text OriginalMessageIdentification { get; init; }
+    public required Max35Text OriginalMessageIdentification { get; init; }
 
     /// <summary>
     /// Original Notification Identification.
     /// </summary>
     [DisplayName("Original Notification Identification")]
     [IsoXmlTag("OrgnlNtfctnId")]
-    public required IsoMax35Text OriginalNotificationIdentification { get; init; }
+    public required Max35Text OriginalNotificationIdentification { get; init; }
 
     /// <summary>
     /// Original Notification Reference.

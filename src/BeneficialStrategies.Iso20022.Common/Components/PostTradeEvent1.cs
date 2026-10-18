@@ -21,7 +21,7 @@ public record PostTradeEvent1
     /// </summary>
     [DisplayName("Original Reference")]
     [IsoXmlTag("OrgnlRef")]
-    public required IsoMax35Text OriginalReference { get; init; }
+    public required Max35Text OriginalReference { get; init; }
 
     /// <summary>
     /// Outstanding Settlement Amount.
@@ -42,7 +42,7 @@ public record PostTradeEvent1
     /// </summary>
     [DisplayName("Profit Or Loss Settlement Date")]
     [IsoXmlTag("PrftOrLossSttlmDt")]
-    public IsoISODate? ProfitOrLossSettlementDate { get; init; }
+    public DateOnly? ProfitOrLossSettlementDate { get; init; }
 
     /// <summary>
     /// Type.
@@ -56,5 +56,5 @@ public record PostTradeEvent1
     /// </summary>
     [DisplayName("Underlying Liability Reference")]
     [IsoXmlTag("UndrlygLbltyRef")]
-    public IsoMax35Text? UnderlyingLiabilityReference { get; init; }
+    public Max35Text? UnderlyingLiabilityReference { get; init; }
 }

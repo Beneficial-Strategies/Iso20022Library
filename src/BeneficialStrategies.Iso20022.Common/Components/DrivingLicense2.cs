@@ -24,7 +24,7 @@ public record DrivingLicense2
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Type { get; init; }
+    public Max70Text? Type { get; init; }
 
     /// <summary>
     /// Form of driving license.
@@ -42,7 +42,7 @@ public record DrivingLicense2
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public required IsoMax70Text Identification { get; init; }
+    public required Max70Text Identification { get; init; }
 
     /// <summary>
     /// Authority assigning an identification to a driver license.
@@ -59,7 +59,7 @@ public record DrivingLicense2
     [DisplayName("Issuance Date")]
     [IsoXmlTag("IssncDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? IssuanceDate { get; init; }
+    public DateOnly? IssuanceDate { get; init; }
 
     /// <summary>
     /// Expiration date of the driving license (if and when relevant).
@@ -68,7 +68,7 @@ public record DrivingLicense2
     [DisplayName("Expiration Date")]
     [IsoXmlTag("XprtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ExpirationDate { get; init; }
+    public DateOnly? ExpirationDate { get; init; }
 
     /// <summary>
     /// Country issuing the driver license.
@@ -86,7 +86,7 @@ public record DrivingLicense2
     [IsoXmlTag("Stat")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoMax16Text? State { get; init; }
+    public Max16Text? State { get; init; }
 
     /// <summary>
     /// Province issuing the driver license (if and when relevant).
@@ -96,7 +96,7 @@ public record DrivingLicense2
     [IsoXmlTag("Prvc")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoMax16Text? Province { get; init; }
+    public Max16Text? Province { get; init; }
 
     /// <summary>
     /// Other authority issuing a driver license.
@@ -106,5 +106,5 @@ public record DrivingLicense2
     [IsoXmlTag("OthrAuthrty")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoMax16Text? OtherAuthority { get; init; }
+    public Max16Text? OtherAuthority { get; init; }
 }

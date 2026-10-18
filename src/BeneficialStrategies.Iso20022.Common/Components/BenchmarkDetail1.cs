@@ -24,7 +24,7 @@ public record BenchmarkDetail1
     [IsoXmlTag("FullNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text FullName { get; init; }
+    public required Max350Text FullName { get; init; }
 
     /// <summary>
     /// Index name of the benchmark.
@@ -42,5 +42,5 @@ public record BenchmarkDetail1
     [IsoXmlTag("Cmnt")]
     [IsoSimpleType(IsoSimpleType.Max20000Text)]
     [StringLength(maximumLength: 20000, MinimumLength = 1)]
-    public IsoMax20000Text? Comment { get; init; }
+    public Max20000Text? Comment { get; init; }
 }

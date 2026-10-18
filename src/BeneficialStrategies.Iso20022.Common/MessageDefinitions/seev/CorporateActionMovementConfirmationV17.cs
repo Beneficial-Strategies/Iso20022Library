@@ -108,7 +108,7 @@ public record CorporateActionMovementConfirmationV17 : IOuterRecord
     [IsoXmlTag("MvmntConfId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MovementConfirmationIdentification { get; init; }
+    public Max35Text? MovementConfirmationIdentification { get; init; }
 
     /// <summary>
     /// Movement Preliminary Advice Identification.

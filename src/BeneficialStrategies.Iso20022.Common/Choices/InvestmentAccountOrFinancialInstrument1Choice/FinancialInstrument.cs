@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestmentAccountOrFinancialInst
         [IsoXmlTag("Nm")]
         [IsoSimpleType(IsoSimpleType.Max350Text)]
         [StringLength(maximumLength: 350, MinimumLength = 1)]
-        public IsoMax350Text? Name { get; init; }
+        public Max350Text? Name { get; init; }
 
         /// <summary>
         /// Additional information about a financial instrument to help identify the instrument.
@@ -42,7 +42,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestmentAccountOrFinancialInst
         [IsoXmlTag("SplmtryId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? SupplementaryIdentification { get; init; }
+        public Max35Text? SupplementaryIdentification { get; init; }
 
         /// <summary>
         /// Features of units offered by a fund. For example, a unit may have a specific load structure, eg, front end or back end, an income policy, eg, pay out or accumulate, or a trailer policy, eg, with or without. Fund classes are typically denoted by a single character, eg, &apos;Class A&apos;, &apos;Class 2&apos;.
@@ -52,7 +52,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestmentAccountOrFinancialInst
         [IsoXmlTag("ClssTp")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? ClassType { get; init; }
+        public Max35Text? ClassType { get; init; }
 
         /// <summary>
         /// Form, ie, ownership, of the security, eg, registered or bearer.
@@ -78,6 +78,6 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestmentAccountOrFinancialInst
         [IsoXmlTag("PdctGrp")]
         [IsoSimpleType(IsoSimpleType.Max140Text)]
         [StringLength(maximumLength: 140, MinimumLength = 1)]
-        public IsoMax140Text? ProductGroup { get; init; }
+        public Max140Text? ProductGroup { get; init; }
     }
 }

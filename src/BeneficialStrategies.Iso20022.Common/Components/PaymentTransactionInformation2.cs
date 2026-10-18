@@ -24,7 +24,7 @@ public record PaymentTransactionInformation2
     [IsoXmlTag("RtrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReturnIdentification { get; init; }
+    public Max35Text? ReturnIdentification { get; init; }
 
     /// <summary>
     /// Information concerning the original group of transactions, to which the message refers.
@@ -42,7 +42,7 @@ public record PaymentTransactionInformation2
     [IsoXmlTag("OrgnlInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Original unique identification assigned by the initiating party to unambiguously identify the original transaction. This identification is passed on, unchanged, throughout the entire end-to-end chain.
@@ -52,7 +52,7 @@ public record PaymentTransactionInformation2
     [IsoXmlTag("OrgnlEndToEndId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Original identification of a transaction, as assigned by the first instructing agent and passed on, unchanged, throughout the entire interbank chain.
@@ -62,7 +62,7 @@ public record PaymentTransactionInformation2
     [IsoXmlTag("OrgnlTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalTransactionIdentification { get; init; }
+    public Max35Text? OriginalTransactionIdentification { get; init; }
 
     /// <summary>
     /// Original amount of money as moved between the instructing agent and the instructed agent in the original transaction.
@@ -87,7 +87,7 @@ public record PaymentTransactionInformation2
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? InterbankSettlementDate { get; init; }
+    public DateOnly? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Amount of money to be moved between the debtor and the creditor, before deduction of charges, in the returned transaction.
@@ -104,7 +104,7 @@ public record PaymentTransactionInformation2
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? ExchangeRate { get; init; }
+    public BaseOneRate? ExchangeRate { get; init; }
 
     /// <summary>
     /// Amount of money asked or paid as compensation for the processing of the instruction.

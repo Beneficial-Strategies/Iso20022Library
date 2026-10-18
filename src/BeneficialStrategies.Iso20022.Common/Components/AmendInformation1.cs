@@ -31,5 +31,5 @@ public record AmendInformation1
     [DisplayName("Reconfirm Instructions")]
     [IsoXmlTag("RcnfrmInstrs")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ReconfirmInstructions { get; init; }
+    public required YesNoIndicator ReconfirmInstructions { get; init; }
 }

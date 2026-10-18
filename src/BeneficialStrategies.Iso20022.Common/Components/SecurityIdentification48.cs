@@ -21,14 +21,14 @@ public record SecurityIdentification48
     /// </summary>
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax140Text? Description { get; init; }
+    public Max140Text? Description { get; init; }
 
     /// <summary>
     /// ISIN.
     /// </summary>
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
-    public IsoISINOct2015Identifier? ISIN { get; init; }
+    public ISINOct2015Identifier? ISIN { get; init; }
 
     /// <summary>
     /// Other Identification.

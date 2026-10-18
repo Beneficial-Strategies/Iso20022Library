@@ -24,7 +24,7 @@ public record DocumentIdentification23
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Date of issuance of the document.
@@ -33,7 +33,7 @@ public record DocumentIdentification23
     [DisplayName("Date Of Issue")]
     [IsoXmlTag("DtOfIsse")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DateOfIssue { get; init; }
+    public DateOnly? DateOfIssue { get; init; }
 
     /// <summary>
     /// Identification of buyer order line item.
@@ -43,5 +43,5 @@ public record DocumentIdentification23
     [IsoXmlTag("OrdrLineId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OrderLineIdentification { get; init; }
+    public Max35Text? OrderLineIdentification { get; init; }
 }

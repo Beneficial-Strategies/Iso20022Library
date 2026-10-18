@@ -23,7 +23,7 @@ public record BusinessDaySearchCriteria2
     [DisplayName("System Date")]
     [IsoXmlTag("SysDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? SystemDate { get; init; }
+    public DateOnly? SystemDate { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identification of the system, as assigned by the system administrator.

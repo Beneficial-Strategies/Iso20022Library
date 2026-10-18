@@ -24,7 +24,7 @@ public record OriginalNotification5
     [IsoXmlTag("OrgnlMsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OriginalMessageIdentification { get; init; }
+    public required Max35Text OriginalMessageIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the original message was created.
@@ -33,7 +33,7 @@ public record OriginalNotification5
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? OriginalCreationDateTime { get; init; }
+    public ISODateTime? OriginalCreationDateTime { get; init; }
 
     /// <summary>
     /// Identification of the original notification.
@@ -43,7 +43,7 @@ public record OriginalNotification5
     [IsoXmlTag("OrgnlNtfctnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OriginalNotificationIdentification { get; init; }
+    public required Max35Text OriginalNotificationIdentification { get; init; }
 
     /// <summary>
     /// Specifies the status of the notification in a coded form.
@@ -61,7 +61,7 @@ public record OriginalNotification5
     [IsoXmlTag("AddtlStsInf")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? AdditionalStatusInformation { get; init; }
+    public Max140Text? AdditionalStatusInformation { get; init; }
 
     /// <summary>
     /// Identifies the original notification item and provides the status.

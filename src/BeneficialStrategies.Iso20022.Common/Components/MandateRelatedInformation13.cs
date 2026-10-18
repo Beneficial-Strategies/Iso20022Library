@@ -24,7 +24,7 @@ public record MandateRelatedInformation13
     [IsoXmlTag("MndtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MandateIdentification { get; init; }
+    public required Max35Text MandateIdentification { get; init; }
 
     /// <summary>
     /// Date on which the direct debit mandate has been signed by the debtor.
@@ -33,7 +33,7 @@ public record MandateRelatedInformation13
     [DisplayName("Date Of Signature")]
     [IsoXmlTag("DtOfSgntr")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DateOfSignature { get; init; }
+    public DateOnly? DateOfSignature { get; init; }
 
     /// <summary>
     /// Image of scanned signed mandate.
@@ -42,5 +42,5 @@ public record MandateRelatedInformation13
     [DisplayName("Mandate Image")]
     [IsoXmlTag("MndtImg")]
     [IsoSimpleType(IsoSimpleType.Max2MBBinary)]
-    public IsoMax2MBBinary? MandateImage { get; init; }
+    public Max2MBBinary? MandateImage { get; init; }
 }

@@ -24,7 +24,7 @@ public record PartyTextInformation6
     [IsoXmlTag("DclrtnDtls")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? DeclarationDetails { get; init; }
+    public Max350Text? DeclarationDetails { get; init; }
 
     /// <summary>
     /// Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.
@@ -34,7 +34,7 @@ public record PartyTextInformation6
     [IsoXmlTag("PtyCtctDtls")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? PartyContactDetails { get; init; }
+    public Max140Text? PartyContactDetails { get; init; }
 
     /// <summary>
     /// Provides information required for the registration.
@@ -44,7 +44,7 @@ public record PartyTextInformation6
     [IsoXmlTag("RegnDtls")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? RegistrationDetails { get; init; }
+    public Max350Text? RegistrationDetails { get; init; }
 
     /// <summary>
     /// Address of the nominee company that holds the assets at the transfer agent or International Central Securities Depository or Central Securities Depository on behalf of the party.

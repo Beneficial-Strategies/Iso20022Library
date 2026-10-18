@@ -23,7 +23,7 @@ public record ComparePercentageRate3
     [DisplayName("Value")]
     [IsoXmlTag("Val1")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Value1 { get; init; }
+    public PercentageRate? Value1 { get; init; }
 
     /// <summary>
     /// Information for the second side of the transaction.
@@ -32,5 +32,5 @@ public record ComparePercentageRate3
     [DisplayName("Value")]
     [IsoXmlTag("Val2")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Value2 { get; init; }
+    public PercentageRate? Value2 { get; init; }
 }

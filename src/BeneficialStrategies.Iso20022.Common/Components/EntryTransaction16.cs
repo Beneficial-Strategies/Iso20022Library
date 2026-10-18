@@ -230,7 +230,7 @@ public record EntryTransaction16
     [IsoId("f76ab536-550b-4411-8cec-685e31f64917")]
     [DisplayName("Instruction Copy")]
     [IsoXmlTag("InstrCpy")]
-    public IsoMax20000Text? InstructionCopy { get; init; }
+    public Max20000Text? InstructionCopy { get; init; }
 
     /// <summary>
     /// Further details of the transaction.
@@ -238,7 +238,7 @@ public record EntryTransaction16
     [IsoId("6699d54e-7274-41d6-8588-a44f605a9512")]
     [DisplayName("Additional Transaction Information")]
     [IsoXmlTag("AddtlTxInf")]
-    public IsoMax500Text? AdditionalTransactionInformation { get; init; }
+    public Max500Text? AdditionalTransactionInformation { get; init; }
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.

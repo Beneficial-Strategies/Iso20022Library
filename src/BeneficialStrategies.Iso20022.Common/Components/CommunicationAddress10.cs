@@ -31,7 +31,7 @@ public record CommunicationAddress10
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public required IsoPhoneNumber PhoneNumber { get; init; }
+    public required PhoneNumber PhoneNumber { get; init; }
 
     /// <summary>
     /// Collection of information that identifies a FAX number, as defined by telecom services.
@@ -40,7 +40,7 @@ public record CommunicationAddress10
     [DisplayName("Fax Number")]
     [IsoXmlTag("FaxNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? FaxNumber { get; init; }
+    public PhoneNumber? FaxNumber { get; init; }
 
     /// <summary>
     /// Address for electronic mail (e-mail).
@@ -50,5 +50,5 @@ public record CommunicationAddress10
     [IsoXmlTag("EmailAdr")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
     [StringLength(maximumLength: 2048, MinimumLength = 1)]
-    public IsoMax2048Text? EmailAddress { get; init; }
+    public Max2048Text? EmailAddress { get; init; }
 }

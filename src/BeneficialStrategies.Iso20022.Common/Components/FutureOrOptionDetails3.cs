@@ -31,7 +31,7 @@ public record FutureOrOptionDetails3
     [DisplayName("Last Delivery Date")]
     [IsoXmlTag("LastDlvryDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? LastDeliveryDate { get; init; }
+    public ISODateTime? LastDeliveryDate { get; init; }
 
     /// <summary>
     /// Used to indicate the size of the underlying commodity on which the contract is based (e.g., 2500 lbs of lean cattle, 1000 barrels of crude oil, 1000 bushels of corn, etc.).
@@ -48,7 +48,7 @@ public record FutureOrOptionDetails3
     [DisplayName("Future Date")]
     [IsoXmlTag("FutrDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? FutureDate { get; init; }
+    public ISODateTime? FutureDate { get; init; }
 
     /// <summary>
     /// Specifies the minimum ratio or multiply factor used to convert from contracts to shares.
@@ -65,7 +65,7 @@ public record FutureOrOptionDetails3
     [DisplayName("Announcement Date")]
     [IsoXmlTag("AnncmntDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? AnnouncementDate { get; init; }
+    public ISODateTime? AnnouncementDate { get; init; }
 
     /// <summary>
     /// Specifies the deliverability of a security.
@@ -82,7 +82,7 @@ public record FutureOrOptionDetails3
     [DisplayName("Strippable Indicator")]
     [IsoXmlTag("StrpblInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? StrippableIndicator { get; init; }
+    public YesNoIndicator? StrippableIndicator { get; init; }
 
     /// <summary>
     /// Indicates the maximum number of listed option contracts on a single security which can be held by an investor or group of investors acting jointly.
@@ -91,7 +91,7 @@ public record FutureOrOptionDetails3
     [DisplayName("Position Limit")]
     [IsoXmlTag("PosLmt")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? PositionLimit { get; init; }
+    public Number? PositionLimit { get; init; }
 
     /// <summary>
     /// Position limit in the near-term contract for a given exchange-traded product.
@@ -100,7 +100,7 @@ public record FutureOrOptionDetails3
     [DisplayName("Near Term Position Limit")]
     [IsoXmlTag("NearTermPosLmt")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NearTermPositionLimit { get; init; }
+    public Number? NearTermPositionLimit { get; init; }
 
     /// <summary>
     /// Minimum price increase for a given exchange-traded Instrument.
@@ -109,7 +109,7 @@ public record FutureOrOptionDetails3
     [DisplayName("Minimum Trading Pricing Increment")]
     [IsoXmlTag("MinTradgPricgIncrmt")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MinimumTradingPricingIncrement { get; init; }
+    public Number? MinimumTradingPricingIncrement { get; init; }
 
     /// <summary>
     /// Reason for which money is raised through the issuance of a security.
@@ -119,7 +119,7 @@ public record FutureOrOptionDetails3
     [IsoXmlTag("Purp")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Purpose { get; init; }
+    public Max256Text? Purpose { get; init; }
 
     /// <summary>
     /// Specifies when the contract (i.e. MBS/TBA) will settle.
@@ -128,7 +128,7 @@ public record FutureOrOptionDetails3
     [DisplayName("Contract Settlement Month")]
     [IsoXmlTag("CtrctSttlmMnth")]
     [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
-    public IsoISOYearMonth? ContractSettlementMonth { get; init; }
+    public ISOYearMonth? ContractSettlementMonth { get; init; }
 
     /// <summary>
     /// Date on which new securities begin trading.
@@ -177,7 +177,7 @@ public record FutureOrOptionDetails3
     [DisplayName("Last Transaction")]
     [IsoXmlTag("LastTx")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? LastTransaction { get; init; }
+    public YesNoIndicator? LastTransaction { get; init; }
 
     /// <summary>
     /// Specifies that there will be one price and one transaction when two contracts are carried out simultaneously, one to buy and the other one to sell with two different expiration dates.
@@ -186,5 +186,5 @@ public record FutureOrOptionDetails3
     [DisplayName("Spread Transaction")]
     [IsoXmlTag("SprdTx")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? SpreadTransaction { get; init; }
+    public YesNoIndicator? SpreadTransaction { get; init; }
 }

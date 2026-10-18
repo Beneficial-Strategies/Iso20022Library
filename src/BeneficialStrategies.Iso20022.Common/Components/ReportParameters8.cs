@@ -28,5 +28,5 @@ public record ReportParameters8
     /// </summary>
     [DisplayName("Report Identification")]
     [IsoXmlTag("RptId")]
-    public required IsoMax35Text ReportIdentification { get; init; }
+    public required Max35Text ReportIdentification { get; init; }
 }

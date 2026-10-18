@@ -28,7 +28,7 @@ public record PaymentTransaction156
     /// </summary>
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Original Instructed Amount.
@@ -42,7 +42,7 @@ public record PaymentTransaction156
     /// </summary>
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
-    public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Original Transaction Reference.
@@ -56,14 +56,14 @@ public record PaymentTransaction156
     /// </summary>
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
-    public IsoUUIDv4Identifier? OriginalUETR { get; init; }
+    public UUIDv4Identifier? OriginalUETR { get; init; }
 
     /// <summary>
     /// Reversal Identification.
     /// </summary>
     [DisplayName("Reversal Identification")]
     [IsoXmlTag("RvslId")]
-    public IsoMax35Text? ReversalIdentification { get; init; }
+    public Max35Text? ReversalIdentification { get; init; }
 
     /// <summary>
     /// Reversal Reason Information.

@@ -24,5 +24,5 @@ public record Addition1
     [IsoXmlTag("PropsdVal")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text ProposedValue { get; init; }
+    public required Max140Text ProposedValue { get; init; }
 }

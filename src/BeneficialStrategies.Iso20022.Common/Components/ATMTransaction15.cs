@@ -32,7 +32,7 @@ public record ATMTransaction15
     [IsoXmlTag("RcncltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReconciliationIdentification { get; init; }
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Unprotected account information.
@@ -81,7 +81,7 @@ public record ATMTransaction15
     [DisplayName("Requested Receipt")]
     [IsoXmlTag("ReqdRct")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? RequestedReceipt { get; init; }
+    public TrueFalseIndicator? RequestedReceipt { get; init; }
 
     /// <summary>
     /// Sequence of one or more TLV data elements from the ATM application, in accordance with ISO 7816-6, not in a specific order. Present if the transaction is performed with an EMV chip card application.
@@ -90,5 +90,5 @@ public record ATMTransaction15
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
     [IsoSimpleType(IsoSimpleType.Max10000Binary)]
-    public IsoMax10000Binary? ICCRelatedData { get; init; }
+    public Max10000Binary? ICCRelatedData { get; init; }
 }

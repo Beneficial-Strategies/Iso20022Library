@@ -28,7 +28,7 @@ public record RemittanceInformation23
     /// </summary>
     [DisplayName("Remittance Identification")]
     [IsoXmlTag("RmtId")]
-    public IsoMax35Text? RemittanceIdentification { get; init; }
+    public Max35Text? RemittanceIdentification { get; init; }
 
     /// <summary>
     /// Structured.
@@ -42,5 +42,5 @@ public record RemittanceInformation23
     /// </summary>
     [DisplayName("Unstructured")]
     [IsoXmlTag("Ustrd")]
-    public ValueList<IsoMax140Text> Unstructured { get; init; } = [];
+    public ValueList<Max140Text> Unstructured { get; init; } = [];
 }

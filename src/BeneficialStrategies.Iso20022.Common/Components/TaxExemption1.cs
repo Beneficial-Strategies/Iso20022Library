@@ -30,5 +30,5 @@ public record TaxExemption1
     [IsoId("_enNREPsaEemYNq6Sxm5nlg-rsn")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public IsoMax210Text? Reason { get; init; }
+    public Max210Text? Reason { get; init; }
 }

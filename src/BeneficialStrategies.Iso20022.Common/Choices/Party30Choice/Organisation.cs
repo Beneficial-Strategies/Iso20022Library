@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party30Choice
         [IsoXmlTag("Nm")]
         [IsoSimpleType(IsoSimpleType.Max350Text)]
         [StringLength(maximumLength: 350, MinimumLength = 1)]
-        public required IsoMax350Text Name { get; init; }
+        public required Max350Text Name { get; init; }
 
         /// <summary>
         /// Name of the organisation in short form.
@@ -34,7 +34,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party30Choice
         [IsoXmlTag("ShrtNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? ShortName { get; init; }
+        public Max35Text? ShortName { get; init; }
 
         /// <summary>
         /// Unique and unambiguous identifier for the organisation.
@@ -51,7 +51,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party30Choice
         [DisplayName("Legal Entity Identifier")]
         [IsoXmlTag("LglNttyIdr")]
         [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-        public IsoLEIIdentifier? LegalEntityIdentifier { get; init; }
+        public LEIIdentifier? LegalEntityIdentifier { get; init; }
 
         /// <summary>
         /// Purpose of the organisation, for example, charity.
@@ -61,7 +61,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party30Choice
         [IsoXmlTag("Purp")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? Purpose { get; init; }
+        public Max35Text? Purpose { get; init; }
 
         /// <summary>
         /// Country in which the organisation is registered.
@@ -78,7 +78,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party30Choice
         [DisplayName("Registration Date")]
         [IsoXmlTag("RegnDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? RegistrationDate { get; init; }
+        public DateOnly? RegistrationDate { get; init; }
 
         /// <summary>
         /// Information related to an address to be inserted, updated or deleted.

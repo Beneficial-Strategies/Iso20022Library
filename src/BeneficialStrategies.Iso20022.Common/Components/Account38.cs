@@ -22,7 +22,7 @@ public record Account38
     [IsoId("49f559a0-3e04-413c-8c33-979cce41baa5")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax35Text? Identification { get; init; }
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Name of the account.
@@ -30,7 +30,7 @@ public record Account38
     [IsoId("f04bd16d-bf1a-44b6-b44f-2b927432607a")]
     [DisplayName("Account Name")]
     [IsoXmlTag("AcctNm")]
-    public IsoMax35Text? AccountName { get; init; }
+    public Max35Text? AccountName { get; init; }
 
     /// <summary>
     /// Supplementary registration information applying to a specific block of units for dealing and reporting purposes.
@@ -38,7 +38,7 @@ public record Account38
     [IsoId("3d0965a4-fc30-48f9-8998-8d762453e6a8")]
     [DisplayName("Designation")]
     [IsoXmlTag("Dsgnt")]
-    public IsoMax35Text? Designation { get; init; }
+    public Max35Text? Designation { get; init; }
 
     /// <summary>
     /// Institution that maintains the records where the account is held.

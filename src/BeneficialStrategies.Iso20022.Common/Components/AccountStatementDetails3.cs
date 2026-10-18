@@ -21,7 +21,7 @@ public record AccountStatementDetails3
     /// </summary>
     [DisplayName("Acceptor Name And Location")]
     [IsoXmlTag("AccptrNmAndLctn")]
-    public IsoMax99Text? AcceptorNameAndLocation { get; init; }
+    public Max99Text? AcceptorNameAndLocation { get; init; }
 
     /// <summary>
     /// Amount.
@@ -63,33 +63,33 @@ public record AccountStatementDetails3
     /// </summary>
     [DisplayName("Long Description")]
     [IsoXmlTag("LngDesc")]
-    public IsoMax256Text? LongDescription { get; init; }
+    public Max256Text? LongDescription { get; init; }
 
     /// <summary>
     /// Pending.
     /// </summary>
     [DisplayName("Pending")]
     [IsoXmlTag("Pdg")]
-    public IsoTrueFalseIndicator? Pending { get; init; }
+    public TrueFalseIndicator? Pending { get; init; }
 
     /// <summary>
     /// Posting Date.
     /// </summary>
     [DisplayName("Posting Date")]
     [IsoXmlTag("PstngDt")]
-    public IsoISODate? PostingDate { get; init; }
+    public DateOnly? PostingDate { get; init; }
 
     /// <summary>
     /// Short Description.
     /// </summary>
     [DisplayName("Short Description")]
     [IsoXmlTag("ShrtDesc")]
-    public IsoMax70Text? ShortDescription { get; init; }
+    public Max70Text? ShortDescription { get; init; }
 
     /// <summary>
     /// Transaction Date.
     /// </summary>
     [DisplayName("Transaction Date")]
     [IsoXmlTag("TxDt")]
-    public required IsoISODate TransactionDate { get; init; }
+    public required DateOnly TransactionDate { get; init; }
 }

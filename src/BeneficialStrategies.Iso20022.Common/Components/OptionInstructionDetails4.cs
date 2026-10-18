@@ -24,7 +24,7 @@ public record OptionInstructionDetails4
     [IsoXmlTag("InstrId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINMax15Text)]
     [StringLength(maximumLength: 15, MinimumLength = 1)]
-    public required IsoRestrictedFINMax15Text InstructionIdentification { get; init; }
+    public required RestrictedFINMax15Text InstructionIdentification { get; init; }
 
     /// <summary>
     /// Provides the sequence number of the instruction.
@@ -33,7 +33,7 @@ public record OptionInstructionDetails4
     [DisplayName("Instruction Sequence Number")]
     [IsoXmlTag("InstrSeqNb")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public IsoMax3NumericText? InstructionSequenceNumber { get; init; }
+    public Max3NumericText? InstructionSequenceNumber { get; init; }
 
     /// <summary>
     /// Indicates whether the instruction is a protect or a cover protect instruction.
@@ -58,7 +58,7 @@ public record OptionInstructionDetails4
     [DisplayName("Instruction Date")]
     [IsoXmlTag("InstrDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate InstructionDate { get; init; }
+    public required DateOnly InstructionDate { get; init; }
 
     /// <summary>
     /// Date of the client protect instruction.
@@ -67,7 +67,7 @@ public record OptionInstructionDetails4
     [DisplayName("Protect Date")]
     [IsoXmlTag("PrtctDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ProtectDate { get; init; }
+    public DateOnly? ProtectDate { get; init; }
 
     /// <summary>
     /// Date of the cover protect Instruction
@@ -76,7 +76,7 @@ public record OptionInstructionDetails4
     [DisplayName("Cover Protect Date")]
     [IsoXmlTag("CoverPrtctDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? CoverProtectDate { get; init; }
+    public DateOnly? CoverProtectDate { get; init; }
 
     /// <summary>
     /// Bid price of the instruction.
@@ -102,7 +102,7 @@ public record OptionInstructionDetails4
     [IsoXmlTag("CstmrRef")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINMax30Text)]
     [StringLength(maximumLength: 30, MinimumLength = 1)]
-    public IsoRestrictedFINMax30Text? CustomerReference { get; init; }
+    public RestrictedFINMax30Text? CustomerReference { get; init; }
 
     /// <summary>
     /// Narrative information from the submitted instruction.
@@ -112,7 +112,7 @@ public record OptionInstructionDetails4
     [IsoXmlTag("InstrNrrtv")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? InstructionNarrative { get; init; }
+    public RestrictedFINXMax350Text? InstructionNarrative { get; init; }
 
     /// <summary>
     /// Status of a particular instruction.

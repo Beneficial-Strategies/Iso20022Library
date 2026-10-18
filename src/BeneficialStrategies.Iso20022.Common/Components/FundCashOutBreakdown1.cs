@@ -39,7 +39,7 @@ public record FundCashOutBreakdown1
     [DisplayName("New Amount Indicator")]
     [IsoXmlTag("NewAmtInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? NewAmountIndicator { get; init; }
+    public YesNoIndicator? NewAmountIndicator { get; init; }
 
     /// <summary>
     /// Breakdown of the cash movements out of a fund by transaction type, eg, redemption, switch-out.

@@ -32,7 +32,7 @@ public record OriginalMessage4
     [IsoXmlTag("OrgnlMsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OriginalMessageIdentification { get; init; }
+    public required Max35Text OriginalMessageIdentification { get; init; }
 
     /// <summary>
     /// Specifies the original message name identifier to which the message refers, such as pacs.003.001.01 or MT103.
@@ -42,7 +42,7 @@ public record OriginalMessage4
     [IsoXmlTag("OrgnlMsgNmId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OriginalMessageNameIdentification { get; init; }
+    public required Max35Text OriginalMessageNameIdentification { get; init; }
 
     /// <summary>
     /// Original date and time at which the message was created.
@@ -51,7 +51,7 @@ public record OriginalMessage4
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? OriginalCreationDateTime { get; init; }
+    public ISODateTime? OriginalCreationDateTime { get; init; }
 
     /// <summary>
     /// Specifies the identification of original package of instructions, entries or records.
@@ -61,7 +61,7 @@ public record OriginalMessage4
     [IsoXmlTag("OrgnlPackgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalPackageIdentification { get; init; }
+    public Max35Text? OriginalPackageIdentification { get; init; }
 
     /// <summary>
     /// Specifies the identification of original entry, instruction or record within the package.
@@ -71,5 +71,5 @@ public record OriginalMessage4
     [IsoXmlTag("OrgnlRcrdId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OriginalRecordIdentification { get; init; }
+    public required Max35Text OriginalRecordIdentification { get; init; }
 }

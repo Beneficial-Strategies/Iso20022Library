@@ -40,7 +40,7 @@ public record TransactionTypeAndAdditionalParameters1
     [IsoXmlTag("CmonId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CommonIdentification { get; init; }
+    public Max35Text? CommonIdentification { get; init; }
 
     /// <summary>
     /// Settlement transaction has already been sent on the market. It is sent by an account owner to an account servicer for reconciliation purposes.
@@ -49,5 +49,5 @@ public record TransactionTypeAndAdditionalParameters1
     [DisplayName("Reconciliation Indicator")]
     [IsoXmlTag("RcncltnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ReconciliationIndicator { get; init; }
+    public YesNoIndicator? ReconciliationIndicator { get; init; }
 }

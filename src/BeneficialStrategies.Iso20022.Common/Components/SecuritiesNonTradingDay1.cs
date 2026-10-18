@@ -26,7 +26,7 @@ public record SecuritiesNonTradingDay1
     [IsoXmlTag("TechRcrdId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TechnicalRecordIdentification { get; init; }
+    public Max35Text? TechnicalRecordIdentification { get; init; }
 
     /// <summary>
     /// Non-working date.
@@ -35,7 +35,7 @@ public record SecuritiesNonTradingDay1
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate Date { get; init; }
+    public required DateOnly Date { get; init; }
 
     /// <summary>
     /// Reason code for the non-working day.

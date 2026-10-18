@@ -21,7 +21,7 @@ public record EntryTransaction14
     /// </summary>
     [DisplayName("Additional Transaction Information")]
     [IsoXmlTag("AddtlTxInf")]
-    public IsoMax500Text? AdditionalTransactionInformation { get; init; }
+    public Max500Text? AdditionalTransactionInformation { get; init; }
 
     /// <summary>
     /// Amount.

@@ -30,7 +30,7 @@ public record UnderlyingPaymentTransaction11
     [IsoId("_MV78hbvHEfCYYbmqNrQFSg")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
-    public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.
@@ -38,7 +38,7 @@ public record UnderlyingPaymentTransaction11
     [IsoId("_MV78h7vHEfCYYbmqNrQFSg")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original first instructing agent, to unambiguously identify the transaction.
@@ -46,7 +46,7 @@ public record UnderlyingPaymentTransaction11
     [IsoId("_MV78ibvHEfCYYbmqNrQFSg")]
     [DisplayName("Original Transaction Identification")]
     [IsoXmlTag("OrgnlTxId")]
-    public IsoMax35Text? OriginalTransactionIdentification { get; init; }
+    public Max35Text? OriginalTransactionIdentification { get; init; }
 
     /// <summary>
     /// Universally unique identifier to provide the original end-to-end reference of a payment transaction.
@@ -54,7 +54,7 @@ public record UnderlyingPaymentTransaction11
     [IsoId("_MV78i7vHEfCYYbmqNrQFSg")]
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
-    public IsoUUIDv4Identifier? OriginalUETR { get; init; }
+    public UUIDv4Identifier? OriginalUETR { get; init; }
 
     /// <summary>
     /// Amount of money moved between the instructing agent and the instructed agent, as provided in the original instruction.
@@ -70,7 +70,7 @@ public record UnderlyingPaymentTransaction11
     [IsoId("_MV78j7vHEfCYYbmqNrQFSg")]
     [DisplayName("Original Interbank Settlement Date")]
     [IsoXmlTag("OrgnlIntrBkSttlmDt")]
-    public IsoISODate? OriginalInterbankSettlementDate { get; init; }
+    public DateOnly? OriginalInterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Key elements used to identify the original transaction that is being referred to.

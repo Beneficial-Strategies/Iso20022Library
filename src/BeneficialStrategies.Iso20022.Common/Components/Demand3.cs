@@ -24,7 +24,7 @@ public record Demand3
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Date and time of demand submission.
@@ -33,7 +33,7 @@ public record Demand3
     [DisplayName("Submission Date Time")]
     [IsoXmlTag("SubmissnDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime SubmissionDateTime { get; init; }
+    public required ISODateTime SubmissionDateTime { get; init; }
 
     /// <summary>
     /// Amount and currency of the demand.

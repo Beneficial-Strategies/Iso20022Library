@@ -9,6 +9,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification46Choice
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Belgn")]
-        public required IsoBelgianIdentifier Value { get; init; }
+        public required BelgianIdentifier Value { get; init; }
     }
 }

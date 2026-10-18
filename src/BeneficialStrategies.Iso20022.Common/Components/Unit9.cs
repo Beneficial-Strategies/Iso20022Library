@@ -23,7 +23,7 @@ public record Unit9
     [DisplayName("Total Units Number")]
     [IsoXmlTag("TtlUnitsNb")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public required IsoDecimalNumber TotalUnitsNumber { get; init; }
+    public required DecimalNumber TotalUnitsNumber { get; init; }
 
     /// <summary>
     /// Information about the units to be transferred.

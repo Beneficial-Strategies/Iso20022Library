@@ -24,7 +24,7 @@ public record FundReferenceDataReport4
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Identification { get; init; }
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Version Number. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 00001 and is the version of the template for which the EMT data is provided.
@@ -49,7 +49,7 @@ public record FundReferenceDataReport4
     [DisplayName("General Reference Date")]
     [IsoXmlTag("GnlRefDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate GeneralReferenceDate { get; init; }
+    public required DateOnly GeneralReferenceDate { get; init; }
 
     /// <summary>
     /// Indicates whether target market data is included in the report. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 00006.
@@ -58,7 +58,7 @@ public record FundReferenceDataReport4
     [DisplayName("Target Market Indicator")]
     [IsoXmlTag("TrgtMktInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? TargetMarketIndicator { get; init; }
+    public YesNoIndicator? TargetMarketIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether ex ante costs and charges are included in the report. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 00007.
@@ -67,7 +67,7 @@ public record FundReferenceDataReport4
     [DisplayName("Ex Ante Indicator")]
     [IsoXmlTag("ExAnteInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ExAnteIndicator { get; init; }
+    public YesNoIndicator? ExAnteIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether ex post costs and charges are included in the report. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 00008.
@@ -76,7 +76,7 @@ public record FundReferenceDataReport4
     [DisplayName("Ex Post Indicator")]
     [IsoXmlTag("ExPstInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ExPostIndicator { get; init; }
+    public YesNoIndicator? ExPostIndicator { get; init; }
 
     /// <summary>
     /// Identification of the security.

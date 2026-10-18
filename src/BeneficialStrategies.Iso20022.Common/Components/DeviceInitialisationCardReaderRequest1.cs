@@ -23,7 +23,7 @@ public record DeviceInitialisationCardReaderRequest1
     [DisplayName("Warm Reset Flag")]
     [IsoXmlTag("WarmRstFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? WarmResetFlag { get; init; }
+    public TrueFalseIndicator? WarmResetFlag { get; init; }
 
     /// <summary>
     /// Payment instrument entry mode requested by the Sale System.
@@ -40,7 +40,7 @@ public record DeviceInitialisationCardReaderRequest1
     [DisplayName("Leave Card Flag")]
     [IsoXmlTag("LeavCardFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? LeaveCardFlag { get; init; }
+    public TrueFalseIndicator? LeaveCardFlag { get; init; }
 
     /// <summary>
     /// Maximum time in seconds that the POI has to wait for a card response.
@@ -49,7 +49,7 @@ public record DeviceInitialisationCardReaderRequest1
     [DisplayName("Maximum Waiting Time")]
     [IsoXmlTag("MaxWtgTm")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaximumWaitingTime { get; init; }
+    public Number? MaximumWaitingTime { get; init; }
 
     /// <summary>
     /// Information to display.

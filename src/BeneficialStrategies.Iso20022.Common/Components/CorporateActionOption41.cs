@@ -48,7 +48,7 @@ public record CorporateActionOption41
     [IsoXmlTag("SfkpgAcct")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SafekeepingAccount { get; init; }
+    public Max35Text? SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Account on which a securities entry is made.

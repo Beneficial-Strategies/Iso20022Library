@@ -64,14 +64,14 @@ public record BatchTransferResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Batch Checksum")]
     [IsoXmlTag("BtchChcksm")]
-    public IsoMax35Binary? BatchChecksum { get; init; }
+    public Max35Binary? BatchChecksum { get; init; }
 
     /// <summary>
     /// Batch Identification.
     /// </summary>
     [DisplayName("Batch Identification")]
     [IsoXmlTag("BtchId")]
-    public IsoMax70Text? BatchIdentification { get; init; }
+    public Max70Text? BatchIdentification { get; init; }
 
     /// <summary>
     /// Clearing Batch Data.
@@ -113,21 +113,21 @@ public record BatchTransferResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Life Cycle Identification")]
     [IsoXmlTag("LifeCyclId")]
-    public IsoExact15Text? LifeCycleIdentification { get; init; }
+    public Exact15Text? LifeCycleIdentification { get; init; }
 
     /// <summary>
     /// Number Of Messages.
     /// </summary>
     [DisplayName("Number Of Messages")]
     [IsoXmlTag("NbOfMsgs")]
-    public IsoNumber? NumberOfMessages { get; init; }
+    public Number? NumberOfMessages { get; init; }
 
     /// <summary>
     /// Original Batch Identification.
     /// </summary>
     [DisplayName("Original Batch Identification")]
     [IsoXmlTag("OrgnlBtchId")]
-    public IsoMax70Text? OriginalBatchIdentification { get; init; }
+    public Max70Text? OriginalBatchIdentification { get; init; }
 
     /// <summary>
     /// Original Response Code.
@@ -183,14 +183,14 @@ public record BatchTransferResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Request Acknowledgement")]
     [IsoXmlTag("ReqAck")]
-    public IsoTrueFalseIndicator? RequestAcknowledgement { get; init; }
+    public TrueFalseIndicator? RequestAcknowledgement { get; init; }
 
     /// <summary>
     /// Retrieval Reference Number.
     /// </summary>
     [DisplayName("Retrieval Reference Number")]
     [IsoXmlTag("RtrvlRefNb")]
-    public IsoExact12Text? RetrievalReferenceNumber { get; init; }
+    public Exact12Text? RetrievalReferenceNumber { get; init; }
 
     /// <summary>
     /// Security Trailer.
@@ -218,12 +218,12 @@ public record BatchTransferResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("System Trace Audit Number")]
     [IsoXmlTag("SysTracAudtNb")]
-    public IsoMax12NumericText? SystemTraceAuditNumber { get; init; }
+    public Max12NumericText? SystemTraceAuditNumber { get; init; }
 
     /// <summary>
     /// Transmission Date Time.
     /// </summary>
     [DisplayName("Transmission Date Time")]
     [IsoXmlTag("TrnsmssnDtTm")]
-    public IsoISODateTime? TransmissionDateTime { get; init; }
+    public ISODateTime? TransmissionDateTime { get; init; }
 }

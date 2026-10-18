@@ -24,7 +24,7 @@ public record TaxInformation2
     [IsoXmlTag("CdtrTaxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CreditorTaxIdentification { get; init; }
+    public Max35Text? CreditorTaxIdentification { get; init; }
 
     /// <summary>
     /// Type of tax payer (creditor).
@@ -34,7 +34,7 @@ public record TaxInformation2
     [IsoXmlTag("CdtrTaxTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CreditorTaxType { get; init; }
+    public Max35Text? CreditorTaxType { get; init; }
 
     /// <summary>
     /// Tax Identification Number of the debtor.
@@ -44,7 +44,7 @@ public record TaxInformation2
     [IsoXmlTag("DbtrTaxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DebtorTaxIdentification { get; init; }
+    public Max35Text? DebtorTaxIdentification { get; init; }
 
     /// <summary>
     /// Tax reference information that is specific to a taxing agency.
@@ -54,7 +54,7 @@ public record TaxInformation2
     [IsoXmlTag("TaxRefNb")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? TaxReferenceNumber { get; init; }
+    public Max140Text? TaxReferenceNumber { get; init; }
 
     /// <summary>
     /// Total amount of money on which the tax is based.
@@ -79,7 +79,7 @@ public record TaxInformation2
     [DisplayName("Tax Date")]
     [IsoXmlTag("TaxDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TaxDate { get; init; }
+    public DateOnly? TaxDate { get; init; }
 
     /// <summary>
     /// Set of characteristics defining the type of tax.

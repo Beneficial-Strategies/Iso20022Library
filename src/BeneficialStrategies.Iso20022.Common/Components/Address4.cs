@@ -22,7 +22,7 @@ public record Address4
     [IsoId("_5VVzsSRYEfCa6bxMAKEOKg")]
     [DisplayName("Line1")]
     [IsoXmlTag("Line1")]
-    public IsoMax99Text? Line1 { get; init; }
+    public Max99Text? Line1 { get; init; }
 
     /// <summary>
     /// Second line of information that locates and identifies a specific address, as defined by postal services.
@@ -30,7 +30,7 @@ public record Address4
     [IsoId("_5VVzsyRYEfCa6bxMAKEOKg")]
     [DisplayName("Line2")]
     [IsoXmlTag("Line2")]
-    public IsoMax99Text? Line2 { get; init; }
+    public Max99Text? Line2 { get; init; }
 
     /// <summary>
     /// Name of a street or thoroughfare.
@@ -38,7 +38,7 @@ public record Address4
     [IsoId("_5VVztSRYEfCa6bxMAKEOKg")]
     [DisplayName("Street Name")]
     [IsoXmlTag("StrtNm")]
-    public IsoMax99Text? StreetName { get; init; }
+    public Max99Text? StreetName { get; init; }
 
     /// <summary>
     /// Number that identifies the position of a building on a street.
@@ -46,7 +46,7 @@ public record Address4
     [IsoId("_5VVztyRYEfCa6bxMAKEOKg")]
     [DisplayName("Building Number")]
     [IsoXmlTag("BldgNb")]
-    public IsoMax16Text? BuildingNumber { get; init; }
+    public Max16Text? BuildingNumber { get; init; }
 
     /// <summary>
     /// Identifier consisting of a group of letters and/or numbers that is added to a postal address to assist the sorting of mail.
@@ -54,7 +54,7 @@ public record Address4
     [IsoId("_5VVzuSRYEfCa6bxMAKEOKg")]
     [DisplayName("Postal Code")]
     [IsoXmlTag("PstlCd")]
-    public IsoMax16Text? PostalCode { get; init; }
+    public Max16Text? PostalCode { get; init; }
 
     /// <summary>
     /// Name of a built-up area, with defined boundaries, and a local government.
@@ -62,7 +62,7 @@ public record Address4
     [IsoId("_5VVzuyRYEfCa6bxMAKEOKg")]
     [DisplayName("Town Name")]
     [IsoXmlTag("TwnNm")]
-    public IsoMax50Text? TownName { get; init; }
+    public Max50Text? TownName { get; init; }
 
     /// <summary>
     /// Identifies a minor subdivision of a country, for instance county, prefecture.
@@ -86,7 +86,7 @@ public record Address4
     [IsoId("_5VVzwSRYEfCa6bxMAKEOKg")]
     [DisplayName("Country Sub Division Major Name")]
     [IsoXmlTag("CtrySubDvsnMjrNm")]
-    public IsoMax50Text? CountrySubDivisionMajorName { get; init; }
+    public Max50Text? CountrySubDivisionMajorName { get; init; }
 
     /// <summary>
     /// Name of a minor subdivision of a country, for instance county, prefecture.
@@ -94,7 +94,7 @@ public record Address4
     [IsoId("_5VVzwyRYEfCa6bxMAKEOKg")]
     [DisplayName("Country Sub Division Minor Name")]
     [IsoXmlTag("CtrySubDvsnMnrNm")]
-    public IsoMax50Text? CountrySubDivisionMinorName { get; init; }
+    public Max50Text? CountrySubDivisionMinorName { get; init; }
 
     /// <summary>
     /// Nation with its own government occupying a particular territory.
@@ -110,5 +110,5 @@ public record Address4
     [IsoId("_ACqnUSRZEfCa6bxMAKEOKg")]
     [DisplayName("Geographic Location")]
     [IsoXmlTag("GeogcLctn")]
-    public IsoGeographicPointInDecimalDegreesText? GeographicLocation { get; init; }
+    public GeographicPointInDecimalDegreesText? GeographicLocation { get; init; }
 }

@@ -31,7 +31,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingPartyAndTime21Choice
         [DisplayName("Clearing Receipt Date Time")]
         [IsoXmlTag("ClrRctDtTm")]
         [IsoSimpleType(IsoSimpleType.ISODateTime)]
-        public IsoISODateTime? ClearingReceiptDateTime { get; init; }
+        public ISODateTime? ClearingReceiptDateTime { get; init; }
 
         /// <summary>
         /// Time and date when clearing took place.
@@ -40,7 +40,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingPartyAndTime21Choice
         [DisplayName("Clearing Date Time")]
         [IsoXmlTag("ClrDtTm")]
         [IsoSimpleType(IsoSimpleType.ISODateTime)]
-        public IsoISODateTime? ClearingDateTime { get; init; }
+        public ISODateTime? ClearingDateTime { get; init; }
 
         /// <summary>
         /// Unique identifier of each clearing derivative that replaces the original derivative that was submitted for clearing to the central counterparty, other than the identifier for the transaction being reported.

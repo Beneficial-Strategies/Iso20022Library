@@ -9,6 +9,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity83Choice
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("NtwkFeeQty")]
-        public required IsoMax30DecimalNumber Value { get; init; }
+        public required Max30DecimalNumber Value { get; init; }
     }
 }

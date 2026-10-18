@@ -23,7 +23,7 @@ public record AuthorisedAmount1
     [DisplayName("Date Time")]
     [IsoXmlTag("DtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? DateTime { get; init; }
+    public ISODateTime? DateTime { get; init; }
 
     /// <summary>
     /// Contains the amount.
@@ -41,5 +41,5 @@ public record AuthorisedAmount1
     [IsoXmlTag("AddtlData")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AdditionalData { get; init; }
+    public Max350Text? AdditionalData { get; init; }
 }

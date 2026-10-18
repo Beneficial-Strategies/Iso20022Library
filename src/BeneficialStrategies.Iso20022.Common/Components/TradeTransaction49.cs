@@ -59,7 +59,7 @@ public record TradeTransaction49
     [IsoXmlTag("RptTrckgNb")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoMax52Text? ReportTrackingNumber { get; init; }
+    public Max52Text? ReportTrackingNumber { get; init; }
 
     /// <summary>
     /// Identifies the trading platform on which the derivative transaction was executed (for example, exchange, multilateral trading facility, swap execution facility).
@@ -69,7 +69,7 @@ public record TradeTransaction49
     [DisplayName("Platform Identifier")]
     [IsoXmlTag("PltfmIdr")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public IsoMICIdentifier? PlatformIdentifier { get; init; }
+    public MICIdentifier? PlatformIdentifier { get; init; }
 
     /// <summary>
     /// Indicates whether the derivative transaction satisfies the definition of mirror transaction or trigger transaction.
@@ -79,7 +79,7 @@ public record TradeTransaction49
     [DisplayName("Mirror Or Trigger Transaction")]
     [IsoXmlTag("MrrrOrTrggrTx")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? MirrorOrTriggerTransaction { get; init; }
+    public TrueFalseIndicator? MirrorOrTriggerTransaction { get; init; }
 
     /// <summary>
     /// Indicates the price per derivative excluding, where applicable, commission and accrued interest.
@@ -129,7 +129,7 @@ public record TradeTransaction49
     [DisplayName("Execution Time Stamp")]
     [IsoXmlTag("ExctnTmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? ExecutionTimeStamp { get; init; }
+    public ISODateTime? ExecutionTimeStamp { get; init; }
 
     /// <summary>
     /// Indicates the date when obligations under the contract come into effect.
@@ -138,7 +138,7 @@ public record TradeTransaction49
     [DisplayName("Effective Date")]
     [IsoXmlTag("FctvDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? EffectiveDate { get; init; }
+    public DateOnly? EffectiveDate { get; init; }
 
     /// <summary>
     /// Indicates the unadjusted date at which obligations under the derivative transaction stop being effective, as included in the confirmation.
@@ -153,7 +153,7 @@ public record TradeTransaction49
     [DisplayName("Expiration Date")]
     [IsoXmlTag("XprtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ExpirationDate { get; init; }
+    public DateOnly? ExpirationDate { get; init; }
 
     /// <summary>
     /// Indicates the effective date of the early termination of the reported derivative transaction.
@@ -162,7 +162,7 @@ public record TradeTransaction49
     [DisplayName("Early Termination Date")]
     [IsoXmlTag("EarlyTermntnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? EarlyTerminationDate { get; init; }
+    public DateOnly? EarlyTerminationDate { get; init; }
 
     /// <summary>
     /// Indicates the unadjusted date, as per the contract, by which all transfer of cash or assets should take place and the counterparties should no longer have any outstanding obligations to each other.||
@@ -171,7 +171,7 @@ public record TradeTransaction49
     [IsoId("_fWRQYWEfEe2P-L9DBerEgA")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public SimpleValueList<IsoISODate> SettlementDate { get; init; } = [];
+    public SimpleValueList<DateOnly> SettlementDate { get; init; } = [];
 
     /// <summary>
     /// Details related to the master agreement.
@@ -189,7 +189,7 @@ public record TradeTransaction49
     [DisplayName("Compression")]
     [IsoXmlTag("Cmprssn")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? Compression { get; init; }
+    public TrueFalseIndicator? Compression { get; init; }
 
     /// <summary>
     /// Indicates whether the contract results from a PTRR operation.
@@ -198,7 +198,7 @@ public record TradeTransaction49
     [DisplayName("Post Trade Risk Reduction Flag")]
     [IsoXmlTag("PstTradRskRdctnFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? PostTradeRiskReductionFlag { get; init; }
+    public TrueFalseIndicator? PostTradeRiskReductionFlag { get; init; }
 
     /// <summary>
     /// Identify whether the contract results from a Post Trade Risk Reduction operation.
@@ -232,7 +232,7 @@ public record TradeTransaction49
     [DisplayName("Non Standardised Term")]
     [IsoXmlTag("NonStdsdTerm")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? NonStandardisedTerm { get; init; }
+    public TrueFalseIndicator? NonStandardisedTerm { get; init; }
 
     /// <summary>
     /// Information related to clearing of the reported contract.
@@ -250,7 +250,7 @@ public record TradeTransaction49
     [DisplayName("Block Trade Election")]
     [IsoXmlTag("BlckTradElctn")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? BlockTradeElection { get; init; }
+    public TrueFalseIndicator? BlockTradeElection { get; init; }
 
     /// <summary>
     /// Indicates whether an election has been made to report the derivative transaction as a large notional off-facility transaction.
@@ -260,7 +260,7 @@ public record TradeTransaction49
     [DisplayName("Large Notional Off Facility Election")]
     [IsoXmlTag("LrgNtnlOffFcltyElctn")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? LargeNotionalOffFacilityElection { get; init; }
+    public TrueFalseIndicator? LargeNotionalOffFacilityElection { get; init; }
 
     /// <summary>
     /// Information related to interest rate asset class type.

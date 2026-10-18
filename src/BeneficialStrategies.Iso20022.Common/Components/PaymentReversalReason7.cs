@@ -38,5 +38,5 @@ public record PaymentReversalReason7
     [IsoId("_t3aEJFkyEeGeoaLUQk__nA_-878513043")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public SimpleValueList<IsoMax105Text> AdditionalInformation { get; init; } = [];
+    public SimpleValueList<Max105Text> AdditionalInformation { get; init; } = [];
 }

@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity43Choice
         [DisplayName("Total Units Number")]
         [IsoXmlTag("TtlUnitsNb")]
         [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-        public required IsoDecimalNumber TotalUnitsNumber { get; init; }
+        public required DecimalNumber TotalUnitsNumber { get; init; }
 
         /// <summary>
         /// Information about the units to be transferred.

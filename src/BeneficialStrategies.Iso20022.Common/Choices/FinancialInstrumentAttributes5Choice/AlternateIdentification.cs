@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentAttributes5Ch
         [DisplayName("ISIN")]
         [IsoXmlTag("ISIN")]
         [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-        public IsoISINOct2015Identifier? ISIN { get; init; }
+        public ISINOct2015Identifier? ISIN { get; init; }
 
         /// <summary>
         /// Identification of a security by proprietary or domestic identification scheme.
@@ -41,6 +41,6 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentAttributes5Ch
         [IsoXmlTag("Desc")]
         [IsoSimpleType(IsoSimpleType.Max140Text)]
         [StringLength(maximumLength: 140, MinimumLength = 1)]
-        public IsoMax140Text? Description { get; init; }
+        public Max140Text? Description { get; init; }
     }
 }

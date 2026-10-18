@@ -39,7 +39,7 @@ public record ForeignExchangeTerms3
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public required IsoBaseOneRate ExchangeRate { get; init; }
+    public required BaseOneRate ExchangeRate { get; init; }
 
     /// <summary>
     /// Date and time at which an exchange rate is quoted.
@@ -48,7 +48,7 @@ public record ForeignExchangeTerms3
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? QuotationDate { get; init; }
+    public ISODateTime? QuotationDate { get; init; }
 
     /// <summary>
     /// Party that proposes a foreign exchange rate.

@@ -22,7 +22,7 @@ public record IntraBalanceQueryCriteria8
     [IsoId("_4JuYgTp8EemwKdP955WBJQ")]
     [DisplayName("Modification Request Identification")]
     [IsoXmlTag("ModReqId")]
-    public SimpleValueList<IsoMax35Text> ModificationRequestIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> ModificationRequestIdentification { get; init; } = [];
 
     /// <summary>
     /// Provides the status of settlement of a transaction.

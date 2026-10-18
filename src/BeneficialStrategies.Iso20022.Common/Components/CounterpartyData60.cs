@@ -23,7 +23,7 @@ public record CounterpartyData60
     [DisplayName("Reporting Date Time")]
     [IsoXmlTag("RptgDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime ReportingDateTime { get; init; }
+    public required ISODateTime ReportingDateTime { get; init; }
 
     /// <summary>
     /// Unique code identifying the entity which submits the report. In the case where submission of the report has been delegated to a third party or to the other counterparty, a unique code identifying that entity.

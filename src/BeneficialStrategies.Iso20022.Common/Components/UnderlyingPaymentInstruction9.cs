@@ -21,7 +21,7 @@ public record UnderlyingPaymentInstruction9
     /// </summary>
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Original Group Information.
@@ -42,14 +42,14 @@ public record UnderlyingPaymentInstruction9
     /// </summary>
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
-    public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Original Payment Information Identification.
     /// </summary>
     [DisplayName("Original Payment Information Identification")]
     [IsoXmlTag("OrgnlPmtInfId")]
-    public IsoMax35Text? OriginalPaymentInformationIdentification { get; init; }
+    public Max35Text? OriginalPaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Original Service Level.
@@ -70,14 +70,14 @@ public record UnderlyingPaymentInstruction9
     /// </summary>
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
-    public IsoUUIDv4Identifier? OriginalUETR { get; init; }
+    public UUIDv4Identifier? OriginalUETR { get; init; }
 
     /// <summary>
     /// Requested Collection Date.
     /// </summary>
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
-    public IsoISODate? RequestedCollectionDate { get; init; }
+    public DateOnly? RequestedCollectionDate { get; init; }
 
     /// <summary>
     /// Requested Execution Date.

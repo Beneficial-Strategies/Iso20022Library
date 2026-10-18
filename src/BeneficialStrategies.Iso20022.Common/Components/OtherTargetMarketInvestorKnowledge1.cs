@@ -24,7 +24,7 @@ public record OtherTargetMarketInvestorKnowledge1
     [IsoXmlTag("InvstrKnwldgTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? InvestorKnowledgeType { get; init; }
+    public Max35Text? InvestorKnowledgeType { get; init; }
 
     /// <summary>
     /// Choice of formats for the specification of whether the product is aimed at the type of knowledge or experience of the investor.

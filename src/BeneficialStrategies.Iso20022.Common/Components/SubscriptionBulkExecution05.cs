@@ -22,7 +22,7 @@ public record SubscriptionBulkExecution05
     [IsoId("51aaf6f5-efda-439a-8584-74a9fce34ef5")]
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
-    public IsoYesNoIndicator? AmendmentIndicator { get; init; }
+    public YesNoIndicator? AmendmentIndicator { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for a group of individual orders, as assigned by the instructing party. This identifier links the individual orders together.
@@ -30,7 +30,7 @@ public record SubscriptionBulkExecution05
     [IsoId("c5f689bc-f8f6-4c01-9f04-85656f748078")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Market in which the advised trade transaction was executed.
@@ -46,7 +46,7 @@ public record SubscriptionBulkExecution05
     [IsoId("f3c6ec2c-a46b-4d5d-b2ac-b622c7c87c9b")]
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
-    public IsoISODateTime? OrderDateTime { get; init; }
+    public ISODateTime? OrderDateTime { get; init; }
 
     /// <summary>
     /// Date and time the order was received by the executing party, for example, the transfer agent.
@@ -54,7 +54,7 @@ public record SubscriptionBulkExecution05
     [IsoId("dc5e7fda-e967-4a0a-83b8-3f29089e7e9a")]
     [DisplayName("Received Date Time")]
     [IsoXmlTag("RcvdDtTm")]
-    public IsoISODateTime? ReceivedDateTime { get; init; }
+    public ISODateTime? ReceivedDateTime { get; init; }
 
     /// <summary>
     /// Future date at which the investor requests the order to be executed.|The specification of a requested future trade date is not allowed in some markets. The date must be a date in the future.
@@ -62,7 +62,7 @@ public record SubscriptionBulkExecution05
     [IsoId("78621f97-c912-45a4-8472-8e4989e223e9")]
     [DisplayName("Requested Future Trade Date")]
     [IsoXmlTag("ReqdFutrTradDt")]
-    public IsoISODate? RequestedFutureTradeDate { get; init; }
+    public DateOnly? RequestedFutureTradeDate { get; init; }
 
     /// <summary>
     /// Cancellation right of the investor with respect to the investment fund order.

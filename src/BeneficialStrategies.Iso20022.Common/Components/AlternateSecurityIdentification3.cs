@@ -24,7 +24,7 @@ public record AlternateSecurityIdentification3
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public required IsoMax70Text Identification { get; init; }
+    public required Max70Text Identification { get; init; }
 
     /// <summary>
     /// Country of the proprietary identification scheme.
@@ -42,5 +42,5 @@ public record AlternateSecurityIdentification3
     [IsoXmlTag("PrtryIdSrc")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ProprietaryIdentificationSource { get; init; }
+    public required Max35Text ProprietaryIdentificationSource { get; init; }
 }

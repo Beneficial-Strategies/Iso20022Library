@@ -32,7 +32,7 @@ public record ATMEnvironment13
     [IsoXmlTag("ATMMgrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ATMManagerIdentification { get; init; }
+    public Max35Text? ATMManagerIdentification { get; init; }
 
     /// <summary>
     /// Entity hosting the ATM terminal.

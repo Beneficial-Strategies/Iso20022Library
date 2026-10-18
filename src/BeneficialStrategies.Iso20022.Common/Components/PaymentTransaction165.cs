@@ -28,7 +28,7 @@ public record PaymentTransaction165
     /// </summary>
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
-    public ValueList<IsoMax70Text> AdditionalTransactionData { get; init; } = [];
+    public ValueList<Max70Text> AdditionalTransactionData { get; init; } = [];
 
     /// <summary>
     /// Authorisation Result.
@@ -42,21 +42,21 @@ public record PaymentTransaction165
     /// </summary>
     [DisplayName("Card Programme Applied")]
     [IsoXmlTag("CardPrgrmmApld")]
-    public IsoMax35Text? CardProgrammeApplied { get; init; }
+    public Max35Text? CardProgrammeApplied { get; init; }
 
     /// <summary>
     /// Card Programme Proposed.
     /// </summary>
     [DisplayName("Card Programme Proposed")]
     [IsoXmlTag("CardPrgrmmPropsd")]
-    public ValueList<IsoMax35Text> CardProgrammeProposed { get; init; } = [];
+    public ValueList<Max35Text> CardProgrammeProposed { get; init; } = [];
 
     /// <summary>
     /// Customer Consent.
     /// </summary>
     [DisplayName("Customer Consent")]
     [IsoXmlTag("CstmrCnsnt")]
-    public IsoTrueFalseIndicator? CustomerConsent { get; init; }
+    public TrueFalseIndicator? CustomerConsent { get; init; }
 
     /// <summary>
     /// Customer Order.
@@ -77,42 +77,42 @@ public record PaymentTransaction165
     /// </summary>
     [DisplayName("Issuer CIT Identification")]
     [IsoXmlTag("IssrCITId")]
-    public IsoMax140Text? IssuerCITIdentification { get; init; }
+    public Max140Text? IssuerCITIdentification { get; init; }
 
     /// <summary>
     /// Issuer Reference Data.
     /// </summary>
     [DisplayName("Issuer Reference Data")]
     [IsoXmlTag("IssrRefData")]
-    public IsoMax140Text? IssuerReferenceData { get; init; }
+    public Max140Text? IssuerReferenceData { get; init; }
 
     /// <summary>
     /// Last Transaction Flag.
     /// </summary>
     [DisplayName("Last Transaction Flag")]
     [IsoXmlTag("LastTxFlg")]
-    public IsoTrueFalseIndicator? LastTransactionFlag { get; init; }
+    public TrueFalseIndicator? LastTransactionFlag { get; init; }
 
     /// <summary>
     /// Merchant Category Code.
     /// </summary>
     [DisplayName("Merchant Category Code")]
     [IsoXmlTag("MrchntCtgyCd")]
-    public IsoMin3Max4Text? MerchantCategoryCode { get; init; }
+    public Min3Max4Text? MerchantCategoryCode { get; init; }
 
     /// <summary>
     /// Merchant CIT Identification.
     /// </summary>
     [DisplayName("Merchant CIT Identification")]
     [IsoXmlTag("MrchntCITId")]
-    public IsoMax140Text? MerchantCITIdentification { get; init; }
+    public Max140Text? MerchantCITIdentification { get; init; }
 
     /// <summary>
     /// Merchant Reference Data.
     /// </summary>
     [DisplayName("Merchant Reference Data")]
     [IsoXmlTag("MrchntRefData")]
-    public IsoMax70Text? MerchantReferenceData { get; init; }
+    public Max70Text? MerchantReferenceData { get; init; }
 
     /// <summary>
     /// Original Transaction.
@@ -140,35 +140,35 @@ public record PaymentTransaction165
     /// </summary>
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
-    public IsoMax35Text? ReconciliationIdentification { get; init; }
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Sale Reference Identification.
     /// </summary>
     [DisplayName("Sale Reference Identification")]
     [IsoXmlTag("SaleRefId")]
-    public IsoMax35Text? SaleReferenceIdentification { get; init; }
+    public Max35Text? SaleReferenceIdentification { get; init; }
 
     /// <summary>
     /// Sale To Acquirer Data.
     /// </summary>
     [DisplayName("Sale To Acquirer Data")]
     [IsoXmlTag("SaleToAcqrrData")]
-    public IsoMax70Text? SaleToAcquirerData { get; init; }
+    public Max70Text? SaleToAcquirerData { get; init; }
 
     /// <summary>
     /// Sale To Issuer Data.
     /// </summary>
     [DisplayName("Sale To Issuer Data")]
     [IsoXmlTag("SaleToIssrData")]
-    public IsoMax70Text? SaleToIssuerData { get; init; }
+    public Max70Text? SaleToIssuerData { get; init; }
 
     /// <summary>
     /// Sale To POI Data.
     /// </summary>
     [DisplayName("Sale To POI Data")]
     [IsoXmlTag("SaleToPOIData")]
-    public IsoMax70Text? SaleToPOIData { get; init; }
+    public Max70Text? SaleToPOIData { get; init; }
 
     /// <summary>
     /// Service Attribute.
@@ -182,7 +182,7 @@ public record PaymentTransaction165
     /// </summary>
     [DisplayName("Transaction Capture")]
     [IsoXmlTag("TxCaptr")]
-    public IsoTrueFalseIndicator? TransactionCapture { get; init; }
+    public TrueFalseIndicator? TransactionCapture { get; init; }
 
     /// <summary>
     /// Transaction Details.

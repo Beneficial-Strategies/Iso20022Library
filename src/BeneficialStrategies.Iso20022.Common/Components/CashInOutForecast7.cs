@@ -23,7 +23,7 @@ public record CashInOutForecast7
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? CashSettlementDate { get; init; }
+    public DateOnly? CashSettlementDate { get; init; }
 
     /// <summary>
     /// Amount of the cash flow.

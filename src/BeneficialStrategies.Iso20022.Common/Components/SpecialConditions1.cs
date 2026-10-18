@@ -24,7 +24,7 @@ public record SpecialConditions1
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Identification { get; init; }
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Level of the condition.
@@ -34,5 +34,5 @@ public record SpecialConditions1
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Value { get; init; }
+    public Max35Text? Value { get; init; }
 }

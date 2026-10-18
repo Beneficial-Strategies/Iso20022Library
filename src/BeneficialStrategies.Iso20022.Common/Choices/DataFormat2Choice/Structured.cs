@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DataFormat2Choice
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text Identification { get; init; }
+        public required Max35Text Identification { get; init; }
 
         /// <summary>
         /// Name of the identification scheme.
@@ -34,7 +34,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DataFormat2Choice
         [IsoXmlTag("SchmeNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? SchemeName { get; init; }
+        public Max35Text? SchemeName { get; init; }
 
         /// <summary>
         /// Entity that assigns the identification.
@@ -44,6 +44,6 @@ namespace BeneficialStrategies.Iso20022.Choices.DataFormat2Choice
         [IsoXmlTag("Issr")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? Issuer { get; init; }
+        public Max35Text? Issuer { get; init; }
     }
 }

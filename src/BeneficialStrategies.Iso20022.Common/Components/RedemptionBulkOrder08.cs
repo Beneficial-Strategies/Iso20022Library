@@ -22,7 +22,7 @@ public record RedemptionBulkOrder08
     [IsoId("464a7d79-5341-4ff6-98b0-974d4f2bb735")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Market in which the advised trade transaction was executed.
@@ -38,7 +38,7 @@ public record RedemptionBulkOrder08
     [IsoId("301b8e75-ee44-4b95-b27b-80f3c019e441")]
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
-    public IsoISODateTime? OrderDateTime { get; init; }
+    public ISODateTime? OrderDateTime { get; init; }
 
     /// <summary>
     /// Date on which the order expires.
@@ -54,7 +54,7 @@ public record RedemptionBulkOrder08
     [IsoId("85bdd338-a9ef-4a20-8370-3b89fcf07fd7")]
     [DisplayName("Requested Future Trade Date")]
     [IsoXmlTag("ReqdFutrTradDt")]
-    public IsoISODate? RequestedFutureTradeDate { get; init; }
+    public DateOnly? RequestedFutureTradeDate { get; init; }
 
     /// <summary>
     /// Cancellation right of the investor with respect to the investment fund order.

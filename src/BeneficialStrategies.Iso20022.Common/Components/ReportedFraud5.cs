@@ -28,28 +28,28 @@ public record ReportedFraud5
     /// </summary>
     [DisplayName("Case Reference")]
     [IsoXmlTag("CaseRef")]
-    public IsoMax35Text? CaseReference { get; init; }
+    public Max35Text? CaseReference { get; init; }
 
     /// <summary>
     /// Other Action.
     /// </summary>
     [DisplayName("Other Action")]
     [IsoXmlTag("OthrActn")]
-    public IsoMax35Text? OtherAction { get; init; }
+    public Max35Text? OtherAction { get; init; }
 
     /// <summary>
     /// Other Reporting Entity.
     /// </summary>
     [DisplayName("Other Reporting Entity")]
     [IsoXmlTag("OthrRptgNtty")]
-    public IsoMax35Text? OtherReportingEntity { get; init; }
+    public Max35Text? OtherReportingEntity { get; init; }
 
     /// <summary>
     /// Other Type.
     /// </summary>
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Reporting Entity.
@@ -63,7 +63,7 @@ public record ReportedFraud5
     /// </summary>
     [DisplayName("Submitter Case Reference")]
     [IsoXmlTag("SubmitrCaseRef")]
-    public IsoMax35Text? SubmitterCaseReference { get; init; }
+    public Max35Text? SubmitterCaseReference { get; init; }
 
     /// <summary>
     /// Type.

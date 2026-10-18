@@ -23,7 +23,7 @@ public record DebitAuthorisationConfirmation2
     [DisplayName("Debit Authorisation")]
     [IsoXmlTag("DbtAuthstn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator DebitAuthorisation { get; init; }
+    public required YesNoIndicator DebitAuthorisation { get; init; }
 
     /// <summary>
     /// Amount of money authorised for debit. |Usage: The party approving the debit may want to authorise the amount less charges and may only be prepared to approve the debit for value today rather than the original value date.
@@ -40,7 +40,7 @@ public record DebitAuthorisationConfirmation2
     [DisplayName("Value Date To Debit")]
     [IsoXmlTag("ValDtToDbt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ValueDateToDebit { get; init; }
+    public DateOnly? ValueDateToDebit { get; init; }
 
     /// <summary>
     /// Specifies the reason for the debit authorisation request.
@@ -50,5 +50,5 @@ public record DebitAuthorisationConfirmation2
     [IsoXmlTag("Rsn")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Reason { get; init; }
+    public Max140Text? Reason { get; init; }
 }

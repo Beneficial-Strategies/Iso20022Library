@@ -78,7 +78,7 @@ public record CorporateAction88
     [IsoId("26853107-21ad-4870-bb19-06db30ff8285")]
     [DisplayName("Interest Accrued Number Of Days")]
     [IsoXmlTag("IntrstAcrdNbOfDays")]
-    public IsoMax3Number? InterestAccruedNumberOfDays { get; init; }
+    public Max3Number? InterestAccruedNumberOfDays { get; init; }
 
     /// <summary>
     /// Level of priority of the given offer which will be accepted by the issuer/agent within the tiered structure of the event.
@@ -86,7 +86,7 @@ public record CorporateAction88
     [IsoId("3f352cad-0166-4d99-a014-fd4496817550")]
     [DisplayName("Acceptance Priority Level")]
     [IsoXmlTag("AccptncPrtyLvl")]
-    public IsoExact3UpperCaseAlphaNumericText? AcceptancePriorityLevel { get; init; }
+    public Exact3UpperCaseAlphaNumericText? AcceptancePriorityLevel { get; init; }
 
     /// <summary>
     /// Indicates whether charges apply to the holder, for instance redemption charges.
@@ -94,7 +94,7 @@ public record CorporateAction88
     [IsoId("c64eb572-32e4-463e-8185-fbd6287935a7")]
     [DisplayName("Charges Applied Indicator")]
     [IsoXmlTag("ChrgsApldInd")]
-    public IsoYesNoIndicator? ChargesAppliedIndicator { get; init; }
+    public YesNoIndicator? ChargesAppliedIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether restrictions apply to the corporate action event or not.
@@ -102,7 +102,7 @@ public record CorporateAction88
     [IsoId("9e68be68-7736-47de-b688-e1dd26d89cb4")]
     [DisplayName("Restriction Indicator")]
     [IsoXmlTag("RstrctnInd")]
-    public IsoYesNoIndicator? RestrictionIndicator { get; init; }
+    public YesNoIndicator? RestrictionIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the holder is entitled to accrued interest.
@@ -110,7 +110,7 @@ public record CorporateAction88
     [IsoId("e4f2c251-91c4-4ad1-a1a7-3e2cbe67acf8")]
     [DisplayName("Accrued Interest Indicator")]
     [IsoXmlTag("AcrdIntrstInd")]
-    public IsoYesNoIndicator? AccruedInterestIndicator { get; init; }
+    public YesNoIndicator? AccruedInterestIndicator { get; init; }
 
     /// <summary>
     /// Identification of a supplementary data element.
@@ -126,7 +126,7 @@ public record CorporateAction88
     [IsoId("838f583d-7c8e-4873-89e7-9f6fdf912679")]
     [DisplayName("Forfeiture Of Interest Indicator")]
     [IsoXmlTag("FrftrOfIntrstInd")]
-    public IsoYesNoIndicator? ForfeitureOfInterestIndicator { get; init; }
+    public YesNoIndicator? ForfeitureOfInterestIndicator { get; init; }
 
     /// <summary>
     /// Specifies the conditions in which a dividend is paid.
@@ -262,7 +262,7 @@ public record CorporateAction88
     [IsoId("_VkWkkKL0EfCHi7w3_0pcpw")]
     [DisplayName("Reverse Dutch Auction Indicator")]
     [IsoXmlTag("RvsDtchAuctnInd")]
-    public IsoYesNoIndicator? ReverseDutchAuctionIndicator { get; init; }
+    public YesNoIndicator? ReverseDutchAuctionIndicator { get; init; }
 
     /// <summary>
     /// New company's place of incorporation.
@@ -270,7 +270,7 @@ public record CorporateAction88
     [IsoId("f8740f8a-b80c-42f9-9bd5-71450c94c2c4")]
     [DisplayName("New Place Of Incorporation")]
     [IsoXmlTag("NewPlcOfIncorprtn")]
-    public IsoMax350Text? NewPlaceOfIncorporation { get; init; }
+    public Max350Text? NewPlaceOfIncorporation { get; init; }
 
     /// <summary>
     /// Specifies whether a redemption announcement refers to certificates held only at depository or also outside of depository.

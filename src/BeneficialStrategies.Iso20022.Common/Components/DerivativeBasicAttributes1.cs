@@ -31,5 +31,5 @@ public record DerivativeBasicAttributes1
     [DisplayName("Interest Included In Price")]
     [IsoXmlTag("IntrstInclInPric")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? InterestIncludedInPrice { get; init; }
+    public YesNoIndicator? InterestIncludedInPrice { get; init; }
 }

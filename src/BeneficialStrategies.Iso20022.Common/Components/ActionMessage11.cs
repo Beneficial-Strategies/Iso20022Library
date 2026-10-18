@@ -35,7 +35,7 @@ public record ActionMessage11
     /// </summary>
     [DisplayName("Message Content")]
     [IsoXmlTag("MsgCntt")]
-    public IsoMax20000Text? MessageContent { get; init; }
+    public Max20000Text? MessageContent { get; init; }
 
     /// <summary>
     /// Message Content Signature.
@@ -56,7 +56,7 @@ public record ActionMessage11
     /// </summary>
     [DisplayName("Minimum Display Time")]
     [IsoXmlTag("MinDispTm")]
-    public IsoNumber? MinimumDisplayTime { get; init; }
+    public Number? MinimumDisplayTime { get; init; }
 
     /// <summary>
     /// Output Barcode.
@@ -70,5 +70,5 @@ public record ActionMessage11
     /// </summary>
     [DisplayName("Response Required Flag")]
     [IsoXmlTag("RspnReqrdFlg")]
-    public IsoTrueFalseIndicator? ResponseRequiredFlag { get; init; }
+    public TrueFalseIndicator? ResponseRequiredFlag { get; init; }
 }

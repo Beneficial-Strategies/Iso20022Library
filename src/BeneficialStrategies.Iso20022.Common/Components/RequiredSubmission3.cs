@@ -42,7 +42,7 @@ public record RequiredSubmission3
     [DisplayName("Match Issue Date")]
     [IsoXmlTag("MtchIsseDt")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator MatchIssueDate { get; init; }
+    public required YesNoIndicator MatchIssueDate { get; init; }
 
     /// <summary>
     /// Specifies if the transport information must be matched as part of the validation of the data set.
@@ -51,7 +51,7 @@ public record RequiredSubmission3
     [DisplayName("Match Transport")]
     [IsoXmlTag("MtchTrnsprt")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator MatchTransport { get; init; }
+    public required YesNoIndicator MatchTransport { get; init; }
 
     /// <summary>
     /// Specifies if the insured amount must be matched as part of the validation of the data set.
@@ -60,7 +60,7 @@ public record RequiredSubmission3
     [DisplayName("Match Amount")]
     [IsoXmlTag("MtchAmt")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator MatchAmount { get; init; }
+    public required YesNoIndicator MatchAmount { get; init; }
 
     /// <summary>
     /// Specifies which clauses are required in the insurance data set.

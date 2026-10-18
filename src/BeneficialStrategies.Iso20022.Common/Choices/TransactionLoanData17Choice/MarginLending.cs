@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData17Choice
         [IsoXmlTag("UnqTradIdr")]
         [IsoSimpleType(IsoSimpleType.Max52Text)]
         [StringLength(maximumLength: 52, MinimumLength = 1)]
-        public required IsoMax52Text UniqueTradeIdentifier { get; init; }
+        public required Max52Text UniqueTradeIdentifier { get; init; }
 
         /// <summary>
         /// Date on which the reportable event pertaining to the transaction and captured by the report took place.
@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData17Choice
         [DisplayName("Event Date")]
         [IsoXmlTag("EvtDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate EventDate { get; init; }
+        public required DateOnly EventDate { get; init; }
 
         /// <summary>
         /// Indicates the date and time when the contract was executed.
@@ -42,7 +42,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData17Choice
         [DisplayName("Execution Date Time")]
         [IsoXmlTag("ExctnDtTm")]
         [IsoSimpleType(IsoSimpleType.ISODateTime)]
-        public required IsoISODateTime ExecutionDateTime { get; init; }
+        public required ISODateTime ExecutionDateTime { get; init; }
 
         /// <summary>
         /// Identification of the trading venue where the transaction was executed.
@@ -51,7 +51,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData17Choice
         [DisplayName("Trading Venue")]
         [IsoXmlTag("TradgVn")]
         [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-        public IsoMICIdentifier? TradingVenue { get; init; }
+        public MICIdentifier? TradingVenue { get; init; }
 
         /// <summary>
         /// Specifies whether the collateral is subject to a title transfer collateral arrangement, a securities interest collateral arrangement, or a securities interest with the right of use.
@@ -92,6 +92,6 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData17Choice
         [DisplayName("Termination Date")]
         [IsoXmlTag("TermntnDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? TerminationDate { get; init; }
+        public DateOnly? TerminationDate { get; init; }
     }
 }

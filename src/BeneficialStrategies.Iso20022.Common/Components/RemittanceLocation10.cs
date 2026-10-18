@@ -28,7 +28,7 @@ public record RemittanceLocation10
     /// </summary>
     [DisplayName("Remittance Identification")]
     [IsoXmlTag("RmtId")]
-    public IsoMax35Text? RemittanceIdentification { get; init; }
+    public Max35Text? RemittanceIdentification { get; init; }
 
     /// <summary>
     /// Remittance Location Details.

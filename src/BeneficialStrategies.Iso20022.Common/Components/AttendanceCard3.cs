@@ -24,7 +24,7 @@ public record AttendanceCard3
     [IsoXmlTag("AttndncCardLbllg")]
     [IsoSimpleType(IsoSimpleType.Max105Text)]
     [StringLength(maximumLength: 105, MinimumLength = 1)]
-    public IsoMax105Text? AttendanceCardLabelling { get; init; }
+    public Max105Text? AttendanceCardLabelling { get; init; }
 
     /// <summary>
     /// Specifies where the attendance card must be delivered.

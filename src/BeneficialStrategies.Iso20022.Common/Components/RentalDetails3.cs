@@ -28,14 +28,14 @@ public record RentalDetails3
     /// </summary>
     [DisplayName("Date Time")]
     [IsoXmlTag("DtTm")]
-    public IsoISODateTime? DateTime { get; init; }
+    public ISODateTime? DateTime { get; init; }
 
     /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax70Text? Identification { get; init; }
+    public Max70Text? Identification { get; init; }
 
     /// <summary>
     /// Return.
@@ -70,5 +70,5 @@ public record RentalDetails3
     /// </summary>
     [DisplayName("Time Period Unit")]
     [IsoXmlTag("TmPrdUnit")]
-    public IsoMax4NumericText? TimePeriodUnit { get; init; }
+    public Max4NumericText? TimePeriodUnit { get; init; }
 }

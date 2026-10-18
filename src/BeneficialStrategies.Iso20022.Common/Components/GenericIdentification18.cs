@@ -24,7 +24,7 @@ public record GenericIdentification18
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax30Text)]
     [StringLength(maximumLength: 30, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax30Text Identification { get; init; }
+    public required RestrictedFINXMax30Text Identification { get; init; }
 
     /// <summary>
     /// Name of the identification scheme.
@@ -34,7 +34,7 @@ public record GenericIdentification18
     [IsoXmlTag("SchmeNm")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4AlphaNumericText? SchemeName { get; init; }
+    public Max4AlphaNumericText? SchemeName { get; init; }
 
     /// <summary>
     /// Entity that assigns the identification.
@@ -44,5 +44,5 @@ public record GenericIdentification18
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4AlphaNumericText? Issuer { get; init; }
+    public Max4AlphaNumericText? Issuer { get; init; }
 }

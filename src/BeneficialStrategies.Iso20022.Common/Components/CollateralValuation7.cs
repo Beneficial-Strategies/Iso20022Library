@@ -31,7 +31,7 @@ public record CollateralValuation7
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
-    public required IsoCFIOct2015Identifier Type { get; init; }
+    public required CFIOct2015Identifier Type { get; init; }
 
     /// <summary>
     /// Provides the institutional sector, such as central government, central bank, etc. of the issuer of collateral.
@@ -40,7 +40,7 @@ public record CollateralValuation7
     [DisplayName("Sector")]
     [IsoXmlTag("Sctr")]
     [IsoSimpleType(IsoSimpleType.SNA2008SectorIdentifier)]
-    public required IsoSNA2008SectorIdentifier Sector { get; init; }
+    public required SNA2008SectorIdentifier Sector { get; init; }
 
     /// <summary>
     /// Nominal amount of money of the security pledged as collateral, when the collateral cannot be identified through an individual or basket ISIN.

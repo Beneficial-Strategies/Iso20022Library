@@ -195,5 +195,5 @@ public record SecuritiesSettlementTransactionInstructionV12 : IOuterRecord
     /// </summary>
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
-    public required IsoMax35Text TransactionIdentification { get; init; }
+    public required Max35Text TransactionIdentification { get; init; }
 }

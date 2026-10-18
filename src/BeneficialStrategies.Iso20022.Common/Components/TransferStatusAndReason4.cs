@@ -24,7 +24,7 @@ public record TransferStatusAndReason4
     [IsoXmlTag("MstrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identification of a transfer, as assigned by the instructing party.
@@ -34,7 +34,7 @@ public record TransferStatusAndReason4
     [IsoXmlTag("TrfRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransferReference { get; init; }
+    public required Max35Text TransferReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor&apos;s identification of a transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.
@@ -52,7 +52,7 @@ public record TransferStatusAndReason4
     [IsoXmlTag("CxlRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CancellationReference { get; init; }
+    public Max35Text? CancellationReference { get; init; }
 
     /// <summary>
     /// Status of the transfer instruction.
@@ -69,7 +69,7 @@ public record TransferStatusAndReason4
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TradeDate { get; init; }
+    public DateOnly? TradeDate { get; init; }
 
     /// <summary>
     /// Date on which the document, for example, the application form, was sent.
@@ -78,7 +78,7 @@ public record TransferStatusAndReason4
     [DisplayName("Send Out Date")]
     [IsoXmlTag("SndOutDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? SendOutDate { get; init; }
+    public DateOnly? SendOutDate { get; init; }
 
     /// <summary>
     /// Party that initiates the status.

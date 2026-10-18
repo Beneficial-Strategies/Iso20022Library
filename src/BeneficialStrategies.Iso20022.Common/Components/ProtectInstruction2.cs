@@ -40,7 +40,7 @@ public record ProtectInstruction2
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.Max15Text)]
     [StringLength(maximumLength: 15, MinimumLength = 1)]
-    public IsoMax15Text? TransactionIdentification { get; init; }
+    public Max15Text? TransactionIdentification { get; init; }
 
     /// <summary>
     /// Account which submitted the original protect instruction used for cover protect instructions whereby one safekeeping account is covering on behalf of another safekeeping account.
@@ -50,7 +50,7 @@ public record ProtectInstruction2
     [IsoXmlTag("PrtctSfkpgAcct")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProtectSafekeepingAccount { get; init; }
+    public Max35Text? ProtectSafekeepingAccount { get; init; }
 
     /// <summary>
     /// Date at which the protect instruction was created and used for cover protect validation.
@@ -59,7 +59,7 @@ public record ProtectInstruction2
     [DisplayName("Protect Date")]
     [IsoXmlTag("PrtctDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ProtectDate { get; init; }
+    public DateOnly? ProtectDate { get; init; }
 
     /// <summary>
     /// Remaining quantity of protect instruction which has not been covered.

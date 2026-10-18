@@ -24,7 +24,7 @@ public record LoyaltyServerData1
     [IsoXmlTag("LltySvrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LoyaltyServerIdentification { get; init; }
+    public Max35Text? LoyaltyServerIdentification { get; init; }
 
     /// <summary>
     /// Approval code assigned to a loyalty transaction by the Server.
@@ -34,7 +34,7 @@ public record LoyaltyServerData1
     [IsoXmlTag("ApprvlCd")]
     [IsoSimpleType(IsoSimpleType.Min6Max8Text)]
     [StringLength(maximumLength: 8, MinimumLength = 6)]
-    public IsoMin6Max8Text? ApprovalCode { get; init; }
+    public Min6Max8Text? ApprovalCode { get; init; }
 
     /// <summary>
     /// Identification of the Loyalty transaction in an unambiguous way.
@@ -52,5 +52,5 @@ public record LoyaltyServerData1
     [IsoXmlTag("HstRcncltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? HostReconciliationIdentification { get; init; }
+    public Max35Text? HostReconciliationIdentification { get; init; }
 }

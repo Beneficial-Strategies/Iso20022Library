@@ -24,7 +24,7 @@ public record AccountSwitchDetails1
     [IsoXmlTag("UnqRefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text UniqueReferenceNumber { get; init; }
+    public required Max35Text UniqueReferenceNumber { get; init; }
 
     /// <summary>
     /// Unique number that provides unique and unambiguous identification of the account switch.
@@ -35,7 +35,7 @@ public record AccountSwitchDetails1
     [IsoXmlTag("RtgUnqRefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text RoutingUniqueReferenceNumber { get; init; }
+    public required Max35Text RoutingUniqueReferenceNumber { get; init; }
 
     /// <summary>
     /// Date and time that the request was received by the central switch service, populated by the central switch service only.
@@ -44,7 +44,7 @@ public record AccountSwitchDetails1
     [DisplayName("Switch Received Date Time")]
     [IsoXmlTag("SwtchRcvdDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? SwitchReceivedDateTime { get; init; }
+    public ISODateTime? SwitchReceivedDateTime { get; init; }
 
     /// <summary>
     /// Date on which the account switch is expected to have completed. The value is the same as the targeted switch date if the switch completes in the expected timeline.
@@ -53,7 +53,7 @@ public record AccountSwitchDetails1
     [DisplayName("Switch Date")]
     [IsoXmlTag("SwtchDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? SwitchDate { get; init; }
+    public DateOnly? SwitchDate { get; init; }
 
     /// <summary>
     /// Indicates whether the account switch is a full switch or a partial switch.

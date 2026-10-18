@@ -33,7 +33,7 @@ public record DetailedAmount8
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public required IsoBaseOneRate ExchangeRate { get; init; }
+    public required BaseOneRate ExchangeRate { get; init; }
 
     /// <summary>
     /// Date and time at which the exchange rate has been quoted.
@@ -42,7 +42,7 @@ public record DetailedAmount8
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? QuotationDate { get; init; }
+    public ISODateTime? QuotationDate { get; init; }
 
     /// <summary>
     /// Text to display on the cardholder or to print on the cardholder bank statement.
@@ -52,5 +52,5 @@ public record DetailedAmount8
     [IsoXmlTag("Labl")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Label { get; init; }
+    public Max140Text? Label { get; init; }
 }

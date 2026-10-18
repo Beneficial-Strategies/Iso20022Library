@@ -30,5 +30,5 @@ public record PendingProcessingReason18
     [IsoId("f96bcb42-5294-41a3-ac99-c6bddfdf8afc")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
-    public IsoMax210Text? AdditionalReasonInformation { get; init; }
+    public Max210Text? AdditionalReasonInformation { get; init; }
 }

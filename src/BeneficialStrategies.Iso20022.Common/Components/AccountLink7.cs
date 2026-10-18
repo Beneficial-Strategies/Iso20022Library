@@ -35,21 +35,21 @@ public record AccountLink7
     /// </summary>
     [DisplayName("Cash Settlement Indicator")]
     [IsoXmlTag("CshSttlmInd")]
-    public required IsoYesNoIndicator CashSettlementIndicator { get; init; }
+    public required YesNoIndicator CashSettlementIndicator { get; init; }
 
     /// <summary>
     /// Collateralisation Indicator.
     /// </summary>
     [DisplayName("Collateralisation Indicator")]
     [IsoXmlTag("CollstnInd")]
-    public required IsoYesNoIndicator CollateralisationIndicator { get; init; }
+    public required YesNoIndicator CollateralisationIndicator { get; init; }
 
     /// <summary>
     /// Default Indicator.
     /// </summary>
     [DisplayName("Default Indicator")]
     [IsoXmlTag("DfltInd")]
-    public required IsoYesNoIndicator DefaultIndicator { get; init; }
+    public required YesNoIndicator DefaultIndicator { get; init; }
 
     /// <summary>
     /// Securities Account.

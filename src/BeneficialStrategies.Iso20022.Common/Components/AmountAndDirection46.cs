@@ -23,7 +23,7 @@ public record AmountAndDirection46
     [DisplayName("Accrued Interest Indicator")]
     [IsoXmlTag("AcrdIntrstInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AccruedInterestIndicator { get; init; }
+    public YesNoIndicator? AccruedInterestIndicator { get; init; }
 
     /// <summary>
     /// Whether the net proceeds include stamp duty amount.
@@ -32,7 +32,7 @@ public record AmountAndDirection46
     [DisplayName("Stamp Duty Indicator")]
     [IsoXmlTag("StmpDtyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? StampDutyIndicator { get; init; }
+    public YesNoIndicator? StampDutyIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the net proceeds include brokerage fees for the transaction. If absent, element is not required.
@@ -41,7 +41,7 @@ public record AmountAndDirection46
     [DisplayName("Brokerage Amount Indicator")]
     [IsoXmlTag("BrkrgAmtInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? BrokerageAmountIndicator { get; init; }
+    public YesNoIndicator? BrokerageAmountIndicator { get; init; }
 
     /// <summary>
     /// Amount of money in the cash entry.

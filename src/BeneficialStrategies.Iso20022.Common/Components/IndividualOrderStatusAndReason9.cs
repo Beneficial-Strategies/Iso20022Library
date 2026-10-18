@@ -22,7 +22,7 @@ public record IndividualOrderStatusAndReason9
     [IsoId("f26e937d-b642-4797-a0c4-31b4a1fea318")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for the order, as assigned by the instructing party.
@@ -30,7 +30,7 @@ public record IndividualOrderStatusAndReason9
     [IsoId("2c67f625-12ec-4d2d-9668-d574f149659c")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
-    public required IsoMax35Text OrderReference { get; init; }
+    public required Max35Text OrderReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor's identification of the order.
@@ -38,7 +38,7 @@ public record IndividualOrderStatusAndReason9
     [IsoId("28eba764-f0e3-410a-8fc5-d68dc2cf0135")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
-    public IsoMax35Text? ClientReference { get; init; }
+    public Max35Text? ClientReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for the order execution, as assigned by the confirming party.
@@ -46,7 +46,7 @@ public record IndividualOrderStatusAndReason9
     [IsoId("765bc59c-a26e-47ba-8fbe-66831f070379")]
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
-    public IsoMax35Text? DealReference { get; init; }
+    public Max35Text? DealReference { get; init; }
 
     /// <summary>
     /// Unambiguous identification of a random or semi-random number used once (NONCE) generated in the frame of a cryptographic communication.
@@ -54,7 +54,7 @@ public record IndividualOrderStatusAndReason9
     [IsoId("48ccadfc-6f50-4327-9deb-e3b1f2b92a18")]
     [DisplayName("Nonce Identification")]
     [IsoXmlTag("NonceId")]
-    public IsoMax35Text? NonceIdentification { get; init; }
+    public Max35Text? NonceIdentification { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for the order cancellation, as assigned by the instructing party.
@@ -62,7 +62,7 @@ public record IndividualOrderStatusAndReason9
     [IsoId("7aab3876-d5c2-42be-8fc9-7963122d9d86")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
-    public IsoMax35Text? CancellationReference { get; init; }
+    public Max35Text? CancellationReference { get; init; }
 
     /// <summary>
     /// Status of the individual order.

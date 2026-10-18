@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
         /// </summary>
         [IsoXmlTag("ZANCC")]
         [IsoSimpleType(IsoSimpleType.SouthAfricanNCCIdentifier)]
-        public required IsoSouthAfricanNCCIdentifier Value { get; init; }
+        public required SouthAfricanNCCIdentifier Value { get; init; }
     }
 }

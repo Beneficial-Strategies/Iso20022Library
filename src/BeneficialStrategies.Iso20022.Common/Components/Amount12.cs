@@ -32,7 +32,7 @@ public record Amount12
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Contains the rate per hour.
@@ -49,5 +49,5 @@ public record Amount12
     [DisplayName("Hours")]
     [IsoXmlTag("Hrs")]
     [IsoSimpleType(IsoSimpleType.Max6NumericText)]
-    public IsoMax6NumericText? Hours { get; init; }
+    public Max6NumericText? Hours { get; init; }
 }

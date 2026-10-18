@@ -23,7 +23,7 @@ public record PartyIdentification64
     [DisplayName("Any BIC")]
     [IsoXmlTag("AnyBIC")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public IsoAnyBICIdentifier? AnyBIC { get; init; }
+    public AnyBICIdentifier? AnyBIC { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier, as assigned to the party using a proprietary identification scheme.

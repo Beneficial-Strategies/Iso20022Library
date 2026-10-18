@@ -21,7 +21,7 @@ public record TransactionCriteria11
     /// </summary>
     [DisplayName("New Query Name")]
     [IsoXmlTag("NewQryNm")]
-    public IsoMax35Text? NewQueryName { get; init; }
+    public Max35Text? NewQueryName { get; init; }
 
     /// <summary>
     /// Return Criteria.

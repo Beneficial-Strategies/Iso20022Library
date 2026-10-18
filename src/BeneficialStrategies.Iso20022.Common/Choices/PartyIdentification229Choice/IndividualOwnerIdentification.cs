@@ -40,6 +40,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification229Choice
         [IsoXmlTag("AltrnId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text AlternateIdentification { get; init; }
+        public required Max35Text AlternateIdentification { get; init; }
     }
 }

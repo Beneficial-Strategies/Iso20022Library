@@ -32,7 +32,7 @@ public record TaxCalculationInformation6
     [IsoXmlTag("XtndedBsis")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedBasis { get; init; }
+    public Extended350Code? ExtendedBasis { get; init; }
 
     /// <summary>
     /// Amount of money that it is to be taxed.

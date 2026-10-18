@@ -24,7 +24,7 @@ public record Organisation12
     [IsoXmlTag("FullLglNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text FullLegalName { get; init; }
+    public required Max350Text FullLegalName { get; init; }
 
     /// <summary>
     /// Name used by a business for commercial purposes, although its registered legal name, used for contracts and other formal situations, may be another.
@@ -34,7 +34,7 @@ public record Organisation12
     [IsoXmlTag("TradgNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? TradingName { get; init; }
+    public Max350Text? TradingName { get; init; }
 
     /// <summary>
     /// Country in which the organisation has its business activity.
@@ -51,7 +51,7 @@ public record Organisation12
     [DisplayName("Registration Date")]
     [IsoXmlTag("RegnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RegistrationDate { get; init; }
+    public DateOnly? RegistrationDate { get; init; }
 
     /// <summary>
     /// Is an operational address, for example, of a shared services center.

@@ -24,7 +24,7 @@ public record SwitchExecution3
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? OrderDateTime { get; init; }
+    public ISODateTime? OrderDateTime { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for an order execution, as assigned by a confirming party.
@@ -34,7 +34,7 @@ public record SwitchExecution3
     [IsoXmlTag("DealRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text DealReference { get; init; }
+    public required Max35Text DealReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for an order, as assigned by the instructing party.
@@ -44,7 +44,7 @@ public record SwitchExecution3
     [IsoXmlTag("OrdrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OrderReference { get; init; }
+    public required Max35Text OrderReference { get; init; }
 
     /// <summary>
     /// Account between an investor(s) and a fund manager or a fund. The account can contain holdings in any investment fund or investment fund class managed (or distributed) by the fund manager, within the same fund family.

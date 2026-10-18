@@ -24,7 +24,7 @@ public record RejectionReason70
     [IsoXmlTag("MsgRptId")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text MessageReportIdentification { get; init; }
+    public required Max140Text MessageReportIdentification { get; init; }
 
     /// <summary>
     /// Information on status of submitted transactions.

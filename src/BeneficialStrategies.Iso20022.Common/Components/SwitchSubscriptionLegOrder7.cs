@@ -22,7 +22,7 @@ public record SwitchSubscriptionLegOrder7
     [IsoId("696a1285-lgid-0001-0001-073e778482f8")]
     [DisplayName("Leg Identification")]
     [IsoXmlTag("LegId")]
-    public IsoMax35Text? LegIdentification { get; init; }
+    public Max35Text? LegIdentification { get; init; }
 
     /// <summary>
     /// Investment fund class related to the subscription leg of the order.
@@ -94,7 +94,7 @@ public record SwitchSubscriptionLegOrder7
     [IsoId("696a1285-phyd-0001-0010-073e778482f8")]
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
-    public required IsoYesNoIndicator PhysicalDeliveryIndicator { get; init; }
+    public required YesNoIndicator PhysicalDeliveryIndicator { get; init; }
 
     /// <summary>
     /// Information related to the physical delivery of the securities.
@@ -118,7 +118,7 @@ public record SwitchSubscriptionLegOrder7
     [IsoId("696a1285-nsts-0001-0013-073e778482f8")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
-    public IsoMax350Text? NonStandardSettlementInformation { get; init; }
+    public Max350Text? NonStandardSettlementInformation { get; init; }
 
     /// <summary>
     /// Part of an investor's subscription amount that is held by the fund in order to pay incentive/performance fees at the end of the fiscal year.

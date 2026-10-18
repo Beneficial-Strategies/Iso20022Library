@@ -40,7 +40,7 @@ public record PartyIdentificationAndAccount201
     [IsoXmlTag("SfkpgAcct")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SafekeepingAccount { get; init; }
+    public Max35Text? SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Blockchain address or wallet where digital assets are maintained. This is the equivalent of safekeeping account for digital assets.
@@ -50,7 +50,7 @@ public record PartyIdentificationAndAccount201
     [IsoXmlTag("BlckChainAdrOrWllt")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? BlockChainAddressOrWallet { get; init; }
+    public Max140Text? BlockChainAddressOrWallet { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the transaction for the party identified.
@@ -60,7 +60,7 @@ public record PartyIdentificationAndAccount201
     [IsoXmlTag("PrcgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProcessingIdentification { get; init; }
+    public Max35Text? ProcessingIdentification { get; init; }
 
     /// <summary>
     /// Provides additional information regarding the party.

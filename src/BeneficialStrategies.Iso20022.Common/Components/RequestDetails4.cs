@@ -24,7 +24,7 @@ public record RequestDetails4
     [IsoXmlTag("Key")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Key { get; init; }
+    public required Max35Text Key { get; init; }
 
     /// <summary>
     /// Data being returned.

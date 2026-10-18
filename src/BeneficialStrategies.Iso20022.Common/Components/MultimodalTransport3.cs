@@ -24,7 +24,7 @@ public record MultimodalTransport3
     [IsoXmlTag("TakngInChrg")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TakingInCharge { get; init; }
+    public required Max35Text TakingInCharge { get; init; }
 
     /// <summary>
     /// Identifies the location of the final destination of the goods.
@@ -34,5 +34,5 @@ public record MultimodalTransport3
     [IsoXmlTag("PlcOfFnlDstn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text PlaceOfFinalDestination { get; init; }
+    public required Max35Text PlaceOfFinalDestination { get; init; }
 }

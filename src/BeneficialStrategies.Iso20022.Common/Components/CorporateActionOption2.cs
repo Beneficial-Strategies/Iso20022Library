@@ -31,5 +31,5 @@ public record CorporateActionOption2
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public required IsoExact3NumericText OptionNumber { get; init; }
+    public required Exact3NumericText OptionNumber { get; init; }
 }

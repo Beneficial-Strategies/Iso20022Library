@@ -32,7 +32,7 @@ public record LocalData5
     [IsoXmlTag("CmonNm")]
     [IsoSimpleType(IsoSimpleType.Max280Text)]
     [StringLength(maximumLength: 280, MinimumLength = 1)]
-    public IsoMax280Text? CommonName { get; init; }
+    public Max280Text? CommonName { get; init; }
 
     /// <summary>
     /// Legal Corporate Name of the party
@@ -42,7 +42,7 @@ public record LocalData5
     [IsoXmlTag("LglCorpNm")]
     [IsoSimpleType(IsoSimpleType.Max210Text)]
     [StringLength(maximumLength: 210, MinimumLength = 1)]
-    public IsoMax210Text? LegalCorporateName { get; init; }
+    public Max210Text? LegalCorporateName { get; init; }
 
     /// <summary>
     /// Structured postal address in the local language.
@@ -60,7 +60,7 @@ public record LocalData5
     [IsoXmlTag("AddtlAdrInf")]
     [IsoSimpleType(IsoSimpleType.Max512Text)]
     [StringLength(maximumLength: 512, MinimumLength = 1)]
-    public IsoMax512Text? AdditionalAddressInformation { get; init; }
+    public Max512Text? AdditionalAddressInformation { get; init; }
 
     /// <summary>
     /// Additional local language data

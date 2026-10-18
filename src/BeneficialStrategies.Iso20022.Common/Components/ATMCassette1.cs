@@ -24,7 +24,7 @@ public record ATMCassette1
     [IsoXmlTag("PhysId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PhysicalIdentification { get; init; }
+    public Max35Text? PhysicalIdentification { get; init; }
 
     /// <summary>
     /// Logical identification of the cassette for the ATM.
@@ -34,7 +34,7 @@ public record ATMCassette1
     [IsoXmlTag("LogclId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text LogicalIdentification { get; init; }
+    public required Max35Text LogicalIdentification { get; init; }
 
     /// <summary>
     /// Type of cassette.

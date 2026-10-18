@@ -32,7 +32,7 @@ public record Credentials2
     [IsoXmlTag("OthrIdCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherIdentificationCode { get; init; }
+    public Max35Text? OtherIdentificationCode { get; init; }
 
     /// <summary>
     /// Value of identification.
@@ -42,7 +42,7 @@ public record Credentials2
     [IsoXmlTag("IdVal")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public required IsoMax70Text IdentificationValue { get; init; }
+    public required Max70Text IdentificationValue { get; init; }
 
     /// <summary>
     /// Expiration date of the identification.
@@ -51,7 +51,7 @@ public record Credentials2
     [DisplayName("Identification Expiry Date")]
     [IsoXmlTag("IdXpryDt")]
     [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
-    public IsoISOYearMonth? IdentificationExpiryDate { get; init; }
+    public ISOYearMonth? IdentificationExpiryDate { get; init; }
 
     /// <summary>
     /// Entity that assigns and manages this type of identification.

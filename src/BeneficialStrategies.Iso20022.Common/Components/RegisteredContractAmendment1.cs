@@ -23,7 +23,7 @@ public record RegisteredContractAmendment1
     [DisplayName("Amendment Date")]
     [IsoXmlTag("AmdmntDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate AmendmentDate { get; init; }
+    public required DateOnly AmendmentDate { get; init; }
 
     /// <summary>
     /// Reference of the amendment document.
@@ -40,7 +40,7 @@ public record RegisteredContractAmendment1
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? StartDate { get; init; }
+    public DateOnly? StartDate { get; init; }
 
     /// <summary>
     /// Reason for the amendment.
@@ -50,7 +50,7 @@ public record RegisteredContractAmendment1
     [IsoXmlTag("AmdmntRsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AmendmentReason { get; init; }
+    public Max35Text? AmendmentReason { get; init; }
 
     /// <summary>
     /// Further details on the amendment.
@@ -60,5 +60,5 @@ public record RegisteredContractAmendment1
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max1025Text)]
     [StringLength(maximumLength: 1025, MinimumLength = 1)]
-    public IsoMax1025Text? AdditionalInformation { get; init; }
+    public Max1025Text? AdditionalInformation { get; init; }
 }

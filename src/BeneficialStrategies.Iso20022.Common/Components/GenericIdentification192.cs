@@ -22,7 +22,7 @@ public record GenericIdentification192
     [IsoId("_boKxUbXxEfCUZfsQO4rYeA")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Type of identified entity.
@@ -46,5 +46,5 @@ public record GenericIdentification192
     [IsoId("_boKxV7XxEfCUZfsQO4rYeA")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
-    public IsoMax35Text? ShortName { get; init; }
+    public Max35Text? ShortName { get; init; }
 }

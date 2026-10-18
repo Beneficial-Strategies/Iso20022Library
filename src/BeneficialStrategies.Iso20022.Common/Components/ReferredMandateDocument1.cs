@@ -32,7 +32,7 @@ public record ReferredMandateDocument1
     [IsoXmlTag("Nb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Number { get; init; }
+    public Max35Text? Number { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identification as assigned by the creditor to the referred document shared with the debtor for its own reference.
@@ -42,7 +42,7 @@ public record ReferredMandateDocument1
     [IsoXmlTag("CdtrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CreditorReference { get; init; }
+    public Max35Text? CreditorReference { get; init; }
 
     /// <summary>
     /// Date associated with the referred document.
@@ -51,5 +51,5 @@ public record ReferredMandateDocument1
     [DisplayName("Related Date")]
     [IsoXmlTag("RltdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RelatedDate { get; init; }
+    public DateOnly? RelatedDate { get; init; }
 }

@@ -22,7 +22,7 @@ public record TokenRequestComponent6
     [IsoId("_El2q1bZ2EfCUZfsQO4rYeA")]
     [DisplayName("Transaction Sequence Counter")]
     [IsoXmlTag("TxSeqCntr")]
-    public required IsoMax9NumericText TransactionSequenceCounter { get; init; }
+    public required Max9NumericText TransactionSequenceCounter { get; init; }
 
     /// <summary>
     /// Environment of the transaction.

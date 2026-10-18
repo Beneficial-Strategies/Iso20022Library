@@ -24,7 +24,7 @@ public record TradeTransactionIdentification20
     [IsoXmlTag("TechRcrdId")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? TechnicalRecordIdentification { get; init; }
+    public Max140Text? TechnicalRecordIdentification { get; init; }
 
     /// <summary>
     /// Unique code identifying the reporting counterparty.
@@ -58,7 +58,7 @@ public record TradeTransactionIdentification20
     [IsoXmlTag("UnqTradIdr")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoMax52Text? UniqueTradeIdentifier { get; init; }
+    public Max52Text? UniqueTradeIdentifier { get; init; }
 
     /// <summary>
     /// Details related to the master agreement.

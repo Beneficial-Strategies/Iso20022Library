@@ -30,7 +30,7 @@ public record ErrorDetails4
     [IsoId("_KfPF20MDEfCQAqQ9lolFUg")]
     [DisplayName("Severity Code")]
     [IsoXmlTag("svrtyCd")]
-    public IsoMax2NumericText? SeverityCode { get; init; }
+    public Max2NumericText? SeverityCode { get; init; }
 
     /// <summary>
     /// Description of the error found.
@@ -38,7 +38,7 @@ public record ErrorDetails4
     [IsoId("_KfPF3UMDEfCQAqQ9lolFUg")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax500Text? Description { get; init; }
+    public Max500Text? Description { get; init; }
 
     /// <summary>
     /// Data element in error.
@@ -46,5 +46,5 @@ public record ErrorDetails4
     [IsoId("_KfPF30MDEfCQAqQ9lolFUg")]
     [DisplayName("Data Element In Error")]
     [IsoXmlTag("DataElmtInErr")]
-    public SimpleValueList<IsoMax4000Text> DataElementInError { get; init; } = [];
+    public SimpleValueList<Max4000Text> DataElementInError { get; init; } = [];
 }

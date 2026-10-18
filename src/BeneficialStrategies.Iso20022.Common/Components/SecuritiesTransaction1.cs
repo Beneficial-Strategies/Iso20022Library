@@ -23,7 +23,7 @@ public record SecuritiesTransaction1
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime TradeDate { get; init; }
+    public required ISODateTime TradeDate { get; init; }
 
     /// <summary>
     /// Indication of whether the transaction results from the reporting firm carrying out matched principal trading or dealing on own account under the local regulation, or where the transaction does not result from the reporting firm carrying out matched principal trading or dealing on own account, the field shall indicate that the transaction was carried out under any other capacity.
@@ -82,7 +82,7 @@ public record SecuritiesTransaction1
     [DisplayName("Trade Venue")]
     [IsoXmlTag("TradVn")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public required IsoMICIdentifier TradeVenue { get; init; }
+    public required MICIdentifier TradeVenue { get; init; }
 
     /// <summary>
     /// Country of the branch of the investment firm whose market membership was used to execute the transaction.
@@ -112,7 +112,7 @@ public record SecuritiesTransaction1
     [IsoXmlTag("TradPlcMtchgId")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoMax52Text? TradePlaceMatchingIdentification { get; init; }
+    public Max52Text? TradePlaceMatchingIdentification { get; init; }
 
     /// <summary>
     /// Identification, internal to the reporting party to identify all the reports related to the same execution of a combination of financial instruments. The code must be unique for the reporting party for the group of reports for the execution.
@@ -124,5 +124,5 @@ public record SecuritiesTransaction1
     [IsoXmlTag("CmplxTradCmpntId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ComplexTradeComponentIdentification { get; init; }
+    public Max35Text? ComplexTradeComponentIdentification { get; init; }
 }

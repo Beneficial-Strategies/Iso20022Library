@@ -31,5 +31,5 @@ public record PaymentPeriod1
     [DisplayName("Number Of Days")]
     [IsoXmlTag("NbOfDays")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NumberOfDays { get; init; }
+    public Number? NumberOfDays { get; init; }
 }

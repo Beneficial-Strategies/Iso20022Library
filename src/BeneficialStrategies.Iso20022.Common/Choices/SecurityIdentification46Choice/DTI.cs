@@ -9,6 +9,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification46Choice
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("DTI")]
-        public required IsoDTI2024Identifier Value { get; init; }
+        public required DTI2024Identifier Value { get; init; }
     }
 }

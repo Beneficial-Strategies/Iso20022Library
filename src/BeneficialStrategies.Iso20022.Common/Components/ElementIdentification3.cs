@@ -24,7 +24,7 @@ public record ElementIdentification3
     [IsoXmlTag("ElmtPth")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text ElementPath { get; init; }
+    public required Max350Text ElementPath { get; init; }
 
     /// <summary>
     /// Name of the element.
@@ -34,7 +34,7 @@ public record ElementIdentification3
     [IsoXmlTag("ElmtNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ElementName { get; init; }
+    public required Max35Text ElementName { get; init; }
 
     /// <summary>
     /// Contents of the element.
@@ -44,5 +44,5 @@ public record ElementIdentification3
     [IsoXmlTag("ElmtVal")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? ElementValue { get; init; }
+    public Max140Text? ElementValue { get; init; }
 }

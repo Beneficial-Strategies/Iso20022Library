@@ -25,7 +25,7 @@ public record VerificationInformation1
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Type { get; init; }
+    public Max35Text? Type { get; init; }
 
     /// <summary>
     /// Value of the data to be verified or authenticated.
@@ -41,7 +41,7 @@ public record VerificationInformation1
     [IsoId("_DDFDQdIoEeirx-13kKhDlQ")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public SimpleValueList<IsoMax35Text> Reason { get; init; } = [];
+    public SimpleValueList<Max35Text> Reason { get; init; } = [];
 
     /// <summary>
     /// Date and time when the verification was performed.
@@ -50,7 +50,7 @@ public record VerificationInformation1
     [DisplayName("Date Time")]
     [IsoXmlTag("DtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? DateTime { get; init; }
+    public ISODateTime? DateTime { get; init; }
 
     /// <summary>
     /// Contains end date of the verification that has been performed.
@@ -59,7 +59,7 @@ public record VerificationInformation1
     [DisplayName("Validity End Date")]
     [IsoXmlTag("VldtyEndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ValidityEndDate { get; init; }
+    public DateOnly? ValidityEndDate { get; init; }
 
     /// <summary>
     /// Contains end time of the verification that has been performed.
@@ -68,5 +68,5 @@ public record VerificationInformation1
     [DisplayName("Validity End Time")]
     [IsoXmlTag("VldtyEndTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? ValidityEndTime { get; init; }
+    public ISOTime? ValidityEndTime { get; init; }
 }

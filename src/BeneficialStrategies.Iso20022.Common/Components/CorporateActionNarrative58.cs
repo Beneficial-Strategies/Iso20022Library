@@ -21,21 +21,21 @@ public record CorporateActionNarrative58
     /// </summary>
     [DisplayName("Event Processing Web Site Address")]
     [IsoXmlTag("EvtPrcgWebSiteAdr")]
-    public IsoMax2048Text? EventProcessingWebSiteAddress { get; init; }
+    public Max2048Text? EventProcessingWebSiteAddress { get; init; }
 
     /// <summary>
     /// New Company Name.
     /// </summary>
     [DisplayName("New Company Name")]
     [IsoXmlTag("NewCpnyNm")]
-    public IsoMax350Text? NewCompanyName { get; init; }
+    public Max350Text? NewCompanyName { get; init; }
 
     /// <summary>
     /// Offeror.
     /// </summary>
     [DisplayName("Offeror")]
     [IsoXmlTag("Offerr")]
-    public ValueList<IsoMax350Text> Offeror { get; init; } = [];
+    public ValueList<Max350Text> Offeror { get; init; } = [];
 
     /// <summary>
     /// URL Address.

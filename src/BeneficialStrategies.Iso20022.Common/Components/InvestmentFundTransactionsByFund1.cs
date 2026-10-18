@@ -33,7 +33,7 @@ public record InvestmentFundTransactionsByFund1
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Name { get; init; }
+    public Max350Text? Name { get; init; }
 
     /// <summary>
     /// Additional information about a financial instrument to help identify the instrument.
@@ -43,7 +43,7 @@ public record InvestmentFundTransactionsByFund1
     [IsoXmlTag("SplmtryId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SupplementaryIdentification { get; init; }
+    public Max35Text? SupplementaryIdentification { get; init; }
 
     /// <summary>
     /// Specifies the form, ie, ownership, of the security.
@@ -61,7 +61,7 @@ public record InvestmentFundTransactionsByFund1
     [IsoXmlTag("ClssTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClassType { get; init; }
+    public Max35Text? ClassType { get; init; }
 
     /// <summary>
     /// Income policy relating to a class type, ie, if income is paid out or retained in the fund.

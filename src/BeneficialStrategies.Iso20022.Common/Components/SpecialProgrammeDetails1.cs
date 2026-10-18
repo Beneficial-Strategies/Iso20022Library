@@ -24,7 +24,7 @@ public record SpecialProgrammeDetails1
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Name { get; init; }
+    public Max35Text? Name { get; init; }
 
     /// <summary>
     /// Special programme detail value.
@@ -34,5 +34,5 @@ public record SpecialProgrammeDetails1
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Value { get; init; }
+    public Max35Text? Value { get; init; }
 }

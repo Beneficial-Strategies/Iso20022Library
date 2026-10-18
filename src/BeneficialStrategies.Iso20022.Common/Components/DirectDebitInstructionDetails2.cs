@@ -24,7 +24,7 @@ public record DirectDebitInstructionDetails2
     [IsoXmlTag("MndtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MandateIdentification { get; init; }
+    public required Max35Text MandateIdentification { get; init; }
 
     /// <summary>
     /// Indicates whether the instruction is an automated direct debit instruction.
@@ -34,7 +34,7 @@ public record DirectDebitInstructionDetails2
     [DisplayName("Automated Direct Debit Instruction Indicator")]
     [IsoXmlTag("AutomtdDrctDbtInstrInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AutomatedDirectDebitInstructionIndicator { get; init; }
+    public YesNoIndicator? AutomatedDirectDebitInstructionIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the direct debit instruction is transferable.
@@ -44,7 +44,7 @@ public record DirectDebitInstructionDetails2
     [DisplayName("Direct Debit Transferable Indicator")]
     [IsoXmlTag("DrctDbtTrfblInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? DirectDebitTransferableIndicator { get; init; }
+    public YesNoIndicator? DirectDebitTransferableIndicator { get; init; }
 
     /// <summary>
     /// Party to which an amount of money is due.
@@ -70,7 +70,7 @@ public record DirectDebitInstructionDetails2
     [DisplayName("Last Collection Date")]
     [IsoXmlTag("LastColltnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? LastCollectionDate { get; init; }
+    public DateOnly? LastCollectionDate { get; init; }
 
     /// <summary>
     /// Provides further information about the status of a requested transaction schedule transfer.

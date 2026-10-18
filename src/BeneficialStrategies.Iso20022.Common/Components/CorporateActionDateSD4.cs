@@ -24,7 +24,7 @@ public record CorporateActionDateSD4
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text PlaceAndName { get; init; }
+    public required Max350Text PlaceAndName { get; init; }
 
     /// <summary>
     /// Date on which accounting for due bills starts and associated tracking begins.
@@ -33,7 +33,7 @@ public record CorporateActionDateSD4
     [DisplayName("Interim Accounting Start Date")]
     [IsoXmlTag("IntrmAcctgStartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? InterimAccountingStartDate { get; init; }
+    public DateOnly? InterimAccountingStartDate { get; init; }
 
     /// <summary>
     /// Date on which the event security is no longer listed on the exchange.
@@ -42,7 +42,7 @@ public record CorporateActionDateSD4
     [DisplayName("Delisting Date")]
     [IsoXmlTag("DlistgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DelistingDate { get; init; }
+    public DateOnly? DelistingDate { get; init; }
 
     /// <summary>
     /// Date by which a holder can exercise warrants.
@@ -51,7 +51,7 @@ public record CorporateActionDateSD4
     [DisplayName("Exercise Period Begin Date")]
     [IsoXmlTag("ExrcPrdBegnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ExercisePeriodBeginDate { get; init; }
+    public DateOnly? ExercisePeriodBeginDate { get; init; }
 
     /// <summary>
     /// Date by which a holder listed as a member of the claimant group in a lawsuit may object to the proposed solution.
@@ -60,7 +60,7 @@ public record CorporateActionDateSD4
     [DisplayName("Objection Date")]
     [IsoXmlTag("ObjctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ObjectionDate { get; init; }
+    public DateOnly? ObjectionDate { get; init; }
 
     /// <summary>
     /// Date by which claimants may exclude themselves from an ongoing class action lawsuit.
@@ -69,7 +69,7 @@ public record CorporateActionDateSD4
     [DisplayName("Exclusion Date")]
     [IsoXmlTag("ExclsnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ExclusionDate { get; init; }
+    public DateOnly? ExclusionDate { get; init; }
 
     /// <summary>
     /// Date by which a holder must file claim forms to become a member of the claimant group in a lawsuit.
@@ -78,5 +78,5 @@ public record CorporateActionDateSD4
     [DisplayName("Proof Of Claim Filing Date")]
     [IsoXmlTag("ProofOfClmFilgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ProofOfClaimFilingDate { get; init; }
+    public DateOnly? ProofOfClaimFilingDate { get; init; }
 }

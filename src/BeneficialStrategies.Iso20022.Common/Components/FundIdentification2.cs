@@ -24,7 +24,7 @@ public record FundIdentification2
     [IsoXmlTag("FndId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text FundIdentification { get; init; }
+    public required Max35Text FundIdentification { get; init; }
 
     /// <summary>
     /// Identifies the account of the fund held with the custodian.
@@ -34,7 +34,7 @@ public record FundIdentification2
     [IsoXmlTag("AcctIdWthCtdn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountIdentificationWithCustodian { get; init; }
+    public Max35Text? AccountIdentificationWithCustodian { get; init; }
 
     /// <summary>
     /// Identification of the custodian which services the account of the fund.

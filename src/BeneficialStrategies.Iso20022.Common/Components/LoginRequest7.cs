@@ -21,7 +21,7 @@ public record LoginRequest7
     /// </summary>
     [DisplayName("Cashier Identification")]
     [IsoXmlTag("CshrId")]
-    public IsoMax35Text? CashierIdentification { get; init; }
+    public Max35Text? CashierIdentification { get; init; }
 
     /// <summary>
     /// Cashier Language.
@@ -42,7 +42,7 @@ public record LoginRequest7
     /// </summary>
     [DisplayName("Login Date Time")]
     [IsoXmlTag("LgnDtTm")]
-    public required IsoISODateTime LoginDateTime { get; init; }
+    public required ISODateTime LoginDateTime { get; init; }
 
     /// <summary>
     /// Output Display.
@@ -77,7 +77,7 @@ public record LoginRequest7
     /// </summary>
     [DisplayName("Shift Number")]
     [IsoXmlTag("ShftNb")]
-    public IsoMax2NumericText? ShiftNumber { get; init; }
+    public Max2NumericText? ShiftNumber { get; init; }
 
     /// <summary>
     /// Token Requested Type.
@@ -91,12 +91,12 @@ public record LoginRequest7
     /// </summary>
     [DisplayName("Totals Group Identification")]
     [IsoXmlTag("TtlsGrpId")]
-    public IsoMax35Text? TotalsGroupIdentification { get; init; }
+    public Max35Text? TotalsGroupIdentification { get; init; }
 
     /// <summary>
     /// Training Mode Flag.
     /// </summary>
     [DisplayName("Training Mode Flag")]
     [IsoXmlTag("TrngMdFlg")]
-    public IsoTrueFalseIndicator? TrainingModeFlag { get; init; }
+    public TrueFalseIndicator? TrainingModeFlag { get; init; }
 }

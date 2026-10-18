@@ -21,7 +21,7 @@ public record PartyIdentificationAndAccount222
     /// </summary>
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public IsoMax35Text? AccountIdentification { get; init; }
+    public Max35Text? AccountIdentification { get; init; }
 
     /// <summary>
     /// Party Identification.

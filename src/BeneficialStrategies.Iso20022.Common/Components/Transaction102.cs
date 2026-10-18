@@ -41,7 +41,7 @@ public record Transaction102
     [DisplayName("Original Message")]
     [IsoXmlTag("OrgnlMsg")]
     [IsoSimpleType(IsoSimpleType.Max100KBinary)]
-    public IsoMax100KBinary? OriginalMessage { get; init; }
+    public Max100KBinary? OriginalMessage { get; init; }
 
     /// <summary>
     /// Message amended.
@@ -50,7 +50,7 @@ public record Transaction102
     [DisplayName("Message Amended")]
     [IsoXmlTag("MsgAmdd")]
     [IsoSimpleType(IsoSimpleType.Max100KBinary)]
-    public IsoMax100KBinary? MessageAmended { get; init; }
+    public Max100KBinary? MessageAmended { get; init; }
 
     /// <summary>
     /// Contains additional data.

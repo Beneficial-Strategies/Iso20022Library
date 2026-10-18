@@ -32,5 +32,5 @@ public record Incoterms4
     [IsoXmlTag("Lctn")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Location { get; init; }
+    public Max70Text? Location { get; init; }
 }

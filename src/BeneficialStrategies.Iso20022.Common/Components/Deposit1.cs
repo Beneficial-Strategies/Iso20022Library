@@ -23,7 +23,7 @@ public record Deposit1
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate MaturityDate { get; init; }
+    public required DateOnly MaturityDate { get; init; }
 
     /// <summary>
     /// Specifies the value of the deposit.
@@ -40,5 +40,5 @@ public record Deposit1
     [DisplayName("Counterparty Identification")]
     [IsoXmlTag("CtrPtyId")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public required IsoLEIIdentifier CounterpartyIdentification { get; init; }
+    public required LEIIdentifier CounterpartyIdentification { get; init; }
 }

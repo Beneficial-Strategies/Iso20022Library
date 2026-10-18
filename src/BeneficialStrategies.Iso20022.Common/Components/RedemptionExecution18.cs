@@ -22,7 +22,7 @@ public record RedemptionExecution18
     [IsoId("15ae7da7-6a1f-484f-8d89-1c98d8ded308")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
-    public required IsoMax35Text OrderReference { get; init; }
+    public required Max35Text OrderReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor's identification of the order.
@@ -30,7 +30,7 @@ public record RedemptionExecution18
     [IsoId("b85ec111-2b5e-4942-9903-0280fcc10dc9")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
-    public IsoMax35Text? ClientReference { get; init; }
+    public Max35Text? ClientReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for the order execution, as assigned by the confirming party.
@@ -38,7 +38,7 @@ public record RedemptionExecution18
     [IsoId("f3e054ed-4eb9-47a6-b498-3c998b09c3d6")]
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
-    public required IsoMax35Text DealReference { get; init; }
+    public required Max35Text DealReference { get; init; }
 
     /// <summary>
     /// Unambiguous identification of a random or semi-random number used once (NONCE).
@@ -46,7 +46,7 @@ public record RedemptionExecution18
     [IsoId("f0e87e01-5d87-49a0-86de-2a21142df974")]
     [DisplayName("Nonce Identification")]
     [IsoXmlTag("NonceId")]
-    public IsoMax35Text? NonceIdentification { get; init; }
+    public Max35Text? NonceIdentification { get; init; }
 
     /// <summary>
     /// Category of the investment fund order.
@@ -102,7 +102,7 @@ public record RedemptionExecution18
     [IsoId("eaa27568-97c8-421d-8076-4bb607b396c7")]
     [DisplayName("Holdings Redemption Rate")]
     [IsoXmlTag("HldgsRedRate")]
-    public IsoPercentageRate? HoldingsRedemptionRate { get; init; }
+    public PercentageRate? HoldingsRedemptionRate { get; init; }
 
     /// <summary>
     /// Amount of money redeemed from the fund.
@@ -134,7 +134,7 @@ public record RedemptionExecution18
     [IsoId("136cc58e-c4d0-407f-9af7-2ab39045510e")]
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
-    public IsoISODate? CashSettlementDate { get; init; }
+    public DateOnly? CashSettlementDate { get; init; }
 
     /// <summary>
     /// Method by which the transaction is settled.
@@ -166,7 +166,7 @@ public record RedemptionExecution18
     [IsoId("1183b07b-f4da-46e7-a2a8-4c60a407a3f3")]
     [DisplayName("Partially Executed Indicator")]
     [IsoXmlTag("PrtlyExctdInd")]
-    public required IsoYesNoIndicator PartiallyExecutedIndicator { get; init; }
+    public required YesNoIndicator PartiallyExecutedIndicator { get; init; }
 
     /// <summary>
     /// Specifies that the execution was subject to best execution rules as defined by MiFID.
@@ -182,7 +182,7 @@ public record RedemptionExecution18
     [IsoId("c030efff-0421-4200-8a46-e2af207dc936")]
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
-    public required IsoYesNoIndicator CumDividendIndicator { get; init; }
+    public required YesNoIndicator CumDividendIndicator { get; init; }
 
     /// <summary>
     /// Part of the price deemed as accrued income or profit rather than capital.
@@ -254,7 +254,7 @@ public record RedemptionExecution18
     [IsoId("aac6ddee-e202-4e9e-b2dc-812276f04a36")]
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
-    public required IsoYesNoIndicator PhysicalDeliveryIndicator { get; init; }
+    public required YesNoIndicator PhysicalDeliveryIndicator { get; init; }
 
     /// <summary>
     /// Information related to the physical delivery of the securities.
@@ -286,7 +286,7 @@ public record RedemptionExecution18
     [IsoId("d360388b-bf36-4570-ad76-58131ed02e83")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
-    public IsoMax350Text? NonStandardSettlementInformation { get; init; }
+    public Max350Text? NonStandardSettlementInformation { get; init; }
 
     /// <summary>
     /// Percentage of units partially settled.
@@ -294,7 +294,7 @@ public record RedemptionExecution18
     [IsoId("d3dd2716-b7f0-4514-a616-e473503d32ba")]
     [DisplayName("Partial Settlement Of Units")]
     [IsoXmlTag("PrtlSttlmOfUnits")]
-    public IsoPercentageRate? PartialSettlementOfUnits { get; init; }
+    public PercentageRate? PartialSettlementOfUnits { get; init; }
 
     /// <summary>
     /// Percentage of cash partially settled.
@@ -302,7 +302,7 @@ public record RedemptionExecution18
     [IsoId("07088da8-f51e-46d6-84d4-03ef7833db86")]
     [DisplayName("Partial Settlement Of Cash")]
     [IsoXmlTag("PrtlSttlmOfCsh")]
-    public IsoPercentageRate? PartialSettlementOfCash { get; init; }
+    public PercentageRate? PartialSettlementOfCash { get; init; }
 
     /// <summary>
     /// Amount retained by the fund and paid out later at a time decided by the fund.

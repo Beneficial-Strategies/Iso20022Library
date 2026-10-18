@@ -111,7 +111,7 @@ public record AggregateBalanceInformation33
     [DisplayName("Days Accrued")]
     [IsoXmlTag("DaysAcrd")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? DaysAccrued { get; init; }
+    public Number? DaysAccrued { get; init; }
 
     /// <summary>
     /// Valuation amounts provided in the base currency of the account.
@@ -170,7 +170,7 @@ public record AggregateBalanceInformation33
     [IsoXmlTag("HldgAddtlDtls")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? HoldingAdditionalDetails { get; init; }
+    public RestrictedFINXMax350Text? HoldingAdditionalDetails { get; init; }
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.

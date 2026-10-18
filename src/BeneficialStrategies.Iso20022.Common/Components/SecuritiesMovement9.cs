@@ -63,7 +63,7 @@ public record SecuritiesMovement9
     [DisplayName("Collateral Movement")]
     [IsoXmlTag("CollMvmnt")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator CollateralMovement { get; init; }
+    public required YesNoIndicator CollateralMovement { get; init; }
 
     /// <summary>
     /// Reference assigned by the party A to the financial instrument movement.
@@ -73,7 +73,7 @@ public record SecuritiesMovement9
     [IsoXmlTag("ClntSctiesMvmntId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClientSecuritiesMovementIdentification { get; init; }
+    public Max35Text? ClientSecuritiesMovementIdentification { get; init; }
 
     /// <summary>
     /// Reference assigned by the triparty agent to the financial instrument movement.
@@ -83,5 +83,5 @@ public record SecuritiesMovement9
     [IsoXmlTag("TrptyAgtSvcPrvdrSctiesMvmntId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TripartyAgentServiceProviderSecuritiesMovementIdentification { get; init; }
+    public Max35Text? TripartyAgentServiceProviderSecuritiesMovementIdentification { get; init; }
 }

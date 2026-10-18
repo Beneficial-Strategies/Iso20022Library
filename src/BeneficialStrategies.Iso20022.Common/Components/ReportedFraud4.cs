@@ -28,28 +28,28 @@ public record ReportedFraud4
     /// </summary>
     [DisplayName("Arrest")]
     [IsoXmlTag("Arrst")]
-    public IsoTrueFalseIndicator? Arrest { get; init; }
+    public TrueFalseIndicator? Arrest { get; init; }
 
     /// <summary>
     /// Cardholder Reporting Date.
     /// </summary>
     [DisplayName("Cardholder Reporting Date")]
     [IsoXmlTag("CrdhldrRptgDt")]
-    public IsoISODate? CardholderReportingDate { get; init; }
+    public DateOnly? CardholderReportingDate { get; init; }
 
     /// <summary>
     /// Case Locator Number.
     /// </summary>
     [DisplayName("Case Locator Number")]
     [IsoXmlTag("CaseLctrNb")]
-    public IsoMax35Text? CaseLocatorNumber { get; init; }
+    public Max35Text? CaseLocatorNumber { get; init; }
 
     /// <summary>
     /// Case Reference.
     /// </summary>
     [DisplayName("Case Reference")]
     [IsoXmlTag("CaseRef")]
-    public IsoMax35Text? CaseReference { get; init; }
+    public Max35Text? CaseReference { get; init; }
 
     /// <summary>
     /// Compromised Credential.
@@ -63,42 +63,42 @@ public record ReportedFraud4
     /// </summary>
     [DisplayName("Confirmation Reporting Date")]
     [IsoXmlTag("ConfRptgDt")]
-    public IsoISODate? ConfirmationReportingDate { get; init; }
+    public DateOnly? ConfirmationReportingDate { get; init; }
 
     /// <summary>
     /// Investigation Status.
     /// </summary>
     [DisplayName("Investigation Status")]
     [IsoXmlTag("InvstgtnSts")]
-    public IsoMax256Text? InvestigationStatus { get; init; }
+    public Max256Text? InvestigationStatus { get; init; }
 
     /// <summary>
     /// Market Segment.
     /// </summary>
     [DisplayName("Market Segment")]
     [IsoXmlTag("MktSgmt")]
-    public IsoMax35Text? MarketSegment { get; init; }
+    public Max35Text? MarketSegment { get; init; }
 
     /// <summary>
     /// Other Action.
     /// </summary>
     [DisplayName("Other Action")]
     [IsoXmlTag("OthrActn")]
-    public IsoMax35Text? OtherAction { get; init; }
+    public Max35Text? OtherAction { get; init; }
 
     /// <summary>
     /// Other Reporting Entity.
     /// </summary>
     [DisplayName("Other Reporting Entity")]
     [IsoXmlTag("OthrRptgNtty")]
-    public IsoMax35Text? OtherReportingEntity { get; init; }
+    public Max35Text? OtherReportingEntity { get; init; }
 
     /// <summary>
     /// Other Type.
     /// </summary>
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Reporting Entity.
@@ -112,7 +112,7 @@ public record ReportedFraud4
     /// </summary>
     [DisplayName("Submitter Case Reference")]
     [IsoXmlTag("SubmitrCaseRef")]
-    public IsoMax35Text? SubmitterCaseReference { get; init; }
+    public Max35Text? SubmitterCaseReference { get; init; }
 
     /// <summary>
     /// Type.

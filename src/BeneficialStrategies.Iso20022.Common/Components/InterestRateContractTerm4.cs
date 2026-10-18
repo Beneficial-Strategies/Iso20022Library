@@ -31,5 +31,5 @@ public record InterestRateContractTerm4
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.Max3Number)]
-    public IsoMax3Number? Value { get; init; }
+    public Max3Number? Value { get; init; }
 }

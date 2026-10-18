@@ -24,7 +24,7 @@ public record CardholderName2
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Name { get; init; }
+    public Max140Text? Name { get; init; }
 
     /// <summary>
     /// Local language equivalent of the first name of the cardholder.
@@ -34,7 +34,7 @@ public record CardholderName2
     [IsoXmlTag("GvnNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? GivenName { get; init; }
+    public Max70Text? GivenName { get; init; }
 
     /// <summary>
     /// Local language equivalent of the middle name or initials present in the name of a person.
@@ -44,7 +44,7 @@ public record CardholderName2
     [IsoXmlTag("MddlNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? MiddleName { get; init; }
+    public Max70Text? MiddleName { get; init; }
 
     /// <summary>
     /// Local language equivalent of the last name or surname of the cardholder.
@@ -54,5 +54,5 @@ public record CardholderName2
     [IsoXmlTag("LastNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? LastName { get; init; }
+    public Max70Text? LastName { get; init; }
 }

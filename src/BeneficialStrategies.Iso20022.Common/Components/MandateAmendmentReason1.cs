@@ -38,5 +38,5 @@ public record MandateAmendmentReason1
     [IsoId("_t4JrBFkyEeGeoaLUQk__nA_-2110542685")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public SimpleValueList<IsoMax105Text> AdditionalInformation { get; init; } = [];
+    public SimpleValueList<Max105Text> AdditionalInformation { get; init; } = [];
 }

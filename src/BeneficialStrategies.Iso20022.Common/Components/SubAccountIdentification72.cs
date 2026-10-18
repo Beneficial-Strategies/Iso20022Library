@@ -28,7 +28,7 @@ public record SubAccountIdentification72
     /// </summary>
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
-    public required IsoYesNoIndicator ActivityIndicator { get; init; }
+    public required YesNoIndicator ActivityIndicator { get; init; }
 
     /// <summary>
     /// Balance For Sub Account.

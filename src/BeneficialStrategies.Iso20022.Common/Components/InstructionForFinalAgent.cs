@@ -34,5 +34,5 @@ public record InstructionForFinalAgent
     [IsoXmlTag("Prtry")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Proprietary { get; init; }
+    public Max140Text? Proprietary { get; init; }
 }

@@ -24,7 +24,7 @@ public record UpdatedAdditionalInformation8
     [IsoXmlTag("UpdDesc")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? UpdateDescription { get; init; }
+    public Max140Text? UpdateDescription { get; init; }
 
     /// <summary>
     /// Specifies the date at which the narrative has been updated.
@@ -33,7 +33,7 @@ public record UpdatedAdditionalInformation8
     [DisplayName("Update Date")]
     [IsoXmlTag("UpdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? UpdateDate { get; init; }
+    public DateOnly? UpdateDate { get; init; }
 
     /// <summary>
     /// Provides additional textual information.

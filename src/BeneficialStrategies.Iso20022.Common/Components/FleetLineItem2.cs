@@ -25,7 +25,7 @@ public record FleetLineItem2
     [DisplayName("Allowed Item Indicator")]
     [IsoXmlTag("AllwdItmInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? AllowedItemIndicator { get; init; }
+    public TrueFalseIndicator? AllowedItemIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether or not the line item represents a fuel or non-fuel product or service.
@@ -51,7 +51,7 @@ public record FleetLineItem2
     [IsoXmlTag("FleetPdctCtgy")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? FleetProductCategory { get; init; }
+    public Max35Text? FleetProductCategory { get; init; }
 
     /// <summary>
     /// Code that identifies the type of fuel or non-fuel product or service being purchased.
@@ -61,7 +61,7 @@ public record FleetLineItem2
     [IsoXmlTag("FleetPdctCd")]
     [IsoSimpleType(IsoSimpleType.Max15Text)]
     [StringLength(maximumLength: 15, MinimumLength = 1)]
-    public IsoMax15Text? FleetProductCode { get; init; }
+    public Max15Text? FleetProductCode { get; init; }
 
     /// <summary>
     /// Unit of measure of the item purchased.
@@ -78,7 +78,7 @@ public record FleetLineItem2
     [DisplayName("Product Quantity")]
     [IsoXmlTag("PdctQty")]
     [IsoSimpleType(IsoSimpleType.Max12NumericText)]
-    public IsoMax12NumericText? ProductQuantity { get; init; }
+    public Max12NumericText? ProductQuantity { get; init; }
 
     /// <summary>
     /// Total amount excluding tax.

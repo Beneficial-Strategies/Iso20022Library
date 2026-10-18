@@ -21,7 +21,7 @@ public record TrackerInvestigationRequestStatus3
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public ValueList<IsoMax105Text> AdditionalInformation { get; init; } = [];
+    public ValueList<Max105Text> AdditionalInformation { get; init; } = [];
 
     /// <summary>
     /// Instructed Agent.

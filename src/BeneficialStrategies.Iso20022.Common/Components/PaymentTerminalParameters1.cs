@@ -30,7 +30,7 @@ public record PaymentTerminalParameters1
     [IsoId("_JFopIEeTEeODR7vDcYOqmg")]
     [DisplayName("Time Zone Line")]
     [IsoXmlTag("TmZoneLine")]
-    public SimpleValueList<IsoMax70Text> TimeZoneLine { get; init; } = [];
+    public SimpleValueList<Max70Text> TimeZoneLine { get; init; } = [];
 
     /// <summary>
     /// Others manufacturer configuration parameters of the point of interaction.
@@ -39,5 +39,5 @@ public record PaymentTerminalParameters1
     [DisplayName("Other Parameters")]
     [IsoXmlTag("OthrParams")]
     [IsoSimpleType(IsoSimpleType.Max10000Binary)]
-    public IsoMax10000Binary? OtherParameters { get; init; }
+    public Max10000Binary? OtherParameters { get; init; }
 }

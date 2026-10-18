@@ -21,7 +21,7 @@ public record ReportParameters7
     /// </summary>
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
-    public required IsoYesNoIndicator ActivityIndicator { get; init; }
+    public required YesNoIndicator ActivityIndicator { get; init; }
 
     /// <summary>
     /// Frequency.
@@ -35,7 +35,7 @@ public record ReportParameters7
     /// </summary>
     [DisplayName("Net Position Identification")]
     [IsoXmlTag("NetPosId")]
-    public required IsoMax35Text NetPositionIdentification { get; init; }
+    public required Max35Text NetPositionIdentification { get; init; }
 
     /// <summary>
     /// Report Date And Time.
@@ -49,7 +49,7 @@ public record ReportParameters7
     /// </summary>
     [DisplayName("Report Number")]
     [IsoXmlTag("RptNb")]
-    public IsoExact5NumericText? ReportNumber { get; init; }
+    public Exact5NumericText? ReportNumber { get; init; }
 
     /// <summary>
     /// Update Type.

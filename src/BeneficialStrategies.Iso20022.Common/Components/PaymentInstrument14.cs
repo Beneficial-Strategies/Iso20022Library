@@ -24,7 +24,7 @@ public record PaymentInstrument14
     [IsoXmlTag("Ref")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Reference { get; init; }
+    public Max35Text? Reference { get; init; }
 
     /// <summary>
     /// Payment instrument between a debtor and a creditor that flows through one or more financial institutions or systems.

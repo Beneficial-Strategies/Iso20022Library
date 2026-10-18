@@ -35,14 +35,14 @@ public record CorporateActionGeneralInformationSD58
     /// </summary>
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Redemption Identification.
     /// </summary>
     [DisplayName("Redemption Identification")]
     [IsoXmlTag("RedId")]
-    public IsoMax10NumericText? RedemptionIdentification { get; init; }
+    public Max10NumericText? RedemptionIdentification { get; init; }
 
     /// <summary>
     /// Sub Event Type.

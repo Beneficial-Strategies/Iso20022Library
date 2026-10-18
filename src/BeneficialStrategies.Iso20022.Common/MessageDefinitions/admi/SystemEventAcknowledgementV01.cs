@@ -58,7 +58,7 @@ public record SystemEventAcknowledgementV01 : IOuterRecord
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Represents the original reference of the system event notification for which the acknowledgement is given, as assigned by the central system.
@@ -68,7 +68,7 @@ public record SystemEventAcknowledgementV01 : IOuterRecord
     [IsoXmlTag("OrgtrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginatorReference { get; init; }
+    public Max35Text? OriginatorReference { get; init; }
 
     /// <summary>
     /// To indicate the requested CLS Settlement Session that the related trade is part of.
@@ -77,7 +77,7 @@ public record SystemEventAcknowledgementV01 : IOuterRecord
     [DisplayName("Settlement Session Identifier")]
     [IsoXmlTag("SttlmSsnIdr")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    public IsoExact4AlphaNumericText? SettlementSessionIdentifier { get; init; }
+    public Exact4AlphaNumericText? SettlementSessionIdentifier { get; init; }
 
     /// <summary>
     /// Details of the system event being acknowledged.

@@ -62,5 +62,5 @@ public record DetailedAmount24
     [IsoId("_5s1w3Wl8EfCyxsm1jzUNug")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax70Text? Description { get; init; }
+    public Max70Text? Description { get; init; }
 }

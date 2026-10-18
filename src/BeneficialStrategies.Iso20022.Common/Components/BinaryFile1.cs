@@ -24,7 +24,7 @@ public record BinaryFile1
     [IsoXmlTag("MIMETp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MIMEType { get; init; }
+    public Max35Text? MIMEType { get; init; }
 
     /// <summary>
     /// Specifies the encoding algorithm used for this attached binary file. Reference IANA (Internet Assigned Numbers Authority) - Transfer Encodings (www.iana.org/assignments/transfer-encodings).
@@ -34,7 +34,7 @@ public record BinaryFile1
     [IsoXmlTag("NcodgTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? EncodingType { get; init; }
+    public Max35Text? EncodingType { get; init; }
 
     /// <summary>
     /// Specifies a code signifying the particular character set used for this attached binary file. Reference IANA (Internet Assigned Numbers Authority) - Character Sets (www.iana.org/assignments/character-sets).
@@ -44,7 +44,7 @@ public record BinaryFile1
     [IsoXmlTag("CharSet")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CharacterSet { get; init; }
+    public Max35Text? CharacterSet { get; init; }
 
     /// <summary>
     /// Binary object included in this attached binary file.
@@ -53,5 +53,5 @@ public record BinaryFile1
     [DisplayName("Included Binary Object")]
     [IsoXmlTag("InclBinryObjct")]
     [IsoSimpleType(IsoSimpleType.Max100KBinary)]
-    public IsoMax100KBinary? IncludedBinaryObject { get; init; }
+    public Max100KBinary? IncludedBinaryObject { get; init; }
 }

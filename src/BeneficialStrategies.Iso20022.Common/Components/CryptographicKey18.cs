@@ -21,14 +21,14 @@ public record CryptographicKey18
     /// </summary>
     [DisplayName("Activation Date")]
     [IsoXmlTag("ActvtnDt")]
-    public IsoISODateTime? ActivationDate { get; init; }
+    public ISODateTime? ActivationDate { get; init; }
 
     /// <summary>
     /// Additional Identification.
     /// </summary>
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
-    public IsoMax35Binary? AdditionalIdentification { get; init; }
+    public Max35Binary? AdditionalIdentification { get; init; }
 
     /// <summary>
     /// Additional Management Information.
@@ -49,7 +49,7 @@ public record CryptographicKey18
     /// </summary>
     [DisplayName("Deactivation Date")]
     [IsoXmlTag("DeactvtnDt")]
-    public IsoISODateTime? DeactivationDate { get; init; }
+    public ISODateTime? DeactivationDate { get; init; }
 
     /// <summary>
     /// Function.
@@ -63,21 +63,21 @@ public record CryptographicKey18
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax350Text Identification { get; init; }
+    public required Max350Text Identification { get; init; }
 
     /// <summary>
     /// Item Number.
     /// </summary>
     [DisplayName("Item Number")]
     [IsoXmlTag("ItmNb")]
-    public IsoMax35Text? ItemNumber { get; init; }
+    public Max35Text? ItemNumber { get; init; }
 
     /// <summary>
     /// Key Check Value.
     /// </summary>
     [DisplayName("Key Check Value")]
     [IsoXmlTag("KeyChckVal")]
-    public IsoMax35Binary? KeyCheckValue { get; init; }
+    public Max35Binary? KeyCheckValue { get; init; }
 
     /// <summary>
     /// Key Value.
@@ -91,7 +91,7 @@ public record CryptographicKey18
     /// </summary>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax256Text? Name { get; init; }
+    public Max256Text? Name { get; init; }
 
     /// <summary>
     /// Protected Component With Authorised Access.
@@ -106,7 +106,7 @@ public record CryptographicKey18
     /// </summary>
     [DisplayName("Security Profile")]
     [IsoXmlTag("SctyPrfl")]
-    public IsoMax35Text? SecurityProfile { get; init; }
+    public Max35Text? SecurityProfile { get; init; }
 
     /// <summary>
     /// Type.
@@ -120,5 +120,5 @@ public record CryptographicKey18
     /// </summary>
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
-    public required IsoMax256Text Version { get; init; }
+    public required Max256Text Version { get; init; }
 }

@@ -30,6 +30,6 @@ public record GeneralCollateral3
     [IsoId("_M-XbUeoaEeadseq5W5YLvQ")]
     [DisplayName("Eligible Financial Instrument Identification")]
     [IsoXmlTag("ElgblFinInstrmId")]
-    public SimpleValueList<IsoISINOct2015Identifier> EligibleFinancialInstrumentIdentification { get; init; } =
+    public SimpleValueList<ISINOct2015Identifier> EligibleFinancialInstrumentIdentification { get; init; } =
         [];
 }

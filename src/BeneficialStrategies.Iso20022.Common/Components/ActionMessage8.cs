@@ -48,7 +48,7 @@ public record ActionMessage8
     [IsoXmlTag("MsgCntt")]
     [IsoSimpleType(IsoSimpleType.Max20000Text)]
     [StringLength(maximumLength: 20000, MinimumLength = 1)]
-    public required IsoMax20000Text MessageContent { get; init; }
+    public required Max20000Text MessageContent { get; init; }
 
     /// <summary>
     /// Digital signature of the message.
@@ -73,7 +73,7 @@ public record ActionMessage8
     [DisplayName("Response Required Flag")]
     [IsoXmlTag("RspnReqrdFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ResponseRequiredFlag { get; init; }
+    public TrueFalseIndicator? ResponseRequiredFlag { get; init; }
 
     /// <summary>
     /// Number of seconds the message has to be displayed.
@@ -82,5 +82,5 @@ public record ActionMessage8
     [DisplayName("Minimum Display Time")]
     [IsoXmlTag("MinDispTm")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MinimumDisplayTime { get; init; }
+    public Number? MinimumDisplayTime { get; init; }
 }

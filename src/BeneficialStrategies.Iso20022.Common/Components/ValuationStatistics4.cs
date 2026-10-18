@@ -46,7 +46,7 @@ public record ValuationStatistics4
     [IsoId("9b01ef7c-5a0a-459c-b039-c1a7d62d7822")]
     [DisplayName("Yield")]
     [IsoXmlTag("Yld")]
-    public IsoPercentageRate? Yield { get; init; }
+    public PercentageRate? Yield { get; init; }
 
     /// <summary>
     /// Information related to price variations, expressed using pre-defined periods.

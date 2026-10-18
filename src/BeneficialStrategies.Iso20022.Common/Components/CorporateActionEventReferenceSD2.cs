@@ -24,7 +24,7 @@ public record CorporateActionEventReferenceSD2
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text PlaceAndName { get; init; }
+    public required Max350Text PlaceAndName { get; init; }
 
     /// <summary>
     /// Indicates the reason why two or more events are related.
@@ -41,7 +41,7 @@ public record CorporateActionEventReferenceSD2
     [DisplayName("Link Added Date")]
     [IsoXmlTag("LkAddedDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate LinkAddedDate { get; init; }
+    public required DateOnly LinkAddedDate { get; init; }
 
     /// <summary>
     /// Events can be linked together. This date represents the date on which the link was modified.
@@ -50,5 +50,5 @@ public record CorporateActionEventReferenceSD2
     [DisplayName("Link Modified Date")]
     [IsoXmlTag("LkModfdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? LinkModifiedDate { get; init; }
+    public DateOnly? LinkModifiedDate { get; init; }
 }

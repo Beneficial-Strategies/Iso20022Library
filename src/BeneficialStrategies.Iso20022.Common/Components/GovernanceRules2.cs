@@ -23,7 +23,7 @@ public record GovernanceRules2
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.ID)]
-    public required IsoID Identification { get; init; }
+    public required XsdID Identification { get; init; }
 
     /// <summary>
     /// Identification of the governance rules.

@@ -89,7 +89,7 @@ public record OptionOrSwaption7
     [DisplayName("Premium Payment Date")]
     [IsoXmlTag("PrmPmtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? PremiumPaymentDate { get; init; }
+    public DateOnly? PremiumPaymentDate { get; init; }
 
     /// <summary>
     /// In case of swaptions, maturity date of the underlying swap.
@@ -98,5 +98,5 @@ public record OptionOrSwaption7
     [DisplayName("Maturity Date Of Underlying")]
     [IsoXmlTag("MtrtyDtOfUndrlyg")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? MaturityDateOfUnderlying { get; init; }
+    public DateOnly? MaturityDateOfUnderlying { get; init; }
 }

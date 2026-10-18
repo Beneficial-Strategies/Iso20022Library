@@ -21,7 +21,7 @@ public record MinimumExecutable1
     /// </summary>
     [DisplayName("First Execution Only")]
     [IsoXmlTag("FrstExctnOnly")]
-    public IsoTrueFalseIndicator? FirstExecutionOnly { get; init; }
+    public TrueFalseIndicator? FirstExecutionOnly { get; init; }
 
     /// <summary>
     /// Size.

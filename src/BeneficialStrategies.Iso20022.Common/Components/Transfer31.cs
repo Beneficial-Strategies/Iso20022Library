@@ -24,7 +24,7 @@ public record Transfer31
     [IsoXmlTag("TrfConfRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransferConfirmationReference { get; init; }
+    public required Max35Text TransferConfirmationReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for a transfer instruction, as assigned by the instructing party.
@@ -34,7 +34,7 @@ public record Transfer31
     [IsoXmlTag("TrfRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransferReference { get; init; }
+    public required Max35Text TransferReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor&apos;s identification of a transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.
@@ -75,7 +75,7 @@ public record Transfer31
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RequestedSettlementDate { get; init; }
+    public DateOnly? RequestedSettlementDate { get; init; }
 
     /// <summary>
     /// Date and time at which the securities were exchanged at the International Central Securities Depository (ICSD) or Central Securities Depository (CSD).
@@ -100,7 +100,7 @@ public record Transfer31
     [DisplayName("Transfer Order Date Form")]
     [IsoXmlTag("TrfOrdrDtForm")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TransferOrderDateForm { get; init; }
+    public DateOnly? TransferOrderDateForm { get; init; }
 
     /// <summary>
     /// Identifies the transfer reason.
@@ -151,7 +151,7 @@ public record Transfer31
     [DisplayName("Portfolio Transfer Out Rate")]
     [IsoXmlTag("PrtflTrfOutRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? PortfolioTransferOutRate { get; init; }
+    public PercentageRate? PortfolioTransferOutRate { get; init; }
 
     /// <summary>
     /// Indicates the rounding direction applied to nearest unit.
@@ -184,7 +184,7 @@ public record Transfer31
     [DisplayName("Average Date")]
     [IsoXmlTag("AvrgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? AverageDate { get; init; }
+    public DateOnly? AverageDate { get; init; }
 
     /// <summary>
     /// Trade date of the average weighted data of units in the account after the transfer was executed.
@@ -193,7 +193,7 @@ public record Transfer31
     [DisplayName("New Average Date")]
     [IsoXmlTag("NewAvrgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? NewAverageDate { get; init; }
+    public DateOnly? NewAverageDate { get; init; }
 
     /// <summary>
     /// Identifies the currency to be used to transfer the holdings.
@@ -210,7 +210,7 @@ public record Transfer31
     [DisplayName("Own Account Transfer Indicator")]
     [IsoXmlTag("OwnAcctTrfInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? OwnAccountTransferIndicator { get; init; }
+    public YesNoIndicator? OwnAccountTransferIndicator { get; init; }
 
     /// <summary>
     /// Additional specific settlement information for non-regulated traded funds.
@@ -220,7 +220,7 @@ public record Transfer31
     [IsoXmlTag("NonStdSttlmInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? NonStandardSettlementInformation { get; init; }
+    public Max350Text? NonStandardSettlementInformation { get; init; }
 
     /// <summary>
     /// Party that receives securities from the delivering agent via the place of settlement, for example, securities central depository.

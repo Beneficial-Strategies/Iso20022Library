@@ -24,7 +24,7 @@ public record CashCollateral4
     [IsoXmlTag("AsstNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AssetNumber { get; init; }
+    public Max35Text? AssetNumber { get; init; }
 
     /// <summary>
     /// Amount of the deposit.
@@ -57,7 +57,7 @@ public record CashCollateral4
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? MaturityDate { get; init; }
+    public DateOnly? MaturityDate { get; init; }
 
     /// <summary>
     /// Valuation date of the cash taken as collateral.
@@ -66,7 +66,7 @@ public record CashCollateral4
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ValueDate { get; init; }
+    public DateOnly? ValueDate { get; init; }
 
     /// <summary>
     /// Exchange rate.
@@ -75,7 +75,7 @@ public record CashCollateral4
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? ExchangeRate { get; init; }
+    public BaseOneRate? ExchangeRate { get; init; }
 
     /// <summary>
     /// Value of the collateral after taking into account the haircut.
@@ -92,5 +92,5 @@ public record CashCollateral4
     [DisplayName("Haircut")]
     [IsoXmlTag("Hrcut")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Haircut { get; init; }
+    public PercentageRate? Haircut { get; init; }
 }

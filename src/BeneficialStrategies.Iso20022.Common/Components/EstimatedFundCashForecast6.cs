@@ -24,7 +24,7 @@ public record EstimatedFundCashForecast6
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Date and, if required, the time, at which the price will be applied.
@@ -89,7 +89,7 @@ public record EstimatedFundCashForecast6
     [DisplayName("Estimated Total NAV Change Rate")]
     [IsoXmlTag("EstmtdTtlNAVChngRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? EstimatedTotalNAVChangeRate { get; init; }
+    public PercentageRate? EstimatedTotalNAVChangeRate { get; init; }
 
     /// <summary>
     /// Currency of the investment fund class.
@@ -114,7 +114,7 @@ public record EstimatedFundCashForecast6
     [DisplayName("Exceptional Net Cash Flow Indicator")]
     [IsoXmlTag("XcptnlNetCshFlowInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ExceptionalNetCashFlowIndicator { get; init; }
+    public required YesNoIndicator ExceptionalNetCashFlowIndicator { get; init; }
 
     /// <summary>
     /// Price per unit of the previous trade date.
@@ -139,7 +139,7 @@ public record EstimatedFundCashForecast6
     [DisplayName("Estimated Percentage Of Share Class Total NAV")]
     [IsoXmlTag("EstmtdPctgOfShrClssTtlNAV")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? EstimatedPercentageOfShareClassTotalNAV { get; init; }
+    public PercentageRate? EstimatedPercentageOfShareClassTotalNAV { get; init; }
 
     /// <summary>
     /// Estimated cash movements into the fund as a result of transactions in shares in an investment fund, for example, subscriptions or switch-ins.

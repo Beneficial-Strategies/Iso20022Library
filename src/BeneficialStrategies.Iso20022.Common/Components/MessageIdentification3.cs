@@ -24,7 +24,7 @@ public record MessageIdentification3
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoRestrictedFINMax16Text Identification { get; init; }
+    public required RestrictedFINMax16Text Identification { get; init; }
 
     /// <summary>
     /// Date of creation of the message.
@@ -33,5 +33,5 @@ public record MessageIdentification3
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 }

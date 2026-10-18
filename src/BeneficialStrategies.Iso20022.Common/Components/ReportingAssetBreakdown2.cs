@@ -35,7 +35,7 @@ public record ReportingAssetBreakdown2
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax350Text? Identification { get; init; }
+    public Max350Text? Identification { get; init; }
 
     /// <summary>
     /// Reporting Asset Type.

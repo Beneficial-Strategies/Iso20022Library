@@ -24,7 +24,7 @@ public record RedemptionOrder8
     [IsoXmlTag("OrdrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OrderReference { get; init; }
+    public required Max35Text OrderReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor&apos;s identification of an order. This reference can typically be used in a hub scenario to give the reference of the order as assigned by the underlying client.
@@ -34,7 +34,7 @@ public record RedemptionOrder8
     [IsoXmlTag("ClntRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClientReference { get; init; }
+    public Max35Text? ClientReference { get; init; }
 
     /// <summary>
     /// Specifies the category of the investment fund order.
@@ -93,7 +93,7 @@ public record RedemptionOrder8
     [DisplayName("Holdings Redemption Rate")]
     [IsoXmlTag("HldgsRedRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate HoldingsRedemptionRate { get; init; }
+    public required PercentageRate HoldingsRedemptionRate { get; init; }
 
     /// <summary>
     /// Indicates the rounding direction applied to nearest unit.
@@ -118,7 +118,7 @@ public record RedemptionOrder8
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? CashSettlementDate { get; init; }
+    public DateOnly? CashSettlementDate { get; init; }
 
     /// <summary>
     /// Method by which the transaction is settled.
@@ -191,7 +191,7 @@ public record RedemptionOrder8
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator PhysicalDeliveryIndicator { get; init; }
+    public required YesNoIndicator PhysicalDeliveryIndicator { get; init; }
 
     /// <summary>
     /// Information related to physical delivery of the securities.
@@ -233,7 +233,7 @@ public record RedemptionOrder8
     [IsoXmlTag("NonStdSttlmInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? NonStandardSettlementInformation { get; init; }
+    public Max350Text? NonStandardSettlementInformation { get; init; }
 
     /// <summary>
     /// Breakdown of the net amount per type of order.

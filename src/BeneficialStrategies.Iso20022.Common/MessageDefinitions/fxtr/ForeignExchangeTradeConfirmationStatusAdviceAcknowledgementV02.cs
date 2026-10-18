@@ -99,14 +99,14 @@ public record ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV02 : I
     /// </summary>
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
-    public required IsoISODate TradeDate { get; init; }
+    public required DateOnly TradeDate { get; init; }
 
     /// <summary>
     /// Trade Identification.
     /// </summary>
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    public required IsoMax35Text TradeIdentification { get; init; }
+    public required Max35Text TradeIdentification { get; init; }
 
     /// <summary>
     /// Trading Mode.

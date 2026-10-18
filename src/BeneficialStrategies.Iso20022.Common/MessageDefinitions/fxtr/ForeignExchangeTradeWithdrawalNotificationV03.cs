@@ -60,7 +60,7 @@ public record ForeignExchangeTradeWithdrawalNotificationV03 : IOuterRecord
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Reference to the unique system identification assigned to the trade by the central matching system.
@@ -70,7 +70,7 @@ public record ForeignExchangeTradeWithdrawalNotificationV03 : IOuterRecord
     [IsoXmlTag("MtchgSysUnqRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MatchingSystemUniqueReference { get; init; }
+    public required Max35Text MatchingSystemUniqueReference { get; init; }
 
     /// <summary>
     /// Reason for the withdrawal notification.
@@ -87,7 +87,7 @@ public record ForeignExchangeTradeWithdrawalNotificationV03 : IOuterRecord
     [DisplayName("Settlement Session Identifier")]
     [IsoXmlTag("SttlmSsnIdr")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    public IsoExact4AlphaNumericText? SettlementSessionIdentifier { get; init; }
+    public Exact4AlphaNumericText? SettlementSessionIdentifier { get; init; }
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.

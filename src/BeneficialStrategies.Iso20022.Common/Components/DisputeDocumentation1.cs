@@ -28,19 +28,19 @@ public record DisputeDocumentation1
     /// </summary>
     [DisplayName("Other Format")]
     [IsoXmlTag("OthrFrmt")]
-    public IsoMax35Text? OtherFormat { get; init; }
+    public Max35Text? OtherFormat { get; init; }
 
     /// <summary>
     /// Type.
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public IsoMax35Text? Type { get; init; }
+    public Max35Text? Type { get; init; }
 
     /// <summary>
     /// Value.
     /// </summary>
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
-    public required IsoMax20KText Value { get; init; }
+    public required Max20KText Value { get; init; }
 }

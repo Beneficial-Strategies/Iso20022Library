@@ -30,7 +30,7 @@ public record RiskInputData3
     [IsoId("_0xTiZT1zEfCQAqQ9lolFUg")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required IsoMax35Text Type { get; init; }
+    public required Max35Text Type { get; init; }
 
     /// <summary>
     /// Value of input data for risk assessment.
@@ -38,5 +38,5 @@ public record RiskInputData3
     [IsoId("_0xTiZz1zEfCQAqQ9lolFUg")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
-    public required IsoMax10KText Value { get; init; }
+    public required Max10KText Value { get; init; }
 }

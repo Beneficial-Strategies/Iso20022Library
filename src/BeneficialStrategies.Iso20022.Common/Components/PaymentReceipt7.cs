@@ -30,7 +30,7 @@ public record PaymentReceipt7
     [IsoId("_0rKVS7ZgEfCUZfsQO4rYeA")]
     [DisplayName("Integrated Print Flag")]
     [IsoXmlTag("IntgrtdPrtFlg")]
-    public IsoTrueFalseIndicator? IntegratedPrintFlag { get; init; }
+    public TrueFalseIndicator? IntegratedPrintFlag { get; init; }
 
     /// <summary>
     /// Flag to indicate that the cardholder payment receipt requires a signature by the customer.
@@ -38,7 +38,7 @@ public record PaymentReceipt7
     [IsoId("_0rKVUbZgEfCUZfsQO4rYeA")]
     [DisplayName("Required Signature Flag")]
     [IsoXmlTag("ReqrdSgntrFlg")]
-    public IsoTrueFalseIndicator? RequiredSignatureFlag { get; init; }
+    public TrueFalseIndicator? RequiredSignatureFlag { get; init; }
 
     /// <summary>
     /// Document to print.

@@ -21,7 +21,7 @@ public record ReportQueryCriteria3
     /// </summary>
     [DisplayName("New Query Name")]
     [IsoXmlTag("NewQryNm")]
-    public IsoMax35Text? NewQueryName { get; init; }
+    public Max35Text? NewQueryName { get; init; }
 
     /// <summary>
     /// Search Criteria.

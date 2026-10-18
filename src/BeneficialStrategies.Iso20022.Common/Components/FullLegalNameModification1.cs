@@ -32,5 +32,5 @@ public record FullLegalNameModification1
     [IsoXmlTag("FullLglNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text FullLegalName { get; init; }
+    public required Max350Text FullLegalName { get; init; }
 }

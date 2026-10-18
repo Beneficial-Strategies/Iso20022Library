@@ -21,7 +21,7 @@ public record CorporateActionGeneralInformation187
     /// </summary>
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
-    public required IsoRestrictedFINXMax16Text CorporateActionEventIdentification { get; init; }
+    public required RestrictedFINXMax16Text CorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Event Type.
@@ -42,5 +42,5 @@ public record CorporateActionGeneralInformation187
     /// </summary>
     [DisplayName("Official Corporate Action Event Identification")]
     [IsoXmlTag("OffclCorpActnEvtId")]
-    public IsoRestrictedFINXMax16Text? OfficialCorporateActionEventIdentification { get; init; }
+    public RestrictedFINXMax16Text? OfficialCorporateActionEventIdentification { get; init; }
 }

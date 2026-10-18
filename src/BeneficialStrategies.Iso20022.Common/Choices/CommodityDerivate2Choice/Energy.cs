@@ -23,6 +23,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CommodityDerivate2Choice
         [IsoXmlTag("SttlmLctn")]
         [IsoSimpleType(IsoSimpleType.Max25Text)]
         [StringLength(maximumLength: 25, MinimumLength = 1)]
-        public required IsoMax25Text SettlementLocation { get; init; }
+        public required Max25Text SettlementLocation { get; init; }
     }
 }

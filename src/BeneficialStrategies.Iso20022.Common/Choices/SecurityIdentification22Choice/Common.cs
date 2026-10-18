@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification22Choice
         /// </summary>
         [IsoXmlTag("Cmon")]
         [IsoSimpleType(IsoSimpleType.EuroclearClearstreamIdentifier)]
-        public required IsoEuroclearClearstreamIdentifier Value { get; init; }
+        public required EuroclearClearstreamIdentifier Value { get; init; }
     }
 }

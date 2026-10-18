@@ -86,7 +86,7 @@ public record MarketClaimCreationV04 : IOuterRecord
     [DisplayName("Market Claim Settlement Indicator")]
     [IsoXmlTag("MktClmSttlmInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? MarketClaimSettlementIndicator { get; init; }
+    public YesNoIndicator? MarketClaimSettlementIndicator { get; init; }
 
     /// <summary>
     /// Market Claim Type.

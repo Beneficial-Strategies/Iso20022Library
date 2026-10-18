@@ -30,7 +30,7 @@ public record ClearingBatchData4
     [IsoId("_SzfhZW79EfC68Y4jZPNEug")]
     [DisplayName("Priority")]
     [IsoXmlTag("Prty")]
-    public IsoMax35Text? Priority { get; init; }
+    public Max35Text? Priority { get; init; }
 
     /// <summary>
     /// Date of clearing.
@@ -38,7 +38,7 @@ public record ClearingBatchData4
     [IsoId("_SzfhZ279EfC68Y4jZPNEug")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Number of transactions to clear.
@@ -46,7 +46,7 @@ public record ClearingBatchData4
     [IsoId("_SzfhaW79EfC68Y4jZPNEug")]
     [DisplayName("Totals Count")]
     [IsoXmlTag("TtlsCnt")]
-    public IsoNumber? TotalsCount { get; init; }
+    public Number? TotalsCount { get; init; }
 
     /// <summary>
     /// Gross clearing accumulated amount.

@@ -44,42 +44,42 @@ public record OriginalGroupHeader23
     /// </summary>
     [DisplayName("Original Control Sum")]
     [IsoXmlTag("OrgnlCtrlSum")]
-    public IsoDecimalNumber? OriginalControlSum { get; init; }
+    public DecimalNumber? OriginalControlSum { get; init; }
 
     /// <summary>
     /// Original Creation Date Time.
     /// </summary>
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
-    public IsoISODateTime? OriginalCreationDateTime { get; init; }
+    public ISODateTime? OriginalCreationDateTime { get; init; }
 
     /// <summary>
     /// Original Group Cancellation Identification.
     /// </summary>
     [DisplayName("Original Group Cancellation Identification")]
     [IsoXmlTag("OrgnlGrpCxlId")]
-    public IsoMax35Text? OriginalGroupCancellationIdentification { get; init; }
+    public Max35Text? OriginalGroupCancellationIdentification { get; init; }
 
     /// <summary>
     /// Original Message Identification.
     /// </summary>
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
-    public required IsoMax35Text OriginalMessageIdentification { get; init; }
+    public required Max35Text OriginalMessageIdentification { get; init; }
 
     /// <summary>
     /// Original Message Name Identification.
     /// </summary>
     [DisplayName("Original Message Name Identification")]
     [IsoXmlTag("OrgnlMsgNmId")]
-    public required IsoMax35Text OriginalMessageNameIdentification { get; init; }
+    public required Max35Text OriginalMessageNameIdentification { get; init; }
 
     /// <summary>
     /// Original Number Of Transactions.
     /// </summary>
     [DisplayName("Original Number Of Transactions")]
     [IsoXmlTag("OrgnlNbOfTxs")]
-    public IsoMax15NumericText? OriginalNumberOfTransactions { get; init; }
+    public Max15NumericText? OriginalNumberOfTransactions { get; init; }
 
     /// <summary>
     /// Resolved Case.

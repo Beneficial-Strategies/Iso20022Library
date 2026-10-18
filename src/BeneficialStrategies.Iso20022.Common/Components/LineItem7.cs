@@ -25,7 +25,7 @@ public record LineItem7
     [IsoXmlTag("GoodsDesc")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? GoodsDescription { get; init; }
+    public Max70Text? GoodsDescription { get; init; }
 
     /// <summary>
     /// Indicates whether or not partial shipments are allowed.
@@ -34,7 +34,7 @@ public record LineItem7
     [DisplayName("Partial Shipment")]
     [IsoXmlTag("PrtlShipmnt")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator PartialShipment { get; init; }
+    public required YesNoIndicator PartialShipment { get; init; }
 
     /// <summary>
     /// Indicates whether or not transshipment of goods is allowed.
@@ -43,7 +43,7 @@ public record LineItem7
     [DisplayName("Trans Shipment")]
     [IsoXmlTag("TrnsShipmnt")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? TransShipment { get; init; }
+    public YesNoIndicator? TransShipment { get; init; }
 
     /// <summary>
     /// Specifies an earliest shipment date and a latest shipment date.

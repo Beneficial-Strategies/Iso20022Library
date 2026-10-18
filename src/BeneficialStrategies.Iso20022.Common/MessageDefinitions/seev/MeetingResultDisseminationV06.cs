@@ -70,7 +70,7 @@ public record MeetingResultDisseminationV06 : IOuterRecord
     [IsoXmlTag("PrvsMtgRsltsDssmntnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PreviousMeetingResultsDisseminationIdentification { get; init; }
+    public Max35Text? PreviousMeetingResultsDisseminationIdentification { get; init; }
 
     /// <summary>
     /// Set of elements that allow to identify unambiguously a meeting.

@@ -28,5 +28,5 @@ public record DevicePoweroffCardReaderRequest6
     /// </summary>
     [DisplayName("Power Off Maximum Waiting Time")]
     [IsoXmlTag("PwrOffMaxWtgTm")]
-    public IsoNumber? PowerOffMaximumWaitingTime { get; init; }
+    public Number? PowerOffMaximumWaitingTime { get; init; }
 }

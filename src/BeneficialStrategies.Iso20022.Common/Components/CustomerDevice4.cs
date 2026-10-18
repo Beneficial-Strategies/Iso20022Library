@@ -48,7 +48,7 @@ public record CustomerDevice4
     [IsoXmlTag("Prvdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Provider { get; init; }
+    public Max35Text? Provider { get; init; }
 
     /// <summary>
     /// Additional customer device data.

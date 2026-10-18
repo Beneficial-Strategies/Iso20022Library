@@ -21,7 +21,7 @@ public record ATMCommand14
     /// </summary>
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
-    public IsoMax70Text? AdditionalReasonInformation { get; init; }
+    public Max70Text? AdditionalReasonInformation { get; init; }
 
     /// <summary>
     /// Command Identification.
@@ -42,7 +42,7 @@ public record ATMCommand14
     /// </summary>
     [DisplayName("Date Time")]
     [IsoXmlTag("DtTm")]
-    public IsoISODateTime? DateTime { get; init; }
+    public ISODateTime? DateTime { get; init; }
 
     /// <summary>
     /// Reason.

@@ -23,7 +23,7 @@ public record PlaceOfClearingIdentification2
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
-    public IsoAnyBICDec2014Identifier? Identification { get; init; }
+    public AnyBICDec2014Identifier? Identification { get; init; }
 
     /// <summary>
     /// Legal entity identification as an alternate identification for a place of clearing.
@@ -32,5 +32,5 @@ public record PlaceOfClearingIdentification2
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? LEI { get; init; }
+    public LEIIdentifier? LEI { get; init; }
 }

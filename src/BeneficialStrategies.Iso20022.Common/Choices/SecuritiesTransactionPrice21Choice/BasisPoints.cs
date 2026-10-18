@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice21Choi
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("BsisPts")]
-        public required IsoDecimalNumber Value { get; init; }
+        public required DecimalNumber Value { get; init; }
     }
 }

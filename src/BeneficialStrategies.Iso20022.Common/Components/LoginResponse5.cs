@@ -23,7 +23,7 @@ public record LoginResponse5
     [DisplayName("POI Date Time")]
     [IsoXmlTag("POIDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime POIDateTime { get; init; }
+    public required ISODateTime POIDateTime { get; init; }
 
     /// <summary>
     /// Information related to the software of the POI System which manages the Sale to POI protocol.

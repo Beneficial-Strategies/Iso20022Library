@@ -28,7 +28,7 @@ public record CardAccount20
     /// </summary>
     [DisplayName("Account Name")]
     [IsoXmlTag("AcctNm")]
-    public IsoMax70Text? AccountName { get; init; }
+    public Max70Text? AccountName { get; init; }
 
     /// <summary>
     /// Account Owner.

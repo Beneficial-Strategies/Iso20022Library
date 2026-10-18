@@ -24,7 +24,7 @@ public record Discount3
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Type { get; init; }
+    public Max35Text? Type { get; init; }
 
     /// <summary>
     /// Monetary value of the discount applied to the transaction.
@@ -34,5 +34,5 @@ public record Discount3
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Value { get; init; }
+    public required Max35Text Value { get; init; }
 }

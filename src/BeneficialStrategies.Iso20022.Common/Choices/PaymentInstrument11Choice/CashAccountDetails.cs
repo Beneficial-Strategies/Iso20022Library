@@ -40,6 +40,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument11Choice
         [IsoXmlTag("XtndedTp")]
         [IsoSimpleType(IsoSimpleType.Extended350Code)]
         [StringLength(maximumLength: 350, MinimumLength = 1)]
-        public IsoExtended350Code? ExtendedType { get; init; }
+        public Extended350Code? ExtendedType { get; init; }
     }
 }

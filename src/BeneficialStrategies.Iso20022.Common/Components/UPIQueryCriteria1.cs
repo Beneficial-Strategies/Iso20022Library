@@ -22,7 +22,7 @@ public record UPIQueryCriteria1
     [IsoId("_Ab3SAJNlEeytjZlcgApf6A")]
     [DisplayName("Identifier")]
     [IsoXmlTag("Idr")]
-    public SimpleValueList<IsoMax52Text> Identifier { get; init; } = [];
+    public SimpleValueList<Max52Text> Identifier { get; init; } = [];
 
     /// <summary>
     /// Field can be queried for not reported value.

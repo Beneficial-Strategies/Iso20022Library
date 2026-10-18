@@ -24,7 +24,7 @@ public record NetworkParameters1
     [IsoXmlTag("PmryAdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text PrimaryAddress { get; init; }
+    public required Max35Text PrimaryAddress { get; init; }
 
     /// <summary>
     /// Port number of the primary host.
@@ -33,7 +33,7 @@ public record NetworkParameters1
     [DisplayName("Primary Port Number")]
     [IsoXmlTag("PmryPortNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber PrimaryPortNumber { get; init; }
+    public required Number PrimaryPortNumber { get; init; }
 
     /// <summary>
     /// IP address or host name of the secondary host.
@@ -43,7 +43,7 @@ public record NetworkParameters1
     [IsoXmlTag("ScndryAdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SecondaryAddress { get; init; }
+    public Max35Text? SecondaryAddress { get; init; }
 
     /// <summary>
     /// Port number of the secondary host.
@@ -52,7 +52,7 @@ public record NetworkParameters1
     [DisplayName("Secondary Port Number")]
     [IsoXmlTag("ScndryPortNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? SecondaryPortNumber { get; init; }
+    public Number? SecondaryPortNumber { get; init; }
 
     /// <summary>
     /// User name identifying the client.
@@ -62,7 +62,7 @@ public record NetworkParameters1
     [IsoXmlTag("UsrNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? UserName { get; init; }
+    public Max35Text? UserName { get; init; }
 
     /// <summary>
     /// Password authenticating the client.
@@ -72,7 +72,7 @@ public record NetworkParameters1
     [IsoXmlTag("AccsCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccessCode { get; init; }
+    public Max35Text? AccessCode { get; init; }
 
     /// <summary>
     /// Client certificate chain.
@@ -81,5 +81,5 @@ public record NetworkParameters1
     [DisplayName("Client Certificate")]
     [IsoXmlTag("ClntCert")]
     [IsoSimpleType(IsoSimpleType.Max3000Binary)]
-    public IsoMax3000Binary? ClientCertificate { get; init; }
+    public Max3000Binary? ClientCertificate { get; init; }
 }

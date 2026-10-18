@@ -40,7 +40,7 @@ public record AuthorisationResult17
     [IsoXmlTag("AuthstnCd")]
     [IsoSimpleType(IsoSimpleType.Max8Text)]
     [StringLength(maximumLength: 8, MinimumLength = 1)]
-    public IsoMax8Text? AuthorisationCode { get; init; }
+    public Max8Text? AuthorisationCode { get; init; }
 
     /// <summary>
     /// Indicates whether the acquirer requires a further exchange completion after the completion of the transaction.
@@ -49,7 +49,7 @@ public record AuthorisationResult17
     [DisplayName("Completion Required")]
     [IsoXmlTag("CmpltnReqrd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CompletionRequired { get; init; }
+    public TrueFalseIndicator? CompletionRequired { get; init; }
 
     /// <summary>
     /// Instructs the point of interaction (POI) how to contact the host to initiate the maintenance of the terminal.

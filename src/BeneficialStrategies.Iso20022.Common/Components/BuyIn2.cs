@@ -24,7 +24,7 @@ public record BuyIn2
     [IsoXmlTag("BuyInNtfctnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? BuyInNotificationIdentification { get; init; }
+    public Max35Text? BuyInNotificationIdentification { get; init; }
 
     /// <summary>
     /// Indicates the reference id of the buy in.
@@ -34,7 +34,7 @@ public record BuyIn2
     [IsoXmlTag("BuyInId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text BuyInIdentification { get; init; }
+    public required Max35Text BuyInIdentification { get; init; }
 
     /// <summary>
     /// Provides the date at which the buy occured.
@@ -43,7 +43,7 @@ public record BuyIn2
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate Date { get; init; }
+    public required DateOnly Date { get; init; }
 
     /// <summary>
     /// Provides the price of the buy-in.

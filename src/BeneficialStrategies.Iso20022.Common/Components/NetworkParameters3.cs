@@ -34,7 +34,7 @@ public record NetworkParameters3
     [IsoXmlTag("UsrNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? UserName { get; init; }
+    public Max35Text? UserName { get; init; }
 
     /// <summary>
     /// Password authenticating the client.
@@ -43,7 +43,7 @@ public record NetworkParameters3
     [DisplayName("Access Code")]
     [IsoXmlTag("AccsCd")]
     [IsoSimpleType(IsoSimpleType.Max35Binary)]
-    public IsoMax35Binary? AccessCode { get; init; }
+    public Max35Binary? AccessCode { get; init; }
 
     /// <summary>
     /// X.509 Certificate required to authenticate the server.
@@ -51,7 +51,7 @@ public record NetworkParameters3
     [IsoId("_H9hTQGpWEeSR-ZWLvO-1dg")]
     [DisplayName("Server Certificate")]
     [IsoXmlTag("SvrCert")]
-    public SimpleValueList<IsoMax3000Binary> ServerCertificate { get; init; } = [];
+    public SimpleValueList<Max3000Binary> ServerCertificate { get; init; } = [];
 
     /// <summary>
     /// Identification of the X.509 Certificate required to authenticate the server, for instance a digest of the certificate.
@@ -59,5 +59,5 @@ public record NetworkParameters3
     [IsoId("_PZZO8GpWEeSR-ZWLvO-1dg")]
     [DisplayName("Server Certificate Identifier")]
     [IsoXmlTag("SvrCertIdr")]
-    public SimpleValueList<IsoMax140Binary> ServerCertificateIdentifier { get; init; } = [];
+    public SimpleValueList<Max140Binary> ServerCertificateIdentifier { get; init; } = [];
 }

@@ -24,7 +24,7 @@ public record Plan1
     [IsoXmlTag("PlanId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PlanIdentification { get; init; }
+    public Max35Text? PlanIdentification { get; init; }
 
     /// <summary>
     /// List of plan owners.
@@ -42,7 +42,7 @@ public record Plan1
     [IsoXmlTag("OthrPlanOwnr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherPlanOwner { get; init; }
+    public Max35Text? OtherPlanOwner { get; init; }
 
     /// <summary>
     /// Instalment payment type.
@@ -52,7 +52,7 @@ public record Plan1
     [IsoXmlTag("InstlmtPmtTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? InstalmentPaymentType { get; init; }
+    public Max35Text? InstalmentPaymentType { get; init; }
 
     /// <summary>
     /// Period unit between consecutive payments.
@@ -69,7 +69,7 @@ public record Plan1
     [DisplayName("Number Of Periods")]
     [IsoXmlTag("NbOfPrds")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NumberOfPeriods { get; init; }
+    public Number? NumberOfPeriods { get; init; }
 
     /// <summary>
     /// Details of the interest rate.
@@ -86,7 +86,7 @@ public record Plan1
     [DisplayName("First Payment Date")]
     [IsoXmlTag("FrstPmtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? FirstPaymentDate { get; init; }
+    public DateOnly? FirstPaymentDate { get; init; }
 
     /// <summary>
     /// Amount of the first payment when different from the subsequent payments.
@@ -112,7 +112,7 @@ public record Plan1
     [DisplayName("Total Number Of Payments")]
     [IsoXmlTag("TtlNbOfPmts")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? TotalNumberOfPayments { get; init; }
+    public Number? TotalNumberOfPayments { get; init; }
 
     /// <summary>
     /// Currency code associated with the instalment amount.  ISO 4217 &quot;Codes for the representation of currencies and funds&quot;.

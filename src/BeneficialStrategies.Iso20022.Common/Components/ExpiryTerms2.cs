@@ -40,7 +40,7 @@ public record ExpiryTerms2
     [IsoXmlTag("Cond")]
     [IsoSimpleType(IsoSimpleType.Max2000Text)]
     [StringLength(maximumLength: 2000, MinimumLength = 1)]
-    public IsoMax2000Text? Condition { get; init; }
+    public Max2000Text? Condition { get; init; }
 
     /// <summary>
     /// Indicates whether the expiry terms are without a fixed expiry date.
@@ -49,5 +49,5 @@ public record ExpiryTerms2
     [DisplayName("Open Ended Indicator")]
     [IsoXmlTag("OpnEnddInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? OpenEndedIndicator { get; init; }
+    public YesNoIndicator? OpenEndedIndicator { get; init; }
 }

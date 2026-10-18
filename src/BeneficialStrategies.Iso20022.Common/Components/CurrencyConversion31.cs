@@ -35,5 +35,5 @@ public record CurrencyConversion31
     /// </summary>
     [DisplayName("Result Reason")]
     [IsoXmlTag("RsltRsn")]
-    public IsoMax35Text? ResultReason { get; init; }
+    public Max35Text? ResultReason { get; init; }
 }

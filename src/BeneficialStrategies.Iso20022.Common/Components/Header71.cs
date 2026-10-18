@@ -28,14 +28,14 @@ public record Header71
     /// </summary>
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// Exchange Identification.
     /// </summary>
     [DisplayName("Exchange Identification")]
     [IsoXmlTag("XchgId")]
-    public IsoMax35Text? ExchangeIdentification { get; init; }
+    public Max35Text? ExchangeIdentification { get; init; }
 
     /// <summary>
     /// Initiating Party.
@@ -56,7 +56,7 @@ public record Header71
     /// </summary>
     [DisplayName("Protocol Version")]
     [IsoXmlTag("PrtcolVrsn")]
-    public required IsoMax2048Text ProtocolVersion { get; init; }
+    public required Max2048Text ProtocolVersion { get; init; }
 
     /// <summary>
     /// Recipient Party.
@@ -70,7 +70,7 @@ public record Header71
     /// </summary>
     [DisplayName("Re Transmission Counter")]
     [IsoXmlTag("ReTrnsmssnCntr")]
-    public IsoMax3NumericText? ReTransmissionCounter { get; init; }
+    public Max3NumericText? ReTransmissionCounter { get; init; }
 
     /// <summary>
     /// Traceability.

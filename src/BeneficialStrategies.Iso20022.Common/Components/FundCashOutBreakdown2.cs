@@ -39,7 +39,7 @@ public record FundCashOutBreakdown2
     [DisplayName("New Amount Indicator")]
     [IsoXmlTag("NewAmtInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? NewAmountIndicator { get; init; }
+    public YesNoIndicator? NewAmountIndicator { get; init; }
 
     /// <summary>
     /// Breakdown of the cash movements out of a fund by transaction type, eg, redemption, switch-out.
@@ -57,7 +57,7 @@ public record FundCashOutBreakdown2
     [IsoXmlTag("XtndedInvstmtFndTxOutTp")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoExtended350Code ExtendedInvestmentFundTransactionOutType { get; init; }
+    public required Extended350Code ExtendedInvestmentFundTransactionOutType { get; init; }
 
     /// <summary>
     /// Breakdown of the cash movements into a fund by order type, eg, order by quantity of units or amount of money.
@@ -75,7 +75,7 @@ public record FundCashOutBreakdown2
     [IsoXmlTag("XtndedOrgnlOrdrQtyTp")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoExtended350Code ExtendedOriginalOrderQuantityType { get; init; }
+    public required Extended350Code ExtendedOriginalOrderQuantityType { get; init; }
 
     /// <summary>
     /// Charge for the placement of an order.

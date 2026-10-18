@@ -24,7 +24,7 @@ public record ReportingExemption1
     [IsoXmlTag("Rsn")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public required IsoMax4Text Reason { get; init; }
+    public required Max4Text Reason { get; init; }
 
     /// <summary>
     /// Textual description of applicable exemption.
@@ -34,5 +34,5 @@ public record ReportingExemption1
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max1000Text)]
     [StringLength(maximumLength: 1000, MinimumLength = 1)]
-    public IsoMax1000Text? Description { get; init; }
+    public Max1000Text? Description { get; init; }
 }

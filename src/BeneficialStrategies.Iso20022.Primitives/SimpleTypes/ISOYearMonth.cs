@@ -19,7 +19,7 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 /// composite <c>(Year, Month)</c> pair, which still needs <see cref="IIsoCompositeSimpleValue"/>
 /// since the generic per-<c>T</c> leaf formatter can't reconstruct <c>"YYYY-MM"</c> from a tuple's
 /// default <see cref="object.ToString"/> (e.g. <c>"(2026, 8)"</c>). Before this type existed,
-/// <c>IsoISOYearMonth</c> was aliased to <see cref="System.UInt16"/>, which cannot hold a
+/// <c>ISOYearMonth</c> was aliased to <see cref="System.UInt16"/>, which cannot hold a
 /// "YYYY-MM"-shaped value at all — UInt16's own maximum (65535) is smaller than even a single
 /// plausible <c>YYYYMM</c> encoding (e.g. 202608).
 /// </remarks>

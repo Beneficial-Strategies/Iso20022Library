@@ -24,7 +24,7 @@ public record Acquirer8
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Software version of the application.
@@ -34,5 +34,5 @@ public record Acquirer8
     [IsoXmlTag("ApplVrsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ApplicationVersion { get; init; }
+    public Max35Text? ApplicationVersion { get; init; }
 }

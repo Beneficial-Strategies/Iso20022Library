@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Number24Choice
         /// </summary>
         [IsoXmlTag("NbId")]
         [IsoSimpleType(IsoSimpleType.Max4NumericText)]
-        public required IsoMax4NumericText Value { get; init; }
+        public required Max4NumericText Value { get; init; }
     }
 }

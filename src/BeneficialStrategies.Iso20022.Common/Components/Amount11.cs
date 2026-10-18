@@ -32,7 +32,7 @@ public record Amount11
     [IsoXmlTag("OthrTpOfChrg")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherTypeOfCharge { get; init; }
+    public Max35Text? OtherTypeOfCharge { get; init; }
 
     /// <summary>
     /// Contains the amount.
@@ -49,5 +49,5 @@ public record Amount11
     [DisplayName("Credit Indicator")]
     [IsoXmlTag("CdtInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CreditIndicator { get; init; }
+    public TrueFalseIndicator? CreditIndicator { get; init; }
 }

@@ -42,7 +42,7 @@ public record QuantityAndAccount115
     /// </summary>
     [DisplayName("Denomination Choice")]
     [IsoXmlTag("DnmtnChc")]
-    public IsoMax210Text? DenominationChoice_ { get; init; }
+    public Max210Text? DenominationChoice_ { get; init; }
 
     /// <summary>
     /// Previously Settled Amount.

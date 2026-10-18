@@ -22,7 +22,7 @@ public record RelatedSettlementInstruction3
     [IsoId("_7U25IbbjEe-NMoTZ6Byg6A")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
-    public IsoMax35Text? MarketInfrastructureTransactionIdentification { get; init; }
+    public Max35Text? MarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of the transaction assigned by the processor of the instruction.
@@ -30,7 +30,7 @@ public record RelatedSettlementInstruction3
     [IsoId("_NPJ7gbbkEe-NMoTZ6Byg6A")]
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
-    public IsoMax35Text? ProcessorTransactionIdentification { get; init; }
+    public Max35Text? ProcessorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique Transaction Identifier (UTI) as agreed with the other counterparty.
@@ -38,7 +38,7 @@ public record RelatedSettlementInstruction3
     [IsoId("_34k1QN8AEe-NrtAAlrBEgQ")]
     [DisplayName("Unique Transaction Identifier")]
     [IsoXmlTag("UnqTxIdr")]
-    public IsoUTIIdentifier? UniqueTransactionIdentifier { get; init; }
+    public UTIIdentifier? UniqueTransactionIdentifier { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the related settlement instruction assigned by the account holder.
@@ -46,7 +46,7 @@ public record RelatedSettlementInstruction3
     [IsoId("_VkcygbbkEe-NMoTZ6Byg6A")]
     [DisplayName("Related Settlement Instruction Identification")]
     [IsoXmlTag("RltdSttlmInstrId")]
-    public IsoMax35Text? RelatedSettlementInstructionIdentification { get; init; }
+    public Max35Text? RelatedSettlementInstructionIdentification { get; init; }
 
     /// <summary>
     /// Specifies if the movement on a securities account results from a deliver or a receive instruction.

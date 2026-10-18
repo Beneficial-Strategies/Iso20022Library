@@ -22,7 +22,7 @@ public record SwitchRedemptionLegOrder7
     [IsoId("fc3f78a9-lgid-0001-0001-df34d88caf54")]
     [DisplayName("Leg Identification")]
     [IsoXmlTag("LegId")]
-    public IsoMax35Text? LegIdentification { get; init; }
+    public Max35Text? LegIdentification { get; init; }
 
     /// <summary>
     /// Investment fund class related to the redemption leg of the order.
@@ -102,7 +102,7 @@ public record SwitchRedemptionLegOrder7
     [IsoId("fc3f78a9-phyd-0001-0011-df34d88caf54")]
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
-    public required IsoYesNoIndicator PhysicalDeliveryIndicator { get; init; }
+    public required YesNoIndicator PhysicalDeliveryIndicator { get; init; }
 
     /// <summary>
     /// Information related to the physical delivery of the securities.
@@ -126,7 +126,7 @@ public record SwitchRedemptionLegOrder7
     [IsoId("fc3f78a9-nsts-0001-0014-df34d88caf54")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
-    public IsoMax350Text? NonStandardSettlementInformation { get; init; }
+    public Max350Text? NonStandardSettlementInformation { get; init; }
 
     /// <summary>
     /// Part of an investor's retained subscription amount that is returned by the fund in order to reimburse preliminary incentive/performance fees.

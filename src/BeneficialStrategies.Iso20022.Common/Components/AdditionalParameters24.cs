@@ -40,5 +40,5 @@ public record AdditionalParameters24
     [IsoXmlTag("PrvsPrtlConfId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PreviousPartialConfirmationIdentification { get; init; }
+    public Max35Text? PreviousPartialConfirmationIdentification { get; init; }
 }

@@ -46,5 +46,5 @@ public record VehicleRentalAdditionalAmount1
     [IsoId("_SGrjKVN8EfC0lMwgjvMClw")]
     [DisplayName("Customer Notified")]
     [IsoXmlTag("CstmrNtfd")]
-    public IsoTrueFalseIndicator? CustomerNotified { get; init; }
+    public TrueFalseIndicator? CustomerNotified { get; init; }
 }

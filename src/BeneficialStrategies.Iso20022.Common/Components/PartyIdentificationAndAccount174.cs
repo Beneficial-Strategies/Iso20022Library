@@ -40,7 +40,7 @@ public record PartyIdentificationAndAccount174
     [IsoXmlTag("PrcgId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? ProcessingIdentification { get; init; }
+    public RestrictedFINXMax16Text? ProcessingIdentification { get; init; }
 
     /// <summary>
     /// Alternate identification for a party.

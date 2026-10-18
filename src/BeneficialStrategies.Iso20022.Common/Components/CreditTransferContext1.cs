@@ -21,7 +21,7 @@ public record CreditTransferContext1
     /// </summary>
     [DisplayName("Automatic Notification Of Cash Movement")]
     [IsoXmlTag("AutomtcNtfctnOfCshMvmnt")]
-    public IsoTrueFalseIndicator? AutomaticNotificationOfCashMovement { get; init; }
+    public TrueFalseIndicator? AutomaticNotificationOfCashMovement { get; init; }
 
     /// <summary>
     /// Creditor.
@@ -70,12 +70,12 @@ public record CreditTransferContext1
     /// </summary>
     [DisplayName("System To Notify")]
     [IsoXmlTag("SysToNtfy")]
-    public IsoMax1025Text? SystemToNotify { get; init; }
+    public Max1025Text? SystemToNotify { get; init; }
 
     /// <summary>
     /// Wait For Notification Before Ending.
     /// </summary>
     [DisplayName("Wait For Notification Before Ending")]
     [IsoXmlTag("WaitForNtfctnBfrEndg")]
-    public IsoTrueFalseIndicator? WaitForNotificationBeforeEnding { get; init; }
+    public TrueFalseIndicator? WaitForNotificationBeforeEnding { get; init; }
 }

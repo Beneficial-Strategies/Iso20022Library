@@ -25,7 +25,7 @@ public record Cheque15
     [IsoXmlTag("InstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? InstructionIdentification { get; init; }
+    public Max35Text? InstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original instructing party for the original instructed party, to unambiguously identify the original instruction.
@@ -35,7 +35,7 @@ public record Cheque15
     [IsoXmlTag("OrgnlInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for a cheque as assigned by the agent.
@@ -45,7 +45,7 @@ public record Cheque15
     [IsoXmlTag("ChqNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ChequeNumber { get; init; }
+    public required Max35Text ChequeNumber { get; init; }
 
     /// <summary>
     /// Date when the cheque has been issued by the payer.
@@ -54,7 +54,7 @@ public record Cheque15
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate IssueDate { get; init; }
+    public required DateOnly IssueDate { get; init; }
 
     /// <summary>
     /// Date after which a cheque is no longer valid.
@@ -67,7 +67,7 @@ public record Cheque15
     [DisplayName("Stale Date")]
     [IsoXmlTag("StlDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? StaleDate { get; init; }
+    public DateOnly? StaleDate { get; init; }
 
     /// <summary>
     /// Specifies the amount of the cheque to be paid to the payee.

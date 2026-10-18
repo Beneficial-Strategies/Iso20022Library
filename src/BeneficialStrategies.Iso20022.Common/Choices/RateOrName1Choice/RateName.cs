@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateOrName1Choice
         [IsoXmlTag("Issr")]
         [IsoSimpleType(IsoSimpleType.Max8Text)]
         [StringLength(maximumLength: 8, MinimumLength = 1)]
-        public IsoMax8Text? Issuer { get; init; }
+        public Max8Text? Issuer { get; init; }
 
         /// <summary>
         /// Rate Name specifies the reference rate or basis rate on which a variable rate is based (ex: EONIA, EURIBOR, LIBOR, FEFUND, EURREPO).
@@ -32,6 +32,6 @@ namespace BeneficialStrategies.Iso20022.Choices.RateOrName1Choice
         [IsoXmlTag("RateNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text Value { get; init; }
+        public required Max35Text Value { get; init; }
     }
 }

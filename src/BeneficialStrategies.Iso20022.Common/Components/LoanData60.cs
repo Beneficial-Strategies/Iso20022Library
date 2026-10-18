@@ -23,7 +23,7 @@ public record LoanData60
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate EventDate { get; init; }
+    public required DateOnly EventDate { get; init; }
 
     /// <summary>
     /// Unique trade Identifier (UTI) as agreed with the other counterparty.
@@ -33,7 +33,7 @@ public record LoanData60
     [IsoXmlTag("UnqTradIdr")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoMax52Text? UniqueTradeIdentifier { get; init; }
+    public Max52Text? UniqueTradeIdentifier { get; init; }
 
     /// <summary>
     /// Reference to master agreement under which the counterparties concluded a documented transaction.

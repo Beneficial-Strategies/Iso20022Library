@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractRegistrationReference1Ch
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? Identification { get; init; }
+        public Max35Text? Identification { get; init; }
 
         /// <summary>
         /// Date of issuance of the document.
@@ -33,6 +33,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractRegistrationReference1Ch
         [DisplayName("Date Of Issue")]
         [IsoXmlTag("DtOfIsse")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate DateOfIssue { get; init; }
+        public required DateOnly DateOfIssue { get; init; }
     }
 }

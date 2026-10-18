@@ -24,7 +24,7 @@ public record PartyIdentification266
     [IsoXmlTag("PtyNm")]
     [IsoSimpleType(IsoSimpleType.Max34Text)]
     [StringLength(maximumLength: 34, MinimumLength = 1)]
-    public IsoMax34Text? PartyName { get; init; }
+    public Max34Text? PartyName { get; init; }
 
     /// <summary>
     /// Identification of the party expressed as a BIC and an optional alternative identifier.
@@ -42,7 +42,7 @@ public record PartyIdentification266
     [IsoXmlTag("AcctNb")]
     [IsoSimpleType(IsoSimpleType.Max34Text)]
     [StringLength(maximumLength: 34, MinimumLength = 1)]
-    public IsoMax34Text? AccountNumber { get; init; }
+    public Max34Text? AccountNumber { get; init; }
 
     /// <summary>
     /// Provides the party&apos;s address.
@@ -52,7 +52,7 @@ public record PartyIdentification266
     [IsoXmlTag("Adr")]
     [IsoSimpleType(IsoSimpleType.Max105Text)]
     [StringLength(maximumLength: 105, MinimumLength = 1)]
-    public IsoMax105Text? Address { get; init; }
+    public Max105Text? Address { get; init; }
 
     /// <summary>
     /// Choice of a clearing system identifier.
@@ -69,5 +69,5 @@ public record PartyIdentification266
     [DisplayName("Legal Entity Identifier")]
     [IsoXmlTag("LglNttyIdr")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? LegalEntityIdentifier { get; init; }
+    public LEIIdentifier? LegalEntityIdentifier { get; init; }
 }

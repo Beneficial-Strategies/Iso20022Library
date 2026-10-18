@@ -22,7 +22,7 @@ public record AgentNotificationCancellationIdentificationAndStatus2
     [IsoId("c540e535-3ef8-407a-9b2c-c8a6f5a478e9")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Date/time of the creation of the document.
@@ -30,7 +30,7 @@ public record AgentNotificationCancellationIdentificationAndStatus2
     [IsoId("250b0b22-8fb8-4265-bda2-35b8eb25590e")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
-    public IsoISODateTime? CreationDateTime { get; init; }
+    public ISODateTime? CreationDateTime { get; init; }
 
     /// <summary>
     /// Status of the corporate action cancellation request sent by the agent.

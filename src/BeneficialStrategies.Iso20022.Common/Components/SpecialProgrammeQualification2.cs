@@ -28,5 +28,5 @@ public record SpecialProgrammeQualification2
     /// </summary>
     [DisplayName("Programme")]
     [IsoXmlTag("Prgrmm")]
-    public IsoMax35Text? Programme { get; init; }
+    public Max35Text? Programme { get; init; }
 }

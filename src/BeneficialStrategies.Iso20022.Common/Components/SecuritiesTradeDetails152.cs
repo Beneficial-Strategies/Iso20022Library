@@ -22,7 +22,7 @@ public record SecuritiesTradeDetails152
     [IsoId("b2b3dc3e-9bbc-466b-a362-6ac611769150")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
-    public IsoMax35Text? AccountOwnerTransactionIdentification { get; init; }
+    public Max35Text? AccountOwnerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of the transaction as known by the account servicer.
@@ -30,7 +30,7 @@ public record SecuritiesTradeDetails152
     [IsoId("93286a66-80b1-4e26-894d-dcb51cf15b0f")]
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
-    public IsoMax35Text? AccountServicerTransactionIdentification { get; init; }
+    public Max35Text? AccountServicerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
@@ -38,7 +38,7 @@ public record SecuritiesTradeDetails152
     [IsoId("6b506da7-b008-4e48-8465-b284bce54f63")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
-    public IsoMax35Text? MarketInfrastructureTransactionIdentification { get; init; }
+    public Max35Text? MarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of a counterparty transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
@@ -46,7 +46,7 @@ public record SecuritiesTradeDetails152
     [IsoId("3ddadedc-a3b0-4e0d-b9c0-1edfd4657b7f")]
     [DisplayName("Counterparty Market Infrastructure Transaction Identification")]
     [IsoXmlTag("CtrPtyMktInfrstrctrTxId")]
-    public IsoMax35Text? CounterpartyMarketInfrastructureTransactionIdentification { get; init; }
+    public Max35Text? CounterpartyMarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of the transaction assigned by the processor of the instruction other than the account owner, the account servicer and the market infrastructure.
@@ -54,7 +54,7 @@ public record SecuritiesTradeDetails152
     [IsoId("3a33b2b9-1a10-492a-81c2-332bf8600111")]
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
-    public IsoMax35Text? ProcessorTransactionIdentification { get; init; }
+    public Max35Text? ProcessorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Reference assigned to the trade by the investor or the trading party. This reference will be used throughout the trade life cycle to access/update the trade details.
@@ -62,7 +62,7 @@ public record SecuritiesTradeDetails152
     [IsoId("28ac7db4-26f9-46e3-ac82-9bbe93cbeda0")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    public SimpleValueList<IsoMax35Text> TradeIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> TradeIdentification { get; init; } = [];
 
     /// <summary>
     /// Unique Transaction Identifier (UTI) as agreed with the other counterparty.
@@ -70,7 +70,7 @@ public record SecuritiesTradeDetails152
     [IsoId("09e2f61d-487a-402c-a824-8afd95333481")]
     [DisplayName("Unique Transaction Identifier")]
     [IsoXmlTag("UnqTxIdr")]
-    public IsoUTIIdentifier? UniqueTransactionIdentifier { get; init; }
+    public UTIIdentifier? UniqueTransactionIdentifier { get; init; }
 
     /// <summary>
     /// Unique reference agreed upon by the two trade counterparties to identify the trade.
@@ -78,7 +78,7 @@ public record SecuritiesTradeDetails152
     [IsoId("fd7f5df4-744d-4b90-b7e9-52b8a8c7b667")]
     [DisplayName("Common Identification")]
     [IsoXmlTag("CmonId")]
-    public IsoMax35Text? CommonIdentification { get; init; }
+    public Max35Text? CommonIdentification { get; init; }
 
     /// <summary>
     /// Collective reference identifying a set of messages.
@@ -86,7 +86,7 @@ public record SecuritiesTradeDetails152
     [IsoId("b60f81be-1f0c-4859-8d5e-ff254ebed89c")]
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
-    public IsoMax35Text? PoolIdentification { get; init; }
+    public Max35Text? PoolIdentification { get; init; }
 
     /// <summary>
     /// Unambiguous identification of a collateral transaction as assigned by the instructing party.
@@ -94,7 +94,7 @@ public record SecuritiesTradeDetails152
     [IsoId("e2b1f421-1e42-4967-86fb-f7263713320f")]
     [DisplayName("Collateral Transaction Identification")]
     [IsoXmlTag("CollTxId")]
-    public SimpleValueList<IsoMax35Text> CollateralTransactionIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> CollateralTransactionIdentification { get; init; } = [];
 
     /// <summary>
     /// Specifies if the movement on a securities account results from a deliver or a receive instruction.
@@ -166,7 +166,7 @@ public record SecuritiesTradeDetails152
     [IsoId("2bf40498-f2dd-4c73-aaa3-eb0c22b89fe7")]
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
-    public IsoMax3Number? NumberOfDaysAccrued { get; init; }
+    public Max3Number? NumberOfDaysAccrued { get; init; }
 
     /// <summary>
     /// Financial instrument representing a sum of rights of the investor vis-a-vis the issuer.

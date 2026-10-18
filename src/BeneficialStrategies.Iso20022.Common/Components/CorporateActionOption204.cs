@@ -63,7 +63,7 @@ public record CorporateActionOption204
     [DisplayName("Eligible For Collateral Indicator")]
     [IsoXmlTag("ElgblForCollInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? EligibleForCollateralIndicator { get; init; }
+    public YesNoIndicator? EligibleForCollateralIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether there is a solicitation fee on the event. This fee is paid by the soliciting dealer.
@@ -72,7 +72,7 @@ public record CorporateActionOption204
     [DisplayName("Solicitation Dealer Fee Indicator")]
     [IsoXmlTag("SlctnDealrFeeInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? SolicitationDealerFeeIndicator { get; init; }
+    public YesNoIndicator? SolicitationDealerFeeIndicator { get; init; }
 
     /// <summary>
     /// Account servicer is instructed to buy the indicated currency after the receipt of cash proceeds.
@@ -146,7 +146,7 @@ public record CorporateActionOption204
     [IsoXmlTag("ShrhldrNb")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax25Text)]
     [StringLength(maximumLength: 25, MinimumLength = 1)]
-    public IsoRestrictedFINXMax25Text? ShareholderNumber { get; init; }
+    public RestrictedFINXMax25Text? ShareholderNumber { get; init; }
 
     /// <summary>
     /// Provides additional information.

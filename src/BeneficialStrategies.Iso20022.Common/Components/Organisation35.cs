@@ -24,7 +24,7 @@ public record Organisation35
     [IsoXmlTag("FullLglNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text FullLegalName { get; init; }
+    public required Max350Text FullLegalName { get; init; }
 
     /// <summary>
     /// Name used by a business for commercial purposes, although its registered legal name, used for contracts and other formal situations, may be another.
@@ -34,7 +34,7 @@ public record Organisation35
     [IsoXmlTag("TradgNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? TradingName { get; init; }
+    public Max350Text? TradingName { get; init; }
 
     /// <summary>
     /// Status of a legal entity.
@@ -51,7 +51,7 @@ public record Organisation35
     [DisplayName("Established Date")]
     [IsoXmlTag("EstblishdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? EstablishedDate { get; init; }
+    public DateOnly? EstablishedDate { get; init; }
 
     /// <summary>
     /// Registration number for the organisation.
@@ -61,7 +61,7 @@ public record Organisation35
     [IsoXmlTag("RegnNb")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? RegistrationNumber { get; init; }
+    public Max70Text? RegistrationNumber { get; init; }
 
     /// <summary>
     /// Country in which the organisation is registered.
@@ -78,7 +78,7 @@ public record Organisation35
     [DisplayName("Registration Date")]
     [IsoXmlTag("RegnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RegistrationDate { get; init; }
+    public DateOnly? RegistrationDate { get; init; }
 
     /// <summary>
     /// Taxation unique reference number.
@@ -88,7 +88,7 @@ public record Organisation35
     [IsoXmlTag("TaxtnIdNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TaxationIdentificationNumber { get; init; }
+    public Max35Text? TaxationIdentificationNumber { get; init; }
 
     /// <summary>
     /// Country of taxation of an individual person or an organisation.
@@ -113,7 +113,7 @@ public record Organisation35
     [DisplayName("Board Resolution Indicator")]
     [IsoXmlTag("BrdRsltnInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? BoardResolutionIndicator { get; init; }
+    public TrueFalseIndicator? BoardResolutionIndicator { get; init; }
 
     /// <summary>
     /// Address where the business activity is taking place.

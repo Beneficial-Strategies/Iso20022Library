@@ -23,7 +23,7 @@ public record CardPaymentTransaction25
     [DisplayName("Transaction Capture")]
     [IsoXmlTag("TxCaptr")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? TransactionCapture { get; init; }
+    public TrueFalseIndicator? TransactionCapture { get; init; }
 
     /// <summary>
     /// Type of transaction being undertaken for the main service.
@@ -57,7 +57,7 @@ public record CardPaymentTransaction25
     [IsoXmlTag("MrchntCtgyCd")]
     [IsoSimpleType(IsoSimpleType.Min3Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 3)]
-    public required IsoMin3Max4Text MerchantCategoryCode { get; init; }
+    public required Min3Max4Text MerchantCategoryCode { get; init; }
 
     /// <summary>
     /// Global reference of the sale transaction for the sale system.
@@ -67,7 +67,7 @@ public record CardPaymentTransaction25
     [IsoXmlTag("SaleRefId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SaleReferenceIdentification { get; init; }
+    public Max35Text? SaleReferenceIdentification { get; init; }
 
     /// <summary>
     /// Unique identification of the transaction assigned by the POI (Point Of Interaction).
@@ -92,7 +92,7 @@ public record CardPaymentTransaction25
     [DisplayName("Transaction Success")]
     [IsoXmlTag("TxSucss")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator TransactionSuccess { get; init; }
+    public required TrueFalseIndicator TransactionSuccess { get; init; }
 
     /// <summary>
     /// Notify that a previous transaction has to be reversed if this original transaction has been appoved by the acquirer.
@@ -101,7 +101,7 @@ public record CardPaymentTransaction25
     [DisplayName("Reversal")]
     [IsoXmlTag("Rvsl")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? Reversal { get; init; }
+    public TrueFalseIndicator? Reversal { get; init; }
 
     /// <summary>
     /// Indicate that the acceptor has forced the transaction in spite of the authorisation result (online or offline), or incident to complete the transaction.
@@ -110,7 +110,7 @@ public record CardPaymentTransaction25
     [DisplayName("Merchant Override")]
     [IsoXmlTag("MrchntOvrrd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? MerchantOverride { get; init; }
+    public TrueFalseIndicator? MerchantOverride { get; init; }
 
     /// <summary>
     /// List of incidents during the transaction.
@@ -128,7 +128,7 @@ public record CardPaymentTransaction25
     [IsoXmlTag("InitrTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? InitiatorTransactionIdentification { get; init; }
+    public Max35Text? InitiatorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of the transaction assigned by the recipient party for the initiating party.
@@ -138,7 +138,7 @@ public record CardPaymentTransaction25
     [IsoXmlTag("RcptTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RecipientTransactionIdentification { get; init; }
+    public Max35Text? RecipientTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification of the reconciliation period between the acceptor and the acquirer. This identification might be linked to the identification of the settlement for further verification by the merchant.
@@ -148,7 +148,7 @@ public record CardPaymentTransaction25
     [IsoXmlTag("RcncltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReconciliationIdentification { get; init; }
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Interchange information related to the card scheme.
@@ -158,7 +158,7 @@ public record CardPaymentTransaction25
     [IsoXmlTag("IntrchngData")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? InterchangeData { get; init; }
+    public Max35Text? InterchangeData { get; init; }
 
     /// <summary>
     /// Details of the transaction.
@@ -190,5 +190,5 @@ public record CardPaymentTransaction25
     [IsoId("_nBSmpTJIEeOkpIB9tKITlw")]
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
-    public SimpleValueList<IsoMax70Text> AdditionalTransactionData { get; init; } = [];
+    public SimpleValueList<Max70Text> AdditionalTransactionData { get; init; } = [];
 }

@@ -47,7 +47,7 @@ public record AggregateBalancePerSafekeepingPlace3
     [DisplayName("Days Accrued")]
     [IsoXmlTag("DaysAcrd")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? DaysAccrued { get; init; }
+    public Number? DaysAccrued { get; init; }
 
     /// <summary>
     /// Total value of a balance of the securities account for a specific financial instrument, expressed in one or more currencies.
@@ -80,7 +80,7 @@ public record AggregateBalancePerSafekeepingPlace3
     [DisplayName("Accrued Interest Amount Sign")]
     [IsoXmlTag("AcrdIntrstAmtSgn")]
     [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
-    public IsoPlusOrMinusIndicator? AccruedInterestAmountSign { get; init; }
+    public PlusOrMinusIndicator? AccruedInterestAmountSign { get; init; }
 
     /// <summary>
     /// Value of a security, as booked in an account. Book value is often different from the current market value of the security.

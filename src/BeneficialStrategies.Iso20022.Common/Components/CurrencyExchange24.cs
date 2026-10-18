@@ -47,7 +47,7 @@ public record CurrencyExchange24
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public required IsoBaseOneRate ExchangeRate { get; init; }
+    public required BaseOneRate ExchangeRate { get; init; }
 
     /// <summary>
     /// Unique identification to unambiguously identify the foreign exchange contract.
@@ -57,7 +57,7 @@ public record CurrencyExchange24
     [IsoXmlTag("CtrctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ContractIdentification { get; init; }
+    public Max35Text? ContractIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which an exchange rate is quoted.
@@ -66,7 +66,7 @@ public record CurrencyExchange24
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? QuotationDate { get; init; }
+    public ISODateTime? QuotationDate { get; init; }
 
     /// <summary>
     /// Expresses the ratio between the base of the denomination of the Unit Currency to the base of the denomination of the Quoted Currency.
@@ -75,5 +75,5 @@ public record CurrencyExchange24
     [DisplayName("Exchange Rate Base")]
     [IsoXmlTag("XchgRateBase")]
     [IsoSimpleType(IsoSimpleType.PositiveNumber)]
-    public IsoPositiveNumber? ExchangeRateBase { get; init; }
+    public PositiveNumber? ExchangeRateBase { get; init; }
 }

@@ -11,6 +11,6 @@ namespace BeneficialStrategies.Iso20022.Choices.AmountOrCoefficientPrice2Choice
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Coeff")]
-        public required IsoDecimalNumber Value { get; init; }
+        public required DecimalNumber Value { get; init; }
     }
 }

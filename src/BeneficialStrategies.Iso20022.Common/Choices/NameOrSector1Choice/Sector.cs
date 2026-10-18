@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.NameOrSector1Choice
         /// </summary>
         [IsoXmlTag("Sctr")]
         [IsoSimpleType(IsoSimpleType.SNA2008SectorIdentifier)]
-        public required IsoSNA2008SectorIdentifier Value { get; init; }
+        public required SNA2008SectorIdentifier Value { get; init; }
     }
 }

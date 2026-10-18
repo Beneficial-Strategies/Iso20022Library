@@ -24,7 +24,7 @@ public record Customer7
     [IsoXmlTag("CstmrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CustomerIdentification { get; init; }
+    public Max35Text? CustomerIdentification { get; init; }
 
     /// <summary>
     /// Identifies the specific customer when multiple customers are associated with the same account.
@@ -33,7 +33,7 @@ public record Customer7
     [DisplayName("Customer Designation")]
     [IsoXmlTag("CstmrDsgnt")]
     [IsoSimpleType(IsoSimpleType.Max2NumericText)]
-    public IsoMax2NumericText? CustomerDesignation { get; init; }
+    public Max2NumericText? CustomerDesignation { get; init; }
 
     /// <summary>
     /// Name of the financial customer.
@@ -90,7 +90,7 @@ public record Customer7
     [DisplayName("Date Of Birth")]
     [IsoXmlTag("DtOfBirth")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DateOfBirth { get; init; }
+    public DateOnly? DateOfBirth { get; init; }
 
     /// <summary>
     /// Contains text fields in the local language.

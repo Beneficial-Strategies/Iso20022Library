@@ -22,7 +22,7 @@ public record IndividualOrderStatusAndReason10
     [IsoId("d962f027-e726-40b7-93ba-c692ff5affe1")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for the order, as assigned by the instructing party.
@@ -30,7 +30,7 @@ public record IndividualOrderStatusAndReason10
     [IsoId("61ca5205-c205-4bb9-9ca6-74a167304b40")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
-    public required IsoMax35Text OrderReference { get; init; }
+    public required Max35Text OrderReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor's identification of the order.
@@ -38,7 +38,7 @@ public record IndividualOrderStatusAndReason10
     [IsoId("9ef316b7-c706-46ff-96a6-74dd00f4ebc5")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
-    public IsoMax35Text? ClientReference { get; init; }
+    public Max35Text? ClientReference { get; init; }
 
     /// <summary>
     /// Unambiguous identification of a random or semi-random number used once (NONCE) generated in the frame of a cryptographic communication.
@@ -46,7 +46,7 @@ public record IndividualOrderStatusAndReason10
     [IsoId("2d1f25f7-77af-4cad-ba36-014bbc084bb2")]
     [DisplayName("Nonce Identification")]
     [IsoXmlTag("NonceId")]
-    public IsoMax35Text? NonceIdentification { get; init; }
+    public Max35Text? NonceIdentification { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for the order cancellation, as assigned by the instructing party.
@@ -54,7 +54,7 @@ public record IndividualOrderStatusAndReason10
     [IsoId("a7244492-eb80-4de1-839d-73f9b981de87")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
-    public IsoMax35Text? CancellationReference { get; init; }
+    public Max35Text? CancellationReference { get; init; }
 
     /// <summary>
     /// Cancellation status of the order cancellation.

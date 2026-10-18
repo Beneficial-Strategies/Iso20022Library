@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketIdentification5Choice
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("Desc")]
-        public required IsoMax140Text Value { get; init; }
+        public required Max140Text Value { get; init; }
     }
 }

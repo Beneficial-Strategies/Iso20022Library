@@ -24,7 +24,7 @@ public record InvestmentAccount50
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Status of the account, for example, enabled or deleted.
@@ -50,7 +50,7 @@ public record InvestmentAccount50
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Name { get; init; }
+    public Max35Text? Name { get; init; }
 
     /// <summary>
     /// Supplementary registration information applying to a specific block of units for dealing and reporting purposes. The supplementary registration information may be used when all the units are registered, for example, to a funds supermarket, but holdings for each investor have to reconciled individually.
@@ -60,7 +60,7 @@ public record InvestmentAccount50
     [IsoXmlTag("Dsgnt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Designation { get; init; }
+    public Max35Text? Designation { get; init; }
 
     /// <summary>
     /// Type of account.
@@ -158,7 +158,7 @@ public record InvestmentAccount50
     [IsoXmlTag("AcmltnRghtRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccumulationRightReference { get; init; }
+    public Max35Text? AccumulationRightReference { get; init; }
 
     /// <summary>
     /// Number of account owners or related parties required to authorise transactions on the account.
@@ -167,7 +167,7 @@ public record InvestmentAccount50
     [DisplayName("Required Signatories Number")]
     [IsoXmlTag("ReqrdSgntriesNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? RequiredSignatoriesNumber { get; init; }
+    public Number? RequiredSignatoriesNumber { get; init; }
 
     /// <summary>
     /// Name of the investment fund family.
@@ -177,7 +177,7 @@ public record InvestmentAccount50
     [IsoXmlTag("FndFmlyNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? FundFamilyName { get; init; }
+    public Max350Text? FundFamilyName { get; init; }
 
     /// <summary>
     /// Detailed information about the investment fund or security associated to the account.
@@ -314,7 +314,7 @@ public record InvestmentAccount50
     [DisplayName("Negative Indicator")]
     [IsoXmlTag("NegInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? NegativeIndicator { get; init; }
+    public YesNoIndicator? NegativeIndicator { get; init; }
 
     /// <summary>
     /// Order in which securities are moved from the account.

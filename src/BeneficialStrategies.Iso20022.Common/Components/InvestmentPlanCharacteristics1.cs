@@ -39,7 +39,7 @@ public record InvestmentPlanCharacteristics1
     [DisplayName("Total Number Of Instalments")]
     [IsoXmlTag("TtlNbOfInstlmts")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? TotalNumberOfInstalments { get; init; }
+    public Number? TotalNumberOfInstalments { get; init; }
 
     /// <summary>
     /// Minimum amount of the periodical payments. (If there is no maximum, then &apos;0&apos; must be specified for the Amount or Units.)
@@ -56,7 +56,7 @@ public record InvestmentPlanCharacteristics1
     [DisplayName("Plan Continuation")]
     [IsoXmlTag("PlanConttn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PlanContinuation { get; init; }
+    public YesNoIndicator? PlanContinuation { get; init; }
 
     /// <summary>
     /// Indicates whether it is possible to subscribe to additional instalments over and above that permitted by the savings plan frequency.
@@ -65,7 +65,7 @@ public record InvestmentPlanCharacteristics1
     [DisplayName("Additional Subscription")]
     [IsoXmlTag("AddtlSbcpt")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AdditionalSubscription { get; init; }
+    public YesNoIndicator? AdditionalSubscription { get; init; }
 
     /// <summary>
     /// Indicates whether any additional instalments will reduce the period of the life of the savings investment plan.
@@ -74,7 +74,7 @@ public record InvestmentPlanCharacteristics1
     [DisplayName("Additional Subscription Function")]
     [IsoXmlTag("AddtlSbcptFctn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AdditionalSubscriptionFunction { get; init; }
+    public YesNoIndicator? AdditionalSubscriptionFunction { get; init; }
 
     /// <summary>
     /// Additional information about the investment plan.

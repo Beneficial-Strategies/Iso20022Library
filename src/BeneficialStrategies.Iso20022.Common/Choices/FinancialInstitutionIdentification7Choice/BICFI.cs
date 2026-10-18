@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
         /// </summary>
         [IsoXmlTag("BICFI")]
         [IsoSimpleType(IsoSimpleType.BICFIIdentifier)]
-        public required IsoBICFIIdentifier Value { get; init; }
+        public required BICFIIdentifier Value { get; init; }
     }
 }

@@ -24,7 +24,7 @@ public record TemporaryServicesLabor1
     [IsoXmlTag("TmSheetNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TimeSheetNumber { get; init; }
+    public Max35Text? TimeSheetNumber { get; init; }
 
     /// <summary>
     /// Contains the date of the end of the billing cycle.
@@ -33,7 +33,7 @@ public record TemporaryServicesLabor1
     [DisplayName("Week Ending")]
     [IsoXmlTag("WkEndg")]
     [IsoSimpleType(IsoSimpleType.Max10NumericText)]
-    public IsoMax10NumericText? WeekEnding { get; init; }
+    public Max10NumericText? WeekEnding { get; init; }
 
     /// <summary>
     /// Contains details of the amount charged.

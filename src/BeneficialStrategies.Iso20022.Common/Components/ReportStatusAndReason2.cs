@@ -25,7 +25,7 @@ public record ReportStatusAndReason2
     [IsoXmlTag("RltdRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text RelatedReference { get; init; }
+    public required Max35Text RelatedReference { get; init; }
 
     /// <summary>
     /// Indicates the status of a report cancellation request message.

@@ -23,7 +23,7 @@ public record CompareLongFraction19DecimalNumber1
     [DisplayName("Value")]
     [IsoXmlTag("Val1")]
     [IsoSimpleType(IsoSimpleType.LongFraction19DecimalNumber)]
-    public IsoLongFraction19DecimalNumber? Value1 { get; init; }
+    public LongFraction19DecimalNumber? Value1 { get; init; }
 
     /// <summary>
     /// Information for the second side of the transaction.
@@ -32,5 +32,5 @@ public record CompareLongFraction19DecimalNumber1
     [DisplayName("Value")]
     [IsoXmlTag("Val2")]
     [IsoSimpleType(IsoSimpleType.LongFraction19DecimalNumber)]
-    public IsoLongFraction19DecimalNumber? Value2 { get; init; }
+    public LongFraction19DecimalNumber? Value2 { get; init; }
 }

@@ -28,7 +28,7 @@ public record IncentivePremium6
     /// </summary>
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax350Text? Description { get; init; }
+    public Max350Text? Description { get; init; }
 
     /// <summary>
     /// Payment Date.

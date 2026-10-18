@@ -56,7 +56,7 @@ public record DeliveringPartiesAndAccount14
     [IsoXmlTag("SctiesSttlmSys")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SecuritiesSettlementSystem { get; init; }
+    public Max35Text? SecuritiesSettlementSystem { get; init; }
 
     /// <summary>
     /// Place where settlement of the securities takes place.

@@ -39,5 +39,5 @@ public record CashCompensation1
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ValueDate { get; init; }
+    public DateOnly? ValueDate { get; init; }
 }

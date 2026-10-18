@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification39Choice
         /// </summary>
         [IsoXmlTag("Card")]
         [IsoSimpleType(IsoSimpleType.Min8Max28NumericText)]
-        public required IsoMin8Max28NumericText Value { get; init; }
+        public required Min8Max28NumericText Value { get; init; }
     }
 }

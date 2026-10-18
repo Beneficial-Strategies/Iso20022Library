@@ -57,7 +57,7 @@ public record ShareholdersIdentificationDisclosureRequestV03 : IOuterRecord
     [IsoXmlTag("IssrDsclsrReqId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text IssuerDisclosureRequestIdentification { get; init; }
+    public required Max35Text IssuerDisclosureRequestIdentification { get; init; }
 
     /// <summary>
     /// Specifies the type of disclosure request.
@@ -75,7 +75,7 @@ public record ShareholdersIdentificationDisclosureRequestV03 : IOuterRecord
     [IsoXmlTag("PrvsDsclsrReqId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PreviousDisclosureRequestIdentification { get; init; }
+    public Max35Text? PreviousDisclosureRequestIdentification { get; init; }
 
     /// <summary>
     /// Indicates whether the request is to be forwarded to and responded by the other intermediaries down the chain of intermediaries or not. If the request is not to be forwarded, the indicator may not be present.
@@ -84,7 +84,7 @@ public record ShareholdersIdentificationDisclosureRequestV03 : IOuterRecord
     [DisplayName("Forward Request Indicator")]
     [IsoXmlTag("FwdReqInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ForwardRequestIndicator { get; init; }
+    public YesNoIndicator? ForwardRequestIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the shareholder identification disclosure response is to be sent back down the chain of intermediaries or directly to the identified response recipient.
@@ -95,7 +95,7 @@ public record ShareholdersIdentificationDisclosureRequestV03 : IOuterRecord
     [DisplayName("Response Through Chain Indicator")]
     [IsoXmlTag("RspnThrghChainInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ResponseThroughChainIndicator { get; init; }
+    public YesNoIndicator? ResponseThroughChainIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the request was initiated by the first intermediary in the custody chain in accordance with SRD II.
@@ -104,7 +104,7 @@ public record ShareholdersIdentificationDisclosureRequestV03 : IOuterRecord
     [DisplayName("Shareholder Rights Directive Indicator")]
     [IsoXmlTag("ShrhldrRghtsDrctvInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ShareholderRightsDirectiveIndicator { get; init; }
+    public YesNoIndicator? ShareholderRightsDirectiveIndicator { get; init; }
 
     /// <summary>
     /// Identifies the financial instrument.
@@ -129,7 +129,7 @@ public record ShareholdersIdentificationDisclosureRequestV03 : IOuterRecord
     [DisplayName("Shares Quantity Threshold")]
     [IsoXmlTag("ShrsQtyThrshld")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? SharesQuantityThreshold { get; init; }
+    public DecimalNumber? SharesQuantityThreshold { get; init; }
 
     /// <summary>
     /// Indicates whether the date from which the shares have been held must be communicated into the disclosure response and according to which method theses dates have to be communicated. The method can be provided either with a predefined code or via a textual description.

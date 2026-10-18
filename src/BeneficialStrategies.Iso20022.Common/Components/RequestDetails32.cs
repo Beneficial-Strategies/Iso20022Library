@@ -91,7 +91,7 @@ public record RequestDetails32
     /// </summary>
     [DisplayName("Retain Indicator")]
     [IsoXmlTag("RtnInd")]
-    public IsoYesNoIndicator? RetainIndicator { get; init; }
+    public YesNoIndicator? RetainIndicator { get; init; }
 
     /// <summary>
     /// Securities RTGS.

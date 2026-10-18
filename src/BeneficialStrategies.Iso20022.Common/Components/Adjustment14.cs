@@ -21,7 +21,7 @@ public record Adjustment14
     /// </summary>
     [DisplayName("Additional Type")]
     [IsoXmlTag("AddtlTp")]
-    public IsoMax35Text? AdditionalType { get; init; }
+    public Max35Text? AdditionalType { get; init; }
 
     /// <summary>
     /// Amount.
@@ -35,63 +35,63 @@ public record Adjustment14
     /// </summary>
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax70Text? Description { get; init; }
+    public Max70Text? Description { get; init; }
 
     /// <summary>
     /// Percentage.
     /// </summary>
     [DisplayName("Percentage")]
     [IsoXmlTag("Pctg")]
-    public IsoPercentageRate? Percentage { get; init; }
+    public PercentageRate? Percentage { get; init; }
 
     /// <summary>
     /// Promotion Code.
     /// </summary>
     [DisplayName("Promotion Code")]
     [IsoXmlTag("PrmtnCd")]
-    public IsoMax35Text? PromotionCode { get; init; }
+    public Max35Text? PromotionCode { get; init; }
 
     /// <summary>
     /// Promotion Coupon Number.
     /// </summary>
     [DisplayName("Promotion Coupon Number")]
     [IsoXmlTag("PrmtnCpnNb")]
-    public IsoMax35Text? PromotionCouponNumber { get; init; }
+    public Max35Text? PromotionCouponNumber { get; init; }
 
     /// <summary>
     /// Promotion Eligibility.
     /// </summary>
     [DisplayName("Promotion Eligibility")]
     [IsoXmlTag("PrmtnElgblty")]
-    public IsoTrueFalseIndicator? PromotionEligibility { get; init; }
+    public TrueFalseIndicator? PromotionEligibility { get; init; }
 
     /// <summary>
     /// Quantity.
     /// </summary>
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
-    public IsoDecimalNumber? Quantity { get; init; }
+    public DecimalNumber? Quantity { get; init; }
 
     /// <summary>
     /// Reason.
     /// </summary>
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public IsoMax35Text? Reason { get; init; }
+    public Max35Text? Reason { get; init; }
 
     /// <summary>
     /// Tax On Original Amount.
     /// </summary>
     [DisplayName("Tax On Original Amount")]
     [IsoXmlTag("TaxOnOrgnlAmt")]
-    public IsoTrueFalseIndicator? TaxOnOriginalAmount { get; init; }
+    public TrueFalseIndicator? TaxOnOriginalAmount { get; init; }
 
     /// <summary>
     /// Type.
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public IsoMax35Text? Type { get; init; }
+    public Max35Text? Type { get; init; }
 
     /// <summary>
     /// Unit Price.

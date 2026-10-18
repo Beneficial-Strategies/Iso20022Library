@@ -46,7 +46,7 @@ public record CreditTransferTransaction73
     [IsoId("d64d5a68-0004-0004-0004-12844122abcc")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
-    public IsoISODate? InterbankSettlementDate { get; init; }
+    public DateOnly? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Indicator of the urgency or order of importance that the instructing party would like the instructed party to apply to the processing of the settlement instruction.
@@ -111,7 +111,7 @@ public record CreditTransferTransaction73
     [IsoId("d64d5a68-0010-0010-0010-12844122abcc")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
-    public IsoBaseOneRate? ExchangeRate { get; init; }
+    public BaseOneRate? ExchangeRate { get; init; }
 
     /// <summary>
     /// Agreed exchange rate between two currencies.

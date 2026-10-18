@@ -35,7 +35,7 @@ public record Cheque18
     /// </summary>
     [DisplayName("Cheque Number")]
     [IsoXmlTag("ChqNb")]
-    public required IsoMax35Text ChequeNumber { get; init; }
+    public required Max35Text ChequeNumber { get; init; }
 
     /// <summary>
     /// Drawer Agent.
@@ -63,21 +63,21 @@ public record Cheque18
     /// </summary>
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
-    public IsoMax35Text? InstructionIdentification { get; init; }
+    public Max35Text? InstructionIdentification { get; init; }
 
     /// <summary>
     /// Issue Date.
     /// </summary>
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
-    public required IsoISODate IssueDate { get; init; }
+    public required DateOnly IssueDate { get; init; }
 
     /// <summary>
     /// Original Instruction Identification.
     /// </summary>
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
-    public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Payee.
@@ -98,5 +98,5 @@ public record Cheque18
     /// </summary>
     [DisplayName("Stale Date")]
     [IsoXmlTag("StlDt")]
-    public IsoISODate? StaleDate { get; init; }
+    public DateOnly? StaleDate { get; init; }
 }

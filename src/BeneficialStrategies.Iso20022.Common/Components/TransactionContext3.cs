@@ -25,7 +25,7 @@ public record TransactionContext3
     [DisplayName("Merchant Category Code")]
     [IsoXmlTag("MrchntCtgyCd")]
     [IsoSimpleType(IsoSimpleType.Exact4NumericText)]
-    public IsoExact4NumericText? MerchantCategoryCode { get; init; }
+    public Exact4NumericText? MerchantCategoryCode { get; init; }
 
     /// <summary>
     /// Identifies the transaction initiator.

@@ -28,14 +28,14 @@ public record FleetData6
     /// </summary>
     [DisplayName("Agent Fuel Prompt Code")]
     [IsoXmlTag("AgtFuelPrmptCd")]
-    public IsoMax35Text? AgentFuelPromptCode { get; init; }
+    public Max35Text? AgentFuelPromptCode { get; init; }
 
     /// <summary>
     /// Card Fuel Prompt Code.
     /// </summary>
     [DisplayName("Card Fuel Prompt Code")]
     [IsoXmlTag("CardFuelPrmptCd")]
-    public IsoMax1Number? CardFuelPromptCode { get; init; }
+    public Max1Number? CardFuelPromptCode { get; init; }
 
     /// <summary>
     /// Driver.
@@ -77,49 +77,49 @@ public record FleetData6
     /// </summary>
     [DisplayName("Trip Billing Identification")]
     [IsoXmlTag("TripBllgId")]
-    public IsoMax70Text? TripBillingIdentification { get; init; }
+    public Max70Text? TripBillingIdentification { get; init; }
 
     /// <summary>
     /// Trip Control Number.
     /// </summary>
     [DisplayName("Trip Control Number")]
     [IsoXmlTag("TripCtrlNb")]
-    public IsoMax35Text? TripControlNumber { get; init; }
+    public Max35Text? TripControlNumber { get; init; }
 
     /// <summary>
     /// Trip Delivery Ticket Number.
     /// </summary>
     [DisplayName("Trip Delivery Ticket Number")]
     [IsoXmlTag("TripDlvryTcktNb")]
-    public IsoMax35Text? TripDeliveryTicketNumber { get; init; }
+    public Max35Text? TripDeliveryTicketNumber { get; init; }
 
     /// <summary>
     /// Trip Invoice Number.
     /// </summary>
     [DisplayName("Trip Invoice Number")]
     [IsoXmlTag("TripInvcNb")]
-    public IsoMax70Text? TripInvoiceNumber { get; init; }
+    public Max70Text? TripInvoiceNumber { get; init; }
 
     /// <summary>
     /// Trip Job Number.
     /// </summary>
     [DisplayName("Trip Job Number")]
     [IsoXmlTag("TripJobNb")]
-    public IsoMax10Text? TripJobNumber { get; init; }
+    public Max10Text? TripJobNumber { get; init; }
 
     /// <summary>
     /// Trip Number.
     /// </summary>
     [DisplayName("Trip Number")]
     [IsoXmlTag("TripNb")]
-    public IsoMax35Text? TripNumber { get; init; }
+    public Max35Text? TripNumber { get; init; }
 
     /// <summary>
     /// Trip Work Order.
     /// </summary>
     [DisplayName("Trip Work Order")]
     [IsoXmlTag("TripWorkOrdr")]
-    public IsoMax70Text? TripWorkOrder { get; init; }
+    public Max70Text? TripWorkOrder { get; init; }
 
     /// <summary>
     /// Vehicle.

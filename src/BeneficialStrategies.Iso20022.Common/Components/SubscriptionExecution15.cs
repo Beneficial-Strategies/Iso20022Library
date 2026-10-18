@@ -22,7 +22,7 @@ public record SubscriptionExecution15
     [IsoId("ef9fa822-b86a-47f7-b813-b52471f396df")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
-    public required IsoMax35Text OrderReference { get; init; }
+    public required Max35Text OrderReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor's identification of the order. This reference can typically be used in a hub scenario to give the reference of the order as assigned by the underlying client.
@@ -30,7 +30,7 @@ public record SubscriptionExecution15
     [IsoId("4fb0eac9-7dc7-483e-990c-8ed2c9cbb59c")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
-    public IsoMax35Text? ClientReference { get; init; }
+    public Max35Text? ClientReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for the order execution, as assigned by the confirming party.
@@ -38,7 +38,7 @@ public record SubscriptionExecution15
     [IsoId("3cf0632b-5157-4a37-8550-7465511b5466")]
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
-    public required IsoMax35Text DealReference { get; init; }
+    public required Max35Text DealReference { get; init; }
 
     /// <summary>
     /// Unambiguous identification of a random or semi-random number used once (NONCE) generated in the frame of a cryptographic communication.
@@ -46,7 +46,7 @@ public record SubscriptionExecution15
     [IsoId("6fda6ed4-5cdf-4dcb-aefb-7d538c632603")]
     [DisplayName("Nonce Identification")]
     [IsoXmlTag("NonceId")]
-    public IsoMax35Text? NonceIdentification { get; init; }
+    public Max35Text? NonceIdentification { get; init; }
 
     /// <summary>
     /// Category of the investment fund order.
@@ -142,7 +142,7 @@ public record SubscriptionExecution15
     [IsoId("2470d032-0320-4601-8e7f-75c1c83d7e7c")]
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
-    public IsoISODate? CashSettlementDate { get; init; }
+    public DateOnly? CashSettlementDate { get; init; }
 
     /// <summary>
     /// Method by which the transaction is settled.
@@ -158,7 +158,7 @@ public record SubscriptionExecution15
     [IsoId("877df7c0-d7b4-4320-9d89-b58e9bf9defb")]
     [DisplayName("Partially Executed Indicator")]
     [IsoXmlTag("PrtlyExctdInd")]
-    public required IsoYesNoIndicator PartiallyExecutedIndicator { get; init; }
+    public required YesNoIndicator PartiallyExecutedIndicator { get; init; }
 
     /// <summary>
     /// Specifies that the execution was subject to best execution rules as defined by MiFID.
@@ -174,7 +174,7 @@ public record SubscriptionExecution15
     [IsoId("94bbff21-b801-41d1-ab4d-7888686b2954")]
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
-    public required IsoYesNoIndicator CumDividendIndicator { get; init; }
+    public required YesNoIndicator CumDividendIndicator { get; init; }
 
     /// <summary>
     /// Part of the price deemed as accrued income or profit rather than capital. The interim profit amount is used for tax purposes.
@@ -206,7 +206,7 @@ public record SubscriptionExecution15
     [IsoId("84f02554-da5b-43d1-aacd-dd6d32dc8aa7")]
     [DisplayName("Letter Intent Reference")]
     [IsoXmlTag("LttrInttRef")]
-    public IsoMax35Text? LetterIntentReference { get; init; }
+    public Max35Text? LetterIntentReference { get; init; }
 
     /// <summary>
     /// Reference of an accumulation right program, in which sales commissions are based on a customer's present purchases of shares and the aggregate quantity previously purchased by the customer. An accumulation rights program is mainly used in the US market.
@@ -214,7 +214,7 @@ public record SubscriptionExecution15
     [IsoId("abe8d1e5-c09a-4245-a87c-b394d37be3bb")]
     [DisplayName("Accumulation Right Reference")]
     [IsoXmlTag("AcmltnRghtRef")]
-    public IsoMax35Text? AccumulationRightReference { get; init; }
+    public Max35Text? AccumulationRightReference { get; init; }
 
     /// <summary>
     /// Fees (charges/commission) and taxes that are taken into consideration for the transaction, so that the total difference between the net amount and gross amount is known, without taking into account equalisation.
@@ -246,7 +246,7 @@ public record SubscriptionExecution15
     [IsoId("5ad24151-cf11-4c1d-8467-c6e5527e07ac")]
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
-    public required IsoYesNoIndicator PhysicalDeliveryIndicator { get; init; }
+    public required YesNoIndicator PhysicalDeliveryIndicator { get; init; }
 
     /// <summary>
     /// Information related to the physical delivery of the securities.
@@ -302,7 +302,7 @@ public record SubscriptionExecution15
     [IsoId("adff3713-f79b-499d-ace3-03b51670d0ce")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
-    public IsoMax350Text? NonStandardSettlementInformation { get; init; }
+    public Max350Text? NonStandardSettlementInformation { get; init; }
 
     /// <summary>
     /// Percentage of units partially settled.
@@ -310,7 +310,7 @@ public record SubscriptionExecution15
     [IsoId("1bc322f5-3689-4bb2-92b0-e4fd5140dd47")]
     [DisplayName("Partial Settlement Of Units")]
     [IsoXmlTag("PrtlSttlmOfUnits")]
-    public IsoPercentageRate? PartialSettlementOfUnits { get; init; }
+    public PercentageRate? PartialSettlementOfUnits { get; init; }
 
     /// <summary>
     /// Specifies if advice has been received from an independent financial advisor.
@@ -342,7 +342,7 @@ public record SubscriptionExecution15
     [IsoId("a9c5debe-8a3a-4afb-bf28-28dd5901d6f9")]
     [DisplayName("Partial Settlement Of Cash")]
     [IsoXmlTag("PrtlSttlmOfCsh")]
-    public IsoPercentageRate? PartialSettlementOfCash { get; init; }
+    public PercentageRate? PartialSettlementOfCash { get; init; }
 
     /// <summary>
     /// Party related to the transaction.

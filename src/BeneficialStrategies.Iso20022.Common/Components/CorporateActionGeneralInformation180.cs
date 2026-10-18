@@ -21,7 +21,7 @@ public record CorporateActionGeneralInformation180
     /// </summary>
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
-    public required IsoMax35Text CorporateActionEventIdentification { get; init; }
+    public required Max35Text CorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Event Type.
@@ -35,7 +35,7 @@ public record CorporateActionGeneralInformation180
     /// </summary>
     [DisplayName("Official Corporate Action Event Identification")]
     [IsoXmlTag("OffclCorpActnEvtId")]
-    public IsoMax35Text? OfficialCorporateActionEventIdentification { get; init; }
+    public Max35Text? OfficialCorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Underlying Security.

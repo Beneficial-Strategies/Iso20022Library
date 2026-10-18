@@ -24,7 +24,7 @@ public record AcquirerHostConfiguration9
     [IsoXmlTag("HstId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text HostIdentification { get; init; }
+    public required Max35Text HostIdentification { get; init; }
 
     /// <summary>
     /// Types of message to sent to this host.
@@ -42,7 +42,7 @@ public record AcquirerHostConfiguration9
     [IsoXmlTag("PrtcolVrsn")]
     [IsoSimpleType(IsoSimpleType.Max8Text)]
     [StringLength(maximumLength: 8, MinimumLength = 1)]
-    public IsoMax8Text? ProtocolVersion { get; init; }
+    public Max8Text? ProtocolVersion { get; init; }
 
     /// <summary>
     /// List of types that the receiver supports and that the sender could use as type of an ExternallyDefinedData message component.
@@ -50,5 +50,5 @@ public record AcquirerHostConfiguration9
     [IsoId("_5Pb2cFFLEeyApZmLzm74zA")]
     [DisplayName("Externally Type Supported")]
     [IsoXmlTag("XtrnlyTpSpprtd")]
-    public SimpleValueList<IsoMax1025Text> ExternallyTypeSupported { get; init; } = [];
+    public SimpleValueList<Max1025Text> ExternallyTypeSupported { get; init; } = [];
 }

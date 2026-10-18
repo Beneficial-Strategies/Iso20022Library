@@ -24,7 +24,7 @@ public record AdditionalReference5
     [IsoXmlTag("Ref")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoRestrictedFINMax16Text Reference { get; init; }
+    public required RestrictedFINMax16Text Reference { get; init; }
 
     /// <summary>
     /// Name of a message.
@@ -34,5 +34,5 @@ public record AdditionalReference5
     [IsoXmlTag("MsgNm")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINMax15Text)]
     [StringLength(maximumLength: 15, MinimumLength = 1)]
-    public IsoRestrictedFINMax15Text? MessageName { get; init; }
+    public RestrictedFINMax15Text? MessageName { get; init; }
 }

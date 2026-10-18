@@ -21,7 +21,7 @@ public record AmountsAndValueDate8
     /// </summary>
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public required IsoISODate SettlementDate { get; init; }
+    public required DateOnly SettlementDate { get; init; }
 
     /// <summary>
     /// Trading Side Buy Amount.

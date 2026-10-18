@@ -21,7 +21,7 @@ public record RegulatoryReporting8
     /// </summary>
     [DisplayName("Additional Reporting Information")]
     [IsoXmlTag("AddtlRptgInf")]
-    public IsoMax210Text? AdditionalReportingInformation { get; init; }
+    public Max210Text? AdditionalReportingInformation { get; init; }
 
     /// <summary>
     /// Allocation Indicator.
@@ -42,7 +42,7 @@ public record RegulatoryReporting8
     /// </summary>
     [DisplayName("Cleared Product Identification")]
     [IsoXmlTag("ClrdPdctId")]
-    public IsoMax35Text? ClearedProductIdentification { get; init; }
+    public Max35Text? ClearedProductIdentification { get; init; }
 
     /// <summary>
     /// Clearing Broker.
@@ -70,14 +70,14 @@ public record RegulatoryReporting8
     /// </summary>
     [DisplayName("Clearing Threshold Indicator")]
     [IsoXmlTag("ClrThrshldInd")]
-    public IsoYesNoIndicator? ClearingThresholdIndicator { get; init; }
+    public YesNoIndicator? ClearingThresholdIndicator { get; init; }
 
     /// <summary>
     /// Clearing Timestamp.
     /// </summary>
     [DisplayName("Clearing Timestamp")]
     [IsoXmlTag("ClrTmstmp")]
-    public IsoISOTime? ClearingTimestamp { get; init; }
+    public ISOTime? ClearingTimestamp { get; init; }
 
     /// <summary>
     /// Collateralisation Indicator.
@@ -91,21 +91,21 @@ public record RegulatoryReporting8
     /// </summary>
     [DisplayName("Collateral Portfolio Code")]
     [IsoXmlTag("CollPrtflCd")]
-    public IsoMax10Text? CollateralPortfolioCode { get; init; }
+    public Max10Text? CollateralPortfolioCode { get; init; }
 
     /// <summary>
     /// Collateral Portfolio Indicator.
     /// </summary>
     [DisplayName("Collateral Portfolio Indicator")]
     [IsoXmlTag("CollPrtflInd")]
-    public IsoYesNoIndicator? CollateralPortfolioIndicator { get; init; }
+    public YesNoIndicator? CollateralPortfolioIndicator { get; init; }
 
     /// <summary>
     /// Commercial Or Treasury Financing Indicator.
     /// </summary>
     [DisplayName("Commercial Or Treasury Financing Indicator")]
     [IsoXmlTag("ComrclOrTrsrFincgInd")]
-    public IsoYesNoIndicator? CommercialOrTreasuryFinancingIndicator { get; init; }
+    public YesNoIndicator? CommercialOrTreasuryFinancingIndicator { get; init; }
 
     /// <summary>
     /// Commissions And Fees.
@@ -119,7 +119,7 @@ public record RegulatoryReporting8
     /// </summary>
     [DisplayName("Confirmation Date And Timestamp")]
     [IsoXmlTag("ConfDtAndTmstmp")]
-    public IsoISODateTime? ConfirmationDateAndTimestamp { get; init; }
+    public ISODateTime? ConfirmationDateAndTimestamp { get; init; }
 
     /// <summary>
     /// Corporate Sector Indicator.
@@ -148,7 +148,7 @@ public record RegulatoryReporting8
     /// </summary>
     [DisplayName("Execution Venue")]
     [IsoXmlTag("ExctnVn")]
-    public IsoMax35Text? ExecutionVenue { get; init; }
+    public Max35Text? ExecutionVenue { get; init; }
 
     /// <summary>
     /// Financial Instrument Identification.
@@ -162,35 +162,35 @@ public record RegulatoryReporting8
     /// </summary>
     [DisplayName("Financial Nature Of The Counterparty Indicator")]
     [IsoXmlTag("FinNtrOfTheCtrPtyInd")]
-    public IsoYesNoIndicator? FinancialNatureOfTheCounterpartyIndicator { get; init; }
+    public YesNoIndicator? FinancialNatureOfTheCounterpartyIndicator { get; init; }
 
     /// <summary>
     /// Intragroup Trade Indicator.
     /// </summary>
     [DisplayName("Intragroup Trade Indicator")]
     [IsoXmlTag("NtrgrpTradInd")]
-    public IsoYesNoIndicator? IntragroupTradeIndicator { get; init; }
+    public YesNoIndicator? IntragroupTradeIndicator { get; init; }
 
     /// <summary>
     /// Link Swap Identification.
     /// </summary>
     [DisplayName("Link Swap Identification")]
     [IsoXmlTag("LkSwpId")]
-    public IsoExact42Text? LinkSwapIdentification { get; init; }
+    public Exact42Text? LinkSwapIdentification { get; init; }
 
     /// <summary>
     /// Non Standard Flag.
     /// </summary>
     [DisplayName("Non Standard Flag")]
     [IsoXmlTag("NonStdFlg")]
-    public IsoYesNoIndicator? NonStandardFlag { get; init; }
+    public YesNoIndicator? NonStandardFlag { get; init; }
 
     /// <summary>
     /// Portfolio Compression Indicator.
     /// </summary>
     [DisplayName("Portfolio Compression Indicator")]
     [IsoXmlTag("PrtflCmprssnInd")]
-    public IsoYesNoIndicator? PortfolioCompressionIndicator { get; init; }
+    public YesNoIndicator? PortfolioCompressionIndicator { get; init; }
 
     /// <summary>
     /// Product Identifier.
@@ -204,7 +204,7 @@ public record RegulatoryReporting8
     /// </summary>
     [DisplayName("Trade With Non EEA Counterparty Indicator")]
     [IsoXmlTag("TradWthNonEEACtrPtyInd")]
-    public IsoYesNoIndicator? TradeWithNonEEACounterpartyIndicator { get; init; }
+    public YesNoIndicator? TradeWithNonEEACounterpartyIndicator { get; init; }
 
     /// <summary>
     /// Trading Side Transaction Reporting.

@@ -32,7 +32,7 @@ public record Header22
     [IsoXmlTag("PrtcolVrsn")]
     [IsoSimpleType(IsoSimpleType.Max6Text)]
     [StringLength(maximumLength: 6, MinimumLength = 1)]
-    public required IsoMax6Text ProtocolVersion { get; init; }
+    public required Max6Text ProtocolVersion { get; init; }
 
     /// <summary>
     /// Unique identification of an exchange occurrence.
@@ -41,7 +41,7 @@ public record Header22
     [DisplayName("Exchange Identification")]
     [IsoXmlTag("XchgId")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public IsoMax3NumericText? ExchangeIdentification { get; init; }
+    public Max3NumericText? ExchangeIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the message was created.
@@ -50,7 +50,7 @@ public record Header22
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// Unique identification of the partner that has initiated the exchange.
@@ -60,7 +60,7 @@ public record Header22
     [IsoXmlTag("InitgPty")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? InitiatingParty { get; init; }
+    public Max35Text? InitiatingParty { get; init; }
 
     /// <summary>
     /// Unique identification of the partner that is the recipient of the message exchange.
@@ -70,7 +70,7 @@ public record Header22
     [IsoXmlTag("RcptPty")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RecipientParty { get; init; }
+    public Max35Text? RecipientParty { get; init; }
 
     /// <summary>
     /// State of the sender of the message inside the process flow.
@@ -80,7 +80,7 @@ public record Header22
     [IsoXmlTag("PrcStat")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProcessState { get; init; }
+    public Max35Text? ProcessState { get; init; }
 
     /// <summary>
     /// Identification of partners involved in exchange from the merchant to the issuer, with the relative timestamp of their exchanges.

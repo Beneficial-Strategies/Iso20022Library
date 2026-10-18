@@ -31,7 +31,7 @@ public record SettlementDetails213
     [DisplayName("Hold Indicator")]
     [IsoXmlTag("HldInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? HoldIndicator { get; init; }
+    public YesNoIndicator? HoldIndicator { get; init; }
 
     /// <summary>
     /// Specifies whether the transaction is to be executed with a high priority.
@@ -65,7 +65,7 @@ public record SettlementDetails213
     [DisplayName("Partial Settlement Indicator")]
     [IsoXmlTag("PrtlSttlmInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PartialSettlementIndicator { get; init; }
+    public YesNoIndicator? PartialSettlementIndicator { get; init; }
 
     /// <summary>
     /// Specifies whether there is change of beneficial ownership.
@@ -202,7 +202,7 @@ public record SettlementDetails213
     [DisplayName("Stamp Duty Indicator")]
     [IsoXmlTag("StmpDtyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? StampDutyIndicator { get; init; }
+    public YesNoIndicator? StampDutyIndicator { get; init; }
 
     /// <summary>
     /// Specifies the stamp duty type or exemption reason applicable to the settlement transaction.
@@ -243,7 +243,7 @@ public record SettlementDetails213
     [DisplayName("Return Leg")]
     [IsoXmlTag("RtrLeg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ReturnLeg { get; init; }
+    public YesNoIndicator? ReturnLeg { get; init; }
 
     /// <summary>
     /// Specifies whether a third party is allowed to modify or cancel the transaction.
@@ -260,5 +260,5 @@ public record SettlementDetails213
     [DisplayName("Eligible For Collateral")]
     [IsoXmlTag("ElgblForColl")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? EligibleForCollateral { get; init; }
+    public YesNoIndicator? EligibleForCollateral { get; init; }
 }

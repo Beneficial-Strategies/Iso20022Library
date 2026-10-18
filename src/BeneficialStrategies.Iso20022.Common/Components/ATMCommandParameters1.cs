@@ -24,7 +24,7 @@ public record ATMCommandParameters1
     [IsoXmlTag("SrlNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SerialNumber { get; init; }
+    public Max35Text? SerialNumber { get; init; }
 
     /// <summary>
     /// Update of the security configuration to apply on the security module of the ATM.

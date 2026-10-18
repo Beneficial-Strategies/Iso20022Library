@@ -23,7 +23,7 @@ public record GlobalDistributionRequest1
     [DisplayName("Preadvice Indicator")]
     [IsoXmlTag("PradvcInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator PreadviceIndicator { get; init; }
+    public required YesNoIndicator PreadviceIndicator { get; init; }
 
     /// <summary>
     /// Number identifying the available corporate action options.
@@ -32,7 +32,7 @@ public record GlobalDistributionRequest1
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public required IsoExact3NumericText OptionNumber { get; init; }
+    public required Exact3NumericText OptionNumber { get; init; }
 
     /// <summary>
     /// Specifies the corporate action options available to the account owner.

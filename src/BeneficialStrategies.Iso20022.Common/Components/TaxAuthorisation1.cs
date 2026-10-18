@@ -24,7 +24,7 @@ public record TaxAuthorisation1
     [IsoXmlTag("Titl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Title { get; init; }
+    public Max35Text? Title { get; init; }
 
     /// <summary>
     /// Name of the debtor or the debtor&apos;s authorised representative.
@@ -34,5 +34,5 @@ public record TaxAuthorisation1
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Name { get; init; }
+    public Max140Text? Name { get; init; }
 }

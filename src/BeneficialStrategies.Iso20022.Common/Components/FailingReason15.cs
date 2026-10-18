@@ -30,5 +30,5 @@ public record FailingReason15
     [IsoId("_0w8AyeSkEe-qVZLXW4RRBw")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
-    public IsoMax210Text? AdditionalReasonInformation { get; init; }
+    public Max210Text? AdditionalReasonInformation { get; init; }
 }

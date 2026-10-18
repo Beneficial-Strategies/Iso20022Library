@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification36Choice
         [DisplayName("Structurer")]
         [IsoXmlTag("Strr")]
         [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-        public required IsoLEIIdentifier Structurer { get; init; }
+        public required LEIIdentifier Structurer { get; init; }
 
         /// <summary>
         /// Identifier of the custom basket assigned by the structurer allowing to link the constituents of the basket of indexes.
@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification36Choice
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.Max52Text)]
         [StringLength(maximumLength: 52, MinimumLength = 1)]
-        public required IsoMax52Text Identification { get; init; }
+        public required Max52Text Identification { get; init; }
 
         /// <summary>
         /// Identifier of the underliers that represent the constituents of a custom basket.

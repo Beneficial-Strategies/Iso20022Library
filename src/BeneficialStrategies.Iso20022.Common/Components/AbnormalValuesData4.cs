@@ -31,7 +31,7 @@ public record AbnormalValuesData4
     [DisplayName("Number Of Derivatives Reported")]
     [IsoXmlTag("NbOfDerivsRptd")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber NumberOfDerivativesReported { get; init; }
+    public required Number NumberOfDerivativesReported { get; init; }
 
     /// <summary>
     /// Number of reported derivatives with outliers.
@@ -40,7 +40,7 @@ public record AbnormalValuesData4
     [DisplayName("Number Of Derivatives Reported With Outliers")]
     [IsoXmlTag("NbOfDerivsRptdWthOtlrs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber NumberOfDerivativesReportedWithOutliers { get; init; }
+    public required Number NumberOfDerivativesReportedWithOutliers { get; init; }
 
     /// <summary>
     /// Details on abnormal values per transaction.

@@ -22,7 +22,7 @@ public record SecuritiesReport2
     [IsoId("_a9BA1eFYEeWIA4E9cYSxxQ")]
     [DisplayName("Report Identification")]
     [IsoXmlTag("RptId")]
-    public IsoMax35Text? ReportIdentification { get; init; }
+    public Max35Text? ReportIdentification { get; init; }
 
     /// <summary>
     /// Identification of the SecuritiesStatementQuery message sent to request this statement.
@@ -30,7 +30,7 @@ public record SecuritiesReport2
     [IsoId("_a9BA1-FYEeWIA4E9cYSxxQ")]
     [DisplayName("Query Reference")]
     [IsoXmlTag("QryRef")]
-    public IsoMax35Text? QueryReference { get; init; }
+    public Max35Text? QueryReference { get; init; }
 
     /// <summary>
     /// Defines the type of query.
@@ -46,5 +46,5 @@ public record SecuritiesReport2
     [IsoId("_a9BA5-FYEeWIA4E9cYSxxQ")]
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
-    public required IsoYesNoIndicator ActivityIndicator { get; init; }
+    public required YesNoIndicator ActivityIndicator { get; init; }
 }

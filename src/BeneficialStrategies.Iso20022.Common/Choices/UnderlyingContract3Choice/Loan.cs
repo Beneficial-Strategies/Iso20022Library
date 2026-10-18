@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingContract3Choice
         [IsoXmlTag("LnTpId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? LoanTypeIdentification { get; init; }
+        public Max35Text? LoanTypeIdentification { get; init; }
 
         /// <summary>
         /// Party that is specified as the buyer for this loan agreement.
@@ -69,7 +69,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingContract3Choice
         [DisplayName("Maturity Date")]
         [IsoXmlTag("MtrtyDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? MaturityDate { get; init; }
+        public DateOnly? MaturityDate { get; init; }
 
         /// <summary>
         /// Indicates whether the contract duration is extended or not.
@@ -79,7 +79,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingContract3Choice
         [DisplayName("Prolongation Flag")]
         [IsoXmlTag("PrlngtnFlg")]
         [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-        public IsoTrueFalseIndicator? ProlongationFlag { get; init; }
+        public TrueFalseIndicator? ProlongationFlag { get; init; }
 
         /// <summary>
         /// Start date of the loan contract.
@@ -88,7 +88,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingContract3Choice
         [DisplayName("Start Date")]
         [IsoXmlTag("StartDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? StartDate { get; init; }
+        public DateOnly? StartDate { get; init; }
 
         /// <summary>
         /// Currency in which the loan is being settled.
@@ -113,7 +113,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingContract3Choice
         [DisplayName("Duration Code")]
         [IsoXmlTag("DrtnCd")]
         [IsoSimpleType(IsoSimpleType.Exact1NumericText)]
-        public IsoExact1NumericText? DurationCode { get; init; }
+        public Exact1NumericText? DurationCode { get; init; }
 
         /// <summary>
         /// Interest rate for the loan.
@@ -154,7 +154,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingContract3Choice
         [DisplayName("Intra Company Loan")]
         [IsoXmlTag("IntraCpnyLn")]
         [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-        public required IsoTrueFalseIndicator IntraCompanyLoan { get; init; }
+        public required TrueFalseIndicator IntraCompanyLoan { get; init; }
 
         /// <summary>
         /// Details of the collateral for the loan.

@@ -23,7 +23,7 @@ public record Schedule4
     [DisplayName("Unadjusted Effective Date")]
     [IsoXmlTag("UadjstdFctvDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate UnadjustedEffectiveDate { get; init; }
+    public required DateOnly UnadjustedEffectiveDate { get; init; }
 
     /// <summary>
     /// Indicates the end date agreed in the derivative transaction without adjustment.
@@ -32,7 +32,7 @@ public record Schedule4
     [DisplayName("Unadjusted End Date")]
     [IsoXmlTag("UadjstdEndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? UnadjustedEndDate { get; init; }
+    public DateOnly? UnadjustedEndDate { get; init; }
 
     /// <summary>
     /// Specifies the predetermined price at which the owner of the option can buy or sell the underlying instrument.

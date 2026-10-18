@@ -24,7 +24,7 @@ public record CorporateActionPriceSD2
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text PlaceAndName { get; init; }
+    public required Max350Text PlaceAndName { get; init; }
 
     /// <summary>
     /// Price and currency at which cash will be paid for fractional shares (cash-in-lieu rate) by DTC (The Depository Trust Corporation). Used in conjunction with a rounding factor element.

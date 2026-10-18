@@ -22,7 +22,7 @@ public record Statement58
     [IsoId("_bIFZE-0kEeWGZ8O9Moj6Zw")]
     [DisplayName("Query Reference")]
     [IsoXmlTag("QryRef")]
-    public IsoMax35Text? QueryReference { get; init; }
+    public Max35Text? QueryReference { get; init; }
 
     /// <summary>
     /// Reference common to all pages of a report.
@@ -30,7 +30,7 @@ public record Statement58
     [IsoId("_bIFZG-0kEeWGZ8O9Moj6Zw")]
     [DisplayName("Report Identification")]
     [IsoXmlTag("RptId")]
-    public IsoMax35Text? ReportIdentification { get; init; }
+    public Max35Text? ReportIdentification { get; init; }
 
     /// <summary>
     /// Specifies whether the data is either historical (true) or current (false).
@@ -38,7 +38,7 @@ public record Statement58
     [IsoId("_bIFZHe0kEeWGZ8O9Moj6Zw")]
     [DisplayName("Historic Data")]
     [IsoXmlTag("HstrcData")]
-    public required IsoTrueFalseIndicator HistoricData { get; init; }
+    public required TrueFalseIndicator HistoricData { get; init; }
 
     /// <summary>
     /// Indicates whether there is activity or information update reported in the statement.
@@ -46,7 +46,7 @@ public record Statement58
     [IsoId("_bIFZJe0kEeWGZ8O9Moj6Zw")]
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
-    public required IsoYesNoIndicator ActivityIndicator { get; init; }
+    public required YesNoIndicator ActivityIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the statement reports holdings at subsafekeeping account level.
@@ -54,5 +54,5 @@ public record Statement58
     [IsoId("_bIFZLe0kEeWGZ8O9Moj6Zw")]
     [DisplayName("Sub Account Indicator")]
     [IsoXmlTag("SubAcctInd")]
-    public required IsoYesNoIndicator SubAccountIndicator { get; init; }
+    public required YesNoIndicator SubAccountIndicator { get; init; }
 }

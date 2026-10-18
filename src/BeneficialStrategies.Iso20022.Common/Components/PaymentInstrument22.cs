@@ -22,7 +22,7 @@ public record PaymentInstrument22
     [IsoId("18694072-a3d4-4fbc-bc37-9b3444db9e95")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
-    public IsoMax35Text? Reference { get; init; }
+    public Max35Text? Reference { get; init; }
 
     /// <summary>
     /// Payment instrument between a debtor and a creditor that flows through one or more financial institutions or systems.

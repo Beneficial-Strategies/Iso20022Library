@@ -47,7 +47,7 @@ public record DirectDebitTransactionInformation15
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? InterbankSettlementDate { get; init; }
+    public DateOnly? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Indicator of the urgency or order of importance that the instructing party would like the instructed party to apply to the processing of the settlement instruction.
@@ -113,7 +113,7 @@ public record DirectDebitTransactionInformation15
     [IsoXmlTag("InstrForDbtrAgt")]
     [IsoSimpleType(IsoSimpleType.Max210Text)]
     [StringLength(maximumLength: 210, MinimumLength = 1)]
-    public IsoMax210Text? InstructionForDebtorAgent { get; init; }
+    public Max210Text? InstructionForDebtorAgent { get; init; }
 
     /// <summary>
     /// Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts&apos; receivable system.

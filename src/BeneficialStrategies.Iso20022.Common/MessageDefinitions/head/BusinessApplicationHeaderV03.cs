@@ -89,7 +89,7 @@ public record BusinessApplicationHeaderV03 : IOuterRecord
     [IsoXmlTag("BizMsgIdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text BusinessMessageIdentifier { get; init; }
+    public required Max35Text BusinessMessageIdentifier { get; init; }
 
     /// <summary>
     /// The Message Definition Identifier of the Business Message instance with which this Business Application Header instance is associated.
@@ -99,7 +99,7 @@ public record BusinessApplicationHeaderV03 : IOuterRecord
     [IsoXmlTag("MsgDefIdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MessageDefinitionIdentifier { get; init; }
+    public required Max35Text MessageDefinitionIdentifier { get; init; }
 
     /// <summary>
     /// Specifies the business service agreed between the two MessagingEndpoints under which rules this Business Message is exchanged.
@@ -112,7 +112,7 @@ public record BusinessApplicationHeaderV03 : IOuterRecord
     [IsoXmlTag("BizSvc")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? BusinessService { get; init; }
+    public Max35Text? BusinessService { get; init; }
 
     /// <summary>
     /// Specifies the market practice to which the message conforms. The market practices are a set of rules agreed between parties that restricts the usage of the messages in order to achieve better STP (Straight Through Processing) rates.
@@ -130,7 +130,7 @@ public record BusinessApplicationHeaderV03 : IOuterRecord
     [DisplayName("Creation Date")]
     [IsoXmlTag("CreDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDate { get; init; }
+    public required ISODateTime CreationDate { get; init; }
 
     /// <summary>
     /// Processing date and time indicated by the sender for the receiver of the business message. This date may be different from the date and time provided in the CreationDate.
@@ -140,7 +140,7 @@ public record BusinessApplicationHeaderV03 : IOuterRecord
     [DisplayName("Business Processing Date")]
     [IsoXmlTag("BizPrcgDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? BusinessProcessingDate { get; init; }
+    public ISODateTime? BusinessProcessingDate { get; init; }
 
     /// <summary>
     /// Indicates whether the message is a Copy, a Duplicate or a copy of a duplicate of a previously sent ISO 20022 Message.
@@ -161,7 +161,7 @@ public record BusinessApplicationHeaderV03 : IOuterRecord
     [DisplayName("Possible Duplicate")]
     [IsoXmlTag("PssblDplct")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PossibleDuplicate { get; init; }
+    public YesNoIndicator? PossibleDuplicate { get; init; }
 
     /// <summary>
     /// Relative indication of the processing precedence of the message over a (set of) Business Messages with assigned priorities.

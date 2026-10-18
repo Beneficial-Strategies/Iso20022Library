@@ -64,7 +64,7 @@ public record IntraPositionMovementInstructionV07 : IOuterRecord
     /// </summary>
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
-    public IsoMax35Text? CorporateActionEventIdentification { get; init; }
+    public Max35Text? CorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Financial Instrument Attributes.
@@ -127,5 +127,5 @@ public record IntraPositionMovementInstructionV07 : IOuterRecord
     /// </summary>
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
-    public required IsoMax35Text TransactionIdentification { get; init; }
+    public required Max35Text TransactionIdentification { get; init; }
 }

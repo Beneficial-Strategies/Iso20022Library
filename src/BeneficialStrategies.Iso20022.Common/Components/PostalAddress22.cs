@@ -32,7 +32,7 @@ public record PostalAddress22
     [IsoXmlTag("Dept")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Department { get; init; }
+    public Max70Text? Department { get; init; }
 
     /// <summary>
     /// Identification of a sub-division of a large organisation or building.
@@ -42,7 +42,7 @@ public record PostalAddress22
     [IsoXmlTag("SubDept")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? SubDepartment { get; init; }
+    public Max70Text? SubDepartment { get; init; }
 
     /// <summary>
     /// Information that locates and identifies a specific address, as defined by postal services, presented in free format text.
@@ -63,7 +63,7 @@ public record PostalAddress22
     [IsoXmlTag("StrtNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? StreetName { get; init; }
+    public Max70Text? StreetName { get; init; }
 
     /// <summary>
     /// Number that identifies the position of a building on a street.
@@ -73,7 +73,7 @@ public record PostalAddress22
     [IsoXmlTag("BldgNb")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoMax16Text? BuildingNumber { get; init; }
+    public Max16Text? BuildingNumber { get; init; }
 
     /// <summary>
     /// Identifier consisting of a group of letters and/or numbers that is added to a postal address to assist the sorting of mail.
@@ -83,7 +83,7 @@ public record PostalAddress22
     [IsoXmlTag("PstCd")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoMax16Text? PostCode { get; init; }
+    public Max16Text? PostCode { get; init; }
 
     /// <summary>
     /// Name of a built-up area, with defined boundaries, and a local government.
@@ -93,7 +93,7 @@ public record PostalAddress22
     [IsoXmlTag("TwnNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? TownName { get; init; }
+    public Max70Text? TownName { get; init; }
 
     /// <summary>
     /// Identifies a subdivision of a country such as state, region, county.
@@ -113,5 +113,5 @@ public record PostalAddress22
     [DisplayName("Country Code")]
     [IsoXmlTag("CtryCd")]
     [IsoSimpleType(IsoSimpleType.Min2Max3AlphaText)]
-    public IsoMin2Max3AlphaText? CountryCode { get; init; }
+    public Min2Max3AlphaText? CountryCode { get; init; }
 }

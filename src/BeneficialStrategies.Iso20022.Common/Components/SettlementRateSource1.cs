@@ -23,7 +23,7 @@ public record SettlementRateSource1
     [DisplayName("Rate Source")]
     [IsoXmlTag("RateSrc")]
     [IsoSimpleType(IsoSimpleType.RateSourceText)]
-    public required IsoRateSourceText RateSource { get; init; }
+    public required RateSourceText RateSource { get; init; }
 
     /// <summary>
     /// Specifies the time &quot;HHMM&quot; associated with the rate source.
@@ -32,7 +32,7 @@ public record SettlementRateSource1
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
     [IsoSimpleType(IsoSimpleType.Exact4NumericText)]
-    public IsoExact4NumericText? Time { get; init; }
+    public Exact4NumericText? Time { get; init; }
 
     /// <summary>
     /// Specifies the country code for the quoted rate source.
@@ -49,5 +49,5 @@ public record SettlementRateSource1
     [DisplayName("Location Code")]
     [IsoXmlTag("LctnCd")]
     [IsoSimpleType(IsoSimpleType.Exact2AlphaNumericText)]
-    public IsoExact2AlphaNumericText? LocationCode { get; init; }
+    public Exact2AlphaNumericText? LocationCode { get; init; }
 }

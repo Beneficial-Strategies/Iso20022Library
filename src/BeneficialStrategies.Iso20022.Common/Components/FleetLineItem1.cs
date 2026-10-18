@@ -25,7 +25,7 @@ public record FleetLineItem1
     [DisplayName("Fuel Indicator")]
     [IsoXmlTag("FuelInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator FuelIndicator { get; init; }
+    public required TrueFalseIndicator FuelIndicator { get; init; }
 
     /// <summary>
     /// Type of service received at the acceptor location.
@@ -43,7 +43,7 @@ public record FleetLineItem1
     [IsoXmlTag("FuelBrndCd")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4Text? FuelBrandCode { get; init; }
+    public Max4Text? FuelBrandCode { get; init; }
 
     /// <summary>
     /// Product code of fleet product or service being purchased.
@@ -53,7 +53,7 @@ public record FleetLineItem1
     [IsoXmlTag("FleetPdctCd")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4Text? FleetProductCode { get; init; }
+    public Max4Text? FleetProductCode { get; init; }
 
     /// <summary>
     /// Contains a code that identifies a category of fleet products or services.
@@ -63,7 +63,7 @@ public record FleetLineItem1
     [IsoXmlTag("FleetPdctCtgy")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? FleetProductCategory { get; init; }
+    public Max35Text? FleetProductCategory { get; init; }
 
     /// <summary>
     /// Contains a code that identifies the product qualifier of the fleet product or service.
@@ -73,7 +73,7 @@ public record FleetLineItem1
     [IsoXmlTag("FleetPdctQlfr")]
     [IsoSimpleType(IsoSimpleType.Max6Text)]
     [StringLength(maximumLength: 6, MinimumLength = 1)]
-    public IsoMax6Text? FleetProductQualifier { get; init; }
+    public Max6Text? FleetProductQualifier { get; init; }
 
     /// <summary>
     /// Contains a code that identifies the product code assigner.
@@ -83,7 +83,7 @@ public record FleetLineItem1
     [IsoXmlTag("FleetPdctCdAssgnr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? FleetProductCodeAssigner { get; init; }
+    public Max35Text? FleetProductCodeAssigner { get; init; }
 
     /// <summary>
     /// Indicates whether or not tax is included in unit price.
@@ -94,7 +94,7 @@ public record FleetLineItem1
     [DisplayName("Unit Price Tax Indicator")]
     [IsoXmlTag("UnitPricTaxInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? UnitPriceTaxIndicator { get; init; }
+    public TrueFalseIndicator? UnitPriceTaxIndicator { get; init; }
 
     /// <summary>
     /// Unit price of the fleet line item.
@@ -120,7 +120,7 @@ public record FleetLineItem1
     [IsoXmlTag("OthrUnitOfMeasr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherUnitOfMeasure { get; init; }
+    public Max35Text? OtherUnitOfMeasure { get; init; }
 
     /// <summary>
     /// Quantity of product or item.
@@ -129,7 +129,7 @@ public record FleetLineItem1
     [DisplayName("Product Quantity")]
     [IsoXmlTag("PdctQty")]
     [IsoSimpleType(IsoSimpleType.Max12NumericText)]
-    public IsoMax12NumericText? ProductQuantity { get; init; }
+    public Max12NumericText? ProductQuantity { get; init; }
 
     /// <summary>
     /// Contains the discount amount applied to the fleet transaction (includes coupons).
@@ -146,7 +146,7 @@ public record FleetLineItem1
     [DisplayName("Non Taxable Indicator")]
     [IsoXmlTag("NonTaxblInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? NonTaxableIndicator { get; init; }
+    public TrueFalseIndicator? NonTaxableIndicator { get; init; }
 
     /// <summary>
     /// Taxes related to the products or services.

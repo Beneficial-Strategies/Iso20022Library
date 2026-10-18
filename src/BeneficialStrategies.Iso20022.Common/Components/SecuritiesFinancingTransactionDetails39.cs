@@ -24,7 +24,7 @@ public record SecuritiesFinancingTransactionDetails39
     [IsoXmlTag("SctiesFincgTradId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? SecuritiesFinancingTradeIdentification { get; init; }
+    public RestrictedFINXMax16Text? SecuritiesFinancingTradeIdentification { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the second leg of the transaction as known by the account owner (or the instructing party acting on its behalf).
@@ -34,7 +34,7 @@ public record SecuritiesFinancingTransactionDetails39
     [IsoXmlTag("ClsgLegId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? ClosingLegIdentification { get; init; }
+    public RestrictedFINXMax16Text? ClosingLegIdentification { get; init; }
 
     /// <summary>
     /// Closing date/time or maturity date/time of the transaction.
@@ -107,7 +107,7 @@ public record SecuritiesFinancingTransactionDetails39
     [DisplayName("Maturity Date Modification")]
     [IsoXmlTag("MtrtyDtMod")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? MaturityDateModification { get; init; }
+    public YesNoIndicator? MaturityDateModification { get; init; }
 
     /// <summary>
     /// Specifies whether the interest is to be paid to the collateral taker. If set to no, the interest is paid to the collateral giver.
@@ -116,7 +116,7 @@ public record SecuritiesFinancingTransactionDetails39
     [DisplayName("Interest Payment")]
     [IsoXmlTag("IntrstPmt")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? InterestPayment { get; init; }
+    public YesNoIndicator? InterestPayment { get; init; }
 
     /// <summary>
     /// Index or support rate used together with the spread to calculate the|repurchase rate.
@@ -181,7 +181,7 @@ public record SecuritiesFinancingTransactionDetails39
     [DisplayName("Transaction Call Delay")]
     [IsoXmlTag("TxCallDely")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public IsoExact3NumericText? TransactionCallDelay { get; init; }
+    public Exact3NumericText? TransactionCallDelay { get; init; }
 
     /// <summary>
     /// Total number of collateral instructions involved in the transaction.
@@ -190,7 +190,7 @@ public record SecuritiesFinancingTransactionDetails39
     [DisplayName("Total Number Of Collateral Instructions")]
     [IsoXmlTag("TtlNbOfCollInstrs")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public IsoExact3NumericText? TotalNumberOfCollateralInstructions { get; init; }
+    public Exact3NumericText? TotalNumberOfCollateralInstructions { get; init; }
 
     /// <summary>
     /// Principal amount of a trade (for second leg).
@@ -248,5 +248,5 @@ public record SecuritiesFinancingTransactionDetails39
     [IsoXmlTag("ScndLegNrrtv")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoRestrictedFINXMax140Text? SecondLegNarrative { get; init; }
+    public RestrictedFINXMax140Text? SecondLegNarrative { get; init; }
 }

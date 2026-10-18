@@ -24,7 +24,7 @@ public record Reference20
     [IsoXmlTag("IntrstPmtReqId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text InterestPaymentRequestIdentification { get; init; }
+    public required Max35Text InterestPaymentRequestIdentification { get; init; }
 
     /// <summary>
     /// Provides the reference to the interest payment response.
@@ -34,5 +34,5 @@ public record Reference20
     [IsoXmlTag("IntrstPmtRspnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? InterestPaymentResponseIdentification { get; init; }
+    public Max35Text? InterestPaymentResponseIdentification { get; init; }
 }

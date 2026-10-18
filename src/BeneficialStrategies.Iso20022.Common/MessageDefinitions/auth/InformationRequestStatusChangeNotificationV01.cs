@@ -57,7 +57,7 @@ public record InformationRequestStatusChangeNotificationV01 : IOuterRecord
     [IsoXmlTag("OrgnlBizQry")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OriginalBusinessQuery { get; init; }
+    public required Max35Text OriginalBusinessQuery { get; init; }
 
     /// <summary>
     /// Specifies the confidentiality status of the investigation.
@@ -66,7 +66,7 @@ public record InformationRequestStatusChangeNotificationV01 : IOuterRecord
     [DisplayName("Confidentiality Status")]
     [IsoXmlTag("CnfdtltySts")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ConfidentialityStatus { get; init; }
+    public required YesNoIndicator ConfidentialityStatus { get; init; }
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.

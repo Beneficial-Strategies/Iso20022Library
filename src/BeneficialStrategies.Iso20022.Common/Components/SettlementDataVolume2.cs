@@ -23,7 +23,7 @@ public record SettlementDataVolume2
     [DisplayName("Volume")]
     [IsoXmlTag("Vol")]
     [IsoSimpleType(IsoSimpleType.Max20PositiveNumber)]
-    public required IsoMax20PositiveNumber Volume { get; init; }
+    public required Max20PositiveNumber Volume { get; init; }
 
     /// <summary>
     /// Specifies the aggregated value of settlement instructions, in terms of failed, settled transactions and total transactions.
@@ -32,5 +32,5 @@ public record SettlementDataVolume2
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.Max20PositiveDecimalNumber)]
-    public required IsoMax20PositiveDecimalNumber Value { get; init; }
+    public required Max20PositiveDecimalNumber Value { get; init; }
 }

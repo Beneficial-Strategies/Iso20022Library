@@ -48,7 +48,7 @@ public record AuthorisationResult9
     [IsoXmlTag("AuthstnCd")]
     [IsoSimpleType(IsoSimpleType.Min6Max8Text)]
     [StringLength(maximumLength: 8, MinimumLength = 6)]
-    public IsoMin6Max8Text? AuthorisationCode { get; init; }
+    public Min6Max8Text? AuthorisationCode { get; init; }
 
     /// <summary>
     /// Sequence of actions to be performed by the ATM to complete the transaction.

@@ -22,7 +22,7 @@ public record TransactionDetails53
     [IsoId("_ZmjjvQ3oEeKIIIcS0K4sAQ")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    public SimpleValueList<IsoMax35Text> TradeIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> TradeIdentification { get; init; } = [];
 
     /// <summary>
     /// Collective reference identifying a set of messages.
@@ -32,7 +32,7 @@ public record TransactionDetails53
     [IsoXmlTag("PoolId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PoolIdentification { get; init; }
+    public Max35Text? PoolIdentification { get; init; }
 
     /// <summary>
     /// Identification assigned by the account servicer to unambiguously identify a corporate action event.
@@ -42,7 +42,7 @@ public record TransactionDetails53
     [IsoXmlTag("CorpActnEvtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CorporateActionEventIdentification { get; init; }
+    public Max35Text? CorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Unique reference identifying the triparty collateral management transaction from the triparty agent&apos;s point of view.
@@ -52,7 +52,7 @@ public record TransactionDetails53
     [IsoXmlTag("TrptyAgtCollTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TripartyAgentCollateralTransactionIdentification { get; init; }
+    public Max35Text? TripartyAgentCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique reference identifying the triparty collateral management transaction from the client&apos;s point of view.
@@ -62,7 +62,7 @@ public record TransactionDetails53
     [IsoXmlTag("ClntTrptyCollTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClientTripartyCollateralTransactionIdentification { get; init; }
+    public Max35Text? ClientTripartyCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification assigned to the instruction by the client.
@@ -72,7 +72,7 @@ public record TransactionDetails53
     [IsoXmlTag("ClntCollInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClientCollateralInstructionIdentification { get; init; }
+    public Max35Text? ClientCollateralInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification assigned to the instruction by the triparty agent.
@@ -82,7 +82,7 @@ public record TransactionDetails53
     [IsoXmlTag("TrptyCollInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TripartyCollateralInstructionIdentification { get; init; }
+    public Max35Text? TripartyCollateralInstructionIdentification { get; init; }
 
     /// <summary>
     /// Party that legally owns the account.
@@ -123,7 +123,7 @@ public record TransactionDetails53
     [DisplayName("Place Of Clearing")]
     [IsoXmlTag("PlcOfClr")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public IsoAnyBICIdentifier? PlaceOfClearing { get; init; }
+    public AnyBICIdentifier? PlaceOfClearing { get; init; }
 
     /// <summary>
     /// Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.
@@ -253,5 +253,5 @@ public record TransactionDetails53
     [IsoXmlTag("SttlmInstrPrcgAddtlDtls")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? SettlementInstructionProcessingAdditionalDetails { get; init; }
+    public Max350Text? SettlementInstructionProcessingAdditionalDetails { get; init; }
 }

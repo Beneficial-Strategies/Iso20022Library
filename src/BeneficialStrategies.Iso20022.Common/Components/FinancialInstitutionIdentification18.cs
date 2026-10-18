@@ -23,7 +23,7 @@ public record FinancialInstitutionIdentification18
     [DisplayName("BICFI")]
     [IsoXmlTag("BICFI")]
     [IsoSimpleType(IsoSimpleType.BICFIDec2014Identifier)]
-    public IsoBICFIDec2014Identifier? BICFI { get; init; }
+    public BICFIDec2014Identifier? BICFI { get; init; }
 
     /// <summary>
     /// Information used to identify a member within a clearing system.
@@ -40,7 +40,7 @@ public record FinancialInstitutionIdentification18
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? LEI { get; init; }
+    public LEIIdentifier? LEI { get; init; }
 
     /// <summary>
     /// Name by which an agent is known and which is usually used to identify that agent.
@@ -50,7 +50,7 @@ public record FinancialInstitutionIdentification18
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Name { get; init; }
+    public Max140Text? Name { get; init; }
 
     /// <summary>
     /// Information that locates and identifies a specific address, as defined by postal services.

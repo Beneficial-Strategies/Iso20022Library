@@ -39,5 +39,5 @@ public record InitialMarginExposure1
     [DisplayName("Core Indicator")]
     [IsoXmlTag("CoreInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator CoreIndicator { get; init; }
+    public required TrueFalseIndicator CoreIndicator { get; init; }
 }

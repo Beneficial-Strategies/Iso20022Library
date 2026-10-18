@@ -32,7 +32,7 @@ public record TaxReference1
     [IsoXmlTag("Ref")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Reference { get; init; }
+    public required Max35Text Reference { get; init; }
 
     /// <summary>
     /// Type of reference holder. For example, the transferee&apos;s tax reference. The transferee may also be known as the acquiring party.

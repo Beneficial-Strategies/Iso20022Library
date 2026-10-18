@@ -23,7 +23,7 @@ public record AmountAndDirection2
     [DisplayName("Accrued Interest Indicator")]
     [IsoXmlTag("AcrdIntrstInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AccruedInterestIndicator { get; init; }
+    public YesNoIndicator? AccruedInterestIndicator { get; init; }
 
     /// <summary>
     /// Whether the net proceeds include stamp duty amount.
@@ -32,7 +32,7 @@ public record AmountAndDirection2
     [DisplayName("Stamp Duty Indicator")]
     [IsoXmlTag("StmpDtyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? StampDutyIndicator { get; init; }
+    public YesNoIndicator? StampDutyIndicator { get; init; }
 
     /// <summary>
     /// Amount of money in the cash entry.

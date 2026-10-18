@@ -24,7 +24,7 @@ public record Contact7
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Name { get; init; }
+    public Max35Text? Name { get; init; }
 
     /// <summary>
     /// Collection of information that identifies a FAX number, as defined by telecom services.
@@ -33,7 +33,7 @@ public record Contact7
     [DisplayName("Fax Number")]
     [IsoXmlTag("FaxNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? FaxNumber { get; init; }
+    public PhoneNumber? FaxNumber { get; init; }
 
     /// <summary>
     /// Collection of information that identifies a phone number, as defined by telecom services.
@@ -42,7 +42,7 @@ public record Contact7
     [DisplayName("Telephone Number")]
     [IsoXmlTag("TelNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? TelephoneNumber { get; init; }
+    public PhoneNumber? TelephoneNumber { get; init; }
 
     /// <summary>
     /// Address for electronic mail (e-mail).
@@ -52,7 +52,7 @@ public record Contact7
     [IsoXmlTag("Email")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Email { get; init; }
+    public Max256Text? Email { get; init; }
 
     /// <summary>
     /// Universal Resource Locator (URL) address.
@@ -62,5 +62,5 @@ public record Contact7
     [IsoXmlTag("URLAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? URLAddress { get; init; }
+    public Max256Text? URLAddress { get; init; }
 }

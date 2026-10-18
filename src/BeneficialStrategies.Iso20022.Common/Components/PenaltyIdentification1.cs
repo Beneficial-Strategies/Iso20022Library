@@ -22,7 +22,7 @@ public record PenaltyIdentification1
     [IsoId("_Exl5dTkPEem897H7zB2RJg")]
     [DisplayName("Market Infrastructure Identification")]
     [IsoXmlTag("MktInfrstrctrId")]
-    public required IsoMax35Text MarketInfrastructureIdentification { get; init; }
+    public required Max35Text MarketInfrastructureIdentification { get; init; }
 
     /// <summary>
     /// Identification as assigned by the market infrastructure to the penalty, individual to the relevant account owner.
@@ -30,7 +30,7 @@ public record PenaltyIdentification1
     [IsoId("_Exl5ejkPEem897H7zB2RJg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax35Text? Identification { get; init; }
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Identification as assigned to the penalty by the market infrastructure following a reallocation.

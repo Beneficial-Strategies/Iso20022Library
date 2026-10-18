@@ -24,7 +24,7 @@ public record DisseminationData1
     [IsoXmlTag("DssmntnIdr")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public required IsoMax52Text DisseminationIdentifier { get; init; }
+    public required Max52Text DisseminationIdentifier { get; init; }
 
     /// <summary>
     /// Trade repository generated unique and random identifier of the original, publicly-disseminated swap transaction and pricing data.
@@ -35,7 +35,7 @@ public record DisseminationData1
     [IsoXmlTag("OrgnlDssmntnIdr")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoMax52Text? OriginalDisseminationIdentifier { get; init; }
+    public Max52Text? OriginalDisseminationIdentifier { get; init; }
 
     /// <summary>
     /// Date and time, to the nearest second, that a trade repository publicly disseminates trade data.
@@ -44,5 +44,5 @@ public record DisseminationData1
     [DisplayName("Time Stamp")]
     [IsoXmlTag("TmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime TimeStamp { get; init; }
+    public required ISODateTime TimeStamp { get; init; }
 }

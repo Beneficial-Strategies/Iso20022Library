@@ -71,7 +71,7 @@ public record MeetingInstructionV09 : IOuterRecord
     [IsoXmlTag("MtgInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MeetingInstructionIdentification { get; init; }
+    public Max35Text? MeetingInstructionIdentification { get; init; }
 
     /// <summary>
     /// Set of elements to allow the unambiguous identification of a meeting.

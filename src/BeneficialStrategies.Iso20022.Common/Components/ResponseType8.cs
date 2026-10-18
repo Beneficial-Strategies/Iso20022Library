@@ -24,7 +24,7 @@ public record ResponseType8
     [IsoXmlTag("RspndrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ResponderIdentification { get; init; }
+    public required Max35Text ResponderIdentification { get; init; }
 
     /// <summary>
     /// Codification of the response (for instance ISO 8583, IFX).
@@ -34,7 +34,7 @@ public record ResponseType8
     [IsoXmlTag("Cdfctn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Codification { get; init; }
+    public Max35Text? Codification { get; init; }
 
     /// <summary>
     /// Result of the request.
@@ -44,7 +44,7 @@ public record ResponseType8
     [IsoXmlTag("Rspn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Response { get; init; }
+    public required Max35Text Response { get; init; }
 
     /// <summary>
     /// Detail of the response.
@@ -54,7 +54,7 @@ public record ResponseType8
     [IsoXmlTag("RspnRsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ResponseReason { get; init; }
+    public Max35Text? ResponseReason { get; init; }
 
     /// <summary>
     /// Additional information to be logged for further examination.
@@ -64,5 +64,5 @@ public record ResponseType8
     [IsoXmlTag("AddtlRspnInf")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AdditionalResponseInformation { get; init; }
+    public Max35Text? AdditionalResponseInformation { get; init; }
 }

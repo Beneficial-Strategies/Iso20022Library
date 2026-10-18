@@ -35,7 +35,7 @@ public record Cheque21
     /// </summary>
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
-    public IsoMax35Text? Number { get; init; }
+    public Max35Text? Number { get; init; }
 
     /// <summary>
     /// Payee Identification.

@@ -24,7 +24,7 @@ public record CurrencyControlHeader5
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the message was created.
@@ -33,7 +33,7 @@ public record CurrencyControlHeader5
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// Number of individual items contained in the message.
@@ -42,7 +42,7 @@ public record CurrencyControlHeader5
     [DisplayName("Number Of Items")]
     [IsoXmlTag("NbOfItms")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText NumberOfItems { get; init; }
+    public required Max15NumericText NumberOfItems { get; init; }
 
     /// <summary>
     /// Party that initiates the instruction.

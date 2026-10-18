@@ -22,7 +22,7 @@ public record AcceptorData1
     [IsoId("_NotssRT3EfC_aaedwHHlmw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Unique identification to the acceptor assigned by the scheme.
@@ -30,7 +30,7 @@ public record AcceptorData1
     [IsoId("_m4PXwBUZEfC_aaedwHHlmw")]
     [DisplayName("Scheme Assigned Identification")]
     [IsoXmlTag("SchmeAssgndId")]
-    public IsoMax15AlphaNumericText? SchemeAssignedIdentification { get; init; }
+    public Max15AlphaNumericText? SchemeAssignedIdentification { get; init; }
 
     /// <summary>
     /// Business name of the acceptor.
@@ -38,7 +38,7 @@ public record AcceptorData1
     [IsoId("_NotsuxT3EfC_aaedwHHlmw")]
     [DisplayName("Business Name")]
     [IsoXmlTag("BizNm")]
-    public IsoMax35Text? BusinessName { get; init; }
+    public Max35Text? BusinessName { get; init; }
 
     /// <summary>
     /// Legal Corporate Name of the party.
@@ -46,7 +46,7 @@ public record AcceptorData1
     [IsoId("_NotsvRT3EfC_aaedwHHlmw")]
     [DisplayName("Legal Corporate Name")]
     [IsoXmlTag("LglCorpNm")]
-    public IsoMax99Text? LegalCorporateName { get; init; }
+    public Max99Text? LegalCorporateName { get; init; }
 
     /// <summary>
     /// Name and location of acceptor.
@@ -54,7 +54,7 @@ public record AcceptorData1
     [IsoId("_NotswRT3EfC_aaedwHHlmw")]
     [DisplayName("Name And Location")]
     [IsoXmlTag("NmAndLctn")]
-    public required IsoMax99Text NameAndLocation { get; init; }
+    public required Max99Text NameAndLocation { get; init; }
 
     /// <summary>
     /// Address of the entity.
@@ -70,7 +70,7 @@ public record AcceptorData1
     [IsoId("_Nots4xT3EfC_aaedwHHlmw")]
     [DisplayName("Additional Address")]
     [IsoXmlTag("AddtlAdr")]
-    public IsoMax256Text? AdditionalAddress { get; init; }
+    public Max256Text? AdditionalAddress { get; init; }
 
     /// <summary>
     /// Electronic mail address.
@@ -78,7 +78,7 @@ public record AcceptorData1
     [IsoId("_Nots7RT3EfC_aaedwHHlmw")]
     [DisplayName("Email")]
     [IsoXmlTag("Email")]
-    public IsoMax256Text? Email { get; init; }
+    public Max256Text? Email { get; init; }
 
     /// <summary>
     /// Universal Resource Locator (URL) address.
@@ -86,7 +86,7 @@ public record AcceptorData1
     [IsoId("_Nots9RT3EfC_aaedwHHlmw")]
     [DisplayName("URL")]
     [IsoXmlTag("URL")]
-    public IsoMax256Text? URL { get; init; }
+    public Max256Text? URL { get; init; }
 
     /// <summary>
     /// Collection of information that identifies a phone number as defined by telecom services.
@@ -94,7 +94,7 @@ public record AcceptorData1
     [IsoId("_Nots_RT3EfC_aaedwHHlmw")]
     [DisplayName("Phone")]
     [IsoXmlTag("Phne")]
-    public IsoMax35Text? Phone { get; init; }
+    public Max35Text? Phone { get; init; }
 
     /// <summary>
     /// Phone number of the customer service.
@@ -102,7 +102,7 @@ public record AcceptorData1
     [IsoId("_NottBRT3EfC_aaedwHHlmw")]
     [DisplayName("Customer Service")]
     [IsoXmlTag("CstmrSvc")]
-    public IsoMax35Text? CustomerService { get; init; }
+    public Max35Text? CustomerService { get; init; }
 
     /// <summary>
     /// Additional information used to facilitate contact with the card acceptor.
@@ -110,7 +110,7 @@ public record AcceptorData1
     [IsoId("_NottDRT3EfC_aaedwHHlmw")]
     [DisplayName("Additional Contact")]
     [IsoXmlTag("AddtlCtct")]
-    public IsoMax256Text? AdditionalContact { get; init; }
+    public Max256Text? AdditionalContact { get; init; }
 
     /// <summary>
     /// Contains business registration Identification of the acceptor.
@@ -118,7 +118,7 @@ public record AcceptorData1
     [IsoId("_rHDzQiRcEfCa6bxMAKEOKg")]
     [DisplayName("Business Registration Identification")]
     [IsoXmlTag("BizRegnId")]
-    public IsoMax35Text? BusinessRegistrationIdentification { get; init; }
+    public Max35Text? BusinessRegistrationIdentification { get; init; }
 
     /// <summary>
     /// Contains the type of acceptor's business registration Identification.
@@ -126,7 +126,7 @@ public record AcceptorData1
     [IsoId("_rHDzQyRcEfCa6bxMAKEOKg")]
     [DisplayName("Business Registration Identification Type")]
     [IsoXmlTag("BizRegnIdTp")]
-    public IsoMax35Text? BusinessRegistrationIdentificationType { get; init; }
+    public Max35Text? BusinessRegistrationIdentificationType { get; init; }
 
     /// <summary>
     /// Location where the cardholder receives the service.
@@ -150,7 +150,7 @@ public record AcceptorData1
     [IsoId("_NottGxT3EfC_aaedwHHlmw")]
     [DisplayName("Additional Transaction Reference Number")]
     [IsoXmlTag("AddtlTxRefNb")]
-    public IsoMax70Text? AdditionalTransactionReferenceNumber { get; init; }
+    public Max70Text? AdditionalTransactionReferenceNumber { get; init; }
 
     /// <summary>
     /// Identification of the company recognized by the taxation authority.
@@ -158,7 +158,7 @@ public record AcceptorData1
     [IsoId("_NottHRT3EfC_aaedwHHlmw")]
     [DisplayName("Corporate Tax Identification")]
     [IsoXmlTag("CorpTaxId")]
-    public IsoMax35Text? CorporateTaxIdentification { get; init; }
+    public Max35Text? CorporateTaxIdentification { get; init; }
 
     /// <summary>
     /// Indicates the corporate tax identification type.
@@ -174,7 +174,7 @@ public record AcceptorData1
     [IsoId("_NottIRT3EfC_aaedwHHlmw")]
     [DisplayName("Business Type")]
     [IsoXmlTag("BizTp")]
-    public IsoMax35Text? BusinessType { get; init; }
+    public Max35Text? BusinessType { get; init; }
 
     /// <summary>
     /// Party that provided the business type information.
@@ -182,7 +182,7 @@ public record AcceptorData1
     [IsoId("_NottIxT3EfC_aaedwHHlmw")]
     [DisplayName("Business Type Provided By")]
     [IsoXmlTag("BizTpPrvddBy")]
-    public IsoMax35Text? BusinessTypeProvidedBy { get; init; }
+    public Max35Text? BusinessTypeProvidedBy { get; init; }
 
     /// <summary>
     /// Specific type of ownership.
@@ -190,7 +190,7 @@ public record AcceptorData1
     [IsoId("_NottJRT3EfC_aaedwHHlmw")]
     [DisplayName("Owner Type")]
     [IsoXmlTag("OwnrTp")]
-    public IsoMax35Text? OwnerType { get; init; }
+    public Max35Text? OwnerType { get; init; }
 
     /// <summary>
     /// Party that provided the owner type information.
@@ -198,7 +198,7 @@ public record AcceptorData1
     [IsoId("_NottJxT3EfC_aaedwHHlmw")]
     [DisplayName("Owner Type Provided By")]
     [IsoXmlTag("OwnrTpPrvddBy")]
-    public IsoMax35Text? OwnerTypeProvidedBy { get; init; }
+    public Max35Text? OwnerTypeProvidedBy { get; init; }
 
     /// <summary>
     /// Specific type of certification.
@@ -206,7 +206,7 @@ public record AcceptorData1
     [IsoId("_NottKRT3EfC_aaedwHHlmw")]
     [DisplayName("Certification Type")]
     [IsoXmlTag("CertfctnTp")]
-    public IsoMax35Text? CertificationType { get; init; }
+    public Max35Text? CertificationType { get; init; }
 
     /// <summary>
     /// Party that provided the certification type information.
@@ -214,7 +214,7 @@ public record AcceptorData1
     [IsoId("_NottKxT3EfC_aaedwHHlmw")]
     [DisplayName("Certification Type Provided By")]
     [IsoXmlTag("CertfctnTpPrvddBy")]
-    public IsoMax35Text? CertificationTypeProvidedBy { get; init; }
+    public Max35Text? CertificationTypeProvidedBy { get; init; }
 
     /// <summary>
     /// Specific type of owner ethnicity.
@@ -222,7 +222,7 @@ public record AcceptorData1
     [IsoId("_NottLRT3EfC_aaedwHHlmw")]
     [DisplayName("Owner Ethnicity Type")]
     [IsoXmlTag("OwnrEthnctyTp")]
-    public IsoMax35Text? OwnerEthnicityType { get; init; }
+    public Max35Text? OwnerEthnicityType { get; init; }
 
     /// <summary>
     /// Party that provided the owner ethnicity type information.
@@ -230,7 +230,7 @@ public record AcceptorData1
     [IsoId("_NottLxT3EfC_aaedwHHlmw")]
     [DisplayName("Owner Ethnicity Type Provided By")]
     [IsoXmlTag("OwnrEthnctyTpPrvddBy")]
-    public IsoMax35Text? OwnerEthnicityTypeProvidedBy { get; init; }
+    public Max35Text? OwnerEthnicityTypeProvidedBy { get; init; }
 
     /// <summary>
     /// Identifies a specific partnership agreement, generally between specific acceptors and issuers.
@@ -238,7 +238,7 @@ public record AcceptorData1
     [IsoId("_5Geb0CRZEfCa6bxMAKEOKg")]
     [DisplayName("Partner Identification")]
     [IsoXmlTag("PrtnrId")]
-    public IsoMax35Text? PartnerIdentification { get; init; }
+    public Max35Text? PartnerIdentification { get; init; }
 
     /// <summary>
     /// Reserved for private data. The use of this data element is determined by bilateral agreement.

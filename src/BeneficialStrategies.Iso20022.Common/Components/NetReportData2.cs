@@ -24,7 +24,7 @@ public record NetReportData2
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the net report was generated.
@@ -33,7 +33,7 @@ public record NetReportData2
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// Provides the cut off time that has been passed, resulting in the generation of the net report.
@@ -42,7 +42,7 @@ public record NetReportData2
     [DisplayName("Netting Cut Off Time")]
     [IsoXmlTag("NetgCutOffTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public required IsoISOTime NettingCutOffTime { get; init; }
+    public required ISOTime NettingCutOffTime { get; init; }
 
     /// <summary>
     /// Specifies the value date on which the net report was generated.
@@ -51,7 +51,7 @@ public record NetReportData2
     [DisplayName("Report Date")]
     [IsoXmlTag("RptDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ReportDate { get; init; }
+    public required DateOnly ReportDate { get; init; }
 
     /// <summary>
     /// Specifies the value date of the trades used in the generation of the net report.
@@ -60,7 +60,7 @@ public record NetReportData2
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ValueDate { get; init; }
+    public required DateOnly ValueDate { get; init; }
 
     /// <summary>
     /// Specifies the type of net report, indicating how the obligations have been calculated.
@@ -70,7 +70,7 @@ public record NetReportData2
     [IsoXmlTag("RptTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReportType { get; init; }
+    public Max35Text? ReportType { get; init; }
 
     /// <summary>
     /// Describes the central system responsible for generating the net report.
@@ -88,7 +88,7 @@ public record NetReportData2
     [IsoXmlTag("NetSvcTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? NetServiceType { get; init; }
+    public Max35Text? NetServiceType { get; init; }
 
     /// <summary>
     /// Page number of the message (within the net report) and continuation indicator to indicate that the report is to continue or that the message is the last page of the report.

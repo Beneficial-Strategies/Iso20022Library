@@ -24,7 +24,7 @@ public record UserDefinedInformation1
     [IsoXmlTag("Labl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Label { get; init; }
+    public required Max35Text Label { get; init; }
 
     /// <summary>
     /// Specifies the content of the user information.
@@ -34,5 +34,5 @@ public record UserDefinedInformation1
     [IsoXmlTag("Inf")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text Information { get; init; }
+    public required Max140Text Information { get; init; }
 }

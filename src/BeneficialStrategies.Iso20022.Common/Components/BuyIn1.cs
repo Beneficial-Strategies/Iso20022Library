@@ -23,7 +23,7 @@ public record BuyIn1
     [IsoId("_UpAwgdp-Ed-ak6NoX_4Aeg_-821727422")]
     [DisplayName("Warning Indicator")]
     [IsoXmlTag("WrngInd")]
-    public IsoYesNoIndicator? WarningIndicator { get; init; }
+    public YesNoIndicator? WarningIndicator { get; init; }
 
     /// <summary>
     /// Provides the date at which the buy will occur.

@@ -23,7 +23,7 @@ public record CertificationRequest2
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Version { get; init; }
+    public Number? Version { get; init; }
 
     /// <summary>
     /// Distinguished name of the certificate subject, the entity whose public key is to be certified.

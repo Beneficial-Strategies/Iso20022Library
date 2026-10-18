@@ -21,7 +21,7 @@ public record Organisation43
     /// </summary>
     [DisplayName("Board Resolution Indicator")]
     [IsoXmlTag("BrdRsltnInd")]
-    public IsoTrueFalseIndicator? BoardResolutionIndicator { get; init; }
+    public TrueFalseIndicator? BoardResolutionIndicator { get; init; }
 
     /// <summary>
     /// Business Address.
@@ -42,14 +42,14 @@ public record Organisation43
     /// </summary>
     [DisplayName("Established Date")]
     [IsoXmlTag("EstblishdDt")]
-    public IsoISODate? EstablishedDate { get; init; }
+    public DateOnly? EstablishedDate { get; init; }
 
     /// <summary>
     /// Full Legal Name.
     /// </summary>
     [DisplayName("Full Legal Name")]
     [IsoXmlTag("FullLglNm")]
-    public required IsoMax350Text FullLegalName { get; init; }
+    public required Max350Text FullLegalName { get; init; }
 
     /// <summary>
     /// Legal Address.
@@ -91,14 +91,14 @@ public record Organisation43
     /// </summary>
     [DisplayName("Registration Date")]
     [IsoXmlTag("RegnDt")]
-    public IsoISODate? RegistrationDate { get; init; }
+    public DateOnly? RegistrationDate { get; init; }
 
     /// <summary>
     /// Registration Number.
     /// </summary>
     [DisplayName("Registration Number")]
     [IsoXmlTag("RegnNb")]
-    public IsoMax70Text? RegistrationNumber { get; init; }
+    public Max70Text? RegistrationNumber { get; init; }
 
     /// <summary>
     /// Representative Officer.
@@ -126,14 +126,14 @@ public record Organisation43
     /// </summary>
     [DisplayName("Taxation Identification Number")]
     [IsoXmlTag("TaxtnIdNb")]
-    public IsoMax35Text? TaxationIdentificationNumber { get; init; }
+    public Max35Text? TaxationIdentificationNumber { get; init; }
 
     /// <summary>
     /// Trading Name.
     /// </summary>
     [DisplayName("Trading Name")]
     [IsoXmlTag("TradgNm")]
-    public IsoMax350Text? TradingName { get; init; }
+    public Max350Text? TradingName { get; init; }
 
     /// <summary>
     /// Treasury Manager.

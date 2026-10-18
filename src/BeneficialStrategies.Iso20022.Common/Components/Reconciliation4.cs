@@ -21,19 +21,19 @@ public record Reconciliation4
     /// </summary>
     [DisplayName("Checkpoint Reference")]
     [IsoXmlTag("ChckptRef")]
-    public IsoMax35Text? CheckpointReference { get; init; }
+    public Max35Text? CheckpointReference { get; init; }
 
     /// <summary>
     /// Date.
     /// </summary>
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax35Text? Identification { get; init; }
+    public Max35Text? Identification { get; init; }
 }

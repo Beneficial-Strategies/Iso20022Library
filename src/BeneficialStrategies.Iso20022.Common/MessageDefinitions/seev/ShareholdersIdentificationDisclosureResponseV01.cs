@@ -73,7 +73,7 @@ public record ShareholdersIdentificationDisclosureResponseV01 : IOuterRecord
     [IsoXmlTag("DsclsrRspnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text DisclosureResponseIdentification { get; init; }
+    public required Max35Text DisclosureResponseIdentification { get; init; }
 
     /// <summary>
     /// Unique identification of the intermediary party responding to the shareholders identification disclosure request.

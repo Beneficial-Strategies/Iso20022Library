@@ -31,7 +31,7 @@ public record ReceiveInformation3
     [DisplayName("Stamp Duty Indicator")]
     [IsoXmlTag("StmpDtyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator StampDutyIndicator { get; init; }
+    public required YesNoIndicator StampDutyIndicator { get; init; }
 
     /// <summary>
     /// Deal amount.
@@ -80,7 +80,7 @@ public record ReceiveInformation3
     [DisplayName("Physical Transfer Indicator")]
     [IsoXmlTag("PhysTrfInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator PhysicalTransferIndicator { get; init; }
+    public required YesNoIndicator PhysicalTransferIndicator { get; init; }
 
     /// <summary>
     /// Parameters of a physical delivery.

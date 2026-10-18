@@ -31,5 +31,5 @@ public record AmountRangeBoundary1
     [DisplayName("Included")]
     [IsoXmlTag("Incl")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator Included { get; init; }
+    public required YesNoIndicator Included { get; init; }
 }

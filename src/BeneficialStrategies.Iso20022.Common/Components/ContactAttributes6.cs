@@ -24,7 +24,7 @@ public record ContactAttributes6
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Name { get; init; }
+    public Max350Text? Name { get; init; }
 
     /// <summary>
     /// Address of the party.
@@ -41,7 +41,7 @@ public record ContactAttributes6
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? PhoneNumber { get; init; }
+    public PhoneNumber? PhoneNumber { get; init; }
 
     /// <summary>
     /// Fax number of the party.
@@ -50,7 +50,7 @@ public record ContactAttributes6
     [DisplayName("Fax Number")]
     [IsoXmlTag("FaxNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? FaxNumber { get; init; }
+    public PhoneNumber? FaxNumber { get; init; }
 
     /// <summary>
     /// Address for electronic mail (e-mail) for the party.
@@ -60,7 +60,7 @@ public record ContactAttributes6
     [IsoXmlTag("EmailAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? EmailAddress { get; init; }
+    public Max256Text? EmailAddress { get; init; }
 
     /// <summary>
     /// Address for the Universal Resource Locator (URL), for example, used over the www (HTTP) service.
@@ -70,7 +70,7 @@ public record ContactAttributes6
     [IsoXmlTag("URLAdr")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
     [StringLength(maximumLength: 2048, MinimumLength = 1)]
-    public IsoMax2048Text? URLAddress { get; init; }
+    public Max2048Text? URLAddress { get; init; }
 
     /// <summary>
     /// Identification of the party expressed as a BIC.
@@ -79,7 +79,7 @@ public record ContactAttributes6
     [DisplayName("Any BIC")]
     [IsoXmlTag("AnyBIC")]
     [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
-    public IsoAnyBICDec2014Identifier? AnyBIC { get; init; }
+    public AnyBICDec2014Identifier? AnyBIC { get; init; }
 
     /// <summary>
     /// Legal entity identification as an alternate identification for the party.
@@ -88,5 +88,5 @@ public record ContactAttributes6
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? LEI { get; init; }
+    public LEIIdentifier? LEI { get; init; }
 }

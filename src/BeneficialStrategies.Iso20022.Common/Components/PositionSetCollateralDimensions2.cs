@@ -40,7 +40,7 @@ public record PositionSetCollateralDimensions2
     [IsoXmlTag("Prtfl")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoMax52Text? Portfolio { get; init; }
+    public Max52Text? Portfolio { get; init; }
 
     /// <summary>
     /// Currency of the initial margin posted by the reporting counterparty to the other counterparty.

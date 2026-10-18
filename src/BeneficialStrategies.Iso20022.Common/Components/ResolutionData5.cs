@@ -42,7 +42,7 @@ public record ResolutionData5
     /// </summary>
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
-    public IsoMax35Text? EndToEndIdentification { get; init; }
+    public Max35Text? EndToEndIdentification { get; init; }
 
     /// <summary>
     /// Interbank Settlement Amount.
@@ -56,19 +56,19 @@ public record ResolutionData5
     /// </summary>
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
-    public IsoISODate? InterbankSettlementDate { get; init; }
+    public DateOnly? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Transaction Identification.
     /// </summary>
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
-    public IsoMax35Text? TransactionIdentification { get; init; }
+    public Max35Text? TransactionIdentification { get; init; }
 
     /// <summary>
     /// UETR.
     /// </summary>
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
-    public IsoUUIDv4Identifier? UETR { get; init; }
+    public UUIDv4Identifier? UETR { get; init; }
 }

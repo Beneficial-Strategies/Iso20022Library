@@ -46,5 +46,5 @@ public record ValidationStatusReason2
     [IsoId("_9rC4u248EeiU9cctagi5ow")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public SimpleValueList<IsoMax105Text> AdditionalInformation { get; init; } = [];
+    public SimpleValueList<Max105Text> AdditionalInformation { get; init; } = [];
 }

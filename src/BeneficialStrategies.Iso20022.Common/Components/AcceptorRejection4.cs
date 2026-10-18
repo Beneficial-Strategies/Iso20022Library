@@ -39,5 +39,5 @@ public record AcceptorRejection4
     [DisplayName("Message In Error")]
     [IsoXmlTag("MsgInErr")]
     [IsoSimpleType(IsoSimpleType.Max100KBinary)]
-    public IsoMax100KBinary? MessageInError { get; init; }
+    public Max100KBinary? MessageInError { get; init; }
 }

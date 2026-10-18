@@ -31,6 +31,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormat34Choice
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
-        public required IsoAnyBICDec2014Identifier Identification { get; init; }
+        public required AnyBICDec2014Identifier Identification { get; init; }
     }
 }

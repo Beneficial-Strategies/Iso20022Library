@@ -39,7 +39,7 @@ public record UndertakingStatusAdvice1
     [DisplayName("Amendment Sequence Number")]
     [IsoXmlTag("AmdmntSeqNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? AmendmentSequenceNumber { get; init; }
+    public Number? AmendmentSequenceNumber { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier assigned by the advising party to the undertaking.
@@ -49,7 +49,7 @@ public record UndertakingStatusAdvice1
     [IsoXmlTag("AdvsgPtyRefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AdvisingPartyReferenceNumber { get; init; }
+    public Max35Text? AdvisingPartyReferenceNumber { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier assigned by the confirmer to the undertaking.
@@ -59,7 +59,7 @@ public record UndertakingStatusAdvice1
     [IsoXmlTag("CnfrmrRefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ConfirmerReferenceNumber { get; init; }
+    public Max35Text? ConfirmerReferenceNumber { get; init; }
 
     /// <summary>
     /// Specifies the category of the status.

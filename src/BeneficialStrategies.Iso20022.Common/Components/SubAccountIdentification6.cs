@@ -31,7 +31,7 @@ public record SubAccountIdentification6
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ActivityIndicator { get; init; }
+    public required YesNoIndicator ActivityIndicator { get; init; }
 
     /// <summary>
     /// Creation/cancellation of investment units on the books of the fund or its designated agent, as a result of executing an investment fund order.

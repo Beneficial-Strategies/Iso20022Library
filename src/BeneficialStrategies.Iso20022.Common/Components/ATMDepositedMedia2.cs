@@ -23,7 +23,7 @@ public record ATMDepositedMedia2
     [DisplayName("Count")]
     [IsoXmlTag("Cnt")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Count { get; init; }
+    public Number? Count { get; init; }
 
     /// <summary>
     /// Amount or denomination of one media item, if the media type is valued or entered by the customer.
@@ -57,7 +57,7 @@ public record ATMDepositedMedia2
     [IsoXmlTag("CdLine")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? CodeLine { get; init; }
+    public Max70Text? CodeLine { get; init; }
 
     /// <summary>
     /// Check amount scanned by the check reader.
@@ -74,5 +74,5 @@ public record ATMDepositedMedia2
     [DisplayName("Confidence Level")]
     [IsoXmlTag("CnfdncLvl")]
     [IsoSimpleType(IsoSimpleType.Percentage)]
-    public IsoPercentage? ConfidenceLevel { get; init; }
+    public Percentage? ConfidenceLevel { get; init; }
 }

@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice19Choi
         /// </summary>
         [IsoXmlTag("Unit")]
         [IsoSimpleType(IsoSimpleType.LongFraction19DecimalNumber)]
-        public required IsoLongFraction19DecimalNumber Value { get; init; }
+        public required LongFraction19DecimalNumber Value { get; init; }
     }
 }

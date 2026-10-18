@@ -21,7 +21,7 @@ public record RateTypeAndPercentageRate22
     /// </summary>
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
-    public required IsoPercentage14Rate Rate { get; init; }
+    public required decimal Rate { get; init; }
 
     /// <summary>
     /// Rate Type.

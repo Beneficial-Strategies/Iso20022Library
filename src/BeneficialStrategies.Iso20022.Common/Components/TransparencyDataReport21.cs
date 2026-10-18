@@ -56,42 +56,42 @@ public record TransparencyDataReport21
     /// </summary>
     [DisplayName("Full Name")]
     [IsoXmlTag("FullNm")]
-    public IsoMax350Text? FullName { get; init; }
+    public Max350Text? FullName { get; init; }
 
     /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoISINOct2015Identifier Identification { get; init; }
+    public required ISINOct2015Identifier Identification { get; init; }
 
     /// <summary>
     /// Maturity Date.
     /// </summary>
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
-    public IsoISODate? MaturityDate { get; init; }
+    public DateOnly? MaturityDate { get; init; }
 
     /// <summary>
     /// Reporting Date.
     /// </summary>
     [DisplayName("Reporting Date")]
     [IsoXmlTag("RptgDt")]
-    public IsoISODate? ReportingDate { get; init; }
+    public DateOnly? ReportingDate { get; init; }
 
     /// <summary>
     /// Technical Record Identification.
     /// </summary>
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
-    public IsoMax35Text? TechnicalRecordIdentification { get; init; }
+    public Max35Text? TechnicalRecordIdentification { get; init; }
 
     /// <summary>
     /// Trading Venue.
     /// </summary>
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
-    public IsoMICIdentifier? TradingVenue { get; init; }
+    public MICIdentifier? TradingVenue { get; init; }
 
     /// <summary>
     /// Underlying Instrument Asset Class.

@@ -21,7 +21,7 @@ public record IntraPositionMovementDetails21
     /// </summary>
     [DisplayName("Acknowledged Status Time Stamp")]
     [IsoXmlTag("AckdStsTmStmp")]
-    public IsoISODateTime? AcknowledgedStatusTimeStamp { get; init; }
+    public ISODateTime? AcknowledgedStatusTimeStamp { get; init; }
 
     /// <summary>
     /// Available Date.
@@ -63,7 +63,7 @@ public record IntraPositionMovementDetails21
     /// </summary>
     [DisplayName("Instruction Processing Additional Details")]
     [IsoXmlTag("InstrPrcgAddtlDtls")]
-    public IsoMax350Text? InstructionProcessingAdditionalDetails { get; init; }
+    public Max350Text? InstructionProcessingAdditionalDetails { get; init; }
 
     /// <summary>
     /// Previously Settled Quantity.

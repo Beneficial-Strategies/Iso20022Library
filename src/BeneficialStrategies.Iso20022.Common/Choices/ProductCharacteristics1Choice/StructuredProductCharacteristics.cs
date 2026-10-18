@@ -32,6 +32,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductCharacteristics1Choice
         [IsoXmlTag("Chrtcs")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text Characteristics { get; init; }
+        public required Max35Text Characteristics { get; init; }
     }
 }

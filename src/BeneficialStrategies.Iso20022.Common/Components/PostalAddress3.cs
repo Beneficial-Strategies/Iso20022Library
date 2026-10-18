@@ -31,7 +31,7 @@ public record PostalAddress3
     [DisplayName("Mailing Indicator")]
     [IsoXmlTag("MlngInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator MailingIndicator { get; init; }
+    public required YesNoIndicator MailingIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the address is the official address of the party.
@@ -40,7 +40,7 @@ public record PostalAddress3
     [DisplayName("Registration Address Indicator")]
     [IsoXmlTag("RegnAdrInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator RegistrationAddressIndicator { get; init; }
+    public required YesNoIndicator RegistrationAddressIndicator { get; init; }
 
     /// <summary>
     /// Information that locates and identifies a specific address, as defined by postal services.

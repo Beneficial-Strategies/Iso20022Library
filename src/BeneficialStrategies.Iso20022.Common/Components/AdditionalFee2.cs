@@ -32,7 +32,7 @@ public record AdditionalFee2
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Identification of fee program.
@@ -42,7 +42,7 @@ public record AdditionalFee2
     [IsoXmlTag("FeePrgm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? FeeProgram { get; init; }
+    public Max35Text? FeeProgram { get; init; }
 
     /// <summary>
     /// Identification of specific fee.
@@ -52,7 +52,7 @@ public record AdditionalFee2
     [IsoXmlTag("FeeDscrptr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? FeeDescriptor { get; init; }
+    public Max35Text? FeeDescriptor { get; init; }
 
     /// <summary>
     /// Amount of one occurrence of the fee amount.
@@ -78,7 +78,7 @@ public record AdditionalFee2
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Description { get; init; }
+    public Max140Text? Description { get; init; }
 
     /// <summary>
     /// Contains additional data.

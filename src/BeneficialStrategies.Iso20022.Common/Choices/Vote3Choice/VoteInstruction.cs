@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote3Choice
         [IsoXmlTag("IssrLabl")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text IssuerLabel { get; init; }
+        public required Max35Text IssuerLabel { get; init; }
 
         /// <summary>
         /// Number of votes in favour of one resolution.
@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote3Choice
         [DisplayName("For")]
         [IsoXmlTag("For")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public IsoNumber? For { get; init; }
+        public Number? For { get; init; }
 
         /// <summary>
         /// Number of votes against one resolution.
@@ -42,7 +42,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote3Choice
         [DisplayName("Against")]
         [IsoXmlTag("Agnst")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public IsoNumber? Against { get; init; }
+        public Number? Against { get; init; }
 
         /// <summary>
         /// Number of votes expressed as abstain for one resolution.
@@ -51,7 +51,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote3Choice
         [DisplayName("Abstain")]
         [IsoXmlTag("Abstn")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public IsoNumber? Abstain { get; init; }
+        public Number? Abstain { get; init; }
 
         /// <summary>
         /// Number of votes withheld for one resolution.
@@ -60,7 +60,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote3Choice
         [DisplayName("Withhold")]
         [IsoXmlTag("Wthhld")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public IsoNumber? Withhold { get; init; }
+        public Number? Withhold { get; init; }
 
         /// <summary>
         /// Number of votes in line with the votes of the management.
@@ -69,7 +69,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote3Choice
         [DisplayName("With Management")]
         [IsoXmlTag("WthMgmt")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public IsoNumber? WithManagement { get; init; }
+        public Number? WithManagement { get; init; }
 
         /// <summary>
         /// Number of votes against the voting recommendation of the management.
@@ -78,7 +78,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote3Choice
         [DisplayName("Against Management")]
         [IsoXmlTag("AgnstMgmt")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public IsoNumber? AgainstManagement { get; init; }
+        public Number? AgainstManagement { get; init; }
 
         /// <summary>
         /// Number of votes for which decision is left to the party that will exercise the voting right.
@@ -87,7 +87,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote3Choice
         [DisplayName("Discretionary")]
         [IsoXmlTag("Dscrtnry")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public IsoNumber? Discretionary { get; init; }
+        public Number? Discretionary { get; init; }
 
         /// <summary>
         /// Number of votes in favour for one year for &quot;say on pay&quot; type of resolution.
@@ -96,7 +96,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote3Choice
         [DisplayName("One Year")]
         [IsoXmlTag("OneYr")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public IsoNumber? OneYear { get; init; }
+        public Number? OneYear { get; init; }
 
         /// <summary>
         /// Number of votes in favour of two years for &quot;say on pay&quot; type of resolution.
@@ -105,7 +105,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote3Choice
         [DisplayName("Two Years")]
         [IsoXmlTag("TwoYrs")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public IsoNumber? TwoYears { get; init; }
+        public Number? TwoYears { get; init; }
 
         /// <summary>
         /// Number of votes in favour of three years for &quot;say on pay&quot; type of resolution.
@@ -114,7 +114,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote3Choice
         [DisplayName("Three Years")]
         [IsoXmlTag("ThreeYrs")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public IsoNumber? ThreeYears { get; init; }
+        public Number? ThreeYears { get; init; }
 
         /// <summary>
         /// Number of votes for which no action has been taken.
@@ -123,6 +123,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote3Choice
         [DisplayName("No Action")]
         [IsoXmlTag("NoActn")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public IsoNumber? NoAction { get; init; }
+        public Number? NoAction { get; init; }
     }
 }

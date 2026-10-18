@@ -57,7 +57,7 @@ public record ShareholdersIdentificationDisclosureResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Disclosure Response Identification")]
     [IsoXmlTag("DsclsrRspnId")]
-    public required IsoMax35Text DisclosureResponseIdentification { get; init; }
+    public required Max35Text DisclosureResponseIdentification { get; init; }
 
     /// <summary>
     /// Issuer Disclosure Request Reference.

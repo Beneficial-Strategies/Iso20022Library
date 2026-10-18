@@ -31,7 +31,7 @@ public record DetailedAmount6
     [DisplayName("Date Time")]
     [IsoXmlTag("DtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime DateTime { get; init; }
+    public required ISODateTime DateTime { get; init; }
 
     /// <summary>
     /// Card data entry mode for the related payment.
@@ -48,7 +48,7 @@ public record DetailedAmount6
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
     [IsoSimpleType(IsoSimpleType.Max10000Binary)]
-    public IsoMax10000Binary? ICCRelatedData { get; init; }
+    public Max10000Binary? ICCRelatedData { get; init; }
 
     /// <summary>
     /// Short description of the amount to display or print.
@@ -58,5 +58,5 @@ public record DetailedAmount6
     [IsoXmlTag("Labl")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Label { get; init; }
+    public Max140Text? Label { get; init; }
 }

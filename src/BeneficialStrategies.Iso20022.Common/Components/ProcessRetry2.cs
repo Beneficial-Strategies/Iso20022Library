@@ -23,7 +23,7 @@ public record ProcessRetry2
     [DisplayName("Delay")]
     [IsoXmlTag("Dely")]
     [IsoSimpleType(IsoSimpleType.Max9NumericText)]
-    public required IsoMax9NumericText Delay { get; init; }
+    public required Max9NumericText Delay { get; init; }
 
     /// <summary>
     /// Maximum number of retries.
@@ -32,5 +32,5 @@ public record ProcessRetry2
     [DisplayName("Maximum Number")]
     [IsoXmlTag("MaxNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaximumNumber { get; init; }
+    public Number? MaximumNumber { get; init; }
 }

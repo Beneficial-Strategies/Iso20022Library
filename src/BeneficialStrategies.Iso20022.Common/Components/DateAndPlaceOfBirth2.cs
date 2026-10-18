@@ -23,7 +23,7 @@ public record DateAndPlaceOfBirth2
     [DisplayName("Birth Date")]
     [IsoXmlTag("BirthDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate BirthDate { get; init; }
+    public required DateOnly BirthDate { get; init; }
 
     /// <summary>
     /// Province where a person was born.
@@ -33,7 +33,7 @@ public record DateAndPlaceOfBirth2
     [IsoXmlTag("PrvcOfBirth")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProvinceOfBirth { get; init; }
+    public Max35Text? ProvinceOfBirth { get; init; }
 
     /// <summary>
     /// City where a person was born.
@@ -43,7 +43,7 @@ public record DateAndPlaceOfBirth2
     [IsoXmlTag("CityOfBirth")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CityOfBirth { get; init; }
+    public Max35Text? CityOfBirth { get; init; }
 
     /// <summary>
     /// Country where a person was born.

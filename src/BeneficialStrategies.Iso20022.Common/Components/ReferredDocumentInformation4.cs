@@ -32,7 +32,7 @@ public record ReferredDocumentInformation4
     [IsoXmlTag("Nb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Number { get; init; }
+    public Max35Text? Number { get; init; }
 
     /// <summary>
     /// Date associated with the referred document.
@@ -41,7 +41,7 @@ public record ReferredDocumentInformation4
     [DisplayName("Related Date")]
     [IsoXmlTag("RltdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RelatedDate { get; init; }
+    public DateOnly? RelatedDate { get; init; }
 
     /// <summary>
     /// Set of elements used to provide the content of the referred document line.

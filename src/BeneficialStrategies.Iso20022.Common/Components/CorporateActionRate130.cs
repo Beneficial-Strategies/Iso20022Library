@@ -28,7 +28,7 @@ public record CorporateActionRate130
     /// </summary>
     [DisplayName("Proposed Rate")]
     [IsoXmlTag("PropsdRate")]
-    public IsoPercentage14Rate? ProposedRate { get; init; }
+    public decimal? ProposedRate { get; init; }
 
     /// <summary>
     /// Requested Second Level Tax Rate.

@@ -23,7 +23,7 @@ public record ATMTransactionAmounts5
     [DisplayName("Display Flag")]
     [IsoXmlTag("DispFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? DisplayFlag { get; init; }
+    public TrueFalseIndicator? DisplayFlag { get; init; }
 
     /// <summary>
     /// Maximum amount allowed for deposit on the account.

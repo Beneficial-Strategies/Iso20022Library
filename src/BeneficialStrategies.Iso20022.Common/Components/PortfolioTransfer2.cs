@@ -24,7 +24,7 @@ public record PortfolioTransfer2
     [IsoXmlTag("MstrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Identification assigned to the transfer of assets.
@@ -34,7 +34,7 @@ public record PortfolioTransfer2
     [IsoXmlTag("TrfId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransferIdentification { get; init; }
+    public required Max35Text TransferIdentification { get; init; }
 
     /// <summary>
     /// Identification of the confirmation assigned by the transferor to the transfer.
@@ -44,7 +44,7 @@ public record PortfolioTransfer2
     [IsoXmlTag("TrfConfId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TransferConfirmationIdentification { get; init; }
+    public Max35Text? TransferConfirmationIdentification { get; init; }
 
     /// <summary>
     /// Choice of tax efficient product, general investment or pension.
@@ -85,7 +85,7 @@ public record PortfolioTransfer2
     [DisplayName("Tax Date")]
     [IsoXmlTag("TaxDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TaxDate { get; init; }
+    public DateOnly? TaxDate { get; init; }
 
     /// <summary>
     /// Asset to be transferred.

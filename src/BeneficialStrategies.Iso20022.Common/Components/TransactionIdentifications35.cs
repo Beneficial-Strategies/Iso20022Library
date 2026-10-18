@@ -24,7 +24,7 @@ public record TransactionIdentifications35
     [IsoXmlTag("AcctOwnrTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax16Text AccountOwnerTransactionIdentification { get; init; }
+    public required RestrictedFINXMax16Text AccountOwnerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the transaction as known by the account servicer.
@@ -34,7 +34,7 @@ public record TransactionIdentifications35
     [IsoXmlTag("AcctSvcrTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? AccountServicerTransactionIdentification { get; init; }
+    public RestrictedFINXMax16Text? AccountServicerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique reference agreed upon by the two trade counterparties to identify the trade.
@@ -44,5 +44,5 @@ public record TransactionIdentifications35
     [IsoXmlTag("CmonId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? CommonIdentification { get; init; }
+    public RestrictedFINXMax16Text? CommonIdentification { get; init; }
 }

@@ -21,14 +21,14 @@ public record CorporateActionGeneralInformationSD55
     /// </summary>
     [DisplayName("Asset Servicer Processing Flag")]
     [IsoXmlTag("AsstSvcrPrcgFlg")]
-    public IsoYesNoIndicator? AssetServicerProcessingFlag { get; init; }
+    public YesNoIndicator? AssetServicerProcessingFlag { get; init; }
 
     /// <summary>
     /// DTCFCP Election Flag.
     /// </summary>
     [DisplayName("DTCFCP Election Flag")]
     [IsoXmlTag("DTCFCPElctnFlg")]
-    public IsoYesNoIndicator? DTCFCPElectionFlag { get; init; }
+    public YesNoIndicator? DTCFCPElectionFlag { get; init; }
 
     /// <summary>
     /// Event Group.
@@ -49,21 +49,21 @@ public record CorporateActionGeneralInformationSD55
     /// </summary>
     [DisplayName("Instruction Messaging Eligibility Flag")]
     [IsoXmlTag("InstrMsggElgbltyFlg")]
-    public IsoYesNoIndicator? InstructionMessagingEligibilityFlag { get; init; }
+    public YesNoIndicator? InstructionMessagingEligibilityFlag { get; init; }
 
     /// <summary>
     /// Place And Name.
     /// </summary>
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Redemption Identification.
     /// </summary>
     [DisplayName("Redemption Identification")]
     [IsoXmlTag("RedId")]
-    public IsoMax10NumericText? RedemptionIdentification { get; init; }
+    public Max10NumericText? RedemptionIdentification { get; init; }
 
     /// <summary>
     /// Sub Event Type.

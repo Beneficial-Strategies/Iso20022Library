@@ -47,7 +47,7 @@ public record ValuationStatistics3
     [DisplayName("Yield")]
     [IsoXmlTag("Yld")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Yield { get; init; }
+    public PercentageRate? Yield { get; init; }
 
     /// <summary>
     /// Information related to price variations, expressed using pre-defined periods.

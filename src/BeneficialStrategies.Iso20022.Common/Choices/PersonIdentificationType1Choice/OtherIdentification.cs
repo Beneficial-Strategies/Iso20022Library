@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonIdentificationType1Choice
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text Identification { get; init; }
+        public required Max35Text Identification { get; init; }
 
         /// <summary>
         /// Specifies the nature of the identifier.|Usage: IdentificationType is used to specify what kind of identifier is used. It should be used in case the identifier is different from the identifiers listed in the pre-defined identifier list.
@@ -34,6 +34,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonIdentificationType1Choice
         [IsoXmlTag("IdTp")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text IdentificationType { get; init; }
+        public required Max35Text IdentificationType { get; init; }
     }
 }

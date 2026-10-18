@@ -23,7 +23,7 @@ public record PartyProfileInformation3
     [DisplayName("Certification Indicator")]
     [IsoXmlTag("CertfctnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? CertificationIndicator { get; init; }
+    public YesNoIndicator? CertificationIndicator { get; init; }
 
     /// <summary>
     /// Identification of the person who validated the document.
@@ -33,7 +33,7 @@ public record PartyProfileInformation3
     [IsoXmlTag("VldtngPty")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? ValidatingParty { get; init; }
+    public Max140Text? ValidatingParty { get; init; }
 
     /// <summary>
     /// Identification of the person who checked the document.
@@ -43,7 +43,7 @@ public record PartyProfileInformation3
     [IsoXmlTag("ChckngPty")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? CheckingParty { get; init; }
+    public Max140Text? CheckingParty { get; init; }
 
     /// <summary>
     /// Identification of the person who is responsible for the document.
@@ -53,7 +53,7 @@ public record PartyProfileInformation3
     [IsoXmlTag("RspnsblPty")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? ResponsibleParty { get; init; }
+    public Max140Text? ResponsibleParty { get; init; }
 
     /// <summary>
     /// Type of certificate.
@@ -70,7 +70,7 @@ public record PartyProfileInformation3
     [DisplayName("Checking Date")]
     [IsoXmlTag("ChckngDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? CheckingDate { get; init; }
+    public DateOnly? CheckingDate { get; init; }
 
     /// <summary>
     /// Specifies how frequently the check is performed.
@@ -87,7 +87,7 @@ public record PartyProfileInformation3
     [DisplayName("Next Revision Date")]
     [IsoXmlTag("NxtRvsnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? NextRevisionDate { get; init; }
+    public DateOnly? NextRevisionDate { get; init; }
 
     /// <summary>
     /// Limits between which a person&apos;s salary is estimated.
@@ -97,7 +97,7 @@ public record PartyProfileInformation3
     [IsoXmlTag("SlryRg")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SalaryRange { get; init; }
+    public Max35Text? SalaryRange { get; init; }
 
     /// <summary>
     /// Indicates the main source of revenue.
@@ -107,7 +107,7 @@ public record PartyProfileInformation3
     [IsoXmlTag("SrcOfWlth")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? SourceOfWealth { get; init; }
+    public Max140Text? SourceOfWealth { get; init; }
 
     /// <summary>
     /// Specifies an assessment of the customer’s behaviour at the time of the account opening application.

@@ -24,7 +24,7 @@ public record PaymentTransaction74
     [IsoXmlTag("CxlId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CancellationIdentification { get; init; }
+    public Max35Text? CancellationIdentification { get; init; }
 
     /// <summary>
     /// Set of elements to uniquely and unambiguously identify an exception or an investigation workflow.
@@ -42,7 +42,7 @@ public record PaymentTransaction74
     [IsoXmlTag("OrgnlInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.
@@ -52,7 +52,7 @@ public record PaymentTransaction74
     [IsoXmlTag("OrgnlEndToEndId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Amount of money, as provided in the original transaction, to be moved between the debtor and the creditor, before deduction of charges, expressed in the currency, as ordered by the original initiating party.
@@ -78,7 +78,7 @@ public record PaymentTransaction74
     [DisplayName("Original Requested Collection Date")]
     [IsoXmlTag("OrgnlReqdColltnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? OriginalRequestedCollectionDate { get; init; }
+    public DateOnly? OriginalRequestedCollectionDate { get; init; }
 
     /// <summary>
     /// Provides detailed information on the cancellation reason.

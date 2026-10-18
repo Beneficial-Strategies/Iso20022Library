@@ -23,7 +23,7 @@ public record BinRange1
     [DisplayName("Lower Bin")]
     [IsoXmlTag("LwrBin")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText LowerBin { get; init; }
+    public required Max15NumericText LowerBin { get; init; }
 
     /// <summary>
     /// Higher value of BIN in the range.
@@ -32,5 +32,5 @@ public record BinRange1
     [DisplayName("Higher Bin")]
     [IsoXmlTag("HghrBin")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText HigherBin { get; init; }
+    public required Max15NumericText HigherBin { get; init; }
 }

@@ -30,7 +30,7 @@ public record LocalData22
     [IsoId("_OE1Is158EfCoP_h9uwd39Q")]
     [DisplayName("Encoding Format")]
     [IsoXmlTag("NcodgFrmt")]
-    public IsoMax35Text? EncodingFormat { get; init; }
+    public Max35Text? EncodingFormat { get; init; }
 
     /// <summary>
     /// Contains transaction description in local language.
@@ -38,7 +38,7 @@ public record LocalData22
     [IsoId("_OE1ItV58EfCoP_h9uwd39Q")]
     [DisplayName("Transaction Description")]
     [IsoXmlTag("TxDesc")]
-    public required IsoMax2000Text TransactionDescription { get; init; }
+    public required Max2000Text TransactionDescription { get; init; }
 
     /// <summary>
     /// Reserved for private data. The use of this data element is determined by bilateral agreement.
@@ -46,7 +46,7 @@ public record LocalData22
     [IsoId("_jhT4Yl58EfCoP_h9uwd39Q")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -54,5 +54,5 @@ public record LocalData22
     [IsoId("_jhT4Y158EfCoP_h9uwd39Q")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

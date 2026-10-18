@@ -39,7 +39,7 @@ public record LossBearing2
     [DisplayName("Limited Capital Loss Level")]
     [IsoXmlTag("LtdCptlLossLvl")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? LimitedCapitalLossLevel { get; init; }
+    public PercentageRate? LimitedCapitalLossLevel { get; init; }
 
     /// <summary>
     /// Specifies the product is compatible with a client who does not need capital guarantee nor protection. One hundred percent of the capital is at risk. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 03040.

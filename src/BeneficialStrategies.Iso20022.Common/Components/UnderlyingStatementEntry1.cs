@@ -32,7 +32,7 @@ public record UnderlyingStatementEntry1
     [IsoXmlTag("OrgnlStmtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalStatementIdentification { get; init; }
+    public Max35Text? OriginalStatementIdentification { get; init; }
 
     /// <summary>
     /// Original unique identification, as assigned by the account servicer, to unambiguously identify the original entry.
@@ -42,5 +42,5 @@ public record UnderlyingStatementEntry1
     [IsoXmlTag("OrgnlNtryId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalEntryIdentification { get; init; }
+    public Max35Text? OriginalEntryIdentification { get; init; }
 }

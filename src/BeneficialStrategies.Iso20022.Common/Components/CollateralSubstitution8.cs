@@ -48,7 +48,7 @@ public record CollateralSubstitution8
     [IsoXmlTag("StdSttlmInstrs")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? StandardSettlementInstructions { get; init; }
+    public Max140Text? StandardSettlementInstructions { get; init; }
 
     /// <summary>
     /// Collateral type is securities.

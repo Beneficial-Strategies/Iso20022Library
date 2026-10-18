@@ -35,7 +35,7 @@ public record ValueForMoney1
     /// </summary>
     [DisplayName("Further Information UK")]
     [IsoXmlTag("FrthrInfUK")]
-    public IsoMax350Text? FurtherInformationUK { get; init; }
+    public Max350Text? FurtherInformationUK { get; init; }
 
     /// <summary>
     /// Other Review Related To Value And Or Charges UK.
@@ -63,12 +63,12 @@ public record ValueForMoney1
     /// </summary>
     [DisplayName("Review Date UK")]
     [IsoXmlTag("RvwDtUK")]
-    public IsoISODate? ReviewDateUK { get; init; }
+    public DateOnly? ReviewDateUK { get; init; }
 
     /// <summary>
     /// Review Next Due UK.
     /// </summary>
     [DisplayName("Review Next Due UK")]
     [IsoXmlTag("RvwNxtDueUK")]
-    public IsoISODate? ReviewNextDueUK { get; init; }
+    public DateOnly? ReviewNextDueUK { get; init; }
 }

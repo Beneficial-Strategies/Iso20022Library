@@ -72,7 +72,7 @@ public record IntraPositionMovementInstruction002V06 : IOuterRecord
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax16Text TransactionIdentification { get; init; }
+    public required RestrictedFINXMax16Text TransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification assigned by the account servicer to unambiguously identify a corporate action event.
@@ -82,7 +82,7 @@ public record IntraPositionMovementInstruction002V06 : IOuterRecord
     [IsoXmlTag("CorpActnEvtId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? CorporateActionEventIdentification { get; init; }
+    public RestrictedFINXMax16Text? CorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Count of the number of transactions linked.

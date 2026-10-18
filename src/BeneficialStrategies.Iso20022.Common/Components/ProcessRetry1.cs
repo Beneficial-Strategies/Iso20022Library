@@ -23,7 +23,7 @@ public record ProcessRetry1
     [DisplayName("Delay")]
     [IsoXmlTag("Dely")]
     [IsoSimpleType(IsoSimpleType.Max9NumericText)]
-    public required IsoMax9NumericText Delay { get; init; }
+    public required Max9NumericText Delay { get; init; }
 
     /// <summary>
     /// Maximum number of retries.
@@ -32,7 +32,7 @@ public record ProcessRetry1
     [DisplayName("Maximum Number")]
     [IsoXmlTag("MaxNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaximumNumber { get; init; }
+    public Number? MaximumNumber { get; init; }
 
     /// <summary>
     /// Time of the last retry.
@@ -41,5 +41,5 @@ public record ProcessRetry1
     [DisplayName("Last Re Try Time")]
     [IsoXmlTag("LastReTryTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? LastReTryTime { get; init; }
+    public ISOTime? LastReTryTime { get; init; }
 }

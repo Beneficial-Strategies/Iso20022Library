@@ -31,7 +31,7 @@ public record CardholderAuthentication8
     [DisplayName("Token Requested")]
     [IsoXmlTag("TknReqd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? TokenRequested { get; init; }
+    public TrueFalseIndicator? TokenRequested { get; init; }
 
     /// <summary>
     /// Value or token to be used for customer or card authentication.
@@ -40,7 +40,7 @@ public record CardholderAuthentication8
     [DisplayName("Authentication Value")]
     [IsoXmlTag("AuthntcnVal")]
     [IsoSimpleType(IsoSimpleType.Max5000Binary)]
-    public IsoMax5000Binary? AuthenticationValue { get; init; }
+    public Max5000Binary? AuthenticationValue { get; init; }
 
     /// <summary>
     /// Protection of the authentication value.

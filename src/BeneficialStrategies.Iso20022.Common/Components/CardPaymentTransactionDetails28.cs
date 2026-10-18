@@ -55,7 +55,7 @@ public record CardPaymentTransactionDetails28
     [DisplayName("Validity Date")]
     [IsoXmlTag("VldtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ValidityDate { get; init; }
+    public DateOnly? ValidityDate { get; init; }
 
     /// <summary>
     /// Type of cardholder account used for the transaction.
@@ -72,5 +72,5 @@ public record CardPaymentTransactionDetails28
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
     [IsoSimpleType(IsoSimpleType.Max10000Binary)]
-    public IsoMax10000Binary? ICCRelatedData { get; init; }
+    public Max10000Binary? ICCRelatedData { get; init; }
 }

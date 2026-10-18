@@ -39,7 +39,7 @@ public record CardholderAuthentication16
     [DisplayName("Authentication Value")]
     [IsoXmlTag("AuthntcnVal")]
     [IsoSimpleType(IsoSimpleType.Max5000Binary)]
-    public IsoMax5000Binary? AuthenticationValue { get; init; }
+    public Max5000Binary? AuthenticationValue { get; init; }
 
     /// <summary>
     /// Protection of the authentication value.
@@ -81,7 +81,7 @@ public record CardholderAuthentication16
     [IsoXmlTag("AuthntcnTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AuthenticationType { get; init; }
+    public Max35Text? AuthenticationType { get; init; }
 
     /// <summary>
     /// Level of authentication for a given type – e.g. value assigned by scheme rules or by bilateral agreements.
@@ -91,7 +91,7 @@ public record CardholderAuthentication16
     [IsoXmlTag("AuthntcnLvl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AuthenticationLevel { get; init; }
+    public Max35Text? AuthenticationLevel { get; init; }
 
     /// <summary>
     /// Result of authentication.

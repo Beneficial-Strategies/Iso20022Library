@@ -54,7 +54,7 @@ public record ReportedFraud6
     [IsoId("_W31XvxODEfC1ZfCQz0xB3g")]
     [DisplayName("Cardholder Reporting Date")]
     [IsoXmlTag("CrdhldrRptgDt")]
-    public IsoISODate? CardholderReportingDate { get; init; }
+    public DateOnly? CardholderReportingDate { get; init; }
 
     /// <summary>
     /// Date fraud was confirmed by the cardholder.
@@ -62,7 +62,7 @@ public record ReportedFraud6
     [IsoId("_W31XwRODEfC1ZfCQz0xB3g")]
     [DisplayName("Confirmation Reporting Date")]
     [IsoXmlTag("ConfRptgDt")]
-    public IsoISODate? ConfirmationReportingDate { get; init; }
+    public DateOnly? ConfirmationReportingDate { get; init; }
 
     /// <summary>
     /// Reference to the case as provided by the submitter.
@@ -70,7 +70,7 @@ public record ReportedFraud6
     [IsoId("_W31XwxODEfC1ZfCQz0xB3g")]
     [DisplayName("Submitter Case Reference")]
     [IsoXmlTag("SubmitrCaseRef")]
-    public IsoMax35Text? SubmitterCaseReference { get; init; }
+    public Max35Text? SubmitterCaseReference { get; init; }
 
     /// <summary>
     /// Type of market segment of confirmed fraud.
@@ -78,7 +78,7 @@ public record ReportedFraud6
     [IsoId("_W31XxRODEfC1ZfCQz0xB3g")]
     [DisplayName("Market Segment")]
     [IsoXmlTag("MktSgmt")]
-    public IsoMax35Text? MarketSegment { get; init; }
+    public Max35Text? MarketSegment { get; init; }
 
     /// <summary>
     /// Case locator number.
@@ -86,7 +86,7 @@ public record ReportedFraud6
     [IsoId("_W31XxxODEfC1ZfCQz0xB3g")]
     [DisplayName("Case Locator Number")]
     [IsoXmlTag("CaseLctrNb")]
-    public IsoMax35Text? CaseLocatorNumber { get; init; }
+    public Max35Text? CaseLocatorNumber { get; init; }
 
     /// <summary>
     /// Reference of fraudulent case.
@@ -94,7 +94,7 @@ public record ReportedFraud6
     [IsoId("_W31XyRODEfC1ZfCQz0xB3g")]
     [DisplayName("Case Reference")]
     [IsoXmlTag("CaseRef")]
-    public IsoMax35Text? CaseReference { get; init; }
+    public Max35Text? CaseReference { get; init; }
 
     /// <summary>
     /// Indicates whether the party that committed fraud was arrested or not.
@@ -102,7 +102,7 @@ public record ReportedFraud6
     [IsoId("_W31XyxODEfC1ZfCQz0xB3g")]
     [DisplayName("Arrest")]
     [IsoXmlTag("Arrst")]
-    public IsoTrueFalseIndicator? Arrest { get; init; }
+    public TrueFalseIndicator? Arrest { get; init; }
 
     /// <summary>
     /// Investigation status at time of submission.
@@ -110,5 +110,5 @@ public record ReportedFraud6
     [IsoId("_W31XzRODEfC1ZfCQz0xB3g")]
     [DisplayName("Investigation Status")]
     [IsoXmlTag("InvstgtnSts")]
-    public IsoMax256Text? InvestigationStatus { get; init; }
+    public Max256Text? InvestigationStatus { get; init; }
 }

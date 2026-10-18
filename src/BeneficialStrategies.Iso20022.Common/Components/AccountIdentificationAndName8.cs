@@ -30,5 +30,5 @@ public record AccountIdentificationAndName8
     [IsoId("07f13c86-9616-439b-aa87-5823246c058b")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax35Text? Name { get; init; }
+    public Max35Text? Name { get; init; }
 }

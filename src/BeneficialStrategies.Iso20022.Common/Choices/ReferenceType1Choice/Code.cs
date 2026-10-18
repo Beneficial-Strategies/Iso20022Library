@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ReferenceType1Choice
         [IsoXmlTag("Cd")]
         [IsoSimpleType(IsoSimpleType.Max4Text)]
         [StringLength(maximumLength: 4, MinimumLength = 1)]
-        public required IsoMax4Text Value { get; init; }
+        public required Max4Text Value { get; init; }
     }
 }

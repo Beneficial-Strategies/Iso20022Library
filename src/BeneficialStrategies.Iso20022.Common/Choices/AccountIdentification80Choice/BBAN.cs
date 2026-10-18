@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification80Choice
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("BBAN")]
-        public required IsoBBANIdentifier Value { get; init; }
+        public required BBANIdentifier Value { get; init; }
     }
 }

@@ -32,6 +32,6 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus3Choice
         [IsoXmlTag("AddtlRsnInf")]
         [IsoSimpleType(IsoSimpleType.Max350Text)]
         [StringLength(maximumLength: 350, MinimumLength = 1)]
-        public IsoMax350Text? AdditionalReasonInformation { get; init; }
+        public Max350Text? AdditionalReasonInformation { get; init; }
     }
 }

@@ -31,5 +31,5 @@ public record MaximumAmountByPeriod1
     [DisplayName("Number Of Days")]
     [IsoXmlTag("NbOfDays")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public required IsoMax3NumericText NumberOfDays { get; init; }
+    public required Max3NumericText NumberOfDays { get; init; }
 }

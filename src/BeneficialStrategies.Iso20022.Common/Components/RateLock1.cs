@@ -23,7 +23,7 @@ public record RateLock1
     [DisplayName("Requested Indicator")]
     [IsoXmlTag("ReqdInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? RequestedIndicator { get; init; }
+    public TrueFalseIndicator? RequestedIndicator { get; init; }
 
     /// <summary>
     /// Indicates if the transaction is rate lock eligible.
@@ -32,7 +32,7 @@ public record RateLock1
     [DisplayName("Eligible Indicator")]
     [IsoXmlTag("ElgblInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? EligibleIndicator { get; init; }
+    public TrueFalseIndicator? EligibleIndicator { get; init; }
 
     /// <summary>
     /// Indicates if a rate lock was applied.
@@ -41,5 +41,5 @@ public record RateLock1
     [DisplayName("Applied Indicator")]
     [IsoXmlTag("ApldInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? AppliedIndicator { get; init; }
+    public TrueFalseIndicator? AppliedIndicator { get; init; }
 }

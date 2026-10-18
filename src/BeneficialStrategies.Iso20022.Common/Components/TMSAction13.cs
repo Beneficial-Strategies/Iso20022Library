@@ -21,7 +21,7 @@ public record TMSAction13
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public ValueList<IsoMax3000Binary> AdditionalInformation { get; init; } = [];
+    public ValueList<Max3000Binary> AdditionalInformation { get; init; } = [];
 
     /// <summary>
     /// Additional Process.
@@ -50,21 +50,21 @@ public record TMSAction13
     /// </summary>
     [DisplayName("Delegation Proof")]
     [IsoXmlTag("DlgtnProof")]
-    public IsoMax5000Binary? DelegationProof { get; init; }
+    public Max5000Binary? DelegationProof { get; init; }
 
     /// <summary>
     /// Delegation Scope Definition.
     /// </summary>
     [DisplayName("Delegation Scope Definition")]
     [IsoXmlTag("DlgtnScpDef")]
-    public IsoMax3000Binary? DelegationScopeDefinition { get; init; }
+    public Max3000Binary? DelegationScopeDefinition { get; init; }
 
     /// <summary>
     /// Delegation Scope Identification.
     /// </summary>
     [DisplayName("Delegation Scope Identification")]
     [IsoXmlTag("DlgtnScpId")]
-    public IsoMax35Text? DelegationScopeIdentification { get; init; }
+    public Max35Text? DelegationScopeIdentification { get; init; }
 
     /// <summary>
     /// Device Request.
@@ -92,7 +92,7 @@ public record TMSAction13
     /// </summary>
     [DisplayName("Key Encipherment Certificate")]
     [IsoXmlTag("KeyNcphrmntCert")]
-    public ValueList<IsoMax10KBinary> KeyEnciphermentCertificate { get; init; } = [];
+    public ValueList<Max10KBinary> KeyEnciphermentCertificate { get; init; } = [];
 
     /// <summary>
     /// Message Item.
@@ -141,21 +141,21 @@ public record TMSAction13
     /// </summary>
     [DisplayName("TM Challenge")]
     [IsoXmlTag("TMChllng")]
-    public IsoMax140Binary? TMChallenge { get; init; }
+    public Max140Binary? TMChallenge { get; init; }
 
     /// <summary>
     /// TMS Protocol.
     /// </summary>
     [DisplayName("TMS Protocol")]
     [IsoXmlTag("TMSPrtcol")]
-    public IsoMax35Text? TMSProtocol { get; init; }
+    public Max35Text? TMSProtocol { get; init; }
 
     /// <summary>
     /// TMS Protocol Version.
     /// </summary>
     [DisplayName("TMS Protocol Version")]
     [IsoXmlTag("TMSPrtcolVrsn")]
-    public IsoMax35Text? TMSProtocolVersion { get; init; }
+    public Max35Text? TMSProtocolVersion { get; init; }
 
     /// <summary>
     /// Trigger.

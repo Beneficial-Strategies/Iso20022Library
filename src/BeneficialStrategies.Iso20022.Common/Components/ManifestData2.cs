@@ -21,12 +21,12 @@ public record ManifestData2
     /// </summary>
     [DisplayName("Document Type")]
     [IsoXmlTag("DocTp")]
-    public required IsoMax35Text DocumentType { get; init; }
+    public required Max35Text DocumentType { get; init; }
 
     /// <summary>
     /// Number Of Documents.
     /// </summary>
     [DisplayName("Number Of Documents")]
     [IsoXmlTag("NbOfDocs")]
-    public required IsoNumber NumberOfDocuments { get; init; }
+    public required Number NumberOfDocuments { get; init; }
 }

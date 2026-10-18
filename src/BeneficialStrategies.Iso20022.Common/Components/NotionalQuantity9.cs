@@ -23,7 +23,7 @@ public record NotionalQuantity9
     [DisplayName("Total Quantity")]
     [IsoXmlTag("TtlQty")]
     [IsoSimpleType(IsoSimpleType.LongFraction19DecimalNumber)]
-    public IsoLongFraction19DecimalNumber? TotalQuantity { get; init; }
+    public LongFraction19DecimalNumber? TotalQuantity { get; init; }
 
     /// <summary>
     /// Indicates the unit of measure in which the total notional quantity and notional quantity schedules are expressed.

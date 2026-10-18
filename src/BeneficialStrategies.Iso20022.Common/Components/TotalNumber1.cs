@@ -23,7 +23,7 @@ public record TotalNumber1
     [DisplayName("Current Instruction Number")]
     [IsoXmlTag("CurInstrNb")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public required IsoExact3NumericText CurrentInstructionNumber { get; init; }
+    public required Exact3NumericText CurrentInstructionNumber { get; init; }
 
     /// <summary>
     /// Total number of settlement instructions that are linked together.
@@ -32,5 +32,5 @@ public record TotalNumber1
     [DisplayName("Total Of Linked Instructions")]
     [IsoXmlTag("TtlOfLkdInstrs")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public required IsoExact3NumericText TotalOfLinkedInstructions { get; init; }
+    public required Exact3NumericText TotalOfLinkedInstructions { get; init; }
 }

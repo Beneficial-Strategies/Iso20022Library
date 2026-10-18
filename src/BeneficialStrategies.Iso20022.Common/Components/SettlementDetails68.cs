@@ -160,7 +160,7 @@ public record SettlementDetails68
     [DisplayName("Return Leg")]
     [IsoXmlTag("RtrLeg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ReturnLeg { get; init; }
+    public YesNoIndicator? ReturnLeg { get; init; }
 
     /// <summary>
     /// Specifies whether a third party is allowed to modify or cancel the transaction.
@@ -177,7 +177,7 @@ public record SettlementDetails68
     [DisplayName("Eligible For Collateral")]
     [IsoXmlTag("ElgblForColl")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? EligibleForCollateral { get; init; }
+    public YesNoIndicator? EligibleForCollateral { get; init; }
 
     /// <summary>
     /// Specifies the securities sub balance type indicator (example restriction type for a market infrastructure).

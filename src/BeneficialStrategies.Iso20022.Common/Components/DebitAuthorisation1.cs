@@ -39,7 +39,7 @@ public record DebitAuthorisation1
     [DisplayName("Value Date To Debit")]
     [IsoXmlTag("ValDtToDbt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ValueDateToDebit { get; init; }
+    public DateOnly? ValueDateToDebit { get; init; }
 
     /// <summary>
     /// Further details on the cancellation request reason.
@@ -47,6 +47,6 @@ public record DebitAuthorisation1
     [IsoId("_t4mW81kyEeGeoaLUQk__nA_1939310155")]
     [DisplayName("Additional Cancellation Reason Information")]
     [IsoXmlTag("AddtlCxlRsnInf")]
-    public SimpleValueList<IsoMax105Text> AdditionalCancellationReasonInformation { get; init; } =
+    public SimpleValueList<Max105Text> AdditionalCancellationReasonInformation { get; init; } =
         [];
 }

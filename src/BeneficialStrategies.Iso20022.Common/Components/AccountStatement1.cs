@@ -25,7 +25,7 @@ public record AccountStatement1
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Sequential number of the report, assigned by the account servicer. It is increased incrementally for each report sent electronically.
@@ -34,7 +34,7 @@ public record AccountStatement1
     [DisplayName("Electronic Sequence Number")]
     [IsoXmlTag("ElctrncSeqNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? ElectronicSequenceNumber { get; init; }
+    public Number? ElectronicSequenceNumber { get; init; }
 
     /// <summary>
     /// Legal sequential number of the report, assigned by the account servicer. It is increased incrementally for each report sent.||Usage: in those scenarios where eg a paper statement is a legal requirement, the paper statement may have a different numbering than the electronic sequential number. Paper statements can for instance only be sent if movement on the account has taken place, whereas electronic statements can be sent eg each day, regardless of whether movements have taken place or not.
@@ -43,7 +43,7 @@ public record AccountStatement1
     [DisplayName("Legal Sequence Number")]
     [IsoXmlTag("LglSeqNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? LegalSequenceNumber { get; init; }
+    public Number? LegalSequenceNumber { get; init; }
 
     /// <summary>
     /// Date and time at which the report was created.
@@ -52,7 +52,7 @@ public record AccountStatement1
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// Range of time between the start date and the end date for which the account statement is issued.
@@ -128,5 +128,5 @@ public record AccountStatement1
     [IsoXmlTag("AddtlStmtInf")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public IsoMax500Text? AdditionalStatementInformation { get; init; }
+    public Max500Text? AdditionalStatementInformation { get; init; }
 }

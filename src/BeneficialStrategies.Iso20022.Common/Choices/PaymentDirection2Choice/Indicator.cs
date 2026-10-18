@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentDirection2Choice
         /// </summary>
         [IsoXmlTag("Ind")]
         [IsoSimpleType(IsoSimpleType.PaymentDirectionIndicator)]
-        public required IsoPaymentDirectionIndicator Value { get; init; }
+        public required PaymentDirectionIndicator Value { get; init; }
     }
 }

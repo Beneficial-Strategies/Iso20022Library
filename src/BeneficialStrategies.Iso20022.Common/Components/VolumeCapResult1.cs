@@ -23,7 +23,7 @@ public record VolumeCapResult1
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public required IsoISINOct2015Identifier Identification { get; init; }
+    public required ISINOct2015Identifier Identification { get; init; }
 
     /// <summary>
     /// Date or date range the report relates to.
@@ -40,7 +40,7 @@ public record VolumeCapResult1
     [DisplayName("Last Update Date")]
     [IsoXmlTag("LastUpdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? LastUpdateDate { get; init; }
+    public DateOnly? LastUpdateDate { get; init; }
 
     /// <summary>
     /// Total traded volume of the instrument in this specific reporting period.
@@ -57,7 +57,7 @@ public record VolumeCapResult1
     [DisplayName("Trading Under Waiver Percentage")]
     [IsoXmlTag("TradgUdrWvrPctg")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate TradingUnderWaiverPercentage { get; init; }
+    public required PercentageRate TradingUnderWaiverPercentage { get; init; }
 
     /// <summary>
     /// Percentage of trading under waiver of the instrument in this specific reporting period broken down by trading venue.
@@ -76,5 +76,5 @@ public record VolumeCapResult1
     [IsoXmlTag("Dsclmr")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Disclaimer { get; init; }
+    public Max350Text? Disclaimer { get; init; }
 }

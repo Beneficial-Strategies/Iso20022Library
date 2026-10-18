@@ -21,7 +21,7 @@ public record GenericIdentification186
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax256Text Identification { get; init; }
+    public required Max256Text Identification { get; init; }
 
     /// <summary>
     /// Type.

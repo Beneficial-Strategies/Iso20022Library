@@ -31,7 +31,7 @@ public record UndertakingAmount1
     [DisplayName("Plus Tolerance")]
     [IsoXmlTag("PlusTlrnce")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? PlusTolerance { get; init; }
+    public PercentageRate? PlusTolerance { get; init; }
 
     /// <summary>
     /// Additional information concerning the undertaking amount.

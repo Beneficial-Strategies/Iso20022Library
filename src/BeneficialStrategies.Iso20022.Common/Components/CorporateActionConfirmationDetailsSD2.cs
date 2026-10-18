@@ -24,7 +24,7 @@ public record CorporateActionConfirmationDetailsSD2
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Indicates how fractional positions will be handled for events with prorated options.
@@ -41,5 +41,5 @@ public record CorporateActionConfirmationDetailsSD2
     [DisplayName("Proration Fraction")]
     [IsoXmlTag("PrratnFrctn")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? ProrationFraction { get; init; }
+    public DecimalNumber? ProrationFraction { get; init; }
 }

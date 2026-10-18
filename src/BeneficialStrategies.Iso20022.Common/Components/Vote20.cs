@@ -70,7 +70,7 @@ public record Vote20
     /// </summary>
     [DisplayName("Issuer Label")]
     [IsoXmlTag("IssrLabl")]
-    public required IsoMax35Text IssuerLabel { get; init; }
+    public required Max35Text IssuerLabel { get; init; }
 
     /// <summary>
     /// No Action.

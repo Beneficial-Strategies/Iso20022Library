@@ -32,7 +32,7 @@ public record Credentials1
     [IsoXmlTag("OthrIdCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherIdentificationCode { get; init; }
+    public Max35Text? OtherIdentificationCode { get; init; }
 
     /// <summary>
     /// Value of identification.
@@ -42,5 +42,5 @@ public record Credentials1
     [IsoXmlTag("IdVal")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public required IsoMax70Text IdentificationValue { get; init; }
+    public required Max70Text IdentificationValue { get; init; }
 }

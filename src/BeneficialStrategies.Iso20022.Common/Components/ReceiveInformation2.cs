@@ -47,7 +47,7 @@ public record ReceiveInformation2
     [DisplayName("Physical Transfer Indicator")]
     [IsoXmlTag("PhysTrfInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator PhysicalTransferIndicator { get; init; }
+    public required YesNoIndicator PhysicalTransferIndicator { get; init; }
 
     /// <summary>
     /// Parameters of a physical delivery.

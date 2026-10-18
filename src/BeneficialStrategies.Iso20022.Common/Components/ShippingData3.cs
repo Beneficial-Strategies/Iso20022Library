@@ -35,7 +35,7 @@ public record ShippingData3
     /// </summary>
     [DisplayName("Insurance")]
     [IsoXmlTag("Insrnc")]
-    public IsoTrueFalseIndicator? Insurance { get; init; }
+    public TrueFalseIndicator? Insurance { get; init; }
 
     /// <summary>
     /// Insurance Amount.
@@ -49,14 +49,14 @@ public record ShippingData3
     /// </summary>
     [DisplayName("Invoice Creation Date Time")]
     [IsoXmlTag("InvcCreDtTm")]
-    public IsoISODateTime? InvoiceCreationDateTime { get; init; }
+    public ISODateTime? InvoiceCreationDateTime { get; init; }
 
     /// <summary>
     /// Invoice Number.
     /// </summary>
     [DisplayName("Invoice Number")]
     [IsoXmlTag("InvcNb")]
-    public IsoMax70Text? InvoiceNumber { get; init; }
+    public Max70Text? InvoiceNumber { get; init; }
 
     /// <summary>
     /// Miscellaneous Expenses.
@@ -77,7 +77,7 @@ public record ShippingData3
     /// </summary>
     [DisplayName("Number Of Packages")]
     [IsoXmlTag("NbOfPackgs")]
-    public IsoMax6NumericText? NumberOfPackages { get; init; }
+    public Max6NumericText? NumberOfPackages { get; init; }
 
     /// <summary>
     /// Package.
@@ -91,14 +91,14 @@ public record ShippingData3
     /// </summary>
     [DisplayName("Service Descriptor Code")]
     [IsoXmlTag("SvcDscrptrCd")]
-    public IsoMax40Text? ServiceDescriptorCode { get; init; }
+    public Max40Text? ServiceDescriptorCode { get; init; }
 
     /// <summary>
     /// Summary Commodity Identification.
     /// </summary>
     [DisplayName("Summary Commodity Identification")]
     [IsoXmlTag("SummryCmmdtyId")]
-    public IsoMax35Text? SummaryCommodityIdentification { get; init; }
+    public Max35Text? SummaryCommodityIdentification { get; init; }
 
     /// <summary>
     /// Tax.

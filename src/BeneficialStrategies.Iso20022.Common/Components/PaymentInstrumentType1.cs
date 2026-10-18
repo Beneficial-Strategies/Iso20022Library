@@ -23,7 +23,7 @@ public record PaymentInstrumentType1
     [DisplayName("Card Number")]
     [IsoXmlTag("CardNb")]
     [IsoSimpleType(IsoSimpleType.Min8Max28NumericText)]
-    public required IsoMin8Max28NumericText CardNumber { get; init; }
+    public required Min8Max28NumericText CardNumber { get; init; }
 
     /// <summary>
     /// Identifies the authority request type as a code.
@@ -43,5 +43,5 @@ public record PaymentInstrumentType1
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public IsoMax500Text? AdditionalInformation { get; init; }
+    public Max500Text? AdditionalInformation { get; init; }
 }

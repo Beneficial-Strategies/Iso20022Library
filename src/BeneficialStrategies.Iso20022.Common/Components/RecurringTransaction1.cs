@@ -23,7 +23,7 @@ public record RecurringTransaction1
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
     [IsoSimpleType(IsoSimpleType.Max2NumericText)]
-    public required IsoMax2NumericText SequenceNumber { get; init; }
+    public required Max2NumericText SequenceNumber { get; init; }
 
     /// <summary>
     /// Period unit between consecutive payments (for example day, month, year).
@@ -40,7 +40,7 @@ public record RecurringTransaction1
     [DisplayName("Instalment Period")]
     [IsoXmlTag("InstlmtPrd")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber InstalmentPeriod { get; init; }
+    public required Number InstalmentPeriod { get; init; }
 
     /// <summary>
     /// Total number of instalment payments.
@@ -49,7 +49,7 @@ public record RecurringTransaction1
     [DisplayName("Total Number Of Payments")]
     [IsoXmlTag("TtlNbOfPmts")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber TotalNumberOfPayments { get; init; }
+    public required Number TotalNumberOfPayments { get; init; }
 
     /// <summary>
     /// Interest charged in percentage for the total amount of payments.

@@ -24,7 +24,7 @@ public record InterestPaymentDateRange2
     [IsoXmlTag("IntrstSchdlId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? InterestScheduleIdentification { get; init; }
+    public Max35Text? InterestScheduleIdentification { get; init; }
 
     /// <summary>
     /// Interest amount that must be paid at due date.
@@ -41,7 +41,7 @@ public record InterestPaymentDateRange2
     [DisplayName("Due Date")]
     [IsoXmlTag("DueDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate DueDate { get; init; }
+    public required DateOnly DueDate { get; init; }
 
     /// <summary>
     /// Further details on the interest payments.
@@ -51,5 +51,5 @@ public record InterestPaymentDateRange2
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max1025Text)]
     [StringLength(maximumLength: 1025, MinimumLength = 1)]
-    public IsoMax1025Text? AdditionalInformation { get; init; }
+    public Max1025Text? AdditionalInformation { get; init; }
 }

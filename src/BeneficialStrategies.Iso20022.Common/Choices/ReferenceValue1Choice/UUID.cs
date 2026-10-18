@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ReferenceValue1Choice
         /// </summary>
         [IsoXmlTag("UUID")]
         [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
-        public required IsoUUIDv4Identifier Value { get; init; }
+        public required UUIDv4Identifier Value { get; init; }
     }
 }

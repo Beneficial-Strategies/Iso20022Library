@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralValueReportOrError6Cho
         [DisplayName("Data Access Time")]
         [IsoXmlTag("DataAccsTm")]
         [IsoSimpleType(IsoSimpleType.ISODateTime)]
-        public required IsoISODateTime DataAccessTime { get; init; }
+        public required ISODateTime DataAccessTime { get; init; }
 
         /// <summary>
         /// Total value of the collateral valuation.

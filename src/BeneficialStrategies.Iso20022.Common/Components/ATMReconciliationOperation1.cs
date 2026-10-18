@@ -21,7 +21,7 @@ public record ATMReconciliationOperation1
     /// </summary>
     [DisplayName("Additional Transaction Information")]
     [IsoXmlTag("AddtlTxInf")]
-    public IsoMax140Text? AdditionalTransactionInformation { get; init; }
+    public Max140Text? AdditionalTransactionInformation { get; init; }
 
     /// <summary>
     /// ATM Totals.
@@ -49,14 +49,14 @@ public record ATMReconciliationOperation1
     /// </summary>
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
-    public required IsoMax35Text ReconciliationIdentification { get; init; }
+    public required Max35Text ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Retained Card.
     /// </summary>
     [DisplayName("Retained Card")]
     [IsoXmlTag("RtndCard")]
-    public IsoNumber? RetainedCard { get; init; }
+    public Number? RetainedCard { get; init; }
 
     /// <summary>
     /// Transaction Identification.

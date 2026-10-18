@@ -31,7 +31,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CertifiedCharacteristics2Choice
         [DisplayName("Value")]
         [IsoXmlTag("Val")]
         [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-        public required IsoDecimalNumber Value { get; init; }
+        public required DecimalNumber Value { get; init; }
 
         /// <summary>
         /// Multiplication factor of measurement values. For example: goods that can be ordered by 36 pieces.
@@ -40,6 +40,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CertifiedCharacteristics2Choice
         [DisplayName("Factor")]
         [IsoXmlTag("Fctr")]
         [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-        public IsoMax15NumericText? Factor { get; init; }
+        public Max15NumericText? Factor { get; init; }
     }
 }

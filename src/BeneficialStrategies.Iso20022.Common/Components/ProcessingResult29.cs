@@ -22,7 +22,7 @@ public record ProcessingResult29
     [IsoId("_za9ogRNYEfC1ZfCQz0xB3g")]
     [DisplayName("Response Source Identification")]
     [IsoXmlTag("RspnSrcId")]
-    public IsoMax35Text? ResponseSourceIdentification { get; init; }
+    public Max35Text? ResponseSourceIdentification { get; init; }
 
     /// <summary>
     /// Type of response source.
@@ -46,7 +46,7 @@ public record ProcessingResult29
     [IsoId("_za9olxNYEfC1ZfCQz0xB3g")]
     [DisplayName("Response Source Name")]
     [IsoXmlTag("RspnSrcNm")]
-    public IsoMax35Text? ResponseSourceName { get; init; }
+    public Max35Text? ResponseSourceName { get; init; }
 
     /// <summary>
     /// Detailed results of the processing, conforming to ISO 8583 Response codes list.
@@ -62,7 +62,7 @@ public record ProcessingResult29
     [IsoId("_4ceyYUL_EfCQAqQ9lolFUg")]
     [DisplayName("Response Reason")]
     [IsoXmlTag("RspnRsn")]
-    public IsoMax4Text? ResponseReason { get; init; }
+    public Max4Text? ResponseReason { get; init; }
 
     /// <summary>
     /// Action to be performed based on ISO8583 Action Code.
@@ -78,7 +78,7 @@ public record ProcessingResult29
     [IsoId("_za9ooRNYEfC1ZfCQz0xB3g")]
     [DisplayName("Approval Code")]
     [IsoXmlTag("ApprvlCd")]
-    public IsoExact6AlphaNumericText? ApprovalCode { get; init; }
+    public Exact6AlphaNumericText? ApprovalCode { get; init; }
 
     /// <summary>
     /// Issuer permits reuse of temporary secure stored card data.
@@ -86,7 +86,7 @@ public record ProcessingResult29
     [IsoId("_za9oqRNYEfC1ZfCQz0xB3g")]
     [DisplayName("Temporary Secure Card Data Reuse Permitted")]
     [IsoXmlTag("TempScrCardDataReusePrtd")]
-    public IsoTrueFalseIndicator? TemporarySecureCardDataReusePermitted { get; init; }
+    public TrueFalseIndicator? TemporarySecureCardDataReusePermitted { get; init; }
 
     /// <summary>
     /// Error detail information.
@@ -102,7 +102,7 @@ public record ProcessingResult29
     [IsoId("_SZsn9RQREfC1ZfCQz0xB3g")]
     [DisplayName("Cardholder Receipt Data")]
     [IsoXmlTag("CrdhldrRctData")]
-    public IsoMax99Text? CardholderReceiptData { get; init; }
+    public Max99Text? CardholderReceiptData { get; init; }
 
     /// <summary>
     /// Contains information of the card acceptor receipt.
@@ -110,7 +110,7 @@ public record ProcessingResult29
     [IsoId("_SZsn9hQREfC1ZfCQz0xB3g")]
     [DisplayName("Card Acceptor Receipt Data")]
     [IsoXmlTag("CardAccptrRctData")]
-    public IsoMax99Text? CardAcceptorReceiptData { get; init; }
+    public Max99Text? CardAcceptorReceiptData { get; init; }
 
     /// <summary>
     /// Contains information displayed to the cardholder.
@@ -118,7 +118,7 @@ public record ProcessingResult29
     [IsoId("_SZsn9xQREfC1ZfCQz0xB3g")]
     [DisplayName("Cardholder Display Data")]
     [IsoXmlTag("CrdhldrDispData")]
-    public IsoMax99Text? CardholderDisplayData { get; init; }
+    public Max99Text? CardholderDisplayData { get; init; }
 
     /// <summary>
     /// Contains information displayed to the card acceptor.
@@ -126,7 +126,7 @@ public record ProcessingResult29
     [IsoId("_SZsn-BQREfC1ZfCQz0xB3g")]
     [DisplayName("Card Acceptor Display Data")]
     [IsoXmlTag("CardAccptrDispData")]
-    public IsoMax99Text? CardAcceptorDisplayData { get; init; }
+    public Max99Text? CardAcceptorDisplayData { get; init; }
 
     /// <summary>
     /// Contains the card issuer's contact telephone number.
@@ -134,7 +134,7 @@ public record ProcessingResult29
     [IsoId("_SZsn-RQREfC1ZfCQz0xB3g")]
     [DisplayName("Card Issuer Telephone Number")]
     [IsoXmlTag("CardIssrTelNb")]
-    public IsoPhoneNumber? CardIssuerTelephoneNumber { get; init; }
+    public PhoneNumber? CardIssuerTelephoneNumber { get; init; }
 
     /// <summary>
     /// Reserved for private data.
@@ -142,7 +142,7 @@ public record ProcessingResult29
     [IsoId("_ekGEokVbEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -150,5 +150,5 @@ public record ProcessingResult29
     [IsoId("_ekGEo0VbEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

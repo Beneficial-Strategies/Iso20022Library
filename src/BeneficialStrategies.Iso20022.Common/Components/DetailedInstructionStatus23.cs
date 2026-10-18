@@ -22,7 +22,7 @@ public record DetailedInstructionStatus23
     [IsoId("_D98Fo6jVEfCzuLlmLrhIvA")]
     [DisplayName("Single Instruction Identification")]
     [IsoXmlTag("SnglInstrId")]
-    public required IsoMax35Text SingleInstructionIdentification { get; init; }
+    public required Max35Text SingleInstructionIdentification { get; init; }
 
     /// <summary>
     /// Identification of the securities account.
@@ -30,7 +30,7 @@ public record DetailedInstructionStatus23
     [IsoId("_D98FpajVEfCzuLlmLrhIvA")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public IsoMax35Text? AccountIdentification { get; init; }
+    public Max35Text? AccountIdentification { get; init; }
 
     /// <summary>
     /// Identification of the subaccount within the safekeeping account.
@@ -38,7 +38,7 @@ public record DetailedInstructionStatus23
     [IsoId("_D98Fp6jVEfCzuLlmLrhIvA")]
     [DisplayName("Sub Account Identification")]
     [IsoXmlTag("SubAcctId")]
-    public IsoMax35Text? SubAccountIdentification { get; init; }
+    public Max35Text? SubAccountIdentification { get; init; }
 
     /// <summary>
     /// Status of the individual meeting instruction.

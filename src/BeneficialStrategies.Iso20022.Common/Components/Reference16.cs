@@ -24,5 +24,5 @@ public record Reference16
     [IsoXmlTag("CollMsgCxlReqId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text CollateralMessageCancellationRequestIdentification { get; init; }
+    public required Max35Text CollateralMessageCancellationRequestIdentification { get; init; }
 }

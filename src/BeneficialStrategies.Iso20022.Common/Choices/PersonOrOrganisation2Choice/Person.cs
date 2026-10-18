@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonOrOrganisation2Choice
         [IsoXmlTag("FrstNm")]
         [IsoSimpleType(IsoSimpleType.Max140Text)]
         [StringLength(maximumLength: 140, MinimumLength = 1)]
-        public required IsoMax140Text FirstName { get; init; }
+        public required Max140Text FirstName { get; init; }
 
         /// <summary>
         /// Name by which a party is known and which is usually used to identify that party.
@@ -34,7 +34,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonOrOrganisation2Choice
         [IsoXmlTag("Nm")]
         [IsoSimpleType(IsoSimpleType.Max140Text)]
         [StringLength(maximumLength: 140, MinimumLength = 1)]
-        public required IsoMax140Text Name { get; init; }
+        public required Max140Text Name { get; init; }
 
         /// <summary>
         /// Date on which a person is born.
@@ -43,7 +43,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonOrOrganisation2Choice
         [DisplayName("Birth Date")]
         [IsoXmlTag("BirthDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate BirthDate { get; init; }
+        public required DateOnly BirthDate { get; init; }
 
         /// <summary>
         /// Unique identification of a person, as assigned by an institution, using an identification scheme.

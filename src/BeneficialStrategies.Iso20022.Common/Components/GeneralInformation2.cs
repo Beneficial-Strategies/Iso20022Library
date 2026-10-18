@@ -23,7 +23,7 @@ public record GeneralInformation2
     [DisplayName("Block Indicator")]
     [IsoXmlTag("BlckInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? BlockIndicator { get; init; }
+    public YesNoIndicator? BlockIndicator { get; init; }
 
     /// <summary>
     /// Reference to a preceeding transaction, for example, an option or swap.
@@ -33,7 +33,7 @@ public record GeneralInformation2
     [IsoXmlTag("RltdTradRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RelatedTradeReference { get; init; }
+    public Max35Text? RelatedTradeReference { get; init; }
 
     /// <summary>
     /// Method used by the trading parties to negotiate and/or execute a deal.
@@ -59,7 +59,7 @@ public record GeneralInformation2
     [IsoXmlTag("CtrPtyRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CounterpartyReference { get; init; }
+    public Max35Text? CounterpartyReference { get; init; }
 
     /// <summary>
     /// Brokerage fee for a broker confirmation.
@@ -77,7 +77,7 @@ public record GeneralInformation2
     [IsoXmlTag("SndrToRcvrInf")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? SenderToReceiverInformation { get; init; }
+    public Max140Text? SenderToReceiverInformation { get; init; }
 
     /// <summary>
     /// Branch at the counterparty side with which the deal was done.

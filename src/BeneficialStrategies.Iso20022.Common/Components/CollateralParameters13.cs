@@ -55,7 +55,7 @@ public record CollateralParameters13
     [DisplayName("Automatic Allocation")]
     [IsoXmlTag("AutomtcAllcn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AutomaticAllocation { get; init; }
+    public YesNoIndicator? AutomaticAllocation { get; init; }
 
     /// <summary>
     /// Indicates whether the proposed collateral movements can be accepted.
@@ -64,7 +64,7 @@ public record CollateralParameters13
     [DisplayName("Collateral Approved")]
     [IsoXmlTag("CollApprvd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? CollateralApproved { get; init; }
+    public YesNoIndicator? CollateralApproved { get; init; }
 
     /// <summary>
     /// Indicates whether the proposed collateral movements have settled or not.
@@ -73,7 +73,7 @@ public record CollateralParameters13
     [DisplayName("Settlement Approved")]
     [IsoXmlTag("SttlmApprvd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? SettlementApproved { get; init; }
+    public YesNoIndicator? SettlementApproved { get; init; }
 
     /// <summary>
     /// Specifies the amount of the collateral.

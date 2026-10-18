@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ShipmentDate1Choice
         /// </summary>
         [IsoXmlTag("PropsdShipmntDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate Value { get; init; }
+        public required DateOnly Value { get; init; }
     }
 }

@@ -46,5 +46,5 @@ public record ReturnReasonInformation10
     [IsoId("_TP6PmNp-Ed-ak6NoX_4Aeg_1913342104")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public SimpleValueList<IsoMax105Text> AdditionalInformation { get; init; } = [];
+    public SimpleValueList<Max105Text> AdditionalInformation { get; init; } = [];
 }

@@ -24,7 +24,7 @@ public record Header23
     [IsoXmlTag("FrmtVrsn")]
     [IsoSimpleType(IsoSimpleType.Max6Text)]
     [StringLength(maximumLength: 6, MinimumLength = 1)]
-    public required IsoMax6Text FormatVersion { get; init; }
+    public required Max6Text FormatVersion { get; init; }
 
     /// <summary>
     /// Unique identification of an exchange occurrence.
@@ -33,7 +33,7 @@ public record Header23
     [DisplayName("Exchange Identification")]
     [IsoXmlTag("XchgId")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public required IsoMax3NumericText ExchangeIdentification { get; init; }
+    public required Max3NumericText ExchangeIdentification { get; init; }
 
     /// <summary>
     /// Unique identification of the partner that has initiated the exchange.
@@ -58,7 +58,7 @@ public record Header23
     [DisplayName("Message Sequence Number")]
     [IsoXmlTag("MsgSeqNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber MessageSequenceNumber { get; init; }
+    public required Number MessageSequenceNumber { get; init; }
 
     /// <summary>
     /// Date and time at which the file or message was created.
@@ -67,5 +67,5 @@ public record Header23
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 }

@@ -39,7 +39,7 @@ public record ProcessingResult13
     [DisplayName("Approval Code")]
     [IsoXmlTag("ApprvlCd")]
     [IsoSimpleType(IsoSimpleType.Exact6AlphaNumericText)]
-    public IsoExact6AlphaNumericText? ApprovalCode { get; init; }
+    public Exact6AlphaNumericText? ApprovalCode { get; init; }
 
     /// <summary>
     /// Error detail information.

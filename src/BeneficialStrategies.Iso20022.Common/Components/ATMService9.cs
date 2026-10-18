@@ -24,7 +24,7 @@ public record ATMService9
     [IsoXmlTag("SvcRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ServiceReference { get; init; }
+    public Max35Text? ServiceReference { get; init; }
 
     /// <summary>
     /// Codification of the type of service for the ATM.
@@ -34,7 +34,7 @@ public record ATMService9
     [IsoXmlTag("ATMSvcCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ATMServiceCode { get; init; }
+    public Max35Text? ATMServiceCode { get; init; }
 
     /// <summary>
     /// Describes the type of transaction selected by the customer.
@@ -50,5 +50,5 @@ public record ATMService9
     [IsoId("_ab3CgK15EeWMg5rOByfExw")]
     [DisplayName("Service Variant Identification")]
     [IsoXmlTag("SvcVarntId")]
-    public SimpleValueList<IsoMax35Text> ServiceVariantIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> ServiceVariantIdentification { get; init; } = [];
 }

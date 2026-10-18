@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CashAccountIdentification6Choice
         [IsoXmlTag("Prtry")]
         [IsoSimpleType(IsoSimpleType.RestrictedFINX2Max34Text)]
         [StringLength(maximumLength: 34, MinimumLength = 1)]
-        public required IsoRestrictedFINX2Max34Text Value { get; init; }
+        public required RestrictedFINX2Max34Text Value { get; init; }
     }
 }

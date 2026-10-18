@@ -24,7 +24,7 @@ public record RegulatoryInformation1
     [IsoXmlTag("Sctr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Sector { get; init; }
+    public Max35Text? Sector { get; init; }
 
     /// <summary>
     /// Branch of economic activity, for example, RAE in the Italian market.
@@ -34,7 +34,7 @@ public record RegulatoryInformation1
     [IsoXmlTag("Brnch")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Branch { get; init; }
+    public Max35Text? Branch { get; init; }
 
     /// <summary>
     /// Group of economic activity, for example, a code issued by a regulator.
@@ -44,7 +44,7 @@ public record RegulatoryInformation1
     [IsoXmlTag("Grp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Group { get; init; }
+    public Max35Text? Group { get; init; }
 
     /// <summary>
     /// Other regulatory information.
@@ -54,5 +54,5 @@ public record RegulatoryInformation1
     [IsoXmlTag("Othr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Other { get; init; }
+    public Max35Text? Other { get; init; }
 }

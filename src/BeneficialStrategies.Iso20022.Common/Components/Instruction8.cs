@@ -42,14 +42,14 @@ public record Instruction8
     /// </summary>
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
-    public IsoISODateTime? RequestedExecutionDate { get; init; }
+    public ISODateTime? RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Single Instruction Identification.
     /// </summary>
     [DisplayName("Single Instruction Identification")]
     [IsoXmlTag("SnglInstrId")]
-    public required IsoMax35Text SingleInstructionIdentification { get; init; }
+    public required Max35Text SingleInstructionIdentification { get; init; }
 
     /// <summary>
     /// Specific Instruction Request.
@@ -70,5 +70,5 @@ public record Instruction8
     /// </summary>
     [DisplayName("Vote Execution Confirmation")]
     [IsoXmlTag("VoteExctnConf")]
-    public required IsoYesNoIndicator VoteExecutionConfirmation { get; init; }
+    public required YesNoIndicator VoteExecutionConfirmation { get; init; }
 }

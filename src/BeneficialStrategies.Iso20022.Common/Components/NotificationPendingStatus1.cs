@@ -30,5 +30,5 @@ public record NotificationPendingStatus1
     [IsoId("_c_AQg6UeEfCnE_wCEfCqTA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public IsoMax350Text? AdditionalInformation { get; init; }
+    public Max350Text? AdditionalInformation { get; init; }
 }

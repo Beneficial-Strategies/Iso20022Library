@@ -32,7 +32,7 @@ public record Balance28
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Amount value.
@@ -67,7 +67,7 @@ public record Balance28
     [DisplayName("Cardholder Currency Indicator")]
     [IsoXmlTag("CrdhldrCcyInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CardholderCurrencyIndicator { get; init; }
+    public TrueFalseIndicator? CardholderCurrencyIndicator { get; init; }
 
     /// <summary>
     /// Date of the balance.
@@ -76,5 +76,5 @@ public record Balance28
     [DisplayName("Balance Date")]
     [IsoXmlTag("BalDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? BalanceDate { get; init; }
+    public DateOnly? BalanceDate { get; init; }
 }

@@ -38,5 +38,5 @@ public record DebtorActivationAmendmentReason2
     [IsoId("_UMdwNeH7Eeqbls7Gk4-ckA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public SimpleValueList<IsoMax105Text> AdditionalInformation { get; init; } = [];
+    public SimpleValueList<Max105Text> AdditionalInformation { get; init; } = [];
 }

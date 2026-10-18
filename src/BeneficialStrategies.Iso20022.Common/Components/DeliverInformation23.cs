@@ -54,7 +54,7 @@ public record DeliverInformation23
     [IsoId("f76ee1a7-fd07-4baa-a6ee-97c7f16a44a5")]
     [DisplayName("Dematerialised Indicator")]
     [IsoXmlTag("DmtrlsdInd")]
-    public IsoYesNoIndicator? DematerialisedIndicator { get; init; }
+    public YesNoIndicator? DematerialisedIndicator { get; init; }
 
     /// <summary>
     /// Dividend option chosen by the account owner based on the options offered in the prospectus.
@@ -78,7 +78,7 @@ public record DeliverInformation23
     [IsoId("037e5c7e-9c6d-447d-83e7-531460bd7766")]
     [DisplayName("Requested Trade Date")]
     [IsoXmlTag("ReqdTradDt")]
-    public IsoISODate? RequestedTradeDate { get; init; }
+    public DateOnly? RequestedTradeDate { get; init; }
 
     /// <summary>
     /// Date and time at which the securities are to be exchanged at the International Central Securities Depository (ICSD) or Central Securities Depository (CSD).
@@ -86,7 +86,7 @@ public record DeliverInformation23
     [IsoId("495bdc07-1cfc-4ad5-9170-051fd76f264e")]
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
-    public IsoISODate? RequestedSettlementDate { get; init; }
+    public DateOnly? RequestedSettlementDate { get; init; }
 
     /// <summary>
     /// Date and time at which the securities were exchanged at the International Central Securities Depository (ICSD) or Central Securities Depository (CSD).

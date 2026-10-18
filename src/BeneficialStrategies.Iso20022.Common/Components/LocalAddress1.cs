@@ -21,54 +21,54 @@ public record LocalAddress1
     /// </summary>
     [DisplayName("Address Line1")]
     [IsoXmlTag("AdrLine1")]
-    public IsoMax200Text? AddressLine1 { get; init; }
+    public Max200Text? AddressLine1 { get; init; }
 
     /// <summary>
     /// Address Line2.
     /// </summary>
     [DisplayName("Address Line2")]
     [IsoXmlTag("AdrLine2")]
-    public IsoMax200Text? AddressLine2 { get; init; }
+    public Max200Text? AddressLine2 { get; init; }
 
     /// <summary>
     /// Building Number.
     /// </summary>
     [DisplayName("Building Number")]
     [IsoXmlTag("BldgNb")]
-    public IsoMax35Text? BuildingNumber { get; init; }
+    public Max35Text? BuildingNumber { get; init; }
 
     /// <summary>
     /// Country Sub Division Major Name.
     /// </summary>
     [DisplayName("Country Sub Division Major Name")]
     [IsoXmlTag("CtrySubDvsnMjrNm")]
-    public IsoMax100Text? CountrySubDivisionMajorName { get; init; }
+    public Max100Text? CountrySubDivisionMajorName { get; init; }
 
     /// <summary>
     /// Country Sub Division Minor Name.
     /// </summary>
     [DisplayName("Country Sub Division Minor Name")]
     [IsoXmlTag("CtrySubDvsnMnrNm")]
-    public IsoMax100Text? CountrySubDivisionMinorName { get; init; }
+    public Max100Text? CountrySubDivisionMinorName { get; init; }
 
     /// <summary>
     /// Postal Code.
     /// </summary>
     [DisplayName("Postal Code")]
     [IsoXmlTag("PstlCd")]
-    public IsoMax35Text? PostalCode { get; init; }
+    public Max35Text? PostalCode { get; init; }
 
     /// <summary>
     /// Street Name.
     /// </summary>
     [DisplayName("Street Name")]
     [IsoXmlTag("StrtNm")]
-    public IsoMax200Text? StreetName { get; init; }
+    public Max200Text? StreetName { get; init; }
 
     /// <summary>
     /// Town Name.
     /// </summary>
     [DisplayName("Town Name")]
     [IsoXmlTag("TwnNm")]
-    public IsoMax100Text? TownName { get; init; }
+    public Max100Text? TownName { get; init; }
 }

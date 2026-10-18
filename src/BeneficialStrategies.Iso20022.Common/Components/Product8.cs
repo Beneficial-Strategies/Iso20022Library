@@ -21,12 +21,12 @@ public record Product8
     /// </summary>
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
-    public IsoMax70Text? Code { get; init; }
+    public Max70Text? Code { get; init; }
 
     /// <summary>
     /// Summary Commodity Identification.
     /// </summary>
     [DisplayName("Summary Commodity Identification")]
     [IsoXmlTag("SummryCmmdtyId")]
-    public IsoMax35Text? SummaryCommodityIdentification { get; init; }
+    public Max35Text? SummaryCommodityIdentification { get; init; }
 }

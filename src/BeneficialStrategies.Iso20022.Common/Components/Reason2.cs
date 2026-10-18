@@ -24,5 +24,5 @@ public record Reason2
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text Description { get; init; }
+    public required Max140Text Description { get; init; }
 }

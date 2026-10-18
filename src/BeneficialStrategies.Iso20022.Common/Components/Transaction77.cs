@@ -24,7 +24,7 @@ public record Transaction77
     [DisplayName("Transaction Type")]
     [IsoXmlTag("TxTp")]
     [IsoSimpleType(IsoSimpleType.Exact2AlphaNumericText)]
-    public required IsoExact2AlphaNumericText TransactionType { get; init; }
+    public required Exact2AlphaNumericText TransactionType { get; init; }
 
     /// <summary>
     /// Provides further granularity of purpose of TransactionType
@@ -34,7 +34,7 @@ public record Transaction77
     [IsoXmlTag("TxSubTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TransactionSubType { get; init; }
+    public Max35Text? TransactionSubType { get; init; }
 
     /// <summary>
     /// Additional functions or services to be performed in conjunction with the transaction.
@@ -62,7 +62,7 @@ public record Transaction77
     [IsoXmlTag("OthrTxAttr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherTransactionAttribute { get; init; }
+    public Max35Text? OtherTransactionAttribute { get; init; }
 
     /// <summary>
     /// Reason to send the message.
@@ -72,7 +72,7 @@ public record Transaction77
     [IsoId("_GlJrA1wfEeeFSOC87I8qLw")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
-    public SimpleValueList<IsoExact4NumericText> MessageReason { get; init; } = [];
+    public SimpleValueList<Exact4NumericText> MessageReason { get; init; } = [];
 
     /// <summary>
     /// Supports message reason codes that are not defined in external code list.
@@ -80,7 +80,7 @@ public record Transaction77
     [IsoId("_q8sy8YkGEeiUdscb3zN7pw")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
-    public SimpleValueList<IsoMax35Text> AlternateMessageReason { get; init; } = [];
+    public SimpleValueList<Max35Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Contains the period (expressed in minutes) within which a merchant is expected to complete the transaction.
@@ -90,7 +90,7 @@ public record Transaction77
     [DisplayName("Pre Authorisation Time Limit")]
     [IsoXmlTag("PreAuthstnTmLmt")]
     [IsoSimpleType(IsoSimpleType.Max6NumericText)]
-    public IsoMax6NumericText? PreAuthorisationTimeLimit { get; init; }
+    public Max6NumericText? PreAuthorisationTimeLimit { get; init; }
 
     /// <summary>
     /// Indicates that additional data will be provided in a separate addendum message.
@@ -99,7 +99,7 @@ public record Transaction77
     [DisplayName("Associated Data Indicator")]
     [IsoXmlTag("AssoctdDataInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? AssociatedDataIndicator { get; init; }
+    public TrueFalseIndicator? AssociatedDataIndicator { get; init; }
 
     /// <summary>
     /// Reference to additional transaction details to be conveyed separately from this message.
@@ -109,7 +109,7 @@ public record Transaction77
     [IsoXmlTag("AssoctdDataRef")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AssociatedDataReference { get; init; }
+    public Max70Text? AssociatedDataReference { get; init; }
 
     /// <summary>
     /// Destination value to be used in the subsequent addendum message.
@@ -119,7 +119,7 @@ public record Transaction77
     [IsoXmlTag("AssoctdDataDstn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AssociatedDataDestination { get; init; }
+    public Max35Text? AssociatedDataDestination { get; init; }
 
     /// <summary>
     /// Data to qualify for incentive or other related programmes.
@@ -222,7 +222,7 @@ public record Transaction77
     [IsoXmlTag("TxDesc")]
     [IsoSimpleType(IsoSimpleType.Max1000Text)]
     [StringLength(maximumLength: 1000, MinimumLength = 1)]
-    public IsoMax1000Text? TransactionDescription { get; init; }
+    public Max1000Text? TransactionDescription { get; init; }
 
     /// <summary>
     /// Contains additional data.

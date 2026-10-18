@@ -49,14 +49,14 @@ public record CashOptionSD14
     /// </summary>
     [DisplayName("DTC Pay Method")]
     [IsoXmlTag("DTCPayMtd")]
-    public IsoMax3Text? DTCPayMethod { get; init; }
+    public Max3Text? DTCPayMethod { get; init; }
 
     /// <summary>
     /// DTC Pay Order.
     /// </summary>
     [DisplayName("DTC Pay Order")]
     [IsoXmlTag("DTCPayOrdr")]
-    public IsoMax3Text? DTCPayOrder { get; init; }
+    public Max3Text? DTCPayOrder { get; init; }
 
     /// <summary>
     /// DTCUS Tax Instruction Period.
@@ -77,21 +77,21 @@ public record CashOptionSD14
     /// </summary>
     [DisplayName("Estimated Rate Flag")]
     [IsoXmlTag("EstmtdRateFlg")]
-    public IsoYesNoIndicator? EstimatedRateFlag { get; init; }
+    public YesNoIndicator? EstimatedRateFlag { get; init; }
 
     /// <summary>
     /// Interest Accrued Number Of Days.
     /// </summary>
     [DisplayName("Interest Accrued Number Of Days")]
     [IsoXmlTag("IntrstAcrdNbOfDays")]
-    public IsoMax3Number? InterestAccruedNumberOfDays { get; init; }
+    public Max3Number? InterestAccruedNumberOfDays { get; init; }
 
     /// <summary>
     /// NRA Tax Reportable Flag.
     /// </summary>
     [DisplayName("NRA Tax Reportable Flag")]
     [IsoXmlTag("NRATaxRptblFlg")]
-    public IsoYesNoIndicator? NRATaxReportableFlag { get; init; }
+    public YesNoIndicator? NRATaxReportableFlag { get; init; }
 
     /// <summary>
     /// Payout Type.
@@ -105,19 +105,19 @@ public record CashOptionSD14
     /// </summary>
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Protect Charge Flag.
     /// </summary>
     [DisplayName("Protect Charge Flag")]
     [IsoXmlTag("PrtctChrgFlg")]
-    public IsoYesNoIndicator? ProtectChargeFlag { get; init; }
+    public YesNoIndicator? ProtectChargeFlag { get; init; }
 
     /// <summary>
     /// RDP Reference Number.
     /// </summary>
     [DisplayName("RDP Reference Number")]
     [IsoXmlTag("RDPRefNb")]
-    public IsoExact32AlphaNumericText? RDPReferenceNumber { get; init; }
+    public Exact32AlphaNumericText? RDPReferenceNumber { get; init; }
 }

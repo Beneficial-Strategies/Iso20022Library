@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 /// format (hh:mm:ss.sss+/-hh:mm), or local time format (hh:mm:ss.sss)." Aligned with "XML Schema
 /// Part 2: Datatypes" (W3C xs:time), itself aligned with ISO 8601. This is exactly the same
 /// 3-wire-form problem as <see cref="ISODateTime"/> (see that type for the full rationale) minus
-/// the date component — before this type existed, <c>IsoISOTime</c> was aliased directly to
+/// the date component — before this type existed, <c>ISOTime</c> was aliased directly to
 /// <see cref="System.TimeOnly"/>, which cannot represent the timezone at all.
 ///
 /// Three wire forms are permitted, and are preserved separately here (not collapsed):

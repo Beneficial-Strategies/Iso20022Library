@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.DataRecord1Choice
         /// </summary>
         [IsoXmlTag("Binry")]
         [IsoSimpleType(IsoSimpleType.Max20MbBinary)]
-        public required IsoMax20MbBinary Value { get; init; }
+        public required Max20MbBinary Value { get; init; }
     }
 }

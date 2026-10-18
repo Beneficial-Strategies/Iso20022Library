@@ -24,7 +24,7 @@ public record Customer3
     [IsoXmlTag("CstmrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CustomerIdentification { get; init; }
+    public Max35Text? CustomerIdentification { get; init; }
 
     /// <summary>
     /// Name of the financial customer.
@@ -34,7 +34,7 @@ public record Customer3
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Name { get; init; }
+    public Max70Text? Name { get; init; }
 
     /// <summary>
     /// Address of the financial customer.
@@ -60,7 +60,7 @@ public record Customer3
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? AdditionalInformation { get; init; }
+    public Max256Text? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Date of birth of the party.
@@ -69,5 +69,5 @@ public record Customer3
     [DisplayName("Date Of Birth")]
     [IsoXmlTag("DtOfBirth")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DateOfBirth { get; init; }
+    public DateOnly? DateOfBirth { get; init; }
 }

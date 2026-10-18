@@ -31,7 +31,7 @@ public record InvestmentRestrictions3
     [DisplayName("Minimum Initial Subscription Units")]
     [IsoXmlTag("MinInitlSbcptUnits")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MinimumInitialSubscriptionUnits { get; init; }
+    public Number? MinimumInitialSubscriptionUnits { get; init; }
 
     /// <summary>
     /// Minimum quantity of securities, expressed as an amount, that must be purchased.
@@ -48,7 +48,7 @@ public record InvestmentRestrictions3
     [DisplayName("Minimum Subsequent Subscription Units")]
     [IsoXmlTag("MinSbsqntSbcptUnits")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MinimumSubsequentSubscriptionUnits { get; init; }
+    public Number? MinimumSubsequentSubscriptionUnits { get; init; }
 
     /// <summary>
     /// Maximum quantity of securities, expressed as an amount, that can be sold.
@@ -65,7 +65,7 @@ public record InvestmentRestrictions3
     [DisplayName("Maximum Redemption Units")]
     [IsoXmlTag("MaxRedUnits")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? MaximumRedemptionUnits { get; init; }
+    public DecimalNumber? MaximumRedemptionUnits { get; init; }
 
     /// <summary>
     /// Minimum percentage of holding that may be redeemed.
@@ -74,7 +74,7 @@ public record InvestmentRestrictions3
     [DisplayName("Minimum Redemption Percentage")]
     [IsoXmlTag("MinRedPctg")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? MinimumRedemptionPercentage { get; init; }
+    public DecimalNumber? MinimumRedemptionPercentage { get; init; }
 
     /// <summary>
     /// Specifies any other restrictions that may limit an investor&apos;s ability to redeem.
@@ -84,7 +84,7 @@ public record InvestmentRestrictions3
     [IsoXmlTag("OthrRedRstrctns")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? OtherRedemptionRestrictions { get; init; }
+    public Max350Text? OtherRedemptionRestrictions { get; init; }
 
     /// <summary>
     /// Minimum quantity of securities, expressed as an amount, that must be purchased.
@@ -101,7 +101,7 @@ public record InvestmentRestrictions3
     [DisplayName("Minimum Switch Subscription Units")]
     [IsoXmlTag("MinSwtchSbcptUnits")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? MinimumSwitchSubscriptionUnits { get; init; }
+    public DecimalNumber? MinimumSwitchSubscriptionUnits { get; init; }
 
     /// <summary>
     /// Maximum quantity of securities, expressed as an amount, that can be sold.
@@ -118,7 +118,7 @@ public record InvestmentRestrictions3
     [DisplayName("Maximum Switch Redemption Units")]
     [IsoXmlTag("MaxSwtchRedUnits")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? MaximumSwitchRedemptionUnits { get; init; }
+    public DecimalNumber? MaximumSwitchRedemptionUnits { get; init; }
 
     /// <summary>
     /// Specifies any other restrictions that may limit an investor&apos;s ability to switch.
@@ -128,7 +128,7 @@ public record InvestmentRestrictions3
     [IsoXmlTag("OthrSwtchRstrctns")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? OtherSwitchRestrictions { get; init; }
+    public Max350Text? OtherSwitchRestrictions { get; init; }
 
     /// <summary>
     /// Minimum value of units that must be maintained to avoid automatic redemption.
@@ -145,7 +145,7 @@ public record InvestmentRestrictions3
     [DisplayName("Minimum Holding Units")]
     [IsoXmlTag("MinHldgUnits")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? MinimumHoldingUnits { get; init; }
+    public DecimalNumber? MinimumHoldingUnits { get; init; }
 
     /// <summary>
     /// Description of the period, that may be a number of days or weeks or another way of describing the period, during which the units/shares must be held following their issue before redemption will be permitted.
@@ -155,7 +155,7 @@ public record InvestmentRestrictions3
     [IsoXmlTag("MinHldgPrd")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? MinimumHoldingPeriod { get; init; }
+    public Max70Text? MinimumHoldingPeriod { get; init; }
 
     /// <summary>
     /// Specifies how registered investors are able to transfer some or all of their holdings to third parties.

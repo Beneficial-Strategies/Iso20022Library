@@ -42,14 +42,14 @@ public record Cardholder22
     /// </summary>
     [DisplayName("Date Of Birth")]
     [IsoXmlTag("DtOfBirth")]
-    public IsoISODate? DateOfBirth { get; init; }
+    public DateOnly? DateOfBirth { get; init; }
 
     /// <summary>
     /// High Value.
     /// </summary>
     [DisplayName("High Value")]
     [IsoXmlTag("HghVal")]
-    public IsoTrueFalseIndicator? HighValue { get; init; }
+    public TrueFalseIndicator? HighValue { get; init; }
 
     /// <summary>
     /// Identification.

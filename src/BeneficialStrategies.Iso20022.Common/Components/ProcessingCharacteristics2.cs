@@ -49,7 +49,7 @@ public record ProcessingCharacteristics2
     [DisplayName("Amount Indicator")]
     [IsoXmlTag("AmtInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator AmountIndicator { get; init; }
+    public required YesNoIndicator AmountIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether subscriptions or redemptions may be placed as a number of units.
@@ -58,7 +58,7 @@ public record ProcessingCharacteristics2
     [DisplayName("Units Indicator")]
     [IsoXmlTag("UnitsInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator UnitsIndicator { get; init; }
+    public required YesNoIndicator UnitsIndicator { get; init; }
 
     /// <summary>
     /// Specifies the location of the main fund order desk.
@@ -75,7 +75,7 @@ public record ProcessingCharacteristics2
     [DisplayName("Dealing Cut Off Time")]
     [IsoXmlTag("DealgCutOffTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public required IsoISOTime DealingCutOffTime { get; init; }
+    public required ISOTime DealingCutOffTime { get; init; }
 
     /// <summary>
     /// TimeFrame or period concept that allows definition of a period as number of days before or after a defined activity.
@@ -101,7 +101,7 @@ public record ProcessingCharacteristics2
     [IsoXmlTag("DealgFrqcyDesc")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text DealingFrequencyDescription { get; init; }
+    public required Max350Text DealingFrequencyDescription { get; init; }
 
     /// <summary>
     /// Specific period, eg, for some guaranteed funds, during which the units/shares may be redeemed.
@@ -111,7 +111,7 @@ public record ProcessingCharacteristics2
     [IsoXmlTag("LtdPrd")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? LimitedPeriod { get; init; }
+    public Max350Text? LimitedPeriod { get; init; }
 
     /// <summary>
     /// Enter the last business day following the day on which a subscription order is priced (T) by which settlement will be due

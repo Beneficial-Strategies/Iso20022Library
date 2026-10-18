@@ -39,7 +39,7 @@ public record ParticipationMethod2
     [DisplayName("Supported By Account Servicer")]
     [IsoXmlTag("SpprtdByAcctSvcr")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? SupportedByAccountServicer { get; init; }
+    public YesNoIndicator? SupportedByAccountServicer { get; init; }
 
     /// <summary>
     /// Account servicer deadline for voting on agenda resolutions at the general meeting.

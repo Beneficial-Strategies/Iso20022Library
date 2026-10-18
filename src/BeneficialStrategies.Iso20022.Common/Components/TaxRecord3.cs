@@ -24,7 +24,7 @@ public record TaxRecord3
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Type { get; init; }
+    public Max35Text? Type { get; init; }
 
     /// <summary>
     /// Specifies the tax code as published by the tax authority.
@@ -34,7 +34,7 @@ public record TaxRecord3
     [IsoXmlTag("Ctgy")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Category { get; init; }
+    public Max35Text? Category { get; init; }
 
     /// <summary>
     /// Provides further details of the category tax code.
@@ -44,7 +44,7 @@ public record TaxRecord3
     [IsoXmlTag("CtgyDtls")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CategoryDetails { get; init; }
+    public Max35Text? CategoryDetails { get; init; }
 
     /// <summary>
     /// Code provided by local authority to identify the status of the party that has drawn up the settlement document.
@@ -54,7 +54,7 @@ public record TaxRecord3
     [IsoXmlTag("DbtrSts")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DebtorStatus { get; init; }
+    public Max35Text? DebtorStatus { get; init; }
 
     /// <summary>
     /// Identification number of the tax report as assigned by the taxing authority.
@@ -64,7 +64,7 @@ public record TaxRecord3
     [IsoXmlTag("CertId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CertificateIdentification { get; init; }
+    public Max35Text? CertificateIdentification { get; init; }
 
     /// <summary>
     /// Identifies, in a coded form, on which template the tax report is to be provided.
@@ -74,7 +74,7 @@ public record TaxRecord3
     [IsoXmlTag("FrmsCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? FormsCode { get; init; }
+    public Max35Text? FormsCode { get; init; }
 
     /// <summary>
     /// Set of elements used to provide details on the period of time related to the tax payment.
@@ -100,5 +100,5 @@ public record TaxRecord3
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? AdditionalInformation { get; init; }
+    public Max140Text? AdditionalInformation { get; init; }
 }

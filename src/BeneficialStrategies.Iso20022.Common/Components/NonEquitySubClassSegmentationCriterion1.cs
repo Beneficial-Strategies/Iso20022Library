@@ -32,5 +32,5 @@ public record NonEquitySubClassSegmentationCriterion1
     [IsoXmlTag("CritVal")]
     [IsoSimpleType(IsoSimpleType.Max1000Text)]
     [StringLength(maximumLength: 1000, MinimumLength = 1)]
-    public required IsoMax1000Text CriteriaValue { get; init; }
+    public required Max1000Text CriteriaValue { get; init; }
 }

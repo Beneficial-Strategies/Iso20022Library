@@ -39,7 +39,7 @@ public record InsuranceDataSet1
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate IssueDate { get; init; }
+    public required DateOnly IssueDate { get; init; }
 
     /// <summary>
     /// Date upon which cover under an insurance policy becomes effective.
@@ -48,7 +48,7 @@ public record InsuranceDataSet1
     [DisplayName("Effective Date")]
     [IsoXmlTag("FctvDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? EffectiveDate { get; init; }
+    public DateOnly? EffectiveDate { get; init; }
 
     /// <summary>
     /// Place where the insurance certificate was issued.
@@ -66,7 +66,7 @@ public record InsuranceDataSet1
     [IsoXmlTag("InsrncDocId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text InsuranceDocumentIdentification { get; init; }
+    public required Max35Text InsuranceDocumentIdentification { get; init; }
 
     /// <summary>
     /// Transport information relative to the goods that are insured under the insurance policy.
@@ -92,7 +92,7 @@ public record InsuranceDataSet1
     [IsoXmlTag("InsrdGoodsDesc")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? InsuredGoodsDescription { get; init; }
+    public Max70Text? InsuredGoodsDescription { get; init; }
 
     /// <summary>
     /// Description of the conditions and exclusion clauses under which insurance is granted.
@@ -100,7 +100,7 @@ public record InsuranceDataSet1
     [IsoId("_Tm_549p-Ed-ak6NoX_4Aeg_515013339")]
     [DisplayName("Insurance Conditions")]
     [IsoXmlTag("InsrncConds")]
-    public SimpleValueList<IsoMax350Text> InsuranceConditions { get; init; } = [];
+    public SimpleValueList<Max350Text> InsuranceConditions { get; init; } = [];
 
     /// <summary>
     /// Standard insurance clauses defined by the Institute of London Underwriters (or the American Institute of marine Underwriters).

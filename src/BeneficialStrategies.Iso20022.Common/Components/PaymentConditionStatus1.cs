@@ -33,7 +33,7 @@ public record PaymentConditionStatus1
     [DisplayName("Guaranteed Payment")]
     [IsoXmlTag("GrntedPmt")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator GuaranteedPayment { get; init; }
+    public required TrueFalseIndicator GuaranteedPayment { get; init; }
 
     /// <summary>
     /// Indicates if the debtor will pay before the requested execution date.
@@ -42,5 +42,5 @@ public record PaymentConditionStatus1
     [DisplayName("Early Payment")]
     [IsoXmlTag("EarlyPmt")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator EarlyPayment { get; init; }
+    public required TrueFalseIndicator EarlyPayment { get; init; }
 }

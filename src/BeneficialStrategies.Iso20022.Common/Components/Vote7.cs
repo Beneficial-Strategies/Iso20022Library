@@ -24,7 +24,7 @@ public record Vote7
     [IsoXmlTag("IssrLabl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text IssuerLabel { get; init; }
+    public required Max35Text IssuerLabel { get; init; }
 
     /// <summary>
     /// Specifies the acceptance status of a resolution.
@@ -41,7 +41,7 @@ public record Vote7
     [DisplayName("For")]
     [IsoXmlTag("For")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? For { get; init; }
+    public Number? For { get; init; }
 
     /// <summary>
     /// Number of votes against one resolution.
@@ -50,7 +50,7 @@ public record Vote7
     [DisplayName("Against")]
     [IsoXmlTag("Agnst")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Against { get; init; }
+    public Number? Against { get; init; }
 
     /// <summary>
     /// Number of votes expressed as abstain.
@@ -59,7 +59,7 @@ public record Vote7
     [DisplayName("Abstain")]
     [IsoXmlTag("Abstn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Abstain { get; init; }
+    public Number? Abstain { get; init; }
 
     /// <summary>
     /// Total votes withheld, for example, in the case where a shareholder wishes not to endorse the election of a board member.
@@ -68,7 +68,7 @@ public record Vote7
     [DisplayName("Withhold")]
     [IsoXmlTag("Wthhld")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Withhold { get; init; }
+    public Number? Withhold { get; init; }
 
     /// <summary>
     /// Number of votes in favour for one year for &quot;say on pay&quot; type of resolution.
@@ -77,7 +77,7 @@ public record Vote7
     [DisplayName("One Year")]
     [IsoXmlTag("OneYr")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? OneYear { get; init; }
+    public Number? OneYear { get; init; }
 
     /// <summary>
     /// Number of votes in favour of two years for &quot;say on pay&quot; type of resolution.
@@ -86,7 +86,7 @@ public record Vote7
     [DisplayName("Two Years")]
     [IsoXmlTag("TwoYrs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? TwoYears { get; init; }
+    public Number? TwoYears { get; init; }
 
     /// <summary>
     /// Number of votes in favour of three years for &quot;say on pay&quot; type of resolution.
@@ -95,7 +95,7 @@ public record Vote7
     [DisplayName("Three Years")]
     [IsoXmlTag("ThreeYrs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? ThreeYears { get; init; }
+    public Number? ThreeYears { get; init; }
 
     /// <summary>
     /// Number of votes for which no action has been taken.
@@ -104,5 +104,5 @@ public record Vote7
     [DisplayName("No Action")]
     [IsoXmlTag("NoActn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NoAction { get; init; }
+    public Number? NoAction { get; init; }
 }

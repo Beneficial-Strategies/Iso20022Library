@@ -23,7 +23,7 @@ public record SecurityInstrumentDescription9
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public required IsoISINOct2015Identifier Identification { get; init; }
+    public required ISINOct2015Identifier Identification { get; init; }
 
     /// <summary>
     /// Full name of the financial instrument.
@@ -33,7 +33,7 @@ public record SecurityInstrumentDescription9
     [IsoXmlTag("FullNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text FullName { get; init; }
+    public required Max350Text FullName { get; init; }
 
     /// <summary>
     /// Short name of financial instrument in accordance with ISO 18774.
@@ -43,7 +43,7 @@ public record SecurityInstrumentDescription9
     [IsoXmlTag("ShrtNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ShortName { get; init; }
+    public Max35Text? ShortName { get; init; }
 
     /// <summary>
     /// Classification type of the financial instrument, as per the ISO Classification of Financial Instrument (CFI) codification.
@@ -52,7 +52,7 @@ public record SecurityInstrumentDescription9
     [DisplayName("Classification Type")]
     [IsoXmlTag("ClssfctnTp")]
     [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
-    public required IsoCFIOct2015Identifier ClassificationType { get; init; }
+    public required CFIOct2015Identifier ClassificationType { get; init; }
 
     /// <summary>
     /// Currency in which the notional is denominated.
@@ -69,5 +69,5 @@ public record SecurityInstrumentDescription9
     [DisplayName("Commodity Derivative Indicator")]
     [IsoXmlTag("CmmdtyDerivInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator CommodityDerivativeIndicator { get; init; }
+    public required TrueFalseIndicator CommodityDerivativeIndicator { get; init; }
 }

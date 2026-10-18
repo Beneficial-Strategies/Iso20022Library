@@ -28,68 +28,68 @@ public record SettlementService6
     /// </summary>
     [DisplayName("Cut Off Time")]
     [IsoXmlTag("CutOffTm")]
-    public IsoISODateTime? CutOffTime { get; init; }
+    public ISODateTime? CutOffTime { get; init; }
 
     /// <summary>
     /// Date.
     /// </summary>
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Deferred.
     /// </summary>
     [DisplayName("Deferred")]
     [IsoXmlTag("Dfrrd")]
-    public IsoTrueFalseIndicator? Deferred { get; init; }
+    public TrueFalseIndicator? Deferred { get; init; }
 
     /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax35Text? Identification { get; init; }
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Period.
     /// </summary>
     [DisplayName("Period")]
     [IsoXmlTag("Prd")]
-    public IsoMax35Text? Period { get; init; }
+    public Max35Text? Period { get; init; }
 
     /// <summary>
     /// Reporting Entity Identification.
     /// </summary>
     [DisplayName("Reporting Entity Identification")]
     [IsoXmlTag("RptgNttyId")]
-    public IsoMax35Text? ReportingEntityIdentification { get; init; }
+    public Max35Text? ReportingEntityIdentification { get; init; }
 
     /// <summary>
     /// Reporting Entity Type.
     /// </summary>
     [DisplayName("Reporting Entity Type")]
     [IsoXmlTag("RptgNttyTp")]
-    public IsoMax35Text? ReportingEntityType { get; init; }
+    public Max35Text? ReportingEntityType { get; init; }
 
     /// <summary>
     /// Requested Date.
     /// </summary>
     [DisplayName("Requested Date")]
     [IsoXmlTag("ReqdDt")]
-    public IsoISODate? RequestedDate { get; init; }
+    public DateOnly? RequestedDate { get; init; }
 
     /// <summary>
     /// Time.
     /// </summary>
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
-    public IsoISOTime? Time { get; init; }
+    public ISOTime? Time { get; init; }
 
     /// <summary>
     /// Type.
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public IsoMax35Text? Type { get; init; }
+    public Max35Text? Type { get; init; }
 }

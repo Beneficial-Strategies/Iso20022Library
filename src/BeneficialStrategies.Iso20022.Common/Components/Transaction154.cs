@@ -31,7 +31,7 @@ public record Transaction154
     [IsoId("_RDCfM4dREeuBS50MFjViNw")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
-    public SimpleValueList<IsoMax256Text> AlternateMessageReason { get; init; } = [];
+    public SimpleValueList<Max256Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Identification of the transaction.

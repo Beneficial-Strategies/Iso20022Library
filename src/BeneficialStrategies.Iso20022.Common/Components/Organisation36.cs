@@ -24,7 +24,7 @@ public record Organisation36
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text Name { get; init; }
+    public required Max140Text Name { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for the organisation.
@@ -42,7 +42,7 @@ public record Organisation36
     [IsoXmlTag("Purp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Purpose { get; init; }
+    public Max35Text? Purpose { get; init; }
 
     /// <summary>
     /// Country of taxation of the organisation.
@@ -67,7 +67,7 @@ public record Organisation36
     [DisplayName("Registration Date")]
     [IsoXmlTag("RegnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RegistrationDate { get; init; }
+    public DateOnly? RegistrationDate { get; init; }
 
     /// <summary>
     /// Number assigned by a tax authority to the organisation.
@@ -77,7 +77,7 @@ public record Organisation36
     [IsoXmlTag("TaxIdNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TaxIdentificationNumber { get; init; }
+    public Max35Text? TaxIdentificationNumber { get; init; }
 
     /// <summary>
     /// Number assigned by a national registration authority to the organisation.
@@ -87,7 +87,7 @@ public record Organisation36
     [IsoXmlTag("NtlRegnNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? NationalRegistrationNumber { get; init; }
+    public Max35Text? NationalRegistrationNumber { get; init; }
 
     /// <summary>
     /// Postal address of the organisation.

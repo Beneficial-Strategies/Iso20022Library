@@ -42,7 +42,7 @@ public record PaymentAccount4
     /// </summary>
     [DisplayName("Late Payment Confirmation")]
     [IsoXmlTag("LatePmtConf")]
-    public required IsoMax10NumericText LatePaymentConfirmation { get; init; }
+    public required Max10NumericText LatePaymentConfirmation { get; init; }
 
     /// <summary>
     /// Net Payment.

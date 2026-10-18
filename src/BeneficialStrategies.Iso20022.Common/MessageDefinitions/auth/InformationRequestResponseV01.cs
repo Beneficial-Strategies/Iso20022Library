@@ -62,7 +62,7 @@ public record InformationRequestResponseV01 : IOuterRecord
     [IsoXmlTag("RspnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ResponseIdentification { get; init; }
+    public required Max35Text ResponseIdentification { get; init; }
 
     /// <summary>
     /// Unique identification for the specific investigation as known by the requesting party.
@@ -72,7 +72,7 @@ public record InformationRequestResponseV01 : IOuterRecord
     [IsoXmlTag("InvstgtnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text InvestigationIdentification { get; init; }
+    public required Max35Text InvestigationIdentification { get; init; }
 
     /// <summary>
     /// Provides the status of the response.

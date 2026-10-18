@@ -30,7 +30,7 @@ public record Unit15
     [IsoId("f203d74c-333f-479a-981d-32bf141e3454")]
     [DisplayName("Order Date")]
     [IsoXmlTag("OrdrDt")]
-    public IsoISODate? OrderDate { get; init; }
+    public DateOnly? OrderDate { get; init; }
 
     /// <summary>
     /// Date the investor purchased the financial instrument.
@@ -38,7 +38,7 @@ public record Unit15
     [IsoId("dd712deb-6b4b-4353-8f02-4048c8ff7da2")]
     [DisplayName("Acquisition Date")]
     [IsoXmlTag("AcqstnDt")]
-    public IsoISODate? AcquisitionDate { get; init; }
+    public DateOnly? AcquisitionDate { get; init; }
 
     /// <summary>
     /// Certificate representing the security.
@@ -46,7 +46,7 @@ public record Unit15
     [IsoId("22d6590d-9c91-4e64-b02b-ff655513bb53")]
     [DisplayName("Certificate Number")]
     [IsoXmlTag("CertNb")]
-    public SimpleValueList<IsoMax35Text> CertificateNumber { get; init; } = [];
+    public SimpleValueList<Max35Text> CertificateNumber { get; init; } = [];
 
     /// <summary>
     /// Tax group to which the purchased investment fund units belong. The investor indicates to the intermediary operating pooled nominees, which type of unit is to be sold.
@@ -62,5 +62,5 @@ public record Unit15
     [IsoId("8617f1c1-2b57-431e-9ef2-e22b15b27a4c")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
-    public IsoMax35Text? Reference { get; init; }
+    public Max35Text? Reference { get; init; }
 }

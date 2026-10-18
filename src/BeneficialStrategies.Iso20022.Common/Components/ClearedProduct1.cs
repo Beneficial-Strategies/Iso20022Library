@@ -66,5 +66,5 @@ public record ClearedProduct1
     [DisplayName("Trades Cleared")]
     [IsoXmlTag("TrdsClrd")]
     [IsoSimpleType(IsoSimpleType.NonNegativeNumber)]
-    public IsoNonNegativeNumber? TradesCleared { get; init; }
+    public NonNegativeNumber? TradesCleared { get; init; }
 }

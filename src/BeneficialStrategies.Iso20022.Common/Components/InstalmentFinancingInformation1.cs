@@ -24,7 +24,7 @@ public record InstalmentFinancingInformation1
     [IsoXmlTag("InstlmtSeqId")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public required IsoMax70Text InstalmentSequenceIdentification { get; init; }
+    public required Max70Text InstalmentSequenceIdentification { get; init; }
 
     /// <summary>
     /// Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.

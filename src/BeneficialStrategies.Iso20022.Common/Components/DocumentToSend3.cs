@@ -24,7 +24,7 @@ public record DocumentToSend3
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text Type { get; init; }
+    public required Max140Text Type { get; init; }
 
     /// <summary>
     /// Party that should receive the document.

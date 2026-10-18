@@ -21,6 +21,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity14Choice
         /// </summary>
         [IsoXmlTag("PctgRate")]
         [IsoSimpleType(IsoSimpleType.PercentageRate)]
-        public required IsoPercentageRate Value { get; init; }
+        // The variant is named like its type, so the type is written in full.
+        public required BeneficialStrategies.Iso20022.SimpleTypes.PercentageRate Value { get; init; }
     }
 }

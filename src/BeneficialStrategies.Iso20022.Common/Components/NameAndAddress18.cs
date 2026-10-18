@@ -29,5 +29,5 @@ public record NameAndAddress18
     /// </summary>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public required IsoMax140Text Name { get; init; }
+    public required Max140Text Name { get; init; }
 }

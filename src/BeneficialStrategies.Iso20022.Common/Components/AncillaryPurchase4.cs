@@ -22,7 +22,7 @@ public record AncillaryPurchase4
     [IsoId("_6XdJsUiDEfCMZJtj4J7UGQ")]
     [DisplayName("Document Number")]
     [IsoXmlTag("DocNb")]
-    public IsoMax15Text? DocumentNumber { get; init; }
+    public Max15Text? DocumentNumber { get; init; }
 
     /// <summary>
     /// Document number of related transport details.
@@ -30,7 +30,7 @@ public record AncillaryPurchase4
     [IsoId("_6XdJs0iDEfCMZJtj4J7UGQ")]
     [DisplayName("Related Document Number")]
     [IsoXmlTag("RltdDocNb")]
-    public IsoMax15Text? RelatedDocumentNumber { get; init; }
+    public Max15Text? RelatedDocumentNumber { get; init; }
 
     /// <summary>
     /// Contains an ancillary category code for the primary type of service that has been provided.
@@ -38,7 +38,7 @@ public record AncillaryPurchase4
     [IsoId("_6XdJtUiDEfCMZJtj4J7UGQ")]
     [DisplayName("Service Category Code")]
     [IsoXmlTag("SvcCtgyCd")]
-    public IsoMax4Text? ServiceCategoryCode { get; init; }
+    public Max4Text? ServiceCategoryCode { get; init; }
 
     /// <summary>
     /// Contains ancillary service sub category code.
@@ -46,7 +46,7 @@ public record AncillaryPurchase4
     [IsoId("_6XdJt0iDEfCMZJtj4J7UGQ")]
     [DisplayName("Service Sub Category Code")]
     [IsoXmlTag("SvcSubCtgyCd")]
-    public IsoMax4Text? ServiceSubCategoryCode { get; init; }
+    public Max4Text? ServiceSubCategoryCode { get; init; }
 
     /// <summary>
     /// Proprietary service type code assigned by the service provider.
@@ -54,7 +54,7 @@ public record AncillaryPurchase4
     [IsoId("_6XdJuUiDEfCMZJtj4J7UGQ")]
     [DisplayName("Service Provider Service Type")]
     [IsoXmlTag("SvcPrvdrSvcTp")]
-    public IsoMax35Text? ServiceProviderServiceType { get; init; }
+    public Max35Text? ServiceProviderServiceType { get; init; }
 
     /// <summary>
     /// Indicates reason for the credit to the cardholder.
@@ -62,7 +62,7 @@ public record AncillaryPurchase4
     [IsoId("_6XdJu0iDEfCMZJtj4J7UGQ")]
     [DisplayName("Credit Reason Code")]
     [IsoXmlTag("CdtRsnCd")]
-    public IsoMax35Text? CreditReasonCode { get; init; }
+    public Max35Text? CreditReasonCode { get; init; }
 
     /// <summary>
     /// Provides the identifier assigned by the card acceptor that best categorizes the items being purchased in a standardized commodity group.
@@ -70,7 +70,7 @@ public record AncillaryPurchase4
     [IsoId("_6XdJvUiDEfCMZJtj4J7UGQ")]
     [DisplayName("Summary Commodity Identification")]
     [IsoXmlTag("SummryCmmdtyId")]
-    public IsoMax35Text? SummaryCommodityIdentification { get; init; }
+    public Max35Text? SummaryCommodityIdentification { get; init; }
 
     /// <summary>
     /// Amount value.

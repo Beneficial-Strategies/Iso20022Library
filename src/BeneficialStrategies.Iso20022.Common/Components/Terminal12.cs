@@ -22,7 +22,7 @@ public record Terminal12
     [IsoId("_Dx2WYWP1EfCX7uJiAWHfoQ-id")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax16Text Identification { get; init; }
+    public required Max16Text Identification { get; init; }
 
     /// <summary>
     /// Reserved for private data. The use of this data element is determined by bilateral agreement.
@@ -30,7 +30,7 @@ public record Terminal12
     [IsoId("_Dx2WYWP1EfCX7uJiAWHfoQ-pvdt")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -38,5 +38,5 @@ public record Terminal12
     [IsoId("_Dx2WYWP1EfCX7uJiAWHfoQ-ntdt")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

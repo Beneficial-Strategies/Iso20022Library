@@ -31,5 +31,5 @@ public record PriceValue2
     [DisplayName("Rate")]
     [IsoXmlTag("Rt")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Rate { get; init; }
+    public PercentageRate? Rate { get; init; }
 }

@@ -69,7 +69,7 @@ public record SecuritiesTransactionCancellationRequestStatusAdviceV07 : IOuterRe
     [IsoXmlTag("CxlReqRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text CancellationRequestReference { get; init; }
+    public required Max35Text CancellationRequestReference { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the transaction as known by the account servicer.

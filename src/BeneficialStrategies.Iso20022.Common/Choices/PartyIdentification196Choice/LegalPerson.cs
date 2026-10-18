@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification196Choice
         [IsoXmlTag("EmailAdr")]
         [IsoSimpleType(IsoSimpleType.Max256Text)]
         [StringLength(maximumLength: 256, MinimumLength = 1)]
-        public IsoMax256Text? EmailAddress { get; init; }
+        public Max256Text? EmailAddress { get; init; }
 
         /// <summary>
         /// Identification of the party.
@@ -57,7 +57,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification196Choice
         [DisplayName("Activity Indicator")]
         [IsoXmlTag("ActvtyInd")]
         [IsoSimpleType(IsoSimpleType.ISICIdentifier)]
-        public IsoISICIdentifier? ActivityIndicator { get; init; }
+        public ISICIdentifier? ActivityIndicator { get; init; }
 
         /// <summary>
         /// Type of investor.

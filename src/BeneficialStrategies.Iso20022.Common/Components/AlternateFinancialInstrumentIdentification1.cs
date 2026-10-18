@@ -32,7 +32,7 @@ public record AlternateFinancialInstrumentIdentification1
     [IsoXmlTag("PrtryIdSrc")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoMax16Text ProprietaryIdentificationSource { get; init; }
+    public required Max16Text ProprietaryIdentificationSource { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier of a security.
@@ -42,5 +42,5 @@ public record AlternateFinancialInstrumentIdentification1
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 }

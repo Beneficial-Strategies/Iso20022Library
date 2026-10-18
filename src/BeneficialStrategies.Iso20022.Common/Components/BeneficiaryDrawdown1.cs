@@ -31,7 +31,7 @@ public record BeneficiaryDrawdown1
     [DisplayName("Death Under Limit")]
     [IsoXmlTag("DthUdrLmt")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? DeathUnderLimit { get; init; }
+    public YesNoIndicator? DeathUnderLimit { get; init; }
 
     /// <summary>
     /// Additional information about the recipient of the drawdown.

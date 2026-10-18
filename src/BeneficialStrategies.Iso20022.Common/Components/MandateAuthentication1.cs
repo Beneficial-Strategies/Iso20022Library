@@ -24,7 +24,7 @@ public record MandateAuthentication1
     [IsoXmlTag("MsgAuthntcnCd")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoMax16Text? MessageAuthenticationCode { get; init; }
+    public Max16Text? MessageAuthenticationCode { get; init; }
 
     /// <summary>
     /// Date when the authentication was conducted.
@@ -33,7 +33,7 @@ public record MandateAuthentication1
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Channel used to transmit the authentication information.

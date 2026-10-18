@@ -19,6 +19,6 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentAmountType1Choice
         /// Specifies the amount type, in a free-text form.
         /// </summary>
         [IsoXmlTag("Prtry")]
-        public required IsoMax35Text Value { get; init; }
+        public required Max35Text Value { get; init; }
     }
 }

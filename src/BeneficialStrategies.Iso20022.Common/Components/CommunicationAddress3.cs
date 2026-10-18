@@ -24,7 +24,7 @@ public record CommunicationAddress3
     [IsoXmlTag("Email")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Email { get; init; }
+    public Max256Text? Email { get; init; }
 
     /// <summary>
     /// Collection of information that identifies a phone number, as defined by telecom services.
@@ -33,7 +33,7 @@ public record CommunicationAddress3
     [DisplayName("Phone")]
     [IsoXmlTag("Phne")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? Phone { get; init; }
+    public PhoneNumber? Phone { get; init; }
 
     /// <summary>
     /// Collection of information that identifies a mobile phone number, as defined by telecom services.
@@ -42,7 +42,7 @@ public record CommunicationAddress3
     [DisplayName("Mobile")]
     [IsoXmlTag("Mob")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? Mobile { get; init; }
+    public PhoneNumber? Mobile { get; init; }
 
     /// <summary>
     /// Collection of information that identifies a FAX number, as defined by telecom services.
@@ -51,7 +51,7 @@ public record CommunicationAddress3
     [DisplayName("Fax Number")]
     [IsoXmlTag("FaxNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? FaxNumber { get; init; }
+    public PhoneNumber? FaxNumber { get; init; }
 
     /// <summary>
     /// Address for a telex machine.
@@ -61,7 +61,7 @@ public record CommunicationAddress3
     [IsoXmlTag("TlxAdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TelexAddress { get; init; }
+    public Max35Text? TelexAddress { get; init; }
 
     /// <summary>
     /// Address for the Universal Resource Locator (URL), for example an address used over the www (HTTP) service.
@@ -71,5 +71,5 @@ public record CommunicationAddress3
     [IsoXmlTag("URLAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? URLAddress { get; init; }
+    public Max256Text? URLAddress { get; init; }
 }

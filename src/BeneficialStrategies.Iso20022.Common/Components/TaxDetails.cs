@@ -24,7 +24,7 @@ public record TaxDetails
     [IsoXmlTag("CertId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CertificateIdentification { get; init; }
+    public Max35Text? CertificateIdentification { get; init; }
 
     /// <summary>
     /// Information on the type of tax.

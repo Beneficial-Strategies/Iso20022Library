@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.References66Choice
         [IsoXmlTag("TradId")]
         [IsoSimpleType(IsoSimpleType.RestrictedFINXMax52Text)]
         [StringLength(maximumLength: 52, MinimumLength = 1)]
-        public required IsoRestrictedFINXMax52Text Value { get; init; }
+        public required RestrictedFINXMax52Text Value { get; init; }
     }
 }

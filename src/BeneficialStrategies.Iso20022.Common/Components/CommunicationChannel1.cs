@@ -40,7 +40,7 @@ public record CommunicationChannel1
     [IsoXmlTag("DlvrToNm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? DeliverToName { get; init; }
+    public Max140Text? DeliverToName { get; init; }
 
     /// <summary>
     /// Address of party to whom the original undertaking or proposed amendment is intended to be delivered.

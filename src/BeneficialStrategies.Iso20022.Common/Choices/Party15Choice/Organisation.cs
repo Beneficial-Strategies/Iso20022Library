@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party15Choice
         [IsoXmlTag("Nm")]
         [IsoSimpleType(IsoSimpleType.Max140Text)]
         [StringLength(maximumLength: 140, MinimumLength = 1)]
-        public required IsoMax140Text Name { get; init; }
+        public required Max140Text Name { get; init; }
 
         /// <summary>
         /// Unique and unambiguous identifier for an organisation that is allocated by an institution, eg, Dun &amp; Bradstreet Identification.
@@ -42,7 +42,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party15Choice
         [IsoXmlTag("Purp")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? Purpose { get; init; }
+        public Max35Text? Purpose { get; init; }
 
         /// <summary>
         /// Country of taxation of an organisation.
@@ -67,7 +67,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party15Choice
         [DisplayName("Registration Date")]
         [IsoXmlTag("RegnDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? RegistrationDate { get; init; }
+        public DateOnly? RegistrationDate { get; init; }
 
         /// <summary>
         /// Number assigned by a tax authority to an entity.
@@ -77,7 +77,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party15Choice
         [IsoXmlTag("TaxIdNb")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? TaxIdentificationNumber { get; init; }
+        public Max35Text? TaxIdentificationNumber { get; init; }
 
         /// <summary>
         /// Number assigned by a national registration authority to an entity.
@@ -87,7 +87,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party15Choice
         [IsoXmlTag("NtlRegnNb")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? NationalRegistrationNumber { get; init; }
+        public Max35Text? NationalRegistrationNumber { get; init; }
 
         /// <summary>
         /// Information that locates and identifies a specific address, as defined by postal services.

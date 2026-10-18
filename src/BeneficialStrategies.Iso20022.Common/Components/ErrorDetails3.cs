@@ -21,28 +21,28 @@ public record ErrorDetails3
     /// </summary>
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
-    public IsoMax35Text? Code { get; init; }
+    public Max35Text? Code { get; init; }
 
     /// <summary>
     /// Data Element In Error.
     /// </summary>
     [DisplayName("Data Element In Error")]
     [IsoXmlTag("DataElmtInErr")]
-    public ValueList<IsoMax4000Text> DataElementInError { get; init; } = [];
+    public ValueList<Max4000Text> DataElementInError { get; init; } = [];
 
     /// <summary>
     /// Description.
     /// </summary>
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax500Text? Description { get; init; }
+    public Max500Text? Description { get; init; }
 
     /// <summary>
     /// Other Type.
     /// </summary>
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Type.

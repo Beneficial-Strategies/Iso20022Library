@@ -57,7 +57,7 @@ public record CorporateActionInstructionCancellationRequestV05 : IOuterRecord
     [DisplayName("Change Instruction Indicator")]
     [IsoXmlTag("ChngInstrInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ChangeInstructionIndicator { get; init; }
+    public YesNoIndicator? ChangeInstructionIndicator { get; init; }
 
     /// <summary>
     /// Identification of a previously sent instruction document.

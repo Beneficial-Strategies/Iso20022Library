@@ -24,7 +24,7 @@ public record UTMCoordinates1
     [IsoXmlTag("UTMZone")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoMax16Text UTMZone { get; init; }
+    public required Max16Text UTMZone { get; init; }
 
     /// <summary>
     /// X-coordinate of the Universal Transverse Mercator coordinate system in meters (for example 448 265m for Eiffel Tower X-coordinate).
@@ -33,7 +33,7 @@ public record UTMCoordinates1
     [DisplayName("UTM Eastward")]
     [IsoXmlTag("UTMEstwrd")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber UTMEastward { get; init; }
+    public required Number UTMEastward { get; init; }
 
     /// <summary>
     /// Y-coordinate of the Universal Transverse Mercator coordinate system (for example 5 411 920m for Eiffel Tower Y-coordinate).
@@ -42,5 +42,5 @@ public record UTMCoordinates1
     [DisplayName("UTM Northward")]
     [IsoXmlTag("UTMNrthwrd")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber UTMNorthward { get; init; }
+    public required Number UTMNorthward { get; init; }
 }

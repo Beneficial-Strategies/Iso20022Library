@@ -21,7 +21,7 @@ public record PostalAddress28
     /// </summary>
     [DisplayName("Address Line")]
     [IsoXmlTag("AdrLine")]
-    public SimpleValueList<IsoMax70Text> AddressLine { get; init; } = [];
+    public SimpleValueList<Max70Text> AddressLine { get; init; } = [];
 
     /// <summary>
     /// Address Type.
@@ -35,21 +35,21 @@ public record PostalAddress28
     /// </summary>
     [DisplayName("Building Name")]
     [IsoXmlTag("BldgNm")]
-    public IsoMax140Text? BuildingName { get; init; }
+    public Max140Text? BuildingName { get; init; }
 
     /// <summary>
     /// Building Number.
     /// </summary>
     [DisplayName("Building Number")]
     [IsoXmlTag("BldgNb")]
-    public IsoMax16Text? BuildingNumber { get; init; }
+    public Max16Text? BuildingNumber { get; init; }
 
     /// <summary>
     /// Care Of.
     /// </summary>
     [DisplayName("Care Of")]
     [IsoXmlTag("CareOf")]
-    public IsoMax140Text? CareOf { get; init; }
+    public Max140Text? CareOf { get; init; }
 
     /// <summary>
     /// Country.
@@ -63,89 +63,89 @@ public record PostalAddress28
     /// </summary>
     [DisplayName("Country Sub Division")]
     [IsoXmlTag("CtrySubDvsn")]
-    public IsoMax35Text? CountrySubDivision { get; init; }
+    public Max35Text? CountrySubDivision { get; init; }
 
     /// <summary>
     /// Department.
     /// </summary>
     [DisplayName("Department")]
     [IsoXmlTag("Dept")]
-    public IsoMax70Text? Department { get; init; }
+    public Max70Text? Department { get; init; }
 
     /// <summary>
     /// District Name.
     /// </summary>
     [DisplayName("District Name")]
     [IsoXmlTag("DstrctNm")]
-    public IsoMax140Text? DistrictName { get; init; }
+    public Max140Text? DistrictName { get; init; }
 
     /// <summary>
     /// Floor.
     /// </summary>
     [DisplayName("Floor")]
     [IsoXmlTag("Flr")]
-    public IsoMax70Text? Floor { get; init; }
+    public Max70Text? Floor { get; init; }
 
     /// <summary>
     /// Post Box.
     /// </summary>
     [DisplayName("Post Box")]
     [IsoXmlTag("PstBx")]
-    public IsoMax16Text? PostBox { get; init; }
+    public Max16Text? PostBox { get; init; }
 
     /// <summary>
     /// Post Code.
     /// </summary>
     [DisplayName("Post Code")]
     [IsoXmlTag("PstCd")]
-    public IsoMax16Text? PostCode { get; init; }
+    public Max16Text? PostCode { get; init; }
 
     /// <summary>
     /// Room.
     /// </summary>
     [DisplayName("Room")]
     [IsoXmlTag("Room")]
-    public IsoMax70Text? Room { get; init; }
+    public Max70Text? Room { get; init; }
 
     /// <summary>
     /// Street Name.
     /// </summary>
     [DisplayName("Street Name")]
     [IsoXmlTag("StrtNm")]
-    public IsoMax140Text? StreetName { get; init; }
+    public Max140Text? StreetName { get; init; }
 
     /// <summary>
     /// Sub Department.
     /// </summary>
     [DisplayName("Sub Department")]
     [IsoXmlTag("SubDept")]
-    public IsoMax70Text? SubDepartment { get; init; }
+    public Max70Text? SubDepartment { get; init; }
 
     /// <summary>
     /// Town Location Name.
     /// </summary>
     [DisplayName("Town Location Name")]
     [IsoXmlTag("TwnLctnNm")]
-    public IsoMax140Text? TownLocationName { get; init; }
+    public Max140Text? TownLocationName { get; init; }
 
     /// <summary>
     /// Town Name.
     /// </summary>
     [DisplayName("Town Name")]
     [IsoXmlTag("TwnNm")]
-    public IsoMax140Text? TownName { get; init; }
+    public Max140Text? TownName { get; init; }
 
     /// <summary>
     /// Unit Number.
     /// </summary>
     [DisplayName("Unit Number")]
     [IsoXmlTag("UnitNb")]
-    public IsoMax16Text? UnitNumber { get; init; }
+    public Max16Text? UnitNumber { get; init; }
 
     /// <summary>
     /// Valid From.
     /// </summary>
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
-    public IsoISODate? ValidFrom { get; init; }
+    public DateOnly? ValidFrom { get; init; }
 }

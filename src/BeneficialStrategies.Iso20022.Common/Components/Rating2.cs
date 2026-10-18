@@ -24,7 +24,7 @@ public record Rating2
     [IsoXmlTag("Ratg")]
     [IsoSimpleType(IsoSimpleType.Max10Text)]
     [StringLength(maximumLength: 10, MinimumLength = 1)]
-    public required IsoMax10Text Rating { get; init; }
+    public required Max10Text Rating { get; init; }
 
     /// <summary>
     /// Agency, which provides rating services, for example, Moody&apos;s and S&amp;P.

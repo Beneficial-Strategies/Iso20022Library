@@ -24,7 +24,7 @@ public record PartyIdentificationSD6
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// DTC agent identification number.
@@ -34,7 +34,7 @@ public record PartyIdentificationSD6
     [IsoXmlTag("AgtId")]
     [IsoSimpleType(IsoSimpleType.Max8Text)]
     [StringLength(maximumLength: 8, MinimumLength = 1)]
-    public IsoMax8Text? AgentIdentification { get; init; }
+    public Max8Text? AgentIdentification { get; init; }
 
     /// <summary>
     /// Telephone number of the agent.
@@ -43,7 +43,7 @@ public record PartyIdentificationSD6
     [DisplayName("Agent Telephone Number")]
     [IsoXmlTag("AgtTelNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? AgentTelephoneNumber { get; init; }
+    public PhoneNumber? AgentTelephoneNumber { get; init; }
 
     /// <summary>
     /// Agent designated contact information details.
@@ -61,7 +61,7 @@ public record PartyIdentificationSD6
     [IsoXmlTag("AgtEmailAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? AgentEmailAddress { get; init; }
+    public Max256Text? AgentEmailAddress { get; init; }
 
     /// <summary>
     /// Event agent address.

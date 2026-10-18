@@ -23,7 +23,7 @@ public record InformationQualifierType1
     [DisplayName("Is Formatted")]
     [IsoXmlTag("IsFrmtd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? IsFormatted { get; init; }
+    public YesNoIndicator? IsFormatted { get; init; }
 
     /// <summary>
     /// Priority of the information.

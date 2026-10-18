@@ -46,7 +46,7 @@ public record ATMTransaction20
     [IsoId("_dsJgl64TEeWZgJQOa6iKCQ")]
     [DisplayName("Incident Detail")]
     [IsoXmlTag("IncdntDtl")]
-    public SimpleValueList<IsoMax70Text> IncidentDetail { get; init; } = [];
+    public SimpleValueList<Max70Text> IncidentDetail { get; init; } = [];
 
     /// <summary>
     /// Identification of the reconciliation period assigned by the ATM.
@@ -56,7 +56,7 @@ public record ATMTransaction20
     [IsoXmlTag("RcncltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReconciliationIdentification { get; init; }
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// True if the customer has requested a receipt.
@@ -65,7 +65,7 @@ public record ATMTransaction20
     [DisplayName("Requested Receipt")]
     [IsoXmlTag("ReqdRct")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? RequestedReceipt { get; init; }
+    public TrueFalseIndicator? RequestedReceipt { get; init; }
 
     /// <summary>
     /// True if a receipt has been printed and presented to the customer.
@@ -74,7 +74,7 @@ public record ATMTransaction20
     [DisplayName("Receipt Printed")]
     [IsoXmlTag("RctPrtd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ReceiptPrinted { get; init; }
+    public TrueFalseIndicator? ReceiptPrinted { get; init; }
 
     /// <summary>
     /// Explicit consent expressed by a customer on a card-related service proposed by an acquirer or an issuer or any agent acting on behalf of one of them.
@@ -83,7 +83,7 @@ public record ATMTransaction20
     [DisplayName("Customer Consent")]
     [IsoXmlTag("CstmrCnsnt")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CustomerConsent { get; init; }
+    public TrueFalseIndicator? CustomerConsent { get; init; }
 
     /// <summary>
     /// Outcome of the withdrawal authorisation.
@@ -100,5 +100,5 @@ public record ATMTransaction20
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
     [IsoSimpleType(IsoSimpleType.Max10000Binary)]
-    public IsoMax10000Binary? ICCRelatedData { get; init; }
+    public Max10000Binary? ICCRelatedData { get; init; }
 }

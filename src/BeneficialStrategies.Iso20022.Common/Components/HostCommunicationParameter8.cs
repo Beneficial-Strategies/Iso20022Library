@@ -30,7 +30,7 @@ public record HostCommunicationParameter8
     [IsoId("_bIcfS7Z8EfCUZfsQO4rYeA")]
     [DisplayName("Host Identification")]
     [IsoXmlTag("HstId")]
-    public required IsoMax35Text HostIdentification { get; init; }
+    public required Max35Text HostIdentification { get; init; }
 
     /// <summary>
     /// Network parameters of the host.

@@ -63,7 +63,7 @@ public record SettlementDetails215
     /// </summary>
     [DisplayName("Eligible For Collateral")]
     [IsoXmlTag("ElgblForColl")]
-    public IsoYesNoIndicator? EligibleForCollateral { get; init; }
+    public YesNoIndicator? EligibleForCollateral { get; init; }
 
     /// <summary>
     /// Exposure Type.

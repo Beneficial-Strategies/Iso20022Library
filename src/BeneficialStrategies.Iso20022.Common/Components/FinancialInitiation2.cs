@@ -72,7 +72,7 @@ public record FinancialInitiation2
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
     [IsoSimpleType(IsoSimpleType.Max10KHexBinaryText)]
-    public IsoMax10KHexBinaryText? ICCRelatedData { get; init; }
+    public Max10KHexBinaryText? ICCRelatedData { get; init; }
 
     /// <summary>
     /// Contains protected data and the attributes used to protect the data.

@@ -32,7 +32,7 @@ public record CommunicationAddress5
     [IsoXmlTag("Email")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Email { get; init; }
+    public Max256Text? Email { get; init; }
 
     /// <summary>
     /// Address for the Universal Resource Locator (URL), for example used over the www (HTTP) service.
@@ -42,7 +42,7 @@ public record CommunicationAddress5
     [IsoXmlTag("URLAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? URLAddress { get; init; }
+    public Max256Text? URLAddress { get; init; }
 
     /// <summary>
     /// Collection of information that identifies a phone number, as defined by telecom services.
@@ -51,7 +51,7 @@ public record CommunicationAddress5
     [DisplayName("Phone")]
     [IsoXmlTag("Phne")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? Phone { get; init; }
+    public PhoneNumber? Phone { get; init; }
 
     /// <summary>
     /// Phone number of the customer service.
@@ -60,7 +60,7 @@ public record CommunicationAddress5
     [DisplayName("Customer Service")]
     [IsoXmlTag("CstmrSvc")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? CustomerService { get; init; }
+    public PhoneNumber? CustomerService { get; init; }
 
     /// <summary>
     /// Additional information used to facilitate contact with the card acceptor, for instance sales agent name, dispute manager name.
@@ -70,5 +70,5 @@ public record CommunicationAddress5
     [IsoXmlTag("AddtlCtctInf")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? AdditionalContactInformation { get; init; }
+    public Max256Text? AdditionalContactInformation { get; init; }
 }

@@ -32,7 +32,7 @@ public record FraudDispositionStatus2
     [IsoXmlTag("OthrActnTaken")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherActionTaken { get; init; }
+    public Max35Text? OtherActionTaken { get; init; }
 
     /// <summary>
     /// Contains errors found in the submitted fraud report message.
@@ -40,7 +40,7 @@ public record FraudDispositionStatus2
     [IsoId("_t4meRTHUEeyTT91yHXSlSQ")]
     [DisplayName("Error Data")]
     [IsoXmlTag("ErrData")]
-    public SimpleValueList<IsoMax256Text> ErrorData { get; init; } = [];
+    public SimpleValueList<Max256Text> ErrorData { get; init; } = [];
 
     /// <summary>
     /// Contains warnings found in the submitted fraud report message.
@@ -48,7 +48,7 @@ public record FraudDispositionStatus2
     [IsoId("_t4meRzHUEeyTT91yHXSlSQ")]
     [DisplayName("Warning Data")]
     [IsoXmlTag("WrngData")]
-    public SimpleValueList<IsoMax256Text> WarningData { get; init; } = [];
+    public SimpleValueList<Max256Text> WarningData { get; init; } = [];
 
     /// <summary>
     /// Additional information

@@ -32,7 +32,7 @@ public record PostalAddress19
     [IsoXmlTag("Dept")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Department { get; init; }
+    public Max70Text? Department { get; init; }
 
     /// <summary>
     /// Identification of a sub-division of a large organisation or building.
@@ -42,7 +42,7 @@ public record PostalAddress19
     [IsoXmlTag("SubDept")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? SubDepartment { get; init; }
+    public Max70Text? SubDepartment { get; init; }
 
     /// <summary>
     /// Name of a street or thoroughfare.
@@ -52,7 +52,7 @@ public record PostalAddress19
     [IsoXmlTag("StrtNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? StreetName { get; init; }
+    public Max70Text? StreetName { get; init; }
 
     /// <summary>
     /// Number that identifies the position of a building on a street.
@@ -62,7 +62,7 @@ public record PostalAddress19
     [IsoXmlTag("BldgNb")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoMax16Text? BuildingNumber { get; init; }
+    public Max16Text? BuildingNumber { get; init; }
 
     /// <summary>
     /// Identifier consisting of a group of letters and/or numbers that is added to a postal address to assist the sorting of mail.
@@ -72,7 +72,7 @@ public record PostalAddress19
     [IsoXmlTag("PstCd")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoMax16Text? PostCode { get; init; }
+    public Max16Text? PostCode { get; init; }
 
     /// <summary>
     /// Name of a built-up area, with defined boundaries, and a local government.
@@ -82,7 +82,7 @@ public record PostalAddress19
     [IsoXmlTag("TwnNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TownName { get; init; }
+    public Max35Text? TownName { get; init; }
 
     /// <summary>
     /// Specific location name within the town.
@@ -92,7 +92,7 @@ public record PostalAddress19
     [IsoXmlTag("TwnLctnNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TownLocationName { get; init; }
+    public Max35Text? TownLocationName { get; init; }
 
     /// <summary>
     /// Identifies a subdivision within a country sub-division.
@@ -102,7 +102,7 @@ public record PostalAddress19
     [IsoXmlTag("DstrctNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DistrictName { get; init; }
+    public Max35Text? DistrictName { get; init; }
 
     /// <summary>
     /// Identifies a subdivision of a country such as state, region, county.
@@ -112,7 +112,7 @@ public record PostalAddress19
     [IsoXmlTag("CtrySubDvsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CountrySubDivision { get; init; }
+    public Max35Text? CountrySubDivision { get; init; }
 
     /// <summary>
     /// Nation with its own government.

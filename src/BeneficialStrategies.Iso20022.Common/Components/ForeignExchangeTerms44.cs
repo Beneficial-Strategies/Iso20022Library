@@ -38,7 +38,7 @@ public record ForeignExchangeTerms44
     [IsoId("610a9bc2-f522-4f6f-95f6-25d53e1fdbab")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
-    public required IsoBaseOneRate ExchangeRate { get; init; }
+    public required BaseOneRate ExchangeRate { get; init; }
 
     /// <summary>
     /// Date and time at which an exchange rate is quoted.
@@ -46,7 +46,7 @@ public record ForeignExchangeTerms44
     [IsoId("9642e4b5-8c9d-47f5-9a4e-f028d8b731b3")]
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
-    public IsoISODateTime? QuotationDate { get; init; }
+    public ISODateTime? QuotationDate { get; init; }
 
     /// <summary>
     /// Party that proposes a foreign exchange rate.

@@ -23,7 +23,7 @@ public record RecordTechnicalData5
     [DisplayName("Receipt Date Time")]
     [IsoXmlTag("RctDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime ReceiptDateTime { get; init; }
+    public required ISODateTime ReceiptDateTime { get; init; }
 
     /// <summary>
     /// Describes the reason for the exchange of the transaction report between the competent authorities.

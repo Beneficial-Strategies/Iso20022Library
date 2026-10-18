@@ -23,7 +23,7 @@ public record TradeAgreement8
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate TradeDate { get; init; }
+    public required DateOnly TradeDate { get; init; }
 
     /// <summary>
     /// Reference of the present instruction assigned by the party issuing the message. This reference must be unique amongst all messages of same type sent by the same party.
@@ -33,7 +33,7 @@ public record TradeAgreement8
     [IsoXmlTag("OrgtrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OriginatorReference { get; init; }
+    public required Max35Text OriginatorReference { get; init; }
 
     /// <summary>
     /// Identification of a matching system reference by a choice between a matching system unique identification or the related reference.
@@ -51,7 +51,7 @@ public record TradeAgreement8
     [IsoXmlTag("CmonRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CommonReference { get; init; }
+    public Max35Text? CommonReference { get; init; }
 
     /// <summary>
     /// Describes the reason for the cancellation or the amendment.
@@ -61,7 +61,7 @@ public record TradeAgreement8
     [IsoXmlTag("AmdOrCclRsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AmendOrCancelReason { get; init; }
+    public Max35Text? AmendOrCancelReason { get; init; }
 
     /// <summary>
     /// Specifies the type of underlying transaction, for example cancellation (CANC).
@@ -71,7 +71,7 @@ public record TradeAgreement8
     [IsoXmlTag("OprTp")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4Text? OperationType { get; init; }
+    public Max4Text? OperationType { get; init; }
 
     /// <summary>
     /// Specifies the business role between the submitter and the trade party, for example Agent (AGNT).
@@ -81,7 +81,7 @@ public record TradeAgreement8
     [IsoXmlTag("OprScp")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4Text? OperationScope { get; init; }
+    public Max4Text? OperationScope { get; init; }
 
     /// <summary>
     /// To indicate the requested CLS Settlement Session that the related trade is part of.
@@ -90,5 +90,5 @@ public record TradeAgreement8
     [DisplayName("Settlement Session Identifier")]
     [IsoXmlTag("SttlmSsnIdr")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    public IsoExact4AlphaNumericText? SettlementSessionIdentifier { get; init; }
+    public Exact4AlphaNumericText? SettlementSessionIdentifier { get; init; }
 }

@@ -39,7 +39,7 @@ public record RegisteredContractJournal1
     [DisplayName("Closure Date")]
     [IsoXmlTag("ClsrDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ClosureDate { get; init; }
+    public required DateOnly ClosureDate { get; init; }
 
     /// <summary>
     /// Reason of closure

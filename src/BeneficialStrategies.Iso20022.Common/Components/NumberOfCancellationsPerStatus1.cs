@@ -23,7 +23,7 @@ public record NumberOfCancellationsPerStatus1
     [DisplayName("Detailed Number Of Transactions")]
     [IsoXmlTag("DtldNbOfTxs")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText DetailedNumberOfTransactions { get; init; }
+    public required Max15NumericText DetailedNumberOfTransactions { get; init; }
 
     /// <summary>
     /// Common cancellation request status for all individual cancellation requests reported.
@@ -40,5 +40,5 @@ public record NumberOfCancellationsPerStatus1
     [DisplayName("Detailed Control Sum")]
     [IsoXmlTag("DtldCtrlSum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? DetailedControlSum { get; init; }
+    public DecimalNumber? DetailedControlSum { get; init; }
 }

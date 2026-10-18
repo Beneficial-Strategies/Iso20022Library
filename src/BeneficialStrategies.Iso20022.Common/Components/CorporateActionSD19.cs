@@ -24,7 +24,7 @@ public record CorporateActionSD19
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Date at which positions are stuck at the end of the day to note which parties will receive the relevant amount of entitlement, due to be distributed on payment date. DTC (The Depository Trust Corporation) and its Participants may use this as a reference.
@@ -33,7 +33,7 @@ public record CorporateActionSD19
     [DisplayName("Record Date")]
     [IsoXmlTag("RcrdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RecordDate { get; init; }
+    public DateOnly? RecordDate { get; init; }
 
     /// <summary>
     /// Date/time at which the movement was due to take place (cash and/or securities).
@@ -50,7 +50,7 @@ public record CorporateActionSD19
     [DisplayName("Lottery Date")]
     [IsoXmlTag("LtryDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? LotteryDate { get; init; }
+    public DateOnly? LotteryDate { get; init; }
 
     /// <summary>
     /// Specifies the type of lottery announced.

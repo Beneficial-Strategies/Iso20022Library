@@ -32,7 +32,7 @@ public record GeneralBusinessInformation1
     [IsoXmlTag("Sbjt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Subject { get; init; }
+    public Max35Text? Subject { get; init; }
 
     /// <summary>
     /// General business information, in unstructured form.
@@ -42,5 +42,5 @@ public record GeneralBusinessInformation1
     [IsoXmlTag("SbjtDtls")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? SubjectDetails { get; init; }
+    public Max350Text? SubjectDetails { get; init; }
 }

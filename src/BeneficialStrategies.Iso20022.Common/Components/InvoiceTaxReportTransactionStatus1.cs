@@ -24,7 +24,7 @@ public record InvoiceTaxReportTransactionStatus1
     [IsoXmlTag("TaxRptId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TaxReportIdentification { get; init; }
+    public required Max35Text TaxReportIdentification { get; init; }
 
     /// <summary>
     /// Defines status of the reported transaction.

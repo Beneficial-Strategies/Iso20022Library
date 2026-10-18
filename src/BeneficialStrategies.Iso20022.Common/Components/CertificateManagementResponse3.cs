@@ -56,7 +56,7 @@ public record CertificateManagementResponse3
     [IsoXmlTag("SctyPrfl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SecurityProfile { get; init; }
+    public Max35Text? SecurityProfile { get; init; }
 
     /// <summary>
     /// Challenge value sends by the POI to be received back in a message response.
@@ -65,7 +65,7 @@ public record CertificateManagementResponse3
     [DisplayName("POI Challenge Value")]
     [IsoXmlTag("POIChllngVal")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public required IsoMax140Binary POIChallengeValue { get; init; }
+    public required Max140Binary POIChallengeValue { get; init; }
 
     /// <summary>
     /// Date and Time of the TMS.
@@ -74,7 +74,7 @@ public record CertificateManagementResponse3
     [DisplayName("TMS Date Time")]
     [IsoXmlTag("TMSDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime TMSDateTime { get; init; }
+    public required ISODateTime TMSDateTime { get; init; }
 
     /// <summary>
     /// Created or renewed certificate. The certificate is ASN.1/DER encoded.
@@ -83,7 +83,7 @@ public record CertificateManagementResponse3
     [DisplayName("Client Certificate")]
     [IsoXmlTag("ClntCert")]
     [IsoSimpleType(IsoSimpleType.Max3000Binary)]
-    public IsoMax3000Binary? ClientCertificate { get; init; }
+    public Max3000Binary? ClientCertificate { get; init; }
 
     /// <summary>
     /// Certificate of the client certificate path, from the CA (Certificate Authority) certificate, to the root certificate, for renewal or revocation of certificate.
@@ -91,7 +91,7 @@ public record CertificateManagementResponse3
     [IsoId("_ZhhVUXI0Ee299ZbWCkdR_w")]
     [DisplayName("Client Certificate Path")]
     [IsoXmlTag("ClntCertPth")]
-    public SimpleValueList<IsoMax10KBinary> ClientCertificatePath { get; init; } = [];
+    public SimpleValueList<Max10KBinary> ClientCertificatePath { get; init; } = [];
 
     /// <summary>
     /// Certificate of the server certificate path, from the CA (Certificate Authority) certificate, to the root certificate, for renewal or revocation of certificate.
@@ -99,5 +99,5 @@ public record CertificateManagementResponse3
     [IsoId("_ZhhVU3I0Ee299ZbWCkdR_w")]
     [DisplayName("Server Certificate Path")]
     [IsoXmlTag("SvrCertPth")]
-    public SimpleValueList<IsoMax10KBinary> ServerCertificatePath { get; init; } = [];
+    public SimpleValueList<Max10KBinary> ServerCertificatePath { get; init; } = [];
 }

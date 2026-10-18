@@ -24,7 +24,7 @@ public record SettlementTypeAndAdditionalParameters13
     [IsoXmlTag("CmonId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CommonIdentification { get; init; }
+    public Max35Text? CommonIdentification { get; init; }
 
     /// <summary>
     /// Identification assigned by the account servicer to unambiguously identify a corporate action event.
@@ -34,7 +34,7 @@ public record SettlementTypeAndAdditionalParameters13
     [IsoXmlTag("CorpActnEvtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CorporateActionEventIdentification { get; init; }
+    public Max35Text? CorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Indicates whether the settlement transaction was already sent on the market and that it is only sent by an account owner to an account servicer for reconciliation purposes.
@@ -43,5 +43,5 @@ public record SettlementTypeAndAdditionalParameters13
     [DisplayName("Reconciliation Indicator")]
     [IsoXmlTag("RcncltnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ReconciliationIndicator { get; init; }
+    public YesNoIndicator? ReconciliationIndicator { get; init; }
 }

@@ -63,7 +63,7 @@ public record SupportingDocument4
     /// </summary>
     [DisplayName("Original Request Identification")]
     [IsoXmlTag("OrgnlReqId")]
-    public IsoMax35Text? OriginalRequestIdentification { get; init; }
+    public Max35Text? OriginalRequestIdentification { get; init; }
 
     /// <summary>
     /// Supplementary Data.
@@ -77,5 +77,5 @@ public record SupportingDocument4
     /// </summary>
     [DisplayName("Supporting Document Identification")]
     [IsoXmlTag("SpprtgDocId")]
-    public required IsoMax35Text SupportingDocumentIdentification { get; init; }
+    public required Max35Text SupportingDocumentIdentification { get; init; }
 }

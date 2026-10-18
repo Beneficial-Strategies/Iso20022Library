@@ -23,7 +23,7 @@ public record SecuritiesAccountReturnCriteria1
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? AccountIdentification { get; init; }
+    public RequestedIndicator? AccountIdentification { get; init; }
 
     /// <summary>
     /// Indicates whether the identification of the party owning the account is requested.
@@ -32,7 +32,7 @@ public record SecuritiesAccountReturnCriteria1
     [DisplayName("Party Identification")]
     [IsoXmlTag("PtyId")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? PartyIdentification { get; init; }
+    public RequestedIndicator? PartyIdentification { get; init; }
 
     /// <summary>
     /// Indicates whether the type of the party owning the account is requested.
@@ -41,7 +41,7 @@ public record SecuritiesAccountReturnCriteria1
     [DisplayName("Party Type")]
     [IsoXmlTag("PtyTp")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? PartyType { get; init; }
+    public RequestedIndicator? PartyType { get; init; }
 
     /// <summary>
     /// Indicates whether the account servicer is requested.
@@ -50,7 +50,7 @@ public record SecuritiesAccountReturnCriteria1
     [DisplayName("Account Servicer")]
     [IsoXmlTag("AcctSvcr")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? AccountServicer { get; init; }
+    public RequestedIndicator? AccountServicer { get; init; }
 
     /// <summary>
     /// Indicates whether the account type is requested.
@@ -59,7 +59,7 @@ public record SecuritiesAccountReturnCriteria1
     [DisplayName("Account Type")]
     [IsoXmlTag("AcctTp")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? AccountType { get; init; }
+    public RequestedIndicator? AccountType { get; init; }
 
     /// <summary>
     /// Indicates whether the opening date for the account is requested.
@@ -68,7 +68,7 @@ public record SecuritiesAccountReturnCriteria1
     [DisplayName("Opening Date")]
     [IsoXmlTag("OpngDt")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? OpeningDate { get; init; }
+    public RequestedIndicator? OpeningDate { get; init; }
 
     /// <summary>
     /// Indicates whether the closing date for the account is requested.
@@ -77,7 +77,7 @@ public record SecuritiesAccountReturnCriteria1
     [DisplayName("Closing Date")]
     [IsoXmlTag("ClsgDt")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? ClosingDate { get; init; }
+    public RequestedIndicator? ClosingDate { get; init; }
 
     /// <summary>
     /// Specifies information to identify securities accounts where allocation instructions are posted.
@@ -86,7 +86,7 @@ public record SecuritiesAccountReturnCriteria1
     [DisplayName("End Investor Flag")]
     [IsoXmlTag("EndInvstrFlg")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? EndInvestorFlag { get; init; }
+    public RequestedIndicator? EndInvestorFlag { get; init; }
 
     /// <summary>
     /// Defines how the price is applied to the securities account.
@@ -95,5 +95,5 @@ public record SecuritiesAccountReturnCriteria1
     [DisplayName("Pricing Scheme")]
     [IsoXmlTag("PricgSchme")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? PricingScheme { get; init; }
+    public RequestedIndicator? PricingScheme { get; init; }
 }

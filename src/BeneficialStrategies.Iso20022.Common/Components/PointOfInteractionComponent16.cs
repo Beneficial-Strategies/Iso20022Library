@@ -21,28 +21,28 @@ public record PointOfInteractionComponent16
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax35Text? Identification { get; init; }
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Item Number.
     /// </summary>
     [DisplayName("Item Number")]
     [IsoXmlTag("ItmNb")]
-    public IsoMax35Text? ItemNumber { get; init; }
+    public Max35Text? ItemNumber { get; init; }
 
     /// <summary>
     /// Provider Identification.
     /// </summary>
     [DisplayName("Provider Identification")]
     [IsoXmlTag("PrvdrId")]
-    public IsoMax35Text? ProviderIdentification { get; init; }
+    public Max35Text? ProviderIdentification { get; init; }
 
     /// <summary>
     /// Serial Number.
     /// </summary>
     [DisplayName("Serial Number")]
     [IsoXmlTag("SrlNb")]
-    public IsoMax70Text? SerialNumber { get; init; }
+    public Max70Text? SerialNumber { get; init; }
 
     /// <summary>
     /// Type.

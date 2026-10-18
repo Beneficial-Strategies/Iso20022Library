@@ -9,6 +9,6 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("FinRspn")]
-        public required IsoMax2MBBinary Value { get; init; }
+        public required Max2MBBinary Value { get; init; }
     }
 }

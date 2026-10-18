@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
         /// </summary>
         [IsoXmlTag("CACPA")]
         [IsoSimpleType(IsoSimpleType.CanadianPaymentsARNIdentifier)]
-        public required IsoCanadianPaymentsARNIdentifier Value { get; init; }
+        public required CanadianPaymentsARNIdentifier Value { get; init; }
     }
 }

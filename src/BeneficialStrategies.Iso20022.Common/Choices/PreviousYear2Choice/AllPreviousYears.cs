@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PreviousYear2Choice
         /// </summary>
         [IsoXmlTag("AllPrvsYrs")]
         [IsoSimpleType(IsoSimpleType.PreviousAll)]
-        public required IsoPreviousAll Value { get; init; }
+        public required PreviousAll Value { get; init; }
     }
 }

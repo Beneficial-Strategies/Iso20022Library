@@ -95,7 +95,7 @@ public record TransactionDetails78
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
     [IsoSimpleType(IsoSimpleType.Max3Number)]
-    public IsoMax3Number? NumberOfDaysAccrued { get; init; }
+    public Max3Number? NumberOfDaysAccrued { get; init; }
 
     /// <summary>
     /// Amount of money that is to be/was posted to the account.
@@ -168,7 +168,7 @@ public record TransactionDetails78
     [DisplayName("Reversal Indicator")]
     [IsoXmlTag("RvslInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ReversalIndicator { get; init; }
+    public YesNoIndicator? ReversalIndicator { get; init; }
 
     /// <summary>
     /// Provides additional details on the transaction which can not be included within the structured fields of the message.
@@ -178,5 +178,5 @@ public record TransactionDetails78
     [IsoXmlTag("TxAddtlDtls")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? TransactionAdditionalDetails { get; init; }
+    public Max350Text? TransactionAdditionalDetails { get; init; }
 }

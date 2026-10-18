@@ -72,5 +72,5 @@ public record CurrencyControlGroupStatus1
     [DisplayName("Status Date Time")]
     [IsoXmlTag("StsDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? StatusDateTime { get; init; }
+    public ISODateTime? StatusDateTime { get; init; }
 }

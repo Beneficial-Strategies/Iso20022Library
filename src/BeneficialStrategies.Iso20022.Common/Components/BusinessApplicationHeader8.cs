@@ -21,21 +21,21 @@ public record BusinessApplicationHeader8
     /// </summary>
     [DisplayName("Business Message Identifier")]
     [IsoXmlTag("BizMsgIdr")]
-    public required IsoMax35Text BusinessMessageIdentifier { get; init; }
+    public required Max35Text BusinessMessageIdentifier { get; init; }
 
     /// <summary>
     /// Business Processing Date.
     /// </summary>
     [DisplayName("Business Processing Date")]
     [IsoXmlTag("BizPrcgDt")]
-    public IsoISODateTime? BusinessProcessingDate { get; init; }
+    public ISODateTime? BusinessProcessingDate { get; init; }
 
     /// <summary>
     /// Business Service.
     /// </summary>
     [DisplayName("Business Service")]
     [IsoXmlTag("BizSvc")]
-    public IsoMax35Text? BusinessService { get; init; }
+    public Max35Text? BusinessService { get; init; }
 
     /// <summary>
     /// Character Set.
@@ -56,7 +56,7 @@ public record BusinessApplicationHeader8
     /// </summary>
     [DisplayName("Creation Date")]
     [IsoXmlTag("CreDt")]
-    public required IsoISODateTime CreationDate { get; init; }
+    public required ISODateTime CreationDate { get; init; }
 
     /// <summary>
     /// From.
@@ -77,14 +77,14 @@ public record BusinessApplicationHeader8
     /// </summary>
     [DisplayName("Message Definition Identifier")]
     [IsoXmlTag("MsgDefIdr")]
-    public required IsoMax35Text MessageDefinitionIdentifier { get; init; }
+    public required Max35Text MessageDefinitionIdentifier { get; init; }
 
     /// <summary>
     /// Possible Duplicate.
     /// </summary>
     [DisplayName("Possible Duplicate")]
     [IsoXmlTag("PssblDplct")]
-    public IsoYesNoIndicator? PossibleDuplicate { get; init; }
+    public YesNoIndicator? PossibleDuplicate { get; init; }
 
     /// <summary>
     /// Priority.

@@ -39,7 +39,7 @@ public record Parameter15
     [DisplayName("Salt Length")]
     [IsoXmlTag("SaltLngth")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? SaltLength { get; init; }
+    public Number? SaltLength { get; init; }
 
     /// <summary>
     /// Trailer field number.
@@ -48,7 +48,7 @@ public record Parameter15
     [DisplayName("Trailer Field")]
     [IsoXmlTag("TrlrFld")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? TrailerField { get; init; }
+    public Number? TrailerField { get; init; }
 
     /// <summary>
     /// Name of the Elliptic Curve according to the OID notation.
@@ -58,5 +58,5 @@ public record Parameter15
     [IsoXmlTag("OIDCrvNm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? OIDCurveName { get; init; }
+    public Max140Text? OIDCurveName { get; init; }
 }

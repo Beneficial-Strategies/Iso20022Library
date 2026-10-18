@@ -57,21 +57,21 @@ public record BatchManagementResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Batch Checksum")]
     [IsoXmlTag("BtchChcksm")]
-    public IsoMax35Binary? BatchChecksum { get; init; }
+    public Max35Binary? BatchChecksum { get; init; }
 
     /// <summary>
     /// Batch Identification.
     /// </summary>
     [DisplayName("Batch Identification")]
     [IsoXmlTag("BtchId")]
-    public IsoMax70Text? BatchIdentification { get; init; }
+    public Max70Text? BatchIdentification { get; init; }
 
     /// <summary>
     /// Batch Identification List.
     /// </summary>
     [DisplayName("Batch Identification List")]
     [IsoXmlTag("BtchIdList")]
-    public ValueList<IsoMax70Text> BatchIdentificationList { get; init; } = [];
+    public ValueList<Max70Text> BatchIdentificationList { get; init; } = [];
 
     /// <summary>
     /// Batch Management Type.
@@ -85,42 +85,42 @@ public record BatchManagementResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Checkpoint Identification")]
     [IsoXmlTag("ChckptId")]
-    public IsoMax70Text? CheckpointIdentification { get; init; }
+    public Max70Text? CheckpointIdentification { get; init; }
 
     /// <summary>
     /// Collection Checksum.
     /// </summary>
     [DisplayName("Collection Checksum")]
     [IsoXmlTag("ColltnChcksm")]
-    public IsoMax35Binary? CollectionChecksum { get; init; }
+    public Max35Binary? CollectionChecksum { get; init; }
 
     /// <summary>
     /// Collection Identification.
     /// </summary>
     [DisplayName("Collection Identification")]
     [IsoXmlTag("ColltnId")]
-    public IsoMax70Text? CollectionIdentification { get; init; }
+    public Max70Text? CollectionIdentification { get; init; }
 
     /// <summary>
     /// Collection Identification List.
     /// </summary>
     [DisplayName("Collection Identification List")]
     [IsoXmlTag("ColltnIdList")]
-    public ValueList<IsoMax70Text> CollectionIdentificationList { get; init; } = [];
+    public ValueList<Max70Text> CollectionIdentificationList { get; init; } = [];
 
     /// <summary>
     /// Collection Size.
     /// </summary>
     [DisplayName("Collection Size")]
     [IsoXmlTag("ColltnSz")]
-    public IsoNumber? CollectionSize { get; init; }
+    public Number? CollectionSize { get; init; }
 
     /// <summary>
     /// Continuation.
     /// </summary>
     [DisplayName("Continuation")]
     [IsoXmlTag("Conttn")]
-    public IsoTrueFalseIndicator? Continuation { get; init; }
+    public TrueFalseIndicator? Continuation { get; init; }
 
     /// <summary>
     /// Correction.
@@ -155,21 +155,21 @@ public record BatchManagementResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Life Cycle Identification")]
     [IsoXmlTag("LifeCyclId")]
-    public IsoExact15Text? LifeCycleIdentification { get; init; }
+    public Exact15Text? LifeCycleIdentification { get; init; }
 
     /// <summary>
     /// Messages Before Acknowledgement.
     /// </summary>
     [DisplayName("Messages Before Acknowledgement")]
     [IsoXmlTag("MsgsBfrAck")]
-    public IsoNumber? MessagesBeforeAcknowledgement { get; init; }
+    public Number? MessagesBeforeAcknowledgement { get; init; }
 
     /// <summary>
     /// Message Sequence Number.
     /// </summary>
     [DisplayName("Message Sequence Number")]
     [IsoXmlTag("MsgSeqNb")]
-    public IsoMax15NumericText? MessageSequenceNumber { get; init; }
+    public Max15NumericText? MessageSequenceNumber { get; init; }
 
     /// <summary>
     /// National Data.
@@ -183,28 +183,28 @@ public record BatchManagementResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Number Of Batches In Collection")]
     [IsoXmlTag("NbOfBtchsInColltn")]
-    public IsoNumber? NumberOfBatchesInCollection { get; init; }
+    public Number? NumberOfBatchesInCollection { get; init; }
 
     /// <summary>
     /// Number Of Messages.
     /// </summary>
     [DisplayName("Number Of Messages")]
     [IsoXmlTag("NbOfMsgs")]
-    public IsoNumber? NumberOfMessages { get; init; }
+    public Number? NumberOfMessages { get; init; }
 
     /// <summary>
     /// Original Batch Identification.
     /// </summary>
     [DisplayName("Original Batch Identification")]
     [IsoXmlTag("OrgnlBtchId")]
-    public IsoMax70Text? OriginalBatchIdentification { get; init; }
+    public Max70Text? OriginalBatchIdentification { get; init; }
 
     /// <summary>
     /// Original Collection Identification.
     /// </summary>
     [DisplayName("Original Collection Identification")]
     [IsoXmlTag("OrgnlColltnId")]
-    public IsoMax70Text? OriginalCollectionIdentification { get; init; }
+    public Max70Text? OriginalCollectionIdentification { get; init; }
 
     /// <summary>
     /// Original Response Code.
@@ -225,7 +225,7 @@ public record BatchManagementResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Positive Acknowledgement")]
     [IsoXmlTag("PostvAck")]
-    public IsoTrueFalseIndicator? PositiveAcknowledgement { get; init; }
+    public TrueFalseIndicator? PositiveAcknowledgement { get; init; }
 
     /// <summary>
     /// Private Data.
@@ -274,21 +274,21 @@ public record BatchManagementResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Remaining Messages In Collection")]
     [IsoXmlTag("RmngMsgsInColltn")]
-    public IsoNumber? RemainingMessagesInCollection { get; init; }
+    public Number? RemainingMessagesInCollection { get; init; }
 
     /// <summary>
     /// Request Acknowledgement.
     /// </summary>
     [DisplayName("Request Acknowledgement")]
     [IsoXmlTag("ReqAck")]
-    public IsoTrueFalseIndicator? RequestAcknowledgement { get; init; }
+    public TrueFalseIndicator? RequestAcknowledgement { get; init; }
 
     /// <summary>
     /// Retrieval Reference Number.
     /// </summary>
     [DisplayName("Retrieval Reference Number")]
     [IsoXmlTag("RtrvlRefNb")]
-    public IsoExact12Text? RetrievalReferenceNumber { get; init; }
+    public Exact12Text? RetrievalReferenceNumber { get; init; }
 
     /// <summary>
     /// Security Trailer.
@@ -316,12 +316,12 @@ public record BatchManagementResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("System Trace Audit Number")]
     [IsoXmlTag("SysTracAudtNb")]
-    public IsoMax12NumericText? SystemTraceAuditNumber { get; init; }
+    public Max12NumericText? SystemTraceAuditNumber { get; init; }
 
     /// <summary>
     /// Transmission Date Time.
     /// </summary>
     [DisplayName("Transmission Date Time")]
     [IsoXmlTag("TrnsmssnDtTm")]
-    public IsoISODateTime? TransmissionDateTime { get; init; }
+    public ISODateTime? TransmissionDateTime { get; init; }
 }

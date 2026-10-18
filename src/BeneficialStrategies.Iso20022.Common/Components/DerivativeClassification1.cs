@@ -24,7 +24,7 @@ public record DerivativeClassification1
     [IsoXmlTag("AsstClss")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text AssetClass { get; init; }
+    public required Max35Text AssetClass { get; init; }
 
     /// <summary>
     /// Second level classification of a derivative.
@@ -34,7 +34,7 @@ public record DerivativeClassification1
     [IsoXmlTag("BasePdct")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? BaseProduct { get; init; }
+    public Max35Text? BaseProduct { get; init; }
 
     /// <summary>
     /// Third level classification of a derivative.
@@ -44,7 +44,7 @@ public record DerivativeClassification1
     [IsoXmlTag("SubPdct")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SubProduct { get; init; }
+    public Max35Text? SubProduct { get; init; }
 
     /// <summary>
     /// Low level classification of commodity derivatives.
@@ -54,7 +54,7 @@ public record DerivativeClassification1
     [IsoXmlTag("SubCmmdty")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SubCommodity { get; init; }
+    public Max35Text? SubCommodity { get; init; }
 
     /// <summary>
     /// Low level classification of a derivative.
@@ -64,5 +64,5 @@ public record DerivativeClassification1
     [IsoXmlTag("TxTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TransactionType { get; init; }
+    public Max35Text? TransactionType { get; init; }
 }

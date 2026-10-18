@@ -22,7 +22,7 @@ public record SettlementInstitutionData1
     [IsoId("_V1r_cXSBEfC68Y4jZPNEug")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax11NumericText Identification { get; init; }
+    public required Max11NumericText Identification { get; init; }
 
     /// <summary>
     /// Business or client identification for settlement institution.
@@ -30,7 +30,7 @@ public record SettlementInstitutionData1
     [IsoId("_pLpHgXSBEfC68Y4jZPNEug")]
     [DisplayName("Business Identification")]
     [IsoXmlTag("BizId")]
-    public IsoMax15AlphaNumericText? BusinessIdentification { get; init; }
+    public Max15AlphaNumericText? BusinessIdentification { get; init; }
 
     /// <summary>
     /// Country of the party.
@@ -46,7 +46,7 @@ public record SettlementInstitutionData1
     [IsoId("_V1r_fXSBEfC68Y4jZPNEug")]
     [DisplayName("Business Name")]
     [IsoXmlTag("BizNm")]
-    public IsoMax35Text? BusinessName { get; init; }
+    public Max35Text? BusinessName { get; init; }
 
     /// <summary>
     /// Legal Corporate Name of the settlement institution.
@@ -54,7 +54,7 @@ public record SettlementInstitutionData1
     [IsoId("_V1r_f3SBEfC68Y4jZPNEug")]
     [DisplayName("Legal Corporate Name")]
     [IsoXmlTag("LglCorpNm")]
-    public IsoMax99Text? LegalCorporateName { get; init; }
+    public Max99Text? LegalCorporateName { get; init; }
 
     /// <summary>
     /// Address of the settlement institution.
@@ -70,7 +70,7 @@ public record SettlementInstitutionData1
     [IsoId("_8g0Me3SBEfC68Y4jZPNEug")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -78,7 +78,7 @@ public record SettlementInstitutionData1
     [IsoId("_8g0MfHSBEfC68Y4jZPNEug")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 
     /// <summary>
     /// Contains local language equivalent(s) of data in the current component.

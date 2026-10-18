@@ -21,21 +21,21 @@ public record LodgingRoom2
     /// </summary>
     [DisplayName("Adults")]
     [IsoXmlTag("Adlts")]
-    public IsoMax3NumericText? Adults { get; init; }
+    public Max3NumericText? Adults { get; init; }
 
     /// <summary>
     /// Bed Type.
     /// </summary>
     [DisplayName("Bed Type")]
     [IsoXmlTag("BedTp")]
-    public IsoMax70Text? BedType { get; init; }
+    public Max70Text? BedType { get; init; }
 
     /// <summary>
     /// Children.
     /// </summary>
     [DisplayName("Children")]
     [IsoXmlTag("Chldrn")]
-    public IsoMax3NumericText? Children { get; init; }
+    public Max3NumericText? Children { get; init; }
 
     /// <summary>
     /// Daily Rate.
@@ -49,19 +49,19 @@ public record LodgingRoom2
     /// </summary>
     [DisplayName("Guests")]
     [IsoXmlTag("Gsts")]
-    public IsoMax3NumericText? Guests { get; init; }
+    public Max3NumericText? Guests { get; init; }
 
     /// <summary>
     /// Location.
     /// </summary>
     [DisplayName("Location")]
     [IsoXmlTag("Lctn")]
-    public IsoMax35Text? Location { get; init; }
+    public Max35Text? Location { get; init; }
 
     /// <summary>
     /// Type.
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public IsoMax35Text? Type { get; init; }
+    public Max35Text? Type { get; init; }
 }

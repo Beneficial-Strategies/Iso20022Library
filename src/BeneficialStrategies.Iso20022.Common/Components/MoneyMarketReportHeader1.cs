@@ -23,7 +23,7 @@ public record MoneyMarketReportHeader1
     [DisplayName("Reporting Agent")]
     [IsoXmlTag("RptgAgt")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public required IsoLEIIdentifier ReportingAgent { get; init; }
+    public required LEIIdentifier ReportingAgent { get; init; }
 
     /// <summary>
     /// Beginning and ending date-time to which the transaction data refers (trade date in case of new transactions and date of amendment in case of revisions).

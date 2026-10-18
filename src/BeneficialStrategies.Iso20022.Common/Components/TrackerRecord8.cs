@@ -56,5 +56,5 @@ public record TrackerRecord8
     /// </summary>
     [DisplayName("Processing Date Time")]
     [IsoXmlTag("PrcgDtTm")]
-    public IsoISODateTime? ProcessingDateTime { get; init; }
+    public ISODateTime? ProcessingDateTime { get; init; }
 }

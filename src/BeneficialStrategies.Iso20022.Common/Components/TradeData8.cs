@@ -24,7 +24,7 @@ public record TradeData8
     [IsoXmlTag("OrgtrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginatorReference { get; init; }
+    public Max35Text? OriginatorReference { get; init; }
 
     /// <summary>
     /// Reference to the unique system identification assigned to the trade by the central matching system.
@@ -34,7 +34,7 @@ public record TradeData8
     [IsoXmlTag("MtchgSysUnqRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MatchingSystemUniqueReference { get; init; }
+    public required Max35Text MatchingSystemUniqueReference { get; init; }
 
     /// <summary>
     /// Reference to the unique matching identification assigned to the trade and to the matching trade from the counterparty by the central matching system.
@@ -44,7 +44,7 @@ public record TradeData8
     [IsoXmlTag("MtchgSysMtchgRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MatchingSystemMatchingReference { get; init; }
+    public Max35Text? MatchingSystemMatchingReference { get; init; }
 
     /// <summary>
     /// Unique reference from the central settlement system that allows the removal of alleged trades once the matched status notification for the matching side has been received.
@@ -54,7 +54,7 @@ public record TradeData8
     [IsoXmlTag("MtchgSysMtchdSdRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MatchingSystemMatchedSideReference { get; init; }
+    public Max35Text? MatchingSystemMatchedSideReference { get; init; }
 
     /// <summary>
     /// The current settlement date of the notification.
@@ -63,7 +63,7 @@ public record TradeData8
     [DisplayName("Current Settlement Date")]
     [IsoXmlTag("CurSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? CurrentSettlementDate { get; init; }
+    public DateOnly? CurrentSettlementDate { get; init; }
 
     /// <summary>
     /// Settlement date has been amended.
@@ -72,7 +72,7 @@ public record TradeData8
     [DisplayName("New Settlement Date")]
     [IsoXmlTag("NewSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? NewSettlementDate { get; init; }
+    public DateOnly? NewSettlementDate { get; init; }
 
     /// <summary>
     /// Specifies the date and time at which the current status was assigned to the individual trade.
@@ -81,7 +81,7 @@ public record TradeData8
     [DisplayName("Current Status Date Time")]
     [IsoXmlTag("CurStsDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? CurrentStatusDateTime { get; init; }
+    public ISODateTime? CurrentStatusDateTime { get; init; }
 
     /// <summary>
     /// Product type of the individual trade.
@@ -91,7 +91,7 @@ public record TradeData8
     [IsoXmlTag("PdctTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProductType { get; init; }
+    public Max35Text? ProductType { get; init; }
 
     /// <summary>
     /// To indicate the requested CLS Settlement Session that the related trade is part of.
@@ -100,7 +100,7 @@ public record TradeData8
     [DisplayName("Settlement Session Identifier")]
     [IsoXmlTag("SttlmSsnIdr")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    public IsoExact4AlphaNumericText? SettlementSessionIdentifier { get; init; }
+    public Exact4AlphaNumericText? SettlementSessionIdentifier { get; init; }
 
     /// <summary>
     /// Information that is to be provided to trade repositories in the context of the regulatory standards around OTC derivatives, central counterparties and trade repositories.

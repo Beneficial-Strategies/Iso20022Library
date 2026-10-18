@@ -70,7 +70,7 @@ public record Vote19
     /// </summary>
     [DisplayName("Issuer Label")]
     [IsoXmlTag("IssrLabl")]
-    public required IsoMax35Text IssuerLabel { get; init; }
+    public required Max35Text IssuerLabel { get; init; }
 
     /// <summary>
     /// No Action.
@@ -119,7 +119,7 @@ public record Vote19
     /// </summary>
     [DisplayName("Withdrawn")]
     [IsoXmlTag("Wdrwn")]
-    public IsoYesNoIndicator? Withdrawn { get; init; }
+    public YesNoIndicator? Withdrawn { get; init; }
 
     /// <summary>
     /// Withhold.

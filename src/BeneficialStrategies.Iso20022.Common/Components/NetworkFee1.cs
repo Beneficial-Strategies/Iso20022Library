@@ -28,5 +28,5 @@ public record NetworkFee1
     /// </summary>
     [DisplayName("Network Fee Quantity")]
     [IsoXmlTag("NtwkFeeQty")]
-    public required IsoMax30DecimalNumber NetworkFeeQuantity { get; init; }
+    public required Max30DecimalNumber NetworkFeeQuantity { get; init; }
 }

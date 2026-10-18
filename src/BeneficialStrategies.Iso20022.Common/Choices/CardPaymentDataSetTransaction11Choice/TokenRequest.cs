@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction11C
         [DisplayName("Transaction Sequence Counter")]
         [IsoXmlTag("TxSeqCntr")]
         [IsoSimpleType(IsoSimpleType.Max9NumericText)]
-        public required IsoMax9NumericText TransactionSequenceCounter { get; init; }
+        public required Max9NumericText TransactionSequenceCounter { get; init; }
 
         /// <summary>
         /// Environment of the transaction.

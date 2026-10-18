@@ -28,7 +28,7 @@ public record Invoice3
     /// </summary>
     [DisplayName("Buyer Additional Information")]
     [IsoXmlTag("BuyrAddtlInf")]
-    public IsoMax1000Text? BuyerAdditionalInformation { get; init; }
+    public Max1000Text? BuyerAdditionalInformation { get; init; }
 
     /// <summary>
     /// Buyer Address.
@@ -56,28 +56,28 @@ public record Invoice3
     /// </summary>
     [DisplayName("Buyer Name")]
     [IsoXmlTag("BuyrNm")]
-    public IsoMax70Text? BuyerName { get; init; }
+    public Max70Text? BuyerName { get; init; }
 
     /// <summary>
     /// Buyer Tax Registration Identification.
     /// </summary>
     [DisplayName("Buyer Tax Registration Identification")]
     [IsoXmlTag("BuyrTaxRegnId")]
-    public IsoMax70Text? BuyerTaxRegistrationIdentification { get; init; }
+    public Max70Text? BuyerTaxRegistrationIdentification { get; init; }
 
     /// <summary>
     /// Creation Date Time.
     /// </summary>
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
-    public IsoISODateTime? CreationDateTime { get; init; }
+    public ISODateTime? CreationDateTime { get; init; }
 
     /// <summary>
     /// Date.
     /// </summary>
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Freight Amount.
@@ -98,14 +98,14 @@ public record Invoice3
     /// </summary>
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
-    public IsoMax70Text? Number { get; init; }
+    public Max70Text? Number { get; init; }
 
     /// <summary>
     /// Seller Additional Information.
     /// </summary>
     [DisplayName("Seller Additional Information")]
     [IsoXmlTag("SellrAddtlInf")]
-    public IsoMax1000Text? SellerAdditionalInformation { get; init; }
+    public Max1000Text? SellerAdditionalInformation { get; init; }
 
     /// <summary>
     /// Seller Address.
@@ -133,21 +133,21 @@ public record Invoice3
     /// </summary>
     [DisplayName("Seller Name")]
     [IsoXmlTag("SellrNm")]
-    public IsoMax70Text? SellerName { get; init; }
+    public Max70Text? SellerName { get; init; }
 
     /// <summary>
     /// Seller Tax Registration Identification.
     /// </summary>
     [DisplayName("Seller Tax Registration Identification")]
     [IsoXmlTag("SellrTaxRegnId")]
-    public IsoMax70Text? SellerTaxRegistrationIdentification { get; init; }
+    public Max70Text? SellerTaxRegistrationIdentification { get; init; }
 
     /// <summary>
     /// Summary Commodity Identification.
     /// </summary>
     [DisplayName("Summary Commodity Identification")]
     [IsoXmlTag("SummryCmmdtyId")]
-    public IsoMax35Text? SummaryCommodityIdentification { get; init; }
+    public Max35Text? SummaryCommodityIdentification { get; init; }
 
     /// <summary>
     /// Tax Reclaim Method.

@@ -23,7 +23,7 @@ public record KeyTransport5
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Version { get; init; }
+    public Number? Version { get; init; }
 
     /// <summary>
     /// Identification of a cryptographic asymmetric key for the recipient.
@@ -48,5 +48,5 @@ public record KeyTransport5
     [DisplayName("Encrypted Key")]
     [IsoXmlTag("NcrptdKey")]
     [IsoSimpleType(IsoSimpleType.Max5000Binary)]
-    public required IsoMax5000Binary EncryptedKey { get; init; }
+    public required Max5000Binary EncryptedKey { get; init; }
 }

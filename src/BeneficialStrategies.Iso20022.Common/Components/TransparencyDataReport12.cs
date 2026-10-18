@@ -26,7 +26,7 @@ public record TransparencyDataReport12
     [IsoXmlTag("TechRcrdId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TechnicalRecordIdentification { get; init; }
+    public Max35Text? TechnicalRecordIdentification { get; init; }
 
     /// <summary>
     /// Identifies the financial instrument using an ISIN.
@@ -35,7 +35,7 @@ public record TransparencyDataReport12
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public required IsoISINOct2015Identifier Identification { get; init; }
+    public required ISINOct2015Identifier Identification { get; init; }
 
     /// <summary>
     /// Full name of the reporting entity.
@@ -45,7 +45,7 @@ public record TransparencyDataReport12
     [IsoXmlTag("FullNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? FullName { get; init; }
+    public Max350Text? FullName { get; init; }
 
     /// <summary>
     /// Segment MIC for the trading venue where applicable, otherwise the operational MIC.
@@ -54,7 +54,7 @@ public record TransparencyDataReport12
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public IsoMICIdentifier? TradingVenue { get; init; }
+    public MICIdentifier? TradingVenue { get; init; }
 
     /// <summary>
     /// Period to which the quantitative data fields relate.
@@ -73,7 +73,7 @@ public record TransparencyDataReport12
     [DisplayName("Liquidity")]
     [IsoXmlTag("Lqdty")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? Liquidity { get; init; }
+    public TrueFalseIndicator? Liquidity { get; init; }
 
     /// <summary>
     /// Methodology that has been used to calculate the result.

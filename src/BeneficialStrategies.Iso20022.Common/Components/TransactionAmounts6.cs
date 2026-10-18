@@ -62,7 +62,7 @@ public record TransactionAmounts6
     [IsoId("_E3w732l-EfCyxsm1jzUNug")]
     [DisplayName("Cardholder Billing Effective Exchange Rate")]
     [IsoXmlTag("CrdhldrBllgFctvXchgRate")]
-    public IsoBaseOne25Rate? CardholderBillingEffectiveExchangeRate { get; init; }
+    public BaseOne25Rate? CardholderBillingEffectiveExchangeRate { get; init; }
 
     /// <summary>
     /// Amount of the transaction in Reconciliation currency.
@@ -86,7 +86,7 @@ public record TransactionAmounts6
     [IsoId("_E3w792l-EfCyxsm1jzUNug")]
     [DisplayName("Reconciliation Effective Exchange Rate")]
     [IsoXmlTag("RcncltnFctvXchgRate")]
-    public IsoBaseOne25Rate? ReconciliationEffectiveExchangeRate { get; init; }
+    public BaseOne25Rate? ReconciliationEffectiveExchangeRate { get; init; }
 
     /// <summary>
     /// Further details of some or all amounts in the transaction amount.

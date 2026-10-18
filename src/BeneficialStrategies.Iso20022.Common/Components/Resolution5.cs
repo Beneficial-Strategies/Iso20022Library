@@ -24,7 +24,7 @@ public record Resolution5
     [IsoXmlTag("IssrLabl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text IssuerLabel { get; init; }
+    public required Max35Text IssuerLabel { get; init; }
 
     /// <summary>
     /// Language, title and textual description of an agenda resolution.
@@ -42,7 +42,7 @@ public record Resolution5
     [IsoXmlTag("ListgGrpRsltnLabl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ListingGroupResolutionLabel { get; init; }
+    public Max35Text? ListingGroupResolutionLabel { get; init; }
 
     /// <summary>
     /// Type of resolution.
@@ -59,7 +59,7 @@ public record Resolution5
     [DisplayName("For Information Only")]
     [IsoXmlTag("ForInfOnly")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ForInformationOnly { get; init; }
+    public required YesNoIndicator ForInformationOnly { get; init; }
 
     /// <summary>
     /// Impact of vote results on an agenda resolution.
@@ -84,7 +84,7 @@ public record Resolution5
     [DisplayName("Submitted By Security Holder")]
     [IsoXmlTag("SubmittdBySctyHldr")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? SubmittedBySecurityHolder { get; init; }
+    public YesNoIndicator? SubmittedBySecurityHolder { get; init; }
 
     /// <summary>
     /// Indicates whether a client who has not voted in favour of the resolutions which is finally approved, has the right to withdraw from a related corporate action event.
@@ -93,7 +93,7 @@ public record Resolution5
     [DisplayName("Right To Withdraw Indicator")]
     [IsoXmlTag("RghtToWdrwInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? RightToWithdrawIndicator { get; init; }
+    public YesNoIndicator? RightToWithdrawIndicator { get; init; }
 
     /// <summary>
     /// Vote options allowed at the resolution level. When specified, it supersedes the vote options given for the meeting.
@@ -143,5 +143,5 @@ public record Resolution5
     [IsoXmlTag("URLAdr")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
     [StringLength(maximumLength: 2048, MinimumLength = 1)]
-    public IsoMax2048Text? URLAddress { get; init; }
+    public Max2048Text? URLAddress { get; init; }
 }

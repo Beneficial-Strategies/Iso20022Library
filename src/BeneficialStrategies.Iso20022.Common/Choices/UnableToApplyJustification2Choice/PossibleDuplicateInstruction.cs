@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustification2Choic
         /// </summary>
         [IsoXmlTag("PssblDplctInstr")]
         [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-        public required IsoTrueFalseIndicator Value { get; init; }
+        public required TrueFalseIndicator Value { get; init; }
     }
 }

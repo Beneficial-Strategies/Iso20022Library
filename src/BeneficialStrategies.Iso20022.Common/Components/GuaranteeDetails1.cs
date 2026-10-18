@@ -31,7 +31,7 @@ public record GuaranteeDetails1
     [DisplayName("Position")]
     [IsoXmlTag("Pos")]
     [IsoSimpleType(IsoSimpleType.positiveInteger)]
-    public IsopositiveInteger? Position { get; init; }
+    public XsdPositiveInteger? Position { get; init; }
 
     /// <summary>
     /// Textual description of guarantee details.
@@ -41,7 +41,7 @@ public record GuaranteeDetails1
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max2000Text)]
     [StringLength(maximumLength: 2000, MinimumLength = 1)]
-    public IsoMax2000Text? Description { get; init; }
+    public Max2000Text? Description { get; init; }
 
     /// <summary>
     /// Amount by time periods, maximum value applies at any given date.

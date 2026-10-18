@@ -24,7 +24,7 @@ public record AmendmentInformationDetails6
     [IsoXmlTag("OrgnlMndtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalMandateIdentification { get; init; }
+    public Max35Text? OriginalMandateIdentification { get; init; }
 
     /// <summary>
     /// Original creditor scheme identification that has been modified.
@@ -89,7 +89,7 @@ public record AmendmentInformationDetails6
     [DisplayName("Original Final Collection Date")]
     [IsoXmlTag("OrgnlFnlColltnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? OriginalFinalCollectionDate { get; init; }
+    public DateOnly? OriginalFinalCollectionDate { get; init; }
 
     /// <summary>
     /// Original frequency that has been modified.

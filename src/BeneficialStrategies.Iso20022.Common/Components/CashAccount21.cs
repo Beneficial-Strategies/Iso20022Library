@@ -23,7 +23,7 @@ public record CashAccount21
     [DisplayName("Servicer")]
     [IsoXmlTag("Svcr")]
     [IsoSimpleType(IsoSimpleType.BICIdentifier)]
-    public IsoBICIdentifier? Servicer { get; init; }
+    public BICIdentifier? Servicer { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identification for the account between the account owner and the account servicer.

@@ -46,7 +46,7 @@ public record ActionMessage12
     [IsoId("_R0SVJ5_7EfC4Q_xhaK1hdQ")]
     [DisplayName("Message Content")]
     [IsoXmlTag("MsgCntt")]
-    public IsoMax20000Text? MessageContent { get; init; }
+    public Max20000Text? MessageContent { get; init; }
 
     /// <summary>
     /// Digital signature of the message.
@@ -70,7 +70,7 @@ public record ActionMessage12
     [IsoId("_R0SVOZ_7EfC4Q_xhaK1hdQ")]
     [DisplayName("Response Required Flag")]
     [IsoXmlTag("RspnReqrdFlg")]
-    public IsoTrueFalseIndicator? ResponseRequiredFlag { get; init; }
+    public TrueFalseIndicator? ResponseRequiredFlag { get; init; }
 
     /// <summary>
     /// Number of seconds the message has to be displayed.
@@ -78,5 +78,5 @@ public record ActionMessage12
     [IsoId("_R0SVP5_7EfC4Q_xhaK1hdQ")]
     [DisplayName("Minimum Display Time")]
     [IsoXmlTag("MinDispTm")]
-    public IsoNumber? MinimumDisplayTime { get; init; }
+    public Number? MinimumDisplayTime { get; init; }
 }

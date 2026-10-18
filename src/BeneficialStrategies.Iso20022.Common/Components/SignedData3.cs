@@ -23,7 +23,7 @@ public record SignedData3
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Version { get; init; }
+    public Number? Version { get; init; }
 
     /// <summary>
     /// Identification of a digest algorithm to apply before signature.
@@ -49,7 +49,7 @@ public record SignedData3
     [IsoId("_SS0SN1W8EeOlEMHvp-ipJg")]
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
-    public SimpleValueList<IsoMax3000Binary> Certificate { get; init; } = [];
+    public SimpleValueList<Max3000Binary> Certificate { get; init; } = [];
 
     /// <summary>
     /// Entity who has signed the data.

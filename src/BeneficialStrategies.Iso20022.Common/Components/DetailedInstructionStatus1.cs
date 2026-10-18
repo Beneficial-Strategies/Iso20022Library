@@ -24,7 +24,7 @@ public record DetailedInstructionStatus1
     [IsoXmlTag("InstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text InstructionIdentification { get; init; }
+    public required Max35Text InstructionIdentification { get; init; }
 
     /// <summary>
     /// Identifies the safekeeping account.
@@ -34,7 +34,7 @@ public record DetailedInstructionStatus1
     [IsoXmlTag("AcctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountIdentification { get; init; }
+    public Max35Text? AccountIdentification { get; init; }
 
     /// <summary>
     /// Identifies the subaccount of the safekeeping account.
@@ -44,7 +44,7 @@ public record DetailedInstructionStatus1
     [IsoXmlTag("SubAcctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SubAccountIdentification { get; init; }
+    public Max35Text? SubAccountIdentification { get; init; }
 
     /// <summary>
     /// Status applying to individual instructions of a MeetingInstruction.

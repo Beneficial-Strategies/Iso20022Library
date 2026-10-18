@@ -21,47 +21,47 @@ public record VerificationValue1
     /// </summary>
     [DisplayName("Binary Value")]
     [IsoXmlTag("BinryVal")]
-    public IsoMax5000Binary? BinaryValue { get; init; }
+    public Max5000Binary? BinaryValue { get; init; }
 
     /// <summary>
     /// Date Time.
     /// </summary>
     [DisplayName("Date Time")]
     [IsoXmlTag("DtTm")]
-    public IsoISODateTime? DateTime { get; init; }
+    public ISODateTime? DateTime { get; init; }
 
     /// <summary>
     /// Hexadecimal Binary Value.
     /// </summary>
     [DisplayName("Hexadecimal Binary Value")]
     [IsoXmlTag("HexBinryVal")]
-    public IsoMax9999HexBinaryText? HexadecimalBinaryValue { get; init; }
+    public Max9999HexBinaryText? HexadecimalBinaryValue { get; init; }
 
     /// <summary>
     /// Name.
     /// </summary>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax35Text? Name { get; init; }
+    public Max35Text? Name { get; init; }
 
     /// <summary>
     /// Text Value.
     /// </summary>
     [DisplayName("Text Value")]
     [IsoXmlTag("TxtVal")]
-    public IsoMax2048Text? TextValue { get; init; }
+    public Max2048Text? TextValue { get; init; }
 
     /// <summary>
     /// Validity End Date.
     /// </summary>
     [DisplayName("Validity End Date")]
     [IsoXmlTag("VldtyEndDt")]
-    public IsoISODate? ValidityEndDate { get; init; }
+    public DateOnly? ValidityEndDate { get; init; }
 
     /// <summary>
     /// Validity End Time.
     /// </summary>
     [DisplayName("Validity End Time")]
     [IsoXmlTag("VldtyEndTm")]
-    public IsoISOTime? ValidityEndTime { get; init; }
+    public ISOTime? ValidityEndTime { get; init; }
 }

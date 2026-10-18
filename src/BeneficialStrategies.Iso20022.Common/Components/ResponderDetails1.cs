@@ -23,7 +23,7 @@ public record ResponderDetails1
     [DisplayName("Date Time Stamp")]
     [IsoXmlTag("DtTmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime DateTimeStamp { get; init; }
+    public required ISODateTime DateTimeStamp { get; init; }
 
     /// <summary>
     /// Identification of the responder.
@@ -32,5 +32,5 @@ public record ResponderDetails1
     [DisplayName("Responder")]
     [IsoXmlTag("Rspndr")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public required IsoAnyBICIdentifier Responder { get; init; }
+    public required AnyBICIdentifier Responder { get; init; }
 }

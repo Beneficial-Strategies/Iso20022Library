@@ -22,7 +22,7 @@ public record SecuritiesModificationQueryCriteria1
     [IsoId("_XB0wYWdnEemMLeaDfmIfIA")]
     [DisplayName("Modification Request Identification")]
     [IsoXmlTag("ModReqId")]
-    public SimpleValueList<IsoMax35Text> ModificationRequestIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> ModificationRequestIdentification { get; init; } = [];
 
     /// <summary>
     /// Type of underlying transaction to be modified, such as an settlement instruction or an intra-position movement.

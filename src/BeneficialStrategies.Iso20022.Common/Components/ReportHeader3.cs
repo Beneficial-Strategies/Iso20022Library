@@ -24,7 +24,7 @@ public record ReportHeader3
     [IsoXmlTag("RptId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ReportIdentification { get; init; }
+    public required Max35Text ReportIdentification { get; init; }
 
     /// <summary>
     /// Provides details on the page number of the message.

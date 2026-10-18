@@ -24,7 +24,7 @@ public record SecuritiesAccount37
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax35Text Identification { get; init; }
+    public required RestrictedFINXMax35Text Identification { get; init; }
 
     /// <summary>
     /// Type of securities account.
@@ -42,5 +42,5 @@ public record SecuritiesAccount37
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Name { get; init; }
+    public Max70Text? Name { get; init; }
 }

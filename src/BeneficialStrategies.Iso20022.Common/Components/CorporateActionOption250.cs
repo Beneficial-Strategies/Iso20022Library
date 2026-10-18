@@ -22,7 +22,7 @@ public record CorporateActionOption250
     [IsoId("7f62e751-4080-493f-8b9e-bc583404199d")]
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
-    public required IsoExact3NumericText OptionNumber { get; init; }
+    public required Exact3NumericText OptionNumber { get; init; }
 
     /// <summary>
     /// Specifies the corporate action options available to the account owner.
@@ -86,7 +86,7 @@ public record CorporateActionOption250
     [IsoId("373bd157-3609-4761-a73f-6c93e25496fa")]
     [DisplayName("Default Option Indicator")]
     [IsoXmlTag("DfltOptnInd")]
-    public required IsoYesNoIndicator DefaultOptionIndicator { get; init; }
+    public required YesNoIndicator DefaultOptionIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether certification/breakdown is required from the account owner.
@@ -94,7 +94,7 @@ public record CorporateActionOption250
     [IsoId("c470c894-90aa-4dfa-9f2e-d2d2f535710c")]
     [DisplayName("Certification Breakdown Indicator")]
     [IsoXmlTag("CertfctnBrkdwnInd")]
-    public IsoYesNoIndicator? CertificationBreakdownIndicator { get; init; }
+    public YesNoIndicator? CertificationBreakdownIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether withdrawal of instruction is allowed.
@@ -102,7 +102,7 @@ public record CorporateActionOption250
     [IsoId("56bef00b-6305-4d05-a1ec-c1a6a0ce2e54")]
     [DisplayName("Withdrawal Allowed Indicator")]
     [IsoXmlTag("WdrwlAllwdInd")]
-    public IsoYesNoIndicator? WithdrawalAllowedIndicator { get; init; }
+    public YesNoIndicator? WithdrawalAllowedIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the cash debit for the oversubscription charge is made at the time of instruction submission.
@@ -110,7 +110,7 @@ public record CorporateActionOption250
     [IsoId("400d88d5-ea87-45cd-885e-7866c1d38c8f")]
     [DisplayName("Oversubscription Charge Indicator")]
     [IsoXmlTag("OvrsbcptChrgInd")]
-    public IsoYesNoIndicator? OversubscriptionChargeIndicator { get; init; }
+    public YesNoIndicator? OversubscriptionChargeIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the cash debit for the protect charge is made at the time of instruction submission.
@@ -118,7 +118,7 @@ public record CorporateActionOption250
     [IsoId("001b0d74-ffc1-4736-b84e-16c707036cb0")]
     [DisplayName("Protect Charge Indicator")]
     [IsoXmlTag("PrtctChrgInd")]
-    public IsoYesNoIndicator? ProtectChargeIndicator { get; init; }
+    public YesNoIndicator? ProtectChargeIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the cash debit for the subscription charge is made at the time of instruction submission.
@@ -126,7 +126,7 @@ public record CorporateActionOption250
     [IsoId("a6b10a67-03f2-41d1-9157-fac4ad8b8619")]
     [DisplayName("Subscription Charge Indicator")]
     [IsoXmlTag("SbcptChrgInd")]
-    public IsoYesNoIndicator? SubscriptionChargeIndicator { get; init; }
+    public YesNoIndicator? SubscriptionChargeIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the cash debit for the step-up charge is made at the time of instruction submission.
@@ -134,7 +134,7 @@ public record CorporateActionOption250
     [IsoId("1fdbc943-3f6e-4516-94ff-1a984d13921f")]
     [DisplayName("Step Up Charge Indicator")]
     [IsoXmlTag("StepUpChrgInd")]
-    public IsoYesNoIndicator? StepUpChargeIndicator { get; init; }
+    public YesNoIndicator? StepUpChargeIndicator { get; init; }
 
     /// <summary>
     /// Identifies the financial instrument.
@@ -214,7 +214,7 @@ public record CorporateActionOption250
     [IsoId("41498c93-7783-48bc-b811-6667d5cef94e")]
     [DisplayName("Proration Fraction")]
     [IsoXmlTag("PrratnFrctn")]
-    public IsoDecimalNumber? ProrationFraction { get; init; }
+    public DecimalNumber? ProrationFraction { get; init; }
 
     /// <summary>
     /// Indicates how prorated instructions will be handled when the prorated entitlement results in less than the minimum denomination.

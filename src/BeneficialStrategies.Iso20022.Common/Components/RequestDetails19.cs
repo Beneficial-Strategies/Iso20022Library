@@ -24,7 +24,7 @@ public record RequestDetails19
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Type { get; init; }
+    public required Max35Text Type { get; init; }
 
     /// <summary>
     /// Identificates the requestor.
@@ -40,5 +40,5 @@ public record RequestDetails19
     [IsoId("_gaPZ0JwpEeahw7LV9elg3w")]
     [DisplayName("Additional Request Information")]
     [IsoXmlTag("AddtlReqInf")]
-    public SimpleValueList<IsoMax35Text> AdditionalRequestInformation { get; init; } = [];
+    public SimpleValueList<Max35Text> AdditionalRequestInformation { get; init; } = [];
 }

@@ -38,7 +38,7 @@ public record SecurityParameters18
     [IsoId("_ryErXbZ5EfCUZfsQO4rYeA")]
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
-    public SimpleValueList<IsoMax5000Binary> Certificate { get; init; } = [];
+    public SimpleValueList<Max5000Binary> Certificate { get; init; } = [];
 
     /// <summary>
     /// Random value from the ATM to avoid message replay.
@@ -46,7 +46,7 @@ public record SecurityParameters18
     [IsoId("_ryErYbZ5EfCUZfsQO4rYeA")]
     [DisplayName("ATM Challenge")]
     [IsoXmlTag("ATMChllng")]
-    public IsoMax140Binary? ATMChallenge { get; init; }
+    public Max140Binary? ATMChallenge { get; init; }
 
     /// <summary>
     /// Requested key for downloading, depending on the key hierarchy used by the host.
@@ -54,5 +54,5 @@ public record SecurityParameters18
     [IsoId("_ryErZbZ5EfCUZfsQO4rYeA")]
     [DisplayName("Requested Key")]
     [IsoXmlTag("ReqdKey")]
-    public IsoMax35Text? RequestedKey { get; init; }
+    public Max35Text? RequestedKey { get; init; }
 }

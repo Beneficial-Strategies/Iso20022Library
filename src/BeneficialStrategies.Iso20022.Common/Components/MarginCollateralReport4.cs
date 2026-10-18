@@ -41,5 +41,5 @@ public record MarginCollateralReport4
     [DisplayName("Time Stamp")]
     [IsoXmlTag("TmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? TimeStamp { get; init; }
+    public ISODateTime? TimeStamp { get; init; }
 }

@@ -34,5 +34,5 @@ public record FinancialInstitutionSector1
     [DisplayName("Clearing Threshold")]
     [IsoXmlTag("ClrThrshld")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ClearingThreshold { get; init; }
+    public TrueFalseIndicator? ClearingThreshold { get; init; }
 }

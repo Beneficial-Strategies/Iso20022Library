@@ -38,5 +38,5 @@ public record AmendmentReasonInformation1
     [IsoId("_TOt8xNp-Ed-ak6NoX_4Aeg_-1877900838")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public SimpleValueList<IsoMax105Text> AdditionalInformation { get; init; } = [];
+    public SimpleValueList<Max105Text> AdditionalInformation { get; init; } = [];
 }

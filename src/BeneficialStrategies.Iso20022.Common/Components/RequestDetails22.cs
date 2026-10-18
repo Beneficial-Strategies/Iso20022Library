@@ -55,7 +55,7 @@ public record RequestDetails22
     [DisplayName("Partial Settlement Indicator")]
     [IsoXmlTag("PrtlSttlmInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PartialSettlementIndicator { get; init; }
+    public YesNoIndicator? PartialSettlementIndicator { get; init; }
 
     /// <summary>
     /// Specifies the clearing channel to be used to process the payment instruction.

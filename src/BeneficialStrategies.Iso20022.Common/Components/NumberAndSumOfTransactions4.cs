@@ -23,7 +23,7 @@ public record NumberAndSumOfTransactions4
     [DisplayName("Number Of Entries")]
     [IsoXmlTag("NbOfNtries")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public IsoMax15NumericText? NumberOfEntries { get; init; }
+    public Max15NumericText? NumberOfEntries { get; init; }
 
     /// <summary>
     /// Total of all individual entries included in the report.
@@ -32,7 +32,7 @@ public record NumberAndSumOfTransactions4
     [DisplayName("Sum")]
     [IsoXmlTag("Sum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? Sum { get; init; }
+    public DecimalNumber? Sum { get; init; }
 
     /// <summary>
     /// Resulting debit or credit amount of the netted amounts for all debit and credit entries.

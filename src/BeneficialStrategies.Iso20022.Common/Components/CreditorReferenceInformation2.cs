@@ -32,5 +32,5 @@ public record CreditorReferenceInformation2
     [IsoXmlTag("Ref")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Reference { get; init; }
+    public Max35Text? Reference { get; init; }
 }

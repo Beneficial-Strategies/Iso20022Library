@@ -23,7 +23,7 @@ public record LoanContractTranche1
     [DisplayName("Tranche Number")]
     [IsoXmlTag("TrchNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber TrancheNumber { get; init; }
+    public required Number TrancheNumber { get; init; }
 
     /// <summary>
     /// Expected tranche payment date.
@@ -32,7 +32,7 @@ public record LoanContractTranche1
     [DisplayName("Expected Date")]
     [IsoXmlTag("XpctdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ExpectedDate { get; init; }
+    public required DateOnly ExpectedDate { get; init; }
 
     /// <summary>
     /// Amount of the tranche as defined in the loan contract.
@@ -49,7 +49,7 @@ public record LoanContractTranche1
     [DisplayName("Due Date")]
     [IsoXmlTag("DueDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DueDate { get; init; }
+    public DateOnly? DueDate { get; init; }
 
     /// <summary>
     /// Loan tranche duration in a coded form.
@@ -58,7 +58,7 @@ public record LoanContractTranche1
     [DisplayName("Duration Code")]
     [IsoXmlTag("DrtnCd")]
     [IsoSimpleType(IsoSimpleType.Exact1NumericText)]
-    public IsoExact1NumericText? DurationCode { get; init; }
+    public Exact1NumericText? DurationCode { get; init; }
 
     /// <summary>
     /// Indicates whether this tranche is the last tranche of the full report.
@@ -67,5 +67,5 @@ public record LoanContractTranche1
     [DisplayName("Last Tranche Indicator")]
     [IsoXmlTag("LastTrchInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? LastTrancheIndicator { get; init; }
+    public YesNoIndicator? LastTrancheIndicator { get; init; }
 }

@@ -56,5 +56,5 @@ public record PointOfInteractionCapabilities1
     [DisplayName("Print Line Width")]
     [IsoXmlTag("PrtLineWidth")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public IsoMax3NumericText? PrintLineWidth { get; init; }
+    public Max3NumericText? PrintLineWidth { get; init; }
 }

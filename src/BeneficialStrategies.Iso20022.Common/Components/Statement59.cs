@@ -40,7 +40,7 @@ public record Statement59
     [IsoXmlTag("QryRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? QueryReference { get; init; }
+    public Max35Text? QueryReference { get; init; }
 
     /// <summary>
     /// Reference common to all pages of the statement.
@@ -50,7 +50,7 @@ public record Statement59
     [IsoXmlTag("StmtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text StatementIdentification { get; init; }
+    public required Max35Text StatementIdentification { get; init; }
 
     /// <summary>
     /// Date and time when the statement was created.
@@ -99,5 +99,5 @@ public record Statement59
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ActivityIndicator { get; init; }
+    public required YesNoIndicator ActivityIndicator { get; init; }
 }

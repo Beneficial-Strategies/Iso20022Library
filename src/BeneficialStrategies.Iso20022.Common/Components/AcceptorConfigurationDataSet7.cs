@@ -30,7 +30,7 @@ public record AcceptorConfigurationDataSet7
     [IsoId("_wJPHm7ZzEfCUZfsQO4rYeA")]
     [DisplayName("Sequence Counter")]
     [IsoXmlTag("SeqCntr")]
-    public IsoMax9NumericText? SequenceCounter { get; init; }
+    public Max9NumericText? SequenceCounter { get; init; }
 
     /// <summary>
     /// Indication of the last sequence in case of split messages.
@@ -38,7 +38,7 @@ public record AcceptorConfigurationDataSet7
     [IsoId("_wJPHobZzEfCUZfsQO4rYeA")]
     [DisplayName("Last Sequence")]
     [IsoXmlTag("LastSeq")]
-    public IsoTrueFalseIndicator? LastSequence { get; init; }
+    public TrueFalseIndicator? LastSequence { get; init; }
 
     /// <summary>
     /// Identification of the point of interactions involved by the configuration data set.

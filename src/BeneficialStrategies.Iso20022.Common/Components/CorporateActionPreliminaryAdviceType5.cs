@@ -28,7 +28,7 @@ public record CorporateActionPreliminaryAdviceType5
     /// </summary>
     [DisplayName("Movement Preliminary Advice Identification")]
     [IsoXmlTag("MvmntPrlimryAdvcId")]
-    public IsoRestrictedFINXMax16Text? MovementPreliminaryAdviceIdentification { get; init; }
+    public RestrictedFINXMax16Text? MovementPreliminaryAdviceIdentification { get; init; }
 
     /// <summary>
     /// Type.

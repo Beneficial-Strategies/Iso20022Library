@@ -85,7 +85,7 @@ public record MeetingEntitlementNotificationV10 : IOuterRecord
     /// </summary>
     [DisplayName("Previous Entitlement Notification Identification")]
     [IsoXmlTag("PrvsEntitlmntNtfctnId")]
-    public IsoMax35Text? PreviousEntitlementNotificationIdentification { get; init; }
+    public Max35Text? PreviousEntitlementNotificationIdentification { get; init; }
 
     /// <summary>
     /// Proxy.

@@ -39,5 +39,5 @@ public record PositionSetDimensions12
     [DisplayName("Outliers Included")]
     [IsoXmlTag("OtlrsIncl")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? OutliersIncluded { get; init; }
+    public TrueFalseIndicator? OutliersIncluded { get; init; }
 }

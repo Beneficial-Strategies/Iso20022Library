@@ -32,7 +32,7 @@ public record RemittanceLocationData1
     [IsoXmlTag("ElctrncAdr")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
     [StringLength(maximumLength: 2048, MinimumLength = 1)]
-    public IsoMax2048Text? ElectronicAddress { get; init; }
+    public Max2048Text? ElectronicAddress { get; init; }
 
     /// <summary>
     /// Postal address to which an agent is to send the remittance information.

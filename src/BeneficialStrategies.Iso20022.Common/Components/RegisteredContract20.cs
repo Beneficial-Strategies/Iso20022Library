@@ -21,7 +21,7 @@ public record RegisteredContract20
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public IsoMax1025Text? AdditionalInformation { get; init; }
+    public Max1025Text? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Amendment.
@@ -56,14 +56,14 @@ public record RegisteredContract20
     /// </summary>
     [DisplayName("Estimated Date Indicator")]
     [IsoXmlTag("EstmtdDtInd")]
-    public required IsoTrueFalseIndicator EstimatedDateIndicator { get; init; }
+    public required TrueFalseIndicator EstimatedDateIndicator { get; init; }
 
     /// <summary>
     /// Inter Company Loan.
     /// </summary>
     [DisplayName("Inter Company Loan")]
     [IsoXmlTag("IntrCpnyLn")]
-    public required IsoTrueFalseIndicator InterCompanyLoan { get; init; }
+    public required TrueFalseIndicator InterCompanyLoan { get; init; }
 
     /// <summary>
     /// Issuer Financial Institution.
@@ -84,7 +84,7 @@ public record RegisteredContract20
     /// </summary>
     [DisplayName("Original Contract Registration Request")]
     [IsoXmlTag("OrgnlCtrctRegnReq")]
-    public IsoMax35Text? OriginalContractRegistrationRequest { get; init; }
+    public Max35Text? OriginalContractRegistrationRequest { get; init; }
 
     /// <summary>
     /// Payment Schedule Type.

@@ -32,7 +32,7 @@ public record PartyIdentification214
     [IsoXmlTag("RcptNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text RecipientName { get; init; }
+    public required Max350Text RecipientName { get; init; }
 
     /// <summary>
     /// Address of the party to which the disclosure response must be sent.

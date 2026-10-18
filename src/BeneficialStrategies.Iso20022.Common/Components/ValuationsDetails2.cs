@@ -33,5 +33,5 @@ public record ValuationsDetails2
     [DisplayName("Haircut")]
     [IsoXmlTag("Hrcut")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public required IsoBaseOneRate Haircut { get; init; }
+    public required BaseOneRate Haircut { get; init; }
 }

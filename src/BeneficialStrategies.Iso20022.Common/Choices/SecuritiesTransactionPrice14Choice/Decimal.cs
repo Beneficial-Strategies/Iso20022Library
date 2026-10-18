@@ -20,6 +20,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice14Choi
         /// </summary>
         [IsoXmlTag("Dcml")]
         [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-        public required IsoBaseOneRate Value { get; init; }
+        public required BaseOneRate Value { get; init; }
     }
 }

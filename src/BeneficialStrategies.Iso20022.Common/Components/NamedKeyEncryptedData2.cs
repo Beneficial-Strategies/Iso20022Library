@@ -23,7 +23,7 @@ public record NamedKeyEncryptedData2
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Version { get; init; }
+    public Number? Version { get; init; }
 
     /// <summary>
     /// Name of the key encryption key (KEK).
@@ -33,7 +33,7 @@ public record NamedKeyEncryptedData2
     [IsoXmlTag("KeyNm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? KeyName { get; init; }
+    public Max140Text? KeyName { get; init; }
 
     /// <summary>
     /// Encrypted data with an encryption key.

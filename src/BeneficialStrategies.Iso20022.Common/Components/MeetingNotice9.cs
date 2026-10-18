@@ -21,7 +21,7 @@ public record MeetingNotice9
     /// </summary>
     [DisplayName("Additional Documentation URL Address")]
     [IsoXmlTag("AddtlDcmnttnURLAdr")]
-    public ValueList<IsoMax2048Text> AdditionalDocumentationURLAddress { get; init; } = [];
+    public ValueList<Max2048Text> AdditionalDocumentationURLAddress { get; init; } = [];
 
     /// <summary>
     /// Additional Procedure Details.
@@ -84,28 +84,28 @@ public record MeetingNotice9
     /// </summary>
     [DisplayName("Event Processing Web Site Address")]
     [IsoXmlTag("EvtPrcgWebSiteAdr")]
-    public IsoMax2048Text? EventProcessingWebSiteAddress { get; init; }
+    public Max2048Text? EventProcessingWebSiteAddress { get; init; }
 
     /// <summary>
     /// Issuer Meeting Identification.
     /// </summary>
     [DisplayName("Issuer Meeting Identification")]
     [IsoXmlTag("IssrMtgId")]
-    public IsoMax35Text? IssuerMeetingIdentification { get; init; }
+    public Max35Text? IssuerMeetingIdentification { get; init; }
 
     /// <summary>
     /// Meeting Identification.
     /// </summary>
     [DisplayName("Meeting Identification")]
     [IsoXmlTag("MtgId")]
-    public required IsoMax35Text MeetingIdentification { get; init; }
+    public required Max35Text MeetingIdentification { get; init; }
 
     /// <summary>
     /// One Man One Vote Indicator.
     /// </summary>
     [DisplayName("One Man One Vote Indicator")]
     [IsoXmlTag("OneManOneVoteInd")]
-    public IsoYesNoIndicator? OneManOneVoteIndicator { get; init; }
+    public YesNoIndicator? OneManOneVoteIndicator { get; init; }
 
     /// <summary>
     /// Participation.
@@ -168,7 +168,7 @@ public record MeetingNotice9
     /// </summary>
     [DisplayName("Total Number Of Voting Rights")]
     [IsoXmlTag("TtlNbOfVtngRghts")]
-    public IsoNumber? TotalNumberOfVotingRights { get; init; }
+    public Number? TotalNumberOfVotingRights { get; init; }
 
     /// <summary>
     /// Type.

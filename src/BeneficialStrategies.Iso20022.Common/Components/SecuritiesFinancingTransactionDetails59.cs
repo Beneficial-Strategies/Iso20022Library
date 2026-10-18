@@ -22,7 +22,7 @@ public record SecuritiesFinancingTransactionDetails59
     [IsoId("_DGqtr5aFEfC2_67yGLymgA")]
     [DisplayName("Securities Financing Trade Identification")]
     [IsoXmlTag("SctiesFincgTradId")]
-    public IsoMax35Text? SecuritiesFinancingTradeIdentification { get; init; }
+    public Max35Text? SecuritiesFinancingTradeIdentification { get; init; }
 
     /// <summary>
     /// Unique Transaction Identifier (UTI) as agreed with the other counterparty.
@@ -30,7 +30,7 @@ public record SecuritiesFinancingTransactionDetails59
     [IsoId("_DGqtt5aFEfC2_67yGLymgA")]
     [DisplayName("Securities Financing Unique Transaction Identifier")]
     [IsoXmlTag("SctiesFincgUnqTxIdr")]
-    public IsoUTIIdentifier? SecuritiesFinancingUniqueTransactionIdentifier { get; init; }
+    public UTIIdentifier? SecuritiesFinancingUniqueTransactionIdentifier { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the second leg of the transaction as known by the account owner (or the instructing party acting on its behalf).
@@ -38,7 +38,7 @@ public record SecuritiesFinancingTransactionDetails59
     [IsoId("_DGqtuZaFEfC2_67yGLymgA")]
     [DisplayName("Closing Leg Identification")]
     [IsoXmlTag("ClsgLegId")]
-    public IsoMax35Text? ClosingLegIdentification { get; init; }
+    public Max35Text? ClosingLegIdentification { get; init; }
 
     /// <summary>
     /// Collective reference identifying a set of messages.
@@ -46,7 +46,7 @@ public record SecuritiesFinancingTransactionDetails59
     [IsoId("_DGqtwZaFEfC2_67yGLymgA")]
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
-    public IsoMax35Text? PoolIdentification { get; init; }
+    public Max35Text? PoolIdentification { get; init; }
 
     /// <summary>
     /// Identification assigned by the account servicer to unambiguously identify a corporate action event.
@@ -54,7 +54,7 @@ public record SecuritiesFinancingTransactionDetails59
     [IsoId("_DGqtyZaFEfC2_67yGLymgA")]
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
-    public IsoMax35Text? CorporateActionEventIdentification { get; init; }
+    public Max35Text? CorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Unique identification identifying the triparty collateral management transaction from the triparty-agent's/service-provider's point of view.
@@ -62,7 +62,7 @@ public record SecuritiesFinancingTransactionDetails59
     [IsoId("_DGqt0ZaFEfC2_67yGLymgA")]
     [DisplayName("Triparty Agent Service Provider Collateral Transaction Identification")]
     [IsoXmlTag("TrptyAgtSvcPrvdrCollTxId")]
-    public IsoMax35Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; }
+    public Max35Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique reference identifying the triparty collateral management transaction from the client's point of view.
@@ -70,7 +70,7 @@ public record SecuritiesFinancingTransactionDetails59
     [IsoId("_DGqt2ZaFEfC2_67yGLymgA")]
     [DisplayName("Client Triparty Collateral Transaction Identification")]
     [IsoXmlTag("ClntTrptyCollTxId")]
-    public IsoMax35Text? ClientTripartyCollateralTransactionIdentification { get; init; }
+    public Max35Text? ClientTripartyCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Party that legally owns the account.
@@ -326,5 +326,5 @@ public record SecuritiesFinancingTransactionDetails59
     [IsoId("_DGrU95aFEfC2_67yGLymgA")]
     [DisplayName("Settlement Instruction Processing Additional Details")]
     [IsoXmlTag("SttlmInstrPrcgAddtlDtls")]
-    public IsoMax350Text? SettlementInstructionProcessingAdditionalDetails { get; init; }
+    public Max350Text? SettlementInstructionProcessingAdditionalDetails { get; init; }
 }

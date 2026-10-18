@@ -22,7 +22,7 @@ public record PaymentInstruction48
     [IsoId("7e046422-12a7-43b1-8d82-2d5aeccb7cc9")]
     [DisplayName("Payment Information Identification")]
     [IsoXmlTag("PmtInfId")]
-    public IsoMax35Text? PaymentInformationIdentification { get; init; }
+    public Max35Text? PaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Specifies the means of payment that will be used to move the amount of money.

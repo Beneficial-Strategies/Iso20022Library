@@ -40,5 +40,5 @@ public record InvestmentAccount20
     [IsoXmlTag("XtndedTp")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedType { get; init; }
+    public Extended350Code? ExtendedType { get; init; }
 }

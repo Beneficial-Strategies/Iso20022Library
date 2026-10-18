@@ -23,7 +23,7 @@ public record GracePeriod2
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public IsoMax3NumericText? Time { get; init; }
+    public Max3NumericText? Time { get; init; }
 
     /// <summary>
     /// Grace period unit type.
@@ -41,7 +41,7 @@ public record GracePeriod2
     [IsoXmlTag("OthrUnitTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherUnitType { get; init; }
+    public Max35Text? OtherUnitType { get; init; }
 
     /// <summary>
     /// Indicates a customer selected grace period
@@ -50,5 +50,5 @@ public record GracePeriod2
     [DisplayName("Customer Selected Grace Period")]
     [IsoXmlTag("CstmrSelctdGracePrd")]
     [IsoSimpleType(IsoSimpleType.boolean)]
-    public Isoboolean? CustomerSelectedGracePeriod { get; init; }
+    public XsdBoolean? CustomerSelectedGracePeriod { get; init; }
 }

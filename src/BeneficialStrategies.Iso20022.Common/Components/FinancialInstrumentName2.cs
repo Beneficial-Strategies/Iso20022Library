@@ -24,7 +24,7 @@ public record FinancialInstrumentName2
     [IsoXmlTag("ISOShrtNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ISOShortName { get; init; }
+    public Max35Text? ISOShortName { get; init; }
 
     /// <summary>
     /// Name of the security.
@@ -34,7 +34,7 @@ public record FinancialInstrumentName2
     [IsoXmlTag("ISOLngNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? ISOLongName { get; init; }
+    public Max350Text? ISOLongName { get; init; }
 
     /// <summary>
     /// Defines the date since when the name of the security is valid.

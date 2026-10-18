@@ -22,7 +22,7 @@ public record RemittanceLocation8
     /// </summary>
     [DisplayName("Remittance Identification")]
     [IsoXmlTag("RmtId")]
-    public IsoMax35Text? RemittanceIdentification { get; init; }
+    public Max35Text? RemittanceIdentification { get; init; }
 
     /// <summary>
     /// Set of elements used to provide information on the location and/or delivery of the remittance information.

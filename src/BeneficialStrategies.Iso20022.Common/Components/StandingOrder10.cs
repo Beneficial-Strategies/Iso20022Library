@@ -77,5 +77,5 @@ public record StandingOrder10
     /// </summary>
     [DisplayName("Zero Sweep Indicator")]
     [IsoXmlTag("ZeroSweepInd")]
-    public IsoTrueFalseIndicator? ZeroSweepIndicator { get; init; }
+    public TrueFalseIndicator? ZeroSweepIndicator { get; init; }
 }

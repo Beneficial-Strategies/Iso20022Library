@@ -26,7 +26,7 @@ public record TransparencyDataReport13
     [IsoXmlTag("TechRcrdId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TechnicalRecordIdentification { get; init; }
+    public Max35Text? TechnicalRecordIdentification { get; init; }
 
     /// <summary>
     /// Identifies the financial instrument using an ISIN.
@@ -35,7 +35,7 @@ public record TransparencyDataReport13
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public required IsoISINOct2015Identifier Identification { get; init; }
+    public required ISINOct2015Identifier Identification { get; init; }
 
     /// <summary>
     /// Date to which the quantitative data fields below relate.
@@ -44,7 +44,7 @@ public record TransparencyDataReport13
     [DisplayName("Reporting Date")]
     [IsoXmlTag("RptgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ReportingDate { get; init; }
+    public DateOnly? ReportingDate { get; init; }
 
     /// <summary>
     /// Segment MIC for the trading venue where applicable, otherwise the operational MIC.
@@ -53,7 +53,7 @@ public record TransparencyDataReport13
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public IsoMICIdentifier? TradingVenue { get; init; }
+    public MICIdentifier? TradingVenue { get; init; }
 
     /// <summary>
     /// Indicates whether the instrument was suspended for trading on that Trading Venue for the whole day on the given reporting day.
@@ -62,7 +62,7 @@ public record TransparencyDataReport13
     [DisplayName("Suspension")]
     [IsoXmlTag("Sspnsn")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator Suspension { get; init; }
+    public required TrueFalseIndicator Suspension { get; init; }
 
     /// <summary>
     /// Total number of transactions executed on the reporting day.

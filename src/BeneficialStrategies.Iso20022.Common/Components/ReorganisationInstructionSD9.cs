@@ -24,7 +24,7 @@ public record ReorganisationInstructionSD9
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Unique number assigned by the depository. Transaction identification will be either the DTC instruction reference number for reorganisation instructions (VOI) or the DAM reference number for custody / reorganisation deposits.
@@ -34,7 +34,7 @@ public record ReorganisationInstructionSD9
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.Max15Text)]
     [StringLength(maximumLength: 15, MinimumLength = 1)]
-    public IsoMax15Text? TransactionIdentification { get; init; }
+    public Max15Text? TransactionIdentification { get; init; }
 
     /// <summary>
     /// Enable input of multiple voluntary instructions for rights or voluntary puts events via a single instruction message through using Transaction Sequence Number.
@@ -87,7 +87,7 @@ public record ReorganisationInstructionSD9
     [DisplayName("Customer Reference Identification")]
     [IsoXmlTag("CstmrRefId")]
     [IsoSimpleType(IsoSimpleType.Max30Text)]
-    public IsoMax30Text? CustomerReferenceIdentification { get; init; }
+    public Max30Text? CustomerReferenceIdentification { get; init; }
 
     /// <summary>
     /// Acknowledgement information relative to corporate action reorganisation instructions.
@@ -129,7 +129,7 @@ public record ReorganisationInstructionSD9
     [IsoXmlTag("UsrRefNb")]
     [IsoSimpleType(IsoSimpleType.Max6Text)]
     [StringLength(maximumLength: 6, MinimumLength = 1)]
-    public IsoMax6Text? UserReferenceNumber { get; init; }
+    public Max6Text? UserReferenceNumber { get; init; }
 
     /// <summary>
     /// Beneficial owner information related to CD early redemption instructions.
@@ -146,7 +146,7 @@ public record ReorganisationInstructionSD9
     [DisplayName("Transaction Record Number")]
     [IsoXmlTag("TxRcrdNb")]
     [IsoSimpleType(IsoSimpleType.Max10NumericText)]
-    public IsoMax10NumericText? TransactionRecordNumber { get; init; }
+    public Max10NumericText? TransactionRecordNumber { get; init; }
 
     /// <summary>
     /// Bid price of the instruction.

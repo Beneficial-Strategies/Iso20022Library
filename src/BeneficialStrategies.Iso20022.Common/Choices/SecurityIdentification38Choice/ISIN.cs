@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification38Choice
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("ISIN")]
-        public required IsoISINOct2015Identifier Value { get; init; }
+        public required ISINOct2015Identifier Value { get; init; }
     }
 }

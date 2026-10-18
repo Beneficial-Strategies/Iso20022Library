@@ -22,7 +22,7 @@ public record PenaltyReport1
     [IsoId("_9BiXkdfMEeiJ1vId85LeLw")]
     [DisplayName("Report Identification")]
     [IsoXmlTag("RptId")]
-    public required IsoMax35Text ReportIdentification { get; init; }
+    public required Max35Text ReportIdentification { get; init; }
 
     /// <summary>
     /// Date and time of the report.
@@ -70,5 +70,5 @@ public record PenaltyReport1
     [IsoId("_9BiXl_fMEeiJ1vId85LeLw")]
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
-    public required IsoYesNoIndicator ActivityIndicator { get; init; }
+    public required YesNoIndicator ActivityIndicator { get; init; }
 }

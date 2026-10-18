@@ -24,7 +24,7 @@ public record OrganisationType2
     [DisplayName("Any BIC")]
     [IsoXmlTag("AnyBIC")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? AnyBIC { get; init; }
+    public RequestedIndicator? AnyBIC { get; init; }
 
     /// <summary>
     /// Legal entity identification as an alternate identification for a party is requested.
@@ -34,7 +34,7 @@ public record OrganisationType2
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? LEI { get; init; }
+    public RequestedIndicator? LEI { get; init; }
 
     /// <summary>
     /// Address for electronic mail (e-mail) is requested.
@@ -44,7 +44,7 @@ public record OrganisationType2
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? EmailAddress { get; init; }
+    public RequestedIndicator? EmailAddress { get; init; }
 
     /// <summary>
     /// Unique identification of an organisation, as assigned by an institution, using an identification scheme is requested.

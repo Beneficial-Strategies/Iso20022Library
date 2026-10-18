@@ -23,7 +23,7 @@ public record UnderlyingAttributes4
     [DisplayName("Allocation Percentage")]
     [IsoXmlTag("AllcnPctg")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? AllocationPercentage { get; init; }
+    public PercentageRate? AllocationPercentage { get; init; }
 
     /// <summary>
     /// Unit amount of the underlying security.
@@ -57,7 +57,7 @@ public record UnderlyingAttributes4
     [IsoXmlTag("CshTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CashType { get; init; }
+    public Max35Text? CashType { get; init; }
 
     /// <summary>
     /// In a financing deal, clean price (percent-of-par or per unit) of the underlying security or basket.
@@ -122,7 +122,7 @@ public record UnderlyingAttributes4
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? ExchangeRate { get; init; }
+    public PercentageRate? ExchangeRate { get; init; }
 
     /// <summary>
     /// Maximum notional value for a financial instrument that is capped.

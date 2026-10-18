@@ -21,21 +21,21 @@ public record PartyAuditTrail2
     /// </summary>
     [DisplayName("Approving User")]
     [IsoXmlTag("ApprvgUsr")]
-    public IsoMax256Text? ApprovingUser { get; init; }
+    public Max256Text? ApprovingUser { get; init; }
 
     /// <summary>
     /// Instructing User.
     /// </summary>
     [DisplayName("Instructing User")]
     [IsoXmlTag("InstgUsr")]
-    public required IsoMax256Text InstructingUser { get; init; }
+    public required Max256Text InstructingUser { get; init; }
 
     /// <summary>
     /// Operation Time Stamp.
     /// </summary>
     [DisplayName("Operation Time Stamp")]
     [IsoXmlTag("OprTmStmp")]
-    public required IsoISODateTime OperationTimeStamp { get; init; }
+    public required ISODateTime OperationTimeStamp { get; init; }
 
     /// <summary>
     /// Record.

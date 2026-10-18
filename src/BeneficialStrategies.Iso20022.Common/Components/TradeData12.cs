@@ -24,7 +24,7 @@ public record TradeData12
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Party that assigned the status to the foreign exchange trade.
@@ -34,7 +34,7 @@ public record TradeData12
     [IsoXmlTag("StsOrgtr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? StatusOriginator { get; init; }
+    public Max35Text? StatusOriginator { get; init; }
 
     /// <summary>
     /// Specifies the new status of the trade.
@@ -59,7 +59,7 @@ public record TradeData12
     [DisplayName("Current Status Date Time")]
     [IsoXmlTag("CurStsDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CurrentStatusDateTime { get; init; }
+    public required ISODateTime CurrentStatusDateTime { get; init; }
 
     /// <summary>
     /// Specifies the previous status of a trade.
@@ -85,7 +85,7 @@ public record TradeData12
     [IsoXmlTag("PdctTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProductType { get; init; }
+    public Max35Text? ProductType { get; init; }
 
     /// <summary>
     /// To indicate the requested CLS settlement session that the related trade is part of.
@@ -94,7 +94,7 @@ public record TradeData12
     [DisplayName("Settlement Session Identifier")]
     [IsoXmlTag("SttlmSsnIdr")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    public IsoExact4AlphaNumericText? SettlementSessionIdentifier { get; init; }
+    public Exact4AlphaNumericText? SettlementSessionIdentifier { get; init; }
 
     /// <summary>
     /// The identification that links the quoted trades with a submitted Report issued by a central system.
@@ -104,5 +104,5 @@ public record TradeData12
     [IsoXmlTag("LkdRptId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LinkedReportIdentification { get; init; }
+    public Max35Text? LinkedReportIdentification { get; init; }
 }

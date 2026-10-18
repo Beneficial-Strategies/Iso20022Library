@@ -39,7 +39,7 @@ public record DetailedAmount18
     [DisplayName("Charge Account To")]
     [IsoXmlTag("ChrgAcctTo")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ChargeAccountTo { get; init; }
+    public TrueFalseIndicator? ChargeAccountTo { get; init; }
 
     /// <summary>
     /// Short description of the amount to display or print.
@@ -49,5 +49,5 @@ public record DetailedAmount18
     [IsoXmlTag("Labl")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Label { get; init; }
+    public Max70Text? Label { get; init; }
 }

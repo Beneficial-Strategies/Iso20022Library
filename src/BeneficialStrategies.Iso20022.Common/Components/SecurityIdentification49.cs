@@ -28,14 +28,14 @@ public record SecurityIdentification49
     /// </summary>
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
-    public IsoISINOct2015Identifier? ISIN { get; init; }
+    public ISINOct2015Identifier? ISIN { get; init; }
 
     /// <summary>
     /// Product Description.
     /// </summary>
     [DisplayName("Product Description")]
     [IsoXmlTag("PdctDesc")]
-    public IsoMax1000Text? ProductDescription { get; init; }
+    public Max1000Text? ProductDescription { get; init; }
 
     /// <summary>
     /// Unique Product Identifier.

@@ -32,7 +32,7 @@ public record ServiceTaxDesignation1
     [IsoXmlTag("Rgn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Region { get; init; }
+    public Max35Text? Region { get; init; }
 
     /// <summary>
     /// Provides free form explanations of the various tax codes used within the statement.

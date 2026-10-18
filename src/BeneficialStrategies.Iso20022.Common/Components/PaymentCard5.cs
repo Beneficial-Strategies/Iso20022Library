@@ -40,7 +40,7 @@ public record PaymentCard5
     [IsoXmlTag("CardCtryCd")]
     [IsoSimpleType(IsoSimpleType.Max3Text)]
     [StringLength(maximumLength: 3, MinimumLength = 1)]
-    public IsoMax3Text? CardCountryCode { get; init; }
+    public Max3Text? CardCountryCode { get; init; }
 
     /// <summary>
     /// Defines a category of cards related to the acceptance processing rules defined by the acquirer.
@@ -49,7 +49,7 @@ public record PaymentCard5
     [DisplayName("Card Product Profile")]
     [IsoXmlTag("CardPdctPrfl")]
     [IsoSimpleType(IsoSimpleType.Exact4NumericText)]
-    public IsoExact4NumericText? CardProductProfile { get; init; }
+    public Exact4NumericText? CardProductProfile { get; init; }
 
     /// <summary>
     /// Brand name of the card.
@@ -59,7 +59,7 @@ public record PaymentCard5
     [IsoXmlTag("CardBrnd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CardBrand { get; init; }
+    public Max35Text? CardBrand { get; init; }
 
     /// <summary>
     /// Additional card issuer specific data.
@@ -69,5 +69,5 @@ public record PaymentCard5
     [IsoXmlTag("AddtlCardData")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AdditionalCardData { get; init; }
+    public Max70Text? AdditionalCardData { get; init; }
 }

@@ -21,7 +21,7 @@ public record CurrencyControlPackageStatus3
     /// </summary>
     [DisplayName("Package Identification")]
     [IsoXmlTag("PackgId")]
-    public required IsoMax35Text PackageIdentification { get; init; }
+    public required Max35Text PackageIdentification { get; init; }
 
     /// <summary>
     /// Record Status.
@@ -42,7 +42,7 @@ public record CurrencyControlPackageStatus3
     /// </summary>
     [DisplayName("Status Date Time")]
     [IsoXmlTag("StsDtTm")]
-    public IsoISODateTime? StatusDateTime { get; init; }
+    public ISODateTime? StatusDateTime { get; init; }
 
     /// <summary>
     /// Status Reason.

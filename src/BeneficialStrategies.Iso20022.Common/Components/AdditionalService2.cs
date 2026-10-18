@@ -32,7 +32,7 @@ public record AdditionalService2
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Result from performing the identified service.
@@ -50,7 +50,7 @@ public record AdditionalService2
     [IsoXmlTag("OthrRslt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherResult { get; init; }
+    public Max35Text? OtherResult { get; init; }
 
     /// <summary>
     /// Contains additional information for the execution or results of the service.

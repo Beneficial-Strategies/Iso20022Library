@@ -31,7 +31,7 @@ public record MissingValuationsData2
     [DisplayName("Number Of Outstanding Derivatives")]
     [IsoXmlTag("NbOfOutsdngDerivs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber NumberOfOutstandingDerivatives { get; init; }
+    public required Number NumberOfOutstandingDerivatives { get; init; }
 
     /// <summary>
     /// Number of outstanding derivatives for which valuation amount was never reported.
@@ -40,7 +40,7 @@ public record MissingValuationsData2
     [DisplayName("Number Of Outstanding Derivatives With No Valuation")]
     [IsoXmlTag("NbOfOutsdngDerivsWthNoValtn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber NumberOfOutstandingDerivativesWithNoValuation { get; init; }
+    public required Number NumberOfOutstandingDerivativesWithNoValuation { get; init; }
 
     /// <summary>
     /// Number of outstanding derivatives with outdated valuation.
@@ -49,7 +49,7 @@ public record MissingValuationsData2
     [DisplayName("Number Of Outstanding Derivatives With Outdated Valuation")]
     [IsoXmlTag("NbOfOutsdngDerivsWthOutdtdValtn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber NumberOfOutstandingDerivativesWithOutdatedValuation { get; init; }
+    public required Number NumberOfOutstandingDerivativesWithOutdatedValuation { get; init; }
 
     /// <summary>
     /// Details of missing valuations per transaction.

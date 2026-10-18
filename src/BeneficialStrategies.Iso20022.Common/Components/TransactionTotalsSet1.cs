@@ -32,7 +32,7 @@ public record TransactionTotalsSet1
     [IsoXmlTag("AcqrrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AcquirerIdentification { get; init; }
+    public Max35Text? AcquirerIdentification { get; init; }
 
     /// <summary>
     /// Identifier of a host reconciliation period: acquirer for a payment or server for loyalty.
@@ -42,7 +42,7 @@ public record TransactionTotalsSet1
     [IsoXmlTag("RcncltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReconciliationIdentification { get; init; }
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Identifier of a reconciliation period on the sale system.
@@ -52,7 +52,7 @@ public record TransactionTotalsSet1
     [IsoXmlTag("SaleRcncltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SaleReconciliationIdentification { get; init; }
+    public Max35Text? SaleReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Brand of payment card or loyalty system.
@@ -62,7 +62,7 @@ public record TransactionTotalsSet1
     [IsoXmlTag("Brnd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Brand { get; init; }
+    public Max35Text? Brand { get; init; }
 
     /// <summary>
     /// Identifier of the POI system performing a reconciliation.
@@ -72,7 +72,7 @@ public record TransactionTotalsSet1
     [IsoXmlTag("POIId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? POIIdentification { get; init; }
+    public Max35Text? POIIdentification { get; init; }
 
     /// <summary>
     /// Identification of the sale terminal (electronic cash register or point of sale terminal) or the sale system.
@@ -82,7 +82,7 @@ public record TransactionTotalsSet1
     [IsoXmlTag("SaleId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SaleIdentification { get; init; }
+    public Max35Text? SaleIdentification { get; init; }
 
     /// <summary>
     /// Identification of the cashier who carried out the transactions.
@@ -92,7 +92,7 @@ public record TransactionTotalsSet1
     [IsoXmlTag("CshrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CashierIdentification { get; init; }
+    public Max35Text? CashierIdentification { get; init; }
 
     /// <summary>
     /// Identifies the shift of the cashier.
@@ -101,7 +101,7 @@ public record TransactionTotalsSet1
     [DisplayName("Shift Number")]
     [IsoXmlTag("ShftNb")]
     [IsoSimpleType(IsoSimpleType.Max2NumericText)]
-    public IsoMax2NumericText? ShiftNumber { get; init; }
+    public Max2NumericText? ShiftNumber { get; init; }
 
     /// <summary>
     /// Merchant using the payment services of a payment facilitator, acting as a card acceptor.

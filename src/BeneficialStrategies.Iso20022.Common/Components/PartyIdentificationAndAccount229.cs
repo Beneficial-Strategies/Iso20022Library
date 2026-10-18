@@ -21,7 +21,7 @@ public record PartyIdentificationAndAccount229
     /// </summary>
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public IsoMax35Text? AccountIdentification { get; init; }
+    public Max35Text? AccountIdentification { get; init; }
 
     /// <summary>
     /// Contact Person.
@@ -49,7 +49,7 @@ public record PartyIdentificationAndAccount229
     /// </summary>
     [DisplayName("Processing Identification")]
     [IsoXmlTag("PrcgId")]
-    public IsoMax35Text? ProcessingIdentification { get; init; }
+    public Max35Text? ProcessingIdentification { get; init; }
 
     /// <summary>
     /// Sub Account.

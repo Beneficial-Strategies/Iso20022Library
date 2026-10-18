@@ -21,19 +21,19 @@ public record InvestigationIdentification1
     /// </summary>
     [DisplayName("EIR")]
     [IsoXmlTag("EIR")]
-    public IsoUUIDv4Identifier? EIR { get; init; }
+    public UUIDv4Identifier? EIR { get; init; }
 
     /// <summary>
     /// Requestor Investigation Identification.
     /// </summary>
     [DisplayName("Requestor Investigation Identification")]
     [IsoXmlTag("RqstrInvstgtnId")]
-    public IsoMax35Text? RequestorInvestigationIdentification { get; init; }
+    public Max35Text? RequestorInvestigationIdentification { get; init; }
 
     /// <summary>
     /// Responder Investigation Identification.
     /// </summary>
     [DisplayName("Responder Investigation Identification")]
     [IsoXmlTag("RspndrInvstgtnId")]
-    public IsoMax35Text? ResponderInvestigationIdentification { get; init; }
+    public Max35Text? ResponderInvestigationIdentification { get; init; }
 }

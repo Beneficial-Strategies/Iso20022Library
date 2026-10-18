@@ -47,7 +47,7 @@ public record EntitlementAssessment1
     [DisplayName("Securities Blocking Period End Date")]
     [IsoXmlTag("SctiesBlckgPrdEndDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? SecuritiesBlockingPeriodEndDate { get; init; }
+    public ISODateTime? SecuritiesBlockingPeriodEndDate { get; init; }
 
     /// <summary>
     /// Date at which the positions are struck to note which parties will receive the entitlement, e.g. record date, book close date.
@@ -113,7 +113,7 @@ public record EntitlementAssessment1
     [IsoXmlTag("EntitlmntDesc")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? EntitlementDescription { get; init; }
+    public Max350Text? EntitlementDescription { get; init; }
 
     /// <summary>
     /// Number of votes assigned to one security.
@@ -122,5 +122,5 @@ public record EntitlementAssessment1
     [DisplayName("Entitlement Ratio")]
     [IsoXmlTag("EntitlmntRatio")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? EntitlementRatio { get; init; }
+    public DecimalNumber? EntitlementRatio { get; init; }
 }

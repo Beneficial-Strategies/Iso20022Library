@@ -22,7 +22,7 @@ public record AccountNotification26
     [IsoId("bbc6a560-2035-4c00-aa48-ca013ab791e2")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Identifies the account to be credited with the incoming amount of money.
@@ -70,7 +70,7 @@ public record AccountNotification26
     [IsoId("0a587bb5-287d-464e-8361-2cbc58cb9f4d")]
     [DisplayName("Expected Value Date")]
     [IsoXmlTag("XpctdValDt")]
-    public IsoISODate? ExpectedValueDate { get; init; }
+    public DateOnly? ExpectedValueDate { get; init; }
 
     /// <summary>
     /// Party that owes an amount of money to the (ultimate) creditor.

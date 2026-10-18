@@ -24,7 +24,7 @@ public record FinancialInstrumentAttributesSD19
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Country of source income for the security.
@@ -57,7 +57,7 @@ public record FinancialInstrumentAttributesSD19
     [DisplayName("Security Eligibility Indicator")]
     [IsoXmlTag("SctyElgbltyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? SecurityEligibilityIndicator { get; init; }
+    public YesNoIndicator? SecurityEligibilityIndicator { get; init; }
 
     /// <summary>
     /// Ticket symbol for the event security (underlying security).
@@ -67,7 +67,7 @@ public record FinancialInstrumentAttributesSD19
     [IsoXmlTag("TckrSymb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TickerSymbol { get; init; }
+    public Max35Text? TickerSymbol { get; init; }
 
     /// <summary>
     /// Security whose characteristics mirror the event security for purposes of FCP eligibility and tax relief. Certain derivative securities like HOLDR may have certain events where the source of payments are from an underlying security.
@@ -93,7 +93,7 @@ public record FinancialInstrumentAttributesSD19
     [IsoXmlTag("DIVANNSctyDesc")]
     [IsoSimpleType(IsoSimpleType.Max50Text)]
     [StringLength(maximumLength: 50, MinimumLength = 1)]
-    public IsoMax50Text? DIVANNSecurityDescription { get; init; }
+    public Max50Text? DIVANNSecurityDescription { get; init; }
 
     /// <summary>
     /// Indicates whether the event security is a foreign issue. This element will be initially used for CD Early Redemptions AC63.
@@ -102,7 +102,7 @@ public record FinancialInstrumentAttributesSD19
     [DisplayName("Foreign Issue Flag")]
     [IsoXmlTag("FrgnIsseFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ForeignIssueFlag { get; init; }
+    public YesNoIndicator? ForeignIssueFlag { get; init; }
 
     /// <summary>
     /// Indicates that underlying security is a Money Market Instrument.
@@ -111,5 +111,5 @@ public record FinancialInstrumentAttributesSD19
     [DisplayName("Money Market Instrument Flag")]
     [IsoXmlTag("MnyMktInstrmFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? MoneyMarketInstrumentFlag { get; init; }
+    public YesNoIndicator? MoneyMarketInstrumentFlag { get; init; }
 }

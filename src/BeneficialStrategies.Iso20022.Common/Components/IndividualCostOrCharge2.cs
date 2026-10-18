@@ -47,7 +47,7 @@ public record IndividualCostOrCharge2
     [DisplayName("Sign")]
     [IsoXmlTag("Sgn")]
     [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
-    public IsoPlusOrMinusIndicator? Sign { get; init; }
+    public PlusOrMinusIndicator? Sign { get; init; }
 
     /// <summary>
     /// Rate of the cost or charge.
@@ -56,7 +56,7 @@ public record IndividualCostOrCharge2
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Rate { get; init; }
+    public PercentageRate? Rate { get; init; }
 
     /// <summary>
     /// Start date and end date of the reference period for the ex post cost or charge. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 08090 and 08100.

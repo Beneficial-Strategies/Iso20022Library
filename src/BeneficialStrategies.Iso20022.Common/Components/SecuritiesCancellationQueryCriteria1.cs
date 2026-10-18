@@ -22,7 +22,7 @@ public record SecuritiesCancellationQueryCriteria1
     [IsoId("_YpFpIWdnEemMLeaDfmIfIA")]
     [DisplayName("Cancellation Request Identification")]
     [IsoXmlTag("CxlReqId")]
-    public SimpleValueList<IsoMax35Text> CancellationRequestIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> CancellationRequestIdentification { get; init; } = [];
 
     /// <summary>
     /// Type of underlying transaction to be cancelled, such as an settlement instruction or an intra-position movement.

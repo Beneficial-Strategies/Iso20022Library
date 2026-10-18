@@ -24,7 +24,7 @@ public record TransportBySea4
     [IsoXmlTag("PortOfLoadng")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text PortOfLoading { get; init; }
+    public required Max35Text PortOfLoading { get; init; }
 
     /// <summary>
     /// Identifies the port where the goods are discharged.
@@ -34,7 +34,7 @@ public record TransportBySea4
     [IsoXmlTag("PortOfDschrge")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text PortOfDischarge { get; init; }
+    public required Max35Text PortOfDischarge { get; init; }
 
     /// <summary>
     /// Name of a vessel.
@@ -44,7 +44,7 @@ public record TransportBySea4
     [IsoXmlTag("VsslNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? VesselName { get; init; }
+    public Max35Text? VesselName { get; init; }
 
     /// <summary>
     /// Identifies the party that is responsible for the conveyance of the goods from one place to another.
@@ -54,5 +54,5 @@ public record TransportBySea4
     [IsoXmlTag("SeaCrrierNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SeaCarrierName { get; init; }
+    public Max35Text? SeaCarrierName { get; init; }
 }

@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyIdentification3Choic
         [DisplayName("Sector")]
         [IsoXmlTag("Sctr")]
         [IsoSimpleType(IsoSimpleType.SNA2008SectorIdentifier)]
-        public required IsoSNA2008SectorIdentifier Sector { get; init; }
+        public required SNA2008SectorIdentifier Sector { get; init; }
 
         /// <summary>
         /// Location of the country in which the counterparty is incorporated.

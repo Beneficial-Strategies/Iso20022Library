@@ -24,7 +24,7 @@ public record TransactionAndDocumentIdentification1
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransactionIdentification { get; init; }
+    public required Max35Text TransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique identifier of the document (message) assigned by the sender of the document.
@@ -34,7 +34,7 @@ public record TransactionAndDocumentIdentification1
     [IsoXmlTag("DocId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DocumentIdentification { get; init; }
+    public Max35Text? DocumentIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the transaction was created by the instructing party in its business application.

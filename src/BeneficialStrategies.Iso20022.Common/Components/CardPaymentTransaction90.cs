@@ -24,7 +24,7 @@ public record CardPaymentTransaction90
     [IsoXmlTag("SaleRefId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SaleReferenceIdentification { get; init; }
+    public Max35Text? SaleReferenceIdentification { get; init; }
 
     /// <summary>
     /// Unique identification of the transaction assigned by the POI (Point Of Interaction).
@@ -42,7 +42,7 @@ public record CardPaymentTransaction90
     [IsoXmlTag("InitrTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? InitiatorTransactionIdentification { get; init; }
+    public Max35Text? InitiatorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of the transaction assigned by the recipient party for the initiating party.
@@ -52,7 +52,7 @@ public record CardPaymentTransaction90
     [IsoXmlTag("RcptTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RecipientTransactionIdentification { get; init; }
+    public Max35Text? RecipientTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification of the reconciliation period between the acceptor and the acquirer. This identification might be linked to the identification of the settlement for further verification by the merchant.
@@ -62,7 +62,7 @@ public record CardPaymentTransaction90
     [IsoXmlTag("RcncltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReconciliationIdentification { get; init; }
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Interchange information related to the card scheme.
@@ -72,7 +72,7 @@ public record CardPaymentTransaction90
     [IsoXmlTag("IntrchngData")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? InterchangeData { get; init; }
+    public Max140Text? InterchangeData { get; init; }
 
     /// <summary>
     /// Detail of the transaction transported.

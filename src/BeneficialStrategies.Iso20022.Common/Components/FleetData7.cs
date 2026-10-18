@@ -46,7 +46,7 @@ public record FleetData7
     [IsoId("_OjEet0YkEfCJpvfyM9roFQ")]
     [DisplayName("Card Fuel Prompt Code")]
     [IsoXmlTag("CardFuelPrmptCd")]
-    public IsoMax1Number? CardFuelPromptCode { get; init; }
+    public Max1Number? CardFuelPromptCode { get; init; }
 
     /// <summary>
     /// An identification code assigned by an agent.
@@ -54,7 +54,7 @@ public record FleetData7
     [IsoId("_OjEeuUYkEfCJpvfyM9roFQ")]
     [DisplayName("Agent Fuel Prompt Code")]
     [IsoXmlTag("AgtFuelPrmptCd")]
-    public IsoMax35Text? AgentFuelPromptCode { get; init; }
+    public Max35Text? AgentFuelPromptCode { get; init; }
 
     /// <summary>
     /// Identification number of the trip.
@@ -62,7 +62,7 @@ public record FleetData7
     [IsoId("_OjEeu0YkEfCJpvfyM9roFQ")]
     [DisplayName("Trip Number")]
     [IsoXmlTag("TripNb")]
-    public IsoMax35Text? TripNumber { get; init; }
+    public Max35Text? TripNumber { get; init; }
 
     /// <summary>
     /// Contains an indicator identifying the job or task identifier of the individual.
@@ -70,7 +70,7 @@ public record FleetData7
     [IsoId("_OjEevUYkEfCJpvfyM9roFQ")]
     [DisplayName("Trip Job Number")]
     [IsoXmlTag("TripJobNb")]
-    public IsoMax10Text? TripJobNumber { get; init; }
+    public Max10Text? TripJobNumber { get; init; }
 
     /// <summary>
     /// Contains the work order or purchase order number.
@@ -78,7 +78,7 @@ public record FleetData7
     [IsoId("_OjEev0YkEfCJpvfyM9roFQ")]
     [DisplayName("Trip Work Order")]
     [IsoXmlTag("TripWorkOrdr")]
-    public IsoMax70Text? TripWorkOrder { get; init; }
+    public Max70Text? TripWorkOrder { get; init; }
 
     /// <summary>
     /// Contains the invoice number.
@@ -86,7 +86,7 @@ public record FleetData7
     [IsoId("_OjEewUYkEfCJpvfyM9roFQ")]
     [DisplayName("Trip Invoice Number")]
     [IsoXmlTag("TripInvcNb")]
-    public IsoMax70Text? TripInvoiceNumber { get; init; }
+    public Max70Text? TripInvoiceNumber { get; init; }
 
     /// <summary>
     /// Contains the billing identification number.
@@ -94,7 +94,7 @@ public record FleetData7
     [IsoId("_OjEew0YkEfCJpvfyM9roFQ")]
     [DisplayName("Trip Billing Identification")]
     [IsoXmlTag("TripBllgId")]
-    public IsoMax70Text? TripBillingIdentification { get; init; }
+    public Max70Text? TripBillingIdentification { get; init; }
 
     /// <summary>
     /// Identification number assigned by an agent.
@@ -102,7 +102,7 @@ public record FleetData7
     [IsoId("_OjEexUYkEfCJpvfyM9roFQ")]
     [DisplayName("Trip Control Number")]
     [IsoXmlTag("TripCtrlNb")]
-    public IsoMax35Text? TripControlNumber { get; init; }
+    public Max35Text? TripControlNumber { get; init; }
 
     /// <summary>
     /// Delivery Ticket Number for the trip information.
@@ -110,7 +110,7 @@ public record FleetData7
     [IsoId("_OjEex0YkEfCJpvfyM9roFQ")]
     [DisplayName("Trip Delivery Ticket Number")]
     [IsoXmlTag("TripDlvryTcktNb")]
-    public IsoMax35Text? TripDeliveryTicketNumber { get; init; }
+    public Max35Text? TripDeliveryTicketNumber { get; init; }
 
     /// <summary>
     /// Indicates the amenities available at the location where the merchant actually performed the transaction.
@@ -142,7 +142,7 @@ public record FleetData7
     [IsoId("_PpJocFBVEfC5WMyGsBx7PA")]
     [DisplayName("Discount Method")]
     [IsoXmlTag("DscntMtd")]
-    public IsoMax4AlphaNumericText? DiscountMethod { get; init; }
+    public Max4AlphaNumericText? DiscountMethod { get; init; }
 
     /// <summary>
     /// Contains any of these codes to identify the entity who calculated discount.
@@ -158,7 +158,7 @@ public record FleetData7
     [IsoId("_2aD34FBWEfC5WMyGsBx7PA")]
     [DisplayName("Discount Plan Identification")]
     [IsoXmlTag("DscntPlanId")]
-    public IsoMax35Text? DiscountPlanIdentification { get; init; }
+    public Max35Text? DiscountPlanIdentification { get; init; }
 
     /// <summary>
     /// Indicate if the card acceptor supports purchase control override at POS.
@@ -166,7 +166,7 @@ public record FleetData7
     [IsoId("_RqJWMFBdEfC5WMyGsBx7PA")]
     [DisplayName("Purchase Restriction Indicator")]
     [IsoXmlTag("PurchsRstrctnInd")]
-    public IsoExact1Text? PurchaseRestrictionIndicator { get; init; }
+    public Exact1Text? PurchaseRestrictionIndicator { get; init; }
 
     /// <summary>
     /// Fleet Line Item component to carry detail level fleet data.

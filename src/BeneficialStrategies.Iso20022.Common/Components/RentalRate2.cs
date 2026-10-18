@@ -21,7 +21,7 @@ public record RentalRate2
     /// </summary>
     [DisplayName("Other Period")]
     [IsoXmlTag("OthrPrd")]
-    public IsoMax35Text? OtherPeriod { get; init; }
+    public Max35Text? OtherPeriod { get; init; }
 
     /// <summary>
     /// Period.
@@ -35,7 +35,7 @@ public record RentalRate2
     /// </summary>
     [DisplayName("Period Count")]
     [IsoXmlTag("PrdCnt")]
-    public IsoMax4NumericText? PeriodCount { get; init; }
+    public Max4NumericText? PeriodCount { get; init; }
 
     /// <summary>
     /// Rate.

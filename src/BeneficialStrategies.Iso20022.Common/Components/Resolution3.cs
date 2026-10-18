@@ -24,7 +24,7 @@ public record Resolution3
     [IsoXmlTag("IssrLabl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text IssuerLabel { get; init; }
+    public required Max35Text IssuerLabel { get; init; }
 
     /// <summary>
     /// Free text description of the resolution.
@@ -34,7 +34,7 @@ public record Resolution3
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max1025Text)]
     [StringLength(maximumLength: 1025, MinimumLength = 1)]
-    public IsoMax1025Text? Description { get; init; }
+    public Max1025Text? Description { get; init; }
 
     /// <summary>
     /// Abbreviated description of the resolution.
@@ -44,7 +44,7 @@ public record Resolution3
     [IsoXmlTag("Titl")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Title { get; init; }
+    public Max350Text? Title { get; init; }
 
     /// <summary>
     /// Specifies the type of resolution.
@@ -61,7 +61,7 @@ public record Resolution3
     [DisplayName("For Information Only")]
     [IsoXmlTag("ForInfOnly")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ForInformationOnly { get; init; }
+    public required YesNoIndicator ForInformationOnly { get; init; }
 
     /// <summary>
     /// Indicates whether the resolution is active or withdrawn.
@@ -78,7 +78,7 @@ public record Resolution3
     [DisplayName("Submitted By Security Holder")]
     [IsoXmlTag("SubmittdBySctyHldr")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? SubmittedBySecurityHolder { get; init; }
+    public YesNoIndicator? SubmittedBySecurityHolder { get; init; }
 
     /// <summary>
     /// Vote options allowed at the resolution level. When specified, it supersedes the vote options given for the meeting.

@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationReference15Choice
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("ExctgPtyTxId")]
-        public required IsoMax35Text Value { get; init; }
+        public required Max35Text Value { get; init; }
     }
 }

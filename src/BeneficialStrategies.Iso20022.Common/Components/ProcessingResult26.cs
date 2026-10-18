@@ -49,21 +49,21 @@ public record ProcessingResult26
     /// </summary>
     [DisplayName("Response Source Identification")]
     [IsoXmlTag("RspnSrcId")]
-    public IsoMax35Text? ResponseSourceIdentification { get; init; }
+    public Max35Text? ResponseSourceIdentification { get; init; }
 
     /// <summary>
     /// Response Source Other Type.
     /// </summary>
     [DisplayName("Response Source Other Type")]
     [IsoXmlTag("RspnSrcOthrTp")]
-    public IsoMax35Text? ResponseSourceOtherType { get; init; }
+    public Max35Text? ResponseSourceOtherType { get; init; }
 
     /// <summary>
     /// Response Source Short Name.
     /// </summary>
     [DisplayName("Response Source Short Name")]
     [IsoXmlTag("RspnSrcShrtNm")]
-    public IsoMax35Text? ResponseSourceShortName { get; init; }
+    public Max35Text? ResponseSourceShortName { get; init; }
 
     /// <summary>
     /// Response Source Type.

@@ -24,7 +24,7 @@ public record ReportGetTotalsResponse1
     [IsoXmlTag("POIRcncltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text POIReconciliationIdentification { get; init; }
+    public required Max35Text POIReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Result of the Sale to POI Totals processing.

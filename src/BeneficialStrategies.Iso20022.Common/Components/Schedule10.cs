@@ -23,7 +23,7 @@ public record Schedule10
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
     [IsoSimpleType(IsoSimpleType.LongFraction19DecimalNumber)]
-    public required IsoLongFraction19DecimalNumber Quantity { get; init; }
+    public required LongFraction19DecimalNumber Quantity { get; init; }
 
     /// <summary>
     /// Indicates the unit of measure in which the total notional quantity and notional quantity schedules are expressed.
@@ -40,7 +40,7 @@ public record Schedule10
     [DisplayName("Unadjusted Effective Date")]
     [IsoXmlTag("UadjstdFctvDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate UnadjustedEffectiveDate { get; init; }
+    public required DateOnly UnadjustedEffectiveDate { get; init; }
 
     /// <summary>
     /// Indicates the end date agreed in the derivative transaction without adjustment.
@@ -49,5 +49,5 @@ public record Schedule10
     [DisplayName("Unadjusted End Date")]
     [IsoXmlTag("UadjstdEndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? UnadjustedEndDate { get; init; }
+    public DateOnly? UnadjustedEndDate { get; init; }
 }

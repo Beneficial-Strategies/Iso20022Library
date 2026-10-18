@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PercentageRange1Choice
         [DisplayName("Boundary Rate")]
         [IsoXmlTag("BdryRate")]
         [IsoSimpleType(IsoSimpleType.PercentageRate)]
-        public required IsoPercentageRate BoundaryRate { get; init; }
+        public required PercentageRate BoundaryRate { get; init; }
 
         /// <summary>
         /// Indicates whether the boundary percentage rate is included in the range of percentage rates.
@@ -32,6 +32,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PercentageRange1Choice
         [DisplayName("Included")]
         [IsoXmlTag("Incl")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public required IsoYesNoIndicator Included { get; init; }
+        public required YesNoIndicator Included { get; init; }
     }
 }

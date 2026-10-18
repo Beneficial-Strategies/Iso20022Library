@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CryptographicKey1Choice
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("ILPV4")]
-        public required IsoHexBinaryText Value { get; init; }
+        public required HexBinaryText Value { get; init; }
     }
 }

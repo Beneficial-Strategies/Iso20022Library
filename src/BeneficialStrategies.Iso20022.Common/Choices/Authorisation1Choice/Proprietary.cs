@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Authorisation1Choice
         [IsoXmlTag("Prtry")]
         [IsoSimpleType(IsoSimpleType.Max128Text)]
         [StringLength(maximumLength: 128, MinimumLength = 1)]
-        public required IsoMax128Text Value { get; init; }
+        public required Max128Text Value { get; init; }
     }
 }

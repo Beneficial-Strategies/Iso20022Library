@@ -42,7 +42,7 @@ public record PartyIdentification315
     /// </summary>
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
-    public IsoLEIIdentifier? LEI { get; init; }
+    public LEIIdentifier? LEI { get; init; }
 
     /// <summary>
     /// Processing Date.
@@ -56,5 +56,5 @@ public record PartyIdentification315
     /// </summary>
     [DisplayName("Processing Identification")]
     [IsoXmlTag("PrcgId")]
-    public IsoMax35Text? ProcessingIdentification { get; init; }
+    public Max35Text? ProcessingIdentification { get; init; }
 }

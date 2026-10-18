@@ -21,14 +21,14 @@ public record InstructionProcessingStatus6
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public IsoMax350Text? AdditionalInformation { get; init; }
+    public Max350Text? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Attendance Card Number.
     /// </summary>
     [DisplayName("Attendance Card Number")]
     [IsoXmlTag("AttndncCardNb")]
-    public IsoMax35Text? AttendanceCardNumber { get; init; }
+    public Max35Text? AttendanceCardNumber { get; init; }
 
     /// <summary>
     /// Status.

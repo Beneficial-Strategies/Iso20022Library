@@ -30,7 +30,7 @@ public record AcceptorConfiguration15
     [IsoId("_0Br_27ZzEfCUZfsQO4rYeA")]
     [DisplayName("POI Group Identification")]
     [IsoXmlTag("POIGrpId")]
-    public SimpleValueList<IsoMax35Text> POIGroupIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> POIGroupIdentification { get; init; } = [];
 
     /// <summary>
     /// Data set containing the acceptor parameters of a point of interaction (POI).

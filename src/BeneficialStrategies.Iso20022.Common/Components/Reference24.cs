@@ -21,7 +21,7 @@ public record Reference24
     /// </summary>
     [DisplayName("Net Position Identification")]
     [IsoXmlTag("NetPosId")]
-    public IsoMax35Text? NetPositionIdentification { get; init; }
+    public Max35Text? NetPositionIdentification { get; init; }
 
     /// <summary>
     /// Trade Leg Notification Identification.

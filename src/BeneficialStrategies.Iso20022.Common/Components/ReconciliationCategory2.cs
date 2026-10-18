@@ -23,7 +23,7 @@ public record ReconciliationCategory2
     [DisplayName("Revived")]
     [IsoXmlTag("Rvvd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator Revived { get; init; }
+    public required YesNoIndicator Revived { get; init; }
 
     /// <summary>
     /// Indicator of modification to the terms or details of a previously reported derivative, at a trade or position level, but not a correction of a report.
@@ -32,5 +32,5 @@ public record ReconciliationCategory2
     [DisplayName("Further Modification")]
     [IsoXmlTag("FrthrMod")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator FurtherModification { get; init; }
+    public required YesNoIndicator FurtherModification { get; init; }
 }

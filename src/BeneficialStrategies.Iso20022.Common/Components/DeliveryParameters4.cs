@@ -23,7 +23,7 @@ public record DeliveryParameters4
     [DisplayName("Registered Address Indicator")]
     [IsoXmlTag("RegdAdrInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator RegisteredAddressIndicator { get; init; }
+    public required YesNoIndicator RegisteredAddressIndicator { get; init; }
 
     /// <summary>
     /// Name and address to/from which the physical delivery/receipt of the financial instrument must take place.

@@ -21,7 +21,7 @@ public record SecurityCSDLink12
     /// </summary>
     [DisplayName("Default Link")]
     [IsoXmlTag("DfltLk")]
-    public IsoTrueFalseIndicator? DefaultLink { get; init; }
+    public TrueFalseIndicator? DefaultLink { get; init; }
 
     /// <summary>
     /// Financial Instrument Identification.
@@ -49,7 +49,7 @@ public record SecurityCSDLink12
     /// </summary>
     [DisplayName("Security Maintenance")]
     [IsoXmlTag("SctyMntnc")]
-    public required IsoTrueFalseIndicator SecurityMaintenance { get; init; }
+    public required TrueFalseIndicator SecurityMaintenance { get; init; }
 
     /// <summary>
     /// Technical Issuer CSD.

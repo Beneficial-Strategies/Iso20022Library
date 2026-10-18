@@ -22,7 +22,7 @@ public record Mandate19
     [IsoId("_feuhldcZEeqRFcf2R4bPBw")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
-    public SimpleValueList<IsoMax35Text> MandateIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> MandateIdentification { get; init; } = [];
 
     /// <summary>
     /// Identification for the mandate request, as assigned by the initiating party.
@@ -32,7 +32,7 @@ public record Mandate19
     [IsoXmlTag("MndtReqId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MandateRequestIdentification { get; init; }
+    public required Max35Text MandateRequestIdentification { get; init; }
 
     /// <summary>
     /// Specifies the transport authentication details related to the mandate.
@@ -65,7 +65,7 @@ public record Mandate19
     [DisplayName("Tracking Indicator")]
     [IsoXmlTag("TrckgInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator TrackingIndicator { get; init; }
+    public required TrueFalseIndicator TrackingIndicator { get; init; }
 
     /// <summary>
     /// Amount different from the collection amount, as it includes the costs associated with the first debited amount.
@@ -187,7 +187,7 @@ public record Mandate19
     [IsoXmlTag("MndtRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MandateReference { get; init; }
+    public Max35Text? MandateReference { get; init; }
 
     /// <summary>
     /// Provides information to identify the underlying documents associated with the mandate.

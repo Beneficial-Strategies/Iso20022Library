@@ -21,14 +21,14 @@ public record FileData1
     /// </summary>
     [DisplayName("File Location Electronic Address")]
     [IsoXmlTag("FileLctnElctrncAdr")]
-    public IsoMax2048Text? FileLocationElectronicAddress { get; init; }
+    public Max2048Text? FileLocationElectronicAddress { get; init; }
 
     /// <summary>
     /// File Name.
     /// </summary>
     [DisplayName("File Name")]
     [IsoXmlTag("FileNm")]
-    public IsoMax140Text? FileName { get; init; }
+    public Max140Text? FileName { get; init; }
 
     /// <summary>
     /// Format.
@@ -42,7 +42,7 @@ public record FileData1
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Issue Date.
@@ -56,7 +56,7 @@ public record FileData1
     /// </summary>
     [DisplayName("Network Reference")]
     [IsoXmlTag("NtwkRef")]
-    public IsoMax140Text? NetworkReference { get; init; }
+    public Max140Text? NetworkReference { get; init; }
 
     /// <summary>
     /// Type.

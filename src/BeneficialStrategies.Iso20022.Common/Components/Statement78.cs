@@ -24,7 +24,7 @@ public record Statement78
     [IsoXmlTag("StmtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text StatementIdentification { get; init; }
+    public required Max35Text StatementIdentification { get; init; }
 
     /// <summary>
     /// Sequential number of the report.
@@ -42,7 +42,7 @@ public record Statement78
     [IsoXmlTag("QryRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? QueryReference { get; init; }
+    public Max35Text? QueryReference { get; init; }
 
     /// <summary>
     /// Date and time of the statement.
@@ -101,7 +101,7 @@ public record Statement78
     [DisplayName("Summary Indicator")]
     [IsoXmlTag("SummryInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator SummaryIndicator { get; init; }
+    public required YesNoIndicator SummaryIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether there is activity or information update reported in the statement.
@@ -110,5 +110,5 @@ public record Statement78
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ActivityIndicator { get; init; }
+    public required YesNoIndicator ActivityIndicator { get; init; }
 }

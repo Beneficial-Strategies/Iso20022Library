@@ -24,7 +24,7 @@ public record Driver1
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Name { get; init; }
+    public Max70Text? Name { get; init; }
 
     /// <summary>
     /// Fleet driver identification.
@@ -34,7 +34,7 @@ public record Driver1
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Identification { get; init; }
+    public Max70Text? Identification { get; init; }
 
     /// <summary>
     /// Driving license details.
@@ -52,7 +52,7 @@ public record Driver1
     [IsoXmlTag("Mplyr")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Employer { get; init; }
+    public Max70Text? Employer { get; init; }
 
     /// <summary>
     /// Contains the employee identification number as assigned by the fleet operator.
@@ -62,7 +62,7 @@ public record Driver1
     [IsoXmlTag("MplyeeId")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? EmployeeIdentification { get; init; }
+    public Max70Text? EmployeeIdentification { get; init; }
 
     /// <summary>
     /// Contains the fleet driver&apos;s department number as assigned by the fleet operator.
@@ -72,7 +72,7 @@ public record Driver1
     [IsoXmlTag("DeptNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DepartmentNumber { get; init; }
+    public Max35Text? DepartmentNumber { get; init; }
 
     /// <summary>
     /// Additional identification used for the driver.
@@ -89,7 +89,7 @@ public record Driver1
     [DisplayName("Date Of Birth")]
     [IsoXmlTag("DtOfBirth")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DateOfBirth { get; init; }
+    public DateOnly? DateOfBirth { get; init; }
 
     /// <summary>
     /// Additional fleet summary-level information.
@@ -99,5 +99,5 @@ public record Driver1
     [IsoXmlTag("AddtlData")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AdditionalData { get; init; }
+    public Max350Text? AdditionalData { get; init; }
 }

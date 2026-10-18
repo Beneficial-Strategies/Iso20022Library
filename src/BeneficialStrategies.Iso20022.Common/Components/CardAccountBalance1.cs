@@ -54,7 +54,7 @@ public record CardAccountBalance1
     [IsoId("_hp7l6xQTEfC1ZfCQz0xB3g")]
     [DisplayName("Cardholder Currency")]
     [IsoXmlTag("CrdhldrCcy")]
-    public IsoTrueFalseIndicator? CardholderCurrency { get; init; }
+    public TrueFalseIndicator? CardholderCurrency { get; init; }
 
     /// <summary>
     /// Date of the balance.
@@ -62,5 +62,5 @@ public record CardAccountBalance1
     [IsoId("_hp7l7RQTEfC1ZfCQz0xB3g")]
     [DisplayName("Balance Date")]
     [IsoXmlTag("BalDt")]
-    public IsoISODate? BalanceDate { get; init; }
+    public DateOnly? BalanceDate { get; init; }
 }

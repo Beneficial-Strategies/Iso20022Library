@@ -21,7 +21,7 @@ public record PointOfInteractionCapabilities10
     /// </summary>
     [DisplayName("Approval Code Length")]
     [IsoXmlTag("ApprvlCdLngth")]
-    public IsoNumber? ApprovalCodeLength { get; init; }
+    public Number? ApprovalCodeLength { get; init; }
 
     /// <summary>
     /// Authentication.
@@ -35,7 +35,7 @@ public record PointOfInteractionCapabilities10
     /// </summary>
     [DisplayName("Card Capture Capable")]
     [IsoXmlTag("CardCaptrCpbl")]
-    public IsoTrueFalseIndicator? CardCaptureCapable { get; init; }
+    public TrueFalseIndicator? CardCaptureCapable { get; init; }
 
     /// <summary>
     /// Card Read Data.
@@ -63,14 +63,14 @@ public record PointOfInteractionCapabilities10
     /// </summary>
     [DisplayName("Interactive Transactions")]
     [IsoXmlTag("IntractvTxs")]
-    public ValueList<IsoMax256Text> InteractiveTransactions { get; init; } = [];
+    public ValueList<Max256Text> InteractiveTransactions { get; init; } = [];
 
     /// <summary>
     /// Max Script Length.
     /// </summary>
     [DisplayName("Max Script Length")]
     [IsoXmlTag("MxScrptLngth")]
-    public IsoNumber? MaxScriptLength { get; init; }
+    public Number? MaxScriptLength { get; init; }
 
     /// <summary>
     /// Message Capabilities.
@@ -84,14 +84,14 @@ public record PointOfInteractionCapabilities10
     /// </summary>
     [DisplayName("PIN Length Capabilities")]
     [IsoXmlTag("PINLngthCpblties")]
-    public IsoNumber? PINLengthCapabilities { get; init; }
+    public Number? PINLengthCapabilities { get; init; }
 
     /// <summary>
     /// Receipt Printing.
     /// </summary>
     [DisplayName("Receipt Printing")]
     [IsoXmlTag("RctPrtg")]
-    public IsoTrueFalseIndicator? ReceiptPrinting { get; init; }
+    public TrueFalseIndicator? ReceiptPrinting { get; init; }
 
     /// <summary>
     /// Withdrawal Media.

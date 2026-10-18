@@ -24,7 +24,7 @@ public record ResponseDetails1
     [IsoXmlTag("RspnCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ResponseCode { get; init; }
+    public required Max35Text ResponseCode { get; init; }
 
     /// <summary>
     /// Additional information to elaborate upon response codes.
@@ -34,5 +34,5 @@ public record ResponseDetails1
     [IsoXmlTag("AddtlDtls")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AdditionalDetails { get; init; }
+    public Max350Text? AdditionalDetails { get; init; }
 }

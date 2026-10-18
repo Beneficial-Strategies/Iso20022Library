@@ -24,7 +24,7 @@ public record GroupHeader7
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the (group of) cancellation request(s) was created by the instructing party.
@@ -33,7 +33,7 @@ public record GroupHeader7
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// Number of individual transactions contained in the message.
@@ -42,7 +42,7 @@ public record GroupHeader7
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText NumberOfTransactions { get; init; }
+    public required Max15NumericText NumberOfTransactions { get; init; }
 
     /// <summary>
     /// Total of all individual amounts included in the message, irrespective of currencies.
@@ -51,7 +51,7 @@ public record GroupHeader7
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? ControlSum { get; init; }
+    public DecimalNumber? ControlSum { get; init; }
 
     /// <summary>
     /// Indicates whether the cancellation applies to a whole group of transactions or to individual transactions within the original group.
@@ -60,7 +60,7 @@ public record GroupHeader7
     [DisplayName("Group Cancellation")]
     [IsoXmlTag("GrpCxl")]
     [IsoSimpleType(IsoSimpleType.GroupingIndicator)]
-    public IsoGroupingIndicator? GroupCancellation { get; init; }
+    public GroupingIndicator? GroupCancellation { get; init; }
 
     /// <summary>
     /// Party initiating the payment. In the payment context, this can either be the debtor (in a credit transfer), the creditor (in a direct debit), or the party that initiates the payment on behalf of the debtor or creditor.

@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TrancheIndicator3Choice
         [DisplayName("Attachment Point")]
         [IsoXmlTag("AttchmntPt")]
         [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-        public IsoBaseOneRate? AttachmentPoint { get; init; }
+        public BaseOneRate? AttachmentPoint { get; init; }
 
         /// <summary>
         /// Indicates the point beyond which the losses in the underlying portfolio no longer reduce the notional of the tranche.
@@ -32,6 +32,6 @@ namespace BeneficialStrategies.Iso20022.Choices.TrancheIndicator3Choice
         [DisplayName("Detachment Point")]
         [IsoXmlTag("DtchmntPt")]
         [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-        public IsoBaseOneRate? DetachmentPoint { get; init; }
+        public BaseOneRate? DetachmentPoint { get; init; }
     }
 }

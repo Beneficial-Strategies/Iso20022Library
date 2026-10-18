@@ -24,7 +24,7 @@ public record ClockSynchronisation3
     [IsoXmlTag("POITmZone")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public required IsoMax70Text POITimeZone { get; init; }
+    public required Max70Text POITimeZone { get; init; }
 
     /// <summary>
     /// Parameters to contact a time server.
@@ -41,5 +41,5 @@ public record ClockSynchronisation3
     [DisplayName("Delay")]
     [IsoXmlTag("Dely")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? Delay { get; init; }
+    public ISOTime? Delay { get; init; }
 }

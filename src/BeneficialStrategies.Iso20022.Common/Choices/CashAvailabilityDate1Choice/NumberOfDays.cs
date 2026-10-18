@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CashAvailabilityDate1Choice
         /// </summary>
         [IsoXmlTag("NbOfDays")]
         [IsoSimpleType(IsoSimpleType.Max15PlusSignedNumericText)]
-        public required IsoMax15PlusSignedNumericText Value { get; init; }
+        public required Max15PlusSignedNumericText Value { get; init; }
     }
 }

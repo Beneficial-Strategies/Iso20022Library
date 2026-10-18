@@ -24,7 +24,7 @@ public record ContactIdentification5
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Name { get; init; }
+    public required Max35Text Name { get; init; }
 
     /// <summary>
     /// Collection of information that identifies a phone number, as defined by telecom services.
@@ -33,5 +33,5 @@ public record ContactIdentification5
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public required IsoPhoneNumber PhoneNumber { get; init; }
+    public required PhoneNumber PhoneNumber { get; init; }
 }

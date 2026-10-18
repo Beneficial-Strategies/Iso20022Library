@@ -39,5 +39,5 @@ public record FinancialCard1
     [DisplayName("Interest Rate Percent")]
     [IsoXmlTag("IntrstRatePct")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? InterestRatePercent { get; init; }
+    public PercentageRate? InterestRatePercent { get; init; }
 }

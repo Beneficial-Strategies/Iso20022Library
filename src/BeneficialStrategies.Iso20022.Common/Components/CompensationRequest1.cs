@@ -35,14 +35,14 @@ public record CompensationRequest1
     /// </summary>
     [DisplayName("Expected Value Date")]
     [IsoXmlTag("XpctdValDt")]
-    public IsoISODate? ExpectedValueDate { get; init; }
+    public DateOnly? ExpectedValueDate { get; init; }
 
     /// <summary>
     /// Interest Rate.
     /// </summary>
     [DisplayName("Interest Rate")]
     [IsoXmlTag("IntrstRate")]
-    public IsoPercentageRate? InterestRate { get; init; }
+    public PercentageRate? InterestRate { get; init; }
 
     /// <summary>
     /// Period.
@@ -56,5 +56,5 @@ public record CompensationRequest1
     /// </summary>
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public ValueList<IsoMax140Text> Reason { get; init; } = [];
+    public ValueList<Max140Text> Reason { get; init; } = [];
 }

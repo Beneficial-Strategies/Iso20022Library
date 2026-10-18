@@ -46,7 +46,7 @@ public record SubAccountIdentification74
     [IsoId("74af9940-58cf-4bb6-a806-b6711e94fa83")]
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
-    public required IsoYesNoIndicator ActivityIndicator { get; init; }
+    public required YesNoIndicator ActivityIndicator { get; init; }
 
     /// <summary>
     /// Reporting per financial instrument.

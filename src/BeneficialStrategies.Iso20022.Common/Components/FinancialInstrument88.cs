@@ -32,7 +32,7 @@ public record FinancialInstrument88
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Name { get; init; }
+    public Max350Text? Name { get; init; }
 
     /// <summary>
     /// Financial Instrument Short Name (FISN) expressed in conformance with the ISO 18774 standard.
@@ -42,7 +42,7 @@ public record FinancialInstrument88
     [IsoXmlTag("ShrtNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ShortName { get; init; }
+    public Max35Text? ShortName { get; init; }
 
     /// <summary>
     /// Additional information about the financial instrument.
@@ -52,7 +52,7 @@ public record FinancialInstrument88
     [IsoXmlTag("SplmtryId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SupplementaryIdentification { get; init; }
+    public Max35Text? SupplementaryIdentification { get; init; }
 
     /// <summary>
     /// Features of units offered by a fund. For example, a unit may have a specific load structure, for example, front end or back end, an income policy, for example, pay out or accumulate, or a trailer policy, for example, with or without. Fund classes are typically denoted by a single character, for example, &apos;Class A&apos;, &apos;Class 2&apos;.
@@ -62,7 +62,7 @@ public record FinancialInstrument88
     [IsoXmlTag("ClssTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClassType { get; init; }
+    public Max35Text? ClassType { get; init; }
 
     /// <summary>
     /// Form, that is, ownership, of the security, that is, registered or bearer.
@@ -87,5 +87,5 @@ public record FinancialInstrument88
     [DisplayName("Dematerialised Indicator")]
     [IsoXmlTag("DmtrlsdInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? DematerialisedIndicator { get; init; }
+    public YesNoIndicator? DematerialisedIndicator { get; init; }
 }

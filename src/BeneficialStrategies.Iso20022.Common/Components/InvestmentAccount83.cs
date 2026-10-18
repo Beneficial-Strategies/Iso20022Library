@@ -30,7 +30,7 @@ public record InvestmentAccount83
     [IsoId("f91a8845-b5ec-44de-9a43-4d4ff061bd74")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public required IsoMax35Text AccountIdentification { get; init; }
+    public required Max35Text AccountIdentification { get; init; }
 
     /// <summary>
     /// Name of the account.
@@ -38,7 +38,7 @@ public record InvestmentAccount83
     [IsoId("c3a753a2-8548-408f-a605-cbb66886f529")]
     [DisplayName("Account Name")]
     [IsoXmlTag("AcctNm")]
-    public IsoMax35Text? AccountName { get; init; }
+    public Max35Text? AccountName { get; init; }
 
     /// <summary>
     /// Supplementary registration information applying to a specific block of units for dealing and reporting purposes.
@@ -46,7 +46,7 @@ public record InvestmentAccount83
     [IsoId("281b3217-8bb8-489f-8ef1-4abf17871231")]
     [DisplayName("Account Designation")]
     [IsoXmlTag("AcctDsgnt")]
-    public IsoMax35Text? AccountDesignation { get; init; }
+    public Max35Text? AccountDesignation { get; init; }
 
     /// <summary>
     /// Institution that maintains the records where the account is held.
@@ -94,7 +94,7 @@ public record InvestmentAccount83
     [IsoId("132609e2-bff9-45cd-a51c-b7e30034e418")]
     [DisplayName("Dematerialised Indicator")]
     [IsoXmlTag("DmtrlsdInd")]
-    public IsoYesNoIndicator? DematerialisedIndicator { get; init; }
+    public YesNoIndicator? DematerialisedIndicator { get; init; }
 
     /// <summary>
     /// Dividend option chosen by the account owner based on the options offered in the prospectus.

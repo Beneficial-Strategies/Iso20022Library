@@ -23,7 +23,7 @@ public record MoneyPurchaseAnnualAllowance1
     [DisplayName("Triggered")]
     [IsoXmlTag("Trggrd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator Triggered { get; init; }
+    public required YesNoIndicator Triggered { get; init; }
 
     /// <summary>
     /// Date the annual allowance is taken.
@@ -32,5 +32,5 @@ public record MoneyPurchaseAnnualAllowance1
     [DisplayName("Triggered Date")]
     [IsoXmlTag("TrggrdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TriggeredDate { get; init; }
+    public DateOnly? TriggeredDate { get; init; }
 }

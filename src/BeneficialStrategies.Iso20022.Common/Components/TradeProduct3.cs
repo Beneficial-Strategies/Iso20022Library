@@ -32,7 +32,7 @@ public record TradeProduct3
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Name { get; init; }
+    public Max35Text? Name { get; init; }
 
     /// <summary>
     /// Information about the goods and/or services of a trade transaction.
@@ -42,7 +42,7 @@ public record TradeProduct3
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Description { get; init; }
+    public Max140Text? Description { get; init; }
 
     /// <summary>
     /// Country of origin of the product.
@@ -74,5 +74,5 @@ public record TradeProduct3
     [IsoId("_taQbLfFTEee_LsXdoqzkWg")]
     [DisplayName("Global Serial Identifier")]
     [IsoXmlTag("GblSrlIdr")]
-    public SimpleValueList<IsoMax35Text> GlobalSerialIdentifier { get; init; } = [];
+    public SimpleValueList<Max35Text> GlobalSerialIdentifier { get; init; } = [];
 }

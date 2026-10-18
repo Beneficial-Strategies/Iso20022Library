@@ -25,7 +25,7 @@ public record CustomerReference1
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Identification { get; init; }
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Subfield is a free-form text field containing customer reference value details about the transaction.
@@ -35,5 +35,5 @@ public record CustomerReference1
     [IsoXmlTag("Dtl")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Detail { get; init; }
+    public Max70Text? Detail { get; init; }
 }

@@ -23,7 +23,7 @@ public record SettlementInternaliserIdentification1
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public required IsoLEIIdentifier LEI { get; init; }
+    public required LEIIdentifier LEI { get; init; }
 
     /// <summary>
     /// Identification of the liaison at the Settlement Internaliser.
@@ -48,5 +48,5 @@ public record SettlementInternaliserIdentification1
     [DisplayName("Branch Identification")]
     [IsoXmlTag("BrnchId")]
     [IsoSimpleType(IsoSimpleType.Exact2UpperCaseAlphaText)]
-    public IsoExact2UpperCaseAlphaText? BranchIdentification { get; init; }
+    public Exact2UpperCaseAlphaText? BranchIdentification { get; init; }
 }

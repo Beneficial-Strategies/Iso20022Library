@@ -49,7 +49,7 @@ public record CorporateActionRate129
     /// </summary>
     [DisplayName("Estimated Rate Indicator")]
     [IsoXmlTag("EstmtdRateInd")]
-    public IsoYesNoIndicator? EstimatedRateIndicator { get; init; }
+    public YesNoIndicator? EstimatedRateIndicator { get; init; }
 
     /// <summary>
     /// Financial Transaction Tax Rate.
@@ -91,7 +91,7 @@ public record CorporateActionRate129
     /// </summary>
     [DisplayName("Transformation Rate")]
     [IsoXmlTag("TrfrmatnRate")]
-    public IsoPercentage14Rate? TransformationRate { get; init; }
+    public decimal? TransformationRate { get; init; }
 
     /// <summary>
     /// Withholding Tax Rate.

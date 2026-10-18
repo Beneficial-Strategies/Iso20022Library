@@ -23,7 +23,7 @@ public record PlainCardData5
     [DisplayName("PAN")]
     [IsoXmlTag("PAN")]
     [IsoSimpleType(IsoSimpleType.Min8Max28NumericText)]
-    public required IsoMin8Max28NumericText PAN { get; init; }
+    public required Min8Max28NumericText PAN { get; init; }
 
     /// <summary>
     /// Identify a card inside a set of cards with the same card number (PAN).
@@ -32,7 +32,7 @@ public record PlainCardData5
     [DisplayName("Card Sequence Number")]
     [IsoXmlTag("CardSeqNb")]
     [IsoSimpleType(IsoSimpleType.Min2Max3NumericText)]
-    public IsoMin2Max3NumericText? CardSequenceNumber { get; init; }
+    public Min2Max3NumericText? CardSequenceNumber { get; init; }
 
     /// <summary>
     /// Date from which the card can be used, expressed either in the YYYY-MM format, or in the YYYY-MM-DD format.
@@ -42,7 +42,7 @@ public record PlainCardData5
     [IsoXmlTag("FctvDt")]
     [IsoSimpleType(IsoSimpleType.Max10Text)]
     [StringLength(maximumLength: 10, MinimumLength = 1)]
-    public IsoMax10Text? EffectiveDate { get; init; }
+    public Max10Text? EffectiveDate { get; init; }
 
     /// <summary>
     /// Expiry date of the card expressed either in the YYYY-MM format, or in the YYYY-MM-DD format.
@@ -52,5 +52,5 @@ public record PlainCardData5
     [IsoXmlTag("XpryDt")]
     [IsoSimpleType(IsoSimpleType.Max10Text)]
     [StringLength(maximumLength: 10, MinimumLength = 1)]
-    public required IsoMax10Text ExpiryDate { get; init; }
+    public required Max10Text ExpiryDate { get; init; }
 }

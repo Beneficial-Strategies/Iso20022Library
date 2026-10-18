@@ -24,7 +24,7 @@ public record RejectionReason2
     [IsoXmlTag("RjctgPtyRsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text RejectingPartyReason { get; init; }
+    public required Max35Text RejectingPartyReason { get; init; }
 
     /// <summary>
     /// Date and time at which the rejection was generated.
@@ -33,7 +33,7 @@ public record RejectionReason2
     [DisplayName("Rejection Date Time")]
     [IsoXmlTag("RjctnDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? RejectionDateTime { get; init; }
+    public ISODateTime? RejectionDateTime { get; init; }
 
     /// <summary>
     /// Description of the precise location of the potential error in a message.
@@ -43,7 +43,7 @@ public record RejectionReason2
     [IsoXmlTag("ErrLctn")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? ErrorLocation { get; init; }
+    public Max350Text? ErrorLocation { get; init; }
 
     /// <summary>
     /// Detailed description of the rejection reason.
@@ -53,7 +53,7 @@ public record RejectionReason2
     [IsoXmlTag("RsnDesc")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? ReasonDescription { get; init; }
+    public Max350Text? ReasonDescription { get; init; }
 
     /// <summary>
     /// Additional information related to the rejection and meant to allow for the precise identification of the rejection reason. This could include a copy of the rejected message in part or in full.
@@ -63,5 +63,5 @@ public record RejectionReason2
     [IsoXmlTag("AddtlData")]
     [IsoSimpleType(IsoSimpleType.Max20000Text)]
     [StringLength(maximumLength: 20000, MinimumLength = 1)]
-    public IsoMax20000Text? AdditionalData { get; init; }
+    public Max20000Text? AdditionalData { get; init; }
 }

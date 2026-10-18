@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PriorityNumeric1Choice
         /// </summary>
         [IsoXmlTag("Nmrc")]
         [IsoSimpleType(IsoSimpleType.Exact4NumericText)]
-        public required IsoExact4NumericText Value { get; init; }
+        public required Exact4NumericText Value { get; init; }
     }
 }

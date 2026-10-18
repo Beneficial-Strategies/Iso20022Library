@@ -26,7 +26,7 @@ public record TransactionLifeCycleIdentification1
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Exact15Text)]
-    public required IsoExact15Text Identification { get; init; }
+    public required Exact15Text Identification { get; init; }
 
     /// <summary>
     /// Contains authorisation sequence number.
@@ -35,7 +35,7 @@ public record TransactionLifeCycleIdentification1
     [DisplayName("Authorisation Sequence Number")]
     [IsoXmlTag("AuthstnSeqNb")]
     [IsoSimpleType(IsoSimpleType.Exact2NumericText)]
-    public IsoExact2NumericText? AuthorisationSequenceNumber { get; init; }
+    public Exact2NumericText? AuthorisationSequenceNumber { get; init; }
 
     /// <summary>
     /// Number used with trace identifier to uniquely identify where a single authorisation was obtained covering a number of financial presentments.
@@ -45,7 +45,7 @@ public record TransactionLifeCycleIdentification1
     [DisplayName("Presentment Sequence Number")]
     [IsoXmlTag("PresntmntSeqNb")]
     [IsoSimpleType(IsoSimpleType.Exact2NumericText)]
-    public IsoExact2NumericText? PresentmentSequenceNumber { get; init; }
+    public Exact2NumericText? PresentmentSequenceNumber { get; init; }
 
     /// <summary>
     /// Expected maximum number of presentments for this transaction.
@@ -54,7 +54,7 @@ public record TransactionLifeCycleIdentification1
     [DisplayName("Presentment Sequence Count")]
     [IsoXmlTag("PresntmntSeqCnt")]
     [IsoSimpleType(IsoSimpleType.Exact2NumericText)]
-    public IsoExact2NumericText? PresentmentSequenceCount { get; init; }
+    public Exact2NumericText? PresentmentSequenceCount { get; init; }
 
     /// <summary>
     /// Code calculated using an algorithm against key transaction data elements that are common to both authorisation and financial messages.
@@ -65,5 +65,5 @@ public record TransactionLifeCycleIdentification1
     [IsoXmlTag("AuthntcnTkn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AuthenticationToken { get; init; }
+    public Max35Text? AuthenticationToken { get; init; }
 }

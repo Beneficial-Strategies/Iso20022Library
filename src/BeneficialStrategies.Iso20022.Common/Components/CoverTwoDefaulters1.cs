@@ -23,7 +23,7 @@ public record CoverTwoDefaulters1
     [DisplayName("Cover 1 Identification")]
     [IsoXmlTag("Cover1Id")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public required IsoLEIIdentifier Cover1Identification { get; init; }
+    public required LEIIdentifier Cover1Identification { get; init; }
 
     /// <summary>
     /// Identifies the member whose default would generate the second largest liquidity exposure for the CCP under the scenario and for the relevant currency.
@@ -32,5 +32,5 @@ public record CoverTwoDefaulters1
     [DisplayName("Cover 2 Identification")]
     [IsoXmlTag("Cover2Id")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public required IsoLEIIdentifier Cover2Identification { get; init; }
+    public required LEIIdentifier Cover2Identification { get; init; }
 }

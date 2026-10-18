@@ -24,7 +24,7 @@ public record SecuritiesPosition1
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public required IsoMax4AlphaNumericText Type { get; init; }
+    public required Max4AlphaNumericText Type { get; init; }
 
     /// <summary>
     /// Specifies the quantity of a position or a balance.

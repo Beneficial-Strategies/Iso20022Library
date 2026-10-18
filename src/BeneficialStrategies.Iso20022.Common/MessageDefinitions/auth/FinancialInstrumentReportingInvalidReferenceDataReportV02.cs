@@ -66,7 +66,7 @@ public record FinancialInstrumentReportingInvalidReferenceDataReportV02 : IOuter
     [DisplayName("Number Of Records")]
     [IsoXmlTag("NbOfRcrds")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NumberOfRecords { get; init; }
+    public Number? NumberOfRecords { get; init; }
 
     /// <summary>
     /// Provides the details of the financial instruments.

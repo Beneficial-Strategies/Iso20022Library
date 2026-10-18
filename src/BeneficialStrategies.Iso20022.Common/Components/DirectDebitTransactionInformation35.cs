@@ -46,7 +46,7 @@ public record DirectDebitTransactionInformation35
     [IsoId("d20bfd82-b557-4a7c-8b8a-20b59acabd7d")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
-    public IsoISODate? InterbankSettlementDate { get; init; }
+    public DateOnly? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Indicator of the urgency or order of importance that the instructing party would like the instructed party to apply to the processing of the settlement instruction.
@@ -78,7 +78,7 @@ public record DirectDebitTransactionInformation35
     [IsoId("ef45b852-b2dc-46e2-bd6e-2816361729d3")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
-    public IsoBaseOneRate? ExchangeRate { get; init; }
+    public BaseOneRate? ExchangeRate { get; init; }
 
     /// <summary>
     /// Specifies which party/parties will bear the charges associated with the processing of the payment transaction.
@@ -102,7 +102,7 @@ public record DirectDebitTransactionInformation35
     [IsoId("7ae95e44-1194-4af6-825f-4a2f4d2e2d00")]
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
-    public IsoISODate? RequestedCollectionDate { get; init; }
+    public DateOnly? RequestedCollectionDate { get; init; }
 
     /// <summary>
     /// Provides information specific to the direct debit mandate.

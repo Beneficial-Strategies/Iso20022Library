@@ -56,7 +56,7 @@ public record NetObligation3
     /// </summary>
     [DisplayName("Obligation Identification")]
     [IsoXmlTag("OblgtnId")]
-    public required IsoMax35Text ObligationIdentification { get; init; }
+    public required Max35Text ObligationIdentification { get; init; }
 
     /// <summary>
     /// Participant Netting Identification.
@@ -77,5 +77,5 @@ public record NetObligation3
     /// </summary>
     [DisplayName("Transactions Number")]
     [IsoXmlTag("TxsNb")]
-    public IsoMax10NumericText? TransactionsNumber { get; init; }
+    public Max10NumericText? TransactionsNumber { get; init; }
 }

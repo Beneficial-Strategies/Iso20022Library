@@ -25,7 +25,7 @@ public record DrawdownAllowanceCheck1
     [DisplayName("BCE Indicator")]
     [IsoXmlTag("BCEInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? BCEIndicator { get; init; }
+    public YesNoIndicator? BCEIndicator { get; init; }
 
     /// <summary>
     /// Species information about the drawdown allowance check.
@@ -35,5 +35,5 @@ public record DrawdownAllowanceCheck1
     [IsoXmlTag("ChckInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? CheckInformation { get; init; }
+    public Max350Text? CheckInformation { get; init; }
 }

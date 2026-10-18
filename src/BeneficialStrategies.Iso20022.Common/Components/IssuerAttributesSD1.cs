@@ -24,7 +24,7 @@ public record IssuerAttributesSD1
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Name by which a party is known and which is usually used to identify that party.
@@ -34,7 +34,7 @@ public record IssuerAttributesSD1
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax140Text Name { get; init; }
+    public required RestrictedFINXMax140Text Name { get; init; }
 
     /// <summary>
     /// Registered number type of the entity.
@@ -52,7 +52,7 @@ public record IssuerAttributesSD1
     [IsoXmlTag("OthrRegdNbTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherRegisteredNumberType { get; init; }
+    public Max35Text? OtherRegisteredNumberType { get; init; }
 
     /// <summary>
     /// Equivalent, unique number of the entity for the Registered Number Type.
@@ -62,7 +62,7 @@ public record IssuerAttributesSD1
     [IsoXmlTag("RegnNb")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoMax16Text RegistrationNumber { get; init; }
+    public required Max16Text RegistrationNumber { get; init; }
 
     /// <summary>
     /// ASX Issuer Code.
@@ -71,5 +71,5 @@ public record IssuerAttributesSD1
     [DisplayName("Issuer Identification")]
     [IsoXmlTag("IssrId")]
     [IsoSimpleType(IsoSimpleType.Exact3UpperCaseAlphaNumericText)]
-    public required IsoExact3UpperCaseAlphaNumericText IssuerIdentification { get; init; }
+    public required Exact3UpperCaseAlphaNumericText IssuerIdentification { get; init; }
 }

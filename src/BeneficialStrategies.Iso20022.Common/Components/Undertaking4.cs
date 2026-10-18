@@ -60,7 +60,7 @@ public record Undertaking4
     [DisplayName("Date Of Issuance")]
     [IsoXmlTag("DtOfIssnc")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DateOfIssuance { get; init; }
+    public DateOnly? DateOfIssuance { get; init; }
 
     /// <summary>
     /// Party asked to advise the requested local undertaking to the beneficiary or to another advising party at the request of the local undertaking issuer.
@@ -101,7 +101,7 @@ public record Undertaking4
     [DisplayName("Confirmation Indicator")]
     [IsoXmlTag("ConfInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ConfirmationIndicator { get; init; }
+    public YesNoIndicator? ConfirmationIndicator { get; init; }
 
     /// <summary>
     /// Party, in addition to the other parties specified in the requested local undertaking, that is also related to the requested local undertaking.
@@ -150,7 +150,7 @@ public record Undertaking4
     [DisplayName("Multiple Demand Indicator")]
     [IsoXmlTag("MltplDmndInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? MultipleDemandIndicator { get; init; }
+    public YesNoIndicator? MultipleDemandIndicator { get; init; }
 
     /// <summary>
     /// Indicates that partial demands/drawings are not permitted.
@@ -159,7 +159,7 @@ public record Undertaking4
     [DisplayName("Partial Demand Indicator")]
     [IsoXmlTag("PrtlDmndInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PartialDemandIndicator { get; init; }
+    public YesNoIndicator? PartialDemandIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the applicant/obligor or beneficiary is responsible for payment of the confirmation charges.
@@ -200,7 +200,7 @@ public record Undertaking4
     [DisplayName("Transfer Indicator")]
     [IsoXmlTag("TrfInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? TransferIndicator { get; init; }
+    public YesNoIndicator? TransferIndicator { get; init; }
 
     /// <summary>
     /// Additional information related to the requested local undertaking.

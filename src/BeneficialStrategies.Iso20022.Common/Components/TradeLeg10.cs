@@ -24,7 +24,7 @@ public record TradeLeg10
     [IsoXmlTag("TradLegId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TradeLegIdentification { get; init; }
+    public required Max35Text TradeLegIdentification { get; init; }
 
     /// <summary>
     /// Reference allocated by the broker dealer.
@@ -34,7 +34,7 @@ public record TradeLeg10
     [IsoXmlTag("TradId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TradeIdentification { get; init; }
+    public Max35Text? TradeIdentification { get; init; }
 
     /// <summary>
     /// Unique reference assigned by the trading venue when the trade is executed.
@@ -44,7 +44,7 @@ public record TradeLeg10
     [IsoXmlTag("TradExctnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TradeExecutionIdentification { get; init; }
+    public required Max35Text TradeExecutionIdentification { get; init; }
 
     /// <summary>
     /// Identifies the order sent by the final investor to an intermediary in order to initiate a trade in the former&apos;s name. This identification is then matched with the equivalent trade by the clearing.
@@ -54,7 +54,7 @@ public record TradeLeg10
     [IsoXmlTag("OrdrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OrderIdentification { get; init; }
+    public Max35Text? OrderIdentification { get; init; }
 
     /// <summary>
     /// Identifies the portion of assets within a determined trade that shall be allocated to different clients.
@@ -64,7 +64,7 @@ public record TradeLeg10
     [IsoXmlTag("AllcnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AllocationIdentification { get; init; }
+    public Max35Text? AllocationIdentification { get; init; }
 
     /// <summary>
     /// Provides the date and time of trade transaction.
@@ -73,7 +73,7 @@ public record TradeLeg10
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate TradeDate { get; init; }
+    public required DateOnly TradeDate { get; init; }
 
     /// <summary>
     /// Date and time used to determine the price applicable to a trade. If the trade is registered &quot;after market&quot; hours, the trading price will the price of the day but the actual trade date will be the next working day.
@@ -82,7 +82,7 @@ public record TradeLeg10
     [DisplayName("Transaction Date And Time")]
     [IsoXmlTag("TxDtAndTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? TransactionDateAndTime { get; init; }
+    public ISODateTime? TransactionDateAndTime { get; init; }
 
     /// <summary>
     /// Provides the contractual settlement date.
@@ -163,7 +163,7 @@ public record TradeLeg10
     [DisplayName("Derivative Related Trade")]
     [IsoXmlTag("DerivRltdTrad")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? DerivativeRelatedTrade { get; init; }
+    public YesNoIndicator? DerivativeRelatedTrade { get; init; }
 
     /// <summary>
     /// Party that identifies a broker when required (for example, authorised broker or prime broker).
@@ -189,7 +189,7 @@ public record TradeLeg10
     [IsoXmlTag("TradRegnOrgn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TradeRegistrationOrigin { get; init; }
+    public Max35Text? TradeRegistrationOrigin { get; init; }
 
     /// <summary>
     /// Identifier of the trading participant&apos;s account at the trading venue using the venue&apos;s coding system.

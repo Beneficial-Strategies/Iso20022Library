@@ -24,7 +24,7 @@ public record SecuritiesCertificate5
     [IsoXmlTag("Nb")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax30Text)]
     [StringLength(maximumLength: 30, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax30Text Number { get; init; }
+    public required RestrictedFINXMax30Text Number { get; init; }
 
     /// <summary>
     /// Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.
@@ -34,7 +34,7 @@ public record SecuritiesCertificate5
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4AlphaNumericText? Issuer { get; init; }
+    public Max4AlphaNumericText? Issuer { get; init; }
 
     /// <summary>
     /// Short textual description of the scheme.
@@ -44,5 +44,5 @@ public record SecuritiesCertificate5
     [IsoXmlTag("SchmeNm")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4AlphaNumericText? SchemeName { get; init; }
+    public Max4AlphaNumericText? SchemeName { get; init; }
 }

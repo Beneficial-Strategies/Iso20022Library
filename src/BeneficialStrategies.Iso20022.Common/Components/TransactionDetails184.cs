@@ -94,7 +94,7 @@ public record TransactionDetails184
     [IsoId("_oXVjf5aPEfC2_67yGLymgK")]
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
-    public IsoMax3Number? NumberOfDaysAccrued { get; init; }
+    public Max3Number? NumberOfDaysAccrued { get; init; }
 
     /// <summary>
     /// Amount of money that is to be/was posted to the account.
@@ -158,7 +158,7 @@ public record TransactionDetails184
     [IsoId("_oXVjf5aPEfC2_67yGLymgS")]
     [DisplayName("Acknowledged Status Time Stamp")]
     [IsoXmlTag("AckdStsTmStmp")]
-    public IsoISODateTime? AcknowledgedStatusTimeStamp { get; init; }
+    public ISODateTime? AcknowledgedStatusTimeStamp { get; init; }
 
     /// <summary>
     /// Time stamp on when the transaction is matched.
@@ -166,7 +166,7 @@ public record TransactionDetails184
     [IsoId("_oXVjf5aPEfC2_67yGLymgT")]
     [DisplayName("Matched Status Time Stamp")]
     [IsoXmlTag("MtchdStsTmStmp")]
-    public IsoISODateTime? MatchedStatusTimeStamp { get; init; }
+    public ISODateTime? MatchedStatusTimeStamp { get; init; }
 
     /// <summary>
     /// Identifies the chain of delivering settlement parties.
@@ -190,7 +190,7 @@ public record TransactionDetails184
     [IsoId("_oXVjf5aPEfC2_67yGLymgW")]
     [DisplayName("Reversal Indicator")]
     [IsoXmlTag("RvslInd")]
-    public IsoYesNoIndicator? ReversalIndicator { get; init; }
+    public YesNoIndicator? ReversalIndicator { get; init; }
 
     /// <summary>
     /// Provides additional details on the transaction which cannot be included within the structured fields of the message.
@@ -198,5 +198,5 @@ public record TransactionDetails184
     [IsoId("_oXVjf5aPEfC2_67yGLymgX")]
     [DisplayName("Transaction Additional Details")]
     [IsoXmlTag("TxAddtlDtls")]
-    public IsoMax350Text? TransactionAdditionalDetails { get; init; }
+    public Max350Text? TransactionAdditionalDetails { get; init; }
 }

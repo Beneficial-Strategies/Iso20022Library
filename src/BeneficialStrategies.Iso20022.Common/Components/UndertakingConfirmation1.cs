@@ -32,7 +32,7 @@ public record UndertakingConfirmation1
     [IsoXmlTag("RefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ReferenceNumber { get; init; }
+    public required Max35Text ReferenceNumber { get; init; }
 
     /// <summary>
     /// Date and time when the undertaking or amendment of the undertaking was confirmed.

@@ -24,7 +24,7 @@ public record CardTransactionEnvironment2
     [IsoXmlTag("AcqrrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text AcquirerIdentification { get; init; }
+    public required Max35Text AcquirerIdentification { get; init; }
 
     /// <summary>
     /// Identification of the interconnected card scheme from which the response is coming.
@@ -34,7 +34,7 @@ public record CardTransactionEnvironment2
     [IsoXmlTag("CardSchmeId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CardSchemeIdentification { get; init; }
+    public Max35Text? CardSchemeIdentification { get; init; }
 
     /// <summary>
     /// Identification of the card acceptor performing the transaction.
@@ -44,7 +44,7 @@ public record CardTransactionEnvironment2
     [IsoXmlTag("AccptrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AcceptorIdentification { get; init; }
+    public Max35Text? AcceptorIdentification { get; init; }
 
     /// <summary>
     /// Identification of the card terminal performing the transaction.
@@ -54,7 +54,7 @@ public record CardTransactionEnvironment2
     [IsoXmlTag("TermnlId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TerminalIdentification { get; init; }
+    public Max35Text? TerminalIdentification { get; init; }
 
     /// <summary>
     /// Card performing the transaction.

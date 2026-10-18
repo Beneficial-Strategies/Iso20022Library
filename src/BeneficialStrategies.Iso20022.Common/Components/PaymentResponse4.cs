@@ -32,7 +32,7 @@ public record PaymentResponse4
     [IsoXmlTag("SaleRefId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SaleReferenceIdentification { get; init; }
+    public Max35Text? SaleReferenceIdentification { get; init; }
 
     /// <summary>
     /// POI identification of the transaction in an unambiguous way.
@@ -50,7 +50,7 @@ public record PaymentResponse4
     [IsoXmlTag("POIRcncltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? POIReconciliationIdentification { get; init; }
+    public Max35Text? POIReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Identification of the transaction given by the Issuer.
@@ -60,7 +60,7 @@ public record PaymentResponse4
     [IsoXmlTag("IssrRefData")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? IssuerReferenceData { get; init; }
+    public Max140Text? IssuerReferenceData { get; init; }
 
     /// <summary>
     /// Data related to the result of a processed payment transaction.

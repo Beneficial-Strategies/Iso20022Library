@@ -56,7 +56,7 @@ public record ATMTransaction51
     /// </summary>
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
-    public IsoMax10000Binary? ICCRelatedData { get; init; }
+    public Max10000Binary? ICCRelatedData { get; init; }
 
     /// <summary>
     /// Incident.
@@ -70,28 +70,28 @@ public record ATMTransaction51
     /// </summary>
     [DisplayName("Incident Detail")]
     [IsoXmlTag("IncdntDtl")]
-    public ValueList<IsoMax70Text> IncidentDetail { get; init; } = [];
+    public ValueList<Max70Text> IncidentDetail { get; init; } = [];
 
     /// <summary>
     /// Receipt Printed.
     /// </summary>
     [DisplayName("Receipt Printed")]
     [IsoXmlTag("RctPrtd")]
-    public IsoTrueFalseIndicator? ReceiptPrinted { get; init; }
+    public TrueFalseIndicator? ReceiptPrinted { get; init; }
 
     /// <summary>
     /// Reconciliation Identification.
     /// </summary>
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
-    public IsoMax35Text? ReconciliationIdentification { get; init; }
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Requested Receipt.
     /// </summary>
     [DisplayName("Requested Receipt")]
     [IsoXmlTag("ReqdRct")]
-    public IsoTrueFalseIndicator? RequestedReceipt { get; init; }
+    public TrueFalseIndicator? RequestedReceipt { get; init; }
 
     /// <summary>
     /// Sub Deposit.

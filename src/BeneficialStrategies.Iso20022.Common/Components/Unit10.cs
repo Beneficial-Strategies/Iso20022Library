@@ -23,7 +23,7 @@ public record Unit10
     [DisplayName("Units Number")]
     [IsoXmlTag("UnitsNb")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public required IsoDecimalNumber UnitsNumber { get; init; }
+    public required DecimalNumber UnitsNumber { get; init; }
 
     /// <summary>
     /// Tax group to which the purchased investment fund units belong. The investor indicates to the intermediary operating pooled nominees, which type of unit is to be sold.

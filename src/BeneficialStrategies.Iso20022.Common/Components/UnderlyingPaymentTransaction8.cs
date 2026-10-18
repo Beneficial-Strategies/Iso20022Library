@@ -21,7 +21,7 @@ public record UnderlyingPaymentTransaction8
     /// </summary>
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Original Group Information.
@@ -35,7 +35,7 @@ public record UnderlyingPaymentTransaction8
     /// </summary>
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
-    public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Original Interbank Settlement Amount.
@@ -49,7 +49,7 @@ public record UnderlyingPaymentTransaction8
     /// </summary>
     [DisplayName("Original Interbank Settlement Date")]
     [IsoXmlTag("OrgnlIntrBkSttlmDt")]
-    public IsoISODate? OriginalInterbankSettlementDate { get; init; }
+    public DateOnly? OriginalInterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Original Service Level.
@@ -63,7 +63,7 @@ public record UnderlyingPaymentTransaction8
     /// </summary>
     [DisplayName("Original Transaction Identification")]
     [IsoXmlTag("OrgnlTxId")]
-    public IsoMax35Text? OriginalTransactionIdentification { get; init; }
+    public Max35Text? OriginalTransactionIdentification { get; init; }
 
     /// <summary>
     /// Original Transaction Reference.
@@ -77,5 +77,5 @@ public record UnderlyingPaymentTransaction8
     /// </summary>
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
-    public IsoUUIDv4Identifier? OriginalUETR { get; init; }
+    public UUIDv4Identifier? OriginalUETR { get; init; }
 }

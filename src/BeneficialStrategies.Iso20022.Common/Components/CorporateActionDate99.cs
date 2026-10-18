@@ -21,7 +21,7 @@ public record CorporateActionDate99
     /// </summary>
     [DisplayName("Earliest Payment Date")]
     [IsoXmlTag("EarlstPmtDt")]
-    public IsoISODate? EarliestPaymentDate { get; init; }
+    public DateOnly? EarliestPaymentDate { get; init; }
 
     /// <summary>
     /// Foreign Exchange Rate Fixing Date.
@@ -35,7 +35,7 @@ public record CorporateActionDate99
     /// </summary>
     [DisplayName("Payment Date")]
     [IsoXmlTag("PmtDt")]
-    public IsoISODate? PaymentDate { get; init; }
+    public DateOnly? PaymentDate { get; init; }
 
     /// <summary>
     /// Posting Date.
@@ -49,5 +49,5 @@ public record CorporateActionDate99
     /// </summary>
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
-    public IsoISODate? ValueDate { get; init; }
+    public DateOnly? ValueDate { get; init; }
 }

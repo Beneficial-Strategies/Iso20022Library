@@ -32,5 +32,5 @@ public record RegistrationReason5
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max210Text)]
     [StringLength(maximumLength: 210, MinimumLength = 1)]
-    public IsoMax210Text? AdditionalInformation { get; init; }
+    public Max210Text? AdditionalInformation { get; init; }
 }

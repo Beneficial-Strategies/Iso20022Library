@@ -32,7 +32,7 @@ public record ReportedFraud3
     [IsoXmlTag("OthrFrdTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherFraudType { get; init; }
+    public Max35Text? OtherFraudType { get; init; }
 
     /// <summary>
     /// Identifies the type of reported fraudulent transaction.
@@ -50,7 +50,7 @@ public record ReportedFraud3
     [IsoXmlTag("OthrFrdRptgActn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherFraudReportingAction { get; init; }
+    public Max35Text? OtherFraudReportingAction { get; init; }
 
     /// <summary>
     /// Type of fraud reporting entity.
@@ -68,7 +68,7 @@ public record ReportedFraud3
     [IsoXmlTag("OthrRptgNtty")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherReportingEntity { get; init; }
+    public Max35Text? OtherReportingEntity { get; init; }
 
     /// <summary>
     /// Identifies the type of cardholder credential that was compromised.
@@ -85,7 +85,7 @@ public record ReportedFraud3
     [DisplayName("Cardholder Reporting Date")]
     [IsoXmlTag("CrdhldrRptgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? CardholderReportingDate { get; init; }
+    public DateOnly? CardholderReportingDate { get; init; }
 
     /// <summary>
     /// Date fraud was confirmed by the cardholder.
@@ -94,7 +94,7 @@ public record ReportedFraud3
     [DisplayName("Confirmation Reporting Date")]
     [IsoXmlTag("ConfRptgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ConfirmationReportingDate { get; init; }
+    public DateOnly? ConfirmationReportingDate { get; init; }
 
     /// <summary>
     /// Reference to the case as provided by the submitter.
@@ -104,7 +104,7 @@ public record ReportedFraud3
     [IsoXmlTag("SubmitrCaseRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SubmitterCaseReference { get; init; }
+    public Max35Text? SubmitterCaseReference { get; init; }
 
     /// <summary>
     /// Details of fraudulent case.
@@ -122,5 +122,5 @@ public record ReportedFraud3
     [IsoXmlTag("FrdInvstgtnSts")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? FraudInvestigationStatus { get; init; }
+    public Max256Text? FraudInvestigationStatus { get; init; }
 }

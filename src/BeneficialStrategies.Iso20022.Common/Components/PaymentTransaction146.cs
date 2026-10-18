@@ -24,7 +24,7 @@ public record PaymentTransaction146
     [IsoXmlTag("RtrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReturnIdentification { get; init; }
+    public Max35Text? ReturnIdentification { get; init; }
 
     /// <summary>
     /// Provides information on the original message.
@@ -42,7 +42,7 @@ public record PaymentTransaction146
     [IsoXmlTag("OrgnlInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.
@@ -52,7 +52,7 @@ public record PaymentTransaction146
     [IsoXmlTag("OrgnlEndToEndId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original first instructing agent, to unambiguously identify the transaction.
@@ -62,7 +62,7 @@ public record PaymentTransaction146
     [IsoXmlTag("OrgnlTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalTransactionIdentification { get; init; }
+    public Max35Text? OriginalTransactionIdentification { get; init; }
 
     /// <summary>
     /// Universally unique identifier to provide the original end-to-end reference of a payment transaction.
@@ -71,7 +71,7 @@ public record PaymentTransaction146
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
     [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
-    public IsoUUIDv4Identifier? OriginalUETR { get; init; }
+    public UUIDv4Identifier? OriginalUETR { get; init; }
 
     /// <summary>
     /// Unique reference, as assigned by the original clearing system, to unambiguously identify the original instruction.
@@ -81,7 +81,7 @@ public record PaymentTransaction146
     [IsoXmlTag("OrgnlClrSysRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalClearingSystemReference { get; init; }
+    public Max35Text? OriginalClearingSystemReference { get; init; }
 
     /// <summary>
     /// Amount of money moved between the instructing agent and the instructed agent, as provided in the original instruction.
@@ -99,7 +99,7 @@ public record PaymentTransaction146
     [DisplayName("Original Interbank Settlement Date")]
     [IsoXmlTag("OrgnlIntrBkSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? OriginalInterbankSettlementDate { get; init; }
+    public DateOnly? OriginalInterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Specifies the type of the return transaction.
@@ -124,7 +124,7 @@ public record PaymentTransaction146
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? InterbankSettlementDate { get; init; }
+    public DateOnly? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Indicator of the urgency or order of importance that the instructing party would like the instructed party to apply to the processing of the settlement instruction.
@@ -167,7 +167,7 @@ public record PaymentTransaction146
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? ExchangeRate { get; init; }
+    public BaseOneRate? ExchangeRate { get; init; }
 
     /// <summary>
     /// Amount of money asked or paid as compensation for the processing of the instruction.
@@ -201,7 +201,7 @@ public record PaymentTransaction146
     [IsoXmlTag("ClrSysRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClearingSystemReference { get; init; }
+    public Max35Text? ClearingSystemReference { get; init; }
 
     /// <summary>
     /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).||Usage: The instructing agent is the party sending the return message and not the party that sent the original instruction that is being returned.

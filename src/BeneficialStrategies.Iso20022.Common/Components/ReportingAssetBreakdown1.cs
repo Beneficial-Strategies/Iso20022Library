@@ -32,7 +32,7 @@ public record ReportingAssetBreakdown1
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Identification { get; init; }
+    public Max350Text? Identification { get; init; }
 
     /// <summary>
     /// Value of the reporting asset.

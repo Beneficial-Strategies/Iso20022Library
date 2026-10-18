@@ -28,7 +28,7 @@ public record ATMStatus2
     /// </summary>
     [DisplayName("Current Status Reason")]
     [IsoXmlTag("CurStsRsn")]
-    public ValueList<IsoMax35Text> CurrentStatusReason { get; init; } = [];
+    public ValueList<Max35Text> CurrentStatusReason { get; init; } = [];
 
     /// <summary>
     /// Demanded Status.

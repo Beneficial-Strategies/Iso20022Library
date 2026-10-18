@@ -30,7 +30,7 @@ public record Order24
     [IsoId("_F49B-weGEe2fOITqoTnSLQ")]
     [DisplayName("Order Identification")]
     [IsoXmlTag("OrdrId")]
-    public SimpleValueList<IsoMax35Text> OrderIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> OrderIdentification { get; init; } = [];
 
     /// <summary>
     /// Unique identifier for the order as assigned by the buy-side. Uniqueness must be guaranteed within a single trading day. Firms, particularly those that electronically submit multi-day orders, trade globally or throughout market close periods, should ensure uniqueness across days, for example by embedding a date within the ClientOrderIdentification element.
@@ -38,7 +38,7 @@ public record Order24
     [IsoId("_F49CAweGEe2fOITqoTnSLQ")]
     [DisplayName("Client Order Identification")]
     [IsoXmlTag("ClntOrdrId")]
-    public SimpleValueList<IsoMax35Text> ClientOrderIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> ClientOrderIdentification { get; init; } = [];
 
     /// <summary>
     /// Assigned by the party that originates the order. Can be used to provide the ClientOrderIdentification used by an exchange or executing system.
@@ -46,7 +46,7 @@ public record Order24
     [IsoId("_F49CCweGEe2fOITqoTnSLQ")]
     [DisplayName("Secondary Client Order Identification")]
     [IsoXmlTag("ScndryClntOrdrId")]
-    public SimpleValueList<IsoMax35Text> SecondaryClientOrderIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> SecondaryClientOrderIdentification { get; init; } = [];
 
     /// <summary>
     /// Unique identifier for a list, as assigned by the trading party. The identifier must be unique within a single trading day.
@@ -54,7 +54,7 @@ public record Order24
     [IsoId("_F49CEweGEe2fOITqoTnSLQ")]
     [DisplayName("List Identification")]
     [IsoXmlTag("ListId")]
-    public SimpleValueList<IsoMax35Text> ListIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> ListIdentification { get; init; } = [];
 
     /// <summary>
     /// Coded list to specify the side of the order.
@@ -96,7 +96,7 @@ public record Order24
     [DisplayName("Pre Advice")]
     [IsoXmlTag("PreAdvc")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PreAdvice { get; init; }
+    public YesNoIndicator? PreAdvice { get; init; }
 
     /// <summary>
     /// Market in which a trade transaction is to be or has been executed.
@@ -113,7 +113,7 @@ public record Order24
     [DisplayName("Order Booking Date")]
     [IsoXmlTag("OrdrBookgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? OrderBookingDate { get; init; }
+    public DateOnly? OrderBookingDate { get; init; }
 
     /// <summary>
     /// Indicates the date and time of the agreement in principal between counter-parties prior to actual trade date.|Used with fixed income for municipal new issue markets.
@@ -122,7 +122,7 @@ public record Order24
     [DisplayName("Trade Origination Date")]
     [IsoXmlTag("TradOrgtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? TradeOriginationDate { get; init; }
+    public ISODateTime? TradeOriginationDate { get; init; }
 
     /// <summary>
     /// Specifies the date/time on which the trade was executed.
@@ -227,7 +227,7 @@ public record Order24
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
     [IsoSimpleType(IsoSimpleType.Max3Number)]
-    public IsoMax3Number? NumberOfDaysAccrued { get; init; }
+    public Max3Number? NumberOfDaysAccrued { get; init; }
 
     /// <summary>
     /// Specifies the number of days from trade date that the counterparty on the other side of the trade should be &quot;given up&quot; or divulged.
@@ -236,7 +236,7 @@ public record Order24
     [DisplayName("Give Up Number Of Days")]
     [IsoXmlTag("GvUpNbOfDays")]
     [IsoSimpleType(IsoSimpleType.Max3Number)]
-    public IsoMax3Number? GiveUpNumberOfDays { get; init; }
+    public Max3Number? GiveUpNumberOfDays { get; init; }
 
     /// <summary>
     /// Indicates whether the trade is cum interest or ex interest.
@@ -261,7 +261,7 @@ public record Order24
     [DisplayName("Accrued Interest Percentage")]
     [IsoXmlTag("AcrdIntrstPctg")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? AccruedInterestPercentage { get; init; }
+    public PercentageRate? AccruedInterestPercentage { get; init; }
 
     /// <summary>
     /// Specifies the regulatory conditions type of the trade.
@@ -302,7 +302,7 @@ public record Order24
     [DisplayName("Derivative Covered")]
     [IsoXmlTag("DerivCvrd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? DerivativeCovered { get; init; }
+    public YesNoIndicator? DerivativeCovered { get; init; }
 
     /// <summary>
     /// Type of charge/tax basis.
@@ -368,5 +368,5 @@ public record Order24
     [IsoXmlTag("AddtlTradInstrPrcgInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AdditionalTradeInstructionProcessingInformation { get; init; }
+    public Max350Text? AdditionalTradeInstructionProcessingInformation { get; init; }
 }

@@ -55,5 +55,5 @@ public record ATMSecurityContext5
     [DisplayName("Host Challenge")]
     [IsoXmlTag("HstChllng")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public IsoMax140Binary? HostChallenge { get; init; }
+    public Max140Binary? HostChallenge { get; init; }
 }

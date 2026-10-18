@@ -28,12 +28,12 @@ public record TradeRecurrentQuery7
     /// </summary>
     [DisplayName("Query Type")]
     [IsoXmlTag("QryTp")]
-    public required IsoMax1000Text QueryType { get; init; }
+    public required Max1000Text QueryType { get; init; }
 
     /// <summary>
     /// Valid Until.
     /// </summary>
     [DisplayName("Valid Until")]
     [IsoXmlTag("VldUntil")]
-    public required IsoISODate ValidUntil { get; init; }
+    public required DateOnly ValidUntil { get; init; }
 }

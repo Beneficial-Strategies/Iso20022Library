@@ -23,7 +23,7 @@ public record Quantity47
     [DisplayName("Unit")]
     [IsoXmlTag("Unit")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? Unit { get; init; }
+    public DecimalNumber? Unit { get; init; }
 
     /// <summary>
     /// Percentage rate of assets to be transferred.
@@ -32,7 +32,7 @@ public record Quantity47
     [DisplayName("Percentage Rate")]
     [IsoXmlTag("PctgRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? PercentageRate { get; init; }
+    public PercentageRate? PercentageRate { get; init; }
 
     /// <summary>
     /// Quantity expressed as an amount representing the face amount, that is, the principal, of a debt instrument.
@@ -66,5 +66,5 @@ public record Quantity47
     [IsoXmlTag("OthrAsst")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherAsset { get; init; }
+    public Max35Text? OtherAsset { get; init; }
 }

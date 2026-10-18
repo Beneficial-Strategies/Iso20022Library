@@ -23,7 +23,7 @@ public record PercentageTolerance1
     [DisplayName("Plus Percent")]
     [IsoXmlTag("PlusPct")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate PlusPercent { get; init; }
+    public required PercentageRate PlusPercent { get; init; }
 
     /// <summary>
     /// Variance in percentage allowed below the agreed dimension. For example, minus 10 percent.
@@ -32,5 +32,5 @@ public record PercentageTolerance1
     [DisplayName("Minus Percent")]
     [IsoXmlTag("MnsPct")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate MinusPercent { get; init; }
+    public required PercentageRate MinusPercent { get; init; }
 }

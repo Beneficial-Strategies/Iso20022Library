@@ -38,7 +38,7 @@ public record TradeSettlement1
     [IsoId("_TB-BCAEcEeCQm6a_G2yO_w_-2064443525")]
     [DisplayName("Payment Reference")]
     [IsoXmlTag("PmtRef")]
-    public SimpleValueList<IsoMax35Text> PaymentReference { get; init; } = [];
+    public SimpleValueList<Max35Text> PaymentReference { get; init; } = [];
 
     /// <summary>
     /// Code specifying the currency of the invoice.
@@ -222,7 +222,7 @@ public record TradeSettlement1
     [IsoId("_TCHyCwEcEeCQm6a_G2yO_w_-1864555444")]
     [DisplayName("Issuer Factoring List Identification")]
     [IsoXmlTag("IssrFactrgListId")]
-    public SimpleValueList<IsoMax35Text> IssuerFactoringListIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> IssuerFactoringListIdentification { get; init; } = [];
 
     /// <summary>
     /// Factoring agreement document referenced.
@@ -230,5 +230,5 @@ public record TradeSettlement1
     [IsoId("_TCHyDAEcEeCQm6a_G2yO_w_-626725410")]
     [DisplayName("Issuer Factoring Agreement Identification")]
     [IsoXmlTag("IssrFactrgAgrmtId")]
-    public SimpleValueList<IsoMax35Text> IssuerFactoringAgreementIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> IssuerFactoringAgreementIdentification { get; init; } = [];
 }

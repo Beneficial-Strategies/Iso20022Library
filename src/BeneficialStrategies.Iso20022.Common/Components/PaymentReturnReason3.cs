@@ -46,5 +46,5 @@ public record PaymentReturnReason3
     [IsoId("_nKYFK7TREeeyuKckOGlwuA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public SimpleValueList<IsoMax105Text> AdditionalInformation { get; init; } = [];
+    public SimpleValueList<Max105Text> AdditionalInformation { get; init; } = [];
 }

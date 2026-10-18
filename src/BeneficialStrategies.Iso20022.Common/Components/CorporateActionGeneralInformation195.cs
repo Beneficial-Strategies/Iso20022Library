@@ -22,7 +22,7 @@ public record CorporateActionGeneralInformation195
     [IsoId("_hlgQ87bhEe-NMoTZ6Byg6A")]
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
-    public required IsoMax35Text CorporateActionEventIdentification { get; init; }
+    public required Max35Text CorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Official and unique reference assigned by the official central body/entity within each market at the beginning of a corporate action event.
@@ -30,7 +30,7 @@ public record CorporateActionGeneralInformation195
     [IsoId("_hlgQ-7bhEe-NMoTZ6Byg6A")]
     [DisplayName("Official Corporate Action Event Identification")]
     [IsoXmlTag("OffclCorpActnEvtId")]
-    public IsoMax35Text? OfficialCorporateActionEventIdentification { get; init; }
+    public Max35Text? OfficialCorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Type of corporate action event.
@@ -46,5 +46,5 @@ public record CorporateActionGeneralInformation195
     [IsoId("_hu4Z9LbiEe-NMoTZ6Byg6A")]
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
-    public IsoISINOct2015Identifier? FinancialInstrumentIdentification { get; init; }
+    public ISINOct2015Identifier? FinancialInstrumentIdentification { get; init; }
 }

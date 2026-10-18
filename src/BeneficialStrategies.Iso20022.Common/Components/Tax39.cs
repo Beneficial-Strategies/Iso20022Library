@@ -32,7 +32,7 @@ public record Tax39
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Description of the tax.
@@ -42,7 +42,7 @@ public record Tax39
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Description { get; init; }
+    public Max35Text? Description { get; init; }
 
     /// <summary>
     /// Exemption for this type of tax.
@@ -53,7 +53,7 @@ public record Tax39
     [DisplayName("Tax Exemption")]
     [IsoXmlTag("TaxXmptn")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? TaxExemption { get; init; }
+    public TrueFalseIndicator? TaxExemption { get; init; }
 
     /// <summary>
     /// Reason for tax exemption.
@@ -63,7 +63,7 @@ public record Tax39
     [IsoXmlTag("TaxXmptRsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TaxExemptReason { get; init; }
+    public Max35Text? TaxExemptReason { get; init; }
 
     /// <summary>
     /// Tax amount.
@@ -80,7 +80,7 @@ public record Tax39
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Rate { get; init; }
+    public PercentageRate? Rate { get; init; }
 
     /// <summary>
     /// Indicate whether the Tax amount is included in total transaction amount
@@ -89,7 +89,7 @@ public record Tax39
     [DisplayName("Included In Total Indicator")]
     [IsoXmlTag("InclInTtlInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? IncludedInTotalIndicator { get; init; }
+    public TrueFalseIndicator? IncludedInTotalIndicator { get; init; }
 
     /// <summary>
     /// A code to indicate the tax amount is credit or debit

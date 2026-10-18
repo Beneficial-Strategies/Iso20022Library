@@ -24,7 +24,7 @@ public record Location3
     [IsoXmlTag("LctnCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LocationCode { get; init; }
+    public Max35Text? LocationCode { get; init; }
 
     /// <summary>
     /// Name (label) of the location.
@@ -34,7 +34,7 @@ public record Location3
     [IsoXmlTag("LctnNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LocationName { get; init; }
+    public Max35Text? LocationName { get; init; }
 
     /// <summary>
     /// Specific explanation of the location or directions.
@@ -44,7 +44,7 @@ public record Location3
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Description { get; init; }
+    public Max256Text? Description { get; init; }
 
     /// <summary>
     /// Contains the address details.
@@ -62,7 +62,7 @@ public record Location3
     [IsoXmlTag("LclTmZone")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? LocalTimeZone { get; init; }
+    public Max70Text? LocalTimeZone { get; init; }
 
     /// <summary>
     /// Local currency.

@@ -23,7 +23,7 @@ public record NumberOfRecordsPerStatus1
     [DisplayName("Detailed Number Of Records")]
     [IsoXmlTag("DtldNbOfRcrds")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText DetailedNumberOfRecords { get; init; }
+    public required Max15NumericText DetailedNumberOfRecords { get; init; }
 
     /// <summary>
     /// Common transaction status for all individual records reported.

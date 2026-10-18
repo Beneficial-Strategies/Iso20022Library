@@ -32,7 +32,7 @@ public record Amount9
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Contains the amount.
@@ -49,7 +49,7 @@ public record Amount9
     [DisplayName("Credit Indicator")]
     [IsoXmlTag("CdtInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CreditIndicator { get; init; }
+    public TrueFalseIndicator? CreditIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether or not the customer was notified about additional amounts.
@@ -58,5 +58,5 @@ public record Amount9
     [DisplayName("Customer Notified Indicator")]
     [IsoXmlTag("CstmrNtfdInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CustomerNotifiedIndicator { get; init; }
+    public TrueFalseIndicator? CustomerNotifiedIndicator { get; init; }
 }

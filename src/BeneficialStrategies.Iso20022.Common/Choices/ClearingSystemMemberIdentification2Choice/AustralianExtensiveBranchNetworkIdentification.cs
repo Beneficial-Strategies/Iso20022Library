@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
         /// </summary>
         [IsoXmlTag("AUBSBx")]
         [IsoSimpleType(IsoSimpleType.ExtensiveBranchNetworkIdentifier)]
-        public required IsoExtensiveBranchNetworkIdentifier Value { get; init; }
+        public required ExtensiveBranchNetworkIdentifier Value { get; init; }
     }
 }

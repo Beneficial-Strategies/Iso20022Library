@@ -24,7 +24,7 @@ public record LoyaltyTransactionTotals1
     [IsoXmlTag("POIGrpId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? POIGroupIdentification { get; init; }
+    public Max35Text? POIGroupIdentification { get; init; }
 
     /// <summary>
     /// Unit of the amount, expressed in point or in a monetary value and a currency.
@@ -42,7 +42,7 @@ public record LoyaltyTransactionTotals1
     [IsoXmlTag("CardPdctPrfl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CardProductProfile { get; init; }
+    public Max35Text? CardProductProfile { get; init; }
 
     /// <summary>
     /// Currency associated with the transaction totals.
@@ -67,7 +67,7 @@ public record LoyaltyTransactionTotals1
     [DisplayName("Total Number")]
     [IsoXmlTag("TtlNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber TotalNumber { get; init; }
+    public required Number TotalNumber { get; init; }
 
     /// <summary>
     /// Total amount of a collection of transactions.

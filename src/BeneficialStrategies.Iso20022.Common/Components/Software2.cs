@@ -30,7 +30,7 @@ public record Software2
     [IsoId("_kmgQhXn0EfCmC4yYaU27Kg")]
     [DisplayName("Sub Type")]
     [IsoXmlTag("SubTp")]
-    public IsoMax35Text? SubType { get; init; }
+    public Max35Text? SubType { get; init; }
 
     /// <summary>
     /// Software version.
@@ -38,5 +38,5 @@ public record Software2
     [IsoId("_kmgQh3n0EfCmC4yYaU27Kg")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
-    public IsoMax256Text? Version { get; init; }
+    public Max256Text? Version { get; init; }
 }

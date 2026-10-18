@@ -31,7 +31,7 @@ public record RateTypeAndLookback2
     [DisplayName("Look Back Days")]
     [IsoXmlTag("LookBckDays")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public IsoMax3NumericText? LookBackDays { get; init; }
+    public Max3NumericText? LookBackDays { get; init; }
 
     /// <summary>
     /// Identifies the penultimate accrual date of the transaction to the final (repurchase) date. Crystallising the penultimate fixing into a fixed rate for the final business day. This will allow for parties to send timely settlement instructions for the repurchase leg of the transaction. Default value is 1 day.

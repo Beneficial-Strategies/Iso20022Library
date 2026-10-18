@@ -22,7 +22,7 @@ public record Statement87
     [IsoId("_R4PwJFdOEfCb5MzBL2XS4A")]
     [DisplayName("Query Reference")]
     [IsoXmlTag("QryRef")]
-    public IsoMax35Text? QueryReference { get; init; }
+    public Max35Text? QueryReference { get; init; }
 
     /// <summary>
     /// Reference common to all pages of a statement.
@@ -30,7 +30,7 @@ public record Statement87
     [IsoId("_Ht09E9_NEe-Ned3-G07x_A")]
     [DisplayName("Statement Identification")]
     [IsoXmlTag("StmtId")]
-    public IsoMax35Text? StatementIdentification { get; init; }
+    public Max35Text? StatementIdentification { get; init; }
 
     /// <summary>
     /// Date and time of the statement.
@@ -62,5 +62,5 @@ public record Statement87
     [IsoId("_Ht09Nd_NEe-Ned3-G07x_A")]
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
-    public required IsoYesNoIndicator ActivityIndicator { get; init; }
+    public required YesNoIndicator ActivityIndicator { get; init; }
 }

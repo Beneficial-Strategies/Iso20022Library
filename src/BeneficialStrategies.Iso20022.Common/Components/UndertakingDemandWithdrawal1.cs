@@ -32,7 +32,7 @@ public record UndertakingDemandWithdrawal1
     [IsoXmlTag("AdvsgPtyRefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AdvisingPartyReferenceNumber { get; init; }
+    public Max35Text? AdvisingPartyReferenceNumber { get; init; }
 
     /// <summary>
     /// Details related to the demand.
@@ -50,5 +50,5 @@ public record UndertakingDemandWithdrawal1
     [IsoXmlTag("CnfrmrRefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ConfirmerReferenceNumber { get; init; }
+    public Max35Text? ConfirmerReferenceNumber { get; init; }
 }

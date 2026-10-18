@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ActivityIndicator1Choice
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("ISICIdr")]
-        public required IsoISICIdentifier Value { get; init; }
+        // The variant is named like its type, so the type is written in full.
+        public required BeneficialStrategies.Iso20022.SimpleTypes.ISICIdentifier Value { get; init; }
     }
 }

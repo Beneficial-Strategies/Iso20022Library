@@ -9,6 +9,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentMethod3Choice
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Prtry")]
-        public required IsoMax210Text Value { get; init; }
+        public required Max210Text Value { get; init; }
     }
 }

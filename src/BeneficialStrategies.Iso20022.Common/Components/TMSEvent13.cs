@@ -22,7 +22,7 @@ public record TMSEvent13
     [IsoId("_PMKpAbYEEfCUZfsQO4rYeA-tms")]
     [DisplayName("Time Stamp")]
     [IsoXmlTag("TmStmp")]
-    public required IsoISODateTime TimeStamp { get; init; }
+    public required ISODateTime TimeStamp { get; init; }
 
     /// <summary>
     /// Final result of the processed terminal management action.
@@ -46,7 +46,7 @@ public record TMSEvent13
     [IsoId("_PMKpAbYEEfCUZfsQO4rYeA-aer")]
     [DisplayName("Additional Error Information")]
     [IsoXmlTag("AddtlErrInf")]
-    public IsoMax70Text? AdditionalErrorInformation { get; init; }
+    public Max70Text? AdditionalErrorInformation { get; init; }
 
     /// <summary>
     /// Identification of the terminal management system (TMS) used with the action.
@@ -54,7 +54,7 @@ public record TMSEvent13
     [IsoId("_PMKpAbYEEfCUZfsQO4rYeA-tmid")]
     [DisplayName("Terminal Manager Identification")]
     [IsoXmlTag("TrmnlMgrId")]
-    public IsoMax35Text? TerminalManagerIdentification { get; init; }
+    public Max35Text? TerminalManagerIdentification { get; init; }
 
     /// <summary>
     /// Response of a device request done previously.

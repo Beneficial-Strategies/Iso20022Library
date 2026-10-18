@@ -21,7 +21,7 @@ public record ContractRegistration7
     /// </summary>
     [DisplayName("Contract Registration Identification")]
     [IsoXmlTag("CtrctRegnId")]
-    public required IsoMax35Text ContractRegistrationIdentification { get; init; }
+    public required Max35Text ContractRegistrationIdentification { get; init; }
 
     /// <summary>
     /// Contract Registration Opening.

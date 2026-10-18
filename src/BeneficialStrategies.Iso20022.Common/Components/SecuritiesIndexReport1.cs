@@ -26,7 +26,7 @@ public record SecuritiesIndexReport1
     [IsoXmlTag("TechRcrdId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TechnicalRecordIdentification { get; init; }
+    public Max35Text? TechnicalRecordIdentification { get; init; }
 
     /// <summary>
     /// Country code of the entity that wishes to express an interest in receiving transaction reports for the requested indexes.

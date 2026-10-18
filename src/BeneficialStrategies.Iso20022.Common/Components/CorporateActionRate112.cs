@@ -47,7 +47,7 @@ public record CorporateActionRate112
     [DisplayName("Transformation Rate")]
     [IsoXmlTag("TrfrmatnRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? TransformationRate { get; init; }
+    public PercentageRate? TransformationRate { get; init; }
 
     /// <summary>
     /// Rate used to calculate the amount of the charges/fees that cannot be categorised.

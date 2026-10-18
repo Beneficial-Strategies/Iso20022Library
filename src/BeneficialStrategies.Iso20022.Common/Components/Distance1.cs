@@ -31,7 +31,7 @@ public record Distance1
     [DisplayName("Odometer Start")]
     [IsoXmlTag("OdmtrStart")]
     [IsoSimpleType(IsoSimpleType.Max10NumericText)]
-    public IsoMax10NumericText? OdometerStart { get; init; }
+    public Max10NumericText? OdometerStart { get; init; }
 
     /// <summary>
     /// Odometer reading at return of rental (at the time of vehicle check-in).
@@ -40,7 +40,7 @@ public record Distance1
     [DisplayName("Odometer Return")]
     [IsoXmlTag("OdmtrRtr")]
     [IsoSimpleType(IsoSimpleType.Max10NumericText)]
-    public IsoMax10NumericText? OdometerReturn { get; init; }
+    public Max10NumericText? OdometerReturn { get; init; }
 
     /// <summary>
     /// Total distance expressed in unit of measure.
@@ -49,7 +49,7 @@ public record Distance1
     [DisplayName("Total Distance")]
     [IsoXmlTag("TtlDstnc")]
     [IsoSimpleType(IsoSimpleType.Max10NumericText)]
-    public IsoMax10NumericText? TotalDistance { get; init; }
+    public Max10NumericText? TotalDistance { get; init; }
 
     /// <summary>
     /// Maximum free miles or kilometres for the car rental period.
@@ -58,7 +58,7 @@ public record Distance1
     [DisplayName("Free Distance")]
     [IsoXmlTag("FreeDstnc")]
     [IsoSimpleType(IsoSimpleType.Max10NumericText)]
-    public IsoMax10NumericText? FreeDistance { get; init; }
+    public Max10NumericText? FreeDistance { get; init; }
 
     /// <summary>
     /// Defines the rate in relation to a specific distance.

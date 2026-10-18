@@ -63,7 +63,7 @@ public record BuyInConfirmationV03 : IOuterRecord
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TransactionIdentification { get; init; }
+    public Max35Text? TransactionIdentification { get; init; }
 
     /// <summary>
     /// Provides the identification of the clearing member (individual clearing member or general clearing member).

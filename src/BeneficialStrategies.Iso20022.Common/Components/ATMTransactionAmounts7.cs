@@ -24,7 +24,7 @@ public record ATMTransactionAmounts7
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Type { get; init; }
+    public required Max35Text Type { get; init; }
 
     /// <summary>
     /// Amount value.
@@ -50,5 +50,5 @@ public record ATMTransactionAmounts7
     [IsoXmlTag("Labl")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Label { get; init; }
+    public Max70Text? Label { get; init; }
 }

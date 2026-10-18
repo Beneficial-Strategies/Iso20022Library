@@ -23,7 +23,7 @@ public record ManagementPlanContent10
     [DisplayName("TM Challenge")]
     [IsoXmlTag("TMChllng")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public IsoMax140Binary? TMChallenge { get; init; }
+    public Max140Binary? TMChallenge { get; init; }
 
     /// <summary>
     /// Certificate chain of an asymmetric encryption keys for the encryption of temporary transport key of the key to inject.
@@ -31,7 +31,7 @@ public record ManagementPlanContent10
     [IsoId("_llkKI06pEeyGi9JAv6wq7Q")]
     [DisplayName("Key Encipherment Certificate")]
     [IsoXmlTag("KeyNcphrmntCert")]
-    public SimpleValueList<IsoMax10KBinary> KeyEnciphermentCertificate { get; init; } = [];
+    public SimpleValueList<Max10KBinary> KeyEnciphermentCertificate { get; init; } = [];
 
     /// <summary>
     /// Terminal management action to be performed by the point of interaction (POI).

@@ -29,21 +29,21 @@ public record OriginalPaymentInstruction47
     /// </summary>
     [DisplayName("Original Control Sum")]
     [IsoXmlTag("OrgnlCtrlSum")]
-    public IsoDecimalNumber? OriginalControlSum { get; init; }
+    public DecimalNumber? OriginalControlSum { get; init; }
 
     /// <summary>
     /// Original Number Of Transactions.
     /// </summary>
     [DisplayName("Original Number Of Transactions")]
     [IsoXmlTag("OrgnlNbOfTxs")]
-    public IsoMax15NumericText? OriginalNumberOfTransactions { get; init; }
+    public Max15NumericText? OriginalNumberOfTransactions { get; init; }
 
     /// <summary>
     /// Original Payment Information Identification.
     /// </summary>
     [DisplayName("Original Payment Information Identification")]
     [IsoXmlTag("OrgnlPmtInfId")]
-    public required IsoMax35Text OriginalPaymentInformationIdentification { get; init; }
+    public required Max35Text OriginalPaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Payment Information Status.

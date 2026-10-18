@@ -21,14 +21,14 @@ public record InputResultData6
     /// </summary>
     [DisplayName("Confirmed Flag")]
     [IsoXmlTag("ConfdFlg")]
-    public IsoTrueFalseIndicator? ConfirmedFlag { get; init; }
+    public TrueFalseIndicator? ConfirmedFlag { get; init; }
 
     /// <summary>
     /// Function Key.
     /// </summary>
     [DisplayName("Function Key")]
     [IsoXmlTag("FctnKey")]
-    public IsoNumber? FunctionKey { get; init; }
+    public Number? FunctionKey { get; init; }
 
     /// <summary>
     /// Image Captured Signature.
@@ -49,7 +49,7 @@ public record InputResultData6
     /// </summary>
     [DisplayName("Input Message")]
     [IsoXmlTag("InptMsg")]
-    public IsoMax20000Text? InputMessage { get; init; }
+    public Max20000Text? InputMessage { get; init; }
 
     /// <summary>
     /// Password.

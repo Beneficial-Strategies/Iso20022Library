@@ -24,7 +24,7 @@ public record GenericValidationRuleIdentification1
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Further information on the validation rule as identified in the Identification.
@@ -34,7 +34,7 @@ public record GenericValidationRuleIdentification1
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Description { get; init; }
+    public Max350Text? Description { get; init; }
 
     /// <summary>
     /// Name of the identification scheme.
@@ -52,5 +52,5 @@ public record GenericValidationRuleIdentification1
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Issuer { get; init; }
+    public Max35Text? Issuer { get; init; }
 }

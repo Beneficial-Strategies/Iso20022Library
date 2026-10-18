@@ -48,7 +48,7 @@ public record TotalFeesAndTaxes40
     [IsoXmlTag("ComrclAgrmtRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CommercialAgreementReference { get; init; }
+    public Max35Text? CommercialAgreementReference { get; init; }
 
     /// <summary>
     /// Individual fee (charge/commission).

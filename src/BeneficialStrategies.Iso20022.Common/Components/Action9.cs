@@ -40,7 +40,7 @@ public record Action9
     [IsoXmlTag("OthrActnTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherActionType { get; init; }
+    public Max35Text? OtherActionType { get; init; }
 
     /// <summary>
     /// Additional information to the type of action to be performed (for example, channel to be used for additional verification or authentication).
@@ -50,5 +50,5 @@ public record Action9
     [IsoXmlTag("ActnInf")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? ActionInformation { get; init; }
+    public Max70Text? ActionInformation { get; init; }
 }

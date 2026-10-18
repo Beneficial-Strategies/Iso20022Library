@@ -48,7 +48,7 @@ public record FinancialInstrumentAttributes90
     [IsoXmlTag("IndxUnit")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text IndexUnit { get; init; }
+    public required Max35Text IndexUnit { get; init; }
 
     /// <summary>
     /// Day count convention for interest payments. Interest rate products only.

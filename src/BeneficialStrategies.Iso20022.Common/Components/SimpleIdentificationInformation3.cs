@@ -24,5 +24,5 @@ public record SimpleIdentificationInformation3
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max34Text)]
     [StringLength(maximumLength: 34, MinimumLength = 1)]
-    public required IsoMax34Text Identification { get; init; }
+    public required Max34Text Identification { get; init; }
 }

@@ -24,7 +24,7 @@ public record TradeRecurrentQuery3
     [IsoXmlTag("QryTp")]
     [IsoSimpleType(IsoSimpleType.Max1000Text)]
     [StringLength(maximumLength: 1000, MinimumLength = 1)]
-    public required IsoMax1000Text QueryType { get; init; }
+    public required Max1000Text QueryType { get; init; }
 
     /// <summary>
     /// Defines the requested frequency of the recurrent query.
@@ -41,5 +41,5 @@ public record TradeRecurrentQuery3
     [DisplayName("Valid Until")]
     [IsoXmlTag("VldUntil")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ValidUntil { get; init; }
+    public required DateOnly ValidUntil { get; init; }
 }

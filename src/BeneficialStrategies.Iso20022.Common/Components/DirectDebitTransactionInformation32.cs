@@ -70,7 +70,7 @@ public record DirectDebitTransactionInformation32
     /// </summary>
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
-    public IsoMax140Text? InstructionForCreditorAgent { get; init; }
+    public Max140Text? InstructionForCreditorAgent { get; init; }
 
     /// <summary>
     /// Payment Identification.

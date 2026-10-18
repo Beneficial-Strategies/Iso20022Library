@@ -41,5 +41,5 @@ public record CommunicationCharacteristics3
     [DisplayName("Active")]
     [IsoXmlTag("Actv")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator Active { get; init; }
+    public required TrueFalseIndicator Active { get; init; }
 }

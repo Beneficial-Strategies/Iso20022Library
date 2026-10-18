@@ -28,7 +28,7 @@ public record Signer8
     /// </summary>
     [DisplayName("Signature")]
     [IsoXmlTag("Sgntr")]
-    public required IsoMax3000Binary Signature { get; init; }
+    public required Max3000Binary Signature { get; init; }
 
     /// <summary>
     /// Signature Algorithm.
@@ -56,5 +56,5 @@ public record Signer8
     /// </summary>
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
-    public IsoNumber? Version { get; init; }
+    public Number? Version { get; init; }
 }

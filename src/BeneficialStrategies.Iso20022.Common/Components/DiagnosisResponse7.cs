@@ -28,7 +28,7 @@ public record DiagnosisResponse7
     /// </summary>
     [DisplayName("Logged Sale Identification")]
     [IsoXmlTag("LggdSaleId")]
-    public ValueList<IsoMax35Text> LoggedSaleIdentification { get; init; } = [];
+    public ValueList<Max35Text> LoggedSaleIdentification { get; init; } = [];
 
     /// <summary>
     /// POI Status.

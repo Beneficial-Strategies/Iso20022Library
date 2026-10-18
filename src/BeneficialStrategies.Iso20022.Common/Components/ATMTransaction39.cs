@@ -70,14 +70,14 @@ public record ATMTransaction39
     /// </summary>
     [DisplayName("Creditor Label")]
     [IsoXmlTag("CdtrLabl")]
-    public IsoMax35Text? CreditorLabel { get; init; }
+    public Max35Text? CreditorLabel { get; init; }
 
     /// <summary>
     /// Debtor Label.
     /// </summary>
     [DisplayName("Debtor Label")]
     [IsoXmlTag("DbtrLabl")]
-    public IsoMax35Text? DebtorLabel { get; init; }
+    public Max35Text? DebtorLabel { get; init; }
 
     /// <summary>
     /// Detailed Requested Amount.
@@ -91,14 +91,14 @@ public record ATMTransaction39
     /// </summary>
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
-    public IsoMax10000Binary? ICCRelatedData { get; init; }
+    public Max10000Binary? ICCRelatedData { get; init; }
 
     /// <summary>
     /// Instant Transfer Program.
     /// </summary>
     [DisplayName("Instant Transfer Program")]
     [IsoXmlTag("InstntTrfPrgm")]
-    public IsoMax35Text? InstantTransferProgram { get; init; }
+    public Max35Text? InstantTransferProgram { get; init; }
 
     /// <summary>
     /// Limits.
@@ -112,14 +112,14 @@ public record ATMTransaction39
     /// </summary>
     [DisplayName("Payment Reference")]
     [IsoXmlTag("PmtRef")]
-    public IsoMax35Text? PaymentReference { get; init; }
+    public Max35Text? PaymentReference { get; init; }
 
     /// <summary>
     /// Proposed Execution Date.
     /// </summary>
     [DisplayName("Proposed Execution Date")]
     [IsoXmlTag("PropsdExctnDt")]
-    public IsoISODate? ProposedExecutionDate { get; init; }
+    public DateOnly? ProposedExecutionDate { get; init; }
 
     /// <summary>
     /// Protected Account From.
@@ -140,7 +140,7 @@ public record ATMTransaction39
     /// </summary>
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
-    public IsoMax35Text? ReconciliationIdentification { get; init; }
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Recurring Transfer.
@@ -154,7 +154,7 @@ public record ATMTransaction39
     /// </summary>
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
-    public IsoISODate? RequestedExecutionDate { get; init; }
+    public DateOnly? RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Total Authorised Amount.
@@ -189,5 +189,5 @@ public record ATMTransaction39
     /// </summary>
     [DisplayName("Transfer Identifier")]
     [IsoXmlTag("TrfIdr")]
-    public IsoMax70Text? TransferIdentifier { get; init; }
+    public Max70Text? TransferIdentifier { get; init; }
 }

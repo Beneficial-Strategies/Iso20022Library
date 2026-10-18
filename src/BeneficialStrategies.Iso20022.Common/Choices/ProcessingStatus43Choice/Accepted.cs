@@ -33,6 +33,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus43Choice
         [IsoXmlTag("AddtlRsnInf")]
         [IsoSimpleType(IsoSimpleType.Max210Text)]
         [StringLength(maximumLength: 210, MinimumLength = 1)]
-        public IsoMax210Text? AdditionalReasonInformation { get; init; }
+        public Max210Text? AdditionalReasonInformation { get; init; }
     }
 }

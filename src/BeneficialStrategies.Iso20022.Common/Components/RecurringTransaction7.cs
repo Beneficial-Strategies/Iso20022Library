@@ -22,7 +22,7 @@ public record RecurringTransaction7
     [IsoId("__8FlBbZiEfCUZfsQO4rYeA")]
     [DisplayName("Plan Identification")]
     [IsoXmlTag("PlanId")]
-    public IsoMax35Text? PlanIdentification { get; init; }
+    public Max35Text? PlanIdentification { get; init; }
 
     /// <summary>
     /// Indicates the recurring occurrence of the transaction.
@@ -30,7 +30,7 @@ public record RecurringTransaction7
     [IsoId("__8FlC7ZiEfCUZfsQO4rYeA")]
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
-    public IsoNumber? SequenceNumber { get; init; }
+    public Number? SequenceNumber { get; init; }
 
     /// <summary>
     /// Period unit between consecutive payments.

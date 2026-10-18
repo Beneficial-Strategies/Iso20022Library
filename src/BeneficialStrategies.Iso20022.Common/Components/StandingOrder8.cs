@@ -87,5 +87,5 @@ public record StandingOrder8
     [DisplayName("Zero Sweep Indicator")]
     [IsoXmlTag("ZeroSweepInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ZeroSweepIndicator { get; init; }
+    public TrueFalseIndicator? ZeroSweepIndicator { get; init; }
 }

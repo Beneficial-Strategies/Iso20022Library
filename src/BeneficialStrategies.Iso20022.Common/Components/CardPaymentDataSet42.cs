@@ -38,7 +38,7 @@ public record CardPaymentDataSet42
     [IsoId("_NngO0bX4EfCUZfsQO4rYeA")]
     [DisplayName("Remove Data Set")]
     [IsoXmlTag("RmvDataSet")]
-    public required IsoTrueFalseIndicator RemoveDataSet { get; init; }
+    public required TrueFalseIndicator RemoveDataSet { get; init; }
 
     /// <summary>
     /// Initiator of the data set.

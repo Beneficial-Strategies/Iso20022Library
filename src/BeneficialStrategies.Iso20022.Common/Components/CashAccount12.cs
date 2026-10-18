@@ -32,7 +32,7 @@ public record CashAccount12
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Name { get; init; }
+    public required Max35Text Name { get; init; }
 
     /// <summary>
     /// Specifies the nature, or use, of the cash account.
@@ -50,7 +50,7 @@ public record CashAccount12
     [IsoXmlTag("XtndedTp")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedType { get; init; }
+    public Extended350Code? ExtendedType { get; init; }
 
     /// <summary>
     /// Medium of exchange of value.

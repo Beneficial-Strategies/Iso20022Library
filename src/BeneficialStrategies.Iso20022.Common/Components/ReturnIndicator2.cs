@@ -21,7 +21,7 @@ public record ReturnIndicator2
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public IsoMax500Text? AdditionalInformation { get; init; }
+    public Max500Text? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Authority Request Type.

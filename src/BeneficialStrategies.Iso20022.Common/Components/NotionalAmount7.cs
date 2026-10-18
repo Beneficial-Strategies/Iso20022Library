@@ -35,5 +35,5 @@ public record NotionalAmount7
     /// </summary>
     [DisplayName("Weighted Average Delta")]
     [IsoXmlTag("WghtdAvrgDlta")]
-    public IsoLongFraction19DecimalNumber? WeightedAverageDelta { get; init; }
+    public LongFraction19DecimalNumber? WeightedAverageDelta { get; init; }
 }

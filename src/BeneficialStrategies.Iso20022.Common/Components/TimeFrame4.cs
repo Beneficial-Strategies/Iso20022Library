@@ -24,7 +24,7 @@ public record TimeFrame4
     [IsoXmlTag("OthrTmFrameDesc")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? OtherTimeFrameDescription { get; init; }
+    public Max350Text? OtherTimeFrameDescription { get; init; }
 
     /// <summary>
     /// Number of days before the trade date (T) used for the standard timeframe for the dealing cut-off.
@@ -33,7 +33,7 @@ public record TimeFrame4
     [DisplayName("Trade Minus")]
     [IsoXmlTag("TMns")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? TradeMinus { get; init; }
+    public Number? TradeMinus { get; init; }
 
     /// <summary>
     /// Convention used for adjusting a date when it is not a business day.

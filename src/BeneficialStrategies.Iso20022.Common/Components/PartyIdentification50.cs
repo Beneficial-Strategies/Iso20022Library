@@ -72,5 +72,5 @@ public record PartyIdentification50
     [IsoXmlTag("DclrtnDtls")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? DeclarationDetails { get; init; }
+    public Max350Text? DeclarationDetails { get; init; }
 }

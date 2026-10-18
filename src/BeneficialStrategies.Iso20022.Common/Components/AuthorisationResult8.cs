@@ -48,7 +48,7 @@ public record AuthorisationResult8
     [IsoXmlTag("AuthstnCd")]
     [IsoSimpleType(IsoSimpleType.Min6Max8Text)]
     [StringLength(maximumLength: 8, MinimumLength = 6)]
-    public IsoMin6Max8Text? AuthorisationCode { get; init; }
+    public Min6Max8Text? AuthorisationCode { get; init; }
 
     /// <summary>
     /// Additional information relevant for the destination.

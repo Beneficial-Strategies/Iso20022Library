@@ -24,7 +24,7 @@ public record AdditionalAcceptorData1
     [IsoXmlTag("AddtlTxRefNb")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AdditionalTransactionReferenceNumber { get; init; }
+    public Max70Text? AdditionalTransactionReferenceNumber { get; init; }
 
     /// <summary>
     /// Identification of the company recognized by the taxation authority.  Used for reporting transaction-related taxes.
@@ -34,7 +34,7 @@ public record AdditionalAcceptorData1
     [IsoXmlTag("TaxRegnId")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? TaxRegistrationIdentification { get; init; }
+    public Max70Text? TaxRegistrationIdentification { get; init; }
 
     /// <summary>
     /// Identification of the company recognized by the taxation authority.  Used for reporting corporate-related taxes.
@@ -44,7 +44,7 @@ public record AdditionalAcceptorData1
     [IsoXmlTag("CorpTaxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CorporateTaxIdentification { get; init; }
+    public Max35Text? CorporateTaxIdentification { get; init; }
 
     /// <summary>
     /// Indicates the corporate tax identification type.
@@ -78,5 +78,5 @@ public record AdditionalAcceptorData1
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AdditionalInformation { get; init; }
+    public Max350Text? AdditionalInformation { get; init; }
 }

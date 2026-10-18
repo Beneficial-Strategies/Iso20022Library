@@ -55,7 +55,7 @@ public record OriginalPaymentInformation6
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RequestedExecutionDate { get; init; }
+    public DateOnly? RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Date and time at which the creditor requests that the amount of money is to be collected from the debtor.
@@ -64,7 +64,7 @@ public record OriginalPaymentInformation6
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RequestedCollectionDate { get; init; }
+    public DateOnly? RequestedCollectionDate { get; init; }
 
     /// <summary>
     /// Party that owes an amount of money to the (ultimate) creditor.

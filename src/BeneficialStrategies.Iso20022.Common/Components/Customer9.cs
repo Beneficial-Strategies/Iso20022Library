@@ -28,7 +28,7 @@ public record Customer9
     /// </summary>
     [DisplayName("Age")]
     [IsoXmlTag("Age")]
-    public IsoMax2NumericText? Age { get; init; }
+    public Max2NumericText? Age { get; init; }
 
     /// <summary>
     /// Contact.
@@ -42,7 +42,7 @@ public record Customer9
     /// </summary>
     [DisplayName("Customer File Reference Number")]
     [IsoXmlTag("CstmrFileRefNb")]
-    public IsoMax70Text? CustomerFileReferenceNumber { get; init; }
+    public Max70Text? CustomerFileReferenceNumber { get; init; }
 
     /// <summary>
     /// Identification.
@@ -56,5 +56,5 @@ public record Customer9
     /// </summary>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax70Text? Name { get; init; }
+    public Max70Text? Name { get; init; }
 }

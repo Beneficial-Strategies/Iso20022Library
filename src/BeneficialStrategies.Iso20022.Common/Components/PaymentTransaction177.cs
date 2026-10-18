@@ -22,7 +22,7 @@ public record PaymentTransaction177
     [IsoId("918a36b9-93fd-4d24-894e-8779d70b95e0")]
     [DisplayName("Status Identification")]
     [IsoXmlTag("StsId")]
-    public IsoMax35Text? StatusIdentification { get; init; }
+    public Max35Text? StatusIdentification { get; init; }
 
     /// <summary>
     /// Point to point reference, as assigned by the original instructing party, to unambiguously identify the original message.
@@ -38,7 +38,7 @@ public record PaymentTransaction177
     [IsoId("371ddaa2-93fc-4bda-a394-0e31582f3b7f")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
-    public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.
@@ -46,7 +46,7 @@ public record PaymentTransaction177
     [IsoId("b1795dab-4c6f-439d-a02f-6b27c6aebd92")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original first instructing agent, to unambiguously identify the transaction.
@@ -54,7 +54,7 @@ public record PaymentTransaction177
     [IsoId("ae39a289-ea35-401e-8af3-c9b78278549f")]
     [DisplayName("Original Transaction Identification")]
     [IsoXmlTag("OrgnlTxId")]
-    public IsoMax35Text? OriginalTransactionIdentification { get; init; }
+    public Max35Text? OriginalTransactionIdentification { get; init; }
 
     /// <summary>
     /// Universally unique identifier to provide the original end-to-end reference of a payment transaction.
@@ -62,7 +62,7 @@ public record PaymentTransaction177
     [IsoId("4f642615-8861-4fa0-92e1-4effe82015e5")]
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
-    public IsoUUIDv4Identifier? OriginalUETR { get; init; }
+    public UUIDv4Identifier? OriginalUETR { get; init; }
 
     /// <summary>
     /// Specifies the status of a transaction, as published in an external payment transaction status code list.
@@ -94,7 +94,7 @@ public record PaymentTransaction177
     [IsoId("14a16f1a-a4ae-4c82-9249-673e443d8b34")]
     [DisplayName("Acceptance Date Time")]
     [IsoXmlTag("AccptncDtTm")]
-    public IsoISODateTime? AcceptanceDateTime { get; init; }
+    public ISODateTime? AcceptanceDateTime { get; init; }
 
     /// <summary>
     /// Date/time at which the instruction was processed by the specified party.
@@ -118,7 +118,7 @@ public record PaymentTransaction177
     [IsoId("6e8670fd-0e2d-48ea-8422-cfe996255c08")]
     [DisplayName("Account Servicer Reference")]
     [IsoXmlTag("AcctSvcrRef")]
-    public IsoMax35Text? AccountServicerReference { get; init; }
+    public Max35Text? AccountServicerReference { get; init; }
 
     /// <summary>
     /// Unique reference, as assigned by a clearing system, to unambiguously identify the instruction.
@@ -126,7 +126,7 @@ public record PaymentTransaction177
     [IsoId("9ce3349a-d39d-4e1e-bc65-1771a01c90da")]
     [DisplayName("Clearing System Reference")]
     [IsoXmlTag("ClrSysRef")]
-    public IsoMax35Text? ClearingSystemReference { get; init; }
+    public Max35Text? ClearingSystemReference { get; init; }
 
     /// <summary>
     /// Cryptographic key provided by the CreditorAgent to confirm that settlement on the creditor's account is guaranteed.
@@ -134,7 +134,7 @@ public record PaymentTransaction177
     [IsoId("48354acb-da04-432e-bee8-ec6eb7582971")]
     [DisplayName("Credit Settlement Key")]
     [IsoXmlTag("CdtSttlmKey")]
-    public IsoSHA256SignatureText? CreditSettlementKey { get; init; }
+    public SHA256SignatureText? CreditSettlementKey { get; init; }
 
     /// <summary>
     /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).

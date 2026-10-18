@@ -24,7 +24,7 @@ public record Vote14
     [IsoXmlTag("IssrLabl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text IssuerLabel { get; init; }
+    public required Max35Text IssuerLabel { get; init; }
 
     /// <summary>
     /// Identifies under the same label a group of agenda resolutions for which a vote in favour can be assigned to only one resolution of that group.
@@ -34,7 +34,7 @@ public record Vote14
     [IsoXmlTag("ListgGrpRsltnLabl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ListingGroupResolutionLabel { get; init; }
+    public Max35Text? ListingGroupResolutionLabel { get; init; }
 
     /// <summary>
     /// Number of votes in favour of one resolution.

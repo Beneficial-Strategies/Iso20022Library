@@ -24,7 +24,7 @@ public record OriginalGroupHeader10
     [IsoXmlTag("GrpCxlId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? GroupCancellationIdentification { get; init; }
+    public Max35Text? GroupCancellationIdentification { get; init; }
 
     /// <summary>
     /// Uniquely and unambiguously identifies an exception or an investigation workflow.
@@ -42,7 +42,7 @@ public record OriginalGroupHeader10
     [IsoXmlTag("OrgnlMsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OriginalMessageIdentification { get; init; }
+    public required Max35Text OriginalMessageIdentification { get; init; }
 
     /// <summary>
     /// Specifies the original message name identifier to which the message refers.
@@ -52,7 +52,7 @@ public record OriginalGroupHeader10
     [IsoXmlTag("OrgnlMsgNmId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OriginalMessageNameIdentification { get; init; }
+    public required Max35Text OriginalMessageNameIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the original message was created.
@@ -61,7 +61,7 @@ public record OriginalGroupHeader10
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? OriginalCreationDateTime { get; init; }
+    public ISODateTime? OriginalCreationDateTime { get; init; }
 
     /// <summary>
     /// Number of individual transactions contained in the original message.
@@ -70,7 +70,7 @@ public record OriginalGroupHeader10
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public IsoMax15NumericText? NumberOfTransactions { get; init; }
+    public Max15NumericText? NumberOfTransactions { get; init; }
 
     /// <summary>
     /// Total of all individual amounts included in the message, irrespective of currencies.
@@ -79,7 +79,7 @@ public record OriginalGroupHeader10
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? ControlSum { get; init; }
+    public DecimalNumber? ControlSum { get; init; }
 
     /// <summary>
     /// Indicates whether the cancellation request applies to a whole group of transactions or to individual transactions within an original group.
@@ -88,7 +88,7 @@ public record OriginalGroupHeader10
     [DisplayName("Group Cancellation")]
     [IsoXmlTag("GrpCxl")]
     [IsoSimpleType(IsoSimpleType.GroupCancellationIndicator)]
-    public IsoGroupCancellationIndicator? GroupCancellation { get; init; }
+    public GroupCancellationIndicator? GroupCancellation { get; init; }
 
     /// <summary>
     /// Provides detailed information on the cancellation reason.

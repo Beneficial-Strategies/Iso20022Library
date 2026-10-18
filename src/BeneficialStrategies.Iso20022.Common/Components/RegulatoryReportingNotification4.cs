@@ -42,5 +42,5 @@ public record RegulatoryReportingNotification4
     /// </summary>
     [DisplayName("Transaction Notification Identification")]
     [IsoXmlTag("TxNtfctnId")]
-    public required IsoMax35Text TransactionNotificationIdentification { get; init; }
+    public required Max35Text TransactionNotificationIdentification { get; init; }
 }

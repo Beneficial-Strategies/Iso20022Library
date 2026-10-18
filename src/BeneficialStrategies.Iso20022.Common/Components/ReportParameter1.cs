@@ -24,7 +24,7 @@ public record ReportParameter1
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public required IsoMax70Text Name { get; init; }
+    public required Max70Text Name { get; init; }
 
     /// <summary>
     /// Value of the parameter being returned.
@@ -34,5 +34,5 @@ public record ReportParameter1
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text Value { get; init; }
+    public required Max350Text Value { get; init; }
 }

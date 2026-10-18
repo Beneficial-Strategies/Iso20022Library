@@ -32,5 +32,5 @@ public record AdditionalInformation6
     [IsoXmlTag("InfVal")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text InformationValue { get; init; }
+    public required Max350Text InformationValue { get; init; }
 }

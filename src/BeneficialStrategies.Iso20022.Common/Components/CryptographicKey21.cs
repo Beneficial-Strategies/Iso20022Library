@@ -22,7 +22,7 @@ public record CryptographicKey21
     [IsoId("_xvj9cbZ5EfCUZfsQO4rYeA")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax140Text? Name { get; init; }
+    public Max140Text? Name { get; init; }
 
     /// <summary>
     /// Name of the cryptographic key.
@@ -30,7 +30,7 @@ public record CryptographicKey21
     [IsoId("_xvj9c7Z5EfCUZfsQO4rYeA")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax140Text? Identification { get; init; }
+    public Max140Text? Identification { get; init; }
 
     /// <summary>
     /// Identification of the security domain.
@@ -38,7 +38,7 @@ public record CryptographicKey21
     [IsoId("_xvj9dbZ5EfCUZfsQO4rYeA")]
     [DisplayName("Security Domain Identification")]
     [IsoXmlTag("SctyDomnId")]
-    public IsoMax35Text? SecurityDomainIdentification { get; init; }
+    public Max35Text? SecurityDomainIdentification { get; init; }
 
     /// <summary>
     /// Additional identification of the key, for instance to derive the key.
@@ -46,7 +46,7 @@ public record CryptographicKey21
     [IsoId("_xvj9d7Z5EfCUZfsQO4rYeA")]
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
-    public IsoMax35Binary? AdditionalIdentification { get; init; }
+    public Max35Binary? AdditionalIdentification { get; init; }
 
     /// <summary>
     /// Version of the cryptographic key.
@@ -54,7 +54,7 @@ public record CryptographicKey21
     [IsoId("_xvj9ebZ5EfCUZfsQO4rYeA")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
-    public IsoMax256Text? Version { get; init; }
+    public Max256Text? Version { get; init; }
 
     /// <summary>
     /// Sequence counter of the cryptographic key.
@@ -62,7 +62,7 @@ public record CryptographicKey21
     [IsoId("_xvj9e7Z5EfCUZfsQO4rYeA")]
     [DisplayName("Sequence Counter")]
     [IsoXmlTag("SeqCntr")]
-    public IsoNumber? SequenceCounter { get; init; }
+    public Number? SequenceCounter { get; init; }
 
     /// <summary>
     /// Type of algorithm used by the cryptographic key.
@@ -86,7 +86,7 @@ public record CryptographicKey21
     [IsoId("_xvj9gbZ5EfCUZfsQO4rYeA")]
     [DisplayName("Activation Date")]
     [IsoXmlTag("ActvtnDt")]
-    public IsoISODateTime? ActivationDate { get; init; }
+    public ISODateTime? ActivationDate { get; init; }
 
     /// <summary>
     /// Date and time on which the key must be deactivated.
@@ -94,7 +94,7 @@ public record CryptographicKey21
     [IsoId("_xvj9g7Z5EfCUZfsQO4rYeA")]
     [DisplayName("Deactivation Date")]
     [IsoXmlTag("DeactvtnDt")]
-    public IsoISODateTime? DeactivationDate { get; init; }
+    public ISODateTime? DeactivationDate { get; init; }
 
     /// <summary>
     /// Value for checking a cryptographic key.
@@ -102,7 +102,7 @@ public record CryptographicKey21
     [IsoId("_xvj9hbZ5EfCUZfsQO4rYeA")]
     [DisplayName("Key Check Value")]
     [IsoXmlTag("KeyChckVal")]
-    public IsoMax35Binary? KeyCheckValue { get; init; }
+    public Max35Binary? KeyCheckValue { get; init; }
 
     /// <summary>
     /// Value of the public component of a RSA key.

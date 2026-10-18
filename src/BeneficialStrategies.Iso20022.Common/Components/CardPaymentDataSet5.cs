@@ -40,7 +40,7 @@ public record CardPaymentDataSet5
     [DisplayName("Remove Data Set")]
     [IsoXmlTag("RmvDataSet")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator RemoveDataSet { get; init; }
+    public required TrueFalseIndicator RemoveDataSet { get; init; }
 
     /// <summary>
     /// Initiator of the data set.

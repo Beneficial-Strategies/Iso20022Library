@@ -49,14 +49,14 @@ public record CommonData13
     /// </summary>
     [DisplayName("Merchant Category Code")]
     [IsoXmlTag("MrchntCtgyCd")]
-    public IsoMin3Max4Text? MerchantCategoryCode { get; init; }
+    public Min3Max4Text? MerchantCategoryCode { get; init; }
 
     /// <summary>
     /// Reconciliation Identification.
     /// </summary>
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
-    public IsoMax35Text? ReconciliationIdentification { get; init; }
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Service Attribute.

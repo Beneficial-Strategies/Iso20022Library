@@ -28,14 +28,14 @@ public record ATMTransactionAmounts10
     /// </summary>
     [DisplayName("Display Flag")]
     [IsoXmlTag("DispFlg")]
-    public IsoTrueFalseIndicator? DisplayFlag { get; init; }
+    public TrueFalseIndicator? DisplayFlag { get; init; }
 
     /// <summary>
     /// Maximum Number.
     /// </summary>
     [DisplayName("Maximum Number")]
     [IsoXmlTag("MaxNb")]
-    public IsoNumber? MaximumNumber { get; init; }
+    public Number? MaximumNumber { get; init; }
 
     /// <summary>
     /// Media Type.
@@ -49,5 +49,5 @@ public record ATMTransactionAmounts10
     /// </summary>
     [DisplayName("Minimum Number")]
     [IsoXmlTag("MinNb")]
-    public IsoNumber? MinimumNumber { get; init; }
+    public Number? MinimumNumber { get; init; }
 }

@@ -24,7 +24,7 @@ public record SecuritiesTransactionReport2
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public required IsoMax52Text TransactionIdentification { get; init; }
+    public required Max52Text TransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of the entity executing the transaction.
@@ -35,7 +35,7 @@ public record SecuritiesTransactionReport2
     [DisplayName("Executing Party")]
     [IsoXmlTag("ExctgPty")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public required IsoLEIIdentifier ExecutingParty { get; init; }
+    public required LEIIdentifier ExecutingParty { get; init; }
 
     /// <summary>
     /// Entity submitting the transaction report to the competent authority.
@@ -44,7 +44,7 @@ public record SecuritiesTransactionReport2
     [DisplayName("Submitting Party")]
     [IsoXmlTag("SubmitgPty")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public required IsoLEIIdentifier SubmittingParty { get; init; }
+    public required LEIIdentifier SubmittingParty { get; init; }
 
     /// <summary>
     /// Data used for exchanges between national competent authorities, not to be used by reporting entities.

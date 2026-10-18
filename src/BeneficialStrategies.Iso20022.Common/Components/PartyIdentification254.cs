@@ -25,7 +25,7 @@ public record PartyIdentification254
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Identification { get; init; }
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Identification of the entity assigning an identification to the acceptor.
@@ -35,7 +35,7 @@ public record PartyIdentification254
     [IsoXmlTag("Assgnr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Assigner { get; init; }
+    public Max35Text? Assigner { get; init; }
 
     /// <summary>
     /// Country code of the acceptor.
@@ -54,7 +54,7 @@ public record PartyIdentification254
     [IsoXmlTag("ShrtNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ShortName { get; init; }
+    public Max35Text? ShortName { get; init; }
 
     /// <summary>
     /// Legal Corporate Name of the party
@@ -64,7 +64,7 @@ public record PartyIdentification254
     [IsoXmlTag("LglCorpNm")]
     [IsoSimpleType(IsoSimpleType.Max99Text)]
     [StringLength(maximumLength: 99, MinimumLength = 1)]
-    public IsoMax99Text? LegalCorporateName { get; init; }
+    public Max99Text? LegalCorporateName { get; init; }
 
     /// <summary>
     /// Additional identification assigned by an agent to an acceptor.
@@ -74,7 +74,7 @@ public record PartyIdentification254
     [IsoXmlTag("AddtlId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AdditionalIdentification { get; init; }
+    public Max35Text? AdditionalIdentification { get; init; }
 
     /// <summary>
     /// Name and location of acceptor.  May only contain name and not location if the location is specified elsewhere.
@@ -84,7 +84,7 @@ public record PartyIdentification254
     [IsoXmlTag("NmAndLctn")]
     [IsoSimpleType(IsoSimpleType.Max99Text)]
     [StringLength(maximumLength: 99, MinimumLength = 1)]
-    public IsoMax99Text? NameAndLocation { get; init; }
+    public Max99Text? NameAndLocation { get; init; }
 
     /// <summary>
     /// Address of the entity.
@@ -102,7 +102,7 @@ public record PartyIdentification254
     [IsoXmlTag("AddtlAdrInf")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? AdditionalAddressInformation { get; init; }
+    public Max256Text? AdditionalAddressInformation { get; init; }
 
     /// <summary>
     /// Location of the acceptor in latitude/longitude decimal degrees.
@@ -111,7 +111,7 @@ public record PartyIdentification254
     [DisplayName("Geographic Location")]
     [IsoXmlTag("GeogcLctn")]
     [IsoSimpleType(IsoSimpleType.GeographicPointInDecimalDegrees)]
-    public IsoGeographicPointInDecimalDegrees? GeographicLocation { get; init; }
+    public GeographicPointInDecimalDegrees? GeographicLocation { get; init; }
 
     /// <summary>
     /// Electronic mail address.
@@ -121,7 +121,7 @@ public record PartyIdentification254
     [IsoXmlTag("Email")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Email { get; init; }
+    public Max256Text? Email { get; init; }
 
     /// <summary>
     /// Universal Resource Locator (URL) address.
@@ -131,7 +131,7 @@ public record PartyIdentification254
     [IsoXmlTag("URLAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? URLAddress { get; init; }
+    public Max256Text? URLAddress { get; init; }
 
     /// <summary>
     /// Collection of information that identifies  a phone number as defined by telecom services.
@@ -141,7 +141,7 @@ public record PartyIdentification254
     [IsoXmlTag("PhneNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PhoneNumber { get; init; }
+    public Max35Text? PhoneNumber { get; init; }
 
     /// <summary>
     /// Phone number of the customer service.
@@ -151,7 +151,7 @@ public record PartyIdentification254
     [IsoXmlTag("CstmrSvc")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CustomerService { get; init; }
+    public Max35Text? CustomerService { get; init; }
 
     /// <summary>
     /// Additional information used to facilitate contact with the card acceptor, for instance sales agent name, dispute manager name.
@@ -161,7 +161,7 @@ public record PartyIdentification254
     [IsoXmlTag("AddtlCtctInf")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? AdditionalContactInformation { get; init; }
+    public Max256Text? AdditionalContactInformation { get; init; }
 
     /// <summary>
     /// Identification of a party by its tax registration number.
@@ -171,7 +171,7 @@ public record PartyIdentification254
     [IsoXmlTag("TaxRegnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TaxRegistrationIdentification { get; init; }
+    public Max35Text? TaxRegistrationIdentification { get; init; }
 
     /// <summary>
     /// Contains additional data.

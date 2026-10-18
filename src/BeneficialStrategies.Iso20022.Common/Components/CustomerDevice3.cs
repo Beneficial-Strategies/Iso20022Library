@@ -24,7 +24,7 @@ public record CustomerDevice3
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Identification { get; init; }
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Type of component.
@@ -34,7 +34,7 @@ public record CustomerDevice3
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Type { get; init; }
+    public Max70Text? Type { get; init; }
 
     /// <summary>
     /// Provider of the component.
@@ -44,5 +44,5 @@ public record CustomerDevice3
     [IsoXmlTag("Prvdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Provider { get; init; }
+    public Max35Text? Provider { get; init; }
 }

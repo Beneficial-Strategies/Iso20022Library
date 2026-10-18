@@ -31,7 +31,7 @@ public record PaymentTransaction20
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? SettlementDate { get; init; }
+    public DateOnly? SettlementDate { get; init; }
 
     /// <summary>
     /// Choice between cash-in or cash-out.

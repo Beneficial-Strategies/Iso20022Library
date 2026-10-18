@@ -102,7 +102,7 @@ public record TransactionDetails187
     [IsoId("_hl1B_ag_EfCXwLUUylXgrQ")]
     [DisplayName("Conditional Securities Delivery")]
     [IsoXmlTag("CondlSctiesDlvry")]
-    public IsoYesNoIndicator? ConditionalSecuritiesDelivery { get; init; }
+    public YesNoIndicator? ConditionalSecuritiesDelivery { get; init; }
 
     /// <summary>
     /// Total quantity of financial instrument to be settled.
@@ -142,7 +142,7 @@ public record TransactionDetails187
     [IsoId("_hl1CB6g_EfCXwLUUylXgrQ")]
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
-    public IsoMax3Number? NumberOfDaysAccrued { get; init; }
+    public Max3Number? NumberOfDaysAccrued { get; init; }
 
     /// <summary>
     /// Total amount of money to be paid or received in exchange for the securities.
@@ -222,7 +222,7 @@ public record TransactionDetails187
     [IsoId("_hl1CP6g_EfCXwLUUylXgrQ")]
     [DisplayName("Status Date")]
     [IsoXmlTag("StsDt")]
-    public IsoISODateTime? StatusDate { get; init; }
+    public ISODateTime? StatusDate { get; init; }
 
     /// <summary>
     /// Time stamp on when the transaction is acknowledged.
@@ -230,7 +230,7 @@ public record TransactionDetails187
     [IsoId("_hl1CR6g_EfCXwLUUylXgrQ")]
     [DisplayName("Acknowledged Status Time Stamp")]
     [IsoXmlTag("AckdStsTmStmp")]
-    public IsoISODateTime? AcknowledgedStatusTimeStamp { get; init; }
+    public ISODateTime? AcknowledgedStatusTimeStamp { get; init; }
 
     /// <summary>
     /// Time stamp on when the transaction is matched.
@@ -238,7 +238,7 @@ public record TransactionDetails187
     [IsoId("_hl1CSag_EfCXwLUUylXgrQ")]
     [DisplayName("Matched Status Time Stamp")]
     [IsoXmlTag("MtchdStsTmStmp")]
-    public IsoISODateTime? MatchedStatusTimeStamp { get; init; }
+    public ISODateTime? MatchedStatusTimeStamp { get; init; }
 
     /// <summary>
     /// Link to another transaction that must be processed after, before or at the same time.
@@ -278,7 +278,7 @@ public record TransactionDetails187
     [IsoId("_hl1CZag_EfCXwLUUylXgrQ")]
     [DisplayName("Reversal Indicator")]
     [IsoXmlTag("RvslInd")]
-    public IsoYesNoIndicator? ReversalIndicator { get; init; }
+    public YesNoIndicator? ReversalIndicator { get; init; }
 
     /// <summary>
     /// Party that originated the message, if other than the sender.
@@ -294,7 +294,7 @@ public record TransactionDetails187
     [IsoId("_hl1Cb6g_EfCXwLUUylXgrQ")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// Provides additional details on the transaction which can not be included within the structured fields of the message.
@@ -302,7 +302,7 @@ public record TransactionDetails187
     [IsoId("_hl1Cd6g_EfCXwLUUylXgrQ")]
     [DisplayName("Transaction Additional Details")]
     [IsoXmlTag("TxAddtlDtls")]
-    public IsoMax350Text? TransactionAdditionalDetails { get; init; }
+    public Max350Text? TransactionAdditionalDetails { get; init; }
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.

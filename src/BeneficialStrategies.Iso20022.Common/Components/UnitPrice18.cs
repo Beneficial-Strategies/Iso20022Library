@@ -39,5 +39,5 @@ public record UnitPrice18
     [DisplayName("Factor")]
     [IsoXmlTag("Fctr")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public IsoMax15NumericText? Factor { get; init; }
+    public Max15NumericText? Factor { get; init; }
 }

@@ -32,5 +32,5 @@ public record InnovativeFinance1
     [IsoXmlTag("Inf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text Information { get; init; }
+    public required Max350Text Information { get; init; }
 }

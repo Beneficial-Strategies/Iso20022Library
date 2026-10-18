@@ -24,7 +24,7 @@ public record ContractRegistrationStatement3
     [IsoXmlTag("StmtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? StatementIdentification { get; init; }
+    public Max35Text? StatementIdentification { get; init; }
 
     /// <summary>
     /// Party registering the currency control contract.

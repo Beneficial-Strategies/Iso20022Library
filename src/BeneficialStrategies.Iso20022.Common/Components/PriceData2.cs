@@ -47,5 +47,5 @@ public record PriceData2
     [DisplayName("Price Multiplier")]
     [IsoXmlTag("PricMltplr")]
     [IsoSimpleType(IsoSimpleType.LongFraction19DecimalNumber)]
-    public IsoLongFraction19DecimalNumber? PriceMultiplier { get; init; }
+    public LongFraction19DecimalNumber? PriceMultiplier { get; init; }
 }

@@ -106,7 +106,7 @@ public record FraudReportingInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Fraud Transaction Identification")]
     [IsoXmlTag("FrdTxId")]
-    public required IsoMax70Text FraudTransactionIdentification { get; init; }
+    public required Max70Text FraudTransactionIdentification { get; init; }
 
     /// <summary>
     /// Fraudulent Transaction Data.

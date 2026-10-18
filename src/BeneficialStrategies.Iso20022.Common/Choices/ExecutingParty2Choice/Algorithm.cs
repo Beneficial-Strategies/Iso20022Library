@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ExecutingParty2Choice
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("Algo")]
-        public required IsoMax50Text Value { get; init; }
+        public required Max50Text Value { get; init; }
     }
 }

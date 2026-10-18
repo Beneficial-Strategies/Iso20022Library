@@ -86,7 +86,7 @@ public record ReconciliationResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Life Cycle Identification")]
     [IsoXmlTag("LifeCyclId")]
-    public IsoExact15Text? LifeCycleIdentification { get; init; }
+    public Exact15Text? LifeCycleIdentification { get; init; }
 
     /// <summary>
     /// Original Response Code.
@@ -107,14 +107,14 @@ public record ReconciliationResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Other Reconciliation Activity Type")]
     [IsoXmlTag("OthrRcncltnActvtyTp")]
-    public IsoMax35Text? OtherReconciliationActivityType { get; init; }
+    public Max35Text? OtherReconciliationActivityType { get; init; }
 
     /// <summary>
     /// Other Reconciliation Type.
     /// </summary>
     [DisplayName("Other Reconciliation Type")]
     [IsoXmlTag("OthrRcncltnTp")]
-    public IsoMax35Text? OtherReconciliationType { get; init; }
+    public Max35Text? OtherReconciliationType { get; init; }
 
     /// <summary>
     /// Processing Result.
@@ -184,14 +184,14 @@ public record ReconciliationResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Requested Currency")]
     [IsoXmlTag("ReqdCcy")]
-    public ValueList<IsoExact3NumericText> RequestedCurrency { get; init; } = [];
+    public ValueList<Exact3NumericText> RequestedCurrency { get; init; } = [];
 
     /// <summary>
     /// Retrieval Reference Number.
     /// </summary>
     [DisplayName("Retrieval Reference Number")]
     [IsoXmlTag("RtrvlRefNb")]
-    public IsoExact12Text? RetrievalReferenceNumber { get; init; }
+    public Exact12Text? RetrievalReferenceNumber { get; init; }
 
     /// <summary>
     /// Security Trailer.
@@ -226,12 +226,12 @@ public record ReconciliationResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("System Trace Audit Number")]
     [IsoXmlTag("SysTracAudtNb")]
-    public IsoMax12NumericText? SystemTraceAuditNumber { get; init; }
+    public Max12NumericText? SystemTraceAuditNumber { get; init; }
 
     /// <summary>
     /// Transmission Date Time.
     /// </summary>
     [DisplayName("Transmission Date Time")]
     [IsoXmlTag("TrnsmssnDtTm")]
-    public IsoISODateTime? TransmissionDateTime { get; init; }
+    public ISODateTime? TransmissionDateTime { get; init; }
 }

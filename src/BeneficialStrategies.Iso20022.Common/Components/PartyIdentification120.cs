@@ -32,7 +32,7 @@ public record PartyIdentification120
     [IsoXmlTag("PrcgId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? ProcessingIdentification { get; init; }
+    public RestrictedFINXMax16Text? ProcessingIdentification { get; init; }
 
     /// <summary>
     /// Provides alternate identification for a party using an id type, a country code and a text field.

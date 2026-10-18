@@ -33,7 +33,7 @@ public record Quantity4
     [IsoXmlTag("OthrUnitOfMeasr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OtherUnitOfMeasure { get; init; }
+    public required Max35Text OtherUnitOfMeasure { get; init; }
 
     /// <summary>
     /// Quantity of a product on a line specified by a number. For example, 100 (kgs), 50 (pieces).
@@ -42,7 +42,7 @@ public record Quantity4
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public required IsoDecimalNumber Value { get; init; }
+    public required DecimalNumber Value { get; init; }
 
     /// <summary>
     /// Multiplication factor of measurement values. For example: goods that can be ordered by 36 pieces.
@@ -51,5 +51,5 @@ public record Quantity4
     [DisplayName("Factor")]
     [IsoXmlTag("Fctr")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public IsoMax15NumericText? Factor { get; init; }
+    public Max15NumericText? Factor { get; init; }
 }

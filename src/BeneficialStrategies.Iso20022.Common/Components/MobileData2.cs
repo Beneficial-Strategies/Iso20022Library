@@ -23,7 +23,7 @@ public record MobileData2
     [DisplayName("Mobile Country Code")]
     [IsoXmlTag("MobCtryCd")]
     [IsoSimpleType(IsoSimpleType.Min2Max3AlphaText)]
-    public IsoMin2Max3AlphaText? MobileCountryCode { get; init; }
+    public Min2Max3AlphaText? MobileCountryCode { get; init; }
 
     /// <summary>
     /// Identifies the mobile phone operator inside a country.
@@ -32,7 +32,7 @@ public record MobileData2
     [DisplayName("Mobile Network Code")]
     [IsoXmlTag("MobNtwkCd")]
     [IsoSimpleType(IsoSimpleType.Min2Max3NumericText)]
-    public IsoMin2Max3NumericText? MobileNetworkCode { get; init; }
+    public Min2Max3NumericText? MobileNetworkCode { get; init; }
 
     /// <summary>
     /// Masked Mobile Subscriber Integrated Service Digital Network.
@@ -42,7 +42,7 @@ public record MobileData2
     [IsoXmlTag("MobMskdMSISDN")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MobileMaskedMSISDN { get; init; }
+    public Max35Text? MobileMaskedMSISDN { get; init; }
 
     /// <summary>
     /// Geographic location specified by geographic or UTM coordinates.

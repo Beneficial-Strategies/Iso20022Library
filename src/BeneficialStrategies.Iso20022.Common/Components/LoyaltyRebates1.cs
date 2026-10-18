@@ -32,7 +32,7 @@ public record LoyaltyRebates1
     [IsoXmlTag("RbtLabl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RebateLabel { get; init; }
+    public Max35Text? RebateLabel { get; init; }
 
     /// <summary>
     /// Amount of the payment transaction related to the Loyalty.

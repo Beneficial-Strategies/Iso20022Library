@@ -23,7 +23,7 @@ public record SecurityIdentification7
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
     [IsoSimpleType(IsoSimpleType.ISINIdentifier)]
-    public required IsoISINIdentifier ISIN { get; init; }
+    public required ISINIdentifier ISIN { get; init; }
 
     /// <summary>
     /// Proprietary identification of a security assigned by an institution or organisation.
@@ -41,5 +41,5 @@ public record SecurityIdentification7
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Description { get; init; }
+    public Max140Text? Description { get; init; }
 }

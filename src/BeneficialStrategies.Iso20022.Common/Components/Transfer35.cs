@@ -24,7 +24,7 @@ public record Transfer35
     [IsoXmlTag("TrfConfRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransferConfirmationReference { get; init; }
+    public required Max35Text TransferConfirmationReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for the transfer instruction, as assigned by the instructing party.
@@ -34,7 +34,7 @@ public record Transfer35
     [IsoXmlTag("TrfRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransferReference { get; init; }
+    public required Max35Text TransferReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor&apos;s identification of the transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.
@@ -67,7 +67,7 @@ public record Transfer35
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RequestedSettlementDate { get; init; }
+    public DateOnly? RequestedSettlementDate { get; init; }
 
     /// <summary>
     /// Date and time at which the transfer was executed.
@@ -100,7 +100,7 @@ public record Transfer35
     [DisplayName("Transfer Order Date Form")]
     [IsoXmlTag("TrfOrdrDtForm")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TransferOrderDateForm { get; init; }
+    public DateOnly? TransferOrderDateForm { get; init; }
 
     /// <summary>
     /// Reason for the transfer.
@@ -135,7 +135,7 @@ public record Transfer35
     [DisplayName("Total Units Number")]
     [IsoXmlTag("TtlUnitsNb")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public required IsoDecimalNumber TotalUnitsNumber { get; init; }
+    public required DecimalNumber TotalUnitsNumber { get; init; }
 
     /// <summary>
     /// Quantity of securities transferred as a percentage of the holding.
@@ -144,7 +144,7 @@ public record Transfer35
     [DisplayName("Transfer Rate")]
     [IsoXmlTag("TrfRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? TransferRate { get; init; }
+    public PercentageRate? TransferRate { get; init; }
 
     /// <summary>
     /// Breakdown of units transferred.
@@ -185,7 +185,7 @@ public record Transfer35
     [DisplayName("Average Date")]
     [IsoXmlTag("AvrgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? AverageDate { get; init; }
+    public DateOnly? AverageDate { get; init; }
 
     /// <summary>
     /// Trade date of the average weighted data of units in the account after the transfer was executed.
@@ -194,7 +194,7 @@ public record Transfer35
     [DisplayName("New Average Date")]
     [IsoXmlTag("NewAvrgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? NewAverageDate { get; init; }
+    public DateOnly? NewAverageDate { get; init; }
 
     /// <summary>
     /// Currency used to transfer the holdings. Some transfer agents register holdings grouped by currency in addition to using the ISIN for multi-currency fund shares.
@@ -211,7 +211,7 @@ public record Transfer35
     [DisplayName("Own Account Transfer Indicator")]
     [IsoXmlTag("OwnAcctTrfInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? OwnAccountTransferIndicator { get; init; }
+    public YesNoIndicator? OwnAccountTransferIndicator { get; init; }
 
     /// <summary>
     /// Additional specific settlement information for non-regulated traded funds.
@@ -221,7 +221,7 @@ public record Transfer35
     [IsoXmlTag("NonStdSttlmInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? NonStandardSettlementInformation { get; init; }
+    public Max350Text? NonStandardSettlementInformation { get; init; }
 
     /// <summary>
     /// Party that receives securities from the delivering agent via the place of settlement, for example, securities central depository.

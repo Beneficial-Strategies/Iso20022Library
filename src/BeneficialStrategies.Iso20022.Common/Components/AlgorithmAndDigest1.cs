@@ -32,5 +32,5 @@ public record AlgorithmAndDigest1
     [IsoXmlTag("Dgst")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text Digest { get; init; }
+    public required Max140Text Digest { get; init; }
 }

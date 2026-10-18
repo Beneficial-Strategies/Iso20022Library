@@ -35,7 +35,7 @@ public record HoldingBalance14
     /// </summary>
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Safekeeping Place.

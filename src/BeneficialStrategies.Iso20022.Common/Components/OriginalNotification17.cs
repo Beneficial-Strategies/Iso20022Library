@@ -22,7 +22,7 @@ public record OriginalNotification17
     [IsoId("02e21d9f-8d10-4e09-9752-c520d355e01e")]
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
-    public required IsoMax35Text OriginalMessageIdentification { get; init; }
+    public required Max35Text OriginalMessageIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the original message was created.
@@ -30,7 +30,7 @@ public record OriginalNotification17
     [IsoId("a253d2ff-106c-4f46-81d1-be35746531fd")]
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
-    public IsoISODateTime? OriginalCreationDateTime { get; init; }
+    public ISODateTime? OriginalCreationDateTime { get; init; }
 
     /// <summary>
     /// Identification of the original notification.
@@ -38,7 +38,7 @@ public record OriginalNotification17
     [IsoId("23745e67-5c4e-4112-869d-cc8407dd8cf5")]
     [DisplayName("Original Notification Identification")]
     [IsoXmlTag("OrgnlNtfctnId")]
-    public required IsoMax35Text OriginalNotificationIdentification { get; init; }
+    public required Max35Text OriginalNotificationIdentification { get; init; }
 
     /// <summary>
     /// Specifies the status of the notification in a coded form.
@@ -54,7 +54,7 @@ public record OriginalNotification17
     [IsoId("3dcde869-39e5-4132-99ff-12da6662fb7d")]
     [DisplayName("Additional Status Information")]
     [IsoXmlTag("AddtlStsInf")]
-    public IsoMax140Text? AdditionalStatusInformation { get; init; }
+    public Max140Text? AdditionalStatusInformation { get; init; }
 
     /// <summary>
     /// Identifies the original notification item and provides the status.

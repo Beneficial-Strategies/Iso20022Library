@@ -31,7 +31,7 @@ public record CitizenshipInformation1
     [DisplayName("Minor Indicator")]
     [IsoXmlTag("MnrInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? MinorIndicator { get; init; }
+    public YesNoIndicator? MinorIndicator { get; init; }
 
     /// <summary>
     /// Date of the commencement of citizenship.
@@ -40,7 +40,7 @@ public record CitizenshipInformation1
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? StartDate { get; init; }
+    public DateOnly? StartDate { get; init; }
 
     /// <summary>
     /// Date of the end of citizenship.
@@ -49,5 +49,5 @@ public record CitizenshipInformation1
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? EndDate { get; init; }
+    public DateOnly? EndDate { get; init; }
 }

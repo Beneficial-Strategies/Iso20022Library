@@ -78,5 +78,5 @@ public record PartyIdentification340
     [IsoId("_CiJxk63pEfCN-rGCydxGUA")]
     [DisplayName("Certification Breakdown")]
     [IsoXmlTag("CertfctnBrkdwn")]
-    public SimpleValueList<IsoMax350Text> CertificationBreakdown { get; init; } = [];
+    public SimpleValueList<Max350Text> CertificationBreakdown { get; init; } = [];
 }

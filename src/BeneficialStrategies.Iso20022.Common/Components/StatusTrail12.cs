@@ -77,7 +77,7 @@ public record StatusTrail12
     /// </summary>
     [DisplayName("Status Date")]
     [IsoXmlTag("StsDt")]
-    public required IsoISODateTime StatusDate { get; init; }
+    public required ISODateTime StatusDate { get; init; }
 
     /// <summary>
     /// Supplementary Data.
@@ -91,5 +91,5 @@ public record StatusTrail12
     /// </summary>
     [DisplayName("User Identification")]
     [IsoXmlTag("UsrId")]
-    public IsoMax35Text? UserIdentification { get; init; }
+    public Max35Text? UserIdentification { get; init; }
 }

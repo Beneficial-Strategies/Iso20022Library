@@ -22,7 +22,7 @@ public record FinancialInstitutionIdentification28
     [IsoId("_uZGyfd-2Ee-Ned3-G07x_A")]
     [DisplayName("BICFI")]
     [IsoXmlTag("BICFI")]
-    public IsoBICFIDec2014Identifier? BICFI { get; init; }
+    public BICFIDec2014Identifier? BICFI { get; init; }
 
     /// <summary>
     /// Legal entity identifier of the financial institution.
@@ -30,7 +30,7 @@ public record FinancialInstitutionIdentification28
     [IsoId("_uZGye9-2Ee-Ned3-G07x_A")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
-    public IsoLEIIdentifier? LEI { get; init; }
+    public LEIIdentifier? LEI { get; init; }
 
     /// <summary>
     /// Unique identification of an agent, as assigned by an institution, using an identification scheme.

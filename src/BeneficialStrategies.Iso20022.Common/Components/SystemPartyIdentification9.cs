@@ -39,5 +39,5 @@ public record SystemPartyIdentification9
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ValidFrom { get; init; }
+    public DateOnly? ValidFrom { get; init; }
 }

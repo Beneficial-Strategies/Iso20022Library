@@ -31,7 +31,7 @@ public record FinancialInstrumentAttributes73
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINDecimalNumber)]
-    public IsoRestrictedFINDecimalNumber? Quantity { get; init; }
+    public RestrictedFINDecimalNumber? Quantity { get; init; }
 
     /// <summary>
     /// Specifies whether terms of the event allow resale of the rights.

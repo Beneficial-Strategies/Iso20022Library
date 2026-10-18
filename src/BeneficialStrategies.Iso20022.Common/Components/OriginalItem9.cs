@@ -22,7 +22,7 @@ public record OriginalItem9
     [IsoId("6d8dc810-0b20-4d8c-ba79-cb1e67a33b43")]
     [DisplayName("Original Item Identification")]
     [IsoXmlTag("OrgnlItmId")]
-    public required IsoMax35Text OriginalItemIdentification { get; init; }
+    public required Max35Text OriginalItemIdentification { get; init; }
 
     /// <summary>
     /// Unique identification as assigned by the debtor to unambiguously identify the original underlying transaction to the creditor.
@@ -30,7 +30,7 @@ public record OriginalItem9
     [IsoId("d1d765e5-1fa3-4662-9a10-0cfcd028e9d1")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Universally unique identifier to provide an end-to-end reference of a payment transaction.
@@ -38,7 +38,7 @@ public record OriginalItem9
     [IsoId("1c451b9c-b037-4daa-a731-69d14581b071")]
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
-    public IsoUUIDv4Identifier? UETR { get; init; }
+    public UUIDv4Identifier? UETR { get; init; }
 
     /// <summary>
     /// Amount of money expected to be credited to the account, as per the original notification to receive.
@@ -54,7 +54,7 @@ public record OriginalItem9
     [IsoId("966a876b-db51-4270-a5db-abf7605d79b9")]
     [DisplayName("Expected Value Date")]
     [IsoXmlTag("XpctdValDt")]
-    public IsoISODate? ExpectedValueDate { get; init; }
+    public DateOnly? ExpectedValueDate { get; init; }
 
     /// <summary>
     /// Provides further information in order to identify a previous payment notification.

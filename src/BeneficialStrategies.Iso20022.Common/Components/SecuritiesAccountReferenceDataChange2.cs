@@ -32,7 +32,7 @@ public record SecuritiesAccountReferenceDataChange2
     [IsoXmlTag("FldNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text FieldName { get; init; }
+    public required Max35Text FieldName { get; init; }
 
     /// <summary>
     /// Value of the related field before the change was applied.
@@ -42,7 +42,7 @@ public record SecuritiesAccountReferenceDataChange2
     [IsoXmlTag("OdFldVal")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text OldFieldValue { get; init; }
+    public required Max350Text OldFieldValue { get; init; }
 
     /// <summary>
     /// Value of the related field after the change was applied.
@@ -52,7 +52,7 @@ public record SecuritiesAccountReferenceDataChange2
     [IsoXmlTag("NewFldVal")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text NewFieldValue { get; init; }
+    public required Max350Text NewFieldValue { get; init; }
 
     /// <summary>
     /// Specifies the timestamp of the operation.
@@ -61,5 +61,5 @@ public record SecuritiesAccountReferenceDataChange2
     [DisplayName("Operation Time Stamp")]
     [IsoXmlTag("OprTmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime OperationTimeStamp { get; init; }
+    public required ISODateTime OperationTimeStamp { get; init; }
 }

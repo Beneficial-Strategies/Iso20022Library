@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PreviousYearChoice
         /// </summary>
         [IsoXmlTag("SpcfcPrvsYrs")]
         [IsoSimpleType(IsoSimpleType.ISOYear)]
-        public required IsoISOYear Value { get; init; }
+        public required ISOYear Value { get; init; }
     }
 }

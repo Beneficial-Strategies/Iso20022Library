@@ -222,7 +222,7 @@ public record SettlementDetails225
     [IsoId("_IpBOpZaDEfC2_67yGLymgA")]
     [DisplayName("Return Leg")]
     [IsoXmlTag("RtrLeg")]
-    public IsoYesNoIndicator? ReturnLeg { get; init; }
+    public YesNoIndicator? ReturnLeg { get; init; }
 
     /// <summary>
     /// Specifies whether a third party is allowed to modify or cancel the transaction.
@@ -238,7 +238,7 @@ public record SettlementDetails225
     [IsoId("_IpBOtZaDEfC2_67yGLymgA")]
     [DisplayName("Eligible For Collateral")]
     [IsoXmlTag("ElgblForColl")]
-    public IsoYesNoIndicator? EligibleForCollateral { get; init; }
+    public YesNoIndicator? EligibleForCollateral { get; init; }
 
     /// <summary>
     /// Specifies the securities sub balance type indicator (example restriction type for a market infrastructure).

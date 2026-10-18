@@ -21,14 +21,14 @@ public record PaymentIdentification15
     /// </summary>
     [DisplayName("Clearing System Reference")]
     [IsoXmlTag("ClrSysRef")]
-    public IsoMax35Text? ClearingSystemReference { get; init; }
+    public Max35Text? ClearingSystemReference { get; init; }
 
     /// <summary>
     /// End To End Identification.
     /// </summary>
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
-    public required IsoMax35Text EndToEndIdentification { get; init; }
+    public required Max35Text EndToEndIdentification { get; init; }
 
     /// <summary>
     /// First Agent.
@@ -42,19 +42,19 @@ public record PaymentIdentification15
     /// </summary>
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
-    public IsoMax35Text? InstructionIdentification { get; init; }
+    public Max35Text? InstructionIdentification { get; init; }
 
     /// <summary>
     /// Transaction Identification.
     /// </summary>
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
-    public IsoMax35Text? TransactionIdentification { get; init; }
+    public Max35Text? TransactionIdentification { get; init; }
 
     /// <summary>
     /// UETR.
     /// </summary>
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
-    public IsoUUIDv4Identifier? UETR { get; init; }
+    public UUIDv4Identifier? UETR { get; init; }
 }

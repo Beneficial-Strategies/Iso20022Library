@@ -31,7 +31,7 @@ public record CardTransaction11
     [DisplayName("Number Of Messages")]
     [IsoXmlTag("NbOfMsgs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NumberOfMessages { get; init; }
+    public Number? NumberOfMessages { get; init; }
 
     /// <summary>
     /// Maximum number of messages in the store and forward queue.
@@ -40,7 +40,7 @@ public record CardTransaction11
     [DisplayName("Maximum Number Of Messages")]
     [IsoXmlTag("MaxNbOfMsgs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaximumNumberOfMessages { get; init; }
+    public Number? MaximumNumberOfMessages { get; init; }
 
     /// <summary>
     /// Date and time of the transaction.
@@ -49,7 +49,7 @@ public record CardTransaction11
     [DisplayName("Initiator Date Time")]
     [IsoXmlTag("InitrDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? InitiatorDateTime { get; init; }
+    public ISODateTime? InitiatorDateTime { get; init; }
 
     /// <summary>
     /// Response to the network management request.

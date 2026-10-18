@@ -28,5 +28,5 @@ public record PlainCardData23
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax20Text? Identification { get; init; }
+    public Max20Text? Identification { get; init; }
 }

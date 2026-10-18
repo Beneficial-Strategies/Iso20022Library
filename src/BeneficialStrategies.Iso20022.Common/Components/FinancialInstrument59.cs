@@ -23,7 +23,7 @@ public record FinancialInstrument59
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public required IsoISINOct2015Identifier Identification { get; init; }
+    public required ISINOct2015Identifier Identification { get; init; }
 
     /// <summary>
     /// Identifies the security issuer.
@@ -32,7 +32,7 @@ public record FinancialInstrument59
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public required IsoLEIIdentifier Issuer { get; init; }
+    public required LEIIdentifier Issuer { get; init; }
 
     /// <summary>
     /// Sector for the security issuer, for example, 0500.
@@ -41,5 +41,5 @@ public record FinancialInstrument59
     [DisplayName("Sector")]
     [IsoXmlTag("Sctr")]
     [IsoSimpleType(IsoSimpleType.SNA2008SectorIdentifier)]
-    public IsoSNA2008SectorIdentifier? Sector { get; init; }
+    public SNA2008SectorIdentifier? Sector { get; init; }
 }

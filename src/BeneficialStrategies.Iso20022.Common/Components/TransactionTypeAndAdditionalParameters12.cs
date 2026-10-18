@@ -24,7 +24,7 @@ public record TransactionTypeAndAdditionalParameters12
     [IsoXmlTag("AcctOwnrTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax16Text AccountOwnerTransactionIdentification { get; init; }
+    public required RestrictedFINXMax16Text AccountOwnerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the transaction (unique per piece of collateral) as known by the account servicer.
@@ -34,7 +34,7 @@ public record TransactionTypeAndAdditionalParameters12
     [IsoXmlTag("AcctSvcrTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? AccountServicerTransactionIdentification { get; init; }
+    public RestrictedFINXMax16Text? AccountServicerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Specifies the type of securities financing transaction, that is, repurchase agreement, reverse repurchase agreement, securities lending or securities borrowing.
@@ -68,7 +68,7 @@ public record TransactionTypeAndAdditionalParameters12
     [IsoXmlTag("CmonId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? CommonIdentification { get; init; }
+    public RestrictedFINXMax16Text? CommonIdentification { get; init; }
 
     /// <summary>
     /// Collective reference identifying a set of messages.
@@ -78,7 +78,7 @@ public record TransactionTypeAndAdditionalParameters12
     [IsoXmlTag("PoolId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? PoolIdentification { get; init; }
+    public RestrictedFINXMax16Text? PoolIdentification { get; init; }
 
     /// <summary>
     /// Identification assigned by the account servicer to unambiguously identify a corporate action event.
@@ -88,5 +88,5 @@ public record TransactionTypeAndAdditionalParameters12
     [IsoXmlTag("CorpActnEvtId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? CorporateActionEventIdentification { get; init; }
+    public RestrictedFINXMax16Text? CorporateActionEventIdentification { get; init; }
 }

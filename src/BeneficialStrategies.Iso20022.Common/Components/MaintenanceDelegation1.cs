@@ -33,7 +33,7 @@ public record MaintenanceDelegation1
     [DisplayName("Partial Delegation")]
     [IsoXmlTag("PrtlDlgtn")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? PartialDelegation { get; init; }
+    public TrueFalseIndicator? PartialDelegation { get; init; }
 
     /// <summary>
     /// Subset of the terminal estate for the delegated actions, for instance for pilot or key deactivation). The subset may be expressed as a list of POI or terminal estate subset identifier.
@@ -41,7 +41,7 @@ public record MaintenanceDelegation1
     [IsoId("_XrpHQGp9EeSojYXQbRlLzA")]
     [DisplayName("POI Subset")]
     [IsoXmlTag("POISubset")]
-    public SimpleValueList<IsoMax35Text> POISubset { get; init; } = [];
+    public SimpleValueList<Max35Text> POISubset { get; init; } = [];
 
     /// <summary>
     /// Information for the MTM to build or include delegated actions in the management plan of the POI.
@@ -59,7 +59,7 @@ public record MaintenanceDelegation1
     [IsoXmlTag("ParamsSubsetId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ParametersSubsetIdentification { get; init; }
+    public Max35Text? ParametersSubsetIdentification { get; init; }
 
     /// <summary>
     /// Definition of the subset of application parameters, for instance the range of application profiles, the RID (registered application provider identification).
@@ -68,7 +68,7 @@ public record MaintenanceDelegation1
     [DisplayName("Parameters Subset Definition")]
     [IsoXmlTag("ParamsSubsetDef")]
     [IsoSimpleType(IsoSimpleType.Max3000Binary)]
-    public IsoMax3000Binary? ParametersSubsetDefinition { get; init; }
+    public Max3000Binary? ParametersSubsetDefinition { get; init; }
 
     /// <summary>
     /// Certificate path of the terminal manager.
@@ -76,7 +76,7 @@ public record MaintenanceDelegation1
     [IsoId("_XiCtEGqCEeSojYXQbRlLzA")]
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
-    public SimpleValueList<IsoMax5000Binary> Certificate { get; init; } = [];
+    public SimpleValueList<Max5000Binary> Certificate { get; init; } = [];
 
     /// <summary>
     /// Association of the TM identifier and the MTM identifier of a POI.

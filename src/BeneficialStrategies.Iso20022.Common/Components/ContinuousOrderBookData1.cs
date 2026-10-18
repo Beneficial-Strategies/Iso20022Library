@@ -22,7 +22,7 @@ public record ContinuousOrderBookData1
     [IsoId("_9iyh8GIZEfCeoPFCHQnhvA")]
     [DisplayName("Entry Date Time")]
     [IsoXmlTag("NtryDtTm")]
-    public required IsoISODateTime EntryDateTime { get; init; }
+    public required ISODateTime EntryDateTime { get; init; }
 
     /// <summary>
     /// Date and time of the calculation of the Best Bid and Offer (BBO).
@@ -30,7 +30,7 @@ public record ContinuousOrderBookData1
     [IsoId("_LbnS8GIaEfCeoPFCHQnhvA")]
     [DisplayName("Calculation Date Time")]
     [IsoXmlTag("ClctnDtTm")]
-    public required IsoISODateTime CalculationDateTime { get; init; }
+    public required ISODateTime CalculationDateTime { get; init; }
 
     /// <summary>
     /// Data related to the bid for continuous order books.

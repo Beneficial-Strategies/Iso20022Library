@@ -23,7 +23,7 @@ public record TaxPeriod3
     [DisplayName("Year")]
     [IsoXmlTag("Yr")]
     [IsoSimpleType(IsoSimpleType.ISOYear)]
-    public IsoISOYear? Year { get; init; }
+    public ISOYear? Year { get; init; }
 
     /// <summary>
     /// Identification of the period related to the tax payment.

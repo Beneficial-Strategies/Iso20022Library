@@ -31,7 +31,7 @@ public record VolumeCapReport1
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public IsoMICIdentifier? TradingVenue { get; init; }
+    public MICIdentifier? TradingVenue { get; init; }
 
     /// <summary>
     /// Volume cap data specific to a reporting period.

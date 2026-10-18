@@ -65,7 +65,7 @@ public record CardTransactionDetail4
     [DisplayName("Validity Date")]
     [IsoXmlTag("VldtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ValidityDate { get; init; }
+    public DateOnly? ValidityDate { get; init; }
 
     /// <summary>
     /// Data related to an integrated circuit card application.
@@ -75,5 +75,5 @@ public record CardTransactionDetail4
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
     [IsoSimpleType(IsoSimpleType.Max10000Binary)]
-    public IsoMax10000Binary? ICCRelatedData { get; init; }
+    public Max10000Binary? ICCRelatedData { get; init; }
 }

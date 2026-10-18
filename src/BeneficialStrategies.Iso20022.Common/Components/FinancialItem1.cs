@@ -73,7 +73,7 @@ public record FinancialItem1
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max2000Text)]
     [StringLength(maximumLength: 2000, MinimumLength = 1)]
-    public IsoMax2000Text? AdditionalInformation { get; init; }
+    public Max2000Text? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Associated free form document, for example a delivery confirmation.

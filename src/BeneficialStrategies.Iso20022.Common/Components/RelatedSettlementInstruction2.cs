@@ -28,7 +28,7 @@ public record RelatedSettlementInstruction2
     /// </summary>
     [DisplayName("Related Settlement Instruction Identification")]
     [IsoXmlTag("RltdSttlmInstrId")]
-    public required IsoMax35Text RelatedSettlementInstructionIdentification { get; init; }
+    public required Max35Text RelatedSettlementInstructionIdentification { get; init; }
 
     /// <summary>
     /// Related Settlement Quantity.

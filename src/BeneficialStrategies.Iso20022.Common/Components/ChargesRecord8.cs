@@ -42,7 +42,7 @@ public record ChargesRecord8
     /// </summary>
     [DisplayName("Charge Included Indicator")]
     [IsoXmlTag("ChrgInclInd")]
-    public IsoChargeIncludedIndicator? ChargeIncludedIndicator { get; init; }
+    public ChargeIncludedIndicator? ChargeIncludedIndicator { get; init; }
 
     /// <summary>
     /// Credit Debit Indicator.
@@ -56,7 +56,7 @@ public record ChargesRecord8
     /// </summary>
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
-    public IsoPercentageRate? Rate { get; init; }
+    public PercentageRate? Rate { get; init; }
 
     /// <summary>
     /// Tax.

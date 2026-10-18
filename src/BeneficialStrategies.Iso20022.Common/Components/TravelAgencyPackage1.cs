@@ -24,7 +24,7 @@ public record TravelAgencyPackage1
     [IsoXmlTag("RsvatnNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReservationNumber { get; init; }
+    public Max35Text? ReservationNumber { get; init; }
 
     /// <summary>
     /// Describes the type of travel offering provided by the travel agency or partner.
@@ -34,7 +34,7 @@ public record TravelAgencyPackage1
     [IsoXmlTag("TrvlPackgTp")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? TravelPackageType { get; init; }
+    public Max70Text? TravelPackageType { get; init; }
 
     /// <summary>
     /// Number of people included in the travel arrangements.
@@ -43,7 +43,7 @@ public record TravelAgencyPackage1
     [DisplayName("Number In Party")]
     [IsoXmlTag("NbInPty")]
     [IsoSimpleType(IsoSimpleType.Max10NumericText)]
-    public IsoMax10NumericText? NumberInParty { get; init; }
+    public Max10NumericText? NumberInParty { get; init; }
 
     /// <summary>
     /// Contains Customer Reference Values provided for this transaction and used for various reference processing at the customer site. These values represent information most prevalently provided by travel agencies for transactions booked against a lodged account or central travel account.
@@ -61,7 +61,7 @@ public record TravelAgencyPackage1
     [IsoXmlTag("DataSrc")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DataSource { get; init; }
+    public Max35Text? DataSource { get; init; }
 
     /// <summary>
     /// Contains a customer invoice number for a rail sale to a corporate account.
@@ -71,7 +71,7 @@ public record TravelAgencyPackage1
     [IsoXmlTag("DlvryOrdrNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DeliveryOrderNumber { get; init; }
+    public Max35Text? DeliveryOrderNumber { get; init; }
 
     /// <summary>
     /// Contains a slip number from the credit card slip.
@@ -81,7 +81,7 @@ public record TravelAgencyPackage1
     [IsoXmlTag("CdtCardSlipNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CreditCardSlipNumber { get; init; }
+    public Max35Text? CreditCardSlipNumber { get; init; }
 
     /// <summary>
     /// Indicates whether or not insurance was purchased.
@@ -90,7 +90,7 @@ public record TravelAgencyPackage1
     [DisplayName("Insurance Indicator")]
     [IsoXmlTag("InsrncInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? InsuranceIndicator { get; init; }
+    public TrueFalseIndicator? InsuranceIndicator { get; init; }
 
     /// <summary>
     /// Cost of the insurance purchased.

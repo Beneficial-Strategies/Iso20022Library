@@ -22,7 +22,7 @@ public record NotificationItem10
     [IsoId("eae303a5-0053-4761-929c-b0b1d0b41472")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the debtor, to unambiguously identify the underlying transaction to the creditor.
@@ -30,7 +30,7 @@ public record NotificationItem10
     [IsoId("ce864501-d56b-41b9-8720-d354a3613627")]
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
-    public IsoMax35Text? EndToEndIdentification { get; init; }
+    public Max35Text? EndToEndIdentification { get; init; }
 
     /// <summary>
     /// Universally unique identifier to provide an end-to-end reference of a payment transaction.
@@ -38,7 +38,7 @@ public record NotificationItem10
     [IsoId("6ac0e6e3-9452-4317-baca-5f45853e9e15")]
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
-    public IsoUUIDv4Identifier? UETR { get; init; }
+    public UUIDv4Identifier? UETR { get; init; }
 
     /// <summary>
     /// Identifies the account to be credited with the incoming amount of money.
@@ -86,7 +86,7 @@ public record NotificationItem10
     [IsoId("c9df1ebc-c3a8-4831-b547-b986bb646982")]
     [DisplayName("Expected Value Date")]
     [IsoXmlTag("XpctdValDt")]
-    public IsoISODate? ExpectedValueDate { get; init; }
+    public DateOnly? ExpectedValueDate { get; init; }
 
     /// <summary>
     /// Party that owes an amount of money to the (ultimate) creditor.

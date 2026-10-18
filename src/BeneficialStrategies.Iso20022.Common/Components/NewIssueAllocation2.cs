@@ -23,7 +23,7 @@ public record NewIssueAllocation2
     [DisplayName("Restricted")]
     [IsoXmlTag("Rstrctd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator Restricted { get; init; }
+    public required YesNoIndicator Restricted { get; init; }
 
     /// <summary>
     /// Reason for exemption.
@@ -33,7 +33,7 @@ public record NewIssueAllocation2
     [IsoXmlTag("XmptPrsnRsn")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? ExemptPersonReason { get; init; }
+    public Max350Text? ExemptPersonReason { get; init; }
 
     /// <summary>
     /// Conditions applicable when the investor is covered by the &quot;de minimis&quot; exemption.

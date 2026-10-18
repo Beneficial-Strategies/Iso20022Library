@@ -24,7 +24,7 @@ public record CorporateActionSD15
     [IsoXmlTag("CertNb")]
     [IsoSimpleType(IsoSimpleType.Max15AlphaNumericText)]
     [StringLength(maximumLength: 15, MinimumLength = 1)]
-    public required IsoMax15AlphaNumericText CertificateNumber { get; init; }
+    public required Max15AlphaNumericText CertificateNumber { get; init; }
 
     /// <summary>
     /// Principal amount (for debt issues) or number of shares (for equity issues) that has been called for redemption for a particular certificate number.
@@ -33,5 +33,5 @@ public record CorporateActionSD15
     [DisplayName("Certificate Called Amount")]
     [IsoXmlTag("CertClldAmt")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public required IsoDecimalNumber CertificateCalledAmount { get; init; }
+    public required DecimalNumber CertificateCalledAmount { get; init; }
 }

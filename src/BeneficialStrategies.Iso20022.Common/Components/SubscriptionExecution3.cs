@@ -24,7 +24,7 @@ public record SubscriptionExecution3
     [IsoXmlTag("OrdrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OrderReference { get; init; }
+    public required Max35Text OrderReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for an order execution, as assigned by a confirming party.
@@ -34,7 +34,7 @@ public record SubscriptionExecution3
     [IsoXmlTag("DealRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text DealReference { get; init; }
+    public required Max35Text DealReference { get; init; }
 
     /// <summary>
     /// Specifies the category of the investment fund order.
@@ -115,7 +115,7 @@ public record SubscriptionExecution3
     [DisplayName("Partially Executed Indicator")]
     [IsoXmlTag("PrtlyExctdInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator PartiallyExecutedIndicator { get; init; }
+    public required YesNoIndicator PartiallyExecutedIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the dividend is included, ie, cum-dividend, in the executed price. When the dividend is not included, the price will be ex-dividend.
@@ -124,7 +124,7 @@ public record SubscriptionExecution3
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator CumDividendIndicator { get; init; }
+    public required YesNoIndicator CumDividendIndicator { get; init; }
 
     /// <summary>
     /// Part of the price deemed as accrued income or profit rather than capital. The interim profit amount is used for tax purposes.
@@ -158,7 +158,7 @@ public record SubscriptionExecution3
     [IsoXmlTag("LttrInttRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LetterIntentReference { get; init; }
+    public Max35Text? LetterIntentReference { get; init; }
 
     /// <summary>
     /// Reference of an accumulation right program, in which sales commissions are based on a customer&apos;s present purchases of shares and the aggregate quantity previously purchased by the customer. An accumulation rights program is mainly used in the US market.
@@ -168,7 +168,7 @@ public record SubscriptionExecution3
     [IsoXmlTag("AcmltnRghtRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccumulationRightReference { get; init; }
+    public Max35Text? AccumulationRightReference { get; init; }
 
     /// <summary>
     /// Amount of money associated with a service.
@@ -209,7 +209,7 @@ public record SubscriptionExecution3
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator PhysicalDeliveryIndicator { get; init; }
+    public required YesNoIndicator PhysicalDeliveryIndicator { get; init; }
 
     /// <summary>
     /// Information related to physical delivery of the securities.

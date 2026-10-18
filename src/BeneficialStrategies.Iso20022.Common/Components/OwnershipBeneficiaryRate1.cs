@@ -23,7 +23,7 @@ public record OwnershipBeneficiaryRate1
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Rate { get; init; }
+    public PercentageRate? Rate { get; init; }
 
     /// <summary>
     /// Ownership or beneficial ownership expressed as a fraction or another form.
@@ -33,5 +33,5 @@ public record OwnershipBeneficiaryRate1
     [IsoXmlTag("Frctn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Fraction { get; init; }
+    public Max35Text? Fraction { get; init; }
 }

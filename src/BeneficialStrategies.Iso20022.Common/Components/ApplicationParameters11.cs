@@ -32,7 +32,7 @@ public record ApplicationParameters11
     [IsoXmlTag("ApplId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ApplicationIdentification { get; init; }
+    public required Max35Text ApplicationIdentification { get; init; }
 
     /// <summary>
     /// Version of the payment application configuration parameters.
@@ -42,7 +42,7 @@ public record ApplicationParameters11
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Version { get; init; }
+    public Max256Text? Version { get; init; }
 
     /// <summary>
     /// Version of the parameters&apos; format.
@@ -52,7 +52,7 @@ public record ApplicationParameters11
     [IsoXmlTag("ParamFrmtIdr")]
     [IsoSimpleType(IsoSimpleType.Max8Text)]
     [StringLength(maximumLength: 8, MinimumLength = 1)]
-    public IsoMax8Text? ParameterFormatIdentifier { get; init; }
+    public Max8Text? ParameterFormatIdentifier { get; init; }
 
     /// <summary>
     /// Full length of parameters.
@@ -61,7 +61,7 @@ public record ApplicationParameters11
     [DisplayName("Parameters Length")]
     [IsoXmlTag("ParamsLngth")]
     [IsoSimpleType(IsoSimpleType.PositiveNumber)]
-    public IsoPositiveNumber? ParametersLength { get; init; }
+    public PositiveNumber? ParametersLength { get; init; }
 
     /// <summary>
     /// Place of this  Block, beginning with 0, in the full parameters.
@@ -70,7 +70,7 @@ public record ApplicationParameters11
     [DisplayName("Offset Start")]
     [IsoXmlTag("OffsetStart")]
     [IsoSimpleType(IsoSimpleType.PositiveNumber)]
-    public IsoPositiveNumber? OffsetStart { get; init; }
+    public PositiveNumber? OffsetStart { get; init; }
 
     /// <summary>
     /// Following place of this Block in the full parameters.
@@ -79,7 +79,7 @@ public record ApplicationParameters11
     [DisplayName("Offset End")]
     [IsoXmlTag("OffsetEnd")]
     [IsoSimpleType(IsoSimpleType.PositiveNumber)]
-    public IsoPositiveNumber? OffsetEnd { get; init; }
+    public PositiveNumber? OffsetEnd { get; init; }
 
     /// <summary>
     /// Configuration parameters used by the related payment application.
@@ -87,7 +87,7 @@ public record ApplicationParameters11
     [IsoId("_RbdSb1FIEeyApZmLzm74zA")]
     [DisplayName("Parameters")]
     [IsoXmlTag("Params")]
-    public SimpleValueList<IsoMax100KBinary> Parameters { get; init; } = [];
+    public SimpleValueList<Max100KBinary> Parameters { get; init; } = [];
 
     /// <summary>
     /// Sensitive parameters (sequence of parameters including the envelope) encrypted with a cryptographic key.

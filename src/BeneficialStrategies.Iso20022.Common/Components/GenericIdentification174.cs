@@ -24,7 +24,7 @@ public record GenericIdentification174
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Indicates the source of the identifier that represent the constituents of a custom basket.
@@ -34,5 +34,5 @@ public record GenericIdentification174
     [IsoXmlTag("Src")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Source { get; init; }
+    public required Max35Text Source { get; init; }
 }

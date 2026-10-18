@@ -22,7 +22,7 @@ public record SubscriptionOrder17
     [IsoId("118faecd-a78c-4b22-9b24-c01a4dc9972d")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
-    public required IsoMax35Text OrderReference { get; init; }
+    public required Max35Text OrderReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor's identification of the order. This reference can typically be used in a hub scenario to give the reference of the order as assigned by the underlying client.
@@ -30,7 +30,7 @@ public record SubscriptionOrder17
     [IsoId("6716a6da-d82c-4dd1-b68c-1d419c9ea078")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
-    public IsoMax35Text? ClientReference { get; init; }
+    public Max35Text? ClientReference { get; init; }
 
     /// <summary>
     /// Unambiguous identification of a random or semi-random number used once (NONCE) generated in the frame of a cryptographic communication.
@@ -38,7 +38,7 @@ public record SubscriptionOrder17
     [IsoId("ad2a53d7-5a29-4642-a3f8-8a9ceaa5a746")]
     [DisplayName("Nonce Identification")]
     [IsoXmlTag("NonceId")]
-    public IsoMax35Text? NonceIdentification { get; init; }
+    public Max35Text? NonceIdentification { get; init; }
 
     /// <summary>
     /// Category of the investment fund order.
@@ -94,7 +94,7 @@ public record SubscriptionOrder17
     [IsoId("a999f09b-65b3-46d0-9dc4-1b08148b05cc")]
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
-    public IsoISODate? CashSettlementDate { get; init; }
+    public DateOnly? CashSettlementDate { get; init; }
 
     /// <summary>
     /// Method by which the transaction is settled.
@@ -126,7 +126,7 @@ public record SubscriptionOrder17
     [IsoId("7b4da6b7-510f-4733-9d4a-0764b2b93677")]
     [DisplayName("Letter Intent Reference")]
     [IsoXmlTag("LttrInttRef")]
-    public IsoMax35Text? LetterIntentReference { get; init; }
+    public Max35Text? LetterIntentReference { get; init; }
 
     /// <summary>
     /// Reference of an accumulation right program, in which sales commissions are based on a customer's present purchases of shares and the aggregate quantity previously purchased by the customer. An accumulation rights program is mainly used in the US market.
@@ -134,7 +134,7 @@ public record SubscriptionOrder17
     [IsoId("a2e36b6a-7f9f-47e2-8654-7c74bf4925c3")]
     [DisplayName("Accumulation Right Reference")]
     [IsoXmlTag("AcmltnRghtRef")]
-    public IsoMax35Text? AccumulationRightReference { get; init; }
+    public Max35Text? AccumulationRightReference { get; init; }
 
     /// <summary>
     /// Fees (charges/commission) and tax to be applied to the net amount.
@@ -158,7 +158,7 @@ public record SubscriptionOrder17
     [IsoId("4e741549-5516-4a0c-9711-c16404e8e448")]
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
-    public required IsoYesNoIndicator PhysicalDeliveryIndicator { get; init; }
+    public required YesNoIndicator PhysicalDeliveryIndicator { get; init; }
 
     /// <summary>
     /// Information related to the physical delivery of the securities.
@@ -206,7 +206,7 @@ public record SubscriptionOrder17
     [IsoId("7191624f-e908-4824-b5db-426eabb3706b")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
-    public IsoMax350Text? NonStandardSettlementInformation { get; init; }
+    public Max350Text? NonStandardSettlementInformation { get; init; }
 
     /// <summary>
     /// Breakdown of the net amount per type of order.

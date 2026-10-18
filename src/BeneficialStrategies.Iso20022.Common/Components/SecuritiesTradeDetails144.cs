@@ -21,14 +21,14 @@ public record SecuritiesTradeDetails144
     /// </summary>
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
-    public ValueList<IsoMax35Text> AccountOwnerTransactionIdentification { get; init; } = [];
+    public ValueList<Max35Text> AccountOwnerTransactionIdentification { get; init; } = [];
 
     /// <summary>
     /// Collateral Transaction Identification.
     /// </summary>
     [DisplayName("Collateral Transaction Identification")]
     [IsoXmlTag("CollTxId")]
-    public ValueList<IsoMax35Text> CollateralTransactionIdentification { get; init; } = [];
+    public ValueList<Max35Text> CollateralTransactionIdentification { get; init; } = [];
 
     /// <summary>
     /// Deal Price.
@@ -42,7 +42,7 @@ public record SecuritiesTradeDetails144
     /// </summary>
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
-    public IsoMax3Number? NumberOfDaysAccrued { get; init; }
+    public Max3Number? NumberOfDaysAccrued { get; init; }
 
     /// <summary>
     /// Place Of Clearing.
@@ -63,7 +63,7 @@ public record SecuritiesTradeDetails144
     /// </summary>
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
-    public IsoMax35Text? ProcessorTransactionIdentification { get; init; }
+    public Max35Text? ProcessorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Settlement Date.
@@ -84,7 +84,7 @@ public record SecuritiesTradeDetails144
     /// </summary>
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    public IsoMax35Text? TradeIdentification { get; init; }
+    public Max35Text? TradeIdentification { get; init; }
 
     /// <summary>
     /// Trade Transaction Condition.
@@ -106,5 +106,5 @@ public record SecuritiesTradeDetails144
     /// </summary>
     [DisplayName("Unique Transaction Identifier")]
     [IsoXmlTag("UnqTxIdr")]
-    public IsoUTIIdentifier? UniqueTransactionIdentifier { get; init; }
+    public UTIIdentifier? UniqueTransactionIdentifier { get; init; }
 }

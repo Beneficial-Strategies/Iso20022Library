@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.VoteThroughNetwork1Choice
         /// </summary>
         [IsoXmlTag("VoteDrctlyToIssr")]
         [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
-        public required IsoAnyBICDec2014Identifier Value { get; init; }
+        public required AnyBICDec2014Identifier Value { get; init; }
     }
 }

@@ -41,7 +41,7 @@ public record ReportTransactionRequest1
     [DisplayName("Descending Order")]
     [IsoXmlTag("DscndgOrdr")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? DescendingOrder { get; init; }
+    public TrueFalseIndicator? DescendingOrder { get; init; }
 
     /// <summary>
     /// Index of the first transaction matching the search criteria.
@@ -50,7 +50,7 @@ public record ReportTransactionRequest1
     [DisplayName("Block Start")]
     [IsoXmlTag("BlckStart")]
     [IsoSimpleType(IsoSimpleType.PositiveNumber)]
-    public IsoPositiveNumber? BlockStart { get; init; }
+    public PositiveNumber? BlockStart { get; init; }
 
     /// <summary>
     /// Index of the last transaction matching the search criteria.
@@ -59,5 +59,5 @@ public record ReportTransactionRequest1
     [DisplayName("Block Stop")]
     [IsoXmlTag("BlckStop")]
     [IsoSimpleType(IsoSimpleType.PositiveNumber)]
-    public IsoPositiveNumber? BlockStop { get; init; }
+    public PositiveNumber? BlockStop { get; init; }
 }

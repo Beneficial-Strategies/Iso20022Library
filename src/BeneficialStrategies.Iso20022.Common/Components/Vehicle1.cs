@@ -23,7 +23,7 @@ public record Vehicle1
     [DisplayName("Vehicle Number")]
     [IsoXmlTag("VhclNb")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public IsoMax35NumericText? VehicleNumber { get; init; }
+    public Max35NumericText? VehicleNumber { get; init; }
 
     /// <summary>
     /// Number assigned to the vehicle trailer for identification.
@@ -32,7 +32,7 @@ public record Vehicle1
     [DisplayName("Trailer Number")]
     [IsoXmlTag("TrlrNb")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public IsoMax35NumericText? TrailerNumber { get; init; }
+    public Max35NumericText? TrailerNumber { get; init; }
 
     /// <summary>
     /// Registration tag of the vehicle.
@@ -42,7 +42,7 @@ public record Vehicle1
     [IsoXmlTag("VhclTag")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? VehicleTag { get; init; }
+    public Max35Text? VehicleTag { get; init; }
 
     /// <summary>
     /// Entry mode of the registration tag.
@@ -59,7 +59,7 @@ public record Vehicle1
     [DisplayName("Unit Number")]
     [IsoXmlTag("UnitNb")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public IsoMax35NumericText? UnitNumber { get; init; }
+    public Max35NumericText? UnitNumber { get; init; }
 
     /// <summary>
     /// True if the car is a replacement car.
@@ -68,7 +68,7 @@ public record Vehicle1
     [DisplayName("Replacement Car")]
     [IsoXmlTag("RplcmntCar")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ReplacementCar { get; init; }
+    public TrueFalseIndicator? ReplacementCar { get; init; }
 
     /// <summary>
     /// Odometer reading value indicating the distance travelled by the vehicle.
@@ -77,7 +77,7 @@ public record Vehicle1
     [DisplayName("Odometer")]
     [IsoXmlTag("Odmtr")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? Odometer { get; init; }
+    public DecimalNumber? Odometer { get; init; }
 
     /// <summary>
     /// Hubometer reading value indicating the distance travelled by the trailer.
@@ -86,7 +86,7 @@ public record Vehicle1
     [DisplayName("Hubometer")]
     [IsoXmlTag("Hbmtr")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? Hubometer { get; init; }
+    public DecimalNumber? Hubometer { get; init; }
 
     /// <summary>
     /// Number of hours the trailer has been in operation.
@@ -96,7 +96,7 @@ public record Vehicle1
     [IsoXmlTag("TrlrHrs")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TrailerHours { get; init; }
+    public Max35Text? TrailerHours { get; init; }
 
     /// <summary>
     /// Number of hours the refer unit has been in operation.
@@ -106,7 +106,7 @@ public record Vehicle1
     [IsoXmlTag("RefrHrs")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReferHours { get; init; }
+    public Max35Text? ReferHours { get; init; }
 
     /// <summary>
     /// Identification assigned to the vehicle related to maintenance.
@@ -116,7 +116,7 @@ public record Vehicle1
     [IsoXmlTag("MntncId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MaintenanceIdentification { get; init; }
+    public Max35Text? MaintenanceIdentification { get; init; }
 
     /// <summary>
     /// Second card presented for the payment transaction.

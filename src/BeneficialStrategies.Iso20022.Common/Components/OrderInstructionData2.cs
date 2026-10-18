@@ -70,7 +70,7 @@ public record OrderInstructionData2
     /// </summary>
     [DisplayName("Passive Only Indicator")]
     [IsoXmlTag("PssvOnlyInd")]
-    public IsoTrueFalseIndicator? PassiveOnlyIndicator { get; init; }
+    public TrueFalseIndicator? PassiveOnlyIndicator { get; init; }
 
     /// <summary>
     /// Remaining Quantity.
@@ -84,12 +84,12 @@ public record OrderInstructionData2
     /// </summary>
     [DisplayName("Routing Strategy")]
     [IsoXmlTag("RtgStrtgy")]
-    public IsoMax50Text? RoutingStrategy { get; init; }
+    public Max50Text? RoutingStrategy { get; init; }
 
     /// <summary>
     /// Self Execution Prevention.
     /// </summary>
     [DisplayName("Self Execution Prevention")]
     [IsoXmlTag("SlfExctnPrvntn")]
-    public IsoTrueFalseIndicator? SelfExecutionPrevention { get; init; }
+    public TrueFalseIndicator? SelfExecutionPrevention { get; init; }
 }

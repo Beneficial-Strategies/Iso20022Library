@@ -48,7 +48,7 @@ public record TMSAction4
     [IsoXmlTag("TMSPrtcol")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TMSProtocol { get; init; }
+    public Max35Text? TMSProtocol { get; init; }
 
     /// <summary>
     /// Version of the TMS protocol to use to perform the maintenance action.
@@ -58,7 +58,7 @@ public record TMSAction4
     [IsoXmlTag("TMSPrtcolVrsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TMSProtocolVersion { get; init; }
+    public Max35Text? TMSProtocolVersion { get; init; }
 
     /// <summary>
     /// Data set on which the action has to be performed.
@@ -84,7 +84,7 @@ public record TMSAction4
     [IsoXmlTag("ParamsSubsetId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ParametersSubsetIdentification { get; init; }
+    public Max35Text? ParametersSubsetIdentification { get; init; }
 
     /// <summary>
     /// Definition of the subset of application parameters, for instance the range of application profiles, the RID (registered application provider identification).
@@ -93,7 +93,7 @@ public record TMSAction4
     [DisplayName("Parameters Subset Definition")]
     [IsoXmlTag("ParamsSubsetDef")]
     [IsoSimpleType(IsoSimpleType.Max3000Binary)]
-    public IsoMax3000Binary? ParametersSubsetDefinition { get; init; }
+    public Max3000Binary? ParametersSubsetDefinition { get; init; }
 
     /// <summary>
     /// Proof of delegation to be verified by the POI, when performing the delegated actions.
@@ -102,7 +102,7 @@ public record TMSAction4
     [DisplayName("Delegation Proof")]
     [IsoXmlTag("DlgtnProof")]
     [IsoSimpleType(IsoSimpleType.Max5000Binary)]
-    public IsoMax5000Binary? DelegationProof { get; init; }
+    public Max5000Binary? DelegationProof { get; init; }
 
     /// <summary>
     /// Protected proof of delegation.
@@ -152,7 +152,7 @@ public record TMSAction4
     [DisplayName("TM Challenge")]
     [IsoXmlTag("TMChllng")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public IsoMax140Binary? TMChallenge { get; init; }
+    public Max140Binary? TMChallenge { get; init; }
 
     /// <summary>
     /// Certificate chain for the encryption of temporary transport key of the key to inject.
@@ -160,7 +160,7 @@ public record TMSAction4
     [IsoId("_7Rt90WpPEeSR-ZWLvO-1dg")]
     [DisplayName("Key Encipherment Certificate")]
     [IsoXmlTag("KeyNcphrmntCert")]
-    public SimpleValueList<IsoMax10KBinary> KeyEnciphermentCertificate { get; init; } = [];
+    public SimpleValueList<Max10KBinary> KeyEnciphermentCertificate { get; init; } = [];
 
     /// <summary>
     /// Action to perform in case of error on the related action in progress.
@@ -176,5 +176,5 @@ public record TMSAction4
     [IsoId("_n_nr4GpYEeSR-ZWLvO-1dg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public SimpleValueList<IsoMax3000Binary> AdditionalInformation { get; init; } = [];
+    public SimpleValueList<Max3000Binary> AdditionalInformation { get; init; } = [];
 }

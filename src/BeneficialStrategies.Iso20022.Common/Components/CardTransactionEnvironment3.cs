@@ -32,7 +32,7 @@ public record CardTransactionEnvironment3
     [IsoXmlTag("CardSchmeId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CardSchemeIdentification { get; init; }
+    public Max35Text? CardSchemeIdentification { get; init; }
 
     /// <summary>
     /// Acceptor performing the card transaction.

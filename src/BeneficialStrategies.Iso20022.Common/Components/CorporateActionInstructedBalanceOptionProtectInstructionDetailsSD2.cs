@@ -24,7 +24,7 @@ public record CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Option number of the protect instruction.
@@ -42,7 +42,7 @@ public record CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2
     [IsoXmlTag("PrtctId")]
     [IsoSimpleType(IsoSimpleType.Max15Text)]
     [StringLength(maximumLength: 15, MinimumLength = 1)]
-    public required IsoMax15Text ProtectIdentification { get; init; }
+    public required Max15Text ProtectIdentification { get; init; }
 
     /// <summary>
     /// For cover protect instructions whereby one safekeeping account is covering on behalf of another safekeeping account. The protect safekeeping account will be the account which submitted the original protect instruction.
@@ -52,7 +52,7 @@ public record CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2
     [IsoXmlTag("PrtctSfkpgAcct")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINMax35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoRestrictedFINMax35Text? ProtectSafekeepingAccount { get; init; }
+    public RestrictedFINMax35Text? ProtectSafekeepingAccount { get; init; }
 
     /// <summary>
     /// Additional reference number used to uniquely identify uncovered protect instruction.
@@ -61,7 +61,7 @@ public record CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2
     [DisplayName("Protect Sequence Number")]
     [IsoXmlTag("PrtctSeqNb")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public IsoMax3NumericText? ProtectSequenceNumber { get; init; }
+    public Max3NumericText? ProtectSequenceNumber { get; init; }
 
     /// <summary>
     /// Date and time of the protect instruction.
@@ -70,7 +70,7 @@ public record CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2
     [DisplayName("Protect Date")]
     [IsoXmlTag("PrtctDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime ProtectDate { get; init; }
+    public required ISODateTime ProtectDate { get; init; }
 
     /// <summary>
     /// Date and time of the cover protect. Will be the latest cover date if partial cover transaction occurs.
@@ -79,7 +79,7 @@ public record CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2
     [DisplayName("Cover Protect Date")]
     [IsoXmlTag("CoverPrtctDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? CoverProtectDate { get; init; }
+    public ISODateTime? CoverProtectDate { get; init; }
 
     /// <summary>
     /// Quantity of the protect instruction. For protects which are partially covered, the quantity will be reduced by the amount partially covered.
@@ -136,7 +136,7 @@ public record CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2
     [DisplayName("Customer Reference Identification")]
     [IsoXmlTag("CstmrRefId")]
     [IsoSimpleType(IsoSimpleType.Max30Text)]
-    public IsoMax30Text? CustomerReferenceIdentification { get; init; }
+    public Max30Text? CustomerReferenceIdentification { get; init; }
 
     /// <summary>
     /// Client free format instruction narrative information. Will be 80 characters for tender instructions, 150 characters for rights instructions and 20 characters for put instructions.
@@ -146,5 +146,5 @@ public record CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2
     [IsoXmlTag("InstrCmnts")]
     [IsoSimpleType(IsoSimpleType.Max210Text)]
     [StringLength(maximumLength: 210, MinimumLength = 1)]
-    public IsoMax210Text? InstructionComments { get; init; }
+    public Max210Text? InstructionComments { get; init; }
 }

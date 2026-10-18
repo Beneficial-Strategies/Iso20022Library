@@ -24,7 +24,7 @@ public record Transfer1
     [IsoXmlTag("TrfRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransferReference { get; init; }
+    public required Max35Text TransferReference { get; init; }
 
     /// <summary>
     /// Date and time at which the securities are to be delivered or received.
@@ -49,7 +49,7 @@ public record Transfer1
     [DisplayName("Portfolio Transfer Out Rate")]
     [IsoXmlTag("PrtflTrfOutRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate PortfolioTransferOutRate { get; init; }
+    public required PercentageRate PortfolioTransferOutRate { get; init; }
 
     /// <summary>
     /// Information about the units to be transferred.
@@ -66,7 +66,7 @@ public record Transfer1
     [DisplayName("Own Account Transfer Indicator")]
     [IsoXmlTag("OwnAcctTrfInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator OwnAccountTransferIndicator { get; init; }
+    public required YesNoIndicator OwnAccountTransferIndicator { get; init; }
 
     /// <summary>
     /// Value of a security, as booked in an account. Book value is often different from the current market value of the security.

@@ -24,7 +24,7 @@ public record SettlementData2
     [IsoXmlTag("CshFlowUnqRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CashFlowUniqueReference { get; init; }
+    public Max35Text? CashFlowUniqueReference { get; init; }
 
     /// <summary>
     /// Unique reference assigned by a settlement system.
@@ -34,7 +34,7 @@ public record SettlementData2
     [IsoXmlTag("SttlmSysUnqRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SettlementSystemUniqueReference { get; init; }
+    public Max35Text? SettlementSystemUniqueReference { get; init; }
 
     /// <summary>
     /// Original amount which should be settled. This information should be provided when the trade is partially settled or when the settlement is rejected.
@@ -83,7 +83,7 @@ public record SettlementData2
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate SettlementDate { get; init; }
+    public required DateOnly SettlementDate { get; init; }
 
     /// <summary>
     /// Specifies the status of a settlement eg rejected, settled or awaiting authorisation.
@@ -101,7 +101,7 @@ public record SettlementData2
     [IsoXmlTag("XtndedSttlmSts")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoExtended350Code ExtendedSettlementStatus { get; init; }
+    public required Extended350Code ExtendedSettlementStatus { get; init; }
 
     /// <summary>
     /// Additional information about the cause of the rejection of a settlement.
@@ -111,7 +111,7 @@ public record SettlementData2
     [IsoXmlTag("SttlmStsSubTp")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? SettlementStatusSubType { get; init; }
+    public Max70Text? SettlementStatusSubType { get; init; }
 
     /// <summary>
     /// Cash settlement is suspended.
@@ -120,7 +120,7 @@ public record SettlementData2
     [DisplayName("Suspended")]
     [IsoXmlTag("Sspd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator Suspended { get; init; }
+    public required YesNoIndicator Suspended { get; init; }
 
     /// <summary>
     /// Cash settlement is pending.
@@ -129,5 +129,5 @@ public record SettlementData2
     [DisplayName("Pending")]
     [IsoXmlTag("Pdg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator Pending { get; init; }
+    public required YesNoIndicator Pending { get; init; }
 }

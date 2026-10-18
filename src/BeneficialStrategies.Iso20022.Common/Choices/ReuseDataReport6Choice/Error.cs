@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReuseDataReport6Choice
         [IsoXmlTag("TechRcrdId")]
         [IsoSimpleType(IsoSimpleType.Max140Text)]
         [StringLength(maximumLength: 140, MinimumLength = 1)]
-        public IsoMax140Text? TechnicalRecordIdentification { get; init; }
+        public Max140Text? TechnicalRecordIdentification { get; init; }
 
         /// <summary>
         /// Date and time of submission of the report to the entitled receiver.
@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReuseDataReport6Choice
         [DisplayName("Reporting Date Time")]
         [IsoXmlTag("RptgDtTm")]
         [IsoSimpleType(IsoSimpleType.ISODateTime)]
-        public required IsoISODateTime ReportingDateTime { get; init; }
+        public required ISODateTime ReportingDateTime { get; init; }
 
         /// <summary>
         /// Data specific to counterparties and related fields.

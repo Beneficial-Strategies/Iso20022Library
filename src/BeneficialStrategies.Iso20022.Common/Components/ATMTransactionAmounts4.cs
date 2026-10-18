@@ -23,7 +23,7 @@ public record ATMTransactionAmounts4
     [DisplayName("Display Flag")]
     [IsoXmlTag("DispFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? DisplayFlag { get; init; }
+    public TrueFalseIndicator? DisplayFlag { get; init; }
 
     /// <summary>
     /// Amount available for withdrawal on the account.

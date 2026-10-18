@@ -28,7 +28,7 @@ public record CorporateActionOption242
     /// </summary>
     [DisplayName("Block Chain Address Or Wallet")]
     [IsoXmlTag("BlckChainAdrOrWllt")]
-    public IsoRestrictedFINXMax140Text? BlockChainAddressOrWallet { get; init; }
+    public RestrictedFINXMax140Text? BlockChainAddressOrWallet { get; init; }
 
     /// <summary>
     /// Cash Account.
@@ -84,7 +84,7 @@ public record CorporateActionOption242
     /// </summary>
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
-    public IsoRestrictedFINXMax35Text? SafekeepingAccount { get; init; }
+    public RestrictedFINXMax35Text? SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Safekeeping Place.
@@ -98,7 +98,7 @@ public record CorporateActionOption242
     /// </summary>
     [DisplayName("Solicitation Dealer Fee Indicator")]
     [IsoXmlTag("SlctnDealrFeeInd")]
-    public IsoYesNoIndicator? SolicitationDealerFeeIndicator { get; init; }
+    public YesNoIndicator? SolicitationDealerFeeIndicator { get; init; }
 
     /// <summary>
     /// Status Cash Amount.

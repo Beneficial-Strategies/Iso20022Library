@@ -21,7 +21,7 @@ public record PartyAndCertificate6
     /// </summary>
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
-    public IsoMax10KBinary? Certificate { get; init; }
+    public Max10KBinary? Certificate { get; init; }
 
     /// <summary>
     /// Party.

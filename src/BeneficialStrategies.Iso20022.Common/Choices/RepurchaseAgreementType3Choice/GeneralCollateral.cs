@@ -31,6 +31,6 @@ namespace BeneficialStrategies.Iso20022.Choices.RepurchaseAgreementType3Choice
         [DisplayName("Eligible Financial Instrument Identification")]
         [IsoXmlTag("ElgblFinInstrmId")]
         [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-        public IsoISINOct2015Identifier? EligibleFinancialInstrumentIdentification { get; init; }
+        public ISINOct2015Identifier? EligibleFinancialInstrumentIdentification { get; init; }
     }
 }

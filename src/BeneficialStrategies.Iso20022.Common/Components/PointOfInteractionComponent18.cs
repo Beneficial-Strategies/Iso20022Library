@@ -30,7 +30,7 @@ public record PointOfInteractionComponent18
     [IsoId("_jmq0W7ZyEfCUZfsQO4rYeA")]
     [DisplayName("Sub Type Information")]
     [IsoXmlTag("SubTpInf")]
-    public IsoMax70Text? SubTypeInformation { get; init; }
+    public Max70Text? SubTypeInformation { get; init; }
 
     /// <summary>
     /// Identification of the POI (Point Of Interaction) component.
@@ -86,5 +86,5 @@ public record PointOfInteractionComponent18
     [IsoId("_jmq0hbZyEfCUZfsQO4rYeA")]
     [DisplayName("Probe Value")]
     [IsoXmlTag("PrbVal")]
-    public IsoMax35Binary? ProbeValue { get; init; }
+    public Max35Binary? ProbeValue { get; init; }
 }

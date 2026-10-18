@@ -22,7 +22,7 @@ public record OriginalItemAndStatus9
     [IsoId("3f07c9bb-27b8-4d65-9f04-0c9757741440")]
     [DisplayName("Original Item Identification")]
     [IsoXmlTag("OrgnlItmId")]
-    public required IsoMax35Text OriginalItemIdentification { get; init; }
+    public required Max35Text OriginalItemIdentification { get; init; }
 
     /// <summary>
     /// Unique identification as assigned by the debtor to unambiguously identify the original underlying transaction to the creditor.
@@ -30,7 +30,7 @@ public record OriginalItemAndStatus9
     [IsoId("3088ff6f-540f-4637-a6c7-d98e15a4474c")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Universally unique identifier to provide the original end-to-end reference of a payment transaction.
@@ -38,7 +38,7 @@ public record OriginalItemAndStatus9
     [IsoId("06f1a2cf-b766-4b32-9fda-78cf54719f36")]
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
-    public IsoUUIDv4Identifier? OriginalUETR { get; init; }
+    public UUIDv4Identifier? OriginalUETR { get; init; }
 
     /// <summary>
     /// Amount of money expected to be credited to the account, as per the original notification to receive.
@@ -54,7 +54,7 @@ public record OriginalItemAndStatus9
     [IsoId("09d5a351-0451-4cd3-bb3d-5c4abf456d3d")]
     [DisplayName("Expected Value Date")]
     [IsoXmlTag("XpctdValDt")]
-    public IsoISODate? ExpectedValueDate { get; init; }
+    public DateOnly? ExpectedValueDate { get; init; }
 
     /// <summary>
     /// Specifies the status of the notification item.
@@ -70,7 +70,7 @@ public record OriginalItemAndStatus9
     [IsoId("46c12b04-18a3-4cec-8524-b660333e694f")]
     [DisplayName("Additional Status Information")]
     [IsoXmlTag("AddtlStsInf")]
-    public IsoMax105Text? AdditionalStatusInformation { get; init; }
+    public Max105Text? AdditionalStatusInformation { get; init; }
 
     /// <summary>
     /// Provides further information in order to identify a previous payment notification.

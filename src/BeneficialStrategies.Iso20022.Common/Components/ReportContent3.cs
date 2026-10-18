@@ -22,7 +22,7 @@ public record ReportContent3
     [IsoId("_7LR1kUVdEfCQAqQ9lolFUg")]
     [DisplayName("Report Line Sequence")]
     [IsoXmlTag("RptLineSeq")]
-    public IsoMax10NumericText? ReportLineSequence { get; init; }
+    public Max10NumericText? ReportLineSequence { get; init; }
 
     /// <summary>
     /// Report content in text format.
@@ -30,7 +30,7 @@ public record ReportContent3
     [IsoId("_z5OOI3FYEfC68Y4jZPNEug")]
     [DisplayName("Text")]
     [IsoXmlTag("Txt")]
-    public IsoMax10MbText? Text { get; init; }
+    public Max10MbText? Text { get; init; }
 
     /// <summary>
     /// BASE-64 encoded report content.
@@ -38,7 +38,7 @@ public record ReportContent3
     [IsoId("_z5OOJHFYEfC68Y4jZPNEug")]
     [DisplayName("Binary")]
     [IsoXmlTag("Binry")]
-    public IsoMax20MbBinary? Binary { get; init; }
+    public Max20MbBinary? Binary { get; init; }
 
     /// <summary>
     /// Encrypted report content.

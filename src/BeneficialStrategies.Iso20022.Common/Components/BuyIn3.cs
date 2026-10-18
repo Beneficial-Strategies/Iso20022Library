@@ -24,7 +24,7 @@ public record BuyIn3
     [IsoXmlTag("BuyInNtfctnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text BuyInNotificationIdentification { get; init; }
+    public required Max35Text BuyInNotificationIdentification { get; init; }
 
     /// <summary>
     /// Specific continuous net settlement case where the central counterparty can call for buy-in at a date anterior to &quot;theoretical&quot; buy-in date, the clearing member may request a delay.
@@ -33,7 +33,7 @@ public record BuyIn3
     [DisplayName("Request For Delay Indicator")]
     [IsoXmlTag("ReqForDelyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator RequestForDelayIndicator { get; init; }
+    public required YesNoIndicator RequestForDelayIndicator { get; init; }
 
     /// <summary>
     /// Number of days associated to the request for delay.
@@ -42,7 +42,7 @@ public record BuyIn3
     [DisplayName("Number Of Days")]
     [IsoXmlTag("NbOfDays")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber NumberOfDays { get; init; }
+    public required Number NumberOfDays { get; init; }
 
     /// <summary>
     /// Buy in quantity called initially by the central counterparty.

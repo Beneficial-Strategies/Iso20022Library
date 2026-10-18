@@ -73,7 +73,7 @@ public record SecuritiesSettlementTransactionInstruction002V08 : IOuterRecord
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax16Text TransactionIdentification { get; init; }
+    public required RestrictedFINXMax16Text TransactionIdentification { get; init; }
 
     /// <summary>
     /// Provides settlement type and identification information.

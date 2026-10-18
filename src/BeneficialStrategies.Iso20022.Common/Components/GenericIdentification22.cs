@@ -23,7 +23,7 @@ public record GenericIdentification22
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    public required IsoExact4AlphaNumericText Identification { get; init; }
+    public required Exact4AlphaNumericText Identification { get; init; }
 
     /// <summary>
     /// Entity that assigns the identification.
@@ -33,7 +33,7 @@ public record GenericIdentification22
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Issuer { get; init; }
+    public required Max35Text Issuer { get; init; }
 
     /// <summary>
     /// Short textual description of the scheme.
@@ -43,7 +43,7 @@ public record GenericIdentification22
     [IsoXmlTag("SchmeNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SchemeName { get; init; }
+    public Max35Text? SchemeName { get; init; }
 
     /// <summary>
     /// Value of the balance.
@@ -52,5 +52,5 @@ public record GenericIdentification22
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public required IsoDecimalNumber Balance { get; init; }
+    public required DecimalNumber Balance { get; init; }
 }

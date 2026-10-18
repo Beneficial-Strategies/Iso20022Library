@@ -22,7 +22,7 @@ public record ISINQueryCriteria1
     [IsoId("_kIBo8JNkEeytjZlcgApf6A")]
     [DisplayName("Identifier")]
     [IsoXmlTag("Idr")]
-    public SimpleValueList<IsoISINOct2015Identifier> Identifier { get; init; } = [];
+    public SimpleValueList<ISINOct2015Identifier> Identifier { get; init; } = [];
 
     /// <summary>
     /// Field can be queried for not reported value.

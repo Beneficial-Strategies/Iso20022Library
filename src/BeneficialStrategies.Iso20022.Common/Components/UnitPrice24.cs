@@ -55,7 +55,7 @@ public record UnitPrice24
     [IsoId("0c8cadf8-6b42-4681-b14a-f1e76b80b6bc")]
     [DisplayName("For Execution Indicator")]
     [IsoXmlTag("ForExctnInd")]
-    public required IsoYesNoIndicator ForExecutionIndicator { get; init; }
+    public required YesNoIndicator ForExecutionIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the dividend is included, ie, cum-dividend, in the price. When the dividend is not included, the price will be ex-dividend.
@@ -63,7 +63,7 @@ public record UnitPrice24
     [IsoId("1939a559-a2ea-48b1-b43f-a4a90bc336b6")]
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
-    public required IsoYesNoIndicator CumDividendIndicator { get; init; }
+    public required YesNoIndicator CumDividendIndicator { get; init; }
 
     /// <summary>
     /// Ratio applied on the non-adjusted price.
@@ -71,7 +71,7 @@ public record UnitPrice24
     [IsoId("95c060bd-230b-4d3d-bc6f-68c7e114434c")]
     [DisplayName("Calculation Basis")]
     [IsoXmlTag("ClctnBsis")]
-    public IsoPercentageRate? CalculationBasis { get; init; }
+    public PercentageRate? CalculationBasis { get; init; }
 
     /// <summary>
     /// Indicates whether the price is an estimated price.
@@ -79,7 +79,7 @@ public record UnitPrice24
     [IsoId("2dec4b60-abf6-4848-9288-c99b374f596a")]
     [DisplayName("Estimated Price Indicator")]
     [IsoXmlTag("EstmtdPricInd")]
-    public required IsoYesNoIndicator EstimatedPriceIndicator { get; init; }
+    public required YesNoIndicator EstimatedPriceIndicator { get; init; }
 
     /// <summary>
     /// Specifies the number of days from trade date that the counterparty on the other side of the trade should "given up" or divulged.
@@ -87,7 +87,7 @@ public record UnitPrice24
     [IsoId("124b3f54-e1c6-407e-832e-36c52cc80a7f")]
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
-    public IsoNumber? NumberOfDaysAccrued { get; init; }
+    public Number? NumberOfDaysAccrued { get; init; }
 
     /// <summary>
     /// Amount included in the NAV that corresponds to gains directly or indirectly derived from interest payment in the scope of the European Directive on taxation of savings income in the form of interest payments.

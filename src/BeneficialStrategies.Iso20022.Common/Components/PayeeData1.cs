@@ -30,7 +30,7 @@ public record PayeeData1
     [IsoId("_XwZRUyzzEfCD0_iZ8tw-zA")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax35Text? Identification { get; init; }
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Identifies the specific payee when multiple payees are associated with the same account.
@@ -38,7 +38,7 @@ public record PayeeData1
     [IsoId("_XwZRZyzzEfCD0_iZ8tw-zA")]
     [DisplayName("Designation")]
     [IsoXmlTag("Dsgnt")]
-    public IsoMax2NumericText? Designation { get; init; }
+    public Max2NumericText? Designation { get; init; }
 
     /// <summary>
     /// Entity type of the payee, such as business, or individul.
@@ -46,7 +46,7 @@ public record PayeeData1
     [IsoId("_XwZReyzzEfCD0_iZ8tw-zA")]
     [DisplayName("Entity Type")]
     [IsoXmlTag("NttyTp")]
-    public IsoMax3Text? EntityType { get; init; }
+    public Max3Text? EntityType { get; init; }
 
     /// <summary>
     /// Type of the payee's account identifier.
@@ -62,7 +62,7 @@ public record PayeeData1
     [IsoId("_XwZRfyzzEfCD0_iZ8tw-zA")]
     [DisplayName("Account Identifier")]
     [IsoXmlTag("AcctIdr")]
-    public IsoMax70Text? AccountIdentifier { get; init; }
+    public Max70Text? AccountIdentifier { get; init; }
 
     /// <summary>
     /// Credentials of the payee.
@@ -78,7 +78,7 @@ public record PayeeData1
     [IsoId("_elqF9FN0EfC0lMwgjvMClw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax105Text? Name { get; init; }
+    public Max105Text? Name { get; init; }
 
     /// <summary>
     /// First name of the cardholder.
@@ -86,7 +86,7 @@ public record PayeeData1
     [IsoId("_elqF9VN0EfC0lMwgjvMClw")]
     [DisplayName("Given Name")]
     [IsoXmlTag("GvnNm")]
-    public IsoMax35Text? GivenName { get; init; }
+    public Max35Text? GivenName { get; init; }
 
     /// <summary>
     /// Middle name or initials present in the name of a person.
@@ -94,7 +94,7 @@ public record PayeeData1
     [IsoId("_elqF9lN0EfC0lMwgjvMClw")]
     [DisplayName("Middle Name")]
     [IsoXmlTag("MddlNm")]
-    public IsoMax35Text? MiddleName { get; init; }
+    public Max35Text? MiddleName { get; init; }
 
     /// <summary>
     /// Family name of the cardholder.
@@ -102,7 +102,7 @@ public record PayeeData1
     [IsoId("_elqF91N0EfC0lMwgjvMClw")]
     [DisplayName("Last Name")]
     [IsoXmlTag("LastNm")]
-    public IsoMax35Text? LastName { get; init; }
+    public Max35Text? LastName { get; init; }
 
     /// <summary>
     /// Address of the payee.
@@ -142,7 +142,7 @@ public record PayeeData1
     [IsoId("_XwZRwyzzEfCD0_iZ8tw-zA")]
     [DisplayName("Date Of Birth")]
     [IsoXmlTag("DtOfBirth")]
-    public IsoISODate? DateOfBirth { get; init; }
+    public DateOnly? DateOfBirth { get; init; }
 
     /// <summary>
     /// Alias name of the payee.
@@ -150,7 +150,7 @@ public record PayeeData1
     [IsoId("_XwZRxSzzEfCD0_iZ8tw-zA")]
     [DisplayName("Alias Name")]
     [IsoXmlTag("AliasNm")]
-    public IsoMax70Text? AliasName { get; init; }
+    public Max70Text? AliasName { get; init; }
 
     /// <summary>
     /// The occupation of the payee.
@@ -158,7 +158,7 @@ public record PayeeData1
     [IsoId("_XwZRyyzzEfCD0_iZ8tw-zA")]
     [DisplayName("Occupation")]
     [IsoXmlTag("Ocptn")]
-    public IsoMax35Text? Occupation { get; init; }
+    public Max35Text? Occupation { get; init; }
 
     /// <summary>
     /// Reserved for private data. The use of this data element is determined by bilateral agreement.
@@ -166,7 +166,7 @@ public record PayeeData1
     [IsoId("_7cwZYkVYEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -174,7 +174,7 @@ public record PayeeData1
     [IsoId("_7cwZY0VYEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 
     /// <summary>
     /// Contains text fields in the local language.

@@ -24,7 +24,7 @@ public record SupportingDocumentEntry2
     [IsoXmlTag("NtryId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text EntryIdentification { get; init; }
+    public required Max35Text EntryIdentification { get; init; }
 
     /// <summary>
     /// Identification of the original document for which the supporting documents are provided.
@@ -42,7 +42,7 @@ public record SupportingDocumentEntry2
     [DisplayName("Document Type")]
     [IsoXmlTag("DocTp")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericUnderscoreText)]
-    public required IsoExact4AlphaNumericUnderscoreText DocumentType { get; init; }
+    public required Exact4AlphaNumericUnderscoreText DocumentType { get; init; }
 
     /// <summary>
     /// Total amount of the supporting document entry.
@@ -100,7 +100,7 @@ public record SupportingDocumentEntry2
     [IsoXmlTag("MtrtyData")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MaturityData { get; init; }
+    public Max35Text? MaturityData { get; init; }
 
     /// <summary>
     /// Further details on the supporting document entry.
@@ -110,7 +110,7 @@ public record SupportingDocumentEntry2
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public IsoMax500Text? AdditionalInformation { get; init; }
+    public Max500Text? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Documents provided as attachments to the supporting document entry.

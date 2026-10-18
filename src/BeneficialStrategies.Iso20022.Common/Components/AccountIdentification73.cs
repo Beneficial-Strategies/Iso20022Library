@@ -28,14 +28,14 @@ public record AccountIdentification73
     /// </summary>
     [DisplayName("Block Chain Address Or Wallet")]
     [IsoXmlTag("BlckChainAdrOrWllt")]
-    public IsoMax140Text? BlockChainAddressOrWallet { get; init; }
+    public Max140Text? BlockChainAddressOrWallet { get; init; }
 
     /// <summary>
     /// Safekeeping Account.
     /// </summary>
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
-    public IsoRestrictedFINXMax35Text? SafekeepingAccount { get; init; }
+    public RestrictedFINXMax35Text? SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Safekeeping Place.

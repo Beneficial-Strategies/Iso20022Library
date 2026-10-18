@@ -24,7 +24,7 @@ public record MessageIdentification2
     [IsoXmlTag("MsgNmId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MessageNameIdentification { get; init; }
+    public Max35Text? MessageNameIdentification { get; init; }
 
     /// <summary>
     /// Specifies the identification of the message that will be used to provide additional details.
@@ -34,5 +34,5 @@ public record MessageIdentification2
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MessageIdentification { get; init; }
+    public Max35Text? MessageIdentification { get; init; }
 }

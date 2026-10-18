@@ -21,35 +21,35 @@ public record SecuritiesTradeDetails141
     /// </summary>
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
-    public IsoMax35Text? AccountOwnerTransactionIdentification { get; init; }
+    public Max35Text? AccountOwnerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Account Servicer Transaction Identification.
     /// </summary>
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
-    public IsoMax35Text? AccountServicerTransactionIdentification { get; init; }
+    public Max35Text? AccountServicerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Collateral Transaction Identification.
     /// </summary>
     [DisplayName("Collateral Transaction Identification")]
     [IsoXmlTag("CollTxId")]
-    public ValueList<IsoMax35Text> CollateralTransactionIdentification { get; init; } = [];
+    public ValueList<Max35Text> CollateralTransactionIdentification { get; init; } = [];
 
     /// <summary>
     /// Common Identification.
     /// </summary>
     [DisplayName("Common Identification")]
     [IsoXmlTag("CmonId")]
-    public IsoMax35Text? CommonIdentification { get; init; }
+    public Max35Text? CommonIdentification { get; init; }
 
     /// <summary>
     /// Counterparty Market Infrastructure Transaction Identification.
     /// </summary>
     [DisplayName("Counterparty Market Infrastructure Transaction Identification")]
     [IsoXmlTag("CtrPtyMktInfrstrctrTxId")]
-    public IsoMax35Text? CounterpartyMarketInfrastructureTransactionIdentification { get; init; }
+    public Max35Text? CounterpartyMarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Deal Price.
@@ -84,14 +84,14 @@ public record SecuritiesTradeDetails141
     /// </summary>
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
-    public IsoMax35Text? MarketInfrastructureTransactionIdentification { get; init; }
+    public Max35Text? MarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Number Of Days Accrued.
     /// </summary>
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
-    public IsoMax3Number? NumberOfDaysAccrued { get; init; }
+    public Max3Number? NumberOfDaysAccrued { get; init; }
 
     /// <summary>
     /// Other Amounts.
@@ -133,14 +133,14 @@ public record SecuritiesTradeDetails141
     /// </summary>
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
-    public IsoMax35Text? PoolIdentification { get; init; }
+    public Max35Text? PoolIdentification { get; init; }
 
     /// <summary>
     /// Processor Transaction Identification.
     /// </summary>
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
-    public IsoMax35Text? ProcessorTransactionIdentification { get; init; }
+    public Max35Text? ProcessorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Quantity And Account Details.
@@ -217,7 +217,7 @@ public record SecuritiesTradeDetails141
     /// </summary>
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    public IsoMax35Text? TradeIdentification { get; init; }
+    public Max35Text? TradeIdentification { get; init; }
 
     /// <summary>
     /// Trade Transaction Condition.
@@ -239,5 +239,5 @@ public record SecuritiesTradeDetails141
     /// </summary>
     [DisplayName("Unique Transaction Identifier")]
     [IsoXmlTag("UnqTxIdr")]
-    public IsoUTIIdentifier? UniqueTransactionIdentifier { get; init; }
+    public UTIIdentifier? UniqueTransactionIdentifier { get; init; }
 }

@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.FrequencyRateFixing1Choice
         /// </summary>
         [IsoXmlTag("NbOfDays")]
         [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-        public required IsoMax3NumericText Value { get; init; }
+        public required Max3NumericText Value { get; init; }
     }
 }

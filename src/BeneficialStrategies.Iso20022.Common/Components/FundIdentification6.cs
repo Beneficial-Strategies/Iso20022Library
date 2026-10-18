@@ -21,7 +21,7 @@ public record FundIdentification6
     /// </summary>
     [DisplayName("Account Identification With Custodian")]
     [IsoXmlTag("AcctIdWthCtdn")]
-    public IsoMax35Text? AccountIdentificationWithCustodian { get; init; }
+    public Max35Text? AccountIdentificationWithCustodian { get; init; }
 
     /// <summary>
     /// Custodian Identification.
@@ -35,5 +35,5 @@ public record FundIdentification6
     /// </summary>
     [DisplayName("Fund Identification")]
     [IsoXmlTag("FndId")]
-    public required IsoMax35Text FundIdentification { get; init; }
+    public required Max35Text FundIdentification { get; init; }
 }

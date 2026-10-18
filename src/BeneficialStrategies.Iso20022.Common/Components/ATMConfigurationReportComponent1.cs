@@ -21,7 +21,7 @@ public record ATMConfigurationReportComponent1
     /// </summary>
     [DisplayName("Active Version")]
     [IsoXmlTag("ActvVrsn")]
-    public IsoMax35Text? ActiveVersion { get; init; }
+    public Max35Text? ActiveVersion { get; init; }
 
     /// <summary>
     /// Environment.

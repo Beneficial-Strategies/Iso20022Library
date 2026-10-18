@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [IsoXmlTag("Dept")]
         [IsoSimpleType(IsoSimpleType.Max70Text)]
         [StringLength(maximumLength: 70, MinimumLength = 1)]
-        public IsoMax70Text? Department { get; init; }
+        public Max70Text? Department { get; init; }
 
         /// <summary>
         /// Identification of a sub-division of a large organisation or building.
@@ -42,7 +42,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [IsoXmlTag("SubDept")]
         [IsoSimpleType(IsoSimpleType.Max70Text)]
         [StringLength(maximumLength: 70, MinimumLength = 1)]
-        public IsoMax70Text? SubDepartment { get; init; }
+        public Max70Text? SubDepartment { get; init; }
 
         /// <summary>
         /// Name of a street or thoroughfare.
@@ -52,7 +52,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [IsoXmlTag("StrtNm")]
         [IsoSimpleType(IsoSimpleType.Max70Text)]
         [StringLength(maximumLength: 70, MinimumLength = 1)]
-        public IsoMax70Text? StreetName { get; init; }
+        public Max70Text? StreetName { get; init; }
 
         /// <summary>
         /// Number that identifies the position of a building on a street.
@@ -62,7 +62,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [IsoXmlTag("BldgNb")]
         [IsoSimpleType(IsoSimpleType.Max16Text)]
         [StringLength(maximumLength: 16, MinimumLength = 1)]
-        public IsoMax16Text? BuildingNumber { get; init; }
+        public Max16Text? BuildingNumber { get; init; }
 
         /// <summary>
         /// Name of the building or house.
@@ -72,7 +72,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [IsoXmlTag("BldgNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? BuildingName { get; init; }
+        public Max35Text? BuildingName { get; init; }
 
         /// <summary>
         /// Floor or storey within a building.
@@ -82,7 +82,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [IsoXmlTag("Flr")]
         [IsoSimpleType(IsoSimpleType.Max70Text)]
         [StringLength(maximumLength: 70, MinimumLength = 1)]
-        public IsoMax70Text? Floor { get; init; }
+        public Max70Text? Floor { get; init; }
 
         /// <summary>
         /// Numbered box in a post office, assigned to a person or organisation, where letters are kept until called for.
@@ -92,7 +92,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [IsoXmlTag("PstBx")]
         [IsoSimpleType(IsoSimpleType.Max16Text)]
         [StringLength(maximumLength: 16, MinimumLength = 1)]
-        public IsoMax16Text? PostBox { get; init; }
+        public Max16Text? PostBox { get; init; }
 
         /// <summary>
         /// Building room number.
@@ -102,7 +102,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [IsoXmlTag("Room")]
         [IsoSimpleType(IsoSimpleType.Max70Text)]
         [StringLength(maximumLength: 70, MinimumLength = 1)]
-        public IsoMax70Text? Room { get; init; }
+        public Max70Text? Room { get; init; }
 
         /// <summary>
         /// Identifier consisting of a group of letters and/or numbers that is added to a postal address to assist the sorting of mail.
@@ -112,7 +112,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [IsoXmlTag("PstCd")]
         [IsoSimpleType(IsoSimpleType.Max16Text)]
         [StringLength(maximumLength: 16, MinimumLength = 1)]
-        public IsoMax16Text? PostCode { get; init; }
+        public Max16Text? PostCode { get; init; }
 
         /// <summary>
         /// Name of a built-up area, with defined boundaries, and a local government.
@@ -122,7 +122,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [IsoXmlTag("TwnNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? TownName { get; init; }
+        public Max35Text? TownName { get; init; }
 
         /// <summary>
         /// Specific location name within the town.
@@ -132,7 +132,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [IsoXmlTag("TwnLctnNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? TownLocationName { get; init; }
+        public Max35Text? TownLocationName { get; init; }
 
         /// <summary>
         /// Identifies a subdivision within a country sub-division.
@@ -142,7 +142,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [IsoXmlTag("DstrctNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? DistrictName { get; init; }
+        public Max35Text? DistrictName { get; init; }
 
         /// <summary>
         /// Identifies a subdivision of a country such as state, region, county.
@@ -152,7 +152,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [IsoXmlTag("CtrySubDvsn")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? CountrySubDivision { get; init; }
+        public Max35Text? CountrySubDivision { get; init; }
 
         /// <summary>
         /// Nation with its own government.
@@ -181,6 +181,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Valid From")]
         [IsoXmlTag("VldFr")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? ValidFrom { get; init; }
+        public DateOnly? ValidFrom { get; init; }
     }
 }

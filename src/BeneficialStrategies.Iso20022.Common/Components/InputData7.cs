@@ -46,7 +46,7 @@ public record InputData7
     [IsoId("_SAwg57ZiEfCUZfsQO4rYeA")]
     [DisplayName("Notify Card Input Flag")]
     [IsoXmlTag("NtfyCardInptFlg")]
-    public required IsoTrueFalseIndicator NotifyCardInputFlag { get; init; }
+    public required TrueFalseIndicator NotifyCardInputFlag { get; init; }
 
     /// <summary>
     /// Maximum input time in seconds.
@@ -54,7 +54,7 @@ public record InputData7
     [IsoId("_SAwg7bZiEfCUZfsQO4rYeA")]
     [DisplayName("Maximum Input Time")]
     [IsoXmlTag("MaxInptTm")]
-    public IsoNumber? MaximumInputTime { get; init; }
+    public Number? MaximumInputTime { get; init; }
 
     /// <summary>
     /// Text value set for an input command.
@@ -70,7 +70,7 @@ public record InputData7
     [IsoId("_SAwg-bZiEfCUZfsQO4rYeA")]
     [DisplayName("Immediate Response Flag")]
     [IsoXmlTag("ImdtRspnFlg")]
-    public IsoTrueFalseIndicator? ImmediateResponseFlag { get; init; }
+    public TrueFalseIndicator? ImmediateResponseFlag { get; init; }
 
     /// <summary>
     /// Flag to confirm by the user the entered characters, when the maximum allowed length is reached.
@@ -78,7 +78,7 @@ public record InputData7
     [IsoId("_SAwg_7ZiEfCUZfsQO4rYeA")]
     [DisplayName("Wait User Validation Flag")]
     [IsoXmlTag("WaitUsrVldtnFlg")]
-    public IsoTrueFalseIndicator? WaitUserValidationFlag { get; init; }
+    public TrueFalseIndicator? WaitUserValidationFlag { get; init; }
 
     /// <summary>
     /// Flag to indicate that when the user press a key, a beep has to be generated.
@@ -86,7 +86,7 @@ public record InputData7
     [IsoId("_SAwhBbZiEfCUZfsQO4rYeA")]
     [DisplayName("Beep Key Flag")]
     [IsoXmlTag("BeepKeyFlg")]
-    public IsoTrueFalseIndicator? BeepKeyFlag { get; init; }
+    public TrueFalseIndicator? BeepKeyFlag { get; init; }
 
     /// <summary>
     /// Flag to correct all characters (True) or just the last one (False).
@@ -94,7 +94,7 @@ public record InputData7
     [IsoId("_SAwhC7ZiEfCUZfsQO4rYeA")]
     [DisplayName("Global Correction Flag")]
     [IsoXmlTag("GblCrrctnFlg")]
-    public IsoTrueFalseIndicator? GlobalCorrectionFlag { get; init; }
+    public TrueFalseIndicator? GlobalCorrectionFlag { get; init; }
 
     /// <summary>
     /// Flag to deactivate the "Cancel" function key.
@@ -102,7 +102,7 @@ public record InputData7
     [IsoId("_SAwhEbZiEfCUZfsQO4rYeA")]
     [DisplayName("Disable Cancel Flag")]
     [IsoXmlTag("DsblCclFlg")]
-    public IsoTrueFalseIndicator? DisableCancelFlag { get; init; }
+    public TrueFalseIndicator? DisableCancelFlag { get; init; }
 
     /// <summary>
     /// Flag to deactivate the "Correct" function key.
@@ -110,7 +110,7 @@ public record InputData7
     [IsoId("_SAwhF7ZiEfCUZfsQO4rYeA")]
     [DisplayName("Disable Correct Flag")]
     [IsoXmlTag("DsblCrrctFlg")]
-    public IsoTrueFalseIndicator? DisableCorrectFlag { get; init; }
+    public TrueFalseIndicator? DisableCorrectFlag { get; init; }
 
     /// <summary>
     /// Flag to disable the "Valid" function key.
@@ -118,7 +118,7 @@ public record InputData7
     [IsoId("_SAwhHbZiEfCUZfsQO4rYeA")]
     [DisplayName("Disable Valid Flag")]
     [IsoXmlTag("DsblVldFlg")]
-    public IsoTrueFalseIndicator? DisableValidFlag { get; init; }
+    public TrueFalseIndicator? DisableValidFlag { get; init; }
 
     /// <summary>
     /// Flag to enable the "Back" function key to go the upper level.
@@ -126,5 +126,5 @@ public record InputData7
     [IsoId("_SAwhI7ZiEfCUZfsQO4rYeA")]
     [DisplayName("Menu Back Flag")]
     [IsoXmlTag("MenuBckFlg")]
-    public IsoTrueFalseIndicator? MenuBackFlag { get; init; }
+    public TrueFalseIndicator? MenuBackFlag { get; init; }
 }

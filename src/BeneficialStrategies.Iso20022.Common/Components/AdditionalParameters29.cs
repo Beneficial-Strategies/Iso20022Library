@@ -40,7 +40,7 @@ public record AdditionalParameters29
     [IsoXmlTag("PrvsPrtlConfId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PreviousPartialConfirmationIdentification { get; init; }
+    public Max35Text? PreviousPartialConfirmationIdentification { get; init; }
 
     /// <summary>
     /// Unique identification identifying the triparty collateral management transaction from the triparty-agent&apos;s/service-provider&apos;s point of view.
@@ -50,7 +50,7 @@ public record AdditionalParameters29
     [IsoXmlTag("TrptyAgtSvcPrvdrCollTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; }
+    public Max35Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique reference identifying the triparty collateral management transaction from the client&apos;s point of view.
@@ -60,7 +60,7 @@ public record AdditionalParameters29
     [IsoXmlTag("ClntTrptyCollTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClientTripartyCollateralTransactionIdentification { get; init; }
+    public Max35Text? ClientTripartyCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification assigned to the instruction by the client.
@@ -70,7 +70,7 @@ public record AdditionalParameters29
     [IsoXmlTag("ClntCollInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClientCollateralInstructionIdentification { get; init; }
+    public Max35Text? ClientCollateralInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification assigned to the instruction by the triparty-agent/service-provider.
@@ -80,5 +80,5 @@ public record AdditionalParameters29
     [IsoXmlTag("TrptyAgtSvcPrvdrCollInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TripartyAgentServiceProviderCollateralInstructionIdentification { get; init; }
+    public Max35Text? TripartyAgentServiceProviderCollateralInstructionIdentification { get; init; }
 }

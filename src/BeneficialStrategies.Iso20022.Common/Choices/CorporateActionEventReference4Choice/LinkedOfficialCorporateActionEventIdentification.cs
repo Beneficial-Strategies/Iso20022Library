@@ -23,6 +23,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventReference4Ch
         [IsoXmlTag("LkdOffclCorpActnEvtId")]
         [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
         [StringLength(maximumLength: 16, MinimumLength = 1)]
-        public required IsoRestrictedFINXMax16Text Value { get; init; }
+        public required RestrictedFINXMax16Text Value { get; init; }
     }
 }

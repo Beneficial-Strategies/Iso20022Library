@@ -21,21 +21,21 @@ public record EncryptedData2
     /// </summary>
     [DisplayName("Algorithm")]
     [IsoXmlTag("Algo")]
-    public IsoMax2NumericText? Algorithm { get; init; }
+    public Max2NumericText? Algorithm { get; init; }
 
     /// <summary>
     /// Control.
     /// </summary>
     [DisplayName("Control")]
     [IsoXmlTag("Ctrl")]
-    public IsoExact1HexBinaryText? Control { get; init; }
+    public Exact1HexBinaryText? Control { get; init; }
 
     /// <summary>
     /// Derived Information.
     /// </summary>
     [DisplayName("Derived Information")]
     [IsoXmlTag("DrvdInf")]
-    public IsoMax32HexBinaryText? DerivedInformation { get; init; }
+    public Max32HexBinaryText? DerivedInformation { get; init; }
 
     /// <summary>
     /// Encrypted Element.
@@ -49,40 +49,40 @@ public record EncryptedData2
     /// </summary>
     [DisplayName("Encrypted Format")]
     [IsoXmlTag("NcrptdFrmt")]
-    public IsoMax2NumericText? EncryptedFormat { get; init; }
+    public Max2NumericText? EncryptedFormat { get; init; }
 
     /// <summary>
     /// Key Index.
     /// </summary>
     [DisplayName("Key Index")]
     [IsoXmlTag("KeyIndx")]
-    public IsoMax5NumericText? KeyIndex { get; init; }
+    public Max5NumericText? KeyIndex { get; init; }
 
     /// <summary>
     /// Key Length.
     /// </summary>
     [DisplayName("Key Length")]
     [IsoXmlTag("KeyLngth")]
-    public IsoMax4NumericText? KeyLength { get; init; }
+    public Max4NumericText? KeyLength { get; init; }
 
     /// <summary>
     /// Key Protection.
     /// </summary>
     [DisplayName("Key Protection")]
     [IsoXmlTag("KeyPrtcn")]
-    public IsoMax2NumericText? KeyProtection { get; init; }
+    public Max2NumericText? KeyProtection { get; init; }
 
     /// <summary>
     /// Key Set Identifier.
     /// </summary>
     [DisplayName("Key Set Identifier")]
     [IsoXmlTag("KeySetIdr")]
-    public IsoMax8NumericText? KeySetIdentifier { get; init; }
+    public Max8NumericText? KeySetIdentifier { get; init; }
 
     /// <summary>
     /// Padding Method.
     /// </summary>
     [DisplayName("Padding Method")]
     [IsoXmlTag("PddgMtd")]
-    public IsoMax2NumericText? PaddingMethod { get; init; }
+    public Max2NumericText? PaddingMethod { get; init; }
 }

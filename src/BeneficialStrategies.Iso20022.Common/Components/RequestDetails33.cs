@@ -46,7 +46,7 @@ public record RequestDetails33
     [IsoId("_E4alSeSmEe-qVZLXW4RRBw")]
     [DisplayName("Retain Indicator")]
     [IsoXmlTag("RtnInd")]
-    public IsoYesNoIndicator? RetainIndicator { get; init; }
+    public YesNoIndicator? RetainIndicator { get; init; }
 
     /// <summary>
     /// Specifies the type of linkage requested.

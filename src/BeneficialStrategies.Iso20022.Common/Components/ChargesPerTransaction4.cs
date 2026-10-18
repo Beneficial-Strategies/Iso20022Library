@@ -21,7 +21,7 @@ public record ChargesPerTransaction4
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public IsoMax140Text? AdditionalInformation { get; init; }
+    public Max140Text? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Charges Account.
@@ -42,7 +42,7 @@ public record ChargesPerTransaction4
     /// </summary>
     [DisplayName("Charges Identification")]
     [IsoXmlTag("ChrgsId")]
-    public IsoMax35Text? ChargesIdentification { get; init; }
+    public Max35Text? ChargesIdentification { get; init; }
 
     /// <summary>
     /// Record.

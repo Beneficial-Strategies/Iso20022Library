@@ -30,7 +30,7 @@ public record Instalment7
     [IsoId("_ydRdM7ZnEfCUZfsQO4rYeA")]
     [DisplayName("Plan Identification")]
     [IsoXmlTag("PlanId")]
-    public IsoMax35Text? PlanIdentification { get; init; }
+    public Max35Text? PlanIdentification { get; init; }
 
     /// <summary>
     /// Type of the Plan Owner.
@@ -46,7 +46,7 @@ public record Instalment7
     [IsoId("_ydRdN7ZnEfCUZfsQO4rYeA")]
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
-    public IsoNumber? SequenceNumber { get; init; }
+    public Number? SequenceNumber { get; init; }
 
     /// <summary>
     /// Period unit between consecutive payments (for example day, month, year).
@@ -62,7 +62,7 @@ public record Instalment7
     [IsoId("_ydRdO7ZnEfCUZfsQO4rYeA")]
     [DisplayName("Instalment Period")]
     [IsoXmlTag("InstlmtPrd")]
-    public IsoNumber? InstalmentPeriod { get; init; }
+    public Number? InstalmentPeriod { get; init; }
 
     /// <summary>
     /// Total number of instalment payments.
@@ -70,7 +70,7 @@ public record Instalment7
     [IsoId("_ydRdPbZnEfCUZfsQO4rYeA")]
     [DisplayName("Total Number Of Payments")]
     [IsoXmlTag("TtlNbOfPmts")]
-    public IsoNumber? TotalNumberOfPayments { get; init; }
+    public Number? TotalNumberOfPayments { get; init; }
 
     /// <summary>
     /// Date of the first payment.
@@ -78,7 +78,7 @@ public record Instalment7
     [IsoId("_ydRdP7ZnEfCUZfsQO4rYeA")]
     [DisplayName("First Payment Date")]
     [IsoXmlTag("FrstPmtDt")]
-    public IsoISODate? FirstPaymentDate { get; init; }
+    public DateOnly? FirstPaymentDate { get; init; }
 
     /// <summary>
     /// Cumulative amount of all the instalments.

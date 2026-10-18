@@ -23,7 +23,7 @@ public record RecordTechnicalData2
     [DisplayName("Receipt Date Time")]
     [IsoXmlTag("RctDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime ReceiptDateTime { get; init; }
+    public required ISODateTime ReceiptDateTime { get; init; }
 
     /// <summary>
     /// Specifies the reason for the cancellation the transaction.

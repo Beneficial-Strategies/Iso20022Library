@@ -22,7 +22,7 @@ public record TelecomBillingEventAmount1
     [IsoId("_Av2xUVXZEfC0lMwgjvMClw-dsc")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax35Text? Description { get; init; }
+    public Max35Text? Description { get; init; }
 
     /// <summary>
     /// Contains the amount.

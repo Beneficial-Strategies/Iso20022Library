@@ -34,7 +34,7 @@ public record Collateral14
     [DisplayName("Haircut")]
     [IsoXmlTag("Hrcut")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Haircut { get; init; }
+    public PercentageRate? Haircut { get; init; }
 
     /// <summary>
     /// Identifies all repurchase agreements conducted against general collateral and those conducted against special collateral.

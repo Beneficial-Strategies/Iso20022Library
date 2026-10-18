@@ -21,49 +21,49 @@ public record Contact13
     /// </summary>
     [DisplayName("Department")]
     [IsoXmlTag("Dept")]
-    public IsoMax70Text? Department { get; init; }
+    public Max70Text? Department { get; init; }
 
     /// <summary>
     /// Email Address.
     /// </summary>
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
-    public IsoMax256Text? EmailAddress { get; init; }
+    public Max256Text? EmailAddress { get; init; }
 
     /// <summary>
     /// Email Purpose.
     /// </summary>
     [DisplayName("Email Purpose")]
     [IsoXmlTag("EmailPurp")]
-    public IsoMax35Text? EmailPurpose { get; init; }
+    public Max35Text? EmailPurpose { get; init; }
 
     /// <summary>
     /// Fax Number.
     /// </summary>
     [DisplayName("Fax Number")]
     [IsoXmlTag("FaxNb")]
-    public IsoPhoneNumber? FaxNumber { get; init; }
+    public PhoneNumber? FaxNumber { get; init; }
 
     /// <summary>
     /// Job Title.
     /// </summary>
     [DisplayName("Job Title")]
     [IsoXmlTag("JobTitl")]
-    public IsoMax35Text? JobTitle { get; init; }
+    public Max35Text? JobTitle { get; init; }
 
     /// <summary>
     /// Mobile Number.
     /// </summary>
     [DisplayName("Mobile Number")]
     [IsoXmlTag("MobNb")]
-    public IsoPhoneNumber? MobileNumber { get; init; }
+    public PhoneNumber? MobileNumber { get; init; }
 
     /// <summary>
     /// Name.
     /// </summary>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax140Text? Name { get; init; }
+    public Max140Text? Name { get; init; }
 
     /// <summary>
     /// Name Prefix.
@@ -84,7 +84,7 @@ public record Contact13
     /// </summary>
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
-    public IsoPhoneNumber? PhoneNumber { get; init; }
+    public PhoneNumber? PhoneNumber { get; init; }
 
     /// <summary>
     /// Preferred Method.
@@ -98,12 +98,12 @@ public record Contact13
     /// </summary>
     [DisplayName("Responsibility")]
     [IsoXmlTag("Rspnsblty")]
-    public IsoMax35Text? Responsibility { get; init; }
+    public Max35Text? Responsibility { get; init; }
 
     /// <summary>
     /// URL Address.
     /// </summary>
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
-    public IsoMax2048Text? URLAddress { get; init; }
+    public Max2048Text? URLAddress { get; init; }
 }

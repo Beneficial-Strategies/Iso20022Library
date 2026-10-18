@@ -32,7 +32,7 @@ public record CommonFinancialInstrumentAttributes10
     [IsoXmlTag("ISOSctyLngNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? ISOSecurityLongName { get; init; }
+    public Max350Text? ISOSecurityLongName { get; init; }
 
     /// <summary>
     /// Short name of the security expressed as ISO 18773/18774.
@@ -42,7 +42,7 @@ public record CommonFinancialInstrumentAttributes10
     [IsoXmlTag("ISOSctyShrtNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ISOSecurityShortName { get; init; }
+    public Max35Text? ISOSecurityShortName { get; init; }
 
     /// <summary>
     /// Defines the date since when the name of the security is valid.
@@ -68,7 +68,7 @@ public record CommonFinancialInstrumentAttributes10
     [IsoXmlTag("CertNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CertificateNumber { get; init; }
+    public Max35Text? CertificateNumber { get; init; }
 
     /// <summary>
     /// Version number assigned to the contract associated with the security.
@@ -77,7 +77,7 @@ public record CommonFinancialInstrumentAttributes10
     [DisplayName("Contract Version Number")]
     [IsoXmlTag("CtrctVrsnNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? ContractVersionNumber { get; init; }
+    public Number? ContractVersionNumber { get; init; }
 
     /// <summary>
     /// Number of the coupon attached to the physical security.
@@ -86,7 +86,7 @@ public record CommonFinancialInstrumentAttributes10
     [DisplayName("Coupon Attached Number")]
     [IsoXmlTag("CpnAttchdNb")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public IsoMax3NumericText? CouponAttachedNumber { get; init; }
+    public Max3NumericText? CouponAttachedNumber { get; init; }
 
     /// <summary>
     /// Identification, for tax purposes, of a lot of identical securities that are bought at a certain date and at a certain price.
@@ -95,7 +95,7 @@ public record CommonFinancialInstrumentAttributes10
     [DisplayName("Tax Lot Number")]
     [IsoXmlTag("TaxLotNb")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public IsoMax15NumericText? TaxLotNumber { get; init; }
+    public Max15NumericText? TaxLotNumber { get; init; }
 
     /// <summary>
     /// Number identifying a group of underlying assets assigned by the issuer of a factored security.
@@ -104,7 +104,7 @@ public record CommonFinancialInstrumentAttributes10
     [DisplayName("Pool Number")]
     [IsoXmlTag("PoolNb")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public IsoMax15NumericText? PoolNumber { get; init; }
+    public Max15NumericText? PoolNumber { get; init; }
 
     /// <summary>
     /// Indicates whether the derivative product is covered or not by an underlying financial instrument position.
@@ -113,7 +113,7 @@ public record CommonFinancialInstrumentAttributes10
     [DisplayName("Covered Indicator")]
     [IsoXmlTag("CvrdInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? CoveredIndicator { get; init; }
+    public YesNoIndicator? CoveredIndicator { get; init; }
 
     /// <summary>
     /// Specifies the regulatory restrictions applicable to a security.
@@ -146,7 +146,7 @@ public record CommonFinancialInstrumentAttributes10
     [DisplayName("Listing Date")]
     [IsoXmlTag("ListgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ListingDate { get; init; }
+    public DateOnly? ListingDate { get; init; }
 
     /// <summary>
     /// Date/time at which positions are struck to note which parties are entitled to receive the entitlement to a corporate event or vote at a meeting.
@@ -155,7 +155,7 @@ public record CommonFinancialInstrumentAttributes10
     [DisplayName("Record Date")]
     [IsoXmlTag("RcrdDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? RecordDate { get; init; }
+    public ISODateTime? RecordDate { get; init; }
 
     /// <summary>
     /// Date on which a privilege expires.
@@ -164,7 +164,7 @@ public record CommonFinancialInstrumentAttributes10
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ExpiryDate { get; init; }
+    public DateOnly? ExpiryDate { get; init; }
 
     /// <summary>
     /// Reason for which money is raised through the issuance of a security.
@@ -174,7 +174,7 @@ public record CommonFinancialInstrumentAttributes10
     [IsoXmlTag("Purp")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Purpose { get; init; }
+    public Max256Text? Purpose { get; init; }
 
     /// <summary>
     /// Information allowing the classification of a financial instrument, for example, with its ISO CFI (Classification of Financial Instrument) or product type.
@@ -231,7 +231,7 @@ public record CommonFinancialInstrumentAttributes10
     [DisplayName("Fungible Indicator")]
     [IsoXmlTag("FngbInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? FungibleIndicator { get; init; }
+    public YesNoIndicator? FungibleIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the details of the security are to be made available to the market, or kept private between ICSDs and agency network.
@@ -240,7 +240,7 @@ public record CommonFinancialInstrumentAttributes10
     [DisplayName("Confidential")]
     [IsoXmlTag("Cnfdtl")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? Confidential { get; init; }
+    public YesNoIndicator? Confidential { get; init; }
 
     /// <summary>
     /// The sale of securities directly to private persons, institutional investors, or both outside a public offering. Such non-public deals (often without a publicly available prospectus) closing through the ICSDs are placed directly with investors.
@@ -249,7 +249,7 @@ public record CommonFinancialInstrumentAttributes10
     [DisplayName("Private Placement")]
     [IsoXmlTag("PrvtPlcmnt")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PrivatePlacement { get; init; }
+    public YesNoIndicator? PrivatePlacement { get; init; }
 
     /// <summary>
     /// Indicates whether the investor or the issuer has a conversion option.
@@ -258,7 +258,7 @@ public record CommonFinancialInstrumentAttributes10
     [DisplayName("Convertible Indicator")]
     [IsoXmlTag("ConvtblInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ConvertibleIndicator { get; init; }
+    public YesNoIndicator? ConvertibleIndicator { get; init; }
 
     /// <summary>
     /// Period during which a convertible security may be converted according to the terms of the issue.
@@ -316,7 +316,7 @@ public record CommonFinancialInstrumentAttributes10
     [IsoXmlTag("SrNb")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoMax16Text? SerieNumber { get; init; }
+    public Max16Text? SerieNumber { get; init; }
 
     /// <summary>
     /// Identifier that links multiple security classes.
@@ -326,7 +326,7 @@ public record CommonFinancialInstrumentAttributes10
     [IsoXmlTag("Clss")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoMax16Text? Class { get; init; }
+    public Max16Text? Class { get; init; }
 
     /// <summary>
     /// Amount or percentage of a cash distribution that will be withheld by a tax authority.
@@ -367,7 +367,7 @@ public record CommonFinancialInstrumentAttributes10
     [DisplayName("Common Safekeeper")]
     [IsoXmlTag("CmonSfkpr")]
     [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
-    public IsoAnyBICDec2014Identifier? CommonSafekeeper { get; init; }
+    public AnyBICDec2014Identifier? CommonSafekeeper { get; init; }
 
     /// <summary>
     /// Indicates the type of redemption at maturity.

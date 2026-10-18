@@ -24,7 +24,7 @@ public record PaymentInitiationSource1
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text Name { get; init; }
+    public required Max140Text Name { get; init; }
 
     /// <summary>
     /// Provider of the application or software used to initiate the payment.
@@ -34,7 +34,7 @@ public record PaymentInitiationSource1
     [IsoXmlTag("Prvdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Provider { get; init; }
+    public Max35Text? Provider { get; init; }
 
     /// <summary>
     /// Version of the application or software used to initiate the payment.
@@ -44,5 +44,5 @@ public record PaymentInitiationSource1
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Version { get; init; }
+    public Max35Text? Version { get; init; }
 }

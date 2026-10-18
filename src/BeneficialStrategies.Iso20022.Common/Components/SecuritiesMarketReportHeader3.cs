@@ -21,7 +21,7 @@ public record SecuritiesMarketReportHeader3
     /// </summary>
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
-    public ValueList<IsoISINOct2015Identifier> ISIN { get; init; } = [];
+    public ValueList<ISINOct2015Identifier> ISIN { get; init; } = [];
 
     /// <summary>
     /// Message Pagination.
@@ -35,7 +35,7 @@ public record SecuritiesMarketReportHeader3
     /// </summary>
     [DisplayName("Number Records")]
     [IsoXmlTag("NbRcrds")]
-    public IsoNumber? NumberRecords { get; init; }
+    public Number? NumberRecords { get; init; }
 
     /// <summary>
     /// Reporting Entity.
@@ -56,5 +56,5 @@ public record SecuritiesMarketReportHeader3
     /// </summary>
     [DisplayName("Submission Date Time")]
     [IsoXmlTag("SubmissnDtTm")]
-    public IsoISODateTime? SubmissionDateTime { get; init; }
+    public ISODateTime? SubmissionDateTime { get; init; }
 }

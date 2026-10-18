@@ -79,7 +79,7 @@ public record CorporateActionInstructionV14 : IOuterRecord
     [DisplayName("Change Instruction Indicator")]
     [IsoXmlTag("ChngInstrInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ChangeInstructionIndicator { get; init; }
+    public YesNoIndicator? ChangeInstructionIndicator { get; init; }
 
     /// <summary>
     /// Corporate Action General Information.

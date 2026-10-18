@@ -24,7 +24,7 @@ public record CutOff1
     [IsoXmlTag("CutOffUpdId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text CutOffUpdateIdentification { get; init; }
+    public required Max35Text CutOffUpdateIdentification { get; init; }
 
     /// <summary>
     /// Currency linked to the netting cut off.
@@ -41,7 +41,7 @@ public record CutOff1
     [DisplayName("Cut Off Time")]
     [IsoXmlTag("CutOffTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public required IsoISOTime CutOffTime { get; init; }
+    public required ISOTime CutOffTime { get; init; }
 
     /// <summary>
     /// Specifies the offset in business days from the value date from which the netting cut off is to be applied.
@@ -50,5 +50,5 @@ public record CutOff1
     [DisplayName("Value Date Offset")]
     [IsoXmlTag("ValDtOffset")]
     [IsoSimpleType(IsoSimpleType.DateOffsetText)]
-    public required IsoDateOffsetText ValueDateOffset { get; init; }
+    public required DateOffsetText ValueDateOffset { get; init; }
 }

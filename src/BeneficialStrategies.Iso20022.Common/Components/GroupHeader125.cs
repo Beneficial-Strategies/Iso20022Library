@@ -36,21 +36,21 @@ public record GroupHeader125
     /// </remarks>
     [DisplayName("Batch Booking")]
     [IsoXmlTag("BtchBookg")]
-    public IsoBatchBookingIndicator? BatchBooking { get; init; }
+    public BatchBookingIndicator? BatchBooking { get; init; }
 
     /// <summary>
     /// Total of all individual amounts included in the message, irrespective of currencies.
     /// </summary>
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
-    public IsoDecimalNumber? ControlSum { get; init; }
+    public DecimalNumber? ControlSum { get; init; }
 
     /// <summary>
     /// Date and time at which the message was created.
     /// </summary>
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).
@@ -71,7 +71,7 @@ public record GroupHeader125
     /// </summary>
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
-    public IsoISODate? InterbankSettlementDate { get; init; }
+    public DateOnly? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Point to point reference, as assigned by the instructing party, and sent to the next party in the chain to unambiguously identify the message.
@@ -81,14 +81,14 @@ public record GroupHeader125
     /// </remarks>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Number of individual transactions contained in the message.
     /// </summary>
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
-    public required IsoMax15NumericText NumberOfTransactions { get; init; }
+    public required Max15NumericText NumberOfTransactions { get; init; }
 
     /// <summary>
     /// Set of elements used to further specify the type of transaction.

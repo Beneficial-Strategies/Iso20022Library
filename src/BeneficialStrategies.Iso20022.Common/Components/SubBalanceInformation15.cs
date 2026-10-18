@@ -40,7 +40,7 @@ public record SubBalanceInformation15
     [IsoXmlTag("SubBalAddtlDtls")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? SubBalanceAdditionalDetails { get; init; }
+    public Max140Text? SubBalanceAdditionalDetails { get; init; }
 
     /// <summary>
     /// Breakdown of the aggregate quantity reported into significant lots, for example, tax lots.

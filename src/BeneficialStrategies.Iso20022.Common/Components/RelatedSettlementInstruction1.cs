@@ -24,7 +24,7 @@ public record RelatedSettlementInstruction1
     [IsoXmlTag("RltdSttlmInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text RelatedSettlementInstructionIdentification { get; init; }
+    public required Max35Text RelatedSettlementInstructionIdentification { get; init; }
 
     /// <summary>
     /// Quantity of securities for which the market claim has been raised.

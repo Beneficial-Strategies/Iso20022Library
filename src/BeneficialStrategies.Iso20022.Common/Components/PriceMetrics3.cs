@@ -31,5 +31,5 @@ public record PriceMetrics3
     [DisplayName("Lending Fee")]
     [IsoXmlTag("LndgFee")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? LendingFee { get; init; }
+    public PercentageRate? LendingFee { get; init; }
 }

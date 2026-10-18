@@ -31,7 +31,7 @@ public record Unit1
     [DisplayName("Acquisition Date")]
     [IsoXmlTag("AcqstnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? AcquisitionDate { get; init; }
+    public DateOnly? AcquisitionDate { get; init; }
 
     /// <summary>
     /// Certificate representing the security that is delivered.
@@ -39,7 +39,7 @@ public record Unit1
     [IsoId("_VPBAk9p-Ed-ak6NoX_4Aeg_-596382257")]
     [DisplayName("Certificate Number")]
     [IsoXmlTag("CertNb")]
-    public SimpleValueList<IsoMax35Text> CertificateNumber { get; init; } = [];
+    public SimpleValueList<Max35Text> CertificateNumber { get; init; } = [];
 
     /// <summary>
     /// Tax group to which the purchased investment fund units belong. The investor indicates to the intermediary operating pooled nominees, which type of unit is to be sold.

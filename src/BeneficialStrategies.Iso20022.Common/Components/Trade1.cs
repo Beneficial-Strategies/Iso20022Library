@@ -24,7 +24,7 @@ public record Trade1
     [IsoXmlTag("TradId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TradeIdentification { get; init; }
+    public required Max35Text TradeIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the trade was executed.
@@ -33,7 +33,7 @@ public record Trade1
     [DisplayName("Date And Time")]
     [IsoXmlTag("DtAndTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime DateAndTime { get; init; }
+    public required ISODateTime DateAndTime { get; init; }
 
     /// <summary>
     /// Specifies the underlying product type.
@@ -99,7 +99,7 @@ public record Trade1
     [IsoXmlTag("Symb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Symbol { get; init; }
+    public required Max35Text Symbol { get; init; }
 
     /// <summary>
     /// Infrastructure where the trade confirmation will take place.
@@ -109,7 +109,7 @@ public record Trade1
     [IsoXmlTag("PlcOfConf")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PlaceOfConfirmation { get; init; }
+    public Max35Text? PlaceOfConfirmation { get; init; }
 
     /// <summary>
     /// Date and time at which the message was executed.
@@ -118,7 +118,7 @@ public record Trade1
     [DisplayName("Transaction Time")]
     [IsoXmlTag("TxTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? TransactionTime { get; init; }
+    public ISODateTime? TransactionTime { get; init; }
 
     /// <summary>
     /// Provides details of the foreign exchange trade including Spot Forward and NDF.

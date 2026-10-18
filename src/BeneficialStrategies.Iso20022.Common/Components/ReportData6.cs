@@ -24,7 +24,7 @@ public record ReportData6
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Name { get; init; }
+    public Max140Text? Name { get; init; }
 
     /// <summary>
     /// Report identification.
@@ -34,7 +34,7 @@ public record ReportData6
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Identification { get; init; }
+    public Max140Text? Identification { get; init; }
 
     /// <summary>
     /// Additional specific information to ID (Country, Service, etc.)
@@ -44,7 +44,7 @@ public record ReportData6
     [IsoXmlTag("Qlfr")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Qualifier { get; init; }
+    public Max70Text? Qualifier { get; init; }
 
     /// <summary>
     /// Date of the report.
@@ -53,7 +53,7 @@ public record ReportData6
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Time of the report.
@@ -62,7 +62,7 @@ public record ReportData6
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? Time { get; init; }
+    public ISOTime? Time { get; init; }
 
     /// <summary>
     /// Contains the specific instance of the report (e.g., sequence “2” of the report within a specific time frame).
@@ -71,7 +71,7 @@ public record ReportData6
     [DisplayName("Sequence")]
     [IsoXmlTag("Seq")]
     [IsoSimpleType(IsoSimpleType.Max5NumericText)]
-    public IsoMax5NumericText? Sequence { get; init; }
+    public Max5NumericText? Sequence { get; init; }
 
     /// <summary>
     /// Contains the expected total number of occurrences of the report within a specific time frame.
@@ -80,7 +80,7 @@ public record ReportData6
     [DisplayName("Total Occurrences")]
     [IsoXmlTag("TtlOcrncs")]
     [IsoSimpleType(IsoSimpleType.Max5NumericText)]
-    public IsoMax5NumericText? TotalOccurrences { get; init; }
+    public Max5NumericText? TotalOccurrences { get; init; }
 
     /// <summary>
     /// Report frequency.
@@ -105,7 +105,7 @@ public record ReportData6
     [DisplayName("Continuation Indicator")]
     [IsoXmlTag("ConttnInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ContinuationIndicator { get; init; }
+    public TrueFalseIndicator? ContinuationIndicator { get; init; }
 
     /// <summary>
     /// Additional report attributes or information.
@@ -131,7 +131,7 @@ public record ReportData6
     [IsoXmlTag("OthrFrmt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherFormat { get; init; }
+    public Max35Text? OtherFormat { get; init; }
 
     /// <summary>
     /// Contains the content of a report.

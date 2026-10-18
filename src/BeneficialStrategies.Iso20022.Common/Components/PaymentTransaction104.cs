@@ -24,7 +24,7 @@ public record PaymentTransaction104
     [IsoXmlTag("StsId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? StatusIdentification { get; init; }
+    public Max35Text? StatusIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original instructing party for the original instructed party, to unambiguously identify the original instruction.
@@ -34,7 +34,7 @@ public record PaymentTransaction104
     [IsoXmlTag("OrgnlInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.
@@ -44,7 +44,7 @@ public record PaymentTransaction104
     [IsoXmlTag("OrgnlEndToEndId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Universally unique identifier to provide the original end-to-end reference of a payment transaction.
@@ -53,7 +53,7 @@ public record PaymentTransaction104
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
     [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
-    public IsoUUIDv4Identifier? OriginalUETR { get; init; }
+    public UUIDv4Identifier? OriginalUETR { get; init; }
 
     /// <summary>
     /// Specifies the status of a transaction, in a coded form.
@@ -94,7 +94,7 @@ public record PaymentTransaction104
     [DisplayName("Debtor Decision Date Time")]
     [IsoXmlTag("DbtrDcsnDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? DebtorDecisionDateTime { get; init; }
+    public ISODateTime? DebtorDecisionDateTime { get; init; }
 
     /// <summary>
     /// Point in time when the payment order from the initiating party meets the processing conditions of the account servicing agent. This means that the account servicing agent has received the payment order and has applied checks such as authorisation, availability of funds.
@@ -103,7 +103,7 @@ public record PaymentTransaction104
     [DisplayName("Acceptance Date Time")]
     [IsoXmlTag("AccptncDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? AcceptanceDateTime { get; init; }
+    public ISODateTime? AcceptanceDateTime { get; init; }
 
     /// <summary>
     /// Unique reference, as assigned by the account servicing institution, to unambiguously identify the instruction.
@@ -113,7 +113,7 @@ public record PaymentTransaction104
     [IsoXmlTag("AcctSvcrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountServicerReference { get; init; }
+    public Max35Text? AccountServicerReference { get; init; }
 
     /// <summary>
     /// Unique reference, as assigned by a clearing system, to unambiguously identify the instruction.
@@ -123,7 +123,7 @@ public record PaymentTransaction104
     [IsoXmlTag("ClrSysRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClearingSystemReference { get; init; }
+    public Max35Text? ClearingSystemReference { get; init; }
 
     /// <summary>
     /// Key elements used to identify the original transaction that is being referred to.

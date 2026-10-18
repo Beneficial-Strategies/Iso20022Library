@@ -21,7 +21,7 @@ public record TradeTransaction50
     /// </summary>
     [DisplayName("Block Trade Election")]
     [IsoXmlTag("BlckTradElctn")]
-    public IsoTrueFalseIndicator? BlockTradeElection { get; init; }
+    public TrueFalseIndicator? BlockTradeElection { get; init; }
 
     /// <summary>
     /// Collateral Portfolio Code.
@@ -42,7 +42,7 @@ public record TradeTransaction50
     /// </summary>
     [DisplayName("Compression")]
     [IsoXmlTag("Cmprssn")]
-    public IsoTrueFalseIndicator? Compression { get; init; }
+    public TrueFalseIndicator? Compression { get; init; }
 
     /// <summary>
     /// Credit.
@@ -77,14 +77,14 @@ public record TradeTransaction50
     /// </summary>
     [DisplayName("Early Termination Date")]
     [IsoXmlTag("EarlyTermntnDt")]
-    public IsoISODate? EarlyTerminationDate { get; init; }
+    public DateOnly? EarlyTerminationDate { get; init; }
 
     /// <summary>
     /// Effective Date.
     /// </summary>
     [DisplayName("Effective Date")]
     [IsoXmlTag("FctvDt")]
-    public IsoISODate? EffectiveDate { get; init; }
+    public DateOnly? EffectiveDate { get; init; }
 
     /// <summary>
     /// Energy Specific Attributes.
@@ -98,14 +98,14 @@ public record TradeTransaction50
     /// </summary>
     [DisplayName("Execution Time Stamp")]
     [IsoXmlTag("ExctnTmStmp")]
-    public IsoISODateTime? ExecutionTimeStamp { get; init; }
+    public ISODateTime? ExecutionTimeStamp { get; init; }
 
     /// <summary>
     /// Expiration Date.
     /// </summary>
     [DisplayName("Expiration Date")]
     [IsoXmlTag("XprtnDt")]
-    public IsoISODate? ExpirationDate { get; init; }
+    public DateOnly? ExpirationDate { get; init; }
 
     /// <summary>
     /// Interest Rate.
@@ -119,7 +119,7 @@ public record TradeTransaction50
     /// </summary>
     [DisplayName("Large Notional Off Facility Election")]
     [IsoXmlTag("LrgNtnlOffFcltyElctn")]
-    public IsoTrueFalseIndicator? LargeNotionalOffFacilityElection { get; init; }
+    public TrueFalseIndicator? LargeNotionalOffFacilityElection { get; init; }
 
     /// <summary>
     /// Master Agreement.
@@ -133,14 +133,14 @@ public record TradeTransaction50
     /// </summary>
     [DisplayName("Mirror Or Trigger Transaction")]
     [IsoXmlTag("MrrrOrTrggrTx")]
-    public IsoTrueFalseIndicator? MirrorOrTriggerTransaction { get; init; }
+    public TrueFalseIndicator? MirrorOrTriggerTransaction { get; init; }
 
     /// <summary>
     /// Non Standardised Term.
     /// </summary>
     [DisplayName("Non Standardised Term")]
     [IsoXmlTag("NonStdsdTerm")]
-    public IsoTrueFalseIndicator? NonStandardisedTerm { get; init; }
+    public TrueFalseIndicator? NonStandardisedTerm { get; init; }
 
     /// <summary>
     /// Notional Amount.
@@ -182,7 +182,7 @@ public record TradeTransaction50
     /// </summary>
     [DisplayName("Platform Identifier")]
     [IsoXmlTag("PltfmIdr")]
-    public IsoMICIdentifier? PlatformIdentifier { get; init; }
+    public MICIdentifier? PlatformIdentifier { get; init; }
 
     /// <summary>
     /// Post Trade Risk Reduction Event.
@@ -196,7 +196,7 @@ public record TradeTransaction50
     /// </summary>
     [DisplayName("Post Trade Risk Reduction Flag")]
     [IsoXmlTag("PstTradRskRdctnFlg")]
-    public IsoTrueFalseIndicator? PostTradeRiskReductionFlag { get; init; }
+    public TrueFalseIndicator? PostTradeRiskReductionFlag { get; init; }
 
     /// <summary>
     /// Prior Transaction Identification.
@@ -217,21 +217,21 @@ public record TradeTransaction50
     /// </summary>
     [DisplayName("Report Tracking Number")]
     [IsoXmlTag("RptTrckgNb")]
-    public IsoMax52Text? ReportTrackingNumber { get; init; }
+    public Max52Text? ReportTrackingNumber { get; init; }
 
     /// <summary>
     /// Secondary Transaction Identification.
     /// </summary>
     [DisplayName("Secondary Transaction Identification")]
     [IsoXmlTag("ScndryTxId")]
-    public IsoMax72Text? SecondaryTransactionIdentification { get; init; }
+    public Max72Text? SecondaryTransactionIdentification { get; init; }
 
     /// <summary>
     /// Settlement Date.
     /// </summary>
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public ValueList<IsoISODate> SettlementDate { get; init; } = [];
+    public ValueList<DateOnly> SettlementDate { get; init; } = [];
 
     /// <summary>
     /// Subsequent Transaction Identification.

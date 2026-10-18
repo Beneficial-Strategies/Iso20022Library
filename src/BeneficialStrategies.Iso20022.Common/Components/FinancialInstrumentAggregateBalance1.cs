@@ -23,7 +23,7 @@ public record FinancialInstrumentAggregateBalance1
     [DisplayName("Item Date")]
     [IsoXmlTag("ItmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ItemDate { get; init; }
+    public required DateOnly ItemDate { get; init; }
 
     /// <summary>
     /// Balances and sub-balances attributed to the holding.

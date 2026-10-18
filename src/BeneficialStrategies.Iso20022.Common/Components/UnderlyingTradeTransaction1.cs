@@ -32,7 +32,7 @@ public record UnderlyingTradeTransaction1
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Identification { get; init; }
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Date the underlying transaction was issued or awarded.
@@ -41,7 +41,7 @@ public record UnderlyingTradeTransaction1
     [DisplayName("Transaction Date")]
     [IsoXmlTag("TxDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TransactionDate { get; init; }
+    public DateOnly? TransactionDate { get; init; }
 
     /// <summary>
     /// Date the tender closes.
@@ -50,7 +50,7 @@ public record UnderlyingTradeTransaction1
     [DisplayName("Tender Closing Date")]
     [IsoXmlTag("TndrClsgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TenderClosingDate { get; init; }
+    public DateOnly? TenderClosingDate { get; init; }
 
     /// <summary>
     /// Amount of the underlying transaction.
@@ -67,7 +67,7 @@ public record UnderlyingTradeTransaction1
     [DisplayName("Contract Amount Percentage")]
     [IsoXmlTag("CtrctAmtPctg")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? ContractAmountPercentage { get; init; }
+    public PercentageRate? ContractAmountPercentage { get; init; }
 
     /// <summary>
     /// Additional information related to the underlying transaction.

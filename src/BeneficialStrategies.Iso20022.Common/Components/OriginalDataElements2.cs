@@ -49,7 +49,7 @@ public record OriginalDataElements2
     [DisplayName("Acquirer Identification")]
     [IsoXmlTag("AcqrrId")]
     [IsoSimpleType(IsoSimpleType.Max11NumericText)]
-    public IsoMax11NumericText? AcquirerIdentification { get; init; }
+    public Max11NumericText? AcquirerIdentification { get; init; }
 
     /// <summary>
     /// Code identifying the sender of the original message.
@@ -59,7 +59,7 @@ public record OriginalDataElements2
     [DisplayName("Sender Identification")]
     [IsoXmlTag("SndrId")]
     [IsoSimpleType(IsoSimpleType.Max11NumericText)]
-    public IsoMax11NumericText? SenderIdentification { get; init; }
+    public Max11NumericText? SenderIdentification { get; init; }
 
     /// <summary>
     /// Local date the transaction takes place at the acceptor location.
@@ -68,7 +68,7 @@ public record OriginalDataElements2
     [DisplayName("Local Date")]
     [IsoXmlTag("LclDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? LocalDate { get; init; }
+    public DateOnly? LocalDate { get; init; }
 
     /// <summary>
     /// Local time the transaction takes place at the acceptor location.
@@ -77,7 +77,7 @@ public record OriginalDataElements2
     [DisplayName("Local Time")]
     [IsoXmlTag("LclTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? LocalTime { get; init; }
+    public ISOTime? LocalTime { get; init; }
 
     /// <summary>
     /// Time zone name (for example, as defined by IANA - Internet Assigned Numbers Authority) in the time zone data base.
@@ -87,7 +87,7 @@ public record OriginalDataElements2
     [IsoXmlTag("TmZone")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? TimeZone { get; init; }
+    public Max70Text? TimeZone { get; init; }
 
     /// <summary>
     /// Identification of the transaction by the card acceptor. It may appear on the receipt of the cardholder. It remains unchanged throughout the lifetime of the transaction.
@@ -97,7 +97,7 @@ public record OriginalDataElements2
     [IsoXmlTag("TxRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TransactionReference { get; init; }
+    public Max35Text? TransactionReference { get; init; }
 
     /// <summary>
     /// Date and time expressed in UTC of the message as sent by the initiator.
@@ -107,7 +107,7 @@ public record OriginalDataElements2
     [DisplayName("Transmission Date Time")]
     [IsoXmlTag("TrnsmssnDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? TransmissionDateTime { get; init; }
+    public ISODateTime? TransmissionDateTime { get; init; }
 
     /// <summary>
     /// Transaction reference of the original message.
@@ -117,7 +117,7 @@ public record OriginalDataElements2
     [DisplayName("System Trace Audit Number")]
     [IsoXmlTag("SysTracAudtNb")]
     [IsoSimpleType(IsoSimpleType.Max12NumericText)]
-    public IsoMax12NumericText? SystemTraceAuditNumber { get; init; }
+    public Max12NumericText? SystemTraceAuditNumber { get; init; }
 
     /// <summary>
     /// Reference supplied by the system retaining the original source information and used to assist in locating that information or a copy thereof.
@@ -127,7 +127,7 @@ public record OriginalDataElements2
     [DisplayName("Retrieval Reference Number")]
     [IsoXmlTag("RtrvlRefNb")]
     [IsoSimpleType(IsoSimpleType.Exact12Text)]
-    public IsoExact12Text? RetrievalReferenceNumber { get; init; }
+    public Exact12Text? RetrievalReferenceNumber { get; init; }
 
     /// <summary>
     /// Indicate the point in the transaction lifecycle at which the lifecycle identifier was assigned.
@@ -154,7 +154,7 @@ public record OriginalDataElements2
     [IsoXmlTag("LifeCyclTracIdMssng")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? LifeCycleTraceIdentificationMissing { get; init; }
+    public Max70Text? LifeCycleTraceIdentificationMissing { get; init; }
 
     /// <summary>
     /// Data supplied by an acquirer in an authorisation or financial request, advice or notification that may be required to be provided in a subsequent transaction.
@@ -164,7 +164,7 @@ public record OriginalDataElements2
     [IsoXmlTag("AcqrrRefData")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? AcquirerReferenceData { get; init; }
+    public Max140Text? AcquirerReferenceData { get; init; }
 
     /// <summary>
     /// Data supplied by an acquirer to assist in identifying a transaction (for example, for researching retrievals and chargebacks).
@@ -174,7 +174,7 @@ public record OriginalDataElements2
     [DisplayName("Acquirer Reference Number")]
     [IsoXmlTag("AcqrrRefNb")]
     [IsoSimpleType(IsoSimpleType.Max23NumericText)]
-    public IsoMax23NumericText? AcquirerReferenceNumber { get; init; }
+    public Max23NumericText? AcquirerReferenceNumber { get; init; }
 
     /// <summary>
     /// Data supplied by a card issuer in an authorisation response, financial response message or in a chargeback transaction that the acquirer may be required to provide in subsequent transactions.
@@ -185,5 +185,5 @@ public record OriginalDataElements2
     [IsoXmlTag("CardIssrRefData")]
     [IsoSimpleType(IsoSimpleType.Max1000Text)]
     [StringLength(maximumLength: 1000, MinimumLength = 1)]
-    public IsoMax1000Text? CardIssuerReferenceData { get; init; }
+    public Max1000Text? CardIssuerReferenceData { get; init; }
 }

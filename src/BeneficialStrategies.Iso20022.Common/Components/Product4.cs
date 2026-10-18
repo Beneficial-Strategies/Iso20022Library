@@ -24,7 +24,7 @@ public record Product4
     [IsoXmlTag("PdctCd")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public required IsoMax70Text ProductCode { get; init; }
+    public required Max70Text ProductCode { get; init; }
 
     /// <summary>
     /// Additional product code related to the product.
@@ -34,5 +34,5 @@ public record Product4
     [IsoXmlTag("AddtlPdctCd")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AdditionalProductCode { get; init; }
+    public Max70Text? AdditionalProductCode { get; init; }
 }

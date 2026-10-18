@@ -24,7 +24,7 @@ public record TransactionDetails3
     [IsoXmlTag("TradRef")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public required IsoMax70Text TradeReference { get; init; }
+    public required Max70Text TradeReference { get; init; }
 
     /// <summary>
     /// Reference that links to other trades that are/will be sent, eg for straddles where put and call legs need to be reported together.
@@ -32,7 +32,7 @@ public record TransactionDetails3
     [IsoId("_S-6mM9p-Ed-ak6NoX_4Aeg_-160365253")]
     [DisplayName("Associated Trade Reference")]
     [IsoXmlTag("AssoctdTradRef")]
-    public SimpleValueList<IsoMax70Text> AssociatedTradeReference { get; init; } = [];
+    public SimpleValueList<Max70Text> AssociatedTradeReference { get; init; } = [];
 
     /// <summary>
     /// Identifies the execution venue. In the case of an exchange or a Multilateral Trading Facility (MTF), this should be identified using a MIC code. In the case of a systematic internaliser, place of trade should be identified using a BIC code.
@@ -49,7 +49,7 @@ public record TransactionDetails3
     [DisplayName("Trade Date Time")]
     [IsoXmlTag("TradDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime TradeDateTime { get; init; }
+    public required ISODateTime TradeDateTime { get; init; }
 
     /// <summary>
     /// Provides details of the financial instrument for which the transaction report is being sent.
@@ -132,7 +132,7 @@ public record TransactionDetails3
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? SettlementDate { get; init; }
+    public ISODateTime? SettlementDate { get; init; }
 
     /// <summary>
     /// Provides details of the person/organisation that has the power of attorney.
@@ -150,5 +150,5 @@ public record TransactionDetails3
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AdditionalInformation { get; init; }
+    public Max350Text? AdditionalInformation { get; init; }
 }

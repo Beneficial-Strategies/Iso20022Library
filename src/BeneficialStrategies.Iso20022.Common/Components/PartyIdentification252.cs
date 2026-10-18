@@ -31,7 +31,7 @@ public record PartyIdentification252
     [DisplayName("LEI Identification")]
     [IsoXmlTag("LEIId")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? LEIIdentification { get; init; }
+    public LEIIdentifier? LEIIdentification { get; init; }
 
     /// <summary>
     /// Alternate identification for a party.
@@ -87,5 +87,5 @@ public record PartyIdentification252
     [IsoId("_piyN4Ti7Eeydid5dcNPKvg")]
     [DisplayName("Certification Breakdown")]
     [IsoXmlTag("CertfctnBrkdwn")]
-    public SimpleValueList<IsoRestrictedFINXMax350Text> CertificationBreakdown { get; init; } = [];
+    public SimpleValueList<RestrictedFINXMax350Text> CertificationBreakdown { get; init; } = [];
 }

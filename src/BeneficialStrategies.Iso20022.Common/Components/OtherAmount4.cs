@@ -23,7 +23,7 @@ public record OtherAmount4
     [DisplayName("Clearing Count")]
     [IsoXmlTag("ClrCnt")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber ClearingCount { get; init; }
+    public required Number ClearingCount { get; init; }
 
     /// <summary>
     /// Amount of clearing.

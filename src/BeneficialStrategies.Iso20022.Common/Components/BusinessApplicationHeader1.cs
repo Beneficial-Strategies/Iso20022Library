@@ -51,7 +51,7 @@ public record BusinessApplicationHeader1
     [IsoXmlTag("BizMsgIdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text BusinessMessageIdentifier { get; init; }
+    public required Max35Text BusinessMessageIdentifier { get; init; }
 
     /// <summary>
     /// Contains the MessageIdentifier that defines the BusinessMessage.
@@ -63,7 +63,7 @@ public record BusinessApplicationHeader1
     [IsoXmlTag("MsgDefIdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MessageDefinitionIdentifier { get; init; }
+    public required Max35Text MessageDefinitionIdentifier { get; init; }
 
     /// <summary>
     /// Specifies the business service agreed between the two MessagingEndpoints under which rules this Business Message is exchanged.
@@ -75,7 +75,7 @@ public record BusinessApplicationHeader1
     [IsoXmlTag("BizSvc")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? BusinessService { get; init; }
+    public Max35Text? BusinessService { get; init; }
 
     /// <summary>
     /// Date and time when this Business Message (header) was created.
@@ -85,7 +85,7 @@ public record BusinessApplicationHeader1
     [DisplayName("Creation Date")]
     [IsoXmlTag("CreDt")]
     [IsoSimpleType(IsoSimpleType.ISONormalisedDateTime)]
-    public required IsoISONormalisedDateTime CreationDate { get; init; }
+    public required ISONormalisedDateTime CreationDate { get; init; }
 
     /// <summary>
     /// Indicates whether the message is a Copy, a Duplicate or a copy of a duplicate of a previously sent ISO 20022 Message.
@@ -106,7 +106,7 @@ public record BusinessApplicationHeader1
     [DisplayName("Possible Duplicate")]
     [IsoXmlTag("PssblDplct")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PossibleDuplicate { get; init; }
+    public YesNoIndicator? PossibleDuplicate { get; init; }
 
     /// <summary>
     /// Relative indication of the processing precedence of the message over a (set of) Business Messages with assigned priorities.

@@ -21,7 +21,7 @@ public record ATMCassetteCounters5
     /// </summary>
     [DisplayName("Added Number")]
     [IsoXmlTag("AddedNb")]
-    public IsoNumber? AddedNumber { get; init; }
+    public Number? AddedNumber { get; init; }
 
     /// <summary>
     /// Deposited Amount.
@@ -35,14 +35,14 @@ public record ATMCassetteCounters5
     /// </summary>
     [DisplayName("Deposited Number")]
     [IsoXmlTag("DpstdNb")]
-    public IsoNumber? DepositedNumber { get; init; }
+    public Number? DepositedNumber { get; init; }
 
     /// <summary>
     /// Dispensed Number.
     /// </summary>
     [DisplayName("Dispensed Number")]
     [IsoXmlTag("DspnsdNb")]
-    public IsoNumber? DispensedNumber { get; init; }
+    public Number? DispensedNumber { get; init; }
 
     /// <summary>
     /// Initial Amount.
@@ -56,28 +56,28 @@ public record ATMCassetteCounters5
     /// </summary>
     [DisplayName("Initial Number")]
     [IsoXmlTag("InitlNb")]
-    public IsoNumber? InitialNumber { get; init; }
+    public Number? InitialNumber { get; init; }
 
     /// <summary>
     /// Presented Number.
     /// </summary>
     [DisplayName("Presented Number")]
     [IsoXmlTag("PresntdNb")]
-    public IsoNumber? PresentedNumber { get; init; }
+    public Number? PresentedNumber { get; init; }
 
     /// <summary>
     /// Recycled Number.
     /// </summary>
     [DisplayName("Recycled Number")]
     [IsoXmlTag("RcycldNb")]
-    public IsoNumber? RecycledNumber { get; init; }
+    public Number? RecycledNumber { get; init; }
 
     /// <summary>
     /// Rejected Number.
     /// </summary>
     [DisplayName("Rejected Number")]
     [IsoXmlTag("RjctdNb")]
-    public IsoNumber? RejectedNumber { get; init; }
+    public Number? RejectedNumber { get; init; }
 
     /// <summary>
     /// Removed Amount.
@@ -91,7 +91,7 @@ public record ATMCassetteCounters5
     /// </summary>
     [DisplayName("Removed Number")]
     [IsoXmlTag("RmvdNb")]
-    public IsoNumber? RemovedNumber { get; init; }
+    public Number? RemovedNumber { get; init; }
 
     /// <summary>
     /// Retracted Amount.
@@ -105,7 +105,7 @@ public record ATMCassetteCounters5
     /// </summary>
     [DisplayName("Retracted Number")]
     [IsoXmlTag("RtrctdNb")]
-    public IsoNumber? RetractedNumber { get; init; }
+    public Number? RetractedNumber { get; init; }
 
     /// <summary>
     /// Type.

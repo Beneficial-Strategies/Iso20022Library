@@ -166,7 +166,7 @@ public record TransactionDetails185
     [IsoId("_9hZRW5aQEfC2_67yGLymgA")]
     [DisplayName("Acknowledged Status Time Stamp")]
     [IsoXmlTag("AckdStsTmStmp")]
-    public IsoISODateTime? AcknowledgedStatusTimeStamp { get; init; }
+    public ISODateTime? AcknowledgedStatusTimeStamp { get; init; }
 
     /// <summary>
     /// Time stamp on when the transaction is matched.
@@ -174,7 +174,7 @@ public record TransactionDetails185
     [IsoId("_9hZRYZaQEfC2_67yGLymgA")]
     [DisplayName("Matched Status Time Stamp")]
     [IsoXmlTag("MtchdStsTmStmp")]
-    public IsoISODateTime? MatchedStatusTimeStamp { get; init; }
+    public ISODateTime? MatchedStatusTimeStamp { get; init; }
 
     /// <summary>
     /// Identifies the chain of delivering settlement parties.
@@ -198,7 +198,7 @@ public record TransactionDetails185
     [IsoId("_9hZRd5aQEfC2_67yGLymgA")]
     [DisplayName("Transaction Additional Details")]
     [IsoXmlTag("TxAddtlDtls")]
-    public IsoMax350Text? TransactionAdditionalDetails { get; init; }
+    public Max350Text? TransactionAdditionalDetails { get; init; }
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
