@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022;
 /// that validates the value against the ISO 20022 constraint and throws
 /// <see cref="Iso20022FormatException"/> on failure.
 /// </remarks>
-public interface IIsoSimpleValue<T>
+public interface IIsoSimpleValue<T> : IIsoSimpleType
 {
     /// <summary>The validated underlying value.</summary>
     T Value { get; }

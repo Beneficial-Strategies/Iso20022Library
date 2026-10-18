@@ -66,7 +66,7 @@ public static class Iso20022MessageTypeRegistry
         var byId = new Dictionary<string, Type>(StringComparer.Ordinal);
         var byNamespace = new Dictionary<string, Type>(StringComparer.Ordinal);
 
-        foreach (var type in typeof(IOuterRecord).Assembly.GetTypes())
+        foreach (var type in typeof(Iso20022MessageTypeRegistry).Assembly.GetTypes())
         {
             if (type.IsAbstract || !typeof(IOuterRecord).IsAssignableFrom(type))
                 continue;

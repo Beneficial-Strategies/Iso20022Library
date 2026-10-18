@@ -11,4 +11,4 @@ namespace BeneficialStrategies.Iso20022.UserDefined;
 /// </summary>
 [IsoId("_YWZBMdp-Ed-ak6NoX_4Aeg_-375411192")]
 [DisplayName("Supplementary Data Contents")]
-public record SupplementaryDataContents1 { }
+public record SupplementaryDataContents1 : IIsoOpenContent { }

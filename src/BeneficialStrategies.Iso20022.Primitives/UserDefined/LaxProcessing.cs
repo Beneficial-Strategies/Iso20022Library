@@ -9,4 +9,4 @@ namespace BeneficialStrategies.Iso20022.UserDefined;
 /// </summary>
 [IsoId("_jLSza-5NEeCisYr99QEiWA_-1693515579")]
 [DisplayName("Lax Processing")]
-public record LaxProcessing { }
+public record LaxProcessing : IIsoOpenContent { }

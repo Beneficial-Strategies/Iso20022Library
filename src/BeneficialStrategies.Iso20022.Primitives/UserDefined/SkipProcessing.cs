@@ -10,4 +10,4 @@ namespace BeneficialStrategies.Iso20022.UserDefined;
 /// </summary>
 [IsoId("_RreBWNp-Ed-ak6NoX_4Aeg_-72452402")]
 [DisplayName("Skip Processing")]
-public record SkipProcessing { }
+public record SkipProcessing : IIsoOpenContent { }
