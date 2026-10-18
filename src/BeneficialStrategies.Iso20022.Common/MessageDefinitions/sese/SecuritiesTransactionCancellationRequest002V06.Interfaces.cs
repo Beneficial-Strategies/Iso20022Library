@@ -8,13 +8,21 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesTransactionCancellationRequest002V06 : ISecuritiesTransactionCancellationRequest002V06
+public partial record SecuritiesTransactionCancellationRequest002V06
+    : ISecuritiesTransactionCancellationRequest002V06
 {
-    IReferences60Choice ISecuritiesTransactionCancellationRequest002V06.AccountOwnerTransactionIdentification => AccountOwnerTransactionIdentification;
-    IPartyIdentification156? ISecuritiesTransactionCancellationRequest002V06.AccountOwner => AccountOwner;
-    ISecuritiesAccount30 ISecuritiesTransactionCancellationRequest002V06.SafekeepingAccount => SafekeepingAccount;
-    ITransactionDetails120? ISecuritiesTransactionCancellationRequest002V06.TransactionDetails => TransactionDetails;
-    ICancellationReason27? ISecuritiesTransactionCancellationRequest002V06.CancellationReason => CancellationReason;
-    IFXCancellation4Choice? ISecuritiesTransactionCancellationRequest002V06.FXCancellation => FXCancellation;
-    IEnumerable<ISupplementaryData1> ISecuritiesTransactionCancellationRequest002V06.SupplementaryData => SupplementaryData;
+    IReferences60Choice ISecuritiesTransactionCancellationRequest002V06.AccountOwnerTransactionIdentification =>
+        AccountOwnerTransactionIdentification;
+    IPartyIdentification156? ISecuritiesTransactionCancellationRequest002V06.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount30 ISecuritiesTransactionCancellationRequest002V06.SafekeepingAccount =>
+        SafekeepingAccount;
+    ITransactionDetails120? ISecuritiesTransactionCancellationRequest002V06.TransactionDetails =>
+        TransactionDetails;
+    ICancellationReason27? ISecuritiesTransactionCancellationRequest002V06.CancellationReason =>
+        CancellationReason;
+    IFXCancellation4Choice? ISecuritiesTransactionCancellationRequest002V06.FXCancellation =>
+        FXCancellation;
+    IEnumerable<ISupplementaryData1> ISecuritiesTransactionCancellationRequest002V06.SupplementaryData =>
+        SupplementaryData;
 }

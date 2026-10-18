@@ -13,13 +13,16 @@ public partial record SecuritiesTradeDetails77 : ISecuritiesTradeDetails77
     IPlaceOfTradeIdentification1? ISecuritiesTradeDetails77.PlaceOfTrade => PlaceOfTrade;
     IPlaceOfClearingIdentification1? ISecuritiesTradeDetails77.PlaceOfClearing => PlaceOfClearing;
     ITradeDate8Choice? ISecuritiesTradeDetails77.TradeDate => TradeDate;
-    IDateAndDateTime2Choice ISecuritiesTradeDetails77.OpeningSettlementDate => OpeningSettlementDate;
+    IDateAndDateTime2Choice ISecuritiesTradeDetails77.OpeningSettlementDate =>
+        OpeningSettlementDate;
     IPrice7? ISecuritiesTradeDetails77.DealPrice => DealPrice;
     IEnumerable<IReporting6Choice> ISecuritiesTradeDetails77.Reporting => Reporting;
-    IEnumerable<ITradeTransactionCondition5Choice> ISecuritiesTradeDetails77.TradeTransactionCondition => TradeTransactionCondition;
+    IEnumerable<ITradeTransactionCondition5Choice> ISecuritiesTradeDetails77.TradeTransactionCondition =>
+        TradeTransactionCondition;
     IInvestorCapacity4Choice? ISecuritiesTradeDetails77.InvestorCapacity => InvestorCapacity;
     ITradeOriginator3Choice? ISecuritiesTradeDetails77.TradeOriginatorRole => TradeOriginatorRole;
-    ICurrencyToBuyOrSell1Choice? ISecuritiesTradeDetails77.CurrencyToBuyOrSell => CurrencyToBuyOrSell;
+    ICurrencyToBuyOrSell1Choice? ISecuritiesTradeDetails77.CurrencyToBuyOrSell =>
+        CurrencyToBuyOrSell;
     IAffirmationStatus8Choice? ISecuritiesTradeDetails77.AffirmationStatus => AffirmationStatus;
     IMatchingStatus27Choice? ISecuritiesTradeDetails77.MatchingStatus => MatchingStatus;
 }

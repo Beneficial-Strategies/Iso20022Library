@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CashOption108 : ICashOption108
 {
-    INonEligibleProceedsIndicator5Choice? ICashOption108.NonEligibleProceedsIndicator => NonEligibleProceedsIndicator;
+    INonEligibleProceedsIndicator5Choice? ICashOption108.NonEligibleProceedsIndicator =>
+        NonEligibleProceedsIndicator;
     IGenericIdentification30? ICashOption108.IncomeType => IncomeType;
     IEnumerable<IGenericIdentification30> ICashOption108.OtherIncomeType => OtherIncomeType;
     IEnumerable<IGenericIdentification30> ICashOption108.ExemptionType => ExemptionType;

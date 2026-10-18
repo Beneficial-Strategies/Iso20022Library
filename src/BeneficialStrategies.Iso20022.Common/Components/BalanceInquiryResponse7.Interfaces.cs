@@ -10,10 +10,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record BalanceInquiryResponse7 : IBalanceInquiryResponse7
 {
-    ITransactionIdentifier1? IBalanceInquiryResponse7.SaleTransactionIdentification => SaleTransactionIdentification;
-    ITransactionIdentifier1? IBalanceInquiryResponse7.POITransactionIdentification => POITransactionIdentification;
+    ITransactionIdentifier1? IBalanceInquiryResponse7.SaleTransactionIdentification =>
+        SaleTransactionIdentification;
+    ITransactionIdentifier1? IBalanceInquiryResponse7.POITransactionIdentification =>
+        POITransactionIdentification;
     IPaymentAccount3? IBalanceInquiryResponse7.PaymentAccount => PaymentAccount;
     ILoyaltyAccount3? IBalanceInquiryResponse7.LoyaltyAccount => LoyaltyAccount;
-    IEnumerable<IStoredValueAccount2> IBalanceInquiryResponse7.StoredValueAccount => StoredValueAccount;
+    IEnumerable<IStoredValueAccount2> IBalanceInquiryResponse7.StoredValueAccount =>
+        StoredValueAccount;
     IEnumerable<IPaymentReceipt7> IBalanceInquiryResponse7.Receipt => Receipt;
 }

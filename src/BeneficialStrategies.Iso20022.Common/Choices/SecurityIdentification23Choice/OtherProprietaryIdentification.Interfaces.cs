@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification23Choice;
 
 public partial record OtherProprietaryIdentification : IOtherProprietaryIdentification
 {
-    IIdentificationSource1Choice IOtherProprietaryIdentification.IdentificationSource => IdentificationSource;
+    IIdentificationSource1Choice IOtherProprietaryIdentification.IdentificationSource =>
+        IdentificationSource;
 }

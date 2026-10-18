@@ -12,17 +12,25 @@ public partial record PEPOrISAOrPortfolioInformationV01 : IPEPOrISAOrPortfolioIn
 {
     IMessageIdentification1 IPEPOrISAOrPortfolioInformationV01.MessageReference => MessageReference;
     IAdditionalReference3? IPEPOrISAOrPortfolioInformationV01.PoolReference => PoolReference;
-    IAdditionalReference3? IPEPOrISAOrPortfolioInformationV01.PreviousReference => PreviousReference;
+    IAdditionalReference3? IPEPOrISAOrPortfolioInformationV01.PreviousReference =>
+        PreviousReference;
     IAdditionalReference3? IPEPOrISAOrPortfolioInformationV01.RelatedReference => RelatedReference;
-    IIndividualPerson8? IPEPOrISAOrPortfolioInformationV01.PrimaryIndividualInvestor => PrimaryIndividualInvestor;
-    IIndividualPerson8? IPEPOrISAOrPortfolioInformationV01.SecondaryIndividualInvestor => SecondaryIndividualInvestor;
-    IEnumerable<IIndividualPerson8> IPEPOrISAOrPortfolioInformationV01.OtherIndividualInvestor => OtherIndividualInvestor;
-    IOrganisation4? IPEPOrISAOrPortfolioInformationV01.PrimaryCorporateInvestor => PrimaryCorporateInvestor;
-    IOrganisation4? IPEPOrISAOrPortfolioInformationV01.SecondaryCorporateInvestor => SecondaryCorporateInvestor;
-    IEnumerable<IOrganisation4> IPEPOrISAOrPortfolioInformationV01.OtherCorporateInvestor => OtherCorporateInvestor;
+    IIndividualPerson8? IPEPOrISAOrPortfolioInformationV01.PrimaryIndividualInvestor =>
+        PrimaryIndividualInvestor;
+    IIndividualPerson8? IPEPOrISAOrPortfolioInformationV01.SecondaryIndividualInvestor =>
+        SecondaryIndividualInvestor;
+    IEnumerable<IIndividualPerson8> IPEPOrISAOrPortfolioInformationV01.OtherIndividualInvestor =>
+        OtherIndividualInvestor;
+    IOrganisation4? IPEPOrISAOrPortfolioInformationV01.PrimaryCorporateInvestor =>
+        PrimaryCorporateInvestor;
+    IOrganisation4? IPEPOrISAOrPortfolioInformationV01.SecondaryCorporateInvestor =>
+        SecondaryCorporateInvestor;
+    IEnumerable<IOrganisation4> IPEPOrISAOrPortfolioInformationV01.OtherCorporateInvestor =>
+        OtherCorporateInvestor;
     IAccount5 IPEPOrISAOrPortfolioInformationV01.ClientAccount => ClientAccount;
     IAccount6? IPEPOrISAOrPortfolioInformationV01.NomineeAccount => NomineeAccount;
     IPartyIdentification2Choice IPEPOrISAOrPortfolioInformationV01.NewPlanManager => NewPlanManager;
-    IEnumerable<IPEPISATransfer6> IPEPOrISAOrPortfolioInformationV01.ProductTransfer => ProductTransfer;
+    IEnumerable<IPEPISATransfer6> IPEPOrISAOrPortfolioInformationV01.ProductTransfer =>
+        ProductTransfer;
     IEnumerable<IExtension1> IPEPOrISAOrPortfolioInformationV01.Extension => Extension;
 }

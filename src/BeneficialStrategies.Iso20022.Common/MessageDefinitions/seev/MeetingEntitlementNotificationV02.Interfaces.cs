@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 
 public partial record MeetingEntitlementNotificationV02 : IMeetingEntitlementNotificationV02
 {
-    IMessageIdentification1 IMeetingEntitlementNotificationV02.EntitlementNotificationIdentification => EntitlementNotificationIdentification;
+    IMessageIdentification1 IMeetingEntitlementNotificationV02.EntitlementNotificationIdentification =>
+        EntitlementNotificationIdentification;
     IMessageIdentification? IMeetingEntitlementNotificationV02.RelatedReference => RelatedReference;
     IMeetingReference3 IMeetingEntitlementNotificationV02.MeetingReference => MeetingReference;
     IPartyIdentification9Choice IMeetingEntitlementNotificationV02.NotifyingParty => NotifyingParty;

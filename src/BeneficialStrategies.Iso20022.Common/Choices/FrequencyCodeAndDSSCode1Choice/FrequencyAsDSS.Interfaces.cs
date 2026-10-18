@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.FrequencyCodeAndDSSCode1Choice;
 
-public partial record FrequencyAsDSS : IFrequencyAsDSS
-{
-}
+public partial record FrequencyAsDSS : IFrequencyAsDSS { }

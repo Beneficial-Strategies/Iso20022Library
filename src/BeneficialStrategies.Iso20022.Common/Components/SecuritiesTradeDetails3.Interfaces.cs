@@ -15,10 +15,12 @@ public partial record SecuritiesTradeDetails3 : ISecuritiesTradeDetails3
     IDateAndDateTimeChoice ISecuritiesTradeDetails3.OpeningSettlementDate => OpeningSettlementDate;
     IPrice2? ISecuritiesTradeDetails3.DealPrice => DealPrice;
     IEnumerable<IReporting2Choice> ISecuritiesTradeDetails3.Reporting => Reporting;
-    IEnumerable<ITradeTransactionCondition1Choice> ISecuritiesTradeDetails3.TradeTransactionCondition => TradeTransactionCondition;
+    IEnumerable<ITradeTransactionCondition1Choice> ISecuritiesTradeDetails3.TradeTransactionCondition =>
+        TradeTransactionCondition;
     IInvestorCapacity1Choice? ISecuritiesTradeDetails3.InvestorCapacity => InvestorCapacity;
     ITradeOriginator1Choice? ISecuritiesTradeDetails3.TradeOriginatorRole => TradeOriginatorRole;
-    ICurrencyToBuyOrSell1Choice? ISecuritiesTradeDetails3.CurrencyToBuyOrSell => CurrencyToBuyOrSell;
+    ICurrencyToBuyOrSell1Choice? ISecuritiesTradeDetails3.CurrencyToBuyOrSell =>
+        CurrencyToBuyOrSell;
     IAffirmationStatus1Choice? ISecuritiesTradeDetails3.AffirmationStatus => AffirmationStatus;
     IMatchingStatus1Choice? ISecuritiesTradeDetails3.MatchingStatus => MatchingStatus;
 }

@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SubBalanceInformation2 : ISubBalanceInformation2
 {
     ISubBalanceQuantity1Choice ISubBalanceInformation2.Quantity => Quantity;
-    IEnumerable<IAdditionalBalanceInformation2> ISubBalanceInformation2.AdditionalBalanceBreakdownDetails => AdditionalBalanceBreakdownDetails;
+    IEnumerable<IAdditionalBalanceInformation2> ISubBalanceInformation2.AdditionalBalanceBreakdownDetails =>
+        AdditionalBalanceBreakdownDetails;
 }

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument23Choice;
 public partial record ChequeDetails : IChequeDetails
 {
     IPartyIdentification139 IChequeDetails.PayeeIdentification => PayeeIdentification;
-    IFinancialInstitutionIdentification17? IChequeDetails.DraweeIdentification => DraweeIdentification;
+    IFinancialInstitutionIdentification17? IChequeDetails.DraweeIdentification =>
+        DraweeIdentification;
     IPartyIdentification139? IChequeDetails.DrawerIdentification => DrawerIdentification;
 }

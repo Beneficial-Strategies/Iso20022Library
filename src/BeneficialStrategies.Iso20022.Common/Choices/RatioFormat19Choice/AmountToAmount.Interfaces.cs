@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.RatioFormat19Choice;
 
-public partial record AmountToAmount : IAmountToAmount
-{
-}
+public partial record AmountToAmount : IAmountToAmount { }

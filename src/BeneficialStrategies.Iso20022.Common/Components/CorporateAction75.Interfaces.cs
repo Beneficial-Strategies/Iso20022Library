@@ -12,7 +12,9 @@ public partial record CorporateAction75 : ICorporateAction75
 {
     ICorporateActionDate89? ICorporateAction75.DateDetails => DateDetails;
     ICorporateActionEventStageFormat15Choice? ICorporateAction75.EventStage => EventStage;
-    IEnumerable<IAdditionalBusinessProcessFormat20Choice> ICorporateAction75.AdditionalBusinessProcessIndicator => AdditionalBusinessProcessIndicator;
-    IIntermediateSecuritiesDistributionTypeFormat18Choice? ICorporateAction75.IntermediateSecuritiesDistributionType => IntermediateSecuritiesDistributionType;
+    IEnumerable<IAdditionalBusinessProcessFormat20Choice> ICorporateAction75.AdditionalBusinessProcessIndicator =>
+        AdditionalBusinessProcessIndicator;
+    IIntermediateSecuritiesDistributionTypeFormat18Choice? ICorporateAction75.IntermediateSecuritiesDistributionType =>
+        IntermediateSecuritiesDistributionType;
     ILotteryTypeFormat5Choice? ICorporateAction75.LotteryType => LotteryType;
 }

@@ -8,20 +8,35 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record CorporateActionMovementConfirmation002V08 : ICorporateActionMovementConfirmation002V08
+public partial record CorporateActionMovementConfirmation002V08
+    : ICorporateActionMovementConfirmation002V08
 {
-    IDocumentIdentification37? ICorporateActionMovementConfirmation002V08.NotificationIdentification => NotificationIdentification;
-    IDocumentIdentification37? ICorporateActionMovementConfirmation002V08.MovementPreliminaryAdviceIdentification => MovementPreliminaryAdviceIdentification;
-    IDocumentIdentification17? ICorporateActionMovementConfirmation002V08.InstructionIdentification => InstructionIdentification;
-    IEnumerable<IDocumentIdentification38> ICorporateActionMovementConfirmation002V08.OtherDocumentIdentification => OtherDocumentIdentification;
-    IEnumerable<ICorporateActionEventReference4> ICorporateActionMovementConfirmation002V08.EventsLinkage => EventsLinkage;
-    ICorporateActionGeneralInformation118 ICorporateActionMovementConfirmation002V08.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IAccountAndBalance38 ICorporateActionMovementConfirmation002V08.AccountDetails => AccountDetails;
-    ICorporateAction36? ICorporateActionMovementConfirmation002V08.CorporateActionDetails => CorporateActionDetails;
-    ICorporateActionOption136 ICorporateActionMovementConfirmation002V08.CorporateActionConfirmationDetails => CorporateActionConfirmationDetails;
-    ICorporateActionNarrative35? ICorporateActionMovementConfirmation002V08.AdditionalInformation => AdditionalInformation;
-    IEnumerable<IPartyIdentification104Choice> ICorporateActionMovementConfirmation002V08.IssuerAgent => IssuerAgent;
-    IEnumerable<IPartyIdentification104Choice> ICorporateActionMovementConfirmation002V08.PayingAgent => PayingAgent;
-    IEnumerable<IPartyIdentification104Choice> ICorporateActionMovementConfirmation002V08.SubPayingAgent => SubPayingAgent;
-    IEnumerable<ISupplementaryData1> ICorporateActionMovementConfirmation002V08.SupplementaryData => SupplementaryData;
+    IDocumentIdentification37? ICorporateActionMovementConfirmation002V08.NotificationIdentification =>
+        NotificationIdentification;
+    IDocumentIdentification37? ICorporateActionMovementConfirmation002V08.MovementPreliminaryAdviceIdentification =>
+        MovementPreliminaryAdviceIdentification;
+    IDocumentIdentification17? ICorporateActionMovementConfirmation002V08.InstructionIdentification =>
+        InstructionIdentification;
+    IEnumerable<IDocumentIdentification38> ICorporateActionMovementConfirmation002V08.OtherDocumentIdentification =>
+        OtherDocumentIdentification;
+    IEnumerable<ICorporateActionEventReference4> ICorporateActionMovementConfirmation002V08.EventsLinkage =>
+        EventsLinkage;
+    ICorporateActionGeneralInformation118 ICorporateActionMovementConfirmation002V08.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IAccountAndBalance38 ICorporateActionMovementConfirmation002V08.AccountDetails =>
+        AccountDetails;
+    ICorporateAction36? ICorporateActionMovementConfirmation002V08.CorporateActionDetails =>
+        CorporateActionDetails;
+    ICorporateActionOption136 ICorporateActionMovementConfirmation002V08.CorporateActionConfirmationDetails =>
+        CorporateActionConfirmationDetails;
+    ICorporateActionNarrative35? ICorporateActionMovementConfirmation002V08.AdditionalInformation =>
+        AdditionalInformation;
+    IEnumerable<IPartyIdentification104Choice> ICorporateActionMovementConfirmation002V08.IssuerAgent =>
+        IssuerAgent;
+    IEnumerable<IPartyIdentification104Choice> ICorporateActionMovementConfirmation002V08.PayingAgent =>
+        PayingAgent;
+    IEnumerable<IPartyIdentification104Choice> ICorporateActionMovementConfirmation002V08.SubPayingAgent =>
+        SubPayingAgent;
+    IEnumerable<ISupplementaryData1> ICorporateActionMovementConfirmation002V08.SupplementaryData =>
+        SupplementaryData;
 }

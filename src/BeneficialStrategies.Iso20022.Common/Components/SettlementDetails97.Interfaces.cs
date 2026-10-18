@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SettlementDetails97 : ISettlementDetails97
 {
     IPriorityNumeric4Choice? ISettlementDetails97.Priority => Priority;
-    IEnumerable<ISettlementTransactionCondition18Choice> ISettlementDetails97.SettlementTransactionCondition => SettlementTransactionCondition;
+    IEnumerable<ISettlementTransactionCondition18Choice> ISettlementDetails97.SettlementTransactionCondition =>
+        SettlementTransactionCondition;
     ISettlingCapacity7Choice? ISettlementDetails97.SettlingCapacity => SettlingCapacity;
     IGenericIdentification30? ISettlementDetails97.StampDutyTaxBasis => StampDutyTaxBasis;
     ISecuritiesRTGS4Choice? ISettlementDetails97.SecuritiesRTGS => SecuritiesRTGS;
@@ -19,10 +20,12 @@ public partial record SettlementDetails97 : ISettlementDetails97
     ICashSettlementSystem4Choice? ISettlementDetails97.CashClearingSystem => CashClearingSystem;
     ITaxCapacityParty4Choice? ISettlementDetails97.TaxCapacity => TaxCapacity;
     IMarketClientSide4Choice? ISettlementDetails97.MarketClientSide => MarketClientSide;
-    IFXStandingInstruction4Choice? ISettlementDetails97.FXStandingInstruction => FXStandingInstruction;
+    IFXStandingInstruction4Choice? ISettlementDetails97.FXStandingInstruction =>
+        FXStandingInstruction;
     IBlockTrade4Choice? ISettlementDetails97.BlockTrade => BlockTrade;
     IRestriction5Choice? ISettlementDetails97.LegalRestrictions => LegalRestrictions;
-    ISettlementSystemMethod4Choice? ISettlementDetails97.SettlementSystemMethod => SettlementSystemMethod;
+    ISettlementSystemMethod4Choice? ISettlementDetails97.SettlementSystemMethod =>
+        SettlementSystemMethod;
     INettingEligibility4Choice? ISettlementDetails97.NettingEligibility => NettingEligibility;
     ICentralCounterPartyEligibility4Choice? ISettlementDetails97.CCPEligibility => CCPEligibility;
     ITracking4Choice? ISettlementDetails97.Tracking => Tracking;

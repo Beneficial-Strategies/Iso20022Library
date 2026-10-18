@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of closing balance.
 /// </summary>
 [IsoId("_8bhd_ZNLEeWGlc8L7oPDIg")]
-public interface IClosingBalance5Choice : IIsoChoice
-{
-}
+public interface IClosingBalance5Choice : IIsoChoice { }

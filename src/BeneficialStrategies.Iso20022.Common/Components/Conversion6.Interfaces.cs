@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record Conversion6 : IConversion6
 {
     IFinancialInstrumentIdentification7 IConversion6.OriginalSecurity => OriginalSecurity;
-    IEnumerable<IAdditionalInformation15> IConversion6.AdditionalInformation => AdditionalInformation;
+    IEnumerable<IAdditionalInformation15> IConversion6.AdditionalInformation =>
+        AdditionalInformation;
 }

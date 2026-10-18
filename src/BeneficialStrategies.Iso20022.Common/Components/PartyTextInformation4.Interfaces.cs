@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record PartyTextInformation4 : IPartyTextInformation4
-{
-}
+public partial record PartyTextInformation4 : IPartyTextInformation4 { }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.References81Choice;
 
-public partial record PoolIdentification : IPoolIdentification
-{
-}
+public partial record PoolIdentification : IPoolIdentification { }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record Vehicle2 : IVehicle2
-{
-}
+public partial record Vehicle2 : IVehicle2 { }

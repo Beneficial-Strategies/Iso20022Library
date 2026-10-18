@@ -12,7 +12,8 @@ public partial record ReportRequest6 : IReportRequest6
 {
     ICardPaymentEnvironment79 IReportRequest6.Environment => Environment;
     ICardPaymentContext30 IReportRequest6.Context => Context;
-    IReportTransactionRequest1? IReportRequest6.ReportTransactionRequest => ReportTransactionRequest;
+    IReportTransactionRequest1? IReportRequest6.ReportTransactionRequest =>
+        ReportTransactionRequest;
     IReportGetTotalsRequest1? IReportRequest6.ReportGetTotalsRequest => ReportGetTotalsRequest;
     IEnumerable<ISupplementaryData1> IReportRequest6.SupplementaryData => SupplementaryData;
 }

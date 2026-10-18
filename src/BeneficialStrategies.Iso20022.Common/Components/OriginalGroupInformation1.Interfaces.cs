@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record OriginalGroupInformation1 : IOriginalGroupInformation1
 {
-    IEnumerable<IStatusReasonInformation1> IOriginalGroupInformation1.StatusReasonInformation => StatusReasonInformation;
-    IEnumerable<INumberOfTransactionsPerStatus1> IOriginalGroupInformation1.NumberOfTransactionsPerStatus => NumberOfTransactionsPerStatus;
+    IEnumerable<IStatusReasonInformation1> IOriginalGroupInformation1.StatusReasonInformation =>
+        StatusReasonInformation;
+    IEnumerable<INumberOfTransactionsPerStatus1> IOriginalGroupInformation1.NumberOfTransactionsPerStatus =>
+        NumberOfTransactionsPerStatus;
 }

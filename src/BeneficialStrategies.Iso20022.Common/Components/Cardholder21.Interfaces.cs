@@ -15,6 +15,7 @@ public partial record Cardholder21 : ICardholder21
     IPostalAddress22? ICardholder21.ShippingAddress => ShippingAddress;
     IVehicle1? ICardholder21.Vehicle => Vehicle;
     IEnumerable<ICardholderAuthentication17> ICardholder21.Authentication => Authentication;
-    IEnumerable<ITransactionVerificationResult4> ICardholder21.TransactionVerificationResult => TransactionVerificationResult;
+    IEnumerable<ITransactionVerificationResult4> ICardholder21.TransactionVerificationResult =>
+        TransactionVerificationResult;
     IEnumerable<IMobileData6> ICardholder21.MobileData => MobileData;
 }

@@ -11,13 +11,22 @@ namespace BeneficialStrategies.Iso20022.semt;
 public partial record SecuritiesBalanceAccountingReportV04 : ISecuritiesBalanceAccountingReportV04
 {
     IPagination ISecuritiesBalanceAccountingReportV04.Pagination => Pagination;
-    IStatement20 ISecuritiesBalanceAccountingReportV04.StatementGeneralDetails => StatementGeneralDetails;
-    IPartyIdentification36Choice? ISecuritiesBalanceAccountingReportV04.AccountOwner => AccountOwner;
-    IPartyIdentification49Choice? ISecuritiesBalanceAccountingReportV04.AccountServicer => AccountServicer;
-    ISecuritiesAccount11 ISecuritiesBalanceAccountingReportV04.SafekeepingAccount => SafekeepingAccount;
-    IEnumerable<IIntermediary21> ISecuritiesBalanceAccountingReportV04.IntermediaryInformation => IntermediaryInformation;
-    IEnumerable<IAggregateBalanceInformation13> ISecuritiesBalanceAccountingReportV04.BalanceForAccount => BalanceForAccount;
-    IEnumerable<ISubAccountIdentification16> ISecuritiesBalanceAccountingReportV04.SubAccountDetails => SubAccountDetails;
-    ITotalValueInPageAndStatement2? ISecuritiesBalanceAccountingReportV04.AccountBaseCurrencyTotalAmounts => AccountBaseCurrencyTotalAmounts;
-    ITotalValueInPageAndStatement2? ISecuritiesBalanceAccountingReportV04.AlternateReportingCurrencyTotalAmounts => AlternateReportingCurrencyTotalAmounts;
+    IStatement20 ISecuritiesBalanceAccountingReportV04.StatementGeneralDetails =>
+        StatementGeneralDetails;
+    IPartyIdentification36Choice? ISecuritiesBalanceAccountingReportV04.AccountOwner =>
+        AccountOwner;
+    IPartyIdentification49Choice? ISecuritiesBalanceAccountingReportV04.AccountServicer =>
+        AccountServicer;
+    ISecuritiesAccount11 ISecuritiesBalanceAccountingReportV04.SafekeepingAccount =>
+        SafekeepingAccount;
+    IEnumerable<IIntermediary21> ISecuritiesBalanceAccountingReportV04.IntermediaryInformation =>
+        IntermediaryInformation;
+    IEnumerable<IAggregateBalanceInformation13> ISecuritiesBalanceAccountingReportV04.BalanceForAccount =>
+        BalanceForAccount;
+    IEnumerable<ISubAccountIdentification16> ISecuritiesBalanceAccountingReportV04.SubAccountDetails =>
+        SubAccountDetails;
+    ITotalValueInPageAndStatement2? ISecuritiesBalanceAccountingReportV04.AccountBaseCurrencyTotalAmounts =>
+        AccountBaseCurrencyTotalAmounts;
+    ITotalValueInPageAndStatement2? ISecuritiesBalanceAccountingReportV04.AlternateReportingCurrencyTotalAmounts =>
+        AlternateReportingCurrencyTotalAmounts;
 }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or proprietary code to specify the type of election movement.
 /// </summary>
 [IsoId("_c5WhK5KQEeWHWpTQn1FFVg")]
-public interface IElectionTypeFormat4Choice : IIsoChoice
-{
-}
+public interface IElectionTypeFormat4Choice : IIsoChoice { }

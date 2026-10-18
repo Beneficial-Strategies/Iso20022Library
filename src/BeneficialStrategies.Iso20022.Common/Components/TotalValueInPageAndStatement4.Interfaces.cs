@@ -10,7 +10,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TotalValueInPageAndStatement4 : ITotalValueInPageAndStatement4
 {
-    IAmountAndDirection14? ITotalValueInPageAndStatement4.TotalHoldingsValueOfPage => TotalHoldingsValueOfPage;
-    IAmountAndDirection14 ITotalValueInPageAndStatement4.TotalHoldingsValueOfStatement => TotalHoldingsValueOfStatement;
-    IAmountAndDirection14? ITotalValueInPageAndStatement4.TotalBookValueOfStatement => TotalBookValueOfStatement;
+    IAmountAndDirection14? ITotalValueInPageAndStatement4.TotalHoldingsValueOfPage =>
+        TotalHoldingsValueOfPage;
+    IAmountAndDirection14 ITotalValueInPageAndStatement4.TotalHoldingsValueOfStatement =>
+        TotalHoldingsValueOfStatement;
+    IAmountAndDirection14? ITotalValueInPageAndStatement4.TotalBookValueOfStatement =>
+        TotalBookValueOfStatement;
 }

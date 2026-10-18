@@ -12,15 +12,20 @@ public partial record SecuritiesTradeDetails24 : ISecuritiesTradeDetails24
 {
     ITradeDate1Choice? ISecuritiesTradeDetails24.TradeDate => TradeDate;
     ISettlementDate1Choice ISecuritiesTradeDetails24.SettlementDate => SettlementDate;
-    ISecurityIdentification14 ISecuritiesTradeDetails24.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentAttributes35? ISecuritiesTradeDetails24.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
+    ISecurityIdentification14 ISecuritiesTradeDetails24.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentAttributes35? ISecuritiesTradeDetails24.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
     IEnumerable<IReporting1Choice> ISecuritiesTradeDetails24.Reporting => Reporting;
     IQuantity7 ISecuritiesTradeDetails24.QuantityDetails => QuantityDetails;
     ISettlementDetails4? ISecuritiesTradeDetails24.SettlementParameters => SettlementParameters;
-    ISettlementParties10? ISecuritiesTradeDetails24.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties10? ISecuritiesTradeDetails24.ReceivingSettlementParties => ReceivingSettlementParties;
+    ISettlementParties10? ISecuritiesTradeDetails24.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties10? ISecuritiesTradeDetails24.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
     IAmountAndDirection7? ISecuritiesTradeDetails24.SettlementAmount => SettlementAmount;
     IOtherAmounts15? ISecuritiesTradeDetails24.OtherAmounts => OtherAmounts;
     IOtherParties10? ISecuritiesTradeDetails24.OtherBusinessParties => OtherBusinessParties;
-    IEnumerable<ISupplementaryData1> ISecuritiesTradeDetails24.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> ISecuritiesTradeDetails24.SupplementaryData =>
+        SupplementaryData;
 }

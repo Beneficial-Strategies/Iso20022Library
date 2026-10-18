@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CorporateActionMovement1 : ICorporateActionMovement1
 {
     ICorporateActionOption1FormatChoice? ICorporateActionMovement1.OptionType => OptionType;
-    IPartyIdentification2Choice? ICorporateActionMovement1.AccountOwnerIdentification => AccountOwnerIdentification;
-    IUnitOrFaceAmount1Choice? ICorporateActionMovement1.ConfirmedBalanceSecuritiesQuantity => ConfirmedBalanceSecuritiesQuantity;
+    IPartyIdentification2Choice? ICorporateActionMovement1.AccountOwnerIdentification =>
+        AccountOwnerIdentification;
+    IUnitOrFaceAmount1Choice? ICorporateActionMovement1.ConfirmedBalanceSecuritiesQuantity =>
+        ConfirmedBalanceSecuritiesQuantity;
 }

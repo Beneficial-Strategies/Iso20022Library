@@ -12,5 +12,6 @@ public partial record AdditionalQueryParameters7 : IAdditionalQueryParameters7
 {
     IStatus8Choice? IAdditionalQueryParameters7.Status => Status;
     IEnumerable<IReason12Choice> IAdditionalQueryParameters7.Reason => Reason;
-    IEnumerable<ISecurityIdentification14> IAdditionalQueryParameters7.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    IEnumerable<ISecurityIdentification14> IAdditionalQueryParameters7.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
 }

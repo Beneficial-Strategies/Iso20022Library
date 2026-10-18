@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record EncapsulatedContent3 : IEncapsulatedContent3
-{
-}
+public partial record EncapsulatedContent3 : IEncapsulatedContent3 { }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of meeting type classification.
 /// </summary>
 [IsoId("_RDrokNp-Ed-ak6NoX_4Aeg_843703595")]
-public interface IMeetingTypeClassification1Choice : IIsoChoice
-{
-}
+public interface IMeetingTypeClassification1Choice : IIsoChoice { }

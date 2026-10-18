@@ -11,10 +11,16 @@ namespace BeneficialStrategies.Iso20022.seev;
 public partial record AgentCAMovementInstructionV01 : IAgentCAMovementInstructionV01
 {
     IDocumentIdentification8 IAgentCAMovementInstructionV01.Identification => Identification;
-    IDocumentIdentification8? IAgentCAMovementInstructionV01.AgentCAElectionAdviceIdentification => AgentCAElectionAdviceIdentification;
-    ICorporateActionInformation1 IAgentCAMovementInstructionV01.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    ICorporateActionMovement1 IAgentCAMovementInstructionV01.MovementGeneralInformation => MovementGeneralInformation;
-    IEnumerable<IUnderlyingSecurityMovement1> IAgentCAMovementInstructionV01.UnderlyingSecuritiesMovementDetails => UnderlyingSecuritiesMovementDetails;
-    IEnumerable<ICashMovement2> IAgentCAMovementInstructionV01.UnderlyingCashMovementDetails => UnderlyingCashMovementDetails;
-    IProceedsMovement1? IAgentCAMovementInstructionV01.ProceedsMovementDetails => ProceedsMovementDetails;
+    IDocumentIdentification8? IAgentCAMovementInstructionV01.AgentCAElectionAdviceIdentification =>
+        AgentCAElectionAdviceIdentification;
+    ICorporateActionInformation1 IAgentCAMovementInstructionV01.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    ICorporateActionMovement1 IAgentCAMovementInstructionV01.MovementGeneralInformation =>
+        MovementGeneralInformation;
+    IEnumerable<IUnderlyingSecurityMovement1> IAgentCAMovementInstructionV01.UnderlyingSecuritiesMovementDetails =>
+        UnderlyingSecuritiesMovementDetails;
+    IEnumerable<ICashMovement2> IAgentCAMovementInstructionV01.UnderlyingCashMovementDetails =>
+        UnderlyingCashMovementDetails;
+    IProceedsMovement1? IAgentCAMovementInstructionV01.ProceedsMovementDetails =>
+        ProceedsMovementDetails;
 }

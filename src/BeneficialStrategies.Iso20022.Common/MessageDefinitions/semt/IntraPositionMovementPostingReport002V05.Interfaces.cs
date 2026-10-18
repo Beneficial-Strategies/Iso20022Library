@@ -8,11 +8,16 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record IntraPositionMovementPostingReport002V05 : IIntraPositionMovementPostingReport002V05
+public partial record IntraPositionMovementPostingReport002V05
+    : IIntraPositionMovementPostingReport002V05
 {
     IPagination IIntraPositionMovementPostingReport002V05.Pagination => Pagination;
-    IStatement49 IIntraPositionMovementPostingReport002V05.StatementGeneralDetails => StatementGeneralDetails;
-    IPartyIdentification103Choice? IIntraPositionMovementPostingReport002V05.AccountOwner => AccountOwner;
-    ISecuritiesAccount27 IIntraPositionMovementPostingReport002V05.SafekeepingAccount => SafekeepingAccount;
-    IEnumerable<IFinancialInstrumentDetails22> IIntraPositionMovementPostingReport002V05.FinancialInstrument => FinancialInstrument;
+    IStatement49 IIntraPositionMovementPostingReport002V05.StatementGeneralDetails =>
+        StatementGeneralDetails;
+    IPartyIdentification103Choice? IIntraPositionMovementPostingReport002V05.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount27 IIntraPositionMovementPostingReport002V05.SafekeepingAccount =>
+        SafekeepingAccount;
+    IEnumerable<IFinancialInstrumentDetails22> IIntraPositionMovementPostingReport002V05.FinancialInstrument =>
+        FinancialInstrument;
 }

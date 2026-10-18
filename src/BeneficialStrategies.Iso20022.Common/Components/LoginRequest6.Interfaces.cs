@@ -12,6 +12,7 @@ public partial record LoginRequest6 : ILoginRequest6
 {
     IEnumerable<IPointOfInteractionComponent15> ILoginRequest6.SaleSoftware => SaleSoftware;
     ISaleTerminalData1? ILoginRequest6.SaleTerminalData => SaleTerminalData;
-    IPointOfInteractionComponentIdentification2? ILoginRequest6.POIIdentification => POIIdentification;
+    IPointOfInteractionComponentIdentification2? ILoginRequest6.POIIdentification =>
+        POIIdentification;
     IActionMessage11? ILoginRequest6.OutputDisplay => OutputDisplay;
 }

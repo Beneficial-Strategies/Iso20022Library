@@ -7,6 +7,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice between different processing statuses for a corporate action instruction.</summary>
 [IsoId("_H2cl8a8wEfCx2aBifPEdRg")]
-public interface IInstructionProcessingStatus62Choice : IIsoChoice
-{
-}
+public interface IInstructionProcessingStatus62Choice : IIsoChoice { }

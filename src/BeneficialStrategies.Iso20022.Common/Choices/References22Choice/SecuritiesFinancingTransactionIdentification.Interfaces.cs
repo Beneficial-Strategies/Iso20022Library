@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.References22Choice;
 
-public partial record SecuritiesFinancingTransactionIdentification : ISecuritiesFinancingTransactionIdentification
-{
-}
+public partial record SecuritiesFinancingTransactionIdentification
+    : ISecuritiesFinancingTransactionIdentification { }

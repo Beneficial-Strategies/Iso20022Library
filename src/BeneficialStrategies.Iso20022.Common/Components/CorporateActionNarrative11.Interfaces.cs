@@ -11,13 +11,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CorporateActionNarrative11 : ICorporateActionNarrative11
 {
     IUpdatedAdditionalInformation2? ICorporateActionNarrative11.AdditionalText => AdditionalText;
-    IUpdatedAdditionalInformation2? ICorporateActionNarrative11.NarrativeVersion => NarrativeVersion;
-    IUpdatedAdditionalInformation2? ICorporateActionNarrative11.InformationConditions => InformationConditions;
-    IUpdatedAdditionalInformation2? ICorporateActionNarrative11.InformationToComplyWith => InformationToComplyWith;
-    IUpdatedAdditionalInformation2? ICorporateActionNarrative11.TaxationConditions => TaxationConditions;
+    IUpdatedAdditionalInformation2? ICorporateActionNarrative11.NarrativeVersion =>
+        NarrativeVersion;
+    IUpdatedAdditionalInformation2? ICorporateActionNarrative11.InformationConditions =>
+        InformationConditions;
+    IUpdatedAdditionalInformation2? ICorporateActionNarrative11.InformationToComplyWith =>
+        InformationToComplyWith;
+    IUpdatedAdditionalInformation2? ICorporateActionNarrative11.TaxationConditions =>
+        TaxationConditions;
     IUpdatedAdditionalInformation2? ICorporateActionNarrative11.Disclaimer => Disclaimer;
-    IUpdatedAdditionalInformation2? ICorporateActionNarrative11.PartyContactNarrative => PartyContactNarrative;
-    IUpdatedAdditionalInformation2? ICorporateActionNarrative11.DeclarationDetails => DeclarationDetails;
-    IUpdatedAdditionalInformation2? ICorporateActionNarrative11.RegistrationDetails => RegistrationDetails;
-    IUpdatedAdditionalInformation2? ICorporateActionNarrative11.BasketOrIndexInformation => BasketOrIndexInformation;
+    IUpdatedAdditionalInformation2? ICorporateActionNarrative11.PartyContactNarrative =>
+        PartyContactNarrative;
+    IUpdatedAdditionalInformation2? ICorporateActionNarrative11.DeclarationDetails =>
+        DeclarationDetails;
+    IUpdatedAdditionalInformation2? ICorporateActionNarrative11.RegistrationDetails =>
+        RegistrationDetails;
+    IUpdatedAdditionalInformation2? ICorporateActionNarrative11.BasketOrIndexInformation =>
+        BasketOrIndexInformation;
 }

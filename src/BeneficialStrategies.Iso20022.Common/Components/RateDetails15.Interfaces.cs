@@ -13,10 +13,13 @@ public partial record RateDetails15 : IRateDetails15
     IRateAndAmountFormat5Choice? IRateDetails15.AdditionalTax => AdditionalTax;
     IRateAndAmountFormat5Choice? IRateDetails15.ChargesFees => ChargesFees;
     IRateAndAmountFormat5Choice? IRateDetails15.FullyFrankedRate => FullyFrankedRate;
-    IEnumerable<IGrossDividendRateFormat8Choice> IRateDetails15.GrossDividendRate => GrossDividendRate;
-    IRateAndAmountFormat5Choice? IRateDetails15.EarlySolicitationFeeRate => EarlySolicitationFeeRate;
+    IEnumerable<IGrossDividendRateFormat8Choice> IRateDetails15.GrossDividendRate =>
+        GrossDividendRate;
+    IRateAndAmountFormat5Choice? IRateDetails15.EarlySolicitationFeeRate =>
+        EarlySolicitationFeeRate;
     IRateAndAmountFormat5Choice? IRateDetails15.ThirdPartyIncentiveRate => ThirdPartyIncentiveRate;
-    IEnumerable<IInterestRateUsedForPaymentFormat2Choice> IRateDetails15.InterestRateUsedForPayment => InterestRateUsedForPayment;
+    IEnumerable<IInterestRateUsedForPaymentFormat2Choice> IRateDetails15.InterestRateUsedForPayment =>
+        InterestRateUsedForPayment;
     IEnumerable<INetDividendRateFormat10Choice> IRateDetails15.NetDividendRate => NetDividendRate;
     IRateAndAmountFormat5Choice? IRateDetails15.NonResidentRate => NonResidentRate;
     IRateAndAmountFormat5Choice? IRateDetails15.SolicitationFeeRate => SolicitationFeeRate;
@@ -24,6 +27,8 @@ public partial record RateDetails15 : IRateDetails15
     IEnumerable<IRateTypeAndAmountAndStatus6> IRateDetails15.TaxRelatedRate => TaxRelatedRate;
     IEnumerable<IRateFormat11Choice> IRateDetails15.WithholdingTaxRate => WithholdingTaxRate;
     IRateAndAmountFormat5Choice? IRateDetails15.TaxOnIncome => TaxOnIncome;
-    IEnumerable<IRateAndAmountFormat21Choice> IRateDetails15.WithholdingOfForeignTax => WithholdingOfForeignTax;
-    IEnumerable<IRateAndAmountFormat21Choice> IRateDetails15.WithholdingOfLocalTax => WithholdingOfLocalTax;
+    IEnumerable<IRateAndAmountFormat21Choice> IRateDetails15.WithholdingOfForeignTax =>
+        WithholdingOfForeignTax;
+    IEnumerable<IRateAndAmountFormat21Choice> IRateDetails15.WithholdingOfLocalTax =>
+        WithholdingOfLocalTax;
 }

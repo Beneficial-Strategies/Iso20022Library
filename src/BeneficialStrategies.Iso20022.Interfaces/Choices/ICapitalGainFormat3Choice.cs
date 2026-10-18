@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or proprietary code to specify the type of capital gain.
 /// </summary>
 [IsoId("_MYGIUUEGEeWVgfuHGaKtRQ")]
-public interface ICapitalGainFormat3Choice : IIsoChoice
-{
-}
+public interface ICapitalGainFormat3Choice : IIsoChoice { }

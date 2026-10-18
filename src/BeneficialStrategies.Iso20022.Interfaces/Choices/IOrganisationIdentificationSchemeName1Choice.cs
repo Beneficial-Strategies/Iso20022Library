@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Sets of elements to identify a name of the organisation identification scheme.
 /// </summary>
 [IsoId("_QACaQtp-Ed-ak6NoX_4Aeg_362604391")]
-public interface IOrganisationIdentificationSchemeName1Choice : IIsoChoice
-{
-}
+public interface IOrganisationIdentificationSchemeName1Choice : IIsoChoice { }

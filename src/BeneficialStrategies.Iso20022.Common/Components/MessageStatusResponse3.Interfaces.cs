@@ -12,7 +12,8 @@ public partial record MessageStatusResponse3 : IMessageStatusResponse3
 {
     ICardPaymentEnvironment75 IMessageStatusResponse3.Environment => Environment;
     ICardPaymentContext28 IMessageStatusResponse3.Context => Context;
-    IMessageStatusResponseData3 IMessageStatusResponse3.MessageStatusResponseData => MessageStatusResponseData;
+    IMessageStatusResponseData3 IMessageStatusResponse3.MessageStatusResponseData =>
+        MessageStatusResponseData;
     IResponseType9 IMessageStatusResponse3.Response => Response;
     IEnumerable<ISupplementaryData1> IMessageStatusResponse3.SupplementaryData => SupplementaryData;
 }

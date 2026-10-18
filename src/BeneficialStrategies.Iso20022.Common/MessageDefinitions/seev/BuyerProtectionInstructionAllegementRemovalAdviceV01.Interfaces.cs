@@ -8,11 +8,17 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record BuyerProtectionInstructionAllegementRemovalAdviceV01 : IBuyerProtectionInstructionAllegementRemovalAdviceV01
+public partial record BuyerProtectionInstructionAllegementRemovalAdviceV01
+    : IBuyerProtectionInstructionAllegementRemovalAdviceV01
 {
-    ICorporateActionGeneralInformation195 IBuyerProtectionInstructionAllegementRemovalAdviceV01.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IRelatedSettlementInstruction4? IBuyerProtectionInstructionAllegementRemovalAdviceV01.RelatedSettlementInstruction => RelatedSettlementInstruction;
-    ISecuritiesAccountIdentification1Choice? IBuyerProtectionInstructionAllegementRemovalAdviceV01.AccountIdentification => AccountIdentification;
-    ICorporateActionElection4? IBuyerProtectionInstructionAllegementRemovalAdviceV01.CorporateActionElection => CorporateActionElection;
-    IEnumerable<ISupplementaryData1> IBuyerProtectionInstructionAllegementRemovalAdviceV01.SupplementaryData => SupplementaryData;
+    ICorporateActionGeneralInformation195 IBuyerProtectionInstructionAllegementRemovalAdviceV01.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IRelatedSettlementInstruction4? IBuyerProtectionInstructionAllegementRemovalAdviceV01.RelatedSettlementInstruction =>
+        RelatedSettlementInstruction;
+    ISecuritiesAccountIdentification1Choice? IBuyerProtectionInstructionAllegementRemovalAdviceV01.AccountIdentification =>
+        AccountIdentification;
+    ICorporateActionElection4? IBuyerProtectionInstructionAllegementRemovalAdviceV01.CorporateActionElection =>
+        CorporateActionElection;
+    IEnumerable<ISupplementaryData1> IBuyerProtectionInstructionAllegementRemovalAdviceV01.SupplementaryData =>
+        SupplementaryData;
 }

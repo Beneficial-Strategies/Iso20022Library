@@ -8,8 +8,11 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record SecuritiesSettlementTransactionQueryV01 : ISecuritiesSettlementTransactionQueryV01
+public partial record SecuritiesSettlementTransactionQueryV01
+    : ISecuritiesSettlementTransactionQueryV01
 {
-    ISettlementInstructionQueryDefinition4 ISecuritiesSettlementTransactionQueryV01.QueryDefinition => QueryDefinition;
-    IEnumerable<ISupplementaryData1> ISecuritiesSettlementTransactionQueryV01.SupplementaryData => SupplementaryData;
+    ISettlementInstructionQueryDefinition4 ISecuritiesSettlementTransactionQueryV01.QueryDefinition =>
+        QueryDefinition;
+    IEnumerable<ISupplementaryData1> ISecuritiesSettlementTransactionQueryV01.SupplementaryData =>
+        SupplementaryData;
 }

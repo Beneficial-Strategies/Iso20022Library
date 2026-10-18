@@ -8,12 +8,19 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record CorporateActionEventProcessingStatusAdviceV05 : ICorporateActionEventProcessingStatusAdviceV05
+public partial record CorporateActionEventProcessingStatusAdviceV05
+    : ICorporateActionEventProcessingStatusAdviceV05
 {
-    IDocumentIdentification9? ICorporateActionEventProcessingStatusAdviceV05.NotificationIdentification => NotificationIdentification;
-    IEnumerable<IDocumentIdentification33> ICorporateActionEventProcessingStatusAdviceV05.OtherDocumentIdentification => OtherDocumentIdentification;
-    ICorporateActionGeneralInformation91 ICorporateActionEventProcessingStatusAdviceV05.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IEnumerable<IEventProcessingStatus3Choice> ICorporateActionEventProcessingStatusAdviceV05.EventProcessingStatus => EventProcessingStatus;
-    ICorporateActionNarrative10? ICorporateActionEventProcessingStatusAdviceV05.AdditionalInformation => AdditionalInformation;
-    IEnumerable<ISupplementaryData1> ICorporateActionEventProcessingStatusAdviceV05.SupplementaryData => SupplementaryData;
+    IDocumentIdentification9? ICorporateActionEventProcessingStatusAdviceV05.NotificationIdentification =>
+        NotificationIdentification;
+    IEnumerable<IDocumentIdentification33> ICorporateActionEventProcessingStatusAdviceV05.OtherDocumentIdentification =>
+        OtherDocumentIdentification;
+    ICorporateActionGeneralInformation91 ICorporateActionEventProcessingStatusAdviceV05.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IEnumerable<IEventProcessingStatus3Choice> ICorporateActionEventProcessingStatusAdviceV05.EventProcessingStatus =>
+        EventProcessingStatus;
+    ICorporateActionNarrative10? ICorporateActionEventProcessingStatusAdviceV05.AdditionalInformation =>
+        AdditionalInformation;
+    IEnumerable<ISupplementaryData1> ICorporateActionEventProcessingStatusAdviceV05.SupplementaryData =>
+        SupplementaryData;
 }

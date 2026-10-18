@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.semt;
 
 public partial record IntraPositionMovementQueryV01 : IIntraPositionMovementQueryV01
 {
-    IIntraPositionQueryDefinition8 IIntraPositionMovementQueryV01.QueryDefinition => QueryDefinition;
-    IEnumerable<ISupplementaryData1> IIntraPositionMovementQueryV01.SupplementaryData => SupplementaryData;
+    IIntraPositionQueryDefinition8 IIntraPositionMovementQueryV01.QueryDefinition =>
+        QueryDefinition;
+    IEnumerable<ISupplementaryData1> IIntraPositionMovementQueryV01.SupplementaryData =>
+        SupplementaryData;
 }

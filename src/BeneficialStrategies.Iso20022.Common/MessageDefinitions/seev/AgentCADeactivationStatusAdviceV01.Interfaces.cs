@@ -11,9 +11,14 @@ namespace BeneficialStrategies.Iso20022.seev;
 public partial record AgentCADeactivationStatusAdviceV01 : IAgentCADeactivationStatusAdviceV01
 {
     IDocumentIdentification8 IAgentCADeactivationStatusAdviceV01.Identification => Identification;
-    IDocumentIdentification8 IAgentCADeactivationStatusAdviceV01.AgentCADeactivationInstructionIdentification => AgentCADeactivationInstructionIdentification;
-    IDocumentIdentification8 IAgentCADeactivationStatusAdviceV01.AgentCADeactivationCancellationRequestIdentification => AgentCADeactivationCancellationRequestIdentification;
-    ICorporateActionInformation1 IAgentCADeactivationStatusAdviceV01.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IEnumerable<ICorporateActionDeactivationInstructionStatus1> IAgentCADeactivationStatusAdviceV01.DeactivationInstructionStatus => DeactivationInstructionStatus;
-    ICorporateActionDeactivationCancellationStatus1Choice IAgentCADeactivationStatusAdviceV01.DeactivationCancellationRequestStatus => DeactivationCancellationRequestStatus;
+    IDocumentIdentification8 IAgentCADeactivationStatusAdviceV01.AgentCADeactivationInstructionIdentification =>
+        AgentCADeactivationInstructionIdentification;
+    IDocumentIdentification8 IAgentCADeactivationStatusAdviceV01.AgentCADeactivationCancellationRequestIdentification =>
+        AgentCADeactivationCancellationRequestIdentification;
+    ICorporateActionInformation1 IAgentCADeactivationStatusAdviceV01.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IEnumerable<ICorporateActionDeactivationInstructionStatus1> IAgentCADeactivationStatusAdviceV01.DeactivationInstructionStatus =>
+        DeactivationInstructionStatus;
+    ICorporateActionDeactivationCancellationStatus1Choice IAgentCADeactivationStatusAdviceV01.DeactivationCancellationRequestStatus =>
+        DeactivationCancellationRequestStatus;
 }

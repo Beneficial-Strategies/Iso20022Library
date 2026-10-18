@@ -10,7 +10,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record AggregateHoldingBalance1 : IAggregateHoldingBalance1
 {
-    ISecurityIdentification19 IAggregateHoldingBalance1.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IEnumerable<IFinancialInstrumentAggregateBalance1> IAggregateHoldingBalance1.BalanceForFinancialInstrument => BalanceForFinancialInstrument;
-    IEnumerable<ISupplementaryData1> IAggregateHoldingBalance1.SupplementaryData => SupplementaryData;
+    ISecurityIdentification19 IAggregateHoldingBalance1.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IEnumerable<IFinancialInstrumentAggregateBalance1> IAggregateHoldingBalance1.BalanceForFinancialInstrument =>
+        BalanceForFinancialInstrument;
+    IEnumerable<ISupplementaryData1> IAggregateHoldingBalance1.SupplementaryData =>
+        SupplementaryData;
 }

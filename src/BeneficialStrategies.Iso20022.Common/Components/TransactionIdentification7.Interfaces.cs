@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record TransactionIdentification7 : ITransactionIdentification7
-{
-}
+public partial record TransactionIdentification7 : ITransactionIdentification7 { }

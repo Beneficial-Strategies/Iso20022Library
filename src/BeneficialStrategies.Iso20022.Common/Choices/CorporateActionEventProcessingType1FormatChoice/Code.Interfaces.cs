@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventProcessingType1FormatChoice;
 
-public partial record Code : ICode
-{
-}
+public partial record Code : ICode { }

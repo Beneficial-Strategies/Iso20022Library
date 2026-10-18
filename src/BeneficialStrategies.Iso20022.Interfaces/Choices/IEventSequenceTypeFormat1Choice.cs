@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code and proprietary code to specify the type of event in a series of predefined or planned events.
 /// </summary>
 [IsoId("_jkicELXIEeiTob_PrFFUxA")]
-public interface IEventSequenceTypeFormat1Choice : IIsoChoice
-{
-}
+public interface IEventSequenceTypeFormat1Choice : IIsoChoice { }

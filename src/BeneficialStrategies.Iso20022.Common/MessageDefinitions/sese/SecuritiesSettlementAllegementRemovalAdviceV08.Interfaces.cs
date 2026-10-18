@@ -8,12 +8,19 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesSettlementAllegementRemovalAdviceV08 : ISecuritiesSettlementAllegementRemovalAdviceV08
+public partial record SecuritiesSettlementAllegementRemovalAdviceV08
+    : ISecuritiesSettlementAllegementRemovalAdviceV08
 {
-    ISettlementTypeAndIdentification18 ISecuritiesSettlementAllegementRemovalAdviceV08.AccountServicerTransactionIdentification => AccountServicerTransactionIdentification;
-    IPartyIdentification144? ISecuritiesSettlementAllegementRemovalAdviceV08.AccountOwner => AccountOwner;
-    ISecuritiesAccount19? ISecuritiesSettlementAllegementRemovalAdviceV08.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet3? ISecuritiesSettlementAllegementRemovalAdviceV08.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
-    ITransactionDetails179? ISecuritiesSettlementAllegementRemovalAdviceV08.TransactionDetails => TransactionDetails;
-    IEnumerable<ISupplementaryData1> ISecuritiesSettlementAllegementRemovalAdviceV08.SupplementaryData => SupplementaryData;
+    ISettlementTypeAndIdentification18 ISecuritiesSettlementAllegementRemovalAdviceV08.AccountServicerTransactionIdentification =>
+        AccountServicerTransactionIdentification;
+    IPartyIdentification144? ISecuritiesSettlementAllegementRemovalAdviceV08.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount19? ISecuritiesSettlementAllegementRemovalAdviceV08.SafekeepingAccount =>
+        SafekeepingAccount;
+    IBlockChainAddressWallet3? ISecuritiesSettlementAllegementRemovalAdviceV08.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
+    ITransactionDetails179? ISecuritiesSettlementAllegementRemovalAdviceV08.TransactionDetails =>
+        TransactionDetails;
+    IEnumerable<ISupplementaryData1> ISecuritiesSettlementAllegementRemovalAdviceV08.SupplementaryData =>
+        SupplementaryData;
 }

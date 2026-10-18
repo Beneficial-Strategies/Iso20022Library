@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.CurrencyToBuyOrSell1Choice;
 
-public partial record CurrencyToSell : ICurrencyToSell
-{
-}
+public partial record CurrencyToSell : ICurrencyToSell { }

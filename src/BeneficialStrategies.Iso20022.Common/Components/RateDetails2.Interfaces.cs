@@ -13,8 +13,10 @@ public partial record RateDetails2 : IRateDetails2
     IRateAndAmountFormat5Choice? IRateDetails2.AdditionalTax => AdditionalTax;
     IRateAndAmountFormat5Choice? IRateDetails2.ChargesFees => ChargesFees;
     IRateAndAmountFormat5Choice? IRateDetails2.FullyFrankedRate => FullyFrankedRate;
-    IEnumerable<IGrossDividendRateFormat2Choice> IRateDetails2.GrossDividendRate => GrossDividendRate;
-    IEnumerable<IInterestRateUsedForPaymentFormat2Choice> IRateDetails2.InterestRateUsedForPayment => InterestRateUsedForPayment;
+    IEnumerable<IGrossDividendRateFormat2Choice> IRateDetails2.GrossDividendRate =>
+        GrossDividendRate;
+    IEnumerable<IInterestRateUsedForPaymentFormat2Choice> IRateDetails2.InterestRateUsedForPayment =>
+        InterestRateUsedForPayment;
     IEnumerable<INetDividendRateFormat2Choice> IRateDetails2.NetDividendRate => NetDividendRate;
     IRateAndAmountFormat5Choice? IRateDetails2.NonResidentRate => NonResidentRate;
     IEnumerable<ITaxCreditRateFormat2Choice> IRateDetails2.TaxCreditRate => TaxCreditRate;

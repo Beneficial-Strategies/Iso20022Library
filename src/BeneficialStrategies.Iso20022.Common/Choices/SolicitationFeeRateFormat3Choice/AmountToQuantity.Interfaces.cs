@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.SolicitationFeeRateFormat3Choice;
 
-public partial record AmountToQuantity : IAmountToQuantity
-{
-}
+public partial record AmountToQuantity : IAmountToQuantity { }

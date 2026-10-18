@@ -8,23 +8,38 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesSettlementTransactionInstructionV09 : ISecuritiesSettlementTransactionInstructionV09
+public partial record SecuritiesSettlementTransactionInstructionV09
+    : ISecuritiesSettlementTransactionInstructionV09
 {
-    ISettlementTypeAndAdditionalParameters19 ISecuritiesSettlementTransactionInstructionV09.SettlementTypeAndAdditionalParameters => SettlementTypeAndAdditionalParameters;
-    INumberCount1Choice? ISecuritiesSettlementTransactionInstructionV09.NumberCounts => NumberCounts;
+    ISettlementTypeAndAdditionalParameters19 ISecuritiesSettlementTransactionInstructionV09.SettlementTypeAndAdditionalParameters =>
+        SettlementTypeAndAdditionalParameters;
+    INumberCount1Choice? ISecuritiesSettlementTransactionInstructionV09.NumberCounts =>
+        NumberCounts;
     IEnumerable<ILinkages54> ISecuritiesSettlementTransactionInstructionV09.Linkages => Linkages;
-    ISecuritiesTradeDetails97 ISecuritiesSettlementTransactionInstructionV09.TradeDetails => TradeDetails;
-    ISecurityIdentification19 ISecuritiesSettlementTransactionInstructionV09.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentAttributes91? ISecuritiesSettlementTransactionInstructionV09.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
-    IQuantityAndAccount79 ISecuritiesSettlementTransactionInstructionV09.QuantityAndAccountDetails => QuantityAndAccountDetails;
-    ISettlementDetails164 ISecuritiesSettlementTransactionInstructionV09.SettlementParameters => SettlementParameters;
-    IStandingSettlementInstruction16? ISecuritiesSettlementTransactionInstructionV09.StandingSettlementInstructionDetails => StandingSettlementInstructionDetails;
-    ISettlementParties76? ISecuritiesSettlementTransactionInstructionV09.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties76? ISecuritiesSettlementTransactionInstructionV09.ReceivingSettlementParties => ReceivingSettlementParties;
+    ISecuritiesTradeDetails97 ISecuritiesSettlementTransactionInstructionV09.TradeDetails =>
+        TradeDetails;
+    ISecurityIdentification19 ISecuritiesSettlementTransactionInstructionV09.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentAttributes91? ISecuritiesSettlementTransactionInstructionV09.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
+    IQuantityAndAccount79 ISecuritiesSettlementTransactionInstructionV09.QuantityAndAccountDetails =>
+        QuantityAndAccountDetails;
+    ISettlementDetails164 ISecuritiesSettlementTransactionInstructionV09.SettlementParameters =>
+        SettlementParameters;
+    IStandingSettlementInstruction16? ISecuritiesSettlementTransactionInstructionV09.StandingSettlementInstructionDetails =>
+        StandingSettlementInstructionDetails;
+    ISettlementParties76? ISecuritiesSettlementTransactionInstructionV09.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties76? ISecuritiesSettlementTransactionInstructionV09.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
     ICashParties36? ISecuritiesSettlementTransactionInstructionV09.CashParties => CashParties;
-    IAmountAndDirection94? ISecuritiesSettlementTransactionInstructionV09.SettlementAmount => SettlementAmount;
+    IAmountAndDirection94? ISecuritiesSettlementTransactionInstructionV09.SettlementAmount =>
+        SettlementAmount;
     IOtherAmounts39? ISecuritiesSettlementTransactionInstructionV09.OtherAmounts => OtherAmounts;
-    IOtherParties33? ISecuritiesSettlementTransactionInstructionV09.OtherBusinessParties => OtherBusinessParties;
-    IRegistrationParameters6? ISecuritiesSettlementTransactionInstructionV09.AdditionalPhysicalOrRegistrationDetails => AdditionalPhysicalOrRegistrationDetails;
-    IEnumerable<ISupplementaryData1> ISecuritiesSettlementTransactionInstructionV09.SupplementaryData => SupplementaryData;
+    IOtherParties33? ISecuritiesSettlementTransactionInstructionV09.OtherBusinessParties =>
+        OtherBusinessParties;
+    IRegistrationParameters6? ISecuritiesSettlementTransactionInstructionV09.AdditionalPhysicalOrRegistrationDetails =>
+        AdditionalPhysicalOrRegistrationDetails;
+    IEnumerable<ISupplementaryData1> ISecuritiesSettlementTransactionInstructionV09.SupplementaryData =>
+        SupplementaryData;
 }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the trade date.
 /// </summary>
 [IsoId("_Qvaowdp-Ed-ak6NoX_4Aeg_-681720433")]
-public interface ITradeDate1Choice : IIsoChoice
-{
-}
+public interface ITradeDate1Choice : IIsoChoice { }

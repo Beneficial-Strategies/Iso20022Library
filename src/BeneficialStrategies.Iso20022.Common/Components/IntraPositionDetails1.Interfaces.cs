@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record IntraPositionDetails1 : IIntraPositionDetails1
 {
     IPriorityNumeric1Choice? IIntraPositionDetails1.Priority => Priority;
-    IFinancialInstrumentQuantity1Choice IIntraPositionDetails1.SettlementQuantity => SettlementQuantity;
+    IFinancialInstrumentQuantity1Choice IIntraPositionDetails1.SettlementQuantity =>
+        SettlementQuantity;
     IDateAndDateTimeChoice IIntraPositionDetails1.SettlementDate => SettlementDate;
     ISecuritiesBalanceType2Choice IIntraPositionDetails1.BalanceFrom => BalanceFrom;
     ISecuritiesBalanceType2Choice IIntraPositionDetails1.BalanceTo => BalanceTo;

@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.References43Choice;
 /// Unambiguous identification of the confirmation to be cancelled.
 /// </summary>
 [IsoId("_5pbMZzqnEeWyoP0PbocV1Q")]
-public interface ISecuritiesSettlementTransactionConfirmationIdentification : IReferences43Choice, IIsoChoiceVariant
+public interface ISecuritiesSettlementTransactionConfirmationIdentification
+    : IReferences43Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Provides unambiguous transaction identification information.

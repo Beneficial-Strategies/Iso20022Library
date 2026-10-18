@@ -10,7 +10,10 @@ namespace BeneficialStrategies.Iso20022.seev;
 
 public partial record AgentCADistributionBreakdownAdviceV01 : IAgentCADistributionBreakdownAdviceV01
 {
-    IDocumentIdentification8 IAgentCADistributionBreakdownAdviceV01.Identification => Identification;
-    ICorporateActionInformation1 IAgentCADistributionBreakdownAdviceV01.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IEntitlementAdvice1 IAgentCADistributionBreakdownAdviceV01.CorporateActionDistributionDetails => CorporateActionDistributionDetails;
+    IDocumentIdentification8 IAgentCADistributionBreakdownAdviceV01.Identification =>
+        Identification;
+    ICorporateActionInformation1 IAgentCADistributionBreakdownAdviceV01.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IEntitlementAdvice1 IAgentCADistributionBreakdownAdviceV01.CorporateActionDistributionDetails =>
+        CorporateActionDistributionDetails;
 }

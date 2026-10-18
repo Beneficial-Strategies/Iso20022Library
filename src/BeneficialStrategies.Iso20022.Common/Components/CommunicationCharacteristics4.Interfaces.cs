@@ -12,5 +12,6 @@ public partial record CommunicationCharacteristics4 : ICommunicationCharacterist
 {
     IEnumerable<PartyType7Code> ICommunicationCharacteristics4.RemoteParty => RemoteParty;
     INetworkParameters5? ICommunicationCharacteristics4.Parameters => Parameters;
-    IPhysicalInterfaceParameter1? ICommunicationCharacteristics4.PhysicalInterface => PhysicalInterface;
+    IPhysicalInterfaceParameter1? ICommunicationCharacteristics4.PhysicalInterface =>
+        PhysicalInterface;
 }

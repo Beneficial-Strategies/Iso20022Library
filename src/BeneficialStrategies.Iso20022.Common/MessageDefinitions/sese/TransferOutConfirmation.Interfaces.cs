@@ -14,7 +14,8 @@ public partial record TransferOutConfirmation : ITransferOutConfirmation
     IAdditionalReference2? ITransferOutConfirmation.PoolReference => PoolReference;
     IAdditionalReference2? ITransferOutConfirmation.PreviousReference => PreviousReference;
     ITransfer2 ITransferOutConfirmation.TransferDetails => TransferDetails;
-    IFinancialInstrument3 ITransferOutConfirmation.FinancialInstrumentDetails => FinancialInstrumentDetails;
+    IFinancialInstrument3 ITransferOutConfirmation.FinancialInstrumentDetails =>
+        FinancialInstrumentDetails;
     IInvestmentAccount10 ITransferOutConfirmation.AccountDetails => AccountDetails;
     IReceiveInformation2 ITransferOutConfirmation.SettlementDetails => SettlementDetails;
     IEnumerable<IExtension1> ITransferOutConfirmation.Extension => Extension;

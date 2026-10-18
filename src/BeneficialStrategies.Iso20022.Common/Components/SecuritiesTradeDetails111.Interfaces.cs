@@ -13,15 +13,20 @@ public partial record SecuritiesTradeDetails111 : ISecuritiesTradeDetails111
     IPortfolioTransferStatus2Choice? ISecuritiesTradeDetails111.Status => Status;
     ITradeDate8Choice? ISecuritiesTradeDetails111.TradeDate => TradeDate;
     ISettlementDate17Choice ISecuritiesTradeDetails111.SettlementDate => SettlementDate;
-    ISecurityIdentification19 ISecuritiesTradeDetails111.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentAttributes91? ISecuritiesTradeDetails111.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
+    ISecurityIdentification19 ISecuritiesTradeDetails111.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentAttributes91? ISecuritiesTradeDetails111.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
     IEnumerable<IReporting7Choice> ISecuritiesTradeDetails111.Reporting => Reporting;
     IQuantity14 ISecuritiesTradeDetails111.QuantityDetails => QuantityDetails;
     ISettlementDetails100? ISecuritiesTradeDetails111.SettlementParameters => SettlementParameters;
-    ISettlementParties93? ISecuritiesTradeDetails111.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties93? ISecuritiesTradeDetails111.ReceivingSettlementParties => ReceivingSettlementParties;
+    ISettlementParties93? ISecuritiesTradeDetails111.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties93? ISecuritiesTradeDetails111.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
     IAmountAndDirection52? ISecuritiesTradeDetails111.SettlementAmount => SettlementAmount;
     IOtherAmounts29? ISecuritiesTradeDetails111.OtherAmounts => OtherAmounts;
     IOtherParties39? ISecuritiesTradeDetails111.OtherBusinessParties => OtherBusinessParties;
-    IEnumerable<ISupplementaryData1> ISecuritiesTradeDetails111.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> ISecuritiesTradeDetails111.SupplementaryData =>
+        SupplementaryData;
 }

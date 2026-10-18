@@ -8,14 +8,21 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record SecuritiesTransactionPostingReport002V12 : ISecuritiesTransactionPostingReport002V12
+public partial record SecuritiesTransactionPostingReport002V12
+    : ISecuritiesTransactionPostingReport002V12
 {
     IPagination1 ISecuritiesTransactionPostingReport002V12.Pagination => Pagination;
-    IStatement82 ISecuritiesTransactionPostingReport002V12.StatementGeneralDetails => StatementGeneralDetails;
+    IStatement82 ISecuritiesTransactionPostingReport002V12.StatementGeneralDetails =>
+        StatementGeneralDetails;
     IPartyIdentification156? ISecuritiesTransactionPostingReport002V12.AccountOwner => AccountOwner;
-    ISecuritiesAccount40? ISecuritiesTransactionPostingReport002V12.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet8? ISecuritiesTransactionPostingReport002V12.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
-    IEnumerable<IIntermediary45> ISecuritiesTransactionPostingReport002V12.IntermediaryInformation => IntermediaryInformation;
-    IEnumerable<IFinancialInstrumentDetails43> ISecuritiesTransactionPostingReport002V12.FinancialInstrumentDetails => FinancialInstrumentDetails;
-    IEnumerable<ISubAccountIdentification70> ISecuritiesTransactionPostingReport002V12.SubAccountDetails => SubAccountDetails;
+    ISecuritiesAccount40? ISecuritiesTransactionPostingReport002V12.SafekeepingAccount =>
+        SafekeepingAccount;
+    IBlockChainAddressWallet8? ISecuritiesTransactionPostingReport002V12.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
+    IEnumerable<IIntermediary45> ISecuritiesTransactionPostingReport002V12.IntermediaryInformation =>
+        IntermediaryInformation;
+    IEnumerable<IFinancialInstrumentDetails43> ISecuritiesTransactionPostingReport002V12.FinancialInstrumentDetails =>
+        FinancialInstrumentDetails;
+    IEnumerable<ISubAccountIdentification70> ISecuritiesTransactionPostingReport002V12.SubAccountDetails =>
+        SubAccountDetails;
 }

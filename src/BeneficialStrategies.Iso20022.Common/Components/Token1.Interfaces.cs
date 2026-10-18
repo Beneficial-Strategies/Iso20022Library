@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record Token1 : IToken1
-{
-}
+public partial record Token1 : IToken1 { }

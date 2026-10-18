@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.CurrentYearType1Choice;
 
-public partial record ExtendedCurrentYearType : IExtendedCurrentYearType
-{
-}
+public partial record ExtendedCurrentYearType : IExtendedCurrentYearType { }

@@ -10,17 +10,27 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record AggregateBalancePerSafekeepingPlace25 : IAggregateBalancePerSafekeepingPlace25
 {
-    ISafekeepingPlaceFormat3Choice IAggregateBalancePerSafekeepingPlace25.SafekeepingPlace => SafekeepingPlace;
-    IMarketIdentification3Choice? IAggregateBalancePerSafekeepingPlace25.PlaceOfListing => PlaceOfListing;
+    ISafekeepingPlaceFormat3Choice IAggregateBalancePerSafekeepingPlace25.SafekeepingPlace =>
+        SafekeepingPlace;
+    IMarketIdentification3Choice? IAggregateBalancePerSafekeepingPlace25.PlaceOfListing =>
+        PlaceOfListing;
     IPledgeeFormat1Choice? IAggregateBalancePerSafekeepingPlace25.Pledgee => Pledgee;
     IBalance1 IAggregateBalancePerSafekeepingPlace25.AggregateBalance => AggregateBalance;
-    IEnumerable<IPriceInformation5> IAggregateBalancePerSafekeepingPlace25.PriceDetails => PriceDetails;
-    IEnumerable<IForeignExchangeTerms14> IAggregateBalancePerSafekeepingPlace25.ForeignExchangeDetails => ForeignExchangeDetails;
-    IBalanceAmounts1 IAggregateBalancePerSafekeepingPlace25.AccountBaseCurrencyAmounts => AccountBaseCurrencyAmounts;
-    IBalanceAmounts1? IAggregateBalancePerSafekeepingPlace25.InstrumentCurrencyAmounts => InstrumentCurrencyAmounts;
-    IBalanceAmounts1? IAggregateBalancePerSafekeepingPlace25.AlternateReportingCurrencyAmounts => AlternateReportingCurrencyAmounts;
-    IEnumerable<IQuantityBreakdown24> IAggregateBalancePerSafekeepingPlace25.QuantityBreakdown => QuantityBreakdown;
+    IEnumerable<IPriceInformation5> IAggregateBalancePerSafekeepingPlace25.PriceDetails =>
+        PriceDetails;
+    IEnumerable<IForeignExchangeTerms14> IAggregateBalancePerSafekeepingPlace25.ForeignExchangeDetails =>
+        ForeignExchangeDetails;
+    IBalanceAmounts1 IAggregateBalancePerSafekeepingPlace25.AccountBaseCurrencyAmounts =>
+        AccountBaseCurrencyAmounts;
+    IBalanceAmounts1? IAggregateBalancePerSafekeepingPlace25.InstrumentCurrencyAmounts =>
+        InstrumentCurrencyAmounts;
+    IBalanceAmounts1? IAggregateBalancePerSafekeepingPlace25.AlternateReportingCurrencyAmounts =>
+        AlternateReportingCurrencyAmounts;
+    IEnumerable<IQuantityBreakdown24> IAggregateBalancePerSafekeepingPlace25.QuantityBreakdown =>
+        QuantityBreakdown;
     IExposureType12Choice? IAggregateBalancePerSafekeepingPlace25.ExposureType => ExposureType;
-    IEnumerable<ISubBalanceInformation6> IAggregateBalancePerSafekeepingPlace25.BalanceBreakdown => BalanceBreakdown;
-    IEnumerable<IAdditionalBalanceInformation6> IAggregateBalancePerSafekeepingPlace25.AdditionalBalanceBreakdown => AdditionalBalanceBreakdown;
+    IEnumerable<ISubBalanceInformation6> IAggregateBalancePerSafekeepingPlace25.BalanceBreakdown =>
+        BalanceBreakdown;
+    IEnumerable<IAdditionalBalanceInformation6> IAggregateBalancePerSafekeepingPlace25.AdditionalBalanceBreakdown =>
+        AdditionalBalanceBreakdown;
 }

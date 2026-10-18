@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the processing position.
 /// </summary>
 [IsoId("_QtevGtp-Ed-ak6NoX_4Aeg_-730269459")]
-public interface IProcessingPosition2Choice : IIsoChoice
-{
-}
+public interface IProcessingPosition2Choice : IIsoChoice { }

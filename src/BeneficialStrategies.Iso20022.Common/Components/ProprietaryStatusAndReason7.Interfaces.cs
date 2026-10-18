@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record ProprietaryStatusAndReason7 : IProprietaryStatusAndReason7
 {
     IGenericIdentification47 IProprietaryStatusAndReason7.ProprietaryStatus => ProprietaryStatus;
-    IEnumerable<IProprietaryReason5> IProprietaryStatusAndReason7.ProprietaryReason => ProprietaryReason;
+    IEnumerable<IProprietaryReason5> IProprietaryStatusAndReason7.ProprietaryReason =>
+        ProprietaryReason;
 }

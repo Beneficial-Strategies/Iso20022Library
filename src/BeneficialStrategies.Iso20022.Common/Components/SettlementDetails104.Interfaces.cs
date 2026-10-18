@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SettlementDetails104 : ISettlementDetails104
 {
     IPriorityNumeric5Choice? ISettlementDetails104.Priority => Priority;
-    IEnumerable<ISettlementTransactionCondition22Choice> ISettlementDetails104.SettlementTransactionCondition => SettlementTransactionCondition;
+    IEnumerable<ISettlementTransactionCondition22Choice> ISettlementDetails104.SettlementTransactionCondition =>
+        SettlementTransactionCondition;
     ISettlingCapacity8Choice? ISettlementDetails104.SettlingCapacity => SettlingCapacity;
     IGenericIdentification47? ISettlementDetails104.StampDutyTaxBasis => StampDutyTaxBasis;
     ISecuritiesRTGS5Choice? ISettlementDetails104.SecuritiesRTGS => SecuritiesRTGS;
@@ -21,7 +22,8 @@ public partial record SettlementDetails104 : ISettlementDetails104
     IMarketClientSide5Choice? ISettlementDetails104.MarketClientSide => MarketClientSide;
     IBlockTrade5Choice? ISettlementDetails104.BlockTrade => BlockTrade;
     IRestriction6Choice? ISettlementDetails104.LegalRestrictions => LegalRestrictions;
-    ISettlementSystemMethod5Choice? ISettlementDetails104.SettlementSystemMethod => SettlementSystemMethod;
+    ISettlementSystemMethod5Choice? ISettlementDetails104.SettlementSystemMethod =>
+        SettlementSystemMethod;
     INettingEligibility5Choice? ISettlementDetails104.NettingEligibility => NettingEligibility;
     ICentralCounterPartyEligibility5Choice? ISettlementDetails104.CCPEligibility => CCPEligibility;
     IAutomaticBorrowing8Choice? ISettlementDetails104.AutomaticBorrowing => AutomaticBorrowing;

@@ -11,12 +11,19 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record AggregateBalanceInformation3 : IAggregateBalanceInformation3
 {
     IBalanceQuantity1Choice IAggregateBalanceInformation3.AggregateQuantity => AggregateQuantity;
-    IEnumerable<ActiveOrHistoricCurrencyAndAmount> IAggregateBalanceInformation3.HoldingValue => HoldingValue;
-    ISafekeepingPlaceFormatChoice? IAggregateBalanceInformation3.SafekeepingPlace => SafekeepingPlace;
-    IFinancialInstrument13 IAggregateBalanceInformation3.FinancialInstrumentDetails => FinancialInstrumentDetails;
+    IEnumerable<ActiveOrHistoricCurrencyAndAmount> IAggregateBalanceInformation3.HoldingValue =>
+        HoldingValue;
+    ISafekeepingPlaceFormatChoice? IAggregateBalanceInformation3.SafekeepingPlace =>
+        SafekeepingPlace;
+    IFinancialInstrument13 IAggregateBalanceInformation3.FinancialInstrumentDetails =>
+        FinancialInstrumentDetails;
     IEnumerable<IPriceInformation2> IAggregateBalanceInformation3.PriceDetails => PriceDetails;
-    IForeignExchangeTerms6? IAggregateBalanceInformation3.ForeignExchangeDetails => ForeignExchangeDetails;
-    IEnumerable<ISubBalanceInformation2> IAggregateBalanceInformation3.BalanceBreakdownDetails => BalanceBreakdownDetails;
-    IEnumerable<IAdditionalBalanceInformation2> IAggregateBalanceInformation3.AdditionalBalanceBreakdownDetails => AdditionalBalanceBreakdownDetails;
-    IEnumerable<IAggregateBalancePerSafekeepingPlace4> IAggregateBalanceInformation3.BalanceAtSafekeepingPlace => BalanceAtSafekeepingPlace;
+    IForeignExchangeTerms6? IAggregateBalanceInformation3.ForeignExchangeDetails =>
+        ForeignExchangeDetails;
+    IEnumerable<ISubBalanceInformation2> IAggregateBalanceInformation3.BalanceBreakdownDetails =>
+        BalanceBreakdownDetails;
+    IEnumerable<IAdditionalBalanceInformation2> IAggregateBalanceInformation3.AdditionalBalanceBreakdownDetails =>
+        AdditionalBalanceBreakdownDetails;
+    IEnumerable<IAggregateBalancePerSafekeepingPlace4> IAggregateBalanceInformation3.BalanceAtSafekeepingPlace =>
+        BalanceAtSafekeepingPlace;
 }

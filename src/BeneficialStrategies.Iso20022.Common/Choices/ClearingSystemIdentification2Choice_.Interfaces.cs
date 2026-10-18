@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record ClearingSystemIdentification2Choice_ : IClearingSystemIdentification2Choice
-{
-}
+public abstract partial record ClearingSystemIdentification2Choice_
+    : IClearingSystemIdentification2Choice { }

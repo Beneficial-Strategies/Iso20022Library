@@ -11,8 +11,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SettlementDetails160 : ISettlementDetails160
 {
     IHoldIndicator7? ISettlementDetails160.HoldIndicator => HoldIndicator;
-    IEnumerable<ISettlementTransactionCondition28Choice> ISettlementDetails160.SettlementTransactionCondition => SettlementTransactionCondition;
-    ISecuritiesTransactionType42Choice ISettlementDetails160.SecuritiesTransactionType => SecuritiesTransactionType;
+    IEnumerable<ISettlementTransactionCondition28Choice> ISettlementDetails160.SettlementTransactionCondition =>
+        SettlementTransactionCondition;
+    ISecuritiesTransactionType42Choice ISettlementDetails160.SecuritiesTransactionType =>
+        SecuritiesTransactionType;
     ISettlingCapacity8Choice? ISettlementDetails160.SettlingCapacity => SettlingCapacity;
     IGenericIdentification47? ISettlementDetails160.StampDutyTaxBasis => StampDutyTaxBasis;
     ISecuritiesRTGS5Choice? ISettlementDetails160.SecuritiesRTGS => SecuritiesRTGS;
@@ -25,7 +27,8 @@ public partial record SettlementDetails160 : ISettlementDetails160
     IMarketClientSide7Choice? ISettlementDetails160.MarketClientSide => MarketClientSide;
     IBlockTrade5Choice? ISettlementDetails160.BlockTrade => BlockTrade;
     IRestriction6Choice? ISettlementDetails160.LegalRestrictions => LegalRestrictions;
-    ISettlementSystemMethod5Choice? ISettlementDetails160.SettlementSystemMethod => SettlementSystemMethod;
+    ISettlementSystemMethod5Choice? ISettlementDetails160.SettlementSystemMethod =>
+        SettlementSystemMethod;
     INettingEligibility5Choice? ISettlementDetails160.NettingEligibility => NettingEligibility;
     ICentralCounterPartyEligibility5Choice? ISettlementDetails160.CCPEligibility => CCPEligibility;
     ILetterOfGuarantee5Choice? ISettlementDetails160.LetterOfGuarantee => LetterOfGuarantee;

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a transfer type.
 /// </summary>
 [IsoId("_3NmKgaxWEemRcYBAkJyjkg")]
-public interface ITransferType2Choice : IIsoChoice
-{
-}
+public interface ITransferType2Choice : IIsoChoice { }

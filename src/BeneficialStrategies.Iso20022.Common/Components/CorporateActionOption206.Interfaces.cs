@@ -11,21 +11,29 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CorporateActionOption206 : ICorporateActionOption206
 {
     ICorporateActionOption46Choice ICorporateActionOption206.OptionType => OptionType;
-    IFractionDispositionType31Choice? ICorporateActionOption206.FractionDisposition => FractionDisposition;
+    IFractionDispositionType31Choice? ICorporateActionOption206.FractionDisposition =>
+        FractionDisposition;
     IEnumerable<IOfferTypeFormat13Choice> ICorporateActionOption206.OfferType => OfferType;
-    IEnumerable<IOptionFeaturesFormat26Choice> ICorporateActionOption206.OptionFeatures => OptionFeatures;
-    IOptionAvailabilityStatus4Choice? ICorporateActionOption206.OptionAvailabilityStatus => OptionAvailabilityStatus;
-    IEnumerable<IBeneficiaryCertificationType12Choice> ICorporateActionOption206.CertificationBreakdownType => CertificationBreakdownType;
+    IEnumerable<IOptionFeaturesFormat26Choice> ICorporateActionOption206.OptionFeatures =>
+        OptionFeatures;
+    IOptionAvailabilityStatus4Choice? ICorporateActionOption206.OptionAvailabilityStatus =>
+        OptionAvailabilityStatus;
+    IEnumerable<IBeneficiaryCertificationType12Choice> ICorporateActionOption206.CertificationBreakdownType =>
+        CertificationBreakdownType;
     IEnumerable<CountryCode> ICorporateActionOption206.NonDomicileCountry => NonDomicileCountry;
     IEnumerable<CountryCode> ICorporateActionOption206.ValidDomicileCountry => ValidDomicileCountry;
-    IDefaultProcessingOrStandingInstruction1Choice ICorporateActionOption206.DefaultProcessingOrStandingInstruction => DefaultProcessingOrStandingInstruction;
-    ISecurityIdentification20? ICorporateActionOption206.SecurityIdentification => SecurityIdentification;
+    IDefaultProcessingOrStandingInstruction1Choice ICorporateActionOption206.DefaultProcessingOrStandingInstruction =>
+        DefaultProcessingOrStandingInstruction;
+    ISecurityIdentification20? ICorporateActionOption206.SecurityIdentification =>
+        SecurityIdentification;
     ICorporateActionDate81? ICorporateActionOption206.DateDetails => DateDetails;
     ICorporateActionPeriod12? ICorporateActionOption206.PeriodDetails => PeriodDetails;
     ICorporateActionRate109? ICorporateActionOption206.RateAndAmountDetails => RateAndAmountDetails;
     ICorporateActionPrice69? ICorporateActionOption206.PriceDetails => PriceDetails;
     ISecuritiesOption84? ICorporateActionOption206.SecuritiesQuantity => SecuritiesQuantity;
-    IEnumerable<ISecuritiesOption85> ICorporateActionOption206.SecuritiesMovementDetails => SecuritiesMovementDetails;
+    IEnumerable<ISecuritiesOption85> ICorporateActionOption206.SecuritiesMovementDetails =>
+        SecuritiesMovementDetails;
     IEnumerable<ICashOption81> ICorporateActionOption206.CashMovementDetails => CashMovementDetails;
-    ICorporateActionNarrative36? ICorporateActionOption206.AdditionalInformation => AdditionalInformation;
+    ICorporateActionNarrative36? ICorporateActionOption206.AdditionalInformation =>
+        AdditionalInformation;
 }

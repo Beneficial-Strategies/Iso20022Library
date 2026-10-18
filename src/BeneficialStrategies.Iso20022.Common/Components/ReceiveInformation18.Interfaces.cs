@@ -12,12 +12,16 @@ public partial record ReceiveInformation18 : IReceiveInformation18
 {
     IPartyIdentification113? IReceiveInformation18.Transferee => Transferee;
     IAccount24? IReceiveInformation18.TransfereeRegisteredAccount => TransfereeRegisteredAccount;
-    IEnumerable<IIntermediary41> IReceiveInformation18.IntermediaryInformation => IntermediaryInformation;
-    IDateAndDateTime2Choice? IReceiveInformation18.EffectiveSettlementDate => EffectiveSettlementDate;
+    IEnumerable<IIntermediary41> IReceiveInformation18.IntermediaryInformation =>
+        IntermediaryInformation;
+    IDateAndDateTime2Choice? IReceiveInformation18.EffectiveSettlementDate =>
+        EffectiveSettlementDate;
     IEnumerable<IFees1> IReceiveInformation18.Fees => Fees;
     IEnumerable<ITax34> IReceiveInformation18.IndividualTax => IndividualTax;
-    IEnumerable<IForeignExchangeTerms33> IReceiveInformation18.ForeignExchangeDetails => ForeignExchangeDetails;
-    IReceivingPartiesAndAccount17? IReceiveInformation18.SettlementPartiesDetails => SettlementPartiesDetails;
+    IEnumerable<IForeignExchangeTerms33> IReceiveInformation18.ForeignExchangeDetails =>
+        ForeignExchangeDetails;
+    IReceivingPartiesAndAccount17? IReceiveInformation18.SettlementPartiesDetails =>
+        SettlementPartiesDetails;
     IDeliveryParameters4? IReceiveInformation18.PhysicalTransferDetails => PhysicalTransferDetails;
     IAdditionalReference8? IReceiveInformation18.ClientReference => ClientReference;
 }

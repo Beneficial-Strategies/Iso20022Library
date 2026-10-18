@@ -7,6 +7,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice between reason types for a transaction status.</summary>
 [IsoId("8a33d039-3d57-4ac9-831c-34e3c708a8c3")]
-public interface IReason21Choice : IIsoChoice
-{
-}
+public interface IReason21Choice : IIsoChoice { }

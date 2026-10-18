@@ -13,10 +13,13 @@ public partial record RateDetails11 : IRateDetails11
     IRateAndAmountFormat5Choice? IRateDetails11.AdditionalTax => AdditionalTax;
     IRateAndAmountFormat5Choice? IRateDetails11.ChargesFees => ChargesFees;
     IRateAndAmountFormat5Choice? IRateDetails11.FullyFrankedRate => FullyFrankedRate;
-    IEnumerable<IGrossDividendRateFormat8Choice> IRateDetails11.GrossDividendRate => GrossDividendRate;
-    IRateAndAmountFormat5Choice? IRateDetails11.EarlySolicitationFeeRate => EarlySolicitationFeeRate;
+    IEnumerable<IGrossDividendRateFormat8Choice> IRateDetails11.GrossDividendRate =>
+        GrossDividendRate;
+    IRateAndAmountFormat5Choice? IRateDetails11.EarlySolicitationFeeRate =>
+        EarlySolicitationFeeRate;
     IRateAndAmountFormat5Choice? IRateDetails11.ThirdPartyIncentiveRate => ThirdPartyIncentiveRate;
-    IEnumerable<IInterestRateUsedForPaymentFormat2Choice> IRateDetails11.InterestRateUsedForPayment => InterestRateUsedForPayment;
+    IEnumerable<IInterestRateUsedForPaymentFormat2Choice> IRateDetails11.InterestRateUsedForPayment =>
+        InterestRateUsedForPayment;
     IEnumerable<INetDividendRateFormat10Choice> IRateDetails11.NetDividendRate => NetDividendRate;
     IRateAndAmountFormat5Choice? IRateDetails11.NonResidentRate => NonResidentRate;
     IRateAndAmountFormat5Choice? IRateDetails11.SolicitationFeeRate => SolicitationFeeRate;

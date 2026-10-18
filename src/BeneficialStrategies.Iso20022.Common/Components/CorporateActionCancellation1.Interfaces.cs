@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionCancellation1 : ICorporateActionCancellation1
 {
-    ICorporateActionProcessingStatus1Choice ICorporateActionCancellation1.ProcessingStatus => ProcessingStatus;
+    ICorporateActionProcessingStatus1Choice ICorporateActionCancellation1.ProcessingStatus =>
+        ProcessingStatus;
 }

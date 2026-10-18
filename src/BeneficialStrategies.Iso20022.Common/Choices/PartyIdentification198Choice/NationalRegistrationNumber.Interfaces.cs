@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification198Choice;
 
-public partial record NationalRegistrationNumber : INationalRegistrationNumber
-{
-}
+public partial record NationalRegistrationNumber : INationalRegistrationNumber { }

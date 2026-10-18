@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormat53Choice;
 
-public partial record DigitalLedgerIdentification : IDigitalLedgerIdentification
-{
-}
+public partial record DigitalLedgerIdentification : IDigitalLedgerIdentification { }

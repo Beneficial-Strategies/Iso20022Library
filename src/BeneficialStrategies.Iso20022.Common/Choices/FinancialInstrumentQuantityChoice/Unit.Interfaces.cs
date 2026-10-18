@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantityChoice;
 
-public partial record Unit : IUnit
-{
-}
+public partial record Unit : IUnit { }

@@ -10,15 +10,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record EntitlementAssessment2 : IEntitlementAssessment2
 {
-    IDateFormat2Choice? IEntitlementAssessment2.SecuritiesBlockingDeadline => SecuritiesBlockingDeadline;
-    IDateFormat2Choice? IEntitlementAssessment2.SecuritiesBlockingSTPDeadline => SecuritiesBlockingSTPDeadline;
-    IDateFormat2Choice? IEntitlementAssessment2.SecuritiesBlockingMarketDeadline => SecuritiesBlockingMarketDeadline;
+    IDateFormat2Choice? IEntitlementAssessment2.SecuritiesBlockingDeadline =>
+        SecuritiesBlockingDeadline;
+    IDateFormat2Choice? IEntitlementAssessment2.SecuritiesBlockingSTPDeadline =>
+        SecuritiesBlockingSTPDeadline;
+    IDateFormat2Choice? IEntitlementAssessment2.SecuritiesBlockingMarketDeadline =>
+        SecuritiesBlockingMarketDeadline;
     IDateFormat3Choice? IEntitlementAssessment2.EntitlementFixingDate => EntitlementFixingDate;
-    IDateFormat2Choice? IEntitlementAssessment2.RegistrationSecuritiesDeadline => RegistrationSecuritiesDeadline;
-    IDateFormat2Choice? IEntitlementAssessment2.RegistrationSecuritiesSTPDeadline => RegistrationSecuritiesSTPDeadline;
-    IDateFormat2Choice? IEntitlementAssessment2.RegistrationSecuritiesMarketDeadline => RegistrationSecuritiesMarketDeadline;
-    IDateFormat2Choice? IEntitlementAssessment2.RegistrationParticipationDeadline => RegistrationParticipationDeadline;
-    IDateFormat2Choice? IEntitlementAssessment2.RegistrationParticipationSTPDeadline => RegistrationParticipationSTPDeadline;
-    IDateFormat2Choice? IEntitlementAssessment2.RegistrationParticipationMarketDeadline => RegistrationParticipationMarketDeadline;
+    IDateFormat2Choice? IEntitlementAssessment2.RegistrationSecuritiesDeadline =>
+        RegistrationSecuritiesDeadline;
+    IDateFormat2Choice? IEntitlementAssessment2.RegistrationSecuritiesSTPDeadline =>
+        RegistrationSecuritiesSTPDeadline;
+    IDateFormat2Choice? IEntitlementAssessment2.RegistrationSecuritiesMarketDeadline =>
+        RegistrationSecuritiesMarketDeadline;
+    IDateFormat2Choice? IEntitlementAssessment2.RegistrationParticipationDeadline =>
+        RegistrationParticipationDeadline;
+    IDateFormat2Choice? IEntitlementAssessment2.RegistrationParticipationSTPDeadline =>
+        RegistrationParticipationSTPDeadline;
+    IDateFormat2Choice? IEntitlementAssessment2.RegistrationParticipationMarketDeadline =>
+        RegistrationParticipationMarketDeadline;
     IEntitlement1Choice? IEntitlementAssessment2.Entitlement => Entitlement;
 }

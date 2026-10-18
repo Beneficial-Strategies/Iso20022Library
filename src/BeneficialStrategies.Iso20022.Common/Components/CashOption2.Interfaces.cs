@@ -16,6 +16,7 @@ public partial record CashOption2 : ICashOption2
     ICorporateActionAmounts2 ICashOption2.AmountDetails => AmountDetails;
     ICorporateActionDate7 ICashOption2.DateDetails => DateDetails;
     IForeignExchangeTerms11? ICashOption2.ForeignExchangeDetails => ForeignExchangeDetails;
-    IPriceFormat7Choice? ICashOption2.GenericCashPriceReceivedPerProduct => GenericCashPriceReceivedPerProduct;
+    IPriceFormat7Choice? ICashOption2.GenericCashPriceReceivedPerProduct =>
+        GenericCashPriceReceivedPerProduct;
     ITaxVoucher2? ICashOption2.TaxVoucherDetails => TaxVoucherDetails;
 }

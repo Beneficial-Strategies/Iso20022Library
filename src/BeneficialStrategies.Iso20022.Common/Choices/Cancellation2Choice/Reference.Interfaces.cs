@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.Cancellation2Choice;
 
-public partial record Reference : IReference
-{
-}
+public partial record Reference : IReference { }

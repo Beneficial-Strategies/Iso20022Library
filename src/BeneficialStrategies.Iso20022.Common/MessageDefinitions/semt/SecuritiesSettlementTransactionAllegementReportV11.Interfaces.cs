@@ -8,12 +8,18 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record SecuritiesSettlementTransactionAllegementReportV11 : ISecuritiesSettlementTransactionAllegementReportV11
+public partial record SecuritiesSettlementTransactionAllegementReportV11
+    : ISecuritiesSettlementTransactionAllegementReportV11
 {
     IPagination1 ISecuritiesSettlementTransactionAllegementReportV11.Pagination => Pagination;
-    IStatement63 ISecuritiesSettlementTransactionAllegementReportV11.StatementGeneralDetails => StatementGeneralDetails;
-    IPartyIdentification144? ISecuritiesSettlementTransactionAllegementReportV11.AccountOwner => AccountOwner;
-    ISecuritiesAccount19? ISecuritiesSettlementTransactionAllegementReportV11.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet3? ISecuritiesSettlementTransactionAllegementReportV11.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
-    IEnumerable<ISecuritiesTradeDetails141> ISecuritiesSettlementTransactionAllegementReportV11.AllegementDetails => AllegementDetails;
+    IStatement63 ISecuritiesSettlementTransactionAllegementReportV11.StatementGeneralDetails =>
+        StatementGeneralDetails;
+    IPartyIdentification144? ISecuritiesSettlementTransactionAllegementReportV11.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount19? ISecuritiesSettlementTransactionAllegementReportV11.SafekeepingAccount =>
+        SafekeepingAccount;
+    IBlockChainAddressWallet3? ISecuritiesSettlementTransactionAllegementReportV11.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
+    IEnumerable<ISecuritiesTradeDetails141> ISecuritiesSettlementTransactionAllegementReportV11.AllegementDetails =>
+        AllegementDetails;
 }

@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record SettlementTransactionCondition36Choice_ : ISettlementTransactionCondition36Choice
-{
-}
+public abstract partial record SettlementTransactionCondition36Choice_
+    : ISettlementTransactionCondition36Choice { }

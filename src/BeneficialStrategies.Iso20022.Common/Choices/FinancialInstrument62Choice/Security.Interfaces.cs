@@ -12,5 +12,6 @@ public partial record Security : ISecurity
 {
     ISecurityIdentification25Choice ISecurity.Identification => Identification;
     IClassificationType32Choice? ISecurity.ClassificationType => ClassificationType;
-    IEnumerable<IFinancialInstrumentIdentification4> ISecurity.AlternateSecurity => AlternateSecurity;
+    IEnumerable<IFinancialInstrumentIdentification4> ISecurity.AlternateSecurity =>
+        AlternateSecurity;
 }

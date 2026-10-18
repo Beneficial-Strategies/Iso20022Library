@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ReportGetTotalsResponse2 : IReportGetTotalsResponse2
 {
-    IEnumerable<ITransactionTotalsSet2> IReportGetTotalsResponse2.TransactionTotalsSet => TransactionTotalsSet;
+    IEnumerable<ITransactionTotalsSet2> IReportGetTotalsResponse2.TransactionTotalsSet =>
+        TransactionTotalsSet;
 }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.RequestShareHeldDate1Choice;
 
-public partial record DateCalculationMethod : IDateCalculationMethod
-{
-}
+public partial record DateCalculationMethod : IDateCalculationMethod { }

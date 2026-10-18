@@ -10,15 +10,25 @@ namespace BeneficialStrategies.Iso20022.semt;
 
 public partial record IntraPositionMovementConfirmationV01 : IIntraPositionMovementConfirmationV01
 {
-    IDocumentIdentification11 IIntraPositionMovementConfirmationV01.Identification => Identification;
-    IAdditionalParameters3? IIntraPositionMovementConfirmationV01.AdditionalParameters => AdditionalParameters;
-    IPartyIdentification13Choice? IIntraPositionMovementConfirmationV01.AccountOwner => AccountOwner;
-    ISecuritiesAccount13 IIntraPositionMovementConfirmationV01.SafekeepingAccount => SafekeepingAccount;
-    ISafekeepingPlaceFormat3Choice? IIntraPositionMovementConfirmationV01.SafekeepingPlace => SafekeepingPlace;
-    ISecurityIdentification11 IIntraPositionMovementConfirmationV01.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentAttributes4? IIntraPositionMovementConfirmationV01.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
-    IIntraPositionDetails2 IIntraPositionMovementConfirmationV01.IntraPositionDetails => IntraPositionDetails;
-    IPartyIdentification10Choice? IIntraPositionMovementConfirmationV01.MessageOriginator => MessageOriginator;
-    IPartyIdentification10Choice? IIntraPositionMovementConfirmationV01.MessageRecipient => MessageRecipient;
+    IDocumentIdentification11 IIntraPositionMovementConfirmationV01.Identification =>
+        Identification;
+    IAdditionalParameters3? IIntraPositionMovementConfirmationV01.AdditionalParameters =>
+        AdditionalParameters;
+    IPartyIdentification13Choice? IIntraPositionMovementConfirmationV01.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount13 IIntraPositionMovementConfirmationV01.SafekeepingAccount =>
+        SafekeepingAccount;
+    ISafekeepingPlaceFormat3Choice? IIntraPositionMovementConfirmationV01.SafekeepingPlace =>
+        SafekeepingPlace;
+    ISecurityIdentification11 IIntraPositionMovementConfirmationV01.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentAttributes4? IIntraPositionMovementConfirmationV01.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
+    IIntraPositionDetails2 IIntraPositionMovementConfirmationV01.IntraPositionDetails =>
+        IntraPositionDetails;
+    IPartyIdentification10Choice? IIntraPositionMovementConfirmationV01.MessageOriginator =>
+        MessageOriginator;
+    IPartyIdentification10Choice? IIntraPositionMovementConfirmationV01.MessageRecipient =>
+        MessageRecipient;
     IEnumerable<IExtension2> IIntraPositionMovementConfirmationV01.Extension => Extension;
 }

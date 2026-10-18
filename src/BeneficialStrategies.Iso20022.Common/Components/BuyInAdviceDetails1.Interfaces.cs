@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record BuyInAdviceDetails1 : IBuyInAdviceDetails1
 {
     IReferences23 IBuyInAdviceDetails1.Reference => Reference;
-    ISecurityIdentification19? IBuyInAdviceDetails1.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification19? IBuyInAdviceDetails1.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     IFinancialInstrumentQuantity1Choice? IBuyInAdviceDetails1.Quantity => Quantity;
     IRateAndAmountFormat39Choice? IBuyInAdviceDetails1.BuyInPrice => BuyInPrice;
     IAmountAndDirection102? IBuyInAdviceDetails1.CashCompensationAmount => CashCompensationAmount;

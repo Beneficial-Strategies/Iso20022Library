@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.DateTimeSearch2Choice;
 
-public partial record EqualDateTime : IEqualDateTime
-{
-}
+public partial record EqualDateTime : IEqualDateTime { }

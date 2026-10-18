@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record AdditionalBusinessProcessFormat12Choice_ : IAdditionalBusinessProcessFormat12Choice
-{
-}
+public abstract partial record AdditionalBusinessProcessFormat12Choice_
+    : IAdditionalBusinessProcessFormat12Choice { }

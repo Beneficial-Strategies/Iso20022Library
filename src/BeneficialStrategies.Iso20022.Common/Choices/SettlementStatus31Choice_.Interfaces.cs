@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record SettlementStatus31Choice_ : ISettlementStatus31Choice
-{
-}
+public abstract partial record SettlementStatus31Choice_ : ISettlementStatus31Choice { }

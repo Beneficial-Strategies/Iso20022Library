@@ -11,12 +11,18 @@ namespace BeneficialStrategies.Iso20022.semt;
 public partial record SecuritiesBalanceCustodyReportV09 : ISecuritiesBalanceCustodyReportV09
 {
     IPagination ISecuritiesBalanceCustodyReportV09.Pagination => Pagination;
-    IStatement45 ISecuritiesBalanceCustodyReportV09.StatementGeneralDetails => StatementGeneralDetails;
+    IStatement45 ISecuritiesBalanceCustodyReportV09.StatementGeneralDetails =>
+        StatementGeneralDetails;
     IPartyIdentification98? ISecuritiesBalanceCustodyReportV09.AccountOwner => AccountOwner;
     IPartyIdentification100? ISecuritiesBalanceCustodyReportV09.AccountServicer => AccountServicer;
-    ISecuritiesAccount26 ISecuritiesBalanceCustodyReportV09.SafekeepingAccount => SafekeepingAccount;
-    IEnumerable<IIntermediary32> ISecuritiesBalanceCustodyReportV09.IntermediaryInformation => IntermediaryInformation;
-    IEnumerable<IAggregateBalanceInformation30> ISecuritiesBalanceCustodyReportV09.BalanceForAccount => BalanceForAccount;
-    IEnumerable<ISubAccountIdentification42> ISecuritiesBalanceCustodyReportV09.SubAccountDetails => SubAccountDetails;
-    ITotalValueInPageAndStatement1? ISecuritiesBalanceCustodyReportV09.AccountBaseCurrencyTotalAmounts => AccountBaseCurrencyTotalAmounts;
+    ISecuritiesAccount26 ISecuritiesBalanceCustodyReportV09.SafekeepingAccount =>
+        SafekeepingAccount;
+    IEnumerable<IIntermediary32> ISecuritiesBalanceCustodyReportV09.IntermediaryInformation =>
+        IntermediaryInformation;
+    IEnumerable<IAggregateBalanceInformation30> ISecuritiesBalanceCustodyReportV09.BalanceForAccount =>
+        BalanceForAccount;
+    IEnumerable<ISubAccountIdentification42> ISecuritiesBalanceCustodyReportV09.SubAccountDetails =>
+        SubAccountDetails;
+    ITotalValueInPageAndStatement1? ISecuritiesBalanceCustodyReportV09.AccountBaseCurrencyTotalAmounts =>
+        AccountBaseCurrencyTotalAmounts;
 }

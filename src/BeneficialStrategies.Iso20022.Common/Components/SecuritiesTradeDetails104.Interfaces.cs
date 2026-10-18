@@ -10,14 +10,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecuritiesTradeDetails104 : ISecuritiesTradeDetails104
 {
-    IEnumerable<RestrictedFINXMax52Text> ISecuritiesTradeDetails104.TradeIdentification => TradeIdentification;
-    IEnumerable<RestrictedFINXMax16Text> ISecuritiesTradeDetails104.CollateralTransactionIdentification => CollateralTransactionIdentification;
-    IEnumerable<RestrictedFINXMax16Text> ISecuritiesTradeDetails104.AccountOwnerTransactionIdentification => AccountOwnerTransactionIdentification;
+    IEnumerable<RestrictedFINXMax52Text> ISecuritiesTradeDetails104.TradeIdentification =>
+        TradeIdentification;
+    IEnumerable<RestrictedFINXMax16Text> ISecuritiesTradeDetails104.CollateralTransactionIdentification =>
+        CollateralTransactionIdentification;
+    IEnumerable<RestrictedFINXMax16Text> ISecuritiesTradeDetails104.AccountOwnerTransactionIdentification =>
+        AccountOwnerTransactionIdentification;
     IPlaceOfTradeIdentification2? ISecuritiesTradeDetails104.PlaceOfTrade => PlaceOfTrade;
     IPlaceOfClearingIdentification2? ISecuritiesTradeDetails104.PlaceOfClearing => PlaceOfClearing;
     ITradeDate9Choice? ISecuritiesTradeDetails104.TradeDate => TradeDate;
     ISettlementDate20Choice ISecuritiesTradeDetails104.SettlementDate => SettlementDate;
     IPrice3? ISecuritiesTradeDetails104.DealPrice => DealPrice;
-    IEnumerable<ITradeTransactionCondition6Choice> ISecuritiesTradeDetails104.TradeTransactionCondition => TradeTransactionCondition;
+    IEnumerable<ITradeTransactionCondition6Choice> ISecuritiesTradeDetails104.TradeTransactionCondition =>
+        TradeTransactionCondition;
     ITypeOfPrice32Choice? ISecuritiesTradeDetails104.TypeOfPrice => TypeOfPrice;
 }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record SafekeepingPlaceTypeAndText6 : ISafekeepingPlaceTypeAndText6
-{
-}
+public partial record SafekeepingPlaceTypeAndText6 : ISafekeepingPlaceTypeAndText6 { }

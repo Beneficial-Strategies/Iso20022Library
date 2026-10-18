@@ -25,5 +25,6 @@ public partial record OtherAmounts29 : IOtherAmounts29
     IAmountAndDirection44? IOtherAmounts29.ValueAddedTax => ValueAddedTax;
     IAmountAndDirection44? IOtherAmounts29.WithholdingTax => WithholdingTax;
     IAmountAndDirection44? IOtherAmounts29.ConsumptionTax => ConsumptionTax;
-    IAmountAndDirection44? IOtherAmounts29.AccruedCapitalisationAmount => AccruedCapitalisationAmount;
+    IAmountAndDirection44? IOtherAmounts29.AccruedCapitalisationAmount =>
+        AccruedCapitalisationAmount;
 }

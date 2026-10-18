@@ -10,7 +10,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PartyIdentificationAndAccount195 : IPartyIdentificationAndAccount195
 {
-    IPartyIdentification120Choice IPartyIdentificationAndAccount195.Identification => Identification;
-    ISecuritiesAccount19? IPartyIdentificationAndAccount195.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet3? IPartyIdentificationAndAccount195.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
+    IPartyIdentification120Choice IPartyIdentificationAndAccount195.Identification =>
+        Identification;
+    ISecuritiesAccount19? IPartyIdentificationAndAccount195.SafekeepingAccount =>
+        SafekeepingAccount;
+    IBlockChainAddressWallet3? IPartyIdentificationAndAccount195.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
 }

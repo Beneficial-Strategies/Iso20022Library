@@ -10,12 +10,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record StatusTrail11 : IStatusTrail11
 {
-    IOrganisationIdentification32? IStatusTrail11.SendingOrganisationIdentification => SendingOrganisationIdentification;
+    IOrganisationIdentification32? IStatusTrail11.SendingOrganisationIdentification =>
+        SendingOrganisationIdentification;
     IProcessingStatus92Choice? IStatusTrail11.ProcessingStatus => ProcessingStatus;
     IMatchingStatus30Choice? IStatusTrail11.InferredMatchingStatus => InferredMatchingStatus;
     IMatchingStatus30Choice? IStatusTrail11.MatchingStatus => MatchingStatus;
     ISettlementStatus22Choice? IStatusTrail11.SettlementStatus => SettlementStatus;
-    IModificationProcessingStatus11Choice? IStatusTrail11.ModificationProcessingStatus => ModificationProcessingStatus;
+    IModificationProcessingStatus11Choice? IStatusTrail11.ModificationProcessingStatus =>
+        ModificationProcessingStatus;
     IProcessingStatus93Choice? IStatusTrail11.CancellationStatus => CancellationStatus;
     IProprietaryReason5? IStatusTrail11.Settled => Settled;
     IEnumerable<ISupplementaryData1> IStatusTrail11.SupplementaryData => SupplementaryData;

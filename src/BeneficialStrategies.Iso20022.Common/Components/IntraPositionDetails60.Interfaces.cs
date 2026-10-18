@@ -12,9 +12,12 @@ public partial record IntraPositionDetails60 : IIntraPositionDetails60
 {
     IPartyIdentification127Choice? IIntraPositionDetails60.AccountOwner => AccountOwner;
     ISecuritiesAccount19? IIntraPositionDetails60.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet3? IIntraPositionDetails60.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
-    ISecurityIdentification19 IIntraPositionDetails60.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentQuantity33Choice IIntraPositionDetails60.SettlementQuantity => SettlementQuantity;
+    IBlockChainAddressWallet3? IIntraPositionDetails60.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
+    ISecurityIdentification19 IIntraPositionDetails60.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentQuantity33Choice IIntraPositionDetails60.SettlementQuantity =>
+        SettlementQuantity;
     IGenericIdentification37? IIntraPositionDetails60.LotNumber => LotNumber;
     IDateAndDateTime2Choice IIntraPositionDetails60.SettlementDate => SettlementDate;
     ISecuritiesBalanceType7Choice? IIntraPositionDetails60.BalanceFrom => BalanceFrom;

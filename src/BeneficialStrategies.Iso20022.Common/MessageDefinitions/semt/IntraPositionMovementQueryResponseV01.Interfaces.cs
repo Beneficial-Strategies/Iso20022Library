@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.semt;
 public partial record IntraPositionMovementQueryResponseV01 : IIntraPositionMovementQueryResponseV01
 {
     IPagination1 IIntraPositionMovementQueryResponseV01.Pagination => Pagination;
-    IIntraPositionReport4 IIntraPositionMovementQueryResponseV01.ReportGeneralDetails => ReportGeneralDetails;
-    IEnumerable<IIntraPositionMovements6> IIntraPositionMovementQueryResponseV01.Movements => Movements;
+    IIntraPositionReport4 IIntraPositionMovementQueryResponseV01.ReportGeneralDetails =>
+        ReportGeneralDetails;
+    IEnumerable<IIntraPositionMovements6> IIntraPositionMovementQueryResponseV01.Movements =>
+        Movements;
 }

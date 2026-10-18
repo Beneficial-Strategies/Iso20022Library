@@ -13,5 +13,6 @@ public partial record CorporateActionEventAndBalance3 : ICorporateActionEventAnd
     IEventInformation1 ICorporateActionEventAndBalance3.GeneralInformation => GeneralInformation;
     IUnderlyingSecurity3 ICorporateActionEventAndBalance3.UnderlyingSecurity => UnderlyingSecurity;
     ICorporateActionBalanceDetails4? ICorporateActionEventAndBalance3.Balance => Balance;
-    IEnumerable<ISupplementaryData1> ICorporateActionEventAndBalance3.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> ICorporateActionEventAndBalance3.SupplementaryData =>
+        SupplementaryData;
 }

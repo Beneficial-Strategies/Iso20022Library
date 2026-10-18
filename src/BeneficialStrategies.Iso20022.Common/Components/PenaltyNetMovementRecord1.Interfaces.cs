@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record PenaltyNetMovementRecord1 : IPenaltyNetMovementRecord1
 {
     ISecuritiesAccount19? IPenaltyNetMovementRecord1.SafekeepingAccount => SafekeepingAccount;
-    IFinancialInstrumentQuantity1Choice? IPenaltyNetMovementRecord1.SecuritiesShortfall => SecuritiesShortfall;
+    IFinancialInstrumentQuantity1Choice? IPenaltyNetMovementRecord1.SecuritiesShortfall =>
+        SecuritiesShortfall;
     IAmountAndDirection5? IPenaltyNetMovementRecord1.ShortfallValuation => ShortfallValuation;
-    IEnumerable<ITradeTransactionCondition5Choice> IPenaltyNetMovementRecord1.TradeTransactionCondition => TradeTransactionCondition;
+    IEnumerable<ITradeTransactionCondition5Choice> IPenaltyNetMovementRecord1.TradeTransactionCondition =>
+        TradeTransactionCondition;
 }

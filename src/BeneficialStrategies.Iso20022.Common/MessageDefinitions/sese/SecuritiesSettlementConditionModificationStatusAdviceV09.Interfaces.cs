@@ -8,12 +8,19 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesSettlementConditionModificationStatusAdviceV09 : ISecuritiesSettlementConditionModificationStatusAdviceV09
+public partial record SecuritiesSettlementConditionModificationStatusAdviceV09
+    : ISecuritiesSettlementConditionModificationStatusAdviceV09
 {
-    IPartyIdentification144? ISecuritiesSettlementConditionModificationStatusAdviceV09.AccountOwner => AccountOwner;
-    ISecuritiesAccount19? ISecuritiesSettlementConditionModificationStatusAdviceV09.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet3? ISecuritiesSettlementConditionModificationStatusAdviceV09.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
-    IRequestDetails27? ISecuritiesSettlementConditionModificationStatusAdviceV09.RequestDetails => RequestDetails;
-    IProcessingStatus85Choice ISecuritiesSettlementConditionModificationStatusAdviceV09.ProcessingStatus => ProcessingStatus;
-    IEnumerable<ISupplementaryData1> ISecuritiesSettlementConditionModificationStatusAdviceV09.SupplementaryData => SupplementaryData;
+    IPartyIdentification144? ISecuritiesSettlementConditionModificationStatusAdviceV09.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount19? ISecuritiesSettlementConditionModificationStatusAdviceV09.SafekeepingAccount =>
+        SafekeepingAccount;
+    IBlockChainAddressWallet3? ISecuritiesSettlementConditionModificationStatusAdviceV09.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
+    IRequestDetails27? ISecuritiesSettlementConditionModificationStatusAdviceV09.RequestDetails =>
+        RequestDetails;
+    IProcessingStatus85Choice ISecuritiesSettlementConditionModificationStatusAdviceV09.ProcessingStatus =>
+        ProcessingStatus;
+    IEnumerable<ISupplementaryData1> ISecuritiesSettlementConditionModificationStatusAdviceV09.SupplementaryData =>
+        SupplementaryData;
 }

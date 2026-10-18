@@ -10,9 +10,12 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CardholderAuthentication13 : ICardholderAuthentication13
 {
-    IContentInformationType22? ICardholderAuthentication13.ProtectedAuthenticationValue => ProtectedAuthenticationValue;
+    IContentInformationType22? ICardholderAuthentication13.ProtectedAuthenticationValue =>
+        ProtectedAuthenticationValue;
     IOnLinePIN7? ICardholderAuthentication13.CardholderOnLinePIN => CardholderOnLinePIN;
-    IPersonIdentification15? ICardholderAuthentication13.CardholderIdentification => CardholderIdentification;
+    IPersonIdentification15? ICardholderAuthentication13.CardholderIdentification =>
+        CardholderIdentification;
     IAddressVerification1? ICardholderAuthentication13.AddressVerification => AddressVerification;
-    IExternallyDefinedData1? ICardholderAuthentication13.AuthenticationAdditionalInformation => AuthenticationAdditionalInformation;
+    IExternallyDefinedData1? ICardholderAuthentication13.AuthenticationAdditionalInformation =>
+        AuthenticationAdditionalInformation;
 }

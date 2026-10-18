@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.VoteThroughNetwork1Choice;
 
-public partial record VoteDirectlyToIssuer : IVoteDirectlyToIssuer
-{
-}
+public partial record VoteDirectlyToIssuer : IVoteDirectlyToIssuer { }

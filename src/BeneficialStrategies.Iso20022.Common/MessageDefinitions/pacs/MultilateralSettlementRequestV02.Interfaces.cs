@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.pacs;
 public partial record MultilateralSettlementRequestV02 : IMultilateralSettlementRequestV02
 {
     IGroupHeader104 IMultilateralSettlementRequestV02.GroupHeader => GroupHeader;
-    IEnumerable<IMultilateralSettlementRequest3> IMultilateralSettlementRequestV02.SettlementRequest => SettlementRequest;
+    IEnumerable<IMultilateralSettlementRequest3> IMultilateralSettlementRequestV02.SettlementRequest =>
+        SettlementRequest;
     ISupplementaryData1? IMultilateralSettlementRequestV02.SupplementaryData => SupplementaryData;
 }

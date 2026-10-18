@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the amount type.
 /// </summary>
 [IsoId("_tsra0lkyEeGeoaLUQk__nA_-1905418813")]
-public interface ITaxAmountType1Choice : IIsoChoice
-{
-}
+public interface ITaxAmountType1Choice : IIsoChoice { }

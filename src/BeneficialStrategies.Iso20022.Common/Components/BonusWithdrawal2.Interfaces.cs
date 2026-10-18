@@ -12,5 +12,6 @@ public partial record BonusWithdrawal2 : IBonusWithdrawal2
 {
     ITypeOfAmount1Choice IBonusWithdrawal2.TypeOfAmount => TypeOfAmount;
     IWithdrawalReason1Choice? IBonusWithdrawal2.Reason => Reason;
-    IEnumerable<IAdditionalInformation15> IBonusWithdrawal2.AdditionalInformation => AdditionalInformation;
+    IEnumerable<IAdditionalInformation15> IBonusWithdrawal2.AdditionalInformation =>
+        AdditionalInformation;
 }

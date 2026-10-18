@@ -11,16 +11,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CorporateActionRate44 : ICorporateActionRate44
 {
     IRateAndAmountFormat14Choice? ICorporateActionRate44.AdditionalTax => AdditionalTax;
-    IEnumerable<IGrossDividendRateFormat9Choice> ICorporateActionRate44.GrossDividendRate => GrossDividendRate;
-    IEnumerable<INetDividendRateFormat11Choice> ICorporateActionRate44.NetDividendRate => NetDividendRate;
+    IEnumerable<IGrossDividendRateFormat9Choice> ICorporateActionRate44.GrossDividendRate =>
+        GrossDividendRate;
+    IEnumerable<INetDividendRateFormat11Choice> ICorporateActionRate44.NetDividendRate =>
+        NetDividendRate;
     IRateAndAmountFormat14Choice? ICorporateActionRate44.IndexFactor => IndexFactor;
-    IEnumerable<IInterestRateUsedForPaymentFormat5Choice> ICorporateActionRate44.InterestRateUsedForPayment => InterestRateUsedForPayment;
-    IRateFormat3Choice? ICorporateActionRate44.MaximumAllowedOversubscriptionRate => MaximumAllowedOversubscriptionRate;
+    IEnumerable<IInterestRateUsedForPaymentFormat5Choice> ICorporateActionRate44.InterestRateUsedForPayment =>
+        InterestRateUsedForPayment;
+    IRateFormat3Choice? ICorporateActionRate44.MaximumAllowedOversubscriptionRate =>
+        MaximumAllowedOversubscriptionRate;
     IRateFormat3Choice? ICorporateActionRate44.ProrationRate => ProrationRate;
-    IEnumerable<IRateFormat10Choice> ICorporateActionRate44.WithholdingTaxRate => WithholdingTaxRate;
-    IEnumerable<IRateAndAmountFormat20Choice> ICorporateActionRate44.WithholdingOfForeignTax => WithholdingOfForeignTax;
-    IEnumerable<IRateTypeAndAmountAndStatus6> ICorporateActionRate44.TaxRelatedRate => TaxRelatedRate;
-    IEnumerable<IRateTypeAndAmountAndStatus11> ICorporateActionRate44.TaxableIncomePerDividendShare => TaxableIncomePerDividendShare;
-    IForeignExchangeTerms19? ICorporateActionRate44.IssuerDeclaredExchangeRate => IssuerDeclaredExchangeRate;
+    IEnumerable<IRateFormat10Choice> ICorporateActionRate44.WithholdingTaxRate =>
+        WithholdingTaxRate;
+    IEnumerable<IRateAndAmountFormat20Choice> ICorporateActionRate44.WithholdingOfForeignTax =>
+        WithholdingOfForeignTax;
+    IEnumerable<IRateTypeAndAmountAndStatus6> ICorporateActionRate44.TaxRelatedRate =>
+        TaxRelatedRate;
+    IEnumerable<IRateTypeAndAmountAndStatus11> ICorporateActionRate44.TaxableIncomePerDividendShare =>
+        TaxableIncomePerDividendShare;
+    IForeignExchangeTerms19? ICorporateActionRate44.IssuerDeclaredExchangeRate =>
+        IssuerDeclaredExchangeRate;
     IRateAndAmountFormat14Choice? ICorporateActionRate44.TaxOnIncome => TaxOnIncome;
 }

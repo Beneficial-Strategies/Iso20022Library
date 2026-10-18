@@ -10,9 +10,12 @@ namespace BeneficialStrategies.Iso20022.sese;
 
 public partial record TransferInCancellationRequestV05 : ITransferInCancellationRequestV05
 {
-    IMessageIdentification1 ITransferInCancellationRequestV05.MessageIdentification => MessageIdentification;
+    IMessageIdentification1 ITransferInCancellationRequestV05.MessageIdentification =>
+        MessageIdentification;
     IEnumerable<IReferences15> ITransferInCancellationRequestV05.References => References;
-    IEnumerable<ICancellation5Choice> ITransferInCancellationRequestV05.Cancellation => Cancellation;
-    IMarketPracticeVersion1? ITransferInCancellationRequestV05.MarketPracticeVersion => MarketPracticeVersion;
+    IEnumerable<ICancellation5Choice> ITransferInCancellationRequestV05.Cancellation =>
+        Cancellation;
+    IMarketPracticeVersion1? ITransferInCancellationRequestV05.MarketPracticeVersion =>
+        MarketPracticeVersion;
     ICopyInformation2? ITransferInCancellationRequestV05.CopyDetails => CopyDetails;
 }

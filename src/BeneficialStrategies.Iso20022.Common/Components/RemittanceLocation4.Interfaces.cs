@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record RemittanceLocation4 : IRemittanceLocation4
 {
-    IEnumerable<IRemittanceLocationDetails1> IRemittanceLocation4.RemittanceLocationDetails => RemittanceLocationDetails;
+    IEnumerable<IRemittanceLocationDetails1> IRemittanceLocation4.RemittanceLocationDetails =>
+        RemittanceLocationDetails;
 }

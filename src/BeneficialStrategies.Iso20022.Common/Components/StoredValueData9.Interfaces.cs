@@ -12,5 +12,6 @@ public partial record StoredValueData9 : IStoredValueData9
 {
     IStoredValueAccount2? IStoredValueData9.AccountIdentification => AccountIdentification;
     IPaymentTransaction183? IStoredValueData9.OriginalPOITransaction => OriginalPOITransaction;
-    ITransactionIdentifier1? IStoredValueData9.HostTransactionIdentification => HostTransactionIdentification;
+    ITransactionIdentifier1? IStoredValueData9.HostTransactionIdentification =>
+        HostTransactionIdentification;
 }

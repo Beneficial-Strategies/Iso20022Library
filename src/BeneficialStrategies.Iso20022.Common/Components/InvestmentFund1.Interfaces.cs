@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record InvestmentFund1 : IInvestmentFund1
 {
-    ISecurityIdentification14? IInvestmentFund1.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification14? IInvestmentFund1.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     IAmountAndDirection30? IInvestmentFund1.TotalValue => TotalValue;
     IEnumerable<IPriceInformation10> IInvestmentFund1.Price => Price;
     IEnumerable<ISupplementaryData1> IInvestmentFund1.SupplementaryData => SupplementaryData;

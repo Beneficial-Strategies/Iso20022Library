@@ -10,14 +10,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record FinancialInstrumentAttributes117 : IFinancialInstrumentAttributes117
 {
-    ISecurityIdentification20 IFinancialInstrumentAttributes117.SecurityIdentification => SecurityIdentification;
-    IRenounceableEntitlementStatusTypeFormat4Choice? IFinancialInstrumentAttributes117.RenounceableEntitlementStatusType => RenounceableEntitlementStatusType;
-    IFractionDispositionType32Choice? IFinancialInstrumentAttributes117.FractionDisposition => FractionDisposition;
-    IQuantityToQuantityRatio2? IFinancialInstrumentAttributes117.IntermediateSecuritiesToUnderlyingRatio => IntermediateSecuritiesToUnderlyingRatio;
+    ISecurityIdentification20 IFinancialInstrumentAttributes117.SecurityIdentification =>
+        SecurityIdentification;
+    IRenounceableEntitlementStatusTypeFormat4Choice? IFinancialInstrumentAttributes117.RenounceableEntitlementStatusType =>
+        RenounceableEntitlementStatusType;
+    IFractionDispositionType32Choice? IFinancialInstrumentAttributes117.FractionDisposition =>
+        FractionDisposition;
+    IQuantityToQuantityRatio2? IFinancialInstrumentAttributes117.IntermediateSecuritiesToUnderlyingRatio =>
+        IntermediateSecuritiesToUnderlyingRatio;
     IAmountPrice4? IFinancialInstrumentAttributes117.MarketPrice => MarketPrice;
     IDateFormat41Choice IFinancialInstrumentAttributes117.ExpiryDate => ExpiryDate;
     IDateFormat41Choice IFinancialInstrumentAttributes117.PostingDate => PostingDate;
     IPeriod11? IFinancialInstrumentAttributes117.TradingPeriod => TradingPeriod;
-    IBalanceFormat14Choice? IFinancialInstrumentAttributes117.UninstructedBalance => UninstructedBalance;
-    IBalanceFormat14Choice? IFinancialInstrumentAttributes117.InstructedBalance => InstructedBalance;
+    IBalanceFormat14Choice? IFinancialInstrumentAttributes117.UninstructedBalance =>
+        UninstructedBalance;
+    IBalanceFormat14Choice? IFinancialInstrumentAttributes117.InstructedBalance =>
+        InstructedBalance;
 }

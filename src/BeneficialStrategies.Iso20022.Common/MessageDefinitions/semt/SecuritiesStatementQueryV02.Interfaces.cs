@@ -14,6 +14,8 @@ public partial record SecuritiesStatementQueryV02 : ISecuritiesStatementQueryV02
     IStatement16? ISecuritiesStatementQueryV02.StatementGeneralDetails => StatementGeneralDetails;
     IPartyIdentification36Choice? ISecuritiesStatementQueryV02.AccountOwner => AccountOwner;
     ISecuritiesAccount13 ISecuritiesStatementQueryV02.SafekeepingAccount => SafekeepingAccount;
-    IEnumerable<IAdditionalQueryParameters3> ISecuritiesStatementQueryV02.AdditionalQueryParameters => AdditionalQueryParameters;
-    IEnumerable<ISupplementaryData1> ISecuritiesStatementQueryV02.SupplementaryData => SupplementaryData;
+    IEnumerable<IAdditionalQueryParameters3> ISecuritiesStatementQueryV02.AdditionalQueryParameters =>
+        AdditionalQueryParameters;
+    IEnumerable<ISupplementaryData1> ISecuritiesStatementQueryV02.SupplementaryData =>
+        SupplementaryData;
 }

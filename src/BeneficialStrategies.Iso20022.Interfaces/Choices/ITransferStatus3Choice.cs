@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of statuses for the status of a transfer.
 /// </summary>
 [IsoId("_aORxAVNUEeijdq8ilaxyOA")]
-public interface ITransferStatus3Choice : IIsoChoice
-{
-}
+public interface ITransferStatus3Choice : IIsoChoice { }

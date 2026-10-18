@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record RetailerReversalResult6 : IRetailerReversalResult6
 {
-    ICardPaymentTransaction136? IRetailerReversalResult6.OriginalPaymentTransaction => OriginalPaymentTransaction;
+    ICardPaymentTransaction136? IRetailerReversalResult6.OriginalPaymentTransaction =>
+        OriginalPaymentTransaction;
     IEnumerable<ICustomerOrder1> IRetailerReversalResult6.CustomerOrder => CustomerOrder;
 }

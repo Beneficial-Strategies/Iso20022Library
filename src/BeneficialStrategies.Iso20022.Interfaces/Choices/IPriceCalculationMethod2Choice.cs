@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Price Calculation Method2Choice.
 /// </summary>
 [IsoId("_HlKRQ6GoEe-4O7NbwmwJkQ")]
-public interface IPriceCalculationMethod2Choice : IIsoChoice
-{
-}
+public interface IPriceCalculationMethod2Choice : IIsoChoice { }

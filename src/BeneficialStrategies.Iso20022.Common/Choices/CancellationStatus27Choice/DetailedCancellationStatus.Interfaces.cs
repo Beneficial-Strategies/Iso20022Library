@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus27Choice;
 
 public partial record DetailedCancellationStatus : IDetailedCancellationStatus
 {
-    ICancellationStatus26Choice IDetailedCancellationStatus.InstructionCancellationStatus => InstructionCancellationStatus;
+    ICancellationStatus26Choice IDetailedCancellationStatus.InstructionCancellationStatus =>
+        InstructionCancellationStatus;
 }

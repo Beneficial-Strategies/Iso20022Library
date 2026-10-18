@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record AttendanceAdmissionConditions2 : IAttendanceAdmissionConditions2
-{
-}
+public partial record AttendanceAdmissionConditions2 : IAttendanceAdmissionConditions2 { }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a reporting type.
 /// </summary>
 [IsoId("_6sleB_fVEeiNZp_PtLohLw")]
-public interface IReporting11Choice : IIsoChoice
-{
-}
+public interface IReporting11Choice : IIsoChoice { }

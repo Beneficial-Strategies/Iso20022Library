@@ -13,8 +13,10 @@ public partial record CustodyStatementOfHoldings1 : ICustodyStatementOfHoldings1
     IPagination ICustodyStatementOfHoldings1.MessagePagination => MessagePagination;
     IStatement3? ICustodyStatementOfHoldings1.StatementGeneralDetails => StatementGeneralDetails;
     ISafekeepingAccount1? ICustodyStatementOfHoldings1.AccountDetails => AccountDetails;
-    IEnumerable<IAggregateBalanceInformation1> ICustodyStatementOfHoldings1.BalanceForAccount => BalanceForAccount;
-    IEnumerable<ISubAccountIdentification1> ICustodyStatementOfHoldings1.SubAccountDetails => SubAccountDetails;
+    IEnumerable<IAggregateBalanceInformation1> ICustodyStatementOfHoldings1.BalanceForAccount =>
+        BalanceForAccount;
+    IEnumerable<ISubAccountIdentification1> ICustodyStatementOfHoldings1.SubAccountDetails =>
+        SubAccountDetails;
     ITotalValueInPageAndStatement? ICustodyStatementOfHoldings1.TotalValues => TotalValues;
     IEnumerable<IExtension1> ICustodyStatementOfHoldings1.Extension => Extension;
 }

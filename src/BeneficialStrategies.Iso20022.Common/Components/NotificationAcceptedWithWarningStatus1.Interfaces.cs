@@ -8,7 +8,9 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record NotificationAcceptedWithWarningStatus1 : INotificationAcceptedWithWarningStatus1
+public partial record NotificationAcceptedWithWarningStatus1
+    : INotificationAcceptedWithWarningStatus1
 {
-    IAcceptedWithWarningStatus1Format1Choice INotificationAcceptedWithWarningStatus1.Status => Status;
+    IAcceptedWithWarningStatus1Format1Choice INotificationAcceptedWithWarningStatus1.Status =>
+        Status;
 }

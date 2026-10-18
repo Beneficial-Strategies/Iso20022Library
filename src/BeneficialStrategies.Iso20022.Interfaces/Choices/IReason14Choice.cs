@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of reason.
 /// </summary>
 [IsoId("_uW-mvVhpEeS8HfHHd4stCA")]
-public interface IReason14Choice : IIsoChoice
-{
-}
+public interface IReason14Choice : IIsoChoice { }

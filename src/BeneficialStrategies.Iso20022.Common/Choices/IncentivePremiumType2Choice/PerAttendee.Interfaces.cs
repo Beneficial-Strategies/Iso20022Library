@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.IncentivePremiumType2Choice;
 
-public partial record PerAttendee : IPerAttendee
-{
-}
+public partial record PerAttendee : IPerAttendee { }

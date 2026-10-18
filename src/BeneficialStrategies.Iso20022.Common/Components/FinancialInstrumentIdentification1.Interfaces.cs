@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record FinancialInstrumentIdentification1 : IFinancialInstrumentIdentification1
 {
-    ISecurityIdentification25Choice IFinancialInstrumentIdentification1.Identification => Identification;
+    ISecurityIdentification25Choice IFinancialInstrumentIdentification1.Identification =>
+        Identification;
 }

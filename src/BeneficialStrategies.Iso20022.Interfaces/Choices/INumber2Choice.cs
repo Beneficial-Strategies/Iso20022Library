@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice number format.
 /// </summary>
 [IsoId("_Qu0y5Np-Ed-ak6NoX_4Aeg_-1987698151")]
-public interface INumber2Choice : IIsoChoice
-{
-}
+public interface INumber2Choice : IIsoChoice { }

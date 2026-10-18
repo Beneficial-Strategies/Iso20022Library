@@ -10,17 +10,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecurityOption1 : ISecurityOption1
 {
-    IFinancialInstrumentDescription3 ISecurityOption1.SecurityIdentification => SecurityIdentification;
+    IFinancialInstrumentDescription3 ISecurityOption1.SecurityIdentification =>
+        SecurityIdentification;
     IUnitOrFaceAmount1Choice? ISecurityOption1.SecuritiesQuantity => SecuritiesQuantity;
-    IUnitOrFaceAmount1Choice? ISecurityOption1.MinimumExercisableSecuritiesQuantity => MinimumExercisableSecuritiesQuantity;
-    IUnitOrFaceAmount1Choice? ISecurityOption1.MinimumExercisableMultipleSecuritiesQuantity => MinimumExercisableMultipleSecuritiesQuantity;
-    IUnitOrFaceAmount1Choice? ISecurityOption1.NewDenominationSecuritiesQuantity => NewDenominationSecuritiesQuantity;
-    IUnitOrFaceAmount1Choice? ISecurityOption1.NewBoardLotSecuritiesQuantity => NewBoardLotSecuritiesQuantity;
+    IUnitOrFaceAmount1Choice? ISecurityOption1.MinimumExercisableSecuritiesQuantity =>
+        MinimumExercisableSecuritiesQuantity;
+    IUnitOrFaceAmount1Choice? ISecurityOption1.MinimumExercisableMultipleSecuritiesQuantity =>
+        MinimumExercisableMultipleSecuritiesQuantity;
+    IUnitOrFaceAmount1Choice? ISecurityOption1.NewDenominationSecuritiesQuantity =>
+        NewDenominationSecuritiesQuantity;
+    IUnitOrFaceAmount1Choice? ISecurityOption1.NewBoardLotSecuritiesQuantity =>
+        NewBoardLotSecuritiesQuantity;
     IShareRanking1FormatChoice? ISecurityOption1.ShareRanking => ShareRanking;
-    IQuantityToQuantityRatio1? ISecurityOption1.AdditionalQuantityForSubscribedResultantSecurities => AdditionalQuantityForSubscribedResultantSecurities;
+    IQuantityToQuantityRatio1? ISecurityOption1.AdditionalQuantityForSubscribedResultantSecurities =>
+        AdditionalQuantityForSubscribedResultantSecurities;
     ICorporateActionDate3? ISecurityOption1.DateDetails => DateDetails;
     ICorporateActionPrice4? ISecurityOption1.PriceDetails => PriceDetails;
     IPeriod1? ISecurityOption1.TradingPeriod => TradingPeriod;
-    IQuantityToQuantityRatio1? ISecurityOption1.AdditionalQuantityForExistingSecurities => AdditionalQuantityForExistingSecurities;
-    IFractionDispositionType1FormatChoice? ISecurityOption1.FractionDisposition => FractionDisposition;
+    IQuantityToQuantityRatio1? ISecurityOption1.AdditionalQuantityForExistingSecurities =>
+        AdditionalQuantityForExistingSecurities;
+    IFractionDispositionType1FormatChoice? ISecurityOption1.FractionDisposition =>
+        FractionDisposition;
 }

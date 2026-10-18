@@ -11,13 +11,22 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record InstructedCorporateActionOption19 : IInstructedCorporateActionOption19
 {
     ICorporateActionOption30Choice IInstructedCorporateActionOption19.OptionType => OptionType;
-    IBalanceFormat11Choice IInstructedCorporateActionOption19.InstructedBalance => InstructedBalance;
-    IDefaultProcessingOrStandingInstruction1Choice? IInstructedCorporateActionOption19.DefaultAction => DefaultAction;
-    ISignedQuantityFormat10? IInstructedCorporateActionOption19.OptionAcceptedInstructedBalance => OptionAcceptedInstructedBalance;
-    ISignedQuantityFormat10? IInstructedCorporateActionOption19.OptionCancelledInstructionBalance => OptionCancelledInstructionBalance;
-    ISignedQuantityFormat10? IInstructedCorporateActionOption19.OptionPendingInstructionBalance => OptionPendingInstructionBalance;
-    ISignedQuantityFormat10? IInstructedCorporateActionOption19.OptionRejectedInstructionBalance => OptionRejectedInstructionBalance;
-    ISignedQuantityFormat10? IInstructedCorporateActionOption19.OptionProtectInstructionBalance => OptionProtectInstructionBalance;
-    ICorporateActionEventDeadlines3 IInstructedCorporateActionOption19.EventDeadlines => EventDeadlines;
-    IEnumerable<IOptionInstructionDetails9> IInstructedCorporateActionOption19.OptionInstructionDetails => OptionInstructionDetails;
+    IBalanceFormat11Choice IInstructedCorporateActionOption19.InstructedBalance =>
+        InstructedBalance;
+    IDefaultProcessingOrStandingInstruction1Choice? IInstructedCorporateActionOption19.DefaultAction =>
+        DefaultAction;
+    ISignedQuantityFormat10? IInstructedCorporateActionOption19.OptionAcceptedInstructedBalance =>
+        OptionAcceptedInstructedBalance;
+    ISignedQuantityFormat10? IInstructedCorporateActionOption19.OptionCancelledInstructionBalance =>
+        OptionCancelledInstructionBalance;
+    ISignedQuantityFormat10? IInstructedCorporateActionOption19.OptionPendingInstructionBalance =>
+        OptionPendingInstructionBalance;
+    ISignedQuantityFormat10? IInstructedCorporateActionOption19.OptionRejectedInstructionBalance =>
+        OptionRejectedInstructionBalance;
+    ISignedQuantityFormat10? IInstructedCorporateActionOption19.OptionProtectInstructionBalance =>
+        OptionProtectInstructionBalance;
+    ICorporateActionEventDeadlines3 IInstructedCorporateActionOption19.EventDeadlines =>
+        EventDeadlines;
+    IEnumerable<IOptionInstructionDetails9> IInstructedCorporateActionOption19.OptionInstructionDetails =>
+        OptionInstructionDetails;
 }

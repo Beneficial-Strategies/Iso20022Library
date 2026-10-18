@@ -8,7 +8,8 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record PointOfInteractionComponentAssessment1 : IPointOfInteractionComponentAssessment1
+public partial record PointOfInteractionComponentAssessment1
+    : IPointOfInteractionComponentAssessment1
 {
     IEnumerable<string> IPointOfInteractionComponentAssessment1.Assigner => Assigner;
 }

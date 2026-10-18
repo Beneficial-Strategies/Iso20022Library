@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the repurchase transaction type information.
 /// </summary>
 [IsoId("_pAgRT5wxEeazcsnODTksnQ")]
-public interface IRepurchaseType24Choice : IIsoChoice
-{
-}
+public interface IRepurchaseType24Choice : IIsoChoice { }

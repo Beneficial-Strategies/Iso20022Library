@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionEventReference4 : ICorporateActionEventReference4
 {
-    ICorporateActionEventReference4Choice ICorporateActionEventReference4.EventIdentification => EventIdentification;
+    ICorporateActionEventReference4Choice ICorporateActionEventReference4.EventIdentification =>
+        EventIdentification;
     IProcessingPosition10Choice? ICorporateActionEventReference4.LinkageType => LinkageType;
 }

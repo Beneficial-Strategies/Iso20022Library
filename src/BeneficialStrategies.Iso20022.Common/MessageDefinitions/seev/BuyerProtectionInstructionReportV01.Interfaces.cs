@@ -11,8 +11,12 @@ namespace BeneficialStrategies.Iso20022.seev;
 public partial record BuyerProtectionInstructionReportV01 : IBuyerProtectionInstructionReportV01
 {
     IPagination1? IBuyerProtectionInstructionReportV01.Pagination => Pagination;
-    IStatement87 IBuyerProtectionInstructionReportV01.StatementGeneralDetails => StatementGeneralDetails;
-    IFinancialInstitutionIdentification28 IBuyerProtectionInstructionReportV01.FinancialInstitutionIdentification => FinancialInstitutionIdentification;
-    IEnumerable<ICorporateActionDetails1> IBuyerProtectionInstructionReportV01.CorporateActionDetails => CorporateActionDetails;
-    IEnumerable<ISupplementaryData1> IBuyerProtectionInstructionReportV01.SupplementaryData => SupplementaryData;
+    IStatement87 IBuyerProtectionInstructionReportV01.StatementGeneralDetails =>
+        StatementGeneralDetails;
+    IFinancialInstitutionIdentification28 IBuyerProtectionInstructionReportV01.FinancialInstitutionIdentification =>
+        FinancialInstitutionIdentification;
+    IEnumerable<ICorporateActionDetails1> IBuyerProtectionInstructionReportV01.CorporateActionDetails =>
+        CorporateActionDetails;
+    IEnumerable<ISupplementaryData1> IBuyerProtectionInstructionReportV01.SupplementaryData =>
+        SupplementaryData;
 }

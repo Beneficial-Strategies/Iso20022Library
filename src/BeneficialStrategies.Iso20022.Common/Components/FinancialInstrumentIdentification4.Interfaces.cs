@@ -10,7 +10,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record FinancialInstrumentIdentification4 : IFinancialInstrumentIdentification4
 {
-    ISecurityIdentification25Choice IFinancialInstrumentIdentification4.Identification => Identification;
-    IClassificationType32Choice? IFinancialInstrumentIdentification4.ClassificationType => ClassificationType;
-    IGenericIdentification1? IFinancialInstrumentIdentification4.AlternateSecurityType => AlternateSecurityType;
+    ISecurityIdentification25Choice IFinancialInstrumentIdentification4.Identification =>
+        Identification;
+    IClassificationType32Choice? IFinancialInstrumentIdentification4.ClassificationType =>
+        ClassificationType;
+    IGenericIdentification1? IFinancialInstrumentIdentification4.AlternateSecurityType =>
+        AlternateSecurityType;
 }

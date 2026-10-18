@@ -12,7 +12,10 @@ public partial record SecuritiesEndOfProcessReportV01 : ISecuritiesEndOfProcessR
 {
     IEnumerable<IPagination> ISecuritiesEndOfProcessReportV01.Pagination => Pagination;
     IReport3 ISecuritiesEndOfProcessReportV01.ReportGeneralDetails => ReportGeneralDetails;
-    IEnumerable<IConfirmationParties2> ISecuritiesEndOfProcessReportV01.ConfirmationParties => ConfirmationParties;
-    IEnumerable<IPartyIdentificationAndAccount79> ISecuritiesEndOfProcessReportV01.Investor => Investor;
-    IEnumerable<ISupplementaryData1> ISecuritiesEndOfProcessReportV01.SupplementaryData => SupplementaryData;
+    IEnumerable<IConfirmationParties2> ISecuritiesEndOfProcessReportV01.ConfirmationParties =>
+        ConfirmationParties;
+    IEnumerable<IPartyIdentificationAndAccount79> ISecuritiesEndOfProcessReportV01.Investor =>
+        Investor;
+    IEnumerable<ISupplementaryData1> ISecuritiesEndOfProcessReportV01.SupplementaryData =>
+        SupplementaryData;
 }

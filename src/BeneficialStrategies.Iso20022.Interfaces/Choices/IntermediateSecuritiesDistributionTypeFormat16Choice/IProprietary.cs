@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.IntermediateSecuritiesDistributi
 /// Proprietary identification of the type of intermediate security distribution.
 /// </summary>
 [IsoId("_fw-qVUGPEeWqy4niLuXETA")]
-public interface IProprietary : IIntermediateSecuritiesDistributionTypeFormat16Choice, IIsoChoiceVariant
+public interface IProprietary
+    : IIntermediateSecuritiesDistributionTypeFormat16Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Proprietary information, often a code, issued by the data source scheme issuer.

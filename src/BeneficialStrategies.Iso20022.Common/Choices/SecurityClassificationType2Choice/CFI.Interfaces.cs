@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.SecurityClassificationType2Choice;
 
-public partial record CFI : ICFI
-{
-}
+public partial record CFI : ICFI { }

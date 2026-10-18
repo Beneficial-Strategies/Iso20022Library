@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.Cancellation11Choice;
 /// Information related to the transfer instruction to be cancelled.
 /// </summary>
 [IsoId("_8u6kcSPvEeWQjryFgN2ITg")]
-public interface ICancellationByTransferInstructionDetails : ICancellation11Choice, IIsoChoiceVariant
+public interface ICancellationByTransferInstructionDetails
+    : ICancellation11Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Information identifying the primary individual investor, for example, name, address, social security number and date of birth.

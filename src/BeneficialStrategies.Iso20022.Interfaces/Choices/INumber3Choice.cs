@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of 3 and 5 exact numeric number.
 /// </summary>
 [IsoId("_QrP6dNp-Ed-ak6NoX_4Aeg_-1147595422")]
-public interface INumber3Choice : IIsoChoice
-{
-}
+public interface INumber3Choice : IIsoChoice { }

@@ -12,6 +12,8 @@ public partial record PortfolioTransfer3 : IPortfolioTransfer3
 {
     IFundPortfolio3Choice? IPortfolioTransfer3.Portfolio => Portfolio;
     IPaymentInstrument14? IPortfolioTransfer3.PaymentDetails => PaymentDetails;
-    IEnumerable<IFinancialInstrument69> IPortfolioTransfer3.FinancialInstrumentAssetForTransfer => FinancialInstrumentAssetForTransfer;
-    IEnumerable<IAdditionalInformation15> IPortfolioTransfer3.AdditionalInformation => AdditionalInformation;
+    IEnumerable<IFinancialInstrument69> IPortfolioTransfer3.FinancialInstrumentAssetForTransfer =>
+        FinancialInstrumentAssetForTransfer;
+    IEnumerable<IAdditionalInformation15> IPortfolioTransfer3.AdditionalInformation =>
+        AdditionalInformation;
 }

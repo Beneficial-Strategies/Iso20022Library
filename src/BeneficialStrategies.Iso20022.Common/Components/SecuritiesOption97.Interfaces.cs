@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecuritiesOption97 : ISecuritiesOption97
 {
-    ISecurityIdentification20 ISecuritiesOption97.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification20 ISecuritiesOption97.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     IQuantity54Choice ISecuritiesOption97.PostingQuantity => PostingQuantity;
 }

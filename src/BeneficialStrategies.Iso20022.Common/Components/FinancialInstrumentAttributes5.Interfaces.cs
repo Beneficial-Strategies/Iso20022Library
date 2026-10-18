@@ -10,18 +10,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record FinancialInstrumentAttributes5 : IFinancialInstrumentAttributes5
 {
-    ISecurityIdentification11 IFinancialInstrumentAttributes5.SecurityIdentification => SecurityIdentification;
+    ISecurityIdentification11 IFinancialInstrumentAttributes5.SecurityIdentification =>
+        SecurityIdentification;
     IMarketIdentification2? IFinancialInstrumentAttributes5.PlaceOfListing => PlaceOfListing;
-    IInterestComputationMethodFormat1Choice? IFinancialInstrumentAttributes5.DayCountBasis => DayCountBasis;
-    IClassificationType2Choice? IFinancialInstrumentAttributes5.ClassificationType => ClassificationType;
+    IInterestComputationMethodFormat1Choice? IFinancialInstrumentAttributes5.DayCountBasis =>
+        DayCountBasis;
+    IClassificationType2Choice? IFinancialInstrumentAttributes5.ClassificationType =>
+        ClassificationType;
     IOptionStyle4Choice? IFinancialInstrumentAttributes5.OptionStyle => OptionStyle;
     IRateFormat3Choice? IFinancialInstrumentAttributes5.PreviousFactor => PreviousFactor;
     IRateFormat3Choice? IFinancialInstrumentAttributes5.NextFactor => NextFactor;
     IRateFormat3Choice? IFinancialInstrumentAttributes5.InterestRate => InterestRate;
     IRateFormat3Choice? IFinancialInstrumentAttributes5.NextInterestRate => NextInterestRate;
-    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes5.MinimumNominalQuantity => MinimumNominalQuantity;
-    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes5.MinimumExercisableQuantity => MinimumExercisableQuantity;
-    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes5.MinimumExercisableMultipleQuantity => MinimumExercisableMultipleQuantity;
-    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes5.ContractSize => ContractSize;
+    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes5.MinimumNominalQuantity =>
+        MinimumNominalQuantity;
+    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes5.MinimumExercisableQuantity =>
+        MinimumExercisableQuantity;
+    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes5.MinimumExercisableMultipleQuantity =>
+        MinimumExercisableMultipleQuantity;
+    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes5.ContractSize =>
+        ContractSize;
     IPriceFormat11Choice? IFinancialInstrumentAttributes5.IssuePrice => IssuePrice;
 }

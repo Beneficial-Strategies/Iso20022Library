@@ -14,9 +14,13 @@ public partial record CorporateActionNarrative4 : ICorporateActionNarrative4
     IEnumerable<Max350Text> ICorporateActionNarrative4.AdditionalText => AdditionalText;
     IEnumerable<Max350Text> ICorporateActionNarrative4.NarrativeVersion => NarrativeVersion;
     IEnumerable<Max350Text> ICorporateActionNarrative4.RegistrationDetails => RegistrationDetails;
-    IEnumerable<Max350Text> ICorporateActionNarrative4.InformationConditions => InformationConditions;
-    IEnumerable<Max350Text> ICorporateActionNarrative4.InformationToComplyWith => InformationToComplyWith;
-    IEnumerable<Max350Text> ICorporateActionNarrative4.PartyContactNarrative => PartyContactNarrative;
+    IEnumerable<Max350Text> ICorporateActionNarrative4.InformationConditions =>
+        InformationConditions;
+    IEnumerable<Max350Text> ICorporateActionNarrative4.InformationToComplyWith =>
+        InformationToComplyWith;
+    IEnumerable<Max350Text> ICorporateActionNarrative4.PartyContactNarrative =>
+        PartyContactNarrative;
     IEnumerable<Max350Text> ICorporateActionNarrative4.TaxationConditions => TaxationConditions;
-    IEnumerable<Max350Text> ICorporateActionNarrative4.BasketOrIndexInformation => BasketOrIndexInformation;
+    IEnumerable<Max350Text> ICorporateActionNarrative4.BasketOrIndexInformation =>
+        BasketOrIndexInformation;
 }

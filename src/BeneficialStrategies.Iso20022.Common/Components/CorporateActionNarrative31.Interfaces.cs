@@ -12,6 +12,7 @@ public partial record CorporateActionNarrative31 : ICorporateActionNarrative31
 {
     IEnumerable<Max350Text> ICorporateActionNarrative31.AdditionalText => AdditionalText;
     IEnumerable<Max350Text> ICorporateActionNarrative31.NarrativeVersion => NarrativeVersion;
-    IEnumerable<Max350Text> ICorporateActionNarrative31.PartyContactNarrative => PartyContactNarrative;
+    IEnumerable<Max350Text> ICorporateActionNarrative31.PartyContactNarrative =>
+        PartyContactNarrative;
     IEnumerable<Max350Text> ICorporateActionNarrative31.TaxationConditions => TaxationConditions;
 }

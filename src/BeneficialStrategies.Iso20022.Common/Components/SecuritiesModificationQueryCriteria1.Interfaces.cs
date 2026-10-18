@@ -10,10 +10,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecuritiesModificationQueryCriteria1 : ISecuritiesModificationQueryCriteria1
 {
-    IEnumerable<Max35Text> ISecuritiesModificationQueryCriteria1.ModificationRequestIdentification => ModificationRequestIdentification;
-    IEnumerable<IModificationProcessingStatus9Choice> ISecuritiesModificationQueryCriteria1.ProcessingStatus => ProcessingStatus;
-    IEnumerable<ISecuritiesAccount19> ISecuritiesModificationQueryCriteria1.SafekeepingAccount => SafekeepingAccount;
-    IEnumerable<ISystemPartyIdentification8> ISecuritiesModificationQueryCriteria1.AccountOwner => AccountOwner;
-    IEnumerable<ISystemPartyIdentification8> ISecuritiesModificationQueryCriteria1.MessageOriginator => MessageOriginator;
-    IDateAndDateTimeSearch5Choice? ISecuritiesModificationQueryCriteria1.CreationDateTime => CreationDateTime;
+    IEnumerable<Max35Text> ISecuritiesModificationQueryCriteria1.ModificationRequestIdentification =>
+        ModificationRequestIdentification;
+    IEnumerable<IModificationProcessingStatus9Choice> ISecuritiesModificationQueryCriteria1.ProcessingStatus =>
+        ProcessingStatus;
+    IEnumerable<ISecuritiesAccount19> ISecuritiesModificationQueryCriteria1.SafekeepingAccount =>
+        SafekeepingAccount;
+    IEnumerable<ISystemPartyIdentification8> ISecuritiesModificationQueryCriteria1.AccountOwner =>
+        AccountOwner;
+    IEnumerable<ISystemPartyIdentification8> ISecuritiesModificationQueryCriteria1.MessageOriginator =>
+        MessageOriginator;
+    IDateAndDateTimeSearch5Choice? ISecuritiesModificationQueryCriteria1.CreationDateTime =>
+        CreationDateTime;
 }

@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ProceedsQuantityBreakdown1 : IProceedsQuantityBreakdown1
 {
-    IFinancialInstrumentQuantity18Choice? IProceedsQuantityBreakdown1.TransferOfReceivedProceedsQuantity => TransferOfReceivedProceedsQuantity;
-    IFinancialInstrumentQuantity18Choice? IProceedsQuantityBreakdown1.CashCompensationQuantity => CashCompensationQuantity;
+    IFinancialInstrumentQuantity18Choice? IProceedsQuantityBreakdown1.TransferOfReceivedProceedsQuantity =>
+        TransferOfReceivedProceedsQuantity;
+    IFinancialInstrumentQuantity18Choice? IProceedsQuantityBreakdown1.CashCompensationQuantity =>
+        CashCompensationQuantity;
 }

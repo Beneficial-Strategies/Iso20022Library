@@ -11,8 +11,12 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record ReceivingPartiesAndAccount9 : IReceivingPartiesAndAccount9
 {
     IInvestmentAccount41? IReceivingPartiesAndAccount9.ReceiverDetails => ReceiverDetails;
-    IPartyIdentificationAndAccount5? IReceivingPartiesAndAccount9.ReceiversCustodianDetails => ReceiversCustodianDetails;
-    IPartyIdentificationAndAccount5? IReceivingPartiesAndAccount9.ReceiversIntermediaryDetails => ReceiversIntermediaryDetails;
-    IPartyIdentificationAndAccount4 IReceivingPartiesAndAccount9.ReceivingAgentDetails => ReceivingAgentDetails;
-    IPartyIdentification21? IReceivingPartiesAndAccount9.PlaceOfSettlementDetails => PlaceOfSettlementDetails;
+    IPartyIdentificationAndAccount5? IReceivingPartiesAndAccount9.ReceiversCustodianDetails =>
+        ReceiversCustodianDetails;
+    IPartyIdentificationAndAccount5? IReceivingPartiesAndAccount9.ReceiversIntermediaryDetails =>
+        ReceiversIntermediaryDetails;
+    IPartyIdentificationAndAccount4 IReceivingPartiesAndAccount9.ReceivingAgentDetails =>
+        ReceivingAgentDetails;
+    IPartyIdentification21? IReceivingPartiesAndAccount9.PlaceOfSettlementDetails =>
+        PlaceOfSettlementDetails;
 }

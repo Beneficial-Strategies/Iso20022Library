@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record DataSetIdentification8 : IDataSetIdentification8
-{
-}
+public partial record DataSetIdentification8 : IDataSetIdentification8 { }

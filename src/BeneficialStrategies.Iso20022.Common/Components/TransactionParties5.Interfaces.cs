@@ -14,13 +14,20 @@ public partial record TransactionParties5 : ITransactionParties5
     IParty35Choice ITransactionParties5.Debtor => Debtor;
     IParty35Choice? ITransactionParties5.InitiatingParty => InitiatingParty;
     IBranchAndFinancialInstitutionIdentification5? ITransactionParties5.DebtorAgent => DebtorAgent;
-    IBranchAndFinancialInstitutionIdentification5? ITransactionParties5.PreviousInstructingAgent1 => PreviousInstructingAgent1;
-    IBranchAndFinancialInstitutionIdentification5? ITransactionParties5.PreviousInstructingAgent2 => PreviousInstructingAgent2;
-    IBranchAndFinancialInstitutionIdentification5? ITransactionParties5.PreviousInstructingAgent3 => PreviousInstructingAgent3;
-    IBranchAndFinancialInstitutionIdentification5? ITransactionParties5.IntermediaryAgent1 => IntermediaryAgent1;
-    IBranchAndFinancialInstitutionIdentification5? ITransactionParties5.IntermediaryAgent2 => IntermediaryAgent2;
-    IBranchAndFinancialInstitutionIdentification5? ITransactionParties5.IntermediaryAgent3 => IntermediaryAgent3;
-    IBranchAndFinancialInstitutionIdentification5? ITransactionParties5.CreditorAgent => CreditorAgent;
+    IBranchAndFinancialInstitutionIdentification5? ITransactionParties5.PreviousInstructingAgent1 =>
+        PreviousInstructingAgent1;
+    IBranchAndFinancialInstitutionIdentification5? ITransactionParties5.PreviousInstructingAgent2 =>
+        PreviousInstructingAgent2;
+    IBranchAndFinancialInstitutionIdentification5? ITransactionParties5.PreviousInstructingAgent3 =>
+        PreviousInstructingAgent3;
+    IBranchAndFinancialInstitutionIdentification5? ITransactionParties5.IntermediaryAgent1 =>
+        IntermediaryAgent1;
+    IBranchAndFinancialInstitutionIdentification5? ITransactionParties5.IntermediaryAgent2 =>
+        IntermediaryAgent2;
+    IBranchAndFinancialInstitutionIdentification5? ITransactionParties5.IntermediaryAgent3 =>
+        IntermediaryAgent3;
+    IBranchAndFinancialInstitutionIdentification5? ITransactionParties5.CreditorAgent =>
+        CreditorAgent;
     IParty35Choice ITransactionParties5.Creditor => Creditor;
     IParty35Choice? ITransactionParties5.UltimateCreditor => UltimateCreditor;
 }

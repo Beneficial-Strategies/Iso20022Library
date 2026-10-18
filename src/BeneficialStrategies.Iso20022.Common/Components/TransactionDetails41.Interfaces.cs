@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TransactionDetails41 : ITransactionDetails41
 {
-    ISettlementTypeAndIdentification3 ITransactionDetails41.AccountOwnerTransactionIdentification => AccountOwnerTransactionIdentification;
+    ISettlementTypeAndIdentification3 ITransactionDetails41.AccountOwnerTransactionIdentification =>
+        AccountOwnerTransactionIdentification;
     IPartyIdentification36Choice? ITransactionDetails41.AccountOwner => AccountOwner;
     ISecuritiesAccount13 ITransactionDetails41.SafekeepingAccount => SafekeepingAccount;
     ITransactionDetails29? ITransactionDetails41.TransactionDetails => TransactionDetails;

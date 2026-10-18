@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.RejectionStatus6Choice;
 
-public partial record NoSpecifiedReason : INoSpecifiedReason
-{
-}
+public partial record NoSpecifiedReason : INoSpecifiedReason { }

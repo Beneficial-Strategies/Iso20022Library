@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Issuer Offeror Taxability Indicator2Choice.
 /// </summary>
 [IsoId("_2VuJw6GnEe-4O7NbwmwJkQ")]
-public interface IIssuerOfferorTaxabilityIndicator2Choice : IIsoChoice
-{
-}
+public interface IIssuerOfferorTaxabilityIndicator2Choice : IIsoChoice { }

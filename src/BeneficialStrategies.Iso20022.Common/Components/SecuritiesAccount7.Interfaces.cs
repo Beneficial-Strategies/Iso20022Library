@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecuritiesAccount7 : ISecuritiesAccount7
 {
-    IPartyIdentification2Choice? ISecuritiesAccount7.AccountOwnerIdentification => AccountOwnerIdentification;
+    IPartyIdentification2Choice? ISecuritiesAccount7.AccountOwnerIdentification =>
+        AccountOwnerIdentification;
 }

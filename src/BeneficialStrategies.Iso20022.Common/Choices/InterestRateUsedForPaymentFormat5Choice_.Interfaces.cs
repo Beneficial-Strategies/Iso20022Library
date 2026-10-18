@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record InterestRateUsedForPaymentFormat5Choice_ : IInterestRateUsedForPaymentFormat5Choice
-{
-}
+public abstract partial record InterestRateUsedForPaymentFormat5Choice_
+    : IInterestRateUsedForPaymentFormat5Choice { }

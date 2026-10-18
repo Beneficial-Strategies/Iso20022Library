@@ -10,13 +10,19 @@ namespace BeneficialStrategies.Iso20022.semt;
 
 public partial record SecuritiesTransactionPendingReportV01 : ISecuritiesTransactionPendingReportV01
 {
-    IDocumentIdentification11 ISecuritiesTransactionPendingReportV01.Identification => Identification;
+    IDocumentIdentification11 ISecuritiesTransactionPendingReportV01.Identification =>
+        Identification;
     IPagination ISecuritiesTransactionPendingReportV01.Pagination => Pagination;
-    IStatement14 ISecuritiesTransactionPendingReportV01.StatementGeneralDetails => StatementGeneralDetails;
-    IPartyIdentification13Choice? ISecuritiesTransactionPendingReportV01.AccountOwner => AccountOwner;
-    ISecuritiesAccount13 ISecuritiesTransactionPendingReportV01.SafekeepingAccount => SafekeepingAccount;
+    IStatement14 ISecuritiesTransactionPendingReportV01.StatementGeneralDetails =>
+        StatementGeneralDetails;
+    IPartyIdentification13Choice? ISecuritiesTransactionPendingReportV01.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount13 ISecuritiesTransactionPendingReportV01.SafekeepingAccount =>
+        SafekeepingAccount;
     IEnumerable<IStatusAndReason1> ISecuritiesTransactionPendingReportV01.Status => Status;
     IEnumerable<ITransaction8> ISecuritiesTransactionPendingReportV01.Transactions => Transactions;
-    IPartyIdentification10Choice? ISecuritiesTransactionPendingReportV01.MessageOriginator => MessageOriginator;
-    IPartyIdentification10Choice? ISecuritiesTransactionPendingReportV01.MessageRecipient => MessageRecipient;
+    IPartyIdentification10Choice? ISecuritiesTransactionPendingReportV01.MessageOriginator =>
+        MessageOriginator;
+    IPartyIdentification10Choice? ISecuritiesTransactionPendingReportV01.MessageRecipient =>
+        MessageRecipient;
 }

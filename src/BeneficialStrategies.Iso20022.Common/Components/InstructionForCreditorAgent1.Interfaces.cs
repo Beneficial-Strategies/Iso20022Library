@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record InstructionForCreditorAgent1 : IInstructionForCreditorAgent1
-{
-}
+public partial record InstructionForCreditorAgent1 : IInstructionForCreditorAgent1 { }

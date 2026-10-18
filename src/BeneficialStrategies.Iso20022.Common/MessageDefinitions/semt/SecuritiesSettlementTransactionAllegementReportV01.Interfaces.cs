@@ -8,14 +8,22 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record SecuritiesSettlementTransactionAllegementReportV01 : ISecuritiesSettlementTransactionAllegementReportV01
+public partial record SecuritiesSettlementTransactionAllegementReportV01
+    : ISecuritiesSettlementTransactionAllegementReportV01
 {
-    IDocumentIdentification11 ISecuritiesSettlementTransactionAllegementReportV01.Identification => Identification;
+    IDocumentIdentification11 ISecuritiesSettlementTransactionAllegementReportV01.Identification =>
+        Identification;
     IPagination ISecuritiesSettlementTransactionAllegementReportV01.Pagination => Pagination;
-    IStatement17 ISecuritiesSettlementTransactionAllegementReportV01.StatementGeneralDetails => StatementGeneralDetails;
-    IPartyIdentification13Choice? ISecuritiesSettlementTransactionAllegementReportV01.AccountOwner => AccountOwner;
-    ISecuritiesAccount13 ISecuritiesSettlementTransactionAllegementReportV01.SafekeepingAccount => SafekeepingAccount;
-    IEnumerable<ISecuritiesTradeDetails4> ISecuritiesSettlementTransactionAllegementReportV01.AllegementDetails => AllegementDetails;
-    IPartyIdentification10Choice? ISecuritiesSettlementTransactionAllegementReportV01.MessageOriginator => MessageOriginator;
-    IPartyIdentification10Choice? ISecuritiesSettlementTransactionAllegementReportV01.MessageRecipient => MessageRecipient;
+    IStatement17 ISecuritiesSettlementTransactionAllegementReportV01.StatementGeneralDetails =>
+        StatementGeneralDetails;
+    IPartyIdentification13Choice? ISecuritiesSettlementTransactionAllegementReportV01.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount13 ISecuritiesSettlementTransactionAllegementReportV01.SafekeepingAccount =>
+        SafekeepingAccount;
+    IEnumerable<ISecuritiesTradeDetails4> ISecuritiesSettlementTransactionAllegementReportV01.AllegementDetails =>
+        AllegementDetails;
+    IPartyIdentification10Choice? ISecuritiesSettlementTransactionAllegementReportV01.MessageOriginator =>
+        MessageOriginator;
+    IPartyIdentification10Choice? ISecuritiesSettlementTransactionAllegementReportV01.MessageRecipient =>
+        MessageRecipient;
 }

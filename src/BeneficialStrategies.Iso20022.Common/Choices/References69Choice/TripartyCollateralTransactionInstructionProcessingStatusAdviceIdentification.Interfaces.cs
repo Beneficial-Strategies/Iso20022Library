@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.References69Choice;
 
-public partial record TripartyCollateralTransactionInstructionProcessingStatusAdviceIdentification : ITripartyCollateralTransactionInstructionProcessingStatusAdviceIdentification
-{
-}
+public partial record TripartyCollateralTransactionInstructionProcessingStatusAdviceIdentification
+    : ITripartyCollateralTransactionInstructionProcessingStatusAdviceIdentification { }

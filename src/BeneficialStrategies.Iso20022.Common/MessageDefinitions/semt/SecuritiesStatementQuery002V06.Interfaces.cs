@@ -11,9 +11,12 @@ namespace BeneficialStrategies.Iso20022.semt;
 public partial record SecuritiesStatementQuery002V06 : ISecuritiesStatementQuery002V06
 {
     IDocumentNumber14 ISecuritiesStatementQuery002V06.StatementRequested => StatementRequested;
-    IStatement54? ISecuritiesStatementQuery002V06.StatementGeneralDetails => StatementGeneralDetails;
+    IStatement54? ISecuritiesStatementQuery002V06.StatementGeneralDetails =>
+        StatementGeneralDetails;
     IPartyIdentification109? ISecuritiesStatementQuery002V06.AccountOwner => AccountOwner;
     ISecuritiesAccount27 ISecuritiesStatementQuery002V06.SafekeepingAccount => SafekeepingAccount;
-    IEnumerable<IAdditionalQueryParameters12> ISecuritiesStatementQuery002V06.AdditionalQueryParameters => AdditionalQueryParameters;
-    IEnumerable<ISupplementaryData1> ISecuritiesStatementQuery002V06.SupplementaryData => SupplementaryData;
+    IEnumerable<IAdditionalQueryParameters12> ISecuritiesStatementQuery002V06.AdditionalQueryParameters =>
+        AdditionalQueryParameters;
+    IEnumerable<ISupplementaryData1> ISecuritiesStatementQuery002V06.SupplementaryData =>
+        SupplementaryData;
 }

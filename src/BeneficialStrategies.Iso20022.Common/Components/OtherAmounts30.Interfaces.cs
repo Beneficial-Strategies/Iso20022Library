@@ -33,7 +33,8 @@ public partial record OtherAmounts30 : IOtherAmounts30
     IAmountAndDirection44? IOtherAmounts30.WithholdingTax => WithholdingTax;
     IAmountAndDirection44? IOtherAmounts30.NetGainLoss => NetGainLoss;
     IAmountAndDirection44? IOtherAmounts30.ConsumptionTax => ConsumptionTax;
-    IAmountAndDirection44? IOtherAmounts30.AccruedCapitalisationAmount => AccruedCapitalisationAmount;
+    IAmountAndDirection44? IOtherAmounts30.AccruedCapitalisationAmount =>
+        AccruedCapitalisationAmount;
     IAmountAndDirection44? IOtherAmounts30.BookValue => BookValue;
     IAmountAndDirection44? IOtherAmounts30.CollateralMonitorAmount => CollateralMonitorAmount;
 }

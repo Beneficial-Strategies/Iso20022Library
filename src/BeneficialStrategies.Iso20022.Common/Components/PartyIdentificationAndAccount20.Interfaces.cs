@@ -11,10 +11,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record PartyIdentificationAndAccount20 : IPartyIdentificationAndAccount20
 {
     IPartyIdentification10Choice IPartyIdentificationAndAccount20.Identification => Identification;
-    IAlternatePartyIdentification2? IPartyIdentificationAndAccount20.AlternateIdentification => AlternateIdentification;
+    IAlternatePartyIdentification2? IPartyIdentificationAndAccount20.AlternateIdentification =>
+        AlternateIdentification;
     ICashAccountIdentification5Choice? IPartyIdentificationAndAccount20.CashAccount => CashAccount;
-    ICashAccountIdentification5Choice? IPartyIdentificationAndAccount20.ChargesAccount => ChargesAccount;
-    ICashAccountIdentification5Choice? IPartyIdentificationAndAccount20.CommissionAccount => CommissionAccount;
+    ICashAccountIdentification5Choice? IPartyIdentificationAndAccount20.ChargesAccount =>
+        ChargesAccount;
+    ICashAccountIdentification5Choice? IPartyIdentificationAndAccount20.CommissionAccount =>
+        CommissionAccount;
     ICashAccountIdentification5Choice? IPartyIdentificationAndAccount20.TaxAccount => TaxAccount;
-    IPartyTextInformation2? IPartyIdentificationAndAccount20.AdditionalInformation => AdditionalInformation;
+    IPartyTextInformation2? IPartyIdentificationAndAccount20.AdditionalInformation =>
+        AdditionalInformation;
 }

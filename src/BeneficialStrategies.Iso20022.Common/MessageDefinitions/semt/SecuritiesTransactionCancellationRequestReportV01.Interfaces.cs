@@ -8,10 +8,14 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record SecuritiesTransactionCancellationRequestReportV01 : ISecuritiesTransactionCancellationRequestReportV01
+public partial record SecuritiesTransactionCancellationRequestReportV01
+    : ISecuritiesTransactionCancellationRequestReportV01
 {
     IPagination1 ISecuritiesTransactionCancellationRequestReportV01.Pagination => Pagination;
-    ISecuritiesTransactionReport5 ISecuritiesTransactionCancellationRequestReportV01.ReportGeneralDetails => ReportGeneralDetails;
-    IEnumerable<ISecuritiesCancellation2> ISecuritiesTransactionCancellationRequestReportV01.Cancellations => Cancellations;
-    IEnumerable<ISupplementaryData1> ISecuritiesTransactionCancellationRequestReportV01.SupplementaryData => SupplementaryData;
+    ISecuritiesTransactionReport5 ISecuritiesTransactionCancellationRequestReportV01.ReportGeneralDetails =>
+        ReportGeneralDetails;
+    IEnumerable<ISecuritiesCancellation2> ISecuritiesTransactionCancellationRequestReportV01.Cancellations =>
+        Cancellations;
+    IEnumerable<ISupplementaryData1> ISecuritiesTransactionCancellationRequestReportV01.SupplementaryData =>
+        SupplementaryData;
 }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record PointOfInteractionComponentStatus3 : IPointOfInteractionComponentStatus3
-{
-}
+public partial record PointOfInteractionComponentStatus3 : IPointOfInteractionComponentStatus3 { }

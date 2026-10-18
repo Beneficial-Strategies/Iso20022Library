@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PlaceOfTradeIdentification1 : IPlaceOfTradeIdentification1
 {
-    IMarketIdentification84? IPlaceOfTradeIdentification1.MarketTypeAndIdentification => MarketTypeAndIdentification;
+    IMarketIdentification84? IPlaceOfTradeIdentification1.MarketTypeAndIdentification =>
+        MarketTypeAndIdentification;
 }

@@ -10,11 +10,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionNarrative66 : ICorporateActionNarrative66
 {
-    IEnumerable<IUpdatedAdditionalInformation19> ICorporateActionNarrative66.AdditionalText => AdditionalText;
-    IEnumerable<IUpdatedAdditionalInformation19> ICorporateActionNarrative66.NarrativeVersion => NarrativeVersion;
-    IEnumerable<IUpdatedAdditionalInformation21> ICorporateActionNarrative66.InformationConditions => InformationConditions;
-    IEnumerable<IUpdatedAdditionalInformation21> ICorporateActionNarrative66.InformationToComplyWith => InformationToComplyWith;
-    IEnumerable<IUpdatedAdditionalInformation21> ICorporateActionNarrative66.SecurityRestriction => SecurityRestriction;
-    IEnumerable<IUpdatedAdditionalInformation21> ICorporateActionNarrative66.TaxationConditions => TaxationConditions;
-    IEnumerable<IUpdatedAdditionalInformation21> ICorporateActionNarrative66.CertificationBreakdown => CertificationBreakdown;
+    IEnumerable<IUpdatedAdditionalInformation19> ICorporateActionNarrative66.AdditionalText =>
+        AdditionalText;
+    IEnumerable<IUpdatedAdditionalInformation19> ICorporateActionNarrative66.NarrativeVersion =>
+        NarrativeVersion;
+    IEnumerable<IUpdatedAdditionalInformation21> ICorporateActionNarrative66.InformationConditions =>
+        InformationConditions;
+    IEnumerable<IUpdatedAdditionalInformation21> ICorporateActionNarrative66.InformationToComplyWith =>
+        InformationToComplyWith;
+    IEnumerable<IUpdatedAdditionalInformation21> ICorporateActionNarrative66.SecurityRestriction =>
+        SecurityRestriction;
+    IEnumerable<IUpdatedAdditionalInformation21> ICorporateActionNarrative66.TaxationConditions =>
+        TaxationConditions;
+    IEnumerable<IUpdatedAdditionalInformation21> ICorporateActionNarrative66.CertificationBreakdown =>
+        CertificationBreakdown;
 }

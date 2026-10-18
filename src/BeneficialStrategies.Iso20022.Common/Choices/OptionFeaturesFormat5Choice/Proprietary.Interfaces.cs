@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.OptionFeaturesFormat5Choice;
 
-public partial record Proprietary : IProprietary
-{
-}
+public partial record Proprietary : IProprietary { }

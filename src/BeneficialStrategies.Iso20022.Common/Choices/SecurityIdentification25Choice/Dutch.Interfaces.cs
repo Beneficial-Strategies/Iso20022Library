@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification25Choice;
 
-public partial record Dutch : IDutch
-{
-}
+public partial record Dutch : IDutch { }

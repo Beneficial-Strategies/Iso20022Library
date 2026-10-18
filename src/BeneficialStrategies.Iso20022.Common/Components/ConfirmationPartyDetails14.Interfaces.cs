@@ -13,7 +13,9 @@ public partial record ConfirmationPartyDetails14 : IConfirmationPartyDetails14
     IPartyIdentification240Choice IConfirmationPartyDetails14.Identification => Identification;
     ISecuritiesAccount35? IConfirmationPartyDetails14.SafekeepingAccount => SafekeepingAccount;
     IAccountIdentification55Choice? IConfirmationPartyDetails14.CashDetails => CashDetails;
-    IAlternatePartyIdentification8? IConfirmationPartyDetails14.AlternateIdentification => AlternateIdentification;
-    IPartyTextInformation5? IConfirmationPartyDetails14.AdditionalInformation => AdditionalInformation;
+    IAlternatePartyIdentification8? IConfirmationPartyDetails14.AlternateIdentification =>
+        AlternateIdentification;
+    IPartyTextInformation5? IConfirmationPartyDetails14.AdditionalInformation =>
+        AdditionalInformation;
     ITradingPartyCapacity3Choice? IConfirmationPartyDetails14.PartyCapacity => PartyCapacity;
 }

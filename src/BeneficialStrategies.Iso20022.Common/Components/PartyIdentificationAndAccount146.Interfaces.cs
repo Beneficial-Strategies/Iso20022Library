@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PartyIdentificationAndAccount146 : IPartyIdentificationAndAccount146
 {
-    IPartyIdentification104Choice IPartyIdentificationAndAccount146.Identification => Identification;
-    ISecuritiesAccount30? IPartyIdentificationAndAccount146.SafekeepingAccount => SafekeepingAccount;
+    IPartyIdentification104Choice IPartyIdentificationAndAccount146.Identification =>
+        Identification;
+    ISecuritiesAccount30? IPartyIdentificationAndAccount146.SafekeepingAccount =>
+        SafekeepingAccount;
 }

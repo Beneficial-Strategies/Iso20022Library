@@ -8,8 +8,11 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record SecuritiesTransactionCancellationRequestQueryV01 : ISecuritiesTransactionCancellationRequestQueryV01
+public partial record SecuritiesTransactionCancellationRequestQueryV01
+    : ISecuritiesTransactionCancellationRequestQueryV01
 {
-    ISecuritiesCancellationQueryDefinition1 ISecuritiesTransactionCancellationRequestQueryV01.QueryDefinition => QueryDefinition;
-    IEnumerable<ISupplementaryData1> ISecuritiesTransactionCancellationRequestQueryV01.SupplementaryData => SupplementaryData;
+    ISecuritiesCancellationQueryDefinition1 ISecuritiesTransactionCancellationRequestQueryV01.QueryDefinition =>
+        QueryDefinition;
+    IEnumerable<ISupplementaryData1> ISecuritiesTransactionCancellationRequestQueryV01.SupplementaryData =>
+        SupplementaryData;
 }

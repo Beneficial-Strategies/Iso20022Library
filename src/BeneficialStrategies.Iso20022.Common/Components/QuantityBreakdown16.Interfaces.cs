@@ -12,7 +12,8 @@ public partial record QuantityBreakdown16 : IQuantityBreakdown16
 {
     IGenericIdentification37? IQuantityBreakdown16.LotNumber => LotNumber;
     IFinancialInstrumentQuantity1Choice? IQuantityBreakdown16.LotQuantity => LotQuantity;
-    IGenericIdentification20? IQuantityBreakdown16.SecuritiesSubBalanceType => SecuritiesSubBalanceType;
+    IGenericIdentification20? IQuantityBreakdown16.SecuritiesSubBalanceType =>
+        SecuritiesSubBalanceType;
     IDateAndDateTimeChoice? IQuantityBreakdown16.LotDateTime => LotDateTime;
     IPrice2? IQuantityBreakdown16.LotPrice => LotPrice;
     ITypeOfPrice3Choice? IQuantityBreakdown16.TypeOfPrice => TypeOfPrice;

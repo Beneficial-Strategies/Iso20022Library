@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SystemPartyIdentification8 : ISystemPartyIdentification8
 {
     IPartyIdentification136 ISystemPartyIdentification8.Identification => Identification;
-    IPartyIdentification136? ISystemPartyIdentification8.ResponsiblePartyIdentification => ResponsiblePartyIdentification;
+    IPartyIdentification136? ISystemPartyIdentification8.ResponsiblePartyIdentification =>
+        ResponsiblePartyIdentification;
 }

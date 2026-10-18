@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record Organisation26 : IOrganisation26
-{
-}
+public partial record Organisation26 : IOrganisation26 { }

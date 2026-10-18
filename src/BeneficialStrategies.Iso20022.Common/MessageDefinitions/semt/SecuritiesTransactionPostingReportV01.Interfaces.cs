@@ -10,13 +10,21 @@ namespace BeneficialStrategies.Iso20022.semt;
 
 public partial record SecuritiesTransactionPostingReportV01 : ISecuritiesTransactionPostingReportV01
 {
-    IDocumentIdentification11 ISecuritiesTransactionPostingReportV01.Identification => Identification;
+    IDocumentIdentification11 ISecuritiesTransactionPostingReportV01.Identification =>
+        Identification;
     IPagination ISecuritiesTransactionPostingReportV01.Pagination => Pagination;
-    IStatement11 ISecuritiesTransactionPostingReportV01.StatementGeneralDetails => StatementGeneralDetails;
-    IPartyIdentification13Choice? ISecuritiesTransactionPostingReportV01.AccountOwner => AccountOwner;
-    ISecuritiesAccount13 ISecuritiesTransactionPostingReportV01.SafekeepingAccount => SafekeepingAccount;
-    IEnumerable<IFinancialInstrumentDetails2> ISecuritiesTransactionPostingReportV01.FinancialInstrumentDetails => FinancialInstrumentDetails;
-    IEnumerable<ISubAccountIdentification9> ISecuritiesTransactionPostingReportV01.SubAccountDetails => SubAccountDetails;
-    IPartyIdentification10Choice? ISecuritiesTransactionPostingReportV01.MessageOriginator => MessageOriginator;
-    IPartyIdentification10Choice? ISecuritiesTransactionPostingReportV01.MessageRecipient => MessageRecipient;
+    IStatement11 ISecuritiesTransactionPostingReportV01.StatementGeneralDetails =>
+        StatementGeneralDetails;
+    IPartyIdentification13Choice? ISecuritiesTransactionPostingReportV01.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount13 ISecuritiesTransactionPostingReportV01.SafekeepingAccount =>
+        SafekeepingAccount;
+    IEnumerable<IFinancialInstrumentDetails2> ISecuritiesTransactionPostingReportV01.FinancialInstrumentDetails =>
+        FinancialInstrumentDetails;
+    IEnumerable<ISubAccountIdentification9> ISecuritiesTransactionPostingReportV01.SubAccountDetails =>
+        SubAccountDetails;
+    IPartyIdentification10Choice? ISecuritiesTransactionPostingReportV01.MessageOriginator =>
+        MessageOriginator;
+    IPartyIdentification10Choice? ISecuritiesTransactionPostingReportV01.MessageRecipient =>
+        MessageRecipient;
 }

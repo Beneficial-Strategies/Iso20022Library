@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 
 public partial record TransferInInstructionV03 : ITransferInInstructionV03
 {
-    IMessageIdentification1 ITransferInInstructionV03.MessageIdentification => MessageIdentification;
+    IMessageIdentification1 ITransferInInstructionV03.MessageIdentification =>
+        MessageIdentification;
     IAdditionalReference2? ITransferInInstructionV03.PoolReference => PoolReference;
     IAdditionalReference2? ITransferInInstructionV03.PreviousReference => PreviousReference;
     IAdditionalReference2? ITransferInInstructionV03.RelatedReference => RelatedReference;

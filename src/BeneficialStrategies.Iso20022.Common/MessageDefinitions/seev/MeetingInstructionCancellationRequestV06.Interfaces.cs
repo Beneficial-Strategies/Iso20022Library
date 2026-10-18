@@ -8,10 +8,15 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record MeetingInstructionCancellationRequestV06 : IMeetingInstructionCancellationRequestV06
+public partial record MeetingInstructionCancellationRequestV06
+    : IMeetingInstructionCancellationRequestV06
 {
-    IMeetingReference8? IMeetingInstructionCancellationRequestV06.MeetingReference => MeetingReference;
-    ISecurityIdentification19? IMeetingInstructionCancellationRequestV06.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IEnumerable<ICancelInstruction1> IMeetingInstructionCancellationRequestV06.ToBeCancelledInstruction => ToBeCancelledInstruction;
-    IEnumerable<ISupplementaryData1> IMeetingInstructionCancellationRequestV06.SupplementaryData => SupplementaryData;
+    IMeetingReference8? IMeetingInstructionCancellationRequestV06.MeetingReference =>
+        MeetingReference;
+    ISecurityIdentification19? IMeetingInstructionCancellationRequestV06.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IEnumerable<ICancelInstruction1> IMeetingInstructionCancellationRequestV06.ToBeCancelledInstruction =>
+        ToBeCancelledInstruction;
+    IEnumerable<ISupplementaryData1> IMeetingInstructionCancellationRequestV06.SupplementaryData =>
+        SupplementaryData;
 }

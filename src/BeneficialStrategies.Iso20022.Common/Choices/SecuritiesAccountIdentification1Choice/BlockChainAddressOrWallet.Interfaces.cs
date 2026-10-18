@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAccountIdentification1Choice;
 
-public partial record BlockChainAddressOrWallet : IBlockChainAddressOrWallet
-{
-}
+public partial record BlockChainAddressOrWallet : IBlockChainAddressOrWallet { }

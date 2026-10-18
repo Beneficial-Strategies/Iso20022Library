@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.DatePeriodSearch1Choice;
 
-public partial record FromDate : IFromDate
-{
-}
+public partial record FromDate : IFromDate { }

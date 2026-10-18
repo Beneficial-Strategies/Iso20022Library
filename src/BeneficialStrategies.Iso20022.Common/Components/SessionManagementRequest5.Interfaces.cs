@@ -15,5 +15,6 @@ public partial record SessionManagementRequest5 : ISessionManagementRequest5
     ILoginRequest4? ISessionManagementRequest5.LoginRequest => LoginRequest;
     ILogoutRequest1? ISessionManagementRequest5.LogoutRequest => LogoutRequest;
     IDiagnosisRequest1? ISessionManagementRequest5.DiagnosisRequest => DiagnosisRequest;
-    IEnumerable<ISupplementaryData1> ISessionManagementRequest5.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> ISessionManagementRequest5.SupplementaryData =>
+        SupplementaryData;
 }

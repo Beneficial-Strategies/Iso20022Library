@@ -11,21 +11,27 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record TransactionDetails170 : ITransactionDetails170
 {
     ITransactionActivity3Choice ITransactionDetails170.TransactionActivity => TransactionActivity;
-    ISettlementOrCorporateActionEvent34Choice? ITransactionDetails170.SettlementTransactionOrCorporateActionEventType => SettlementTransactionOrCorporateActionEventType;
+    ISettlementOrCorporateActionEvent34Choice? ITransactionDetails170.SettlementTransactionOrCorporateActionEventType =>
+        SettlementTransactionOrCorporateActionEventType;
     ISettlementDetails184? ITransactionDetails170.SettlementParameters => SettlementParameters;
     IPlaceOfTradeIdentification1? ITransactionDetails170.PlaceOfTrade => PlaceOfTrade;
     ISafeKeepingPlace5? ITransactionDetails170.SafekeepingPlace => SafekeepingPlace;
     IPlaceOfClearingIdentification2? ITransactionDetails170.PlaceOfClearing => PlaceOfClearing;
-    ISecurityIdentification19 ITransactionDetails170.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification19 ITransactionDetails170.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     IQuantity51Choice ITransactionDetails170.PostingQuantity => PostingQuantity;
-    IQuantity51Choice? ITransactionDetails170.PartiallyReleasedQuantity => PartiallyReleasedQuantity;
+    IQuantity51Choice? ITransactionDetails170.PartiallyReleasedQuantity =>
+        PartiallyReleasedQuantity;
     IAmountAndDirection51? ITransactionDetails170.PostingAmount => PostingAmount;
     ITradeDate8Choice? ITransactionDetails170.TradeDate => TradeDate;
-    IDateAndDateTime2Choice? ITransactionDetails170.ExpectedSettlementDate => ExpectedSettlementDate;
+    IDateAndDateTime2Choice? ITransactionDetails170.ExpectedSettlementDate =>
+        ExpectedSettlementDate;
     ISettlementDate19Choice ITransactionDetails170.SettlementDate => SettlementDate;
     IDateAndDateTime2Choice? ITransactionDetails170.LateDeliveryDate => LateDeliveryDate;
     IDateAndDateTime2Choice? ITransactionDetails170.ExpectedValueDate => ExpectedValueDate;
-    ISettlementParties125? ITransactionDetails170.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties125? ITransactionDetails170.ReceivingSettlementParties => ReceivingSettlementParties;
+    ISettlementParties125? ITransactionDetails170.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties125? ITransactionDetails170.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
     IEnumerable<ISupplementaryData1> ITransactionDetails170.SupplementaryData => SupplementaryData;
 }

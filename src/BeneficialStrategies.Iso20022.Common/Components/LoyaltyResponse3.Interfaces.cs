@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record LoyaltyResponse3 : ILoyaltyResponse3
 {
-    ITransactionIdentifier1 ILoyaltyResponse3.SaleTransactionIdentification => SaleTransactionIdentification;
-    ITransactionIdentifier1 ILoyaltyResponse3.POITransactionIdentification => POITransactionIdentification;
+    ITransactionIdentifier1 ILoyaltyResponse3.SaleTransactionIdentification =>
+        SaleTransactionIdentification;
+    ITransactionIdentifier1 ILoyaltyResponse3.POITransactionIdentification =>
+        POITransactionIdentification;
     IEnumerable<ILoyaltyResult3> ILoyaltyResponse3.Result => Result;
 }

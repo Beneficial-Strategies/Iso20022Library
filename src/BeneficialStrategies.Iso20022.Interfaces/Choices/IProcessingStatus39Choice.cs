@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides the status of a transaction (eg, at a non-matching CSD) as far as the message sender is concerned.
 /// </summary>
 [IsoId("_lip6ACzREeOsiuMH68so7Q")]
-public interface IProcessingStatus39Choice : IIsoChoice
-{
-}
+public interface IProcessingStatus39Choice : IIsoChoice { }

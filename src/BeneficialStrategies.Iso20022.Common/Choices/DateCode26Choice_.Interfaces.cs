@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record DateCode26Choice_ : IDateCode26Choice
-{
-}
+public abstract partial record DateCode26Choice_ : IDateCode26Choice { }

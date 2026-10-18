@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the revaluation.
 /// </summary>
 [IsoId("_5mw3_ZNLEeWGlc8L7oPDIg")]
-public interface IRevaluationIndicator4Choice : IIsoChoice
-{
-}
+public interface IRevaluationIndicator4Choice : IIsoChoice { }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.TypeOfPrice33Choice;
 
-public partial record Code : ICode
-{
-}
+public partial record Code : ICode { }

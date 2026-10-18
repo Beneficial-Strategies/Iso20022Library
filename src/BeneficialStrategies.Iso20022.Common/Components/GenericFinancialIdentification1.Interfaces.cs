@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record GenericFinancialIdentification1 : IGenericFinancialIdentification1
 {
-    IFinancialIdentificationSchemeName1Choice? IGenericFinancialIdentification1.SchemeName => SchemeName;
+    IFinancialIdentificationSchemeName1Choice? IGenericFinancialIdentification1.SchemeName =>
+        SchemeName;
 }

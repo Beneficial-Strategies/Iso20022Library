@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.Quantity42Choice;
 
-public partial record TransferRate : ITransferRate
-{
-}
+public partial record TransferRate : ITransferRate { }

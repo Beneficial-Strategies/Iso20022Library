@@ -7,6 +7,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Specifies one or a range of securities accounts.</summary>
 [IsoId("_38iun-GBEeWCAvUNsZ5u6g")]
-public interface ISecuritiesAccount2Choice : IIsoChoice
-{
-}
+public interface ISecuritiesAccount2Choice : IIsoChoice { }

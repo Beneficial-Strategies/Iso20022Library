@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.References37Choice;
 /// Identification of the intra-position movement posting report to be cancelled.
 /// </summary>
 [IsoId("_ts-sMQ34EeKN_Y-2Awiamw")]
-public interface IIntraPositionMovementPostingReportIdentification : IReferences37Choice, IIsoChoiceVariant
+public interface IIntraPositionMovementPostingReportIdentification
+    : IReferences37Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Period as a date, a month or a date time span for which the statement is provided.
 /// </summary>
 [IsoId("_kaGgU579EeOieb-y7x0pFg")]
-public interface IDatePeriod1Choice : IIsoChoice
-{
-}
+public interface IDatePeriod1Choice : IIsoChoice { }

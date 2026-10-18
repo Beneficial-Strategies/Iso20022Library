@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimCancellationRequestSt
 /// Provides status information related to a pending cancellation request.
 /// </summary>
 [IsoId("_1Tcqa9x4EeqESbVR5AloZQ")]
-public interface IPendingCancellation : IMarketClaimCancellationRequestStatus1Choice, IIsoChoiceVariant
+public interface IPendingCancellation
+    : IMarketClaimCancellationRequestStatus1Choice,
+        IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>
     [IsoXmlTag("PdgCxl")]

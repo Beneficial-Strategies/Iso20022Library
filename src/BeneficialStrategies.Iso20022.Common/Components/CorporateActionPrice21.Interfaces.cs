@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionPrice21 : ICorporateActionPrice21
 {
-    IEnumerable<IPriceFormat7Choice> ICorporateActionPrice21.GenericCashPriceReceivedPerProduct => GenericCashPriceReceivedPerProduct;
+    IEnumerable<IPriceFormat7Choice> ICorporateActionPrice21.GenericCashPriceReceivedPerProduct =>
+        GenericCashPriceReceivedPerProduct;
     IPriceFormat5Choice? ICorporateActionPrice21.CashInLieuOfSharePrice => CashInLieuOfSharePrice;
-    IPriceFormat5Choice? ICorporateActionPrice21.OverSubscriptionDepositPrice => OverSubscriptionDepositPrice;
+    IPriceFormat5Choice? ICorporateActionPrice21.OverSubscriptionDepositPrice =>
+        OverSubscriptionDepositPrice;
 }

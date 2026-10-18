@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the cash settlement system.
 /// </summary>
 [IsoId("_AF_qMTqHEeWVrPy0StzzSg")]
-public interface ICashSettlementSystem4Choice : IIsoChoice
-{
-}
+public interface ICashSettlementSystem4Choice : IIsoChoice { }

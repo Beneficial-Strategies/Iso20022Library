@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record DirectDebitTransaction8 : IDirectDebitTransaction8
 {
-    IMandateRelatedInformation10? IDirectDebitTransaction8.MandateRelatedInformation => MandateRelatedInformation;
-    IPartyIdentification43? IDirectDebitTransaction8.CreditorSchemeIdentification => CreditorSchemeIdentification;
+    IMandateRelatedInformation10? IDirectDebitTransaction8.MandateRelatedInformation =>
+        MandateRelatedInformation;
+    IPartyIdentification43? IDirectDebitTransaction8.CreditorSchemeIdentification =>
+        CreditorSchemeIdentification;
 }

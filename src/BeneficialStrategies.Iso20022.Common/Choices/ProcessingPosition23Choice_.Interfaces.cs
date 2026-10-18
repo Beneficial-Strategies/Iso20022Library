@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record ProcessingPosition23Choice_ : IProcessingPosition23Choice
-{
-}
+public abstract partial record ProcessingPosition23Choice_ : IProcessingPosition23Choice { }

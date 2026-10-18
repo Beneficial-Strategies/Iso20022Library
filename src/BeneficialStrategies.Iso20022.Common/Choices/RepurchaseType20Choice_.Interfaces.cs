@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record RepurchaseType20Choice_ : IRepurchaseType20Choice
-{
-}
+public abstract partial record RepurchaseType20Choice_ : IRepurchaseType20Choice { }

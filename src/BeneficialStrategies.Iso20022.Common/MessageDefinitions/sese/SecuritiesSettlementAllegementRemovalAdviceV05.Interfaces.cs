@@ -8,12 +8,19 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesSettlementAllegementRemovalAdviceV05 : ISecuritiesSettlementAllegementRemovalAdviceV05
+public partial record SecuritiesSettlementAllegementRemovalAdviceV05
+    : ISecuritiesSettlementAllegementRemovalAdviceV05
 {
-    ISettlementTypeAndIdentification18 ISecuritiesSettlementAllegementRemovalAdviceV05.AccountServicerTransactionIdentification => AccountServicerTransactionIdentification;
-    IIdentification14? ISecuritiesSettlementAllegementRemovalAdviceV05.MarketInfrastructureTransactionIdentification => MarketInfrastructureTransactionIdentification;
-    IPartyIdentification144? ISecuritiesSettlementAllegementRemovalAdviceV05.AccountOwner => AccountOwner;
-    ISecuritiesAccount19 ISecuritiesSettlementAllegementRemovalAdviceV05.SafekeepingAccount => SafekeepingAccount;
-    ITransactionDetails135? ISecuritiesSettlementAllegementRemovalAdviceV05.TransactionDetails => TransactionDetails;
-    IEnumerable<ISupplementaryData1> ISecuritiesSettlementAllegementRemovalAdviceV05.SupplementaryData => SupplementaryData;
+    ISettlementTypeAndIdentification18 ISecuritiesSettlementAllegementRemovalAdviceV05.AccountServicerTransactionIdentification =>
+        AccountServicerTransactionIdentification;
+    IIdentification14? ISecuritiesSettlementAllegementRemovalAdviceV05.MarketInfrastructureTransactionIdentification =>
+        MarketInfrastructureTransactionIdentification;
+    IPartyIdentification144? ISecuritiesSettlementAllegementRemovalAdviceV05.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount19 ISecuritiesSettlementAllegementRemovalAdviceV05.SafekeepingAccount =>
+        SafekeepingAccount;
+    ITransactionDetails135? ISecuritiesSettlementAllegementRemovalAdviceV05.TransactionDetails =>
+        TransactionDetails;
+    IEnumerable<ISupplementaryData1> ISecuritiesSettlementAllegementRemovalAdviceV05.SupplementaryData =>
+        SupplementaryData;
 }

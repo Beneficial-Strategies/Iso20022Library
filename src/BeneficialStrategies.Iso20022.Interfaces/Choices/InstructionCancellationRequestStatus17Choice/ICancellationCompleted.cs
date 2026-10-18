@@ -8,7 +8,9 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionCancellationRequestSt
 /// <summary>
 /// Cancellation Completed.
 /// </summary>
-public interface ICancellationCompleted : IInstructionCancellationRequestStatus17Choice, IIsoChoiceVariant
+public interface ICancellationCompleted
+    : IInstructionCancellationRequestStatus17Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

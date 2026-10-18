@@ -7,6 +7,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice between a range of quantities.</summary>
 [IsoId("_jtHuFO5NEeCisYr99QEiWA_-1373711231")]
-public interface IQuantityRange1Choice : IIsoChoice
-{
-}
+public interface IQuantityRange1Choice : IIsoChoice { }

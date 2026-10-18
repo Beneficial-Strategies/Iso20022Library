@@ -12,5 +12,6 @@ public partial record AccountIdentification50 : IAccountIdentification50
 {
     IPartyIdentification136Choice? IAccountIdentification50.AccountOwner => AccountOwner;
     ISafekeepingPlaceFormat32Choice? IAccountIdentification50.SafekeepingPlace => SafekeepingPlace;
-    IEnumerable<ICorporateActionEventAndBalance16> IAccountIdentification50.CorporateActionEventAndBalance => CorporateActionEventAndBalance;
+    IEnumerable<ICorporateActionEventAndBalance16> IAccountIdentification50.CorporateActionEventAndBalance =>
+        CorporateActionEventAndBalance;
 }

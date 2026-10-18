@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TMSActionIdentification7 : ITMSActionIdentification7
 {
-    IDataSetIdentification8? ITMSActionIdentification7.DataSetIdentification => DataSetIdentification;
+    IDataSetIdentification8? ITMSActionIdentification7.DataSetIdentification =>
+        DataSetIdentification;
 }

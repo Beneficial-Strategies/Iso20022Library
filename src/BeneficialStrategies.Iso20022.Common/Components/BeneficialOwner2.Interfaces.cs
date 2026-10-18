@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record BeneficialOwner2 : IBeneficialOwner2
 {
-    IPartyIdentification100 IBeneficialOwner2.BeneficialOwnerIdentification => BeneficialOwnerIdentification;
-    IAlternateIdentification4? IBeneficialOwner2.AdditionalIdentification => AdditionalIdentification;
+    IPartyIdentification100 IBeneficialOwner2.BeneficialOwnerIdentification =>
+        BeneficialOwnerIdentification;
+    IAlternateIdentification4? IBeneficialOwner2.AdditionalIdentification =>
+        AdditionalIdentification;
     IBeneficiaryCertificationType9Choice? IBeneficialOwner2.CertificationType => CertificationType;
 }

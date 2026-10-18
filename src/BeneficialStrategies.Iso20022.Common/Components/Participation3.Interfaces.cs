@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record Participation3 : IParticipation3
-{
-}
+public partial record Participation3 : IParticipation3 { }

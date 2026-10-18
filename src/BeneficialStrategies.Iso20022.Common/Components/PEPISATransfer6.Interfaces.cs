@@ -13,5 +13,6 @@ public partial record PEPISATransfer6 : IPEPISATransfer6
     IISAYearsOfIssue1 IPEPISATransfer6.ISA => ISA;
     IPreviousYearChoice IPEPISATransfer6.PEP => PEP;
     IPortfolio1 IPEPISATransfer6.Portfolio => Portfolio;
-    IEnumerable<IFinancialInstrument12> IPEPISATransfer6.FinancialInstrumentAssetForTransfer => FinancialInstrumentAssetForTransfer;
+    IEnumerable<IFinancialInstrument12> IPEPISATransfer6.FinancialInstrumentAssetForTransfer =>
+        FinancialInstrumentAssetForTransfer;
 }

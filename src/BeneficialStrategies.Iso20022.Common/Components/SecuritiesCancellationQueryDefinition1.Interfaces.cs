@@ -8,7 +8,9 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record SecuritiesCancellationQueryDefinition1 : ISecuritiesCancellationQueryDefinition1
+public partial record SecuritiesCancellationQueryDefinition1
+    : ISecuritiesCancellationQueryDefinition1
 {
-    ISecuritiesCancellationQueryCriteria1 ISecuritiesCancellationQueryDefinition1.SearchCriteria => SearchCriteria;
+    ISecuritiesCancellationQueryCriteria1 ISecuritiesCancellationQueryDefinition1.SearchCriteria =>
+        SearchCriteria;
 }

@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record InvestmentFundTransactionsByFund2 : IInvestmentFundTransactionsByFund2
 {
-    ISecurityIdentification3Choice IInvestmentFundTransactionsByFund2.Identification => Identification;
-    IEnumerable<IInvestmentFundTransaction3> IInvestmentFundTransactionsByFund2.TransactionDetails => TransactionDetails;
+    ISecurityIdentification3Choice IInvestmentFundTransactionsByFund2.Identification =>
+        Identification;
+    IEnumerable<IInvestmentFundTransaction3> IInvestmentFundTransactionsByFund2.TransactionDetails =>
+        TransactionDetails;
     IPaginationBalance1? IInvestmentFundTransactionsByFund2.BalanceByPage => BalanceByPage;
 }

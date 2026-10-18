@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record ClassificationType33Choice_ : IClassificationType33Choice
-{
-}
+public abstract partial record ClassificationType33Choice_ : IClassificationType33Choice { }

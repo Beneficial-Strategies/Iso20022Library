@@ -13,5 +13,6 @@ public partial record Resolution6 : IResolution6
     IEnumerable<IItemDescription1> IResolution6.Description => Description;
     IEnumerable<IVoteInstructionType1> IResolution6.VoteInstructionType => VoteInstructionType;
     IEntitlement1Choice? IResolution6.Entitlement => Entitlement;
-    IEnumerable<IVotingRightsThreshold1> IResolution6.VotingRightsThresholdForApproval => VotingRightsThresholdForApproval;
+    IEnumerable<IVotingRightsThreshold1> IResolution6.VotingRightsThresholdForApproval =>
+        VotingRightsThresholdForApproval;
 }

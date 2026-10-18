@@ -16,19 +16,29 @@ public partial record TransactionParties10 : ITransactionParties10
     IParty40Choice? ITransactionParties10.InitiatingParty => InitiatingParty;
     IBranchAndFinancialInstitutionIdentification6? ITransactionParties10.DebtorAgent => DebtorAgent;
     ICashAccount40? ITransactionParties10.DebtorAgentAccount => DebtorAgentAccount;
-    IBranchAndFinancialInstitutionIdentification6? ITransactionParties10.PreviousInstructingAgent1 => PreviousInstructingAgent1;
-    ICashAccount40? ITransactionParties10.PreviousInstructingAgent1Account => PreviousInstructingAgent1Account;
-    IBranchAndFinancialInstitutionIdentification6? ITransactionParties10.PreviousInstructingAgent2 => PreviousInstructingAgent2;
-    ICashAccount40? ITransactionParties10.PreviousInstructingAgent2Account => PreviousInstructingAgent2Account;
-    IBranchAndFinancialInstitutionIdentification6? ITransactionParties10.PreviousInstructingAgent3 => PreviousInstructingAgent3;
-    ICashAccount40? ITransactionParties10.PreviousInstructingAgent3Account => PreviousInstructingAgent3Account;
-    IBranchAndFinancialInstitutionIdentification6? ITransactionParties10.IntermediaryAgent1 => IntermediaryAgent1;
+    IBranchAndFinancialInstitutionIdentification6? ITransactionParties10.PreviousInstructingAgent1 =>
+        PreviousInstructingAgent1;
+    ICashAccount40? ITransactionParties10.PreviousInstructingAgent1Account =>
+        PreviousInstructingAgent1Account;
+    IBranchAndFinancialInstitutionIdentification6? ITransactionParties10.PreviousInstructingAgent2 =>
+        PreviousInstructingAgent2;
+    ICashAccount40? ITransactionParties10.PreviousInstructingAgent2Account =>
+        PreviousInstructingAgent2Account;
+    IBranchAndFinancialInstitutionIdentification6? ITransactionParties10.PreviousInstructingAgent3 =>
+        PreviousInstructingAgent3;
+    ICashAccount40? ITransactionParties10.PreviousInstructingAgent3Account =>
+        PreviousInstructingAgent3Account;
+    IBranchAndFinancialInstitutionIdentification6? ITransactionParties10.IntermediaryAgent1 =>
+        IntermediaryAgent1;
     ICashAccount40? ITransactionParties10.IntermediaryAgent1Account => IntermediaryAgent1Account;
-    IBranchAndFinancialInstitutionIdentification6? ITransactionParties10.IntermediaryAgent2 => IntermediaryAgent2;
+    IBranchAndFinancialInstitutionIdentification6? ITransactionParties10.IntermediaryAgent2 =>
+        IntermediaryAgent2;
     ICashAccount40? ITransactionParties10.IntermediaryAgent2Account => IntermediaryAgent2Account;
-    IBranchAndFinancialInstitutionIdentification6? ITransactionParties10.IntermediaryAgent3 => IntermediaryAgent3;
+    IBranchAndFinancialInstitutionIdentification6? ITransactionParties10.IntermediaryAgent3 =>
+        IntermediaryAgent3;
     ICashAccount40? ITransactionParties10.IntermediaryAgent3Account => IntermediaryAgent3Account;
-    IBranchAndFinancialInstitutionIdentification6? ITransactionParties10.CreditorAgent => CreditorAgent;
+    IBranchAndFinancialInstitutionIdentification6? ITransactionParties10.CreditorAgent =>
+        CreditorAgent;
     ICashAccount40? ITransactionParties10.CreditorAgentAccount => CreditorAgentAccount;
     IParty40Choice ITransactionParties10.Creditor => Creditor;
     ICashAccount40? ITransactionParties10.CreditorAccount => CreditorAccount;

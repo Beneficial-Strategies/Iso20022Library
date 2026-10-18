@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record MandateRelatedInformation17 : IMandateRelatedInformation17
 {
-    IContentInformationType39? IMandateRelatedInformation17.ProtectedMandateImage => ProtectedMandateImage;
+    IContentInformationType39? IMandateRelatedInformation17.ProtectedMandateImage =>
+        ProtectedMandateImage;
 }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between formats for account identification.
 /// </summary>
 [IsoId("_RBvu5dp-Ed-ak6NoX_4Aeg_1713990380")]
-public interface IAccountIdentificationFormatChoice : IIsoChoice
-{
-}
+public interface IAccountIdentificationFormatChoice : IIsoChoice { }

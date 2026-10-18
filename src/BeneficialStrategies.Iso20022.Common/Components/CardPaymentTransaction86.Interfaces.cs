@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CardPaymentTransaction86 : ICardPaymentTransaction86
 {
-    ITransactionIdentifier1 ICardPaymentTransaction86.TransactionIdentification => TransactionIdentification;
+    ITransactionIdentifier1 ICardPaymentTransaction86.TransactionIdentification =>
+        TransactionIdentification;
     IGenericIdentification32 ICardPaymentTransaction86.POIIdentification => POIIdentification;
     ICurrencyConversion16 ICardPaymentTransaction86.CurrencyConversion => CurrencyConversion;
 }

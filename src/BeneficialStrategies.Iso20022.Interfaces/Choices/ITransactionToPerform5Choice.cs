@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Content of the batch request message.
 /// </summary>
 [IsoId("_XnUecXGwEe2TbaNWBpRZpQ")]
-public interface ITransactionToPerform5Choice : IIsoChoice
-{
-}
+public interface ITransactionToPerform5Choice : IIsoChoice { }

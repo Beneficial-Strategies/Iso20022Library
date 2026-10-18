@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between the different options to search for an account.
 /// </summary>
 [IsoId("_g7QEuGliEeGaMcKyqKNRfQ_-836272256")]
-public interface IAccountIdentificationSearchCriteria2Choice : IIsoChoice
-{
-}
+public interface IAccountIdentificationSearchCriteria2Choice : IIsoChoice { }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record DigitalPaymentSettlement3 : IDigitalPaymentSettlement3
 {
-    ISecurityIdentification50 IDigitalPaymentSettlement3.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification50 IDigitalPaymentSettlement3.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     IQuantity48Choice IDigitalPaymentSettlement3.Quantity => Quantity;
 }

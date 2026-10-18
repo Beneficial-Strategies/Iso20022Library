@@ -10,8 +10,12 @@ namespace BeneficialStrategies.Iso20022.seev;
 
 public partial record AgentCAMovementCancellationRequestV01 : IAgentCAMovementCancellationRequestV01
 {
-    IDocumentIdentification8 IAgentCAMovementCancellationRequestV01.Identification => Identification;
-    IDocumentIdentification8 IAgentCAMovementCancellationRequestV01.AgentCAMovementInstructionIdentification => AgentCAMovementInstructionIdentification;
-    ICorporateActionInformation1 IAgentCAMovementCancellationRequestV01.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IMovementInstruction1? IAgentCAMovementCancellationRequestV01.MovementDetails => MovementDetails;
+    IDocumentIdentification8 IAgentCAMovementCancellationRequestV01.Identification =>
+        Identification;
+    IDocumentIdentification8 IAgentCAMovementCancellationRequestV01.AgentCAMovementInstructionIdentification =>
+        AgentCAMovementInstructionIdentification;
+    ICorporateActionInformation1 IAgentCAMovementCancellationRequestV01.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IMovementInstruction1? IAgentCAMovementCancellationRequestV01.MovementDetails =>
+        MovementDetails;
 }

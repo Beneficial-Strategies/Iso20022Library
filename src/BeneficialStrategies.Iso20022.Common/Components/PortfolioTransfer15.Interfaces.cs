@@ -15,6 +15,8 @@ public partial record PortfolioTransfer15 : IPortfolioTransfer15
     IEnumerable<ICashAll1> IPortfolioTransfer15.CashAll => CashAll;
     IEnumerable<IResidualCash2> IPortfolioTransfer15.ResidualCash => ResidualCash;
     IPaymentInstrument22? IPortfolioTransfer15.PaymentDetails => PaymentDetails;
-    IEnumerable<IFinancialInstrument109> IPortfolioTransfer15.FinancialInstrumentAssetForTransfer => FinancialInstrumentAssetForTransfer;
-    IEnumerable<IAdditionalInformation15> IPortfolioTransfer15.AdditionalInformation => AdditionalInformation;
+    IEnumerable<IFinancialInstrument109> IPortfolioTransfer15.FinancialInstrumentAssetForTransfer =>
+        FinancialInstrumentAssetForTransfer;
+    IEnumerable<IAdditionalInformation15> IPortfolioTransfer15.AdditionalInformation =>
+        AdditionalInformation;
 }

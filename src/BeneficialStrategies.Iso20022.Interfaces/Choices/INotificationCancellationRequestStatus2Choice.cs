@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Notification Cancellation Request Status2Choice.
 /// </summary>
 [IsoId("_Eye7gVvFEe6gDOpEK7Q4ig")]
-public interface INotificationCancellationRequestStatus2Choice : IIsoChoice
-{
-}
+public interface INotificationCancellationRequestStatus2Choice : IIsoChoice { }

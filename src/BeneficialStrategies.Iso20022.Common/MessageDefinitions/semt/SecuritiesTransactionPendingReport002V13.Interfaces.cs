@@ -8,13 +8,18 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record SecuritiesTransactionPendingReport002V13 : ISecuritiesTransactionPendingReport002V13
+public partial record SecuritiesTransactionPendingReport002V13
+    : ISecuritiesTransactionPendingReport002V13
 {
     IPagination1 ISecuritiesTransactionPendingReport002V13.Pagination => Pagination;
-    IStatement70 ISecuritiesTransactionPendingReport002V13.StatementGeneralDetails => StatementGeneralDetails;
+    IStatement70 ISecuritiesTransactionPendingReport002V13.StatementGeneralDetails =>
+        StatementGeneralDetails;
     IPartyIdentification156? ISecuritiesTransactionPendingReport002V13.AccountOwner => AccountOwner;
-    ISecuritiesAccount30? ISecuritiesTransactionPendingReport002V13.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet7? ISecuritiesTransactionPendingReport002V13.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
+    ISecuritiesAccount30? ISecuritiesTransactionPendingReport002V13.SafekeepingAccount =>
+        SafekeepingAccount;
+    IBlockChainAddressWallet7? ISecuritiesTransactionPendingReport002V13.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
     IEnumerable<IStatusAndReason45> ISecuritiesTransactionPendingReport002V13.Status => Status;
-    IEnumerable<ITransaction125> ISecuritiesTransactionPendingReport002V13.Transactions => Transactions;
+    IEnumerable<ITransaction125> ISecuritiesTransactionPendingReport002V13.Transactions =>
+        Transactions;
 }

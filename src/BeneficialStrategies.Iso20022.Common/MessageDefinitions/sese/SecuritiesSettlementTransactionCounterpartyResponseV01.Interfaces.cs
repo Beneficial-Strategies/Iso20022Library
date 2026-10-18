@@ -8,10 +8,15 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesSettlementTransactionCounterpartyResponseV01 : ISecuritiesSettlementTransactionCounterpartyResponseV01
+public partial record SecuritiesSettlementTransactionCounterpartyResponseV01
+    : ISecuritiesSettlementTransactionCounterpartyResponseV01
 {
-    ITransactionIdentification2 ISecuritiesSettlementTransactionCounterpartyResponseV01.TransactionIdentification => TransactionIdentification;
-    IResponseStatus3Choice ISecuritiesSettlementTransactionCounterpartyResponseV01.ResponseStatus => ResponseStatus;
-    ITransactionDetails40? ISecuritiesSettlementTransactionCounterpartyResponseV01.TransactionDetails => TransactionDetails;
-    IEnumerable<ISupplementaryData1> ISecuritiesSettlementTransactionCounterpartyResponseV01.SupplementaryData => SupplementaryData;
+    ITransactionIdentification2 ISecuritiesSettlementTransactionCounterpartyResponseV01.TransactionIdentification =>
+        TransactionIdentification;
+    IResponseStatus3Choice ISecuritiesSettlementTransactionCounterpartyResponseV01.ResponseStatus =>
+        ResponseStatus;
+    ITransactionDetails40? ISecuritiesSettlementTransactionCounterpartyResponseV01.TransactionDetails =>
+        TransactionDetails;
+    IEnumerable<ISupplementaryData1> ISecuritiesSettlementTransactionCounterpartyResponseV01.SupplementaryData =>
+        SupplementaryData;
 }

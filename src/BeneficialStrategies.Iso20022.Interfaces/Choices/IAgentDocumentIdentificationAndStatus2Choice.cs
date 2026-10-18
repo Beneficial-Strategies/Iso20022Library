@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between the Identification and status of the corporate action notification advice or the notification cancellation request sent by the agent.
 /// </summary>
 [IsoId("4c6dcfc0-1a9a-48f7-a6b5-ff1367607aa5")]
-public interface IAgentDocumentIdentificationAndStatus2Choice : IIsoChoice
-{
-}
+public interface IAgentDocumentIdentificationAndStatus2Choice : IIsoChoice { }

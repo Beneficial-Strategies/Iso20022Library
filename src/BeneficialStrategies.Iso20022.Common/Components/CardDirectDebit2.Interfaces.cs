@@ -12,5 +12,6 @@ public partial record CardDirectDebit2 : ICardDirectDebit2
 {
     IDebtor4? ICardDirectDebit2.DebtorIdentification => DebtorIdentification;
     ICreditor4 ICardDirectDebit2.CreditorIdentification => CreditorIdentification;
-    IMandateRelatedInformation13 ICardDirectDebit2.MandateRelatedInformation => MandateRelatedInformation;
+    IMandateRelatedInformation13 ICardDirectDebit2.MandateRelatedInformation =>
+        MandateRelatedInformation;
 }

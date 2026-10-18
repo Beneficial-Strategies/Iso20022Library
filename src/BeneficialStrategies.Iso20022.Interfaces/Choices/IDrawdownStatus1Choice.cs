@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a drawdown status.
 /// </summary>
 [IsoId("_bM0XwFKiEeiSDqv62fL07g")]
-public interface IDrawdownStatus1Choice : IIsoChoice
-{
-}
+public interface IDrawdownStatus1Choice : IIsoChoice { }

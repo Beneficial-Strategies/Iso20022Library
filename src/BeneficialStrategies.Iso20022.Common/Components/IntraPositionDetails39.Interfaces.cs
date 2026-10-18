@@ -12,8 +12,10 @@ public partial record IntraPositionDetails39 : IIntraPositionDetails39
 {
     IPartyIdentification92Choice? IIntraPositionDetails39.AccountOwner => AccountOwner;
     ISecuritiesAccount19 IIntraPositionDetails39.SafekeepingAccount => SafekeepingAccount;
-    ISecurityIdentification19 IIntraPositionDetails39.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentQuantity1Choice IIntraPositionDetails39.SettlementQuantity => SettlementQuantity;
+    ISecurityIdentification19 IIntraPositionDetails39.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentQuantity1Choice IIntraPositionDetails39.SettlementQuantity =>
+        SettlementQuantity;
     IGenericIdentification37? IIntraPositionDetails39.LotNumber => LotNumber;
     IDateAndDateTimeChoice IIntraPositionDetails39.SettlementDate => SettlementDate;
     ISecuritiesBalanceType7Choice? IIntraPositionDetails39.BalanceFrom => BalanceFrom;

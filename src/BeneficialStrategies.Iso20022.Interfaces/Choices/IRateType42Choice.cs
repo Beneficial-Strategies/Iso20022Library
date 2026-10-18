@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or proprietary code to specify a rate type.
 /// </summary>
 [IsoId("__c_cdUEIEeWVgfuHGaKtRQ")]
-public interface IRateType42Choice : IIsoChoice
-{
-}
+public interface IRateType42Choice : IIsoChoice { }

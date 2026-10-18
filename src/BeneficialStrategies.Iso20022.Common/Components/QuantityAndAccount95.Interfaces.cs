@@ -13,7 +13,8 @@ public partial record QuantityAndAccount95 : IQuantityAndAccount95
     IQuantity51Choice IQuantityAndAccount95.SettlementQuantity => SettlementQuantity;
     IPartyIdentification144? IQuantityAndAccount95.AccountOwner => AccountOwner;
     ISecuritiesAccount19? IQuantityAndAccount95.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet3? IQuantityAndAccount95.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
+    IBlockChainAddressWallet3? IQuantityAndAccount95.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
     ICashAccountIdentification5Choice? IQuantityAndAccount95.CashAccount => CashAccount;
     ISafeKeepingPlace3? IQuantityAndAccount95.SafekeepingPlace => SafekeepingPlace;
     IEnumerable<IQuantityBreakdown62> IQuantityAndAccount95.QuantityBreakdown => QuantityBreakdown;

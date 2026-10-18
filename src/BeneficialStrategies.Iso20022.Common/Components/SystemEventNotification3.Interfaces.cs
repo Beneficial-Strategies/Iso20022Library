@@ -13,5 +13,6 @@ public partial record SystemEventNotification3 : ISystemEventNotification3
     ICardPaymentEnvironment75 ISystemEventNotification3.Environment => Environment;
     ICardPaymentContext28 ISystemEventNotification3.Context => Context;
     IEventNotificationData2 ISystemEventNotification3.EventNotification => EventNotification;
-    IEnumerable<ISupplementaryData1> ISystemEventNotification3.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> ISystemEventNotification3.SupplementaryData =>
+        SupplementaryData;
 }

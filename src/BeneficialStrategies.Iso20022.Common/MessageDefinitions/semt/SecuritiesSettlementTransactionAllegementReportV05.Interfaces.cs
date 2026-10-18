@@ -8,11 +8,16 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record SecuritiesSettlementTransactionAllegementReportV05 : ISecuritiesSettlementTransactionAllegementReportV05
+public partial record SecuritiesSettlementTransactionAllegementReportV05
+    : ISecuritiesSettlementTransactionAllegementReportV05
 {
     IPagination ISecuritiesSettlementTransactionAllegementReportV05.Pagination => Pagination;
-    IStatement39 ISecuritiesSettlementTransactionAllegementReportV05.StatementGeneralDetails => StatementGeneralDetails;
-    IPartyIdentification98? ISecuritiesSettlementTransactionAllegementReportV05.AccountOwner => AccountOwner;
-    ISecuritiesAccount24 ISecuritiesSettlementTransactionAllegementReportV05.SafekeepingAccount => SafekeepingAccount;
-    IEnumerable<ISecuritiesTradeDetails49> ISecuritiesSettlementTransactionAllegementReportV05.AllegementDetails => AllegementDetails;
+    IStatement39 ISecuritiesSettlementTransactionAllegementReportV05.StatementGeneralDetails =>
+        StatementGeneralDetails;
+    IPartyIdentification98? ISecuritiesSettlementTransactionAllegementReportV05.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount24 ISecuritiesSettlementTransactionAllegementReportV05.SafekeepingAccount =>
+        SafekeepingAccount;
+    IEnumerable<ISecuritiesTradeDetails49> ISecuritiesSettlementTransactionAllegementReportV05.AllegementDetails =>
+        AllegementDetails;
 }

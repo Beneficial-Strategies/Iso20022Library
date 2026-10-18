@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the instruction processing status.
 /// </summary>
 [IsoId("_UYBuMNp-Ed-ak6NoX_4Aeg_-1515031070")]
-public interface IInstructionProcessingStatus2Choice : IIsoChoice
-{
-}
+public interface IInstructionProcessingStatus2Choice : IIsoChoice { }

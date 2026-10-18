@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between an amount or a rate or an unspecified rate.
 /// </summary>
 [IsoId("_DeFVIOwPEd-sn-FiNtktcA")]
-public interface ITaxCreditRateFormat5Choice : IIsoChoice
-{
-}
+public interface ITaxCreditRateFormat5Choice : IIsoChoice { }

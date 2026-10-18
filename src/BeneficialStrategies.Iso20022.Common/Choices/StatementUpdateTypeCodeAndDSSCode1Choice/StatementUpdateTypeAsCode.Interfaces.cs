@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.StatementUpdateTypeCodeAndDSSCode1Choice;
 
-public partial record StatementUpdateTypeAsCode : IStatementUpdateTypeAsCode
-{
-}
+public partial record StatementUpdateTypeAsCode : IStatementUpdateTypeAsCode { }

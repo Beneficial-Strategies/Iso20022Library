@@ -8,7 +8,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementOrCorporateActionEvent
 /// <summary>
 /// Corporate Action Event Type.
 /// </summary>
-public interface ICorporateActionEventType : ISettlementOrCorporateActionEvent35Choice, IIsoChoiceVariant
+public interface ICorporateActionEventType
+    : ISettlementOrCorporateActionEvent35Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record QuantityAndAccount14 : IQuantityAndAccount14
 {
-    IFinancialInstrumentQuantity1Choice IQuantityAndAccount14.SettlementQuantity => SettlementQuantity;
+    IFinancialInstrumentQuantity1Choice IQuantityAndAccount14.SettlementQuantity =>
+        SettlementQuantity;
     ICashAccountIdentification5Choice? IQuantityAndAccount14.CashAccount => CashAccount;
     IEnumerable<IQuantityBreakdown3> IQuantityAndAccount14.QuantityBreakdown => QuantityBreakdown;
     ISafekeepingPlaceFormat3Choice? IQuantityAndAccount14.SafekeepingPlace => SafekeepingPlace;

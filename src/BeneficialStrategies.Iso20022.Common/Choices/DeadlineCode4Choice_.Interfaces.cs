@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record DeadlineCode4Choice_ : IDeadlineCode4Choice
-{
-}
+public abstract partial record DeadlineCode4Choice_ : IDeadlineCode4Choice { }

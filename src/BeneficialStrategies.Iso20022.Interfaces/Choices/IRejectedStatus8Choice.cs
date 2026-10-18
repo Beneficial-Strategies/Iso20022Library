@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Reason for the rejected status.
 /// </summary>
 [IsoId("_RQy3gdp-Ed-ak6NoX_4Aeg_-368514445")]
-public interface IRejectedStatus8Choice : IIsoChoice
-{
-}
+public interface IRejectedStatus8Choice : IIsoChoice { }

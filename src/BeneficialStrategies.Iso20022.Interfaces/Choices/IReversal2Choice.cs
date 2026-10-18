@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between reversal by reference or by reversal details.
 /// </summary>
 [IsoId("_PsjTARg4EeK-_89we2b-bA")]
-public interface IReversal2Choice : IIsoChoice
-{
-}
+public interface IReversal2Choice : IIsoChoice { }

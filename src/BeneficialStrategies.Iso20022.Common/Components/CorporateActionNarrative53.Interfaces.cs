@@ -11,14 +11,23 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CorporateActionNarrative53 : ICorporateActionNarrative53
 {
     IUpdatedAdditionalInformation5? ICorporateActionNarrative53.AdditionalText => AdditionalText;
-    IUpdatedAdditionalInformation5? ICorporateActionNarrative53.NarrativeVersion => NarrativeVersion;
-    IUpdatedAdditionalInformation5? ICorporateActionNarrative53.InformationConditions => InformationConditions;
-    IUpdatedAdditionalInformation5? ICorporateActionNarrative53.InformationToComplyWith => InformationToComplyWith;
-    IUpdatedAdditionalInformation5? ICorporateActionNarrative53.TaxationConditions => TaxationConditions;
+    IUpdatedAdditionalInformation5? ICorporateActionNarrative53.NarrativeVersion =>
+        NarrativeVersion;
+    IUpdatedAdditionalInformation5? ICorporateActionNarrative53.InformationConditions =>
+        InformationConditions;
+    IUpdatedAdditionalInformation5? ICorporateActionNarrative53.InformationToComplyWith =>
+        InformationToComplyWith;
+    IUpdatedAdditionalInformation5? ICorporateActionNarrative53.TaxationConditions =>
+        TaxationConditions;
     IUpdatedAdditionalInformation5? ICorporateActionNarrative53.Disclaimer => Disclaimer;
-    IUpdatedAdditionalInformation5? ICorporateActionNarrative53.PartyContactNarrative => PartyContactNarrative;
-    IUpdatedAdditionalInformation5? ICorporateActionNarrative53.RegistrationDetails => RegistrationDetails;
-    IUpdatedAdditionalInformation5? ICorporateActionNarrative53.BasketOrIndexInformation => BasketOrIndexInformation;
-    IUpdatedAdditionalInformation5? ICorporateActionNarrative53.CertificationBreakdown => CertificationBreakdown;
-    IUpdatedAdditionalInformation1? ICorporateActionNarrative53.ProcessingTextForNextIntermediary => ProcessingTextForNextIntermediary;
+    IUpdatedAdditionalInformation5? ICorporateActionNarrative53.PartyContactNarrative =>
+        PartyContactNarrative;
+    IUpdatedAdditionalInformation5? ICorporateActionNarrative53.RegistrationDetails =>
+        RegistrationDetails;
+    IUpdatedAdditionalInformation5? ICorporateActionNarrative53.BasketOrIndexInformation =>
+        BasketOrIndexInformation;
+    IUpdatedAdditionalInformation5? ICorporateActionNarrative53.CertificationBreakdown =>
+        CertificationBreakdown;
+    IUpdatedAdditionalInformation1? ICorporateActionNarrative53.ProcessingTextForNextIntermediary =>
+        ProcessingTextForNextIntermediary;
 }

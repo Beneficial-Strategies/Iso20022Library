@@ -7,7 +7,9 @@ namespace BeneficialStrategies.Iso20022.Choices.AgentDocumentIdentificationAndSt
 
 /// <summary>Identification of the linked Agent CA Notification Advice for which a status is given.</summary>
 [IsoId("ebcab647-ffac-4281-98fd-0ead226e6af6")]
-public interface IAgentCANotificationAdviceIdentificationAndStatus : IAgentDocumentIdentificationAndStatus2Choice, IIsoChoiceVariant
+public interface IAgentCANotificationAdviceIdentificationAndStatus
+    : IAgentDocumentIdentificationAndStatus2Choice,
+        IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>
     [IsoXmlTag("AgtCANtfctnAdvcIdAndSts")]

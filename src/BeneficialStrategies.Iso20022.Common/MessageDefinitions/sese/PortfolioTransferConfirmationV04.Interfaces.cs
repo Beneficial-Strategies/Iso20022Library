@@ -14,16 +14,23 @@ public partial record PortfolioTransferConfirmationV04 : IPortfolioTransferConfi
     IAdditionalReference3? IPortfolioTransferConfirmationV04.PoolReference => PoolReference;
     IAdditionalReference3? IPortfolioTransferConfirmationV04.PreviousReference => PreviousReference;
     IAdditionalReference3? IPortfolioTransferConfirmationV04.RelatedReference => RelatedReference;
-    IIndividualPerson8? IPortfolioTransferConfirmationV04.PrimaryIndividualInvestor => PrimaryIndividualInvestor;
-    IIndividualPerson8? IPortfolioTransferConfirmationV04.SecondaryIndividualInvestor => SecondaryIndividualInvestor;
-    IEnumerable<IIndividualPerson8> IPortfolioTransferConfirmationV04.OtherIndividualInvestor => OtherIndividualInvestor;
-    IOrganisation4? IPortfolioTransferConfirmationV04.PrimaryCorporateInvestor => PrimaryCorporateInvestor;
-    IOrganisation4? IPortfolioTransferConfirmationV04.SecondaryCorporateInvestor => SecondaryCorporateInvestor;
-    IEnumerable<IOrganisation4> IPortfolioTransferConfirmationV04.OtherCorporateInvestor => OtherCorporateInvestor;
+    IIndividualPerson8? IPortfolioTransferConfirmationV04.PrimaryIndividualInvestor =>
+        PrimaryIndividualInvestor;
+    IIndividualPerson8? IPortfolioTransferConfirmationV04.SecondaryIndividualInvestor =>
+        SecondaryIndividualInvestor;
+    IEnumerable<IIndividualPerson8> IPortfolioTransferConfirmationV04.OtherIndividualInvestor =>
+        OtherIndividualInvestor;
+    IOrganisation4? IPortfolioTransferConfirmationV04.PrimaryCorporateInvestor =>
+        PrimaryCorporateInvestor;
+    IOrganisation4? IPortfolioTransferConfirmationV04.SecondaryCorporateInvestor =>
+        SecondaryCorporateInvestor;
+    IEnumerable<IOrganisation4> IPortfolioTransferConfirmationV04.OtherCorporateInvestor =>
+        OtherCorporateInvestor;
     IAccount5 IPortfolioTransferConfirmationV04.TransferorAccount => TransferorAccount;
     IAccount6? IPortfolioTransferConfirmationV04.NomineeAccount => NomineeAccount;
     IPartyIdentification2Choice IPortfolioTransferConfirmationV04.Transferee => Transferee;
     ICashAccount11? IPortfolioTransferConfirmationV04.CashAccount => CashAccount;
-    IEnumerable<IISATransfer10> IPortfolioTransferConfirmationV04.ProductTransfer => ProductTransfer;
+    IEnumerable<IISATransfer10> IPortfolioTransferConfirmationV04.ProductTransfer =>
+        ProductTransfer;
     IEnumerable<IExtension1> IPortfolioTransferConfirmationV04.Extension => Extension;
 }

@@ -8,15 +8,25 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record IntraPositionMovementConfirmation002V09 : IIntraPositionMovementConfirmation002V09
+public partial record IntraPositionMovementConfirmation002V09
+    : IIntraPositionMovementConfirmation002V09
 {
-    IAdditionalParameters34? IIntraPositionMovementConfirmation002V09.AdditionalParameters => AdditionalParameters;
-    IPartyIdentification136Choice? IIntraPositionMovementConfirmation002V09.AccountOwner => AccountOwner;
-    ISecuritiesAccount30? IIntraPositionMovementConfirmation002V09.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet7? IIntraPositionMovementConfirmation002V09.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
-    ISafekeepingPlaceFormat39Choice? IIntraPositionMovementConfirmation002V09.SafekeepingPlace => SafekeepingPlace;
-    ISecurityIdentification20 IIntraPositionMovementConfirmation002V09.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentAttributes119? IIntraPositionMovementConfirmation002V09.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
-    IIntraPositionDetails61 IIntraPositionMovementConfirmation002V09.IntraPositionDetails => IntraPositionDetails;
-    IEnumerable<ISupplementaryData1> IIntraPositionMovementConfirmation002V09.SupplementaryData => SupplementaryData;
+    IAdditionalParameters34? IIntraPositionMovementConfirmation002V09.AdditionalParameters =>
+        AdditionalParameters;
+    IPartyIdentification136Choice? IIntraPositionMovementConfirmation002V09.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount30? IIntraPositionMovementConfirmation002V09.SafekeepingAccount =>
+        SafekeepingAccount;
+    IBlockChainAddressWallet7? IIntraPositionMovementConfirmation002V09.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
+    ISafekeepingPlaceFormat39Choice? IIntraPositionMovementConfirmation002V09.SafekeepingPlace =>
+        SafekeepingPlace;
+    ISecurityIdentification20 IIntraPositionMovementConfirmation002V09.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentAttributes119? IIntraPositionMovementConfirmation002V09.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
+    IIntraPositionDetails61 IIntraPositionMovementConfirmation002V09.IntraPositionDetails =>
+        IntraPositionDetails;
+    IEnumerable<ISupplementaryData1> IIntraPositionMovementConfirmation002V09.SupplementaryData =>
+        SupplementaryData;
 }

@@ -12,12 +12,20 @@ public partial record IntraPositionMovementInstructionV07 : IIntraPositionMoveme
 {
     INumberCount1Choice? IIntraPositionMovementInstructionV07.NumberCounts => NumberCounts;
     IEnumerable<ILinkages59> IIntraPositionMovementInstructionV07.Linkages => Linkages;
-    IPartyIdentification127Choice? IIntraPositionMovementInstructionV07.AccountOwner => AccountOwner;
-    ISecuritiesAccount19? IIntraPositionMovementInstructionV07.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet3? IIntraPositionMovementInstructionV07.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
-    ISafekeepingPlaceFormat41Choice? IIntraPositionMovementInstructionV07.SafekeepingPlace => SafekeepingPlace;
-    ISecurityIdentification19 IIntraPositionMovementInstructionV07.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentAttributes112? IIntraPositionMovementInstructionV07.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
-    IIntraPositionDetails58 IIntraPositionMovementInstructionV07.IntraPositionDetails => IntraPositionDetails;
-    IEnumerable<ISupplementaryData1> IIntraPositionMovementInstructionV07.SupplementaryData => SupplementaryData;
+    IPartyIdentification127Choice? IIntraPositionMovementInstructionV07.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount19? IIntraPositionMovementInstructionV07.SafekeepingAccount =>
+        SafekeepingAccount;
+    IBlockChainAddressWallet3? IIntraPositionMovementInstructionV07.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
+    ISafekeepingPlaceFormat41Choice? IIntraPositionMovementInstructionV07.SafekeepingPlace =>
+        SafekeepingPlace;
+    ISecurityIdentification19 IIntraPositionMovementInstructionV07.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentAttributes112? IIntraPositionMovementInstructionV07.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
+    IIntraPositionDetails58 IIntraPositionMovementInstructionV07.IntraPositionDetails =>
+        IntraPositionDetails;
+    IEnumerable<ISupplementaryData1> IIntraPositionMovementInstructionV07.SupplementaryData =>
+        SupplementaryData;
 }

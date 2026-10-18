@@ -8,15 +8,23 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record StatementOfInvestmentFundTransactionsV02 : IStatementOfInvestmentFundTransactionsV02
+public partial record StatementOfInvestmentFundTransactionsV02
+    : IStatementOfInvestmentFundTransactionsV02
 {
-    IMessageIdentification1 IStatementOfInvestmentFundTransactionsV02.MessageIdentification => MessageIdentification;
-    IEnumerable<IAdditionalReference2> IStatementOfInvestmentFundTransactionsV02.PreviousReference => PreviousReference;
-    IEnumerable<IAdditionalReference2> IStatementOfInvestmentFundTransactionsV02.RelatedReference => RelatedReference;
+    IMessageIdentification1 IStatementOfInvestmentFundTransactionsV02.MessageIdentification =>
+        MessageIdentification;
+    IEnumerable<IAdditionalReference2> IStatementOfInvestmentFundTransactionsV02.PreviousReference =>
+        PreviousReference;
+    IEnumerable<IAdditionalReference2> IStatementOfInvestmentFundTransactionsV02.RelatedReference =>
+        RelatedReference;
     IPagination IStatementOfInvestmentFundTransactionsV02.MessagePagination => MessagePagination;
-    IStatement8 IStatementOfInvestmentFundTransactionsV02.StatementGeneralDetails => StatementGeneralDetails;
-    IInvestmentAccount25 IStatementOfInvestmentFundTransactionsV02.InvestmentAccountDetails => InvestmentAccountDetails;
-    IEnumerable<IInvestmentFundTransactionsByFund2> IStatementOfInvestmentFundTransactionsV02.TransactionOnAccount => TransactionOnAccount;
-    IEnumerable<ISubAccountIdentification6> IStatementOfInvestmentFundTransactionsV02.SubAccountDetails => SubAccountDetails;
+    IStatement8 IStatementOfInvestmentFundTransactionsV02.StatementGeneralDetails =>
+        StatementGeneralDetails;
+    IInvestmentAccount25 IStatementOfInvestmentFundTransactionsV02.InvestmentAccountDetails =>
+        InvestmentAccountDetails;
+    IEnumerable<IInvestmentFundTransactionsByFund2> IStatementOfInvestmentFundTransactionsV02.TransactionOnAccount =>
+        TransactionOnAccount;
+    IEnumerable<ISubAccountIdentification6> IStatementOfInvestmentFundTransactionsV02.SubAccountDetails =>
+        SubAccountDetails;
     IEnumerable<IExtension1> IStatementOfInvestmentFundTransactionsV02.Extension => Extension;
 }

@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.References37Choice;
 /// Unambiguous identification of the report to be cancelled.
 /// </summary>
 [IsoId("_ts-sQQ34EeKN_Y-2Awiamw")]
-public interface ISecuritiesSettlementTransactionAllegementReportIdentification : IReferences37Choice, IIsoChoiceVariant
+public interface ISecuritiesSettlementTransactionAllegementReportIdentification
+    : IReferences37Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

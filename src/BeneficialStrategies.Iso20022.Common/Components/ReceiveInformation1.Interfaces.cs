@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ReceiveInformation1 : IReceiveInformation1
 {
-    IReceivingPartiesAndAccount1 IReceiveInformation1.SettlementPartiesDetails => SettlementPartiesDetails;
+    IReceivingPartiesAndAccount1 IReceiveInformation1.SettlementPartiesDetails =>
+        SettlementPartiesDetails;
     IDeliveryParameters2? IReceiveInformation1.PhysicalTransferDetails => PhysicalTransferDetails;
 }

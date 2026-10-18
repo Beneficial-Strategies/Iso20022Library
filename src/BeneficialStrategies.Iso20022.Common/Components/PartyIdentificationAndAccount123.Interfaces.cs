@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PartyIdentificationAndAccount123 : IPartyIdentificationAndAccount123
 {
-    IPartyIdentification70Choice IPartyIdentificationAndAccount123.PartyIdentification => PartyIdentification;
+    IPartyIdentification70Choice IPartyIdentificationAndAccount123.PartyIdentification =>
+        PartyIdentification;
     IDateAndDateTimeChoice? IPartyIdentificationAndAccount123.ProcessingDate => ProcessingDate;
     ISubAccount5? IPartyIdentificationAndAccount123.SubAccountDetails => SubAccountDetails;
     IContactIdentification2? IPartyIdentificationAndAccount123.ContactPerson => ContactPerson;

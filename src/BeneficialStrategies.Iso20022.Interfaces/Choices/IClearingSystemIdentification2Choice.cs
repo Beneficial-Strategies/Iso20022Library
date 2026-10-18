@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of a clearing system identifier.
 /// </summary>
 [IsoId("_TMoSENp-Ed-ak6NoX_4Aeg_-1410917193")]
-public interface IClearingSystemIdentification2Choice : IIsoChoice
-{
-}
+public interface IClearingSystemIdentification2Choice : IIsoChoice { }

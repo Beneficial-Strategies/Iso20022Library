@@ -14,12 +14,18 @@ public partial record AccountHoldingInformationV02 : IAccountHoldingInformationV
     IAdditionalReference3? IAccountHoldingInformationV02.PoolReference => PoolReference;
     IAdditionalReference3? IAccountHoldingInformationV02.PreviousReference => PreviousReference;
     IAdditionalReference3? IAccountHoldingInformationV02.RelatedReference => RelatedReference;
-    IIndividualPerson8? IAccountHoldingInformationV02.PrimaryIndividualInvestor => PrimaryIndividualInvestor;
-    IIndividualPerson8? IAccountHoldingInformationV02.SecondaryIndividualInvestor => SecondaryIndividualInvestor;
-    IEnumerable<IIndividualPerson8> IAccountHoldingInformationV02.OtherIndividualInvestor => OtherIndividualInvestor;
-    IOrganisation4? IAccountHoldingInformationV02.PrimaryCorporateInvestor => PrimaryCorporateInvestor;
-    IOrganisation4? IAccountHoldingInformationV02.SecondaryCorporateInvestor => SecondaryCorporateInvestor;
-    IEnumerable<IOrganisation4> IAccountHoldingInformationV02.OtherCorporateInvestor => OtherCorporateInvestor;
+    IIndividualPerson8? IAccountHoldingInformationV02.PrimaryIndividualInvestor =>
+        PrimaryIndividualInvestor;
+    IIndividualPerson8? IAccountHoldingInformationV02.SecondaryIndividualInvestor =>
+        SecondaryIndividualInvestor;
+    IEnumerable<IIndividualPerson8> IAccountHoldingInformationV02.OtherIndividualInvestor =>
+        OtherIndividualInvestor;
+    IOrganisation4? IAccountHoldingInformationV02.PrimaryCorporateInvestor =>
+        PrimaryCorporateInvestor;
+    IOrganisation4? IAccountHoldingInformationV02.SecondaryCorporateInvestor =>
+        SecondaryCorporateInvestor;
+    IEnumerable<IOrganisation4> IAccountHoldingInformationV02.OtherCorporateInvestor =>
+        OtherCorporateInvestor;
     IAccount5 IAccountHoldingInformationV02.TransferorAccount => TransferorAccount;
     IAccount6? IAccountHoldingInformationV02.NomineeAccount => NomineeAccount;
     IPartyIdentification2Choice IAccountHoldingInformationV02.Transferee => Transferee;

@@ -18,5 +18,6 @@ public partial record Transfer39 : ITransfer39
     IFinancialInstrument116 ITransfer39.FinancialInstrumentDetails => FinancialInstrumentDetails;
     IQuantity82Choice ITransfer39.Quantity => Quantity;
     IEnumerable<IUnit14> ITransfer39.UnitsDetails => UnitsDetails;
-    IChargePaymentMethod1Choice? ITransfer39.TransferExpensesPaymentType => TransferExpensesPaymentType;
+    IChargePaymentMethod1Choice? ITransfer39.TransferExpensesPaymentType =>
+        TransferExpensesPaymentType;
 }

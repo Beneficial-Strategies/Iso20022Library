@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Instruction Status13Choice.
 /// </summary>
 [IsoId("_Yq9FEYY_Ee-5eN4DwJpixA")]
-public interface IInstructionStatus13Choice : IIsoChoice
-{
-}
+public interface IInstructionStatus13Choice : IIsoChoice { }

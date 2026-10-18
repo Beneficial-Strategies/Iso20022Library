@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.VoteInstructionType2Choice;
 
-public partial record Type : IType
-{
-}
+public partial record Type : IType { }

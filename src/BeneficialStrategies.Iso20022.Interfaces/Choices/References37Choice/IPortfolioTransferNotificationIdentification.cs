@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.References37Choice;
 /// Identification of the portfolio transfer.
 /// </summary>
 [IsoId("_ts-sSQ34EeKN_Y-2Awiamw")]
-public interface IPortfolioTransferNotificationIdentification : IReferences37Choice, IIsoChoiceVariant
+public interface IPortfolioTransferNotificationIdentification
+    : IReferences37Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

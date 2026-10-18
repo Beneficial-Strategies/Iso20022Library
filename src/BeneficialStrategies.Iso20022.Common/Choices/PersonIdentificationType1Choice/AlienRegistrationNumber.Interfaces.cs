@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PersonIdentificationType1Choice;
 
-public partial record AlienRegistrationNumber : IAlienRegistrationNumber
-{
-}
+public partial record AlienRegistrationNumber : IAlienRegistrationNumber { }

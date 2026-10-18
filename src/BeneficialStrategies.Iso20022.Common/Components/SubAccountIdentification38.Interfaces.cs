@@ -12,5 +12,6 @@ public partial record SubAccountIdentification38 : ISubAccountIdentification38
 {
     IPartyIdentification36Choice? ISubAccountIdentification38.AccountOwner => AccountOwner;
     ISecuritiesAccount14 ISubAccountIdentification38.SafekeepingAccount => SafekeepingAccount;
-    IEnumerable<IAggregateBalanceInformation26> ISubAccountIdentification38.BalanceForSubAccount => BalanceForSubAccount;
+    IEnumerable<IAggregateBalanceInformation26> ISubAccountIdentification38.BalanceForSubAccount =>
+        BalanceForSubAccount;
 }

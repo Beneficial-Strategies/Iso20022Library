@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a date or quarter.
 /// </summary>
 [IsoId("_CUTHIKFTEei_VZq-6SQkuQ")]
-public interface IDateQuarter1Choice : IIsoChoice
-{
-}
+public interface IDateQuarter1Choice : IIsoChoice { }

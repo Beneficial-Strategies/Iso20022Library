@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record References83Choice_ : IReferences83Choice
-{
-}
+public abstract partial record References83Choice_ : IReferences83Choice { }

@@ -10,14 +10,16 @@ namespace BeneficialStrategies.Iso20022.sese;
 
 public partial record TransferOutConfirmationV10 : ITransferOutConfirmationV10
 {
-    IMessageIdentification1 ITransferOutConfirmationV10.MessageIdentification => MessageIdentification;
+    IMessageIdentification1 ITransferOutConfirmationV10.MessageIdentification =>
+        MessageIdentification;
     IAdditionalReference11? ITransferOutConfirmationV10.PoolReference => PoolReference;
     IAdditionalReference10? ITransferOutConfirmationV10.PreviousReference => PreviousReference;
     IAdditionalReference10? ITransferOutConfirmationV10.RelatedReference => RelatedReference;
     IEnumerable<ITransfer38> ITransferOutConfirmationV10.TransferDetails => TransferDetails;
     IInvestmentAccount82 ITransferOutConfirmationV10.AccountDetails => AccountDetails;
     IReceiveInformation23? ITransferOutConfirmationV10.SettlementDetails => SettlementDetails;
-    IMarketPracticeVersion1? ITransferOutConfirmationV10.MarketPracticeVersion => MarketPracticeVersion;
+    IMarketPracticeVersion1? ITransferOutConfirmationV10.MarketPracticeVersion =>
+        MarketPracticeVersion;
     ICopyInformation5? ITransferOutConfirmationV10.CopyDetails => CopyDetails;
     IEnumerable<IExtension1> ITransferOutConfirmationV10.Extension => Extension;
 }

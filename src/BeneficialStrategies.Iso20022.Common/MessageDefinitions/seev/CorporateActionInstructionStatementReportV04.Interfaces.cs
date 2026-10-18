@@ -8,10 +8,14 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record CorporateActionInstructionStatementReportV04 : ICorporateActionInstructionStatementReportV04
+public partial record CorporateActionInstructionStatementReportV04
+    : ICorporateActionInstructionStatementReportV04
 {
     IPagination ICorporateActionInstructionStatementReportV04.Pagination => Pagination;
-    IStatement12 ICorporateActionInstructionStatementReportV04.StatementGeneralDetails => StatementGeneralDetails;
-    IEnumerable<IAccountIdentification25> ICorporateActionInstructionStatementReportV04.AccountAndStatementDetails => AccountAndStatementDetails;
-    IEnumerable<ISupplementaryData1> ICorporateActionInstructionStatementReportV04.SupplementaryData => SupplementaryData;
+    IStatement12 ICorporateActionInstructionStatementReportV04.StatementGeneralDetails =>
+        StatementGeneralDetails;
+    IEnumerable<IAccountIdentification25> ICorporateActionInstructionStatementReportV04.AccountAndStatementDetails =>
+        AccountAndStatementDetails;
+    IEnumerable<ISupplementaryData1> ICorporateActionInstructionStatementReportV04.SupplementaryData =>
+        SupplementaryData;
 }

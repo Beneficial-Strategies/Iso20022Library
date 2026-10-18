@@ -10,13 +10,17 @@ namespace BeneficialStrategies.Iso20022.semt;
 
 public partial record AccountingStatementOfHoldings : IAccountingStatementOfHoldings
 {
-    IEnumerable<IAdditionalReference2> IAccountingStatementOfHoldings.PreviousReference => PreviousReference;
-    IEnumerable<IAdditionalReference2> IAccountingStatementOfHoldings.RelatedReference => RelatedReference;
+    IEnumerable<IAdditionalReference2> IAccountingStatementOfHoldings.PreviousReference =>
+        PreviousReference;
+    IEnumerable<IAdditionalReference2> IAccountingStatementOfHoldings.RelatedReference =>
+        RelatedReference;
     IPagination IAccountingStatementOfHoldings.MessagePagination => MessagePagination;
     IStatement4 IAccountingStatementOfHoldings.StatementGeneralDetails => StatementGeneralDetails;
     ISafekeepingAccount1 IAccountingStatementOfHoldings.AccountDetails => AccountDetails;
-    IEnumerable<IAggregateBalanceInformation2> IAccountingStatementOfHoldings.BalanceForAccount => BalanceForAccount;
-    IEnumerable<ISubAccountIdentification2> IAccountingStatementOfHoldings.SubAccountDetails => SubAccountDetails;
+    IEnumerable<IAggregateBalanceInformation2> IAccountingStatementOfHoldings.BalanceForAccount =>
+        BalanceForAccount;
+    IEnumerable<ISubAccountIdentification2> IAccountingStatementOfHoldings.SubAccountDetails =>
+        SubAccountDetails;
     ITotalValueInPageAndStatement? IAccountingStatementOfHoldings.TotalValues => TotalValues;
     IEnumerable<IExtension1> IAccountingStatementOfHoldings.Extension => Extension;
 }

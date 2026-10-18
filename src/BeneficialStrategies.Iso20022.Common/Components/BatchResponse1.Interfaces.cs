@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record BatchResponse1 : IBatchResponse1
 {
-    IEnumerable<IPerformedTransaction1> IBatchResponse1.PerformedTransaction => PerformedTransaction;
+    IEnumerable<IPerformedTransaction1> IBatchResponse1.PerformedTransaction =>
+        PerformedTransaction;
 }

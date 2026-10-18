@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for a type of lump sum.
 /// </summary>
 [IsoId("_AB4QYLKdEeiXL6Ccd-oU8g")]
-public interface ILumpSumType1Choice : IIsoChoice
-{
-}
+public interface ILumpSumType1Choice : IIsoChoice { }

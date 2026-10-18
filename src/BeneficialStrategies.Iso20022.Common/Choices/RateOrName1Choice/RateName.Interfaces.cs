@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.RateOrName1Choice;
 
-public partial record RateName : IRateName
-{
-}
+public partial record RateName : IRateName { }

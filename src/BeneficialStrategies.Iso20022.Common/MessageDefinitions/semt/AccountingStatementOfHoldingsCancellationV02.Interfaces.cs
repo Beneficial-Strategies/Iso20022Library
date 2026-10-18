@@ -8,11 +8,17 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record AccountingStatementOfHoldingsCancellationV02 : IAccountingStatementOfHoldingsCancellationV02
+public partial record AccountingStatementOfHoldingsCancellationV02
+    : IAccountingStatementOfHoldingsCancellationV02
 {
-    IMessageIdentification1 IAccountingStatementOfHoldingsCancellationV02.MessageIdentification => MessageIdentification;
-    IAdditionalReference2? IAccountingStatementOfHoldingsCancellationV02.PreviousReference => PreviousReference;
-    IAdditionalReference2? IAccountingStatementOfHoldingsCancellationV02.RelatedReference => RelatedReference;
-    IPagination IAccountingStatementOfHoldingsCancellationV02.MessagePagination => MessagePagination;
-    IAccountingStatementOfHoldings2? IAccountingStatementOfHoldingsCancellationV02.StatementToBeCancelled => StatementToBeCancelled;
+    IMessageIdentification1 IAccountingStatementOfHoldingsCancellationV02.MessageIdentification =>
+        MessageIdentification;
+    IAdditionalReference2? IAccountingStatementOfHoldingsCancellationV02.PreviousReference =>
+        PreviousReference;
+    IAdditionalReference2? IAccountingStatementOfHoldingsCancellationV02.RelatedReference =>
+        RelatedReference;
+    IPagination IAccountingStatementOfHoldingsCancellationV02.MessagePagination =>
+        MessagePagination;
+    IAccountingStatementOfHoldings2? IAccountingStatementOfHoldingsCancellationV02.StatementToBeCancelled =>
+        StatementToBeCancelled;
 }

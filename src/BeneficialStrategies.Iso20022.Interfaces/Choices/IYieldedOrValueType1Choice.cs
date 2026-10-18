@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of value type.
 /// </summary>
 [IsoId("_RdBVptp-Ed-ak6NoX_4Aeg_510883553")]
-public interface IYieldedOrValueType1Choice : IIsoChoice
-{
-}
+public interface IYieldedOrValueType1Choice : IIsoChoice { }

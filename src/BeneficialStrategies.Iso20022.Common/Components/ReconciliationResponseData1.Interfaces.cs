@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ReconciliationResponseData1 : IReconciliationResponseData1
 {
-    IEnumerable<ITransactionTotalsSet1> IReconciliationResponseData1.TransactionTotals => TransactionTotals;
+    IEnumerable<ITransactionTotalsSet1> IReconciliationResponseData1.TransactionTotals =>
+        TransactionTotals;
 }

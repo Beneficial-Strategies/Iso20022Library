@@ -8,7 +8,8 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record DeviceInitialisationCardReaderResponse2 : IDeviceInitialisationCardReaderResponse2
+public partial record DeviceInitialisationCardReaderResponse2
+    : IDeviceInitialisationCardReaderResponse2
 {
     IICCResetData1? IDeviceInitialisationCardReaderResponse2.ICCResetData => ICCResetData;
 }

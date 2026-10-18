@@ -10,9 +10,14 @@ namespace BeneficialStrategies.Iso20022.semt;
 
 public partial record IntraPositionMovementStatusAdviceV03 : IIntraPositionMovementStatusAdviceV03
 {
-    ITransactionIdentifications15 IIntraPositionMovementStatusAdviceV03.TransactionIdentification => TransactionIdentification;
-    IIntraPositionProcessingStatus3Choice? IIntraPositionMovementStatusAdviceV03.ProcessingStatus => ProcessingStatus;
-    ISettlementStatus9Choice? IIntraPositionMovementStatusAdviceV03.SettlementStatus => SettlementStatus;
-    IIntraPositionDetails19? IIntraPositionMovementStatusAdviceV03.TransactionDetails => TransactionDetails;
-    IEnumerable<ISupplementaryData1> IIntraPositionMovementStatusAdviceV03.SupplementaryData => SupplementaryData;
+    ITransactionIdentifications15 IIntraPositionMovementStatusAdviceV03.TransactionIdentification =>
+        TransactionIdentification;
+    IIntraPositionProcessingStatus3Choice? IIntraPositionMovementStatusAdviceV03.ProcessingStatus =>
+        ProcessingStatus;
+    ISettlementStatus9Choice? IIntraPositionMovementStatusAdviceV03.SettlementStatus =>
+        SettlementStatus;
+    IIntraPositionDetails19? IIntraPositionMovementStatusAdviceV03.TransactionDetails =>
+        TransactionDetails;
+    IEnumerable<ISupplementaryData1> IIntraPositionMovementStatusAdviceV03.SupplementaryData =>
+        SupplementaryData;
 }

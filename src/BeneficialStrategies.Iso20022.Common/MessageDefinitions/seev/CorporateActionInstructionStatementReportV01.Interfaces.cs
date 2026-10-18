@@ -8,13 +8,19 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record CorporateActionInstructionStatementReportV01 : ICorporateActionInstructionStatementReportV01
+public partial record CorporateActionInstructionStatementReportV01
+    : ICorporateActionInstructionStatementReportV01
 {
-    IDocumentIdentification11 ICorporateActionInstructionStatementReportV01.Identification => Identification;
+    IDocumentIdentification11 ICorporateActionInstructionStatementReportV01.Identification =>
+        Identification;
     IPagination ICorporateActionInstructionStatementReportV01.Pagination => Pagination;
-    IStatement12 ICorporateActionInstructionStatementReportV01.StatementGeneralDetails => StatementGeneralDetails;
-    IEnumerable<IAccountIdentification6> ICorporateActionInstructionStatementReportV01.AccountAndStatementDetails => AccountAndStatementDetails;
-    IPartyIdentification10Choice? ICorporateActionInstructionStatementReportV01.MessageOriginator => MessageOriginator;
-    IPartyIdentification10Choice? ICorporateActionInstructionStatementReportV01.MessageRecipient => MessageRecipient;
+    IStatement12 ICorporateActionInstructionStatementReportV01.StatementGeneralDetails =>
+        StatementGeneralDetails;
+    IEnumerable<IAccountIdentification6> ICorporateActionInstructionStatementReportV01.AccountAndStatementDetails =>
+        AccountAndStatementDetails;
+    IPartyIdentification10Choice? ICorporateActionInstructionStatementReportV01.MessageOriginator =>
+        MessageOriginator;
+    IPartyIdentification10Choice? ICorporateActionInstructionStatementReportV01.MessageRecipient =>
+        MessageRecipient;
     IEnumerable<IExtension2> ICorporateActionInstructionStatementReportV01.Extension => Extension;
 }

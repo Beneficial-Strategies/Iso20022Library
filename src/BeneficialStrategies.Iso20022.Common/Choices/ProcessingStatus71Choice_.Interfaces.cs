@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record ProcessingStatus71Choice_ : IProcessingStatus71Choice
-{
-}
+public abstract partial record ProcessingStatus71Choice_ : IProcessingStatus71Choice { }

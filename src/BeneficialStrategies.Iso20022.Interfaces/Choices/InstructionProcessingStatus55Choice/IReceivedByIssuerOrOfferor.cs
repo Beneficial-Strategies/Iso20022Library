@@ -8,7 +8,9 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus55Cho
 /// <summary>
 /// Received By Issuer Or Offeror.
 /// </summary>
-public interface IReceivedByIssuerOrOfferor : IInstructionProcessingStatus55Choice, IIsoChoiceVariant
+public interface IReceivedByIssuerOrOfferor
+    : IInstructionProcessingStatus55Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

@@ -10,8 +10,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionGeneralInformation117 : ICorporateActionGeneralInformation117
 {
-    ICorporateActionEventProcessingType3Choice? ICorporateActionGeneralInformation117.EventProcessingType => EventProcessingType;
+    ICorporateActionEventProcessingType3Choice? ICorporateActionGeneralInformation117.EventProcessingType =>
+        EventProcessingType;
     ICorporateActionEventType61Choice ICorporateActionGeneralInformation117.EventType => EventType;
-    ICorporateActionMandatoryVoluntary4Choice ICorporateActionGeneralInformation117.MandatoryVoluntaryEventType => MandatoryVoluntaryEventType;
-    IFinancialInstrumentAttributes85 ICorporateActionGeneralInformation117.UnderlyingSecurity => UnderlyingSecurity;
+    ICorporateActionMandatoryVoluntary4Choice ICorporateActionGeneralInformation117.MandatoryVoluntaryEventType =>
+        MandatoryVoluntaryEventType;
+    IFinancialInstrumentAttributes85 ICorporateActionGeneralInformation117.UnderlyingSecurity =>
+        UnderlyingSecurity;
 }

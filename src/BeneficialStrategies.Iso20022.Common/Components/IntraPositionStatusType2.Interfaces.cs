@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record IntraPositionStatusType2 : IIntraPositionStatusType2
 {
-    IEnumerable<IProcessingStatus68Choice> IIntraPositionStatusType2.ProcessingStatus => ProcessingStatus;
-    IEnumerable<ISettlementStatus26Choice> IIntraPositionStatusType2.SettlementStatus => SettlementStatus;
+    IEnumerable<IProcessingStatus68Choice> IIntraPositionStatusType2.ProcessingStatus =>
+        ProcessingStatus;
+    IEnumerable<ISettlementStatus26Choice> IIntraPositionStatusType2.SettlementStatus =>
+        SettlementStatus;
     IProprietaryReason4? IIntraPositionStatusType2.Settled => Settled;
 }

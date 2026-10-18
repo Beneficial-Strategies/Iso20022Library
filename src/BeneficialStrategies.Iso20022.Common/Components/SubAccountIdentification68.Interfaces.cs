@@ -12,6 +12,8 @@ public partial record SubAccountIdentification68 : ISubAccountIdentification68
 {
     IPartyIdentification156? ISubAccountIdentification68.AccountOwner => AccountOwner;
     ISecuritiesAccount34? ISubAccountIdentification68.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet9? ISubAccountIdentification68.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
-    IEnumerable<IAggregateBalanceInformation43> ISubAccountIdentification68.BalanceForSubAccount => BalanceForSubAccount;
+    IBlockChainAddressWallet9? ISubAccountIdentification68.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
+    IEnumerable<IAggregateBalanceInformation43> ISubAccountIdentification68.BalanceForSubAccount =>
+        BalanceForSubAccount;
 }

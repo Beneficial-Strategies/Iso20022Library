@@ -11,12 +11,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CardPaymentTransaction109 : ICardPaymentTransaction109
 {
     IAuthorisationResult14 ICardPaymentTransaction109.AuthorisationResult => AuthorisationResult;
-    IEnumerable<ITransactionVerificationResult4> ICardPaymentTransaction109.TransactionVerificationResult => TransactionVerificationResult;
+    IEnumerable<ITransactionVerificationResult4> ICardPaymentTransaction109.TransactionVerificationResult =>
+        TransactionVerificationResult;
     IEnumerable<IProduct4> ICardPaymentTransaction109.AllowedProductCode => AllowedProductCode;
-    IEnumerable<IProduct4> ICardPaymentTransaction109.NotAllowedProductCode => NotAllowedProductCode;
-    IEnumerable<IProduct5> ICardPaymentTransaction109.AdditionalAvailableProduct => AdditionalAvailableProduct;
+    IEnumerable<IProduct4> ICardPaymentTransaction109.NotAllowedProductCode =>
+        NotAllowedProductCode;
+    IEnumerable<IProduct5> ICardPaymentTransaction109.AdditionalAvailableProduct =>
+        AdditionalAvailableProduct;
     IAmountAndDirection93? ICardPaymentTransaction109.Balance => Balance;
     IContentInformationType28? ICardPaymentTransaction109.ProtectedBalance => ProtectedBalance;
     IEnumerable<IAction11> ICardPaymentTransaction109.Action => Action;
-    ICurrencyConversion20? ICardPaymentTransaction109.CurrencyConversionEligibility => CurrencyConversionEligibility;
+    ICurrencyConversion20? ICardPaymentTransaction109.CurrencyConversionEligibility =>
+        CurrencyConversionEligibility;
 }

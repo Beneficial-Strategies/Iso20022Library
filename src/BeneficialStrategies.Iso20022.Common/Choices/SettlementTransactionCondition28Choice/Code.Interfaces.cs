@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.SettlementTransactionCondition28Choice;
 
-public partial record Code : ICode
-{
-}
+public partial record Code : ICode { }

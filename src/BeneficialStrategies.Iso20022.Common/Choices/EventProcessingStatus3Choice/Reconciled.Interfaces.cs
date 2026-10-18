@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.EventProcessingStatus3Choice;
 
-public partial record Reconciled : IReconciled
-{
-}
+public partial record Reconciled : IReconciled { }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.TransferStatus3Choice;
 
-public partial record Status : IStatus
-{
-}
+public partial record Status : IStatus { }

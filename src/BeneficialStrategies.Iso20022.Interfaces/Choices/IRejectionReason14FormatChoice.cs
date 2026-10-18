@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the reason of a rejection of a movement cancellation request.
 /// </summary>
 [IsoId("_RoMq5dp-Ed-ak6NoX_4Aeg_-1393087527")]
-public interface IRejectionReason14FormatChoice : IIsoChoice
-{
-}
+public interface IRejectionReason14FormatChoice : IIsoChoice { }

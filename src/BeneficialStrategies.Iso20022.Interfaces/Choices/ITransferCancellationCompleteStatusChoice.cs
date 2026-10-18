@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Reason for the complete status.
 /// </summary>
 [IsoId("_U0C70dp-Ed-ak6NoX_4Aeg_-1711844694")]
-public interface ITransferCancellationCompleteStatusChoice : IIsoChoice
-{
-}
+public interface ITransferCancellationCompleteStatusChoice : IIsoChoice { }

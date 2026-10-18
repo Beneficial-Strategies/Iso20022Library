@@ -8,12 +8,17 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record StatementOfInvestmentFundTransactions1 : IStatementOfInvestmentFundTransactions1
+public partial record StatementOfInvestmentFundTransactions1
+    : IStatementOfInvestmentFundTransactions1
 {
     IPagination IStatementOfInvestmentFundTransactions1.MessagePagination => MessagePagination;
-    IStatement5? IStatementOfInvestmentFundTransactions1.StatementGeneralDetails => StatementGeneralDetails;
-    IInvestmentAccount12? IStatementOfInvestmentFundTransactions1.InvestmentAccountDetails => InvestmentAccountDetails;
-    IEnumerable<IInvestmentFundTransactionsByFund1> IStatementOfInvestmentFundTransactions1.TransactionOnAccount => TransactionOnAccount;
-    ISubAccountIdentification4 IStatementOfInvestmentFundTransactions1.SubAccountDetails => SubAccountDetails;
+    IStatement5? IStatementOfInvestmentFundTransactions1.StatementGeneralDetails =>
+        StatementGeneralDetails;
+    IInvestmentAccount12? IStatementOfInvestmentFundTransactions1.InvestmentAccountDetails =>
+        InvestmentAccountDetails;
+    IEnumerable<IInvestmentFundTransactionsByFund1> IStatementOfInvestmentFundTransactions1.TransactionOnAccount =>
+        TransactionOnAccount;
+    ISubAccountIdentification4 IStatementOfInvestmentFundTransactions1.SubAccountDetails =>
+        SubAccountDetails;
     IEnumerable<IExtension1> IStatementOfInvestmentFundTransactions1.Extension => Extension;
 }

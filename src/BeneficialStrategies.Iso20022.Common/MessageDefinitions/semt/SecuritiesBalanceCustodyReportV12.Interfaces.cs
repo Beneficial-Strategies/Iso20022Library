@@ -11,13 +11,20 @@ namespace BeneficialStrategies.Iso20022.semt;
 public partial record SecuritiesBalanceCustodyReportV12 : ISecuritiesBalanceCustodyReportV12
 {
     IPagination1 ISecuritiesBalanceCustodyReportV12.Pagination => Pagination;
-    IStatement73 ISecuritiesBalanceCustodyReportV12.StatementGeneralDetails => StatementGeneralDetails;
+    IStatement73 ISecuritiesBalanceCustodyReportV12.StatementGeneralDetails =>
+        StatementGeneralDetails;
     IPartyIdentification144? ISecuritiesBalanceCustodyReportV12.AccountOwner => AccountOwner;
     IPartyIdentification136? ISecuritiesBalanceCustodyReportV12.AccountServicer => AccountServicer;
-    ISecuritiesAccount26? ISecuritiesBalanceCustodyReportV12.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet1? ISecuritiesBalanceCustodyReportV12.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
-    IEnumerable<IIntermediary44> ISecuritiesBalanceCustodyReportV12.IntermediaryInformation => IntermediaryInformation;
-    IEnumerable<IAggregateBalanceInformation46> ISecuritiesBalanceCustodyReportV12.BalanceForAccount => BalanceForAccount;
-    IEnumerable<ISubAccountIdentification71> ISecuritiesBalanceCustodyReportV12.SubAccountDetails => SubAccountDetails;
-    ITotalValueInPageAndStatement1? ISecuritiesBalanceCustodyReportV12.AccountBaseCurrencyTotalAmounts => AccountBaseCurrencyTotalAmounts;
+    ISecuritiesAccount26? ISecuritiesBalanceCustodyReportV12.SafekeepingAccount =>
+        SafekeepingAccount;
+    IBlockChainAddressWallet1? ISecuritiesBalanceCustodyReportV12.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
+    IEnumerable<IIntermediary44> ISecuritiesBalanceCustodyReportV12.IntermediaryInformation =>
+        IntermediaryInformation;
+    IEnumerable<IAggregateBalanceInformation46> ISecuritiesBalanceCustodyReportV12.BalanceForAccount =>
+        BalanceForAccount;
+    IEnumerable<ISubAccountIdentification71> ISecuritiesBalanceCustodyReportV12.SubAccountDetails =>
+        SubAccountDetails;
+    ITotalValueInPageAndStatement1? ISecuritiesBalanceCustodyReportV12.AccountBaseCurrencyTotalAmounts =>
+        AccountBaseCurrencyTotalAmounts;
 }

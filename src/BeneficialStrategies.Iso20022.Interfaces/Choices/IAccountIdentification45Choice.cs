@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between all accounts and one or more selected accounts and balance information.
 /// </summary>
 [IsoId("_csxih_fSEeiNZp_PtLohLw")]
-public interface IAccountIdentification45Choice : IIsoChoice
-{
-}
+public interface IAccountIdentification45Choice : IIsoChoice { }

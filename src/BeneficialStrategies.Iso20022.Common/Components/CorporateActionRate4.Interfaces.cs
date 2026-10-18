@@ -12,14 +12,20 @@ public partial record CorporateActionRate4 : ICorporateActionRate4
 {
     IRateAndAmountFormat5Choice? ICorporateActionRate4.ChargesFees => ChargesFees;
     IRateAndAmountFormat5Choice? ICorporateActionRate4.FullyFrankedRate => FullyFrankedRate;
-    IEnumerable<IGrossDividendRateFormat2Choice> ICorporateActionRate4.GrossDividendRate => GrossDividendRate;
+    IEnumerable<IGrossDividendRateFormat2Choice> ICorporateActionRate4.GrossDividendRate =>
+        GrossDividendRate;
     IRateAndAmountFormat5Choice? ICorporateActionRate4.IndexFactor => IndexFactor;
-    IEnumerable<IInterestRateUsedForPaymentFormat2Choice> ICorporateActionRate4.InterestRateUsedForPayment => InterestRateUsedForPayment;
-    IEnumerable<INetDividendRateFormat2Choice> ICorporateActionRate4.NetDividendRate => NetDividendRate;
+    IEnumerable<IInterestRateUsedForPaymentFormat2Choice> ICorporateActionRate4.InterestRateUsedForPayment =>
+        InterestRateUsedForPayment;
+    IEnumerable<INetDividendRateFormat2Choice> ICorporateActionRate4.NetDividendRate =>
+        NetDividendRate;
     IRateAndAmountFormat5Choice? ICorporateActionRate4.NonResidentRate => NonResidentRate;
     IEnumerable<ITaxCreditRateFormat2Choice> ICorporateActionRate4.TaxCreditRate => TaxCreditRate;
-    IEnumerable<IRateTypeAndAmountAndStatus6> ICorporateActionRate4.TaxRelatedRate => TaxRelatedRate;
-    IRateAndAmountFormat5Choice? ICorporateActionRate4.WithholdingOfForeignTax => WithholdingOfForeignTax;
-    IRateAndAmountFormat5Choice? ICorporateActionRate4.WithholdingOfLocalTax => WithholdingOfLocalTax;
+    IEnumerable<IRateTypeAndAmountAndStatus6> ICorporateActionRate4.TaxRelatedRate =>
+        TaxRelatedRate;
+    IRateAndAmountFormat5Choice? ICorporateActionRate4.WithholdingOfForeignTax =>
+        WithholdingOfForeignTax;
+    IRateAndAmountFormat5Choice? ICorporateActionRate4.WithholdingOfLocalTax =>
+        WithholdingOfLocalTax;
     IRateAndAmountFormat5Choice? ICorporateActionRate4.AdditionalTax => AdditionalTax;
 }

@@ -8,9 +8,13 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record ShareholderIdentificationDisclosureResponseCancellationAdviceV01 : IShareholderIdentificationDisclosureResponseCancellationAdviceV01
+public partial record ShareholderIdentificationDisclosureResponseCancellationAdviceV01
+    : IShareholderIdentificationDisclosureResponseCancellationAdviceV01
 {
-    IDisclosureRequestIdentification1 IShareholderIdentificationDisclosureResponseCancellationAdviceV01.IssuerDisclosureRequestReference => IssuerDisclosureRequestReference;
-    IPartyIdentification215 IShareholderIdentificationDisclosureResponseCancellationAdviceV01.RespondingIntermediary => RespondingIntermediary;
-    IEnumerable<ISupplementaryData1> IShareholderIdentificationDisclosureResponseCancellationAdviceV01.SupplementaryData => SupplementaryData;
+    IDisclosureRequestIdentification1 IShareholderIdentificationDisclosureResponseCancellationAdviceV01.IssuerDisclosureRequestReference =>
+        IssuerDisclosureRequestReference;
+    IPartyIdentification215 IShareholderIdentificationDisclosureResponseCancellationAdviceV01.RespondingIntermediary =>
+        RespondingIntermediary;
+    IEnumerable<ISupplementaryData1> IShareholderIdentificationDisclosureResponseCancellationAdviceV01.SupplementaryData =>
+        SupplementaryData;
 }

@@ -10,12 +10,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionQuantity3 : ICorporateActionQuantity3
 {
-    IFinancialInstrumentQuantity1Choice? ICorporateActionQuantity3.MinimumExercisableQuantity => MinimumExercisableQuantity;
-    IFinancialInstrumentQuantity1Choice? ICorporateActionQuantity3.MinimumExercisableMultipleQuantity => MinimumExercisableMultipleQuantity;
-    IFinancialInstrumentQuantity16Choice? ICorporateActionQuantity3.MaximumQuantity => MaximumQuantity;
-    IFinancialInstrumentQuantity16Choice? ICorporateActionQuantity3.MinimumQuantitySought => MinimumQuantitySought;
-    IFinancialInstrumentQuantity1Choice? ICorporateActionQuantity3.NewBoardLotQuantity => NewBoardLotQuantity;
-    IFinancialInstrumentQuantity1Choice? ICorporateActionQuantity3.NewDenominationQuantity => NewDenominationQuantity;
-    IFinancialInstrumentQuantity1Choice? ICorporateActionQuantity3.BaseDenomination => BaseDenomination;
-    IFinancialInstrumentQuantity1Choice? ICorporateActionQuantity3.IncrementalDenomination => IncrementalDenomination;
+    IFinancialInstrumentQuantity1Choice? ICorporateActionQuantity3.MinimumExercisableQuantity =>
+        MinimumExercisableQuantity;
+    IFinancialInstrumentQuantity1Choice? ICorporateActionQuantity3.MinimumExercisableMultipleQuantity =>
+        MinimumExercisableMultipleQuantity;
+    IFinancialInstrumentQuantity16Choice? ICorporateActionQuantity3.MaximumQuantity =>
+        MaximumQuantity;
+    IFinancialInstrumentQuantity16Choice? ICorporateActionQuantity3.MinimumQuantitySought =>
+        MinimumQuantitySought;
+    IFinancialInstrumentQuantity1Choice? ICorporateActionQuantity3.NewBoardLotQuantity =>
+        NewBoardLotQuantity;
+    IFinancialInstrumentQuantity1Choice? ICorporateActionQuantity3.NewDenominationQuantity =>
+        NewDenominationQuantity;
+    IFinancialInstrumentQuantity1Choice? ICorporateActionQuantity3.BaseDenomination =>
+        BaseDenomination;
+    IFinancialInstrumentQuantity1Choice? ICorporateActionQuantity3.IncrementalDenomination =>
+        IncrementalDenomination;
 }

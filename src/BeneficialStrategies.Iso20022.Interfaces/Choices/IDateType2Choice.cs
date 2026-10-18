@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Date Type2Choice.
 /// </summary>
 [IsoId("_5NXe0DLNEe6C5PjOhOZ_sw")]
-public interface IDateType2Choice : IIsoChoice
-{
-}
+public interface IDateType2Choice : IIsoChoice { }

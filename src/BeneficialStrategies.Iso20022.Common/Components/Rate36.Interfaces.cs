@@ -12,7 +12,8 @@ public partial record Rate36 : IRate36
 {
     IRateAndAmountFormat37Choice? IRate36.AdditionalTax => AdditionalTax;
     IEnumerable<IGrossDividendRateFormat38Choice> IRate36.GrossDividendRate => GrossDividendRate;
-    IEnumerable<IInterestRateUsedForPaymentFormat8Choice> IRate36.InterestRateUsedForPayment => InterestRateUsedForPayment;
+    IEnumerable<IInterestRateUsedForPaymentFormat8Choice> IRate36.InterestRateUsedForPayment =>
+        InterestRateUsedForPayment;
     IEnumerable<IRateAndAmountFormat41Choice> IRate36.WithholdingTaxRate => WithholdingTaxRate;
     IEnumerable<IRateAndAmountFormat41Choice> IRate36.SecondLevelTax => SecondLevelTax;
     IRateAndAmountFormat37Choice? IRate36.ChargesFees => ChargesFees;

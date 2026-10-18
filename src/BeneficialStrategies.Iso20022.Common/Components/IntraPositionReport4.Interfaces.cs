@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record IntraPositionReport4 : IIntraPositionReport4
-{
-}
+public partial record IntraPositionReport4 : IIntraPositionReport4 { }

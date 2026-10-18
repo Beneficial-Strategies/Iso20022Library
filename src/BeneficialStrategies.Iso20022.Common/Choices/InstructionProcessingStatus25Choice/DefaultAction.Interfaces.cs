@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus25Choice;
 
-public partial record DefaultAction : IDefaultAction
-{
-}
+public partial record DefaultAction : IDefaultAction { }

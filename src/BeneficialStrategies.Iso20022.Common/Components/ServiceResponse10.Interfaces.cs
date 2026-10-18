@@ -18,7 +18,8 @@ public partial record ServiceResponse10 : IServiceResponse10
     ILoyaltyResponse3? IServiceResponse10.LoyaltyResponse => LoyaltyResponse;
     IStoredValueResponse9? IServiceResponse10.StoredValueResponse => StoredValueResponse;
     IBatchResponse8? IServiceResponse10.BatchResponse => BatchResponse;
-    ICardAcquisitionResponse3? IServiceResponse10.CardAcquisitionResponse => CardAcquisitionResponse;
+    ICardAcquisitionResponse3? IServiceResponse10.CardAcquisitionResponse =>
+        CardAcquisitionResponse;
     IResponseType11 IServiceResponse10.Response => Response;
     IEnumerable<ISupplementaryData1> IServiceResponse10.SupplementaryData => SupplementaryData;
 }

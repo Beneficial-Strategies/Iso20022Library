@@ -10,9 +10,14 @@ namespace BeneficialStrategies.Iso20022.seev;
 
 public partial record CorporateActionNarrative002V07 : ICorporateActionNarrative002V07
 {
-    IAccountIdentification53Choice? ICorporateActionNarrative002V07.AccountDetails => AccountDetails;
-    ISecurityIdentification20? ICorporateActionNarrative002V07.UnderlyingSecurity => UnderlyingSecurity;
-    ICorporateActionGeneralInformation102 ICorporateActionNarrative002V07.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IUpdatedAdditionalInformation10 ICorporateActionNarrative002V07.AdditionalInformation => AdditionalInformation;
-    IEnumerable<ISupplementaryData1> ICorporateActionNarrative002V07.SupplementaryData => SupplementaryData;
+    IAccountIdentification53Choice? ICorporateActionNarrative002V07.AccountDetails =>
+        AccountDetails;
+    ISecurityIdentification20? ICorporateActionNarrative002V07.UnderlyingSecurity =>
+        UnderlyingSecurity;
+    ICorporateActionGeneralInformation102 ICorporateActionNarrative002V07.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IUpdatedAdditionalInformation10 ICorporateActionNarrative002V07.AdditionalInformation =>
+        AdditionalInformation;
+    IEnumerable<ISupplementaryData1> ICorporateActionNarrative002V07.SupplementaryData =>
+        SupplementaryData;
 }

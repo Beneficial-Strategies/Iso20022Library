@@ -12,5 +12,6 @@ public partial record DataSetRequest4 : IDataSetRequest4
 {
     IDataSetIdentification10 IDataSetRequest4.Identification => Identification;
     ICryptographicKey17? IDataSetRequest4.SessionKey => SessionKey;
-    IContentInformationType34? IDataSetRequest4.ProtectedDelegationProof => ProtectedDelegationProof;
+    IContentInformationType34? IDataSetRequest4.ProtectedDelegationProof =>
+        ProtectedDelegationProof;
 }

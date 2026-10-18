@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SettlementInstructionQueryDefinition4 : ISettlementInstructionQueryDefinition4
 {
-    ISettlementInstructionQueryCriteria4 ISettlementInstructionQueryDefinition4.SearchCriteria => SearchCriteria;
+    ISettlementInstructionQueryCriteria4 ISettlementInstructionQueryDefinition4.SearchCriteria =>
+        SearchCriteria;
 }

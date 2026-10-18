@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the trade transaction condition.
 /// </summary>
 [IsoId("_2O8mYTqjEeWyoP0PbocV1Q")]
-public interface ITradeTransactionCondition5Choice : IIsoChoice
-{
-}
+public interface ITradeTransactionCondition5Choice : IIsoChoice { }

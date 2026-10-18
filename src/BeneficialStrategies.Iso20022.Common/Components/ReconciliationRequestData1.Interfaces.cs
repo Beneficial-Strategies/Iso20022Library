@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record ReconciliationRequestData1 : IReconciliationRequestData1
-{
-}
+public partial record ReconciliationRequestData1 : IReconciliationRequestData1 { }

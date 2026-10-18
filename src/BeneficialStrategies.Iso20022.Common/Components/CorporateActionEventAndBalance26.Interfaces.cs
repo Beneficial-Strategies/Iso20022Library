@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CorporateActionEventAndBalance26 : ICorporateActionEventAndBalance26
 {
     IEventInformation17 ICorporateActionEventAndBalance26.GeneralInformation => GeneralInformation;
-    ISecurityIdentification19 ICorporateActionEventAndBalance26.UnderlyingSecurity => UnderlyingSecurity;
+    ISecurityIdentification19 ICorporateActionEventAndBalance26.UnderlyingSecurity =>
+        UnderlyingSecurity;
     ICorporateActionBalance50? ICorporateActionEventAndBalance26.Balance => Balance;
-    IEnumerable<ISupplementaryData1> ICorporateActionEventAndBalance26.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> ICorporateActionEventAndBalance26.SupplementaryData =>
+        SupplementaryData;
 }

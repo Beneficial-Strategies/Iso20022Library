@@ -8,8 +8,10 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record DeviceInitialisationCardReaderRequest2 : IDeviceInitialisationCardReaderRequest2
+public partial record DeviceInitialisationCardReaderRequest2
+    : IDeviceInitialisationCardReaderRequest2
 {
-    IEnumerable<CardDataReading8Code> IDeviceInitialisationCardReaderRequest2.ForceEntryMode => ForceEntryMode;
+    IEnumerable<CardDataReading8Code> IDeviceInitialisationCardReaderRequest2.ForceEntryMode =>
+        ForceEntryMode;
     IActionMessage7? IDeviceInitialisationCardReaderRequest2.DisplayOutput => DisplayOutput;
 }

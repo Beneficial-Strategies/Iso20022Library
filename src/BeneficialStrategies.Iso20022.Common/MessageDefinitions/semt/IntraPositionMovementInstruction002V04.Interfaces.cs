@@ -8,16 +8,25 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record IntraPositionMovementInstruction002V04 : IIntraPositionMovementInstruction002V04
+public partial record IntraPositionMovementInstruction002V04
+    : IIntraPositionMovementInstruction002V04
 {
-    IIdentification16? IIntraPositionMovementInstruction002V04.CorporateActionEventIdentification => CorporateActionEventIdentification;
+    IIdentification16? IIntraPositionMovementInstruction002V04.CorporateActionEventIdentification =>
+        CorporateActionEventIdentification;
     INumberCount1Choice? IIntraPositionMovementInstruction002V04.NumberCounts => NumberCounts;
     IEnumerable<ILinkages42> IIntraPositionMovementInstruction002V04.Linkages => Linkages;
-    IPartyIdentification103Choice? IIntraPositionMovementInstruction002V04.AccountOwner => AccountOwner;
-    ISecuritiesAccount27 IIntraPositionMovementInstruction002V04.SafekeepingAccount => SafekeepingAccount;
-    ISafekeepingPlaceFormat17Choice? IIntraPositionMovementInstruction002V04.SafekeepingPlace => SafekeepingPlace;
-    ISecurityIdentification20 IIntraPositionMovementInstruction002V04.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentAttributes75? IIntraPositionMovementInstruction002V04.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
-    IIntraPositionDetails36 IIntraPositionMovementInstruction002V04.IntraPositionDetails => IntraPositionDetails;
-    IEnumerable<ISupplementaryData1> IIntraPositionMovementInstruction002V04.SupplementaryData => SupplementaryData;
+    IPartyIdentification103Choice? IIntraPositionMovementInstruction002V04.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount27 IIntraPositionMovementInstruction002V04.SafekeepingAccount =>
+        SafekeepingAccount;
+    ISafekeepingPlaceFormat17Choice? IIntraPositionMovementInstruction002V04.SafekeepingPlace =>
+        SafekeepingPlace;
+    ISecurityIdentification20 IIntraPositionMovementInstruction002V04.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentAttributes75? IIntraPositionMovementInstruction002V04.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
+    IIntraPositionDetails36 IIntraPositionMovementInstruction002V04.IntraPositionDetails =>
+        IntraPositionDetails;
+    IEnumerable<ISupplementaryData1> IIntraPositionMovementInstruction002V04.SupplementaryData =>
+        SupplementaryData;
 }

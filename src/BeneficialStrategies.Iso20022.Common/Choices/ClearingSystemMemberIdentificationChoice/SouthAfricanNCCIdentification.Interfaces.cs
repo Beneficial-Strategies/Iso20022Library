@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificationChoice;
 
-public partial record SouthAfricanNCCIdentification : ISouthAfricanNCCIdentification
-{
-}
+public partial record SouthAfricanNCCIdentification : ISouthAfricanNCCIdentification { }

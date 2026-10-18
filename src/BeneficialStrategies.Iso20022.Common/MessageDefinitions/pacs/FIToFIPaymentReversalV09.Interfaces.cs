@@ -11,7 +11,10 @@ namespace BeneficialStrategies.Iso20022.pacs;
 public partial record FIToFIPaymentReversalV09 : IFIToFIPaymentReversalV09
 {
     IGroupHeader89 IFIToFIPaymentReversalV09.GroupHeader => GroupHeader;
-    IOriginalGroupHeader16? IFIToFIPaymentReversalV09.OriginalGroupInformation => OriginalGroupInformation;
-    IEnumerable<IPaymentTransaction111> IFIToFIPaymentReversalV09.TransactionInformation => TransactionInformation;
-    IEnumerable<ISupplementaryData1> IFIToFIPaymentReversalV09.SupplementaryData => SupplementaryData;
+    IOriginalGroupHeader16? IFIToFIPaymentReversalV09.OriginalGroupInformation =>
+        OriginalGroupInformation;
+    IEnumerable<IPaymentTransaction111> IFIToFIPaymentReversalV09.TransactionInformation =>
+        TransactionInformation;
+    IEnumerable<ISupplementaryData1> IFIToFIPaymentReversalV09.SupplementaryData =>
+        SupplementaryData;
 }

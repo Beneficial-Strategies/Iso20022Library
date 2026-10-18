@@ -8,11 +8,16 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record CustodyStatementOfHoldingsCancellationV02 : ICustodyStatementOfHoldingsCancellationV02
+public partial record CustodyStatementOfHoldingsCancellationV02
+    : ICustodyStatementOfHoldingsCancellationV02
 {
-    IMessageIdentification1 ICustodyStatementOfHoldingsCancellationV02.MessageIdentification => MessageIdentification;
-    IAdditionalReference2? ICustodyStatementOfHoldingsCancellationV02.PreviousReference => PreviousReference;
-    IAdditionalReference2? ICustodyStatementOfHoldingsCancellationV02.RelatedReference => RelatedReference;
+    IMessageIdentification1 ICustodyStatementOfHoldingsCancellationV02.MessageIdentification =>
+        MessageIdentification;
+    IAdditionalReference2? ICustodyStatementOfHoldingsCancellationV02.PreviousReference =>
+        PreviousReference;
+    IAdditionalReference2? ICustodyStatementOfHoldingsCancellationV02.RelatedReference =>
+        RelatedReference;
     IPagination ICustodyStatementOfHoldingsCancellationV02.MessagePagination => MessagePagination;
-    ICustodyStatementOfHoldings2? ICustodyStatementOfHoldingsCancellationV02.StatementToBeCancelled => StatementToBeCancelled;
+    ICustodyStatementOfHoldings2? ICustodyStatementOfHoldingsCancellationV02.StatementToBeCancelled =>
+        StatementToBeCancelled;
 }

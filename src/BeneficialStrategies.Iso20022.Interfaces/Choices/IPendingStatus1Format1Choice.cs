@@ -7,6 +7,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice of formats to express the pending status of the notification advice.</summary>
 [IsoId("_pJuWYaUdEfCnE_wCEfCqTA")]
-public interface IPendingStatus1Format1Choice : IIsoChoice
-{
-}
+public interface IPendingStatus1Format1Choice : IIsoChoice { }

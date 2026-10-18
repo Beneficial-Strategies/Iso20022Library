@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record PaginationBalance1 : IPaginationBalance1
 {
     IFinancialInstrumentQuantity1? IPaginationBalance1.FirstOpeningBalance => FirstOpeningBalance;
-    IFinancialInstrumentQuantity1? IPaginationBalance1.IntermediaryOpeningBalance => IntermediaryOpeningBalance;
+    IFinancialInstrumentQuantity1? IPaginationBalance1.IntermediaryOpeningBalance =>
+        IntermediaryOpeningBalance;
     IFinancialInstrumentQuantity1? IPaginationBalance1.FinalClosingBalance => FinalClosingBalance;
-    IFinancialInstrumentQuantity1? IPaginationBalance1.IntermediaryClosingBalance => IntermediaryClosingBalance;
+    IFinancialInstrumentQuantity1? IPaginationBalance1.IntermediaryClosingBalance =>
+        IntermediaryClosingBalance;
 }

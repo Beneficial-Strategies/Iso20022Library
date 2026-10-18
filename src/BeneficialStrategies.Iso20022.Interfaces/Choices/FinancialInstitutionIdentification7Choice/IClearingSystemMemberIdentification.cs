@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
 /// Choice of identifier for a clearing system member, as assigned by the clearing system. In some clearing systems, the accounts of the clearing system members are also assigned an identifier.
 /// </summary>
 [IsoId("_Tet_ZSGOEeW7gKYhAMEFCw")]
-public interface IClearingSystemMemberIdentification : IFinancialInstitutionIdentification7Choice, IIsoChoiceVariant
+public interface IClearingSystemMemberIdentification
+    : IFinancialInstitutionIdentification7Choice,
+        IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>
     [IsoXmlTag("ClrSysMmbId")]

@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.References27Choice;
 
-public partial record MarketInfrastructureTransactionIdentification : IMarketInfrastructureTransactionIdentification
-{
-}
+public partial record MarketInfrastructureTransactionIdentification
+    : IMarketInfrastructureTransactionIdentification { }

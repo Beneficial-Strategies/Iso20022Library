@@ -16,5 +16,6 @@ public partial record Penalty4 : IPenalty4
     IPartyIdentification136? IPenalty4.CSDDepository => CSDDepository;
     IAggregatedPenaltyAmount1? IPenalty4.AggregatedAmount => AggregatedAmount;
     IAccountIdentification4Choice? IPenalty4.CashAccount => CashAccount;
-    IEnumerable<IPenaltyPerCounterparty4> IPenalty4.PenaltyPerCounterparty => PenaltyPerCounterparty;
+    IEnumerable<IPenaltyPerCounterparty4> IPenalty4.PenaltyPerCounterparty =>
+        PenaltyPerCounterparty;
 }

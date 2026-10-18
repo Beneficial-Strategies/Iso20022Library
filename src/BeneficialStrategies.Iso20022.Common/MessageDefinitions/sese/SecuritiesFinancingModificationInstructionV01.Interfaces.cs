@@ -8,19 +8,32 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesFinancingModificationInstructionV01 : ISecuritiesFinancingModificationInstructionV01
+public partial record SecuritiesFinancingModificationInstructionV01
+    : ISecuritiesFinancingModificationInstructionV01
 {
-    IDocumentIdentification11 ISecuritiesFinancingModificationInstructionV01.Identification => Identification;
-    ITransactionTypeAndAdditionalParameters2 ISecuritiesFinancingModificationInstructionV01.TransactionTypeAndModificationAdditionalParameters => TransactionTypeAndModificationAdditionalParameters;
-    ISecuritiesTradeDetails5 ISecuritiesFinancingModificationInstructionV01.TradeDetails => TradeDetails;
-    ISecurityIdentification11 ISecuritiesFinancingModificationInstructionV01.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IQuantityAndAccount7 ISecuritiesFinancingModificationInstructionV01.QuantityAndAccountDetails => QuantityAndAccountDetails;
-    ISecuritiesFinancingTransactionDetails1 ISecuritiesFinancingModificationInstructionV01.SecuritiesFinancingAdditionalDetails => SecuritiesFinancingAdditionalDetails;
-    ISettlementDetails3? ISecuritiesFinancingModificationInstructionV01.SettlementParameters => SettlementParameters;
-    ISettlementParties5? ISecuritiesFinancingModificationInstructionV01.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties5? ISecuritiesFinancingModificationInstructionV01.ReceivingSettlementParties => ReceivingSettlementParties;
-    IAmountAndDirection10? ISecuritiesFinancingModificationInstructionV01.OpeningSettlementAmount => OpeningSettlementAmount;
-    IPartyIdentification10Choice? ISecuritiesFinancingModificationInstructionV01.MessageOriginator => MessageOriginator;
-    IPartyIdentification10Choice? ISecuritiesFinancingModificationInstructionV01.MessageRecipient => MessageRecipient;
+    IDocumentIdentification11 ISecuritiesFinancingModificationInstructionV01.Identification =>
+        Identification;
+    ITransactionTypeAndAdditionalParameters2 ISecuritiesFinancingModificationInstructionV01.TransactionTypeAndModificationAdditionalParameters =>
+        TransactionTypeAndModificationAdditionalParameters;
+    ISecuritiesTradeDetails5 ISecuritiesFinancingModificationInstructionV01.TradeDetails =>
+        TradeDetails;
+    ISecurityIdentification11 ISecuritiesFinancingModificationInstructionV01.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IQuantityAndAccount7 ISecuritiesFinancingModificationInstructionV01.QuantityAndAccountDetails =>
+        QuantityAndAccountDetails;
+    ISecuritiesFinancingTransactionDetails1 ISecuritiesFinancingModificationInstructionV01.SecuritiesFinancingAdditionalDetails =>
+        SecuritiesFinancingAdditionalDetails;
+    ISettlementDetails3? ISecuritiesFinancingModificationInstructionV01.SettlementParameters =>
+        SettlementParameters;
+    ISettlementParties5? ISecuritiesFinancingModificationInstructionV01.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties5? ISecuritiesFinancingModificationInstructionV01.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
+    IAmountAndDirection10? ISecuritiesFinancingModificationInstructionV01.OpeningSettlementAmount =>
+        OpeningSettlementAmount;
+    IPartyIdentification10Choice? ISecuritiesFinancingModificationInstructionV01.MessageOriginator =>
+        MessageOriginator;
+    IPartyIdentification10Choice? ISecuritiesFinancingModificationInstructionV01.MessageRecipient =>
+        MessageRecipient;
     IEnumerable<IExtension2> ISecuritiesFinancingModificationInstructionV01.Extension => Extension;
 }

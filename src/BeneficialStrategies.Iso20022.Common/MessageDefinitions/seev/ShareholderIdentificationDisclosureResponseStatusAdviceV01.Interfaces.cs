@@ -8,10 +8,15 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record ShareholderIdentificationDisclosureResponseStatusAdviceV01 : IShareholderIdentificationDisclosureResponseStatusAdviceV01
+public partial record ShareholderIdentificationDisclosureResponseStatusAdviceV01
+    : IShareholderIdentificationDisclosureResponseStatusAdviceV01
 {
-    IDisclosureRequestIdentification1 IShareholderIdentificationDisclosureResponseStatusAdviceV01.IssuerDisclosureRequestReference => IssuerDisclosureRequestReference;
-    IPartyIdentification215 IShareholderIdentificationDisclosureResponseStatusAdviceV01.RespondingIntermediary => RespondingIntermediary;
-    IResponseProcessingStatus1Choice IShareholderIdentificationDisclosureResponseStatusAdviceV01.ResponseReceptionStatus => ResponseReceptionStatus;
-    IEnumerable<ISupplementaryData1> IShareholderIdentificationDisclosureResponseStatusAdviceV01.SupplementaryData => SupplementaryData;
+    IDisclosureRequestIdentification1 IShareholderIdentificationDisclosureResponseStatusAdviceV01.IssuerDisclosureRequestReference =>
+        IssuerDisclosureRequestReference;
+    IPartyIdentification215 IShareholderIdentificationDisclosureResponseStatusAdviceV01.RespondingIntermediary =>
+        RespondingIntermediary;
+    IResponseProcessingStatus1Choice IShareholderIdentificationDisclosureResponseStatusAdviceV01.ResponseReceptionStatus =>
+        ResponseReceptionStatus;
+    IEnumerable<ISupplementaryData1> IShareholderIdentificationDisclosureResponseStatusAdviceV01.SupplementaryData =>
+        SupplementaryData;
 }

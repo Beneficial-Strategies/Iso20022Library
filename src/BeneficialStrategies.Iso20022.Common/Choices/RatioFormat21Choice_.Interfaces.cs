@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record RatioFormat21Choice_ : IRatioFormat21Choice
-{
-}
+public abstract partial record RatioFormat21Choice_ : IRatioFormat21Choice { }

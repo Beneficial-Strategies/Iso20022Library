@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.casp;
 public partial record SaleToPOIReconciliationRequestV05 : ISaleToPOIReconciliationRequestV05
 {
     IHeader41 ISaleToPOIReconciliationRequestV05.Header => Header;
-    IReconciliationRequest6 ISaleToPOIReconciliationRequestV05.ReconciliationRequest => ReconciliationRequest;
-    IContentInformationType33? ISaleToPOIReconciliationRequestV05.SecurityTrailer => SecurityTrailer;
+    IReconciliationRequest6 ISaleToPOIReconciliationRequestV05.ReconciliationRequest =>
+        ReconciliationRequest;
+    IContentInformationType33? ISaleToPOIReconciliationRequestV05.SecurityTrailer =>
+        SecurityTrailer;
 }

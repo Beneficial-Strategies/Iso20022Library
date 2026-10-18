@@ -11,23 +11,32 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SecuritiesTradeDetails23 : ISecuritiesTradeDetails23
 {
     IEnumerable<Max35Text> ISecuritiesTradeDetails23.TradeIdentification => TradeIdentification;
-    IEnumerable<Max35Text> ISecuritiesTradeDetails23.CollateralTransactionIdentification => CollateralTransactionIdentification;
+    IEnumerable<Max35Text> ISecuritiesTradeDetails23.CollateralTransactionIdentification =>
+        CollateralTransactionIdentification;
     IAllegementStatus1Choice? ISecuritiesTradeDetails23.Status => Status;
     IMarketIdentification4? ISecuritiesTradeDetails23.PlaceOfTrade => PlaceOfTrade;
     ITradeDate1Choice? ISecuritiesTradeDetails23.TradeDate => TradeDate;
     ISettlementDate1Choice ISecuritiesTradeDetails23.SettlementDate => SettlementDate;
     IPrice2? ISecuritiesTradeDetails23.DealPrice => DealPrice;
-    ISecurityIdentification14 ISecuritiesTradeDetails23.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentAttributes35? ISecuritiesTradeDetails23.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
-    IEnumerable<ITradeTransactionCondition1Choice> ISecuritiesTradeDetails23.TradeTransactionCondition => TradeTransactionCondition;
+    ISecurityIdentification14 ISecuritiesTradeDetails23.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentAttributes35? ISecuritiesTradeDetails23.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
+    IEnumerable<ITradeTransactionCondition1Choice> ISecuritiesTradeDetails23.TradeTransactionCondition =>
+        TradeTransactionCondition;
     ITypeOfPrice3Choice? ISecuritiesTradeDetails23.TypeOfPrice => TypeOfPrice;
-    IQuantityAndAccount26 ISecuritiesTradeDetails23.QuantityAndAccountDetails => QuantityAndAccountDetails;
-    ISecuritiesFinancingTransactionDetails7? ISecuritiesTradeDetails23.SecuritiesFinancingDetails => SecuritiesFinancingDetails;
+    IQuantityAndAccount26 ISecuritiesTradeDetails23.QuantityAndAccountDetails =>
+        QuantityAndAccountDetails;
+    ISecuritiesFinancingTransactionDetails7? ISecuritiesTradeDetails23.SecuritiesFinancingDetails =>
+        SecuritiesFinancingDetails;
     ISettlementDetails49 ISecuritiesTradeDetails23.SettlementParameters => SettlementParameters;
-    ISettlementParties11? ISecuritiesTradeDetails23.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties11? ISecuritiesTradeDetails23.ReceivingSettlementParties => ReceivingSettlementParties;
+    ISettlementParties11? ISecuritiesTradeDetails23.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties11? ISecuritiesTradeDetails23.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
     IAmountAndDirection22? ISecuritiesTradeDetails23.SettlementAmount => SettlementAmount;
     IOtherAmounts8? ISecuritiesTradeDetails23.OtherAmounts => OtherAmounts;
     IOtherParties11? ISecuritiesTradeDetails23.OtherBusinessParties => OtherBusinessParties;
-    IEnumerable<ISupplementaryData1> ISecuritiesTradeDetails23.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> ISecuritiesTradeDetails23.SupplementaryData =>
+        SupplementaryData;
 }

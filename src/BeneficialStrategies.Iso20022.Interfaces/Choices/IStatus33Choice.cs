@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between statuses.
 /// </summary>
 [IsoId("_waWF8yAeEeuyDZ-ukt4YRg")]
-public interface IStatus33Choice : IIsoChoice
-{
-}
+public interface IStatus33Choice : IIsoChoice { }

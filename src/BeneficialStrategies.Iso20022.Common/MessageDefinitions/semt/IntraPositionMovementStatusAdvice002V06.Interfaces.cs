@@ -8,11 +8,17 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record IntraPositionMovementStatusAdvice002V06 : IIntraPositionMovementStatusAdvice002V06
+public partial record IntraPositionMovementStatusAdvice002V06
+    : IIntraPositionMovementStatusAdvice002V06
 {
-    ITransactionIdentifications34 IIntraPositionMovementStatusAdvice002V06.TransactionIdentification => TransactionIdentification;
-    IIntraPositionProcessingStatus8Choice? IIntraPositionMovementStatusAdvice002V06.ProcessingStatus => ProcessingStatus;
-    ISettlementStatus20Choice? IIntraPositionMovementStatusAdvice002V06.SettlementStatus => SettlementStatus;
-    IIntraPositionDetails50? IIntraPositionMovementStatusAdvice002V06.TransactionDetails => TransactionDetails;
-    IEnumerable<ISupplementaryData1> IIntraPositionMovementStatusAdvice002V06.SupplementaryData => SupplementaryData;
+    ITransactionIdentifications34 IIntraPositionMovementStatusAdvice002V06.TransactionIdentification =>
+        TransactionIdentification;
+    IIntraPositionProcessingStatus8Choice? IIntraPositionMovementStatusAdvice002V06.ProcessingStatus =>
+        ProcessingStatus;
+    ISettlementStatus20Choice? IIntraPositionMovementStatusAdvice002V06.SettlementStatus =>
+        SettlementStatus;
+    IIntraPositionDetails50? IIntraPositionMovementStatusAdvice002V06.TransactionDetails =>
+        TransactionDetails;
+    IEnumerable<ISupplementaryData1> IIntraPositionMovementStatusAdvice002V06.SupplementaryData =>
+        SupplementaryData;
 }

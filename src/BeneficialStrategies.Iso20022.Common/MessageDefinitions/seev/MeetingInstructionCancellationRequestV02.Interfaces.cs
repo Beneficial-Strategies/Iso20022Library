@@ -8,12 +8,19 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record MeetingInstructionCancellationRequestV02 : IMeetingInstructionCancellationRequestV02
+public partial record MeetingInstructionCancellationRequestV02
+    : IMeetingInstructionCancellationRequestV02
 {
-    IMessageIdentification1 IMeetingInstructionCancellationRequestV02.InstructionCancellationIdentification => InstructionCancellationIdentification;
-    IMessageIdentification IMeetingInstructionCancellationRequestV02.PreviousReference => PreviousReference;
-    IMeetingReference3? IMeetingInstructionCancellationRequestV02.MeetingReference => MeetingReference;
-    IPartyIdentification9Choice? IMeetingInstructionCancellationRequestV02.RequestingParty => RequestingParty;
-    ISecurityIdentification3? IMeetingInstructionCancellationRequestV02.SecurityIdentification => SecurityIdentification;
-    IEnumerable<ISafekeepingAccount3> IMeetingInstructionCancellationRequestV02.InstructedPosition => InstructedPosition;
+    IMessageIdentification1 IMeetingInstructionCancellationRequestV02.InstructionCancellationIdentification =>
+        InstructionCancellationIdentification;
+    IMessageIdentification IMeetingInstructionCancellationRequestV02.PreviousReference =>
+        PreviousReference;
+    IMeetingReference3? IMeetingInstructionCancellationRequestV02.MeetingReference =>
+        MeetingReference;
+    IPartyIdentification9Choice? IMeetingInstructionCancellationRequestV02.RequestingParty =>
+        RequestingParty;
+    ISecurityIdentification3? IMeetingInstructionCancellationRequestV02.SecurityIdentification =>
+        SecurityIdentification;
+    IEnumerable<ISafekeepingAccount3> IMeetingInstructionCancellationRequestV02.InstructedPosition =>
+        InstructedPosition;
 }

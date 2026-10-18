@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for a frequency, for example, the frequency of delivery of a statement.
 /// </summary>
 [IsoId("_muwIS_70EeCKvdA5_Kg7Aw")]
-public interface IFrequency9Choice : IIsoChoice
-{
-}
+public interface IFrequency9Choice : IIsoChoice { }

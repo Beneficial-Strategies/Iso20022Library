@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the sub-balance.
 /// </summary>
 [IsoId("_5W5195NLEeWGlc8L7oPDIg")]
-public interface ISubBalanceType13Choice : IIsoChoice
-{
-}
+public interface ISubBalanceType13Choice : IIsoChoice { }

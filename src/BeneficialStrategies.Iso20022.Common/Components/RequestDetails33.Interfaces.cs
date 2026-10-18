@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record RequestDetails33 : IRequestDetails33
 {
     IReferences32 IRequestDetails33.Reference => Reference;
-    IEnumerable<IRestrictionIdentification1> IRequestDetails33.RestrictionReference => RestrictionReference;
+    IEnumerable<IRestrictionIdentification1> IRequestDetails33.RestrictionReference =>
+        RestrictionReference;
     IAutomaticBorrowing7Choice? IRequestDetails33.AutomaticBorrowing => AutomaticBorrowing;
     ILinkageType3Choice? IRequestDetails33.Linkage => Linkage;
     IPriorityNumeric4Choice? IRequestDetails33.Priority => Priority;

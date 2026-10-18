@@ -10,15 +10,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PaymentTransaction165 : IPaymentTransaction165
 {
-    IEnumerable<PaymentInstrumentType2Code> IPaymentTransaction165.PaymentInstrument => PaymentInstrument;
-    IPaymentTypeInformation26? IPaymentTransaction165.PaymentTypeInformation => PaymentTypeInformation;
-    IEnumerable<CardPaymentServiceType9Code> IPaymentTransaction165.AdditionalService => AdditionalService;
-    ITransactionIdentifier1 IPaymentTransaction165.TransactionIdentification => TransactionIdentification;
+    IEnumerable<PaymentInstrumentType2Code> IPaymentTransaction165.PaymentInstrument =>
+        PaymentInstrument;
+    IPaymentTypeInformation26? IPaymentTransaction165.PaymentTypeInformation =>
+        PaymentTypeInformation;
+    IEnumerable<CardPaymentServiceType9Code> IPaymentTransaction165.AdditionalService =>
+        AdditionalService;
+    ITransactionIdentifier1 IPaymentTransaction165.TransactionIdentification =>
+        TransactionIdentification;
     ICardPaymentTransaction131? IPaymentTransaction165.OriginalTransaction => OriginalTransaction;
-    ICardPaymentTransactionDetails53 IPaymentTransaction165.TransactionDetails => TransactionDetails;
+    ICardPaymentTransactionDetails53 IPaymentTransaction165.TransactionDetails =>
+        TransactionDetails;
     IAuthorisationResult18? IPaymentTransaction165.AuthorisationResult => AuthorisationResult;
     ICustomerOrder1? IPaymentTransaction165.CustomerOrder => CustomerOrder;
     ICardPaymentToken5? IPaymentTransaction165.CustomerToken => CustomerToken;
     IEnumerable<Max35Text> IPaymentTransaction165.CardProgrammeProposed => CardProgrammeProposed;
-    IEnumerable<Max70Text> IPaymentTransaction165.AdditionalTransactionData => AdditionalTransactionData;
+    IEnumerable<Max70Text> IPaymentTransaction165.AdditionalTransactionData =>
+        AdditionalTransactionData;
 }

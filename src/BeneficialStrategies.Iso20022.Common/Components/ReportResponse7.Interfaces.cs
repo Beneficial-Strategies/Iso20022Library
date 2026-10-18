@@ -12,7 +12,8 @@ public partial record ReportResponse7 : IReportResponse7
 {
     ICardPaymentEnvironment80 IReportResponse7.Environment => Environment;
     ICardPaymentContext30 IReportResponse7.Context => Context;
-    IReportTransactionResponse6? IReportResponse7.ReportTransactionResponse => ReportTransactionResponse;
+    IReportTransactionResponse6? IReportResponse7.ReportTransactionResponse =>
+        ReportTransactionResponse;
     IReportGetTotalsResponse1? IReportResponse7.ReportGetTotalsResponse => ReportGetTotalsResponse;
     IResponseType11 IReportResponse7.Response => Response;
     IEnumerable<ISupplementaryData1> IReportResponse7.SupplementaryData => SupplementaryData;

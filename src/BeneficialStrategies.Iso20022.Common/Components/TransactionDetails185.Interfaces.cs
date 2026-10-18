@@ -11,22 +11,29 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record TransactionDetails185 : ITransactionDetails185
 {
     ITransactionActivity3Choice ITransactionDetails185.TransactionActivity => TransactionActivity;
-    ISettlementOrCorporateActionEvent34Choice? ITransactionDetails185.SettlementTransactionOrCorporateActionEventType => SettlementTransactionOrCorporateActionEventType;
+    ISettlementOrCorporateActionEvent34Choice? ITransactionDetails185.SettlementTransactionOrCorporateActionEventType =>
+        SettlementTransactionOrCorporateActionEventType;
     ISettlementDetails232? ITransactionDetails185.SettlementParameters => SettlementParameters;
     IPlaceOfTradeIdentification1? ITransactionDetails185.PlaceOfTrade => PlaceOfTrade;
     ISafeKeepingPlace5? ITransactionDetails185.SafekeepingPlace => SafekeepingPlace;
     IPlaceOfClearingIdentification2? ITransactionDetails185.PlaceOfClearing => PlaceOfClearing;
-    ISecurityIdentification19 ITransactionDetails185.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification19 ITransactionDetails185.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     IQuantity51Choice ITransactionDetails185.PostingQuantity => PostingQuantity;
-    IQuantity51Choice? ITransactionDetails185.PartiallyReleasedQuantity => PartiallyReleasedQuantity;
+    IQuantity51Choice? ITransactionDetails185.PartiallyReleasedQuantity =>
+        PartiallyReleasedQuantity;
     IAmountAndDirection51? ITransactionDetails185.PostingAmount => PostingAmount;
-    IDigitalPaymentSettlement2? ITransactionDetails185.DigitalPaymentSettlement => DigitalPaymentSettlement;
+    IDigitalPaymentSettlement2? ITransactionDetails185.DigitalPaymentSettlement =>
+        DigitalPaymentSettlement;
     ITradeDate8Choice? ITransactionDetails185.TradeDate => TradeDate;
-    IDateAndDateTime2Choice? ITransactionDetails185.ExpectedSettlementDate => ExpectedSettlementDate;
+    IDateAndDateTime2Choice? ITransactionDetails185.ExpectedSettlementDate =>
+        ExpectedSettlementDate;
     ISettlementDate19Choice ITransactionDetails185.SettlementDate => SettlementDate;
     IDateAndDateTime2Choice? ITransactionDetails185.LateDeliveryDate => LateDeliveryDate;
     IDateAndDateTime2Choice? ITransactionDetails185.ExpectedValueDate => ExpectedValueDate;
-    ISettlementParties125? ITransactionDetails185.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties125? ITransactionDetails185.ReceivingSettlementParties => ReceivingSettlementParties;
+    ISettlementParties125? ITransactionDetails185.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties125? ITransactionDetails185.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
     IEnumerable<ISupplementaryData1> ITransactionDetails185.SupplementaryData => SupplementaryData;
 }

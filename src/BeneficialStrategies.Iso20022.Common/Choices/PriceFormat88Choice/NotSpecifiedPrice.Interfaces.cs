@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PriceFormat88Choice;
 
-public partial record NotSpecifiedPrice : INotSpecifiedPrice
-{
-}
+public partial record NotSpecifiedPrice : INotSpecifiedPrice { }

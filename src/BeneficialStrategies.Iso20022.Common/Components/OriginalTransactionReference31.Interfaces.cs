@@ -11,18 +11,26 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record OriginalTransactionReference31 : IOriginalTransactionReference31
 {
     IAmountType4Choice? IOriginalTransactionReference31.Amount => Amount;
-    IDateAndDateTime2Choice? IOriginalTransactionReference31.RequestedExecutionDate => RequestedExecutionDate;
-    IPartyIdentification135? IOriginalTransactionReference31.CreditorSchemeIdentification => CreditorSchemeIdentification;
-    ISettlementInstruction7? IOriginalTransactionReference31.SettlementInformation => SettlementInformation;
-    IPaymentTypeInformation27? IOriginalTransactionReference31.PaymentTypeInformation => PaymentTypeInformation;
-    IMandateRelatedData1Choice? IOriginalTransactionReference31.MandateRelatedInformation => MandateRelatedInformation;
-    IRemittanceInformation16? IOriginalTransactionReference31.RemittanceInformation => RemittanceInformation;
+    IDateAndDateTime2Choice? IOriginalTransactionReference31.RequestedExecutionDate =>
+        RequestedExecutionDate;
+    IPartyIdentification135? IOriginalTransactionReference31.CreditorSchemeIdentification =>
+        CreditorSchemeIdentification;
+    ISettlementInstruction7? IOriginalTransactionReference31.SettlementInformation =>
+        SettlementInformation;
+    IPaymentTypeInformation27? IOriginalTransactionReference31.PaymentTypeInformation =>
+        PaymentTypeInformation;
+    IMandateRelatedData1Choice? IOriginalTransactionReference31.MandateRelatedInformation =>
+        MandateRelatedInformation;
+    IRemittanceInformation16? IOriginalTransactionReference31.RemittanceInformation =>
+        RemittanceInformation;
     IParty40Choice? IOriginalTransactionReference31.UltimateDebtor => UltimateDebtor;
     IParty40Choice? IOriginalTransactionReference31.Debtor => Debtor;
     ICashAccount38? IOriginalTransactionReference31.DebtorAccount => DebtorAccount;
-    IBranchAndFinancialInstitutionIdentification6? IOriginalTransactionReference31.DebtorAgent => DebtorAgent;
+    IBranchAndFinancialInstitutionIdentification6? IOriginalTransactionReference31.DebtorAgent =>
+        DebtorAgent;
     ICashAccount38? IOriginalTransactionReference31.DebtorAgentAccount => DebtorAgentAccount;
-    IBranchAndFinancialInstitutionIdentification6? IOriginalTransactionReference31.CreditorAgent => CreditorAgent;
+    IBranchAndFinancialInstitutionIdentification6? IOriginalTransactionReference31.CreditorAgent =>
+        CreditorAgent;
     ICashAccount38? IOriginalTransactionReference31.CreditorAgentAccount => CreditorAgentAccount;
     IParty40Choice? IOriginalTransactionReference31.Creditor => Creditor;
     ICashAccount38? IOriginalTransactionReference31.CreditorAccount => CreditorAccount;

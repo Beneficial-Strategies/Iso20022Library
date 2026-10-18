@@ -12,14 +12,23 @@ public partial record SecuritiesBalanceCustodyReportV03 : ISecuritiesBalanceCust
 {
     IDocumentIdentification11 ISecuritiesBalanceCustodyReportV03.Identification => Identification;
     IPagination ISecuritiesBalanceCustodyReportV03.Pagination => Pagination;
-    IStatement21 ISecuritiesBalanceCustodyReportV03.StatementGeneralDetails => StatementGeneralDetails;
+    IStatement21 ISecuritiesBalanceCustodyReportV03.StatementGeneralDetails =>
+        StatementGeneralDetails;
     IPartyIdentification13Choice? ISecuritiesBalanceCustodyReportV03.AccountOwner => AccountOwner;
-    IPartyIdentification10Choice? ISecuritiesBalanceCustodyReportV03.AccountServicer => AccountServicer;
-    ISecuritiesAccount11 ISecuritiesBalanceCustodyReportV03.SafekeepingAccount => SafekeepingAccount;
-    IEnumerable<IIntermediary2> ISecuritiesBalanceCustodyReportV03.IntermediaryInformation => IntermediaryInformation;
-    IEnumerable<IAggregateBalanceInformation9> ISecuritiesBalanceCustodyReportV03.BalanceForAccount => BalanceForAccount;
-    IEnumerable<ISubAccountIdentification11> ISecuritiesBalanceCustodyReportV03.SubAccountDetails => SubAccountDetails;
-    ITotalValueInPageAndStatement1? ISecuritiesBalanceCustodyReportV03.AccountBaseCurrencyTotalAmounts => AccountBaseCurrencyTotalAmounts;
-    IPartyIdentification10Choice? ISecuritiesBalanceCustodyReportV03.MessageOriginator => MessageOriginator;
-    IPartyIdentification10Choice? ISecuritiesBalanceCustodyReportV03.MessageRecipient => MessageRecipient;
+    IPartyIdentification10Choice? ISecuritiesBalanceCustodyReportV03.AccountServicer =>
+        AccountServicer;
+    ISecuritiesAccount11 ISecuritiesBalanceCustodyReportV03.SafekeepingAccount =>
+        SafekeepingAccount;
+    IEnumerable<IIntermediary2> ISecuritiesBalanceCustodyReportV03.IntermediaryInformation =>
+        IntermediaryInformation;
+    IEnumerable<IAggregateBalanceInformation9> ISecuritiesBalanceCustodyReportV03.BalanceForAccount =>
+        BalanceForAccount;
+    IEnumerable<ISubAccountIdentification11> ISecuritiesBalanceCustodyReportV03.SubAccountDetails =>
+        SubAccountDetails;
+    ITotalValueInPageAndStatement1? ISecuritiesBalanceCustodyReportV03.AccountBaseCurrencyTotalAmounts =>
+        AccountBaseCurrencyTotalAmounts;
+    IPartyIdentification10Choice? ISecuritiesBalanceCustodyReportV03.MessageOriginator =>
+        MessageOriginator;
+    IPartyIdentification10Choice? ISecuritiesBalanceCustodyReportV03.MessageRecipient =>
+        MessageRecipient;
 }

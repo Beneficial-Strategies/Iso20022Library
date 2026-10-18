@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentIdentification1Choice;
 /// Identification of the document asigned by the account owner.
 /// </summary>
 [IsoId("_ThCb19p-Ed-ak6NoX_4Aeg_-1596192981")]
-public interface IAccountOwnerDocumentIdentification : IDocumentIdentification1Choice, IIsoChoiceVariant
+public interface IAccountOwnerDocumentIdentification
+    : IDocumentIdentification1Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

@@ -12,7 +12,8 @@ public partial record CorporateActionDate65 : ICorporateActionDate65
 {
     IDateAndDateTime2Choice ICorporateActionDate65.PostingDate => PostingDate;
     IDateAndDateTime2Choice? ICorporateActionDate65.ValueDate => ValueDate;
-    IDateAndDateTime2Choice? ICorporateActionDate65.ForeignExchangeRateFixingDate => ForeignExchangeRateFixingDate;
+    IDateAndDateTime2Choice? ICorporateActionDate65.ForeignExchangeRateFixingDate =>
+        ForeignExchangeRateFixingDate;
     IDateAndDateTime2Choice? ICorporateActionDate65.EarliestPaymentDate => EarliestPaymentDate;
     IDateAndDateTime2Choice? ICorporateActionDate65.PaymentDate => PaymentDate;
 }

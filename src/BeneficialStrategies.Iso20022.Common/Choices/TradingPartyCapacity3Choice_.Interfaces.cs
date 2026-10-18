@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record TradingPartyCapacity3Choice_ : ITradingPartyCapacity3Choice
-{
-}
+public abstract partial record TradingPartyCapacity3Choice_ : ITradingPartyCapacity3Choice { }

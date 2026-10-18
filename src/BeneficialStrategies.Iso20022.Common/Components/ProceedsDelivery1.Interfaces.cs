@@ -10,7 +10,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ProceedsDelivery1 : IProceedsDelivery1
 {
-    ICashAccountIdentification1Choice IProceedsDelivery1.CashAccountIdentification => CashAccountIdentification;
-    IPartyIdentification2Choice? IProceedsDelivery1.AccountOwnerIdentification => AccountOwnerIdentification;
-    IPartyIdentification2Choice? IProceedsDelivery1.AccountServicerIdentification => AccountServicerIdentification;
+    ICashAccountIdentification1Choice IProceedsDelivery1.CashAccountIdentification =>
+        CashAccountIdentification;
+    IPartyIdentification2Choice? IProceedsDelivery1.AccountOwnerIdentification =>
+        AccountOwnerIdentification;
+    IPartyIdentification2Choice? IProceedsDelivery1.AccountServicerIdentification =>
+        AccountServicerIdentification;
 }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies whether the status is provided with a reason or not.
 /// </summary>
 [IsoId("_Jha0UTnuEeWfSKvvZlhRKg")]
-public interface IRejectionOrRepairStatus29Choice : IIsoChoice
-{
-}
+public interface IRejectionOrRepairStatus29Choice : IIsoChoice { }

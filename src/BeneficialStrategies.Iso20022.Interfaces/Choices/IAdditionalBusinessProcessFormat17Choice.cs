@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or proprietary code to specify the type of the additional business process.
 /// </summary>
 [IsoId("_QR65wReoEeyroI8qKgB7Mg")]
-public interface IAdditionalBusinessProcessFormat17Choice : IIsoChoice
-{
-}
+public interface IAdditionalBusinessProcessFormat17Choice : IIsoChoice { }

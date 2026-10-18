@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the statement query unmatched reason.
 /// </summary>
 [IsoId("_E2Dtd_4hEeCH9dkaY_DhYw")]
-public interface IUnmatchedReason8Choice : IIsoChoice
-{
-}
+public interface IUnmatchedReason8Choice : IIsoChoice { }

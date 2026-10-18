@@ -12,5 +12,6 @@ public partial record BatchResponse5 : IBatchResponse5
 {
     ITransactionIdentifier1? IBatchResponse5.SaleBatchIdentification => SaleBatchIdentification;
     ITransactionIdentifier1? IBatchResponse5.POIBatchIdentification => POIBatchIdentification;
-    IEnumerable<IPerformedTransaction5> IBatchResponse5.PerformedTransaction => PerformedTransaction;
+    IEnumerable<IPerformedTransaction5> IBatchResponse5.PerformedTransaction =>
+        PerformedTransaction;
 }

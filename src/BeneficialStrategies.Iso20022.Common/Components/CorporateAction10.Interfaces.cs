@@ -18,15 +18,23 @@ public partial record CorporateAction10 : ICorporateAction10
     IEnumerable<IIdentificationFormat1Choice> ICorporateAction10.CouponNumber => CouponNumber;
     IDividendTypeFormat3Choice? ICorporateAction10.DividendType => DividendType;
     IConversionTypeFormat1Choice? ICorporateAction10.ConversionType => ConversionType;
-    IDistributionTypeFormat3Choice? ICorporateAction10.PaymentOccurrenceType => PaymentOccurrenceType;
+    IDistributionTypeFormat3Choice? ICorporateAction10.PaymentOccurrenceType =>
+        PaymentOccurrenceType;
     IEnumerable<IOfferTypeFormat3Choice> ICorporateAction10.OfferType => OfferType;
-    IRenounceableEntitlementStatusTypeFormat1Choice? ICorporateAction10.RenounceableEntitlementStatusType => RenounceableEntitlementStatusType;
-    IEnumerable<ICorporateActionEventStageFormat3Choice> ICorporateAction10.EventStage => EventStage;
-    IEnumerable<IAdditionalBusinessProcessFormat1Choice> ICorporateAction10.AdditionalBusinessProcessIndicator => AdditionalBusinessProcessIndicator;
-    IEnumerable<ICorporateActionChangeTypeFormat1Choice> ICorporateAction10.ChangeType => ChangeType;
-    IIntermediateSecuritiesDistributionTypeFormat9Choice? ICorporateAction10.IntermediateSecuritiesDistributionType => IntermediateSecuritiesDistributionType;
-    ICapitalGainFormat1Choice? ICorporateAction10.CapitalGainInOutIndicator => CapitalGainInOutIndicator;
-    ITaxableIncomePerShareCalculatedFormat1Choice? ICorporateAction10.TaxableIncomePerShareCalculated => TaxableIncomePerShareCalculated;
+    IRenounceableEntitlementStatusTypeFormat1Choice? ICorporateAction10.RenounceableEntitlementStatusType =>
+        RenounceableEntitlementStatusType;
+    IEnumerable<ICorporateActionEventStageFormat3Choice> ICorporateAction10.EventStage =>
+        EventStage;
+    IEnumerable<IAdditionalBusinessProcessFormat1Choice> ICorporateAction10.AdditionalBusinessProcessIndicator =>
+        AdditionalBusinessProcessIndicator;
+    IEnumerable<ICorporateActionChangeTypeFormat1Choice> ICorporateAction10.ChangeType =>
+        ChangeType;
+    IIntermediateSecuritiesDistributionTypeFormat9Choice? ICorporateAction10.IntermediateSecuritiesDistributionType =>
+        IntermediateSecuritiesDistributionType;
+    ICapitalGainFormat1Choice? ICorporateAction10.CapitalGainInOutIndicator =>
+        CapitalGainInOutIndicator;
+    ITaxableIncomePerShareCalculatedFormat1Choice? ICorporateAction10.TaxableIncomePerShareCalculated =>
+        TaxableIncomePerShareCalculated;
     IElectionTypeFormat1Choice? ICorporateAction10.ElectionType => ElectionType;
     ILotteryTypeFormat1Choice? ICorporateAction10.LotteryType => LotteryType;
     ICertificationTypeFormat1Choice? ICorporateAction10.CertificationType => CertificationType;

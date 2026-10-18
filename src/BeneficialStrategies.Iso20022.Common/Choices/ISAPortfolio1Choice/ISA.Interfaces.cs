@@ -12,5 +12,6 @@ public partial record ISA : IISA
 {
     ICurrentYearType1Choice? IISA.CurrentYear => CurrentYear;
     IPreviousYear2? IISA.PreviousYears => PreviousYears;
-    ISubscriptionInformation1? IISA.CurrentYearSubscriptionDetails => CurrentYearSubscriptionDetails;
+    ISubscriptionInformation1? IISA.CurrentYearSubscriptionDetails =>
+        CurrentYearSubscriptionDetails;
 }

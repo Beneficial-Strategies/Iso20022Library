@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record EncryptedContent4 : IEncryptedContent4
 {
-    IAlgorithmIdentification24? IEncryptedContent4.ContentEncryptionAlgorithm => ContentEncryptionAlgorithm;
+    IAlgorithmIdentification24? IEncryptedContent4.ContentEncryptionAlgorithm =>
+        ContentEncryptionAlgorithm;
 }

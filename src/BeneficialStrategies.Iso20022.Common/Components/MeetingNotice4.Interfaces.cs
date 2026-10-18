@@ -11,13 +11,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record MeetingNotice4 : IMeetingNotice4
 {
     IMeetingTypeClassification1Choice? IMeetingNotice4.Classification => Classification;
-    IDateFormat29Choice? IMeetingNotice4.AttendanceConfirmationDeadline => AttendanceConfirmationDeadline;
-    IDateFormat29Choice? IMeetingNotice4.AttendanceConfirmationSTPDeadline => AttendanceConfirmationSTPDeadline;
-    IDateFormat29Choice? IMeetingNotice4.AttendanceConfirmationMarketDeadline => AttendanceConfirmationMarketDeadline;
-    IEnumerable<IAdditionalRights2> IMeetingNotice4.AdditionalProcedureDetails => AdditionalProcedureDetails;
-    IUnitOrFaceAmount1Choice? IMeetingNotice4.TotalNumberOfSecuritiesOutstanding => TotalNumberOfSecuritiesOutstanding;
-    IPostalAddress1? IMeetingNotice4.ProxyAppointmentNotificationAddress => ProxyAppointmentNotificationAddress;
+    IDateFormat29Choice? IMeetingNotice4.AttendanceConfirmationDeadline =>
+        AttendanceConfirmationDeadline;
+    IDateFormat29Choice? IMeetingNotice4.AttendanceConfirmationSTPDeadline =>
+        AttendanceConfirmationSTPDeadline;
+    IDateFormat29Choice? IMeetingNotice4.AttendanceConfirmationMarketDeadline =>
+        AttendanceConfirmationMarketDeadline;
+    IEnumerable<IAdditionalRights2> IMeetingNotice4.AdditionalProcedureDetails =>
+        AdditionalProcedureDetails;
+    IUnitOrFaceAmount1Choice? IMeetingNotice4.TotalNumberOfSecuritiesOutstanding =>
+        TotalNumberOfSecuritiesOutstanding;
+    IPostalAddress1? IMeetingNotice4.ProxyAppointmentNotificationAddress =>
+        ProxyAppointmentNotificationAddress;
     IProxy2Choice? IMeetingNotice4.ProxyChoice_ => ProxyChoice_;
-    IEnumerable<IMeetingContactPerson2> IMeetingNotice4.ContactPersonDetails => ContactPersonDetails;
+    IEnumerable<IMeetingContactPerson2> IMeetingNotice4.ContactPersonDetails =>
+        ContactPersonDetails;
     IDateFormat3Choice? IMeetingNotice4.ResultPublicationDate => ResultPublicationDate;
 }

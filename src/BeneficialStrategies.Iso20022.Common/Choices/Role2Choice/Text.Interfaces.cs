@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.Role2Choice;
 
-public partial record Text : IText
-{
-}
+public partial record Text : IText { }

@@ -11,7 +11,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CorporateActionNotification1 : ICorporateActionNotification1
 {
     IDateFormat4Choice? ICorporateActionNotification1.AnnouncementDate => AnnouncementDate;
-    IDateFormat4Choice? ICorporateActionNotification1.FurtherDetailedAnnouncementDate => FurtherDetailedAnnouncementDate;
-    IDateFormat4Choice? ICorporateActionNotification1.OfficialAnnouncementPublicationDate => OfficialAnnouncementPublicationDate;
-    IProcessingStatus1FormatChoice ICorporateActionNotification1.ProcessingStatus => ProcessingStatus;
+    IDateFormat4Choice? ICorporateActionNotification1.FurtherDetailedAnnouncementDate =>
+        FurtherDetailedAnnouncementDate;
+    IDateFormat4Choice? ICorporateActionNotification1.OfficialAnnouncementPublicationDate =>
+        OfficialAnnouncementPublicationDate;
+    IProcessingStatus1FormatChoice ICorporateActionNotification1.ProcessingStatus =>
+        ProcessingStatus;
 }

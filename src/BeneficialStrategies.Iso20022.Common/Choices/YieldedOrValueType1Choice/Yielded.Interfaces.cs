@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.YieldedOrValueType1Choice;
 
-public partial record Yielded : IYielded
-{
-}
+public partial record Yielded : IYielded { }

@@ -10,16 +10,25 @@ namespace BeneficialStrategies.Iso20022.semt;
 
 public partial record IntraPositionMovementInstructionV01 : IIntraPositionMovementInstructionV01
 {
-    ITransactionAndDocumentIdentification1 IIntraPositionMovementInstructionV01.Identification => Identification;
-    IIdentification1? IIntraPositionMovementInstructionV01.CorporateActionEventIdentification => CorporateActionEventIdentification;
+    ITransactionAndDocumentIdentification1 IIntraPositionMovementInstructionV01.Identification =>
+        Identification;
+    IIdentification1? IIntraPositionMovementInstructionV01.CorporateActionEventIdentification =>
+        CorporateActionEventIdentification;
     ILinkages2? IIntraPositionMovementInstructionV01.Linkages => Linkages;
     IPartyIdentification13Choice? IIntraPositionMovementInstructionV01.AccountOwner => AccountOwner;
-    ISecuritiesAccount13 IIntraPositionMovementInstructionV01.SafekeepingAccount => SafekeepingAccount;
-    ISafekeepingPlaceFormat3Choice? IIntraPositionMovementInstructionV01.SafekeepingPlace => SafekeepingPlace;
-    ISecurityIdentification11 IIntraPositionMovementInstructionV01.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentAttributes4? IIntraPositionMovementInstructionV01.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
-    IIntraPositionDetails1 IIntraPositionMovementInstructionV01.IntraPositionDetails => IntraPositionDetails;
-    IPartyIdentification10Choice? IIntraPositionMovementInstructionV01.MessageOriginator => MessageOriginator;
-    IPartyIdentification10Choice? IIntraPositionMovementInstructionV01.MessageRecipient => MessageRecipient;
+    ISecuritiesAccount13 IIntraPositionMovementInstructionV01.SafekeepingAccount =>
+        SafekeepingAccount;
+    ISafekeepingPlaceFormat3Choice? IIntraPositionMovementInstructionV01.SafekeepingPlace =>
+        SafekeepingPlace;
+    ISecurityIdentification11 IIntraPositionMovementInstructionV01.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentAttributes4? IIntraPositionMovementInstructionV01.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
+    IIntraPositionDetails1 IIntraPositionMovementInstructionV01.IntraPositionDetails =>
+        IntraPositionDetails;
+    IPartyIdentification10Choice? IIntraPositionMovementInstructionV01.MessageOriginator =>
+        MessageOriginator;
+    IPartyIdentification10Choice? IIntraPositionMovementInstructionV01.MessageRecipient =>
+        MessageRecipient;
     IEnumerable<IExtension2> IIntraPositionMovementInstructionV01.Extension => Extension;
 }

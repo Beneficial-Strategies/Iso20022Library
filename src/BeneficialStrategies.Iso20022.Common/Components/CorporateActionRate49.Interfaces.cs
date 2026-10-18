@@ -10,8 +10,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionRate49 : ICorporateActionRate49
 {
-    IRatioFormat3Choice? ICorporateActionRate49.AdditionalQuantityForSubscribedResultantSecurities => AdditionalQuantityForSubscribedResultantSecurities;
-    IRatioFormat3Choice? ICorporateActionRate49.AdditionalQuantityForExistingSecurities => AdditionalQuantityForExistingSecurities;
+    IRatioFormat3Choice? ICorporateActionRate49.AdditionalQuantityForSubscribedResultantSecurities =>
+        AdditionalQuantityForSubscribedResultantSecurities;
+    IRatioFormat3Choice? ICorporateActionRate49.AdditionalQuantityForExistingSecurities =>
+        AdditionalQuantityForExistingSecurities;
     IRatioFormat15Choice? ICorporateActionRate49.NewToOld => NewToOld;
     IRateAndAmountFormat5Choice? ICorporateActionRate49.ChargesFees => ChargesFees;
     IEnumerable<ITaxCreditRateFormat2Choice> ICorporateActionRate49.TaxCreditRate => TaxCreditRate;

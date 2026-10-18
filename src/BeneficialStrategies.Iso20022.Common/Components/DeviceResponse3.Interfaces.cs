@@ -16,8 +16,10 @@ public partial record DeviceResponse3 : IDeviceResponse3
     IDeviceInputResponse2? IDeviceResponse3.InputResponse => InputResponse;
     IDevicePrintResponse1? IDeviceResponse3.PrintResponse => PrintResponse;
     IDeviceSecureInputResponse2? IDeviceResponse3.SecureInputResponse => SecureInputResponse;
-    IDeviceInitialisationCardReaderResponse2? IDeviceResponse3.InitialisationCardReaderResponse => InitialisationCardReaderResponse;
-    IDeviceSendApplicationProtocolDataUnitCardReaderResponse1? IDeviceResponse3.CardReaderApplicationProtocolDataUnitResponse => CardReaderApplicationProtocolDataUnitResponse;
+    IDeviceInitialisationCardReaderResponse2? IDeviceResponse3.InitialisationCardReaderResponse =>
+        InitialisationCardReaderResponse;
+    IDeviceSendApplicationProtocolDataUnitCardReaderResponse1? IDeviceResponse3.CardReaderApplicationProtocolDataUnitResponse =>
+        CardReaderApplicationProtocolDataUnitResponse;
     IDeviceTransmitMessageResponse1? IDeviceResponse3.TransmissionResponse => TransmissionResponse;
     IResponseType9 IDeviceResponse3.Response => Response;
     IEnumerable<ISupplementaryData1> IDeviceResponse3.SupplementaryData => SupplementaryData;

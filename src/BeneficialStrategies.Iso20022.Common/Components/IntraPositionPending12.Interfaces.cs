@@ -11,16 +11,23 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record IntraPositionPending12 : IIntraPositionPending12
 {
     IPendingStatusAndReason4? IIntraPositionPending12.StatusAndReason => StatusAndReason;
-    ISecuritiesSubBalanceTypeAndQuantityBreakdown3 IIntraPositionPending12.BalanceFrom => BalanceFrom;
+    ISecuritiesSubBalanceTypeAndQuantityBreakdown3 IIntraPositionPending12.BalanceFrom =>
+        BalanceFrom;
     ISecuritiesSubBalanceTypeAndQuantityBreakdown3 IIntraPositionPending12.BalanceTo => BalanceTo;
-    ISecurityIdentification19 IIntraPositionPending12.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentAttributes92? IIntraPositionPending12.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
-    IFinancialInstrumentQuantity1Choice IIntraPositionPending12.SettlementQuantity => SettlementQuantity;
-    IDateAndDateTime2Choice IIntraPositionPending12.IntendedSettlementDate => IntendedSettlementDate;
+    ISecurityIdentification19 IIntraPositionPending12.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentAttributes92? IIntraPositionPending12.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
+    IFinancialInstrumentQuantity1Choice IIntraPositionPending12.SettlementQuantity =>
+        SettlementQuantity;
+    IDateAndDateTime2Choice IIntraPositionPending12.IntendedSettlementDate =>
+        IntendedSettlementDate;
     IEnumerable<ILinkages57> IIntraPositionPending12.Linkages => Linkages;
-    IGenericIdentification37? IIntraPositionPending12.SecuritiesSubBalanceIdentification => SecuritiesSubBalanceIdentification;
+    IGenericIdentification37? IIntraPositionPending12.SecuritiesSubBalanceIdentification =>
+        SecuritiesSubBalanceIdentification;
     IPriorityNumeric4Choice? IIntraPositionPending12.Priority => Priority;
-    ICorporateActionEventType56Choice? IIntraPositionPending12.CorporateActionEventType => CorporateActionEventType;
+    ICorporateActionEventType56Choice? IIntraPositionPending12.CorporateActionEventType =>
+        CorporateActionEventType;
     ISystemPartyIdentification8? IIntraPositionPending12.MessageOriginator => MessageOriginator;
     IEnumerable<ISupplementaryData1> IIntraPositionPending12.SupplementaryData => SupplementaryData;
 }

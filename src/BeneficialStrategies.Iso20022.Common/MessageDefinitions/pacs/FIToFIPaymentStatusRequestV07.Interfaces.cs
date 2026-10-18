@@ -11,7 +11,10 @@ namespace BeneficialStrategies.Iso20022.pacs;
 public partial record FIToFIPaymentStatusRequestV07 : IFIToFIPaymentStatusRequestV07
 {
     IGroupHeader109 IFIToFIPaymentStatusRequestV07.GroupHeader => GroupHeader;
-    IEnumerable<IOriginalGroupInformation27> IFIToFIPaymentStatusRequestV07.OriginalGroupInformation => OriginalGroupInformation;
-    IEnumerable<IPaymentTransaction171> IFIToFIPaymentStatusRequestV07.TransactionInformation => TransactionInformation;
-    IEnumerable<ISupplementaryData1> IFIToFIPaymentStatusRequestV07.SupplementaryData => SupplementaryData;
+    IEnumerable<IOriginalGroupInformation27> IFIToFIPaymentStatusRequestV07.OriginalGroupInformation =>
+        OriginalGroupInformation;
+    IEnumerable<IPaymentTransaction171> IFIToFIPaymentStatusRequestV07.TransactionInformation =>
+        TransactionInformation;
+    IEnumerable<ISupplementaryData1> IFIToFIPaymentStatusRequestV07.SupplementaryData =>
+        SupplementaryData;
 }

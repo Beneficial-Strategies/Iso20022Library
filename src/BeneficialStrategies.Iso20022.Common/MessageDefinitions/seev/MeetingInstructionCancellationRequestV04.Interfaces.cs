@@ -8,13 +8,20 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record MeetingInstructionCancellationRequestV04 : IMeetingInstructionCancellationRequestV04
+public partial record MeetingInstructionCancellationRequestV04
+    : IMeetingInstructionCancellationRequestV04
 {
-    IMessageIdentification1 IMeetingInstructionCancellationRequestV04.Identification => Identification;
-    IMessageIdentification IMeetingInstructionCancellationRequestV04.PreviousReference => PreviousReference;
-    IMeetingReference4? IMeetingInstructionCancellationRequestV04.MeetingReference => MeetingReference;
-    IPartyIdentification9Choice? IMeetingInstructionCancellationRequestV04.RequestingParty => RequestingParty;
-    ISecurityIdentification11? IMeetingInstructionCancellationRequestV04.SecurityIdentification => SecurityIdentification;
-    IEnumerable<ISafekeepingAccount4> IMeetingInstructionCancellationRequestV04.InstructedPosition => InstructedPosition;
+    IMessageIdentification1 IMeetingInstructionCancellationRequestV04.Identification =>
+        Identification;
+    IMessageIdentification IMeetingInstructionCancellationRequestV04.PreviousReference =>
+        PreviousReference;
+    IMeetingReference4? IMeetingInstructionCancellationRequestV04.MeetingReference =>
+        MeetingReference;
+    IPartyIdentification9Choice? IMeetingInstructionCancellationRequestV04.RequestingParty =>
+        RequestingParty;
+    ISecurityIdentification11? IMeetingInstructionCancellationRequestV04.SecurityIdentification =>
+        SecurityIdentification;
+    IEnumerable<ISafekeepingAccount4> IMeetingInstructionCancellationRequestV04.InstructedPosition =>
+        InstructedPosition;
     IEnumerable<IExtension2> IMeetingInstructionCancellationRequestV04.Extension => Extension;
 }

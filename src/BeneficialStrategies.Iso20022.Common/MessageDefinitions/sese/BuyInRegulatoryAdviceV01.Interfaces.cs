@@ -13,5 +13,6 @@ public partial record BuyInRegulatoryAdviceV01 : IBuyInRegulatoryAdviceV01
     IPartyIdentification144? IBuyInRegulatoryAdviceV01.AccountOwner => AccountOwner;
     ISecuritiesAccount19 IBuyInRegulatoryAdviceV01.SafekeepingAccount => SafekeepingAccount;
     IEnumerable<IBuyInAdviceDetails1> IBuyInRegulatoryAdviceV01.BuyInAttributes => BuyInAttributes;
-    IEnumerable<ISupplementaryData1> IBuyInRegulatoryAdviceV01.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IBuyInRegulatoryAdviceV01.SupplementaryData =>
+        SupplementaryData;
 }

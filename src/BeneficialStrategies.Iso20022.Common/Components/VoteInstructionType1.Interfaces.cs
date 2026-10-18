@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record VoteInstructionType1 : IVoteInstructionType1
 {
-    IVoteInstructionType1Choice IVoteInstructionType1.VoteInstructionTypeCode => VoteInstructionTypeCode;
+    IVoteInstructionType1Choice IVoteInstructionType1.VoteInstructionTypeCode =>
+        VoteInstructionTypeCode;
 }

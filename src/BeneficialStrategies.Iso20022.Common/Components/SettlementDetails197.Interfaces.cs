@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SettlementDetails197 : ISettlementDetails197
 {
     IHoldIndicator7? ISettlementDetails197.HoldIndicator => HoldIndicator;
-    IEnumerable<ISettlementTransactionCondition37Choice> ISettlementDetails197.SettlementTransactionCondition => SettlementTransactionCondition;
+    IEnumerable<ISettlementTransactionCondition37Choice> ISettlementDetails197.SettlementTransactionCondition =>
+        SettlementTransactionCondition;
     ISettlingCapacity8Choice? ISettlementDetails197.SettlingCapacity => SettlingCapacity;
     IGenericIdentification47? ISettlementDetails197.StampDutyTaxBasis => StampDutyTaxBasis;
     ISecuritiesRTGS5Choice? ISettlementDetails197.SecuritiesRTGS => SecuritiesRTGS;
@@ -23,7 +24,8 @@ public partial record SettlementDetails197 : ISettlementDetails197
     IMarketClientSide7Choice? ISettlementDetails197.MarketClientSide => MarketClientSide;
     IBlockTrade5Choice? ISettlementDetails197.BlockTrade => BlockTrade;
     IRestriction6Choice? ISettlementDetails197.LegalRestrictions => LegalRestrictions;
-    ISettlementSystemMethod5Choice? ISettlementDetails197.SettlementSystemMethod => SettlementSystemMethod;
+    ISettlementSystemMethod5Choice? ISettlementDetails197.SettlementSystemMethod =>
+        SettlementSystemMethod;
     INettingEligibility5Choice? ISettlementDetails197.NettingEligibility => NettingEligibility;
     ICentralCounterPartyEligibility5Choice? ISettlementDetails197.CCPEligibility => CCPEligibility;
     ILetterOfGuarantee5Choice? ISettlementDetails197.LetterOfGuarantee => LetterOfGuarantee;

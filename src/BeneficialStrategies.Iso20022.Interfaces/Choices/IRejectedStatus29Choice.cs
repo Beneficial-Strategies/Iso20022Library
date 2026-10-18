@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a proprietary or narrative reason and no reason for the rejected status.
 /// </summary>
 [IsoId("_fh9eqYeWEemJ1cSJJmVYRQ")]
-public interface IRejectedStatus29Choice : IIsoChoice
-{
-}
+public interface IRejectedStatus29Choice : IIsoChoice { }

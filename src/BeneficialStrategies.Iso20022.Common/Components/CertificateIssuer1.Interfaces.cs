@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CertificateIssuer1 : ICertificateIssuer1
 {
-    IEnumerable<IRelativeDistinguishedName1> ICertificateIssuer1.RelativeDistinguishedName => RelativeDistinguishedName;
+    IEnumerable<IRelativeDistinguishedName1> ICertificateIssuer1.RelativeDistinguishedName =>
+        RelativeDistinguishedName;
 }

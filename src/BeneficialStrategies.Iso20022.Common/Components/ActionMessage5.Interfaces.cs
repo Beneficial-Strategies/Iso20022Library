@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record ActionMessage5 : IActionMessage5
-{
-}
+public partial record ActionMessage5 : IActionMessage5 { }

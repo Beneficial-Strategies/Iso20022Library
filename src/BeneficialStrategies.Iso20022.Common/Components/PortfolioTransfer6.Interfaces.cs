@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record PortfolioTransfer6 : IPortfolioTransfer6
 {
     IFundPortfolio4Choice? IPortfolioTransfer6.Portfolio => Portfolio;
-    IEnumerable<IFinancialInstrument84> IPortfolioTransfer6.FinancialInstrumentAssetForTransfer => FinancialInstrumentAssetForTransfer;
-    IEnumerable<IAdditionalInformation15> IPortfolioTransfer6.AdditionalInformation => AdditionalInformation;
+    IEnumerable<IFinancialInstrument84> IPortfolioTransfer6.FinancialInstrumentAssetForTransfer =>
+        FinancialInstrumentAssetForTransfer;
+    IEnumerable<IAdditionalInformation15> IPortfolioTransfer6.AdditionalInformation =>
+        AdditionalInformation;
 }

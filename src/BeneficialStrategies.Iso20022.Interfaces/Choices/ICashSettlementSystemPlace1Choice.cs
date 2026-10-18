@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Location where the payment is/will be taking place.
 /// </summary>
 [IsoId("_57FSMJZgEfCShM_qO0U4ig")]
-public interface ICashSettlementSystemPlace1Choice : IIsoChoice
-{
-}
+public interface ICashSettlementSystemPlace1Choice : IIsoChoice { }

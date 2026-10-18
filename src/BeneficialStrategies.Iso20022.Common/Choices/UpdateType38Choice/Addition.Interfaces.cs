@@ -10,19 +10,23 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType38Choice;
 
 public partial record Addition : IAddition
 {
-    ISettlementTypeAndAdditionalParameters17? IAddition.SettlementTypeAndAdditionalParameters => SettlementTypeAndAdditionalParameters;
+    ISettlementTypeAndAdditionalParameters17? IAddition.SettlementTypeAndAdditionalParameters =>
+        SettlementTypeAndAdditionalParameters;
     IEnumerable<ILinkages70> IAddition.Linkages => Linkages;
     ISecuritiesTradeDetails132? IAddition.TradeDetails => TradeDetails;
-    IFinancialInstrumentAttributes122? IAddition.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
+    IFinancialInstrumentAttributes122? IAddition.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
     IQuantityAndAccount111? IAddition.QuantityAndAccountDetails => QuantityAndAccountDetails;
     ISettlementDetails208? IAddition.SettlementParameters => SettlementParameters;
-    IStandingSettlementInstruction19? IAddition.StandingSettlementInstructionDetails => StandingSettlementInstructionDetails;
+    IStandingSettlementInstruction19? IAddition.StandingSettlementInstructionDetails =>
+        StandingSettlementInstructionDetails;
     ISettlementParties119? IAddition.DeliveringSettlementParties => DeliveringSettlementParties;
     ISettlementParties119? IAddition.ReceivingSettlementParties => ReceivingSettlementParties;
     ICashParties38? IAddition.CashParties => CashParties;
     IAmountAndDirection101? IAddition.SettlementAmount => SettlementAmount;
     IOtherAmounts43? IAddition.OtherAmounts => OtherAmounts;
     IOtherParties44? IAddition.OtherBusinessParties => OtherBusinessParties;
-    IRegistrationParameters7? IAddition.AdditionalPhysicalOrRegistrationDetails => AdditionalPhysicalOrRegistrationDetails;
+    IRegistrationParameters7? IAddition.AdditionalPhysicalOrRegistrationDetails =>
+        AdditionalPhysicalOrRegistrationDetails;
     IEnumerable<ISupplementaryData1> IAddition.SupplementaryData => SupplementaryData;
 }

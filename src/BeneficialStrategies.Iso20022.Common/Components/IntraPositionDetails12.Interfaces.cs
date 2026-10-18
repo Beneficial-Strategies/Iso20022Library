@@ -12,12 +12,16 @@ public partial record IntraPositionDetails12 : IIntraPositionDetails12
 {
     IFinancialInstrumentQuantity1Choice IIntraPositionDetails12.SettledQuantity => SettledQuantity;
     INumber2Choice? IIntraPositionDetails12.LotNumber => LotNumber;
-    IAmountAndDirection9? IIntraPositionDetails12.CollateralMonitorAmount => CollateralMonitorAmount;
-    IFinancialInstrumentQuantity1Choice? IIntraPositionDetails12.PreviouslySettledQuantity => PreviouslySettledQuantity;
-    IFinancialInstrumentQuantity1Choice? IIntraPositionDetails12.RemainingToBeSettledQuantity => RemainingToBeSettledQuantity;
+    IAmountAndDirection9? IIntraPositionDetails12.CollateralMonitorAmount =>
+        CollateralMonitorAmount;
+    IFinancialInstrumentQuantity1Choice? IIntraPositionDetails12.PreviouslySettledQuantity =>
+        PreviouslySettledQuantity;
+    IFinancialInstrumentQuantity1Choice? IIntraPositionDetails12.RemainingToBeSettledQuantity =>
+        RemainingToBeSettledQuantity;
     IDateAndDateTimeChoice IIntraPositionDetails12.SettlementDate => SettlementDate;
     IDateAndDateTimeChoice? IIntraPositionDetails12.AvailableDate => AvailableDate;
-    ICorporateActionEventType3Choice? IIntraPositionDetails12.CorporateActionEventType => CorporateActionEventType;
+    ICorporateActionEventType3Choice? IIntraPositionDetails12.CorporateActionEventType =>
+        CorporateActionEventType;
     ISecuritiesBalanceType3Choice IIntraPositionDetails12.BalanceFrom => BalanceFrom;
     ISecuritiesBalanceType3Choice IIntraPositionDetails12.BalanceTo => BalanceTo;
 }

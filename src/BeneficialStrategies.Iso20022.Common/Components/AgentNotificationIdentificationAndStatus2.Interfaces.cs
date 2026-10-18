@@ -8,7 +8,8 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record AgentNotificationIdentificationAndStatus2 : IAgentNotificationIdentificationAndStatus2
+public partial record AgentNotificationIdentificationAndStatus2
+    : IAgentNotificationIdentificationAndStatus2
 {
     INotificationAdviceStatus4Choice IAgentNotificationIdentificationAndStatus2.Status => Status;
 }

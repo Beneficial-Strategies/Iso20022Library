@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.semt;
 
 public partial record SecuritiesMessageRejectionV03 : ISecuritiesMessageRejectionV03
 {
-    IMessageIdentification1 ISecuritiesMessageRejectionV03.MessageIdentification => MessageIdentification;
+    IMessageIdentification1 ISecuritiesMessageRejectionV03.MessageIdentification =>
+        MessageIdentification;
     IAdditionalReference3 ISecuritiesMessageRejectionV03.RelatedReference => RelatedReference;
     IRejectionReason23 ISecuritiesMessageRejectionV03.Reason => Reason;
 }

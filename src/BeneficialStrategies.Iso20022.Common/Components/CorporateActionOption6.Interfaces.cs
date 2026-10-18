@@ -12,5 +12,6 @@ public partial record CorporateActionOption6 : ICorporateActionOption6
 {
     IOptionNumber1Choice ICorporateActionOption6.OptionNumber => OptionNumber;
     ICorporateActionOption4Choice ICorporateActionOption6.OptionType => OptionType;
-    IInstructedOrQuantityToReceive1Choice ICorporateActionOption6.InstructedOrQuantityToReceive => InstructedOrQuantityToReceive;
+    IInstructedOrQuantityToReceive1Choice ICorporateActionOption6.InstructedOrQuantityToReceive =>
+        InstructedOrQuantityToReceive;
 }

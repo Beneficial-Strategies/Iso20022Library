@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.Quantity83Choice;
 
-public partial record NetworkFeeQuantity : INetworkFeeQuantity
-{
-}
+public partial record NetworkFeeQuantity : INetworkFeeQuantity { }

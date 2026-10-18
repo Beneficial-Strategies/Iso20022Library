@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SecuritiesTradeDetails33 : ISecuritiesTradeDetails33
 {
     IEnumerable<Max35Text> ISecuritiesTradeDetails33.TradeIdentification => TradeIdentification;
-    IEnumerable<Max35Text> ISecuritiesTradeDetails33.CollateralTransactionIdentification => CollateralTransactionIdentification;
+    IEnumerable<Max35Text> ISecuritiesTradeDetails33.CollateralTransactionIdentification =>
+        CollateralTransactionIdentification;
     IMarketIdentification78? ISecuritiesTradeDetails33.PlaceOfTrade => PlaceOfTrade;
     ITradeDate1Choice? ISecuritiesTradeDetails33.TradeDate => TradeDate;
     ISettlementDate1Choice ISecuritiesTradeDetails33.SettlementDate => SettlementDate;
@@ -19,11 +20,13 @@ public partial record SecuritiesTradeDetails33 : ISecuritiesTradeDetails33
     IPrice2? ISecuritiesTradeDetails33.DealPrice => DealPrice;
     IOpeningClosing1Choice? ISecuritiesTradeDetails33.OpeningClosing => OpeningClosing;
     IEnumerable<IReporting2Choice> ISecuritiesTradeDetails33.Reporting => Reporting;
-    IEnumerable<ITradeTransactionCondition1Choice> ISecuritiesTradeDetails33.TradeTransactionCondition => TradeTransactionCondition;
+    IEnumerable<ITradeTransactionCondition1Choice> ISecuritiesTradeDetails33.TradeTransactionCondition =>
+        TradeTransactionCondition;
     IInvestorCapacity1Choice? ISecuritiesTradeDetails33.InvestorCapacity => InvestorCapacity;
     ITradeOriginator1Choice? ISecuritiesTradeDetails33.TradeOriginatorRole => TradeOriginatorRole;
     ITypeOfPrice3Choice? ISecuritiesTradeDetails33.TypeOfPrice => TypeOfPrice;
-    ICurrencyToBuyOrSell1Choice? ISecuritiesTradeDetails33.CurrencyToBuyOrSell => CurrencyToBuyOrSell;
+    ICurrencyToBuyOrSell1Choice? ISecuritiesTradeDetails33.CurrencyToBuyOrSell =>
+        CurrencyToBuyOrSell;
     IMatchingStatus1Choice? ISecuritiesTradeDetails33.MatchingStatus => MatchingStatus;
     IAffirmationStatus1Choice? ISecuritiesTradeDetails33.AffirmationStatus => AffirmationStatus;
 }

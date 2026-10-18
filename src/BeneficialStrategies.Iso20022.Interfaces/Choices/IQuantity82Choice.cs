@@ -7,6 +7,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Total quantity of securities to be transferred, expressed in a number of units or a percentage rate.</summary>
 [IsoId("c704e737-08fc-44aa-b295-87d3d33a6d9b")]
-public interface IQuantity82Choice : IIsoChoice
-{
-}
+public interface IQuantity82Choice : IIsoChoice { }

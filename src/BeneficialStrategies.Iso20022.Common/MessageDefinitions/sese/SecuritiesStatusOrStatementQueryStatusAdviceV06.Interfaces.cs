@@ -8,13 +8,21 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesStatusOrStatementQueryStatusAdviceV06 : ISecuritiesStatusOrStatementQueryStatusAdviceV06
+public partial record SecuritiesStatusOrStatementQueryStatusAdviceV06
+    : ISecuritiesStatusOrStatementQueryStatusAdviceV06
 {
-    IDocumentIdentification54 ISecuritiesStatusOrStatementQueryStatusAdviceV06.QueryDetails => QueryDetails;
-    IPartyIdentification144? ISecuritiesStatusOrStatementQueryStatusAdviceV06.AccountOwner => AccountOwner;
-    ISecuritiesAccount19? ISecuritiesStatusOrStatementQueryStatusAdviceV06.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet3? ISecuritiesStatusOrStatementQueryStatusAdviceV06.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
-    IStatusOrStatement11Choice? ISecuritiesStatusOrStatementQueryStatusAdviceV06.StatusOrStatementRequested => StatusOrStatementRequested;
-    IProcessingStatus89Choice ISecuritiesStatusOrStatementQueryStatusAdviceV06.ProcessingStatus => ProcessingStatus;
-    IEnumerable<ISupplementaryData1> ISecuritiesStatusOrStatementQueryStatusAdviceV06.SupplementaryData => SupplementaryData;
+    IDocumentIdentification54 ISecuritiesStatusOrStatementQueryStatusAdviceV06.QueryDetails =>
+        QueryDetails;
+    IPartyIdentification144? ISecuritiesStatusOrStatementQueryStatusAdviceV06.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount19? ISecuritiesStatusOrStatementQueryStatusAdviceV06.SafekeepingAccount =>
+        SafekeepingAccount;
+    IBlockChainAddressWallet3? ISecuritiesStatusOrStatementQueryStatusAdviceV06.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
+    IStatusOrStatement11Choice? ISecuritiesStatusOrStatementQueryStatusAdviceV06.StatusOrStatementRequested =>
+        StatusOrStatementRequested;
+    IProcessingStatus89Choice ISecuritiesStatusOrStatementQueryStatusAdviceV06.ProcessingStatus =>
+        ProcessingStatus;
+    IEnumerable<ISupplementaryData1> ISecuritiesStatusOrStatementQueryStatusAdviceV06.SupplementaryData =>
+        SupplementaryData;
 }

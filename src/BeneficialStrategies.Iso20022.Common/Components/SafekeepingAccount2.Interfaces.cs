@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SafekeepingAccount2 : ISafekeepingAccount2
 {
     IAccountIdentificationFormatChoice ISafekeepingAccount2.Identification => Identification;
-    IEnumerable<IIntermediary11> ISafekeepingAccount2.IntermediaryInformation => IntermediaryInformation;
+    IEnumerable<IIntermediary11> ISafekeepingAccount2.IntermediaryInformation =>
+        IntermediaryInformation;
     IPartyIdentification2Choice? ISafekeepingAccount2.AccountOwner => AccountOwner;
     IPartyIdentification2Choice? ISafekeepingAccount2.AccountServicer => AccountServicer;
 }

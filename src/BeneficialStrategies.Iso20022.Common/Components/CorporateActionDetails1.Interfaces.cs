@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionDetails1 : ICorporateActionDetails1
 {
-    ICorporateActionGeneralInformation195 ICorporateActionDetails1.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    ICorporateActionOptionStatement1 ICorporateActionDetails1.CorporateActionOption => CorporateActionOption;
+    ICorporateActionGeneralInformation195 ICorporateActionDetails1.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    ICorporateActionOptionStatement1 ICorporateActionDetails1.CorporateActionOption =>
+        CorporateActionOption;
 }

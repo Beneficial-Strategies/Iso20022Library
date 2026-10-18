@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
 /// South African National Clearing Code (NCC) - identifies South African financial institutions on the South African national clearing system. The code is assigned by the South African Bankers Services Company Ltd. (BankServ).
 /// </summary>
 [IsoId("_TDF7lNp-Ed-ak6NoX_4Aeg_1990860839")]
-public interface ISouthAfricanNCCIdentification : IClearingSystemMemberIdentification2Choice, IIsoChoiceVariant
+public interface ISouthAfricanNCCIdentification
+    : IClearingSystemMemberIdentification2Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

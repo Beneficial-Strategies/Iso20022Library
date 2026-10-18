@@ -14,7 +14,8 @@ public partial record TransferOutInstruction : ITransferOutInstruction
     IAdditionalReference2? ITransferOutInstruction.PreviousReference => PreviousReference;
     IAdditionalReference2? ITransferOutInstruction.RelatedReference => RelatedReference;
     ITransfer1 ITransferOutInstruction.TransferDetails => TransferDetails;
-    IFinancialInstrument3 ITransferOutInstruction.FinancialInstrumentDetails => FinancialInstrumentDetails;
+    IFinancialInstrument3 ITransferOutInstruction.FinancialInstrumentDetails =>
+        FinancialInstrumentDetails;
     IInvestmentAccount10 ITransferOutInstruction.AccountDetails => AccountDetails;
     IReceiveInformation1 ITransferOutInstruction.SettlementDetails => SettlementDetails;
     IEnumerable<IExtension1> ITransferOutInstruction.Extension => Extension;

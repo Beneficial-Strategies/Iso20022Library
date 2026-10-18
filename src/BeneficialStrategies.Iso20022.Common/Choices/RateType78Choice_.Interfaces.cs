@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record RateType78Choice_ : IRateType78Choice
-{
-}
+public abstract partial record RateType78Choice_ : IRateType78Choice { }

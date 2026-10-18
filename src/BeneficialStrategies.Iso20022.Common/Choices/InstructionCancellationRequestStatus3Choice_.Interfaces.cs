@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record InstructionCancellationRequestStatus3Choice_ : IInstructionCancellationRequestStatus3Choice
-{
-}
+public abstract partial record InstructionCancellationRequestStatus3Choice_
+    : IInstructionCancellationRequestStatus3Choice { }

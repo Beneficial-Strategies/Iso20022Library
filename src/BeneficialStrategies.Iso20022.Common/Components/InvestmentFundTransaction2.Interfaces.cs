@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record InvestmentFundTransaction2 : IInvestmentFundTransaction2
 {
     ITransactionType1CodeChoice IInvestmentFundTransaction2.TransactionType => TransactionType;
-    ICorporateActionEventType1CodeChoice IInvestmentFundTransaction2.CorporateActionEventType => CorporateActionEventType;
+    ICorporateActionEventType1CodeChoice IInvestmentFundTransaction2.CorporateActionEventType =>
+        CorporateActionEventType;
     IFinancialInstrumentQuantity1 IInvestmentFundTransaction2.UnitsQuantity => UnitsQuantity;
     IDateAndDateTimeChoice IInvestmentFundTransaction2.TradeDateTime => TradeDateTime;
     IUnitPrice1? IInvestmentFundTransaction2.PriceDetails => PriceDetails;

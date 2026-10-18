@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus41Choice;
 
-public partial record Uncovered : IUncovered
-{
-}
+public partial record Uncovered : IUncovered { }

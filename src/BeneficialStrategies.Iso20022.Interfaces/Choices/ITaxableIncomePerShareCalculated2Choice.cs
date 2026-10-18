@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for taxable income per share calculated.
 /// </summary>
 [IsoId("_wM39wThgEeamLZQeccJa7w")]
-public interface ITaxableIncomePerShareCalculated2Choice : IIsoChoice
-{
-}
+public interface ITaxableIncomePerShareCalculated2Choice : IIsoChoice { }

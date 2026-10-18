@@ -12,8 +12,12 @@ public partial record CorporateActionElection3 : ICorporateActionElection3
 {
     ISecuritiesAccount7? ICorporateActionElection3.AccountDetails => AccountDetails;
     ICorporateActionOption1FormatChoice? ICorporateActionElection3.OptionType => OptionType;
-    IUnitOrFaceAmount1Choice? ICorporateActionElection3.InstructedUnderlyingSecuritiesQuantity => InstructedUnderlyingSecuritiesQuantity;
-    IUnitOrFaceAmount1Choice? ICorporateActionElection3.InstructedSecuritiesQuantityToReceive => InstructedSecuritiesQuantityToReceive;
-    IEnumerable<ICorporateActionCashMovements2> ICorporateActionElection3.CashMovementDetails => CashMovementDetails;
-    IEnumerable<ICorporateActionSecuritiesMovement2> ICorporateActionElection3.SecuritiesMovementDetails => SecuritiesMovementDetails;
+    IUnitOrFaceAmount1Choice? ICorporateActionElection3.InstructedUnderlyingSecuritiesQuantity =>
+        InstructedUnderlyingSecuritiesQuantity;
+    IUnitOrFaceAmount1Choice? ICorporateActionElection3.InstructedSecuritiesQuantityToReceive =>
+        InstructedSecuritiesQuantityToReceive;
+    IEnumerable<ICorporateActionCashMovements2> ICorporateActionElection3.CashMovementDetails =>
+        CashMovementDetails;
+    IEnumerable<ICorporateActionSecuritiesMovement2> ICorporateActionElection3.SecuritiesMovementDetails =>
+        SecuritiesMovementDetails;
 }

@@ -10,8 +10,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ReversalResponse9 : IReversalResponse9
 {
-    ITransactionIdentifier1 IReversalResponse9.SaleTransactionIdentification => SaleTransactionIdentification;
-    ITransactionIdentifier1 IReversalResponse9.POITransactionIdentification => POITransactionIdentification;
-    IRetailerReversalResult7 IReversalResponse9.ReversalTransactionResult => ReversalTransactionResult;
+    ITransactionIdentifier1 IReversalResponse9.SaleTransactionIdentification =>
+        SaleTransactionIdentification;
+    ITransactionIdentifier1 IReversalResponse9.POITransactionIdentification =>
+        POITransactionIdentification;
+    IRetailerReversalResult7 IReversalResponse9.ReversalTransactionResult =>
+        ReversalTransactionResult;
     IEnumerable<IPaymentReceipt6> IReversalResponse9.Receipt => Receipt;
 }

@@ -10,16 +10,22 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PaymentTransaction183 : IPaymentTransaction183
 {
-    IEnumerable<PaymentInstrumentType2Code> IPaymentTransaction183.PaymentInstrument => PaymentInstrument;
-    IPaymentTypeInformation26? IPaymentTransaction183.PaymentTypeInformation => PaymentTypeInformation;
-    IEnumerable<CardPaymentServiceType9Code> IPaymentTransaction183.AdditionalService => AdditionalService;
-    ITransactionIdentifier1 IPaymentTransaction183.TransactionIdentification => TransactionIdentification;
+    IEnumerable<PaymentInstrumentType2Code> IPaymentTransaction183.PaymentInstrument =>
+        PaymentInstrument;
+    IPaymentTypeInformation26? IPaymentTransaction183.PaymentTypeInformation =>
+        PaymentTypeInformation;
+    IEnumerable<CardPaymentServiceType9Code> IPaymentTransaction183.AdditionalService =>
+        AdditionalService;
+    ITransactionIdentifier1 IPaymentTransaction183.TransactionIdentification =>
+        TransactionIdentification;
     ICardPaymentTransaction148? IPaymentTransaction183.OriginalTransaction => OriginalTransaction;
-    ICardPaymentTransactionDetails54 IPaymentTransaction183.TransactionDetails => TransactionDetails;
+    ICardPaymentTransactionDetails54 IPaymentTransaction183.TransactionDetails =>
+        TransactionDetails;
     IAuthorisationResult18? IPaymentTransaction183.AuthorisationResult => AuthorisationResult;
     ICustomerOrder1? IPaymentTransaction183.CustomerOrder => CustomerOrder;
     ICardPaymentToken5? IPaymentTransaction183.CustomerToken => CustomerToken;
     IEnumerable<Max35Text> IPaymentTransaction183.CardProgrammeProposed => CardProgrammeProposed;
-    IEnumerable<Max70Text> IPaymentTransaction183.AdditionalTransactionData => AdditionalTransactionData;
+    IEnumerable<Max70Text> IPaymentTransaction183.AdditionalTransactionData =>
+        AdditionalTransactionData;
     IEnumerable<IAction18> IPaymentTransaction183.MessageFromMerchant => MessageFromMerchant;
 }

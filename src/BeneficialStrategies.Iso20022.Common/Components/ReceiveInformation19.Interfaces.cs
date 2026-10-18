@@ -12,11 +12,14 @@ public partial record ReceiveInformation19 : IReceiveInformation19
 {
     IPartyIdentification113? IReceiveInformation19.Transferee => Transferee;
     IAccount24? IReceiveInformation19.TransfereeRegisteredAccount => TransfereeRegisteredAccount;
-    IEnumerable<IIntermediary41> IReceiveInformation19.IntermediaryInformation => IntermediaryInformation;
+    IEnumerable<IIntermediary41> IReceiveInformation19.IntermediaryInformation =>
+        IntermediaryInformation;
     IEnumerable<IFees1> IReceiveInformation19.Fees => Fees;
     IEnumerable<ITax34> IReceiveInformation19.IndividualTax => IndividualTax;
-    IEnumerable<IForeignExchangeTerms33> IReceiveInformation19.ForeignExchangeDetails => ForeignExchangeDetails;
-    IReceivingPartiesAndAccount17? IReceiveInformation19.SettlementPartiesDetails => SettlementPartiesDetails;
+    IEnumerable<IForeignExchangeTerms33> IReceiveInformation19.ForeignExchangeDetails =>
+        ForeignExchangeDetails;
+    IReceivingPartiesAndAccount17? IReceiveInformation19.SettlementPartiesDetails =>
+        SettlementPartiesDetails;
     IDeliveryParameters4? IReceiveInformation19.PhysicalTransferDetails => PhysicalTransferDetails;
     IAdditionalReference8? IReceiveInformation19.ClientReference => ClientReference;
 }

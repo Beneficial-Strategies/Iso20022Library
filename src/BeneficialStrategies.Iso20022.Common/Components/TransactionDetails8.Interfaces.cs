@@ -11,11 +11,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record TransactionDetails8 : ITransactionDetails8
 {
     ITransactionActivity1Choice ITransactionDetails8.TransactionActivity => TransactionActivity;
-    ISettlementOrCorporateActionEvent2Choice? ITransactionDetails8.SettlementTransactionOrCorporateActionEventType => SettlementTransactionOrCorporateActionEventType;
+    ISettlementOrCorporateActionEvent2Choice? ITransactionDetails8.SettlementTransactionOrCorporateActionEventType =>
+        SettlementTransactionOrCorporateActionEventType;
     ISettlementDetails7? ITransactionDetails8.SettlementParameters => SettlementParameters;
     IMarketIdentification4? ITransactionDetails8.PlaceOfTrade => PlaceOfTrade;
     ISafekeepingPlaceFormat3Choice? ITransactionDetails8.SafekeepingPlace => SafekeepingPlace;
-    ISecurityIdentification11 ITransactionDetails8.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification11 ITransactionDetails8.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     IQuantity6Choice ITransactionDetails8.PostingQuantity => PostingQuantity;
     IAmountAndDirection8 ITransactionDetails8.PostingAmount => PostingAmount;
     ITradeDate1Choice? ITransactionDetails8.TradeDate => TradeDate;
@@ -23,7 +25,9 @@ public partial record TransactionDetails8 : ITransactionDetails8
     ISettlementDate2Choice ITransactionDetails8.SettlementDate => SettlementDate;
     IDateAndDateTimeChoice? ITransactionDetails8.LateDeliveryDate => LateDeliveryDate;
     IDateAndDateTimeChoice? ITransactionDetails8.ExpectedValueDate => ExpectedValueDate;
-    ISettlementParties2? ITransactionDetails8.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties2? ITransactionDetails8.ReceivingSettlementParties => ReceivingSettlementParties;
+    ISettlementParties2? ITransactionDetails8.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties2? ITransactionDetails8.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
     IEnumerable<IExtension2> ITransactionDetails8.Extension => Extension;
 }

@@ -14,6 +14,8 @@ public partial record FinancialInstrument48 : IFinancialInstrument48
     IQuantity14Choice IFinancialInstrument48.Quantity => Quantity;
     IAccount19? IFinancialInstrument48.TransfereeAccount => TransfereeAccount;
     ISubAccount5? IFinancialInstrument48.SubAccountDetails => SubAccountDetails;
-    IReceivingPartiesAndAccount14? IFinancialInstrument48.SettlementPartiesReceivingSideDetails => SettlementPartiesReceivingSideDetails;
-    IPartyIdentificationAndAccount125? IFinancialInstrument48.DeliveringAgentDetails => DeliveringAgentDetails;
+    IReceivingPartiesAndAccount14? IFinancialInstrument48.SettlementPartiesReceivingSideDetails =>
+        SettlementPartiesReceivingSideDetails;
+    IPartyIdentificationAndAccount125? IFinancialInstrument48.DeliveringAgentDetails =>
+        DeliveringAgentDetails;
 }

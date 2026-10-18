@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.SubBalanceQuantity1Choice;
 
-public partial record QuantityAsDSS : IQuantityAsDSS
-{
-}
+public partial record QuantityAsDSS : IQuantityAsDSS { }

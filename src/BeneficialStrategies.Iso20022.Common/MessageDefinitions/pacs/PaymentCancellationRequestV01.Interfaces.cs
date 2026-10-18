@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.pacs;
 public partial record PaymentCancellationRequestV01 : IPaymentCancellationRequestV01
 {
     IGroupHeader7 IPaymentCancellationRequestV01.GroupHeader => GroupHeader;
-    IOriginalGroupInformation4 IPaymentCancellationRequestV01.OriginalGroupInformation => OriginalGroupInformation;
-    IEnumerable<IPaymentTransactionInformation3> IPaymentCancellationRequestV01.TransactionInformation => TransactionInformation;
+    IOriginalGroupInformation4 IPaymentCancellationRequestV01.OriginalGroupInformation =>
+        OriginalGroupInformation;
+    IEnumerable<IPaymentTransactionInformation3> IPaymentCancellationRequestV01.TransactionInformation =>
+        TransactionInformation;
 }

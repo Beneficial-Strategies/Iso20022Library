@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Market Type19Choice.
 /// </summary>
 [IsoId("_Xeb8oYVYEe-Pv9KR9bv9IA")]
-public interface IMarketType19Choice : IIsoChoice
-{
-}
+public interface IMarketType19Choice : IIsoChoice { }

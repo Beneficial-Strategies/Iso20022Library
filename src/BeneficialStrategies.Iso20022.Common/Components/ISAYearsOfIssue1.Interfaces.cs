@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record ISAYearsOfIssue1 : IISAYearsOfIssue1
 {
     IPreviousYear1? IISAYearsOfIssue1.PreviousYears => PreviousYears;
-    ISubscriptionInformation1? IISAYearsOfIssue1.CurrentYearSubscriptionDetails => CurrentYearSubscriptionDetails;
+    ISubscriptionInformation1? IISAYearsOfIssue1.CurrentYearSubscriptionDetails =>
+        CurrentYearSubscriptionDetails;
 }

@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.DocumentIdentification3Choice;
 
-public partial record AccountServicerDocumentIdentification : IAccountServicerDocumentIdentification
-{
-}
+public partial record AccountServicerDocumentIdentification
+    : IAccountServicerDocumentIdentification { }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.NumberOrPercentage2Choice;
 
-public partial record ThresholdPercentage : IThresholdPercentage
-{
-}
+public partial record ThresholdPercentage : IThresholdPercentage { }

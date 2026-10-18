@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PartyIdentificationAndAccount156 : IPartyIdentificationAndAccount156
 {
-    IPartyIdentification113? IPartyIdentificationAndAccount156.PartyIdentification => PartyIdentification;
-    IPartyIdentification113 IPartyIdentificationAndAccount156.PlaceOfSettlement => PlaceOfSettlement;
+    IPartyIdentification113? IPartyIdentificationAndAccount156.PartyIdentification =>
+        PartyIdentification;
+    IPartyIdentification113 IPartyIdentificationAndAccount156.PlaceOfSettlement =>
+        PlaceOfSettlement;
 }

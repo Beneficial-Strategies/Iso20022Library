@@ -10,12 +10,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionQuantity5 : ICorporateActionQuantity5
 {
-    IFinancialInstrumentQuantity19Choice? ICorporateActionQuantity5.MinimumExercisableQuantity => MinimumExercisableQuantity;
-    IFinancialInstrumentQuantity20Choice? ICorporateActionQuantity5.MinimumExercisableMultipleQuantity => MinimumExercisableMultipleQuantity;
-    IFinancialInstrumentQuantity19Choice? ICorporateActionQuantity5.MaximumQuantity => MaximumQuantity;
-    IFinancialInstrumentQuantity19Choice? ICorporateActionQuantity5.MinimumQuantitySought => MinimumQuantitySought;
-    IFinancialInstrumentQuantity20Choice? ICorporateActionQuantity5.NewBoardLotQuantity => NewBoardLotQuantity;
-    IFinancialInstrumentQuantity20Choice? ICorporateActionQuantity5.NewDenominationQuantity => NewDenominationQuantity;
-    IFinancialInstrumentQuantity20Choice? ICorporateActionQuantity5.BaseDenomination => BaseDenomination;
-    IFinancialInstrumentQuantity20Choice? ICorporateActionQuantity5.IncrementalDenomination => IncrementalDenomination;
+    IFinancialInstrumentQuantity19Choice? ICorporateActionQuantity5.MinimumExercisableQuantity =>
+        MinimumExercisableQuantity;
+    IFinancialInstrumentQuantity20Choice? ICorporateActionQuantity5.MinimumExercisableMultipleQuantity =>
+        MinimumExercisableMultipleQuantity;
+    IFinancialInstrumentQuantity19Choice? ICorporateActionQuantity5.MaximumQuantity =>
+        MaximumQuantity;
+    IFinancialInstrumentQuantity19Choice? ICorporateActionQuantity5.MinimumQuantitySought =>
+        MinimumQuantitySought;
+    IFinancialInstrumentQuantity20Choice? ICorporateActionQuantity5.NewBoardLotQuantity =>
+        NewBoardLotQuantity;
+    IFinancialInstrumentQuantity20Choice? ICorporateActionQuantity5.NewDenominationQuantity =>
+        NewDenominationQuantity;
+    IFinancialInstrumentQuantity20Choice? ICorporateActionQuantity5.BaseDenomination =>
+        BaseDenomination;
+    IFinancialInstrumentQuantity20Choice? ICorporateActionQuantity5.IncrementalDenomination =>
+        IncrementalDenomination;
 }

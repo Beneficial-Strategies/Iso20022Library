@@ -8,12 +8,16 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record SecuritiesTransactionPendingReport002V10 : ISecuritiesTransactionPendingReport002V10
+public partial record SecuritiesTransactionPendingReport002V10
+    : ISecuritiesTransactionPendingReport002V10
 {
     IPagination1 ISecuritiesTransactionPendingReport002V10.Pagination => Pagination;
-    IStatement70 ISecuritiesTransactionPendingReport002V10.StatementGeneralDetails => StatementGeneralDetails;
+    IStatement70 ISecuritiesTransactionPendingReport002V10.StatementGeneralDetails =>
+        StatementGeneralDetails;
     IPartyIdentification156? ISecuritiesTransactionPendingReport002V10.AccountOwner => AccountOwner;
-    ISecuritiesAccount30 ISecuritiesTransactionPendingReport002V10.SafekeepingAccount => SafekeepingAccount;
+    ISecuritiesAccount30 ISecuritiesTransactionPendingReport002V10.SafekeepingAccount =>
+        SafekeepingAccount;
     IEnumerable<IStatusAndReason37> ISecuritiesTransactionPendingReport002V10.Status => Status;
-    IEnumerable<ITransaction71> ISecuritiesTransactionPendingReport002V10.Transactions => Transactions;
+    IEnumerable<ITransaction71> ISecuritiesTransactionPendingReport002V10.Transactions =>
+        Transactions;
 }

@@ -12,7 +12,8 @@ public partial record StatusReportContent8 : IStatusReportContent8
 {
     IPointOfInteractionCapabilities8? IStatusReportContent8.POICapabilities => POICapabilities;
     IEnumerable<IPointOfInteractionComponent9> IStatusReportContent8.POIComponent => POIComponent;
-    IEnumerable<ITerminalManagementDataSet25> IStatusReportContent8.DataSetRequired => DataSetRequired;
+    IEnumerable<ITerminalManagementDataSet25> IStatusReportContent8.DataSetRequired =>
+        DataSetRequired;
     IEnumerable<ITMSEvent6> IStatusReportContent8.Event => Event;
     IEnumerable<Max140Text> IStatusReportContent8.Errors => Errors;
 }

@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.sese;
 
 public partial record RequestForTransferStatusReportV02 : IRequestForTransferStatusReportV02
 {
-    IMessageIdentification1 IRequestForTransferStatusReportV02.MessageIdentification => MessageIdentification;
-    IEnumerable<IMessageAndBusinessReference6> IRequestForTransferStatusReportV02.RequestDetails => RequestDetails;
+    IMessageIdentification1 IRequestForTransferStatusReportV02.MessageIdentification =>
+        MessageIdentification;
+    IEnumerable<IMessageAndBusinessReference6> IRequestForTransferStatusReportV02.RequestDetails =>
+        RequestDetails;
     IEnumerable<IExtension1> IRequestForTransferStatusReportV02.Extension => Extension;
 }

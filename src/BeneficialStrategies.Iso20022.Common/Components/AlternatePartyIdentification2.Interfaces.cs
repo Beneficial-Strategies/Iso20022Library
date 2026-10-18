@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record AlternatePartyIdentification2 : IAlternatePartyIdentification2
 {
-    IIdentificationType4Choice IAlternatePartyIdentification2.IdentificationType => IdentificationType;
+    IIdentificationType4Choice IAlternatePartyIdentification2.IdentificationType =>
+        IdentificationType;
 }

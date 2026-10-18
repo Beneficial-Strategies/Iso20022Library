@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CorporateActionDate99 : ICorporateActionDate99
 {
     IDateAndDateTime2Choice ICorporateActionDate99.PostingDate => PostingDate;
-    IDateAndDateTime2Choice? ICorporateActionDate99.ForeignExchangeRateFixingDate => ForeignExchangeRateFixingDate;
+    IDateAndDateTime2Choice? ICorporateActionDate99.ForeignExchangeRateFixingDate =>
+        ForeignExchangeRateFixingDate;
 }

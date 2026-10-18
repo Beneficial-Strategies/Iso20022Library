@@ -10,38 +10,64 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CreditTransferTransaction82 : ICreditTransferTransaction82
 {
-    IPaymentIdentification13 ICreditTransferTransaction82.PaymentIdentification => PaymentIdentification;
-    IPaymentTypeInformation28? ICreditTransferTransaction82.PaymentTypeInformation => PaymentTypeInformation;
-    ISettlementDateTimeIndication1? ICreditTransferTransaction82.SettlementTimeIndication => SettlementTimeIndication;
-    ISettlementTimeRequest2? ICreditTransferTransaction82.SettlementTimeRequest => SettlementTimeRequest;
+    IPaymentIdentification13 ICreditTransferTransaction82.PaymentIdentification =>
+        PaymentIdentification;
+    IPaymentTypeInformation28? ICreditTransferTransaction82.PaymentTypeInformation =>
+        PaymentTypeInformation;
+    ISettlementDateTimeIndication1? ICreditTransferTransaction82.SettlementTimeIndication =>
+        SettlementTimeIndication;
+    ISettlementTimeRequest2? ICreditTransferTransaction82.SettlementTimeRequest =>
+        SettlementTimeRequest;
     ICryptographicKey1Choice? ICreditTransferTransaction82.PaymentSignature => PaymentSignature;
-    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction82.PreviousInstructingAgent1 => PreviousInstructingAgent1;
-    ICashAccount40? ICreditTransferTransaction82.PreviousInstructingAgent1Account => PreviousInstructingAgent1Account;
-    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction82.PreviousInstructingAgent2 => PreviousInstructingAgent2;
-    ICashAccount40? ICreditTransferTransaction82.PreviousInstructingAgent2Account => PreviousInstructingAgent2Account;
-    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction82.PreviousInstructingAgent3 => PreviousInstructingAgent3;
-    ICashAccount40? ICreditTransferTransaction82.PreviousInstructingAgent3Account => PreviousInstructingAgent3Account;
-    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction82.InstructingAgent => InstructingAgent;
-    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction82.InstructedAgent => InstructedAgent;
-    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction82.IntermediaryAgent1 => IntermediaryAgent1;
-    ICashAccount40? ICreditTransferTransaction82.IntermediaryAgent1Account => IntermediaryAgent1Account;
-    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction82.IntermediaryAgent2 => IntermediaryAgent2;
-    ICashAccount40? ICreditTransferTransaction82.IntermediaryAgent2Account => IntermediaryAgent2Account;
-    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction82.IntermediaryAgent3 => IntermediaryAgent3;
-    ICashAccount40? ICreditTransferTransaction82.IntermediaryAgent3Account => IntermediaryAgent3Account;
-    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction82.UltimateDebtor => UltimateDebtor;
+    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction82.PreviousInstructingAgent1 =>
+        PreviousInstructingAgent1;
+    ICashAccount40? ICreditTransferTransaction82.PreviousInstructingAgent1Account =>
+        PreviousInstructingAgent1Account;
+    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction82.PreviousInstructingAgent2 =>
+        PreviousInstructingAgent2;
+    ICashAccount40? ICreditTransferTransaction82.PreviousInstructingAgent2Account =>
+        PreviousInstructingAgent2Account;
+    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction82.PreviousInstructingAgent3 =>
+        PreviousInstructingAgent3;
+    ICashAccount40? ICreditTransferTransaction82.PreviousInstructingAgent3Account =>
+        PreviousInstructingAgent3Account;
+    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction82.InstructingAgent =>
+        InstructingAgent;
+    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction82.InstructedAgent =>
+        InstructedAgent;
+    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction82.IntermediaryAgent1 =>
+        IntermediaryAgent1;
+    ICashAccount40? ICreditTransferTransaction82.IntermediaryAgent1Account =>
+        IntermediaryAgent1Account;
+    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction82.IntermediaryAgent2 =>
+        IntermediaryAgent2;
+    ICashAccount40? ICreditTransferTransaction82.IntermediaryAgent2Account =>
+        IntermediaryAgent2Account;
+    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction82.IntermediaryAgent3 =>
+        IntermediaryAgent3;
+    ICashAccount40? ICreditTransferTransaction82.IntermediaryAgent3Account =>
+        IntermediaryAgent3Account;
+    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction82.UltimateDebtor =>
+        UltimateDebtor;
     IBranchAndFinancialInstitutionIdentification8 ICreditTransferTransaction82.Debtor => Debtor;
     ICashAccount40? ICreditTransferTransaction82.DebtorAccount => DebtorAccount;
-    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction82.DebtorAgent => DebtorAgent;
+    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction82.DebtorAgent =>
+        DebtorAgent;
     ICashAccount40? ICreditTransferTransaction82.DebtorAgentAccount => DebtorAgentAccount;
-    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction82.CreditorAgent => CreditorAgent;
+    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction82.CreditorAgent =>
+        CreditorAgent;
     ICashAccount40? ICreditTransferTransaction82.CreditorAgentAccount => CreditorAgentAccount;
     IBranchAndFinancialInstitutionIdentification8 ICreditTransferTransaction82.Creditor => Creditor;
     ICashAccount40? ICreditTransferTransaction82.CreditorAccount => CreditorAccount;
-    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction82.UltimateCreditor => UltimateCreditor;
-    IEnumerable<IInstructionForCreditorAgent3> ICreditTransferTransaction82.InstructionForCreditorAgent => InstructionForCreditorAgent;
-    IEnumerable<IInstructionForNextAgent1> ICreditTransferTransaction82.InstructionForNextAgent => InstructionForNextAgent;
+    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction82.UltimateCreditor =>
+        UltimateCreditor;
+    IEnumerable<IInstructionForCreditorAgent3> ICreditTransferTransaction82.InstructionForCreditorAgent =>
+        InstructionForCreditorAgent;
+    IEnumerable<IInstructionForNextAgent1> ICreditTransferTransaction82.InstructionForNextAgent =>
+        InstructionForNextAgent;
     IPurpose2Choice? ICreditTransferTransaction82.Purpose => Purpose;
-    IRemittanceInformation2? ICreditTransferTransaction82.RemittanceInformation => RemittanceInformation;
-    IEnumerable<ITransactionAllocation2> ICreditTransferTransaction82.UnderlyingAllocation => UnderlyingAllocation;
+    IRemittanceInformation2? ICreditTransferTransaction82.RemittanceInformation =>
+        RemittanceInformation;
+    IEnumerable<ITransactionAllocation2> ICreditTransferTransaction82.UnderlyingAllocation =>
+        UnderlyingAllocation;
 }

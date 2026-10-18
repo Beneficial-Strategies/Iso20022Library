@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PartyAdditionalIdentification2Choice;
 
-public partial record BirthDate : IBirthDate
-{
-}
+public partial record BirthDate : IBirthDate { }

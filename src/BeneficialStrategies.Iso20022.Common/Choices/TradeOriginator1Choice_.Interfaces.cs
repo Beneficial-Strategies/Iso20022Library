@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record TradeOriginator1Choice_ : ITradeOriginator1Choice
-{
-}
+public abstract partial record TradeOriginator1Choice_ : ITradeOriginator1Choice { }

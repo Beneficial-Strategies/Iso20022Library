@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record InstructionProcessingStatus33Choice_ : IInstructionProcessingStatus33Choice
-{
-}
+public abstract partial record InstructionProcessingStatus33Choice_
+    : IInstructionProcessingStatus33Choice { }

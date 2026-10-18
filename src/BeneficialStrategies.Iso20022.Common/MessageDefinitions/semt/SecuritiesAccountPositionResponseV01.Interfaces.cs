@@ -13,8 +13,11 @@ public partial record SecuritiesAccountPositionResponseV01 : ISecuritiesAccountP
     IPagination1 ISecuritiesAccountPositionResponseV01.Pagination => Pagination;
     IStatement58 ISecuritiesAccountPositionResponseV01.ReportGeneralDetails => ReportGeneralDetails;
     IPartyIdentification136? ISecuritiesAccountPositionResponseV01.AccountOwner => AccountOwner;
-    IPartyIdentification136? ISecuritiesAccountPositionResponseV01.AccountServicer => AccountServicer;
+    IPartyIdentification136? ISecuritiesAccountPositionResponseV01.AccountServicer =>
+        AccountServicer;
     IEnumerable<IBalance30> ISecuritiesAccountPositionResponseV01.Balances => Balances;
-    ITotalValueInPageAndStatement1? ISecuritiesAccountPositionResponseV01.PartyBaseCurrencyTotalAmounts => PartyBaseCurrencyTotalAmounts;
-    IOtherParties46? ISecuritiesAccountPositionResponseV01.OtherBusinessParties => OtherBusinessParties;
+    ITotalValueInPageAndStatement1? ISecuritiesAccountPositionResponseV01.PartyBaseCurrencyTotalAmounts =>
+        PartyBaseCurrencyTotalAmounts;
+    IOtherParties46? ISecuritiesAccountPositionResponseV01.OtherBusinessParties =>
+        OtherBusinessParties;
 }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record PriceFormat29Choice_ : IPriceFormat29Choice
-{
-}
+public abstract partial record PriceFormat29Choice_ : IPriceFormat29Choice { }

@@ -8,9 +8,13 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record PointOfInteractionComponentCharacteristics10 : IPointOfInteractionComponentCharacteristics10
+public partial record PointOfInteractionComponentCharacteristics10
+    : IPointOfInteractionComponentCharacteristics10
 {
-    IEnumerable<IMemoryCharacteristics1> IPointOfInteractionComponentCharacteristics10.Memory => Memory;
-    IEnumerable<ICommunicationCharacteristics5> IPointOfInteractionComponentCharacteristics10.Communication => Communication;
-    IEnumerable<ICryptographicKey18> IPointOfInteractionComponentCharacteristics10.SecurityElement => SecurityElement;
+    IEnumerable<IMemoryCharacteristics1> IPointOfInteractionComponentCharacteristics10.Memory =>
+        Memory;
+    IEnumerable<ICommunicationCharacteristics5> IPointOfInteractionComponentCharacteristics10.Communication =>
+        Communication;
+    IEnumerable<ICryptographicKey18> IPointOfInteractionComponentCharacteristics10.SecurityElement =>
+        SecurityElement;
 }

@@ -8,11 +8,17 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesTransactionCancellationRequestStatusAdviceV05 : ISecuritiesTransactionCancellationRequestStatusAdviceV05
+public partial record SecuritiesTransactionCancellationRequestStatusAdviceV05
+    : ISecuritiesTransactionCancellationRequestStatusAdviceV05
 {
-    IIdentification14 ISecuritiesTransactionCancellationRequestStatusAdviceV05.CancellationRequestReference => CancellationRequestReference;
-    ITransactionIdentifications30? ISecuritiesTransactionCancellationRequestStatusAdviceV05.TransactionIdentification => TransactionIdentification;
-    IProcessingStatus54Choice ISecuritiesTransactionCancellationRequestStatusAdviceV05.ProcessingStatus => ProcessingStatus;
-    ITransactionDetails80? ISecuritiesTransactionCancellationRequestStatusAdviceV05.TransactionDetails => TransactionDetails;
-    IEnumerable<ISupplementaryData1> ISecuritiesTransactionCancellationRequestStatusAdviceV05.SupplementaryData => SupplementaryData;
+    IIdentification14 ISecuritiesTransactionCancellationRequestStatusAdviceV05.CancellationRequestReference =>
+        CancellationRequestReference;
+    ITransactionIdentifications30? ISecuritiesTransactionCancellationRequestStatusAdviceV05.TransactionIdentification =>
+        TransactionIdentification;
+    IProcessingStatus54Choice ISecuritiesTransactionCancellationRequestStatusAdviceV05.ProcessingStatus =>
+        ProcessingStatus;
+    ITransactionDetails80? ISecuritiesTransactionCancellationRequestStatusAdviceV05.TransactionDetails =>
+        TransactionDetails;
+    IEnumerable<ISupplementaryData1> ISecuritiesTransactionCancellationRequestStatusAdviceV05.SupplementaryData =>
+        SupplementaryData;
 }

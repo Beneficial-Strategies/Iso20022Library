@@ -14,7 +14,9 @@ public partial record MeetingEntitlementNotificationV10 : IMeetingEntitlementNot
     IPartyIdentification129Choice IMeetingEntitlementNotificationV10.Issuer => Issuer;
     IEnumerable<ISecurityPosition21> IMeetingEntitlementNotificationV10.Security => Security;
     IEligibilityDates1 IMeetingEntitlementNotificationV10.Eligibility => Eligibility;
-    IPartyIdentification232Choice? IMeetingEntitlementNotificationV10.MeetingAttendee => MeetingAttendee;
+    IPartyIdentification232Choice? IMeetingEntitlementNotificationV10.MeetingAttendee =>
+        MeetingAttendee;
     IPartyIdentification232Choice? IMeetingEntitlementNotificationV10.Proxy => Proxy;
-    IEnumerable<ISupplementaryData1> IMeetingEntitlementNotificationV10.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IMeetingEntitlementNotificationV10.SupplementaryData =>
+        SupplementaryData;
 }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a predefined code value or a proprietary code value for a vote instruction type.
 /// </summary>
 [IsoId("_XuyKVfNoEeqRfth943bvEA")]
-public interface IVoteInstructionType2Choice : IIsoChoice
-{
-}
+public interface IVoteInstructionType2Choice : IIsoChoice { }

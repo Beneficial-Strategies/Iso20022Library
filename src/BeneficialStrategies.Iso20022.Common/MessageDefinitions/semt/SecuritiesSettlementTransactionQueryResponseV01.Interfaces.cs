@@ -8,9 +8,12 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record SecuritiesSettlementTransactionQueryResponseV01 : ISecuritiesSettlementTransactionQueryResponseV01
+public partial record SecuritiesSettlementTransactionQueryResponseV01
+    : ISecuritiesSettlementTransactionQueryResponseV01
 {
     IPagination1 ISecuritiesSettlementTransactionQueryResponseV01.Pagination => Pagination;
-    ISecuritiesReport2 ISecuritiesSettlementTransactionQueryResponseV01.ReportGeneralDetails => ReportGeneralDetails;
-    IEnumerable<ISecuritiesSettlementTransactions6> ISecuritiesSettlementTransactionQueryResponseV01.Transactions => Transactions;
+    ISecuritiesReport2 ISecuritiesSettlementTransactionQueryResponseV01.ReportGeneralDetails =>
+        ReportGeneralDetails;
+    IEnumerable<ISecuritiesSettlementTransactions6> ISecuritiesSettlementTransactionQueryResponseV01.Transactions =>
+        Transactions;
 }

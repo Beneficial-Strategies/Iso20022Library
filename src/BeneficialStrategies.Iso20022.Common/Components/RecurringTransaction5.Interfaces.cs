@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record RecurringTransaction5 : IRecurringTransaction5
 {
     IEnumerable<InstalmentPlan1Code> IRecurringTransaction5.InstalmentPlan => InstalmentPlan;
-    IEnumerable<IInstalmentAmountDetails1> IRecurringTransaction5.DetailedCharges => DetailedCharges;
+    IEnumerable<IInstalmentAmountDetails1> IRecurringTransaction5.DetailedCharges =>
+        DetailedCharges;
     IEnumerable<IInterestRateDetails1> IRecurringTransaction5.InterestRate => InterestRate;
     IEnumerable<IGracePeriod1> IRecurringTransaction5.GracePeriod => GracePeriod;
     IEnumerable<IActionMessage10> IRecurringTransaction5.PlanNotice => PlanNotice;

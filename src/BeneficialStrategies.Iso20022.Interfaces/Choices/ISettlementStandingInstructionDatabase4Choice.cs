@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the standing settlement instruction information.
 /// </summary>
 [IsoId("_OX40sTtGEeWRTLSN0i0tng")]
-public interface ISettlementStandingInstructionDatabase4Choice : IIsoChoice
-{
-}
+public interface ISettlementStandingInstructionDatabase4Choice : IIsoChoice { }

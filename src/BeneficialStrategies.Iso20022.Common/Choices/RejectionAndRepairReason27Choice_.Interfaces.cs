@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record RejectionAndRepairReason27Choice_ : IRejectionAndRepairReason27Choice
-{
-}
+public abstract partial record RejectionAndRepairReason27Choice_
+    : IRejectionAndRepairReason27Choice { }

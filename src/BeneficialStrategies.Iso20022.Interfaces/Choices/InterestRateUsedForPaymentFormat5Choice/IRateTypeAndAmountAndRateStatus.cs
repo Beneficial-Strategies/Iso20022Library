@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRateUsedForPaymentFormat
 /// Specifies different formats for interest rate used for payment.
 /// </summary>
 [IsoId("_iS_3h-EREd-1Ktb5rVaajw")]
-public interface IRateTypeAndAmountAndRateStatus : IInterestRateUsedForPaymentFormat5Choice, IIsoChoiceVariant
+public interface IRateTypeAndAmountAndRateStatus
+    : IInterestRateUsedForPaymentFormat5Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Value expressed as a rate type.

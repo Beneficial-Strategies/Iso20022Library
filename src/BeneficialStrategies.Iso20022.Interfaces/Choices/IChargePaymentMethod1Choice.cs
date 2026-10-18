@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the specification of the charge payment method.
 /// </summary>
 [IsoId("_ufg1QRXxEeOBE-jZfcm4KQ")]
-public interface IChargePaymentMethod1Choice : IIsoChoice
-{
-}
+public interface IChargePaymentMethod1Choice : IIsoChoice { }

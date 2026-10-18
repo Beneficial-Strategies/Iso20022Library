@@ -11,19 +11,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record TransactionDetails184 : ITransactionDetails184
 {
     ITransactionActivity3Choice ITransactionDetails184.TransactionActivity => TransactionActivity;
-    ISettlementOrCorporateActionEvent35Choice? ITransactionDetails184.SettlementTransactionOrCorporateActionEventType => SettlementTransactionOrCorporateActionEventType;
+    ISettlementOrCorporateActionEvent35Choice? ITransactionDetails184.SettlementTransactionOrCorporateActionEventType =>
+        SettlementTransactionOrCorporateActionEventType;
     ISettlementDetails231? ITransactionDetails184.SettlementParameters => SettlementParameters;
     IPlaceOfTradeIdentification1? ITransactionDetails184.PlaceOfTrade => PlaceOfTrade;
     ISafeKeepingPlace5? ITransactionDetails184.SafekeepingPlace => SafekeepingPlace;
     IPlaceOfClearingIdentification2? ITransactionDetails184.PlaceOfClearing => PlaceOfClearing;
     IQuantity51Choice ITransactionDetails184.PostingQuantity => PostingQuantity;
     IAmountAndDirection3? ITransactionDetails184.PostingAmount => PostingAmount;
-    IDigitalPaymentSettlement2? ITransactionDetails184.DigitalPaymentPostingSettlement => DigitalPaymentPostingSettlement;
+    IDigitalPaymentSettlement2? ITransactionDetails184.DigitalPaymentPostingSettlement =>
+        DigitalPaymentPostingSettlement;
     IAmountAndDirection21? ITransactionDetails184.AccruedInterestAmount => AccruedInterestAmount;
     ITradeDate8Choice? ITransactionDetails184.TradeDate => TradeDate;
-    IDateAndDateTime2Choice ITransactionDetails184.EffectiveSettlementDate => EffectiveSettlementDate;
+    IDateAndDateTime2Choice ITransactionDetails184.EffectiveSettlementDate =>
+        EffectiveSettlementDate;
     ISettlementDate17Choice? ITransactionDetails184.SettlementDate => SettlementDate;
     IDateAndDateTime2Choice? ITransactionDetails184.ValueDate => ValueDate;
-    ISettlementParties125? ITransactionDetails184.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties125? ITransactionDetails184.ReceivingSettlementParties => ReceivingSettlementParties;
+    ISettlementParties125? ITransactionDetails184.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties125? ITransactionDetails184.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
 }

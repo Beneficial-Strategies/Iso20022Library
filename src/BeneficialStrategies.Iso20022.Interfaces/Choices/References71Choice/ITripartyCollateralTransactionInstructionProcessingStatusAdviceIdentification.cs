@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.References71Choice;
 /// Unambiguous identification of the triparty collateral transaction instruction status advice to be cancelled.
 /// </summary>
 [IsoId("_KDxv0SAaEeu4a6pNulzZ4Q")]
-public interface ITripartyCollateralTransactionInstructionProcessingStatusAdviceIdentification : IReferences71Choice, IIsoChoiceVariant
+public interface ITripartyCollateralTransactionInstructionProcessingStatusAdviceIdentification
+    : IReferences71Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

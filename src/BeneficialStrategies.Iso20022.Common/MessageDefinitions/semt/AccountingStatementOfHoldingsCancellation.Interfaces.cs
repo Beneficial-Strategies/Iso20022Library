@@ -8,10 +8,14 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record AccountingStatementOfHoldingsCancellation : IAccountingStatementOfHoldingsCancellation
+public partial record AccountingStatementOfHoldingsCancellation
+    : IAccountingStatementOfHoldingsCancellation
 {
-    IAdditionalReference2 IAccountingStatementOfHoldingsCancellation.PreviousReference => PreviousReference;
-    IAdditionalReference2? IAccountingStatementOfHoldingsCancellation.RelatedReference => RelatedReference;
+    IAdditionalReference2 IAccountingStatementOfHoldingsCancellation.PreviousReference =>
+        PreviousReference;
+    IAdditionalReference2? IAccountingStatementOfHoldingsCancellation.RelatedReference =>
+        RelatedReference;
     IPagination IAccountingStatementOfHoldingsCancellation.MessagePagination => MessagePagination;
-    IAccountingStatementOfHoldings1? IAccountingStatementOfHoldingsCancellation.StatementToBeCancelled => StatementToBeCancelled;
+    IAccountingStatementOfHoldings1? IAccountingStatementOfHoldingsCancellation.StatementToBeCancelled =>
+        StatementToBeCancelled;
 }

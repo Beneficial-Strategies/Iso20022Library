@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentAggregateBalance1Choice;
 
-public partial record HoldingsIndicator : IHoldingsIndicator
-{
-}
+public partial record HoldingsIndicator : IHoldingsIndicator { }

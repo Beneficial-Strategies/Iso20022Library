@@ -12,5 +12,6 @@ public partial record ReversalReasonInformation6 : IReversalReasonInformation6
 {
     IPartyIdentification32? IReversalReasonInformation6.Originator => Originator;
     IReversalReason4Choice? IReversalReasonInformation6.Reason => Reason;
-    IEnumerable<Max105Text> IReversalReasonInformation6.AdditionalInformation => AdditionalInformation;
+    IEnumerable<Max105Text> IReversalReasonInformation6.AdditionalInformation =>
+        AdditionalInformation;
 }

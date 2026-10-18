@@ -8,10 +8,14 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record SecuritiesMessageCancellationAdviceV03 : ISecuritiesMessageCancellationAdviceV03
+public partial record SecuritiesMessageCancellationAdviceV03
+    : ISecuritiesMessageCancellationAdviceV03
 {
     IReferences18Choice ISecuritiesMessageCancellationAdviceV03.Reference => Reference;
-    IPartyIdentification36Choice? ISecuritiesMessageCancellationAdviceV03.AccountOwner => AccountOwner;
-    ISecuritiesAccount13 ISecuritiesMessageCancellationAdviceV03.SafekeepingAccount => SafekeepingAccount;
-    IEnumerable<ISupplementaryData1> ISecuritiesMessageCancellationAdviceV03.SupplementaryData => SupplementaryData;
+    IPartyIdentification36Choice? ISecuritiesMessageCancellationAdviceV03.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount13 ISecuritiesMessageCancellationAdviceV03.SafekeepingAccount =>
+        SafekeepingAccount;
+    IEnumerable<ISupplementaryData1> ISecuritiesMessageCancellationAdviceV03.SupplementaryData =>
+        SupplementaryData;
 }

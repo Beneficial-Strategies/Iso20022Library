@@ -10,36 +10,61 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CreditTransferTransactionInformation2 : ICreditTransferTransactionInformation2
 {
-    IPaymentIdentification2 ICreditTransferTransactionInformation2.PaymentIdentification => PaymentIdentification;
-    IPaymentTypeInformation3? ICreditTransferTransactionInformation2.PaymentTypeInformation => PaymentTypeInformation;
-    ISettlementDateTimeIndication1? ICreditTransferTransactionInformation2.SettlementTimeIndication => SettlementTimeIndication;
-    ISettlementTimeRequest1? ICreditTransferTransactionInformation2.SettlementTimeRequest => SettlementTimeRequest;
-    IEnumerable<IChargesInformation1> ICreditTransferTransactionInformation2.ChargesInformation => ChargesInformation;
-    IBranchAndFinancialInstitutionIdentification3? ICreditTransferTransactionInformation2.PreviousInstructingAgent => PreviousInstructingAgent;
-    ICashAccount7? ICreditTransferTransactionInformation2.PreviousInstructingAgentAccount => PreviousInstructingAgentAccount;
-    IBranchAndFinancialInstitutionIdentification3? ICreditTransferTransactionInformation2.InstructingAgent => InstructingAgent;
-    IBranchAndFinancialInstitutionIdentification3? ICreditTransferTransactionInformation2.InstructedAgent => InstructedAgent;
-    IBranchAndFinancialInstitutionIdentification3? ICreditTransferTransactionInformation2.IntermediaryAgent1 => IntermediaryAgent1;
-    ICashAccount7? ICreditTransferTransactionInformation2.IntermediaryAgent1Account => IntermediaryAgent1Account;
-    IBranchAndFinancialInstitutionIdentification3? ICreditTransferTransactionInformation2.IntermediaryAgent2 => IntermediaryAgent2;
-    ICashAccount7? ICreditTransferTransactionInformation2.IntermediaryAgent2Account => IntermediaryAgent2Account;
-    IBranchAndFinancialInstitutionIdentification3? ICreditTransferTransactionInformation2.IntermediaryAgent3 => IntermediaryAgent3;
-    ICashAccount7? ICreditTransferTransactionInformation2.IntermediaryAgent3Account => IntermediaryAgent3Account;
+    IPaymentIdentification2 ICreditTransferTransactionInformation2.PaymentIdentification =>
+        PaymentIdentification;
+    IPaymentTypeInformation3? ICreditTransferTransactionInformation2.PaymentTypeInformation =>
+        PaymentTypeInformation;
+    ISettlementDateTimeIndication1? ICreditTransferTransactionInformation2.SettlementTimeIndication =>
+        SettlementTimeIndication;
+    ISettlementTimeRequest1? ICreditTransferTransactionInformation2.SettlementTimeRequest =>
+        SettlementTimeRequest;
+    IEnumerable<IChargesInformation1> ICreditTransferTransactionInformation2.ChargesInformation =>
+        ChargesInformation;
+    IBranchAndFinancialInstitutionIdentification3? ICreditTransferTransactionInformation2.PreviousInstructingAgent =>
+        PreviousInstructingAgent;
+    ICashAccount7? ICreditTransferTransactionInformation2.PreviousInstructingAgentAccount =>
+        PreviousInstructingAgentAccount;
+    IBranchAndFinancialInstitutionIdentification3? ICreditTransferTransactionInformation2.InstructingAgent =>
+        InstructingAgent;
+    IBranchAndFinancialInstitutionIdentification3? ICreditTransferTransactionInformation2.InstructedAgent =>
+        InstructedAgent;
+    IBranchAndFinancialInstitutionIdentification3? ICreditTransferTransactionInformation2.IntermediaryAgent1 =>
+        IntermediaryAgent1;
+    ICashAccount7? ICreditTransferTransactionInformation2.IntermediaryAgent1Account =>
+        IntermediaryAgent1Account;
+    IBranchAndFinancialInstitutionIdentification3? ICreditTransferTransactionInformation2.IntermediaryAgent2 =>
+        IntermediaryAgent2;
+    ICashAccount7? ICreditTransferTransactionInformation2.IntermediaryAgent2Account =>
+        IntermediaryAgent2Account;
+    IBranchAndFinancialInstitutionIdentification3? ICreditTransferTransactionInformation2.IntermediaryAgent3 =>
+        IntermediaryAgent3;
+    ICashAccount7? ICreditTransferTransactionInformation2.IntermediaryAgent3Account =>
+        IntermediaryAgent3Account;
     IPartyIdentification8? ICreditTransferTransactionInformation2.UltimateDebtor => UltimateDebtor;
-    IPartyIdentification8? ICreditTransferTransactionInformation2.InitiatingParty => InitiatingParty;
+    IPartyIdentification8? ICreditTransferTransactionInformation2.InitiatingParty =>
+        InitiatingParty;
     IPartyIdentification8 ICreditTransferTransactionInformation2.Debtor => Debtor;
     ICashAccount7? ICreditTransferTransactionInformation2.DebtorAccount => DebtorAccount;
-    IBranchAndFinancialInstitutionIdentification3 ICreditTransferTransactionInformation2.DebtorAgent => DebtorAgent;
+    IBranchAndFinancialInstitutionIdentification3 ICreditTransferTransactionInformation2.DebtorAgent =>
+        DebtorAgent;
     ICashAccount7? ICreditTransferTransactionInformation2.DebtorAgentAccount => DebtorAgentAccount;
-    IBranchAndFinancialInstitutionIdentification3 ICreditTransferTransactionInformation2.CreditorAgent => CreditorAgent;
-    ICashAccount7? ICreditTransferTransactionInformation2.CreditorAgentAccount => CreditorAgentAccount;
+    IBranchAndFinancialInstitutionIdentification3 ICreditTransferTransactionInformation2.CreditorAgent =>
+        CreditorAgent;
+    ICashAccount7? ICreditTransferTransactionInformation2.CreditorAgentAccount =>
+        CreditorAgentAccount;
     IPartyIdentification8 ICreditTransferTransactionInformation2.Creditor => Creditor;
     ICashAccount7? ICreditTransferTransactionInformation2.CreditorAccount => CreditorAccount;
-    IPartyIdentification8? ICreditTransferTransactionInformation2.UltimateCreditor => UltimateCreditor;
-    IEnumerable<IInstructionForCreditorAgent1> ICreditTransferTransactionInformation2.InstructionForCreditorAgent => InstructionForCreditorAgent;
-    IEnumerable<IInstructionForNextAgent1> ICreditTransferTransactionInformation2.InstructionForNextAgent => InstructionForNextAgent;
+    IPartyIdentification8? ICreditTransferTransactionInformation2.UltimateCreditor =>
+        UltimateCreditor;
+    IEnumerable<IInstructionForCreditorAgent1> ICreditTransferTransactionInformation2.InstructionForCreditorAgent =>
+        InstructionForCreditorAgent;
+    IEnumerable<IInstructionForNextAgent1> ICreditTransferTransactionInformation2.InstructionForNextAgent =>
+        InstructionForNextAgent;
     IPurpose1Choice? ICreditTransferTransactionInformation2.Purpose => Purpose;
-    IEnumerable<IRegulatoryReporting2> ICreditTransferTransactionInformation2.RegulatoryReporting => RegulatoryReporting;
-    IEnumerable<IRemittanceLocation1> ICreditTransferTransactionInformation2.RelatedRemittanceInformation => RelatedRemittanceInformation;
-    IRemittanceInformation1? ICreditTransferTransactionInformation2.RemittanceInformation => RemittanceInformation;
+    IEnumerable<IRegulatoryReporting2> ICreditTransferTransactionInformation2.RegulatoryReporting =>
+        RegulatoryReporting;
+    IEnumerable<IRemittanceLocation1> ICreditTransferTransactionInformation2.RelatedRemittanceInformation =>
+        RelatedRemittanceInformation;
+    IRemittanceInformation1? ICreditTransferTransactionInformation2.RemittanceInformation =>
+        RemittanceInformation;
 }

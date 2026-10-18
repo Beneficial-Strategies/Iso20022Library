@@ -11,11 +11,17 @@ namespace BeneficialStrategies.Iso20022.seev;
 public partial record AgentCANotificationAdviceV01 : IAgentCANotificationAdviceV01
 {
     IDocumentIdentification8 IAgentCANotificationAdviceV01.Identification => Identification;
-    ILinkedCorporateAction1 IAgentCANotificationAdviceV01.NotificationTypeAndLinkage => NotificationTypeAndLinkage;
-    ICorporateActionNotification1 IAgentCANotificationAdviceV01.NotificationGeneralInformation => NotificationGeneralInformation;
-    ICorporateActionInformation2 IAgentCANotificationAdviceV01.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    ICorporateAction2 IAgentCANotificationAdviceV01.CorporateActionDetails => CorporateActionDetails;
-    IEnumerable<ICorporateActionOption1> IAgentCANotificationAdviceV01.CorporateActionOptionDetails => CorporateActionOptionDetails;
+    ILinkedCorporateAction1 IAgentCANotificationAdviceV01.NotificationTypeAndLinkage =>
+        NotificationTypeAndLinkage;
+    ICorporateActionNotification1 IAgentCANotificationAdviceV01.NotificationGeneralInformation =>
+        NotificationGeneralInformation;
+    ICorporateActionInformation2 IAgentCANotificationAdviceV01.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    ICorporateAction2 IAgentCANotificationAdviceV01.CorporateActionDetails =>
+        CorporateActionDetails;
+    IEnumerable<ICorporateActionOption1> IAgentCANotificationAdviceV01.CorporateActionOptionDetails =>
+        CorporateActionOptionDetails;
     IEnumerable<IContactPerson1> IAgentCANotificationAdviceV01.ContactDetails => ContactDetails;
-    ICorporateActionNarrative2? IAgentCANotificationAdviceV01.AdditionalInformation => AdditionalInformation;
+    ICorporateActionNarrative2? IAgentCANotificationAdviceV01.AdditionalInformation =>
+        AdditionalInformation;
 }

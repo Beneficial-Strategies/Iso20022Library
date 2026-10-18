@@ -33,6 +33,7 @@ public partial record OtherAmounts39 : IOtherAmounts39
     IAmountAndDirection44? IOtherAmounts39.WithholdingTax => WithholdingTax;
     IAmountAndDirection44? IOtherAmounts39.NetGainLoss => NetGainLoss;
     IAmountAndDirection44? IOtherAmounts39.ConsumptionTax => ConsumptionTax;
-    IAmountAndDirection44? IOtherAmounts39.AccruedCapitalisationAmount => AccruedCapitalisationAmount;
+    IAmountAndDirection44? IOtherAmounts39.AccruedCapitalisationAmount =>
+        AccruedCapitalisationAmount;
     IAmountAndDirection44? IOtherAmounts39.ResearchFee => ResearchFee;
 }

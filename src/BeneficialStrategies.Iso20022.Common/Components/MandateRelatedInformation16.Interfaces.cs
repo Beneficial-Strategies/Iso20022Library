@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record MandateRelatedInformation16 : IMandateRelatedInformation16
 {
-    IAmendmentInformationDetails15? IMandateRelatedInformation16.AmendmentInformationDetails => AmendmentInformationDetails;
+    IAmendmentInformationDetails15? IMandateRelatedInformation16.AmendmentInformationDetails =>
+        AmendmentInformationDetails;
     IFrequency36Choice? IMandateRelatedInformation16.Frequency => Frequency;
     IMandateSetupReason1Choice? IMandateRelatedInformation16.Reason => Reason;
 }

@@ -11,7 +11,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CorporateActionGeneralInformation142 : ICorporateActionGeneralInformation142
 {
     ICorporateActionEventType87Choice ICorporateActionGeneralInformation142.EventType => EventType;
-    ISecurityIdentification19 ICorporateActionGeneralInformation142.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IIntermediateSecuritiesDistributionTypeFormat16Choice? ICorporateActionGeneralInformation142.IntermediateSecuritiesDistributionType => IntermediateSecuritiesDistributionType;
-    IFinancialInstrumentQuantity1Choice? ICorporateActionGeneralInformation142.FractionalQuantity => FractionalQuantity;
+    ISecurityIdentification19 ICorporateActionGeneralInformation142.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IIntermediateSecuritiesDistributionTypeFormat16Choice? ICorporateActionGeneralInformation142.IntermediateSecuritiesDistributionType =>
+        IntermediateSecuritiesDistributionType;
+    IFinancialInstrumentQuantity1Choice? ICorporateActionGeneralInformation142.FractionalQuantity =>
+        FractionalQuantity;
 }

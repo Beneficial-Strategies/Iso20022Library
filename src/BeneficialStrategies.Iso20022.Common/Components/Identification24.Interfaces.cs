@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record Identification24 : IIdentification24
 {
-    IEnumerable<RestrictedFINXMax16Text> IIdentification24.TradeIdentification => TradeIdentification;
+    IEnumerable<RestrictedFINXMax16Text> IIdentification24.TradeIdentification =>
+        TradeIdentification;
 }

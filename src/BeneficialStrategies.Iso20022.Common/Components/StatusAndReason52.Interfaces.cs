@@ -13,7 +13,8 @@ public partial record StatusAndReason52 : IStatusAndReason52
     IMatchingStatus24Choice? IStatusAndReason52.InferredMatchingStatus => InferredMatchingStatus;
     IMatchingStatus24Choice? IStatusAndReason52.MatchingStatus => MatchingStatus;
     ISettlementStatus32Choice? IStatusAndReason52.SettlementStatus => SettlementStatus;
-    IInstructionProcessingStatus63Choice? IStatusAndReason52.InstructionProcessingStatus => InstructionProcessingStatus;
+    IInstructionProcessingStatus63Choice? IStatusAndReason52.InstructionProcessingStatus =>
+        InstructionProcessingStatus;
     IProprietaryReason4? IStatusAndReason52.Settled => Settled;
     IProprietaryStatusAndReason6? IStatusAndReason52.Proprietary => Proprietary;
 }

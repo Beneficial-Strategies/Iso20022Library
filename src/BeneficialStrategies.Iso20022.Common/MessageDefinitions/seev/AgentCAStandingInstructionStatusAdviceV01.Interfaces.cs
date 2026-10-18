@@ -8,12 +8,19 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record AgentCAStandingInstructionStatusAdviceV01 : IAgentCAStandingInstructionStatusAdviceV01
+public partial record AgentCAStandingInstructionStatusAdviceV01
+    : IAgentCAStandingInstructionStatusAdviceV01
 {
-    IDocumentIdentification8 IAgentCAStandingInstructionStatusAdviceV01.Identification => Identification;
-    IDocumentIdentification8 IAgentCAStandingInstructionStatusAdviceV01.AgentCAStandingInstructionRequestIdentification => AgentCAStandingInstructionRequestIdentification;
-    IDocumentIdentification8 IAgentCAStandingInstructionStatusAdviceV01.AgentCAStandingInstructionCancellationRequestIdentification => AgentCAStandingInstructionCancellationRequestIdentification;
-    ICorporateActionStandingInstructionGeneralInformation1 IAgentCAStandingInstructionStatusAdviceV01.StandingInstructionGeneralInformation => StandingInstructionGeneralInformation;
-    IStandingInstructionStatus1Choice IAgentCAStandingInstructionStatusAdviceV01.StandingInstructionRequestStatus => StandingInstructionRequestStatus;
-    IStandingInstructionCancellationStatus1Choice IAgentCAStandingInstructionStatusAdviceV01.StandingInstructionCancellationRequestStatus => StandingInstructionCancellationRequestStatus;
+    IDocumentIdentification8 IAgentCAStandingInstructionStatusAdviceV01.Identification =>
+        Identification;
+    IDocumentIdentification8 IAgentCAStandingInstructionStatusAdviceV01.AgentCAStandingInstructionRequestIdentification =>
+        AgentCAStandingInstructionRequestIdentification;
+    IDocumentIdentification8 IAgentCAStandingInstructionStatusAdviceV01.AgentCAStandingInstructionCancellationRequestIdentification =>
+        AgentCAStandingInstructionCancellationRequestIdentification;
+    ICorporateActionStandingInstructionGeneralInformation1 IAgentCAStandingInstructionStatusAdviceV01.StandingInstructionGeneralInformation =>
+        StandingInstructionGeneralInformation;
+    IStandingInstructionStatus1Choice IAgentCAStandingInstructionStatusAdviceV01.StandingInstructionRequestStatus =>
+        StandingInstructionRequestStatus;
+    IStandingInstructionCancellationStatus1Choice IAgentCAStandingInstructionStatusAdviceV01.StandingInstructionCancellationRequestStatus =>
+        StandingInstructionCancellationRequestStatus;
 }

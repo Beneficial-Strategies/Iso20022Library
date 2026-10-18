@@ -8,11 +8,15 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesSettlementAllegementRemovalAdviceV01 : ISecuritiesSettlementAllegementRemovalAdviceV01
+public partial record SecuritiesSettlementAllegementRemovalAdviceV01
+    : ISecuritiesSettlementAllegementRemovalAdviceV01
 {
-    IDocumentIdentification11 ISecuritiesSettlementAllegementRemovalAdviceV01.Identification => Identification;
+    IDocumentIdentification11 ISecuritiesSettlementAllegementRemovalAdviceV01.Identification =>
+        Identification;
     ITransactionDetails13 ISecuritiesSettlementAllegementRemovalAdviceV01.Details => Details;
-    IPartyIdentification10Choice? ISecuritiesSettlementAllegementRemovalAdviceV01.MessageOriginator => MessageOriginator;
-    IPartyIdentification10Choice? ISecuritiesSettlementAllegementRemovalAdviceV01.MessageRecipient => MessageRecipient;
+    IPartyIdentification10Choice? ISecuritiesSettlementAllegementRemovalAdviceV01.MessageOriginator =>
+        MessageOriginator;
+    IPartyIdentification10Choice? ISecuritiesSettlementAllegementRemovalAdviceV01.MessageRecipient =>
+        MessageRecipient;
     IEnumerable<IExtension2> ISecuritiesSettlementAllegementRemovalAdviceV01.Extension => Extension;
 }

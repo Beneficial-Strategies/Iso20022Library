@@ -8,11 +8,17 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record StatementOfInvestmentFundTransactionsCancellationV02 : IStatementOfInvestmentFundTransactionsCancellationV02
+public partial record StatementOfInvestmentFundTransactionsCancellationV02
+    : IStatementOfInvestmentFundTransactionsCancellationV02
 {
-    IMessageIdentification1 IStatementOfInvestmentFundTransactionsCancellationV02.MessageIdentification => MessageIdentification;
-    IAdditionalReference2? IStatementOfInvestmentFundTransactionsCancellationV02.PreviousReference => PreviousReference;
-    IAdditionalReference2? IStatementOfInvestmentFundTransactionsCancellationV02.RelatedReference => RelatedReference;
-    IPagination IStatementOfInvestmentFundTransactionsCancellationV02.MessagePagination => MessagePagination;
-    IStatementOfInvestmentFundTransactions2? IStatementOfInvestmentFundTransactionsCancellationV02.StatementToBeCancelled => StatementToBeCancelled;
+    IMessageIdentification1 IStatementOfInvestmentFundTransactionsCancellationV02.MessageIdentification =>
+        MessageIdentification;
+    IAdditionalReference2? IStatementOfInvestmentFundTransactionsCancellationV02.PreviousReference =>
+        PreviousReference;
+    IAdditionalReference2? IStatementOfInvestmentFundTransactionsCancellationV02.RelatedReference =>
+        RelatedReference;
+    IPagination IStatementOfInvestmentFundTransactionsCancellationV02.MessagePagination =>
+        MessagePagination;
+    IStatementOfInvestmentFundTransactions2? IStatementOfInvestmentFundTransactionsCancellationV02.StatementToBeCancelled =>
+        StatementToBeCancelled;
 }

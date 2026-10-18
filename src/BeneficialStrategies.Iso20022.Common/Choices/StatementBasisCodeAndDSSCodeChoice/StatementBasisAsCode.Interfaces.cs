@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.StatementBasisCodeAndDSSCodeChoice;
 
-public partial record StatementBasisAsCode : IStatementBasisAsCode
-{
-}
+public partial record StatementBasisAsCode : IStatementBasisAsCode { }

@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record MessageAndBusinessReference7 : IMessageAndBusinessReference7
 {
     IReferences39Choice? IMessageAndBusinessReference7.Reference => Reference;
-    IInvestmentAccount40? IMessageAndBusinessReference7.InvestmentAccountDetails => InvestmentAccountDetails;
+    IInvestmentAccount40? IMessageAndBusinessReference7.InvestmentAccountDetails =>
+        InvestmentAccountDetails;
 }

@@ -10,10 +10,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record RetailerPaymentResult3 : IRetailerPaymentResult3
 {
-    IEnumerable<CardPaymentServiceType9Code> IRetailerPaymentResult3.AdditionalService => AdditionalService;
-    ICardPaymentTransaction110? IRetailerPaymentResult3.RequestedTransaction => RequestedTransaction;
+    IEnumerable<CardPaymentServiceType9Code> IRetailerPaymentResult3.AdditionalService =>
+        AdditionalService;
+    ICardPaymentTransaction110? IRetailerPaymentResult3.RequestedTransaction =>
+        RequestedTransaction;
     ICardPaymentTransaction109? IRetailerPaymentResult3.TransactionResponse => TransactionResponse;
     IEnumerable<ICustomerOrder1> IRetailerPaymentResult3.CustomerOrder => CustomerOrder;
     ICapturedSignature1? IRetailerPaymentResult3.ImageCapturedSignature => ImageCapturedSignature;
-    IContentInformationType28? IRetailerPaymentResult3.ProtectedCapturedSignature => ProtectedCapturedSignature;
+    IContentInformationType28? IRetailerPaymentResult3.ProtectedCapturedSignature =>
+        ProtectedCapturedSignature;
 }

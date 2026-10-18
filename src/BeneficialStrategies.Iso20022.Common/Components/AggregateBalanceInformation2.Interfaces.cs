@@ -11,12 +11,19 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record AggregateBalanceInformation2 : IAggregateBalanceInformation2
 {
     IBalanceQuantity1Choice IAggregateBalanceInformation2.AggregateQuantity => AggregateQuantity;
-    IEnumerable<ActiveOrHistoricCurrencyAndAmount> IAggregateBalanceInformation2.HoldingValue => HoldingValue;
-    ISafekeepingPlaceFormatChoice? IAggregateBalanceInformation2.SafekeepingPlace => SafekeepingPlace;
-    IFinancialInstrument4 IAggregateBalanceInformation2.FinancialInstrumentDetails => FinancialInstrumentDetails;
+    IEnumerable<ActiveOrHistoricCurrencyAndAmount> IAggregateBalanceInformation2.HoldingValue =>
+        HoldingValue;
+    ISafekeepingPlaceFormatChoice? IAggregateBalanceInformation2.SafekeepingPlace =>
+        SafekeepingPlace;
+    IFinancialInstrument4 IAggregateBalanceInformation2.FinancialInstrumentDetails =>
+        FinancialInstrumentDetails;
     IEnumerable<IPriceInformation1> IAggregateBalanceInformation2.PriceDetails => PriceDetails;
-    IForeignExchangeTerms3? IAggregateBalanceInformation2.ForeignExchangeDetails => ForeignExchangeDetails;
-    IEnumerable<ISubBalanceInformation1> IAggregateBalanceInformation2.BalanceBreakdownDetails => BalanceBreakdownDetails;
-    IEnumerable<IAdditionalBalanceInformation> IAggregateBalanceInformation2.AdditionalBalanceBreakdownDetails => AdditionalBalanceBreakdownDetails;
-    IEnumerable<IAggregateBalancePerSafekeepingPlace2> IAggregateBalanceInformation2.BalanceAtSafekeepingPlace => BalanceAtSafekeepingPlace;
+    IForeignExchangeTerms3? IAggregateBalanceInformation2.ForeignExchangeDetails =>
+        ForeignExchangeDetails;
+    IEnumerable<ISubBalanceInformation1> IAggregateBalanceInformation2.BalanceBreakdownDetails =>
+        BalanceBreakdownDetails;
+    IEnumerable<IAdditionalBalanceInformation> IAggregateBalanceInformation2.AdditionalBalanceBreakdownDetails =>
+        AdditionalBalanceBreakdownDetails;
+    IEnumerable<IAggregateBalancePerSafekeepingPlace2> IAggregateBalanceInformation2.BalanceAtSafekeepingPlace =>
+        BalanceAtSafekeepingPlace;
 }

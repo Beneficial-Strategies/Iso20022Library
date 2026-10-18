@@ -13,5 +13,6 @@ public partial record Balance30 : IBalance30
     ISecuritiesAccount19 IBalance30.SafekeepingAccount => SafekeepingAccount;
     IEnumerable<IAggregateBalanceInformation47> IBalance30.BalanceForAccount => BalanceForAccount;
     IEnumerable<ISubAccountIdentification75> IBalance30.SubAccountDetails => SubAccountDetails;
-    ITotalValueInPageAndStatement1? IBalance30.AccountBaseCurrencyTotalAmounts => AccountBaseCurrencyTotalAmounts;
+    ITotalValueInPageAndStatement1? IBalance30.AccountBaseCurrencyTotalAmounts =>
+        AccountBaseCurrencyTotalAmounts;
 }

@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.References53Choice;
 
-public partial record SecuritiesSettlementTransactionGenerationNotificationIdentification : ISecuritiesSettlementTransactionGenerationNotificationIdentification
-{
-}
+public partial record SecuritiesSettlementTransactionGenerationNotificationIdentification
+    : ISecuritiesSettlementTransactionGenerationNotificationIdentification { }

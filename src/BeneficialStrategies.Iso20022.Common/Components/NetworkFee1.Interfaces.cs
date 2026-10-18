@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record NetworkFee1 : INetworkFee1
 {
-    ISecurityIdentification19 INetworkFee1.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification19 INetworkFee1.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
 }

@@ -10,8 +10,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionSecuritiesMovement2 : ICorporateActionSecuritiesMovement2
 {
-    ISecurityIdentification7 ICorporateActionSecuritiesMovement2.SecurityIdentification => SecurityIdentification;
+    ISecurityIdentification7 ICorporateActionSecuritiesMovement2.SecurityIdentification =>
+        SecurityIdentification;
     IDateAndDateTimeChoice? ICorporateActionSecuritiesMovement2.PostingDateTime => PostingDateTime;
     IUnitOrFaceAmount1Choice ICorporateActionSecuritiesMovement2.PostingQuantity => PostingQuantity;
-    IEnumerable<ISecuritiesAccount9> ICorporateActionSecuritiesMovement2.AccountDetails => AccountDetails;
+    IEnumerable<ISecuritiesAccount9> ICorporateActionSecuritiesMovement2.AccountDetails =>
+        AccountDetails;
 }

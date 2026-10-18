@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification234Choice;
 
 public partial record IndividualOwnerIdentification : IIndividualOwnerIdentification
 {
-    IIdentificationType42Choice IIndividualOwnerIdentification.IdentificationType => IdentificationType;
+    IIdentificationType42Choice IIndividualOwnerIdentification.IdentificationType =>
+        IdentificationType;
 }

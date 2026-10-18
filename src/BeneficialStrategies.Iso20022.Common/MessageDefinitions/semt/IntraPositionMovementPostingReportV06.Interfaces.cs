@@ -11,8 +11,12 @@ namespace BeneficialStrategies.Iso20022.semt;
 public partial record IntraPositionMovementPostingReportV06 : IIntraPositionMovementPostingReportV06
 {
     IPagination IIntraPositionMovementPostingReportV06.Pagination => Pagination;
-    IStatement43 IIntraPositionMovementPostingReportV06.StatementGeneralDetails => StatementGeneralDetails;
-    IPartyIdentification92Choice? IIntraPositionMovementPostingReportV06.AccountOwner => AccountOwner;
-    ISecuritiesAccount24 IIntraPositionMovementPostingReportV06.SafekeepingAccount => SafekeepingAccount;
-    IEnumerable<IFinancialInstrumentDetails24> IIntraPositionMovementPostingReportV06.FinancialInstrument => FinancialInstrument;
+    IStatement43 IIntraPositionMovementPostingReportV06.StatementGeneralDetails =>
+        StatementGeneralDetails;
+    IPartyIdentification92Choice? IIntraPositionMovementPostingReportV06.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount24 IIntraPositionMovementPostingReportV06.SafekeepingAccount =>
+        SafekeepingAccount;
+    IEnumerable<IFinancialInstrumentDetails24> IIntraPositionMovementPostingReportV06.FinancialInstrument =>
+        FinancialInstrument;
 }

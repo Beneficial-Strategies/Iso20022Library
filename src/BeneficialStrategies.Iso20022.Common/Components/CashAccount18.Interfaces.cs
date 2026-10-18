@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CashAccount18 : ICashAccount18
 {
-    IPartyIdentification2Choice? ICashAccount18.AccountOwnerIdentification => AccountOwnerIdentification;
+    IPartyIdentification2Choice? ICashAccount18.AccountOwnerIdentification =>
+        AccountOwnerIdentification;
     IAccountIdentification2Choice ICashAccount18.AccountIdentification => AccountIdentification;
     ICashBalanceType1FormatType? ICashAccount18.BalanceType => BalanceType;
 }

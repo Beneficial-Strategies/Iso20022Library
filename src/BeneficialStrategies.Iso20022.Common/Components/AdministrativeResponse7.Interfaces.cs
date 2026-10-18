@@ -13,5 +13,6 @@ public partial record AdministrativeResponse7 : IAdministrativeResponse7
     ICardPaymentEnvironment80 IAdministrativeResponse7.Environment => Environment;
     ICardPaymentContext30 IAdministrativeResponse7.Context => Context;
     IResponseType11 IAdministrativeResponse7.Response => Response;
-    IEnumerable<ISupplementaryData1> IAdministrativeResponse7.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IAdministrativeResponse7.SupplementaryData =>
+        SupplementaryData;
 }

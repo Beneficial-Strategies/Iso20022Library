@@ -14,12 +14,18 @@ public partial record PortfolioTransferInstructionV03 : IPortfolioTransferInstru
     IAdditionalReference3? IPortfolioTransferInstructionV03.PoolReference => PoolReference;
     IAdditionalReference3? IPortfolioTransferInstructionV03.PreviousReference => PreviousReference;
     IAdditionalReference3? IPortfolioTransferInstructionV03.RelatedReference => RelatedReference;
-    IIndividualPerson8? IPortfolioTransferInstructionV03.PrimaryIndividualInvestor => PrimaryIndividualInvestor;
-    IIndividualPerson8? IPortfolioTransferInstructionV03.SecondaryIndividualInvestor => SecondaryIndividualInvestor;
-    IEnumerable<IIndividualPerson8> IPortfolioTransferInstructionV03.OtherIndividualInvestor => OtherIndividualInvestor;
-    IOrganisation4? IPortfolioTransferInstructionV03.PrimaryCorporateInvestor => PrimaryCorporateInvestor;
-    IOrganisation4? IPortfolioTransferInstructionV03.SecondaryCorporateInvestor => SecondaryCorporateInvestor;
-    IEnumerable<IOrganisation4> IPortfolioTransferInstructionV03.OtherCorporateInvestor => OtherCorporateInvestor;
+    IIndividualPerson8? IPortfolioTransferInstructionV03.PrimaryIndividualInvestor =>
+        PrimaryIndividualInvestor;
+    IIndividualPerson8? IPortfolioTransferInstructionV03.SecondaryIndividualInvestor =>
+        SecondaryIndividualInvestor;
+    IEnumerable<IIndividualPerson8> IPortfolioTransferInstructionV03.OtherIndividualInvestor =>
+        OtherIndividualInvestor;
+    IOrganisation4? IPortfolioTransferInstructionV03.PrimaryCorporateInvestor =>
+        PrimaryCorporateInvestor;
+    IOrganisation4? IPortfolioTransferInstructionV03.SecondaryCorporateInvestor =>
+        SecondaryCorporateInvestor;
+    IEnumerable<IOrganisation4> IPortfolioTransferInstructionV03.OtherCorporateInvestor =>
+        OtherCorporateInvestor;
     IAccount5 IPortfolioTransferInstructionV03.TransferorAccount => TransferorAccount;
     IAccount6? IPortfolioTransferInstructionV03.NomineeAccount => NomineeAccount;
     IPartyIdentification2Choice IPortfolioTransferInstructionV03.Transferee => Transferee;

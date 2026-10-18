@@ -10,12 +10,19 @@ namespace BeneficialStrategies.Iso20022.semt;
 
 public partial record IntraPositionMovementPostingReportV01 : IIntraPositionMovementPostingReportV01
 {
-    IDocumentIdentification11 IIntraPositionMovementPostingReportV01.Identification => Identification;
+    IDocumentIdentification11 IIntraPositionMovementPostingReportV01.Identification =>
+        Identification;
     IPagination IIntraPositionMovementPostingReportV01.Pagination => Pagination;
-    IStatement15 IIntraPositionMovementPostingReportV01.StatementGeneralDetails => StatementGeneralDetails;
-    IPartyIdentification13Choice? IIntraPositionMovementPostingReportV01.AccountOwner => AccountOwner;
-    ISecuritiesAccount13 IIntraPositionMovementPostingReportV01.SafekeepingAccount => SafekeepingAccount;
-    IEnumerable<IFinancialInstrumentDetails1> IIntraPositionMovementPostingReportV01.FinancialInstrument => FinancialInstrument;
-    IPartyIdentification10Choice? IIntraPositionMovementPostingReportV01.MessageOriginator => MessageOriginator;
-    IPartyIdentification10Choice? IIntraPositionMovementPostingReportV01.MessageRecipient => MessageRecipient;
+    IStatement15 IIntraPositionMovementPostingReportV01.StatementGeneralDetails =>
+        StatementGeneralDetails;
+    IPartyIdentification13Choice? IIntraPositionMovementPostingReportV01.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount13 IIntraPositionMovementPostingReportV01.SafekeepingAccount =>
+        SafekeepingAccount;
+    IEnumerable<IFinancialInstrumentDetails1> IIntraPositionMovementPostingReportV01.FinancialInstrument =>
+        FinancialInstrument;
+    IPartyIdentification10Choice? IIntraPositionMovementPostingReportV01.MessageOriginator =>
+        MessageOriginator;
+    IPartyIdentification10Choice? IIntraPositionMovementPostingReportV01.MessageRecipient =>
+        MessageRecipient;
 }

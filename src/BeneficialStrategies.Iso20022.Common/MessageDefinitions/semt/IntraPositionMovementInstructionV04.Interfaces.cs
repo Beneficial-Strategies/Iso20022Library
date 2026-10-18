@@ -10,14 +10,21 @@ namespace BeneficialStrategies.Iso20022.semt;
 
 public partial record IntraPositionMovementInstructionV04 : IIntraPositionMovementInstructionV04
 {
-    IIdentification14? IIntraPositionMovementInstructionV04.CorporateActionEventIdentification => CorporateActionEventIdentification;
+    IIdentification14? IIntraPositionMovementInstructionV04.CorporateActionEventIdentification =>
+        CorporateActionEventIdentification;
     INumberCount1Choice? IIntraPositionMovementInstructionV04.NumberCounts => NumberCounts;
     IEnumerable<ILinkages36> IIntraPositionMovementInstructionV04.Linkages => Linkages;
     IPartyIdentification92Choice? IIntraPositionMovementInstructionV04.AccountOwner => AccountOwner;
-    ISecuritiesAccount24 IIntraPositionMovementInstructionV04.SafekeepingAccount => SafekeepingAccount;
-    ISafekeepingPlaceFormat10Choice? IIntraPositionMovementInstructionV04.SafekeepingPlace => SafekeepingPlace;
-    ISecurityIdentification19 IIntraPositionMovementInstructionV04.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentAttributes63? IIntraPositionMovementInstructionV04.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
-    IIntraPositionDetails33 IIntraPositionMovementInstructionV04.IntraPositionDetails => IntraPositionDetails;
-    IEnumerable<ISupplementaryData1> IIntraPositionMovementInstructionV04.SupplementaryData => SupplementaryData;
+    ISecuritiesAccount24 IIntraPositionMovementInstructionV04.SafekeepingAccount =>
+        SafekeepingAccount;
+    ISafekeepingPlaceFormat10Choice? IIntraPositionMovementInstructionV04.SafekeepingPlace =>
+        SafekeepingPlace;
+    ISecurityIdentification19 IIntraPositionMovementInstructionV04.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentAttributes63? IIntraPositionMovementInstructionV04.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
+    IIntraPositionDetails33 IIntraPositionMovementInstructionV04.IntraPositionDetails =>
+        IntraPositionDetails;
+    IEnumerable<ISupplementaryData1> IIntraPositionMovementInstructionV04.SupplementaryData =>
+        SupplementaryData;
 }

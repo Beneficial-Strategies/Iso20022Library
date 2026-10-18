@@ -12,7 +12,10 @@ public partial record CryptographicKey18 : ICryptographicKey18
 {
     IEnumerable<KeyUsage1Code> ICryptographicKey18.Function => Function;
     IContentInformationType39? ICryptographicKey18.KeyValue => KeyValue;
-    IEnumerable<IGenericIdentification186> ICryptographicKey18.ComponentWithAuthorisedAccess => ComponentWithAuthorisedAccess;
-    IEnumerable<IContentInformationType39> ICryptographicKey18.ProtectedComponentWithAuthorisedAccess => ProtectedComponentWithAuthorisedAccess;
-    IEnumerable<IGenericInformation1> ICryptographicKey18.AdditionalManagementInformation => AdditionalManagementInformation;
+    IEnumerable<IGenericIdentification186> ICryptographicKey18.ComponentWithAuthorisedAccess =>
+        ComponentWithAuthorisedAccess;
+    IEnumerable<IContentInformationType39> ICryptographicKey18.ProtectedComponentWithAuthorisedAccess =>
+        ProtectedComponentWithAuthorisedAccess;
+    IEnumerable<IGenericInformation1> ICryptographicKey18.AdditionalManagementInformation =>
+        AdditionalManagementInformation;
 }

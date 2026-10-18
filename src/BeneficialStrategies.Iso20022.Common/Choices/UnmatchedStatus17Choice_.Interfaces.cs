@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record UnmatchedStatus17Choice_ : IUnmatchedStatus17Choice
-{
-}
+public abstract partial record UnmatchedStatus17Choice_ : IUnmatchedStatus17Choice { }

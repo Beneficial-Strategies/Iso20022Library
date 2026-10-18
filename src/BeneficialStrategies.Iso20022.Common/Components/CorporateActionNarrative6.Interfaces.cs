@@ -12,12 +12,19 @@ public partial record CorporateActionNarrative6 : ICorporateActionNarrative6
 {
     IUpdatedAdditionalInformation1? ICorporateActionNarrative6.AdditionalText => AdditionalText;
     IUpdatedAdditionalInformation1? ICorporateActionNarrative6.NarrativeVersion => NarrativeVersion;
-    IUpdatedAdditionalInformation1? ICorporateActionNarrative6.InformationConditions => InformationConditions;
-    IUpdatedAdditionalInformation1? ICorporateActionNarrative6.InformationToComplyWith => InformationToComplyWith;
-    IUpdatedAdditionalInformation1? ICorporateActionNarrative6.TaxationConditions => TaxationConditions;
+    IUpdatedAdditionalInformation1? ICorporateActionNarrative6.InformationConditions =>
+        InformationConditions;
+    IUpdatedAdditionalInformation1? ICorporateActionNarrative6.InformationToComplyWith =>
+        InformationToComplyWith;
+    IUpdatedAdditionalInformation1? ICorporateActionNarrative6.TaxationConditions =>
+        TaxationConditions;
     IUpdatedAdditionalInformation1? ICorporateActionNarrative6.Disclaimer => Disclaimer;
-    IUpdatedAdditionalInformation1? ICorporateActionNarrative6.PartyContactNarrative => PartyContactNarrative;
-    IUpdatedAdditionalInformation1? ICorporateActionNarrative6.DeclarationDetails => DeclarationDetails;
-    IUpdatedAdditionalInformation1? ICorporateActionNarrative6.RegistrationDetails => RegistrationDetails;
-    IUpdatedAdditionalInformation1? ICorporateActionNarrative6.BasketOrIndexInformation => BasketOrIndexInformation;
+    IUpdatedAdditionalInformation1? ICorporateActionNarrative6.PartyContactNarrative =>
+        PartyContactNarrative;
+    IUpdatedAdditionalInformation1? ICorporateActionNarrative6.DeclarationDetails =>
+        DeclarationDetails;
+    IUpdatedAdditionalInformation1? ICorporateActionNarrative6.RegistrationDetails =>
+        RegistrationDetails;
+    IUpdatedAdditionalInformation1? ICorporateActionNarrative6.BasketOrIndexInformation =>
+        BasketOrIndexInformation;
 }

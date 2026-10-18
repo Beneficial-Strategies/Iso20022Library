@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record TransferStatus5Choice_ : ITransferStatus5Choice
-{
-}
+public abstract partial record TransferStatus5Choice_ : ITransferStatus5Choice { }

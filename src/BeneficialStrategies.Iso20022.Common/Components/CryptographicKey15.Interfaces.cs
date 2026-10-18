@@ -12,5 +12,6 @@ public partial record CryptographicKey15 : ICryptographicKey15
 {
     IEnumerable<KeyUsage1Code> ICryptographicKey15.Function => Function;
     IContentInformationType26? ICryptographicKey15.KeyValue => KeyValue;
-    IEnumerable<IGenericInformation1> ICryptographicKey15.AdditionalManagementInformation => AdditionalManagementInformation;
+    IEnumerable<IGenericInformation1> ICryptographicKey15.AdditionalManagementInformation =>
+        AdditionalManagementInformation;
 }

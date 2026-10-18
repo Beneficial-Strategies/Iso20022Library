@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record PendingReason75Choice_ : IPendingReason75Choice
-{
-}
+public abstract partial record PendingReason75Choice_ : IPendingReason75Choice { }

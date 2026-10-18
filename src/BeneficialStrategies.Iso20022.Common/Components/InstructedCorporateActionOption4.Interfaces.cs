@@ -12,6 +12,7 @@ public partial record InstructedCorporateActionOption4 : IInstructedCorporateAct
 {
     ICorporateActionOption10Choice IInstructedCorporateActionOption4.OptionType => OptionType;
     IBalanceFormat1Choice IInstructedCorporateActionOption4.InstructedBalance => InstructedBalance;
-    IDefaultProcessingOrStandingInstruction1Choice? IInstructedCorporateActionOption4.DefaultAction => DefaultAction;
+    IDefaultProcessingOrStandingInstruction1Choice? IInstructedCorporateActionOption4.DefaultAction =>
+        DefaultAction;
     IDeadlineCode1Choice IInstructedCorporateActionOption4.DeadlineType => DeadlineType;
 }

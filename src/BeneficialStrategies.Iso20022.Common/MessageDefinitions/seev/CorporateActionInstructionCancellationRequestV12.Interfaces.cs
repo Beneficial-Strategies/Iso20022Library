@@ -8,13 +8,21 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record CorporateActionInstructionCancellationRequestV12 : ICorporateActionInstructionCancellationRequestV12
+public partial record CorporateActionInstructionCancellationRequestV12
+    : ICorporateActionInstructionCancellationRequestV12
 {
-    IDocumentIdentification31 ICorporateActionInstructionCancellationRequestV12.InstructionIdentification => InstructionIdentification;
-    ICorporateActionGeneralInformation155 ICorporateActionInstructionCancellationRequestV12.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IAccountIdentification60 ICorporateActionInstructionCancellationRequestV12.AccountDetails => AccountDetails;
-    ICorporateActionOption200 ICorporateActionInstructionCancellationRequestV12.CorporateActionInstruction => CorporateActionInstruction;
-    IProtectInstruction3? ICorporateActionInstructionCancellationRequestV12.ProtectInstruction => ProtectInstruction;
-    ICorporateActionNarrative10? ICorporateActionInstructionCancellationRequestV12.AdditionalInformation => AdditionalInformation;
-    IEnumerable<ISupplementaryData1> ICorporateActionInstructionCancellationRequestV12.SupplementaryData => SupplementaryData;
+    IDocumentIdentification31 ICorporateActionInstructionCancellationRequestV12.InstructionIdentification =>
+        InstructionIdentification;
+    ICorporateActionGeneralInformation155 ICorporateActionInstructionCancellationRequestV12.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IAccountIdentification60 ICorporateActionInstructionCancellationRequestV12.AccountDetails =>
+        AccountDetails;
+    ICorporateActionOption200 ICorporateActionInstructionCancellationRequestV12.CorporateActionInstruction =>
+        CorporateActionInstruction;
+    IProtectInstruction3? ICorporateActionInstructionCancellationRequestV12.ProtectInstruction =>
+        ProtectInstruction;
+    ICorporateActionNarrative10? ICorporateActionInstructionCancellationRequestV12.AdditionalInformation =>
+        AdditionalInformation;
+    IEnumerable<ISupplementaryData1> ICorporateActionInstructionCancellationRequestV12.SupplementaryData =>
+        SupplementaryData;
 }

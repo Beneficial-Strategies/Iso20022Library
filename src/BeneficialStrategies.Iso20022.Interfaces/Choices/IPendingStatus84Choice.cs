@@ -7,6 +7,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice between a reason and no reason for the general meeting instruction processing pending status.</summary>
 [IsoId("_Rd70kbMVEfCEXew4g5B5oA")]
-public interface IPendingStatus84Choice : IIsoChoice
-{
-}
+public interface IPendingStatus84Choice : IIsoChoice { }

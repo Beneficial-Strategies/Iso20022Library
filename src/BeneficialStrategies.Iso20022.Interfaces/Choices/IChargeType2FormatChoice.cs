@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or a proprietary code for specifying the type of charge.
 /// </summary>
 [IsoId("_Rl0FRNp-Ed-ak6NoX_4Aeg_-1615660129")]
-public interface IChargeType2FormatChoice : IIsoChoice
-{
-}
+public interface IChargeType2FormatChoice : IIsoChoice { }

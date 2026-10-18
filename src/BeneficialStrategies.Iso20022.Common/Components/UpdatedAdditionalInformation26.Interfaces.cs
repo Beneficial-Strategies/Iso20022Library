@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record UpdatedAdditionalInformation26 : IUpdatedAdditionalInformation26
 {
-    IEnumerable<RestrictedFINZMax8000Text> IUpdatedAdditionalInformation26.AdditionalInformation => AdditionalInformation;
+    IEnumerable<RestrictedFINZMax8000Text> IUpdatedAdditionalInformation26.AdditionalInformation =>
+        AdditionalInformation;
 }

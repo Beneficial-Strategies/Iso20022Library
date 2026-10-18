@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificationChoice;
 
-public partial record RussianCentralBankIdentificationCode : IRussianCentralBankIdentificationCode
-{
-}
+public partial record RussianCentralBankIdentificationCode
+    : IRussianCentralBankIdentificationCode { }

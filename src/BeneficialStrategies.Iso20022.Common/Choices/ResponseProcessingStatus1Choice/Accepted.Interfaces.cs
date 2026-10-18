@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.ResponseProcessingStatus1Choice;
 
-public partial record Accepted : IAccepted
-{
-}
+public partial record Accepted : IAccepted { }

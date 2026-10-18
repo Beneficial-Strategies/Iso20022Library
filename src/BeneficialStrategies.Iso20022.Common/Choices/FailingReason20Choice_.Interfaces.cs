@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record FailingReason20Choice_ : IFailingReason20Choice
-{
-}
+public abstract partial record FailingReason20Choice_ : IFailingReason20Choice { }

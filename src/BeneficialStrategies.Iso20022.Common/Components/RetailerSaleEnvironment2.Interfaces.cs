@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record RetailerSaleEnvironment2 : IRetailerSaleEnvironment2
 {
-    IEnumerable<SaleCapabilities1Code> IRetailerSaleEnvironment2.SaleCapabilities => SaleCapabilities;
+    IEnumerable<SaleCapabilities1Code> IRetailerSaleEnvironment2.SaleCapabilities =>
+        SaleCapabilities;
 }

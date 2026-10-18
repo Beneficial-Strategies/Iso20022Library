@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a percentage rate or a rate name.
 /// </summary>
 [IsoId("_Q-xTaNp-Ed-ak6NoX_4Aeg_-1686411263")]
-public interface IRateOrName1Choice : IIsoChoice
-{
-}
+public interface IRateOrName1Choice : IIsoChoice { }

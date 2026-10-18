@@ -12,13 +12,17 @@ public partial record TransactionDetails162 : ITransactionDetails162
 {
     IPartyIdentification156? ITransactionDetails162.AccountOwner => AccountOwner;
     ISecuritiesAccount30? ITransactionDetails162.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet7? ITransactionDetails162.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
-    ISecurityIdentification20 ITransactionDetails162.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    IBlockChainAddressWallet7? ITransactionDetails162.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
+    ISecurityIdentification20 ITransactionDetails162.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     IQuantity54Choice ITransactionDetails162.SettlementQuantity => SettlementQuantity;
     IAmountAndDirection67? ITransactionDetails162.SettlementAmount => SettlementAmount;
     ITradeDate9Choice? ITransactionDetails162.TradeDate => TradeDate;
     ISettlementDate32Choice ITransactionDetails162.SettlementDate => SettlementDate;
-    ISettlementParties109? ITransactionDetails162.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties109? ITransactionDetails162.ReceivingSettlementParties => ReceivingSettlementParties;
+    ISettlementParties109? ITransactionDetails162.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties109? ITransactionDetails162.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
     IPartyIdentification170? ITransactionDetails162.Investor => Investor;
 }

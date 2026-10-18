@@ -12,19 +12,27 @@ public partial record CorporateActionBalance51 : ICorporateActionBalance51
 {
     IQuantity80Choice ICorporateActionBalance51.TotalEligibleBalance => TotalEligibleBalance;
     IBalanceFormat14Choice ICorporateActionBalance51.UninstructedBalance => UninstructedBalance;
-    IInstructedBalance21 ICorporateActionBalance51.TotalInstructedBalanceDetails => TotalInstructedBalanceDetails;
+    IInstructedBalance21 ICorporateActionBalance51.TotalInstructedBalanceDetails =>
+        TotalInstructedBalanceDetails;
     ISignedQuantityFormat13? ICorporateActionBalance51.BlockedBalance => BlockedBalance;
     ISignedQuantityFormat13? ICorporateActionBalance51.BorrowedBalance => BorrowedBalance;
     ISignedQuantityFormat13? ICorporateActionBalance51.CollateralInBalance => CollateralInBalance;
     ISignedQuantityFormat13? ICorporateActionBalance51.CollateralOutBalance => CollateralOutBalance;
     ISignedQuantityFormat13? ICorporateActionBalance51.OnLoanBalance => OnLoanBalance;
-    ISignedQuantityFormat13? ICorporateActionBalance51.OutForRegistrationBalance => OutForRegistrationBalance;
-    ISignedQuantityFormat13? ICorporateActionBalance51.SettlementPositionBalance => SettlementPositionBalance;
-    ISignedQuantityFormat13? ICorporateActionBalance51.StreetPositionBalance => StreetPositionBalance;
-    ISignedQuantityFormat13? ICorporateActionBalance51.TradeDatePositionBalance => TradeDatePositionBalance;
-    ISignedQuantityFormat13? ICorporateActionBalance51.InTransshipmentBalance => InTransshipmentBalance;
+    ISignedQuantityFormat13? ICorporateActionBalance51.OutForRegistrationBalance =>
+        OutForRegistrationBalance;
+    ISignedQuantityFormat13? ICorporateActionBalance51.SettlementPositionBalance =>
+        SettlementPositionBalance;
+    ISignedQuantityFormat13? ICorporateActionBalance51.StreetPositionBalance =>
+        StreetPositionBalance;
+    ISignedQuantityFormat13? ICorporateActionBalance51.TradeDatePositionBalance =>
+        TradeDatePositionBalance;
+    ISignedQuantityFormat13? ICorporateActionBalance51.InTransshipmentBalance =>
+        InTransshipmentBalance;
     ISignedQuantityFormat13? ICorporateActionBalance51.RegisteredBalance => RegisteredBalance;
     ISignedQuantityFormat13? ICorporateActionBalance51.ObligatedBalance => ObligatedBalance;
-    IEnumerable<IPendingBalance8> ICorporateActionBalance51.PendingDeliveryBalance => PendingDeliveryBalance;
-    IEnumerable<IPendingBalance8> ICorporateActionBalance51.PendingReceiptBalance => PendingReceiptBalance;
+    IEnumerable<IPendingBalance8> ICorporateActionBalance51.PendingDeliveryBalance =>
+        PendingDeliveryBalance;
+    IEnumerable<IPendingBalance8> ICorporateActionBalance51.PendingReceiptBalance =>
+        PendingReceiptBalance;
 }

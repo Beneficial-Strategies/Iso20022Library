@@ -12,5 +12,6 @@ public partial record BatchResponse8 : IBatchResponse8
 {
     ITransactionIdentifier1? IBatchResponse8.SaleBatchIdentification => SaleBatchIdentification;
     ITransactionIdentifier1? IBatchResponse8.POIBatchIdentification => POIBatchIdentification;
-    IEnumerable<IPerformedTransaction8> IBatchResponse8.PerformedTransaction => PerformedTransaction;
+    IEnumerable<IPerformedTransaction8> IBatchResponse8.PerformedTransaction =>
+        PerformedTransaction;
 }

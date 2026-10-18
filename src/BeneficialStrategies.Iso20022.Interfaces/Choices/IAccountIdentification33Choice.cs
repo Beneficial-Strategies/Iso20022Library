@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between all accounts (GENR - General in ISO 15022) or one or more selected accounts and balance information.
 /// </summary>
 [IsoId("_w9u0bTq3EeWQ1Y7f8kds2A")]
-public interface IAccountIdentification33Choice : IIsoChoice
-{
-}
+public interface IAccountIdentification33Choice : IIsoChoice { }

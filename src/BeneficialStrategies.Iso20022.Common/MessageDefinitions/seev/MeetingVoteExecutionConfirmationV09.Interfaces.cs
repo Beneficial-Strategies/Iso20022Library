@@ -12,7 +12,10 @@ public partial record MeetingVoteExecutionConfirmationV09 : IMeetingVoteExecutio
 {
     IPagination1? IMeetingVoteExecutionConfirmationV09.Pagination => Pagination;
     IMeetingReference10 IMeetingVoteExecutionConfirmationV09.MeetingReference => MeetingReference;
-    ISecurityIdentification19 IMeetingVoteExecutionConfirmationV09.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IEnumerable<IDetailedInstructionStatus18> IMeetingVoteExecutionConfirmationV09.VoteInstructions => VoteInstructions;
-    IEnumerable<ISupplementaryData1> IMeetingVoteExecutionConfirmationV09.SupplementaryData => SupplementaryData;
+    ISecurityIdentification19 IMeetingVoteExecutionConfirmationV09.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IEnumerable<IDetailedInstructionStatus18> IMeetingVoteExecutionConfirmationV09.VoteInstructions =>
+        VoteInstructions;
+    IEnumerable<ISupplementaryData1> IMeetingVoteExecutionConfirmationV09.SupplementaryData =>
+        SupplementaryData;
 }

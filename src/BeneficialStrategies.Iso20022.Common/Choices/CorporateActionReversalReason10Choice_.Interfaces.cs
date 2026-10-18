@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record CorporateActionReversalReason10Choice_ : ICorporateActionReversalReason10Choice
-{
-}
+public abstract partial record CorporateActionReversalReason10Choice_
+    : ICorporateActionReversalReason10Choice { }

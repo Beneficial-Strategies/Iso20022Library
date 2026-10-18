@@ -11,10 +11,14 @@ namespace BeneficialStrategies.Iso20022.seev;
 public partial record MeetingVoteExecutionConfirmationV04 : IMeetingVoteExecutionConfirmationV04
 {
     IMessageIdentification1 IMeetingVoteExecutionConfirmationV04.Identification => Identification;
-    IMessageIdentification IMeetingVoteExecutionConfirmationV04.RelatedReference => RelatedReference;
+    IMessageIdentification IMeetingVoteExecutionConfirmationV04.RelatedReference =>
+        RelatedReference;
     IMeetingReference4 IMeetingVoteExecutionConfirmationV04.MeetingReference => MeetingReference;
-    IPartyIdentification9Choice IMeetingVoteExecutionConfirmationV04.ReportingParty => ReportingParty;
-    ISecurityIdentification11 IMeetingVoteExecutionConfirmationV04.SecurityIdentification => SecurityIdentification;
-    IEnumerable<IDetailedInstructionStatus9> IMeetingVoteExecutionConfirmationV04.VoteInstructions => VoteInstructions;
+    IPartyIdentification9Choice IMeetingVoteExecutionConfirmationV04.ReportingParty =>
+        ReportingParty;
+    ISecurityIdentification11 IMeetingVoteExecutionConfirmationV04.SecurityIdentification =>
+        SecurityIdentification;
+    IEnumerable<IDetailedInstructionStatus9> IMeetingVoteExecutionConfirmationV04.VoteInstructions =>
+        VoteInstructions;
     IEnumerable<IExtension2> IMeetingVoteExecutionConfirmationV04.Extension => Extension;
 }

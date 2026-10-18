@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.References3Choice;
 /// Unambiguous identification of the confirmation to be cancelled.
 /// </summary>
 [IsoId("_USz3Atp-Ed-ak6NoX_4Aeg_-1717183315")]
-public interface ISecuritiesFinancingConfirmationIdentification : IReferences3Choice, IIsoChoiceVariant
+public interface ISecuritiesFinancingConfirmationIdentification
+    : IReferences3Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

@@ -8,10 +8,15 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record SecuritiesSettlementConditionsModificationRequestReportV01 : ISecuritiesSettlementConditionsModificationRequestReportV01
+public partial record SecuritiesSettlementConditionsModificationRequestReportV01
+    : ISecuritiesSettlementConditionsModificationRequestReportV01
 {
-    IPagination1 ISecuritiesSettlementConditionsModificationRequestReportV01.Pagination => Pagination;
-    ISecuritiesTransactionReport5 ISecuritiesSettlementConditionsModificationRequestReportV01.ReportGeneralDetails => ReportGeneralDetails;
-    IEnumerable<ISecuritiesModification2> ISecuritiesSettlementConditionsModificationRequestReportV01.Modifications => Modifications;
-    IEnumerable<ISupplementaryData1> ISecuritiesSettlementConditionsModificationRequestReportV01.SupplementaryData => SupplementaryData;
+    IPagination1 ISecuritiesSettlementConditionsModificationRequestReportV01.Pagination =>
+        Pagination;
+    ISecuritiesTransactionReport5 ISecuritiesSettlementConditionsModificationRequestReportV01.ReportGeneralDetails =>
+        ReportGeneralDetails;
+    IEnumerable<ISecuritiesModification2> ISecuritiesSettlementConditionsModificationRequestReportV01.Modifications =>
+        Modifications;
+    IEnumerable<ISupplementaryData1> ISecuritiesSettlementConditionsModificationRequestReportV01.SupplementaryData =>
+        SupplementaryData;
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecuritiesOption52 : ISecuritiesOption52
 {
-    IFinancialInstrumentQuantity1Choice? ISecuritiesOption52.ConditionalQuantity => ConditionalQuantity;
+    IFinancialInstrumentQuantity1Choice? ISecuritiesOption52.ConditionalQuantity =>
+        ConditionalQuantity;
     IQuantity20Choice ISecuritiesOption52.InstructedQuantity => InstructedQuantity;
 }

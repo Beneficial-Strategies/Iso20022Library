@@ -10,14 +10,19 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionRate115 : ICorporateActionRate115
 {
-    IRatioFormat23Choice? ICorporateActionRate115.AdditionalQuantityForSubscribedResultantSecurities => AdditionalQuantityForSubscribedResultantSecurities;
-    IRatioFormat23Choice? ICorporateActionRate115.AdditionalQuantityForExistingSecurities => AdditionalQuantityForExistingSecurities;
+    IRatioFormat23Choice? ICorporateActionRate115.AdditionalQuantityForSubscribedResultantSecurities =>
+        AdditionalQuantityForSubscribedResultantSecurities;
+    IRatioFormat23Choice? ICorporateActionRate115.AdditionalQuantityForExistingSecurities =>
+        AdditionalQuantityForExistingSecurities;
     IRatioFormat24Choice? ICorporateActionRate115.NewToOld => NewToOld;
     IRateAndAmountFormat46Choice? ICorporateActionRate115.ChargesFees => ChargesFees;
     IRateFormat3Choice? ICorporateActionRate115.FiscalStamp => FiscalStamp;
     IRateFormat3Choice? ICorporateActionRate115.ApplicableRate => ApplicableRate;
     IRateFormat21Choice? ICorporateActionRate115.TaxCreditRate => TaxCreditRate;
-    IRateFormat3Choice? ICorporateActionRate115.FinancialTransactionTaxRate => FinancialTransactionTaxRate;
-    IEnumerable<IRateAndAmountFormat47Choice> ICorporateActionRate115.WithholdingTaxRate => WithholdingTaxRate;
-    IEnumerable<IRateAndAmountFormat47Choice> ICorporateActionRate115.SecondLevelTax => SecondLevelTax;
+    IRateFormat3Choice? ICorporateActionRate115.FinancialTransactionTaxRate =>
+        FinancialTransactionTaxRate;
+    IEnumerable<IRateAndAmountFormat47Choice> ICorporateActionRate115.WithholdingTaxRate =>
+        WithholdingTaxRate;
+    IEnumerable<IRateAndAmountFormat47Choice> ICorporateActionRate115.SecondLevelTax =>
+        SecondLevelTax;
 }

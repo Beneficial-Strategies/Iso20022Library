@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Reference to a message.
 /// </summary>
 [IsoId("_2mW56TWhEe2OzdGcZrUAEQ")]
-public interface ILinkedMessage6Choice : IIsoChoice
-{
-}
+public interface ILinkedMessage6Choice : IIsoChoice { }

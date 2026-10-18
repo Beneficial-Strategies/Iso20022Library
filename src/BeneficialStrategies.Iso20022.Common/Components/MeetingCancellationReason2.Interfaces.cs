@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record MeetingCancellationReason2 : IMeetingCancellationReason2
 {
-    IMeetingCancellationReason1Choice? IMeetingCancellationReason2.CancellationReasonCode => CancellationReasonCode;
+    IMeetingCancellationReason1Choice? IMeetingCancellationReason2.CancellationReasonCode =>
+        CancellationReasonCode;
 }

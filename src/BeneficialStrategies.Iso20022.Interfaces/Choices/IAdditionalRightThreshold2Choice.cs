@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Additional Right Threshold2Choice.
 /// </summary>
 [IsoId("_ddxGe5K5Ee-l-O3vIHRmRw")]
-public interface IAdditionalRightThreshold2Choice : IIsoChoice
-{
-}
+public interface IAdditionalRightThreshold2Choice : IIsoChoice { }

@@ -8,12 +8,19 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesSettlementAllegementRemovalAdvice002V05 : ISecuritiesSettlementAllegementRemovalAdvice002V05
+public partial record SecuritiesSettlementAllegementRemovalAdvice002V05
+    : ISecuritiesSettlementAllegementRemovalAdvice002V05
 {
-    ISettlementTypeAndIdentification22 ISecuritiesSettlementAllegementRemovalAdvice002V05.AccountServicerTransactionIdentification => AccountServicerTransactionIdentification;
-    IIdentification16? ISecuritiesSettlementAllegementRemovalAdvice002V05.MarketInfrastructureTransactionIdentification => MarketInfrastructureTransactionIdentification;
-    IPartyIdentification156? ISecuritiesSettlementAllegementRemovalAdvice002V05.AccountOwner => AccountOwner;
-    ISecuritiesAccount30 ISecuritiesSettlementAllegementRemovalAdvice002V05.SafekeepingAccount => SafekeepingAccount;
-    ITransactionDetails139? ISecuritiesSettlementAllegementRemovalAdvice002V05.TransactionDetails => TransactionDetails;
-    IEnumerable<ISupplementaryData1> ISecuritiesSettlementAllegementRemovalAdvice002V05.SupplementaryData => SupplementaryData;
+    ISettlementTypeAndIdentification22 ISecuritiesSettlementAllegementRemovalAdvice002V05.AccountServicerTransactionIdentification =>
+        AccountServicerTransactionIdentification;
+    IIdentification16? ISecuritiesSettlementAllegementRemovalAdvice002V05.MarketInfrastructureTransactionIdentification =>
+        MarketInfrastructureTransactionIdentification;
+    IPartyIdentification156? ISecuritiesSettlementAllegementRemovalAdvice002V05.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount30 ISecuritiesSettlementAllegementRemovalAdvice002V05.SafekeepingAccount =>
+        SafekeepingAccount;
+    ITransactionDetails139? ISecuritiesSettlementAllegementRemovalAdvice002V05.TransactionDetails =>
+        TransactionDetails;
+    IEnumerable<ISupplementaryData1> ISecuritiesSettlementAllegementRemovalAdvice002V05.SupplementaryData =>
+        SupplementaryData;
 }

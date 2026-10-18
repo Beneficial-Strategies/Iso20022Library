@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record UpdatedURLlnformation7 : IUpdatedURLlnformation7
-{
-}
+public partial record UpdatedURLlnformation7 : IUpdatedURLlnformation7 { }

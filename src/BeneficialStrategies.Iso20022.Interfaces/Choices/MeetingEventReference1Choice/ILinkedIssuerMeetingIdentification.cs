@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.MeetingEventReference1Choice;
 /// Official and unique reference assigned by the official central body/ entity within each market at the beginning of a meeting event.
 /// </summary>
 [IsoId("__b3CG67rEemG7MmivSuE5g")]
-public interface ILinkedIssuerMeetingIdentification : IMeetingEventReference1Choice, IIsoChoiceVariant
+public interface ILinkedIssuerMeetingIdentification
+    : IMeetingEventReference1Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

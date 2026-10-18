@@ -11,20 +11,30 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CorporateActionOption250 : ICorporateActionOption250
 {
     ICorporateActionOption37Choice ICorporateActionOption250.OptionType => OptionType;
-    IFractionDispositionType26Choice? ICorporateActionOption250.FractionDisposition => FractionDisposition;
-    IEnumerable<IOptionFeaturesFormat32Choice> ICorporateActionOption250.OptionFeatures => OptionFeatures;
-    IEnumerable<ExtendedOptionFeature2Code> ICorporateActionOption250.SupplementaryOptionFeatures => SupplementaryOptionFeatures;
-    IOptionAvailabilityStatus3Choice? ICorporateActionOption250.OptionAvailabilityStatus => OptionAvailabilityStatus;
-    IEnumerable<IBeneficiaryCertificationType13Choice> ICorporateActionOption250.CertificationBreakdownType => CertificationBreakdownType;
-    ISecurityIdentification19? ICorporateActionOption250.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    IFractionDispositionType26Choice? ICorporateActionOption250.FractionDisposition =>
+        FractionDisposition;
+    IEnumerable<IOptionFeaturesFormat32Choice> ICorporateActionOption250.OptionFeatures =>
+        OptionFeatures;
+    IEnumerable<ExtendedOptionFeature2Code> ICorporateActionOption250.SupplementaryOptionFeatures =>
+        SupplementaryOptionFeatures;
+    IOptionAvailabilityStatus3Choice? ICorporateActionOption250.OptionAvailabilityStatus =>
+        OptionAvailabilityStatus;
+    IEnumerable<IBeneficiaryCertificationType13Choice> ICorporateActionOption250.CertificationBreakdownType =>
+        CertificationBreakdownType;
+    ISecurityIdentification19? ICorporateActionOption250.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     ICorporateActionDate110? ICorporateActionOption250.DateDetails => DateDetails;
     ICorporateActionPeriod18? ICorporateActionOption250.PeriodDetails => PeriodDetails;
     ICorporateActionRate138? ICorporateActionOption250.RateAndAmountDetails => RateAndAmountDetails;
     ICorporateActionPrice87? ICorporateActionOption250.PriceDetails => PriceDetails;
     ISecuritiesOption81? ICorporateActionOption250.SecuritiesQuantity => SecuritiesQuantity;
     IEnumerable<ITaxCategory1> ICorporateActionOption250.TaxCategory => TaxCategory;
-    IProrationBelowMinimumQuantity3Choice? ICorporateActionOption250.ProrationBelowMinimumQuantity => ProrationBelowMinimumQuantity;
-    IEnumerable<ISecuritiesOption120> ICorporateActionOption250.SecuritiesMovementDetails => SecuritiesMovementDetails;
-    IEnumerable<ICashOption115> ICorporateActionOption250.CashMovementDetails => CashMovementDetails;
-    ICorporateActionNarrative66? ICorporateActionOption250.AdditionalInformation => AdditionalInformation;
+    IProrationBelowMinimumQuantity3Choice? ICorporateActionOption250.ProrationBelowMinimumQuantity =>
+        ProrationBelowMinimumQuantity;
+    IEnumerable<ISecuritiesOption120> ICorporateActionOption250.SecuritiesMovementDetails =>
+        SecuritiesMovementDetails;
+    IEnumerable<ICashOption115> ICorporateActionOption250.CashMovementDetails =>
+        CashMovementDetails;
+    ICorporateActionNarrative66? ICorporateActionOption250.AdditionalInformation =>
+        AdditionalInformation;
 }

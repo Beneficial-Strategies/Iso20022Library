@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the pending processing reason.
 /// </summary>
 [IsoId("_UZOBB9p-Ed-ak6NoX_4Aeg_-1812988057")]
-public interface IPendingProcessingReason1Choice : IIsoChoice
-{
-}
+public interface IPendingProcessingReason1Choice : IIsoChoice { }

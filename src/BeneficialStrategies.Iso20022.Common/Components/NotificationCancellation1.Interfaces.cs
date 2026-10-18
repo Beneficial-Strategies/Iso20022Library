@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record NotificationCancellation1 : INotificationCancellation1
 {
-    IDocumentIdentification8 INotificationCancellation1.LinkedAgentCANotificationAdviceIdentification => LinkedAgentCANotificationAdviceIdentification;
+    IDocumentIdentification8 INotificationCancellation1.LinkedAgentCANotificationAdviceIdentification =>
+        LinkedAgentCANotificationAdviceIdentification;
 }

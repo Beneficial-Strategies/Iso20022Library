@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record SecuritiesBalanceType10FormatChoice_ : ISecuritiesBalanceType10FormatChoice
-{
-}
+public abstract partial record SecuritiesBalanceType10FormatChoice_
+    : ISecuritiesBalanceType10FormatChoice { }

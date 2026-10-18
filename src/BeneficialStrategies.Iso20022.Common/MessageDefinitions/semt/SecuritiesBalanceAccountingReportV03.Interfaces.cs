@@ -10,17 +10,29 @@ namespace BeneficialStrategies.Iso20022.semt;
 
 public partial record SecuritiesBalanceAccountingReportV03 : ISecuritiesBalanceAccountingReportV03
 {
-    IDocumentIdentification11 ISecuritiesBalanceAccountingReportV03.Identification => Identification;
+    IDocumentIdentification11 ISecuritiesBalanceAccountingReportV03.Identification =>
+        Identification;
     IPagination ISecuritiesBalanceAccountingReportV03.Pagination => Pagination;
-    IStatement20 ISecuritiesBalanceAccountingReportV03.StatementGeneralDetails => StatementGeneralDetails;
-    IPartyIdentification13Choice? ISecuritiesBalanceAccountingReportV03.AccountOwner => AccountOwner;
-    IPartyIdentification10Choice? ISecuritiesBalanceAccountingReportV03.AccountServicer => AccountServicer;
-    ISecuritiesAccount11 ISecuritiesBalanceAccountingReportV03.SafekeepingAccount => SafekeepingAccount;
-    IEnumerable<IIntermediary2> ISecuritiesBalanceAccountingReportV03.IntermediaryInformation => IntermediaryInformation;
-    IEnumerable<IAggregateBalanceInformation8> ISecuritiesBalanceAccountingReportV03.BalanceForAccount => BalanceForAccount;
-    IEnumerable<ISubAccountIdentification10> ISecuritiesBalanceAccountingReportV03.SubAccountDetails => SubAccountDetails;
-    ITotalValueInPageAndStatement2? ISecuritiesBalanceAccountingReportV03.AccountBaseCurrencyTotalAmounts => AccountBaseCurrencyTotalAmounts;
-    ITotalValueInPageAndStatement2? ISecuritiesBalanceAccountingReportV03.AlternateReportingCurrencyTotalAmounts => AlternateReportingCurrencyTotalAmounts;
-    IPartyIdentification10Choice? ISecuritiesBalanceAccountingReportV03.MessageOriginator => MessageOriginator;
-    IPartyIdentification10Choice? ISecuritiesBalanceAccountingReportV03.MessageRecipient => MessageRecipient;
+    IStatement20 ISecuritiesBalanceAccountingReportV03.StatementGeneralDetails =>
+        StatementGeneralDetails;
+    IPartyIdentification13Choice? ISecuritiesBalanceAccountingReportV03.AccountOwner =>
+        AccountOwner;
+    IPartyIdentification10Choice? ISecuritiesBalanceAccountingReportV03.AccountServicer =>
+        AccountServicer;
+    ISecuritiesAccount11 ISecuritiesBalanceAccountingReportV03.SafekeepingAccount =>
+        SafekeepingAccount;
+    IEnumerable<IIntermediary2> ISecuritiesBalanceAccountingReportV03.IntermediaryInformation =>
+        IntermediaryInformation;
+    IEnumerable<IAggregateBalanceInformation8> ISecuritiesBalanceAccountingReportV03.BalanceForAccount =>
+        BalanceForAccount;
+    IEnumerable<ISubAccountIdentification10> ISecuritiesBalanceAccountingReportV03.SubAccountDetails =>
+        SubAccountDetails;
+    ITotalValueInPageAndStatement2? ISecuritiesBalanceAccountingReportV03.AccountBaseCurrencyTotalAmounts =>
+        AccountBaseCurrencyTotalAmounts;
+    ITotalValueInPageAndStatement2? ISecuritiesBalanceAccountingReportV03.AlternateReportingCurrencyTotalAmounts =>
+        AlternateReportingCurrencyTotalAmounts;
+    IPartyIdentification10Choice? ISecuritiesBalanceAccountingReportV03.MessageOriginator =>
+        MessageOriginator;
+    IPartyIdentification10Choice? ISecuritiesBalanceAccountingReportV03.MessageRecipient =>
+        MessageRecipient;
 }

@@ -13,5 +13,6 @@ public partial record Statement65 : IStatement65
     IDateAndDateTime2Choice IStatement65.StatementDateTime => StatementDateTime;
     IFrequency25Choice IStatement65.Frequency => Frequency;
     IUpdateType15Choice IStatement65.UpdateType => UpdateType;
-    IDateOrDateTimePeriod2Choice? IStatement65.NotificationDeadlinePeriod => NotificationDeadlinePeriod;
+    IDateOrDateTimePeriod2Choice? IStatement65.NotificationDeadlinePeriod =>
+        NotificationDeadlinePeriod;
 }

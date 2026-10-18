@@ -10,9 +10,12 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionPrice56 : ICorporateActionPrice56
 {
-    IIndicativeOrMarketPrice7Choice? ICorporateActionPrice56.IndicativeOrMarketPrice => IndicativeOrMarketPrice;
+    IIndicativeOrMarketPrice7Choice? ICorporateActionPrice56.IndicativeOrMarketPrice =>
+        IndicativeOrMarketPrice;
     IPriceFormat45Choice? ICorporateActionPrice56.CashInLieuOfSharePrice => CashInLieuOfSharePrice;
     IPriceFormat46Choice? ICorporateActionPrice56.CashValueForTax => CashValueForTax;
-    IPriceFormat44Choice? ICorporateActionPrice56.GenericCashPricePaidPerProduct => GenericCashPricePaidPerProduct;
-    IPriceFormat47Choice? ICorporateActionPrice56.GenericCashPriceReceivedPerProduct => GenericCashPriceReceivedPerProduct;
+    IPriceFormat44Choice? ICorporateActionPrice56.GenericCashPricePaidPerProduct =>
+        GenericCashPricePaidPerProduct;
+    IPriceFormat47Choice? ICorporateActionPrice56.GenericCashPriceReceivedPerProduct =>
+        GenericCashPriceReceivedPerProduct;
 }

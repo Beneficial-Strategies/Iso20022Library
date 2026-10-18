@@ -12,5 +12,6 @@ public partial record TerminalManagementDataSet25 : ITerminalManagementDataSet25
 {
     IDataSetIdentification7 ITerminalManagementDataSet25.Identification => Identification;
     ICryptographicKey13? ITerminalManagementDataSet25.SessionKey => SessionKey;
-    IContentInformationType19? ITerminalManagementDataSet25.ProtectedDelegationProof => ProtectedDelegationProof;
+    IContentInformationType19? ITerminalManagementDataSet25.ProtectedDelegationProof =>
+        ProtectedDelegationProof;
 }

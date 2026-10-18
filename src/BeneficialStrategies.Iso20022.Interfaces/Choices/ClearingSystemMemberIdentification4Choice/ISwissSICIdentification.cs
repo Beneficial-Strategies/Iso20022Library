@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
 /// Swiss Interbank Clearing (SIC) Code - identifies Swiss financial institutions domestically, on the Swiss national clearing system.
 /// </summary>
 [IsoId("_VwSCebNIEeejueAciesPMA")]
-public interface ISwissSICIdentification : IClearingSystemMemberIdentification4Choice, IIsoChoiceVariant
+public interface ISwissSICIdentification
+    : IClearingSystemMemberIdentification4Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

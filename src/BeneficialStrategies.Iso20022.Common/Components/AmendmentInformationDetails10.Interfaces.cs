@@ -10,13 +10,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record AmendmentInformationDetails10 : IAmendmentInformationDetails10
 {
-    IPartyIdentification43? IAmendmentInformationDetails10.OriginalCreditorSchemeIdentification => OriginalCreditorSchemeIdentification;
-    IBranchAndFinancialInstitutionIdentification5? IAmendmentInformationDetails10.OriginalCreditorAgent => OriginalCreditorAgent;
-    ICashAccount24? IAmendmentInformationDetails10.OriginalCreditorAgentAccount => OriginalCreditorAgentAccount;
+    IPartyIdentification43? IAmendmentInformationDetails10.OriginalCreditorSchemeIdentification =>
+        OriginalCreditorSchemeIdentification;
+    IBranchAndFinancialInstitutionIdentification5? IAmendmentInformationDetails10.OriginalCreditorAgent =>
+        OriginalCreditorAgent;
+    ICashAccount24? IAmendmentInformationDetails10.OriginalCreditorAgentAccount =>
+        OriginalCreditorAgentAccount;
     IPartyIdentification43? IAmendmentInformationDetails10.OriginalDebtor => OriginalDebtor;
     ICashAccount24? IAmendmentInformationDetails10.OriginalDebtorAccount => OriginalDebtorAccount;
-    IBranchAndFinancialInstitutionIdentification5? IAmendmentInformationDetails10.OriginalDebtorAgent => OriginalDebtorAgent;
-    ICashAccount24? IAmendmentInformationDetails10.OriginalDebtorAgentAccount => OriginalDebtorAgentAccount;
+    IBranchAndFinancialInstitutionIdentification5? IAmendmentInformationDetails10.OriginalDebtorAgent =>
+        OriginalDebtorAgent;
+    ICashAccount24? IAmendmentInformationDetails10.OriginalDebtorAgentAccount =>
+        OriginalDebtorAgentAccount;
     IFrequency21Choice? IAmendmentInformationDetails10.OriginalFrequency => OriginalFrequency;
     IMandateSetupReason1Choice? IAmendmentInformationDetails10.OriginalReason => OriginalReason;
 }

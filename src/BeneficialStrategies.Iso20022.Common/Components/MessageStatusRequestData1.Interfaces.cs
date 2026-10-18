@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record MessageStatusRequestData1 : IMessageStatusRequestData1
 {
     IGenericIdentification171 IMessageStatusRequestData1.InitiatingParty => InitiatingParty;
-    IEnumerable<DocumentType7Code> IMessageStatusRequestData1.DocumentQualifier => DocumentQualifier;
+    IEnumerable<DocumentType7Code> IMessageStatusRequestData1.DocumentQualifier =>
+        DocumentQualifier;
 }

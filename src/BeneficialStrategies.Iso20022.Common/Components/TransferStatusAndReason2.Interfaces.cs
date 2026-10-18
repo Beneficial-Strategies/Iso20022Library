@@ -18,6 +18,7 @@ public partial record TransferStatusAndReason2 : ITransferStatusAndReason2
     IFailedSettlementStatus1 ITransferStatusAndReason2.FailedSettlement => FailedSettlement;
     ICancelledStatus3 ITransferStatusAndReason2.Cancelled => Cancelled;
     IReversedStatus1 ITransferStatusAndReason2.Reversed => Reversed;
-    ICancellationPendingStatus1 ITransferStatusAndReason2.CancellationPending => CancellationPending;
+    ICancellationPendingStatus1 ITransferStatusAndReason2.CancellationPending =>
+        CancellationPending;
     IPartyIdentification2Choice? ITransferStatusAndReason2.StatusInitiator => StatusInitiator;
 }

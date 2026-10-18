@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record StoredValueResponse3 : IStoredValueResponse3
 {
-    ITransactionIdentifier1 IStoredValueResponse3.POITransactionIdentification => POITransactionIdentification;
+    ITransactionIdentifier1 IStoredValueResponse3.POITransactionIdentification =>
+        POITransactionIdentification;
     IEnumerable<IStoredValueData3> IStoredValueResponse3.Result => Result;
     IEnumerable<IPaymentReceipt2> IStoredValueResponse3.Receipt => Receipt;
 }

@@ -11,9 +11,12 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record DetailedInstructionStatus18 : IDetailedInstructionStatus18
 {
     IPartyIdentification231Choice? IDetailedInstructionStatus18.AccountOwner => AccountOwner;
-    IEnumerable<IPartyIdentification246Choice> IDetailedInstructionStatus18.RightsHolder => RightsHolder;
+    IEnumerable<IPartyIdentification246Choice> IDetailedInstructionStatus18.RightsHolder =>
+        RightsHolder;
     IPartyIdentification232Choice? IDetailedInstructionStatus18.Proxy => Proxy;
-    IModalityOfCounting1Choice IDetailedInstructionStatus18.ModalityOfCounting => ModalityOfCounting;
-    IDateAndDateTime1Choice? IDetailedInstructionStatus18.VoteReceiptDateTime => VoteReceiptDateTime;
+    IModalityOfCounting1Choice IDetailedInstructionStatus18.ModalityOfCounting =>
+        ModalityOfCounting;
+    IDateAndDateTime1Choice? IDetailedInstructionStatus18.VoteReceiptDateTime =>
+        VoteReceiptDateTime;
     IEnumerable<IVote17> IDetailedInstructionStatus18.VotePerResolution => VotePerResolution;
 }

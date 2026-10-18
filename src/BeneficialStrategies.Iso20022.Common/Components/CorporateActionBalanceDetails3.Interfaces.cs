@@ -13,15 +13,24 @@ public partial record CorporateActionBalanceDetails3 : ICorporateActionBalanceDe
     IQuantity3Choice? ICorporateActionBalanceDetails3.TotalEligibleBalance => TotalEligibleBalance;
     IBalanceFormat1Choice? ICorporateActionBalanceDetails3.BlockedBalance => BlockedBalance;
     IBalanceFormat1Choice? ICorporateActionBalanceDetails3.BorrowedBalance => BorrowedBalance;
-    IBalanceFormat1Choice? ICorporateActionBalanceDetails3.CollateralInBalance => CollateralInBalance;
-    IBalanceFormat1Choice? ICorporateActionBalanceDetails3.CollateralOutBalance => CollateralOutBalance;
+    IBalanceFormat1Choice? ICorporateActionBalanceDetails3.CollateralInBalance =>
+        CollateralInBalance;
+    IBalanceFormat1Choice? ICorporateActionBalanceDetails3.CollateralOutBalance =>
+        CollateralOutBalance;
     IBalanceFormat1Choice? ICorporateActionBalanceDetails3.OnLoanBalance => OnLoanBalance;
-    IEnumerable<IBalanceFormat1Choice> ICorporateActionBalanceDetails3.PendingDeliveryBalance => PendingDeliveryBalance;
-    IEnumerable<IBalanceFormat1Choice> ICorporateActionBalanceDetails3.PendingReceiptBalance => PendingReceiptBalance;
-    IBalanceFormat1Choice? ICorporateActionBalanceDetails3.OutForRegistrationBalance => OutForRegistrationBalance;
-    IBalanceFormat1Choice? ICorporateActionBalanceDetails3.SettlementPositionBalance => SettlementPositionBalance;
-    IBalanceFormat1Choice? ICorporateActionBalanceDetails3.StreetPositionBalance => StreetPositionBalance;
-    IBalanceFormat1Choice? ICorporateActionBalanceDetails3.TradeDatePositionBalance => TradeDatePositionBalance;
-    IBalanceFormat1Choice? ICorporateActionBalanceDetails3.InTransshipmentBalance => InTransshipmentBalance;
+    IEnumerable<IBalanceFormat1Choice> ICorporateActionBalanceDetails3.PendingDeliveryBalance =>
+        PendingDeliveryBalance;
+    IEnumerable<IBalanceFormat1Choice> ICorporateActionBalanceDetails3.PendingReceiptBalance =>
+        PendingReceiptBalance;
+    IBalanceFormat1Choice? ICorporateActionBalanceDetails3.OutForRegistrationBalance =>
+        OutForRegistrationBalance;
+    IBalanceFormat1Choice? ICorporateActionBalanceDetails3.SettlementPositionBalance =>
+        SettlementPositionBalance;
+    IBalanceFormat1Choice? ICorporateActionBalanceDetails3.StreetPositionBalance =>
+        StreetPositionBalance;
+    IBalanceFormat1Choice? ICorporateActionBalanceDetails3.TradeDatePositionBalance =>
+        TradeDatePositionBalance;
+    IBalanceFormat1Choice? ICorporateActionBalanceDetails3.InTransshipmentBalance =>
+        InTransshipmentBalance;
     IBalanceFormat1Choice? ICorporateActionBalanceDetails3.RegisteredBalance => RegisteredBalance;
 }

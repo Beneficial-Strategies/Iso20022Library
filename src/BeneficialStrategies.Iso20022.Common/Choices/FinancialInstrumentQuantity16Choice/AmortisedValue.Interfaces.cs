@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity16Choice;
 
-public partial record AmortisedValue : IAmortisedValue
-{
-}
+public partial record AmortisedValue : IAmortisedValue { }

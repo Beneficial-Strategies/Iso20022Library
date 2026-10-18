@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus47Choice;
 
-public partial record Covered : ICovered
-{
-}
+public partial record Covered : ICovered { }

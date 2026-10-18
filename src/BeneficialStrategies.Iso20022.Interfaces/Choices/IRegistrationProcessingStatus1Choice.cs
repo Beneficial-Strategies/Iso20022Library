@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the registration processing status.
 /// </summary>
 [IsoId("_UYUpIdp-Ed-ak6NoX_4Aeg_170456881")]
-public interface IRegistrationProcessingStatus1Choice : IIsoChoice
-{
-}
+public interface IRegistrationProcessingStatus1Choice : IIsoChoice { }

@@ -8,12 +8,19 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record CorporateActionInstructionCancellationRequestV10 : ICorporateActionInstructionCancellationRequestV10
+public partial record CorporateActionInstructionCancellationRequestV10
+    : ICorporateActionInstructionCancellationRequestV10
 {
-    IDocumentIdentification31 ICorporateActionInstructionCancellationRequestV10.InstructionIdentification => InstructionIdentification;
-    ICorporateActionGeneralInformation155 ICorporateActionInstructionCancellationRequestV10.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IAccountIdentification46 ICorporateActionInstructionCancellationRequestV10.AccountDetails => AccountDetails;
-    ICorporateActionOption181 ICorporateActionInstructionCancellationRequestV10.CorporateActionInstruction => CorporateActionInstruction;
-    IProtectInstruction3? ICorporateActionInstructionCancellationRequestV10.ProtectInstruction => ProtectInstruction;
-    IEnumerable<ISupplementaryData1> ICorporateActionInstructionCancellationRequestV10.SupplementaryData => SupplementaryData;
+    IDocumentIdentification31 ICorporateActionInstructionCancellationRequestV10.InstructionIdentification =>
+        InstructionIdentification;
+    ICorporateActionGeneralInformation155 ICorporateActionInstructionCancellationRequestV10.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IAccountIdentification46 ICorporateActionInstructionCancellationRequestV10.AccountDetails =>
+        AccountDetails;
+    ICorporateActionOption181 ICorporateActionInstructionCancellationRequestV10.CorporateActionInstruction =>
+        CorporateActionInstruction;
+    IProtectInstruction3? ICorporateActionInstructionCancellationRequestV10.ProtectInstruction =>
+        ProtectInstruction;
+    IEnumerable<ISupplementaryData1> ICorporateActionInstructionCancellationRequestV10.SupplementaryData =>
+        SupplementaryData;
 }

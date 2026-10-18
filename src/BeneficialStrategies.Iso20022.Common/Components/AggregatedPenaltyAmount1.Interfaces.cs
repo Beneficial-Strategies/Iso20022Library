@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record AggregatedPenaltyAmount1 : IAggregatedPenaltyAmount1
 {
     IAmountAndDirection5? IAggregatedPenaltyAmount1.GlobalNetAmount => GlobalNetAmount;
-    IEnumerable<IAggregatedPenaltyAmount2> IAggregatedPenaltyAmount1.CounterpartyCSDAggregatedAmount => CounterpartyCSDAggregatedAmount;
+    IEnumerable<IAggregatedPenaltyAmount2> IAggregatedPenaltyAmount1.CounterpartyCSDAggregatedAmount =>
+        CounterpartyCSDAggregatedAmount;
 }

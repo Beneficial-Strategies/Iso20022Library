@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record DetailedAmount14 : IDetailedAmount14
-{
-}
+public partial record DetailedAmount14 : IDetailedAmount14 { }

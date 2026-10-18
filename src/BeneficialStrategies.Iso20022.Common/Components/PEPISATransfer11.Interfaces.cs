@@ -11,8 +11,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record PEPISATransfer11 : IPEPISATransfer11
 {
     IIndividualPerson8? IPEPISATransfer11.PrimaryIndividualInvestor => PrimaryIndividualInvestor;
-    IIndividualPerson8? IPEPISATransfer11.SecondaryIndividualInvestor => SecondaryIndividualInvestor;
-    IEnumerable<IIndividualPerson8> IPEPISATransfer11.OtherIndividualInvestor => OtherIndividualInvestor;
+    IIndividualPerson8? IPEPISATransfer11.SecondaryIndividualInvestor =>
+        SecondaryIndividualInvestor;
+    IEnumerable<IIndividualPerson8> IPEPISATransfer11.OtherIndividualInvestor =>
+        OtherIndividualInvestor;
     IOrganisation4? IPEPISATransfer11.PrimaryCorporateInvestor => PrimaryCorporateInvestor;
     IOrganisation4? IPEPISATransfer11.SecondaryCorporateInvestor => SecondaryCorporateInvestor;
     IEnumerable<IOrganisation4> IPEPISATransfer11.OtherCorporateInvestor => OtherCorporateInvestor;

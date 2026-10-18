@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a code or a proprietary code for a deadline code.
 /// </summary>
 [IsoId("_W4fbIUGZEeWqy4niLuXETA")]
-public interface IDeadlineCode3Choice : IIsoChoice
-{
-}
+public interface IDeadlineCode3Choice : IIsoChoice { }

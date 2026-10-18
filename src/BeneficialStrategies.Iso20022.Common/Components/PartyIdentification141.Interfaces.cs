@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record PartyIdentification141 : IPartyIdentification141
 {
     IPartyIdentification122Choice IPartyIdentification141.Identification => Identification;
-    IAlternatePartyIdentification7? IPartyIdentification141.AlternateIdentification => AlternateIdentification;
+    IAlternatePartyIdentification7? IPartyIdentification141.AlternateIdentification =>
+        AlternateIdentification;
     IDateAndDateTime2Choice? IPartyIdentification141.ProcessingDate => ProcessingDate;
     IPartyTextInformation1? IPartyIdentification141.AdditionalInformation => AdditionalInformation;
 }

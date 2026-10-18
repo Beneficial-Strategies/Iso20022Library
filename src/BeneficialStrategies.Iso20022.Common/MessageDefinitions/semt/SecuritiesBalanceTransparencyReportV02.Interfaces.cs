@@ -8,13 +8,20 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record SecuritiesBalanceTransparencyReportV02 : ISecuritiesBalanceTransparencyReportV02
+public partial record SecuritiesBalanceTransparencyReportV02
+    : ISecuritiesBalanceTransparencyReportV02
 {
-    IMessageIdentification1 ISecuritiesBalanceTransparencyReportV02.MessageIdentification => MessageIdentification;
-    IPartyIdentification100 ISecuritiesBalanceTransparencyReportV02.SenderIdentification => SenderIdentification;
-    IPartyIdentification100? ISecuritiesBalanceTransparencyReportV02.ReceiverIdentification => ReceiverIdentification;
+    IMessageIdentification1 ISecuritiesBalanceTransparencyReportV02.MessageIdentification =>
+        MessageIdentification;
+    IPartyIdentification100 ISecuritiesBalanceTransparencyReportV02.SenderIdentification =>
+        SenderIdentification;
+    IPartyIdentification100? ISecuritiesBalanceTransparencyReportV02.ReceiverIdentification =>
+        ReceiverIdentification;
     IPagination ISecuritiesBalanceTransparencyReportV02.Pagination => Pagination;
-    IStatement59 ISecuritiesBalanceTransparencyReportV02.StatementGeneralDetails => StatementGeneralDetails;
-    IEnumerable<ISafekeepingAccount7> ISecuritiesBalanceTransparencyReportV02.SafekeepingAccountAndHoldings => SafekeepingAccountAndHoldings;
-    IEnumerable<ISupplementaryData1> ISecuritiesBalanceTransparencyReportV02.SupplementaryData => SupplementaryData;
+    IStatement59 ISecuritiesBalanceTransparencyReportV02.StatementGeneralDetails =>
+        StatementGeneralDetails;
+    IEnumerable<ISafekeepingAccount7> ISecuritiesBalanceTransparencyReportV02.SafekeepingAccountAndHoldings =>
+        SafekeepingAccountAndHoldings;
+    IEnumerable<ISupplementaryData1> ISecuritiesBalanceTransparencyReportV02.SupplementaryData =>
+        SupplementaryData;
 }

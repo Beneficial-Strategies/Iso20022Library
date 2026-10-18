@@ -11,9 +11,14 @@ namespace BeneficialStrategies.Iso20022.semt;
 public partial record IntraPositionMovementPostingReportV10 : IIntraPositionMovementPostingReportV10
 {
     IPagination1 IIntraPositionMovementPostingReportV10.Pagination => Pagination;
-    IStatement80 IIntraPositionMovementPostingReportV10.StatementGeneralDetails => StatementGeneralDetails;
-    IPartyIdentification127Choice? IIntraPositionMovementPostingReportV10.AccountOwner => AccountOwner;
-    ISecuritiesAccount19? IIntraPositionMovementPostingReportV10.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet3? IIntraPositionMovementPostingReportV10.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
-    IEnumerable<IFinancialInstrumentDetails47> IIntraPositionMovementPostingReportV10.FinancialInstrument => FinancialInstrument;
+    IStatement80 IIntraPositionMovementPostingReportV10.StatementGeneralDetails =>
+        StatementGeneralDetails;
+    IPartyIdentification127Choice? IIntraPositionMovementPostingReportV10.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount19? IIntraPositionMovementPostingReportV10.SafekeepingAccount =>
+        SafekeepingAccount;
+    IBlockChainAddressWallet3? IIntraPositionMovementPostingReportV10.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
+    IEnumerable<IFinancialInstrumentDetails47> IIntraPositionMovementPostingReportV10.FinancialInstrument =>
+        FinancialInstrument;
 }

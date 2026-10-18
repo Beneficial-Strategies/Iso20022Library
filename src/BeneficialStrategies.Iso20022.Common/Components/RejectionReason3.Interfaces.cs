@@ -10,7 +10,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record RejectionReason3 : IRejectionReason3
 {
-    IAdditionalReference3? IRejectionReason3.LinkedMessagePreviousReference => LinkedMessagePreviousReference;
-    IAdditionalReference3? IRejectionReason3.LinkedMessageOtherReference => LinkedMessageOtherReference;
-    IAdditionalReference3? IRejectionReason3.LinkedMessageRelatedReference => LinkedMessageRelatedReference;
+    IAdditionalReference3? IRejectionReason3.LinkedMessagePreviousReference =>
+        LinkedMessagePreviousReference;
+    IAdditionalReference3? IRejectionReason3.LinkedMessageOtherReference =>
+        LinkedMessageOtherReference;
+    IAdditionalReference3? IRejectionReason3.LinkedMessageRelatedReference =>
+        LinkedMessageRelatedReference;
 }

@@ -17,5 +17,6 @@ public partial record QuantityBreakdown55 : IQuantityBreakdown55
     ITypeOfPrice32Choice? IQuantityBreakdown55.TypeOfPrice => TypeOfPrice;
     IBalanceAmounts6? IQuantityBreakdown55.AccountBaseCurrencyAmounts => AccountBaseCurrencyAmounts;
     IBalanceAmounts6? IQuantityBreakdown55.InstrumentCurrencyAmounts => InstrumentCurrencyAmounts;
-    IBalanceAmounts6? IQuantityBreakdown55.AlternateReportingCurrencyAmounts => AlternateReportingCurrencyAmounts;
+    IBalanceAmounts6? IQuantityBreakdown55.AlternateReportingCurrencyAmounts =>
+        AlternateReportingCurrencyAmounts;
 }

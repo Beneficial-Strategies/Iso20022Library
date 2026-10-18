@@ -10,9 +10,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SettlementTransactionStatusType2 : ISettlementTransactionStatusType2
 {
-    IEnumerable<IProcessingStatus70Choice> ISettlementTransactionStatusType2.ProcessingStatus => ProcessingStatus;
-    IEnumerable<IMatchingStatus27Choice> ISettlementTransactionStatusType2.InferredMatchingStatus => InferredMatchingStatus;
-    IEnumerable<IMatchingStatus27Choice> ISettlementTransactionStatusType2.MatchingStatus => MatchingStatus;
-    IEnumerable<ISettlementStatus26Choice> ISettlementTransactionStatusType2.SettlementStatus => SettlementStatus;
+    IEnumerable<IProcessingStatus70Choice> ISettlementTransactionStatusType2.ProcessingStatus =>
+        ProcessingStatus;
+    IEnumerable<IMatchingStatus27Choice> ISettlementTransactionStatusType2.InferredMatchingStatus =>
+        InferredMatchingStatus;
+    IEnumerable<IMatchingStatus27Choice> ISettlementTransactionStatusType2.MatchingStatus =>
+        MatchingStatus;
+    IEnumerable<ISettlementStatus26Choice> ISettlementTransactionStatusType2.SettlementStatus =>
+        SettlementStatus;
     IProprietaryReason4? ISettlementTransactionStatusType2.Settled => Settled;
 }

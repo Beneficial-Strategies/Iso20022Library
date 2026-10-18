@@ -17,6 +17,7 @@ public partial record MeetingResultDisseminationV04 : IMeetingResultDisseminatio
     IEnumerable<ISecurityPosition6> IMeetingResultDisseminationV04.Security => Security;
     IEnumerable<IVote5> IMeetingResultDisseminationV04.VoteResult => VoteResult;
     IParticipation3? IMeetingResultDisseminationV04.Participation => Participation;
-    ICommunicationAddress4? IMeetingResultDisseminationV04.AdditionalInformation => AdditionalInformation;
+    ICommunicationAddress4? IMeetingResultDisseminationV04.AdditionalInformation =>
+        AdditionalInformation;
     IEnumerable<IExtension2> IMeetingResultDisseminationV04.Extension => Extension;
 }

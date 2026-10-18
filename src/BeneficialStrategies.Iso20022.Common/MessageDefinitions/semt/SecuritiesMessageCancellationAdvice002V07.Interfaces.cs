@@ -8,11 +8,16 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record SecuritiesMessageCancellationAdvice002V07 : ISecuritiesMessageCancellationAdvice002V07
+public partial record SecuritiesMessageCancellationAdvice002V07
+    : ISecuritiesMessageCancellationAdvice002V07
 {
     IReferences79Choice ISecuritiesMessageCancellationAdvice002V07.Reference => Reference;
-    IPartyIdentification156? ISecuritiesMessageCancellationAdvice002V07.AccountOwner => AccountOwner;
-    ISecuritiesAccount30? ISecuritiesMessageCancellationAdvice002V07.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet7? ISecuritiesMessageCancellationAdvice002V07.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
-    IEnumerable<ISupplementaryData1> ISecuritiesMessageCancellationAdvice002V07.SupplementaryData => SupplementaryData;
+    IPartyIdentification156? ISecuritiesMessageCancellationAdvice002V07.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount30? ISecuritiesMessageCancellationAdvice002V07.SafekeepingAccount =>
+        SafekeepingAccount;
+    IBlockChainAddressWallet7? ISecuritiesMessageCancellationAdvice002V07.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
+    IEnumerable<ISupplementaryData1> ISecuritiesMessageCancellationAdvice002V07.SupplementaryData =>
+        SupplementaryData;
 }

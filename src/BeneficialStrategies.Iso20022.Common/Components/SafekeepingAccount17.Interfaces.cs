@@ -11,8 +11,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SafekeepingAccount17 : ISafekeepingAccount17
 {
     IPartyIdentification195Choice ISafekeepingAccount17.AccountServicer => AccountServicer;
-    IFinancialInstrumentQuantity18Choice ISafekeepingAccount17.ShareholdingBalanceOnOwnAccount => ShareholdingBalanceOnOwnAccount;
-    IFinancialInstrumentQuantity18Choice ISafekeepingAccount17.ShareholdingBalanceOnClientAccount => ShareholdingBalanceOnClientAccount;
-    IFinancialInstrumentQuantity18Choice ISafekeepingAccount17.TotalShareholdingBalance => TotalShareholdingBalance;
+    IFinancialInstrumentQuantity18Choice ISafekeepingAccount17.ShareholdingBalanceOnOwnAccount =>
+        ShareholdingBalanceOnOwnAccount;
+    IFinancialInstrumentQuantity18Choice ISafekeepingAccount17.ShareholdingBalanceOnClientAccount =>
+        ShareholdingBalanceOnClientAccount;
+    IFinancialInstrumentQuantity18Choice ISafekeepingAccount17.TotalShareholdingBalance =>
+        TotalShareholdingBalance;
     IAccountSubLevel24? ISafekeepingAccount17.AccountSubLevel => AccountSubLevel;
 }

@@ -11,29 +11,39 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record TransactionDetails187 : ITransactionDetails187
 {
     ITransactionActivity3Choice ITransactionDetails187.TransactionActivity => TransactionActivity;
-    ISettlementOrCorporateActionEvent26Choice? ITransactionDetails187.SettlementTransactionOrCorporateActionEventType => SettlementTransactionOrCorporateActionEventType;
+    ISettlementOrCorporateActionEvent26Choice? ITransactionDetails187.SettlementTransactionOrCorporateActionEventType =>
+        SettlementTransactionOrCorporateActionEventType;
     ISettlementDetails235? ITransactionDetails187.SettlementParameters => SettlementParameters;
     IPlaceOfTradeIdentification1? ITransactionDetails187.PlaceOfTrade => PlaceOfTrade;
     ISafeKeepingPlace3? ITransactionDetails187.SafekeepingPlace => SafekeepingPlace;
     IPlaceOfClearingIdentification2? ITransactionDetails187.PlaceOfClearing => PlaceOfClearing;
-    ISecurityIdentification19 ITransactionDetails187.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentQuantity1Choice ITransactionDetails187.SettlementQuantity => SettlementQuantity;
+    ISecurityIdentification19 ITransactionDetails187.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentQuantity1Choice ITransactionDetails187.SettlementQuantity =>
+        SettlementQuantity;
     IFinancialInstrumentQuantity1Choice? ITransactionDetails187.SettledQuantity => SettledQuantity;
-    IFinancialInstrumentQuantity1Choice? ITransactionDetails187.PreviouslySettledQuantity => PreviouslySettledQuantity;
-    IFinancialInstrumentQuantity1Choice? ITransactionDetails187.RemainingToBeSettledQuantity => RemainingToBeSettledQuantity;
+    IFinancialInstrumentQuantity1Choice? ITransactionDetails187.PreviouslySettledQuantity =>
+        PreviouslySettledQuantity;
+    IFinancialInstrumentQuantity1Choice? ITransactionDetails187.RemainingToBeSettledQuantity =>
+        RemainingToBeSettledQuantity;
     IAmountAndDirection20 ITransactionDetails187.SettlementAmount => SettlementAmount;
     IAmountAndDirection20? ITransactionDetails187.SettledAmount => SettledAmount;
-    IAmountAndDirection20? ITransactionDetails187.PreviouslySettledAmount => PreviouslySettledAmount;
-    IAmountAndDirection20? ITransactionDetails187.RemainingSettlementAmount => RemainingSettlementAmount;
+    IAmountAndDirection20? ITransactionDetails187.PreviouslySettledAmount =>
+        PreviouslySettledAmount;
+    IAmountAndDirection20? ITransactionDetails187.RemainingSettlementAmount =>
+        RemainingSettlementAmount;
     IAmountAndDirection20? ITransactionDetails187.AccruedInterestAmount => AccruedInterestAmount;
     ITradeDate8Choice? ITransactionDetails187.TradeDate => TradeDate;
     ISettlementDate19Choice ITransactionDetails187.IntendedSettlementDate => IntendedSettlementDate;
-    IDateAndDateTime2Choice? ITransactionDetails187.EffectiveSettlementDate => EffectiveSettlementDate;
+    IDateAndDateTime2Choice? ITransactionDetails187.EffectiveSettlementDate =>
+        EffectiveSettlementDate;
     IDateAndDateTime2Choice? ITransactionDetails187.ValueDate => ValueDate;
     IEnumerable<ILinkages57> ITransactionDetails187.Linkages => Linkages;
     IPriorityNumeric4Choice? ITransactionDetails187.Priority => Priority;
-    ISettlementParties78? ITransactionDetails187.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties78? ITransactionDetails187.ReceivingSettlementParties => ReceivingSettlementParties;
+    ISettlementParties78? ITransactionDetails187.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties78? ITransactionDetails187.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
     ISystemPartyIdentification8? ITransactionDetails187.MessageOriginator => MessageOriginator;
     IEnumerable<ISupplementaryData1> ITransactionDetails187.SupplementaryData => SupplementaryData;
 }

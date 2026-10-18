@@ -8,16 +8,26 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record CorporateActionInstructionStatusAdviceV01 : ICorporateActionInstructionStatusAdviceV01
+public partial record CorporateActionInstructionStatusAdviceV01
+    : ICorporateActionInstructionStatusAdviceV01
 {
-    IDocumentIdentification11 ICorporateActionInstructionStatusAdviceV01.Identification => Identification;
-    IDocumentIdentification9? ICorporateActionInstructionStatusAdviceV01.InstructionIdentification => InstructionIdentification;
-    IEnumerable<IDocumentIdentification14> ICorporateActionInstructionStatusAdviceV01.OtherDocumentIdentification => OtherDocumentIdentification;
-    ICorporateActionGeneralInformation9 ICorporateActionInstructionStatusAdviceV01.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IEnumerable<IInstructionProcessingStatus1Choice> ICorporateActionInstructionStatusAdviceV01.InstructionProcessingStatus => InstructionProcessingStatus;
-    ICorporateActionOption9? ICorporateActionInstructionStatusAdviceV01.CorporateActionInstruction => CorporateActionInstruction;
-    ICorporateActionNarrative10? ICorporateActionInstructionStatusAdviceV01.AdditionalInformation => AdditionalInformation;
-    IPartyIdentification10Choice? ICorporateActionInstructionStatusAdviceV01.MessageOriginator => MessageOriginator;
-    IPartyIdentification10Choice? ICorporateActionInstructionStatusAdviceV01.MessageRecipient => MessageRecipient;
+    IDocumentIdentification11 ICorporateActionInstructionStatusAdviceV01.Identification =>
+        Identification;
+    IDocumentIdentification9? ICorporateActionInstructionStatusAdviceV01.InstructionIdentification =>
+        InstructionIdentification;
+    IEnumerable<IDocumentIdentification14> ICorporateActionInstructionStatusAdviceV01.OtherDocumentIdentification =>
+        OtherDocumentIdentification;
+    ICorporateActionGeneralInformation9 ICorporateActionInstructionStatusAdviceV01.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IEnumerable<IInstructionProcessingStatus1Choice> ICorporateActionInstructionStatusAdviceV01.InstructionProcessingStatus =>
+        InstructionProcessingStatus;
+    ICorporateActionOption9? ICorporateActionInstructionStatusAdviceV01.CorporateActionInstruction =>
+        CorporateActionInstruction;
+    ICorporateActionNarrative10? ICorporateActionInstructionStatusAdviceV01.AdditionalInformation =>
+        AdditionalInformation;
+    IPartyIdentification10Choice? ICorporateActionInstructionStatusAdviceV01.MessageOriginator =>
+        MessageOriginator;
+    IPartyIdentification10Choice? ICorporateActionInstructionStatusAdviceV01.MessageRecipient =>
+        MessageRecipient;
     IEnumerable<IExtension2> ICorporateActionInstructionStatusAdviceV01.Extension => Extension;
 }

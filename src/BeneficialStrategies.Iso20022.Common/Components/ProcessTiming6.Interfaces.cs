@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record ProcessTiming6 : IProcessTiming6
-{
-}
+public partial record ProcessTiming6 : IProcessTiming6 { }

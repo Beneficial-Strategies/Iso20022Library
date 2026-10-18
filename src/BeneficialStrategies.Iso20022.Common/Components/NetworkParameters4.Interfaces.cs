@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record NetworkParameters4 : INetworkParameters4
-{
-}
+public partial record NetworkParameters4 : INetworkParameters4 { }

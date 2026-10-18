@@ -10,19 +10,23 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType14Choice;
 
 public partial record Addition : IAddition
 {
-    ISettlementTypeAndAdditionalParameters13? IAddition.SettlementTypeAndAdditionalParameters => SettlementTypeAndAdditionalParameters;
+    ISettlementTypeAndAdditionalParameters13? IAddition.SettlementTypeAndAdditionalParameters =>
+        SettlementTypeAndAdditionalParameters;
     IEnumerable<ILinkages38> IAddition.Linkages => Linkages;
     ISecuritiesTradeDetails50? IAddition.TradeDetails => TradeDetails;
-    IFinancialInstrumentAttributes64? IAddition.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
+    IFinancialInstrumentAttributes64? IAddition.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
     IQuantityAndAccount44? IAddition.QuantityAndAccountDetails => QuantityAndAccountDetails;
     ISettlementDetails94? IAddition.SettlementParameters => SettlementParameters;
-    IStandingSettlementInstruction11? IAddition.StandingSettlementInstructionDetails => StandingSettlementInstructionDetails;
+    IStandingSettlementInstruction11? IAddition.StandingSettlementInstructionDetails =>
+        StandingSettlementInstructionDetails;
     ISettlementParties39? IAddition.DeliveringSettlementParties => DeliveringSettlementParties;
     ISettlementParties39? IAddition.ReceivingSettlementParties => ReceivingSettlementParties;
     ICashParties26? IAddition.CashParties => CashParties;
     IAmountAndDirection45? IAddition.SettlementAmount => SettlementAmount;
     IOtherAmounts28? IAddition.OtherAmounts => OtherAmounts;
     IOtherParties27? IAddition.OtherBusinessParties => OtherBusinessParties;
-    IRegistrationParameters4? IAddition.AdditionalPhysicalOrRegistrationDetails => AdditionalPhysicalOrRegistrationDetails;
+    IRegistrationParameters4? IAddition.AdditionalPhysicalOrRegistrationDetails =>
+        AdditionalPhysicalOrRegistrationDetails;
     IEnumerable<ISupplementaryData1> IAddition.SupplementaryData => SupplementaryData;
 }

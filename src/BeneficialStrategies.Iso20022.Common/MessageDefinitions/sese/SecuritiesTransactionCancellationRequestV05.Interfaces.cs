@@ -8,13 +8,21 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesTransactionCancellationRequestV05 : ISecuritiesTransactionCancellationRequestV05
+public partial record SecuritiesTransactionCancellationRequestV05
+    : ISecuritiesTransactionCancellationRequestV05
 {
-    IReferences45Choice ISecuritiesTransactionCancellationRequestV05.AccountOwnerTransactionIdentification => AccountOwnerTransactionIdentification;
-    IPartyIdentification98? ISecuritiesTransactionCancellationRequestV05.AccountOwner => AccountOwner;
-    ISecuritiesAccount19 ISecuritiesTransactionCancellationRequestV05.SafekeepingAccount => SafekeepingAccount;
-    ITransactionDetails74? ISecuritiesTransactionCancellationRequestV05.TransactionDetails => TransactionDetails;
-    ICancellationReason13? ISecuritiesTransactionCancellationRequestV05.CancellationReason => CancellationReason;
-    IFXCancellation3Choice? ISecuritiesTransactionCancellationRequestV05.FXCancellation => FXCancellation;
-    IEnumerable<ISupplementaryData1> ISecuritiesTransactionCancellationRequestV05.SupplementaryData => SupplementaryData;
+    IReferences45Choice ISecuritiesTransactionCancellationRequestV05.AccountOwnerTransactionIdentification =>
+        AccountOwnerTransactionIdentification;
+    IPartyIdentification98? ISecuritiesTransactionCancellationRequestV05.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount19 ISecuritiesTransactionCancellationRequestV05.SafekeepingAccount =>
+        SafekeepingAccount;
+    ITransactionDetails74? ISecuritiesTransactionCancellationRequestV05.TransactionDetails =>
+        TransactionDetails;
+    ICancellationReason13? ISecuritiesTransactionCancellationRequestV05.CancellationReason =>
+        CancellationReason;
+    IFXCancellation3Choice? ISecuritiesTransactionCancellationRequestV05.FXCancellation =>
+        FXCancellation;
+    IEnumerable<ISupplementaryData1> ISecuritiesTransactionCancellationRequestV05.SupplementaryData =>
+        SupplementaryData;
 }

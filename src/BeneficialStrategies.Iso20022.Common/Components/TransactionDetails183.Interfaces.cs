@@ -10,15 +10,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TransactionDetails183 : ITransactionDetails183
 {
-    ISecurityIdentification19 ITransactionDetails183.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification19 ITransactionDetails183.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     IQuantity51Choice ITransactionDetails183.SettlementQuantity => SettlementQuantity;
     ISecuritiesAccount19? ITransactionDetails183.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet3? ITransactionDetails183.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
+    IBlockChainAddressWallet3? ITransactionDetails183.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
     IAmountAndDirection51? ITransactionDetails183.SettlementAmount => SettlementAmount;
-    IDigitalPaymentSettlement2? ITransactionDetails183.DigitalPaymentSettlement => DigitalPaymentSettlement;
+    IDigitalPaymentSettlement2? ITransactionDetails183.DigitalPaymentSettlement =>
+        DigitalPaymentSettlement;
     ISettlementDate19Choice ITransactionDetails183.SettlementDate => SettlementDate;
     ITradeDate8Choice? ITransactionDetails183.TradeDate => TradeDate;
-    ISettlementParties125? ITransactionDetails183.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties125? ITransactionDetails183.ReceivingSettlementParties => ReceivingSettlementParties;
+    ISettlementParties125? ITransactionDetails183.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties125? ITransactionDetails183.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
     IPartyIdentification149? ITransactionDetails183.Investor => Investor;
 }

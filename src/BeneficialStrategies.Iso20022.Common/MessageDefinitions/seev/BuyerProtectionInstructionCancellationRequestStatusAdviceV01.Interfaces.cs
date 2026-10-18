@@ -8,13 +8,21 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record BuyerProtectionInstructionCancellationRequestStatusAdviceV01 : IBuyerProtectionInstructionCancellationRequestStatusAdviceV01
+public partial record BuyerProtectionInstructionCancellationRequestStatusAdviceV01
+    : IBuyerProtectionInstructionCancellationRequestStatusAdviceV01
 {
-    IDocumentIdentification57 IBuyerProtectionInstructionCancellationRequestStatusAdviceV01.BuyerProtectionInstructionIdentification => BuyerProtectionInstructionIdentification;
-    ICorporateActionGeneralInformation195 IBuyerProtectionInstructionCancellationRequestStatusAdviceV01.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IEnumerable<IInstructionCancellationRequestStatus20Choice> IBuyerProtectionInstructionCancellationRequestStatusAdviceV01.InstructionCancellationRequestStatus => InstructionCancellationRequestStatus;
-    IRelatedSettlementInstruction4? IBuyerProtectionInstructionCancellationRequestStatusAdviceV01.RelatedSettlementInstruction => RelatedSettlementInstruction;
-    ISecuritiesAccountIdentification1Choice? IBuyerProtectionInstructionCancellationRequestStatusAdviceV01.AccountIdentification => AccountIdentification;
-    ICorporateActionElection4? IBuyerProtectionInstructionCancellationRequestStatusAdviceV01.CorporateActionElection => CorporateActionElection;
-    IEnumerable<ISupplementaryData1> IBuyerProtectionInstructionCancellationRequestStatusAdviceV01.SupplementaryData => SupplementaryData;
+    IDocumentIdentification57 IBuyerProtectionInstructionCancellationRequestStatusAdviceV01.BuyerProtectionInstructionIdentification =>
+        BuyerProtectionInstructionIdentification;
+    ICorporateActionGeneralInformation195 IBuyerProtectionInstructionCancellationRequestStatusAdviceV01.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IEnumerable<IInstructionCancellationRequestStatus20Choice> IBuyerProtectionInstructionCancellationRequestStatusAdviceV01.InstructionCancellationRequestStatus =>
+        InstructionCancellationRequestStatus;
+    IRelatedSettlementInstruction4? IBuyerProtectionInstructionCancellationRequestStatusAdviceV01.RelatedSettlementInstruction =>
+        RelatedSettlementInstruction;
+    ISecuritiesAccountIdentification1Choice? IBuyerProtectionInstructionCancellationRequestStatusAdviceV01.AccountIdentification =>
+        AccountIdentification;
+    ICorporateActionElection4? IBuyerProtectionInstructionCancellationRequestStatusAdviceV01.CorporateActionElection =>
+        CorporateActionElection;
+    IEnumerable<ISupplementaryData1> IBuyerProtectionInstructionCancellationRequestStatusAdviceV01.SupplementaryData =>
+        SupplementaryData;
 }

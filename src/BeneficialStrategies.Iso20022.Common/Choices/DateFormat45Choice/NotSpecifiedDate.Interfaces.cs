@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.DateFormat45Choice;
 
-public partial record NotSpecifiedDate : INotSpecifiedDate
-{
-}
+public partial record NotSpecifiedDate : INotSpecifiedDate { }

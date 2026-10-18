@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CorporateActionDate68 : ICorporateActionDate68
 {
     IDateFormat49Choice? ICorporateActionDate68.ResponseDeadline => ResponseDeadline;
-    IDateFormat49Choice? ICorporateActionDate68.SubscriptionCostDebitDate => SubscriptionCostDebitDate;
+    IDateFormat49Choice? ICorporateActionDate68.SubscriptionCostDebitDate =>
+        SubscriptionCostDebitDate;
     IDateFormat49Choice? ICorporateActionDate68.MarketDeadline => MarketDeadline;
     IDateFormat49Choice? ICorporateActionDate68.ExpiryDate => ExpiryDate;
     IDateFormat49Choice? ICorporateActionDate68.CoverExpirationDate => CoverExpirationDate;

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record KEKIdentifier7 : IKEKIdentifier7
-{
-}
+public partial record KEKIdentifier7 : IKEKIdentifier7 { }

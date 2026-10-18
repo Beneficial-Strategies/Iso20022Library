@@ -11,16 +11,26 @@ namespace BeneficialStrategies.Iso20022.seev;
 public partial record CorporateActionInstructionV01 : ICorporateActionInstructionV01
 {
     IDocumentIdentification12 ICorporateActionInstructionV01.Identification => Identification;
-    IDocumentIdentification15? ICorporateActionInstructionV01.CancelledInstructionIdentification => CancelledInstructionIdentification;
-    IDocumentIdentification15? ICorporateActionInstructionV01.InstructionCancellationRequestIdentification => InstructionCancellationRequestIdentification;
-    IEnumerable<IDocumentIdentification13> ICorporateActionInstructionV01.OtherDocumentIdentification => OtherDocumentIdentification;
-    IEnumerable<ICorporateActionEventReference1> ICorporateActionInstructionV01.EventsLinkage => EventsLinkage;
-    ICorporateActionGeneralInformation6 ICorporateActionInstructionV01.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
+    IDocumentIdentification15? ICorporateActionInstructionV01.CancelledInstructionIdentification =>
+        CancelledInstructionIdentification;
+    IDocumentIdentification15? ICorporateActionInstructionV01.InstructionCancellationRequestIdentification =>
+        InstructionCancellationRequestIdentification;
+    IEnumerable<IDocumentIdentification13> ICorporateActionInstructionV01.OtherDocumentIdentification =>
+        OtherDocumentIdentification;
+    IEnumerable<ICorporateActionEventReference1> ICorporateActionInstructionV01.EventsLinkage =>
+        EventsLinkage;
+    ICorporateActionGeneralInformation6 ICorporateActionInstructionV01.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
     IAccountAndBalance2 ICorporateActionInstructionV01.AccountDetails => AccountDetails;
-    IEnumerable<IPartyIdentification33> ICorporateActionInstructionV01.BeneficialOwnerDetails => BeneficialOwnerDetails;
-    ICorporateActionOption5 ICorporateActionInstructionV01.CorporateActionInstruction => CorporateActionInstruction;
-    ICorporateActionNarrative7? ICorporateActionInstructionV01.AdditionalInformation => AdditionalInformation;
-    IPartyIdentification10Choice? ICorporateActionInstructionV01.MessageOriginator => MessageOriginator;
-    IPartyIdentification10Choice? ICorporateActionInstructionV01.MessageRecipient => MessageRecipient;
+    IEnumerable<IPartyIdentification33> ICorporateActionInstructionV01.BeneficialOwnerDetails =>
+        BeneficialOwnerDetails;
+    ICorporateActionOption5 ICorporateActionInstructionV01.CorporateActionInstruction =>
+        CorporateActionInstruction;
+    ICorporateActionNarrative7? ICorporateActionInstructionV01.AdditionalInformation =>
+        AdditionalInformation;
+    IPartyIdentification10Choice? ICorporateActionInstructionV01.MessageOriginator =>
+        MessageOriginator;
+    IPartyIdentification10Choice? ICorporateActionInstructionV01.MessageRecipient =>
+        MessageRecipient;
     IEnumerable<IExtension2> ICorporateActionInstructionV01.Extension => Extension;
 }

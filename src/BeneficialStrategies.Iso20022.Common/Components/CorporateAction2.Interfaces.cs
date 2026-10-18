@@ -12,15 +12,23 @@ public partial record CorporateAction2 : ICorporateAction2
 {
     IEnumerable<ICorporateActionEventStage1FormatChoice> ICorporateAction2.EventStage => EventStage;
     ICorporateActionOption1FormatChoice? ICorporateAction2.DefaultOptionType => DefaultOptionType;
-    ICorporateActionCalculationMethod1FormatChoice? ICorporateAction2.CalculationMethod => CalculationMethod;
-    IUnitOrFaceAmountOrCode1Choice? ICorporateAction2.BackEndOddLotSecuritiesQuantity => BackEndOddLotSecuritiesQuantity;
-    IUnitOrFaceAmountOrCode1Choice? ICorporateAction2.FrontEndOddLotSecuritiesQuantity => FrontEndOddLotSecuritiesQuantity;
-    IUnitOrFaceAmount1Choice? ICorporateAction2.MinimumExercisableSecuritiesQuantity => MinimumExercisableSecuritiesQuantity;
-    IUnitOrFaceAmount1Choice? ICorporateAction2.MinimumExercisableMultipleSecuritiesQuantity => MinimumExercisableMultipleSecuritiesQuantity;
+    ICorporateActionCalculationMethod1FormatChoice? ICorporateAction2.CalculationMethod =>
+        CalculationMethod;
+    IUnitOrFaceAmountOrCode1Choice? ICorporateAction2.BackEndOddLotSecuritiesQuantity =>
+        BackEndOddLotSecuritiesQuantity;
+    IUnitOrFaceAmountOrCode1Choice? ICorporateAction2.FrontEndOddLotSecuritiesQuantity =>
+        FrontEndOddLotSecuritiesQuantity;
+    IUnitOrFaceAmount1Choice? ICorporateAction2.MinimumExercisableSecuritiesQuantity =>
+        MinimumExercisableSecuritiesQuantity;
+    IUnitOrFaceAmount1Choice? ICorporateAction2.MinimumExercisableMultipleSecuritiesQuantity =>
+        MinimumExercisableMultipleSecuritiesQuantity;
     IUnitOrFaceAmount1Choice? ICorporateAction2.IncrementalDenomination => IncrementalDenomination;
-    IUnitOrFaceAmount1Choice? ICorporateAction2.NewDenominationSecuritiesQuantity => NewDenominationSecuritiesQuantity;
-    IUnitOrFaceAmount1Choice? ICorporateAction2.NewBoardLotSecuritiesQuantity => NewBoardLotSecuritiesQuantity;
-    IUnitOrFaceAmountOrCode1Choice? ICorporateAction2.SecuritiesQuantitySought => SecuritiesQuantitySought;
+    IUnitOrFaceAmount1Choice? ICorporateAction2.NewDenominationSecuritiesQuantity =>
+        NewDenominationSecuritiesQuantity;
+    IUnitOrFaceAmount1Choice? ICorporateAction2.NewBoardLotSecuritiesQuantity =>
+        NewBoardLotSecuritiesQuantity;
+    IUnitOrFaceAmountOrCode1Choice? ICorporateAction2.SecuritiesQuantitySought =>
+        SecuritiesQuantitySought;
     IUnitOrFaceAmount1Choice? ICorporateAction2.BaseDenomination => BaseDenomination;
     IEnumerable<ICorporateActionChangeType1FormatChoice> ICorporateAction2.ChangeType => ChangeType;
     IEnumerable<IOfferType1FormatChoice> ICorporateAction2.OfferType => OfferType;
@@ -28,15 +36,19 @@ public partial record CorporateAction2 : ICorporateAction2
     ILotteryType1FormatChoice? ICorporateAction2.LotteryType => LotteryType;
     IGenericIdentification13? ICorporateAction2.IncomeType => IncomeType;
     ICorporateActionFrequencyType1FormatChoice? ICorporateAction2.DividendType => DividendType;
-    IIntermediateSecurityDistributionType1FormatChoice? ICorporateAction2.IntermediateSecuritiesDistributionType => IntermediateSecuritiesDistributionType;
+    IIntermediateSecurityDistributionType1FormatChoice? ICorporateAction2.IntermediateSecuritiesDistributionType =>
+        IntermediateSecuritiesDistributionType;
     IEnumerable<Max3NumericText> ICorporateAction2.CouponNumber => CouponNumber;
     ICorporateActionDate2? ICorporateAction2.DateDetails => DateDetails;
     IEnumerable<ICorporateActionPrice2> ICorporateAction2.PriceDetails => PriceDetails;
     ICorporateActionPeriod1? ICorporateAction2.PeriodDetails => PeriodDetails;
     ICorporateActionRate1? ICorporateAction2.RateAndAmountDetails => RateAndAmountDetails;
-    ICorporateActionNarrative1? ICorporateAction2.CorporateActionAdditionalInformation => CorporateActionAdditionalInformation;
-    IBeneficiaryCertificationType1FormatChoice? ICorporateAction2.CertificationType => CertificationType;
-    IRenounceableStatus1FormatChoice? ICorporateAction2.RenounceableEntitlementStatusType => RenounceableEntitlementStatusType;
+    ICorporateActionNarrative1? ICorporateAction2.CorporateActionAdditionalInformation =>
+        CorporateActionAdditionalInformation;
+    IBeneficiaryCertificationType1FormatChoice? ICorporateAction2.CertificationType =>
+        CertificationType;
+    IRenounceableStatus1FormatChoice? ICorporateAction2.RenounceableEntitlementStatusType =>
+        RenounceableEntitlementStatusType;
     IConversionType1FormatChoice? ICorporateAction2.ConversionType => ConversionType;
     IDistributionType1FormatChoice? ICorporateAction2.DistributionType => DistributionType;
 }

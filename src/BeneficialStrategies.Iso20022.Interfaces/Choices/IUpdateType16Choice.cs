@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the update information.
 /// </summary>
 [IsoId("_cfq115KQEeWHWpTQn1FFVg")]
-public interface IUpdateType16Choice : IIsoChoice
-{
-}
+public interface IUpdateType16Choice : IIsoChoice { }

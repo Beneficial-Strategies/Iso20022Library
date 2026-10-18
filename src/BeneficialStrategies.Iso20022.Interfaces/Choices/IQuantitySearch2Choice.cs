@@ -7,6 +7,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice between quantity search criteria.</summary>
 [IsoId("_eMzYAWqWEemz04WrKJaMEA")]
-public interface IQuantitySearch2Choice : IIsoChoice
-{
-}
+public interface IQuantitySearch2Choice : IIsoChoice { }

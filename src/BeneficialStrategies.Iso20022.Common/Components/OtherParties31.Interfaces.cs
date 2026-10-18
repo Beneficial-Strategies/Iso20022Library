@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record OtherParties31 : IOtherParties31
 {
     IPartyIdentification110? IOtherParties31.Investor => Investor;
-    IPartyIdentification111? IOtherParties31.QualifiedForeignIntermediary => QualifiedForeignIntermediary;
+    IPartyIdentification111? IOtherParties31.QualifiedForeignIntermediary =>
+        QualifiedForeignIntermediary;
     IPartyIdentification111? IOtherParties31.StockExchange => StockExchange;
     IPartyIdentification111? IOtherParties31.TradeRegulator => TradeRegulator;
     IPartyIdentification111? IOtherParties31.TripartyAgent => TripartyAgent;

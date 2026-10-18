@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record FinancialInstrument21 : IFinancialInstrument21
 {
-    IEnumerable<CountryCode> IFinancialInstrument21.RegisteredDistributionCountry => RegisteredDistributionCountry;
+    IEnumerable<CountryCode> IFinancialInstrument21.RegisteredDistributionCountry =>
+        RegisteredDistributionCountry;
 }

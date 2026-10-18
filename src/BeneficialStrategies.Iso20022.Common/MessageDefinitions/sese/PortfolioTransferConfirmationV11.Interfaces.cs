@@ -12,19 +12,28 @@ public partial record PortfolioTransferConfirmationV11 : IPortfolioTransferConfi
 {
     IMessageIdentification1 IPortfolioTransferConfirmationV11.MessageReference => MessageReference;
     IAdditionalReference11? IPortfolioTransferConfirmationV11.PoolReference => PoolReference;
-    IAdditionalReference10? IPortfolioTransferConfirmationV11.PreviousReference => PreviousReference;
+    IAdditionalReference10? IPortfolioTransferConfirmationV11.PreviousReference =>
+        PreviousReference;
     IAdditionalReference10? IPortfolioTransferConfirmationV11.RelatedReference => RelatedReference;
-    IIndividualPerson8? IPortfolioTransferConfirmationV11.PrimaryIndividualInvestor => PrimaryIndividualInvestor;
+    IIndividualPerson8? IPortfolioTransferConfirmationV11.PrimaryIndividualInvestor =>
+        PrimaryIndividualInvestor;
     IIndividualPerson8? IPortfolioTransferConfirmationV11.RegisteredHolder => RegisteredHolder;
-    IIndividualPerson8? IPortfolioTransferConfirmationV11.SecondaryIndividualInvestor => SecondaryIndividualInvestor;
-    IEnumerable<IIndividualPerson8> IPortfolioTransferConfirmationV11.OtherIndividualInvestor => OtherIndividualInvestor;
-    IOrganisation36? IPortfolioTransferConfirmationV11.PrimaryCorporateInvestor => PrimaryCorporateInvestor;
-    IOrganisation36? IPortfolioTransferConfirmationV11.SecondaryCorporateInvestor => SecondaryCorporateInvestor;
-    IEnumerable<IOrganisation36> IPortfolioTransferConfirmationV11.OtherCorporateInvestor => OtherCorporateInvestor;
+    IIndividualPerson8? IPortfolioTransferConfirmationV11.SecondaryIndividualInvestor =>
+        SecondaryIndividualInvestor;
+    IEnumerable<IIndividualPerson8> IPortfolioTransferConfirmationV11.OtherIndividualInvestor =>
+        OtherIndividualInvestor;
+    IOrganisation36? IPortfolioTransferConfirmationV11.PrimaryCorporateInvestor =>
+        PrimaryCorporateInvestor;
+    IOrganisation36? IPortfolioTransferConfirmationV11.SecondaryCorporateInvestor =>
+        SecondaryCorporateInvestor;
+    IEnumerable<IOrganisation36> IPortfolioTransferConfirmationV11.OtherCorporateInvestor =>
+        OtherCorporateInvestor;
     IInvestmentAccount69 IPortfolioTransferConfirmationV11.TransferorAccount => TransferorAccount;
     IInvestmentAccount69? IPortfolioTransferConfirmationV11.NomineeAccount => NomineeAccount;
     IPartyIdentification132 IPortfolioTransferConfirmationV11.Transferee => Transferee;
-    IEnumerable<IPortfolioTransfer10> IPortfolioTransferConfirmationV11.ProductTransfer => ProductTransfer;
-    IMarketPracticeVersion1? IPortfolioTransferConfirmationV11.MarketPracticeVersion => MarketPracticeVersion;
+    IEnumerable<IPortfolioTransfer10> IPortfolioTransferConfirmationV11.ProductTransfer =>
+        ProductTransfer;
+    IMarketPracticeVersion1? IPortfolioTransferConfirmationV11.MarketPracticeVersion =>
+        MarketPracticeVersion;
     IEnumerable<IExtension1> IPortfolioTransferConfirmationV11.Extension => Extension;
 }

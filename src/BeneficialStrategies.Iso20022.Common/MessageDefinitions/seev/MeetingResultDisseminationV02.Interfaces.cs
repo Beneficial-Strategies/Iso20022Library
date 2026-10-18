@@ -10,12 +10,14 @@ namespace BeneficialStrategies.Iso20022.seev;
 
 public partial record MeetingResultDisseminationV02 : IMeetingResultDisseminationV02
 {
-    IMessageIdentification1 IMeetingResultDisseminationV02.MeetingResultDisseminationIdentification => MeetingResultDisseminationIdentification;
+    IMessageIdentification1 IMeetingResultDisseminationV02.MeetingResultDisseminationIdentification =>
+        MeetingResultDisseminationIdentification;
     IAmendInformation2? IMeetingResultDisseminationV02.Amendment => Amendment;
     IMeetingReference3 IMeetingResultDisseminationV02.MeetingReference => MeetingReference;
     IPartyIdentification9Choice IMeetingResultDisseminationV02.ReportingParty => ReportingParty;
     IEnumerable<ISecurityPosition5> IMeetingResultDisseminationV02.Security => Security;
     IEnumerable<IVote5> IMeetingResultDisseminationV02.VoteResult => VoteResult;
     IParticipation2? IMeetingResultDisseminationV02.Participation => Participation;
-    ICommunicationAddress4? IMeetingResultDisseminationV02.AdditionalInformation => AdditionalInformation;
+    ICommunicationAddress4? IMeetingResultDisseminationV02.AdditionalInformation =>
+        AdditionalInformation;
 }

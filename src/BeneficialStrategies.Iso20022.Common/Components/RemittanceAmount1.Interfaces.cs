@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record RemittanceAmount1 : IRemittanceAmount1
 {
-    IEnumerable<IDocumentAdjustment1> IRemittanceAmount1.AdjustmentAmountAndReason => AdjustmentAmountAndReason;
+    IEnumerable<IDocumentAdjustment1> IRemittanceAmount1.AdjustmentAmountAndReason =>
+        AdjustmentAmountAndReason;
 }

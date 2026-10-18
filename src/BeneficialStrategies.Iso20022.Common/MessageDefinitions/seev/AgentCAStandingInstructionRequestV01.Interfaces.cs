@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.seev;
 public partial record AgentCAStandingInstructionRequestV01 : IAgentCAStandingInstructionRequestV01
 {
     IDocumentIdentification8 IAgentCAStandingInstructionRequestV01.Identification => Identification;
-    ICorporateActionStandingInstructionGeneralInformation1 IAgentCAStandingInstructionRequestV01.StandingInstructionGeneralInformation => StandingInstructionGeneralInformation;
-    ICorporateActionStandingInstruction1 IAgentCAStandingInstructionRequestV01.StandingInstructionDetails => StandingInstructionDetails;
+    ICorporateActionStandingInstructionGeneralInformation1 IAgentCAStandingInstructionRequestV01.StandingInstructionGeneralInformation =>
+        StandingInstructionGeneralInformation;
+    ICorporateActionStandingInstruction1 IAgentCAStandingInstructionRequestV01.StandingInstructionDetails =>
+        StandingInstructionDetails;
     IContactPerson1? IAgentCAStandingInstructionRequestV01.ContactDetails => ContactDetails;
 }

@@ -8,13 +8,19 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record SecuritiesTransactionPostingReport002V09 : ISecuritiesTransactionPostingReport002V09
+public partial record SecuritiesTransactionPostingReport002V09
+    : ISecuritiesTransactionPostingReport002V09
 {
     IPagination1 ISecuritiesTransactionPostingReport002V09.Pagination => Pagination;
-    IStatement71 ISecuritiesTransactionPostingReport002V09.StatementGeneralDetails => StatementGeneralDetails;
+    IStatement71 ISecuritiesTransactionPostingReport002V09.StatementGeneralDetails =>
+        StatementGeneralDetails;
     IPartyIdentification156? ISecuritiesTransactionPostingReport002V09.AccountOwner => AccountOwner;
-    ISecuritiesAccount40 ISecuritiesTransactionPostingReport002V09.SafekeepingAccount => SafekeepingAccount;
-    IEnumerable<IIntermediary45> ISecuritiesTransactionPostingReport002V09.IntermediaryInformation => IntermediaryInformation;
-    IEnumerable<IFinancialInstrumentDetails33> ISecuritiesTransactionPostingReport002V09.FinancialInstrumentDetails => FinancialInstrumentDetails;
-    IEnumerable<ISubAccountIdentification59> ISecuritiesTransactionPostingReport002V09.SubAccountDetails => SubAccountDetails;
+    ISecuritiesAccount40 ISecuritiesTransactionPostingReport002V09.SafekeepingAccount =>
+        SafekeepingAccount;
+    IEnumerable<IIntermediary45> ISecuritiesTransactionPostingReport002V09.IntermediaryInformation =>
+        IntermediaryInformation;
+    IEnumerable<IFinancialInstrumentDetails33> ISecuritiesTransactionPostingReport002V09.FinancialInstrumentDetails =>
+        FinancialInstrumentDetails;
+    IEnumerable<ISubAccountIdentification59> ISecuritiesTransactionPostingReport002V09.SubAccountDetails =>
+        SubAccountDetails;
 }

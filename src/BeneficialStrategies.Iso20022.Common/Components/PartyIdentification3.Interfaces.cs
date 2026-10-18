@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record PartyIdentification3 : IPartyIdentification3
-{
-}
+public partial record PartyIdentification3 : IPartyIdentification3 { }

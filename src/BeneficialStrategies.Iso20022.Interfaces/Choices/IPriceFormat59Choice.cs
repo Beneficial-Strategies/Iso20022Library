@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a percentage price or an amount price or an unspecified price or index points.
 /// </summary>
 [IsoId("_ctkvAZKQEeWHWpTQn1FFVg")]
-public interface IPriceFormat59Choice : IIsoChoice
-{
-}
+public interface IPriceFormat59Choice : IIsoChoice { }

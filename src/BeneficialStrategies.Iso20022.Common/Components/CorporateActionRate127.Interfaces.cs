@@ -10,7 +10,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionRate127 : ICorporateActionRate127
 {
-    IRateAndAmountFormat59Choice? ICorporateActionRate127.OversubscriptionRate => OversubscriptionRate;
-    IEnumerable<IRateAndAmountFormat55Choice> ICorporateActionRate127.RequestedWithholdingTaxRate => RequestedWithholdingTaxRate;
-    IEnumerable<IRateAndAmountFormat55Choice> ICorporateActionRate127.RequestedSecondLevelTaxRate => RequestedSecondLevelTaxRate;
+    IRateAndAmountFormat59Choice? ICorporateActionRate127.OversubscriptionRate =>
+        OversubscriptionRate;
+    IEnumerable<IRateAndAmountFormat55Choice> ICorporateActionRate127.RequestedWithholdingTaxRate =>
+        RequestedWithholdingTaxRate;
+    IEnumerable<IRateAndAmountFormat55Choice> ICorporateActionRate127.RequestedSecondLevelTaxRate =>
+        RequestedSecondLevelTaxRate;
 }

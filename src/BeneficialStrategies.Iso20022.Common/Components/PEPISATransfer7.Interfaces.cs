@@ -12,7 +12,8 @@ public partial record PEPISATransfer7 : IPEPISATransfer7
 {
     IIndividualPerson8? IPEPISATransfer7.PrimaryIndividualInvestor => PrimaryIndividualInvestor;
     IIndividualPerson8? IPEPISATransfer7.SecondaryIndividualInvestor => SecondaryIndividualInvestor;
-    IEnumerable<IIndividualPerson8> IPEPISATransfer7.OtherIndividualInvestor => OtherIndividualInvestor;
+    IEnumerable<IIndividualPerson8> IPEPISATransfer7.OtherIndividualInvestor =>
+        OtherIndividualInvestor;
     IOrganisation4? IPEPISATransfer7.PrimaryCorporateInvestor => PrimaryCorporateInvestor;
     IOrganisation4? IPEPISATransfer7.SecondaryCorporateInvestor => SecondaryCorporateInvestor;
     IEnumerable<IOrganisation4> IPEPISATransfer7.OtherCorporateInvestor => OtherCorporateInvestor;

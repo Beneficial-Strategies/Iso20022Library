@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ReversalRequest1 : IReversalRequest1
 {
-    ICardPaymentTransaction91? IReversalRequest1.OriginalPaymentTransaction => OriginalPaymentTransaction;
+    ICardPaymentTransaction91? IReversalRequest1.OriginalPaymentTransaction =>
+        OriginalPaymentTransaction;
     ICustomerOrder1? IReversalRequest1.CustomerOrder => CustomerOrder;
 }

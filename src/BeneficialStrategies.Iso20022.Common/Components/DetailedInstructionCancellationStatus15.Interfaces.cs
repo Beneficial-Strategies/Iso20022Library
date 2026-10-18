@@ -8,7 +8,9 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record DetailedInstructionCancellationStatus15 : IDetailedInstructionCancellationStatus15
+public partial record DetailedInstructionCancellationStatus15
+    : IDetailedInstructionCancellationStatus15
 {
-    ICancellationStatus32Choice IDetailedInstructionCancellationStatus15.InstructionCancellationStatus => InstructionCancellationStatus;
+    ICancellationStatus32Choice IDetailedInstructionCancellationStatus15.InstructionCancellationStatus =>
+        InstructionCancellationStatus;
 }

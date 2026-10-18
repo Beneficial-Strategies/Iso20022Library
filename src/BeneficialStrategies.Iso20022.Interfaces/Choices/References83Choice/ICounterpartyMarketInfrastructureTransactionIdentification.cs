@@ -7,7 +7,9 @@ namespace BeneficialStrategies.Iso20022.Choices.References83Choice;
 
 /// <summary>Specifies the counterparty market infrastructure transaction identification.</summary>
 [IsoId("_btDt8KgzEfCXwLUUylXgrQ")]
-public interface ICounterpartyMarketInfrastructureTransactionIdentification : IReferences83Choice, IIsoChoiceVariant
+public interface ICounterpartyMarketInfrastructureTransactionIdentification
+    : IReferences83Choice,
+        IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>
     [IsoXmlTag("CtrPtyMktInfrstrctrTxId")]

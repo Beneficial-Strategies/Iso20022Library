@@ -8,12 +8,18 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record SecuritiesSettlementTransactionAuditTrailReportV02 : ISecuritiesSettlementTransactionAuditTrailReportV02
+public partial record SecuritiesSettlementTransactionAuditTrailReportV02
+    : ISecuritiesSettlementTransactionAuditTrailReportV02
 {
     IPagination ISecuritiesSettlementTransactionAuditTrailReportV02.Pagination => Pagination;
-    IIdentification1? ISecuritiesSettlementTransactionAuditTrailReportV02.QueryReference => QueryReference;
-    ITransactionIdentifications15? ISecuritiesSettlementTransactionAuditTrailReportV02.TransactionIdentification => TransactionIdentification;
-    ISecuritiesAccount13 ISecuritiesSettlementTransactionAuditTrailReportV02.SafekeepingAccount => SafekeepingAccount;
-    IPartyIdentification36Choice? ISecuritiesSettlementTransactionAuditTrailReportV02.AccountOwner => AccountOwner;
-    IEnumerable<IStatusTrail4> ISecuritiesSettlementTransactionAuditTrailReportV02.StatusTrail => StatusTrail;
+    IIdentification1? ISecuritiesSettlementTransactionAuditTrailReportV02.QueryReference =>
+        QueryReference;
+    ITransactionIdentifications15? ISecuritiesSettlementTransactionAuditTrailReportV02.TransactionIdentification =>
+        TransactionIdentification;
+    ISecuritiesAccount13 ISecuritiesSettlementTransactionAuditTrailReportV02.SafekeepingAccount =>
+        SafekeepingAccount;
+    IPartyIdentification36Choice? ISecuritiesSettlementTransactionAuditTrailReportV02.AccountOwner =>
+        AccountOwner;
+    IEnumerable<IStatusTrail4> ISecuritiesSettlementTransactionAuditTrailReportV02.StatusTrail =>
+        StatusTrail;
 }

@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CorporateActionPrice58 : ICorporateActionPrice58
 {
     IPriceFormat45Choice? ICorporateActionPrice58.CashInLieuOfSharePrice => CashInLieuOfSharePrice;
-    IPriceFormat45Choice? ICorporateActionPrice58.OverSubscriptionDepositPrice => OverSubscriptionDepositPrice;
+    IPriceFormat45Choice? ICorporateActionPrice58.OverSubscriptionDepositPrice =>
+        OverSubscriptionDepositPrice;
 }

@@ -13,5 +13,6 @@ public partial record SubBalanceInformation5 : ISubBalanceInformation5
     ISubBalanceType5Choice ISubBalanceInformation5.SubBalanceType => SubBalanceType;
     ISubBalanceQuantity3Choice ISubBalanceInformation5.Quantity => Quantity;
     IEnumerable<IQuantityBreakdown3> ISubBalanceInformation5.QuantityBreakdown => QuantityBreakdown;
-    IEnumerable<IAdditionalBalanceInformation5> ISubBalanceInformation5.AdditionalBalanceBreakdownDetails => AdditionalBalanceBreakdownDetails;
+    IEnumerable<IAdditionalBalanceInformation5> ISubBalanceInformation5.AdditionalBalanceBreakdownDetails =>
+        AdditionalBalanceBreakdownDetails;
 }

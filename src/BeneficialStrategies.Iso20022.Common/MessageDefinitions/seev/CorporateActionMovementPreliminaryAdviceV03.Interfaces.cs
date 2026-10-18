@@ -8,29 +8,52 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record CorporateActionMovementPreliminaryAdviceV03 : ICorporateActionMovementPreliminaryAdviceV03
+public partial record CorporateActionMovementPreliminaryAdviceV03
+    : ICorporateActionMovementPreliminaryAdviceV03
 {
     IPagination? ICorporateActionMovementPreliminaryAdviceV03.Pagination => Pagination;
-    ICorporateActionPreliminaryAdviceType1 ICorporateActionMovementPreliminaryAdviceV03.MovementPreliminaryAdviceGeneralInformation => MovementPreliminaryAdviceGeneralInformation;
-    IDocumentIdentification15? ICorporateActionMovementPreliminaryAdviceV03.PreviousMovementPreliminaryAdviceIdentification => PreviousMovementPreliminaryAdviceIdentification;
-    IDocumentIdentification15? ICorporateActionMovementPreliminaryAdviceV03.NotificationIdentification => NotificationIdentification;
-    IDocumentIdentification15? ICorporateActionMovementPreliminaryAdviceV03.MovementConfirmationIdentification => MovementConfirmationIdentification;
-    IDocumentIdentification9? ICorporateActionMovementPreliminaryAdviceV03.InstructionIdentification => InstructionIdentification;
-    IEnumerable<IDocumentIdentification13> ICorporateActionMovementPreliminaryAdviceV03.OtherDocumentIdentification => OtherDocumentIdentification;
-    IEnumerable<ICorporateActionEventReference1> ICorporateActionMovementPreliminaryAdviceV03.EventsLinkage => EventsLinkage;
-    ICorporateActionReversalReason1? ICorporateActionMovementPreliminaryAdviceV03.ReversalReason => ReversalReason;
-    ICorporateActionGeneralInformation38 ICorporateActionMovementPreliminaryAdviceV03.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IAccountIdentification18Choice ICorporateActionMovementPreliminaryAdviceV03.AccountDetails => AccountDetails;
-    IEnumerable<ICorporateActionOption35> ICorporateActionMovementPreliminaryAdviceV03.CorporateActionMovementDetails => CorporateActionMovementDetails;
-    ICorporateActionNarrative6? ICorporateActionMovementPreliminaryAdviceV03.AdditionalInformation => AdditionalInformation;
-    IEnumerable<IPartyIdentification46Choice> ICorporateActionMovementPreliminaryAdviceV03.IssuerAgent => IssuerAgent;
-    IEnumerable<IPartyIdentification46Choice> ICorporateActionMovementPreliminaryAdviceV03.PayingAgent => PayingAgent;
-    IEnumerable<IPartyIdentification46Choice> ICorporateActionMovementPreliminaryAdviceV03.SubPayingAgent => SubPayingAgent;
-    IPartyIdentification46Choice? ICorporateActionMovementPreliminaryAdviceV03.Registrar => Registrar;
-    IEnumerable<IPartyIdentification46Choice> ICorporateActionMovementPreliminaryAdviceV03.ResellingAgent => ResellingAgent;
-    IPartyIdentification46Choice? ICorporateActionMovementPreliminaryAdviceV03.PhysicalSecuritiesAgent => PhysicalSecuritiesAgent;
-    IPartyIdentification46Choice? ICorporateActionMovementPreliminaryAdviceV03.DropAgent => DropAgent;
-    IEnumerable<IPartyIdentification46Choice> ICorporateActionMovementPreliminaryAdviceV03.SolicitationAgent => SolicitationAgent;
-    IPartyIdentification46Choice? ICorporateActionMovementPreliminaryAdviceV03.InformationAgent => InformationAgent;
-    IEnumerable<ISupplementaryData1> ICorporateActionMovementPreliminaryAdviceV03.SupplementaryData => SupplementaryData;
+    ICorporateActionPreliminaryAdviceType1 ICorporateActionMovementPreliminaryAdviceV03.MovementPreliminaryAdviceGeneralInformation =>
+        MovementPreliminaryAdviceGeneralInformation;
+    IDocumentIdentification15? ICorporateActionMovementPreliminaryAdviceV03.PreviousMovementPreliminaryAdviceIdentification =>
+        PreviousMovementPreliminaryAdviceIdentification;
+    IDocumentIdentification15? ICorporateActionMovementPreliminaryAdviceV03.NotificationIdentification =>
+        NotificationIdentification;
+    IDocumentIdentification15? ICorporateActionMovementPreliminaryAdviceV03.MovementConfirmationIdentification =>
+        MovementConfirmationIdentification;
+    IDocumentIdentification9? ICorporateActionMovementPreliminaryAdviceV03.InstructionIdentification =>
+        InstructionIdentification;
+    IEnumerable<IDocumentIdentification13> ICorporateActionMovementPreliminaryAdviceV03.OtherDocumentIdentification =>
+        OtherDocumentIdentification;
+    IEnumerable<ICorporateActionEventReference1> ICorporateActionMovementPreliminaryAdviceV03.EventsLinkage =>
+        EventsLinkage;
+    ICorporateActionReversalReason1? ICorporateActionMovementPreliminaryAdviceV03.ReversalReason =>
+        ReversalReason;
+    ICorporateActionGeneralInformation38 ICorporateActionMovementPreliminaryAdviceV03.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IAccountIdentification18Choice ICorporateActionMovementPreliminaryAdviceV03.AccountDetails =>
+        AccountDetails;
+    IEnumerable<ICorporateActionOption35> ICorporateActionMovementPreliminaryAdviceV03.CorporateActionMovementDetails =>
+        CorporateActionMovementDetails;
+    ICorporateActionNarrative6? ICorporateActionMovementPreliminaryAdviceV03.AdditionalInformation =>
+        AdditionalInformation;
+    IEnumerable<IPartyIdentification46Choice> ICorporateActionMovementPreliminaryAdviceV03.IssuerAgent =>
+        IssuerAgent;
+    IEnumerable<IPartyIdentification46Choice> ICorporateActionMovementPreliminaryAdviceV03.PayingAgent =>
+        PayingAgent;
+    IEnumerable<IPartyIdentification46Choice> ICorporateActionMovementPreliminaryAdviceV03.SubPayingAgent =>
+        SubPayingAgent;
+    IPartyIdentification46Choice? ICorporateActionMovementPreliminaryAdviceV03.Registrar =>
+        Registrar;
+    IEnumerable<IPartyIdentification46Choice> ICorporateActionMovementPreliminaryAdviceV03.ResellingAgent =>
+        ResellingAgent;
+    IPartyIdentification46Choice? ICorporateActionMovementPreliminaryAdviceV03.PhysicalSecuritiesAgent =>
+        PhysicalSecuritiesAgent;
+    IPartyIdentification46Choice? ICorporateActionMovementPreliminaryAdviceV03.DropAgent =>
+        DropAgent;
+    IEnumerable<IPartyIdentification46Choice> ICorporateActionMovementPreliminaryAdviceV03.SolicitationAgent =>
+        SolicitationAgent;
+    IPartyIdentification46Choice? ICorporateActionMovementPreliminaryAdviceV03.InformationAgent =>
+        InformationAgent;
+    IEnumerable<ISupplementaryData1> ICorporateActionMovementPreliminaryAdviceV03.SupplementaryData =>
+        SupplementaryData;
 }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record OtherContact1 : IOtherContact1
-{
-}
+public partial record OtherContact1 : IOtherContact1 { }

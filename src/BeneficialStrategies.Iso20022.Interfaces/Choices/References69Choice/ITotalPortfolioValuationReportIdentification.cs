@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.References69Choice;
 /// Unique identification of the report.
 /// </summary>
 [IsoId("_z_ogTwzXEeuUZuaHWzkTew")]
-public interface ITotalPortfolioValuationReportIdentification : IReferences69Choice, IIsoChoiceVariant
+public interface ITotalPortfolioValuationReportIdentification
+    : IReferences69Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

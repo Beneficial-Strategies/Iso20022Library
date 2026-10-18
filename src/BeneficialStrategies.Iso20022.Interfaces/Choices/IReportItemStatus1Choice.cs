@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides acceptance status of the holding item.
 /// </summary>
 [IsoId("_0w3vwb3QEeO2FLWuu_JIqg")]
-public interface IReportItemStatus1Choice : IIsoChoice
-{
-}
+public interface IReportItemStatus1Choice : IIsoChoice { }

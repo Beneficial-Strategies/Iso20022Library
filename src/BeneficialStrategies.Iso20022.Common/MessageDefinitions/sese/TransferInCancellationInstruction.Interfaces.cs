@@ -13,5 +13,6 @@ public partial record TransferInCancellationInstruction : ITransferInCancellatio
     IAdditionalReference2 ITransferInCancellationInstruction.PreviousReference => PreviousReference;
     IAdditionalReference2? ITransferInCancellationInstruction.PoolReference => PoolReference;
     IAdditionalReference2? ITransferInCancellationInstruction.RelatedReference => RelatedReference;
-    ITransferIn2? ITransferInCancellationInstruction.TransferInToBeCancelled => TransferInToBeCancelled;
+    ITransferIn2? ITransferInCancellationInstruction.TransferInToBeCancelled =>
+        TransferInToBeCancelled;
 }

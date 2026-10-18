@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ReportTransactionResponse3 : IReportTransactionResponse3
 {
-    IEnumerable<IPointOfInteractionTransactionReport3> IReportTransactionResponse3.TransactionReport => TransactionReport;
+    IEnumerable<IPointOfInteractionTransactionReport3> IReportTransactionResponse3.TransactionReport =>
+        TransactionReport;
 }

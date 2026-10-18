@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Status22Choice;
 
 public partial record CorporateActionEventProcessingStatus : ICorporateActionEventProcessingStatus
 {
-    ICorporateActionEventProcessingStatus4Choice ICorporateActionEventProcessingStatus.Value => Value;
+    ICorporateActionEventProcessingStatus4Choice ICorporateActionEventProcessingStatus.Value =>
+        Value;
 }

@@ -10,12 +10,19 @@ namespace BeneficialStrategies.Iso20022.sese;
 
 public partial record SecuritiesFinancingStatusAdviceV09 : ISecuritiesFinancingStatusAdviceV09
 {
-    ITransactionIdentifications32 ISecuritiesFinancingStatusAdviceV09.TransactionIdentification => TransactionIdentification;
-    IProcessingStatus83Choice? ISecuritiesFinancingStatusAdviceV09.ProcessingStatus => ProcessingStatus;
+    ITransactionIdentifications32 ISecuritiesFinancingStatusAdviceV09.TransactionIdentification =>
+        TransactionIdentification;
+    IProcessingStatus83Choice? ISecuritiesFinancingStatusAdviceV09.ProcessingStatus =>
+        ProcessingStatus;
     IMatchingStatus26Choice? ISecuritiesFinancingStatusAdviceV09.MatchingStatus => MatchingStatus;
-    IMatchingStatus26Choice? ISecuritiesFinancingStatusAdviceV09.InferredMatchingStatus => InferredMatchingStatus;
-    ISettlementStatus18Choice? ISecuritiesFinancingStatusAdviceV09.SettlementStatus => SettlementStatus;
-    IRepoCallRequestStatus7Choice? ISecuritiesFinancingStatusAdviceV09.RepoCallRequestStatus => RepoCallRequestStatus;
-    ISecuritiesFinancingTransactionDetails52? ISecuritiesFinancingStatusAdviceV09.TransactionDetails => TransactionDetails;
-    IEnumerable<ISupplementaryData1> ISecuritiesFinancingStatusAdviceV09.SupplementaryData => SupplementaryData;
+    IMatchingStatus26Choice? ISecuritiesFinancingStatusAdviceV09.InferredMatchingStatus =>
+        InferredMatchingStatus;
+    ISettlementStatus18Choice? ISecuritiesFinancingStatusAdviceV09.SettlementStatus =>
+        SettlementStatus;
+    IRepoCallRequestStatus7Choice? ISecuritiesFinancingStatusAdviceV09.RepoCallRequestStatus =>
+        RepoCallRequestStatus;
+    ISecuritiesFinancingTransactionDetails52? ISecuritiesFinancingStatusAdviceV09.TransactionDetails =>
+        TransactionDetails;
+    IEnumerable<ISupplementaryData1> ISecuritiesFinancingStatusAdviceV09.SupplementaryData =>
+        SupplementaryData;
 }

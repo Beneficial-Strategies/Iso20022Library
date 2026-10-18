@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the acknowledgement reason.
 /// </summary>
 [IsoId("_UXuzRNp-Ed-ak6NoX_4Aeg_2050241792")]
-public interface IAcknowledgementReason2Choice : IIsoChoice
-{
-}
+public interface IAcknowledgementReason2Choice : IIsoChoice { }

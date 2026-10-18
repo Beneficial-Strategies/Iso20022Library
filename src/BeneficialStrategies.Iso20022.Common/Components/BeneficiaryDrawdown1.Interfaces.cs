@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record BeneficiaryDrawdown1 : IBeneficiaryDrawdown1
 {
     IBeneficiaryType1Choice? IBeneficiaryDrawdown1.BeneficiaryType => BeneficiaryType;
-    IEnumerable<IAdditionalInformation15> IBeneficiaryDrawdown1.AdditionalInformation => AdditionalInformation;
+    IEnumerable<IAdditionalInformation15> IBeneficiaryDrawdown1.AdditionalInformation =>
+        AdditionalInformation;
 }

@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.References69Choice;
 /// Unambiguous account servicer identification of the intra-position movement confirmation to be cancelled.
 /// </summary>
 [IsoId("_z_ogNwzXEeuUZuaHWzkTew")]
-public interface IIntraPositionMovementConfirmationIdentification : IReferences69Choice, IIsoChoiceVariant
+public interface IIntraPositionMovementConfirmationIdentification
+    : IReferences69Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

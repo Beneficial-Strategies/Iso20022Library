@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record StoredValueRequest5 : IStoredValueRequest5
 {
-    ITransactionIdentifier1? IStoredValueRequest5.SaleTransactionIdentification => SaleTransactionIdentification;
+    ITransactionIdentifier1? IStoredValueRequest5.SaleTransactionIdentification =>
+        SaleTransactionIdentification;
     IEnumerable<IStoredValueData5> IStoredValueRequest5.Data => Data;
 }

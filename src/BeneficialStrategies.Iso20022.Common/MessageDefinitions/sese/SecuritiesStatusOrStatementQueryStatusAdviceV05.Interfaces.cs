@@ -8,12 +8,19 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesStatusOrStatementQueryStatusAdviceV05 : ISecuritiesStatusOrStatementQueryStatusAdviceV05
+public partial record SecuritiesStatusOrStatementQueryStatusAdviceV05
+    : ISecuritiesStatusOrStatementQueryStatusAdviceV05
 {
-    IDocumentIdentification30 ISecuritiesStatusOrStatementQueryStatusAdviceV05.QueryDetails => QueryDetails;
-    IPartyIdentification144? ISecuritiesStatusOrStatementQueryStatusAdviceV05.AccountOwner => AccountOwner;
-    ISecuritiesAccount19? ISecuritiesStatusOrStatementQueryStatusAdviceV05.SafekeepingAccount => SafekeepingAccount;
-    IStatusOrStatement9Choice? ISecuritiesStatusOrStatementQueryStatusAdviceV05.StatusOrStatementRequested => StatusOrStatementRequested;
-    IProcessingStatus55Choice ISecuritiesStatusOrStatementQueryStatusAdviceV05.ProcessingStatus => ProcessingStatus;
-    IEnumerable<ISupplementaryData1> ISecuritiesStatusOrStatementQueryStatusAdviceV05.SupplementaryData => SupplementaryData;
+    IDocumentIdentification30 ISecuritiesStatusOrStatementQueryStatusAdviceV05.QueryDetails =>
+        QueryDetails;
+    IPartyIdentification144? ISecuritiesStatusOrStatementQueryStatusAdviceV05.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount19? ISecuritiesStatusOrStatementQueryStatusAdviceV05.SafekeepingAccount =>
+        SafekeepingAccount;
+    IStatusOrStatement9Choice? ISecuritiesStatusOrStatementQueryStatusAdviceV05.StatusOrStatementRequested =>
+        StatusOrStatementRequested;
+    IProcessingStatus55Choice ISecuritiesStatusOrStatementQueryStatusAdviceV05.ProcessingStatus =>
+        ProcessingStatus;
+    IEnumerable<ISupplementaryData1> ISecuritiesStatusOrStatementQueryStatusAdviceV05.SupplementaryData =>
+        SupplementaryData;
 }

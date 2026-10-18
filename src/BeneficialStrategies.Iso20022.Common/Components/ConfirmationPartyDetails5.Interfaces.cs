@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record ConfirmationPartyDetails5 : IConfirmationPartyDetails5
 {
     IPartyIdentification32Choice IConfirmationPartyDetails5.Identification => Identification;
-    IAlternatePartyIdentification5? IConfirmationPartyDetails5.AlternateIdentification => AlternateIdentification;
-    IPartyTextInformation5? IConfirmationPartyDetails5.AdditionalInformation => AdditionalInformation;
+    IAlternatePartyIdentification5? IConfirmationPartyDetails5.AlternateIdentification =>
+        AlternateIdentification;
+    IPartyTextInformation5? IConfirmationPartyDetails5.AdditionalInformation =>
+        AdditionalInformation;
 }

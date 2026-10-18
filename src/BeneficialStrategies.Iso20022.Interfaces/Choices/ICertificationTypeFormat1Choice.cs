@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or proprietary code to specify the certification format required.
 /// </summary>
 [IsoId("_Q3BFl9p-Ed-ak6NoX_4Aeg_-917118670")]
-public interface ICertificationTypeFormat1Choice : IIsoChoice
-{
-}
+public interface ICertificationTypeFormat1Choice : IIsoChoice { }

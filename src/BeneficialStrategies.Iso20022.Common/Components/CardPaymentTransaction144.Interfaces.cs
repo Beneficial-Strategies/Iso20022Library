@@ -12,10 +12,13 @@ public partial record CardPaymentTransaction144 : ICardPaymentTransaction144
 {
     IAuthorisationResult17 ICardPaymentTransaction144.AuthorisationResult => AuthorisationResult;
     IEnumerable<IProduct4> ICardPaymentTransaction144.AllowedProductCode => AllowedProductCode;
-    IEnumerable<IProduct4> ICardPaymentTransaction144.NotAllowedProductCode => NotAllowedProductCode;
-    IEnumerable<IProduct5> ICardPaymentTransaction144.AdditionalAvailableProduct => AdditionalAvailableProduct;
+    IEnumerable<IProduct4> ICardPaymentTransaction144.NotAllowedProductCode =>
+        NotAllowedProductCode;
+    IEnumerable<IProduct5> ICardPaymentTransaction144.AdditionalAvailableProduct =>
+        AdditionalAvailableProduct;
     IAmountAndDirection93? ICardPaymentTransaction144.Balance => Balance;
     IContentInformationType40? ICardPaymentTransaction144.ProtectedBalance => ProtectedBalance;
     IEnumerable<IAction17> ICardPaymentTransaction144.Action => Action;
-    ICurrencyConversion29? ICardPaymentTransaction144.CurrencyConversionEligibility => CurrencyConversionEligibility;
+    ICurrencyConversion29? ICardPaymentTransaction144.CurrencyConversionEligibility =>
+        CurrencyConversionEligibility;
 }

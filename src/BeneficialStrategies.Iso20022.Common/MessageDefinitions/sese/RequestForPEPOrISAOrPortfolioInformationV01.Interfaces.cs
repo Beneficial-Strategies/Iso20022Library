@@ -8,21 +8,34 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record RequestForPEPOrISAOrPortfolioInformationV01 : IRequestForPEPOrISAOrPortfolioInformationV01
+public partial record RequestForPEPOrISAOrPortfolioInformationV01
+    : IRequestForPEPOrISAOrPortfolioInformationV01
 {
-    IMessageIdentification1 IRequestForPEPOrISAOrPortfolioInformationV01.MessageReference => MessageReference;
-    IAdditionalReference3? IRequestForPEPOrISAOrPortfolioInformationV01.PoolReference => PoolReference;
-    IAdditionalReference3? IRequestForPEPOrISAOrPortfolioInformationV01.PreviousReference => PreviousReference;
-    IAdditionalReference3? IRequestForPEPOrISAOrPortfolioInformationV01.RelatedReference => RelatedReference;
-    IIndividualPerson8? IRequestForPEPOrISAOrPortfolioInformationV01.PrimaryIndividualInvestor => PrimaryIndividualInvestor;
-    IIndividualPerson8? IRequestForPEPOrISAOrPortfolioInformationV01.SecondaryIndividualInvestor => SecondaryIndividualInvestor;
-    IEnumerable<IIndividualPerson8> IRequestForPEPOrISAOrPortfolioInformationV01.OtherIndividualInvestor => OtherIndividualInvestor;
-    IOrganisation4? IRequestForPEPOrISAOrPortfolioInformationV01.PrimaryCorporateInvestor => PrimaryCorporateInvestor;
-    IOrganisation4? IRequestForPEPOrISAOrPortfolioInformationV01.SecondaryCorporateInvestor => SecondaryCorporateInvestor;
-    IEnumerable<IOrganisation4> IRequestForPEPOrISAOrPortfolioInformationV01.OtherCorporateInvestor => OtherCorporateInvestor;
+    IMessageIdentification1 IRequestForPEPOrISAOrPortfolioInformationV01.MessageReference =>
+        MessageReference;
+    IAdditionalReference3? IRequestForPEPOrISAOrPortfolioInformationV01.PoolReference =>
+        PoolReference;
+    IAdditionalReference3? IRequestForPEPOrISAOrPortfolioInformationV01.PreviousReference =>
+        PreviousReference;
+    IAdditionalReference3? IRequestForPEPOrISAOrPortfolioInformationV01.RelatedReference =>
+        RelatedReference;
+    IIndividualPerson8? IRequestForPEPOrISAOrPortfolioInformationV01.PrimaryIndividualInvestor =>
+        PrimaryIndividualInvestor;
+    IIndividualPerson8? IRequestForPEPOrISAOrPortfolioInformationV01.SecondaryIndividualInvestor =>
+        SecondaryIndividualInvestor;
+    IEnumerable<IIndividualPerson8> IRequestForPEPOrISAOrPortfolioInformationV01.OtherIndividualInvestor =>
+        OtherIndividualInvestor;
+    IOrganisation4? IRequestForPEPOrISAOrPortfolioInformationV01.PrimaryCorporateInvestor =>
+        PrimaryCorporateInvestor;
+    IOrganisation4? IRequestForPEPOrISAOrPortfolioInformationV01.SecondaryCorporateInvestor =>
+        SecondaryCorporateInvestor;
+    IEnumerable<IOrganisation4> IRequestForPEPOrISAOrPortfolioInformationV01.OtherCorporateInvestor =>
+        OtherCorporateInvestor;
     IAccount5 IRequestForPEPOrISAOrPortfolioInformationV01.ClientAccount => ClientAccount;
     IAccount6? IRequestForPEPOrISAOrPortfolioInformationV01.NomineeAccount => NomineeAccount;
-    IPartyIdentification2Choice IRequestForPEPOrISAOrPortfolioInformationV01.NewPlanManager => NewPlanManager;
-    IEnumerable<IPEPISATransfer5> IRequestForPEPOrISAOrPortfolioInformationV01.ProductTransfer => ProductTransfer;
+    IPartyIdentification2Choice IRequestForPEPOrISAOrPortfolioInformationV01.NewPlanManager =>
+        NewPlanManager;
+    IEnumerable<IPEPISATransfer5> IRequestForPEPOrISAOrPortfolioInformationV01.ProductTransfer =>
+        ProductTransfer;
     IEnumerable<IExtension1> IRequestForPEPOrISAOrPortfolioInformationV01.Extension => Extension;
 }

@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementUpdateTypeCodeAndDSSCod
 /// Update type expressed as a data source scheme and a code used within the data source scheme.
 /// </summary>
 [IsoId("_Q7Cp9dp-Ed-ak6NoX_4Aeg_-2045399501")]
-public interface IStatementUpdateTypeAsDSS : IStatementUpdateTypeCodeAndDSSCodeChoice, IIsoChoiceVariant
+public interface IStatementUpdateTypeAsDSS
+    : IStatementUpdateTypeCodeAndDSSCodeChoice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Entity that assigns the identification.

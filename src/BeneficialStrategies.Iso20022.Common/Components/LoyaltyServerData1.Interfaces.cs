@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record LoyaltyServerData1 : ILoyaltyServerData1
 {
-    ITransactionIdentifier1? ILoyaltyServerData1.LoyaltyTransactionIdentification => LoyaltyTransactionIdentification;
+    ITransactionIdentifier1? ILoyaltyServerData1.LoyaltyTransactionIdentification =>
+        LoyaltyTransactionIdentification;
 }

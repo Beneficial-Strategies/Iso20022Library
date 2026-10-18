@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the rejection or repair reason.
 /// </summary>
 [IsoId("_ify0V_4wEeClUvPNHKL9Zw")]
-public interface IRejectionAndRepairReason14Choice : IIsoChoice
-{
-}
+public interface IRejectionAndRepairReason14Choice : IIsoChoice { }

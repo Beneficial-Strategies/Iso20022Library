@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Quorum Quantity2Choice.
 /// </summary>
 [IsoId("_h-GeH5K5Ee-l-O3vIHRmRw")]
-public interface IQuorumQuantity2Choice : IIsoChoice
-{
-}
+public interface IQuorumQuantity2Choice : IIsoChoice { }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record Geolocation1 : IGeolocation1
 {
-    IGeolocationGeographicCoordinates1? IGeolocation1.GeographicCoordinates => GeographicCoordinates;
+    IGeolocationGeographicCoordinates1? IGeolocation1.GeographicCoordinates =>
+        GeographicCoordinates;
     IGeolocationUTMCoordinates1? IGeolocation1.UTMCoordinates => UTMCoordinates;
 }

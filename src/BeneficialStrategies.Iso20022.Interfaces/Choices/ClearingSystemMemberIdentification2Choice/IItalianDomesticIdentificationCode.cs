@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
 /// Italian Domestic Identification Code - identifies Italian financial institutions on the Italian national clearing system. The code is assigned by the Associazione Bancaria Italiana (ABI).
 /// </summary>
 [IsoId("_TC8KmNp-Ed-ak6NoX_4Aeg_1989940263")]
-public interface IItalianDomesticIdentificationCode : IClearingSystemMemberIdentification2Choice, IIsoChoiceVariant
+public interface IItalianDomesticIdentificationCode
+    : IClearingSystemMemberIdentification2Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

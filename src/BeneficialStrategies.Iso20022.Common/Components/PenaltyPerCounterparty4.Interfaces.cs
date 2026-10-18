@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record PenaltyPerCounterparty4 : IPenaltyPerCounterparty4
 {
     IPartyIdentification136? IPenaltyPerCounterparty4.AccountServicer => AccountServicer;
-    IPenaltyPartyIdentification1 IPenaltyPerCounterparty4.PartyIdentification => PartyIdentification;
+    IPenaltyPartyIdentification1 IPenaltyPerCounterparty4.PartyIdentification =>
+        PartyIdentification;
     IAmountAndDirection5 IPenaltyPerCounterparty4.AggregatedNetAmount => AggregatedNetAmount;
     IEnumerable<IPenaltyRecord4> IPenaltyPerCounterparty4.PenaltyDetails => PenaltyDetails;
 }

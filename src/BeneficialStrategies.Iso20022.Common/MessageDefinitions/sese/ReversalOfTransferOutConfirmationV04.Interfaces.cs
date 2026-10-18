@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 
 public partial record ReversalOfTransferOutConfirmationV04 : IReversalOfTransferOutConfirmationV04
 {
-    IMessageIdentification1 IReversalOfTransferOutConfirmationV04.MessageIdentification => MessageIdentification;
+    IMessageIdentification1 IReversalOfTransferOutConfirmationV04.MessageIdentification =>
+        MessageIdentification;
     IEnumerable<IReferences11> IReversalOfTransferOutConfirmationV04.References => References;
     IReversal1Choice IReversalOfTransferOutConfirmationV04.Reversal => Reversal;
     ICopyInformation2? IReversalOfTransferOutConfirmationV04.CopyDetails => CopyDetails;

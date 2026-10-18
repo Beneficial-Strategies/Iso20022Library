@@ -14,7 +14,10 @@ public partial record SecuritiesStatementQueryV08 : ISecuritiesStatementQueryV08
     IStatement83? ISecuritiesStatementQueryV08.StatementGeneralDetails => StatementGeneralDetails;
     IPartyIdentification144? ISecuritiesStatementQueryV08.AccountOwner => AccountOwner;
     ISecuritiesAccount19? ISecuritiesStatementQueryV08.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet3? ISecuritiesStatementQueryV08.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
-    IEnumerable<IAdditionalQueryParameters13> ISecuritiesStatementQueryV08.AdditionalQueryParameters => AdditionalQueryParameters;
-    IEnumerable<ISupplementaryData1> ISecuritiesStatementQueryV08.SupplementaryData => SupplementaryData;
+    IBlockChainAddressWallet3? ISecuritiesStatementQueryV08.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
+    IEnumerable<IAdditionalQueryParameters13> ISecuritiesStatementQueryV08.AdditionalQueryParameters =>
+        AdditionalQueryParameters;
+    IEnumerable<ISupplementaryData1> ISecuritiesStatementQueryV08.SupplementaryData =>
+        SupplementaryData;
 }

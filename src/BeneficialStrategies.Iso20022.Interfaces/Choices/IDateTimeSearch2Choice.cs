@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between search criteria based on dates and date ranges.
 /// </summary>
 [IsoId("_68F8RX3sEeibM9CPDGCw0g")]
-public interface IDateTimeSearch2Choice : IIsoChoice
-{
-}
+public interface IDateTimeSearch2Choice : IIsoChoice { }

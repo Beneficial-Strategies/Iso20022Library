@@ -11,10 +11,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record TotalPortfolioValuation1 : ITotalPortfolioValuation1
 {
     IAmountAndDirection30 ITotalPortfolioValuation1.TotalPortfolioValue => TotalPortfolioValue;
-    IAmountAndDirection30? ITotalPortfolioValuation1.PreviousTotalPortfolioValue => PreviousTotalPortfolioValue;
-    IAmountAndRate2? ITotalPortfolioValuation1.TotalPortfolioValueChange => TotalPortfolioValueChange;
+    IAmountAndDirection30? ITotalPortfolioValuation1.PreviousTotalPortfolioValue =>
+        PreviousTotalPortfolioValue;
+    IAmountAndRate2? ITotalPortfolioValuation1.TotalPortfolioValueChange =>
+        TotalPortfolioValueChange;
     IAmountAndDirection30 ITotalPortfolioValuation1.TotalBookValue => TotalBookValue;
-    IAmountAndDirection30? ITotalPortfolioValuation1.PreviousTotalBookValue => PreviousTotalBookValue;
+    IAmountAndDirection30? ITotalPortfolioValuation1.PreviousTotalBookValue =>
+        PreviousTotalBookValue;
     IAmountAndRate2? ITotalPortfolioValuation1.TotalBookValueChange => TotalBookValueChange;
     IAmountAndDirection30? ITotalPortfolioValuation1.TotalReceipts => TotalReceipts;
     IAmountAndDirection30? ITotalPortfolioValuation1.TotalDisbursements => TotalDisbursements;
@@ -23,5 +26,6 @@ public partial record TotalPortfolioValuation1 : ITotalPortfolioValuation1
     IAmountAndDirection31? ITotalPortfolioValuation1.UnrealisedGainOrLoss => UnrealisedGainOrLoss;
     IAmountAndDirection31? ITotalPortfolioValuation1.RealisedGainOrLoss => RealisedGainOrLoss;
     IAmountAndDirection30? ITotalPortfolioValuation1.AccruedIncome => AccruedIncome;
-    IEnumerable<IInvestmentFund1> ITotalPortfolioValuation1.InvestmentFundDetails => InvestmentFundDetails;
+    IEnumerable<IInvestmentFund1> ITotalPortfolioValuation1.InvestmentFundDetails =>
+        InvestmentFundDetails;
 }

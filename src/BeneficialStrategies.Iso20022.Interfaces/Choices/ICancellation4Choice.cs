@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between cancellation by reference or by transfer details.
 /// </summary>
 [IsoId("_d8mKoRXzEeOBE-jZfcm4KQ")]
-public interface ICancellation4Choice : IIsoChoice
-{
-}
+public interface ICancellation4Choice : IIsoChoice { }

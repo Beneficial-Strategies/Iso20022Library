@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.References72Choice;
 
-public partial record ProcessorTransactionIdentification : IProcessorTransactionIdentification
-{
-}
+public partial record ProcessorTransactionIdentification : IProcessorTransactionIdentification { }

@@ -8,12 +8,18 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record SecuritiesSettlementTransactionAuditTrailReport002V05 : ISecuritiesSettlementTransactionAuditTrailReport002V05
+public partial record SecuritiesSettlementTransactionAuditTrailReport002V05
+    : ISecuritiesSettlementTransactionAuditTrailReport002V05
 {
     IPagination1 ISecuritiesSettlementTransactionAuditTrailReport002V05.Pagination => Pagination;
-    ITransactionIdentifications34? ISecuritiesSettlementTransactionAuditTrailReport002V05.TransactionIdentification => TransactionIdentification;
-    ISecuritiesAccount37? ISecuritiesSettlementTransactionAuditTrailReport002V05.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet7? ISecuritiesSettlementTransactionAuditTrailReport002V05.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
-    IPartyIdentification156? ISecuritiesSettlementTransactionAuditTrailReport002V05.AccountOwner => AccountOwner;
-    IEnumerable<IStatusTrail11> ISecuritiesSettlementTransactionAuditTrailReport002V05.StatusTrail => StatusTrail;
+    ITransactionIdentifications34? ISecuritiesSettlementTransactionAuditTrailReport002V05.TransactionIdentification =>
+        TransactionIdentification;
+    ISecuritiesAccount37? ISecuritiesSettlementTransactionAuditTrailReport002V05.SafekeepingAccount =>
+        SafekeepingAccount;
+    IBlockChainAddressWallet7? ISecuritiesSettlementTransactionAuditTrailReport002V05.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
+    IPartyIdentification156? ISecuritiesSettlementTransactionAuditTrailReport002V05.AccountOwner =>
+        AccountOwner;
+    IEnumerable<IStatusTrail11> ISecuritiesSettlementTransactionAuditTrailReport002V05.StatusTrail =>
+        StatusTrail;
 }

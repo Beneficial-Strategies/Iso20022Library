@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record SolicitationFeeRateFormat7Choice_ : ISolicitationFeeRateFormat7Choice
-{
-}
+public abstract partial record SolicitationFeeRateFormat7Choice_
+    : ISolicitationFeeRateFormat7Choice { }

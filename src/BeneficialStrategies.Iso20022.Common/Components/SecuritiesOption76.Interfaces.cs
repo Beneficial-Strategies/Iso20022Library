@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecuritiesOption76 : ISecuritiesOption76
 {
-    ISecurityIdentification19 ISecuritiesOption76.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification19 ISecuritiesOption76.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     IQuantity6Choice ISecuritiesOption76.EntitledQuantity => EntitledQuantity;
     IDateFormat58Choice ISecuritiesOption76.PaymentDate => PaymentDate;
 }

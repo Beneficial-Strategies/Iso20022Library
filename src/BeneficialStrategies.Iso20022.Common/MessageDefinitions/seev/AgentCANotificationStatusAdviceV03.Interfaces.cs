@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 
 public partial record AgentCANotificationStatusAdviceV03 : IAgentCANotificationStatusAdviceV03
 {
-    IAgentDocumentIdentificationAndStatus1Choice IAgentCANotificationStatusAdviceV03.AgentDocumentIdentificationAndStatus => AgentDocumentIdentificationAndStatus;
-    ICorporateActionGeneralInformation175 IAgentCANotificationStatusAdviceV03.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
+    IAgentDocumentIdentificationAndStatus1Choice IAgentCANotificationStatusAdviceV03.AgentDocumentIdentificationAndStatus =>
+        AgentDocumentIdentificationAndStatus;
+    ICorporateActionGeneralInformation175 IAgentCANotificationStatusAdviceV03.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
 }

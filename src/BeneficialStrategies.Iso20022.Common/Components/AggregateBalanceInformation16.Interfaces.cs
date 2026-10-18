@@ -10,21 +10,35 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record AggregateBalanceInformation16 : IAggregateBalanceInformation16
 {
-    ISecurityIdentification14 IAggregateBalanceInformation16.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentAttributes35? IAggregateBalanceInformation16.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
-    IFinancialInstrument21? IAggregateBalanceInformation16.InvestmentFundsFinancialInstrumentAttributes => InvestmentFundsFinancialInstrumentAttributes;
-    IBasicCollateralValuation1Details? IAggregateBalanceInformation16.ValuationHaircutDetails => ValuationHaircutDetails;
+    ISecurityIdentification14 IAggregateBalanceInformation16.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentAttributes35? IAggregateBalanceInformation16.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
+    IFinancialInstrument21? IAggregateBalanceInformation16.InvestmentFundsFinancialInstrumentAttributes =>
+        InvestmentFundsFinancialInstrumentAttributes;
+    IBasicCollateralValuation1Details? IAggregateBalanceInformation16.ValuationHaircutDetails =>
+        ValuationHaircutDetails;
     IBalance1 IAggregateBalanceInformation16.AggregateBalance => AggregateBalance;
     IBalanceQuantity5Choice? IAggregateBalanceInformation16.AvailableBalance => AvailableBalance;
-    IBalanceQuantity5Choice? IAggregateBalanceInformation16.NotAvailableBalance => NotAvailableBalance;
-    ISafekeepingPlaceFormat3Choice? IAggregateBalanceInformation16.SafekeepingPlace => SafekeepingPlace;
+    IBalanceQuantity5Choice? IAggregateBalanceInformation16.NotAvailableBalance =>
+        NotAvailableBalance;
+    ISafekeepingPlaceFormat3Choice? IAggregateBalanceInformation16.SafekeepingPlace =>
+        SafekeepingPlace;
     IEnumerable<IPriceInformation5> IAggregateBalanceInformation16.PriceDetails => PriceDetails;
-    IEnumerable<IForeignExchangeTerms14> IAggregateBalanceInformation16.ForeignExchangeDetails => ForeignExchangeDetails;
-    IBalanceAmounts3? IAggregateBalanceInformation16.AccountBaseCurrencyAmounts => AccountBaseCurrencyAmounts;
-    IBalanceAmounts3? IAggregateBalanceInformation16.InstrumentCurrencyAmounts => InstrumentCurrencyAmounts;
-    IEnumerable<IQuantityBreakdown13> IAggregateBalanceInformation16.QuantityBreakdown => QuantityBreakdown;
-    IEnumerable<ISubBalanceInformation9> IAggregateBalanceInformation16.BalanceBreakdown => BalanceBreakdown;
-    IEnumerable<IAdditionalBalanceInformation9> IAggregateBalanceInformation16.AdditionalBalanceBreakdown => AdditionalBalanceBreakdown;
-    IEnumerable<IAggregateBalancePerSafekeepingPlace15> IAggregateBalanceInformation16.BalanceAtSafekeepingPlace => BalanceAtSafekeepingPlace;
-    IEnumerable<ISupplementaryData1> IAggregateBalanceInformation16.SupplementaryData => SupplementaryData;
+    IEnumerable<IForeignExchangeTerms14> IAggregateBalanceInformation16.ForeignExchangeDetails =>
+        ForeignExchangeDetails;
+    IBalanceAmounts3? IAggregateBalanceInformation16.AccountBaseCurrencyAmounts =>
+        AccountBaseCurrencyAmounts;
+    IBalanceAmounts3? IAggregateBalanceInformation16.InstrumentCurrencyAmounts =>
+        InstrumentCurrencyAmounts;
+    IEnumerable<IQuantityBreakdown13> IAggregateBalanceInformation16.QuantityBreakdown =>
+        QuantityBreakdown;
+    IEnumerable<ISubBalanceInformation9> IAggregateBalanceInformation16.BalanceBreakdown =>
+        BalanceBreakdown;
+    IEnumerable<IAdditionalBalanceInformation9> IAggregateBalanceInformation16.AdditionalBalanceBreakdown =>
+        AdditionalBalanceBreakdown;
+    IEnumerable<IAggregateBalancePerSafekeepingPlace15> IAggregateBalanceInformation16.BalanceAtSafekeepingPlace =>
+        BalanceAtSafekeepingPlace;
+    IEnumerable<ISupplementaryData1> IAggregateBalanceInformation16.SupplementaryData =>
+        SupplementaryData;
 }

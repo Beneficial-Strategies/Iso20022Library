@@ -10,10 +10,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PointOfInteractionComponent12 : IPointOfInteractionComponent12
 {
-    IPointOfInteractionComponentIdentification2 IPointOfInteractionComponent12.Identification => Identification;
+    IPointOfInteractionComponentIdentification2 IPointOfInteractionComponent12.Identification =>
+        Identification;
     IPointOfInteractionComponentStatus3? IPointOfInteractionComponent12.Status => Status;
-    IEnumerable<IGenericIdentification48> IPointOfInteractionComponent12.StandardCompliance => StandardCompliance;
-    IPointOfInteractionComponentCharacteristics8? IPointOfInteractionComponent12.Characteristics => Characteristics;
-    IEnumerable<IPointOfInteractionComponentAssessment1> IPointOfInteractionComponent12.Assessment => Assessment;
+    IEnumerable<IGenericIdentification48> IPointOfInteractionComponent12.StandardCompliance =>
+        StandardCompliance;
+    IPointOfInteractionComponentCharacteristics8? IPointOfInteractionComponent12.Characteristics =>
+        Characteristics;
+    IEnumerable<IPointOfInteractionComponentAssessment1> IPointOfInteractionComponent12.Assessment =>
+        Assessment;
     IEnumerable<IPackageType3> IPointOfInteractionComponent12.Package => Package;
 }

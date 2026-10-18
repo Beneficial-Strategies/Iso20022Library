@@ -10,15 +10,23 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record DirectDebitTransactionInformation25 : IDirectDebitTransactionInformation25
 {
-    IPaymentIdentification7 IDirectDebitTransactionInformation25.PaymentIdentification => PaymentIdentification;
-    IPaymentTypeInformation28? IDirectDebitTransactionInformation25.PaymentTypeInformation => PaymentTypeInformation;
-    ISettlementDateTimeIndication1? IDirectDebitTransactionInformation25.SettlementTimeIndication => SettlementTimeIndication;
-    ISettlementTimeRequest2? IDirectDebitTransactionInformation25.SettlementTimeRequest => SettlementTimeRequest;
-    IBranchAndFinancialInstitutionIdentification6? IDirectDebitTransactionInformation25.UltimateDebtor => UltimateDebtor;
-    IBranchAndFinancialInstitutionIdentification6 IDirectDebitTransactionInformation25.Debtor => Debtor;
+    IPaymentIdentification7 IDirectDebitTransactionInformation25.PaymentIdentification =>
+        PaymentIdentification;
+    IPaymentTypeInformation28? IDirectDebitTransactionInformation25.PaymentTypeInformation =>
+        PaymentTypeInformation;
+    ISettlementDateTimeIndication1? IDirectDebitTransactionInformation25.SettlementTimeIndication =>
+        SettlementTimeIndication;
+    ISettlementTimeRequest2? IDirectDebitTransactionInformation25.SettlementTimeRequest =>
+        SettlementTimeRequest;
+    IBranchAndFinancialInstitutionIdentification6? IDirectDebitTransactionInformation25.UltimateDebtor =>
+        UltimateDebtor;
+    IBranchAndFinancialInstitutionIdentification6 IDirectDebitTransactionInformation25.Debtor =>
+        Debtor;
     ICashAccount38? IDirectDebitTransactionInformation25.DebtorAccount => DebtorAccount;
-    IBranchAndFinancialInstitutionIdentification6? IDirectDebitTransactionInformation25.DebtorAgent => DebtorAgent;
+    IBranchAndFinancialInstitutionIdentification6? IDirectDebitTransactionInformation25.DebtorAgent =>
+        DebtorAgent;
     ICashAccount38? IDirectDebitTransactionInformation25.DebtorAgentAccount => DebtorAgentAccount;
     IPurpose2Choice? IDirectDebitTransactionInformation25.Purpose => Purpose;
-    IRemittanceInformation2? IDirectDebitTransactionInformation25.RemittanceInformation => RemittanceInformation;
+    IRemittanceInformation2? IDirectDebitTransactionInformation25.RemittanceInformation =>
+        RemittanceInformation;
 }

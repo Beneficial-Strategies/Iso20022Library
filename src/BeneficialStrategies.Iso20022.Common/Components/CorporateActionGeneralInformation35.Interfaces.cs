@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CorporateActionGeneralInformation35 : ICorporateActionGeneralInformation35
 {
     ICorporateActionEventType7Choice ICorporateActionGeneralInformation35.EventType => EventType;
-    ICorporateActionMandatoryVoluntary1Choice ICorporateActionGeneralInformation35.MandatoryVoluntaryEventType => MandatoryVoluntaryEventType;
-    ISecurityIdentification14 ICorporateActionGeneralInformation35.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ICorporateActionMandatoryVoluntary1Choice ICorporateActionGeneralInformation35.MandatoryVoluntaryEventType =>
+        MandatoryVoluntaryEventType;
+    ISecurityIdentification14 ICorporateActionGeneralInformation35.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
 }

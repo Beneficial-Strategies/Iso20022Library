@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the frequency of a CA event.
 /// </summary>
 [IsoId("_RmQKJ9p-Ed-ak6NoX_4Aeg_-1912631141")]
-public interface ICorporateActionFrequencyType1FormatChoice : IIsoChoice
-{
-}
+public interface ICorporateActionFrequencyType1FormatChoice : IIsoChoice { }

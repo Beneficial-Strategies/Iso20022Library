@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 
 public partial record TransferOutInstructionV05 : ITransferOutInstructionV05
 {
-    IMessageIdentification1 ITransferOutInstructionV05.MessageIdentification => MessageIdentification;
+    IMessageIdentification1 ITransferOutInstructionV05.MessageIdentification =>
+        MessageIdentification;
     IAdditionalReference2? ITransferOutInstructionV05.PoolReference => PoolReference;
     IAdditionalReference2? ITransferOutInstructionV05.PreviousReference => PreviousReference;
     IAdditionalReference2? ITransferOutInstructionV05.RelatedReference => RelatedReference;
@@ -18,7 +19,8 @@ public partial record TransferOutInstructionV05 : ITransferOutInstructionV05
     IEnumerable<ITransfer27> ITransferOutInstructionV05.TransferDetails => TransferDetails;
     IInvestmentAccount40 ITransferOutInstructionV05.AccountDetails => AccountDetails;
     IReceiveInformation13? ITransferOutInstructionV05.SettlementDetails => SettlementDetails;
-    IMarketPracticeVersion1? ITransferOutInstructionV05.MarketPracticeVersion => MarketPracticeVersion;
+    IMarketPracticeVersion1? ITransferOutInstructionV05.MarketPracticeVersion =>
+        MarketPracticeVersion;
     ICopyInformation2? ITransferOutInstructionV05.CopyDetails => CopyDetails;
     IEnumerable<IExtension1> ITransferOutInstructionV05.Extension => Extension;
 }

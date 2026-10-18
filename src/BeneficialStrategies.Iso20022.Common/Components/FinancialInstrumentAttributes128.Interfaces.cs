@@ -10,17 +10,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record FinancialInstrumentAttributes128 : IFinancialInstrumentAttributes128
 {
-    ISecurityIdentification19 IFinancialInstrumentAttributes128.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IMarketIdentification3Choice? IFinancialInstrumentAttributes128.PlaceOfListing => PlaceOfListing;
-    IInterestComputationMethodFormat4Choice? IFinancialInstrumentAttributes128.DayCountBasis => DayCountBasis;
-    IClassificationType32Choice? IFinancialInstrumentAttributes128.ClassificationType => ClassificationType;
+    ISecurityIdentification19 IFinancialInstrumentAttributes128.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IMarketIdentification3Choice? IFinancialInstrumentAttributes128.PlaceOfListing =>
+        PlaceOfListing;
+    IInterestComputationMethodFormat4Choice? IFinancialInstrumentAttributes128.DayCountBasis =>
+        DayCountBasis;
+    IClassificationType32Choice? IFinancialInstrumentAttributes128.ClassificationType =>
+        ClassificationType;
     IOptionStyle8Choice? IFinancialInstrumentAttributes128.OptionStyle => OptionStyle;
     IRateFormat24Choice? IFinancialInstrumentAttributes128.InterestRate => InterestRate;
     IRateFormat24Choice? IFinancialInstrumentAttributes128.NextInterestRate => NextInterestRate;
-    IRateFormat24Choice? IFinancialInstrumentAttributes128.PercentageOfDebtClaim => PercentageOfDebtClaim;
+    IRateFormat24Choice? IFinancialInstrumentAttributes128.PercentageOfDebtClaim =>
+        PercentageOfDebtClaim;
     IRateFormat12Choice? IFinancialInstrumentAttributes128.PreviousFactor => PreviousFactor;
     IRateFormat12Choice? IFinancialInstrumentAttributes128.NextFactor => NextFactor;
     IQuantityToQuantityRatio1? IFinancialInstrumentAttributes128.WarrantParity => WarrantParity;
-    IFinancialInstrumentQuantity33Choice? IFinancialInstrumentAttributes128.MinimumNominalQuantity => MinimumNominalQuantity;
-    IFinancialInstrumentQuantity33Choice? IFinancialInstrumentAttributes128.ContractSize => ContractSize;
+    IFinancialInstrumentQuantity33Choice? IFinancialInstrumentAttributes128.MinimumNominalQuantity =>
+        MinimumNominalQuantity;
+    IFinancialInstrumentQuantity33Choice? IFinancialInstrumentAttributes128.ContractSize =>
+        ContractSize;
 }

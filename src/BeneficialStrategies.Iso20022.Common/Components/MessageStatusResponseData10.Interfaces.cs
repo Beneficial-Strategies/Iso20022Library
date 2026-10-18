@@ -12,10 +12,16 @@ public partial record MessageStatusResponseData10 : IMessageStatusResponseData10
 {
     IGenericIdentification177 IMessageStatusResponseData10.InitiatingParty => InitiatingParty;
     IResponseType11 IMessageStatusResponseData10.TransactionResponse => TransactionResponse;
-    ILoyaltyResponse3? IMessageStatusResponseData10.RepeatedLoyaltyResponse => RepeatedLoyaltyResponse;
-    IPaymentResponse8? IMessageStatusResponseData10.RepeatedPaymentResponse => RepeatedPaymentResponse;
-    IReversalResponse10? IMessageStatusResponseData10.RepeatedReversalResponse => RepeatedReversalResponse;
-    IStoredValueResponse9? IMessageStatusResponseData10.RepeatedStoredValueResponse => RepeatedStoredValueResponse;
-    ICardAcquisitionResponse3? IMessageStatusResponseData10.RepeatedCardAcquisitionResponse => RepeatedCardAcquisitionResponse;
-    IDeviceSendApplicationProtocolDataUnitCardReaderResponse1? IMessageStatusResponseData10.RepeatedSendApplicationProtocolDataUnitCardReaderResponse => RepeatedSendApplicationProtocolDataUnitCardReaderResponse;
+    ILoyaltyResponse3? IMessageStatusResponseData10.RepeatedLoyaltyResponse =>
+        RepeatedLoyaltyResponse;
+    IPaymentResponse8? IMessageStatusResponseData10.RepeatedPaymentResponse =>
+        RepeatedPaymentResponse;
+    IReversalResponse10? IMessageStatusResponseData10.RepeatedReversalResponse =>
+        RepeatedReversalResponse;
+    IStoredValueResponse9? IMessageStatusResponseData10.RepeatedStoredValueResponse =>
+        RepeatedStoredValueResponse;
+    ICardAcquisitionResponse3? IMessageStatusResponseData10.RepeatedCardAcquisitionResponse =>
+        RepeatedCardAcquisitionResponse;
+    IDeviceSendApplicationProtocolDataUnitCardReaderResponse1? IMessageStatusResponseData10.RepeatedSendApplicationProtocolDataUnitCardReaderResponse =>
+        RepeatedSendApplicationProtocolDataUnitCardReaderResponse;
 }

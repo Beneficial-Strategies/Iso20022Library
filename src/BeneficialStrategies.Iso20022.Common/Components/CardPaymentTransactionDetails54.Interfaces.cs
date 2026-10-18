@@ -12,10 +12,13 @@ public partial record CardPaymentTransactionDetails54 : ICardPaymentTransactionD
 {
     IDetailedAmount15? ICardPaymentTransactionDetails54.DetailedAmount => DetailedAmount;
     IEnumerable<OnLineReason2Code> ICardPaymentTransactionDetails54.OnLineReason => OnLineReason;
-    ICurrencyConversion35? ICardPaymentTransactionDetails54.CurrencyConversionResult => CurrencyConversionResult;
+    ICurrencyConversion35? ICardPaymentTransactionDetails54.CurrencyConversionResult =>
+        CurrencyConversionResult;
     IEnumerable<IInstalment7> ICardPaymentTransactionDetails54.Instalment => Instalment;
     IRecurringTransaction7? ICardPaymentTransactionDetails54.Recurring => Recurring;
-    IAggregationTransaction3? ICardPaymentTransactionDetails54.AggregationTransaction => AggregationTransaction;
+    IAggregationTransaction3? ICardPaymentTransactionDetails54.AggregationTransaction =>
+        AggregationTransaction;
     IEnumerable<IProduct6> ICardPaymentTransactionDetails54.SaleItem => SaleItem;
-    IEnumerable<IExternallyDefinedData5> ICardPaymentTransactionDetails54.AdditionalInformation => AdditionalInformation;
+    IEnumerable<IExternallyDefinedData5> ICardPaymentTransactionDetails54.AdditionalInformation =>
+        AdditionalInformation;
 }

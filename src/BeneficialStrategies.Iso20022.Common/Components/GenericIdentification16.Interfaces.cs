@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record GenericIdentification16 : IGenericIdentification16
 {
-    IPersonIdentificationType3Choice IGenericIdentification16.IdentificationType => IdentificationType;
+    IPersonIdentificationType3Choice IGenericIdentification16.IdentificationType =>
+        IdentificationType;
 }

@@ -16,8 +16,11 @@ public partial record CorporateActionDate71 : ICorporateActionDate71
     IDateFormat49Choice? ICorporateActionDate71.MarketDeadline => MarketDeadline;
     IDateFormat54Choice? ICorporateActionDate71.ResponseDeadline => ResponseDeadline;
     IDateFormat49Choice? ICorporateActionDate71.ExpiryDate => ExpiryDate;
-    IDateFormat49Choice? ICorporateActionDate71.SubscriptionCostDebitDate => SubscriptionCostDebitDate;
-    IDateFormat49Choice? ICorporateActionDate71.DepositoryCoverExpirationDate => DepositoryCoverExpirationDate;
+    IDateFormat49Choice? ICorporateActionDate71.SubscriptionCostDebitDate =>
+        SubscriptionCostDebitDate;
+    IDateFormat49Choice? ICorporateActionDate71.DepositoryCoverExpirationDate =>
+        DepositoryCoverExpirationDate;
     IDateFormat49Choice? ICorporateActionDate71.StockLendingDeadline => StockLendingDeadline;
-    IEnumerable<IBorrowerLendingDeadline4> ICorporateActionDate71.BorrowerStockLendingDeadline => BorrowerStockLendingDeadline;
+    IEnumerable<IBorrowerLendingDeadline4> ICorporateActionDate71.BorrowerStockLendingDeadline =>
+        BorrowerStockLendingDeadline;
 }

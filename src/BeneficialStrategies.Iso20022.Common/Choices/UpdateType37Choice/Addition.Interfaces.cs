@@ -10,19 +10,23 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType37Choice;
 
 public partial record Addition : IAddition
 {
-    ISettlementTypeAndAdditionalParameters13? IAddition.SettlementTypeAndAdditionalParameters => SettlementTypeAndAdditionalParameters;
+    ISettlementTypeAndAdditionalParameters13? IAddition.SettlementTypeAndAdditionalParameters =>
+        SettlementTypeAndAdditionalParameters;
     IEnumerable<ILinkages63> IAddition.Linkages => Linkages;
     ISecuritiesTradeDetails120? IAddition.TradeDetails => TradeDetails;
-    IFinancialInstrumentAttributes111? IAddition.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
+    IFinancialInstrumentAttributes111? IAddition.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
     IQuantityAndAccount100? IAddition.QuantityAndAccountDetails => QuantityAndAccountDetails;
     ISettlementDetails200? IAddition.SettlementParameters => SettlementParameters;
-    IStandingSettlementInstruction18? IAddition.StandingSettlementInstructionDetails => StandingSettlementInstructionDetails;
+    IStandingSettlementInstruction18? IAddition.StandingSettlementInstructionDetails =>
+        StandingSettlementInstructionDetails;
     ISettlementParties98? IAddition.DeliveringSettlementParties => DeliveringSettlementParties;
     ISettlementParties98? IAddition.ReceivingSettlementParties => ReceivingSettlementParties;
     ICashParties36? IAddition.CashParties => CashParties;
     IAmountAndDirection95? IAddition.SettlementAmount => SettlementAmount;
     IOtherAmounts39? IAddition.OtherAmounts => OtherAmounts;
     IOtherParties43? IAddition.OtherBusinessParties => OtherBusinessParties;
-    IRegistrationParameters6? IAddition.AdditionalPhysicalOrRegistrationDetails => AdditionalPhysicalOrRegistrationDetails;
+    IRegistrationParameters6? IAddition.AdditionalPhysicalOrRegistrationDetails =>
+        AdditionalPhysicalOrRegistrationDetails;
     IEnumerable<ISupplementaryData1> IAddition.SupplementaryData => SupplementaryData;
 }

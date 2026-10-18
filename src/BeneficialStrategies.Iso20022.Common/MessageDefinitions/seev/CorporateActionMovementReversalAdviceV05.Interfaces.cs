@@ -8,19 +8,32 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record CorporateActionMovementReversalAdviceV05 : ICorporateActionMovementReversalAdviceV05
+public partial record CorporateActionMovementReversalAdviceV05
+    : ICorporateActionMovementReversalAdviceV05
 {
-    IDocumentIdentification15 ICorporateActionMovementReversalAdviceV05.MovementConfirmationIdentification => MovementConfirmationIdentification;
-    IEnumerable<IDocumentIdentification13> ICorporateActionMovementReversalAdviceV05.OtherDocumentIdentification => OtherDocumentIdentification;
-    IEnumerable<ICorporateActionEventReference1> ICorporateActionMovementReversalAdviceV05.EventsLinkage => EventsLinkage;
-    ICorporateActionReversalReason1? ICorporateActionMovementReversalAdviceV05.ReversalReason => ReversalReason;
-    ICorporateActionGeneralInformation50 ICorporateActionMovementReversalAdviceV05.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
+    IDocumentIdentification15 ICorporateActionMovementReversalAdviceV05.MovementConfirmationIdentification =>
+        MovementConfirmationIdentification;
+    IEnumerable<IDocumentIdentification13> ICorporateActionMovementReversalAdviceV05.OtherDocumentIdentification =>
+        OtherDocumentIdentification;
+    IEnumerable<ICorporateActionEventReference1> ICorporateActionMovementReversalAdviceV05.EventsLinkage =>
+        EventsLinkage;
+    ICorporateActionReversalReason1? ICorporateActionMovementReversalAdviceV05.ReversalReason =>
+        ReversalReason;
+    ICorporateActionGeneralInformation50 ICorporateActionMovementReversalAdviceV05.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
     IAccountAndBalance4 ICorporateActionMovementReversalAdviceV05.AccountDetails => AccountDetails;
-    ICorporateAction14? ICorporateActionMovementReversalAdviceV05.CorporateActionDetails => CorporateActionDetails;
-    ICorporateActionOption39 ICorporateActionMovementReversalAdviceV05.CorporateActionConfirmationDetails => CorporateActionConfirmationDetails;
-    ICorporateActionNarrative4? ICorporateActionMovementReversalAdviceV05.AdditionalInformation => AdditionalInformation;
-    IEnumerable<IPartyIdentification46Choice> ICorporateActionMovementReversalAdviceV05.IssuerAgent => IssuerAgent;
-    IEnumerable<IPartyIdentification46Choice> ICorporateActionMovementReversalAdviceV05.PayingAgent => PayingAgent;
-    IEnumerable<IPartyIdentification46Choice> ICorporateActionMovementReversalAdviceV05.SubPayingAgent => SubPayingAgent;
-    IEnumerable<ISupplementaryData1> ICorporateActionMovementReversalAdviceV05.SupplementaryData => SupplementaryData;
+    ICorporateAction14? ICorporateActionMovementReversalAdviceV05.CorporateActionDetails =>
+        CorporateActionDetails;
+    ICorporateActionOption39 ICorporateActionMovementReversalAdviceV05.CorporateActionConfirmationDetails =>
+        CorporateActionConfirmationDetails;
+    ICorporateActionNarrative4? ICorporateActionMovementReversalAdviceV05.AdditionalInformation =>
+        AdditionalInformation;
+    IEnumerable<IPartyIdentification46Choice> ICorporateActionMovementReversalAdviceV05.IssuerAgent =>
+        IssuerAgent;
+    IEnumerable<IPartyIdentification46Choice> ICorporateActionMovementReversalAdviceV05.PayingAgent =>
+        PayingAgent;
+    IEnumerable<IPartyIdentification46Choice> ICorporateActionMovementReversalAdviceV05.SubPayingAgent =>
+        SubPayingAgent;
+    IEnumerable<ISupplementaryData1> ICorporateActionMovementReversalAdviceV05.SupplementaryData =>
+        SupplementaryData;
 }

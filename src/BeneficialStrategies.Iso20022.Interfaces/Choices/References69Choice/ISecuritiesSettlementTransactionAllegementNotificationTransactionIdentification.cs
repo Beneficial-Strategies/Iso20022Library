@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.References69Choice;
 /// Unambiguous identification of the allegement notification to be cancelled as known by the account servicer.
 /// </summary>
 [IsoId("_z_ogRwzXEeuUZuaHWzkTew")]
-public interface ISecuritiesSettlementTransactionAllegementNotificationTransactionIdentification : IReferences69Choice, IIsoChoiceVariant
+public interface ISecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
+    : IReferences69Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Provides unambiguous transaction identification information.

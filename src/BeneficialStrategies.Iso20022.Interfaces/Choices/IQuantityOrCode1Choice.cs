@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a quantity or a code value.
 /// </summary>
 [IsoId("_9Z368K-VEemJ1NnLPsTFaw")]
-public interface IQuantityOrCode1Choice : IIsoChoice
-{
-}
+public interface IQuantityOrCode1Choice : IIsoChoice { }

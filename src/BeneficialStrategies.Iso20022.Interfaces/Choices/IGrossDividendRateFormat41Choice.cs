@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between an amount or an unspecified rate.
 /// </summary>
 [IsoId("_bZ6BFwVTEeqjd8n6wD9JVw")]
-public interface IGrossDividendRateFormat41Choice : IIsoChoice
-{
-}
+public interface IGrossDividendRateFormat41Choice : IIsoChoice { }

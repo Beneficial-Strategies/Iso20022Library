@@ -8,13 +8,18 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record SecuritiesTransactionPenaltiesReportV01 : ISecuritiesTransactionPenaltiesReportV01
+public partial record SecuritiesTransactionPenaltiesReportV01
+    : ISecuritiesTransactionPenaltiesReportV01
 {
     IPagination1? ISecuritiesTransactionPenaltiesReportV01.ReportPagination => ReportPagination;
-    IPenaltyReport1 ISecuritiesTransactionPenaltiesReportV01.ReportGeneralDetails => ReportGeneralDetails;
-    ISecuritiesAccount19? ISecuritiesTransactionPenaltiesReportV01.SafekeepingAccount => SafekeepingAccount;
+    IPenaltyReport1 ISecuritiesTransactionPenaltiesReportV01.ReportGeneralDetails =>
+        ReportGeneralDetails;
+    ISecuritiesAccount19? ISecuritiesTransactionPenaltiesReportV01.SafekeepingAccount =>
+        SafekeepingAccount;
     IPartyIdentification136? ISecuritiesTransactionPenaltiesReportV01.AccountOwner => AccountOwner;
-    IPartyIdentification136 ISecuritiesTransactionPenaltiesReportV01.AccountServicer => AccountServicer;
+    IPartyIdentification136 ISecuritiesTransactionPenaltiesReportV01.AccountServicer =>
+        AccountServicer;
     IEnumerable<IPenalty4> ISecuritiesTransactionPenaltiesReportV01.Penalty => Penalty;
-    IEnumerable<ISupplementaryData1> ISecuritiesTransactionPenaltiesReportV01.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> ISecuritiesTransactionPenaltiesReportV01.SupplementaryData =>
+        SupplementaryData;
 }

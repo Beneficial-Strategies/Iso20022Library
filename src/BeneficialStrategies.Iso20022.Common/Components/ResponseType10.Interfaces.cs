@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record ResponseType10 : IResponseType10
-{
-}
+public partial record ResponseType10 : IResponseType10 { }

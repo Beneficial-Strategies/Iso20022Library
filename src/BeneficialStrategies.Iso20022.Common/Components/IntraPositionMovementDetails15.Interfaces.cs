@@ -11,14 +11,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record IntraPositionMovementDetails15 : IIntraPositionMovementDetails15
 {
     IReferences42Choice? IIntraPositionMovementDetails15.Identification => Identification;
-    IFinancialInstrumentQuantity1Choice IIntraPositionMovementDetails15.SettledQuantity => SettledQuantity;
-    IFinancialInstrumentQuantity1Choice? IIntraPositionMovementDetails15.PreviouslySettledQuantity => PreviouslySettledQuantity;
-    IFinancialInstrumentQuantity1Choice? IIntraPositionMovementDetails15.RemainingToBeSettledQuantity => RemainingToBeSettledQuantity;
-    IGenericIdentification37? IIntraPositionMovementDetails15.SecuritiesSubBalanceIdentification => SecuritiesSubBalanceIdentification;
+    IFinancialInstrumentQuantity1Choice IIntraPositionMovementDetails15.SettledQuantity =>
+        SettledQuantity;
+    IFinancialInstrumentQuantity1Choice? IIntraPositionMovementDetails15.PreviouslySettledQuantity =>
+        PreviouslySettledQuantity;
+    IFinancialInstrumentQuantity1Choice? IIntraPositionMovementDetails15.RemainingToBeSettledQuantity =>
+        RemainingToBeSettledQuantity;
+    IGenericIdentification37? IIntraPositionMovementDetails15.SecuritiesSubBalanceIdentification =>
+        SecuritiesSubBalanceIdentification;
     ISecuritiesBalanceType6Choice IIntraPositionMovementDetails15.BalanceTo => BalanceTo;
     IDateAndDateTime2Choice IIntraPositionMovementDetails15.SettlementDate => SettlementDate;
     IDateAndDateTime2Choice? IIntraPositionMovementDetails15.AvailableDate => AvailableDate;
-    ICorporateActionEventType73Choice? IIntraPositionMovementDetails15.CorporateActionEventType => CorporateActionEventType;
-    IAmountAndDirection44? IIntraPositionMovementDetails15.CollateralMonitorAmount => CollateralMonitorAmount;
-    IEnumerable<ISupplementaryData1> IIntraPositionMovementDetails15.SupplementaryData => SupplementaryData;
+    ICorporateActionEventType73Choice? IIntraPositionMovementDetails15.CorporateActionEventType =>
+        CorporateActionEventType;
+    IAmountAndDirection44? IIntraPositionMovementDetails15.CollateralMonitorAmount =>
+        CollateralMonitorAmount;
+    IEnumerable<ISupplementaryData1> IIntraPositionMovementDetails15.SupplementaryData =>
+        SupplementaryData;
 }

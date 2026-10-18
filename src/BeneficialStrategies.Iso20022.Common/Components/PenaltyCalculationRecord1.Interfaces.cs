@@ -10,8 +10,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PenaltyCalculationRecord1 : IPenaltyCalculationRecord1
 {
-    IPenaltyFinancialInstrumentIdentification1 IPenaltyCalculationRecord1.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
+    IPenaltyFinancialInstrumentIdentification1 IPenaltyCalculationRecord1.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
     IPriceRateOrAmount4Choice? IPenaltyCalculationRecord1.DiscountRate => DiscountRate;
-    IEnumerable<IForeignExchangeRate3> IPenaltyCalculationRecord1.ForeignExchangeData => ForeignExchangeData;
-    IEnumerable<IPenaltyAmountBreakdown1> IPenaltyCalculationRecord1.SubAmountPenaltyBreakdown => SubAmountPenaltyBreakdown;
+    IEnumerable<IForeignExchangeRate3> IPenaltyCalculationRecord1.ForeignExchangeData =>
+        ForeignExchangeData;
+    IEnumerable<IPenaltyAmountBreakdown1> IPenaltyCalculationRecord1.SubAmountPenaltyBreakdown =>
+        SubAmountPenaltyBreakdown;
 }

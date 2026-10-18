@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the status of the CA option.
 /// </summary>
 [IsoId("_RmQKIdp-Ed-ak6NoX_4Aeg_-108007853")]
-public interface ICorporateActionEventStatus2FormatChoice : IIsoChoice
-{
-}
+public interface ICorporateActionEventStatus2FormatChoice : IIsoChoice { }

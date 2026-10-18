@@ -16,5 +16,6 @@ public partial record SafekeepingAccount7 : ISafekeepingAccount7
     IEnumerable<IBeneficialOwner2> ISafekeepingAccount7.BeneficialOwner => BeneficialOwner;
     IEnumerable<IAggregateHoldingBalance3> ISafekeepingAccount7.BalanceDetails => BalanceDetails;
     IEnumerable<IAccountSubLevel11> ISafekeepingAccount7.AccountSubLevel1 => AccountSubLevel1;
-    IEnumerable<IAggregateHoldingBalance2> ISafekeepingAccount7.AccountSubLevel1Difference => AccountSubLevel1Difference;
+    IEnumerable<IAggregateHoldingBalance2> ISafekeepingAccount7.AccountSubLevel1Difference =>
+        AccountSubLevel1Difference;
 }

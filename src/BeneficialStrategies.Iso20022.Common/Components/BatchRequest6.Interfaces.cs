@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record BatchRequest6 : IBatchRequest6
 {
     ITransactionIdentifier1? IBatchRequest6.SaleBatchIdentification => SaleBatchIdentification;
-    IEnumerable<ITransactionToPerform6Choice> IBatchRequest6.TransactionToPerform => TransactionToPerform;
+    IEnumerable<ITransactionToPerform6Choice> IBatchRequest6.TransactionToPerform =>
+        TransactionToPerform;
 }

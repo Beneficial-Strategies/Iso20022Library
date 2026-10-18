@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
 /// Fedwire Routing Number - identifies financial institutions, in the US, on the FedWire system. The routing number is assigned by the American Bankers Association (ABA).
 /// </summary>
 [IsoId("_TC8Kldp-Ed-ak6NoX_4Aeg_1989940168")]
-public interface IFedwireRoutingNumberIdentification : IClearingSystemMemberIdentification2Choice, IIsoChoiceVariant
+public interface IFedwireRoutingNumberIdentification
+    : IClearingSystemMemberIdentification2Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

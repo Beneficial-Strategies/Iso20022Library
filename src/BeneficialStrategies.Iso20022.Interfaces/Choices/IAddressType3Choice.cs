@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the type of address.
 /// </summary>
 [IsoId("_CneugRb-EeiyVv5j1vf1VQ")]
-public interface IAddressType3Choice : IIsoChoice
-{
-}
+public interface IAddressType3Choice : IIsoChoice { }

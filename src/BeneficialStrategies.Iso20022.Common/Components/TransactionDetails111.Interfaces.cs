@@ -11,20 +11,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record TransactionDetails111 : ITransactionDetails111
 {
     ITransactionActivity4Choice ITransactionDetails111.TransactionActivity => TransactionActivity;
-    ISettlementOrCorporateActionEvent24Choice? ITransactionDetails111.SettlementTransactionOrCorporateActionEventType => SettlementTransactionOrCorporateActionEventType;
+    ISettlementOrCorporateActionEvent24Choice? ITransactionDetails111.SettlementTransactionOrCorporateActionEventType =>
+        SettlementTransactionOrCorporateActionEventType;
     ISettlementDetails161? ITransactionDetails111.SettlementParameters => SettlementParameters;
     IPlaceOfTradeIdentification2? ITransactionDetails111.PlaceOfTrade => PlaceOfTrade;
     ISafeKeepingPlace2? ITransactionDetails111.SafekeepingPlace => SafekeepingPlace;
     IPlaceOfClearingIdentification1? ITransactionDetails111.PlaceOfClearing => PlaceOfClearing;
-    ISecurityIdentification20 ITransactionDetails111.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification20 ITransactionDetails111.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     IQuantity10Choice ITransactionDetails111.PostingQuantity => PostingQuantity;
     IAmountAndDirection67? ITransactionDetails111.PostingAmount => PostingAmount;
     ITradeDate9Choice? ITransactionDetails111.TradeDate => TradeDate;
-    IDateAndDateTime2Choice? ITransactionDetails111.ExpectedSettlementDate => ExpectedSettlementDate;
+    IDateAndDateTime2Choice? ITransactionDetails111.ExpectedSettlementDate =>
+        ExpectedSettlementDate;
     ISettlementDate32Choice ITransactionDetails111.SettlementDate => SettlementDate;
     IDateAndDateTime2Choice? ITransactionDetails111.LateDeliveryDate => LateDeliveryDate;
     IDateAndDateTime2Choice? ITransactionDetails111.ExpectedValueDate => ExpectedValueDate;
-    ISettlementParties49? ITransactionDetails111.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties49? ITransactionDetails111.ReceivingSettlementParties => ReceivingSettlementParties;
+    ISettlementParties49? ITransactionDetails111.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties49? ITransactionDetails111.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
     IEnumerable<ISupplementaryData1> ITransactionDetails111.SupplementaryData => SupplementaryData;
 }

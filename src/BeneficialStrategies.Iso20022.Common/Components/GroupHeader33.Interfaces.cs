@@ -12,6 +12,8 @@ public partial record GroupHeader33 : IGroupHeader33
 {
     ISettlementInformation13 IGroupHeader33.SettlementInformation => SettlementInformation;
     IPaymentTypeInformation21? IGroupHeader33.PaymentTypeInformation => PaymentTypeInformation;
-    IBranchAndFinancialInstitutionIdentification4? IGroupHeader33.InstructingAgent => InstructingAgent;
-    IBranchAndFinancialInstitutionIdentification4? IGroupHeader33.InstructedAgent => InstructedAgent;
+    IBranchAndFinancialInstitutionIdentification4? IGroupHeader33.InstructingAgent =>
+        InstructingAgent;
+    IBranchAndFinancialInstitutionIdentification4? IGroupHeader33.InstructedAgent =>
+        InstructedAgent;
 }

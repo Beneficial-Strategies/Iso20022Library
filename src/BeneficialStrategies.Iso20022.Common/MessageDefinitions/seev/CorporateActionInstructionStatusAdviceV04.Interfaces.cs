@@ -8,13 +8,21 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record CorporateActionInstructionStatusAdviceV04 : ICorporateActionInstructionStatusAdviceV04
+public partial record CorporateActionInstructionStatusAdviceV04
+    : ICorporateActionInstructionStatusAdviceV04
 {
-    IDocumentIdentification9? ICorporateActionInstructionStatusAdviceV04.InstructionIdentification => InstructionIdentification;
-    IEnumerable<IDocumentIdentification14> ICorporateActionInstructionStatusAdviceV04.OtherDocumentIdentification => OtherDocumentIdentification;
-    ICorporateActionGeneralInformation52 ICorporateActionInstructionStatusAdviceV04.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IEnumerable<IInstructionProcessingStatus12Choice> ICorporateActionInstructionStatusAdviceV04.InstructionProcessingStatus => InstructionProcessingStatus;
-    ICorporateActionOption41? ICorporateActionInstructionStatusAdviceV04.CorporateActionInstruction => CorporateActionInstruction;
-    ICorporateActionNarrative10? ICorporateActionInstructionStatusAdviceV04.AdditionalInformation => AdditionalInformation;
-    IEnumerable<ISupplementaryData1> ICorporateActionInstructionStatusAdviceV04.SupplementaryData => SupplementaryData;
+    IDocumentIdentification9? ICorporateActionInstructionStatusAdviceV04.InstructionIdentification =>
+        InstructionIdentification;
+    IEnumerable<IDocumentIdentification14> ICorporateActionInstructionStatusAdviceV04.OtherDocumentIdentification =>
+        OtherDocumentIdentification;
+    ICorporateActionGeneralInformation52 ICorporateActionInstructionStatusAdviceV04.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IEnumerable<IInstructionProcessingStatus12Choice> ICorporateActionInstructionStatusAdviceV04.InstructionProcessingStatus =>
+        InstructionProcessingStatus;
+    ICorporateActionOption41? ICorporateActionInstructionStatusAdviceV04.CorporateActionInstruction =>
+        CorporateActionInstruction;
+    ICorporateActionNarrative10? ICorporateActionInstructionStatusAdviceV04.AdditionalInformation =>
+        AdditionalInformation;
+    IEnumerable<ISupplementaryData1> ICorporateActionInstructionStatusAdviceV04.SupplementaryData =>
+        SupplementaryData;
 }

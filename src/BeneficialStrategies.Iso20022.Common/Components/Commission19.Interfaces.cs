@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record Commission19 : ICommission19
-{
-}
+public partial record Commission19 : ICommission19 { }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormatChoice;
 
-public partial record IdentificationAsCountry : IIdentificationAsCountry
-{
-}
+public partial record IdentificationAsCountry : IIdentificationAsCountry { }

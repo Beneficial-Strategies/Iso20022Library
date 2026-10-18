@@ -10,12 +10,18 @@ namespace BeneficialStrategies.Iso20022.semt;
 
 public partial record StatementOfInvestmentFundTransactions : IStatementOfInvestmentFundTransactions
 {
-    IEnumerable<IAdditionalReference2> IStatementOfInvestmentFundTransactions.PreviousReference => PreviousReference;
-    IEnumerable<IAdditionalReference2> IStatementOfInvestmentFundTransactions.RelatedReference => RelatedReference;
+    IEnumerable<IAdditionalReference2> IStatementOfInvestmentFundTransactions.PreviousReference =>
+        PreviousReference;
+    IEnumerable<IAdditionalReference2> IStatementOfInvestmentFundTransactions.RelatedReference =>
+        RelatedReference;
     IPagination IStatementOfInvestmentFundTransactions.MessagePagination => MessagePagination;
-    IStatement5 IStatementOfInvestmentFundTransactions.StatementGeneralDetails => StatementGeneralDetails;
-    IInvestmentAccount12 IStatementOfInvestmentFundTransactions.InvestmentAccountDetails => InvestmentAccountDetails;
-    IEnumerable<IInvestmentFundTransactionsByFund1> IStatementOfInvestmentFundTransactions.TransactionOnAccount => TransactionOnAccount;
-    IEnumerable<ISubAccountIdentification4> IStatementOfInvestmentFundTransactions.SubAccountDetails => SubAccountDetails;
+    IStatement5 IStatementOfInvestmentFundTransactions.StatementGeneralDetails =>
+        StatementGeneralDetails;
+    IInvestmentAccount12 IStatementOfInvestmentFundTransactions.InvestmentAccountDetails =>
+        InvestmentAccountDetails;
+    IEnumerable<IInvestmentFundTransactionsByFund1> IStatementOfInvestmentFundTransactions.TransactionOnAccount =>
+        TransactionOnAccount;
+    IEnumerable<ISubAccountIdentification4> IStatementOfInvestmentFundTransactions.SubAccountDetails =>
+        SubAccountDetails;
     IEnumerable<IExtension1> IStatementOfInvestmentFundTransactions.Extension => Extension;
 }

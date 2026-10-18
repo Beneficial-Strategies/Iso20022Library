@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record LinkedCorporateAction1 : ILinkedCorporateAction1
 {
-    IDocumentIdentification8? ILinkedCorporateAction1.LinkedAgentCANotificationAdviceIdentification => LinkedAgentCANotificationAdviceIdentification;
+    IDocumentIdentification8? ILinkedCorporateAction1.LinkedAgentCANotificationAdviceIdentification =>
+        LinkedAgentCANotificationAdviceIdentification;
     IProcessingPosition2FormatChoice? ILinkedCorporateAction1.LinkageType => LinkageType;
 }

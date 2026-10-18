@@ -12,9 +12,12 @@ public partial record DirectDebitContext1 : IDirectDebitContext1
 {
     IPartyIdentification272? IDirectDebitContext1.Debtor => Debtor;
     ICashAccount40? IDirectDebitContext1.DebtorAccount => DebtorAccount;
-    IContentInformationType39? IDirectDebitContext1.ProtectedDebtorAccount => ProtectedDebtorAccount;
+    IContentInformationType39? IDirectDebitContext1.ProtectedDebtorAccount =>
+        ProtectedDebtorAccount;
     IPartyIdentification272? IDirectDebitContext1.Creditor => Creditor;
     ICashAccount40? IDirectDebitContext1.CreditorAccount => CreditorAccount;
-    IContentInformationType39? IDirectDebitContext1.ProtectedCreditorAccount => ProtectedCreditorAccount;
-    IMandateRelatedInformation17 IDirectDebitContext1.MandateRelatedInformation => MandateRelatedInformation;
+    IContentInformationType39? IDirectDebitContext1.ProtectedCreditorAccount =>
+        ProtectedCreditorAccount;
+    IMandateRelatedInformation17 IDirectDebitContext1.MandateRelatedInformation =>
+        MandateRelatedInformation;
 }

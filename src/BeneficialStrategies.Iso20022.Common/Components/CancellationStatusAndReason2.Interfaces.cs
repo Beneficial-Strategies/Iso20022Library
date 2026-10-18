@@ -12,7 +12,8 @@ public partial record CancellationStatusAndReason2 : ICancellationStatusAndReaso
 {
     ITransferCancellationStatus2 ICancellationStatusAndReason2.Status => Status;
     ITransferCancellationRejectedStatus1 ICancellationStatusAndReason2.Rejected => Rejected;
-    ITransferCancellationCompleteStatusAndReason1 ICancellationStatusAndReason2.Complete => Complete;
+    ITransferCancellationCompleteStatusAndReason1 ICancellationStatusAndReason2.Complete =>
+        Complete;
     ITransferCancellationPendingStatus1 ICancellationStatusAndReason2.Pending => Pending;
     IPartyIdentification2Choice? ICancellationStatusAndReason2.StatusInitiator => StatusInitiator;
 }

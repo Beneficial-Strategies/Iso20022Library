@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record AdditionalParameters21 : IAdditionalParameters21
-{
-}
+public partial record AdditionalParameters21 : IAdditionalParameters21 { }

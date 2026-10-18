@@ -13,16 +13,22 @@ public partial record SecuritiesTradeDetails154 : ISecuritiesTradeDetails154
     IPortfolioTransferStatus2Choice? ISecuritiesTradeDetails154.Status => Status;
     ITradeDate8Choice? ISecuritiesTradeDetails154.TradeDate => TradeDate;
     ISettlementDate17Choice ISecuritiesTradeDetails154.SettlementDate => SettlementDate;
-    ISecurityIdentification19 ISecuritiesTradeDetails154.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentAttributes111? ISecuritiesTradeDetails154.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
+    ISecurityIdentification19 ISecuritiesTradeDetails154.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentAttributes111? ISecuritiesTradeDetails154.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
     IEnumerable<IReporting7Choice> ISecuritiesTradeDetails154.Reporting => Reporting;
     IQuantity48 ISecuritiesTradeDetails154.QuantityDetails => QuantityDetails;
     ISettlementDetails236? ISecuritiesTradeDetails154.SettlementParameters => SettlementParameters;
-    ISettlementParties128? ISecuritiesTradeDetails154.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties128? ISecuritiesTradeDetails154.ReceivingSettlementParties => ReceivingSettlementParties;
+    ISettlementParties128? ISecuritiesTradeDetails154.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties128? ISecuritiesTradeDetails154.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
     IAmountAndDirection52? ISecuritiesTradeDetails154.SettlementAmount => SettlementAmount;
     IOtherAmounts29? ISecuritiesTradeDetails154.OtherAmounts => OtherAmounts;
-    IEnumerable<IDigitalPaymentSettlement1> ISecuritiesTradeDetails154.DigitalPaymentSettlement => DigitalPaymentSettlement;
+    IEnumerable<IDigitalPaymentSettlement1> ISecuritiesTradeDetails154.DigitalPaymentSettlement =>
+        DigitalPaymentSettlement;
     IOtherParties39? ISecuritiesTradeDetails154.OtherBusinessParties => OtherBusinessParties;
-    IEnumerable<ISupplementaryData1> ISecuritiesTradeDetails154.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> ISecuritiesTradeDetails154.SupplementaryData =>
+        SupplementaryData;
 }

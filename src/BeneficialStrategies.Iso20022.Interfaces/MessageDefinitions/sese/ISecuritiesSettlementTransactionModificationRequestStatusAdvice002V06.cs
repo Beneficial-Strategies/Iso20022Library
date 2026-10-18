@@ -22,7 +22,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// using the relevant elements in the Business Application Header.
 /// </summary>
 [IsoId("_eXqikzi8Eeydid5dcNPKvg")]
-public interface ISecuritiesSettlementTransactionModificationRequestStatusAdvice002V06 : IOuterRecord
+public interface ISecuritiesSettlementTransactionModificationRequestStatusAdvice002V06
+    : IOuterRecord
 {
     /// <summary>
     /// Reference to the unambiguous identification of the cancellation request as per the account owner.

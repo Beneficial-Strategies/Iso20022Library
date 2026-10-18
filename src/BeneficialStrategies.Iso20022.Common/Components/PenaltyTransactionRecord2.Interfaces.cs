@@ -10,15 +10,19 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PenaltyTransactionRecord2 : IPenaltyTransactionRecord2
 {
-    ISettlementOrCorporateActionEvent27Choice IPenaltyTransactionRecord2.SettlementTransactionOrCorporateActionEventType => SettlementTransactionOrCorporateActionEventType;
+    ISettlementOrCorporateActionEvent27Choice IPenaltyTransactionRecord2.SettlementTransactionOrCorporateActionEventType =>
+        SettlementTransactionOrCorporateActionEventType;
     ISettlementDate17Choice IPenaltyTransactionRecord2.SettlementDate => SettlementDate;
-    IDateAndDateTime2Choice? IPenaltyTransactionRecord2.CorporateActionRelatedDate => CorporateActionRelatedDate;
+    IDateAndDateTime2Choice? IPenaltyTransactionRecord2.CorporateActionRelatedDate =>
+        CorporateActionRelatedDate;
     ISecuritiesAccount19 IPenaltyTransactionRecord2.SafekeepingAccount => SafekeepingAccount;
     IPartyIdentification144? IPenaltyTransactionRecord2.AccountOwner => AccountOwner;
-    IFinancialInstrumentQuantity1Choice IPenaltyTransactionRecord2.PostingQuantity => PostingQuantity;
+    IFinancialInstrumentQuantity1Choice IPenaltyTransactionRecord2.PostingQuantity =>
+        PostingQuantity;
     ICashAccountIdentification5Choice? IPenaltyTransactionRecord2.CashAccount => CashAccount;
     IPartyIdentification272? IPenaltyTransactionRecord2.CashAccountOwner => CashAccountOwner;
     IAmountAndDirection5? IPenaltyTransactionRecord2.PostingAmount => PostingAmount;
-    IFailingStatus15Choice? IPenaltyTransactionRecord2.SettlementStatusFailing => SettlementStatusFailing;
+    IFailingStatus15Choice? IPenaltyTransactionRecord2.SettlementStatusFailing =>
+        SettlementStatusFailing;
     ISystemEvent3? IPenaltyTransactionRecord2.BusinessDayEvent => BusinessDayEvent;
 }

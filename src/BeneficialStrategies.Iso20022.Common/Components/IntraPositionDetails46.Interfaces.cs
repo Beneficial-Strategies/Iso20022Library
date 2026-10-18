@@ -11,13 +11,19 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record IntraPositionDetails46 : IIntraPositionDetails46
 {
     IFinancialInstrumentQuantity1Choice IIntraPositionDetails46.SettledQuantity => SettledQuantity;
-    IGenericIdentification37? IIntraPositionDetails46.SecuritiesSubBalanceIdentification => SecuritiesSubBalanceIdentification;
-    IAmountAndDirection44? IIntraPositionDetails46.CollateralMonitorAmount => CollateralMonitorAmount;
-    IFinancialInstrumentQuantity1Choice? IIntraPositionDetails46.PreviouslySettledQuantity => PreviouslySettledQuantity;
-    IFinancialInstrumentQuantity1Choice? IIntraPositionDetails46.RemainingToBeSettledQuantity => RemainingToBeSettledQuantity;
+    IGenericIdentification37? IIntraPositionDetails46.SecuritiesSubBalanceIdentification =>
+        SecuritiesSubBalanceIdentification;
+    IAmountAndDirection44? IIntraPositionDetails46.CollateralMonitorAmount =>
+        CollateralMonitorAmount;
+    IFinancialInstrumentQuantity1Choice? IIntraPositionDetails46.PreviouslySettledQuantity =>
+        PreviouslySettledQuantity;
+    IFinancialInstrumentQuantity1Choice? IIntraPositionDetails46.RemainingToBeSettledQuantity =>
+        RemainingToBeSettledQuantity;
     IDateAndDateTime2Choice IIntraPositionDetails46.SettlementDate => SettlementDate;
     IDateAndDateTime2Choice? IIntraPositionDetails46.AvailableDate => AvailableDate;
-    ICorporateActionEventType73Choice? IIntraPositionDetails46.CorporateActionEventType => CorporateActionEventType;
-    ISecuritiesSubBalanceTypeAndQuantityBreakdown3 IIntraPositionDetails46.BalanceFrom => BalanceFrom;
+    ICorporateActionEventType73Choice? IIntraPositionDetails46.CorporateActionEventType =>
+        CorporateActionEventType;
+    ISecuritiesSubBalanceTypeAndQuantityBreakdown3 IIntraPositionDetails46.BalanceFrom =>
+        BalanceFrom;
     ISecuritiesSubBalanceTypeAndQuantityBreakdown3 IIntraPositionDetails46.BalanceTo => BalanceTo;
 }

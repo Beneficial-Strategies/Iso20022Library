@@ -10,12 +10,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionRate26 : ICorporateActionRate26
 {
-    IEnumerable<IGrossDividendRateFormat2Choice> ICorporateActionRate26.GrossDividendRate => GrossDividendRate;
-    IEnumerable<INetDividendRateFormat7Choice> ICorporateActionRate26.NetDividendRate => NetDividendRate;
+    IEnumerable<IGrossDividendRateFormat2Choice> ICorporateActionRate26.GrossDividendRate =>
+        GrossDividendRate;
+    IEnumerable<INetDividendRateFormat7Choice> ICorporateActionRate26.NetDividendRate =>
+        NetDividendRate;
     IRateAndAmountFormat5Choice? ICorporateActionRate26.IndexFactor => IndexFactor;
-    IEnumerable<IInterestRateUsedForPaymentFormat2Choice> ICorporateActionRate26.InterestRateUsedForPayment => InterestRateUsedForPayment;
-    IEnumerable<IRateTypeAndAmountAndStatus6> ICorporateActionRate26.TaxRelatedRate => TaxRelatedRate;
+    IEnumerable<IInterestRateUsedForPaymentFormat2Choice> ICorporateActionRate26.InterestRateUsedForPayment =>
+        InterestRateUsedForPayment;
+    IEnumerable<IRateTypeAndAmountAndStatus6> ICorporateActionRate26.TaxRelatedRate =>
+        TaxRelatedRate;
     IRateAndAmountFormat5Choice? ICorporateActionRate26.AdditionalTax => AdditionalTax;
-    IRateAndAmountFormat5Choice? ICorporateActionRate26.WithholdingOfForeignTax => WithholdingOfForeignTax;
-    IEnumerable<IRateTypeAndAmountAndStatus11> ICorporateActionRate26.TaxableIncomePerDividendShare => TaxableIncomePerDividendShare;
+    IRateAndAmountFormat5Choice? ICorporateActionRate26.WithholdingOfForeignTax =>
+        WithholdingOfForeignTax;
+    IEnumerable<IRateTypeAndAmountAndStatus11> ICorporateActionRate26.TaxableIncomePerDividendShare =>
+        TaxableIncomePerDividendShare;
 }

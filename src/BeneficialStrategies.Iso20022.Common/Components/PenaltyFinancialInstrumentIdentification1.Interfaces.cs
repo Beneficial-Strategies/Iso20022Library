@@ -8,11 +8,16 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record PenaltyFinancialInstrumentIdentification1 : IPenaltyFinancialInstrumentIdentification1
+public partial record PenaltyFinancialInstrumentIdentification1
+    : IPenaltyFinancialInstrumentIdentification1
 {
-    ISecurityIdentification19 IPenaltyFinancialInstrumentIdentification1.Identification => Identification;
-    IClassificationType1Choice? IPenaltyFinancialInstrumentIdentification1.ClassificationType => ClassificationType;
+    ISecurityIdentification19 IPenaltyFinancialInstrumentIdentification1.Identification =>
+        Identification;
+    IClassificationType1Choice? IPenaltyFinancialInstrumentIdentification1.ClassificationType =>
+        ClassificationType;
     IPriceInformation25? IPenaltyFinancialInstrumentIdentification1.PriceData => PriceData;
-    IEnumerable<IForeignExchangeRate3> IPenaltyFinancialInstrumentIdentification1.ForeignExchangeData => ForeignExchangeData;
-    IPenaltyRate1? IPenaltyFinancialInstrumentIdentification1.SecuritiesPenaltyRateData => SecuritiesPenaltyRateData;
+    IEnumerable<IForeignExchangeRate3> IPenaltyFinancialInstrumentIdentification1.ForeignExchangeData =>
+        ForeignExchangeData;
+    IPenaltyRate1? IPenaltyFinancialInstrumentIdentification1.SecuritiesPenaltyRateData =>
+        SecuritiesPenaltyRateData;
 }

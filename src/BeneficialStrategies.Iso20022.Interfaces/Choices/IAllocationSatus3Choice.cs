@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the allocation status reason.
 /// </summary>
 [IsoId("_Dg5V4TqqEeWyoP0PbocV1Q")]
-public interface IAllocationSatus3Choice : IIsoChoice
-{
-}
+public interface IAllocationSatus3Choice : IIsoChoice { }

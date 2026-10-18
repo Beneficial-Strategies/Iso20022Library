@@ -12,5 +12,6 @@ public partial record BalanceInquiryRequest3 : IBalanceInquiryRequest3
 {
     IPaymentAccountRequest1? IBalanceInquiryRequest3.PaymentAccountRequest => PaymentAccountRequest;
     ILoyaltyAccountRequest2? IBalanceInquiryRequest3.LoyaltyAccountRequest => LoyaltyAccountRequest;
-    IStoredValueRequest3? IBalanceInquiryRequest3.StoredValueAccountRequest => StoredValueAccountRequest;
+    IStoredValueRequest3? IBalanceInquiryRequest3.StoredValueAccountRequest =>
+        StoredValueAccountRequest;
 }

@@ -11,14 +11,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record IntraPositionMovementDetails5 : IIntraPositionMovementDetails5
 {
     IReferences19Choice? IIntraPositionMovementDetails5.Identification => Identification;
-    IFinancialInstrumentQuantity1Choice IIntraPositionMovementDetails5.SettledQuantity => SettledQuantity;
-    IFinancialInstrumentQuantity1Choice? IIntraPositionMovementDetails5.PreviouslySettledQuantity => PreviouslySettledQuantity;
-    IFinancialInstrumentQuantity1Choice? IIntraPositionMovementDetails5.RemainingToBeSettledQuantity => RemainingToBeSettledQuantity;
+    IFinancialInstrumentQuantity1Choice IIntraPositionMovementDetails5.SettledQuantity =>
+        SettledQuantity;
+    IFinancialInstrumentQuantity1Choice? IIntraPositionMovementDetails5.PreviouslySettledQuantity =>
+        PreviouslySettledQuantity;
+    IFinancialInstrumentQuantity1Choice? IIntraPositionMovementDetails5.RemainingToBeSettledQuantity =>
+        RemainingToBeSettledQuantity;
     INumber2Choice? IIntraPositionMovementDetails5.LotNumber => LotNumber;
     ISecuritiesBalanceType3Choice IIntraPositionMovementDetails5.BalanceTo => BalanceTo;
     IDateAndDateTimeChoice IIntraPositionMovementDetails5.SettlementDate => SettlementDate;
     IDateAndDateTimeChoice? IIntraPositionMovementDetails5.AvailableDate => AvailableDate;
-    ICorporateActionEventType3Choice? IIntraPositionMovementDetails5.CorporateActionEventType => CorporateActionEventType;
-    IAmountAndDirection9? IIntraPositionMovementDetails5.CollateralMonitorAmount => CollateralMonitorAmount;
-    IEnumerable<ISupplementaryData1> IIntraPositionMovementDetails5.SupplementaryData => SupplementaryData;
+    ICorporateActionEventType3Choice? IIntraPositionMovementDetails5.CorporateActionEventType =>
+        CorporateActionEventType;
+    IAmountAndDirection9? IIntraPositionMovementDetails5.CollateralMonitorAmount =>
+        CollateralMonitorAmount;
+    IEnumerable<ISupplementaryData1> IIntraPositionMovementDetails5.SupplementaryData =>
+        SupplementaryData;
 }

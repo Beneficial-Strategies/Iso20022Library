@@ -10,13 +10,17 @@ namespace BeneficialStrategies.Iso20022.semt;
 
 public partial record CustodyStatementOfHoldings : ICustodyStatementOfHoldings
 {
-    IEnumerable<IAdditionalReference2> ICustodyStatementOfHoldings.PreviousReference => PreviousReference;
-    IEnumerable<IAdditionalReference2> ICustodyStatementOfHoldings.RelatedReference => RelatedReference;
+    IEnumerable<IAdditionalReference2> ICustodyStatementOfHoldings.PreviousReference =>
+        PreviousReference;
+    IEnumerable<IAdditionalReference2> ICustodyStatementOfHoldings.RelatedReference =>
+        RelatedReference;
     IPagination ICustodyStatementOfHoldings.MessagePagination => MessagePagination;
     IStatement3 ICustodyStatementOfHoldings.StatementGeneralDetails => StatementGeneralDetails;
     ISafekeepingAccount1 ICustodyStatementOfHoldings.AccountDetails => AccountDetails;
-    IEnumerable<IAggregateBalanceInformation1> ICustodyStatementOfHoldings.BalanceForAccount => BalanceForAccount;
-    IEnumerable<ISubAccountIdentification1> ICustodyStatementOfHoldings.SubAccountDetails => SubAccountDetails;
+    IEnumerable<IAggregateBalanceInformation1> ICustodyStatementOfHoldings.BalanceForAccount =>
+        BalanceForAccount;
+    IEnumerable<ISubAccountIdentification1> ICustodyStatementOfHoldings.SubAccountDetails =>
+        SubAccountDetails;
     ITotalValueInPageAndStatement? ICustodyStatementOfHoldings.TotalValues => TotalValues;
     IEnumerable<IExtension1> ICustodyStatementOfHoldings.Extension => Extension;
 }

@@ -11,8 +11,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SecuritiesCancellationTransaction2 : ISecuritiesCancellationTransaction2
 {
     ISystemPartyIdentification8? ISecuritiesCancellationTransaction2.AccountOwner => AccountOwner;
-    ISecuritiesAccount19? ISecuritiesCancellationTransaction2.SafekeepingAccount => SafekeepingAccount;
-    IProcessingStatus69Choice? ISecuritiesCancellationTransaction2.ProcessingStatus => ProcessingStatus;
-    IReferences33? ISecuritiesCancellationTransaction2.TransactionIdentification => TransactionIdentification;
+    ISecuritiesAccount19? ISecuritiesCancellationTransaction2.SafekeepingAccount =>
+        SafekeepingAccount;
+    IProcessingStatus69Choice? ISecuritiesCancellationTransaction2.ProcessingStatus =>
+        ProcessingStatus;
+    IReferences33? ISecuritiesCancellationTransaction2.TransactionIdentification =>
+        TransactionIdentification;
     ISettlementOrIntraPosition3Choice? ISecuritiesCancellationTransaction2.Underlying => Underlying;
 }

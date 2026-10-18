@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record References27 : IReferences27
-{
-}
+public partial record References27 : IReferences27 { }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record AmountAndDirection101 : IAmountAndDirection101
 {
-    IForeignExchangeTerms27? IAmountAndDirection101.ForeignExchangeDetails => ForeignExchangeDetails;
+    IForeignExchangeTerms27? IAmountAndDirection101.ForeignExchangeDetails =>
+        ForeignExchangeDetails;
     IDateAndDateTime2Choice? IAmountAndDirection101.ValueDate => ValueDate;
 }

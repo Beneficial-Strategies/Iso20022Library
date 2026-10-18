@@ -12,6 +12,7 @@ public partial record ReconciliationRequest8 : IReconciliationRequest8
 {
     ICardPaymentEnvironment81 IReconciliationRequest8.Environment => Environment;
     IPaymentContext30 IReconciliationRequest8.Context => Context;
-    IReconciliationRequestData1 IReconciliationRequest8.ReconciliationRequestData => ReconciliationRequestData;
+    IReconciliationRequestData1 IReconciliationRequest8.ReconciliationRequestData =>
+        ReconciliationRequestData;
     IEnumerable<ISupplementaryData1> IReconciliationRequest8.SupplementaryData => SupplementaryData;
 }

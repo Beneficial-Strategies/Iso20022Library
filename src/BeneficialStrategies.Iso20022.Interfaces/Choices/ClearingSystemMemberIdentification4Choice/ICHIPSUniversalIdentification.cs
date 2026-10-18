@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
 /// (United States) Clearing House Interbank Payments System (CHIPS) Universal Identification (UID) - identifies entities that own accounts at CHIPS participating financial institutions, through which CHIPS payments are effected. The CHIPS UID is assigned by the New York Clearing House.
 /// </summary>
 [IsoId("_VwSCYbNIEeejueAciesPMA")]
-public interface ICHIPSUniversalIdentification : IClearingSystemMemberIdentification4Choice, IIsoChoiceVariant
+public interface ICHIPSUniversalIdentification
+    : IClearingSystemMemberIdentification4Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

@@ -12,6 +12,7 @@ public partial record MessageStatusRequest6 : IMessageStatusRequest6
 {
     ICardPaymentEnvironment79 IMessageStatusRequest6.Environment => Environment;
     ICardPaymentContext30 IMessageStatusRequest6.Context => Context;
-    IMessageStatusRequestData2 IMessageStatusRequest6.MessageStatusRequestData => MessageStatusRequestData;
+    IMessageStatusRequestData2 IMessageStatusRequest6.MessageStatusRequestData =>
+        MessageStatusRequestData;
     IEnumerable<ISupplementaryData1> IMessageStatusRequest6.SupplementaryData => SupplementaryData;
 }

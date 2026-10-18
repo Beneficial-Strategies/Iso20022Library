@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record GenericOrganisationIdentification1 : IGenericOrganisationIdentification1
 {
-    IOrganisationIdentificationSchemeName1Choice? IGenericOrganisationIdentification1.SchemeName => SchemeName;
+    IOrganisationIdentificationSchemeName1Choice? IGenericOrganisationIdentification1.SchemeName =>
+        SchemeName;
 }

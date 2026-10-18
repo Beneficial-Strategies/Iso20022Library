@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record FXStandingInstruction5Choice_ : IFXStandingInstruction5Choice
-{
-}
+public abstract partial record FXStandingInstruction5Choice_ : IFXStandingInstruction5Choice { }

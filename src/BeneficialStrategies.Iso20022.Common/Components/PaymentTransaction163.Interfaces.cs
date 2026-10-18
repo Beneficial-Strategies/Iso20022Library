@@ -10,16 +10,23 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PaymentTransaction163 : IPaymentTransaction163
 {
-    IOriginalGroupInformation29? IPaymentTransaction163.OriginalGroupInformation => OriginalGroupInformation;
-    IPaymentTypeInformation28? IPaymentTransaction163.PaymentTypeInformation => PaymentTypeInformation;
-    ISettlementDateTimeIndication1? IPaymentTransaction163.SettlementTimeIndication => SettlementTimeIndication;
+    IOriginalGroupInformation29? IPaymentTransaction163.OriginalGroupInformation =>
+        OriginalGroupInformation;
+    IPaymentTypeInformation28? IPaymentTransaction163.PaymentTypeInformation =>
+        PaymentTypeInformation;
+    ISettlementDateTimeIndication1? IPaymentTransaction163.SettlementTimeIndication =>
+        SettlementTimeIndication;
     ISettlementTimeRequest2? IPaymentTransaction163.SettlementTimeRequest => SettlementTimeRequest;
     ICurrencyExchange26? IPaymentTransaction163.AgreedRate => AgreedRate;
     IEnumerable<ICharges16> IPaymentTransaction163.ChargesInformation => ChargesInformation;
-    IBranchAndFinancialInstitutionIdentification8? IPaymentTransaction163.InstructingAgent => InstructingAgent;
-    IBranchAndFinancialInstitutionIdentification8? IPaymentTransaction163.InstructedAgent => InstructedAgent;
+    IBranchAndFinancialInstitutionIdentification8? IPaymentTransaction163.InstructingAgent =>
+        InstructingAgent;
+    IBranchAndFinancialInstitutionIdentification8? IPaymentTransaction163.InstructedAgent =>
+        InstructedAgent;
     ITransactionParties11? IPaymentTransaction163.ReturnChain => ReturnChain;
-    IEnumerable<IPaymentReturnReason7> IPaymentTransaction163.ReturnReasonInformation => ReturnReasonInformation;
-    IOriginalTransactionReference44? IPaymentTransaction163.OriginalTransactionReference => OriginalTransactionReference;
+    IEnumerable<IPaymentReturnReason7> IPaymentTransaction163.ReturnReasonInformation =>
+        ReturnReasonInformation;
+    IOriginalTransactionReference44? IPaymentTransaction163.OriginalTransactionReference =>
+        OriginalTransactionReference;
     IEnumerable<ISupplementaryData1> IPaymentTransaction163.SupplementaryData => SupplementaryData;
 }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record TransactionType1CodeChoice_ : ITransactionType1CodeChoice
-{
-}
+public abstract partial record TransactionType1CodeChoice_ : ITransactionType1CodeChoice { }

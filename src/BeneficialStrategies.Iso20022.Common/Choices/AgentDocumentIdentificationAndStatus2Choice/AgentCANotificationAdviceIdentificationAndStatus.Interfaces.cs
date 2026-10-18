@@ -8,7 +8,9 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AgentDocumentIdentificationAndStatus2Choice;
 
-public partial record AgentCANotificationAdviceIdentificationAndStatus : IAgentCANotificationAdviceIdentificationAndStatus
+public partial record AgentCANotificationAdviceIdentificationAndStatus
+    : IAgentCANotificationAdviceIdentificationAndStatus
 {
-    IAgentNotificationIdentificationAndStatus2 IAgentCANotificationAdviceIdentificationAndStatus.Value => Value;
+    IAgentNotificationIdentificationAndStatus2 IAgentCANotificationAdviceIdentificationAndStatus.Value =>
+        Value;
 }

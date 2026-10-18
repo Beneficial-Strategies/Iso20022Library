@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.Quantity6Choice;
 
-public partial record OriginalAndCurrentFace : IOriginalAndCurrentFace
-{
-}
+public partial record OriginalAndCurrentFace : IOriginalAndCurrentFace { }

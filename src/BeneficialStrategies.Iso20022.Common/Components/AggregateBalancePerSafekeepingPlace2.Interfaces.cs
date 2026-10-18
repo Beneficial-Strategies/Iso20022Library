@@ -10,11 +10,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record AggregateBalancePerSafekeepingPlace2 : IAggregateBalancePerSafekeepingPlace2
 {
-    IBalanceQuantity1Choice IAggregateBalancePerSafekeepingPlace2.AggregateBalance => AggregateBalance;
-    IEnumerable<ActiveOrHistoricCurrencyAndAmount> IAggregateBalancePerSafekeepingPlace2.HoldingValue => HoldingValue;
-    ISafekeepingPlaceFormatChoice IAggregateBalancePerSafekeepingPlace2.SafekeepingPlace => SafekeepingPlace;
-    IEnumerable<IPriceInformation1> IAggregateBalancePerSafekeepingPlace2.PriceDetails => PriceDetails;
-    IForeignExchangeTerms3? IAggregateBalancePerSafekeepingPlace2.ForeignExchangeDetails => ForeignExchangeDetails;
-    IEnumerable<ISubBalanceInformation1> IAggregateBalancePerSafekeepingPlace2.BalanceBreakdownDetails => BalanceBreakdownDetails;
-    IEnumerable<IAdditionalBalanceInformation> IAggregateBalancePerSafekeepingPlace2.AdditionalBalanceBreakdownDetails => AdditionalBalanceBreakdownDetails;
+    IBalanceQuantity1Choice IAggregateBalancePerSafekeepingPlace2.AggregateBalance =>
+        AggregateBalance;
+    IEnumerable<ActiveOrHistoricCurrencyAndAmount> IAggregateBalancePerSafekeepingPlace2.HoldingValue =>
+        HoldingValue;
+    ISafekeepingPlaceFormatChoice IAggregateBalancePerSafekeepingPlace2.SafekeepingPlace =>
+        SafekeepingPlace;
+    IEnumerable<IPriceInformation1> IAggregateBalancePerSafekeepingPlace2.PriceDetails =>
+        PriceDetails;
+    IForeignExchangeTerms3? IAggregateBalancePerSafekeepingPlace2.ForeignExchangeDetails =>
+        ForeignExchangeDetails;
+    IEnumerable<ISubBalanceInformation1> IAggregateBalancePerSafekeepingPlace2.BalanceBreakdownDetails =>
+        BalanceBreakdownDetails;
+    IEnumerable<IAdditionalBalanceInformation> IAggregateBalancePerSafekeepingPlace2.AdditionalBalanceBreakdownDetails =>
+        AdditionalBalanceBreakdownDetails;
 }

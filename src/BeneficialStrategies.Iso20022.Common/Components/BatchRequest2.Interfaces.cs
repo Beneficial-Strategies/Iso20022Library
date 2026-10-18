@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record BatchRequest2 : IBatchRequest2
 {
-    IEnumerable<ITransactionToPerform2Choice> IBatchRequest2.TransactionToPerform => TransactionToPerform;
+    IEnumerable<ITransactionToPerform2Choice> IBatchRequest2.TransactionToPerform =>
+        TransactionToPerform;
 }

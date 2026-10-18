@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record AmountRangeBoundary1 : IAmountRangeBoundary1
-{
-}
+public partial record AmountRangeBoundary1 : IAmountRangeBoundary1 { }

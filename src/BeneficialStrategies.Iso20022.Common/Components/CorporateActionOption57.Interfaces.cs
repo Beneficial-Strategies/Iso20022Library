@@ -12,12 +12,17 @@ public partial record CorporateActionOption57 : ICorporateActionOption57
 {
     IOptionNumber1Choice ICorporateActionOption57.OptionNumber => OptionNumber;
     ICorporateActionOption12Choice ICorporateActionOption57.OptionType => OptionType;
-    IFractionDispositionType17Choice? ICorporateActionOption57.FractionDisposition => FractionDisposition;
-    IEnumerable<ICorporateActionChangeTypeFormat2Choice> ICorporateActionOption57.ChangeType => ChangeType;
-    ISecurityIdentification14? ICorporateActionOption57.SecurityIdentification => SecurityIdentification;
+    IFractionDispositionType17Choice? ICorporateActionOption57.FractionDisposition =>
+        FractionDisposition;
+    IEnumerable<ICorporateActionChangeTypeFormat2Choice> ICorporateActionOption57.ChangeType =>
+        ChangeType;
+    ISecurityIdentification14? ICorporateActionOption57.SecurityIdentification =>
+        SecurityIdentification;
     ISecuritiesOption2 ICorporateActionOption57.SecuritiesQuantity => SecuritiesQuantity;
-    IDateAndDateTimeChoice? ICorporateActionOption57.ExecutionRequestedDateTime => ExecutionRequestedDateTime;
+    IDateAndDateTimeChoice? ICorporateActionOption57.ExecutionRequestedDateTime =>
+        ExecutionRequestedDateTime;
     ICorporateActionRate8? ICorporateActionOption57.RateAndAmountDetails => RateAndAmountDetails;
     ICorporateActionPrice29? ICorporateActionOption57.PriceDetails => PriceDetails;
-    ICorporateActionNarrative8? ICorporateActionOption57.AdditionalInformation => AdditionalInformation;
+    ICorporateActionNarrative8? ICorporateActionOption57.AdditionalInformation =>
+        AdditionalInformation;
 }

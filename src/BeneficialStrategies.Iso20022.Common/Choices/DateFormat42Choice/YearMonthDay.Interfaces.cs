@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.DateFormat42Choice;
 
-public partial record YearMonthDay : IYearMonthDay
-{
-}
+public partial record YearMonthDay : IYearMonthDay { }

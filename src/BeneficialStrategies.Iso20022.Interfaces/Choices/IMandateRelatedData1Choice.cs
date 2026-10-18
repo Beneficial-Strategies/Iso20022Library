@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of mandate related information.
 /// </summary>
 [IsoId("_su3YJ8lxEem0vqvvoqYsqQ")]
-public interface IMandateRelatedData1Choice : IIsoChoice
-{
-}
+public interface IMandateRelatedData1Choice : IIsoChoice { }

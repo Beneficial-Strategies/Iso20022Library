@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record RemittanceInformation10 : IRemittanceInformation10
 {
     IEnumerable<Max140Text> IRemittanceInformation10.Unstructured => Unstructured;
-    IEnumerable<IStructuredRemittanceInformation12> IRemittanceInformation10.Structured => Structured;
+    IEnumerable<IStructuredRemittanceInformation12> IRemittanceInformation10.Structured =>
+        Structured;
 }

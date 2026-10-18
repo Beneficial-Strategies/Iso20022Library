@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.DateFormat3Choice;
 
-public partial record DateCode : IDateCode
-{
-}
+public partial record DateCode : IDateCode { }

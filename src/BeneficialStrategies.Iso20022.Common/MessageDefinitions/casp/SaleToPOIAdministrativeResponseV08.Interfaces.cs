@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.casp;
 public partial record SaleToPOIAdministrativeResponseV08 : ISaleToPOIAdministrativeResponseV08
 {
     IHeader41 ISaleToPOIAdministrativeResponseV08.Header => Header;
-    IAdministrativeResponse9 ISaleToPOIAdministrativeResponseV08.AdministrativeResponse => AdministrativeResponse;
-    IContentInformationType38? ISaleToPOIAdministrativeResponseV08.SecurityTrailer => SecurityTrailer;
+    IAdministrativeResponse9 ISaleToPOIAdministrativeResponseV08.AdministrativeResponse =>
+        AdministrativeResponse;
+    IContentInformationType38? ISaleToPOIAdministrativeResponseV08.SecurityTrailer =>
+        SecurityTrailer;
 }

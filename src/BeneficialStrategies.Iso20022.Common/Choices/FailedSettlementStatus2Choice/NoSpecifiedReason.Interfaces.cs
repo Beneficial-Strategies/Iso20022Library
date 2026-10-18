@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.FailedSettlementStatus2Choice;
 
-public partial record NoSpecifiedReason : INoSpecifiedReason
-{
-}
+public partial record NoSpecifiedReason : INoSpecifiedReason { }

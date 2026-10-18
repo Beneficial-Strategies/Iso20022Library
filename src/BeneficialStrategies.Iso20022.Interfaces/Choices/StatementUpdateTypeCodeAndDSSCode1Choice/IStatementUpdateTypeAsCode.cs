@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementUpdateTypeCodeAndDSSCod
 /// Update type expressed as a code.
 /// </summary>
 [IsoId("_sXPbwQaUEe2-DuDrUXkg2w")]
-public interface IStatementUpdateTypeAsCode : IStatementUpdateTypeCodeAndDSSCode1Choice, IIsoChoiceVariant
+public interface IStatementUpdateTypeAsCode
+    : IStatementUpdateTypeCodeAndDSSCode1Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

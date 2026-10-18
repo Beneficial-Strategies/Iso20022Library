@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.RateFormat11Choice;
 
-public partial record Rate : IRate
-{
-}
+public partial record Rate : IRate { }

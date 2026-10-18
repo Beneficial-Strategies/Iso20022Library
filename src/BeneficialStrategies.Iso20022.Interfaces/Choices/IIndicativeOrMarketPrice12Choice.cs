@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Indicative Or Market Price12Choice.
 /// </summary>
 [IsoId("_Cv1HMYV6Ee-oeNhl-Tk6YQ")]
-public interface IIndicativeOrMarketPrice12Choice : IIsoChoice
-{
-}
+public interface IIndicativeOrMarketPrice12Choice : IIsoChoice { }

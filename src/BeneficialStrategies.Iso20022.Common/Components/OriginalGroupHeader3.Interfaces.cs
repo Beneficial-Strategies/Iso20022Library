@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record OriginalGroupHeader3 : IOriginalGroupHeader3
 {
-    IEnumerable<IPaymentReversalReason7> IOriginalGroupHeader3.ReversalReasonInformation => ReversalReasonInformation;
+    IEnumerable<IPaymentReversalReason7> IOriginalGroupHeader3.ReversalReasonInformation =>
+        ReversalReasonInformation;
 }

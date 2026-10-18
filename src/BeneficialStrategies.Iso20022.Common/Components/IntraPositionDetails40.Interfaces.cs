@@ -12,5 +12,6 @@ public partial record IntraPositionDetails40 : IIntraPositionDetails40
 {
     ISafekeepingPlaceFormat10Choice? IIntraPositionDetails40.SafekeepingPlace => SafekeepingPlace;
     ISecuritiesBalanceType6Choice IIntraPositionDetails40.BalanceFrom => BalanceFrom;
-    IEnumerable<IIntraPositionMovementDetails13> IIntraPositionDetails40.IntraPositionMovement => IntraPositionMovement;
+    IEnumerable<IIntraPositionMovementDetails13> IIntraPositionDetails40.IntraPositionMovement =>
+        IntraPositionMovement;
 }

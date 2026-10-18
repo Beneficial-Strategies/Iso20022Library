@@ -8,9 +8,13 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record AgentCAGlobalDistributionAuthorisationRequestV01 : IAgentCAGlobalDistributionAuthorisationRequestV01
+public partial record AgentCAGlobalDistributionAuthorisationRequestV01
+    : IAgentCAGlobalDistributionAuthorisationRequestV01
 {
-    IDocumentIdentification8 IAgentCAGlobalDistributionAuthorisationRequestV01.Identification => Identification;
-    ICorporateActionInformation1 IAgentCAGlobalDistributionAuthorisationRequestV01.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IGlobalDistributionRequest1 IAgentCAGlobalDistributionAuthorisationRequestV01.GlobalDistributionDetails => GlobalDistributionDetails;
+    IDocumentIdentification8 IAgentCAGlobalDistributionAuthorisationRequestV01.Identification =>
+        Identification;
+    ICorporateActionInformation1 IAgentCAGlobalDistributionAuthorisationRequestV01.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IGlobalDistributionRequest1 IAgentCAGlobalDistributionAuthorisationRequestV01.GlobalDistributionDetails =>
+        GlobalDistributionDetails;
 }

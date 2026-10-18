@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the classification.
 /// </summary>
 [IsoId("_chVpw5KQEeWHWpTQn1FFVg")]
-public interface IClassificationType33Choice : IIsoChoice
-{
-}
+public interface IClassificationType33Choice : IIsoChoice { }

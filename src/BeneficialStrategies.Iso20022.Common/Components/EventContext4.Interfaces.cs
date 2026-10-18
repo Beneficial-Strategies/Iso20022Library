@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record EventContext4 : IEventContext4
 {
-    IPointOfInteractionComponent12? IEventContext4.ComponentIdentification => ComponentIdentification;
+    IPointOfInteractionComponent12? IEventContext4.ComponentIdentification =>
+        ComponentIdentification;
 }

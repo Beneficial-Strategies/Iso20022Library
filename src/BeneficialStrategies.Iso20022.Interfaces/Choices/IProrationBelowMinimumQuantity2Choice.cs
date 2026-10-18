@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Proration Below Minimum Quantity2Choice.
 /// </summary>
 [IsoId("_G1b586GnEe-4O7NbwmwJkQ")]
-public interface IProrationBelowMinimumQuantity2Choice : IIsoChoice
-{
-}
+public interface IProrationBelowMinimumQuantity2Choice : IIsoChoice { }

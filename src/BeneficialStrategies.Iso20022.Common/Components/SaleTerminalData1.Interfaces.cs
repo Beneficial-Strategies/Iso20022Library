@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record SaleTerminalData1 : ISaleTerminalData1
-{
-}
+public partial record SaleTerminalData1 : ISaleTerminalData1 { }

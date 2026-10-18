@@ -10,14 +10,19 @@ namespace BeneficialStrategies.Iso20022.semt;
 
 public partial record CustodyStatementOfHoldingsV02 : ICustodyStatementOfHoldingsV02
 {
-    IMessageIdentification1 ICustodyStatementOfHoldingsV02.MessageIdentification => MessageIdentification;
-    IEnumerable<IAdditionalReference2> ICustodyStatementOfHoldingsV02.PreviousReference => PreviousReference;
-    IEnumerable<IAdditionalReference2> ICustodyStatementOfHoldingsV02.RelatedReference => RelatedReference;
+    IMessageIdentification1 ICustodyStatementOfHoldingsV02.MessageIdentification =>
+        MessageIdentification;
+    IEnumerable<IAdditionalReference2> ICustodyStatementOfHoldingsV02.PreviousReference =>
+        PreviousReference;
+    IEnumerable<IAdditionalReference2> ICustodyStatementOfHoldingsV02.RelatedReference =>
+        RelatedReference;
     IPagination ICustodyStatementOfHoldingsV02.MessagePagination => MessagePagination;
     IStatement7 ICustodyStatementOfHoldingsV02.StatementGeneralDetails => StatementGeneralDetails;
     ISafekeepingAccount2 ICustodyStatementOfHoldingsV02.AccountDetails => AccountDetails;
-    IEnumerable<IAggregateBalanceInformation4> ICustodyStatementOfHoldingsV02.BalanceForAccount => BalanceForAccount;
-    IEnumerable<ISubAccountIdentification5> ICustodyStatementOfHoldingsV02.SubAccountDetails => SubAccountDetails;
+    IEnumerable<IAggregateBalanceInformation4> ICustodyStatementOfHoldingsV02.BalanceForAccount =>
+        BalanceForAccount;
+    IEnumerable<ISubAccountIdentification5> ICustodyStatementOfHoldingsV02.SubAccountDetails =>
+        SubAccountDetails;
     ITotalValueInPageAndStatement? ICustodyStatementOfHoldingsV02.TotalValues => TotalValues;
     IEnumerable<IExtension1> ICustodyStatementOfHoldingsV02.Extension => Extension;
 }

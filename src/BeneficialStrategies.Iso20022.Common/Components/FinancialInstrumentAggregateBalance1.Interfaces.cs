@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record FinancialInstrumentAggregateBalance1 : IFinancialInstrumentAggregateBalance1
 {
-    IFinancialInstrumentAggregateBalance1Choice IFinancialInstrumentAggregateBalance1.Holdings => Holdings;
+    IFinancialInstrumentAggregateBalance1Choice IFinancialInstrumentAggregateBalance1.Holdings =>
+        Holdings;
     IEnumerable<IPrice6> IFinancialInstrumentAggregateBalance1.Price => Price;
 }

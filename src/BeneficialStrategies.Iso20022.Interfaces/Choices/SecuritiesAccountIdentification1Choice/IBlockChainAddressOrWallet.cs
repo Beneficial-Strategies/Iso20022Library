@@ -7,7 +7,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAccountIdentification1
 
 /// <summary>Account identified by a blockchain address or wallet.</summary>
 [IsoId("_s5w_Sd-5Ee-Ned3-G07x_A")]
-public interface IBlockChainAddressOrWallet : ISecuritiesAccountIdentification1Choice, IIsoChoiceVariant
+public interface IBlockChainAddressOrWallet
+    : ISecuritiesAccountIdentification1Choice,
+        IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>
     [IsoXmlTag("BlckChainAdrOrWllt")]

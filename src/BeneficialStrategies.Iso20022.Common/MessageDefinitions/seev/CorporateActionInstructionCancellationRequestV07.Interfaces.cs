@@ -8,11 +8,17 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record CorporateActionInstructionCancellationRequestV07 : ICorporateActionInstructionCancellationRequestV07
+public partial record CorporateActionInstructionCancellationRequestV07
+    : ICorporateActionInstructionCancellationRequestV07
 {
-    IDocumentIdentification31 ICorporateActionInstructionCancellationRequestV07.InstructionIdentification => InstructionIdentification;
-    ICorporateActionGeneralInformation110 ICorporateActionInstructionCancellationRequestV07.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IAccountIdentification31 ICorporateActionInstructionCancellationRequestV07.AccountDetails => AccountDetails;
-    ICorporateActionOption120 ICorporateActionInstructionCancellationRequestV07.CorporateActionInstruction => CorporateActionInstruction;
-    IEnumerable<ISupplementaryData1> ICorporateActionInstructionCancellationRequestV07.SupplementaryData => SupplementaryData;
+    IDocumentIdentification31 ICorporateActionInstructionCancellationRequestV07.InstructionIdentification =>
+        InstructionIdentification;
+    ICorporateActionGeneralInformation110 ICorporateActionInstructionCancellationRequestV07.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IAccountIdentification31 ICorporateActionInstructionCancellationRequestV07.AccountDetails =>
+        AccountDetails;
+    ICorporateActionOption120 ICorporateActionInstructionCancellationRequestV07.CorporateActionInstruction =>
+        CorporateActionInstruction;
+    IEnumerable<ISupplementaryData1> ICorporateActionInstructionCancellationRequestV07.SupplementaryData =>
+        SupplementaryData;
 }

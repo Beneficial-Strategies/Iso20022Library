@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus59Choice;
 
-public partial record AcceptedAndConfirmed : IAcceptedAndConfirmed
-{
-}
+public partial record AcceptedAndConfirmed : IAcceptedAndConfirmed { }

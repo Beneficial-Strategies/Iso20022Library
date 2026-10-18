@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.References37Choice;
 
-public partial record OtherMessageIdentification : IOtherMessageIdentification
-{
-}
+public partial record OtherMessageIdentification : IOtherMessageIdentification { }

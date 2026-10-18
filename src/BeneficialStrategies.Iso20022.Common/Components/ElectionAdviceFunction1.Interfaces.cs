@@ -10,7 +10,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ElectionAdviceFunction1 : IElectionAdviceFunction1
 {
-    IDocumentIdentification8? IElectionAdviceFunction1.PreviousAgentCAElectionAdviceIdentification => PreviousAgentCAElectionAdviceIdentification;
-    IDocumentIdentification8? IElectionAdviceFunction1.AgentCAElectionStatusAdviceIdentification => AgentCAElectionStatusAdviceIdentification;
-    IDocumentIdentification8? IElectionAdviceFunction1.AgentCAElectionAmendmentRequestIdentification => AgentCAElectionAmendmentRequestIdentification;
+    IDocumentIdentification8? IElectionAdviceFunction1.PreviousAgentCAElectionAdviceIdentification =>
+        PreviousAgentCAElectionAdviceIdentification;
+    IDocumentIdentification8? IElectionAdviceFunction1.AgentCAElectionStatusAdviceIdentification =>
+        AgentCAElectionStatusAdviceIdentification;
+    IDocumentIdentification8? IElectionAdviceFunction1.AgentCAElectionAmendmentRequestIdentification =>
+        AgentCAElectionAmendmentRequestIdentification;
 }

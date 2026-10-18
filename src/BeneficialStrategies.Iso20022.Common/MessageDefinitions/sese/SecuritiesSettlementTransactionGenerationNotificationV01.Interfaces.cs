@@ -8,27 +8,49 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesSettlementTransactionGenerationNotificationV01 : ISecuritiesSettlementTransactionGenerationNotificationV01
+public partial record SecuritiesSettlementTransactionGenerationNotificationV01
+    : ISecuritiesSettlementTransactionGenerationNotificationV01
 {
-    IDocumentIdentification11 ISecuritiesSettlementTransactionGenerationNotificationV01.Identification => Identification;
-    ISettlementTypeAndIdentification1 ISecuritiesSettlementTransactionGenerationNotificationV01.TransactionIdentificationDetails => TransactionIdentificationDetails;
-    INumberCount1Choice? ISecuritiesSettlementTransactionGenerationNotificationV01.NumberCounts => NumberCounts;
-    IEnumerable<ILinkages1> ISecuritiesSettlementTransactionGenerationNotificationV01.Linkages => Linkages;
-    ISecuritiesTradeDetails1 ISecuritiesSettlementTransactionGenerationNotificationV01.TradeDetails => TradeDetails;
-    ISecurityIdentification11 ISecuritiesSettlementTransactionGenerationNotificationV01.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentAttributes8? ISecuritiesSettlementTransactionGenerationNotificationV01.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
-    IEnumerable<IQuantityAndAccount1> ISecuritiesSettlementTransactionGenerationNotificationV01.QuantityAndAccountDetails => QuantityAndAccountDetails;
-    ISettlementDetails1 ISecuritiesSettlementTransactionGenerationNotificationV01.SettlementParameters => SettlementParameters;
-    ISettlementParties5? ISecuritiesSettlementTransactionGenerationNotificationV01.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties5? ISecuritiesSettlementTransactionGenerationNotificationV01.ReceivingSettlementParties => ReceivingSettlementParties;
-    ICashParties3? ISecuritiesSettlementTransactionGenerationNotificationV01.CashParties => CashParties;
-    IAmountAndDirection2? ISecuritiesSettlementTransactionGenerationNotificationV01.SettlementAmount => SettlementAmount;
-    IOtherAmounts3? ISecuritiesSettlementTransactionGenerationNotificationV01.OtherAmounts => OtherAmounts;
-    IOtherParties2? ISecuritiesSettlementTransactionGenerationNotificationV01.OtherBusinessParties => OtherBusinessParties;
-    IPartyIdentification10Choice? ISecuritiesSettlementTransactionGenerationNotificationV01.MessageOriginator => MessageOriginator;
-    IPartyIdentification10Choice? ISecuritiesSettlementTransactionGenerationNotificationV01.MessageRecipient => MessageRecipient;
-    IRegistrationParameters1? ISecuritiesSettlementTransactionGenerationNotificationV01.AdditionalPhysicalOrRegistrationDetails => AdditionalPhysicalOrRegistrationDetails;
-    IEnumerable<IGeneratedReason1> ISecuritiesSettlementTransactionGenerationNotificationV01.GeneratedReason => GeneratedReason;
-    IStatusAndReason3? ISecuritiesSettlementTransactionGenerationNotificationV01.StatusAndReason => StatusAndReason;
-    IEnumerable<IExtension2> ISecuritiesSettlementTransactionGenerationNotificationV01.Extension => Extension;
+    IDocumentIdentification11 ISecuritiesSettlementTransactionGenerationNotificationV01.Identification =>
+        Identification;
+    ISettlementTypeAndIdentification1 ISecuritiesSettlementTransactionGenerationNotificationV01.TransactionIdentificationDetails =>
+        TransactionIdentificationDetails;
+    INumberCount1Choice? ISecuritiesSettlementTransactionGenerationNotificationV01.NumberCounts =>
+        NumberCounts;
+    IEnumerable<ILinkages1> ISecuritiesSettlementTransactionGenerationNotificationV01.Linkages =>
+        Linkages;
+    ISecuritiesTradeDetails1 ISecuritiesSettlementTransactionGenerationNotificationV01.TradeDetails =>
+        TradeDetails;
+    ISecurityIdentification11 ISecuritiesSettlementTransactionGenerationNotificationV01.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentAttributes8? ISecuritiesSettlementTransactionGenerationNotificationV01.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
+    IEnumerable<IQuantityAndAccount1> ISecuritiesSettlementTransactionGenerationNotificationV01.QuantityAndAccountDetails =>
+        QuantityAndAccountDetails;
+    ISettlementDetails1 ISecuritiesSettlementTransactionGenerationNotificationV01.SettlementParameters =>
+        SettlementParameters;
+    ISettlementParties5? ISecuritiesSettlementTransactionGenerationNotificationV01.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties5? ISecuritiesSettlementTransactionGenerationNotificationV01.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
+    ICashParties3? ISecuritiesSettlementTransactionGenerationNotificationV01.CashParties =>
+        CashParties;
+    IAmountAndDirection2? ISecuritiesSettlementTransactionGenerationNotificationV01.SettlementAmount =>
+        SettlementAmount;
+    IOtherAmounts3? ISecuritiesSettlementTransactionGenerationNotificationV01.OtherAmounts =>
+        OtherAmounts;
+    IOtherParties2? ISecuritiesSettlementTransactionGenerationNotificationV01.OtherBusinessParties =>
+        OtherBusinessParties;
+    IPartyIdentification10Choice? ISecuritiesSettlementTransactionGenerationNotificationV01.MessageOriginator =>
+        MessageOriginator;
+    IPartyIdentification10Choice? ISecuritiesSettlementTransactionGenerationNotificationV01.MessageRecipient =>
+        MessageRecipient;
+    IRegistrationParameters1? ISecuritiesSettlementTransactionGenerationNotificationV01.AdditionalPhysicalOrRegistrationDetails =>
+        AdditionalPhysicalOrRegistrationDetails;
+    IEnumerable<IGeneratedReason1> ISecuritiesSettlementTransactionGenerationNotificationV01.GeneratedReason =>
+        GeneratedReason;
+    IStatusAndReason3? ISecuritiesSettlementTransactionGenerationNotificationV01.StatusAndReason =>
+        StatusAndReason;
+    IEnumerable<IExtension2> ISecuritiesSettlementTransactionGenerationNotificationV01.Extension =>
+        Extension;
 }

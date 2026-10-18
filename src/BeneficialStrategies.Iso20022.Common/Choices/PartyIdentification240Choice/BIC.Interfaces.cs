@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification240Choice;
 
-public partial record BIC : IBIC
-{
-}
+public partial record BIC : IBIC { }

@@ -10,9 +10,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record BeneficialOwner1 : IBeneficialOwner1
 {
-    IPartyIdentification2Choice IBeneficialOwner1.BeneficialOwnerIdentification => BeneficialOwnerIdentification;
-    IGenericIdentification16? IBeneficialOwner1.AdditionalIdentification => AdditionalIdentification;
-    IBeneficiaryCertificationType1FormatChoice? IBeneficialOwner1.CertificationType => CertificationType;
+    IPartyIdentification2Choice IBeneficialOwner1.BeneficialOwnerIdentification =>
+        BeneficialOwnerIdentification;
+    IGenericIdentification16? IBeneficialOwner1.AdditionalIdentification =>
+        AdditionalIdentification;
+    IBeneficiaryCertificationType1FormatChoice? IBeneficialOwner1.CertificationType =>
+        CertificationType;
     ISecurityIdentification7? IBeneficialOwner1.SecurityIdentification => SecurityIdentification;
-    IUnitOrFaceAmount1Choice IBeneficialOwner1.ElectedSecuritiesQuantity => ElectedSecuritiesQuantity;
+    IUnitOrFaceAmount1Choice IBeneficialOwner1.ElectedSecuritiesQuantity =>
+        ElectedSecuritiesQuantity;
 }

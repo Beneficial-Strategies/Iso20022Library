@@ -11,12 +11,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record TransactionDetails75 : ITransactionDetails75
 {
     ITransactionActivity3Choice ITransactionDetails75.TransactionActivity => TransactionActivity;
-    ISettlementOrCorporateActionEvent14Choice? ITransactionDetails75.SettlementTransactionOrCorporateActionEventType => SettlementTransactionOrCorporateActionEventType;
+    ISettlementOrCorporateActionEvent14Choice? ITransactionDetails75.SettlementTransactionOrCorporateActionEventType =>
+        SettlementTransactionOrCorporateActionEventType;
     ISettlementDetails92? ITransactionDetails75.SettlementParameters => SettlementParameters;
     IPlaceOfTradeIdentification1? ITransactionDetails75.PlaceOfTrade => PlaceOfTrade;
     ISafeKeepingPlace1? ITransactionDetails75.SafekeepingPlace => SafekeepingPlace;
     IPlaceOfClearingIdentification1? ITransactionDetails75.PlaceOfClearing => PlaceOfClearing;
-    ISecurityIdentification19 ITransactionDetails75.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification19 ITransactionDetails75.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     IQuantity6Choice ITransactionDetails75.PostingQuantity => PostingQuantity;
     IAmountAndDirection51? ITransactionDetails75.PostingAmount => PostingAmount;
     ITradeDate5Choice? ITransactionDetails75.TradeDate => TradeDate;
@@ -24,7 +26,9 @@ public partial record TransactionDetails75 : ITransactionDetails75
     ISettlementDate10Choice ITransactionDetails75.SettlementDate => SettlementDate;
     IDateAndDateTimeChoice? ITransactionDetails75.LateDeliveryDate => LateDeliveryDate;
     IDateAndDateTimeChoice? ITransactionDetails75.ExpectedValueDate => ExpectedValueDate;
-    ISettlementParties40? ITransactionDetails75.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties40? ITransactionDetails75.ReceivingSettlementParties => ReceivingSettlementParties;
+    ISettlementParties40? ITransactionDetails75.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties40? ITransactionDetails75.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
     IEnumerable<ISupplementaryData1> ITransactionDetails75.SupplementaryData => SupplementaryData;
 }

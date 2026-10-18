@@ -11,11 +11,17 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CorporateActionNarrative36 : ICorporateActionNarrative36
 {
     IUpdatedAdditionalInformation6? ICorporateActionNarrative36.AdditionalText => AdditionalText;
-    IUpdatedAdditionalInformation6? ICorporateActionNarrative36.NarrativeVersion => NarrativeVersion;
-    IUpdatedAdditionalInformation5? ICorporateActionNarrative36.InformationConditions => InformationConditions;
-    IUpdatedAdditionalInformation5? ICorporateActionNarrative36.InformationToComplyWith => InformationToComplyWith;
-    IUpdatedAdditionalInformation5? ICorporateActionNarrative36.SecurityRestriction => SecurityRestriction;
-    IUpdatedAdditionalInformation5? ICorporateActionNarrative36.TaxationConditions => TaxationConditions;
+    IUpdatedAdditionalInformation6? ICorporateActionNarrative36.NarrativeVersion =>
+        NarrativeVersion;
+    IUpdatedAdditionalInformation5? ICorporateActionNarrative36.InformationConditions =>
+        InformationConditions;
+    IUpdatedAdditionalInformation5? ICorporateActionNarrative36.InformationToComplyWith =>
+        InformationToComplyWith;
+    IUpdatedAdditionalInformation5? ICorporateActionNarrative36.SecurityRestriction =>
+        SecurityRestriction;
+    IUpdatedAdditionalInformation5? ICorporateActionNarrative36.TaxationConditions =>
+        TaxationConditions;
     IUpdatedAdditionalInformation5? ICorporateActionNarrative36.Disclaimer => Disclaimer;
-    IUpdatedAdditionalInformation5? ICorporateActionNarrative36.CertificationBreakdown => CertificationBreakdown;
+    IUpdatedAdditionalInformation5? ICorporateActionNarrative36.CertificationBreakdown =>
+        CertificationBreakdown;
 }

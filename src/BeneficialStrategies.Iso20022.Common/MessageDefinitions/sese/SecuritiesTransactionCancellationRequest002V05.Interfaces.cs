@@ -8,13 +8,21 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesTransactionCancellationRequest002V05 : ISecuritiesTransactionCancellationRequest002V05
+public partial record SecuritiesTransactionCancellationRequest002V05
+    : ISecuritiesTransactionCancellationRequest002V05
 {
-    IReferences60Choice ISecuritiesTransactionCancellationRequest002V05.AccountOwnerTransactionIdentification => AccountOwnerTransactionIdentification;
-    IPartyIdentification109? ISecuritiesTransactionCancellationRequest002V05.AccountOwner => AccountOwner;
-    ISecuritiesAccount30 ISecuritiesTransactionCancellationRequest002V05.SafekeepingAccount => SafekeepingAccount;
-    ITransactionDetails83? ISecuritiesTransactionCancellationRequest002V05.TransactionDetails => TransactionDetails;
-    ICancellationReason19? ISecuritiesTransactionCancellationRequest002V05.CancellationReason => CancellationReason;
-    IFXCancellation4Choice? ISecuritiesTransactionCancellationRequest002V05.FXCancellation => FXCancellation;
-    IEnumerable<ISupplementaryData1> ISecuritiesTransactionCancellationRequest002V05.SupplementaryData => SupplementaryData;
+    IReferences60Choice ISecuritiesTransactionCancellationRequest002V05.AccountOwnerTransactionIdentification =>
+        AccountOwnerTransactionIdentification;
+    IPartyIdentification109? ISecuritiesTransactionCancellationRequest002V05.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount30 ISecuritiesTransactionCancellationRequest002V05.SafekeepingAccount =>
+        SafekeepingAccount;
+    ITransactionDetails83? ISecuritiesTransactionCancellationRequest002V05.TransactionDetails =>
+        TransactionDetails;
+    ICancellationReason19? ISecuritiesTransactionCancellationRequest002V05.CancellationReason =>
+        CancellationReason;
+    IFXCancellation4Choice? ISecuritiesTransactionCancellationRequest002V05.FXCancellation =>
+        FXCancellation;
+    IEnumerable<ISupplementaryData1> ISecuritiesTransactionCancellationRequest002V05.SupplementaryData =>
+        SupplementaryData;
 }

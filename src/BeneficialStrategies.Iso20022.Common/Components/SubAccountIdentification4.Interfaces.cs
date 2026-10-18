@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SubAccountIdentification4 : ISubAccountIdentification4
 {
     IAccountIdentificationFormatChoice ISubAccountIdentification4.Identification => Identification;
-    IEnumerable<IInvestmentFundTransactionsByFund1> ISubAccountIdentification4.TransactionOnSubAccount => TransactionOnSubAccount;
+    IEnumerable<IInvestmentFundTransactionsByFund1> ISubAccountIdentification4.TransactionOnSubAccount =>
+        TransactionOnSubAccount;
 }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification178Choice;
 
-public partial record ProprietaryIdentification : IProprietaryIdentification
-{
-}
+public partial record ProprietaryIdentification : IProprietaryIdentification { }

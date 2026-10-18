@@ -10,19 +10,23 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType37Choice;
 
 public partial record Deletion : IDeletion
 {
-    ISettlementTypeAndAdditionalParameters13? IDeletion.SettlementTypeAndAdditionalParameters => SettlementTypeAndAdditionalParameters;
+    ISettlementTypeAndAdditionalParameters13? IDeletion.SettlementTypeAndAdditionalParameters =>
+        SettlementTypeAndAdditionalParameters;
     IEnumerable<ILinkages40> IDeletion.Linkages => Linkages;
     ISecuritiesTradeDetails120? IDeletion.TradeDetails => TradeDetails;
-    IFinancialInstrumentAttributes111? IDeletion.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
+    IFinancialInstrumentAttributes111? IDeletion.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
     IQuantityAndAccount100? IDeletion.QuantityAndAccountDetails => QuantityAndAccountDetails;
     ISettlementDetails200? IDeletion.SettlementParameters => SettlementParameters;
-    IStandingSettlementInstruction18? IDeletion.StandingSettlementInstructionDetails => StandingSettlementInstructionDetails;
+    IStandingSettlementInstruction18? IDeletion.StandingSettlementInstructionDetails =>
+        StandingSettlementInstructionDetails;
     ISettlementParties98? IDeletion.DeliveringSettlementParties => DeliveringSettlementParties;
     ISettlementParties98? IDeletion.ReceivingSettlementParties => ReceivingSettlementParties;
     ICashParties36? IDeletion.CashParties => CashParties;
     IAmountAndDirection95? IDeletion.SettlementAmount => SettlementAmount;
     IOtherAmounts39? IDeletion.OtherAmounts => OtherAmounts;
     IOtherParties43? IDeletion.OtherBusinessParties => OtherBusinessParties;
-    IRegistrationParameters6? IDeletion.AdditionalPhysicalOrRegistrationDetails => AdditionalPhysicalOrRegistrationDetails;
+    IRegistrationParameters6? IDeletion.AdditionalPhysicalOrRegistrationDetails =>
+        AdditionalPhysicalOrRegistrationDetails;
     IEnumerable<ISupplementaryData1> IDeletion.SupplementaryData => SupplementaryData;
 }

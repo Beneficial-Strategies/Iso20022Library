@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the tax basis.
 /// </summary>
 [IsoId("_S9_-wRuIEeOqSdXzJ0oydA")]
-public interface ITaxBasis1Choice : IIsoChoice
-{
-}
+public interface ITaxBasis1Choice : IIsoChoice { }

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record InvestmentAccount25 : IInvestmentAccount25
 {
     IAccountIdentification1 IInvestmentAccount25.Identification => Identification;
-    IEnumerable<IIntermediary11> IInvestmentAccount25.IntermediaryInformation => IntermediaryInformation;
+    IEnumerable<IIntermediary11> IInvestmentAccount25.IntermediaryInformation =>
+        IntermediaryInformation;
     IPartyIdentification2Choice? IInvestmentAccount25.AccountServicer => AccountServicer;
 }

@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record OriginalGroupHeader2 : IOriginalGroupHeader2
 {
-    IEnumerable<IPaymentReturnReason1> IOriginalGroupHeader2.ReturnReasonInformation => ReturnReasonInformation;
+    IEnumerable<IPaymentReturnReason1> IOriginalGroupHeader2.ReturnReasonInformation =>
+        ReturnReasonInformation;
 }

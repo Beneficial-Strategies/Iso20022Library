@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the feature of an option.
 /// </summary>
 [IsoId("_Rm2nFdp-Ed-ak6NoX_4Aeg_741252058")]
-public interface IOptionFeatures1FormatChoice : IIsoChoice
-{
-}
+public interface IOptionFeatures1FormatChoice : IIsoChoice { }

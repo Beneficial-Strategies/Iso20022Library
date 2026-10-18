@@ -11,10 +11,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SecuritiesOption33 : ISecuritiesOption33
 {
     IFinancialInstrumentAttributes34 ISecuritiesOption33.SecurityDetails => SecurityDetails;
-    ITemporaryFinancialInstrumentIndicator1Choice? ISecuritiesOption33.TemporaryFinancialInstrumentIndicator => TemporaryFinancialInstrumentIndicator;
-    INonEligibleProceedsIndicator1Choice? ISecuritiesOption33.NonEligibleProceedsIndicator => NonEligibleProceedsIndicator;
+    ITemporaryFinancialInstrumentIndicator1Choice? ISecuritiesOption33.TemporaryFinancialInstrumentIndicator =>
+        TemporaryFinancialInstrumentIndicator;
+    INonEligibleProceedsIndicator1Choice? ISecuritiesOption33.NonEligibleProceedsIndicator =>
+        NonEligibleProceedsIndicator;
     IQuantity6Choice? ISecuritiesOption33.EntitledQuantity => EntitledQuantity;
-    IFractionDispositionType19Choice? ISecuritiesOption33.FractionDisposition => FractionDisposition;
+    IFractionDispositionType19Choice? ISecuritiesOption33.FractionDisposition =>
+        FractionDisposition;
     IPeriod3Choice? ISecuritiesOption33.TradingPeriod => TradingPeriod;
     ISecurityDate9 ISecuritiesOption33.DateDetails => DateDetails;
     ICorporateActionRate28? ISecuritiesOption33.RateDetails => RateDetails;

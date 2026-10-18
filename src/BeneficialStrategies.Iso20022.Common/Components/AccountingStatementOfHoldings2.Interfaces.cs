@@ -12,8 +12,10 @@ public partial record AccountingStatementOfHoldings2 : IAccountingStatementOfHol
 {
     IStatement6? IAccountingStatementOfHoldings2.StatementGeneralDetails => StatementGeneralDetails;
     ISafekeepingAccount2? IAccountingStatementOfHoldings2.AccountDetails => AccountDetails;
-    IEnumerable<IAggregateBalanceInformation3> IAccountingStatementOfHoldings2.BalanceForAccount => BalanceForAccount;
-    IEnumerable<ISubAccountIdentification3> IAccountingStatementOfHoldings2.SubAccountDetails => SubAccountDetails;
+    IEnumerable<IAggregateBalanceInformation3> IAccountingStatementOfHoldings2.BalanceForAccount =>
+        BalanceForAccount;
+    IEnumerable<ISubAccountIdentification3> IAccountingStatementOfHoldings2.SubAccountDetails =>
+        SubAccountDetails;
     ITotalValueInPageAndStatement? IAccountingStatementOfHoldings2.TotalValues => TotalValues;
     IEnumerable<IExtension1> IAccountingStatementOfHoldings2.Extension => Extension;
 }

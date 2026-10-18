@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record EventInformation3 : IEventInformation3
 {
     ICorporateActionEventType7Choice IEventInformation3.EventType => EventType;
-    ICorporateActionMandatoryVoluntary1Choice IEventInformation3.MandatoryVoluntaryEventType => MandatoryVoluntaryEventType;
-    INotificationIdentification1? IEventInformation3.LastNotificationIdentification => LastNotificationIdentification;
+    ICorporateActionMandatoryVoluntary1Choice IEventInformation3.MandatoryVoluntaryEventType =>
+        MandatoryVoluntaryEventType;
+    INotificationIdentification1? IEventInformation3.LastNotificationIdentification =>
+        LastNotificationIdentification;
 }

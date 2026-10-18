@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CashAccount19 : ICashAccount19
 {
-    IPartyIdentification2Choice? ICashAccount19.AccountOwnerIdentification => AccountOwnerIdentification;
+    IPartyIdentification2Choice? ICashAccount19.AccountOwnerIdentification =>
+        AccountOwnerIdentification;
     IAccountIdentification2Choice ICashAccount19.AccountIdentification => AccountIdentification;
 }

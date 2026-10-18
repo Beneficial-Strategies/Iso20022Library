@@ -11,13 +11,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CorporateActionNarrative28 : ICorporateActionNarrative28
 {
     IUpdatedAdditionalInformation1? ICorporateActionNarrative28.AdditionalText => AdditionalText;
-    IUpdatedAdditionalInformation1? ICorporateActionNarrative28.NarrativeVersion => NarrativeVersion;
-    IUpdatedAdditionalInformation1? ICorporateActionNarrative28.InformationConditions => InformationConditions;
-    IUpdatedAdditionalInformation1? ICorporateActionNarrative28.InformationToComplyWith => InformationToComplyWith;
-    IUpdatedAdditionalInformation1? ICorporateActionNarrative28.TaxationConditions => TaxationConditions;
+    IUpdatedAdditionalInformation1? ICorporateActionNarrative28.NarrativeVersion =>
+        NarrativeVersion;
+    IUpdatedAdditionalInformation1? ICorporateActionNarrative28.InformationConditions =>
+        InformationConditions;
+    IUpdatedAdditionalInformation1? ICorporateActionNarrative28.InformationToComplyWith =>
+        InformationToComplyWith;
+    IUpdatedAdditionalInformation1? ICorporateActionNarrative28.TaxationConditions =>
+        TaxationConditions;
     IUpdatedAdditionalInformation1? ICorporateActionNarrative28.Disclaimer => Disclaimer;
-    IUpdatedAdditionalInformation1? ICorporateActionNarrative28.PartyContactNarrative => PartyContactNarrative;
-    IUpdatedAdditionalInformation1? ICorporateActionNarrative28.RegistrationDetails => RegistrationDetails;
-    IUpdatedAdditionalInformation1? ICorporateActionNarrative28.BasketOrIndexInformation => BasketOrIndexInformation;
-    IUpdatedAdditionalInformation1? ICorporateActionNarrative28.CertificationBreakdown => CertificationBreakdown;
+    IUpdatedAdditionalInformation1? ICorporateActionNarrative28.PartyContactNarrative =>
+        PartyContactNarrative;
+    IUpdatedAdditionalInformation1? ICorporateActionNarrative28.RegistrationDetails =>
+        RegistrationDetails;
+    IUpdatedAdditionalInformation1? ICorporateActionNarrative28.BasketOrIndexInformation =>
+        BasketOrIndexInformation;
+    IUpdatedAdditionalInformation1? ICorporateActionNarrative28.CertificationBreakdown =>
+        CertificationBreakdown;
 }

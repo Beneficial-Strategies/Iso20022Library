@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification1Choice;
 
-public partial record AlternateIdentification : IAlternateIdentification
-{
-}
+public partial record AlternateIdentification : IAlternateIdentification { }

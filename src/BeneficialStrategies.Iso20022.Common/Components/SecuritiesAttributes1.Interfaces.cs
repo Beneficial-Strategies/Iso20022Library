@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record SecuritiesAttributes1 : ISecuritiesAttributes1
-{
-}
+public partial record SecuritiesAttributes1 : ISecuritiesAttributes1 { }

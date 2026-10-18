@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PledgeeFormat6Choice;
 
-public partial record TypeAndIdentification : ITypeAndIdentification
-{
-}
+public partial record TypeAndIdentification : ITypeAndIdentification { }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for a party role.
 /// </summary>
 [IsoId("_Qwm7k9p-Ed-ak6NoX_4Aeg_-1001393826")]
-public interface IRole2Choice : IIsoChoice
-{
-}
+public interface IRole2Choice : IIsoChoice { }

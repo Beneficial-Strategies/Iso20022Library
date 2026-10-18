@@ -12,11 +12,14 @@ public partial record DeliverInformation21 : IDeliverInformation21
 {
     IPartyIdentification139? IDeliverInformation21.Transferor => Transferor;
     IAccount31? IDeliverInformation21.TransferorRegisteredAccount => TransferorRegisteredAccount;
-    IEnumerable<IIntermediary43> IDeliverInformation21.IntermediaryInformation => IntermediaryInformation;
+    IEnumerable<IIntermediary43> IDeliverInformation21.IntermediaryInformation =>
+        IntermediaryInformation;
     IEnumerable<IFees2> IDeliverInformation21.Fees => Fees;
     IEnumerable<ITax38> IDeliverInformation21.IndividualTax => IndividualTax;
-    IEnumerable<IForeignExchangeTerms37> IDeliverInformation21.ForeignExchangeDetails => ForeignExchangeDetails;
-    IFundSettlementParameters15? IDeliverInformation21.SettlementPartiesDetails => SettlementPartiesDetails;
+    IEnumerable<IForeignExchangeTerms37> IDeliverInformation21.ForeignExchangeDetails =>
+        ForeignExchangeDetails;
+    IFundSettlementParameters15? IDeliverInformation21.SettlementPartiesDetails =>
+        SettlementPartiesDetails;
     IDeliveryParameters4? IDeliverInformation21.PhysicalTransferDetails => PhysicalTransferDetails;
     IAdditionalReference10? IDeliverInformation21.ClientReference => ClientReference;
 }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the type of price.
 /// </summary>
 [IsoId("_Qih-PznXEeWV5sr121Fc8A")]
-public interface ITypeOfPrice29Choice : IIsoChoice
-{
-}
+public interface ITypeOfPrice29Choice : IIsoChoice { }

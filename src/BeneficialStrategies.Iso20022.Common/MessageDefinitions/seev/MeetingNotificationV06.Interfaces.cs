@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.seev;
 
 public partial record MeetingNotificationV06 : IMeetingNotificationV06
 {
-    INotificationGeneralInformation1 IMeetingNotificationV06.NotificationGeneralInformation => NotificationGeneralInformation;
+    INotificationGeneralInformation1 IMeetingNotificationV06.NotificationGeneralInformation =>
+        NotificationGeneralInformation;
     INotificationUpdate1? IMeetingNotificationV06.NotificationUpdate => NotificationUpdate;
     IEnumerable<IMeetingEventReference1> IMeetingNotificationV06.EventsLinkage => EventsLinkage;
     IMeetingNotice5 IMeetingNotificationV06.Meeting => Meeting;
@@ -20,7 +21,9 @@ public partial record MeetingNotificationV06 : IMeetingNotificationV06
     IEnumerable<ISecurityPosition10> IMeetingNotificationV06.Security => Security;
     IEnumerable<IResolution4> IMeetingNotificationV06.Resolution => Resolution;
     IVoteParameters5? IMeetingNotificationV06.Vote => Vote;
-    IPowerOfAttorneyRequirements4? IMeetingNotificationV06.PowerOfAttorneyRequirements => PowerOfAttorneyRequirements;
-    ICorporateEventNarrative2? IMeetingNotificationV06.AdditionalInformation => AdditionalInformation;
+    IPowerOfAttorneyRequirements4? IMeetingNotificationV06.PowerOfAttorneyRequirements =>
+        PowerOfAttorneyRequirements;
+    ICorporateEventNarrative2? IMeetingNotificationV06.AdditionalInformation =>
+        AdditionalInformation;
     IEnumerable<ISupplementaryData1> IMeetingNotificationV06.SupplementaryData => SupplementaryData;
 }

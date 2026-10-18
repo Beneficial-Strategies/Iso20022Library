@@ -8,12 +8,19 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record CorporateActionEventProcessingStatusAdvice002V05 : ICorporateActionEventProcessingStatusAdvice002V05
+public partial record CorporateActionEventProcessingStatusAdvice002V05
+    : ICorporateActionEventProcessingStatusAdvice002V05
 {
-    IDocumentIdentification17? ICorporateActionEventProcessingStatusAdvice002V05.NotificationIdentification => NotificationIdentification;
-    IEnumerable<IDocumentIdentification34> ICorporateActionEventProcessingStatusAdvice002V05.OtherDocumentIdentification => OtherDocumentIdentification;
-    ICorporateActionGeneralInformation94 ICorporateActionEventProcessingStatusAdvice002V05.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IEnumerable<IEventProcessingStatus4Choice> ICorporateActionEventProcessingStatusAdvice002V05.EventProcessingStatus => EventProcessingStatus;
-    ICorporateActionNarrative19? ICorporateActionEventProcessingStatusAdvice002V05.AdditionalInformation => AdditionalInformation;
-    IEnumerable<ISupplementaryData1> ICorporateActionEventProcessingStatusAdvice002V05.SupplementaryData => SupplementaryData;
+    IDocumentIdentification17? ICorporateActionEventProcessingStatusAdvice002V05.NotificationIdentification =>
+        NotificationIdentification;
+    IEnumerable<IDocumentIdentification34> ICorporateActionEventProcessingStatusAdvice002V05.OtherDocumentIdentification =>
+        OtherDocumentIdentification;
+    ICorporateActionGeneralInformation94 ICorporateActionEventProcessingStatusAdvice002V05.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IEnumerable<IEventProcessingStatus4Choice> ICorporateActionEventProcessingStatusAdvice002V05.EventProcessingStatus =>
+        EventProcessingStatus;
+    ICorporateActionNarrative19? ICorporateActionEventProcessingStatusAdvice002V05.AdditionalInformation =>
+        AdditionalInformation;
+    IEnumerable<ISupplementaryData1> ICorporateActionEventProcessingStatusAdvice002V05.SupplementaryData =>
+        SupplementaryData;
 }

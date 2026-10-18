@@ -16,13 +16,15 @@ public partial record CardPaymentEnvironment79 : ICardPaymentEnvironment79
     IPointOfInteraction13? ICardPaymentEnvironment79.POI => POI;
     IPaymentCard33? ICardPaymentEnvironment79.Card => Card;
     ICheck1? ICardPaymentEnvironment79.Check => Check;
-    IEnumerable<IStoredValueAccount2> ICardPaymentEnvironment79.StoredValueAccount => StoredValueAccount;
+    IEnumerable<IStoredValueAccount2> ICardPaymentEnvironment79.StoredValueAccount =>
+        StoredValueAccount;
     IEnumerable<ILoyaltyAccount3> ICardPaymentEnvironment79.LoyaltyAccount => LoyaltyAccount;
     ICustomerDevice3? ICardPaymentEnvironment79.CustomerDevice => CustomerDevice;
     ICustomerDevice3? ICardPaymentEnvironment79.Wallet => Wallet;
     IToken1? ICardPaymentEnvironment79.PaymentToken => PaymentToken;
     IMerchantToken2? ICardPaymentEnvironment79.MerchantToken => MerchantToken;
     ICardholder20? ICardPaymentEnvironment79.Cardholder => Cardholder;
-    IContentInformationType35? ICardPaymentEnvironment79.ProtectedCardholderData => ProtectedCardholderData;
+    IContentInformationType35? ICardPaymentEnvironment79.ProtectedCardholderData =>
+        ProtectedCardholderData;
     IRetailerSaleEnvironment2? ICardPaymentEnvironment79.SaleEnvironment => SaleEnvironment;
 }

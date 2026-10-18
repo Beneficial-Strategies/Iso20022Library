@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record MultilateralSettlementRequest2 : IMultilateralSettlementRequest2
 {
-    ISettlementTimeRequest2? IMultilateralSettlementRequest2.SettlementTimeRequest => SettlementTimeRequest;
+    ISettlementTimeRequest2? IMultilateralSettlementRequest2.SettlementTimeRequest =>
+        SettlementTimeRequest;
     IEnumerable<IMovementRecord1> IMultilateralSettlementRequest2.MovementRecord => MovementRecord;
 }

@@ -13,7 +13,8 @@ public partial record TotalPortfolioValuationReportV01 : ITotalPortfolioValuatio
     IPagination ITotalPortfolioValuationReportV01.Pagination => Pagination;
     IReport4 ITotalPortfolioValuationReportV01.ReportGeneralDetails => ReportGeneralDetails;
     ISecuritiesAccount21 ITotalPortfolioValuationReportV01.AccountDetails => AccountDetails;
-    ITotalPortfolioValuation1 ITotalPortfolioValuationReportV01.TotalPortfolioValuation => TotalPortfolioValuation;
+    ITotalPortfolioValuation1 ITotalPortfolioValuationReportV01.TotalPortfolioValuation =>
+        TotalPortfolioValuation;
     IPortfolioBalance1? ITotalPortfolioValuationReportV01.Balance => Balance;
     ISupplementaryData1? ITotalPortfolioValuationReportV01.SupplementaryData => SupplementaryData;
 }

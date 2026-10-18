@@ -8,7 +8,9 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record SecuritiesModificationQueryDefinition1 : ISecuritiesModificationQueryDefinition1
+public partial record SecuritiesModificationQueryDefinition1
+    : ISecuritiesModificationQueryDefinition1
 {
-    ISecuritiesModificationQueryCriteria1 ISecuritiesModificationQueryDefinition1.SearchCriteria => SearchCriteria;
+    ISecuritiesModificationQueryCriteria1 ISecuritiesModificationQueryDefinition1.SearchCriteria =>
+        SearchCriteria;
 }

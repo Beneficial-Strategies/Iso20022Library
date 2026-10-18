@@ -8,19 +8,28 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.Cancellation11Choice;
 
-public partial record CancellationByTransferInstructionDetails : ICancellationByTransferInstructionDetails
+public partial record CancellationByTransferInstructionDetails
+    : ICancellationByTransferInstructionDetails
 {
-    IIndividualPerson8? ICancellationByTransferInstructionDetails.PrimaryIndividualInvestor => PrimaryIndividualInvestor;
-    IIndividualPerson8? ICancellationByTransferInstructionDetails.SecondaryIndividualInvestor => SecondaryIndividualInvestor;
-    IEnumerable<IIndividualPerson8> ICancellationByTransferInstructionDetails.OtherIndividualInvestor => OtherIndividualInvestor;
-    IOrganisation21? ICancellationByTransferInstructionDetails.PrimaryCorporateInvestor => PrimaryCorporateInvestor;
-    IOrganisation21? ICancellationByTransferInstructionDetails.SecondaryCorporateInvestor => SecondaryCorporateInvestor;
-    IEnumerable<IOrganisation21> ICancellationByTransferInstructionDetails.OtherCorporateInvestor => OtherCorporateInvestor;
+    IIndividualPerson8? ICancellationByTransferInstructionDetails.PrimaryIndividualInvestor =>
+        PrimaryIndividualInvestor;
+    IIndividualPerson8? ICancellationByTransferInstructionDetails.SecondaryIndividualInvestor =>
+        SecondaryIndividualInvestor;
+    IEnumerable<IIndividualPerson8> ICancellationByTransferInstructionDetails.OtherIndividualInvestor =>
+        OtherIndividualInvestor;
+    IOrganisation21? ICancellationByTransferInstructionDetails.PrimaryCorporateInvestor =>
+        PrimaryCorporateInvestor;
+    IOrganisation21? ICancellationByTransferInstructionDetails.SecondaryCorporateInvestor =>
+        SecondaryCorporateInvestor;
+    IEnumerable<IOrganisation21> ICancellationByTransferInstructionDetails.OtherCorporateInvestor =>
+        OtherCorporateInvestor;
     IAccount19 ICancellationByTransferInstructionDetails.TransferorAccount => TransferorAccount;
     IAccount19? ICancellationByTransferInstructionDetails.NomineeAccount => NomineeAccount;
     IPartyIdentification70Choice ICancellationByTransferInstructionDetails.Transferee => Transferee;
-    IEnumerable<IIntermediary34> ICancellationByTransferInstructionDetails.IntermediaryInformation => IntermediaryInformation;
+    IEnumerable<IIntermediary34> ICancellationByTransferInstructionDetails.IntermediaryInformation =>
+        IntermediaryInformation;
     ICashAccount34? ICancellationByTransferInstructionDetails.CashAccount => CashAccount;
-    IISATransfer25 ICancellationByTransferInstructionDetails.ProductTransferAndReference => ProductTransferAndReference;
+    IISATransfer25 ICancellationByTransferInstructionDetails.ProductTransferAndReference =>
+        ProductTransferAndReference;
     IEnumerable<IExtension1> ICancellationByTransferInstructionDetails.Extension => Extension;
 }

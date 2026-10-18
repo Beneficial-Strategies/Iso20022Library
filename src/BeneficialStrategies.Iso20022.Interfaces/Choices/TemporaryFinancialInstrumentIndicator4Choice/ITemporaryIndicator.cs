@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.TemporaryFinancialInstrumentIndi
 /// Temporary financial instrument identification used for processing reasons.
 /// </summary>
 [IsoId("_cj_8PZKQEeWHWpTQn1FFVg")]
-public interface ITemporaryIndicator : ITemporaryFinancialInstrumentIndicator4Choice, IIsoChoiceVariant
+public interface ITemporaryIndicator
+    : ITemporaryFinancialInstrumentIndicator4Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

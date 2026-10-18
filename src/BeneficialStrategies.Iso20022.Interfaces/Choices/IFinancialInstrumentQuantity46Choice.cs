@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between formats for the quantity of security.
 /// </summary>
 [IsoId("_DcYV6DT5Ee2j2eQlcOSMKg")]
-public interface IFinancialInstrumentQuantity46Choice : IIsoChoice
-{
-}
+public interface IFinancialInstrumentQuantity46Choice : IIsoChoice { }

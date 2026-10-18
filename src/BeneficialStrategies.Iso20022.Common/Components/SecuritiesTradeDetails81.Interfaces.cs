@@ -13,15 +13,20 @@ public partial record SecuritiesTradeDetails81 : ISecuritiesTradeDetails81
     IPortfolioTransferStatus1Choice? ISecuritiesTradeDetails81.Status => Status;
     ITradeDate9Choice? ISecuritiesTradeDetails81.TradeDate => TradeDate;
     ISettlementDate20Choice ISecuritiesTradeDetails81.SettlementDate => SettlementDate;
-    ISecurityIdentification20 ISecuritiesTradeDetails81.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentAttributes97? ISecuritiesTradeDetails81.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
+    ISecurityIdentification20 ISecuritiesTradeDetails81.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentAttributes97? ISecuritiesTradeDetails81.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
     IEnumerable<IReporting8Choice> ISecuritiesTradeDetails81.Reporting => Reporting;
     IQuantity15 ISecuritiesTradeDetails81.QuantityDetails => QuantityDetails;
     ISettlementDetails103? ISecuritiesTradeDetails81.SettlementParameters => SettlementParameters;
-    ISettlementParties64? ISecuritiesTradeDetails81.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties64? ISecuritiesTradeDetails81.ReceivingSettlementParties => ReceivingSettlementParties;
+    ISettlementParties64? ISecuritiesTradeDetails81.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties64? ISecuritiesTradeDetails81.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
     IAmountAndDirection57? ISecuritiesTradeDetails81.SettlementAmount => SettlementAmount;
     IOtherAmounts33? ISecuritiesTradeDetails81.OtherAmounts => OtherAmounts;
     IOtherParties30? ISecuritiesTradeDetails81.OtherBusinessParties => OtherBusinessParties;
-    IEnumerable<ISupplementaryData1> ISecuritiesTradeDetails81.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> ISecuritiesTradeDetails81.SupplementaryData =>
+        SupplementaryData;
 }

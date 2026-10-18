@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.Vote3Choice;
 
-public partial record VoteInstruction : IVoteInstruction
-{
-}
+public partial record VoteInstruction : IVoteInstruction { }

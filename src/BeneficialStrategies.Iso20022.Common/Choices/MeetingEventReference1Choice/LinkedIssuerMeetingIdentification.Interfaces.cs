@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.MeetingEventReference1Choice;
 
-public partial record LinkedIssuerMeetingIdentification : ILinkedIssuerMeetingIdentification
-{
-}
+public partial record LinkedIssuerMeetingIdentification : ILinkedIssuerMeetingIdentification { }

@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.pacs;
 public partial record FinancialInstitutionCreditTransferV02 : IFinancialInstitutionCreditTransferV02
 {
     IGroupHeader35 IFinancialInstitutionCreditTransferV02.GroupHeader => GroupHeader;
-    IEnumerable<ICreditTransferTransactionInformation13> IFinancialInstitutionCreditTransferV02.CreditTransferTransactionInformation => CreditTransferTransactionInformation;
+    IEnumerable<ICreditTransferTransactionInformation13> IFinancialInstitutionCreditTransferV02.CreditTransferTransactionInformation =>
+        CreditTransferTransactionInformation;
 }

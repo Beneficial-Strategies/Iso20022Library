@@ -7,7 +7,9 @@ namespace BeneficialStrategies.Iso20022.Choices.References86Choice;
 
 /// <summary>Specifies the market infrastructure transaction identification.</summary>
 [IsoId("910139b7-5f84-4d8b-bcac-56e2acb9051a")]
-public interface IMarketInfrastructureTransactionIdentification : IReferences86Choice, IIsoChoiceVariant
+public interface IMarketInfrastructureTransactionIdentification
+    : IReferences86Choice,
+        IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>
     [IsoXmlTag("MktInfrstrctrTxId")]

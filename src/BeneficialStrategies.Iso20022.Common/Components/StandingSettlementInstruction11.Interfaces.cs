@@ -10,9 +10,12 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record StandingSettlementInstruction11 : IStandingSettlementInstruction11
 {
-    ISettlementStandingInstructionDatabase4Choice IStandingSettlementInstruction11.SettlementStandingInstructionDatabase => SettlementStandingInstructionDatabase;
+    ISettlementStandingInstructionDatabase4Choice IStandingSettlementInstruction11.SettlementStandingInstructionDatabase =>
+        SettlementStandingInstructionDatabase;
     ICounterparty9Choice IStandingSettlementInstruction11.Counterparty => Counterparty;
     IPartyIdentification100? IStandingSettlementInstruction11.Vendor => Vendor;
-    ISettlementParties36? IStandingSettlementInstruction11.OtherDeliveringSettlementParties => OtherDeliveringSettlementParties;
-    ISettlementParties36? IStandingSettlementInstruction11.OtherReceivingSettlementParties => OtherReceivingSettlementParties;
+    ISettlementParties36? IStandingSettlementInstruction11.OtherDeliveringSettlementParties =>
+        OtherDeliveringSettlementParties;
+    ISettlementParties36? IStandingSettlementInstruction11.OtherReceivingSettlementParties =>
+        OtherReceivingSettlementParties;
 }

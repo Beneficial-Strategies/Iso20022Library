@@ -8,13 +8,20 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record SecuritiesBalanceTransparencyReportStatusAdviceV01 : ISecuritiesBalanceTransparencyReportStatusAdviceV01
+public partial record SecuritiesBalanceTransparencyReportStatusAdviceV01
+    : ISecuritiesBalanceTransparencyReportStatusAdviceV01
 {
-    IMessageIdentification1 ISecuritiesBalanceTransparencyReportStatusAdviceV01.MessageIdentification => MessageIdentification;
-    IPartyIdentification100 ISecuritiesBalanceTransparencyReportStatusAdviceV01.SenderIdentification => SenderIdentification;
-    IPartyIdentification100? ISecuritiesBalanceTransparencyReportStatusAdviceV01.ReceiverIdentification => ReceiverIdentification;
-    IStatementReference1 ISecuritiesBalanceTransparencyReportStatusAdviceV01.RelatedStatement => RelatedStatement;
+    IMessageIdentification1 ISecuritiesBalanceTransparencyReportStatusAdviceV01.MessageIdentification =>
+        MessageIdentification;
+    IPartyIdentification100 ISecuritiesBalanceTransparencyReportStatusAdviceV01.SenderIdentification =>
+        SenderIdentification;
+    IPartyIdentification100? ISecuritiesBalanceTransparencyReportStatusAdviceV01.ReceiverIdentification =>
+        ReceiverIdentification;
+    IStatementReference1 ISecuritiesBalanceTransparencyReportStatusAdviceV01.RelatedStatement =>
+        RelatedStatement;
     IReportItemStatus1Choice ISecuritiesBalanceTransparencyReportStatusAdviceV01.Status => Status;
-    IEnumerable<INumberOfItemsPerStatus1> ISecuritiesBalanceTransparencyReportStatusAdviceV01.NumberOfItemsPerStatus => NumberOfItemsPerStatus;
-    IEnumerable<ISupplementaryData1> ISecuritiesBalanceTransparencyReportStatusAdviceV01.SupplementaryData => SupplementaryData;
+    IEnumerable<INumberOfItemsPerStatus1> ISecuritiesBalanceTransparencyReportStatusAdviceV01.NumberOfItemsPerStatus =>
+        NumberOfItemsPerStatus;
+    IEnumerable<ISupplementaryData1> ISecuritiesBalanceTransparencyReportStatusAdviceV01.SupplementaryData =>
+        SupplementaryData;
 }

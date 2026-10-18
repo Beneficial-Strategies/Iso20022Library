@@ -10,9 +10,11 @@ namespace BeneficialStrategies.Iso20022.seev;
 
 public partial record MeetingInstructionV02 : IMeetingInstructionV02
 {
-    IMessageIdentification1 IMeetingInstructionV02.MeetingInstructionIdentification => MeetingInstructionIdentification;
+    IMessageIdentification1 IMeetingInstructionV02.MeetingInstructionIdentification =>
+        MeetingInstructionIdentification;
     IMeetingReference3 IMeetingInstructionV02.MeetingReference => MeetingReference;
     IPartyIdentification9Choice IMeetingInstructionV02.InstructingParty => InstructingParty;
-    ISecurityIdentification3 IMeetingInstructionV02.SecurityIdentification => SecurityIdentification;
+    ISecurityIdentification3 IMeetingInstructionV02.SecurityIdentification =>
+        SecurityIdentification;
     IEnumerable<IInstruction1> IMeetingInstructionV02.Instruction => Instruction;
 }

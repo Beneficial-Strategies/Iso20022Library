@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionStandingInstruction1 : ICorporateActionStandingInstruction1
 {
-    ICashAccount17 ICorporateActionStandingInstruction1.CashDistributionDetails => CashDistributionDetails;
-    ISecuritiesAccount6 ICorporateActionStandingInstruction1.SecuritiesDistributionDetails => SecuritiesDistributionDetails;
+    ICashAccount17 ICorporateActionStandingInstruction1.CashDistributionDetails =>
+        CashDistributionDetails;
+    ISecuritiesAccount6 ICorporateActionStandingInstruction1.SecuritiesDistributionDetails =>
+        SecuritiesDistributionDetails;
 }

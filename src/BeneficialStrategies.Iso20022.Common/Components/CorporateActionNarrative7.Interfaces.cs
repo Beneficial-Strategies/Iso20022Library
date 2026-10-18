@@ -13,7 +13,9 @@ public partial record CorporateActionNarrative7 : ICorporateActionNarrative7
     IEnumerable<Max350Text> ICorporateActionNarrative7.AdditionalText => AdditionalText;
     IEnumerable<Max350Text> ICorporateActionNarrative7.NarrativeVersion => NarrativeVersion;
     IEnumerable<Max350Text> ICorporateActionNarrative7.RegistrationDetails => RegistrationDetails;
-    IEnumerable<Max350Text> ICorporateActionNarrative7.PartyContactNarrative => PartyContactNarrative;
+    IEnumerable<Max350Text> ICorporateActionNarrative7.PartyContactNarrative =>
+        PartyContactNarrative;
     IEnumerable<Max350Text> ICorporateActionNarrative7.Disclaimer => Disclaimer;
-    IEnumerable<Max350Text> ICorporateActionNarrative7.BasketOrIndexInformation => BasketOrIndexInformation;
+    IEnumerable<Max350Text> ICorporateActionNarrative7.BasketOrIndexInformation =>
+        BasketOrIndexInformation;
 }

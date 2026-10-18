@@ -10,8 +10,12 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionAdditionalInformation1 : ICorporateActionAdditionalInformation1
 {
-    IEnumerable<IBeneficialOwner1> ICorporateActionAdditionalInformation1.BeneficialOwnerDetails => BeneficialOwnerDetails;
-    IPartyIdentification2Choice? ICorporateActionAdditionalInformation1.ReceiverIdentification => ReceiverIdentification;
-    IBeneficiaryCertificationType1FormatChoice? ICorporateActionAdditionalInformation1.CertificationType => CertificationType;
-    IEnumerable<IProceedsDelivery1> ICorporateActionAdditionalInformation1.DeliveryDetails => DeliveryDetails;
+    IEnumerable<IBeneficialOwner1> ICorporateActionAdditionalInformation1.BeneficialOwnerDetails =>
+        BeneficialOwnerDetails;
+    IPartyIdentification2Choice? ICorporateActionAdditionalInformation1.ReceiverIdentification =>
+        ReceiverIdentification;
+    IBeneficiaryCertificationType1FormatChoice? ICorporateActionAdditionalInformation1.CertificationType =>
+        CertificationType;
+    IEnumerable<IProceedsDelivery1> ICorporateActionAdditionalInformation1.DeliveryDetails =>
+        DeliveryDetails;
 }

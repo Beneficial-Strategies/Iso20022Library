@@ -10,12 +10,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CardPaymentTransaction91 : ICardPaymentTransaction91
 {
-    IEnumerable<CardPaymentServiceType9Code> ICardPaymentTransaction91.AdditionalService => AdditionalService;
-    ITransactionIdentifier1 ICardPaymentTransaction91.TransactionIdentification => TransactionIdentification;
+    IEnumerable<CardPaymentServiceType9Code> ICardPaymentTransaction91.AdditionalService =>
+        AdditionalService;
+    ITransactionIdentifier1 ICardPaymentTransaction91.TransactionIdentification =>
+        TransactionIdentification;
     ICardPaymentTransaction86? ICardPaymentTransaction91.OriginalTransaction => OriginalTransaction;
-    ICardPaymentTransactionDetails47 ICardPaymentTransaction91.TransactionDetails => TransactionDetails;
+    ICardPaymentTransactionDetails47 ICardPaymentTransaction91.TransactionDetails =>
+        TransactionDetails;
     ICustomerOrder1? ICardPaymentTransaction91.CustomerOrder => CustomerOrder;
     ICardPaymentToken4? ICardPaymentTransaction91.CustomerToken => CustomerToken;
     IEnumerable<Max35Text> ICardPaymentTransaction91.CardProgrammeProposed => CardProgrammeProposed;
-    IEnumerable<Max70Text> ICardPaymentTransaction91.AdditionalTransactionData => AdditionalTransactionData;
+    IEnumerable<Max70Text> ICardPaymentTransaction91.AdditionalTransactionData =>
+        AdditionalTransactionData;
 }

@@ -12,5 +12,6 @@ public partial record SaleToPOIMessageStatusResponseV07 : ISaleToPOIMessageStatu
 {
     IHeader41 ISaleToPOIMessageStatusResponseV07.Header => Header;
     IMessageStatusResponse9 ISaleToPOIMessageStatusResponseV07.StatusResponse => StatusResponse;
-    IContentInformationType38? ISaleToPOIMessageStatusResponseV07.SecurityTrailer => SecurityTrailer;
+    IContentInformationType38? ISaleToPOIMessageStatusResponseV07.SecurityTrailer =>
+        SecurityTrailer;
 }

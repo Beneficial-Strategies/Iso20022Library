@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between source of identification of a financial instrument.
 /// </summary>
 [IsoId("_uPmNYAgWEeCVlvYcV4HKqQ")]
-public interface IIdentificationSource4Choice : IIsoChoice
-{
-}
+public interface IIdentificationSource4Choice : IIsoChoice { }

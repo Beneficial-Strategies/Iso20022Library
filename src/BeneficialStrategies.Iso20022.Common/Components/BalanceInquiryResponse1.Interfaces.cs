@@ -12,6 +12,7 @@ public partial record BalanceInquiryResponse1 : IBalanceInquiryResponse1
 {
     IPaymentAccount2? IBalanceInquiryResponse1.PaymentAccount => PaymentAccount;
     ILoyaltyAccount1? IBalanceInquiryResponse1.LoyaltyAccount => LoyaltyAccount;
-    IEnumerable<IStoredValueAccount1> IBalanceInquiryResponse1.StoredValueAccount => StoredValueAccount;
+    IEnumerable<IStoredValueAccount1> IBalanceInquiryResponse1.StoredValueAccount =>
+        StoredValueAccount;
     IEnumerable<IPaymentReceipt1> IBalanceInquiryResponse1.Receipt => Receipt;
 }

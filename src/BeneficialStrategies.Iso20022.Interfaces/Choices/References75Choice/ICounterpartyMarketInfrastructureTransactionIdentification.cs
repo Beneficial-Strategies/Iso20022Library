@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.References75Choice;
 /// Identification of a counterparty transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
 /// </summary>
 [IsoId("_ccpnrTi8Eeydid5dcNPKvg")]
-public interface ICounterpartyMarketInfrastructureTransactionIdentification : IReferences75Choice, IIsoChoiceVariant
+public interface ICounterpartyMarketInfrastructureTransactionIdentification
+    : IReferences75Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

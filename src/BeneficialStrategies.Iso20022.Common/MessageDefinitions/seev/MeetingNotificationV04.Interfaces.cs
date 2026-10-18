@@ -21,8 +21,11 @@ public partial record MeetingNotificationV04 : IMeetingNotificationV04
     IEnumerable<ISecurityPosition6> IMeetingNotificationV04.Security => Security;
     IEnumerable<IResolution2> IMeetingNotificationV04.Resolution => Resolution;
     IVoteParameters3? IMeetingNotificationV04.Vote => Vote;
-    IEntitlementAssessment2 IMeetingNotificationV04.EntitlementSpecification => EntitlementSpecification;
-    IPowerOfAttorneyRequirements2? IMeetingNotificationV04.PowerOfAttorneyRequirements => PowerOfAttorneyRequirements;
-    ICorporateEventNarrative2? IMeetingNotificationV04.AdditionalInformation => AdditionalInformation;
+    IEntitlementAssessment2 IMeetingNotificationV04.EntitlementSpecification =>
+        EntitlementSpecification;
+    IPowerOfAttorneyRequirements2? IMeetingNotificationV04.PowerOfAttorneyRequirements =>
+        PowerOfAttorneyRequirements;
+    ICorporateEventNarrative2? IMeetingNotificationV04.AdditionalInformation =>
+        AdditionalInformation;
     IEnumerable<IExtension2> IMeetingNotificationV04.Extension => Extension;
 }

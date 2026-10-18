@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the balance type.
 /// </summary>
 [IsoId("_QtCDJtp-Ed-ak6NoX_4Aeg_1544987525")]
-public interface ISecuritiesBalanceType3Choice : IIsoChoice
-{
-}
+public interface ISecuritiesBalanceType3Choice : IIsoChoice { }

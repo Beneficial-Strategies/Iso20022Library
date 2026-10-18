@@ -12,17 +12,25 @@ public partial record IntraPositionQueryCriteria8 : IIntraPositionQueryCriteria8
 {
     IEnumerable<IReferences82Choice> IIntraPositionQueryCriteria8.References => References;
     IIntraPositionQueryStatus3? IIntraPositionQueryCriteria8.Status => Status;
-    IEnumerable<ISecurityIdentification19> IIntraPositionQueryCriteria8.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IEnumerable<ISystemPartyIdentification8> IIntraPositionQueryCriteria8.SafekeepingAccountOwner => SafekeepingAccountOwner;
-    IEnumerable<ISecuritiesAccount19> IIntraPositionQueryCriteria8.SafekeepingAccount => SafekeepingAccount;
+    IEnumerable<ISecurityIdentification19> IIntraPositionQueryCriteria8.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IEnumerable<ISystemPartyIdentification8> IIntraPositionQueryCriteria8.SafekeepingAccountOwner =>
+        SafekeepingAccountOwner;
+    IEnumerable<ISecuritiesAccount19> IIntraPositionQueryCriteria8.SafekeepingAccount =>
+        SafekeepingAccount;
     IEnumerable<IIntraPositionType2> IIntraPositionQueryCriteria8.BalanceType => BalanceType;
-    IEnumerable<IGenericIdentification37> IIntraPositionQueryCriteria8.SecuritiesSubBalanceIdentification => SecuritiesSubBalanceIdentification;
+    IEnumerable<IGenericIdentification37> IIntraPositionQueryCriteria8.SecuritiesSubBalanceIdentification =>
+        SecuritiesSubBalanceIdentification;
     IQuantitySearch2Choice? IIntraPositionQueryCriteria8.SettlementQuantity => SettlementQuantity;
     IQuantitySearch2Choice? IIntraPositionQueryCriteria8.SettledQuantity => SettledQuantity;
-    IDateAndDateTimeSearch5Choice? IIntraPositionQueryCriteria8.IntendedSettlementDate => IntendedSettlementDate;
-    IDateAndDateTimeSearch5Choice? IIntraPositionQueryCriteria8.EffectiveSettlementDate => EffectiveSettlementDate;
+    IDateAndDateTimeSearch5Choice? IIntraPositionQueryCriteria8.IntendedSettlementDate =>
+        IntendedSettlementDate;
+    IDateAndDateTimeSearch5Choice? IIntraPositionQueryCriteria8.EffectiveSettlementDate =>
+        EffectiveSettlementDate;
     IEnumerable<IPriorityNumeric4Choice> IIntraPositionQueryCriteria8.Priority => Priority;
     IEnumerable<CountryCode> IIntraPositionQueryCriteria8.CountryOfIssue => CountryOfIssue;
-    IEnumerable<ISystemPartyIdentification8> IIntraPositionQueryCriteria8.MessageOriginator => MessageOriginator;
-    IDateAndDateTimeSearch5Choice? IIntraPositionQueryCriteria8.CreationDateTime => CreationDateTime;
+    IEnumerable<ISystemPartyIdentification8> IIntraPositionQueryCriteria8.MessageOriginator =>
+        MessageOriginator;
+    IDateAndDateTimeSearch5Choice? IIntraPositionQueryCriteria8.CreationDateTime =>
+        CreationDateTime;
 }

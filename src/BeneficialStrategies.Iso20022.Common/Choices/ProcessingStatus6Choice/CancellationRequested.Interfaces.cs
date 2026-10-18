@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus6Choice;
 
-public partial record CancellationRequested : ICancellationRequested
-{
-}
+public partial record CancellationRequested : ICancellationRequested { }

@@ -12,5 +12,6 @@ public partial record TransactionTotalsSet2 : ITransactionTotalsSet2
 {
     IEnumerable<IOrganisation26> ITransactionTotalsSet2.SponsoredMerchant => SponsoredMerchant;
     ITransactionTotals8 ITransactionTotalsSet2.TransactionTotal => TransactionTotal;
-    IEnumerable<ILoyaltyTransactionTotals1> ITransactionTotalsSet2.LoyaltyTransactionTotal => LoyaltyTransactionTotal;
+    IEnumerable<ILoyaltyTransactionTotals1> ITransactionTotalsSet2.LoyaltyTransactionTotal =>
+        LoyaltyTransactionTotal;
 }

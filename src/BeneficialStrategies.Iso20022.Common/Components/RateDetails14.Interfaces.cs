@@ -11,12 +11,15 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record RateDetails14 : IRateDetails14
 {
     IRateAndAmountFormat14Choice? IRateDetails14.AdditionalTax => AdditionalTax;
-    IEnumerable<IGrossDividendRateFormat7Choice> IRateDetails14.GrossDividendRate => GrossDividendRate;
-    IEnumerable<IInterestRateUsedForPaymentFormat5Choice> IRateDetails14.InterestRateUsedForPayment => InterestRateUsedForPayment;
+    IEnumerable<IGrossDividendRateFormat7Choice> IRateDetails14.GrossDividendRate =>
+        GrossDividendRate;
+    IEnumerable<IInterestRateUsedForPaymentFormat5Choice> IRateDetails14.InterestRateUsedForPayment =>
+        InterestRateUsedForPayment;
     IEnumerable<IRateTypeAndAmountAndStatus6> IRateDetails14.TaxRelatedRate => TaxRelatedRate;
     IEnumerable<IRateFormat10Choice> IRateDetails14.WithholdingTaxRate => WithholdingTaxRate;
     IRateAndAmountFormat14Choice? IRateDetails14.ChargesFees => ChargesFees;
-    ISolicitationFeeRateFormat5Choice? IRateDetails14.EarlySolicitationFeeRate => EarlySolicitationFeeRate;
+    ISolicitationFeeRateFormat5Choice? IRateDetails14.EarlySolicitationFeeRate =>
+        EarlySolicitationFeeRate;
     IRateAndAmountFormat15Choice? IRateDetails14.FinalDividendRate => FinalDividendRate;
     IRateFormat3Choice? IRateDetails14.FiscalStamp => FiscalStamp;
     IRateAndAmountFormat14Choice? IRateDetails14.FullyFrankedRate => FullyFrankedRate;
@@ -30,7 +33,9 @@ public partial record RateDetails14 : IRateDetails14
     IRateAndAmountFormat14Choice? IRateDetails14.TaxOnIncome => TaxOnIncome;
     IRateFormat3Choice? IRateDetails14.TaxOnProfits => TaxOnProfits;
     IRateFormat3Choice? IRateDetails14.TaxReclaimRate => TaxReclaimRate;
-    IEnumerable<IRateAndAmountFormat20Choice> IRateDetails14.WithholdingOfForeignTax => WithholdingOfForeignTax;
-    IEnumerable<IRateAndAmountFormat20Choice> IRateDetails14.WithholdingOfLocalTax => WithholdingOfLocalTax;
+    IEnumerable<IRateAndAmountFormat20Choice> IRateDetails14.WithholdingOfForeignTax =>
+        WithholdingOfForeignTax;
+    IEnumerable<IRateAndAmountFormat20Choice> IRateDetails14.WithholdingOfLocalTax =>
+        WithholdingOfLocalTax;
     IRateAndAmountFormat15Choice? IRateDetails14.EqualisationRate => EqualisationRate;
 }

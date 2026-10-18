@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record AccountIdentification43Choice_ : IAccountIdentification43Choice
-{
-}
+public abstract partial record AccountIdentification43Choice_ : IAccountIdentification43Choice { }

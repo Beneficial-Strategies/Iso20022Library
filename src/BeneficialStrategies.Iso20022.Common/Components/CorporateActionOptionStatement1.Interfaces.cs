@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CorporateActionOptionStatement1 : ICorporateActionOptionStatement1
 {
     ICorporateActionOption47Choice ICorporateActionOptionStatement1.OptionType => OptionType;
-    IEnumerable<IBuyerProtectionInstructionDetails1> ICorporateActionOptionStatement1.BuyerProtectionInstructionDetails => BuyerProtectionInstructionDetails;
+    IEnumerable<IBuyerProtectionInstructionDetails1> ICorporateActionOptionStatement1.BuyerProtectionInstructionDetails =>
+        BuyerProtectionInstructionDetails;
 }

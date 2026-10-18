@@ -12,15 +12,18 @@ public partial record SettlementDetails67 : ISettlementDetails67
 {
     IHoldIndicator4? ISettlementDetails67.HoldIndicator => HoldIndicator;
     IPriorityNumeric1Choice? ISettlementDetails67.Priority => Priority;
-    ISecuritiesTransactionType9Choice ISettlementDetails67.SecuritiesTransactionType => SecuritiesTransactionType;
-    IEnumerable<ISettlementTransactionCondition12Choice> ISettlementDetails67.SettlementTransactionCondition => SettlementTransactionCondition;
+    ISecuritiesTransactionType9Choice ISettlementDetails67.SecuritiesTransactionType =>
+        SecuritiesTransactionType;
+    IEnumerable<ISettlementTransactionCondition12Choice> ISettlementDetails67.SettlementTransactionCondition =>
+        SettlementTransactionCondition;
     IBeneficialOwnership1Choice? ISettlementDetails67.BeneficialOwnership => BeneficialOwnership;
     IBlockTrade1Choice? ISettlementDetails67.BlockTrade => BlockTrade;
     ICentralCounterPartyEligibility1Choice? ISettlementDetails67.CCPEligibility => CCPEligibility;
     IDeliveryReturn1Choice? ISettlementDetails67.DeliveryReturnReason => DeliveryReturnReason;
     ICashSettlementSystem1Choice? ISettlementDetails67.CashClearingSystem => CashClearingSystem;
     IExposureType10Choice? ISettlementDetails67.ExposureType => ExposureType;
-    IFXStandingInstruction1Choice? ISettlementDetails67.FXStandingInstruction => FXStandingInstruction;
+    IFXStandingInstruction1Choice? ISettlementDetails67.FXStandingInstruction =>
+        FXStandingInstruction;
     IMarketClientSide1Choice? ISettlementDetails67.MarketClientSide => MarketClientSide;
     INettingEligibility1Choice? ISettlementDetails67.NettingEligibility => NettingEligibility;
     IRegistration1Choice? ISettlementDetails67.Registration => Registration;
@@ -28,13 +31,16 @@ public partial record SettlementDetails67 : ISettlementDetails67
     IRestriction1Choice? ISettlementDetails67.LegalRestrictions => LegalRestrictions;
     ISecuritiesRTGS1Choice? ISettlementDetails67.SecuritiesRTGS => SecuritiesRTGS;
     ISettlingCapacity4Choice? ISettlementDetails67.SettlingCapacity => SettlingCapacity;
-    ISettlementSystemMethod1Choice? ISettlementDetails67.SettlementSystemMethod => SettlementSystemMethod;
+    ISettlementSystemMethod1Choice? ISettlementDetails67.SettlementSystemMethod =>
+        SettlementSystemMethod;
     ITaxCapacityParty1Choice? ISettlementDetails67.TaxCapacity => TaxCapacity;
     IGenericIdentification20? ISettlementDetails67.StampDutyTaxBasis => StampDutyTaxBasis;
     ITracking1Choice? ISettlementDetails67.Tracking => Tracking;
     IAutomaticBorrowing1Choice? ISettlementDetails67.AutomaticBorrowing => AutomaticBorrowing;
     ILetterOfGuarantee1Choice? ISettlementDetails67.LetterOfGuarantee => LetterOfGuarantee;
-    IModificationCancellationAllowed1Choice? ISettlementDetails67.ModificationCancellationAllowed => ModificationCancellationAllowed;
-    IGenericIdentification20? ISettlementDetails67.SecuritiesSubBalanceType => SecuritiesSubBalanceType;
+    IModificationCancellationAllowed1Choice? ISettlementDetails67.ModificationCancellationAllowed =>
+        ModificationCancellationAllowed;
+    IGenericIdentification20? ISettlementDetails67.SecuritiesSubBalanceType =>
+        SecuritiesSubBalanceType;
     IGenericIdentification20? ISettlementDetails67.CashSubBalanceType => CashSubBalanceType;
 }

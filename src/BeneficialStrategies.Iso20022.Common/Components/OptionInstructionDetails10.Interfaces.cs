@@ -10,8 +10,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record OptionInstructionDetails10 : IOptionInstructionDetails10
 {
-    IFinancialInstrumentQuantity36Choice IOptionInstructionDetails10.InstructionQuantity => InstructionQuantity;
+    IFinancialInstrumentQuantity36Choice IOptionInstructionDetails10.InstructionQuantity =>
+        InstructionQuantity;
     IPriceFormat57Choice? IOptionInstructionDetails10.BidPrice => BidPrice;
-    IFinancialInstrumentQuantity36Choice? IOptionInstructionDetails10.ConditionalQuantity => ConditionalQuantity;
-    IInstructionProcessingStatus53Choice IOptionInstructionDetails10.InstructionStatus => InstructionStatus;
+    IFinancialInstrumentQuantity36Choice? IOptionInstructionDetails10.ConditionalQuantity =>
+        ConditionalQuantity;
+    IInstructionProcessingStatus53Choice IOptionInstructionDetails10.InstructionStatus =>
+        InstructionStatus;
 }

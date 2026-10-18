@@ -20,13 +20,18 @@ public partial record CorporateAction5 : ICorporateAction5
     IConversionTypeFormat1Choice? ICorporateAction5.ConversionType => ConversionType;
     IDistributionTypeFormat1Choice? ICorporateAction5.DistributionType => DistributionType;
     IEnumerable<IOfferTypeFormat1Choice> ICorporateAction5.OfferType => OfferType;
-    IRenounceableEntitlementStatusTypeFormat1Choice? ICorporateAction5.RenounceableEntitlementStatusType => RenounceableEntitlementStatusType;
+    IRenounceableEntitlementStatusTypeFormat1Choice? ICorporateAction5.RenounceableEntitlementStatusType =>
+        RenounceableEntitlementStatusType;
     IEnumerable<ICorporateActionEventStageFormat3Choice> ICorporateAction5.EventStage => EventStage;
-    IEnumerable<IAdditionalBusinessProcessFormat1Choice> ICorporateAction5.AdditionalBusinessProcessIndicator => AdditionalBusinessProcessIndicator;
+    IEnumerable<IAdditionalBusinessProcessFormat1Choice> ICorporateAction5.AdditionalBusinessProcessIndicator =>
+        AdditionalBusinessProcessIndicator;
     IEnumerable<ICorporateActionChangeTypeFormat1Choice> ICorporateAction5.ChangeType => ChangeType;
-    IIntermediateSecuritiesDistributionTypeFormat5Choice? ICorporateAction5.IntermediateSecuritiesDistributionType => IntermediateSecuritiesDistributionType;
-    ICapitalGainFormat1Choice? ICorporateAction5.CapitalGainInOutIndicator => CapitalGainInOutIndicator;
-    ITaxableIncomePerShareCalculatedFormat1Choice? ICorporateAction5.TaxableIncomePerShareCalculated => TaxableIncomePerShareCalculated;
+    IIntermediateSecuritiesDistributionTypeFormat5Choice? ICorporateAction5.IntermediateSecuritiesDistributionType =>
+        IntermediateSecuritiesDistributionType;
+    ICapitalGainFormat1Choice? ICorporateAction5.CapitalGainInOutIndicator =>
+        CapitalGainInOutIndicator;
+    ITaxableIncomePerShareCalculatedFormat1Choice? ICorporateAction5.TaxableIncomePerShareCalculated =>
+        TaxableIncomePerShareCalculated;
     IElectionTypeFormat1Choice? ICorporateAction5.ElectionType => ElectionType;
     ILotteryTypeFormat1Choice? ICorporateAction5.LotteryType => LotteryType;
     ICertificationTypeFormat1Choice? ICorporateAction5.CertificationType => CertificationType;

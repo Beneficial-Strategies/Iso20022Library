@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.References71Choice;
 /// Unambiguous identification of the triparty collateral and exposure report to be cancelled.
 /// </summary>
 [IsoId("_KDxv1SAaEeu4a6pNulzZ4Q")]
-public interface ITripartyCollateralAndExposureReportIdentification : IReferences71Choice, IIsoChoiceVariant
+public interface ITripartyCollateralAndExposureReportIdentification
+    : IReferences71Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

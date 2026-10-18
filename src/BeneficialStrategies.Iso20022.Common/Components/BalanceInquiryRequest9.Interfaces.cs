@@ -10,8 +10,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record BalanceInquiryRequest9 : IBalanceInquiryRequest9
 {
-    ITransactionIdentifier1? IBalanceInquiryRequest9.SaleTransactionIdentification => SaleTransactionIdentification;
+    ITransactionIdentifier1? IBalanceInquiryRequest9.SaleTransactionIdentification =>
+        SaleTransactionIdentification;
     IPaymentAccountRequest1? IBalanceInquiryRequest9.PaymentAccountRequest => PaymentAccountRequest;
     ILoyaltyAccountRequest3? IBalanceInquiryRequest9.LoyaltyAccountRequest => LoyaltyAccountRequest;
-    IStoredValueRequest9? IBalanceInquiryRequest9.StoredValueAccountRequest => StoredValueAccountRequest;
+    IStoredValueRequest9? IBalanceInquiryRequest9.StoredValueAccountRequest =>
+        StoredValueAccountRequest;
 }

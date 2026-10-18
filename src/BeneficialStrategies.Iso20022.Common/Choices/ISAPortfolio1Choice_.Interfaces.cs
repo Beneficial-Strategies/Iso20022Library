@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record ISAPortfolio1Choice_ : IISAPortfolio1Choice
-{
-}
+public abstract partial record ISAPortfolio1Choice_ : IISAPortfolio1Choice { }

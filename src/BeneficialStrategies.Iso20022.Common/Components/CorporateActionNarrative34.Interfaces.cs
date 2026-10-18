@@ -10,7 +10,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionNarrative34 : ICorporateActionNarrative34
 {
-    IEnumerable<RestrictedFINXMax350Text> ICorporateActionNarrative34.RegistrationDetails => RegistrationDetails;
-    IEnumerable<RestrictedFINXMax350Text> ICorporateActionNarrative34.PartyContactNarrative => PartyContactNarrative;
-    IEnumerable<RestrictedFINXMax350Text> ICorporateActionNarrative34.CertificationBreakdown => CertificationBreakdown;
+    IEnumerable<RestrictedFINXMax350Text> ICorporateActionNarrative34.RegistrationDetails =>
+        RegistrationDetails;
+    IEnumerable<RestrictedFINXMax350Text> ICorporateActionNarrative34.PartyContactNarrative =>
+        PartyContactNarrative;
+    IEnumerable<RestrictedFINXMax350Text> ICorporateActionNarrative34.CertificationBreakdown =>
+        CertificationBreakdown;
 }

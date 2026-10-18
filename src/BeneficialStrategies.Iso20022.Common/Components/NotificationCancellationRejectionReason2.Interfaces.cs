@@ -8,7 +8,9 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record NotificationCancellationRejectionReason2 : INotificationCancellationRejectionReason2
+public partial record NotificationCancellationRejectionReason2
+    : INotificationCancellationRejectionReason2
 {
-    IEnumerable<IRejectionReason11Format1Choice> INotificationCancellationRejectionReason2.Reason => Reason;
+    IEnumerable<IRejectionReason11Format1Choice> INotificationCancellationRejectionReason2.Reason =>
+        Reason;
 }

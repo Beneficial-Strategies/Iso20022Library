@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecuritiesOption80 : ISecuritiesOption80
 {
-    ISecurityIdentification19 ISecuritiesOption80.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification19 ISecuritiesOption80.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     IQuantity51Choice ISecuritiesOption80.PostingQuantity => PostingQuantity;
     IDateAndDateTime2Choice ISecuritiesOption80.PostingDate => PostingDate;
     IDateAndDateTime2Choice? ISecuritiesOption80.OriginalPostingDate => OriginalPostingDate;

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between an instructed quantity or a quantity to receive.
 /// </summary>
 [IsoId("_UHCr6dp-Ed-ak6NoX_4Aeg_-1969996831")]
-public interface IInstructedOrQuantityToReceive1Choice : IIsoChoice
-{
-}
+public interface IInstructedOrQuantityToReceive1Choice : IIsoChoice { }

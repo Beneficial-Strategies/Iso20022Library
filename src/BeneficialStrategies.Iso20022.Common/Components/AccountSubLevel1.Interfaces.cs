@@ -16,7 +16,8 @@ public partial record AccountSubLevel1 : IAccountSubLevel1
     IEnumerable<IBeneficialOwner2> IAccountSubLevel1.BeneficialOwner => BeneficialOwner;
     IEnumerable<IAggregateHoldingBalance1> IAccountSubLevel1.BalanceForAccount => BalanceForAccount;
     IEnumerable<IAccountSubLevel2> IAccountSubLevel1.AccountSubLevel2 => AccountSubLevel2;
-    IEnumerable<IAggregateHoldingBalance2> IAccountSubLevel1.AccountSubLevel2Difference => AccountSubLevel2Difference;
+    IEnumerable<IAggregateHoldingBalance2> IAccountSubLevel1.AccountSubLevel2Difference =>
+        AccountSubLevel2Difference;
     IEnumerable<IIntermediary29> IAccountSubLevel1.Agent => Agent;
     IEnumerable<ISupplementaryData1> IAccountSubLevel1.SupplementaryData => SupplementaryData;
 }

@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record TransactionDetails145 : ITransactionDetails145
 {
     ITransactionActivity4Choice ITransactionDetails145.TransactionActivity => TransactionActivity;
-    ISettlementOrCorporateActionEvent33Choice? ITransactionDetails145.SettlementTransactionOrCorporateActionEventType => SettlementTransactionOrCorporateActionEventType;
+    ISettlementOrCorporateActionEvent33Choice? ITransactionDetails145.SettlementTransactionOrCorporateActionEventType =>
+        SettlementTransactionOrCorporateActionEventType;
     ISettlementDetails198? ITransactionDetails145.SettlementParameters => SettlementParameters;
     IPlaceOfTradeIdentification2? ITransactionDetails145.PlaceOfTrade => PlaceOfTrade;
     ISafeKeepingPlace4? ITransactionDetails145.SafekeepingPlace => SafekeepingPlace;
@@ -20,9 +21,12 @@ public partial record TransactionDetails145 : ITransactionDetails145
     IAmountAndDirection18? ITransactionDetails145.PostingAmount => PostingAmount;
     IAmountAndDirection59? ITransactionDetails145.AccruedInterestAmount => AccruedInterestAmount;
     ITradeDate9Choice? ITransactionDetails145.TradeDate => TradeDate;
-    IDateAndDateTime2Choice ITransactionDetails145.EffectiveSettlementDate => EffectiveSettlementDate;
+    IDateAndDateTime2Choice ITransactionDetails145.EffectiveSettlementDate =>
+        EffectiveSettlementDate;
     ISettlementDate20Choice? ITransactionDetails145.SettlementDate => SettlementDate;
     IDateAndDateTime2Choice? ITransactionDetails145.ValueDate => ValueDate;
-    ISettlementParties90? ITransactionDetails145.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties90? ITransactionDetails145.ReceivingSettlementParties => ReceivingSettlementParties;
+    ISettlementParties90? ITransactionDetails145.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties90? ITransactionDetails145.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
 }

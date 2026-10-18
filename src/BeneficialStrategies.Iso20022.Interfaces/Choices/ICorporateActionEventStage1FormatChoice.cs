@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the stage of the CA event.
 /// </summary>
 [IsoId("_RmHANNp-Ed-ak6NoX_4Aeg_-299884544")]
-public interface ICorporateActionEventStage1FormatChoice : IIsoChoice
-{
-}
+public interface ICorporateActionEventStage1FormatChoice : IIsoChoice { }

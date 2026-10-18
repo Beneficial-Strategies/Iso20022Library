@@ -10,12 +10,17 @@ namespace BeneficialStrategies.Iso20022.seev;
 
 public partial record MeetingInstructionStatusV02 : IMeetingInstructionStatusV02
 {
-    IMessageIdentification1 IMeetingInstructionStatusV02.MeetingInstructionStatusIdentification => MeetingInstructionStatusIdentification;
-    IMessageIdentification IMeetingInstructionStatusV02.InstructionIdentification => InstructionIdentification;
-    IMessageIdentification IMeetingInstructionStatusV02.InstructionCancellationIdentification => InstructionCancellationIdentification;
+    IMessageIdentification1 IMeetingInstructionStatusV02.MeetingInstructionStatusIdentification =>
+        MeetingInstructionStatusIdentification;
+    IMessageIdentification IMeetingInstructionStatusV02.InstructionIdentification =>
+        InstructionIdentification;
+    IMessageIdentification IMeetingInstructionStatusV02.InstructionCancellationIdentification =>
+        InstructionCancellationIdentification;
     IMeetingReference3 IMeetingInstructionStatusV02.MeetingReference => MeetingReference;
     IPartyIdentification9Choice IMeetingInstructionStatusV02.ReportingParty => ReportingParty;
-    ISecurityIdentification3 IMeetingInstructionStatusV02.SecurityIdentification => SecurityIdentification;
+    ISecurityIdentification3 IMeetingInstructionStatusV02.SecurityIdentification =>
+        SecurityIdentification;
     IInstructionStatus1Choice IMeetingInstructionStatusV02.InstructionStatus => InstructionStatus;
-    ICancellationStatus1Choice IMeetingInstructionStatusV02.CancellationStatus => CancellationStatus;
+    ICancellationStatus1Choice IMeetingInstructionStatusV02.CancellationStatus =>
+        CancellationStatus;
 }

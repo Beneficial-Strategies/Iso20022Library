@@ -12,7 +12,8 @@ public partial record CorporateAction49 : ICorporateAction49
 {
     ICorporateActionDate70? ICorporateAction49.DateDetails => DateDetails;
     ICorporateActionEventStageFormat15Choice? ICorporateAction49.EventStage => EventStage;
-    IAdditionalBusinessProcessFormat13Choice? ICorporateAction49.AdditionalBusinessProcessIndicator => AdditionalBusinessProcessIndicator;
+    IAdditionalBusinessProcessFormat13Choice? ICorporateAction49.AdditionalBusinessProcessIndicator =>
+        AdditionalBusinessProcessIndicator;
     ILotteryTypeFormat5Choice? ICorporateAction49.LotteryType => LotteryType;
     ICorporateActionQuantity10? ICorporateAction49.SecuritiesQuantity => SecuritiesQuantity;
 }

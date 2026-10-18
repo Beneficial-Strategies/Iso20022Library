@@ -8,14 +8,23 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record IntraPositionMovementConfirmation002V05 : IIntraPositionMovementConfirmation002V05
+public partial record IntraPositionMovementConfirmation002V05
+    : IIntraPositionMovementConfirmation002V05
 {
-    IAdditionalParameters25? IIntraPositionMovementConfirmation002V05.AdditionalParameters => AdditionalParameters;
-    IPartyIdentification103Choice? IIntraPositionMovementConfirmation002V05.AccountOwner => AccountOwner;
-    ISecuritiesAccount27 IIntraPositionMovementConfirmation002V05.SafekeepingAccount => SafekeepingAccount;
-    ISafekeepingPlaceFormat17Choice? IIntraPositionMovementConfirmation002V05.SafekeepingPlace => SafekeepingPlace;
-    ISecurityIdentification20 IIntraPositionMovementConfirmation002V05.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentAttributes75? IIntraPositionMovementConfirmation002V05.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
-    IIntraPositionDetails35 IIntraPositionMovementConfirmation002V05.IntraPositionDetails => IntraPositionDetails;
-    IEnumerable<ISupplementaryData1> IIntraPositionMovementConfirmation002V05.SupplementaryData => SupplementaryData;
+    IAdditionalParameters25? IIntraPositionMovementConfirmation002V05.AdditionalParameters =>
+        AdditionalParameters;
+    IPartyIdentification103Choice? IIntraPositionMovementConfirmation002V05.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount27 IIntraPositionMovementConfirmation002V05.SafekeepingAccount =>
+        SafekeepingAccount;
+    ISafekeepingPlaceFormat17Choice? IIntraPositionMovementConfirmation002V05.SafekeepingPlace =>
+        SafekeepingPlace;
+    ISecurityIdentification20 IIntraPositionMovementConfirmation002V05.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentAttributes75? IIntraPositionMovementConfirmation002V05.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
+    IIntraPositionDetails35 IIntraPositionMovementConfirmation002V05.IntraPositionDetails =>
+        IntraPositionDetails;
+    IEnumerable<ISupplementaryData1> IIntraPositionMovementConfirmation002V05.SupplementaryData =>
+        SupplementaryData;
 }

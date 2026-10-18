@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between the different statuses of a deactivation cancellation request.
 /// </summary>
 [IsoId("_RiYWwNp-Ed-ak6NoX_4Aeg_1248187111")]
-public interface ICorporateActionDeactivationCancellationStatus1Choice : IIsoChoice
-{
-}
+public interface ICorporateActionDeactivationCancellationStatus1Choice : IIsoChoice { }

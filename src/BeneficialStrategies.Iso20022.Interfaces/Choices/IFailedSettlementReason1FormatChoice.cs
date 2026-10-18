@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or a proprietary code for specifying the reason of a settlement failure.
 /// </summary>
 [IsoId("_RmjsItp-Ed-ak6NoX_4Aeg_220367712")]
-public interface IFailedSettlementReason1FormatChoice : IIsoChoice
-{
-}
+public interface IFailedSettlementReason1FormatChoice : IIsoChoice { }

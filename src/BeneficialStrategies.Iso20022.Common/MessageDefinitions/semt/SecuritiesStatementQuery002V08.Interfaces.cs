@@ -11,10 +11,14 @@ namespace BeneficialStrategies.Iso20022.semt;
 public partial record SecuritiesStatementQuery002V08 : ISecuritiesStatementQuery002V08
 {
     IDocumentNumber14 ISecuritiesStatementQuery002V08.StatementRequested => StatementRequested;
-    IStatement84? ISecuritiesStatementQuery002V08.StatementGeneralDetails => StatementGeneralDetails;
+    IStatement84? ISecuritiesStatementQuery002V08.StatementGeneralDetails =>
+        StatementGeneralDetails;
     IPartyIdentification156? ISecuritiesStatementQuery002V08.AccountOwner => AccountOwner;
     ISecuritiesAccount30? ISecuritiesStatementQuery002V08.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet7? ISecuritiesStatementQuery002V08.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
-    IEnumerable<IAdditionalQueryParameters14> ISecuritiesStatementQuery002V08.AdditionalQueryParameters => AdditionalQueryParameters;
-    IEnumerable<ISupplementaryData1> ISecuritiesStatementQuery002V08.SupplementaryData => SupplementaryData;
+    IBlockChainAddressWallet7? ISecuritiesStatementQuery002V08.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
+    IEnumerable<IAdditionalQueryParameters14> ISecuritiesStatementQuery002V08.AdditionalQueryParameters =>
+        AdditionalQueryParameters;
+    IEnumerable<ISupplementaryData1> ISecuritiesStatementQuery002V08.SupplementaryData =>
+        SupplementaryData;
 }

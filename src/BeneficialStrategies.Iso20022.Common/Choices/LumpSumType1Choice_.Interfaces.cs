@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record LumpSumType1Choice_ : ILumpSumType1Choice
-{
-}
+public abstract partial record LumpSumType1Choice_ : ILumpSumType1Choice { }

@@ -10,12 +10,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionNarrative45 : ICorporateActionNarrative45
 {
-    IEnumerable<IUpdatedAdditionalInformation12> ICorporateActionNarrative45.AdditionalText => AdditionalText;
-    IEnumerable<IUpdatedAdditionalInformation12> ICorporateActionNarrative45.NarrativeVersion => NarrativeVersion;
-    IEnumerable<IUpdatedAdditionalInformation11> ICorporateActionNarrative45.InformationConditions => InformationConditions;
-    IEnumerable<IUpdatedAdditionalInformation11> ICorporateActionNarrative45.InformationToComplyWith => InformationToComplyWith;
-    IEnumerable<IUpdatedAdditionalInformation11> ICorporateActionNarrative45.SecurityRestriction => SecurityRestriction;
-    IEnumerable<IUpdatedAdditionalInformation11> ICorporateActionNarrative45.TaxationConditions => TaxationConditions;
-    IEnumerable<IUpdatedAdditionalInformation11> ICorporateActionNarrative45.Disclaimer => Disclaimer;
-    IEnumerable<IUpdatedAdditionalInformation11> ICorporateActionNarrative45.CertificationBreakdown => CertificationBreakdown;
+    IEnumerable<IUpdatedAdditionalInformation12> ICorporateActionNarrative45.AdditionalText =>
+        AdditionalText;
+    IEnumerable<IUpdatedAdditionalInformation12> ICorporateActionNarrative45.NarrativeVersion =>
+        NarrativeVersion;
+    IEnumerable<IUpdatedAdditionalInformation11> ICorporateActionNarrative45.InformationConditions =>
+        InformationConditions;
+    IEnumerable<IUpdatedAdditionalInformation11> ICorporateActionNarrative45.InformationToComplyWith =>
+        InformationToComplyWith;
+    IEnumerable<IUpdatedAdditionalInformation11> ICorporateActionNarrative45.SecurityRestriction =>
+        SecurityRestriction;
+    IEnumerable<IUpdatedAdditionalInformation11> ICorporateActionNarrative45.TaxationConditions =>
+        TaxationConditions;
+    IEnumerable<IUpdatedAdditionalInformation11> ICorporateActionNarrative45.Disclaimer =>
+        Disclaimer;
+    IEnumerable<IUpdatedAdditionalInformation11> ICorporateActionNarrative45.CertificationBreakdown =>
+        CertificationBreakdown;
 }

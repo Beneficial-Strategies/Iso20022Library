@@ -11,13 +11,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record QuantityAndAccount108 : IQuantityAndAccount108
 {
     IQuantity54Choice IQuantityAndAccount108.SettledQuantity => SettledQuantity;
-    IFinancialInstrumentQuantity36Choice? IQuantityAndAccount108.PreviouslySettledQuantity => PreviouslySettledQuantity;
-    IFinancialInstrumentQuantity36Choice? IQuantityAndAccount108.RemainingToBeSettledQuantity => RemainingToBeSettledQuantity;
-    IAmountAndDirection57? IQuantityAndAccount108.PreviouslySettledAmount => PreviouslySettledAmount;
-    IAmountAndDirection57? IQuantityAndAccount108.RemainingToBeSettledAmount => RemainingToBeSettledAmount;
+    IFinancialInstrumentQuantity36Choice? IQuantityAndAccount108.PreviouslySettledQuantity =>
+        PreviouslySettledQuantity;
+    IFinancialInstrumentQuantity36Choice? IQuantityAndAccount108.RemainingToBeSettledQuantity =>
+        RemainingToBeSettledQuantity;
+    IAmountAndDirection57? IQuantityAndAccount108.PreviouslySettledAmount =>
+        PreviouslySettledAmount;
+    IAmountAndDirection57? IQuantityAndAccount108.RemainingToBeSettledAmount =>
+        RemainingToBeSettledAmount;
     IPartyIdentification156? IQuantityAndAccount108.AccountOwner => AccountOwner;
     ISecuritiesAccount30? IQuantityAndAccount108.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet7? IQuantityAndAccount108.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
+    IBlockChainAddressWallet7? IQuantityAndAccount108.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
     ICashAccountIdentification6Choice? IQuantityAndAccount108.CashAccount => CashAccount;
     IEnumerable<IQuantityBreakdown75> IQuantityAndAccount108.QuantityBreakdown => QuantityBreakdown;
     ISafeKeepingPlace4? IQuantityAndAccount108.SafekeepingPlace => SafekeepingPlace;

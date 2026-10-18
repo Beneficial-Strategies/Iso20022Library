@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Account12Choice.
 /// </summary>
 [IsoId("_m45sW5t3Ee-wQIOX0djF2w")]
-public interface IAccount12Choice : IIsoChoice
-{
-}
+public interface IAccount12Choice : IIsoChoice { }

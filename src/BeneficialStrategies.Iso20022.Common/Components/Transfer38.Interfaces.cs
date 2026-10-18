@@ -20,5 +20,6 @@ public partial record Transfer38 : ITransfer38
     IFinancialInstrument116 ITransfer38.FinancialInstrumentDetails => FinancialInstrumentDetails;
     IUnit1Choice ITransfer38.TotalUnitsNumber => TotalUnitsNumber;
     IEnumerable<IUnit14> ITransfer38.UnitsDetails => UnitsDetails;
-    IChargePaymentMethod1Choice? ITransfer38.TransferExpensesPaymentType => TransferExpensesPaymentType;
+    IChargePaymentMethod1Choice? ITransfer38.TransferExpensesPaymentType =>
+        TransferExpensesPaymentType;
 }

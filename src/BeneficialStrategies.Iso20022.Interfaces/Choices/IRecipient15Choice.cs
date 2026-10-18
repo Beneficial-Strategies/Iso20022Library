@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Recipient15Choice.
 /// </summary>
 [IsoId("_bTfzcY-QEe6oobnCtR50kw")]
-public interface IRecipient15Choice : IIsoChoice
-{
-}
+public interface IRecipient15Choice : IIsoChoice { }

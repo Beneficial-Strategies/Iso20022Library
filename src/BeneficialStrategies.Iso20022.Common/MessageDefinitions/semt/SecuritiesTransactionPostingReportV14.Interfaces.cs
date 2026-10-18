@@ -11,11 +11,17 @@ namespace BeneficialStrategies.Iso20022.semt;
 public partial record SecuritiesTransactionPostingReportV14 : ISecuritiesTransactionPostingReportV14
 {
     IPagination1 ISecuritiesTransactionPostingReportV14.Pagination => Pagination;
-    IStatement79 ISecuritiesTransactionPostingReportV14.StatementGeneralDetails => StatementGeneralDetails;
+    IStatement79 ISecuritiesTransactionPostingReportV14.StatementGeneralDetails =>
+        StatementGeneralDetails;
     IPartyIdentification144? ISecuritiesTransactionPostingReportV14.AccountOwner => AccountOwner;
-    ISecuritiesAccount36? ISecuritiesTransactionPostingReportV14.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet4? ISecuritiesTransactionPostingReportV14.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
-    IEnumerable<IIntermediary44> ISecuritiesTransactionPostingReportV14.IntermediaryInformation => IntermediaryInformation;
-    IEnumerable<IFinancialInstrumentDetails48> ISecuritiesTransactionPostingReportV14.FinancialInstrumentDetails => FinancialInstrumentDetails;
-    IEnumerable<ISubAccountIdentification74> ISecuritiesTransactionPostingReportV14.SubAccountDetails => SubAccountDetails;
+    ISecuritiesAccount36? ISecuritiesTransactionPostingReportV14.SafekeepingAccount =>
+        SafekeepingAccount;
+    IBlockChainAddressWallet4? ISecuritiesTransactionPostingReportV14.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
+    IEnumerable<IIntermediary44> ISecuritiesTransactionPostingReportV14.IntermediaryInformation =>
+        IntermediaryInformation;
+    IEnumerable<IFinancialInstrumentDetails48> ISecuritiesTransactionPostingReportV14.FinancialInstrumentDetails =>
+        FinancialInstrumentDetails;
+    IEnumerable<ISubAccountIdentification74> ISecuritiesTransactionPostingReportV14.SubAccountDetails =>
+        SubAccountDetails;
 }

@@ -10,14 +10,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TransactionDetails173 : ITransactionDetails173
 {
-    ISecurityIdentification19 ITransactionDetails173.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification19 ITransactionDetails173.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     IQuantity51Choice ITransactionDetails173.SettlementQuantity => SettlementQuantity;
     ISecuritiesAccount19? ITransactionDetails173.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet3? ITransactionDetails173.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
+    IBlockChainAddressWallet3? ITransactionDetails173.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
     IAmountAndDirection51? ITransactionDetails173.SettlementAmount => SettlementAmount;
     ISettlementDate19Choice ITransactionDetails173.SettlementDate => SettlementDate;
     ITradeDate8Choice? ITransactionDetails173.TradeDate => TradeDate;
-    ISettlementParties125? ITransactionDetails173.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties125? ITransactionDetails173.ReceivingSettlementParties => ReceivingSettlementParties;
+    ISettlementParties125? ITransactionDetails173.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties125? ITransactionDetails173.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
     IPartyIdentification149? ITransactionDetails173.Investor => Investor;
 }

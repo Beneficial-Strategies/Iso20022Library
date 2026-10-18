@@ -12,9 +12,13 @@ public partial record CorporateActionNarrative5 : ICorporateActionNarrative5
 {
     IUpdatedAdditionalInformation3? ICorporateActionNarrative5.AdditionalText => AdditionalText;
     IUpdatedAdditionalInformation3? ICorporateActionNarrative5.NarrativeVersion => NarrativeVersion;
-    IUpdatedAdditionalInformation1? ICorporateActionNarrative5.InformationConditions => InformationConditions;
-    IUpdatedAdditionalInformation1? ICorporateActionNarrative5.InformationToComplyWith => InformationToComplyWith;
-    IUpdatedAdditionalInformation1? ICorporateActionNarrative5.SecurityRestriction => SecurityRestriction;
-    IUpdatedAdditionalInformation1? ICorporateActionNarrative5.TaxationConditions => TaxationConditions;
+    IUpdatedAdditionalInformation1? ICorporateActionNarrative5.InformationConditions =>
+        InformationConditions;
+    IUpdatedAdditionalInformation1? ICorporateActionNarrative5.InformationToComplyWith =>
+        InformationToComplyWith;
+    IUpdatedAdditionalInformation1? ICorporateActionNarrative5.SecurityRestriction =>
+        SecurityRestriction;
+    IUpdatedAdditionalInformation1? ICorporateActionNarrative5.TaxationConditions =>
+        TaxationConditions;
     IUpdatedAdditionalInformation1? ICorporateActionNarrative5.Disclaimer => Disclaimer;
 }

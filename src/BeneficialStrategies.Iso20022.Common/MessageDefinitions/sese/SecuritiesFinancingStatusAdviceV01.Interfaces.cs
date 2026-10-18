@@ -11,14 +11,22 @@ namespace BeneficialStrategies.Iso20022.sese;
 public partial record SecuritiesFinancingStatusAdviceV01 : ISecuritiesFinancingStatusAdviceV01
 {
     IDocumentIdentification11 ISecuritiesFinancingStatusAdviceV01.Identification => Identification;
-    ITransactionIdentifications1 ISecuritiesFinancingStatusAdviceV01.TransactionIdentification => TransactionIdentification;
-    IProcessingStatus3Choice? ISecuritiesFinancingStatusAdviceV01.ProcessingStatus => ProcessingStatus;
+    ITransactionIdentifications1 ISecuritiesFinancingStatusAdviceV01.TransactionIdentification =>
+        TransactionIdentification;
+    IProcessingStatus3Choice? ISecuritiesFinancingStatusAdviceV01.ProcessingStatus =>
+        ProcessingStatus;
     IMatchingStatus3Choice? ISecuritiesFinancingStatusAdviceV01.MatchingStatus => MatchingStatus;
-    IMatchingStatus3Choice? ISecuritiesFinancingStatusAdviceV01.InferredMatchingStatus => InferredMatchingStatus;
-    ISettlementStatus2Choice? ISecuritiesFinancingStatusAdviceV01.SettlementStatus => SettlementStatus;
-    IRepoCallRequestStatus2Choice? ISecuritiesFinancingStatusAdviceV01.RepoCallRequestStatus => RepoCallRequestStatus;
-    ISecuritiesFinancingTransactionDetails2? ISecuritiesFinancingStatusAdviceV01.TransactionDetails => TransactionDetails;
-    IPartyIdentification10Choice? ISecuritiesFinancingStatusAdviceV01.MessageOriginator => MessageOriginator;
-    IPartyIdentification10Choice? ISecuritiesFinancingStatusAdviceV01.MessageRecipient => MessageRecipient;
+    IMatchingStatus3Choice? ISecuritiesFinancingStatusAdviceV01.InferredMatchingStatus =>
+        InferredMatchingStatus;
+    ISettlementStatus2Choice? ISecuritiesFinancingStatusAdviceV01.SettlementStatus =>
+        SettlementStatus;
+    IRepoCallRequestStatus2Choice? ISecuritiesFinancingStatusAdviceV01.RepoCallRequestStatus =>
+        RepoCallRequestStatus;
+    ISecuritiesFinancingTransactionDetails2? ISecuritiesFinancingStatusAdviceV01.TransactionDetails =>
+        TransactionDetails;
+    IPartyIdentification10Choice? ISecuritiesFinancingStatusAdviceV01.MessageOriginator =>
+        MessageOriginator;
+    IPartyIdentification10Choice? ISecuritiesFinancingStatusAdviceV01.MessageRecipient =>
+        MessageRecipient;
     IEnumerable<IExtension2> ISecuritiesFinancingStatusAdviceV01.Extension => Extension;
 }

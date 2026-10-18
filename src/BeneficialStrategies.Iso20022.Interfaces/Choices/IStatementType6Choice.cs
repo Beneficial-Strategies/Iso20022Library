@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the statement type.
 /// </summary>
 [IsoId("_8QbnrZNLEeWGlc8L7oPDIg")]
-public interface IStatementType6Choice : IIsoChoice
-{
-}
+public interface IStatementType6Choice : IIsoChoice { }

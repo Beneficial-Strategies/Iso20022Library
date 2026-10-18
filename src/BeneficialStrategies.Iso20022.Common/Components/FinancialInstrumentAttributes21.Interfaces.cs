@@ -11,25 +11,35 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record FinancialInstrumentAttributes21 : IFinancialInstrumentAttributes21
 {
     IMarketIdentification5? IFinancialInstrumentAttributes21.PlaceOfListing => PlaceOfListing;
-    IInterestComputationMethodFormat1Choice? IFinancialInstrumentAttributes21.DayCountBasis => DayCountBasis;
+    IInterestComputationMethodFormat1Choice? IFinancialInstrumentAttributes21.DayCountBasis =>
+        DayCountBasis;
     IFormOfSecurity2Choice? IFinancialInstrumentAttributes21.RegistrationForm => RegistrationForm;
     IFrequency3Choice? IFinancialInstrumentAttributes21.PaymentFrequency => PaymentFrequency;
-    ISecuritiesPaymentStatus2Choice? IFinancialInstrumentAttributes21.PaymentStatus => PaymentStatus;
+    ISecuritiesPaymentStatus2Choice? IFinancialInstrumentAttributes21.PaymentStatus =>
+        PaymentStatus;
     IPaymentDirection2Choice? IFinancialInstrumentAttributes21.PaymentDirection => PaymentDirection;
-    IFrequency3Choice? IFinancialInstrumentAttributes21.VariableRateChangeFrequency => VariableRateChangeFrequency;
-    IPreferenceToIncome2Choice? IFinancialInstrumentAttributes21.PreferenceToIncome => PreferenceToIncome;
-    IClassificationType2Choice? IFinancialInstrumentAttributes21.ClassificationType => ClassificationType;
+    IFrequency3Choice? IFinancialInstrumentAttributes21.VariableRateChangeFrequency =>
+        VariableRateChangeFrequency;
+    IPreferenceToIncome2Choice? IFinancialInstrumentAttributes21.PreferenceToIncome =>
+        PreferenceToIncome;
+    IClassificationType2Choice? IFinancialInstrumentAttributes21.ClassificationType =>
+        ClassificationType;
     IOptionStyle4Choice? IFinancialInstrumentAttributes21.OptionStyle => OptionStyle;
     IOptionType2Choice? IFinancialInstrumentAttributes21.OptionType => OptionType;
     INumber2Choice? IFinancialInstrumentAttributes21.CouponAttachedNumber => CouponAttachedNumber;
     INumber2Choice? IFinancialInstrumentAttributes21.PoolNumber => PoolNumber;
-    IEnumerable<IQuantityBreakdown5> IFinancialInstrumentAttributes21.QuantityBreakdown => QuantityBreakdown;
-    IPriceType1Choice? IFinancialInstrumentAttributes21.MarketOrIndicativePrice => MarketOrIndicativePrice;
+    IEnumerable<IQuantityBreakdown5> IFinancialInstrumentAttributes21.QuantityBreakdown =>
+        QuantityBreakdown;
+    IPriceType1Choice? IFinancialInstrumentAttributes21.MarketOrIndicativePrice =>
+        MarketOrIndicativePrice;
     IPrice2? IFinancialInstrumentAttributes21.ExercisePrice => ExercisePrice;
     IPrice2? IFinancialInstrumentAttributes21.SubscriptionPrice => SubscriptionPrice;
     IPrice2? IFinancialInstrumentAttributes21.ConversionPrice => ConversionPrice;
     IPrice2? IFinancialInstrumentAttributes21.StrikePrice => StrikePrice;
-    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes21.MinimumNominalQuantity => MinimumNominalQuantity;
-    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes21.ContractSize => ContractSize;
-    IEnumerable<ISecurityIdentification14> IFinancialInstrumentAttributes21.UnderlyingFinancialInstrumentIdentification => UnderlyingFinancialInstrumentIdentification;
+    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes21.MinimumNominalQuantity =>
+        MinimumNominalQuantity;
+    IFinancialInstrumentQuantity1Choice? IFinancialInstrumentAttributes21.ContractSize =>
+        ContractSize;
+    IEnumerable<ISecurityIdentification14> IFinancialInstrumentAttributes21.UnderlyingFinancialInstrumentIdentification =>
+        UnderlyingFinancialInstrumentIdentification;
 }

@@ -12,6 +12,7 @@ public partial record CorporateActionOption126 : ICorporateActionOption126
 {
     IOptionNumber1Choice ICorporateActionOption126.OptionNumber => OptionNumber;
     ICorporateActionOption26Choice ICorporateActionOption126.OptionType => OptionType;
-    IEnumerable<ISecuritiesOption58> ICorporateActionOption126.SecuritiesMovementDetails => SecuritiesMovementDetails;
+    IEnumerable<ISecuritiesOption58> ICorporateActionOption126.SecuritiesMovementDetails =>
+        SecuritiesMovementDetails;
     IEnumerable<ICashOption48> ICorporateActionOption126.CashMovementDetails => CashMovementDetails;
 }

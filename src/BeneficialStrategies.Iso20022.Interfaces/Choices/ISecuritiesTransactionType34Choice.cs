@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the settlement transaction type information.
 /// </summary>
 [IsoId("_zmv34ZwxEeazcsnODTksnQ")]
-public interface ISecuritiesTransactionType34Choice : IIsoChoice
-{
-}
+public interface ISecuritiesTransactionType34Choice : IIsoChoice { }

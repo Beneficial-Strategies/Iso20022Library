@@ -11,9 +11,13 @@ namespace BeneficialStrategies.Iso20022.semt;
 public partial record SecuritiesTransactionPostingReportV08 : ISecuritiesTransactionPostingReportV08
 {
     IPagination1 ISecuritiesTransactionPostingReportV08.Pagination => Pagination;
-    IStatement61 ISecuritiesTransactionPostingReportV08.StatementGeneralDetails => StatementGeneralDetails;
+    IStatement61 ISecuritiesTransactionPostingReportV08.StatementGeneralDetails =>
+        StatementGeneralDetails;
     IPartyIdentification98? ISecuritiesTransactionPostingReportV08.AccountOwner => AccountOwner;
-    ISecuritiesAccount19 ISecuritiesTransactionPostingReportV08.SafekeepingAccount => SafekeepingAccount;
-    IEnumerable<IFinancialInstrumentDetails28> ISecuritiesTransactionPostingReportV08.FinancialInstrumentDetails => FinancialInstrumentDetails;
-    IEnumerable<ISubAccountIdentification51> ISecuritiesTransactionPostingReportV08.SubAccountDetails => SubAccountDetails;
+    ISecuritiesAccount19 ISecuritiesTransactionPostingReportV08.SafekeepingAccount =>
+        SafekeepingAccount;
+    IEnumerable<IFinancialInstrumentDetails28> ISecuritiesTransactionPostingReportV08.FinancialInstrumentDetails =>
+        FinancialInstrumentDetails;
+    IEnumerable<ISubAccountIdentification51> ISecuritiesTransactionPostingReportV08.SubAccountDetails =>
+        SubAccountDetails;
 }

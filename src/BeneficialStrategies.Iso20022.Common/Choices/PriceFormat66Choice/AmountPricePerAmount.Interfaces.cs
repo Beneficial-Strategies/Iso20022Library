@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PriceFormat66Choice;
 
-public partial record AmountPricePerAmount : IAmountPricePerAmount
-{
-}
+public partial record AmountPricePerAmount : IAmountPricePerAmount { }

@@ -11,8 +11,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SettlementDetails221 : ISettlementDetails221
 {
     IPriorityNumeric4Choice? ISettlementDetails221.Priority => Priority;
-    ISecuritiesTransactionType43Choice ISettlementDetails221.SecuritiesTransactionType => SecuritiesTransactionType;
-    IEnumerable<ISettlementTransactionCondition41Choice> ISettlementDetails221.SettlementTransactionCondition => SettlementTransactionCondition;
+    ISecuritiesTransactionType43Choice ISettlementDetails221.SecuritiesTransactionType =>
+        SecuritiesTransactionType;
+    IEnumerable<ISettlementTransactionCondition41Choice> ISettlementDetails221.SettlementTransactionCondition =>
+        SettlementTransactionCondition;
     IBeneficialOwnership4Choice? ISettlementDetails221.BeneficialOwnership => BeneficialOwnership;
     IBlockTrade4Choice? ISettlementDetails221.BlockTrade => BlockTrade;
     ICentralCounterPartyEligibility4Choice? ISettlementDetails221.CCPEligibility => CCPEligibility;
@@ -25,11 +27,13 @@ public partial record SettlementDetails221 : ISettlementDetails221
     IRestriction5Choice? ISettlementDetails221.LegalRestrictions => LegalRestrictions;
     ISecuritiesRTGS4Choice? ISettlementDetails221.SecuritiesRTGS => SecuritiesRTGS;
     ISettlingCapacity7Choice? ISettlementDetails221.SettlingCapacity => SettlingCapacity;
-    ISettlementSystemMethod4Choice? ISettlementDetails221.SettlementSystemMethod => SettlementSystemMethod;
+    ISettlementSystemMethod4Choice? ISettlementDetails221.SettlementSystemMethod =>
+        SettlementSystemMethod;
     ITaxCapacityParty4Choice? ISettlementDetails221.TaxCapacity => TaxCapacity;
     IGenericIdentification30? ISettlementDetails221.StampDutyTaxBasis => StampDutyTaxBasis;
     IAutomaticBorrowing6Choice? ISettlementDetails221.AutomaticBorrowing => AutomaticBorrowing;
     ILetterOfGuarantee4Choice? ISettlementDetails221.LetterOfGuarantee => LetterOfGuarantee;
-    IGenericIdentification30? ISettlementDetails221.SecuritiesSubBalanceType => SecuritiesSubBalanceType;
+    IGenericIdentification30? ISettlementDetails221.SecuritiesSubBalanceType =>
+        SecuritiesSubBalanceType;
     IGenericIdentification30? ISettlementDetails221.CashSubBalanceType => CashSubBalanceType;
 }

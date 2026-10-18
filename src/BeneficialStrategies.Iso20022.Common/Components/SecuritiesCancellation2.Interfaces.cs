@@ -13,5 +13,6 @@ public partial record SecuritiesCancellation2 : ISecuritiesCancellation2
     ISystemPartyIdentification8? ISecuritiesCancellation2.AccountOwner => AccountOwner;
     ISecuritiesAccount19? ISecuritiesCancellation2.SafekeepingAccount => SafekeepingAccount;
     IProcessingStatus69Choice? ISecuritiesCancellation2.ProcessingStatus => ProcessingStatus;
-    IEnumerable<ISecuritiesCancellationTransaction2> ISecuritiesCancellation2.Cancellation => Cancellation;
+    IEnumerable<ISecuritiesCancellationTransaction2> ISecuritiesCancellation2.Cancellation =>
+        Cancellation;
 }

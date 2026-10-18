@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record NumberOfItemsPerStatus1 : INumberOfItemsPerStatus1
-{
-}
+public partial record NumberOfItemsPerStatus1 : INumberOfItemsPerStatus1 { }

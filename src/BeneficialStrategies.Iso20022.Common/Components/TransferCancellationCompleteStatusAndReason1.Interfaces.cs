@@ -8,7 +8,9 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record TransferCancellationCompleteStatusAndReason1 : ITransferCancellationCompleteStatusAndReason1
+public partial record TransferCancellationCompleteStatusAndReason1
+    : ITransferCancellationCompleteStatusAndReason1
 {
-    IGenericIdentification1 ITransferCancellationCompleteStatusAndReason1.DataSourceScheme => DataSourceScheme;
+    IGenericIdentification1 ITransferCancellationCompleteStatusAndReason1.DataSourceScheme =>
+        DataSourceScheme;
 }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a CFI code and an other type of identification for the classification of a financial instrument.
 /// </summary>
 [IsoId("_TrbgMW1MEeiqaPNRWUnGNA")]
-public interface ISecurityClassificationType2Choice : IIsoChoice
-{
-}
+public interface ISecurityClassificationType2Choice : IIsoChoice { }

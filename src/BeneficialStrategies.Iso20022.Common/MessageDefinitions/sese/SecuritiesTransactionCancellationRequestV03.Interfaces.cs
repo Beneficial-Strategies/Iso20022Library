@@ -8,12 +8,19 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesTransactionCancellationRequestV03 : ISecuritiesTransactionCancellationRequestV03
+public partial record SecuritiesTransactionCancellationRequestV03
+    : ISecuritiesTransactionCancellationRequestV03
 {
-    IReferences2Choice ISecuritiesTransactionCancellationRequestV03.AccountOwnerTransactionIdentification => AccountOwnerTransactionIdentification;
-    IPartyIdentification36Choice? ISecuritiesTransactionCancellationRequestV03.AccountOwner => AccountOwner;
-    ISecuritiesAccount13 ISecuritiesTransactionCancellationRequestV03.SafekeepingAccount => SafekeepingAccount;
-    ITransactionDetails29? ISecuritiesTransactionCancellationRequestV03.TransactionDetails => TransactionDetails;
-    IFXCancellation1Choice? ISecuritiesTransactionCancellationRequestV03.FXCancellation => FXCancellation;
-    IEnumerable<ISupplementaryData1> ISecuritiesTransactionCancellationRequestV03.SupplementaryData => SupplementaryData;
+    IReferences2Choice ISecuritiesTransactionCancellationRequestV03.AccountOwnerTransactionIdentification =>
+        AccountOwnerTransactionIdentification;
+    IPartyIdentification36Choice? ISecuritiesTransactionCancellationRequestV03.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount13 ISecuritiesTransactionCancellationRequestV03.SafekeepingAccount =>
+        SafekeepingAccount;
+    ITransactionDetails29? ISecuritiesTransactionCancellationRequestV03.TransactionDetails =>
+        TransactionDetails;
+    IFXCancellation1Choice? ISecuritiesTransactionCancellationRequestV03.FXCancellation =>
+        FXCancellation;
+    IEnumerable<ISupplementaryData1> ISecuritiesTransactionCancellationRequestV03.SupplementaryData =>
+        SupplementaryData;
 }

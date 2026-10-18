@@ -11,10 +11,16 @@ namespace BeneficialStrategies.Iso20022.seev;
 public partial record AgentCAMovementConfirmationV01 : IAgentCAMovementConfirmationV01
 {
     IDocumentIdentification8 IAgentCAMovementConfirmationV01.Identification => Identification;
-    IDocumentIdentification8 IAgentCAMovementConfirmationV01.AgentCAMovementInstructionIdentification => AgentCAMovementInstructionIdentification;
-    IDocumentIdentification8 IAgentCAMovementConfirmationV01.AgentCAElectionStatusAdviceIdentification => AgentCAElectionStatusAdviceIdentification;
-    IDocumentIdentification8 IAgentCAMovementConfirmationV01.AgentCAGlobalDistributionStatusAdviceIdentification => AgentCAGlobalDistributionStatusAdviceIdentification;
-    ICorporateActionInformation1 IAgentCAMovementConfirmationV01.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IEnumerable<ICorporateActionSecuritiesMovement1> IAgentCAMovementConfirmationV01.SecuritiesMovementDetails => SecuritiesMovementDetails;
-    IEnumerable<ICashMovement3> IAgentCAMovementConfirmationV01.CashMovementDetails => CashMovementDetails;
+    IDocumentIdentification8 IAgentCAMovementConfirmationV01.AgentCAMovementInstructionIdentification =>
+        AgentCAMovementInstructionIdentification;
+    IDocumentIdentification8 IAgentCAMovementConfirmationV01.AgentCAElectionStatusAdviceIdentification =>
+        AgentCAElectionStatusAdviceIdentification;
+    IDocumentIdentification8 IAgentCAMovementConfirmationV01.AgentCAGlobalDistributionStatusAdviceIdentification =>
+        AgentCAGlobalDistributionStatusAdviceIdentification;
+    ICorporateActionInformation1 IAgentCAMovementConfirmationV01.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IEnumerable<ICorporateActionSecuritiesMovement1> IAgentCAMovementConfirmationV01.SecuritiesMovementDetails =>
+        SecuritiesMovementDetails;
+    IEnumerable<ICashMovement3> IAgentCAMovementConfirmationV01.CashMovementDetails =>
+        CashMovementDetails;
 }

@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PenaltyIdentification1 : IPenaltyIdentification1
 {
-    IPenaltyIdentification2? IPenaltyIdentification1.ReallocationIdentification => ReallocationIdentification;
+    IPenaltyIdentification2? IPenaltyIdentification1.ReallocationIdentification =>
+        ReallocationIdentification;
 }

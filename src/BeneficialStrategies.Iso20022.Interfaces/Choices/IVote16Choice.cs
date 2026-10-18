@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Determines how the voting instructions are specified.
 /// </summary>
 [IsoId("_XGdmEfNoEeqRfth943bvEA")]
-public interface IVote16Choice : IIsoChoice
-{
-}
+public interface IVote16Choice : IIsoChoice { }

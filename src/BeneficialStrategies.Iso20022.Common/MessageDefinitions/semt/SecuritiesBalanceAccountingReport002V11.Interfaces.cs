@@ -8,17 +8,27 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.semt;
 
-public partial record SecuritiesBalanceAccountingReport002V11 : ISecuritiesBalanceAccountingReport002V11
+public partial record SecuritiesBalanceAccountingReport002V11
+    : ISecuritiesBalanceAccountingReport002V11
 {
     IPagination1 ISecuritiesBalanceAccountingReport002V11.Pagination => Pagination;
-    IStatement76 ISecuritiesBalanceAccountingReport002V11.StatementGeneralDetails => StatementGeneralDetails;
+    IStatement76 ISecuritiesBalanceAccountingReport002V11.StatementGeneralDetails =>
+        StatementGeneralDetails;
     IPartyIdentification156? ISecuritiesBalanceAccountingReport002V11.AccountOwner => AccountOwner;
-    IPartyIdentification157? ISecuritiesBalanceAccountingReport002V11.AccountServicer => AccountServicer;
-    ISecuritiesAccount42? ISecuritiesBalanceAccountingReport002V11.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet10? ISecuritiesBalanceAccountingReport002V11.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
-    IEnumerable<IIntermediary45> ISecuritiesBalanceAccountingReport002V11.IntermediaryInformation => IntermediaryInformation;
-    IEnumerable<IAggregateBalanceInformation43> ISecuritiesBalanceAccountingReport002V11.BalanceForAccount => BalanceForAccount;
-    IEnumerable<ISubAccountIdentification68> ISecuritiesBalanceAccountingReport002V11.SubAccountDetails => SubAccountDetails;
-    ITotalValueInPageAndStatement4? ISecuritiesBalanceAccountingReport002V11.AccountBaseCurrencyTotalAmounts => AccountBaseCurrencyTotalAmounts;
-    ITotalValueInPageAndStatement4? ISecuritiesBalanceAccountingReport002V11.AlternateReportingCurrencyTotalAmounts => AlternateReportingCurrencyTotalAmounts;
+    IPartyIdentification157? ISecuritiesBalanceAccountingReport002V11.AccountServicer =>
+        AccountServicer;
+    ISecuritiesAccount42? ISecuritiesBalanceAccountingReport002V11.SafekeepingAccount =>
+        SafekeepingAccount;
+    IBlockChainAddressWallet10? ISecuritiesBalanceAccountingReport002V11.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
+    IEnumerable<IIntermediary45> ISecuritiesBalanceAccountingReport002V11.IntermediaryInformation =>
+        IntermediaryInformation;
+    IEnumerable<IAggregateBalanceInformation43> ISecuritiesBalanceAccountingReport002V11.BalanceForAccount =>
+        BalanceForAccount;
+    IEnumerable<ISubAccountIdentification68> ISecuritiesBalanceAccountingReport002V11.SubAccountDetails =>
+        SubAccountDetails;
+    ITotalValueInPageAndStatement4? ISecuritiesBalanceAccountingReport002V11.AccountBaseCurrencyTotalAmounts =>
+        AccountBaseCurrencyTotalAmounts;
+    ITotalValueInPageAndStatement4? ISecuritiesBalanceAccountingReport002V11.AlternateReportingCurrencyTotalAmounts =>
+        AlternateReportingCurrencyTotalAmounts;
 }

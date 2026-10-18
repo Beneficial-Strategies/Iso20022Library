@@ -15,8 +15,10 @@ public partial record SecuritiesStatementQueryV01 : ISecuritiesStatementQueryV01
     IStatement16? ISecuritiesStatementQueryV01.StatementGeneralDetails => StatementGeneralDetails;
     IPartyIdentification13Choice? ISecuritiesStatementQueryV01.AccountOwner => AccountOwner;
     ISecuritiesAccount13 ISecuritiesStatementQueryV01.SafekeepingAccount => SafekeepingAccount;
-    IEnumerable<IAdditionalQueryParameters1> ISecuritiesStatementQueryV01.AdditionalQueryParameters => AdditionalQueryParameters;
-    IPartyIdentification10Choice? ISecuritiesStatementQueryV01.MessageOriginator => MessageOriginator;
+    IEnumerable<IAdditionalQueryParameters1> ISecuritiesStatementQueryV01.AdditionalQueryParameters =>
+        AdditionalQueryParameters;
+    IPartyIdentification10Choice? ISecuritiesStatementQueryV01.MessageOriginator =>
+        MessageOriginator;
     IPartyIdentification10Choice? ISecuritiesStatementQueryV01.MessageRecipient => MessageRecipient;
     IEnumerable<IExtension2> ISecuritiesStatementQueryV01.Extension => Extension;
 }

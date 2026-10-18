@@ -10,18 +10,26 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record FinancialInstrumentAttributes115 : IFinancialInstrumentAttributes115
 {
-    ISecurityIdentification20 IFinancialInstrumentAttributes115.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IMarketIdentification4Choice? IFinancialInstrumentAttributes115.PlaceOfListing => PlaceOfListing;
-    IInterestComputationMethodFormat5Choice? IFinancialInstrumentAttributes115.DayCountBasis => DayCountBasis;
-    IClassificationType33Choice? IFinancialInstrumentAttributes115.ClassificationType => ClassificationType;
+    ISecurityIdentification20 IFinancialInstrumentAttributes115.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IMarketIdentification4Choice? IFinancialInstrumentAttributes115.PlaceOfListing =>
+        PlaceOfListing;
+    IInterestComputationMethodFormat5Choice? IFinancialInstrumentAttributes115.DayCountBasis =>
+        DayCountBasis;
+    IClassificationType33Choice? IFinancialInstrumentAttributes115.ClassificationType =>
+        ClassificationType;
     IOptionStyle9Choice? IFinancialInstrumentAttributes115.OptionStyle => OptionStyle;
     IRateFormat12Choice? IFinancialInstrumentAttributes115.PreviousFactor => PreviousFactor;
     IRateFormat12Choice? IFinancialInstrumentAttributes115.NextFactor => NextFactor;
     IRateFormat3Choice? IFinancialInstrumentAttributes115.InterestRate => InterestRate;
     IRateFormat3Choice? IFinancialInstrumentAttributes115.NextInterestRate => NextInterestRate;
-    IFinancialInstrumentQuantity36Choice? IFinancialInstrumentAttributes115.MinimumNominalQuantity => MinimumNominalQuantity;
-    IFinancialInstrumentQuantity36Choice? IFinancialInstrumentAttributes115.MinimumQuantityToInstruct => MinimumQuantityToInstruct;
-    IFinancialInstrumentQuantity36Choice? IFinancialInstrumentAttributes115.MinimumMultipleQuantityToInstruct => MinimumMultipleQuantityToInstruct;
-    IFinancialInstrumentQuantity36Choice? IFinancialInstrumentAttributes115.ContractSize => ContractSize;
+    IFinancialInstrumentQuantity36Choice? IFinancialInstrumentAttributes115.MinimumNominalQuantity =>
+        MinimumNominalQuantity;
+    IFinancialInstrumentQuantity36Choice? IFinancialInstrumentAttributes115.MinimumQuantityToInstruct =>
+        MinimumQuantityToInstruct;
+    IFinancialInstrumentQuantity36Choice? IFinancialInstrumentAttributes115.MinimumMultipleQuantityToInstruct =>
+        MinimumMultipleQuantityToInstruct;
+    IFinancialInstrumentQuantity36Choice? IFinancialInstrumentAttributes115.ContractSize =>
+        ContractSize;
     IPriceFormat57Choice? IFinancialInstrumentAttributes115.IssuePrice => IssuePrice;
 }

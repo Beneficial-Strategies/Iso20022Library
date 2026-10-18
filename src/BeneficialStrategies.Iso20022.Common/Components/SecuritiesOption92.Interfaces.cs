@@ -11,15 +11,19 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SecuritiesOption92 : ISecuritiesOption92
 {
     IFinancialInstrumentAttributes107 ISecuritiesOption92.SecurityDetails => SecurityDetails;
-    ITemporaryFinancialInstrumentIndicator3Choice? ISecuritiesOption92.TemporaryFinancialInstrumentIndicator => TemporaryFinancialInstrumentIndicator;
-    INonEligibleProceedsIndicator3Choice? ISecuritiesOption92.NonEligibleProceedsIndicator => NonEligibleProceedsIndicator;
-    IIssuerOfferorTaxabilityIndicator1Choice? ISecuritiesOption92.IssuerOfferorTaxabilityIndicator => IssuerOfferorTaxabilityIndicator;
+    ITemporaryFinancialInstrumentIndicator3Choice? ISecuritiesOption92.TemporaryFinancialInstrumentIndicator =>
+        TemporaryFinancialInstrumentIndicator;
+    INonEligibleProceedsIndicator3Choice? ISecuritiesOption92.NonEligibleProceedsIndicator =>
+        NonEligibleProceedsIndicator;
+    IIssuerOfferorTaxabilityIndicator1Choice? ISecuritiesOption92.IssuerOfferorTaxabilityIndicator =>
+        IssuerOfferorTaxabilityIndicator;
     IGenericIdentification30? ISecuritiesOption92.IncomeType => IncomeType;
     IEnumerable<IGenericIdentification30> ISecuritiesOption92.OtherIncomeType => OtherIncomeType;
     IEnumerable<IGenericIdentification30> ISecuritiesOption92.ExemptionType => ExemptionType;
     IQuantity51Choice? ISecuritiesOption92.EntitledQuantity => EntitledQuantity;
     ISafekeepingPlaceFormat29Choice? ISecuritiesOption92.SafekeepingPlace => SafekeepingPlace;
-    IFractionDispositionType26Choice? ISecuritiesOption92.FractionDisposition => FractionDisposition;
+    IFractionDispositionType26Choice? ISecuritiesOption92.FractionDisposition =>
+        FractionDisposition;
     IPeriod6Choice? ISecuritiesOption92.TradingPeriod => TradingPeriod;
     ISecurityDate20 ISecuritiesOption92.DateDetails => DateDetails;
     ICorporateActionRate112? ISecuritiesOption92.RateDetails => RateDetails;

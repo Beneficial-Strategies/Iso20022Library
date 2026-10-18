@@ -10,12 +10,19 @@ namespace BeneficialStrategies.Iso20022.semt;
 
 public partial record IntraPositionMovementStatusAdviceV01 : IIntraPositionMovementStatusAdviceV01
 {
-    IDocumentIdentification11 IIntraPositionMovementStatusAdviceV01.Identification => Identification;
-    ITransactionIdentifications3 IIntraPositionMovementStatusAdviceV01.TransactionIdentification => TransactionIdentification;
-    IIntraPositionProcessingStatus1Choice? IIntraPositionMovementStatusAdviceV01.ProcessingStatus => ProcessingStatus;
-    ISettlementStatus2Choice? IIntraPositionMovementStatusAdviceV01.SettlementStatus => SettlementStatus;
-    IIntraPositionDetails4? IIntraPositionMovementStatusAdviceV01.TransactionDetails => TransactionDetails;
-    IPartyIdentification10Choice? IIntraPositionMovementStatusAdviceV01.MessageOriginator => MessageOriginator;
-    IPartyIdentification10Choice? IIntraPositionMovementStatusAdviceV01.MessageRecipient => MessageRecipient;
+    IDocumentIdentification11 IIntraPositionMovementStatusAdviceV01.Identification =>
+        Identification;
+    ITransactionIdentifications3 IIntraPositionMovementStatusAdviceV01.TransactionIdentification =>
+        TransactionIdentification;
+    IIntraPositionProcessingStatus1Choice? IIntraPositionMovementStatusAdviceV01.ProcessingStatus =>
+        ProcessingStatus;
+    ISettlementStatus2Choice? IIntraPositionMovementStatusAdviceV01.SettlementStatus =>
+        SettlementStatus;
+    IIntraPositionDetails4? IIntraPositionMovementStatusAdviceV01.TransactionDetails =>
+        TransactionDetails;
+    IPartyIdentification10Choice? IIntraPositionMovementStatusAdviceV01.MessageOriginator =>
+        MessageOriginator;
+    IPartyIdentification10Choice? IIntraPositionMovementStatusAdviceV01.MessageRecipient =>
+        MessageRecipient;
     IEnumerable<IExtension2> IIntraPositionMovementStatusAdviceV01.Extension => Extension;
 }

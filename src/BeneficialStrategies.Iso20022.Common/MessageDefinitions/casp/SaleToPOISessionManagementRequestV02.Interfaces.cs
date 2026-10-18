@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.casp;
 public partial record SaleToPOISessionManagementRequestV02 : ISaleToPOISessionManagementRequestV02
 {
     IHeader41 ISaleToPOISessionManagementRequestV02.Header => Header;
-    ISessionManagementRequest3 ISaleToPOISessionManagementRequestV02.SessionManagementRequest => SessionManagementRequest;
-    IContentInformationType21? ISaleToPOISessionManagementRequestV02.SecurityTrailer => SecurityTrailer;
+    ISessionManagementRequest3 ISaleToPOISessionManagementRequestV02.SessionManagementRequest =>
+        SessionManagementRequest;
+    IContentInformationType21? ISaleToPOISessionManagementRequestV02.SecurityTrailer =>
+        SecurityTrailer;
 }

@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SubAccountIdentification3 : ISubAccountIdentification3
 {
     IAccountIdentificationFormatChoice ISubAccountIdentification3.Identification => Identification;
-    IEnumerable<IAggregateBalanceInformation3> ISubAccountIdentification3.BalanceForSubAccount => BalanceForSubAccount;
+    IEnumerable<IAggregateBalanceInformation3> ISubAccountIdentification3.BalanceForSubAccount =>
+        BalanceForSubAccount;
 }

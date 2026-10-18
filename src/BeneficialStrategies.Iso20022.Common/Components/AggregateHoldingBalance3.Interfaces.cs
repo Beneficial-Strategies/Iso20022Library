@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record AggregateHoldingBalance3 : IAggregateHoldingBalance3
 {
-    IEnumerable<IAggregateHoldingBalance1> IAggregateHoldingBalance3.BalanceForAccount => BalanceForAccount;
+    IEnumerable<IAggregateHoldingBalance1> IAggregateHoldingBalance3.BalanceForAccount =>
+        BalanceForAccount;
     IEnumerable<IIntermediary29> IAggregateHoldingBalance3.Agent => Agent;
 }

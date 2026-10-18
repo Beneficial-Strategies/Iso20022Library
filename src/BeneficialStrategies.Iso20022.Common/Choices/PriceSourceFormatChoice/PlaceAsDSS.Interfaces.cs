@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PriceSourceFormatChoice;
 
-public partial record PlaceAsDSS : IPlaceAsDSS
-{
-}
+public partial record PlaceAsDSS : IPlaceAsDSS { }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the settlement capacity information.
 /// </summary>
 [IsoId("_QwK2stp-Ed-ak6NoX_4Aeg_-342126272")]
-public interface ISettlingCapacity1Choice : IIsoChoice
-{
-}
+public interface ISettlingCapacity1Choice : IIsoChoice { }

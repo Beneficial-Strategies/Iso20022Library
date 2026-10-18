@@ -10,13 +10,20 @@ namespace BeneficialStrategies.Iso20022.semt;
 
 public partial record IntraPositionMovementInstructionV02 : IIntraPositionMovementInstructionV02
 {
-    IIdentification1? IIntraPositionMovementInstructionV02.CorporateActionEventIdentification => CorporateActionEventIdentification;
+    IIdentification1? IIntraPositionMovementInstructionV02.CorporateActionEventIdentification =>
+        CorporateActionEventIdentification;
     ILinkages8? IIntraPositionMovementInstructionV02.Linkages => Linkages;
     IPartyIdentification36Choice? IIntraPositionMovementInstructionV02.AccountOwner => AccountOwner;
-    ISecuritiesAccount13 IIntraPositionMovementInstructionV02.SafekeepingAccount => SafekeepingAccount;
-    ISafekeepingPlaceFormat3Choice? IIntraPositionMovementInstructionV02.SafekeepingPlace => SafekeepingPlace;
-    ISecurityIdentification14 IIntraPositionMovementInstructionV02.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentAttributes21? IIntraPositionMovementInstructionV02.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
-    IIntraPositionDetails11 IIntraPositionMovementInstructionV02.IntraPositionDetails => IntraPositionDetails;
-    IEnumerable<ISupplementaryData1> IIntraPositionMovementInstructionV02.SupplementaryData => SupplementaryData;
+    ISecuritiesAccount13 IIntraPositionMovementInstructionV02.SafekeepingAccount =>
+        SafekeepingAccount;
+    ISafekeepingPlaceFormat3Choice? IIntraPositionMovementInstructionV02.SafekeepingPlace =>
+        SafekeepingPlace;
+    ISecurityIdentification14 IIntraPositionMovementInstructionV02.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentAttributes21? IIntraPositionMovementInstructionV02.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
+    IIntraPositionDetails11 IIntraPositionMovementInstructionV02.IntraPositionDetails =>
+        IntraPositionDetails;
+    IEnumerable<ISupplementaryData1> IIntraPositionMovementInstructionV02.SupplementaryData =>
+        SupplementaryData;
 }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record ForeignExchangeTerms27 : IForeignExchangeTerms27
-{
-}
+public partial record ForeignExchangeTerms27 : IForeignExchangeTerms27 { }

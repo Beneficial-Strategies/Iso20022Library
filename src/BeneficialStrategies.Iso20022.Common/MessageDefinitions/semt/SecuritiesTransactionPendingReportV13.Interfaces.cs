@@ -11,10 +11,14 @@ namespace BeneficialStrategies.Iso20022.semt;
 public partial record SecuritiesTransactionPendingReportV13 : ISecuritiesTransactionPendingReportV13
 {
     IPagination1 ISecuritiesTransactionPendingReportV13.Pagination => Pagination;
-    IStatement64 ISecuritiesTransactionPendingReportV13.StatementGeneralDetails => StatementGeneralDetails;
+    IStatement64 ISecuritiesTransactionPendingReportV13.StatementGeneralDetails =>
+        StatementGeneralDetails;
     IPartyIdentification144? ISecuritiesTransactionPendingReportV13.AccountOwner => AccountOwner;
-    ISecuritiesAccount19? ISecuritiesTransactionPendingReportV13.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet3? ISecuritiesTransactionPendingReportV13.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
+    ISecuritiesAccount19? ISecuritiesTransactionPendingReportV13.SafekeepingAccount =>
+        SafekeepingAccount;
+    IBlockChainAddressWallet3? ISecuritiesTransactionPendingReportV13.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
     IEnumerable<IStatusAndReason44> ISecuritiesTransactionPendingReportV13.Status => Status;
-    IEnumerable<ITransaction121> ISecuritiesTransactionPendingReportV13.Transactions => Transactions;
+    IEnumerable<ITransaction121> ISecuritiesTransactionPendingReportV13.Transactions =>
+        Transactions;
 }

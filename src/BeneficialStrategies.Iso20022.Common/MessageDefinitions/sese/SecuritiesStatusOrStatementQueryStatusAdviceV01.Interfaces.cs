@@ -8,15 +8,25 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesStatusOrStatementQueryStatusAdviceV01 : ISecuritiesStatusOrStatementQueryStatusAdviceV01
+public partial record SecuritiesStatusOrStatementQueryStatusAdviceV01
+    : ISecuritiesStatusOrStatementQueryStatusAdviceV01
 {
-    IDocumentIdentification11 ISecuritiesStatusOrStatementQueryStatusAdviceV01.Identification => Identification;
-    IIdentification1 ISecuritiesStatusOrStatementQueryStatusAdviceV01.QueryReference => QueryReference;
-    IPartyIdentification13Choice? ISecuritiesStatusOrStatementQueryStatusAdviceV01.AccountOwner => AccountOwner;
-    ISecuritiesAccount13? ISecuritiesStatusOrStatementQueryStatusAdviceV01.SafekeepingAccount => SafekeepingAccount;
-    IStatusOrStatement1Choice? ISecuritiesStatusOrStatementQueryStatusAdviceV01.StatusOrStatementRequested => StatusOrStatementRequested;
-    IProcessingStatus4Choice ISecuritiesStatusOrStatementQueryStatusAdviceV01.ProcessingStatus => ProcessingStatus;
-    IPartyIdentification10Choice? ISecuritiesStatusOrStatementQueryStatusAdviceV01.MessageOriginator => MessageOriginator;
-    IPartyIdentification10Choice? ISecuritiesStatusOrStatementQueryStatusAdviceV01.MessageRecipient => MessageRecipient;
-    IEnumerable<IExtension2> ISecuritiesStatusOrStatementQueryStatusAdviceV01.Extension => Extension;
+    IDocumentIdentification11 ISecuritiesStatusOrStatementQueryStatusAdviceV01.Identification =>
+        Identification;
+    IIdentification1 ISecuritiesStatusOrStatementQueryStatusAdviceV01.QueryReference =>
+        QueryReference;
+    IPartyIdentification13Choice? ISecuritiesStatusOrStatementQueryStatusAdviceV01.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount13? ISecuritiesStatusOrStatementQueryStatusAdviceV01.SafekeepingAccount =>
+        SafekeepingAccount;
+    IStatusOrStatement1Choice? ISecuritiesStatusOrStatementQueryStatusAdviceV01.StatusOrStatementRequested =>
+        StatusOrStatementRequested;
+    IProcessingStatus4Choice ISecuritiesStatusOrStatementQueryStatusAdviceV01.ProcessingStatus =>
+        ProcessingStatus;
+    IPartyIdentification10Choice? ISecuritiesStatusOrStatementQueryStatusAdviceV01.MessageOriginator =>
+        MessageOriginator;
+    IPartyIdentification10Choice? ISecuritiesStatusOrStatementQueryStatusAdviceV01.MessageRecipient =>
+        MessageRecipient;
+    IEnumerable<IExtension2> ISecuritiesStatusOrStatementQueryStatusAdviceV01.Extension =>
+        Extension;
 }

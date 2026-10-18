@@ -10,12 +10,20 @@ namespace BeneficialStrategies.Iso20022.semt;
 
 public partial record IntraPositionMovementConfirmationV03 : IIntraPositionMovementConfirmationV03
 {
-    IAdditionalParameters10? IIntraPositionMovementConfirmationV03.AdditionalParameters => AdditionalParameters;
-    IPartyIdentification36Choice? IIntraPositionMovementConfirmationV03.AccountOwner => AccountOwner;
-    ISecuritiesAccount13 IIntraPositionMovementConfirmationV03.SafekeepingAccount => SafekeepingAccount;
-    ISafekeepingPlaceFormat3Choice? IIntraPositionMovementConfirmationV03.SafekeepingPlace => SafekeepingPlace;
-    ISecurityIdentification14 IIntraPositionMovementConfirmationV03.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentAttributes36? IIntraPositionMovementConfirmationV03.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
-    IIntraPositionDetails22 IIntraPositionMovementConfirmationV03.IntraPositionDetails => IntraPositionDetails;
-    IEnumerable<ISupplementaryData1> IIntraPositionMovementConfirmationV03.SupplementaryData => SupplementaryData;
+    IAdditionalParameters10? IIntraPositionMovementConfirmationV03.AdditionalParameters =>
+        AdditionalParameters;
+    IPartyIdentification36Choice? IIntraPositionMovementConfirmationV03.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount13 IIntraPositionMovementConfirmationV03.SafekeepingAccount =>
+        SafekeepingAccount;
+    ISafekeepingPlaceFormat3Choice? IIntraPositionMovementConfirmationV03.SafekeepingPlace =>
+        SafekeepingPlace;
+    ISecurityIdentification14 IIntraPositionMovementConfirmationV03.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentAttributes36? IIntraPositionMovementConfirmationV03.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
+    IIntraPositionDetails22 IIntraPositionMovementConfirmationV03.IntraPositionDetails =>
+        IntraPositionDetails;
+    IEnumerable<ISupplementaryData1> IIntraPositionMovementConfirmationV03.SupplementaryData =>
+        SupplementaryData;
 }

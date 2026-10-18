@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record RelatedSettlementInstruction4 : IRelatedSettlementInstruction4
-{
-}
+public partial record RelatedSettlementInstruction4 : IRelatedSettlementInstruction4 { }

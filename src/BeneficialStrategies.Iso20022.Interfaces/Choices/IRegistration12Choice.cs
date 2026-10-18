@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the registration information.
 /// </summary>
 [IsoId("_6GWV9ZNLEeWGlc8L7oPDIg")]
-public interface IRegistration12Choice : IIsoChoice
-{
-}
+public interface IRegistration12Choice : IIsoChoice { }

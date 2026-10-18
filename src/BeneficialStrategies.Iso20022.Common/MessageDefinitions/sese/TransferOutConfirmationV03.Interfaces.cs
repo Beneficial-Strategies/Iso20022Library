@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.sese;
 
 public partial record TransferOutConfirmationV03 : ITransferOutConfirmationV03
 {
-    IMessageIdentification1 ITransferOutConfirmationV03.MessageIdentification => MessageIdentification;
+    IMessageIdentification1 ITransferOutConfirmationV03.MessageIdentification =>
+        MessageIdentification;
     IAdditionalReference2? ITransferOutConfirmationV03.PoolReference => PoolReference;
     IAdditionalReference2? ITransferOutConfirmationV03.PreviousReference => PreviousReference;
     IAdditionalReference2? ITransferOutConfirmationV03.RelatedReference => RelatedReference;

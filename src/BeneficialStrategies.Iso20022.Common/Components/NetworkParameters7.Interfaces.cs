@@ -12,6 +12,7 @@ public partial record NetworkParameters7 : INetworkParameters7
 {
     IEnumerable<INetworkParameters9> INetworkParameters7.Address => Address;
     IEnumerable<Max10KBinary> INetworkParameters7.ServerCertificate => ServerCertificate;
-    IEnumerable<Max140Binary> INetworkParameters7.ServerCertificateIdentifier => ServerCertificateIdentifier;
+    IEnumerable<Max140Binary> INetworkParameters7.ServerCertificateIdentifier =>
+        ServerCertificateIdentifier;
     IEnumerable<Max10KBinary> INetworkParameters7.ClientCertificate => ClientCertificate;
 }

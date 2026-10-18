@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record RestrictionIdentification2 : IRestrictionIdentification2
-{
-}
+public partial record RestrictionIdentification2 : IRestrictionIdentification2 { }

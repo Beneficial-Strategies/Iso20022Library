@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the specification of the status.
 /// </summary>
 [IsoId("_zx7jgSYtEeW_ZNn8gbfY7Q")]
-public interface IStatus21Choice : IIsoChoice
-{
-}
+public interface IStatus21Choice : IIsoChoice { }

@@ -11,11 +11,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record IntraPositionDetails2 : IIntraPositionDetails2
 {
     IFinancialInstrumentQuantity1Choice IIntraPositionDetails2.SettledQuantity => SettledQuantity;
-    IFinancialInstrumentQuantity1Choice? IIntraPositionDetails2.PreviouslySettledQuantity => PreviouslySettledQuantity;
-    IFinancialInstrumentQuantity1Choice? IIntraPositionDetails2.RemainingToBeSettledQuantity => RemainingToBeSettledQuantity;
+    IFinancialInstrumentQuantity1Choice? IIntraPositionDetails2.PreviouslySettledQuantity =>
+        PreviouslySettledQuantity;
+    IFinancialInstrumentQuantity1Choice? IIntraPositionDetails2.RemainingToBeSettledQuantity =>
+        RemainingToBeSettledQuantity;
     IDateAndDateTimeChoice IIntraPositionDetails2.SettlementDate => SettlementDate;
     IDateAndDateTimeChoice? IIntraPositionDetails2.AvailableDate => AvailableDate;
-    ICorporateActionEventType3Choice? IIntraPositionDetails2.CorporateActionEventType => CorporateActionEventType;
+    ICorporateActionEventType3Choice? IIntraPositionDetails2.CorporateActionEventType =>
+        CorporateActionEventType;
     ISecuritiesBalanceType3Choice IIntraPositionDetails2.BalanceFrom => BalanceFrom;
     ISecuritiesBalanceType3Choice IIntraPositionDetails2.BalanceTo => BalanceTo;
 }

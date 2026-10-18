@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats to express the reason of a rejection of a standing instruction cancellation request.
 /// </summary>
 [IsoId("_RoC54dp-Ed-ak6NoX_4Aeg_1992373934")]
-public interface IRejectionReason10FormatChoice : IIsoChoice
-{
-}
+public interface IRejectionReason10FormatChoice : IIsoChoice { }

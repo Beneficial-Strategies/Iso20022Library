@@ -11,28 +11,46 @@ namespace BeneficialStrategies.Iso20022.seev;
 public partial record CorporateActionNotificationV11 : ICorporateActionNotificationV11
 {
     IPagination1? ICorporateActionNotificationV11.Pagination => Pagination;
-    ICorporateActionNotification5 ICorporateActionNotificationV11.NotificationGeneralInformation => NotificationGeneralInformation;
-    IDocumentIdentification31? ICorporateActionNotificationV11.PreviousNotificationIdentification => PreviousNotificationIdentification;
-    IDocumentIdentification9? ICorporateActionNotificationV11.InstructionIdentification => InstructionIdentification;
-    IEnumerable<IDocumentIdentification32> ICorporateActionNotificationV11.OtherDocumentIdentification => OtherDocumentIdentification;
-    IEnumerable<ICorporateActionEventReference3> ICorporateActionNotificationV11.EventsLinkage => EventsLinkage;
-    ICorporateActionGeneralInformation136 ICorporateActionNotificationV11.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
+    ICorporateActionNotification5 ICorporateActionNotificationV11.NotificationGeneralInformation =>
+        NotificationGeneralInformation;
+    IDocumentIdentification31? ICorporateActionNotificationV11.PreviousNotificationIdentification =>
+        PreviousNotificationIdentification;
+    IDocumentIdentification9? ICorporateActionNotificationV11.InstructionIdentification =>
+        InstructionIdentification;
+    IEnumerable<IDocumentIdentification32> ICorporateActionNotificationV11.OtherDocumentIdentification =>
+        OtherDocumentIdentification;
+    IEnumerable<ICorporateActionEventReference3> ICorporateActionNotificationV11.EventsLinkage =>
+        EventsLinkage;
+    ICorporateActionGeneralInformation136 ICorporateActionNotificationV11.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
     IAccountIdentification41Choice ICorporateActionNotificationV11.AccountDetails => AccountDetails;
-    IFinancialInstrumentAttributes93? ICorporateActionNotificationV11.IntermediateSecurity => IntermediateSecurity;
-    ICorporateAction57? ICorporateActionNotificationV11.CorporateActionDetails => CorporateActionDetails;
-    IEnumerable<ICorporateActionOption177> ICorporateActionNotificationV11.CorporateActionOptionDetails => CorporateActionOptionDetails;
-    ICorporateActionNarrative46? ICorporateActionNotificationV11.AdditionalInformation => AdditionalInformation;
-    IEnumerable<IPartyIdentification129Choice> ICorporateActionNotificationV11.IssuerAgent => IssuerAgent;
-    IEnumerable<IPartyIdentification120Choice> ICorporateActionNotificationV11.PayingAgent => PayingAgent;
-    IEnumerable<IPartyIdentification120Choice> ICorporateActionNotificationV11.SubPayingAgent => SubPayingAgent;
+    IFinancialInstrumentAttributes93? ICorporateActionNotificationV11.IntermediateSecurity =>
+        IntermediateSecurity;
+    ICorporateAction57? ICorporateActionNotificationV11.CorporateActionDetails =>
+        CorporateActionDetails;
+    IEnumerable<ICorporateActionOption177> ICorporateActionNotificationV11.CorporateActionOptionDetails =>
+        CorporateActionOptionDetails;
+    ICorporateActionNarrative46? ICorporateActionNotificationV11.AdditionalInformation =>
+        AdditionalInformation;
+    IEnumerable<IPartyIdentification129Choice> ICorporateActionNotificationV11.IssuerAgent =>
+        IssuerAgent;
+    IEnumerable<IPartyIdentification120Choice> ICorporateActionNotificationV11.PayingAgent =>
+        PayingAgent;
+    IEnumerable<IPartyIdentification120Choice> ICorporateActionNotificationV11.SubPayingAgent =>
+        SubPayingAgent;
     IPartyIdentification120Choice? ICorporateActionNotificationV11.Registrar => Registrar;
-    IEnumerable<IPartyIdentification120Choice> ICorporateActionNotificationV11.ResellingAgent => ResellingAgent;
-    IPartyIdentification120Choice? ICorporateActionNotificationV11.PhysicalSecuritiesAgent => PhysicalSecuritiesAgent;
+    IEnumerable<IPartyIdentification120Choice> ICorporateActionNotificationV11.ResellingAgent =>
+        ResellingAgent;
+    IPartyIdentification120Choice? ICorporateActionNotificationV11.PhysicalSecuritiesAgent =>
+        PhysicalSecuritiesAgent;
     IPartyIdentification120Choice? ICorporateActionNotificationV11.DropAgent => DropAgent;
-    IEnumerable<IPartyIdentification120Choice> ICorporateActionNotificationV11.SolicitationAgent => SolicitationAgent;
-    IPartyIdentification120Choice? ICorporateActionNotificationV11.InformationAgent => InformationAgent;
+    IEnumerable<IPartyIdentification120Choice> ICorporateActionNotificationV11.SolicitationAgent =>
+        SolicitationAgent;
+    IPartyIdentification120Choice? ICorporateActionNotificationV11.InformationAgent =>
+        InformationAgent;
     IPartyIdentification129Choice? ICorporateActionNotificationV11.Issuer => Issuer;
     IEnumerable<IPartyIdentification129Choice> ICorporateActionNotificationV11.Offeror => Offeror;
     IPartyIdentification129Choice? ICorporateActionNotificationV11.TransferAgent => TransferAgent;
-    IEnumerable<ISupplementaryData1> ICorporateActionNotificationV11.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> ICorporateActionNotificationV11.SupplementaryData =>
+        SupplementaryData;
 }

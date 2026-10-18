@@ -14,6 +14,8 @@ public partial record MeetingInstructionStatusV03 : IMeetingInstructionStatusV03
     IInstructionType1Choice IMeetingInstructionStatusV03.InstructionType => InstructionType;
     IMeetingReference4 IMeetingInstructionStatusV03.MeetingReference => MeetingReference;
     IPartyIdentification9Choice IMeetingInstructionStatusV03.ReportingParty => ReportingParty;
-    ISecurityIdentification11 IMeetingInstructionStatusV03.SecurityIdentification => SecurityIdentification;
-    IInstructionTypeStatus1Choice IMeetingInstructionStatusV03.InstructionTypeStatus => InstructionTypeStatus;
+    ISecurityIdentification11 IMeetingInstructionStatusV03.SecurityIdentification =>
+        SecurityIdentification;
+    IInstructionTypeStatus1Choice IMeetingInstructionStatusV03.InstructionTypeStatus =>
+        InstructionTypeStatus;
 }

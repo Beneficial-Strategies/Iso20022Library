@@ -10,13 +10,19 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record MeetingNotice2 : IMeetingNotice2
 {
-    IDateFormat2Choice? IMeetingNotice2.AttendanceConfirmationDeadline => AttendanceConfirmationDeadline;
-    IDateFormat2Choice? IMeetingNotice2.AttendanceConfirmationSTPDeadline => AttendanceConfirmationSTPDeadline;
-    IDateFormat2Choice? IMeetingNotice2.AttendanceConfirmationMarketDeadline => AttendanceConfirmationMarketDeadline;
+    IDateFormat2Choice? IMeetingNotice2.AttendanceConfirmationDeadline =>
+        AttendanceConfirmationDeadline;
+    IDateFormat2Choice? IMeetingNotice2.AttendanceConfirmationSTPDeadline =>
+        AttendanceConfirmationSTPDeadline;
+    IDateFormat2Choice? IMeetingNotice2.AttendanceConfirmationMarketDeadline =>
+        AttendanceConfirmationMarketDeadline;
     IDateFormat2Choice? IMeetingNotice2.ResolutionProposalDeadline => ResolutionProposalDeadline;
-    IDateFormat2Choice? IMeetingNotice2.ResolutionProposalMarketDeadline => ResolutionProposalMarketDeadline;
-    IPostalAddress1? IMeetingNotice2.ProxyAppointmentNotificationAddress => ProxyAppointmentNotificationAddress;
+    IDateFormat2Choice? IMeetingNotice2.ResolutionProposalMarketDeadline =>
+        ResolutionProposalMarketDeadline;
+    IPostalAddress1? IMeetingNotice2.ProxyAppointmentNotificationAddress =>
+        ProxyAppointmentNotificationAddress;
     IProxyAppointmentInformation1? IMeetingNotice2.Proxy => Proxy;
-    IEnumerable<IMeetingContactPerson1> IMeetingNotice2.ContactPersonDetails => ContactPersonDetails;
+    IEnumerable<IMeetingContactPerson1> IMeetingNotice2.ContactPersonDetails =>
+        ContactPersonDetails;
     IDateFormat3Choice? IMeetingNotice2.ResultPublicationDate => ResultPublicationDate;
 }

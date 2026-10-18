@@ -11,15 +11,23 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CorporateActionRate138 : ICorporateActionRate138
 {
     IRateAndAmountFormat57Choice? ICorporateActionRate138.AdditionalTax => AdditionalTax;
-    IEnumerable<IGrossDividendRateFormat43Choice> ICorporateActionRate138.GrossDistributionRate => GrossDistributionRate;
-    IEnumerable<INetDividendRateFormat38Choice> ICorporateActionRate138.NetDistributionRate => NetDistributionRate;
-    IEnumerable<IInterestRateUsedForPaymentFormat11Choice> ICorporateActionRate138.GrossInterestRateUsedForPayment => GrossInterestRateUsedForPayment;
-    IRateFormat24Choice? ICorporateActionRate138.MaximumAllowedOversubscriptionRate => MaximumAllowedOversubscriptionRate;
+    IEnumerable<IGrossDividendRateFormat43Choice> ICorporateActionRate138.GrossDistributionRate =>
+        GrossDistributionRate;
+    IEnumerable<INetDividendRateFormat38Choice> ICorporateActionRate138.NetDistributionRate =>
+        NetDistributionRate;
+    IEnumerable<IInterestRateUsedForPaymentFormat11Choice> ICorporateActionRate138.GrossInterestRateUsedForPayment =>
+        GrossInterestRateUsedForPayment;
+    IRateFormat24Choice? ICorporateActionRate138.MaximumAllowedOversubscriptionRate =>
+        MaximumAllowedOversubscriptionRate;
     IRateFormat32Choice? ICorporateActionRate138.ProrationRate => ProrationRate;
-    IEnumerable<IRateAndAmountFormat56Choice> ICorporateActionRate138.WithholdingTaxRate => WithholdingTaxRate;
-    IEnumerable<IRateAndAmountFormat56Choice> ICorporateActionRate138.SecondLevelTax => SecondLevelTax;
-    IEnumerable<IRateTypeAndAmountAndStatus26> ICorporateActionRate138.TaxableIncomePerDividendShare => TaxableIncomePerDividendShare;
-    IForeignExchangeTerms38? ICorporateActionRate138.IssuerDeclaredExchangeRate => IssuerDeclaredExchangeRate;
+    IEnumerable<IRateAndAmountFormat56Choice> ICorporateActionRate138.WithholdingTaxRate =>
+        WithholdingTaxRate;
+    IEnumerable<IRateAndAmountFormat56Choice> ICorporateActionRate138.SecondLevelTax =>
+        SecondLevelTax;
+    IEnumerable<IRateTypeAndAmountAndStatus26> ICorporateActionRate138.TaxableIncomePerDividendShare =>
+        TaxableIncomePerDividendShare;
+    IForeignExchangeTerms38? ICorporateActionRate138.IssuerDeclaredExchangeRate =>
+        IssuerDeclaredExchangeRate;
     IRateAndAmountFormat57Choice? ICorporateActionRate138.TaxOnIncome => TaxOnIncome;
     IRateAndAmountFormat58Choice? ICorporateActionRate138.BidInterval => BidInterval;
 }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Market Claim Cancellation Request Status2Choice.
 /// </summary>
 [IsoId("_A4VBYYYTEe-9jM3-w7OB3g")]
-public interface IMarketClaimCancellationRequestStatus2Choice : IIsoChoice
-{
-}
+public interface IMarketClaimCancellationRequestStatus2Choice : IIsoChoice { }

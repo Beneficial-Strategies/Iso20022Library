@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or a proprietary code for specifying the processing type of a corporate action event.
 /// </summary>
 [IsoId("_RLnv5zndEeWLJsP1cO-amg")]
-public interface ICorporateActionEventProcessingType2Choice : IIsoChoice
-{
-}
+public interface ICorporateActionEventProcessingType2Choice : IIsoChoice { }

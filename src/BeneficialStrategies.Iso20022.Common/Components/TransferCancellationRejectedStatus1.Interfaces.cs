@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TransferCancellationRejectedStatus1 : ITransferCancellationRejectedStatus1
 {
-    IEnumerable<IGenericIdentification1> ITransferCancellationRejectedStatus1.DataSourceScheme => DataSourceScheme;
+    IEnumerable<IGenericIdentification1> ITransferCancellationRejectedStatus1.DataSourceScheme =>
+        DataSourceScheme;
 }

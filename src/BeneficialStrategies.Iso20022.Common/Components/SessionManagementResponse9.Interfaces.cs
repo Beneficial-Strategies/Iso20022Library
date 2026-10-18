@@ -15,5 +15,6 @@ public partial record SessionManagementResponse9 : ISessionManagementResponse9
     ILoginResponse8? ISessionManagementResponse9.LoginResponse => LoginResponse;
     IDiagnosisResponse8? ISessionManagementResponse9.DiagnosisResponse => DiagnosisResponse;
     IResponseType11 ISessionManagementResponse9.Response => Response;
-    IEnumerable<ISupplementaryData1> ISessionManagementResponse9.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> ISessionManagementResponse9.SupplementaryData =>
+        SupplementaryData;
 }

@@ -14,12 +14,17 @@ public partial record CreditTransferDetails : ICreditTransferDetails
     IAccountIdentificationAndName6? ICreditTransferDetails.DebtorAccount => DebtorAccount;
     IFinancialInstitutionIdentification16? ICreditTransferDetails.DebtorAgent => DebtorAgent;
     IAccountIdentificationAndName6? ICreditTransferDetails.DebtorAgentAccount => DebtorAgentAccount;
-    IFinancialInstitutionIdentification16? ICreditTransferDetails.IntermediaryAgent1 => IntermediaryAgent1;
-    IAccountIdentificationAndName6? ICreditTransferDetails.IntermediaryAgent1Account => IntermediaryAgent1Account;
-    IFinancialInstitutionIdentification16? ICreditTransferDetails.IntermediaryAgent2 => IntermediaryAgent2;
-    IAccountIdentificationAndName6? ICreditTransferDetails.IntermediaryAgent2Account => IntermediaryAgent2Account;
+    IFinancialInstitutionIdentification16? ICreditTransferDetails.IntermediaryAgent1 =>
+        IntermediaryAgent1;
+    IAccountIdentificationAndName6? ICreditTransferDetails.IntermediaryAgent1Account =>
+        IntermediaryAgent1Account;
+    IFinancialInstitutionIdentification16? ICreditTransferDetails.IntermediaryAgent2 =>
+        IntermediaryAgent2;
+    IAccountIdentificationAndName6? ICreditTransferDetails.IntermediaryAgent2Account =>
+        IntermediaryAgent2Account;
     IFinancialInstitutionIdentification16 ICreditTransferDetails.CreditorAgent => CreditorAgent;
-    IAccountIdentificationAndName6? ICreditTransferDetails.CreditorAgentAccount => CreditorAgentAccount;
+    IAccountIdentificationAndName6? ICreditTransferDetails.CreditorAgentAccount =>
+        CreditorAgentAccount;
     IPartyIdentification132? ICreditTransferDetails.Creditor => Creditor;
     IAccountIdentificationAndName6 ICreditTransferDetails.CreditorAccount => CreditorAccount;
 }

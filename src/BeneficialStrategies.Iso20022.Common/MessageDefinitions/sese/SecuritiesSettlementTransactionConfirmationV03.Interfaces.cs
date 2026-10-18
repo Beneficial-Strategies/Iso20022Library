@@ -8,22 +8,37 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesSettlementTransactionConfirmationV03 : ISecuritiesSettlementTransactionConfirmationV03
+public partial record SecuritiesSettlementTransactionConfirmationV03
+    : ISecuritiesSettlementTransactionConfirmationV03
 {
-    ISettlementTypeAndIdentification15 ISecuritiesSettlementTransactionConfirmationV03.TransactionIdentificationDetails => TransactionIdentificationDetails;
-    IAdditionalParameters12? ISecuritiesSettlementTransactionConfirmationV03.AdditionalParameters => AdditionalParameters;
-    ISecuritiesTradeDetails2 ISecuritiesSettlementTransactionConfirmationV03.TradeDetails => TradeDetails;
-    ISecurityIdentification14 ISecuritiesSettlementTransactionConfirmationV03.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentAttributes35? ISecuritiesSettlementTransactionConfirmationV03.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
-    IQuantityAndAccount28 ISecuritiesSettlementTransactionConfirmationV03.QuantityAndAccountDetails => QuantityAndAccountDetails;
-    ISettlementDetails45 ISecuritiesSettlementTransactionConfirmationV03.SettlementParameters => SettlementParameters;
-    IStandingSettlementInstruction4? ISecuritiesSettlementTransactionConfirmationV03.StandingSettlementInstructionDetails => StandingSettlementInstructionDetails;
-    ISettlementParties11? ISecuritiesSettlementTransactionConfirmationV03.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties11? ISecuritiesSettlementTransactionConfirmationV03.ReceivingSettlementParties => ReceivingSettlementParties;
+    ISettlementTypeAndIdentification15 ISecuritiesSettlementTransactionConfirmationV03.TransactionIdentificationDetails =>
+        TransactionIdentificationDetails;
+    IAdditionalParameters12? ISecuritiesSettlementTransactionConfirmationV03.AdditionalParameters =>
+        AdditionalParameters;
+    ISecuritiesTradeDetails2 ISecuritiesSettlementTransactionConfirmationV03.TradeDetails =>
+        TradeDetails;
+    ISecurityIdentification14 ISecuritiesSettlementTransactionConfirmationV03.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentAttributes35? ISecuritiesSettlementTransactionConfirmationV03.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
+    IQuantityAndAccount28 ISecuritiesSettlementTransactionConfirmationV03.QuantityAndAccountDetails =>
+        QuantityAndAccountDetails;
+    ISettlementDetails45 ISecuritiesSettlementTransactionConfirmationV03.SettlementParameters =>
+        SettlementParameters;
+    IStandingSettlementInstruction4? ISecuritiesSettlementTransactionConfirmationV03.StandingSettlementInstructionDetails =>
+        StandingSettlementInstructionDetails;
+    ISettlementParties11? ISecuritiesSettlementTransactionConfirmationV03.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties11? ISecuritiesSettlementTransactionConfirmationV03.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
     ICashParties8? ISecuritiesSettlementTransactionConfirmationV03.CashParties => CashParties;
-    IAmountAndDirection2? ISecuritiesSettlementTransactionConfirmationV03.SettledAmount => SettledAmount;
+    IAmountAndDirection2? ISecuritiesSettlementTransactionConfirmationV03.SettledAmount =>
+        SettledAmount;
     IOtherAmounts18? ISecuritiesSettlementTransactionConfirmationV03.OtherAmounts => OtherAmounts;
-    IOtherParties19? ISecuritiesSettlementTransactionConfirmationV03.OtherBusinessParties => OtherBusinessParties;
-    IRegistrationParameters1? ISecuritiesSettlementTransactionConfirmationV03.AdditionalPhysicalOrRegistrationDetails => AdditionalPhysicalOrRegistrationDetails;
-    IEnumerable<ISupplementaryData1> ISecuritiesSettlementTransactionConfirmationV03.SupplementaryData => SupplementaryData;
+    IOtherParties19? ISecuritiesSettlementTransactionConfirmationV03.OtherBusinessParties =>
+        OtherBusinessParties;
+    IRegistrationParameters1? ISecuritiesSettlementTransactionConfirmationV03.AdditionalPhysicalOrRegistrationDetails =>
+        AdditionalPhysicalOrRegistrationDetails;
+    IEnumerable<ISupplementaryData1> ISecuritiesSettlementTransactionConfirmationV03.SupplementaryData =>
+        SupplementaryData;
 }

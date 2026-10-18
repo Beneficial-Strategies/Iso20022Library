@@ -15,7 +15,8 @@ public partial record Rate35 : IRate35
     IEnumerable<IGrossDividendRateFormat37Choice> IRate35.GrossDividendRate => GrossDividendRate;
     ISolicitationFeeRateFormat8Choice? IRate35.EarlySolicitationFeeRate => EarlySolicitationFeeRate;
     IRateAndAmountFormat39Choice? IRate35.ThirdPartyIncentiveRate => ThirdPartyIncentiveRate;
-    IEnumerable<IInterestRateUsedForPaymentFormat7Choice> IRate35.InterestRateUsedForPayment => InterestRateUsedForPayment;
+    IEnumerable<IInterestRateUsedForPaymentFormat7Choice> IRate35.InterestRateUsedForPayment =>
+        InterestRateUsedForPayment;
     IEnumerable<INetDividendRateFormat40Choice> IRate35.NetDividendRate => NetDividendRate;
     ISolicitationFeeRateFormat8Choice? IRate35.SolicitationFeeRate => SolicitationFeeRate;
     IRateFormat22Choice? IRate35.TaxCreditRate => TaxCreditRate;

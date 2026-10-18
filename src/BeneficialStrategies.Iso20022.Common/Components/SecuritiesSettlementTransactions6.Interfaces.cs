@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SecuritiesSettlementTransactions6 : ISecuritiesSettlementTransactions6
 {
     ISystemPartyIdentification8? ISecuritiesSettlementTransactions6.AccountOwner => AccountOwner;
-    ISecuritiesAccount19? ISecuritiesSettlementTransactions6.SafekeepingAccount => SafekeepingAccount;
+    ISecuritiesAccount19? ISecuritiesSettlementTransactions6.SafekeepingAccount =>
+        SafekeepingAccount;
     IStatusAndReason52? ISecuritiesSettlementTransactions6.StatusAndReason => StatusAndReason;
     IEnumerable<ITransaction169> ISecuritiesSettlementTransactions6.Transaction => Transaction;
 }

@@ -11,14 +11,17 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SecuritiesOption120 : ISecuritiesOption120
 {
     IFinancialInstrumentAttributes130 ISecuritiesOption120.SecurityDetails => SecurityDetails;
-    ITemporaryFinancialInstrumentIndicator3Choice? ISecuritiesOption120.TemporaryFinancialInstrumentIndicator => TemporaryFinancialInstrumentIndicator;
-    INonEligibleProceedsIndicator5Choice? ISecuritiesOption120.NonEligibleProceedsIndicator => NonEligibleProceedsIndicator;
+    ITemporaryFinancialInstrumentIndicator3Choice? ISecuritiesOption120.TemporaryFinancialInstrumentIndicator =>
+        TemporaryFinancialInstrumentIndicator;
+    INonEligibleProceedsIndicator5Choice? ISecuritiesOption120.NonEligibleProceedsIndicator =>
+        NonEligibleProceedsIndicator;
     IGenericIdentification30? ISecuritiesOption120.IncomeType => IncomeType;
     IEnumerable<IGenericIdentification30> ISecuritiesOption120.OtherIncomeType => OtherIncomeType;
     IEnumerable<IGenericIdentification30> ISecuritiesOption120.ExemptionType => ExemptionType;
     IQuantity51Choice? ISecuritiesOption120.EntitledQuantity => EntitledQuantity;
     ISafekeepingPlaceFormat41Choice? ISecuritiesOption120.SafekeepingPlace => SafekeepingPlace;
-    IFractionDispositionType26Choice? ISecuritiesOption120.FractionDisposition => FractionDisposition;
+    IFractionDispositionType26Choice? ISecuritiesOption120.FractionDisposition =>
+        FractionDisposition;
     IPeriod12Choice? ISecuritiesOption120.TradingPeriod => TradingPeriod;
     ISecurityDate20 ISecuritiesOption120.DateDetails => DateDetails;
     ICorporateActionRate129? ISecuritiesOption120.RateDetails => RateDetails;

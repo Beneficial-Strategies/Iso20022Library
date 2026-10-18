@@ -10,10 +10,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecuritiesCancellationQueryCriteria1 : ISecuritiesCancellationQueryCriteria1
 {
-    IEnumerable<Max35Text> ISecuritiesCancellationQueryCriteria1.CancellationRequestIdentification => CancellationRequestIdentification;
-    IEnumerable<ICancellationProcessingStatus9Choice> ISecuritiesCancellationQueryCriteria1.ProcessingStatus => ProcessingStatus;
-    IEnumerable<ISecuritiesAccount19> ISecuritiesCancellationQueryCriteria1.SafekeepingAccount => SafekeepingAccount;
-    IEnumerable<ISystemPartyIdentification8> ISecuritiesCancellationQueryCriteria1.AccountOwner => AccountOwner;
-    IEnumerable<ISystemPartyIdentification8> ISecuritiesCancellationQueryCriteria1.MessageOriginator => MessageOriginator;
-    IDateAndDateTimeSearch5Choice? ISecuritiesCancellationQueryCriteria1.CreationDateTime => CreationDateTime;
+    IEnumerable<Max35Text> ISecuritiesCancellationQueryCriteria1.CancellationRequestIdentification =>
+        CancellationRequestIdentification;
+    IEnumerable<ICancellationProcessingStatus9Choice> ISecuritiesCancellationQueryCriteria1.ProcessingStatus =>
+        ProcessingStatus;
+    IEnumerable<ISecuritiesAccount19> ISecuritiesCancellationQueryCriteria1.SafekeepingAccount =>
+        SafekeepingAccount;
+    IEnumerable<ISystemPartyIdentification8> ISecuritiesCancellationQueryCriteria1.AccountOwner =>
+        AccountOwner;
+    IEnumerable<ISystemPartyIdentification8> ISecuritiesCancellationQueryCriteria1.MessageOriginator =>
+        MessageOriginator;
+    IDateAndDateTimeSearch5Choice? ISecuritiesCancellationQueryCriteria1.CreationDateTime =>
+        CreationDateTime;
 }

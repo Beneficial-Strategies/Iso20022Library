@@ -8,14 +8,23 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record CorporateActionInstructionCancellationRequestV01 : ICorporateActionInstructionCancellationRequestV01
+public partial record CorporateActionInstructionCancellationRequestV01
+    : ICorporateActionInstructionCancellationRequestV01
 {
-    IDocumentIdentification12 ICorporateActionInstructionCancellationRequestV01.Identification => Identification;
-    IDocumentIdentification15 ICorporateActionInstructionCancellationRequestV01.InstructionIdentification => InstructionIdentification;
-    ICorporateActionGeneralInformation7 ICorporateActionInstructionCancellationRequestV01.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IAccountIdentification8 ICorporateActionInstructionCancellationRequestV01.AccountDetails => AccountDetails;
-    ICorporateActionOption6 ICorporateActionInstructionCancellationRequestV01.CorporateActionInstruction => CorporateActionInstruction;
-    IPartyIdentification10Choice? ICorporateActionInstructionCancellationRequestV01.MessageOriginator => MessageOriginator;
-    IPartyIdentification10Choice? ICorporateActionInstructionCancellationRequestV01.MessageRecipient => MessageRecipient;
-    IEnumerable<IExtension2> ICorporateActionInstructionCancellationRequestV01.Extension => Extension;
+    IDocumentIdentification12 ICorporateActionInstructionCancellationRequestV01.Identification =>
+        Identification;
+    IDocumentIdentification15 ICorporateActionInstructionCancellationRequestV01.InstructionIdentification =>
+        InstructionIdentification;
+    ICorporateActionGeneralInformation7 ICorporateActionInstructionCancellationRequestV01.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IAccountIdentification8 ICorporateActionInstructionCancellationRequestV01.AccountDetails =>
+        AccountDetails;
+    ICorporateActionOption6 ICorporateActionInstructionCancellationRequestV01.CorporateActionInstruction =>
+        CorporateActionInstruction;
+    IPartyIdentification10Choice? ICorporateActionInstructionCancellationRequestV01.MessageOriginator =>
+        MessageOriginator;
+    IPartyIdentification10Choice? ICorporateActionInstructionCancellationRequestV01.MessageRecipient =>
+        MessageRecipient;
+    IEnumerable<IExtension2> ICorporateActionInstructionCancellationRequestV01.Extension =>
+        Extension;
 }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.SecuritiesQuantityOrAmount6Choice;
 
-public partial record InstructedAmount : IInstructedAmount
-{
-}
+public partial record InstructedAmount : IInstructedAmount { }

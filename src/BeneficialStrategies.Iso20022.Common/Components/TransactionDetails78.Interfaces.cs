@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record TransactionDetails78 : ITransactionDetails78
 {
     ITransactionActivity3Choice ITransactionDetails78.TransactionActivity => TransactionActivity;
-    ISettlementOrCorporateActionEvent13Choice? ITransactionDetails78.SettlementTransactionOrCorporateActionEventType => SettlementTransactionOrCorporateActionEventType;
+    ISettlementOrCorporateActionEvent13Choice? ITransactionDetails78.SettlementTransactionOrCorporateActionEventType =>
+        SettlementTransactionOrCorporateActionEventType;
     ISettlementDetails91? ITransactionDetails78.SettlementParameters => SettlementParameters;
     IPlaceOfTradeIdentification1? ITransactionDetails78.PlaceOfTrade => PlaceOfTrade;
     ISafeKeepingPlace1? ITransactionDetails78.SafekeepingPlace => SafekeepingPlace;
@@ -23,6 +24,8 @@ public partial record TransactionDetails78 : ITransactionDetails78
     IDateAndDateTimeChoice ITransactionDetails78.EffectiveSettlementDate => EffectiveSettlementDate;
     ISettlementDate9Choice? ITransactionDetails78.SettlementDate => SettlementDate;
     IDateAndDateTimeChoice? ITransactionDetails78.ValueDate => ValueDate;
-    ISettlementParties40? ITransactionDetails78.DeliveringSettlementParties => DeliveringSettlementParties;
-    ISettlementParties40? ITransactionDetails78.ReceivingSettlementParties => ReceivingSettlementParties;
+    ISettlementParties40? ITransactionDetails78.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
+    ISettlementParties40? ITransactionDetails78.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
 }

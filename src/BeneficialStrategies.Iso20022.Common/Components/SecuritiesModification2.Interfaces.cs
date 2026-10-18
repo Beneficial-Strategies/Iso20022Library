@@ -13,5 +13,6 @@ public partial record SecuritiesModification2 : ISecuritiesModification2
     ISystemPartyIdentification8? ISecuritiesModification2.AccountOwner => AccountOwner;
     ISecuritiesAccount19? ISecuritiesModification2.SafekeepingAccount => SafekeepingAccount;
     IProcessingStatus71Choice? ISecuritiesModification2.ProcessingStatus => ProcessingStatus;
-    IEnumerable<ISecuritiesModificationTransaction2> ISecuritiesModification2.Modification => Modification;
+    IEnumerable<ISecuritiesModificationTransaction2> ISecuritiesModification2.Modification =>
+        Modification;
 }

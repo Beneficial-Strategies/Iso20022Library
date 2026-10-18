@@ -11,9 +11,12 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record IntraPositionDetails58 : IIntraPositionDetails58
 {
     IPriorityNumeric4Choice? IIntraPositionDetails58.Priority => Priority;
-    IFinancialInstrumentQuantity33Choice IIntraPositionDetails58.SettlementQuantity => SettlementQuantity;
-    IGenericIdentification37? IIntraPositionDetails58.SecuritiesSubBalanceIdentification => SecuritiesSubBalanceIdentification;
+    IFinancialInstrumentQuantity33Choice IIntraPositionDetails58.SettlementQuantity =>
+        SettlementQuantity;
+    IGenericIdentification37? IIntraPositionDetails58.SecuritiesSubBalanceIdentification =>
+        SecuritiesSubBalanceIdentification;
     IDateAndDateTime2Choice IIntraPositionDetails58.SettlementDate => SettlementDate;
-    ISecuritiesSubBalanceTypeAndQuantityBreakdown5 IIntraPositionDetails58.BalanceFrom => BalanceFrom;
+    ISecuritiesSubBalanceTypeAndQuantityBreakdown5 IIntraPositionDetails58.BalanceFrom =>
+        BalanceFrom;
     ISecuritiesSubBalanceTypeAndQuantityBreakdown5 IIntraPositionDetails58.BalanceTo => BalanceTo;
 }

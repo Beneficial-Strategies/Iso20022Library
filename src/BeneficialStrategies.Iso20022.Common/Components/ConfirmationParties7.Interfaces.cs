@@ -23,5 +23,6 @@ public partial record ConfirmationParties7 : IConfirmationParties7
     IConfirmationPartyDetails11? IConfirmationParties7.CMUParty => CMUParty;
     IConfirmationPartyDetails11? IConfirmationParties7.CMUCounterparty => CMUCounterparty;
     IConfirmationPartyDetails11? IConfirmationParties7.AffirmingParty => AffirmingParty;
-    IConfirmationPartyDetails14? IConfirmationParties7.TradeBeneficiaryParty => TradeBeneficiaryParty;
+    IConfirmationPartyDetails14? IConfirmationParties7.TradeBeneficiaryParty =>
+        TradeBeneficiaryParty;
 }

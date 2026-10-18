@@ -11,12 +11,19 @@ namespace BeneficialStrategies.Iso20022.semt;
 public partial record SecuritiesBalanceCustodyReport002V10 : ISecuritiesBalanceCustodyReport002V10
 {
     IPagination1 ISecuritiesBalanceCustodyReport002V10.Pagination => Pagination;
-    IStatement77 ISecuritiesBalanceCustodyReport002V10.StatementGeneralDetails => StatementGeneralDetails;
+    IStatement77 ISecuritiesBalanceCustodyReport002V10.StatementGeneralDetails =>
+        StatementGeneralDetails;
     IPartyIdentification156? ISecuritiesBalanceCustodyReport002V10.AccountOwner => AccountOwner;
-    IPartyIdentification157? ISecuritiesBalanceCustodyReport002V10.AccountServicer => AccountServicer;
-    ISecuritiesAccount33 ISecuritiesBalanceCustodyReport002V10.SafekeepingAccount => SafekeepingAccount;
-    IEnumerable<IIntermediary45> ISecuritiesBalanceCustodyReport002V10.IntermediaryInformation => IntermediaryInformation;
-    IEnumerable<IAggregateBalanceInformation39> ISecuritiesBalanceCustodyReport002V10.BalanceForAccount => BalanceForAccount;
-    IEnumerable<ISubAccountIdentification58> ISecuritiesBalanceCustodyReport002V10.SubAccountDetails => SubAccountDetails;
-    ITotalValueInPageAndStatement3? ISecuritiesBalanceCustodyReport002V10.AccountBaseCurrencyTotalAmounts => AccountBaseCurrencyTotalAmounts;
+    IPartyIdentification157? ISecuritiesBalanceCustodyReport002V10.AccountServicer =>
+        AccountServicer;
+    ISecuritiesAccount33 ISecuritiesBalanceCustodyReport002V10.SafekeepingAccount =>
+        SafekeepingAccount;
+    IEnumerable<IIntermediary45> ISecuritiesBalanceCustodyReport002V10.IntermediaryInformation =>
+        IntermediaryInformation;
+    IEnumerable<IAggregateBalanceInformation39> ISecuritiesBalanceCustodyReport002V10.BalanceForAccount =>
+        BalanceForAccount;
+    IEnumerable<ISubAccountIdentification58> ISecuritiesBalanceCustodyReport002V10.SubAccountDetails =>
+        SubAccountDetails;
+    ITotalValueInPageAndStatement3? ISecuritiesBalanceCustodyReport002V10.AccountBaseCurrencyTotalAmounts =>
+        AccountBaseCurrencyTotalAmounts;
 }

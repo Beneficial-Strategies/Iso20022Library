@@ -15,5 +15,6 @@ public partial record Drawdown04 : IDrawdown04
     ITaxReference2? IDrawdown04.InvestorTaxReference => InvestorTaxReference;
     IBeneficiaryDrawdown2? IDrawdown04.BeneficiaryDetails => BeneficiaryDetails;
     ICapped1? IDrawdown04.CappedLimits => CappedLimits;
-    IEnumerable<IAdditionalInformation15> IDrawdown04.AdditionalInformation => AdditionalInformation;
+    IEnumerable<IAdditionalInformation15> IDrawdown04.AdditionalInformation =>
+        AdditionalInformation;
 }

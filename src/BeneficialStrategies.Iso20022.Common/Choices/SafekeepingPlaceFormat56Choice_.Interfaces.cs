@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record SafekeepingPlaceFormat56Choice_ : ISafekeepingPlaceFormat56Choice
-{
-}
+public abstract partial record SafekeepingPlaceFormat56Choice_ : ISafekeepingPlaceFormat56Choice { }

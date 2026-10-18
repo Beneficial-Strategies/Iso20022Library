@@ -10,14 +10,18 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio5Choice;
 
 public partial record TaxEfficientProduct : ITaxEfficientProduct
 {
-    ITaxEfficientProductType2Choice ITaxEfficientProduct.TaxEfficientProductType => TaxEfficientProductType;
+    ITaxEfficientProductType2Choice ITaxEfficientProduct.TaxEfficientProductType =>
+        TaxEfficientProductType;
     IPreviousYear4? ITaxEfficientProduct.PreviousYears => PreviousYears;
-    ISubscriptionInformation2? ITaxEfficientProduct.CurrentYearSubscriptionDetails => CurrentYearSubscriptionDetails;
+    ISubscriptionInformation2? ITaxEfficientProduct.CurrentYearSubscriptionDetails =>
+        CurrentYearSubscriptionDetails;
     IEnumerable<IBonusWithdrawal2> ITaxEfficientProduct.BonusOrWithdrawal => BonusOrWithdrawal;
     IEnumerable<IOtherAmount3> ITaxEfficientProduct.OtherAmount => OtherAmount;
     ITaxReference2? ITaxEfficientProduct.InvestorTaxReference => InvestorTaxReference;
-    IEnumerable<IDateAndAmount2> ITaxEfficientProduct.InvestmentsToFollowValue => InvestmentsToFollowValue;
+    IEnumerable<IDateAndAmount2> ITaxEfficientProduct.InvestmentsToFollowValue =>
+        InvestmentsToFollowValue;
     IEnumerable<IInnovativeFinance1> ITaxEfficientProduct.InnovativeFinance => InnovativeFinance;
     IDateAndAmount2? ITaxEfficientProduct.EstimatedValue => EstimatedValue;
-    IEnumerable<IAdditionalInformation15> ITaxEfficientProduct.AdditionalInformation => AdditionalInformation;
+    IEnumerable<IAdditionalInformation15> ITaxEfficientProduct.AdditionalInformation =>
+        AdditionalInformation;
 }

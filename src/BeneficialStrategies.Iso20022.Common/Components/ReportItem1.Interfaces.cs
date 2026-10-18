@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record ReportItem1 : IReportItem1
 {
     ISecuritiesAccount19 IReportItem1.AccountIdentification => AccountIdentification;
-    ISecurityIdentification19? IReportItem1.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification19? IReportItem1.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
 }

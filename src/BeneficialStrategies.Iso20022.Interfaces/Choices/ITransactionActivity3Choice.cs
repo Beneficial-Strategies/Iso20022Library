@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the transaction activity identification.
 /// </summary>
 [IsoId("_iF2-wTqDEeWVrPy0StzzSg")]
-public interface ITransactionActivity3Choice : IIsoChoice
-{
-}
+public interface ITransactionActivity3Choice : IIsoChoice { }

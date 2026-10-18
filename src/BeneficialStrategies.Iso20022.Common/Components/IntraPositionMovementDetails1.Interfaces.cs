@@ -11,12 +11,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record IntraPositionMovementDetails1 : IIntraPositionMovementDetails1
 {
     IReferences5Choice? IIntraPositionMovementDetails1.Identification => Identification;
-    IFinancialInstrumentQuantity1Choice IIntraPositionMovementDetails1.SettledQuantity => SettledQuantity;
-    IFinancialInstrumentQuantity1Choice? IIntraPositionMovementDetails1.PreviouslySettledQuantity => PreviouslySettledQuantity;
-    IFinancialInstrumentQuantity1Choice? IIntraPositionMovementDetails1.RemainingToBeSettledQuantity => RemainingToBeSettledQuantity;
+    IFinancialInstrumentQuantity1Choice IIntraPositionMovementDetails1.SettledQuantity =>
+        SettledQuantity;
+    IFinancialInstrumentQuantity1Choice? IIntraPositionMovementDetails1.PreviouslySettledQuantity =>
+        PreviouslySettledQuantity;
+    IFinancialInstrumentQuantity1Choice? IIntraPositionMovementDetails1.RemainingToBeSettledQuantity =>
+        RemainingToBeSettledQuantity;
     ISecuritiesBalanceType3Choice IIntraPositionMovementDetails1.BalanceTo => BalanceTo;
     IDateAndDateTimeChoice IIntraPositionMovementDetails1.SettlementDate => SettlementDate;
     IDateAndDateTimeChoice? IIntraPositionMovementDetails1.AvailableDate => AvailableDate;
-    ICorporateActionEventType3Choice? IIntraPositionMovementDetails1.CorporateActionEventType => CorporateActionEventType;
+    ICorporateActionEventType3Choice? IIntraPositionMovementDetails1.CorporateActionEventType =>
+        CorporateActionEventType;
     IEnumerable<IExtension2> IIntraPositionMovementDetails1.Extension => Extension;
 }

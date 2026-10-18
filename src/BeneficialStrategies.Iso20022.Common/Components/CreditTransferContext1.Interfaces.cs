@@ -12,8 +12,10 @@ public partial record CreditTransferContext1 : ICreditTransferContext1
 {
     IPartyIdentification272? ICreditTransferContext1.Debtor => Debtor;
     ICashAccount40? ICreditTransferContext1.DebtorAccount => DebtorAccount;
-    IContentInformationType39? ICreditTransferContext1.ProtectedDebtorAccount => ProtectedDebtorAccount;
+    IContentInformationType39? ICreditTransferContext1.ProtectedDebtorAccount =>
+        ProtectedDebtorAccount;
     IPartyIdentification272? ICreditTransferContext1.Creditor => Creditor;
     ICashAccount40? ICreditTransferContext1.CreditorAccount => CreditorAccount;
-    IContentInformationType39? ICreditTransferContext1.ProtectedCreditorAccount => ProtectedCreditorAccount;
+    IContentInformationType39? ICreditTransferContext1.ProtectedCreditorAccount =>
+        ProtectedCreditorAccount;
 }

@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Status8Choice;
 
 public partial record SettlementConditionModificationStatus : ISettlementConditionModificationStatus
 {
-    ISettlementConditionModificationStatus1Choice ISettlementConditionModificationStatus.Value => Value;
+    ISettlementConditionModificationStatus1Choice ISettlementConditionModificationStatus.Value =>
+        Value;
 }

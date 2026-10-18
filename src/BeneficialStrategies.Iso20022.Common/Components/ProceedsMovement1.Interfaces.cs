@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ProceedsMovement1 : IProceedsMovement1
 {
-    IEnumerable<ICashProceeds1> IProceedsMovement1.CashProceedsMovementDetails => CashProceedsMovementDetails;
-    IEnumerable<ISecuritiesProceeds1> IProceedsMovement1.SecuritiesProceedsMovementDetails => SecuritiesProceedsMovementDetails;
+    IEnumerable<ICashProceeds1> IProceedsMovement1.CashProceedsMovementDetails =>
+        CashProceedsMovementDetails;
+    IEnumerable<ISecuritiesProceeds1> IProceedsMovement1.SecuritiesProceedsMovementDetails =>
+        SecuritiesProceedsMovementDetails;
     ITaxVoucher1? IProceedsMovement1.TaxDetails => TaxDetails;
 }

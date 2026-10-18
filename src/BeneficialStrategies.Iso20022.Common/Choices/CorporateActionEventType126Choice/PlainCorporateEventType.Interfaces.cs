@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventType126Choice;
 
-public partial record PlainCorporateEventType : IPlainCorporateEventType
-{
-}
+public partial record PlainCorporateEventType : IPlainCorporateEventType { }

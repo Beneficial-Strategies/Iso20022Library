@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the exemption reason.
 /// </summary>
 [IsoId("_Qmk-8RuJEeOqSdXzJ0oydA")]
-public interface IExemptionReason1Choice : IIsoChoice
-{
-}
+public interface IExemptionReason1Choice : IIsoChoice { }

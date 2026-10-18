@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record OriginalGroupInformation5 : IOriginalGroupInformation5
 {
-    IEnumerable<IReversalReasonInformation1> IOriginalGroupInformation5.ReversalReasonInformation => ReversalReasonInformation;
+    IEnumerable<IReversalReasonInformation1> IOriginalGroupInformation5.ReversalReasonInformation =>
+        ReversalReasonInformation;
 }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the trading capacity.
 /// </summary>
 [IsoId("_YLdZIY-1Eeaoj_JbcpWKgg")]
-public interface ITradingPartyCapacity3Choice : IIsoChoice
-{
-}
+public interface ITradingPartyCapacity3Choice : IIsoChoice { }

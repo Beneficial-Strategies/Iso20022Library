@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the service level of the transaction.
 /// </summary>
 [IsoId("_QJkwxNp-Ed-ak6NoX_4Aeg_1187501352")]
-public interface IServiceLevel3Choice : IIsoChoice
-{
-}
+public interface IServiceLevel3Choice : IIsoChoice { }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.QuantityRange1Choice;
 
-public partial record NotEqualQuantity : INotEqualQuantity
-{
-}
+public partial record NotEqualQuantity : INotEqualQuantity { }

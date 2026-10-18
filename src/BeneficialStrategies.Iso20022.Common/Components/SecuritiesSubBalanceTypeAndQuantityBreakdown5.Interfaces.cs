@@ -8,8 +8,10 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record SecuritiesSubBalanceTypeAndQuantityBreakdown5 : ISecuritiesSubBalanceTypeAndQuantityBreakdown5
+public partial record SecuritiesSubBalanceTypeAndQuantityBreakdown5
+    : ISecuritiesSubBalanceTypeAndQuantityBreakdown5
 {
     ISecuritiesBalanceType6Choice ISecuritiesSubBalanceTypeAndQuantityBreakdown5.Type => Type;
-    IEnumerable<IQuantityBreakdown61> ISecuritiesSubBalanceTypeAndQuantityBreakdown5.QuantityBreakdown => QuantityBreakdown;
+    IEnumerable<IQuantityBreakdown61> ISecuritiesSubBalanceTypeAndQuantityBreakdown5.QuantityBreakdown =>
+        QuantityBreakdown;
 }

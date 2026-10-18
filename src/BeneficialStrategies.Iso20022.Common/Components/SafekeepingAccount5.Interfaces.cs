@@ -14,8 +14,10 @@ public partial record SafekeepingAccount5 : ISafekeepingAccount5
     IPartyIdentification100 ISafekeepingAccount5.AccountOwner => AccountOwner;
     IPartyIdentification100 ISafekeepingAccount5.AccountServicer => AccountServicer;
     IEnumerable<IBeneficialOwner2> ISafekeepingAccount5.BeneficialOwner => BeneficialOwner;
-    IEnumerable<IAggregateHoldingBalance1> ISafekeepingAccount5.BalanceForAccount => BalanceForAccount;
+    IEnumerable<IAggregateHoldingBalance1> ISafekeepingAccount5.BalanceForAccount =>
+        BalanceForAccount;
     IIntermediary28? ISafekeepingAccount5.Agent => Agent;
     IEnumerable<IAccountSubLevel1> ISafekeepingAccount5.AccountSubLevel1 => AccountSubLevel1;
-    IEnumerable<IAggregateHoldingBalance2> ISafekeepingAccount5.AccountSubLevel1Difference => AccountSubLevel1Difference;
+    IEnumerable<IAggregateHoldingBalance2> ISafekeepingAccount5.AccountSubLevel1Difference =>
+        AccountSubLevel1Difference;
 }

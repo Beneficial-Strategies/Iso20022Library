@@ -8,7 +8,9 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record CorporateActionMovementRejectionStatus2 : ICorporateActionMovementRejectionStatus2
+public partial record CorporateActionMovementRejectionStatus2
+    : ICorporateActionMovementRejectionStatus2
 {
-    IEnumerable<IRejectionReason14FormatChoice> ICorporateActionMovementRejectionStatus2.Reason => Reason;
+    IEnumerable<IRejectionReason14FormatChoice> ICorporateActionMovementRejectionStatus2.Reason =>
+        Reason;
 }

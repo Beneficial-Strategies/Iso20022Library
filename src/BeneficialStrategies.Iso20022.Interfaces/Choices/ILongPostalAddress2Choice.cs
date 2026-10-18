@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Information that locates and identifies a specific address, as defined by postal services either in a structured or unstructured way.
 /// </summary>
 [IsoId("_RVRH19p-Ed-ak6NoX_4Aeg_-1296060125")]
-public interface ILongPostalAddress2Choice : IIsoChoice
-{
-}
+public interface ILongPostalAddress2Choice : IIsoChoice { }

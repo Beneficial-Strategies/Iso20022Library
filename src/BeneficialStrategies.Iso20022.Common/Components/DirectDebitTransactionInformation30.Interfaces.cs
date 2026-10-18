@@ -10,33 +10,55 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record DirectDebitTransactionInformation30 : IDirectDebitTransactionInformation30
 {
-    IPaymentIdentification13 IDirectDebitTransactionInformation30.PaymentIdentification => PaymentIdentification;
-    IPaymentTypeInformation27? IDirectDebitTransactionInformation30.PaymentTypeInformation => PaymentTypeInformation;
-    ISettlementDateTimeIndication1? IDirectDebitTransactionInformation30.SettlementTimeIndication => SettlementTimeIndication;
-    IEnumerable<ICharges12> IDirectDebitTransactionInformation30.ChargesInformation => ChargesInformation;
-    IDirectDebitTransaction11? IDirectDebitTransactionInformation30.DirectDebitTransaction => DirectDebitTransaction;
+    IPaymentIdentification13 IDirectDebitTransactionInformation30.PaymentIdentification =>
+        PaymentIdentification;
+    IPaymentTypeInformation27? IDirectDebitTransactionInformation30.PaymentTypeInformation =>
+        PaymentTypeInformation;
+    ISettlementDateTimeIndication1? IDirectDebitTransactionInformation30.SettlementTimeIndication =>
+        SettlementTimeIndication;
+    IEnumerable<ICharges12> IDirectDebitTransactionInformation30.ChargesInformation =>
+        ChargesInformation;
+    IDirectDebitTransaction11? IDirectDebitTransactionInformation30.DirectDebitTransaction =>
+        DirectDebitTransaction;
     IPartyIdentification135 IDirectDebitTransactionInformation30.Creditor => Creditor;
     ICashAccount40? IDirectDebitTransactionInformation30.CreditorAccount => CreditorAccount;
-    IBranchAndFinancialInstitutionIdentification6 IDirectDebitTransactionInformation30.CreditorAgent => CreditorAgent;
-    ICashAccount40? IDirectDebitTransactionInformation30.CreditorAgentAccount => CreditorAgentAccount;
-    IPartyIdentification135? IDirectDebitTransactionInformation30.UltimateCreditor => UltimateCreditor;
-    IPartyIdentification135? IDirectDebitTransactionInformation30.InitiatingParty => InitiatingParty;
-    IBranchAndFinancialInstitutionIdentification6? IDirectDebitTransactionInformation30.InstructingAgent => InstructingAgent;
-    IBranchAndFinancialInstitutionIdentification6? IDirectDebitTransactionInformation30.InstructedAgent => InstructedAgent;
-    IBranchAndFinancialInstitutionIdentification6? IDirectDebitTransactionInformation30.IntermediaryAgent1 => IntermediaryAgent1;
-    ICashAccount40? IDirectDebitTransactionInformation30.IntermediaryAgent1Account => IntermediaryAgent1Account;
-    IBranchAndFinancialInstitutionIdentification6? IDirectDebitTransactionInformation30.IntermediaryAgent2 => IntermediaryAgent2;
-    ICashAccount40? IDirectDebitTransactionInformation30.IntermediaryAgent2Account => IntermediaryAgent2Account;
-    IBranchAndFinancialInstitutionIdentification6? IDirectDebitTransactionInformation30.IntermediaryAgent3 => IntermediaryAgent3;
-    ICashAccount40? IDirectDebitTransactionInformation30.IntermediaryAgent3Account => IntermediaryAgent3Account;
+    IBranchAndFinancialInstitutionIdentification6 IDirectDebitTransactionInformation30.CreditorAgent =>
+        CreditorAgent;
+    ICashAccount40? IDirectDebitTransactionInformation30.CreditorAgentAccount =>
+        CreditorAgentAccount;
+    IPartyIdentification135? IDirectDebitTransactionInformation30.UltimateCreditor =>
+        UltimateCreditor;
+    IPartyIdentification135? IDirectDebitTransactionInformation30.InitiatingParty =>
+        InitiatingParty;
+    IBranchAndFinancialInstitutionIdentification6? IDirectDebitTransactionInformation30.InstructingAgent =>
+        InstructingAgent;
+    IBranchAndFinancialInstitutionIdentification6? IDirectDebitTransactionInformation30.InstructedAgent =>
+        InstructedAgent;
+    IBranchAndFinancialInstitutionIdentification6? IDirectDebitTransactionInformation30.IntermediaryAgent1 =>
+        IntermediaryAgent1;
+    ICashAccount40? IDirectDebitTransactionInformation30.IntermediaryAgent1Account =>
+        IntermediaryAgent1Account;
+    IBranchAndFinancialInstitutionIdentification6? IDirectDebitTransactionInformation30.IntermediaryAgent2 =>
+        IntermediaryAgent2;
+    ICashAccount40? IDirectDebitTransactionInformation30.IntermediaryAgent2Account =>
+        IntermediaryAgent2Account;
+    IBranchAndFinancialInstitutionIdentification6? IDirectDebitTransactionInformation30.IntermediaryAgent3 =>
+        IntermediaryAgent3;
+    ICashAccount40? IDirectDebitTransactionInformation30.IntermediaryAgent3Account =>
+        IntermediaryAgent3Account;
     IPartyIdentification135 IDirectDebitTransactionInformation30.Debtor => Debtor;
     ICashAccount40 IDirectDebitTransactionInformation30.DebtorAccount => DebtorAccount;
-    IBranchAndFinancialInstitutionIdentification6 IDirectDebitTransactionInformation30.DebtorAgent => DebtorAgent;
+    IBranchAndFinancialInstitutionIdentification6 IDirectDebitTransactionInformation30.DebtorAgent =>
+        DebtorAgent;
     ICashAccount40? IDirectDebitTransactionInformation30.DebtorAgentAccount => DebtorAgentAccount;
     IPartyIdentification135? IDirectDebitTransactionInformation30.UltimateDebtor => UltimateDebtor;
     IPurpose2Choice? IDirectDebitTransactionInformation30.Purpose => Purpose;
-    IEnumerable<IRegulatoryReporting3> IDirectDebitTransactionInformation30.RegulatoryReporting => RegulatoryReporting;
-    IEnumerable<IRemittanceLocation7> IDirectDebitTransactionInformation30.RelatedRemittanceInformation => RelatedRemittanceInformation;
-    IRemittanceInformation21? IDirectDebitTransactionInformation30.RemittanceInformation => RemittanceInformation;
-    IEnumerable<ISupplementaryData1> IDirectDebitTransactionInformation30.SupplementaryData => SupplementaryData;
+    IEnumerable<IRegulatoryReporting3> IDirectDebitTransactionInformation30.RegulatoryReporting =>
+        RegulatoryReporting;
+    IEnumerable<IRemittanceLocation7> IDirectDebitTransactionInformation30.RelatedRemittanceInformation =>
+        RelatedRemittanceInformation;
+    IRemittanceInformation21? IDirectDebitTransactionInformation30.RemittanceInformation =>
+        RemittanceInformation;
+    IEnumerable<ISupplementaryData1> IDirectDebitTransactionInformation30.SupplementaryData =>
+        SupplementaryData;
 }

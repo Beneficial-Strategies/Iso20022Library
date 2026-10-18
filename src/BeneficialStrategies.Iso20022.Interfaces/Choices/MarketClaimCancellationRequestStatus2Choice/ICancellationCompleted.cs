@@ -8,7 +8,9 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimCancellationRequestSt
 /// <summary>
 /// Cancellation Completed.
 /// </summary>
-public interface ICancellationCompleted : IMarketClaimCancellationRequestStatus2Choice, IIsoChoiceVariant
+public interface ICancellationCompleted
+    : IMarketClaimCancellationRequestStatus2Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CorporateActionOption185 : ICorporateActionOption185
 {
     ICorporateActionOption30Choice ICorporateActionOption185.OptionType => OptionType;
-    IEnumerable<ISecuritiesOption76> ICorporateActionOption185.SecuritiesMovementDetails => SecuritiesMovementDetails;
+    IEnumerable<ISecuritiesOption76> ICorporateActionOption185.SecuritiesMovementDetails =>
+        SecuritiesMovementDetails;
     IEnumerable<ICashOption76> ICorporateActionOption185.CashMovementDetails => CashMovementDetails;
 }

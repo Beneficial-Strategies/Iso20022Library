@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record FinancialInstrumentDetails36 : IFinancialInstrumentDetails36
 {
-    ISecurityIdentification20 IFinancialInstrumentDetails36.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IFinancialInstrumentAttributes95? IFinancialInstrumentDetails36.FinancialInstrumentAttributes => FinancialInstrumentAttributes;
+    ISecurityIdentification20 IFinancialInstrumentDetails36.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IFinancialInstrumentAttributes95? IFinancialInstrumentDetails36.FinancialInstrumentAttributes =>
+        FinancialInstrumentAttributes;
     IEnumerable<IIntraPositionDetails54> IFinancialInstrumentDetails36.SubBalance => SubBalance;
 }

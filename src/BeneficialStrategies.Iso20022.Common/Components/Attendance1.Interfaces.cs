@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record Attendance1 : IAttendance1
 {
-    IEnumerable<IAttendanceAdmissionConditions1> IAttendance1.AdmissionConditions => AdmissionConditions;
+    IEnumerable<IAttendanceAdmissionConditions1> IAttendance1.AdmissionConditions =>
+        AdmissionConditions;
     IDateFormat58Choice? IAttendance1.ConfirmationDeadline => ConfirmationDeadline;
     IDateFormat58Choice? IAttendance1.ConfirmationMarketDeadline => ConfirmationMarketDeadline;
 }

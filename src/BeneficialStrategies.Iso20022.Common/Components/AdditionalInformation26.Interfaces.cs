@@ -12,13 +12,16 @@ public partial record AdditionalInformation26 : IAdditionalInformation26
 {
     IClassificationType32Choice? IAdditionalInformation26.ClassificationType => ClassificationType;
     ISecuritiesAccount19? IAdditionalInformation26.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet3? IAdditionalInformation26.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
-    ISecurityIdentification19? IAdditionalInformation26.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    IBlockChainAddressWallet3? IAdditionalInformation26.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
+    ISecurityIdentification19? IAdditionalInformation26.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     IFinancialInstrumentQuantity33Choice? IAdditionalInformation26.Quantity => Quantity;
     IDateAndDateTime2Choice? IAdditionalInformation26.EffectiveDate => EffectiveDate;
     IDateAndDateTime2Choice? IAdditionalInformation26.ExpiryDate => ExpiryDate;
     IDateAndDateTime2Choice? IAdditionalInformation26.CutOffDate => CutOffDate;
     IPartyIdentification136? IAdditionalInformation26.Investor => Investor;
-    IPartyIdentificationAndAccount195? IAdditionalInformation26.DeliveringParty1 => DeliveringParty1;
+    IPartyIdentificationAndAccount195? IAdditionalInformation26.DeliveringParty1 =>
+        DeliveringParty1;
     IPartyIdentificationAndAccount195? IAdditionalInformation26.ReceivingParty1 => ReceivingParty1;
 }

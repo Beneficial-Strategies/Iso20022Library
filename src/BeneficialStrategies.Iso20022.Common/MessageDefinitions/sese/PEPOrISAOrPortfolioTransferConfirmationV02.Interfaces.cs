@@ -8,22 +8,35 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record PEPOrISAOrPortfolioTransferConfirmationV02 : IPEPOrISAOrPortfolioTransferConfirmationV02
+public partial record PEPOrISAOrPortfolioTransferConfirmationV02
+    : IPEPOrISAOrPortfolioTransferConfirmationV02
 {
-    IMessageIdentification1 IPEPOrISAOrPortfolioTransferConfirmationV02.MessageReference => MessageReference;
-    IAdditionalReference3? IPEPOrISAOrPortfolioTransferConfirmationV02.PoolReference => PoolReference;
-    IAdditionalReference3? IPEPOrISAOrPortfolioTransferConfirmationV02.PreviousReference => PreviousReference;
-    IAdditionalReference3? IPEPOrISAOrPortfolioTransferConfirmationV02.RelatedReference => RelatedReference;
-    IIndividualPerson8? IPEPOrISAOrPortfolioTransferConfirmationV02.PrimaryIndividualInvestor => PrimaryIndividualInvestor;
-    IIndividualPerson8? IPEPOrISAOrPortfolioTransferConfirmationV02.SecondaryIndividualInvestor => SecondaryIndividualInvestor;
-    IEnumerable<IIndividualPerson8> IPEPOrISAOrPortfolioTransferConfirmationV02.OtherIndividualInvestor => OtherIndividualInvestor;
-    IOrganisation4? IPEPOrISAOrPortfolioTransferConfirmationV02.PrimaryCorporateInvestor => PrimaryCorporateInvestor;
-    IOrganisation4? IPEPOrISAOrPortfolioTransferConfirmationV02.SecondaryCorporateInvestor => SecondaryCorporateInvestor;
-    IEnumerable<IOrganisation4> IPEPOrISAOrPortfolioTransferConfirmationV02.OtherCorporateInvestor => OtherCorporateInvestor;
+    IMessageIdentification1 IPEPOrISAOrPortfolioTransferConfirmationV02.MessageReference =>
+        MessageReference;
+    IAdditionalReference3? IPEPOrISAOrPortfolioTransferConfirmationV02.PoolReference =>
+        PoolReference;
+    IAdditionalReference3? IPEPOrISAOrPortfolioTransferConfirmationV02.PreviousReference =>
+        PreviousReference;
+    IAdditionalReference3? IPEPOrISAOrPortfolioTransferConfirmationV02.RelatedReference =>
+        RelatedReference;
+    IIndividualPerson8? IPEPOrISAOrPortfolioTransferConfirmationV02.PrimaryIndividualInvestor =>
+        PrimaryIndividualInvestor;
+    IIndividualPerson8? IPEPOrISAOrPortfolioTransferConfirmationV02.SecondaryIndividualInvestor =>
+        SecondaryIndividualInvestor;
+    IEnumerable<IIndividualPerson8> IPEPOrISAOrPortfolioTransferConfirmationV02.OtherIndividualInvestor =>
+        OtherIndividualInvestor;
+    IOrganisation4? IPEPOrISAOrPortfolioTransferConfirmationV02.PrimaryCorporateInvestor =>
+        PrimaryCorporateInvestor;
+    IOrganisation4? IPEPOrISAOrPortfolioTransferConfirmationV02.SecondaryCorporateInvestor =>
+        SecondaryCorporateInvestor;
+    IEnumerable<IOrganisation4> IPEPOrISAOrPortfolioTransferConfirmationV02.OtherCorporateInvestor =>
+        OtherCorporateInvestor;
     IAccount5 IPEPOrISAOrPortfolioTransferConfirmationV02.ClientAccount => ClientAccount;
     IAccount6? IPEPOrISAOrPortfolioTransferConfirmationV02.NomineeAccount => NomineeAccount;
-    IPartyIdentification2Choice IPEPOrISAOrPortfolioTransferConfirmationV02.NewPlanManager => NewPlanManager;
+    IPartyIdentification2Choice IPEPOrISAOrPortfolioTransferConfirmationV02.NewPlanManager =>
+        NewPlanManager;
     ICashAccount11? IPEPOrISAOrPortfolioTransferConfirmationV02.CashAccount => CashAccount;
-    IEnumerable<IPEPISATransfer4> IPEPOrISAOrPortfolioTransferConfirmationV02.ProductTransfer => ProductTransfer;
+    IEnumerable<IPEPISATransfer4> IPEPOrISAOrPortfolioTransferConfirmationV02.ProductTransfer =>
+        ProductTransfer;
     IEnumerable<IExtension1> IPEPOrISAOrPortfolioTransferConfirmationV02.Extension => Extension;
 }

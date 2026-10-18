@@ -8,20 +8,35 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record CorporateActionMovementConfirmation002V07 : ICorporateActionMovementConfirmation002V07
+public partial record CorporateActionMovementConfirmation002V07
+    : ICorporateActionMovementConfirmation002V07
 {
-    IDocumentIdentification37? ICorporateActionMovementConfirmation002V07.NotificationIdentification => NotificationIdentification;
-    IDocumentIdentification37? ICorporateActionMovementConfirmation002V07.MovementPreliminaryAdviceIdentification => MovementPreliminaryAdviceIdentification;
-    IDocumentIdentification17? ICorporateActionMovementConfirmation002V07.InstructionIdentification => InstructionIdentification;
-    IEnumerable<IDocumentIdentification38> ICorporateActionMovementConfirmation002V07.OtherDocumentIdentification => OtherDocumentIdentification;
-    IEnumerable<ICorporateActionEventReference4> ICorporateActionMovementConfirmation002V07.EventsLinkage => EventsLinkage;
-    ICorporateActionGeneralInformation98 ICorporateActionMovementConfirmation002V07.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IAccountAndBalance38 ICorporateActionMovementConfirmation002V07.AccountDetails => AccountDetails;
-    ICorporateAction36? ICorporateActionMovementConfirmation002V07.CorporateActionDetails => CorporateActionDetails;
-    ICorporateActionOption124 ICorporateActionMovementConfirmation002V07.CorporateActionConfirmationDetails => CorporateActionConfirmationDetails;
-    ICorporateActionNarrative35? ICorporateActionMovementConfirmation002V07.AdditionalInformation => AdditionalInformation;
-    IEnumerable<IPartyIdentification104Choice> ICorporateActionMovementConfirmation002V07.IssuerAgent => IssuerAgent;
-    IEnumerable<IPartyIdentification104Choice> ICorporateActionMovementConfirmation002V07.PayingAgent => PayingAgent;
-    IEnumerable<IPartyIdentification104Choice> ICorporateActionMovementConfirmation002V07.SubPayingAgent => SubPayingAgent;
-    IEnumerable<ISupplementaryData1> ICorporateActionMovementConfirmation002V07.SupplementaryData => SupplementaryData;
+    IDocumentIdentification37? ICorporateActionMovementConfirmation002V07.NotificationIdentification =>
+        NotificationIdentification;
+    IDocumentIdentification37? ICorporateActionMovementConfirmation002V07.MovementPreliminaryAdviceIdentification =>
+        MovementPreliminaryAdviceIdentification;
+    IDocumentIdentification17? ICorporateActionMovementConfirmation002V07.InstructionIdentification =>
+        InstructionIdentification;
+    IEnumerable<IDocumentIdentification38> ICorporateActionMovementConfirmation002V07.OtherDocumentIdentification =>
+        OtherDocumentIdentification;
+    IEnumerable<ICorporateActionEventReference4> ICorporateActionMovementConfirmation002V07.EventsLinkage =>
+        EventsLinkage;
+    ICorporateActionGeneralInformation98 ICorporateActionMovementConfirmation002V07.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IAccountAndBalance38 ICorporateActionMovementConfirmation002V07.AccountDetails =>
+        AccountDetails;
+    ICorporateAction36? ICorporateActionMovementConfirmation002V07.CorporateActionDetails =>
+        CorporateActionDetails;
+    ICorporateActionOption124 ICorporateActionMovementConfirmation002V07.CorporateActionConfirmationDetails =>
+        CorporateActionConfirmationDetails;
+    ICorporateActionNarrative35? ICorporateActionMovementConfirmation002V07.AdditionalInformation =>
+        AdditionalInformation;
+    IEnumerable<IPartyIdentification104Choice> ICorporateActionMovementConfirmation002V07.IssuerAgent =>
+        IssuerAgent;
+    IEnumerable<IPartyIdentification104Choice> ICorporateActionMovementConfirmation002V07.PayingAgent =>
+        PayingAgent;
+    IEnumerable<IPartyIdentification104Choice> ICorporateActionMovementConfirmation002V07.SubPayingAgent =>
+        SubPayingAgent;
+    IEnumerable<ISupplementaryData1> ICorporateActionMovementConfirmation002V07.SupplementaryData =>
+        SupplementaryData;
 }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the payment direction.
 /// </summary>
 [IsoId("_Qu-j5tp-Ed-ak6NoX_4Aeg_1993902591")]
-public interface IPaymentDirection2Choice : IIsoChoice
-{
-}
+public interface IPaymentDirection2Choice : IIsoChoice { }

@@ -13,6 +13,7 @@ public partial record GroupHeader3 : IGroupHeader3
     IEnumerable<string> IGroupHeader3.Authorisation => Authorisation;
     ISettlementInformation2 IGroupHeader3.SettlementInformation => SettlementInformation;
     IPaymentTypeInformation4? IGroupHeader3.PaymentTypeInformation => PaymentTypeInformation;
-    IBranchAndFinancialInstitutionIdentification3? IGroupHeader3.InstructingAgent => InstructingAgent;
+    IBranchAndFinancialInstitutionIdentification3? IGroupHeader3.InstructingAgent =>
+        InstructingAgent;
     IBranchAndFinancialInstitutionIdentification3? IGroupHeader3.InstructedAgent => InstructedAgent;
 }

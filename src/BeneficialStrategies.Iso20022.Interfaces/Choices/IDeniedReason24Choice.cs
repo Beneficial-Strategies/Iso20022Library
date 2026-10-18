@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the denied reason.
 /// </summary>
 [IsoId("_vnmOEZkNEeWn2ur3BXxtdg")]
-public interface IDeniedReason24Choice : IIsoChoice
-{
-}
+public interface IDeniedReason24Choice : IIsoChoice { }

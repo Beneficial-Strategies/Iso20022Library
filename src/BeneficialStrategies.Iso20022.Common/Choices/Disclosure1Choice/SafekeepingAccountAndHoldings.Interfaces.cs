@@ -11,8 +11,11 @@ namespace BeneficialStrategies.Iso20022.Choices.Disclosure1Choice;
 public partial record SafekeepingAccountAndHoldings : ISafekeepingAccountAndHoldings
 {
     IPartyIdentification195Choice ISafekeepingAccountAndHoldings.AccountServicer => AccountServicer;
-    IFinancialInstrumentQuantity18Choice ISafekeepingAccountAndHoldings.ShareholdingBalanceOnOwnAccount => ShareholdingBalanceOnOwnAccount;
-    IFinancialInstrumentQuantity18Choice ISafekeepingAccountAndHoldings.ShareholdingBalanceOnClientAccount => ShareholdingBalanceOnClientAccount;
-    IFinancialInstrumentQuantity18Choice ISafekeepingAccountAndHoldings.TotalShareholdingBalance => TotalShareholdingBalance;
+    IFinancialInstrumentQuantity18Choice ISafekeepingAccountAndHoldings.ShareholdingBalanceOnOwnAccount =>
+        ShareholdingBalanceOnOwnAccount;
+    IFinancialInstrumentQuantity18Choice ISafekeepingAccountAndHoldings.ShareholdingBalanceOnClientAccount =>
+        ShareholdingBalanceOnClientAccount;
+    IFinancialInstrumentQuantity18Choice ISafekeepingAccountAndHoldings.TotalShareholdingBalance =>
+        TotalShareholdingBalance;
     IAccountSublevel21? ISafekeepingAccountAndHoldings.AccountSubLevel => AccountSubLevel;
 }

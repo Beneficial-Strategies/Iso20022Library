@@ -8,7 +8,9 @@ namespace BeneficialStrategies.Iso20022.Choices.AgentDocumentIdentificationAndSt
 /// <summary>
 /// Agent CA Notification Advice Identification And Status.
 /// </summary>
-public interface IAgentCANotificationAdviceIdentificationAndStatus : IAgentDocumentIdentificationAndStatus1Choice, IIsoChoiceVariant
+public interface IAgentCANotificationAdviceIdentificationAndStatus
+    : IAgentDocumentIdentificationAndStatus1Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

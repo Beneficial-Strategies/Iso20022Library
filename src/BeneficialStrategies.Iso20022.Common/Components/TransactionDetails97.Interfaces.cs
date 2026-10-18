@@ -16,7 +16,8 @@ public partial record TransactionDetails97 : ITransactionDetails97
     ISafeKeepingPlace1? ITransactionDetails97.SafekeepingPlace => SafekeepingPlace;
     IPlaceOfTradeIdentification1? ITransactionDetails97.PlaceOfTrade => PlaceOfTrade;
     IPlaceOfClearingIdentification1? ITransactionDetails97.PlaceOfClearing => PlaceOfClearing;
-    ISecurityIdentification19 ITransactionDetails97.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification19 ITransactionDetails97.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     IQuantity6Choice ITransactionDetails97.SettlementQuantity => SettlementQuantity;
     IAmountAndDirection51? ITransactionDetails97.SettlementAmount => SettlementAmount;
     IDateAndDateTimeChoice? ITransactionDetails97.LateDeliveryDate => LateDeliveryDate;
@@ -25,8 +26,11 @@ public partial record TransactionDetails97 : ITransactionDetails97
     ISettlementDate10Choice ITransactionDetails97.SettlementDate => SettlementDate;
     ITradeDate5Choice? ITransactionDetails97.TradeDate => TradeDate;
     ISettlementDetails121 ITransactionDetails97.SettlementParameters => SettlementParameters;
-    ISettlementParties40? ITransactionDetails97.ReceivingSettlementParties => ReceivingSettlementParties;
-    ISettlementParties40? ITransactionDetails97.DeliveringSettlementParties => DeliveringSettlementParties;
+    ISettlementParties40? ITransactionDetails97.ReceivingSettlementParties =>
+        ReceivingSettlementParties;
+    ISettlementParties40? ITransactionDetails97.DeliveringSettlementParties =>
+        DeliveringSettlementParties;
     IPartyIdentification99? ITransactionDetails97.Investor => Investor;
-    IPartyIdentification100? ITransactionDetails97.QualifiedForeignIntermediary => QualifiedForeignIntermediary;
+    IPartyIdentification100? ITransactionDetails97.QualifiedForeignIntermediary =>
+        QualifiedForeignIntermediary;
 }

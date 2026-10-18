@@ -12,3 +12,13 @@ choice they reach:
 
 Interface members: get-only; required is not nullable and optional is; a member that may repeat is an `IEnumerable<T>`; a component or
 choice member names the interface (`IFoo`, the choice `Foo_` is `IFoo`); a choice variant interface also derives from its choice's interface.
+
+## Formatting
+The generated files are formatted with CSharpier (the version in the global tools; the records of `Common` are not, see `.csharpierignore`).
+After generating, run, from the repository root:
+
+```
+dotnet csharpier --include-generated src/BeneficialStrategies.Iso20022.Interfaces src/BeneficialStrategies.Iso20022.Common/Components src/BeneficialStrategies.Iso20022.Common/Choices src/BeneficialStrategies.Iso20022.Common/MessageDefinitions
+```
+
+(Directories, not a list of files: a list of 17,000 files takes minutes, the directories 30 seconds.) Without it GitHub does not render some of the diffs.

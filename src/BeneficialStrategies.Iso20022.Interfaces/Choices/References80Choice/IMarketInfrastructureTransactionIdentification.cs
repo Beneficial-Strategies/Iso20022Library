@@ -8,7 +8,9 @@ namespace BeneficialStrategies.Iso20022.Choices.References80Choice;
 /// <summary>
 /// Market Infrastructure Transaction Identification.
 /// </summary>
-public interface IMarketInfrastructureTransactionIdentification : IReferences80Choice, IIsoChoiceVariant
+public interface IMarketInfrastructureTransactionIdentification
+    : IReferences80Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

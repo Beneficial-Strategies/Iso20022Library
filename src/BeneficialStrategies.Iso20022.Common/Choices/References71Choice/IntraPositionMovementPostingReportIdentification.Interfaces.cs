@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.References71Choice;
 
-public partial record IntraPositionMovementPostingReportIdentification : IIntraPositionMovementPostingReportIdentification
-{
-}
+public partial record IntraPositionMovementPostingReportIdentification
+    : IIntraPositionMovementPostingReportIdentification { }

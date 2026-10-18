@@ -8,19 +8,32 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
-public partial record CorporateActionMovementConfirmationV03 : ICorporateActionMovementConfirmationV03
+public partial record CorporateActionMovementConfirmationV03
+    : ICorporateActionMovementConfirmationV03
 {
-    IDocumentIdentification15? ICorporateActionMovementConfirmationV03.NotificationIdentification => NotificationIdentification;
-    IDocumentIdentification15? ICorporateActionMovementConfirmationV03.MovementPreliminaryAdviceIdentification => MovementPreliminaryAdviceIdentification;
-    IDocumentIdentification9? ICorporateActionMovementConfirmationV03.InstructionIdentification => InstructionIdentification;
-    IEnumerable<IDocumentIdentification13> ICorporateActionMovementConfirmationV03.OtherDocumentIdentification => OtherDocumentIdentification;
-    IEnumerable<ICorporateActionEventReference1> ICorporateActionMovementConfirmationV03.EventsLinkage => EventsLinkage;
-    ICorporateActionGeneralInformation39 ICorporateActionMovementConfirmationV03.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
+    IDocumentIdentification15? ICorporateActionMovementConfirmationV03.NotificationIdentification =>
+        NotificationIdentification;
+    IDocumentIdentification15? ICorporateActionMovementConfirmationV03.MovementPreliminaryAdviceIdentification =>
+        MovementPreliminaryAdviceIdentification;
+    IDocumentIdentification9? ICorporateActionMovementConfirmationV03.InstructionIdentification =>
+        InstructionIdentification;
+    IEnumerable<IDocumentIdentification13> ICorporateActionMovementConfirmationV03.OtherDocumentIdentification =>
+        OtherDocumentIdentification;
+    IEnumerable<ICorporateActionEventReference1> ICorporateActionMovementConfirmationV03.EventsLinkage =>
+        EventsLinkage;
+    ICorporateActionGeneralInformation39 ICorporateActionMovementConfirmationV03.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
     IAccountAndBalance16 ICorporateActionMovementConfirmationV03.AccountDetails => AccountDetails;
-    ICorporateActionOption37 ICorporateActionMovementConfirmationV03.CorporateActionConfirmationDetails => CorporateActionConfirmationDetails;
-    ICorporateActionNarrative4? ICorporateActionMovementConfirmationV03.AdditionalInformation => AdditionalInformation;
-    IEnumerable<IPartyIdentification46Choice> ICorporateActionMovementConfirmationV03.IssuerAgent => IssuerAgent;
-    IEnumerable<IPartyIdentification46Choice> ICorporateActionMovementConfirmationV03.PayingAgent => PayingAgent;
-    IEnumerable<IPartyIdentification46Choice> ICorporateActionMovementConfirmationV03.SubPayingAgent => SubPayingAgent;
-    IEnumerable<ISupplementaryData1> ICorporateActionMovementConfirmationV03.SupplementaryData => SupplementaryData;
+    ICorporateActionOption37 ICorporateActionMovementConfirmationV03.CorporateActionConfirmationDetails =>
+        CorporateActionConfirmationDetails;
+    ICorporateActionNarrative4? ICorporateActionMovementConfirmationV03.AdditionalInformation =>
+        AdditionalInformation;
+    IEnumerable<IPartyIdentification46Choice> ICorporateActionMovementConfirmationV03.IssuerAgent =>
+        IssuerAgent;
+    IEnumerable<IPartyIdentification46Choice> ICorporateActionMovementConfirmationV03.PayingAgent =>
+        PayingAgent;
+    IEnumerable<IPartyIdentification46Choice> ICorporateActionMovementConfirmationV03.SubPayingAgent =>
+        SubPayingAgent;
+    IEnumerable<ISupplementaryData1> ICorporateActionMovementConfirmationV03.SupplementaryData =>
+        SupplementaryData;
 }

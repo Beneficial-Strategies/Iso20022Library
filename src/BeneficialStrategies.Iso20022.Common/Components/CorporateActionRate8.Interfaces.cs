@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionRate8 : ICorporateActionRate8
 {
-    IRateAndAmountFormat12Choice? ICorporateActionRate8.OversubscriptionRate => OversubscriptionRate;
+    IRateAndAmountFormat12Choice? ICorporateActionRate8.OversubscriptionRate =>
+        OversubscriptionRate;
 }

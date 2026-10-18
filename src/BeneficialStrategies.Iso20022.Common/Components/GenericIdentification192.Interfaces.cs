@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record GenericIdentification192 : IGenericIdentification192
-{
-}
+public partial record GenericIdentification192 : IGenericIdentification192 { }

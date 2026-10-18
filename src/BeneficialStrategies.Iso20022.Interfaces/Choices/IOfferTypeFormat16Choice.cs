@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Offer Type Format16Choice.
 /// </summary>
 [IsoId("_nLhFfZt3Ee-wQIOX0djF2w")]
-public interface IOfferTypeFormat16Choice : IIsoChoice
-{
-}
+public interface IOfferTypeFormat16Choice : IIsoChoice { }

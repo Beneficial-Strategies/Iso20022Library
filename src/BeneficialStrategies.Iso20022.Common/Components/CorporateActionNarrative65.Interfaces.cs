@@ -10,16 +10,27 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateActionNarrative65 : ICorporateActionNarrative65
 {
-    IEnumerable<IUpdatedAdditionalInformation26> ICorporateActionNarrative65.AdditionalText => AdditionalText;
-    IEnumerable<IUpdatedAdditionalInformation26> ICorporateActionNarrative65.NarrativeVersion => NarrativeVersion;
-    IEnumerable<IUpdatedAdditionalInformation26> ICorporateActionNarrative65.InformationConditions => InformationConditions;
-    IEnumerable<IUpdatedAdditionalInformation26> ICorporateActionNarrative65.InformationToComplyWith => InformationToComplyWith;
-    IEnumerable<IUpdatedAdditionalInformation26> ICorporateActionNarrative65.TaxationConditions => TaxationConditions;
-    IEnumerable<IUpdatedAdditionalInformation26> ICorporateActionNarrative65.Disclaimer => Disclaimer;
-    IEnumerable<IUpdatedAdditionalInformation26> ICorporateActionNarrative65.PartyContactNarrative => PartyContactNarrative;
-    IEnumerable<IUpdatedAdditionalInformation26> ICorporateActionNarrative65.RegistrationDetails => RegistrationDetails;
-    IEnumerable<IUpdatedAdditionalInformation26> ICorporateActionNarrative65.BasketOrIndexInformation => BasketOrIndexInformation;
-    IEnumerable<IUpdatedAdditionalInformation26> ICorporateActionNarrative65.CertificationBreakdown => CertificationBreakdown;
+    IEnumerable<IUpdatedAdditionalInformation26> ICorporateActionNarrative65.AdditionalText =>
+        AdditionalText;
+    IEnumerable<IUpdatedAdditionalInformation26> ICorporateActionNarrative65.NarrativeVersion =>
+        NarrativeVersion;
+    IEnumerable<IUpdatedAdditionalInformation26> ICorporateActionNarrative65.InformationConditions =>
+        InformationConditions;
+    IEnumerable<IUpdatedAdditionalInformation26> ICorporateActionNarrative65.InformationToComplyWith =>
+        InformationToComplyWith;
+    IEnumerable<IUpdatedAdditionalInformation26> ICorporateActionNarrative65.TaxationConditions =>
+        TaxationConditions;
+    IEnumerable<IUpdatedAdditionalInformation26> ICorporateActionNarrative65.Disclaimer =>
+        Disclaimer;
+    IEnumerable<IUpdatedAdditionalInformation26> ICorporateActionNarrative65.PartyContactNarrative =>
+        PartyContactNarrative;
+    IEnumerable<IUpdatedAdditionalInformation26> ICorporateActionNarrative65.RegistrationDetails =>
+        RegistrationDetails;
+    IEnumerable<IUpdatedAdditionalInformation26> ICorporateActionNarrative65.BasketOrIndexInformation =>
+        BasketOrIndexInformation;
+    IEnumerable<IUpdatedAdditionalInformation26> ICorporateActionNarrative65.CertificationBreakdown =>
+        CertificationBreakdown;
     IEnumerable<IUpdatedURLlnformation7> ICorporateActionNarrative65.URLAddress => URLAddress;
-    IEnumerable<IUpdatedAdditionalInformation26> ICorporateActionNarrative65.ProcessingTextForNextIntermediary => ProcessingTextForNextIntermediary;
+    IEnumerable<IUpdatedAdditionalInformation26> ICorporateActionNarrative65.ProcessingTextForNextIntermediary =>
+        ProcessingTextForNextIntermediary;
 }

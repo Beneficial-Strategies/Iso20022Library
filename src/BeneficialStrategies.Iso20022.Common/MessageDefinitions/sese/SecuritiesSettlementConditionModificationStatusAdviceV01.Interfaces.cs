@@ -8,15 +8,25 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesSettlementConditionModificationStatusAdviceV01 : ISecuritiesSettlementConditionModificationStatusAdviceV01
+public partial record SecuritiesSettlementConditionModificationStatusAdviceV01
+    : ISecuritiesSettlementConditionModificationStatusAdviceV01
 {
-    IDocumentIdentification11 ISecuritiesSettlementConditionModificationStatusAdviceV01.Identification => Identification;
-    IIdentification1 ISecuritiesSettlementConditionModificationStatusAdviceV01.RequestReference => RequestReference;
-    IPartyIdentification13Choice? ISecuritiesSettlementConditionModificationStatusAdviceV01.AccountOwner => AccountOwner;
-    ISecuritiesAccount13? ISecuritiesSettlementConditionModificationStatusAdviceV01.SafekeepingAccount => SafekeepingAccount;
-    IRequestDetails1? ISecuritiesSettlementConditionModificationStatusAdviceV01.RequestDetails => RequestDetails;
-    IProcessingStatus5Choice ISecuritiesSettlementConditionModificationStatusAdviceV01.ProcessingStatus => ProcessingStatus;
-    IPartyIdentification10Choice? ISecuritiesSettlementConditionModificationStatusAdviceV01.MessageOriginator => MessageOriginator;
-    IPartyIdentification10Choice? ISecuritiesSettlementConditionModificationStatusAdviceV01.MessageRecipient => MessageRecipient;
-    IEnumerable<IExtension2> ISecuritiesSettlementConditionModificationStatusAdviceV01.Extension => Extension;
+    IDocumentIdentification11 ISecuritiesSettlementConditionModificationStatusAdviceV01.Identification =>
+        Identification;
+    IIdentification1 ISecuritiesSettlementConditionModificationStatusAdviceV01.RequestReference =>
+        RequestReference;
+    IPartyIdentification13Choice? ISecuritiesSettlementConditionModificationStatusAdviceV01.AccountOwner =>
+        AccountOwner;
+    ISecuritiesAccount13? ISecuritiesSettlementConditionModificationStatusAdviceV01.SafekeepingAccount =>
+        SafekeepingAccount;
+    IRequestDetails1? ISecuritiesSettlementConditionModificationStatusAdviceV01.RequestDetails =>
+        RequestDetails;
+    IProcessingStatus5Choice ISecuritiesSettlementConditionModificationStatusAdviceV01.ProcessingStatus =>
+        ProcessingStatus;
+    IPartyIdentification10Choice? ISecuritiesSettlementConditionModificationStatusAdviceV01.MessageOriginator =>
+        MessageOriginator;
+    IPartyIdentification10Choice? ISecuritiesSettlementConditionModificationStatusAdviceV01.MessageRecipient =>
+        MessageRecipient;
+    IEnumerable<IExtension2> ISecuritiesSettlementConditionModificationStatusAdviceV01.Extension =>
+        Extension;
 }

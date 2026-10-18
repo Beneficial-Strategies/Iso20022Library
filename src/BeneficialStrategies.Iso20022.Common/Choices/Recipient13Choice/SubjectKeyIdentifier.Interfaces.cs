@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.Recipient13Choice;
 
-public partial record SubjectKeyIdentifier : ISubjectKeyIdentifier
-{
-}
+public partial record SubjectKeyIdentifier : ISubjectKeyIdentifier { }

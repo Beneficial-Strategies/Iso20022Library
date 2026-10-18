@@ -14,16 +14,24 @@ public partial record AccountHoldingInformationV09 : IAccountHoldingInformationV
     IAdditionalReference11? IAccountHoldingInformationV09.PoolReference => PoolReference;
     IAdditionalReference10? IAccountHoldingInformationV09.PreviousReference => PreviousReference;
     IAdditionalReference10? IAccountHoldingInformationV09.RelatedReference => RelatedReference;
-    IIndividualPerson8? IAccountHoldingInformationV09.PrimaryIndividualInvestor => PrimaryIndividualInvestor;
-    IIndividualPerson8? IAccountHoldingInformationV09.SecondaryIndividualInvestor => SecondaryIndividualInvestor;
-    IEnumerable<IIndividualPerson8> IAccountHoldingInformationV09.OtherIndividualInvestor => OtherIndividualInvestor;
-    IOrganisation36? IAccountHoldingInformationV09.PrimaryCorporateInvestor => PrimaryCorporateInvestor;
-    IOrganisation36? IAccountHoldingInformationV09.SecondaryCorporateInvestor => SecondaryCorporateInvestor;
-    IEnumerable<IOrganisation36> IAccountHoldingInformationV09.OtherCorporateInvestor => OtherCorporateInvestor;
+    IIndividualPerson8? IAccountHoldingInformationV09.PrimaryIndividualInvestor =>
+        PrimaryIndividualInvestor;
+    IIndividualPerson8? IAccountHoldingInformationV09.SecondaryIndividualInvestor =>
+        SecondaryIndividualInvestor;
+    IEnumerable<IIndividualPerson8> IAccountHoldingInformationV09.OtherIndividualInvestor =>
+        OtherIndividualInvestor;
+    IOrganisation36? IAccountHoldingInformationV09.PrimaryCorporateInvestor =>
+        PrimaryCorporateInvestor;
+    IOrganisation36? IAccountHoldingInformationV09.SecondaryCorporateInvestor =>
+        SecondaryCorporateInvestor;
+    IEnumerable<IOrganisation36> IAccountHoldingInformationV09.OtherCorporateInvestor =>
+        OtherCorporateInvestor;
     IInvestmentAccount69 IAccountHoldingInformationV09.TransferorAccount => TransferorAccount;
     IInvestmentAccount69? IAccountHoldingInformationV09.NomineeAccount => NomineeAccount;
     IPartyIdentification132 IAccountHoldingInformationV09.Transferee => Transferee;
-    IEnumerable<IPortfolioTransfer9> IAccountHoldingInformationV09.ProductTransfer => ProductTransfer;
-    IMarketPracticeVersion1? IAccountHoldingInformationV09.MarketPracticeVersion => MarketPracticeVersion;
+    IEnumerable<IPortfolioTransfer9> IAccountHoldingInformationV09.ProductTransfer =>
+        ProductTransfer;
+    IMarketPracticeVersion1? IAccountHoldingInformationV09.MarketPracticeVersion =>
+        MarketPracticeVersion;
     IEnumerable<IExtension1> IAccountHoldingInformationV09.Extension => Extension;
 }

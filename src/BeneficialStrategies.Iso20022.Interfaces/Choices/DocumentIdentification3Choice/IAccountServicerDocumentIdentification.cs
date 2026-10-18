@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentIdentification3Choice;
 /// Identification of the document assigned by the account servicer.
 /// </summary>
 [IsoId("_FGNkYznaEeWLJsP1cO-amg")]
-public interface IAccountServicerDocumentIdentification : IDocumentIdentification3Choice, IIsoChoiceVariant
+public interface IAccountServicerDocumentIdentification
+    : IDocumentIdentification3Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PriceRateOrAmountOrUnknown1Choice;
 
-public partial record UnknownIndicator : IUnknownIndicator
-{
-}
+public partial record UnknownIndicator : IUnknownIndicator { }

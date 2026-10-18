@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a standard code or proprietary code to specify the type of offer.
 /// </summary>
 [IsoId("_8aKE8UEFEeWVgfuHGaKtRQ")]
-public interface IOfferTypeFormat10Choice : IIsoChoice
-{
-}
+public interface IOfferTypeFormat10Choice : IIsoChoice { }

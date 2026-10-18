@@ -10,12 +10,14 @@ namespace BeneficialStrategies.Iso20022.sese;
 
 public partial record TransferInConfirmationV02 : ITransferInConfirmationV02
 {
-    IMessageIdentification1 ITransferInConfirmationV02.MessageIdentification => MessageIdentification;
+    IMessageIdentification1 ITransferInConfirmationV02.MessageIdentification =>
+        MessageIdentification;
     IAdditionalReference2? ITransferInConfirmationV02.RelatedReference => RelatedReference;
     IAdditionalReference2? ITransferInConfirmationV02.PoolReference => PoolReference;
     IAdditionalReference2? ITransferInConfirmationV02.PreviousReference => PreviousReference;
     ITransfer7 ITransferInConfirmationV02.TransferDetails => TransferDetails;
-    IFinancialInstrument13 ITransferInConfirmationV02.FinancialInstrumentDetails => FinancialInstrumentDetails;
+    IFinancialInstrument13 ITransferInConfirmationV02.FinancialInstrumentDetails =>
+        FinancialInstrumentDetails;
     IInvestmentAccount22 ITransferInConfirmationV02.AccountDetails => AccountDetails;
     IDeliverInformation4 ITransferInConfirmationV02.SettlementDetails => SettlementDetails;
     ICopyInformation2? ITransferInConfirmationV02.CopyDetails => CopyDetails;

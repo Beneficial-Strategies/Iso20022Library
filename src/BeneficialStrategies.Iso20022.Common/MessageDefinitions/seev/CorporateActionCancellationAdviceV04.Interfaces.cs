@@ -10,17 +10,28 @@ namespace BeneficialStrategies.Iso20022.seev;
 
 public partial record CorporateActionCancellationAdviceV04 : ICorporateActionCancellationAdviceV04
 {
-    ICorporateActionCancellation1 ICorporateActionCancellationAdviceV04.CancellationAdviceGeneralInformation => CancellationAdviceGeneralInformation;
-    ICorporateActionGeneralInformation56 ICorporateActionCancellationAdviceV04.CorporateActionGeneralInformation => CorporateActionGeneralInformation;
-    IAccountIdentification13Choice ICorporateActionCancellationAdviceV04.AccountsDetails => AccountsDetails;
-    IEnumerable<IPartyIdentification46Choice> ICorporateActionCancellationAdviceV04.IssuerAgent => IssuerAgent;
-    IEnumerable<IPartyIdentification46Choice> ICorporateActionCancellationAdviceV04.PayingAgent => PayingAgent;
-    IEnumerable<IPartyIdentification46Choice> ICorporateActionCancellationAdviceV04.SubPayingAgent => SubPayingAgent;
+    ICorporateActionCancellation1 ICorporateActionCancellationAdviceV04.CancellationAdviceGeneralInformation =>
+        CancellationAdviceGeneralInformation;
+    ICorporateActionGeneralInformation56 ICorporateActionCancellationAdviceV04.CorporateActionGeneralInformation =>
+        CorporateActionGeneralInformation;
+    IAccountIdentification13Choice ICorporateActionCancellationAdviceV04.AccountsDetails =>
+        AccountsDetails;
+    IEnumerable<IPartyIdentification46Choice> ICorporateActionCancellationAdviceV04.IssuerAgent =>
+        IssuerAgent;
+    IEnumerable<IPartyIdentification46Choice> ICorporateActionCancellationAdviceV04.PayingAgent =>
+        PayingAgent;
+    IEnumerable<IPartyIdentification46Choice> ICorporateActionCancellationAdviceV04.SubPayingAgent =>
+        SubPayingAgent;
     IPartyIdentification46Choice? ICorporateActionCancellationAdviceV04.Registrar => Registrar;
-    IEnumerable<IPartyIdentification46Choice> ICorporateActionCancellationAdviceV04.ResellingAgent => ResellingAgent;
-    IPartyIdentification46Choice? ICorporateActionCancellationAdviceV04.PhysicalSecuritiesAgent => PhysicalSecuritiesAgent;
+    IEnumerable<IPartyIdentification46Choice> ICorporateActionCancellationAdviceV04.ResellingAgent =>
+        ResellingAgent;
+    IPartyIdentification46Choice? ICorporateActionCancellationAdviceV04.PhysicalSecuritiesAgent =>
+        PhysicalSecuritiesAgent;
     IPartyIdentification46Choice? ICorporateActionCancellationAdviceV04.DropAgent => DropAgent;
-    IEnumerable<IPartyIdentification46Choice> ICorporateActionCancellationAdviceV04.SolicitationAgent => SolicitationAgent;
-    IPartyIdentification46Choice? ICorporateActionCancellationAdviceV04.InformationAgent => InformationAgent;
-    IEnumerable<ISupplementaryData1> ICorporateActionCancellationAdviceV04.SupplementaryData => SupplementaryData;
+    IEnumerable<IPartyIdentification46Choice> ICorporateActionCancellationAdviceV04.SolicitationAgent =>
+        SolicitationAgent;
+    IPartyIdentification46Choice? ICorporateActionCancellationAdviceV04.InformationAgent =>
+        InformationAgent;
+    IEnumerable<ISupplementaryData1> ICorporateActionCancellationAdviceV04.SupplementaryData =>
+        SupplementaryData;
 }

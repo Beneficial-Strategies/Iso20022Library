@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record FinancialInstrumentQuantitySearch2 : IFinancialInstrumentQuantitySearch2
 {
     IImpliedCurrencyAmountRange1Choice IFinancialInstrumentQuantitySearch2.FaceAmount => FaceAmount;
-    IImpliedCurrencyAmountRange1Choice IFinancialInstrumentQuantitySearch2.AmortisedValue => AmortisedValue;
+    IImpliedCurrencyAmountRange1Choice IFinancialInstrumentQuantitySearch2.AmortisedValue =>
+        AmortisedValue;
 }

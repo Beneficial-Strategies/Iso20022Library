@@ -10,10 +10,15 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record FinancialInstrumentAttributes69 : IFinancialInstrumentAttributes69
 {
-    ISecurityIdentification20? IFinancialInstrumentAttributes69.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification20? IFinancialInstrumentAttributes69.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     IMarketIdentification4Choice? IFinancialInstrumentAttributes69.PlaceOfListing => PlaceOfListing;
-    IInterestComputationMethodFormat5Choice? IFinancialInstrumentAttributes69.DayCountBasis => DayCountBasis;
-    IClassificationType33Choice? IFinancialInstrumentAttributes69.ClassificationType => ClassificationType;
-    IFinancialInstrumentQuantity15Choice? IFinancialInstrumentAttributes69.MinimumNominalQuantity => MinimumNominalQuantity;
-    IFinancialInstrumentQuantity15Choice? IFinancialInstrumentAttributes69.ContractSize => ContractSize;
+    IInterestComputationMethodFormat5Choice? IFinancialInstrumentAttributes69.DayCountBasis =>
+        DayCountBasis;
+    IClassificationType33Choice? IFinancialInstrumentAttributes69.ClassificationType =>
+        ClassificationType;
+    IFinancialInstrumentQuantity15Choice? IFinancialInstrumentAttributes69.MinimumNominalQuantity =>
+        MinimumNominalQuantity;
+    IFinancialInstrumentQuantity15Choice? IFinancialInstrumentAttributes69.ContractSize =>
+        ContractSize;
 }

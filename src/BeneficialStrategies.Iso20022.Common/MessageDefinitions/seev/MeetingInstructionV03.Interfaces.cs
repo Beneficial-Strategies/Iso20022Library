@@ -13,6 +13,7 @@ public partial record MeetingInstructionV03 : IMeetingInstructionV03
     IMessageIdentification1 IMeetingInstructionV03.Identification => Identification;
     IMeetingReference4 IMeetingInstructionV03.MeetingReference => MeetingReference;
     IPartyIdentification9Choice IMeetingInstructionV03.InstructingParty => InstructingParty;
-    ISecurityIdentification11 IMeetingInstructionV03.SecurityIdentification => SecurityIdentification;
+    ISecurityIdentification11 IMeetingInstructionV03.SecurityIdentification =>
+        SecurityIdentification;
     IEnumerable<IInstruction2> IMeetingInstructionV03.Instruction => Instruction;
 }

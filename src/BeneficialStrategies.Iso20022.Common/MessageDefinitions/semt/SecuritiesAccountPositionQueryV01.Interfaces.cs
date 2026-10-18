@@ -12,5 +12,6 @@ public partial record SecuritiesAccountPositionQueryV01 : ISecuritiesAccountPosi
 {
     IStatement89 ISecuritiesAccountPositionQueryV01.Statement => Statement;
     IPositionSearchCriteria4 ISecuritiesAccountPositionQueryV01.SearchCriteria => SearchCriteria;
-    IEnumerable<ISupplementaryData1> ISecuritiesAccountPositionQueryV01.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> ISecuritiesAccountPositionQueryV01.SupplementaryData =>
+        SupplementaryData;
 }

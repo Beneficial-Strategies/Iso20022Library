@@ -12,5 +12,6 @@ public partial record DataSetRequest3 : IDataSetRequest3
 {
     IDataSetIdentification9 IDataSetRequest3.Identification => Identification;
     ICryptographicKey16? IDataSetRequest3.SessionKey => SessionKey;
-    IContentInformationType30? IDataSetRequest3.ProtectedDelegationProof => ProtectedDelegationProof;
+    IContentInformationType30? IDataSetRequest3.ProtectedDelegationProof =>
+        ProtectedDelegationProof;
 }

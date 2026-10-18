@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record CashAccountIdentification7Choice_ : ICashAccountIdentification7Choice
-{
-}
+public abstract partial record CashAccountIdentification7Choice_
+    : ICashAccountIdentification7Choice { }

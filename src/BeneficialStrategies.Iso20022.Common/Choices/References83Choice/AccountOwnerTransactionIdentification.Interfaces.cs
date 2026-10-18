@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.References83Choice;
 
-public partial record AccountOwnerTransactionIdentification : IAccountOwnerTransactionIdentification
-{
-}
+public partial record AccountOwnerTransactionIdentification
+    : IAccountOwnerTransactionIdentification { }

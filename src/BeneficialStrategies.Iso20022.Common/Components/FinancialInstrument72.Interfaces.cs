@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record FinancialInstrument72 : IFinancialInstrument72
 {
-    ISecurityClassificationType2Choice? IFinancialInstrument72.ClassificationType => ClassificationType;
+    ISecurityClassificationType2Choice? IFinancialInstrument72.ClassificationType =>
+        ClassificationType;
 }

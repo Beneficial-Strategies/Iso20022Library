@@ -8,11 +8,16 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
-public partial record SecuritiesTransactionStatusQuery002V06 : ISecuritiesTransactionStatusQuery002V06
+public partial record SecuritiesTransactionStatusQuery002V06
+    : ISecuritiesTransactionStatusQuery002V06
 {
-    IDocumentNumber19 ISecuritiesTransactionStatusQuery002V06.StatusAdviceRequested => StatusAdviceRequested;
+    IDocumentNumber19 ISecuritiesTransactionStatusQuery002V06.StatusAdviceRequested =>
+        StatusAdviceRequested;
     IPartyIdentification156? ISecuritiesTransactionStatusQuery002V06.AccountOwner => AccountOwner;
-    ISecuritiesAccount37? ISecuritiesTransactionStatusQuery002V06.SafekeepingAccount => SafekeepingAccount;
-    IBlockChainAddressWallet7? ISecuritiesTransactionStatusQuery002V06.BlockChainAddressOrWallet => BlockChainAddressOrWallet;
-    IEnumerable<ISupplementaryData1> ISecuritiesTransactionStatusQuery002V06.SupplementaryData => SupplementaryData;
+    ISecuritiesAccount37? ISecuritiesTransactionStatusQuery002V06.SafekeepingAccount =>
+        SafekeepingAccount;
+    IBlockChainAddressWallet7? ISecuritiesTransactionStatusQuery002V06.BlockChainAddressOrWallet =>
+        BlockChainAddressOrWallet;
+    IEnumerable<ISupplementaryData1> ISecuritiesTransactionStatusQuery002V06.SupplementaryData =>
+        SupplementaryData;
 }

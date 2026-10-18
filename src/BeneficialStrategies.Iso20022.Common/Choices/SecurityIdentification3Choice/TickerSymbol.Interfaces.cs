@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification3Choice;
 
-public partial record TickerSymbol : ITickerSymbol
-{
-}
+public partial record TickerSymbol : ITickerSymbol { }

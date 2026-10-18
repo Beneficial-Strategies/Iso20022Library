@@ -10,38 +10,60 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CreditTransferTransaction19 : ICreditTransferTransaction19
 {
-    IPaymentIdentification3 ICreditTransferTransaction19.PaymentIdentification => PaymentIdentification;
-    IPaymentTypeInformation21? ICreditTransferTransaction19.PaymentTypeInformation => PaymentTypeInformation;
-    ISettlementDateTimeIndication1? ICreditTransferTransaction19.SettlementTimeIndication => SettlementTimeIndication;
-    ISettlementTimeRequest2? ICreditTransferTransaction19.SettlementTimeRequest => SettlementTimeRequest;
+    IPaymentIdentification3 ICreditTransferTransaction19.PaymentIdentification =>
+        PaymentIdentification;
+    IPaymentTypeInformation21? ICreditTransferTransaction19.PaymentTypeInformation =>
+        PaymentTypeInformation;
+    ISettlementDateTimeIndication1? ICreditTransferTransaction19.SettlementTimeIndication =>
+        SettlementTimeIndication;
+    ISettlementTimeRequest2? ICreditTransferTransaction19.SettlementTimeRequest =>
+        SettlementTimeRequest;
     IEnumerable<ICharges2> ICreditTransferTransaction19.ChargesInformation => ChargesInformation;
-    IBranchAndFinancialInstitutionIdentification5? ICreditTransferTransaction19.PreviousInstructingAgent => PreviousInstructingAgent;
-    ICashAccount24? ICreditTransferTransaction19.PreviousInstructingAgentAccount => PreviousInstructingAgentAccount;
-    IBranchAndFinancialInstitutionIdentification5? ICreditTransferTransaction19.InstructingAgent => InstructingAgent;
-    IBranchAndFinancialInstitutionIdentification5? ICreditTransferTransaction19.InstructedAgent => InstructedAgent;
-    IBranchAndFinancialInstitutionIdentification5? ICreditTransferTransaction19.IntermediaryAgent1 => IntermediaryAgent1;
-    ICashAccount24? ICreditTransferTransaction19.IntermediaryAgent1Account => IntermediaryAgent1Account;
-    IBranchAndFinancialInstitutionIdentification5? ICreditTransferTransaction19.IntermediaryAgent2 => IntermediaryAgent2;
-    ICashAccount24? ICreditTransferTransaction19.IntermediaryAgent2Account => IntermediaryAgent2Account;
-    IBranchAndFinancialInstitutionIdentification5? ICreditTransferTransaction19.IntermediaryAgent3 => IntermediaryAgent3;
-    ICashAccount24? ICreditTransferTransaction19.IntermediaryAgent3Account => IntermediaryAgent3Account;
+    IBranchAndFinancialInstitutionIdentification5? ICreditTransferTransaction19.PreviousInstructingAgent =>
+        PreviousInstructingAgent;
+    ICashAccount24? ICreditTransferTransaction19.PreviousInstructingAgentAccount =>
+        PreviousInstructingAgentAccount;
+    IBranchAndFinancialInstitutionIdentification5? ICreditTransferTransaction19.InstructingAgent =>
+        InstructingAgent;
+    IBranchAndFinancialInstitutionIdentification5? ICreditTransferTransaction19.InstructedAgent =>
+        InstructedAgent;
+    IBranchAndFinancialInstitutionIdentification5? ICreditTransferTransaction19.IntermediaryAgent1 =>
+        IntermediaryAgent1;
+    ICashAccount24? ICreditTransferTransaction19.IntermediaryAgent1Account =>
+        IntermediaryAgent1Account;
+    IBranchAndFinancialInstitutionIdentification5? ICreditTransferTransaction19.IntermediaryAgent2 =>
+        IntermediaryAgent2;
+    ICashAccount24? ICreditTransferTransaction19.IntermediaryAgent2Account =>
+        IntermediaryAgent2Account;
+    IBranchAndFinancialInstitutionIdentification5? ICreditTransferTransaction19.IntermediaryAgent3 =>
+        IntermediaryAgent3;
+    ICashAccount24? ICreditTransferTransaction19.IntermediaryAgent3Account =>
+        IntermediaryAgent3Account;
     IPartyIdentification43? ICreditTransferTransaction19.UltimateDebtor => UltimateDebtor;
     IPartyIdentification43? ICreditTransferTransaction19.InitiatingParty => InitiatingParty;
     IPartyIdentification43 ICreditTransferTransaction19.Debtor => Debtor;
     ICashAccount24? ICreditTransferTransaction19.DebtorAccount => DebtorAccount;
-    IBranchAndFinancialInstitutionIdentification5 ICreditTransferTransaction19.DebtorAgent => DebtorAgent;
+    IBranchAndFinancialInstitutionIdentification5 ICreditTransferTransaction19.DebtorAgent =>
+        DebtorAgent;
     ICashAccount24? ICreditTransferTransaction19.DebtorAgentAccount => DebtorAgentAccount;
-    IBranchAndFinancialInstitutionIdentification5 ICreditTransferTransaction19.CreditorAgent => CreditorAgent;
+    IBranchAndFinancialInstitutionIdentification5 ICreditTransferTransaction19.CreditorAgent =>
+        CreditorAgent;
     ICashAccount24? ICreditTransferTransaction19.CreditorAgentAccount => CreditorAgentAccount;
     IPartyIdentification43 ICreditTransferTransaction19.Creditor => Creditor;
     ICashAccount24? ICreditTransferTransaction19.CreditorAccount => CreditorAccount;
     IPartyIdentification43? ICreditTransferTransaction19.UltimateCreditor => UltimateCreditor;
-    IEnumerable<IInstructionForCreditorAgent1> ICreditTransferTransaction19.InstructionForCreditorAgent => InstructionForCreditorAgent;
-    IEnumerable<IInstructionForNextAgent1> ICreditTransferTransaction19.InstructionForNextAgent => InstructionForNextAgent;
+    IEnumerable<IInstructionForCreditorAgent1> ICreditTransferTransaction19.InstructionForCreditorAgent =>
+        InstructionForCreditorAgent;
+    IEnumerable<IInstructionForNextAgent1> ICreditTransferTransaction19.InstructionForNextAgent =>
+        InstructionForNextAgent;
     IPurpose2Choice? ICreditTransferTransaction19.Purpose => Purpose;
-    IEnumerable<IRegulatoryReporting3> ICreditTransferTransaction19.RegulatoryReporting => RegulatoryReporting;
+    IEnumerable<IRegulatoryReporting3> ICreditTransferTransaction19.RegulatoryReporting =>
+        RegulatoryReporting;
     ITaxInformation3? ICreditTransferTransaction19.Tax => Tax;
-    IEnumerable<IRemittanceLocation4> ICreditTransferTransaction19.RelatedRemittanceInformation => RelatedRemittanceInformation;
-    IRemittanceInformation10? ICreditTransferTransaction19.RemittanceInformation => RemittanceInformation;
-    IEnumerable<ISupplementaryData1> ICreditTransferTransaction19.SupplementaryData => SupplementaryData;
+    IEnumerable<IRemittanceLocation4> ICreditTransferTransaction19.RelatedRemittanceInformation =>
+        RelatedRemittanceInformation;
+    IRemittanceInformation10? ICreditTransferTransaction19.RemittanceInformation =>
+        RemittanceInformation;
+    IEnumerable<ISupplementaryData1> ICreditTransferTransaction19.SupplementaryData =>
+        SupplementaryData;
 }

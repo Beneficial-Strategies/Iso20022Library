@@ -17,9 +17,12 @@ public partial record DeviceRequest6 : IDeviceRequest6
     IDevicePrintRequest5? IDeviceRequest6.PrintRequest => PrintRequest;
     IDevicePlayResourceRequest1? IDeviceRequest6.PlayResourceRequest => PlayResourceRequest;
     IDeviceSecureInputRequest5? IDeviceRequest6.SecureInputRequest => SecureInputRequest;
-    IDeviceInitialisationCardReaderRequest5? IDeviceRequest6.InitialisationCardReaderRequest => InitialisationCardReaderRequest;
-    IDeviceSendApplicationProtocolDataUnitCardReaderRequest1? IDeviceRequest6.CardReaderAPDURequest => CardReaderAPDURequest;
-    IDevicePoweroffCardReaderRequest5? IDeviceRequest6.PowerOffCardReaderRequest => PowerOffCardReaderRequest;
+    IDeviceInitialisationCardReaderRequest5? IDeviceRequest6.InitialisationCardReaderRequest =>
+        InitialisationCardReaderRequest;
+    IDeviceSendApplicationProtocolDataUnitCardReaderRequest1? IDeviceRequest6.CardReaderAPDURequest =>
+        CardReaderAPDURequest;
+    IDevicePoweroffCardReaderRequest5? IDeviceRequest6.PowerOffCardReaderRequest =>
+        PowerOffCardReaderRequest;
     IDeviceTransmitMessageRequest2? IDeviceRequest6.TransmissionRequest => TransmissionRequest;
     IDeviceInputNotification5? IDeviceRequest6.InputNotification => InputNotification;
     IEnumerable<ISupplementaryData1> IDeviceRequest6.SupplementaryData => SupplementaryData;

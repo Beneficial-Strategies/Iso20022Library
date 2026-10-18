@@ -16,8 +16,10 @@ public partial record MessageAndBusinessReference14 : IMessageAndBusinessReferen
     IAdditionalReference10? IMessageAndBusinessReference14.ClientReference => ClientReference;
     IFinancialInstrument101Choice? IMessageAndBusinessReference14.Instrument => Instrument;
     IAccount36? IMessageAndBusinessReference14.InvestmentAccountDetails => InvestmentAccountDetails;
-    IEnumerable<IIntermediary48> IMessageAndBusinessReference14.IntermediaryInformation => IntermediaryInformation;
-    IEnumerable<IAdditionalInformation25> IMessageAndBusinessReference14.QueryInformation => QueryInformation;
+    IEnumerable<IIntermediary48> IMessageAndBusinessReference14.IntermediaryInformation =>
+        IntermediaryInformation;
+    IEnumerable<IAdditionalInformation25> IMessageAndBusinessReference14.QueryInformation =>
+        QueryInformation;
     IPartyIdentification139? IMessageAndBusinessReference14.RequestIssuer => RequestIssuer;
     IPartyIdentification139? IMessageAndBusinessReference14.RequestRecipient => RequestRecipient;
 }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.References24Choice;
 
-public partial record CommonIdentification : ICommonIdentification
-{
-}
+public partial record CommonIdentification : ICommonIdentification { }
