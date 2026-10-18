@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T6hS0tp-Ed-ak6NoX_4Aeg_177856099")]
 [DisplayName("Delivery Parameters")]
-public record DeliveryParameters4
+public partial record DeliveryParameters4
 {
     /// <summary>
     /// Indicates whether the address for the physical delivery is the registered address.

@@ -38,7 +38,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 )]
 [IsoId("_8f_to5NLEeWGlc8L7oPDIg")]
 [DisplayName("Securities Transaction Status Query 002 V")]
-public record SecuritiesTransactionStatusQuery002V04 : IOuterRecord
+public partial record SecuritiesTransactionStatusQuery002V04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

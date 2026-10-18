@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_UyctRQycEeuG8M5giQ2e0w")]
     [DisplayName("Yielded Or Value Type 2 Choice")]
-    public abstract record YieldedOrValueType2Choice_ { }
+    public abstract partial record YieldedOrValueType2Choice_ { }
 }

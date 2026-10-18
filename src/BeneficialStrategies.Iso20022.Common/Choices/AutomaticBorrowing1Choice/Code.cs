@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AutomaticBorrowing1Choice
     /// </summary>
     [IsoId("_Qt7bBtp-Ed-ak6NoX_4Aeg_-2126449337")]
     [DisplayName("Code")]
-    public record Code : AutomaticBorrowing1Choice_
+    public partial record Code : AutomaticBorrowing1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

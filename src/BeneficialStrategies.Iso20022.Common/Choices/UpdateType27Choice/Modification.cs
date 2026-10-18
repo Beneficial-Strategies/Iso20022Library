@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType27Choice
     [IsoId("_IAvcdaz2EeeBIMhGLpLUsQ")]
     [DisplayName("Modification")]
     [IsoXmlTag("Mod")]
-    public record Modification : UpdateType27Choice_
+    public partial record Modification : UpdateType27Choice_
     {
         /// <summary>
         /// Provides settlement type and identification information.

@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_fHQhMf7rEeCvPoRGOxRobQ")]
     [DisplayName("Repo Call Request Status 5 Choice")]
-    public abstract record RepoCallRequestStatus5Choice_ { }
+    public abstract partial record RepoCallRequestStatus5Choice_ { }
 }

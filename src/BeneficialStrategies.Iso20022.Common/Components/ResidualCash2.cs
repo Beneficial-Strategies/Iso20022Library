@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_s2vtoJP7EemyZbjY08A1Vw")]
 [DisplayName("Residual Cash")]
-public record ResidualCash2
+public partial record ResidualCash2
 {
     /// <summary>
     /// Indicates whether the cash in the account awaiting investment is to be transferred.

@@ -30,7 +30,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 )]
 [IsoId("_Yga5gZDhEem7fvtoGpNpow")]
 [DisplayName("Transfer In Cancellation Request V")]
-public record TransferInCancellationRequestV09 : IOuterRecord
+public partial record TransferInCancellationRequestV09 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

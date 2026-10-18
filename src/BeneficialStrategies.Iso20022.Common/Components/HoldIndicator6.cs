@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yW7v0TqfEeWyoP0PbocV1Q")]
 [DisplayName("Hold Indicator")]
-public record HoldIndicator6
+public partial record HoldIndicator6
 {
     /// <summary>
     /// Specifies whether the transaction is on hold/blocked/frozen.

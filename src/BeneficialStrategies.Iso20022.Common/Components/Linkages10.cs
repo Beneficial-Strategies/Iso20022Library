@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_38duYfk7Ed-0eapN4XNkgg")]
 [DisplayName("Linkages")]
-public record Linkages10
+public partial record Linkages10
 {
     /// <summary>
     /// When the transaction is to be executed relative to a linked transaction.

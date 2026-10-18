@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeniedStatus5Choice
     /// </summary>
     [IsoId("_g8PF1f7rEeCvPoRGOxRobQ")]
     [DisplayName("No Specified Reason")]
-    public record NoSpecifiedReason : DeniedStatus5Choice_
+    public partial record NoSpecifiedReason : DeniedStatus5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CXqF4YjMEeeqaMoyJI1HbA")]
 [DisplayName("Charge Or Commission Discount")]
-public record ChargeOrCommissionDiscount2
+public partial record ChargeOrCommissionDiscount2
 {
     /// <summary>
     /// Amount of discount or waiver.

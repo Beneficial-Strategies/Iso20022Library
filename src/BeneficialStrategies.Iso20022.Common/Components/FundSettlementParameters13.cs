@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0QyaoU4EEeiQHa-q1Uephw")]
 [DisplayName("Fund Settlement Parameters")]
-public record FundSettlementParameters13
+public partial record FundSettlementParameters13
 {
     /// <summary>
     /// Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository or an International Central Securities Depository.

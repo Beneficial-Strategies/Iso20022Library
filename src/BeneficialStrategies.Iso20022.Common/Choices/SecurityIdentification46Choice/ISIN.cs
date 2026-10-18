@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification46Choice
     /// <summary>International Securities Identification Number (ISIN).</summary>
     [IsoId("256a59be-1564-4e1b-b0ed-604c6acbb3df")]
     [DisplayName("ISIN")]
-    public record ISIN : SecurityIdentification46Choice_
+    public partial record ISIN : SecurityIdentification46Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("ISIN")]

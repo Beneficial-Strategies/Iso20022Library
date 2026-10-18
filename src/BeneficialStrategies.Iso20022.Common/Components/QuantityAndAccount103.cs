@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_c67fJTi8Eeydid5dcNPKvg")]
 [DisplayName("Quantity And Account")]
-public record QuantityAndAccount103
+public partial record QuantityAndAccount103
 {
     /// <summary>
     /// Quantity of financial instrument effectively settled.

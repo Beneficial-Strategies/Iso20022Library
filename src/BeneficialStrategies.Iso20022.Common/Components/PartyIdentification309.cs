@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0qWpIX_yEe-5A_neRtHpSQ")]
 [DisplayName("Party Identification309")]
-public record PartyIdentification309
+public partial record PartyIdentification309
 {
     /// <summary>
     /// Any BIC.

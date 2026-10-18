@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStatus32Choice
     /// Failing.
     /// </summary>
     [DisplayName("Failing")]
-    public record Failing : SettlementStatus32Choice_
+    public partial record Failing : SettlementStatus32Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

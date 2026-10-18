@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TerminationDate6Choice
     /// </summary>
     [IsoId("_hUd9YbPvEeelzbgsFa3sqQ")]
     [DisplayName("Date")]
-    public record Date : TerminationDate6Choice_
+    public partial record Date : TerminationDate6Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Dt")]

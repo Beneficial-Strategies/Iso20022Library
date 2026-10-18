@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_WBlccE3VEeidB49bWZiS0g")]
     [DisplayName("Transfer Type 1 Choice")]
-    public abstract record TransferType1Choice_ { }
+    public abstract partial record TransferType1Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Vv7Tofr0EeCJc7cZxzE2fg")]
 [DisplayName("References")]
-public record References11
+public partial record References11
 {
     /// <summary>
     /// Collective reference identifying a set of messages.

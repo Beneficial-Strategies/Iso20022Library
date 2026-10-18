@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References73Choice
     /// </summary>
     [IsoId("_LPWOcSgUEeym1_Zp1BTvEw")]
     [DisplayName("Counterparty Market Infrastructure Transaction Identification")]
-    public record CounterpartyMarketInfrastructureTransactionIdentification : References73Choice_
+    public partial record CounterpartyMarketInfrastructureTransactionIdentification : References73Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

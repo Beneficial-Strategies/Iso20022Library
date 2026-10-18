@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument62Choice
     [IsoId("_qD51cZy1Eem54rMzia0iag")]
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
-    public record Security : FinancialInstrument62Choice_
+    public partial record Security : FinancialInstrument62Choice_
     {
         /// <summary>
         /// Unique and unambiguous identifier of a security, assigned under a formal or proprietary identification scheme.

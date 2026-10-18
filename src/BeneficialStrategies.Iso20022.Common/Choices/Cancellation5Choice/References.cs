@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cancellation5Choice
     [IsoId("_GxfqERYAEeOBE-jZfcm4KQ")]
     [DisplayName("References")]
     [IsoXmlTag("Refs")]
-    public record References : Cancellation5Choice_
+    public partial record References : Cancellation5Choice_
     {
         /// <summary>
         /// Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T1_yMaPvEemf4IaGqCtquA")]
 [DisplayName("Cash Asset")]
-public record CashAsset3
+public partial record CashAsset3
 {
     /// <summary>
     /// Type of cash asset.

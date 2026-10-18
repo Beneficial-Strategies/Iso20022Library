@@ -11,5 +11,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(NoSpecifiedReason), nameof(NoSpecifiedReason))]
     [KnownType(typeof(Reason))]
     [JsonDerivedType(typeof(Reason), nameof(Reason))]
-    public abstract record ModificationStatus6Choice_;
+    public abstract partial record ModificationStatus6Choice_;
 }

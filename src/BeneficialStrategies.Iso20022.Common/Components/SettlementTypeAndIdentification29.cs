@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lXqRAYVqEe-Pv9KR9bv9IA")]
 [DisplayName("Settlement Type And Identification29")]
-public record SettlementTypeAndIdentification29
+public partial record SettlementTypeAndIdentification29
 {
     /// <summary>
     /// Account Owner Transaction Identification.

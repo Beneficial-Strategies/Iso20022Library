@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reversal1Choice
     [IsoId("_-5EuwBg3EeK-_89we2b-bA")]
     [DisplayName("Transfer Out Confirmation Details")]
     [IsoXmlTag("TrfOutConfDtls")]
-    public record TransferOutConfirmationDetails : Reversal1Choice_
+    public partial record TransferOutConfirmationDetails : Reversal1Choice_
     {
         /// <summary>
         /// General information related to the transfer of a financial instrument.

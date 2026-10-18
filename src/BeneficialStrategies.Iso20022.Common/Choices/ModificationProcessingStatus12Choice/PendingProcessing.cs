@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationProcessingStatus12Ch
     /// <summary>Modification is pending processing.</summary>
     [IsoId("_rZrHYaohEfCG2_q2WT-90w")]
     [DisplayName("Pending Processing")]
-    public record PendingProcessing : ModificationProcessingStatus12Choice_
+    public partial record PendingProcessing : ModificationProcessingStatus12Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("PdgPrcg")]

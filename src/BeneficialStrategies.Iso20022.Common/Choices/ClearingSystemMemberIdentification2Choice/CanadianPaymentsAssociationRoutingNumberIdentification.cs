@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
     /// </summary>
     [IsoId("_TDF7kNp-Ed-ak6NoX_4Aeg_1989940341")]
     [DisplayName("Canadian Payments Association Routing Number Identification")]
-    public record CanadianPaymentsAssociationRoutingNumberIdentification
+    public partial record CanadianPaymentsAssociationRoutingNumberIdentification
         : ClearingSystemMemberIdentification2Choice_
     {
         /// <summary>

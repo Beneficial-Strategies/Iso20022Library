@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Rw1ph9p-Ed-ak6NoX_4Aeg_-1507060862")]
 [DisplayName("Investment Account")]
-public record InvestmentAccount24
+public partial record InvestmentAccount24
 {
     /// <summary>
     /// Party that legally owns the account.

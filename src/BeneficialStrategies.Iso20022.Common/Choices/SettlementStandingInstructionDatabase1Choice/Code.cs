@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStandingInstructionDat
     /// </summary>
     [IsoId("_Qt7bANp-Ed-ak6NoX_4Aeg_45144609")]
     [DisplayName("Code")]
-    public record Code : SettlementStandingInstructionDatabase1Choice_
+    public partial record Code : SettlementStandingInstructionDatabase1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

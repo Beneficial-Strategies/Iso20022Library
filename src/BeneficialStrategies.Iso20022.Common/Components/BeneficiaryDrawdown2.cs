@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("060f5b7c-5f73-49cd-8328-183e7820b929")]
 [DisplayName("Beneficiary Drawdown2")]
-public record BeneficiaryDrawdown2
+public partial record BeneficiaryDrawdown2
 {
     /// <summary>
     /// Type of beneficiary.

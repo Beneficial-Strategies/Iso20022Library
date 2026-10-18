@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LinkageType4Choice
     [IsoId("_6GVveZNLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : LinkageType4Choice_
+    public partial record Proprietary : LinkageType4Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

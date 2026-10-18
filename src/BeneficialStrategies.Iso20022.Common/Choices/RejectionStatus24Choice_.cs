@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_6QDEhZNLEeWGlc8L7oPDIg")]
     [DisplayName("Rejection Status 24 Choice")]
-    public abstract record RejectionStatus24Choice_ { }
+    public abstract partial record RejectionStatus24Choice_ { }
 }

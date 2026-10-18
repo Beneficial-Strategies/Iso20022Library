@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status31Choice
     [IsoId("_ym2jxZM6EemKz5EOjv82iQ")]
     [DisplayName("Complete")]
     [IsoXmlTag("Cmplt")]
-    public record Complete : Status31Choice_
+    public partial record Complete : Status31Choice_
     {
         /// <summary>
         /// Reason for the cancelled complete status.

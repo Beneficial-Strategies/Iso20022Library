@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VeJAYYS2Ee-Pv9KR9bv9IA")]
 [DisplayName("Settlement Details214")]
-public record SettlementDetails214
+public partial record SettlementDetails214
 {
     /// <summary>
     /// Priority.

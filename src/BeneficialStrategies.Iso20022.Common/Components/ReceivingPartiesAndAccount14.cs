@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_G-NuISStEeWEdM0tuoNJdg")]
 [DisplayName("Receiving Parties And Account")]
-public record ReceivingPartiesAndAccount14
+public partial record ReceivingPartiesAndAccount14
 {
     /// <summary>
     /// Party that acts on behalf of the buyer of securities when the buyer does not have a direct relationship with the receiving agent.

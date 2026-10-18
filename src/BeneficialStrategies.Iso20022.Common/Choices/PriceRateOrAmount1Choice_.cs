@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Wi6RYtp-Ed-ak6NoX_4Aeg_143429586")]
     [DisplayName("Price Rate Or Amount 1 Choice")]
-    public abstract record PriceRateOrAmount1Choice_ { }
+    public abstract partial record PriceRateOrAmount1Choice_ { }
 }

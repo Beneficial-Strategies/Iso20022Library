@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 )]
 [IsoId("_jcYo4YZMEeemXK0UETsSiA")]
 [DisplayName("Account Holding Information V")]
-public record AccountHoldingInformationV06 : IOuterRecord
+public partial record AccountHoldingInformationV06 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

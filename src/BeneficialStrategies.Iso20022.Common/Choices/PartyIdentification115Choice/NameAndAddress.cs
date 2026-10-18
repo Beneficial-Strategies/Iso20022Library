@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification115Choice
     [IsoId("_SmxZe5jcEeWn2ur3BXxtdg")]
     [DisplayName("Name And Address")]
     [IsoXmlTag("NmAndAdr")]
-    public record NameAndAddress : PartyIdentification115Choice_
+    public partial record NameAndAddress : PartyIdentification115Choice_
     {
         /// <summary>
         /// Name by which a party is known and which is usually used to identify that party.

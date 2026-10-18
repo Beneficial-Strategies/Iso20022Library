@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JBe719edEeSA_uUacqhl1Q")]
 [DisplayName("Additional Reference")]
-public record AdditionalReference6
+public partial record AdditionalReference6
 {
     /// <summary>
     /// Message identification of a message. This reference was assigned by the party issuing the message.

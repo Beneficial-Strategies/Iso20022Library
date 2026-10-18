@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferCancellationRejectedStat
     [IsoId("_U0fAtNp-Ed-ak6NoX_4Aeg_886199596")]
     [DisplayName("Data Source Scheme")]
     [IsoXmlTag("DataSrcSchme")]
-    public record DataSourceScheme : TransferCancellationRejectedStatus1Choice_
+    public partial record DataSourceScheme : TransferCancellationRejectedStatus1Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

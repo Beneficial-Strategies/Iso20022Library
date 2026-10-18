@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6sloi_fVEeiNZp_PtLohLw")]
 [DisplayName("Party Identification")]
-public record PartyIdentification162
+public partial record PartyIdentification162
 {
     /// <summary>
     /// Unique and unambiguous way to identify an organisation.

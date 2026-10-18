@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__8vqgIVwEe-Pv9KR9bv9IA")]
 [DisplayName("Network Fee1")]
-public record NetworkFee1
+public partial record NetworkFee1
 {
     /// <summary>
     /// Financial Instrument Identification.

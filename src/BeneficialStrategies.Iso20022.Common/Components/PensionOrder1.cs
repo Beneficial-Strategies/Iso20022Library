@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HAPJcLTpEeiENt6AoDfPXg")]
 [DisplayName("Pension Order")]
-public record PensionOrder1
+public partial record PensionOrder1
 {
     /// <summary>
     /// Order attached to the pension policy, plan or scheme.

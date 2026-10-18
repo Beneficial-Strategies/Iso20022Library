@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Q-niaNp-Ed-ak6NoX_4Aeg_-1215412850")]
 [DisplayName("Rate")]
-public record Rate2
+public partial record Rate2
 {
     /// <summary>
     /// Indicates the sign of the rate.

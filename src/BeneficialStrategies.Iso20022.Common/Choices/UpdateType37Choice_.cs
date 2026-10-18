@@ -20,5 +20,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_h2gZMSglEey2k_sfZmJz4g")]
     [DisplayName("Update Type 37 Choice")]
-    public abstract record UpdateType37Choice_ { }
+    public abstract partial record UpdateType37Choice_ { }
 }

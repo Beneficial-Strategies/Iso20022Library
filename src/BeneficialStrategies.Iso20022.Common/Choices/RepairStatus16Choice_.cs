@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(RepairStatus16Choice.Reason), nameof(RepairStatus16Choice.Reason))]
     [IsoId("_6P_Z45NLEeWGlc8L7oPDIg")]
     [DisplayName("Repair Status 16 Choice")]
-    public abstract record RepairStatus16Choice_ { }
+    public abstract partial record RepairStatus16Choice_ { }
 }

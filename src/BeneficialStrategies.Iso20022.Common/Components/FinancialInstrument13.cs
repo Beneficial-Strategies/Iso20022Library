@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SdFrh9p-Ed-ak6NoX_4Aeg_2092063055")]
 [DisplayName("Financial Instrument")]
-public record FinancialInstrument13
+public partial record FinancialInstrument13
 {
     /// <summary>
     /// Identification of a security by an ISIN.

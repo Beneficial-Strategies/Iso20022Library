@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_6QDrcZNLEeWGlc8L7oPDIg")]
     [DisplayName("Modification Reason 5 Choice")]
-    public abstract record ModificationReason5Choice_ { }
+    public abstract partial record ModificationReason5Choice_ { }
 }

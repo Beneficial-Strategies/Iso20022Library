@@ -37,7 +37,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 )]
 [IsoId("_X-uLgZaOEfC2_67yGLymgA")]
 [DisplayName("Securities Settlement Transaction Counterparty Response V06")]
-public record SecuritiesSettlementTransactionCounterpartyResponseV06 : IOuterRecord
+public partial record SecuritiesSettlementTransactionCounterpartyResponseV06 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

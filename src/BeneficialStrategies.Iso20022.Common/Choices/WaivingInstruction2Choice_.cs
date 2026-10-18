@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Ox8_UViPEeaMNZxYNthMeA")]
     [DisplayName("Waiving Instruction 2 Choice")]
-    public abstract record WaivingInstruction2Choice_ { }
+    public abstract partial record WaivingInstruction2Choice_ { }
 }

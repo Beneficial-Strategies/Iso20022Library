@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 )]
 [IsoId("_DFqK8ZwYEeqtp-LOti013g")]
 [DisplayName("Buy In Regulatory Advice Response V")]
-public record BuyInRegulatoryAdviceResponseV01 : IOuterRecord
+public partial record BuyInRegulatoryAdviceResponseV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

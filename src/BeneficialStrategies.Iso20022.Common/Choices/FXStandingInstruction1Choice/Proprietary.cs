@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FXStandingInstruction1Choice
     [IsoId("_QuFMB9p-Ed-ak6NoX_4Aeg_-1213284611")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : FXStandingInstruction1Choice_
+    public partial record Proprietary : FXStandingInstruction1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

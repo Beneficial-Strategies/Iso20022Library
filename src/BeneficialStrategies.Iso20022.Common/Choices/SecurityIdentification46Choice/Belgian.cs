@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification46Choice
     /// <summary>Belgian identifier.</summary>
     [IsoId("638ff3aa-692c-47da-b721-d3d0fd0d3e0c")]
     [DisplayName("Belgian")]
-    public record Belgian : SecurityIdentification46Choice_
+    public partial record Belgian : SecurityIdentification46Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Belgn")]

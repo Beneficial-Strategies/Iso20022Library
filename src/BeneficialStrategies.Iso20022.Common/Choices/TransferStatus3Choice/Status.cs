@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus3Choice
     [IsoId("_aeWNUVNUEeijdq8ilaxyOA")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
-    public record Status : TransferStatus3Choice_
+    public partial record Status : TransferStatus3Choice_
     {
         /// <summary>
         /// Status code.

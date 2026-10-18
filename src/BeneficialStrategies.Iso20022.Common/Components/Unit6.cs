@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TW_CkSVmEeWV8IT-SD_UOg")]
 [DisplayName("Unit")]
-public record Unit6
+public partial record Unit6
 {
     /// <summary>
     /// Total quantity of securities to be settled.

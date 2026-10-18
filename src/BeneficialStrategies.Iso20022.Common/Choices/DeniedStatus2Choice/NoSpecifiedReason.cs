@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeniedStatus2Choice
     /// </summary>
     [IsoId("_UUc1xdp-Ed-ak6NoX_4Aeg_-73327125")]
     [DisplayName("No Specified Reason")]
-    public record NoSpecifiedReason : DeniedStatus2Choice_
+    public partial record NoSpecifiedReason : DeniedStatus2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_FKf7AE4LEeiQHa-q1Uephw")]
     [DisplayName("Tax Efficient Product Type 1 Choice")]
-    public abstract record TaxEfficientProductType1Choice_ { }
+    public abstract partial record TaxEfficientProductType1Choice_ { }
 }

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlingCapacity1Choice
     /// </summary>
     [IsoId("_QwK2s9p-Ed-ak6NoX_4Aeg_61454778")]
     [DisplayName("Code")]
-    public record Code : SettlingCapacity1Choice_
+    public partial record Code : SettlingCapacity1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

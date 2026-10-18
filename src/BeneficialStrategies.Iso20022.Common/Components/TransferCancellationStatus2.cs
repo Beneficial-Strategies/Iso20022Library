@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RQWyqNp-Ed-ak6NoX_4Aeg_610595446")]
 [DisplayName("Transfer Cancellation Status")]
-public record TransferCancellationStatus2
+public partial record TransferCancellationStatus2
 {
     /// <summary>
     /// Status of the transfer cancellation is accepted or sent to next party.

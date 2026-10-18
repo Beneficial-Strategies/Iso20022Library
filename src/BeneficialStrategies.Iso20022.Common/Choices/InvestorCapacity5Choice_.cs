@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_5mtMY5NLEeWGlc8L7oPDIg")]
     [DisplayName("Investor Capacity 5 Choice")]
-    public abstract record InvestorCapacity5Choice_ { }
+    public abstract partial record InvestorCapacity5Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reporting6Choice
     [IsoId("_pdpd6TtCEeWRTLSN0i0tng")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : Reporting6Choice_
+    public partial record Proprietary : Reporting6Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferType2Choice
     /// </summary>
     [IsoId("_3m40Q6xWEemRcYBAkJyjkg")]
     [DisplayName("Code")]
-    public record Code : TransferType2Choice_
+    public partial record Code : TransferType2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

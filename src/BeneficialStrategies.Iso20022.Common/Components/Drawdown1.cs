@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9IEgwFNcEeijdq8ilaxyOA")]
 [DisplayName("Drawdown")]
-public record Drawdown1
+public partial record Drawdown1
 {
     /// <summary>
     /// Type of drawdown tranche.

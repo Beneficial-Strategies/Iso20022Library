@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_U1POpdp-Ed-ak6NoX_4Aeg_-1501368338")]
     [DisplayName("Pending Settlement Status Choice")]
-    public abstract record PendingSettlementStatusChoice_ { }
+    public abstract partial record PendingSettlementStatusChoice_ { }
 }

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_ufg1QRXxEeOBE-jZfcm4KQ")]
     [DisplayName("Charge Payment Method 1 Choice")]
-    public abstract record ChargePaymentMethod1Choice_ { }
+    public abstract partial record ChargePaymentMethod1Choice_ { }
 }

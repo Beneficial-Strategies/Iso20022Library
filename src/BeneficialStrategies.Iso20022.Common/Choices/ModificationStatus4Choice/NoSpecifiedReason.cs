@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationStatus4Choice
     /// </summary>
     [IsoId("_C9XfITq3EeWyoP0PbocV1Q")]
     [DisplayName("No Specified Reason")]
-    public record NoSpecifiedReason : ModificationStatus4Choice_
+    public partial record NoSpecifiedReason : ModificationStatus4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

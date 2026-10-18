@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio1Choice
     [IsoId("_ibqr004HEeiQHa-q1Uephw")]
     [DisplayName("General Investment")]
     [IsoXmlTag("GnlInvstmt")]
-    public record GeneralInvestment : FundPortfolio1Choice_
+    public partial record GeneralInvestment : FundPortfolio1Choice_
     {
         /// <summary>
         /// Type of investment.

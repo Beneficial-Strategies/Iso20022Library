@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(TradeDate5Choice.DateCode), nameof(TradeDate5Choice.DateCode))]
     [IsoId("_GxkNgTqLEeWVrPy0StzzSg")]
     [DisplayName("Trade Date 5 Choice")]
-    public abstract record TradeDate5Choice_ { }
+    public abstract partial record TradeDate5Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PreferenceToIncome2Choice
     [IsoId("_Qu-j5dp-Ed-ak6NoX_4Aeg_1951703204")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : PreferenceToIncome2Choice_
+    public partial record Proprietary : PreferenceToIncome2Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

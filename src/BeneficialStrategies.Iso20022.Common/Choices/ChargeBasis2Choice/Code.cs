@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeBasis2Choice
     /// </summary>
     [IsoId("_9tIUYjh5EeaH-93K5JKmzw")]
     [DisplayName("Code")]
-    public record Code : ChargeBasis2Choice_
+    public partial record Code : ChargeBasis2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

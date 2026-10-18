@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_18oYYTOOEeqjy7_SkdcoGg")]
 [DisplayName("Crystallisation")]
-public record Crystallisation2
+public partial record Crystallisation2
 {
     /// <summary>
     /// Identification of the tranche.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
     /// </summary>
     [IsoId("_TDY2htp-Ed-ak6NoX_4Aeg_-896562590")]
     [DisplayName("Russian Central Bank Identification Code")]
-    public record RussianCentralBankIdentificationCode : ClearingSystemMemberIdentificationChoice_
+    public partial record RussianCentralBankIdentificationCode : ClearingSystemMemberIdentificationChoice_
     {
         /// <summary>
         /// Contains the main value for the container.

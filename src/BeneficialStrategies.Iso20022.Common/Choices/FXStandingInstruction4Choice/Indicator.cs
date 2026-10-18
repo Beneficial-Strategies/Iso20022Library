@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FXStandingInstruction4Choice
     /// </summary>
     [IsoId("_aqW90TtEEeWRTLSN0i0tng")]
     [DisplayName("Indicator")]
-    public record Indicator : FXStandingInstruction4Choice_
+    public partial record Indicator : FXStandingInstruction4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

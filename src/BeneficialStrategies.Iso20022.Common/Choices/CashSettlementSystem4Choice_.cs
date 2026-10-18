@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_AF_qMTqHEeWVrPy0StzzSg")]
     [DisplayName("Cash Settlement System 4 Choice")]
-    public abstract record CashSettlementSystem4Choice_ { }
+    public abstract partial record CashSettlementSystem4Choice_ { }
 }

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Frequency23Choice
     /// </summary>
     [IsoId("_YIsyIzm_EeWV5sr121Fc8A")]
     [DisplayName("Code")]
-    public record Code : Frequency23Choice_
+    public partial record Code : Frequency23Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

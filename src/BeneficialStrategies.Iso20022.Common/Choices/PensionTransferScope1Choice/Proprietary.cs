@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PensionTransferScope1Choice
     [IsoId("_YpUYQE4YEeiQHa-q1Uephw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : PensionTransferScope1Choice_
+    public partial record Proprietary : PensionTransferScope1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

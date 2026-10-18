@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus45Choice
     /// </summary>
     [IsoId("_i0ct61hgEeS8HfHHd4stCA")]
     [DisplayName("Denied")]
-    public record Denied : ProcessingStatus45Choice_
+    public partial record Denied : ProcessingStatus45Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Dnd")]

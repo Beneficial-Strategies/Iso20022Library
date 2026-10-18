@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
     /// </summary>
     [IsoId("_TDY2gtp-Ed-ak6NoX_4Aeg_-896562602")]
     [DisplayName("CHIPS Participant Identification")]
-    public record CHIPSParticipantIdentification : ClearingSystemMemberIdentificationChoice_
+    public partial record CHIPSParticipantIdentification : ClearingSystemMemberIdentificationChoice_
     {
         /// <summary>
         /// Contains the main value for the container.

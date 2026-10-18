@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(DeniedStatus15Choice.Reason), nameof(DeniedStatus15Choice.Reason))]
     [IsoId("_-rIDUTq1EeWyoP0PbocV1Q")]
     [DisplayName("Denied Status 15 Choice")]
-    public abstract record DeniedStatus15Choice_ { }
+    public abstract partial record DeniedStatus15Choice_ { }
 }

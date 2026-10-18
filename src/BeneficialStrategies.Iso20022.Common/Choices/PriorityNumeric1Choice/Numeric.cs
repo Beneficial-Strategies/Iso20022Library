@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriorityNumeric1Choice
     /// </summary>
     [IsoId("_QuYG8dp-Ed-ak6NoX_4Aeg_971634575")]
     [DisplayName("Numeric")]
-    public record Numeric : PriorityNumeric1Choice_
+    public partial record Numeric : PriorityNumeric1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

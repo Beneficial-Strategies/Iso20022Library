@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PairedOrTurnedQuantity1Choice
     /// </summary>
     [IsoId("_UdsRVdp-Ed-ak6NoX_4Aeg_508111545")]
     [DisplayName("Turned Quantity")]
-    public record TurnedQuantity : PairedOrTurnedQuantity1Choice_
+    public partial record TurnedQuantity : PairedOrTurnedQuantity1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("TrndQty")]

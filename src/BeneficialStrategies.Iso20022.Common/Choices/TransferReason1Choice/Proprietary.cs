@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferReason1Choice
     [IsoId("_hvAgY651EeeMy7TnJ3e__g")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : TransferReason1Choice_
+    public partial record Proprietary : TransferReason1Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

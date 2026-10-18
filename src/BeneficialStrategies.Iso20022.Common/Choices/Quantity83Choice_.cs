@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(Quantity83Choice.NetworkFeeQuantity))]
     [JsonDerivedType(typeof(Quantity83Choice.ElectronicMoneyTokenSettlementQuantity))]
     [JsonDerivedType(typeof(Quantity83Choice.NetworkFeeQuantity))]
-    public abstract record Quantity83Choice_
+    public abstract partial record Quantity83Choice_
     {
     }
 }

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NumberCount2Choice
     /// </summary>
     [IsoId("_JaoZcygdEey2k_sfZmJz4g")]
     [DisplayName("Current Instruction Number")]
-    public record CurrentInstructionNumber : NumberCount2Choice_
+    public partial record CurrentInstructionNumber : NumberCount2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

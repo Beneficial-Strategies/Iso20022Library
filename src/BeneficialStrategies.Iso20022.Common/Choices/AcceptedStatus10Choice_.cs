@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(AcceptedStatus10Choice.Reason), nameof(AcceptedStatus10Choice.Reason))]
     [IsoId("_6HWbjZNLEeWGlc8L7oPDIg")]
     [DisplayName("Accepted Status 10 Choice")]
-    public abstract record AcceptedStatus10Choice_ { }
+    public abstract partial record AcceptedStatus10Choice_ { }
 }

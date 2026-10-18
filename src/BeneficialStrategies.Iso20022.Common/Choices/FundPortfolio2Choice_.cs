@@ -23,5 +23,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(FundPortfolio2Choice.Pension), nameof(FundPortfolio2Choice.Pension))]
     [IsoId("_ozJ3sU4aEeiQHa-q1Uephw")]
     [DisplayName("Fund Portfolio 2 Choice")]
-    public abstract record FundPortfolio2Choice_ { }
+    public abstract partial record FundPortfolio2Choice_ { }
 }

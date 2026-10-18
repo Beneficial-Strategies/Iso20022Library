@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Unit1Choice
     /// <summary>Quantity expressed as a number of units.</summary>
     [IsoId("95fcab82-8696-4195-8d32-436e0645910b")]
     [DisplayName("Units Number")]
-    public record UnitsNumber : Unit1Choice_
+    public partial record UnitsNumber : Unit1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("UnitsNb")]

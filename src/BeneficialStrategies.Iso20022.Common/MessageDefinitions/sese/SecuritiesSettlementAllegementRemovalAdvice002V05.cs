@@ -34,7 +34,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 )]
 [IsoId("_SKZRcyAaEeu4a6pNulzZ4Q")]
 [DisplayName("Securities Settlement Allegement Removal Advice 002 V")]
-public record SecuritiesSettlementAllegementRemovalAdvice002V05 : IOuterRecord
+public partial record SecuritiesSettlementAllegementRemovalAdvice002V05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

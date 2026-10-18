@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus25Choice
     /// </summary>
     [IsoId("_65Na6ffUEeiNZp_PtLohLw")]
     [DisplayName("No Specified Reason")]
-    public record NoSpecifiedReason : CancellationStatus25Choice_
+    public partial record NoSpecifiedReason : CancellationStatus25Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

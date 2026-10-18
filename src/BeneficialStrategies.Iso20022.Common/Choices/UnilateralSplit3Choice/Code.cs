@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnilateralSplit3Choice
     /// </summary>
     [IsoId("_e2Y7wTt4EeW638lNyHKv7A")]
     [DisplayName("Code")]
-    public record Code : UnilateralSplit3Choice_
+    public partial record Code : UnilateralSplit3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

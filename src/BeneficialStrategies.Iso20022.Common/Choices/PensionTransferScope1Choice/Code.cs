@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PensionTransferScope1Choice
     /// </summary>
     [IsoId("_X3xmkE4YEeiQHa-q1Uephw")]
     [DisplayName("Code")]
-    public record Code : PensionTransferScope1Choice_
+    public partial record Code : PensionTransferScope1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

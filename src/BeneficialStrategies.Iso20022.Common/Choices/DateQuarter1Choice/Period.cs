@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateQuarter1Choice
     /// </summary>
     [IsoId("_ft10AaFTEei_VZq-6SQkuQ")]
     [DisplayName("Period")]
-    public record Period : DateQuarter1Choice_
+    public partial record Period : DateQuarter1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

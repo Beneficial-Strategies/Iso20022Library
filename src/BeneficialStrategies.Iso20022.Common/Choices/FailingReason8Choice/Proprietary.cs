@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FailingReason8Choice
     [IsoId("_4kd42TqOEeWyoP0PbocV1Q")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : FailingReason8Choice_
+    public partial record Proprietary : FailingReason8Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

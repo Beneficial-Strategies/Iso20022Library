@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RepoCallRequestStatus7Choice
     /// </summary>
     [IsoId("_3-jxaTp4EeWVrPy0StzzSg")]
     [DisplayName("Denied")]
-    public record Denied : RepoCallRequestStatus7Choice_
+    public partial record Denied : RepoCallRequestStatus7Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Dnd")]

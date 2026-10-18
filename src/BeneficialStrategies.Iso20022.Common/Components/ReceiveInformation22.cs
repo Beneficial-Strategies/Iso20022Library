@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("dd8d12fe-94e7-4aae-a530-fcede0256d7e")]
 [DisplayName("Receive Information22")]
-public record ReceiveInformation22
+public partial record ReceiveInformation22
 {
     /// <summary>
     /// Party that receives (transferee) securities from the delivering agent (transferor).

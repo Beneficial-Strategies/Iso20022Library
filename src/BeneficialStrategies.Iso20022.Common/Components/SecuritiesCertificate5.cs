@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5TJXe5NLEeWGlc8L7oPDIg")]
 [DisplayName("Securities Certificate")]
-public record SecuritiesCertificate5
+public partial record SecuritiesCertificate5
 {
     /// <summary>
     /// Unique and unambiguous identifier of a certificate assigned by the issuer.

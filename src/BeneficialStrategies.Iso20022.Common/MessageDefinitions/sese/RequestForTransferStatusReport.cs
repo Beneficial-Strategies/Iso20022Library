@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 )]
 [IsoId("_nnEjSNE5Ed-BzquC8wXy7w_-788060154")]
 [DisplayName("Request For Transfer Status Report")]
-public record RequestForTransferStatusReport : IOuterRecord
+public partial record RequestForTransferStatusReport : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

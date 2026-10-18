@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References44Choice
     [IsoId("_IIcaszqoEeWyoP0PbocV1Q")]
     [DisplayName("Other Transaction Identification")]
     [IsoXmlTag("OthrTxId")]
-    public record OtherTransactionIdentification : References44Choice_
+    public partial record OtherTransactionIdentification : References44Choice_
     {
         /// <summary>
         /// Message type number/message identifier of the message referenced in the linkage sequence.

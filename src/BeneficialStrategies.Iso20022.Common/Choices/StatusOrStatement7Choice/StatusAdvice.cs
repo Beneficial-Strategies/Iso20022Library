@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatusOrStatement7Choice
     [IsoId("_RMPsUzs-EeWRTLSN0i0tng")]
     [DisplayName("Status Advice")]
     [IsoXmlTag("StsAdvc")]
-    public record StatusAdvice : StatusOrStatement7Choice_
+    public partial record StatusAdvice : StatusOrStatement7Choice_
     {
         /// <summary>
         /// Number used to identify a message or document.

@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_5TGUe5NLEeWGlc8L7oPDIg")]
     [DisplayName("Trade Date Code 4 Choice")]
-    public abstract record TradeDateCode4Choice_ { }
+    public abstract partial record TradeDateCode4Choice_ { }
 }

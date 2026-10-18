@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RepurchaseType21Choice
     /// </summary>
     [IsoId("_RbiH04-REeaVK-2bgpxeYw")]
     [DisplayName("Code")]
-    public record Code : RepurchaseType21Choice_
+    public partial record Code : RepurchaseType21Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

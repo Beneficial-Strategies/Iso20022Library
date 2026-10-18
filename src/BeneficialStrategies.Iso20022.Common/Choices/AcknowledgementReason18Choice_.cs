@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_6BLh4ZNLEeWGlc8L7oPDIg")]
     [DisplayName("Acknowledgement Reason 18 Choice")]
-    public abstract record AcknowledgementReason18Choice_ { }
+    public abstract partial record AcknowledgementReason18Choice_ { }
 }

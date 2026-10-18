@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementDate3Choice
     [IsoId("_QsvIMNp-Ed-ak6NoX_4Aeg_-882102558")]
     [DisplayName("Date Code")]
     [IsoXmlTag("DtCd")]
-    public record DateCode : SettlementDate3Choice_
+    public partial record DateCode : SettlementDate3Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

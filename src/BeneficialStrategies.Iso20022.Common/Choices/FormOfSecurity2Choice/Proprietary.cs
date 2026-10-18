@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FormOfSecurity2Choice
     [IsoId("_QvHt2Np-Ed-ak6NoX_4Aeg_-1979489686")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : FormOfSecurity2Choice_
+    public partial record Proprietary : FormOfSecurity2Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

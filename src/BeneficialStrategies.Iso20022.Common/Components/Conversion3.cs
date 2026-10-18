@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_enviAX_8Ee-5A_neRtHpSQ")]
 [DisplayName("Conversion3")]
-public record Conversion3
+public partial record Conversion3
 {
     /// <summary>
     /// Original Security.

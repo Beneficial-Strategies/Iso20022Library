@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementTransactionCondition18
     /// </summary>
     [IsoId("_ry8LUzw0EeW3QqUkIQtIUA")]
     [DisplayName("Code")]
-    public record Code : SettlementTransactionCondition18Choice_
+    public partial record Code : SettlementTransactionCondition18Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

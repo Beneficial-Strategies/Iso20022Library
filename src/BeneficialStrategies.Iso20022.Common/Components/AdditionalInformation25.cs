@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ho71Md1BEeqW_oCeEFhoHw")]
 [DisplayName("Additional Information")]
-public record AdditionalInformation25
+public partial record AdditionalInformation25
 {
     /// <summary>
     /// Type of query.

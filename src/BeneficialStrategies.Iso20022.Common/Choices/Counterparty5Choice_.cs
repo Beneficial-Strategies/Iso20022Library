@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Counterparty5Choice.Buyer), nameof(Counterparty5Choice.Buyer))]
     [IsoId("_idvrweaOEd-q8fx_Zl_34A")]
     [DisplayName("Counterparty 5 Choice")]
-    public abstract record Counterparty5Choice_ { }
+    public abstract partial record Counterparty5Choice_ { }
 }

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestorCapacity1Choice
     /// </summary>
     [IsoId("_Qs45MNp-Ed-ak6NoX_4Aeg_-1222322943")]
     [DisplayName("Code")]
-    public record Code : InvestorCapacity1Choice_
+    public partial record Code : InvestorCapacity1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

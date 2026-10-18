@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(ConsentStatus5Choice.Reason), nameof(ConsentStatus5Choice.Reason))]
     [IsoId("_Vl2wL5NSEeWGlc8L7oPDIg")]
     [DisplayName("Consent Status 5 Choice")]
-    public abstract record ConsentStatus5Choice_ { }
+    public abstract partial record ConsentStatus5Choice_ { }
 }

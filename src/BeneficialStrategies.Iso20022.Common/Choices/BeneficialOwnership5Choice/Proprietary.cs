@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BeneficialOwnership5Choice
     [IsoId("_5m6A7ZNLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : BeneficialOwnership5Choice_
+    public partial record Proprietary : BeneficialOwnership5Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

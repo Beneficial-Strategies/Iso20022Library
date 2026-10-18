@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_L7y38YizEeefvMoXmllHqg")]
 [DisplayName("Transfer Reference")]
-public record TransferReference11
+public partial record TransferReference11
 {
     /// <summary>
     /// Unique and unambiguous identifier for the transfer instruction for which the cancellation request is sent, as assigned by the instructing party.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
     [IsoId("_QE8vdNp-Ed-ak6NoX_4Aeg_2090381870")]
     [DisplayName("Proprietary Identification")]
     [IsoXmlTag("PrtryId")]
-    public record ProprietaryIdentification : FinancialInstitutionIdentification3Choice_
+    public partial record ProprietaryIdentification : FinancialInstitutionIdentification3Choice_
     {
         /// <summary>
         /// Name or number assigned by an entity to enable recognition of that entity, eg, account identifier.

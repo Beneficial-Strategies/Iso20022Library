@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RWwlPfpeEeCPwaG9zjUPNQ")]
 [DisplayName("Transfer")]
-public record Transfer12
+public partial record Transfer12
 {
     /// <summary>
     /// Identifies whether or not saving plan or withdrawal or switch plan are included in the holdings.

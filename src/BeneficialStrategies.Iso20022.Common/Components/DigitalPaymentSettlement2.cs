@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7BQRQZZ6EfC2_67yGLymgA")]
 [DisplayName("Digital Payment Settlement2")]
-public record DigitalPaymentSettlement2
+public partial record DigitalPaymentSettlement2
 {
     /// <summary>
     /// Financial instrument representing a sum of rights of the investor vis-a-vis the issuer.

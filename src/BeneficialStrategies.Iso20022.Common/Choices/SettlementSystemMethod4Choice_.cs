@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_R9Xe8TqIEeWVrPy0StzzSg")]
     [DisplayName("Settlement System Method 4 Choice")]
-    public abstract record SettlementSystemMethod4Choice_ { }
+    public abstract partial record SettlementSystemMethod4Choice_ { }
 }

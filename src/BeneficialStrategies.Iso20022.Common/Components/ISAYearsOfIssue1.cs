@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Sv3dmNp-Ed-ak6NoX_4Aeg_98060804")]
 [DisplayName("ISA Years Of Issue")]
-public record ISAYearsOfIssue1
+public partial record ISAYearsOfIssue1
 {
     /// <summary>
     /// Current year ISA is an ISA that was issued during the current fiscal year.

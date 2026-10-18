@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6tege_70EeCKvdA5_Kg7Aw")]
 [DisplayName("Party Identification And Account")]
-public record PartyIdentificationAndAccount81
+public partial record PartyIdentificationAndAccount81
 {
     /// <summary>
     /// Identification of the party.

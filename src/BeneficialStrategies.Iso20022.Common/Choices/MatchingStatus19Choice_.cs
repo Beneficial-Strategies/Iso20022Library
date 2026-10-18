@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_ZlY6ASwREeOEV5XHD-BKpw")]
     [DisplayName("Matching Status 19 Choice")]
-    public abstract record MatchingStatus19Choice_ { }
+    public abstract partial record MatchingStatus19Choice_ { }
 }

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Role4Choice
     /// </summary>
     [IsoId("_vrgEwB6YEeOolf0-cMYhrw")]
     [DisplayName("Code")]
-    public record Code : Role4Choice_
+    public partial record Code : Role4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zhY78U7eEeifNrXGwadPmg")]
 [DisplayName("Previous Year")]
-public record PreviousYear4
+public partial record PreviousYear4
 {
     /// <summary>
     /// Investment plans issued during previous years.

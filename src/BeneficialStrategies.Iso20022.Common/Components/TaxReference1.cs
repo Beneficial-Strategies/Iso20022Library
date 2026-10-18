@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jUsPcE4QEeiQHa-q1Uephw")]
 [DisplayName("Tax Reference")]
-public record TaxReference1
+public partial record TaxReference1
 {
     /// <summary>
     /// Type of tax reference.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PortfolioTransferStatus2Choice
     /// </summary>
     [IsoId("_WLfY8ukGEemm4qhb2yFPOw")]
     [DisplayName("Rejected")]
-    public record Rejected : PortfolioTransferStatus2Choice_
+    public partial record Rejected : PortfolioTransferStatus2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Rjctd")]

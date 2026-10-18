@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2YtAsQ3lEeKIIIcS0K4sAQ")]
 [DisplayName("Additional Parameters")]
-public record AdditionalParameters17
+public partial record AdditionalParameters17
 {
     /// <summary>
     /// Specifies whether there exists a pre-confirmation.

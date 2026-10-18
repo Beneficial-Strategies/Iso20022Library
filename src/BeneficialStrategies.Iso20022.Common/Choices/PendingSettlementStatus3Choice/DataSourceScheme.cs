@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingSettlementStatus3Choice
     [IsoId("_LrsCZyY4EeW_ZNn8gbfY7Q")]
     [DisplayName("Data Source Scheme")]
     [IsoXmlTag("DataSrcSchme")]
-    public record DataSourceScheme : PendingSettlementStatus3Choice_
+    public partial record DataSourceScheme : PendingSettlementStatus3Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

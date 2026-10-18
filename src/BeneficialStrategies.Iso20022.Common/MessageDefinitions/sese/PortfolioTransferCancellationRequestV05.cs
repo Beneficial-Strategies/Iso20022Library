@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 )]
 [IsoId("_SElK4RXfEeOocOqSQt5Jbw")]
 [DisplayName("Portfolio Transfer Cancellation Request V")]
-public record PortfolioTransferCancellationRequestV05 : IOuterRecord
+public partial record PortfolioTransferCancellationRequestV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Vl2wTZNSEeWGlc8L7oPDIg")]
     [DisplayName("Consent Or Rejection Reason 5 Choice")]
-    public abstract record ConsentOrRejectionReason5Choice_ { }
+    public abstract partial record ConsentOrRejectionReason5Choice_ { }
 }

@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_1qZNADh5EeaH-93K5JKmzw")]
     [DisplayName("Charge Basis 2 Choice")]
-    public abstract record ChargeBasis2Choice_ { }
+    public abstract partial record ChargeBasis2Choice_ { }
 }

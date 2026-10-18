@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingStatus82Choice
     /// <summary>Reason not specified.</summary>
     [IsoId("_u_FrpaodEfCG2_q2WT-90w")]
     [DisplayName("No Specified Reason")]
-    public record NoSpecifiedReason : PendingStatus82Choice_
+    public partial record NoSpecifiedReason : PendingStatus82Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("NoSpcfdRsn")]

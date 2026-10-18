@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dxw3NzqEEeWVrPy0StzzSg")]
 [DisplayName("Settlement Details")]
-public record SettlementDetails98
+public partial record SettlementDetails98
 {
     /// <summary>
     /// Specifies whether the transaction is on hold/blocked/frozen.

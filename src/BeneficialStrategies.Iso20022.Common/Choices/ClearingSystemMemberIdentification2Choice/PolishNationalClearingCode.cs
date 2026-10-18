@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
     /// </summary>
     [IsoId("_TDPFhNp-Ed-ak6NoX_4Aeg_-1877438256")]
     [DisplayName("Polish National Clearing Code")]
-    public record PolishNationalClearingCode : ClearingSystemMemberIdentification2Choice_
+    public partial record PolishNationalClearingCode : ClearingSystemMemberIdentification2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

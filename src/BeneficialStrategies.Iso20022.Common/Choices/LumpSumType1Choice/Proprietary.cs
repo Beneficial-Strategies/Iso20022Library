@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LumpSumType1Choice
     [IsoId("_HK6IkLKdEeiXL6Ccd-oU8g")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : LumpSumType1Choice_
+    public partial record Proprietary : LumpSumType1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

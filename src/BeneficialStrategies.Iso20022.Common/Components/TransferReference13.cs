@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YTDBIYi2EeefvMoXmllHqg")]
 [DisplayName("Transfer Reference")]
-public record TransferReference13
+public partial record TransferReference13
 {
     /// <summary>
     /// Unique and unambiguous identifier for the portfolio transfer instruction, as assigned by the instructing party.

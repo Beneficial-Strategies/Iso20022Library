@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_GG1RwTt4EeW638lNyHKv7A")]
     [DisplayName("Automatic Borrowing 7 Choice")]
-    public abstract record AutomaticBorrowing7Choice_ { }
+    public abstract partial record AutomaticBorrowing7Choice_ { }
 }

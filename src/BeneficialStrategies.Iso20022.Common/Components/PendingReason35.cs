@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("9d9ca1e5-462c-43d1-be7e-59689275c827")]
 [DisplayName("Pending Reason35")]
-public record PendingReason35
+public partial record PendingReason35
 {
     /// <summary>
     /// Specifies the reason why a cancellation request sent for the related instruction is pending.

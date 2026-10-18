@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementTransactionCondition41
     /// <summary>Settlement transaction condition expressed as a proprietary code.</summary>
     [IsoId("_KWsIWfHPEfChCaiL9q1LKg")]
     [DisplayName("Proprietary")]
-    public record Proprietary : SettlementTransactionCondition41Choice_
+    public partial record Proprietary : SettlementTransactionCondition41Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Prtry")]

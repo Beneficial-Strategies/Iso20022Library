@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeniedStatus17Choice
     [IsoId("__pmdqTw9EeW3QqUkIQtIUA")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : DeniedStatus17Choice_
+    public partial record Reason : DeniedStatus17Choice_
     {
         /// <summary>
         /// Specifies the reason why the request has a denied status.

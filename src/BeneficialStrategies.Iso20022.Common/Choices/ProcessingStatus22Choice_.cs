@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_2zEPMf7rEeCvPoRGOxRobQ")]
     [DisplayName("Processing Status 22 Choice")]
-    public abstract record ProcessingStatus22Choice_ { }
+    public abstract partial record ProcessingStatus22Choice_ { }
 }

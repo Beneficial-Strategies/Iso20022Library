@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_-5gGQTqkEeWyoP0PbocV1Q")]
     [DisplayName("Legal Framework 3 Choice")]
-    public abstract record LegalFramework3Choice_ { }
+    public abstract partial record LegalFramework3Choice_ { }
 }

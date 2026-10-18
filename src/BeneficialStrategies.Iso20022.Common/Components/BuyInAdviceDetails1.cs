@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fGNv0ZwREeqtp-LOti013g")]
 [DisplayName("Buy In Advice Details")]
-public record BuyInAdviceDetails1
+public partial record BuyInAdviceDetails1
 {
     /// <summary>
     /// References of the failing transaction.

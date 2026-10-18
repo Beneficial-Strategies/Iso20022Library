@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_U0fAstp-Ed-ak6NoX_4Aeg_330240032")]
     [DisplayName("Transfer Cancellation Rejected Status 1 Choice")]
-    public abstract record TransferCancellationRejectedStatus1Choice_ { }
+    public abstract partial record TransferCancellationRejectedStatus1Choice_ { }
 }

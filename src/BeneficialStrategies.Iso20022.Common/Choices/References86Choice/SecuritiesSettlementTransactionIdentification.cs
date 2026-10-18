@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References86Choice
     /// <summary>Specifies the securities settlement transaction identification.</summary>
     [IsoId("51e8fcea-4a11-4244-bfb4-bcf488ca3288")]
     [DisplayName("Securities Settlement Transaction Identification")]
-    public record SecuritiesSettlementTransactionIdentification : References86Choice_
+    public partial record SecuritiesSettlementTransactionIdentification : References86Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("SctiesSttlmTxId")]

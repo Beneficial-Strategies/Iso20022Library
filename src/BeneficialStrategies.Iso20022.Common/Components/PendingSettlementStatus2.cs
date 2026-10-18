@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RRPjdtp-Ed-ak6NoX_4Aeg_-685618546")]
 [DisplayName("Pending Settlement Status")]
-public record PendingSettlementStatus2
+public partial record PendingSettlementStatus2
 {
     /// <summary>
     /// Reason for the settlement pending status.

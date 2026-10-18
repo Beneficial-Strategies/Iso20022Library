@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References86Choice
     /// <summary>Specifies the account servicer transaction identification.</summary>
     [IsoId("3d992178-443c-4f4a-af1f-c43af8b1ed30")]
     [DisplayName("Account Servicer Transaction Identification")]
-    public record AccountServicerTransactionIdentification : References86Choice_
+    public partial record AccountServicerTransactionIdentification : References86Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("AcctSvcrTxId")]

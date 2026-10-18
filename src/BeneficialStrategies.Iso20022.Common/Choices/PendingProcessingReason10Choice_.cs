@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_MpK08TqdEeWyoP0PbocV1Q")]
     [DisplayName("Pending Processing Reason 10 Choice")]
-    public abstract record PendingProcessingReason10Choice_ { }
+    public abstract partial record PendingProcessingReason10Choice_ { }
 }

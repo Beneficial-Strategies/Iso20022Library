@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_93NYiYftEeevKP8c-ilVhA")]
 [DisplayName("Account")]
-public record Account24
+public partial record Account24
 {
     /// <summary>
     /// Unique and unambiguous identification for the account between the account owner and the account servicer.

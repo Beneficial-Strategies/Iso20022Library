@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus1Choice
     /// </summary>
     [IsoId("_UVfXmNp-Ed-ak6NoX_4Aeg_-1298289034")]
     [DisplayName("Pending Cancellation")]
-    public record PendingCancellation : ProcessingStatus1Choice_
+    public partial record PendingCancellation : ProcessingStatus1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("PdgCxl")]

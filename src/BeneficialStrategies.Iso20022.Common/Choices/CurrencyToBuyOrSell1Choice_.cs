@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QsvIMdp-Ed-ak6NoX_4Aeg_-947619938")]
     [DisplayName("Currency To Buy Or Sell 1 Choice")]
-    public abstract record CurrencyToBuyOrSell1Choice_ { }
+    public abstract partial record CurrencyToBuyOrSell1Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mW7mF5NBEemQB_8XA98K0Q")]
 [DisplayName("Other Asset")]
-public record OtherAsset2
+public partial record OtherAsset2
 {
     /// <summary>
     /// Type of asset.

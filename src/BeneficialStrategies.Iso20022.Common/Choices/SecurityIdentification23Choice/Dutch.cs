@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification23Choice
     /// </summary>
     [IsoId("_CSq4RSGQEeW7gKYhAMEFCw")]
     [DisplayName("Dutch")]
-    public record Dutch : SecurityIdentification23Choice_
+    public partial record Dutch : SecurityIdentification23Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

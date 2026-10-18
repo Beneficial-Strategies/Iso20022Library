@@ -11,5 +11,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(PairedOffQuantity), nameof(PairedOffQuantity))]
     [KnownType(typeof(TurnedQuantity))]
     [JsonDerivedType(typeof(TurnedQuantity), nameof(TurnedQuantity))]
-    public abstract record PairedOrTurnedQuantity7Choice_;
+    public abstract partial record PairedOrTurnedQuantity7Choice_;
 }

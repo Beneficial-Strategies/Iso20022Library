@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneratedReasons1Choice
     /// </summary>
     [IsoId("_UYxVFtp-Ed-ak6NoX_4Aeg_-1972160100")]
     [DisplayName("Code")]
-    public record Code : GeneratedReasons1Choice_
+    public partial record Code : GeneratedReasons1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

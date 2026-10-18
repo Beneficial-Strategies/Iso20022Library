@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References46Choice
     /// </summary>
     [IsoId("_2ThUszt4EeW638lNyHKv7A")]
     [DisplayName("Common Identification")]
-    public record CommonIdentification : References46Choice_
+    public partial record CommonIdentification : References46Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

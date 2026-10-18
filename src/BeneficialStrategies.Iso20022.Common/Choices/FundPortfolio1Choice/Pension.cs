@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio1Choice
     [IsoId("_vbA3IE4HEeiQHa-q1Uephw")]
     [DisplayName("Pension")]
     [IsoXmlTag("Pnsn")]
-    public record Pension : FundPortfolio1Choice_
+    public partial record Pension : FundPortfolio1Choice_
     {
         /// <summary>
         /// Identification of the pension policy, plan or scheme.

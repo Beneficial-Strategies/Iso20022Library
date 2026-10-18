@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References61Choice
     [IsoId("_kuQbcUHOEeazV4RAqPV71g")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
-    public record RelatedReference : References61Choice_
+    public partial record RelatedReference : References61Choice_
     {
         /// <summary>
         /// Reference issued by a party to identify an instruction, transaction or a message.

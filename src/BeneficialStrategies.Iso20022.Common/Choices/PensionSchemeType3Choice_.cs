@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_XUKNoelqEeuvhrZwLF0fDg")]
     [DisplayName("Pension Scheme Type 3 Choice")]
-    public abstract record PensionSchemeType3Choice_ { }
+    public abstract partial record PensionSchemeType3Choice_ { }
 }

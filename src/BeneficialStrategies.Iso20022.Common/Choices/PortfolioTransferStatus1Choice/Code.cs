@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PortfolioTransferStatus1Choice
     /// </summary>
     [IsoId("_BJu8wa3EEeeBVbuVcoH9Nw")]
     [DisplayName("Code")]
-    public record Code : PortfolioTransferStatus1Choice_
+    public partial record Code : PortfolioTransferStatus1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

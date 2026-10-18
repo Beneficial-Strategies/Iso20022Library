@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reporting10Choice
     /// </summary>
     [IsoId("_pBlssdB5EeihG9bKfarOOA")]
     [DisplayName("Code")]
-    public record Code : Reporting10Choice_
+    public partial record Code : Reporting10Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

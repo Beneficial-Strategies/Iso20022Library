@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LetterOfGuarantee5Choice
     [IsoId("_6ScRj5NLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : LetterOfGuarantee5Choice_
+    public partial record Proprietary : LetterOfGuarantee5Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

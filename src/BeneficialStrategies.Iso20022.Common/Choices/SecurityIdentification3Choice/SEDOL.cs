@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification3Choice
     /// </summary>
     [IsoId("_Qdr_kdp-Ed-ak6NoX_4Aeg_1796754500")]
     [DisplayName("SEDOL")]
-    public record SEDOL : SecurityIdentification3Choice_
+    public partial record SEDOL : SecurityIdentification3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

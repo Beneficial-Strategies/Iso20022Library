@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneralInvestmentAccountType2Cho
     /// </summary>
     [IsoId("_4Xg9MZNuEembCsVG-3f_AA")]
     [DisplayName("Code")]
-    public record Code : GeneralInvestmentAccountType2Choice_
+    public partial record Code : GeneralInvestmentAccountType2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

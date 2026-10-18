@@ -31,5 +31,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_bClDsekGEemm4qhb2yFPOw")]
     [DisplayName("Portfolio Transfer Status 2 Choice")]
-    public abstract record PortfolioTransferStatus2Choice_ { }
+    public abstract partial record PortfolioTransferStatus2Choice_ { }
 }

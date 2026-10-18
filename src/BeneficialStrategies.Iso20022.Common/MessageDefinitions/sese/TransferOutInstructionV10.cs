@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 )]
 [IsoId("f32bbd62-3b8d-47b1-b0d0-0f810e0efd68")]
 [DisplayName("Transfer Out Instruction V10")]
-public record TransferOutInstructionV10 : IOuterRecord
+public partial record TransferOutInstructionV10 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

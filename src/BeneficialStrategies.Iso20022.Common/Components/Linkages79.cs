@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("e4b43370-aa8a-4163-a51a-8816d9b059ff")]
 [DisplayName("Linkages79")]
-public record Linkages79
+public partial record Linkages79
 {
     /// <summary>
     /// Specifies the type of link and if the link is forward, backward or can be both.

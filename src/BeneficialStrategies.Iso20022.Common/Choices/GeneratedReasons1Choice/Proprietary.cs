@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneratedReasons1Choice
     [IsoId("_UYxVF9p-Ed-ak6NoX_4Aeg_-1972160083")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : GeneratedReasons1Choice_
+    public partial record Proprietary : GeneratedReasons1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

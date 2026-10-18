@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnmatchedReason25Choice
     /// </summary>
     [IsoId("_6BIel5NLEeWGlc8L7oPDIg")]
     [DisplayName("Code")]
-    public record Code : UnmatchedReason25Choice_
+    public partial record Code : UnmatchedReason25Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

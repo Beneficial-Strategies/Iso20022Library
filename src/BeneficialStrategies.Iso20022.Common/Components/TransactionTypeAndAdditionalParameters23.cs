@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AaX-gYVtEe-Pv9KR9bv9IA")]
 [DisplayName("Transaction Type And Additional Parameters23")]
-public record TransactionTypeAndAdditionalParameters23
+public partial record TransactionTypeAndAdditionalParameters23
 {
     /// <summary>
     /// Account Owner Transaction Identification.

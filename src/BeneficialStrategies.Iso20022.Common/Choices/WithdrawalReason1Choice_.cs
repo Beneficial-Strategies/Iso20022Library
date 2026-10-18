@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_NMNN8E7XEeifNrXGwadPmg")]
     [DisplayName("Withdrawal Reason 1 Choice")]
-    public abstract record WithdrawalReason1Choice_ { }
+    public abstract partial record WithdrawalReason1Choice_ { }
 }

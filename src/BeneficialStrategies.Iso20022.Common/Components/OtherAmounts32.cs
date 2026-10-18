@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-4p5Azp8EeWVrPy0StzzSg")]
 [DisplayName("Other Amounts")]
-public record OtherAmounts32
+public partial record OtherAmounts32
 {
     /// <summary>
     /// Interest amount that has accrued in between coupon payment periods.

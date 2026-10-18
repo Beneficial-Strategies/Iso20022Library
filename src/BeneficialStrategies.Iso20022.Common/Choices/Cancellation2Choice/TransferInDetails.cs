@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cancellation2Choice
     [IsoId("_OFsU3Bg2EeK-_89we2b-bA")]
     [DisplayName("Transfer In Details")]
     [IsoXmlTag("TrfInDtls")]
-    public record TransferInDetails : Cancellation2Choice_
+    public partial record TransferInDetails : Cancellation2Choice_
     {
         /// <summary>
         /// General information related to the transfer of a financial instrument.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReversedStatus2Choice
     /// </summary>
     [IsoId("_bUFeJyY5EeW_ZNn8gbfY7Q")]
     [DisplayName("No Specified Reason")]
-    public record NoSpecifiedReason : ReversedStatus2Choice_
+    public partial record NoSpecifiedReason : ReversedStatus2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

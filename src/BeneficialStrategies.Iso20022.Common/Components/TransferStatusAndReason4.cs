@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_gd6JkSY3EeW_ZNn8gbfY7Q")]
 [DisplayName("Transfer Status And Reason")]
-public record TransferStatusAndReason4
+public partial record TransferStatusAndReason4
 {
     /// <summary>
     /// Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.

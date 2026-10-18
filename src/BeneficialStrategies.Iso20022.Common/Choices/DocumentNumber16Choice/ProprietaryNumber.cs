@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentNumber16Choice
     [IsoId("_6GW815NLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary Number")]
     [IsoXmlTag("PrtryNb")]
-    public record ProprietaryNumber : DocumentNumber16Choice_
+    public partial record ProprietaryNumber : DocumentNumber16Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

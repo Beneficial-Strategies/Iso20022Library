@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AD08MYVsEe-Pv9KR9bv9IA")]
 [DisplayName("Transaction Type And Additional Parameters21")]
-public record TransactionTypeAndAdditionalParameters21
+public partial record TransactionTypeAndAdditionalParameters21
 {
     /// <summary>
     /// Securities Financing Transaction Type.

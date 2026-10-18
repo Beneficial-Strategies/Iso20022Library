@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_uHXTcYVnEe-Pv9KR9bv9IA")]
 [DisplayName("Settlement Type And Additional Parameters23")]
-public record SettlementTypeAndAdditionalParameters23
+public partial record SettlementTypeAndAdditionalParameters23
 {
     /// <summary>
     /// Securities Movement Type.

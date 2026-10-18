@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cancellation6Choice
     [IsoId("_r0ZQURwnEeOIveEnnb_1-A")]
     [DisplayName("Cancellation By Transfer Instruction Details")]
     [IsoXmlTag("CxlByTrfInstrDtls")]
-    public record CancellationByTransferInstructionDetails : Cancellation6Choice_
+    public partial record CancellationByTransferInstructionDetails : Cancellation6Choice_
     {
         /// <summary>
         /// Information identifying the primary individual investor, eg, name, address, social security number and date of birth.

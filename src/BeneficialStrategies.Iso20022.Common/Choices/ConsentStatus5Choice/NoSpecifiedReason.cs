@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConsentStatus5Choice
     /// </summary>
     [IsoId("_Vl2wMZNSEeWGlc8L7oPDIg")]
     [DisplayName("No Specified Reason")]
-    public record NoSpecifiedReason : ConsentStatus5Choice_
+    public partial record NoSpecifiedReason : ConsentStatus5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

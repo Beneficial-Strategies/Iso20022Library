@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Counterparty10Choice
     [IsoId("_5myFCpNLEeWGlc8L7oPDIg")]
     [DisplayName("Buyer")]
     [IsoXmlTag("Buyr")]
-    public record Buyer : Counterparty10Choice_
+    public partial record Buyer : Counterparty10Choice_
     {
         /// <summary>
         /// Identification of the party.

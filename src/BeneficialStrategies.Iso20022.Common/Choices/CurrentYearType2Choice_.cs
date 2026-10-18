@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_3f6cY0XfEeGY6MkiuzuPOA_-540956173")]
     [DisplayName("Current Year Type 2 Choice")]
-    public abstract record CurrentYearType2Choice_ { }
+    public abstract partial record CurrentYearType2Choice_ { }
 }

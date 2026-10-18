@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_qIKqe_fYEeiNZp_PtLohLw")]
     [DisplayName("Securities Transaction Type 55 Choice")]
-    public abstract record SecuritiesTransactionType55Choice_ { }
+    public abstract partial record SecuritiesTransactionType55Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingStatus2Choice
     [IsoId("_UaQi0Np-Ed-ak6NoX_4Aeg_1375873669")]
     [DisplayName("Matched")]
     [IsoXmlTag("Mtchd")]
-    public record Matched : MatchingStatus2Choice_
+    public partial record Matched : MatchingStatus2Choice_
     {
         /// <summary>
         /// Indicates that there is no reason available or to report.

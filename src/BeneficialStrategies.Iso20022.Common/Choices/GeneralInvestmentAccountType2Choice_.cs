@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_4CGG0ZNuEembCsVG-3f_AA")]
     [DisplayName("General Investment Account Type 2 Choice")]
-    public abstract record GeneralInvestmentAccountType2Choice_ { }
+    public abstract partial record GeneralInvestmentAccountType2Choice_ { }
 }

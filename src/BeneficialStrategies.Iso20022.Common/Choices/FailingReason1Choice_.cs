@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_UZqs8Np-Ed-ak6NoX_4Aeg_-144637934")]
     [DisplayName("Failing Reason 1 Choice")]
-    public abstract record FailingReason1Choice_ { }
+    public abstract partial record FailingReason1Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0chdGAlIEeGATtfOBToyew_-1939889920")]
 [DisplayName("Transaction Details")]
-public record TransactionDetails41
+public partial record TransactionDetails41
 {
     /// <summary>
     /// Unambiguous identification of the transaction as known by the account owner (or the instructing party managing the account).

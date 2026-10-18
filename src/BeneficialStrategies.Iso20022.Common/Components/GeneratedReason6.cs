@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6d7vSZNLEeWGlc8L7oPDIg")]
 [DisplayName("Generated Reason")]
-public record GeneratedReason6
+public partial record GeneratedReason6
 {
     /// <summary>
     /// Specifies the reason why the transaction was generated.

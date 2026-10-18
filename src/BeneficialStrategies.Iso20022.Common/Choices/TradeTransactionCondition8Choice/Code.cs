@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeTransactionCondition8Choice
     /// </summary>
     [IsoId("_P2iDk0c9EeaBWtcfqEyXyw")]
     [DisplayName("Code")]
-    public record Code : TradeTransactionCondition8Choice_
+    public partial record Code : TradeTransactionCondition8Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

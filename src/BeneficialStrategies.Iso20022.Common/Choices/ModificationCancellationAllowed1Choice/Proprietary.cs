@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationCancellationAllowed1
     [IsoId("_Qt7bBNp-Ed-ak6NoX_4Aeg_1213217598")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : ModificationCancellationAllowed1Choice_
+    public partial record Proprietary : ModificationCancellationAllowed1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

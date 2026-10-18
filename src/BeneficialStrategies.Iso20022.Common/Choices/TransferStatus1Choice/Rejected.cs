@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus1Choice
     /// </summary>
     [IsoId("_o1CqrBwkEeOIveEnnb_1-A")]
     [DisplayName("Rejected")]
-    public record Rejected : TransferStatus1Choice_
+    public partial record Rejected : TransferStatus1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Rjctd")]

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingStatus20Choice
     [IsoId("_0k3gwwlIEeGATtfOBToyew_-935306155")]
     [DisplayName("Forwarded")]
     [IsoXmlTag("Fwdd")]
-    public record Forwarded : PendingStatus20Choice_
+    public partial record Forwarded : PendingStatus20Choice_
     {
         /// <summary>
         /// Indicates that there is no reason available or to report.

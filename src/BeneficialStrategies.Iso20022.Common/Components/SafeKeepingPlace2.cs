@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JLYF8ZjwEeWn2ur3BXxtdg")]
 [DisplayName("Safe Keeping Place")]
-public record SafeKeepingPlace2
+public partial record SafeKeepingPlace2
 {
     /// <summary>
     /// Unique identification of the party.

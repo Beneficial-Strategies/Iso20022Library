@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Qu-j5tp-Ed-ak6NoX_4Aeg_1993902591")]
     [DisplayName("Payment Direction 2 Choice")]
-    public abstract record PaymentDirection2Choice_ { }
+    public abstract partial record PaymentDirection2Choice_ { }
 }

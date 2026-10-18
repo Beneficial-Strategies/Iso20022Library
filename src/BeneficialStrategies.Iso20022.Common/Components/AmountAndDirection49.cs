@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AWPRXTp9EeWVrPy0StzzSg")]
 [DisplayName("Amount And Direction")]
-public record AmountAndDirection49
+public partial record AmountAndDirection49
 {
     /// <summary>
     /// Amount of money in the cash entry.

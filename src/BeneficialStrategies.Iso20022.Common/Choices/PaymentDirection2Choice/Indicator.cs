@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentDirection2Choice
     /// </summary>
     [IsoId("_Qu-j59p-Ed-ak6NoX_4Aeg_1880063525")]
     [DisplayName("Indicator")]
-    public record Indicator : PaymentDirection2Choice_
+    public partial record Indicator : PaymentDirection2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

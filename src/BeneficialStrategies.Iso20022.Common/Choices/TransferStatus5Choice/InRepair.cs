@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus5Choice
     /// </summary>
     [IsoId("_WY1VR-ijEeuLe8v4JEtDDg")]
     [DisplayName("In Repair")]
-    public record InRepair : TransferStatus5Choice_
+    public partial record InRepair : TransferStatus5Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("InRpr")]

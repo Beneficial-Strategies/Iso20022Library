@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("bbf72b05-1174-4003-81ca-21f41f0b81f7")]
 [DisplayName("Portfolio Transfer14")]
-public record PortfolioTransfer14
+public partial record PortfolioTransfer14
 {
     /// <summary>
     /// Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party.

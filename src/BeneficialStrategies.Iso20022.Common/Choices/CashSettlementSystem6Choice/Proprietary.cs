@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashSettlementSystem6Choice
     /// <summary>Cash settlement system expressed as a proprietary code.</summary>
     [IsoId("_evTQ4ZZ1EfC2_67yGLymgA")]
     [DisplayName("Proprietary")]
-    public record Proprietary : CashSettlementSystem6Choice_
+    public partial record Proprietary : CashSettlementSystem6Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Prtry")]

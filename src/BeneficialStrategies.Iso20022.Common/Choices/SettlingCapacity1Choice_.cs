@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QwK2stp-Ed-ak6NoX_4Aeg_-342126272")]
     [DisplayName("Settling Capacity 1 Choice")]
-    public abstract record SettlingCapacity1Choice_ { }
+    public abstract partial record SettlingCapacity1Choice_ { }
 }

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LegalFramework4Choice
     /// </summary>
     [IsoId("_5mxdwJNLEeWGlc8L7oPDIg")]
     [DisplayName("Code")]
-    public record Code : LegalFramework4Choice_
+    public partial record Code : LegalFramework4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

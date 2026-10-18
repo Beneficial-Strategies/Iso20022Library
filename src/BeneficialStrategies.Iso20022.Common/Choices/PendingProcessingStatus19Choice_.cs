@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_qTGQXyAdEeuyDZ-ukt4YRg")]
     [DisplayName("Pending Processing Status 19 Choice")]
-    public abstract record PendingProcessingStatus19Choice_ { }
+    public abstract partial record PendingProcessingStatus19Choice_ { }
 }

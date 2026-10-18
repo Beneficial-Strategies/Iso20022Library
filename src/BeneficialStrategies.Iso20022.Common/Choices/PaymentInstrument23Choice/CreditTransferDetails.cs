@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument23Choice
     [IsoId("_iPPvEVNaEeijdq8ilaxyOA")]
     [DisplayName("Credit Transfer Details")]
     [IsoXmlTag("CdtTrfDtls")]
-    public record CreditTransferDetails : PaymentInstrument23Choice_
+    public partial record CreditTransferDetails : PaymentInstrument23Choice_
     {
         /// <summary>
         /// Party that owes an amount of money to the (ultimate) creditor. In the context of the payment model, the debtor is also the debit account owner.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_C5dKU4fuEeevKP8c-ilVhA")]
 [DisplayName("ISA Transfer")]
-public record ISATransfer29
+public partial record ISATransfer29
 {
     /// <summary>
     /// Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.

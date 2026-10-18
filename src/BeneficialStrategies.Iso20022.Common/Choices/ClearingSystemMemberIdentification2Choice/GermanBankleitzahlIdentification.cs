@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
     /// </summary>
     [IsoId("_TDF7ktp-Ed-ak6NoX_4Aeg_1989940790")]
     [DisplayName("German Bankleitzahl Identification")]
-    public record GermanBankleitzahlIdentification : ClearingSystemMemberIdentification2Choice_
+    public partial record GermanBankleitzahlIdentification : ClearingSystemMemberIdentification2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

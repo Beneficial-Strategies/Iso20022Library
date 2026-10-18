@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument63Choice
     [IsoId("_nj5gNaPvEemf4IaGqCtquA")]
     [DisplayName("Other Asset")]
     [IsoXmlTag("OthrAsst")]
-    public record OtherAsset : FinancialInstrument63Choice_
+    public partial record OtherAsset : FinancialInstrument63Choice_
     {
         /// <summary>
         /// Type of asset.

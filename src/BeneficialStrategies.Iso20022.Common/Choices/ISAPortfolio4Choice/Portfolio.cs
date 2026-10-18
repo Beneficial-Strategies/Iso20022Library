@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ISAPortfolio4Choice
     [IsoId("_1AA5A7NBEeewUI7-Tnew9A")]
     [DisplayName("Portfolio")]
     [IsoXmlTag("Prtfl")]
-    public record Portfolio : ISAPortfolio4Choice_
+    public partial record Portfolio : ISAPortfolio4Choice_
     {
         /// <summary>
         /// Additional information related to the portfolio.

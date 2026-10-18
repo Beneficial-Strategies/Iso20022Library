@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_6HWbpZNLEeWGlc8L7oPDIg")]
     [DisplayName("Accepted Reason 12 Choice")]
-    public abstract record AcceptedReason12Choice_ { }
+    public abstract partial record AcceptedReason12Choice_ { }
 }

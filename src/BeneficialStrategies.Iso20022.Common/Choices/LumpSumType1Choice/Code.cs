@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LumpSumType1Choice
     /// </summary>
     [IsoId("_GJThoLKdEeiXL6Ccd-oU8g")]
     [DisplayName("Code")]
-    public record Code : LumpSumType1Choice_
+    public partial record Code : LumpSumType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

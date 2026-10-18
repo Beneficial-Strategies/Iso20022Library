@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferUnmatchedStatus3Choice
     [IsoId("_eLXpySY4EeW_ZNn8gbfY7Q")]
     [DisplayName("Data Source Scheme")]
     [IsoXmlTag("DataSrcSchme")]
-    public record DataSourceScheme : TransferUnmatchedStatus3Choice_
+    public partial record DataSourceScheme : TransferUnmatchedStatus3Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

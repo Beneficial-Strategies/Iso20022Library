@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(SettlementTransactionCondition45Choice.Proprietary))]
     [JsonDerivedType(typeof(SettlementTransactionCondition45Choice.Code))]
     [JsonDerivedType(typeof(SettlementTransactionCondition45Choice.Proprietary))]
-    public abstract record SettlementTransactionCondition45Choice_
+    public abstract partial record SettlementTransactionCondition45Choice_
     {
     }
 }

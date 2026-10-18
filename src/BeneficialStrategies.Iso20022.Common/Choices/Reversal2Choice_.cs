@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_PsjTARg4EeK-_89we2b-bA")]
     [DisplayName("Reversal 2 Choice")]
-    public abstract record Reversal2Choice_ { }
+    public abstract partial record Reversal2Choice_ { }
 }

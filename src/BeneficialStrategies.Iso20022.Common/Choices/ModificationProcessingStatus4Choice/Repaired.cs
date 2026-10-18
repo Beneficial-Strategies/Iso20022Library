@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationProcessingStatus4Cho
     /// </summary>
     [IsoId("_gvJONVhgEeS8HfHHd4stCA")]
     [DisplayName("Repaired")]
-    public record Repaired : ModificationProcessingStatus4Choice_
+    public partial record Repaired : ModificationProcessingStatus4Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Rprd")]

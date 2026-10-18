@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 )]
 [IsoId("_1ejVMR8NEeWpZde3LQh6dg")]
 [DisplayName("Transfer In Instruction V")]
-public record TransferInInstructionV07 : IOuterRecord
+public partial record TransferInInstructionV07 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

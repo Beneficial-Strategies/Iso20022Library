@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingStatus64Choice
     /// </summary>
     [IsoId("_qTHeOSAdEeuyDZ-ukt4YRg")]
     [DisplayName("No Specified Reason")]
-    public record NoSpecifiedReason : PendingStatus64Choice_
+    public partial record NoSpecifiedReason : PendingStatus64Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatusOrStatement13Choice
     /// Status Advice.
     /// </summary>
     [DisplayName("Status Advice")]
-    public record StatusAdvice : StatusOrStatement13Choice_
+    public partial record StatusAdvice : StatusOrStatement13Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

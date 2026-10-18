@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_DbOakYfuEeevKP8c-ilVhA")]
 [DisplayName("Deliver Information")]
-public record DeliverInformation19
+public partial record DeliverInformation19
 {
     /// <summary>
     /// Party that delivers (transferor) securities to the receiving agent (transferee).

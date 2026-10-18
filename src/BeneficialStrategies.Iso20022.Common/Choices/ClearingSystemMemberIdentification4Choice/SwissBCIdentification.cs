@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
     /// </summary>
     [IsoId("_VwSCa7NIEeejueAciesPMA")]
     [DisplayName("Swiss BC Identification")]
-    public record SwissBCIdentification : ClearingSystemMemberIdentification4Choice_
+    public partial record SwissBCIdentification : ClearingSystemMemberIdentification4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

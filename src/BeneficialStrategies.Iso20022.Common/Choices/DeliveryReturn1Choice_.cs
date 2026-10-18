@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QuOV89p-Ed-ak6NoX_4Aeg_1305476197")]
     [DisplayName("Delivery Return 1 Choice")]
-    public abstract record DeliveryReturn1Choice_ { }
+    public abstract partial record DeliveryReturn1Choice_ { }
 }

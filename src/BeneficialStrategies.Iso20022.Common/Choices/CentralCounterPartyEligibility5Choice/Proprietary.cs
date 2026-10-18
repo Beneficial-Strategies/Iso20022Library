@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CentralCounterPartyEligibility5C
     [IsoId("_5m6oPZNLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : CentralCounterPartyEligibility5Choice_
+    public partial record Proprietary : CentralCounterPartyEligibility5Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

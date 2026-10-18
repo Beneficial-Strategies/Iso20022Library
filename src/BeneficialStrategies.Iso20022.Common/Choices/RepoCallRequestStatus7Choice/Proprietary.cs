@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RepoCallRequestStatus7Choice
     [IsoId("_3-jxcTp4EeWVrPy0StzzSg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : RepoCallRequestStatus7Choice_
+    public partial record Proprietary : RepoCallRequestStatus7Choice_
     {
         /// <summary>
         /// Proprietary identification of the status related to an instruction.

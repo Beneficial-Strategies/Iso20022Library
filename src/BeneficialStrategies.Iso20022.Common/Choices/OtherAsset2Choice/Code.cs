@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OtherAsset2Choice
     /// </summary>
     [IsoId("__RowIZNBEemQB_8XA98K0Q")]
     [DisplayName("Code")]
-    public record Code : OtherAsset2Choice_
+    public partial record Code : OtherAsset2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mLikAYV1Ee-Pv9KR9bv9IA")]
 [DisplayName("Other Amounts46")]
-public record OtherAmounts46
+public partial record OtherAmounts46
 {
     /// <summary>
     /// Accrued Interest Amount.

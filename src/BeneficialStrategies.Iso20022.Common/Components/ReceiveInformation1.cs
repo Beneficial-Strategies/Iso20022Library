@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VOajqtp-Ed-ak6NoX_4Aeg_299421149")]
 [DisplayName("Receive Information")]
-public record ReceiveInformation1
+public partial record ReceiveInformation1
 {
     /// <summary>
     /// Chain of parties involved in the settlement of a transaction.

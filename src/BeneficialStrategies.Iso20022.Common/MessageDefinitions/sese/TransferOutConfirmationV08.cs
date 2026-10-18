@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 )]
 [IsoId("_pI1q0YZLEeemXK0UETsSiA")]
 [DisplayName("Transfer Out Confirmation V")]
-public record TransferOutConfirmationV08 : IOuterRecord
+public partial record TransferOutConfirmationV08 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Restriction1Choice
     /// </summary>
     [IsoId("_QvuKwNp-Ed-ak6NoX_4Aeg_2094501438")]
     [DisplayName("Code")]
-    public record Code : Restriction1Choice_
+    public partial record Code : Restriction1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

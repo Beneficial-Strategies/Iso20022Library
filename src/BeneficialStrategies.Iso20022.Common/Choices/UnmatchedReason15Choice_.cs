@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_6f3HQSwiEeOEV5XHD-BKpw")]
     [DisplayName("Unmatched Reason 15 Choice")]
-    public abstract record UnmatchedReason15Choice_ { }
+    public abstract partial record UnmatchedReason15Choice_ { }
 }

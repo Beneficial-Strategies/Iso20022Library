@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingStatus32Choice
     [IsoId("_6d8XTZNLEeWGlc8L7oPDIg")]
     [DisplayName("Matched")]
     [IsoXmlTag("Mtchd")]
-    public record Matched : MatchingStatus32Choice_
+    public partial record Matched : MatchingStatus32Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reporting8Choice
     [IsoId("_5TJXLZNLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : Reporting8Choice_
+    public partial record Proprietary : Reporting8Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

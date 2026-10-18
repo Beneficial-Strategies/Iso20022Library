@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingProcessingStatus22Choice
     /// <summary>Specifies the reason of the pending processing status.</summary>
     [IsoId("_hCkDQaoZEfCG2_q2WT-90w")]
     [DisplayName("Reason")]
-    public record Reason : PendingProcessingStatus22Choice_
+    public partial record Reason : PendingProcessingStatus22Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Rsn")]

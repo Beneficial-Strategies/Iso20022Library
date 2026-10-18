@@ -23,5 +23,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(ResponseStatus6Choice.Pending), nameof(ResponseStatus6Choice.Pending))]
     [IsoId("_l8zcITzpEeWeNtT0s2RbkQ")]
     [DisplayName("Response Status 6 Choice")]
-    public abstract record ResponseStatus6Choice_ { }
+    public abstract partial record ResponseStatus6Choice_ { }
 }

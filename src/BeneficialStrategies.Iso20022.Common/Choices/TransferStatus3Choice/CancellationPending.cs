@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus3Choice
     /// </summary>
     [IsoId("_aeWNYVNUEeijdq8ilaxyOA")]
     [DisplayName("Cancellation Pending")]
-    public record CancellationPending : TransferStatus3Choice_
+    public partial record CancellationPending : TransferStatus3Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("CxlPdg")]

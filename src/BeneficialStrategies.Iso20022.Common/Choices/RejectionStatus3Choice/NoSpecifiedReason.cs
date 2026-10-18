@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionStatus3Choice
     /// </summary>
     [IsoId("_UVy5lNp-Ed-ak6NoX_4Aeg_68497547")]
     [DisplayName("No Specified Reason")]
-    public record NoSpecifiedReason : RejectionStatus3Choice_
+    public partial record NoSpecifiedReason : RejectionStatus3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

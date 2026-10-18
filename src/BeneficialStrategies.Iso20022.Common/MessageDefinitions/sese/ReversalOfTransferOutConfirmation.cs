@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 )]
 [IsoId("_pokg9tE5Ed-BzquC8wXy7w_938886633")]
 [DisplayName("Reversal Of Transfer Out Confirmation")]
-public record ReversalOfTransferOutConfirmation : IOuterRecord
+public partial record ReversalOfTransferOutConfirmation : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

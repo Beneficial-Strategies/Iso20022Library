@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_a6glUYYdEe-Pv9KR9bv9IA")]
 [DisplayName("Request Details31")]
-public record RequestDetails31
+public partial record RequestDetails31
 {
     /// <summary>
     /// Reference.

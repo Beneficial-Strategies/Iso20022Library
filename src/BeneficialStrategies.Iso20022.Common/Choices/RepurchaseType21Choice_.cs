@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RLA_kY-REeaVK-2bgpxeYw")]
     [DisplayName("Repurchase Type 21 Choice")]
-    public abstract record RepurchaseType21Choice_ { }
+    public abstract partial record RepurchaseType21Choice_ { }
 }

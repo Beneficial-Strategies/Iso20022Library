@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("0dc22d15-9813-4686-a02d-cbeab0b7131e")]
 [DisplayName("Fund Settlement Parameters24")]
-public record FundSettlementParameters24
+public partial record FundSettlementParameters24
 {
     /// <summary>
     /// Place where the securities are safe-kept, physically or notionally.

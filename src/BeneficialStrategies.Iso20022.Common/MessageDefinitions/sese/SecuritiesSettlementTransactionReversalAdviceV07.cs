@@ -34,7 +34,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 )]
 [IsoId("_kyDd8azxEeeBIMhGLpLUsQ")]
 [DisplayName("Securities Settlement Transaction Reversal Advice V")]
-public record SecuritiesSettlementTransactionReversalAdviceV07 : IOuterRecord
+public partial record SecuritiesSettlementTransactionReversalAdviceV07 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

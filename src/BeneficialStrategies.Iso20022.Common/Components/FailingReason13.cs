@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8xVDEYcTEe-FecylWsA1vA")]
 [DisplayName("Failing Reason13")]
-public record FailingReason13
+public partial record FailingReason13
 {
     /// <summary>
     /// Code.

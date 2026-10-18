@@ -53,5 +53,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_WDhzoeijEeuLe8v4JEtDDg")]
     [DisplayName("Transfer Status 5 Choice")]
-    public abstract record TransferStatus5Choice_ { }
+    public abstract partial record TransferStatus5Choice_ { }
 }

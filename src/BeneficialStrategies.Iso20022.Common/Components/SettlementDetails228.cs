@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zW2wYZaFEfC2_67yGLymgA")]
 [DisplayName("Settlement Details228")]
-public record SettlementDetails228
+public partial record SettlementDetails228
 {
     /// <summary>
     /// Specifies whether the transaction was executed with a high priority.

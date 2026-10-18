@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionType36Choic
     [IsoId("_1t-3OaUoEee4_75LDmHZiQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : SecuritiesTransactionType36Choice_
+    public partial record Proprietary : SecuritiesTransactionType36Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

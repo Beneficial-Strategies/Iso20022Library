@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification1Choice
     /// </summary>
     [IsoId("_VcIPhNp-Ed-ak6NoX_4Aeg_-371877997")]
     [DisplayName("CTA")]
-    public record CTA : SecurityIdentification1Choice_
+    public partial record CTA : SecurityIdentification1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

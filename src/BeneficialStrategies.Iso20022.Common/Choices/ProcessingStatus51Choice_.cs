@@ -56,5 +56,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_i1LiRznvEeWfSKvvZlhRKg")]
     [DisplayName("Processing Status 51 Choice")]
-    public abstract record ProcessingStatus51Choice_ { }
+    public abstract partial record ProcessingStatus51Choice_ { }
 }

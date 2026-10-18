@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_RQf8kNp-Ed-ak6NoX_4Aeg_1498754509")]
 [DisplayName("Transfer Cancellation Rejected Status")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record TransferCancellationRejectedStatus1
+public partial record TransferCancellationRejectedStatus1
 {
     /// <summary>
     /// Reason for the rejected status.

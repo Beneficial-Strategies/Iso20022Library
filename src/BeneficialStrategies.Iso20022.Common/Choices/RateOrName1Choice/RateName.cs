@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateOrName1Choice
     [IsoId("_Q-xTatp-Ed-ak6NoX_4Aeg_-1877843628")]
     [DisplayName("Rate Name")]
     [IsoXmlTag("RateNm")]
-    public record RateName : RateOrName1Choice_
+    public partial record RateName : RateOrName1Choice_
     {
         /// <summary>
         /// Entity that assigns the identification.

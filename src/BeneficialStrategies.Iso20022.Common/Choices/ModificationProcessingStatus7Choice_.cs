@@ -46,5 +46,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_1bR8UTp4EeWVrPy0StzzSg")]
     [DisplayName("Modification Processing Status 7 Choice")]
-    public abstract record ModificationProcessingStatus7Choice_ { }
+    public abstract partial record ModificationProcessingStatus7Choice_ { }
 }

@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_zWwOFTqfEeWyoP0PbocV1Q")]
     [DisplayName("Registration 10 Choice")]
-    public abstract record Registration10Choice_ { }
+    public abstract partial record Registration10Choice_ { }
 }

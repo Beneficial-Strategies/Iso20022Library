@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cancellation5Choice
     [IsoId("_GxfqExYAEeOBE-jZfcm4KQ")]
     [DisplayName("Transfer In Details")]
     [IsoXmlTag("TrfInDtls")]
-    public record TransferInDetails : Cancellation5Choice_
+    public partial record TransferInDetails : Cancellation5Choice_
     {
         /// <summary>
         /// Requested date at which the instructing party places the transfer instruction.

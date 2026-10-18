@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification23Choice
     /// </summary>
     [IsoId("_CSq4NyGQEeW7gKYhAMEFCw")]
     [DisplayName("CUSIP")]
-    public record CUSIP : SecurityIdentification23Choice_
+    public partial record CUSIP : SecurityIdentification23Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("__-aJkTqIEeWVrPy0StzzSg")]
     [DisplayName("Central Counter Party Eligibility 4 Choice")]
-    public abstract record CentralCounterPartyEligibility4Choice_ { }
+    public abstract partial record CentralCounterPartyEligibility4Choice_ { }
 }

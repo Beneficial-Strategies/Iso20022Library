@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus14Choice
     [IsoId("_KXLkV_I4Ed-dOvqmSLSz5g")]
     [DisplayName("Completed")]
     [IsoXmlTag("Cmpltd")]
-    public record Completed : ProcessingStatus14Choice_
+    public partial record Completed : ProcessingStatus14Choice_
     {
         /// <summary>
         /// Indicates that there is no reason available or to report.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus1Choice
     [IsoId("_o1CqqhwkEeOIveEnnb_1-A")]
     [DisplayName("Unmatched")]
     [IsoXmlTag("Umtchd")]
-    public record Unmatched : TransferStatus1Choice_
+    public partial record Unmatched : TransferStatus1Choice_
     {
         /// <summary>
         /// Indicates that there is no reason available or to report.

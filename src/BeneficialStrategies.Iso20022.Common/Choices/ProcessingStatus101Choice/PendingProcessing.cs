@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus101Choice
     /// <summary>Specifies the pending processing status.</summary>
     [IsoId("5631332f-1b84-43d3-9fd3-2a6be8e40c2b")]
     [DisplayName("Pending Processing")]
-    public record PendingProcessing : ProcessingStatus101Choice_
+    public partial record PendingProcessing : ProcessingStatus101Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("PdgPrcg")]

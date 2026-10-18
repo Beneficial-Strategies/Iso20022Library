@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateFormat42Choice
     /// </summary>
     [IsoId("_xXmZwpBrEeaGiLsfv6g8MA")]
     [DisplayName("Year Month")]
-    public record YearMonth : DateFormat42Choice_
+    public partial record YearMonth : DateFormat42Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

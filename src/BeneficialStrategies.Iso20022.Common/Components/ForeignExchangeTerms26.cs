@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_aDZy8SSEEeWdoOFYMt-Lzw")]
 [DisplayName("Foreign Exchange Terms")]
-public record ForeignExchangeTerms26
+public partial record ForeignExchangeTerms26
 {
     /// <summary>
     /// Cash amount resulting from a foreign exchange trade.

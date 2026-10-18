@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConsentOrRejectionReason2Choice
     [IsoId("_0fzakQlIEeGATtfOBToyew_-406067479")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : ConsentOrRejectionReason2Choice_
+    public partial record Proprietary : ConsentOrRejectionReason2Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

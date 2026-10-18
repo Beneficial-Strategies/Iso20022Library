@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
     /// </summary>
     [IsoId("_VwSCfbNIEeejueAciesPMA")]
     [DisplayName("Spanish Domestic Interbanking Identification")]
-    public record SpanishDomesticInterbankingIdentification
+    public partial record SpanishDomesticInterbankingIdentification
         : ClearingSystemMemberIdentification4Choice_
     {
         /// <summary>

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RQNBpdp-Ed-ak6NoX_4Aeg_-544756899")]
 [DisplayName("Transfer Unmatched Status")]
-public record TransferUnmatchedStatus2
+public partial record TransferUnmatchedStatus2
 {
     /// <summary>
     /// Indicates that there is no reason available or to report.

@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Reporting2Choice.Proprietary), nameof(Reporting2Choice.Proprietary))]
     [IsoId("_Qs45Mtp-Ed-ak6NoX_4Aeg_-349062494")]
     [DisplayName("Reporting 2 Choice")]
-    public abstract record Reporting2Choice_ { }
+    public abstract partial record Reporting2Choice_ { }
 }

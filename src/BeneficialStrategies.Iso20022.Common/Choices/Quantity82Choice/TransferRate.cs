@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity82Choice
     /// <summary>Specifies the transfer rate.</summary>
     [IsoId("ee5ca458-191a-41e0-be61-3a033e1e3974")]
     [DisplayName("Transfer Rate")]
-    public record TransferRate : Quantity82Choice_
+    public partial record TransferRate : Quantity82Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("TrfRate")]

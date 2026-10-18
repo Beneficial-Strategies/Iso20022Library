@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Tracking4Choice
     /// </summary>
     [IsoId("_YrWeATtFEeWRTLSN0i0tng")]
     [DisplayName("Indicator")]
-    public record Indicator : Tracking4Choice_
+    public partial record Indicator : Tracking4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

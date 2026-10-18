@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingSettlementStatusChoice
     [IsoId("_U1POptp-Ed-ak6NoX_4Aeg_-485496729")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : PendingSettlementStatusChoice_
+    public partial record Reason : PendingSettlementStatusChoice_
     {
         /// <summary>
         /// Reason for a settlement pending status in structured form.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateOrName1Choice
     [IsoId("_Q-xTadp-Ed-ak6NoX_4Aeg_-1848289996")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
-    public record Rate : RateOrName1Choice_
+    public partial record Rate : RateOrName1Choice_
     {
         /// <summary>
         /// Indicates the sign of the rate.

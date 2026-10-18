@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcknowledgedAcceptedStatus27Choi
     [IsoId("_6BK6zZNLEeWGlc8L7oPDIg")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : AcknowledgedAcceptedStatus27Choice_
+    public partial record Reason : AcknowledgedAcceptedStatus27Choice_
     {
         /// <summary>
         /// Specifies additional information about the processed instruction.

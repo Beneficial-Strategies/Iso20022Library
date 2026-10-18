@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_REBa0E4YEeiQHa-q1Uephw")]
     [DisplayName("Pension Transfer Scope 1 Choice")]
-    public abstract record PensionTransferScope1Choice_ { }
+    public abstract partial record PensionTransferScope1Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PensionSchemeType2Choice
     [IsoId("_CZ5YEzOUEeqLMcD_sEa8Xw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : PensionSchemeType2Choice_
+    public partial record Proprietary : PensionSchemeType2Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

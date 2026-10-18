@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PortfolioTransferStatus2Choice
     [IsoId("_5VZh8ukGEemm4qhb2yFPOw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : PortfolioTransferStatus2Choice_
+    public partial record Proprietary : PortfolioTransferStatus2Choice_
     {
         /// <summary>
         /// Proprietary identification of the status related to an instruction.

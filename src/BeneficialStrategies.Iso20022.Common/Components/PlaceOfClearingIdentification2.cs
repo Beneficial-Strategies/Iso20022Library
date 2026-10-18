@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FkYpQdXUEeiN28wlpBQScw")]
 [DisplayName("Place Of Clearing Identification")]
-public record PlaceOfClearingIdentification2
+public partial record PlaceOfClearingIdentification2
 {
     /// <summary>
     /// Unique identification of the place of clearing.

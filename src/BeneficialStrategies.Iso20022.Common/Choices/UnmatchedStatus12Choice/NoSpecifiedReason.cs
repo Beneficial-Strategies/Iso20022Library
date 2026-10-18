@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnmatchedStatus12Choice
     /// </summary>
     [IsoId("_q5xL4SwREeOEV5XHD-BKpw")]
     [DisplayName("No Specified Reason")]
-    public record NoSpecifiedReason : UnmatchedStatus12Choice_
+    public partial record NoSpecifiedReason : UnmatchedStatus12Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

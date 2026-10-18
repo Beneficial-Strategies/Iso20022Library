@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_N2Aj4LToEeiWMOV-LTfmAw")]
 [DisplayName("Benefit Crystallisation Event")]
-public record BenefitCrystallisationEvent1
+public partial record BenefitCrystallisationEvent1
 {
     /// <summary>
     /// Type of crystallisation event.

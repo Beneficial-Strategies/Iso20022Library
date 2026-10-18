@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yr9NITzaEeWeNtT0s2RbkQ")]
 [DisplayName("Settlement Type And Additional Parameters")]
-public record SettlementTypeAndAdditionalParameters13
+public partial record SettlementTypeAndAdditionalParameters13
 {
     /// <summary>
     /// Unique reference agreed upon by the two trade counterparties to identify the trade.

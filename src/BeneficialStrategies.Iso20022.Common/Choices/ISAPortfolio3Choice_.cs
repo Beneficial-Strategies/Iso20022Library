@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(ISAPortfolio3Choice.Portfolio), nameof(ISAPortfolio3Choice.Portfolio))]
     [IsoId("_3fnhcEXfEeGY6MkiuzuPOA_-1372155354")]
     [DisplayName("ISA Portfolio 3 Choice")]
-    public abstract record ISAPortfolio3Choice_ { }
+    public abstract partial record ISAPortfolio3Choice_ { }
 }

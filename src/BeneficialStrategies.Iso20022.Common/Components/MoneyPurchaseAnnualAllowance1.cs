@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YYAkcFK7EeiSDqv62fL07g")]
 [DisplayName("Money Purchase Annual Allowance")]
-public record MoneyPurchaseAnnualAllowance1
+public partial record MoneyPurchaseAnnualAllowance1
 {
     /// <summary>
     /// Indicates whether the annual allowance has been triggered.

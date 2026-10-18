@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_0k3gwglIEeGATtfOBToyew_-1102038135")]
     [DisplayName("Pending Status 20 Choice")]
-    public abstract record PendingStatus20Choice_ { }
+    public abstract partial record PendingStatus20Choice_ { }
 }

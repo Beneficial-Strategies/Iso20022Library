@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcknowledgedAcceptedStatus33Choi
     [IsoId("_HwRDeZwZEeqtp-LOti013g")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : AcknowledgedAcceptedStatus33Choice_
+    public partial record Reason : AcknowledgedAcceptedStatus33Choice_
     {
         /// <summary>
         /// Reason provided for the status.

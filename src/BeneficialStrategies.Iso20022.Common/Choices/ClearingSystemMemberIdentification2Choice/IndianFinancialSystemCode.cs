@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
     /// </summary>
     [IsoId("_TDPFgtp-Ed-ak6NoX_4Aeg_2074902177")]
     [DisplayName("Indian Financial System Code")]
-    public record IndianFinancialSystemCode : ClearingSystemMemberIdentification2Choice_
+    public partial record IndianFinancialSystemCode : ClearingSystemMemberIdentification2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

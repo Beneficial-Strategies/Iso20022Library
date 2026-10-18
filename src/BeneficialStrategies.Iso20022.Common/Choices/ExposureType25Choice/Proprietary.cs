@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExposureType25Choice
     /// Proprietary.
     /// </summary>
     [DisplayName("Proprietary")]
-    public record Proprietary : ExposureType25Choice_
+    public partial record Proprietary : ExposureType25Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

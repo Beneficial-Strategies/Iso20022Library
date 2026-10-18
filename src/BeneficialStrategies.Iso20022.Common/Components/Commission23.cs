@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hLSRESSDEeWdoOFYMt-Lzw")]
 [DisplayName("Commission")]
-public record Commission23
+public partial record Commission23
 {
     /// <summary>
     /// Service for which the commission is asked or paid.

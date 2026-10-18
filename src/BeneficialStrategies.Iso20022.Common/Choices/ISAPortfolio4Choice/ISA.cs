@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ISAPortfolio4Choice
     [IsoId("_1AA5AbNBEeewUI7-Tnew9A")]
     [DisplayName("ISA")]
     [IsoXmlTag("ISA")]
-    public record ISA : ISAPortfolio4Choice_
+    public partial record ISA : ISAPortfolio4Choice_
     {
         /// <summary>
         /// ISA that was issued during the current fiscal year.

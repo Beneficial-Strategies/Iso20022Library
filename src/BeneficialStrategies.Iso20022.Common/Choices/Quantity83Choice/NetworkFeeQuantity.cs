@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity83Choice
     /// <summary>Specifies the network fee quantity.</summary>
     [IsoId("_aUJLkZZeEfCShM_qO0U4ig")]
     [DisplayName("Network Fee Quantity")]
-    public record NetworkFeeQuantity : Quantity83Choice_
+    public partial record NetworkFeeQuantity : Quantity83Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("NtwkFeeQty")]

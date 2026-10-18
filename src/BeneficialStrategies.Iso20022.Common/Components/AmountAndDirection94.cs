@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_I5FT0cvGEeihG9bKfarOOA")]
 [DisplayName("Amount And Direction")]
-public record AmountAndDirection94
+public partial record AmountAndDirection94
 {
     /// <summary>
     /// Indicates whether the net proceeds include interest accrued on the financial instrument.

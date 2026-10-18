@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_bM0XwFKiEeiSDqv62fL07g")]
     [DisplayName("Drawdown Status 1 Choice")]
-    public abstract record DrawdownStatus1Choice_ { }
+    public abstract partial record DrawdownStatus1Choice_ { }
 }

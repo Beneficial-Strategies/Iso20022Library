@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus44Choice
     /// </summary>
     [IsoId("_iZ0nV1hgEeS8HfHHd4stCA")]
     [DisplayName("Pending")]
-    public record Pending : ProcessingStatus44Choice_
+    public partial record Pending : ProcessingStatus44Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Pdg")]

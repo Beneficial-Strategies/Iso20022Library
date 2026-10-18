@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_EFd7ATqIEeWVrPy0StzzSg")]
     [DisplayName("Restriction 5 Choice")]
-    public abstract record Restriction5Choice_ { }
+    public abstract partial record Restriction5Choice_ { }
 }

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification3Choice
     /// </summary>
     [IsoId("_Qd1wkdp-Ed-ak6NoX_4Aeg_-722284808")]
     [DisplayName("Valoren")]
-    public record Valoren : SecurityIdentification3Choice_
+    public partial record Valoren : SecurityIdentification3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

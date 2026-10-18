@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatusOrStatement10Choice
     [IsoId("_LSk43ffZEeiNZp_PtLohLw")]
     [DisplayName("Statement")]
     [IsoXmlTag("Stmt")]
-    public record Statement : StatusOrStatement10Choice_
+    public partial record Statement : StatusOrStatement10Choice_
     {
         /// <summary>
         /// Number used to identify a message or document.

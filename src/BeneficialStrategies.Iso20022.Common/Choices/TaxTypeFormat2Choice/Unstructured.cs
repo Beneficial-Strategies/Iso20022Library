@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxTypeFormat2Choice
     /// </summary>
     [IsoId("_Uy2pBtp-Ed-ak6NoX_4Aeg_-1825009049")]
     [DisplayName("Unstructured")]
-    public record Unstructured : TaxTypeFormat2Choice_
+    public partial record Unstructured : TaxTypeFormat2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

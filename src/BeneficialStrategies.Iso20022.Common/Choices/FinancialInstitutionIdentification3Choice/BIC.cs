@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
     /// </summary>
     [IsoId("_QE8vctp-Ed-ak6NoX_4Aeg_2090381758")]
     [DisplayName("BIC")]
-    public record BIC : FinancialInstitutionIdentification3Choice_
+    public partial record BIC : FinancialInstitutionIdentification3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Reporting9Choice.Proprietary), nameof(Reporting9Choice.Proprietary))]
     [IsoId("_5mslkZNLEeWGlc8L7oPDIg")]
     [DisplayName("Reporting 9 Choice")]
-    public abstract record Reporting9Choice_ { }
+    public abstract partial record Reporting9Choice_ { }
 }

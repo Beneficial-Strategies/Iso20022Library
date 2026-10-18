@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References54Choice
     /// </summary>
     [IsoId("_6GW89ZNLEeWGlc8L7oPDIg")]
     [DisplayName("Account Servicer Transaction Identification")]
-    public record AccountServicerTransactionIdentification : References54Choice_
+    public partial record AccountServicerTransactionIdentification : References54Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

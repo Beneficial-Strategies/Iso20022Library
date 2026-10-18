@@ -13,5 +13,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(ChequeDetails))]
     [JsonDerivedType(typeof(CreditTransferDetails))]
     [JsonDerivedType(typeof(ChequeDetails))]
-    public abstract record PaymentInstrument31Choice_;
+    public abstract partial record PaymentInstrument31Choice_;
 }

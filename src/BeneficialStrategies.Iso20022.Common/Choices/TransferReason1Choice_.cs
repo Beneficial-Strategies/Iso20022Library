@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_hPw_oa51EeeMy7TnJ3e__g")]
     [DisplayName("Transfer Reason 1 Choice")]
-    public abstract record TransferReason1Choice_ { }
+    public abstract partial record TransferReason1Choice_ { }
 }

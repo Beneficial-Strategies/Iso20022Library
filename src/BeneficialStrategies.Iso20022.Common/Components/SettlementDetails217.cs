@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Wjb02YS2Ee-Pv9KR9bv9IA")]
 [DisplayName("Settlement Details217")]
-public record SettlementDetails217
+public partial record SettlementDetails217
 {
     /// <summary>
     /// Hold Indicator.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DrawdownStatus1Choice
     [IsoId("_oVF1kFKiEeiSDqv62fL07g")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : DrawdownStatus1Choice_
+    public partial record Proprietary : DrawdownStatus1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

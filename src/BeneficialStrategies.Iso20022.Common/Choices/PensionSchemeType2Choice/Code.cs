@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PensionSchemeType2Choice
     /// </summary>
     [IsoId("_CZ5YETOUEeqLMcD_sEa8Xw")]
     [DisplayName("Code")]
-    public record Code : PensionSchemeType2Choice_
+    public partial record Code : PensionSchemeType2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

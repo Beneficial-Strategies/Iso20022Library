@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reversal1Choice
     [IsoId("_qJndIBg3EeK-_89we2b-bA")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
-    public record Reference : Reversal1Choice_
+    public partial record Reference : Reversal1Choice_
     {
         /// <summary>
         /// Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_qTJdkJP9EemyZbjY08A1Vw")]
 [DisplayName("Cash All")]
-public record CashAll1
+public partial record CashAll1
 {
     /// <summary>
     /// Indicates whether all assets in the portfolio are to be liquidated and transferred as cash.

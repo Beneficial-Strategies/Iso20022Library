@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7m-ucYYQEe-Pv9KR9bv9IA")]
 [DisplayName("Document Number20")]
-public record DocumentNumber20
+public partial record DocumentNumber20
 {
     /// <summary>
     /// Number.

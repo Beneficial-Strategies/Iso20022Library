@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kgcvYPr5EeCu2Z1WwxJVWA")]
 [DisplayName("Transfer Reason")]
-public record TransferReason1
+public partial record TransferReason1
 {
     /// <summary>
     /// Transfer reason expressed as an ISO 20022 code.

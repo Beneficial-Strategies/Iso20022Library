@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeType10Choice
     /// <summary>Fee (charge/commission) expressed as a code.</summary>
     [IsoId("128dd115-fcaf-4228-9621-441a7a659f6e")]
     [DisplayName("Code")]
-    public record Code : ChargeType10Choice_
+    public partial record Code : ChargeType10Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Cd")]

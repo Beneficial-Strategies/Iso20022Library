@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RNN_ENp-Ed-ak6NoX_4Aeg_-755638591")]
 [DisplayName("Transfer Out")]
-public record TransferOut6
+public partial record TransferOut6
 {
     /// <summary>
     /// General information related to the transfer of a financial instrument.

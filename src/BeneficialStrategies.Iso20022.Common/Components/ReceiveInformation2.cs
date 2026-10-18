@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VN93tdp-Ed-ak6NoX_4Aeg_-1112110934")]
 [DisplayName("Receive Information")]
-public record ReceiveInformation2
+public partial record ReceiveInformation2
 {
     /// <summary>
     /// Charge related to the transfer of a financial instrument.

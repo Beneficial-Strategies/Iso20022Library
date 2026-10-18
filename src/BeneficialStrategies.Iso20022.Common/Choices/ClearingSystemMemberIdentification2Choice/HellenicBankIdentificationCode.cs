@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
     /// </summary>
     [IsoId("_TDPFg9p-Ed-ak6NoX_4Aeg_-1906990554")]
     [DisplayName("Hellenic Bank Identification Code")]
-    public record HellenicBankIdentificationCode : ClearingSystemMemberIdentification2Choice_
+    public partial record HellenicBankIdentificationCode : ClearingSystemMemberIdentification2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementDate11Choice
     /// </summary>
     [IsoId("_VL5wETtPEeWRTLSN0i0tng")]
     [DisplayName("Date")]
-    public record Date : SettlementDate11Choice_
+    public partial record Date : SettlementDate11Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Dt")]

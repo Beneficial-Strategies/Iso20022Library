@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementSystemMethod1Choice
     /// </summary>
     [IsoId("_QvkZxdp-Ed-ak6NoX_4Aeg_-1731315832")]
     [DisplayName("Code")]
-    public record Code : SettlementSystemMethod1Choice_
+    public partial record Code : SettlementSystemMethod1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

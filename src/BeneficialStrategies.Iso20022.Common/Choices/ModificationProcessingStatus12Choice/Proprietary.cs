@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationProcessingStatus12Ch
     /// <summary>Proprietary status.</summary>
     [IsoId("_rZruZ6ohEfCG2_q2WT-90w")]
     [DisplayName("Proprietary")]
-    public record Proprietary : ModificationProcessingStatus12Choice_
+    public partial record Proprietary : ModificationProcessingStatus12Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Prtry")]

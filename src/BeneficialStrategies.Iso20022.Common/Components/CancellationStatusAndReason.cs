@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Uww-Vtp-Ed-ak6NoX_4Aeg_-973620019")]
 [DisplayName("Cancellation Status And Reason")]
-public record CancellationStatusAndReason
+public partial record CancellationStatusAndReason
 {
     /// <summary>
     /// Status of the transfer cancellation instruction.

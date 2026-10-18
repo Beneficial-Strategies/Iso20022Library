@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStatus2Choice
     /// </summary>
     [IsoId("_UZ9n4tp-Ed-ak6NoX_4Aeg_-471752923")]
     [DisplayName("Pending")]
-    public record Pending : SettlementStatus2Choice_
+    public partial record Pending : SettlementStatus2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Pdg")]

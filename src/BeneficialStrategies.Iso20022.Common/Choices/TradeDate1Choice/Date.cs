@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeDate1Choice
     /// </summary>
     [IsoId("_Qvaowtp-Ed-ak6NoX_4Aeg_93111248")]
     [DisplayName("Date")]
-    public record Date : TradeDate1Choice_
+    public partial record Date : TradeDate1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Dt")]

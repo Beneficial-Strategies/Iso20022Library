@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification25Choice
     /// </summary>
     [IsoId("_cH1L8znxEeabspMEjqY5TQ")]
     [DisplayName("Wertpapier")]
-    public record Wertpapier : SecurityIdentification25Choice_
+    public partial record Wertpapier : SecurityIdentification25Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

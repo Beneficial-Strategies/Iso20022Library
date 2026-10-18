@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_ZYK_kTt4EeW638lNyHKv7A")]
     [DisplayName("Matching Denied 3 Choice")]
-    public abstract record MatchingDenied3Choice_ { }
+    public abstract partial record MatchingDenied3Choice_ { }
 }

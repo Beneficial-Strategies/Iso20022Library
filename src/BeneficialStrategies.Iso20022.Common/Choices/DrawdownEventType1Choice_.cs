@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_DvIiEFNiEeijdq8ilaxyOA")]
     [DisplayName("Drawdown Event Type 1 Choice")]
-    public abstract record DrawdownEventType1Choice_ { }
+    public abstract partial record DrawdownEventType1Choice_ { }
 }

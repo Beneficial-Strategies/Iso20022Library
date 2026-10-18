@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("bf947de9-3b3b-4e81-a71b-fb3f7cc83a47")]
 [DisplayName("Payment Instrument23")]
-public record PaymentInstrument23
+public partial record PaymentInstrument23
 {
     /// <summary>
     /// Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts' receivable system.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TUra39p-Ed-ak6NoX_4Aeg_208948486")]
 [DisplayName("Portfolio")]
-public record Portfolio1
+public partial record Portfolio1
 {
     /// <summary>
     /// Additional information related to the portfolio.

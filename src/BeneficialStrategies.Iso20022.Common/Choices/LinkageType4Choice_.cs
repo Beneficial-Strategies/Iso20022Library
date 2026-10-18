@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_6GVvb5NLEeWGlc8L7oPDIg")]
     [DisplayName("Linkage Type 4 Choice")]
-    public abstract record LinkageType4Choice_ { }
+    public abstract partial record LinkageType4Choice_ { }
 }

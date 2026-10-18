@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RQf8l9p-Ed-ak6NoX_4Aeg_1012324214")]
 [DisplayName("Transfer Cancellation Pending Status")]
-public record TransferCancellationPendingStatus1
+public partial record TransferCancellationPendingStatus1
 {
     /// <summary>
     /// Reason for the cancellation pending status.

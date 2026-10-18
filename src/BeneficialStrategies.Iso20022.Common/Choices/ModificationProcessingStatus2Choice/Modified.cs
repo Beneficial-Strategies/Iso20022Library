@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationProcessingStatus2Cho
     /// </summary>
     [IsoId("_0k3gwAlIEeGATtfOBToyew_-1512185367")]
     [DisplayName("Modified")]
-    public record Modified : ModificationProcessingStatus2Choice_
+    public partial record Modified : ModificationProcessingStatus2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Modfd")]

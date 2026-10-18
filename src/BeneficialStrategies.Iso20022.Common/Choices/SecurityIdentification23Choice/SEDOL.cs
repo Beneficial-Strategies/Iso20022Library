@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification23Choice
     /// </summary>
     [IsoId("_CSq4NSGQEeW7gKYhAMEFCw")]
     [DisplayName("SEDOL")]
-    public record SEDOL : SecurityIdentification23Choice_
+    public partial record SEDOL : SecurityIdentification23Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

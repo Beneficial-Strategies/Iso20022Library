@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedStatus17Choice
     [IsoId("_d7-Fczt5EeW638lNyHKv7A")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : RejectedStatus17Choice_
+    public partial record Reason : RejectedStatus17Choice_
     {
         /// <summary>
         /// Specifies the reason why the instruction/request has a rejected status.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingDenied3Choice
     [IsoId("_Z5MpCTt4EeW638lNyHKv7A")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : MatchingDenied3Choice_
+    public partial record Proprietary : MatchingDenied3Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

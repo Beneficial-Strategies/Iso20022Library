@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8RszA5NLEeWGlc8L7oPDIg")]
 [DisplayName("Document Identification")]
-public record DocumentIdentification48
+public partial record DocumentIdentification48
 {
     /// <summary>
     /// Message type number/message identifier of the message referenced in the linkage sequence.

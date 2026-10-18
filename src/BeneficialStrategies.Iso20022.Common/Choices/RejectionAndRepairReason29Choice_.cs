@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_6QESuZNLEeWGlc8L7oPDIg")]
     [DisplayName("Rejection And Repair Reason 29 Choice")]
-    public abstract record RejectionAndRepairReason29Choice_ { }
+    public abstract partial record RejectionAndRepairReason29Choice_ { }
 }

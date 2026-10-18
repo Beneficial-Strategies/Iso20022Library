@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(UpdateType40Choice.Addition))]
     [JsonDerivedType(typeof(UpdateType40Choice.Deletion))]
     [JsonDerivedType(typeof(UpdateType40Choice.Modification))]
-    public abstract record UpdateType40Choice_
+    public abstract partial record UpdateType40Choice_
     {
     }
 }

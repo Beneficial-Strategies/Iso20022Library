@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeOriginator3Choice
     /// </summary>
     [IsoId("_69UZwTtCEeWRTLSN0i0tng")]
     [DisplayName("Code")]
-    public record Code : TradeOriginator3Choice_
+    public partial record Code : TradeOriginator3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

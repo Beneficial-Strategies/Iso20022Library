@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status21Choice
     [IsoId("_MHhOUCYuEeW_ZNn8gbfY7Q")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
-    public record Status : Status21Choice_
+    public partial record Status : Status21Choice_
     {
         /// <summary>
         /// Status of the transfer cancellation is accepted or sent to next party.

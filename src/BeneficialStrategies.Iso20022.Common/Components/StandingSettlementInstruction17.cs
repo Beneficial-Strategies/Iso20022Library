@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6sllzffVEeiNZp_PtLohLw")]
 [DisplayName("Standing Settlement Instruction")]
-public record StandingSettlementInstruction17
+public partial record StandingSettlementInstruction17
 {
     /// <summary>
     /// Specifies what settlement standing instruction database is to be used to derive the settlement parties involved in the transaction.

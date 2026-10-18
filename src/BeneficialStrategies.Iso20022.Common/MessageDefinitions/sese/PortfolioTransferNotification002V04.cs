@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.sese;
 )]
 [IsoId("_5TFsw5NLEeWGlc8L7oPDIg")]
 [DisplayName("Portfolio Transfer Notification 002 V")]
-public record PortfolioTransferNotification002V04 : IOuterRecord
+public partial record PortfolioTransferNotification002V04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

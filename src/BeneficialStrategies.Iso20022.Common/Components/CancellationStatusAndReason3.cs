@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kq3dwSYtEeW_ZNn8gbfY7Q")]
 [DisplayName("Cancellation Status And Reason")]
-public record CancellationStatusAndReason3
+public partial record CancellationStatusAndReason3
 {
     /// <summary>
     /// Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.

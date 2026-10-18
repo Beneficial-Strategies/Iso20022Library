@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FaNY0RUVEeOIaq8KyCdIDQ")]
 [DisplayName("Market Practice Version")]
-public record MarketPracticeVersion1
+public partial record MarketPracticeVersion1
 {
     /// <summary>
     /// Market practice, for example, “UKTRANSFERS”, “FINDELSLT”.

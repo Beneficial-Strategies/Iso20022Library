@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OtherAmountType1Choice
     [IsoId("_i3ZxsI2NEeeNN9vGwZc5aA")]
     [DisplayName("Proprietary Code")]
     [IsoXmlTag("PrtryCd")]
-    public record ProprietaryCode : OtherAmountType1Choice_
+    public partial record ProprietaryCode : OtherAmountType1Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

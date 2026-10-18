@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity42Choice
     /// </summary>
     [IsoId("_Shu0w4fwEeevKP8c-ilVhA")]
     [DisplayName("Transfer Rate")]
-    public record TransferRate : Quantity42Choice_
+    public partial record TransferRate : Quantity42Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

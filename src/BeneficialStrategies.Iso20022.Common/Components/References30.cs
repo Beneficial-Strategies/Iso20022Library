@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_I0u2eYYeEe-Pv9KR9bv9IA")]
 [DisplayName("References30")]
-public record References30
+public partial record References30
 {
     /// <summary>
     /// Account Owner Transaction Identification.

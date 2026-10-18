@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus3Choice
     [IsoId("_UV8Dhtp-Ed-ak6NoX_4Aeg_952313343")]
     [DisplayName("Cancellation Requested")]
     [IsoXmlTag("CxlReqd")]
-    public record CancellationRequested : ProcessingStatus3Choice_
+    public partial record CancellationRequested : ProcessingStatus3Choice_
     {
         /// <summary>
         /// Indicates that there is no reason available or to report.

@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_AB4QYLKdEeiXL6Ccd-oU8g")]
     [DisplayName("Lump Sum Type 1 Choice")]
-    public abstract record LumpSumType1Choice_ { }
+    public abstract partial record LumpSumType1Choice_ { }
 }

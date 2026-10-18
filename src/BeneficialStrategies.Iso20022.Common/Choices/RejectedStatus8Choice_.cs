@@ -23,5 +23,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RQy3gdp-Ed-ak6NoX_4Aeg_-368514445")]
     [DisplayName("Rejected Status 8 Choice")]
-    public abstract record RejectedStatus8Choice_ { }
+    public abstract partial record RejectedStatus8Choice_ { }
 }

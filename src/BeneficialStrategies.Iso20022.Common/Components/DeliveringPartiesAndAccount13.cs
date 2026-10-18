@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IODZoSSSEeWdoOFYMt-Lzw")]
 [DisplayName("Delivering Parties And Account")]
-public record DeliveringPartiesAndAccount13
+public partial record DeliveringPartiesAndAccount13
 {
     /// <summary>
     /// Party that sells goods or services, or a financial instrument.

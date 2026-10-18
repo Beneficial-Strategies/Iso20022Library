@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargePaymentMethod1Choice
     [IsoId("_Ca0GEBXyEeOBE-jZfcm4KQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : ChargePaymentMethod1Choice_
+    public partial record Proprietary : ChargePaymentMethod1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

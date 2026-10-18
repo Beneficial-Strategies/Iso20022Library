@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4Nxqo_soEeCFJsO61PplcQ")]
 [DisplayName("Deliver Information")]
-public record DeliverInformation8
+public partial record DeliverInformation8
 {
     /// <summary>
     /// Total amount of money paid /to be paid or received in exchange for the financial instrument in the individual order.
