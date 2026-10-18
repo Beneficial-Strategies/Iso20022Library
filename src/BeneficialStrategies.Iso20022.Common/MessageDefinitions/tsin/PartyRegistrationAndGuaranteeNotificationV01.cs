@@ -65,7 +65,7 @@ public record PartyRegistrationAndGuaranteeNotificationV01 : IOuterRecord
     [IsoId("_OTgzNDg2-AOSNFX-8224506")]
     [DisplayName("Notification List")]
     [IsoXmlTag("NtfctnList")]
-    public required FinancingAgreementList1 NotificationList { get; init; }
+    public ValueList<FinancingAgreementList1> NotificationList { get; init; } = [];
 
     /// <summary>
     /// Number of notification lists as control value.
@@ -100,5 +100,5 @@ public record PartyRegistrationAndGuaranteeNotificationV01 : IOuterRecord
     [IsoId("_OTgzNDkw-AOSNFX-8224506")]
     [DisplayName("Attached Message")]
     [IsoXmlTag("AttchdMsg")]
-    public EncapsulatedBusinessMessage1? AttachedMessage { get; init; }
+    public ValueList<EncapsulatedBusinessMessage1> AttachedMessage { get; init; } = [];
 }

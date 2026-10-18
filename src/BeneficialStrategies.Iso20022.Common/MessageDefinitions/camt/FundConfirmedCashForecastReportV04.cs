@@ -83,7 +83,7 @@ public record FundConfirmedCashForecastReportV04 : IOuterRecord
     [IsoId("_GJQg6QasEeSrXeb3pHPmbg")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
-    public AdditionalReference3? PreviousReference { get; init; }
+    public ValueList<AdditionalReference3> PreviousReference { get; init; } = [];
 
     /// <summary>
     /// Reference to a linked message that was previously received.
@@ -91,7 +91,7 @@ public record FundConfirmedCashForecastReportV04 : IOuterRecord
     [IsoId("_GJQg6wasEeSrXeb3pHPmbg")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
-    public AdditionalReference3? RelatedReference { get; init; }
+    public ValueList<AdditionalReference3> RelatedReference { get; init; } = [];
 
     /// <summary>
     /// Pagination of the message.
@@ -107,7 +107,7 @@ public record FundConfirmedCashForecastReportV04 : IOuterRecord
     [IsoId("_suf4IQc3EeSyIPzOZ6VzBQ")]
     [DisplayName("Fund Or Sub Fund Details")]
     [IsoXmlTag("FndOrSubFndDtls")]
-    public Fund2? FundOrSubFundDetails { get; init; }
+    public ValueList<Fund2> FundOrSubFundDetails { get; init; } = [];
 
     /// <summary>
     /// Information related to the cash-in and cash-out flows for a specific trade date as a result of transactions in shares in an investment fund, for example, subscriptions, redemptions or switches.
@@ -115,7 +115,7 @@ public record FundConfirmedCashForecastReportV04 : IOuterRecord
     [IsoId("_GJQg7wasEeSrXeb3pHPmbg")]
     [DisplayName("Fund Cash Forecast Details")]
     [IsoXmlTag("FndCshFcstDtls")]
-    public FundCashForecast7? FundCashForecastDetails { get; init; }
+    public ValueList<FundCashForecast7> FundCashForecastDetails { get; init; } = [];
 
     /// <summary>
     /// Estimated net cash as a result of the cash-in and cash-out flows.
@@ -131,5 +131,5 @@ public record FundConfirmedCashForecastReportV04 : IOuterRecord
     [IsoId("_GJQg8wasEeSrXeb3pHPmbg")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

@@ -85,11 +85,11 @@ public class FIToFIPaymentCancellationRequestV10Validator
             .SetValidator(caseAssignmentValidator);
 
         RuleFor(x => x.Underlying)
-            .NotNull()
+            .NotEmpty()
             .WithMessage(
-                "FIToFIPaymentCancellationRequestV10.Underlying is required (UnderlyingTransaction28, 1..1)."
-            )
-            .SetValidator(underlyingTransactionValidator);
+                "FIToFIPaymentCancellationRequestV10.Underlying is required (UnderlyingTransaction28, 1..*)."
+            );
+        RuleForEach(x => x.Underlying).SetValidator(underlyingTransactionValidator);
 
         // ── Optional building blocks — validate when present ─────────────────────────
 
@@ -139,10 +139,13 @@ public class FIToFIPaymentCancellationRequestV10Validator
         int count = 0;
         if (msg.Case is not null)
             count++;
-        if (msg.Underlying?.OriginalGroupInformationAndCancellation?.Case is not null)
-            count++;
-        if (msg.Underlying?.TransactionInformation?.Any(t => t.Case is not null) == true)
-            count++;
+        foreach (var underlying in msg.Underlying ?? [])
+        {
+            if (underlying.OriginalGroupInformationAndCancellation?.Case is not null)
+                count++;
+            if (underlying.TransactionInformation?.Any(t => t.Case is not null) == true)
+                count++;
+        }
         return count <= 1;
     }
 }

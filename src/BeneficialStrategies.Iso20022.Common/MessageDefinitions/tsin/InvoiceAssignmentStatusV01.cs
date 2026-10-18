@@ -67,7 +67,7 @@ public record InvoiceAssignmentStatusV01 : IOuterRecord
     [IsoId("_OTgzNDUx-AOSNFX-8224505")]
     [DisplayName("Assignment List")]
     [IsoXmlTag("AssgnmtList")]
-    public required FinancingItemList1 AssignmentList { get; init; }
+    public ValueList<FinancingItemList1> AssignmentList { get; init; } = [];
 
     /// <summary>
     /// Number of assignments.
@@ -102,5 +102,5 @@ public record InvoiceAssignmentStatusV01 : IOuterRecord
     [IsoId("_OTgzNDU1-AOSNFX-8224505")]
     [DisplayName("Attached Message")]
     [IsoXmlTag("AttchdMsg")]
-    public EncapsulatedBusinessMessage1? AttachedMessage { get; init; }
+    public ValueList<EncapsulatedBusinessMessage1> AttachedMessage { get; init; } = [];
 }

@@ -70,7 +70,7 @@ public record TransferInCancellationRequestV07 : IOuterRecord
     [IsoId("_5T5PFR8NEeWpZde3LQh6dg")]
     [DisplayName("References")]
     [IsoXmlTag("Refs")]
-    public References20? References { get; init; }
+    public ValueList<References20> References { get; init; } = [];
 
     /// <summary>
     /// Function of the transfer-in, that is, whether the message is used as a request to cancel a previously sent instruction or as a cancellation of a previously sent advice and request for information. The absence of Function indicates the message is a request to cancel a previously sent instruction.
@@ -86,7 +86,7 @@ public record TransferInCancellationRequestV07 : IOuterRecord
     [IsoId("_5T5PFx8NEeWpZde3LQh6dg")]
     [DisplayName("Cancellation")]
     [IsoXmlTag("Cxl")]
-    public required Cancellation10Choice_ Cancellation { get; init; }
+    public ValueList<Cancellation10Choice_> Cancellation { get; init; } = [];
 
     /// <summary>
     /// Identifies the market practice to which the message conforms.

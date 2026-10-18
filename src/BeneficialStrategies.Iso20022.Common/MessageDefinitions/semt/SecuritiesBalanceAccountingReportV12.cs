@@ -92,7 +92,9 @@ public record SecuritiesBalanceAccountingReportV12 : IOuterRecord
     /// </summary>
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
-    public Intermediary44? IntermediaryInformation { get; init; }
+    [MinLength(0)]
+    [MaxLength(10)]
+    public ValueList<Intermediary44> IntermediaryInformation { get; init; } = [];
 
     /// <summary>
     /// Balance For Account.

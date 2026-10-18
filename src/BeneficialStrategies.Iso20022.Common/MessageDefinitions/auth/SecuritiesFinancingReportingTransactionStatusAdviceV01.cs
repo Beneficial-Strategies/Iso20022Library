@@ -55,7 +55,7 @@ public record SecuritiesFinancingReportingTransactionStatusAdviceV01 : IOuterRec
     [IsoId("_2zvMMQuAEeqVvtu9Ny8FDA")]
     [DisplayName("Transaction Report Status And Reason")]
     [IsoXmlTag("TxRptStsAndRsn")]
-    public required TradeData11Choice_ TransactionReportStatusAndReason { get; init; }
+    public ValueList<TradeData11Choice_> TransactionReportStatusAndReason { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -63,5 +63,5 @@ public record SecuritiesFinancingReportingTransactionStatusAdviceV01 : IOuterRec
     [IsoId("_2zvMMwuAEeqVvtu9Ny8FDA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

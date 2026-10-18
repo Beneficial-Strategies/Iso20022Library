@@ -128,7 +128,7 @@ public class Camt053ExamplesTests
         var message = new BankToCustomerStatementV11
         {
             GroupHeader = CreateGroupHeader(),
-            Statement = new AccountStatement12
+            Statement = [new AccountStatement12
             {
                 Identification = "DEUTDEFF-ACME-STMT-20240315-001",
                 Account = CreateStatementAccount(),
@@ -153,12 +153,12 @@ public class Camt053ExamplesTests
                     },
                     CreateClosingBookedBalance(),
                 ],
-            },
+            }],
         };
 
         Assert.NotNull(message);
         Assert.Equal("camt.053.001.11", BankToCustomerStatementV11.IsoIdentifier);
-        Assert.Equal(2, message.Statement.Balance.Count);
+        Assert.Equal(2, message.Statement[0].Balance.Count);
     }
 
     /// <summary>
@@ -173,7 +173,7 @@ public class Camt053ExamplesTests
         var message = new BankToCustomerStatementV11
         {
             GroupHeader = CreateGroupHeader("BNPAFRPP/240315/CAM053/00001"),
-            Statement = new AccountStatement12
+            Statement = [new AccountStatement12
             {
                 Identification = "BNPAFRPP-GLOBALSUPPLY-STMT-20240315",
                 Account = new CashAccount41
@@ -185,12 +185,12 @@ public class Camt053ExamplesTests
                 },
                 Balance = [CreateClosingBookedBalance()],
                 Entry = [CreateCreditEntry()],
-            },
+            }],
         };
 
         Assert.NotNull(message);
-        Assert.IsType<Code>(message.Statement.Entry![0].Status);
-        Assert.Equal(CreditDebitCode.Credit, message.Statement.Entry[0].CreditDebitIndicator);
+        Assert.IsType<Code>(message.Statement[0].Entry![0].Status);
+        Assert.Equal(CreditDebitCode.Credit, message.Statement[0].Entry[0].CreditDebitIndicator);
     }
 
     /// <summary>
@@ -205,7 +205,7 @@ public class Camt053ExamplesTests
         var message = new BankToCustomerStatementV11
         {
             GroupHeader = CreateGroupHeader("BNPAFRPP/240315/CAM053/00002"),
-            Statement = new AccountStatement12
+            Statement = [new AccountStatement12
             {
                 Identification = "GLOBALSUPPLY-STMT-20240315-INTRADAY",
                 Account = new CashAccount41
@@ -214,11 +214,11 @@ public class Camt053ExamplesTests
                     Currency = Iso20022TestData.Currency,
                 },
                 Entry = [CreateCreditEntry(new Code { Value = ExternalEntryStatus1Code.Pending })],
-            },
+            }],
         };
 
         Assert.NotNull(message);
-        var status = Assert.IsType<Code>(message.Statement.Entry![0].Status);
+        var status = Assert.IsType<Code>(message.Statement[0].Entry![0].Status);
         Assert.Equal(ExternalEntryStatus1Code.Pending, status.Value);
     }
 
@@ -233,7 +233,7 @@ public class Camt053ExamplesTests
         var message = new BankToCustomerStatementV11
         {
             GroupHeader = CreateGroupHeader("BNPAFRPP/240315/CAM053/00003"),
-            Statement = new AccountStatement12
+            Statement = [new AccountStatement12
             {
                 Identification = "GLOBALSUPPLY-STMT-20240315-PROP",
                 Account = new CashAccount41
@@ -242,11 +242,11 @@ public class Camt053ExamplesTests
                     Currency = Iso20022TestData.Currency,
                 },
                 Entry = [CreateCreditEntry(new Proprietary { Value = "BNPFR-PRE-BOOKED" })],
-            },
+            }],
         };
 
         Assert.NotNull(message);
-        Assert.IsType<Proprietary>(message.Statement.Entry![0].Status);
+        Assert.IsType<Proprietary>(message.Statement[0].Entry![0].Status);
     }
 
     /// <summary>
@@ -285,16 +285,16 @@ public class Camt053ExamplesTests
         var message = new BankToCustomerStatementV11
         {
             GroupHeader = CreateGroupHeader(),
-            Statement = new AccountStatement12
+            Statement = [new AccountStatement12
             {
                 Identification = "DEUTDEFF-ACME-STMT-20240315-DEBIT",
                 Account = CreateStatementAccount(),
                 Balance = [CreateClosingBookedBalance()],
                 Entry = [debitEntry],
-            },
+            }],
         };
 
         Assert.NotNull(message);
-        Assert.Equal(CreditDebitCode.Debit, message.Statement.Entry![0].CreditDebitIndicator);
+        Assert.Equal(CreditDebitCode.Debit, message.Statement[0].Entry![0].CreditDebitIndicator);
     }
 }

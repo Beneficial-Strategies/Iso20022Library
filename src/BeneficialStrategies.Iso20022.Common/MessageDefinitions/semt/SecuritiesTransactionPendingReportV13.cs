@@ -107,7 +107,7 @@ public record SecuritiesTransactionPendingReportV13 : IOuterRecord
     [IsoId("_PHmToyW9EeygjNFjAlVoPA")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
-    public StatusAndReason44? Status { get; init; }
+    public ValueList<StatusAndReason44> Status { get; init; } = [];
 
     /// <summary>
     /// Details of the transactions reported.
@@ -115,5 +115,5 @@ public record SecuritiesTransactionPendingReportV13 : IOuterRecord
     [IsoId("_PHmTpSW9EeygjNFjAlVoPA")]
     [DisplayName("Transactions")]
     [IsoXmlTag("Txs")]
-    public Transaction121? Transactions { get; init; }
+    public ValueList<Transaction121> Transactions { get; init; } = [];
 }

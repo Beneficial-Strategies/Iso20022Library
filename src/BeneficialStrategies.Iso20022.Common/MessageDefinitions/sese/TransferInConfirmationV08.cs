@@ -112,7 +112,7 @@ public record TransferInConfirmationV08 : IOuterRecord
     [IsoId("_zupzBYZLEeemXK0UETsSiA")]
     [DisplayName("Transfer Details")]
     [IsoXmlTag("TrfDtls")]
-    public required Transfer35 TransferDetails { get; init; }
+    public ValueList<Transfer35> TransferDetails { get; init; } = [];
 
     /// <summary>
     /// Information related to the account into which the financial instrument was received.
@@ -152,5 +152,5 @@ public record TransferInConfirmationV08 : IOuterRecord
     [IsoId("_zupzD4ZLEeemXK0UETsSiA")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

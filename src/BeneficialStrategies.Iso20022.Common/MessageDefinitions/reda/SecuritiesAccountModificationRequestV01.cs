@@ -74,7 +74,7 @@ public record SecuritiesAccountModificationRequestV01 : IOuterRecord
     [IsoId("_KAu-vZ2fEem_Be8NuxvF7Q")]
     [DisplayName("Modification")]
     [IsoXmlTag("Mod")]
-    public required SecuritiesAccountModification2 Modification { get; init; }
+    public ValueList<SecuritiesAccountModification2> Modification { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -82,5 +82,5 @@ public record SecuritiesAccountModificationRequestV01 : IOuterRecord
     [IsoId("_KAu-v52fEem_Be8NuxvF7Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

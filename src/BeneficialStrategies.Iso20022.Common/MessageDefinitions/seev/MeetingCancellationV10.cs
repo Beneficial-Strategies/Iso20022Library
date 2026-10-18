@@ -57,7 +57,9 @@ public record MeetingCancellationV10 : IOuterRecord
     /// </summary>
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
-    public required SecurityPosition23 Security { get; init; }
+    [MinLength(1)]
+    [MaxLength(200)]
+    public ValueList<SecurityPosition23> Security { get; init; } = [];
 
     /// <summary>
     /// Reason.

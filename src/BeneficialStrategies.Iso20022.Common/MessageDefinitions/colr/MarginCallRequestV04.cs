@@ -148,7 +148,7 @@ public record MarginCallRequestV04 : IOuterRecord
     [IsoId("_JCbdwILVEeWrrO9HojbPQA")]
     [DisplayName("Margin Call Details")]
     [IsoXmlTag("MrgnCallDtls")]
-    public MarginCall2? MarginCallDetails { get; init; }
+    public ValueList<MarginCall2> MarginCallDetails { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -156,5 +156,5 @@ public record MarginCallRequestV04 : IOuterRecord
     [IsoId("_CRyfwYFsEeWtPe6Crjmeug")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

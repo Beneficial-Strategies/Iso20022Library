@@ -65,7 +65,7 @@ public record InvoicePaymentReconciliationAdviceV01 : IOuterRecord
     [IsoId("_OTgzNDc5-AOSNFX-8224506")]
     [DisplayName("Reconciliation List")]
     [IsoXmlTag("RcncltnList")]
-    public required ReconciliationList1 ReconciliationList { get; init; }
+    public ValueList<ReconciliationList1> ReconciliationList { get; init; } = [];
 
     /// <summary>
     /// Number of reconciliation lists as control value.
@@ -100,5 +100,5 @@ public record InvoicePaymentReconciliationAdviceV01 : IOuterRecord
     [IsoId("_OTgzNDgz-AOSNFX-8224506")]
     [DisplayName("Attached Message")]
     [IsoXmlTag("AttchdMsg")]
-    public EncapsulatedBusinessMessage1? AttachedMessage { get; init; }
+    public ValueList<EncapsulatedBusinessMessage1> AttachedMessage { get; init; } = [];
 }

@@ -71,7 +71,7 @@ public record MandateCancellationRequestV07 : IOuterRecord
     [IsoId("_rUYOCdcBEeq_l4BJLVUF2Q")]
     [DisplayName("Underlying Cancellation Details")]
     [IsoXmlTag("UndrlygCxlDtls")]
-    public required MandateCancellation7 UnderlyingCancellationDetails { get; init; }
+    public ValueList<MandateCancellation7> UnderlyingCancellationDetails { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -79,5 +79,5 @@ public record MandateCancellationRequestV07 : IOuterRecord
     [IsoId("_rUYOC9cBEeq_l4BJLVUF2Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

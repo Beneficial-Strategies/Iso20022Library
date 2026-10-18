@@ -102,5 +102,5 @@ public record NotificationOfCaseAssignmentV04 : IOuterRecord
     [IsoId("_sYyKAVkyEeGeoaLUQk__nA_-135424207")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

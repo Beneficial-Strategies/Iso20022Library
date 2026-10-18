@@ -90,5 +90,5 @@ public record ShareholderIdentificationDisclosureResponseStatusAdviceV01 : IOute
     [IsoId("_-bsZoYebEemJ1cSJJmVYRQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

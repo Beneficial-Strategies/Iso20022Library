@@ -64,5 +64,5 @@ public record SecuritiesFinancingReportingReusedCollateralDataTransactionStateRe
     [IsoId("_lP69RcKvEeuzU9S_IANlog")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

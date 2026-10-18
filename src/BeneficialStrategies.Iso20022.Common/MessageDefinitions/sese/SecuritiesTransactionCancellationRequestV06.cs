@@ -153,5 +153,5 @@ public record SecuritiesTransactionCancellationRequestV06 : IOuterRecord
     [IsoId("_3njkeewAEeiazoAmcoGsBQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

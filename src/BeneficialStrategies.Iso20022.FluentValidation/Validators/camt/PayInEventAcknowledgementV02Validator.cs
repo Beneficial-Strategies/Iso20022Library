@@ -56,10 +56,7 @@ public class PayInEventAcknowledgementV02Validator : AbstractValidator<PayInEven
 
         RuleFor(x => x.AcknowledgementDetails).SetValidator(acknowledgementDetailsValidator);
 
-        When(
-            x => x.SupplementaryData is not null,
-            () => RuleFor(x => x.SupplementaryData).SetValidator(supplementaryDataValidator!)
-        );
+        RuleForEach(x => x.SupplementaryData).SetValidator(supplementaryDataValidator!);
     }
 
     /// <summary>

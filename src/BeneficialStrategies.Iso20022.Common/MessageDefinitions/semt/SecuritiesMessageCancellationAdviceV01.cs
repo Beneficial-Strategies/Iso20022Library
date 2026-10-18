@@ -105,5 +105,5 @@ public record SecuritiesMessageCancellationAdviceV01 : IOuterRecord
     [IsoId("_Mg6r89FSEd-BzquC8wXy7w_1894692884")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension2? Extension { get; init; }
+    public ValueList<Extension2> Extension { get; init; } = [];
 }

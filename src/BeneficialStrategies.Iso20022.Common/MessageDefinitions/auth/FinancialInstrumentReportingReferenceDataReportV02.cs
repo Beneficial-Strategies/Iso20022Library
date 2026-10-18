@@ -63,7 +63,7 @@ public record FinancialInstrumentReportingReferenceDataReportV02 : IOuterRecord
     [IsoId("_JRfSVSX6EeigZbhgJcrASA")]
     [DisplayName("Reference Data")]
     [IsoXmlTag("RefData")]
-    public required SecuritiesReferenceDataReport6 ReferenceData { get; init; }
+    public ValueList<SecuritiesReferenceDataReport6> ReferenceData { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -71,5 +71,5 @@ public record FinancialInstrumentReportingReferenceDataReportV02 : IOuterRecord
     [IsoId("_JRfSVyX6EeigZbhgJcrASA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

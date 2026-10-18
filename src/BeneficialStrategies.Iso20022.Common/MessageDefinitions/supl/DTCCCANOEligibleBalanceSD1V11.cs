@@ -71,7 +71,7 @@ public record DTCCCANOEligibleBalanceSD1V11 : IOuterRecord
     [IsoId("_Vk6qTTDmEey2N-DB7H7A5A")]
     [DisplayName("Distribution Account Balance")]
     [IsoXmlTag("DstrbtnAcctBal")]
-    public AccountBalanceSD10? DistributionAccountBalance { get; init; }
+    public ValueList<AccountBalanceSD10> DistributionAccountBalance { get; init; } = [];
 
     /// <summary>
     /// Information to be extended as supplementary data to account balance for redemptions events.

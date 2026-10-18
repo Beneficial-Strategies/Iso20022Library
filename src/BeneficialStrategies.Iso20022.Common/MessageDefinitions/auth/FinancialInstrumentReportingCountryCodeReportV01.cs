@@ -55,7 +55,7 @@ public record FinancialInstrumentReportingCountryCodeReportV01 : IOuterRecord
     [IsoId("_4LK8M0RNEee7JdgA9zPESA")]
     [DisplayName("Country Data")]
     [IsoXmlTag("CtryData")]
-    public required SecuritiesCountryIdentification2 CountryData { get; init; }
+    public ValueList<SecuritiesCountryIdentification2> CountryData { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -63,5 +63,5 @@ public record FinancialInstrumentReportingCountryCodeReportV01 : IOuterRecord
     [IsoId("_4LK8NURNEee7JdgA9zPESA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

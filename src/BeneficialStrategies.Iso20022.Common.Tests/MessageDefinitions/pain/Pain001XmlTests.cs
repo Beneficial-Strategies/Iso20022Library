@@ -92,10 +92,10 @@ public class Pain001XmlTests
         );
 
         var pmtInf = result.PaymentInformation;
-        Assert.Equal(ExpectedPmtInfId, pmtInf.PaymentInformationIdentification);
-        Assert.Equal(ExpectedDebtorName, pmtInf.Debtor.Name);
+        Assert.Equal(ExpectedPmtInfId, pmtInf[0].PaymentInformationIdentification);
+        Assert.Equal(ExpectedDebtorName, pmtInf[0].Debtor.Name);
 
-        var iban = Assert.IsType<IbanChoice>(pmtInf.DebtorAccount.Identification);
+        var iban = Assert.IsType<IbanChoice>(pmtInf[0].DebtorAccount.Identification);
         Assert.Equal(ExpectedDebtorIban, iban.Value);
     }
 
@@ -110,7 +110,7 @@ public class Pain001XmlTests
             LoadEmbeddedXml()
         );
 
-        Assert.Equal(2, result.PaymentInformation.CreditTransferTransactionInformation.Count);
+        Assert.Equal(2, result.PaymentInformation[0].CreditTransferTransactionInformation.Count);
     }
 
     /// <summary>
@@ -124,7 +124,7 @@ public class Pain001XmlTests
             LoadEmbeddedXml()
         );
 
-        var tx1 = result.PaymentInformation.CreditTransferTransactionInformation[0];
+        var tx1 = result.PaymentInformation[0].CreditTransferTransactionInformation[0];
         Assert.Equal(ExpectedUetr1, tx1.PaymentIdentification.UETR);
         Assert.Equal(ExpectedEndToEndId1, tx1.PaymentIdentification.EndToEndIdentification);
         Assert.Equal(ExpectedCreditorName, tx1.Creditor?.Name);
@@ -141,7 +141,7 @@ public class Pain001XmlTests
             LoadEmbeddedXml()
         );
 
-        var tx2 = result.PaymentInformation.CreditTransferTransactionInformation[1];
+        var tx2 = result.PaymentInformation[0].CreditTransferTransactionInformation[1];
         Assert.Equal(ExpectedUetr2, tx2.PaymentIdentification.UETR);
         Assert.Equal(ExpectedEndToEndId2, tx2.PaymentIdentification.EndToEndIdentification);
     }
@@ -156,7 +156,7 @@ public class Pain001XmlTests
             LoadEmbeddedXml()
         );
 
-        var tx1 = result.PaymentInformation.CreditTransferTransactionInformation[0];
+        var tx1 = result.PaymentInformation[0].CreditTransferTransactionInformation[0];
         Assert.NotNull(tx1.RemittanceInformation);
         Assert.Equal(2, tx1.RemittanceInformation!.Unstructured.Count);
     }
@@ -178,10 +178,10 @@ public class Pain001XmlTests
         var result = Iso20022XmlSerializer.Deserialize<CustomerCreditTransferInitiationV11>(xml);
 
         Assert.Equal(ExpectedMsgId, result.GroupHeader.MessageIdentification);
-        Assert.Equal(2, result.PaymentInformation.CreditTransferTransactionInformation.Count);
+        Assert.Equal(2, result.PaymentInformation[0].CreditTransferTransactionInformation.Count);
 
-        var tx1 = result.PaymentInformation.CreditTransferTransactionInformation[0];
-        var tx2 = result.PaymentInformation.CreditTransferTransactionInformation[1];
+        var tx1 = result.PaymentInformation[0].CreditTransferTransactionInformation[0];
+        var tx2 = result.PaymentInformation[0].CreditTransferTransactionInformation[1];
 
         Assert.Equal(ExpectedUetr1, tx1.PaymentIdentification.UETR);
         Assert.Equal(ExpectedEndToEndId1, tx1.PaymentIdentification.EndToEndIdentification);

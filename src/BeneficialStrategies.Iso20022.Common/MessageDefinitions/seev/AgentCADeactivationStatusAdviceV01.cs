@@ -90,7 +90,7 @@ public record AgentCADeactivationStatusAdviceV01 : IOuterRecord
     [IsoId("_TMaMA9EwEd-BzquC8wXy7w_861232790")]
     [DisplayName("Deactivation Instruction Status")]
     [IsoXmlTag("DeactvtnInstrSts")]
-    public required CorporateActionDeactivationInstructionStatus1 DeactivationInstructionStatus { get; init; }
+    public ValueList<CorporateActionDeactivationInstructionStatus1> DeactivationInstructionStatus { get; init; } = [];
 
     /// <summary>
     /// Status of the deactivation cancellation request sent by the issuer (agent).

@@ -68,7 +68,7 @@ public record FinancialInstitutionDirectDebitV03 : IOuterRecord
     [IsoId("_x0JZEXL4EeidQ_AAdEzxQA")]
     [DisplayName("Credit Instruction")]
     [IsoXmlTag("CdtInstr")]
-    public required CreditTransferTransaction38 CreditInstruction { get; init; }
+    public ValueList<CreditTransferTransaction38> CreditInstruction { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -76,5 +76,5 @@ public record FinancialInstitutionDirectDebitV03 : IOuterRecord
     [IsoId("_x0JZE3L4EeidQ_AAdEzxQA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

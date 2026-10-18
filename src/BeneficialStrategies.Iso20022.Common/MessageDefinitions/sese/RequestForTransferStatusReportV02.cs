@@ -68,7 +68,7 @@ public record RequestForTransferStatusReportV02 : IOuterRecord
     [IsoId("_oGN9Z9E5Ed-BzquC8wXy7w_2033838559")]
     [DisplayName("Request Details")]
     [IsoXmlTag("ReqDtls")]
-    public required MessageAndBusinessReference6 RequestDetails { get; init; }
+    public ValueList<MessageAndBusinessReference6> RequestDetails { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -76,5 +76,5 @@ public record RequestForTransferStatusReportV02 : IOuterRecord
     [IsoId("_oGN9aNE5Ed-BzquC8wXy7w_240300067")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

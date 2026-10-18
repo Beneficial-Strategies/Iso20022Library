@@ -92,5 +92,5 @@ public record FinancialInvoiceV01 : IOuterRecord
     [IsoId("_BU_0J31LEeCF8NjrBemJWQ_-1744265877")]
     [DisplayName("Line Item")]
     [IsoXmlTag("LineItm")]
-    public LineItem10? LineItem { get; init; }
+    public ValueList<LineItem10> LineItem { get; init; } = [];
 }

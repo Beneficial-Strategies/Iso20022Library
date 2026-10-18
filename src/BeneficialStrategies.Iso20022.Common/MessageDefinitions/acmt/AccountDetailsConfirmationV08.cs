@@ -111,7 +111,7 @@ public record AccountDetailsConfirmationV08 : IOuterRecord
     [IsoId("_lUvrM5DiEem7fvtoGpNpow")]
     [DisplayName("Intermediaries")]
     [IsoXmlTag("Intrmies")]
-    public Intermediary46? Intermediaries { get; init; }
+    public ValueList<Intermediary46> Intermediaries { get; init; } = [];
 
     /// <summary>
     /// Confirmation of referral information.
@@ -175,7 +175,7 @@ public record AccountDetailsConfirmationV08 : IOuterRecord
     [IsoId("_lUvrQZDiEem7fvtoGpNpow")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditiononalInformation13? AdditionalInformation { get; init; }
+    public ValueList<AdditiononalInformation13> AdditionalInformation { get; init; } = [];
 
     /// <summary>
     /// Identifies the market practice to which the message conforms.
@@ -191,5 +191,5 @@ public record AccountDetailsConfirmationV08 : IOuterRecord
     [IsoId("_lUvrRZDiEem7fvtoGpNpow")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

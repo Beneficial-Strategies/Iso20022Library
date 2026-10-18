@@ -98,7 +98,7 @@ public record AccountExcludedMandateMaintenanceAmendmentRequestV01 : IOuterRecor
     [IsoId("_pW9PttE9Ed-BzquC8wXy7w_705170154")]
     [DisplayName("Organisation")]
     [IsoXmlTag("Org")]
-    public required Organisation6 Organisation { get; init; }
+    public ValueList<Organisation6> Organisation { get; init; } = [];
 
     /// <summary>
     /// Contains the signature with its components, namely signed info, signature value, key info and the object.
@@ -106,5 +106,5 @@ public record AccountExcludedMandateMaintenanceAmendmentRequestV01 : IOuterRecor
     [IsoId("_pW9Pt9E9Ed-BzquC8wXy7w_173839057")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
-    public PartyAndSignature1? DigitalSignature { get; init; }
+    public ValueList<PartyAndSignature1> DigitalSignature { get; init; } = [];
 }

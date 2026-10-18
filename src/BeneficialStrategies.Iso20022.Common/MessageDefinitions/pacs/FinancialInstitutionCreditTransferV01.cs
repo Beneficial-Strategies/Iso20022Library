@@ -70,5 +70,5 @@ public record FinancialInstitutionCreditTransferV01 : IOuterRecord
     [IsoId("_efpsytEuEd-BzquC8wXy7w_-941594069")]
     [DisplayName("Credit Transfer Transaction Information")]
     [IsoXmlTag("CdtTrfTxInf")]
-    public required CreditTransferTransactionInformation3 CreditTransferTransactionInformation { get; init; }
+    public ValueList<CreditTransferTransactionInformation3> CreditTransferTransactionInformation { get; init; } = [];
 }

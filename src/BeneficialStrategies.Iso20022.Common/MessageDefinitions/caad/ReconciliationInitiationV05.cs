@@ -113,7 +113,7 @@ public record ReconciliationInitiationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Programme")]
     [IsoXmlTag("Prgrmm")]
-    public ProgrammeMode6? Programme { get; init; }
+    public ValueList<ProgrammeMode6> Programme { get; init; } = [];
 
     /// <summary>
     /// System Trace Audit Number.
@@ -197,14 +197,14 @@ public record ReconciliationInitiationV05 : IOuterRecord
     /// </summary>
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public ATICALaxProcessing? PrivateData { get; init; }
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// National Data.
     /// </summary>
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public ATICALaxProcessing? NationalData { get; init; }
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 
     /// <summary>
     /// Security Trailer.

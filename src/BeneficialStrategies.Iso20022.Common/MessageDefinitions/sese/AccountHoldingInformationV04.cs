@@ -114,7 +114,7 @@ public record AccountHoldingInformationV04 : IOuterRecord
     [IsoId("_F5S52RXfEeOocOqSQt5Jbw")]
     [DisplayName("Other Individual Investor")]
     [IsoXmlTag("OthrIndvInvstr")]
-    public IndividualPerson8? OtherIndividualInvestor { get; init; }
+    public ValueList<IndividualPerson8> OtherIndividualInvestor { get; init; } = [];
 
     /// <summary>
     /// Information identifying the primary corporate investor, eg, name and address.
@@ -138,7 +138,7 @@ public record AccountHoldingInformationV04 : IOuterRecord
     [IsoId("_F5S53xXfEeOocOqSQt5Jbw")]
     [DisplayName("Other Corporate Investor")]
     [IsoXmlTag("OthrCorpInvstr")]
-    public Organisation4? OtherCorporateInvestor { get; init; }
+    public ValueList<Organisation4> OtherCorporateInvestor { get; init; } = [];
 
     /// <summary>
     /// Identification of an account owned by the investor at the old plan manager (account servicer).
@@ -170,7 +170,7 @@ public record AccountHoldingInformationV04 : IOuterRecord
     [IsoId("_F5S55xXfEeOocOqSQt5Jbw")]
     [DisplayName("Product Transfer")]
     [IsoXmlTag("PdctTrf")]
-    public required ISATransfer14 ProductTransfer { get; init; }
+    public ValueList<ISATransfer14> ProductTransfer { get; init; } = [];
 
     /// <summary>
     /// Identifies the market practice to which the message conforms.
@@ -186,5 +186,5 @@ public record AccountHoldingInformationV04 : IOuterRecord
     [IsoId("_F5S56RXfEeOocOqSQt5Jbw")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

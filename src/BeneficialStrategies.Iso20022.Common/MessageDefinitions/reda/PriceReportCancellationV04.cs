@@ -139,7 +139,7 @@ public record PriceReportCancellationV04 : IOuterRecord
     [IsoId("_M87dUxj3EeKxeog5DTmtgg")]
     [DisplayName("Cancelled Price Valuation Details")]
     [IsoXmlTag("CancPricValtnDtls")]
-    public PriceReport3? CancelledPriceValuationDetails { get; init; }
+    public ValueList<PriceReport3> CancelledPriceValuationDetails { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -147,5 +147,5 @@ public record PriceReportCancellationV04 : IOuterRecord
     [IsoId("_2sI2JRmCEeKxsrht2duUcg")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

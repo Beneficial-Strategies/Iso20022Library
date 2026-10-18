@@ -106,7 +106,7 @@ public record SecuritiesTransactionPendingReportV01 : IOuterRecord
     [IsoId("_MgUPANFSEd-BzquC8wXy7w_2129129525")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
-    public StatusAndReason1? Status { get; init; }
+    public ValueList<StatusAndReason1> Status { get; init; } = [];
 
     /// <summary>
     /// Details of the transactions reported.
@@ -114,7 +114,7 @@ public record SecuritiesTransactionPendingReportV01 : IOuterRecord
     [IsoId("_MgUPAdFSEd-BzquC8wXy7w_-967195252")]
     [DisplayName("Transactions")]
     [IsoXmlTag("Txs")]
-    public Transaction8? Transactions { get; init; }
+    public ValueList<Transaction8> Transactions { get; init; } = [];
 
     /// <summary>
     /// Party that originated the message, if other than the sender.

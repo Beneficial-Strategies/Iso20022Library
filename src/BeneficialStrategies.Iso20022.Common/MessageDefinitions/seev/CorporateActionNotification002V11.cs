@@ -95,7 +95,7 @@ public record CorporateActionNotification002V11 : IOuterRecord
     [IsoId("_x-1F9h9REeuFz_FaCzCLgQ")]
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
-    public DocumentIdentification38? OtherDocumentIdentification { get; init; }
+    public ValueList<DocumentIdentification38> OtherDocumentIdentification { get; init; } = [];
 
     /// <summary>
     /// Identification of another corporate action event that needs to be closely linked to the processing of the event notified in this document.
@@ -103,7 +103,7 @@ public record CorporateActionNotification002V11 : IOuterRecord
     [IsoId("_x-1F-B9REeuFz_FaCzCLgQ")]
     [DisplayName("Events Linkage")]
     [IsoXmlTag("EvtsLkg")]
-    public CorporateActionEventReference4? EventsLinkage { get; init; }
+    public ValueList<CorporateActionEventReference4> EventsLinkage { get; init; } = [];
 
     /// <summary>
     /// General information about the corporate action event.
@@ -143,7 +143,7 @@ public record CorporateActionNotification002V11 : IOuterRecord
     [IsoId("_x-1GAh9REeuFz_FaCzCLgQ")]
     [DisplayName("Corporate Action Option Details")]
     [IsoXmlTag("CorpActnOptnDtls")]
-    public CorporateActionOption191? CorporateActionOptionDetails { get; init; }
+    public ValueList<CorporateActionOption191> CorporateActionOptionDetails { get; init; } = [];
 
     /// <summary>
     /// Additional information on the event.
@@ -159,7 +159,7 @@ public record CorporateActionNotification002V11 : IOuterRecord
     [IsoId("_x-1GBh9REeuFz_FaCzCLgQ")]
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
-    public PartyIdentification151Choice_? IssuerAgent { get; init; }
+    public ValueList<PartyIdentification151Choice_> IssuerAgent { get; init; } = [];
 
     /// <summary>
     /// Agent (principal or fiscal paying agent) appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.
@@ -167,7 +167,7 @@ public record CorporateActionNotification002V11 : IOuterRecord
     [IsoId("_x-1GCB9REeuFz_FaCzCLgQ")]
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
-    public PartyIdentification137Choice_? PayingAgent { get; init; }
+    public ValueList<PartyIdentification137Choice_> PayingAgent { get; init; } = [];
 
     /// <summary>
     /// Sub-agent appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.
@@ -175,7 +175,7 @@ public record CorporateActionNotification002V11 : IOuterRecord
     [IsoId("_x-1GCh9REeuFz_FaCzCLgQ")]
     [DisplayName("Sub Paying Agent")]
     [IsoXmlTag("SubPngAgt")]
-    public PartyIdentification137Choice_? SubPayingAgent { get; init; }
+    public ValueList<PartyIdentification137Choice_> SubPayingAgent { get; init; } = [];
 
     /// <summary>
     /// Party/agent responsible for maintaining the register of the security.
@@ -191,7 +191,7 @@ public record CorporateActionNotification002V11 : IOuterRecord
     [IsoId("_x-1GDh9REeuFz_FaCzCLgQ")]
     [DisplayName("Reselling Agent")]
     [IsoXmlTag("RsellngAgt")]
-    public PartyIdentification137Choice_? ResellingAgent { get; init; }
+    public ValueList<PartyIdentification137Choice_> ResellingAgent { get; init; } = [];
 
     /// <summary>
     /// A trust company, bank or similar financial institution assigned by an issuer to accept presentations of instruments, usually bonds, for transfer and or exchange.
@@ -215,7 +215,7 @@ public record CorporateActionNotification002V11 : IOuterRecord
     [IsoId("_x-1GFB9REeuFz_FaCzCLgQ")]
     [DisplayName("Solicitation Agent")]
     [IsoXmlTag("SlctnAgt")]
-    public PartyIdentification137Choice_? SolicitationAgent { get; init; }
+    public ValueList<PartyIdentification137Choice_> SolicitationAgent { get; init; } = [];
 
     /// <summary>
     /// A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation.
@@ -239,7 +239,7 @@ public record CorporateActionNotification002V11 : IOuterRecord
     [IsoId("_x-1GGh9REeuFz_FaCzCLgQ")]
     [DisplayName("Offeror")]
     [IsoXmlTag("Offerr")]
-    public PartyIdentification151Choice_? Offeror { get; init; }
+    public ValueList<PartyIdentification151Choice_> Offeror { get; init; } = [];
 
     /// <summary>
     /// A trust company, bank or similar financial institution appointed by a fund management company to maintain records of investors and account balances. The transfer agent records transactions, including subscriptions, redemptions, switches, transfers, and re-registrations.
@@ -255,5 +255,5 @@ public record CorporateActionNotification002V11 : IOuterRecord
     [IsoId("_x-1GHh9REeuFz_FaCzCLgQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

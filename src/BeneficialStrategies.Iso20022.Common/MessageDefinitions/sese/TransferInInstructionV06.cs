@@ -101,7 +101,7 @@ public record TransferInInstructionV06 : IOuterRecord
     [IsoId("_41OKjz57EeSIqOPJHpnleA")]
     [DisplayName("Transfer Details")]
     [IsoXmlTag("TrfDtls")]
-    public required Transfer21 TransferDetails { get; init; }
+    public ValueList<Transfer21> TransferDetails { get; init; } = [];
 
     /// <summary>
     /// Information related to the account into which the financial instrument is to be received.
@@ -141,5 +141,5 @@ public record TransferInInstructionV06 : IOuterRecord
     [IsoId("_41OKmT57EeSIqOPJHpnleA")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

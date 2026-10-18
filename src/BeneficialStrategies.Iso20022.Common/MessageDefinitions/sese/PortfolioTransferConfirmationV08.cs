@@ -106,7 +106,7 @@ public record PortfolioTransferConfirmationV08 : IOuterRecord
     [IsoId("_dvvPO4ZMEeemXK0UETsSiA")]
     [DisplayName("Other Individual Investor")]
     [IsoXmlTag("OthrIndvInvstr")]
-    public IndividualPerson8? OtherIndividualInvestor { get; init; }
+    public ValueList<IndividualPerson8> OtherIndividualInvestor { get; init; } = [];
 
     /// <summary>
     /// Information identifying the primary corporate investor, for example, name and address.
@@ -130,7 +130,7 @@ public record PortfolioTransferConfirmationV08 : IOuterRecord
     [IsoId("_dvvPQYZMEeemXK0UETsSiA")]
     [DisplayName("Other Corporate Investor")]
     [IsoXmlTag("OthrCorpInvstr")]
-    public Organisation31? OtherCorporateInvestor { get; init; }
+    public ValueList<Organisation31> OtherCorporateInvestor { get; init; } = [];
 
     /// <summary>
     /// Identification of the account owned by the investor at the old plan manager (account servicer).
@@ -162,7 +162,7 @@ public record PortfolioTransferConfirmationV08 : IOuterRecord
     [IsoId("_dvvPSYZMEeemXK0UETsSiA")]
     [DisplayName("Intermediary Information")]
     [IsoXmlTag("IntrmyInf")]
-    public Intermediary41? IntermediaryInformation { get; init; }
+    public ValueList<Intermediary41> IntermediaryInformation { get; init; } = [];
 
     /// <summary>
     /// Identification of an account owned by the investor to which a cash entry is made based on the transfer of asset(s).
@@ -178,7 +178,7 @@ public record PortfolioTransferConfirmationV08 : IOuterRecord
     [IsoId("_dvvPTYZMEeemXK0UETsSiA")]
     [DisplayName("Product Transfer")]
     [IsoXmlTag("PdctTrf")]
-    public required ISATransfer28 ProductTransfer { get; init; }
+    public ValueList<ISATransfer28> ProductTransfer { get; init; } = [];
 
     /// <summary>
     /// Identifies the market practice to which the message conforms.
@@ -194,5 +194,5 @@ public record PortfolioTransferConfirmationV08 : IOuterRecord
     [IsoId("_dvvPUYZMEeemXK0UETsSiA")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

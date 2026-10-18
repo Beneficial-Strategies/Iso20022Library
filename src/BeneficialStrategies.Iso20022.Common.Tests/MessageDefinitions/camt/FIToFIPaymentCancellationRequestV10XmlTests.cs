@@ -74,7 +74,7 @@ public class FIToFIPaymentCancellationRequestV10XmlTests
         Assert.Equal(ExpectedCaseId, result.Case!.Identification);
 
         // Underlying transaction
-        var txns = result.Underlying.TransactionInformation;
+        var txns = result.Underlying[0].TransactionInformation;
         Assert.NotEmpty(txns);
         var txn = txns![0];
         Assert.Equal(ExpectedAssignmentId, txn.CancellationIdentification);
@@ -112,7 +112,7 @@ public class FIToFIPaymentCancellationRequestV10XmlTests
         Assert.NotNull(result.Case);
         Assert.Equal(ExpectedCaseId, result.Case!.Identification);
 
-        var txns2 = result.Underlying.TransactionInformation;
+        var txns2 = result.Underlying[0].TransactionInformation;
         Assert.NotEmpty(txns2);
         var txn = txns2![0];
         Assert.Equal(ExpectedAssignmentId, txn.CancellationIdentification);

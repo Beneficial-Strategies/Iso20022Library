@@ -63,7 +63,7 @@ public record RemittanceAdviceV02 : IOuterRecord
     [IsoId("_pmmdszqxEeWZFYSPlduMhw")]
     [DisplayName("Remittance Information")]
     [IsoXmlTag("RmtInf")]
-    public required RemittanceInformation12 RemittanceInformation { get; init; }
+    public ValueList<RemittanceInformation12> RemittanceInformation { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -71,5 +71,5 @@ public record RemittanceAdviceV02 : IOuterRecord
     [IsoId("_pmmdtTqxEeWZFYSPlduMhw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

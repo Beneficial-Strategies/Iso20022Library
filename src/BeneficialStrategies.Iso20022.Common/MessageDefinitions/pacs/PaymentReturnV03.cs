@@ -78,7 +78,7 @@ public record PaymentReturnV03 : IOuterRecord
     [IsoId("_sKeoQlkyEeGeoaLUQk__nA_-93352633")]
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
-    public PaymentTransaction34? TransactionInformation { get; init; }
+    public ValueList<PaymentTransaction34> TransactionInformation { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -86,5 +86,5 @@ public record PaymentReturnV03 : IOuterRecord
     [IsoId("_sKnyMFkyEeGeoaLUQk__nA_-789030620")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

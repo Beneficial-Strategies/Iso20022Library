@@ -66,7 +66,7 @@ public record AcceptorBatchTransferResponseV01 : IOuterRecord
     [IsoId("_fHr69qMVEeCJ6YNENx4h-w_-71921900")]
     [DisplayName("Data Set")]
     [IsoXmlTag("DataSet")]
-    public required CardPaymentDataSet2 DataSet { get; init; }
+    public ValueList<CardPaymentDataSet2> DataSet { get; init; } = [];
 
     /// <summary>
     /// Trailer of the message containing a MAC or a digital signature.

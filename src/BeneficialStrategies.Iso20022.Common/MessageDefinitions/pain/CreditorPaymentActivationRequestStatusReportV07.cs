@@ -71,7 +71,7 @@ public record CreditorPaymentActivationRequestStatusReportV07 : IOuterRecord
     [IsoId("_eYI__22PEei3KuUgpx7Xcw")]
     [DisplayName("Original Payment Information And Status")]
     [IsoXmlTag("OrgnlPmtInfAndSts")]
-    public OriginalPaymentInstruction31? OriginalPaymentInformationAndStatus { get; init; }
+    public ValueList<OriginalPaymentInstruction31> OriginalPaymentInformationAndStatus { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -79,5 +79,5 @@ public record CreditorPaymentActivationRequestStatusReportV07 : IOuterRecord
     [IsoId("_eYJAAW2PEei3KuUgpx7Xcw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

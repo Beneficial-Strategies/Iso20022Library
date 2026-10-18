@@ -64,7 +64,7 @@ public record SecuritiesEndOfProcessReportV02 : IOuterRecord
     [IsoId("_j5E4hwNmEe2P7e2qGFFOGg")]
     [DisplayName("Pagination")]
     [IsoXmlTag("Pgntn")]
-    public Pagination1? Pagination { get; init; }
+    public ValueList<Pagination1> Pagination { get; init; } = [];
 
     /// <summary>
     /// Notifies the type of report transmitted.
@@ -80,7 +80,7 @@ public record SecuritiesEndOfProcessReportV02 : IOuterRecord
     [IsoId("_j5E4iwNmEe2P7e2qGFFOGg")]
     [DisplayName("Confirmation Parties")]
     [IsoXmlTag("ConfPties")]
-    public ConfirmationParties7? ConfirmationParties { get; init; }
+    public ValueList<ConfirmationParties7> ConfirmationParties { get; init; } = [];
 
     /// <summary>
     /// Party that identifies the underlying investor.
@@ -88,7 +88,7 @@ public record SecuritiesEndOfProcessReportV02 : IOuterRecord
     [IsoId("_j5E4jQNmEe2P7e2qGFFOGg")]
     [DisplayName("Investor")]
     [IsoXmlTag("Invstr")]
-    public PartyIdentificationAndAccount220? Investor { get; init; }
+    public ValueList<PartyIdentificationAndAccount220> Investor { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -96,5 +96,5 @@ public record SecuritiesEndOfProcessReportV02 : IOuterRecord
     [IsoId("_j5E4jwNmEe2P7e2qGFFOGg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

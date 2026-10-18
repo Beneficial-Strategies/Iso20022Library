@@ -194,5 +194,5 @@ public record SecuritiesSettlementTransactionReversalAdvice002V08 : IOuterRecord
     [IsoId("_qIKhf_fYEeiNZp_PtLohLw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

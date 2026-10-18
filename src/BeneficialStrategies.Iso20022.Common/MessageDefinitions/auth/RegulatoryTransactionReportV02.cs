@@ -66,7 +66,7 @@ public record RegulatoryTransactionReportV02 : IOuterRecord
     [IsoId("_gKRs8MIFEeGllrOKQRUTYA_1289680605")]
     [DisplayName("Transaction Details")]
     [IsoXmlTag("TxDtls")]
-    public required TransactionDetails3 TransactionDetails { get; init; }
+    public ValueList<TransactionDetails3> TransactionDetails { get; init; } = [];
 
     /// <summary>
     /// Identification of the firm that is legally responsible for sending the transaction report.|.
@@ -90,5 +90,5 @@ public record RegulatoryTransactionReportV02 : IOuterRecord
     [IsoId("_gKRs88IFEeGllrOKQRUTYA_1289680973")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

@@ -66,7 +66,7 @@ public record AccountOpeningAdditionalInformationRequestV01 : IOuterRecord
     [IsoId("_s7iwwNE9Ed-BzquC8wXy7w_-2055295141")]
     [DisplayName("Organisation Identification")]
     [IsoXmlTag("OrgId")]
-    public required OrganisationIdentification6 OrganisationIdentification { get; init; }
+    public ValueList<OrganisationIdentification6> OrganisationIdentification { get; init; } = [];
 
     /// <summary>
     /// Unique and unambiguous identification of the account between the account owner and the account servicer.
@@ -98,5 +98,5 @@ public record AccountOpeningAdditionalInformationRequestV01 : IOuterRecord
     [IsoId("_s7iwxNE9Ed-BzquC8wXy7w_369890722")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
-    public PartyAndSignature1? DigitalSignature { get; init; }
+    public ValueList<PartyAndSignature1> DigitalSignature { get; init; } = [];
 }

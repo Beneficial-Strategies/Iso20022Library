@@ -71,7 +71,7 @@ public record SecuritiesTradeConfirmationCancellationV01 : IOuterRecord
     [IsoId("_RJ4jMuQXEeCGktPI9k4Dlw_135409583")]
     [DisplayName("References")]
     [IsoXmlTag("Refs")]
-    public Linkages15? References { get; init; }
+    public ValueList<Linkages15> References { get; init; } = [];
 
     /// <summary>
     /// Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.
@@ -87,5 +87,5 @@ public record SecuritiesTradeConfirmationCancellationV01 : IOuterRecord
     [IsoId("_RJ4jNOQXEeCGktPI9k4Dlw_-206107615")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -98,5 +98,5 @@ public record CollateralManagementCancellationStatusV04 : IOuterRecord
     [IsoId("_cjxa-4FrEeWtPe6Crjmeug")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

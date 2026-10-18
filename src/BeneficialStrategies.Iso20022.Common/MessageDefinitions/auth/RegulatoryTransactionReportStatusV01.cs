@@ -86,5 +86,5 @@ public record RegulatoryTransactionReportStatusV01 : IOuterRecord
     [IsoId("_gJ-K9MIFEeGllrOKQRUTYA_1351125442")]
     [DisplayName("Individual Transaction Status")]
     [IsoXmlTag("IndvTxSts")]
-    public required TradeTransactionStatusAndReason1 IndividualTransactionStatus { get; init; }
+    public ValueList<TradeTransactionStatusAndReason1> IndividualTransactionStatus { get; init; } = [];
 }

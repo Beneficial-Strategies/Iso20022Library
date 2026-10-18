@@ -95,5 +95,5 @@ public record RejectInvestigationV06 : IOuterRecord
     [IsoId("_eX_Om22PEei3KuUgpx7Xcw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

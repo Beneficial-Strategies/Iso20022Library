@@ -74,7 +74,7 @@ public record AccountReportV01 : IOuterRecord
     [IsoId("_vtdewNE9Ed-BzquC8wXy7w_-1289032009")]
     [DisplayName("Organisation")]
     [IsoXmlTag("Org")]
-    public required Organisation6 Organisation { get; init; }
+    public ValueList<Organisation6> Organisation { get; init; } = [];
 
     /// <summary>
     /// Account report.
@@ -82,7 +82,7 @@ public record AccountReportV01 : IOuterRecord
     [IsoId("_vtdewdE9Ed-BzquC8wXy7w_1826995567")]
     [DisplayName("Report")]
     [IsoXmlTag("Rpt")]
-    public AccountReport1? Report { get; init; }
+    public ValueList<AccountReport1> Report { get; init; } = [];
 
     /// <summary>
     /// Contains the signature with its components, namely signed info, signature value, key info and the object.
@@ -90,5 +90,5 @@ public record AccountReportV01 : IOuterRecord
     [IsoId("_vtdewtE9Ed-BzquC8wXy7w_1985192498")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
-    public PartyAndSignature1? DigitalSignature { get; init; }
+    public ValueList<PartyAndSignature1> DigitalSignature { get; init; } = [];
 }

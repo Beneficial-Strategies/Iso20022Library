@@ -87,5 +87,5 @@ public record SecuritiesTransactionCancellationRequestStatusAdviceV03 : IOuterRe
     [IsoId("_NIX9UfvfEeCBQp5TnX1XKQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

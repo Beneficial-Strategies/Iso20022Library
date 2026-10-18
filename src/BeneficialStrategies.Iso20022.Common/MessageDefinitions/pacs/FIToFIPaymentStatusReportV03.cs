@@ -77,5 +77,5 @@ public record FIToFIPaymentStatusReportV03 : IOuterRecord
     [IsoId("_el6FwNEuEd-BzquC8wXy7w_-717206288")]
     [DisplayName("Transaction Information And Status")]
     [IsoXmlTag("TxInfAndSts")]
-    public PaymentTransactionInformation26? TransactionInformationAndStatus { get; init; }
+    public ValueList<PaymentTransactionInformation26> TransactionInformationAndStatus { get; init; } = [];
 }

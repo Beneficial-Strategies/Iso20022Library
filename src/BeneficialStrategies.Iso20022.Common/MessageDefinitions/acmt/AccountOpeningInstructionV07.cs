@@ -174,7 +174,7 @@ public record AccountOpeningInstructionV07 : IOuterRecord
     [IsoId("_BsEwQUNEEeaknIuOb43xYQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditiononalInformation12? AdditionalInformation { get; init; }
+    public ValueList<AdditiononalInformation12> AdditionalInformation { get; init; } = [];
 
     /// <summary>
     /// Identifies the market practice to which the message conforms.
@@ -190,5 +190,5 @@ public record AccountOpeningInstructionV07 : IOuterRecord
     [IsoId("_BsEwRUNEEeaknIuOb43xYQ")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

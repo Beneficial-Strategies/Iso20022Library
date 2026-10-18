@@ -138,7 +138,7 @@ public record ForeignExchangeTradeStatusAndDetailsNotificationV04 : IOuterRecord
     [IsoId("_rIwsWZR5Eeak6e8_Fc5fQg")]
     [DisplayName("Split Trade Information")]
     [IsoXmlTag("SpltTradInf")]
-    public SplitTradeDetails3? SplitTradeInformation { get; init; }
+    public ValueList<SplitTradeDetails3> SplitTradeInformation { get; init; } = [];
 
     /// <summary>
     /// Information that is to be provided to trade repositories in the context of the regulatory standards around over-the-counter (OTC) derivatives, central counterparties and trade repositories.
@@ -154,5 +154,5 @@ public record ForeignExchangeTradeStatusAndDetailsNotificationV04 : IOuterRecord
     [IsoId("_rIwsXZR5Eeak6e8_Fc5fQg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

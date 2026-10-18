@@ -63,5 +63,5 @@ public record SecuritiesFinancingReportingTransactionStateReportV02 : IOuterReco
     [IsoId("_9g7DBcKvEeuzU9S_IANlog")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

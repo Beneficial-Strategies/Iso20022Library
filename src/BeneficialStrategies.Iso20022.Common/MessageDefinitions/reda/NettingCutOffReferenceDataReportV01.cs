@@ -63,7 +63,7 @@ public record NettingCutOffReferenceDataReportV01 : IOuterRecord
     [IsoId("_pQMvMJXZEeaYkf5FCqYMeA")]
     [DisplayName("Participant Netting Cut Off Data")]
     [IsoXmlTag("PtcptNetgCutOffData")]
-    public required CutOffData1 ParticipantNettingCutOffData { get; init; }
+    public ValueList<CutOffData1> ParticipantNettingCutOffData { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -71,5 +71,5 @@ public record NettingCutOffReferenceDataReportV01 : IOuterRecord
     [IsoId("_g5ZZMZnzEeahw7LV9elg3w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

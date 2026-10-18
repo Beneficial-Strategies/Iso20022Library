@@ -71,7 +71,7 @@ public record CorporateActionEventProcessingStatusAdviceV06 : IOuterRecord
     [IsoId("_ynLuo4b4Eea9VrPZgV7UBQ")]
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
-    public DocumentIdentification33? OtherDocumentIdentification { get; init; }
+    public ValueList<DocumentIdentification33> OtherDocumentIdentification { get; init; } = [];
 
     /// <summary>
     /// General information about the corporate action event.
@@ -87,7 +87,7 @@ public record CorporateActionEventProcessingStatusAdviceV06 : IOuterRecord
     [IsoId("_ynLup4b4Eea9VrPZgV7UBQ")]
     [DisplayName("Event Processing Status")]
     [IsoXmlTag("EvtPrcgSts")]
-    public required EventProcessingStatus3Choice_ EventProcessingStatus { get; init; }
+    public ValueList<EventProcessingStatus3Choice_> EventProcessingStatus { get; init; } = [];
 
     /// <summary>
     /// Provides additional information.
@@ -103,5 +103,5 @@ public record CorporateActionEventProcessingStatusAdviceV06 : IOuterRecord
     [IsoId("_ynLuq4b4Eea9VrPZgV7UBQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

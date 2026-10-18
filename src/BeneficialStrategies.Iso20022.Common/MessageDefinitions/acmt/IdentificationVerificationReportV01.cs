@@ -77,5 +77,5 @@ public record IdentificationVerificationReportV01 : IOuterRecord
     [IsoId("_sSFgQmtdEeCY4-KZ9JEyUQ_-1601120034")]
     [DisplayName("Report")]
     [IsoXmlTag("Rpt")]
-    public required VerificationReport1 Report { get; init; }
+    public ValueList<VerificationReport1> Report { get; init; } = [];
 }

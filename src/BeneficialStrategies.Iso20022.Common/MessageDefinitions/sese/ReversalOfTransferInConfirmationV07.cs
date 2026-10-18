@@ -72,7 +72,7 @@ public record ReversalOfTransferInConfirmationV07 : IOuterRecord
     [IsoId("_BL8wdR8OEeWpZde3LQh6dg")]
     [DisplayName("References")]
     [IsoXmlTag("Refs")]
-    public References20? References { get; init; }
+    public ValueList<References20> References { get; init; } = [];
 
     /// <summary>
     /// Function of the transfer-in, that is, whether the message is used as a reversal of a previously sent confirmation or as a reversal of a previously sent advice. The absence of Function indicates the message is a reversal of a previously sent confirmation.

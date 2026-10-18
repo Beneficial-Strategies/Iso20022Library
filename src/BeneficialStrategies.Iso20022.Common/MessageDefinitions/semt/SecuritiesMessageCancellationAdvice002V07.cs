@@ -108,5 +108,5 @@ public record SecuritiesMessageCancellationAdvice002V07 : IOuterRecord
     [IsoId("_dgY8ZTi8Eeydid5dcNPKvg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

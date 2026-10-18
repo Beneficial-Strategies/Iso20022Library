@@ -78,5 +78,5 @@ public record PaymentReturnV02 : IOuterRecord
     [IsoId("_eqhgAtEuEd-BzquC8wXy7w_-993933649")]
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
-    public PaymentTransactionInformation27? TransactionInformation { get; init; }
+    public ValueList<PaymentTransactionInformation27> TransactionInformation { get; init; } = [];
 }

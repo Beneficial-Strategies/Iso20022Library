@@ -71,5 +71,5 @@ public record CollateralValueQueryV01 : IOuterRecord
     [IsoId("_5SjM_TooEemaN9GkhmGkfg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

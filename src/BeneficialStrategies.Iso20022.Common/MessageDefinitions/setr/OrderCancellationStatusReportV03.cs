@@ -103,7 +103,7 @@ public record OrderCancellationStatusReportV03 : IOuterRecord
     [IsoId("_g9tXsNE7Ed-BzquC8wXy7w_-358353694")]
     [DisplayName("Individual Cancellation Status Report")]
     [IsoXmlTag("IndvCxlStsRpt")]
-    public required IndividualOrderStatusAndReason4 IndividualCancellationStatusReport { get; init; }
+    public ValueList<IndividualOrderStatusAndReason4> IndividualCancellationStatusReport { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -111,5 +111,5 @@ public record OrderCancellationStatusReportV03 : IOuterRecord
     [IsoId("_g9tXsdE7Ed-BzquC8wXy7w_819197774")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

@@ -110,10 +110,10 @@ public class Pain002XmlTests
 
         var pmtInf = result.OriginalPaymentInformationAndStatus;
         Assert.NotNull(pmtInf);
-        Assert.Equal(ExpectedOriginalPmtInfId, pmtInf!.OriginalPaymentInformationIdentification);
-        Assert.Equal(2, pmtInf.StatusReasonInformation.Count);
+        Assert.Equal(ExpectedOriginalPmtInfId, pmtInf![0].OriginalPaymentInformationIdentification);
+        Assert.Equal(2, pmtInf[0].StatusReasonInformation.Count);
 
-        var firstReason = Assert.IsType<Code>(pmtInf.StatusReasonInformation[0].Reason);
+        var firstReason = Assert.IsType<Code>(pmtInf[0].StatusReasonInformation[0].Reason);
         Assert.Equal(ExternalStatusReason1Code.ClosedAccountNumber, firstReason.Value);
     }
 
@@ -128,7 +128,7 @@ public class Pain002XmlTests
             LoadEmbeddedXml()
         );
 
-        var stsRsn1 = result.OriginalPaymentInformationAndStatus!.StatusReasonInformation[0];
+        var stsRsn1 = result.OriginalPaymentInformationAndStatus![0].StatusReasonInformation[0];
         Assert.Equal("Deutsche Bank AG", stsRsn1.Originator?.Name);
         var code = Assert.IsType<Code>(stsRsn1.Reason);
         Assert.Equal(ExternalStatusReason1Code.ClosedAccountNumber, code.Value);
@@ -144,7 +144,7 @@ public class Pain002XmlTests
             LoadEmbeddedXml()
         );
 
-        var stsRsn1 = result.OriginalPaymentInformationAndStatus!.StatusReasonInformation[0];
+        var stsRsn1 = result.OriginalPaymentInformationAndStatus![0].StatusReasonInformation[0];
         Assert.Equal(2, stsRsn1.AdditionalInformation.Count);
         Assert.Equal("Account FR7630006000011234567890189 closed", stsRsn1.AdditionalInformation[0]);
         Assert.Equal("As of 2024-01-31", stsRsn1.AdditionalInformation[1]);
@@ -177,10 +177,10 @@ public class Pain002XmlTests
         Assert.NotNull(pmtInf);
         Assert.Equal(
             ExternalPaymentGroupStatus1Code.Rejected,
-            pmtInf!.PaymentInformationStatus
+            pmtInf![0].PaymentInformationStatus
         );
-        Assert.Equal(2, pmtInf.StatusReasonInformation.Count);
-        Assert.Equal(2, pmtInf.StatusReasonInformation[0].AdditionalInformation.Count);
-        Assert.Single(pmtInf.StatusReasonInformation[1].AdditionalInformation);
+        Assert.Equal(2, pmtInf[0].StatusReasonInformation.Count);
+        Assert.Equal(2, pmtInf[0].StatusReasonInformation[0].AdditionalInformation.Count);
+        Assert.Single(pmtInf[0].StatusReasonInformation[1].AdditionalInformation);
     }
 }

@@ -87,5 +87,5 @@ public record AccountSwitchRequestPaymentV01 : IOuterRecord
     [IsoId("_g84jIA8EEeeJ4ZumUkzG4Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

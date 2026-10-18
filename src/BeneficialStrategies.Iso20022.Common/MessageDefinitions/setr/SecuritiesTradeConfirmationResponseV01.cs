@@ -71,7 +71,7 @@ public record SecuritiesTradeConfirmationResponseV01 : IOuterRecord
     [IsoId("_QZAf5-QXEeCGktPI9k4Dlw_-804271867")]
     [DisplayName("References")]
     [IsoXmlTag("Refs")]
-    public required Linkages15 References { get; init; }
+    public ValueList<Linkages15> References { get; init; } = [];
 
     /// <summary>
     /// Provides details on the processing status of the trade.
@@ -95,7 +95,7 @@ public record SecuritiesTradeConfirmationResponseV01 : IOuterRecord
     [IsoId("_QZKQ4OQXEeCGktPI9k4Dlw_-1695268832")]
     [DisplayName("Confirmation Parties")]
     [IsoXmlTag("ConfPties")]
-    public ConfirmationParties3? ConfirmationParties { get; init; }
+    public ValueList<ConfirmationParties3> ConfirmationParties { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -103,5 +103,5 @@ public record SecuritiesTradeConfirmationResponseV01 : IOuterRecord
     [IsoId("_QZKQ4eQXEeCGktPI9k4Dlw_499478370")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

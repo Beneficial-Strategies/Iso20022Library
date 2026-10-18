@@ -63,7 +63,7 @@ public record BankToCustomerDebitCreditNotificationV11 : IOuterRecord
     [IsoId("_BJcI2A5rEe2xs7BqO31w6w")]
     [DisplayName("Notification")]
     [IsoXmlTag("Ntfctn")]
-    public required AccountNotification21 Notification { get; init; }
+    public ValueList<AccountNotification21> Notification { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -71,5 +71,5 @@ public record BankToCustomerDebitCreditNotificationV11 : IOuterRecord
     [IsoId("_BJcI2g5rEe2xs7BqO31w6w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

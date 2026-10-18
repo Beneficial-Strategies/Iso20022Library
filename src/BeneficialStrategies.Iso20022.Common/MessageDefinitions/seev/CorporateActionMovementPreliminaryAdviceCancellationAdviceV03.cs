@@ -94,7 +94,7 @@ public record CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 : IO
     [IsoId("_e0jdnfmOEeC_eLZALo-S0A")]
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
-    public PartyIdentification46Choice_? IssuerAgent { get; init; }
+    public ValueList<PartyIdentification46Choice_> IssuerAgent { get; init; } = [];
 
     /// <summary>
     /// Agent (principal or fiscal paying agent) appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.
@@ -102,7 +102,7 @@ public record CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 : IO
     [IsoId("_e0jdofmOEeC_eLZALo-S0A")]
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
-    public PartyIdentification46Choice_? PayingAgent { get; init; }
+    public ValueList<PartyIdentification46Choice_> PayingAgent { get; init; } = [];
 
     /// <summary>
     /// Sub-agent appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.
@@ -110,7 +110,7 @@ public record CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 : IO
     [IsoId("_e0jdpfmOEeC_eLZALo-S0A")]
     [DisplayName("Sub Paying Agent")]
     [IsoXmlTag("SubPngAgt")]
-    public PartyIdentification46Choice_? SubPayingAgent { get; init; }
+    public ValueList<PartyIdentification46Choice_> SubPayingAgent { get; init; } = [];
 
     /// <summary>
     /// Party/agent responsible for maintaining the register of a security.
@@ -126,7 +126,7 @@ public record CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 : IO
     [IsoId("_e0jdrfmOEeC_eLZALo-S0A")]
     [DisplayName("Reselling Agent")]
     [IsoXmlTag("RsellngAgt")]
-    public PartyIdentification46Choice_? ResellingAgent { get; init; }
+    public ValueList<PartyIdentification46Choice_> ResellingAgent { get; init; } = [];
 
     /// <summary>
     /// A trust company, bank or similar financial institution assigned by an issuer to accept presentations of instruments, usually bonds, for transfer and or exchange.
@@ -150,7 +150,7 @@ public record CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 : IO
     [IsoId("_e0jdufmOEeC_eLZALo-S0A")]
     [DisplayName("Solicitation Agent")]
     [IsoXmlTag("SlctnAgt")]
-    public PartyIdentification46Choice_? SolicitationAgent { get; init; }
+    public ValueList<PartyIdentification46Choice_> SolicitationAgent { get; init; } = [];
 
     /// <summary>
     /// A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation.
@@ -166,5 +166,5 @@ public record CorporateActionMovementPreliminaryAdviceCancellationAdviceV03 : IO
     [IsoId("_e0jdwfmOEeC_eLZALo-S0A")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

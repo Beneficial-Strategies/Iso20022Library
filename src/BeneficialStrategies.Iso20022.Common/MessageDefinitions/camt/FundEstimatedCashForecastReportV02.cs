@@ -67,7 +67,7 @@ public record FundEstimatedCashForecastReportV02 : IOuterRecord
     [IsoId("_d6JYt9E-Ed-BzquC8wXy7w_-602392790")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
-    public AdditionalReference3? PreviousReference { get; init; }
+    public ValueList<AdditionalReference3> PreviousReference { get; init; } = [];
 
     /// <summary>
     /// Reference to a linked message that was previously received.
@@ -75,7 +75,7 @@ public record FundEstimatedCashForecastReportV02 : IOuterRecord
     [IsoId("_d6JYuNE-Ed-BzquC8wXy7w_-506346429")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
-    public AdditionalReference3? RelatedReference { get; init; }
+    public ValueList<AdditionalReference3> RelatedReference { get; init; } = [];
 
     /// <summary>
     /// Information related to the estimated cash-in and cash-out flows for a specific trade date as a result of investment fund transactions, for example, subscriptions, redemptions or switch to/from a specified investment fund.
@@ -83,7 +83,7 @@ public record FundEstimatedCashForecastReportV02 : IOuterRecord
     [IsoId("_d6JYudE-Ed-BzquC8wXy7w_1685167439")]
     [DisplayName("Estimated Fund Cash Forecast Details")]
     [IsoXmlTag("EstmtdFndCshFcstDtls")]
-    public required EstimatedFundCashForecast1 EstimatedFundCashForecastDetails { get; init; }
+    public ValueList<EstimatedFundCashForecast1> EstimatedFundCashForecastDetails { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -91,5 +91,5 @@ public record FundEstimatedCashForecastReportV02 : IOuterRecord
     [IsoId("_d6JYutE-Ed-BzquC8wXy7w_328515513")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

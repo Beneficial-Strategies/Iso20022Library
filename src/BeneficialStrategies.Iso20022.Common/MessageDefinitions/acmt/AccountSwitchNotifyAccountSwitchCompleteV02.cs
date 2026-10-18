@@ -72,5 +72,5 @@ public record AccountSwitchNotifyAccountSwitchCompleteV02 : IOuterRecord
     [IsoId("_7HK1sW42EeiU9cctagi5ow")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

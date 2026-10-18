@@ -85,5 +85,5 @@ public record MeetingCancellationV08 : IOuterRecord
     [IsoId("_lKgSLxrdEeyhRdHRjakS2w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

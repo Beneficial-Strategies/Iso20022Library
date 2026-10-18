@@ -69,7 +69,7 @@ public record SecuritiesTradeConfirmationStatusAdviceV03 : IOuterRecord
     [IsoId("_upGFjANmEe2P7e2qGFFOGg")]
     [DisplayName("References")]
     [IsoXmlTag("Refs")]
-    public required Linkages72 References { get; init; }
+    public ValueList<Linkages72> References { get; init; } = [];
 
     /// <summary>
     /// Provides details on the affitrmation status of a trade.
@@ -133,7 +133,7 @@ public record SecuritiesTradeConfirmationStatusAdviceV03 : IOuterRecord
     [IsoId("_upGFnANmEe2P7e2qGFFOGg")]
     [DisplayName("Confirmation Parties")]
     [IsoXmlTag("ConfPties")]
-    public ConfirmationParties9? ConfirmationParties { get; init; }
+    public ValueList<ConfirmationParties9> ConfirmationParties { get; init; } = [];
 
     /// <summary>
     /// Identifies the chain of delivering settlement parties.
@@ -157,5 +157,5 @@ public record SecuritiesTradeConfirmationStatusAdviceV03 : IOuterRecord
     [IsoId("_upGFogNmEe2P7e2qGFFOGg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

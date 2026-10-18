@@ -184,5 +184,5 @@ public record SecuritiesSettlementTransactionAllegementNotificationV02 : IOuterR
     [IsoId("_I_jGNdtaEd-RF5yaMAVhAw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

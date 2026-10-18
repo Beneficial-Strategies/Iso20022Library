@@ -84,5 +84,5 @@ public record SecurityCreationRequestV01 : IOuterRecord
     [IsoId("_jTt_tR62Eeu31YsWNiv_cw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

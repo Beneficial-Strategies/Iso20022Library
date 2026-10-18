@@ -74,7 +74,7 @@ public record SettlementInternaliserReportV01 : IOuterRecord
     [IsoId("_pgDeYO3kEeaWjpoyrnG6Rw")]
     [DisplayName("Issuer CSD")]
     [IsoXmlTag("IssrCSD")]
-    public required IssuerCSDReport1 IssuerCSD { get; init; }
+    public ValueList<IssuerCSDReport1> IssuerCSD { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -82,5 +82,5 @@ public record SettlementInternaliserReportV01 : IOuterRecord
     [IsoId("_D1rv0X9xEeiuTa5SlOUnYg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

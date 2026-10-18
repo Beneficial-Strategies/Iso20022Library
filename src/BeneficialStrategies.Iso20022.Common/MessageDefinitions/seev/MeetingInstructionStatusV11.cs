@@ -99,7 +99,9 @@ public record MeetingInstructionStatusV11 : IOuterRecord
     /// </summary>
     [DisplayName("Rights Holder")]
     [IsoXmlTag("RghtsHldr")]
-    public PartyIdentification246Choice_? RightsHolder { get; init; }
+    [MinLength(0)]
+    [MaxLength(250)]
+    public ValueList<PartyIdentification246Choice_> RightsHolder { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

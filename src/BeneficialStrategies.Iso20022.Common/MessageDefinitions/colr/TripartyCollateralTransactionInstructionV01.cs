@@ -70,7 +70,7 @@ public record TripartyCollateralTransactionInstructionV01 : IOuterRecord
     [IsoId("_2uaNMys7EeySlt9bF77XfA")]
     [DisplayName("Linkages")]
     [IsoXmlTag("Lnkgs")]
-    public Linkages58? Linkages { get; init; }
+    public ValueList<Linkages58> Linkages { get; init; } = [];
 
     /// <summary>
     /// Page number of the message and continuation indicator to indicate that the multi-part preliminary advice is to continue or that the message is the last page of the multi-part preliminary advice.
@@ -118,7 +118,7 @@ public record TripartyCollateralTransactionInstructionV01 : IOuterRecord
     [IsoId("_2uaNPys7EeySlt9bF77XfA")]
     [DisplayName("Securities Movement")]
     [IsoXmlTag("SctiesMvmnt")]
-    public SecuritiesMovement9? SecuritiesMovement { get; init; }
+    public ValueList<SecuritiesMovement9> SecuritiesMovement { get; init; } = [];
 
     /// <summary>
     /// Cash movements.
@@ -126,7 +126,7 @@ public record TripartyCollateralTransactionInstructionV01 : IOuterRecord
     [IsoId("_2uaNQSs7EeySlt9bF77XfA")]
     [DisplayName("Cash Movement")]
     [IsoXmlTag("CshMvmnt")]
-    public CashMovement8? CashMovement { get; init; }
+    public ValueList<CashMovement8> CashMovement { get; init; } = [];
 
     /// <summary>
     /// Other business parties relevant to the transaction.
@@ -142,5 +142,5 @@ public record TripartyCollateralTransactionInstructionV01 : IOuterRecord
     [IsoId("_2uaNRSs7EeySlt9bF77XfA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

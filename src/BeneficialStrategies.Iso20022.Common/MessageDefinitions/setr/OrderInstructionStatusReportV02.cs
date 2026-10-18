@@ -108,5 +108,5 @@ public record OrderInstructionStatusReportV02 : IOuterRecord
     [IsoId("_jH_d8dE7Ed-BzquC8wXy7w_289696390")]
     [DisplayName("Individual Order Details Report")]
     [IsoXmlTag("IndvOrdrDtlsRpt")]
-    public required IndividualOrderStatusAndReason1 IndividualOrderDetailsReport { get; init; }
+    public ValueList<IndividualOrderStatusAndReason1> IndividualOrderDetailsReport { get; init; } = [];
 }

@@ -55,7 +55,7 @@ public record DTCCCAINSD1V04 : IOuterRecord
     [IsoId("_LAGyMb5MEeexmbB7KsjCwA")]
     [DisplayName("Optional Dividend")]
     [IsoXmlTag("OptnlDvdd")]
-    public OptionalDividendAccountQuantitySD3? OptionalDividend { get; init; }
+    public ValueList<OptionalDividendAccountQuantitySD3> OptionalDividend { get; init; } = [];
 
     /// <summary>
     /// DTC (The Depository Trust Corporation) tax exempt service election.
@@ -63,7 +63,7 @@ public record DTCCCAINSD1V04 : IOuterRecord
     [IsoId("_LAGyOb5MEeexmbB7KsjCwA")]
     [DisplayName("Tax Exempt")]
     [IsoXmlTag("TaxXmpt")]
-    public TaxExemptQuantitySD2? TaxExempt { get; init; }
+    public ValueList<TaxExemptQuantitySD2> TaxExempt { get; init; } = [];
 
     /// <summary>
     /// DTC (The Depository Trust Corporation) foreign currency payment service wire payment instruction.
@@ -71,7 +71,7 @@ public record DTCCCAINSD1V04 : IOuterRecord
     [IsoId("_LAGyQb5MEeexmbB7KsjCwA")]
     [DisplayName("Wire Instruction")]
     [IsoXmlTag("WireInstr")]
-    public WireInstructionSD3? WireInstruction { get; init; }
+    public ValueList<WireInstructionSD3> WireInstruction { get; init; } = [];
 
     /// <summary>
     /// Supplementary data extending corporate action reorganisation instruction message with corporate action elements not covered in the standard message.

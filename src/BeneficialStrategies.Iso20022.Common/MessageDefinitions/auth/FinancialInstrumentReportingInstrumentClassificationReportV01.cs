@@ -55,7 +55,7 @@ public record FinancialInstrumentReportingInstrumentClassificationReportV01 : IO
     [IsoId("_4LK8V0RNEee7JdgA9zPESA")]
     [DisplayName("Instrument Classification")]
     [IsoXmlTag("InstrmClssfctn")]
-    public required SecuritiesInstrumentClassification2 InstrumentClassification { get; init; }
+    public ValueList<SecuritiesInstrumentClassification2> InstrumentClassification { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -63,5 +63,5 @@ public record FinancialInstrumentReportingInstrumentClassificationReportV01 : IO
     [IsoId("_4LK8WURNEee7JdgA9zPESA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

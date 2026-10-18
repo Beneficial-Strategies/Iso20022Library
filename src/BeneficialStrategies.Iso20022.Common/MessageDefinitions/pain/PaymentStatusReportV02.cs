@@ -78,5 +78,5 @@ public record PaymentStatusReportV02 : IOuterRecord
     [IsoId("_GZkBE9EvEd-BzquC8wXy7w_-408419562")]
     [DisplayName("Transaction Information And Status")]
     [IsoXmlTag("TxInfAndSts")]
-    public PaymentTransactionInformation1? TransactionInformationAndStatus { get; init; }
+    public ValueList<PaymentTransactionInformation1> TransactionInformationAndStatus { get; init; } = [];
 }

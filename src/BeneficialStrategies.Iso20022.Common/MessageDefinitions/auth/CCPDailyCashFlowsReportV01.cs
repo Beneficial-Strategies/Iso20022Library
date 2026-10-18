@@ -56,7 +56,7 @@ public record CCPDailyCashFlowsReportV01 : IOuterRecord
     [IsoId("_-yhDWeUTEem3X-64-NKdqg")]
     [DisplayName("Concentration Agent")]
     [IsoXmlTag("CncntrtnAgt")]
-    public required ConcentrationAgent1 ConcentrationAgent { get; init; }
+    public ValueList<ConcentrationAgent1> ConcentrationAgent { get; init; } = [];
 
     /// <summary>
     /// Agent used by a central counterparty to allow for the convenient settlement of obligations between a central counterparty and a clearing member, typically in commercial bank money.
@@ -64,7 +64,7 @@ public record CCPDailyCashFlowsReportV01 : IOuterRecord
     [IsoId("_-yhDW-UTEem3X-64-NKdqg")]
     [DisplayName("Settlement Agent")]
     [IsoXmlTag("SttlmAgt")]
-    public required SettlementAgent1 SettlementAgent { get; init; }
+    public ValueList<SettlementAgent1> SettlementAgent { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -72,5 +72,5 @@ public record CCPDailyCashFlowsReportV01 : IOuterRecord
     [IsoId("_-yhDXeUTEem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

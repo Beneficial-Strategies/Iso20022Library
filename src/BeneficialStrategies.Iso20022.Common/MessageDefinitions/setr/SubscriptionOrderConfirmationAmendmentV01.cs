@@ -76,7 +76,7 @@ public record SubscriptionOrderConfirmationAmendmentV01 : IOuterRecord
     [IsoId("_3HjjtdE7Ed-BzquC8wXy7w_858735058")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
-    public AdditionalReference3? PreviousReference { get; init; }
+    public ValueList<AdditionalReference3> PreviousReference { get; init; } = [];
 
     /// <summary>
     /// Reference to a linked message that was previously received.
@@ -118,5 +118,5 @@ public record SubscriptionOrderConfirmationAmendmentV01 : IOuterRecord
     [IsoId("_3HtUsdE7Ed-BzquC8wXy7w_861505547")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

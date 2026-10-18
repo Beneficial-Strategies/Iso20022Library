@@ -105,7 +105,7 @@ public record SecuritiesSettlementTransactionAllegementReportV01 : IOuterRecord
     [IsoId("_MgnJ89FSEd-BzquC8wXy7w_1913536278")]
     [DisplayName("Allegement Details")]
     [IsoXmlTag("AllgmtDtls")]
-    public SecuritiesTradeDetails4? AllegementDetails { get; init; }
+    public ValueList<SecuritiesTradeDetails4> AllegementDetails { get; init; } = [];
 
     /// <summary>
     /// Party that originated the message, if other than the sender.

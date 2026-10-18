@@ -63,7 +63,7 @@ public record ChargesPaymentRequestV01 : IOuterRecord
     [IsoId("_5ShVQKdBEeqY6dwgI6s5vg")]
     [DisplayName("Charges")]
     [IsoXmlTag("Chrgs")]
-    public required ChargesRecord5 Charges { get; init; }
+    public ValueList<ChargesRecord5> Charges { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -71,5 +71,5 @@ public record ChargesPaymentRequestV01 : IOuterRecord
     [IsoId("_fu1SMbR_Eeq3lpO-mRtrig")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

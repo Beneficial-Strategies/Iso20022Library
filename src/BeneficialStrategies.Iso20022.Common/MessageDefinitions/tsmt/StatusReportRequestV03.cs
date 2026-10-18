@@ -68,5 +68,5 @@ public record StatusReportRequestV03 : IOuterRecord
     [IsoId("_0n_7mtE8Ed-BzquC8wXy7w_-619721446")]
     [DisplayName("Entities To Be Reported")]
     [IsoXmlTag("NttiesToBeRptd")]
-    public BICIdentification1? EntitiesToBeReported { get; init; }
+    public ValueList<BICIdentification1> EntitiesToBeReported { get; init; } = [];
 }

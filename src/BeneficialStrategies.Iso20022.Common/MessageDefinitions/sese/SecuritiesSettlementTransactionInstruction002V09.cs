@@ -96,7 +96,7 @@ public record SecuritiesSettlementTransactionInstruction002V09 : IOuterRecord
     [IsoId("_VACRK_fYEeiNZp_PtLohLw")]
     [DisplayName("Linkages")]
     [IsoXmlTag("Lnkgs")]
-    public Linkages55? Linkages { get; init; }
+    public ValueList<Linkages55> Linkages { get; init; } = [];
 
     /// <summary>
     /// Details of the trade.
@@ -208,5 +208,5 @@ public record SecuritiesSettlementTransactionInstruction002V09 : IOuterRecord
     [IsoId("_VACRR_fYEeiNZp_PtLohLw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

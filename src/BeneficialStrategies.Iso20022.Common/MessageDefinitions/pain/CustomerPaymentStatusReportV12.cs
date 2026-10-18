@@ -78,7 +78,7 @@ public record CustomerPaymentStatusReportV12 : IOuterRecord
     [IsoId("_rUXm5dcBEeq_l4BJLVUF2Q")]
     [DisplayName("Original Payment Information And Status")]
     [IsoXmlTag("OrgnlPmtInfAndSts")]
-    public OriginalPaymentInstruction40? OriginalPaymentInformationAndStatus { get; init; }
+    public ValueList<OriginalPaymentInstruction40> OriginalPaymentInformationAndStatus { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -86,5 +86,5 @@ public record CustomerPaymentStatusReportV12 : IOuterRecord
     [IsoId("_rUXm59cBEeq_l4BJLVUF2Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

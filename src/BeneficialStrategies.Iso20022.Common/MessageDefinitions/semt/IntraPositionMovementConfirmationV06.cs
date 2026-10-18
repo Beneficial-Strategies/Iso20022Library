@@ -123,5 +123,5 @@ public record IntraPositionMovementConfirmationV06 : IOuterRecord
     [IsoId("_-EeS4ZBcEeakHoV5BVecAQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

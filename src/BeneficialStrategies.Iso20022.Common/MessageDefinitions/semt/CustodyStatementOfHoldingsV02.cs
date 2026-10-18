@@ -73,7 +73,7 @@ public record CustodyStatementOfHoldingsV02 : IOuterRecord
     [IsoId("_Magh_9FSEd-BzquC8wXy7w_1153922222")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
-    public AdditionalReference2? PreviousReference { get; init; }
+    public ValueList<AdditionalReference2> PreviousReference { get; init; } = [];
 
     /// <summary>
     /// Reference to a linked message that was previously received.
@@ -81,7 +81,7 @@ public record CustodyStatementOfHoldingsV02 : IOuterRecord
     [IsoId("_Mapr4NFSEd-BzquC8wXy7w_1153922204")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
-    public AdditionalReference2? RelatedReference { get; init; }
+    public ValueList<AdditionalReference2> RelatedReference { get; init; } = [];
 
     /// <summary>
     /// Pagination of the message.
@@ -113,7 +113,7 @@ public record CustodyStatementOfHoldingsV02 : IOuterRecord
     [IsoId("_Mapr5NFSEd-BzquC8wXy7w_1153922402")]
     [DisplayName("Balance For Account")]
     [IsoXmlTag("BalForAcct")]
-    public AggregateBalanceInformation4? BalanceForAccount { get; init; }
+    public ValueList<AggregateBalanceInformation4> BalanceForAccount { get; init; } = [];
 
     /// <summary>
     /// The sub-account of the safekeeping or investment account.
@@ -121,7 +121,7 @@ public record CustodyStatementOfHoldingsV02 : IOuterRecord
     [IsoId("_Mapr5dFSEd-BzquC8wXy7w_1153922324")]
     [DisplayName("Sub Account Details")]
     [IsoXmlTag("SubAcctDtls")]
-    public SubAccountIdentification5? SubAccountDetails { get; init; }
+    public ValueList<SubAccountIdentification5> SubAccountDetails { get; init; } = [];
 
     /// <summary>
     /// Value of total holdings reported.
@@ -137,5 +137,5 @@ public record CustodyStatementOfHoldingsV02 : IOuterRecord
     [IsoId("_Mapr59FSEd-BzquC8wXy7w_1153922437")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

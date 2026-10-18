@@ -80,5 +80,5 @@ public record MandateAmendmentRequestV02 : IOuterRecord
     [IsoId("_ry7q8FkyEeGeoaLUQk__nA_-1980028627")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

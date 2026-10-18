@@ -87,7 +87,7 @@ public record AccountReportV04 : IOuterRecord
     [IsoId("_1EOMydcAEeq_l4BJLVUF2Q")]
     [DisplayName("Report")]
     [IsoXmlTag("Rpt")]
-    public AccountReport28? Report { get; init; }
+    public ValueList<AccountReport28> Report { get; init; } = [];
 
     /// <summary>
     /// Contains the signature with its components, namely signed info, signature value, key info and the object.
@@ -95,7 +95,7 @@ public record AccountReportV04 : IOuterRecord
     [IsoId("_1EOMy9cAEeq_l4BJLVUF2Q")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
-    public PartyAndSignature3? DigitalSignature { get; init; }
+    public ValueList<PartyAndSignature3> DigitalSignature { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -103,5 +103,5 @@ public record AccountReportV04 : IOuterRecord
     [IsoId("_1EOMzdcAEeq_l4BJLVUF2Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

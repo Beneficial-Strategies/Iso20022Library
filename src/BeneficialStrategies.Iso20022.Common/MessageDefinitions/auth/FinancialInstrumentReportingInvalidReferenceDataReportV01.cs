@@ -74,7 +74,7 @@ public record FinancialInstrumentReportingInvalidReferenceDataReportV01 : IOuter
     [IsoId("_4LK8YURNEee7JdgA9zPESA")]
     [DisplayName("Financial Instruments")]
     [IsoXmlTag("FinInstrms")]
-    public required SecuritiesInvalidReferenceDataReport3 FinancialInstruments { get; init; }
+    public ValueList<SecuritiesInvalidReferenceDataReport3> FinancialInstruments { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -82,5 +82,5 @@ public record FinancialInstrumentReportingInvalidReferenceDataReportV01 : IOuter
     [IsoId("_4LK8Y0RNEee7JdgA9zPESA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -127,7 +127,7 @@ public record SecuritiesBalanceAccountingReportV03 : IOuterRecord
     [IsoId("_Mbs0xNFSEd-BzquC8wXy7w_-653027355")]
     [DisplayName("Balance For Account")]
     [IsoXmlTag("BalForAcct")]
-    public AggregateBalanceInformation8? BalanceForAccount { get; init; }
+    public ValueList<AggregateBalanceInformation8> BalanceForAccount { get; init; } = [];
 
     /// <summary>
     /// Sub-account of the safekeeping or investment account.
@@ -135,7 +135,7 @@ public record SecuritiesBalanceAccountingReportV03 : IOuterRecord
     [IsoId("_Mbs0xdFSEd-BzquC8wXy7w_-563444726")]
     [DisplayName("Sub Account Details")]
     [IsoXmlTag("SubAcctDtls")]
-    public SubAccountIdentification10? SubAccountDetails { get; init; }
+    public ValueList<SubAccountIdentification10> SubAccountDetails { get; init; } = [];
 
     /// <summary>
     /// Total valuation amounts provided in the base currency of the account.

@@ -146,5 +146,5 @@ public record SecuritiesFinancingStatusAdviceV01 : IOuterRecord
     [IsoId("_wEbxItE5Ed-BzquC8wXy7w_-351374884")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension2? Extension { get; init; }
+    public ValueList<Extension2> Extension { get; init; } = [];
 }

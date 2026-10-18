@@ -106,7 +106,7 @@ public record SecuritiesTransactionPostingReportV01 : IOuterRecord
     [IsoId("_Mf3jFdFSEd-BzquC8wXy7w_1852964584")]
     [DisplayName("Financial Instrument Details")]
     [IsoXmlTag("FinInstrmDtls")]
-    public FinancialInstrumentDetails2? FinancialInstrumentDetails { get; init; }
+    public ValueList<FinancialInstrumentDetails2> FinancialInstrumentDetails { get; init; } = [];
 
     /// <summary>
     /// Details at sub-account level.
@@ -114,7 +114,7 @@ public record SecuritiesTransactionPostingReportV01 : IOuterRecord
     [IsoId("_Mf3jFtFSEd-BzquC8wXy7w_-638429612")]
     [DisplayName("Sub Account Details")]
     [IsoXmlTag("SubAcctDtls")]
-    public SubAccountIdentification9? SubAccountDetails { get; init; }
+    public ValueList<SubAccountIdentification9> SubAccountDetails { get; init; } = [];
 
     /// <summary>
     /// Party that originated the message, if other than the sender.

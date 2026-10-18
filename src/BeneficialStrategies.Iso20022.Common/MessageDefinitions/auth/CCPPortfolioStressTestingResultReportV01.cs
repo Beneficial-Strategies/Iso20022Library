@@ -55,7 +55,7 @@ public record CCPPortfolioStressTestingResultReportV01 : IOuterRecord
     [IsoId("_YI3SeeUSEem3X-64-NKdqg")]
     [DisplayName("Scenario Stress Test Result")]
     [IsoXmlTag("ScnroStrssTstRslt")]
-    public required ScenarioStressTestResult1 ScenarioStressTestResult { get; init; }
+    public ValueList<ScenarioStressTestResult1> ScenarioStressTestResult { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -63,5 +63,5 @@ public record CCPPortfolioStressTestingResultReportV01 : IOuterRecord
     [IsoId("_YI3Se-USEem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

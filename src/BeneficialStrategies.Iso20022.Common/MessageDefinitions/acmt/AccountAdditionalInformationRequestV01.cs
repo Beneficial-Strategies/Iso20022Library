@@ -66,7 +66,7 @@ public record AccountAdditionalInformationRequestV01 : IOuterRecord
     [IsoId("_msyIcNE9Ed-BzquC8wXy7w_844276535")]
     [DisplayName("Organisation Identification")]
     [IsoXmlTag("OrgId")]
-    public required OrganisationIdentification6 OrganisationIdentification { get; init; }
+    public ValueList<OrganisationIdentification6> OrganisationIdentification { get; init; } = [];
 
     /// <summary>
     /// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme.
@@ -90,5 +90,5 @@ public record AccountAdditionalInformationRequestV01 : IOuterRecord
     [IsoId("_msyIc9E9Ed-BzquC8wXy7w_-516297795")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
-    public PartyAndSignature1? DigitalSignature { get; init; }
+    public ValueList<PartyAndSignature1> DigitalSignature { get; init; } = [];
 }

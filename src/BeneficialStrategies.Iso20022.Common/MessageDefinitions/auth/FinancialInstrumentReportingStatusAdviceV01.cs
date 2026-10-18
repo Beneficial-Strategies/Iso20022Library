@@ -55,7 +55,7 @@ public record FinancialInstrumentReportingStatusAdviceV01 : IOuterRecord
     [IsoId("_4LUGQ0RNEee7JdgA9zPESA")]
     [DisplayName("Status Advice")]
     [IsoXmlTag("StsAdvc")]
-    public required MessageReportHeader4 StatusAdvice { get; init; }
+    public ValueList<MessageReportHeader4> StatusAdvice { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -63,5 +63,5 @@ public record FinancialInstrumentReportingStatusAdviceV01 : IOuterRecord
     [IsoId("_4LUGRURNEee7JdgA9zPESA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

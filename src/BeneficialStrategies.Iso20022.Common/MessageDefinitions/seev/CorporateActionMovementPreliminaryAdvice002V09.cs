@@ -110,7 +110,7 @@ public record CorporateActionMovementPreliminaryAdvice002V09 : IOuterRecord
     [IsoId("_k9dC_c3xEee5nJBZsW8MFQ")]
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
-    public DocumentIdentification38? OtherDocumentIdentification { get; init; }
+    public ValueList<DocumentIdentification38> OtherDocumentIdentification { get; init; } = [];
 
     /// <summary>
     /// Identification of another corporate action event that needs to be closely linked to the processing of the event notified in this document.
@@ -118,7 +118,7 @@ public record CorporateActionMovementPreliminaryAdvice002V09 : IOuterRecord
     [IsoId("_k9dC_83xEee5nJBZsW8MFQ")]
     [DisplayName("Events Linkage")]
     [IsoXmlTag("EvtsLkg")]
-    public CorporateActionEventReference4? EventsLinkage { get; init; }
+    public ValueList<CorporateActionEventReference4> EventsLinkage { get; init; } = [];
 
     /// <summary>
     /// Reason for the reversal.
@@ -158,7 +158,7 @@ public record CorporateActionMovementPreliminaryAdvice002V09 : IOuterRecord
     [IsoId("_k9dDCc3xEee5nJBZsW8MFQ")]
     [DisplayName("Corporate Action Movement Details")]
     [IsoXmlTag("CorpActnMvmntDtls")]
-    public CorporateActionOption148? CorporateActionMovementDetails { get; init; }
+    public ValueList<CorporateActionOption148> CorporateActionMovementDetails { get; init; } = [];
 
     /// <summary>
     /// Provides additional information.
@@ -174,7 +174,7 @@ public record CorporateActionMovementPreliminaryAdvice002V09 : IOuterRecord
     [IsoId("_k9dDDc3xEee5nJBZsW8MFQ")]
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
-    public PartyIdentification104Choice_? IssuerAgent { get; init; }
+    public ValueList<PartyIdentification104Choice_> IssuerAgent { get; init; } = [];
 
     /// <summary>
     /// Agent (principal or fiscal paying agent) appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.
@@ -182,7 +182,7 @@ public record CorporateActionMovementPreliminaryAdvice002V09 : IOuterRecord
     [IsoId("_k9dDD83xEee5nJBZsW8MFQ")]
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
-    public PartyIdentification104Choice_? PayingAgent { get; init; }
+    public ValueList<PartyIdentification104Choice_> PayingAgent { get; init; } = [];
 
     /// <summary>
     /// Sub-agent appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.
@@ -190,7 +190,7 @@ public record CorporateActionMovementPreliminaryAdvice002V09 : IOuterRecord
     [IsoId("_k9dDEc3xEee5nJBZsW8MFQ")]
     [DisplayName("Sub Paying Agent")]
     [IsoXmlTag("SubPngAgt")]
-    public PartyIdentification104Choice_? SubPayingAgent { get; init; }
+    public ValueList<PartyIdentification104Choice_> SubPayingAgent { get; init; } = [];
 
     /// <summary>
     /// Party/agent responsible for maintaining the register of a security.
@@ -206,7 +206,7 @@ public record CorporateActionMovementPreliminaryAdvice002V09 : IOuterRecord
     [IsoId("_k9dDFc3xEee5nJBZsW8MFQ")]
     [DisplayName("Reselling Agent")]
     [IsoXmlTag("RsellngAgt")]
-    public PartyIdentification104Choice_? ResellingAgent { get; init; }
+    public ValueList<PartyIdentification104Choice_> ResellingAgent { get; init; } = [];
 
     /// <summary>
     /// A trust company, bank or similar financial institution assigned by an issuer to accept presentations of instruments, usually bonds, for transfer and or exchange.
@@ -230,7 +230,7 @@ public record CorporateActionMovementPreliminaryAdvice002V09 : IOuterRecord
     [IsoId("_k9dDG83xEee5nJBZsW8MFQ")]
     [DisplayName("Solicitation Agent")]
     [IsoXmlTag("SlctnAgt")]
-    public PartyIdentification104Choice_? SolicitationAgent { get; init; }
+    public ValueList<PartyIdentification104Choice_> SolicitationAgent { get; init; } = [];
 
     /// <summary>
     /// A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation.
@@ -246,5 +246,5 @@ public record CorporateActionMovementPreliminaryAdvice002V09 : IOuterRecord
     [IsoId("_k9dDH83xEee5nJBZsW8MFQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

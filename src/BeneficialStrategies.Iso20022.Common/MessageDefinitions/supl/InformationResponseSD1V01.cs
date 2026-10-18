@@ -80,5 +80,5 @@ public record InformationResponseSD1V01 : IOuterRecord
     [IsoId("_jqrv4C__EeOKib24wnHaFg")]
     [DisplayName("Account And Parties")]
     [IsoXmlTag("AcctAndPties")]
-    public required AccountAndParties2 AccountAndParties { get; init; }
+    public ValueList<AccountAndParties2> AccountAndParties { get; init; } = [];
 }

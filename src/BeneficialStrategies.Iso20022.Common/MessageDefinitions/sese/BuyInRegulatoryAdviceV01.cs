@@ -76,7 +76,7 @@ public record BuyInRegulatoryAdviceV01 : IOuterRecord
     [IsoId("_O1mdjZwQEeqtp-LOti013g")]
     [DisplayName("Buy In Attributes")]
     [IsoXmlTag("BuyInAttrbts")]
-    public required BuyInAdviceDetails1 BuyInAttributes { get; init; }
+    public ValueList<BuyInAdviceDetails1> BuyInAttributes { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -84,5 +84,5 @@ public record BuyInRegulatoryAdviceV01 : IOuterRecord
     [IsoId("_O1mdkZwQEeqtp-LOti013g")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

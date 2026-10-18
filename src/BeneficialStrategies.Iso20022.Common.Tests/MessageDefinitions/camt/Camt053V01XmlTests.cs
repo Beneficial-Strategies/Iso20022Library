@@ -62,17 +62,17 @@ public class Camt053V01XmlTests
         );
 
         var stmt = result.Statement;
-        Assert.Equal(ExpectedStmtId, stmt.Identification);
-        Assert.Equal(2, stmt.Balance.Count);
+        Assert.Equal(ExpectedStmtId, stmt[0].Identification);
+        Assert.Equal(2, stmt[0].Balance.Count);
 
-        var bal1 = stmt.Balance[0];
+        var bal1 = stmt[0].Balance[0];
         var balCode1 = Assert.IsType<BalCode>(bal1.Type);
         Assert.Equal(BalanceType9Code.OpeningBooked, balCode1.Value);
         Assert.Equal("EUR", bal1.Amount.Currency);
         Assert.Equal(ExpectedOpeningBalance, bal1.Amount.Amount);
         Assert.Equal(CreditDebitCode.Credit, bal1.CreditDebitIndicator);
 
-        var bal2 = stmt.Balance[1];
+        var bal2 = stmt[0].Balance[1];
         var balCode2 = Assert.IsType<BalCode>(bal2.Type);
         Assert.Equal(BalanceType9Code.ClosingBooked, balCode2.Value);
         Assert.Equal("EUR", bal2.Amount.Currency);
@@ -92,8 +92,8 @@ public class Camt053V01XmlTests
 
         Assert.Equal(ExpectedMsgId, result.GroupHeader.MessageIdentification);
         Assert.Equal(ExpectedMsgRcptName, result.GroupHeader.MessageRecipient?.Name);
-        Assert.Equal(2, result.Statement.Balance.Count);
-        Assert.Equal(ExpectedOpeningBalance, result.Statement.Balance[0].Amount.Amount);
-        Assert.Equal(ExpectedClosingBalance, result.Statement.Balance[1].Amount.Amount);
+        Assert.Equal(2, result.Statement[0].Balance.Count);
+        Assert.Equal(ExpectedOpeningBalance, result.Statement[0].Balance[0].Amount.Amount);
+        Assert.Equal(ExpectedClosingBalance, result.Statement[0].Balance[1].Amount.Amount);
     }
 }

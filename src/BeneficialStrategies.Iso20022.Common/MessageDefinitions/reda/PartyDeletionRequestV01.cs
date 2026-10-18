@@ -76,5 +76,5 @@ public record PartyDeletionRequestV01 : IOuterRecord
     [IsoId("_77Tqh5eSEeen_cyMrluY4w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

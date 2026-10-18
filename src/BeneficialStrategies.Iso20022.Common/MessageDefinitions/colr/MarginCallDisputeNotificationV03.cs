@@ -87,5 +87,5 @@ public record MarginCallDisputeNotificationV03 : IOuterRecord
     [IsoId("_InD5qV9MEeSMgPeFpRHeJw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

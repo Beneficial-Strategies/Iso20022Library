@@ -79,7 +79,7 @@ public record DTCCCACOSD1V09 : IOuterRecord
     [IsoId("_q_pK2w4zEeuIpNw_GxsBOw")]
     [DisplayName("Account Balance")]
     [IsoXmlTag("AcctBal")]
-    public AccountBalanceSD14? AccountBalance { get; init; }
+    public ValueList<AccountBalanceSD14> AccountBalance { get; init; } = [];
 
     /// <summary>
     /// Information to be extended as supplementary data to corporate action confirmation details.
@@ -95,7 +95,7 @@ public record DTCCCACOSD1V09 : IOuterRecord
     [IsoId("_q_pK3w4zEeuIpNw_GxsBOw")]
     [DisplayName("Corporate Action Confirmation Securities Movement Details")]
     [IsoXmlTag("CorpActnConfSctiesMvmntDtls")]
-    public CorporateActionConfirmationSecuritiesMovementDetailsSD6? CorporateActionConfirmationSecuritiesMovementDetails { get; init; }
+    public ValueList<CorporateActionConfirmationSecuritiesMovementDetailsSD6> CorporateActionConfirmationSecuritiesMovementDetails { get; init; } = [];
 
     /// <summary>
     /// Information to be extended as supplementary data to corporate action confirmation cash movement details.
@@ -103,7 +103,7 @@ public record DTCCCACOSD1V09 : IOuterRecord
     [IsoId("_q_pK5w4zEeuIpNw_GxsBOw")]
     [DisplayName("Corporate Action Confirmation Cash Movement Details")]
     [IsoXmlTag("CorpActnConfCshMvmntDtls")]
-    public CorporateActionConfirmationCashMovementDetailsSD5? CorporateActionConfirmationCashMovementDetails { get; init; }
+    public ValueList<CorporateActionConfirmationCashMovementDetailsSD5> CorporateActionConfirmationCashMovementDetails { get; init; } = [];
 
     /// <summary>
     /// Information to be extended as supplementary data to corporate action option details.
@@ -111,5 +111,5 @@ public record DTCCCACOSD1V09 : IOuterRecord
     [IsoId("_q_pK7w4zEeuIpNw_GxsBOw")]
     [DisplayName("Option Transaction Details")]
     [IsoXmlTag("OptnTxDtls")]
-    public OptionTransactionSD6? OptionTransactionDetails { get; init; }
+    public ValueList<OptionTransactionSD6> OptionTransactionDetails { get; init; } = [];
 }

@@ -86,5 +86,5 @@ public record RegulatoryTransactionReportCancellationStatusV01 : IOuterRecord
     [IsoId("_gJrQBcIFEeGllrOKQRUTYA_-1483406141")]
     [DisplayName("Individual Transaction Cancellation Status")]
     [IsoXmlTag("IndvTxCxlSts")]
-    public required TradeTransactionStatusAndReason2 IndividualTransactionCancellationStatus { get; init; }
+    public ValueList<TradeTransactionStatusAndReason2> IndividualTransactionCancellationStatus { get; init; } = [];
 }

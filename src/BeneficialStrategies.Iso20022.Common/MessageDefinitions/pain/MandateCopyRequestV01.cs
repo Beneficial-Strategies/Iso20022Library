@@ -72,7 +72,7 @@ public record MandateCopyRequestV01 : IOuterRecord
     [IsoId("_WQnekG6vEeaUkthD_kt0tA")]
     [DisplayName("Underlying Copy Request Details")]
     [IsoXmlTag("UndrlygCpyReqDtls")]
-    public required MandateCopy1 UnderlyingCopyRequestDetails { get; init; }
+    public ValueList<MandateCopy1> UnderlyingCopyRequestDetails { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -80,5 +80,5 @@ public record MandateCopyRequestV01 : IOuterRecord
     [IsoId("_eHtPQW6yEeaUkthD_kt0tA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

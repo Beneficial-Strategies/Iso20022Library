@@ -76,5 +76,5 @@ public record CustomerPaymentReversalV01 : IOuterRecord
     [IsoId("_GXBqe9EvEd-BzquC8wXy7w_-1906565683")]
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
-    public PaymentTransactionInformation4? TransactionInformation { get; init; }
+    public ValueList<PaymentTransactionInformation4> TransactionInformation { get; init; } = [];
 }

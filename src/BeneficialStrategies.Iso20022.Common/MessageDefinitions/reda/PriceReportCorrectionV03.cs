@@ -91,5 +91,5 @@ public record PriceReportCorrectionV03 : IOuterRecord
     [IsoId("_ZtKYs9EvEd-BzquC8wXy7w_1468107589")]
     [DisplayName("Price Correction Details")]
     [IsoXmlTag("PricCrrctnDtls")]
-    public required PriceCorrection3 PriceCorrectionDetails { get; init; }
+    public ValueList<PriceCorrection3> PriceCorrectionDetails { get; init; } = [];
 }

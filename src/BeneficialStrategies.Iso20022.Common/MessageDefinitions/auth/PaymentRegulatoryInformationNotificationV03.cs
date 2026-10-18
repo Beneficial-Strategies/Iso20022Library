@@ -65,7 +65,7 @@ public record PaymentRegulatoryInformationNotificationV03 : IOuterRecord
     [IsoId("_Nz8a1R3pEeuiRvbpCaJe6A")]
     [DisplayName("Transaction Notification")]
     [IsoXmlTag("TxNtfctn")]
-    public required RegulatoryReportingNotification3 TransactionNotification { get; init; }
+    public ValueList<RegulatoryReportingNotification3> TransactionNotification { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -73,5 +73,5 @@ public record PaymentRegulatoryInformationNotificationV03 : IOuterRecord
     [IsoId("_Nz8a1x3pEeuiRvbpCaJe6A")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

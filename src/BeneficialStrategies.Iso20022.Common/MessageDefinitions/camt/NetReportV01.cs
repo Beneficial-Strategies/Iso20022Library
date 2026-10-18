@@ -79,7 +79,7 @@ public record NetReportV01 : IOuterRecord
     [IsoId("_0OAIgJU0EeaYkf5FCqYMeA")]
     [DisplayName("Net Obligation")]
     [IsoXmlTag("NetOblgtn")]
-    public required NetObligation1 NetObligation { get; init; }
+    public ValueList<NetObligation1> NetObligation { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -87,5 +87,5 @@ public record NetReportV01 : IOuterRecord
     [IsoId("_RA5FEJU1EeaYkf5FCqYMeA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -96,18 +96,18 @@ public class Camt056ExamplesTests
         {
             Assignment = CreateCaseAssignment(),
             Case = CreateCase(),
-            Underlying = new UnderlyingTransaction28
+            Underlying = [new UnderlyingTransaction28
             {
                 TransactionInformation = [CreateTransactionCancellation(
                     new Code { Value = ExternalCancellationReason1Code.RequestedByCustomer }
                 )],
-            },
+            }],
         };
 
         Assert.NotNull(message);
         Assert.Equal("camt.056.001.10", FIToFIPaymentCancellationRequestV10.IsoIdentifier);
         Assert.IsType<Code>(
-            message.Underlying.TransactionInformation![0].CancellationReasonInformation![0].Reason
+            message.Underlying[0].TransactionInformation![0].CancellationReasonInformation![0].Reason
         );
     }
 
@@ -126,7 +126,7 @@ public class Camt056ExamplesTests
                 Identification = "DEUTDEFF/240316/CAMT056/00002",
             },
             Case = CreateCase() with { Identification = "CASE-DEUTDEFF-20240316-002", },
-            Underlying = new UnderlyingTransaction28
+            Underlying = [new UnderlyingTransaction28
             {
                 TransactionInformation = [CreateTransactionCancellation(
                     new Code { Value = ExternalCancellationReason1Code.DuplicatePayment }
@@ -143,12 +143,12 @@ public class Camt056ExamplesTests
                             ["Duplicate of UETR 97ed4827-7b6f-4491-a06f-b548d5a7512d. Original sent 08:30 UTC."],
                     }],
                 }],
-            },
+            }],
         };
 
         Assert.NotNull(message);
         var reason = (Code)
-            message.Underlying.TransactionInformation![0].CancellationReasonInformation![0].Reason!;
+            message.Underlying[0].TransactionInformation![0].CancellationReasonInformation![0].Reason!;
         Assert.Equal(ExternalCancellationReason1Code.DuplicatePayment, reason.Value);
     }
 
@@ -167,7 +167,7 @@ public class Camt056ExamplesTests
                 Identification = "DEUTDEFF/240316/CAMT056/00003",
             },
             Case = CreateCase() with { Identification = "CASE-DEUTDEFF-20240316-003", },
-            Underlying = new UnderlyingTransaction28
+            Underlying = [new UnderlyingTransaction28
             {
                 TransactionInformation = [CreateTransactionCancellation(
                     new Proprietary { Value = "AML-FREEZE-REF-2024-03-16-0042", }
@@ -175,12 +175,12 @@ public class Camt056ExamplesTests
                 {
                     CancellationIdentification = "DEUTDEFF/240316/CAMT056/00003",
                 }],
-            },
+            }],
         };
 
         Assert.NotNull(message);
         Assert.IsType<Proprietary>(
-            message.Underlying.TransactionInformation![0].CancellationReasonInformation![0].Reason
+            message.Underlying[0].TransactionInformation![0].CancellationReasonInformation![0].Reason
         );
     }
 
@@ -202,7 +202,7 @@ public class Camt056ExamplesTests
                 NumberOfTransactions = "3",
                 ControlSum = 141_750UL, // 3 × EUR 47,250.00
             },
-            Underlying = new UnderlyingTransaction28
+            Underlying = [new UnderlyingTransaction28
             {
                 OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
                 {
@@ -220,11 +220,11 @@ public class Camt056ExamplesTests
                             ["Customer requested cancellation of all payments in batch DEUTDEFF/240315/PAC008/00001."],
                     }],
                 },
-            },
+            }],
         };
 
         Assert.NotNull(message);
-        Assert.NotNull(message.Underlying.OriginalGroupInformationAndCancellation);
+        Assert.NotNull(message.Underlying[0].OriginalGroupInformationAndCancellation);
         Assert.Equal("3", message.ControlData!.NumberOfTransactions);
     }
 
@@ -256,10 +256,10 @@ public class Camt056ExamplesTests
                 },
                 CreationDateTime = Iso20022TestData.MessageCreationDateTime.AddDays(1),
             },
-            Underlying = new UnderlyingTransaction28
+            Underlying = [new UnderlyingTransaction28
             {
                 TransactionInformation = [CreateTransactionCancellation()],
-            },
+            }],
         };
 
         Assert.NotNull(message);

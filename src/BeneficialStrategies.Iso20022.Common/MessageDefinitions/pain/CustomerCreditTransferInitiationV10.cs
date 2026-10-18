@@ -76,7 +76,7 @@ public record CustomerCreditTransferInitiationV10 : IOuterRecord
     [IsoId("_LwD3OcP_Eemsic1bQcEtLA")]
     [DisplayName("Payment Information")]
     [IsoXmlTag("PmtInf")]
-    public required PaymentInstruction34 PaymentInformation { get; init; }
+    public ValueList<PaymentInstruction34> PaymentInformation { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -84,5 +84,5 @@ public record CustomerCreditTransferInitiationV10 : IOuterRecord
     [IsoId("_LwD3O8P_Eemsic1bQcEtLA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

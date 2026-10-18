@@ -94,7 +94,7 @@ public record IntraPositionMovementInstruction002V04 : IOuterRecord
     [IsoId("_5PaGq5NLEeWGlc8L7oPDIg")]
     [DisplayName("Linkages")]
     [IsoXmlTag("Lnkgs")]
-    public Linkages42? Linkages { get; init; }
+    public ValueList<Linkages42> Linkages { get; init; } = [];
 
     /// <summary>
     /// Party that legally owns the account.
@@ -150,5 +150,5 @@ public record IntraPositionMovementInstruction002V04 : IOuterRecord
     [IsoId("_5PaGuZNLEeWGlc8L7oPDIg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

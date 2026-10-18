@@ -91,5 +91,5 @@ public record CustomerPaymentCancellationRequestV01 : IOuterRecord
     [IsoId("_RscFsNE-Ed-BzquC8wXy7w_377163639")]
     [DisplayName("Underlying")]
     [IsoXmlTag("Undrlyg")]
-    public required UnderlyingTransaction1 Underlying { get; init; }
+    public ValueList<UnderlyingTransaction1> Underlying { get; init; } = [];
 }

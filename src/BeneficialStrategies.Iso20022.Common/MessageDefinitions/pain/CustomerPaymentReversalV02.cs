@@ -76,5 +76,5 @@ public record CustomerPaymentReversalV02 : IOuterRecord
     [IsoId("_GXUlYtEvEd-BzquC8wXy7w_-1091943635")]
     [DisplayName("Original Payment Information And Reversal")]
     [IsoXmlTag("OrgnlPmtInfAndRvsl")]
-    public OriginalPaymentInformation2? OriginalPaymentInformationAndReversal { get; init; }
+    public ValueList<OriginalPaymentInformation2> OriginalPaymentInformationAndReversal { get; init; } = [];
 }

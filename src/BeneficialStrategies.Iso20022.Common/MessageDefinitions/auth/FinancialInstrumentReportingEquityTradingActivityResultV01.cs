@@ -63,7 +63,7 @@ public record FinancialInstrumentReportingEquityTradingActivityResultV01 : IOute
     [IsoId("_4LK8SURNEee7JdgA9zPESA")]
     [DisplayName("Equity Transparency Data")]
     [IsoXmlTag("EqtyTrnsprncyData")]
-    public required TransparencyDataReport12 EquityTransparencyData { get; init; }
+    public ValueList<TransparencyDataReport12> EquityTransparencyData { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -71,5 +71,5 @@ public record FinancialInstrumentReportingEquityTradingActivityResultV01 : IOute
     [IsoId("_4LK8S0RNEee7JdgA9zPESA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -117,5 +117,5 @@ public record CorporateActionNarrativeV01 : IOuterRecord
     [IsoId("_ThH3x9EwEd-BzquC8wXy7w_-1301348994")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension2? Extension { get; init; }
+    public ValueList<Extension2> Extension { get; init; } = [];
 }

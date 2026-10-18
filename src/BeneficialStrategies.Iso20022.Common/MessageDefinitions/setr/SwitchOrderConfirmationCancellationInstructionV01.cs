@@ -80,7 +80,7 @@ public record SwitchOrderConfirmationCancellationInstructionV01 : IOuterRecord
     [IsoId("_64W70dE7Ed-BzquC8wXy7w_1790540438")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
-    public AdditionalReference3? PreviousReference { get; init; }
+    public ValueList<AdditionalReference3> PreviousReference { get; init; } = [];
 
     /// <summary>
     /// Reference to a linked message that was previously received.

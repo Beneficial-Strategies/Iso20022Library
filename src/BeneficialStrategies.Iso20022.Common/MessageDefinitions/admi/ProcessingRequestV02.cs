@@ -82,5 +82,5 @@ public record ProcessingRequestV02 : IOuterRecord
     [IsoId("_36KEsQR4Ee29PP19jELcvQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

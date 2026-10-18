@@ -95,7 +95,7 @@ public record CorporateActionCancellationAdviceV11 : IOuterRecord
     [IsoXmlTag("AddtlTxt")]
     [IsoSimpleType(IsoSimpleType.Max8000Text)]
     [StringLength(maximumLength: 8000, MinimumLength = 1)]
-    public Max8000Text? AdditionalText { get; init; }
+    public SimpleValueList<Max8000Text> AdditionalText { get; init; } = [];
 
     /// <summary>
     /// Party appointed to administer the event on behalf of the issuer company/offeror. The party may be contacted for more information about the event.
@@ -103,7 +103,7 @@ public record CorporateActionCancellationAdviceV11 : IOuterRecord
     [IsoId("_yg7AARbHEeyroI8qKgB7Mg")]
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
-    public PartyIdentification120Choice_? IssuerAgent { get; init; }
+    public ValueList<PartyIdentification120Choice_> IssuerAgent { get; init; } = [];
 
     /// <summary>
     /// Agent (principal or fiscal paying agent) appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.
@@ -111,7 +111,7 @@ public record CorporateActionCancellationAdviceV11 : IOuterRecord
     [IsoId("_yg7AAxbHEeyroI8qKgB7Mg")]
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
-    public PartyIdentification120Choice_? PayingAgent { get; init; }
+    public ValueList<PartyIdentification120Choice_> PayingAgent { get; init; } = [];
 
     /// <summary>
     /// Sub-agent appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.
@@ -119,7 +119,7 @@ public record CorporateActionCancellationAdviceV11 : IOuterRecord
     [IsoId("_yg7ABRbHEeyroI8qKgB7Mg")]
     [DisplayName("Sub Paying Agent")]
     [IsoXmlTag("SubPngAgt")]
-    public PartyIdentification120Choice_? SubPayingAgent { get; init; }
+    public ValueList<PartyIdentification120Choice_> SubPayingAgent { get; init; } = [];
 
     /// <summary>
     /// Party/agent responsible for maintaining the register of a security.
@@ -135,7 +135,7 @@ public record CorporateActionCancellationAdviceV11 : IOuterRecord
     [IsoId("_yg7ACRbHEeyroI8qKgB7Mg")]
     [DisplayName("Reselling Agent")]
     [IsoXmlTag("RsellngAgt")]
-    public PartyIdentification120Choice_? ResellingAgent { get; init; }
+    public ValueList<PartyIdentification120Choice_> ResellingAgent { get; init; } = [];
 
     /// <summary>
     /// Trust company, bank or similar financial institution assigned by an issuer to accept presentations of instruments, usually bonds, for transfer and or exchange.
@@ -159,7 +159,7 @@ public record CorporateActionCancellationAdviceV11 : IOuterRecord
     [IsoId("_yg7ADxbHEeyroI8qKgB7Mg")]
     [DisplayName("Solicitation Agent")]
     [IsoXmlTag("SlctnAgt")]
-    public PartyIdentification120Choice_? SolicitationAgent { get; init; }
+    public ValueList<PartyIdentification120Choice_> SolicitationAgent { get; init; } = [];
 
     /// <summary>
     /// Trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation.
@@ -175,5 +175,5 @@ public record CorporateActionCancellationAdviceV11 : IOuterRecord
     [IsoId("_yg7AExbHEeyroI8qKgB7Mg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

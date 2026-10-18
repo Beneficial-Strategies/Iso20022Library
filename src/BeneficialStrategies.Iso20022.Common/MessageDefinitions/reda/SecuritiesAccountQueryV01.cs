@@ -79,5 +79,5 @@ public record SecuritiesAccountQueryV01 : IOuterRecord
     [IsoId("_KAu-052fEem_Be8NuxvF7Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

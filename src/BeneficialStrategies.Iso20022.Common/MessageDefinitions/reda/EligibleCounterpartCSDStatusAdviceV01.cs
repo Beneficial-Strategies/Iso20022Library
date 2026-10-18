@@ -57,7 +57,7 @@ public record EligibleCounterpartCSDStatusAdviceV01 : IOuterRecord
     /// </summary>
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
-    public CollateralStatusReason1? StatusReason { get; init; }
+    public required CollateralStatusReason1 StatusReason { get; init; }
 
     /// <summary>
     /// Supplementary Data.

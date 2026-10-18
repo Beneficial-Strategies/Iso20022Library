@@ -75,5 +75,7 @@ public record SecuritiesSettlementTransactionModificationRequestV10 : IOuterReco
     /// </summary>
     [DisplayName("Update Type")]
     [IsoXmlTag("UpdTp")]
-    public required UpdateType39Choice_ UpdateType { get; init; }
+    [MinLength(1)]
+    [MaxLength(3)]
+    public ValueList<UpdateType39Choice_> UpdateType { get; init; } = [];
 }

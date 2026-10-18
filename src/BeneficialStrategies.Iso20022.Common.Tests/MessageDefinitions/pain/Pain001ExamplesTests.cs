@@ -90,13 +90,13 @@ public class Pain001ExamplesTests
         var message = new CustomerCreditTransferInitiationV11
         {
             GroupHeader = CreateGroupHeader(),
-            PaymentInformation = CreatePaymentInstruction(),
+            PaymentInformation = [CreatePaymentInstruction()],
         };
 
         Assert.NotNull(message);
         Assert.Equal("pain.001.001.11", CustomerCreditTransferInitiationV11.IsoIdentifier);
         Assert.IsType<InstructedAmount>(
-            message.PaymentInformation.CreditTransferTransactionInformation[0].Amount
+            message.PaymentInformation[0].CreditTransferTransactionInformation[0].Amount
         );
     }
 
@@ -112,7 +112,7 @@ public class Pain001ExamplesTests
         var message = new CustomerCreditTransferInitiationV11
         {
             GroupHeader = CreateGroupHeader("ACME/240315/PAI001/00002"),
-            PaymentInformation = CreatePaymentInstruction(
+            PaymentInformation = [CreatePaymentInstruction(
                 CreateCreditTransfer(
                     new Choices.AmountType4Choice.EquivalentAmount
                     {
@@ -124,12 +124,12 @@ public class Pain001ExamplesTests
                         CurrencyOfTransfer = "USD",
                     }
                 )
-            ),
+            )],
         };
 
         Assert.NotNull(message);
         Assert.IsType<Choices.AmountType4Choice.EquivalentAmount>(
-            message.PaymentInformation.CreditTransferTransactionInformation[0].Amount
+            message.PaymentInformation[0].CreditTransferTransactionInformation[0].Amount
         );
     }
 
@@ -145,7 +145,7 @@ public class Pain001ExamplesTests
         var message = new CustomerCreditTransferInitiationV11
         {
             GroupHeader = CreateGroupHeader("ACME/240315/PAI001/00003"),
-            PaymentInformation = CreatePaymentInstruction(
+            PaymentInformation = [CreatePaymentInstruction(
                 CreateCreditTransfer() with
                 {
                     Purpose = new Choices.Purpose2Choice.Code
@@ -157,12 +157,12 @@ public class Pain001ExamplesTests
                         Unstructured = ["INV-2024-847 EUR 47250.00 due 2024-03-15"],
                     },
                 }
-            ),
+            )],
         };
 
         Assert.NotNull(message);
         Assert.IsType<Choices.Purpose2Choice.Code>(
-            message.PaymentInformation.CreditTransferTransactionInformation[0].Purpose
+            message.PaymentInformation[0].CreditTransferTransactionInformation[0].Purpose
         );
     }
 
@@ -177,7 +177,7 @@ public class Pain001ExamplesTests
         var message = new CustomerCreditTransferInitiationV11
         {
             GroupHeader = CreateGroupHeader("ACME/240315/PAI001/00004"),
-            PaymentInformation = CreatePaymentInstruction(
+            PaymentInformation = [CreatePaymentInstruction(
                 CreateCreditTransfer() with
                 {
                     Purpose = new Choices.Purpose2Choice.Proprietary
@@ -185,12 +185,12 @@ public class Pain001ExamplesTests
                         Value = "ACME-INTERCOMPANY-LOAN",
                     },
                 }
-            ),
+            )],
         };
 
         Assert.NotNull(message);
         Assert.IsType<Choices.Purpose2Choice.Proprietary>(
-            message.PaymentInformation.CreditTransferTransactionInformation[0].Purpose
+            message.PaymentInformation[0].CreditTransferTransactionInformation[0].Purpose
         );
     }
 
@@ -207,7 +207,7 @@ public class Pain001ExamplesTests
         var message = new CustomerCreditTransferInitiationV11
         {
             GroupHeader = CreateGroupHeader("ACME/240315/PAI001/00005"),
-            PaymentInformation = CreatePaymentInstruction() with
+            PaymentInformation = [CreatePaymentInstruction() with
             {
                 PaymentInformationIdentification = "ACME/240315/PMTINF/002",
                 RequestedExecutionDate = new Choices.DateAndDateTime2Choice.DateTime
@@ -225,12 +225,12 @@ public class Pain001ExamplesTests
                         Value = ExternalLocalInstrument1Code.InstantCreditTransfer,
                     },
                 },
-            },
+            }],
         };
 
         Assert.NotNull(message);
         Assert.IsType<Choices.DateAndDateTime2Choice.DateTime>(
-            message.PaymentInformation.RequestedExecutionDate
+            message.PaymentInformation[0].RequestedExecutionDate
         );
     }
 }

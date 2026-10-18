@@ -83,5 +83,5 @@ public record PayInEventAcknowledgementV02 : IOuterRecord
     [IsoId("_Cu8KTy53EeKwTrPDLMbLxA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

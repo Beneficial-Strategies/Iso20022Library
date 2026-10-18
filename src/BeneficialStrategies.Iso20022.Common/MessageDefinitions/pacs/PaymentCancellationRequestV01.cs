@@ -78,5 +78,5 @@ public record PaymentCancellationRequestV01 : IOuterRecord
     [IsoId("_eoccYtEuEd-BzquC8wXy7w_1545316731")]
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
-    public PaymentTransactionInformation3? TransactionInformation { get; init; }
+    public ValueList<PaymentTransactionInformation3> TransactionInformation { get; init; } = [];
 }

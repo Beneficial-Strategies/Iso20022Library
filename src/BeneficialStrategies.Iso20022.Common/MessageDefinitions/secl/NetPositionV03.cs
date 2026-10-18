@@ -94,7 +94,7 @@ public record NetPositionV03 : IOuterRecord
     [IsoId("_9C7fuy0lEeSRe9rElPHBfg")]
     [DisplayName("Net Position Report")]
     [IsoXmlTag("NetPosRpt")]
-    public required NetPosition3 NetPositionReport { get; init; }
+    public ValueList<NetPosition3> NetPositionReport { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -102,5 +102,5 @@ public record NetPositionV03 : IOuterRecord
     [IsoId("_9C7fvS0lEeSRe9rElPHBfg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -55,7 +55,7 @@ public record CCPLiquidityStressTestingResultReportV01 : IOuterRecord
     [IsoId("_FO6maeUREem3X-64-NKdqg")]
     [DisplayName("Liquidity Stress Test Result")]
     [IsoXmlTag("LqdtyStrssTstRslt")]
-    public required LiquidityStressTestResult1 LiquidityStressTestResult { get; init; }
+    public ValueList<LiquidityStressTestResult1> LiquidityStressTestResult { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -63,5 +63,5 @@ public record CCPLiquidityStressTestingResultReportV01 : IOuterRecord
     [IsoId("_FO6ma-UREem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

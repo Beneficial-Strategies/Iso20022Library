@@ -87,5 +87,5 @@ public record ClaimNonReceiptV04 : IOuterRecord
     [IsoId("_sVDgkVkyEeGeoaLUQk__nA_392767597")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

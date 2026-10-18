@@ -112,5 +112,5 @@ public record MeetingInstructionStatusV04 : IOuterRecord
     [IsoId("_TqXTV9EwEd-BzquC8wXy7w_510788685")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension2? Extension { get; init; }
+    public ValueList<Extension2> Extension { get; init; } = [];
 }

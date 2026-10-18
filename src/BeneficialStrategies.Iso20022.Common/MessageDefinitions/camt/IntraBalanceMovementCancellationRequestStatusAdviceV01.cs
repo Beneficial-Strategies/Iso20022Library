@@ -125,5 +125,5 @@ public record IntraBalanceMovementCancellationRequestStatusAdviceV01 : IOuterRec
     [IsoId("_DLtKjzncEem7JZMuWtwtsg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -64,7 +64,7 @@ public record CorporateActionMovementReversalAdviceV06 : IOuterRecord
     [IsoId("_TpNq11hBEeSewsfsZR0hxA")]
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
-    public DocumentIdentification13? OtherDocumentIdentification { get; init; }
+    public ValueList<DocumentIdentification13> OtherDocumentIdentification { get; init; } = [];
 
     /// <summary>
     /// Identification of an other corporate action event that needs to be closely linked to the processing of the event notified in this document.
@@ -72,7 +72,7 @@ public record CorporateActionMovementReversalAdviceV06 : IOuterRecord
     [IsoId("_TpNq2VhBEeSewsfsZR0hxA")]
     [DisplayName("Events Linkage")]
     [IsoXmlTag("EvtsLkg")]
-    public CorporateActionEventReference1? EventsLinkage { get; init; }
+    public ValueList<CorporateActionEventReference1> EventsLinkage { get; init; } = [];
 
     /// <summary>
     /// Reason for the reversal.
@@ -128,7 +128,7 @@ public record CorporateActionMovementReversalAdviceV06 : IOuterRecord
     [IsoId("_TpNq51hBEeSewsfsZR0hxA")]
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
-    public PartyIdentification40Choice_? IssuerAgent { get; init; }
+    public ValueList<PartyIdentification40Choice_> IssuerAgent { get; init; } = [];
 
     /// <summary>
     /// Agent (principal or fiscal paying agent) appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.
@@ -136,7 +136,7 @@ public record CorporateActionMovementReversalAdviceV06 : IOuterRecord
     [IsoId("_TpNq6VhBEeSewsfsZR0hxA")]
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
-    public PartyIdentification40Choice_? PayingAgent { get; init; }
+    public ValueList<PartyIdentification40Choice_> PayingAgent { get; init; } = [];
 
     /// <summary>
     /// Sub-agent appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.
@@ -144,7 +144,7 @@ public record CorporateActionMovementReversalAdviceV06 : IOuterRecord
     [IsoId("_TpNq61hBEeSewsfsZR0hxA")]
     [DisplayName("Sub Paying Agent")]
     [IsoXmlTag("SubPngAgt")]
-    public PartyIdentification40Choice_? SubPayingAgent { get; init; }
+    public ValueList<PartyIdentification40Choice_> SubPayingAgent { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -152,5 +152,5 @@ public record CorporateActionMovementReversalAdviceV06 : IOuterRecord
     [IsoId("_TpNq7VhBEeSewsfsZR0hxA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

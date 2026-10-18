@@ -64,7 +64,7 @@ public record PartyRegistrationAndGuaranteeRequestV01 : IOuterRecord
     [IsoId("_OTgzNDY1-AOSNFX-8224506")]
     [DisplayName("Agreement List")]
     [IsoXmlTag("AgrmtList")]
-    public required FinancingAgreementList1 AgreementList { get; init; }
+    public ValueList<FinancingAgreementList1> AgreementList { get; init; } = [];
 
     /// <summary>
     /// Number of agreement lists as control value.
@@ -99,5 +99,5 @@ public record PartyRegistrationAndGuaranteeRequestV01 : IOuterRecord
     [IsoId("_OTgzNDY5-AOSNFX-8224506")]
     [DisplayName("Attached Message")]
     [IsoXmlTag("AttchdMsg")]
-    public EncapsulatedBusinessMessage1? AttachedMessage { get; init; }
+    public ValueList<EncapsulatedBusinessMessage1> AttachedMessage { get; init; } = [];
 }

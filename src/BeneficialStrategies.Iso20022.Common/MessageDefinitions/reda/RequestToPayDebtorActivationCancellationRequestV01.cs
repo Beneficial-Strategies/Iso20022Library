@@ -63,7 +63,7 @@ public record RequestToPayDebtorActivationCancellationRequestV01 : IOuterRecord
     [IsoId("_rNNByeHzEeqbls7Gk4-ckA")]
     [DisplayName("Cancellation Data")]
     [IsoXmlTag("CxlData")]
-    public required DebtorActivationCancellation2 CancellationData { get; init; }
+    public ValueList<DebtorActivationCancellation2> CancellationData { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -71,5 +71,5 @@ public record RequestToPayDebtorActivationCancellationRequestV01 : IOuterRecord
     [IsoId("_rNNBy-HzEeqbls7Gk4-ckA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

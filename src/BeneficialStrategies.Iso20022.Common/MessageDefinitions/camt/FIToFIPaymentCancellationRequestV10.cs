@@ -103,7 +103,7 @@ public record FIToFIPaymentCancellationRequestV10 : IOuterRecord
     [IsoId("_IBjZldcBEeq_l4BJLVUF2Q")]
     [DisplayName("Underlying")]
     [IsoXmlTag("Undrlyg")]
-    public required UnderlyingTransaction28 Underlying { get; init; }
+    public ValueList<UnderlyingTransaction28> Underlying { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -111,5 +111,5 @@ public record FIToFIPaymentCancellationRequestV10 : IOuterRecord
     [IsoId("_IBjZl9cBEeq_l4BJLVUF2Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

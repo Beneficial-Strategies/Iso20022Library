@@ -64,7 +64,7 @@ public record RequestToPayDebtorActivationStatusReportV01 : IOuterRecord
     [IsoId("_rNNB3eHzEeqbls7Gk4-ckA")]
     [DisplayName("Original Activation And Status")]
     [IsoXmlTag("OrgnlActvtnAndSts")]
-    public required ActivationStatus2 OriginalActivationAndStatus { get; init; }
+    public ValueList<ActivationStatus2> OriginalActivationAndStatus { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -72,5 +72,5 @@ public record RequestToPayDebtorActivationStatusReportV01 : IOuterRecord
     [IsoId("_rNNB3-HzEeqbls7Gk4-ckA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

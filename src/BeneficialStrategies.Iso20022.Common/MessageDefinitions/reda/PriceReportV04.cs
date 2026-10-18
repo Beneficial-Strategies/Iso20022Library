@@ -71,7 +71,7 @@ public record PriceReportV04 : IOuterRecord
     [IsoId("_IOkQvxj3EeKxeog5DTmtgg")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
-    public AdditionalReference3? PreviousReference { get; init; }
+    public ValueList<AdditionalReference3> PreviousReference { get; init; } = [];
 
     /// <summary>
     /// Reference to a linked message that was previously received.
@@ -123,7 +123,7 @@ public record PriceReportV04 : IOuterRecord
     [IsoId("_IOkQyxj3EeKxeog5DTmtgg")]
     [DisplayName("Price Valuation Details")]
     [IsoXmlTag("PricValtnDtls")]
-    public required PriceValuation4 PriceValuationDetails { get; init; }
+    public ValueList<PriceValuation4> PriceValuationDetails { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -131,5 +131,5 @@ public record PriceReportV04 : IOuterRecord
     [IsoId("_IOkQzxj3EeKxeog5DTmtgg")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

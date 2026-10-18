@@ -112,5 +112,5 @@ public record MeetingResultDisseminationV05 : IOuterRecord
     [IsoId("_xXGYQFtoEeSwKe7KuKvXhg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

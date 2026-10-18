@@ -106,5 +106,5 @@ public record TransferCancellationStatusReportV04 : IOuterRecord
     [IsoId("_QzhWQxXgEeOocOqSQt5Jbw")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

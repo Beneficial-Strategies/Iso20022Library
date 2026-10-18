@@ -83,5 +83,5 @@ public record DuplicateV04 : IOuterRecord
     [IsoId("_sWsfUlkyEeGeoaLUQk__nA_1398916229")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -71,7 +71,7 @@ public record FIToFIPaymentStatusRequestV05 : IOuterRecord
     [IsoId("_jMaoM9cBEeq_l4BJLVUF2Q")]
     [DisplayName("Original Group Information")]
     [IsoXmlTag("OrgnlGrpInf")]
-    public OriginalGroupInformation27? OriginalGroupInformation { get; init; }
+    public ValueList<OriginalGroupInformation27> OriginalGroupInformation { get; init; } = [];
 
     /// <summary>
     /// Information concerning the original transaction, to which the status request message refers.
@@ -79,7 +79,7 @@ public record FIToFIPaymentStatusRequestV05 : IOuterRecord
     [IsoId("_jMaoNdcBEeq_l4BJLVUF2Q")]
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
-    public PaymentTransaction131? TransactionInformation { get; init; }
+    public ValueList<PaymentTransaction131> TransactionInformation { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -87,5 +87,5 @@ public record FIToFIPaymentStatusRequestV05 : IOuterRecord
     [IsoId("_jMaoN9cBEeq_l4BJLVUF2Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

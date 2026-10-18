@@ -90,7 +90,7 @@ public record OrderConfirmationStatusReportV02 : IOuterRecord
     [IsoId("_Aab8QzbLEead9bDRE_1DAQ")]
     [DisplayName("Individual Order Confirmation Details Report")]
     [IsoXmlTag("IndvOrdrConfDtlsRpt")]
-    public required IndividualOrderConfirmationStatusAndReason2 IndividualOrderConfirmationDetailsReport { get; init; }
+    public ValueList<IndividualOrderConfirmationStatusAndReason2> IndividualOrderConfirmationDetailsReport { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -98,5 +98,5 @@ public record OrderConfirmationStatusReportV02 : IOuterRecord
     [IsoId("_Aab8RTbLEead9bDRE_1DAQ")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

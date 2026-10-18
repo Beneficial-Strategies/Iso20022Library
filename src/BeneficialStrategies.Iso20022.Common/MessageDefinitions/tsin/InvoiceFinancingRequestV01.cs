@@ -77,5 +77,5 @@ public record InvoiceFinancingRequestV01 : IOuterRecord
     [IsoId("_BU2DIn1LEeCF8NjrBemJWQ_-1651121112")]
     [DisplayName("Invoice Request Information")]
     [IsoXmlTag("InvcReqInf")]
-    public required InvoiceRequestInformation1 InvoiceRequestInformation { get; init; }
+    public ValueList<InvoiceRequestInformation1> InvoiceRequestInformation { get; init; } = [];
 }

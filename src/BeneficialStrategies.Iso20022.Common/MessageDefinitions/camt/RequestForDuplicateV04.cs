@@ -79,5 +79,5 @@ public record RequestForDuplicateV04 : IOuterRecord
     [IsoId("_sWGpdlkyEeGeoaLUQk__nA_484850933")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

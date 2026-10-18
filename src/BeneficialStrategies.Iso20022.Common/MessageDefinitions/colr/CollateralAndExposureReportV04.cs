@@ -93,7 +93,7 @@ public record CollateralAndExposureReportV04 : IOuterRecord
     [IsoId("_hsQPbwFmEeutW5-TpeYJhA")]
     [DisplayName("Collateral Report")]
     [IsoXmlTag("CollRpt")]
-    public required Collateral43 CollateralReport { get; init; }
+    public ValueList<Collateral43> CollateralReport { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -101,5 +101,5 @@ public record CollateralAndExposureReportV04 : IOuterRecord
     [IsoId("_hsQPcQFmEeutW5-TpeYJhA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

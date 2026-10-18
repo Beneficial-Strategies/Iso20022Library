@@ -83,5 +83,5 @@ public record InvestmentFundReportRequestV03 : IOuterRecord
     [IsoId("_qIk6aWolEeipaMTLlhaKMQ")]
     [DisplayName("Report Request")]
     [IsoXmlTag("RptReq")]
-    public required FundParameters4Choice_ ReportRequest { get; init; }
+    public ValueList<FundParameters4Choice_> ReportRequest { get; init; } = [];
 }

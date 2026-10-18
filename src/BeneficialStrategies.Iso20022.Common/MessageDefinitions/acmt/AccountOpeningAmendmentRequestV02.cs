@@ -111,7 +111,7 @@ public record AccountOpeningAmendmentRequestV02 : IOuterRecord
     [IsoId("_cNqkmw1TEeKGXqvMN6jpiw")]
     [DisplayName("Mandate")]
     [IsoXmlTag("Mndt")]
-    public OperationMandate2? Mandate { get; init; }
+    public ValueList<OperationMandate2> Mandate { get; init; } = [];
 
     /// <summary>
     /// Definition of a group of parties.
@@ -119,7 +119,7 @@ public record AccountOpeningAmendmentRequestV02 : IOuterRecord
     [IsoId("_RFZ2kA4XEeKGXqvMN6jpiw")]
     [DisplayName("Group")]
     [IsoXmlTag("Grp")]
-    public Group1? Group { get; init; }
+    public ValueList<Group1> Group { get; init; } = [];
 
     /// <summary>
     /// Unique and unambiguous identification of the account used as a reference for the opening of another account.
@@ -135,7 +135,7 @@ public record AccountOpeningAmendmentRequestV02 : IOuterRecord
     [IsoId("_cNqkow1TEeKGXqvMN6jpiw")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
-    public PartyAndSignature2? DigitalSignature { get; init; }
+    public ValueList<PartyAndSignature2> DigitalSignature { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -143,5 +143,5 @@ public record AccountOpeningAmendmentRequestV02 : IOuterRecord
     [IsoId("_wb0MsA3_EeKGXqvMN6jpiw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

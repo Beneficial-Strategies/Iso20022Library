@@ -127,5 +127,5 @@ public record MeetingResultDisseminationV04 : IOuterRecord
     [IsoId("_TtopwNEwEd-BzquC8wXy7w_-2089507082")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension2? Extension { get; init; }
+    public ValueList<Extension2> Extension { get; init; } = [];
 }

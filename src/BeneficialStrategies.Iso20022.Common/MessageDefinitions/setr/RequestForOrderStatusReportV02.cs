@@ -64,5 +64,5 @@ public record RequestForOrderStatusReportV02 : IOuterRecord
     [IsoId("_wWrFydE7Ed-BzquC8wXy7w_93958643")]
     [DisplayName("Request Details")]
     [IsoXmlTag("ReqDtls")]
-    public required MessageAndBusinessReference2 RequestDetails { get; init; }
+    public ValueList<MessageAndBusinessReference2> RequestDetails { get; init; } = [];
 }

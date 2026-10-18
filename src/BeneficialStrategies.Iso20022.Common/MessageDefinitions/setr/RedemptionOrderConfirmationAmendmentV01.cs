@@ -76,7 +76,7 @@ public record RedemptionOrderConfirmationAmendmentV01 : IOuterRecord
     [IsoId("_tf_MgNE7Ed-BzquC8wXy7w_-818407706")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
-    public AdditionalReference3? PreviousReference { get; init; }
+    public ValueList<AdditionalReference3> PreviousReference { get; init; } = [];
 
     /// <summary>
     /// Reference to a linked message that was previously received.
@@ -118,5 +118,5 @@ public record RedemptionOrderConfirmationAmendmentV01 : IOuterRecord
     [IsoId("_tf_MhdE7Ed-BzquC8wXy7w_-817485677")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

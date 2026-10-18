@@ -55,7 +55,7 @@ public record CCPInvestmentsReportV01 : IOuterRecord
     [IsoId("_JJKuGeUUEem3X-64-NKdqg")]
     [DisplayName("Investment")]
     [IsoXmlTag("Invstmt")]
-    public required Investment1Choice_ Investment { get; init; }
+    public ValueList<Investment1Choice_> Investment { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -63,5 +63,5 @@ public record CCPInvestmentsReportV01 : IOuterRecord
     [IsoId("_JJKuG-UUEem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

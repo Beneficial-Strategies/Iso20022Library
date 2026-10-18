@@ -73,10 +73,7 @@ public class GetCurrencyExchangeRateV04Validator : AbstractValidator<GetCurrency
             x => x.CurrencyQueryDefinition is not null,
             () => RuleFor(x => x.CurrencyQueryDefinition).SetValidator(currencyQueryDefinitionValidator!)
         );
-        When(
-            x => x.SupplementaryData is not null,
-            () => RuleFor(x => x.SupplementaryData).SetValidator(supplementaryDataValidator!)
-        );
+        RuleForEach(x => x.SupplementaryData).SetValidator(supplementaryDataValidator!);
     }
 
     /// <summary>

@@ -133,5 +133,5 @@ public record MarginCallResponseV03 : IOuterRecord
     [IsoId("_M-jCI1nMEeSPgY23yCMQSQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

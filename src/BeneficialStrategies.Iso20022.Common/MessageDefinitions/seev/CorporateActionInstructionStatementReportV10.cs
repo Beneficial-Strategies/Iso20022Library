@@ -77,7 +77,7 @@ public record CorporateActionInstructionStatementReportV10 : IOuterRecord
     [IsoId("_B3V7g-2zEeqc-LCjwLsUVg")]
     [DisplayName("Account And Statement Details")]
     [IsoXmlTag("AcctAndStmtDtls")]
-    public required AccountIdentification56 AccountAndStatementDetails { get; init; }
+    public ValueList<AccountIdentification56> AccountAndStatementDetails { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -85,5 +85,5 @@ public record CorporateActionInstructionStatementReportV10 : IOuterRecord
     [IsoId("_B3V7he2zEeqc-LCjwLsUVg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

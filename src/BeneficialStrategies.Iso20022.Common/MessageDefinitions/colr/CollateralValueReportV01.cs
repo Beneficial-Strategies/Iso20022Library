@@ -71,5 +71,5 @@ public record CollateralValueReportV01 : IOuterRecord
     [IsoId("_5Sj0BTooEemaN9GkhmGkfg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

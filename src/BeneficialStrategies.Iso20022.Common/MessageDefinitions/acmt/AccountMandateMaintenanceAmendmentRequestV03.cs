@@ -91,7 +91,7 @@ public record AccountMandateMaintenanceAmendmentRequestV03 : IOuterRecord
     [IsoId("_bf9RJW2PEei3KuUgpx7Xcw")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public required AccountForAction1 AccountIdentification { get; init; }
+    public ValueList<AccountForAction1> AccountIdentification { get; init; } = [];
 
     /// <summary>
     /// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme.
@@ -115,7 +115,7 @@ public record AccountMandateMaintenanceAmendmentRequestV03 : IOuterRecord
     [IsoId("_bf9RK22PEei3KuUgpx7Xcw")]
     [DisplayName("Mandate")]
     [IsoXmlTag("Mndt")]
-    public OperationMandate5? Mandate { get; init; }
+    public ValueList<OperationMandate5> Mandate { get; init; } = [];
 
     /// <summary>
     /// Definition of a group of parties.
@@ -123,7 +123,7 @@ public record AccountMandateMaintenanceAmendmentRequestV03 : IOuterRecord
     [IsoId("_bf9RLW2PEei3KuUgpx7Xcw")]
     [DisplayName("Group")]
     [IsoXmlTag("Grp")]
-    public Group3? Group { get; init; }
+    public ValueList<Group3> Group { get; init; } = [];
 
     /// <summary>
     /// Contains the signature with its components, namely signed info, signature value, key info and the object.
@@ -131,7 +131,7 @@ public record AccountMandateMaintenanceAmendmentRequestV03 : IOuterRecord
     [IsoId("_bf9RL22PEei3KuUgpx7Xcw")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
-    public PartyAndSignature3? DigitalSignature { get; init; }
+    public ValueList<PartyAndSignature3> DigitalSignature { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -139,5 +139,5 @@ public record AccountMandateMaintenanceAmendmentRequestV03 : IOuterRecord
     [IsoId("_bf9RMW2PEei3KuUgpx7Xcw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -83,7 +83,7 @@ public record SecuritiesSettlementTransactionGenerationNotification002V08 : IOut
     [IsoId("_KuDPdc30Eee5nJBZsW8MFQ")]
     [DisplayName("Linkages")]
     [IsoXmlTag("Lnkgs")]
-    public Linkages43? Linkages { get; init; }
+    public ValueList<Linkages43> Linkages { get; init; } = [];
 
     /// <summary>
     /// Details of the trade.
@@ -115,7 +115,7 @@ public record SecuritiesSettlementTransactionGenerationNotification002V08 : IOut
     [IsoId("_KuDPfc30Eee5nJBZsW8MFQ")]
     [DisplayName("Quantity And Account Details")]
     [IsoXmlTag("QtyAndAcctDtls")]
-    public required QuantityAndAccount69 QuantityAndAccountDetails { get; init; }
+    public ValueList<QuantityAndAccount69> QuantityAndAccountDetails { get; init; } = [];
 
     /// <summary>
     /// Parameters which explicitly state the conditions that must be fulfilled before a particular transaction of a financial instrument can be settled. These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.
@@ -187,7 +187,7 @@ public record SecuritiesSettlementTransactionGenerationNotification002V08 : IOut
     [IsoId("_KuDPj830Eee5nJBZsW8MFQ")]
     [DisplayName("Generated Reason")]
     [IsoXmlTag("GnrtdRsn")]
-    public GeneratedReason6? GeneratedReason { get; init; }
+    public ValueList<GeneratedReason6> GeneratedReason { get; init; } = [];
 
     /// <summary>
     /// Status and reason of the transaction.
@@ -203,5 +203,5 @@ public record SecuritiesSettlementTransactionGenerationNotification002V08 : IOut
     [IsoId("_KuDPk830Eee5nJBZsW8MFQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

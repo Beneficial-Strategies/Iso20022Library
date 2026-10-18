@@ -82,7 +82,7 @@ public record SecuritiesTradeConfirmationV03 : IOuterRecord
     [IsoId("_L2hN1y9UEeOdVfle5cojCg")]
     [DisplayName("References")]
     [IsoXmlTag("Refs")]
-    public Linkages15? References { get; init; }
+    public ValueList<Linkages15> References { get; init; } = [];
 
     /// <summary>
     /// Details of the trade.
@@ -114,7 +114,7 @@ public record SecuritiesTradeConfirmationV03 : IOuterRecord
     [IsoId("_L2hN3y9UEeOdVfle5cojCg")]
     [DisplayName("Underlying Financial Instrument")]
     [IsoXmlTag("UndrlygFinInstrm")]
-    public UnderlyingFinancialInstrument2? UnderlyingFinancialInstrument { get; init; }
+    public ValueList<UnderlyingFinancialInstrument2> UnderlyingFinancialInstrument { get; init; } = [];
 
     /// <summary>
     /// Additional restrictions on the financial instrument, related to the stipulation.
@@ -130,7 +130,7 @@ public record SecuritiesTradeConfirmationV03 : IOuterRecord
     [IsoId("_L2hN4y9UEeOdVfle5cojCg")]
     [DisplayName("Confirmation Parties")]
     [IsoXmlTag("ConfPties")]
-    public required ConfirmationParties2 ConfirmationParties { get; init; }
+    public ValueList<ConfirmationParties2> ConfirmationParties { get; init; } = [];
 
     /// <summary>
     /// Parameters which explicitly state the conditions that must be fulfilled before a particular transaction of a financial instrument can be settled. These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.
@@ -194,7 +194,7 @@ public record SecuritiesTradeConfirmationV03 : IOuterRecord
     [IsoId("_L2hN8y9UEeOdVfle5cojCg")]
     [DisplayName("Other Amounts")]
     [IsoXmlTag("OthrAmts")]
-    public OtherAmounts16? OtherAmounts { get; init; }
+    public ValueList<OtherAmounts16> OtherAmounts { get; init; } = [];
 
     /// <summary>
     /// Other prices than the deal price.
@@ -202,7 +202,7 @@ public record SecuritiesTradeConfirmationV03 : IOuterRecord
     [IsoId("_L2hN9S9UEeOdVfle5cojCg")]
     [DisplayName("Other Prices")]
     [IsoXmlTag("OthrPrics")]
-    public OtherPrices2? OtherPrices { get; init; }
+    public ValueList<OtherPrices2> OtherPrices { get; init; } = [];
 
     /// <summary>
     /// Other business parties relevant to the transaction.
@@ -235,5 +235,5 @@ public record SecuritiesTradeConfirmationV03 : IOuterRecord
     [IsoId("_L2hN_S9UEeOdVfle5cojCg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -92,5 +92,5 @@ public record SecurityCreationStatusAdviceV01 : IOuterRecord
     [IsoId("_jTt_0R62Eeu31YsWNiv_cw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

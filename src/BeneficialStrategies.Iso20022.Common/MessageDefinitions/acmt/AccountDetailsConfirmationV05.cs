@@ -182,5 +182,5 @@ public record AccountDetailsConfirmationV05 : IOuterRecord
     [IsoId("_o6vj3wgpEeSUG-8hqXsVMQ")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

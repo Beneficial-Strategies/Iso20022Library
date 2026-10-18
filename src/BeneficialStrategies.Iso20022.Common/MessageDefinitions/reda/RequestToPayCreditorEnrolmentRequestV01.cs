@@ -64,7 +64,7 @@ public record RequestToPayCreditorEnrolmentRequestV01 : IOuterRecord
     [IsoId("_rNNBqeHzEeqbls7Gk4-ckA")]
     [DisplayName("Creditor Enrolment")]
     [IsoXmlTag("CdtrEnrlmnt")]
-    public required CreditorEnrolment3 CreditorEnrolment { get; init; }
+    public ValueList<CreditorEnrolment3> CreditorEnrolment { get; init; } = [];
 
     /// <summary>
     /// Specific attributes requested from the debtor for its activation as specified by the creditor in the creditor enrolment request.
@@ -80,5 +80,5 @@ public record RequestToPayCreditorEnrolmentRequestV01 : IOuterRecord
     [IsoId("_rNNBreHzEeqbls7Gk4-ckA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -69,5 +69,5 @@ public record BankServicesBillingStatementV01 : IOuterRecord
     [IsoId("_cVsZ95qmEeGSON8vddiWzQ_1850153158")]
     [DisplayName("Billing Statement Group")]
     [IsoXmlTag("BllgStmtGrp")]
-    public required StatementGroup1 BillingStatementGroup { get; init; }
+    public ValueList<StatementGroup1> BillingStatementGroup { get; init; } = [];
 }

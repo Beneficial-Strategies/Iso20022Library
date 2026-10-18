@@ -48,7 +48,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
         new() { Reason = new CxlReasonChoice.Code { Value = CxlReasonCode.RequestedByCustomer }, };
 
     private static FIToFIPaymentCancellationRequestV10 ValidMessage() =>
-        new() { Assignment = ValidAssignment(), Underlying = ValidUnderlying(), };
+        new() { Assignment = ValidAssignment(), Underlying = [ValidUnderlying()], };
 
     // ── Happy path ─────────────────────────────────────────────────────────────
 
@@ -86,7 +86,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
         var msg = new FIToFIPaymentCancellationRequestV10
         {
             Assignment = ValidAssignment(),
-            Underlying = new UnderlyingTransaction28
+            Underlying = [new UnderlyingTransaction28
             {
                 OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
                 {
@@ -95,7 +95,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
                     GroupCancellation = "true",
                     CancellationReasonInformation = [ValidCancellationReason()],
                 },
-            },
+            }],
         };
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
@@ -115,7 +115,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
             {
                 // Assignment intentionally omitted — required property, FluentValidation NotNull check
                 Assignment = null!,
-                Underlying = ValidUnderlying(),
+                Underlying = [ValidUnderlying()],
             }
         );
         Assert.Contains(result.Errors, e => e.PropertyName == "Assignment");
@@ -220,13 +220,13 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     {
         var msg = ValidMessage() with
         {
-            Underlying = new UnderlyingTransaction28
+            Underlying = [new UnderlyingTransaction28
             {
                 TransactionInformation = [new PaymentTransaction137
                 {
                     OriginalUETR = "97ed4827-7b6f-4491-a06f-b548d5a7512d",
                 }],
-            },
+            }],
         };
         var result2 = _sut.Validate(msg);
         Assert.DoesNotContain(result2.Errors, e => e.PropertyName.EndsWith(".OriginalUETR"));
@@ -249,10 +249,10 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     {
         var msg = ValidMessage() with
         {
-            Underlying = new UnderlyingTransaction28
+            Underlying = [new UnderlyingTransaction28
             {
                 OriginalGroupInformationAndCancellation = null,
-            },
+            }],
         };
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.ErrorMessage.Contains("at least one"));
@@ -267,7 +267,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
         {
             Assignment = ValidAssignment(),
             Case = new Case5 { Identification = "CASE-MSG", Creator = MakeAgent("DEUTDEFFXXX") },
-            Underlying = new UnderlyingTransaction28
+            Underlying = [new UnderlyingTransaction28
             {
                 TransactionInformation = [new PaymentTransaction137
                 {
@@ -278,7 +278,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
                     },
                     OriginalEndToEndIdentification = "E2E-001",
                 }],
-            },
+            }],
         };
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "MessageOrGroupCaseRule");
@@ -291,7 +291,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
         {
             Assignment = ValidAssignment(),
             Case = new Case5 { Identification = "CASE-MSG", Creator = MakeAgent("DEUTDEFFXXX") },
-            Underlying = new UnderlyingTransaction28
+            Underlying = [new UnderlyingTransaction28
             {
                 OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
                 {
@@ -303,7 +303,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
                         Creator = MakeAgent("DEUTDEFFXXX")
                     },
                 },
-            },
+            }],
         };
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "MessageOrGroupCaseRule");
@@ -316,7 +316,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
         {
             Assignment = ValidAssignment(),
             // No message-level Case
-            Underlying = new UnderlyingTransaction28
+            Underlying = [new UnderlyingTransaction28
             {
                 TransactionInformation = [new PaymentTransaction137
                 {
@@ -327,7 +327,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
                     },
                     OriginalEndToEndIdentification = "E2E-001",
                 }],
-            },
+            }],
         };
         _sut.TestValidate(msg).ShouldNotHaveValidationErrorFor("MessageOrGroupCaseRule");
     }
@@ -353,7 +353,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     {
         var msg = ValidMessage() with
         {
-            Underlying = new UnderlyingTransaction28
+            Underlying = [new UnderlyingTransaction28
             {
                 OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
                 {
@@ -362,7 +362,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
                     GroupCancellation = "true",
                     // CancellationReasonInformation intentionally absent
                 },
-            },
+            }],
         };
         var result = _sut.Validate(msg);
         Assert.Contains(
@@ -376,7 +376,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     {
         var msg = ValidMessage() with
         {
-            Underlying = new UnderlyingTransaction28
+            Underlying = [new UnderlyingTransaction28
             {
                 OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
                 {
@@ -385,7 +385,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
                     GroupCancellation = "true",
                     CancellationReasonInformation = [ValidCancellationReason()],
                 },
-            },
+            }],
         };
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(
@@ -401,7 +401,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     {
         var msg = ValidMessage() with
         {
-            Underlying = new UnderlyingTransaction28
+            Underlying = [new UnderlyingTransaction28
             {
                 OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
                 {
@@ -414,7 +414,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
                 {
                     OriginalEndToEndIdentification = "E2E-001",
                 }],
-            },
+            }],
         };
         var result = _sut.Validate(msg);
         Assert.Contains(
@@ -430,7 +430,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     {
         var msg = ValidMessage() with
         {
-            Underlying = new UnderlyingTransaction28
+            Underlying = [new UnderlyingTransaction28
             {
                 OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
                 {
@@ -439,7 +439,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
                     GroupCancellation = "false",
                     // TransactionInformation intentionally absent
                 },
-            },
+            }],
         };
         var result = _sut.Validate(msg);
         Assert.Contains(
@@ -453,7 +453,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     {
         var msg = ValidMessage() with
         {
-            Underlying = new UnderlyingTransaction28
+            Underlying = [new UnderlyingTransaction28
             {
                 OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
                 {
@@ -465,7 +465,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
                 {
                     OriginalEndToEndIdentification = "E2E-001",
                 }],
-            },
+            }],
         };
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(
@@ -481,7 +481,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     {
         var msg = ValidMessage() with
         {
-            Underlying = new UnderlyingTransaction28
+            Underlying = [new UnderlyingTransaction28
             {
                 OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
                 {
@@ -494,7 +494,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
                 {
                     OriginalEndToEndIdentification = "E2E-001",
                 }],
-            },
+            }],
         };
         var result = _sut.Validate(msg);
         Assert.Contains(
@@ -508,7 +508,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     {
         var msg = ValidMessage() with
         {
-            Underlying = new UnderlyingTransaction28
+            Underlying = [new UnderlyingTransaction28
             {
                 OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
                 {
@@ -521,7 +521,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
                 {
                     OriginalEndToEndIdentification = "E2E-001",
                 }],
-            },
+            }],
         };
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(
@@ -537,7 +537,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     {
         var msg = ValidMessage() with
         {
-            Underlying = new UnderlyingTransaction28
+            Underlying = [new UnderlyingTransaction28
             {
                 OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
                 {
@@ -558,7 +558,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
                     },
                     OriginalEndToEndIdentification = "E2E-001",
                 }],
-            },
+            }],
         };
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.ErrorMessage.Contains("GroupOrTransactionCaseRule"));
@@ -569,7 +569,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     {
         var msg = ValidMessage() with
         {
-            Underlying = new UnderlyingTransaction28
+            Underlying = [new UnderlyingTransaction28
             {
                 TransactionInformation = [new PaymentTransaction137
                 {
@@ -580,7 +580,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
                     },
                     OriginalEndToEndIdentification = "E2E-001",
                 }],
-            },
+            }],
         };
         var result = _sut.Validate(msg);
         Assert.DoesNotContain(

@@ -69,7 +69,7 @@ public record MandateAcceptanceReportV07 : IOuterRecord
     [IsoId("_rUYOGdcBEeq_l4BJLVUF2Q")]
     [DisplayName("Underlying Acceptance Details")]
     [IsoXmlTag("UndrlygAccptncDtls")]
-    public required MandateAcceptance7 UnderlyingAcceptanceDetails { get; init; }
+    public ValueList<MandateAcceptance7> UnderlyingAcceptanceDetails { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -77,5 +77,5 @@ public record MandateAcceptanceReportV07 : IOuterRecord
     [IsoId("_rUYOG9cBEeq_l4BJLVUF2Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

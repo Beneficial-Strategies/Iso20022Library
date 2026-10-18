@@ -82,7 +82,7 @@ public record RegulatoryTransactionReportCancellationRequestV02 : IOuterRecord
     [IsoId("_gJYVE8IFEeGllrOKQRUTYA_-2116922081")]
     [DisplayName("Cancellation By Transaction Details")]
     [IsoXmlTag("CxlByTxDtls")]
-    public required TransactionDetails3 CancellationByTransactionDetails { get; init; }
+    public ValueList<TransactionDetails3> CancellationByTransactionDetails { get; init; } = [];
 
     /// <summary>
     /// Provides the reference of the RegulatoryTransactionReport document that was previously sent and that needs to be cancelled in its entirety.
@@ -98,5 +98,5 @@ public record RegulatoryTransactionReportCancellationRequestV02 : IOuterRecord
     [IsoId("_gJiGEMIFEeGllrOKQRUTYA_-2116922038")]
     [DisplayName("Cancellation By Trade Reference")]
     [IsoXmlTag("CxlByTradRef")]
-    public required TransactionDetails2 CancellationByTradeReference { get; init; }
+    public ValueList<TransactionDetails2> CancellationByTradeReference { get; init; } = [];
 }

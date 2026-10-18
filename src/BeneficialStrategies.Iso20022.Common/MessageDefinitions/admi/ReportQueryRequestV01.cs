@@ -63,7 +63,7 @@ public record ReportQueryRequestV01 : IOuterRecord
     [IsoId("_5Ql0JZb3Eee4htziCyV8eA")]
     [DisplayName("Report Query Criteria")]
     [IsoXmlTag("RptQryCrit")]
-    public ReportQueryCriteria2? ReportQueryCriteria { get; init; }
+    public ValueList<ReportQueryCriteria2> ReportQueryCriteria { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -71,5 +71,5 @@ public record ReportQueryRequestV01 : IOuterRecord
     [IsoId("_5Ql0J5b3Eee4htziCyV8eA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

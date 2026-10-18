@@ -59,15 +59,15 @@ public class Pacs002ExamplesTests
         var message = new FIToFIPaymentStatusReportV13
         {
             GroupHeader = CreateGroupHeader(),
-            OriginalGroupInformationAndStatus = CreateOriginalGroupInfo(),
-            TransactionInformationAndStatus = CreateAcceptedTransactionStatus(),
+            OriginalGroupInformationAndStatus = [CreateOriginalGroupInfo()],
+            TransactionInformationAndStatus = [CreateAcceptedTransactionStatus()],
         };
 
         Assert.NotNull(message);
         Assert.Equal("pacs.002.001.13", FIToFIPaymentStatusReportV13.IsoIdentifier);
         Assert.Equal(
             ExternalPaymentTransactionStatus1Code.AcceptedSettlementInProcess,
-            message.TransactionInformationAndStatus!.TransactionStatus
+            message.TransactionInformationAndStatus![0].TransactionStatus
         );
     }
 
@@ -81,7 +81,7 @@ public class Pacs002ExamplesTests
         var message = new FIToFIPaymentStatusReportV13
         {
             GroupHeader = CreateGroupHeader("BNPAFRPP/240315/PAC002/00002"),
-            TransactionInformationAndStatus = CreateAcceptedTransactionStatus() with
+            TransactionInformationAndStatus = [CreateAcceptedTransactionStatus() with
             {
                 TransactionStatus =
                     ExternalPaymentTransactionStatus1Code.AcceptedSettlementCompletedCreditorAccount,
@@ -89,13 +89,13 @@ public class Pacs002ExamplesTests
                 {
                     Value = Iso20022TestData.SettlementDate,
                 },
-            },
+            }],
         };
 
         Assert.NotNull(message);
         Assert.Equal(
             ExternalPaymentTransactionStatus1Code.AcceptedSettlementCompletedCreditorAccount,
-            message.TransactionInformationAndStatus!.TransactionStatus
+            message.TransactionInformationAndStatus![0].TransactionStatus
         );
     }
 
@@ -110,7 +110,7 @@ public class Pacs002ExamplesTests
         var message = new FIToFIPaymentStatusReportV13
         {
             GroupHeader = CreateGroupHeader("BNPAFRPP/240315/PAC002/00003"),
-            TransactionInformationAndStatus = new PaymentTransaction142
+            TransactionInformationAndStatus = [new PaymentTransaction142
             {
                 OriginalEndToEndIdentification = Iso20022TestData.EndToEndId,
                 OriginalUETR = Iso20022TestData.Uetr,
@@ -122,16 +122,16 @@ public class Pacs002ExamplesTests
                     AdditionalInformation =
                         ["Beneficiary account FR7630006000011234567890189 was closed on 2024-01-31."],
                 }],
-            },
+            }],
         };
 
         Assert.NotNull(message);
         Assert.Equal(
             ExternalPaymentTransactionStatus1Code.Rejected,
-            message.TransactionInformationAndStatus!.TransactionStatus
+            message.TransactionInformationAndStatus![0].TransactionStatus
         );
         Assert.IsType<Code>(
-            message.TransactionInformationAndStatus.StatusReasonInformation![0].Reason
+            message.TransactionInformationAndStatus[0].StatusReasonInformation![0].Reason
         );
     }
 
@@ -146,7 +146,7 @@ public class Pacs002ExamplesTests
         var message = new FIToFIPaymentStatusReportV13
         {
             GroupHeader = CreateGroupHeader("BNPAFRPP/240315/PAC002/00004"),
-            TransactionInformationAndStatus = new PaymentTransaction142
+            TransactionInformationAndStatus = [new PaymentTransaction142
             {
                 OriginalEndToEndIdentification = Iso20022TestData.EndToEndId,
                 OriginalUETR = Iso20022TestData.Uetr,
@@ -158,12 +158,12 @@ public class Pacs002ExamplesTests
                     AdditionalInformation =
                         ["Transaction held pending compliance review per internal policy CP-2024-007."],
                 }],
-            },
+            }],
         };
 
         Assert.NotNull(message);
         Assert.IsType<Proprietary>(
-            message.TransactionInformationAndStatus!.StatusReasonInformation![0].Reason
+            message.TransactionInformationAndStatus![0].StatusReasonInformation![0].Reason
         );
     }
 }

@@ -55,7 +55,7 @@ public record CCPAccountPositionReportV01 : IOuterRecord
     [IsoId("_1-TtqeUREem3X-64-NKdqg")]
     [DisplayName("Portfolio")]
     [IsoXmlTag("Prtfl")]
-    public required PositionAccount2 Portfolio { get; init; }
+    public ValueList<PositionAccount2> Portfolio { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -63,5 +63,5 @@ public record CCPAccountPositionReportV01 : IOuterRecord
     [IsoId("_1-Ttq-UREem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

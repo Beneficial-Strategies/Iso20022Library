@@ -117,5 +117,5 @@ public record TradeLegNotificationCancellationV03 : IOuterRecord
     [IsoId("__kNJqy0lEeSRe9rElPHBfg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

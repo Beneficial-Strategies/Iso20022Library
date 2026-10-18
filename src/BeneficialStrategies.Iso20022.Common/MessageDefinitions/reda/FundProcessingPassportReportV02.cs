@@ -71,5 +71,5 @@ public record FundProcessingPassportReportV02 : IOuterRecord
     [IsoId("_ZsRA2tEvEd-BzquC8wXy7w_-23910655")]
     [DisplayName("Fund Processing Passport")]
     [IsoXmlTag("FPP")]
-    public required FundProcessingPassport1 FundProcessingPassport { get; init; }
+    public ValueList<FundProcessingPassport1> FundProcessingPassport { get; init; } = [];
 }

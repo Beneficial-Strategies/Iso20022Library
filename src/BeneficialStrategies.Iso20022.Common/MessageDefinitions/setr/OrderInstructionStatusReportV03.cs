@@ -122,7 +122,7 @@ public record OrderInstructionStatusReportV03 : IOuterRecord
     [IsoId("_jlDNYNE7Ed-BzquC8wXy7w_1516458830")]
     [DisplayName("Individual Order Details Report")]
     [IsoXmlTag("IndvOrdrDtlsRpt")]
-    public required IndividualOrderStatusAndReason2 IndividualOrderDetailsReport { get; init; }
+    public ValueList<IndividualOrderStatusAndReason2> IndividualOrderDetailsReport { get; init; } = [];
 
     /// <summary>
     /// Status report details of a switch order.
@@ -130,7 +130,7 @@ public record OrderInstructionStatusReportV03 : IOuterRecord
     [IsoId("_jlDNYdE7Ed-BzquC8wXy7w_-475245778")]
     [DisplayName("Switch Order Details Report")]
     [IsoXmlTag("SwtchOrdrDtlsRpt")]
-    public required SwitchOrderStatusAndReason1 SwitchOrderDetailsReport { get; init; }
+    public ValueList<SwitchOrderStatusAndReason1> SwitchOrderDetailsReport { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -138,5 +138,5 @@ public record OrderInstructionStatusReportV03 : IOuterRecord
     [IsoId("_jlDNYtE7Ed-BzquC8wXy7w_1340149318")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

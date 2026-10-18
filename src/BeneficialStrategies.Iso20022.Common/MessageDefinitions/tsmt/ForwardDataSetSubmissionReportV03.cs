@@ -67,7 +67,7 @@ public record ForwardDataSetSubmissionReportV03 : IOuterRecord
     [IsoId("_oioFMNE8Ed-BzquC8wXy7w_403320811")]
     [DisplayName("Related Transaction References")]
     [IsoXmlTag("RltdTxRefs")]
-    public required DataSetSubmissionReferences4 RelatedTransactionReferences { get; init; }
+    public ValueList<DataSetSubmissionReferences4> RelatedTransactionReferences { get; init; } = [];
 
     /// <summary>
     /// This reference must be used for all data sets belonging to the same submission group.
@@ -131,7 +131,7 @@ public record ForwardDataSetSubmissionReportV03 : IOuterRecord
     [IsoId("_oixPINE8Ed-BzquC8wXy7w_1650995885")]
     [DisplayName("Certificate Data Set")]
     [IsoXmlTag("CertDataSet")]
-    public CertificateDataSet1? CertificateDataSet { get; init; }
+    public ValueList<CertificateDataSet1> CertificateDataSet { get; init; } = [];
 
     /// <summary>
     /// Other certificate information that has been submitted to the matching application by the other party.
@@ -139,7 +139,7 @@ public record ForwardDataSetSubmissionReportV03 : IOuterRecord
     [IsoId("_oixPIdE8Ed-BzquC8wXy7w_1469713115")]
     [DisplayName("Other Certificate Data Set")]
     [IsoXmlTag("OthrCertDataSet")]
-    public OtherCertificateDataSet1? OtherCertificateDataSet { get; init; }
+    public ValueList<OtherCertificateDataSet1> OtherCertificateDataSet { get; init; } = [];
 
     /// <summary>
     /// Next processing step required.

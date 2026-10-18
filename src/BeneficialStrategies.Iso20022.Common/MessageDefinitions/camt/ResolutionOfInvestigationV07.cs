@@ -100,7 +100,7 @@ public record ResolutionOfInvestigationV07 : IOuterRecord
     [IsoId("_KncB42XkEeap-P22vGV91g")]
     [DisplayName("Cancellation Details")]
     [IsoXmlTag("CxlDtls")]
-    public UnderlyingTransaction17? CancellationDetails { get; init; }
+    public ValueList<UnderlyingTransaction17> CancellationDetails { get; init; } = [];
 
     /// <summary>
     /// Details on the underlying statement entry.
@@ -132,5 +132,5 @@ public record ResolutionOfInvestigationV07 : IOuterRecord
     [IsoId("_KncB62XkEeap-P22vGV91g")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

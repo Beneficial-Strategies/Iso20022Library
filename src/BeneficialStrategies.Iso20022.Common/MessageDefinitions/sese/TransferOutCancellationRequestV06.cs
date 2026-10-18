@@ -69,7 +69,7 @@ public record TransferOutCancellationRequestV06 : IOuterRecord
     [IsoId("_s0NPtT57EeSIqOPJHpnleA")]
     [DisplayName("References")]
     [IsoXmlTag("Refs")]
-    public References15? References { get; init; }
+    public ValueList<References15> References { get; init; } = [];
 
     /// <summary>
     /// Choice between cancellation by reference or by transfer details.
@@ -77,7 +77,7 @@ public record TransferOutCancellationRequestV06 : IOuterRecord
     [IsoId("_s0NPtz57EeSIqOPJHpnleA")]
     [DisplayName("Cancellation")]
     [IsoXmlTag("Cxl")]
-    public required Cancellation8Choice_ Cancellation { get; init; }
+    public ValueList<Cancellation8Choice_> Cancellation { get; init; } = [];
 
     /// <summary>
     /// Identifies the market practice to which the message conforms.

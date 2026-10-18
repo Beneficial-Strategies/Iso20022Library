@@ -70,7 +70,7 @@ public record BankToCustomerStatementV11 : IOuterRecord
     [IsoId("_8gJpgQ5qEe2xs7BqO31w6w")]
     [DisplayName("Statement")]
     [IsoXmlTag("Stmt")]
-    public required AccountStatement12 Statement { get; init; }
+    public ValueList<AccountStatement12> Statement { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -78,5 +78,5 @@ public record BankToCustomerStatementV11 : IOuterRecord
     [IsoId("_8gJpgw5qEe2xs7BqO31w6w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

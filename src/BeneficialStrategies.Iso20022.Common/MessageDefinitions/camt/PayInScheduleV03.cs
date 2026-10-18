@@ -71,7 +71,7 @@ public record PayInScheduleV03 : IOuterRecord
     [IsoId("_KfNcvS43EeK7-OZOLIksSw")]
     [DisplayName("Pay In Schedule Long Balance")]
     [IsoXmlTag("PayInSchdlLngBal")]
-    public BalanceStatus2? PayInScheduleLongBalance { get; init; }
+    public ValueList<BalanceStatus2> PayInScheduleLongBalance { get; init; } = [];
 
     /// <summary>
     /// Currency and total amount to be paid in by the corresponding deadline.
@@ -79,7 +79,7 @@ public record PayInScheduleV03 : IOuterRecord
     [IsoId("_KfNcwS43EeK7-OZOLIksSw")]
     [DisplayName("Pay In Schedule Item")]
     [IsoXmlTag("PayInSchdlItm")]
-    public PayInScheduleItems1? PayInScheduleItem { get; init; }
+    public ValueList<PayInScheduleItems1> PayInScheduleItem { get; init; } = [];
 
     /// <summary>
     /// Factors used in the calculation of the pay-in schedule.
@@ -95,5 +95,5 @@ public record PayInScheduleV03 : IOuterRecord
     [IsoId("_DTaJUS53EeKwTrPDLMbLxA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

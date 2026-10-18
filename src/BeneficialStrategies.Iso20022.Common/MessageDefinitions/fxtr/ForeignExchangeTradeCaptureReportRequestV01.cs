@@ -129,7 +129,7 @@ public record ForeignExchangeTradeCaptureReportRequestV01 : IOuterRecord
     [IsoId("_a2e2MKHhEeS69KkQis5bYg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 
     /// <summary>
     /// Largest number of request result.

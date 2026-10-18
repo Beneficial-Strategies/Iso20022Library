@@ -67,5 +67,5 @@ public record IdentificationVerificationRequestV01 : IOuterRecord
     [IsoId("_sRylWmtdEeCY4-KZ9JEyUQ_731202779")]
     [DisplayName("Verification")]
     [IsoXmlTag("Vrfctn")]
-    public required IdentificationVerification1 Verification { get; init; }
+    public ValueList<IdentificationVerification1> Verification { get; init; } = [];
 }

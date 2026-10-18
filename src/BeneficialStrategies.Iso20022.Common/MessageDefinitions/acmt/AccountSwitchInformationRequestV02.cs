@@ -87,7 +87,7 @@ public record AccountSwitchInformationRequestV02 : IOuterRecord
     [IsoId("_7HK1l242EeiU9cctagi5ow")]
     [DisplayName("Balance Transfer")]
     [IsoXmlTag("BalTrf")]
-    public BalanceTransfer2? BalanceTransfer { get; init; }
+    public ValueList<BalanceTransfer2> BalanceTransfer { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -95,5 +95,5 @@ public record AccountSwitchInformationRequestV02 : IOuterRecord
     [IsoId("_7HK1mW42EeiU9cctagi5ow")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

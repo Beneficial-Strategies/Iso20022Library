@@ -65,7 +65,7 @@ public record PartyRegistrationAndGuaranteeAcknowledgementV01 : IOuterRecord
     [IsoId("_OTgzNDkz-AOSNFX-8224507")]
     [DisplayName("Acknowledgement List")]
     [IsoXmlTag("AckList")]
-    public required FinancingAgreementList1 AcknowledgementList { get; init; }
+    public ValueList<FinancingAgreementList1> AcknowledgementList { get; init; } = [];
 
     /// <summary>
     /// Number of acknowledgement lists as control value.
@@ -100,5 +100,5 @@ public record PartyRegistrationAndGuaranteeAcknowledgementV01 : IOuterRecord
     [IsoId("_OTgzNDk3-AOSNFX-8224507")]
     [DisplayName("Attached Message")]
     [IsoXmlTag("AttchdMsg")]
-    public EncapsulatedBusinessMessage1? AttachedMessage { get; init; }
+    public ValueList<EncapsulatedBusinessMessage1> AttachedMessage { get; init; } = [];
 }

@@ -85,14 +85,18 @@ public record MeetingResultDisseminationV09 : IOuterRecord
     /// </summary>
     [DisplayName("Security")]
     [IsoXmlTag("Scty")]
-    public required SecurityPosition19 Security { get; init; }
+    [MinLength(1)]
+    [MaxLength(200)]
+    public ValueList<SecurityPosition19> Security { get; init; } = [];
 
     /// <summary>
     /// Vote Result.
     /// </summary>
     [DisplayName("Vote Result")]
     [IsoXmlTag("VoteRslt")]
-    public required Vote20 VoteResult { get; init; }
+    [MinLength(1)]
+    [MaxLength(1000)]
+    public ValueList<Vote20> VoteResult { get; init; } = [];
 
     /// <summary>
     /// Participation.

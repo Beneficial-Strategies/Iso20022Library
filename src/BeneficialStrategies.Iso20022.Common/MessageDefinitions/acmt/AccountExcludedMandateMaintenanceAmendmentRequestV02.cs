@@ -113,7 +113,7 @@ public record AccountExcludedMandateMaintenanceAmendmentRequestV02 : IOuterRecor
     [IsoId("_UlU6Ow1TEeKGXqvMN6jpiw")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
-    public PartyAndSignature2? DigitalSignature { get; init; }
+    public ValueList<PartyAndSignature2> DigitalSignature { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -121,5 +121,5 @@ public record AccountExcludedMandateMaintenanceAmendmentRequestV02 : IOuterRecor
     [IsoId("_mZD44A4AEeKGXqvMN6jpiw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

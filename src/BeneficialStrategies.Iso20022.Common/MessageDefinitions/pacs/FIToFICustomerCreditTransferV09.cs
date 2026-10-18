@@ -72,7 +72,7 @@ public record FIToFICustomerCreditTransferV09 : IOuterRecord
     [IsoId("_LwCCC8P_Eemsic1bQcEtLA")]
     [DisplayName("Credit Transfer Transaction Information")]
     [IsoXmlTag("CdtTrfTxInf")]
-    public required CreditTransferTransaction43 CreditTransferTransactionInformation { get; init; }
+    public ValueList<CreditTransferTransaction43> CreditTransferTransactionInformation { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -80,5 +80,5 @@ public record FIToFICustomerCreditTransferV09 : IOuterRecord
     [IsoId("_LwCCDcP_Eemsic1bQcEtLA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

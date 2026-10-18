@@ -90,5 +90,5 @@ public record ModifyMemberV04 : IOuterRecord
     [IsoId("_jwlb0RbvEeiyVv5j1vf1VQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

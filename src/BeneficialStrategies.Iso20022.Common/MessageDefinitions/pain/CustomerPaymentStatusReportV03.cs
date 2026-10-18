@@ -77,5 +77,5 @@ public record CustomerPaymentStatusReportV03 : IOuterRecord
     [IsoId("_GXeWa9EvEd-BzquC8wXy7w_-667525122")]
     [DisplayName("Original Payment Information And Status")]
     [IsoXmlTag("OrgnlPmtInfAndSts")]
-    public OriginalPaymentInformation1? OriginalPaymentInformationAndStatus { get; init; }
+    public ValueList<OriginalPaymentInformation1> OriginalPaymentInformationAndStatus { get; init; } = [];
 }

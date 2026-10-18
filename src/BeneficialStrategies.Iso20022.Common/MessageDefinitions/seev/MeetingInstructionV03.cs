@@ -92,5 +92,5 @@ public record MeetingInstructionV03 : IOuterRecord
     [IsoId("_Tqz_R9EwEd-BzquC8wXy7w_-879456271")]
     [DisplayName("Instruction")]
     [IsoXmlTag("Instr")]
-    public required Instruction2 Instruction { get; init; }
+    public ValueList<Instruction2> Instruction { get; init; } = [];
 }

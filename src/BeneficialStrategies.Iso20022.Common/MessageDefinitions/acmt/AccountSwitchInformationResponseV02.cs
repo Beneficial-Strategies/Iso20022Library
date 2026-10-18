@@ -87,7 +87,7 @@ public record AccountSwitchInformationResponseV02 : IOuterRecord
     [IsoId("_7HK1pW42EeiU9cctagi5ow")]
     [DisplayName("Payment Instruction")]
     [IsoXmlTag("PmtInstr")]
-    public PaymentInstruction28? PaymentInstruction { get; init; }
+    public ValueList<PaymentInstruction28> PaymentInstruction { get; init; } = [];
 
     /// <summary>
     /// Details of a direct debit instruction associated with the old account.
@@ -95,7 +95,7 @@ public record AccountSwitchInformationResponseV02 : IOuterRecord
     [IsoId("_7HK1p242EeiU9cctagi5ow")]
     [DisplayName("Direct Debit Instruction")]
     [IsoXmlTag("DrctDbtInstr")]
-    public DirectDebitInstructionDetails2? DirectDebitInstruction { get; init; }
+    public ValueList<DirectDebitInstructionDetails2> DirectDebitInstruction { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -103,5 +103,5 @@ public record AccountSwitchInformationResponseV02 : IOuterRecord
     [IsoId("_7HK1qW42EeiU9cctagi5ow")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

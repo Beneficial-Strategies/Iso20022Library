@@ -64,7 +64,7 @@ public record ForeignExchangeTradeBulkStatusNotificationV03 : IOuterRecord
     [IsoId("_1RUgVTJ5EeOd1OidA-8_VQ")]
     [DisplayName("Trade Data")]
     [IsoXmlTag("TradData")]
-    public required TradeData11 TradeData { get; init; }
+    public ValueList<TradeData11> TradeData { get; init; } = [];
 
     /// <summary>
     /// Page number of the message (within the status report) and continuation indicator to indicate that the statement is to continue or that the message is the last page of the report.
@@ -80,5 +80,5 @@ public record ForeignExchangeTradeBulkStatusNotificationV03 : IOuterRecord
     [IsoId("_1RUgWTJ5EeOd1OidA-8_VQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

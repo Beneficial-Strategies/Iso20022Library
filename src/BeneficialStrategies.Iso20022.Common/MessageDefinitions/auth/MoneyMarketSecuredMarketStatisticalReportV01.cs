@@ -71,5 +71,5 @@ public record MoneyMarketSecuredMarketStatisticalReportV01 : IOuterRecord
     [IsoId("_OgdYx6idEeWHO_l3hf2rlA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

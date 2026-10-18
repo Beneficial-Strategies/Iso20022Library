@@ -55,7 +55,7 @@ public record CCPMemberRequirementsReportV01 : IOuterRecord
     [IsoId("_daMXSeUUEem3X-64-NKdqg")]
     [DisplayName("Intra Day Requirement Amount")]
     [IsoXmlTag("IntraDayRqrmntAmt")]
-    public required IntraDayRequirement1 IntraDayRequirementAmount { get; init; }
+    public ValueList<IntraDayRequirement1> IntraDayRequirementAmount { get; init; } = [];
 
     /// <summary>
     /// Describes an instance of an intraday margin call being made against a margin account.
@@ -63,7 +63,7 @@ public record CCPMemberRequirementsReportV01 : IOuterRecord
     [IsoId("_daMXS-UUEem3X-64-NKdqg")]
     [DisplayName("Intra Day Margin Call")]
     [IsoXmlTag("IntraDayMrgnCall")]
-    public IntraDayMarginCall1? IntraDayMarginCall { get; init; }
+    public ValueList<IntraDayMarginCall1> IntraDayMarginCall { get; init; } = [];
 
     /// <summary>
     /// Obligations of a clearing member with respect to a central counterparty that are calculated based on end of day positions.
@@ -71,7 +71,7 @@ public record CCPMemberRequirementsReportV01 : IOuterRecord
     [IsoId("_daMXTeUUEem3X-64-NKdqg")]
     [DisplayName("End Of Day Requirement")]
     [IsoXmlTag("EndOfDayRqrmnt")]
-    public required EndOfDayRequirement2 EndOfDayRequirement { get; init; }
+    public ValueList<EndOfDayRequirement2> EndOfDayRequirement { get; init; } = [];
 
     /// <summary>
     /// Requirement for a clearing member to post collateral at a central counterparty with respect to a default fund.
@@ -79,7 +79,7 @@ public record CCPMemberRequirementsReportV01 : IOuterRecord
     [IsoId("_daMXT-UUEem3X-64-NKdqg")]
     [DisplayName("Default Fund Requirement")]
     [IsoXmlTag("DfltFndRqrmnt")]
-    public required DefaultFundRequirement1 DefaultFundRequirement { get; init; }
+    public ValueList<DefaultFundRequirement1> DefaultFundRequirement { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -87,5 +87,5 @@ public record CCPMemberRequirementsReportV01 : IOuterRecord
     [IsoId("_daMXUeUUEem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -55,7 +55,7 @@ public record CCPMemberObligationsReportV01 : IOuterRecord
     [IsoId("_YdmheeUUEem3X-64-NKdqg")]
     [DisplayName("Settlement Account")]
     [IsoXmlTag("SttlmAcct")]
-    public required SettlementAccount1 SettlementAccount { get; init; }
+    public ValueList<SettlementAccount1> SettlementAccount { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -63,5 +63,5 @@ public record CCPMemberObligationsReportV01 : IOuterRecord
     [IsoId("_Ydmhe-UUEem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

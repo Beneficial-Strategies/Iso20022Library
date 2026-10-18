@@ -73,5 +73,5 @@ public record FIToFICustomerCreditTransferV01 : IOuterRecord
     [IsoId("_ehb1ctEuEd-BzquC8wXy7w_-1296415574")]
     [DisplayName("Credit Transfer Transaction Information")]
     [IsoXmlTag("CdtTrfTxInf")]
-    public required CreditTransferTransactionInformation2 CreditTransferTransactionInformation { get; init; }
+    public ValueList<CreditTransferTransactionInformation2> CreditTransferTransactionInformation { get; init; } = [];
 }

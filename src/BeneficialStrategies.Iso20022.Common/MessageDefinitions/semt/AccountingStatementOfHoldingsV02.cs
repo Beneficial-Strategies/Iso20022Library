@@ -73,7 +73,7 @@ public record AccountingStatementOfHoldingsV02 : IOuterRecord
     [IsoId("_MbQI2tFSEd-BzquC8wXy7w_1168130789")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
-    public AdditionalReference2? PreviousReference { get; init; }
+    public ValueList<AdditionalReference2> PreviousReference { get; init; } = [];
 
     /// <summary>
     /// Reference to a linked message that was previously received.
@@ -81,7 +81,7 @@ public record AccountingStatementOfHoldingsV02 : IOuterRecord
     [IsoId("_MbQI29FSEd-BzquC8wXy7w_1168130832")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
-    public AdditionalReference2? RelatedReference { get; init; }
+    public ValueList<AdditionalReference2> RelatedReference { get; init; } = [];
 
     /// <summary>
     /// Pagination of the message.
@@ -113,7 +113,7 @@ public record AccountingStatementOfHoldingsV02 : IOuterRecord
     [IsoId("_MbZSwtFSEd-BzquC8wXy7w_1168131109")]
     [DisplayName("Balance For Account")]
     [IsoXmlTag("BalForAcct")]
-    public AggregateBalanceInformation3? BalanceForAccount { get; init; }
+    public ValueList<AggregateBalanceInformation3> BalanceForAccount { get; init; } = [];
 
     /// <summary>
     /// The sub-account of the safekeeping or investment account.
@@ -121,7 +121,7 @@ public record AccountingStatementOfHoldingsV02 : IOuterRecord
     [IsoId("_MbZSw9FSEd-BzquC8wXy7w_1168131144")]
     [DisplayName("Sub Account Details")]
     [IsoXmlTag("SubAcctDtls")]
-    public SubAccountIdentification3? SubAccountDetails { get; init; }
+    public ValueList<SubAccountIdentification3> SubAccountDetails { get; init; } = [];
 
     /// <summary>
     /// Value of total holdings reported.
@@ -137,5 +137,5 @@ public record AccountingStatementOfHoldingsV02 : IOuterRecord
     [IsoId("_MbZSxdFSEd-BzquC8wXy7w_1168131264")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

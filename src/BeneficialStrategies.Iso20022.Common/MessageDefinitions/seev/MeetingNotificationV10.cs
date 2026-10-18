@@ -83,7 +83,7 @@ public record MeetingNotificationV10 : IOuterRecord
     [IsoId("_nIzH1zQ7Ee22Z83HpR5E8w")]
     [DisplayName("Events Linkage")]
     [IsoXmlTag("EvtsLkg")]
-    public MeetingEventReference1? EventsLinkage { get; init; }
+    public ValueList<MeetingEventReference1> EventsLinkage { get; init; } = [];
 
     /// <summary>
     /// Information about the meeting like meeting identifications, various deadlines, contact persons, electronic and postal locations for accessing information and proxy assignment parameters.
@@ -171,5 +171,5 @@ public record MeetingNotificationV10 : IOuterRecord
     [IsoId("_nIzH6zQ7Ee22Z83HpR5E8w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

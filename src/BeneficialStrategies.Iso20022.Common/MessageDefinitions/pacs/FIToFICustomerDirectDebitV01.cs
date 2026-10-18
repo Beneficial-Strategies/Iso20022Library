@@ -71,5 +71,5 @@ public record FIToFICustomerDirectDebitV01 : IOuterRecord
     [IsoId("_ejOlMdEuEd-BzquC8wXy7w_-847540007")]
     [DisplayName("Direct Debit Transaction Information")]
     [IsoXmlTag("DrctDbtTxInf")]
-    public required DirectDebitTransactionInformation2 DirectDebitTransactionInformation { get; init; }
+    public ValueList<DirectDebitTransactionInformation2> DirectDebitTransactionInformation { get; init; } = [];
 }

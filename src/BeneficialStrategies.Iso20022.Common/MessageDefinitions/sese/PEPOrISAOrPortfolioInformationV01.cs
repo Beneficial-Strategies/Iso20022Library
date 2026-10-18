@@ -106,7 +106,7 @@ public record PEPOrISAOrPortfolioInformationV01 : IOuterRecord
     [IsoId("_jbJ8cdE5Ed-BzquC8wXy7w_-763765015")]
     [DisplayName("Other Individual Investor")]
     [IsoXmlTag("OthrIndvInvstr")]
-    public IndividualPerson8? OtherIndividualInvestor { get; init; }
+    public ValueList<IndividualPerson8> OtherIndividualInvestor { get; init; } = [];
 
     /// <summary>
     /// Information identifying the primary corporate investor, eg, name and address.
@@ -130,7 +130,7 @@ public record PEPOrISAOrPortfolioInformationV01 : IOuterRecord
     [IsoId("_jbJ8dNE5Ed-BzquC8wXy7w_-9246374")]
     [DisplayName("Other Corporate Investor")]
     [IsoXmlTag("OthrCorpInvstr")]
-    public Organisation4? OtherCorporateInvestor { get; init; }
+    public ValueList<Organisation4> OtherCorporateInvestor { get; init; } = [];
 
     /// <summary>
     /// Identification of an account owned by the investor at the old plan manager (account servicer).
@@ -162,7 +162,7 @@ public record PEPOrISAOrPortfolioInformationV01 : IOuterRecord
     [IsoId("_jbTGYdE5Ed-BzquC8wXy7w_-153289612")]
     [DisplayName("Product Transfer")]
     [IsoXmlTag("PdctTrf")]
-    public required PEPISATransfer6 ProductTransfer { get; init; }
+    public ValueList<PEPISATransfer6> ProductTransfer { get; init; } = [];
 
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -170,5 +170,5 @@ public record PEPOrISAOrPortfolioInformationV01 : IOuterRecord
     [IsoId("_jbTGYtE5Ed-BzquC8wXy7w_1484084715")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

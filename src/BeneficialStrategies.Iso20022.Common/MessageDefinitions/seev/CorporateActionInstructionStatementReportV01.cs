@@ -85,7 +85,7 @@ public record CorporateActionInstructionStatementReportV01 : IOuterRecord
     [IsoId("_TW16ZtEwEd-BzquC8wXy7w_-1280073177")]
     [DisplayName("Account And Statement Details")]
     [IsoXmlTag("AcctAndStmtDtls")]
-    public required AccountIdentification6 AccountAndStatementDetails { get; init; }
+    public ValueList<AccountIdentification6> AccountAndStatementDetails { get; init; } = [];
 
     /// <summary>
     /// Party that originated the message, if other than the sender.
@@ -109,5 +109,5 @@ public record CorporateActionInstructionStatementReportV01 : IOuterRecord
     [IsoId("_TW_EUNEwEd-BzquC8wXy7w_-884634108")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension2? Extension { get; init; }
+    public ValueList<Extension2> Extension { get; init; } = [];
 }

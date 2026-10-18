@@ -105,7 +105,7 @@ public record IntraPositionMovementPostingReportV01 : IOuterRecord
     [IsoId("_MfkoKNFSEd-BzquC8wXy7w_1481544869")]
     [DisplayName("Financial Instrument")]
     [IsoXmlTag("FinInstrm")]
-    public FinancialInstrumentDetails1? FinancialInstrument { get; init; }
+    public ValueList<FinancialInstrumentDetails1> FinancialInstrument { get; init; } = [];
 
     /// <summary>
     /// Party that originated the message, if other than the sender.

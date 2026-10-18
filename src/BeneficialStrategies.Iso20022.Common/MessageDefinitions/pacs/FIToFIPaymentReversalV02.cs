@@ -77,5 +77,5 @@ public record FIToFIPaymentReversalV02 : IOuterRecord
     [IsoId("_eldZ3NEuEd-BzquC8wXy7w_1408458283")]
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
-    public PaymentTransactionInformation29? TransactionInformation { get; init; }
+    public ValueList<PaymentTransactionInformation29> TransactionInformation { get; init; } = [];
 }

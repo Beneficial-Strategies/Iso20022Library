@@ -155,5 +155,5 @@ public record ForeignExchangeTradeCaptureReportV01 : IOuterRecord
     [IsoId("_IoQyQKHhEeS69KkQis5bYg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -85,5 +85,5 @@ public record ProprietaryFormatInvestigationV03 : IOuterRecord
     [IsoId("_sXJLQ1kyEeGeoaLUQk__nA_1922221803")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

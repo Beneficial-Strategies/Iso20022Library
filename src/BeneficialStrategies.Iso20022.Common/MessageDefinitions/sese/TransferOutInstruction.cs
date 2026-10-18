@@ -115,5 +115,5 @@ public record TransferOutInstruction : IOuterRecord
     [IsoId("_K2XiktE6Ed-BzquC8wXy7w_-406991476")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; }
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

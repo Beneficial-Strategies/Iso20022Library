@@ -66,7 +66,7 @@ public record AccountReportingRequestV03 : IOuterRecord
     [IsoId("_sNm0wVkyEeGeoaLUQk__nA_-471051475")]
     [DisplayName("Reporting Request")]
     [IsoXmlTag("RptgReq")]
-    public required ReportingRequest3 ReportingRequest { get; init; }
+    public ValueList<ReportingRequest3> ReportingRequest { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -74,5 +74,5 @@ public record AccountReportingRequestV03 : IOuterRecord
     [IsoId("_sNwlwFkyEeGeoaLUQk__nA_1992302117")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

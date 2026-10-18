@@ -99,7 +99,7 @@ public record AccountOpeningAmendmentRequestV01 : IOuterRecord
     [IsoId("_tXHSctE9Ed-BzquC8wXy7w_-1565255885")]
     [DisplayName("Organisation")]
     [IsoXmlTag("Org")]
-    public required Organisation6 Organisation { get; init; }
+    public ValueList<Organisation6> Organisation { get; init; } = [];
 
     /// <summary>
     /// Information specifying the account mandate.
@@ -107,7 +107,7 @@ public record AccountOpeningAmendmentRequestV01 : IOuterRecord
     [IsoId("_tXHSc9E9Ed-BzquC8wXy7w_961816593")]
     [DisplayName("Mandate")]
     [IsoXmlTag("Mndt")]
-    public OperationMandate1? Mandate { get; init; }
+    public ValueList<OperationMandate1> Mandate { get; init; } = [];
 
     /// <summary>
     /// Unique and unambiguous identification of the account used as a reference for the opening of another account.
@@ -123,5 +123,5 @@ public record AccountOpeningAmendmentRequestV01 : IOuterRecord
     [IsoId("_tXHSddE9Ed-BzquC8wXy7w_1417761134")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
-    public PartyAndSignature1? DigitalSignature { get; init; }
+    public ValueList<PartyAndSignature1> DigitalSignature { get; init; } = [];
 }

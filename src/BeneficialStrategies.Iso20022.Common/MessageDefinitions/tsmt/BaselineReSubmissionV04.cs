@@ -95,7 +95,7 @@ public record BaselineReSubmissionV04 : IOuterRecord
     [IsoId("_4PDNC9NTEeK-v49t1oWkNA")]
     [DisplayName("Buyer Contact Person")]
     [IsoXmlTag("BuyrCtctPrsn")]
-    public ContactIdentification1? BuyerContactPerson { get; init; }
+    public ValueList<ContactIdentification1> BuyerContactPerson { get; init; } = [];
 
     /// <summary>
     /// Person to be contacted in the organisation of the seller.
@@ -103,7 +103,7 @@ public record BaselineReSubmissionV04 : IOuterRecord
     [IsoId("_4PDNDdNTEeK-v49t1oWkNA")]
     [DisplayName("Seller Contact Person")]
     [IsoXmlTag("SellrCtctPrsn")]
-    public ContactIdentification1? SellerContactPerson { get; init; }
+    public ValueList<ContactIdentification1> SellerContactPerson { get; init; } = [];
 
     /// <summary>
     /// Person to be contacted in the seller&apos;s bank or buyer&apos;s bank.
@@ -119,5 +119,5 @@ public record BaselineReSubmissionV04 : IOuterRecord
     [IsoId("_4PDNE9NTEeK-v49t1oWkNA")]
     [DisplayName("Other Bank Contact Person")]
     [IsoXmlTag("OthrBkCtctPrsn")]
-    public ContactIdentification3? OtherBankContactPerson { get; init; }
+    public ValueList<ContactIdentification3> OtherBankContactPerson { get; init; } = [];
 }

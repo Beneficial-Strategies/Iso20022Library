@@ -87,7 +87,7 @@ public record CCPIncomeStatementAndCapitalAdequacyReportV01 : IOuterRecord
     [IsoId("_DzbYgeUUEem3X-64-NKdqg")]
     [DisplayName("Hypothetical Capital Measure")]
     [IsoXmlTag("HpthtclCptlMeasr")]
-    public required HypotheticalCapitalMeasure1 HypotheticalCapitalMeasure { get; init; }
+    public ValueList<HypotheticalCapitalMeasure1> HypotheticalCapitalMeasure { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -95,5 +95,5 @@ public record CCPIncomeStatementAndCapitalAdequacyReportV01 : IOuterRecord
     [IsoId("_DzbYg-UUEem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; }
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }
