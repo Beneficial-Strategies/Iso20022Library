@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_-SHFQTnXEeWV5sr121Fc8A")]
     [DisplayName("Sub Balance Type 12 Choice")]
-    public abstract record SubBalanceType12Choice_ { }
+    public abstract partial record SubBalanceType12Choice_ { }
 }

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeniedReason8Choice
     /// </summary>
     [IsoId("_JJ0gMVjwEeSYweXGddZAOA")]
     [DisplayName("Code")]
-    public record Code : DeniedReason8Choice_
+    public partial record Code : DeniedReason8Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

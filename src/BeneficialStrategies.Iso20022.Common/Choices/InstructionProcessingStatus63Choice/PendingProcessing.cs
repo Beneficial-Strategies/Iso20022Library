@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus63Cho
     /// <summary>Processing of the instruction is pending.</summary>
     [IsoId("_9ENHsQNrEfG_3cM8uyJ20w")]
     [DisplayName("Pending Processing")]
-    public record PendingProcessing : InstructionProcessingStatus63Choice_
+    public partial record PendingProcessing : InstructionProcessingStatus63Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("PdgPrcg")]

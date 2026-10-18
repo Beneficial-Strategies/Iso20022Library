@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XGwTIaE1Ee-MRKYsaX6JDg")]
 [DisplayName("Service Response9")]
-public record ServiceResponse9
+public partial record ServiceResponse9
 {
     /// <summary>
     /// Environment.

@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PenaltyListType1Choice
     /// <summary>Specifies the penalty list reported, in a coded format.</summary>
     [IsoId("_-p6qk9fNEeiJ1vId85LeLw")]
     [DisplayName("Code")]
-    public record Code : PenaltyListType1Choice_
+    public partial record Code : PenaltyListType1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Cd")]

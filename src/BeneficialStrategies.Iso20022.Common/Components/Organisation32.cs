@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Odd08dwtEeeKpa-yxjuKzQ")]
 [DisplayName("Organisation")]
-public record Organisation32
+public partial record Organisation32
 {
     /// <summary>
     /// Identification of the merchant.

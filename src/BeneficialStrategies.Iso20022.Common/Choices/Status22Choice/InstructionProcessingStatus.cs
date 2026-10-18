@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status22Choice
     /// </summary>
     [IsoId("_8QboL5NLEeWGlc8L7oPDIg")]
     [DisplayName("Instruction Processing Status")]
-    public record InstructionProcessingStatus : Status22Choice_
+    public partial record InstructionProcessingStatus : Status22Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("InstrPrcgSts")]

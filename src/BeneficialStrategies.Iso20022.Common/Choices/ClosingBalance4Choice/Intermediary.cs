@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClosingBalance4Choice
     /// </summary>
     [IsoId("_Q8Um2TnGEeWV5sr121Fc8A")]
     [DisplayName("Intermediary")]
-    public record Intermediary : ClosingBalance4Choice_
+    public partial record Intermediary : ClosingBalance4Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Intrmy")]

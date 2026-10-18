@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(AcknowledgedAcceptedStatus34Choice.Reason), nameof(AcknowledgedAcceptedStatus34Choice.Reason))]
     [IsoId("_XHw_IY5bEfC_4ZEXsY0Xyg")]
     [DisplayName("AcknowledgedAcceptedStatus34Choice")]
-    public abstract record AcknowledgedAcceptedStatus34Choice_ { }
+    public abstract partial record AcknowledgedAcceptedStatus34Choice_ { }
 }

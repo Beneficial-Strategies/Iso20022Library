@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionToPerform6Choice
     /// Reversal Request.
     /// </summary>
     [DisplayName("Reversal Request")]
-    public record ReversalRequest : TransactionToPerform6Choice_
+    public partial record ReversalRequest : TransactionToPerform6Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

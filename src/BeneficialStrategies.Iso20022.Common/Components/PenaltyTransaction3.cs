@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xXR-w6gzEfCXwLUUylXgrQ")]
 [DisplayName("Penalty Transaction3")]
-public record PenaltyTransaction3
+public partial record PenaltyTransaction3
 {
     /// <summary>
     /// Reference of the transaction for which penalties are provided.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jdDcsXG4Ee2TbaNWBpRZpQ")]
 [DisplayName("Action")]
-public record Action14
+public partial record Action14
 {
     /// <summary>
     /// Type of action to be performed by the POI (Point Of Interaction) system.

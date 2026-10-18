@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.casp;
 [Description(@"This message is a Administration response by the POI System.")]
 [IsoId("_82whcYYBEemxIqbaFEE8-w")]
 [DisplayName("Sale To POI Administrative Response V")]
-public record SaleToPOIAdministrativeResponseV01 : IOuterRecord
+public partial record SaleToPOIAdministrativeResponseV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

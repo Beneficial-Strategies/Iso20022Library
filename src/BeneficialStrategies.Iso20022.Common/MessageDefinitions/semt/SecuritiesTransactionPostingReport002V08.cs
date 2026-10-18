@@ -35,7 +35,7 @@ namespace BeneficialStrategies.Iso20022.semt;
 )]
 [IsoId("_gdOKM833Eee5nJBZsW8MFQ")]
 [DisplayName("Securities Transaction Posting Report 002 V")]
-public record SecuritiesTransactionPostingReport002V08 : IOuterRecord
+public partial record SecuritiesTransactionPostingReport002V08 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

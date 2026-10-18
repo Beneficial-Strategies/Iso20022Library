@@ -34,7 +34,7 @@ namespace BeneficialStrategies.Iso20022.semt;
 )]
 [IsoId("_MXrQa9FSEd-BzquC8wXy7w_1518243761")]
 [DisplayName("Statement Of Investment Fund Transactions")]
-public record StatementOfInvestmentFundTransactions : IOuterRecord
+public partial record StatementOfInvestmentFundTransactions : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

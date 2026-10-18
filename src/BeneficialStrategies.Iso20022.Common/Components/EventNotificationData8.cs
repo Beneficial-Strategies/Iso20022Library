@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_I8-wAbZeEfCUZfsQO4rYeA")]
 [DisplayName("Event Notification Data8")]
-public record EventNotificationData8
+public partial record EventNotificationData8
 {
     /// <summary>
     /// Content of the Retailer Event message.

@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_m9_jwPNBEeCuA5Tr22BnwA_-274650344")]
 [DisplayName("Portfolio Balance")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2019-03-02.")]
-public record PortfolioBalance1
+public partial record PortfolioBalance1
 {
     /// <summary>
     /// Summary balance information.

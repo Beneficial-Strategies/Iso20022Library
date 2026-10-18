@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References3Choice
     /// </summary>
     [IsoId("_USz3BNp-Ed-ak6NoX_4Aeg_-1077173030")]
     [DisplayName("Securities Transaction Posting Report Identification")]
-    public record SecuritiesTransactionPostingReportIdentification : References3Choice_
+    public partial record SecuritiesTransactionPostingReportIdentification : References3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

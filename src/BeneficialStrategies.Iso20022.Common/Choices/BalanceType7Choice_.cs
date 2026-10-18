@@ -20,5 +20,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(BalanceType7Choice.Account), nameof(BalanceType7Choice.Account))]
     [IsoId("_nAhTV_NBEeCuA5Tr22BnwA_51741931")]
     [DisplayName("Balance Type 7 Choice")]
-    public abstract record BalanceType7Choice_ { }
+    public abstract partial record BalanceType7Choice_ { }
 }

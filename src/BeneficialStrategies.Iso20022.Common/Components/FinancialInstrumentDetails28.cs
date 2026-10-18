@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_v--6saOAEeeDTpy0mhI4TQ")]
 [DisplayName("Financial Instrument Details")]
-public record FinancialInstrumentDetails28
+public partial record FinancialInstrumentDetails28
 {
     /// <summary>
     /// Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.

@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus61Cho
     /// <summary>Instruction has been generated.</summary>
     [IsoId("35559f13-aca3-4e14-a005-c4137068db20")]
     [DisplayName("Generated")]
-    public record Generated : InstructionProcessingStatus61Choice_
+    public partial record Generated : InstructionProcessingStatus61Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Gnrtd")]

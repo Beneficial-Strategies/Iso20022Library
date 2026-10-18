@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7yAJQZ9XEe-nbM0aSPcoiQ")]
 [DisplayName("Transaction Totals Set2")]
-public record TransactionTotalsSet2
+public partial record TransactionTotalsSet2
 {
     /// <summary>
     /// Payment Instrument Type.

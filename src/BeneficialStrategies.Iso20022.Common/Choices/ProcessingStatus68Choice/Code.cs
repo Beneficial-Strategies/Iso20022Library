@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus68Choice
     /// </summary>
     [IsoId("_TMjAEeFWEeWIA4E9cYSxxQ")]
     [DisplayName("Code")]
-    public record Code : ProcessingStatus68Choice_
+    public partial record Code : ProcessingStatus68Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

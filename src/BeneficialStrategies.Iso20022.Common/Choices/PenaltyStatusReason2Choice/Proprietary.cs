@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PenaltyStatusReason2Choice
     /// <summary>Penalty status reason, in a proprietary form.</summary>
     [IsoId("_vUsvEx-DEeuwwezkzufkMw")]
     [DisplayName("Proprietary")]
-    public record Proprietary : PenaltyStatusReason2Choice_
+    public partial record Proprietary : PenaltyStatusReason2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Prtry")]

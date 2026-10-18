@@ -36,7 +36,7 @@ namespace BeneficialStrategies.Iso20022.semt;
 )]
 [IsoId("_MbjDy9FSEd-BzquC8wXy7w_1753340550")]
 [DisplayName("Securities Balance Accounting Report V")]
-public record SecuritiesBalanceAccountingReportV03 : IOuterRecord
+public partial record SecuritiesBalanceAccountingReportV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient9Choice
     [IsoId("_M0YGAS8jEeu125Ip9zFcsQ")]
     [DisplayName("Issuer And Serial Number")]
     [IsoXmlTag("IssrAndSrlNb")]
-    public record IssuerAndSerialNumber : Recipient9Choice_
+    public partial record IssuerAndSerialNumber : Recipient9Choice_
     {
         /// <summary>
         /// Certificate issuer name (see X.509).

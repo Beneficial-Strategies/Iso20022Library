@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QYBcf9p-Ed-ak6NoX_4Aeg_-935871262")]
 [DisplayName("Additional Balance Information")]
-public record AdditionalBalanceInformation6
+public partial record AdditionalBalanceInformation6
 {
     /// <summary>
     /// Reason for the sub-balance.

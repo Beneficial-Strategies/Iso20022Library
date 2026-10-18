@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_pP7JweSmEe-qVZLXW4RRBw")]
 [DisplayName("Securities Cancellation2")]
-public record SecuritiesCancellation2
+public partial record SecuritiesCancellation2
 {
     /// <summary>
     /// Party that owns the account.

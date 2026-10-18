@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_YdRwN9LGEeiN28wlpBQScw")]
     [DisplayName("Pledgee Format 5 Choice")]
-    public abstract record PledgeeFormat5Choice_ { }
+    public abstract partial record PledgeeFormat5Choice_ { }
 }

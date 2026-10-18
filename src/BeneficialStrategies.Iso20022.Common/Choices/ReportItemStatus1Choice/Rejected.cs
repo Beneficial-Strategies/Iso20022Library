@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportItemStatus1Choice
     [IsoId("_08aRa73QEeO2FLWuu_JIqg")]
     [DisplayName("Rejected")]
     [IsoXmlTag("Rjctd")]
-    public record Rejected : ReportItemStatus1Choice_
+    public partial record Rejected : ReportItemStatus1Choice_
     {
         /// <summary>
         /// Reason for the exception status.

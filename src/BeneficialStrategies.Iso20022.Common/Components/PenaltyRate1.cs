@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8Ch2YDkZEem897H7zB2RJg")]
 [DisplayName("Penalty Rate1")]
-public record PenaltyRate1
+public partial record PenaltyRate1
 {
     /// <summary>
     /// Place of trade of the related transaction.

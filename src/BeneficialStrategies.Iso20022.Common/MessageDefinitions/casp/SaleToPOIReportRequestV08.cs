@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.casp;
 /// </summary>
 [IsoId("_3-MvkbXtEfCUZfsQO4rYeA")]
 [DisplayName("Sale To POI Report Request V08")]
-public record SaleToPOIReportRequestV08 : IOuterRecord
+public partial record SaleToPOIReportRequestV08 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

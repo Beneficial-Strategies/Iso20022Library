@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GIIq4ZbhEeW6aPG6p-lhQQ")]
 [DisplayName("Plain Card Data")]
-public record PlainCardData17
+public partial record PlainCardData17
 {
     /// <summary>
     /// Primary Account Number (PAN) of the card.

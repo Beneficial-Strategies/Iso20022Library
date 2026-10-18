@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status22Choice
     /// </summary>
     [IsoId("_8QboJZNLEeWGlc8L7oPDIg")]
     [DisplayName("Allocation Status")]
-    public record AllocationStatus : Status22Choice_
+    public partial record AllocationStatus : Status22Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("AllcnSts")]

@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_d7AQEXhkEeidzqjNEfehPg")]
     [DisplayName("System Event Type 4 Choice")]
-    public abstract record SystemEventType4Choice_ { }
+    public abstract partial record SystemEventType4Choice_ { }
 }

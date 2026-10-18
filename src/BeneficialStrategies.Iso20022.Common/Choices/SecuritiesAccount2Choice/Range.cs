@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAccount2Choice
     /// <summary>One or more securities accounts identified by a range.</summary>
     [IsoId("_4H1_oeGBEeWCAvUNsZ5u6g")]
     [DisplayName("Range")]
-    public record Range : SecuritiesAccount2Choice_
+    public partial record Range : SecuritiesAccount2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Rg")]

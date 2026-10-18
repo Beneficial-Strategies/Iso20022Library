@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_pv3ZIN6JEeiwsev40qZGEQ")]
 [DisplayName("Logout Request")]
-public record LogoutRequest1
+public partial record LogoutRequest1
 {
     /// <summary>
     /// Indicates that the POI terminal is able to go(or have to go) to maintenance.

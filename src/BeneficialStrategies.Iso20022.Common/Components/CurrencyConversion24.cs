@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_y6QXsVE4EeyApZmLzm74zA")]
 [DisplayName("Currency Conversion")]
-public record CurrencyConversion24
+public partial record CurrencyConversion24
 {
     /// <summary>
     /// True if the cardholder has accepted the currency conversion that the acquirer has proposed.

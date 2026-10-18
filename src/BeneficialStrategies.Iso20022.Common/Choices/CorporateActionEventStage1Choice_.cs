@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Qsl-QNp-Ed-ak6NoX_4Aeg_526490390")]
     [DisplayName("Corporate Action Event Stage 1 Choice")]
-    public abstract record CorporateActionEventStage1Choice_ { }
+    public abstract partial record CorporateActionEventStage1Choice_ { }
 }

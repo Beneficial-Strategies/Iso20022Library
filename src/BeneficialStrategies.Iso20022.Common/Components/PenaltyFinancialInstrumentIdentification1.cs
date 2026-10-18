@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5-_1MDkVEem897H7zB2RJg")]
 [DisplayName("Penalty Financial Instrument Identification1")]
-public record PenaltyFinancialInstrumentIdentification1
+public partial record PenaltyFinancialInstrumentIdentification1
 {
     /// <summary>
     /// Identification of the financial instrument.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SKL8y83yEee5nJBZsW8MFQ")]
 [DisplayName("Intra Position Details")]
-public record IntraPositionDetails47
+public partial record IntraPositionDetails47
 {
     /// <summary>
     /// Quantity of financial instrument effectively settled.

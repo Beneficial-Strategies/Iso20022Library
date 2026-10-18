@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3Q3kMS_FEeugIJ3Gvoevmg")]
 [DisplayName("Device Secure Input Request")]
-public record DeviceSecureInputRequest3
+public partial record DeviceSecureInputRequest3
 {
     /// <summary>
     /// Type of PIN Service.

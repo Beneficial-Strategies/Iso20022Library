@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_m_eQEdgxEeipBO1pkKK6zg")]
 [DisplayName("Debtor")]
-public record Debtor4
+public partial record Debtor4
 {
     /// <summary>
     /// Party that owes an amount of money to the (ultimate) creditor. In the context of the payment model, the debtor is also the debit account owner.

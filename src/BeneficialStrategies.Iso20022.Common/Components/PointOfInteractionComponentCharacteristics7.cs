@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S6Jm4S8iEeu125Ip9zFcsQ")]
 [DisplayName("Point Of Interaction Component Characteristics")]
-public record PointOfInteractionComponentCharacteristics7
+public partial record PointOfInteractionComponentCharacteristics7
 {
     /// <summary>
     /// Memory characteristics of the component.

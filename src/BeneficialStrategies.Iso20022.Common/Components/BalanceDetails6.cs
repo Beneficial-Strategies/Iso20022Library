@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_m91ywPNBEeCuA5Tr22BnwA_934037418")]
 [DisplayName("Balance Details")]
-public record BalanceDetails6
+public partial record BalanceDetails6
 {
     /// <summary>
     /// Category of the financial asset balance type.

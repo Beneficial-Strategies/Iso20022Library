@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HScVsU4AEey_VecAUE-C9Q")]
 [DisplayName("Stored Value Data")]
-public record StoredValueData5
+public partial record StoredValueData5
 {
     /// <summary>
     /// Identification of the provider of the stored value account load/reload.

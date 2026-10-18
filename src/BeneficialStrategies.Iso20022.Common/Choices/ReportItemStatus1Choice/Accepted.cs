@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportItemStatus1Choice
     /// </summary>
     [IsoId("_08aRY73QEeO2FLWuu_JIqg")]
     [DisplayName("Accepted")]
-    public record Accepted : ReportItemStatus1Choice_
+    public partial record Accepted : ReportItemStatus1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

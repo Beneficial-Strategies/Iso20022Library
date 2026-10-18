@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient10Choice
     [IsoId("_Wyk0gS8jEeu125Ip9zFcsQ")]
     [DisplayName("Key Transport")]
     [IsoXmlTag("KeyTrnsprt")]
-    public record KeyTransport : Recipient10Choice_
+    public partial record KeyTransport : Recipient10Choice_
     {
         /// <summary>
         /// Version of the data structure.

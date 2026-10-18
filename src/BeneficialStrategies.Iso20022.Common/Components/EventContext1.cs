@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tONqIN6bEeiwsev40qZGEQ")]
 [DisplayName("Event Context")]
-public record EventContext1
+public partial record EventContext1
 {
     /// <summary>
     /// Reference to the service and functions related to the event.

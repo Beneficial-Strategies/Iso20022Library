@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_czz68TeREeWm5uvLSn0jEw")]
     [DisplayName("Statement Basis 7 Choice")]
-    public abstract record StatementBasis7Choice_ { }
+    public abstract partial record StatementBasis7Choice_ { }
 }

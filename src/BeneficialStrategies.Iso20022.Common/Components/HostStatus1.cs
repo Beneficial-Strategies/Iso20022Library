@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_N2O4cN6MEeiwsev40qZGEQ")]
 [DisplayName("Host Status")]
-public record HostStatus1
+public partial record HostStatus1
 {
     /// <summary>
     /// Identification of the Acquirer.

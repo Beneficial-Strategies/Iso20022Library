@@ -36,5 +36,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_ifpDQf4wEeClUvPNHKL9Zw")]
     [DisplayName("Intra Position Processing Status 3 Choice")]
-    public abstract record IntraPositionProcessingStatus3Choice_ { }
+    public abstract partial record IntraPositionProcessingStatus3Choice_ { }
 }

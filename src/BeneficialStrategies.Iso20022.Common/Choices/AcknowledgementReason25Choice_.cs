@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(AcknowledgementReason25Choice.Proprietary), nameof(AcknowledgementReason25Choice.Proprietary))]
     [IsoId("_XLTbXo5bEfC_4ZEXsY0Xyg")]
     [DisplayName("AcknowledgementReason25Choice")]
-    public abstract record AcknowledgementReason25Choice_ { }
+    public abstract partial record AcknowledgementReason25Choice_ { }
 }

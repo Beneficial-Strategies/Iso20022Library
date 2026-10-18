@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6tYQ8ZQxEe6HYLAajyhWIQ")]
 [DisplayName("Loyalty Request6")]
-public record LoyaltyRequest6
+public partial record LoyaltyRequest6
 {
     /// <summary>
     /// Customer Order.

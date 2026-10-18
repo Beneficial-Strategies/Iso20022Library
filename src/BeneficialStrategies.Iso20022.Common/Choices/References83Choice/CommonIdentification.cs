@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References83Choice
     /// <summary>Specifies the common identification.</summary>
     [IsoId("_Wt0M4KgzEfCXwLUUylXgrQ")]
     [DisplayName("Common Identification")]
-    public record CommonIdentification : References83Choice_
+    public partial record CommonIdentification : References83Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("CmonId")]

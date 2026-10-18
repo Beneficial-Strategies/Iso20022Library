@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FailingStatus11Choice
     [IsoId("_5SGOuZNLEeWGlc8L7oPDIg")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : FailingStatus11Choice_
+    public partial record Reason : FailingStatus11Choice_
     {
         /// <summary>
         /// Specifies the reason why the instruction has a failing status.

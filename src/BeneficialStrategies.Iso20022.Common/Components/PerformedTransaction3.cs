@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XOFb4S8PEeu125Ip9zFcsQ")]
 [DisplayName("Performed Transaction")]
-public record PerformedTransaction3
+public partial record PerformedTransaction3
 {
     /// <summary>
     /// Response for this performed transaction.

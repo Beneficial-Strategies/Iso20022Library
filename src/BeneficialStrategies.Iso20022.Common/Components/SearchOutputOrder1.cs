@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_s9PP4N6QEeiwsev40qZGEQ")]
 [DisplayName("Search Output Order")]
-public record SearchOutputOrder1
+public partial record SearchOutputOrder1
 {
     /// <summary>
     /// Ordering criteria for the transaction report.

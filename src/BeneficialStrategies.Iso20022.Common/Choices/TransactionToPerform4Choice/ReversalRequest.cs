@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionToPerform4Choice
     [IsoId("_8yJLRU31Eey_VecAUE-C9Q")]
     [DisplayName("Reversal Request")]
     [IsoXmlTag("RvslReq")]
-    public record ReversalRequest : TransactionToPerform4Choice_
+    public partial record ReversalRequest : TransactionToPerform4Choice_
     {
         /// <summary>
         /// Transaction to reverse.

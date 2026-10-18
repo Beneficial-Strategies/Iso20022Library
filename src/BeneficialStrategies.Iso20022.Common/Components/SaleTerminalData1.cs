@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PfggMN6IEeiwsev40qZGEQ")]
 [DisplayName("Sale Terminal Data")]
-public record SaleTerminalData1
+public partial record SaleTerminalData1
 {
     /// <summary>
     /// Human attendance at the POI location during the transaction.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_u5lkhYjkEeONZKAAW4pOaQ")]
 [DisplayName("Sub Balance Breakdown")]
-public record SubBalanceBreakdown1
+public partial record SubBalanceBreakdown1
 {
     /// <summary>
     /// Reason for the sub-balance.

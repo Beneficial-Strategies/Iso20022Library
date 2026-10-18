@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PriceRateOrAmount4Choice.Amount))]
     [JsonDerivedType(typeof(PriceRateOrAmount4Choice.Rate))]
     [JsonDerivedType(typeof(PriceRateOrAmount4Choice.Amount))]
-    public abstract record PriceRateOrAmount4Choice_
+    public abstract partial record PriceRateOrAmount4Choice_
     {
     }
 }

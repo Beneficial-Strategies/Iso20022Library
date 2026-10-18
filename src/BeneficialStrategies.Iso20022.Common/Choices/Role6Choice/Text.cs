@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Role6Choice
     /// </summary>
     [IsoId("_exy39Tm9EeWV5sr121Fc8A")]
     [DisplayName("Text")]
-    public record Text : Role6Choice_
+    public partial record Text : Role6Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

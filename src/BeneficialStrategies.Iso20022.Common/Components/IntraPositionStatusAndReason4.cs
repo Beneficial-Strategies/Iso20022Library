@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VxnB0eSkEe-qVZLXW4RRBw")]
 [DisplayName("Intra Position Status And Reason4")]
-public record IntraPositionStatusAndReason4
+public partial record IntraPositionStatusAndReason4
 {
     /// <summary>
     /// Provides details on the processing status of the transaction.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mKkka_7xEeCvPoRGOxRobQ")]
 [DisplayName("Intra Position Movement Details")]
-public record IntraPositionMovementDetails7
+public partial record IntraPositionMovementDetails7
 {
     /// <summary>
     /// Identifications (account owner and/or account servicer) of the intra-position movement.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JqiHUQ04EeqUVL7sB4m7NA")]
 [DisplayName("Stored Value Response")]
-public record StoredValueResponse3
+public partial record StoredValueResponse3
 {
     /// <summary>
     /// Unique identification of a POI transaction.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yklEC6OAEeeDTpy0mhI4TQ")]
 [DisplayName("Intra Position Details")]
-public record IntraPositionDetails45
+public partial record IntraPositionDetails45
 {
     /// <summary>
     /// Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).

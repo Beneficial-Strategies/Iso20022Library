@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WmNI4agzEfCXwLUUylXgrQ")]
 [DisplayName("Settlement Instruction Query Criteria4")]
-public record SettlementInstructionQueryCriteria4
+public partial record SettlementInstructionQueryCriteria4
 {
     /// <summary>
     /// Collective reference identifying a set of messages.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Role5Choice
     /// </summary>
     [IsoId("_WRnD8Z-zEeO1d8sv7xazyA")]
     [DisplayName("Code")]
-    public record Code : Role5Choice_
+    public partial record Code : Role5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

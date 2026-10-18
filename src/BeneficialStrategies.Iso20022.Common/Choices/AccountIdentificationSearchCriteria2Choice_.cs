@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_g7QEuGliEeGaMcKyqKNRfQ_-836272256")]
     [DisplayName("Account Identification Search Criteria 2 Choice")]
-    public abstract record AccountIdentificationSearchCriteria2Choice_ { }
+    public abstract partial record AccountIdentificationSearchCriteria2Choice_ { }
 }

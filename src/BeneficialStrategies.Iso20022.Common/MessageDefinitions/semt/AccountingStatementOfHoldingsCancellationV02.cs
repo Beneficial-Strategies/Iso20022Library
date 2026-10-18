@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.semt;
 )]
 [IsoId("_McJgvtFSEd-BzquC8wXy7w_-1129601452")]
 [DisplayName("Accounting Statement Of Holdings Cancellation V")]
-public record AccountingStatementOfHoldingsCancellationV02 : IOuterRecord
+public partial record AccountingStatementOfHoldingsCancellationV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

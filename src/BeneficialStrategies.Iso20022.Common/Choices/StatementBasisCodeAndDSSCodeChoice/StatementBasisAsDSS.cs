@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementBasisCodeAndDSSCodeChoi
     [IsoId("_Q7Cp8tp-Ed-ak6NoX_4Aeg_-1630736025")]
     [DisplayName("Statement Basis As DSS")]
     [IsoXmlTag("StmtBsisAsDSS")]
-    public record StatementBasisAsDSS : StatementBasisCodeAndDSSCodeChoice_
+    public partial record StatementBasisAsDSS : StatementBasisCodeAndDSSCodeChoice_
     {
         /// <summary>
         /// Entity that assigns the identification.

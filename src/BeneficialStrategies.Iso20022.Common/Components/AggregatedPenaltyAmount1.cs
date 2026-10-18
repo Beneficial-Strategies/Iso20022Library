@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_79hU8DmlEemla4muNfgRrg")]
 [DisplayName("Aggregated Penalty Amount1")]
-public record AggregatedPenaltyAmount1
+public partial record AggregatedPenaltyAmount1
 {
     /// <summary>
     /// Sum of all debit amounts.

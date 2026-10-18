@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceRateOrAmountOrUnknown1Choic
     /// </summary>
     [IsoId("_Wi6RYdp-Ed-ak6NoX_4Aeg_-1982209591")]
     [DisplayName("Unknown Indicator")]
-    public record UnknownIndicator : PriceRateOrAmountOrUnknown1Choice_
+    public partial record UnknownIndicator : PriceRateOrAmountOrUnknown1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TypeOfPrice27Choice
     /// </summary>
     [IsoId("_nAFOdPNBEeCuA5Tr22BnwA_1322004937")]
     [DisplayName("Code")]
-    public record Code : TypeOfPrice27Choice_
+    public partial record Code : TypeOfPrice27Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

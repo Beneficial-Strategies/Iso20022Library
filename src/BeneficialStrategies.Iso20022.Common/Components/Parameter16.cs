@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5lgsUY-DEe6oobnCtR50kw")]
 [DisplayName("Parameter16")]
-public record Parameter16
+public partial record Parameter16
 {
     /// <summary>
     /// Digest Algorithm.

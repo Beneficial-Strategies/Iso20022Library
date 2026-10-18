@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XpAh0NxiEeioifFt1dhnJA")]
 [DisplayName("Loyalty Transaction Totals")]
-public record LoyaltyTransactionTotals1
+public partial record LoyaltyTransactionTotals1
 {
     /// <summary>
     /// Identifier assigned by the merchant identifying a set of POI terminals performing some categories of transactions.

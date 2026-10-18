@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationProcessingStatus9Cho
     /// </summary>
     [IsoId("_xFphgeF8EeWCAvUNsZ5u6g")]
     [DisplayName("Code")]
-    public record Code : ModificationProcessingStatus9Choice_
+    public partial record Code : ModificationProcessingStatus9Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

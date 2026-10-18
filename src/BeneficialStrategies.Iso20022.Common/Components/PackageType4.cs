@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_flEsIXDUEe2MCaKO5AtGsA")]
 [DisplayName("Package Type")]
-public record PackageType4
+public partial record PackageType4
 {
     /// <summary>
     /// Identification of the software packages of which the chunk belongs.

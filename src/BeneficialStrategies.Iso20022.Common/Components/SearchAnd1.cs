@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JdNs8N6QEeiwsev40qZGEQ")]
 [DisplayName("Search And")]
-public record SearchAnd1
+public partial record SearchAnd1
 {
     /// <summary>
     /// Identifier of target element.

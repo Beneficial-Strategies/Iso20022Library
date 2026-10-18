@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CwaX8dwtEeeKpa-yxjuKzQ")]
 [DisplayName("Communication Address")]
-public record CommunicationAddress9
+public partial record CommunicationAddress9
 {
     /// <summary>
     /// Postal address of the entity.

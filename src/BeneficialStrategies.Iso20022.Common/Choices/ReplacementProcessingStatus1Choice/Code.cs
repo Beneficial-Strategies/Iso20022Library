@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReplacementProcessingStatus1Choi
     /// </summary>
     [IsoId("_UXSHUdp-Ed-ak6NoX_4Aeg_-220686661")]
     [DisplayName("Code")]
-    public record Code : ReplacementProcessingStatus1Choice_
+    public partial record Code : ReplacementProcessingStatus1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

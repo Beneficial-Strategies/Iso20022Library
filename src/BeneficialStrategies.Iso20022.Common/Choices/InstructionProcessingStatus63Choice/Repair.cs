@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus63Cho
     /// <summary>Instruction is accepted but in repair.</summary>
     [IsoId("_9ENHxQNrEfG_3cM8uyJ20w")]
     [DisplayName("Repair")]
-    public record Repair : InstructionProcessingStatus63Choice_
+    public partial record Repair : InstructionProcessingStatus63Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Rpr")]

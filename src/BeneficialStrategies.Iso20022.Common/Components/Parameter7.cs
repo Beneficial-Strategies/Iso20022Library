@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PrnlsWkJEeS7zPBpvm732w")]
 [DisplayName("Parameter")]
-public record Parameter7
+public partial record Parameter7
 {
     /// <summary>
     /// Initialisation vector of a cipher block chaining (CBC) mode encryption.

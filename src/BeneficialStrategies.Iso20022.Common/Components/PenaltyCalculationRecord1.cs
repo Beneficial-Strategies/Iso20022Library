@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_eaMcYDkVEem897H7zB2RJg")]
 [DisplayName("Penalty Calculation Record1")]
-public record PenaltyCalculationRecord1
+public partial record PenaltyCalculationRecord1
 {
     /// <summary>
     /// Date for which the penalty applies.

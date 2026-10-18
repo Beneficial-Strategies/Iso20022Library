@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.semt;
 )]
 [IsoId("_dpGMYzi8Eeydid5dcNPKvg")]
 [DisplayName("Securities Settlement Transaction Allegement Report 002 V")]
-public record SecuritiesSettlementTransactionAllegementReport002V10 : IOuterRecord
+public partial record SecuritiesSettlementTransactionAllegementReport002V10 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

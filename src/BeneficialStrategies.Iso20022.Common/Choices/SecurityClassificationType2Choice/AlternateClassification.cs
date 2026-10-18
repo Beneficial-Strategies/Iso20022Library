@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityClassificationType2Choic
     [IsoId("_T81ZQ21MEeiqaPNRWUnGNA")]
     [DisplayName("Alternate Classification")]
     [IsoXmlTag("AltrnClssfctn")]
-    public record AlternateClassification : SecurityClassificationType2Choice_
+    public partial record AlternateClassification : SecurityClassificationType2Choice_
     {
         /// <summary>
         /// Name or number assigned by an entity to enable recognition of that entity, for example, account identifier.

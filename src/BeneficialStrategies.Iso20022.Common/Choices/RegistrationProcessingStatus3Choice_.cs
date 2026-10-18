@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_gC8aETqqEeWyoP0PbocV1Q")]
     [DisplayName("Registration Processing Status 3 Choice")]
-    public abstract record RegistrationProcessingStatus3Choice_ { }
+    public abstract partial record RegistrationProcessingStatus3Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vxJ0gaEuEe-MRKYsaX6JDg")]
 [DisplayName("Reconciliation Request8")]
-public record ReconciliationRequest8
+public partial record ReconciliationRequest8
 {
     /// <summary>
     /// Environment.

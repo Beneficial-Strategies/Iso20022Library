@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AllocationSatus4Choice
     [IsoId("_8Qbob5NLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : AllocationSatus4Choice_
+    public partial record Proprietary : AllocationSatus4Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

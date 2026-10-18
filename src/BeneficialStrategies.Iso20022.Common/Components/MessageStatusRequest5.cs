@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_d_IAYU6tEeyGi9JAv6wq7Q")]
 [DisplayName("Message Status Request")]
-public record MessageStatusRequest5
+public partial record MessageStatusRequest5
 {
     /// <summary>
     /// Environment of the transaction.

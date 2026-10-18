@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient13Choice
     /// </summary>
     [IsoId("_d9kLgHDDEe2MCaKO5AtGsA")]
     [DisplayName("Subject Key Identifier")]
-    public record SubjectKeyIdentifier : Recipient13Choice_
+    public partial record SubjectKeyIdentifier : Recipient13Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_EmOB-eSmEe-qVZLXW4RRBw")]
 [DisplayName("Securities Modification Transaction2")]
-public record SecuritiesModificationTransaction2
+public partial record SecuritiesModificationTransaction2
 {
     /// <summary>
     /// Party that owns the account.

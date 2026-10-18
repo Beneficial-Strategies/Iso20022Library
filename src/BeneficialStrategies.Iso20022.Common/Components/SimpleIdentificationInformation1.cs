@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WelLCdp-Ed-ak6NoX_4Aeg_187646079")]
 [DisplayName("Simple Identification Information")]
-public record SimpleIdentificationInformation1
+public partial record SimpleIdentificationInformation1
 {
     /// <summary>
     /// Name or number assigned by an entity to enable recognition of that entity, for example, account identifier.

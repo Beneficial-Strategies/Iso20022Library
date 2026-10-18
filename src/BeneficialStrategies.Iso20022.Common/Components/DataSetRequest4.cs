@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vpp_MXI2Ee299ZbWCkdR_w")]
 [DisplayName("Data Set Request")]
-public record DataSetRequest4
+public partial record DataSetRequest4
 {
     /// <summary>
     /// Identification of the required data set.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient9Choice
     [IsoId("_M0YGAy8jEeu125Ip9zFcsQ")]
     [DisplayName("Key Identifier")]
     [IsoXmlTag("KeyIdr")]
-    public record KeyIdentifier : Recipient9Choice_
+    public partial record KeyIdentifier : Recipient9Choice_
     {
         /// <summary>
         /// Identification of the cryptographic key.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(TransactionToPerform8Choice.PaymentRequest))]
     [JsonDerivedType(typeof(TransactionToPerform8Choice.LoyaltyRequest))]
     [JsonDerivedType(typeof(TransactionToPerform8Choice.ReversalRequest))]
-    public abstract record TransactionToPerform8Choice_
+    public abstract partial record TransactionToPerform8Choice_
     {
     }
 }

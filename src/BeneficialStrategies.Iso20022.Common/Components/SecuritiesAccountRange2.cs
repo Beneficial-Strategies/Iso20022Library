@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4H1_peGBEeWCAvUNsZ5u6g")]
 [DisplayName("Securities Account Range2")]
-public record SecuritiesAccountRange2
+public partial record SecuritiesAccountRange2
 {
     /// <summary>
     /// Securities account number or code at which the range starts.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_uN0q0YomEeSaAcF2oE2GNQ")]
 [DisplayName("Currency Details")]
-public record CurrencyDetails2
+public partial record CurrencyDetails2
 {
     /// <summary>
     /// Alpha currency code (ISO 4217, 3 alphanumeric characters).

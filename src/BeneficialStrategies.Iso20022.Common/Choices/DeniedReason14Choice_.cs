@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_11uswTqxEeWyoP0PbocV1Q")]
     [DisplayName("Denied Reason 14 Choice")]
-    public abstract record DeniedReason14Choice_ { }
+    public abstract partial record DeniedReason14Choice_ { }
 }

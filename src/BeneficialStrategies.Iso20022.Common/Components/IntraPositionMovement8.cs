@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LpZDIWdDEemvNLufWGIVOQ")]
 [DisplayName("Intra Position Movement8")]
-public record IntraPositionMovement8
+public partial record IntraPositionMovement8
 {
     /// <summary>
     /// Balance from which the securities are moving.

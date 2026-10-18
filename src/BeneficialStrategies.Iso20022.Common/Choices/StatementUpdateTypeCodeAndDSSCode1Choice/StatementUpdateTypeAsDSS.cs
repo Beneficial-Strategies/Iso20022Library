@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementUpdateTypeCodeAndDSSCod
     [IsoId("_sXPbwwaUEe2-DuDrUXkg2w")]
     [DisplayName("Statement Update Type As DSS")]
     [IsoXmlTag("StmtUpdTpAsDSS")]
-    public record StatementUpdateTypeAsDSS : StatementUpdateTypeCodeAndDSSCode1Choice_
+    public partial record StatementUpdateTypeAsDSS : StatementUpdateTypeCodeAndDSSCode1Choice_
     {
         /// <summary>
         /// Entity that assigns the identification.

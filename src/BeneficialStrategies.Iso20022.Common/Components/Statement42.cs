@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dJfNDzeNEeWm5uvLSn0jEw")]
 [DisplayName("Statement")]
-public record Statement42
+public partial record Statement42
 {
     /// <summary>
     /// Date or period of the statement.

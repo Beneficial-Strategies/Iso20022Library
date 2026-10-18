@@ -112,5 +112,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_zwc0sQzXEeuUZuaHWzkTew")]
     [DisplayName("References 69 Choice")]
-    public abstract record References69Choice_ { }
+    public abstract partial record References69Choice_ { }
 }

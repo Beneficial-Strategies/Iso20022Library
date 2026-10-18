@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mmNwMYYEEemxIqbaFEE8-w")]
 [DisplayName("Card Acquisition Request")]
-public record CardAcquisitionRequest2
+public partial record CardAcquisitionRequest2
 {
     /// <summary>
     /// Card payment brands allowed by the Sale System for the payment transaction.

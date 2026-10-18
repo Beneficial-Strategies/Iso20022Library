@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStatus34Choice
     /// <summary>Settlement status expressed as a proprietary status and reason.</summary>
     [IsoId("_XtOaA-SkEe-qVZLXW4RRBw")]
     [DisplayName("Proprietary")]
-    public record Proprietary : SettlementStatus34Choice_
+    public partial record Proprietary : SettlementStatus34Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Prtry")]

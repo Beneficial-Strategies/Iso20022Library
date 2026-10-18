@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus100Choice
     /// <summary>Specifies the proprietary status.</summary>
     [IsoId("_XXEmiY5bEfC_4ZEXsY0Xyg")]
     [DisplayName("Proprietary")]
-    public record Proprietary : ProcessingStatus100Choice_
+    public partial record Proprietary : ProcessingStatus100Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Prtry")]

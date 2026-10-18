@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3JdwsZCAEe6FLLjWp95ntQ")]
 [DisplayName("Input Result Data6")]
-public record InputResultData6
+public partial record InputResultData6
 {
     /// <summary>
     /// Input Command.

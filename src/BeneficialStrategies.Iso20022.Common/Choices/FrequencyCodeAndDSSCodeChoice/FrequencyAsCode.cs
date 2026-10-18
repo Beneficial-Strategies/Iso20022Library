@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FrequencyCodeAndDSSCodeChoice
     /// </summary>
     [IsoId("_Uuhiodp-Ed-ak6NoX_4Aeg_501343039")]
     [DisplayName("Frequency As Code")]
-    public record FrequencyAsCode : FrequencyCodeAndDSSCodeChoice_
+    public partial record FrequencyAsCode : FrequencyCodeAndDSSCodeChoice_
     {
         /// <summary>
         /// Contains the main value for the container.

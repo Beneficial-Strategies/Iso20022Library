@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RFBsYNp-Ed-ak6NoX_4Aeg_389014624")]
 [DisplayName("Pagination Balance")]
-public record PaginationBalance1
+public partial record PaginationBalance1
 {
     /// <summary>
     /// Opening balance of the financial instrument in the statement.

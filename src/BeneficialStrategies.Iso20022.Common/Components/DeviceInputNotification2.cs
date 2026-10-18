@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cLmfgQ0cEeqUVL7sB4m7NA")]
 [DisplayName("Device Input Notification")]
-public record DeviceInputNotification2
+public partial record DeviceInputNotification2
 {
     /// <summary>
     /// Message main identifier.

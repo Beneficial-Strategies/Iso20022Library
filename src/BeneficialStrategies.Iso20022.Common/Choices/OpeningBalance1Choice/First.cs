@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OpeningBalance1Choice
     /// </summary>
     [IsoId("_R9WbiNp-Ed-ak6NoX_4Aeg_-773103442")]
     [DisplayName("First")]
-    public record First : OpeningBalance1Choice_
+    public partial record First : OpeningBalance1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Frst")]

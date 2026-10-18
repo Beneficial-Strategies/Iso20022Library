@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2kGeAZB5Ee6FLLjWp95ntQ")]
 [DisplayName("Mobile Data6")]
-public record MobileData6
+public partial record MobileData6
 {
     /// <summary>
     /// Mobile Country Code.

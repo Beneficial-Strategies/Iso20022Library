@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QYBcfNp-Ed-ak6NoX_4Aeg_1907481606")]
     [DisplayName("Sub Balance Type 6 Choice")]
-    public abstract record SubBalanceType6Choice_ { }
+    public abstract partial record SubBalanceType6Choice_ { }
 }

@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.semt;
 )]
 [IsoId("_MV4gpdFSEd-BzquC8wXy7w_952968106")]
 [DisplayName("Securities Message Rejection")]
-public record SecuritiesMessageRejection : IOuterRecord
+public partial record SecuritiesMessageRejection : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceQuantity5Choice
     [IsoId("_QYn5ZNp-Ed-ak6NoX_4Aeg_1256476395")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : BalanceQuantity5Choice_
+    public partial record Proprietary : BalanceQuantity5Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

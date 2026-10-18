@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType4Choice
     /// </summary>
     [IsoId("_m_7dc_NBEeCuA5Tr22BnwA_238148282")]
     [DisplayName("Code")]
-    public record Code : UpdateType4Choice_
+    public partial record Code : UpdateType4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

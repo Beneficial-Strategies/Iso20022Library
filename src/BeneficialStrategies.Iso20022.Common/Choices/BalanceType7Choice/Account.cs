@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceType7Choice
     [IsoId("_nArEUPNBEeCuA5Tr22BnwA_-379442712")]
     [DisplayName("Account")]
     [IsoXmlTag("Acct")]
-    public record Account : BalanceType7Choice_
+    public partial record Account : BalanceType7Choice_
     {
         /// <summary>
         /// Unambiguous identification for the account between the account owner and the account servicer.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_iBmSwbZYEfCUZfsQO4rYeA")]
 [DisplayName("Payment Request8")]
-public record PaymentRequest8
+public partial record PaymentRequest8
 {
     /// <summary>
     /// Data associated with the Transaction.

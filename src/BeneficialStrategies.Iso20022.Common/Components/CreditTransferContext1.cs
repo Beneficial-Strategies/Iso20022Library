@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UC-MAJ2mEe-4seDr3Li2Ew")]
 [DisplayName("Credit Transfer Context1")]
-public record CreditTransferContext1
+public partial record CreditTransferContext1
 {
     /// <summary>
     /// Automatic Notification Of Cash Movement.

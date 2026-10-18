@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_EGn-QYX-EemxIqbaFEE8-w")]
 [DisplayName("Retailer Sale Environment")]
-public record RetailerSaleEnvironment2
+public partial record RetailerSaleEnvironment2
 {
     /// <summary>
     /// Capabilities of the Sale system.

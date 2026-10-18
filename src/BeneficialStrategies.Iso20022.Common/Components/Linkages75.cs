@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_r4RdNYb9Ee-6cOl7zMpJaA")]
 [DisplayName("Linkages75")]
-public record Linkages75
+public partial record Linkages75
 {
     /// <summary>
     /// Securities Settlement Transaction Identification.

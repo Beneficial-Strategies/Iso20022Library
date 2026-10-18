@@ -16,7 +16,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References53Choice
         "Securities Settlement Transaction Allegement Notification Transaction Identification"
     )]
     [IsoXmlTag("SctiesSttlmTxAllgmtNtfctnTxId")]
-    public record SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
+    public partial record SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
         : References53Choice_
     {
         /// <summary>

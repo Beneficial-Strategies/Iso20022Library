@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GG5KQNuDEeiXqq0XHEoNUA")]
 [DisplayName("Loyalty Amount")]
-public record LoyaltyAmount1
+public partial record LoyaltyAmount1
 {
     /// <summary>
     /// Unit type for the amount.

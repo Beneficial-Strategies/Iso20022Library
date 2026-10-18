@@ -30,5 +30,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_gi4k0TnuEeWfSKvvZlhRKg")]
     [DisplayName("Status 18 Choice")]
-    public abstract record Status18Choice_ { }
+    public abstract partial record Status18Choice_ { }
 }

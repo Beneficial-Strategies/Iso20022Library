@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References83Choice
     /// <summary>Specifies the trade identification.</summary>
     [IsoId("_Wt0M6KgzEfCXwLUUylXgrQ")]
     [DisplayName("Trade Identification")]
-    public record TradeIdentification : References83Choice_
+    public partial record TradeIdentification : References83Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("TradId")]

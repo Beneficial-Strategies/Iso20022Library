@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XH490YYAEemxIqbaFEE8-w")]
 [DisplayName("Service Response")]
-public record ServiceResponse2
+public partial record ServiceResponse2
 {
     /// <summary>
     /// Environment of the transaction.

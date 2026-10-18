@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Sr6-UbYNEfCUZfsQO4rYeA")]
 [DisplayName("Retailer Reversal Result8")]
-public record RetailerReversalResult8
+public partial record RetailerReversalResult8
 {
     /// <summary>
     /// POI reconciliation identification.

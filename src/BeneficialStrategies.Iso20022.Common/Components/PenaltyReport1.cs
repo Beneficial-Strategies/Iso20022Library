@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8l9EMdfMEeiJ1vId85LeLw")]
 [DisplayName("Penalty Report1")]
-public record PenaltyReport1
+public partial record PenaltyReport1
 {
     /// <summary>
     /// Unique identification of the report as assigned by the account servicer.

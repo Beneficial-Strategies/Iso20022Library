@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0eA4sdwqEeioifFt1dhnJA")]
 [DisplayName("Payment Context")]
-public record PaymentContext26
+public partial record PaymentContext26
 {
     /// <summary>
     /// Indicates whether the transaction has been initiated by a card physically present or not.

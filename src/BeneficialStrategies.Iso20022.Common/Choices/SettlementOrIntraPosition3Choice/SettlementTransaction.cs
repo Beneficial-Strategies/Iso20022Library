@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementOrIntraPosition3Choice
     /// <summary>Settlement transaction details.</summary>
     [IsoId("_TgJxc2p9EemmaZLSPtWX5A")]
     [DisplayName("Settlement Transaction")]
-    public record SettlementTransaction : SettlementOrIntraPosition3Choice_
+    public partial record SettlementTransaction : SettlementOrIntraPosition3Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("SttlmTx")]

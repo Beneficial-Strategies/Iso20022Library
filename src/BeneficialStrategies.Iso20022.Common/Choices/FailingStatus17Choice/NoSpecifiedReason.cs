@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FailingStatus17Choice
     /// <summary>Indicates that there is no reason available or to report.</summary>
     [IsoId("_0o3p4eSkEe-qVZLXW4RRBw")]
     [DisplayName("No Specified Reason")]
-    public record NoSpecifiedReason : FailingStatus17Choice_
+    public partial record NoSpecifiedReason : FailingStatus17Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("NoSpcfdRsn")]

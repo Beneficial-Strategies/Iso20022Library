@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventStage3Choice
     /// </summary>
     [IsoId("_RhjNMTqqEeWyoP0PbocV1Q")]
     [DisplayName("Code")]
-    public record Code : CorporateActionEventStage3Choice_
+    public partial record Code : CorporateActionEventStage3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

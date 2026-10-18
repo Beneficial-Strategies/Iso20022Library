@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_U0V2wdp-Ed-ak6NoX_4Aeg_1816953757")]
     [DisplayName("Transaction Type 1 Code Choice")]
-    public abstract record TransactionType1CodeChoice_ { }
+    public abstract partial record TransactionType1CodeChoice_ { }
 }

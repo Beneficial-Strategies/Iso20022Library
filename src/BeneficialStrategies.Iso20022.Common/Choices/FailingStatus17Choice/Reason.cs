@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FailingStatus17Choice
     /// <summary>Specifies the reason of the failing status.</summary>
     [IsoId("_0o3p6eSkEe-qVZLXW4RRBw")]
     [DisplayName("Reason")]
-    public record Reason : FailingStatus17Choice_
+    public partial record Reason : FailingStatus17Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Rsn")]

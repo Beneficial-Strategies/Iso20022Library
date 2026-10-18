@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(SettlementStatus34Choice.Pending))]
     [JsonDerivedType(typeof(SettlementStatus34Choice.Failing))]
     [JsonDerivedType(typeof(SettlementStatus34Choice.Proprietary))]
-    public abstract record SettlementStatus34Choice_
+    public abstract partial record SettlementStatus34Choice_
     {
     }
 }

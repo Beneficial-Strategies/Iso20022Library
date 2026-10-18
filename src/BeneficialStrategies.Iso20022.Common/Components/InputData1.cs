@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KWsQoN6mEeiwsev40qZGEQ")]
 [DisplayName("Input Data")]
-public record InputData1
+public partial record InputData1
 {
     /// <summary>
     /// Type of logical device located on a Sale Terminal or a POI Terminal.

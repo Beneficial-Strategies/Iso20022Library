@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_5NeNE5NLEeWGlc8L7oPDIg")]
     [DisplayName("Securities Balance Type 8 Choice")]
-    public abstract record SecuritiesBalanceType8Choice_ { }
+    public abstract partial record SecuritiesBalanceType8Choice_ { }
 }

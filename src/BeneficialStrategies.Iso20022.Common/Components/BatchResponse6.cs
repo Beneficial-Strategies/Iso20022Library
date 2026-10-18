@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5m3eIZTcEe6sd81HehWb6w")]
 [DisplayName("Batch Response6")]
-public record BatchResponse6
+public partial record BatchResponse6
 {
     /// <summary>
     /// Sale Batch Identification.

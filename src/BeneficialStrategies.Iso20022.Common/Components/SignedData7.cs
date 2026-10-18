@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4_PTwVFKEeyApZmLzm74zA")]
 [DisplayName("Signed Data")]
-public record SignedData7
+public partial record SignedData7
 {
     /// <summary>
     /// Version of the data structure.

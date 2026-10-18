@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// </summary>
 [IsoId("_Oign8QJ3EfGAP_FOfstLIw")]
 [DisplayName("Securities Account Position Response V01")]
-public record SecuritiesAccountPositionResponseV01 : IOuterRecord
+public partial record SecuritiesAccountPositionResponseV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

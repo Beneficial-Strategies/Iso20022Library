@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_m4zOIQ0qEeK9as54HthO0w")]
 [DisplayName("Aggregate Balance Information")]
-public record AggregateBalanceInformation21
+public partial record AggregateBalanceInformation21
 {
     /// <summary>
     /// Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.

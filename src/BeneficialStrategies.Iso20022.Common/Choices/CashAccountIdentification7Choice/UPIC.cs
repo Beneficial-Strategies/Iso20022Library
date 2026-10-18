@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashAccountIdentification7Choice
     /// </summary>
     [IsoId("_o7ELN-WbEeevU7McUP3D1w")]
     [DisplayName("UPIC")]
-    public record UPIC : CashAccountIdentification7Choice_
+    public partial record UPIC : CashAccountIdentification7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

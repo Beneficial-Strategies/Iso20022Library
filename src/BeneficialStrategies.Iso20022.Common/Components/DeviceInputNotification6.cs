@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_24CPMZCQEe6zroekBXoFoQ")]
 [DisplayName("Device Input Notification6")]
-public record DeviceInputNotification6
+public partial record DeviceInputNotification6
 {
     /// <summary>
     /// Exchange Identification.

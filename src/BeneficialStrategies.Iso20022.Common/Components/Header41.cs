@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BwWUYQuKEeqYM5yH99IYQw")]
 [DisplayName("Header")]
-public record Header41
+public partial record Header41
 {
     /// <summary>
     /// Identifies the type of process related to the message.

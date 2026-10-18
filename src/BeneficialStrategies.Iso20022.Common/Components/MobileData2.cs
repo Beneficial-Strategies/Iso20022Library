@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_G1x6EQxvEeqdx6buGpCCQw")]
 [DisplayName("Mobile Data")]
-public record MobileData2
+public partial record MobileData2
 {
     /// <summary>
     /// Identifies the country of a mobile phone operator.

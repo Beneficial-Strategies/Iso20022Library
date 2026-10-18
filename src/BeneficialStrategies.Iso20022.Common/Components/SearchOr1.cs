@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BBbMYN6QEeiwsev40qZGEQ")]
 [DisplayName("Search Or")]
-public record SearchOr1
+public partial record SearchOr1
 {
     /// <summary>
     /// List of criteria following the AND logic.

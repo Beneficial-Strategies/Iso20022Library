@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_sfgOoaEPEe-MRKYsaX6JDg")]
 [DisplayName("Stored Value Response8")]
-public record StoredValueResponse8
+public partial record StoredValueResponse8
 {
     /// <summary>
     /// Sale Transaction Identification.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityClassificationType3Choic
     [IsoId("_SimIQ_35EeimOuZbLgw0bg")]
     [DisplayName("Alternate Classification")]
     [IsoXmlTag("AltrnClssfctn")]
-    public record AlternateClassification : SecurityClassificationType3Choice_
+    public partial record AlternateClassification : SecurityClassificationType3Choice_
     {
         /// <summary>
         /// Proprietary information issued by the data source scheme issuer.

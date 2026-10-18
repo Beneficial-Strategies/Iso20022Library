@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Xh2YsY-OEe6oobnCtR50kw")]
 [DisplayName("Algorithm Identification35")]
-public record AlgorithmIdentification35
+public partial record AlgorithmIdentification35
 {
     /// <summary>
     /// Algorithm.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_ZkDCOStUEeyhipY4f42fZQ")]
     [DisplayName("Rejection Or Repair Status 41 Choice")]
-    public abstract record RejectionOrRepairStatus41Choice_ { }
+    public abstract partial record RejectionOrRepairStatus41Choice_ { }
 }

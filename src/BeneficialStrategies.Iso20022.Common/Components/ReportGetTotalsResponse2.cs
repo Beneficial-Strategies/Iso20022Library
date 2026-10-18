@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-zdYAZ9rEe-nbM0aSPcoiQ")]
 [DisplayName("Report Get Totals Response2")]
-public record ReportGetTotalsResponse2
+public partial record ReportGetTotalsResponse2
 {
     /// <summary>
     /// POI Reconciliation Identification.

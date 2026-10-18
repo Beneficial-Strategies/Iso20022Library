@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_unaLkS83Eeu125Ip9zFcsQ")]
 [DisplayName("Loyalty Request")]
-public record LoyaltyRequest3
+public partial record LoyaltyRequest3
 {
     /// <summary>
     /// To retrieve Card Acquisition Data.

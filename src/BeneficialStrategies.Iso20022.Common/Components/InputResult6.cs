@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_A5p-sZFNEe6reqfAp4CunQ")]
 [DisplayName("Input Result6")]
-public record InputResult6
+public partial record InputResult6
 {
     /// <summary>
     /// Device Type.

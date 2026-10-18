@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient15Choice
     /// Key Identifier.
     /// </summary>
     [DisplayName("Key Identifier")]
-    public record KeyIdentifier : Recipient15Choice_
+    public partial record KeyIdentifier : Recipient15Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

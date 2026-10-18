@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Sw--vQEcEeCQm6a_G2yO_w_152932975")]
 [DisplayName("Certificate Issuer")]
-public record CertificateIssuer1
+public partial record CertificateIssuer1
 {
     /// <summary>
     /// Relative distinguished name inside a X.509 certificate.

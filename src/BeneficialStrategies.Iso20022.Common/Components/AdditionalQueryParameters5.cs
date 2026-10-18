@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_E2DtEf4hEeCH9dkaY_DhYw")]
 [DisplayName("Additional Query Parameters")]
-public record AdditionalQueryParameters5
+public partial record AdditionalQueryParameters5
 {
     /// <summary>
     /// Request to obtain a Securities Transaction Pending Report for transactions with the specified status.

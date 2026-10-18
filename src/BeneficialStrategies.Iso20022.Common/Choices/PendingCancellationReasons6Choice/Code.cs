@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingCancellationReasons6Choic
     /// <summary>Specifies the reason why the cancellation request is pending.</summary>
     [IsoId("_2avCAaoWEfCG2_q2WT-90w")]
     [DisplayName("Code")]
-    public record Code : PendingCancellationReasons6Choice_
+    public partial record Code : PendingCancellationReasons6Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Cd")]

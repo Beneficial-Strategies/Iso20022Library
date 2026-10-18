@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionAndRepairReason14Choice
     /// </summary>
     [IsoId("_ify0Xf4wEeClUvPNHKL9Zw")]
     [DisplayName("Code")]
-    public record Code : RejectionAndRepairReason14Choice_
+    public partial record Code : RejectionAndRepairReason14Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

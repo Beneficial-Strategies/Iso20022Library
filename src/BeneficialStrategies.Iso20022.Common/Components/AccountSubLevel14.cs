@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_s1xFgVjBEea1XpTdyimpLA")]
 [DisplayName("Account Sub Level")]
-public record AccountSubLevel14
+public partial record AccountSubLevel14
 {
     /// <summary>
     /// Unique and unambiguous identification for the sub-account between the account owner and the account servicer.

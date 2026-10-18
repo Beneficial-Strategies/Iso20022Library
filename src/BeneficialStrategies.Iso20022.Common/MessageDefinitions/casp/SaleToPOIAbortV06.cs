@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.casp;
 /// </summary>
 [IsoId("_4hcjAZUwEe62CMB9luireQ")]
 [DisplayName("Sale To POI Abort V06")]
-public record SaleToPOIAbortV06 : IOuterRecord
+public partial record SaleToPOIAbortV06 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

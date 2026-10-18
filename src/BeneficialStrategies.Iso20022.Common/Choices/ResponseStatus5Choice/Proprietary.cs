@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ResponseStatus5Choice
     [IsoId("_klDTWTqqEeWyoP0PbocV1Q")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : ResponseStatus5Choice_
+    public partial record Proprietary : ResponseStatus5Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

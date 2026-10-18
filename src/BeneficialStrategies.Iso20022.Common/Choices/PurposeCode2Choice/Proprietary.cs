@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PurposeCode2Choice
     [IsoId("_QwdxpNp-Ed-ak6NoX_4Aeg_1195273800")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : PurposeCode2Choice_
+    public partial record Proprietary : PurposeCode2Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

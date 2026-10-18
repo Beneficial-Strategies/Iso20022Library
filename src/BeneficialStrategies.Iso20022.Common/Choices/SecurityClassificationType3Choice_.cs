@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_R_yWIf35EeimOuZbLgw0bg")]
     [DisplayName("Security Classification Type 3 Choice")]
-    public abstract record SecurityClassificationType3Choice_ { }
+    public abstract partial record SecurityClassificationType3Choice_ { }
 }

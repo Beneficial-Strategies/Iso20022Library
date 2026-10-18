@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S3OSYUHLEeWeNKJ6kJGSFw")]
 [DisplayName("Alternate Identification")]
-public record AlternateIdentification4
+public partial record AlternateIdentification4
 {
     /// <summary>
     /// Name or number assigned by an entity to enable recognition of that entity, for example, account identifier.

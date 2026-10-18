@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationProcessingStatus9Cho
     [IsoId("_xFphieF8EeWCAvUNsZ5u6g")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : ModificationProcessingStatus9Choice_
+    public partial record Proprietary : ModificationProcessingStatus9Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

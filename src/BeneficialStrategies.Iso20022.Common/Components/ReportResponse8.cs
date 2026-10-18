@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Zdt7waE7Ee-MRKYsaX6JDg")]
 [DisplayName("Report Response8")]
-public record ReportResponse8
+public partial record ReportResponse8
 {
     /// <summary>
     /// Environment.

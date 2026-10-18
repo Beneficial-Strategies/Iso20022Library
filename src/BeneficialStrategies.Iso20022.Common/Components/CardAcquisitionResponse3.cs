@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8ZY84U7NEeyGi9JAv6wq7Q")]
 [DisplayName("Card Acquisition Response")]
-public record CardAcquisitionResponse3
+public partial record CardAcquisitionResponse3
 {
     /// <summary>
     /// Sale System identification of the transaction in an unambiguous way.

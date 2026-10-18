@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OTK5caE8Ee-MRKYsaX6JDg")]
 [DisplayName("Diagnosis Response7")]
-public record DiagnosisResponse7
+public partial record DiagnosisResponse7
 {
     /// <summary>
     /// Logged Sale Identification.

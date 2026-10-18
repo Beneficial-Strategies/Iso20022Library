@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ze71QVE8EeyApZmLzm74zA")]
 [DisplayName("Login Request")]
-public record LoginRequest4
+public partial record LoginRequest4
 {
     /// <summary>
     /// Date and Time of Login.

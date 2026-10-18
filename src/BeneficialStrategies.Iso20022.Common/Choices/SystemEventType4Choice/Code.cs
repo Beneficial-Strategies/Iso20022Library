@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemEventType4Choice
     /// </summary>
     [IsoId("_eFPKI3hkEeidzqjNEfehPg")]
     [DisplayName("Code")]
-    public record Code : SystemEventType4Choice_
+    public partial record Code : SystemEventType4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

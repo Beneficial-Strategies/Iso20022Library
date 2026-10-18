@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lPknoZVaEeWuuIjj4l7kpg")]
 [DisplayName("Product")]
-public record Product5
+public partial record Product5
 {
     /// <summary>
     /// Product code of the item.

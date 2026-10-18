@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason16Choice
     /// </summary>
     [IsoId("_kYkAeTnvEeWfSKvvZlhRKg")]
     [DisplayName("Generated Reason")]
-    public record GeneratedReason : Reason16Choice_
+    public partial record GeneratedReason : Reason16Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("GnrtdRsn")]

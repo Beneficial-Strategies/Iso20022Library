@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WowJEWdnEemMLeaDfmIfIA")]
 [DisplayName("Securities Modification Query Definition1")]
-public record SecuritiesModificationQueryDefinition1
+public partial record SecuritiesModificationQueryDefinition1
 {
     /// <summary>
     /// Defines the type of query.

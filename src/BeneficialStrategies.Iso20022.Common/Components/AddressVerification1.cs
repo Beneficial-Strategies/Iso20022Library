@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SqbqxgEcEeCQm6a_G2yO_w_1267025270")]
 [DisplayName("Address Verification")]
-public record AddressVerification1
+public partial record AddressVerification1
 {
     /// <summary>
     /// Numeric characters from the cardholder&apos;s address excluding the postal code (that is street number).

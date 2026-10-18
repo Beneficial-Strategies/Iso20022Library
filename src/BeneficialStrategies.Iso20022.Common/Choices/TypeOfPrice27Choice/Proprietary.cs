@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TypeOfPrice27Choice
     [IsoId("_nAFOdfNBEeCuA5Tr22BnwA_324932584")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : TypeOfPrice27Choice_
+    public partial record Proprietary : TypeOfPrice27Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateTimeSearch2Choice
     /// </summary>
     [IsoId("_7Gq0kX3sEeibM9CPDGCw0g")]
     [DisplayName("From Date Time")]
-    public record FromDateTime : DateTimeSearch2Choice_
+    public partial record FromDateTime : DateTimeSearch2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

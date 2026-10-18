@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Hi8mMQ0sEeqUVL7sB4m7NA")]
 [DisplayName("Device Transmit Message Request")]
-public record DeviceTransmitMessageRequest2
+public partial record DeviceTransmitMessageRequest2
 {
     /// <summary>
     /// Transport address.

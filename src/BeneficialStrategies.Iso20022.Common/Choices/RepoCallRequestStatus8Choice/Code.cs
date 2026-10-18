@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RepoCallRequestStatus8Choice
     /// </summary>
     [IsoId("_IRR7sTqqEeWyoP0PbocV1Q")]
     [DisplayName("Code")]
-    public record Code : RepoCallRequestStatus8Choice_
+    public partial record Code : RepoCallRequestStatus8Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

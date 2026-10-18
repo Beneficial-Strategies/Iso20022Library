@@ -39,7 +39,7 @@ namespace BeneficialStrategies.Iso20022.semt;
 )]
 [IsoId("_rolMUSgkEey2k_sfZmJz4g")]
 [DisplayName("Securities Balance Custody Report V")]
-public record SecuritiesBalanceCustodyReportV11 : IOuterRecord
+public partial record SecuritiesBalanceCustodyReportV11 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

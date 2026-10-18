@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradingPartyCapacity3Choice
     /// </summary>
     [IsoId("_YaVioY-1Eeaoj_JbcpWKgg")]
     [DisplayName("Code")]
-    public record Code : TradingPartyCapacity3Choice_
+    public partial record Code : TradingPartyCapacity3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

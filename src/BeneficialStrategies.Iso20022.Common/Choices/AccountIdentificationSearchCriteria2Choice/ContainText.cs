@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentificationSearchCrite
     /// </summary>
     [IsoId("_g7QEumliEeGaMcKyqKNRfQ_-1833344609")]
     [DisplayName("Contain Text")]
-    public record ContainText : AccountIdentificationSearchCriteria2Choice_
+    public partial record ContainText : AccountIdentificationSearchCriteria2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

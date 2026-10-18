@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References53Choice
     /// </summary>
     [IsoId("_6EvMS5NLEeWGlc8L7oPDIg")]
     [DisplayName("Other Message Identification")]
-    public record OtherMessageIdentification : References53Choice_
+    public partial record OtherMessageIdentification : References53Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

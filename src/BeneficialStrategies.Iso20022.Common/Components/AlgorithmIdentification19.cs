@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_m4fhods2Eee9e6xduATmQg")]
 [DisplayName("Algorithm Identification")]
-public record AlgorithmIdentification19
+public partial record AlgorithmIdentification19
 {
     /// <summary>
     /// Asymmetric encryption algorithm of a transport key.

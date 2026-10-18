@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationProcessingStatus9Cho
     [IsoId("_BxXzmeFfEeWIA4E9cYSxxQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : CancellationProcessingStatus9Choice_
+    public partial record Proprietary : CancellationProcessingStatus9Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

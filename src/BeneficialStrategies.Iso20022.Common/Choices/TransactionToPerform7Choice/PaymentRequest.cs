@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionToPerform7Choice
     /// Payment Request.
     /// </summary>
     [DisplayName("Payment Request")]
-    public record PaymentRequest : TransactionToPerform7Choice_
+    public partial record PaymentRequest : TransactionToPerform7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

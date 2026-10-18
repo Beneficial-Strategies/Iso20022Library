@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ImpliedCurrencyAmountRange1Choic
     /// </summary>
     [IsoId("_O_mxN5lcEeeE1Ya-LgRsuQ")]
     [DisplayName("Equal Amount")]
-    public record EqualAmount : ImpliedCurrencyAmountRange1Choice_
+    public partial record EqualAmount : ImpliedCurrencyAmountRange1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("EQAmt")]

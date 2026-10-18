@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PendingStatus79Choice.Reason))]
     [JsonDerivedType(typeof(PendingStatus79Choice.NoSpecifiedReason))]
     [JsonDerivedType(typeof(PendingStatus79Choice.Reason))]
-    public abstract record PendingStatus79Choice_
+    public abstract partial record PendingStatus79Choice_
     {
     }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradingPartyCapacity3Choice
     [IsoId("_YaViqY-1Eeaoj_JbcpWKgg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : TradingPartyCapacity3Choice_
+    public partial record Proprietary : TradingPartyCapacity3Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

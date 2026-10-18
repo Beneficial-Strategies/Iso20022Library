@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.casp;
 )]
 [IsoId("_5LB2YU7AEeyGi9JAv6wq7Q")]
 [DisplayName("Sale To POI Event Notification V")]
-public record SaleToPOIEventNotificationV04 : IOuterRecord
+public partial record SaleToPOIEventNotificationV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

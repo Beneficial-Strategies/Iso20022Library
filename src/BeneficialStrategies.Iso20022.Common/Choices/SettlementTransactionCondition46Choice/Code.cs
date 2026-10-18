@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementTransactionCondition46
     /// <summary>Settlement transaction condition expressed as an ISO 20022 code.</summary>
     [IsoId("_mnUdpfHVEfChCaiL9q1LKg")]
     [DisplayName("Code")]
-    public record Code : SettlementTransactionCondition46Choice_
+    public partial record Code : SettlementTransactionCondition46Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Cd")]

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T4ItO9p-Ed-ak6NoX_4Aeg_-1155989003")]
 [DisplayName("Amount Range Boundary")]
-public record AmountRangeBoundary1
+public partial record AmountRangeBoundary1
 {
     /// <summary>
     /// Amount value of the range limit.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrganisationIdentificationScheme
     /// </summary>
     [IsoId("_WgN0RRBBEeGyZLI6olyk-Q")]
     [DisplayName("Code")]
-    public record Code : OrganisationIdentificationSchemeName2Choice_
+    public partial record Code : OrganisationIdentificationSchemeName2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneratedStatus5Choice
     [IsoId("_FD3Q-SRhEeO8sskhVI3IDA")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public record Reason : GeneratedStatus5Choice_
+    public partial record Reason : GeneratedStatus5Choice_
     {
         /// <summary>
         /// Specifies the reason why the transaction was generated.

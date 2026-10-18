@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason12Choice
     /// </summary>
     [IsoId("_C2YFsyRhEeO8sskhVI3IDA")]
     [DisplayName("Repo Call Acknowledgement Reason")]
-    public record RepoCallAcknowledgementReason : Reason12Choice_
+    public partial record RepoCallAcknowledgementReason : Reason12Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("RepoCallAckRsn")]

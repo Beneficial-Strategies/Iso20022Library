@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xi8ocaEREe-MRKYsaX6JDg")]
 [DisplayName("Retailer Event7")]
-public record RetailerEvent7
+public partial record RetailerEvent7
 {
     /// <summary>
     /// Event Time Stamp.

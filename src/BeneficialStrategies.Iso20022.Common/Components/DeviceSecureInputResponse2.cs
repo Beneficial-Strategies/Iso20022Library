@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_bWZikQ0sEeqUVL7sB4m7NA")]
 [DisplayName("Device Secure Input Response")]
-public record DeviceSecureInputResponse2
+public partial record DeviceSecureInputResponse2
 {
     /// <summary>
     /// Cardholder PIN data when needed.

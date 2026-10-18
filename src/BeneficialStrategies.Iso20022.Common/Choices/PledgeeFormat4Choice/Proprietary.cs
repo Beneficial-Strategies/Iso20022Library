@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PledgeeFormat4Choice
     [IsoId("_XDu4tZj3EeWn2ur3BXxtdg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : PledgeeFormat4Choice_
+    public partial record Proprietary : PledgeeFormat4Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

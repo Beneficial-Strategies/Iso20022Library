@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References43Choice
     /// </summary>
     [IsoId("_5pbMczqnEeWyoP0PbocV1Q")]
     [DisplayName("Securities Transaction Pending Report Identification")]
-    public record SecuritiesTransactionPendingReportIdentification : References43Choice_
+    public partial record SecuritiesTransactionPendingReportIdentification : References43Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

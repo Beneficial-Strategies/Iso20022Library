@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UxD5R9p-Ed-ak6NoX_4Aeg_-1253958762")]
 [DisplayName("Accounting Statement Of Holdings")]
-public record AccountingStatementOfHoldings1
+public partial record AccountingStatementOfHoldings1
 {
     /// <summary>
     /// Pagination of the message.

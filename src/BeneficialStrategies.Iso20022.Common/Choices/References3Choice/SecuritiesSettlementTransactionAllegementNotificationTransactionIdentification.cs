@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References3Choice
     [DisplayName(
         "Securities Settlement Transaction Allegement Notification Transaction Identification"
     )]
-    public record SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
+    public partial record SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
         : References3Choice_
     {
         /// <summary>

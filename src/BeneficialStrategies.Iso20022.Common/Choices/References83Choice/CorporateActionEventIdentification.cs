@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References83Choice
     /// <summary>Specifies the corporate action event identification.</summary>
     [IsoId("_Wt0M8KgzEfCXwLUUylXgrQ")]
     [DisplayName("Corporate Action Event Identification")]
-    public record CorporateActionEventIdentification : References83Choice_
+    public partial record CorporateActionEventIdentification : References83Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("CorpActnEvtId")]

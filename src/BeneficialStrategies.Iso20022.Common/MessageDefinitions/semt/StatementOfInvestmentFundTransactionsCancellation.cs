@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.semt;
 )]
 [IsoId("_MX-LWNFSEd-BzquC8wXy7w_953864526")]
 [DisplayName("Statement Of Investment Fund Transactions Cancellation")]
-public record StatementOfInvestmentFundTransactionsCancellation : IOuterRecord
+public partial record StatementOfInvestmentFundTransactionsCancellation : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

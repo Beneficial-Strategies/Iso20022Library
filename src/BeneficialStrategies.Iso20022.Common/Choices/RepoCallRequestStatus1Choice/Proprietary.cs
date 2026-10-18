@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RepoCallRequestStatus1Choice
     [IsoId("_UXIWV9p-Ed-ak6NoX_4Aeg_-695454166")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : RepoCallRequestStatus1Choice_
+    public partial record Proprietary : RepoCallRequestStatus1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

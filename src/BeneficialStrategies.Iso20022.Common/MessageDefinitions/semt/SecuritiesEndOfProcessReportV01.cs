@@ -31,7 +31,7 @@ namespace BeneficialStrategies.Iso20022.semt;
 )]
 [IsoId("_CwVqwOQXEeCGktPI9k4Dlw_-1232982722")]
 [DisplayName("Securities End Of Process Report V")]
-public record SecuritiesEndOfProcessReportV01 : IOuterRecord
+public partial record SecuritiesEndOfProcessReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4ORaINj8EeiojJsa6FYyew")]
 [DisplayName("Geolocation")]
-public record Geolocation1
+public partial record Geolocation1
 {
     /// <summary>
     /// Geographic location specified by geographic coordinates.

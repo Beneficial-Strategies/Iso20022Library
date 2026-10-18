@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityRange1Choice
     /// <summary>Specifies the not equal quantity.</summary>
     [IsoId("_jtRfFO5NEeCisYr99QEiWA_-267876901")]
     [DisplayName("Not Equal Quantity")]
-    public record NotEqualQuantity : QuantityRange1Choice_
+    public partial record NotEqualQuantity : QuantityRange1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("NEQQty")]

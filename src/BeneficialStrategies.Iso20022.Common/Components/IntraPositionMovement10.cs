@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YQ2EceSkEe-qVZLXW4RRBw")]
 [DisplayName("Intra Position Movement10")]
-public record IntraPositionMovement10
+public partial record IntraPositionMovement10
 {
     /// <summary>
     /// Party that owns the account.

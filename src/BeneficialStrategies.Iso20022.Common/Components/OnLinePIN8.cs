@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zZ9RYS8zEeu125Ip9zFcsQ")]
 [DisplayName("On Line PIN")]
-public record OnLinePIN8
+public partial record OnLinePIN8
 {
     /// <summary>
     /// Encrypted PIN (Personal Identification Number).

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xNODwagzEfCXwLUUylXgrQ")]
 [DisplayName("Penalty4")]
-public record Penalty4
+public partial record Penalty4
 {
     /// <summary>
     /// Currency of the penalties reported.

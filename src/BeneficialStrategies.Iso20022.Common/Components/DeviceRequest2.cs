@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RS_foYYDEemxIqbaFEE8-w")]
 [DisplayName("Device Request")]
-public record DeviceRequest2
+public partial record DeviceRequest2
 {
     /// <summary>
     /// Environment of the transaction.

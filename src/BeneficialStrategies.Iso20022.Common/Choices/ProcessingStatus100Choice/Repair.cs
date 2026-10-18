@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus100Choice
     /// <summary>Specifies the repair status.</summary>
     [IsoId("_XXEmeY5bEfC_4ZEXsY0Xyg")]
     [DisplayName("Repair")]
-    public record Repair : ProcessingStatus100Choice_
+    public partial record Repair : ProcessingStatus100Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Rpr")]

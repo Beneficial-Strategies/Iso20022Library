@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_DpHiYNxWEeioifFt1dhnJA")]
 [DisplayName("Batch Response")]
-public record BatchResponse1
+public partial record BatchResponse1
 {
     /// <summary>
     /// Performed transaction content.

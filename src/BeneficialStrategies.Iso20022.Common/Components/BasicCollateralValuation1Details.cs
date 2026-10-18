@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UAL1-dp-Ed-ak6NoX_4Aeg_-606746879")]
 [DisplayName("Basic Collateral Valuation 1 Details")]
-public record BasicCollateralValuation1Details
+public partial record BasicCollateralValuation1Details
 {
     /// <summary>
     /// Haircut percentage applied to the market value of underlying assets used as collateral as a risk control measure. The institution valuating the collateral calculates the value of underlying assets based on its market value less a certain percentage (the haircut).

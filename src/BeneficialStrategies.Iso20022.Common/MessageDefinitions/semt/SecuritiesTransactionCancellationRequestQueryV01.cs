@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// </summary>
 [IsoId("_iPlFweShEe-qVZLXW4RRBw")]
 [DisplayName("Securities Transaction Cancellation Request Query V01")]
-public record SecuritiesTransactionCancellationRequestQueryV01 : IOuterRecord
+public partial record SecuritiesTransactionCancellationRequestQueryV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

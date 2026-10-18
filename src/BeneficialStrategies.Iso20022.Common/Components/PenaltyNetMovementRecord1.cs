@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Mq3zFQAXEeqIo7-k3pky8Q")]
 [DisplayName("Penalty Net Movement Record1")]
-public record PenaltyNetMovementRecord1
+public partial record PenaltyNetMovementRecord1
 {
     /// <summary>
     /// Account to or from which a securities entry is made.

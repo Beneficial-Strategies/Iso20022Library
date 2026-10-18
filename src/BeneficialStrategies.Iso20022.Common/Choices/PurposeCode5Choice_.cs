@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_AeehNtokEeC60axPepSq7g_1734090960")]
     [DisplayName("Purpose Code 5 Choice")]
-    public abstract record PurposeCode5Choice_ { }
+    public abstract partial record PurposeCode5Choice_ { }
 }

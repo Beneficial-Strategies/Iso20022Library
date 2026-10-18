@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_azpCYeFYEeWIA4E9cYSxxQ")]
 [DisplayName("Securities Report2")]
-public record SecuritiesReport2
+public partial record SecuritiesReport2
 {
     /// <summary>
     /// Reference common to all pages of a report.

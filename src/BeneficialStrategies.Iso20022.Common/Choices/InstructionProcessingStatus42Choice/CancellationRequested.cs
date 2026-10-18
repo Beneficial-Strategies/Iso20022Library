@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus42Cho
     [IsoId("_7X_7FQpJEeup4r-PFG2T5Q")]
     [DisplayName("Cancellation Requested")]
     [IsoXmlTag("CxlReqd")]
-    public record CancellationRequested : InstructionProcessingStatus42Choice_
+    public partial record CancellationRequested : InstructionProcessingStatus42Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

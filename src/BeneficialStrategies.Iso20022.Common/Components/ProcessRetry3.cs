@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_M4Y0sTASEeugIJ3Gvoevmg")]
 [DisplayName("Process Retry")]
-public record ProcessRetry3
+public partial record ProcessRetry3
 {
     /// <summary>
     /// Time period to wait for a retry in months, days, hours and minutes, leading zeros could be omitted.

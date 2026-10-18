@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0VCDsZFQEe6reqfAp4CunQ")]
 [DisplayName("Cardholder21")]
-public record Cardholder21
+public partial record Cardholder21
 {
     /// <summary>
     /// Identification.

@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_VLSXKNp-Ed-ak6NoX_4Aeg_770800567")]
 [DisplayName("Aggregate Balance Information")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
-public record AggregateBalanceInformation2
+public partial record AggregateBalanceInformation2
 {
     /// <summary>
     /// Total quantity of financial instrument for the referenced holding.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_U1-1h9p-Ed-ak6NoX_4Aeg_418582784")]
 [DisplayName("Statement")]
-public record Statement3
+public partial record Statement3
 {
     /// <summary>
     /// Reference of the statement.

@@ -27,5 +27,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(InstructionProcessingStatus61Choice.ModificationRequested), nameof(InstructionProcessingStatus61Choice.ModificationRequested))]
     [IsoId("b4de1baa-0198-4d85-b954-9b9ef0ebbb2c")]
     [DisplayName("Instruction Processing Status 61 Choice")]
-    public abstract record InstructionProcessingStatus61Choice_ { }
+    public abstract partial record InstructionProcessingStatus61Choice_ { }
 }

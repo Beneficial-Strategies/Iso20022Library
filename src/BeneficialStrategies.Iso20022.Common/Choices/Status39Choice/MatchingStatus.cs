@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status39Choice
     /// </summary>
     [IsoId("_gEIFdDi8Eeydid5dcNPKvg")]
     [DisplayName("Matching Status")]
-    public record MatchingStatus : Status39Choice_
+    public partial record MatchingStatus : Status39Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("MtchgSts")]

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ty4bQN7HEeiwsev40qZGEQ")]
 [DisplayName("Device Print Response")]
-public record DevicePrintResponse1
+public partial record DevicePrintResponse1
 {
     /// <summary>
     /// Qualification of the document printed to the Cashier or the Customer.

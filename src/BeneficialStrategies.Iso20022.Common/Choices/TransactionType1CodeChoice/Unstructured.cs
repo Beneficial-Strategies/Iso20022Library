@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionType1CodeChoice
     /// </summary>
     [IsoId("_U0V2w9p-Ed-ak6NoX_4Aeg_-2145545823")]
     [DisplayName("Unstructured")]
-    public record Unstructured : TransactionType1CodeChoice_
+    public partial record Unstructured : TransactionType1CodeChoice_
     {
         /// <summary>
         /// Contains the main value for the container.

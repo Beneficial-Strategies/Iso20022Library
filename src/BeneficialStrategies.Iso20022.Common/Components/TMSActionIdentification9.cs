@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GavU4XI4Ee299ZbWCkdR_w")]
 [DisplayName("TMS Action Identification")]
-public record TMSActionIdentification9
+public partial record TMSActionIdentification9
 {
     /// <summary>
     /// Types of terminal management action performed by a point of interaction.

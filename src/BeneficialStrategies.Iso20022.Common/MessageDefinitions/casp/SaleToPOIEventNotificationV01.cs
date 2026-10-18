@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.casp;
 [Description(@"An Event Notification message is sent by the POI when an event occurs.")]
 [IsoId("_ebPkwYYCEemxIqbaFEE8-w")]
 [DisplayName("Sale To POI Event Notification V")]
-public record SaleToPOIEventNotificationV01 : IOuterRecord
+public partial record SaleToPOIEventNotificationV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

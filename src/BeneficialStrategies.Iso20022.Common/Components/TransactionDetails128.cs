@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YSkyQemrEemUgrefIx730g")]
 [DisplayName("Transaction Details")]
-public record TransactionDetails128
+public partial record TransactionDetails128
 {
     /// <summary>
     /// Specifies the type of activity to which this instruction relates.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_m1LjEWqWEemz04WrKJaMEA")]
 [DisplayName("Financial Instrument Quantity Search2")]
-public record FinancialInstrumentQuantitySearch2
+public partial record FinancialInstrumentQuantitySearch2
 {
     /// <summary>
     /// Quantity expressed as an amount representing the face amount, that is the principal, of a debt instrument.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VR4TUyp_EeyR9JrVGfaMKw")]
 [DisplayName("Quantity Breakdown")]
-public record QuantityBreakdown60
+public partial record QuantityBreakdown60
 {
     /// <summary>
     /// Identification, for tax purposes, of a lot of identical securities that are bought at a certain date and at a certain price.

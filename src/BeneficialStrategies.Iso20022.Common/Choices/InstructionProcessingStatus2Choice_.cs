@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_UYBuMNp-Ed-ak6NoX_4Aeg_-1515031070")]
     [DisplayName("Instruction Processing Status 2 Choice")]
-    public abstract record InstructionProcessingStatus2Choice_ { }
+    public abstract partial record InstructionProcessingStatus2Choice_ { }
 }

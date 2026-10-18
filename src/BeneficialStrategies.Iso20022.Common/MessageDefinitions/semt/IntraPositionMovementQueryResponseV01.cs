@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.semt;
 /// </summary>
 [IsoId("_iPjQkeShEe-qVZLXW4RRBw")]
 [DisplayName("Intra Position Movement Query Response V01")]
-public record IntraPositionMovementQueryResponseV01 : IOuterRecord
+public partial record IntraPositionMovementQueryResponseV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

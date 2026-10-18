@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AZdb0aE1Ee-MRKYsaX6JDg")]
 [DisplayName("Service Request8")]
-public record ServiceRequest8
+public partial record ServiceRequest8
 {
     /// <summary>
     /// Environment.

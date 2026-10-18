@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus26Cho
     /// </summary>
     [IsoId("_8QcO25NLEeWGlc8L7oPDIg")]
     [DisplayName("Code")]
-    public record Code : InstructionProcessingStatus26Choice_
+    public partial record Code : InstructionProcessingStatus26Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

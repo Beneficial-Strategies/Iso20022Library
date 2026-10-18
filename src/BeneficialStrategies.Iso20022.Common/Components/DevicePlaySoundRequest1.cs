@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GGvxgN6-Eeiwsev40qZGEQ")]
 [DisplayName("Device Play Sound Request")]
-public record DevicePlaySoundRequest1
+public partial record DevicePlaySoundRequest1
 {
     /// <summary>
     /// Message response awaited by the initiator of the Request.

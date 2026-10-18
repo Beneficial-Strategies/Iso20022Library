@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_UXSHUNp-Ed-ak6NoX_4Aeg_-220686671")]
     [DisplayName("Replacement Processing Status 1 Choice")]
-    public abstract record ReplacementProcessingStatus1Choice_ { }
+    public abstract partial record ReplacementProcessingStatus1Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S4tccNj9EeiojJsa6FYyew")]
 [DisplayName("Geolocation Geographic Coordinates")]
-public record GeolocationGeographicCoordinates1
+public partial record GeolocationGeographicCoordinates1
 {
     /// <summary>
     /// Angular distance of a location on the earth south or north of the equator.

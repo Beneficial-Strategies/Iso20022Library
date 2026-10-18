@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ylo6pDkYEem897H7zB2RJg")]
 [DisplayName("Foreign Exchange Rate3")]
-public record ForeignExchangeRate3
+public partial record ForeignExchangeRate3
 {
     /// <summary>
     /// Value of one currency expressed in relation to another currency.

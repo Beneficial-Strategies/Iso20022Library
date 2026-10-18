@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Reason21Choice.RepairReason))]
     [JsonDerivedType(typeof(Reason21Choice.PendingModificationReason))]
     [JsonDerivedType(typeof(Reason21Choice.UnmatchedReason))]
-    public abstract record Reason21Choice_
+    public abstract partial record Reason21Choice_
     {
     }
 }

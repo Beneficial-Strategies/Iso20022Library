@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus103Choice
     /// <summary>Specifies the acknowledged accepted status.</summary>
     [IsoId("cc6702b0-377d-42ca-88f6-44fd559d8128")]
     [DisplayName("Acknowledged Accepted")]
-    public record AcknowledgedAccepted : ProcessingStatus103Choice_
+    public partial record AcknowledgedAccepted : ProcessingStatus103Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("AckdAccptd")]

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashAccountIdentification7Choice
     [IsoId("_o7ELOeWbEeevU7McUP3D1w")]
     [DisplayName("Domestic Account")]
     [IsoXmlTag("DmstAcct")]
-    public record DomesticAccount : CashAccountIdentification7Choice_
+    public partial record DomesticAccount : CashAccountIdentification7Choice_
     {
         /// <summary>
         /// Name or number assigned by an entity to enable recognition of that entity, for example, account identifier.

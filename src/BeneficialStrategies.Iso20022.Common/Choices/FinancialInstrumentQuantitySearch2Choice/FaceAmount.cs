@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantitySearc
     /// <summary>Quantity expressed as an amount representing the face amount, that is the principal, of a debt instrument.</summary>
     [IsoId("_emN9mWqWEemz04WrKJaMEA")]
     [DisplayName("Face Amount")]
-    public record FaceAmount : FinancialInstrumentQuantitySearch2Choice_
+    public partial record FaceAmount : FinancialInstrumentQuantitySearch2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("FaceAmt")]

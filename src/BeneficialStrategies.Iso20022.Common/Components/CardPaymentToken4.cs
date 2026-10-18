@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OY-lIXr8EeSZrs_hiwNOWA")]
 [DisplayName("Card Payment Token")]
-public record CardPaymentToken4
+public partial record CardPaymentToken4
 {
     /// <summary>
     /// Surrogate value for the PAN.

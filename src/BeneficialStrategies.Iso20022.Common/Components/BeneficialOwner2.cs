@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vfLMYbv-EeOgOuxYpBEzKg")]
 [DisplayName("Beneficial Owner")]
-public record BeneficialOwner2
+public partial record BeneficialOwner2
 {
     /// <summary>
     /// Identification of the party that is the beneficial owner of the specified financial instrument.

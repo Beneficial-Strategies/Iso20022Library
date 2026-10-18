@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus87Choice
     [IsoId("_rHpxAStWEeyhipY4f42fZQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : ProcessingStatus87Choice_
+    public partial record Proprietary : ProcessingStatus87Choice_
     {
         /// <summary>
         /// Proprietary identification of the status related to an instruction.

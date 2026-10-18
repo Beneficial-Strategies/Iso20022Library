@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.semt;
 )]
 [IsoId("_ZpI-IVXWEeSTstivKW60Lg")]
 [DisplayName("Securities Settlement Transaction Audit Trail Report V")]
-public record SecuritiesSettlementTransactionAuditTrailReportV02 : IOuterRecord
+public partial record SecuritiesSettlementTransactionAuditTrailReportV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

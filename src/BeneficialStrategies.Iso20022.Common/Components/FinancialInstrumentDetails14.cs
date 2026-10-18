@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_RshAwRQ0EeKOSJdKMJK1cg")]
 [DisplayName("Financial Instrument Details")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-05-04.")]
-public record FinancialInstrumentDetails14
+public partial record FinancialInstrumentDetails14
 {
     /// <summary>
     /// Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.

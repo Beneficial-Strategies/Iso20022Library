@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kKUwgZLNEe6-zvj9Dw-ctg")]
 [DisplayName("Loyalty Transaction6")]
-public record LoyaltyTransaction6
+public partial record LoyaltyTransaction6
 {
     /// <summary>
     /// Sale Transaction Identification.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneratedStatus5Choice
     /// </summary>
     [IsoId("_FD3Q8SRhEeO8sskhVI3IDA")]
     [DisplayName("No Specified Reason")]
-    public record NoSpecifiedReason : GeneratedStatus5Choice_
+    public partial record NoSpecifiedReason : GeneratedStatus5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

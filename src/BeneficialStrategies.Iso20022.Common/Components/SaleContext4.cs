@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cJQTMQx5Eeqdx6buGpCCQw")]
 [DisplayName("Sale Context")]
-public record SaleContext4
+public partial record SaleContext4
 {
     /// <summary>
     /// Identification of the sale terminal (electronic cash register or point of sale terminal) or the sale system.

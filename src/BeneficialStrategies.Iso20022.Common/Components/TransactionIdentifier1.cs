@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TFsqdwEcEeCQm6a_G2yO_w_-629860519")]
 [DisplayName("Transaction Identifier")]
-public record TransactionIdentifier1
+public partial record TransactionIdentifier1
 {
     /// <summary>
     /// Local date and time of the transaction assigned by the POI (Point Of Interaction).

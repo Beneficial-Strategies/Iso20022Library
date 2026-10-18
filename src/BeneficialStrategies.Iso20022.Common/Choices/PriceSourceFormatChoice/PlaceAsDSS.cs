@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceSourceFormatChoice
     [IsoId("_RCDQ5tp-Ed-ak6NoX_4Aeg_1174932111")]
     [DisplayName("Place As DSS")]
     [IsoXmlTag("PlcAsDSS")]
-    public record PlaceAsDSS : PriceSourceFormatChoice_
+    public partial record PlaceAsDSS : PriceSourceFormatChoice_
     {
         /// <summary>
         /// Entity that assigns the identification.

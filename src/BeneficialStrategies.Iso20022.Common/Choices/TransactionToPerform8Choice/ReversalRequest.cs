@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionToPerform8Choice
     /// <summary>Transaction to perform expressed as a reversal request.</summary>
     [IsoId("_By-kTbZaEfCUZfsQO4rYeA")]
     [DisplayName("Reversal Request")]
-    public record ReversalRequest : TransactionToPerform8Choice_
+    public partial record ReversalRequest : TransactionToPerform8Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("RvslReq")]

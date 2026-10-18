@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_huWK8XDCEe2MCaKO5AtGsA")]
     [DisplayName("Recipient 13 Choice")]
-    public abstract record Recipient13Choice_ { }
+    public abstract partial record Recipient13Choice_ { }
 }

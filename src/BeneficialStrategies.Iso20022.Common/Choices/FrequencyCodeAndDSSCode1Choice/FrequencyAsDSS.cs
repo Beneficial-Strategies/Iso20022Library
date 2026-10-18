@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FrequencyCodeAndDSSCode1Choice
     [IsoId("_Q7Vk59p-Ed-ak6NoX_4Aeg_1533373125")]
     [DisplayName("Frequency As DSS")]
     [IsoXmlTag("FrqcyAsDSS")]
-    public record FrequencyAsDSS : FrequencyCodeAndDSSCode1Choice_
+    public partial record FrequencyAsDSS : FrequencyCodeAndDSSCode1Choice_
     {
         /// <summary>
         /// Entity that assigns the identification.

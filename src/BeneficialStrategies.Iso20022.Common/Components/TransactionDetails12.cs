@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ub5hltp-Ed-ak6NoX_4Aeg_1658880948")]
 [DisplayName("Transaction Details")]
-public record TransactionDetails12
+public partial record TransactionDetails12
 {
     /// <summary>
     /// Reference to the message advised to be cancelled by the account servicer.

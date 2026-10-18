@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RBvu5dp-Ed-ak6NoX_4Aeg_1713990380")]
     [DisplayName("Account Identification Format Choice")]
-    public abstract record AccountIdentificationFormatChoice_ { }
+    public abstract partial record AccountIdentificationFormatChoice_ { }
 }

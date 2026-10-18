@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementOrCorporateActionEvent
     /// Securities Transaction Type.
     /// </summary>
     [DisplayName("Securities Transaction Type")]
-    public record SecuritiesTransactionType : SettlementOrCorporateActionEvent35Choice_
+    public partial record SecuritiesTransactionType : SettlementOrCorporateActionEvent35Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

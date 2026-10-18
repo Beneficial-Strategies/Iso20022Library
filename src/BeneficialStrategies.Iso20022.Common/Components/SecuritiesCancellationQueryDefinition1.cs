@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YKC8sWdnEemMLeaDfmIfIA")]
 [DisplayName("Securities Cancellation Query Definition1")]
-public record SecuritiesCancellationQueryDefinition1
+public partial record SecuritiesCancellationQueryDefinition1
 {
     /// <summary>
     /// Defines the type of query.

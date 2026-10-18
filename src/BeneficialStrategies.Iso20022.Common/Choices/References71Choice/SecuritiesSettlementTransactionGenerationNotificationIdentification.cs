@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References71Choice
     [IsoId("_KDxvyyAaEeu4a6pNulzZ4Q")]
     [DisplayName("Securities Settlement Transaction Generation Notification Identification")]
     [IsoXmlTag("SctiesSttlmTxGnrtnNtfctnId")]
-    public record SecuritiesSettlementTransactionGenerationNotificationIdentification
+    public partial record SecuritiesSettlementTransactionGenerationNotificationIdentification
         : References71Choice_
     {
         /// <summary>

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0fkkgQx-Eeqdx6buGpCCQw")]
 [DisplayName("Point Of Interaction")]
-public record PointOfInteraction10
+public partial record PointOfInteraction10
 {
     /// <summary>
     /// Identification of the POI (Point Of Interaction) for the acquirer or its agent.

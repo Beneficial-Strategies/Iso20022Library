@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_iHJX4V27EeS_LPIA7qJ58w")]
     [DisplayName("Exposure Type 12 Choice")]
-    public abstract record ExposureType12Choice_ { }
+    public abstract partial record ExposureType12Choice_ { }
 }

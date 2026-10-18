@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_sanebffZEeiNZp_PtLohLw")]
 [DisplayName("Sub Account Identification")]
-public record SubAccountIdentification59
+public partial record SubAccountIdentification59
 {
     /// <summary>
     /// Party that legally owns the account.

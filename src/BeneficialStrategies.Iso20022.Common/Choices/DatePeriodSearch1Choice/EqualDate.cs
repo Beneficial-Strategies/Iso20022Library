@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DatePeriodSearch1Choice
     /// </summary>
     [IsoId("_aQotZ4aAEee8r9VKRbnJSg")]
     [DisplayName("Equal Date")]
-    public record EqualDate : DatePeriodSearch1Choice_
+    public partial record EqualDate : DatePeriodSearch1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_k6DnIN6REeiwsev40qZGEQ")]
 [DisplayName("Report Get Totals Response")]
-public record ReportGetTotalsResponse1
+public partial record ReportGetTotalsResponse1
 {
     /// <summary>
     /// Identification of the reconciliation period between Sale and POI.

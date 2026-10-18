@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient15Choice
     /// KEK.
     /// </summary>
     [DisplayName("KEK")]
-    public record KEK : Recipient15Choice_
+    public partial record KEK : Recipient15Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

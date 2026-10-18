@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantitySearch2Choice
     /// <summary>Specifies the original and current face.</summary>
     [IsoId("_eaw7g2qWEemz04WrKJaMEA")]
     [DisplayName("Original And Current Face")]
-    public record OriginalAndCurrentFace : QuantitySearch2Choice_
+    public partial record OriginalAndCurrentFace : QuantitySearch2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("OrgnlAndCurFace")]

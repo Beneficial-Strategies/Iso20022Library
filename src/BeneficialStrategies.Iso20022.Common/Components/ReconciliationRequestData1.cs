@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__qugkNxdEeioifFt1dhnJA")]
 [DisplayName("Reconciliation Request Data")]
-public record ReconciliationRequestData1
+public partial record ReconciliationRequestData1
 {
     /// <summary>
     /// Type of Reconciliation requested by the Sale to the POI.

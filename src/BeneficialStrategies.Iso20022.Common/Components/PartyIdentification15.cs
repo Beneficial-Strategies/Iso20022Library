@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QO7x6tp-Ed-ak6NoX_4Aeg_-789866808")]
 [DisplayName("Party Identification")]
-public record PartyIdentification15
+public partial record PartyIdentification15
 {
     /// <summary>
     /// Country in which the organisation is registered.

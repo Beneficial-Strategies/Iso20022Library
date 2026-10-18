@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(StatementType7Choice.Proprietary))]
     [JsonDerivedType(typeof(StatementType7Choice.Code))]
     [JsonDerivedType(typeof(StatementType7Choice.Proprietary))]
-    public abstract record StatementType7Choice_
+    public abstract partial record StatementType7Choice_
     {
     }
 }

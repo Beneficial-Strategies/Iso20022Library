@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status1Choice
     /// </summary>
     [IsoId("_UVMcoNp-Ed-ak6NoX_4Aeg_-135724603")]
     [DisplayName("Settlement Condition Modification Status")]
-    public record SettlementConditionModificationStatus : Status1Choice_
+    public partial record SettlementConditionModificationStatus : Status1Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("SttlmCondModSts")]

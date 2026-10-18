@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventProcessingSt
     /// </summary>
     [IsoId("_8Qbor5NLEeWGlc8L7oPDIg")]
     [DisplayName("Code")]
-    public record Code : CorporateActionEventProcessingStatus4Choice_
+    public partial record Code : CorporateActionEventProcessingStatus4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

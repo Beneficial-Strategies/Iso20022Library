@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3Xi2weziEeiojesOXOKoug")]
 [DisplayName("Status Report Content")]
-public record StatusReportContent8
+public partial record StatusReportContent8
 {
     /// <summary>
     /// Capabilities of the POI (Point Of Interaction) performing the status report.

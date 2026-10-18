@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus61Cho
     /// <summary>Instruction cancellation is pending.</summary>
     [IsoId("fe32299c-8490-4c66-96a7-e62f9c8eb479")]
     [DisplayName("Pending Cancellation")]
-    public record PendingCancellation : InstructionProcessingStatus61Choice_
+    public partial record PendingCancellation : InstructionProcessingStatus61Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("PdgCxl")]

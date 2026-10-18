@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3nMJkQ0qEeqUVL7sB4m7NA")]
 [DisplayName("Device Print Request")]
-public record DevicePrintRequest2
+public partial record DevicePrintRequest2
 {
     /// <summary>
     /// Qualifies the type of document.

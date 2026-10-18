@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QMJNsNtcEeipuvJHTHIw9A")]
 [DisplayName("Stored Value Account")]
-public record StoredValueAccount1
+public partial record StoredValueAccount1
 {
     /// <summary>
     /// Type of stored value account.

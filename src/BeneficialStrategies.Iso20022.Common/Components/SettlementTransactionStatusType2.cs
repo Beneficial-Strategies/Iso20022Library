@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_X9rz1eFWEeWIA4E9cYSxxQ")]
 [DisplayName("Settlement Transaction Status Type2")]
-public record SettlementTransactionStatusType2
+public partial record SettlementTransactionStatusType2
 {
     /// <summary>
     /// Provides details on the processing status of the transaction.

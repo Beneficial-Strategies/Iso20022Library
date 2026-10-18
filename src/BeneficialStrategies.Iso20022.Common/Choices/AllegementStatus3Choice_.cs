@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_TlRHgTqhEeWyoP0PbocV1Q")]
     [DisplayName("Allegement Status 3 Choice")]
-    public abstract record AllegementStatus3Choice_ { }
+    public abstract partial record AllegementStatus3Choice_ { }
 }

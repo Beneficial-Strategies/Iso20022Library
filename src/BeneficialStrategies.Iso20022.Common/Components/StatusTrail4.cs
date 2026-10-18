@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hkjzQVhgEeS8HfHHd4stCA")]
 [DisplayName("Status Trail")]
-public record StatusTrail4
+public partial record StatusTrail4
 {
     /// <summary>
     /// Date and time at which the status was assigned.

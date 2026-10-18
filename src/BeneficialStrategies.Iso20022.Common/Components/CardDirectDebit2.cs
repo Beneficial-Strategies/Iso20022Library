@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IHGYQdgyEeipBO1pkKK6zg")]
 [DisplayName("Card Direct Debit")]
-public record CardDirectDebit2
+public partial record CardDirectDebit2
 {
     /// <summary>
     /// Information related to the debtor.

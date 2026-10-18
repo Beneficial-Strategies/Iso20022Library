@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_uXqBwbZeEfCUZfsQO4rYeA")]
 [DisplayName("Device Display Request7")]
-public record DeviceDisplayRequest7
+public partial record DeviceDisplayRequest7
 {
     /// <summary>
     /// Message to be displayed.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References79Choice
     /// </summary>
     [IsoId("_Wkm3n0fGEey6Is2iMqV8fg")]
     [DisplayName("Total Portfolio Valuation Report Identification")]
-    public record TotalPortfolioValuationReportIdentification : References79Choice_
+    public partial record TotalPortfolioValuationReportIdentification : References79Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

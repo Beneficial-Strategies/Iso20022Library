@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_STQaENp-Ed-ak6NoX_4Aeg_-993584795")]
 [DisplayName("Amount And Direction")]
-public record AmountAndDirection20
+public partial record AmountAndDirection20
 {
     /// <summary>
     /// Total amount that needs to be settled.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TljRUS9DEeu125Ip9zFcsQ")]
 [DisplayName("Balance Inquiry Request")]
-public record BalanceInquiryRequest4
+public partial record BalanceInquiryRequest4
 {
     /// <summary>
     /// Data related to the account pointed by the payment card.
