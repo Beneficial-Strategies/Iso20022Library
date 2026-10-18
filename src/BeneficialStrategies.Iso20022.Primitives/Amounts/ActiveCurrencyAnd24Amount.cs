@@ -9,7 +9,7 @@ namespace BeneficialStrategies.Iso20022.Amounts;
 /// <summary>
 /// A number of monetary units specified in an active currency where the unit of currency is explicit and compliant with ISO 4217.  It allows up to 24 digits.
 /// </summary>
-public record ActiveCurrencyAnd24Amount
+public record ActiveCurrencyAnd24Amount : IIsoAmount
 {
     /// <summary>
     /// The currency in which this amount is measured.

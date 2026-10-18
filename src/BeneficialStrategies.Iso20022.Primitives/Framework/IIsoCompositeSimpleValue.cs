@@ -20,4 +20,4 @@ namespace BeneficialStrategies.Iso20022;
 /// <c>(string)</c> constructor and <see cref="object.ToString"/> override instead, which know
 /// the full lexical grammar.
 /// </remarks>
-public interface IIsoCompositeSimpleValue { }
+public interface IIsoCompositeSimpleValue : IIsoSimpleType { }

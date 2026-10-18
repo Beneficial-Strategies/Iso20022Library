@@ -11,4 +11,4 @@ namespace BeneficialStrategies.Iso20022.UserDefined;
 /// </summary>
 [IsoId("_YWiyM9p-Ed-ak6NoX_4Aeg_1061291860")]
 [DisplayName("Extension Contents")]
-public record ExtensionContents2 { }
+public record ExtensionContents2 : IIsoOpenContent { }

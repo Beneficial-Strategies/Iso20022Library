@@ -9,7 +9,7 @@ namespace BeneficialStrategies.Iso20022.Amounts;
 /// <summary>
 /// Number of monetary units specified in a currency, where the unit of currency is explicit and compliant with ISO 4217. The maximum number of digits must not exceed 15, including a maximum of 5 fractional digits.
 /// </summary>
-public record Restricted15DigitCurrencyAndAmount
+public record Restricted15DigitCurrencyAndAmount : IIsoAmount
 {
     /// <summary>
     /// The currency in which this amount is measured.

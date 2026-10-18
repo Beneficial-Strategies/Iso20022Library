@@ -12,4 +12,4 @@ namespace BeneficialStrategies.Iso20022.UserDefined;
 /// </summary>
 [IsoId("_YWZBMNp-Ed-ak6NoX_4Aeg_492078843")]
 [DisplayName("XML Signature")]
-public record XMLSignature { }
+public record XMLSignature : IIsoOpenContent { }

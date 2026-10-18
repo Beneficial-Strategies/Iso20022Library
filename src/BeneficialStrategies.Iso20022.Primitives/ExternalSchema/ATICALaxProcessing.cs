@@ -10,4 +10,4 @@ namespace BeneficialStrategies.Iso20022.ExternalSchema;
 /// The property namespace is set to 'any'. The processContents value is 'lax'.
 /// </summary>
 [IsoId("_VD5BwBNrEfC1ZfCQz0xB3g")]
-public record ATICALaxProcessing { }
+public record ATICALaxProcessing : IIsoOpenContent { }

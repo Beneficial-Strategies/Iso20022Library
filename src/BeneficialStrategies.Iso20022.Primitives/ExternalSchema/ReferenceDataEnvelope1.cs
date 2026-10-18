@@ -9,4 +9,4 @@ namespace BeneficialStrategies.Iso20022.ExternalSchema;
 /// Technical component that contains the validated reference data information.
 /// </summary>
 [IsoId("_xNiNsbMbEe-OHY85tcOC5w")]
-public record ReferenceDataEnvelope1 { }
+public record ReferenceDataEnvelope1 : IIsoOpenContent { }
