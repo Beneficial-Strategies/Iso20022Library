@@ -14,6 +14,7 @@ public class CreditorEnrolmentServiceProviderStateMachineTests
     )> StartHarnessAsync()
     {
         var provider = new ServiceCollection()
+            .WithGenerousTestTimeouts()
             .AddMassTransitTestHarness(cfg =>
             {
                 cfg.AddSagaStateMachine<

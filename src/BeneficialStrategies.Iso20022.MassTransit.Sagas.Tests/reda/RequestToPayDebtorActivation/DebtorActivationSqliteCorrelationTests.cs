@@ -59,7 +59,7 @@ public class DebtorActivationSqliteCorrelationTests
         // harness also needs to resolve it directly, to run EnsureCreatedAsync.
         services.AddDbContext<TestDbContext>(builder => builder.UseSqlite(database.ConnectionString));
 
-        var provider = services.AddMassTransitTestHarness(cfg =>
+        var provider = services.WithGenerousTestTimeouts().AddMassTransitTestHarness(cfg =>
             {
                 cfg.AddSagaStateMachine<DebtorActivationServiceProviderStateMachine, DebtorActivationSagaState>()
                     .EntityFrameworkRepository(r =>
