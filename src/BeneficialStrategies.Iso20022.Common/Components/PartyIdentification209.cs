@@ -24,7 +24,7 @@ public record PartyIdentification209
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Name { get; init; }
+    public Max70Text? Name { get; init; }
 
     /// <summary>
     /// Contains identification details.
@@ -58,5 +58,5 @@ public record PartyIdentification209
     [IsoXmlTag("Instrs")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Instructions { get; init; }
+    public Max350Text? Instructions { get; init; }
 }

@@ -24,7 +24,7 @@ public record CorporateActionCertificateSD1
     [IsoXmlTag("CertNb")]
     [IsoSimpleType(IsoSimpleType.Max15AlphaNumericText)]
     [StringLength(maximumLength: 15, MinimumLength = 1)]
-    public required IsoMax15AlphaNumericText CertificateNumber { get; init; }
+    public required Max15AlphaNumericText CertificateNumber { get; init; }
 
     /// <summary>
     /// Additional identifier assigned by DTC.
@@ -34,7 +34,7 @@ public record CorporateActionCertificateSD1
     [IsoXmlTag("CertSeqNb")]
     [IsoSimpleType(IsoSimpleType.Max15AlphaNumericText)]
     [StringLength(maximumLength: 15, MinimumLength = 1)]
-    public IsoMax15AlphaNumericText? CertificateSequenceNumber { get; init; }
+    public Max15AlphaNumericText? CertificateSequenceNumber { get; init; }
 
     /// <summary>
     /// Registration name of the beneficial holder.
@@ -43,5 +43,5 @@ public record CorporateActionCertificateSD1
     [DisplayName("Certificate Registration Name")]
     [IsoXmlTag("CertRegnNm")]
     [IsoSimpleType(IsoSimpleType.Max30Text)]
-    public IsoMax30Text? CertificateRegistrationName { get; init; }
+    public Max30Text? CertificateRegistrationName { get; init; }
 }

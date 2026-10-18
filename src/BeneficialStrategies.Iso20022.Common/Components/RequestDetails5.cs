@@ -24,7 +24,7 @@ public record RequestDetails5
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Type { get; init; }
+    public required Max35Text Type { get; init; }
 
     /// <summary>
     /// Reference to the request for which the report is sent.
@@ -34,7 +34,7 @@ public record RequestDetails5
     [IsoXmlTag("ReqRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text RequestReference { get; init; }
+    public required Max35Text RequestReference { get; init; }
 
     /// <summary>
     /// Report key and returned data.

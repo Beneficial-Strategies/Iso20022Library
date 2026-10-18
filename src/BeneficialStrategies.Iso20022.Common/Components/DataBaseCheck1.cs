@@ -23,7 +23,7 @@ public record DataBaseCheck1
     [DisplayName("Database Check")]
     [IsoXmlTag("DBChck")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator DatabaseCheck { get; init; }
+    public required YesNoIndicator DatabaseCheck { get; init; }
 
     /// <summary>
     /// Identification of the database.
@@ -33,5 +33,5 @@ public record DataBaseCheck1
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 }

@@ -24,7 +24,7 @@ public record OtherIdentification1
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Identifies the suffix of the security identification.
@@ -34,7 +34,7 @@ public record OtherIdentification1
     [IsoXmlTag("Sfx")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoMax16Text? Suffix { get; init; }
+    public Max16Text? Suffix { get; init; }
 
     /// <summary>
     /// Type of the identification.

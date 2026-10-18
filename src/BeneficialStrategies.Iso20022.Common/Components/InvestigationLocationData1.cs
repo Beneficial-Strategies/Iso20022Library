@@ -21,7 +21,7 @@ public record InvestigationLocationData1
     /// </summary>
     [DisplayName("Electronic Address")]
     [IsoXmlTag("ElctrncAdr")]
-    public IsoMax2048Text? ElectronicAddress { get; init; }
+    public Max2048Text? ElectronicAddress { get; init; }
 
     /// <summary>
     /// Method.

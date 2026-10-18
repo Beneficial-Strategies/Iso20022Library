@@ -39,5 +39,5 @@ public record IntraDayMarginCall1
     [DisplayName("Time Stamp")]
     [IsoXmlTag("TmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime TimeStamp { get; init; }
+    public required ISODateTime TimeStamp { get; init; }
 }

@@ -40,7 +40,7 @@ public record SettlementTypeAndAdditionalParameters11
     [IsoXmlTag("CmonId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CommonIdentification { get; init; }
+    public Max35Text? CommonIdentification { get; init; }
 
     /// <summary>
     /// Identification assigned by the account servicer to unambiguously identify a corporate action event.
@@ -50,7 +50,7 @@ public record SettlementTypeAndAdditionalParameters11
     [IsoXmlTag("CorpActnEvtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CorporateActionEventIdentification { get; init; }
+    public Max35Text? CorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Indicates whether the settlement transaction was already sent on the market and that it is only sent by an account owner to an account servicer for reconciliation purposes.
@@ -59,7 +59,7 @@ public record SettlementTypeAndAdditionalParameters11
     [DisplayName("Reconciliation Indicator")]
     [IsoXmlTag("RcncltnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ReconciliationIndicator { get; init; }
+    public YesNoIndicator? ReconciliationIndicator { get; init; }
 
     /// <summary>
     /// Unique identification assigned to the instruction by the client.
@@ -69,7 +69,7 @@ public record SettlementTypeAndAdditionalParameters11
     [IsoXmlTag("ClntCollInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClientCollateralInstructionIdentification { get; init; }
+    public Max35Text? ClientCollateralInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification identifying the triparty collateral management transaction from the client&apos;s point of view.
@@ -79,7 +79,7 @@ public record SettlementTypeAndAdditionalParameters11
     [IsoXmlTag("ClntCollTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClientCollateralTransactionIdentification { get; init; }
+    public Max35Text? ClientCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification identifying the triparty collateral management transaction from the triparty agent&apos;s point of view.
@@ -89,7 +89,7 @@ public record SettlementTypeAndAdditionalParameters11
     [IsoXmlTag("TrptyAgtCollTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TripartyAgentCollateralTransactionIdentification { get; init; }
+    public Max35Text? TripartyAgentCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification assigned to the instruction by the triparty agent.
@@ -99,5 +99,5 @@ public record SettlementTypeAndAdditionalParameters11
     [IsoXmlTag("TrptyCollInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TripartyCollateralInstructionIdentification { get; init; }
+    public Max35Text? TripartyCollateralInstructionIdentification { get; init; }
 }

@@ -23,7 +23,7 @@ public record CorporateActionRateSD2
     [DisplayName("Receipt Base Quantity")]
     [IsoXmlTag("RctBaseQty")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? ReceiptBaseQuantity { get; init; }
+    public DecimalNumber? ReceiptBaseQuantity { get; init; }
 
     /// <summary>
     ///  Ordinary shares quantity of the American or Global Depository Receipt(s) per ordinary share(s) ratio.
@@ -32,5 +32,5 @@ public record CorporateActionRateSD2
     [DisplayName("Ordinary Share")]
     [IsoXmlTag("OrdnryShr")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? OrdinaryShare { get; init; }
+    public DecimalNumber? OrdinaryShare { get; init; }
 }

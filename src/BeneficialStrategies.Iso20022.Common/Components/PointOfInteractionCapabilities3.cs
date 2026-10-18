@@ -40,7 +40,7 @@ public record PointOfInteractionCapabilities3
     [DisplayName("PIN Length Capabilities")]
     [IsoXmlTag("PINLngthCpblties")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? PINLengthCapabilities { get; init; }
+    public Number? PINLengthCapabilities { get; init; }
 
     /// <summary>
     /// Maximum number of characters of the approval code the POI is able to manage.
@@ -49,7 +49,7 @@ public record PointOfInteractionCapabilities3
     [DisplayName("Approval Code Length")]
     [IsoXmlTag("ApprvlCdLngth")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? ApprovalCodeLength { get; init; }
+    public Number? ApprovalCodeLength { get; init; }
 
     /// <summary>
     /// True if the POI is able to capture card.
@@ -58,7 +58,7 @@ public record PointOfInteractionCapabilities3
     [DisplayName("Card Capture Capable")]
     [IsoXmlTag("CardCaptrCpbl")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CardCaptureCapable { get; init; }
+    public TrueFalseIndicator? CardCaptureCapable { get; init; }
 
     /// <summary>
     /// On-line and off-line capabilities of the POI (Point Of Interaction).
@@ -83,7 +83,7 @@ public record PointOfInteractionCapabilities3
     [DisplayName("Print Line Width")]
     [IsoXmlTag("PrtLineWidth")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? PrintLineWidth { get; init; }
+    public Number? PrintLineWidth { get; init; }
 
     /// <summary>
     /// Available language in the display and printer interface.

@@ -56,7 +56,7 @@ public record TradeContract4
     /// </summary>
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
-    public IsoISODate? MaturityDate { get; init; }
+    public DateOnly? MaturityDate { get; init; }
 
     /// <summary>
     /// Payment Schedule.
@@ -70,7 +70,7 @@ public record TradeContract4
     /// </summary>
     [DisplayName("Prolongation Flag")]
     [IsoXmlTag("PrlngtnFlg")]
-    public IsoTrueFalseIndicator? ProlongationFlag { get; init; }
+    public TrueFalseIndicator? ProlongationFlag { get; init; }
 
     /// <summary>
     /// Seller.
@@ -98,12 +98,12 @@ public record TradeContract4
     /// </summary>
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
-    public IsoISODate? StartDate { get; init; }
+    public DateOnly? StartDate { get; init; }
 
     /// <summary>
     /// Trade Type Identification.
     /// </summary>
     [DisplayName("Trade Type Identification")]
     [IsoXmlTag("TradTpId")]
-    public IsoMax35Text? TradeTypeIdentification { get; init; }
+    public Max35Text? TradeTypeIdentification { get; init; }
 }

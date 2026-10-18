@@ -28,5 +28,5 @@ public record MissingCover6
     /// </summary>
     [DisplayName("Missing Cover Indicator")]
     [IsoXmlTag("MssngCoverInd")]
-    public required IsoYesNoIndicator MissingCoverIndicator { get; init; }
+    public required YesNoIndicator MissingCoverIndicator { get; init; }
 }

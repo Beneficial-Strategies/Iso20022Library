@@ -22,7 +22,7 @@ public record LocalAddress2
     [IsoId("_qXnMoT_XEfCQAqQ9lolFUg")]
     [DisplayName("Line1")]
     [IsoXmlTag("Line1")]
-    public IsoMax200Text? Line1 { get; init; }
+    public Max200Text? Line1 { get; init; }
 
     /// <summary>
     /// Second line of an address.
@@ -30,7 +30,7 @@ public record LocalAddress2
     [IsoId("_qXnMpT_XEfCQAqQ9lolFUg")]
     [DisplayName("Line2")]
     [IsoXmlTag("Line2")]
-    public IsoMax200Text? Line2 { get; init; }
+    public Max200Text? Line2 { get; init; }
 
     /// <summary>
     /// Name of a street or thoroughfare.
@@ -38,7 +38,7 @@ public record LocalAddress2
     [IsoId("_qXnMqT_XEfCQAqQ9lolFUg")]
     [DisplayName("Street Name")]
     [IsoXmlTag("StrtNm")]
-    public IsoMax200Text? StreetName { get; init; }
+    public Max200Text? StreetName { get; init; }
 
     /// <summary>
     /// Number that identifies the position of a building on a street.
@@ -46,7 +46,7 @@ public record LocalAddress2
     [IsoId("_qXnMrT_XEfCQAqQ9lolFUg")]
     [DisplayName("Building Number")]
     [IsoXmlTag("BldgNb")]
-    public IsoMax35Text? BuildingNumber { get; init; }
+    public Max35Text? BuildingNumber { get; init; }
 
     /// <summary>
     /// Identifier consisting of a group of letters and/or numbers that is added to a postal address to assist the sorting of mail.
@@ -54,7 +54,7 @@ public record LocalAddress2
     [IsoId("_qXnMsT_XEfCQAqQ9lolFUg")]
     [DisplayName("Postal Code")]
     [IsoXmlTag("PstlCd")]
-    public IsoMax35Text? PostalCode { get; init; }
+    public Max35Text? PostalCode { get; init; }
 
     /// <summary>
     /// Name of a built-up area, with defined boundaries, and a local government.
@@ -62,7 +62,7 @@ public record LocalAddress2
     [IsoId("_qXnMtT_XEfCQAqQ9lolFUg")]
     [DisplayName("Town Name")]
     [IsoXmlTag("TwnNm")]
-    public IsoMax100Text? TownName { get; init; }
+    public Max100Text? TownName { get; init; }
 
     /// <summary>
     /// Identifies a subdivision of a country such as state, region, county.
@@ -70,7 +70,7 @@ public record LocalAddress2
     [IsoId("_qXnMuT_XEfCQAqQ9lolFUg")]
     [DisplayName("Country Sub Division Minor Name")]
     [IsoXmlTag("CtrySubDvsnMnrNm")]
-    public IsoMax100Text? CountrySubDivisionMinorName { get; init; }
+    public Max100Text? CountrySubDivisionMinorName { get; init; }
 
     /// <summary>
     /// Identifies a major subdivision of a country such as province, state, or territory.
@@ -78,5 +78,5 @@ public record LocalAddress2
     [IsoId("_qXnMvT_XEfCQAqQ9lolFUg")]
     [DisplayName("Country Sub Division Major Name")]
     [IsoXmlTag("CtrySubDvsnMjrNm")]
-    public IsoMax100Text? CountrySubDivisionMajorName { get; init; }
+    public Max100Text? CountrySubDivisionMajorName { get; init; }
 }

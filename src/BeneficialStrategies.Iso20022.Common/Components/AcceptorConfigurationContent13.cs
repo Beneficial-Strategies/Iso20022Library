@@ -49,7 +49,7 @@ public record AcceptorConfigurationContent13
     /// </summary>
     [DisplayName("Replace Configuration")]
     [IsoXmlTag("RplcCfgtn")]
-    public IsoTrueFalseIndicator? ReplaceConfiguration { get; init; }
+    public TrueFalseIndicator? ReplaceConfiguration { get; init; }
 
     /// <summary>
     /// Sale To POI Parameters.

@@ -24,7 +24,7 @@ public record StructuredLongPostalAddress1
     [IsoXmlTag("BldgNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? BuildingName { get; init; }
+    public Max35Text? BuildingName { get; init; }
 
     /// <summary>
     /// Name of a street or thoroughfare.
@@ -34,7 +34,7 @@ public record StructuredLongPostalAddress1
     [IsoXmlTag("StrtNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? StreetName { get; init; }
+    public Max35Text? StreetName { get; init; }
 
     /// <summary>
     /// Number that identifies the position of a building on a street.
@@ -44,7 +44,7 @@ public record StructuredLongPostalAddress1
     [IsoXmlTag("StrtBldgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? StreetBuildingIdentification { get; init; }
+    public Max35Text? StreetBuildingIdentification { get; init; }
 
     /// <summary>
     /// Floor or storey within a building.
@@ -54,7 +54,7 @@ public record StructuredLongPostalAddress1
     [IsoXmlTag("Flr")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoMax16Text? Floor { get; init; }
+    public Max16Text? Floor { get; init; }
 
     /// <summary>
     /// Name of a built-up area, with defined boundaries, and a local government.
@@ -64,7 +64,7 @@ public record StructuredLongPostalAddress1
     [IsoXmlTag("TwnNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TownName { get; init; }
+    public required Max35Text TownName { get; init; }
 
     /// <summary>
     /// Name of a district, that is, a part of a town or region.
@@ -74,7 +74,7 @@ public record StructuredLongPostalAddress1
     [IsoXmlTag("DstrctNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DistrictName { get; init; }
+    public Max35Text? DistrictName { get; init; }
 
     /// <summary>
     /// Identification of an administrative division of a country, state, or territory.
@@ -84,7 +84,7 @@ public record StructuredLongPostalAddress1
     [IsoXmlTag("RgnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RegionIdentification { get; init; }
+    public Max35Text? RegionIdentification { get; init; }
 
     /// <summary>
     /// Organised political community or area forming a part of a federation.
@@ -94,7 +94,7 @@ public record StructuredLongPostalAddress1
     [IsoXmlTag("Stat")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? State { get; init; }
+    public Max35Text? State { get; init; }
 
     /// <summary>
     /// Identifier of a county.
@@ -104,7 +104,7 @@ public record StructuredLongPostalAddress1
     [IsoXmlTag("CtyId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CountyIdentification { get; init; }
+    public Max35Text? CountyIdentification { get; init; }
 
     /// <summary>
     /// Nation with its own government.
@@ -122,7 +122,7 @@ public record StructuredLongPostalAddress1
     [IsoXmlTag("PstCdId")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoMax16Text PostCodeIdentification { get; init; }
+    public required Max16Text PostCodeIdentification { get; init; }
 
     /// <summary>
     /// Numbered box in a post office, assigned to a person or organisation, where letters are kept until called for.
@@ -132,5 +132,5 @@ public record StructuredLongPostalAddress1
     [IsoXmlTag("POB")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoMax16Text? PostOfficeBox { get; init; }
+    public Max16Text? PostOfficeBox { get; init; }
 }

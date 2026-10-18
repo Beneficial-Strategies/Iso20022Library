@@ -21,28 +21,28 @@ public record DetailedTransactionStatistics30
     /// </summary>
     [DisplayName("Total Corrected Rejections")]
     [IsoXmlTag("TtlCrrctdRjctns")]
-    public IsoMax20PositiveNumber? TotalCorrectedRejections { get; init; }
+    public Max20PositiveNumber? TotalCorrectedRejections { get; init; }
 
     /// <summary>
     /// Total Number Of Transactions.
     /// </summary>
     [DisplayName("Total Number Of Transactions")]
     [IsoXmlTag("TtlNbOfTxs")]
-    public required IsoMax20PositiveNumber TotalNumberOfTransactions { get; init; }
+    public required Max20PositiveNumber TotalNumberOfTransactions { get; init; }
 
     /// <summary>
     /// Total Number Of Transactions Accepted.
     /// </summary>
     [DisplayName("Total Number Of Transactions Accepted")]
     [IsoXmlTag("TtlNbOfTxsAccptd")]
-    public required IsoMax20PositiveNumber TotalNumberOfTransactionsAccepted { get; init; }
+    public required Max20PositiveNumber TotalNumberOfTransactionsAccepted { get; init; }
 
     /// <summary>
     /// Total Number Of Transactions Rejected.
     /// </summary>
     [DisplayName("Total Number Of Transactions Rejected")]
     [IsoXmlTag("TtlNbOfTxsRjctd")]
-    public required IsoMax20PositiveNumber TotalNumberOfTransactionsRejected { get; init; }
+    public required Max20PositiveNumber TotalNumberOfTransactionsRejected { get; init; }
 
     /// <summary>
     /// Transactions Rejections Reason.

@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatus5Choice
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text Identification { get; init; }
+        public required Max35Text Identification { get; init; }
 
         /// <summary>
         /// Party that created the investigation case.
@@ -41,6 +41,6 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatus5Choice
         [DisplayName("Reopen Case Indication")]
         [IsoXmlTag("ReopCaseIndctn")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? ReopenCaseIndication { get; init; }
+        public YesNoIndicator? ReopenCaseIndication { get; init; }
     }
 }

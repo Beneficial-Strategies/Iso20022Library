@@ -49,5 +49,5 @@ public record SyndicatedLoan3
     /// </summary>
     [DisplayName("Share")]
     [IsoXmlTag("Shr")]
-    public IsoPercentageRate? Share { get; init; }
+    public PercentageRate? Share { get; init; }
 }

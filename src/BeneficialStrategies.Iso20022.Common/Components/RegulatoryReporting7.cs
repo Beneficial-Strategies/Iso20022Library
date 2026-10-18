@@ -75,7 +75,7 @@ public record RegulatoryReporting7
     [DisplayName("Clearing Threshold Indicator")]
     [IsoXmlTag("ClrThrshldInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ClearingThresholdIndicator { get; init; }
+    public YesNoIndicator? ClearingThresholdIndicator { get; init; }
 
     /// <summary>
     /// Specifies the reference number assigned by the Central Counterparty (CCP).
@@ -85,7 +85,7 @@ public record RegulatoryReporting7
     [IsoXmlTag("ClrdPdctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClearedProductIdentification { get; init; }
+    public Max35Text? ClearedProductIdentification { get; init; }
 
     /// <summary>
     /// Specifies the underlying product type.
@@ -119,7 +119,7 @@ public record RegulatoryReporting7
     [IsoXmlTag("ExctnVn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ExecutionVenue { get; init; }
+    public Max35Text? ExecutionVenue { get; init; }
 
     /// <summary>
     /// Specifies the date and time of the execution of the transaction in Coordinated Universal Time (UTC).
@@ -136,7 +136,7 @@ public record RegulatoryReporting7
     [DisplayName("Non Standard Flag")]
     [IsoXmlTag("NonStdFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? NonStandardFlag { get; init; }
+    public YesNoIndicator? NonStandardFlag { get; init; }
 
     /// <summary>
     /// Specifies the common reference or correlation identification for a swap transaction where the near and far leg are confirmed separately.
@@ -145,7 +145,7 @@ public record RegulatoryReporting7
     [DisplayName("Link Swap Identification")]
     [IsoXmlTag("LkSwpId")]
     [IsoSimpleType(IsoSimpleType.Exact42Text)]
-    public IsoExact42Text? LinkSwapIdentification { get; init; }
+    public Exact42Text? LinkSwapIdentification { get; init; }
 
     /// <summary>
     /// Specifies the financial nature of the reporting counterparty.
@@ -154,7 +154,7 @@ public record RegulatoryReporting7
     [DisplayName("Financial Nature Of The Counterparty Indicator")]
     [IsoXmlTag("FinNtrOfTheCtrPtyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? FinancialNatureOfTheCounterpartyIndicator { get; init; }
+    public YesNoIndicator? FinancialNatureOfTheCounterpartyIndicator { get; init; }
 
     /// <summary>
     /// Specifies if the collateral is posted on a portfolio basis.
@@ -163,7 +163,7 @@ public record RegulatoryReporting7
     [DisplayName("Collateral Portfolio Indicator")]
     [IsoXmlTag("CollPrtflInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? CollateralPortfolioIndicator { get; init; }
+    public YesNoIndicator? CollateralPortfolioIndicator { get; init; }
 
     /// <summary>
     /// Identifies the portfolio code to which the trade belongs if the collateral is posted on a portfolio basis (and not trade by trade).
@@ -173,7 +173,7 @@ public record RegulatoryReporting7
     [IsoXmlTag("CollPrtflCd")]
     [IsoSimpleType(IsoSimpleType.Max10Text)]
     [StringLength(maximumLength: 10, MinimumLength = 1)]
-    public IsoMax10Text? CollateralPortfolioCode { get; init; }
+    public Max10Text? CollateralPortfolioCode { get; init; }
 
     /// <summary>
     /// Indicates if the trade results from portfolio compression.
@@ -182,7 +182,7 @@ public record RegulatoryReporting7
     [DisplayName("Portfolio Compression Indicator")]
     [IsoXmlTag("PrtflCmprssnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PortfolioCompressionIndicator { get; init; }
+    public YesNoIndicator? PortfolioCompressionIndicator { get; init; }
 
     /// <summary>
     /// Specifies the corporate sector of the counterparty.
@@ -199,7 +199,7 @@ public record RegulatoryReporting7
     [DisplayName("Trade With Non EEA Counterparty Indicator")]
     [IsoXmlTag("TradWthNonEEACtrPtyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? TradeWithNonEEACounterpartyIndicator { get; init; }
+    public YesNoIndicator? TradeWithNonEEACounterpartyIndicator { get; init; }
 
     /// <summary>
     /// Indicate if a reported trade falls under the definition of intragroup transaction, as defined by European Securities and Markets Authority (ESMA) in the Technical Standards.
@@ -208,7 +208,7 @@ public record RegulatoryReporting7
     [DisplayName("Intragroup Trade Indicator")]
     [IsoXmlTag("NtrgrpTradInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? IntragroupTradeIndicator { get; init; }
+    public YesNoIndicator? IntragroupTradeIndicator { get; init; }
 
     /// <summary>
     /// Specifies whether the contract is objectively measurable as directly linked to the non-financial counterparty&apos;s commercial or treasury financing activity.
@@ -217,7 +217,7 @@ public record RegulatoryReporting7
     [DisplayName("Commercial Or Treasury Financing Indicator")]
     [IsoXmlTag("ComrclOrTrsrFincgInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? CommercialOrTreasuryFinancingIndicator { get; init; }
+    public YesNoIndicator? CommercialOrTreasuryFinancingIndicator { get; init; }
 
     /// <summary>
     /// Identification of a security, as assigned under a formal or proprietary identification scheme.
@@ -234,7 +234,7 @@ public record RegulatoryReporting7
     [DisplayName("Confirmation Date And Timestamp")]
     [IsoXmlTag("ConfDtAndTmstmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? ConfirmationDateAndTimestamp { get; init; }
+    public ISODateTime? ConfirmationDateAndTimestamp { get; init; }
 
     /// <summary>
     /// Specifies the time at which the Central Counterparty (CCP) has legally taken on the clearing of the trade in Universal Time Coordinated (UTC).
@@ -243,7 +243,7 @@ public record RegulatoryReporting7
     [DisplayName("Clearing Timestamp")]
     [IsoXmlTag("ClrTmstmp")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? ClearingTimestamp { get; init; }
+    public ISOTime? ClearingTimestamp { get; init; }
 
     /// <summary>
     /// Provides the commission and fee type anf amout or rate.
@@ -261,5 +261,5 @@ public record RegulatoryReporting7
     [IsoXmlTag("AddtlRptgInf")]
     [IsoSimpleType(IsoSimpleType.Max210Text)]
     [StringLength(maximumLength: 210, MinimumLength = 1)]
-    public IsoMax210Text? AdditionalReportingInformation { get; init; }
+    public Max210Text? AdditionalReportingInformation { get; init; }
 }

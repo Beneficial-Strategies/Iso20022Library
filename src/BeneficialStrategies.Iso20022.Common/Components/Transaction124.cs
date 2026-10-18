@@ -24,7 +24,7 @@ public record Transaction124
     [IsoXmlTag("ClntTrptyCollTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClientTripartyCollateralTransactionIdentification { get; init; }
+    public Max35Text? ClientTripartyCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique reference identifying the triparty-agent/service-provider collateral management transaction from the triparty-agent&apos;s/service-provider&apos;s point of view.
@@ -34,7 +34,7 @@ public record Transaction124
     [IsoXmlTag("TrptyAgtSvcPrvdrCollTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; }
+    public required Max35Text TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique collateral transaction reference assigned by counterparty.
@@ -44,7 +44,7 @@ public record Transaction124
     [IsoXmlTag("CtrPtyCollTxRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CounterpartyCollateralTransactionReference { get; init; }
+    public Max35Text? CounterpartyCollateralTransactionReference { get; init; }
 
     /// <summary>
     /// Unique identification (UTI) agreed upon by the two trade counterparties to identify the trade.
@@ -54,7 +54,7 @@ public record Transaction124
     [IsoXmlTag("CmonTxId")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoMax52Text? CommonTransactionIdentification { get; init; }
+    public Max52Text? CommonTransactionIdentification { get; init; }
 
     /// <summary>
     /// Specifies the underlying business area/type of trade causing the exposure.
@@ -135,7 +135,7 @@ public record Transaction124
     [DisplayName("Margin Rate")]
     [IsoXmlTag("MrgnRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? MarginRate { get; init; }
+    public PercentageRate? MarginRate { get; init; }
 
     /// <summary>
     /// Margin rate over or under an index.
@@ -145,7 +145,7 @@ public record Transaction124
     [DisplayName("Spread Rate")]
     [IsoXmlTag("SprdRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? SpreadRate { get; init; }
+    public PercentageRate? SpreadRate { get; init; }
 
     /// <summary>
     /// Specifies the computation method of (accrued) interest of the financial instrument.
@@ -162,7 +162,7 @@ public record Transaction124
     [DisplayName("Automatic Allocation")]
     [IsoXmlTag("AutomtcAllcn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AutomaticAllocation { get; init; }
+    public YesNoIndicator? AutomaticAllocation { get; init; }
 
     /// <summary>
     /// Provides the status of a  transaction.

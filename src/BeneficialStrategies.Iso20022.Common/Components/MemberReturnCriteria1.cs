@@ -23,7 +23,7 @@ public record MemberReturnCriteria1
     [DisplayName("Name Indicator")]
     [IsoXmlTag("NmInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? NameIndicator { get; init; }
+    public RequestedIndicator? NameIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the member return address is requested.
@@ -32,7 +32,7 @@ public record MemberReturnCriteria1
     [DisplayName("Member Return Address Indicator")]
     [IsoXmlTag("MmbRtrAdrInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? MemberReturnAddressIndicator { get; init; }
+    public RequestedIndicator? MemberReturnAddressIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the member account is requested.
@@ -41,7 +41,7 @@ public record MemberReturnCriteria1
     [DisplayName("Account Indicator")]
     [IsoXmlTag("AcctInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? AccountIndicator { get; init; }
+    public RequestedIndicator? AccountIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the member type is requested.
@@ -50,7 +50,7 @@ public record MemberReturnCriteria1
     [DisplayName("Type Indicator")]
     [IsoXmlTag("TpInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? TypeIndicator { get; init; }
+    public RequestedIndicator? TypeIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the member status is requested.
@@ -59,7 +59,7 @@ public record MemberReturnCriteria1
     [DisplayName("Status Indicator")]
     [IsoXmlTag("StsInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? StatusIndicator { get; init; }
+    public RequestedIndicator? StatusIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the contact references are requested.
@@ -68,7 +68,7 @@ public record MemberReturnCriteria1
     [DisplayName("Contact Reference Indicator")]
     [IsoXmlTag("CtctRefInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? ContactReferenceIndicator { get; init; }
+    public RequestedIndicator? ContactReferenceIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the communication addresses are requested.
@@ -77,5 +77,5 @@ public record MemberReturnCriteria1
     [DisplayName("Communication Address Indicator")]
     [IsoXmlTag("ComAdrInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? CommunicationAddressIndicator { get; init; }
+    public RequestedIndicator? CommunicationAddressIndicator { get; init; }
 }

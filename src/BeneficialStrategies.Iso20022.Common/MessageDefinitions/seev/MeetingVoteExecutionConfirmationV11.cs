@@ -57,7 +57,7 @@ public record MeetingVoteExecutionConfirmationV11 : IOuterRecord
     /// </summary>
     [DisplayName("Meeting Instruction Identification")]
     [IsoXmlTag("MtgInstrId")]
-    public required IsoMax35Text MeetingInstructionIdentification { get; init; }
+    public required Max35Text MeetingInstructionIdentification { get; init; }
 
     /// <summary>
     /// Meeting Reference.
@@ -85,7 +85,7 @@ public record MeetingVoteExecutionConfirmationV11 : IOuterRecord
     /// </summary>
     [DisplayName("Vote Execution Confirmation Identification")]
     [IsoXmlTag("VoteExctnConfId")]
-    public IsoMax35Text? VoteExecutionConfirmationIdentification { get; init; }
+    public Max35Text? VoteExecutionConfirmationIdentification { get; init; }
 
     /// <summary>
     /// Vote Instructions.
@@ -99,5 +99,5 @@ public record MeetingVoteExecutionConfirmationV11 : IOuterRecord
     /// </summary>
     [DisplayName("Vote Instructions Confirmation URL Address")]
     [IsoXmlTag("VoteInstrsConfURLAdr")]
-    public IsoMax2048Text? VoteInstructionsConfirmationURLAddress { get; init; }
+    public Max2048Text? VoteInstructionsConfirmationURLAddress { get; init; }
 }

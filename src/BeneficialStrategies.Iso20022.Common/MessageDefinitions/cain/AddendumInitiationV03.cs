@@ -99,7 +99,7 @@ public record AddendumInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Data Source")]
     [IsoXmlTag("DataSrc")]
-    public IsoMax70Text? DataSource { get; init; }
+    public Max70Text? DataSource { get; init; }
 
     /// <summary>
     /// Destination.
@@ -211,7 +211,7 @@ public record AddendumInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Transaction Description")]
     [IsoXmlTag("TxDesc")]
-    public IsoMax1000Text? TransactionDescription { get; init; }
+    public Max1000Text? TransactionDescription { get; init; }
 
     /// <summary>
     /// Transaction Identification.

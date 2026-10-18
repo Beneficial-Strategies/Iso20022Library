@@ -23,5 +23,5 @@ public record DeviceTransmitMessageResponse1
     [DisplayName("Received Message")]
     [IsoXmlTag("RcvdMsg")]
     [IsoSimpleType(IsoSimpleType.Max100KBinary)]
-    public IsoMax100KBinary? ReceivedMessage { get; init; }
+    public Max100KBinary? ReceivedMessage { get; init; }
 }

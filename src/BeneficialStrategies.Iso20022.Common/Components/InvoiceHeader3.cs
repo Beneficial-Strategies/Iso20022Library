@@ -24,7 +24,7 @@ public record InvoiceHeader3
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Specifies the type of the document, for example commercial invoice.
@@ -40,7 +40,7 @@ public record InvoiceHeader3
     [IsoId("_xeqRAeWoEeevU7McUP3D1w")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public SimpleValueList<IsoMax35Text> Name { get; init; } = [];
+    public SimpleValueList<Max35Text> Name { get; init; } = [];
 
     /// <summary>
     /// Issue date of the document.
@@ -49,7 +49,7 @@ public record InvoiceHeader3
     [DisplayName("Issue Date Time")]
     [IsoXmlTag("IsseDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime IssueDateTime { get; init; }
+    public required ISODateTime IssueDateTime { get; init; }
 
     /// <summary>
     /// Party that issued this invoice document.
@@ -74,7 +74,7 @@ public record InvoiceHeader3
     [DisplayName("Copy Indicator")]
     [IsoXmlTag("CpyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? CopyIndicator { get; init; }
+    public YesNoIndicator? CopyIndicator { get; init; }
 
     /// <summary>
     /// Specifies the function of the document.

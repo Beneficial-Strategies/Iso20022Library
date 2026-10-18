@@ -32,7 +32,7 @@ public record CorporateActionCancellation3
     [IsoXmlTag("CxlRsn")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? CancellationReason { get; init; }
+    public Max140Text? CancellationReason { get; init; }
 
     /// <summary>
     /// Specifies the status of the details of the event.

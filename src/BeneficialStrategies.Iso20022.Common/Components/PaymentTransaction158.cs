@@ -21,14 +21,14 @@ public record PaymentTransaction158
     /// </summary>
     [DisplayName("Acceptance Date Time")]
     [IsoXmlTag("AccptncDtTm")]
-    public IsoISODateTime? AcceptanceDateTime { get; init; }
+    public ISODateTime? AcceptanceDateTime { get; init; }
 
     /// <summary>
     /// Clearing System Reference.
     /// </summary>
     [DisplayName("Clearing System Reference")]
     [IsoXmlTag("ClrSysRef")]
-    public IsoMax35Text? ClearingSystemReference { get; init; }
+    public Max35Text? ClearingSystemReference { get; init; }
 
     /// <summary>
     /// Instructed Agent.
@@ -49,7 +49,7 @@ public record PaymentTransaction158
     /// </summary>
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Original Group Information.
@@ -63,14 +63,14 @@ public record PaymentTransaction158
     /// </summary>
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
-    public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Original Transaction Identification.
     /// </summary>
     [DisplayName("Original Transaction Identification")]
     [IsoXmlTag("OrgnlTxId")]
-    public IsoMax35Text? OriginalTransactionIdentification { get; init; }
+    public Max35Text? OriginalTransactionIdentification { get; init; }
 
     /// <summary>
     /// Original Transaction Reference.
@@ -84,14 +84,14 @@ public record PaymentTransaction158
     /// </summary>
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
-    public IsoUUIDv4Identifier? OriginalUETR { get; init; }
+    public UUIDv4Identifier? OriginalUETR { get; init; }
 
     /// <summary>
     /// Status Request Identification.
     /// </summary>
     [DisplayName("Status Request Identification")]
     [IsoXmlTag("StsReqId")]
-    public IsoMax35Text? StatusRequestIdentification { get; init; }
+    public Max35Text? StatusRequestIdentification { get; init; }
 
     /// <summary>
     /// Supplementary Data.

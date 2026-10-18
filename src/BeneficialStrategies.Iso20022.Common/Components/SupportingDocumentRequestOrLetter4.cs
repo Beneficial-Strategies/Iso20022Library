@@ -28,21 +28,21 @@ public record SupportingDocumentRequestOrLetter4
     /// </summary>
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Description.
     /// </summary>
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax1025Text? Description { get; init; }
+    public Max1025Text? Description { get; init; }
 
     /// <summary>
     /// Due Date.
     /// </summary>
     [DisplayName("Due Date")]
     [IsoXmlTag("DueDt")]
-    public IsoISODate? DueDate { get; init; }
+    public DateOnly? DueDate { get; init; }
 
     /// <summary>
     /// Original References.
@@ -63,14 +63,14 @@ public record SupportingDocumentRequestOrLetter4
     /// </summary>
     [DisplayName("Request Or Letter Identification")]
     [IsoXmlTag("ReqOrLttrId")]
-    public required IsoMax35Text RequestOrLetterIdentification { get; init; }
+    public required Max35Text RequestOrLetterIdentification { get; init; }
 
     /// <summary>
     /// Response Required.
     /// </summary>
     [DisplayName("Response Required")]
     [IsoXmlTag("RspnReqrd")]
-    public required IsoTrueFalseIndicator ResponseRequired { get; init; }
+    public required TrueFalseIndicator ResponseRequired { get; init; }
 
     /// <summary>
     /// Sender.
@@ -84,7 +84,7 @@ public record SupportingDocumentRequestOrLetter4
     /// </summary>
     [DisplayName("Subject")]
     [IsoXmlTag("Sbjt")]
-    public required IsoMax140Text Subject { get; init; }
+    public required Max140Text Subject { get; init; }
 
     /// <summary>
     /// Supplementary Data.

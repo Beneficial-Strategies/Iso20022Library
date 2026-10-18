@@ -24,7 +24,7 @@ public record NettingCutOffReportData2
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the net report was generated.
@@ -33,7 +33,7 @@ public record NettingCutOffReportData2
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// Describes the type of net report, indicating how the obligations have been calculated.
@@ -43,7 +43,7 @@ public record NettingCutOffReportData2
     [IsoXmlTag("RptTp")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public required IsoMax4Text ReportType { get; init; }
+    public required Max4Text ReportType { get; init; }
 
     /// <summary>
     /// Date on which the proposed netting cut off will become active.
@@ -52,7 +52,7 @@ public record NettingCutOffReportData2
     [DisplayName("Activation Date")]
     [IsoXmlTag("ActvtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ActivationDate { get; init; }
+    public required DateOnly ActivationDate { get; init; }
 
     /// <summary>
     /// Describes the participant receiving the net report.
@@ -78,7 +78,7 @@ public record NettingCutOffReportData2
     [IsoXmlTag("NetSvcTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? NetServiceType { get; init; }
+    public Max35Text? NetServiceType { get; init; }
 
     /// <summary>
     /// Page number of the message (within the net cut off report) and continuation indicator to indicate that the report is to continue or that the message is the last page of the report.

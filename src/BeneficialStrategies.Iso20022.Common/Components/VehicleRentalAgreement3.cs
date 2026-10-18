@@ -28,42 +28,42 @@ public record VehicleRentalAgreement3
     /// </summary>
     [DisplayName("Adjusted")]
     [IsoXmlTag("Adjstd")]
-    public IsoTrueFalseIndicator? Adjusted { get; init; }
+    public TrueFalseIndicator? Adjusted { get; init; }
 
     /// <summary>
     /// Check In Date.
     /// </summary>
     [DisplayName("Check In Date")]
     [IsoXmlTag("ChckInDt")]
-    public IsoISODate? CheckInDate { get; init; }
+    public DateOnly? CheckInDate { get; init; }
 
     /// <summary>
     /// Check In Time.
     /// </summary>
     [DisplayName("Check In Time")]
     [IsoXmlTag("ChckInTm")]
-    public IsoISOTime? CheckInTime { get; init; }
+    public ISOTime? CheckInTime { get; init; }
 
     /// <summary>
     /// Check Out Date.
     /// </summary>
     [DisplayName("Check Out Date")]
     [IsoXmlTag("ChckOutDt")]
-    public IsoISODate? CheckOutDate { get; init; }
+    public DateOnly? CheckOutDate { get; init; }
 
     /// <summary>
     /// Check Out Time.
     /// </summary>
     [DisplayName("Check Out Time")]
     [IsoXmlTag("ChckOutTm")]
-    public IsoISOTime? CheckOutTime { get; init; }
+    public ISOTime? CheckOutTime { get; init; }
 
     /// <summary>
     /// Class.
     /// </summary>
     [DisplayName("Class")]
     [IsoXmlTag("Clss")]
-    public IsoMax35Text? Class { get; init; }
+    public Max35Text? Class { get; init; }
 
     /// <summary>
     /// Discount Programme.
@@ -77,7 +77,7 @@ public record VehicleRentalAgreement3
     /// </summary>
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
-    public IsoMax4NumericText? Duration { get; init; }
+    public Max4NumericText? Duration { get; init; }
 
     /// <summary>
     /// Estimated Tax.
@@ -91,7 +91,7 @@ public record VehicleRentalAgreement3
     /// </summary>
     [DisplayName("Insurance")]
     [IsoXmlTag("Insrnc")]
-    public IsoTrueFalseIndicator? Insurance { get; init; }
+    public TrueFalseIndicator? Insurance { get; init; }
 
     /// <summary>
     /// Loyalty Programme.
@@ -105,21 +105,21 @@ public record VehicleRentalAgreement3
     /// </summary>
     [DisplayName("Make")]
     [IsoXmlTag("Make")]
-    public IsoMax35NumericText? Make { get; init; }
+    public Max35NumericText? Make { get; init; }
 
     /// <summary>
     /// Model.
     /// </summary>
     [DisplayName("Model")]
     [IsoXmlTag("Mdl")]
-    public IsoMax35NumericText? Model { get; init; }
+    public Max35NumericText? Model { get; init; }
 
     /// <summary>
     /// Number.
     /// </summary>
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
-    public IsoMax35Text? Number { get; init; }
+    public Max35Text? Number { get; init; }
 
     /// <summary>
     /// Pickup Location.
@@ -133,7 +133,7 @@ public record VehicleRentalAgreement3
     /// </summary>
     [DisplayName("Registration Number")]
     [IsoXmlTag("RegnNb")]
-    public IsoMax35Text? RegistrationNumber { get; init; }
+    public Max35Text? RegistrationNumber { get; init; }
 
     /// <summary>
     /// Rental Details.

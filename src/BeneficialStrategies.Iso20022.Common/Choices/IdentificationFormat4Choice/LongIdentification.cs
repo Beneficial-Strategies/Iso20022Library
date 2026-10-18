@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationFormat4Choice
         [IsoXmlTag("LngId")]
         [IsoSimpleType(IsoSimpleType.RestrictedFINXMax30Text)]
         [StringLength(maximumLength: 30, MinimumLength = 1)]
-        public required IsoRestrictedFINXMax30Text Value { get; init; }
+        public required RestrictedFINXMax30Text Value { get; init; }
     }
 }

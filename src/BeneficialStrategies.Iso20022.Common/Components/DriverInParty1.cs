@@ -24,7 +24,7 @@ public record DriverInParty1
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Name { get; init; }
+    public Max70Text? Name { get; init; }
 
     /// <summary>
     /// Address of driver in party.
@@ -49,7 +49,7 @@ public record DriverInParty1
     [DisplayName("Date Of Birth")]
     [IsoXmlTag("DtOfBirth")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DateOfBirth { get; init; }
+    public DateOnly? DateOfBirth { get; init; }
 
     /// <summary>
     /// Age of driver.
@@ -58,7 +58,7 @@ public record DriverInParty1
     [DisplayName("Age")]
     [IsoXmlTag("Age")]
     [IsoSimpleType(IsoSimpleType.Max2NumericText)]
-    public IsoMax2NumericText? Age { get; init; }
+    public Max2NumericText? Age { get; init; }
 
     /// <summary>
     /// Credential used by the driver for identification.

@@ -35,7 +35,7 @@ public record LoginResponse6
     /// </summary>
     [DisplayName("POI Date Time")]
     [IsoXmlTag("POIDtTm")]
-    public required IsoISODateTime POIDateTime { get; init; }
+    public required ISODateTime POIDateTime { get; init; }
 
     /// <summary>
     /// POI Software.

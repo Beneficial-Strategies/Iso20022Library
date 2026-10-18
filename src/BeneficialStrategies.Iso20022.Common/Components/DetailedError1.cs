@@ -24,7 +24,7 @@ public record DetailedError1
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Type { get; init; }
+    public required Max35Text Type { get; init; }
 
     /// <summary>
     /// Detailed description of the error or amendment.
@@ -34,7 +34,7 @@ public record DetailedError1
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public required IsoMax500Text Description { get; init; }
+    public required Max500Text Description { get; init; }
 
     /// <summary>
     /// Contains the modified value.
@@ -44,5 +44,5 @@ public record DetailedError1
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Value { get; init; }
+    public Max256Text? Value { get; init; }
 }

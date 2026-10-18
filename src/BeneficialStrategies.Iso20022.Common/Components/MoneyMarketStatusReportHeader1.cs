@@ -23,7 +23,7 @@ public record MoneyMarketStatusReportHeader1
     [DisplayName("Reporting Agent")]
     [IsoXmlTag("RptgAgt")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public required IsoLEIIdentifier ReportingAgent { get; init; }
+    public required LEIIdentifier ReportingAgent { get; init; }
 
     /// <summary>
     /// For daily reporting this is the day to which the transaction data in the status message refers (trade date or amendment date if there are corrections).

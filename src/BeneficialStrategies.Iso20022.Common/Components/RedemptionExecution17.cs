@@ -28,7 +28,7 @@ public record RedemptionExecution17
     /// </summary>
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
-    public IsoISODate? CashSettlementDate { get; init; }
+    public DateOnly? CashSettlementDate { get; init; }
 
     /// <summary>
     /// Cash Settlement Details.
@@ -42,14 +42,14 @@ public record RedemptionExecution17
     /// </summary>
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
-    public IsoMax35Text? ClientReference { get; init; }
+    public Max35Text? ClientReference { get; init; }
 
     /// <summary>
     /// Cum Dividend Indicator.
     /// </summary>
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
-    public required IsoYesNoIndicator CumDividendIndicator { get; init; }
+    public required YesNoIndicator CumDividendIndicator { get; init; }
 
     /// <summary>
     /// Customer Conduct Classification.
@@ -70,7 +70,7 @@ public record RedemptionExecution17
     /// </summary>
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
-    public required IsoMax35Text DealReference { get; init; }
+    public required Max35Text DealReference { get; init; }
 
     /// <summary>
     /// Equalisation.
@@ -126,7 +126,7 @@ public record RedemptionExecution17
     /// </summary>
     [DisplayName("Holdings Redemption Rate")]
     [IsoXmlTag("HldgsRedRate")]
-    public IsoPercentageRate? HoldingsRedemptionRate { get; init; }
+    public PercentageRate? HoldingsRedemptionRate { get; init; }
 
     /// <summary>
     /// Income Preference.
@@ -182,14 +182,14 @@ public record RedemptionExecution17
     /// </summary>
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
-    public IsoMax350Text? NonStandardSettlementInformation { get; init; }
+    public Max350Text? NonStandardSettlementInformation { get; init; }
 
     /// <summary>
     /// Order Reference.
     /// </summary>
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
-    public required IsoMax35Text OrderReference { get; init; }
+    public required Max35Text OrderReference { get; init; }
 
     /// <summary>
     /// Order Type.
@@ -210,7 +210,7 @@ public record RedemptionExecution17
     /// </summary>
     [DisplayName("Partially Executed Indicator")]
     [IsoXmlTag("PrtlyExctdInd")]
-    public required IsoYesNoIndicator PartiallyExecutedIndicator { get; init; }
+    public required YesNoIndicator PartiallyExecutedIndicator { get; init; }
 
     /// <summary>
     /// Partial Redemption Withholding Amount.
@@ -224,14 +224,14 @@ public record RedemptionExecution17
     /// </summary>
     [DisplayName("Partial Settlement Of Cash")]
     [IsoXmlTag("PrtlSttlmOfCsh")]
-    public IsoPercentageRate? PartialSettlementOfCash { get; init; }
+    public PercentageRate? PartialSettlementOfCash { get; init; }
 
     /// <summary>
     /// Partial Settlement Of Units.
     /// </summary>
     [DisplayName("Partial Settlement Of Units")]
     [IsoXmlTag("PrtlSttlmOfUnits")]
-    public IsoPercentageRate? PartialSettlementOfUnits { get; init; }
+    public PercentageRate? PartialSettlementOfUnits { get; init; }
 
     /// <summary>
     /// Physical Delivery Details.
@@ -245,7 +245,7 @@ public record RedemptionExecution17
     /// </summary>
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
-    public required IsoYesNoIndicator PhysicalDeliveryIndicator { get; init; }
+    public required YesNoIndicator PhysicalDeliveryIndicator { get; init; }
 
     /// <summary>
     /// Related Party Details.
@@ -343,5 +343,5 @@ public record RedemptionExecution17
     /// </summary>
     [DisplayName("Units Number")]
     [IsoXmlTag("UnitsNb")]
-    public required IsoDecimalNumber UnitsNumber { get; init; }
+    public required DecimalNumber UnitsNumber { get; init; }
 }

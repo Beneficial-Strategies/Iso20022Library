@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeLegNotificationIdentificati
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("UnqTxIdr")]
-        public required IsoUTIIdentifier Value { get; init; }
+        public required UTIIdentifier Value { get; init; }
     }
 }

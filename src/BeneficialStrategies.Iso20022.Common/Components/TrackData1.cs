@@ -23,7 +23,7 @@ public record TrackData1
     [DisplayName("Track Number")]
     [IsoXmlTag("TrckNb")]
     [IsoSimpleType(IsoSimpleType.Exact1NumericText)]
-    public IsoExact1NumericText? TrackNumber { get; init; }
+    public Exact1NumericText? TrackNumber { get; init; }
 
     /// <summary>
     /// Card track content or equivalent.
@@ -33,5 +33,5 @@ public record TrackData1
     [IsoXmlTag("TrckVal")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text TrackValue { get; init; }
+    public required Max140Text TrackValue { get; init; }
 }

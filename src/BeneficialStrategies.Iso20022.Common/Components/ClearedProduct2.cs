@@ -49,14 +49,14 @@ public record ClearedProduct2
     /// </summary>
     [DisplayName("Trades Cleared")]
     [IsoXmlTag("TrdsClrd")]
-    public IsoNonNegativeNumber? TradesCleared { get; init; }
+    public NonNegativeNumber? TradesCleared { get; init; }
 
     /// <summary>
     /// Trading Venue.
     /// </summary>
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
-    public ValueList<IsoMICIdentifier> TradingVenue { get; init; } = [];
+    public ValueList<MICIdentifier> TradingVenue { get; init; } = [];
 
     /// <summary>
     /// Universal Product Identification.

@@ -22,7 +22,7 @@ public record Terminal13
     [IsoId("_IvaAEWP2EfCX7uJiAWHfoQ-id")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax16Text? Identification { get; init; }
+    public Max16Text? Identification { get; init; }
 
     /// <summary>
     /// Type of terminal. P000-P999 reserved for private use, N000-N999 reserved for national use.
@@ -62,7 +62,7 @@ public record Terminal13
     [IsoId("_IvaAEWP2EfCX7uJiAWHfoQ-pnln")]
     [DisplayName("PIN Length Capability")]
     [IsoXmlTag("PINLngthCpblty")]
-    public IsoNumber? PINLengthCapability { get; init; }
+    public Number? PINLengthCapability { get; init; }
 
     /// <summary>
     /// Security characteristic of the PIN Entry device solution.
@@ -78,7 +78,7 @@ public record Terminal13
     [IsoId("_IvaAEWP2EfCX7uJiAWHfoQ-acln")]
     [DisplayName("Approval Code Length")]
     [IsoXmlTag("AprvlCdLngth")]
-    public IsoNumber? ApprovalCodeLength { get; init; }
+    public Number? ApprovalCodeLength { get; init; }
 
     /// <summary>
     /// Maximum data length in bytes that a card issuer can return to the ICC at the terminal.
@@ -86,7 +86,7 @@ public record Terminal13
     [IsoId("_IvaAEWP2EfCX7uJiAWHfoQ-mxsl")]
     [DisplayName("Max Script Length")]
     [IsoXmlTag("MxScrptLngth")]
-    public IsoNumber? MaxScriptLength { get; init; }
+    public Number? MaxScriptLength { get; init; }
 
     /// <summary>
     /// Indicates whether the terminal can capture cards or not.|True: The terminal is able to capture cards|False: The terminal is not able to capture cards.
@@ -94,7 +94,7 @@ public record Terminal13
     [IsoId("_IvaAEWP2EfCX7uJiAWHfoQ-cccp")]
     [DisplayName("Card Capture Capable")]
     [IsoXmlTag("CardCaptrCpbl")]
-    public IsoTrueFalseIndicator? CardCaptureCapable { get; init; }
+    public TrueFalseIndicator? CardCaptureCapable { get; init; }
 
     /// <summary>
     /// Capability of the terminal to go online.
@@ -126,7 +126,7 @@ public record Terminal13
     [IsoId("_IvaAEWP2EfCX7uJiAWHfoQ-tmss")]
     [DisplayName("Temporary Secure Storage")]
     [IsoXmlTag("TmpryScrtStrg")]
-    public IsoTrueFalseIndicator? TemporarySecureStorage { get; init; }
+    public TrueFalseIndicator? TemporarySecureStorage { get; init; }
 
     /// <summary>
     /// Type of terminal integration at a point of service location.
@@ -142,7 +142,7 @@ public record Terminal13
     [IsoId("_IvaAEWP2EfCX7uJiAWHfoQ-gelo")]
     [DisplayName("Geographic Location")]
     [IsoXmlTag("GeoLctn")]
-    public IsoGeographicPointInDecimalDegreesText? GeographicLocation { get; init; }
+    public GeographicPointInDecimalDegreesText? GeographicLocation { get; init; }
 
     /// <summary>
     /// Indicates whether the terminal is operated outdoor or indoor at the point of service.|True: The terminal is operated outdoor|False: The terminal is operated indoor
@@ -150,7 +150,7 @@ public record Terminal13
     [IsoId("_IvaAEWP2EfCX7uJiAWHfoQ-outd")]
     [DisplayName("Outdoor")]
     [IsoXmlTag("Outdr")]
-    public IsoTrueFalseIndicator? Outdoor { get; init; }
+    public TrueFalseIndicator? Outdoor { get; init; }
 
     /// <summary>
     /// Indicates whether the terminal is operated on- or off-premises at the point of service.|True: The terminal is operated off premises.|False: The terminal is operated on premises.
@@ -158,7 +158,7 @@ public record Terminal13
     [IsoId("_IvaAEWP2EfCX7uJiAWHfoQ-offp")]
     [DisplayName("Off Premises")]
     [IsoXmlTag("OffPrmss")]
-    public IsoTrueFalseIndicator? OffPremises { get; init; }
+    public TrueFalseIndicator? OffPremises { get; init; }
 
     /// <summary>
     /// Indicates whether the transaction was performed on board.||True: The terminal is located on board.|False: The terminal is not located on board.
@@ -166,7 +166,7 @@ public record Terminal13
     [IsoId("_IvaAEWP2EfCX7uJiAWHfoQ-onbd")]
     [DisplayName("On Board")]
     [IsoXmlTag("OnBrd")]
-    public IsoTrueFalseIndicator? OnBoard { get; init; }
+    public TrueFalseIndicator? OnBoard { get; init; }
 
     /// <summary>
     /// Serial number identifying an occurrence of an hardware component.
@@ -174,7 +174,7 @@ public record Terminal13
     [IsoId("_IvaAEWP2EfCX7uJiAWHfoQ-srnb")]
     [DisplayName("Serial Number")]
     [IsoXmlTag("SerlNb")]
-    public IsoMax35Text? SerialNumber { get; init; }
+    public Max35Text? SerialNumber { get; init; }
 
     /// <summary>
     /// Terminal software information.
@@ -190,7 +190,7 @@ public record Terminal13
     [IsoId("_IvaAEWP2EfCX7uJiAWHfoQ-crti")]
     [DisplayName("Certification Identification")]
     [IsoXmlTag("CertfctnId")]
-    public IsoMax256Text? CertificationIdentification { get; init; }
+    public Max256Text? CertificationIdentification { get; init; }
 
     /// <summary>
     /// Country of the terminal.
@@ -206,7 +206,7 @@ public record Terminal13
     [IsoId("_IvaAEWP2EfCX7uJiAWHfoQ-pvdt")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications. 
@@ -214,5 +214,5 @@ public record Terminal13
     [IsoId("_IvaAEWP2EfCX7uJiAWHfoQ-ntdt")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

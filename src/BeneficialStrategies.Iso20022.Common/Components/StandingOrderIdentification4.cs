@@ -24,7 +24,7 @@ public record StandingOrderIdentification4
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Identification { get; init; }
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.|.

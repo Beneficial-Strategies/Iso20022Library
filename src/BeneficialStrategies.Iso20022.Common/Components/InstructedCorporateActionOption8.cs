@@ -23,7 +23,7 @@ public record InstructedCorporateActionOption8
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public IsoExact3NumericText? OptionNumber { get; init; }
+    public Exact3NumericText? OptionNumber { get; init; }
 
     /// <summary>
     /// Specifies the corporate action options available to the account owner.

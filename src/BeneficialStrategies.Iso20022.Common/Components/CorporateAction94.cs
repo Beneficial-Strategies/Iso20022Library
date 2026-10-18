@@ -62,7 +62,7 @@ public record CorporateAction94
     [IsoId("_H737-_IIEfCS-OXqezZQmw")]
     [DisplayName("Interest Accrued Number Of Days")]
     [IsoXmlTag("IntrstAcrdNbOfDays")]
-    public IsoMax3Number? InterestAccruedNumberOfDays { get; init; }
+    public Max3Number? InterestAccruedNumberOfDays { get; init; }
 
     /// <summary>
     /// Number of the coupon attached/associated with a security.
@@ -78,7 +78,7 @@ public record CorporateAction94
     [IsoId("_H738C_IIEfCS-OXqezZQmw")]
     [DisplayName("Acceptance Priority Level")]
     [IsoXmlTag("AccptncPrtyLvl")]
-    public IsoExact3UpperCaseAlphaNumericText? AcceptancePriorityLevel { get; init; }
+    public Exact3UpperCaseAlphaNumericText? AcceptancePriorityLevel { get; init; }
 
     /// <summary>
     /// Indicates whether certification/breakdown is required.
@@ -86,7 +86,7 @@ public record CorporateAction94
     [IsoId("_H738DfIIEfCS-OXqezZQmw")]
     [DisplayName("Certification Breakdown Indicator")]
     [IsoXmlTag("CertfctnBrkdwnInd")]
-    public IsoYesNoIndicator? CertificationBreakdownIndicator { get; init; }
+    public YesNoIndicator? CertificationBreakdownIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether charges apply to the holder, for instance redemption charges.
@@ -94,7 +94,7 @@ public record CorporateAction94
     [IsoId("_H738FfIIEfCS-OXqezZQmw")]
     [DisplayName("Charges Applied Indicator")]
     [IsoXmlTag("ChrgsApldInd")]
-    public IsoYesNoIndicator? ChargesAppliedIndicator { get; init; }
+    public YesNoIndicator? ChargesAppliedIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether restrictions apply to the corporate action event or not.
@@ -102,7 +102,7 @@ public record CorporateAction94
     [IsoId("_H738HfIIEfCS-OXqezZQmw")]
     [DisplayName("Restriction Indicator")]
     [IsoXmlTag("RstrctnInd")]
-    public IsoYesNoIndicator? RestrictionIndicator { get; init; }
+    public YesNoIndicator? RestrictionIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the holder is entitled to accrued interest.
@@ -110,7 +110,7 @@ public record CorporateAction94
     [IsoId("_H738JfIIEfCS-OXqezZQmw")]
     [DisplayName("Accrued Interest Indicator")]
     [IsoXmlTag("AcrdIntrstInd")]
-    public IsoYesNoIndicator? AccruedInterestIndicator { get; init; }
+    public YesNoIndicator? AccruedInterestIndicator { get; init; }
 
     /// <summary>
     /// Indicates that bondholders who convert between record date and payable date will forfeit their interest.
@@ -118,7 +118,7 @@ public record CorporateAction94
     [IsoId("_H738LfIIEfCS-OXqezZQmw")]
     [DisplayName("Forfeiture Of Interest Indicator")]
     [IsoXmlTag("FrftrOfIntrstInd")]
-    public IsoYesNoIndicator? ForfeitureOfInterestIndicator { get; init; }
+    public YesNoIndicator? ForfeitureOfInterestIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether a letter of guaranteed delivery can be submitted in order to participate in the offer on full eligible position.
@@ -126,7 +126,7 @@ public record CorporateAction94
     [IsoId("_H738L_IIEfCS-OXqezZQmw")]
     [DisplayName("Letter Of Guaranteed Delivery Indicator")]
     [IsoXmlTag("LttrOfGrntedDlvryInd")]
-    public IsoYesNoIndicator? LetterOfGuaranteedDeliveryIndicator { get; init; }
+    public YesNoIndicator? LetterOfGuaranteedDeliveryIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the announcement was initiated by the first intermediary in the custody chain in accordance with SRD II.
@@ -134,7 +134,7 @@ public record CorporateAction94
     [IsoId("_H738MfIIEfCS-OXqezZQmw")]
     [DisplayName("Shareholder Rights Directive Indicator")]
     [IsoXmlTag("ShrhldrRghtsDrctvInd")]
-    public IsoYesNoIndicator? ShareholderRightsDirectiveIndicator { get; init; }
+    public YesNoIndicator? ShareholderRightsDirectiveIndicator { get; init; }
 
     /// <summary>
     /// Specifies the conditions in which a dividend is paid.
@@ -286,7 +286,7 @@ public record CorporateAction94
     [IsoId("_H74jEfIIEfCS-OXqezZQmw")]
     [DisplayName("Reverse Dutch Auction Indicator")]
     [IsoXmlTag("RvsDtchAuctnInd")]
-    public IsoYesNoIndicator? ReverseDutchAuctionIndicator { get; init; }
+    public YesNoIndicator? ReverseDutchAuctionIndicator { get; init; }
 
     /// <summary>
     /// New company's place of incorporation.
@@ -294,7 +294,7 @@ public record CorporateAction94
     [IsoId("_H74jE_IIEfCS-OXqezZQmw")]
     [DisplayName("New Place Of Incorporation")]
     [IsoXmlTag("NewPlcOfIncorprtn")]
-    public IsoMax350Text? NewPlaceOfIncorporation { get; init; }
+    public Max350Text? NewPlaceOfIncorporation { get; init; }
 
     /// <summary>
     /// Provides additional information. This field may only be used when the information to be transmitted cannot be coded.

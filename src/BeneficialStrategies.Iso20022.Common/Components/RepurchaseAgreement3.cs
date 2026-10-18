@@ -39,5 +39,5 @@ public record RepurchaseAgreement3
     [DisplayName("Triparty Agent")]
     [IsoXmlTag("TrptyAgt")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? TripartyAgent { get; init; }
+    public LEIIdentifier? TripartyAgent { get; init; }
 }

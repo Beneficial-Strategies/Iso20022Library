@@ -23,7 +23,7 @@ public record BenchmarkCurve6
     [DisplayName("Spread")]
     [IsoXmlTag("Sprd")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? Spread { get; init; }
+    public DecimalNumber? Spread { get; init; }
 
     /// <summary>
     /// Identification of a security by an ISIN.
@@ -65,5 +65,5 @@ public record BenchmarkCurve6
     [IsoXmlTag("BchmkCrvPt")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? BenchmarkCurvePoint { get; init; }
+    public Max256Text? BenchmarkCurvePoint { get; init; }
 }

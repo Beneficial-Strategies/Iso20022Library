@@ -42,7 +42,7 @@ public record LocalData16
     /// </summary>
     [DisplayName("Encoding Format")]
     [IsoXmlTag("NcodgFrmt")]
-    public IsoMax35Text? EncodingFormat { get; init; }
+    public Max35Text? EncodingFormat { get; init; }
 
     /// <summary>
     /// Language.
@@ -56,7 +56,7 @@ public record LocalData16
     /// </summary>
     [DisplayName("Mailed From Postal Code")]
     [IsoXmlTag("MldFrPstlCd")]
-    public IsoMax35Text? MailedFromPostalCode { get; init; }
+    public Max35Text? MailedFromPostalCode { get; init; }
 
     /// <summary>
     /// Mailing Address.
@@ -70,5 +70,5 @@ public record LocalData16
     /// </summary>
     [DisplayName("Mailing Address Unstructured")]
     [IsoXmlTag("MlngAdrUstrd")]
-    public IsoMax512Text? MailingAddressUnstructured { get; init; }
+    public Max512Text? MailingAddressUnstructured { get; init; }
 }

@@ -31,7 +31,7 @@ public record LoanData134
     [DisplayName("Cleared")]
     [IsoXmlTag("Clrd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? Cleared { get; init; }
+    public TrueFalseIndicator? Cleared { get; init; }
 
     /// <summary>
     /// Unique code determined by the reporting counterparty identifying the portfolio.
@@ -41,7 +41,7 @@ public record LoanData134
     [IsoXmlTag("PrtflCd")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoMax52Text? PortfolioCode { get; init; }
+    public Max52Text? PortfolioCode { get; init; }
 
     /// <summary>
     /// Identification of the trading venue where the transaction was executed.
@@ -66,7 +66,7 @@ public record LoanData134
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? MaturityDate { get; init; }
+    public DateOnly? MaturityDate { get; init; }
 
     /// <summary>
     /// Indication whether the secured financing transaction is subject to a general or special collateral arrangement.

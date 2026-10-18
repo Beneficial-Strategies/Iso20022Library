@@ -24,7 +24,7 @@ public record UndertakingAdvice2
     [IsoXmlTag("ApplcntRefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ApplicantReferenceNumber { get; init; }
+    public required Max35Text ApplicantReferenceNumber { get; init; }
 
     /// <summary>
     /// Party obligated to reimburse the issuer.

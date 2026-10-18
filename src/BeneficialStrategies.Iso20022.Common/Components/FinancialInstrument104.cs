@@ -21,12 +21,12 @@ public record FinancialInstrument104
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoISINOct2015Identifier Identification { get; init; }
+    public required ISINOct2015Identifier Identification { get; init; }
 
     /// <summary>
     /// Issuer.
     /// </summary>
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
-    public required IsoLEIIdentifier Issuer { get; init; }
+    public required LEIIdentifier Issuer { get; init; }
 }

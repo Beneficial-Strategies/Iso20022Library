@@ -32,7 +32,7 @@ public record InstalmentAmountDetails1
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Grace period sub type.
@@ -42,7 +42,7 @@ public record InstalmentAmountDetails1
     [IsoXmlTag("SubTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SubType { get; init; }
+    public Max35Text? SubType { get; init; }
 
     /// <summary>
     /// Detailed instalment amount.
@@ -59,5 +59,5 @@ public record InstalmentAmountDetails1
     [DisplayName("Percentage")]
     [IsoXmlTag("Pctg")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Percentage { get; init; }
+    public PercentageRate? Percentage { get; init; }
 }

@@ -24,7 +24,7 @@ public record DeviceOperatingSystem1
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Identification { get; init; }
+    public Max70Text? Identification { get; init; }
 
     /// <summary>
     /// Type of device operating system.
@@ -42,7 +42,7 @@ public record DeviceOperatingSystem1
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Version of device operating system.
@@ -52,7 +52,7 @@ public record DeviceOperatingSystem1
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Version { get; init; }
+    public Max35Text? Version { get; init; }
 
     /// <summary>
     /// Build of the device operating system.
@@ -62,5 +62,5 @@ public record DeviceOperatingSystem1
     [IsoXmlTag("Bld")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Build { get; init; }
+    public Max70Text? Build { get; init; }
 }

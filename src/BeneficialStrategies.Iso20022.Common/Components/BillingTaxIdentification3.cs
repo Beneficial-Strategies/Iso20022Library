@@ -28,12 +28,12 @@ public record BillingTaxIdentification3
     /// </summary>
     [DisplayName("Tax Registration Number")]
     [IsoXmlTag("TaxRegnNb")]
-    public IsoMax35Text? TaxRegistrationNumber { get; init; }
+    public Max35Text? TaxRegistrationNumber { get; init; }
 
     /// <summary>
     /// VAT Registration Number.
     /// </summary>
     [DisplayName("VAT Registration Number")]
     [IsoXmlTag("VATRegnNb")]
-    public IsoMax35Text? VATRegistrationNumber { get; init; }
+    public Max35Text? VATRegistrationNumber { get; init; }
 }

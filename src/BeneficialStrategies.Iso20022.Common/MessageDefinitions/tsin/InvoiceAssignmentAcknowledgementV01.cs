@@ -75,7 +75,7 @@ public record InvoiceAssignmentAcknowledgementV01 : IOuterRecord
     [DisplayName("Payment Status Count")]
     [IsoXmlTag("PmtStsCnt")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public IsoMax15NumericText? PaymentStatusCount { get; init; }
+    public Max15NumericText? PaymentStatusCount { get; init; }
 
     /// <summary>
     /// Total number of individual items in all lists.
@@ -84,7 +84,7 @@ public record InvoiceAssignmentAcknowledgementV01 : IOuterRecord
     [DisplayName("Item Count")]
     [IsoXmlTag("ItmCnt")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public IsoMax15NumericText? ItemCount { get; init; }
+    public Max15NumericText? ItemCount { get; init; }
 
     /// <summary>
     /// Total of all individual amounts included in all lists, irrespective of currencies or direction.
@@ -93,7 +93,7 @@ public record InvoiceAssignmentAcknowledgementV01 : IOuterRecord
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? ControlSum { get; init; }
+    public DecimalNumber? ControlSum { get; init; }
 
     /// <summary>
     /// Referenced or related business message.

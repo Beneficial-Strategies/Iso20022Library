@@ -21,7 +21,7 @@ public record Organisation44
     /// </summary>
     [DisplayName("Full Legal Name")]
     [IsoXmlTag("FullLglNm")]
-    public IsoMax350Text? FullLegalName { get; init; }
+    public Max350Text? FullLegalName { get; init; }
 
     /// <summary>
     /// Organisation Identification.

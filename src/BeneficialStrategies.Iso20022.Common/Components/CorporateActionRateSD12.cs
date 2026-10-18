@@ -22,7 +22,7 @@ public record CorporateActionRateSD12
     [IsoId("_mX1VNLskEfCWCehgFzyN4w")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Rate declared by the security issuer.
@@ -38,7 +38,7 @@ public record CorporateActionRateSD12
     [IsoId("_mX1VPLskEfCWCehgFzyN4w")]
     [DisplayName("Estimated Rate Flag")]
     [IsoXmlTag("EstmtdRateFlg")]
-    public IsoYesNoIndicator? EstimatedRateFlag { get; init; }
+    public YesNoIndicator? EstimatedRateFlag { get; init; }
 
     /// <summary>
     /// Rate of the fee declared by the issuer.

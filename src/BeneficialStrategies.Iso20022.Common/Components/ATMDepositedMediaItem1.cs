@@ -28,7 +28,7 @@ public record ATMDepositedMediaItem1
     /// </summary>
     [DisplayName("Code Line")]
     [IsoXmlTag("CdLine")]
-    public IsoMax70Text? CodeLine { get; init; }
+    public Max70Text? CodeLine { get; init; }
 
     /// <summary>
     /// Code Line Format.
@@ -42,14 +42,14 @@ public record ATMDepositedMediaItem1
     /// </summary>
     [DisplayName("Confidence Level")]
     [IsoXmlTag("CnfdncLvl")]
-    public IsoPercentageRate? ConfidenceLevel { get; init; }
+    public PercentageRate? ConfidenceLevel { get; init; }
 
     /// <summary>
     /// Count.
     /// </summary>
     [DisplayName("Count")]
     [IsoXmlTag("Cnt")]
-    public IsoNumber? Count { get; init; }
+    public Number? Count { get; init; }
 
     /// <summary>
     /// Currency.
@@ -63,7 +63,7 @@ public record ATMDepositedMediaItem1
     /// </summary>
     [DisplayName("Media Identification")]
     [IsoXmlTag("MdiaId")]
-    public IsoMax70Text? MediaIdentification { get; init; }
+    public Max70Text? MediaIdentification { get; init; }
 
     /// <summary>
     /// Media Status.
@@ -77,14 +77,14 @@ public record ATMDepositedMediaItem1
     /// </summary>
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
-    public IsoMax70Text? Reference { get; init; }
+    public Max70Text? Reference { get; init; }
 
     /// <summary>
     /// Rejected Reason.
     /// </summary>
     [DisplayName("Rejected Reason")]
     [IsoXmlTag("RjctdRsn")]
-    public IsoMax70Text? RejectedReason { get; init; }
+    public Max70Text? RejectedReason { get; init; }
 
     /// <summary>
     /// Scanned Value.

@@ -22,7 +22,7 @@ public record TransactionTotals15
     [IsoId("_BAE1gWP5EfCX7uJiAWHfoQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax35Text? Identification { get; init; }
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Date of the reconciliation.
@@ -30,7 +30,7 @@ public record TransactionTotals15
     [IsoId("_BAE1g2P5EfCX7uJiAWHfoQ")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// A value used to allow a period within a reconciliation date.
@@ -38,7 +38,7 @@ public record TransactionTotals15
     [IsoId("_BAE1hWP5EfCX7uJiAWHfoQ")]
     [DisplayName("Checkpoint Reference")]
     [IsoXmlTag("ChckptRef")]
-    public IsoMax35Text? CheckpointReference { get; init; }
+    public Max35Text? CheckpointReference { get; init; }
 
     /// <summary>
     /// Total of credit transactions.

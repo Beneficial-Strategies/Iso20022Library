@@ -41,7 +41,7 @@ public record CardAccount15
     [IsoXmlTag("AcctNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AccountName { get; init; }
+    public Max70Text? AccountName { get; init; }
 
     /// <summary>
     /// Party that legally owns the account.

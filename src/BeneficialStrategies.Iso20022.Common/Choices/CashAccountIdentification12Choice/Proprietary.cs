@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CashAccountIdentification12Choic
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("Prtry")]
-        public required IsoRestrictedFINX2Max34Text Value { get; init; }
+        public required RestrictedFINX2Max34Text Value { get; init; }
     }
 }

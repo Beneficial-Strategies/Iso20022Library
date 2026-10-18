@@ -57,7 +57,7 @@ public record ShareholdersIdentificationDisclosureRequestV01 : IOuterRecord
     [IsoXmlTag("IssrDsclsrReqId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text IssuerDisclosureRequestIdentification { get; init; }
+    public required Max35Text IssuerDisclosureRequestIdentification { get; init; }
 
     /// <summary>
     /// Specifies the type of disclosure request.
@@ -75,7 +75,7 @@ public record ShareholdersIdentificationDisclosureRequestV01 : IOuterRecord
     [DisplayName("Forward Request Indicator")]
     [IsoXmlTag("FwdReqInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ForwardRequestIndicator { get; init; }
+    public YesNoIndicator? ForwardRequestIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the shareholder identification disclosure response is to be sent back down the chain of intermediaries or directly to the identified response recipient.
@@ -86,7 +86,7 @@ public record ShareholdersIdentificationDisclosureRequestV01 : IOuterRecord
     [DisplayName("Response Through Chain Indicator")]
     [IsoXmlTag("RspnThrghChainInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ResponseThroughChainIndicator { get; init; }
+    public YesNoIndicator? ResponseThroughChainIndicator { get; init; }
 
     /// <summary>
     /// Identifies the financial instrument.
@@ -111,7 +111,7 @@ public record ShareholdersIdentificationDisclosureRequestV01 : IOuterRecord
     [DisplayName("Shares Quantity Threshold")]
     [IsoXmlTag("ShrsQtyThrshld")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? SharesQuantityThreshold { get; init; }
+    public DecimalNumber? SharesQuantityThreshold { get; init; }
 
     /// <summary>
     /// Indicates whether the date from which the shares have been held must be communicated into the disclosure response and according to which method theses dates have to be communicated.

@@ -32,7 +32,7 @@ public record FeeCollectionReference1
     [IsoXmlTag("OthrAssgnrNtty")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherAssignerEntity { get; init; }
+    public Max35Text? OtherAssignerEntity { get; init; }
 
     /// <summary>
     /// Identification of the fee collection.

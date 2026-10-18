@@ -56,7 +56,7 @@ public record PointOfInteractionCapabilities2
     [DisplayName("Print Line Width")]
     [IsoXmlTag("PrtLineWidth")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? PrintLineWidth { get; init; }
+    public Number? PrintLineWidth { get; init; }
 
     /// <summary>
     /// Available language in the display and printer interface.

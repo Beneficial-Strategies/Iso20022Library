@@ -30,7 +30,7 @@ public record TransactionCharacteristics6
     [IsoId("_6AVNuV59EfCoP_h9uwd39Q")]
     [DisplayName("Transaction Sub Type")]
     [IsoXmlTag("TxSubTp")]
-    public IsoMax35Text? TransactionSubType { get; init; }
+    public Max35Text? TransactionSubType { get; init; }
 
     /// <summary>
     /// Attribute of the transaction. P000-P999 reserved for private use, N000-N999 reserved for national use.
@@ -46,7 +46,7 @@ public record TransactionCharacteristics6
     [IsoId("_6AVNy159EfCoP_h9uwd39Q")]
     [DisplayName("Cancellation")]
     [IsoXmlTag("Cxl")]
-    public IsoTrueFalseIndicator? Cancellation { get; init; }
+    public TrueFalseIndicator? Cancellation { get; init; }
 
     /// <summary>
     /// Indicates the type of transaction that will follow an approved InquiryVerificationResponse.
@@ -70,7 +70,7 @@ public record TransactionCharacteristics6
     [IsoId("_6AVN2159EfCoP_h9uwd39Q")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
-    public SimpleValueList<IsoMax256Text> AlternateMessageReason { get; init; } = [];
+    public SimpleValueList<Max256Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Transaction data related to programmes and services, content and format based on bilateral agreements.
@@ -78,7 +78,7 @@ public record TransactionCharacteristics6
     [IsoId("_6AVN3V59EfCoP_h9uwd39Q")]
     [DisplayName("Transaction Description")]
     [IsoXmlTag("TxDesc")]
-    public IsoMax1000Text? TransactionDescription { get; init; }
+    public Max1000Text? TransactionDescription { get; init; }
 
     /// <summary>
     /// Reserved for private data. The use of this data element is determined by bilateral agreement.
@@ -86,7 +86,7 @@ public record TransactionCharacteristics6
     [IsoId("_9Acvw159EfCoP_h9uwd39Q")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -94,7 +94,7 @@ public record TransactionCharacteristics6
     [IsoId("_9AcvxF59EfCoP_h9uwd39Q")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 
     /// <summary>
     /// Contains local language equivalent(s) of data in the current component.

@@ -24,7 +24,7 @@ public record IndividualPerson32
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Name { get; init; }
+    public Max350Text? Name { get; init; }
 
     /// <summary>
     /// Date on which the person is born.
@@ -33,7 +33,7 @@ public record IndividualPerson32
     [DisplayName("Birth Date")]
     [IsoXmlTag("BirthDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? BirthDate { get; init; }
+    public DateOnly? BirthDate { get; init; }
 
     /// <summary>
     /// Country and residential status of the individual, for example, non-permanent resident.

@@ -24,7 +24,7 @@ public record LoyaltyProgramme2
     [IsoXmlTag("PrgrmmTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProgrammeType { get; init; }
+    public Max35Text? ProgrammeType { get; init; }
 
     /// <summary>
     /// Loyalty programme identification value.
@@ -34,7 +34,7 @@ public record LoyaltyProgramme2
     [IsoXmlTag("PrgmId")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? ProgramIdentification { get; init; }
+    public Max70Text? ProgramIdentification { get; init; }
 
     /// <summary>
     /// Loyalty programme participant identification value.
@@ -44,5 +44,5 @@ public record LoyaltyProgramme2
     [IsoXmlTag("PtcptId")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? ParticipantIdentification { get; init; }
+    public Max70Text? ParticipantIdentification { get; init; }
 }

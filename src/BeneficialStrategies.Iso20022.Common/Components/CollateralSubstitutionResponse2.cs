@@ -24,7 +24,7 @@ public record CollateralSubstitutionResponse2
     [IsoXmlTag("CollSbstitnReqId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text CollateralSubstitutionRequestIdentification { get; init; }
+    public required Max35Text CollateralSubstitutionRequestIdentification { get; init; }
 
     /// <summary>
     /// Specifies the collateral substitution amount that is rejected.
@@ -50,5 +50,5 @@ public record CollateralSubstitutionResponse2
     [IsoXmlTag("RjctnRsnInf")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? RejectionReasonInformation { get; init; }
+    public Max140Text? RejectionReasonInformation { get; init; }
 }

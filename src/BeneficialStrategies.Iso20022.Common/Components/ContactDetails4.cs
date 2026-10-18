@@ -24,7 +24,7 @@ public record ContactDetails4
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text Name { get; init; }
+    public required Max140Text Name { get; init; }
 
     /// <summary>
     /// Phone number of the liaison at the Settlement Internaliser.
@@ -33,7 +33,7 @@ public record ContactDetails4
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public required IsoPhoneNumber PhoneNumber { get; init; }
+    public required PhoneNumber PhoneNumber { get; init; }
 
     /// <summary>
     /// Electronic mail (e-mail) address of the liaison at the Settlement Internaliser.
@@ -43,7 +43,7 @@ public record ContactDetails4
     [IsoXmlTag("EmailAdr")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
     [StringLength(maximumLength: 2048, MinimumLength = 1)]
-    public required IsoMax2048Text EmailAddress { get; init; }
+    public required Max2048Text EmailAddress { get; init; }
 
     /// <summary>
     /// Function of the liaison at the Settlement Internaliser.
@@ -53,5 +53,5 @@ public record ContactDetails4
     [IsoXmlTag("Fctn")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text Function { get; init; }
+    public required Max140Text Function { get; init; }
 }

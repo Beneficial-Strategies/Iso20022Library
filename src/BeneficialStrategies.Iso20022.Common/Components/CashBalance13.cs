@@ -71,7 +71,7 @@ public record CashBalance13
     [DisplayName("Number Of Payments")]
     [IsoXmlTag("NbOfPmts")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NumberOfPayments { get; init; }
+    public Number? NumberOfPayments { get; init; }
 
     /// <summary>
     /// Type providing further information on balance restrictions.

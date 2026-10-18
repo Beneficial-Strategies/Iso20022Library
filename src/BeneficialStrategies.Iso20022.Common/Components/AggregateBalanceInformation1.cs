@@ -47,7 +47,7 @@ public record AggregateBalanceInformation1
     [DisplayName("Days Accrued")]
     [IsoXmlTag("DaysAcrd")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? DaysAccrued { get; init; }
+    public Number? DaysAccrued { get; init; }
 
     /// <summary>
     /// Total value of a balance of the securities account for a specific financial instrument, expressed in one or more currencies.

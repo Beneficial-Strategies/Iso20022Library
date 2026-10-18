@@ -50,7 +50,7 @@ public record InformationRequestOpeningV02 : IOuterRecord
     /// </summary>
     [DisplayName("Confidentiality Status")]
     [IsoXmlTag("CnfdtltySts")]
-    public required IsoYesNoIndicator ConfidentialityStatus { get; init; }
+    public required YesNoIndicator ConfidentialityStatus { get; init; }
 
     /// <summary>
     /// Due Date.
@@ -64,7 +64,7 @@ public record InformationRequestOpeningV02 : IOuterRecord
     /// </summary>
     [DisplayName("Investigation Identification")]
     [IsoXmlTag("InvstgtnId")]
-    public required IsoMax35Text InvestigationIdentification { get; init; }
+    public required Max35Text InvestigationIdentification { get; init; }
 
     /// <summary>
     /// Investigation Period.

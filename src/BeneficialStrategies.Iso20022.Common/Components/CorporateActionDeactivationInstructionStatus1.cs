@@ -31,7 +31,7 @@ public record CorporateActionDeactivationInstructionStatus1
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public IsoExact3NumericText? OptionNumber { get; init; }
+    public Exact3NumericText? OptionNumber { get; init; }
 
     /// <summary>
     /// Provides information about the processing status of the instruction.

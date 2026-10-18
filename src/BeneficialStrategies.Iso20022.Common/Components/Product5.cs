@@ -24,7 +24,7 @@ public record Product5
     [IsoXmlTag("PdctCd")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public required IsoMax70Text ProductCode { get; init; }
+    public required Max70Text ProductCode { get; init; }
 
     /// <summary>
     /// Additional product code related to the product.
@@ -34,7 +34,7 @@ public record Product5
     [IsoXmlTag("AddtlPdctCd")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AdditionalProductCode { get; init; }
+    public Max70Text? AdditionalProductCode { get; init; }
 
     /// <summary>
     /// Amount limit for the product.
@@ -51,7 +51,7 @@ public record Product5
     [DisplayName("Quantity Limit")]
     [IsoXmlTag("QtyLmt")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? QuantityLimit { get; init; }
+    public DecimalNumber? QuantityLimit { get; init; }
 
     /// <summary>
     /// Unit of measure of the item purchased.

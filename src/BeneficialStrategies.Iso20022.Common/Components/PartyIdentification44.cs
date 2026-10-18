@@ -23,7 +23,7 @@ public record PartyIdentification44
     [DisplayName("Any BIC")]
     [IsoXmlTag("AnyBIC")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public required IsoAnyBICIdentifier AnyBIC { get; init; }
+    public required AnyBICIdentifier AnyBIC { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.

@@ -32,7 +32,7 @@ public record Verification4
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Type of authentication for a given method (for example, three domain authentication, scheme proprietary solution, type of cryptogram, etc.).
@@ -42,7 +42,7 @@ public record Verification4
     [IsoXmlTag("SubTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SubType { get; init; }
+    public Max35Text? SubType { get; init; }
 
     /// <summary>
     /// Additional information about the verification.
@@ -52,7 +52,7 @@ public record Verification4
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AdditionalInformation { get; init; }
+    public Max35Text? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Result of verifications performed prior or after the transaction.

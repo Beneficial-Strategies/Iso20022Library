@@ -40,6 +40,6 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionIdentification1Choice
         [IsoXmlTag("CollPrtflId")]
         [IsoSimpleType(IsoSimpleType.Max52Text)]
         [StringLength(maximumLength: 52, MinimumLength = 1)]
-        public required IsoMax52Text CollateralPortfolioIdentification { get; init; }
+        public required Max52Text CollateralPortfolioIdentification { get; init; }
     }
 }

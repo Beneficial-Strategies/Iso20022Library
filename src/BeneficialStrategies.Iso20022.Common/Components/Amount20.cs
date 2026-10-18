@@ -32,7 +32,7 @@ public record Amount20
     [IsoXmlTag("OthrTpOfChrg")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherTypeOfCharge { get; init; }
+    public Max35Text? OtherTypeOfCharge { get; init; }
 
     /// <summary>
     /// Contains the amount.

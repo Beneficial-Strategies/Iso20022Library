@@ -22,7 +22,7 @@ public record CardNotReceivedData1
     [IsoId("_uBd9EXR4EfC68Y4jZPNEug")]
     [DisplayName("Date Mailed")]
     [IsoXmlTag("DtMld")]
-    public required IsoISODate DateMailed { get; init; }
+    public required DateOnly DateMailed { get; init; }
 
     /// <summary>
     /// Address where card was mailed to.
@@ -38,7 +38,7 @@ public record CardNotReceivedData1
     [IsoId("_uBd9FXR4EfC68Y4jZPNEug")]
     [DisplayName("Mailing Address Unstructured")]
     [IsoXmlTag("MlngAdrUstrd")]
-    public IsoMax256Text? MailingAddressUnstructured { get; init; }
+    public Max256Text? MailingAddressUnstructured { get; init; }
 
     /// <summary>
     /// Postal code where the card was mailed from.
@@ -46,7 +46,7 @@ public record CardNotReceivedData1
     [IsoId("_uBd9F3R4EfC68Y4jZPNEug")]
     [DisplayName("Mailed From Postal Code")]
     [IsoXmlTag("MldFrPstlCd")]
-    public required IsoMax16Text MailedFromPostalCode { get; init; }
+    public required Max16Text MailedFromPostalCode { get; init; }
 
     /// <summary>
     /// Date of the beginning of validation of the card.
@@ -54,7 +54,7 @@ public record CardNotReceivedData1
     [IsoId("_uBd9GXR4EfC68Y4jZPNEug")]
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
-    public IsoISODate? ValidFrom { get; init; }
+    public DateOnly? ValidFrom { get; init; }
 
     /// <summary>
     /// Indicates whether card provides a Card Security Code.
@@ -62,7 +62,7 @@ public record CardNotReceivedData1
     [IsoId("_uBd9G3R4EfC68Y4jZPNEug")]
     [DisplayName("Card Security Code")]
     [IsoXmlTag("CardSctyCd")]
-    public IsoTrueFalseIndicator? CardSecurityCode { get; init; }
+    public TrueFalseIndicator? CardSecurityCode { get; init; }
 
     /// <summary>
     /// Identifies the security capabilities of the card.

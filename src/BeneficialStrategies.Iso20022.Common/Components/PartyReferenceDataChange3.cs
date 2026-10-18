@@ -21,7 +21,7 @@ public record PartyReferenceDataChange3
     /// </summary>
     [DisplayName("Operation Time Stamp")]
     [IsoXmlTag("OprTmStmp")]
-    public required IsoISODateTime OperationTimeStamp { get; init; }
+    public required ISODateTime OperationTimeStamp { get; init; }
 
     /// <summary>
     /// Party Identification.

@@ -48,7 +48,7 @@ public record CertificateManagementRequest3
     [IsoXmlTag("SctyDomn")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? SecurityDomain { get; init; }
+    public Max70Text? SecurityDomain { get; init; }
 
     /// <summary>
     /// Identifies type of function that could be used with the Key.
@@ -65,7 +65,7 @@ public record CertificateManagementRequest3
     [DisplayName("POI Challenge Value")]
     [IsoXmlTag("POIChllngVal")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public required IsoMax140Binary POIChallengeValue { get; init; }
+    public required Max140Binary POIChallengeValue { get; init; }
 
     /// <summary>
     /// Date and Time of the POI.
@@ -74,7 +74,7 @@ public record CertificateManagementRequest3
     [DisplayName("POI Date Time")]
     [IsoXmlTag("POIDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime POIDateTime { get; init; }
+    public required ISODateTime POIDateTime { get; init; }
 
     /// <summary>
     /// PKCS#10 (Public Key Certificate Standard 10) certification request coded in base64 ASN.1/DER (Abstract Syntax Notation 1, Distinguished Encoding Rules) or PEM (Privacy Enhanced Message) format.
@@ -84,7 +84,7 @@ public record CertificateManagementRequest3
     [IsoXmlTag("BinryCertfctnReq")]
     [IsoSimpleType(IsoSimpleType.Max20000Text)]
     [StringLength(maximumLength: 20000, MinimumLength = 1)]
-    public IsoMax20000Text? BinaryCertificationRequest { get; init; }
+    public Max20000Text? BinaryCertificationRequest { get; init; }
 
     /// <summary>
     /// Certification request PKCS#10 (Public Key Certificate Standard 10) for creation or renewal of an X.509 certificate.
@@ -101,7 +101,7 @@ public record CertificateManagementRequest3
     [DisplayName("Client Certificate")]
     [IsoXmlTag("ClntCert")]
     [IsoSimpleType(IsoSimpleType.Max10KBinary)]
-    public IsoMax10KBinary? ClientCertificate { get; init; }
+    public Max10KBinary? ClientCertificate { get; init; }
 
     /// <summary>
     /// Identification of the white list element, for white list addition or removal.

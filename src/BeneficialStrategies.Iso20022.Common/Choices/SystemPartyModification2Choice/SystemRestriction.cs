@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Valid From")]
         [IsoXmlTag("VldFr")]
         [IsoSimpleType(IsoSimpleType.ISODateTime)]
-        public required IsoISODateTime ValidFrom { get; init; }
+        public required ISODateTime ValidFrom { get; init; }
 
         /// <summary>
         /// Specifies the date until which the restriction is valid.
@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Valid To")]
         [IsoXmlTag("VldTo")]
         [IsoSimpleType(IsoSimpleType.ISODateTime)]
-        public IsoISODateTime? ValidTo { get; init; }
+        public ISODateTime? ValidTo { get; init; }
 
         /// <summary>
         /// Specifies the identification of a restriction.
@@ -42,6 +42,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [IsoXmlTag("Tp")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text Type { get; init; }
+        public required Max35Text Type { get; init; }
     }
 }

@@ -32,7 +32,7 @@ public record StatementResolutionEntry3
     [IsoXmlTag("OrgnlStmtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalStatementIdentification { get; init; }
+    public Max35Text? OriginalStatementIdentification { get; init; }
 
     /// <summary>
     /// Unique reference, as assigned by the account servicing institution, to unambiguously identify the entry.
@@ -42,7 +42,7 @@ public record StatementResolutionEntry3
     [IsoXmlTag("AcctSvcrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountServicerReference { get; init; }
+    public Max35Text? AccountServicerReference { get; init; }
 
     /// <summary>
     /// Corrected debit or credit amount, compared to the original entry where the amount is incorrect.||Usage: This amount may only be present if an incorrect statement entry has been reported.

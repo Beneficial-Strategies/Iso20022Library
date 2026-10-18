@@ -23,7 +23,7 @@ public record DetailedAmount16
     [DisplayName("Account Sequence Number")]
     [IsoXmlTag("AcctSeqNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? AccountSequenceNumber { get; init; }
+    public Number? AccountSequenceNumber { get; init; }
 
     /// <summary>
     /// Amount of the deposit to be made on the ATM after the approval of the deposit transaction.

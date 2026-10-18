@@ -24,7 +24,7 @@ public record CashOptionSD12
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Specifies the type of payout associated with the event (for example: principal, long term capital gain).
@@ -42,7 +42,7 @@ public record CashOptionSD12
     [IsoXmlTag("DTCPayMtd")]
     [IsoSimpleType(IsoSimpleType.Max3Text)]
     [StringLength(maximumLength: 3, MinimumLength = 1)]
-    public IsoMax3Text? DTCPayMethod { get; init; }
+    public Max3Text? DTCPayMethod { get; init; }
 
     /// <summary>
     /// Indicates the payment order. Used in stock dividends processing at DTC (The Depository Trust Corporation). Valid values list will be maintained separately from the schema.
@@ -52,7 +52,7 @@ public record CashOptionSD12
     [IsoXmlTag("DTCPayOrdr")]
     [IsoSimpleType(IsoSimpleType.Max3Text)]
     [StringLength(maximumLength: 3, MinimumLength = 1)]
-    public IsoMax3Text? DTCPayOrder { get; init; }
+    public Max3Text? DTCPayOrder { get; init; }
 
     /// <summary>
     /// Indicates how the entitlements were calculated for optional dividends.
@@ -69,7 +69,7 @@ public record CashOptionSD12
     [DisplayName("Estimated Rate Flag")]
     [IsoXmlTag("EstmtdRateFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? EstimatedRateFlag { get; init; }
+    public YesNoIndicator? EstimatedRateFlag { get; init; }
 
     /// <summary>
     /// Indicates whether the income event is subject to withholding tax if paid to a non-U.S. resident alien (NRA).
@@ -78,7 +78,7 @@ public record CashOptionSD12
     [DisplayName("NRA Tax Reportable Flag")]
     [IsoXmlTag("NRATaxRptblFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? NRATaxReportableFlag { get; init; }
+    public YesNoIndicator? NRATaxReportableFlag { get; init; }
 
     /// <summary>
     /// Indicates whether a charge is levied on the protect instructions at the time when the protect is submitted or at the time of the cover. Applies to warrants or rights exercise scenario where the holder must put up money with rights or warrants execution. When this flag is set to yes - charges are due at the time of the protect, when it is set to &quot;no&quot; changes are due when protect is covered.
@@ -87,7 +87,7 @@ public record CashOptionSD12
     [DisplayName("Protect Charge Flag")]
     [IsoXmlTag("PrtctChrgFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ProtectChargeFlag { get; init; }
+    public YesNoIndicator? ProtectChargeFlag { get; init; }
 
     /// <summary>
     /// Cash rate associated to the payout as declared on the market by the issuer or offeror.
@@ -136,7 +136,7 @@ public record CashOptionSD12
     [DisplayName("RDP Reference Number")]
     [IsoXmlTag("RDPRefNb")]
     [IsoSimpleType(IsoSimpleType.Exact32AlphaNumericText)]
-    public IsoExact32AlphaNumericText? RDPReferenceNumber { get; init; }
+    public Exact32AlphaNumericText? RDPReferenceNumber { get; init; }
 
     /// <summary>
     /// Specifies the type of income.

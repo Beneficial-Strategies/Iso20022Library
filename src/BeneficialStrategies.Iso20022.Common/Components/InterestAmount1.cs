@@ -47,7 +47,7 @@ public record InterestAmount1
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ValueDate { get; init; }
+    public required DateOnly ValueDate { get; init; }
 
     /// <summary>
     /// Indicates whether the interest will be settled in cash or rolled in the existing collateral balance.
@@ -80,7 +80,7 @@ public record InterestAmount1
     [DisplayName("Applied Withholding Tax")]
     [IsoXmlTag("ApldWhldgTax")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AppliedWithholdingTax { get; init; }
+    public YesNoIndicator? AppliedWithholdingTax { get; init; }
 
     /// <summary>
     /// Specifies whether the interest is simple or compounded.
@@ -130,7 +130,7 @@ public record InterestAmount1
     [IsoXmlTag("StdSttlmInstrs")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? StandardSettlementInstructions { get; init; }
+    public Max140Text? StandardSettlementInstructions { get; init; }
 
     /// <summary>
     /// Additionnal information related to interest request.
@@ -140,7 +140,7 @@ public record InterestAmount1
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max210Text)]
     [StringLength(maximumLength: 210, MinimumLength = 1)]
-    public IsoMax210Text? AdditionalInformation { get; init; }
+    public Max210Text? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Additional references linked to the updated interest payement request.

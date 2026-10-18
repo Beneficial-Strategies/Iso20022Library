@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Number1Choice
         [IsoXmlTag("Issr")]
         [IsoSimpleType(IsoSimpleType.Max8Text)]
         [StringLength(maximumLength: 8, MinimumLength = 1)]
-        public required IsoMax8Text Issuer { get; init; }
+        public required Max8Text Issuer { get; init; }
 
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.
@@ -34,6 +34,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Number1Choice
         [IsoXmlTag("Inf")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text Information { get; init; }
+        public required Max35Text Information { get; init; }
     }
 }

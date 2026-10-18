@@ -24,7 +24,7 @@ public record StoredValueData2
     [IsoXmlTag("Prvdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Provider { get; init; }
+    public Max35Text? Provider { get; init; }
 
     /// <summary>
     /// Identification of operation to proceed on the stored value account or the stored value card.
@@ -58,7 +58,7 @@ public record StoredValueData2
     [IsoXmlTag("PdctCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProductCode { get; init; }
+    public Max35Text? ProductCode { get; init; }
 
     /// <summary>
     /// Standard European Article Number Universal Product Code of item purchased with the transaction.
@@ -67,7 +67,7 @@ public record StoredValueData2
     [DisplayName("EANUPC")]
     [IsoXmlTag("EANUPC")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public IsoMax35NumericText? EANUPC { get; init; }
+    public Max35NumericText? EANUPC { get; init; }
 
     /// <summary>
     /// Total amount of the item line.

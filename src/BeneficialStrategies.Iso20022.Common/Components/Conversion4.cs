@@ -30,7 +30,7 @@ public record Conversion4
     [IsoId("f5a0a888-6553-470e-bcbb-af89622c60d7")]
     [DisplayName("Total Units Number")]
     [IsoXmlTag("TtlUnitsNb")]
-    public IsoDecimalNumber? TotalUnitsNumber { get; init; }
+    public DecimalNumber? TotalUnitsNumber { get; init; }
 
     /// <summary>
     /// Breakdown of units of the source security.

@@ -40,5 +40,5 @@ public record Exemption1
     [IsoXmlTag("RsnNotHnrd")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4Text? ReasonNotHonored { get; init; }
+    public Max4Text? ReasonNotHonored { get; init; }
 }

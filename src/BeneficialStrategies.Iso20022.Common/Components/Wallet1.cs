@@ -32,5 +32,5 @@ public record Wallet1
     [IsoXmlTag("AddtlWlltData")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? AdditionalWalletData { get; init; }
+    public Max256Text? AdditionalWalletData { get; init; }
 }

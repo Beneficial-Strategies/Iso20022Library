@@ -30,7 +30,7 @@ public record FleetTransactionDetail2
     [IsoId("_ksf6o1XgEfC0lMwgjvMClw")]
     [DisplayName("Summary Commodity Identification")]
     [IsoXmlTag("SummryCmmdtyId")]
-    public IsoMax35Text? SummaryCommodityIdentification { get; init; }
+    public Max35Text? SummaryCommodityIdentification { get; init; }
 
     /// <summary>
     /// Total amount of the transaction, inclusive of all applicable taxes and fees.

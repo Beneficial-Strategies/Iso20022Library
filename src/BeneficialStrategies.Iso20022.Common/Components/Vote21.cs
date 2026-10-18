@@ -22,7 +22,7 @@ public record Vote21
     [IsoId("_oW4V8ajHEfCzuLlmLrhIvA")]
     [DisplayName("Issuer Label")]
     [IsoXmlTag("IssrLabl")]
-    public required IsoMax35Text IssuerLabel { get; init; }
+    public required Max35Text IssuerLabel { get; init; }
 
     /// <summary>
     /// Identifies under the same label a group of agenda resolutions for which a vote in favour can be assigned to only one resolution of that group.
@@ -30,7 +30,7 @@ public record Vote21
     [IsoId("_oW4V86jHEfCzuLlmLrhIvA")]
     [DisplayName("Listing Group Resolution Label")]
     [IsoXmlTag("ListgGrpRsltnLabl")]
-    public IsoMax35Text? ListingGroupResolutionLabel { get; init; }
+    public Max35Text? ListingGroupResolutionLabel { get; init; }
 
     /// <summary>
     /// Number of securities for which vote in favour is instructed.

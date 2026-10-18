@@ -23,7 +23,7 @@ public record ResetDateAndValue1
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate Date { get; init; }
+    public required DateOnly Date { get; init; }
 
     /// <summary>
     /// Indicates the most recent value at which the floating reference rate was reset.
@@ -32,5 +32,5 @@ public record ResetDateAndValue1
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? Value { get; init; }
+    public BaseOneRate? Value { get; init; }
 }

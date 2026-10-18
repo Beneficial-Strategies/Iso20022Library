@@ -32,7 +32,7 @@ public record ValuationDealingProcessingCharacteristics2
     [IsoXmlTag("ValtnFrqcyDesc")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text ValuationFrequencyDescription { get; init; }
+    public required Max350Text ValuationFrequencyDescription { get; init; }
 
     /// <summary>
     /// Number of decimal places to which quantities of units/shares are rounded.
@@ -41,7 +41,7 @@ public record ValuationDealingProcessingCharacteristics2
     [DisplayName("Decimalisation Units")]
     [IsoXmlTag("DcmlstnUnits")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber DecimalisationUnits { get; init; }
+    public required Number DecimalisationUnits { get; init; }
 
     /// <summary>
     /// Number of decimal places to which quantities of units/shares are rounded.
@@ -50,7 +50,7 @@ public record ValuationDealingProcessingCharacteristics2
     [DisplayName("Decimalisation Price")]
     [IsoXmlTag("DcmlstnPric")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber DecimalisationPrice { get; init; }
+    public required Number DecimalisationPrice { get; init; }
 
     /// <summary>
     /// Indicates whether the fund has two prices.
@@ -59,7 +59,7 @@ public record ValuationDealingProcessingCharacteristics2
     [DisplayName("Dual Fund Indicator")]
     [IsoXmlTag("DualFndInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator DualFundIndicator { get; init; }
+    public required YesNoIndicator DualFundIndicator { get; init; }
 
     /// <summary>
     /// Type of pricing calculation method.

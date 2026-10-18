@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentIdentificatio
         [DisplayName("ISIN")]
         [IsoXmlTag("ISIN")]
         [IsoSimpleType(IsoSimpleType.ISIN2021Identifier)]
-        public IsoISIN2021Identifier? ISIN { get; init; }
+        public ISIN2021Identifier? ISIN { get; init; }
 
         /// <summary>
         /// Index on which the financial instrument is based.

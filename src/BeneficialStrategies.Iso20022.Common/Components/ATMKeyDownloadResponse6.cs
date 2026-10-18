@@ -38,7 +38,7 @@ public record ATMKeyDownloadResponse6
     [IsoId("_KPqPJbZ6EfCUZfsQO4rYeA")]
     [DisplayName("ATM Challenge")]
     [IsoXmlTag("ATMChllng")]
-    public IsoMax140Binary? ATMChallenge { get; init; }
+    public Max140Binary? ATMChallenge { get; init; }
 
     /// <summary>
     /// Security parameters of the host downloading the key.

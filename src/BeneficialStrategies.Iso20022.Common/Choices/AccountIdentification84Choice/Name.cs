@@ -11,6 +11,6 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification84Choice
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Nm")]
-        public required IsoMax70Text Value { get; init; }
+        public required Max70Text Value { get; init; }
     }
 }

@@ -39,7 +39,7 @@ public record DevicePlayResourceRequest1
     [DisplayName("Sound Volume")]
     [IsoXmlTag("SoundVol")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? SoundVolume { get; init; }
+    public PercentageRate? SoundVolume { get; init; }
 
     /// <summary>
     /// Resolution to use.
@@ -49,7 +49,7 @@ public record DevicePlayResourceRequest1
     [IsoXmlTag("DispRsltn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DisplayResolution { get; init; }
+    public Max35Text? DisplayResolution { get; init; }
 
     /// <summary>
     /// Identification of the resource to use.

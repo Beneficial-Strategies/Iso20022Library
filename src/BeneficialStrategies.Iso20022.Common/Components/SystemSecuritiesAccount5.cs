@@ -23,7 +23,7 @@ public record SystemSecuritiesAccount5
     [DisplayName("Closing Date")]
     [IsoXmlTag("ClsgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ClosingDate { get; init; }
+    public DateOnly? ClosingDate { get; init; }
 
     /// <summary>
     /// Indicates whether the securities account is on hold or not.
@@ -35,7 +35,7 @@ public record SystemSecuritiesAccount5
     [DisplayName("Hold Indicator")]
     [IsoXmlTag("HldInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? HoldIndicator { get; init; }
+    public TrueFalseIndicator? HoldIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the securities account can hold a negative position in a security or not.
@@ -44,7 +44,7 @@ public record SystemSecuritiesAccount5
     [DisplayName("Negative Position")]
     [IsoXmlTag("NegPos")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? NegativePosition { get; init; }
+    public TrueFalseIndicator? NegativePosition { get; init; }
 
     /// <summary>
     /// Specifies information to identify securities accounts where allocation instructions are posted.
@@ -53,7 +53,7 @@ public record SystemSecuritiesAccount5
     [DisplayName("End Investor Flag")]
     [IsoXmlTag("EndInvstrFlg")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    public IsoExact4AlphaNumericText? EndInvestorFlag { get; init; }
+    public Exact4AlphaNumericText? EndInvestorFlag { get; init; }
 
     /// <summary>
     /// Defines how the price is applied to the securities account.
@@ -62,5 +62,5 @@ public record SystemSecuritiesAccount5
     [DisplayName("Pricing Scheme")]
     [IsoXmlTag("PricgSchme")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    public IsoExact4AlphaNumericText? PricingScheme { get; init; }
+    public Exact4AlphaNumericText? PricingScheme { get; init; }
 }

@@ -39,7 +39,7 @@ public record RequestDetails11
     [DisplayName("Retain Indicator")]
     [IsoXmlTag("RtnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? RetainIndicator { get; init; }
+    public YesNoIndicator? RetainIndicator { get; init; }
 
     /// <summary>
     /// Specifies the type of linkage requested.

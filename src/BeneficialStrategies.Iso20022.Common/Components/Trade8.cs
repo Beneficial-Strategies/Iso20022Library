@@ -21,7 +21,7 @@ public record Trade8
     /// </summary>
     [DisplayName("Associated Trade Reference")]
     [IsoXmlTag("AssoctdTradRef")]
-    public ValueList<IsoMax70Text> AssociatedTradeReference { get; init; } = [];
+    public ValueList<Max70Text> AssociatedTradeReference { get; init; } = [];
 
     /// <summary>
     /// Clearing Method.
@@ -56,7 +56,7 @@ public record Trade8
     /// </summary>
     [DisplayName("Place Of Confirmation")]
     [IsoXmlTag("PlcOfConf")]
-    public IsoAnyBICDec2014Identifier? PlaceOfConfirmation { get; init; }
+    public AnyBICDec2014Identifier? PlaceOfConfirmation { get; init; }
 
     /// <summary>
     /// Product Identification.
@@ -84,21 +84,21 @@ public record Trade8
     /// </summary>
     [DisplayName("Symbol")]
     [IsoXmlTag("Symb")]
-    public IsoMax35Text? Symbol { get; init; }
+    public Max35Text? Symbol { get; init; }
 
     /// <summary>
     /// Trade Date.
     /// </summary>
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
-    public required IsoISODate TradeDate { get; init; }
+    public required DateOnly TradeDate { get; init; }
 
     /// <summary>
     /// Trade Identification.
     /// </summary>
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    public required IsoMax35Text TradeIdentification { get; init; }
+    public required Max35Text TradeIdentification { get; init; }
 
     /// <summary>
     /// Trading Currency.

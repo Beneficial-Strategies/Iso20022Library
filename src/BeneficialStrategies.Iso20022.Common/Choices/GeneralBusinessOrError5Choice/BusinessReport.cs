@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneralBusinessOrError5Choice
         [IsoXmlTag("BizInfRef")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text BusinessInformationReference { get; init; }
+        public required Max35Text BusinessInformationReference { get; init; }
 
         /// <summary>
         /// Requested business information.

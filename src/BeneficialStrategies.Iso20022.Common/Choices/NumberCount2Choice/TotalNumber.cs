@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NumberCount2Choice
         [DisplayName("Current Instruction Number")]
         [IsoXmlTag("CurInstrNb")]
         [IsoSimpleType(IsoSimpleType.Max6NumericText)]
-        public required IsoMax6NumericText CurrentInstructionNumber { get; init; }
+        public required Max6NumericText CurrentInstructionNumber { get; init; }
 
         /// <summary>
         /// Total number of settlement instructions that are linked together.
@@ -32,6 +32,6 @@ namespace BeneficialStrategies.Iso20022.Choices.NumberCount2Choice
         [DisplayName("Total Of Linked Instructions")]
         [IsoXmlTag("TtlOfLkdInstrs")]
         [IsoSimpleType(IsoSimpleType.Max6NumericText)]
-        public required IsoMax6NumericText TotalOfLinkedInstructions { get; init; }
+        public required Max6NumericText TotalOfLinkedInstructions { get; init; }
     }
 }

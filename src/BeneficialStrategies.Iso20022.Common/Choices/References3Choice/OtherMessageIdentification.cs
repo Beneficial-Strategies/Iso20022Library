@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.References3Choice
         [IsoXmlTag("OthrMsgId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text Value { get; init; }
+        public required Max35Text Value { get; init; }
     }
 }

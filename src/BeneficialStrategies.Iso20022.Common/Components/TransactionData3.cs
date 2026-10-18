@@ -28,7 +28,7 @@ public record TransactionData3
     /// </summary>
     [DisplayName("Strategy Linked Order Identification")]
     [IsoXmlTag("StrtgyLkdOrdrId")]
-    public IsoMax50Text? StrategyLinkedOrderIdentification { get; init; }
+    public Max50Text? StrategyLinkedOrderIdentification { get; init; }
 
     /// <summary>
     /// Traded Quantity.
@@ -42,7 +42,7 @@ public record TransactionData3
     /// </summary>
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
-    public IsoMax52Text? TransactionIdentification { get; init; }
+    public Max52Text? TransactionIdentification { get; init; }
 
     /// <summary>
     /// Transaction Price.

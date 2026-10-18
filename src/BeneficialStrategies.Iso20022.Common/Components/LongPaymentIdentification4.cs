@@ -21,14 +21,14 @@ public record LongPaymentIdentification4
     /// </summary>
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
-    public IsoMax35Text? EndToEndIdentification { get; init; }
+    public Max35Text? EndToEndIdentification { get; init; }
 
     /// <summary>
     /// Entry Type.
     /// </summary>
     [DisplayName("Entry Type")]
     [IsoXmlTag("NtryTp")]
-    public IsoEntryTypeIdentifier? EntryType { get; init; }
+    public EntryTypeIdentifier? EntryType { get; init; }
 
     /// <summary>
     /// Instructed Agent.
@@ -56,7 +56,7 @@ public record LongPaymentIdentification4
     /// </summary>
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
-    public required IsoISODate InterbankSettlementDate { get; init; }
+    public required DateOnly InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Payment Method.
@@ -70,12 +70,12 @@ public record LongPaymentIdentification4
     /// </summary>
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
-    public IsoMax35Text? TransactionIdentification { get; init; }
+    public Max35Text? TransactionIdentification { get; init; }
 
     /// <summary>
     /// UETR.
     /// </summary>
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
-    public IsoUUIDv4Identifier? UETR { get; init; }
+    public UUIDv4Identifier? UETR { get; init; }
 }

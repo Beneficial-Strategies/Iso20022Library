@@ -23,7 +23,7 @@ public record SettlementCategoryTotal2
     [DisplayName("Count")]
     [IsoXmlTag("Cnt")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Count { get; init; }
+    public Number? Count { get; init; }
 
     /// <summary>
     /// Gross amount.

@@ -22,7 +22,7 @@ public record RequestIdentification1
     [IsoId("_XEQ-klGnEfC_v5ez7RpMHw")]
     [DisplayName("Original Order Reference")]
     [IsoXmlTag("OrgnlOrdrRef")]
-    public required IsoUUIDv4Identifier OriginalOrderReference { get; init; }
+    public required UUIDv4Identifier OriginalOrderReference { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the cash receiver for the cash withdrawal.
@@ -30,7 +30,7 @@ public record RequestIdentification1
     [IsoId("_XEQ-k1GnEfC_v5ez7RpMHw")]
     [DisplayName("Original Cash Receiver Reference")]
     [IsoXmlTag("OrgnlCshRcvrRef")]
-    public IsoMax35Text? OriginalCashReceiverReference { get; init; }
+    public Max35Text? OriginalCashReceiverReference { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the cash sender for the cash deposit.
@@ -38,5 +38,5 @@ public record RequestIdentification1
     [IsoId("_Z2K6EWiTEfC7No_UZmyDXw")]
     [DisplayName("Original Cash Sender Reference")]
     [IsoXmlTag("OrgnlCshSndrRef")]
-    public IsoMax35Text? OriginalCashSenderReference { get; init; }
+    public Max35Text? OriginalCashSenderReference { get; init; }
 }

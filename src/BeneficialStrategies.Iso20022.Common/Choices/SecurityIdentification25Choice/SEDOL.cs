@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification25Choice
         /// </summary>
         [IsoXmlTag("SEDOL")]
         [IsoSimpleType(IsoSimpleType.SEDOLIdentifier)]
-        public required IsoSEDOLIdentifier Value { get; init; }
+        public required SEDOLIdentifier Value { get; init; }
     }
 }

@@ -23,7 +23,7 @@ public record SecuritiesReturnCriteria1
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator FinancialInstrumentIdentification { get; init; }
+    public required RequestedIndicator FinancialInstrumentIdentification { get; init; }
 
     /// <summary>
     /// Name of the security.
@@ -32,7 +32,7 @@ public record SecuritiesReturnCriteria1
     [DisplayName("ISO Security Long Name")]
     [IsoXmlTag("ISOSctyLngNm")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator ISOSecurityLongName { get; init; }
+    public required RequestedIndicator ISOSecurityLongName { get; init; }
 
     /// <summary>
     /// Short name of the security expressed as ISO 18773/18774.
@@ -41,7 +41,7 @@ public record SecuritiesReturnCriteria1
     [DisplayName("ISO Security Short Name")]
     [IsoXmlTag("ISOSctyShrtNm")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator ISOSecurityShortName { get; init; }
+    public required RequestedIndicator ISOSecurityShortName { get; init; }
 
     /// <summary>
     /// Classification type of the financial instrument, as per the ISO Classification of Financial Instrument (CFI) codification, for example, common share with voting rights, fully paid, or registered.
@@ -50,7 +50,7 @@ public record SecuritiesReturnCriteria1
     [DisplayName("Classification Financial Instrument")]
     [IsoXmlTag("ClssfctnFinInstrm")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator ClassificationFinancialInstrument { get; init; }
+    public required RequestedIndicator ClassificationFinancialInstrument { get; init; }
 
     /// <summary>
     /// Planned final repayment date at the time of issuance.
@@ -59,7 +59,7 @@ public record SecuritiesReturnCriteria1
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator MaturityDate { get; init; }
+    public required RequestedIndicator MaturityDate { get; init; }
 
     /// <summary>
     /// Date/time at which the security was made available.
@@ -68,7 +68,7 @@ public record SecuritiesReturnCriteria1
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator IssueDate { get; init; }
+    public required RequestedIndicator IssueDate { get; init; }
 
     /// <summary>
     /// Currency in which a security is issued or redenominated.
@@ -77,7 +77,7 @@ public record SecuritiesReturnCriteria1
     [DisplayName("Issue Currency")]
     [IsoXmlTag("IsseCcy")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator IssueCurrency { get; init; }
+    public required RequestedIndicator IssueCurrency { get; init; }
 
     /// <summary>
     /// Primary market or country where a security is issued by the issuer or its agent.
@@ -86,7 +86,7 @@ public record SecuritiesReturnCriteria1
     [DisplayName("Country Of Issue")]
     [IsoXmlTag("CtryOfIsse")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator CountryOfIssue { get; init; }
+    public required RequestedIndicator CountryOfIssue { get; init; }
 
     /// <summary>
     /// Specifies the status of the security within its lifecycle.
@@ -95,7 +95,7 @@ public record SecuritiesReturnCriteria1
     [DisplayName("Security Status")]
     [IsoXmlTag("SctySts")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator SecurityStatus { get; init; }
+    public required RequestedIndicator SecurityStatus { get; init; }
 
     /// <summary>
     /// CSD Investor of a security.
@@ -104,7 +104,7 @@ public record SecuritiesReturnCriteria1
     [DisplayName("Investor CSD")]
     [IsoXmlTag("InvstrCSD")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator InvestorCSD { get; init; }
+    public required RequestedIndicator InvestorCSD { get; init; }
 
     /// <summary>
     /// CSD Issuer of a security.
@@ -113,7 +113,7 @@ public record SecuritiesReturnCriteria1
     [DisplayName("Issuer CSD")]
     [IsoXmlTag("IssrCSD")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator IssuerCSD { get; init; }
+    public required RequestedIndicator IssuerCSD { get; init; }
 
     /// <summary>
     /// Technical issuer of a security.
@@ -122,7 +122,7 @@ public record SecuritiesReturnCriteria1
     [DisplayName("Technical Issuer CSD")]
     [IsoXmlTag("TechIssrCSD")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator TechnicalIssuerCSD { get; init; }
+    public required RequestedIndicator TechnicalIssuerCSD { get; init; }
 
     /// <summary>
     /// CSD of a security.
@@ -131,7 +131,7 @@ public record SecuritiesReturnCriteria1
     [DisplayName("CSD")]
     [IsoXmlTag("CSD")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator CSD { get; init; }
+    public required RequestedIndicator CSD { get; init; }
 
     /// <summary>
     /// Quantity of a security.
@@ -140,7 +140,7 @@ public record SecuritiesReturnCriteria1
     [DisplayName("Securities Quantity Type")]
     [IsoXmlTag("SctiesQtyTp")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator SecuritiesQuantityType { get; init; }
+    public required RequestedIndicator SecuritiesQuantityType { get; init; }
 
     /// <summary>
     /// Indicates the minimum quantity (unit or nominal) of a security.
@@ -149,7 +149,7 @@ public record SecuritiesReturnCriteria1
     [DisplayName("Minimum Denomination")]
     [IsoXmlTag("MinDnmtn")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator MinimumDenomination { get; init; }
+    public required RequestedIndicator MinimumDenomination { get; init; }
 
     /// <summary>
     /// Minimum multiple quantity (unit or nominal) of securities.
@@ -158,7 +158,7 @@ public record SecuritiesReturnCriteria1
     [DisplayName("Minimum Multiple Quantity")]
     [IsoXmlTag("MinMltplQty")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator MinimumMultipleQuantity { get; init; }
+    public required RequestedIndicator MinimumMultipleQuantity { get; init; }
 
     /// <summary>
     /// Minimum quantity of securities that can be purchased without incurring a larger fee. For example, if the round lot size is 100 and the trade is for 125 shares, then 100 will be processed without a fee and the remaining 25 will incur a service fee for being an odd lot size.
@@ -167,5 +167,5 @@ public record SecuritiesReturnCriteria1
     [DisplayName("Deviating Settlement Unit")]
     [IsoXmlTag("DevtgSttlmUnit")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator DeviatingSettlementUnit { get; init; }
+    public required RequestedIndicator DeviatingSettlementUnit { get; init; }
 }

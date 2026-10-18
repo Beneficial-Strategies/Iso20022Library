@@ -32,7 +32,7 @@ public record ResultData5
     [IsoXmlTag("OthrRslt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherResult { get; init; }
+    public Max35Text? OtherResult { get; init; }
 
     /// <summary>
     /// Detailed results of the processing.
@@ -42,7 +42,7 @@ public record ResultData5
     [DisplayName("Result Details")]
     [IsoXmlTag("RsltDtls")]
     [IsoSimpleType(IsoSimpleType.Exact2AlphaNumericText)]
-    public required IsoExact2AlphaNumericText ResultDetails { get; init; }
+    public required Exact2AlphaNumericText ResultDetails { get; init; }
 
     /// <summary>
     /// Additional result information to be conveyed.

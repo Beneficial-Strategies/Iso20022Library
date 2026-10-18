@@ -23,7 +23,7 @@ public record SystemPartyIdentification10
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ValidFrom { get; init; }
+    public DateOnly? ValidFrom { get; init; }
 
     /// <summary>
     /// Unique and unambiguous way to identify a system party.

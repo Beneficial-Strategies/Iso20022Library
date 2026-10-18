@@ -21,7 +21,7 @@ public record AccountStatementData3
     /// </summary>
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Details.
@@ -35,5 +35,5 @@ public record AccountStatementData3
     /// </summary>
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
-    public IsoISOTime? Time { get; init; }
+    public ISOTime? Time { get; init; }
 }

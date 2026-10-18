@@ -22,7 +22,7 @@ public record CashDepositRequest1
     [IsoId("_lCZqQVDfEfCRhs5qxCujTw")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
-    public required IsoUUIDv4Identifier OrderReference { get; init; }
+    public required UUIDv4Identifier OrderReference { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the cash sender for the cash deposit.
@@ -30,7 +30,7 @@ public record CashDepositRequest1
     [IsoId("__6BSEOO0Ee-NFYIkYc90gw")]
     [DisplayName("Cash Sender Reference")]
     [IsoXmlTag("CshSndrRef")]
-    public required IsoMax35Text CashSenderReference { get; init; }
+    public required Max35Text CashSenderReference { get; init; }
 
     /// <summary>
     /// Indicates whether this message is amending an earlier request message.
@@ -39,7 +39,7 @@ public record CashDepositRequest1
     [IsoId("_YtLHQatmEfC6tbn8zOl_iw")]
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
-    public IsoYesNoIndicator? AmendmentIndicator { get; init; }
+    public YesNoIndicator? AmendmentIndicator { get; init; }
 
     /// <summary>
     /// Date on which the cash sender expects the cash to arrive at the cash receiver and be credited to their account.
@@ -47,7 +47,7 @@ public record CashDepositRequest1
     [IsoId("_NjfqYeOzEe-NFYIkYc90gw")]
     [DisplayName("Expected Value Date")]
     [IsoXmlTag("XpctdValDt")]
-    public required IsoISODate ExpectedValueDate { get; init; }
+    public required DateOnly ExpectedValueDate { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the account to which cash will be deposited.
@@ -95,7 +95,7 @@ public record CashDepositRequest1
     [IsoId("_t40oYOOyEe-NFYIkYc90gw")]
     [DisplayName("Secure Carrier Name")]
     [IsoXmlTag("ScrCrrierNm")]
-    public IsoMax70Text? SecureCarrierName { get; init; }
+    public Max70Text? SecureCarrierName { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the secure carrier for the deposit.
@@ -103,7 +103,7 @@ public record CashDepositRequest1
     [IsoId("_Xj1RcOO0Ee-NFYIkYc90gw")]
     [DisplayName("Secure Carrier Reference")]
     [IsoXmlTag("ScrCrrierRef")]
-    public IsoMax35Text? SecureCarrierReference { get; init; }
+    public Max35Text? SecureCarrierReference { get; init; }
 
     /// <summary>
     /// Indicates whether the deposit in transit is insured.
@@ -112,7 +112,7 @@ public record CashDepositRequest1
     [IsoId("_8vR-8OO1Ee-NFYIkYc90gw")]
     [DisplayName("Insurance Indicator")]
     [IsoXmlTag("InsrncInd")]
-    public IsoYesNoIndicator? InsuranceIndicator { get; init; }
+    public YesNoIndicator? InsuranceIndicator { get; init; }
 
     /// <summary>
     /// Further details of the cash deposit.
@@ -120,5 +120,5 @@ public record CashDepositRequest1
     [IsoId("_QEGekOO2Ee-NFYIkYc90gw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public IsoMax500Text? AdditionalInformation { get; init; }
+    public Max500Text? AdditionalInformation { get; init; }
 }

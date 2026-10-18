@@ -24,7 +24,7 @@ public record PEPISATransfer4
     [IsoXmlTag("MstrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Identification of the confirmation assigned by the old plan manager to the transfer of account.
@@ -34,7 +34,7 @@ public record PEPISATransfer4
     [IsoXmlTag("TrfConfId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransferConfirmationIdentification { get; init; }
+    public required Max35Text TransferConfirmationIdentification { get; init; }
 
     /// <summary>
     /// Identification received by the old plan manager and assigned by the new plan manager to the transfer of account.
@@ -44,7 +44,7 @@ public record PEPISATransfer4
     [IsoXmlTag("TrfInstrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransferInstructionReference { get; init; }
+    public required Max35Text TransferInstructionReference { get; init; }
 
     /// <summary>
     /// Date when the transfer instruction was executed.
@@ -53,7 +53,7 @@ public record PEPISATransfer4
     [DisplayName("Actual Transfer Date")]
     [IsoXmlTag("ActlTrfDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ActualTransferDate { get; init; }
+    public required DateOnly ActualTransferDate { get; init; }
 
     /// <summary>
     /// Indicates whether there is cash in the account that is awaiting investment.
@@ -62,7 +62,7 @@ public record PEPISATransfer4
     [DisplayName("Residual Cash Indicator")]
     [IsoXmlTag("RsdlCshInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ResidualCashIndicator { get; init; }
+    public required YesNoIndicator ResidualCashIndicator { get; init; }
 
     /// <summary>
     /// UK government schemes to encourage individuals to invest in securities based unit and investment trusts, offering certain tax benefits. These are not investment in their own right but are tax exempt wrappers in which individuals can hold equities, bonds and funds to shelter them from income and capital gains tax. ||The Personal Equity Plan (PEP) and the Individual Savings Account (ISA) are provided only by UK based financial institutions.

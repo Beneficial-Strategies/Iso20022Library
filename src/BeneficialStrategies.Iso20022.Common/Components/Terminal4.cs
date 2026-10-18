@@ -40,7 +40,7 @@ public record Terminal4
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Capabilities of the terminal
@@ -65,7 +65,7 @@ public record Terminal4
     [DisplayName("Geographic Location")]
     [IsoXmlTag("GeogcLctn")]
     [IsoSimpleType(IsoSimpleType.GeographicPointInDecimalDegrees)]
-    public IsoGeographicPointInDecimalDegrees? GeographicLocation { get; init; }
+    public GeographicPointInDecimalDegrees? GeographicLocation { get; init; }
 
     /// <summary>
     /// Indicates whether the terminal is operated outdoor or indoor at the point of service.
@@ -76,7 +76,7 @@ public record Terminal4
     [DisplayName("Outdoor Indicator")]
     [IsoXmlTag("OutdrInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? OutdoorIndicator { get; init; }
+    public TrueFalseIndicator? OutdoorIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the terminal is operated on- or off-premises at the point of service.
@@ -88,7 +88,7 @@ public record Terminal4
     [DisplayName("Off Premises Indicator")]
     [IsoXmlTag("OffPrmissInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? OffPremisesIndicator { get; init; }
+    public TrueFalseIndicator? OffPremisesIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the transaction was performed on board.
@@ -99,7 +99,7 @@ public record Terminal4
     [DisplayName("On Board Indicator")]
     [IsoXmlTag("OnBrdInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? OnBoardIndicator { get; init; }
+    public TrueFalseIndicator? OnBoardIndicator { get; init; }
 
     /// <summary>
     /// Data related to the components of the POI (Point Of Interaction) performing the transactions.

@@ -24,7 +24,7 @@ public record TransferReference13
     [IsoXmlTag("TrfRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransferReference { get; init; }
+    public required Max35Text TransferReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor&apos;s identification of the portfolio transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.
@@ -50,7 +50,7 @@ public record TransferReference13
     [IsoXmlTag("TrfConfRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TransferConfirmationReference { get; init; }
+    public Max35Text? TransferConfirmationReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for the portfolio transfer cancellation, as assigned by the instructing party.
@@ -60,7 +60,7 @@ public record TransferReference13
     [IsoXmlTag("CxlRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CancellationReference { get; init; }
+    public Max35Text? CancellationReference { get; init; }
 
     /// <summary>
     /// Reason for the cancellation.
@@ -70,5 +70,5 @@ public record TransferReference13
     [IsoXmlTag("CxlRsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CancellationReason { get; init; }
+    public Max35Text? CancellationReason { get; init; }
 }

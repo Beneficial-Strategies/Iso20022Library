@@ -35,47 +35,47 @@ public record OriginalGroupHeader21
     /// </summary>
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
-    public IsoDecimalNumber? ControlSum { get; init; }
+    public DecimalNumber? ControlSum { get; init; }
 
     /// <summary>
     /// Group Cancellation.
     /// </summary>
     [DisplayName("Group Cancellation")]
     [IsoXmlTag("GrpCxl")]
-    public IsoGroupCancellationIndicator? GroupCancellation { get; init; }
+    public GroupCancellationIndicator? GroupCancellation { get; init; }
 
     /// <summary>
     /// Group Cancellation Identification.
     /// </summary>
     [DisplayName("Group Cancellation Identification")]
     [IsoXmlTag("GrpCxlId")]
-    public IsoMax35Text? GroupCancellationIdentification { get; init; }
+    public Max35Text? GroupCancellationIdentification { get; init; }
 
     /// <summary>
     /// Number Of Transactions.
     /// </summary>
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
-    public IsoMax15NumericText? NumberOfTransactions { get; init; }
+    public Max15NumericText? NumberOfTransactions { get; init; }
 
     /// <summary>
     /// Original Creation Date Time.
     /// </summary>
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
-    public IsoISODateTime? OriginalCreationDateTime { get; init; }
+    public ISODateTime? OriginalCreationDateTime { get; init; }
 
     /// <summary>
     /// Original Message Identification.
     /// </summary>
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
-    public required IsoMax35Text OriginalMessageIdentification { get; init; }
+    public required Max35Text OriginalMessageIdentification { get; init; }
 
     /// <summary>
     /// Original Message Name Identification.
     /// </summary>
     [DisplayName("Original Message Name Identification")]
     [IsoXmlTag("OrgnlMsgNmId")]
-    public required IsoMax35Text OriginalMessageNameIdentification { get; init; }
+    public required Max35Text OriginalMessageNameIdentification { get; init; }
 }

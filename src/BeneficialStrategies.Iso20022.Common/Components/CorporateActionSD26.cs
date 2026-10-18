@@ -21,19 +21,19 @@ public record CorporateActionSD26
     /// </summary>
     [DisplayName("Certificate Called Amount")]
     [IsoXmlTag("CertClldAmt")]
-    public required IsoDecimalNumber CertificateCalledAmount { get; init; }
+    public required DecimalNumber CertificateCalledAmount { get; init; }
 
     /// <summary>
     /// Certificate Number.
     /// </summary>
     [DisplayName("Certificate Number")]
     [IsoXmlTag("CertNb")]
-    public required IsoMax15AlphaNumericText CertificateNumber { get; init; }
+    public required Max15AlphaNumericText CertificateNumber { get; init; }
 
     /// <summary>
     /// Certificate Prefix.
     /// </summary>
     [DisplayName("Certificate Prefix")]
     [IsoXmlTag("CertPrfx")]
-    public IsoMax4AlphaNumericText? CertificatePrefix { get; init; }
+    public Max4AlphaNumericText? CertificatePrefix { get; init; }
 }

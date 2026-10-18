@@ -21,12 +21,12 @@ public record OrderPriority1
     /// </summary>
     [DisplayName("Size")]
     [IsoXmlTag("Sz")]
-    public IsoPositiveNumber? Size { get; init; }
+    public PositiveNumber? Size { get; init; }
 
     /// <summary>
     /// Time Stamp.
     /// </summary>
     [DisplayName("Time Stamp")]
     [IsoXmlTag("TmStmp")]
-    public IsoISODateTime? TimeStamp { get; init; }
+    public ISODateTime? TimeStamp { get; init; }
 }

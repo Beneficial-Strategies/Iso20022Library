@@ -21,14 +21,14 @@ public record CorporateActionGeneralInformation192
     /// </summary>
     [DisplayName("Class Action Number")]
     [IsoXmlTag("ClssActnNb")]
-    public IsoRestrictedFINXMax16Text? ClassActionNumber { get; init; }
+    public RestrictedFINXMax16Text? ClassActionNumber { get; init; }
 
     /// <summary>
     /// Corporate Action Event Identification.
     /// </summary>
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
-    public required IsoRestrictedFINXMax16Text CorporateActionEventIdentification { get; init; }
+    public required RestrictedFINXMax16Text CorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Event Processing Type.
@@ -56,7 +56,7 @@ public record CorporateActionGeneralInformation192
     /// </summary>
     [DisplayName("Official Corporate Action Event Identification")]
     [IsoXmlTag("OffclCorpActnEvtId")]
-    public IsoRestrictedFINXMax16Text? OfficialCorporateActionEventIdentification { get; init; }
+    public RestrictedFINXMax16Text? OfficialCorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Underlying Security.

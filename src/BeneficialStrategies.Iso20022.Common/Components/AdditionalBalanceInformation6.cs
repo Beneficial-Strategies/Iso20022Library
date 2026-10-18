@@ -40,5 +40,5 @@ public record AdditionalBalanceInformation6
     [IsoXmlTag("SubBalAddtlDtls")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? SubBalanceAdditionalDetails { get; init; }
+    public Max140Text? SubBalanceAdditionalDetails { get; init; }
 }

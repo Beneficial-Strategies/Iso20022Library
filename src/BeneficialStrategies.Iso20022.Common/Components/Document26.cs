@@ -21,14 +21,14 @@ public record Document26
     /// </summary>
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax2048Text? Description { get; init; }
+    public Max2048Text? Description { get; init; }
 
     /// <summary>
     /// Electronic Seal Reference.
     /// </summary>
     [DisplayName("Electronic Seal Reference")]
     [IsoXmlTag("ElctrncSealRef")]
-    public IsoMax2048Text? ElectronicSealReference { get; init; }
+    public Max2048Text? ElectronicSealReference { get; init; }
 
     /// <summary>
     /// Language.
@@ -49,5 +49,5 @@ public record Document26
     /// </summary>
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
-    public required IsoMax2048Text Reference { get; init; }
+    public required Max2048Text Reference { get; init; }
 }

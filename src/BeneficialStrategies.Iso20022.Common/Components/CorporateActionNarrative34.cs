@@ -22,7 +22,7 @@ public record CorporateActionNarrative34
     [IsoId("_chfbX5KQEeWHWpTQn1FFVg")]
     [DisplayName("Registration Details")]
     [IsoXmlTag("RegnDtls")]
-    public SimpleValueList<IsoRestrictedFINXMax350Text> RegistrationDetails { get; init; } = [];
+    public SimpleValueList<RestrictedFINXMax350Text> RegistrationDetails { get; init; } = [];
 
     /// <summary>
     /// Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.
@@ -30,7 +30,7 @@ public record CorporateActionNarrative34
     [IsoId("_chfbZ5KQEeWHWpTQn1FFVg")]
     [DisplayName("Party Contact Narrative")]
     [IsoXmlTag("PtyCtctNrrtv")]
-    public SimpleValueList<IsoRestrictedFINXMax350Text> PartyContactNarrative { get; init; } = [];
+    public SimpleValueList<RestrictedFINXMax350Text> PartyContactNarrative { get; init; } = [];
 
     /// <summary>
     /// Provides information required for the certification/breakdown.
@@ -38,5 +38,5 @@ public record CorporateActionNarrative34
     [IsoId("_chfbb5KQEeWHWpTQn1FFVg")]
     [DisplayName("Certification Breakdown")]
     [IsoXmlTag("CertfctnBrkdwn")]
-    public SimpleValueList<IsoRestrictedFINXMax350Text> CertificationBreakdown { get; init; } = [];
+    public SimpleValueList<RestrictedFINXMax350Text> CertificationBreakdown { get; init; } = [];
 }

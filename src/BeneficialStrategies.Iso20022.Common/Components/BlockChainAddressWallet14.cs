@@ -22,7 +22,7 @@ public record BlockChainAddressWallet14
     [IsoId("958094cd-e882-4e77-9b78-371ed4fd5bab")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax140Text Identification { get; init; }
+    public required Max140Text Identification { get; init; }
 
     /// <summary>
     /// Specifies the type of securities account.
@@ -38,7 +38,7 @@ public record BlockChainAddressWallet14
     [IsoId("2747708a-65df-4e67-959a-20d305cae13c")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax70Text? Name { get; init; }
+    public Max70Text? Name { get; init; }
 
     /// <summary>
     /// Place of safekeeping expressed with a Digital Ledger Identifier.
@@ -46,5 +46,5 @@ public record BlockChainAddressWallet14
     [IsoId("c4edb6ce-049a-41da-8321-25f1b52b703b")]
     [DisplayName("Digital Ledger Identification")]
     [IsoXmlTag("DgtlLdgrId")]
-    public required IsoDTI2024Identifier DigitalLedgerIdentification { get; init; }
+    public required DTI2024Identifier DigitalLedgerIdentification { get; init; }
 }

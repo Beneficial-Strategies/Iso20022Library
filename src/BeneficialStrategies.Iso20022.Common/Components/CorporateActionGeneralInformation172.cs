@@ -21,14 +21,14 @@ public record CorporateActionGeneralInformation172
     /// </summary>
     [DisplayName("Agent Corporate Action Event Identification")]
     [IsoXmlTag("AgtCorpActnEvtId")]
-    public required IsoMax35Text AgentCorporateActionEventIdentification { get; init; }
+    public required Max35Text AgentCorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Corporate Action Event Identification.
     /// </summary>
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
-    public IsoMax35Text? CorporateActionEventIdentification { get; init; }
+    public Max35Text? CorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Event Processing Type.
@@ -56,7 +56,7 @@ public record CorporateActionGeneralInformation172
     /// </summary>
     [DisplayName("Official Corporate Action Event Identification")]
     [IsoXmlTag("OffclCorpActnEvtId")]
-    public IsoMax35Text? OfficialCorporateActionEventIdentification { get; init; }
+    public Max35Text? OfficialCorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Sub Event Type.

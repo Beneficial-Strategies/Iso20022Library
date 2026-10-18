@@ -23,7 +23,7 @@ public record SettlementDateTimeIndication1
     [DisplayName("Debit Date Time")]
     [IsoXmlTag("DbtDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? DebitDateTime { get; init; }
+    public ISODateTime? DebitDateTime { get; init; }
 
     /// <summary>
     /// Date and time at which a payment has been credited at the transaction administrator. In the case of TARGET, the date and time at which the payment has been credited at the receiving central bank, expressed in Central European Time (CET).
@@ -32,5 +32,5 @@ public record SettlementDateTimeIndication1
     [DisplayName("Credit Date Time")]
     [IsoXmlTag("CdtDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? CreditDateTime { get; init; }
+    public ISODateTime? CreditDateTime { get; init; }
 }

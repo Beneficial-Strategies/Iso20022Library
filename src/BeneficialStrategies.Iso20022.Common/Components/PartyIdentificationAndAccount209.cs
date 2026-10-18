@@ -31,7 +31,7 @@ public record PartyIdentificationAndAccount209
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? LEI { get; init; }
+    public LEIIdentifier? LEI { get; init; }
 
     /// <summary>
     /// Alternate identification for a party.
@@ -49,7 +49,7 @@ public record PartyIdentificationAndAccount209
     [IsoXmlTag("SfkpgAcct")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoRestrictedFINXMax35Text? SafekeepingAccount { get; init; }
+    public RestrictedFINXMax35Text? SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Blockchain address or wallet where digital assets are maintained. This is the equivalent of safekeeping account for digital assets.
@@ -59,7 +59,7 @@ public record PartyIdentificationAndAccount209
     [IsoXmlTag("BlckChainAdrOrWllt")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoRestrictedFINXMax140Text? BlockChainAddressOrWallet { get; init; }
+    public RestrictedFINXMax140Text? BlockChainAddressOrWallet { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the transaction for the party identified.
@@ -69,7 +69,7 @@ public record PartyIdentificationAndAccount209
     [IsoXmlTag("PrcgId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? ProcessingIdentification { get; init; }
+    public RestrictedFINXMax16Text? ProcessingIdentification { get; init; }
 
     /// <summary>
     /// Provides additional information regarding the party.

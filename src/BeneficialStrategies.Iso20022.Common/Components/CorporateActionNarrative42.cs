@@ -102,5 +102,5 @@ public record CorporateActionNarrative42
     [IsoId("_XNTxpOXtEemEj48jhmlA0Q")]
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
-    public SimpleValueList<IsoMax2048Text> URLAddress { get; init; } = [];
+    public SimpleValueList<Max2048Text> URLAddress { get; init; } = [];
 }

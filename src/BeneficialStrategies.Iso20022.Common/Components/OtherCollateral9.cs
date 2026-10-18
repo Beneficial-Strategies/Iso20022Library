@@ -24,7 +24,7 @@ public record OtherCollateral9
     [IsoXmlTag("CollId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CollateralIdentification { get; init; }
+    public Max35Text? CollateralIdentification { get; init; }
 
     /// <summary>
     /// Provides the unique identification of the letter of credit.
@@ -34,7 +34,7 @@ public record OtherCollateral9
     [IsoXmlTag("LttrOfCdtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LetterOfCreditIdentification { get; init; }
+    public Max35Text? LetterOfCreditIdentification { get; init; }
 
     /// <summary>
     /// Amount of the letter/documentary credit.
@@ -83,7 +83,7 @@ public record OtherCollateral9
     [DisplayName("Limited Coverage Indicator")]
     [IsoXmlTag("LtdCvrgInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? LimitedCoverageIndicator { get; init; }
+    public YesNoIndicator? LimitedCoverageIndicator { get; init; }
 
     /// <summary>
     /// Party that issues the bank guarantee or letter of / documentary credit.
@@ -100,7 +100,7 @@ public record OtherCollateral9
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ValueDate { get; init; }
+    public DateOnly? ValueDate { get; init; }
 
     /// <summary>
     /// Exchange rate.
@@ -109,7 +109,7 @@ public record OtherCollateral9
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? ExchangeRate { get; init; }
+    public BaseOneRate? ExchangeRate { get; init; }
 
     /// <summary>
     /// Value of the collateral based on current market prices.
@@ -126,7 +126,7 @@ public record OtherCollateral9
     [DisplayName("Haircut")]
     [IsoXmlTag("Hrcut")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Haircut { get; init; }
+    public PercentageRate? Haircut { get; init; }
 
     /// <summary>
     /// Value of the collateral after taking into account the haircut, if any.

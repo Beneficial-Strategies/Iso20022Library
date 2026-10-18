@@ -23,7 +23,7 @@ public record Frequency1
     [DisplayName("Sequence")]
     [IsoXmlTag("Seq")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public IsoMax3NumericText? Sequence { get; init; }
+    public Max3NumericText? Sequence { get; init; }
 
     /// <summary>
     /// The date of the first payment to be made for this payment schedule.
@@ -32,7 +32,7 @@ public record Frequency1
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate StartDate { get; init; }
+    public required DateOnly StartDate { get; init; }
 
     /// <summary>
     /// Information about when the payment arrangement will end.

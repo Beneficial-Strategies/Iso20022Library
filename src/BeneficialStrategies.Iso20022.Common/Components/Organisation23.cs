@@ -24,7 +24,7 @@ public record Organisation23
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text Name { get; init; }
+    public required Max350Text Name { get; init; }
 
     /// <summary>
     /// Name of the organisation in short form.
@@ -34,7 +34,7 @@ public record Organisation23
     [IsoXmlTag("ShrtNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ShortName { get; init; }
+    public Max35Text? ShortName { get; init; }
 
     /// <summary>
     /// Information that locates and identifies a specific address, as defined by postal services.

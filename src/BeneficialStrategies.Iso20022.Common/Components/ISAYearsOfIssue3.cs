@@ -32,7 +32,7 @@ public record ISAYearsOfIssue3
     [IsoXmlTag("XtndedCurYrTp")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedCurrentYearType { get; init; }
+    public Extended350Code? ExtendedCurrentYearType { get; init; }
 
     /// <summary>
     /// Indicates whether the ISA contains a cash component asset for transfer.
@@ -41,7 +41,7 @@ public record ISAYearsOfIssue3
     [DisplayName("Cash Component Indicator")]
     [IsoXmlTag("CshCmpntInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator CashComponentIndicator { get; init; }
+    public required YesNoIndicator CashComponentIndicator { get; init; }
 
     /// <summary>
     /// Specifies the amounts already subscribed for the current year.

@@ -23,7 +23,7 @@ public record StandingOrderSearchCriteria2
     [DisplayName("Key Attributes Indicator")]
     [IsoXmlTag("KeyAttrbtsInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? KeyAttributesIndicator { get; init; }
+    public TrueFalseIndicator? KeyAttributesIndicator { get; init; }
 
     /// <summary>
     /// Unique identification to unambiguously identify the standing order used to initiate the liquidity transfer.
@@ -33,7 +33,7 @@ public record StandingOrderSearchCriteria2
     [IsoXmlTag("StgOrdrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? StandingOrderIdentification { get; init; }
+    public Max35Text? StandingOrderIdentification { get; init; }
 
     /// <summary>
     /// Type of the standing order.
@@ -99,7 +99,7 @@ public record StandingOrderSearchCriteria2
     [IsoXmlTag("LkSetId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LinkSetIdentification { get; init; }
+    public Max35Text? LinkSetIdentification { get; init; }
 
     /// <summary>
     /// Unique identification to unambiguously identify liquidity transfer standing order within the link set.
@@ -109,7 +109,7 @@ public record StandingOrderSearchCriteria2
     [IsoXmlTag("LkSetOrdrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LinkSetOrderIdentification { get; init; }
+    public Max35Text? LinkSetOrderIdentification { get; init; }
 
     /// <summary>
     /// Specifies the sequence in which the system will execute the liquidity transfers standing order within the link set when additional liquidity is required.
@@ -118,7 +118,7 @@ public record StandingOrderSearchCriteria2
     [DisplayName("Link Set Order Sequence")]
     [IsoXmlTag("LkSetOrdrSeq")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? LinkSetOrderSequence { get; init; }
+    public Number? LinkSetOrderSequence { get; init; }
 
     /// <summary>
     /// Indicates whether the query shall return all liquidity transfer standing orders defined as zero sweeping orders.
@@ -128,5 +128,5 @@ public record StandingOrderSearchCriteria2
     [DisplayName("Zero Sweep Indicator")]
     [IsoXmlTag("ZeroSweepInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ZeroSweepIndicator { get; init; }
+    public TrueFalseIndicator? ZeroSweepIndicator { get; init; }
 }

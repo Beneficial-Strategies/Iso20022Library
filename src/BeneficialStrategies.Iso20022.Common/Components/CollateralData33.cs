@@ -23,7 +23,7 @@ public record CollateralData33
     [DisplayName("Net Exposure Collateralisation Indicator")]
     [IsoXmlTag("NetXpsrCollstnInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? NetExposureCollateralisationIndicator { get; init; }
+    public TrueFalseIndicator? NetExposureCollateralisationIndicator { get; init; }
 
     /// <summary>
     /// Indication of the type of collateral component.

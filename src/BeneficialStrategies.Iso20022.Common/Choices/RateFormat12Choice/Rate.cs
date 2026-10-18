@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.RateFormat12Choice
         /// </summary>
         [IsoXmlTag("Rate")]
         [IsoSimpleType(IsoSimpleType.BaseOne14Rate)]
-        public required IsoBaseOne14Rate Value { get; init; }
+        public required BaseOne14Rate Value { get; init; }
     }
 }

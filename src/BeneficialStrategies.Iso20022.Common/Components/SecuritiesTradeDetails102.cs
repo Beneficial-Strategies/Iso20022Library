@@ -63,7 +63,7 @@ public record SecuritiesTradeDetails102
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
     [IsoSimpleType(IsoSimpleType.Max3Number)]
-    public IsoMax3Number? NumberOfDaysAccrued { get; init; }
+    public Max3Number? NumberOfDaysAccrued { get; init; }
 
     /// <summary>
     /// Specifies that a trade is to be reported to a third party.
@@ -130,7 +130,7 @@ public record SecuritiesTradeDetails102
     [IsoXmlTag("SttlmInstrPrcgAddtlDtls")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? SettlementInstructionProcessingAdditionalDetails { get; init; }
+    public RestrictedFINXMax350Text? SettlementInstructionProcessingAdditionalDetails { get; init; }
 
     /// <summary>
     /// Provides additional details pertaining to foreign exchange instructions.
@@ -140,5 +140,5 @@ public record SecuritiesTradeDetails102
     [IsoXmlTag("FxAddtlDtls")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? FXAdditionalDetails { get; init; }
+    public RestrictedFINXMax350Text? FXAdditionalDetails { get; init; }
 }

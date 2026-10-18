@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateSetupReason1Choice
         [IsoXmlTag("Prtry")]
         [IsoSimpleType(IsoSimpleType.Max70Text)]
         [StringLength(maximumLength: 70, MinimumLength = 1)]
-        public required IsoMax70Text Value { get; init; }
+        public required Max70Text Value { get; init; }
     }
 }

@@ -42,5 +42,5 @@ public record PayloadDescription2
     /// </summary>
     [DisplayName("Payload Type")]
     [IsoXmlTag("PyldTp")]
-    public required IsoMax256Text PayloadType { get; init; }
+    public required Max256Text PayloadType { get; init; }
 }

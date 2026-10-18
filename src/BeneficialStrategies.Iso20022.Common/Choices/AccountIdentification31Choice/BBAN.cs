@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification31Choice
         /// </summary>
         [IsoXmlTag("BBAN")]
         [IsoSimpleType(IsoSimpleType.BBANIdentifier)]
-        public required IsoBBANIdentifier Value { get; init; }
+        public required BBANIdentifier Value { get; init; }
     }
 }

@@ -39,7 +39,7 @@ public record Intermediary24
     [DisplayName("Waived Trailer Commission Indicator")]
     [IsoXmlTag("WvdTrlrComssnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? WaivedTrailerCommissionIndicator { get; init; }
+    public YesNoIndicator? WaivedTrailerCommissionIndicator { get; init; }
 
     /// <summary>
     /// Role or function performed by the intermediary.

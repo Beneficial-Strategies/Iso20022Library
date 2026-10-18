@@ -24,7 +24,7 @@ public record CorporateActionGeneralInformation89
     [IsoXmlTag("CorpActnEvtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text CorporateActionEventIdentification { get; init; }
+    public required Max35Text CorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Official and unique reference assigned by the official central body/entity within each market at the beginning of a corporate action event.
@@ -34,7 +34,7 @@ public record CorporateActionGeneralInformation89
     [IsoXmlTag("OffclCorpActnEvtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OfficialCorporateActionEventIdentification { get; init; }
+    public Max35Text? OfficialCorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Reference assigned by a court to a class action.
@@ -44,7 +44,7 @@ public record CorporateActionGeneralInformation89
     [IsoXmlTag("ClssActnNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClassActionNumber { get; init; }
+    public Max35Text? ClassActionNumber { get; init; }
 
     /// <summary>
     /// Type of corporate action event.

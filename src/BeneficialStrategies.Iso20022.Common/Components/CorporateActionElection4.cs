@@ -22,7 +22,7 @@ public record CorporateActionElection4
     [IsoId("_HAL7A7boEe-NMoTZ6Byg6A")]
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
-    public required IsoExact3NumericText OptionNumber { get; init; }
+    public required Exact3NumericText OptionNumber { get; init; }
 
     /// <summary>
     /// Specifies the corporate action options available to the account owner.

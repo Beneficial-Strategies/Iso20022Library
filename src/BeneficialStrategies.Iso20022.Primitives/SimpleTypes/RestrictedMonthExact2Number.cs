@@ -19,7 +19,7 @@ namespace BeneficialStrategies.Iso20022.SimpleTypes;
 /// month 1 is <c>"01"</c>, not <c>"1"</c>). Implements <see cref="IIsoCompositeSimpleValue"/> to
 /// force the serializer to defer to this type's own zero-padded <see cref="ToString"/> rather
 /// than the generic unpadded integer formatter that the previous
-/// <c>IsoRestrictedMonthExact2Number = System.UInt64</c> alias would have used.
+/// <c>RestrictedMonthExact2Number = System.UInt64</c> alias would have used.
 /// </remarks>
 [DataContract]
 [Serializable]

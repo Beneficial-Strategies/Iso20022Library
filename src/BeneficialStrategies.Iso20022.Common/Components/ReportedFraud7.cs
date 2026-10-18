@@ -46,7 +46,7 @@ public record ReportedFraud7
     [IsoId("_oAT9XXRzEfC68Y4jZPNEug")]
     [DisplayName("Submitter Case Reference")]
     [IsoXmlTag("SubmitrCaseRef")]
-    public IsoMax35Text? SubmitterCaseReference { get; init; }
+    public Max35Text? SubmitterCaseReference { get; init; }
 
     /// <summary>
     /// Reference of fraudulent case.
@@ -54,5 +54,5 @@ public record ReportedFraud7
     [IsoId("_oAT9YXRzEfC68Y4jZPNEug")]
     [DisplayName("Case Reference")]
     [IsoXmlTag("CaseRef")]
-    public IsoMax35Text? CaseReference { get; init; }
+    public Max35Text? CaseReference { get; init; }
 }

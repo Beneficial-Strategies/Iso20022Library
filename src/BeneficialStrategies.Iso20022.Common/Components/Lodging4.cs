@@ -49,7 +49,7 @@ public record Lodging4
     /// </summary>
     [DisplayName("Customer Age")]
     [IsoXmlTag("CstmrAge")]
-    public IsoMax2NumericText? CustomerAge { get; init; }
+    public Max2NumericText? CustomerAge { get; init; }
 
     /// <summary>
     /// Customer Contact.
@@ -63,7 +63,7 @@ public record Lodging4
     /// </summary>
     [DisplayName("Customer File Reference Number")]
     [IsoXmlTag("CstmrFileRefNb")]
-    public IsoMax70Text? CustomerFileReferenceNumber { get; init; }
+    public Max70Text? CustomerFileReferenceNumber { get; init; }
 
     /// <summary>
     /// Customer Identification.
@@ -77,7 +77,7 @@ public record Lodging4
     /// </summary>
     [DisplayName("Customer Name")]
     [IsoXmlTag("CstmrNm")]
-    public IsoMax70Text? CustomerName { get; init; }
+    public Max70Text? CustomerName { get; init; }
 
     /// <summary>
     /// Departure.
@@ -91,21 +91,21 @@ public record Lodging4
     /// </summary>
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
-    public IsoMax4NumericText? Duration { get; init; }
+    public Max4NumericText? Duration { get; init; }
 
     /// <summary>
     /// Folio Number.
     /// </summary>
     [DisplayName("Folio Number")]
     [IsoXmlTag("FolioNb")]
-    public IsoMax35Text? FolioNumber { get; init; }
+    public Max35Text? FolioNumber { get; init; }
 
     /// <summary>
     /// Insurance.
     /// </summary>
     [DisplayName("Insurance")]
     [IsoXmlTag("Insrnc")]
-    public IsoTrueFalseIndicator? Insurance { get; init; }
+    public TrueFalseIndicator? Insurance { get; init; }
 
     /// <summary>
     /// Insurance Amount.
@@ -133,21 +133,21 @@ public record Lodging4
     /// </summary>
     [DisplayName("No Show")]
     [IsoXmlTag("NoShow")]
-    public IsoTrueFalseIndicator? NoShow { get; init; }
+    public TrueFalseIndicator? NoShow { get; init; }
 
     /// <summary>
     /// Number Of Rooms.
     /// </summary>
     [DisplayName("Number Of Rooms")]
     [IsoXmlTag("NbOfRooms")]
-    public IsoMax4NumericText? NumberOfRooms { get; init; }
+    public Max4NumericText? NumberOfRooms { get; init; }
 
     /// <summary>
     /// Prestigious Property.
     /// </summary>
     [DisplayName("Prestigious Property")]
     [IsoXmlTag("PrstgsPrprty")]
-    public IsoMax35Text? PrestigiousProperty { get; init; }
+    public Max35Text? PrestigiousProperty { get; init; }
 
     /// <summary>
     /// Property Assigner.
@@ -175,7 +175,7 @@ public record Lodging4
     /// </summary>
     [DisplayName("Property Fire Safety Act")]
     [IsoXmlTag("PrprtyFireSftyAct")]
-    public IsoTrueFalseIndicator? PropertyFireSafetyAct { get; init; }
+    public TrueFalseIndicator? PropertyFireSafetyAct { get; init; }
 
     /// <summary>
     /// Property Identification.
@@ -196,14 +196,14 @@ public record Lodging4
     /// </summary>
     [DisplayName("Property Name")]
     [IsoXmlTag("PrprtyNm")]
-    public IsoMax35Text? PropertyName { get; init; }
+    public Max35Text? PropertyName { get; init; }
 
     /// <summary>
     /// Property Other Type.
     /// </summary>
     [DisplayName("Property Other Type")]
     [IsoXmlTag("PrprtyOthrTp")]
-    public IsoMax35Text? PropertyOtherType { get; init; }
+    public Max35Text? PropertyOtherType { get; init; }
 
     /// <summary>
     /// Property Type.
@@ -224,7 +224,7 @@ public record Lodging4
     /// </summary>
     [DisplayName("Summary Commodity Identification")]
     [IsoXmlTag("SummryCmmdtyId")]
-    public IsoMax35Text? SummaryCommodityIdentification { get; init; }
+    public Max35Text? SummaryCommodityIdentification { get; init; }
 
     /// <summary>
     /// Total Amount.

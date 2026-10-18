@@ -32,7 +32,7 @@ public record PartyIdentification237
     [IsoXmlTag("EmailAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? EmailAddress { get; init; }
+    public Max256Text? EmailAddress { get; init; }
 
     /// <summary>
     /// Identification of the party.
@@ -57,7 +57,7 @@ public record PartyIdentification237
     [DisplayName("Year Of Incorporation")]
     [IsoXmlTag("YrOfIncorprtn")]
     [IsoSimpleType(IsoSimpleType.ISOYear)]
-    public IsoISOYear? YearOfIncorporation { get; init; }
+    public ISOYear? YearOfIncorporation { get; init; }
 
     /// <summary>
     /// Economical activity of the  investor.
@@ -66,7 +66,7 @@ public record PartyIdentification237
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
     [IsoSimpleType(IsoSimpleType.ISICIdentifier)]
-    public IsoISICIdentifier? ActivityIndicator { get; init; }
+    public ISICIdentifier? ActivityIndicator { get; init; }
 
     /// <summary>
     /// Type of investor.

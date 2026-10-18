@@ -24,7 +24,7 @@ public record AncillaryPurchase2
     [IsoXmlTag("AncllryDocNb")]
     [IsoSimpleType(IsoSimpleType.Max15Text)]
     [StringLength(maximumLength: 15, MinimumLength = 1)]
-    public IsoMax15Text? AncillaryDocumentNumber { get; init; }
+    public Max15Text? AncillaryDocumentNumber { get; init; }
 
     /// <summary>
     /// Document number of related transport details.
@@ -34,7 +34,7 @@ public record AncillaryPurchase2
     [IsoXmlTag("RltdDocNb")]
     [IsoSimpleType(IsoSimpleType.Max15Text)]
     [StringLength(maximumLength: 15, MinimumLength = 1)]
-    public IsoMax15Text? RelatedDocumentNumber { get; init; }
+    public Max15Text? RelatedDocumentNumber { get; init; }
 
     /// <summary>
     /// Contains an ancillary category code for the primary type of service that has been provided.
@@ -44,7 +44,7 @@ public record AncillaryPurchase2
     [IsoXmlTag("SvcCtgyCd")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4Text? ServiceCategoryCode { get; init; }
+    public Max4Text? ServiceCategoryCode { get; init; }
 
     /// <summary>
     /// Contains ancillary service sub category code.
@@ -54,7 +54,7 @@ public record AncillaryPurchase2
     [IsoXmlTag("SvcSubCtgyCd")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4Text? ServiceSubCategoryCode { get; init; }
+    public Max4Text? ServiceSubCategoryCode { get; init; }
 
     /// <summary>
     /// Proprietary service type code assigned by the service provider.
@@ -64,7 +64,7 @@ public record AncillaryPurchase2
     [IsoXmlTag("SvcPrvdrSvcTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ServiceProviderServiceType { get; init; }
+    public Max35Text? ServiceProviderServiceType { get; init; }
 
     /// <summary>
     /// Indicates reason for the credit to the cardholder.  Includes: ancillary purchase cancelled, passenger transport ticket and related ancillary purchase cancelled, etc.
@@ -74,7 +74,7 @@ public record AncillaryPurchase2
     [IsoXmlTag("CdtRsnCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CreditReasonCode { get; init; }
+    public Max35Text? CreditReasonCode { get; init; }
 
     /// <summary>
     /// Provides the identifier assigned by the card acceptor that best categorizes the items being purchased in a standardized commodity group.
@@ -84,7 +84,7 @@ public record AncillaryPurchase2
     [IsoXmlTag("SummryCmmdtyId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SummaryCommodityIdentification { get; init; }
+    public Max35Text? SummaryCommodityIdentification { get; init; }
 
     /// <summary>
     /// Ancillary purchase amount.
@@ -118,5 +118,5 @@ public record AncillaryPurchase2
     [IsoXmlTag("AddtlData")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AdditionalData { get; init; }
+    public Max350Text? AdditionalData { get; init; }
 }

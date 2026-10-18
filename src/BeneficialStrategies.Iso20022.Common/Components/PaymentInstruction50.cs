@@ -22,7 +22,7 @@ public record PaymentInstruction50
     [IsoId("0db8143c-3f35-43d6-8305-b1ce885687e1")]
     [DisplayName("Payment Information Identification")]
     [IsoXmlTag("PmtInfId")]
-    public required IsoMax35Text PaymentInformationIdentification { get; init; }
+    public required Max35Text PaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Specifies the means of payment that will be used to move the amount of money.
@@ -46,7 +46,7 @@ public record PaymentInstruction50
     [IsoId("78735f7e-f6cb-4385-b0be-2d9724c37c17")]
     [DisplayName("Batch Booking")]
     [IsoXmlTag("BtchBookg")]
-    public IsoBatchBookingIndicator? BatchBooking { get; init; }
+    public BatchBookingIndicator? BatchBooking { get; init; }
 
     /// <summary>
     /// Number of individual transactions contained in the payment information group.
@@ -54,7 +54,7 @@ public record PaymentInstruction50
     [IsoId("e1075d7f-6168-4606-a287-fccef6a4226d")]
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
-    public IsoMax15NumericText? NumberOfTransactions { get; init; }
+    public Max15NumericText? NumberOfTransactions { get; init; }
 
     /// <summary>
     /// Total of all individual amounts included in the group, irrespective of currencies.
@@ -62,7 +62,7 @@ public record PaymentInstruction50
     [IsoId("13e9d3b6-e22d-4a4d-b7cc-801a6ef0570f")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
-    public IsoDecimalNumber? ControlSum { get; init; }
+    public DecimalNumber? ControlSum { get; init; }
 
     /// <summary>
     /// Set of elements used to further specify the type of transaction.
@@ -78,7 +78,7 @@ public record PaymentInstruction50
     [IsoId("90ab1a25-d3b0-44af-b707-657686a70954")]
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
-    public required IsoISODate RequestedCollectionDate { get; init; }
+    public required DateOnly RequestedCollectionDate { get; init; }
 
     /// <summary>
     /// Party to which an amount of money is due.

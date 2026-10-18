@@ -24,7 +24,7 @@ public record OtherTargetMarket1
     [IsoXmlTag("TrgtMktTp")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text TargetMarketType { get; init; }
+    public required Max350Text TargetMarketType { get; init; }
 
     /// <summary>
     /// Additional information about the target market.

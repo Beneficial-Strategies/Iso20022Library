@@ -23,7 +23,7 @@ public record ATMDepositedMedia1
     [DisplayName("Account Sequence Number")]
     [IsoXmlTag("AcctSeqNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? AccountSequenceNumber { get; init; }
+    public Number? AccountSequenceNumber { get; init; }
 
     /// <summary>
     /// Type of deposited media.

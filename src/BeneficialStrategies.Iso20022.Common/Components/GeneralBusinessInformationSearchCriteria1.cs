@@ -22,7 +22,7 @@ public record GeneralBusinessInformationSearchCriteria1
     [IsoId("_59y2MZlZEeeE1Ya-LgRsuQ")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
-    public SimpleValueList<IsoMax35Text> Reference { get; init; } = [];
+    public SimpleValueList<Max35Text> Reference { get; init; } = [];
 
     /// <summary>
     /// Subject line of an item of general business information, summarizing the topic and intended destination of the information.

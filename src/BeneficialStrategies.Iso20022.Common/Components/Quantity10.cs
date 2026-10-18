@@ -31,5 +31,5 @@ public record Quantity10
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public required IsoDecimalNumber Value { get; init; }
+    public required DecimalNumber Value { get; init; }
 }

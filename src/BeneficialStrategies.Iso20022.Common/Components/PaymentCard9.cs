@@ -39,7 +39,7 @@ public record PaymentCard9
     [DisplayName("Issuer BIN")]
     [IsoXmlTag("IssrBIN")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public IsoMax15NumericText? IssuerBIN { get; init; }
+    public Max15NumericText? IssuerBIN { get; init; }
 
     /// <summary>
     /// Country code assigned to the card by the card issuer.
@@ -49,7 +49,7 @@ public record PaymentCard9
     [IsoXmlTag("CardCtryCd")]
     [IsoSimpleType(IsoSimpleType.Max3Text)]
     [StringLength(maximumLength: 3, MinimumLength = 1)]
-    public IsoMax3Text? CardCountryCode { get; init; }
+    public Max3Text? CardCountryCode { get; init; }
 
     /// <summary>
     /// Currency code of the card issuer (ISO 4217 numeric code).
@@ -58,7 +58,7 @@ public record PaymentCard9
     [DisplayName("Card Currency Code")]
     [IsoXmlTag("CardCcyCd")]
     [IsoSimpleType(IsoSimpleType.Exact3AlphaNumericText)]
-    public IsoExact3AlphaNumericText? CardCurrencyCode { get; init; }
+    public Exact3AlphaNumericText? CardCurrencyCode { get; init; }
 
     /// <summary>
     /// Defines a category of cards related to the acceptance processing rules defined by the acquirer.
@@ -68,7 +68,7 @@ public record PaymentCard9
     [IsoXmlTag("CardPdctPrfl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CardProductProfile { get; init; }
+    public Max35Text? CardProductProfile { get; init; }
 
     /// <summary>
     /// Brand name of the card.
@@ -78,7 +78,7 @@ public record PaymentCard9
     [IsoXmlTag("CardBrnd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CardBrand { get; init; }
+    public Max35Text? CardBrand { get; init; }
 
     /// <summary>
     /// Additional card issuer specific data.
@@ -88,5 +88,5 @@ public record PaymentCard9
     [IsoXmlTag("AddtlCardData")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AdditionalCardData { get; init; }
+    public Max70Text? AdditionalCardData { get; init; }
 }

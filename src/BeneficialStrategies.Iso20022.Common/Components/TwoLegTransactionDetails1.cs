@@ -32,7 +32,7 @@ public record TwoLegTransactionDetails1
     [IsoXmlTag("OpngLegId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OpeningLegIdentification { get; init; }
+    public Max35Text? OpeningLegIdentification { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the second leg of the transaction as known by the account owner (or the instructing party acting on its behalf).
@@ -42,7 +42,7 @@ public record TwoLegTransactionDetails1
     [IsoXmlTag("ClsgLegId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClosingLegIdentification { get; init; }
+    public Max35Text? ClosingLegIdentification { get; init; }
 
     /// <summary>
     /// Principal amount of a trade (price multiplied by quantity).
@@ -68,7 +68,7 @@ public record TwoLegTransactionDetails1
     [IsoXmlTag("ScndLegNrrtv")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? SecondLegNarrative { get; init; }
+    public Max140Text? SecondLegNarrative { get; init; }
 
     /// <summary>
     /// Negotiated fixed price of the security to buy it back.

@@ -30,7 +30,7 @@ public record InstalmentAmountData1
     [IsoId("_iBKUxT2BEfCQAqQ9lolFUg")]
     [DisplayName("Sub Type")]
     [IsoXmlTag("SubTp")]
-    public IsoMax35Text? SubType { get; init; }
+    public Max35Text? SubType { get; init; }
 
     /// <summary>
     /// Amount value.
@@ -54,5 +54,5 @@ public record InstalmentAmountData1
     [IsoId("_iBKUyz2BEfCQAqQ9lolFUg")]
     [DisplayName("Percentage")]
     [IsoXmlTag("Pctg")]
-    public IsoPercentageRate? Percentage { get; init; }
+    public PercentageRate? Percentage { get; init; }
 }

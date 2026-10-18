@@ -48,7 +48,7 @@ public record InvestmentAccountOwnershipInformation5
     [IsoXmlTag("XtndedMnyLndrgChck")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedMoneyLaunderingCheck { get; init; }
+    public Extended350Code? ExtendedMoneyLaunderingCheck { get; init; }
 
     /// <summary>
     /// Information to support Know Your Customer processes.
@@ -65,7 +65,7 @@ public record InvestmentAccountOwnershipInformation5
     [DisplayName("Ownership Beneficiary Rate")]
     [IsoXmlTag("OwnrshBnfcryRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? OwnershipBeneficiaryRate { get; init; }
+    public PercentageRate? OwnershipBeneficiaryRate { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by an organisation, to unambiguously identify a party.
@@ -75,7 +75,7 @@ public record InvestmentAccountOwnershipInformation5
     [IsoXmlTag("ClntId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClientIdentification { get; init; }
+    public Max35Text? ClientIdentification { get; init; }
 
     /// <summary>
     /// Indicates whether an owner of an investment account may benefit from a fiscal exemption or amnesty for instance for declaring overseas investments.
@@ -84,7 +84,7 @@ public record InvestmentAccountOwnershipInformation5
     [DisplayName("Fiscal Exemption")]
     [IsoXmlTag("FsclXmptn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? FiscalExemption { get; init; }
+    public YesNoIndicator? FiscalExemption { get; init; }
 
     /// <summary>
     /// Indicates whether the signature of the account owner is required to authorise transactions on the account.
@@ -93,5 +93,5 @@ public record InvestmentAccountOwnershipInformation5
     [DisplayName("Signatory Right Indicator")]
     [IsoXmlTag("SgntryRghtInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? SignatoryRightIndicator { get; init; }
+    public YesNoIndicator? SignatoryRightIndicator { get; init; }
 }

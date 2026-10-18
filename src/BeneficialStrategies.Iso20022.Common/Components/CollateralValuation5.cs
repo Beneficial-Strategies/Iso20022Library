@@ -24,7 +24,7 @@ public record CollateralValuation5
     [IsoXmlTag("CollId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CollateralIdentification { get; init; }
+    public Max35Text? CollateralIdentification { get; init; }
 
     /// <summary>
     /// Specifies the type of collateral used.
@@ -49,7 +49,7 @@ public record CollateralValuation5
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber NumberOfDaysAccrued { get; init; }
+    public required Number NumberOfDaysAccrued { get; init; }
 
     /// <summary>
     /// Provides details on the collateral valuation.
@@ -74,7 +74,7 @@ public record CollateralValuation5
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? ExchangeRate { get; init; }
+    public BaseOneRate? ExchangeRate { get; init; }
 
     /// <summary>
     /// Specifies the haircut or valuation factor on the currency of the collateral expressed as a percentage.
@@ -83,7 +83,7 @@ public record CollateralValuation5
     [DisplayName("Currency Haircut")]
     [IsoXmlTag("CcyHrcut")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? CurrencyHaircut { get; init; }
+    public BaseOneRate? CurrencyHaircut { get; init; }
 
     /// <summary>
     /// Percentage by which the collateral amount needs to be adjusted.
@@ -92,7 +92,7 @@ public record CollateralValuation5
     [DisplayName("Adjusted Rate")]
     [IsoXmlTag("AdjstdRate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? AdjustedRate { get; init; }
+    public BaseOneRate? AdjustedRate { get; init; }
 
     /// <summary>
     /// Provides details on the securities collateral.

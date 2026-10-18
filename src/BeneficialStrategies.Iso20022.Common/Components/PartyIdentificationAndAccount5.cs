@@ -40,7 +40,7 @@ public record PartyIdentificationAndAccount5
     [IsoXmlTag("PrcgRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProcessingReference { get; init; }
+    public Max35Text? ProcessingReference { get; init; }
 
     /// <summary>
     /// Date and optionally the time, at which this transaction was processed by the party identified in this sequence.

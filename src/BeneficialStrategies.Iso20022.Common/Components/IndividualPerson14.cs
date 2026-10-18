@@ -24,7 +24,7 @@ public record IndividualPerson14
     [IsoXmlTag("BirthNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text BirthName { get; init; }
+    public required Max35Text BirthName { get; init; }
 
     /// <summary>
     /// First name of a person.
@@ -34,7 +34,7 @@ public record IndividualPerson14
     [IsoXmlTag("GvnNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? GivenName { get; init; }
+    public Max35Text? GivenName { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identification of a person, eg passport.

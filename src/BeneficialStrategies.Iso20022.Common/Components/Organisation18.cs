@@ -33,7 +33,7 @@ public record Organisation18
     [IsoXmlTag("CmonNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public required IsoMax70Text CommonName { get; init; }
+    public required Max70Text CommonName { get; init; }
 
     /// <summary>
     /// Location of the card acceptor.
@@ -60,5 +60,5 @@ public record Organisation18
     [IsoXmlTag("SchmeData")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? SchemeData { get; init; }
+    public Max140Text? SchemeData { get; init; }
 }

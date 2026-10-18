@@ -24,7 +24,7 @@ public record LegalMandate1
     [IsoXmlTag("Prgrph")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Paragraph { get; init; }
+    public required Max35Text Paragraph { get; init; }
 
     /// <summary>
     /// Specifies any additional information describing how or why the paragraph of law should be applied.
@@ -34,5 +34,5 @@ public record LegalMandate1
     [IsoXmlTag("Dsclmr")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Disclaimer { get; init; }
+    public Max350Text? Disclaimer { get; init; }
 }

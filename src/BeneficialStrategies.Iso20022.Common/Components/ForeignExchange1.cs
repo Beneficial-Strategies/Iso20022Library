@@ -31,7 +31,7 @@ public record ForeignExchange1
     [DisplayName("Exchange Spot Rate")]
     [IsoXmlTag("XchgSpotRate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public required IsoBaseOneRate ExchangeSpotRate { get; init; }
+    public required BaseOneRate ExchangeSpotRate { get; init; }
 
     /// <summary>
     /// Difference between the foreign exchange spot rate and the foreign exchange forward rate expressed in basis points quoted in accordance with the prevailing market conventions for the currency pair.
@@ -42,5 +42,5 @@ public record ForeignExchange1
     [DisplayName("Exchange Forward Point")]
     [IsoXmlTag("XchgFwdPt")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public required IsoDecimalNumber ExchangeForwardPoint { get; init; }
+    public required DecimalNumber ExchangeForwardPoint { get; init; }
 }

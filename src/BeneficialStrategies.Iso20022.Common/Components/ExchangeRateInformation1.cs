@@ -23,7 +23,7 @@ public record ExchangeRateInformation1
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? ExchangeRate { get; init; }
+    public BaseOneRate? ExchangeRate { get; init; }
 
     /// <summary>
     /// Specifies the type used to complete the currency exchange.
@@ -41,5 +41,5 @@ public record ExchangeRateInformation1
     [IsoXmlTag("CtrctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ContractIdentification { get; init; }
+    public Max35Text? ContractIdentification { get; init; }
 }

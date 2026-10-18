@@ -22,7 +22,7 @@ public record Lodging5
     [IsoId("_UfdhQUhsEfCMZJtj4J7UGQ")]
     [DisplayName("Folio Number")]
     [IsoXmlTag("FolioNb")]
-    public IsoMax35Text? FolioNumber { get; init; }
+    public Max35Text? FolioNumber { get; init; }
 
     /// <summary>
     /// Type of accommodations. P000-P999 reserved for private use, N000-N999 reserved for national use.
@@ -38,7 +38,7 @@ public record Lodging5
     [IsoId("_UfdhR0hsEfCMZJtj4J7UGQ")]
     [DisplayName("Prestigious Property")]
     [IsoXmlTag("PrstgsPrprty")]
-    public IsoMax35Text? PrestigiousProperty { get; init; }
+    public Max35Text? PrestigiousProperty { get; init; }
 
     /// <summary>
     /// Name of the property.
@@ -46,7 +46,7 @@ public record Lodging5
     [IsoId("_UfdhSUhsEfCMZJtj4J7UGQ")]
     [DisplayName("Property Name")]
     [IsoXmlTag("PrprtyNm")]
-    public IsoMax35Text? PropertyName { get; init; }
+    public Max35Text? PropertyName { get; init; }
 
     /// <summary>
     /// Identification of the property.
@@ -54,7 +54,7 @@ public record Lodging5
     [IsoId("_UqF1N0hyEfCMZJtj4J7UGQ")]
     [DisplayName("Property Identification")]
     [IsoXmlTag("PrprtyId")]
-    public IsoMax35Text? PropertyIdentification { get; init; }
+    public Max35Text? PropertyIdentification { get; init; }
 
     /// <summary>
     /// Business name of the property.
@@ -62,7 +62,7 @@ public record Lodging5
     [IsoId("_UqF1OEhyEfCMZJtj4J7UGQ")]
     [DisplayName("Property Business Name")]
     [IsoXmlTag("PrprtyBizNm")]
-    public IsoMax35Text? PropertyBusinessName { get; init; }
+    public Max35Text? PropertyBusinessName { get; init; }
 
     /// <summary>
     /// Legal Corporate Name of the property.
@@ -70,7 +70,7 @@ public record Lodging5
     [IsoId("_UqF1OUhyEfCMZJtj4J7UGQ")]
     [DisplayName("Property Legal Corporate Name")]
     [IsoXmlTag("PrprtyLglCorpNm")]
-    public IsoMax99Text? PropertyLegalCorporateName { get; init; }
+    public Max99Text? PropertyLegalCorporateName { get; init; }
 
     /// <summary>
     /// Address of the property.
@@ -86,7 +86,7 @@ public record Lodging5
     [IsoId("_B-FaUUh4EfCMZJtj4J7UGQ")]
     [DisplayName("Property Location Code")]
     [IsoXmlTag("PrprtyLctnCd")]
-    public IsoMax35Text? PropertyLocationCode { get; init; }
+    public Max35Text? PropertyLocationCode { get; init; }
 
     /// <summary>
     /// Local time zone of the property.
@@ -94,7 +94,7 @@ public record Lodging5
     [IsoId("_h1Wt4kh4EfCMZJtj4J7UGQ")]
     [DisplayName("Property Local Time Zone")]
     [IsoXmlTag("PrprtyLclTmZone")]
-    public IsoMax70Text? PropertyLocalTimeZone { get; init; }
+    public Max70Text? PropertyLocalTimeZone { get; init; }
 
     /// <summary>
     /// Contains local language equivalent(s) of property data.
@@ -126,7 +126,7 @@ public record Lodging5
     [IsoId("_UfdhVUhsEfCMZJtj4J7UGQ")]
     [DisplayName("Property Fire Safety Act")]
     [IsoXmlTag("PrprtyFireSftyAct")]
-    public IsoTrueFalseIndicator? PropertyFireSafetyAct { get; init; }
+    public TrueFalseIndicator? PropertyFireSafetyAct { get; init; }
 
     /// <summary>
     /// Name of the customer.
@@ -142,7 +142,7 @@ public record Lodging5
     [IsoId("_UfdhY0hsEfCMZJtj4J7UGQ")]
     [DisplayName("Number Of Rooms")]
     [IsoXmlTag("NbOfRooms")]
-    public IsoMax4NumericText? NumberOfRooms { get; init; }
+    public Max4NumericText? NumberOfRooms { get; init; }
 
     /// <summary>
     /// Contains the room details.
@@ -158,7 +158,7 @@ public record Lodging5
     [IsoId("_UfdhZ0hsEfCMZJtj4J7UGQ")]
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
-    public IsoMax4NumericText? Duration { get; init; }
+    public Max4NumericText? Duration { get; init; }
 
     /// <summary>
     /// Lodging transaction details.
@@ -182,7 +182,7 @@ public record Lodging5
     [IsoId("_X7CLEUh-EfCMZJtj4J7UGQ")]
     [DisplayName("No Show")]
     [IsoXmlTag("NoShow")]
-    public IsoTrueFalseIndicator? NoShow { get; init; }
+    public TrueFalseIndicator? NoShow { get; init; }
 
     /// <summary>
     /// Indicates whether or not insurance was purchased.
@@ -190,7 +190,7 @@ public record Lodging5
     [IsoId("_Ufdhb0hsEfCMZJtj4J7UGQ")]
     [DisplayName("Insurance")]
     [IsoXmlTag("Insrnc")]
-    public IsoTrueFalseIndicator? Insurance { get; init; }
+    public TrueFalseIndicator? Insurance { get; init; }
 
     /// <summary>
     /// Amount of insurance.
@@ -230,7 +230,7 @@ public record Lodging5
     [IsoId("_UfdheUhsEfCMZJtj4J7UGQ")]
     [DisplayName("Summary Commodity Identification")]
     [IsoXmlTag("SummryCmmdtyId")]
-    public IsoMax35Text? SummaryCommodityIdentification { get; init; }
+    public Max35Text? SummaryCommodityIdentification { get; init; }
 
     /// <summary>
     /// Loyalty programme details.
@@ -246,7 +246,7 @@ public record Lodging5
     [IsoId("_MvlrgkhsEfCMZJtj4J7UGQ")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -254,7 +254,7 @@ public record Lodging5
     [IsoId("_Mvlrg0hsEfCMZJtj4J7UGQ")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 
     /// <summary>
     /// Component provides detailed information about lodging accommodations and related expenses for the cardholder.

@@ -70,7 +70,7 @@ public record CashAccountCharacteristics5
     /// </summary>
     [DisplayName("Delayed Debit Date")]
     [IsoXmlTag("DelydDbtDt")]
-    public IsoISODate? DelayedDebitDate { get; init; }
+    public DateOnly? DelayedDebitDate { get; init; }
 
     /// <summary>
     /// Host Currency Code.
@@ -91,7 +91,7 @@ public record CashAccountCharacteristics5
     /// </summary>
     [DisplayName("Settlement Advice")]
     [IsoXmlTag("SttlmAdvc")]
-    public IsoMax105Text? SettlementAdvice { get; init; }
+    public Max105Text? SettlementAdvice { get; init; }
 
     /// <summary>
     /// Settlement Currency Code.

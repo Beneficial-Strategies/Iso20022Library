@@ -31,5 +31,5 @@ public record OpenInterest1
     [DisplayName("Number Of Lots")]
     [IsoXmlTag("NbOfLots")]
     [IsoSimpleType(IsoSimpleType.PositiveNumber)]
-    public IsoPositiveNumber? NumberOfLots { get; init; }
+    public PositiveNumber? NumberOfLots { get; init; }
 }

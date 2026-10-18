@@ -24,7 +24,7 @@ public record CorporateActionOptionSD8
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text PlaceAndName { get; init; }
+    public required Max350Text PlaceAndName { get; init; }
 
     /// <summary>
     /// Used for options that have particular proprietary feature that cannot be represented in standard ISO message.
@@ -41,7 +41,7 @@ public record CorporateActionOptionSD8
     [DisplayName("Default Option Flag")]
     [IsoXmlTag("DfltOptnFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? DefaultOptionFlag { get; init; }
+    public YesNoIndicator? DefaultOptionFlag { get; init; }
 
     /// <summary>
     /// Indicates whether optional dividend supplementary data are required in the ISO 20022 CAIN instructions for this event.
@@ -50,7 +50,7 @@ public record CorporateActionOptionSD8
     [DisplayName("Optional Dividend Supplementary Data Required Flag")]
     [IsoXmlTag("OptnlDvddSplmtryDataReqrdFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? OptionalDividendSupplementaryDataRequiredFlag { get; init; }
+    public YesNoIndicator? OptionalDividendSupplementaryDataRequiredFlag { get; init; }
 
     /// <summary>
     /// Unique DTCC legacy reference used for matching and reconciling legacy records. The number algorhithm is as follows: Department ID (1:1), Activity Type (2:3), Cusip Country Code (5:2), Cusip (7:9), Record Date (15:8), Payable Date (22:8), Sequence Number (29:3), RDP Issue Type (31:1).
@@ -60,5 +60,5 @@ public record CorporateActionOptionSD8
     [DisplayName("RDP Reference Number")]
     [IsoXmlTag("RDPRefNb")]
     [IsoSimpleType(IsoSimpleType.Exact32AlphaNumericText)]
-    public IsoExact32AlphaNumericText? RDPReferenceNumber { get; init; }
+    public Exact32AlphaNumericText? RDPReferenceNumber { get; init; }
 }

@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
         /// </summary>
         [IsoXmlTag("HKNCC")]
         [IsoSimpleType(IsoSimpleType.HongKongBankIdentifier)]
-        public required IsoHongKongBankIdentifier Value { get; init; }
+        public required HongKongBankIdentifier Value { get; init; }
     }
 }

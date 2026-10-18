@@ -24,7 +24,7 @@ public record FinancialInstitution7
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Identification { get; init; }
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Name of the financial institution.
@@ -34,7 +34,7 @@ public record FinancialInstitution7
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Name { get; init; }
+    public Max70Text? Name { get; init; }
 
     /// <summary>
     /// Address of the financial institution.
@@ -52,7 +52,7 @@ public record FinancialInstitution7
     [IsoXmlTag("Email")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Email { get; init; }
+    public Max256Text? Email { get; init; }
 
     /// <summary>
     /// Universal Resource Locator (URL) address of the financial institution.
@@ -62,7 +62,7 @@ public record FinancialInstitution7
     [IsoXmlTag("URLAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? URLAddress { get; init; }
+    public Max256Text? URLAddress { get; init; }
 
     /// <summary>
     /// Collection of information that identifies a phone number, as defined by telecom services.
@@ -72,7 +72,7 @@ public record FinancialInstitution7
     [IsoXmlTag("PhneNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PhoneNumber { get; init; }
+    public Max35Text? PhoneNumber { get; init; }
 
     /// <summary>
     /// Phone number of the customer services.
@@ -82,7 +82,7 @@ public record FinancialInstitution7
     [IsoXmlTag("CstmrSvc")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CustomerService { get; init; }
+    public Max35Text? CustomerService { get; init; }
 
     /// <summary>
     /// Additional information used to facilitate contact with the financial institution, for instance dispute manager name.
@@ -92,7 +92,7 @@ public record FinancialInstitution7
     [IsoXmlTag("AddtlCtctInf")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? AdditionalContactInformation { get; init; }
+    public Max256Text? AdditionalContactInformation { get; init; }
 
     /// <summary>
     /// Contains text fields in the local language.

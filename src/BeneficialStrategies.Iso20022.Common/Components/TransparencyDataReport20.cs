@@ -26,7 +26,7 @@ public record TransparencyDataReport20
     [IsoXmlTag("TechRcrdId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TechnicalRecordIdentification { get; init; }
+    public Max35Text? TechnicalRecordIdentification { get; init; }
 
     /// <summary>
     /// Identifies the financial instrument or the class of financial instruments to which the result relates.
@@ -44,7 +44,7 @@ public record TransparencyDataReport20
     [IsoXmlTag("FullNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? FullName { get; init; }
+    public Max350Text? FullName { get; init; }
 
     /// <summary>
     /// Segment MIC for the trading venue where applicable, otherwise the operational MIC.
@@ -53,7 +53,7 @@ public record TransparencyDataReport20
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public IsoMICIdentifier? TradingVenue { get; init; }
+    public MICIdentifier? TradingVenue { get; init; }
 
     /// <summary>
     /// Period to which the quantitative data fields relate.
@@ -72,7 +72,7 @@ public record TransparencyDataReport20
     [DisplayName("Liquidity")]
     [IsoXmlTag("Lqdty")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? Liquidity { get; init; }
+    public TrueFalseIndicator? Liquidity { get; init; }
 
     /// <summary>
     /// The pre-trade Large in Scale threshold.

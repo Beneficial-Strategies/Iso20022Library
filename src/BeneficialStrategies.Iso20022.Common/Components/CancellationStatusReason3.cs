@@ -38,5 +38,5 @@ public record CancellationStatusReason3
     [IsoId("_skGdR4lrEeePr-EGJjGYzQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public SimpleValueList<IsoMax105Text> AdditionalInformation { get; init; } = [];
+    public SimpleValueList<Max105Text> AdditionalInformation { get; init; } = [];
 }

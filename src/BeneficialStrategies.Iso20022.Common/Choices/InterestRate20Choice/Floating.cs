@@ -55,7 +55,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate20Choice
         [DisplayName("Basis Point Spread")]
         [IsoXmlTag("BsisPtSprd")]
         [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-        public IsoDecimalNumber? BasisPointSpread { get; init; }
+        public DecimalNumber? BasisPointSpread { get; init; }
 
         /// <summary>
         /// Specifies the rate adjustments as determined by the rate schedule.

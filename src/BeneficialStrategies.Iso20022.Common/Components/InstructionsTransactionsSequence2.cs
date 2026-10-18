@@ -23,7 +23,7 @@ public record InstructionsTransactionsSequence2
     [DisplayName("Transaction Sequence Number")]
     [IsoXmlTag("TxSeqNb")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public IsoMax3NumericText? TransactionSequenceNumber { get; init; }
+    public Max3NumericText? TransactionSequenceNumber { get; init; }
 
     /// <summary>
     /// Instruction quantity for a given transaction sequence number.
@@ -48,5 +48,5 @@ public record InstructionsTransactionsSequence2
     [DisplayName("Customer Reference Identification")]
     [IsoXmlTag("CstmrRefId")]
     [IsoSimpleType(IsoSimpleType.Max30Text)]
-    public IsoMax30Text? CustomerReferenceIdentification { get; init; }
+    public Max30Text? CustomerReferenceIdentification { get; init; }
 }

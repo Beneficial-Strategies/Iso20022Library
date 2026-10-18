@@ -32,7 +32,7 @@ public record Amendment6
     [IsoXmlTag("ApplcntRefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ApplicantReferenceNumber { get; init; }
+    public Max35Text? ApplicantReferenceNumber { get; init; }
 
     /// <summary>
     /// Additional information related to the notification.

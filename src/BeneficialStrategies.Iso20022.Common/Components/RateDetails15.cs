@@ -47,7 +47,7 @@ public record RateDetails15
     [DisplayName("Fiscal Stamp")]
     [IsoXmlTag("FsclStmp")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? FiscalStamp { get; init; }
+    public PercentageRate? FiscalStamp { get; init; }
 
     /// <summary>
     /// Rate resulting from a fully franked dividend paid by a company; rate includes tax credit for companies that have made sufficient tax payments during fiscal period.
@@ -121,7 +121,7 @@ public record RateDetails15
     [DisplayName("Applicable Rate")]
     [IsoXmlTag("AplblRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? ApplicableRate { get; init; }
+    public PercentageRate? ApplicableRate { get; init; }
 
     /// <summary>
     /// Rate of the cash premium made available if the securities holder consents or participates to an event, for example consent fees or solicitation fee.
@@ -170,7 +170,7 @@ public record RateDetails15
     [DisplayName("Tax On Profits")]
     [IsoXmlTag("TaxOnPrfts")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? TaxOnProfits { get; init; }
+    public PercentageRate? TaxOnProfits { get; init; }
 
     /// <summary>
     /// Percentage of cash that was paid in excess of actual tax obligation and was reclaimed.
@@ -179,7 +179,7 @@ public record RateDetails15
     [DisplayName("Tax Reclaim Rate")]
     [IsoXmlTag("TaxRclmRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? TaxReclaimRate { get; init; }
+    public PercentageRate? TaxReclaimRate { get; init; }
 
     /// <summary>
     /// Rate at which the income will be withheld by the jurisdiction in which the income was originally paid, for which relief at source and/or reclaim may be possible.

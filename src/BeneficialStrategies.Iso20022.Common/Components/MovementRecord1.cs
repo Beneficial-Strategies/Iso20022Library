@@ -25,7 +25,7 @@ public record MovementRecord1
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// An index to identify the individual movement record entry.
@@ -34,7 +34,7 @@ public record MovementRecord1
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? SequenceNumber { get; init; }
+    public Number? SequenceNumber { get; init; }
 
     /// <summary>
     /// Amount of money requested by the instructing agent for settlement at the market infrastructure in a single movement record entry.
@@ -84,5 +84,5 @@ public record MovementRecord1
     [IsoXmlTag("Ref")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Reference { get; init; }
+    public Max35Text? Reference { get; init; }
 }

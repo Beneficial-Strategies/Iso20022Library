@@ -25,7 +25,7 @@ public record FileActionDetails2
     [IsoXmlTag("FileNm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? FileName { get; init; }
+    public Max140Text? FileName { get; init; }
 
     /// <summary>
     /// File format code.
@@ -52,7 +52,7 @@ public record FileActionDetails2
     [DisplayName("Action Date")]
     [IsoXmlTag("ActnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ActionDate { get; init; }
+    public DateOnly? ActionDate { get; init; }
 
     /// <summary>
     /// Indicates that the originator of the message is authorised to update the file.
@@ -63,5 +63,5 @@ public record FileActionDetails2
     [IsoXmlTag("FileSctyCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? FileSecurityCode { get; init; }
+    public Max35Text? FileSecurityCode { get; init; }
 }

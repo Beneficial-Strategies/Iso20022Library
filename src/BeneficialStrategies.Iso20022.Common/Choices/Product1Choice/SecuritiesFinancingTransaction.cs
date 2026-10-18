@@ -39,6 +39,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Product1Choice
         [DisplayName("Triparty Agent")]
         [IsoXmlTag("TrptyAgt")]
         [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-        public IsoLEIIdentifier? TripartyAgent { get; init; }
+        public LEIIdentifier? TripartyAgent { get; init; }
     }
 }

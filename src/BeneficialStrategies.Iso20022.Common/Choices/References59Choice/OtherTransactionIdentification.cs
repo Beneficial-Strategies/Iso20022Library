@@ -32,6 +32,6 @@ namespace BeneficialStrategies.Iso20022.Choices.References59Choice
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
         [StringLength(maximumLength: 16, MinimumLength = 1)]
-        public required IsoRestrictedFINXMax16Text Identification { get; init; }
+        public required RestrictedFINXMax16Text Identification { get; init; }
     }
 }

@@ -22,7 +22,7 @@ public record TransactionSpecificData2
     [IsoId("_kSLg8FBgEfC5WMyGsBx7PA")]
     [DisplayName("Purchase Restriction")]
     [IsoXmlTag("PurchsRstrctn")]
-    public IsoMax16HexBinaryText? PurchaseRestriction { get; init; }
+    public Max16HexBinaryText? PurchaseRestriction { get; init; }
 
     /// <summary>
     /// It is designed to carry detail level fleet data and to enable issuers to supply more transaction information to their consumer and corporate clients pertaining to fleet transactions.
@@ -38,7 +38,7 @@ public record TransactionSpecificData2
     [IsoId("_zxWwskYYEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -46,5 +46,5 @@ public record TransactionSpecificData2
     [IsoId("_zxWws0YYEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

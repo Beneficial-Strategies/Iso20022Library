@@ -40,7 +40,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio1Choice
         [DisplayName("Current Year")]
         [IsoXmlTag("CurYr")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? CurrentYear { get; init; }
+        public YesNoIndicator? CurrentYear { get; init; }
 
         /// <summary>
         /// Additional information about the tax efficient product.

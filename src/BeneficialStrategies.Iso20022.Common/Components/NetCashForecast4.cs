@@ -23,7 +23,7 @@ public record NetCashForecast4
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate CashSettlementDate { get; init; }
+    public required DateOnly CashSettlementDate { get; init; }
 
     /// <summary>
     /// Net amount of the cash flow, expressed as an amount of money.

@@ -56,7 +56,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties11Choice
         [IsoXmlTag("ClntId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? ClientIdentification { get; init; }
+        public Max35Text? ClientIdentification { get; init; }
 
         /// <summary>
         /// Indicates whether an owner of the account may benefit from a fiscal exemption or amnesty, for example, when declaring overseas investments.
@@ -65,7 +65,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties11Choice
         [DisplayName("Fiscal Exemption")]
         [IsoXmlTag("FsclXmptn")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? FiscalExemption { get; init; }
+        public YesNoIndicator? FiscalExemption { get; init; }
 
         /// <summary>
         /// Indicates whether the signature of the account owner is required to authorise transactions on the account.
@@ -74,7 +74,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties11Choice
         [DisplayName("Signatory Right Indicator")]
         [IsoXmlTag("SgntryRghtInd")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? SignatoryRightIndicator { get; init; }
+        public YesNoIndicator? SignatoryRightIndicator { get; init; }
 
         /// <summary>
         /// Details about the MiFID classification of the account owner.
@@ -115,7 +115,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties11Choice
         [DisplayName("FATCA Reporting Date")]
         [IsoXmlTag("FATCARptgDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? FATCAReportingDate { get; init; }
+        public DateOnly? FATCAReportingDate { get; init; }
 
         /// <summary>
         /// Type of Common Reporting Standard (CRS) form submitted by the investor or account owner.
@@ -140,7 +140,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties11Choice
         [DisplayName("CRS Reporting Date")]
         [IsoXmlTag("CRSRptgDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? CRSReportingDate { get; init; }
+        public DateOnly? CRSReportingDate { get; init; }
 
         /// <summary>
         /// Alternative identification, for example, national registration identification number, passport number, tax identification number. This may be an account number used to further identify the beneficial owner, for example, a Central Provident Fund (CFP) account as required for Singapore.
@@ -230,7 +230,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties11Choice
         [IsoXmlTag("ElctrncMlngSvcRef")]
         [IsoSimpleType(IsoSimpleType.Max350Text)]
         [StringLength(maximumLength: 350, MinimumLength = 1)]
-        public IsoMax350Text? ElectronicMailingServiceReference { get; init; }
+        public Max350Text? ElectronicMailingServiceReference { get; init; }
 
         /// <summary>
         /// Communication device number or electronic address used for communication.
@@ -280,6 +280,6 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties11Choice
         [DisplayName("Controlling Party")]
         [IsoXmlTag("CtrlgPty")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? ControllingParty { get; init; }
+        public YesNoIndicator? ControllingParty { get; init; }
     }
 }

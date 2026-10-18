@@ -24,7 +24,7 @@ public record FractionDispositionTypeSD3
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Decimal above which numbers are rounded. For an example if rounding factor is 0.6 this means that fractional units greater than or equal to 6 will be rounded up and less than 6 will be rounded down.
@@ -33,5 +33,5 @@ public record FractionDispositionTypeSD3
     [DisplayName("Rounding Factor")]
     [IsoXmlTag("RndgFctr")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? RoundingFactor { get; init; }
+    public DecimalNumber? RoundingFactor { get; init; }
 }

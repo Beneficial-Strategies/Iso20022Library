@@ -22,7 +22,7 @@ public record CurrencyConversion34
     [IsoId("_NTX89bZoEfCUZfsQO4rYeA")]
     [DisplayName("Currency Conversion Identification")]
     [IsoXmlTag("CcyConvsId")]
-    public IsoMax35Text? CurrencyConversionIdentification { get; init; }
+    public Max35Text? CurrencyConversionIdentification { get; init; }
 
     /// <summary>
     /// Currency into which the amount is converted (ISO 4217, 3 alphanumeric characters).
@@ -46,7 +46,7 @@ public record CurrencyConversion34
     [IsoId("_NTX9B7ZoEfCUZfsQO4rYeA")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
-    public required IsoPercentageRate ExchangeRate { get; init; }
+    public required PercentageRate ExchangeRate { get; init; }
 
     /// <summary>
     /// Exchange rate, expressed as a percentage, applied to convert the resulting amount into the original amount.
@@ -54,7 +54,7 @@ public record CurrencyConversion34
     [IsoId("_NTX9DbZoEfCUZfsQO4rYeA")]
     [DisplayName("Inverted Exchange Rate")]
     [IsoXmlTag("NvrtdXchgRate")]
-    public IsoPercentageRate? InvertedExchangeRate { get; init; }
+    public PercentageRate? InvertedExchangeRate { get; init; }
 
     /// <summary>
     /// Date and time at which the exchange rate has been quoted.
@@ -62,7 +62,7 @@ public record CurrencyConversion34
     [IsoId("_NTX9E7ZoEfCUZfsQO4rYeA")]
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
-    public IsoISODateTime? QuotationDate { get; init; }
+    public ISODateTime? QuotationDate { get; init; }
 
     /// <summary>
     /// Specifies when the currency conversion could start.
@@ -70,7 +70,7 @@ public record CurrencyConversion34
     [IsoId("_NTX9GbZoEfCUZfsQO4rYeA")]
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
-    public IsoISODateTime? ValidFrom { get; init; }
+    public ISODateTime? ValidFrom { get; init; }
 
     /// <summary>
     /// Validity limit of the exchange rate.
@@ -78,7 +78,7 @@ public record CurrencyConversion34
     [IsoId("_NTht8bZoEfCUZfsQO4rYeA")]
     [DisplayName("Valid Until")]
     [IsoXmlTag("VldUntil")]
-    public IsoISODateTime? ValidUntil { get; init; }
+    public ISODateTime? ValidUntil { get; init; }
 
     /// <summary>
     /// Currency from which the amount is converted (ISO 4217, 3 alphanumeric characters).

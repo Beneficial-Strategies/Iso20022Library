@@ -23,7 +23,7 @@ public record PercentageAndPeriod1
     [DisplayName("Percentage")]
     [IsoXmlTag("Pctg")]
     [IsoSimpleType(IsoSimpleType.PercentageBoundedRate)]
-    public required IsoPercentageBoundedRate Percentage { get; init; }
+    public required PercentageBoundedRate Percentage { get; init; }
 
     /// <summary>
     /// Start of period or immediate if not specified.
@@ -32,7 +32,7 @@ public record PercentageAndPeriod1
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? StartDate { get; init; }
+    public DateOnly? StartDate { get; init; }
 
     /// <summary>
     /// End of period or indefinite if not specified.
@@ -41,5 +41,5 @@ public record PercentageAndPeriod1
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? EndDate { get; init; }
+    public DateOnly? EndDate { get; init; }
 }

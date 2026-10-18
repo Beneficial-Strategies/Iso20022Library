@@ -38,7 +38,7 @@ public record HoldBackInformation5
     [IsoId("f73682b2-34e0-4e68-815d-2030bf272168")]
     [DisplayName("Expected Release Date")]
     [IsoXmlTag("XpctdRlsDt")]
-    public IsoISODate? ExpectedReleaseDate { get; init; }
+    public DateOnly? ExpectedReleaseDate { get; init; }
 
     /// <summary>
     /// New identification of the security.
@@ -54,7 +54,7 @@ public record HoldBackInformation5
     [IsoId("8419f918-448d-4c79-a025-6f5d73e0eaba")]
     [DisplayName("Financial Instrument Name")]
     [IsoXmlTag("FinInstrmNm")]
-    public IsoMax350Text? FinancialInstrumentName { get; init; }
+    public Max350Text? FinancialInstrumentName { get; init; }
 
     /// <summary>
     /// Specifies whether or not additional redemption order instructions are required in order for the redemption to be completed.
@@ -70,5 +70,5 @@ public record HoldBackInformation5
     [IsoId("5c0820b1-6310-4bea-8149-e5ce3d6ed941")]
     [DisplayName("Final Confirmation")]
     [IsoXmlTag("FnlConf")]
-    public IsoYesNoIndicator? FinalConfirmation { get; init; }
+    public YesNoIndicator? FinalConfirmation { get; init; }
 }

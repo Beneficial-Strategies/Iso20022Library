@@ -24,7 +24,7 @@ public record RegulatoryReporting1
     [IsoXmlTag("RptgJursdctn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReportingJurisdiction { get; init; }
+    public Max35Text? ReportingJurisdiction { get; init; }
 
     /// <summary>
     /// Identifies the party that is responsible for reporting the trade to the trade repository.
@@ -73,7 +73,7 @@ public record RegulatoryReporting1
     [DisplayName("Clearing Threshold Indicator")]
     [IsoXmlTag("ClrThrshldInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ClearingThresholdIndicator { get; init; }
+    public YesNoIndicator? ClearingThresholdIndicator { get; init; }
 
     /// <summary>
     /// Specifies the reference number assigned by the Central Counterparty (CCP).
@@ -83,7 +83,7 @@ public record RegulatoryReporting1
     [IsoXmlTag("ClrdPdctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClearedProductIdentification { get; init; }
+    public Max35Text? ClearedProductIdentification { get; init; }
 
     /// <summary>
     /// Specifies the underlying product type.
@@ -117,7 +117,7 @@ public record RegulatoryReporting1
     [IsoXmlTag("ExctnVn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ExecutionVenue { get; init; }
+    public Max35Text? ExecutionVenue { get; init; }
 
     /// <summary>
     /// Specifies the date and time of the execution of the transaction in Coordinated Universal Time (UTC).
@@ -134,7 +134,7 @@ public record RegulatoryReporting1
     [DisplayName("Non Standard Flag")]
     [IsoXmlTag("NonStdFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? NonStandardFlag { get; init; }
+    public YesNoIndicator? NonStandardFlag { get; init; }
 
     /// <summary>
     /// Specifies the common reference or correlation identification for a swap transaction where the near and far leg are confirmed separately.
@@ -143,7 +143,7 @@ public record RegulatoryReporting1
     [DisplayName("Link Swap Identification")]
     [IsoXmlTag("LkSwpId")]
     [IsoSimpleType(IsoSimpleType.Exact42Text)]
-    public IsoExact42Text? LinkSwapIdentification { get; init; }
+    public Exact42Text? LinkSwapIdentification { get; init; }
 
     /// <summary>
     /// Specifies additional information that might be required by the regulator.
@@ -153,5 +153,5 @@ public record RegulatoryReporting1
     [IsoXmlTag("AddtlRptgInf")]
     [IsoSimpleType(IsoSimpleType.Max210Text)]
     [StringLength(maximumLength: 210, MinimumLength = 1)]
-    public IsoMax210Text? AdditionalReportingInformation { get; init; }
+    public Max210Text? AdditionalReportingInformation { get; init; }
 }

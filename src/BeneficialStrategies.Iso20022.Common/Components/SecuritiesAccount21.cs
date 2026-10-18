@@ -55,5 +55,5 @@ public record SecuritiesAccount21
     [DisplayName("Foreign Exchange Rate")]
     [IsoXmlTag("FXRate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? ForeignExchangeRate { get; init; }
+    public BaseOneRate? ForeignExchangeRate { get; init; }
 }

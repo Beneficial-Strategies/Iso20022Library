@@ -21,21 +21,21 @@ public record ContactBusiness1
     /// </summary>
     [DisplayName("Email")]
     [IsoXmlTag("Email")]
-    public IsoMax256Text? Email { get; init; }
+    public Max256Text? Email { get; init; }
 
     /// <summary>
     /// Fax.
     /// </summary>
     [DisplayName("Fax")]
     [IsoXmlTag("Fax")]
-    public IsoPhoneNumber? Fax { get; init; }
+    public PhoneNumber? Fax { get; init; }
 
     /// <summary>
     /// Given Name.
     /// </summary>
     [DisplayName("Given Name")]
     [IsoXmlTag("GvnNm")]
-    public IsoMax35Text? GivenName { get; init; }
+    public Max35Text? GivenName { get; init; }
 
     /// <summary>
     /// Language.
@@ -49,47 +49,47 @@ public record ContactBusiness1
     /// </summary>
     [DisplayName("Last Name")]
     [IsoXmlTag("LastNm")]
-    public IsoMax35Text? LastName { get; init; }
+    public Max35Text? LastName { get; init; }
 
     /// <summary>
     /// Middle Name.
     /// </summary>
     [DisplayName("Middle Name")]
     [IsoXmlTag("MddlNm")]
-    public IsoMax35Text? MiddleName { get; init; }
+    public Max35Text? MiddleName { get; init; }
 
     /// <summary>
     /// Name.
     /// </summary>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax70Text? Name { get; init; }
+    public Max70Text? Name { get; init; }
 
     /// <summary>
     /// Phone.
     /// </summary>
     [DisplayName("Phone")]
     [IsoXmlTag("Phne")]
-    public IsoPhoneNumber? Phone { get; init; }
+    public PhoneNumber? Phone { get; init; }
 
     /// <summary>
     /// Property Phone.
     /// </summary>
     [DisplayName("Property Phone")]
     [IsoXmlTag("PrprtyPhne")]
-    public IsoPhoneNumber? PropertyPhone { get; init; }
+    public PhoneNumber? PropertyPhone { get; init; }
 
     /// <summary>
     /// Toll Free Phone.
     /// </summary>
     [DisplayName("Toll Free Phone")]
     [IsoXmlTag("TollFreePhne")]
-    public IsoPhoneNumber? TollFreePhone { get; init; }
+    public PhoneNumber? TollFreePhone { get; init; }
 
     /// <summary>
     /// URL.
     /// </summary>
     [DisplayName("URL")]
     [IsoXmlTag("URL")]
-    public IsoMax256Text? URL { get; init; }
+    public Max256Text? URL { get; init; }
 }

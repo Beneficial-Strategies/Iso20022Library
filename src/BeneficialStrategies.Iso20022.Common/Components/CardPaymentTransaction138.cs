@@ -35,7 +35,7 @@ public record CardPaymentTransaction138
     /// </summary>
     [DisplayName("Initiator Transaction Identification")]
     [IsoXmlTag("InitrTxId")]
-    public IsoMax35Text? InitiatorTransactionIdentification { get; init; }
+    public Max35Text? InitiatorTransactionIdentification { get; init; }
 
     /// <summary>
     /// POI Identification.
@@ -49,14 +49,14 @@ public record CardPaymentTransaction138
     /// </summary>
     [DisplayName("Recipient Transaction Identification")]
     [IsoXmlTag("RcptTxId")]
-    public IsoMax140Text? RecipientTransactionIdentification { get; init; }
+    public Max140Text? RecipientTransactionIdentification { get; init; }
 
     /// <summary>
     /// Sale Reference Identification.
     /// </summary>
     [DisplayName("Sale Reference Identification")]
     [IsoXmlTag("SaleRefId")]
-    public IsoMax35Text? SaleReferenceIdentification { get; init; }
+    public Max35Text? SaleReferenceIdentification { get; init; }
 
     /// <summary>
     /// Service Attribute.

@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice
         [DisplayName("Maturity Date")]
         [IsoXmlTag("MtrtyDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate MaturityDate { get; init; }
+        public required DateOnly MaturityDate { get; init; }
 
         /// <summary>
         /// Specifies the value of the deposit.
@@ -40,6 +40,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice
         [DisplayName("Counterparty Identification")]
         [IsoXmlTag("CtrPtyId")]
         [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-        public required IsoLEIIdentifier CounterpartyIdentification { get; init; }
+        public required LEIIdentifier CounterpartyIdentification { get; init; }
     }
 }

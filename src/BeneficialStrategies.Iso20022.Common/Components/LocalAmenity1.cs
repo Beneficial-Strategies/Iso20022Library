@@ -32,7 +32,7 @@ public record LocalAmenity1
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Indicates whether or not a specific type of amenity is available at this location.
@@ -41,5 +41,5 @@ public record LocalAmenity1
     [DisplayName("Available Indicator")]
     [IsoXmlTag("AvlblInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? AvailableIndicator { get; init; }
+    public TrueFalseIndicator? AvailableIndicator { get; init; }
 }

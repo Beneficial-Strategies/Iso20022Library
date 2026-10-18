@@ -23,7 +23,7 @@ public record CompareTrueFalseIndicator2
     [DisplayName("Value")]
     [IsoXmlTag("Val1")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? Value1 { get; init; }
+    public TrueFalseIndicator? Value1 { get; init; }
 
     /// <summary>
     /// Information for the second side of the transaction.
@@ -32,5 +32,5 @@ public record CompareTrueFalseIndicator2
     [DisplayName("Value")]
     [IsoXmlTag("Val2")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? Value2 { get; init; }
+    public TrueFalseIndicator? Value2 { get; init; }
 }

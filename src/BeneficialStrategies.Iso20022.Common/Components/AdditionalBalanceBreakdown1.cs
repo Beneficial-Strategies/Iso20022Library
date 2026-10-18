@@ -38,7 +38,7 @@ public record AdditionalBalanceBreakdown1
     [IsoId("_kHopgag6EfCXwLUUylXgrQ")]
     [DisplayName("Sub Balance Additional Details")]
     [IsoXmlTag("SubBalAddtlDtls")]
-    public IsoMax140Text? SubBalanceAdditionalDetails { get; init; }
+    public Max140Text? SubBalanceAdditionalDetails { get; init; }
 
     /// <summary>
     /// Breakdown of the aggregate quantity reported into significant lots, for example, tax lots.

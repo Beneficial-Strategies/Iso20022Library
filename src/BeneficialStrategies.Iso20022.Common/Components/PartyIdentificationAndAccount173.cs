@@ -32,7 +32,7 @@ public record PartyIdentificationAndAccount173
     [IsoXmlTag("SfkpgAcct")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoRestrictedFINXMax35Text? SafekeepingAccount { get; init; }
+    public RestrictedFINXMax35Text? SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Reference meaningful to the party identified.
@@ -42,7 +42,7 @@ public record PartyIdentificationAndAccount173
     [IsoXmlTag("PrcgId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? ProcessingIdentification { get; init; }
+    public RestrictedFINXMax16Text? ProcessingIdentification { get; init; }
 
     /// <summary>
     /// Alternate identification for a party.

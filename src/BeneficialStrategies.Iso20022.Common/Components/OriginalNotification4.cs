@@ -24,7 +24,7 @@ public record OriginalNotification4
     [IsoXmlTag("OrgnlMsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OriginalMessageIdentification { get; init; }
+    public required Max35Text OriginalMessageIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the original message was created.
@@ -33,7 +33,7 @@ public record OriginalNotification4
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? OriginalCreationDateTime { get; init; }
+    public ISODateTime? OriginalCreationDateTime { get; init; }
 
     /// <summary>
     /// Identification of the original notification.
@@ -43,7 +43,7 @@ public record OriginalNotification4
     [IsoXmlTag("OrgnlNtfctnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OriginalNotificationIdentification { get; init; }
+    public required Max35Text OriginalNotificationIdentification { get; init; }
 
     /// <summary>
     /// Indicates whether the cancellation applies to the complete original notification or to individual items within the original notification.
@@ -52,7 +52,7 @@ public record OriginalNotification4
     [DisplayName("Notification Cancellation")]
     [IsoXmlTag("NtfctnCxl")]
     [IsoSimpleType(IsoSimpleType.GroupCancellationIndicator)]
-    public IsoGroupCancellationIndicator? NotificationCancellation { get; init; }
+    public GroupCancellationIndicator? NotificationCancellation { get; init; }
 
     /// <summary>
     /// Identifies the original notification item, to which the cancellation advice refers.

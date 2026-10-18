@@ -22,7 +22,7 @@ public record TelecomServicesLineItem4
     [IsoId("_DK8YkUiEEfCMZJtj4J7UGQ-stdt")]
     [DisplayName("Start Date Time")]
     [IsoXmlTag("StartDtTm")]
-    public IsoISODate? StartDateTime { get; init; }
+    public DateOnly? StartDateTime { get; init; }
 
     /// <summary>
     /// Describes the period (such as peak or off peak) of the phone call.
@@ -30,7 +30,7 @@ public record TelecomServicesLineItem4
     [IsoId("_DK8YkUiEEfCMZJtj4J7UGQ-tmpr")]
     [DisplayName("Time Period")]
     [IsoXmlTag("TmPrd")]
-    public IsoMax35Text? TimePeriod { get; init; }
+    public Max35Text? TimePeriod { get; init; }
 
     /// <summary>
     /// Duration of phone call expressed in HHMMSS format. 
@@ -38,7 +38,7 @@ public record TelecomServicesLineItem4
     [IsoId("_DK8YkUiEEfCMZJtj4J7UGQ-drtn")]
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
-    public IsoISOTime? Duration { get; init; }
+    public ISOTime? Duration { get; init; }
 
     /// <summary>
     /// Contains call type values for the originator of the telephone call . P000-P999 reserved for private use, N000-N999 reserved for national use.
@@ -54,7 +54,7 @@ public record TelecomServicesLineItem4
     [IsoId("_DK8YkUiEEfCMZJtj4J7UGQ-cfph")]
     [DisplayName("Call From Phone")]
     [IsoXmlTag("CallFrmPhne")]
-    public IsoPhoneNumber? CallFromPhone { get; init; }
+    public PhoneNumber? CallFromPhone { get; init; }
 
     /// <summary>
     /// City from which the call was made.
@@ -62,7 +62,7 @@ public record TelecomServicesLineItem4
     [IsoId("_DK8YkUiEEfCMZJtj4J7UGQ-cfcy")]
     [DisplayName("Call From City")]
     [IsoXmlTag("CallFrmCty")]
-    public IsoMax35Text? CallFromCity { get; init; }
+    public Max35Text? CallFromCity { get; init; }
 
     /// <summary>
     /// Country sub division major from which the call was made.
@@ -102,7 +102,7 @@ public record TelecomServicesLineItem4
     [IsoId("_DK8YkUiEEfCMZJtj4J7UGQ-ctph")]
     [DisplayName("Call To Phone")]
     [IsoXmlTag("CallToPhne")]
-    public IsoPhoneNumber? CallToPhone { get; init; }
+    public PhoneNumber? CallToPhone { get; init; }
 
     /// <summary>
     /// City to which the call was made.
@@ -110,7 +110,7 @@ public record TelecomServicesLineItem4
     [IsoId("_DK8YkUiEEfCMZJtj4J7UGQ-ctcy")]
     [DisplayName("Call To City")]
     [IsoXmlTag("CallToCty")]
-    public IsoMax35Text? CallToCity { get; init; }
+    public Max35Text? CallToCity { get; init; }
 
     /// <summary>
     /// Country sub division major to which the call was made.
@@ -166,7 +166,7 @@ public record TelecomServicesLineItem4
     [IsoId("_DK8YkUiEEfCMZJtj4J7UGQ-dsc")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax256Text? Description { get; init; }
+    public Max256Text? Description { get; init; }
 
     /// <summary>
     /// Reserved for private data. The use of this data element is determined by bilateral agreement.
@@ -174,7 +174,7 @@ public record TelecomServicesLineItem4
     [IsoId("_DK8YkUiEEfCMZJtj4J7UGQ-pvdt")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications. 
@@ -182,5 +182,5 @@ public record TelecomServicesLineItem4
     [IsoId("_DK8YkUiEEfCMZJtj4J7UGQ-ntdt")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

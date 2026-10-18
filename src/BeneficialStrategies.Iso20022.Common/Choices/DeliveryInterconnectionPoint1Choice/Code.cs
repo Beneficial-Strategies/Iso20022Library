@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.DeliveryInterconnectionPoint1Cho
         /// </summary>
         [IsoXmlTag("Cd")]
         [IsoSimpleType(IsoSimpleType.EICIdentifier)]
-        public required IsoEICIdentifier Value { get; init; }
+        public required EICIdentifier Value { get; init; }
     }
 }

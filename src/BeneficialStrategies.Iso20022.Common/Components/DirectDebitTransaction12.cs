@@ -36,7 +36,7 @@ public record DirectDebitTransaction12
     /// </summary>
     [DisplayName("Pre Notification Date")]
     [IsoXmlTag("PreNtfctnDt")]
-    public IsoISODate? PreNotificationDate { get; init; }
+    public DateOnly? PreNotificationDate { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identification of the pre-notification which is sent separately from the direct debit instruction.
@@ -44,5 +44,5 @@ public record DirectDebitTransaction12
     /// </summary>
     [DisplayName("Pre Notification Identification")]
     [IsoXmlTag("PreNtfctnId")]
-    public IsoMax35Text? PreNotificationIdentification { get; init; }
+    public Max35Text? PreNotificationIdentification { get; init; }
 }

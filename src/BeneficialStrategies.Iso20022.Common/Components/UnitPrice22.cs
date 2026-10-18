@@ -47,7 +47,7 @@ public record UnitPrice22
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NumberOfDaysAccrued { get; init; }
+    public Number? NumberOfDaysAccrued { get; init; }
 
     /// <summary>
     /// Amount included in the NAV that corresponds to gains directly or indirectly derived from interest payment in the scope of the European Directive on taxation of savings income in the form of interest payments.
@@ -73,5 +73,5 @@ public record UnitPrice22
     [IsoXmlTag("PricDiffRsn")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PriceDifferenceReason { get; init; }
+    public Max350Text? PriceDifferenceReason { get; init; }
 }

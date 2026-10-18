@@ -32,7 +32,7 @@ public record ApplicationParameters9
     [IsoXmlTag("ApplId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ApplicationIdentification { get; init; }
+    public required Max35Text ApplicationIdentification { get; init; }
 
     /// <summary>
     /// Version of the payment application configuration parameters.
@@ -42,7 +42,7 @@ public record ApplicationParameters9
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Version { get; init; }
+    public Max256Text? Version { get; init; }
 
     /// <summary>
     /// Version of the parameters&apos; format.
@@ -52,7 +52,7 @@ public record ApplicationParameters9
     [IsoXmlTag("ParamFrmtIdr")]
     [IsoSimpleType(IsoSimpleType.Max8Text)]
     [StringLength(maximumLength: 8, MinimumLength = 1)]
-    public IsoMax8Text? ParameterFormatIdentifier { get; init; }
+    public Max8Text? ParameterFormatIdentifier { get; init; }
 
     /// <summary>
     /// Configuration parameters used by the related payment application.
@@ -60,7 +60,7 @@ public record ApplicationParameters9
     [IsoId("_2BjwCQufEeqw5uEXxQ9H4g")]
     [DisplayName("Parameters")]
     [IsoXmlTag("Params")]
-    public SimpleValueList<IsoMax100KBinary> Parameters { get; init; } = [];
+    public SimpleValueList<Max100KBinary> Parameters { get; init; } = [];
 
     /// <summary>
     /// Sensitive parameters (sequence of parameters including the envelope) encrypted with a cryptographic key.

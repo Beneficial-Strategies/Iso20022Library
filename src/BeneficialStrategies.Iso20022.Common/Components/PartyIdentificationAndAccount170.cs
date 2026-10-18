@@ -31,7 +31,7 @@ public record PartyIdentificationAndAccount170
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? LEI { get; init; }
+    public LEIIdentifier? LEI { get; init; }
 
     /// <summary>
     /// Account to or from which a securities entry is made.
@@ -49,5 +49,5 @@ public record PartyIdentificationAndAccount170
     [IsoXmlTag("PrcgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProcessingIdentification { get; init; }
+    public Max35Text? ProcessingIdentification { get; init; }
 }

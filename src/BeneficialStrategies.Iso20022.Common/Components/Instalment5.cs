@@ -42,7 +42,7 @@ public record Instalment5
     /// </summary>
     [DisplayName("First Payment Date")]
     [IsoXmlTag("FrstPmtDt")]
-    public IsoISODate? FirstPaymentDate { get; init; }
+    public DateOnly? FirstPaymentDate { get; init; }
 
     /// <summary>
     /// Grace Period.
@@ -56,7 +56,7 @@ public record Instalment5
     /// </summary>
     [DisplayName("Instalment Period")]
     [IsoXmlTag("InstlmtPrd")]
-    public IsoNumber? InstalmentPeriod { get; init; }
+    public Number? InstalmentPeriod { get; init; }
 
     /// <summary>
     /// Instalment Plan.
@@ -91,7 +91,7 @@ public record Instalment5
     /// </summary>
     [DisplayName("Plan Identification")]
     [IsoXmlTag("PlanId")]
-    public IsoMax35Text? PlanIdentification { get; init; }
+    public Max35Text? PlanIdentification { get; init; }
 
     /// <summary>
     /// Plan Notice.
@@ -112,7 +112,7 @@ public record Instalment5
     /// </summary>
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
-    public IsoNumber? SequenceNumber { get; init; }
+    public Number? SequenceNumber { get; init; }
 
     /// <summary>
     /// Subsequent Amount.
@@ -133,5 +133,5 @@ public record Instalment5
     /// </summary>
     [DisplayName("Total Number Of Payments")]
     [IsoXmlTag("TtlNbOfPmts")]
-    public IsoNumber? TotalNumberOfPayments { get; init; }
+    public Number? TotalNumberOfPayments { get; init; }
 }

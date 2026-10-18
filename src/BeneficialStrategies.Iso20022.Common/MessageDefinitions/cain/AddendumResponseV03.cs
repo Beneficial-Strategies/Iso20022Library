@@ -197,7 +197,7 @@ public record AddendumResponseV03 : IOuterRecord
     /// </summary>
     [DisplayName("Transaction Description")]
     [IsoXmlTag("TxDesc")]
-    public IsoMax1000Text? TransactionDescription { get; init; }
+    public Max1000Text? TransactionDescription { get; init; }
 
     /// <summary>
     /// Transaction Identification.

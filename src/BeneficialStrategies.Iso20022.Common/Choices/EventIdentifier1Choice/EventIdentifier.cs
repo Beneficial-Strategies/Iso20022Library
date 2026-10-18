@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.EventIdentifier1Choice
         /// </summary>
         [IsoXmlTag("EvtIdr")]
         [IsoSimpleType(IsoSimpleType.UTIIdentifier)]
-        public required IsoUTIIdentifier Value { get; init; }
+        public required UTIIdentifier Value { get; init; }
     }
 }

@@ -64,7 +64,7 @@ public record MeetingResultDisseminationV10 : IOuterRecord
     /// </summary>
     [DisplayName("Meeting Result Dissemination Identification")]
     [IsoXmlTag("MtgRsltDssmntnId")]
-    public IsoMax35Text? MeetingResultDisseminationIdentification { get; init; }
+    public Max35Text? MeetingResultDisseminationIdentification { get; init; }
 
     /// <summary>
     /// Meeting Results Dissemination Type.
@@ -92,7 +92,7 @@ public record MeetingResultDisseminationV10 : IOuterRecord
     /// </summary>
     [DisplayName("Previous Meeting Results Dissemination Identification")]
     [IsoXmlTag("PrvsMtgRsltsDssmntnId")]
-    public IsoMax35Text? PreviousMeetingResultsDisseminationIdentification { get; init; }
+    public Max35Text? PreviousMeetingResultsDisseminationIdentification { get; init; }
 
     /// <summary>
     /// Security.

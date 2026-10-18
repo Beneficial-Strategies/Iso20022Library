@@ -32,5 +32,5 @@ public record ResponseType1
     [IsoXmlTag("RspnRsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ResponseReason { get; init; }
+    public Max35Text? ResponseReason { get; init; }
 }

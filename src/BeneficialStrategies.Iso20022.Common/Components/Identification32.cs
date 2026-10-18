@@ -22,7 +22,7 @@ public record Identification32
     [IsoId("_mavm1aovEfCG2_q2WT-90w")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
-    public required IsoMax35Text AccountOwnerTransactionIdentification { get; init; }
+    public required Max35Text AccountOwnerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the transaction as known by the account servicer.
@@ -30,7 +30,7 @@ public record Identification32
     [IsoId("_mavm4aovEfCG2_q2WT-90w")]
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
-    public IsoMax35Text? AccountServicerTransactionIdentification { get; init; }
+    public Max35Text? AccountServicerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of a transaction assigned by a market infrastructure other than a central securities depository.
@@ -38,7 +38,7 @@ public record Identification32
     [IsoId("_mavm7aovEfCG2_q2WT-90w")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
-    public IsoMax35Text? MarketInfrastructureTransactionIdentification { get; init; }
+    public Max35Text? MarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of a counterparty transaction assigned by a market infrastructure other than a central securities depository.
@@ -46,7 +46,7 @@ public record Identification32
     [IsoId("_mavm-aovEfCG2_q2WT-90w")]
     [DisplayName("Counterparty Market Infrastructure Transaction Identification")]
     [IsoXmlTag("CtrPtyMktInfrstrctrTxId")]
-    public IsoMax35Text? CounterpartyMarketInfrastructureTransactionIdentification { get; init; }
+    public Max35Text? CounterpartyMarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of the transaction assigned by the processor of the instruction other than the account owner, the account servicer and the market infrastructure.
@@ -54,7 +54,7 @@ public record Identification32
     [IsoId("_mavm_6ovEfCG2_q2WT-90w")]
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
-    public IsoMax35Text? ProcessorTransactionIdentification { get; init; }
+    public Max35Text? ProcessorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique reference agreed upon by the two trade counterparties to identify the trade.
@@ -62,7 +62,7 @@ public record Identification32
     [IsoId("_mavnBaovEfCG2_q2WT-90w")]
     [DisplayName("Common Identification")]
     [IsoXmlTag("CmonId")]
-    public IsoMax35Text? CommonIdentification { get; init; }
+    public Max35Text? CommonIdentification { get; init; }
 
     /// <summary>
     /// Reference assigned to the trade by the investor or the trading party.
@@ -70,7 +70,7 @@ public record Identification32
     [IsoId("_mavnEaovEfCG2_q2WT-90w")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    public SimpleValueList<IsoMax35Text> TradeIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> TradeIdentification { get; init; } = [];
 
     /// <summary>
     /// Unique Transaction Identifier (UTI) as agreed with the other counterparty.
@@ -78,7 +78,7 @@ public record Identification32
     [IsoId("_mavnHaovEfCG2_q2WT-90w")]
     [DisplayName("Unique Transaction Identifier")]
     [IsoXmlTag("UnqTxIdr")]
-    public IsoUTIIdentifier? UniqueTransactionIdentifier { get; init; }
+    public UTIIdentifier? UniqueTransactionIdentifier { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party.
@@ -86,7 +86,7 @@ public record Identification32
     [IsoId("_mavnH6ovEfCG2_q2WT-90w")]
     [DisplayName("Master Identification")]
     [IsoXmlTag("MstrId")]
-    public IsoMax35Text? MasterIdentification { get; init; }
+    public Max35Text? MasterIdentification { get; init; }
 
     /// <summary>
     /// Identification of a basket trade.
@@ -94,7 +94,7 @@ public record Identification32
     [IsoId("_mavnK6ovEfCG2_q2WT-90w")]
     [DisplayName("Basket Identification")]
     [IsoXmlTag("BsktId")]
-    public IsoMax35Text? BasketIdentification { get; init; }
+    public Max35Text? BasketIdentification { get; init; }
 
     /// <summary>
     /// Reference identifying an index trade.
@@ -102,7 +102,7 @@ public record Identification32
     [IsoId("_mavnN6ovEfCG2_q2WT-90w")]
     [DisplayName("Index Identification")]
     [IsoXmlTag("IndxId")]
-    public IsoMax35Text? IndexIdentification { get; init; }
+    public Max35Text? IndexIdentification { get; init; }
 
     /// <summary>
     /// Unique identifier for a list, as assigned by the trading party.
@@ -110,7 +110,7 @@ public record Identification32
     [IsoId("_mavnQ6ovEfCG2_q2WT-90w")]
     [DisplayName("List Identification")]
     [IsoXmlTag("ListId")]
-    public IsoMax35Text? ListIdentification { get; init; }
+    public Max35Text? ListIdentification { get; init; }
 
     /// <summary>
     /// Program reference which identifies a program trade.
@@ -118,7 +118,7 @@ public record Identification32
     [IsoId("_mavnT6ovEfCG2_q2WT-90w")]
     [DisplayName("Program Identification")]
     [IsoXmlTag("PrgmId")]
-    public IsoMax35Text? ProgramIdentification { get; init; }
+    public Max35Text? ProgramIdentification { get; init; }
 
     /// <summary>
     /// Collective reference identifying a set of messages.
@@ -126,7 +126,7 @@ public record Identification32
     [IsoId("_mavnW6ovEfCG2_q2WT-90w")]
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
-    public IsoMax35Text? PoolIdentification { get; init; }
+    public Max35Text? PoolIdentification { get; init; }
 
     /// <summary>
     /// Identification assigned by the account servicer to unambiguously identify a corporate action event.
@@ -134,5 +134,5 @@ public record Identification32
     [IsoId("_mavnZ6ovEfCG2_q2WT-90w")]
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
-    public IsoMax35Text? CorporateActionEventIdentification { get; init; }
+    public Max35Text? CorporateActionEventIdentification { get; init; }
 }

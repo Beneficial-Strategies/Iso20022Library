@@ -23,7 +23,7 @@ public record NotionalQuantity1
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
     [IsoSimpleType(IsoSimpleType.LongFraction19DecimalNumber)]
-    public required IsoLongFraction19DecimalNumber Quantity { get; init; }
+    public required LongFraction19DecimalNumber Quantity { get; init; }
 
     /// <summary>
     /// Specifies the effective date and end date of the schedule for derivative transactions negotiated in non-monetary amounts with a notional quantity varying throughout the life of the transaction.

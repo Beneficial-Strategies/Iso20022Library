@@ -22,7 +22,7 @@ public record PriceValuation5
     [IsoId("87c2cbcf-bfc9-4f39-8104-b2c033c72ca8")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax35Text? Identification { get; init; }
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Date and time of the price valuation for the investment fund/fund class.
@@ -110,7 +110,7 @@ public record PriceValuation5
     [IsoId("49936174-9fd1-4585-ab5b-7665ddd5ab41")]
     [DisplayName("Official Valuation Indicator")]
     [IsoXmlTag("OffclValtnInd")]
-    public required IsoYesNoIndicator OfficialValuationIndicator { get; init; }
+    public required YesNoIndicator OfficialValuationIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the valuation of the investment fund class is suspended.
@@ -118,7 +118,7 @@ public record PriceValuation5
     [IsoId("b41dfbde-2459-4c20-bee8-954c6a1ce0c4")]
     [DisplayName("Suspended Indicator")]
     [IsoXmlTag("SspdInd")]
-    public required IsoYesNoIndicator SuspendedIndicator { get; init; }
+    public required YesNoIndicator SuspendedIndicator { get; init; }
 
     /// <summary>
     /// Amount of money for which goods or services are offered, sold, or bought.

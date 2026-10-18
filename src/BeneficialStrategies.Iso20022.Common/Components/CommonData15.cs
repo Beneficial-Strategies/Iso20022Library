@@ -62,7 +62,7 @@ public record CommonData15
     [IsoId("_B-a2c7X5EfCUZfsQO4rYeA")]
     [DisplayName("Merchant Category Code")]
     [IsoXmlTag("MrchntCtgyCd")]
-    public IsoMin3Max4Text? MerchantCategoryCode { get; init; }
+    public Min3Max4Text? MerchantCategoryCode { get; init; }
 
     /// <summary>
     /// Unique identification of the reconciliation period between the acceptor and the acquirer.
@@ -70,7 +70,7 @@ public record CommonData15
     [IsoId("_B-a2ebX5EfCUZfsQO4rYeA")]
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
-    public IsoMax35Text? ReconciliationIdentification { get; init; }
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Currency associated with the set of transaction.

@@ -47,7 +47,7 @@ public record Debt5
     [DisplayName("Interest Fixing Date")]
     [IsoXmlTag("IntrstFxgDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? InterestFixingDate { get; init; }
+    public ISODateTime? InterestFixingDate { get; init; }
 
     /// <summary>
     /// First date/time at which a security begins to accrue interest.
@@ -56,7 +56,7 @@ public record Debt5
     [DisplayName("Dated Date")]
     [IsoXmlTag("DtdDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? DatedDate { get; init; }
+    public ISODateTime? DatedDate { get; init; }
 
     /// <summary>
     /// Date/time at which the first interest payment is due to holders of the security.
@@ -65,7 +65,7 @@ public record Debt5
     [DisplayName("First Payment Date")]
     [IsoXmlTag("FrstPmtDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? FirstPaymentDate { get; init; }
+    public ISODateTime? FirstPaymentDate { get; init; }
 
     /// <summary>
     /// Planned final repayment date at the time of issuance.
@@ -74,7 +74,7 @@ public record Debt5
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? MaturityDate { get; init; }
+    public ISODateTime? MaturityDate { get; init; }
 
     /// <summary>
     /// Date of the coupon attached to the physical security.
@@ -83,7 +83,7 @@ public record Debt5
     [DisplayName("Next Coupon Date")]
     [IsoXmlTag("NxtCpnDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? NextCouponDate { get; init; }
+    public ISODateTime? NextCouponDate { get; init; }
 
     /// <summary>
     /// Date at which the holder has the right to ask for redemption of the security prior to final maturity.
@@ -92,7 +92,7 @@ public record Debt5
     [DisplayName("Putable Date")]
     [IsoXmlTag("PutblDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? PutableDate { get; init; }
+    public ISODateTime? PutableDate { get; init; }
 
     /// <summary>
     /// Next date/time at which the issuer has the right to pay the securitiy prior to maturity.
@@ -101,7 +101,7 @@ public record Debt5
     [DisplayName("Next Callable Date")]
     [IsoXmlTag("NxtCllblDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? NextCallableDate { get; init; }
+    public ISODateTime? NextCallableDate { get; init; }
 
     /// <summary>
     /// The date that the current factor will be changed to a new factor.
@@ -110,7 +110,7 @@ public record Debt5
     [DisplayName("Next Factor Date")]
     [IsoXmlTag("NxtFctrDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? NextFactorDate { get; init; }
+    public ISODateTime? NextFactorDate { get; init; }
 
     /// <summary>
     /// Date/time at which an interest bearing security becomes due and assets are to be repaid.
@@ -119,7 +119,7 @@ public record Debt5
     [DisplayName("Expiration Date")]
     [IsoXmlTag("XprtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? ExpirationDate { get; init; }
+    public ISODateTime? ExpirationDate { get; init; }
 
     /// <summary>
     /// Indicates the direction of payment for asset or mortgage backed securities, ie, whether the repaid capital is distributed (payment direction is down) or capitalized (payment direction is up).
@@ -128,7 +128,7 @@ public record Debt5
     [DisplayName("Payment Direction Indicator")]
     [IsoXmlTag("PmtDrctnInd")]
     [IsoSimpleType(IsoSimpleType.PaymentDirectionIndicator)]
-    public IsoPaymentDirectionIndicator? PaymentDirectionIndicator { get; init; }
+    public PaymentDirectionIndicator? PaymentDirectionIndicator { get; init; }
 
     /// <summary>
     /// Per annum ratio of interest paid to the principal amount of the financial instrument for a specific period of time.
@@ -137,7 +137,7 @@ public record Debt5
     [DisplayName("Interest Rate")]
     [IsoXmlTag("IntrstRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? InterestRate { get; init; }
+    public PercentageRate? InterestRate { get; init; }
 
     /// <summary>
     /// Specifies the interest rate applicable to the next interest payment period.
@@ -146,7 +146,7 @@ public record Debt5
     [DisplayName("Next Interest Rate")]
     [IsoXmlTag("NxtIntrstRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? NextInterestRate { get; init; }
+    public PercentageRate? NextInterestRate { get; init; }
 
     /// <summary>
     /// Specifies whether the payment of the coupon (interest) on a bond is off the normal schedule.
@@ -155,7 +155,7 @@ public record Debt5
     [DisplayName("Odd Coupon Indicator")]
     [IsoXmlTag("OddCpnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? OddCouponIndicator { get; init; }
+    public YesNoIndicator? OddCouponIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the issuer has the right to pay the security prior to maturity. Also called RetractableIndicator.
@@ -164,7 +164,7 @@ public record Debt5
     [DisplayName("Callable Indicator")]
     [IsoXmlTag("CllblInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? CallableIndicator { get; init; }
+    public YesNoIndicator? CallableIndicator { get; init; }
 
     /// <summary>
     /// The program under which a commercial paper is issued. The values that are most used are:
@@ -181,7 +181,7 @@ public record Debt5
     [DisplayName("CP Program")]
     [IsoXmlTag("CPPrgm")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? CPProgram { get; init; }
+    public Number? CPProgram { get; init; }
 
     /// <summary>
     /// Registration type of a commercial paper issuance.
@@ -191,7 +191,7 @@ public record Debt5
     [IsoXmlTag("CPRegnTp")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? CPRegistrationType { get; init; }
+    public Max350Text? CPRegistrationType { get; init; }
 
     /// <summary>
     /// Start date used for calculating accrued interest on debt instruments which are being sold between interest payment dates. Often but not always the same as the issue date and the dated date.
@@ -200,7 +200,7 @@ public record Debt5
     [DisplayName("Interest Accrual Date")]
     [IsoXmlTag("IntrstAcrlDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? InterestAccrualDate { get; init; }
+    public ISODateTime? InterestAccrualDate { get; init; }
 
     /// <summary>
     /// Indicates whether the holder has the right to ask for redemption of the security prior to final maturity. Also called RedeemableIndicator.
@@ -209,7 +209,7 @@ public record Debt5
     [DisplayName("Putable Indicator")]
     [IsoXmlTag("PutblInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PutableIndicator { get; init; }
+    public YesNoIndicator? PutableIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether an interest bearing instrument is being escrowed or collateralized either by direct obligations guaranteed by the US government, or by other types of securities. The maturity schedules of the securities in the escrow fund are determined in such a way to pay the maturity value, coupon, and premium payments (if any) of the refunded bonds.
@@ -218,7 +218,7 @@ public record Debt5
     [DisplayName("Pre Funded Indicator")]
     [IsoXmlTag("PreFnddInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PreFundedIndicator { get; init; }
+    public YesNoIndicator? PreFundedIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether an interest bearing instrument is deposited in a fund that will be used to pay debt service on refunded securities.
@@ -227,7 +227,7 @@ public record Debt5
     [DisplayName("Escrowed Indicator")]
     [IsoXmlTag("EscrwdInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? EscrowedIndicator { get; init; }
+    public YesNoIndicator? EscrowedIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the security has no maturity date.
@@ -236,7 +236,7 @@ public record Debt5
     [DisplayName("Perpetual Indicator")]
     [IsoXmlTag("PerptlInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PerpetualIndicator { get; init; }
+    public YesNoIndicator? PerpetualIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the security is a subordinated security.
@@ -245,7 +245,7 @@ public record Debt5
     [DisplayName("Subordinated Indicator")]
     [IsoXmlTag("SubrdntdInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? SubordinatedIndicator { get; init; }
+    public YesNoIndicator? SubordinatedIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the security is extendible,eg, repayment may be extended or maturity changed.
@@ -254,7 +254,7 @@ public record Debt5
     [DisplayName("Extendible Indicator")]
     [IsoXmlTag("XtndblInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ExtendibleIndicator { get; init; }
+    public YesNoIndicator? ExtendibleIndicator { get; init; }
 
     /// <summary>
     /// Period during which a date might be extended.
@@ -271,7 +271,7 @@ public record Debt5
     [DisplayName("Variable Rate Indicator")]
     [IsoXmlTag("VarblRateInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? VariableRateIndicator { get; init; }
+    public YesNoIndicator? VariableRateIndicator { get; init; }
 
     /// <summary>
     /// Amount for which a security can be overalloted (as in greenshoe option).
@@ -288,7 +288,7 @@ public record Debt5
     [DisplayName("Over Allotment Rate")]
     [IsoXmlTag("OverAlltmtRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? OverAllotmentRate { get; init; }
+    public PercentageRate? OverAllotmentRate { get; init; }
 
     /// <summary>
     /// Indicates whether repayment is made via regular principal and interest payments over time.
@@ -297,7 +297,7 @@ public record Debt5
     [DisplayName("Amortisable Indicator")]
     [IsoXmlTag("AmtsblInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AmortisableIndicator { get; init; }
+    public YesNoIndicator? AmortisableIndicator { get; init; }
 
     /// <summary>
     /// Calculation method used to calculate interest and/or yield for a bond, for example, street convention.
@@ -307,7 +307,7 @@ public record Debt5
     [IsoXmlTag("IntrstClctnMtd")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? InterestCalculationMethod { get; init; }
+    public Max70Text? InterestCalculationMethod { get; init; }
 
     /// <summary>
     /// Specifies whether the interest amount is capitalised until maturity date or paid out at each interest payment date.
@@ -332,7 +332,7 @@ public record Debt5
     [DisplayName("Current Factor")]
     [IsoXmlTag("CurFctr")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? CurrentFactor { get; init; }
+    public PercentageRate? CurrentFactor { get; init; }
 
     /// <summary>
     /// Identifies the new factor expressed as a decimal between 0 and 1 defining the outstanding principal of the bond (for factored securities).
@@ -341,7 +341,7 @@ public record Debt5
     [DisplayName("Next Factor")]
     [IsoXmlTag("NxtFctr")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? NextFactor { get; init; }
+    public PercentageRate? NextFactor { get; init; }
 
     /// <summary>
     /// Identifies the previous factor expressed as a decimal between 0 and 1 defining the outstanding principal of the bond (for factored securities).
@@ -350,7 +350,7 @@ public record Debt5
     [DisplayName("Previous Factor")]
     [IsoXmlTag("PrvsFctr")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? PreviousFactor { get; init; }
+    public PercentageRate? PreviousFactor { get; init; }
 
     /// <summary>
     /// Number of pieces composing a pool of financial assets.
@@ -359,7 +359,7 @@ public record Debt5
     [DisplayName("Pieces")]
     [IsoXmlTag("Pcs")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? Pieces { get; init; }
+    public DecimalNumber? Pieces { get; init; }
 
     /// <summary>
     /// Collection of assets by which a security is backed.
@@ -368,7 +368,7 @@ public record Debt5
     [DisplayName("Pools Maximum")]
     [IsoXmlTag("PlsMax")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? PoolsMaximum { get; init; }
+    public DecimalNumber? PoolsMaximum { get; init; }
 
     /// <summary>
     /// Indicates per million the collection of loans, mortgages or other assets assembled by an originator as the basis for a security.
@@ -377,7 +377,7 @@ public record Debt5
     [DisplayName("Pools Per Million")]
     [IsoXmlTag("PlsPerMln")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? PoolsPerMillion { get; init; }
+    public DecimalNumber? PoolsPerMillion { get; init; }
 
     /// <summary>
     /// Indicates per lot the collection of loans, mortgages or other assets assembled by an originator as the basis for a security.
@@ -386,7 +386,7 @@ public record Debt5
     [DisplayName("Pools Per Lot")]
     [IsoXmlTag("PlsPerLot")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? PoolsPerLot { get; init; }
+    public DecimalNumber? PoolsPerLot { get; init; }
 
     /// <summary>
     /// Indicates per trade the collection of loans, mortgages or other assets assembled by an originator as the basis for a security.
@@ -395,7 +395,7 @@ public record Debt5
     [DisplayName("Pools Per Trade")]
     [IsoXmlTag("PlsPerTrad")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? PoolsPerTrade { get; init; }
+    public DecimalNumber? PoolsPerTrade { get; init; }
 
     /// <summary>
     /// Indicates whether a penalty might be imposed to the borrower of a mortgage in case of prepayments occurring during the lockout period.
@@ -404,7 +404,7 @@ public record Debt5
     [DisplayName("Constant Pre Payment Penalty Indicator")]
     [IsoXmlTag("CstPrePmtPnltyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ConstantPrePaymentPenaltyIndicator { get; init; }
+    public YesNoIndicator? ConstantPrePaymentPenaltyIndicator { get; init; }
 
     /// <summary>
     /// Identifies the lot constituting an asset backed or mortgage backed security issue.
@@ -414,7 +414,7 @@ public record Debt5
     [IsoXmlTag("LotId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LotIdentification { get; init; }
+    public Max35Text? LotIdentification { get; init; }
 
     /// <summary>
     /// Measure of prepayment as a yield of the current outstanding loan balance.
@@ -423,7 +423,7 @@ public record Debt5
     [DisplayName("Constant Pre Payment Yield")]
     [IsoXmlTag("CstPrePmtYld")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? ConstantPrePaymentYield { get; init; }
+    public PercentageRate? ConstantPrePaymentYield { get; init; }
 
     /// <summary>
     /// Contains the weighted average coupon of the fixed income instrument (expressed as a percentage).
@@ -432,7 +432,7 @@ public record Debt5
     [DisplayName("Weighted Average Coupon")]
     [IsoXmlTag("WghtdAvrgCpn")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? WeightedAverageCoupon { get; init; }
+    public PercentageRate? WeightedAverageCoupon { get; init; }
 
     /// <summary>
     /// Contains the weighted average life of the fixed income instrument (expressed in months).
@@ -441,7 +441,7 @@ public record Debt5
     [DisplayName("Weighted Average Life")]
     [IsoXmlTag("WghtdAvrgLife")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? WeightedAverageLife { get; init; }
+    public DecimalNumber? WeightedAverageLife { get; init; }
 
     /// <summary>
     /// Contains the weighted average loan of the fixed income instrument (expressed in months).
@@ -450,7 +450,7 @@ public record Debt5
     [DisplayName("Weighted Average Loan")]
     [IsoXmlTag("WghtdAvrgLn")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? WeightedAverageLoan { get; init; }
+    public DecimalNumber? WeightedAverageLoan { get; init; }
 
     /// <summary>
     /// Contains the weighted average maturity of the fixed income instrument (expressed in months).
@@ -459,7 +459,7 @@ public record Debt5
     [DisplayName("Weighted Average Maturity")]
     [IsoXmlTag("WghtdAvrgMtrty")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? WeightedAverageMaturity { get; init; }
+    public DecimalNumber? WeightedAverageMaturity { get; init; }
 
     /// <summary>
     /// Indicates whether the instrument is backed by any kind of asset or not.
@@ -468,7 +468,7 @@ public record Debt5
     [DisplayName("Insured Indicator")]
     [IsoXmlTag("InsrdInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? InsuredIndicator { get; init; }
+    public YesNoIndicator? InsuredIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the security is bank qualified (usually applies to loan products).
@@ -477,7 +477,7 @@ public record Debt5
     [DisplayName("Bank Qualified Indicator")]
     [IsoXmlTag("BkQlfdInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? BankQualifiedIndicator { get; init; }
+    public YesNoIndicator? BankQualifiedIndicator { get; init; }
 
     /// <summary>
     /// Rate of return on an investment, based on the price.
@@ -520,7 +520,7 @@ public record Debt5
     [DisplayName("Potential Euro System Eligibility")]
     [IsoXmlTag("PotntlEuroSysElgblty")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PotentialEuroSystemEligibility { get; init; }
+    public YesNoIndicator? PotentialEuroSystemEligibility { get; init; }
 
     /// <summary>
     /// Type of stipulation expressing geographical constraints on a fixed income instrument. It is expressed with a state or country abbreviation and a minimum or maximum percentage. Example: CA 0-80 (minimum of 80 percent in Californian assets).
@@ -530,7 +530,7 @@ public record Debt5
     [IsoXmlTag("Geogcs")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Geographics { get; init; }
+    public Max35Text? Geographics { get; init; }
 
     /// <summary>
     /// Range of allowed yield.
@@ -556,7 +556,7 @@ public record Debt5
     [IsoXmlTag("Purp")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Purpose { get; init; }
+    public Max256Text? Purpose { get; init; }
 
     /// <summary>
     /// Identifies whether the issue is subject to alternative minimum taxation (used for municipal bonds).
@@ -565,7 +565,7 @@ public record Debt5
     [DisplayName("Alternative Minimum Tax Indicator")]
     [IsoXmlTag("AltrntvMinTaxInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AlternativeMinimumTaxIndicator { get; init; }
+    public YesNoIndicator? AlternativeMinimumTaxIndicator { get; init; }
 
     /// <summary>
     /// Indicates an instruction to reinvest dividends in the underlying security (or proceeds at maturity in a similar instrument) if the current rate is &lt;rate&gt; or better.
@@ -574,7 +574,7 @@ public record Debt5
     [DisplayName("Auto Reinvestment")]
     [IsoXmlTag("AutoRinvstmt")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? AutoReinvestment { get; init; }
+    public PercentageRate? AutoReinvestment { get; init; }
 
     /// <summary>
     /// Haircut or valuation factor on the security expressed as a percentage.
@@ -583,7 +583,7 @@ public record Debt5
     [DisplayName("Haircut")]
     [IsoXmlTag("Hrcut")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Haircut { get; init; }
+    public PercentageRate? Haircut { get; init; }
 
     /// <summary>
     /// Indicates the conditions under which the order/trade is to be/was executed.
@@ -600,7 +600,7 @@ public record Debt5
     [DisplayName("Look Back")]
     [IsoXmlTag("LookBck")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? LookBack { get; init; }
+    public Number? LookBack { get; init; }
 
     /// <summary>
     /// Maximum number of time the collateral can be substitute.
@@ -609,7 +609,7 @@ public record Debt5
     [DisplayName("Maximum Substitution")]
     [IsoXmlTag("MaxSbstitn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaximumSubstitution { get; init; }
+    public Number? MaximumSubstitution { get; init; }
 
     /// <summary>
     /// Indicates the minimum tradable increments of a security.
@@ -635,7 +635,7 @@ public record Debt5
     [IsoXmlTag("Pdctn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Production { get; init; }
+    public Max35Text? Production { get; init; }
 
     /// <summary>
     /// Identifies if the securities is restricted or not (as per Rule 144).
@@ -644,7 +644,7 @@ public record Debt5
     [DisplayName("Restricted Indicator")]
     [IsoXmlTag("RstrctdInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? RestrictedIndicator { get; init; }
+    public YesNoIndicator? RestrictedIndicator { get; init; }
 
     /// <summary>
     /// Indicates the frequency at which the bond is re-rated and therefore re-priced (bond attribute, particularly of floating rate and index linked instruments).
@@ -662,7 +662,7 @@ public record Debt5
     [IsoXmlTag("Sctr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Sector { get; init; }
+    public Max35Text? Sector { get; init; }
 
     /// <summary>
     /// Indicates the maximum number of times collateral can be substituted.
@@ -679,7 +679,7 @@ public record Debt5
     [DisplayName("Substitution Left")]
     [IsoXmlTag("SbstitnLft")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? SubstitutionLeft { get; init; }
+    public Number? SubstitutionLeft { get; init; }
 
     /// <summary>
     /// Indicates a search criterion when looking to buy a mortgaged backed security that either is [yes] or is not [no] an entire pool.
@@ -688,7 +688,7 @@ public record Debt5
     [DisplayName("Whole Pool Indicator")]
     [IsoXmlTag("WhlPoolInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? WholePoolIndicator { get; init; }
+    public YesNoIndicator? WholePoolIndicator { get; init; }
 
     /// <summary>
     /// Identifies the Benchmark source price (eg. BB Generic, BB Fairvalue, Brokertec.).
@@ -698,7 +698,7 @@ public record Debt5
     [IsoXmlTag("PricSrc")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PriceSource { get; init; }
+    public Max35Text? PriceSource { get; init; }
 
     /// <summary>
     /// Indicates a search criterion used when looking to buy a bond within a particular price range.

@@ -21,56 +21,56 @@ public record TradeData44
     /// </summary>
     [DisplayName("Current Settlement Date")]
     [IsoXmlTag("CurSttlmDt")]
-    public IsoISODate? CurrentSettlementDate { get; init; }
+    public DateOnly? CurrentSettlementDate { get; init; }
 
     /// <summary>
     /// Current Status Date Time.
     /// </summary>
     [DisplayName("Current Status Date Time")]
     [IsoXmlTag("CurStsDtTm")]
-    public IsoISODateTime? CurrentStatusDateTime { get; init; }
+    public ISODateTime? CurrentStatusDateTime { get; init; }
 
     /// <summary>
     /// Matching System Matched Side Reference.
     /// </summary>
     [DisplayName("Matching System Matched Side Reference")]
     [IsoXmlTag("MtchgSysMtchdSdRef")]
-    public IsoMax35Text? MatchingSystemMatchedSideReference { get; init; }
+    public Max35Text? MatchingSystemMatchedSideReference { get; init; }
 
     /// <summary>
     /// Matching System Matching Reference.
     /// </summary>
     [DisplayName("Matching System Matching Reference")]
     [IsoXmlTag("MtchgSysMtchgRef")]
-    public IsoMax35Text? MatchingSystemMatchingReference { get; init; }
+    public Max35Text? MatchingSystemMatchingReference { get; init; }
 
     /// <summary>
     /// Matching System Unique Reference.
     /// </summary>
     [DisplayName("Matching System Unique Reference")]
     [IsoXmlTag("MtchgSysUnqRef")]
-    public required IsoMax35Text MatchingSystemUniqueReference { get; init; }
+    public required Max35Text MatchingSystemUniqueReference { get; init; }
 
     /// <summary>
     /// New Settlement Date.
     /// </summary>
     [DisplayName("New Settlement Date")]
     [IsoXmlTag("NewSttlmDt")]
-    public IsoISODate? NewSettlementDate { get; init; }
+    public DateOnly? NewSettlementDate { get; init; }
 
     /// <summary>
     /// Originator Reference.
     /// </summary>
     [DisplayName("Originator Reference")]
     [IsoXmlTag("OrgtrRef")]
-    public IsoMax35Text? OriginatorReference { get; init; }
+    public Max35Text? OriginatorReference { get; init; }
 
     /// <summary>
     /// Product Type.
     /// </summary>
     [DisplayName("Product Type")]
     [IsoXmlTag("PdctTp")]
-    public IsoMax35Text? ProductType { get; init; }
+    public Max35Text? ProductType { get; init; }
 
     /// <summary>
     /// Regulatory Reporting.
@@ -84,5 +84,5 @@ public record TradeData44
     /// </summary>
     [DisplayName("Settlement Session Identifier")]
     [IsoXmlTag("SttlmSsnIdr")]
-    public IsoExact4AlphaNumericText? SettlementSessionIdentifier { get; init; }
+    public Exact4AlphaNumericText? SettlementSessionIdentifier { get; init; }
 }

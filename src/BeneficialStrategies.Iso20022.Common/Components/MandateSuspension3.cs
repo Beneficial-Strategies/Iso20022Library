@@ -24,7 +24,7 @@ public record MandateSuspension3
     [IsoXmlTag("SspnsnReqId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text SuspensionRequestIdentification { get; init; }
+    public required Max35Text SuspensionRequestIdentification { get; init; }
 
     /// <summary>
     /// Provides information on the original message.

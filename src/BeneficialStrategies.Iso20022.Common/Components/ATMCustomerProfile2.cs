@@ -24,7 +24,7 @@ public record ATMCustomerProfile2
     [IsoXmlTag("PrflRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProfileReference { get; init; }
+    public Max35Text? ProfileReference { get; init; }
 
     /// <summary>
     /// Identification of the customer for the bank.
@@ -34,5 +34,5 @@ public record ATMCustomerProfile2
     [IsoXmlTag("CstmrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CustomerIdentification { get; init; }
+    public Max35Text? CustomerIdentification { get; init; }
 }

@@ -40,7 +40,7 @@ public record ATMTransaction19
     [IsoXmlTag("RcncltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReconciliationIdentification { get; init; }
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Incident occurring during the processing of the transaction.
@@ -56,7 +56,7 @@ public record ATMTransaction19
     [IsoId("_wxbsMK4PEeWZgJQOa6iKCQ")]
     [DisplayName("Incident Detail")]
     [IsoXmlTag("IncdntDtl")]
-    public SimpleValueList<IsoMax70Text> IncidentDetail { get; init; } = [];
+    public SimpleValueList<Max70Text> IncidentDetail { get; init; } = [];
 
     /// <summary>
     /// Unprotected account information.
@@ -121,7 +121,7 @@ public record ATMTransaction19
     [DisplayName("Requested Receipt")]
     [IsoXmlTag("ReqdRct")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? RequestedReceipt { get; init; }
+    public TrueFalseIndicator? RequestedReceipt { get; init; }
 
     /// <summary>
     /// True if a receipt has been printed and presented to the customer.
@@ -130,7 +130,7 @@ public record ATMTransaction19
     [DisplayName("Receipt Printed")]
     [IsoXmlTag("RctPrtd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ReceiptPrinted { get; init; }
+    public TrueFalseIndicator? ReceiptPrinted { get; init; }
 
     /// <summary>
     /// Outcome of the deposit authorisation.
@@ -179,5 +179,5 @@ public record ATMTransaction19
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
     [IsoSimpleType(IsoSimpleType.Max10000Binary)]
-    public IsoMax10000Binary? ICCRelatedData { get; init; }
+    public Max10000Binary? ICCRelatedData { get; init; }
 }

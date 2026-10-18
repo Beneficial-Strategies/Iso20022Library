@@ -32,7 +32,7 @@ public record TMSTrigger1
     [IsoXmlTag("TMSId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TMSIdentification { get; init; }
+    public Max35Text? TMSIdentification { get; init; }
 
     /// <summary>
     /// Date and time for calling the maintenance.
@@ -41,5 +41,5 @@ public record TMSTrigger1
     [DisplayName("TMS Contact Date Time")]
     [IsoXmlTag("TMSCtctDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? TMSContactDateTime { get; init; }
+    public ISODateTime? TMSContactDateTime { get; init; }
 }

@@ -91,7 +91,7 @@ public record RedemptionBulkOrderConfirmationCancellationInstructionV02 : IOuter
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator AmendmentIndicator { get; init; }
+    public required YesNoIndicator AmendmentIndicator { get; init; }
 
     /// <summary>
     /// Reference assigned to a set of orders or trades in order to link them together.
@@ -101,7 +101,7 @@ public record RedemptionBulkOrderConfirmationCancellationInstructionV02 : IOuter
     [IsoXmlTag("MstrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Identification of the individual order confirmation to be cancelled.

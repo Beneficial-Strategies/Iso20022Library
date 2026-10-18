@@ -55,7 +55,7 @@ public record Tax34
     [DisplayName("Exemption Indicator")]
     [IsoXmlTag("XmptnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ExemptionIndicator { get; init; }
+    public required YesNoIndicator ExemptionIndicator { get; init; }
 
     /// <summary>
     /// Reason for the tax exemption.

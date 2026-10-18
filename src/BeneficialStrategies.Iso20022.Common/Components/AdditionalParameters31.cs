@@ -40,7 +40,7 @@ public record AdditionalParameters31
     [IsoXmlTag("PrvsPrtlConfId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? PreviousPartialConfirmationIdentification { get; init; }
+    public RestrictedFINXMax16Text? PreviousPartialConfirmationIdentification { get; init; }
 
     /// <summary>
     /// Unique identification identifying the triparty collateral management transaction from the triparty-agent&apos;s/service-provider&apos;s point of view.
@@ -50,7 +50,7 @@ public record AdditionalParameters31
     [IsoXmlTag("TrptyAgtSvcPrvdrCollTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; }
+    public RestrictedFINXMax16Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique reference identifying the triparty collateral management transaction from the client&apos;s point of view.
@@ -60,7 +60,7 @@ public record AdditionalParameters31
     [IsoXmlTag("ClntTrptyCollTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? ClientTripartyCollateralTransactionIdentification { get; init; }
+    public RestrictedFINXMax16Text? ClientTripartyCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification assigned to the instruction by the client.
@@ -70,7 +70,7 @@ public record AdditionalParameters31
     [IsoXmlTag("ClntCollInstrId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? ClientCollateralInstructionIdentification { get; init; }
+    public RestrictedFINXMax16Text? ClientCollateralInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification assigned to the instruction by the triparty-agent/service-provider.
@@ -80,5 +80,5 @@ public record AdditionalParameters31
     [IsoXmlTag("TrptyAgtSvcPrvdrCollInstrId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? TripartyAgentServiceProviderCollateralInstructionIdentification { get; init; }
+    public RestrictedFINXMax16Text? TripartyAgentServiceProviderCollateralInstructionIdentification { get; init; }
 }

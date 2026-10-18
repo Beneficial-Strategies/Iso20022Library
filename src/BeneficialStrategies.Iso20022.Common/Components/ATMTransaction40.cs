@@ -35,14 +35,14 @@ public record ATMTransaction40
     /// </summary>
     [DisplayName("Exception Detail")]
     [IsoXmlTag("XcptnDtl")]
-    public ValueList<IsoMax70Text> ExceptionDetail { get; init; } = [];
+    public ValueList<Max70Text> ExceptionDetail { get; init; } = [];
 
     /// <summary>
     /// Reconciliation Identification.
     /// </summary>
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
-    public IsoMax35Text? ReconciliationIdentification { get; init; }
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Transaction Identification.

@@ -31,7 +31,7 @@ public record ATMConfigurationParameter2
     [DisplayName("Host Challenge")]
     [IsoXmlTag("HstChllng")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public IsoMax140Binary? HostChallenge { get; init; }
+    public Max140Binary? HostChallenge { get; init; }
 
     /// <summary>
     /// Ordered certificate chain of the asymmetric key encryption key, starting with the host certificate.
@@ -39,7 +39,7 @@ public record ATMConfigurationParameter2
     [IsoId("_tNm-wItJEeSxlKlAGYErFg")]
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
-    public SimpleValueList<IsoMax5000Binary> Certificate { get; init; } = [];
+    public SimpleValueList<Max5000Binary> Certificate { get; init; } = [];
 
     /// <summary>
     /// Cryptographic key involved in the security command.

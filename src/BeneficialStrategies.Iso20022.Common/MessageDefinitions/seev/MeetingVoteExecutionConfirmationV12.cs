@@ -59,7 +59,7 @@ public record MeetingVoteExecutionConfirmationV12 : IOuterRecord
     [IsoXmlTag("MtgInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MeetingInstructionIdentification { get; init; }
+    public required Max35Text MeetingInstructionIdentification { get; init; }
 
     /// <summary>
     /// Meeting Reference.
@@ -89,7 +89,7 @@ public record MeetingVoteExecutionConfirmationV12 : IOuterRecord
     [IsoXmlTag("VoteExctnConfId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? VoteExecutionConfirmationIdentification { get; init; }
+    public Max35Text? VoteExecutionConfirmationIdentification { get; init; }
 
     /// <summary>
     /// Vote Instructions.
@@ -105,5 +105,5 @@ public record MeetingVoteExecutionConfirmationV12 : IOuterRecord
     [IsoXmlTag("VoteInstrsConfURLAdr")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
     [StringLength(maximumLength: 2048, MinimumLength = 1)]
-    public IsoMax2048Text? VoteInstructionsConfirmationURLAddress { get; init; }
+    public Max2048Text? VoteInstructionsConfirmationURLAddress { get; init; }
 }

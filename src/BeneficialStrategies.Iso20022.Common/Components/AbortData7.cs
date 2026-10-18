@@ -22,7 +22,7 @@ public record AbortData7
     [IsoId("_8-outbZdEfCUZfsQO4rYeA")]
     [DisplayName("Exchange Identification")]
     [IsoXmlTag("XchgId")]
-    public required IsoMax35Text ExchangeIdentification { get; init; }
+    public required Max35Text ExchangeIdentification { get; init; }
 
     /// <summary>
     /// Reason of aborting a transaction.
@@ -30,7 +30,7 @@ public record AbortData7
     [IsoId("_8-ouu7ZdEfCUZfsQO4rYeA")]
     [DisplayName("Abort Reason")]
     [IsoXmlTag("AbrtRsn")]
-    public required IsoMax140Text AbortReason { get; init; }
+    public required Max140Text AbortReason { get; init; }
 
     /// <summary>
     /// To display an abort message to the Customer.
@@ -46,5 +46,5 @@ public record AbortData7
     [IsoId("_8-oux7ZdEfCUZfsQO4rYeA")]
     [DisplayName("Transaction Success")]
     [IsoXmlTag("TxSucss")]
-    public IsoTrueFalseIndicator? TransactionSuccess { get; init; }
+    public TrueFalseIndicator? TransactionSuccess { get; init; }
 }

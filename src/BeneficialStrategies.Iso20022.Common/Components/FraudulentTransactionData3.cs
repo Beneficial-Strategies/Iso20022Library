@@ -21,14 +21,14 @@ public record FraudulentTransactionData3
     /// </summary>
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
-    public ValueList<IsoMax35Text> AlternateMessageReason { get; init; } = [];
+    public ValueList<Max35Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Authorisation.
     /// </summary>
     [DisplayName("Authorisation")]
     [IsoXmlTag("Authstn")]
-    public IsoTrueFalseIndicator? Authorisation { get; init; }
+    public TrueFalseIndicator? Authorisation { get; init; }
 
     /// <summary>
     /// Authorisation Entity.
@@ -42,7 +42,7 @@ public record FraudulentTransactionData3
     /// </summary>
     [DisplayName("Dispute Condition")]
     [IsoXmlTag("DsptCond")]
-    public IsoMax35Text? DisputeCondition { get; init; }
+    public Max35Text? DisputeCondition { get; init; }
 
     /// <summary>
     /// Dispute Reference.
@@ -56,7 +56,7 @@ public record FraudulentTransactionData3
     /// </summary>
     [DisplayName("Fraudulent Message")]
     [IsoXmlTag("FrdlntMsg")]
-    public IsoMax100KBinary? FraudulentMessage { get; init; }
+    public Max100KBinary? FraudulentMessage { get; init; }
 
     /// <summary>
     /// Message Reason.
@@ -70,12 +70,12 @@ public record FraudulentTransactionData3
     /// </summary>
     [DisplayName("Other Authorisation Entity")]
     [IsoXmlTag("OthrAuthstnNtty")]
-    public IsoMax35Text? OtherAuthorisationEntity { get; init; }
+    public Max35Text? OtherAuthorisationEntity { get; init; }
 
     /// <summary>
     /// Presentment Cycle.
     /// </summary>
     [DisplayName("Presentment Cycle")]
     [IsoXmlTag("PresntmntCycl")]
-    public IsoExact1NumericText? PresentmentCycle { get; init; }
+    public Exact1NumericText? PresentmentCycle { get; init; }
 }

@@ -47,7 +47,7 @@ public record Commission24
     [DisplayName("Calculation Date")]
     [IsoXmlTag("ClctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? CalculationDate { get; init; }
+    public DateOnly? CalculationDate { get; init; }
 
     /// <summary>
     /// Total value of the commissions for a specific trade.
@@ -72,5 +72,5 @@ public record Commission24
     [DisplayName("VAT Rate")]
     [IsoXmlTag("VATRate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? VATRate { get; init; }
+    public BaseOneRate? VATRate { get; init; }
 }

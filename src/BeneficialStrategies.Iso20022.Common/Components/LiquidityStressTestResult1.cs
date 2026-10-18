@@ -24,7 +24,7 @@ public record LiquidityStressTestResult1
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public required IsoMax256Text Identification { get; init; }
+    public required Max256Text Identification { get; init; }
 
     /// <summary>
     /// Identification of assumed defaulters under the stress scenario.

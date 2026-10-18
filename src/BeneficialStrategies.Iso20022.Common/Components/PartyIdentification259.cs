@@ -24,7 +24,7 @@ public record PartyIdentification259
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Name { get; init; }
+    public Max70Text? Name { get; init; }
 
     /// <summary>
     /// Identification of the customer.
@@ -58,7 +58,7 @@ public record PartyIdentification259
     [IsoXmlTag("TaxRegnId")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? TaxRegistrationIdentification { get; init; }
+    public Max70Text? TaxRegistrationIdentification { get; init; }
 
     /// <summary>
     /// Additional information about the seller.
@@ -68,5 +68,5 @@ public record PartyIdentification259
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max1000Text)]
     [StringLength(maximumLength: 1000, MinimumLength = 1)]
-    public IsoMax1000Text? AdditionalInformation { get; init; }
+    public Max1000Text? AdditionalInformation { get; init; }
 }

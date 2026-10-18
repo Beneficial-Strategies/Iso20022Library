@@ -24,7 +24,7 @@ public record ShippingData2
     [IsoXmlTag("InvcNb")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? InvoiceNumber { get; init; }
+    public Max70Text? InvoiceNumber { get; init; }
 
     /// <summary>
     /// Contains the date and time the electronic invoice was created.
@@ -33,7 +33,7 @@ public record ShippingData2
     [DisplayName("Invoice Creation Date Time")]
     [IsoXmlTag("InvcCreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? InvoiceCreationDateTime { get; init; }
+    public ISODateTime? InvoiceCreationDateTime { get; init; }
 
     /// <summary>
     /// Contains a card acceptor designated code for the shipping service provided.
@@ -43,7 +43,7 @@ public record ShippingData2
     [IsoXmlTag("SvcDscrptrCd")]
     [IsoSimpleType(IsoSimpleType.Max40Text)]
     [StringLength(maximumLength: 40, MinimumLength = 1)]
-    public IsoMax40Text? ServiceDescriptorCode { get; init; }
+    public Max40Text? ServiceDescriptorCode { get; init; }
 
     /// <summary>
     /// Contains the amount of any incentives applied to the transaction.
@@ -68,7 +68,7 @@ public record ShippingData2
     [DisplayName("Insurance Indicator")]
     [IsoXmlTag("InsrncInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? InsuranceIndicator { get; init; }
+    public TrueFalseIndicator? InsuranceIndicator { get; init; }
 
     /// <summary>
     /// Amount of insurance.
@@ -102,7 +102,7 @@ public record ShippingData2
     [IsoXmlTag("SummryCmmdtyId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SummaryCommodityIdentification { get; init; }
+    public Max35Text? SummaryCommodityIdentification { get; init; }
 
     /// <summary>
     /// Contains the total number of packages being shipped or sent by the service provider.
@@ -111,7 +111,7 @@ public record ShippingData2
     [DisplayName("Number Of Packages")]
     [IsoXmlTag("NbOfPackgs")]
     [IsoSimpleType(IsoSimpleType.Max6NumericText)]
-    public IsoMax6NumericText? NumberOfPackages { get; init; }
+    public Max6NumericText? NumberOfPackages { get; init; }
 
     /// <summary>
     /// Contains the details of the package being shipped.
@@ -129,5 +129,5 @@ public record ShippingData2
     [IsoXmlTag("AddtlData")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AdditionalData { get; init; }
+    public Max350Text? AdditionalData { get; init; }
 }

@@ -39,7 +39,7 @@ public record InterestResult1
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ValueDate { get; init; }
+    public required DateOnly ValueDate { get; init; }
 
     /// <summary>
     /// Indicates whether the interest will be settled in cash or rolled in the existing collateral balance.

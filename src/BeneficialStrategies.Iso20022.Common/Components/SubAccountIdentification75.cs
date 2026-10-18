@@ -38,7 +38,7 @@ public record SubAccountIdentification75
     [IsoId("_zHJH8ag1EfCXwLUUylXgrQ")]
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
-    public required IsoYesNoIndicator ActivityIndicator { get; init; }
+    public required YesNoIndicator ActivityIndicator { get; init; }
 
     /// <summary>
     /// Net position of a segregated holding, in a single security, within the overall position held in a securities subaccount.

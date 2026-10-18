@@ -24,7 +24,7 @@ public record CryptographicKey16
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text Identification { get; init; }
+    public required Max350Text Identification { get; init; }
 
     /// <summary>
     /// Additional identification of the key.
@@ -35,7 +35,7 @@ public record CryptographicKey16
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
     [IsoSimpleType(IsoSimpleType.Max35Binary)]
-    public IsoMax35Binary? AdditionalIdentification { get; init; }
+    public Max35Binary? AdditionalIdentification { get; init; }
 
     /// <summary>
     /// Name of the Cryptographic Element.
@@ -45,7 +45,7 @@ public record CryptographicKey16
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Name { get; init; }
+    public Max256Text? Name { get; init; }
 
     /// <summary>
     /// Identification of the set of security elements to which this element belongs.
@@ -55,7 +55,7 @@ public record CryptographicKey16
     [IsoXmlTag("SctyPrfl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SecurityProfile { get; init; }
+    public Max35Text? SecurityProfile { get; init; }
 
     /// <summary>
     /// Hierarchical identification of a key inside all the key system. It is composed of all item numbers of the upper level components, separated by the &apos;.&apos; character, ended by the item number of the current component.
@@ -65,7 +65,7 @@ public record CryptographicKey16
     [IsoXmlTag("ItmNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ItemNumber { get; init; }
+    public Max35Text? ItemNumber { get; init; }
 
     /// <summary>
     /// Version of the cryptographic key.
@@ -75,7 +75,7 @@ public record CryptographicKey16
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public required IsoMax256Text Version { get; init; }
+    public required Max256Text Version { get; init; }
 
     /// <summary>
     /// Type of algorithm used by the cryptographic key.
@@ -100,7 +100,7 @@ public record CryptographicKey16
     [DisplayName("Activation Date")]
     [IsoXmlTag("ActvtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? ActivationDate { get; init; }
+    public ISODateTime? ActivationDate { get; init; }
 
     /// <summary>
     /// Date and time on which the key must be deactivated.
@@ -109,7 +109,7 @@ public record CryptographicKey16
     [DisplayName("Deactivation Date")]
     [IsoXmlTag("DeactvtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? DeactivationDate { get; init; }
+    public ISODateTime? DeactivationDate { get; init; }
 
     /// <summary>
     /// Encrypted cryptographic key.
@@ -126,7 +126,7 @@ public record CryptographicKey16
     [DisplayName("Key Check Value")]
     [IsoXmlTag("KeyChckVal")]
     [IsoSimpleType(IsoSimpleType.Max35Binary)]
-    public IsoMax35Binary? KeyCheckValue { get; init; }
+    public Max35Binary? KeyCheckValue { get; init; }
 
     /// <summary>
     /// Additional Information needed by the receiver to securely process the management of the security element.

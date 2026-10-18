@@ -35,7 +35,7 @@ public record RecurringTransaction6
     /// </summary>
     [DisplayName("Plan Identification")]
     [IsoXmlTag("PlanId")]
-    public IsoMax35Text? PlanIdentification { get; init; }
+    public Max35Text? PlanIdentification { get; init; }
 
     /// <summary>
     /// Plan Notice.
@@ -49,5 +49,5 @@ public record RecurringTransaction6
     /// </summary>
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
-    public IsoNumber? SequenceNumber { get; init; }
+    public Number? SequenceNumber { get; init; }
 }

@@ -38,7 +38,7 @@ public record SaleToPOIProtocolParameter4
     [IsoId("_npneIaAFEfC4Q_xhaK1hdQ")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
-    public required IsoMax256Text Version { get; init; }
+    public required Max256Text Version { get; init; }
 
     /// <summary>
     /// Identification used to retrieve HostCommunicationParameters.
@@ -46,7 +46,7 @@ public record SaleToPOIProtocolParameter4
     [IsoId("_npneJ6AFEfC4Q_xhaK1hdQ")]
     [DisplayName("Host Identification")]
     [IsoXmlTag("HstId")]
-    public required IsoMax35Text HostIdentification { get; init; }
+    public required Max35Text HostIdentification { get; init; }
 
     /// <summary>
     /// Uniquely identifies the protocol version to use when using these parameters.
@@ -54,7 +54,7 @@ public record SaleToPOIProtocolParameter4
     [IsoId("_7PGP4KAFEfC4Q_xhaK1hdQ")]
     [DisplayName("Protocol Version")]
     [IsoXmlTag("PrtcolVrsn")]
-    public IsoMax8Text? ProtocolVersion { get; init; }
+    public Max8Text? ProtocolVersion { get; init; }
 
     /// <summary>
     /// Identification of the POI during communication with sale system.
@@ -62,7 +62,7 @@ public record SaleToPOIProtocolParameter4
     [IsoId("_npneLaAFEfC4Q_xhaK1hdQ")]
     [DisplayName("Merchant POI Identification")]
     [IsoXmlTag("MrchntPOIId")]
-    public IsoMax35Text? MerchantPOIIdentification { get; init; }
+    public Max35Text? MerchantPOIIdentification { get; init; }
 
     /// <summary>
     /// Identification of the SaleSystem connected to the POI.
@@ -70,7 +70,7 @@ public record SaleToPOIProtocolParameter4
     [IsoId("_npneM6AFEfC4Q_xhaK1hdQ")]
     [DisplayName("Sale Identification")]
     [IsoXmlTag("SaleId")]
-    public IsoMax35Text? SaleIdentification { get; init; }
+    public Max35Text? SaleIdentification { get; init; }
 
     /// <summary>
     /// Identify a message that a Sale system could send to the POI system.
@@ -110,5 +110,5 @@ public record SaleToPOIProtocolParameter4
     [IsoId("_npneQaAFEfC4Q_xhaK1hdQ")]
     [DisplayName("Externally Type Supported")]
     [IsoXmlTag("XtrnlyTpSpprtd")]
-    public SimpleValueList<IsoMax1025Text> ExternallyTypeSupported { get; init; } = [];
+    public SimpleValueList<Max1025Text> ExternallyTypeSupported { get; init; } = [];
 }

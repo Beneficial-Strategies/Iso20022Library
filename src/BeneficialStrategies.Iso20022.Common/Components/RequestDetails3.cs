@@ -24,7 +24,7 @@ public record RequestDetails3
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Type { get; init; }
+    public required Max35Text Type { get; init; }
 
     /// <summary>
     /// Specific report data requested, for example, a BIC.
@@ -34,5 +34,5 @@ public record RequestDetails3
     [IsoXmlTag("Key")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Key { get; init; }
+    public Max35Text? Key { get; init; }
 }

@@ -22,7 +22,7 @@ public record CorporateActionGeneralInformation196
     [IsoId("_JBLHg6NaEfC9id413JK-Ig")]
     [DisplayName("Agent Corporate Action Event Identification")]
     [IsoXmlTag("AgtCorpActnEvtId")]
-    public required IsoMax35Text AgentCorporateActionEventIdentification { get; init; }
+    public required Max35Text AgentCorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Reference assigned by the account servicer to unambiguously identify a corporate action event.
@@ -30,7 +30,7 @@ public record CorporateActionGeneralInformation196
     [IsoId("_JBLHi6NaEfC9id413JK-Ig")]
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
-    public IsoMax35Text? CorporateActionEventIdentification { get; init; }
+    public Max35Text? CorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Official and unique reference assigned by the official central body/entity within each market at the beginning of a corporate action event.
@@ -38,7 +38,7 @@ public record CorporateActionGeneralInformation196
     [IsoId("_JBLHk6NaEfC9id413JK-Ig")]
     [DisplayName("Official Corporate Action Event Identification")]
     [IsoXmlTag("OffclCorpActnEvtId")]
-    public IsoMax35Text? OfficialCorporateActionEventIdentification { get; init; }
+    public Max35Text? OfficialCorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Type of processing involved by a corporate action.

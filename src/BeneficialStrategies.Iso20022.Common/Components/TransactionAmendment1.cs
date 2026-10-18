@@ -21,7 +21,7 @@ public record TransactionAmendment1
     /// </summary>
     [DisplayName("Path")]
     [IsoXmlTag("Pth")]
-    public IsoMax2048Text? Path { get; init; }
+    public Max2048Text? Path { get; init; }
 
     /// <summary>
     /// Record.

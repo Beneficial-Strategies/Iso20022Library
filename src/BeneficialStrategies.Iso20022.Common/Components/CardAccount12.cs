@@ -33,7 +33,7 @@ public record CardAccount12
     [IsoXmlTag("AcctNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AccountName { get; init; }
+    public Max70Text? AccountName { get; init; }
 
     /// <summary>
     /// Identification of the currency in which the account is held.
@@ -59,7 +59,7 @@ public record CardAccount12
     [IsoXmlTag("CdtRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CreditReference { get; init; }
+    public Max35Text? CreditReference { get; init; }
 
     /// <summary>
     /// Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.
@@ -84,7 +84,7 @@ public record CardAccount12
     [DisplayName("Balance Display Flag")]
     [IsoXmlTag("BalDispFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? BalanceDisplayFlag { get; init; }
+    public TrueFalseIndicator? BalanceDisplayFlag { get; init; }
 
     /// <summary>
     /// Indicates if this is the default account.
@@ -93,7 +93,7 @@ public record CardAccount12
     [DisplayName("Default Account Indicator")]
     [IsoXmlTag("DfltAcctInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? DefaultAccountIndicator { get; init; }
+    public TrueFalseIndicator? DefaultAccountIndicator { get; init; }
 
     /// <summary>
     /// Service allowed on the account.

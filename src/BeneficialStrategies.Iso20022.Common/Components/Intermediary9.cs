@@ -65,5 +65,5 @@ public record Intermediary9
     [IsoXmlTag("XtndedRole")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedRole { get; init; }
+    public Extended350Code? ExtendedRole { get; init; }
 }

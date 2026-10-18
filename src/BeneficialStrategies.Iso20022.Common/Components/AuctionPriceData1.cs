@@ -22,7 +22,7 @@ public record AuctionPriceData1
     [IsoId("_O_VJ8GIdEfCeoPFCHQnhvA")]
     [DisplayName("Lowest")]
     [IsoXmlTag("Lwst")]
-    public required IsoDecimalNumber Lowest { get; init; }
+    public required DecimalNumber Lowest { get; init; }
 
     /// <summary>
     /// Highest auction price.
@@ -30,7 +30,7 @@ public record AuctionPriceData1
     [IsoId("_WLJ3cGIdEfCeoPFCHQnhvA")]
     [DisplayName("Highest")]
     [IsoXmlTag("Hghst")]
-    public required IsoDecimalNumber Highest { get; init; }
+    public required DecimalNumber Highest { get; init; }
 
     /// <summary>
     /// Volume weighted auction price.
@@ -38,7 +38,7 @@ public record AuctionPriceData1
     [IsoId("_aUtGwGIdEfCeoPFCHQnhvA")]
     [DisplayName("Volume Weighted")]
     [IsoXmlTag("VolWghtd")]
-    public required IsoDecimalNumber VolumeWeighted { get; init; }
+    public required DecimalNumber VolumeWeighted { get; init; }
 
     /// <summary>
     /// Major currency unit in which the best bid and offer prices are expressed.

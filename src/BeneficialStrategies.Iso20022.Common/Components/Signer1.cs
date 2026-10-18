@@ -23,7 +23,7 @@ public record Signer1
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Version { get; init; }
+    public Number? Version { get; init; }
 
     /// <summary>
     /// Identification of the entity who has signed the data.
@@ -56,5 +56,5 @@ public record Signer1
     [DisplayName("Signature")]
     [IsoXmlTag("Sgntr")]
     [IsoSimpleType(IsoSimpleType.Max500Binary)]
-    public required IsoMax500Binary Signature { get; init; }
+    public required Max500Binary Signature { get; init; }
 }

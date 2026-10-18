@@ -32,5 +32,5 @@ public record HypotheticalCapitalMeasure1
     [IsoXmlTag("DfltWtrfllId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text DefaultWaterfallIdentification { get; init; }
+    public required Max35Text DefaultWaterfallIdentification { get; init; }
 }

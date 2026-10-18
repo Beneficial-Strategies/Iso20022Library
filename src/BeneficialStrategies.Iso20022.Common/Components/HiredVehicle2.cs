@@ -24,7 +24,7 @@ public record HiredVehicle2
     [IsoXmlTag("CpnyTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CompanyType { get; init; }
+    public Max35Text? CompanyType { get; init; }
 
     /// <summary>
     /// Contains the name of the company that provided the hired vehicle services.
@@ -34,7 +34,7 @@ public record HiredVehicle2
     [IsoXmlTag("CpnyNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? CompanyName { get; init; }
+    public Max70Text? CompanyName { get; init; }
 
     /// <summary>
     /// Contains the type of vehicle that was hired (for example, limousine, black, SUV).
@@ -44,7 +44,7 @@ public record HiredVehicle2
     [IsoXmlTag("TpOfVhcl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TypeOfVehicle { get; init; }
+    public Max35Text? TypeOfVehicle { get; init; }
 
     /// <summary>
     /// Contains the identifier assigned to the vehicle.
@@ -54,7 +54,7 @@ public record HiredVehicle2
     [IsoXmlTag("VhclId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? VehicleIdentification { get; init; }
+    public Max35Text? VehicleIdentification { get; init; }
 
     /// <summary>
     /// Contains the identifier assigned to the driver.
@@ -64,7 +64,7 @@ public record HiredVehicle2
     [IsoXmlTag("DrvrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DriverIdentification { get; init; }
+    public Max35Text? DriverIdentification { get; init; }
 
     /// <summary>
     /// Contains the tax identifier assigned to the driver.
@@ -74,7 +74,7 @@ public record HiredVehicle2
     [IsoXmlTag("DrvrTaxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DriverTaxIdentification { get; init; }
+    public Max35Text? DriverTaxIdentification { get; init; }
 
     /// <summary>
     /// Destination of the hired vehicle.

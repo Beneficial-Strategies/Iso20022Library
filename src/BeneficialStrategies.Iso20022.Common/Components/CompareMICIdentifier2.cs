@@ -23,7 +23,7 @@ public record CompareMICIdentifier2
     [DisplayName("Value")]
     [IsoXmlTag("Val1")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public IsoMICIdentifier? Value1 { get; init; }
+    public MICIdentifier? Value1 { get; init; }
 
     /// <summary>
     /// Information for the second side of the transaction.
@@ -32,5 +32,5 @@ public record CompareMICIdentifier2
     [DisplayName("Value")]
     [IsoXmlTag("Val2")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public IsoMICIdentifier? Value2 { get; init; }
+    public MICIdentifier? Value2 { get; init; }
 }

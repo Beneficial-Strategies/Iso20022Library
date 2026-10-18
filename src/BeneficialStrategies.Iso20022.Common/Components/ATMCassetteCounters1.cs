@@ -55,7 +55,7 @@ public record ATMCassetteCounters1
     [DisplayName("Current Number")]
     [IsoXmlTag("CurNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber CurrentNumber { get; init; }
+    public required Number CurrentNumber { get; init; }
 
     /// <summary>
     /// Current amount in the cassette.

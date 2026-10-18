@@ -30,7 +30,7 @@ public record TransactionCharacteristics7
     [IsoId("__j2rOV5-EfCoP_h9uwd39Q")]
     [DisplayName("Transaction Sub Type")]
     [IsoXmlTag("TxSubTp")]
-    public IsoMax35Text? TransactionSubType { get; init; }
+    public Max35Text? TransactionSubType { get; init; }
 
     /// <summary>
     /// Indicates the previous message is cancelled.
@@ -38,7 +38,7 @@ public record TransactionCharacteristics7
     [IsoId("__j2rPV5-EfCoP_h9uwd39Q")]
     [DisplayName("Cancellation")]
     [IsoXmlTag("Cxl")]
-    public IsoTrueFalseIndicator? Cancellation { get; init; }
+    public TrueFalseIndicator? Cancellation { get; init; }
 
     /// <summary>
     /// Reason or purpose to send the message.
@@ -54,7 +54,7 @@ public record TransactionCharacteristics7
     [IsoId("__j2rRV5-EfCoP_h9uwd39Q")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
-    public SimpleValueList<IsoMax256Text> AlternateMessageReason { get; init; } = [];
+    public SimpleValueList<Max256Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Indicates the Fee Collection cycle.
@@ -62,7 +62,7 @@ public record TransactionCharacteristics7
     [IsoId("__j2rSV5-EfCoP_h9uwd39Q")]
     [DisplayName("Fee Collection Cycle")]
     [IsoXmlTag("FeeColltnCycle")]
-    public IsoExact1NumericText? FeeCollectionCycle { get; init; }
+    public Exact1NumericText? FeeCollectionCycle { get; init; }
 
     /// <summary>
     /// Transaction data related to programmes and services, content and format based on bilateral agreements.
@@ -70,7 +70,7 @@ public record TransactionCharacteristics7
     [IsoId("__j2rTV5-EfCoP_h9uwd39Q")]
     [DisplayName("Transaction Description")]
     [IsoXmlTag("TxDesc")]
-    public IsoMax1000Text? TransactionDescription { get; init; }
+    public Max1000Text? TransactionDescription { get; init; }
 
     /// <summary>
     /// Reserved for private data. The use of this data element is determined by bilateral agreement.
@@ -78,7 +78,7 @@ public record TransactionCharacteristics7
     [IsoId("__j2rUV5-EfCoP_h9uwd39Q")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -86,7 +86,7 @@ public record TransactionCharacteristics7
     [IsoId("__j2rVV5-EfCoP_h9uwd39Q")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 
     /// <summary>
     /// Contains local language equivalent(s) of data in the current component.

@@ -22,7 +22,7 @@ public record Instalment8
     [IsoId("_Nh-JMT2AEfCQAqQ9lolFUg")]
     [DisplayName("Payment Sequence Number")]
     [IsoXmlTag("PmtSeqNb")]
-    public IsoNumber? PaymentSequenceNumber { get; init; }
+    public Number? PaymentSequenceNumber { get; init; }
 
     /// <summary>
     /// Attributes of the instalment plan.

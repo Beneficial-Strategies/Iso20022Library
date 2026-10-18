@@ -30,7 +30,7 @@ public record StructuredRegulatoryReporting5
     [IsoId("_GC8jY3eKEfCdoODv2ypKfw")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Country related to the specified type of regulatory reporting details.
@@ -46,7 +46,7 @@ public record StructuredRegulatoryReporting5
     [IsoId("_GC8jZ3eKEfCdoODv2ypKfw")]
     [DisplayName("Reporting Code")]
     [IsoXmlTag("RptgCd")]
-    public IsoMax10Text? ReportingCode { get; init; }
+    public Max10Text? ReportingCode { get; init; }
 
     /// <summary>
     /// Amount of money to be reported for regulatory and statutory requirements.
@@ -62,5 +62,5 @@ public record StructuredRegulatoryReporting5
     [IsoId("_GC8ja3eKEfCdoODv2ypKfw")]
     [DisplayName("Information")]
     [IsoXmlTag("Inf")]
-    public SimpleValueList<IsoMax35Text> Information { get; init; } = [];
+    public SimpleValueList<Max35Text> Information { get; init; } = [];
 }

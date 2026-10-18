@@ -31,7 +31,7 @@ public record TotalTaxes5
     [DisplayName("Percentage Of Debt Claim")]
     [IsoXmlTag("PctgOfDebtClm")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? PercentageOfDebtClaim { get; init; }
+    public PercentageRate? PercentageOfDebtClaim { get; init; }
 
     /// <summary>
     /// Information related to a specific tax.

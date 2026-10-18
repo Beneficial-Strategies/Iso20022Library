@@ -23,7 +23,7 @@ public record DealTransactionDetails6
     [DisplayName("Minimum Notice Period")]
     [IsoXmlTag("MinNtcePrd")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public IsoExact3NumericText? MinimumNoticePeriod { get; init; }
+    public Exact3NumericText? MinimumNoticePeriod { get; init; }
 
     /// <summary>
     /// Closing date/time or maturity date/time of the transaction.
@@ -64,7 +64,7 @@ public record DealTransactionDetails6
     [DisplayName("Spread")]
     [IsoXmlTag("Sprd")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Spread { get; init; }
+    public PercentageRate? Spread { get; init; }
 
     /// <summary>
     /// Specifies the computation method of (accrued) interest of the financial instrument.

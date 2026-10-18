@@ -24,7 +24,7 @@ public record TradingSideTransactionReporting1
     [IsoXmlTag("RptgJursdctn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReportingJurisdiction { get; init; }
+    public Max35Text? ReportingJurisdiction { get; init; }
 
     /// <summary>
     /// Identifies the party that is responsible for reporting the trade to the trade repository.

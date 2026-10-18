@@ -24,7 +24,7 @@ public record Agreement4
     [IsoXmlTag("AgrmtDtls")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text AgreementDetails { get; init; }
+    public required Max140Text AgreementDetails { get; init; }
 
     /// <summary>
     /// Common reference to the agreement between the two counterparties.
@@ -34,7 +34,7 @@ public record Agreement4
     [IsoXmlTag("AgrmtId")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? AgreementIdentification { get; init; }
+    public Max140Text? AgreementIdentification { get; init; }
 
     /// <summary>
     /// Date on which the collateral agreement was signed.
@@ -43,7 +43,7 @@ public record Agreement4
     [DisplayName("Agreement Date")]
     [IsoXmlTag("AgrmtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate AgreementDate { get; init; }
+    public required DateOnly AgreementDate { get; init; }
 
     /// <summary>
     /// Denomination currency as specified in the collateral agreement.

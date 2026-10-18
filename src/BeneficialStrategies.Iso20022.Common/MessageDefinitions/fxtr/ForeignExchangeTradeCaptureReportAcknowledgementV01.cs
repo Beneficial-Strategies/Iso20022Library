@@ -70,7 +70,7 @@ public record ForeignExchangeTradeCaptureReportAcknowledgementV01 : IOuterRecord
     [IsoXmlTag("TradId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TradeIdentification { get; init; }
+    public required Max35Text TradeIdentification { get; init; }
 
     /// <summary>
     /// Acknowlegement status of recevied trade capture report.

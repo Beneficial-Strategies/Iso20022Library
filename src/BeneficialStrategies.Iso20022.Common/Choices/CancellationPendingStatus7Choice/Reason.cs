@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationPendingStatus7Choice
         [IsoXmlTag("Rsn")]
         [IsoSimpleType(IsoSimpleType.Max350Text)]
         [StringLength(maximumLength: 350, MinimumLength = 1)]
-        public required IsoMax350Text Value { get; init; }
+        public required Max350Text Value { get; init; }
     }
 }

@@ -25,7 +25,7 @@ public record FileActionDetails1
     [IsoXmlTag("FileNm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text FileName { get; init; }
+    public required Max140Text FileName { get; init; }
 
     /// <summary>
     /// Content of record to be added, updated, deleted or replaced.
@@ -35,7 +35,7 @@ public record FileActionDetails1
     [DisplayName("Data Record")]
     [IsoXmlTag("DataRcrd")]
     [IsoSimpleType(IsoSimpleType.Max100KBinary)]
-    public required IsoMax100KBinary DataRecord { get; init; }
+    public required Max100KBinary DataRecord { get; init; }
 
     /// <summary>
     /// Date when the file action should be performed.
@@ -45,7 +45,7 @@ public record FileActionDetails1
     [DisplayName("Action Date")]
     [IsoXmlTag("ActnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ActionDate { get; init; }
+    public DateOnly? ActionDate { get; init; }
 
     /// <summary>
     /// Indicates that the originator of the message is authorised to update the file.
@@ -56,5 +56,5 @@ public record FileActionDetails1
     [IsoXmlTag("FileSctyCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? FileSecurityCode { get; init; }
+    public Max35Text? FileSecurityCode { get; init; }
 }

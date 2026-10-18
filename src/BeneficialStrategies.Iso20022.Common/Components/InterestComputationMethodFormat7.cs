@@ -32,5 +32,5 @@ public record InterestComputationMethodFormat7
     [IsoXmlTag("Nrrtv")]
     [IsoSimpleType(IsoSimpleType.Max1000Text)]
     [StringLength(maximumLength: 1000, MinimumLength = 1)]
-    public IsoMax1000Text? Narrative { get; init; }
+    public Max1000Text? Narrative { get; init; }
 }

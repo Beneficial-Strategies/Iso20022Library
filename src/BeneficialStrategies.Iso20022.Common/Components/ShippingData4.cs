@@ -22,7 +22,7 @@ public record ShippingData4
     [IsoId("_f_E_MUhsEfCMZJtj4J7UGQ")]
     [DisplayName("Invoice Number")]
     [IsoXmlTag("InvcNb")]
-    public IsoMax70Text? InvoiceNumber { get; init; }
+    public Max70Text? InvoiceNumber { get; init; }
 
     /// <summary>
     /// Contains the date and time the electronic invoice was created.
@@ -30,7 +30,7 @@ public record ShippingData4
     [IsoId("_f_E_M0hsEfCMZJtj4J7UGQ")]
     [DisplayName("Invoice Creation Date Time")]
     [IsoXmlTag("InvcCreDtTm")]
-    public IsoISODateTime? InvoiceCreationDateTime { get; init; }
+    public ISODateTime? InvoiceCreationDateTime { get; init; }
 
     /// <summary>
     /// Contains a card acceptor designated code for the shipping service provided.
@@ -38,7 +38,7 @@ public record ShippingData4
     [IsoId("_f_E_NUhsEfCMZJtj4J7UGQ")]
     [DisplayName("Service Descriptor Code")]
     [IsoXmlTag("SvcDscrptrCd")]
-    public IsoMax40Text? ServiceDescriptorCode { get; init; }
+    public Max40Text? ServiceDescriptorCode { get; init; }
 
     /// <summary>
     /// Contains the amount of any incentives applied to the transaction. 
@@ -62,7 +62,7 @@ public record ShippingData4
     [IsoId("_f_E_O0hsEfCMZJtj4J7UGQ")]
     [DisplayName("Insurance")]
     [IsoXmlTag("Insrnc")]
-    public IsoTrueFalseIndicator? Insurance { get; init; }
+    public TrueFalseIndicator? Insurance { get; init; }
 
     /// <summary>
     /// Amount of insurance.
@@ -94,7 +94,7 @@ public record ShippingData4
     [IsoId("_f_E_Q0hsEfCMZJtj4J7UGQ")]
     [DisplayName("Summary Commodity Identification")]
     [IsoXmlTag("SummryCmmdtyId")]
-    public IsoMax35Text? SummaryCommodityIdentification { get; init; }
+    public Max35Text? SummaryCommodityIdentification { get; init; }
 
     /// <summary>
     /// Contains the total number of packages being shipped or sent by the service provider.
@@ -102,7 +102,7 @@ public record ShippingData4
     [IsoId("_f_E_RUhsEfCMZJtj4J7UGQ")]
     [DisplayName("Number Of Packages")]
     [IsoXmlTag("NbOfPackgs")]
-    public IsoMax6NumericText? NumberOfPackages { get; init; }
+    public Max6NumericText? NumberOfPackages { get; init; }
 
     /// <summary>
     /// Contains the details of the package being shipped. 
@@ -118,7 +118,7 @@ public record ShippingData4
     [IsoId("_U-p-skhsEfCMZJtj4J7UGQ")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications. 
@@ -126,5 +126,5 @@ public record ShippingData4
     [IsoId("_U-p-s0hsEfCMZJtj4J7UGQ")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

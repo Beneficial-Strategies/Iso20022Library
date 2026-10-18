@@ -22,7 +22,7 @@ public record SecuritiesTradeDetails94
     [IsoId("_Dg-Ep9BxEeihG9bKfarOOA")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    public SimpleValueList<IsoMax52Text> TradeIdentification { get; init; } = [];
+    public SimpleValueList<Max52Text> TradeIdentification { get; init; } = [];
 
     /// <summary>
     /// Unambiguous identification of a collateral transaction as assigned by the instructing party.
@@ -30,7 +30,7 @@ public record SecuritiesTradeDetails94
     [IsoId("_Dg-Eq9BxEeihG9bKfarOOA")]
     [DisplayName("Collateral Transaction Identification")]
     [IsoXmlTag("CollTxId")]
-    public SimpleValueList<IsoMax35Text> CollateralTransactionIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> CollateralTransactionIdentification { get; init; } = [];
 
     /// <summary>
     /// Identification of an account owner transaction that could potentially match with the allegement notified.
@@ -38,7 +38,7 @@ public record SecuritiesTradeDetails94
     [IsoId("_Dg-Er9BxEeihG9bKfarOOA")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
-    public SimpleValueList<IsoMax35Text> AccountOwnerTransactionIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> AccountOwnerTransactionIdentification { get; init; } = [];
 
     /// <summary>
     /// Identification of the transaction assigned by the processor of the instruction other than the account owner, the account servicer and the market infrastructure.
@@ -48,7 +48,7 @@ public record SecuritiesTradeDetails94
     [IsoXmlTag("PrcrTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProcessorTransactionIdentification { get; init; }
+    public Max35Text? ProcessorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Market in which a trade transaction has been executed.
@@ -97,7 +97,7 @@ public record SecuritiesTradeDetails94
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
     [IsoSimpleType(IsoSimpleType.Max3Number)]
-    public IsoMax3Number? NumberOfDaysAccrued { get; init; }
+    public Max3Number? NumberOfDaysAccrued { get; init; }
 
     /// <summary>
     /// Indicates the conditions under which the order/trade is to be/was executed.

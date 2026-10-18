@@ -42,5 +42,5 @@ public record ReceivingPartiesAndAccount21
     /// </summary>
     [DisplayName("Securities Settlement System")]
     [IsoXmlTag("SctiesSttlmSys")]
-    public IsoMax35Text? SecuritiesSettlementSystem { get; init; }
+    public Max35Text? SecuritiesSettlementSystem { get; init; }
 }

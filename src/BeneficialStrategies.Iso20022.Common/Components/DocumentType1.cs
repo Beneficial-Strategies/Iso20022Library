@@ -28,5 +28,5 @@ public record DocumentType1
     /// </summary>
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
-    public IsoMax35Text? Issuer { get; init; }
+    public Max35Text? Issuer { get; init; }
 }

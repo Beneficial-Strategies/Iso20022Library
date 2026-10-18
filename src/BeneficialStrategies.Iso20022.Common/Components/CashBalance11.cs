@@ -63,5 +63,5 @@ public record CashBalance11
     [DisplayName("Number Of Payments")]
     [IsoXmlTag("NbOfPmts")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NumberOfPayments { get; init; }
+    public Number? NumberOfPayments { get; init; }
 }

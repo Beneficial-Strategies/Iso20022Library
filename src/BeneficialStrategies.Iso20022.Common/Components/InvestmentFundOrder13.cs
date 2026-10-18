@@ -22,7 +22,7 @@ public record InvestmentFundOrder13
     [IsoId("d99ffc5b-0648-49bd-bf6e-d92c60de7af3")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
-    public required IsoMax35Text OrderReference { get; init; }
+    public required Max35Text OrderReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor's identification of the order.
@@ -30,7 +30,7 @@ public record InvestmentFundOrder13
     [IsoId("562f4820-a638-4238-bd8b-0ee3f66ed63e")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
-    public IsoMax35Text? ClientReference { get; init; }
+    public Max35Text? ClientReference { get; init; }
 
     /// <summary>
     /// Unambiguous identification of a random or semi-random number used once (NONCE) generated in the frame of a cryptographic communication.
@@ -38,7 +38,7 @@ public record InvestmentFundOrder13
     [IsoId("b2d73690-977d-420a-88a9-74601e05813b")]
     [DisplayName("Nonce Identification")]
     [IsoXmlTag("NonceId")]
-    public IsoMax35Text? NonceIdentification { get; init; }
+    public Max35Text? NonceIdentification { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for the order cancellation, as assigned by the instructing party.
@@ -46,7 +46,7 @@ public record InvestmentFundOrder13
     [IsoId("0bcdc97a-8bef-4336-bd43-3e9ea9b56780")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
-    public IsoMax35Text? CancellationReference { get; init; }
+    public Max35Text? CancellationReference { get; init; }
 
     /// <summary>
     /// Reason for the cancellation.

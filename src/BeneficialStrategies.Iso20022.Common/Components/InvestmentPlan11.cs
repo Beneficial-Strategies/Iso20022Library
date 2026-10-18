@@ -32,7 +32,7 @@ public record InvestmentPlan11
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? StartDate { get; init; }
+    public DateOnly? StartDate { get; init; }
 
     /// <summary>
     /// Date the investment plan stops.
@@ -41,7 +41,7 @@ public record InvestmentPlan11
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? EndDate { get; init; }
+    public DateOnly? EndDate { get; init; }
 
     /// <summary>
     /// Amount of the periodical payments.
@@ -58,7 +58,7 @@ public record InvestmentPlan11
     [DisplayName("Gross Amount Indicator")]
     [IsoXmlTag("GrssAmtInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? GrossAmountIndicator { get; init; }
+    public YesNoIndicator? GrossAmountIndicator { get; init; }
 
     /// <summary>
     /// Dividend option chosen by the account owner based on the options offered in the prospectus.
@@ -75,7 +75,7 @@ public record InvestmentPlan11
     [DisplayName("Initial Number Of Instalments")]
     [IsoXmlTag("InitlNbOfInstlmts")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? InitialNumberOfInstalments { get; init; }
+    public Number? InitialNumberOfInstalments { get; init; }
 
     /// <summary>
     /// Total number of times the amount must be invested at the predefined frequency as of the start date of the investment plan.
@@ -84,7 +84,7 @@ public record InvestmentPlan11
     [DisplayName("Total Number Of Instalments")]
     [IsoXmlTag("TtlNbOfInstlmts")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? TotalNumberOfInstalments { get; init; }
+    public Number? TotalNumberOfInstalments { get; init; }
 
     /// <summary>
     /// Indicates the rounding direction when an amount is to be spread over several funds.
@@ -123,7 +123,7 @@ public record InvestmentPlan11
     [IsoXmlTag("CtrctRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ContractReference { get; init; }
+    public Max35Text? ContractReference { get; init; }
 
     /// <summary>
     /// Reference of the previous contract to which this savings or withdrawal plan is related.
@@ -133,7 +133,7 @@ public record InvestmentPlan11
     [IsoXmlTag("RltdCtrctRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RelatedContractReference { get; init; }
+    public Max35Text? RelatedContractReference { get; init; }
 
     /// <summary>
     /// Identification of the product as designated by the fund manager. In some markets, such as Italy, the financial product or service related to a savings plan or withdrawal plan are identified by a product identification or number.
@@ -143,7 +143,7 @@ public record InvestmentPlan11
     [IsoXmlTag("PdctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProductIdentification { get; init; }
+    public Max35Text? ProductIdentification { get; init; }
 
     /// <summary>
     /// Reference of the underlying service level agreement (SLA) governing charges and commission.
@@ -153,7 +153,7 @@ public record InvestmentPlan11
     [IsoXmlTag("SLAChrgAndComssnRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SLAChargeAndCommissionReference { get; init; }
+    public Max35Text? SLAChargeAndCommissionReference { get; init; }
 
     /// <summary>
     /// Specifies the type of insurance contract to which the savings investment plan is linked.

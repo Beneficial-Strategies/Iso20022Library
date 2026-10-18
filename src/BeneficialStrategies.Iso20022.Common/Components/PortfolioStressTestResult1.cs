@@ -47,7 +47,7 @@ public record PortfolioStressTestResult1
     [DisplayName("Cover 1 Flag")]
     [IsoXmlTag("Cover1Flg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator Cover1Flag { get; init; }
+    public required TrueFalseIndicator Cover1Flag { get; init; }
 
     /// <summary>
     /// Indicates whether the stress loss over initial margin under this scenario for the clearing member of which the corresponding account is an account, is the second largest stress over initial margin used to size the default fund.
@@ -56,5 +56,5 @@ public record PortfolioStressTestResult1
     [DisplayName("Cover 2 Flag")]
     [IsoXmlTag("Cover2Flg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator Cover2Flag { get; init; }
+    public required TrueFalseIndicator Cover2Flag { get; init; }
 }

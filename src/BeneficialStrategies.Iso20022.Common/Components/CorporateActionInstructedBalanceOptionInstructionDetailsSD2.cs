@@ -24,7 +24,7 @@ public record CorporateActionInstructedBalanceOptionInstructionDetailsSD2
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Number identifying the available corporate action options.
@@ -42,7 +42,7 @@ public record CorporateActionInstructedBalanceOptionInstructionDetailsSD2
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.Max15Text)]
     [StringLength(maximumLength: 15, MinimumLength = 1)]
-    public required IsoMax15Text TransactionIdentification { get; init; }
+    public required Max15Text TransactionIdentification { get; init; }
 
     /// <summary>
     /// Number which further identifies DTC instruction reference number. Not applicable to reorganisation / custody deposits.
@@ -51,7 +51,7 @@ public record CorporateActionInstructedBalanceOptionInstructionDetailsSD2
     [DisplayName("Transaction Sequence Number")]
     [IsoXmlTag("TxSeqNb")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public IsoMax3NumericText? TransactionSequenceNumber { get; init; }
+    public Max3NumericText? TransactionSequenceNumber { get; init; }
 
     /// <summary>
     /// Instruction date and time for reorganisation instructions or the deposit date for reorganisation / custody deposits.
@@ -60,7 +60,7 @@ public record CorporateActionInstructedBalanceOptionInstructionDetailsSD2
     [DisplayName("Transaction Identification Date")]
     [IsoXmlTag("TxIdDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime TransactionIdentificationDate { get; init; }
+    public required ISODateTime TransactionIdentificationDate { get; init; }
 
     /// <summary>
     /// Contra CUSIP Identification of the option instruction.
@@ -101,7 +101,7 @@ public record CorporateActionInstructedBalanceOptionInstructionDetailsSD2
     [DisplayName("Transaction Identification Protect Date")]
     [IsoXmlTag("TxIdPrtctDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? TransactionIdentificationProtectDate { get; init; }
+    public ISODateTime? TransactionIdentificationProtectDate { get; init; }
 
     /// <summary>
     /// Date and time of the cover protect.
@@ -110,7 +110,7 @@ public record CorporateActionInstructedBalanceOptionInstructionDetailsSD2
     [DisplayName("Transaction Identification Cover Protect Date")]
     [IsoXmlTag("TxIdCoverPrtctDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? TransactionIdentificationCoverProtectDate { get; init; }
+    public ISODateTime? TransactionIdentificationCoverProtectDate { get; init; }
 
     /// <summary>
     /// Conditional quantity on the instruction.
@@ -135,7 +135,7 @@ public record CorporateActionInstructedBalanceOptionInstructionDetailsSD2
     [DisplayName("Customer Reference Identification")]
     [IsoXmlTag("CstmrRefId")]
     [IsoSimpleType(IsoSimpleType.Max30Text)]
-    public IsoMax30Text? CustomerReferenceIdentification { get; init; }
+    public Max30Text? CustomerReferenceIdentification { get; init; }
 
     /// <summary>
     /// Client free format instruction narrative information. Will be 80 characters for tender instructions, 150 characters for rights instructions and 20 characters for put instructions.
@@ -145,5 +145,5 @@ public record CorporateActionInstructedBalanceOptionInstructionDetailsSD2
     [IsoXmlTag("InstrCmnts")]
     [IsoSimpleType(IsoSimpleType.Max210Text)]
     [StringLength(maximumLength: 210, MinimumLength = 1)]
-    public IsoMax210Text? InstructionComments { get; init; }
+    public Max210Text? InstructionComments { get; init; }
 }

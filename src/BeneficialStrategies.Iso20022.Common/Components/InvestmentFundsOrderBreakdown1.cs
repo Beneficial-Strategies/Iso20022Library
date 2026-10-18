@@ -32,7 +32,7 @@ public record InvestmentFundsOrderBreakdown1
     [IsoXmlTag("XtndedOrdrBrkdwnTp")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoExtended350Code ExtendedOrderBreakdownType { get; init; }
+    public required Extended350Code ExtendedOrderBreakdownType { get; init; }
 
     /// <summary>
     /// Portion of the net amount that is attributed to an order type.

@@ -41,7 +41,7 @@ public record ProcessingResult5
     [DisplayName("Action Required")]
     [IsoXmlTag("ActnReqrd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ActionRequired { get; init; }
+    public YesNoIndicator? ActionRequired { get; init; }
 
     /// <summary>
     /// Set of actions to be performed.

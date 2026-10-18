@@ -23,7 +23,7 @@ public record ReportData1
     [IsoId("_SXbvd9p-Ed-ak6NoX_4Aeg_-759204120")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Date by which the amount(s) requested must be settled.
@@ -31,7 +31,7 @@ public record ReportData1
     [IsoId("_SXk5YNp-Ed-ak6NoX_4Aeg_628613877")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
-    public required IsoISODate ValueDate { get; init; }
+    public required DateOnly ValueDate { get; init; }
 
     /// <summary>
     /// Date and time on which the report is generated.
@@ -39,7 +39,7 @@ public record ReportData1
     [IsoId("_SXk5Ydp-Ed-ak6NoX_4Aeg_-759204151")]
     [DisplayName("Date And Time Stamp")]
     [IsoXmlTag("DtAndTmStmp")]
-    public required IsoISODateTime DateAndTimeStamp { get; init; }
+    public required ISODateTime DateAndTimeStamp { get; init; }
 
     /// <summary>
     /// Specifies the type of the Pay In Call.

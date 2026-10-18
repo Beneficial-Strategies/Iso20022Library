@@ -31,5 +31,5 @@ public record AmountAndDirection6
     [DisplayName("Sign")]
     [IsoXmlTag("Sgn")]
     [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
-    public required IsoPlusOrMinusIndicator Sign { get; init; }
+    public required PlusOrMinusIndicator Sign { get; init; }
 }

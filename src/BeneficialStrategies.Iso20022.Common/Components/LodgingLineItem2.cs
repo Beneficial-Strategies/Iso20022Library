@@ -23,7 +23,7 @@ public record LodgingLineItem2
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Time of the charge for the product or service associated with the line item.
@@ -32,7 +32,7 @@ public record LodgingLineItem2
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? Time { get; init; }
+    public ISOTime? Time { get; init; }
 
     /// <summary>
     /// Type of product or service associated with the line item.
@@ -50,7 +50,7 @@ public record LodgingLineItem2
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Indicates whether or not the charge originated following the checkout.
@@ -59,7 +59,7 @@ public record LodgingLineItem2
     [DisplayName("Post Check Out Indicator")]
     [IsoXmlTag("PstChckOutInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? PostCheckOutIndicator { get; init; }
+    public TrueFalseIndicator? PostCheckOutIndicator { get; init; }
 
     /// <summary>
     /// A code to indicate the tax amount is credit or debit
@@ -84,7 +84,7 @@ public record LodgingLineItem2
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
     [IsoSimpleType(IsoSimpleType.Max4NumericText)]
-    public IsoMax4NumericText? Duration { get; init; }
+    public Max4NumericText? Duration { get; init; }
 
     /// <summary>
     /// Subtotal amount of line item.  (e.g. total nightly rate, etc.)
@@ -110,5 +110,5 @@ public record LodgingLineItem2
     [IsoXmlTag("AddtlData")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AdditionalData { get; init; }
+    public Max350Text? AdditionalData { get; init; }
 }

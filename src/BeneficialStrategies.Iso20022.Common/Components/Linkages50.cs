@@ -32,5 +32,5 @@ public record Linkages50
     [IsoXmlTag("SctiesSttlmTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax16Text SecuritiesSettlementTransactionIdentification { get; init; }
+    public required RestrictedFINXMax16Text SecuritiesSettlementTransactionIdentification { get; init; }
 }

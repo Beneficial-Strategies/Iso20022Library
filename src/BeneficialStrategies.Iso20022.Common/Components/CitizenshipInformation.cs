@@ -31,5 +31,5 @@ public record CitizenshipInformation
     [DisplayName("Minor Indicator")]
     [IsoXmlTag("MnrInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator MinorIndicator { get; init; }
+    public required YesNoIndicator MinorIndicator { get; init; }
 }

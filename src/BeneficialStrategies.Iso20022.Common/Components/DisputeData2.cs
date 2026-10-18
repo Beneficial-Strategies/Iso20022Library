@@ -23,7 +23,7 @@ public record DisputeData2
     [DisplayName("Presentment Cycle")]
     [IsoXmlTag("PresntmntCycl")]
     [IsoSimpleType(IsoSimpleType.Exact1NumericText)]
-    public IsoExact1NumericText? PresentmentCycle { get; init; }
+    public Exact1NumericText? PresentmentCycle { get; init; }
 
     /// <summary>
     /// Condition of the dispute.
@@ -33,7 +33,7 @@ public record DisputeData2
     [IsoXmlTag("DsptCond")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DisputeCondition { get; init; }
+    public Max35Text? DisputeCondition { get; init; }
 
     /// <summary>
     /// Reference for the dispute.

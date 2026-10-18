@@ -32,7 +32,7 @@ public record ISAYearsOfIssue2
     [IsoXmlTag("XtndedCurYrTp")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedCurrentYearType { get; init; }
+    public Extended350Code? ExtendedCurrentYearType { get; init; }
 
     /// <summary>
     /// Selection of investment plans issued during previous years.

@@ -22,7 +22,7 @@ public record CardExchangeRate1
     [IsoId("_feWfMSH1EfCkq6-p7S3J1Q")]
     [DisplayName("Provider")]
     [IsoXmlTag("Prvdr")]
-    public IsoMax70Text? Provider { get; init; }
+    public Max70Text? Provider { get; init; }
 
     /// <summary>
     /// Identification of the specific rate, table or file that contains the rate information.
@@ -30,7 +30,7 @@ public record CardExchangeRate1
     [IsoId("_feWfMyH1EfCkq6-p7S3J1Q")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax70Text? Identification { get; init; }
+    public Max70Text? Identification { get; init; }
 
     /// <summary>
     /// The date the exchange rate data is effective.
@@ -38,7 +38,7 @@ public record CardExchangeRate1
     [IsoId("_feWfNSH1EfCkq6-p7S3J1Q")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// The time the exchange rate data is effective.
@@ -46,7 +46,7 @@ public record CardExchangeRate1
     [IsoId("_feWfNyH1EfCkq6-p7S3J1Q")]
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
-    public IsoISOTime? Time { get; init; }
+    public ISOTime? Time { get; init; }
 
     /// <summary>
     /// Identifies the party to which this detail applies.
@@ -78,7 +78,7 @@ public record CardExchangeRate1
     [IsoId("_feWfQSH1EfCkq6-p7S3J1Q")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
-    public IsoBaseOne25Rate? Rate { get; init; }
+    public BaseOne25Rate? Rate { get; init; }
 
     /// <summary>
     /// Identifies the type of rate.
@@ -102,7 +102,7 @@ public record CardExchangeRate1
     [IsoId("_feWfSyH1EfCkq6-p7S3J1Q")]
     [DisplayName("Rate Lock Requested")]
     [IsoXmlTag("RateLckReqd")]
-    public IsoTrueFalseIndicator? RateLockRequested { get; init; }
+    public TrueFalseIndicator? RateLockRequested { get; init; }
 
     /// <summary>
     /// Indicates if the transaction is rate lock eligible.
@@ -110,7 +110,7 @@ public record CardExchangeRate1
     [IsoId("_feWfTSH1EfCkq6-p7S3J1Q")]
     [DisplayName("Rate Lock Eligible")]
     [IsoXmlTag("RateLckElgbl")]
-    public IsoTrueFalseIndicator? RateLockEligible { get; init; }
+    public TrueFalseIndicator? RateLockEligible { get; init; }
 
     /// <summary>
     /// Indicates if a rate lock was applied.
@@ -118,5 +118,5 @@ public record CardExchangeRate1
     [IsoId("_feWfTyH1EfCkq6-p7S3J1Q")]
     [DisplayName("Rate Lock Applied")]
     [IsoXmlTag("RateLckApld")]
-    public IsoTrueFalseIndicator? RateLockApplied { get; init; }
+    public TrueFalseIndicator? RateLockApplied { get; init; }
 }

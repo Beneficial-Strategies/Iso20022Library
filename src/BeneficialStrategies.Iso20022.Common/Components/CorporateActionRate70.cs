@@ -56,7 +56,7 @@ public record CorporateActionRate70
     [DisplayName("Maximum Allowed Oversubscription Rate")]
     [IsoXmlTag("MaxAllwdOvrsbcptRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? MaximumAllowedOversubscriptionRate { get; init; }
+    public PercentageRate? MaximumAllowedOversubscriptionRate { get; init; }
 
     /// <summary>
     /// Proportionate allocation used for the offer.
@@ -65,7 +65,7 @@ public record CorporateActionRate70
     [DisplayName("Proration Rate")]
     [IsoXmlTag("PrratnRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? ProrationRate { get; init; }
+    public PercentageRate? ProrationRate { get; init; }
 
     /// <summary>
     /// Percentage of a cash distribution that will be withheld by the tax authorities of the jurisdiction of the issuer, for which a relief at source and/or reclaim may be possible.

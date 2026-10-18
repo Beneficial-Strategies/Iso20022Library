@@ -22,7 +22,7 @@ public record OptionInstructionDetails13
     [IsoId("_H2bX0a8wEfCx2aBifPEdRg")]
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
-    public required IsoMax15Text InstructionIdentification { get; init; }
+    public required Max15Text InstructionIdentification { get; init; }
 
     /// <summary>
     /// Provides the sequence number of the instruction.
@@ -30,7 +30,7 @@ public record OptionInstructionDetails13
     [IsoId("_H2bX068wEfCx2aBifPEdRg")]
     [DisplayName("Instruction Sequence Number")]
     [IsoXmlTag("InstrSeqNb")]
-    public IsoMax3NumericText? InstructionSequenceNumber { get; init; }
+    public Max3NumericText? InstructionSequenceNumber { get; init; }
 
     /// <summary>
     /// Indicates whether the instruction is a protect or a cover protect instruction.
@@ -54,7 +54,7 @@ public record OptionInstructionDetails13
     [IsoId("_H2bX2a8wEfCx2aBifPEdRg")]
     [DisplayName("Instruction Date")]
     [IsoXmlTag("InstrDt")]
-    public required IsoISODate InstructionDate { get; init; }
+    public required DateOnly InstructionDate { get; init; }
 
     /// <summary>
     /// Date of the client protect instruction.
@@ -62,7 +62,7 @@ public record OptionInstructionDetails13
     [IsoId("_H2bX268wEfCx2aBifPEdRg")]
     [DisplayName("Protect Date")]
     [IsoXmlTag("PrtctDt")]
-    public IsoISODate? ProtectDate { get; init; }
+    public DateOnly? ProtectDate { get; init; }
 
     /// <summary>
     /// Date of the cover protect instruction.
@@ -70,7 +70,7 @@ public record OptionInstructionDetails13
     [IsoId("_H2bX3a8wEfCx2aBifPEdRg")]
     [DisplayName("Cover Protect Date")]
     [IsoXmlTag("CoverPrtctDt")]
-    public IsoISODate? CoverProtectDate { get; init; }
+    public DateOnly? CoverProtectDate { get; init; }
 
     /// <summary>
     /// Bid price of the instruction.
@@ -94,7 +94,7 @@ public record OptionInstructionDetails13
     [IsoId("_H2bX468wEfCx2aBifPEdRg")]
     [DisplayName("Customer Reference")]
     [IsoXmlTag("CstmrRef")]
-    public IsoMax50Text? CustomerReference { get; init; }
+    public Max50Text? CustomerReference { get; init; }
 
     /// <summary>
     /// Narrative information from the submitted instruction.
@@ -102,7 +102,7 @@ public record OptionInstructionDetails13
     [IsoId("_H2bX5a8wEfCx2aBifPEdRg")]
     [DisplayName("Instruction Narrative")]
     [IsoXmlTag("InstrNrrtv")]
-    public IsoMax350Text? InstructionNarrative { get; init; }
+    public Max350Text? InstructionNarrative { get; init; }
 
     /// <summary>
     /// Status of a particular instruction.

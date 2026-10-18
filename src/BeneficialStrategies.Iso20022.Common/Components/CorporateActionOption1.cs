@@ -23,7 +23,7 @@ public record CorporateActionOption1
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public required IsoExact3NumericText OptionNumber { get; init; }
+    public required Exact3NumericText OptionNumber { get; init; }
 
     /// <summary>
     /// Specifies the corporate action options available to the account owner.
@@ -48,7 +48,7 @@ public record CorporateActionOption1
     [DisplayName("Certification Indicator")]
     [IsoXmlTag("CertfctnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? CertificationIndicator { get; init; }
+    public YesNoIndicator? CertificationIndicator { get; init; }
 
     /// <summary>
     /// Type of certification which is required.
@@ -74,7 +74,7 @@ public record CorporateActionOption1
     [IsoXmlTag("AgtSctiesAcctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AgentSecuritiesAccountIdentification { get; init; }
+    public Max35Text? AgentSecuritiesAccountIdentification { get; init; }
 
     /// <summary>
     /// Identification of the cash account held by an agent at the CSD.
@@ -107,7 +107,7 @@ public record CorporateActionOption1
     [DisplayName("Withdrawal Allowed Indicator")]
     [IsoXmlTag("WdrwlAllwdInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator WithdrawalAllowedIndicator { get; init; }
+    public required YesNoIndicator WithdrawalAllowedIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether change of instruction is allowed.
@@ -116,7 +116,7 @@ public record CorporateActionOption1
     [DisplayName("Change Allowed Indicator")]
     [IsoXmlTag("ChngAllwdInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ChangeAllowedIndicator { get; init; }
+    public required YesNoIndicator ChangeAllowedIndicator { get; init; }
 
     /// <summary>
     /// Provides information about the dates related to a CA option.
@@ -189,7 +189,7 @@ public record CorporateActionOption1
     [DisplayName("Redemption Charges Applied Indicator")]
     [IsoXmlTag("RedChrgsApldInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? RedemptionChargesAppliedIndicator { get; init; }
+    public YesNoIndicator? RedemptionChargesAppliedIndicator { get; init; }
 
     /// <summary>
     /// Specifies the features that may apply to a corporate action option.

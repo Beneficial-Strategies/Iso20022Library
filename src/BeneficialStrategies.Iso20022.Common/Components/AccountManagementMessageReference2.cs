@@ -40,7 +40,7 @@ public record AccountManagementMessageReference2
     [IsoXmlTag("AcctApplId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountApplicationIdentification { get; init; }
+    public Max35Text? AccountApplicationIdentification { get; init; }
 
     /// <summary>
     /// Account information for which the status of an account management instruction is requested.

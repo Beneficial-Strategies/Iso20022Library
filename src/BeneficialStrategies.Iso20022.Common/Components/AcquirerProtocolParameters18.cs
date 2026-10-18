@@ -39,7 +39,7 @@ public record AcquirerProtocolParameters18
     [IsoId("_sK_6AbZ_EfCUZfsQO4rYeA")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
-    public required IsoMax256Text Version { get; init; }
+    public required Max256Text Version { get; init; }
 
     /// <summary>
     /// Identification of the payment application, user of the acquirer protocol.
@@ -47,7 +47,7 @@ public record AcquirerProtocolParameters18
     [IsoId("_sK_6B7Z_EfCUZfsQO4rYeA")]
     [DisplayName("Application Identification")]
     [IsoXmlTag("ApplId")]
-    public SimpleValueList<IsoMax35Text> ApplicationIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> ApplicationIdentification { get; init; } = [];
 
     /// <summary>
     /// Acquirer host configuration.
@@ -87,7 +87,7 @@ public record AcquirerProtocolParameters18
     [IsoId("_sK_6JbZ_EfCUZfsQO4rYeA")]
     [DisplayName("Reconciliation By Acquirer")]
     [IsoXmlTag("RcncltnByAcqrr")]
-    public IsoTrueFalseIndicator? ReconciliationByAcquirer { get; init; }
+    public TrueFalseIndicator? ReconciliationByAcquirer { get; init; }
 
     /// <summary>
     /// Indicates the reconciliation total amounts are computed per currency.
@@ -95,7 +95,7 @@ public record AcquirerProtocolParameters18
     [IsoId("_sK_6K7Z_EfCUZfsQO4rYeA")]
     [DisplayName("Totals Per Currency")]
     [IsoXmlTag("TtlsPerCcy")]
-    public IsoTrueFalseIndicator? TotalsPerCurrency { get; init; }
+    public TrueFalseIndicator? TotalsPerCurrency { get; init; }
 
     /// <summary>
     /// Indicates that totals in reconciliation or batch must be split.
@@ -103,7 +103,7 @@ public record AcquirerProtocolParameters18
     [IsoId("_sK_6MbZ_EfCUZfsQO4rYeA")]
     [DisplayName("Split Totals")]
     [IsoXmlTag("SpltTtls")]
-    public IsoTrueFalseIndicator? SplitTotals { get; init; }
+    public TrueFalseIndicator? SplitTotals { get; init; }
 
     /// <summary>
     /// List of criterion to use when totals in reconciliation or batch must be split.
@@ -119,7 +119,7 @@ public record AcquirerProtocolParameters18
     [IsoId("_sK_6PbZ_EfCUZfsQO4rYeA")]
     [DisplayName("Completion Advice Mandated")]
     [IsoXmlTag("CmpltnAdvcMndtd")]
-    public IsoTrueFalseIndicator? CompletionAdviceMandated { get; init; }
+    public TrueFalseIndicator? CompletionAdviceMandated { get; init; }
 
     /// <summary>
     /// Identification of available amount qualifier for a reservation.
@@ -135,7 +135,7 @@ public record AcquirerProtocolParameters18
     [IsoId("_sK_6SbZ_EfCUZfsQO4rYeA")]
     [DisplayName("Reconciliation Error")]
     [IsoXmlTag("RcncltnErr")]
-    public IsoTrueFalseIndicator? ReconciliationError { get; init; }
+    public TrueFalseIndicator? ReconciliationError { get; init; }
 
     /// <summary>
     /// Indicates whether the POI must send card data in the AcceptorCompletionAdvice message following an authorisation exchange.
@@ -143,7 +143,7 @@ public record AcquirerProtocolParameters18
     [IsoId("_sK_6T7Z_EfCUZfsQO4rYeA")]
     [DisplayName("Card Data Verification")]
     [IsoXmlTag("CardDataVrfctn")]
-    public IsoTrueFalseIndicator? CardDataVerification { get; init; }
+    public TrueFalseIndicator? CardDataVerification { get; init; }
 
     /// <summary>
     /// Send a cancellation advice for offline transactions not yet captured.
@@ -151,7 +151,7 @@ public record AcquirerProtocolParameters18
     [IsoId("_sK_6VbZ_EfCUZfsQO4rYeA")]
     [DisplayName("Notify Off Line Cancellation")]
     [IsoXmlTag("NtfyOffLineCxl")]
-    public IsoTrueFalseIndicator? NotifyOffLineCancellation { get; init; }
+    public TrueFalseIndicator? NotifyOffLineCancellation { get; init; }
 
     /// <summary>
     /// Types of transaction to include in the batch.
@@ -167,7 +167,7 @@ public record AcquirerProtocolParameters18
     [IsoId("_sK_6YbZ_EfCUZfsQO4rYeA")]
     [DisplayName("File Transfer Batch")]
     [IsoXmlTag("FileTrfBtch")]
-    public IsoTrueFalseIndicator? FileTransferBatch { get; init; }
+    public TrueFalseIndicator? FileTransferBatch { get; init; }
 
     /// <summary>
     /// BatchTransfer are authenticated by digital signature rather than a MAC.
@@ -175,7 +175,7 @@ public record AcquirerProtocolParameters18
     [IsoId("_sK_6Z7Z_EfCUZfsQO4rYeA")]
     [DisplayName("Batch Digital Signature")]
     [IsoXmlTag("BtchDgtlSgntr")]
-    public IsoTrueFalseIndicator? BatchDigitalSignature { get; init; }
+    public TrueFalseIndicator? BatchDigitalSignature { get; init; }
 
     /// <summary>
     /// Configuration of a message item.
@@ -191,7 +191,7 @@ public record AcquirerProtocolParameters18
     [IsoId("_sK_6c7Z_EfCUZfsQO4rYeA")]
     [DisplayName("Protect Card Data")]
     [IsoXmlTag("PrtctCardData")]
-    public required IsoTrueFalseIndicator ProtectCardData { get; init; }
+    public required TrueFalseIndicator ProtectCardData { get; init; }
 
     /// <summary>
     /// Indicator to require a private protection of sensitive card data in messages.
@@ -199,7 +199,7 @@ public record AcquirerProtocolParameters18
     [IsoId("_sK_6ebZ_EfCUZfsQO4rYeA")]
     [DisplayName("Private Card Data")]
     [IsoXmlTag("PrvtCardData")]
-    public IsoTrueFalseIndicator? PrivateCardData { get; init; }
+    public TrueFalseIndicator? PrivateCardData { get; init; }
 
     /// <summary>
     /// A security trailer is mandatory in the messages.
@@ -207,5 +207,5 @@ public record AcquirerProtocolParameters18
     [IsoId("_sK_6f7Z_EfCUZfsQO4rYeA")]
     [DisplayName("Mandatory Security Trailer")]
     [IsoXmlTag("MndtrySctyTrlr")]
-    public IsoTrueFalseIndicator? MandatorySecurityTrailer { get; init; }
+    public TrueFalseIndicator? MandatorySecurityTrailer { get; init; }
 }

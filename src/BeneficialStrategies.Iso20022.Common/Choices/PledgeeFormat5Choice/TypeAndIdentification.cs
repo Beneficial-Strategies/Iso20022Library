@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PledgeeFormat5Choice
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
-        public required IsoAnyBICDec2014Identifier Identification { get; init; }
+        public required AnyBICDec2014Identifier Identification { get; init; }
 
         /// <summary>
         /// Entity to which the financial instruments are pledged expressed as a code.

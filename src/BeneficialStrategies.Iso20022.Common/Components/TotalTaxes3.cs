@@ -48,7 +48,7 @@ public record TotalTaxes3
     [IsoXmlTag("XtndedEUCptlGn")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedEUCapitalGain { get; init; }
+    public Extended350Code? ExtendedEUCapitalGain { get; init; }
 
     /// <summary>
     /// Specifies whether dividend is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June), or an income realised upon sale, a refund or redemption of shares and units, etc.
@@ -66,7 +66,7 @@ public record TotalTaxes3
     [IsoXmlTag("XtndedEUDvddSts")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedEUDividendStatus { get; init; }
+    public Extended350Code? ExtendedEUDividendStatus { get; init; }
 
     /// <summary>
     /// Percentage of the underlying assets of the funds that represents a debt and is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June).
@@ -75,7 +75,7 @@ public record TotalTaxes3
     [DisplayName("Percentage Of Debt Claim")]
     [IsoXmlTag("PctgOfDebtClm")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? PercentageOfDebtClaim { get; init; }
+    public PercentageRate? PercentageOfDebtClaim { get; init; }
 
     /// <summary>
     /// Information related to a specific tax.

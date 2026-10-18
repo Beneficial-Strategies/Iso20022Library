@@ -23,7 +23,7 @@ public record DateInformation1
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate StartDate { get; init; }
+    public required DateOnly StartDate { get; init; }
 
     /// <summary>
     /// Specifies the regularity of the trigger date.
@@ -40,5 +40,5 @@ public record DateInformation1
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber Number { get; init; }
+    public required Number Number { get; init; }
 }

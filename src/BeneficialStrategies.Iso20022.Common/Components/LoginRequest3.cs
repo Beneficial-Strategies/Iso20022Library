@@ -23,7 +23,7 @@ public record LoginRequest3
     [DisplayName("Login Date Time")]
     [IsoXmlTag("LgnDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime LoginDateTime { get; init; }
+    public required ISODateTime LoginDateTime { get; init; }
 
     /// <summary>
     /// Information related to the software of the Sale System which manages the Sale to POI protocol.
@@ -50,7 +50,7 @@ public record LoginRequest3
     [DisplayName("Training Mode Flag")]
     [IsoXmlTag("TrngMdFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? TrainingModeFlag { get; init; }
+    public TrueFalseIndicator? TrainingModeFlag { get; init; }
 
     /// <summary>
     /// Identification of the cashier.
@@ -60,7 +60,7 @@ public record LoginRequest3
     [IsoXmlTag("CshrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CashierIdentification { get; init; }
+    public Max35Text? CashierIdentification { get; init; }
 
     /// <summary>
     /// Language of the cashier.
@@ -77,7 +77,7 @@ public record LoginRequest3
     [DisplayName("Shift Number")]
     [IsoXmlTag("ShftNb")]
     [IsoSimpleType(IsoSimpleType.Max2NumericText)]
-    public IsoMax2NumericText? ShiftNumber { get; init; }
+    public Max2NumericText? ShiftNumber { get; init; }
 
     /// <summary>
     /// Type of token replacing the PAN of a payment card to identify the payment mean of the customer.
@@ -111,7 +111,7 @@ public record LoginRequest3
     [IsoXmlTag("TtlsGrpId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TotalsGroupIdentification { get; init; }
+    public Max35Text? TotalsGroupIdentification { get; init; }
 
     /// <summary>
     /// Message to be displayed.

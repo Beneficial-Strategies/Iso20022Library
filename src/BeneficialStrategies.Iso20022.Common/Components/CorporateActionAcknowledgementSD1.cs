@@ -25,7 +25,7 @@ public record CorporateActionAcknowledgementSD1
     [DisplayName("Terms Acknowledgement Indicator")]
     [IsoXmlTag("TermsAckInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? TermsAcknowledgementIndicator { get; init; }
+    public YesNoIndicator? TermsAcknowledgementIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether condition 1 of this tender offer is being accepted.
@@ -36,7 +36,7 @@ public record CorporateActionAcknowledgementSD1
     [DisplayName("Condition 1 Indicator")]
     [IsoXmlTag("Cond1Ind")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? Condition1Indicator { get; init; }
+    public YesNoIndicator? Condition1Indicator { get; init; }
 
     /// <summary>
     /// Indicates whether condition 2 of this tender offer is being accepted.
@@ -47,7 +47,7 @@ public record CorporateActionAcknowledgementSD1
     [DisplayName("Condition 2 Indicator")]
     [IsoXmlTag("Cond2Ind")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? Condition2Indicator { get; init; }
+    public YesNoIndicator? Condition2Indicator { get; init; }
 
     /// <summary>
     /// Indicates whether condition 3 of this tender offer is being accepted.
@@ -58,7 +58,7 @@ public record CorporateActionAcknowledgementSD1
     [DisplayName("Condition 3 Indicator")]
     [IsoXmlTag("Cond3Ind")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? Condition3Indicator { get; init; }
+    public YesNoIndicator? Condition3Indicator { get; init; }
 
     /// <summary>
     /// Indicates whether condition 4 of this tender offer is being accepted.
@@ -69,7 +69,7 @@ public record CorporateActionAcknowledgementSD1
     [DisplayName("Condition 4 Indicator")]
     [IsoXmlTag("Cond4Ind")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? Condition4Indicator { get; init; }
+    public YesNoIndicator? Condition4Indicator { get; init; }
 
     /// <summary>
     /// Indicates whether condition 5 of this tender offer is being accepted.
@@ -80,7 +80,7 @@ public record CorporateActionAcknowledgementSD1
     [DisplayName("Condition 5 Indicator")]
     [IsoXmlTag("Cond5Ind")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? Condition5Indicator { get; init; }
+    public YesNoIndicator? Condition5Indicator { get; init; }
 
     /// <summary>
     /// Indicates whether condition 6 of this tender offer is being accepted.
@@ -91,7 +91,7 @@ public record CorporateActionAcknowledgementSD1
     [DisplayName("Condition 6 Indicator")]
     [IsoXmlTag("Cond6Ind")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? Condition6Indicator { get; init; }
+    public YesNoIndicator? Condition6Indicator { get; init; }
 
     /// <summary>
     /// Indicates whether there is an acknowledgement that the beneficial owner has been deemed incompetent. Acknowledgement is related to CD early redemption instructions.
@@ -102,7 +102,7 @@ public record CorporateActionAcknowledgementSD1
     [DisplayName("Adjudication Of Incompetency Acknowledgement Indicator")]
     [IsoXmlTag("AdjdctnOfIncmptncyAckInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AdjudicationOfIncompetencyAcknowledgementIndicator { get; init; }
+    public YesNoIndicator? AdjudicationOfIncompetencyAcknowledgementIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether there is an acknowledgement that this CD Early Redemption request is an exempt request, that the identification of the beneficial owner and required legal documentation is correct and that you agree to maintain such documentation for at least 30 months following payment of the request and will make it available to the CD Issuer upon request.
@@ -113,7 +113,7 @@ public record CorporateActionAcknowledgementSD1
     [DisplayName("Legal Documentation Thirty Months Retention Acknowledgement Indicator")]
     [IsoXmlTag("LglDcmnttnThrtyMnthsRtntnAckInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? LegalDocumentationThirtyMonthsRetentionAcknowledgementIndicator { get; init; }
+    public YesNoIndicator? LegalDocumentationThirtyMonthsRetentionAcknowledgementIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether there is an acknowledgement that this CD Early Redemption instruction will automatically be deleted by the close of the fifth business day subsequent to submission if the appropriate legal documents, for example, death certificate, affidavit of domicile, are not received by DTC at that time.
@@ -124,7 +124,7 @@ public record CorporateActionAcknowledgementSD1
     [DisplayName("Instruction Deletion Acknowledgement Indicator")]
     [IsoXmlTag("InstrDeltnAckInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? InstructionDeletionAcknowledgementIndicator { get; init; }
+    public YesNoIndicator? InstructionDeletionAcknowledgementIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether there is an acknowledgement that the warrant or conversion instruction being sent could lead to a potential loss due to pricing factors.
@@ -135,5 +135,5 @@ public record CorporateActionAcknowledgementSD1
     [DisplayName("Potential Loss Acknowledgement Indicator")]
     [IsoXmlTag("PotntlLossAckInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PotentialLossAcknowledgementIndicator { get; init; }
+    public YesNoIndicator? PotentialLossAcknowledgementIndicator { get; init; }
 }

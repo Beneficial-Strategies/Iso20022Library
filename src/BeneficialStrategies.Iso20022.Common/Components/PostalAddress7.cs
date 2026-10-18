@@ -35,7 +35,7 @@ public record PostalAddress7
     [IsoXmlTag("PstCd")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINMax8Text)]
     [StringLength(maximumLength: 8, MinimumLength = 1)]
-    public IsoRestrictedFINMax8Text? PostCode { get; init; }
+    public RestrictedFINMax8Text? PostCode { get; init; }
 
     /// <summary>
     /// Name of a built-up area, with defined boundaries, and a local government.
@@ -45,7 +45,7 @@ public record PostalAddress7
     [IsoXmlTag("TwnNm")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINMax23Text)]
     [StringLength(maximumLength: 23, MinimumLength = 1)]
-    public IsoRestrictedFINMax23Text? TownName { get; init; }
+    public RestrictedFINMax23Text? TownName { get; init; }
 
     /// <summary>
     /// Nation with its own government.

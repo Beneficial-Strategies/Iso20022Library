@@ -24,7 +24,7 @@ public record OriginalGroupInformation1
     [IsoXmlTag("OrgnlMsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OriginalMessageIdentification { get; init; }
+    public required Max35Text OriginalMessageIdentification { get; init; }
 
     /// <summary>
     /// Name assigned by the sending party to unambiguously identify the file transmitted on the network.
@@ -34,7 +34,7 @@ public record OriginalGroupInformation1
     [IsoXmlTag("NtwkFileNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text NetworkFileName { get; init; }
+    public required Max35Text NetworkFileName { get; init; }
 
     /// <summary>
     /// Specifies the original message name identifier to which the message refers, eg, pacs.003.001.01 or MT103.
@@ -44,7 +44,7 @@ public record OriginalGroupInformation1
     [IsoXmlTag("OrgnlMsgNmId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OriginalMessageNameIdentification { get; init; }
+    public required Max35Text OriginalMessageNameIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the original message was created.
@@ -53,7 +53,7 @@ public record OriginalGroupInformation1
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? OriginalCreationDateTime { get; init; }
+    public ISODateTime? OriginalCreationDateTime { get; init; }
 
     /// <summary>
     /// Party that sent the file for which the status has been generated.||Usage: this field will only be used when the content of the message could not be decoded at the receiving side.
@@ -63,7 +63,7 @@ public record OriginalGroupInformation1
     [IsoXmlTag("FileOrgtr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? FileOriginator { get; init; }
+    public Max35Text? FileOriginator { get; init; }
 
     /// <summary>
     /// Number of individual transactions contained in the original message.
@@ -72,7 +72,7 @@ public record OriginalGroupInformation1
     [DisplayName("Original Number Of Transactions")]
     [IsoXmlTag("OrgnlNbOfTxs")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public IsoMax15NumericText? OriginalNumberOfTransactions { get; init; }
+    public Max15NumericText? OriginalNumberOfTransactions { get; init; }
 
     /// <summary>
     /// Total of all individual amounts included in the original message, irrespective of currencies.
@@ -81,7 +81,7 @@ public record OriginalGroupInformation1
     [DisplayName("Original Control Sum")]
     [IsoXmlTag("OrgnlCtrlSum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? OriginalControlSum { get; init; }
+    public DecimalNumber? OriginalControlSum { get; init; }
 
     /// <summary>
     /// Specifies the status of a group of transactions.

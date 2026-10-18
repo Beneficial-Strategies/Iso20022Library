@@ -23,7 +23,7 @@ public record OrganisationIdentification4
     [DisplayName("BIC Or BEI")]
     [IsoXmlTag("BICOrBEI")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public IsoAnyBICIdentifier? BICOrBEI { get; init; }
+    public AnyBICIdentifier? BICOrBEI { get; init; }
 
     /// <summary>
     /// Unique identification of an organisation, as assigned by an institution, using an identification scheme.

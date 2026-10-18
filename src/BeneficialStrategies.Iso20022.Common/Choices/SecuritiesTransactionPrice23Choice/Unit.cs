@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice23Choi
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("Unit")]
-        public required IsoLongFraction19DecimalNumber Value { get; init; }
+        public required LongFraction19DecimalNumber Value { get; init; }
     }
 }

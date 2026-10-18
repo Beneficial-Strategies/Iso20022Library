@@ -24,7 +24,7 @@ public record SwitchLegReferences1
     [IsoXmlTag("RedLegId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text RedemptionLegIdentification { get; init; }
+    public required Max35Text RedemptionLegIdentification { get; init; }
 
     /// <summary>
     /// Unique technical identifier for an instance of a leg within a switch.
@@ -34,7 +34,7 @@ public record SwitchLegReferences1
     [IsoXmlTag("SbcptLegId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text SubscriptionLegIdentification { get; init; }
+    public required Max35Text SubscriptionLegIdentification { get; init; }
 
     /// <summary>
     /// Additional information about the reason for the rejection of a leg.
@@ -44,7 +44,7 @@ public record SwitchLegReferences1
     [IsoXmlTag("LegRjctnRsn")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? LegRejectionReason { get; init; }
+    public Max350Text? LegRejectionReason { get; init; }
 
     /// <summary>
     /// Elements from the original switch order that have been repaired so that the switch order can be accepted.

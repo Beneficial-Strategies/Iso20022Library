@@ -31,7 +31,7 @@ public record StructuredRemittanceInformation2
     [DisplayName("Referred Document Related Date")]
     [IsoXmlTag("RfrdDocRltdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ReferredDocumentRelatedDate { get; init; }
+    public DateOnly? ReferredDocumentRelatedDate { get; init; }
 
     /// <summary>
     /// Amount of money and currency of a document referred to in the remittance section. The amount is typically either the original amount due and payable, or the amount actually remitted for the referred document.
@@ -49,7 +49,7 @@ public record StructuredRemittanceInformation2
     [IsoXmlTag("DocRefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DocumentReferenceNumber { get; init; }
+    public Max35Text? DocumentReferenceNumber { get; init; }
 
     /// <summary>
     /// Unique and unambiguous reference assigned by the creditor to refer to the payment transaction.||Usage: if available, the initiating party should provide this reference in the structured remittance information, to enable reconciliation by the creditor upon receipt of the cash.||If the business context requires the use of a creditor reference or a payment remit identification, and only one identifier can be passed through the end-to-end chain, the creditor&apos;s reference or payment remittance identification should be quoted in the end-to-end transaction identification.
@@ -59,7 +59,7 @@ public record StructuredRemittanceInformation2
     [IsoXmlTag("CdtrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CreditorReference { get; init; }
+    public Max35Text? CreditorReference { get; init; }
 
     /// <summary>
     /// Identification of the organization issuing the invoice when different than the creditor or final party.

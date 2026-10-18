@@ -48,7 +48,7 @@ public record TaxData1
     [IsoXmlTag("AdmstnZone")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AdministrationZone { get; init; }
+    public Max35Text? AdministrationZone { get; init; }
 
     /// <summary>
     /// Tax reference information that is specific to a taxing agency.
@@ -58,7 +58,7 @@ public record TaxData1
     [IsoXmlTag("RefNb")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? ReferenceNumber { get; init; }
+    public Max140Text? ReferenceNumber { get; init; }
 
     /// <summary>
     /// Method used to indicate the underlying business or how the tax is paid.
@@ -68,7 +68,7 @@ public record TaxData1
     [IsoXmlTag("Mtd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Method { get; init; }
+    public Max35Text? Method { get; init; }
 
     /// <summary>
     /// Total amount of money on which the tax is based.
@@ -93,7 +93,7 @@ public record TaxData1
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Sequential number of the tax report.
@@ -102,7 +102,7 @@ public record TaxData1
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? SequenceNumber { get; init; }
+    public Number? SequenceNumber { get; init; }
 
     /// <summary>
     /// Record of tax details.

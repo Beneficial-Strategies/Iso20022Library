@@ -21,7 +21,7 @@ public record PaymentInstruction45
     /// </summary>
     [DisplayName("Batch Booking")]
     [IsoXmlTag("BtchBookg")]
-    public IsoBatchBookingIndicator? BatchBooking { get; init; }
+    public BatchBookingIndicator? BatchBooking { get; init; }
 
     /// <summary>
     /// Charge Bearer.
@@ -49,7 +49,7 @@ public record PaymentInstruction45
     /// </summary>
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
-    public IsoDecimalNumber? ControlSum { get; init; }
+    public DecimalNumber? ControlSum { get; init; }
 
     /// <summary>
     /// Creditor.
@@ -99,14 +99,14 @@ public record PaymentInstruction45
     /// </summary>
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
-    public IsoMax15NumericText? NumberOfTransactions { get; init; }
+    public Max15NumericText? NumberOfTransactions { get; init; }
 
     /// <summary>
     /// Payment Information Identification.
     /// </summary>
     [DisplayName("Payment Information Identification")]
     [IsoXmlTag("PmtInfId")]
-    public required IsoMax35Text PaymentInformationIdentification { get; init; }
+    public required Max35Text PaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Payment Method.
@@ -134,7 +134,7 @@ public record PaymentInstruction45
     /// </summary>
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
-    public required IsoISODate RequestedCollectionDate { get; init; }
+    public required DateOnly RequestedCollectionDate { get; init; }
 
     /// <summary>
     /// Ultimate Creditor.

@@ -23,7 +23,7 @@ public record ATMSecurityConfiguration4
     [DisplayName("Maximum Certificates")]
     [IsoXmlTag("MaxCerts")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaximumCertificates { get; init; }
+    public Number? MaximumCertificates { get; init; }
 
     /// <summary>
     /// Maximum number of cosigners, the security module is able to manage in a digital signature.
@@ -32,7 +32,7 @@ public record ATMSecurityConfiguration4
     [DisplayName("Maximum Signatures")]
     [IsoXmlTag("MaxSgntrs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaximumSignatures { get; init; }
+    public Number? MaximumSignatures { get; init; }
 
     /// <summary>
     /// Digital signature algorithm the security module is able to manage.

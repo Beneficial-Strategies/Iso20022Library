@@ -30,7 +30,7 @@ public record VoteParameters10
     [IsoId("_5i-786jPEfCzuLlmLrhIvA")]
     [DisplayName("Partial Vote Allowed")]
     [IsoXmlTag("PrtlVoteAllwd")]
-    public required IsoYesNoIndicator PartialVoteAllowed { get; init; }
+    public required YesNoIndicator PartialVoteAllowed { get; init; }
 
     /// <summary>
     /// Indicates whether the vote can be split, that is, there could be different votes for different parts of the holding.
@@ -38,7 +38,7 @@ public record VoteParameters10
     [IsoId("_5i-79ajPEfCzuLlmLrhIvA")]
     [DisplayName("Split Vote Allowed")]
     [IsoXmlTag("SpltVoteAllwd")]
-    public required IsoYesNoIndicator SplitVoteAllowed { get; init; }
+    public required YesNoIndicator SplitVoteAllowed { get; init; }
 
     /// <summary>
     /// Date and time by which the vote instructions should be submitted to the intermediary.
@@ -102,7 +102,7 @@ public record VoteParameters10
     [IsoId("_5i-8BajPEfCzuLlmLrhIvA")]
     [DisplayName("Beneficial Owner Disclosure")]
     [IsoXmlTag("BnfclOwnrDsclsr")]
-    public IsoYesNoIndicator? BeneficialOwnerDisclosure { get; init; }
+    public YesNoIndicator? BeneficialOwnerDisclosure { get; init; }
 
     /// <summary>
     /// Cash premium paid to the security holder when voting earlier (before the early vote with a premium deadline).
@@ -150,7 +150,7 @@ public record VoteParameters10
     [IsoId("_5i-8EajPEfCzuLlmLrhIvA")]
     [DisplayName("Additional Voting Requirements")]
     [IsoXmlTag("AddtlVtngRqrmnts")]
-    public IsoMax350Text? AdditionalVotingRequirements { get; init; }
+    public Max350Text? AdditionalVotingRequirements { get; init; }
 
     /// <summary>
     /// Information required by the issuer to be disclosed as part of a submitted instruction, that is neither the information related to the beneficiary holder, or the voting participant, or the proxy appointed by the issuer, or the attendee(s) participating to the meeting (without voting).
@@ -158,7 +158,7 @@ public record VoteParameters10
     [IsoId("_GfhX8KjdEfCzuLlmLrhIvA")]
     [DisplayName("Additional Disclosure Requirements")]
     [IsoXmlTag("AddtlDsclsrRqrmnts")]
-    public IsoMax350Text? AdditionalDisclosureRequirements { get; init; }
+    public Max350Text? AdditionalDisclosureRequirements { get; init; }
 
     /// <summary>
     /// Indicates whether the previously sent instructions becomes invalid after a market deadline extension.
@@ -166,5 +166,5 @@ public record VoteParameters10
     [IsoId("_5i-8E6jPEfCzuLlmLrhIvA")]
     [DisplayName("Previous Instruction Invalidity Indicator")]
     [IsoXmlTag("PrvsInstrInvldtyInd")]
-    public IsoYesNoIndicator? PreviousInstructionInvalidityIndicator { get; init; }
+    public YesNoIndicator? PreviousInstructionInvalidityIndicator { get; init; }
 }

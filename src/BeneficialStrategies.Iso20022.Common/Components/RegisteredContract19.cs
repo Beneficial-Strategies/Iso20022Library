@@ -56,7 +56,7 @@ public record RegisteredContract19
     /// </summary>
     [DisplayName("Registered Contract Closure Identification")]
     [IsoXmlTag("RegdCtrctClsrId")]
-    public required IsoMax35Text RegisteredContractClosureIdentification { get; init; }
+    public required Max35Text RegisteredContractClosureIdentification { get; init; }
 
     /// <summary>
     /// Registration Agent.

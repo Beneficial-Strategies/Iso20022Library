@@ -32,7 +32,7 @@ public record AdditionalRights2
     [IsoXmlTag("AddtlRghtInfURLAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? AdditionalRightInformationURLAddress { get; init; }
+    public Max256Text? AdditionalRightInformationURLAddress { get; init; }
 
     /// <summary>
     /// Additional right granted to determine the date and time by which security holders can propose amendments or new resolutions. This deadline is set by an intermediary.

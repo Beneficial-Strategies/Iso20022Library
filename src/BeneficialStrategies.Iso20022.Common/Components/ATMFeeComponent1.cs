@@ -35,5 +35,5 @@ public record ATMFeeComponent1
     /// </summary>
     [DisplayName("Fee Label")]
     [IsoXmlTag("FeeLabl")]
-    public IsoMax70Text? FeeLabel { get; init; }
+    public Max70Text? FeeLabel { get; init; }
 }

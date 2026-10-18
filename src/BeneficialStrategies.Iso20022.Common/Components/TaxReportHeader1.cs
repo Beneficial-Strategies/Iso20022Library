@@ -31,7 +31,7 @@ public record TaxReportHeader1
     [DisplayName("Number Of Tax Reports")]
     [IsoXmlTag("NbOfTaxRpts")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NumberOfTaxReports { get; init; }
+    public Number? NumberOfTaxReports { get; init; }
 
     /// <summary>
     /// Party to which the TaxReport is delivered. This message block contains party details for a specific tax authority.

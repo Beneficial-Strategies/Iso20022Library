@@ -22,7 +22,7 @@ public record RelatedSettlementInstruction4
     [IsoId("_4Kvu4972Ee-NrtAAlrBEgQ")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
-    public IsoMax35Text? MarketInfrastructureTransactionIdentification { get; init; }
+    public Max35Text? MarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of the transaction assigned by the processor of the instruction.
@@ -30,7 +30,7 @@ public record RelatedSettlementInstruction4
     [IsoId("_4Kvu5d72Ee-NrtAAlrBEgQ")]
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
-    public IsoMax35Text? ProcessorTransactionIdentification { get; init; }
+    public Max35Text? ProcessorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the related settlement instruction assigned by the account holder.
@@ -38,7 +38,7 @@ public record RelatedSettlementInstruction4
     [IsoId("_4Kvu5972Ee-NrtAAlrBEgQ")]
     [DisplayName("Related Settlement Instruction Identification")]
     [IsoXmlTag("RltdSttlmInstrId")]
-    public IsoMax35Text? RelatedSettlementInstructionIdentification { get; init; }
+    public Max35Text? RelatedSettlementInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique Transaction Identifier (UTI) as agreed with the other counterparty.
@@ -46,5 +46,5 @@ public record RelatedSettlementInstruction4
     [IsoId("_BepXod8BEe-NrtAAlrBEgQ")]
     [DisplayName("Unique Transaction Identifier")]
     [IsoXmlTag("UnqTxIdr")]
-    public IsoUTIIdentifier? UniqueTransactionIdentifier { get; init; }
+    public UTIIdentifier? UniqueTransactionIdentifier { get; init; }
 }

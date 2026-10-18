@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification12Choice
         /// </summary>
         [IsoXmlTag("ISIN")]
         [IsoSimpleType(IsoSimpleType.ISINIdentifier)]
-        public required IsoISINIdentifier Value { get; init; }
+        public required ISINIdentifier Value { get; init; }
     }
 }

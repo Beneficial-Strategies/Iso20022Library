@@ -23,7 +23,7 @@ public record CompareDecimalNumber2
     [DisplayName("Value")]
     [IsoXmlTag("Val1")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? Value1 { get; init; }
+    public DecimalNumber? Value1 { get; init; }
 
     /// <summary>
     /// Information for the second side of the transaction.
@@ -32,5 +32,5 @@ public record CompareDecimalNumber2
     [DisplayName("Value")]
     [IsoXmlTag("Val2")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? Value2 { get; init; }
+    public DecimalNumber? Value2 { get; init; }
 }

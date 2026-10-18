@@ -56,5 +56,5 @@ public record CashOption92
     /// </summary>
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
-    public IsoISODate? ValueDate { get; init; }
+    public DateOnly? ValueDate { get; init; }
 }

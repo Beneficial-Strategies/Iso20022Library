@@ -20,6 +20,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IssuerJurisdiction1Choice
         /// Code to identify a country, a dependency, or another area of particular geopolitical interest, on the basis of country names obtained from the United Nations (ISO 3166, Alpha-2 code).
         /// </summary>
         [IsoXmlTag("CtryCd")]
-        public required CountryCode Value { get; init; }
+        // The variant is named like its type, so the type is written in full.
+        public required BeneficialStrategies.Iso20022.Codesets.CountryCode Value { get; init; }
     }
 }

@@ -41,7 +41,7 @@ public record CollateralAccount5
     [DisplayName("Title Transfer Collateral Arrangement")]
     [IsoXmlTag("TitlTrfCollArrgmnt")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? TitleTransferCollateralArrangement { get; init; }
+    public TrueFalseIndicator? TitleTransferCollateralArrangement { get; init; }
 
     /// <summary>
     /// Indicates whether the client collateral is segregated by value in accordance with local regulations. Usage: In the context of clearing members with US clients, in accordance with Section 4d(a)(2) of the Commodity Exchange Act.
@@ -50,5 +50,5 @@ public record CollateralAccount5
     [DisplayName("Collateral Segregation By Value")]
     [IsoXmlTag("CollSgrtnByVal")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CollateralSegregationByValue { get; init; }
+    public TrueFalseIndicator? CollateralSegregationByValue { get; init; }
 }

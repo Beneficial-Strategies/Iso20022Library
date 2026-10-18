@@ -32,7 +32,7 @@ public record SecurityParameters6
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public required IsoMax256Text Version { get; init; }
+    public required Max256Text Version { get; init; }
 
     /// <summary>
     /// Point of interaction challenge for cryptographic key injection.
@@ -41,7 +41,7 @@ public record SecurityParameters6
     [DisplayName("POI Challenge")]
     [IsoXmlTag("POIChllng")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public IsoMax140Binary? POIChallenge { get; init; }
+    public Max140Binary? POIChallenge { get; init; }
 
     /// <summary>
     /// Terminal manager challenge for cryptographic key injection.
@@ -50,7 +50,7 @@ public record SecurityParameters6
     [DisplayName("TM Challenge")]
     [IsoXmlTag("TMChllng")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public IsoMax140Binary? TMChallenge { get; init; }
+    public Max140Binary? TMChallenge { get; init; }
 
     /// <summary>
     /// Key to inject in the point of interaction, protected by the temporary key previously sent.

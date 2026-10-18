@@ -47,5 +47,5 @@ public record SettlementTax1
     [DisplayName("Tax Point Date")]
     [IsoXmlTag("TaxPtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TaxPointDate { get; init; }
+    public DateOnly? TaxPointDate { get; init; }
 }

@@ -32,6 +32,6 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatusChoice
         [IsoXmlTag("Rsn")]
         [IsoSimpleType(IsoSimpleType.Max140Text)]
         [StringLength(maximumLength: 140, MinimumLength = 1)]
-        public IsoMax140Text? Reason { get; init; }
+        public Max140Text? Reason { get; init; }
     }
 }

@@ -32,5 +32,5 @@ public record PurposeModification1
     [IsoXmlTag("Purp")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text Purpose { get; init; }
+    public required Max140Text Purpose { get; init; }
 }

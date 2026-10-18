@@ -85,7 +85,7 @@ public record ErrorV05 : IOuterRecord
     /// </summary>
     [DisplayName("Life Cycle Identification")]
     [IsoXmlTag("LifeCyclId")]
-    public IsoExact15Text? LifeCycleIdentification { get; init; }
+    public Exact15Text? LifeCycleIdentification { get; init; }
 
     /// <summary>
     /// National Data.
@@ -99,7 +99,7 @@ public record ErrorV05 : IOuterRecord
     /// </summary>
     [DisplayName("Original Message")]
     [IsoXmlTag("OrgnlMsg")]
-    public IsoMax100KBinary? OriginalMessage { get; init; }
+    public Max100KBinary? OriginalMessage { get; init; }
 
     /// <summary>
     /// Originator.
@@ -148,7 +148,7 @@ public record ErrorV05 : IOuterRecord
     /// </summary>
     [DisplayName("Retrieval Reference Number")]
     [IsoXmlTag("RtrvlRefNb")]
-    public IsoExact12Text? RetrievalReferenceNumber { get; init; }
+    public Exact12Text? RetrievalReferenceNumber { get; init; }
 
     /// <summary>
     /// Security Trailer.
@@ -176,12 +176,12 @@ public record ErrorV05 : IOuterRecord
     /// </summary>
     [DisplayName("System Trace Audit Number")]
     [IsoXmlTag("SysTracAudtNb")]
-    public required IsoMax12NumericText SystemTraceAuditNumber { get; init; }
+    public required Max12NumericText SystemTraceAuditNumber { get; init; }
 
     /// <summary>
     /// Transmission Date Time.
     /// </summary>
     [DisplayName("Transmission Date Time")]
     [IsoXmlTag("TrnsmssnDtTm")]
-    public required IsoISODateTime TransmissionDateTime { get; init; }
+    public required ISODateTime TransmissionDateTime { get; init; }
 }

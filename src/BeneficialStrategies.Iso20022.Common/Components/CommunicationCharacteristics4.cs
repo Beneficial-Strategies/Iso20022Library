@@ -41,7 +41,7 @@ public record CommunicationCharacteristics4
     [DisplayName("Active")]
     [IsoXmlTag("Actv")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator Active { get; init; }
+    public required TrueFalseIndicator Active { get; init; }
 
     /// <summary>
     /// Network parameters of the communication link.

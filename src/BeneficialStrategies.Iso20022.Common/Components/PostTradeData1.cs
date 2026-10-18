@@ -22,7 +22,7 @@ public record PostTradeData1
     [IsoId("_Y5ESYGIhEfCeoPFCHQnhvA")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
-    public required IsoISINOct2015Identifier ISIN { get; init; }
+    public required ISINOct2015Identifier ISIN { get; init; }
 
     /// <summary>
     /// Date and time when the transaction was executed.
@@ -30,7 +30,7 @@ public record PostTradeData1
     [IsoId("_igwlYGIhEfCeoPFCHQnhvA")]
     [DisplayName("Trading Date Time")]
     [IsoXmlTag("TradgDtTm")]
-    public required IsoISODateTime TradingDateTime { get; init; }
+    public required ISODateTime TradingDateTime { get; init; }
 
     /// <summary>
     /// Data related to the venue where the transaction was executed.
@@ -46,7 +46,7 @@ public record PostTradeData1
     [IsoId("_q5AakITPEfClBYp_xDbOWg")]
     [DisplayName("Third Country Trading Venue Identification")]
     [IsoXmlTag("ThrdCtryTradgVnId")]
-    public IsoMICIdentifier? ThirdCountryTradingVenueIdentification { get; init; }
+    public MICIdentifier? ThirdCountryTradingVenueIdentification { get; init; }
 
     /// <summary>
     /// Alphanumerical code assigned by trading venues and Approved Publication Arrangements (APAs) and used in any subsequent reference to the underlying trade.
@@ -55,7 +55,7 @@ public record PostTradeData1
     [IsoId("_hjFKQGIjEfCeoPFCHQnhvA")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
-    public IsoMax52Text? TransactionIdentification { get; init; }
+    public Max52Text? TransactionIdentification { get; init; }
 
     /// <summary>
     /// Number of transactions executed when deferred publication of details of several transactions in an aggregated form is required.
@@ -64,7 +64,7 @@ public record PostTradeData1
     [IsoId("_GkqmkGIkEfCeoPFCHQnhvA")]
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
-    public IsoDecimalNumber? NumberOfTransactions { get; init; }
+    public DecimalNumber? NumberOfTransactions { get; init; }
 
     /// <summary>
     /// Type of trading system on which the transaction was executed.
@@ -134,5 +134,5 @@ public record PostTradeData1
     [IsoId("_2tIwYGInEfCeoPFCHQnhvA")]
     [DisplayName("Suspicious Data")]
     [IsoXmlTag("SspcsData")]
-    public IsoTrueFalseIndicator? SuspiciousData { get; init; }
+    public TrueFalseIndicator? SuspiciousData { get; init; }
 }

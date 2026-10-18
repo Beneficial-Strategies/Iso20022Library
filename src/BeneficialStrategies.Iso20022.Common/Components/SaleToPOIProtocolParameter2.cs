@@ -40,7 +40,7 @@ public record SaleToPOIProtocolParameter2
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public required IsoMax256Text Version { get; init; }
+    public required Max256Text Version { get; init; }
 
     /// <summary>
     /// Identification used to retrieve HostCommunicationParameters.
@@ -50,7 +50,7 @@ public record SaleToPOIProtocolParameter2
     [IsoXmlTag("HstId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text HostIdentification { get; init; }
+    public required Max35Text HostIdentification { get; init; }
 
     /// <summary>
     /// Identification of the POI during communication with sale system.
@@ -60,7 +60,7 @@ public record SaleToPOIProtocolParameter2
     [IsoXmlTag("MrchntPOIId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MerchantPOIIdentification { get; init; }
+    public Max35Text? MerchantPOIIdentification { get; init; }
 
     /// <summary>
     /// Identification of the SaleSystem connected to the POI.
@@ -70,7 +70,7 @@ public record SaleToPOIProtocolParameter2
     [IsoXmlTag("SaleId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SaleIdentification { get; init; }
+    public Max35Text? SaleIdentification { get; init; }
 
     /// <summary>
     /// List of types that the receiver supports and that the sender could use as type of an ExternallyDefinedData message component.
@@ -78,5 +78,5 @@ public record SaleToPOIProtocolParameter2
     [IsoId("_vrXpwVFMEeyApZmLzm74zA")]
     [DisplayName("Externally Type Supported")]
     [IsoXmlTag("XtrnlyTpSpprtd")]
-    public SimpleValueList<IsoMax1025Text> ExternallyTypeSupported { get; init; } = [];
+    public SimpleValueList<Max1025Text> ExternallyTypeSupported { get; init; } = [];
 }

@@ -24,7 +24,7 @@ public record FinancialInstrument72
     [IsoXmlTag("SplmtryId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SupplementaryIdentification { get; init; }
+    public Max35Text? SupplementaryIdentification { get; init; }
 
     /// <summary>
     /// Specifies the form, that is, ownership, of the security.
@@ -42,7 +42,7 @@ public record FinancialInstrument72
     [IsoXmlTag("ClssTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClassType { get; init; }
+    public Max35Text? ClassType { get; init; }
 
     /// <summary>
     /// Income policy relating to a class type, that is, if income is paid out or retained in the fund.

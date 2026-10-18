@@ -23,7 +23,7 @@ public record GeneralBusinessInformationReturnCriteria1
     [DisplayName("Qualifier Indicator")]
     [IsoXmlTag("QlfrInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? QualifierIndicator { get; init; }
+    public RequestedIndicator? QualifierIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the subject is requested.
@@ -32,7 +32,7 @@ public record GeneralBusinessInformationReturnCriteria1
     [DisplayName("Subject Indicator")]
     [IsoXmlTag("SbjtInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? SubjectIndicator { get; init; }
+    public RequestedIndicator? SubjectIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the subject details are requested.
@@ -41,5 +41,5 @@ public record GeneralBusinessInformationReturnCriteria1
     [DisplayName("Subject Details Indicator")]
     [IsoXmlTag("SbjtDtlsInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? SubjectDetailsIndicator { get; init; }
+    public RequestedIndicator? SubjectDetailsIndicator { get; init; }
 }

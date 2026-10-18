@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeQueryExecutionFrequency1Cho
         /// </summary>
         [IsoXmlTag("Mnthly")]
         [IsoSimpleType(IsoSimpleType.Max3Number)]
-        public required IsoMax3Number Value { get; init; }
+        public required Max3Number Value { get; init; }
     }
 }

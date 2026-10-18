@@ -24,7 +24,7 @@ public record DeliveryInformation4
     [IsoXmlTag("DlvryNoteNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DeliveryNoteNumber { get; init; }
+    public Max35Text? DeliveryNoteNumber { get; init; }
 
     /// <summary>
     /// Delivery address.
@@ -50,7 +50,7 @@ public record DeliveryInformation4
     [IsoXmlTag("Instrs")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Instructions { get; init; }
+    public Max350Text? Instructions { get; init; }
 
     /// <summary>
     /// Contains the package delivery date.
@@ -59,7 +59,7 @@ public record DeliveryInformation4
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Contains the package delivery time.
@@ -68,5 +68,5 @@ public record DeliveryInformation4
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? Time { get; init; }
+    public ISOTime? Time { get; init; }
 }

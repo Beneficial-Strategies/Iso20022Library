@@ -32,7 +32,7 @@ public record FinancialInstrumentAttributesSD4
     [IsoXmlTag("CSDDsbrsdSctyDesc")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? CSDDisbursedSecurityDescription { get; init; }
+    public Max140Text? CSDDisbursedSecurityDescription { get; init; }
 
     /// <summary>
     /// Security identification of the security that will be distributed in fractions by the CSD (for example in the US - DTC, The Depository Trust Corporation) DTC (The Depository Trust Corporation) as a result of a corporate action.

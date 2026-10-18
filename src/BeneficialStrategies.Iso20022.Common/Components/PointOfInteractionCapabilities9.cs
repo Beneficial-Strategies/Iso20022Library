@@ -40,7 +40,7 @@ public record PointOfInteractionCapabilities9
     [DisplayName("PIN Length Capabilities")]
     [IsoXmlTag("PINLngthCpblties")]
     [IsoSimpleType(IsoSimpleType.PositiveNumber)]
-    public IsoPositiveNumber? PINLengthCapabilities { get; init; }
+    public PositiveNumber? PINLengthCapabilities { get; init; }
 
     /// <summary>
     /// Maximum number of characters of the approval code the POI is able to manage.
@@ -49,7 +49,7 @@ public record PointOfInteractionCapabilities9
     [DisplayName("Approval Code Length")]
     [IsoXmlTag("ApprvlCdLngth")]
     [IsoSimpleType(IsoSimpleType.PositiveNumber)]
-    public IsoPositiveNumber? ApprovalCodeLength { get; init; }
+    public PositiveNumber? ApprovalCodeLength { get; init; }
 
     /// <summary>
     /// Maximum data length in bytes that a card issuer can return to the ICC at the terminal.
@@ -58,7 +58,7 @@ public record PointOfInteractionCapabilities9
     [DisplayName("Max Script Length")]
     [IsoXmlTag("MxScrptLngth")]
     [IsoSimpleType(IsoSimpleType.PositiveNumber)]
-    public IsoPositiveNumber? MaxScriptLength { get; init; }
+    public PositiveNumber? MaxScriptLength { get; init; }
 
     /// <summary>
     /// True if the POI is able to capture card.
@@ -67,7 +67,7 @@ public record PointOfInteractionCapabilities9
     [DisplayName("Card Capture Capable")]
     [IsoXmlTag("CardCaptrCpbl")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CardCaptureCapable { get; init; }
+    public TrueFalseIndicator? CardCaptureCapable { get; init; }
 
     /// <summary>
     /// On-line and off-line capabilities of the POI (Point Of Interaction).

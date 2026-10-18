@@ -23,7 +23,7 @@ public record SecurityParameters2
     [DisplayName("POI Challenge")]
     [IsoXmlTag("POIChllng")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public IsoMax140Binary? POIChallenge { get; init; }
+    public Max140Binary? POIChallenge { get; init; }
 
     /// <summary>
     /// Terminal manager challenge for cryptographic key injection.
@@ -32,7 +32,7 @@ public record SecurityParameters2
     [DisplayName("TM Challenge")]
     [IsoXmlTag("TMChllng")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public IsoMax140Binary? TMChallenge { get; init; }
+    public Max140Binary? TMChallenge { get; init; }
 
     /// <summary>
     /// Key to inject in the point of interaction, protected by the temporary key previously sent.

@@ -21,19 +21,19 @@ public record DigitalTokenAmount3
     /// </summary>
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax30Text? Description { get; init; }
+    public Max30Text? Description { get; init; }
 
     /// <summary>
     /// Identifier.
     /// </summary>
     [DisplayName("Identifier")]
     [IsoXmlTag("Idr")]
-    public IsoDTI2024Identifier? Identifier { get; init; }
+    public DTI2024Identifier? Identifier { get; init; }
 
     /// <summary>
     /// Unit.
     /// </summary>
     [DisplayName("Unit")]
     [IsoXmlTag("Unit")]
-    public required IsoMax30DecimalNumber Unit { get; init; }
+    public required Max30DecimalNumber Unit { get; init; }
 }

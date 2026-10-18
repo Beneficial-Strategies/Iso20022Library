@@ -35,35 +35,35 @@ public record CustomerDevice5
     /// </summary>
     [DisplayName("Device Name")]
     [IsoXmlTag("DvcNm")]
-    public IsoMax100Text? DeviceName { get; init; }
+    public Max100Text? DeviceName { get; init; }
 
     /// <summary>
     /// Device Name Normalized.
     /// </summary>
     [DisplayName("Device Name Normalized")]
     [IsoXmlTag("DvcNmNrmlzd")]
-    public IsoMax100Text? DeviceNameNormalized { get; init; }
+    public Max100Text? DeviceNameNormalized { get; init; }
 
     /// <summary>
     /// Email.
     /// </summary>
     [DisplayName("Email")]
     [IsoXmlTag("Email")]
-    public IsoMax256Text? Email { get; init; }
+    public Max256Text? Email { get; init; }
 
     /// <summary>
     /// Geographic Location.
     /// </summary>
     [DisplayName("Geographic Location")]
     [IsoXmlTag("GeogcLctn")]
-    public IsoGeographicPointInDecimalDegrees? GeographicLocation { get; init; }
+    public GeographicPointInDecimalDegrees? GeographicLocation { get; init; }
 
     /// <summary>
     /// IP Address.
     /// </summary>
     [DisplayName("IP Address")]
     [IsoXmlTag("IPAdr")]
-    public IsoMax70Text? IPAddress { get; init; }
+    public Max70Text? IPAddress { get; init; }
 
     /// <summary>
     /// Language.
@@ -84,28 +84,28 @@ public record CustomerDevice5
     /// </summary>
     [DisplayName("Manufacturer")]
     [IsoXmlTag("Manfctr")]
-    public IsoMax70Text? Manufacturer { get; init; }
+    public Max70Text? Manufacturer { get; init; }
 
     /// <summary>
     /// Manufacturer Model Identification.
     /// </summary>
     [DisplayName("Manufacturer Model Identification")]
     [IsoXmlTag("ManfctrMdlId")]
-    public IsoMax70Text? ManufacturerModelIdentification { get; init; }
+    public Max70Text? ManufacturerModelIdentification { get; init; }
 
     /// <summary>
     /// Operating System Build.
     /// </summary>
     [DisplayName("Operating System Build")]
     [IsoXmlTag("OprgSysBld")]
-    public IsoMax70Text? OperatingSystemBuild { get; init; }
+    public Max70Text? OperatingSystemBuild { get; init; }
 
     /// <summary>
     /// Operating System Identification.
     /// </summary>
     [DisplayName("Operating System Identification")]
     [IsoXmlTag("OprgSysId")]
-    public IsoMax70Text? OperatingSystemIdentification { get; init; }
+    public Max70Text? OperatingSystemIdentification { get; init; }
 
     /// <summary>
     /// Operating System Type.
@@ -119,35 +119,35 @@ public record CustomerDevice5
     /// </summary>
     [DisplayName("Operating System Version")]
     [IsoXmlTag("OprgSysVrsn")]
-    public IsoMax35Text? OperatingSystemVersion { get; init; }
+    public Max35Text? OperatingSystemVersion { get; init; }
 
     /// <summary>
     /// Other Operating System Type.
     /// </summary>
     [DisplayName("Other Operating System Type")]
     [IsoXmlTag("OthrOprgSysTp")]
-    public IsoMax35Text? OtherOperatingSystemType { get; init; }
+    public Max35Text? OtherOperatingSystemType { get; init; }
 
     /// <summary>
     /// Other Type.
     /// </summary>
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Phone.
     /// </summary>
     [DisplayName("Phone")]
     [IsoXmlTag("Phne")]
-    public IsoPhoneNumber? Phone { get; init; }
+    public PhoneNumber? Phone { get; init; }
 
     /// <summary>
     /// Provider.
     /// </summary>
     [DisplayName("Provider")]
     [IsoXmlTag("Prvdr")]
-    public IsoMax35Text? Provider { get; init; }
+    public Max35Text? Provider { get; init; }
 
     /// <summary>
     /// Type.

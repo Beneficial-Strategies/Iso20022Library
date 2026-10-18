@@ -25,7 +25,7 @@ public record ChargesRecord5
     [IsoXmlTag("ChrgsRcrdId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ChargesRecordIdentification { get; init; }
+    public Max35Text? ChargesRecordIdentification { get; init; }
 
     /// <summary>
     /// Identifies the underlying transaction(s) to which the charges apply.
@@ -117,5 +117,5 @@ public record ChargesRecord5
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? AdditionalInformation { get; init; }
+    public Max140Text? AdditionalInformation { get; init; }
 }

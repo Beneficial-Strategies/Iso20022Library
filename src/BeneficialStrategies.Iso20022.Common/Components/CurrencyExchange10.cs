@@ -31,7 +31,7 @@ public record CurrencyExchange10
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? ExchangeRate { get; init; }
+    public BaseOneRate? ExchangeRate { get; init; }
 
     /// <summary>
     /// Forward exchange rate as agreed between the counterparties in the contractual agreement, expressed as a price of base currency in the quoted currency.
@@ -40,7 +40,7 @@ public record CurrencyExchange10
     [DisplayName("Forward Exchange Rate")]
     [IsoXmlTag("FwdXchgRate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? ForwardExchangeRate { get; init; }
+    public BaseOneRate? ForwardExchangeRate { get; init; }
 
     /// <summary>
     /// Indicates the quote base for the exchange rate.

@@ -30,7 +30,7 @@ public record DisputeDocumentation2
     [IsoId("_L7k0JWvYEfCyxsm1jzUNug")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public IsoMax35Text? Type { get; init; }
+    public Max35Text? Type { get; init; }
 
     /// <summary>
     /// Content of or reference to the message.
@@ -38,5 +38,5 @@ public record DisputeDocumentation2
     [IsoId("_L7k0J2vYEfCyxsm1jzUNug")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
-    public required IsoMax20KText Value { get; init; }
+    public required Max20KText Value { get; init; }
 }

@@ -32,7 +32,7 @@ public record ResponseType5
     [IsoXmlTag("RspnRsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ResponseReason { get; init; }
+    public Max35Text? ResponseReason { get; init; }
 
     /// <summary>
     /// Additional information on the response for further examination.
@@ -42,5 +42,5 @@ public record ResponseType5
     [IsoXmlTag("AddtlRspnInf")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? AdditionalResponseInformation { get; init; }
+    public Max140Text? AdditionalResponseInformation { get; init; }
 }

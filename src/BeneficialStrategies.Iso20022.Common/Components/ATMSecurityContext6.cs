@@ -54,5 +54,5 @@ public record ATMSecurityContext6
     [IsoId("_HvJPqbZ5EfCUZfsQO4rYeA")]
     [DisplayName("Host Challenge")]
     [IsoXmlTag("HstChllng")]
-    public IsoMax140Binary? HostChallenge { get; init; }
+    public Max140Binary? HostChallenge { get; init; }
 }

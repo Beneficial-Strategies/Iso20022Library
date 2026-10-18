@@ -35,21 +35,21 @@ public record Verification6
     /// </summary>
     [DisplayName("Other Entity")]
     [IsoXmlTag("OthrNtty")]
-    public IsoMax35Text? OtherEntity { get; init; }
+    public Max35Text? OtherEntity { get; init; }
 
     /// <summary>
     /// Other Result.
     /// </summary>
     [DisplayName("Other Result")]
     [IsoXmlTag("OthrRslt")]
-    public IsoMax500Text? OtherResult { get; init; }
+    public Max500Text? OtherResult { get; init; }
 
     /// <summary>
     /// Other Type.
     /// </summary>
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// PIN Data.
@@ -77,7 +77,7 @@ public record Verification6
     /// </summary>
     [DisplayName("Sub Type")]
     [IsoXmlTag("SubTp")]
-    public IsoMax35Text? SubType { get; init; }
+    public Max35Text? SubType { get; init; }
 
     /// <summary>
     /// Type.

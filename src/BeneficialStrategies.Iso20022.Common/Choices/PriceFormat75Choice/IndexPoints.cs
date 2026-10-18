@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat75Choice
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("IndxPts")]
-        public required IsoDecimalNumber Value { get; init; }
+        public required DecimalNumber Value { get; init; }
     }
 }

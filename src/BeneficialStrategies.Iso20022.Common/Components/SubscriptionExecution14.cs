@@ -21,7 +21,7 @@ public record SubscriptionExecution14
     /// </summary>
     [DisplayName("Accumulation Right Reference")]
     [IsoXmlTag("AcmltnRghtRef")]
-    public IsoMax35Text? AccumulationRightReference { get; init; }
+    public Max35Text? AccumulationRightReference { get; init; }
 
     /// <summary>
     /// Best Execution.
@@ -35,7 +35,7 @@ public record SubscriptionExecution14
     /// </summary>
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
-    public IsoISODate? CashSettlementDate { get; init; }
+    public DateOnly? CashSettlementDate { get; init; }
 
     /// <summary>
     /// Cash Settlement Details.
@@ -49,14 +49,14 @@ public record SubscriptionExecution14
     /// </summary>
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
-    public IsoMax35Text? ClientReference { get; init; }
+    public Max35Text? ClientReference { get; init; }
 
     /// <summary>
     /// Cum Dividend Indicator.
     /// </summary>
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
-    public required IsoYesNoIndicator CumDividendIndicator { get; init; }
+    public required YesNoIndicator CumDividendIndicator { get; init; }
 
     /// <summary>
     /// Customer Conduct Classification.
@@ -77,7 +77,7 @@ public record SubscriptionExecution14
     /// </summary>
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
-    public required IsoMax35Text DealReference { get; init; }
+    public required Max35Text DealReference { get; init; }
 
     /// <summary>
     /// Equalisation.
@@ -154,7 +154,7 @@ public record SubscriptionExecution14
     /// </summary>
     [DisplayName("Letter Intent Reference")]
     [IsoXmlTag("LttrInttRef")]
-    public IsoMax35Text? LetterIntentReference { get; init; }
+    public Max35Text? LetterIntentReference { get; init; }
 
     /// <summary>
     /// Negotiated Trade.
@@ -175,14 +175,14 @@ public record SubscriptionExecution14
     /// </summary>
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
-    public IsoMax350Text? NonStandardSettlementInformation { get; init; }
+    public Max350Text? NonStandardSettlementInformation { get; init; }
 
     /// <summary>
     /// Order Reference.
     /// </summary>
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
-    public required IsoMax35Text OrderReference { get; init; }
+    public required Max35Text OrderReference { get; init; }
 
     /// <summary>
     /// Order Type.
@@ -203,21 +203,21 @@ public record SubscriptionExecution14
     /// </summary>
     [DisplayName("Partially Executed Indicator")]
     [IsoXmlTag("PrtlyExctdInd")]
-    public required IsoYesNoIndicator PartiallyExecutedIndicator { get; init; }
+    public required YesNoIndicator PartiallyExecutedIndicator { get; init; }
 
     /// <summary>
     /// Partial Settlement Of Cash.
     /// </summary>
     [DisplayName("Partial Settlement Of Cash")]
     [IsoXmlTag("PrtlSttlmOfCsh")]
-    public IsoPercentageRate? PartialSettlementOfCash { get; init; }
+    public PercentageRate? PartialSettlementOfCash { get; init; }
 
     /// <summary>
     /// Partial Settlement Of Units.
     /// </summary>
     [DisplayName("Partial Settlement Of Units")]
     [IsoXmlTag("PrtlSttlmOfUnits")]
-    public IsoPercentageRate? PartialSettlementOfUnits { get; init; }
+    public PercentageRate? PartialSettlementOfUnits { get; init; }
 
     /// <summary>
     /// Physical Delivery Details.
@@ -231,7 +231,7 @@ public record SubscriptionExecution14
     /// </summary>
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
-    public required IsoYesNoIndicator PhysicalDeliveryIndicator { get; init; }
+    public required YesNoIndicator PhysicalDeliveryIndicator { get; init; }
 
     /// <summary>
     /// Refund.
@@ -350,5 +350,5 @@ public record SubscriptionExecution14
     /// </summary>
     [DisplayName("Units Number")]
     [IsoXmlTag("UnitsNb")]
-    public required IsoDecimalNumber UnitsNumber { get; init; }
+    public required DecimalNumber UnitsNumber { get; init; }
 }

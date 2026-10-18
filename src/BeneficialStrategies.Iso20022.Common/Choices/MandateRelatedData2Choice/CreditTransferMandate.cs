@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateRelatedData2Choice
         [IsoXmlTag("MndtId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? MandateIdentification { get; init; }
+        public Max35Text? MandateIdentification { get; init; }
 
         /// <summary>
         /// Specifies the type of mandate, such as paper, electronic or scheme.
@@ -41,7 +41,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateRelatedData2Choice
         [DisplayName("Date Of Signature")]
         [IsoXmlTag("DtOfSgntr")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? DateOfSignature { get; init; }
+        public DateOnly? DateOfSignature { get; init; }
 
         /// <summary>
         /// Date on which the credit transfer mandate has been verified.
@@ -50,7 +50,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateRelatedData2Choice
         [DisplayName("Date Of Verification")]
         [IsoXmlTag("DtOfVrfctn")]
         [IsoSimpleType(IsoSimpleType.ISODateTime)]
-        public IsoISODateTime? DateOfVerification { get; init; }
+        public ISODateTime? DateOfVerification { get; init; }
 
         /// <summary>
         /// Additional security provisions, such as a digital signature, as provided by the debtor.
@@ -59,7 +59,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateRelatedData2Choice
         [DisplayName("Electronic Signature")]
         [IsoXmlTag("ElctrncSgntr")]
         [IsoSimpleType(IsoSimpleType.Max10KBinary)]
-        public IsoMax10KBinary? ElectronicSignature { get; init; }
+        public Max10KBinary? ElectronicSignature { get; init; }
 
         /// <summary>
         /// Date of the first payment of a recurrent credit transfer as per the mandate.
@@ -68,7 +68,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateRelatedData2Choice
         [DisplayName("First Payment Date")]
         [IsoXmlTag("FrstPmtDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? FirstPaymentDate { get; init; }
+        public DateOnly? FirstPaymentDate { get; init; }
 
         /// <summary>
         /// Date of the final payment of a recurrent credit transfer as per the mandate.
@@ -77,7 +77,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateRelatedData2Choice
         [DisplayName("Final Payment Date")]
         [IsoXmlTag("FnlPmtDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? FinalPaymentDate { get; init; }
+        public DateOnly? FinalPaymentDate { get; init; }
 
         /// <summary>
         /// Regularity with which credit transfer instructions are to be created and processed.

@@ -23,7 +23,7 @@ public record ElementIdentification1
     [DisplayName("Document Index")]
     [IsoXmlTag("DocIndx")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public required IsoMax3NumericText DocumentIndex { get; init; }
+    public required Max3NumericText DocumentIndex { get; init; }
 
     /// <summary>
     /// Specifies from the root of the message the complete path of the element that violated a rule.
@@ -33,7 +33,7 @@ public record ElementIdentification1
     [IsoXmlTag("ElmtPth")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text ElementPath { get; init; }
+    public required Max350Text ElementPath { get; init; }
 
     /// <summary>
     /// Name of the element.
@@ -43,7 +43,7 @@ public record ElementIdentification1
     [IsoXmlTag("ElmtNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ElementName { get; init; }
+    public required Max35Text ElementName { get; init; }
 
     /// <summary>
     /// Content of the element.
@@ -53,5 +53,5 @@ public record ElementIdentification1
     [IsoXmlTag("ElmtVal")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? ElementValue { get; init; }
+    public Max140Text? ElementValue { get; init; }
 }

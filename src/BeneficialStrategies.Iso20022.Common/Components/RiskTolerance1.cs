@@ -23,7 +23,7 @@ public record RiskTolerance1
     [DisplayName("Risk Tolerance PRIIPS Methodology")]
     [IsoXmlTag("RskTlrncePRIIPSMthdlgy")]
     [IsoSimpleType(IsoSimpleType.Max1Number)]
-    public IsoMax1Number? RiskTolerancePRIIPSMethodology { get; init; }
+    public Max1Number? RiskTolerancePRIIPSMethodology { get; init; }
 
     /// <summary>
     /// Specifies the Synthetic Risk and Reward Indicator (SRRI). When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 04020.
@@ -32,7 +32,7 @@ public record RiskTolerance1
     [DisplayName("Risk Tolerance UCITS Methodology")]
     [IsoXmlTag("RskTlrnceUCITSMthdlgy")]
     [IsoSimpleType(IsoSimpleType.Max1Number)]
-    public IsoMax1Number? RiskToleranceUCITSMethodology { get; init; }
+    public Max1Number? RiskToleranceUCITSMethodology { get; init; }
 
     /// <summary>
     /// Specifies the risk tolerance for non-PRIIPs and non-UCITS instructions. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 04030.
@@ -49,7 +49,7 @@ public record RiskTolerance1
     [DisplayName("Risk Tolerance For Non PRIIPS And Non UCITS Spain")]
     [IsoXmlTag("RskTlrnceForNonPRIIPSAndNonUCITSES")]
     [IsoSimpleType(IsoSimpleType.Max1Number)]
-    public IsoMax1Number? RiskToleranceForNonPRIIPSAndNonUCITSSpain { get; init; }
+    public Max1Number? RiskToleranceForNonPRIIPSAndNonUCITSSpain { get; init; }
 
     /// <summary>
     /// Specifies the risk tolerance for a German product. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 04050.

@@ -22,7 +22,7 @@ public record ManifestData4
     [IsoId("_zvgqMcF1EfC5bNIScwOWFA")]
     [DisplayName("Message Definition Identifier")]
     [IsoXmlTag("MsgDefIdr")]
-    public SimpleValueList<IsoMax35Text> MessageDefinitionIdentifier { get; init; } = [];
+    public SimpleValueList<Max35Text> MessageDefinitionIdentifier { get; init; } = [];
 
     /// <summary>
     /// Identification of the format of the Business Message.
@@ -30,7 +30,7 @@ public record ManifestData4
     [IsoId("_zvgqM8F1EfC5bNIScwOWFA")]
     [DisplayName("Format")]
     [IsoXmlTag("Frmt")]
-    public IsoMax35Text? Format { get; init; }
+    public Max35Text? Format { get; init; }
 
     /// <summary>
     /// Number of instances (messages) for each declared type.
@@ -38,7 +38,7 @@ public record ManifestData4
     [IsoId("_zvgqNcF1EfC5bNIScwOWFA")]
     [DisplayName("Number Of Business Messages")]
     [IsoXmlTag("NbOfBizMsgs")]
-    public IsoNumber? NumberOfBusinessMessages { get; init; }
+    public Number? NumberOfBusinessMessages { get; init; }
 
     /// <summary>
     /// Specifies the market practice to which the message conforms.

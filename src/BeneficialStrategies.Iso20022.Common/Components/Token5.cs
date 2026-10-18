@@ -22,7 +22,7 @@ public record Token5
     [IsoId("_t7ehIRRBEfC_aaedwHHlmw")]
     [DisplayName("Payment Token")]
     [IsoXmlTag("PmtTkn")]
-    public IsoMax19NumericText? PaymentToken { get; init; }
+    public Max19NumericText? PaymentToken { get; init; }
 
     /// <summary>
     /// Contains the type of token.
@@ -30,7 +30,7 @@ public record Token5
     [IsoId("_N5idwC9gEfCD0_iZ8tw-zA")]
     [DisplayName("Token Type")]
     [IsoXmlTag("TknTp")]
-    public IsoMax3Text? TokenType { get; init; }
+    public Max3Text? TokenType { get; init; }
 
     /// <summary>
     /// Expiry date of the payment token or the PAN.
@@ -38,7 +38,7 @@ public record Token5
     [IsoId("_t7ehIxRBEfC_aaedwHHlmw")]
     [DisplayName("Token Expiry Date")]
     [IsoXmlTag("TknXpryDt")]
-    public IsoISOYearMonth? TokenExpiryDate { get; init; }
+    public ISOYearMonth? TokenExpiryDate { get; init; }
 
     /// <summary>
     /// Identification of a party requesting a token.
@@ -46,7 +46,7 @@ public record Token5
     [IsoId("_t7ehJRRBEfC_aaedwHHlmw")]
     [DisplayName("Token Requestor Identification")]
     [IsoXmlTag("TknRqstrId")]
-    public IsoMax11NumericText? TokenRequestorIdentification { get; init; }
+    public Max11NumericText? TokenRequestorIdentification { get; init; }
 
     /// <summary>
     /// Supporting information for the Token Assurance Method.
@@ -54,7 +54,7 @@ public record Token5
     [IsoId("_t7ehJxRBEfC_aaedwHHlmw")]
     [DisplayName("Token Assurance Data")]
     [IsoXmlTag("TknAssrncData")]
-    public IsoMax140Text? TokenAssuranceData { get; init; }
+    public Max140Text? TokenAssuranceData { get; init; }
 
     /// <summary>
     /// Value that allows a Token Service Provider to indicate the identification and verification performed representing the binding of the payment token to the underlying PAN and cardholder.
@@ -62,7 +62,7 @@ public record Token5
     [IsoId("_t7ehKRRBEfC_aaedwHHlmw")]
     [DisplayName("Token Assurance Method")]
     [IsoXmlTag("TknAssrncMtd")]
-    public IsoMax2NumericText? TokenAssuranceMethod { get; init; }
+    public Max2NumericText? TokenAssuranceMethod { get; init; }
 
     /// <summary>
     /// A reference to the token.
@@ -70,7 +70,7 @@ public record Token5
     [IsoId("_2H71AXn2EfCmC4yYaU27Kg")]
     [DisplayName("Token Reference Identification")]
     [IsoXmlTag("TknRefId")]
-    public IsoMax35Text? TokenReferenceIdentification { get; init; }
+    public Max35Text? TokenReferenceIdentification { get; init; }
 
     /// <summary>
     /// Original transaction was initiated by Token.
@@ -78,7 +78,7 @@ public record Token5
     [IsoId("_t7ehKxRBEfC_aaedwHHlmw")]
     [DisplayName("Token Initiated Indicator")]
     [IsoXmlTag("TknInittdInd")]
-    public IsoTrueFalseIndicator? TokenInitiatedIndicator { get; init; }
+    public TrueFalseIndicator? TokenInitiatedIndicator { get; init; }
 
     /// <summary>
     /// Storage location of the token. P000-P999 reserved for private use, N000-N999 reserved for national use.
@@ -102,7 +102,7 @@ public record Token5
     [IsoId("_S--_gC9eEfCD0_iZ8tw-zA")]
     [DisplayName("Non Payment")]
     [IsoXmlTag("NonPmt")]
-    public IsoTrueFalseIndicator? NonPayment { get; init; }
+    public TrueFalseIndicator? NonPayment { get; init; }
 
     /// <summary>
     /// Contains the name of the token requestor
@@ -110,7 +110,7 @@ public record Token5
     [IsoId("_9NYe8C9eEfCD0_iZ8tw-zA")]
     [DisplayName("Token Requestor Name")]
     [IsoXmlTag("TknRqstrNm")]
-    public IsoMax70Text? TokenRequestorName { get; init; }
+    public Max70Text? TokenRequestorName { get; init; }
 
     /// <summary>
     /// Indicate the channel used to update the token.
@@ -118,7 +118,7 @@ public record Token5
     [IsoId("_WiUG4C9fEfCD0_iZ8tw-zA")]
     [DisplayName("Updated Channel")]
     [IsoXmlTag("UpdtdChanl")]
-    public IsoMax35Text? UpdatedChannel { get; init; }
+    public Max35Text? UpdatedChannel { get; init; }
 
     /// <summary>
     /// Contains status of the token.
@@ -126,7 +126,7 @@ public record Token5
     [IsoId("_hyy8oC9fEfCD0_iZ8tw-zA")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
-    public IsoMax35Text? Status { get; init; }
+    public Max35Text? Status { get; init; }
 
     /// <summary>
     /// The Date and time when token is activated.
@@ -134,7 +134,7 @@ public record Token5
     [IsoId("_8V5ZEK8dEfCnL-2fAG0ssA")]
     [DisplayName("Token Activation Date Time")]
     [IsoXmlTag("TknActvtnDtTm")]
-    public IsoISODateTime? TokenActivationDateTime { get; init; }
+    public ISODateTime? TokenActivationDateTime { get; init; }
 
     /// <summary>
     /// Original token.
@@ -150,7 +150,7 @@ public record Token5
     [IsoId("_AiY2ckVZEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications. 
@@ -158,5 +158,5 @@ public record Token5
     [IsoId("_AiY2c0VZEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

@@ -23,7 +23,7 @@ public record DocumentEntryAmendment1
     [DisplayName("Correcting Entry Number")]
     [IsoXmlTag("CrrctgNtryNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber CorrectingEntryNumber { get; init; }
+    public required Number CorrectingEntryNumber { get; init; }
 
     /// <summary>
     /// Data related to an original document.

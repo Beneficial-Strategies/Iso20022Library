@@ -23,5 +23,5 @@ public record Parameter1
     [DisplayName("Initialisation Vector")]
     [IsoXmlTag("InitlstnVctr")]
     [IsoSimpleType(IsoSimpleType.Max500Binary)]
-    public IsoMax500Binary? InitialisationVector { get; init; }
+    public Max500Binary? InitialisationVector { get; init; }
 }

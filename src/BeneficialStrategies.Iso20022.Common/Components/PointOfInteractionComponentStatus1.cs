@@ -24,7 +24,7 @@ public record PointOfInteractionComponentStatus1
     [IsoXmlTag("VrsnNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? VersionNumber { get; init; }
+    public Max35Text? VersionNumber { get; init; }
 
     /// <summary>
     /// Current status of the component.

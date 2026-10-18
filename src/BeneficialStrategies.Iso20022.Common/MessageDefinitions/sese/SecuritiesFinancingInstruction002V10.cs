@@ -71,7 +71,7 @@ public record SecuritiesFinancingInstruction002V10 : IOuterRecord
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax16Text TransactionIdentification { get; init; }
+    public required RestrictedFINXMax16Text TransactionIdentification { get; init; }
 
     /// <summary>
     /// Securities financing transaction identification information, type (repurchase agreement, reverse repurchase agreement, securities lending or securities borrowing) and other parameters.

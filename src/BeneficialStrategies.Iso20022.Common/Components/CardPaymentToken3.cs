@@ -22,7 +22,7 @@ public record CardPaymentToken3
     [IsoId("_AXb2EGluEeSGkpGpjm7tzg")]
     [DisplayName("Token Characteristic")]
     [IsoXmlTag("TknChrtc")]
-    public SimpleValueList<IsoMax35Text> TokenCharacteristic { get; init; } = [];
+    public SimpleValueList<Max35Text> TokenCharacteristic { get; init; } = [];
 
     /// <summary>
     /// Identifier of a token provider requestor.
@@ -39,5 +39,5 @@ public record CardPaymentToken3
     [DisplayName("Token Assurance Level")]
     [IsoXmlTag("TknAssrncLvl")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? TokenAssuranceLevel { get; init; }
+    public Number? TokenAssuranceLevel { get; init; }
 }

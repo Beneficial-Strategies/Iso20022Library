@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.FiscalYear1Choice
         /// </summary>
         [IsoXmlTag("StartDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate Value { get; init; }
+        public required DateOnly Value { get; init; }
     }
 }

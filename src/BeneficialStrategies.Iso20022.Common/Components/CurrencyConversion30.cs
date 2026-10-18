@@ -21,7 +21,7 @@ public record CurrencyConversion30
     /// </summary>
     [DisplayName("Accepted By Cardholder")]
     [IsoXmlTag("AccptdByCrdhldr")]
-    public IsoTrueFalseIndicator? AcceptedByCardholder { get; init; }
+    public TrueFalseIndicator? AcceptedByCardholder { get; init; }
 
     /// <summary>
     /// Conversion.

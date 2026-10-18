@@ -47,7 +47,7 @@ public record SyndicatedLoan2
     [DisplayName("Share")]
     [IsoXmlTag("Shr")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Share { get; init; }
+    public PercentageRate? Share { get; init; }
 
     /// <summary>
     /// Provides details on the currency exchange rate and contract.

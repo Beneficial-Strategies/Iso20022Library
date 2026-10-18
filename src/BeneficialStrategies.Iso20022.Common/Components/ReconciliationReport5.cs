@@ -24,7 +24,7 @@ public record ReconciliationReport5
     [IsoXmlTag("TechRcrdId")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? TechnicalRecordIdentification { get; init; }
+    public Max140Text? TechnicalRecordIdentification { get; init; }
 
     /// <summary>
     /// Information related to transactions that are subject of reconciliation.
@@ -41,7 +41,7 @@ public record ReconciliationReport5
     [DisplayName("Modified")]
     [IsoXmlTag("Modfd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator Modified { get; init; }
+    public required TrueFalseIndicator Modified { get; init; }
 
     /// <summary>
     /// Indication whether the reconciliation is required.

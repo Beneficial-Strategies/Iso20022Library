@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Valid From")]
         [IsoXmlTag("VldFr")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? ValidFrom { get; init; }
+        public DateOnly? ValidFrom { get; init; }
 
         /// <summary>
         /// Name by which a party is known and which is usually used to identify that party.
@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [IsoXmlTag("Nm")]
         [IsoSimpleType(IsoSimpleType.Max350Text)]
         [StringLength(maximumLength: 350, MinimumLength = 1)]
-        public IsoMax350Text? Name { get; init; }
+        public Max350Text? Name { get; init; }
 
         /// <summary>
         /// Specifies the short name of the organisation.
@@ -43,6 +43,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [IsoXmlTag("ShrtNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? ShortName { get; init; }
+        public Max35Text? ShortName { get; init; }
     }
 }

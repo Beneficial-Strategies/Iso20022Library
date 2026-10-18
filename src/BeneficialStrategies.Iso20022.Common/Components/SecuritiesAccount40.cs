@@ -24,7 +24,7 @@ public record SecuritiesAccount40
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax35Text Identification { get; init; }
+    public required RestrictedFINXMax35Text Identification { get; init; }
 
     /// <summary>
     /// Specifies the type of securities account.
@@ -42,7 +42,7 @@ public record SecuritiesAccount40
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Name { get; init; }
+    public Max70Text? Name { get; init; }
 
     /// <summary>
     /// Supplementary registration information applying to a specific block of units for dealing and reporting purposes. The supplementary registration information may be used when all the units are registered, for example, to a funds supermarket, but holdings for each investor have to be reconciled individually.
@@ -52,5 +52,5 @@ public record SecuritiesAccount40
     [IsoXmlTag("Dsgnt")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoRestrictedFINXMax35Text? Designation { get; init; }
+    public RestrictedFINXMax35Text? Designation { get; init; }
 }

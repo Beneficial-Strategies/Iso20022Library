@@ -23,7 +23,7 @@ public record InstructedCorporateActionOption4
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public IsoExact3NumericText? OptionNumber { get; init; }
+    public Exact3NumericText? OptionNumber { get; init; }
 
     /// <summary>
     /// Specifies the corporate action options available to the account owner.
@@ -56,7 +56,7 @@ public record InstructedCorporateActionOption4
     [DisplayName("Deadline Date Time")]
     [IsoXmlTag("DdlnDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime DeadlineDateTime { get; init; }
+    public required ISODateTime DeadlineDateTime { get; init; }
 
     /// <summary>
     /// Specifies the type of deadline for instructing.

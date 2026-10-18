@@ -89,7 +89,7 @@ public record FundReferenceDataReportV06 : IOuterRecord
     [IsoXmlTag("FndRefDataRptId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? FundReferenceDataReportIdentification { get; init; }
+    public Max35Text? FundReferenceDataReportIdentification { get; init; }
 
     /// <summary>
     /// Fund reference data.

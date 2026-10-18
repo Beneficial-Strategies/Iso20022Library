@@ -31,7 +31,7 @@ public record PriceValueChange1
     [DisplayName("Amount Sign")]
     [IsoXmlTag("AmtSgn")]
     [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
-    public IsoPlusOrMinusIndicator? AmountSign { get; init; }
+    public PlusOrMinusIndicator? AmountSign { get; init; }
 
     /// <summary>
     /// Rate by which the price has changed.
@@ -40,5 +40,5 @@ public record PriceValueChange1
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Rate { get; init; }
+    public PercentageRate? Rate { get; init; }
 }

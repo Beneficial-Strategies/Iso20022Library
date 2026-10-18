@@ -24,7 +24,7 @@ public record Transaction98
     [IsoId("_gDGuUt0oEeil7LQldntseg")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
-    public SimpleValueList<IsoExact4NumericText> MessageReason { get; init; } = [];
+    public SimpleValueList<Exact4NumericText> MessageReason { get; init; } = [];
 
     /// <summary>
     /// Supports message reason codes that are not defined in external code list.
@@ -32,7 +32,7 @@ public record Transaction98
     [IsoId("_gDGuU90oEeil7LQldntseg")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
-    public SimpleValueList<IsoMax35Text> AlternateMessageReason { get; init; } = [];
+    public SimpleValueList<Max35Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Identification of the transaction.
@@ -67,7 +67,7 @@ public record Transaction98
     [IsoXmlTag("OthrFileActnTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherFileActionType { get; init; }
+    public Max35Text? OtherFileActionType { get; init; }
 
     /// <summary>
     /// Details pertaining to the file action.

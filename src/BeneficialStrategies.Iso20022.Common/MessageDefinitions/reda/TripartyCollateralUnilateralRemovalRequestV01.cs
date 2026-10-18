@@ -68,7 +68,7 @@ public record TripartyCollateralUnilateralRemovalRequestV01 : IOuterRecord
     [IsoXmlTag("RmvlReqId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text RemovalRequestIdentification { get; init; }
+    public required Max35Text RemovalRequestIdentification { get; init; }
 
     /// <summary>
     /// Instructing party sending the removal request.

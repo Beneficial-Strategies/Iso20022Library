@@ -22,7 +22,7 @@ public record SecuritiesTradeDetails154
     [IsoId("_1hTj3ZaHEfC2_67yGLymgA")]
     [DisplayName("Notification Sender Transaction Identification")]
     [IsoXmlTag("NtfctnSndrTxId")]
-    public IsoMax35Text? NotificationSenderTransactionIdentification { get; init; }
+    public Max35Text? NotificationSenderTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the transaction as known by the notification receiver.
@@ -30,7 +30,7 @@ public record SecuritiesTradeDetails154
     [IsoId("_1hTj6ZaHEfC2_67yGLymgA")]
     [DisplayName("Notification Receiver Transaction Identification")]
     [IsoXmlTag("NtfctnRcvrTxId")]
-    public IsoMax35Text? NotificationReceiverTransactionIdentification { get; init; }
+    public Max35Text? NotificationReceiverTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique reference agreed upon by the two trade counterparties to identify the trade.
@@ -38,7 +38,7 @@ public record SecuritiesTradeDetails154
     [IsoId("_1hTj9ZaHEfC2_67yGLymgA")]
     [DisplayName("Common Identification")]
     [IsoXmlTag("CmonId")]
-    public IsoMax35Text? CommonIdentification { get; init; }
+    public Max35Text? CommonIdentification { get; init; }
 
     /// <summary>
     /// Specifies if the movement on a securities account results from a deliver or a receive instruction.
@@ -86,7 +86,7 @@ public record SecuritiesTradeDetails154
     [IsoId("_1hTkN5aHEfC2_67yGLymgA")]
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
-    public IsoMax3Number? NumberOfDaysAccrued { get; init; }
+    public Max3Number? NumberOfDaysAccrued { get; init; }
 
     /// <summary>
     /// Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.

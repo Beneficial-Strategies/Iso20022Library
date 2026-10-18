@@ -56,7 +56,7 @@ public record PaymentCard22
     [IsoXmlTag("CardCtryCd")]
     [IsoSimpleType(IsoSimpleType.Max3Text)]
     [StringLength(maximumLength: 3, MinimumLength = 1)]
-    public IsoMax3Text? CardCountryCode { get; init; }
+    public Max3Text? CardCountryCode { get; init; }
 
     /// <summary>
     /// Currency code of the card issuer (ISO 4217 numeric code).
@@ -65,5 +65,5 @@ public record PaymentCard22
     [DisplayName("Card Currency Code")]
     [IsoXmlTag("CardCcyCd")]
     [IsoSimpleType(IsoSimpleType.Exact3AlphaNumericText)]
-    public IsoExact3AlphaNumericText? CardCurrencyCode { get; init; }
+    public Exact3AlphaNumericText? CardCurrencyCode { get; init; }
 }

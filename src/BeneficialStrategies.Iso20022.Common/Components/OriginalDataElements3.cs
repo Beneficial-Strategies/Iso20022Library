@@ -21,7 +21,7 @@ public record OriginalDataElements3
     /// </summary>
     [DisplayName("Acquirer Identification")]
     [IsoXmlTag("AcqrrId")]
-    public IsoMax11NumericText? AcquirerIdentification { get; init; }
+    public Max11NumericText? AcquirerIdentification { get; init; }
 
     /// <summary>
     /// Additional Fee.
@@ -35,7 +35,7 @@ public record OriginalDataElements3
     /// </summary>
     [DisplayName("Approval Code")]
     [IsoXmlTag("ApprvlCd")]
-    public IsoExact6AlphaNumericText? ApprovalCode { get; init; }
+    public Exact6AlphaNumericText? ApprovalCode { get; init; }
 
     /// <summary>
     /// Conversion Date Time.
@@ -70,7 +70,7 @@ public record OriginalDataElements3
     /// </summary>
     [DisplayName("Sender Identification")]
     [IsoXmlTag("SndrId")]
-    public IsoMax11NumericText? SenderIdentification { get; init; }
+    public Max11NumericText? SenderIdentification { get; init; }
 
     /// <summary>
     /// Transaction Amounts.

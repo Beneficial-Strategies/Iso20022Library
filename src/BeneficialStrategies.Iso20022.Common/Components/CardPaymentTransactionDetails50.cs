@@ -39,7 +39,7 @@ public record CardPaymentTransactionDetails50
     [DisplayName("Validity Date")]
     [IsoXmlTag("VldtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ValidityDate { get; init; }
+    public DateOnly? ValidityDate { get; init; }
 
     /// <summary>
     /// Data related to an integrated circuit card application.
@@ -48,7 +48,7 @@ public record CardPaymentTransactionDetails50
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
     [IsoSimpleType(IsoSimpleType.Max10000Binary)]
-    public IsoMax10000Binary? ICCRelatedData { get; init; }
+    public Max10000Binary? ICCRelatedData { get; init; }
 
     /// <summary>
     /// This transaction is cancelled but the authorisation is not reversed.
@@ -57,5 +57,5 @@ public record CardPaymentTransactionDetails50
     [DisplayName("Keep Authorisation Open")]
     [IsoXmlTag("KeepAuthstnOpn")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? KeepAuthorisationOpen { get; init; }
+    public TrueFalseIndicator? KeepAuthorisationOpen { get; init; }
 }

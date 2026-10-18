@@ -23,7 +23,7 @@ public record SecurityIdentification3
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
     [IsoSimpleType(IsoSimpleType.ISINIdentifier)]
-    public required IsoISINIdentifier ISIN { get; init; }
+    public required ISINIdentifier ISIN { get; init; }
 
     /// <summary>
     /// Letters that identify a stock traded on a stock exchange. The Ticker Symbol is a short and convenient way of identifying a stock, eg, RTR.L for Reuters quoted in London.
@@ -32,7 +32,7 @@ public record SecurityIdentification3
     [DisplayName("Ticker Symbol")]
     [IsoXmlTag("TckrSymb")]
     [IsoSimpleType(IsoSimpleType.TickerIdentifier)]
-    public IsoTickerIdentifier? TickerSymbol { get; init; }
+    public TickerIdentifier? TickerSymbol { get; init; }
 
     /// <summary>
     /// Committee on Uniform Securities and Identification Procedures (CUSIP). The standards body that created and maintains the securities classification system in the US. The CUSIP is composed of a 9-character number that uniquely identifies a particular security. Non-US securities have a similar number called the CINS number.
@@ -41,7 +41,7 @@ public record SecurityIdentification3
     [DisplayName("CUSIP")]
     [IsoXmlTag("CUSIP")]
     [IsoSimpleType(IsoSimpleType.CUSIPIdentifier)]
-    public IsoCUSIPIdentifier? CUSIP { get; init; }
+    public CUSIPIdentifier? CUSIP { get; init; }
 
     /// <summary>
     /// Stock Exchange Daily Official List (SEDOL) number. A code used by the London Stock Exchange to identify foreign stocks, especially those that aren&apos;t actively traded in the US and don&apos;t have a CUSIP number.
@@ -50,7 +50,7 @@ public record SecurityIdentification3
     [DisplayName("SEDOL")]
     [IsoXmlTag("SEDOL")]
     [IsoSimpleType(IsoSimpleType.SEDOLIdentifier)]
-    public IsoSEDOLIdentifier? SEDOL { get; init; }
+    public SEDOLIdentifier? SEDOL { get; init; }
 
     /// <summary>
     /// Identifier of a security assigned by the Japanese QUICK identification scheme for financial instruments.
@@ -59,7 +59,7 @@ public record SecurityIdentification3
     [DisplayName("QUICK")]
     [IsoXmlTag("QUICK")]
     [IsoSimpleType(IsoSimpleType.QUICKIdentifier)]
-    public IsoQUICKIdentifier? QUICK { get; init; }
+    public QUICKIdentifier? QUICK { get; init; }
 
     /// <summary>
     /// Proprietary identification of a security assigned by an institution or organisation.

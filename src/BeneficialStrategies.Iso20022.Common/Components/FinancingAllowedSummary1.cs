@@ -23,7 +23,7 @@ public record FinancingAllowedSummary1
     [DisplayName("Financed Item Number")]
     [IsoXmlTag("FincdItmNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber FinancedItemNumber { get; init; }
+    public required Number FinancedItemNumber { get; init; }
 
     /// <summary>
     /// Sum of the original total amounts of the invoices accepted for financing.
@@ -40,7 +40,7 @@ public record FinancingAllowedSummary1
     [DisplayName("Applied Percentage")]
     [IsoXmlTag("ApldPctg")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? AppliedPercentage { get; init; }
+    public PercentageRate? AppliedPercentage { get; init; }
 
     /// <summary>
     /// Total amount financed, defined as the entire financed amount of the requests.

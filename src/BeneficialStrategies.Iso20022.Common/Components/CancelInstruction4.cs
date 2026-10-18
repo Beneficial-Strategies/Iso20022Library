@@ -24,7 +24,7 @@ public record CancelInstruction4
     [IsoXmlTag("SnglInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text SingleInstructionIdentification { get; init; }
+    public required Max35Text SingleInstructionIdentification { get; init; }
 
     /// <summary>
     /// Account and instructed positions to which the meeting instruction cancellation request applies.

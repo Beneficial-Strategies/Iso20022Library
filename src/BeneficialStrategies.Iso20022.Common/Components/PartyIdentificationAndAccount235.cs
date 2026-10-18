@@ -30,7 +30,7 @@ public record PartyIdentificationAndAccount235
     [IsoId("f103f41e-8ad2-4baa-8b13-7e3be5e5f451")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public IsoMax35Text? AccountIdentification { get; init; }
+    public Max35Text? AccountIdentification { get; init; }
 
     /// <summary>
     /// Digital account where digital assets or digital tokens can be stored and where an entry is made.

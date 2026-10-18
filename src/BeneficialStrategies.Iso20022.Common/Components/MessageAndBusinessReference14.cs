@@ -38,7 +38,7 @@ public record MessageAndBusinessReference14
     [IsoId("2b1a7c12-4dea-4e5b-ad02-656504979aa6")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identification of the transfer, as assigned by the instructing party.
@@ -62,7 +62,7 @@ public record MessageAndBusinessReference14
     [IsoId("d78ce04d-4b7d-450a-b5ae-653aaaf63855")]
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
-    public IsoMax35Text? CancellationReference { get; init; }
+    public Max35Text? CancellationReference { get; init; }
 
     /// <summary>
     /// Identification of the asset.

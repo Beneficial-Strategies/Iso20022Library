@@ -24,7 +24,7 @@ public record Reconciliation3
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Identification { get; init; }
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Date of the reconciliation.
@@ -34,7 +34,7 @@ public record Reconciliation3
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// A value used to allow a period within a reconciliation date.  Refer to ISO8583:2003 Field 29
@@ -44,5 +44,5 @@ public record Reconciliation3
     [IsoXmlTag("ChckptRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CheckpointReference { get; init; }
+    public Max35Text? CheckpointReference { get; init; }
 }

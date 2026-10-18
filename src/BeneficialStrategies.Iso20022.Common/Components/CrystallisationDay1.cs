@@ -23,7 +23,7 @@ public record CrystallisationDay1
     [DisplayName("Day")]
     [IsoXmlTag("Day")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator Day { get; init; }
+    public required YesNoIndicator Day { get; init; }
 
     /// <summary>
     /// Number of days prior to the accrual date of the transaction to the final (repurchase) date.
@@ -32,5 +32,5 @@ public record CrystallisationDay1
     [DisplayName("Period")]
     [IsoXmlTag("Prd")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public IsoMax3NumericText? Period { get; init; }
+    public Max3NumericText? Period { get; init; }
 }

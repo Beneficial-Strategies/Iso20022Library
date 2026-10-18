@@ -42,14 +42,14 @@ public record AcquirerProtocolParameters17
     /// </summary>
     [DisplayName("Application Identification")]
     [IsoXmlTag("ApplId")]
-    public ValueList<IsoMax35Text> ApplicationIdentification { get; init; } = [];
+    public ValueList<Max35Text> ApplicationIdentification { get; init; } = [];
 
     /// <summary>
     /// Batch Digital Signature.
     /// </summary>
     [DisplayName("Batch Digital Signature")]
     [IsoXmlTag("BtchDgtlSgntr")]
-    public IsoTrueFalseIndicator? BatchDigitalSignature { get; init; }
+    public TrueFalseIndicator? BatchDigitalSignature { get; init; }
 
     /// <summary>
     /// Batch Transfer Content.
@@ -63,21 +63,21 @@ public record AcquirerProtocolParameters17
     /// </summary>
     [DisplayName("Card Data Verification")]
     [IsoXmlTag("CardDataVrfctn")]
-    public IsoTrueFalseIndicator? CardDataVerification { get; init; }
+    public TrueFalseIndicator? CardDataVerification { get; init; }
 
     /// <summary>
     /// Completion Advice Mandated.
     /// </summary>
     [DisplayName("Completion Advice Mandated")]
     [IsoXmlTag("CmpltnAdvcMndtd")]
-    public IsoTrueFalseIndicator? CompletionAdviceMandated { get; init; }
+    public TrueFalseIndicator? CompletionAdviceMandated { get; init; }
 
     /// <summary>
     /// File Transfer Batch.
     /// </summary>
     [DisplayName("File Transfer Batch")]
     [IsoXmlTag("FileTrfBtch")]
-    public IsoTrueFalseIndicator? FileTransferBatch { get; init; }
+    public TrueFalseIndicator? FileTransferBatch { get; init; }
 
     /// <summary>
     /// Host.
@@ -91,7 +91,7 @@ public record AcquirerProtocolParameters17
     /// </summary>
     [DisplayName("Mandatory Security Trailer")]
     [IsoXmlTag("MndtrySctyTrlr")]
-    public IsoTrueFalseIndicator? MandatorySecurityTrailer { get; init; }
+    public TrueFalseIndicator? MandatorySecurityTrailer { get; init; }
 
     /// <summary>
     /// Message Item.
@@ -105,7 +105,7 @@ public record AcquirerProtocolParameters17
     /// </summary>
     [DisplayName("Notify Off Line Cancellation")]
     [IsoXmlTag("NtfyOffLineCxl")]
-    public IsoTrueFalseIndicator? NotifyOffLineCancellation { get; init; }
+    public TrueFalseIndicator? NotifyOffLineCancellation { get; init; }
 
     /// <summary>
     /// Off Line Transaction.
@@ -126,28 +126,28 @@ public record AcquirerProtocolParameters17
     /// </summary>
     [DisplayName("Private Card Data")]
     [IsoXmlTag("PrvtCardData")]
-    public IsoTrueFalseIndicator? PrivateCardData { get; init; }
+    public TrueFalseIndicator? PrivateCardData { get; init; }
 
     /// <summary>
     /// Protect Card Data.
     /// </summary>
     [DisplayName("Protect Card Data")]
     [IsoXmlTag("PrtctCardData")]
-    public required IsoTrueFalseIndicator ProtectCardData { get; init; }
+    public required TrueFalseIndicator ProtectCardData { get; init; }
 
     /// <summary>
     /// Reconciliation By Acquirer.
     /// </summary>
     [DisplayName("Reconciliation By Acquirer")]
     [IsoXmlTag("RcncltnByAcqrr")]
-    public IsoTrueFalseIndicator? ReconciliationByAcquirer { get; init; }
+    public TrueFalseIndicator? ReconciliationByAcquirer { get; init; }
 
     /// <summary>
     /// Reconciliation Error.
     /// </summary>
     [DisplayName("Reconciliation Error")]
     [IsoXmlTag("RcncltnErr")]
-    public IsoTrueFalseIndicator? ReconciliationError { get; init; }
+    public TrueFalseIndicator? ReconciliationError { get; init; }
 
     /// <summary>
     /// Reconciliation Exchange.
@@ -168,19 +168,19 @@ public record AcquirerProtocolParameters17
     /// </summary>
     [DisplayName("Split Totals")]
     [IsoXmlTag("SpltTtls")]
-    public IsoTrueFalseIndicator? SplitTotals { get; init; }
+    public TrueFalseIndicator? SplitTotals { get; init; }
 
     /// <summary>
     /// Totals Per Currency.
     /// </summary>
     [DisplayName("Totals Per Currency")]
     [IsoXmlTag("TtlsPerCcy")]
-    public IsoTrueFalseIndicator? TotalsPerCurrency { get; init; }
+    public TrueFalseIndicator? TotalsPerCurrency { get; init; }
 
     /// <summary>
     /// Version.
     /// </summary>
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
-    public required IsoMax256Text Version { get; init; }
+    public required Max256Text Version { get; init; }
 }

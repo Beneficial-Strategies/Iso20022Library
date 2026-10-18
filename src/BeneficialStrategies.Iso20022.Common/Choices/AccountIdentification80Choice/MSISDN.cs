@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification80Choice
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("MSISDN")]
-        public required IsoMax16Text Value { get; init; }
+        public required Max16Text Value { get; init; }
     }
 }

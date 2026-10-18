@@ -35,7 +35,7 @@ public record Amount22
     /// </summary>
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax35Text? Description { get; init; }
+    public Max35Text? Description { get; init; }
 
     /// <summary>
     /// Tax.

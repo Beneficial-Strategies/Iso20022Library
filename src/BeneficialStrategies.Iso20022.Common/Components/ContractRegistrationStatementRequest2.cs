@@ -24,7 +24,7 @@ public record ContractRegistrationStatementRequest2
     [IsoXmlTag("StmtReqId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text StatementRequestIdentification { get; init; }
+    public required Max35Text StatementRequestIdentification { get; init; }
 
     /// <summary>
     /// Specifies the period for which the statement is requested.
@@ -58,7 +58,7 @@ public record ContractRegistrationStatementRequest2
     [IsoXmlTag("RegdCtrctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text RegisteredContractIdentification { get; init; }
+    public required Max35Text RegisteredContractIdentification { get; init; }
 
     /// <summary>
     /// Defines the criteria to be returned in the statement in response to the request.

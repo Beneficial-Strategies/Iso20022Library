@@ -23,7 +23,7 @@ public record RateAdjustment1
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate Rate { get; init; }
+    public required PercentageRate Rate { get; init; }
 
     /// <summary>
     /// Specifies date as of which the rate is effective.
@@ -32,5 +32,5 @@ public record RateAdjustment1
     [DisplayName("Adjustment Date")]
     [IsoXmlTag("AdjstmntDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate AdjustmentDate { get; init; }
+    public required DateOnly AdjustmentDate { get; init; }
 }

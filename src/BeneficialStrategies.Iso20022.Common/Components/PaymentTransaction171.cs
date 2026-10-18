@@ -22,7 +22,7 @@ public record PaymentTransaction171
     [IsoId("92d96915-2e3a-4ab5-9130-92e1d1401109")]
     [DisplayName("Status Request Identification")]
     [IsoXmlTag("StsReqId")]
-    public IsoMax35Text? StatusRequestIdentification { get; init; }
+    public Max35Text? StatusRequestIdentification { get; init; }
 
     /// <summary>
     /// Point to point reference, as assigned by the original instructing party, to unambiguously identify the original message.
@@ -38,7 +38,7 @@ public record PaymentTransaction171
     [IsoId("5dbbd40c-8bdb-4c16-abb1-e5215c87164a")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
-    public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.
@@ -46,7 +46,7 @@ public record PaymentTransaction171
     [IsoId("610dd1b6-931c-4867-af05-9dbb71755f7a")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original first instructing agent, to unambiguously identify the transaction.
@@ -54,7 +54,7 @@ public record PaymentTransaction171
     [IsoId("8a523ac3-778a-4857-a07d-e659d0bf06ae")]
     [DisplayName("Original Transaction Identification")]
     [IsoXmlTag("OrgnlTxId")]
-    public IsoMax35Text? OriginalTransactionIdentification { get; init; }
+    public Max35Text? OriginalTransactionIdentification { get; init; }
 
     /// <summary>
     /// Universally unique identifier to provide the original end-to-end reference of a payment transaction.
@@ -62,7 +62,7 @@ public record PaymentTransaction171
     [IsoId("a66b61df-268a-4c50-bb01-4a6e3f0447ce")]
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
-    public IsoUUIDv4Identifier? OriginalUETR { get; init; }
+    public UUIDv4Identifier? OriginalUETR { get; init; }
 
     /// <summary>
     /// Point in time when the payment order from the initiating party meets the processing conditions of the account servicing agent.
@@ -70,7 +70,7 @@ public record PaymentTransaction171
     [IsoId("c8227be5-d09b-4f0e-824d-a95ab72e73de")]
     [DisplayName("Acceptance Date Time")]
     [IsoXmlTag("AccptncDtTm")]
-    public IsoISODateTime? AcceptanceDateTime { get; init; }
+    public ISODateTime? AcceptanceDateTime { get; init; }
 
     /// <summary>
     /// Unique reference, as assigned by a clearing system, to unambiguously identify the instruction.
@@ -78,7 +78,7 @@ public record PaymentTransaction171
     [IsoId("e608b458-763a-45bf-b35f-32d729979bb7")]
     [DisplayName("Clearing System Reference")]
     [IsoXmlTag("ClrSysRef")]
-    public IsoMax35Text? ClearingSystemReference { get; init; }
+    public Max35Text? ClearingSystemReference { get; init; }
 
     /// <summary>
     /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).

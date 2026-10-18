@@ -23,7 +23,7 @@ public record KEK4
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Version { get; init; }
+    public Number? Version { get; init; }
 
     /// <summary>
     /// Identification of the key encryption key (KEK).
@@ -48,5 +48,5 @@ public record KEK4
     [DisplayName("Encrypted Key")]
     [IsoXmlTag("NcrptdKey")]
     [IsoSimpleType(IsoSimpleType.Max500Binary)]
-    public required IsoMax500Binary EncryptedKey { get; init; }
+    public required Max500Binary EncryptedKey { get; init; }
 }

@@ -23,7 +23,7 @@ public record FloatingRateNote2
     [DisplayName("Reference Rate Index")]
     [IsoXmlTag("RefRateIndx")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public required IsoISINOct2015Identifier ReferenceRateIndex { get; init; }
+    public required ISINOct2015Identifier ReferenceRateIndex { get; init; }
 
     /// <summary>
     /// Number of basis points added to (if positive) or deducted from (if negative) the underlying reference rate to calculate the actual interest rate applicable for a given period at issuance of the floating rate instrument.
@@ -33,5 +33,5 @@ public record FloatingRateNote2
     [DisplayName("Basis Point Spread")]
     [IsoXmlTag("BsisPtSprd")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber BasisPointSpread { get; init; }
+    public required Number BasisPointSpread { get; init; }
 }

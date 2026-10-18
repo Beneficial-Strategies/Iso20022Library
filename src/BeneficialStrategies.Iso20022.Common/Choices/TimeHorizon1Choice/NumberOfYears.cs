@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeHorizon1Choice
         /// </summary>
         [IsoXmlTag("NbOfYrs")]
         [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-        public required IsoDecimalNumber Value { get; init; }
+        public required DecimalNumber Value { get; init; }
     }
 }

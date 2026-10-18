@@ -39,5 +39,5 @@ public record CorporateActionNotification3
     [DisplayName("Eligible Balance Indicator")]
     [IsoXmlTag("ElgblBalInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? EligibleBalanceIndicator { get; init; }
+    public YesNoIndicator? EligibleBalanceIndicator { get; init; }
 }

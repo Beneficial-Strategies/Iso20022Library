@@ -23,7 +23,7 @@ public record Forms
     [DisplayName("Application Form")]
     [IsoXmlTag("ApplForm")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ApplicationForm { get; init; }
+    public required YesNoIndicator ApplicationForm { get; init; }
 
     /// <summary>
     /// Type of signature.

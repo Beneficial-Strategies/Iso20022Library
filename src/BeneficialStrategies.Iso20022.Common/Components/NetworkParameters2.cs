@@ -24,7 +24,7 @@ public record NetworkParameters2
     [IsoXmlTag("Adr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Address { get; init; }
+    public required Max35Text Address { get; init; }
 
     /// <summary>
     /// Port number of the server, if the default port number is not used.
@@ -33,7 +33,7 @@ public record NetworkParameters2
     [DisplayName("Port Number")]
     [IsoXmlTag("PortNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? PortNumber { get; init; }
+    public Number? PortNumber { get; init; }
 
     /// <summary>
     /// Delay between two contacts of the server.
@@ -42,5 +42,5 @@ public record NetworkParameters2
     [DisplayName("Delay")]
     [IsoXmlTag("Dely")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? Delay { get; init; }
+    public ISOTime? Delay { get; init; }
 }

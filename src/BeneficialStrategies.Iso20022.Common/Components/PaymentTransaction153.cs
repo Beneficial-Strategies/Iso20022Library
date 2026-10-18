@@ -21,7 +21,7 @@ public record PaymentTransaction153
     /// </summary>
     [DisplayName("Cancellation Status Identification")]
     [IsoXmlTag("CxlStsId")]
-    public IsoMax35Text? CancellationStatusIdentification { get; init; }
+    public Max35Text? CancellationStatusIdentification { get; init; }
 
     /// <summary>
     /// Cancellation Status Reason Information.
@@ -36,7 +36,7 @@ public record PaymentTransaction153
     /// </summary>
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Original Instructed Amount.
@@ -50,14 +50,14 @@ public record PaymentTransaction153
     /// </summary>
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
-    public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Original Requested Collection Date.
     /// </summary>
     [DisplayName("Original Requested Collection Date")]
     [IsoXmlTag("OrgnlReqdColltnDt")]
-    public IsoISODate? OriginalRequestedCollectionDate { get; init; }
+    public DateOnly? OriginalRequestedCollectionDate { get; init; }
 
     /// <summary>
     /// Original Requested Execution Date.
@@ -92,5 +92,5 @@ public record PaymentTransaction153
     /// </summary>
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
-    public IsoUUIDv4Identifier? UETR { get; init; }
+    public UUIDv4Identifier? UETR { get; init; }
 }

@@ -21,7 +21,7 @@ public record ATMDepositedMedia4
     /// </summary>
     [DisplayName("Account Sequence Number")]
     [IsoXmlTag("AcctSeqNb")]
-    public IsoNumber? AccountSequenceNumber { get; init; }
+    public Number? AccountSequenceNumber { get; init; }
 
     /// <summary>
     /// Media Category.

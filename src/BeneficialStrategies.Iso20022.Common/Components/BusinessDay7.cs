@@ -23,7 +23,7 @@ public record BusinessDay7
     [DisplayName("System Date")]
     [IsoXmlTag("SysDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? SystemDate { get; init; }
+    public DateOnly? SystemDate { get; init; }
 
     /// <summary>
     /// Status of a system and the period of time during which the status is valid.

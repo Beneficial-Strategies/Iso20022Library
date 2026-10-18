@@ -24,7 +24,7 @@ public record ProxyAppointmentInformation4
     [IsoXmlTag("RegnMtd")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? RegistrationMethod { get; init; }
+    public Max350Text? RegistrationMethod { get; init; }
 
     /// <summary>
     /// Date by which the information on the proxy assignment must be received by the intermediary.

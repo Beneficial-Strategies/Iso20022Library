@@ -23,7 +23,7 @@ public record OrganisationIdentification7
     [DisplayName("Any BIC")]
     [IsoXmlTag("AnyBIC")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public IsoAnyBICIdentifier? AnyBIC { get; init; }
+    public AnyBICIdentifier? AnyBIC { get; init; }
 
     /// <summary>
     /// Unique identification of an organisation, as assigned by an institution, using an identification scheme.

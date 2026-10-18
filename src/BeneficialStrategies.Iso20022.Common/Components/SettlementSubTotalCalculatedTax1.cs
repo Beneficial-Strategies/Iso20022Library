@@ -24,7 +24,7 @@ public record SettlementSubTotalCalculatedTax1
     [IsoXmlTag("TpCd")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4Text? TypeCode { get; init; }
+    public Max4Text? TypeCode { get; init; }
 
     /// <summary>
     /// Reference used to identify the nature of tax levied, such as Value Added Tax (VAT).
@@ -34,7 +34,7 @@ public record SettlementSubTotalCalculatedTax1
     [IsoXmlTag("CtgyCd")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4Text? CategoryCode { get; init; }
+    public Max4Text? CategoryCode { get; init; }
 
     /// <summary>
     /// Monetary value resulting from the calculation of this tax, levy or duty.
@@ -59,7 +59,7 @@ public record SettlementSubTotalCalculatedTax1
     [DisplayName("Calculated Rate")]
     [IsoXmlTag("ClctdRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? CalculatedRate { get; init; }
+    public PercentageRate? CalculatedRate { get; init; }
 
     /// <summary>
     /// Reason for a tax exemption.

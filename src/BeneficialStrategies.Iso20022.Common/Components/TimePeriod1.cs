@@ -23,7 +23,7 @@ public record TimePeriod1
     [DisplayName("From Time")]
     [IsoXmlTag("FrTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public required IsoISOTime FromTime { get; init; }
+    public required ISOTime FromTime { get; init; }
 
     /// <summary>
     /// Time at which the time span ends.
@@ -32,5 +32,5 @@ public record TimePeriod1
     [DisplayName("To Time")]
     [IsoXmlTag("ToTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public required IsoISOTime ToTime { get; init; }
+    public required ISOTime ToTime { get; init; }
 }

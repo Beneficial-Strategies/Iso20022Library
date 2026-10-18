@@ -25,7 +25,7 @@ public record ContractRegistration1
     [IsoXmlTag("CtrctRegnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ContractRegistrationIdentification { get; init; }
+    public required Max35Text ContractRegistrationIdentification { get; init; }
 
     /// <summary>
     /// Party registering the currency control contract.

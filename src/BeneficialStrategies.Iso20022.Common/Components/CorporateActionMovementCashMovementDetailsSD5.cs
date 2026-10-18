@@ -24,7 +24,7 @@ public record CorporateActionMovementCashMovementDetailsSD5
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Indicates whether the value is a debit or a credit.
@@ -74,7 +74,7 @@ public record CorporateActionMovementCashMovementDetailsSD5
     [IsoXmlTag("ContraPtcptNb")]
     [IsoSimpleType(IsoSimpleType.Max8Text)]
     [StringLength(maximumLength: 8, MinimumLength = 1)]
-    public IsoMax8Text? ContraParticipantNumber { get; init; }
+    public Max8Text? ContraParticipantNumber { get; init; }
 
     /// <summary>
     /// Date/Time on which the posting / draft of cash is scheduled to take place for a transaction.
@@ -91,7 +91,7 @@ public record CorporateActionMovementCashMovementDetailsSD5
     [DisplayName("RDP Reference Number")]
     [IsoXmlTag("RDPRefNb")]
     [IsoSimpleType(IsoSimpleType.Exact32AlphaNumericText)]
-    public IsoExact32AlphaNumericText? RDPReferenceNumber { get; init; }
+    public Exact32AlphaNumericText? RDPReferenceNumber { get; init; }
 
     /// <summary>
     /// Set of the DTC legacy sub reason codes representing tax rate. Used with reason codes ‘TJXD’ ‘TJXF’ ‘TJXI’ ‘TJXL’ ‘TJXR’ ‘TJXT’ ‘TJXU’ to identify the correct tax rate.
@@ -100,7 +100,7 @@ public record CorporateActionMovementCashMovementDetailsSD5
     [DisplayName("Tax Adjustment Rate")]
     [IsoXmlTag("TaxAdjstmntRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? TaxAdjustmentRate { get; init; }
+    public PercentageRate? TaxAdjustmentRate { get; init; }
 
     /// <summary>
     /// Quantity used on adjustment transactions which when summed across all extension movements equals the relevant balance in the core message. For example, a summation of loan and borrow movements when summed which is negative will show the net total in the borrow balance in the core message. While a summation of loan and borrow movements which is positive will show in the loan balance.

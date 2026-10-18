@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyAdditionalIdentification2Ch
         [IsoXmlTag("RegnNb")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text RegistrationNumber { get; init; }
+        public required Max35Text RegistrationNumber { get; init; }
 
         /// <summary>
         /// Name of the register managed by a registration authority.
@@ -34,6 +34,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyAdditionalIdentification2Ch
         [IsoXmlTag("RegrNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? RegisterName { get; init; }
+        public Max35Text? RegisterName { get; init; }
     }
 }

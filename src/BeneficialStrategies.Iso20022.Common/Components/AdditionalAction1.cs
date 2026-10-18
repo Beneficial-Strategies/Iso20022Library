@@ -40,7 +40,7 @@ public record AdditionalAction1
     [IsoXmlTag("OthrDstn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherDestination { get; init; }
+    public Max35Text? OtherDestination { get; init; }
 
     /// <summary>
     /// Type of destination of the additional action to perform.
@@ -58,7 +58,7 @@ public record AdditionalAction1
     [IsoXmlTag("OthrDstnTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherDestinationType { get; init; }
+    public Max35Text? OtherDestinationType { get; init; }
 
     /// <summary>
     /// Physical destination address of the additional action to perform (for example, URL, mobile phone number, IP address, file name, etc.).
@@ -68,7 +68,7 @@ public record AdditionalAction1
     [IsoXmlTag("DstnAdr")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? DestinationAddress { get; init; }
+    public Max70Text? DestinationAddress { get; init; }
 
     /// <summary>
     /// Format of the message associated with the additional action to perform.
@@ -86,7 +86,7 @@ public record AdditionalAction1
     [IsoXmlTag("OthrFrmt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherFormat { get; init; }
+    public Max35Text? OtherFormat { get; init; }
 
     /// <summary>
     /// Content of or reference to the message.

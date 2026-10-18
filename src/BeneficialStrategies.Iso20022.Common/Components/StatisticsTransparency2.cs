@@ -23,7 +23,7 @@ public record StatisticsTransparency2
     [DisplayName("Total Number Of Transactions Executed")]
     [IsoXmlTag("TtlNbOfTxsExctd")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber TotalNumberOfTransactionsExecuted { get; init; }
+    public required Number TotalNumberOfTransactionsExecuted { get; init; }
 
     /// <summary>
     /// Total volume of transactions that have been performed on this market.
@@ -32,5 +32,5 @@ public record StatisticsTransparency2
     [DisplayName("Total Volume Of Transactions Executed")]
     [IsoXmlTag("TtlVolOfTxsExctd")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public required IsoDecimalNumber TotalVolumeOfTransactionsExecuted { get; init; }
+    public required DecimalNumber TotalVolumeOfTransactionsExecuted { get; init; }
 }

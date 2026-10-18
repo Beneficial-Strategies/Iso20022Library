@@ -20,8 +20,5 @@
     <None Include="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Compile Include="..\Shared\PrimitiveAliases.cs" Link="PrimitiveAliases.cs" />
-  </ItemGroup>
 
 </Project>

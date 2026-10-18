@@ -24,7 +24,7 @@ public record UpdatedURLlnformation2
     [IsoXmlTag("UpdDesc")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? UpdateDescription { get; init; }
+    public Max140Text? UpdateDescription { get; init; }
 
     /// <summary>
     /// Specifies the date at which the narrative has been updated.
@@ -33,7 +33,7 @@ public record UpdatedURLlnformation2
     [DisplayName("Update Date")]
     [IsoXmlTag("UpdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? UpdateDate { get; init; }
+    public DateOnly? UpdateDate { get; init; }
 
     /// <summary>
     /// Provides the web address, that is, the address for the Universal Resource Locator (URL), to use over the www (HTTP) service where additional information may be found.
@@ -43,5 +43,5 @@ public record UpdatedURLlnformation2
     [IsoXmlTag("URLAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public required IsoMax256Text URLAddress { get; init; }
+    public required Max256Text URLAddress { get; init; }
 }

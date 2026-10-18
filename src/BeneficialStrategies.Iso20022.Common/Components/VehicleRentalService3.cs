@@ -56,14 +56,14 @@ public record VehicleRentalService3
     /// </summary>
     [DisplayName("Company Name")]
     [IsoXmlTag("CpnyNm")]
-    public IsoMax70Text? CompanyName { get; init; }
+    public Max70Text? CompanyName { get; init; }
 
     /// <summary>
     /// Company Other Type.
     /// </summary>
     [DisplayName("Company Other Type")]
     [IsoXmlTag("CpnyOthrTp")]
-    public IsoMax35Text? CompanyOtherType { get; init; }
+    public Max35Text? CompanyOtherType { get; init; }
 
     /// <summary>
     /// Company Type.
@@ -105,7 +105,7 @@ public record VehicleRentalService3
     /// </summary>
     [DisplayName("Renter Corporate Identifier")]
     [IsoXmlTag("RntrCorpIdr")]
-    public required IsoMax35Text RenterCorporateIdentifier { get; init; }
+    public required Max35Text RenterCorporateIdentifier { get; init; }
 
     /// <summary>
     /// Renter Corporate Identifier Assigner.
@@ -119,19 +119,19 @@ public record VehicleRentalService3
     /// </summary>
     [DisplayName("Renter Corporate Name")]
     [IsoXmlTag("RntrCorpNm")]
-    public IsoMax70Text? RenterCorporateName { get; init; }
+    public Max70Text? RenterCorporateName { get; init; }
 
     /// <summary>
     /// Renter Name.
     /// </summary>
     [DisplayName("Renter Name")]
     [IsoXmlTag("RntrNm")]
-    public required IsoMax70Text RenterName { get; init; }
+    public required Max70Text RenterName { get; init; }
 
     /// <summary>
     /// Summary Commodity Identification.
     /// </summary>
     [DisplayName("Summary Commodity Identification")]
     [IsoXmlTag("SummryCmmdtyId")]
-    public IsoMax35Text? SummaryCommodityIdentification { get; init; }
+    public Max35Text? SummaryCommodityIdentification { get; init; }
 }

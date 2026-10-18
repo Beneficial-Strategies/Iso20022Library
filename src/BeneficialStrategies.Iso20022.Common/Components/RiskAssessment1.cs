@@ -32,7 +32,7 @@ public record RiskAssessment1
     [IsoXmlTag("RskAssmntTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RiskAssessmentType { get; init; }
+    public Max35Text? RiskAssessmentType { get; init; }
 
     /// <summary>
     /// Reason for indicating a certain level of risk for the transaction.
@@ -40,7 +40,7 @@ public record RiskAssessment1
     [IsoId("_0lY4kEbPEeeIjf8aP9KbJA")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public SimpleValueList<IsoMax35Text> Reason { get; init; } = [];
+    public SimpleValueList<Max35Text> Reason { get; init; } = [];
 
     /// <summary>
     /// Risk assessment result.
@@ -50,7 +50,7 @@ public record RiskAssessment1
     [IsoXmlTag("Rslt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Result { get; init; }
+    public Max35Text? Result { get; init; }
 
     /// <summary>
     /// Additional risk data associated with the transaction.
@@ -76,7 +76,7 @@ public record RiskAssessment1
     [IsoXmlTag("OthrRcmmnddActn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherRecommendedAction { get; init; }
+    public Max35Text? OtherRecommendedAction { get; init; }
 
     /// <summary>
     /// Additional details of recommended action or other recommended action.
@@ -86,5 +86,5 @@ public record RiskAssessment1
     [IsoXmlTag("RcmmnddActnDtls")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? RecommendedActionDetails { get; init; }
+    public Max256Text? RecommendedActionDetails { get; init; }
 }

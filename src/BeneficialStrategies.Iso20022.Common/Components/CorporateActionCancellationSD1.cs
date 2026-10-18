@@ -24,7 +24,7 @@ public record CorporateActionCancellationSD1
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text PlaceAndName { get; init; }
+    public required Max350Text PlaceAndName { get; init; }
 
     /// <summary>
     /// Reference assigned by the account servicer to unambiguously identify a related corporate action event.
@@ -34,7 +34,7 @@ public record CorporateActionCancellationSD1
     [IsoXmlTag("LkdCorpActnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text LinkedCorporateActionIdentification { get; init; }
+    public required Max35Text LinkedCorporateActionIdentification { get; init; }
 
     /// <summary>
     /// Indicates the reason why two or more events are related.
@@ -51,7 +51,7 @@ public record CorporateActionCancellationSD1
     [DisplayName("Link Added Date")]
     [IsoXmlTag("LkAddedDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate LinkAddedDate { get; init; }
+    public required DateOnly LinkAddedDate { get; init; }
 
     /// <summary>
     /// Events can be linked together. This date represents the date on which the link was modified.
@@ -60,5 +60,5 @@ public record CorporateActionCancellationSD1
     [DisplayName("Link Modified Date")]
     [IsoXmlTag("LkModfdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? LinkModifiedDate { get; init; }
+    public DateOnly? LinkModifiedDate { get; init; }
 }

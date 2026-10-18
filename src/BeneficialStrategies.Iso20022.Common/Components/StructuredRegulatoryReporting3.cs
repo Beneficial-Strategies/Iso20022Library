@@ -24,7 +24,7 @@ public record StructuredRegulatoryReporting3
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Type { get; init; }
+    public Max35Text? Type { get; init; }
 
     /// <summary>
     /// Date related to the specified type of regulatory reporting details.
@@ -33,7 +33,7 @@ public record StructuredRegulatoryReporting3
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Country related to the specified type of regulatory reporting details.
@@ -51,7 +51,7 @@ public record StructuredRegulatoryReporting3
     [IsoXmlTag("Cd")]
     [IsoSimpleType(IsoSimpleType.Max10Text)]
     [StringLength(maximumLength: 10, MinimumLength = 1)]
-    public IsoMax10Text? Code { get; init; }
+    public Max10Text? Code { get; init; }
 
     /// <summary>
     /// Amount of money to be reported for regulatory and statutory requirements.
@@ -67,5 +67,5 @@ public record StructuredRegulatoryReporting3
     [IsoId("_SnhZ6Np-Ed-ak6NoX_4Aeg_797412333")]
     [DisplayName("Information")]
     [IsoXmlTag("Inf")]
-    public SimpleValueList<IsoMax35Text> Information { get; init; } = [];
+    public SimpleValueList<Max35Text> Information { get; init; } = [];
 }

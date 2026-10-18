@@ -24,7 +24,7 @@ public record Collateral16
     [IsoXmlTag("MrgnCallReqId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MarginCallRequestIdentification { get; init; }
+    public required Max35Text MarginCallRequestIdentification { get; init; }
 
     /// <summary>
     /// Specifies the reference to the unambiguous identification of the margin call response.
@@ -34,7 +34,7 @@ public record Collateral16
     [IsoXmlTag("MrgnCallRspnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MarginCallResponseIdentification { get; init; }
+    public Max35Text? MarginCallResponseIdentification { get; init; }
 
     /// <summary>
     /// Specifies the standard settlement instructions.
@@ -44,7 +44,7 @@ public record Collateral16
     [IsoXmlTag("StdSttlmInstrs")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? StandardSettlementInstructions { get; init; }
+    public Max140Text? StandardSettlementInstructions { get; init; }
 
     /// <summary>
     /// Specifies the reference to the unambiguous identification of the collateral proposal response (in case of counter proposal).
@@ -54,7 +54,7 @@ public record Collateral16
     [IsoXmlTag("CollPrpslRspnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CollateralProposalResponseIdentification { get; init; }
+    public Max35Text? CollateralProposalResponseIdentification { get; init; }
 
     /// <summary>
     /// Collateral type is securities.

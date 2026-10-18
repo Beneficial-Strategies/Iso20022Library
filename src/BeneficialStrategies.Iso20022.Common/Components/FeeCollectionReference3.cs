@@ -30,5 +30,5 @@ public record FeeCollectionReference3
     [IsoId("_irnyVXFbEfC68Y4jZPNEug")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax70Text Identification { get; init; }
+    public required Max70Text Identification { get; init; }
 }

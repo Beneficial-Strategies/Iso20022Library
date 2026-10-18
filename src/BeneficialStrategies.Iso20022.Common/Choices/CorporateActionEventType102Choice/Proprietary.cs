@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventType102Choic
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-        public required IsoExact4AlphaNumericText Identification { get; init; }
+        public required Exact4AlphaNumericText Identification { get; init; }
 
         /// <summary>
         /// Entity that assigns the identification.
@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventType102Choic
         [IsoXmlTag("Issr")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text Issuer { get; init; }
+        public required Max35Text Issuer { get; init; }
 
         /// <summary>
         /// Short textual description of the scheme.
@@ -43,6 +43,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventType102Choic
         [IsoXmlTag("SchmeNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? SchemeName { get; init; }
+        public Max35Text? SchemeName { get; init; }
     }
 }

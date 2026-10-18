@@ -30,5 +30,5 @@ public record PendingCancellationStatusReason17
     [IsoId("_Jubl3a8xEfCx2aBifPEdRg")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
-    public IsoMax210Text? AdditionalReasonInformation { get; init; }
+    public Max210Text? AdditionalReasonInformation { get; init; }
 }

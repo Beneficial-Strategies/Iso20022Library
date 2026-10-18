@@ -23,7 +23,7 @@ public record ClearingControlTotals2
     [DisplayName("Clearing Control Count")]
     [IsoXmlTag("ClrCtrlCnt")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber ClearingControlCount { get; init; }
+    public required Number ClearingControlCount { get; init; }
 
     /// <summary>
     /// Gross accumulated amount of clearing. To be used for control purpose.

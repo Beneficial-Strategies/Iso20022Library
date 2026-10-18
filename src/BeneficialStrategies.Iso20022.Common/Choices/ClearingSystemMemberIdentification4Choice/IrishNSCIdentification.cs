@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
         /// </summary>
         [IsoXmlTag("IENSC")]
         [IsoSimpleType(IsoSimpleType.IrishNSCIdentifier)]
-        public required IsoIrishNSCIdentifier Value { get; init; }
+        public required IrishNSCIdentifier Value { get; init; }
     }
 }

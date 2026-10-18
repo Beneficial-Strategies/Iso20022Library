@@ -24,7 +24,7 @@ public record DeviceInputNotification2
     [IsoXmlTag("XchgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ExchangeIdentification { get; init; }
+    public required Max35Text ExchangeIdentification { get; init; }
 
     /// <summary>
     /// Updated content of the message to display before input.

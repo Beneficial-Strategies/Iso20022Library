@@ -21,19 +21,19 @@ public record AdditionalReferences2
     /// </summary>
     [DisplayName("Message Name")]
     [IsoXmlTag("MsgNm")]
-    public IsoMax35Text? MessageName { get; init; }
+    public Max35Text? MessageName { get; init; }
 
     /// <summary>
     /// Reference.
     /// </summary>
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
-    public required IsoMax35Text Reference { get; init; }
+    public required Max35Text Reference { get; init; }
 
     /// <summary>
     /// Reference Issuer.
     /// </summary>
     [DisplayName("Reference Issuer")]
     [IsoXmlTag("RefIssr")]
-    public IsoMax35Text? ReferenceIssuer { get; init; }
+    public Max35Text? ReferenceIssuer { get; init; }
 }

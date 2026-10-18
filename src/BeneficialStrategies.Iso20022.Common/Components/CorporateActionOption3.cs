@@ -23,7 +23,7 @@ public record CorporateActionOption3
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public required IsoExact3NumericText OptionNumber { get; init; }
+    public required Exact3NumericText OptionNumber { get; init; }
 
     /// <summary>
     /// Specifies the corporate action options available to the account owner.
@@ -120,7 +120,7 @@ public record CorporateActionOption3
     [DisplayName("Charges Applied Indicator")]
     [IsoXmlTag("ChrgsApldInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ChargesAppliedIndicator { get; init; }
+    public YesNoIndicator? ChargesAppliedIndicator { get; init; }
 
     /// <summary>
     /// Whether or not certification is required from the account owner. |Yes: certification required |No: no certification required.
@@ -129,7 +129,7 @@ public record CorporateActionOption3
     [DisplayName("Certification Indicator")]
     [IsoXmlTag("CertfctnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? CertificationIndicator { get; init; }
+    public YesNoIndicator? CertificationIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether withdrawal of instruction is allowed.
@@ -138,7 +138,7 @@ public record CorporateActionOption3
     [DisplayName("Withdrawal Allowed Indicator")]
     [IsoXmlTag("WdrwlAllwdInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? WithdrawalAllowedIndicator { get; init; }
+    public YesNoIndicator? WithdrawalAllowedIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether change of instruction is allowed.
@@ -147,7 +147,7 @@ public record CorporateActionOption3
     [DisplayName("Change Allowed Indicator")]
     [IsoXmlTag("ChngAllwdInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ChangeAllowedIndicator { get; init; }
+    public YesNoIndicator? ChangeAllowedIndicator { get; init; }
 
     /// <summary>
     /// Identifies the financial instrument.

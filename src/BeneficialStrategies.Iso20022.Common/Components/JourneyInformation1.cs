@@ -32,7 +32,7 @@ public record JourneyInformation1
     [IsoXmlTag("JrnyData")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? JourneyData { get; init; }
+    public Max35Text? JourneyData { get; init; }
 
     /// <summary>
     /// Date and time related to the journey type selected.
@@ -41,5 +41,5 @@ public record JourneyInformation1
     [DisplayName("Date And Time")]
     [IsoXmlTag("DtAndTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? DateAndTime { get; init; }
+    public ISODateTime? DateAndTime { get; init; }
 }

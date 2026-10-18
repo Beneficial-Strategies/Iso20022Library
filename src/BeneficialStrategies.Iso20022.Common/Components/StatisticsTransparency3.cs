@@ -39,7 +39,7 @@ public record StatisticsTransparency3
     [DisplayName("Large In Scale")]
     [IsoXmlTag("LrgInScale")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? LargeInScale { get; init; }
+    public DecimalNumber? LargeInScale { get; init; }
 
     /// <summary>
     /// Standard market size for shares, depositary receipts, ETFs, certificates and other similar financial instruments for which there is a liquid market shall be determined on the basis of the average value of transactions for each financial instrument and in accordance with the local regulation.
@@ -48,7 +48,7 @@ public record StatisticsTransparency3
     [DisplayName("Standard Market Size")]
     [IsoXmlTag("StdMktSz")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? StandardMarketSize { get; init; }
+    public DecimalNumber? StandardMarketSize { get; init; }
 
     /// <summary>
     /// Average daily number of transactions that have been performed on this market.
@@ -57,7 +57,7 @@ public record StatisticsTransparency3
     [DisplayName("Average Daily Number Of Transactions")]
     [IsoXmlTag("AvrgDalyNbOfTxs")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? AverageDailyNumberOfTransactions { get; init; }
+    public DecimalNumber? AverageDailyNumberOfTransactions { get; init; }
 
     /// <summary>
     /// Total number of transactions that have been performed on this market.
@@ -66,7 +66,7 @@ public record StatisticsTransparency3
     [DisplayName("Total Number Of Transactions Executed")]
     [IsoXmlTag("TtlNbOfTxsExctd")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? TotalNumberOfTransactionsExecuted { get; init; }
+    public DecimalNumber? TotalNumberOfTransactionsExecuted { get; init; }
 
     /// <summary>
     /// Total volume of transactions that have been performed on this market.
@@ -75,7 +75,7 @@ public record StatisticsTransparency3
     [DisplayName("Total Volume Of Transactions Executed")]
     [IsoXmlTag("TtlVolOfTxsExctd")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? TotalVolumeOfTransactionsExecuted { get; init; }
+    public DecimalNumber? TotalVolumeOfTransactionsExecuted { get; init; }
 
     /// <summary>
     /// The total number of trading days for which the data is provided.
@@ -84,5 +84,5 @@ public record StatisticsTransparency3
     [DisplayName("Total Number Of Trading Days")]
     [IsoXmlTag("TtlNbOfTradgDays")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? TotalNumberOfTradingDays { get; init; }
+    public Number? TotalNumberOfTradingDays { get; init; }
 }

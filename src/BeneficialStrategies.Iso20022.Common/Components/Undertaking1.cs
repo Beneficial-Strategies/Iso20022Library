@@ -25,7 +25,7 @@ public record Undertaking1
     [IsoXmlTag("ApplcntRefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ApplicantReferenceNumber { get; init; }
+    public required Max35Text ApplicantReferenceNumber { get; init; }
 
     /// <summary>
     /// Brief description of the purpose of the undertaking. Provided as information for the issuer reference.
@@ -35,7 +35,7 @@ public record Undertaking1
     [IsoXmlTag("Purp")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text Purpose { get; init; }
+    public required Max350Text Purpose { get; init; }
 
     /// <summary>
     /// Undertaking name.
@@ -118,7 +118,7 @@ public record Undertaking1
     [DisplayName("Confirmation Indicator")]
     [IsoXmlTag("ConfInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ConfirmationIndicator { get; init; }
+    public YesNoIndicator? ConfirmationIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the undertaking is a local or ancillary undertaking to be issued under a counter-undertaking.
@@ -127,7 +127,7 @@ public record Undertaking1
     [DisplayName("Counter Undertaking Indicator")]
     [IsoXmlTag("CntrUdrtkgInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator CounterUndertakingIndicator { get; init; }
+    public required YesNoIndicator CounterUndertakingIndicator { get; init; }
 
     /// <summary>
     /// Details related to the counter undertaking.
@@ -200,7 +200,7 @@ public record Undertaking1
     [DisplayName("Multiple Demand Indicator")]
     [IsoXmlTag("MltplDmndInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? MultipleDemandIndicator { get; init; }
+    public YesNoIndicator? MultipleDemandIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether partial demands/drawings are permitted.
@@ -209,7 +209,7 @@ public record Undertaking1
     [DisplayName("Partial Demand Indicator")]
     [IsoXmlTag("PrtlDmndInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PartialDemandIndicator { get; init; }
+    public YesNoIndicator? PartialDemandIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the undertaking is transferable.
@@ -218,7 +218,7 @@ public record Undertaking1
     [DisplayName("Transfer Indicator")]
     [IsoXmlTag("TrfInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? TransferIndicator { get; init; }
+    public YesNoIndicator? TransferIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the applicant/obligor or beneficiary is responsible for payment of the transfer charges.

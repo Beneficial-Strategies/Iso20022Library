@@ -21,7 +21,7 @@ public record DeviceSecureInputRequest6
     /// </summary>
     [DisplayName("Beep Key Flag")]
     [IsoXmlTag("BeepKeyFlg")]
-    public IsoTrueFalseIndicator? BeepKeyFlag { get; init; }
+    public TrueFalseIndicator? BeepKeyFlag { get; init; }
 
     /// <summary>
     /// Cardholder PIN.
@@ -35,7 +35,7 @@ public record DeviceSecureInputRequest6
     /// </summary>
     [DisplayName("Maximum Waiting Time")]
     [IsoXmlTag("MaxWtgTm")]
-    public IsoNumber? MaximumWaitingTime { get; init; }
+    public Number? MaximumWaitingTime { get; init; }
 
     /// <summary>
     /// PIN Request Type.
@@ -49,5 +49,5 @@ public record DeviceSecureInputRequest6
     /// </summary>
     [DisplayName("PIN Verification Method")]
     [IsoXmlTag("PINVrfctnMtd")]
-    public IsoMax35Text? PINVerificationMethod { get; init; }
+    public Max35Text? PINVerificationMethod { get; init; }
 }

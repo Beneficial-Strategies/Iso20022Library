@@ -31,7 +31,7 @@ public record CorporateSectorCriteria5
     [IsoId("_Q2nTI65pEeuo-IflVgGqiA")]
     [DisplayName("Non Financial Institution Sector")]
     [IsoXmlTag("NFISctr")]
-    public SimpleValueList<IsoNACEDomainIdentifier> NonFinancialInstitutionSector { get; init; } =
+    public SimpleValueList<NACEDomainIdentifier> NonFinancialInstitutionSector { get; init; } =
         [];
 
     /// <summary>

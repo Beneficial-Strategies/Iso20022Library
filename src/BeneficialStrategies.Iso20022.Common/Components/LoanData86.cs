@@ -24,7 +24,7 @@ public record LoanData86
     [IsoXmlTag("UnqTradIdr")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public required IsoMax52Text UniqueTradeIdentifier { get; init; }
+    public required Max52Text UniqueTradeIdentifier { get; init; }
 
     /// <summary>
     /// Date on which the reportable event pertaining to the transaction and captured by the report took place.
@@ -33,7 +33,7 @@ public record LoanData86
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? EventDate { get; init; }
+    public DateOnly? EventDate { get; init; }
 
     /// <summary>
     /// Termination date in the case of a full early termination of the SFT.
@@ -42,5 +42,5 @@ public record LoanData86
     [DisplayName("Termination Date")]
     [IsoXmlTag("TermntnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TerminationDate { get; init; }
+    public DateOnly? TerminationDate { get; init; }
 }

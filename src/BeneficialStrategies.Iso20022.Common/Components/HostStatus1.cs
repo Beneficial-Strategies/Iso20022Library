@@ -24,7 +24,7 @@ public record HostStatus1
     [IsoXmlTag("AcqrrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text AcquirerIdentification { get; init; }
+    public required Max35Text AcquirerIdentification { get; init; }
 
     /// <summary>
     /// Indicate if a Host is reachable.
@@ -33,5 +33,5 @@ public record HostStatus1
     [DisplayName("Reachable")]
     [IsoXmlTag("Rchbl")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? Reachable { get; init; }
+    public TrueFalseIndicator? Reachable { get; init; }
 }

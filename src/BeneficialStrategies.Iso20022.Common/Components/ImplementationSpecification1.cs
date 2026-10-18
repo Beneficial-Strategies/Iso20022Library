@@ -25,7 +25,7 @@ public record ImplementationSpecification1
     [IsoXmlTag("Regy")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text Registry { get; init; }
+    public required Max350Text Registry { get; init; }
 
     /// <summary>
     /// Identifier which unambiguously identifies, within the implementation specification registry, the implementation specification to which the ISO 20022 message is compliant. This can be done via a URN. It can also contain a version number or date.
@@ -36,5 +36,5 @@ public record ImplementationSpecification1
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
     [StringLength(maximumLength: 2048, MinimumLength = 1)]
-    public required IsoMax2048Text Identification { get; init; }
+    public required Max2048Text Identification { get; init; }
 }

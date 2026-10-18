@@ -22,7 +22,7 @@ public record CorporateActionSD27
     [IsoId("_r_kK9aOEEfCHhuKwuscqyg")]
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Type of notice issued for the corporate action event.
@@ -46,7 +46,7 @@ public record CorporateActionSD27
     [IsoId("_r_kLAaOEEfCHhuKwuscqyg")]
     [DisplayName("Number Of Shares To Be Issued")]
     [IsoXmlTag("NbOfShrsToBIssd")]
-    public IsoDecimalNumber? NumberOfSharesToBeIssued { get; init; }
+    public DecimalNumber? NumberOfSharesToBeIssued { get; init; }
 
     /// <summary>
     /// Total number of shares offered in the event.
@@ -54,7 +54,7 @@ public record CorporateActionSD27
     [IsoId("_r_kLBaOEEfCHhuKwuscqyg")]
     [DisplayName("Total Number Of Shares Offered")]
     [IsoXmlTag("TtlNbOfShrsOffrd")]
-    public IsoDecimalNumber? TotalNumberOfSharesOffered { get; init; }
+    public DecimalNumber? TotalNumberOfSharesOffered { get; init; }
 
     /// <summary>
     /// Number of days to cut off.
@@ -62,7 +62,7 @@ public record CorporateActionSD27
     [IsoId("_r_kLCaOEEfCHhuKwuscqyg")]
     [DisplayName("Cut Off Days")]
     [IsoXmlTag("CutOffDays")]
-    public IsoMax3Number? CutOffDays { get; init; }
+    public Max3Number? CutOffDays { get; init; }
 
     /// <summary>
     /// Indicates the DTC Automated Offer Program type.
@@ -102,7 +102,7 @@ public record CorporateActionSD27
     [IsoId("_r_kLHaOEEfCHhuKwuscqyg")]
     [DisplayName("Fractional Quantity Instruction Indicator")]
     [IsoXmlTag("FrctnlQtyInstrInd")]
-    public IsoYesNoIndicator? FractionalQuantityInstructionIndicator { get; init; }
+    public YesNoIndicator? FractionalQuantityInstructionIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether odd lot tender applies.
@@ -110,7 +110,7 @@ public record CorporateActionSD27
     [IsoId("_r_kLIaOEEfCHhuKwuscqyg")]
     [DisplayName("Odd Lot Tender Indicator")]
     [IsoXmlTag("OddLotTndrInd")]
-    public IsoYesNoIndicator? OddLotTenderIndicator { get; init; }
+    public YesNoIndicator? OddLotTenderIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether partial election is allowed.
@@ -118,7 +118,7 @@ public record CorporateActionSD27
     [IsoId("_r_kLJaOEEfCHhuKwuscqyg")]
     [DisplayName("Partial Election Allowed Indicator")]
     [IsoXmlTag("PrtlElctnAllwdInd")]
-    public IsoYesNoIndicator? PartialElectionAllowedIndicator { get; init; }
+    public YesNoIndicator? PartialElectionAllowedIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether oversubscription applies.
@@ -126,7 +126,7 @@ public record CorporateActionSD27
     [IsoId("_r_kLKaOEEfCHhuKwuscqyg")]
     [DisplayName("Oversubscription Indicator")]
     [IsoXmlTag("OvrsbcptInd")]
-    public IsoYesNoIndicator? OversubscriptionIndicator { get; init; }
+    public YesNoIndicator? OversubscriptionIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the event is a priority event.
@@ -134,7 +134,7 @@ public record CorporateActionSD27
     [IsoId("_r_kLLaOEEfCHhuKwuscqyg")]
     [DisplayName("Priority Event Indicator")]
     [IsoXmlTag("PrtyEvtInd")]
-    public IsoYesNoIndicator? PriorityEventIndicator { get; init; }
+    public YesNoIndicator? PriorityEventIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether proration applies.
@@ -142,7 +142,7 @@ public record CorporateActionSD27
     [IsoId("_r_kLMaOEEfCHhuKwuscqyg")]
     [DisplayName("Proration Indicator")]
     [IsoXmlTag("PrratnInd")]
-    public IsoYesNoIndicator? ProrationIndicator { get; init; }
+    public YesNoIndicator? ProrationIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether reinvestment is applicable.
@@ -150,7 +150,7 @@ public record CorporateActionSD27
     [IsoId("_r_kLNaOEEfCHhuKwuscqyg")]
     [DisplayName("Reinvestment Indicator")]
     [IsoXmlTag("RinvstmtInd")]
-    public IsoYesNoIndicator? ReinvestmentIndicator { get; init; }
+    public YesNoIndicator? ReinvestmentIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the event is a subscription event.
@@ -158,7 +158,7 @@ public record CorporateActionSD27
     [IsoId("_r_kLOaOEEfCHhuKwuscqyg")]
     [DisplayName("Subscription Event Indicator")]
     [IsoXmlTag("SbcptEvtInd")]
-    public IsoYesNoIndicator? SubscriptionEventIndicator { get; init; }
+    public YesNoIndicator? SubscriptionEventIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether a tax relief is applicable.
@@ -166,7 +166,7 @@ public record CorporateActionSD27
     [IsoId("_r_kLPaOEEfCHhuKwuscqyg")]
     [DisplayName("Tax Relief Indicator")]
     [IsoXmlTag("TaxRlfInd")]
-    public IsoYesNoIndicator? TaxReliefIndicator { get; init; }
+    public YesNoIndicator? TaxReliefIndicator { get; init; }
 
     /// <summary>
     /// DTC instruction lockout type.
@@ -198,7 +198,7 @@ public record CorporateActionSD27
     [IsoId("_r_kLTaOEEfCHhuKwuscqyg")]
     [DisplayName("RDP Reference Number")]
     [IsoXmlTag("RDPRefNb")]
-    public IsoExact32AlphaNumericText? RDPReferenceNumber { get; init; }
+    public Exact32AlphaNumericText? RDPReferenceNumber { get; init; }
 
     /// <summary>
     /// Total quantity of securities called by DTC.

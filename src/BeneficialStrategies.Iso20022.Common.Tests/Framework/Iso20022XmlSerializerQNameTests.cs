@@ -9,7 +9,7 @@ namespace BeneficialStrategies.Iso20022;
 /// End-to-end tests for <see cref="System.Xml.XmlQualifiedName"/> leaf-value support in
 /// <see cref="Iso20022XmlSerializer"/> — added when the type was wired in as the first real
 /// application of CLAUDE.md's "primitives defined by a W3C standard" exception. There is no real
-/// ISO 20022 field using <c>IsoQName</c> yet (zero live usage as of this writing), so this uses a
+/// ISO 20022 field using <c>System.Xml.XmlQualifiedName</c> yet (zero live usage as of this writing), so this uses a
 /// minimal purpose-built <see cref="IOuterRecord"/> to exercise the actual public
 /// Serialize/Deserialize pipeline rather than reaching into private methods via reflection.
 /// </summary>

@@ -127,7 +127,7 @@ public record NetPosition3
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TradeDate { get; init; }
+    public DateOnly? TradeDate { get; init; }
 
     /// <summary>
     /// Provides the contractual settlement date.

@@ -24,7 +24,7 @@ public record EncryptedData1
     [DisplayName("Control")]
     [IsoXmlTag("Ctrl")]
     [IsoSimpleType(IsoSimpleType.Exact1HexBinaryText)]
-    public IsoExact1HexBinaryText? Control { get; init; }
+    public Exact1HexBinaryText? Control { get; init; }
 
     /// <summary>
     /// Number that uniquely identifies a key or a group of related keys that are all different but have certain characteristics in common.
@@ -34,7 +34,7 @@ public record EncryptedData1
     [DisplayName("Key Set Identifier")]
     [IsoXmlTag("KeySetIdr")]
     [IsoSimpleType(IsoSimpleType.Max8NumericText)]
-    public IsoMax8NumericText? KeySetIdentifier { get; init; }
+    public Max8NumericText? KeySetIdentifier { get; init; }
 
     /// <summary>
     /// Contains Derived Info or Device ID and Transaction Counter.
@@ -44,7 +44,7 @@ public record EncryptedData1
     [DisplayName("Derived Information")]
     [IsoXmlTag("DrvdInf")]
     [IsoSimpleType(IsoSimpleType.Max32HexBinaryText)]
-    public IsoMax32HexBinaryText? DerivedInformation { get; init; }
+    public Max32HexBinaryText? DerivedInformation { get; init; }
 
     /// <summary>
     /// Defines the algorithm used for encryption.
@@ -54,7 +54,7 @@ public record EncryptedData1
     [DisplayName("Algorithm")]
     [IsoXmlTag("Algo")]
     [IsoSimpleType(IsoSimpleType.Max2NumericText)]
-    public IsoMax2NumericText? Algorithm { get; init; }
+    public Max2NumericText? Algorithm { get; init; }
 
     /// <summary>
     /// Specifies the length of the encryption key.
@@ -64,7 +64,7 @@ public record EncryptedData1
     [DisplayName("Key Length")]
     [IsoXmlTag("KeyLngth")]
     [IsoSimpleType(IsoSimpleType.Max4NumericText)]
-    public IsoMax4NumericText? KeyLength { get; init; }
+    public Max4NumericText? KeyLength { get; init; }
 
     /// <summary>
     /// Mechanism used to provide key confidentiality and integrity. Identifies encryption attribute used for the data encryption operation.
@@ -74,7 +74,7 @@ public record EncryptedData1
     [DisplayName("Key Protection")]
     [IsoXmlTag("KeyPrtcn")]
     [IsoSimpleType(IsoSimpleType.Max2NumericText)]
-    public IsoMax2NumericText? KeyProtection { get; init; }
+    public Max2NumericText? KeyProtection { get; init; }
 
     /// <summary>
     /// Identifies a unique key within a key set when multiple keys exist with the same key set identifier.
@@ -84,7 +84,7 @@ public record EncryptedData1
     [DisplayName("Key Index")]
     [IsoXmlTag("KeyIndx")]
     [IsoSimpleType(IsoSimpleType.Max5NumericText)]
-    public IsoMax5NumericText? KeyIndex { get; init; }
+    public Max5NumericText? KeyIndex { get; init; }
 
     /// <summary>
     /// Identifies the padding method used prior to encipherment of the data.
@@ -94,7 +94,7 @@ public record EncryptedData1
     [DisplayName("Padding Method")]
     [IsoXmlTag("PddgMtd")]
     [IsoSimpleType(IsoSimpleType.Max2NumericText)]
-    public IsoMax2NumericText? PaddingMethod { get; init; }
+    public Max2NumericText? PaddingMethod { get; init; }
 
     /// <summary>
     /// Identifies the format of the structured data when the encrypted data block contains more than one data element.
@@ -104,7 +104,7 @@ public record EncryptedData1
     [DisplayName("Encrypted Data Format")]
     [IsoXmlTag("NcrptdDataFrmt")]
     [IsoSimpleType(IsoSimpleType.Max2NumericText)]
-    public IsoMax2NumericText? EncryptedDataFormat { get; init; }
+    public Max2NumericText? EncryptedDataFormat { get; init; }
 
     /// <summary>
     /// Encrypted data element information.

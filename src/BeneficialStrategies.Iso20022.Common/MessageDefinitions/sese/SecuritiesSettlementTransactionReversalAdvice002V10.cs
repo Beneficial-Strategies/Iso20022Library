@@ -76,7 +76,7 @@ public record SecuritiesSettlementTransactionReversalAdvice002V10 : IOuterRecord
     [IsoXmlTag("ConfRef")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax16Text ConfirmationReference { get; init; }
+    public required RestrictedFINXMax16Text ConfirmationReference { get; init; }
 
     /// <summary>
     /// Additional parameters for the transaction.

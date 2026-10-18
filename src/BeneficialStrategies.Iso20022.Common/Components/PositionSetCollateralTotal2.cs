@@ -21,7 +21,7 @@ public record PositionSetCollateralTotal2
     /// </summary>
     [DisplayName("Number Of Reports")]
     [IsoXmlTag("NbOfRpts")]
-    public IsoMax20PositiveNumber? NumberOfReports { get; init; }
+    public Max20PositiveNumber? NumberOfReports { get; init; }
 
     /// <summary>
     /// Posted Margin Or Collateral.

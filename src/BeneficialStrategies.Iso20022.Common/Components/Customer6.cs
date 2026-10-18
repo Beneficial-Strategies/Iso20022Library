@@ -24,7 +24,7 @@ public record Customer6
     [IsoXmlTag("AcctNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountNumber { get; init; }
+    public Max35Text? AccountNumber { get; init; }
 
     /// <summary>
     /// Name of the customer.
@@ -34,7 +34,7 @@ public record Customer6
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Name { get; init; }
+    public Max70Text? Name { get; init; }
 
     /// <summary>
     /// Customer&apos;s primary contact phone number.
@@ -43,5 +43,5 @@ public record Customer6
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? PhoneNumber { get; init; }
+    public PhoneNumber? PhoneNumber { get; init; }
 }

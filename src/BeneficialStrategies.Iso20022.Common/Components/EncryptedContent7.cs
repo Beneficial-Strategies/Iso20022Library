@@ -35,5 +35,5 @@ public record EncryptedContent7
     /// </summary>
     [DisplayName("Encrypted Data")]
     [IsoXmlTag("NcrptdData")]
-    public required IsoMax100KBinary EncryptedData { get; init; }
+    public required Max100KBinary EncryptedData { get; init; }
 }

@@ -42,5 +42,5 @@ public record PartyIdentificationAndAccount226
     /// </summary>
     [DisplayName("Processing Identification")]
     [IsoXmlTag("PrcgId")]
-    public IsoMax35Text? ProcessingIdentification { get; init; }
+    public Max35Text? ProcessingIdentification { get; init; }
 }

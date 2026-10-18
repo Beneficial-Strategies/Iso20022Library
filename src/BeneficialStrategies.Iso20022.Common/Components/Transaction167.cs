@@ -22,7 +22,7 @@ public record Transaction167
     [IsoId("_oXVjQ5aPEfC2_67yGLymgA")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
-    public required IsoMax35Text AccountOwnerTransactionIdentification { get; init; }
+    public required Max35Text AccountOwnerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the transaction as known by the account servicer.
@@ -30,7 +30,7 @@ public record Transaction167
     [IsoId("_oXVjR5aPEfC2_67yGLymgA")]
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
-    public IsoMax35Text? AccountServicerTransactionIdentification { get; init; }
+    public Max35Text? AccountServicerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
@@ -38,7 +38,7 @@ public record Transaction167
     [IsoId("_oXVjS5aPEfC2_67yGLymgA")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
-    public IsoMax35Text? MarketInfrastructureTransactionIdentification { get; init; }
+    public Max35Text? MarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of a counterparty transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
@@ -46,7 +46,7 @@ public record Transaction167
     [IsoId("_oXVjT5aPEfC2_67yGLymgA")]
     [DisplayName("Counterparty Market Infrastructure Transaction Identification")]
     [IsoXmlTag("CtrPtyMktInfrstrctrTxId")]
-    public IsoMax35Text? CounterpartyMarketInfrastructureTransactionIdentification { get; init; }
+    public Max35Text? CounterpartyMarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of the transaction assigned by the processor of the instruction other than the account owner, the account servicer and the market infrastructure.
@@ -54,7 +54,7 @@ public record Transaction167
     [IsoId("_oXVjUZaPEfC2_67yGLymgA")]
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
-    public IsoMax35Text? ProcessorTransactionIdentification { get; init; }
+    public Max35Text? ProcessorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Reference assigned to the trade by the investor or the trading party. This reference will be used throughout the trade life cycle to access/update the trade details.
@@ -62,7 +62,7 @@ public record Transaction167
     [IsoId("_oXVjU5aPEfC2_67yGLymgA")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    public SimpleValueList<IsoMax35Text> TradeIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> TradeIdentification { get; init; } = [];
 
     /// <summary>
     /// Unique Transaction Identifier (UTI) as agreed with the other counterparty.
@@ -70,7 +70,7 @@ public record Transaction167
     [IsoId("_oXVjV5aPEfC2_67yGLymgA")]
     [DisplayName("Unique Transaction Identifier")]
     [IsoXmlTag("UnqTxIdr")]
-    public IsoUTIIdentifier? UniqueTransactionIdentifier { get; init; }
+    public UTIIdentifier? UniqueTransactionIdentifier { get; init; }
 
     /// <summary>
     /// Collective reference identifying a set of messages.
@@ -78,7 +78,7 @@ public record Transaction167
     [IsoId("_oXVjWZaPEfC2_67yGLymgA")]
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
-    public IsoMax35Text? PoolIdentification { get; init; }
+    public Max35Text? PoolIdentification { get; init; }
 
     /// <summary>
     /// Unique reference agreed upon by the two trade counterparties to identify the trade.
@@ -86,7 +86,7 @@ public record Transaction167
     [IsoId("_oXVjXZaPEfC2_67yGLymgA")]
     [DisplayName("Common Identification")]
     [IsoXmlTag("CmonId")]
-    public IsoMax35Text? CommonIdentification { get; init; }
+    public Max35Text? CommonIdentification { get; init; }
 
     /// <summary>
     /// Identification assigned by the account servicer to unambiguously identify a corporate action event.
@@ -94,7 +94,7 @@ public record Transaction167
     [IsoId("_oXVjYZaPEfC2_67yGLymgA")]
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
-    public IsoMax35Text? CorporateActionEventIdentification { get; init; }
+    public Max35Text? CorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Unique identification identifying the triparty collateral management transaction from the triparty-agent's/service-provider's point of view.
@@ -102,7 +102,7 @@ public record Transaction167
     [IsoId("_oXVjZZaPEfC2_67yGLymgA")]
     [DisplayName("Triparty Agent Service Provider Collateral Transaction Identification")]
     [IsoXmlTag("TrptyAgtSvcPrvdrCollTxId")]
-    public IsoMax35Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; }
+    public Max35Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique reference identifying the triparty collateral management transaction from the client's point of view.
@@ -110,7 +110,7 @@ public record Transaction167
     [IsoId("_oXVjaZaPEfC2_67yGLymgA")]
     [DisplayName("Client Triparty Collateral Transaction Identification")]
     [IsoXmlTag("ClntTrptyCollTxId")]
-    public IsoMax35Text? ClientTripartyCollateralTransactionIdentification { get; init; }
+    public Max35Text? ClientTripartyCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification assigned to the instruction by the client.
@@ -118,7 +118,7 @@ public record Transaction167
     [IsoId("_oXVjbZaPEfC2_67yGLymgA")]
     [DisplayName("Client Collateral Instruction Identification")]
     [IsoXmlTag("ClntCollInstrId")]
-    public IsoMax35Text? ClientCollateralInstructionIdentification { get; init; }
+    public Max35Text? ClientCollateralInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification assigned to the instruction by the triparty-agent/service-provider.
@@ -126,7 +126,7 @@ public record Transaction167
     [IsoId("_oXVjb5aPEfC2_67yGLymgA")]
     [DisplayName("Triparty Agent Service Provider Collateral Instruction Identification")]
     [IsoXmlTag("TrptyAgtSvcPrvdrCollInstrId")]
-    public IsoMax35Text? TripartyAgentServiceProviderCollateralInstructionIdentification { get; init; }
+    public Max35Text? TripartyAgentServiceProviderCollateralInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for a group of individual orders, as assigned by the instructing party. This identifier links the individual orders together.
@@ -134,7 +134,7 @@ public record Transaction167
     [IsoId("_oXVjcZaPEfC2_67yGLymgA")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor's identification of an order. This reference can typically be used in a hub scenario to give the reference of the order as assigned by the underlying client.
@@ -150,7 +150,7 @@ public record Transaction167
     [IsoId("_oXVjdZaPEfC2_67yGLymgA")]
     [DisplayName("Account Owner Leg Identification")]
     [IsoXmlTag("AcctOwnrLegId")]
-    public IsoMax35Text? AccountOwnerLegIdentification { get; init; }
+    public Max35Text? AccountOwnerLegIdentification { get; init; }
 
     /// <summary>
     /// Unique identifier for the instance of the leg execution within a switch confirmation.
@@ -158,7 +158,7 @@ public record Transaction167
     [IsoId("_oXVjd5aPEfC2_67yGLymgA")]
     [DisplayName("Account Servicer Leg Identification")]
     [IsoXmlTag("AcctSvcrLegId")]
-    public IsoMax35Text? AccountServicerLegIdentification { get; init; }
+    public Max35Text? AccountServicerLegIdentification { get; init; }
 
     /// <summary>
     /// Identifies the details of the transaction.

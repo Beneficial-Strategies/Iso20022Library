@@ -22,21 +22,21 @@ public record Garnishment4
     /// </summary>
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Indicates if the employment of the person to whom the garnishment applies (that is, the ultimate debtor) has been terminated.
     /// </summary>
     [DisplayName("Employee Termination Indicator")]
     [IsoXmlTag("MplyeeTermntnInd")]
-    public IsoTrueFalseIndicator? EmployeeTerminationIndicator { get; init; }
+    public TrueFalseIndicator? EmployeeTerminationIndicator { get; init; }
 
     /// <summary>
     /// Indicates if the person to whom the garnishment applies (that is, the ultimate debtor) has family medical insurance coverage available.
     /// </summary>
     [DisplayName("Family Medical Insurance Indicator")]
     [IsoXmlTag("FmlyMdclInsrncInd")]
-    public IsoTrueFalseIndicator? FamilyMedicalInsuranceIndicator { get; init; }
+    public TrueFalseIndicator? FamilyMedicalInsuranceIndicator { get; init; }
 
     /// <summary>
     /// Ultimate party that owes an amount of money to the (ultimate) creditor, in this case, to the garnisher.
@@ -57,7 +57,7 @@ public record Garnishment4
     /// </summary>
     [DisplayName("Reference Number")]
     [IsoXmlTag("RefNb")]
-    public IsoMax140Text? ReferenceNumber { get; init; }
+    public Max140Text? ReferenceNumber { get; init; }
 
     /// <summary>
     /// Amount of money remitted for the referred document.

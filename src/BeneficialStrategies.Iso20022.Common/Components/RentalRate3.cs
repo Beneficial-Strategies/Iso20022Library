@@ -38,5 +38,5 @@ public record RentalRate3
     [IsoId("_8W5gZ3nwEfCmC4yYaU27Kg")]
     [DisplayName("Period Count")]
     [IsoXmlTag("PrdCnt")]
-    public IsoMax4NumericText? PeriodCount { get; init; }
+    public Max4NumericText? PeriodCount { get; init; }
 }

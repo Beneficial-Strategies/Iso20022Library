@@ -35,7 +35,7 @@ public record AdditionalRights4
     /// </summary>
     [DisplayName("Additional Right Information URL Address")]
     [IsoXmlTag("AddtlRghtInfURLAdr")]
-    public IsoMax2048Text? AdditionalRightInformationURLAddress { get; init; }
+    public Max2048Text? AdditionalRightInformationURLAddress { get; init; }
 
     /// <summary>
     /// Additional Right Market Deadline.

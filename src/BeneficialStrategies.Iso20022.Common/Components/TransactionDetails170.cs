@@ -21,7 +21,7 @@ public record TransactionDetails170
     /// </summary>
     [DisplayName("Acknowledged Status Time Stamp")]
     [IsoXmlTag("AckdStsTmStmp")]
-    public IsoISODateTime? AcknowledgedStatusTimeStamp { get; init; }
+    public ISODateTime? AcknowledgedStatusTimeStamp { get; init; }
 
     /// <summary>
     /// Delivering Settlement Parties.
@@ -63,7 +63,7 @@ public record TransactionDetails170
     /// </summary>
     [DisplayName("Matched Status Time Stamp")]
     [IsoXmlTag("MtchdStsTmStmp")]
-    public IsoISODateTime? MatchedStatusTimeStamp { get; init; }
+    public ISODateTime? MatchedStatusTimeStamp { get; init; }
 
     /// <summary>
     /// Partially Released Quantity.
@@ -175,5 +175,5 @@ public record TransactionDetails170
     /// </summary>
     [DisplayName("Transaction Additional Details")]
     [IsoXmlTag("TxAddtlDtls")]
-    public IsoMax350Text? TransactionAdditionalDetails { get; init; }
+    public Max350Text? TransactionAdditionalDetails { get; init; }
 }

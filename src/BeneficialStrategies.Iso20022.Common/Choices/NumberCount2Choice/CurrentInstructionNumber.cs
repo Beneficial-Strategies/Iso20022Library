@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.NumberCount2Choice
         /// </summary>
         [IsoXmlTag("CurInstrNb")]
         [IsoSimpleType(IsoSimpleType.Max6NumericText)]
-        public required IsoMax6NumericText Value { get; init; }
+        public required Max6NumericText Value { get; init; }
     }
 }

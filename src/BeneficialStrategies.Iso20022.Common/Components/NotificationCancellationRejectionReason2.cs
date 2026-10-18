@@ -21,7 +21,7 @@ public record NotificationCancellationRejectionReason2
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public IsoMax350Text? AdditionalInformation { get; init; }
+    public Max350Text? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Reason.

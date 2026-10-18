@@ -21,7 +21,7 @@ public record RelatedInvestigationData1
     /// </summary>
     [DisplayName("Investigation Identification")]
     [IsoXmlTag("InvstgtnId")]
-    public IsoMax35Text? InvestigationIdentification { get; init; }
+    public Max35Text? InvestigationIdentification { get; init; }
 
     /// <summary>
     /// Location.

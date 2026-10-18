@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice
         [IsoXmlTag("FldNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text FieldName { get; init; }
+        public required Max35Text FieldName { get; init; }
 
         /// <summary>
         /// Value of the field before the change.
@@ -34,7 +34,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice
         [IsoXmlTag("OdFldVal")]
         [IsoSimpleType(IsoSimpleType.Max350Text)]
         [StringLength(maximumLength: 350, MinimumLength = 1)]
-        public required IsoMax350Text OldFieldValue { get; init; }
+        public required Max350Text OldFieldValue { get; init; }
 
         /// <summary>
         /// Value of the field after the change.
@@ -44,6 +44,6 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice
         [IsoXmlTag("NewFldVal")]
         [IsoSimpleType(IsoSimpleType.Max350Text)]
         [StringLength(maximumLength: 350, MinimumLength = 1)]
-        public required IsoMax350Text NewFieldValue { get; init; }
+        public required Max350Text NewFieldValue { get; init; }
     }
 }

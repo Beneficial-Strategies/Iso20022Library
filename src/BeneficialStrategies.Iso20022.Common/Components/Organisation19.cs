@@ -33,7 +33,7 @@ public record Organisation19
     [IsoXmlTag("CmonNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public required IsoMax70Text CommonName { get; init; }
+    public required Max70Text CommonName { get; init; }
 
     /// <summary>
     /// Selected language of the card acceptor. Reference ISO 639-1 (alpha-2) and ISO 639-2 (alpha-3).
@@ -51,5 +51,5 @@ public record Organisation19
     [IsoXmlTag("SchmeData")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? SchemeData { get; init; }
+    public Max140Text? SchemeData { get; init; }
 }

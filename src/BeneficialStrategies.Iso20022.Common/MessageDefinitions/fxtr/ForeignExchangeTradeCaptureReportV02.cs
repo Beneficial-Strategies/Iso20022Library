@@ -64,14 +64,14 @@ public record ForeignExchangeTradeCaptureReportV02 : IOuterRecord
     /// </summary>
     [DisplayName("Last Report Requested")]
     [IsoXmlTag("LastRptReqd")]
-    public IsoTrueFalseIndicator? LastReportRequested { get; init; }
+    public TrueFalseIndicator? LastReportRequested { get; init; }
 
     /// <summary>
     /// Query Reject Reason.
     /// </summary>
     [DisplayName("Query Reject Reason")]
     [IsoXmlTag("QryRjctRsn")]
-    public IsoMax35Text? QueryRejectReason { get; init; }
+    public Max35Text? QueryRejectReason { get; init; }
 
     /// <summary>
     /// Reference.
@@ -92,14 +92,14 @@ public record ForeignExchangeTradeCaptureReportV02 : IOuterRecord
     /// </summary>
     [DisplayName("Request Rejected")]
     [IsoXmlTag("ReqRjctd")]
-    public IsoTrueFalseIndicator? RequestRejected { get; init; }
+    public TrueFalseIndicator? RequestRejected { get; init; }
 
     /// <summary>
     /// Request Responder.
     /// </summary>
     [DisplayName("Request Responder")]
     [IsoXmlTag("ReqRspndr")]
-    public required IsoTrueFalseIndicator RequestResponder { get; init; }
+    public required TrueFalseIndicator RequestResponder { get; init; }
 
     /// <summary>
     /// Supplementary Data.
@@ -113,7 +113,7 @@ public record ForeignExchangeTradeCaptureReportV02 : IOuterRecord
     /// </summary>
     [DisplayName("Total Number Trades")]
     [IsoXmlTag("TtlNbTrds")]
-    public IsoNumber? TotalNumberTrades { get; init; }
+    public Number? TotalNumberTrades { get; init; }
 
     /// <summary>
     /// Trade Detail.

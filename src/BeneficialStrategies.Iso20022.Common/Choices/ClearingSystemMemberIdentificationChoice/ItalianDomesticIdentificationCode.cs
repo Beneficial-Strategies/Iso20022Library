@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
         /// </summary>
         [IsoXmlTag("ITNCC")]
         [IsoSimpleType(IsoSimpleType.ItalianDomesticIdentifier)]
-        public required IsoItalianDomesticIdentifier Value { get; init; }
+        public required ItalianDomesticIdentifier Value { get; init; }
     }
 }

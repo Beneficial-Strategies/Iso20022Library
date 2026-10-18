@@ -22,7 +22,7 @@ public record SecuritiesTradeDetails153
     [IsoId("23746c72-dedd-4cf4-a4e3-1dd0eb831564")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    public SimpleValueList<IsoMax35Text> TradeIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> TradeIdentification { get; init; } = [];
 
     /// <summary>
     /// Unique Transaction Identifier (UTI) as agreed with the other counterparty.
@@ -30,7 +30,7 @@ public record SecuritiesTradeDetails153
     [IsoId("dcd036ea-cc06-479f-b2dc-d11cb0de1385")]
     [DisplayName("Unique Transaction Identifier")]
     [IsoXmlTag("UnqTxIdr")]
-    public IsoUTIIdentifier? UniqueTransactionIdentifier { get; init; }
+    public UTIIdentifier? UniqueTransactionIdentifier { get; init; }
 
     /// <summary>
     /// Unambiguous identification of a collateral transaction as assigned by the instructing party.
@@ -38,7 +38,7 @@ public record SecuritiesTradeDetails153
     [IsoId("315a8cd9-125e-4f74-9b0e-1d4199e316d6")]
     [DisplayName("Collateral Transaction Identification")]
     [IsoXmlTag("CollTxId")]
-    public SimpleValueList<IsoMax35Text> CollateralTransactionIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> CollateralTransactionIdentification { get; init; } = [];
 
     /// <summary>
     /// Market in which a trade transaction has been executed.
@@ -86,7 +86,7 @@ public record SecuritiesTradeDetails153
     [IsoId("47435c05-bb6b-49c4-971d-9fdcced363bf")]
     [DisplayName("Acknowledged Status Time Stamp")]
     [IsoXmlTag("AckdStsTmStmp")]
-    public IsoISODateTime? AcknowledgedStatusTimeStamp { get; init; }
+    public ISODateTime? AcknowledgedStatusTimeStamp { get; init; }
 
     /// <summary>
     /// Time stamp on when the transaction is matched.
@@ -94,7 +94,7 @@ public record SecuritiesTradeDetails153
     [IsoId("2274f63e-adc6-43f5-84b2-5c3794d10595")]
     [DisplayName("Matched Status Time Stamp")]
     [IsoXmlTag("MtchdStsTmStmp")]
-    public IsoISODateTime? MatchedStatusTimeStamp { get; init; }
+    public ISODateTime? MatchedStatusTimeStamp { get; init; }
 
     /// <summary>
     /// Specifies the price of the traded financial instrument.|This is the deal price of the individual trade transaction. |If there is only one trade transaction for the execution of the trade, then the deal price could equal the executed trade price (unless, for example, the price includes commissions or rounding, or some other factor has been applied to the deal price or the executed trade price, or both).
@@ -110,7 +110,7 @@ public record SecuritiesTradeDetails153
     [IsoId("0cbd9ed1-38fb-4365-8098-c848e5c4bb85")]
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
-    public IsoMax3Number? NumberOfDaysAccrued { get; init; }
+    public Max3Number? NumberOfDaysAccrued { get; init; }
 
     /// <summary>
     /// Specifies additional information relative to the processing of the trade.
@@ -190,7 +190,7 @@ public record SecuritiesTradeDetails153
     [IsoId("dc4274a0-02f6-4dfd-8ac8-fb1dfd7aee4d")]
     [DisplayName("FX Additional Details")]
     [IsoXmlTag("FxAddtlDtls")]
-    public IsoMax350Text? FXAdditionalDetails { get; init; }
+    public Max350Text? FXAdditionalDetails { get; init; }
 
     /// <summary>
     /// Provides additional settlement processing information which cannot be included within the structured fields of the message.
@@ -198,5 +198,5 @@ public record SecuritiesTradeDetails153
     [IsoId("46f558a6-8ba4-4c27-ab2d-eed308c60a42")]
     [DisplayName("Settlement Instruction Processing Additional Details")]
     [IsoXmlTag("SttlmInstrPrcgAddtlDtls")]
-    public IsoMax350Text? SettlementInstructionProcessingAdditionalDetails { get; init; }
+    public Max350Text? SettlementInstructionProcessingAdditionalDetails { get; init; }
 }

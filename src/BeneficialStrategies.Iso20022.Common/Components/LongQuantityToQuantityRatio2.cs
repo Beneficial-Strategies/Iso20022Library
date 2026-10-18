@@ -23,7 +23,7 @@ public record LongQuantityToQuantityRatio2
     [DisplayName("Long Quantity")]
     [IsoXmlTag("LngQty1")]
     [IsoSimpleType(IsoSimpleType.LongDecimalNumber)]
-    public required IsoLongDecimalNumber LongQuantity1 { get; init; }
+    public required LongDecimalNumber LongQuantity1 { get; init; }
 
     /// <summary>
     /// High precision denominator of the quotient of quantities.
@@ -32,5 +32,5 @@ public record LongQuantityToQuantityRatio2
     [DisplayName("Long Quantity")]
     [IsoXmlTag("LngQty2")]
     [IsoSimpleType(IsoSimpleType.LongDecimalNumber)]
-    public required IsoLongDecimalNumber LongQuantity2 { get; init; }
+    public required LongDecimalNumber LongQuantity2 { get; init; }
 }

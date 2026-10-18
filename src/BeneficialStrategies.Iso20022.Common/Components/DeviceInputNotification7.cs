@@ -22,7 +22,7 @@ public record DeviceInputNotification7
     [IsoId("_g4DpFbZeEfCUZfsQO4rYeA")]
     [DisplayName("Exchange Identification")]
     [IsoXmlTag("XchgId")]
-    public required IsoMax35Text ExchangeIdentification { get; init; }
+    public required Max35Text ExchangeIdentification { get; init; }
 
     /// <summary>
     /// Updated content of the message to display before input.

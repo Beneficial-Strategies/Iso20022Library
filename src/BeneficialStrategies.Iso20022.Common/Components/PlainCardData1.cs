@@ -23,7 +23,7 @@ public record PlainCardData1
     [DisplayName("PAN")]
     [IsoXmlTag("PAN")]
     [IsoSimpleType(IsoSimpleType.Min8Max28NumericText)]
-    public required IsoMin8Max28NumericText PAN { get; init; }
+    public required Min8Max28NumericText PAN { get; init; }
 
     /// <summary>
     /// Identify a card inside a set of cards with the same card number (PAN).
@@ -32,7 +32,7 @@ public record PlainCardData1
     [DisplayName("Card Sequence Number")]
     [IsoXmlTag("CardSeqNb")]
     [IsoSimpleType(IsoSimpleType.Min2Max3NumericText)]
-    public IsoMin2Max3NumericText? CardSequenceNumber { get; init; }
+    public Min2Max3NumericText? CardSequenceNumber { get; init; }
 
     /// <summary>
     /// Date as from which the card can be used.
@@ -41,7 +41,7 @@ public record PlainCardData1
     [DisplayName("Effective Date")]
     [IsoXmlTag("FctvDt")]
     [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
-    public IsoISOYearMonth? EffectiveDate { get; init; }
+    public ISOYearMonth? EffectiveDate { get; init; }
 
     /// <summary>
     /// Expiry date of the card.
@@ -50,7 +50,7 @@ public record PlainCardData1
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
     [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
-    public required IsoISOYearMonth ExpiryDate { get; init; }
+    public required ISOYearMonth ExpiryDate { get; init; }
 
     /// <summary>
     /// Services attached to the card, as defined in ISO 7813.
@@ -59,7 +59,7 @@ public record PlainCardData1
     [DisplayName("Service Code")]
     [IsoXmlTag("SvcCd")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public IsoExact3NumericText? ServiceCode { get; init; }
+    public Exact3NumericText? ServiceCode { get; init; }
 
     /// <summary>
     /// Magnetic track or equivalent payment card data.

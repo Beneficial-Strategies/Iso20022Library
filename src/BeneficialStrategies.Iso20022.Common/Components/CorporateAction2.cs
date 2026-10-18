@@ -39,7 +39,7 @@ public record CorporateAction2
     [DisplayName("Default Option Number")]
     [IsoXmlTag("DfltOptnNb")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public IsoExact3NumericText? DefaultOptionNumber { get; init; }
+    public Exact3NumericText? DefaultOptionNumber { get; init; }
 
     /// <summary>
     /// The method of calculation of drawings and partial redemptions.
@@ -144,7 +144,7 @@ public record CorporateAction2
     [DisplayName("Restriction Indicator")]
     [IsoXmlTag("RstrctnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? RestrictionIndicator { get; init; }
+    public YesNoIndicator? RestrictionIndicator { get; init; }
 
     /// <summary>
     /// Specifies if the issuer will allow the agent to accept partial elections. It is to allow split voting over options. It allows the client to elect more than one option to be selected per designated holding.
@@ -153,7 +153,7 @@ public record CorporateAction2
     [DisplayName("Partial Election Indicator")]
     [IsoXmlTag("PrtlElctnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PartialElectionIndicator { get; init; }
+    public YesNoIndicator? PartialElectionIndicator { get; init; }
 
     /// <summary>
     /// Specifies the effect on the holdings of electing a Corporate Action option.
@@ -201,7 +201,7 @@ public record CorporateAction2
     [IsoId("_TddjZtp-Ed-ak6NoX_4Aeg_-1756777381")]
     [DisplayName("Coupon Number")]
     [IsoXmlTag("CpnNb")]
-    public SimpleValueList<IsoMax3NumericText> CouponNumber { get; init; } = [];
+    public SimpleValueList<Max3NumericText> CouponNumber { get; init; } = [];
 
     /// <summary>
     /// Number of days used for calculating the accrued interest amount.
@@ -210,7 +210,7 @@ public record CorporateAction2
     [DisplayName("Interest Accrued Number Of Days")]
     [IsoXmlTag("IntrstAcrdNbOfDays")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? InterestAccruedNumberOfDays { get; init; }
+    public Number? InterestAccruedNumberOfDays { get; init; }
 
     /// <summary>
     /// New denomination currency of the inancial instrument.
@@ -267,7 +267,7 @@ public record CorporateAction2
     [DisplayName("Certification Required Indicator")]
     [IsoXmlTag("CertfctnReqrdInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? CertificationRequiredIndicator { get; init; }
+    public YesNoIndicator? CertificationRequiredIndicator { get; init; }
 
     /// <summary>
     /// Type of certification which is required.
@@ -301,7 +301,7 @@ public record CorporateAction2
     [IsoXmlTag("NewPlcOfIncorprtn")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? NewPlaceOfIncorporation { get; init; }
+    public Max70Text? NewPlaceOfIncorporation { get; init; }
 
     /// <summary>
     /// Specifies whether terms of the event allow resale of the rights.
@@ -326,7 +326,7 @@ public record CorporateAction2
     [DisplayName("Redemption Charges Applied Indicator")]
     [IsoXmlTag("RedChrgsApldInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? RedemptionChargesAppliedIndicator { get; init; }
+    public YesNoIndicator? RedemptionChargesAppliedIndicator { get; init; }
 
     /// <summary>
     /// Specifies whether the proceeds of the event will be distributed on a rolling basis rather than on a specific date.

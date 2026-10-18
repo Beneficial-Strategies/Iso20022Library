@@ -33,5 +33,5 @@ public record AmountHaircutMargin1
     [DisplayName("Haircut Or Margin")]
     [IsoXmlTag("HrcutOrMrgn")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? HaircutOrMargin { get; init; }
+    public PercentageRate? HaircutOrMargin { get; init; }
 }

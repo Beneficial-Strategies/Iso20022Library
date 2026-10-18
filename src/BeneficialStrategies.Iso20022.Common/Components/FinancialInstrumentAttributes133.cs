@@ -35,14 +35,14 @@ public record FinancialInstrumentAttributes133
     /// </summary>
     [DisplayName("Conversion Date")]
     [IsoXmlTag("ConvsDt")]
-    public IsoISODate? ConversionDate { get; init; }
+    public DateOnly? ConversionDate { get; init; }
 
     /// <summary>
     /// Dated Date.
     /// </summary>
     [DisplayName("Dated Date")]
     [IsoXmlTag("DtdDt")]
-    public IsoISODate? DatedDate { get; init; }
+    public DateOnly? DatedDate { get; init; }
 
     /// <summary>
     /// Day Count Basis.
@@ -63,7 +63,7 @@ public record FinancialInstrumentAttributes133
     /// </summary>
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
-    public IsoISODate? ExpiryDate { get; init; }
+    public DateOnly? ExpiryDate { get; init; }
 
     /// <summary>
     /// Financial Instrument Identification.
@@ -77,28 +77,28 @@ public record FinancialInstrumentAttributes133
     /// </summary>
     [DisplayName("Floating Rate Fixing Date")]
     [IsoXmlTag("FltgRateFxgDt")]
-    public IsoISODate? FloatingRateFixingDate { get; init; }
+    public DateOnly? FloatingRateFixingDate { get; init; }
 
     /// <summary>
     /// Interest Rate.
     /// </summary>
     [DisplayName("Interest Rate")]
     [IsoXmlTag("IntrstRate")]
-    public IsoPercentage14Rate? InterestRate { get; init; }
+    public decimal? InterestRate { get; init; }
 
     /// <summary>
     /// Issue Date.
     /// </summary>
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
-    public IsoISODate? IssueDate { get; init; }
+    public DateOnly? IssueDate { get; init; }
 
     /// <summary>
     /// Maturity Date.
     /// </summary>
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
-    public IsoISODate? MaturityDate { get; init; }
+    public DateOnly? MaturityDate { get; init; }
 
     /// <summary>
     /// Minimum Nominal Quantity.
@@ -112,28 +112,28 @@ public record FinancialInstrumentAttributes133
     /// </summary>
     [DisplayName("Next Callable Date")]
     [IsoXmlTag("NxtCllblDt")]
-    public IsoISODate? NextCallableDate { get; init; }
+    public DateOnly? NextCallableDate { get; init; }
 
     /// <summary>
     /// Next Coupon Date.
     /// </summary>
     [DisplayName("Next Coupon Date")]
     [IsoXmlTag("NxtCpnDt")]
-    public IsoISODate? NextCouponDate { get; init; }
+    public DateOnly? NextCouponDate { get; init; }
 
     /// <summary>
     /// Next Factor.
     /// </summary>
     [DisplayName("Next Factor")]
     [IsoXmlTag("NxtFctr")]
-    public IsoBaseOne14Rate? NextFactor { get; init; }
+    public BaseOne14Rate? NextFactor { get; init; }
 
     /// <summary>
     /// Next Interest Rate.
     /// </summary>
     [DisplayName("Next Interest Rate")]
     [IsoXmlTag("NxtIntrstRate")]
-    public IsoPercentage14Rate? NextInterestRate { get; init; }
+    public decimal? NextInterestRate { get; init; }
 
     /// <summary>
     /// Place Of Listing.
@@ -147,12 +147,12 @@ public record FinancialInstrumentAttributes133
     /// </summary>
     [DisplayName("Previous Factor")]
     [IsoXmlTag("PrvsFctr")]
-    public IsoBaseOne14Rate? PreviousFactor { get; init; }
+    public BaseOne14Rate? PreviousFactor { get; init; }
 
     /// <summary>
     /// Putable Date.
     /// </summary>
     [DisplayName("Putable Date")]
     [IsoXmlTag("PutblDt")]
-    public IsoISODate? PutableDate { get; init; }
+    public DateOnly? PutableDate { get; init; }
 }

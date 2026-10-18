@@ -32,5 +32,5 @@ public record ProxyAccountIdentification1
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
     [StringLength(maximumLength: 2048, MinimumLength = 1)]
-    public required IsoMax2048Text Identification { get; init; }
+    public required Max2048Text Identification { get; init; }
 }

@@ -64,7 +64,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument8Choice
         [IsoXmlTag("RegnId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? RegistrationIdentification { get; init; }
+        public Max35Text? RegistrationIdentification { get; init; }
 
         /// <summary>
         /// Reference of the direct debit mandate that has been agreed upon by the debtor and creditor.
@@ -74,6 +74,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument8Choice
         [IsoXmlTag("MndtId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? MandateIdentification { get; init; }
+        public Max35Text? MandateIdentification { get; init; }
     }
 }

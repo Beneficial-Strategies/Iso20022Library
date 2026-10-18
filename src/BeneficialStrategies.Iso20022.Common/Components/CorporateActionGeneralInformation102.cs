@@ -24,7 +24,7 @@ public record CorporateActionGeneralInformation102
     [IsoXmlTag("CorpActnEvtId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax16Text CorporateActionEventIdentification { get; init; }
+    public required RestrictedFINXMax16Text CorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Official and unique reference assigned by the official central body/entity within each market at the beginning of a corporate action event.
@@ -34,7 +34,7 @@ public record CorporateActionGeneralInformation102
     [IsoXmlTag("OffclCorpActnEvtId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? OfficialCorporateActionEventIdentification { get; init; }
+    public RestrictedFINXMax16Text? OfficialCorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Specifies the type of narrative related to the message.

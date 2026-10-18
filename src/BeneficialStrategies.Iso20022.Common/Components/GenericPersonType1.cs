@@ -23,7 +23,7 @@ public record GenericPersonType1
     [DisplayName("Requested")]
     [IsoXmlTag("Reqd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator Requested { get; init; }
+    public required RequestedIndicator Requested { get; init; }
 
     /// <summary>
     /// Name of the identification scheme.

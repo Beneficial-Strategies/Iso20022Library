@@ -23,7 +23,7 @@ public record Record1
     [DisplayName("Sequence Counter")]
     [IsoXmlTag("SeqCntr")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber SequenceCounter { get; init; }
+    public required Number SequenceCounter { get; init; }
 
     /// <summary>
     /// Value of the record to use for the computation of the checksum of the batch.
@@ -32,7 +32,7 @@ public record Record1
     [DisplayName("Record Checksum Input Value")]
     [IsoXmlTag("RcrdChcksmInptVal")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public IsoMax140Binary? RecordChecksumInputValue { get; init; }
+    public Max140Binary? RecordChecksumInputValue { get; init; }
 
     /// <summary>
     /// Information used with financial type of messages when third-party clearing is involved.

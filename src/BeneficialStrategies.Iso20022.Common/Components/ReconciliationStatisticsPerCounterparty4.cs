@@ -28,14 +28,14 @@ public record ReconciliationStatisticsPerCounterparty4
     /// </summary>
     [DisplayName("Reference Date")]
     [IsoXmlTag("RefDt")]
-    public required IsoISODate ReferenceDate { get; init; }
+    public required DateOnly ReferenceDate { get; init; }
 
     /// <summary>
     /// Total Number Of Transactions.
     /// </summary>
     [DisplayName("Total Number Of Transactions")]
     [IsoXmlTag("TtlNbOfTxs")]
-    public IsoNumber? TotalNumberOfTransactions { get; init; }
+    public Number? TotalNumberOfTransactions { get; init; }
 
     /// <summary>
     /// Transaction Details.

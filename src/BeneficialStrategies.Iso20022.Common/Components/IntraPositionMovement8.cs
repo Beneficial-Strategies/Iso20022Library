@@ -102,7 +102,7 @@ public record IntraPositionMovement8
     [IsoId("_L2bZVWdDEemvNLufWGIVOQ")]
     [DisplayName("Status Date")]
     [IsoXmlTag("StsDt")]
-    public IsoISODateTime? StatusDate { get; init; }
+    public ISODateTime? StatusDate { get; init; }
 
     /// <summary>
     /// Time stamp on when the transaction is acknowledged.
@@ -110,7 +110,7 @@ public record IntraPositionMovement8
     [IsoId("_L2bZXWdDEemvNLufWGIVOQ")]
     [DisplayName("Acknowledged Status Time Stamp")]
     [IsoXmlTag("AckdStsTmStmp")]
-    public IsoISODateTime? AcknowledgedStatusTimeStamp { get; init; }
+    public ISODateTime? AcknowledgedStatusTimeStamp { get; init; }
 
     /// <summary>
     /// Link to another transaction that must be processed after, before or at the same time.
@@ -158,7 +158,7 @@ public record IntraPositionMovement8
     [IsoId("_L2bZb2dDEemvNLufWGIVOQ")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// Provides additional settlement processing information which can not be included within the structured fields of the message.
@@ -166,7 +166,7 @@ public record IntraPositionMovement8
     [IsoId("_L2bZd2dDEemvNLufWGIVOQ")]
     [DisplayName("Instruction Processing Additional Details")]
     [IsoXmlTag("InstrPrcgAddtlDtls")]
-    public IsoMax350Text? InstructionProcessingAdditionalDetails { get; init; }
+    public Max350Text? InstructionProcessingAdditionalDetails { get; init; }
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.

@@ -39,7 +39,7 @@ public record DevicePlaySoundRequest1
     [DisplayName("Sound Volume")]
     [IsoXmlTag("SoundVol")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? SoundVolume { get; init; }
+    public PercentageRate? SoundVolume { get; init; }
 
     /// <summary>
     /// Content of a sound to play.

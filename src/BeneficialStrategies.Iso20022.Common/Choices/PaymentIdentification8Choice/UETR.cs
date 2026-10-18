@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification8Choice
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("UETR")]
-        public required IsoUUIDv4Identifier Value { get; init; }
+        public required UUIDv4Identifier Value { get; init; }
     }
 }

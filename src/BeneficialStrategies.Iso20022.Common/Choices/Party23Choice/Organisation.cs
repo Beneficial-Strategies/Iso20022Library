@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party23Choice
         [IsoXmlTag("Nm")]
         [IsoSimpleType(IsoSimpleType.Max140Text)]
         [StringLength(maximumLength: 140, MinimumLength = 1)]
-        public required IsoMax140Text Name { get; init; }
+        public required Max140Text Name { get; init; }
 
         /// <summary>
         /// Unique and unambiguous identifier for an organisation that is allocated by an institution, for example, Dun &amp; Bradstreet Identification.
@@ -42,7 +42,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party23Choice
         [IsoXmlTag("Purp")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? Purpose { get; init; }
+        public Max35Text? Purpose { get; init; }
 
         /// <summary>
         /// Country of taxation of an organisation.
@@ -67,7 +67,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party23Choice
         [DisplayName("Registration Date")]
         [IsoXmlTag("RegnDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? RegistrationDate { get; init; }
+        public DateOnly? RegistrationDate { get; init; }
 
         /// <summary>
         /// Tax identification information.
@@ -85,7 +85,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party23Choice
         [IsoXmlTag("NtlRegnNb")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? NationalRegistrationNumber { get; init; }
+        public Max35Text? NationalRegistrationNumber { get; init; }
 
         /// <summary>
         /// Information that locates and identifies a specific address, as defined by postal services.

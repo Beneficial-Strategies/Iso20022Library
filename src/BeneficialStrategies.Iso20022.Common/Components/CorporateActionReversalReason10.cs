@@ -21,7 +21,7 @@ public record CorporateActionReversalReason10
     /// </summary>
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
-    public IsoRestrictedFINXMax256Text? AdditionalReasonInformation { get; init; }
+    public RestrictedFINXMax256Text? AdditionalReasonInformation { get; init; }
 
     /// <summary>
     /// Reason.

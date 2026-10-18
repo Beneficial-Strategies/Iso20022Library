@@ -33,5 +33,5 @@ public record CashReuseData1
     [DisplayName("Cash Reinvestment Rate")]
     [IsoXmlTag("CshRinvstmtRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate CashReinvestmentRate { get; init; }
+    public required PercentageRate CashReinvestmentRate { get; init; }
 }

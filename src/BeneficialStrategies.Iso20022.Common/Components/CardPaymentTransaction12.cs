@@ -32,7 +32,7 @@ public record CardPaymentTransaction12
     [IsoXmlTag("RcptTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RecipientTransactionIdentification { get; init; }
+    public Max35Text? RecipientTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification of the reconciliation period between the acceptor and the acquirer. This identification might be linked to the identification of the settlement for further verification by the merchant.
@@ -42,7 +42,7 @@ public record CardPaymentTransaction12
     [IsoXmlTag("RcncltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReconciliationIdentification { get; init; }
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Interchange information related to the card scheme.
@@ -52,7 +52,7 @@ public record CardPaymentTransaction12
     [IsoXmlTag("IntrchngData")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? InterchangeData { get; init; }
+    public Max35Text? InterchangeData { get; init; }
 
     /// <summary>
     /// Detail of the transaction transported.

@@ -24,7 +24,7 @@ public record BillingStatement2
     [IsoXmlTag("StmtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text StatementIdentification { get; init; }
+    public required Max35Text StatementIdentification { get; init; }
 
     /// <summary>
     /// Date range between the start date and the end date for which the statement is issued.
@@ -41,7 +41,7 @@ public record BillingStatement2
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// Defines the status of the statement.

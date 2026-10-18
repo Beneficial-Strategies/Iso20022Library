@@ -22,7 +22,7 @@ public record SubMerchant1
     [IsoId("_FyXyoRTjEfC_aaedwHHlmw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Entity in charge of assigning an identification to a party.
@@ -30,7 +30,7 @@ public record SubMerchant1
     [IsoId("_FyXyoxTjEfC_aaedwHHlmw")]
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
-    public IsoMax35Text? Assigner { get; init; }
+    public Max35Text? Assigner { get; init; }
 
     /// <summary>
     /// Country of the party.
@@ -46,7 +46,7 @@ public record SubMerchant1
     [IsoId("_FyXyqxTjEfC_aaedwHHlmw")]
     [DisplayName("Foreign")]
     [IsoXmlTag("Frgn")]
-    public IsoMax3Text? Foreign { get; init; }
+    public Max3Text? Foreign { get; init; }
 
     /// <summary>
     /// Contains the full name of the sponsored merchant.
@@ -54,7 +54,7 @@ public record SubMerchant1
     [IsoId("_FyXyrRTjEfC_aaedwHHlmw")]
     [DisplayName("Business Name")]
     [IsoXmlTag("BizNm")]
-    public IsoMax140Text? BusinessName { get; init; }
+    public Max140Text? BusinessName { get; init; }
 
     /// <summary>
     /// Legal Corporate Name of the sponsored merchant.
@@ -62,7 +62,7 @@ public record SubMerchant1
     [IsoId("_FyXyrxTjEfC_aaedwHHlmw")]
     [DisplayName("Legal Corporate Name")]
     [IsoXmlTag("LglCorpNm")]
-    public IsoMax99Text? LegalCorporateName { get; init; }
+    public Max99Text? LegalCorporateName { get; init; }
 
     /// <summary>
     /// Address of the sponsored merchant.
@@ -78,7 +78,7 @@ public record SubMerchant1
     [IsoId("_FyXyuxTjEfC_aaedwHHlmw")]
     [DisplayName("Geographic Location")]
     [IsoXmlTag("GeogcLctn")]
-    public IsoGeographicPointInDecimalDegreesText? GeographicLocation { get; init; }
+    public GeographicPointInDecimalDegreesText? GeographicLocation { get; init; }
 
     /// <summary>
     /// Reserved for private data. The use of this data element is determined by bilateral agreement.
@@ -86,7 +86,7 @@ public record SubMerchant1
     [IsoId("_TvldUl6CEfCoP_h9uwd39Q")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -94,7 +94,7 @@ public record SubMerchant1
     [IsoId("_TvldU16CEfCoP_h9uwd39Q")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 
     /// <summary>
     /// Contains local language equivalent(s) of data in the current component.

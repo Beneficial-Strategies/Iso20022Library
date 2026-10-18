@@ -40,7 +40,7 @@ public record StatusDetail1
     [IsoXmlTag("Sts")]
     [IsoSimpleType(IsoSimpleType.Max10Text)]
     [StringLength(maximumLength: 10, MinimumLength = 1)]
-    public IsoMax10Text? Status { get; init; }
+    public Max10Text? Status { get; init; }
 
     /// <summary>
     /// Code indicating the reason of the decision.
@@ -50,7 +50,7 @@ public record StatusDetail1
     [IsoXmlTag("StsRsn")]
     [IsoSimpleType(IsoSimpleType.Max10Text)]
     [StringLength(maximumLength: 10, MinimumLength = 1)]
-    public required IsoMax10Text StatusReason { get; init; }
+    public required Max10Text StatusReason { get; init; }
 
     /// <summary>
     /// Period of time when the decision is effective.
@@ -68,5 +68,5 @@ public record StatusDetail1
     [IsoXmlTag("Cmnt")]
     [IsoSimpleType(IsoSimpleType.Max20000Text)]
     [StringLength(maximumLength: 20000, MinimumLength = 1)]
-    public IsoMax20000Text? Comment { get; init; }
+    public Max20000Text? Comment { get; init; }
 }

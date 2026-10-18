@@ -28,7 +28,7 @@ public record TradeData45
     /// </summary>
     [DisplayName("Current Status Date Time")]
     [IsoXmlTag("CurStsDtTm")]
-    public required IsoISODateTime CurrentStatusDateTime { get; init; }
+    public required ISODateTime CurrentStatusDateTime { get; init; }
 
     /// <summary>
     /// Current Status Sub Type.
@@ -42,7 +42,7 @@ public record TradeData45
     /// </summary>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Previous Status.
@@ -63,19 +63,19 @@ public record TradeData45
     /// </summary>
     [DisplayName("Product Type")]
     [IsoXmlTag("PdctTp")]
-    public IsoMax35Text? ProductType { get; init; }
+    public Max35Text? ProductType { get; init; }
 
     /// <summary>
     /// Settlement Session Identifier.
     /// </summary>
     [DisplayName("Settlement Session Identifier")]
     [IsoXmlTag("SttlmSsnIdr")]
-    public IsoExact4AlphaNumericText? SettlementSessionIdentifier { get; init; }
+    public Exact4AlphaNumericText? SettlementSessionIdentifier { get; init; }
 
     /// <summary>
     /// Status Originator.
     /// </summary>
     [DisplayName("Status Originator")]
     [IsoXmlTag("StsOrgtr")]
-    public IsoMax35Text? StatusOriginator { get; init; }
+    public Max35Text? StatusOriginator { get; init; }
 }

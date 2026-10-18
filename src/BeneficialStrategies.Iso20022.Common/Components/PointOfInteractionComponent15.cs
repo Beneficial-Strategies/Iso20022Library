@@ -63,7 +63,7 @@ public record PointOfInteractionComponent15
     /// </summary>
     [DisplayName("Sub Type Information")]
     [IsoXmlTag("SubTpInf")]
-    public IsoMax70Text? SubTypeInformation { get; init; }
+    public Max70Text? SubTypeInformation { get; init; }
 
     /// <summary>
     /// Type.

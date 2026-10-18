@@ -23,7 +23,7 @@ public record SecurityInstrumentDescription11
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public IsoISINOct2015Identifier? Identification { get; init; }
+    public ISINOct2015Identifier? Identification { get; init; }
 
     /// <summary>
     /// Full name or description of the financial instrument.
@@ -33,7 +33,7 @@ public record SecurityInstrumentDescription11
     [IsoXmlTag("FullNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text FullName { get; init; }
+    public required Max350Text FullName { get; init; }
 
     /// <summary>
     /// Classification type of the financial instrument, as per the ISO classification of financial instrument (CFI) codification, that is common share with voting rights, fully paid, or registered.
@@ -42,7 +42,7 @@ public record SecurityInstrumentDescription11
     [DisplayName("Classification Type")]
     [IsoXmlTag("ClssfctnTp")]
     [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
-    public required IsoCFIOct2015Identifier ClassificationType { get; init; }
+    public required CFIOct2015Identifier ClassificationType { get; init; }
 
     /// <summary>
     /// Currency in which the notional is denominated.

@@ -31,5 +31,5 @@ public record SpecificInstructionRequest2
     [DisplayName("Securities Registration")]
     [IsoXmlTag("SctiesRegn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? SecuritiesRegistration { get; init; }
+    public YesNoIndicator? SecuritiesRegistration { get; init; }
 }

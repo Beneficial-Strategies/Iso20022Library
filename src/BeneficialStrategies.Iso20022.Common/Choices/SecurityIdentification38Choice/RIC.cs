@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification38Choice
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("RIC")]
-        public required IsoRICIdentifier Value { get; init; }
+        public required RICIdentifier Value { get; init; }
     }
 }

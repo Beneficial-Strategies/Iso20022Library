@@ -22,7 +22,7 @@ public record QuantityRangeBoundary1
     [IsoId("_jtapAO5NEeCisYr99QEiWA_-330775982")]
     [DisplayName("Boundary")]
     [IsoXmlTag("Bdry")]
-    public required IsoDecimalNumber Boundary { get; init; }
+    public required DecimalNumber Boundary { get; init; }
 
     /// <summary>
     /// Indicates whether the boundary quantity is included in the range of quantity values.
@@ -30,5 +30,5 @@ public record QuantityRangeBoundary1
     [IsoId("_jtapAe5NEeCisYr99QEiWA_279625946")]
     [DisplayName("Included")]
     [IsoXmlTag("Incl")]
-    public required IsoYesNoIndicator Included { get; init; }
+    public required YesNoIndicator Included { get; init; }
 }

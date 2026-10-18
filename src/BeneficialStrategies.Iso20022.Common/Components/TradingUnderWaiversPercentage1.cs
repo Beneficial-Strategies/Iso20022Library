@@ -23,7 +23,7 @@ public record TradingUnderWaiversPercentage1
     [DisplayName("Trading Under Waiver Percentage")]
     [IsoXmlTag("TradgUdrWvrPctg")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate TradingUnderWaiverPercentage { get; init; }
+    public required PercentageRate TradingUnderWaiverPercentage { get; init; }
 
     /// <summary>
     /// The venue this trading under waiver percentage is in relation to.
@@ -32,7 +32,7 @@ public record TradingUnderWaiversPercentage1
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public required IsoMICIdentifier TradingVenue { get; init; }
+    public required MICIdentifier TradingVenue { get; init; }
 
     /// <summary>
     /// Information for interpreting the result.
@@ -42,5 +42,5 @@ public record TradingUnderWaiversPercentage1
     [IsoXmlTag("Dsclmr")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Disclaimer { get; init; }
+    public Max350Text? Disclaimer { get; init; }
 }

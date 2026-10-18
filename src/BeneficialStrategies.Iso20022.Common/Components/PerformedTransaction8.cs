@@ -46,7 +46,7 @@ public record PerformedTransaction8
     [IsoId("_QUHdF7ZbEfCUZfsQO4rYeA")]
     [DisplayName("POI Reconciliation Identification")]
     [IsoXmlTag("POIRcncltnId")]
-    public IsoMax35Text? POIReconciliationIdentification { get; init; }
+    public Max35Text? POIReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Data related to the result of a processed payment transaction.

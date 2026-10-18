@@ -24,7 +24,7 @@ public record ExtendedParty4
     [IsoXmlTag("XtndedPtyRole")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoExtended350Code ExtendedPartyRole { get; init; }
+    public required Extended350Code ExtendedPartyRole { get; init; }
 
     /// <summary>
     /// Detailed ownership information about a party.

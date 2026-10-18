@@ -40,5 +40,5 @@ public record Visibilty1
     [DisplayName("Limited Visibility")]
     [IsoXmlTag("LtdVsblty")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? LimitedVisibility { get; init; }
+    public TrueFalseIndicator? LimitedVisibility { get; init; }
 }

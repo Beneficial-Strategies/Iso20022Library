@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReportQuery8Choice
         [DisplayName("Trade Life Cycle History")]
         [IsoXmlTag("TradLifeCyclHstry")]
         [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-        public required IsoTrueFalseIndicator TradeLifeCycleHistory { get; init; }
+        public required TrueFalseIndicator TradeLifeCycleHistory { get; init; }
 
         /// <summary>
         /// Indicates whether the response must include all trades  (false) or only the outstanding trades (true).
@@ -34,7 +34,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReportQuery8Choice
         [DisplayName("Outstanding Trade Indicator")]
         [IsoXmlTag("OutsdngTradInd")]
         [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-        public required IsoTrueFalseIndicator OutstandingTradeIndicator { get; init; }
+        public required TrueFalseIndicator OutstandingTradeIndicator { get; init; }
 
         /// <summary>
         /// Query criteria related to counterparties.

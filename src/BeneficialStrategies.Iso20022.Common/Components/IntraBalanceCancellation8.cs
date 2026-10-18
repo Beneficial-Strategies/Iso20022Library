@@ -49,14 +49,14 @@ public record IntraBalanceCancellation8
     /// </summary>
     [DisplayName("Request Reference")]
     [IsoXmlTag("ReqRef")]
-    public required IsoMax35Text RequestReference { get; init; }
+    public required Max35Text RequestReference { get; init; }
 
     /// <summary>
     /// Status Date.
     /// </summary>
     [DisplayName("Status Date")]
     [IsoXmlTag("StsDt")]
-    public IsoISODateTime? StatusDate { get; init; }
+    public ISODateTime? StatusDate { get; init; }
 
     /// <summary>
     /// Transaction Identification.

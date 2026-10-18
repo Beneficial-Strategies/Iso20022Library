@@ -23,5 +23,5 @@ public record EligibilityDates1
     [DisplayName("Entitlement Fixing Date")]
     [IsoXmlTag("EntitlmntFxgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate EntitlementFixingDate { get; init; }
+    public required DateOnly EntitlementFixingDate { get; init; }
 }

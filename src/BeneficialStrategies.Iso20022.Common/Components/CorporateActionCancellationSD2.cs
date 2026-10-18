@@ -24,7 +24,7 @@ public record CorporateActionCancellationSD2
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text PlaceAndName { get; init; }
+    public required Max350Text PlaceAndName { get; init; }
 
     /// <summary>
     /// Additional textual information regarding the cancelled event.
@@ -34,5 +34,5 @@ public record CorporateActionCancellationSD2
     [IsoXmlTag("XtrnlCmnts")]
     [IsoSimpleType(IsoSimpleType.Max8000Text)]
     [StringLength(maximumLength: 8000, MinimumLength = 1)]
-    public IsoMax8000Text? ExternalComments { get; init; }
+    public Max8000Text? ExternalComments { get; init; }
 }

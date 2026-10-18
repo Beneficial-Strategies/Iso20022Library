@@ -24,7 +24,7 @@ public record DataSetSubmissionReferences3
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransactionIdentification { get; init; }
+    public required Max35Text TransactionIdentification { get; init; }
 
     /// <summary>
     /// Reference to the purchase order of the underlying transaction.
@@ -42,7 +42,7 @@ public record DataSetSubmissionReferences3
     [IsoXmlTag("SubmitrTxRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SubmitterTransactionReference { get; init; }
+    public Max35Text? SubmitterTransactionReference { get; init; }
 
     /// <summary>
     /// Specifies that this message should force the matching application to match all data sets it has received so far for the transaction identified by the transaction identification.
@@ -51,5 +51,5 @@ public record DataSetSubmissionReferences3
     [DisplayName("Forced Match")]
     [IsoXmlTag("ForcdMtch")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ForcedMatch { get; init; }
+    public required YesNoIndicator ForcedMatch { get; init; }
 }

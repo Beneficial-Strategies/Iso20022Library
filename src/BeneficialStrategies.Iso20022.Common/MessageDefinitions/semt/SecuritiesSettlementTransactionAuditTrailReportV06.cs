@@ -71,7 +71,7 @@ public record SecuritiesSettlementTransactionAuditTrailReportV06 : IOuterRecord
     /// </summary>
     [DisplayName("Query Reference")]
     [IsoXmlTag("QryRef")]
-    public IsoMax35Text? QueryReference { get; init; }
+    public Max35Text? QueryReference { get; init; }
 
     /// <summary>
     /// Safekeeping Account.

@@ -21,7 +21,7 @@ public record ItemDescription2
     /// </summary>
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public ValueList<IsoMax8000Text> Description { get; init; } = [];
+    public ValueList<Max8000Text> Description { get; init; } = [];
 
     /// <summary>
     /// Language.
@@ -35,5 +35,5 @@ public record ItemDescription2
     /// </summary>
     [DisplayName("Title")]
     [IsoXmlTag("Titl")]
-    public IsoMax1025Text? Title { get; init; }
+    public Max1025Text? Title { get; init; }
 }

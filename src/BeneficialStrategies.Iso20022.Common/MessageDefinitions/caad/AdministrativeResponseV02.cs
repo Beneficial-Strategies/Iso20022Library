@@ -92,7 +92,7 @@ public record AdministrativeResponseV02 : IOuterRecord
     /// </summary>
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
-    public ValueList<IsoMax256Text> AlternateMessageReason { get; init; } = [];
+    public ValueList<Max256Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Card.
@@ -162,7 +162,7 @@ public record AdministrativeResponseV02 : IOuterRecord
     /// </summary>
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
-    public IsoMax10KHexBinaryText? ICCRelatedData { get; init; }
+    public Max10KHexBinaryText? ICCRelatedData { get; init; }
 
     /// <summary>
     /// Instalment.
@@ -218,7 +218,7 @@ public record AdministrativeResponseV02 : IOuterRecord
     /// </summary>
     [DisplayName("Other Administrative Type")]
     [IsoXmlTag("OthrAdmstvTp")]
-    public IsoMax35Text? OtherAdministrativeType { get; init; }
+    public Max35Text? OtherAdministrativeType { get; init; }
 
     /// <summary>
     /// Payee.
@@ -331,7 +331,7 @@ public record AdministrativeResponseV02 : IOuterRecord
     /// </summary>
     [DisplayName("Text Message")]
     [IsoXmlTag("TxtMsg")]
-    public IsoMax20KText? TextMessage { get; init; }
+    public Max20KText? TextMessage { get; init; }
 
     /// <summary>
     /// Token.
@@ -345,7 +345,7 @@ public record AdministrativeResponseV02 : IOuterRecord
     /// </summary>
     [DisplayName("Transaction Description")]
     [IsoXmlTag("TxDesc")]
-    public IsoMax1000Text? TransactionDescription { get; init; }
+    public Max1000Text? TransactionDescription { get; init; }
 
     /// <summary>
     /// Transaction Identification.

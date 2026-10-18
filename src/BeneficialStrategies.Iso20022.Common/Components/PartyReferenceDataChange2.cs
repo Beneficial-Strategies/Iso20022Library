@@ -41,5 +41,5 @@ public record PartyReferenceDataChange2
     [DisplayName("Operation Time Stamp")]
     [IsoXmlTag("OprTmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime OperationTimeStamp { get; init; }
+    public required ISODateTime OperationTimeStamp { get; init; }
 }

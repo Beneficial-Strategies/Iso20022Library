@@ -30,7 +30,7 @@ public record PartyIdentification342
     [IsoId("_YJARsa5wEfCUHaCK5HWOhg")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public IsoMax35Text? AccountIdentification { get; init; }
+    public Max35Text? AccountIdentification { get; init; }
 
     /// <summary>
     /// Address for electronic mail (e-mail).
@@ -38,7 +38,7 @@ public record PartyIdentification342
     [IsoId("_WM4jQ65wEfCUHaCK5HWOhg")]
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
-    public IsoMax256Text? EmailAddress { get; init; }
+    public Max256Text? EmailAddress { get; init; }
 
     /// <summary>
     /// Natural person local identification and type.
@@ -70,5 +70,5 @@ public record PartyIdentification342
     [IsoId("_WM4jS65wEfCUHaCK5HWOhg")]
     [DisplayName("Company Register Shareholder Identification")]
     [IsoXmlTag("CpnyRegrShrhldrId")]
-    public IsoMax35Text? CompanyRegisterShareholderIdentification { get; init; }
+    public Max35Text? CompanyRegisterShareholderIdentification { get; init; }
 }

@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PlaceOfTradeIdentification4Choic
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("Xchg")]
-        public required IsoMICIdentifier Value { get; init; }
+        public required MICIdentifier Value { get; init; }
     }
 }

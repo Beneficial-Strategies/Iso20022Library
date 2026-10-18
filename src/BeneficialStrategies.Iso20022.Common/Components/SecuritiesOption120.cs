@@ -166,7 +166,7 @@ public record SecuritiesOption120
     [IsoId("_qjXbJ6toEfCqjuqNaaNXgw")]
     [DisplayName("Estimated Price Indicator")]
     [IsoXmlTag("EstmtdPricInd")]
-    public IsoYesNoIndicator? EstimatedPriceIndicator { get; init; }
+    public YesNoIndicator? EstimatedPriceIndicator { get; init; }
 
     /// <summary>
     /// Decimal above which numbers are rounded. For an example if rounding factor is 0.6 this means that fractional units greater than or equal to 6 will be rounded up and less than 6 will be rounded down.
@@ -174,7 +174,7 @@ public record SecuritiesOption120
     [IsoId("_qjXbL6toEfCqjuqNaaNXgw")]
     [DisplayName("Rounding Factor")]
     [IsoXmlTag("RndgFctr")]
-    public IsoDecimalNumber? RoundingFactor { get; init; }
+    public DecimalNumber? RoundingFactor { get; init; }
 
     /// <summary>
     /// Indicates whether a DTC (The Depository Trust Corporation) participant, using one or more payment bonds in connection with a warrant exercise, will be charged (through settlement on exercise date) the value of the upcoming interest payment on the bond(s).
@@ -182,7 +182,7 @@ public record SecuritiesOption120
     [IsoId("_qjXbN6toEfCqjuqNaaNXgw")]
     [DisplayName("Charge Indicator")]
     [IsoXmlTag("ChrgInd")]
-    public IsoYesNoIndicator? ChargeIndicator { get; init; }
+    public YesNoIndicator? ChargeIndicator { get; init; }
 
     /// <summary>
     /// Income classification of the cash proceeds for dividend reinvestment.

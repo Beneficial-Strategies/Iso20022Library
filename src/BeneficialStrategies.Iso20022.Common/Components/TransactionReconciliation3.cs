@@ -23,7 +23,7 @@ public record TransactionReconciliation3
     [DisplayName("Close Period")]
     [IsoXmlTag("ClsPrd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ClosePeriod { get; init; }
+    public TrueFalseIndicator? ClosePeriod { get; init; }
 
     /// <summary>
     /// Unique identification of a reconciliation transaction.
@@ -41,7 +41,7 @@ public record TransactionReconciliation3
     [IsoXmlTag("RcncltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ReconciliationIdentification { get; init; }
+    public required Max35Text ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Transaction totals during the reconciliation period for a certain type of transaction.
@@ -59,5 +59,5 @@ public record TransactionReconciliation3
     [IsoXmlTag("AddtlTxData")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AdditionalTransactionData { get; init; }
+    public Max70Text? AdditionalTransactionData { get; init; }
 }

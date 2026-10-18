@@ -31,5 +31,5 @@ public record AmountAndQuantityRatio2
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public required IsoDecimalNumber Quantity { get; init; }
+    public required DecimalNumber Quantity { get; init; }
 }

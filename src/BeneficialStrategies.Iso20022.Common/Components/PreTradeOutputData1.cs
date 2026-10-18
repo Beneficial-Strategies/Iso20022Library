@@ -22,7 +22,7 @@ public record PreTradeOutputData1
     [IsoId("_QmZSkGIWEfCeoPFCHQnhvA")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
-    public required IsoISINOct2015Identifier ISIN { get; init; }
+    public required ISINOct2015Identifier ISIN { get; init; }
 
     /// <summary>
     /// The most relevant market in terms of liquidity shall be the trading venue where that financial instrument is first admitted to trading or first traded.
@@ -30,7 +30,7 @@ public record PreTradeOutputData1
     [IsoId("_bhJI4GIWEfCeoPFCHQnhvA")]
     [DisplayName("Most Relevant Market")]
     [IsoXmlTag("MostRlvntMkt")]
-    public required IsoMICIdentifier MostRelevantMarket { get; init; }
+    public required MICIdentifier MostRelevantMarket { get; init; }
 
     /// <summary>
     /// Output data covering both the continuous order book and auction trading system.
@@ -46,7 +46,7 @@ public record PreTradeOutputData1
     [IsoId("_jKop0GIWEfCeoPFCHQnhvA")]
     [DisplayName("Publication Date Time")]
     [IsoXmlTag("PblctnDtTm")]
-    public IsoISODateTime? PublicationDateTime { get; init; }
+    public ISODateTime? PublicationDateTime { get; init; }
 
     /// <summary>
     /// Date and time when the output data were disseminated by the CTP.
@@ -54,5 +54,5 @@ public record PreTradeOutputData1
     [IsoId("_CyOtgKUREfCmoeslmyBN5Q")]
     [DisplayName("Dissemination Date Time")]
     [IsoXmlTag("DssmntnDtTm")]
-    public required IsoISODateTime DisseminationDateTime { get; init; }
+    public required ISODateTime DisseminationDateTime { get; init; }
 }

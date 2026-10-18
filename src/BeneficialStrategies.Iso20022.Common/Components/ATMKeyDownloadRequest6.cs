@@ -62,5 +62,5 @@ public record ATMKeyDownloadRequest6
     [IsoId("_m8T2S7Z5EfCUZfsQO4rYeA")]
     [DisplayName("Host Challenge")]
     [IsoXmlTag("HstChllng")]
-    public IsoMax140Binary? HostChallenge { get; init; }
+    public Max140Binary? HostChallenge { get; init; }
 }

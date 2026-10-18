@@ -24,7 +24,7 @@ public record MandateRelatedInformation14
     [IsoXmlTag("MndtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MandateIdentification { get; init; }
+    public Max35Text? MandateIdentification { get; init; }
 
     /// <summary>
     /// Date on which the direct debit mandate has been signed by the debtor.
@@ -33,7 +33,7 @@ public record MandateRelatedInformation14
     [DisplayName("Date Of Signature")]
     [IsoXmlTag("DtOfSgntr")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DateOfSignature { get; init; }
+    public DateOnly? DateOfSignature { get; init; }
 
     /// <summary>
     /// Indicator notifying whether the underlying mandate is amended or not.
@@ -42,7 +42,7 @@ public record MandateRelatedInformation14
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? AmendmentIndicator { get; init; }
+    public TrueFalseIndicator? AmendmentIndicator { get; init; }
 
     /// <summary>
     /// List of mandate elements that have been modified.
@@ -60,7 +60,7 @@ public record MandateRelatedInformation14
     [IsoXmlTag("ElctrncSgntr")]
     [IsoSimpleType(IsoSimpleType.Max1025Text)]
     [StringLength(maximumLength: 1025, MinimumLength = 1)]
-    public IsoMax1025Text? ElectronicSignature { get; init; }
+    public Max1025Text? ElectronicSignature { get; init; }
 
     /// <summary>
     /// Date of the first collection of a direct debit as per the mandate.
@@ -69,7 +69,7 @@ public record MandateRelatedInformation14
     [DisplayName("First Collection Date")]
     [IsoXmlTag("FrstColltnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? FirstCollectionDate { get; init; }
+    public DateOnly? FirstCollectionDate { get; init; }
 
     /// <summary>
     /// Date of the final collection of a direct debit as per the mandate.
@@ -78,7 +78,7 @@ public record MandateRelatedInformation14
     [DisplayName("Final Collection Date")]
     [IsoXmlTag("FnlColltnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? FinalCollectionDate { get; init; }
+    public DateOnly? FinalCollectionDate { get; init; }
 
     /// <summary>
     /// Regularity with which direct debit instructions are to be created and processed.
@@ -103,5 +103,5 @@ public record MandateRelatedInformation14
     [DisplayName("Tracking Days")]
     [IsoXmlTag("TrckgDays")]
     [IsoSimpleType(IsoSimpleType.Exact2NumericText)]
-    public IsoExact2NumericText? TrackingDays { get; init; }
+    public Exact2NumericText? TrackingDays { get; init; }
 }

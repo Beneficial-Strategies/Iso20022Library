@@ -32,5 +32,5 @@ public record FinancialInstrumentAttributesSD18
     [IsoXmlTag("DclrdDsbrsdSctyDesc")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? DeclaredDisbursedSecurityDescription { get; init; }
+    public Max140Text? DeclaredDisbursedSecurityDescription { get; init; }
 }

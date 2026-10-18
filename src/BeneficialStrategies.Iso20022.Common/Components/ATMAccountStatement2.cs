@@ -23,7 +23,7 @@ public record ATMAccountStatement2
     [DisplayName("Transaction Date")]
     [IsoXmlTag("TxDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TransactionDate { get; init; }
+    public DateOnly? TransactionDate { get; init; }
 
     /// <summary>
     /// Value date of the transaction.
@@ -32,7 +32,7 @@ public record ATMAccountStatement2
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ValueDate { get; init; }
+    public DateOnly? ValueDate { get; init; }
 
     /// <summary>
     /// Short text to display or print for the statement.
@@ -42,7 +42,7 @@ public record ATMAccountStatement2
     [IsoXmlTag("ShrtTxt")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? ShortText { get; init; }
+    public Max70Text? ShortText { get; init; }
 
     /// <summary>
     /// True if credit transaction.
@@ -51,7 +51,7 @@ public record ATMAccountStatement2
     [DisplayName("Credit Transaction")]
     [IsoXmlTag("CdtTx")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CreditTransaction { get; init; }
+    public TrueFalseIndicator? CreditTransaction { get; init; }
 
     /// <summary>
     /// Amount of the transaction.
@@ -77,5 +77,5 @@ public record ATMAccountStatement2
     [IsoXmlTag("LngTxt")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? LongText { get; init; }
+    public Max256Text? LongText { get; init; }
 }

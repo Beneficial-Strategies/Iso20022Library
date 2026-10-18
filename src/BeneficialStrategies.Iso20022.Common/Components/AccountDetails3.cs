@@ -24,7 +24,7 @@ public record AccountDetails3
     [IsoXmlTag("AcctNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AccountName { get; init; }
+    public Max70Text? AccountName { get; init; }
 
     /// <summary>
     /// Type of cardholder account used for the transaction.
@@ -44,5 +44,5 @@ public record AccountDetails3
     [IsoXmlTag("AcctId")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AccountIdentification { get; init; }
+    public Max70Text? AccountIdentification { get; init; }
 }

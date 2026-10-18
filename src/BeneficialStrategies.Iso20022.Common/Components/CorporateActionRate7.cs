@@ -55,5 +55,5 @@ public record CorporateActionRate7
     [DisplayName("Transformation Rate")]
     [IsoXmlTag("TrfrmatnRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? TransformationRate { get; init; }
+    public PercentageRate? TransformationRate { get; init; }
 }

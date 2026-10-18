@@ -24,7 +24,7 @@ public record ATMEquipment1
     [IsoXmlTag("Manfctr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Manufacturer { get; init; }
+    public Max35Text? Manufacturer { get; init; }
 
     /// <summary>
     /// Model of ATM.
@@ -34,7 +34,7 @@ public record ATMEquipment1
     [IsoXmlTag("Mdl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Model { get; init; }
+    public Max35Text? Model { get; init; }
 
     /// <summary>
     /// Serial number of the ATM.
@@ -44,7 +44,7 @@ public record ATMEquipment1
     [IsoXmlTag("SrlNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SerialNumber { get; init; }
+    public Max35Text? SerialNumber { get; init; }
 
     /// <summary>
     /// Provider of the ATM application software.
@@ -54,7 +54,7 @@ public record ATMEquipment1
     [IsoXmlTag("ApplPrvdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ApplicationProvider { get; init; }
+    public Max35Text? ApplicationProvider { get; init; }
 
     /// <summary>
     /// Name of the software product.
@@ -64,7 +64,7 @@ public record ATMEquipment1
     [IsoXmlTag("ApplNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ApplicationName { get; init; }
+    public Max35Text? ApplicationName { get; init; }
 
     /// <summary>
     /// Current version of the software that might include the release number.
@@ -74,7 +74,7 @@ public record ATMEquipment1
     [IsoXmlTag("ApplVrsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ApplicationVersion { get; init; }
+    public Max35Text? ApplicationVersion { get; init; }
 
     /// <summary>
     /// Unique assessment number for the component.
@@ -84,7 +84,7 @@ public record ATMEquipment1
     [IsoXmlTag("ApprvlNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ApprovalNumber { get; init; }
+    public Max35Text? ApprovalNumber { get; init; }
 
     /// <summary>
     /// Configuration parameter version.

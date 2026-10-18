@@ -24,7 +24,7 @@ public record VehicleRentalAgreement2
     [IsoXmlTag("AgrmtNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AgreementNumber { get; init; }
+    public Max35Text? AgreementNumber { get; init; }
 
     /// <summary>
     /// Indicates that an adjustment was made to a vehicle rental charge (for example, additional charges added).
@@ -33,7 +33,7 @@ public record VehicleRentalAgreement2
     [DisplayName("Adjusted Indicator")]
     [IsoXmlTag("AdjstdInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? AdjustedIndicator { get; init; }
+    public TrueFalseIndicator? AdjustedIndicator { get; init; }
 
     /// <summary>
     /// Contains the vehicle rental location.
@@ -58,7 +58,7 @@ public record VehicleRentalAgreement2
     [DisplayName("Check Out Date")]
     [IsoXmlTag("ChckOutDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? CheckOutDate { get; init; }
+    public DateOnly? CheckOutDate { get; init; }
 
     /// <summary>
     /// Time the vehicle was picked-up by the customer.  In the case of a no-show transaction or a prepaid transaction, this contains the scheduled pickup time.
@@ -67,7 +67,7 @@ public record VehicleRentalAgreement2
     [DisplayName("Check Out Time")]
     [IsoXmlTag("ChckOutTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? CheckOutTime { get; init; }
+    public ISOTime? CheckOutTime { get; init; }
 
     /// <summary>
     /// Location to which vehicle was returned.
@@ -84,7 +84,7 @@ public record VehicleRentalAgreement2
     [DisplayName("Check In Date")]
     [IsoXmlTag("ChckInDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? CheckInDate { get; init; }
+    public DateOnly? CheckInDate { get; init; }
 
     /// <summary>
     /// Time when the vehicle was returned to the rental agency.
@@ -93,7 +93,7 @@ public record VehicleRentalAgreement2
     [DisplayName("Check In Time")]
     [IsoXmlTag("ChckInTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? CheckInTime { get; init; }
+    public ISOTime? CheckInTime { get; init; }
 
     /// <summary>
     /// Duration of rental in days.
@@ -102,7 +102,7 @@ public record VehicleRentalAgreement2
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
     [IsoSimpleType(IsoSimpleType.Max4NumericText)]
-    public IsoMax4NumericText? Duration { get; init; }
+    public Max4NumericText? Duration { get; init; }
 
     /// <summary>
     /// Contains the details of the vehicle classification.
@@ -144,7 +144,7 @@ public record VehicleRentalAgreement2
     [IsoXmlTag("VhclRegnNb")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? VehicleRegistrationNumber { get; init; }
+    public Max70Text? VehicleRegistrationNumber { get; init; }
 
     /// <summary>
     /// Indicates whether or not insurance was purchased.
@@ -153,7 +153,7 @@ public record VehicleRentalAgreement2
     [DisplayName("Insurance Indicator")]
     [IsoXmlTag("InsrncInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? InsuranceIndicator { get; init; }
+    public TrueFalseIndicator? InsuranceIndicator { get; init; }
 
     /// <summary>
     /// Contains the details of additional amount for a specific vehicle rental service type.

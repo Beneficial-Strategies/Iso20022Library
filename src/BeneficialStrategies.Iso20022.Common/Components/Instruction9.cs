@@ -22,7 +22,7 @@ public record Instruction9
     [IsoId("_w3COk6jGEfCzuLlmLrhIvA")]
     [DisplayName("Single Instruction Identification")]
     [IsoXmlTag("SnglInstrId")]
-    public required IsoMax35Text SingleInstructionIdentification { get; init; }
+    public required Max35Text SingleInstructionIdentification { get; init; }
 
     /// <summary>
     /// Date at which the instruction must be executed.
@@ -30,7 +30,7 @@ public record Instruction9
     [IsoId("_w3COlajGEfCzuLlmLrhIvA")]
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
-    public IsoISODateTime? RequestedExecutionDate { get; init; }
+    public ISODateTime? RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Indicates that a vote execution confirmation is requested.
@@ -38,7 +38,7 @@ public record Instruction9
     [IsoId("_w3COl6jGEfCzuLlmLrhIvA")]
     [DisplayName("Vote Execution Confirmation")]
     [IsoXmlTag("VoteExctnConf")]
-    public required IsoYesNoIndicator VoteExecutionConfirmation { get; init; }
+    public required YesNoIndicator VoteExecutionConfirmation { get; init; }
 
     /// <summary>
     /// Identification of the securities account.

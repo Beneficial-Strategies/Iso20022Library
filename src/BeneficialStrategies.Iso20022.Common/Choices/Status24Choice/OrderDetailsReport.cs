@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status24Choice
         [IsoXmlTag("MstrRef")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? MasterReference { get; init; }
+        public Max35Text? MasterReference { get; init; }
 
         /// <summary>
         /// Status of a &apos;bulk&apos; of orders. Can be used if all the individual orders conveyed in a bulk or multiple order message have the same status.

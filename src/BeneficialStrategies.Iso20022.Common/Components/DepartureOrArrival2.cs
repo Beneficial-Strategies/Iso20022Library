@@ -24,7 +24,7 @@ public record DepartureOrArrival2
     [IsoXmlTag("CrrierCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CarrierCode { get; init; }
+    public Max35Text? CarrierCode { get; init; }
 
     /// <summary>
     /// Route number (for example, flight number, bus number, train route or number, etc.)
@@ -33,7 +33,7 @@ public record DepartureOrArrival2
     [DisplayName("Route Number")]
     [IsoXmlTag("RouteNb")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public IsoMax35NumericText? RouteNumber { get; init; }
+    public Max35NumericText? RouteNumber { get; init; }
 
     /// <summary>
     /// Departure or arrival date.
@@ -42,7 +42,7 @@ public record DepartureOrArrival2
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Departure or arrival time.
@@ -51,5 +51,5 @@ public record DepartureOrArrival2
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? Time { get; init; }
+    public ISOTime? Time { get; init; }
 }

@@ -21,7 +21,7 @@ public record ChargesPerTypeRecord5
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public IsoMax140Text? AdditionalInformation { get; init; }
+    public Max140Text? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Amount.
@@ -98,7 +98,7 @@ public record ChargesPerTypeRecord5
     /// </summary>
     [DisplayName("Record Identification")]
     [IsoXmlTag("RcrdId")]
-    public IsoMax35Text? RecordIdentification { get; init; }
+    public Max35Text? RecordIdentification { get; init; }
 
     /// <summary>
     /// Underlying Transaction.

@@ -32,5 +32,5 @@ public record OtherReference1
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public required IsoMax256Text Value { get; init; }
+    public required Max256Text Value { get; init; }
 }

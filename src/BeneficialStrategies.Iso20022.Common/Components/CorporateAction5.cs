@@ -63,7 +63,7 @@ public record CorporateAction5
     [DisplayName("Interest Accrued Number Of Days")]
     [IsoXmlTag("IntrstAcrdNbOfDays")]
     [IsoSimpleType(IsoSimpleType.Max3Number)]
-    public IsoMax3Number? InterestAccruedNumberOfDays { get; init; }
+    public Max3Number? InterestAccruedNumberOfDays { get; init; }
 
     /// <summary>
     /// Number of the coupon attached/associated with a security.
@@ -80,7 +80,7 @@ public record CorporateAction5
     [DisplayName("Certification Required Indicator")]
     [IsoXmlTag("CertfctnReqrdInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? CertificationRequiredIndicator { get; init; }
+    public YesNoIndicator? CertificationRequiredIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether charges apply to the holder, for instance redemption charges.
@@ -89,7 +89,7 @@ public record CorporateAction5
     [DisplayName("Charges Applied Indicator")]
     [IsoXmlTag("ChrgsApldInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ChargesAppliedIndicator { get; init; }
+    public YesNoIndicator? ChargesAppliedIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether there is restrictions apply to the corporate action event or not.|Yes = There is restrictions.|No = There is no restrictions.
@@ -98,7 +98,7 @@ public record CorporateAction5
     [DisplayName("Restriction Indicator")]
     [IsoXmlTag("RstrctnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? RestrictionIndicator { get; init; }
+    public YesNoIndicator? RestrictionIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the holder is entitled to accrued interest.
@@ -107,7 +107,7 @@ public record CorporateAction5
     [DisplayName("Accrued Interest Indicator")]
     [IsoXmlTag("AcrdIntrstInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AccruedInterestIndicator { get; init; }
+    public YesNoIndicator? AccruedInterestIndicator { get; init; }
 
     /// <summary>
     /// Specifies the conditions in which a dividend is paid.
@@ -230,7 +230,7 @@ public record CorporateAction5
     [IsoXmlTag("NewPlcOfIncorprtn")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? NewPlaceOfIncorporation { get; init; }
+    public Max70Text? NewPlaceOfIncorporation { get; init; }
 
     /// <summary>
     /// Provides additional information. This field may only be used when the information to be transmitted, cannot be coded.

@@ -110,7 +110,7 @@ public record DirectDebitTransactionInformation34
     [IsoId("5ae9615b-2482-46a2-87d5-898be043d7d6")]
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
-    public IsoMax140Text? InstructionForCreditorAgent { get; init; }
+    public Max140Text? InstructionForCreditorAgent { get; init; }
 
     /// <summary>
     /// Underlying reason for the payment transaction.

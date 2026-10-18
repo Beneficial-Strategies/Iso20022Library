@@ -21,7 +21,7 @@ public record AutomatedTellerMachine12
     /// </summary>
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
-    public IsoMax35Text? AdditionalIdentification { get; init; }
+    public Max35Text? AdditionalIdentification { get; init; }
 
     /// <summary>
     /// Base Currency.
@@ -49,7 +49,7 @@ public record AutomatedTellerMachine12
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Location.
@@ -70,5 +70,5 @@ public record AutomatedTellerMachine12
     /// </summary>
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
-    public IsoMax35Text? SequenceNumber { get; init; }
+    public Max35Text? SequenceNumber { get; init; }
 }

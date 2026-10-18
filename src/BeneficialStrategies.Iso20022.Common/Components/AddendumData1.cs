@@ -32,7 +32,7 @@ public record AddendumData1
     [IsoXmlTag("OthrPurchsIdrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherPurchaseIdentifierType { get; init; }
+    public Max35Text? OtherPurchaseIdentifierType { get; init; }
 
     /// <summary>
     /// Contains a value identifying Invoice Data or Purchase Request Data.
@@ -42,7 +42,7 @@ public record AddendumData1
     [IsoXmlTag("PurchsIdr")]
     [IsoSimpleType(IsoSimpleType.Max99Text)]
     [StringLength(maximumLength: 99, MinimumLength = 1)]
-    public IsoMax99Text? PurchaseIdentifier { get; init; }
+    public Max99Text? PurchaseIdentifier { get; init; }
 
     /// <summary>
     /// Contains additional card acceptor data.

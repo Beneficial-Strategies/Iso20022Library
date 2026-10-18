@@ -38,7 +38,7 @@ public record Clearing8
     [IsoId("_OCi946o4EfCG2_q2WT-90w")]
     [DisplayName("Guaranteed Trade")]
     [IsoXmlTag("GrntedTrad")]
-    public IsoYesNoIndicator? GuaranteedTrade { get; init; }
+    public YesNoIndicator? GuaranteedTrade { get; init; }
 
     /// <summary>
     /// Whether the trades are guaranteed or not by the central counterparty, provide details such as the trade counterparty member identification or the trade counterparty clearing member identification.

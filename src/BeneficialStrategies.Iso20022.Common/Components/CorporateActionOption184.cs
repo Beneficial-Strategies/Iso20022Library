@@ -56,7 +56,7 @@ public record CorporateActionOption184
     [IsoXmlTag("SfkpgAcct")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SafekeepingAccount { get; init; }
+    public Max35Text? SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Account on which a securities entry is made.
@@ -129,5 +129,5 @@ public record CorporateActionOption184
     [DisplayName("Solicitation Dealer Fee Indicator")]
     [IsoXmlTag("SlctnDealrFeeInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? SolicitationDealerFeeIndicator { get; init; }
+    public YesNoIndicator? SolicitationDealerFeeIndicator { get; init; }
 }

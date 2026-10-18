@@ -23,7 +23,7 @@ public record ICCResetData1
     [DisplayName("ATR Value")]
     [IsoXmlTag("ATRVal")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public IsoMax140Binary? ATRValue { get; init; }
+    public Max140Binary? ATRValue { get; init; }
 
     /// <summary>
     /// Status of a smartcard response to a command (SW1-SW2).
@@ -32,5 +32,5 @@ public record ICCResetData1
     [DisplayName("Card Status")]
     [IsoXmlTag("CardSts")]
     [IsoSimpleType(IsoSimpleType.Max35Binary)]
-    public IsoMax35Binary? CardStatus { get; init; }
+    public Max35Binary? CardStatus { get; init; }
 }

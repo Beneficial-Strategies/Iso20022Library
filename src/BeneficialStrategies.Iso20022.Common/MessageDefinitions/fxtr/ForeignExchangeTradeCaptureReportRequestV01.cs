@@ -84,7 +84,7 @@ public record ForeignExchangeTradeCaptureReportRequestV01 : IOuterRecord
     [DisplayName("Query Start Number")]
     [IsoXmlTag("QryStartNb")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public required IsoMax35NumericText QueryStartNumber { get; init; }
+    public required Max35NumericText QueryStartNumber { get; init; }
 
     /// <summary>
     /// Indicates whether the request is query trade for a period of time.
@@ -93,7 +93,7 @@ public record ForeignExchangeTradeCaptureReportRequestV01 : IOuterRecord
     [DisplayName("Query By Period")]
     [IsoXmlTag("QryByPrd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator QueryByPeriod { get; init; }
+    public required YesNoIndicator QueryByPeriod { get; init; }
 
     /// <summary>
     /// Period of the inquiry.
@@ -111,7 +111,7 @@ public record ForeignExchangeTradeCaptureReportRequestV01 : IOuterRecord
     [IsoXmlTag("QryTradId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? QueryTradeIdentification { get; init; }
+    public Max35Text? QueryTradeIdentification { get; init; }
 
     /// <summary>
     /// Identifies the end of the request result.
@@ -121,7 +121,7 @@ public record ForeignExchangeTradeCaptureReportRequestV01 : IOuterRecord
     [IsoXmlTag("QryEndId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? QueryEndIdentification { get; init; }
+    public Max35Text? QueryEndIdentification { get; init; }
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -138,7 +138,7 @@ public record ForeignExchangeTradeCaptureReportRequestV01 : IOuterRecord
     [DisplayName("Query Page Size")]
     [IsoXmlTag("QryPgSz")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public IsoMax35NumericText? QueryPageSize { get; init; }
+    public Max35NumericText? QueryPageSize { get; init; }
 
     /// <summary>
     /// Specifies the inquiry value of the parameter.
@@ -148,5 +148,5 @@ public record ForeignExchangeTradeCaptureReportRequestV01 : IOuterRecord
     [IsoXmlTag("QryParamVal")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? QueryParameterValue { get; init; }
+    public Max35Text? QueryParameterValue { get; init; }
 }

@@ -28,7 +28,7 @@ public record PartyIdentification313
     /// </summary>
     [DisplayName("Certification Breakdown")]
     [IsoXmlTag("CertfctnBrkdwn")]
-    public ValueList<IsoMax350Text> CertificationBreakdown { get; init; } = [];
+    public ValueList<Max350Text> CertificationBreakdown { get; init; } = [];
 
     /// <summary>
     /// Certification Type.
@@ -49,7 +49,7 @@ public record PartyIdentification313
     /// </summary>
     [DisplayName("LEI Identification")]
     [IsoXmlTag("LEIId")]
-    public IsoLEIIdentifier? LEIIdentification { get; init; }
+    public LEIIdentifier? LEIIdentification { get; init; }
 
     /// <summary>
     /// Non Domicile Country.

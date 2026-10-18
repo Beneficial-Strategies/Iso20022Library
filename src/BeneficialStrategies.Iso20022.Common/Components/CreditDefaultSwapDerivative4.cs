@@ -23,7 +23,7 @@ public record CreditDefaultSwapDerivative4
     [DisplayName("Underlying Name Identification")]
     [IsoXmlTag("UndrlygNmId")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public IsoISINOct2015Identifier? UnderlyingNameIdentification { get; init; }
+    public ISINOct2015Identifier? UnderlyingNameIdentification { get; init; }
 
     /// <summary>
     /// Identification of the reference obligation for a derivative on a credit default swap.
@@ -32,7 +32,7 @@ public record CreditDefaultSwapDerivative4
     [DisplayName("Obligation Identification")]
     [IsoXmlTag("OblgtnId")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public required IsoISINOct2015Identifier ObligationIdentification { get; init; }
+    public required ISINOct2015Identifier ObligationIdentification { get; init; }
 
     /// <summary>
     /// Describes the single name specific details the derivative is being made on.

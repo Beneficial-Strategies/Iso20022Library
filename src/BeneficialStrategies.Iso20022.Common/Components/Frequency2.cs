@@ -22,7 +22,7 @@ public record Frequency2
     [IsoId("_a2kSgbpVEfCPZvweyV2nEg")]
     [DisplayName("Sequence")]
     [IsoXmlTag("Seq")]
-    public IsoMax3NumericText? Sequence { get; init; }
+    public Max3NumericText? Sequence { get; init; }
 
     /// <summary>
     /// The date of the first payment to be made for this payment schedule.
@@ -30,7 +30,7 @@ public record Frequency2
     [IsoId("_a2kSg7pVEfCPZvweyV2nEg")]
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
-    public required IsoISODate StartDate { get; init; }
+    public required DateOnly StartDate { get; init; }
 
     /// <summary>
     /// Information about when the payment arrangement will end.

@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification231Choice
         [IsoXmlTag("EmailAdr")]
         [IsoSimpleType(IsoSimpleType.Max256Text)]
         [StringLength(maximumLength: 256, MinimumLength = 1)]
-        public IsoMax256Text? EmailAddress { get; init; }
+        public Max256Text? EmailAddress { get; init; }
 
         /// <summary>
         /// Natural person local identification and type.

@@ -28,7 +28,7 @@ public record TradeQueryCriteria14
     /// </summary>
     [DisplayName("Margin Life Cycle History")]
     [IsoXmlTag("MrgnLifeCyclHstry")]
-    public IsoTrueFalseIndicator? MarginLifeCycleHistory { get; init; }
+    public TrueFalseIndicator? MarginLifeCycleHistory { get; init; }
 
     /// <summary>
     /// Other Criteria.
@@ -42,7 +42,7 @@ public record TradeQueryCriteria14
     /// </summary>
     [DisplayName("Outstanding Trade Indicator")]
     [IsoXmlTag("OutsdngTradInd")]
-    public required IsoTrueFalseIndicator OutstandingTradeIndicator { get; init; }
+    public required TrueFalseIndicator OutstandingTradeIndicator { get; init; }
 
     /// <summary>
     /// Time Criteria.
@@ -56,7 +56,7 @@ public record TradeQueryCriteria14
     /// </summary>
     [DisplayName("Trade Life Cycle History")]
     [IsoXmlTag("TradLifeCyclHstry")]
-    public IsoTrueFalseIndicator? TradeLifeCycleHistory { get; init; }
+    public TrueFalseIndicator? TradeLifeCycleHistory { get; init; }
 
     /// <summary>
     /// Trade Party Criteria.

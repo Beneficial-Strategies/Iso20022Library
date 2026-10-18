@@ -24,7 +24,7 @@ public record ProceedsDelivery1
     [IsoXmlTag("SctiesAcctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text SecuritiesAccountIdentification { get; init; }
+    public required Max35Text SecuritiesAccountIdentification { get; init; }
 
     /// <summary>
     /// Identification of the cash account to which the cash has to be delivered.

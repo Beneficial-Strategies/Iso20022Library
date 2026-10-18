@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification23Choice
         /// </summary>
         [IsoXmlTag("RIC")]
         [IsoSimpleType(IsoSimpleType.RICIdentifier)]
-        public required IsoRICIdentifier Value { get; init; }
+        public required RICIdentifier Value { get; init; }
     }
 }

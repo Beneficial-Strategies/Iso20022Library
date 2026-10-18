@@ -24,7 +24,7 @@ public record TransportByRoad4
     [IsoXmlTag("PlcOfRct")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text PlaceOfReceipt { get; init; }
+    public required Max35Text PlaceOfReceipt { get; init; }
 
     /// <summary>
     /// Identifies the location of delivery of the goods.
@@ -34,7 +34,7 @@ public record TransportByRoad4
     [IsoXmlTag("PlcOfDlvry")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text PlaceOfDelivery { get; init; }
+    public required Max35Text PlaceOfDelivery { get; init; }
 
     /// <summary>
     /// Identifies the party that is responsible for the conveyance of the goods from one place to another.
@@ -44,7 +44,7 @@ public record TransportByRoad4
     [IsoXmlTag("RoadCrrierNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? RoadCarrierName { get; init; }
+    public Max70Text? RoadCarrierName { get; init; }
 
     /// <summary>
     /// Country in which the carrier of the goods, for example, shipping company, is located or registered.
@@ -62,7 +62,7 @@ public record TransportByRoad4
     [IsoXmlTag("CrrierAgtNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? CarrierAgentName { get; init; }
+    public Max70Text? CarrierAgentName { get; init; }
 
     /// <summary>
     /// Country of registration of the carrier&apos;s (for example, shipping company&apos;s) agent that acts on behalf of the carrier and may be the issuer of transport documents relating to the underlying shipment.

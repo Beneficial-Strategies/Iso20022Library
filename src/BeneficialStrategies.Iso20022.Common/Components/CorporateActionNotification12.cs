@@ -21,7 +21,7 @@ public record CorporateActionNotification12
     /// </summary>
     [DisplayName("Notification Identification")]
     [IsoXmlTag("NtfctnId")]
-    public IsoMax35Text? NotificationIdentification { get; init; }
+    public Max35Text? NotificationIdentification { get; init; }
 
     /// <summary>
     /// Notification Type.

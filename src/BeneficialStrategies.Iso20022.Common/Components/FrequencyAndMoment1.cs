@@ -31,5 +31,5 @@ public record FrequencyAndMoment1
     [DisplayName("Point In Time")]
     [IsoXmlTag("PtInTm")]
     [IsoSimpleType(IsoSimpleType.Exact2NumericText)]
-    public required IsoExact2NumericText PointInTime { get; init; }
+    public required Exact2NumericText PointInTime { get; init; }
 }

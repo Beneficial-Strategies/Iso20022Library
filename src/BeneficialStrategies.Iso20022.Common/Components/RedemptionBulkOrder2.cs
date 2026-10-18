@@ -32,7 +32,7 @@ public record RedemptionBulkOrder2
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? OrderDateTime { get; init; }
+    public ISODateTime? OrderDateTime { get; init; }
 
     /// <summary>
     /// Date on which the order expires.
@@ -41,7 +41,7 @@ public record RedemptionBulkOrder2
     [DisplayName("Expiry Date Time")]
     [IsoXmlTag("XpryDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? ExpiryDateTime { get; init; }
+    public ISODateTime? ExpiryDateTime { get; init; }
 
     /// <summary>
     /// Cancellation right of an investor with respect to an investment fund order.

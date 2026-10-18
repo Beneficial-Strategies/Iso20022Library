@@ -28,7 +28,7 @@ public record OrderData4
     /// </summary>
     [DisplayName("Direct Electronic Access")]
     [IsoXmlTag("DrctElctrncAccs")]
-    public IsoTrueFalseIndicator? DirectElectronicAccess { get; init; }
+    public TrueFalseIndicator? DirectElectronicAccess { get; init; }
 
     /// <summary>
     /// Executing Person.
@@ -56,14 +56,14 @@ public record OrderData4
     /// </summary>
     [DisplayName("Liquidity Provision Activity")]
     [IsoXmlTag("LqdtyPrvsnActvty")]
-    public IsoTrueFalseIndicator? LiquidityProvisionActivity { get; init; }
+    public TrueFalseIndicator? LiquidityProvisionActivity { get; init; }
 
     /// <summary>
     /// Non Executing Broker.
     /// </summary>
     [DisplayName("Non Executing Broker")]
     [IsoXmlTag("NonExctgBrkr")]
-    public IsoLEIIdentifier? NonExecutingBroker { get; init; }
+    public LEIIdentifier? NonExecutingBroker { get; init; }
 
     /// <summary>
     /// Order Classification.
@@ -84,7 +84,7 @@ public record OrderData4
     /// </summary>
     [DisplayName("Submitting Entity")]
     [IsoXmlTag("SubmitgNtty")]
-    public IsoLEIIdentifier? SubmittingEntity { get; init; }
+    public LEIIdentifier? SubmittingEntity { get; init; }
 
     /// <summary>
     /// Trading Capacity.

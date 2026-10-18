@@ -24,7 +24,7 @@ public record LoanData95
     [IsoXmlTag("UnqTradIdr")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public required IsoMax52Text UniqueTradeIdentifier { get; init; }
+    public required Max52Text UniqueTradeIdentifier { get; init; }
 
     /// <summary>
     /// Date on which the reportable event pertaining to the transaction and captured by the report took place. In the case of action types valuation update, collateral update, reuse update, margin update, the date for which the information contained in the report is provided.
@@ -33,7 +33,7 @@ public record LoanData95
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate EventDate { get; init; }
+    public required DateOnly EventDate { get; init; }
 
     /// <summary>
     /// Indicates the date and time when the contract was executed.
@@ -42,7 +42,7 @@ public record LoanData95
     [DisplayName("Execution Date Time")]
     [IsoXmlTag("ExctnDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime ExecutionDateTime { get; init; }
+    public required ISODateTime ExecutionDateTime { get; init; }
 
     /// <summary>
     /// Indicates whether clearing of contract has taken place.
@@ -59,7 +59,7 @@ public record LoanData95
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public required IsoMICIdentifier TradingVenue { get; init; }
+    public required MICIdentifier TradingVenue { get; init; }
 
     /// <summary>
     /// Reference to master agreement under which the counterparties concluded a documented transaction.
@@ -76,7 +76,7 @@ public record LoanData95
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ValueDate { get; init; }
+    public required DateOnly ValueDate { get; init; }
 
     /// <summary>
     /// Indication whether the transaction is subject to a general collateral arrangement. -‘true’ shall be populated for general collateral. General collateral specifies a collateral arrangement for a repurchase transaction in which the security lender may choose the security to provide as collateral with the cash provider amongst a relatively wide range of securities meeting predefined criteria.
@@ -94,7 +94,7 @@ public record LoanData95
     [DisplayName("Delivery By Value")]
     [IsoXmlTag("DlvryByVal")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator DeliveryByValue { get; init; }
+    public required TrueFalseIndicator DeliveryByValue { get; init; }
 
     /// <summary>
     /// Delivery method of the collateral.
@@ -135,7 +135,7 @@ public record LoanData95
     [DisplayName("Termination Date")]
     [IsoXmlTag("TermntnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TerminationDate { get; init; }
+    public DateOnly? TerminationDate { get; init; }
 
     /// <summary>
     /// Price of unit of collateral component, including accrued interest for interest-bearing securities.

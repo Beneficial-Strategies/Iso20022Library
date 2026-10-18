@@ -31,7 +31,7 @@ public record CurrencyExchange17
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
     [IsoSimpleType(IsoSimpleType.BaseOne18Rate)]
-    public IsoBaseOne18Rate? ExchangeRate { get; init; }
+    public BaseOne18Rate? ExchangeRate { get; init; }
 
     /// <summary>
     /// Forward exchange rate as agreed between the counterparties in the contractual agreement, expressed as a price of base currency in the quoted currency.
@@ -40,7 +40,7 @@ public record CurrencyExchange17
     [DisplayName("Forward Exchange Rate")]
     [IsoXmlTag("FwdXchgRate")]
     [IsoSimpleType(IsoSimpleType.BaseOne18Rate)]
-    public IsoBaseOne18Rate? ForwardExchangeRate { get; init; }
+    public BaseOne18Rate? ForwardExchangeRate { get; init; }
 
     /// <summary>
     /// Indicates, for equity options, commodity options and similar products, the currency in which the strike price is denominated.  In case of foreign exchange options, indicates the currency pair and order in which the strike price is expressed as unit currency and quoted currency.

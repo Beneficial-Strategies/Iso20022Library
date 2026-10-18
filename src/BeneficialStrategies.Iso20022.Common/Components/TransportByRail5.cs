@@ -22,7 +22,7 @@ public record TransportByRail5
     [IsoId("_hl1_EYj7EeO0H4aqD2Yw9Q")]
     [DisplayName("Place Of Receipt")]
     [IsoXmlTag("PlcOfRct")]
-    public SimpleValueList<IsoMax35Text> PlaceOfReceipt { get; init; } = [];
+    public SimpleValueList<Max35Text> PlaceOfReceipt { get; init; } = [];
 
     /// <summary>
     /// Identifies the location of delivery of the goods.
@@ -43,7 +43,7 @@ public record TransportByRail5
     [IsoXmlTag("RailCrrierNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? RailCarrierName { get; init; }
+    public Max70Text? RailCarrierName { get; init; }
 
     /// <summary>
     /// Country in which the carrier of the goods, for example, shipping company, is located or registered.
@@ -61,7 +61,7 @@ public record TransportByRail5
     [IsoXmlTag("CrrierAgtNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? CarrierAgentName { get; init; }
+    public Max70Text? CarrierAgentName { get; init; }
 
     /// <summary>
     /// Country of registration of the carrier&apos;s (for example, shipping company&apos;s) agent that acts on behalf of the carrier and may be the issuer of transport documents relating to the underlying shipment.

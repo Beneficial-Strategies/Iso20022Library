@@ -24,7 +24,7 @@ public record RegisteredContract10
     [IsoXmlTag("RegdCtrctAmdmntId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text RegisteredContractAmendmentIdentification { get; init; }
+    public required Max35Text RegisteredContractAmendmentIdentification { get; init; }
 
     /// <summary>
     /// Identification of the original contract registration, as registered with the registration agent.
@@ -34,7 +34,7 @@ public record RegisteredContract10
     [IsoXmlTag("OrgnlRegdCtrctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OriginalRegisteredContractIdentification { get; init; }
+    public required Max35Text OriginalRegisteredContractIdentification { get; init; }
 
     /// <summary>
     /// Priority requested for the amendment of the registered contract.
@@ -76,7 +76,7 @@ public record RegisteredContract10
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max1025Text)]
     [StringLength(maximumLength: 1025, MinimumLength = 1)]
-    public IsoMax1025Text? AdditionalInformation { get; init; }
+    public Max1025Text? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Documents provided as attachments to the contract registration amendment request.

@@ -21,19 +21,19 @@ public record LoyaltyProgramme4
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax70Text? Identification { get; init; }
+    public Max70Text? Identification { get; init; }
 
     /// <summary>
     /// Participant Identification.
     /// </summary>
     [DisplayName("Participant Identification")]
     [IsoXmlTag("PtcptId")]
-    public IsoMax70Text? ParticipantIdentification { get; init; }
+    public Max70Text? ParticipantIdentification { get; init; }
 
     /// <summary>
     /// Type.
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public IsoMax35Text? Type { get; init; }
+    public Max35Text? Type { get; init; }
 }

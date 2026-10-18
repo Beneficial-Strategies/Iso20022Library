@@ -46,7 +46,7 @@ public record CertificateManagementRequest4
     [IsoId("_HMZMl5__EfC4Q_xhaK1hdQ")]
     [DisplayName("Security Domain")]
     [IsoXmlTag("SctyDomn")]
-    public IsoMax70Text? SecurityDomain { get; init; }
+    public Max70Text? SecurityDomain { get; init; }
 
     /// <summary>
     /// Identifies type of function that could be used with the Key.
@@ -62,7 +62,7 @@ public record CertificateManagementRequest4
     [IsoId("_HMZMn5__EfC4Q_xhaK1hdQ")]
     [DisplayName("POI Challenge Value")]
     [IsoXmlTag("POIChllngVal")]
-    public required IsoMax140Binary POIChallengeValue { get; init; }
+    public required Max140Binary POIChallengeValue { get; init; }
 
     /// <summary>
     /// Date and Time of the POI.
@@ -70,7 +70,7 @@ public record CertificateManagementRequest4
     [IsoId("_HMZMoZ__EfC4Q_xhaK1hdQ")]
     [DisplayName("POI Date Time")]
     [IsoXmlTag("POIDtTm")]
-    public required IsoISODateTime POIDateTime { get; init; }
+    public required ISODateTime POIDateTime { get; init; }
 
     /// <summary>
     /// PKCS#10 certification request coded in base64 ASN.1/DER or PEM format.
@@ -78,7 +78,7 @@ public record CertificateManagementRequest4
     [IsoId("_HMZMo5__EfC4Q_xhaK1hdQ")]
     [DisplayName("Binary Certification Request")]
     [IsoXmlTag("BinryCertfctnReq")]
-    public IsoMax20000Text? BinaryCertificationRequest { get; init; }
+    public Max20000Text? BinaryCertificationRequest { get; init; }
 
     /// <summary>
     /// Certification request PKCS#10 for creation or renewal of an X.509 certificate.
@@ -94,7 +94,7 @@ public record CertificateManagementRequest4
     [IsoId("_HMZMr5__EfC4Q_xhaK1hdQ")]
     [DisplayName("Client Certificate")]
     [IsoXmlTag("ClntCert")]
-    public IsoMax10KBinary? ClientCertificate { get; init; }
+    public Max10KBinary? ClientCertificate { get; init; }
 
     /// <summary>
     /// Identification of the white list element, for white list addition or removal.

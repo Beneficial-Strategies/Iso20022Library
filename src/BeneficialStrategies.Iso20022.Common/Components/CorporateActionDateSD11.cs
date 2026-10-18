@@ -24,7 +24,7 @@ public record CorporateActionDateSD11
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Actual early expiration time as set by the issuer/offer/agent.
@@ -89,5 +89,5 @@ public record CorporateActionDateSD11
     [DisplayName("DTC Earliest Payment Date")]
     [IsoXmlTag("DTCEarlstPmtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DTCEarliestPaymentDate { get; init; }
+    public DateOnly? DTCEarliestPaymentDate { get; init; }
 }

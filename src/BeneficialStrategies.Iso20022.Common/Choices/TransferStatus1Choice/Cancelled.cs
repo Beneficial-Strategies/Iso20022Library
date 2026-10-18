@@ -40,7 +40,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus1Choice
         [IsoXmlTag("XtndedRsn")]
         [IsoSimpleType(IsoSimpleType.Extended350Code)]
         [StringLength(maximumLength: 350, MinimumLength = 1)]
-        public required IsoExtended350Code ExtendedReason { get; init; }
+        public required Extended350Code ExtendedReason { get; init; }
 
         /// <summary>
         /// Proprietary identification of the reason for the cancelled status.

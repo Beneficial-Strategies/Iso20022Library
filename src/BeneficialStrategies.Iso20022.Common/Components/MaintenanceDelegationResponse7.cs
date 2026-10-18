@@ -39,7 +39,7 @@ public record MaintenanceDelegationResponse7
     [DisplayName("TM Date Time")]
     [IsoXmlTag("TMDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime TMDateTime { get; init; }
+    public required ISODateTime TMDateTime { get; init; }
 
     /// <summary>
     /// Challenge value sends by the POI to be received back in a message response.
@@ -48,7 +48,7 @@ public record MaintenanceDelegationResponse7
     [DisplayName("TM Challenge Value")]
     [IsoXmlTag("TMChllngVal")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public required IsoMax140Binary TMChallengeValue { get; init; }
+    public required Max140Binary TMChallengeValue { get; init; }
 
     /// <summary>
     /// Information on the delegation of a maintenance action.

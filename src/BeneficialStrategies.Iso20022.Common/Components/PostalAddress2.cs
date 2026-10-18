@@ -24,7 +24,7 @@ public record PostalAddress2
     [IsoXmlTag("StrtNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? StreetName { get; init; }
+    public Max70Text? StreetName { get; init; }
 
     /// <summary>
     /// Identifier consisting of a group of letters and/or numbers that is added to a postal address to assist the sorting of mail.
@@ -34,7 +34,7 @@ public record PostalAddress2
     [IsoXmlTag("PstCdId")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoMax16Text PostCodeIdentification { get; init; }
+    public required Max16Text PostCodeIdentification { get; init; }
 
     /// <summary>
     /// Name of a built-up area, with defined boundaries, and a local government.
@@ -44,7 +44,7 @@ public record PostalAddress2
     [IsoXmlTag("TwnNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TownName { get; init; }
+    public required Max35Text TownName { get; init; }
 
     /// <summary>
     /// Identifies a subdivision of a country for example, state, region, county.
@@ -54,7 +54,7 @@ public record PostalAddress2
     [IsoXmlTag("CtrySubDvsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CountrySubDivision { get; init; }
+    public Max35Text? CountrySubDivision { get; init; }
 
     /// <summary>
     /// Nation with its own government.

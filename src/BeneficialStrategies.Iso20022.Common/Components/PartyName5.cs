@@ -21,7 +21,7 @@ public record PartyName5
     /// </summary>
     [DisplayName("International")]
     [IsoXmlTag("Intrnl")]
-    public IsoTrueFalseIndicator? International { get; init; }
+    public TrueFalseIndicator? International { get; init; }
 
     /// <summary>
     /// Language.
@@ -35,5 +35,5 @@ public record PartyName5
     /// </summary>
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
-    public required IsoMax500Text Value { get; init; }
+    public required Max500Text Value { get; init; }
 }

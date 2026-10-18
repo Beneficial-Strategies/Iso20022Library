@@ -35,7 +35,7 @@ public record CorporateActionRate132
     /// </summary>
     [DisplayName("Applicable Rate")]
     [IsoXmlTag("AplblRate")]
-    public IsoPercentage14Rate? ApplicableRate { get; init; }
+    public decimal? ApplicableRate { get; init; }
 
     /// <summary>
     /// Charges Fees.
@@ -49,14 +49,14 @@ public record CorporateActionRate132
     /// </summary>
     [DisplayName("Financial Transaction Tax Rate")]
     [IsoXmlTag("FinTxTaxRate")]
-    public IsoPercentage14Rate? FinancialTransactionTaxRate { get; init; }
+    public decimal? FinancialTransactionTaxRate { get; init; }
 
     /// <summary>
     /// Fiscal Stamp.
     /// </summary>
     [DisplayName("Fiscal Stamp")]
     [IsoXmlTag("FsclStmp")]
-    public IsoPercentage14Rate? FiscalStamp { get; init; }
+    public decimal? FiscalStamp { get; init; }
 
     /// <summary>
     /// New To Old.

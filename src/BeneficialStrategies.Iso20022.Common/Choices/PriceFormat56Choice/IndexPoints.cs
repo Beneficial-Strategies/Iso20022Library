@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat56Choice
         /// </summary>
         [IsoXmlTag("IndxPts")]
         [IsoSimpleType(IsoSimpleType.RestrictedFINDecimalNumber)]
-        public required IsoRestrictedFINDecimalNumber Value { get; init; }
+        public required RestrictedFINDecimalNumber Value { get; init; }
     }
 }

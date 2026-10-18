@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument62Choice
         [IsoXmlTag("Nm")]
         [IsoSimpleType(IsoSimpleType.Max350Text)]
         [StringLength(maximumLength: 350, MinimumLength = 1)]
-        public IsoMax350Text? Name { get; init; }
+        public Max350Text? Name { get; init; }
 
         /// <summary>
         /// Financial Instrument Short Name (FISN) expressed in conformance with the ISO 18774 standard.
@@ -42,7 +42,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument62Choice
         [IsoXmlTag("ShrtNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? ShortName { get; init; }
+        public Max35Text? ShortName { get; init; }
 
         /// <summary>
         /// Type of security.
@@ -59,7 +59,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument62Choice
         [DisplayName("Restricted Indicator")]
         [IsoXmlTag("RstrctdInd")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? RestrictedIndicator { get; init; }
+        public YesNoIndicator? RestrictedIndicator { get; init; }
 
         /// <summary>
         /// Alternative security offered in place of a restricted security.

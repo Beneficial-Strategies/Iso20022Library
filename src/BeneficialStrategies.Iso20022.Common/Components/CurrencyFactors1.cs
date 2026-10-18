@@ -47,7 +47,7 @@ public record CurrencyFactors1
     [DisplayName("Volatility Margin")]
     [IsoXmlTag("VoltlyMrgn")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate VolatilityMargin { get; init; }
+    public required PercentageRate VolatilityMargin { get; init; }
 
     /// <summary>
     /// Exchange rate used in the calculation of the pay-in schedule.

@@ -28,7 +28,7 @@ public record ATMTotals4
     /// </summary>
     [DisplayName("ATM Balance Number")]
     [IsoXmlTag("ATMBalNb")]
-    public IsoNumber? ATMBalanceNumber { get; init; }
+    public Number? ATMBalanceNumber { get; init; }
 
     /// <summary>
     /// ATM Current.
@@ -42,7 +42,7 @@ public record ATMTotals4
     /// </summary>
     [DisplayName("ATM Current Number")]
     [IsoXmlTag("ATMCurNb")]
-    public IsoNumber? ATMCurrentNumber { get; init; }
+    public Number? ATMCurrentNumber { get; init; }
 
     /// <summary>
     /// Currency.

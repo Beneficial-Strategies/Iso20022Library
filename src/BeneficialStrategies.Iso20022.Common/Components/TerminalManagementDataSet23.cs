@@ -31,7 +31,7 @@ public record TerminalManagementDataSet23
     [DisplayName("Sequence Counter")]
     [IsoXmlTag("SeqCntr")]
     [IsoSimpleType(IsoSimpleType.Max9NumericText)]
-    public IsoMax9NumericText? SequenceCounter { get; init; }
+    public Max9NumericText? SequenceCounter { get; init; }
 
     /// <summary>
     /// Identification of the point of interactions involved by the configuration data set.

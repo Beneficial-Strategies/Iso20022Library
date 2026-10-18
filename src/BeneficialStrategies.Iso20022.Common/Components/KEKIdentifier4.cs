@@ -24,7 +24,7 @@ public record KEKIdentifier4
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Name { get; init; }
+    public Max140Text? Name { get; init; }
 
     /// <summary>
     /// Identification of the cryptographic key.
@@ -34,7 +34,7 @@ public record KEKIdentifier4
     [IsoXmlTag("KeyId")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? KeyIdentification { get; init; }
+    public Max140Text? KeyIdentification { get; init; }
 
     /// <summary>
     /// Version of the cryptographic key.
@@ -44,5 +44,5 @@ public record KEKIdentifier4
     [IsoXmlTag("KeyVrsn")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? KeyVersion { get; init; }
+    public Max140Text? KeyVersion { get; init; }
 }

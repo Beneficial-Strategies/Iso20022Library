@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument8Choice
         [IsoXmlTag("Ref")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? Reference { get; init; }
+        public Max35Text? Reference { get; init; }
 
         /// <summary>
         /// Party that receives an amount of money from the debtor. The creditor is also the credit account owner.

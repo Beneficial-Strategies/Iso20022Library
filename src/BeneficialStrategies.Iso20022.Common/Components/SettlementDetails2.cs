@@ -152,5 +152,5 @@ public record SettlementDetails2
     [DisplayName("Partial Settlement Indicator")]
     [IsoXmlTag("PrtlSttlmInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PartialSettlementIndicator { get; init; }
+    public YesNoIndicator? PartialSettlementIndicator { get; init; }
 }

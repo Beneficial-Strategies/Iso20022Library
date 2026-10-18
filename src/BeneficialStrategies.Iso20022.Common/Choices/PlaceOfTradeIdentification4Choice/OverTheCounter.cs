@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PlaceOfTradeIdentification4Choic
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("OverTheCntr")]
-        public required IsoMax35Text Value { get; init; }
+        public required Max35Text Value { get; init; }
     }
 }

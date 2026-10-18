@@ -22,7 +22,7 @@ public record PaymentSearch9
     [IsoId("_ASwGHQKyEe2rHs6fbn9-0A")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
-    public SimpleValueList<IsoMax35Text> MessageIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> MessageIdentification { get; init; } = [];
 
     /// <summary>
     /// Date and time at which the cash is at the disposal of the credit account owner, or ceases to be at the disposal of the debit account owner.
@@ -136,7 +136,7 @@ public record PaymentSearch9
     [IsoId("_ASwGOQKyEe2rHs6fbn9-0A")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
-    public SimpleValueList<IsoMax35Text> TransactionIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> TransactionIdentification { get; init; } = [];
 
     /// <summary>
     /// Universally unique identifier to provide an end-to-end reference of a payment transaction.
@@ -144,7 +144,7 @@ public record PaymentSearch9
     [IsoId("_VoE_cRlcEe2Do_UtrNmb2g")]
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
-    public SimpleValueList<IsoUUIDv4Identifier> UETR { get; init; } = [];
+    public SimpleValueList<UUIDv4Identifier> UETR { get; init; } = [];
 
     /// <summary>
     /// Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.|Usage: this is the former InterbankValueDate.
@@ -152,7 +152,7 @@ public record PaymentSearch9
     [IsoId("_ASwGOwKyEe2rHs6fbn9-0A")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
-    public SimpleValueList<IsoISODate> InterbankSettlementDate { get; init; } = [];
+    public SimpleValueList<DateOnly> InterbankSettlementDate { get; init; } = [];
 
     /// <summary>
     /// Unique identification, as assigned by the initiating party, to unambiguously identify the transaction. This identification is passed on, unchanged, throughout the entire end-to-end chain.|Usage: The end-to-end identification can be used for reconciliation or to link tasks relating to the transaction.|It can be included in several messages related to the transaction.|Usage: this is the former RelatedReference.
@@ -160,7 +160,7 @@ public record PaymentSearch9
     [IsoId("_ASwGPQKyEe2rHs6fbn9-0A")]
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
-    public SimpleValueList<IsoMax35Text> EndToEndIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> EndToEndIdentification { get; init; } = [];
 
     /// <summary>
     /// Defines the party fields used to search for a payment.

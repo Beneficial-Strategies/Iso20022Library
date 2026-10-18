@@ -24,7 +24,7 @@ public record Group4
     [IsoXmlTag("GrpId")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public required IsoMax4AlphaNumericText GroupIdentification { get; init; }
+    public required Max4AlphaNumericText GroupIdentification { get; init; }
 
     /// <summary>
     /// Specifies a party and related certificate.

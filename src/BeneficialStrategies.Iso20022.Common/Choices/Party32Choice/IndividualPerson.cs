@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party32Choice
         [IsoXmlTag("GvnNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? GivenName { get; init; }
+        public Max35Text? GivenName { get; init; }
 
         /// <summary>
         /// Second name of the person.
@@ -42,7 +42,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party32Choice
         [IsoXmlTag("MddlNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? MiddleName { get; init; }
+        public Max35Text? MiddleName { get; init; }
 
         /// <summary>
         /// Name by which the party is known and which is usually used to identify that person.
@@ -52,7 +52,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party32Choice
         [IsoXmlTag("Nm")]
         [IsoSimpleType(IsoSimpleType.Max350Text)]
         [StringLength(maximumLength: 350, MinimumLength = 1)]
-        public required IsoMax350Text Name { get; init; }
+        public required Max350Text Name { get; init; }
 
         /// <summary>
         /// Additional information about the person that follows a person&apos;s name, for example, qualification such as Doctor of Philosophy (PhD).
@@ -62,7 +62,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party32Choice
         [IsoXmlTag("NmSfx")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? NameSuffix { get; init; }
+        public Max35Text? NameSuffix { get; init; }
 
         /// <summary>
         /// Gender of the person.
@@ -79,7 +79,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party32Choice
         [DisplayName("Birth Date")]
         [IsoXmlTag("BirthDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? BirthDate { get; init; }
+        public DateOnly? BirthDate { get; init; }
 
         /// <summary>
         /// Country where the person was born.
@@ -97,7 +97,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party32Choice
         [IsoXmlTag("PrvcOfBirth")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? ProvinceOfBirth { get; init; }
+        public Max35Text? ProvinceOfBirth { get; init; }
 
         /// <summary>
         /// City where the person was born.
@@ -107,7 +107,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party32Choice
         [IsoXmlTag("CityOfBirth")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? CityOfBirth { get; init; }
+        public Max35Text? CityOfBirth { get; init; }
 
         /// <summary>
         /// Name of the occupation or job of the person.
@@ -117,7 +117,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party32Choice
         [IsoXmlTag("Prfssn")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? Profession { get; init; }
+        public Max35Text? Profession { get; init; }
 
         /// <summary>
         /// Address of the person.
@@ -147,7 +147,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party32Choice
         [IsoXmlTag("EmplngCpny")]
         [IsoSimpleType(IsoSimpleType.Max140Text)]
         [StringLength(maximumLength: 140, MinimumLength = 1)]
-        public IsoMax140Text? EmployingCompany { get; init; }
+        public Max140Text? EmployingCompany { get; init; }
 
         /// <summary>
         /// Title of the function.
@@ -157,7 +157,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party32Choice
         [IsoXmlTag("BizFctn")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? BusinessFunction { get; init; }
+        public Max35Text? BusinessFunction { get; init; }
 
         /// <summary>
         /// Specifies if due diligence checks on the political exposure of the investor or account servicer have been carried out and whether these checks are national or foreign. (A politically exposed person is someone who has been entrusted with a prominent public function, or an individual who is closely related to such a person.).
@@ -174,7 +174,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party32Choice
         [DisplayName("Death Date")]
         [IsoXmlTag("DthDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? DeathDate { get; init; }
+        public DateOnly? DeathDate { get; init; }
 
         /// <summary>
         /// Civil status of the individual person.
@@ -192,7 +192,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party32Choice
         [IsoXmlTag("EdctnLvl")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? EducationLevel { get; init; }
+        public Max35Text? EducationLevel { get; init; }
 
         /// <summary>
         /// Information related to the person.

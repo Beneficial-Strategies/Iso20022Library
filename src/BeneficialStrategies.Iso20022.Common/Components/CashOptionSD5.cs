@@ -24,7 +24,7 @@ public record CashOptionSD5
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text PlaceAndName { get; init; }
+    public required Max350Text PlaceAndName { get; init; }
 
     /// <summary>
     /// Unique number associated with a payout within an option.
@@ -33,7 +33,7 @@ public record CashOptionSD5
     [DisplayName("Payout Number")]
     [IsoXmlTag("PyoutNb")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public required IsoExact3NumericText PayoutNumber { get; init; }
+    public required Exact3NumericText PayoutNumber { get; init; }
 
     /// <summary>
     /// Describes the type of payout associated with the event.
@@ -58,5 +58,5 @@ public record CashOptionSD5
     [DisplayName("Maximum Withholding Tax Percentage")]
     [IsoXmlTag("MaxWhldgTaxPctg")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? MaximumWithholdingTaxPercentage { get; init; }
+    public PercentageRate? MaximumWithholdingTaxPercentage { get; init; }
 }

@@ -63,7 +63,7 @@ public record InstructedCorporateActionOption20
     /// </summary>
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
-    public IsoExact3NumericText? OptionNumber { get; init; }
+    public Exact3NumericText? OptionNumber { get; init; }
 
     /// <summary>
     /// Option Pending Instruction Balance.

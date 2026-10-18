@@ -34,7 +34,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature15Choice
         [DisplayName("Clearing Threshold")]
         [IsoXmlTag("ClrThrshld")]
         [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-        public IsoTrueFalseIndicator? ClearingThreshold { get; init; }
+        public TrueFalseIndicator? ClearingThreshold { get; init; }
 
         /// <summary>
         /// Directly linked to commercial activity or treasury financing: Information on whether the contract is objectively measurable as directly linked to the counterparty&apos;s commercial or treasury financing activity.
@@ -44,7 +44,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature15Choice
         [DisplayName("Directly Linked Activity")]
         [IsoXmlTag("DrctlyLkdActvty")]
         [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-        public IsoTrueFalseIndicator? DirectlyLinkedActivity { get; init; }
+        public TrueFalseIndicator? DirectlyLinkedActivity { get; init; }
 
         /// <summary>
         /// Indicates whether the counterparty is an entity established pursuant to federal law like for example a federal authority or a government corporation.
@@ -54,6 +54,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature15Choice
         [DisplayName("Federal Institution")]
         [IsoXmlTag("FdrlInstn")]
         [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-        public IsoTrueFalseIndicator? FederalInstitution { get; init; }
+        public TrueFalseIndicator? FederalInstitution { get; init; }
     }
 }

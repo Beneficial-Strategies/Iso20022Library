@@ -23,7 +23,7 @@ public record NumberOfTransactionsPerStatus1
     [DisplayName("Detailed Number Of Transactions")]
     [IsoXmlTag("DtldNbOfTxs")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText DetailedNumberOfTransactions { get; init; }
+    public required Max15NumericText DetailedNumberOfTransactions { get; init; }
 
     /// <summary>
     /// Common transaction status for all individual transactions reported with the same status.
@@ -40,5 +40,5 @@ public record NumberOfTransactionsPerStatus1
     [DisplayName("Detailed Control Sum")]
     [IsoXmlTag("DtldCtrlSum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? DetailedControlSum { get; init; }
+    public DecimalNumber? DetailedControlSum { get; init; }
 }

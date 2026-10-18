@@ -263,7 +263,7 @@ public record OtherAmounts16
     [DisplayName("Remuneration Amount Request")]
     [IsoXmlTag("RmnrtnAmtReq")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? RemunerationAmountRequest { get; init; }
+    public YesNoIndicator? RemunerationAmountRequest { get; init; }
 
     /// <summary>
     /// Specifies the source and amount of any other remuneration received or to be received by the broker in connection with the transaction.
@@ -336,5 +336,5 @@ public record OtherAmounts16
     [DisplayName("Odd Lot Fee")]
     [IsoXmlTag("OddLotFee")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? OddLotFee { get; init; }
+    public YesNoIndicator? OddLotFee { get; init; }
 }

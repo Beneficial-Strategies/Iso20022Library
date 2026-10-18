@@ -31,7 +31,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cleared16Choice
         [DisplayName("Clearing Date Time")]
         [IsoXmlTag("ClrDtTm")]
         [IsoSimpleType(IsoSimpleType.ISODateTime)]
-        public IsoISODateTime? ClearingDateTime { get; init; }
+        public ISODateTime? ClearingDateTime { get; init; }
 
         /// <summary>
         /// Unique number to indicate a group of reports which relate to the same execution.
@@ -41,7 +41,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cleared16Choice
         [IsoXmlTag("RptTrckgNb")]
         [IsoSimpleType(IsoSimpleType.Max52Text)]
         [StringLength(maximumLength: 52, MinimumLength = 1)]
-        public IsoMax52Text? ReportTrackingNumber { get; init; }
+        public Max52Text? ReportTrackingNumber { get; init; }
 
         /// <summary>
         /// Unique code determined by the reporting counterparty identifying the portfolio.
@@ -51,6 +51,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Cleared16Choice
         [IsoXmlTag("PrtflCd")]
         [IsoSimpleType(IsoSimpleType.Max52Text)]
         [StringLength(maximumLength: 52, MinimumLength = 1)]
-        public IsoMax52Text? PortfolioCode { get; init; }
+        public Max52Text? PortfolioCode { get; init; }
     }
 }

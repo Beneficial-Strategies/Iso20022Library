@@ -22,7 +22,7 @@ public record SwitchExecution8
     [IsoId("b567fa88-amnd-0001-0001-cbedd3f4632d")]
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
-    public IsoYesNoIndicator? AmendmentIndicator { get; init; }
+    public YesNoIndicator? AmendmentIndicator { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for a group of individual orders, as assigned by the instructing party. This identifier links the individual orders together.
@@ -30,7 +30,7 @@ public record SwitchExecution8
     [IsoId("b567fa88-mstr-0001-0002-cbedd3f4632d")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Market in which the advised trade transaction was executed.
@@ -46,7 +46,7 @@ public record SwitchExecution8
     [IsoId("b567fa88-ordr-0001-0004-cbedd3f4632d")]
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
-    public IsoISODateTime? OrderDateTime { get; init; }
+    public ISODateTime? OrderDateTime { get; init; }
 
     /// <summary>
     /// Date and time the order was received by the executing party, for example, the transfer agent.
@@ -54,7 +54,7 @@ public record SwitchExecution8
     [IsoId("b567fa88-rcvd-0001-0005-cbedd3f4632d")]
     [DisplayName("Received Date Time")]
     [IsoXmlTag("RcvdDtTm")]
-    public IsoISODateTime? ReceivedDateTime { get; init; }
+    public ISODateTime? ReceivedDateTime { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for the order execution, as assigned by the confirming party.
@@ -62,7 +62,7 @@ public record SwitchExecution8
     [IsoId("b567fa88-deal-0001-0006-cbedd3f4632d")]
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
-    public required IsoMax35Text DealReference { get; init; }
+    public required Max35Text DealReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for the order, as assigned by the instructing party.
@@ -70,7 +70,7 @@ public record SwitchExecution8
     [IsoId("b567fa88-ordr-0002-0007-cbedd3f4632d")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
-    public required IsoMax35Text OrderReference { get; init; }
+    public required Max35Text OrderReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor's identification of the order. This reference can typically be used in a hub scenario to give the reference of the order as assigned by the underlying client.
@@ -78,7 +78,7 @@ public record SwitchExecution8
     [IsoId("b567fa88-clnt-0001-0008-cbedd3f4632d")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
-    public IsoMax35Text? ClientReference { get; init; }
+    public Max35Text? ClientReference { get; init; }
 
     /// <summary>
     /// Unambiguous identification of a random or semi-random number used once (NONCE) generated in the frame of a cryptographic communication.
@@ -86,7 +86,7 @@ public record SwitchExecution8
     [IsoId("b567fa88-nonc-0001-0009-cbedd3f4632d")]
     [DisplayName("Nonce Identification")]
     [IsoXmlTag("NonceId")]
-    public IsoMax35Text? NonceIdentification { get; init; }
+    public Max35Text? NonceIdentification { get; init; }
 
     /// <summary>
     /// Account impacted by the investment fund order execution.
@@ -118,7 +118,7 @@ public record SwitchExecution8
     [IsoId("b567fa88-reqd-0001-0013-cbedd3f4632d")]
     [DisplayName("Requested Future Trade Date")]
     [IsoXmlTag("ReqdFutrTradDt")]
-    public IsoISODate? RequestedFutureTradeDate { get; init; }
+    public DateOnly? RequestedFutureTradeDate { get; init; }
 
     /// <summary>
     /// Total amount of money paid /to be paid or received in exchange for the financial instrument in the individual order.
@@ -134,7 +134,7 @@ public record SwitchExecution8
     [IsoId("b567fa88-cash-0001-0015-cbedd3f4632d")]
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
-    public IsoISODate? CashSettlementDate { get; init; }
+    public DateOnly? CashSettlementDate { get; init; }
 
     /// <summary>
     /// Method by which the transaction is settled.

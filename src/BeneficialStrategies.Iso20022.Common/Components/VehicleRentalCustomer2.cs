@@ -24,7 +24,7 @@ public record VehicleRentalCustomer2
     [IsoXmlTag("RntrNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public required IsoMax70Text RenterName { get; init; }
+    public required Max70Text RenterName { get; init; }
 
     /// <summary>
     /// Corporate name of the vehicle rental customer.
@@ -34,7 +34,7 @@ public record VehicleRentalCustomer2
     [IsoXmlTag("CorpNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? CorporateName { get; init; }
+    public Max70Text? CorporateName { get; init; }
 
     /// <summary>
     /// Corporate identifier of the vehicle rental customer.
@@ -44,7 +44,7 @@ public record VehicleRentalCustomer2
     [IsoXmlTag("CorpIdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text CorporateIdentifier { get; init; }
+    public required Max35Text CorporateIdentifier { get; init; }
 
     /// <summary>
     /// Party assigning an identification to a vehicle rental customer.

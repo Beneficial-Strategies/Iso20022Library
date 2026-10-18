@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentIdentificatio
         [DisplayName("ISIN")]
         [IsoXmlTag("ISIN")]
         [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-        public IsoISINOct2015Identifier? ISIN { get; init; }
+        public ISINOct2015Identifier? ISIN { get; init; }
 
         /// <summary>
         /// Index on which the financial instrument is based.

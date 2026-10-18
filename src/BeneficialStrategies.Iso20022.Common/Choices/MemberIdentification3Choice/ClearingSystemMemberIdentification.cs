@@ -32,6 +32,6 @@ namespace BeneficialStrategies.Iso20022.Choices.MemberIdentification3Choice
         [IsoXmlTag("MmbId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text MemberIdentification { get; init; }
+        public required Max35Text MemberIdentification { get; init; }
     }
 }

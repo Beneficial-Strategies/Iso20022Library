@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity4Choi
         [DisplayName("Unit")]
         [IsoXmlTag("Unit")]
         [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-        public required IsoDecimalNumber Unit { get; init; }
+        public required DecimalNumber Unit { get; init; }
     }
 }

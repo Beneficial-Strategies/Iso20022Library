@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentAttributes4Ch
         /// </summary>
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.ISIN2021Identifier)]
-        public required IsoISIN2021Identifier Value { get; init; }
+        public required ISIN2021Identifier Value { get; init; }
     }
 }

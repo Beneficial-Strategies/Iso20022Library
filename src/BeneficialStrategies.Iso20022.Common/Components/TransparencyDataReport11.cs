@@ -26,7 +26,7 @@ public record TransparencyDataReport11
     [IsoXmlTag("TechRcrdId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TechnicalRecordIdentification { get; init; }
+    public Max35Text? TechnicalRecordIdentification { get; init; }
 
     /// <summary>
     /// Identifies the financial instrument using an ISIN.
@@ -35,7 +35,7 @@ public record TransparencyDataReport11
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public required IsoISINOct2015Identifier Identification { get; init; }
+    public required ISINOct2015Identifier Identification { get; init; }
 
     /// <summary>
     /// Full name or description of the financial instrument.
@@ -45,7 +45,7 @@ public record TransparencyDataReport11
     [IsoXmlTag("FullNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? FullName { get; init; }
+    public Max350Text? FullName { get; init; }
 
     /// <summary>
     /// Segment MIC for the trading venue where applicable, otherwise the operational MIC.
@@ -54,7 +54,7 @@ public record TransparencyDataReport11
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public IsoMICIdentifier? TradingVenue { get; init; }
+    public MICIdentifier? TradingVenue { get; init; }
 
     /// <summary>
     /// Date for which the data is provided.
@@ -63,7 +63,7 @@ public record TransparencyDataReport11
     [DisplayName("Reporting Date")]
     [IsoXmlTag("RptgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ReportingDate { get; init; }
+    public DateOnly? ReportingDate { get; init; }
 
     /// <summary>
     /// Specifies the classification of the equity instrument.
@@ -81,7 +81,7 @@ public record TransparencyDataReport11
     [DisplayName("Number Outstanding Instruments")]
     [IsoXmlTag("NbOutsdngInstrms")]
     [IsoSimpleType(IsoSimpleType.DecimalNumberFraction5)]
-    public IsoDecimalNumberFraction5? NumberOutstandingInstruments { get; init; }
+    public DecimalNumberFraction5? NumberOutstandingInstruments { get; init; }
 
     /// <summary>
     /// The total number of shares corresponding to holdings exceeding 5% of total voting rights of the issuer unless such a holding is held by a collective investment undertaking or a pension fund. This field is to be populated only when actual information is known.
@@ -90,7 +90,7 @@ public record TransparencyDataReport11
     [DisplayName("Holdings Exceeding Total Voting Right Threshold")]
     [IsoXmlTag("HldgsExcdgTtlVtngRghtThrshld")]
     [IsoSimpleType(IsoSimpleType.DecimalNumberFraction5)]
-    public IsoDecimalNumberFraction5? HoldingsExceedingTotalVotingRightThreshold { get; init; }
+    public DecimalNumberFraction5? HoldingsExceedingTotalVotingRightThreshold { get; init; }
 
     /// <summary>
     /// Issuance size of the certificate expressed in Euros.

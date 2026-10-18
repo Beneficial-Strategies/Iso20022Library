@@ -60,7 +60,7 @@ public record TransportDetails2
     [DisplayName("Proposed Shipment Date")]
     [IsoXmlTag("PropsdShipmntDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ProposedShipmentDate { get; init; }
+    public required DateOnly ProposedShipmentDate { get; init; }
 
     /// <summary>
     /// Actual date whereby the goods were shipped.
@@ -69,7 +69,7 @@ public record TransportDetails2
     [DisplayName("Actual Shipment Date")]
     [IsoXmlTag("ActlShipmntDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ActualShipmentDate { get; init; }
+    public required DateOnly ActualShipmentDate { get; init; }
 
     /// <summary>
     /// Specifies the applicable Incoterm and associated location.

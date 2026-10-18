@@ -23,7 +23,7 @@ public record SettlementDetails88
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime TradeDate { get; init; }
+    public required ISODateTime TradeDate { get; init; }
 
     /// <summary>
     /// Provides details on either the delivering or receiving settlement parties.

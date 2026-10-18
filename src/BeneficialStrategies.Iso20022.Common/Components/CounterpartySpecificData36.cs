@@ -39,5 +39,5 @@ public record CounterpartySpecificData36
     [DisplayName("Reporting Time Stamp")]
     [IsoXmlTag("RptgTmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? ReportingTimeStamp { get; init; }
+    public ISODateTime? ReportingTimeStamp { get; init; }
 }

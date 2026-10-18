@@ -23,7 +23,7 @@ public record CalendarData1
     [DisplayName("System Date")]
     [IsoXmlTag("SysDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate SystemDate { get; init; }
+    public required DateOnly SystemDate { get; init; }
 
     /// <summary>
     /// Status of the system.

@@ -56,7 +56,7 @@ public record References5
     [IsoXmlTag("Sts")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Status { get; init; }
+    public Max35Text? Status { get; init; }
 
     /// <summary>
     /// File name of a document logically related to the request.
@@ -64,5 +64,5 @@ public record References5
     [IsoId("_Qoao5Np-Ed-ak6NoX_4Aeg_186950521")]
     [DisplayName("Attached Document Name")]
     [IsoXmlTag("AttchdDocNm")]
-    public SimpleValueList<IsoMax70Text> AttachedDocumentName { get; init; } = [];
+    public SimpleValueList<Max70Text> AttachedDocumentName { get; init; } = [];
 }

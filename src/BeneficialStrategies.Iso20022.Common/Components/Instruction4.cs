@@ -24,7 +24,7 @@ public record Instruction4
     [IsoXmlTag("SnglInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text SingleInstructionIdentification { get; init; }
+    public required Max35Text SingleInstructionIdentification { get; init; }
 
     /// <summary>
     /// Date at which the instruction must be executed.
@@ -33,7 +33,7 @@ public record Instruction4
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? RequestedExecutionDate { get; init; }
+    public ISODateTime? RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Indicates that a vote execution confirmation is requested.
@@ -42,7 +42,7 @@ public record Instruction4
     [DisplayName("Vote Execution Confirmation")]
     [IsoXmlTag("VoteExctnConf")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator VoteExecutionConfirmation { get; init; }
+    public required YesNoIndicator VoteExecutionConfirmation { get; init; }
 
     /// <summary>
     /// Identification of the securities account.

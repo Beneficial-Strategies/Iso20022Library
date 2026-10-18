@@ -32,7 +32,7 @@ public record Amount1
     [IsoXmlTag("MrgnCallReqId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MarginCallRequestIdentification { get; init; }
+    public required Max35Text MarginCallRequestIdentification { get; init; }
 
     /// <summary>
     /// Provides additional information related to the margin call amount that has been agreed.
@@ -42,5 +42,5 @@ public record Amount1
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max210Text)]
     [StringLength(maximumLength: 210, MinimumLength = 1)]
-    public IsoMax210Text? AdditionalInformation { get; init; }
+    public Max210Text? AdditionalInformation { get; init; }
 }

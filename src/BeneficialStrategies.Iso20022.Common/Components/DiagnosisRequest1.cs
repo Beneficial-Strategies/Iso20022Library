@@ -23,7 +23,7 @@ public record DiagnosisRequest1
     [DisplayName("Host Diagnosis Flag")]
     [IsoXmlTag("HstDgnssFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? HostDiagnosisFlag { get; init; }
+    public TrueFalseIndicator? HostDiagnosisFlag { get; init; }
 
     /// <summary>
     /// Identification of the Acquirers.
@@ -31,5 +31,5 @@ public record DiagnosisRequest1
     [IsoId("_ETK4sN6KEeiwsev40qZGEQ")]
     [DisplayName("Acquirer Identification")]
     [IsoXmlTag("AcqrrId")]
-    public SimpleValueList<IsoMax35Text> AcquirerIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> AcquirerIdentification { get; init; } = [];
 }

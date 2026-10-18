@@ -24,7 +24,7 @@ public record TaxCategory2
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Tax category identification.
@@ -33,7 +33,7 @@ public record TaxCategory2
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max2NumericText)]
-    public IsoMax2NumericText? Identification { get; init; }
+    public Max2NumericText? Identification { get; init; }
 
     /// <summary>
     /// Quantity to be withheld at the tax category level.

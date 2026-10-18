@@ -34,7 +34,7 @@ public record Transaction134
     [IsoXmlTag("OthrNtwkMgmtTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherNetworkManagementType { get; init; }
+    public Max35Text? OtherNetworkManagementType { get; init; }
 
     /// <summary>
     /// Reason or purpose to send the message.
@@ -51,7 +51,7 @@ public record Transaction134
     [IsoId("_xuMBN4v7EeumSPwlS1PkxQ")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
-    public SimpleValueList<IsoMax256Text> AlternateMessageReason { get; init; } = [];
+    public SimpleValueList<Max256Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Identification of the transaction.
@@ -68,7 +68,7 @@ public record Transaction134
     [DisplayName("Number Of Messages")]
     [IsoXmlTag("NbOfMsgs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NumberOfMessages { get; init; }
+    public Number? NumberOfMessages { get; init; }
 
     /// <summary>
     /// Maximum number of messages in the store and forward queue.
@@ -77,7 +77,7 @@ public record Transaction134
     [DisplayName("Maximum Number Of Messages")]
     [IsoXmlTag("MaxNbOfMsgs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaximumNumberOfMessages { get; init; }
+    public Number? MaximumNumberOfMessages { get; init; }
 
     /// <summary>
     /// Fees not included in the transaction amount but included in the settlement.
@@ -95,7 +95,7 @@ public record Transaction134
     [IsoXmlTag("TxDesc")]
     [IsoSimpleType(IsoSimpleType.Max1000Text)]
     [StringLength(maximumLength: 1000, MinimumLength = 1)]
-    public IsoMax1000Text? TransactionDescription { get; init; }
+    public Max1000Text? TransactionDescription { get; init; }
 
     /// <summary>
     /// Contains additional data.

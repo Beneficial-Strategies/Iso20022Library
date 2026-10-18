@@ -21,21 +21,21 @@ public record ATMService27
     /// </summary>
     [DisplayName("ATM Service Code")]
     [IsoXmlTag("ATMSvcCd")]
-    public IsoMax35Text? ATMServiceCode { get; init; }
+    public Max35Text? ATMServiceCode { get; init; }
 
     /// <summary>
     /// Host Service Code.
     /// </summary>
     [DisplayName("Host Service Code")]
     [IsoXmlTag("HstSvcCd")]
-    public IsoMax35Text? HostServiceCode { get; init; }
+    public Max35Text? HostServiceCode { get; init; }
 
     /// <summary>
     /// Service Reference.
     /// </summary>
     [DisplayName("Service Reference")]
     [IsoXmlTag("SvcRef")]
-    public IsoMax35Text? ServiceReference { get; init; }
+    public Max35Text? ServiceReference { get; init; }
 
     /// <summary>
     /// Service Type.
@@ -49,5 +49,5 @@ public record ATMService27
     /// </summary>
     [DisplayName("Service Variant Identification")]
     [IsoXmlTag("SvcVarntId")]
-    public ValueList<IsoMax35Text> ServiceVariantIdentification { get; init; } = [];
+    public ValueList<Max35Text> ServiceVariantIdentification { get; init; } = [];
 }

@@ -22,7 +22,7 @@ public record SecuritiesTradeDetails104
     [IsoId("_ZdqIw_fXEeiNZp_PtLohLw")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    public SimpleValueList<IsoRestrictedFINXMax52Text> TradeIdentification { get; init; } = [];
+    public SimpleValueList<RestrictedFINXMax52Text> TradeIdentification { get; init; } = [];
 
     /// <summary>
     /// Unambiguous identification of a collateral transaction as assigned by the instructing party.
@@ -30,7 +30,7 @@ public record SecuritiesTradeDetails104
     [IsoId("_ZdqIx_fXEeiNZp_PtLohLw")]
     [DisplayName("Collateral Transaction Identification")]
     [IsoXmlTag("CollTxId")]
-    public SimpleValueList<IsoRestrictedFINXMax16Text> CollateralTransactionIdentification { get; init; } =
+    public SimpleValueList<RestrictedFINXMax16Text> CollateralTransactionIdentification { get; init; } =
         [];
 
     /// <summary>
@@ -39,7 +39,7 @@ public record SecuritiesTradeDetails104
     [IsoId("_ZdqIy_fXEeiNZp_PtLohLw")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
-    public SimpleValueList<IsoRestrictedFINXMax16Text> AccountOwnerTransactionIdentification { get; init; } =
+    public SimpleValueList<RestrictedFINXMax16Text> AccountOwnerTransactionIdentification { get; init; } =
         [];
 
     /// <summary>
@@ -50,7 +50,7 @@ public record SecuritiesTradeDetails104
     [IsoXmlTag("PrcrTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? ProcessorTransactionIdentification { get; init; }
+    public RestrictedFINXMax16Text? ProcessorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Market in which a trade transaction has been executed.
@@ -99,7 +99,7 @@ public record SecuritiesTradeDetails104
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
     [IsoSimpleType(IsoSimpleType.Max3Number)]
-    public IsoMax3Number? NumberOfDaysAccrued { get; init; }
+    public Max3Number? NumberOfDaysAccrued { get; init; }
 
     /// <summary>
     /// Indicates the conditions under which the order/trade is to be/was executed.

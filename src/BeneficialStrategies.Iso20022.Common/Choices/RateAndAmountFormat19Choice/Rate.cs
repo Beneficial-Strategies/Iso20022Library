@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.RateAndAmountFormat19Choice
         /// </summary>
         [IsoXmlTag("Rate")]
         [IsoSimpleType(IsoSimpleType.PercentageRate)]
-        public required IsoPercentageRate Value { get; init; }
+        public required PercentageRate Value { get; init; }
     }
 }

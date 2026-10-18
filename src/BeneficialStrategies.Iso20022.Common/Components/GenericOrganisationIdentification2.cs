@@ -24,7 +24,7 @@ public record GenericOrganisationIdentification2
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax35Text Identification { get; init; }
+    public required RestrictedFINXMax35Text Identification { get; init; }
 
     /// <summary>
     /// Name of the identification scheme.
@@ -42,5 +42,5 @@ public record GenericOrganisationIdentification2
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoRestrictedFINXMax35Text? Issuer { get; init; }
+    public RestrictedFINXMax35Text? Issuer { get; init; }
 }

@@ -31,7 +31,7 @@ public record Transaction157
     [IsoId("_rvxQY4gpEeu8-LhY4KPfWg")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
-    public SimpleValueList<IsoMax256Text> AlternateMessageReason { get; init; } = [];
+    public SimpleValueList<Max256Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Identification of the transaction.
@@ -66,7 +66,7 @@ public record Transaction157
     [IsoXmlTag("OthrFileActnTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherFileActionType { get; init; }
+    public Max35Text? OtherFileActionType { get; init; }
 
     /// <summary>
     /// Details pertaining to the file action.
@@ -107,5 +107,5 @@ public record Transaction157
     [DisplayName("Continuation Indicator")]
     [IsoXmlTag("ConttnInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ContinuationIndicator { get; init; }
+    public TrueFalseIndicator? ContinuationIndicator { get; init; }
 }

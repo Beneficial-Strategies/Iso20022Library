@@ -32,7 +32,7 @@ public record DetailedAmount10
     [IsoXmlTag("AddtlTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AdditionalType { get; init; }
+    public Max35Text? AdditionalType { get; init; }
 
     /// <summary>
     /// Amount value.
@@ -50,5 +50,5 @@ public record DetailedAmount10
     [IsoXmlTag("Labl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Label { get; init; }
+    public Max35Text? Label { get; init; }
 }

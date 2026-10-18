@@ -46,7 +46,7 @@ public record SecuritiesModificationTransaction2
     [IsoId("_Ev6wjeSmEe-qVZLXW4RRBw")]
     [DisplayName("Request Reference")]
     [IsoXmlTag("ReqRef")]
-    public required IsoMax35Text RequestReference { get; init; }
+    public required Max35Text RequestReference { get; init; }
 
     /// <summary>
     /// Date and time at which the status was assigned.
@@ -54,7 +54,7 @@ public record SecuritiesModificationTransaction2
     [IsoId("_Ev6wj-SmEe-qVZLXW4RRBw")]
     [DisplayName("Status Date")]
     [IsoXmlTag("StsDt")]
-    public IsoISODateTime? StatusDate { get; init; }
+    public ISODateTime? StatusDate { get; init; }
 
     /// <summary>
     /// Details of the request providing the changes and references of the instruction for which the modification is requested.

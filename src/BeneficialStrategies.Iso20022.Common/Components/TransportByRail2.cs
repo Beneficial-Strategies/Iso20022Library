@@ -24,7 +24,7 @@ public record TransportByRail2
     [IsoXmlTag("PlcOfRct")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text PlaceOfReceipt { get; init; }
+    public required Max35Text PlaceOfReceipt { get; init; }
 
     /// <summary>
     /// Identifies the location of delivery of the goods.
@@ -34,7 +34,7 @@ public record TransportByRail2
     [IsoXmlTag("PlcOfDlvry")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text PlaceOfDelivery { get; init; }
+    public required Max35Text PlaceOfDelivery { get; init; }
 
     /// <summary>
     /// Identifies the party that is responsible for the conveyance of the goods from one place to another.
@@ -44,5 +44,5 @@ public record TransportByRail2
     [IsoXmlTag("RailCrrierNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RailCarrierName { get; init; }
+    public Max35Text? RailCarrierName { get; init; }
 }

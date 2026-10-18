@@ -32,5 +32,5 @@ public record CorporateActionReversalReason7
     [IsoXmlTag("AddtlRsnInf")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoRestrictedFINXMax256Text? AdditionalReasonInformation { get; init; }
+    public RestrictedFINXMax256Text? AdditionalReasonInformation { get; init; }
 }

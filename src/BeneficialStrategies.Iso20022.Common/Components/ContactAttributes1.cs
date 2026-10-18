@@ -24,7 +24,7 @@ public record ContactAttributes1
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text Name { get; init; }
+    public required Max350Text Name { get; init; }
 
     /// <summary>
     /// Information that locates and identifies a specific address, as defined by postal services.
@@ -41,7 +41,7 @@ public record ContactAttributes1
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public required IsoPhoneNumber PhoneNumber { get; init; }
+    public required PhoneNumber PhoneNumber { get; init; }
 
     /// <summary>
     /// Collection of information that identifies a FAX number, as defined by telecom services.
@@ -50,7 +50,7 @@ public record ContactAttributes1
     [DisplayName("Fax Number")]
     [IsoXmlTag("FaxNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? FaxNumber { get; init; }
+    public PhoneNumber? FaxNumber { get; init; }
 
     /// <summary>
     /// Address for electronic mail (e-mail).
@@ -60,7 +60,7 @@ public record ContactAttributes1
     [IsoXmlTag("EmailAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? EmailAddress { get; init; }
+    public Max256Text? EmailAddress { get; init; }
 
     /// <summary>
     /// Address for the Universal Resource Locator (URL), eg, used over the www (HTTP) service.
@@ -70,7 +70,7 @@ public record ContactAttributes1
     [IsoXmlTag("URLAdr")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
     [StringLength(maximumLength: 2048, MinimumLength = 1)]
-    public IsoMax2048Text? URLAddress { get; init; }
+    public Max2048Text? URLAddress { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identification of a financial institution, as assigned under a globally recognised or proprietary identification scheme.
@@ -79,5 +79,5 @@ public record ContactAttributes1
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.BICIdentifier)]
-    public IsoBICIdentifier? Identification { get; init; }
+    public BICIdentifier? Identification { get; init; }
 }

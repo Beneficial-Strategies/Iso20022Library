@@ -24,7 +24,7 @@ public record AccountRestrictions1
     [IsoXmlTag("Lmttn")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Limitation { get; init; }
+    public Max350Text? Limitation { get; init; }
 
     /// <summary>
     /// Additional information.
@@ -34,7 +34,7 @@ public record AccountRestrictions1
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AdditionalInformation { get; init; }
+    public Max350Text? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Information or instructions for the by-passing of validations in the account registration process.
@@ -44,7 +44,7 @@ public record AccountRestrictions1
     [IsoXmlTag("AcctVldtn")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AccountValidation { get; init; }
+    public Max350Text? AccountValidation { get; init; }
 
     /// <summary>
     /// Type or identification of the restriction.
@@ -54,7 +54,7 @@ public record AccountRestrictions1
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Type { get; init; }
+    public Max35Text? Type { get; init; }
 
     /// <summary>
     /// Regulator that may have to be informed about restrictions or limitations on the account or account party.

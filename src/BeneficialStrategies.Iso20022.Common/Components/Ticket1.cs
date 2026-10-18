@@ -24,7 +24,7 @@ public record Ticket1
     [IsoXmlTag("TcktNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TicketNumber { get; init; }
+    public Max35Text? TicketNumber { get; init; }
 
     /// <summary>
     /// Name of the issuing ticket agent.
@@ -41,7 +41,7 @@ public record Ticket1
     [DisplayName("Ticket Issue Date")]
     [IsoXmlTag("TcktIsseDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TicketIssueDate { get; init; }
+    public DateOnly? TicketIssueDate { get; init; }
 
     /// <summary>
     /// Location where ticket was issued.
@@ -51,7 +51,7 @@ public record Ticket1
     [IsoXmlTag("TcktIsseLctn")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? TicketIssueLocation { get; init; }
+    public Max140Text? TicketIssueLocation { get; init; }
 
     /// <summary>
     /// Number of a ticket that contains additional coupons for an itinerary that contains more than four segments.
@@ -61,7 +61,7 @@ public record Ticket1
     [IsoXmlTag("CnjnctnTcktNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ConjunctionTicketNumber { get; init; }
+    public Max35Text? ConjunctionTicketNumber { get; init; }
 
     /// <summary>
     /// Indicates whether or not restrictions apply to the ticket.
@@ -72,7 +72,7 @@ public record Ticket1
     [DisplayName("Restricted Ticket Indicator")]
     [IsoXmlTag("RstrctdTcktInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? RestrictedTicketIndicator { get; init; }
+    public TrueFalseIndicator? RestrictedTicketIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether or not the ticket is open-ended.
@@ -83,7 +83,7 @@ public record Ticket1
     [DisplayName("Open Ticket Indicator")]
     [IsoXmlTag("OpnTcktInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? OpenTicketIndicator { get; init; }
+    public TrueFalseIndicator? OpenTicketIndicator { get; init; }
 
     /// <summary>
     /// Contains the specific restriction applicable to the ticket.
@@ -93,7 +93,7 @@ public record Ticket1
     [IsoXmlTag("Rstrctns")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Restrictions { get; init; }
+    public Max70Text? Restrictions { get; init; }
 
     /// <summary>
     /// Indicates whether or not the ticket was exchanged (reissued or new ticket generated).
@@ -104,7 +104,7 @@ public record Ticket1
     [DisplayName("Exchanged Ticket Indicator")]
     [IsoXmlTag("XchgdTcktInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ExchangedTicketIndicator { get; init; }
+    public TrueFalseIndicator? ExchangedTicketIndicator { get; init; }
 
     /// <summary>
     /// Contains the original ticket number that was replaced by the new ticket number.
@@ -114,7 +114,7 @@ public record Ticket1
     [IsoXmlTag("XchgdTcktNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ExchangedTicketNumber { get; init; }
+    public Max35Text? ExchangedTicketNumber { get; init; }
 
     /// <summary>
     /// Ticket record locator number.
@@ -124,7 +124,7 @@ public record Ticket1
     [IsoXmlTag("RcrdLctrNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RecordLocatorNumber { get; init; }
+    public Max35Text? RecordLocatorNumber { get; init; }
 
     /// <summary>
     /// Reservation number or identifier.

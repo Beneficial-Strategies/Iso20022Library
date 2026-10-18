@@ -31,7 +31,7 @@ public record ReconciliationCounterpartyPairStatistics6
     [DisplayName("Total Number Of Transactions")]
     [IsoXmlTag("TtlNbOfTxs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber TotalNumberOfTransactions { get; init; }
+    public required Number TotalNumberOfTransactions { get; init; }
 
     /// <summary>
     /// Data on transaction requiring reconciliation or pairing.

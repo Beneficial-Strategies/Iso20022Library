@@ -34,5 +34,5 @@ public record PowerOfAttorneyRequirements2
     [IsoXmlTag("OthrDcmnttn")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? OtherDocumentation { get; init; }
+    public Max350Text? OtherDocumentation { get; init; }
 }

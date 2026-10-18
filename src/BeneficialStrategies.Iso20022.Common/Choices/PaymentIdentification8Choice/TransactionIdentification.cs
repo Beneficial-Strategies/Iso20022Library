@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification8Choice
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("TxId")]
-        public required IsoMax35Text Value { get; init; }
+        public required Max35Text Value { get; init; }
     }
 }

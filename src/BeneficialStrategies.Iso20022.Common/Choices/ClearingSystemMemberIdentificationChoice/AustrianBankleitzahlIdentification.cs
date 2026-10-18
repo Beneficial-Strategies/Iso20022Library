@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
         /// </summary>
         [IsoXmlTag("ATBLZ")]
         [IsoSimpleType(IsoSimpleType.AustrianBankleitzahlIdentifier)]
-        public required IsoAustrianBankleitzahlIdentifier Value { get; init; }
+        public required AustrianBankleitzahlIdentifier Value { get; init; }
     }
 }

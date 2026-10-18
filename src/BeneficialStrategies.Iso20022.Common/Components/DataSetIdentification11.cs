@@ -21,14 +21,14 @@ public record DataSetIdentification11
     /// </summary>
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
-    public IsoISODateTime? CreationDateTime { get; init; }
+    public ISODateTime? CreationDateTime { get; init; }
 
     /// <summary>
     /// Name.
     /// </summary>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax256Text? Name { get; init; }
+    public Max256Text? Name { get; init; }
 
     /// <summary>
     /// Type.
@@ -42,5 +42,5 @@ public record DataSetIdentification11
     /// </summary>
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
-    public IsoMax256Text? Version { get; init; }
+    public Max256Text? Version { get; init; }
 }

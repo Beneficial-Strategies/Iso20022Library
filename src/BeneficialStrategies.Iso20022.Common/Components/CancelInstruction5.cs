@@ -28,5 +28,5 @@ public record CancelInstruction5
     /// </summary>
     [DisplayName("Single Instruction Identification")]
     [IsoXmlTag("SnglInstrId")]
-    public required IsoMax35Text SingleInstructionIdentification { get; init; }
+    public required Max35Text SingleInstructionIdentification { get; init; }
 }

@@ -22,7 +22,7 @@ public record InvestigationResponse23
     [IsoId("a8be19d8-ddfd-43f6-b3f8-75e3711eadb7")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the responder, to unambiguously identify the responder reference for the investigation.
@@ -30,7 +30,7 @@ public record InvestigationResponse23
     [IsoId("90e06376-b619-4654-af50-826857c84c47")]
     [DisplayName("Responder Investigation Identification")]
     [IsoXmlTag("RspndrInvstgtnId")]
-    public IsoMax35Text? ResponderInvestigationIdentification { get; init; }
+    public Max35Text? ResponderInvestigationIdentification { get; init; }
 
     /// <summary>
     /// Status of the investigation request.

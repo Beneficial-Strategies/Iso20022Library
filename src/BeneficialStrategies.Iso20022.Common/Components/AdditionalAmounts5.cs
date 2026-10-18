@@ -38,7 +38,7 @@ public record AdditionalAmounts5
     [IsoId("_LqhdcyH3EfCkq6-p7S3J1Q")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Amount value.
@@ -70,5 +70,5 @@ public record AdditionalAmounts5
     [IsoId("_LqhdeyH3EfCkq6-p7S3J1Q")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax70Text? Description { get; init; }
+    public Max70Text? Description { get; init; }
 }

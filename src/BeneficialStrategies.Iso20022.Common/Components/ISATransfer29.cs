@@ -24,7 +24,7 @@ public record ISATransfer29
     [IsoXmlTag("MstrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Identification assigned to the transfer of assets.
@@ -34,7 +34,7 @@ public record ISATransfer29
     [IsoXmlTag("TrfId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransferIdentification { get; init; }
+    public required Max35Text TransferIdentification { get; init; }
 
     /// <summary>
     /// Identification of the confirmation assigned by the transferor to the transfer.
@@ -44,7 +44,7 @@ public record ISATransfer29
     [IsoXmlTag("TrfConfId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TransferConfirmationIdentification { get; init; }
+    public Max35Text? TransferConfirmationIdentification { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor&apos;s identification of the transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.

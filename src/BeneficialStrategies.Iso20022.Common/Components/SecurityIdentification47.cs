@@ -42,7 +42,7 @@ public record SecurityIdentification47
     /// </summary>
     [DisplayName("Class Type")]
     [IsoXmlTag("ClssTp")]
-    public IsoMax35Text? ClassType { get; init; }
+    public Max35Text? ClassType { get; init; }
 
     /// <summary>
     /// Country Of Domicile.
@@ -84,28 +84,28 @@ public record SecurityIdentification47
     /// </summary>
     [DisplayName("Leveraged Or Contingent Liability")]
     [IsoXmlTag("LvrgdOrCntngntLblty")]
-    public IsoYesNoIndicator? LeveragedOrContingentLiability { get; init; }
+    public YesNoIndicator? LeveragedOrContingentLiability { get; init; }
 
     /// <summary>
     /// Name.
     /// </summary>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public required IsoMax350Text Name { get; init; }
+    public required Max350Text Name { get; init; }
 
     /// <summary>
     /// New Umbrella.
     /// </summary>
     [DisplayName("New Umbrella")]
     [IsoXmlTag("NewUmbrll")]
-    public IsoYesNoIndicator? NewUmbrella { get; init; }
+    public YesNoIndicator? NewUmbrella { get; init; }
 
     /// <summary>
     /// No Retrocession Indicator.
     /// </summary>
     [DisplayName("No Retrocession Indicator")]
     [IsoXmlTag("NoRtrcssnInd")]
-    public IsoYesNoIndicator? NoRetrocessionIndicator { get; init; }
+    public YesNoIndicator? NoRetrocessionIndicator { get; init; }
 
     /// <summary>
     /// Notional Or Unit Based.
@@ -119,14 +119,14 @@ public record SecurityIdentification47
     /// </summary>
     [DisplayName("Product Category")]
     [IsoXmlTag("PdctCtgy")]
-    public IsoMax140Text? ProductCategory { get; init; }
+    public Max140Text? ProductCategory { get; init; }
 
     /// <summary>
     /// Product Category Germany.
     /// </summary>
     [DisplayName("Product Category Germany")]
     [IsoXmlTag("PdctCtgyDE")]
-    public IsoMax140Text? ProductCategoryGermany { get; init; }
+    public Max140Text? ProductCategoryGermany { get; init; }
 
     /// <summary>
     /// Product Type.
@@ -154,12 +154,12 @@ public record SecurityIdentification47
     /// </summary>
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
-    public IsoMax35Text? ShortName { get; init; }
+    public Max35Text? ShortName { get; init; }
 
     /// <summary>
     /// Umbrella Name.
     /// </summary>
     [DisplayName("Umbrella Name")]
     [IsoXmlTag("UmbrllNm")]
-    public IsoMax35Text? UmbrellaName { get; init; }
+    public Max35Text? UmbrellaName { get; init; }
 }

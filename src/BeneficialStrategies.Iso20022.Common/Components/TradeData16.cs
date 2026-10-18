@@ -24,7 +24,7 @@ public record TradeData16
     [IsoXmlTag("MtchgSysUnqRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MatchingSystemUniqueReference { get; init; }
+    public required Max35Text MatchingSystemUniqueReference { get; init; }
 
     /// <summary>
     /// Reference to the unique matching identification assigned to the trade and to the matching trade from the counterparty by the central matching system.
@@ -34,7 +34,7 @@ public record TradeData16
     [IsoXmlTag("MtchgSysMtchgRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MatchingSystemMatchingReference { get; init; }
+    public Max35Text? MatchingSystemMatchingReference { get; init; }
 
     /// <summary>
     /// Unique reference from the central settlement system that allows the removal of alleged trades once the matched status notification for the matching side has been received.
@@ -44,7 +44,7 @@ public record TradeData16
     [IsoXmlTag("MtchgSysMtchdSdRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MatchingSystemMatchedSideReference { get; init; }
+    public Max35Text? MatchingSystemMatchedSideReference { get; init; }
 
     /// <summary>
     /// Party that assigned the status to the trade.
@@ -54,7 +54,7 @@ public record TradeData16
     [IsoXmlTag("StsOrgtr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? StatusOriginator { get; init; }
+    public Max35Text? StatusOriginator { get; init; }
 
     /// <summary>
     /// Specifies the new status of a trade.
@@ -79,7 +79,7 @@ public record TradeData16
     [DisplayName("Current Status Date Time")]
     [IsoXmlTag("CurStsDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? CurrentStatusDateTime { get; init; }
+    public ISODateTime? CurrentStatusDateTime { get; init; }
 
     /// <summary>
     /// Specifies the previous status of a trade.

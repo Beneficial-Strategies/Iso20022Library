@@ -49,7 +49,7 @@ public record ExposureTypeAggregation3
     [DisplayName("Margin Rate")]
     [IsoXmlTag("MrgnRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? MarginRate { get; init; }
+    public PercentageRate? MarginRate { get; init; }
 
     /// <summary>
     /// Provides the status after comparing the total collateral required and the total collateral value of all transactions of the same exposure type.

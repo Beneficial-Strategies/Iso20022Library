@@ -36,5 +36,5 @@ public record ContentInformationType20
     [DisplayName("MAC")]
     [IsoXmlTag("MAC")]
     [IsoSimpleType(IsoSimpleType.Max8HexBinaryText)]
-    public required IsoMax8HexBinaryText MAC { get; init; }
+    public required Max8HexBinaryText MAC { get; init; }
 }

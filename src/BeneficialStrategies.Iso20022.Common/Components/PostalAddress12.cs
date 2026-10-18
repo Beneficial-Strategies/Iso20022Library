@@ -24,7 +24,7 @@ public record PostalAddress12
     [IsoXmlTag("TwnNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TownName { get; init; }
+    public Max35Text? TownName { get; init; }
 
     /// <summary>
     /// Identifies a subdivision of a country eg, state, region, county.
@@ -34,7 +34,7 @@ public record PostalAddress12
     [IsoXmlTag("CtrySubDvsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CountrySubDivision { get; init; }
+    public Max35Text? CountrySubDivision { get; init; }
 
     /// <summary>
     /// Nation with its own government.

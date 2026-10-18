@@ -58,7 +58,7 @@ public record ShareholderIdentificationDisclosureResponseCancellationAdviceV01 :
     [IsoXmlTag("DsclsrRspnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text DisclosureResponseIdentification { get; init; }
+    public required Max35Text DisclosureResponseIdentification { get; init; }
 
     /// <summary>
     /// Official and unique identification assigned to a shareholders identification disclosure request process by the issuer or third party nominated by it and for which a response is sent.

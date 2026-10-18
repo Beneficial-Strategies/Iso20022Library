@@ -24,7 +24,7 @@ public record AccountBalance1
     [DisplayName("Account Type")]
     [IsoXmlTag("AcctTp")]
     [IsoSimpleType(IsoSimpleType.Exact2AlphaNumericText)]
-    public required IsoExact2AlphaNumericText AccountType { get; init; }
+    public required Exact2AlphaNumericText AccountType { get; init; }
 
     /// <summary>
     /// Balance of the account.

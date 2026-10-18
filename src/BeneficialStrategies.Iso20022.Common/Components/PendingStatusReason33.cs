@@ -30,5 +30,5 @@ public record PendingStatusReason33
     [IsoId("_8CsLC6KtEfCHi7w3_0pcpw")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
-    public IsoMax210Text? AdditionalReasonInformation { get; init; }
+    public Max210Text? AdditionalReasonInformation { get; init; }
 }

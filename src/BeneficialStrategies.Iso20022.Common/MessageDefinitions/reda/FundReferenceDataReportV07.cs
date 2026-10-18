@@ -50,7 +50,7 @@ public record FundReferenceDataReportV07 : IOuterRecord
     /// </summary>
     [DisplayName("Fund Reference Data Report Identification")]
     [IsoXmlTag("FndRefDataRptId")]
-    public IsoMax35Text? FundReferenceDataReportIdentification { get; init; }
+    public Max35Text? FundReferenceDataReportIdentification { get; init; }
 
     /// <summary>
     /// Message Identification.

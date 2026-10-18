@@ -28,7 +28,7 @@ public record ATMCassette3
     /// </summary>
     [DisplayName("Logical Identification")]
     [IsoXmlTag("LogclId")]
-    public required IsoMax35Text LogicalIdentification { get; init; }
+    public required Max35Text LogicalIdentification { get; init; }
 
     /// <summary>
     /// Media Counters.
@@ -49,14 +49,14 @@ public record ATMCassette3
     /// </summary>
     [DisplayName("Physical Identification")]
     [IsoXmlTag("PhysId")]
-    public IsoMax35Text? PhysicalIdentification { get; init; }
+    public Max35Text? PhysicalIdentification { get; init; }
 
     /// <summary>
     /// Serial Number.
     /// </summary>
     [DisplayName("Serial Number")]
     [IsoXmlTag("SrlNb")]
-    public IsoMax35Text? SerialNumber { get; init; }
+    public Max35Text? SerialNumber { get; init; }
 
     /// <summary>
     /// Sub Type.

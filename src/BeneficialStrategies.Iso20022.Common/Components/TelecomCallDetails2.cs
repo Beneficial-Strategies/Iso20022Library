@@ -32,7 +32,7 @@ public record TelecomCallDetails2
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? OtherType { get; init; }
+    public Max70Text? OtherType { get; init; }
 
     /// <summary>
     /// Origination or destination phone number.
@@ -41,7 +41,7 @@ public record TelecomCallDetails2
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? PhoneNumber { get; init; }
+    public PhoneNumber? PhoneNumber { get; init; }
 
     /// <summary>
     /// City from which or to which the call was made.
@@ -51,7 +51,7 @@ public record TelecomCallDetails2
     [IsoXmlTag("City")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? City { get; init; }
+    public Max35Text? City { get; init; }
 
     /// <summary>
     /// State from which or to which the call was made.
@@ -61,7 +61,7 @@ public record TelecomCallDetails2
     [IsoXmlTag("Stat")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoMax16Text? State { get; init; }
+    public Max16Text? State { get; init; }
 
     /// <summary>
     /// Province from which or to which the call was made.
@@ -71,7 +71,7 @@ public record TelecomCallDetails2
     [IsoXmlTag("Prvc")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Province { get; init; }
+    public Max35Text? Province { get; init; }
 
     /// <summary>
     /// Country from which or to which the call was made.

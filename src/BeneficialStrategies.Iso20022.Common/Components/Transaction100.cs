@@ -32,7 +32,7 @@ public record Transaction100
     [IsoXmlTag("OthrKeyXchgFctn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherKeyExchangeFunction { get; init; }
+    public Max35Text? OtherKeyExchangeFunction { get; init; }
 
     /// <summary>
     /// Reason to send a key exchange message.
@@ -42,7 +42,7 @@ public record Transaction100
     [IsoId("_Z5FVmVWXEeeiG_nL4vgKnQ")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
-    public SimpleValueList<IsoExact4NumericText> MessageReason { get; init; } = [];
+    public SimpleValueList<Exact4NumericText> MessageReason { get; init; } = [];
 
     /// <summary>
     /// Alternate reason to send a message.
@@ -52,7 +52,7 @@ public record Transaction100
     [IsoXmlTag("AltrnMsgRsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AlternateMessageReason { get; init; }
+    public Max35Text? AlternateMessageReason { get; init; }
 
     /// <summary>
     /// Identification of the transaction.
@@ -78,7 +78,7 @@ public record Transaction100
     [IsoXmlTag("OthrKeyXchgTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherKeyExchangeType { get; init; }
+    public Max35Text? OtherKeyExchangeType { get; init; }
 
     /// <summary>
     /// Contains information pertaining to a key exchange.

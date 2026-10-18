@@ -28,12 +28,12 @@ public record ATMVersionReport1
     /// </summary>
     [DisplayName("Configuration Version")]
     [IsoXmlTag("CfgtnVrsn")]
-    public required IsoMax35Text ConfigurationVersion { get; init; }
+    public required Max35Text ConfigurationVersion { get; init; }
 
     /// <summary>
     /// Fail Reason.
     /// </summary>
     [DisplayName("Fail Reason")]
     [IsoXmlTag("FailRsn")]
-    public IsoMax70Text? FailReason { get; init; }
+    public Max70Text? FailReason { get; init; }
 }

@@ -28,5 +28,5 @@ public record ReportContent2
     /// </summary>
     [DisplayName("Report Line Sequence")]
     [IsoXmlTag("RptLineSeq")]
-    public IsoMax10NumericText? ReportLineSequence { get; init; }
+    public Max10NumericText? ReportLineSequence { get; init; }
 }

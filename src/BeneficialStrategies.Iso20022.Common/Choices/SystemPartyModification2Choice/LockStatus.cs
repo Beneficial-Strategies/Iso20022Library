@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Valid From")]
         [IsoXmlTag("VldFr")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? ValidFrom { get; init; }
+        public DateOnly? ValidFrom { get; init; }
 
         /// <summary>
         /// Lock status of the party.
@@ -41,6 +41,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [IsoXmlTag("LckRsn")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? LockReason { get; init; }
+        public Max35Text? LockReason { get; init; }
     }
 }

@@ -24,7 +24,7 @@ public record RemittanceLocation5
     [IsoXmlTag("RmtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RemittanceIdentification { get; init; }
+    public Max35Text? RemittanceIdentification { get; init; }
 
     /// <summary>
     /// Set of elements used to provide information on the location and/or delivery of the remittance information.

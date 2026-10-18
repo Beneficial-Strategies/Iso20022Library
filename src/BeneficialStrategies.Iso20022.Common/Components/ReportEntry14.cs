@@ -21,14 +21,14 @@ public record ReportEntry14
     /// </summary>
     [DisplayName("Account Servicer Reference")]
     [IsoXmlTag("AcctSvcrRef")]
-    public IsoMax35Text? AccountServicerReference { get; init; }
+    public Max35Text? AccountServicerReference { get; init; }
 
     /// <summary>
     /// Additional Entry Information.
     /// </summary>
     [DisplayName("Additional Entry Information")]
     [IsoXmlTag("AddtlNtryInf")]
-    public IsoMax500Text? AdditionalEntryInformation { get; init; }
+    public Max500Text? AdditionalEntryInformation { get; init; }
 
     /// <summary>
     /// Additional Information Indicator.
@@ -91,7 +91,7 @@ public record ReportEntry14
     /// </summary>
     [DisplayName("Commission Waiver Indicator")]
     [IsoXmlTag("ComssnWvrInd")]
-    public IsoYesNoIndicator? CommissionWaiverIndicator { get; init; }
+    public YesNoIndicator? CommissionWaiverIndicator { get; init; }
 
     /// <summary>
     /// Credit Debit Indicator.
@@ -112,7 +112,7 @@ public record ReportEntry14
     /// </summary>
     [DisplayName("Entry Reference")]
     [IsoXmlTag("NtryRef")]
-    public IsoMax35Text? EntryReference { get; init; }
+    public Max35Text? EntryReference { get; init; }
 
     /// <summary>
     /// Interest.
@@ -126,7 +126,7 @@ public record ReportEntry14
     /// </summary>
     [DisplayName("Reversal Indicator")]
     [IsoXmlTag("RvslInd")]
-    public IsoTrueFalseIndicator? ReversalIndicator { get; init; }
+    public TrueFalseIndicator? ReversalIndicator { get; init; }
 
     /// <summary>
     /// Status.

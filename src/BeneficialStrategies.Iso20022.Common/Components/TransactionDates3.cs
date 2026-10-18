@@ -23,7 +23,7 @@ public record TransactionDates3
     [DisplayName("Acceptance Date Time")]
     [IsoXmlTag("AccptncDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? AcceptanceDateTime { get; init; }
+    public ISODateTime? AcceptanceDateTime { get; init; }
 
     /// <summary>
     /// Identifies when an amount of money should have contractually been credited or debited the account versus when the amount of money was actually settled (debited/credited) on the cash account.
@@ -32,7 +32,7 @@ public record TransactionDates3
     [DisplayName("Trade Activity Contractual Settlement Date")]
     [IsoXmlTag("TradActvtyCtrctlSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TradeActivityContractualSettlementDate { get; init; }
+    public DateOnly? TradeActivityContractualSettlementDate { get; init; }
 
     /// <summary>
     /// Date on which the trade was executed.
@@ -41,7 +41,7 @@ public record TransactionDates3
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TradeDate { get; init; }
+    public DateOnly? TradeDate { get; init; }
 
     /// <summary>
     /// Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.
@@ -50,7 +50,7 @@ public record TransactionDates3
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? InterbankSettlementDate { get; init; }
+    public DateOnly? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Start date of the underlying transaction, such as a treasury transaction, an investment plan.
@@ -59,7 +59,7 @@ public record TransactionDates3
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? StartDate { get; init; }
+    public DateOnly? StartDate { get; init; }
 
     /// <summary>
     /// End date of the underlying transaction, such as a treasury transaction, an investment plan.
@@ -68,7 +68,7 @@ public record TransactionDates3
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? EndDate { get; init; }
+    public DateOnly? EndDate { get; init; }
 
     /// <summary>
     /// Date and time of the underlying transaction.
@@ -77,7 +77,7 @@ public record TransactionDates3
     [DisplayName("Transaction Date Time")]
     [IsoXmlTag("TxDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? TransactionDateTime { get; init; }
+    public ISODateTime? TransactionDateTime { get; init; }
 
     /// <summary>
     /// Proprietary date related to the underlying transaction.

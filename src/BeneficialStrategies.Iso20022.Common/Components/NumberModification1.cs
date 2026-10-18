@@ -31,5 +31,5 @@ public record NumberModification1
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
     [IsoSimpleType(IsoSimpleType.Max5NumericText)]
-    public required IsoMax5NumericText Number { get; init; }
+    public required Max5NumericText Number { get; init; }
 }

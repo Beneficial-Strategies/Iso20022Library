@@ -22,7 +22,7 @@ public record FleetLineItem7
     [IsoId("_hnkDIUrhEfCMZJtj4J7UGQ")]
     [DisplayName("Fuel")]
     [IsoXmlTag("Fuel")]
-    public required IsoTrueFalseIndicator Fuel { get; init; }
+    public required TrueFalseIndicator Fuel { get; init; }
 
     /// <summary>
     /// Type of service received at the acceptor location.
@@ -38,7 +38,7 @@ public record FleetLineItem7
     [IsoId("_hnkDJUrhEfCMZJtj4J7UGQ")]
     [DisplayName("Fuel Brand Code")]
     [IsoXmlTag("FuelBrndCd")]
-    public IsoMax4Text? FuelBrandCode { get; init; }
+    public Max4Text? FuelBrandCode { get; init; }
 
     /// <summary>
     /// Product code of fleet product or service being purchased.
@@ -46,7 +46,7 @@ public record FleetLineItem7
     [IsoId("_hnkDJ0rhEfCMZJtj4J7UGQ")]
     [DisplayName("Product Code")]
     [IsoXmlTag("PdctCd")]
-    public IsoMax4Text? ProductCode { get; init; }
+    public Max4Text? ProductCode { get; init; }
 
     /// <summary>
     /// Contains a code that identifies a category of fleet products or services.
@@ -54,7 +54,7 @@ public record FleetLineItem7
     [IsoId("_hnkDKUrhEfCMZJtj4J7UGQ")]
     [DisplayName("Product Category")]
     [IsoXmlTag("PdctCtgy")]
-    public IsoMax35Text? ProductCategory { get; init; }
+    public Max35Text? ProductCategory { get; init; }
 
     /// <summary>
     /// Contains a code that identifies the product qualifier of the fleet product or service.
@@ -62,7 +62,7 @@ public record FleetLineItem7
     [IsoId("_hnkDK0rhEfCMZJtj4J7UGQ")]
     [DisplayName("Product Qualifier")]
     [IsoXmlTag("PdctQlfr")]
-    public IsoMax6Text? ProductQualifier { get; init; }
+    public Max6Text? ProductQualifier { get; init; }
 
     /// <summary>
     /// Contains a code that identifies the product code assigner.
@@ -70,7 +70,7 @@ public record FleetLineItem7
     [IsoId("_hnkDLUrhEfCMZJtj4J7UGQ")]
     [DisplayName("Product Code Assigner")]
     [IsoXmlTag("PdctCdAssgnr")]
-    public IsoMax35Text? ProductCodeAssigner { get; init; }
+    public Max35Text? ProductCodeAssigner { get; init; }
 
     /// <summary>
     /// Indicates whether or not tax is included in unit price.
@@ -78,7 +78,7 @@ public record FleetLineItem7
     [IsoId("_hnkDL0rhEfCMZJtj4J7UGQ")]
     [DisplayName("Unit Price Tax")]
     [IsoXmlTag("UnitPricTax")]
-    public IsoTrueFalseIndicator? UnitPriceTax { get; init; }
+    public TrueFalseIndicator? UnitPriceTax { get; init; }
 
     /// <summary>
     /// Unit price of the fleet line item.
@@ -102,7 +102,7 @@ public record FleetLineItem7
     [IsoId("_nCOD0FBZEfC5WMyGsBx7PA")]
     [DisplayName("Percentage Discount Rate")]
     [IsoXmlTag("PctgDscntRate")]
-    public IsoPercentageRate? PercentageDiscountRate { get; init; }
+    public PercentageRate? PercentageDiscountRate { get; init; }
 
     /// <summary>
     /// Contains unit discount per unit amount in retail minus discount model.
@@ -150,7 +150,7 @@ public record FleetLineItem7
     [IsoId("_QL4Z8EriEfCMZJtj4J7UGQ")]
     [DisplayName("Total Time Plugged In")]
     [IsoXmlTag("TtlTmPlugdIn")]
-    public IsoISOTime? TotalTimePluggedIn { get; init; }
+    public ISOTime? TotalTimePluggedIn { get; init; }
 
     /// <summary>
     /// Contain the actual total time taken to charge the vehicle.
@@ -158,7 +158,7 @@ public record FleetLineItem7
     [IsoId("_hTgCMEriEfCMZJtj4J7UGQ")]
     [DisplayName("Total Time Charging")]
     [IsoXmlTag("TtlTmChrgg")]
-    public IsoISOTime? TotalTimeCharging { get; init; }
+    public ISOTime? TotalTimeCharging { get; init; }
 
     /// <summary>
     /// Contains the start time of the charge.
@@ -166,7 +166,7 @@ public record FleetLineItem7
     [IsoId("_4j3xYEriEfCMZJtj4J7UGQ")]
     [DisplayName("Charging Start Time")]
     [IsoXmlTag("ChrggStartTm")]
-    public IsoISOTime? ChargingStartTime { get; init; }
+    public ISOTime? ChargingStartTime { get; init; }
 
     /// <summary>
     /// Contains the completion time of the charge.
@@ -174,7 +174,7 @@ public record FleetLineItem7
     [IsoId("_M_gvIErjEfCMZJtj4J7UGQ")]
     [DisplayName("Charging Completion Time")]
     [IsoXmlTag("ChrggCmpltnTm")]
-    public IsoISOTime? ChargingCompletionTime { get; init; }
+    public ISOTime? ChargingCompletionTime { get; init; }
 
     /// <summary>
     /// Quantity of product or item.
@@ -182,7 +182,7 @@ public record FleetLineItem7
     [IsoId("_hnkDN0rhEfCMZJtj4J7UGQ")]
     [DisplayName("Product Quantity")]
     [IsoXmlTag("PdctQty")]
-    public IsoDecimalNumber? ProductQuantity { get; init; }
+    public DecimalNumber? ProductQuantity { get; init; }
 
     /// <summary>
     /// Contains the discount amount applied to the fleet transaction (includes coupons).
@@ -198,7 +198,7 @@ public record FleetLineItem7
     [IsoId("_hnkDO0rhEfCMZJtj4J7UGQ")]
     [DisplayName("Non Taxable")]
     [IsoXmlTag("NonTaxbl")]
-    public IsoTrueFalseIndicator? NonTaxable { get; init; }
+    public TrueFalseIndicator? NonTaxable { get; init; }
 
     /// <summary>
     /// Taxes related to the products or services.

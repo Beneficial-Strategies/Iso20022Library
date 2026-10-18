@@ -24,7 +24,7 @@ public record Content1
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.Max20KText)]
     [StringLength(maximumLength: 20000, MinimumLength = 1)]
-    public required IsoMax20KText Value { get; init; }
+    public required Max20KText Value { get; init; }
 
     /// <summary>
     /// Digital signature of the content of or the reference to the message.
@@ -33,7 +33,7 @@ public record Content1
     [DisplayName("Signature")]
     [IsoXmlTag("Sgntr")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public IsoMax140Binary? Signature { get; init; }
+    public Max140Binary? Signature { get; init; }
 
     /// <summary>
     /// Signing certificate identification.
@@ -43,5 +43,5 @@ public record Content1
     [IsoXmlTag("CertId")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? CertificateIdentification { get; init; }
+    public Max70Text? CertificateIdentification { get; init; }
 }

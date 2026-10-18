@@ -56,7 +56,7 @@ public record Pension2
     [IsoXmlTag("DrwdwnTrchId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DrawdownTrancheIdentification { get; init; }
+    public Max35Text? DrawdownTrancheIdentification { get; init; }
 
     /// <summary>
     /// Drawdown status of the pension.
@@ -81,7 +81,7 @@ public record Pension2
     [DisplayName("Block Transfer")]
     [IsoXmlTag("BlckTrf")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? BlockTransfer { get; init; }
+    public YesNoIndicator? BlockTransfer { get; init; }
 
     /// <summary>
     /// Indicates whether the tax-free cash is protected when the pension policy, plan or scheme is transferred.
@@ -90,7 +90,7 @@ public record Pension2
     [DisplayName("Tax Free Cash Protection")]
     [IsoXmlTag("TaxFreeCshPrtcn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? TaxFreeCashProtection { get; init; }
+    public YesNoIndicator? TaxFreeCashProtection { get; init; }
 
     /// <summary>
     /// Amount of cash that is tax free.
@@ -115,7 +115,7 @@ public record Pension2
     [DisplayName("Retirement Age Protection")]
     [IsoXmlTag("RtrmntAgePrtcn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? RetirementAgeProtection { get; init; }
+    public YesNoIndicator? RetirementAgeProtection { get; init; }
 
     /// <summary>
     /// Age at which the pension policy, plan or scheme holder retires.
@@ -124,7 +124,7 @@ public record Pension2
     [DisplayName("Retirement Age")]
     [IsoXmlTag("RtrmntAge")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? RetirementAge { get; init; }
+    public DecimalNumber? RetirementAge { get; init; }
 
     /// <summary>
     /// Indicates whether the pension benefits are shared.
@@ -133,7 +133,7 @@ public record Pension2
     [DisplayName("Sharing")]
     [IsoXmlTag("Shrg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? Sharing { get; init; }
+    public YesNoIndicator? Sharing { get; init; }
 
     /// <summary>
     /// Type of lump sum paid to a member of the pension policy, plan or scheme.
@@ -158,7 +158,7 @@ public record Pension2
     [DisplayName("Ring Fenced Drawdown Assets")]
     [IsoXmlTag("RingFncdDrwdwnAssts")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? RingFencedDrawdownAssets { get; init; }
+    public YesNoIndicator? RingFencedDrawdownAssets { get; init; }
 
     /// <summary>
     /// Money Purchase Annual Allowance (MPAA) details.
@@ -175,7 +175,7 @@ public record Pension2
     [DisplayName("Safeguard Benefit")]
     [IsoXmlTag("SfgrdBnft")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? SafeguardBenefit { get; init; }
+    public YesNoIndicator? SafeguardBenefit { get; init; }
 
     /// <summary>
     /// Indicates whether the pension policy, plan or scheme has lifetime allowance protection.
@@ -184,7 +184,7 @@ public record Pension2
     [DisplayName("Lifetime Allowance Protection")]
     [IsoXmlTag("LftmAllwncPrtcn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? LifetimeAllowanceProtection { get; init; }
+    public YesNoIndicator? LifetimeAllowanceProtection { get; init; }
 
     /// <summary>
     /// Additional information about the pension policy, plan or scheme.

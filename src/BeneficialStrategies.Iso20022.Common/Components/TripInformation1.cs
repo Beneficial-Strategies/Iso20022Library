@@ -24,7 +24,7 @@ public record TripInformation1
     [IsoXmlTag("TripNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TripNumber { get; init; }
+    public Max35Text? TripNumber { get; init; }
 
     /// <summary>
     /// Contains an indicator identifying the job or task identifier of the individual.
@@ -34,7 +34,7 @@ public record TripInformation1
     [IsoXmlTag("JobNb")]
     [IsoSimpleType(IsoSimpleType.Max10Text)]
     [StringLength(maximumLength: 10, MinimumLength = 1)]
-    public IsoMax10Text? JobNumber { get; init; }
+    public Max10Text? JobNumber { get; init; }
 
     /// <summary>
     /// Contains the work order or purchase order number.
@@ -44,7 +44,7 @@ public record TripInformation1
     [IsoXmlTag("WorkOrdr")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? WorkOrder { get; init; }
+    public Max70Text? WorkOrder { get; init; }
 
     /// <summary>
     /// Contains the invoice number.
@@ -54,7 +54,7 @@ public record TripInformation1
     [IsoXmlTag("InvcNb")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? InvoiceNumber { get; init; }
+    public Max70Text? InvoiceNumber { get; init; }
 
     /// <summary>
     /// Contains the billing identification number.
@@ -64,7 +64,7 @@ public record TripInformation1
     [IsoXmlTag("BllgId")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? BillingIdentification { get; init; }
+    public Max70Text? BillingIdentification { get; init; }
 
     /// <summary>
     /// Identification number assigned by an agent.
@@ -74,7 +74,7 @@ public record TripInformation1
     [IsoXmlTag("CtrlNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ControlNumber { get; init; }
+    public Max35Text? ControlNumber { get; init; }
 
     /// <summary>
     /// Delivery Ticket Number for the trip information.
@@ -84,5 +84,5 @@ public record TripInformation1
     [IsoXmlTag("DlvryTcktNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DeliveryTicketNumber { get; init; }
+    public Max35Text? DeliveryTicketNumber { get; init; }
 }

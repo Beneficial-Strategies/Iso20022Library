@@ -98,21 +98,21 @@ public record Mandate20
     /// </summary>
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
-    public required IsoMax35Text MandateIdentification { get; init; }
+    public required Max35Text MandateIdentification { get; init; }
 
     /// <summary>
     /// Mandate Reference.
     /// </summary>
     [DisplayName("Mandate Reference")]
     [IsoXmlTag("MndtRef")]
-    public IsoMax35Text? MandateReference { get; init; }
+    public Max35Text? MandateReference { get; init; }
 
     /// <summary>
     /// Mandate Request Identification.
     /// </summary>
     [DisplayName("Mandate Request Identification")]
     [IsoXmlTag("MndtReqId")]
-    public IsoMax35Text? MandateRequestIdentification { get; init; }
+    public Max35Text? MandateRequestIdentification { get; init; }
 
     /// <summary>
     /// Maximum Amount.
@@ -147,7 +147,7 @@ public record Mandate20
     /// </summary>
     [DisplayName("Tracking Indicator")]
     [IsoXmlTag("TrckgInd")]
-    public required IsoTrueFalseIndicator TrackingIndicator { get; init; }
+    public required TrueFalseIndicator TrackingIndicator { get; init; }
 
     /// <summary>
     /// Type.

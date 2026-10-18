@@ -31,7 +31,7 @@ public record TaxEfficientProduct2
     [DisplayName("Cash Component Indicator")]
     [IsoXmlTag("CshCmpntInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? CashComponentIndicator { get; init; }
+    public YesNoIndicator? CashComponentIndicator { get; init; }
 
     /// <summary>
     /// Investment plans issued during previous years.
@@ -48,7 +48,7 @@ public record TaxEfficientProduct2
     [DisplayName("Date Of First Subscription")]
     [IsoXmlTag("DtOfFrstSbcpt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DateOfFirstSubscription { get; init; }
+    public DateOnly? DateOfFirstSubscription { get; init; }
 
     /// <summary>
     /// Amounts already subscribed for the current year.

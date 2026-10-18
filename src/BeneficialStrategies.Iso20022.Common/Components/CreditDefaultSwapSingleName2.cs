@@ -23,7 +23,7 @@ public record CreditDefaultSwapSingleName2
     [DisplayName("Sovereign Issuer")]
     [IsoXmlTag("SvrgnIssr")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator SovereignIssuer { get; init; }
+    public required TrueFalseIndicator SovereignIssuer { get; init; }
 
     /// <summary>
     /// Reference entity of a single name credit default swap (CDS) or a derivative on single name credit default swap (CDS).

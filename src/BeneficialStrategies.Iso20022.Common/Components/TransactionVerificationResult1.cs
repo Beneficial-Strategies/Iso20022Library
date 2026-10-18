@@ -24,7 +24,7 @@ public record TransactionVerificationResult1
     [IsoXmlTag("ElctrncComrcAuthntcnRslt")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public IsoMax500Text? ElectronicCommerceAuthenticationResult { get; init; }
+    public Max500Text? ElectronicCommerceAuthenticationResult { get; init; }
 
     /// <summary>
     /// Result of the printed card security code (CSC) validation.
@@ -48,5 +48,5 @@ public record TransactionVerificationResult1
     [IsoId("_SxbqpAEcEeCQm6a_G2yO_w_2039129918")]
     [DisplayName("Declined Product Code")]
     [IsoXmlTag("DclndPdctCd")]
-    public SimpleValueList<IsoMax70Text> DeclinedProductCode { get; init; } = [];
+    public SimpleValueList<Max70Text> DeclinedProductCode { get; init; } = [];
 }

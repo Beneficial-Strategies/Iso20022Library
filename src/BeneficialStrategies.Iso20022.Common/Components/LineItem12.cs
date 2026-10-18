@@ -31,7 +31,7 @@ public record LineItem12
     [DisplayName("Final Submission")]
     [IsoXmlTag("FnlSubmissn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator FinalSubmission { get; init; }
+    public required YesNoIndicator FinalSubmission { get; init; }
 
     /// <summary>
     /// Goods which are the subject of the invoice.

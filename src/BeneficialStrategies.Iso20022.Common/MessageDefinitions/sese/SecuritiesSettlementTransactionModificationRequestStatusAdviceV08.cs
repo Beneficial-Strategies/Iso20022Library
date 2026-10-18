@@ -88,7 +88,7 @@ public record SecuritiesSettlementTransactionModificationRequestStatusAdviceV08 
     [IsoXmlTag("ModReqRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ModificationRequestReference { get; init; }
+    public required Max35Text ModificationRequestReference { get; init; }
 
     /// <summary>
     /// Account to or from which a securities entry is made.

@@ -23,5 +23,5 @@ public record PartyIdentification3
     [DisplayName("BIC Or BEI")]
     [IsoXmlTag("BICOrBEI")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public required IsoAnyBICIdentifier BICOrBEI { get; init; }
+    public required AnyBICIdentifier BICOrBEI { get; init; }
 }

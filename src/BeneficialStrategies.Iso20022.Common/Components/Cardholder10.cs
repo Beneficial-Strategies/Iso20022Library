@@ -32,7 +32,7 @@ public record Cardholder10
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max45Text)]
     [StringLength(maximumLength: 45, MinimumLength = 1)]
-    public IsoMax45Text? Name { get; init; }
+    public Max45Text? Name { get; init; }
 
     /// <summary>
     /// Language selected for the cardholder interface during the transaction.
@@ -67,7 +67,7 @@ public record Cardholder10
     [IsoXmlTag("TripNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TripNumber { get; init; }
+    public Max35Text? TripNumber { get; init; }
 
     /// <summary>
     /// Information related to the vehicle used for the transaction.
@@ -102,5 +102,5 @@ public record Cardholder10
     [IsoXmlTag("PrsnlData")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? PersonalData { get; init; }
+    public Max70Text? PersonalData { get; init; }
 }

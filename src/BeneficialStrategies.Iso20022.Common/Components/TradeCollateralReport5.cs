@@ -104,7 +104,7 @@ public record TradeCollateralReport5
     [DisplayName("Counterparty Rating Trigger Indicator")]
     [IsoXmlTag("CtrPtyRatgTrggrInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CounterpartyRatingTriggerIndicator { get; init; }
+    public TrueFalseIndicator? CounterpartyRatingTriggerIndicator { get; init; }
 
     /// <summary>
     /// Indicates if a counterparty rating trigger includes a threshold that increases collateral requirements when the counterparty falls below the single-A rating or equivalent.
@@ -114,5 +114,5 @@ public record TradeCollateralReport5
     [DisplayName("Counterparty Rating Threshold Indicator")]
     [IsoXmlTag("CtrPtyRatgThrshldInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CounterpartyRatingThresholdIndicator { get; init; }
+    public TrueFalseIndicator? CounterpartyRatingThresholdIndicator { get; init; }
 }

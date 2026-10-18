@@ -30,7 +30,7 @@ public record PaymentResponse8
     [IsoId("_0M6eO7YMEfCUZfsQO4rYeA")]
     [DisplayName("Sale Reference Identification")]
     [IsoXmlTag("SaleRefId")]
-    public IsoMax35Text? SaleReferenceIdentification { get; init; }
+    public Max35Text? SaleReferenceIdentification { get; init; }
 
     /// <summary>
     /// POI identification of the transaction in an unambiguous way.
@@ -46,7 +46,7 @@ public record PaymentResponse8
     [IsoId("_0M6eR7YMEfCUZfsQO4rYeA")]
     [DisplayName("POI Reconciliation Identification")]
     [IsoXmlTag("POIRcncltnId")]
-    public IsoMax35Text? POIReconciliationIdentification { get; init; }
+    public Max35Text? POIReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Identification of the transaction given by the Issuer.
@@ -54,7 +54,7 @@ public record PaymentResponse8
     [IsoId("_0M6eTbYMEfCUZfsQO4rYeA")]
     [DisplayName("Issuer Reference Data")]
     [IsoXmlTag("IssrRefData")]
-    public IsoMax140Text? IssuerReferenceData { get; init; }
+    public Max140Text? IssuerReferenceData { get; init; }
 
     /// <summary>
     /// Data related to the result of a processed payment transaction.

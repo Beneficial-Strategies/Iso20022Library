@@ -29,7 +29,7 @@ public record DocumentLineInformation2
     /// </summary>
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax2048Text? Description { get; init; }
+    public Max2048Text? Description { get; init; }
 
     /// <summary>
     /// Provides identification of the document line.

@@ -35,21 +35,21 @@ public record MarginReportData9
     /// </summary>
     [DisplayName("Counterparty Rating Threshold Indicator")]
     [IsoXmlTag("CtrPtyRatgThrshldInd")]
-    public IsoTrueFalseIndicator? CounterpartyRatingThresholdIndicator { get; init; }
+    public TrueFalseIndicator? CounterpartyRatingThresholdIndicator { get; init; }
 
     /// <summary>
     /// Counterparty Rating Trigger Indicator.
     /// </summary>
     [DisplayName("Counterparty Rating Trigger Indicator")]
     [IsoXmlTag("CtrPtyRatgTrggrInd")]
-    public IsoTrueFalseIndicator? CounterpartyRatingTriggerIndicator { get; init; }
+    public TrueFalseIndicator? CounterpartyRatingTriggerIndicator { get; init; }
 
     /// <summary>
     /// Event Date.
     /// </summary>
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
-    public IsoISODate? EventDate { get; init; }
+    public DateOnly? EventDate { get; init; }
 
     /// <summary>
     /// Posted Margin Or Collateral.
@@ -70,7 +70,7 @@ public record MarginReportData9
     /// </summary>
     [DisplayName("Reporting Time Stamp")]
     [IsoXmlTag("RptgTmStmp")]
-    public IsoISODateTime? ReportingTimeStamp { get; init; }
+    public ISODateTime? ReportingTimeStamp { get; init; }
 
     /// <summary>
     /// Supplementary Data.

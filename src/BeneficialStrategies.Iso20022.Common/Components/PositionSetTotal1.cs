@@ -23,7 +23,7 @@ public record PositionSetTotal1
     [DisplayName("Number Of Trades")]
     [IsoXmlTag("NbOfTrds")]
     [IsoSimpleType(IsoSimpleType.Max20PositiveNumber)]
-    public IsoMax20PositiveNumber? NumberOfTrades { get; init; }
+    public Max20PositiveNumber? NumberOfTrades { get; init; }
 
     /// <summary>
     /// Aggregations of all positive values of the derivative for all derivatives pertaining to a position set.

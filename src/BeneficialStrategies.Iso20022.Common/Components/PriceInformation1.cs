@@ -63,5 +63,5 @@ public record PriceInformation1
     [DisplayName("Yielded")]
     [IsoXmlTag("Yldd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? Yielded { get; init; }
+    public YesNoIndicator? Yielded { get; init; }
 }

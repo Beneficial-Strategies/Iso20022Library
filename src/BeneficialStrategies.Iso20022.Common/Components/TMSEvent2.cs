@@ -23,7 +23,7 @@ public record TMSEvent2
     [DisplayName("Time Stamp")]
     [IsoXmlTag("TmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime TimeStamp { get; init; }
+    public required ISODateTime TimeStamp { get; init; }
 
     /// <summary>
     /// Final result of the processed terminal management action.
@@ -49,5 +49,5 @@ public record TMSEvent2
     [IsoXmlTag("AddtlErrInf")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AdditionalErrorInformation { get; init; }
+    public Max70Text? AdditionalErrorInformation { get; init; }
 }

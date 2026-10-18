@@ -49,5 +49,5 @@ public record Equalisation3
     /// </summary>
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
-    public IsoPercentageRate? Rate { get; init; }
+    public PercentageRate? Rate { get; init; }
 }

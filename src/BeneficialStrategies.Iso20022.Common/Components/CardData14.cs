@@ -21,26 +21,26 @@ public record CardData14
     /// </summary>
     [DisplayName("Card Sequence Number")]
     [IsoXmlTag("CardSeqNb")]
-    public IsoMin2Max3NumericText? CardSequenceNumber { get; init; }
+    public Min2Max3NumericText? CardSequenceNumber { get; init; }
 
     /// <summary>
     /// PAN.
     /// </summary>
     [DisplayName("PAN")]
     [IsoXmlTag("PAN")]
-    public IsoMax19NumericText? PAN { get; init; }
+    public Max19NumericText? PAN { get; init; }
 
     /// <summary>
     /// Payment Account Reference.
     /// </summary>
     [DisplayName("Payment Account Reference")]
     [IsoXmlTag("PmtAcctRef")]
-    public IsoMax35Text? PaymentAccountReference { get; init; }
+    public Max35Text? PaymentAccountReference { get; init; }
 
     /// <summary>
     /// Portfolio Identifier.
     /// </summary>
     [DisplayName("Portfolio Identifier")]
     [IsoXmlTag("PrtflIdr")]
-    public IsoMax35Text? PortfolioIdentifier { get; init; }
+    public Max35Text? PortfolioIdentifier { get; init; }
 }

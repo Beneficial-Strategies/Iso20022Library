@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.IndustrySector3Choice
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("NACETxnmySctr")]
-        public required IsoNACEDomain2025Identifier Value { get; init; }
+        public required NACEDomain2025Identifier Value { get; init; }
     }
 }

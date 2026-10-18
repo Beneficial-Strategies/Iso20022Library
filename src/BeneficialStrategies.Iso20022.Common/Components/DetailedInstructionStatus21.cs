@@ -21,7 +21,7 @@ public record DetailedInstructionStatus21
     /// </summary>
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public IsoMax35Text? AccountIdentification { get; init; }
+    public Max35Text? AccountIdentification { get; init; }
 
     /// <summary>
     /// Instruction Status.
@@ -35,12 +35,12 @@ public record DetailedInstructionStatus21
     /// </summary>
     [DisplayName("Single Instruction Identification")]
     [IsoXmlTag("SnglInstrId")]
-    public required IsoMax35Text SingleInstructionIdentification { get; init; }
+    public required Max35Text SingleInstructionIdentification { get; init; }
 
     /// <summary>
     /// Sub Account Identification.
     /// </summary>
     [DisplayName("Sub Account Identification")]
     [IsoXmlTag("SubAcctId")]
-    public IsoMax35Text? SubAccountIdentification { get; init; }
+    public Max35Text? SubAccountIdentification { get; init; }
 }

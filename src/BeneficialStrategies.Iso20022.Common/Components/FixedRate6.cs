@@ -23,7 +23,7 @@ public record FixedRate6
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Rate { get; init; }
+    public PercentageRate? Rate { get; init; }
 
     /// <summary>
     /// Actual number of days in the relevant fixed rate calculation period.
@@ -33,7 +33,7 @@ public record FixedRate6
     [IsoXmlTag("DayCnt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DayCount { get; init; }
+    public Max35Text? DayCount { get; init; }
 
     /// <summary>
     /// Information related to payment frequency.

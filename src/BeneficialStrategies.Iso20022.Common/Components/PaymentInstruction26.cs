@@ -24,7 +24,7 @@ public record PaymentInstruction26
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MessageIdentification { get; init; }
+    public Max35Text? MessageIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the cash is at the disposal of the credit account owner, or ceases to be at the disposal of the debit account owner.
@@ -66,7 +66,7 @@ public record PaymentInstruction26
     [IsoXmlTag("Purp")]
     [IsoSimpleType(IsoSimpleType.Max10Text)]
     [StringLength(maximumLength: 10, MinimumLength = 1)]
-    public IsoMax10Text? Purpose { get; init; }
+    public Max10Text? Purpose { get; init; }
 
     /// <summary>
     /// Indicates the message or event from which an instruction has been initiated.
@@ -100,7 +100,7 @@ public record PaymentInstruction26
     [IsoXmlTag("InstrCpy")]
     [IsoSimpleType(IsoSimpleType.Max20000Text)]
     [StringLength(maximumLength: 20000, MinimumLength = 1)]
-    public IsoMax20000Text? InstructionCopy { get; init; }
+    public Max20000Text? InstructionCopy { get; init; }
 
     /// <summary>
     /// Type, or nature, of the payment, such as express payment.|.
@@ -117,7 +117,7 @@ public record PaymentInstruction26
     [DisplayName("Generated Order")]
     [IsoXmlTag("GnrtdOrdr")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? GeneratedOrder { get; init; }
+    public TrueFalseIndicator? GeneratedOrder { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the first instructing agent, to unambiguously identify the transaction that is passed on, unchanged, throughout the entire interbank chain.
@@ -129,7 +129,7 @@ public record PaymentInstruction26
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TransactionIdentification { get; init; }
+    public Max35Text? TransactionIdentification { get; init; }
 
     /// <summary>
     /// Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.
@@ -138,7 +138,7 @@ public record PaymentInstruction26
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? InterbankSettlementDate { get; init; }
+    public DateOnly? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the initiating party, to unambiguously identify the transaction. This identification is passed on, unchanged, throughout the entire end-to-end chain.
@@ -151,7 +151,7 @@ public record PaymentInstruction26
     [IsoXmlTag("EndToEndId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? EndToEndIdentification { get; init; }
+    public Max35Text? EndToEndIdentification { get; init; }
 
     /// <summary>
     /// Defines the party fields used to search for a payment.

@@ -23,7 +23,7 @@ public record CompareCFIIdentifier3
     [DisplayName("Value")]
     [IsoXmlTag("Val1")]
     [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
-    public IsoCFIOct2015Identifier? Value1 { get; init; }
+    public CFIOct2015Identifier? Value1 { get; init; }
 
     /// <summary>
     /// Information for the second side of the transaction.
@@ -32,5 +32,5 @@ public record CompareCFIIdentifier3
     [DisplayName("Value")]
     [IsoXmlTag("Val2")]
     [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
-    public IsoCFIOct2015Identifier? Value2 { get; init; }
+    public CFIOct2015Identifier? Value2 { get; init; }
 }

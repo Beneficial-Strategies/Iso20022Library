@@ -25,7 +25,7 @@ public record TaxSD1
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Amount of foreign tax credit per security.
@@ -42,7 +42,7 @@ public record TaxSD1
     [DisplayName("Foreign Tax Credit Rate")]
     [IsoXmlTag("FrgnTaxCdtRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? ForeignTaxCreditRate { get; init; }
+    public PercentageRate? ForeignTaxCreditRate { get; init; }
 
     /// <summary>
     /// Amount of the dividend that is being paid out of income earned in a foreign jurisdiction.
@@ -59,7 +59,7 @@ public record TaxSD1
     [DisplayName("Foreign Source Rate")]
     [IsoXmlTag("FrgnSrcRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? ForeignSourceRate { get; init; }
+    public PercentageRate? ForeignSourceRate { get; init; }
 
     /// <summary>
     /// Form of tax advantage on the dividend.
@@ -84,7 +84,7 @@ public record TaxSD1
     [DisplayName("Tax Advantage Rate")]
     [IsoXmlTag("TaxAdvntgRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? TaxAdvantageRate { get; init; }
+    public PercentageRate? TaxAdvantageRate { get; init; }
 
     /// <summary>
     /// Percentage of the amount of money related to taxable income that cannot be categorised.
@@ -93,7 +93,7 @@ public record TaxSD1
     [DisplayName("Sundry Or Other Rate")]
     [IsoXmlTag("SndryOrOthrRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? SundryOrOtherRate { get; init; }
+    public PercentageRate? SundryOrOtherRate { get; init; }
 
     /// <summary>
     /// Percentage of the amount of income eligible for deferred taxation.
@@ -102,7 +102,7 @@ public record TaxSD1
     [DisplayName("Tax Deferred Rate")]
     [IsoXmlTag("TaxDfrrdRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? TaxDeferredRate { get; init; }
+    public PercentageRate? TaxDeferredRate { get; init; }
 
     /// <summary>
     /// Percentage of the amount of money that has not been subject to taxation.
@@ -111,5 +111,5 @@ public record TaxSD1
     [DisplayName("Tax Free Rate")]
     [IsoXmlTag("TaxFreeRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? TaxFreeRate { get; init; }
+    public PercentageRate? TaxFreeRate { get; init; }
 }

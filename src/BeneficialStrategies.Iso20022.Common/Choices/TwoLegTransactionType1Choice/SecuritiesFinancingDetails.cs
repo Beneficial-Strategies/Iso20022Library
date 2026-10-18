@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice
         [DisplayName("Rate Change Date")]
         [IsoXmlTag("RateChngDt")]
         [IsoSimpleType(IsoSimpleType.ISODateTime)]
-        public IsoISODateTime? RateChangeDate { get; init; }
+        public ISODateTime? RateChangeDate { get; init; }
 
         /// <summary>
         /// Specifies whether the rate is fixed or variable.
@@ -112,7 +112,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice
         [DisplayName("Callable Trade Indicator")]
         [IsoXmlTag("CllblTradInd")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? CallableTradeIndicator { get; init; }
+        public YesNoIndicator? CallableTradeIndicator { get; init; }
 
         /// <summary>
         /// Minimum number of days&apos; notice a counterparty needs for terminating the transaction.
@@ -121,7 +121,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice
         [DisplayName("Transaction Call Delay")]
         [IsoXmlTag("TxCallDely")]
         [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-        public IsoMax3NumericText? TransactionCallDelay { get; init; }
+        public Max3NumericText? TransactionCallDelay { get; init; }
 
         /// <summary>
         /// Interest amount that has accrued in between two periods, for example, in between interest payment periods.
@@ -138,7 +138,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice
         [DisplayName("Accrued Interest Percentage")]
         [IsoXmlTag("AcrdIntrstPctg")]
         [IsoSimpleType(IsoSimpleType.PercentageRate)]
-        public IsoPercentageRate? AccruedInterestPercentage { get; init; }
+        public PercentageRate? AccruedInterestPercentage { get; init; }
 
         /// <summary>
         /// Fixed amount of money that has to be paid (instead of interest) in the case of a recall or at the closing date.
@@ -171,7 +171,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice
         [DisplayName("Total Number Of Collateral Instructions")]
         [IsoXmlTag("TtlNbOfCollInstrs")]
         [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-        public IsoMax3NumericText? TotalNumberOfCollateralInstructions { get; init; }
+        public Max3NumericText? TotalNumberOfCollateralInstructions { get; init; }
 
         /// <summary>
         /// Provides details for the securities financing transaction.
@@ -196,7 +196,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice
         [DisplayName("Lending With Collateral")]
         [IsoXmlTag("LndgWthColl")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? LendingWithCollateral { get; init; }
+        public YesNoIndicator? LendingWithCollateral { get; init; }
 
         /// <summary>
         /// Identifies the underlying reason for the borrowing, for instance, sale on my behalf or on behalf of a third party.
@@ -221,7 +221,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice
         [DisplayName("Contract Terms Modification Changed")]
         [IsoXmlTag("CtrctTermsModChngd")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? ContractTermsModificationChanged { get; init; }
+        public YesNoIndicator? ContractTermsModificationChanged { get; init; }
 
         /// <summary>
         /// Interest rate to be paid as agreed between the counterparties.
@@ -278,7 +278,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice
         [DisplayName("Accrued Interest Tax")]
         [IsoXmlTag("AcrdIntrstTax")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? AccruedInterestTax { get; init; }
+        public YesNoIndicator? AccruedInterestTax { get; init; }
 
         /// <summary>
         /// Number of days accrued at the instant of closing trade.
@@ -287,7 +287,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice
         [DisplayName("End Number Of Days Accrued")]
         [IsoXmlTag("EndNbOfDaysAcrd")]
         [IsoSimpleType(IsoSimpleType.Max3Number)]
-        public IsoMax3Number? EndNumberOfDaysAccrued { get; init; }
+        public Max3Number? EndNumberOfDaysAccrued { get; init; }
 
         /// <summary>
         /// End ratio of principal outstanding to the original balance.
@@ -296,7 +296,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice
         [DisplayName("End Factor")]
         [IsoXmlTag("EndFctr")]
         [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-        public IsoBaseOneRate? EndFactor { get; init; }
+        public BaseOneRate? EndFactor { get; init; }
 
         /// <summary>
         /// Type of securities lending.
@@ -321,7 +321,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice
         [DisplayName("Minimum Date For Call Back")]
         [IsoXmlTag("MinDtForCallBck")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? MinimumDateForCallBack { get; init; }
+        public DateOnly? MinimumDateForCallBack { get; init; }
 
         /// <summary>
         /// Indicates that the contract can be rolled over.
@@ -330,7 +330,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice
         [DisplayName("Roll Over")]
         [IsoXmlTag("RollOver")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? RollOver { get; init; }
+        public YesNoIndicator? RollOver { get; init; }
 
         /// <summary>
         /// Indicates whether the securities lending fees can be paid periodically or at the end of the contract.
@@ -339,7 +339,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice
         [DisplayName("Periodic Payment")]
         [IsoXmlTag("PrdcPmt")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? PeriodicPayment { get; init; }
+        public YesNoIndicator? PeriodicPayment { get; init; }
 
         /// <summary>
         /// Indicates whether the trade is executed ex coupon.
@@ -348,6 +348,6 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice
         [DisplayName("Ex Coupon")]
         [IsoXmlTag("ExCpn")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? ExCoupon { get; init; }
+        public YesNoIndicator? ExCoupon { get; init; }
     }
 }

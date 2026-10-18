@@ -25,7 +25,7 @@ public record BatchManagementInformation1
     [IsoXmlTag("ColltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CollectionIdentification { get; init; }
+    public Max35Text? CollectionIdentification { get; init; }
 
     /// <summary>
     /// Identification of the batch to which the message belongs.
@@ -36,7 +36,7 @@ public record BatchManagementInformation1
     [IsoXmlTag("BtchId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text BatchIdentification { get; init; }
+    public required Max35Text BatchIdentification { get; init; }
 
     /// <summary>
     /// Sequence number of the message inside the batch.
@@ -47,7 +47,7 @@ public record BatchManagementInformation1
     [DisplayName("Message Sequence Number")]
     [IsoXmlTag("MsgSeqNb")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public IsoMax15NumericText? MessageSequenceNumber { get; init; }
+    public Max15NumericText? MessageSequenceNumber { get; init; }
 
     /// <summary>
     /// Value of the message to use for the computation of the checksum of the batch or collection of messages.
@@ -56,5 +56,5 @@ public record BatchManagementInformation1
     [DisplayName("Message Checksum Input Value")]
     [IsoXmlTag("MsgChcksmInptVal")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public IsoMax140Binary? MessageChecksumInputValue { get; init; }
+    public Max140Binary? MessageChecksumInputValue { get; init; }
 }

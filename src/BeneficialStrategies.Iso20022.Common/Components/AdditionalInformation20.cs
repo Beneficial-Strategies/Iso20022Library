@@ -32,7 +32,7 @@ public record AdditionalInformation20
     [IsoXmlTag("OthrRcpt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherRecipient { get; init; }
+    public Max35Text? OtherRecipient { get; init; }
 
     /// <summary>
     /// Target of the additional information to print, display, send or store.
@@ -50,7 +50,7 @@ public record AdditionalInformation20
     [IsoXmlTag("OthrTrgt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherTarget { get; init; }
+    public Max35Text? OtherTarget { get; init; }
 
     /// <summary>
     /// Format of the additional information.
@@ -68,7 +68,7 @@ public record AdditionalInformation20
     [IsoXmlTag("OthrFrmt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherFormat { get; init; }
+    public Max35Text? OtherFormat { get; init; }
 
     /// <summary>
     /// Defines the type of the value.
@@ -78,7 +78,7 @@ public record AdditionalInformation20
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Type { get; init; }
+    public Max35Text? Type { get; init; }
 
     /// <summary>
     /// Content of or reference to the message.
@@ -88,5 +88,5 @@ public record AdditionalInformation20
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.Max20KText)]
     [StringLength(maximumLength: 20000, MinimumLength = 1)]
-    public required IsoMax20KText Value { get; init; }
+    public required Max20KText Value { get; init; }
 }

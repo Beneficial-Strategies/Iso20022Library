@@ -30,5 +30,5 @@ public record PartyIdentification339
     [IsoId("58b84cc6-3138-4e6a-bde1-e1794402b211")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
-    public IsoLEIIdentifier? LEI { get; init; }
+    public LEIIdentifier? LEI { get; init; }
 }

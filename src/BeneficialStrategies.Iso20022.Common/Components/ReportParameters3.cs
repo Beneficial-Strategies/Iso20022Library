@@ -24,7 +24,7 @@ public record ReportParameters3
     [IsoXmlTag("RptId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ReportIdentification { get; init; }
+    public required Max35Text ReportIdentification { get; init; }
 
     /// <summary>
     /// Date (and time) and time of the report.
@@ -49,7 +49,7 @@ public record ReportParameters3
     [DisplayName("Calculation Date And Time")]
     [IsoXmlTag("ClctnDtAndTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CalculationDateAndTime { get; init; }
+    public required ISODateTime CalculationDateAndTime { get; init; }
 
     /// <summary>
     /// Frequency of the report.
@@ -66,5 +66,5 @@ public record ReportParameters3
     [DisplayName("Report Number")]
     [IsoXmlTag("RptNb")]
     [IsoSimpleType(IsoSimpleType.Exact5NumericText)]
-    public IsoExact5NumericText? ReportNumber { get; init; }
+    public Exact5NumericText? ReportNumber { get; init; }
 }

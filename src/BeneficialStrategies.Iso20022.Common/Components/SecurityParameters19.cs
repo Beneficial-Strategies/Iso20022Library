@@ -22,7 +22,7 @@ public record SecurityParameters19
     [IsoId("_ObBcVbZ6EfCUZfsQO4rYeA")]
     [DisplayName("Host Challenge")]
     [IsoXmlTag("HstChllng")]
-    public IsoMax140Binary? HostChallenge { get; init; }
+    public Max140Binary? HostChallenge { get; init; }
 
     /// <summary>
     /// Cryptographic key used to store in the ATM.

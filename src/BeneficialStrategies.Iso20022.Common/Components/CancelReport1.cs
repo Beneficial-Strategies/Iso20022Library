@@ -22,5 +22,5 @@ public record CancelReport1
     [IsoId("_Nt7eoGF8EfC07JR6e2JJ-w")]
     [DisplayName("Report Identification")]
     [IsoXmlTag("RptId")]
-    public required IsoMax140Text ReportIdentification { get; init; }
+    public required Max140Text ReportIdentification { get; init; }
 }

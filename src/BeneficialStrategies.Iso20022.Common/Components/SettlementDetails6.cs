@@ -48,7 +48,7 @@ public record SettlementDetails6
     [DisplayName("Partial Settlement Indicator")]
     [IsoXmlTag("PrtlSttlmInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PartialSettlementIndicator { get; init; }
+    public YesNoIndicator? PartialSettlementIndicator { get; init; }
 
     /// <summary>
     /// Specifies whether there was change of beneficial ownership.
@@ -193,5 +193,5 @@ public record SettlementDetails6
     [DisplayName("Eligible For Collateral")]
     [IsoXmlTag("ElgblForColl")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? EligibleForCollateral { get; init; }
+    public YesNoIndicator? EligibleForCollateral { get; init; }
 }

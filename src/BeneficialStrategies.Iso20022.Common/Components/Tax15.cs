@@ -32,7 +32,7 @@ public record Tax15
     [IsoXmlTag("XtndedTp")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoExtended350Code ExtendedType { get; init; }
+    public required Extended350Code ExtendedType { get; init; }
 
     /// <summary>
     /// Amount of money resulting from the calculation of the tax.
@@ -58,7 +58,7 @@ public record Tax15
     [IsoXmlTag("XtndedBsis")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedBasis { get; init; }
+    public Extended350Code? ExtendedBasis { get; init; }
 
     /// <summary>
     /// Party that receives the tax. The recipient of, and the party entitled to, the tax may be two different parties.
@@ -75,7 +75,7 @@ public record Tax15
     [DisplayName("Exemption Indicator")]
     [IsoXmlTag("XmptnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ExemptionIndicator { get; init; }
+    public required YesNoIndicator ExemptionIndicator { get; init; }
 
     /// <summary>
     /// Reason for a tax exemption.
@@ -93,5 +93,5 @@ public record Tax15
     [IsoXmlTag("XtndedXmptnRsn")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedExemptionReason { get; init; }
+    public Extended350Code? ExtendedExemptionReason { get; init; }
 }

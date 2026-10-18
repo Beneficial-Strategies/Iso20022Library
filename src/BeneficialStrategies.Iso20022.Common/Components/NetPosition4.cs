@@ -112,7 +112,7 @@ public record NetPosition4
     /// </summary>
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
-    public IsoISODate? TradeDate { get; init; }
+    public DateOnly? TradeDate { get; init; }
 
     /// <summary>
     /// Trade Leg Details.

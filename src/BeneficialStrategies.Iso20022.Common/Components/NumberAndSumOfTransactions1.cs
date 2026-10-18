@@ -23,7 +23,7 @@ public record NumberAndSumOfTransactions1
     [DisplayName("Number Of Entries")]
     [IsoXmlTag("NbOfNtries")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public IsoMax15NumericText? NumberOfEntries { get; init; }
+    public Max15NumericText? NumberOfEntries { get; init; }
 
     /// <summary>
     /// Total of all individual entries included in the report.
@@ -32,5 +32,5 @@ public record NumberAndSumOfTransactions1
     [DisplayName("Sum")]
     [IsoXmlTag("Sum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? Sum { get; init; }
+    public DecimalNumber? Sum { get; init; }
 }

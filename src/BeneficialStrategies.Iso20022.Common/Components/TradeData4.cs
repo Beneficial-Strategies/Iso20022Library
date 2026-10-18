@@ -24,7 +24,7 @@ public record TradeData4
     [IsoXmlTag("StsOrgtr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? StatusOriginator { get; init; }
+    public Max35Text? StatusOriginator { get; init; }
 
     /// <summary>
     /// Specifies the new status of the trade.
@@ -42,7 +42,7 @@ public record TradeData4
     [IsoXmlTag("CurStsSubTp")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? CurrentStatusSubType { get; init; }
+    public Max70Text? CurrentStatusSubType { get; init; }
 
     /// <summary>
     /// Specifies the date and time at which the current status was assigned to all the trades, unless overwritten by a date and time assigned to an individual trade.
@@ -51,7 +51,7 @@ public record TradeData4
     [DisplayName("Current Status Date Time")]
     [IsoXmlTag("CurStsDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CurrentStatusDateTime { get; init; }
+    public required ISODateTime CurrentStatusDateTime { get; init; }
 
     /// <summary>
     /// Specifies the previous status of a trade.
@@ -69,7 +69,7 @@ public record TradeData4
     [IsoXmlTag("PrvsStsSubTp")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? PreviousStatusSubType { get; init; }
+    public Max70Text? PreviousStatusSubType { get; init; }
 
     /// <summary>
     /// Specifies the product for which the status of the confirmation is reported, unless overwritten by a product type assigned to an individual trade.
@@ -79,5 +79,5 @@ public record TradeData4
     [IsoXmlTag("PdctTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProductType { get; init; }
+    public Max35Text? ProductType { get; init; }
 }

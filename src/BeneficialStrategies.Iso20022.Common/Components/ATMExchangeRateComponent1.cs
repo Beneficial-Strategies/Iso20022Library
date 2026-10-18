@@ -21,19 +21,19 @@ public record ATMExchangeRateComponent1
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public IsoMax256Text? AdditionalInformation { get; init; }
+    public Max256Text? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Exchange Rate.
     /// </summary>
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
-    public required IsoPercentageRate ExchangeRate { get; init; }
+    public required PercentageRate ExchangeRate { get; init; }
 
     /// <summary>
     /// Publish Date.
     /// </summary>
     [DisplayName("Publish Date")]
     [IsoXmlTag("PblshDt")]
-    public required IsoISODateTime PublishDate { get; init; }
+    public required ISODateTime PublishDate { get; init; }
 }

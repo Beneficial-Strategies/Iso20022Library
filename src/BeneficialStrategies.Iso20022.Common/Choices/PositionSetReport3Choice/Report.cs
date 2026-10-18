@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PositionSetReport3Choice
         [DisplayName("Reference Date")]
         [IsoXmlTag("RefDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate ReferenceDate { get; init; }
+        public required DateOnly ReferenceDate { get; init; }
 
         /// <summary>
         /// Report containing aggregation of loan and collateral exposures between counterparties by Securities Financing Transaction type, for a limited number of fields.

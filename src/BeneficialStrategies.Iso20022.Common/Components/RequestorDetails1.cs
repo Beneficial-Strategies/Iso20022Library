@@ -23,7 +23,7 @@ public record RequestorDetails1
     [DisplayName("Date Time Stamp")]
     [IsoXmlTag("DtTmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime DateTimeStamp { get; init; }
+    public required ISODateTime DateTimeStamp { get; init; }
 
     /// <summary>
     /// Identification of the requester.
@@ -32,5 +32,5 @@ public record RequestorDetails1
     [DisplayName("Requestor")]
     [IsoXmlTag("Rqstr")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public required IsoAnyBICIdentifier Requestor { get; init; }
+    public required AnyBICIdentifier Requestor { get; init; }
 }

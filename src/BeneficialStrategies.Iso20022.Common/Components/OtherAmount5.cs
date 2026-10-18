@@ -49,7 +49,7 @@ public record OtherAmount5
     /// </summary>
     [DisplayName("Clearing Count")]
     [IsoXmlTag("ClrCnt")]
-    public required IsoNumber ClearingCount { get; init; }
+    public required Number ClearingCount { get; init; }
 
     /// <summary>
     /// Clearing Credit Debit.

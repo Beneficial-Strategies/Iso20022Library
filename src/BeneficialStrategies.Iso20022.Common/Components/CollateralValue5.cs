@@ -30,7 +30,7 @@ public record CollateralValue5
     [IsoId("_1WMMs6X9EeynsLtPxJMJTQ")]
     [DisplayName("Valuation Date")]
     [IsoXmlTag("ValtnDt")]
-    public required IsoISODate ValuationDate { get; init; }
+    public required DateOnly ValuationDate { get; init; }
 
     /// <summary>
     /// Provides details of the currency of the valuation.
@@ -78,7 +78,7 @@ public record CollateralValue5
     [IsoId("_1WMMv6X9EeynsLtPxJMJTQ")]
     [DisplayName("Haircut")]
     [IsoXmlTag("Hrcut")]
-    public IsoPercentageRate? Haircut { get; init; }
+    public PercentageRate? Haircut { get; init; }
 
     /// <summary>
     /// Haircut or valuation factor on the security expressed as a percentage in case of close links.
@@ -86,7 +86,7 @@ public record CollateralValue5
     [IsoId("_1WMMwaX9EeynsLtPxJMJTQ")]
     [DisplayName("Close Link Haircut")]
     [IsoXmlTag("ClsLkHrcut")]
-    public IsoPercentageRate? CloseLinkHaircut { get; init; }
+    public PercentageRate? CloseLinkHaircut { get; init; }
 
     /// <summary>
     /// Percentage that applies to price of the securities following a redemption.
@@ -94,7 +94,7 @@ public record CollateralValue5
     [IsoId("_1WMMw6X9EeynsLtPxJMJTQ")]
     [DisplayName("Pool Factor")]
     [IsoXmlTag("PoolFctr")]
-    public IsoPercentageRate? PoolFactor { get; init; }
+    public PercentageRate? PoolFactor { get; init; }
 
     /// <summary>
     /// Information needed to process a currency exchange or conversion.

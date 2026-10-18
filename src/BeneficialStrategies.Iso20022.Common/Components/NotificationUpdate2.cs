@@ -24,7 +24,7 @@ public record NotificationUpdate2
     [IsoXmlTag("PrvsNtfctnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text PreviousNotificationIdentification { get; init; }
+    public required Max35Text PreviousNotificationIdentification { get; init; }
 
     /// <summary>
     /// Indicates whether a meeting instruction must be resent in case the parameters of the meeting are changed and the meeting instruction has already been sent.
@@ -33,5 +33,5 @@ public record NotificationUpdate2
     [DisplayName("Reconfirm Instructions")]
     [IsoXmlTag("RcnfrmInstrs")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ReconfirmInstructions { get; init; }
+    public YesNoIndicator? ReconfirmInstructions { get; init; }
 }

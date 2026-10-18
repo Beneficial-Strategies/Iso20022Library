@@ -24,7 +24,7 @@ public record CurrencyControlPackageStatus1
     [IsoXmlTag("PackgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text PackageIdentification { get; init; }
+    public required Max35Text PackageIdentification { get; init; }
 
     /// <summary>
     /// Defines the status of the reported transaction.
@@ -49,7 +49,7 @@ public record CurrencyControlPackageStatus1
     [DisplayName("Status Date Time")]
     [IsoXmlTag("StsDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? StatusDateTime { get; init; }
+    public ISODateTime? StatusDateTime { get; init; }
 
     /// <summary>
     /// Provides the status of the individual records in the package.

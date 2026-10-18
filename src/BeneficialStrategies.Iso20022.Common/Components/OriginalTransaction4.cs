@@ -246,7 +246,7 @@ public record OriginalTransaction4
     [IsoId("_Me61gRNZEfC1ZfCQz0xB3g")]
     [DisplayName("Special Programme Qualification")]
     [IsoXmlTag("SpclPrgrmmQlfctn")]
-    public SimpleValueList<IsoATICALaxProcessing> SpecialProgrammeQualification { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> SpecialProgrammeQualification { get; init; } = [];
 
     /// <summary>
     /// Additional functions or services to be performed in conjunction with the transaction.

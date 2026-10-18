@@ -38,5 +38,5 @@ public record StatusReasonInformation13
     [IsoId("_zyR4CKX_EeynsLtPxJMJTQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public IsoMax140Text? AdditionalInformation { get; init; }
+    public Max140Text? AdditionalInformation { get; init; }
 }

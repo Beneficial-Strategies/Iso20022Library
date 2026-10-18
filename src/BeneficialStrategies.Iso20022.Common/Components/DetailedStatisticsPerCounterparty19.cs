@@ -21,7 +21,7 @@ public record DetailedStatisticsPerCounterparty19
     /// </summary>
     [DisplayName("Reference Date")]
     [IsoXmlTag("RefDt")]
-    public required IsoISODate ReferenceDate { get; init; }
+    public required DateOnly ReferenceDate { get; init; }
 
     /// <summary>
     /// Rejection Statistics.
@@ -35,47 +35,47 @@ public record DetailedStatisticsPerCounterparty19
     /// </summary>
     [DisplayName("Total Corrected Rejections")]
     [IsoXmlTag("TtlCrrctdRjctns")]
-    public IsoMax20PositiveNumber? TotalCorrectedRejections { get; init; }
+    public Max20PositiveNumber? TotalCorrectedRejections { get; init; }
 
     /// <summary>
     /// Total Number Of Reports.
     /// </summary>
     [DisplayName("Total Number Of Reports")]
     [IsoXmlTag("TtlNbOfRpts")]
-    public required IsoMax20PositiveNumber TotalNumberOfReports { get; init; }
+    public required Max20PositiveNumber TotalNumberOfReports { get; init; }
 
     /// <summary>
     /// Total Number Of Reports Accepted.
     /// </summary>
     [DisplayName("Total Number Of Reports Accepted")]
     [IsoXmlTag("TtlNbOfRptsAccptd")]
-    public required IsoMax20PositiveNumber TotalNumberOfReportsAccepted { get; init; }
+    public required Max20PositiveNumber TotalNumberOfReportsAccepted { get; init; }
 
     /// <summary>
     /// Total Number Of Reports Rejected.
     /// </summary>
     [DisplayName("Total Number Of Reports Rejected")]
     [IsoXmlTag("TtlNbOfRptsRjctd")]
-    public required IsoMax20PositiveNumber TotalNumberOfReportsRejected { get; init; }
+    public required Max20PositiveNumber TotalNumberOfReportsRejected { get; init; }
 
     /// <summary>
     /// Total Number Of Transactions.
     /// </summary>
     [DisplayName("Total Number Of Transactions")]
     [IsoXmlTag("TtlNbOfTxs")]
-    public required IsoMax20PositiveNumber TotalNumberOfTransactions { get; init; }
+    public required Max20PositiveNumber TotalNumberOfTransactions { get; init; }
 
     /// <summary>
     /// Total Number Of Transactions Accepted.
     /// </summary>
     [DisplayName("Total Number Of Transactions Accepted")]
     [IsoXmlTag("TtlNbOfTxsAccptd")]
-    public required IsoMax20PositiveNumber TotalNumberOfTransactionsAccepted { get; init; }
+    public required Max20PositiveNumber TotalNumberOfTransactionsAccepted { get; init; }
 
     /// <summary>
     /// Total Number Of Transactions Rejected.
     /// </summary>
     [DisplayName("Total Number Of Transactions Rejected")]
     [IsoXmlTag("TtlNbOfTxsRjctd")]
-    public required IsoMax20PositiveNumber TotalNumberOfTransactionsRejected { get; init; }
+    public required Max20PositiveNumber TotalNumberOfTransactionsRejected { get; init; }
 }

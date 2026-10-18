@@ -50,7 +50,7 @@ public record CreditorServiceEnrolment1
     [DisplayName("Service Activation Allowed")]
     [IsoXmlTag("SvcActvtnAllwd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator ServiceActivationAllowed { get; init; }
+    public required TrueFalseIndicator ServiceActivationAllowed { get; init; }
 
     /// <summary>
     /// Information web page, as provided by the creditor, to which the debtor can be linked for further information (Universal Resource Locator - URL).
@@ -60,7 +60,7 @@ public record CreditorServiceEnrolment1
     [IsoXmlTag("SvcDescLk")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
     [StringLength(maximumLength: 2048, MinimumLength = 1)]
-    public IsoMax2048Text? ServiceDescriptionLink { get; init; }
+    public Max2048Text? ServiceDescriptionLink { get; init; }
 
     /// <summary>
     /// Web page link provided by the Creditor, intended to the Debtors, to proceed to activation when  servicing messages can not be used.
@@ -70,5 +70,5 @@ public record CreditorServiceEnrolment1
     [IsoXmlTag("CdtrSvcActvtnLk")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
     [StringLength(maximumLength: 2048, MinimumLength = 1)]
-    public IsoMax2048Text? CreditorServiceActivationLink { get; init; }
+    public Max2048Text? CreditorServiceActivationLink { get; init; }
 }

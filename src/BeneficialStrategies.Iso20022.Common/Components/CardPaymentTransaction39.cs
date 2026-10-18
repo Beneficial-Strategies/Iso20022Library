@@ -39,7 +39,7 @@ public record CardPaymentTransaction39
     [IsoId("_I9lWsGklEeSTIuB9A-QJ6g")]
     [DisplayName("Declined Product Code")]
     [IsoXmlTag("DclndPdctCd")]
-    public SimpleValueList<IsoMax70Text> DeclinedProductCode { get; init; } = [];
+    public SimpleValueList<Max70Text> DeclinedProductCode { get; init; } = [];
 
     /// <summary>
     /// Balance of the account, related to the payment.

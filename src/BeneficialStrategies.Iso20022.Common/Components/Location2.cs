@@ -40,5 +40,5 @@ public record Location2
     [IsoXmlTag("Txt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Text { get; init; }
+    public Max35Text? Text { get; init; }
 }

@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References59Choice
         [IsoXmlTag("TxId")]
         [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
         [StringLength(maximumLength: 16, MinimumLength = 1)]
-        public required IsoRestrictedFINXMax16Text TransactionIdentification { get; init; }
+        public required RestrictedFINXMax16Text TransactionIdentification { get; init; }
 
         /// <summary>
         /// Specifies if the movement on a securities account results from a deliver or a receive instruction.

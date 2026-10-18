@@ -22,7 +22,7 @@ public record AccountNotification25
     [IsoId("91ff7335-fd25-417a-9755-7f2f018a217b")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Provides details on the page number of the notification.
@@ -38,7 +38,7 @@ public record AccountNotification25
     [IsoId("298d5b45-acfb-4a63-a7ff-0e243792b784")]
     [DisplayName("Electronic Sequence Number")]
     [IsoXmlTag("ElctrncSeqNb")]
-    public IsoNumber? ElectronicSequenceNumber { get; init; }
+    public Number? ElectronicSequenceNumber { get; init; }
 
     /// <summary>
     /// Specifies the range of identification sequence numbers, as provided in the request.
@@ -54,7 +54,7 @@ public record AccountNotification25
     [IsoId("10b1471b-7aeb-4ed9-9e7a-51a6c60f349f")]
     [DisplayName("Legal Sequence Number")]
     [IsoXmlTag("LglSeqNb")]
-    public IsoNumber? LegalSequenceNumber { get; init; }
+    public Number? LegalSequenceNumber { get; init; }
 
     /// <summary>
     /// Date and time at which the notification was created.
@@ -62,7 +62,7 @@ public record AccountNotification25
     [IsoId("fe46b445-dbf3-4735-a5d9-1da1dd4f43eb")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
-    public IsoISODateTime? CreationDateTime { get; init; }
+    public ISODateTime? CreationDateTime { get; init; }
 
     /// <summary>
     /// Range of time between a start date and an end date for which the account notification is issued.
@@ -134,5 +134,5 @@ public record AccountNotification25
     [IsoId("70c7c621-607a-4b80-8c57-6826db65e8b0")]
     [DisplayName("Additional Notification Information")]
     [IsoXmlTag("AddtlNtfctnInf")]
-    public IsoMax500Text? AdditionalNotificationInformation { get; init; }
+    public Max500Text? AdditionalNotificationInformation { get; init; }
 }

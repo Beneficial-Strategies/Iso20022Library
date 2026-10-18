@@ -31,6 +31,6 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRateFrequency2Choice
         [DisplayName("Value")]
         [IsoXmlTag("Val")]
         [IsoSimpleType(IsoSimpleType.Max3Number)]
-        public IsoMax3Number? Value { get; init; }
+        public Max3Number? Value { get; init; }
     }
 }

@@ -24,7 +24,7 @@ public record CorporateAction9
     [IsoXmlTag("EvtTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text EventType { get; init; }
+    public required Max35Text EventType { get; init; }
 
     /// <summary>
     /// Identification of a corporate action assigned by an official central body/entity within a given market.
@@ -34,5 +34,5 @@ public record CorporateAction9
     [IsoXmlTag("EvtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text EventIdentification { get; init; }
+    public required Max35Text EventIdentification { get; init; }
 }

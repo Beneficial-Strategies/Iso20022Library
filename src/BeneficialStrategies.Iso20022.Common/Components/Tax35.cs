@@ -39,7 +39,7 @@ public record Tax35
     [DisplayName("Applied Rate")]
     [IsoXmlTag("ApldRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? AppliedRate { get; init; }
+    public PercentageRate? AppliedRate { get; init; }
 
     /// <summary>
     /// Country where the tax is due.

@@ -21,14 +21,14 @@ public record GenericPersonIdentification2
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax256Text Identification { get; init; }
+    public required Max256Text Identification { get; init; }
 
     /// <summary>
     /// Issuer.
     /// </summary>
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
-    public IsoMax35Text? Issuer { get; init; }
+    public Max35Text? Issuer { get; init; }
 
     /// <summary>
     /// Scheme Name.

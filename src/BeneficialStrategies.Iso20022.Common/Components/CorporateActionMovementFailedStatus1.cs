@@ -25,7 +25,7 @@ public record CorporateActionMovementFailedStatus1
     [IsoXmlTag("AgtAcctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text AgentAccountIdentification { get; init; }
+    public required Max35Text AgentAccountIdentification { get; init; }
 
     /// <summary>
     /// Identification of the client account.
@@ -35,7 +35,7 @@ public record CorporateActionMovementFailedStatus1
     [IsoXmlTag("ClntAcctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClientAccountIdentification { get; init; }
+    public Max35Text? ClientAccountIdentification { get; init; }
 
     /// <summary>
     /// Identification of the party that owns the client account.

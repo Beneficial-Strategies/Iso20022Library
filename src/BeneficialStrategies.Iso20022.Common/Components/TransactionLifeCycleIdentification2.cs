@@ -26,5 +26,5 @@ public record TransactionLifeCycleIdentification2
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Exact15Text)]
-    public required IsoExact15Text Identification { get; init; }
+    public required Exact15Text Identification { get; init; }
 }

@@ -42,7 +42,7 @@ public record MaintenanceDelegation4
     [IsoXmlTag("RspnRsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ResponseReason { get; init; }
+    public Max35Text? ResponseReason { get; init; }
 
     /// <summary>
     /// Type of delegation action.
@@ -58,7 +58,7 @@ public record MaintenanceDelegation4
     [IsoId("_X8XsN44HEeWrZqsymMFdfg")]
     [DisplayName("POI Subset")]
     [IsoXmlTag("POISubset")]
-    public SimpleValueList<IsoMax35Text> POISubset { get; init; } = [];
+    public SimpleValueList<Max35Text> POISubset { get; init; } = [];
 
     /// <summary>
     /// Identification of the parameters subset assigned by the MTM.
@@ -68,7 +68,7 @@ public record MaintenanceDelegation4
     [IsoXmlTag("DlgtnScpId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DelegationScopeIdentification { get; init; }
+    public Max35Text? DelegationScopeIdentification { get; init; }
 
     /// <summary>
     /// Definition of the delegation scope, for instance inside the payment application parameters the range of application profiles, the RID (registered application provider identification).
@@ -77,7 +77,7 @@ public record MaintenanceDelegation4
     [DisplayName("Delegation Scope Definition")]
     [IsoXmlTag("DlgtnScpDef")]
     [IsoSimpleType(IsoSimpleType.Max3000Binary)]
-    public IsoMax3000Binary? DelegationScopeDefinition { get; init; }
+    public Max3000Binary? DelegationScopeDefinition { get; init; }
 
     /// <summary>
     /// Proof of delegation to be verified by the POI, when performing the delegated actions.
@@ -86,7 +86,7 @@ public record MaintenanceDelegation4
     [DisplayName("Delegation Proof")]
     [IsoXmlTag("DlgtnProof")]
     [IsoSimpleType(IsoSimpleType.Max5000Binary)]
-    public IsoMax5000Binary? DelegationProof { get; init; }
+    public Max5000Binary? DelegationProof { get; init; }
 
     /// <summary>
     /// Protected proof of delegation.

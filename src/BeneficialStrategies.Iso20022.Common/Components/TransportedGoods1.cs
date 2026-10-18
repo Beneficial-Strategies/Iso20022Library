@@ -32,7 +32,7 @@ public record TransportedGoods1
     [IsoXmlTag("GoodsDesc")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? GoodsDescription { get; init; }
+    public Max70Text? GoodsDescription { get; init; }
 
     /// <summary>
     /// Information important for the users of the message/service, which cannot be captured in any other message component/element. For example: Warehouse number.

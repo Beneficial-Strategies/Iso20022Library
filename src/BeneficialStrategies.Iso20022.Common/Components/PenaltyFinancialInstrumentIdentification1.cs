@@ -30,7 +30,7 @@ public record PenaltyFinancialInstrumentIdentification1
     [IsoId("_WK8GgDkWEem897H7zB2RJg")]
     [DisplayName("Subject To Penalties")]
     [IsoXmlTag("SbjtToPnlties")]
-    public IsoTrueFalseIndicator? SubjectToPenalties { get; init; }
+    public TrueFalseIndicator? SubjectToPenalties { get; init; }
 
     /// <summary>
     /// Classification type of the financial instrument, as per the ISO Classification of Financial Instrument (CFI) codification.
@@ -46,7 +46,7 @@ public record PenaltyFinancialInstrumentIdentification1
     [IsoId("__zV88DkWEem897H7zB2RJg")]
     [DisplayName("Liquidity")]
     [IsoXmlTag("Lqdty")]
-    public IsoTrueFalseIndicator? Liquidity { get; init; }
+    public TrueFalseIndicator? Liquidity { get; init; }
 
     /// <summary>
     /// Further details on the price of the financial instrument.

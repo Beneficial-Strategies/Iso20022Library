@@ -23,7 +23,7 @@ public record MaintenanceDelegateAction7
     [DisplayName("Periodic Action")]
     [IsoXmlTag("PrdcActn")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? PeriodicAction { get; init; }
+    public TrueFalseIndicator? PeriodicAction { get; init; }
 
     /// <summary>
     /// Network address and parameters of the terminal manager host which will performs the delegated actions.
@@ -41,7 +41,7 @@ public record MaintenanceDelegateAction7
     [IsoXmlTag("TMSPrtcol")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TMSProtocol { get; init; }
+    public Max35Text? TMSProtocol { get; init; }
 
     /// <summary>
     /// Version of the TMS protocol to use to perform the maintenance action.
@@ -51,7 +51,7 @@ public record MaintenanceDelegateAction7
     [IsoXmlTag("TMSPrtcolVrsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TMSProtocolVersion { get; init; }
+    public Max35Text? TMSProtocolVersion { get; init; }
 
     /// <summary>
     /// Data set on which the delegated action has to be performed.
@@ -75,7 +75,7 @@ public record MaintenanceDelegateAction7
     [IsoId("_tMkpvU6nEeyGi9JAv6wq7Q")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public SimpleValueList<IsoMax3000Binary> AdditionalInformation { get; init; } = [];
+    public SimpleValueList<Max3000Binary> AdditionalInformation { get; init; } = [];
 
     /// <summary>
     /// Sequence of action to include in the next MTM management plan.

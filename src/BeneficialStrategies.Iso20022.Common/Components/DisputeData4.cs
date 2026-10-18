@@ -28,35 +28,35 @@ public record DisputeData4
     /// </summary>
     [DisplayName("Chargeback Eligibility")]
     [IsoXmlTag("ChrgbckElgblty")]
-    public IsoMax35Text? ChargebackEligibility { get; init; }
+    public Max35Text? ChargebackEligibility { get; init; }
 
     /// <summary>
     /// Condition.
     /// </summary>
     [DisplayName("Condition")]
     [IsoXmlTag("Cond")]
-    public IsoMax35Text? Condition { get; init; }
+    public Max35Text? Condition { get; init; }
 
     /// <summary>
     /// Cycle.
     /// </summary>
     [DisplayName("Cycle")]
     [IsoXmlTag("Cycl")]
-    public IsoExact1NumericText? Cycle { get; init; }
+    public Exact1NumericText? Cycle { get; init; }
 
     /// <summary>
     /// Documentation Status.
     /// </summary>
     [DisplayName("Documentation Status")]
     [IsoXmlTag("DcmnttnSts")]
-    public IsoMax35Text? DocumentationStatus { get; init; }
+    public Max35Text? DocumentationStatus { get; init; }
 
     /// <summary>
     /// Partial.
     /// </summary>
     [DisplayName("Partial")]
     [IsoXmlTag("Prtl")]
-    public IsoTrueFalseIndicator? Partial { get; init; }
+    public TrueFalseIndicator? Partial { get; init; }
 
     /// <summary>
     /// Reference.
@@ -70,12 +70,12 @@ public record DisputeData4
     /// </summary>
     [DisplayName("Reject Reason")]
     [IsoXmlTag("RjctRsn")]
-    public ValueList<IsoMax35Text> RejectReason { get; init; } = [];
+    public ValueList<Max35Text> RejectReason { get; init; } = [];
 
     /// <summary>
     /// Status.
     /// </summary>
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
-    public IsoMax35Text? Status { get; init; }
+    public Max35Text? Status { get; init; }
 }

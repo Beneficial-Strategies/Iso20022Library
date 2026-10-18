@@ -40,7 +40,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument17Choice
         [IsoXmlTag("DbtrTaxIdNb")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? DebtorTaxIdentificationNumber { get; init; }
+        public Max35Text? DebtorTaxIdentificationNumber { get; init; }
 
         /// <summary>
         /// Number assigned by a national registration authority to an entity.
@@ -50,7 +50,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument17Choice
         [IsoXmlTag("DbtrNtlRegnNb")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? DebtorNationalRegistrationNumber { get; init; }
+        public Max35Text? DebtorNationalRegistrationNumber { get; init; }
 
         /// <summary>
         /// Party that receives an amount of money from the debtor. In the context of the payment model, the creditor is also the credit account owner.
@@ -100,7 +100,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument17Choice
         [IsoXmlTag("RegnId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? RegistrationIdentification { get; init; }
+        public Max35Text? RegistrationIdentification { get; init; }
 
         /// <summary>
         /// Reference of the direct debit mandate that has been agreed upon by the debtor and creditor.
@@ -110,6 +110,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument17Choice
         [IsoXmlTag("MndtId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? MandateIdentification { get; init; }
+        public Max35Text? MandateIdentification { get; init; }
     }
 }

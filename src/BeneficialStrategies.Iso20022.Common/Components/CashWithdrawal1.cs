@@ -23,7 +23,7 @@ public record CashWithdrawal1
     [IsoId("_vxTJ8bDnEfCbk9-eHc2eXw")]
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
-    public IsoYesNoIndicator? AmendmentIndicator { get; init; }
+    public YesNoIndicator? AmendmentIndicator { get; init; }
 
     /// <summary>
     /// Specifies the details of the requested withdrawal in notes.
@@ -55,5 +55,5 @@ public record CashWithdrawal1
     [IsoId("_na2s4dEnEfCHIpLhE5dmGg")]
     [DisplayName("Discrepancy Identification")]
     [IsoXmlTag("DscrpncyId")]
-    public IsoMax35Text? DiscrepancyIdentification { get; init; }
+    public Max35Text? DiscrepancyIdentification { get; init; }
 }

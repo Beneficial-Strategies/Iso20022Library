@@ -40,7 +40,7 @@ public record SoundContent1
     [IsoXmlTag("SoundRef")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public IsoMax500Text? SoundReference { get; init; }
+    public Max500Text? SoundReference { get; init; }
 
     /// <summary>
     /// Content of text message to play (Text-to-Speech).
@@ -50,5 +50,5 @@ public record SoundContent1
     [IsoXmlTag("Txt")]
     [IsoSimpleType(IsoSimpleType.Max1025Text)]
     [StringLength(maximumLength: 1025, MinimumLength = 1)]
-    public IsoMax1025Text? Text { get; init; }
+    public Max1025Text? Text { get; init; }
 }

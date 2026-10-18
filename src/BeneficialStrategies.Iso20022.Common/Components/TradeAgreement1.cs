@@ -23,7 +23,7 @@ public record TradeAgreement1
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate TradeDate { get; init; }
+    public required DateOnly TradeDate { get; init; }
 
     /// <summary>
     /// Identification of a notification.This identification must be unique amongst all notifications of same type confirmed by the same party.
@@ -33,7 +33,7 @@ public record TradeAgreement1
     [IsoXmlTag("NtfctnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text NotificationIdentification { get; init; }
+    public required Max35Text NotificationIdentification { get; init; }
 
     /// <summary>
     /// Reference common to the parties of a trade.
@@ -43,5 +43,5 @@ public record TradeAgreement1
     [IsoXmlTag("CmonRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CommonReference { get; init; }
+    public Max35Text? CommonReference { get; init; }
 }

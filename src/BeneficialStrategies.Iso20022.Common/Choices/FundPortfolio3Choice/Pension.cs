@@ -56,7 +56,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio3Choice
         [IsoXmlTag("DrwdwnTrchId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? DrawdownTrancheIdentification { get; init; }
+        public Max35Text? DrawdownTrancheIdentification { get; init; }
 
         /// <summary>
         /// Additional information about the pension policy, plan or scheme.

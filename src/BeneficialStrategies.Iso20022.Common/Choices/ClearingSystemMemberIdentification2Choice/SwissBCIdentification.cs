@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
         /// </summary>
         [IsoXmlTag("CHBC")]
         [IsoSimpleType(IsoSimpleType.SwissBCIdentifier)]
-        public required IsoSwissBCIdentifier Value { get; init; }
+        public required SwissBCIdentifier Value { get; init; }
     }
 }

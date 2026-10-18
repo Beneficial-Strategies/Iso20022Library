@@ -32,7 +32,7 @@ public record PaymentTerminalParameters5
     [IsoXmlTag("VndrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? VendorIdentification { get; init; }
+    public Max35Text? VendorIdentification { get; init; }
 
     /// <summary>
     /// Version of the terminal parameters.
@@ -42,7 +42,7 @@ public record PaymentTerminalParameters5
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Version { get; init; }
+    public Max256Text? Version { get; init; }
 
     /// <summary>
     /// Parameters to synchronise the real time clock of the POI (Point Of Interaction).
@@ -58,7 +58,7 @@ public record PaymentTerminalParameters5
     [IsoId("_wtSf-dqbEeearpaEPXv9UA")]
     [DisplayName("Time Zone Line")]
     [IsoXmlTag("TmZoneLine")]
-    public SimpleValueList<IsoMax70Text> TimeZoneLine { get; init; } = [];
+    public SimpleValueList<Max70Text> TimeZoneLine { get; init; } = [];
 
     /// <summary>
     /// Local time offset to UTC (Coordinated Universal Time).
@@ -75,5 +75,5 @@ public record PaymentTerminalParameters5
     [DisplayName("Other Parameters")]
     [IsoXmlTag("OthrParams")]
     [IsoSimpleType(IsoSimpleType.Max10000Binary)]
-    public IsoMax10000Binary? OtherParameters { get; init; }
+    public Max10000Binary? OtherParameters { get; init; }
 }

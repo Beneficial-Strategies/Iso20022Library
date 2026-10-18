@@ -34,7 +34,7 @@ public record Attendance1
     [IsoXmlTag("ConfInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? ConfirmationInformation { get; init; }
+    public Max350Text? ConfirmationInformation { get; init; }
 
     /// <summary>
     /// Date and time by which the beneficial owner or agent must provide notification of its intention to participate in the meeting. This deadline is set by an intermediary.

@@ -30,7 +30,7 @@ public record CardAcquisitionRequest3
     [IsoId("_DCr5MU7bEeyGi9JAv6wq7Q")]
     [DisplayName("Allowed Payment Brand")]
     [IsoXmlTag("AllwdPmtBrnd")]
-    public SimpleValueList<IsoMax35Text> AllowedPaymentBrand { get; init; } = [];
+    public SimpleValueList<Max35Text> AllowedPaymentBrand { get; init; } = [];
 
     /// <summary>
     /// Loyalty brands or programs allowed by the Sale System for the loyalty transaction.
@@ -38,7 +38,7 @@ public record CardAcquisitionRequest3
     [IsoId("_DCr5M07bEeyGi9JAv6wq7Q")]
     [DisplayName("Allowed Loyalty Brand")]
     [IsoXmlTag("AllwdLltyBrnd")]
-    public SimpleValueList<IsoMax35Text> AllowedLoyaltyBrand { get; init; } = [];
+    public SimpleValueList<Max35Text> AllowedLoyaltyBrand { get; init; } = [];
 
     /// <summary>
     /// Indicates if the Customer realises the selection of the card application.
@@ -47,7 +47,7 @@ public record CardAcquisitionRequest3
     [DisplayName("Force Customer Selection Flag")]
     [IsoXmlTag("ForceCstmrSelctnFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ForceCustomerSelectionFlag { get; init; }
+    public TrueFalseIndicator? ForceCustomerSelectionFlag { get; init; }
 
     /// <summary>
     /// Amount of the transaction. It allows the processing of a contactless card.
@@ -72,7 +72,7 @@ public record CardAcquisitionRequest3
     [DisplayName("Cash Back Flag")]
     [IsoXmlTag("CshBckFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CashBackFlag { get; init; }
+    public TrueFalseIndicator? CashBackFlag { get; init; }
 
     /// <summary>
     /// The POI System receives this information.
@@ -82,7 +82,7 @@ public record CardAcquisitionRequest3
     [IsoXmlTag("SaleToPOIData")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? SaleToPOIData { get; init; }
+    public Max70Text? SaleToPOIData { get; init; }
 
     /// <summary>
     /// Sale information intended for the Acquirer.
@@ -92,7 +92,7 @@ public record CardAcquisitionRequest3
     [IsoXmlTag("SaleToAcqrrData")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? SaleToAcquirerData { get; init; }
+    public Max70Text? SaleToAcquirerData { get; init; }
 
     /// <summary>
     /// Sale information intended for the Issuer.
@@ -102,5 +102,5 @@ public record CardAcquisitionRequest3
     [IsoXmlTag("SaleToIssrData")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? SaleToIssuerData { get; init; }
+    public Max70Text? SaleToIssuerData { get; init; }
 }

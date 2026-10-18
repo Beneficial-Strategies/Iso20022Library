@@ -21,21 +21,21 @@ public record MaintenanceDelegation17
     /// </summary>
     [DisplayName("Delegation Proof")]
     [IsoXmlTag("DlgtnProof")]
-    public IsoMax5000Binary? DelegationProof { get; init; }
+    public Max5000Binary? DelegationProof { get; init; }
 
     /// <summary>
     /// Delegation Scope Definition.
     /// </summary>
     [DisplayName("Delegation Scope Definition")]
     [IsoXmlTag("DlgtnScpDef")]
-    public IsoMax3000Binary? DelegationScopeDefinition { get; init; }
+    public Max3000Binary? DelegationScopeDefinition { get; init; }
 
     /// <summary>
     /// Delegation Scope Identification.
     /// </summary>
     [DisplayName("Delegation Scope Identification")]
     [IsoXmlTag("DlgtnScpId")]
-    public IsoMax35Text? DelegationScopeIdentification { get; init; }
+    public Max35Text? DelegationScopeIdentification { get; init; }
 
     /// <summary>
     /// Delegation Type.
@@ -64,7 +64,7 @@ public record MaintenanceDelegation17
     /// </summary>
     [DisplayName("POI Subset")]
     [IsoXmlTag("POISubset")]
-    public ValueList<IsoMax35Text> POISubset { get; init; } = [];
+    public ValueList<Max35Text> POISubset { get; init; } = [];
 
     /// <summary>
     /// Protected Delegation Proof.
@@ -85,5 +85,5 @@ public record MaintenanceDelegation17
     /// </summary>
     [DisplayName("Response Reason")]
     [IsoXmlTag("RspnRsn")]
-    public IsoMax35Text? ResponseReason { get; init; }
+    public Max35Text? ResponseReason { get; init; }
 }

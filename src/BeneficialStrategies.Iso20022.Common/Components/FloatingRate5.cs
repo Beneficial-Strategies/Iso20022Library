@@ -39,7 +39,7 @@ public record FloatingRate5
     [DisplayName("Spread")]
     [IsoXmlTag("Sprd")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Spread { get; init; }
+    public PercentageRate? Spread { get; init; }
 
     /// <summary>
     /// Information related to payment frequency.

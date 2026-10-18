@@ -35,14 +35,14 @@ public record Amount21
     /// </summary>
     [DisplayName("Customer Notified")]
     [IsoXmlTag("CstmrNtfd")]
-    public IsoTrueFalseIndicator? CustomerNotified { get; init; }
+    public TrueFalseIndicator? CustomerNotified { get; init; }
 
     /// <summary>
     /// Other Type.
     /// </summary>
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Type.

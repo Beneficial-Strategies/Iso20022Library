@@ -32,7 +32,7 @@ public record MeetingCancellationReason1
     [IsoXmlTag("XtndedCd")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoExtended350Code ExtendedCode { get; init; }
+    public required Extended350Code ExtendedCode { get; init; }
 
     /// <summary>
     /// Provides more information on the reason for cancelling a meeting in free format form.
@@ -42,5 +42,5 @@ public record MeetingCancellationReason1
     [IsoXmlTag("CxlRsn")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? CancellationReason { get; init; }
+    public Max140Text? CancellationReason { get; init; }
 }

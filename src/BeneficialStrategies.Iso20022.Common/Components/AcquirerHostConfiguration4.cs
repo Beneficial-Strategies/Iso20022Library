@@ -24,7 +24,7 @@ public record AcquirerHostConfiguration4
     [IsoXmlTag("HstId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text HostIdentification { get; init; }
+    public required Max35Text HostIdentification { get; init; }
 
     /// <summary>
     /// Types of message to sent to this host.

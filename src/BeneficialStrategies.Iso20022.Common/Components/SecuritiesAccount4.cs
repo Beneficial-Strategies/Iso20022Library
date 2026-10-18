@@ -32,7 +32,7 @@ public record SecuritiesAccount4
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Name { get; init; }
+    public required Max35Text Name { get; init; }
 
     /// <summary>
     /// Additional information about a financial instrument to help identify the instrument.
@@ -42,7 +42,7 @@ public record SecuritiesAccount4
     [IsoXmlTag("FinInstrmSplmtryId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? FinancialInstrumentSupplementaryIdentification { get; init; }
+    public Max35Text? FinancialInstrumentSupplementaryIdentification { get; init; }
 
     /// <summary>
     /// Identification of a security, as assigned under a formal or proprietary identification scheme.
@@ -60,7 +60,7 @@ public record SecuritiesAccount4
     [IsoXmlTag("FinInstrmNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? FinancialInstrumentName { get; init; }
+    public Max350Text? FinancialInstrumentName { get; init; }
 
     /// <summary>
     /// Specifies the current state of an account, eg, enabled or deleted.

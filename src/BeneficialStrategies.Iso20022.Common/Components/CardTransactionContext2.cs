@@ -24,7 +24,7 @@ public record CardTransactionContext2
     [DisplayName("Card Present")]
     [IsoXmlTag("CardPres")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CardPresent { get; init; }
+    public TrueFalseIndicator? CardPresent { get; init; }
 
     /// <summary>
     /// Indicates whether the transaction has been initiated in presence of the cardholder or not.
@@ -34,7 +34,7 @@ public record CardTransactionContext2
     [DisplayName("Cardholder Present")]
     [IsoXmlTag("CrdhldrPres")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CardholderPresent { get; init; }
+    public TrueFalseIndicator? CardholderPresent { get; init; }
 
     /// <summary>
     /// Location category of the place where the transaction is actually performed.

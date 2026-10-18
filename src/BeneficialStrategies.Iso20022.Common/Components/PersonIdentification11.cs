@@ -24,7 +24,7 @@ public record PersonIdentification11
     [IsoXmlTag("DrvrLicNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DriverLicenseNumber { get; init; }
+    public Max35Text? DriverLicenseNumber { get; init; }
 
     /// <summary>
     /// Country, state or province, issuer of the driver license.
@@ -34,7 +34,7 @@ public record PersonIdentification11
     [IsoXmlTag("DrvrLicLctn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DriverLicenseLocation { get; init; }
+    public Max35Text? DriverLicenseLocation { get; init; }
 
     /// <summary>
     /// Name or title of the driver license.
@@ -44,7 +44,7 @@ public record PersonIdentification11
     [IsoXmlTag("DrvrLicNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DriverLicenseName { get; init; }
+    public Max35Text? DriverLicenseName { get; init; }
 
     /// <summary>
     /// Identification of the driver in the fleet of vehicle.
@@ -54,7 +54,7 @@ public record PersonIdentification11
     [IsoXmlTag("DrvrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DriverIdentification { get; init; }
+    public Max35Text? DriverIdentification { get; init; }
 
     /// <summary>
     /// Number assigned by an agent to identify its customer.
@@ -64,7 +64,7 @@ public record PersonIdentification11
     [IsoXmlTag("CstmrNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CustomerNumber { get; init; }
+    public Max35Text? CustomerNumber { get; init; }
 
     /// <summary>
     /// Number assigned by a social security agency.
@@ -74,7 +74,7 @@ public record PersonIdentification11
     [IsoXmlTag("SclSctyNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SocialSecurityNumber { get; init; }
+    public Max35Text? SocialSecurityNumber { get; init; }
 
     /// <summary>
     /// Number assigned by a government agency to identify foreign nationals.
@@ -84,7 +84,7 @@ public record PersonIdentification11
     [IsoXmlTag("AlnRegnNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AlienRegistrationNumber { get; init; }
+    public Max35Text? AlienRegistrationNumber { get; init; }
 
     /// <summary>
     /// Number assigned by a passport authority to a passport.
@@ -94,7 +94,7 @@ public record PersonIdentification11
     [IsoXmlTag("PsptNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PassportNumber { get; init; }
+    public Max35Text? PassportNumber { get; init; }
 
     /// <summary>
     /// Number assigned by a tax authority to an entity.
@@ -104,7 +104,7 @@ public record PersonIdentification11
     [IsoXmlTag("TaxIdNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TaxIdentificationNumber { get; init; }
+    public Max35Text? TaxIdentificationNumber { get; init; }
 
     /// <summary>
     /// Number assigned by a national authority to an identity card.
@@ -114,7 +114,7 @@ public record PersonIdentification11
     [IsoXmlTag("IdntyCardNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? IdentityCardNumber { get; init; }
+    public Max35Text? IdentityCardNumber { get; init; }
 
     /// <summary>
     /// Number assigned to an employer by a registration authority.
@@ -124,7 +124,7 @@ public record PersonIdentification11
     [IsoXmlTag("MplyrIdNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? EmployerIdentificationNumber { get; init; }
+    public Max35Text? EmployerIdentificationNumber { get; init; }
 
     /// <summary>
     /// Number assigned to an employee by a employer.
@@ -134,7 +134,7 @@ public record PersonIdentification11
     [IsoXmlTag("MplyeeIdNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? EmployeeIdentificationNumber { get; init; }
+    public Max35Text? EmployeeIdentificationNumber { get; init; }
 
     /// <summary>
     /// Identification of the job.
@@ -144,7 +144,7 @@ public record PersonIdentification11
     [IsoXmlTag("JobNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? JobNumber { get; init; }
+    public Max35Text? JobNumber { get; init; }
 
     /// <summary>
     /// Identification of the department.
@@ -154,7 +154,7 @@ public record PersonIdentification11
     [IsoXmlTag("Dept")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Department { get; init; }
+    public Max35Text? Department { get; init; }
 
     /// <summary>
     /// Address for electronic mail (e-mail).
@@ -164,7 +164,7 @@ public record PersonIdentification11
     [IsoXmlTag("EmailAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? EmailAddress { get; init; }
+    public Max256Text? EmailAddress { get; init; }
 
     /// <summary>
     /// Date and place of birth of a person.

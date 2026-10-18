@@ -21,7 +21,7 @@ public record SubscriptionMultipleExecution6
     /// </summary>
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
-    public IsoYesNoIndicator? AmendmentIndicator { get; init; }
+    public YesNoIndicator? AmendmentIndicator { get; init; }
 
     /// <summary>
     /// Beneficiary Details.
@@ -63,14 +63,14 @@ public record SubscriptionMultipleExecution6
     /// </summary>
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Order Date Time.
     /// </summary>
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
-    public IsoISODateTime? OrderDateTime { get; init; }
+    public ISODateTime? OrderDateTime { get; init; }
 
     /// <summary>
     /// Place Of Trade.
@@ -84,14 +84,14 @@ public record SubscriptionMultipleExecution6
     /// </summary>
     [DisplayName("Received Date Time")]
     [IsoXmlTag("RcvdDtTm")]
-    public IsoISODateTime? ReceivedDateTime { get; init; }
+    public ISODateTime? ReceivedDateTime { get; init; }
 
     /// <summary>
     /// Requested Future Trade Date.
     /// </summary>
     [DisplayName("Requested Future Trade Date")]
     [IsoXmlTag("ReqdFutrTradDt")]
-    public IsoISODate? RequestedFutureTradeDate { get; init; }
+    public DateOnly? RequestedFutureTradeDate { get; init; }
 
     /// <summary>
     /// Total Settlement Amount.

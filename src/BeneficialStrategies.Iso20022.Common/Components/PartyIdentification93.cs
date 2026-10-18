@@ -72,5 +72,5 @@ public record PartyIdentification93
     [IsoXmlTag("CertfctnBrkdwn")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? CertificationBreakdown { get; init; }
+    public Max350Text? CertificationBreakdown { get; init; }
 }

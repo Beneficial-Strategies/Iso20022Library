@@ -23,7 +23,7 @@ public record CashOutForecast1
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate SettlementDate { get; init; }
+    public required DateOnly SettlementDate { get; init; }
 
     /// <summary>
     /// Sub-total amount of the cash flow out, expressed as an amount of money.
@@ -48,7 +48,7 @@ public record CashOutForecast1
     [DisplayName("Exceptional Cash Flow Indicator")]
     [IsoXmlTag("XcptnlCshFlowInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ExceptionalCashFlowIndicator { get; init; }
+    public YesNoIndicator? ExceptionalCashFlowIndicator { get; init; }
 
     /// <summary>
     /// Breakdown of cash out amounts, eg, by transaction or order type.

@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentSchedule1Choice
         [IsoXmlTag("PmtSchdlId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? PaymentScheduleIdentification { get; init; }
+        public Max35Text? PaymentScheduleIdentification { get; init; }
 
         /// <summary>
         /// Amount that must be paid no sooner than the expected payment date and no later than the due date.
@@ -41,7 +41,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentSchedule1Choice
         [DisplayName("Expected Date")]
         [IsoXmlTag("XpctdDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? ExpectedDate { get; init; }
+        public DateOnly? ExpectedDate { get; init; }
 
         /// <summary>
         /// Latest date whereby the amount of money must be paid.
@@ -50,6 +50,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentSchedule1Choice
         [DisplayName("Due Date")]
         [IsoXmlTag("DueDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate DueDate { get; init; }
+        public required DateOnly DueDate { get; init; }
     }
 }

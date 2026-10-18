@@ -22,7 +22,7 @@ public record PaymentTransaction172
     [IsoId("32db28b3-7648-423b-9f3e-ed5ce5019d78")]
     [DisplayName("Cancellation Identification")]
     [IsoXmlTag("CxlId")]
-    public IsoMax35Text? CancellationIdentification { get; init; }
+    public Max35Text? CancellationIdentification { get; init; }
 
     /// <summary>
     /// Set of elements to uniquely and unambiguously identify an exception or an investigation workflow.
@@ -46,7 +46,7 @@ public record PaymentTransaction172
     [IsoId("0aea58fc-aae0-4993-a9c4-cd1f66a01283")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
-    public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.
@@ -54,7 +54,7 @@ public record PaymentTransaction172
     [IsoId("55a5a837-a8bb-42fb-b555-e038212306eb")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original first instructing agent, to unambiguously identify the transaction.
@@ -62,7 +62,7 @@ public record PaymentTransaction172
     [IsoId("4a6fdf2a-48d1-4998-a056-ec80bcd7b632")]
     [DisplayName("Original Transaction Identification")]
     [IsoXmlTag("OrgnlTxId")]
-    public IsoMax35Text? OriginalTransactionIdentification { get; init; }
+    public Max35Text? OriginalTransactionIdentification { get; init; }
 
     /// <summary>
     /// Universally unique identifier to provide the original end-to-end reference of a payment transaction.
@@ -70,7 +70,7 @@ public record PaymentTransaction172
     [IsoId("3d992e21-8e13-4b32-b0c5-d52b7abedecd")]
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
-    public IsoUUIDv4Identifier? OriginalUETR { get; init; }
+    public UUIDv4Identifier? OriginalUETR { get; init; }
 
     /// <summary>
     /// Unique reference, as assigned by the original clearing system, to unambiguously identify the original instruction.
@@ -78,7 +78,7 @@ public record PaymentTransaction172
     [IsoId("98e52064-770b-4ee2-912e-f943be02004c")]
     [DisplayName("Original Clearing System Reference")]
     [IsoXmlTag("OrgnlClrSysRef")]
-    public IsoMax35Text? OriginalClearingSystemReference { get; init; }
+    public Max35Text? OriginalClearingSystemReference { get; init; }
 
     /// <summary>
     /// Amount of money moved between the instructing agent and the instructed agent, as provided in the original instruction.
@@ -94,7 +94,7 @@ public record PaymentTransaction172
     [IsoId("272a75bd-7238-4d3a-a89e-8ca238975cd9")]
     [DisplayName("Original Interbank Settlement Date")]
     [IsoXmlTag("OrgnlIntrBkSttlmDt")]
-    public IsoISODate? OriginalInterbankSettlementDate { get; init; }
+    public DateOnly? OriginalInterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Party who assigns the case.

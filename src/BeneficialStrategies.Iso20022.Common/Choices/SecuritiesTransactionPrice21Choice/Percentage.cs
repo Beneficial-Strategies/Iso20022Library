@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice21Choi
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("Pctg")]
-        public required IsoPercentageRate Value { get; init; }
+        public required PercentageRate Value { get; init; }
     }
 }

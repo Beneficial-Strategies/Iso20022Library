@@ -21,7 +21,7 @@ public record AlternatePartyIdentification11
     /// </summary>
     [DisplayName("Alternate Identification")]
     [IsoXmlTag("AltrnId")]
-    public required IsoMax35Text AlternateIdentification { get; init; }
+    public required Max35Text AlternateIdentification { get; init; }
 
     /// <summary>
     /// Country.

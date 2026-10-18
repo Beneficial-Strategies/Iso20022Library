@@ -38,7 +38,7 @@ public record PenaltyRecord4
     [IsoId("_xXR-tagzEfCXwLUUylXgrQ")]
     [DisplayName("Insolvency")]
     [IsoXmlTag("Inslvncy")]
-    public IsoYesNoIndicator? Insolvency { get; init; }
+    public YesNoIndicator? Insolvency { get; init; }
 
     /// <summary>
     /// Status of a penalty.
@@ -70,7 +70,7 @@ public record PenaltyRecord4
     [IsoId("_xXR-vagzEfCXwLUUylXgrQ")]
     [DisplayName("Number Of Days")]
     [IsoXmlTag("NbOfDays")]
-    public IsoNumber? NumberOfDays { get; init; }
+    public Number? NumberOfDays { get; init; }
 
     /// <summary>
     /// Further details for the calculation of the penalty.

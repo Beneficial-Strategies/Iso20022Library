@@ -25,7 +25,7 @@ public record Package4
     [IsoXmlTag("CmplxTradId")]
     [IsoSimpleType(IsoSimpleType.Max100Text)]
     [StringLength(maximumLength: 100, MinimumLength = 1)]
-    public IsoMax100Text? ComplexTradeIdentification { get; init; }
+    public Max100Text? ComplexTradeIdentification { get; init; }
 
     /// <summary>
     /// Identifier which is used to link the near leg and far leg of an FX swap per current industry practice. This identifier could distingish FX swap from other packaged transactions identified by ComplexTradeIdentification.
@@ -35,7 +35,7 @@ public record Package4
     [IsoXmlTag("FxSwpLkId")]
     [IsoSimpleType(IsoSimpleType.Max100Text)]
     [StringLength(maximumLength: 100, MinimumLength = 1)]
-    public IsoMax100Text? FXSwapLinkIdentification { get; init; }
+    public Max100Text? FXSwapLinkIdentification { get; init; }
 
     /// <summary>
     /// Indicates the traded price of the entire package in which the reported derivative transaction is a component.

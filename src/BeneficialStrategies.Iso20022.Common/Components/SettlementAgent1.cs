@@ -23,7 +23,7 @@ public record SettlementAgent1
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public required IsoLEIIdentifier Identification { get; init; }
+    public required LEIIdentifier Identification { get; init; }
 
     /// <summary>
     /// CCP’s account at the settlement agent.

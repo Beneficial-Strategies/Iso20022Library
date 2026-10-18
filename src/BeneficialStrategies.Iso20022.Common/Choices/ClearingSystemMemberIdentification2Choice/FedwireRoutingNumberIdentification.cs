@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
         /// </summary>
         [IsoXmlTag("USFW")]
         [IsoSimpleType(IsoSimpleType.FedwireRoutingNumberIdentifier)]
-        public required IsoFedwireRoutingNumberIdentifier Value { get; init; }
+        public required FedwireRoutingNumberIdentifier Value { get; init; }
     }
 }

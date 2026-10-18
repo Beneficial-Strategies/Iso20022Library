@@ -59,5 +59,5 @@ public record MergerDetailsType1
     [DisplayName("Share Unit Quantity Of New Company")]
     [IsoXmlTag("ShrUnitQtyOfNewCpny")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? ShareUnitQuantityOfNewCompany { get; init; }
+    public Number? ShareUnitQuantityOfNewCompany { get; init; }
 }

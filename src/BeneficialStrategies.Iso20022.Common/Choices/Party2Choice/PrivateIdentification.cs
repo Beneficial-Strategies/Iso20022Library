@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party2Choice
         [IsoXmlTag("DrvrsLicNb")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text DriversLicenseNumber { get; init; }
+        public required Max35Text DriversLicenseNumber { get; init; }
 
         /// <summary>
         /// Number assigned by an agent to identify its customer.
@@ -34,7 +34,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party2Choice
         [IsoXmlTag("CstmrNb")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text CustomerNumber { get; init; }
+        public required Max35Text CustomerNumber { get; init; }
 
         /// <summary>
         /// Number assigned by a social security agency.
@@ -44,7 +44,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party2Choice
         [IsoXmlTag("SclSctyNb")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text SocialSecurityNumber { get; init; }
+        public required Max35Text SocialSecurityNumber { get; init; }
 
         /// <summary>
         /// Number assigned by a government agency to identify foreign nationals.
@@ -54,7 +54,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party2Choice
         [IsoXmlTag("AlnRegnNb")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text AlienRegistrationNumber { get; init; }
+        public required Max35Text AlienRegistrationNumber { get; init; }
 
         /// <summary>
         /// Number assigned by a passport authority to a passport.
@@ -64,7 +64,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party2Choice
         [IsoXmlTag("PsptNb")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text PassportNumber { get; init; }
+        public required Max35Text PassportNumber { get; init; }
 
         /// <summary>
         /// Number assigned by a tax authority to an entity.
@@ -74,7 +74,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party2Choice
         [IsoXmlTag("TaxIdNb")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text TaxIdentificationNumber { get; init; }
+        public required Max35Text TaxIdentificationNumber { get; init; }
 
         /// <summary>
         /// Number assigned by a national authority to an identity card.
@@ -84,7 +84,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party2Choice
         [IsoXmlTag("IdntyCardNb")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text IdentityCardNumber { get; init; }
+        public required Max35Text IdentityCardNumber { get; init; }
 
         /// <summary>
         /// Number assigned to an employer by a registration authority.
@@ -94,7 +94,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party2Choice
         [IsoXmlTag("MplyrIdNb")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text EmployerIdentificationNumber { get; init; }
+        public required Max35Text EmployerIdentificationNumber { get; init; }
 
         /// <summary>
         /// Date and place of birth of a person.
@@ -120,6 +120,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Party2Choice
         [IsoXmlTag("Issr")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? Issuer { get; init; }
+        public Max35Text? Issuer { get; init; }
     }
 }

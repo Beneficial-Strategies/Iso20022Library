@@ -21,7 +21,7 @@ public record Statement86
     /// </summary>
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
-    public required IsoYesNoIndicator ActivityIndicator { get; init; }
+    public required YesNoIndicator ActivityIndicator { get; init; }
 
     /// <summary>
     /// Frequency.
@@ -35,7 +35,7 @@ public record Statement86
     /// </summary>
     [DisplayName("Report Number")]
     [IsoXmlTag("RptNb")]
-    public IsoExact5NumericText? ReportNumber { get; init; }
+    public Exact5NumericText? ReportNumber { get; init; }
 
     /// <summary>
     /// Statement Date And Time.
@@ -49,7 +49,7 @@ public record Statement86
     /// </summary>
     [DisplayName("Statement Identification")]
     [IsoXmlTag("StmtId")]
-    public required IsoMax35Text StatementIdentification { get; init; }
+    public required Max35Text StatementIdentification { get; init; }
 
     /// <summary>
     /// Update Type.

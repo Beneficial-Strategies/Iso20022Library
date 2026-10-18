@@ -30,7 +30,7 @@ public record Quantity54
     [IsoId("8f232dcc-bf0b-486e-856f-2f7162b0f450")]
     [DisplayName("Percentage Rate")]
     [IsoXmlTag("PctgRate")]
-    public IsoPercentageRate? PercentageRate { get; init; }
+    public PercentageRate? PercentageRate { get; init; }
 
     /// <summary>
     /// Quantity expressed as an amount representing the face amount of a debt instrument.
@@ -62,5 +62,5 @@ public record Quantity54
     [IsoId("0361cf89-71c7-4aff-83a5-1b42ba74a845")]
     [DisplayName("Other Asset")]
     [IsoXmlTag("OthrAsst")]
-    public IsoMax35Text? OtherAsset { get; init; }
+    public Max35Text? OtherAsset { get; init; }
 }

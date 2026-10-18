@@ -22,7 +22,7 @@ public record ProductClassificationCriteria1
     [IsoId("_hfq2VR3YEeWNp95x0ENf8w")]
     [DisplayName("Classification Financial Instrument")]
     [IsoXmlTag("ClssfctnFinInstrm")]
-    public SimpleValueList<IsoCFIOct2015Identifier> ClassificationFinancialInstrument { get; init; } =
+    public SimpleValueList<CFIOct2015Identifier> ClassificationFinancialInstrument { get; init; } =
         [];
 
     /// <summary>
@@ -31,5 +31,5 @@ public record ProductClassificationCriteria1
     [IsoId("_hfq2VB3YEeWNp95x0ENf8w")]
     [DisplayName("Unique Product Identifier")]
     [IsoXmlTag("UnqPdctIdr")]
-    public SimpleValueList<IsoMax52Text> UniqueProductIdentifier { get; init; } = [];
+    public SimpleValueList<Max52Text> UniqueProductIdentifier { get; init; } = [];
 }

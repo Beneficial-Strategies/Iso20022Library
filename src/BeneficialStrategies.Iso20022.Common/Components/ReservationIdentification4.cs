@@ -35,7 +35,7 @@ public record ReservationIdentification4
     /// </summary>
     [DisplayName("Reservation Identification")]
     [IsoXmlTag("RsvatnId")]
-    public IsoMax35Text? ReservationIdentification { get; init; }
+    public Max35Text? ReservationIdentification { get; init; }
 
     /// <summary>
     /// System Identification.

@@ -24,7 +24,7 @@ public record ReportData3
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Value date for which the pay-in schedule is generated.
@@ -33,7 +33,7 @@ public record ReportData3
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ValueDate { get; init; }
+    public required DateOnly ValueDate { get; init; }
 
     /// <summary>
     /// Date and time on which the report is generated. The offset with UTC may also be specified.
@@ -42,7 +42,7 @@ public record ReportData3
     [DisplayName("Date And Time Stamp")]
     [IsoXmlTag("DtAndTmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime DateAndTimeStamp { get; init; }
+    public required ISODateTime DateAndTimeStamp { get; init; }
 
     /// <summary>
     /// Type of pay-in schedule.
@@ -59,5 +59,5 @@ public record ReportData3
     [DisplayName("Settlement Session")]
     [IsoXmlTag("SttlmSsn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? SettlementSession { get; init; }
+    public Number? SettlementSession { get; init; }
 }

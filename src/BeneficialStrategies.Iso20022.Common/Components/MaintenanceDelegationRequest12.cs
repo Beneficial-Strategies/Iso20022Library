@@ -38,7 +38,7 @@ public record MaintenanceDelegationRequest12
     [IsoId("_1-LEsbYFEfCUZfsQO4rYeA")]
     [DisplayName("TM Date Time")]
     [IsoXmlTag("TMDtTm")]
-    public required IsoISODateTime TMDateTime { get; init; }
+    public required ISODateTime TMDateTime { get; init; }
 
     /// <summary>
     /// Challenge value sent by the POI to be received back in a message response.
@@ -46,7 +46,7 @@ public record MaintenanceDelegationRequest12
     [IsoId("_1-LEt7YFEfCUZfsQO4rYeA")]
     [DisplayName("TM Challenge Value")]
     [IsoXmlTag("TMChllngVal")]
-    public required IsoMax140Binary TMChallengeValue { get; init; }
+    public required Max140Binary TMChallengeValue { get; init; }
 
     /// <summary>
     /// Information on the delegation of a maintenance action.

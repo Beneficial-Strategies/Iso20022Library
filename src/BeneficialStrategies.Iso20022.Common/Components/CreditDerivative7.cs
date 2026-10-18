@@ -21,14 +21,14 @@ public record CreditDerivative7
     /// </summary>
     [DisplayName("Calculation Basis")]
     [IsoXmlTag("ClctnBsis")]
-    public IsoMax35Text? CalculationBasis { get; init; }
+    public Max35Text? CalculationBasis { get; init; }
 
     /// <summary>
     /// Index Factor.
     /// </summary>
     [DisplayName("Index Factor")]
     [IsoXmlTag("IndxFctr")]
-    public IsoPercentageRate? IndexFactor { get; init; }
+    public PercentageRate? IndexFactor { get; init; }
 
     /// <summary>
     /// Payment Frequency.
@@ -56,19 +56,19 @@ public record CreditDerivative7
     /// </summary>
     [DisplayName("Series")]
     [IsoXmlTag("Srs")]
-    public IsoNumber? Series { get; init; }
+    public Number? Series { get; init; }
 
     /// <summary>
     /// Tranche Indicator.
     /// </summary>
     [DisplayName("Tranche Indicator")]
     [IsoXmlTag("TrchInd")]
-    public IsoTrueFalseIndicator? TrancheIndicator { get; init; }
+    public TrueFalseIndicator? TrancheIndicator { get; init; }
 
     /// <summary>
     /// Version.
     /// </summary>
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
-    public IsoNumber? Version { get; init; }
+    public Number? Version { get; init; }
 }

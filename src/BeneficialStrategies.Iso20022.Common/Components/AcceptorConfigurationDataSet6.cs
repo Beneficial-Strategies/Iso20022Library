@@ -42,7 +42,7 @@ public record AcceptorConfigurationDataSet6
     /// </summary>
     [DisplayName("Last Sequence")]
     [IsoXmlTag("LastSeq")]
-    public IsoTrueFalseIndicator? LastSequence { get; init; }
+    public TrueFalseIndicator? LastSequence { get; init; }
 
     /// <summary>
     /// POI Identification.
@@ -56,5 +56,5 @@ public record AcceptorConfigurationDataSet6
     /// </summary>
     [DisplayName("Sequence Counter")]
     [IsoXmlTag("SeqCntr")]
-    public IsoMax9NumericText? SequenceCounter { get; init; }
+    public Max9NumericText? SequenceCounter { get; init; }
 }

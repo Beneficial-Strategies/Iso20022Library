@@ -24,7 +24,7 @@ public record SwitchRedemptionLegExecution2
     [IsoXmlTag("LegId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LegIdentification { get; init; }
+    public Max35Text? LegIdentification { get; init; }
 
     /// <summary>
     /// Unique identifier for an instance of a leg execution within a switch confirmation.
@@ -34,7 +34,7 @@ public record SwitchRedemptionLegExecution2
     [IsoXmlTag("LegExctnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LegExecutionIdentification { get; init; }
+    public Max35Text? LegExecutionIdentification { get; init; }
 
     /// <summary>
     /// Investment fund class to which an investment fund order execution is related.
@@ -59,7 +59,7 @@ public record SwitchRedemptionLegExecution2
     [DisplayName("Holdings Redemption Rate")]
     [IsoXmlTag("HldgsRedRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? HoldingsRedemptionRate { get; init; }
+    public PercentageRate? HoldingsRedemptionRate { get; init; }
 
     /// <summary>
     /// Net amount of money paid to the investor as a result of the redemption.
@@ -100,7 +100,7 @@ public record SwitchRedemptionLegExecution2
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator CumDividendIndicator { get; init; }
+    public required YesNoIndicator CumDividendIndicator { get; init; }
 
     /// <summary>
     /// Part of the price deemed as accrued income or profit rather than capital. The interim profit amount is used for tax purposes.
@@ -181,7 +181,7 @@ public record SwitchRedemptionLegExecution2
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator PhysicalDeliveryIndicator { get; init; }
+    public required YesNoIndicator PhysicalDeliveryIndicator { get; init; }
 
     /// <summary>
     /// Information related to physical delivery of the securities.

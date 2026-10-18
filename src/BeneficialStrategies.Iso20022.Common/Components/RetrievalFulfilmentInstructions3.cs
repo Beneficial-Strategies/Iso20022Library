@@ -21,7 +21,7 @@ public record RetrievalFulfilmentInstructions3
     /// </summary>
     [DisplayName("Actual Delivery Method")]
     [IsoXmlTag("ActlDlvryMtd")]
-    public IsoMax35Text? ActualDeliveryMethod { get; init; }
+    public Max35Text? ActualDeliveryMethod { get; init; }
 
     /// <summary>
     /// Contact.
@@ -35,7 +35,7 @@ public record RetrievalFulfilmentInstructions3
     /// </summary>
     [DisplayName("Established Method")]
     [IsoXmlTag("EstblishdMtd")]
-    public ValueList<IsoMax35Text> EstablishedMethod { get; init; } = [];
+    public ValueList<Max35Text> EstablishedMethod { get; init; } = [];
 
     /// <summary>
     /// Format.
@@ -63,7 +63,7 @@ public record RetrievalFulfilmentInstructions3
     /// </summary>
     [DisplayName("Requested Method")]
     [IsoXmlTag("ReqdMtd")]
-    public ValueList<IsoMax35Text> RequestedMethod { get; init; } = [];
+    public ValueList<Max35Text> RequestedMethod { get; init; } = [];
 
     /// <summary>
     /// Target.
@@ -77,12 +77,12 @@ public record RetrievalFulfilmentInstructions3
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public IsoMax35Text? Type { get; init; }
+    public Max35Text? Type { get; init; }
 
     /// <summary>
     /// Value.
     /// </summary>
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
-    public required IsoMax20KText Value { get; init; }
+    public required Max20KText Value { get; init; }
 }

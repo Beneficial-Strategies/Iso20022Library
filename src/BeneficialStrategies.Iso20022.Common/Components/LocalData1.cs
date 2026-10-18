@@ -32,7 +32,7 @@ public record LocalData1
     [IsoXmlTag("ShrtNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? ShortName { get; init; }
+    public Max70Text? ShortName { get; init; }
 
     /// <summary>
     /// Legal Corporate Name of the party in local language
@@ -42,7 +42,7 @@ public record LocalData1
     [IsoXmlTag("LglCorpNm")]
     [IsoSimpleType(IsoSimpleType.Max210Text)]
     [StringLength(maximumLength: 210, MinimumLength = 1)]
-    public IsoMax210Text? LegalCorporateName { get; init; }
+    public Max210Text? LegalCorporateName { get; init; }
 
     /// <summary>
     /// Additional local language data

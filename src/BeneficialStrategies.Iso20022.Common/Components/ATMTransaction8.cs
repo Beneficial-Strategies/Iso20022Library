@@ -39,7 +39,7 @@ public record ATMTransaction8
     [DisplayName("Receipt Flag")]
     [IsoXmlTag("RctFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ReceiptFlag { get; init; }
+    public TrueFalseIndicator? ReceiptFlag { get; init; }
 
     /// <summary>
     /// True if a balance has to be printed by the ATM on the customer receipt.
@@ -48,7 +48,7 @@ public record ATMTransaction8
     [DisplayName("Balance Print Flag")]
     [IsoXmlTag("BalPrtFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? BalancePrintFlag { get; init; }
+    public TrueFalseIndicator? BalancePrintFlag { get; init; }
 
     /// <summary>
     /// Media mix algorithm, the identification of the algorithm is an agreement between the ATM and the ATM manager.
@@ -58,7 +58,7 @@ public record ATMTransaction8
     [IsoXmlTag("MixTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MixType { get; init; }
+    public Max35Text? MixType { get; init; }
 
     /// <summary>
     /// Media mix to select.

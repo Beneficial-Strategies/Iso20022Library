@@ -24,7 +24,7 @@ public record RegistrationParameters7
     [IsoXmlTag("CertfctnId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? CertificationIdentification { get; init; }
+    public RestrictedFINXMax16Text? CertificationIdentification { get; init; }
 
     /// <summary>
     /// Date/time at which the certificates in the deposit were validated by the agent.
@@ -42,7 +42,7 @@ public record RegistrationParameters7
     [IsoXmlTag("RegarAcct")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoRestrictedFINXMax35Text? RegistrarAccount { get; init; }
+    public RestrictedFINXMax35Text? RegistrarAccount { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier of a certificate assigned by the issuer.

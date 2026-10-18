@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.OrganisationIdentificationScheme
         [IsoXmlTag("Prtry")]
         [IsoSimpleType(IsoSimpleType.RestrictedFINXMax35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoRestrictedFINXMax35Text Value { get; init; }
+        public required RestrictedFINXMax35Text Value { get; init; }
     }
 }

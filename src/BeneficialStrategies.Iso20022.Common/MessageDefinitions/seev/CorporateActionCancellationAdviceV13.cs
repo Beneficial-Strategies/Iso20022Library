@@ -57,7 +57,7 @@ public record CorporateActionCancellationAdviceV13 : IOuterRecord
     /// </summary>
     [DisplayName("Additional Text")]
     [IsoXmlTag("AddtlTxt")]
-    public ValueList<IsoMax8000Text> AdditionalText { get; init; } = [];
+    public ValueList<Max8000Text> AdditionalText { get; init; } = [];
 
     /// <summary>
     /// Cancellation Advice General Information.

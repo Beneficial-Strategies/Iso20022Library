@@ -32,7 +32,7 @@ public record OtherCertificateDataSet1
     [IsoXmlTag("CertId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text CertificateIdentification { get; init; }
+    public required Max35Text CertificateIdentification { get; init; }
 
     /// <summary>
     /// Specifies the type of the certificate.
@@ -49,7 +49,7 @@ public record OtherCertificateDataSet1
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate IssueDate { get; init; }
+    public required DateOnly IssueDate { get; init; }
 
     /// <summary>
     /// Issuer of the certificate, typically the inspection company or its agent.
@@ -65,5 +65,5 @@ public record OtherCertificateDataSet1
     [IsoId("_TnmW1dp-Ed-ak6NoX_4Aeg_237674436")]
     [DisplayName("Certificate Information")]
     [IsoXmlTag("CertInf")]
-    public SimpleValueList<IsoMax350Text> CertificateInformation { get; init; } = [];
+    public SimpleValueList<Max350Text> CertificateInformation { get; init; } = [];
 }

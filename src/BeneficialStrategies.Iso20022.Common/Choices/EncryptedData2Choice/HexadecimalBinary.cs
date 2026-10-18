@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.EncryptedData2Choice
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("HexBinry")]
-        public required IsoMax9999HexBinaryText Value { get; init; }
+        public required Max9999HexBinaryText Value { get; init; }
     }
 }

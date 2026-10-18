@@ -56,7 +56,7 @@ public record CurrencyControlGroupStatus3
     /// </summary>
     [DisplayName("Status Date Time")]
     [IsoXmlTag("StsDtTm")]
-    public IsoISODateTime? StatusDateTime { get; init; }
+    public ISODateTime? StatusDateTime { get; init; }
 
     /// <summary>
     /// Status Reason.

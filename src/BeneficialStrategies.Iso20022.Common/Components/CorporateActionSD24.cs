@@ -28,21 +28,21 @@ public record CorporateActionSD24
     /// </summary>
     [DisplayName("Conditional Payment Applicable Flag")]
     [IsoXmlTag("CondlPmtAplblFlg")]
-    public IsoYesNoIndicator? ConditionalPaymentApplicableFlag { get; init; }
+    public YesNoIndicator? ConditionalPaymentApplicableFlag { get; init; }
 
     /// <summary>
     /// Cut Off Days.
     /// </summary>
     [DisplayName("Cut Off Days")]
     [IsoXmlTag("CutOffDays")]
-    public IsoMax3Number? CutOffDays { get; init; }
+    public Max3Number? CutOffDays { get; init; }
 
     /// <summary>
     /// Dissenter Rights Applicable Flag.
     /// </summary>
     [DisplayName("Dissenter Rights Applicable Flag")]
     [IsoXmlTag("DsstrRghtsAplblFlg")]
-    public IsoYesNoIndicator? DissenterRightsApplicableFlag { get; init; }
+    public YesNoIndicator? DissenterRightsApplicableFlag { get; init; }
 
     /// <summary>
     /// DTC Automated Offer Program.
@@ -56,14 +56,14 @@ public record CorporateActionSD24
     /// </summary>
     [DisplayName("DTC Custody Eligible Flag")]
     [IsoXmlTag("DTCCtdyElgblFlg")]
-    public IsoYesNoIndicator? DTCCustodyEligibleFlag { get; init; }
+    public YesNoIndicator? DTCCustodyEligibleFlag { get; init; }
 
     /// <summary>
     /// DTC Foreign Tax Election Flag.
     /// </summary>
     [DisplayName("DTC Foreign Tax Election Flag")]
     [IsoXmlTag("DTCFrgnTaxElctnFlg")]
-    public IsoYesNoIndicator? DTCForeignTaxElectionFlag { get; init; }
+    public YesNoIndicator? DTCForeignTaxElectionFlag { get; init; }
 
     /// <summary>
     /// DTC Instruction Lockout Indicator.
@@ -84,14 +84,14 @@ public record CorporateActionSD24
     /// </summary>
     [DisplayName("DTC Reorganisation Custody Eligible Flag")]
     [IsoXmlTag("DTCReorgCtdyElgblFlg")]
-    public IsoYesNoIndicator? DTCReorganisationCustodyEligibleFlag { get; init; }
+    public YesNoIndicator? DTCReorganisationCustodyEligibleFlag { get; init; }
 
     /// <summary>
     /// DTC Reorganisation Deposit Eligible Flag.
     /// </summary>
     [DisplayName("DTC Reorganisation Deposit Eligible Flag")]
     [IsoXmlTag("DTCReorgDpstElgblFlg")]
-    public IsoYesNoIndicator? DTCReorganisationDepositEligibleFlag { get; init; }
+    public YesNoIndicator? DTCReorganisationDepositEligibleFlag { get; init; }
 
     /// <summary>
     /// EDS Messaging Country Code.
@@ -119,7 +119,7 @@ public record CorporateActionSD24
     /// </summary>
     [DisplayName("Non Exempt Allowed Indicator")]
     [IsoXmlTag("NonXmptAllwdInd")]
-    public IsoYesNoIndicator? NonExemptAllowedIndicator { get; init; }
+    public YesNoIndicator? NonExemptAllowedIndicator { get; init; }
 
     /// <summary>
     /// Notice Type.
@@ -133,7 +133,7 @@ public record CorporateActionSD24
     /// </summary>
     [DisplayName("Number Of Shares To Be Issued")]
     [IsoXmlTag("NbOfShrsToBeIssd")]
-    public IsoDecimalNumber? NumberOfSharesToBeIssued { get; init; }
+    public DecimalNumber? NumberOfSharesToBeIssued { get; init; }
 
     /// <summary>
     /// Oversubscription Type.
@@ -147,7 +147,7 @@ public record CorporateActionSD24
     /// </summary>
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Proration Return Minimum Quantity Treatment.
@@ -161,54 +161,54 @@ public record CorporateActionSD24
     /// </summary>
     [DisplayName("RDP Reference Number")]
     [IsoXmlTag("RDPRefNb")]
-    public IsoExact32AlphaNumericText? RDPReferenceNumber { get; init; }
+    public Exact32AlphaNumericText? RDPReferenceNumber { get; init; }
 
     /// <summary>
     /// Rights Oversubscription Flag.
     /// </summary>
     [DisplayName("Rights Oversubscription Flag")]
     [IsoXmlTag("RghtsOvrsbcptFlg")]
-    public IsoYesNoIndicator? RightsOversubscriptionFlag { get; init; }
+    public YesNoIndicator? RightsOversubscriptionFlag { get; init; }
 
     /// <summary>
     /// Rights Round Up Privilege Flag.
     /// </summary>
     [DisplayName("Rights Round Up Privilege Flag")]
     [IsoXmlTag("RghtsRndUpPrvlgFlg")]
-    public IsoYesNoIndicator? RightsRoundUpPrivilegeFlag { get; init; }
+    public YesNoIndicator? RightsRoundUpPrivilegeFlag { get; init; }
 
     /// <summary>
     /// Rights Transferable Flag.
     /// </summary>
     [DisplayName("Rights Transferable Flag")]
     [IsoXmlTag("RghtsTrfblFlg")]
-    public IsoYesNoIndicator? RightsTransferableFlag { get; init; }
+    public YesNoIndicator? RightsTransferableFlag { get; init; }
 
     /// <summary>
     /// Solicitation Dealer Fee Flag.
     /// </summary>
     [DisplayName("Solicitation Dealer Fee Flag")]
     [IsoXmlTag("SlctnDealrFeeFlg")]
-    public IsoYesNoIndicator? SolicitationDealerFeeFlag { get; init; }
+    public YesNoIndicator? SolicitationDealerFeeFlag { get; init; }
 
     /// <summary>
     /// Step Up Privilege Flag.
     /// </summary>
     [DisplayName("Step Up Privilege Flag")]
     [IsoXmlTag("StepUpPrvlgFlg")]
-    public IsoYesNoIndicator? StepUpPrivilegeFlag { get; init; }
+    public YesNoIndicator? StepUpPrivilegeFlag { get; init; }
 
     /// <summary>
     /// Surrender Shares To Agent Flag.
     /// </summary>
     [DisplayName("Surrender Shares To Agent Flag")]
     [IsoXmlTag("SrrndrShrsToAgtFlg")]
-    public IsoYesNoIndicator? SurrenderSharesToAgentFlag { get; init; }
+    public YesNoIndicator? SurrenderSharesToAgentFlag { get; init; }
 
     /// <summary>
     /// Total Number Of Shares Offered.
     /// </summary>
     [DisplayName("Total Number Of Shares Offered")]
     [IsoXmlTag("TtlNbOfShrsOfferd")]
-    public IsoDecimalNumber? TotalNumberOfSharesOffered { get; init; }
+    public DecimalNumber? TotalNumberOfSharesOffered { get; init; }
 }

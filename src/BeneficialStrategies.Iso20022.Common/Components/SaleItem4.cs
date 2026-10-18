@@ -21,14 +21,14 @@ public record SaleItem4
     /// </summary>
     [DisplayName("Additional Product Code")]
     [IsoXmlTag("AddtlPdctCd")]
-    public IsoMax70Text? AdditionalProductCode { get; init; }
+    public Max70Text? AdditionalProductCode { get; init; }
 
     /// <summary>
     /// Additional Product Code Type.
     /// </summary>
     [DisplayName("Additional Product Code Type")]
     [IsoXmlTag("AddtlPdctCdTp")]
-    public IsoMax35Text? AdditionalProductCodeType { get; init; }
+    public Max35Text? AdditionalProductCodeType { get; init; }
 
     /// <summary>
     /// Adjusted Amount.
@@ -56,7 +56,7 @@ public record SaleItem4
     /// </summary>
     [DisplayName("Insurance Indicator")]
     [IsoXmlTag("InsrncInd")]
-    public IsoTrueFalseIndicator? InsuranceIndicator { get; init; }
+    public TrueFalseIndicator? InsuranceIndicator { get; init; }
 
     /// <summary>
     /// Non Adjusted Total Amount.
@@ -77,21 +77,21 @@ public record SaleItem4
     /// </summary>
     [DisplayName("Other Unit Of Measure")]
     [IsoXmlTag("OthrUnitOfMeasr")]
-    public IsoMax35Text? OtherUnitOfMeasure { get; init; }
+    public Max35Text? OtherUnitOfMeasure { get; init; }
 
     /// <summary>
     /// Product Code.
     /// </summary>
     [DisplayName("Product Code")]
     [IsoXmlTag("PdctCd")]
-    public IsoMax70Text? ProductCode { get; init; }
+    public Max70Text? ProductCode { get; init; }
 
     /// <summary>
     /// Product Code Modifier.
     /// </summary>
     [DisplayName("Product Code Modifier")]
     [IsoXmlTag("PdctCdModfr")]
-    public IsoDecimalNumber? ProductCodeModifier { get; init; }
+    public DecimalNumber? ProductCodeModifier { get; init; }
 
     /// <summary>
     /// Product Code Type.
@@ -105,21 +105,21 @@ public record SaleItem4
     /// </summary>
     [DisplayName("Product Description")]
     [IsoXmlTag("PdctDesc")]
-    public IsoMax140Text? ProductDescription { get; init; }
+    public Max140Text? ProductDescription { get; init; }
 
     /// <summary>
     /// Product Quantity.
     /// </summary>
     [DisplayName("Product Quantity")]
     [IsoXmlTag("PdctQty")]
-    public IsoDecimalNumber? ProductQuantity { get; init; }
+    public DecimalNumber? ProductQuantity { get; init; }
 
     /// <summary>
     /// Product Type.
     /// </summary>
     [DisplayName("Product Type")]
     [IsoXmlTag("PdctTp")]
-    public IsoMax35Text? ProductType { get; init; }
+    public Max35Text? ProductType { get; init; }
 
     /// <summary>
     /// Tax.

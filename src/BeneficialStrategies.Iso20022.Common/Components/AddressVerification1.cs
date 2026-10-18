@@ -23,7 +23,7 @@ public record AddressVerification1
     [DisplayName("Address Digits")]
     [IsoXmlTag("AdrDgts")]
     [IsoSimpleType(IsoSimpleType.Max5NumericText)]
-    public IsoMax5NumericText? AddressDigits { get; init; }
+    public Max5NumericText? AddressDigits { get; init; }
 
     /// <summary>
     /// Numeric characters from the cardholder&apos;s postal code.
@@ -32,5 +32,5 @@ public record AddressVerification1
     [DisplayName("Postal Code Digits")]
     [IsoXmlTag("PstlCdDgts")]
     [IsoSimpleType(IsoSimpleType.Max5NumericText)]
-    public IsoMax5NumericText? PostalCodeDigits { get; init; }
+    public Max5NumericText? PostalCodeDigits { get; init; }
 }

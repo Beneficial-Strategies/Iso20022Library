@@ -32,7 +32,7 @@ public record ContractValuationData2
     [DisplayName("Time Stamp")]
     [IsoXmlTag("TmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime TimeStamp { get; init; }
+    public required ISODateTime TimeStamp { get; init; }
 
     /// <summary>
     /// Indicate whether valuation was performed mark to market, mark to model or provided by the CCP.

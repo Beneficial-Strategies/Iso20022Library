@@ -35,42 +35,42 @@ public record Tax41
     /// </summary>
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax35Text? Description { get; init; }
+    public Max35Text? Description { get; init; }
 
     /// <summary>
     /// Exemption.
     /// </summary>
     [DisplayName("Exemption")]
     [IsoXmlTag("Xmptn")]
-    public IsoTrueFalseIndicator? Exemption { get; init; }
+    public TrueFalseIndicator? Exemption { get; init; }
 
     /// <summary>
     /// Exempt Reason.
     /// </summary>
     [DisplayName("Exempt Reason")]
     [IsoXmlTag("XmptRsn")]
-    public IsoMax35Text? ExemptReason { get; init; }
+    public Max35Text? ExemptReason { get; init; }
 
     /// <summary>
     /// Included In Total.
     /// </summary>
     [DisplayName("Included In Total")]
     [IsoXmlTag("InclInTtl")]
-    public IsoTrueFalseIndicator? IncludedInTotal { get; init; }
+    public TrueFalseIndicator? IncludedInTotal { get; init; }
 
     /// <summary>
     /// Other Type.
     /// </summary>
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Rate.
     /// </summary>
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
-    public IsoPercentageRate? Rate { get; init; }
+    public PercentageRate? Rate { get; init; }
 
     /// <summary>
     /// Type.

@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice
         /// </summary>
         [IsoXmlTag("RvslInitn")]
         [IsoSimpleType(IsoSimpleType.Max2MBBinary)]
-        public required IsoMax2MBBinary Value { get; init; }
+        public required Max2MBBinary Value { get; init; }
     }
 }

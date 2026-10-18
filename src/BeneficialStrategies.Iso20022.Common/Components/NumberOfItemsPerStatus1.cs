@@ -31,5 +31,5 @@ public record NumberOfItemsPerStatus1
     [DisplayName("Number Of Items")]
     [IsoXmlTag("NbOfItms")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText NumberOfItems { get; init; }
+    public required Max15NumericText NumberOfItems { get; init; }
 }

@@ -28,19 +28,19 @@ public record RiskInputData2
     /// </summary>
     [DisplayName("Other Entity Type")]
     [IsoXmlTag("OthrNttyTp")]
-    public IsoMax35Text? OtherEntityType { get; init; }
+    public Max35Text? OtherEntityType { get; init; }
 
     /// <summary>
     /// Type.
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required IsoMax35Text Type { get; init; }
+    public required Max35Text Type { get; init; }
 
     /// <summary>
     /// Value.
     /// </summary>
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
-    public required IsoMax10KText Value { get; init; }
+    public required Max10KText Value { get; init; }
 }

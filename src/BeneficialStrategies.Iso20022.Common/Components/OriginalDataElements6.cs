@@ -38,7 +38,7 @@ public record OriginalDataElements6
     [IsoId("_U2-JdSH4EfCkq6-p7S3J1Q")]
     [DisplayName("Acquirer Identification")]
     [IsoXmlTag("AcqrrId")]
-    public IsoMax11NumericText? AcquirerIdentification { get; init; }
+    public Max11NumericText? AcquirerIdentification { get; init; }
 
     /// <summary>
     /// Code identifying the sender of the original message.
@@ -46,7 +46,7 @@ public record OriginalDataElements6
     [IsoId("_U2-JdyH4EfCkq6-p7S3J1Q")]
     [DisplayName("Sender Identification")]
     [IsoXmlTag("SndrId")]
-    public IsoMax11NumericText? SenderIdentification { get; init; }
+    public Max11NumericText? SenderIdentification { get; init; }
 
     /// <summary>
     /// Type of transaction associated with the main service.
@@ -102,7 +102,7 @@ public record OriginalDataElements6
     [IsoId("_U2-JkSH4EfCkq6-p7S3J1Q")]
     [DisplayName("Approval Code")]
     [IsoXmlTag("ApprvlCd")]
-    public IsoExact6AlphaNumericText? ApprovalCode { get; init; }
+    public Exact6AlphaNumericText? ApprovalCode { get; init; }
 
     /// <summary>
     /// Deferred settlement date of the original transaction.
@@ -110,5 +110,5 @@ public record OriginalDataElements6
     [IsoId("_KW-qkCH6EfCkq6-p7S3J1Q")]
     [DisplayName("Deferred Settlement Date")]
     [IsoXmlTag("DfrrdSttlmDt")]
-    public IsoISODate? DeferredSettlementDate { get; init; }
+    public DateOnly? DeferredSettlementDate { get; init; }
 }

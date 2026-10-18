@@ -47,7 +47,7 @@ public record InvestmentAccountOwnershipInformation12
     [DisplayName("Ownership Beneficiary Rate")]
     [IsoXmlTag("OwnrshBnfcryRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? OwnershipBeneficiaryRate { get; init; }
+    public PercentageRate? OwnershipBeneficiaryRate { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by an organisation, to unambiguously identify a party.
@@ -57,7 +57,7 @@ public record InvestmentAccountOwnershipInformation12
     [IsoXmlTag("ClntId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClientIdentification { get; init; }
+    public Max35Text? ClientIdentification { get; init; }
 
     /// <summary>
     /// Indicates whether an owner of the account may benefit from a fiscal exemption or amnesty, for example, when declaring overseas investments.
@@ -66,7 +66,7 @@ public record InvestmentAccountOwnershipInformation12
     [DisplayName("Fiscal Exemption")]
     [IsoXmlTag("FsclXmptn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? FiscalExemption { get; init; }
+    public YesNoIndicator? FiscalExemption { get; init; }
 
     /// <summary>
     /// Indicates whether the signature of the account owner is required to authorise transactions on the account.
@@ -75,7 +75,7 @@ public record InvestmentAccountOwnershipInformation12
     [DisplayName("Signatory Right Indicator")]
     [IsoXmlTag("SgntryRghtInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? SignatoryRightIndicator { get; init; }
+    public YesNoIndicator? SignatoryRightIndicator { get; init; }
 
     /// <summary>
     /// Details about the MiFID classification of the account owner.
@@ -197,7 +197,7 @@ public record InvestmentAccountOwnershipInformation12
     [IsoXmlTag("ElctrncMlngSvcRef")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? ElectronicMailingServiceReference { get; init; }
+    public Max350Text? ElectronicMailingServiceReference { get; init; }
 
     /// <summary>
     /// Communication device number or electronic address used for communication.

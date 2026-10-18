@@ -38,7 +38,7 @@ public record Tax43
     [IsoId("84a3ce1c-rate-0001-0003-5b77709f3523")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
-    public IsoPercentageRate? Rate { get; init; }
+    public PercentageRate? Rate { get; init; }
 
     /// <summary>
     /// Country where the tax is due.

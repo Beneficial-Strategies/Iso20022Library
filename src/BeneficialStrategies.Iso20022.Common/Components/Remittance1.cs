@@ -35,5 +35,5 @@ public record Remittance1
     /// </summary>
     [DisplayName("Unstructured")]
     [IsoXmlTag("Ustrd")]
-    public ValueList<IsoMax140Text> Unstructured { get; init; } = [];
+    public ValueList<Max140Text> Unstructured { get; init; } = [];
 }

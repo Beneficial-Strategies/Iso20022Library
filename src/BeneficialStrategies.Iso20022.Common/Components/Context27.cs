@@ -46,7 +46,7 @@ public record Context27
     [IsoId("_qXJIOSnUEfCD0_iZ8tw-zA")]
     [DisplayName("Merchant Category Specific Data")]
     [IsoXmlTag("MrchntCtgySpcfcData")]
-    public IsoMax35Text? MerchantCategorySpecificData { get; init; }
+    public Max35Text? MerchantCategorySpecificData { get; init; }
 
     /// <summary>
     /// Other merchant category assigned by local or national scheme.
@@ -54,7 +54,7 @@ public record Context27
     [IsoId("_qXJIOynUEfCD0_iZ8tw-zA")]
     [DisplayName("Other Merchant Category")]
     [IsoXmlTag("OthrMrchntCtgy")]
-    public IsoMax35Text? OtherMerchantCategory { get; init; }
+    public Max35Text? OtherMerchantCategory { get; init; }
 
     /// <summary>
     /// A code identifying transaction conditions at the point-of-sale or point of service.
@@ -70,7 +70,7 @@ public record Context27
     [IsoId("_qXJIPSnUEfCD0_iZ8tw-zA")]
     [DisplayName("Card Present")]
     [IsoXmlTag("CardPres")]
-    public IsoTrueFalseIndicator? CardPresent { get; init; }
+    public TrueFalseIndicator? CardPresent { get; init; }
 
     /// <summary>
     /// Indicates whether the transaction has been initiated in presence of the cardholder or not.
@@ -78,7 +78,7 @@ public record Context27
     [IsoId("_qXJISynUEfCD0_iZ8tw-zA")]
     [DisplayName("Cardholder Present")]
     [IsoXmlTag("CrdhldrPres")]
-    public IsoTrueFalseIndicator? CardholderPresent { get; init; }
+    public TrueFalseIndicator? CardholderPresent { get; init; }
 
     /// <summary>
     /// Indicates whether the automated device was operated solely by the cardholder or not.
@@ -86,7 +86,7 @@ public record Context27
     [IsoId("_qXJIWSnUEfCD0_iZ8tw-zA")]
     [DisplayName("Cardholder Activated")]
     [IsoXmlTag("CrdhldrActvtd")]
-    public IsoTrueFalseIndicator? CardholderActivated { get; init; }
+    public TrueFalseIndicator? CardholderActivated { get; init; }
 
     /// <summary>
     /// Transaction initiated through a transponder or not.
@@ -94,7 +94,7 @@ public record Context27
     [IsoId("_qXJIYSnUEfCD0_iZ8tw-zA")]
     [DisplayName("Transponder Initiated")]
     [IsoXmlTag("TrnspndrInittd")]
-    public IsoTrueFalseIndicator? TransponderInitiated { get; init; }
+    public TrueFalseIndicator? TransponderInitiated { get; init; }
 
     /// <summary>
     /// Indicates a transit transaction.
@@ -102,7 +102,7 @@ public record Context27
     [IsoId("_qXJIYynUEfCD0_iZ8tw-zA")]
     [DisplayName("Transit")]
     [IsoXmlTag("Trnst")]
-    public IsoTrueFalseIndicator? Transit { get; init; }
+    public TrueFalseIndicator? Transit { get; init; }
 
     /// <summary>
     /// Card acceptor representative in attendance at the point of service during the transaction.
@@ -110,7 +110,7 @@ public record Context27
     [IsoId("_qXJIZSnUEfCD0_iZ8tw-zA")]
     [DisplayName("Attended")]
     [IsoXmlTag("Attndd")]
-    public IsoTrueFalseIndicator? Attended { get; init; }
+    public TrueFalseIndicator? Attended { get; init; }
 
     /// <summary>
     /// Transaction category level on an unattended terminal.
@@ -118,7 +118,7 @@ public record Context27
     [IsoId("_qXJIeSnUEfCD0_iZ8tw-zA")]
     [DisplayName("Unattended Level Category")]
     [IsoXmlTag("UattnddLvlCtgy")]
-    public IsoMax35NumericText? UnattendedLevelCategory { get; init; }
+    public Max35NumericText? UnattendedLevelCategory { get; init; }
 
     /// <summary>
     /// Indicates whether the point of service is an e-commerce one or not.
@@ -126,7 +126,7 @@ public record Context27
     [IsoId("_qXJIeynUEfCD0_iZ8tw-zA")]
     [DisplayName("E Commerce")]
     [IsoXmlTag("EComrc")]
-    public IsoTrueFalseIndicator? ECommerce { get; init; }
+    public TrueFalseIndicator? ECommerce { get; init; }
 
     /// <summary>
     /// Contains the proposed level of security of e-commerce transaction.
@@ -134,7 +134,7 @@ public record Context27
     [IsoId("_qXJIfSnUEfCD0_iZ8tw-zA")]
     [DisplayName("E Commerce Indicator Proposed")]
     [IsoXmlTag("EComrcIndPropsd")]
-    public IsoMax35Text? ECommerceIndicatorProposed { get; init; }
+    public Max35Text? ECommerceIndicatorProposed { get; init; }
 
     /// <summary>
     /// Contains the applied level of security of e-commerce transaction.
@@ -142,7 +142,7 @@ public record Context27
     [IsoId("_qXJIhSnUEfCD0_iZ8tw-zA")]
     [DisplayName("E Commerce Indicator Applied")]
     [IsoXmlTag("EComrcIndApld")]
-    public IsoMax35Text? ECommerceIndicatorApplied { get; init; }
+    public Max35Text? ECommerceIndicatorApplied { get; init; }
 
     /// <summary>
     /// Contains electronic commerce data.
@@ -174,7 +174,7 @@ public record Context27
     [IsoId("_qXJIkynUEfCD0_iZ8tw-zA")]
     [DisplayName("Delayed Authorisation")]
     [IsoXmlTag("DelydAuthstn")]
-    public IsoTrueFalseIndicator? DelayedAuthorisation { get; init; }
+    public TrueFalseIndicator? DelayedAuthorisation { get; init; }
 
     /// <summary>
     /// Indicates a delayed charge.
@@ -182,7 +182,7 @@ public record Context27
     [IsoId("_qXJIlSnUEfCD0_iZ8tw-zA")]
     [DisplayName("Delayed Charges")]
     [IsoXmlTag("DelydChrgs")]
-    public IsoTrueFalseIndicator? DelayedCharges { get; init; }
+    public TrueFalseIndicator? DelayedCharges { get; init; }
 
     /// <summary>
     /// Indicates that the cardholder failed to arrive at the property and was therefore charged a no-show fee.
@@ -190,7 +190,7 @@ public record Context27
     [IsoId("_qXJIlynUEfCD0_iZ8tw-zA")]
     [DisplayName("No Show")]
     [IsoXmlTag("NoShow")]
-    public IsoTrueFalseIndicator? NoShow { get; init; }
+    public TrueFalseIndicator? NoShow { get; init; }
 
     /// <summary>
     /// Indicates a reauthorisation.
@@ -198,7 +198,7 @@ public record Context27
     [IsoId("_qXJImSnUEfCD0_iZ8tw-zA")]
     [DisplayName("Reauthorisation")]
     [IsoXmlTag("Reauthstn")]
-    public IsoTrueFalseIndicator? Reauthorisation { get; init; }
+    public TrueFalseIndicator? Reauthorisation { get; init; }
 
     /// <summary>
     /// Indicates a resubmission.
@@ -206,7 +206,7 @@ public record Context27
     [IsoId("_qXJImynUEfCD0_iZ8tw-zA")]
     [DisplayName("Re Submission")]
     [IsoXmlTag("ReSubmissn")]
-    public IsoTrueFalseIndicator? ReSubmission { get; init; }
+    public TrueFalseIndicator? ReSubmission { get; init; }
 
     /// <summary>
     /// Indicates the partial shipment.
@@ -214,7 +214,7 @@ public record Context27
     [IsoId("_qXJInSnUEfCD0_iZ8tw-zA")]
     [DisplayName("Partial Shipment")]
     [IsoXmlTag("PrtlShipmnt")]
-    public IsoTrueFalseIndicator? PartialShipment { get; init; }
+    public TrueFalseIndicator? PartialShipment { get; init; }
 
     /// <summary>
     /// Indicates whether the point of service supports partial approval or not.
@@ -222,7 +222,7 @@ public record Context27
     [IsoId("_qXJInynUEfCD0_iZ8tw-zA")]
     [DisplayName("Partial Approval Supported")]
     [IsoXmlTag("PrtlApprvlSpprtd")]
-    public IsoTrueFalseIndicator? PartialApprovalSupported { get; init; }
+    public TrueFalseIndicator? PartialApprovalSupported { get; init; }
 
     /// <summary>
     /// Indicate the merchant's preference of the party to create VAT documentation.
@@ -230,7 +230,7 @@ public record Context27
     [IsoId("_QTF64SnVEfCD0_iZ8tw-zA")]
     [DisplayName("VAT Documentation Request")]
     [IsoXmlTag("VATDcmnttnReq")]
-    public IsoMax10Text? VATDocumentationRequest { get; init; }
+    public Max10Text? VATDocumentationRequest { get; init; }
 
     /// <summary>
     /// Indicate the issuer's decision of the party to create VAT documentation.
@@ -238,7 +238,7 @@ public record Context27
     [IsoId("_3NWlgSnUEfCD0_iZ8tw-zA")]
     [DisplayName("VAT Documentation Response")]
     [IsoXmlTag("VATDcmnttnRspn")]
-    public IsoMax10Text? VATDocumentationResponse { get; init; }
+    public Max10Text? VATDocumentationResponse { get; init; }
 
     /// <summary>
     /// The date on which the sale or purchase is expected to occur.
@@ -246,7 +246,7 @@ public record Context27
     [IsoId("_5YluBCnUEfCD0_iZ8tw-zA")]
     [DisplayName("Date Anticipated")]
     [IsoXmlTag("DtAntcptd")]
-    public IsoISODate? DateAnticipated { get; init; }
+    public DateOnly? DateAnticipated { get; init; }
 
     /// <summary>
     /// Contains network or scheme calculated maximum processing date when the clearing will occur.
@@ -254,7 +254,7 @@ public record Context27
     [IsoId("_18yVgSnUEfCD0_iZ8tw-zA")]
     [DisplayName("Maximum Processing Date")]
     [IsoXmlTag("MaxPrcgDt")]
-    public IsoJulianDate? MaximumProcessingDate { get; init; }
+    public JulianDate? MaximumProcessingDate { get; init; }
 
     /// <summary>
     /// Security characteristics of the communication link in the card acceptance process.
@@ -270,7 +270,7 @@ public record Context27
     [IsoId("_qXJIqynUEfCD0_iZ8tw-zA")]
     [DisplayName("Temporary Secure Card Data Reused")]
     [IsoXmlTag("TempScrCardDataReusd")]
-    public IsoTrueFalseIndicator? TemporarySecureCardDataReused { get; init; }
+    public TrueFalseIndicator? TemporarySecureCardDataReused { get; init; }
 
     /// <summary>
     /// Storage location of payment credential (for example, Acceptor or third party wallet).
@@ -278,7 +278,7 @@ public record Context27
     [IsoId("_qXJIrSnUEfCD0_iZ8tw-zA")]
     [DisplayName("Storage Location")]
     [IsoXmlTag("StorgLctn")]
-    public IsoMax35Text? StorageLocation { get; init; }
+    public Max35Text? StorageLocation { get; init; }
 
     /// <summary>
     /// Indicates the relationship between payment credential and merchant.
@@ -286,7 +286,7 @@ public record Context27
     [IsoId("_qXJIrynUEfCD0_iZ8tw-zA")]
     [DisplayName("Payment Credential Merchant Relationship")]
     [IsoXmlTag("PmtCrdntlMrchntRltsh")]
-    public IsoTrueFalseIndicator? PaymentCredentialMerchantRelationship { get; init; }
+    public TrueFalseIndicator? PaymentCredentialMerchantRelationship { get; init; }
 
     /// <summary>
     /// Reserved for private data.

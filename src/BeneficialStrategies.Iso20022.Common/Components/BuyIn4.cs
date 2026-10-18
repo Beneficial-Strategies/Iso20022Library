@@ -23,7 +23,7 @@ public record BuyIn4
     [DisplayName("Warning Indicator")]
     [IsoXmlTag("WrngInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? WarningIndicator { get; init; }
+    public YesNoIndicator? WarningIndicator { get; init; }
 
     /// <summary>
     /// Provides the date at which the buy-in will occur.
@@ -40,7 +40,7 @@ public record BuyIn4
     [DisplayName("Cancellation Limit Date")]
     [IsoXmlTag("CxlLmtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? CancellationLimitDate { get; init; }
+    public DateOnly? CancellationLimitDate { get; init; }
 
     /// <summary>
     /// Identifies the date by which the buy-in operation is reversed by the CCP.
@@ -49,5 +49,5 @@ public record BuyIn4
     [DisplayName("Buy In Reversion Date")]
     [IsoXmlTag("BuyInRvrsnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? BuyInReversionDate { get; init; }
+    public DateOnly? BuyInReversionDate { get; init; }
 }

@@ -28,7 +28,7 @@ public record AuthenticatedData10
     /// </summary>
     [DisplayName("MAC")]
     [IsoXmlTag("MAC")]
-    public required IsoMax140Binary MAC { get; init; }
+    public required Max140Binary MAC { get; init; }
 
     /// <summary>
     /// MAC Algorithm.
@@ -49,5 +49,5 @@ public record AuthenticatedData10
     /// </summary>
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
-    public IsoNumber? Version { get; init; }
+    public Number? Version { get; init; }
 }

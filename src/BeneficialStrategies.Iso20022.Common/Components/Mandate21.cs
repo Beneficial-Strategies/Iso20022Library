@@ -98,21 +98,21 @@ public record Mandate21
     /// </summary>
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
-    public required IsoMax35Text MandateIdentification { get; init; }
+    public required Max35Text MandateIdentification { get; init; }
 
     /// <summary>
     /// Reference assigned by a creditor or ultimate creditor for internal usage for the mandate.
     /// </summary>
     [DisplayName("Mandate Reference")]
     [IsoXmlTag("MndtRef")]
-    public IsoMax35Text? MandateReference { get; init; }
+    public Max35Text? MandateReference { get; init; }
 
     /// <summary>
     /// Identification for the mandate request, as assigned by the initiating party.
     /// </summary>
     [DisplayName("Mandate Request Identification")]
     [IsoXmlTag("MndtReqId")]
-    public IsoMax35Text? MandateRequestIdentification { get; init; }
+    public Max35Text? MandateRequestIdentification { get; init; }
 
     /// <summary>
     /// Maximum amount that may be collected from the debtor's account, per instruction.
@@ -147,7 +147,7 @@ public record Mandate21
     /// </summary>
     [DisplayName("Tracking Indicator")]
     [IsoXmlTag("TrckgInd")]
-    public required IsoTrueFalseIndicator TrackingIndicator { get; init; }
+    public required TrueFalseIndicator TrackingIndicator { get; init; }
 
     /// <summary>
     /// Specifies the type of mandate, such as paper, electronic or scheme.

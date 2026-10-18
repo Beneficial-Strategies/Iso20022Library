@@ -24,7 +24,7 @@ public record Activity1
     [IsoXmlTag("MsgNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public required IsoMax70Text MessageName { get; init; }
+    public required Max70Text MessageName { get; init; }
 
     /// <summary>
     /// Further information on a message associated with the activity.
@@ -34,5 +34,5 @@ public record Activity1
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Description { get; init; }
+    public Max140Text? Description { get; init; }
 }

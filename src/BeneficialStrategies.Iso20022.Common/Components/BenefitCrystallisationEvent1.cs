@@ -32,7 +32,7 @@ public record BenefitCrystallisationEvent1
     [IsoXmlTag("EvtNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? EventNumber { get; init; }
+    public Max35Text? EventNumber { get; init; }
 
     /// <summary>
     /// Date on which the crystallisation event was triggered.
@@ -41,7 +41,7 @@ public record BenefitCrystallisationEvent1
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? EventDate { get; init; }
+    public DateOnly? EventDate { get; init; }
 
     /// <summary>
     /// Amount of the crystallisation event.
@@ -58,7 +58,7 @@ public record BenefitCrystallisationEvent1
     [DisplayName("Percentage Of Allowance")]
     [IsoXmlTag("PctgOfAllwnc")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? PercentageOfAllowance { get; init; }
+    public PercentageRate? PercentageOfAllowance { get; init; }
 
     /// <summary>
     /// Additional information about the benefit crystallisation event.

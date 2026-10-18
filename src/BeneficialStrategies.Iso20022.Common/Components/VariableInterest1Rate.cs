@@ -24,7 +24,7 @@ public record VariableInterest1Rate
     [IsoXmlTag("Indx")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Index { get; init; }
+    public required Max35Text Index { get; init; }
 
     /// <summary>
     /// Used to express differences in interest rates, for example, a difference of 0.10% is equivalent to a change of 10 basis points.
@@ -33,5 +33,5 @@ public record VariableInterest1Rate
     [DisplayName("Basis Point Spread")]
     [IsoXmlTag("BsisPtSprd")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? BasisPointSpread { get; init; }
+    public Number? BasisPointSpread { get; init; }
 }

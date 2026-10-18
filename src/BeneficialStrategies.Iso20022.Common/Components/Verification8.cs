@@ -30,7 +30,7 @@ public record Verification8
     [IsoId("_l0nddT1vEfCQAqQ9lolFUg")]
     [DisplayName("Sub Type")]
     [IsoXmlTag("SubTp")]
-    public IsoMax35Text? SubType { get; init; }
+    public Max35Text? SubType { get; init; }
 
     /// <summary>
     /// Contains verification or authentication data.
@@ -70,5 +70,5 @@ public record Verification8
     [IsoId("_l0ndlT1vEfCQAqQ9lolFUg")]
     [DisplayName("Result Details")]
     [IsoXmlTag("RsltDtls")]
-    public IsoATICALaxProcessing? ResultDetails { get; init; }
+    public ATICALaxProcessing? ResultDetails { get; init; }
 }

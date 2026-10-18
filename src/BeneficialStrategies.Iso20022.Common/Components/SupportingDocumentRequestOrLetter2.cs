@@ -24,7 +24,7 @@ public record SupportingDocumentRequestOrLetter2
     [IsoXmlTag("ReqOrLttrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text RequestOrLetterIdentification { get; init; }
+    public required Max35Text RequestOrLetterIdentification { get; init; }
 
     /// <summary>
     /// Date of the supporting document request or the letter.
@@ -33,7 +33,7 @@ public record SupportingDocumentRequestOrLetter2
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Sender of the request or letter.
@@ -67,7 +67,7 @@ public record SupportingDocumentRequestOrLetter2
     [IsoXmlTag("Sbjt")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text Subject { get; init; }
+    public required Max140Text Subject { get; init; }
 
     /// <summary>
     /// Provides the type of supporting document requested.
@@ -85,7 +85,7 @@ public record SupportingDocumentRequestOrLetter2
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max1025Text)]
     [StringLength(maximumLength: 1025, MinimumLength = 1)]
-    public IsoMax1025Text? Description { get; init; }
+    public Max1025Text? Description { get; init; }
 
     /// <summary>
     /// Flag to indicate whether a response is required or not.
@@ -95,7 +95,7 @@ public record SupportingDocumentRequestOrLetter2
     [DisplayName("Response Required")]
     [IsoXmlTag("RspnReqrd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator ResponseRequired { get; init; }
+    public required TrueFalseIndicator ResponseRequired { get; init; }
 
     /// <summary>
     /// Date by which the response to the request is expected.
@@ -104,7 +104,7 @@ public record SupportingDocumentRequestOrLetter2
     [DisplayName("Due Date")]
     [IsoXmlTag("DueDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DueDate { get; init; }
+    public DateOnly? DueDate { get; init; }
 
     /// <summary>
     /// Documents provided as attachments to the supporting document request or letter.

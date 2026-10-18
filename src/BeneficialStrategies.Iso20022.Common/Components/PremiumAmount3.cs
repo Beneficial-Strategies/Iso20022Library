@@ -47,7 +47,7 @@ public record PremiumAmount3
     [DisplayName("Decimal Places")]
     [IsoXmlTag("DcmlPlcs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber DecimalPlaces { get; init; }
+    public required Number DecimalPlaces { get; init; }
 
     /// <summary>
     /// Date on which the premium must be settled.
@@ -56,7 +56,7 @@ public record PremiumAmount3
     [DisplayName("Premium Settlement Date")]
     [IsoXmlTag("PrmSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate PremiumSettlementDate { get; init; }
+    public required DateOnly PremiumSettlementDate { get; init; }
 
     /// <summary>
     /// Premium fee payer related information.
@@ -66,7 +66,7 @@ public record PremiumAmount3
     [IsoXmlTag("PyerPtyRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text PayerPartyReference { get; init; }
+    public required Max35Text PayerPartyReference { get; init; }
 
     /// <summary>
     /// Premium fee receiver related information.
@@ -76,5 +76,5 @@ public record PremiumAmount3
     [IsoXmlTag("RcvrPtyRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ReceiverPartyReference { get; init; }
+    public required Max35Text ReceiverPartyReference { get; init; }
 }

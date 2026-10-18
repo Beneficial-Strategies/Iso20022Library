@@ -48,7 +48,7 @@ public record TemporaryServices2
     [DisplayName("Flat Rate Indicator")]
     [IsoXmlTag("FlatRateInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? FlatRateIndicator { get; init; }
+    public TrueFalseIndicator? FlatRateIndicator { get; init; }
 
     /// <summary>
     /// Contains the discount amount.
@@ -66,7 +66,7 @@ public record TemporaryServices2
     [IsoXmlTag("SummryCmmdtyId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SummaryCommodityIdentification { get; init; }
+    public Max35Text? SummaryCommodityIdentification { get; init; }
 
     /// <summary>
     /// Contains the details of the labour performed and associated duration and billing rate.
@@ -108,5 +108,5 @@ public record TemporaryServices2
     [IsoXmlTag("AddtlData")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AdditionalData { get; init; }
+    public Max350Text? AdditionalData { get; init; }
 }

@@ -58,7 +58,7 @@ public record PayInEventAcknowledgementV02 : IOuterRecord
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// To indicate the requested CLS Settlement Session that the related trade is part of.
@@ -67,7 +67,7 @@ public record PayInEventAcknowledgementV02 : IOuterRecord
     [DisplayName("Settlement Session Identifier")]
     [IsoXmlTag("SttlmSsnIdr")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    public IsoExact4AlphaNumericText? SettlementSessionIdentifier { get; init; }
+    public Exact4AlphaNumericText? SettlementSessionIdentifier { get; init; }
 
     /// <summary>
     /// Details of the pay in schedule or pay in call being acknowledged.

@@ -22,7 +22,7 @@ public record FinancialInstitutionData1
     [IsoId("_fq2RQXSCEfC68Y4jZPNEug")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Business or client identification for financial institution.
@@ -30,7 +30,7 @@ public record FinancialInstitutionData1
     [IsoId("_we_j7HSCEfC68Y4jZPNEug")]
     [DisplayName("Business Identification")]
     [IsoXmlTag("BizId")]
-    public IsoMax15AlphaNumericText? BusinessIdentification { get; init; }
+    public Max15AlphaNumericText? BusinessIdentification { get; init; }
 
     /// <summary>
     /// Country of the financial institution.
@@ -46,7 +46,7 @@ public record FinancialInstitutionData1
     [IsoId("_we_j7XSCEfC68Y4jZPNEug")]
     [DisplayName("Business Name")]
     [IsoXmlTag("BizNm")]
-    public IsoMax35Text? BusinessName { get; init; }
+    public Max35Text? BusinessName { get; init; }
 
     /// <summary>
     /// Legal Corporate Name of the financial institution.
@@ -54,7 +54,7 @@ public record FinancialInstitutionData1
     [IsoId("_fq2RSXSCEfC68Y4jZPNEug")]
     [DisplayName("Legal Corporate Name")]
     [IsoXmlTag("LglCorpNm")]
-    public IsoMax99Text? LegalCorporateName { get; init; }
+    public Max99Text? LegalCorporateName { get; init; }
 
     /// <summary>
     /// Account number from which the funds get debited or credited.
@@ -62,7 +62,7 @@ public record FinancialInstitutionData1
     [IsoId("_fq2RTXSCEfC68Y4jZPNEug")]
     [DisplayName("Account Number")]
     [IsoXmlTag("AcctNb")]
-    public IsoMax35Text? AccountNumber { get; init; }
+    public Max35Text? AccountNumber { get; init; }
 
     /// <summary>
     /// Address of the settlement institution.
@@ -78,7 +78,7 @@ public record FinancialInstitutionData1
     [IsoId("_we_j73SCEfC68Y4jZPNEug")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -86,7 +86,7 @@ public record FinancialInstitutionData1
     [IsoId("_we_j8HSCEfC68Y4jZPNEug")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 
     /// <summary>
     /// Contains local language equivalent(s) of data in the current component.

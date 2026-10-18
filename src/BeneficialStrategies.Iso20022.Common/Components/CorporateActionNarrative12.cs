@@ -22,7 +22,7 @@ public record CorporateActionNarrative12
     [IsoId("_WZEY6dp-Ed-ak6NoX_4Aeg_-518430978")]
     [DisplayName("Additional Text")]
     [IsoXmlTag("AddtlTxt")]
-    public SimpleValueList<IsoRestrictedFINXMax350Text> AdditionalText { get; init; } = [];
+    public SimpleValueList<RestrictedFINXMax350Text> AdditionalText { get; init; } = [];
 
     /// <summary>
     /// Provides information that can be ignored for automated processing; - reiteration of information that has been included within structured fields of this message, - or narrative information not needed for automatic processing.
@@ -30,7 +30,7 @@ public record CorporateActionNarrative12
     [IsoId("_WZEY6tp-Ed-ak6NoX_4Aeg_-1629342397")]
     [DisplayName("Narrative Version")]
     [IsoXmlTag("NrrtvVrsn")]
-    public SimpleValueList<IsoRestrictedFINXMax350Text> NarrativeVersion { get; init; } = [];
+    public SimpleValueList<RestrictedFINXMax350Text> NarrativeVersion { get; init; } = [];
 
     /// <summary>
     /// Provides information required for the registration.
@@ -38,7 +38,7 @@ public record CorporateActionNarrative12
     [IsoId("_WZOJ4Np-Ed-ak6NoX_4Aeg_785319259")]
     [DisplayName("Registration Details")]
     [IsoXmlTag("RegnDtls")]
-    public SimpleValueList<IsoRestrictedFINXMax350Text> RegistrationDetails { get; init; } = [];
+    public SimpleValueList<RestrictedFINXMax350Text> RegistrationDetails { get; init; } = [];
 
     /// <summary>
     /// Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.
@@ -46,7 +46,7 @@ public record CorporateActionNarrative12
     [IsoId("_WZOJ4dp-Ed-ak6NoX_4Aeg_1556661713")]
     [DisplayName("Party Contact Narrative")]
     [IsoXmlTag("PtyCtctNrrtv")]
-    public SimpleValueList<IsoRestrictedFINXMax350Text> PartyContactNarrative { get; init; } = [];
+    public SimpleValueList<RestrictedFINXMax350Text> PartyContactNarrative { get; init; } = [];
 
     /// <summary>
     /// Disclaimer relative to the information provided in the message. It may be ignored for automated processing. No information about the instruction itself is allowed here.
@@ -54,7 +54,7 @@ public record CorporateActionNarrative12
     [IsoId("_WZOJ4tp-Ed-ak6NoX_4Aeg_445750294")]
     [DisplayName("Disclaimer")]
     [IsoXmlTag("Dsclmr")]
-    public SimpleValueList<IsoRestrictedFINXMax350Text> Disclaimer { get; init; } = [];
+    public SimpleValueList<RestrictedFINXMax350Text> Disclaimer { get; init; } = [];
 
     /// <summary>
     /// Provides additional information on the basket or index underlying a security, for example a warrant.
@@ -62,6 +62,6 @@ public record CorporateActionNarrative12
     [IsoId("_WZOJ49p-Ed-ak6NoX_4Aeg_-1434555346")]
     [DisplayName("Basket Or Index Information")]
     [IsoXmlTag("BsktOrIndxInf")]
-    public SimpleValueList<IsoRestrictedFINXMax350Text> BasketOrIndexInformation { get; init; } =
+    public SimpleValueList<RestrictedFINXMax350Text> BasketOrIndexInformation { get; init; } =
         [];
 }

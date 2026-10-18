@@ -40,7 +40,7 @@ public record SubBalanceInformation2
     [IsoXmlTag("XtndedSubBalTp")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoExtended350Code ExtendedSubBalanceType { get; init; }
+    public required Extended350Code ExtendedSubBalanceType { get; init; }
 
     /// <summary>
     /// Net position of a segregated holding of a single security within the overall position held in a securities account, eg, sub-balance per status.

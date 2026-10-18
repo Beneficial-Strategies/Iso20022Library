@@ -21,7 +21,7 @@ public record BatchRequest7
     /// </summary>
     [DisplayName("Remove All Flag")]
     [IsoXmlTag("RmvAllFlg")]
-    public IsoTrueFalseIndicator? RemoveAllFlag { get; init; }
+    public TrueFalseIndicator? RemoveAllFlag { get; init; }
 
     /// <summary>
     /// Sale Batch Identification.

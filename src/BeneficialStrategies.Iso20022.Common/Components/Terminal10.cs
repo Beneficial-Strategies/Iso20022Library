@@ -22,7 +22,7 @@ public record Terminal10
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-id")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax16Text Identification { get; init; }
+    public required Max16Text Identification { get; init; }
 
     /// <summary>
     /// Type of terminal. P000-P999 reserved for private use, N000-N999 reserved for national use.
@@ -62,7 +62,7 @@ public record Terminal10
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-pnln")]
     [DisplayName("PIN Length Capability")]
     [IsoXmlTag("PINLngthCpblty")]
-    public IsoNumber? PINLengthCapability { get; init; }
+    public Number? PINLengthCapability { get; init; }
 
     /// <summary>
     /// Describe the capability of acceptance device to support PINs. 
@@ -78,7 +78,7 @@ public record Terminal10
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-acln")]
     [DisplayName("Approval Code Length")]
     [IsoXmlTag("AprvlCdLngth")]
-    public IsoNumber? ApprovalCodeLength { get; init; }
+    public Number? ApprovalCodeLength { get; init; }
 
     /// <summary>
     /// Maximum data length in bytes that a card issuer can return to the ICC at the terminal.
@@ -86,7 +86,7 @@ public record Terminal10
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-mxsl")]
     [DisplayName("Max Script Length")]
     [IsoXmlTag("MxScrptLngth")]
-    public IsoNumber? MaxScriptLength { get; init; }
+    public Number? MaxScriptLength { get; init; }
 
     /// <summary>
     /// Indicates whether the terminal can capture cards or not.|True: The terminal is able to capture cards|False: The terminal is not able to capture cards.
@@ -94,7 +94,7 @@ public record Terminal10
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-cccp")]
     [DisplayName("Card Capture Capable")]
     [IsoXmlTag("CardCaptrCpbl")]
-    public IsoTrueFalseIndicator? CardCaptureCapable { get; init; }
+    public TrueFalseIndicator? CardCaptureCapable { get; init; }
 
     /// <summary>
     /// Capability of the terminal to go online.
@@ -126,7 +126,7 @@ public record Terminal10
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-tmss")]
     [DisplayName("Temporary Secure Storage")]
     [IsoXmlTag("TmpryScrtStrg")]
-    public IsoTrueFalseIndicator? TemporarySecureStorage { get; init; }
+    public TrueFalseIndicator? TemporarySecureStorage { get; init; }
 
     /// <summary>
     /// Type of terminal integration at a point of service location.
@@ -142,7 +142,7 @@ public record Terminal10
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-gelo")]
     [DisplayName("Geographic Location")]
     [IsoXmlTag("GeoLctn")]
-    public IsoGeographicPointInDecimalDegreesText? GeographicLocation { get; init; }
+    public GeographicPointInDecimalDegreesText? GeographicLocation { get; init; }
 
     /// <summary>
     /// Indicates whether the terminal is operated outdoor or indoor at the point of service.|True: The terminal is operated outdoor|False: The terminal is operated indoor
@@ -150,7 +150,7 @@ public record Terminal10
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-outd")]
     [DisplayName("Outdoor")]
     [IsoXmlTag("Outdr")]
-    public IsoTrueFalseIndicator? Outdoor { get; init; }
+    public TrueFalseIndicator? Outdoor { get; init; }
 
     /// <summary>
     /// Indicates whether the terminal is operated on- or off-premises at the point of service.|True: The terminal is operated off premises.|False: The terminal is operated on premises.
@@ -158,7 +158,7 @@ public record Terminal10
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-offp")]
     [DisplayName("Off Premises")]
     [IsoXmlTag("OffPrmss")]
-    public IsoTrueFalseIndicator? OffPremises { get; init; }
+    public TrueFalseIndicator? OffPremises { get; init; }
 
     /// <summary>
     /// Indicates whether the transaction was performed on board.||True: The terminal is located on board.|False: The terminal is not located on board.
@@ -166,7 +166,7 @@ public record Terminal10
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-onbd")]
     [DisplayName("On Board")]
     [IsoXmlTag("OnBrd")]
-    public IsoTrueFalseIndicator? OnBoard { get; init; }
+    public TrueFalseIndicator? OnBoard { get; init; }
 
     /// <summary>
     /// Serial number identifying an occurrence of an hardware component.
@@ -174,7 +174,7 @@ public record Terminal10
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-srnb")]
     [DisplayName("Serial Number")]
     [IsoXmlTag("SerlNb")]
-    public IsoMax35Text? SerialNumber { get; init; }
+    public Max35Text? SerialNumber { get; init; }
 
     /// <summary>
     /// Terminal software information.
@@ -190,7 +190,7 @@ public record Terminal10
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-crti")]
     [DisplayName("Certification Identification")]
     [IsoXmlTag("CertfctnId")]
-    public IsoMax256Text? CertificationIdentification { get; init; }
+    public Max256Text? CertificationIdentification { get; init; }
 
     /// <summary>
     /// Indicates whether or not the POS terminal from which the|transaction occurred is Terminal Line Encryption (TLE)-certified. 
@@ -198,7 +198,7 @@ public record Terminal10
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-tlen")]
     [DisplayName("Terminal Line Encryption Certified")]
     [IsoXmlTag("TrmnlLineNcrptnCrtfd")]
-    public IsoTrueFalseIndicator? TerminalLineEncryptionCertified { get; init; }
+    public TrueFalseIndicator? TerminalLineEncryptionCertified { get; init; }
 
     /// <summary>
     /// Indicates whether the terminal has encryption certification for unique key per terminal implementations. This includes technologies such as:|- UKPT (Unique Key Per Terminal)|- DUKPT (Derived Unique Key Per Transaction)|- Other key management schemes|||`true` - Terminal is certified for unique key per terminal encryption|`false` - Terminal is not certified or uses alternative encryption methods
@@ -206,7 +206,7 @@ public record Terminal10
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-ukpt")]
     [DisplayName("Unique Key Per Terminal Certified")]
     [IsoXmlTag("UqKeyPerTrmnlCrtfd")]
-    public IsoTrueFalseIndicator? UniqueKeyPerTerminalCertified { get; init; }
+    public TrueFalseIndicator? UniqueKeyPerTerminalCertified { get; init; }
 
     /// <summary>
     /// Specific encryption method/standard used by the terminal
@@ -214,7 +214,7 @@ public record Terminal10
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-encm")]
     [DisplayName("Encryption Method")]
     [IsoXmlTag("NcrptnMtd")]
-    public IsoMax35Text? EncryptionMethod { get; init; }
+    public Max35Text? EncryptionMethod { get; init; }
 
     /// <summary>
     /// Terminal support single tap processing.
@@ -222,7 +222,7 @@ public record Terminal10
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-sngt")]
     [DisplayName("Single Tap")]
     [IsoXmlTag("SnglTap")]
-    public IsoTrueFalseIndicator? SingleTap { get; init; }
+    public TrueFalseIndicator? SingleTap { get; init; }
 
     /// <summary>
     /// Country of the terminal.
@@ -238,7 +238,7 @@ public record Terminal10
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-pvdt")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications. 
@@ -246,5 +246,5 @@ public record Terminal10
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-ntdt")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

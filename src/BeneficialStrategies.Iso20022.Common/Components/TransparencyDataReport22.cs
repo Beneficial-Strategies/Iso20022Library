@@ -22,7 +22,7 @@ public record TransparencyDataReport22
     [IsoId("_ZD6x1fp2Ee-b4ekxD4W-5g")]
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
-    public IsoMax35Text? TechnicalRecordIdentification { get; init; }
+    public Max35Text? TechnicalRecordIdentification { get; init; }
 
     /// <summary>
     /// Identifies the financial instrument using an ISIN.
@@ -30,7 +30,7 @@ public record TransparencyDataReport22
     [IsoId("_ZD6x1_p2Ee-b4ekxD4W-5g")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoISINOct2015Identifier Identification { get; init; }
+    public required ISINOct2015Identifier Identification { get; init; }
 
     /// <summary>
     /// Specifies the classification of the equity instrument.
@@ -46,7 +46,7 @@ public record TransparencyDataReport22
     [IsoId("_ZD6x2_p2Ee-b4ekxD4W-5g")]
     [DisplayName("Full Name")]
     [IsoXmlTag("FullNm")]
-    public IsoMax350Text? FullName { get; init; }
+    public Max350Text? FullName { get; init; }
 
     /// <summary>
     /// Segment MIC for the trading venue where applicable, otherwise the operational MIC.
@@ -54,7 +54,7 @@ public record TransparencyDataReport22
     [IsoId("_ZD6x3fp2Ee-b4ekxD4W-5g")]
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
-    public IsoMICIdentifier? TradingVenue { get; init; }
+    public MICIdentifier? TradingVenue { get; init; }
 
     /// <summary>
     /// Period to which the quantitative data fields relate.
@@ -78,7 +78,7 @@ public record TransparencyDataReport22
     [IsoId("_ZD6x4fp2Ee-b4ekxD4W-5g")]
     [DisplayName("Liquidity")]
     [IsoXmlTag("Lqdty")]
-    public IsoTrueFalseIndicator? Liquidity { get; init; }
+    public TrueFalseIndicator? Liquidity { get; init; }
 
     /// <summary>
     /// Methodology that has been used to calculate the result.

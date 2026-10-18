@@ -24,7 +24,7 @@ public record RejectedStatus8
     [IsoXmlTag("XtndedRsn")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text ExtendedReason { get; init; }
+    public required Max350Text ExtendedReason { get; init; }
 
     /// <summary>
     /// Additional information about the rejected status reason.
@@ -34,5 +34,5 @@ public record RejectedStatus8
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINMax210Text)]
     [StringLength(maximumLength: 210, MinimumLength = 1)]
-    public IsoRestrictedFINMax210Text? AdditionalInformation { get; init; }
+    public RestrictedFINMax210Text? AdditionalInformation { get; init; }
 }

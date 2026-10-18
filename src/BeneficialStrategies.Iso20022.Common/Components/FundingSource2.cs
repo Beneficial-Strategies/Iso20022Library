@@ -32,7 +32,7 @@ public record FundingSource2
     [IsoXmlTag("OthrSrcTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherSourceType { get; init; }
+    public Max35Text? OtherSourceType { get; init; }
 
     /// <summary>
     /// Reference to the funding source.
@@ -42,5 +42,5 @@ public record FundingSource2
     [IsoXmlTag("Ref")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Reference { get; init; }
+    public Max35Text? Reference { get; init; }
 }

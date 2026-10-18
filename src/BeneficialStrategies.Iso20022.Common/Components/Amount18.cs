@@ -32,7 +32,7 @@ public record Amount18
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Contains the amount.
@@ -57,5 +57,5 @@ public record Amount18
     [DisplayName("Customer Notified Indicator")]
     [IsoXmlTag("CstmrNtfdInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CustomerNotifiedIndicator { get; init; }
+    public TrueFalseIndicator? CustomerNotifiedIndicator { get; init; }
 }

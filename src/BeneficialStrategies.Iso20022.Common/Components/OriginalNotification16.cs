@@ -21,28 +21,28 @@ public record OriginalNotification16
     /// </summary>
     [DisplayName("Notification Cancellation")]
     [IsoXmlTag("NtfctnCxl")]
-    public IsoGroupCancellationIndicator? NotificationCancellation { get; init; }
+    public GroupCancellationIndicator? NotificationCancellation { get; init; }
 
     /// <summary>
     /// Original Creation Date Time.
     /// </summary>
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
-    public IsoISODateTime? OriginalCreationDateTime { get; init; }
+    public ISODateTime? OriginalCreationDateTime { get; init; }
 
     /// <summary>
     /// Original Message Identification.
     /// </summary>
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
-    public required IsoMax35Text OriginalMessageIdentification { get; init; }
+    public required Max35Text OriginalMessageIdentification { get; init; }
 
     /// <summary>
     /// Original Notification Identification.
     /// </summary>
     [DisplayName("Original Notification Identification")]
     [IsoXmlTag("OrgnlNtfctnId")]
-    public required IsoMax35Text OriginalNotificationIdentification { get; init; }
+    public required Max35Text OriginalNotificationIdentification { get; init; }
 
     /// <summary>
     /// Original Notification Reference.

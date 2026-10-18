@@ -21,7 +21,7 @@ public record TradeConfirmation5
     /// </summary>
     [DisplayName("Time Stamp")]
     [IsoXmlTag("TmStmp")]
-    public IsoISODateTime? TimeStamp { get; init; }
+    public ISODateTime? TimeStamp { get; init; }
 
     /// <summary>
     /// Type.

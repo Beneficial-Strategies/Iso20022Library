@@ -1,7 +1,5 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-// The Iso* aliases of the primitive types are in ../Shared/PrimitiveAliases.cs, linked into this project.
-
 global using System.ComponentModel;
 global using System.Runtime.Serialization;
 global using System.Text.Json.Serialization;

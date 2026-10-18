@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction6Choice
         [IsoXmlTag("OrgnlInstrId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+        public Max35Text? OriginalInstructionIdentification { get; init; }
 
         /// <summary>
         /// Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.
@@ -42,7 +42,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction6Choice
         [IsoXmlTag("OrgnlEndToEndId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+        public Max35Text? OriginalEndToEndIdentification { get; init; }
 
         /// <summary>
         /// Unique identification, as assigned by the original first instructing agent, to unambiguously identify the transaction.
@@ -52,7 +52,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction6Choice
         [IsoXmlTag("OrgnlTxId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? OriginalTransactionIdentification { get; init; }
+        public Max35Text? OriginalTransactionIdentification { get; init; }
 
         /// <summary>
         /// Universally unique identifier to provide the original end-to-end reference of a payment transaction.
@@ -61,7 +61,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction6Choice
         [DisplayName("Original UETR")]
         [IsoXmlTag("OrgnlUETR")]
         [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
-        public IsoUUIDv4Identifier? OriginalUETR { get; init; }
+        public UUIDv4Identifier? OriginalUETR { get; init; }
 
         /// <summary>
         /// Amount of money moved between the instructing agent and the instructed agent, as provided in the original instruction.
@@ -78,7 +78,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction6Choice
         [DisplayName("Original Interbank Settlement Date")]
         [IsoXmlTag("OrgnlIntrBkSttlmDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate OriginalInterbankSettlementDate { get; init; }
+        public required DateOnly OriginalInterbankSettlementDate { get; init; }
 
         /// <summary>
         /// Key elements used to identify the original transaction that is being referred to.

@@ -23,7 +23,7 @@ public record SettlementObligation6
     [IsoId("_-e8896MOEeCojJW5vEuTEQ_794633936")]
     [DisplayName("CSD Transaction Identification")]
     [IsoXmlTag("CSDTxId")]
-    public IsoMax35Text? CSDTransactionIdentification { get; init; }
+    public Max35Text? CSDTransactionIdentification { get; init; }
 
     /// <summary>
     /// Reference of the transaction (non settled instruction) given by the central counterparty.
@@ -31,7 +31,7 @@ public record SettlementObligation6
     [IsoId("_-fGG4KMOEeCojJW5vEuTEQ_-202438417")]
     [DisplayName("Central Counterparty Transaction Identification")]
     [IsoXmlTag("CntrlCtrPtyTxId")]
-    public IsoMax35Text? CentralCounterpartyTransactionIdentification { get; init; }
+    public Max35Text? CentralCounterpartyTransactionIdentification { get; init; }
 
     /// <summary>
     /// An account opened by the central counterparty in the name of the clearing member within the account structure, for settlement purposes (gives information about the clearing member account at central counterparty).
@@ -71,7 +71,7 @@ public record SettlementObligation6
     [IsoId("_-fGG5aMOEeCojJW5vEuTEQ_873149557")]
     [DisplayName("Intended Settlement Date")]
     [IsoXmlTag("IntnddSttlmDt")]
-    public IsoISODate? IntendedSettlementDate { get; init; }
+    public DateOnly? IntendedSettlementDate { get; init; }
 
     /// <summary>
     /// Provides details about the security identification.
@@ -87,7 +87,7 @@ public record SettlementObligation6
     [IsoId("_-fGG56MOEeCojJW5vEuTEQ_-1120995149")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
-    public IsoISODate? TradeDate { get; init; }
+    public DateOnly? TradeDate { get; init; }
 
     /// <summary>
     /// Provides the price of the trade.

@@ -23,7 +23,7 @@ public record PartyIdentification62
     [DisplayName("BICFI")]
     [IsoXmlTag("BICFI")]
     [IsoSimpleType(IsoSimpleType.BICFIIdentifier)]
-    public IsoBICFIIdentifier? BICFI { get; init; }
+    public BICFIIdentifier? BICFI { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.

@@ -33,7 +33,7 @@ public record ResultData7
     [IsoXmlTag("OthrRslt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherResult { get; init; }
+    public Max35Text? OtherResult { get; init; }
 
     /// <summary>
     /// Detailed results of the processing, conforming to ISO 8583 Response codes list.  This code list is maintained by the ISO 8583/MA (maintenance agency).
@@ -51,7 +51,7 @@ public record ResultData7
     [IsoXmlTag("OthrRsltDtls")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherResultDetails { get; init; }
+    public Max35Text? OtherResultDetails { get; init; }
 
     /// <summary>
     /// Issuer permits reuse of temporary secure stored card data.
@@ -60,7 +60,7 @@ public record ResultData7
     [DisplayName("Temporary Secure Card Data Reuse Permitted")]
     [IsoXmlTag("TempScrCardDataReusePrtd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? TemporarySecureCardDataReusePermitted { get; init; }
+    public TrueFalseIndicator? TemporarySecureCardDataReusePermitted { get; init; }
 
     /// <summary>
     /// Additional result information to be conveyed.

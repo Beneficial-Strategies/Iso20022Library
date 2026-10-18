@@ -42,14 +42,14 @@ public record PartyIdentification273
     /// </summary>
     [DisplayName("Legal Name")]
     [IsoXmlTag("LglNm")]
-    public IsoMax140Text? LegalName { get; init; }
+    public Max140Text? LegalName { get; init; }
 
     /// <summary>
     /// Name.
     /// </summary>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public required IsoMax140Text Name { get; init; }
+    public required Max140Text Name { get; init; }
 
     /// <summary>
     /// Postal Address.

@@ -23,7 +23,7 @@ public record SecurityIdentification39
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
     [IsoSimpleType(IsoSimpleType.ISIN2021Identifier)]
-    public IsoISIN2021Identifier? ISIN { get; init; }
+    public ISIN2021Identifier? ISIN { get; init; }
 
     /// <summary>
     /// Identification of a security by proprietary or domestic identification scheme.
@@ -41,5 +41,5 @@ public record SecurityIdentification39
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Description { get; init; }
+    public Max140Text? Description { get; init; }
 }

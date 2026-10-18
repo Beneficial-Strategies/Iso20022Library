@@ -35,35 +35,35 @@ public record Traceability10
     /// </summary>
     [DisplayName("Date Time In")]
     [IsoXmlTag("DtTmIn")]
-    public IsoISODateTime? DateTimeIn { get; init; }
+    public ISODateTime? DateTimeIn { get; init; }
 
     /// <summary>
     /// Date Time Out.
     /// </summary>
     [DisplayName("Date Time Out")]
     [IsoXmlTag("DtTmOut")]
-    public IsoISODateTime? DateTimeOut { get; init; }
+    public ISODateTime? DateTimeOut { get; init; }
 
     /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Other Type.
     /// </summary>
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Short Name.
     /// </summary>
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
-    public IsoMax35Text? ShortName { get; init; }
+    public Max35Text? ShortName { get; init; }
 
     /// <summary>
     /// Type.

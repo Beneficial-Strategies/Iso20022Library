@@ -55,7 +55,7 @@ public record TransactionTotals13
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
     [IsoSimpleType(IsoSimpleType.Min2Max3NumericText)]
-    public required IsoMin2Max3NumericText Currency { get; init; }
+    public required Min2Max3NumericText Currency { get; init; }
 
     /// <summary>
     /// Net amount of reconciliation.

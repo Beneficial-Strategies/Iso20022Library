@@ -21,7 +21,7 @@ public record SafekeepingPlaceTypeAndAnyBICIdentifier3
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoAnyBICDec2014Identifier Identification { get; init; }
+    public required AnyBICDec2014Identifier Identification { get; init; }
 
     /// <summary>
     /// Safekeeping Place Type.

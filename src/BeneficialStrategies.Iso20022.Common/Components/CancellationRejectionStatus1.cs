@@ -32,7 +32,7 @@ public record CancellationRejectionStatus1
     [IsoXmlTag("XtndedRsn")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoExtended350Code ExtendedReason { get; init; }
+    public required Extended350Code ExtendedReason { get; init; }
 
     /// <summary>
     /// Additional information about the reason.
@@ -42,5 +42,5 @@ public record CancellationRejectionStatus1
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AdditionalInformation { get; init; }
+    public Max350Text? AdditionalInformation { get; init; }
 }

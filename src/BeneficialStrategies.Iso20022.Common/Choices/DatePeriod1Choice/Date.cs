@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.DatePeriod1Choice
         /// </summary>
         [IsoXmlTag("Dt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate Value { get; init; }
+        public required DateOnly Value { get; init; }
     }
 }

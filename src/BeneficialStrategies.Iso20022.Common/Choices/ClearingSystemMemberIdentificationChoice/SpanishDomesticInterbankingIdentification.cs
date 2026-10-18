@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
         /// </summary>
         [IsoXmlTag("ESNCC")]
         [IsoSimpleType(IsoSimpleType.SpanishDomesticInterbankingIdentifier)]
-        public required IsoSpanishDomesticInterbankingIdentifier Value { get; init; }
+        public required SpanishDomesticInterbankingIdentifier Value { get; init; }
     }
 }

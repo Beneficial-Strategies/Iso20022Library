@@ -56,7 +56,7 @@ public record CollateralParameters10
     [DisplayName("Transfer Title")]
     [IsoXmlTag("TrfTitl")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? TransferTitle { get; init; }
+    public YesNoIndicator? TransferTitle { get; init; }
 
     /// <summary>
     /// Specifies the settlement process in which the collateral will be settled.
@@ -81,7 +81,7 @@ public record CollateralParameters10
     [DisplayName("Automatic Allocation")]
     [IsoXmlTag("AutomtcAllcn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AutomaticAllocation { get; init; }
+    public YesNoIndicator? AutomaticAllocation { get; init; }
 
     /// <summary>
     /// Specifies whether the taker is allowed to solve the failing settlement by proposing other collateral movements.
@@ -90,7 +90,7 @@ public record CollateralParameters10
     [DisplayName("Failed Settlement Salvation")]
     [IsoXmlTag("FaildSttlmSlvtn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? FailedSettlementSalvation { get; init; }
+    public YesNoIndicator? FailedSettlementSalvation { get; init; }
 
     /// <summary>
     /// Specifies if the main trading account  is included in the pool of securities positions available for collateralisation. It is used in case of re-use of collateral to specify the account from which the securities collateral is taken from.
@@ -99,7 +99,7 @@ public record CollateralParameters10
     [DisplayName("Main Trading Account Collateralisation")]
     [IsoXmlTag("MainTradgAcctCollstn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? MainTradingAccountCollateralisation { get; init; }
+    public YesNoIndicator? MainTradingAccountCollateralisation { get; init; }
 
     /// <summary>
     /// Provides information on the baskets identification and the Eligibility Set Profile.

@@ -49,7 +49,7 @@ public record BillingStatement5
     /// </summary>
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// Currency Exchange.
@@ -91,7 +91,7 @@ public record BillingStatement5
     /// </summary>
     [DisplayName("Statement Identification")]
     [IsoXmlTag("StmtId")]
-    public required IsoMax35Text StatementIdentification { get; init; }
+    public required Max35Text StatementIdentification { get; init; }
 
     /// <summary>
     /// Status.

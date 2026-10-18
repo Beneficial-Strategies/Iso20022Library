@@ -23,7 +23,7 @@ public record Tranche2
     [DisplayName("Attachment Point")]
     [IsoXmlTag("AttchmntPt")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? AttachmentPoint { get; init; }
+    public BaseOneRate? AttachmentPoint { get; init; }
 
     /// <summary>
     /// Indicates the point beyond which losses do not affect the particular tranche.
@@ -32,5 +32,5 @@ public record Tranche2
     [DisplayName("Detachment Point")]
     [IsoXmlTag("DtchmntPt")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? DetachmentPoint { get; init; }
+    public BaseOneRate? DetachmentPoint { get; init; }
 }

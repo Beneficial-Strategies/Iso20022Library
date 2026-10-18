@@ -22,5 +22,5 @@ public record RemittanceInformation2
     [IsoId("_QFsWVtp-Ed-ak6NoX_4Aeg_-1039592586")]
     [DisplayName("Unstructured")]
     [IsoXmlTag("Ustrd")]
-    public SimpleValueList<IsoMax140Text> Unstructured { get; init; } = [];
+    public SimpleValueList<Max140Text> Unstructured { get; init; } = [];
 }

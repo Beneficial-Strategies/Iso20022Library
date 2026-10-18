@@ -50,14 +50,14 @@ public record InformationRequestResponseV02 : IOuterRecord
     /// </summary>
     [DisplayName("Investigation Identification")]
     [IsoXmlTag("InvstgtnId")]
-    public required IsoMax35Text InvestigationIdentification { get; init; }
+    public required Max35Text InvestigationIdentification { get; init; }
 
     /// <summary>
     /// Response Identification.
     /// </summary>
     [DisplayName("Response Identification")]
     [IsoXmlTag("RspnId")]
-    public required IsoMax35Text ResponseIdentification { get; init; }
+    public required Max35Text ResponseIdentification { get; init; }
 
     /// <summary>
     /// Response Status.

@@ -72,7 +72,7 @@ public record SecuritiesSettlementTransactionAuditTrailReport002V05 : IOuterReco
     [IsoXmlTag("QryRef")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? QueryReference { get; init; }
+    public RestrictedFINXMax16Text? QueryReference { get; init; }
 
     /// <summary>
     /// Provides unambiguous transaction identification information.

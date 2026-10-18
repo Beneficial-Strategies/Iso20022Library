@@ -24,7 +24,7 @@ public record ExternallyDefinedData3
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max1025Text)]
     [StringLength(maximumLength: 1025, MinimumLength = 1)]
-    public required IsoMax1025Text Identification { get; init; }
+    public required Max1025Text Identification { get; init; }
 
     /// <summary>
     /// Data to exchange according to an external standard.
@@ -33,7 +33,7 @@ public record ExternallyDefinedData3
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.Max100KBinary)]
-    public IsoMax100KBinary? Value { get; init; }
+    public Max100KBinary? Value { get; init; }
 
     /// <summary>
     /// Protection of the values to exchange.
@@ -51,5 +51,5 @@ public record ExternallyDefinedData3
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max1025Text)]
     [StringLength(maximumLength: 1025, MinimumLength = 1)]
-    public IsoMax1025Text? Type { get; init; }
+    public Max1025Text? Type { get; init; }
 }

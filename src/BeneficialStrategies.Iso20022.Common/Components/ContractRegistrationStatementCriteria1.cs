@@ -23,7 +23,7 @@ public record ContractRegistrationStatementCriteria1
     [DisplayName("Transaction Journal")]
     [IsoXmlTag("TxJrnl")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? TransactionJournal { get; init; }
+    public TrueFalseIndicator? TransactionJournal { get; init; }
 
     /// <summary>
     /// Indicates whether the journal of the supporting documents recorded under the registered currency control contract must be returned or not.
@@ -32,7 +32,7 @@ public record ContractRegistrationStatementCriteria1
     [DisplayName("Supporting Document Journal")]
     [IsoXmlTag("SpprtgDocJrnl")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? SupportingDocumentJournal { get; init; }
+    public TrueFalseIndicator? SupportingDocumentJournal { get; init; }
 
     /// <summary>
     /// Indicates whether the journal of additional supporting documents recorded under the registered currency control contract must be returned or not.
@@ -41,7 +41,7 @@ public record ContractRegistrationStatementCriteria1
     [DisplayName("Additional Supporting Document Journal")]
     [IsoXmlTag("AddtlSpprtgDocJrnl")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? AdditionalSupportingDocumentJournal { get; init; }
+    public TrueFalseIndicator? AdditionalSupportingDocumentJournal { get; init; }
 
     /// <summary>
     /// Indicates whether the details on the currency control rule against which has been violated must be returned or not.
@@ -50,5 +50,5 @@ public record ContractRegistrationStatementCriteria1
     [DisplayName("Regulatory Rule Validation")]
     [IsoXmlTag("RgltryRuleVldtn")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? RegulatoryRuleValidation { get; init; }
+    public TrueFalseIndicator? RegulatoryRuleValidation { get; init; }
 }

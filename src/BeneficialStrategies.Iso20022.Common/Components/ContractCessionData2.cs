@@ -21,14 +21,14 @@ public record ContractCessionData2
     /// </summary>
     [DisplayName("Document Date")]
     [IsoXmlTag("DocDt")]
-    public IsoISODate? DocumentDate { get; init; }
+    public DateOnly? DocumentDate { get; init; }
 
     /// <summary>
     /// Document Number.
     /// </summary>
     [DisplayName("Document Number")]
     [IsoXmlTag("DocNb")]
-    public IsoMax35Text? DocumentNumber { get; init; }
+    public Max35Text? DocumentNumber { get; init; }
 
     /// <summary>
     /// Party.

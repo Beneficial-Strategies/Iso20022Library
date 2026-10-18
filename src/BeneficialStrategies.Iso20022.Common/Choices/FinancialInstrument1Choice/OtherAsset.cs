@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument1Choice
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text Identification { get; init; }
+        public required Max35Text Identification { get; init; }
 
         /// <summary>
         /// Name of the asset.
@@ -42,7 +42,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument1Choice
         [IsoXmlTag("Nm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? Name { get; init; }
+        public Max35Text? Name { get; init; }
 
         /// <summary>
         /// Addition identification of the asset.

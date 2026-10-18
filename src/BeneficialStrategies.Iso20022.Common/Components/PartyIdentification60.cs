@@ -24,7 +24,7 @@ public record PartyIdentification60
     [IsoXmlTag("FndId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text FundIdentification { get; init; }
+    public required Max35Text FundIdentification { get; init; }
 
     /// <summary>
     /// Identification of the party expressed as name and an optional address and an optional alternative identifier.
@@ -41,5 +41,5 @@ public record PartyIdentification60
     [DisplayName("Legal Entity Identifier")]
     [IsoXmlTag("LglNttyIdr")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? LegalEntityIdentifier { get; init; }
+    public LEIIdentifier? LegalEntityIdentifier { get; init; }
 }

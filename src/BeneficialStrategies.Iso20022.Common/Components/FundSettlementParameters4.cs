@@ -23,7 +23,7 @@ public record FundSettlementParameters4
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? SettlementDate { get; init; }
+    public DateOnly? SettlementDate { get; init; }
 
     /// <summary>
     /// Place where the settlement of transaction will take place. In the context of the investment funds, the place of settlement is the transfer agent, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).
@@ -49,7 +49,7 @@ public record FundSettlementParameters4
     [IsoXmlTag("SctiesSttlmSysId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SecuritiesSettlementSystemIdentification { get; init; }
+    public Max35Text? SecuritiesSettlementSystemIdentification { get; init; }
 
     /// <summary>
     /// Chain of parties involved in the settlement of a transaction resulting in the movement of a security from one account to another.

@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedMissingValuationsStatist
         [DisplayName("Number Of Outstanding Derivatives")]
         [IsoXmlTag("NbOfOutsdngDerivs")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public required IsoNumber NumberOfOutstandingDerivatives { get; init; }
+        public required Number NumberOfOutstandingDerivatives { get; init; }
 
         /// <summary>
         /// Number of outstanding derivatives for which valuation amount was never reported.
@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedMissingValuationsStatist
         [DisplayName("Number Of Outstanding Derivatives With No Valuation")]
         [IsoXmlTag("NbOfOutsdngDerivsWthNoValtn")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public required IsoNumber NumberOfOutstandingDerivativesWithNoValuation { get; init; }
+        public required Number NumberOfOutstandingDerivativesWithNoValuation { get; init; }
 
         /// <summary>
         /// Number of outstanding derivatives with outdated valuation.
@@ -41,7 +41,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedMissingValuationsStatist
         [DisplayName("Number Of Outstanding Derivatives With Outdated Valuation")]
         [IsoXmlTag("NbOfOutsdngDerivsWthOutdtdValtn")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public required IsoNumber NumberOfOutstandingDerivativesWithOutdatedValuation { get; init; }
+        public required Number NumberOfOutstandingDerivativesWithOutdatedValuation { get; init; }
 
         /// <summary>
         /// Details of outstanding derivatives for which the valuation was not reported or the valuation reported is more than fourteen calendar days earlier than the date for which the report was generated shall be included in the report of missing valuations at the end of the day.

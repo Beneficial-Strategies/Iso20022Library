@@ -22,7 +22,7 @@ public record BillingFeeRecord1
     [IsoId("_syeH0PsYEemYNq6Sxm5nlg")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public IsoMax4Text? Type { get; init; }
+    public Max4Text? Type { get; init; }
 
     /// <summary>
     /// Further details on the charges or fees.
@@ -30,7 +30,7 @@ public record BillingFeeRecord1
     [IsoId("_Qp56qfsYEemYNq6Sxm5nlg")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax35Text? Description { get; init; }
+    public Max35Text? Description { get; init; }
 
     /// <summary>
     /// Rate used to calculate the charges or fees.
@@ -38,7 +38,7 @@ public record BillingFeeRecord1
     [IsoId("_Qp56p_sYEemYNq6Sxm5nlg")]
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
-    public IsoPercentageRate? Rate { get; init; }
+    public PercentageRate? Rate { get; init; }
 
     /// <summary>
     /// Amount of money asked or paid for the charges or fees.

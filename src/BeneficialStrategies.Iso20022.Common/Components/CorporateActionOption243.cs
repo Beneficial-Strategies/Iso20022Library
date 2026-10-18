@@ -56,7 +56,7 @@ public record CorporateActionOption243
     /// </summary>
     [DisplayName("Eligible For Collateral Indicator")]
     [IsoXmlTag("ElgblForCollInd")]
-    public IsoYesNoIndicator? EligibleForCollateralIndicator { get; init; }
+    public YesNoIndicator? EligibleForCollateralIndicator { get; init; }
 
     /// <summary>
     /// Execution Requested Date Time.
@@ -126,12 +126,12 @@ public record CorporateActionOption243
     /// </summary>
     [DisplayName("Shareholder Number")]
     [IsoXmlTag("ShrhldrNb")]
-    public IsoRestrictedFINXMax25Text? ShareholderNumber { get; init; }
+    public RestrictedFINXMax25Text? ShareholderNumber { get; init; }
 
     /// <summary>
     /// Solicitation Dealer Fee Indicator.
     /// </summary>
     [DisplayName("Solicitation Dealer Fee Indicator")]
     [IsoXmlTag("SlctnDealrFeeInd")]
-    public IsoYesNoIndicator? SolicitationDealerFeeIndicator { get; init; }
+    public YesNoIndicator? SolicitationDealerFeeIndicator { get; init; }
 }

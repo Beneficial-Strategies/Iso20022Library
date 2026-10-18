@@ -40,7 +40,7 @@ public record Transaction135
     [IsoXmlTag("OthrRcncltnActvtyTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherReconciliationActivityType { get; init; }
+    public Max35Text? OtherReconciliationActivityType { get; init; }
 
     /// <summary>
     /// Type of reconciliation.
@@ -58,7 +58,7 @@ public record Transaction135
     [IsoXmlTag("OthrRcncltnTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherReconciliationType { get; init; }
+    public Max35Text? OtherReconciliationType { get; init; }
 
     /// <summary>
     /// Identification of the transaction.
@@ -75,7 +75,7 @@ public record Transaction135
     [IsoId("_otJMmYv9EeuC5632vxUfGg")]
     [DisplayName("Requested Currency")]
     [IsoXmlTag("ReqdCcy")]
-    public SimpleValueList<IsoExact3NumericText> RequestedCurrency { get; init; } = [];
+    public SimpleValueList<Exact3NumericText> RequestedCurrency { get; init; } = [];
 
     /// <summary>
     /// Totals of the reconciliation.

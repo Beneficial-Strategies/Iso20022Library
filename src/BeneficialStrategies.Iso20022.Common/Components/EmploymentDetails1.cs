@@ -31,7 +31,7 @@ public record EmploymentDetails1
     [DisplayName("Other Tax Code Indicator")]
     [IsoXmlTag("OthrTaxCdInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? OtherTaxCodeIndicator { get; init; }
+    public YesNoIndicator? OtherTaxCodeIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether tax is cumulative or non-cumulative. In the UK, this is known as the W1M1 indicator.
@@ -40,7 +40,7 @@ public record EmploymentDetails1
     [DisplayName("Cumulative Tax Indicator")]
     [IsoXmlTag("CmltvTaxInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? CumulativeTaxIndicator { get; init; }
+    public YesNoIndicator? CumulativeTaxIndicator { get; init; }
 
     /// <summary>
     /// Amount of the previous pay.

@@ -21,12 +21,12 @@ public record AdditionalProductInformation3
     /// </summary>
     [DisplayName("Financial Instrument Transaction Costs Ex Ante UK")]
     [IsoXmlTag("FinInstrmTxCostsExAnteUK")]
-    public IsoPercentageRate? FinancialInstrumentTransactionCostsExAnteUK { get; init; }
+    public PercentageRate? FinancialInstrumentTransactionCostsExAnteUK { get; init; }
 
     /// <summary>
     /// Financial Instrument Transaction Costs Ex Post UK.
     /// </summary>
     [DisplayName("Financial Instrument Transaction Costs Ex Post UK")]
     [IsoXmlTag("FinInstrmTxCostsExPstUK")]
-    public IsoPercentageRate? FinancialInstrumentTransactionCostsExPostUK { get; init; }
+    public PercentageRate? FinancialInstrumentTransactionCostsExPostUK { get; init; }
 }

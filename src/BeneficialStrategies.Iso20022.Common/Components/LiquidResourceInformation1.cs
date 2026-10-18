@@ -24,7 +24,7 @@ public record LiquidResourceInformation1
     [IsoXmlTag("CntrPtyId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CounterPartyIdentification { get; init; }
+    public Max35Text? CounterPartyIdentification { get; init; }
 
     /// <summary>
     /// Amount of liquid resources available to meet liquid requirements.
@@ -49,7 +49,7 @@ public record LiquidResourceInformation1
     [DisplayName("Secured")]
     [IsoXmlTag("Scrd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator Secured { get; init; }
+    public required TrueFalseIndicator Secured { get; init; }
 
     /// <summary>
     /// Indicates whether the financial instruments are encumbered or not. This includes where financial instruments must be pledged to secure liquidity facilities.
@@ -58,7 +58,7 @@ public record LiquidResourceInformation1
     [DisplayName("Asset Encumbered")]
     [IsoXmlTag("AsstNcmbrd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator AssetEncumbered { get; init; }
+    public required TrueFalseIndicator AssetEncumbered { get; init; }
 
     /// <summary>
     /// Indicates whether the available liquid resource counts towards the liquid requirements in the scenario or not.
@@ -67,7 +67,7 @@ public record LiquidResourceInformation1
     [DisplayName("Qualifying Resource")]
     [IsoXmlTag("QlfygRsrc")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator QualifyingResource { get; init; }
+    public required TrueFalseIndicator QualifyingResource { get; init; }
 
     /// <summary>
     /// Indicates the reliance on third party entities to settle payment obligations for the CCP or a clearing member. The article 32(4) of Commission Delegated Regulated 153/2013 includes a full list of third party entities which a CCP may have a liquidity exposure to. If the value is true, the portion of the liquid resource which is assumed to be unavailable due to a dependency on third party entities. If the value is false, the portion of the liquid resource which is assumed to be available as no dependency on third party entities.
@@ -76,5 +76,5 @@ public record LiquidResourceInformation1
     [DisplayName("Agency Arrangements")]
     [IsoXmlTag("AgcyArrgmnts")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator AgencyArrangements { get; init; }
+    public required TrueFalseIndicator AgencyArrangements { get; init; }
 }

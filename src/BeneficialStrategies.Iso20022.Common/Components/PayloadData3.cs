@@ -22,7 +22,7 @@ public record PayloadData3
     [IsoId("_b63rQRUZEfCfALVKQ4rOew")]
     [DisplayName("Business File Identifier")]
     [IsoXmlTag("BizFileIdr")]
-    public required IsoMax35Text BusinessFileIdentifier { get; init; }
+    public required Max35Text BusinessFileIdentifier { get; init; }
 
     /// <summary>
     /// Date and time when the file was created by the sender.
@@ -30,7 +30,7 @@ public record PayloadData3
     [IsoId("_b63rQxUZEfCfALVKQ4rOew")]
     [DisplayName("Creation Date")]
     [IsoXmlTag("CreDt")]
-    public required IsoISODateTime CreationDate { get; init; }
+    public required ISODateTime CreationDate { get; init; }
 
     /// <summary>
     /// Indicates whether the file is a Copy, a Duplicate or a copy of a duplicate of a previously sent ISO 20022 File.
@@ -46,7 +46,7 @@ public record PayloadData3
     [IsoId("_O6BZNBUbEfCfALVKQ4rOew")]
     [DisplayName("Possible Duplicate")]
     [IsoXmlTag("PssblDplct")]
-    public IsoTrueFalseIndicator? PossibleDuplicate { get; init; }
+    public TrueFalseIndicator? PossibleDuplicate { get; init; }
 
     /// <summary>
     /// Relative indication of the processing precedence of the file over a (set of) Business Files with assigned priorities.

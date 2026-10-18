@@ -22,7 +22,7 @@ public record BasketDescription4
     [IsoId("_FvixQZ3EEeuwmdq0KtnICg")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
-    public SimpleValueList<IsoISIN2021Identifier> ISIN { get; init; } = [];
+    public SimpleValueList<ISIN2021Identifier> ISIN { get; init; } = [];
 
     /// <summary>
     /// Index on which the financial instrument is based.

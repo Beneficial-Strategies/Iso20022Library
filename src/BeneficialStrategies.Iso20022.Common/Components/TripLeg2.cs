@@ -23,7 +23,7 @@ public record TripLeg2
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public IsoMax35NumericText? SequenceNumber { get; init; }
+    public Max35NumericText? SequenceNumber { get; init; }
 
     /// <summary>
     /// Details of the ticket.
@@ -49,7 +49,7 @@ public record TripLeg2
     [IsoXmlTag("PrcdrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProcedureReference { get; init; }
+    public Max35Text? ProcedureReference { get; init; }
 
     /// <summary>
     /// Type of transportation.
@@ -67,7 +67,7 @@ public record TripLeg2
     [IsoXmlTag("OthrTrnsprtTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherTransportType { get; init; }
+    public Max35Text? OtherTransportType { get; init; }
 
     /// <summary>
     /// Provides the identifier assigned by the card acceptor that best categorizes the items being purchased in a standardized commodity group.
@@ -77,7 +77,7 @@ public record TripLeg2
     [IsoXmlTag("CmmdtyCd")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4Text? CommodityCode { get; init; }
+    public Max4Text? CommodityCode { get; init; }
 
     /// <summary>
     /// Identification of transportation carrier.
@@ -95,7 +95,7 @@ public record TripLeg2
     [IsoXmlTag("RouteNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RouteNumber { get; init; }
+    public Max35Text? RouteNumber { get; init; }
 
     /// <summary>
     /// Indicates the service class (for example, coach or first class).
@@ -105,7 +105,7 @@ public record TripLeg2
     [IsoXmlTag("SvcClss")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ServiceClass { get; init; }
+    public Max35Text? ServiceClass { get; init; }
 
     /// <summary>
     /// Contains departure location, date and time.
@@ -130,7 +130,7 @@ public record TripLeg2
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
     [IsoSimpleType(IsoSimpleType.Max4NumericText)]
-    public IsoMax4NumericText? Duration { get; init; }
+    public Max4NumericText? Duration { get; init; }
 
     /// <summary>
     /// Indicator that specifies whether the mode of transportation was a direct or non-direct route on the same ticket number.
@@ -139,7 +139,7 @@ public record TripLeg2
     [DisplayName("Stop Over Indicator")]
     [IsoXmlTag("StopOverInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? StopOverIndicator { get; init; }
+    public TrueFalseIndicator? StopOverIndicator { get; init; }
 
     /// <summary>
     /// Indicates a non-direct route between the origin and the destination.
@@ -149,7 +149,7 @@ public record TripLeg2
     [IsoXmlTag("NonDrctRouteCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? NonDirectRouteCode { get; init; }
+    public Max35Text? NonDirectRouteCode { get; init; }
 
     /// <summary>
     /// Code that transportation companies assign to a particular ticket type, such as business class or discounted or non-refundable tickets.
@@ -159,7 +159,7 @@ public record TripLeg2
     [IsoXmlTag("FairBsisCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? FairBasisCode { get; init; }
+    public Max35Text? FairBasisCode { get; init; }
 
     /// <summary>
     /// Indicates whether or not insurance was purchased.
@@ -168,7 +168,7 @@ public record TripLeg2
     [DisplayName("Insurance Indicator")]
     [IsoXmlTag("InsrncInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? InsuranceIndicator { get; init; }
+    public TrueFalseIndicator? InsuranceIndicator { get; init; }
 
     /// <summary>
     /// Contains trip leg amount information.
@@ -186,7 +186,7 @@ public record TripLeg2
     [IsoXmlTag("CdtRsnCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CreditReasonCode { get; init; }
+    public Max35Text? CreditReasonCode { get; init; }
 
     /// <summary>
     /// Contains identification of the rail server procedure or the order in which the service was booked or a cancellation was completed.
@@ -196,7 +196,7 @@ public record TripLeg2
     [IsoXmlTag("PrcdrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProcedureIdentification { get; init; }
+    public Max35Text? ProcedureIdentification { get; init; }
 
     /// <summary>
     /// Loyalty programme details.
@@ -214,5 +214,5 @@ public record TripLeg2
     [IsoXmlTag("AddtlData")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AdditionalData { get; init; }
+    public Max350Text? AdditionalData { get; init; }
 }

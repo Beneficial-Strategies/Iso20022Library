@@ -35,7 +35,7 @@ public record ContractType15
     /// </summary>
     [DisplayName("Derivative Based On Crypto Asset")]
     [IsoXmlTag("DerivBasedOnCrptAsst")]
-    public IsoTrueFalseIndicator? DerivativeBasedOnCryptoAsset { get; init; }
+    public TrueFalseIndicator? DerivativeBasedOnCryptoAsset { get; init; }
 
     /// <summary>
     /// Place Of Settlement.
@@ -49,7 +49,7 @@ public record ContractType15
     /// </summary>
     [DisplayName("Product Classification")]
     [IsoXmlTag("PdctClssfctn")]
-    public IsoCFIOct2015Identifier? ProductClassification { get; init; }
+    public CFIOct2015Identifier? ProductClassification { get; init; }
 
     /// <summary>
     /// Product Identification.
@@ -77,14 +77,14 @@ public record ContractType15
     /// </summary>
     [DisplayName("Underlying Asset Price Source")]
     [IsoXmlTag("UndrlygAsstPricSrc")]
-    public IsoMax50Text? UnderlyingAssetPriceSource { get; init; }
+    public Max50Text? UnderlyingAssetPriceSource { get; init; }
 
     /// <summary>
     /// Underlying Asset Trading Platform Identifier.
     /// </summary>
     [DisplayName("Underlying Asset Trading Platform Identifier")]
     [IsoXmlTag("UndrlygAsstTradgPltfmIdr")]
-    public IsoMICIdentifier? UnderlyingAssetTradingPlatformIdentifier { get; init; }
+    public MICIdentifier? UnderlyingAssetTradingPlatformIdentifier { get; init; }
 
     /// <summary>
     /// Underlying Instrument.

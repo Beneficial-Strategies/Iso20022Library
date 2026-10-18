@@ -23,7 +23,7 @@ public record MandateAdjustment1
     [DisplayName("Date Adjustment Rule Indicator")]
     [IsoXmlTag("DtAdjstmntRuleInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator DateAdjustmentRuleIndicator { get; init; }
+    public required TrueFalseIndicator DateAdjustmentRuleIndicator { get; init; }
 
     /// <summary>
     /// Defines the category of adjustment.
@@ -48,5 +48,5 @@ public record MandateAdjustment1
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Rate { get; init; }
+    public PercentageRate? Rate { get; init; }
 }

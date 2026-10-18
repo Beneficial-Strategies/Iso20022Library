@@ -32,7 +32,7 @@ public record MerchantConfigurationParameters6
     [IsoXmlTag("MrchntId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MerchantIdentification { get; init; }
+    public Max35Text? MerchantIdentification { get; init; }
 
     /// <summary>
     /// Version of the merchant parameters.
@@ -42,7 +42,7 @@ public record MerchantConfigurationParameters6
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Version { get; init; }
+    public Max256Text? Version { get; init; }
 
     /// <summary>
     /// Version of the parameters&apos; format.
@@ -52,7 +52,7 @@ public record MerchantConfigurationParameters6
     [IsoXmlTag("ParamFrmtIdr")]
     [IsoSimpleType(IsoSimpleType.Max8Text)]
     [StringLength(maximumLength: 8, MinimumLength = 1)]
-    public IsoMax8Text? ParameterFormatIdentifier { get; init; }
+    public Max8Text? ParameterFormatIdentifier { get; init; }
 
     /// <summary>
     /// Local proxy configuration.
@@ -69,7 +69,7 @@ public record MerchantConfigurationParameters6
     [DisplayName("Other Parameters Length")]
     [IsoXmlTag("OthrParamsLngth")]
     [IsoSimpleType(IsoSimpleType.PositiveNumber)]
-    public IsoPositiveNumber? OtherParametersLength { get; init; }
+    public PositiveNumber? OtherParametersLength { get; init; }
 
     /// <summary>
     /// Place of this  Block, beginning with 0, in the full other parameters.
@@ -78,7 +78,7 @@ public record MerchantConfigurationParameters6
     [DisplayName("Offset Start")]
     [IsoXmlTag("OffsetStart")]
     [IsoSimpleType(IsoSimpleType.PositiveNumber)]
-    public IsoPositiveNumber? OffsetStart { get; init; }
+    public PositiveNumber? OffsetStart { get; init; }
 
     /// <summary>
     /// Following place of this Block in the full other parameters.
@@ -87,7 +87,7 @@ public record MerchantConfigurationParameters6
     [DisplayName("Offset End")]
     [IsoXmlTag("OffsetEnd")]
     [IsoSimpleType(IsoSimpleType.PositiveNumber)]
-    public IsoPositiveNumber? OffsetEnd { get; init; }
+    public PositiveNumber? OffsetEnd { get; init; }
 
     /// <summary>
     /// Other merchant parameters.
@@ -96,5 +96,5 @@ public record MerchantConfigurationParameters6
     [DisplayName("Other Parameters")]
     [IsoXmlTag("OthrParams")]
     [IsoSimpleType(IsoSimpleType.Max10000Binary)]
-    public IsoMax10000Binary? OtherParameters { get; init; }
+    public Max10000Binary? OtherParameters { get; init; }
 }

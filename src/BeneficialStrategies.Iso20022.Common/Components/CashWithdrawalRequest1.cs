@@ -22,7 +22,7 @@ public record CashWithdrawalRequest1
     [IsoId("_m99YAVDfEfCRhs5qxCujTw")]
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
-    public required IsoUUIDv4Identifier OrderReference { get; init; }
+    public required UUIDv4Identifier OrderReference { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the cash receiver for the cash withdrawal.
@@ -30,7 +30,7 @@ public record CashWithdrawalRequest1
     [IsoId("_e0TcGeR9Ee-NFYIkYc90gw")]
     [DisplayName("Cash Receiver Reference")]
     [IsoXmlTag("CshRcvrRef")]
-    public required IsoMax35Text CashReceiverReference { get; init; }
+    public required Max35Text CashReceiverReference { get; init; }
 
     /// <summary>
     /// Indicates whether this message is amending an earlier request message.
@@ -40,7 +40,7 @@ public record CashWithdrawalRequest1
     [IsoId("_MxRV8KtmEfC6tbn8zOl_iw")]
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
-    public IsoYesNoIndicator? AmendmentIndicator { get; init; }
+    public YesNoIndicator? AmendmentIndicator { get; init; }
 
     /// <summary>
     /// Date on which the cash receiver requests the cash to be withdrawn from the account.
@@ -48,7 +48,7 @@ public record CashWithdrawalRequest1
     [IsoId("_e0TcGuR9Ee-NFYIkYc90gw")]
     [DisplayName("Requested Value Date")]
     [IsoXmlTag("ReqdValDt")]
-    public required IsoISODate RequestedValueDate { get; init; }
+    public required DateOnly RequestedValueDate { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the account to which cash will be withdrawn.
@@ -96,7 +96,7 @@ public record CashWithdrawalRequest1
     [IsoId("_e0TcHuR9Ee-NFYIkYc90gw")]
     [DisplayName("Secure Carrier Name")]
     [IsoXmlTag("ScrCrrierNm")]
-    public IsoMax70Text? SecureCarrierName { get; init; }
+    public Max70Text? SecureCarrierName { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the secure carrier for the withdrawal.
@@ -104,7 +104,7 @@ public record CashWithdrawalRequest1
     [IsoId("_e0TcH-R9Ee-NFYIkYc90gw")]
     [DisplayName("Secure Carrier Reference")]
     [IsoXmlTag("ScrCrrierRef")]
-    public IsoMax35Text? SecureCarrierReference { get; init; }
+    public Max35Text? SecureCarrierReference { get; init; }
 
     /// <summary>
     /// Indicates whether the withdrawal in transit is insured.
@@ -113,7 +113,7 @@ public record CashWithdrawalRequest1
     [IsoId("_e0TcIOR9Ee-NFYIkYc90gw")]
     [DisplayName("Insurance Indicator")]
     [IsoXmlTag("InsrncInd")]
-    public IsoYesNoIndicator? InsuranceIndicator { get; init; }
+    public YesNoIndicator? InsuranceIndicator { get; init; }
 
     /// <summary>
     /// Specifies the address where the cash withdrawal is sent from.
@@ -129,5 +129,5 @@ public record CashWithdrawalRequest1
     [IsoId("_e0TcIeR9Ee-NFYIkYc90gw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public IsoMax500Text? AdditionalInformation { get; init; }
+    public Max500Text? AdditionalInformation { get; init; }
 }

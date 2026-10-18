@@ -30,7 +30,7 @@ public record DigitalPaymentSettlement2
     [IsoId("_vOYOMZZ8EfC2_67yGLymgA")]
     [DisplayName("Electronic Money Token Settlement Quantity")]
     [IsoXmlTag("ElctrncMnyTknSttlmQty")]
-    public required IsoMax30DecimalNumber ElectronicMoneyTokenSettlementQuantity { get; init; }
+    public required Max30DecimalNumber ElectronicMoneyTokenSettlementQuantity { get; init; }
 
     /// <summary>
     /// Location where the payment is/will be taking place.

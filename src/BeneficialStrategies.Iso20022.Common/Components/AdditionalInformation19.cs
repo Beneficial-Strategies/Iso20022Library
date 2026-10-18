@@ -23,7 +23,7 @@ public record AdditionalInformation19
     [DisplayName("Entered Data Numeric")]
     [IsoXmlTag("NtrdDataNmrc")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public IsoMax35NumericText? EnteredDataNumeric { get; init; }
+    public Max35NumericText? EnteredDataNumeric { get; init; }
 
     /// <summary>
     /// Key-entered alphanumeric data.
@@ -33,7 +33,7 @@ public record AdditionalInformation19
     [IsoXmlTag("NtrdDataAlphaNmrc")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? EnteredDataAlphaNumeric { get; init; }
+    public Max350Text? EnteredDataAlphaNumeric { get; init; }
 
     /// <summary>
     /// Additional fleet summary data.
@@ -43,5 +43,5 @@ public record AdditionalInformation19
     [IsoXmlTag("AddtlData")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AdditionalData { get; init; }
+    public Max350Text? AdditionalData { get; init; }
 }

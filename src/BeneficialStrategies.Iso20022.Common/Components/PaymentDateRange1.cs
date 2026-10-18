@@ -24,7 +24,7 @@ public record PaymentDateRange1
     [IsoXmlTag("PmtSchdlId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PaymentScheduleIdentification { get; init; }
+    public Max35Text? PaymentScheduleIdentification { get; init; }
 
     /// <summary>
     /// Expected payment date.
@@ -33,7 +33,7 @@ public record PaymentDateRange1
     [DisplayName("Expected Date")]
     [IsoXmlTag("XpctdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ExpectedDate { get; init; }
+    public DateOnly? ExpectedDate { get; init; }
 
     /// <summary>
     /// Latest date whereby the amount must be paid.
@@ -42,5 +42,5 @@ public record PaymentDateRange1
     [DisplayName("Due Date")]
     [IsoXmlTag("DueDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DueDate { get; init; }
+    public DateOnly? DueDate { get; init; }
 }

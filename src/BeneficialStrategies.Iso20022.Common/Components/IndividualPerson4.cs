@@ -24,7 +24,7 @@ public record IndividualPerson4
     [IsoXmlTag("GvnNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text GivenName { get; init; }
+    public required Max35Text GivenName { get; init; }
 
     /// <summary>
     /// Second name of a person.
@@ -34,7 +34,7 @@ public record IndividualPerson4
     [IsoXmlTag("MddlNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MiddleName { get; init; }
+    public Max35Text? MiddleName { get; init; }
 
     /// <summary>
     /// Name by which a party is known and which is usually used to identify that party.
@@ -44,7 +44,7 @@ public record IndividualPerson4
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text Name { get; init; }
+    public required Max350Text Name { get; init; }
 
     /// <summary>
     /// Specifies the gender of the person.
@@ -61,5 +61,5 @@ public record IndividualPerson4
     [DisplayName("Birth Date")]
     [IsoXmlTag("BirthDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? BirthDate { get; init; }
+    public DateOnly? BirthDate { get; init; }
 }

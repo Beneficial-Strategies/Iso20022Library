@@ -32,7 +32,7 @@ public record Statement69
     [IsoXmlTag("QryRef")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? QueryReference { get; init; }
+    public RestrictedFINXMax16Text? QueryReference { get; init; }
 
     /// <summary>
     /// Reference common to all pages of a statement.
@@ -42,7 +42,7 @@ public record Statement69
     [IsoXmlTag("StmtId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? StatementIdentification { get; init; }
+    public RestrictedFINXMax16Text? StatementIdentification { get; init; }
 
     /// <summary>
     /// Date and time of the statement.
@@ -75,5 +75,5 @@ public record Statement69
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ActivityIndicator { get; init; }
+    public required YesNoIndicator ActivityIndicator { get; init; }
 }

@@ -50,7 +50,7 @@ public record RequiredSubmission4
     [DisplayName("Match Issue Date")]
     [IsoXmlTag("MtchIsseDt")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator MatchIssueDate { get; init; }
+    public required YesNoIndicator MatchIssueDate { get; init; }
 
     /// <summary>
     /// Specifies if the inspection date must be matched as part of the validation of the data set.
@@ -59,7 +59,7 @@ public record RequiredSubmission4
     [DisplayName("Match Inspection Date")]
     [IsoXmlTag("MtchInspctnDt")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator MatchInspectionDate { get; init; }
+    public required YesNoIndicator MatchInspectionDate { get; init; }
 
     /// <summary>
     /// Specifies if the indication of an authorised inspector must be present as part of the validation of the data set.
@@ -68,7 +68,7 @@ public record RequiredSubmission4
     [DisplayName("Authorised Inspector Indicator")]
     [IsoXmlTag("AuthrsdInspctrInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator AuthorisedInspectorIndicator { get; init; }
+    public required YesNoIndicator AuthorisedInspectorIndicator { get; init; }
 
     /// <summary>
     /// Specifies if the consignee must be matched as part of the validation of the data set.
@@ -77,7 +77,7 @@ public record RequiredSubmission4
     [DisplayName("Match Consignee")]
     [IsoXmlTag("MtchConsgn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator MatchConsignee { get; init; }
+    public required YesNoIndicator MatchConsignee { get; init; }
 
     /// <summary>
     /// Specifies if the manufacturer must be matched as part of the validation of the data set.
@@ -93,5 +93,5 @@ public record RequiredSubmission4
     [IsoId("_TnwH1tp-Ed-ak6NoX_4Aeg_161434273")]
     [DisplayName("Line Item Identification")]
     [IsoXmlTag("LineItmId")]
-    public SimpleValueList<IsoMax70Text> LineItemIdentification { get; init; } = [];
+    public SimpleValueList<Max70Text> LineItemIdentification { get; init; } = [];
 }

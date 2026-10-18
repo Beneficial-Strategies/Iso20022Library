@@ -22,7 +22,7 @@ public record FleetDriverData2
     [IsoId("_5ugJQVN5EfC0lMwgjvMClw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax105Text? Name { get; init; }
+    public Max105Text? Name { get; init; }
 
     /// <summary>
     /// Fleet driver identification.
@@ -30,7 +30,7 @@ public record FleetDriverData2
     [IsoId("_5ugJQ1N5EfC0lMwgjvMClw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax70Text? Identification { get; init; }
+    public Max70Text? Identification { get; init; }
 
     /// <summary>
     /// Type of driving license.
@@ -38,7 +38,7 @@ public record FleetDriverData2
     [IsoId("_5ugJRVN5EfC0lMwgjvMClw")]
     [DisplayName("License Type")]
     [IsoXmlTag("LicTp")]
-    public IsoMax70Text? LicenseType { get; init; }
+    public Max70Text? LicenseType { get; init; }
 
     /// <summary>
     /// Form of driving license.
@@ -54,7 +54,7 @@ public record FleetDriverData2
     [IsoId("_5ugJSVN5EfC0lMwgjvMClw")]
     [DisplayName("License Identification")]
     [IsoXmlTag("LicId")]
-    public IsoMax70Text? LicenseIdentification { get; init; }
+    public Max70Text? LicenseIdentification { get; init; }
 
     /// <summary>
     /// Authority assigning an identification to a driver license.
@@ -70,7 +70,7 @@ public record FleetDriverData2
     [IsoId("_5ugJTVN5EfC0lMwgjvMClw")]
     [DisplayName("License Issuance Date")]
     [IsoXmlTag("LicIssncDt")]
-    public IsoISODate? LicenseIssuanceDate { get; init; }
+    public DateOnly? LicenseIssuanceDate { get; init; }
 
     /// <summary>
     /// Expiration date of the driving license (if and when relevant).
@@ -78,7 +78,7 @@ public record FleetDriverData2
     [IsoId("_5ugJT1N5EfC0lMwgjvMClw")]
     [DisplayName("License Expiration Date")]
     [IsoXmlTag("LicXprtnDt")]
-    public IsoISODate? LicenseExpirationDate { get; init; }
+    public DateOnly? LicenseExpirationDate { get; init; }
 
     /// <summary>
     /// Country issuing the driver license.
@@ -110,7 +110,7 @@ public record FleetDriverData2
     [IsoId("_5ugJV1N5EfC0lMwgjvMClw")]
     [DisplayName("License Other Authority")]
     [IsoXmlTag("LicOthrAuthrty")]
-    public IsoMax16Text? LicenseOtherAuthority { get; init; }
+    public Max16Text? LicenseOtherAuthority { get; init; }
 
     /// <summary>
     /// Contains the employer information.
@@ -118,7 +118,7 @@ public record FleetDriverData2
     [IsoId("_5ugJWVN5EfC0lMwgjvMClw")]
     [DisplayName("Employer")]
     [IsoXmlTag("Mplyr")]
-    public IsoMax70Text? Employer { get; init; }
+    public Max70Text? Employer { get; init; }
 
     /// <summary>
     /// Contains the employee identification number as assigned by the fleet operator.
@@ -126,7 +126,7 @@ public record FleetDriverData2
     [IsoId("_5ugJW1N5EfC0lMwgjvMClw")]
     [DisplayName("Employee Identification")]
     [IsoXmlTag("MplyeeId")]
-    public IsoMax70Text? EmployeeIdentification { get; init; }
+    public Max70Text? EmployeeIdentification { get; init; }
 
     /// <summary>
     /// Contains the fleet driver's department number as assigned by the fleet operator.
@@ -134,7 +134,7 @@ public record FleetDriverData2
     [IsoId("_5ugJXVN5EfC0lMwgjvMClw")]
     [DisplayName("Department Number")]
     [IsoXmlTag("DeptNb")]
-    public IsoMax35Text? DepartmentNumber { get; init; }
+    public Max35Text? DepartmentNumber { get; init; }
 
     /// <summary>
     /// Additional identification used for the driver.
@@ -150,7 +150,7 @@ public record FleetDriverData2
     [IsoId("_5ugJYVN5EfC0lMwgjvMClw")]
     [DisplayName("Date Of Birth")]
     [IsoXmlTag("DtOfBirth")]
-    public IsoISODate? DateOfBirth { get; init; }
+    public DateOnly? DateOfBirth { get; init; }
 
     /// <summary>
     /// Reserved for private data. The use of this data element is determined by bilateral agreement.
@@ -158,7 +158,7 @@ public record FleetDriverData2
     [IsoId("_5ugJY1N5EfC0lMwgjvMClw")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -166,5 +166,5 @@ public record FleetDriverData2
     [IsoId("_5ugJZVN5EfC0lMwgjvMClw")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

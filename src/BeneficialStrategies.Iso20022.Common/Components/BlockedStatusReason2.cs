@@ -31,7 +31,7 @@ public record BlockedStatusReason2
     [DisplayName("Blocked")]
     [IsoXmlTag("Blckd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator Blocked { get; init; }
+    public required YesNoIndicator Blocked { get; init; }
 
     /// <summary>
     /// Reason for the blocked status.
@@ -49,5 +49,5 @@ public record BlockedStatusReason2
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text AdditionalInformation { get; init; }
+    public required Max350Text AdditionalInformation { get; init; }
 }

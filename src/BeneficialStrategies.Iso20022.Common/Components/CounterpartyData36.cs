@@ -23,7 +23,7 @@ public record CounterpartyData36
     [DisplayName("Report Submitting Entity")]
     [IsoXmlTag("RptSubmitgNtty")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public required IsoLEIIdentifier ReportSubmittingEntity { get; init; }
+    public required LEIIdentifier ReportSubmittingEntity { get; init; }
 
     /// <summary>
     /// Unique code identifying the reporting counterparty.
@@ -32,5 +32,5 @@ public record CounterpartyData36
     [DisplayName("Reporting Counterparty")]
     [IsoXmlTag("RptgCtrPty")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public required IsoLEIIdentifier ReportingCounterparty { get; init; }
+    public required LEIIdentifier ReportingCounterparty { get; init; }
 }

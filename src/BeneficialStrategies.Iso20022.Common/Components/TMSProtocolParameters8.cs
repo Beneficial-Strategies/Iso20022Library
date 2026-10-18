@@ -38,7 +38,7 @@ public record TMSProtocolParameters8
     [IsoId("_3A1QgbZ-EfCUZfsQO4rYeA-pver")]
     [DisplayName("Protocol Version")]
     [IsoXmlTag("PrtclVrsn")]
-    public IsoMax8Text? ProtocolVersion { get; init; }
+    public Max8Text? ProtocolVersion { get; init; }
 
     /// <summary>
     /// Maintenance services provided by the terminal manager.
@@ -55,7 +55,7 @@ public record TMSProtocolParameters8
     [IsoId("_3A1QgbZ-EfCUZfsQO4rYeA-vers")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
-    public required IsoMax256Text Version { get; init; }
+    public required Max256Text Version { get; init; }
 
     /// <summary>
     /// Identification of applications which may be managed by the TM, partially or globally.
@@ -63,7 +63,7 @@ public record TMSProtocolParameters8
     [IsoId("_3A1QgbZ-EfCUZfsQO4rYeA-apid")]
     [DisplayName("Application Identification")]
     [IsoXmlTag("ApplId")]
-    public SimpleValueList<IsoMax35Text> ApplicationIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> ApplicationIdentification { get; init; } = [];
 
     /// <summary>
     /// Identification of the terminal manager host.
@@ -71,7 +71,7 @@ public record TMSProtocolParameters8
     [IsoId("_3A1QgbZ-EfCUZfsQO4rYeA-hstid")]
     [DisplayName("Host Identification")]
     [IsoXmlTag("HstId")]
-    public required IsoMax35Text HostIdentification { get; init; }
+    public required Max35Text HostIdentification { get; init; }
 
     /// <summary>
     /// New identification of the POI for the terminal manager.
@@ -79,7 +79,7 @@ public record TMSProtocolParameters8
     [IsoId("_3A1QgbZ-EfCUZfsQO4rYeA-poiid")]
     [DisplayName("POI Identification")]
     [IsoXmlTag("POIId")]
-    public IsoMax35Text? POIIdentification { get; init; }
+    public Max35Text? POIIdentification { get; init; }
 
     /// <summary>
     /// New identification of the initiating party to set in TMS messages with this terminal manager.
@@ -87,7 +87,7 @@ public record TMSProtocolParameters8
     [IsoId("_3A1QgbZ-EfCUZfsQO4rYeA-inid")]
     [DisplayName("Initiating Party Identification")]
     [IsoXmlTag("InitgPtyId")]
-    public IsoMax35Text? InitiatingPartyIdentification { get; init; }
+    public Max35Text? InitiatingPartyIdentification { get; init; }
 
     /// <summary>
     /// New identification of the recipient party to set in TMS messages with this terminal manager.
@@ -95,7 +95,7 @@ public record TMSProtocolParameters8
     [IsoId("_3A1QgbZ-EfCUZfsQO4rYeA-rcid")]
     [DisplayName("Recipient Party Identification")]
     [IsoXmlTag("RcptPtyId")]
-    public IsoMax35Text? RecipientPartyIdentification { get; init; }
+    public Max35Text? RecipientPartyIdentification { get; init; }
 
     /// <summary>
     /// Configuration parameters are exchanged per file transfer protocol rather than per message.
@@ -103,7 +103,7 @@ public record TMSProtocolParameters8
     [IsoId("_3A1QgbZ-EfCUZfsQO4rYeA-fltx")]
     [DisplayName("File Transfer")]
     [IsoXmlTag("FileTrf")]
-    public IsoTrueFalseIndicator? FileTransfer { get; init; }
+    public TrueFalseIndicator? FileTransfer { get; init; }
 
     /// <summary>
     /// Configuration of a message item.
@@ -119,5 +119,5 @@ public record TMSProtocolParameters8
     [IsoId("_3A1QgbZ-EfCUZfsQO4rYeA-exts")]
     [DisplayName("Externally Type Supported")]
     [IsoXmlTag("ExtnllyTpSpprtd")]
-    public SimpleValueList<IsoMax1025Text> ExternallyTypeSupported { get; init; } = [];
+    public SimpleValueList<Max1025Text> ExternallyTypeSupported { get; init; } = [];
 }

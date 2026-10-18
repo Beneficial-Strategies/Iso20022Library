@@ -35,7 +35,7 @@ public record PaymentTransaction152
     /// </summary>
     [DisplayName("Cancellation Status Identification")]
     [IsoXmlTag("CxlStsId")]
-    public IsoMax35Text? CancellationStatusIdentification { get; init; }
+    public Max35Text? CancellationStatusIdentification { get; init; }
 
     /// <summary>
     /// Cancellation Status Reason Information.
@@ -50,14 +50,14 @@ public record PaymentTransaction152
     /// </summary>
     [DisplayName("Original Clearing System Reference")]
     [IsoXmlTag("OrgnlClrSysRef")]
-    public IsoMax35Text? OriginalClearingSystemReference { get; init; }
+    public Max35Text? OriginalClearingSystemReference { get; init; }
 
     /// <summary>
     /// Original End To End Identification.
     /// </summary>
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Original Group Information.
@@ -71,7 +71,7 @@ public record PaymentTransaction152
     /// </summary>
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
-    public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Original Interbank Settlement Amount.
@@ -85,14 +85,14 @@ public record PaymentTransaction152
     /// </summary>
     [DisplayName("Original Interbank Settlement Date")]
     [IsoXmlTag("OrgnlIntrBkSttlmDt")]
-    public IsoISODate? OriginalInterbankSettlementDate { get; init; }
+    public DateOnly? OriginalInterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Original Transaction Identification.
     /// </summary>
     [DisplayName("Original Transaction Identification")]
     [IsoXmlTag("OrgnlTxId")]
-    public IsoMax35Text? OriginalTransactionIdentification { get; init; }
+    public Max35Text? OriginalTransactionIdentification { get; init; }
 
     /// <summary>
     /// Original Transaction Reference.
@@ -106,7 +106,7 @@ public record PaymentTransaction152
     /// </summary>
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
-    public IsoUUIDv4Identifier? OriginalUETR { get; init; }
+    public UUIDv4Identifier? OriginalUETR { get; init; }
 
     /// <summary>
     /// Resolution Related Information.

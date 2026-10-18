@@ -21,7 +21,7 @@ public record ContractRegistration8
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public IsoMax1025Text? AdditionalInformation { get; init; }
+    public Max1025Text? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Attachment.
@@ -49,7 +49,7 @@ public record ContractRegistration8
     /// </summary>
     [DisplayName("Contract Registration Opening Identification")]
     [IsoXmlTag("CtrctRegnOpngId")]
-    public required IsoMax35Text ContractRegistrationOpeningIdentification { get; init; }
+    public required Max35Text ContractRegistrationOpeningIdentification { get; init; }
 
     /// <summary>
     /// Payment Schedule Type.

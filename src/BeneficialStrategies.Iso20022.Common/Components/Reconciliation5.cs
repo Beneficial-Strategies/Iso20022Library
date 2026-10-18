@@ -22,7 +22,7 @@ public record Reconciliation5
     [IsoId("_bmMeca25EfCKbLfqFyM0kg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax50Text? Identification { get; init; }
+    public Max50Text? Identification { get; init; }
 
     /// <summary>
     /// Date of the reconciliation.
@@ -30,7 +30,7 @@ public record Reconciliation5
     [IsoId("_bmMec625EfCKbLfqFyM0kg")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// A value used to allow a period within a reconciliation date.
@@ -38,5 +38,5 @@ public record Reconciliation5
     [IsoId("_bmMee625EfCKbLfqFyM0kg")]
     [DisplayName("Checkpoint Reference")]
     [IsoXmlTag("ChckptRef")]
-    public IsoMax35Text? CheckpointReference { get; init; }
+    public Max35Text? CheckpointReference { get; init; }
 }

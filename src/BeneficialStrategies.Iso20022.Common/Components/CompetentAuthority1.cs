@@ -24,7 +24,7 @@ public record CompetentAuthority1
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text Identification { get; init; }
+    public required Max350Text Identification { get; init; }
 
     /// <summary>
     /// Information on the onboarding status of the competent authority.
@@ -33,5 +33,5 @@ public record CompetentAuthority1
     [DisplayName("Onboarding Status")]
     [IsoXmlTag("OnbrdgSts")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator OnboardingStatus { get; init; }
+    public required TrueFalseIndicator OnboardingStatus { get; init; }
 }

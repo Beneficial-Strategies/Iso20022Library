@@ -32,14 +32,14 @@ public record CurrencyExchange26
     /// </summary>
     [DisplayName("Pre Agreed Exchange Rate")]
     [IsoXmlTag("PreAgrdXchgRate")]
-    public required IsoBaseOneRate PreAgreedExchangeRate { get; init; }
+    public required BaseOneRate PreAgreedExchangeRate { get; init; }
 
     /// <summary>
     /// Date and time at which an exchange rate is quoted.
     /// </summary>
     [DisplayName("Quotation Date Time")]
     [IsoXmlTag("QtnDtTm")]
-    public IsoISODateTime? QuotationDateTime { get; init; }
+    public ISODateTime? QuotationDateTime { get; init; }
 
     /// <summary>
     /// Currency into which the base (unit) currency is converted. In the example GBP 1.00 = USD 1.30, the unit currency is USD.
@@ -56,7 +56,7 @@ public record CurrencyExchange26
     /// </remarks>
     [DisplayName("Quote Identification")]
     [IsoXmlTag("QtId")]
-    public IsoUUIDv4Identifier? QuoteIdentification { get; init; }
+    public UUIDv4Identifier? QuoteIdentification { get; init; }
 
     /// <summary>
     /// Currency in which the rate of exchange is expressed in a currency exchange. In the example GBP 1.00 = USD 1.30, the unit currency is GBP.

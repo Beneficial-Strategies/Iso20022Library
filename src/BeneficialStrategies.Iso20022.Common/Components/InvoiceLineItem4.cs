@@ -22,7 +22,7 @@ public record InvoiceLineItem4
     [IsoId("_sSJIwUhrEfCMZJtj4J7UGQ")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Invoice order date.
@@ -30,7 +30,7 @@ public record InvoiceLineItem4
     [IsoId("_sSJIw0hrEfCMZJtj4J7UGQ")]
     [DisplayName("Order Date")]
     [IsoXmlTag("OrdrDt")]
-    public IsoISODate? OrderDate { get; init; }
+    public DateOnly? OrderDate { get; init; }
 
     /// <summary>
     /// Contains the corporate contract number.
@@ -38,7 +38,7 @@ public record InvoiceLineItem4
     [IsoId("_sSJIxUhrEfCMZJtj4J7UGQ")]
     [DisplayName("Contract Number")]
     [IsoXmlTag("CtrctNb")]
-    public IsoMax70Text? ContractNumber { get; init; }
+    public Max70Text? ContractNumber { get; init; }
 
     /// <summary>
     /// Shipping date of the product or the date services rendered.
@@ -46,7 +46,7 @@ public record InvoiceLineItem4
     [IsoId("_sSJIx0hrEfCMZJtj4J7UGQ")]
     [DisplayName("Shipping Date")]
     [IsoXmlTag("ShppgDt")]
-    public IsoISODate? ShippingDate { get; init; }
+    public DateOnly? ShippingDate { get; init; }
 
     /// <summary>
     /// Rebilling indicator.
@@ -54,7 +54,7 @@ public record InvoiceLineItem4
     [IsoId("_sSJIyUhrEfCMZJtj4J7UGQ")]
     [DisplayName("Rebilling")]
     [IsoXmlTag("Rbllg")]
-    public IsoTrueFalseIndicator? Rebilling { get; init; }
+    public TrueFalseIndicator? Rebilling { get; init; }
 
     /// <summary>
     /// Indicates whether or not the invoice line item represents a medical service.
@@ -62,7 +62,7 @@ public record InvoiceLineItem4
     [IsoId("_sSJIy0hrEfCMZJtj4J7UGQ")]
     [DisplayName("Medical Services")]
     [IsoXmlTag("MdclSvcs")]
-    public IsoTrueFalseIndicator? MedicalServices { get; init; }
+    public TrueFalseIndicator? MedicalServices { get; init; }
 
     /// <summary>
     /// Contains the health industry number to which the medical services are being shipped.
@@ -70,7 +70,7 @@ public record InvoiceLineItem4
     [IsoId("_sSJIzUhrEfCMZJtj4J7UGQ")]
     [DisplayName("Ship To Industry Code")]
     [IsoXmlTag("ShipToIndstryCd")]
-    public IsoMax50Text? ShipToIndustryCode { get; init; }
+    public Max50Text? ShipToIndustryCode { get; init; }
 
     /// <summary>
     /// Product code of the item.
@@ -78,7 +78,7 @@ public record InvoiceLineItem4
     [IsoId("_sSJIz0hrEfCMZJtj4J7UGQ")]
     [DisplayName("Product Code")]
     [IsoXmlTag("PdctCd")]
-    public IsoMax70Text? ProductCode { get; init; }
+    public Max70Text? ProductCode { get; init; }
 
     /// <summary>
     /// Contains a code that identifies the product number qualifier of the product.
@@ -86,7 +86,7 @@ public record InvoiceLineItem4
     [IsoId("_sSJI0UhrEfCMZJtj4J7UGQ")]
     [DisplayName("Product Qualifier")]
     [IsoXmlTag("PdctQlfr")]
-    public IsoMax35Text? ProductQualifier { get; init; }
+    public Max35Text? ProductQualifier { get; init; }
 
     /// <summary>
     /// May contain further clarifying data, such as event name, etc.
@@ -94,7 +94,7 @@ public record InvoiceLineItem4
     [IsoId("_sSJI00hrEfCMZJtj4J7UGQ")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax256Text? Description { get; init; }
+    public Max256Text? Description { get; init; }
 
     /// <summary>
     /// Indicates whether the purchase is categorized as goods or services.
@@ -102,7 +102,7 @@ public record InvoiceLineItem4
     [IsoId("_sSJI1UhrEfCMZJtj4J7UGQ")]
     [DisplayName("Type Of Supply")]
     [IsoXmlTag("TpOfSpply")]
-    public IsoMax10Text? TypeOfSupply { get; init; }
+    public Max10Text? TypeOfSupply { get; init; }
 
     /// <summary>
     /// Unit of measure of the item purchased.
@@ -118,7 +118,7 @@ public record InvoiceLineItem4
     [IsoId("_sSJI2UhrEfCMZJtj4J7UGQ")]
     [DisplayName("Other Unit Of Measure")]
     [IsoXmlTag("OthrUnitOfMeasr")]
-    public IsoMax35Text? OtherUnitOfMeasure { get; init; }
+    public Max35Text? OtherUnitOfMeasure { get; init; }
 
     /// <summary>
     /// Contains the price for one unit of the product or service.
@@ -134,7 +134,7 @@ public record InvoiceLineItem4
     [IsoId("_sSJI3UhrEfCMZJtj4J7UGQ")]
     [DisplayName("Product Quantity")]
     [IsoXmlTag("PdctQty")]
-    public IsoDecimalNumber? ProductQuantity { get; init; }
+    public DecimalNumber? ProductQuantity { get; init; }
 
     /// <summary>
     /// Contains the adjusted amount (for example, discounts).
@@ -158,7 +158,7 @@ public record InvoiceLineItem4
     [IsoId("_sSJI40hrEfCMZJtj4J7UGQ")]
     [DisplayName("Adjustment Reason")]
     [IsoXmlTag("AdjstmntRsn")]
-    public IsoMax35Text? AdjustmentReason { get; init; }
+    public Max35Text? AdjustmentReason { get; init; }
 
     /// <summary>
     /// Indicates whether or not insurance was purchased.
@@ -166,7 +166,7 @@ public record InvoiceLineItem4
     [IsoId("_sSJI5UhrEfCMZJtj4J7UGQ")]
     [DisplayName("Insurance")]
     [IsoXmlTag("Insrnc")]
-    public IsoTrueFalseIndicator? Insurance { get; init; }
+    public TrueFalseIndicator? Insurance { get; init; }
 
     /// <summary>
     /// Cost of the insurance purchased.
@@ -190,7 +190,7 @@ public record InvoiceLineItem4
     [IsoId("_sSJI60hrEfCMZJtj4J7UGQ")]
     [DisplayName("VAT Invoice Reference")]
     [IsoXmlTag("VATInvcRef")]
-    public IsoMax35Text? VATInvoiceReference { get; init; }
+    public Max35Text? VATInvoiceReference { get; init; }
 
     /// <summary>
     /// Total amount of line item, inclusive of any applicable adjustments and taxes.
@@ -214,7 +214,7 @@ public record InvoiceLineItem4
     [IsoId("_sSJI8UhrEfCMZJtj4J7UGQ")]
     [DisplayName("Zero Cost To Customer")]
     [IsoXmlTag("ZeroCostToCstmr")]
-    public IsoTrueFalseIndicator? ZeroCostToCustomer { get; init; }
+    public TrueFalseIndicator? ZeroCostToCustomer { get; init; }
 
     /// <summary>
     /// Reserved for private data. The use of this data element is determined by bilateral agreement.
@@ -222,7 +222,7 @@ public record InvoiceLineItem4
     [IsoId("_luufEkhrEfCMZJtj4J7UGQ")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -230,5 +230,5 @@ public record InvoiceLineItem4
     [IsoId("_luufE0hrEfCMZJtj4J7UGQ")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

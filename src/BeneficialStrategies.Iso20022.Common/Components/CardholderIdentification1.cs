@@ -24,7 +24,7 @@ public record CardholderIdentification1
     [IsoXmlTag("CrdhldrIdVal")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text CardholderIdentificationValue { get; init; }
+    public required Max35Text CardholderIdentificationValue { get; init; }
 
     /// <summary>
     /// Type of identification used for identifying the cardholder.

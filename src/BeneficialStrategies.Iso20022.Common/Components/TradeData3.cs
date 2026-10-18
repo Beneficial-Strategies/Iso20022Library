@@ -24,7 +24,7 @@ public record TradeData3
     [IsoXmlTag("MtchgSysUnqRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MatchingSystemUniqueReference { get; init; }
+    public required Max35Text MatchingSystemUniqueReference { get; init; }
 
     /// <summary>
     /// Reference to the unique matching identification assigned to the trade and to the matching trade from the counterparty by the central matching system.
@@ -34,7 +34,7 @@ public record TradeData3
     [IsoXmlTag("MtchgSysMtchgRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MatchingSystemMatchingReference { get; init; }
+    public Max35Text? MatchingSystemMatchingReference { get; init; }
 
     /// <summary>
     /// Party that assigned the status to the trade.
@@ -44,7 +44,7 @@ public record TradeData3
     [IsoXmlTag("StsOrgtr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? StatusOriginator { get; init; }
+    public Max35Text? StatusOriginator { get; init; }
 
     /// <summary>
     /// Specifies the new status of the trade.
@@ -62,7 +62,7 @@ public record TradeData3
     [IsoXmlTag("CurStsSubTp")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? CurrentStatusSubType { get; init; }
+    public Max70Text? CurrentStatusSubType { get; init; }
 
     /// <summary>
     /// Specifies the date and time at which the current status was assigned.
@@ -71,7 +71,7 @@ public record TradeData3
     [DisplayName("Current Status Date Time")]
     [IsoXmlTag("CurStsDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? CurrentStatusDateTime { get; init; }
+    public ISODateTime? CurrentStatusDateTime { get; init; }
 
     /// <summary>
     /// Specifies the previous status of the trade.
@@ -88,7 +88,7 @@ public record TradeData3
     [DisplayName("Alleged Trade")]
     [IsoXmlTag("AllgdTrad")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AllegedTrade { get; init; }
+    public YesNoIndicator? AllegedTrade { get; init; }
 
     /// <summary>
     /// Additional information on the previous status of a trade in a central system.
@@ -98,5 +98,5 @@ public record TradeData3
     [IsoXmlTag("PrvsStsSubTp")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? PreviousStatusSubType { get; init; }
+    public Max70Text? PreviousStatusSubType { get; init; }
 }

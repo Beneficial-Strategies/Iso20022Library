@@ -33,7 +33,7 @@ public record Transaction141
     [IsoXmlTag("BtchId")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? BatchIdentification { get; init; }
+    public Max70Text? BatchIdentification { get; init; }
 
     /// <summary>
     /// Identification of the original batch to answer.
@@ -44,7 +44,7 @@ public record Transaction141
     [IsoXmlTag("OrgnlBtchId")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? OriginalBatchIdentification { get; init; }
+    public Max70Text? OriginalBatchIdentification { get; init; }
 
     /// <summary>
     /// Number of messages.
@@ -60,7 +60,7 @@ public record Transaction141
     [DisplayName("Number Of Messages")]
     [IsoXmlTag("NbOfMsgs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NumberOfMessages { get; init; }
+    public Number? NumberOfMessages { get; init; }
 
     /// <summary>
     /// Checksum of the series of messages received in the batch or until a checkpoint.
@@ -69,7 +69,7 @@ public record Transaction141
     [DisplayName("Batch Checksum")]
     [IsoXmlTag("BtchChcksm")]
     [IsoSimpleType(IsoSimpleType.Max35Binary)]
-    public IsoMax35Binary? BatchChecksum { get; init; }
+    public Max35Binary? BatchChecksum { get; init; }
 
     /// <summary>
     /// Indicator to request acknowledgement.
@@ -80,7 +80,7 @@ public record Transaction141
     [DisplayName("Request Acknowledgement")]
     [IsoXmlTag("ReqAck")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? RequestAcknowledgement { get; init; }
+    public TrueFalseIndicator? RequestAcknowledgement { get; init; }
 
     /// <summary>
     /// Clearing data at batch level allowing clearing in different currencies.

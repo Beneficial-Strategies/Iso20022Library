@@ -23,7 +23,7 @@ public record Issuance5
     [DisplayName("Issue Place")]
     [IsoXmlTag("IssePlc")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public IsoMICIdentifier? IssuePlace { get; init; }
+    public MICIdentifier? IssuePlace { get; init; }
 
     /// <summary>
     /// Country where a security is issued by the issuer or its agent.
@@ -40,7 +40,7 @@ public record Issuance5
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? IssueDate { get; init; }
+    public DateOnly? IssueDate { get; init; }
 
     /// <summary>
     /// Date/time, as announced by the issuer, at which the securities will be issued.
@@ -49,7 +49,7 @@ public record Issuance5
     [DisplayName("Announcement Date")]
     [IsoXmlTag("AnncmntDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? AnnouncementDate { get; init; }
+    public ISODateTime? AnnouncementDate { get; init; }
 
     /// <summary>
     /// Defines the date from which the instrument code is valid. This date can be before the actual issue date of an instrument for &apos;when-issued&apos; securities, but may not be a date in the future for a new security.
@@ -58,7 +58,7 @@ public record Issuance5
     [DisplayName("ISIN Valid From")]
     [IsoXmlTag("ISINVldFr")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ISINValidFrom { get; init; }
+    public DateOnly? ISINValidFrom { get; init; }
 
     /// <summary>
     /// Legal entity that has the right to issue securities.
@@ -91,7 +91,7 @@ public record Issuance5
     [DisplayName("Issue Size")]
     [IsoXmlTag("IsseSz")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? IssueSize { get; init; }
+    public Number? IssueSize { get; init; }
 
     /// <summary>
     /// Initial issue price of the asset.

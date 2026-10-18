@@ -24,7 +24,7 @@ public record TransactionIdentification12
     [DisplayName("System Trace Audit Number")]
     [IsoXmlTag("SysTracAudtNb")]
     [IsoSimpleType(IsoSimpleType.Max12NumericText)]
-    public required IsoMax12NumericText SystemTraceAuditNumber { get; init; }
+    public required Max12NumericText SystemTraceAuditNumber { get; init; }
 
     /// <summary>
     /// Date and time expressed in UTC of the message as sent by the initiator.
@@ -34,7 +34,7 @@ public record TransactionIdentification12
     [DisplayName("Transmission Date Time")]
     [IsoXmlTag("TrnsmssnDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime TransmissionDateTime { get; init; }
+    public required ISODateTime TransmissionDateTime { get; init; }
 
     /// <summary>
     /// A reference supplied by the system retaining the original source information and used to assist in locating that information or a copy thereof.
@@ -44,7 +44,7 @@ public record TransactionIdentification12
     [DisplayName("Retrieval Reference Number")]
     [IsoXmlTag("RtrvlRefNb")]
     [IsoSimpleType(IsoSimpleType.Exact12Text)]
-    public IsoExact12Text? RetrievalReferenceNumber { get; init; }
+    public Exact12Text? RetrievalReferenceNumber { get; init; }
 
     /// <summary>
     /// Unique global identification structure used to match transactions throughout their lifecycle.

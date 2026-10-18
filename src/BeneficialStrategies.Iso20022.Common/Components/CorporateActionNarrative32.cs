@@ -22,7 +22,7 @@ public record CorporateActionNarrative32
     [IsoId("_sRzOwWOKEeW4z96Yfj3Wng")]
     [DisplayName("Information To Comply With")]
     [IsoXmlTag("InfToCmplyWth")]
-    public SimpleValueList<IsoMax350Text> InformationToComplyWith { get; init; } = [];
+    public SimpleValueList<Max350Text> InformationToComplyWith { get; init; } = [];
 
     /// <summary>
     /// Provides additional information on the delivery details of the outturned (derived) securities. This narrative is only to be used in case the securities are not eligible at the agent/custodian, and may not be used for settlement instructions.
@@ -30,7 +30,7 @@ public record CorporateActionNarrative32
     [IsoId("_sR8_xmOKEeW4z96Yfj3Wng")]
     [DisplayName("Delivery Details")]
     [IsoXmlTag("DlvryDtls")]
-    public SimpleValueList<IsoMax350Text> DeliveryDetails { get; init; } = [];
+    public SimpleValueList<Max350Text> DeliveryDetails { get; init; } = [];
 
     /// <summary>
     /// Provides additional details pertaining to foreign exchange instructions.
@@ -38,7 +38,7 @@ public record CorporateActionNarrative32
     [IsoId("_sR8_zmOKEeW4z96Yfj3Wng")]
     [DisplayName("Foreign Exchange Instructions Additional Information")]
     [IsoXmlTag("FXInstrsAddtlInf")]
-    public SimpleValueList<IsoMax350Text> ForeignExchangeInstructionsAdditionalInformation { get; init; } =
+    public SimpleValueList<Max350Text> ForeignExchangeInstructionsAdditionalInformation { get; init; } =
         [];
 
     /// <summary>
@@ -47,5 +47,5 @@ public record CorporateActionNarrative32
     [IsoId("_sR8_3mOKEeW4z96Yfj3Wng")]
     [DisplayName("Instruction Additional Information")]
     [IsoXmlTag("InstrAddtlInf")]
-    public SimpleValueList<IsoMax350Text> InstructionAdditionalInformation { get; init; } = [];
+    public SimpleValueList<Max350Text> InstructionAdditionalInformation { get; init; } = [];
 }

@@ -23,7 +23,7 @@ public record SecurityIdentification22
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
     [IsoSimpleType(IsoSimpleType.ISIN2021Identifier)]
-    public IsoISIN2021Identifier? ISIN { get; init; }
+    public ISIN2021Identifier? ISIN { get; init; }
 
     /// <summary>
     /// Identification through a unique product identifier.
@@ -33,7 +33,7 @@ public record SecurityIdentification22
     [IsoXmlTag("UnqPdctIdr")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoMax52Text? UniqueProductIdentifier { get; init; }
+    public Max52Text? UniqueProductIdentifier { get; init; }
 
     /// <summary>
     /// Proprietary identification of a security assigned by an institution or organisation.
@@ -43,5 +43,5 @@ public record SecurityIdentification22
     [IsoXmlTag("AltrntvInstrmId")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoMax52Text? AlternativeInstrumentIdentification { get; init; }
+    public Max52Text? AlternativeInstrumentIdentification { get; init; }
 }

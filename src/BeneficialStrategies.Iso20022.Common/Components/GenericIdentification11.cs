@@ -24,7 +24,7 @@ public record GenericIdentification11
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Specifies the nature of the identifier.
@@ -42,7 +42,7 @@ public record GenericIdentification11
     [IsoXmlTag("XtndedIdTp")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoExtended350Code ExtendedIdentificationType { get; init; }
+    public required Extended350Code ExtendedIdentificationType { get; init; }
 
     /// <summary>
     /// Entity that assigns the identifier.
@@ -52,5 +52,5 @@ public record GenericIdentification11
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Issuer { get; init; }
+    public Max35Text? Issuer { get; init; }
 }

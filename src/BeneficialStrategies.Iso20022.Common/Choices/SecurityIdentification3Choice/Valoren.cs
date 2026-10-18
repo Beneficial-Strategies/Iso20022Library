@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification3Choice
         /// </summary>
         [IsoXmlTag("Vlrn")]
         [IsoSimpleType(IsoSimpleType.ValorenIdentifier)]
-        public required IsoValorenIdentifier Value { get; init; }
+        public required ValorenIdentifier Value { get; init; }
     }
 }

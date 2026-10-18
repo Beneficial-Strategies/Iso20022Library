@@ -31,5 +31,5 @@ public record ClearingPartyAndTime8
     [DisplayName("Clearing Date Time")]
     [IsoXmlTag("ClrDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? ClearingDateTime { get; init; }
+    public ISODateTime? ClearingDateTime { get; init; }
 }

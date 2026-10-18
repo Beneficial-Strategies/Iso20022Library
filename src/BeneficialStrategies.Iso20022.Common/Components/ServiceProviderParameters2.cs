@@ -42,7 +42,7 @@ public record ServiceProviderParameters2
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public required IsoMax256Text Version { get; init; }
+    public required Max256Text Version { get; init; }
 
     /// <summary>
     /// Identification of payment application relevant for this service provider.
@@ -50,7 +50,7 @@ public record ServiceProviderParameters2
     [IsoId("_YW_kV1FMEeyApZmLzm74zA")]
     [DisplayName("Application Identification")]
     [IsoXmlTag("ApplId")]
-    public SimpleValueList<IsoMax35Text> ApplicationIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> ApplicationIdentification { get; init; } = [];
 
     /// <summary>
     /// Service provider host configuration.

@@ -24,7 +24,7 @@ public record CorporateActionRateSD9
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Applicable to structured securities where there is a set schedule of principal and interest payments for the life of the issue. A portion of the scheduled interest payment will not be paid at the time of distribution.
@@ -33,7 +33,7 @@ public record CorporateActionRateSD9
     [DisplayName("Deferred Interest Rate")]
     [IsoXmlTag("DfrrdIntrstRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? DeferredInterestRate { get; init; }
+    public PercentageRate? DeferredInterestRate { get; init; }
 
     /// <summary>
     /// American or Global Depository Receipt(s) per ordinary share(s) ratio.

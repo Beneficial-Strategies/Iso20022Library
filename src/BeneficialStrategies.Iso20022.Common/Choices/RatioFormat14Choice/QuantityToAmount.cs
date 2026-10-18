@@ -31,6 +31,6 @@ namespace BeneficialStrategies.Iso20022.Choices.RatioFormat14Choice
         [DisplayName("Quantity")]
         [IsoXmlTag("Qty")]
         [IsoSimpleType(IsoSimpleType.RestrictedFINDecimalNumber)]
-        public required IsoRestrictedFINDecimalNumber Quantity { get; init; }
+        public required RestrictedFINDecimalNumber Quantity { get; init; }
     }
 }

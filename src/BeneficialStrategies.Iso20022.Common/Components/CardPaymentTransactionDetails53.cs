@@ -56,14 +56,14 @@ public record CardPaymentTransactionDetails53
     /// </summary>
     [DisplayName("Completion Sequence Counter")]
     [IsoXmlTag("CmpltnSeqCntr")]
-    public IsoPositiveNumber? CompletionSequenceCounter { get; init; }
+    public PositiveNumber? CompletionSequenceCounter { get; init; }
 
     /// <summary>
     /// Completion Sequence Number.
     /// </summary>
     [DisplayName("Completion Sequence Number")]
     [IsoXmlTag("CmpltnSeqNb")]
-    public IsoPositiveNumber? CompletionSequenceNumber { get; init; }
+    public PositiveNumber? CompletionSequenceNumber { get; init; }
 
     /// <summary>
     /// Cumulative Amount.
@@ -91,7 +91,7 @@ public record CardPaymentTransactionDetails53
     /// </summary>
     [DisplayName("Delivery Location")]
     [IsoXmlTag("DlvryLctn")]
-    public IsoMax35Text? DeliveryLocation { get; init; }
+    public Max35Text? DeliveryLocation { get; init; }
 
     /// <summary>
     /// Detailed Amount.
@@ -105,7 +105,7 @@ public record CardPaymentTransactionDetails53
     /// </summary>
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
-    public IsoMax10000Binary? ICCRelatedData { get; init; }
+    public Max10000Binary? ICCRelatedData { get; init; }
 
     /// <summary>
     /// Instalment.
@@ -133,7 +133,7 @@ public record CardPaymentTransactionDetails53
     /// </summary>
     [DisplayName("Product Code Set Identification")]
     [IsoXmlTag("PdctCdSetId")]
-    public IsoMax10Text? ProductCodeSetIdentification { get; init; }
+    public Max10Text? ProductCodeSetIdentification { get; init; }
 
     /// <summary>
     /// Recurring.
@@ -154,7 +154,7 @@ public record CardPaymentTransactionDetails53
     /// </summary>
     [DisplayName("Re Submission Counter")]
     [IsoXmlTag("ReSubmissnCntr")]
-    public IsoPositiveNumber? ReSubmissionCounter { get; init; }
+    public PositiveNumber? ReSubmissionCounter { get; init; }
 
     /// <summary>
     /// Sale Item.
@@ -182,12 +182,12 @@ public record CardPaymentTransactionDetails53
     /// </summary>
     [DisplayName("Unattended Level Category")]
     [IsoXmlTag("UattnddLvlCtgy")]
-    public IsoMax35NumericText? UnattendedLevelCategory { get; init; }
+    public Max35NumericText? UnattendedLevelCategory { get; init; }
 
     /// <summary>
     /// Validity Date.
     /// </summary>
     [DisplayName("Validity Date")]
     [IsoXmlTag("VldtyDt")]
-    public IsoISODate? ValidityDate { get; init; }
+    public DateOnly? ValidityDate { get; init; }
 }

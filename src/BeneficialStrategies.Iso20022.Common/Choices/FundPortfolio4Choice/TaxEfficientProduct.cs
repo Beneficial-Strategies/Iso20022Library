@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio4Choice
         [DisplayName("Current Year")]
         [IsoXmlTag("CurYr")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? CurrentYear { get; init; }
+        public YesNoIndicator? CurrentYear { get; init; }
 
         /// <summary>
         /// Investment plans issued during previous years.

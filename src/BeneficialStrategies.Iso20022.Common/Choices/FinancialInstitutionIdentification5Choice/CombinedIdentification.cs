@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
         [DisplayName("BIC")]
         [IsoXmlTag("BIC")]
         [IsoSimpleType(IsoSimpleType.BICIdentifier)]
-        public IsoBICIdentifier? BIC { get; init; }
+        public BICIdentifier? BIC { get; init; }
 
         /// <summary>
         /// Unique and unambiguous identifier of a clearing system member, as assigned by the system or system administrator.
@@ -41,7 +41,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
         [IsoXmlTag("Nm")]
         [IsoSimpleType(IsoSimpleType.Max70Text)]
         [StringLength(maximumLength: 70, MinimumLength = 1)]
-        public IsoMax70Text? Name { get; init; }
+        public Max70Text? Name { get; init; }
 
         /// <summary>
         /// Information that locates and identifies a specific address, as defined by postal services.

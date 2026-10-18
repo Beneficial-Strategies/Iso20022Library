@@ -63,7 +63,7 @@ public record Record3
     /// </summary>
     [DisplayName("Clearing Date")]
     [IsoXmlTag("ClrDt")]
-    public IsoISODate? ClearingDate { get; init; }
+    public DateOnly? ClearingDate { get; init; }
 
     /// <summary>
     /// Clearing Method.
@@ -77,14 +77,14 @@ public record Record3
     /// </summary>
     [DisplayName("Clearing Priority")]
     [IsoXmlTag("ClrPrty")]
-    public IsoMax35Text? ClearingPriority { get; init; }
+    public Max35Text? ClearingPriority { get; init; }
 
     /// <summary>
     /// Destination Assigner.
     /// </summary>
     [DisplayName("Destination Assigner")]
     [IsoXmlTag("DstnAssgnr")]
-    public IsoMax35Text? DestinationAssigner { get; init; }
+    public Max35Text? DestinationAssigner { get; init; }
 
     /// <summary>
     /// Destination Country.
@@ -98,14 +98,14 @@ public record Record3
     /// </summary>
     [DisplayName("Destination Identification")]
     [IsoXmlTag("DstnId")]
-    public IsoMax35Text? DestinationIdentification { get; init; }
+    public Max35Text? DestinationIdentification { get; init; }
 
     /// <summary>
     /// Destination Short Name.
     /// </summary>
     [DisplayName("Destination Short Name")]
     [IsoXmlTag("DstnShrtNm")]
-    public IsoMax35Text? DestinationShortName { get; init; }
+    public Max35Text? DestinationShortName { get; init; }
 
     /// <summary>
     /// Interchange Fee Amount.
@@ -133,7 +133,7 @@ public record Record3
     /// </summary>
     [DisplayName("Originator Assigner")]
     [IsoXmlTag("OrgtrAssgnr")]
-    public IsoMax35Text? OriginatorAssigner { get; init; }
+    public Max35Text? OriginatorAssigner { get; init; }
 
     /// <summary>
     /// Originator Country.
@@ -147,14 +147,14 @@ public record Record3
     /// </summary>
     [DisplayName("Originator Identification")]
     [IsoXmlTag("OrgtrId")]
-    public IsoMax35Text? OriginatorIdentification { get; init; }
+    public Max35Text? OriginatorIdentification { get; init; }
 
     /// <summary>
     /// Originator Short Name.
     /// </summary>
     [DisplayName("Originator Short Name")]
     [IsoXmlTag("OrgtrShrtNm")]
-    public IsoMax35Text? OriginatorShortName { get; init; }
+    public Max35Text? OriginatorShortName { get; init; }
 
     /// <summary>
     /// Other Amount.
@@ -168,14 +168,14 @@ public record Record3
     /// </summary>
     [DisplayName("Other Clearing Method")]
     [IsoXmlTag("OthrClrMtd")]
-    public IsoMax35Text? OtherClearingMethod { get; init; }
+    public Max35Text? OtherClearingMethod { get; init; }
 
     /// <summary>
     /// Record Checksum Input Value.
     /// </summary>
     [DisplayName("Record Checksum Input Value")]
     [IsoXmlTag("RcrdChcksmInptVal")]
-    public IsoMax140Binary? RecordChecksumInputValue { get; init; }
+    public Max140Binary? RecordChecksumInputValue { get; init; }
 
     /// <summary>
     /// Record Message.
@@ -189,5 +189,5 @@ public record Record3
     /// </summary>
     [DisplayName("Sequence Counter")]
     [IsoXmlTag("SeqCntr")]
-    public required IsoNumber SequenceCounter { get; init; }
+    public required Number SequenceCounter { get; init; }
 }

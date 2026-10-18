@@ -32,7 +32,7 @@ public record TransactionContext8
     [IsoXmlTag("MrchntCtgySpcfcData")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MerchantCategorySpecificData { get; init; }
+    public Max35Text? MerchantCategorySpecificData { get; init; }
 
     /// <summary>
     /// Specifies the initiator of the fee collection message.
@@ -57,7 +57,7 @@ public record TransactionContext8
     [DisplayName("Partial Shipment Indicator")]
     [IsoXmlTag("PrtlShipmntInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? PartialShipmentIndicator { get; init; }
+    public TrueFalseIndicator? PartialShipmentIndicator { get; init; }
 
     /// <summary>
     /// Indicates a delayed charge.
@@ -66,7 +66,7 @@ public record TransactionContext8
     [DisplayName("Delayed Charges Indicator")]
     [IsoXmlTag("DelydChrgsInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? DelayedChargesIndicator { get; init; }
+    public TrueFalseIndicator? DelayedChargesIndicator { get; init; }
 
     /// <summary>
     /// Indicates that the cardholder failed to arrive at the property and was therefore charged a no-show fee; property was not actually rented.
@@ -75,7 +75,7 @@ public record TransactionContext8
     [DisplayName("No Show Indicator")]
     [IsoXmlTag("NoShowInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? NoShowIndicator { get; init; }
+    public TrueFalseIndicator? NoShowIndicator { get; init; }
 
     /// <summary>
     /// Indicates a reauthorisation.
@@ -84,7 +84,7 @@ public record TransactionContext8
     [DisplayName("Reauthorisation Indicator")]
     [IsoXmlTag("ReauthstnInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ReauthorisationIndicator { get; init; }
+    public TrueFalseIndicator? ReauthorisationIndicator { get; init; }
 
     /// <summary>
     /// Indicates a resubmission.
@@ -93,7 +93,7 @@ public record TransactionContext8
     [DisplayName("Re Submission Indicator")]
     [IsoXmlTag("ReSubmissnInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ReSubmissionIndicator { get; init; }
+    public TrueFalseIndicator? ReSubmissionIndicator { get; init; }
 
     /// <summary>
     /// Card programme or brand related to the transaction.

@@ -62,7 +62,7 @@ public record MeetingVoteExecutionConfirmationV07 : IOuterRecord
     [IsoXmlTag("MtgInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MeetingInstructionIdentification { get; init; }
+    public required Max35Text MeetingInstructionIdentification { get; init; }
 
     /// <summary>
     /// Set of elements to allow the unambiguous identification of a meeting.
@@ -96,7 +96,7 @@ public record MeetingVoteExecutionConfirmationV07 : IOuterRecord
     [IsoXmlTag("VoteInstrsConfURLAdr")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
     [StringLength(maximumLength: 2048, MinimumLength = 1)]
-    public IsoMax2048Text? VoteInstructionsConfirmationURLAddress { get; init; }
+    public Max2048Text? VoteInstructionsConfirmationURLAddress { get; init; }
 
     /// <summary>
     /// Additional information that cannot be captured in the structured fields and/or any other specific block.

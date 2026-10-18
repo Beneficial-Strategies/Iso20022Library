@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification25Choice
         /// </summary>
         [IsoXmlTag("Belgn")]
         [IsoSimpleType(IsoSimpleType.BelgianIdentifier)]
-        public required IsoBelgianIdentifier Value { get; init; }
+        public required BelgianIdentifier Value { get; init; }
     }
 }

@@ -23,7 +23,7 @@ public record CopyInformation2
     [DisplayName("Copy Indicator")]
     [IsoXmlTag("CpyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator CopyIndicator { get; init; }
+    public required YesNoIndicator CopyIndicator { get; init; }
 
     /// <summary>
     /// Original receiver of the message, if this message is a copy.

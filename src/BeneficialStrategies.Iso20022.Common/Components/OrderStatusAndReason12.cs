@@ -22,7 +22,7 @@ public record OrderStatusAndReason12
     [IsoId("2eb84416-f7ba-48c9-9894-4a0d3ef3c15d")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Cancellation status of the order cancellation.

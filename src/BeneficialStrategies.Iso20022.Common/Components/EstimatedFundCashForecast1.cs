@@ -79,7 +79,7 @@ public record EstimatedFundCashForecast1
     [DisplayName("Estimated Total NAV Change Rate")]
     [IsoXmlTag("EstmtdTtlNAVChngRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? EstimatedTotalNAVChangeRate { get; init; }
+    public PercentageRate? EstimatedTotalNAVChangeRate { get; init; }
 
     /// <summary>
     /// Currency of the investment fund class.
@@ -96,7 +96,7 @@ public record EstimatedFundCashForecast1
     [DisplayName("Exceptional Net Cash Flow Indicator")]
     [IsoXmlTag("XcptnlNetCshFlowInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ExceptionalNetCashFlowIndicator { get; init; }
+    public required YesNoIndicator ExceptionalNetCashFlowIndicator { get; init; }
 
     /// <summary>
     /// Cash movements into a fund as a result of investment funds transactions, eg, subscriptions or switch-in.

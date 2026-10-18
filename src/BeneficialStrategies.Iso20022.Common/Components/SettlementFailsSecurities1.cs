@@ -31,5 +31,5 @@ public record SettlementFailsSecurities1
     [DisplayName("Rank")]
     [IsoXmlTag("Rank")]
     [IsoSimpleType(IsoSimpleType.Max2NumericText)]
-    public required IsoMax2NumericText Rank { get; init; }
+    public required Max2NumericText Rank { get; init; }
 }

@@ -28,5 +28,5 @@ public record UpdatedURLlnformation7
     /// </summary>
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
-    public required IsoRestrictedFINZMax2048Text URLAddress { get; init; }
+    public required RestrictedFINZMax2048Text URLAddress { get; init; }
 }

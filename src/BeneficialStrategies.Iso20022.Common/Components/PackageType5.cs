@@ -21,14 +21,14 @@ public record PackageType5
     /// </summary>
     [DisplayName("Offset End")]
     [IsoXmlTag("OffsetEnd")]
-    public IsoPositiveNumber? OffsetEnd { get; init; }
+    public PositiveNumber? OffsetEnd { get; init; }
 
     /// <summary>
     /// Offset Start.
     /// </summary>
     [DisplayName("Offset Start")]
     [IsoXmlTag("OffsetStart")]
-    public IsoPositiveNumber? OffsetStart { get; init; }
+    public PositiveNumber? OffsetStart { get; init; }
 
     /// <summary>
     /// Package Block.
@@ -49,5 +49,5 @@ public record PackageType5
     /// </summary>
     [DisplayName("Package Length")]
     [IsoXmlTag("PackgLngth")]
-    public IsoPositiveNumber? PackageLength { get; init; }
+    public PositiveNumber? PackageLength { get; init; }
 }

@@ -39,7 +39,7 @@ public record HoldBackInformation3
     [DisplayName("Expected Release Date")]
     [IsoXmlTag("XpctdRlsDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ExpectedReleaseDate { get; init; }
+    public DateOnly? ExpectedReleaseDate { get; init; }
 
     /// <summary>
     /// New identification of the security.
@@ -57,7 +57,7 @@ public record HoldBackInformation3
     [IsoXmlTag("FinInstrmNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? FinancialInstrumentName { get; init; }
+    public Max350Text? FinancialInstrumentName { get; init; }
 
     /// <summary>
     /// Specifies whether or not additional redemption order instructions are required in order for the redemption to be completed.

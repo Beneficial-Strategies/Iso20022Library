@@ -32,7 +32,7 @@ public record Adjustment3
     [IsoXmlTag("OthrAdjstmntTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OtherAdjustmentType { get; init; }
+    public required Max35Text OtherAdjustmentType { get; init; }
 
     /// <summary>
     /// Specifies the monetary amount of the adjustment.
@@ -49,7 +49,7 @@ public record Adjustment3
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate Rate { get; init; }
+    public required PercentageRate Rate { get; init; }
 
     /// <summary>
     /// Specifies whether the adjustment must be subtracted or added to the total amount.

@@ -22,7 +22,7 @@ public record PortfolioTransfer17
     [IsoId("78dd4dea-2ecb-4bc3-8bef-2f33f89e9e47")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Identification assigned to the transfer of assets.
@@ -30,7 +30,7 @@ public record PortfolioTransfer17
     [IsoId("c2c1c16f-07a2-40ba-beee-49640a370e05")]
     [DisplayName("Transfer Identification")]
     [IsoXmlTag("TrfId")]
-    public required IsoMax35Text TransferIdentification { get; init; }
+    public required Max35Text TransferIdentification { get; init; }
 
     /// <summary>
     /// Choice of tax efficient product, general investment or pension.

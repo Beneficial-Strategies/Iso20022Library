@@ -22,7 +22,7 @@ public record FinancingDateDetails1
     [IsoId("_T8KRk9p-Ed-ak6NoX_4Aeg_-558847054")]
     [DisplayName("Book Date")]
     [IsoXmlTag("BookDt")]
-    public SimpleValueList<IsoISODate> BookDate { get; init; } = [];
+    public SimpleValueList<DateOnly> BookDate { get; init; } = [];
 
     /// <summary>
     /// Date on which a financed amount has been credited.
@@ -31,7 +31,7 @@ public record FinancingDateDetails1
     [DisplayName("Credit Date")]
     [IsoXmlTag("CdtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate CreditDate { get; init; }
+    public required DateOnly CreditDate { get; init; }
 
     /// <summary>
     /// Date on which a financed amount has been debited.
@@ -40,5 +40,5 @@ public record FinancingDateDetails1
     [DisplayName("Debit Date")]
     [IsoXmlTag("DbtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DebitDate { get; init; }
+    public DateOnly? DebitDate { get; init; }
 }

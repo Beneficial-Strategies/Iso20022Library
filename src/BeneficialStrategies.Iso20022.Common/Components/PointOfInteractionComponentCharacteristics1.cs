@@ -39,7 +39,7 @@ public record PointOfInteractionComponentCharacteristics1
     [DisplayName("Security Access Modules")]
     [IsoXmlTag("SctyAccsMdls")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? SecurityAccessModules { get; init; }
+    public Number? SecurityAccessModules { get; init; }
 
     /// <summary>
     /// Number of subscriber identity modules (SIM).
@@ -48,7 +48,7 @@ public record PointOfInteractionComponentCharacteristics1
     [DisplayName("Subscriber Identity Modules")]
     [IsoXmlTag("SbcbrIdntyMdls")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? SubscriberIdentityModules { get; init; }
+    public Number? SubscriberIdentityModules { get; init; }
 
     /// <summary>
     /// Value for checking a cryptographic key security parameter.
@@ -57,5 +57,5 @@ public record PointOfInteractionComponentCharacteristics1
     [DisplayName("Key Check Value")]
     [IsoXmlTag("KeyChckVal")]
     [IsoSimpleType(IsoSimpleType.Max35Binary)]
-    public IsoMax35Binary? KeyCheckValue { get; init; }
+    public Max35Binary? KeyCheckValue { get; init; }
 }

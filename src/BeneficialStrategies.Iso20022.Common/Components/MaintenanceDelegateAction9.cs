@@ -28,7 +28,7 @@ public record MaintenanceDelegateAction9
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public ValueList<IsoMax3000Binary> AdditionalInformation { get; init; } = [];
+    public ValueList<Max3000Binary> AdditionalInformation { get; init; } = [];
 
     /// <summary>
     /// Data Set Identification.
@@ -42,7 +42,7 @@ public record MaintenanceDelegateAction9
     /// </summary>
     [DisplayName("Periodic Action")]
     [IsoXmlTag("PrdcActn")]
-    public IsoTrueFalseIndicator? PeriodicAction { get; init; }
+    public TrueFalseIndicator? PeriodicAction { get; init; }
 
     /// <summary>
     /// Re Try.
@@ -63,12 +63,12 @@ public record MaintenanceDelegateAction9
     /// </summary>
     [DisplayName("TMS Protocol")]
     [IsoXmlTag("TMSPrtcol")]
-    public IsoMax35Text? TMSProtocol { get; init; }
+    public Max35Text? TMSProtocol { get; init; }
 
     /// <summary>
     /// TMS Protocol Version.
     /// </summary>
     [DisplayName("TMS Protocol Version")]
     [IsoXmlTag("TMSPrtcolVrsn")]
-    public IsoMax35Text? TMSProtocolVersion { get; init; }
+    public Max35Text? TMSProtocolVersion { get; init; }
 }

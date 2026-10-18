@@ -21,14 +21,14 @@ public record BillingTaxRegion3
     /// </summary>
     [DisplayName("Customer Tax Identification")]
     [IsoXmlTag("CstmrTaxId")]
-    public required IsoMax40Text CustomerTaxIdentification { get; init; }
+    public required Max40Text CustomerTaxIdentification { get; init; }
 
     /// <summary>
     /// Invoice Number.
     /// </summary>
     [DisplayName("Invoice Number")]
     [IsoXmlTag("InvcNb")]
-    public IsoMax40Text? InvoiceNumber { get; init; }
+    public Max40Text? InvoiceNumber { get; init; }
 
     /// <summary>
     /// Method C.
@@ -42,21 +42,21 @@ public record BillingTaxRegion3
     /// </summary>
     [DisplayName("Point Date")]
     [IsoXmlTag("PtDt")]
-    public IsoISODate? PointDate { get; init; }
+    public DateOnly? PointDate { get; init; }
 
     /// <summary>
     /// Region Name.
     /// </summary>
     [DisplayName("Region Name")]
     [IsoXmlTag("RgnNm")]
-    public required IsoMax40Text RegionName { get; init; }
+    public required Max40Text RegionName { get; init; }
 
     /// <summary>
     /// Region Number.
     /// </summary>
     [DisplayName("Region Number")]
     [IsoXmlTag("RgnNb")]
-    public required IsoMax40Text RegionNumber { get; init; }
+    public required Max40Text RegionNumber { get; init; }
 
     /// <summary>
     /// Sending Financial Institution.

@@ -23,7 +23,7 @@ public record CashInForecast3
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate CashSettlementDate { get; init; }
+    public required DateOnly CashSettlementDate { get; init; }
 
     /// <summary>
     /// Sub-total amount of the cash flow in, expressed as an amount of money.
@@ -48,7 +48,7 @@ public record CashInForecast3
     [DisplayName("Exceptional Cash Flow Indicator")]
     [IsoXmlTag("XcptnlCshFlowInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ExceptionalCashFlowIndicator { get; init; }
+    public YesNoIndicator? ExceptionalCashFlowIndicator { get; init; }
 
     /// <summary>
     /// Breakdown of cash in amounts, eg, by transaction and order type.

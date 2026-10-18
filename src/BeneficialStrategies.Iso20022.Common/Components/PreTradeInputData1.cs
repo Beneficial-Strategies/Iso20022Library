@@ -28,7 +28,7 @@ public record PreTradeInputData1
     [IsoId("_HXufoGF-EfC07JR6e2JJ-w")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
-    public required IsoISINOct2015Identifier ISIN { get; init; }
+    public required ISINOct2015Identifier ISIN { get; init; }
 
     /// <summary>
     /// Indicates whether there are any orders in the book on the bid and/or offer side.
@@ -37,7 +37,7 @@ public record PreTradeInputData1
     [IsoId("_XEv7sI18EfCPs6j8AP0CcQ")]
     [DisplayName("Empty Book Indicator")]
     [IsoXmlTag("MptyBookInd")]
-    public IsoTrueFalseIndicator? EmptyBookIndicator { get; init; }
+    public TrueFalseIndicator? EmptyBookIndicator { get; init; }
 
     /// <summary>
     /// Side of the order or quote.
@@ -69,7 +69,7 @@ public record PreTradeInputData1
     [IsoId("_jME64GF_EfChAd75JYbucA")]
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
-    public required IsoMICIdentifier TradingVenue { get; init; }
+    public required MICIdentifier TradingVenue { get; init; }
 
     /// <summary>
     /// Date and time when the information was published by the trading venue.
@@ -77,7 +77,7 @@ public record PreTradeInputData1
     [IsoId("__LEPAKUPEfCmoeslmyBN5Q")]
     [DisplayName("Publication Date Time")]
     [IsoXmlTag("PblctnDtTm")]
-    public required IsoISODateTime PublicationDateTime { get; init; }
+    public required ISODateTime PublicationDateTime { get; init; }
 
     /// <summary>
     /// Last update of the date and time when the data was updated.
@@ -85,7 +85,7 @@ public record PreTradeInputData1
     [IsoId("_YsjFMKUQEfCmoeslmyBN5Q")]
     [DisplayName("Update Date Time")]
     [IsoXmlTag("UpdDtTm")]
-    public required IsoISODateTime UpdateDateTime { get; init; }
+    public required ISODateTime UpdateDateTime { get; init; }
 
     /// <summary>
     /// Status in which the instrument that is traded is in.

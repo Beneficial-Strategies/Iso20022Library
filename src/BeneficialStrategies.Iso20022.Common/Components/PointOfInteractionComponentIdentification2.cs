@@ -24,7 +24,7 @@ public record PointOfInteractionComponentIdentification2
     [IsoXmlTag("ItmNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ItemNumber { get; init; }
+    public Max35Text? ItemNumber { get; init; }
 
     /// <summary>
     /// Identifies the provider of the software, hardware or parameters of the POI component.
@@ -34,7 +34,7 @@ public record PointOfInteractionComponentIdentification2
     [IsoXmlTag("PrvdrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProviderIdentification { get; init; }
+    public Max35Text? ProviderIdentification { get; init; }
 
     /// <summary>
     /// Identification of the POI component assigned by its provider.
@@ -44,7 +44,7 @@ public record PointOfInteractionComponentIdentification2
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Identification { get; init; }
+    public Max256Text? Identification { get; init; }
 
     /// <summary>
     /// Serial number identifying an occurrence of an hardware component.
@@ -54,5 +54,5 @@ public record PointOfInteractionComponentIdentification2
     [IsoXmlTag("SrlNb")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? SerialNumber { get; init; }
+    public Max256Text? SerialNumber { get; init; }
 }

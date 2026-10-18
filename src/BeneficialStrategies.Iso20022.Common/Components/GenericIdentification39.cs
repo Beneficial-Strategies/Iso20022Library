@@ -24,7 +24,7 @@ public record GenericIdentification39
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINMax30Text)]
     [StringLength(maximumLength: 30, MinimumLength = 1)]
-    public required IsoRestrictedFINMax30Text Identification { get; init; }
+    public required RestrictedFINMax30Text Identification { get; init; }
 
     /// <summary>
     /// Entity that assigns the identification.
@@ -34,5 +34,5 @@ public record GenericIdentification39
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINMax8Text)]
     [StringLength(maximumLength: 8, MinimumLength = 1)]
-    public IsoRestrictedFINMax8Text? Issuer { get; init; }
+    public RestrictedFINMax8Text? Issuer { get; init; }
 }

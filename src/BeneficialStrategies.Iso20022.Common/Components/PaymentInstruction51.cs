@@ -22,7 +22,7 @@ public record PaymentInstruction51
     [IsoId("dfeb6565-c0a1-4f42-98be-7280338a0602")]
     [DisplayName("Payment Information Identification")]
     [IsoXmlTag("PmtInfId")]
-    public required IsoMax35Text PaymentInformationIdentification { get; init; }
+    public required Max35Text PaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Specifies the means of payment that will be used to move the amount of money.
@@ -46,7 +46,7 @@ public record PaymentInstruction51
     [IsoId("0dcd68c1-4680-4ea8-979f-db22db1ea892")]
     [DisplayName("Batch Booking")]
     [IsoXmlTag("BtchBookg")]
-    public IsoBatchBookingIndicator? BatchBooking { get; init; }
+    public BatchBookingIndicator? BatchBooking { get; init; }
 
     /// <summary>
     /// Number of individual transactions contained in the payment information group.
@@ -54,7 +54,7 @@ public record PaymentInstruction51
     [IsoId("5bb724bf-3b06-4052-abd4-6bbd3bc3c929")]
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
-    public IsoMax15NumericText? NumberOfTransactions { get; init; }
+    public Max15NumericText? NumberOfTransactions { get; init; }
 
     /// <summary>
     /// Total of all individual amounts included in the group, irrespective of currencies.
@@ -62,7 +62,7 @@ public record PaymentInstruction51
     [IsoId("9ea5345e-08d4-42ac-8ba6-19b791caf194")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
-    public IsoDecimalNumber? ControlSum { get; init; }
+    public DecimalNumber? ControlSum { get; init; }
 
     /// <summary>
     /// Set of elements used to further specify the type of transaction.
@@ -86,7 +86,7 @@ public record PaymentInstruction51
     [IsoId("7f3ee28b-3e13-410c-ae42-32bf1a03e034")]
     [DisplayName("Pooling Adjustment Date")]
     [IsoXmlTag("PoolgAdjstmntDt")]
-    public IsoISODate? PoolingAdjustmentDate { get; init; }
+    public DateOnly? PoolingAdjustmentDate { get; init; }
 
     /// <summary>
     /// Party that owes an amount of money to the (ultimate) creditor.
@@ -126,7 +126,7 @@ public record PaymentInstruction51
     [IsoId("7741a44b-38b8-4773-8179-da314dc13e6c")]
     [DisplayName("Instruction For Debtor Agent")]
     [IsoXmlTag("InstrForDbtrAgt")]
-    public IsoMax140Text? InstructionForDebtorAgent { get; init; }
+    public Max140Text? InstructionForDebtorAgent { get; init; }
 
     /// <summary>
     /// Ultimate party that owes an amount of money to the (ultimate) creditor.

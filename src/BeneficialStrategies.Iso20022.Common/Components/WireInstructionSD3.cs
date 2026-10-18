@@ -24,7 +24,7 @@ public record WireInstructionSD3
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Quantity of securities concerned in this wire.
@@ -41,7 +41,7 @@ public record WireInstructionSD3
     [DisplayName("Bank Name")]
     [IsoXmlTag("BkNm")]
     [IsoSimpleType(IsoSimpleType.Max30Text)]
-    public required IsoMax30Text BankName { get; init; }
+    public required Max30Text BankName { get; init; }
 
     /// <summary>
     /// Street address of the recipient bank for the wire.
@@ -50,7 +50,7 @@ public record WireInstructionSD3
     [DisplayName("Bank Address")]
     [IsoXmlTag("BkAdr")]
     [IsoSimpleType(IsoSimpleType.Max30Text)]
-    public required IsoMax30Text BankAddress { get; init; }
+    public required Max30Text BankAddress { get; init; }
 
     /// <summary>
     /// City of the recipient bank for the wire.
@@ -59,7 +59,7 @@ public record WireInstructionSD3
     [DisplayName("Bank City")]
     [IsoXmlTag("BkCity")]
     [IsoSimpleType(IsoSimpleType.Max30Text)]
-    public required IsoMax30Text BankCity { get; init; }
+    public required Max30Text BankCity { get; init; }
 
     /// <summary>
     /// Country of the recipient bank for the wire.
@@ -76,7 +76,7 @@ public record WireInstructionSD3
     [DisplayName("Bank Attention To")]
     [IsoXmlTag("BkAttnTo")]
     [IsoSimpleType(IsoSimpleType.Max30Text)]
-    public required IsoMax30Text BankAttentionTo { get; init; }
+    public required Max30Text BankAttentionTo { get; init; }
 
     /// <summary>
     /// Notes or comments for the recipient bank for the wire.
@@ -86,7 +86,7 @@ public record WireInstructionSD3
     [IsoXmlTag("BkCmnts")]
     [IsoSimpleType(IsoSimpleType.Max60Text)]
     [StringLength(maximumLength: 60, MinimumLength = 1)]
-    public required IsoMax60Text BankComments { get; init; }
+    public required Max60Text BankComments { get; init; }
 
     /// <summary>
     /// Account type at the recipient bank for the wire.
@@ -95,7 +95,7 @@ public record WireInstructionSD3
     [DisplayName("Beneficiary Account")]
     [IsoXmlTag("BnfcryAcct")]
     [IsoSimpleType(IsoSimpleType.Max30Text)]
-    public required IsoMax30Text BeneficiaryAccount { get; init; }
+    public required Max30Text BeneficiaryAccount { get; init; }
 
     /// <summary>
     /// Account identification at the recipient bank for the wire.
@@ -104,7 +104,7 @@ public record WireInstructionSD3
     [DisplayName("Beneficiary Account Identification")]
     [IsoXmlTag("BnfcryAcctId")]
     [IsoSimpleType(IsoSimpleType.Max30Text)]
-    public required IsoMax30Text BeneficiaryAccountIdentification { get; init; }
+    public required Max30Text BeneficiaryAccountIdentification { get; init; }
 
     /// <summary>
     /// Notes or comments for the beneficiary account at the recipient bank for the wire.
@@ -113,5 +113,5 @@ public record WireInstructionSD3
     [DisplayName("Beneficiary Account Comments")]
     [IsoXmlTag("BnfcryAcctCmnts")]
     [IsoSimpleType(IsoSimpleType.Max30Text)]
-    public required IsoMax30Text BeneficiaryAccountComments { get; init; }
+    public required Max30Text BeneficiaryAccountComments { get; init; }
 }

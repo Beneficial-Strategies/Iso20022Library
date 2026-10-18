@@ -21,28 +21,28 @@ public record LoyaltyProgramme5
     /// </summary>
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
-    public IsoMax10NumericText? Balance { get; init; }
+    public Max10NumericText? Balance { get; init; }
 
     /// <summary>
     /// Eligibility.
     /// </summary>
     [DisplayName("Eligibility")]
     [IsoXmlTag("Elgblty")]
-    public ValueList<IsoTrueFalseIndicator> Eligibility { get; init; } = [];
+    public ValueList<TrueFalseIndicator> Eligibility { get; init; } = [];
 
     /// <summary>
     /// Expiration Date.
     /// </summary>
     [DisplayName("Expiration Date")]
     [IsoXmlTag("XprtnDt")]
-    public IsoISODate? ExpirationDate { get; init; }
+    public DateOnly? ExpirationDate { get; init; }
 
     /// <summary>
     /// Issuer.
     /// </summary>
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
-    public IsoMax35Text? Issuer { get; init; }
+    public Max35Text? Issuer { get; init; }
 
     /// <summary>
     /// Member Address.
@@ -56,7 +56,7 @@ public record LoyaltyProgramme5
     /// </summary>
     [DisplayName("Member Identification")]
     [IsoXmlTag("MmbId")]
-    public IsoMax35Text? MemberIdentification { get; init; }
+    public Max35Text? MemberIdentification { get; init; }
 
     /// <summary>
     /// Member Name.
@@ -70,35 +70,35 @@ public record LoyaltyProgramme5
     /// </summary>
     [DisplayName("Member Status")]
     [IsoXmlTag("MmbSts")]
-    public IsoMax35Text? MemberStatus { get; init; }
+    public Max35Text? MemberStatus { get; init; }
 
     /// <summary>
     /// Other Value Type.
     /// </summary>
     [DisplayName("Other Value Type")]
     [IsoXmlTag("OthrValTp")]
-    public IsoMax35Text? OtherValueType { get; init; }
+    public Max35Text? OtherValueType { get; init; }
 
     /// <summary>
     /// Value.
     /// </summary>
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
-    public IsoMax10NumericText? Value { get; init; }
+    public Max10NumericText? Value { get; init; }
 
     /// <summary>
     /// Value To Credit.
     /// </summary>
     [DisplayName("Value To Credit")]
     [IsoXmlTag("ValToCdt")]
-    public IsoMax10NumericText? ValueToCredit { get; init; }
+    public Max10NumericText? ValueToCredit { get; init; }
 
     /// <summary>
     /// Value To Debit.
     /// </summary>
     [DisplayName("Value To Debit")]
     [IsoXmlTag("ValToDbt")]
-    public IsoMax10NumericText? ValueToDebit { get; init; }
+    public Max10NumericText? ValueToDebit { get; init; }
 
     /// <summary>
     /// Value Type.

@@ -24,7 +24,7 @@ public record SettlementObligation8
     [IsoXmlTag("SttlmOblgtnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text SettlementObligationIdentification { get; init; }
+    public required Max35Text SettlementObligationIdentification { get; init; }
 
     /// <summary>
     /// Provides details about the security identification.

@@ -24,7 +24,7 @@ public record RelatedCustodianMessageDetailsSD1
     [IsoXmlTag("RcvdEvtTp")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public required IsoMax4AlphaNumericText ReceivedEventType { get; init; }
+    public required Max4AlphaNumericText ReceivedEventType { get; init; }
 
     /// <summary>
     /// Reference the CAMV value from the received custodian message. Applicable to custodian service only.
@@ -34,7 +34,7 @@ public record RelatedCustodianMessageDetailsSD1
     [IsoXmlTag("RcvdMndtryVlntryEvtTp")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public required IsoMax4AlphaNumericText ReceivedMandatoryVoluntaryEventType { get; init; }
+    public required Max4AlphaNumericText ReceivedMandatoryVoluntaryEventType { get; init; }
 
     /// <summary>
     /// Reference the CORP value from the received custodian message. Applicable to custodian service only.
@@ -44,7 +44,7 @@ public record RelatedCustodianMessageDetailsSD1
     [IsoXmlTag("RcvdCorpActnEvtId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax16Text ReceivedCorporateActionEventIdentification { get; init; }
+    public required RestrictedFINXMax16Text ReceivedCorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Rate that the ISO message was received from the custodian. Applicable to custodian service only.
@@ -53,7 +53,7 @@ public record RelatedCustodianMessageDetailsSD1
     [DisplayName("Received Date")]
     [IsoXmlTag("RcvdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ReceivedDate { get; init; }
+    public required DateOnly ReceivedDate { get; init; }
 
     /// <summary>
     /// Time of day that the ISO message was received from the custodian. Applicable to custodian service only.
@@ -62,7 +62,7 @@ public record RelatedCustodianMessageDetailsSD1
     [DisplayName("Received Time")]
     [IsoXmlTag("RcvdTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? ReceivedTime { get; init; }
+    public ISOTime? ReceivedTime { get; init; }
 
     /// <summary>
     /// Reference of the ISO15022 MT message type received from the custodian message. Applicable to custodian service only.
@@ -71,7 +71,7 @@ public record RelatedCustodianMessageDetailsSD1
     [DisplayName("Inbound ISO Message Type")]
     [IsoXmlTag("InbndISOMT")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public required IsoExact3NumericText InboundISOMessageType { get; init; }
+    public required Exact3NumericText InboundISOMessageType { get; init; }
 
     /// <summary>
     /// BIC Code of the recipient of the custodian record on a received message. Applicable to custodian service only.
@@ -80,7 +80,7 @@ public record RelatedCustodianMessageDetailsSD1
     [DisplayName("Inbound ISO Message Receiver BIC")]
     [IsoXmlTag("InbndISOMsgRcvrBIC")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public required IsoAnyBICIdentifier InboundISOMessageReceiverBIC { get; init; }
+    public required AnyBICIdentifier InboundISOMessageReceiverBIC { get; init; }
 
     /// <summary>
     /// Sender related reference from the received custodian message. Applicable to custodian service only.
@@ -90,7 +90,7 @@ public record RelatedCustodianMessageDetailsSD1
     [IsoXmlTag("RcvdRltdRef")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax16Text ReceivedRelatedReference { get; init; }
+    public required RestrictedFINXMax16Text ReceivedRelatedReference { get; init; }
 
     /// <summary>
     /// Sender SEME from received custodian message. Applicable to custodian service only.
@@ -100,7 +100,7 @@ public record RelatedCustodianMessageDetailsSD1
     [IsoXmlTag("RcvdSndrMsgRef")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax16Text ReceivedSenderMessageReference { get; init; }
+    public required RestrictedFINXMax16Text ReceivedSenderMessageReference { get; init; }
 
     /// <summary>
     /// BIC Code of the sender of the custodian record on a received message. Applicable to custodian service only.
@@ -109,5 +109,5 @@ public record RelatedCustodianMessageDetailsSD1
     [DisplayName("Inbound ISO Message Sender BIC")]
     [IsoXmlTag("InbndISOMsgSndrBIC")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public required IsoAnyBICIdentifier InboundISOMessageSenderBIC { get; init; }
+    public required AnyBICIdentifier InboundISOMessageSenderBIC { get; init; }
 }

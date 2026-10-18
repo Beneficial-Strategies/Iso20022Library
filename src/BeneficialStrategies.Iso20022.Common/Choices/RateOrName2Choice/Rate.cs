@@ -23,13 +23,13 @@ namespace BeneficialStrategies.Iso20022.Choices.RateOrName2Choice
         [DisplayName("Sign")]
         [IsoXmlTag("Sgn")]
         [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
-        public IsoPlusOrMinusIndicator? Sign { get; init; }
+        public PlusOrMinusIndicator? Sign { get; init; }
 
         /// <summary>
         /// Percentage charged for the use of an amount of money, usually expressed at an annual rate. The interest rate is the ratio of the amount of interest paid during a certain period of time compared to the principal amount of the interest bearing financial instrument.
         /// </summary>
         [IsoXmlTag("Rate")]
         [IsoSimpleType(IsoSimpleType.PercentageRate)]
-        public required IsoPercentageRate Value { get; init; }
+        public required PercentageRate Value { get; init; }
     }
 }

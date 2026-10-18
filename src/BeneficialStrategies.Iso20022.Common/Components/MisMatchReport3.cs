@@ -23,7 +23,7 @@ public record MisMatchReport3
     [DisplayName("Number Of Mis Matches")]
     [IsoXmlTag("NbOfMisMtchs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber NumberOfMisMatches { get; init; }
+    public required Number NumberOfMisMatches { get; init; }
 
     /// <summary>
     /// Details of each mismatch occurrence.

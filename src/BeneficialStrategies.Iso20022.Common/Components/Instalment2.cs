@@ -25,7 +25,7 @@ public record Instalment2
     [IsoXmlTag("SeqId")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public required IsoMax70Text SequenceIdentification { get; init; }
+    public required Max70Text SequenceIdentification { get; init; }
 
     /// <summary>
     /// Due date for the payment of the financing item instalment.
@@ -34,7 +34,7 @@ public record Instalment2
     [DisplayName("Payment Due Date")]
     [IsoXmlTag("PmtDueDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate PaymentDueDate { get; init; }
+    public required DateOnly PaymentDueDate { get; init; }
 
     /// <summary>
     /// Amount of a single instalment related to an invoice.

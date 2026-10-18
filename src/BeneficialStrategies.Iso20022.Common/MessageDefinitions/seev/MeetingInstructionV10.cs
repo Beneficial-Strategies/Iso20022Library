@@ -80,7 +80,7 @@ public record MeetingInstructionV10 : IOuterRecord
     /// </summary>
     [DisplayName("Meeting Instruction Identification")]
     [IsoXmlTag("MtgInstrId")]
-    public IsoMax35Text? MeetingInstructionIdentification { get; init; }
+    public Max35Text? MeetingInstructionIdentification { get; init; }
 
     /// <summary>
     /// Meeting Reference.

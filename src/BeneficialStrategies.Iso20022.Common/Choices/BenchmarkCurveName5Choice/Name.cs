@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.BenchmarkCurveName5Choice
         [IsoXmlTag("Nm")]
         [IsoSimpleType(IsoSimpleType.Max25Text)]
         [StringLength(maximumLength: 25, MinimumLength = 1)]
-        public required IsoMax25Text Value { get; init; }
+        public required Max25Text Value { get; init; }
     }
 }

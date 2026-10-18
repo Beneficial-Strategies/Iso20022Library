@@ -22,7 +22,7 @@ public record TradingSystemReport1
     [IsoId("_hdvCMGFdEfC-1NkZ9TkdKA")]
     [DisplayName("Report Identification")]
     [IsoXmlTag("RptId")]
-    public IsoMax140Text? ReportIdentification { get; init; }
+    public Max140Text? ReportIdentification { get; init; }
 
     /// <summary>
     /// Information about the status of a trading system.

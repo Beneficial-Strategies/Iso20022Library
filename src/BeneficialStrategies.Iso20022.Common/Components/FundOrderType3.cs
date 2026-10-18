@@ -32,5 +32,5 @@ public record FundOrderType3
     [IsoXmlTag("XtndedOrdrTp")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoExtended350Code ExtendedOrderType { get; init; }
+    public required Extended350Code ExtendedOrderType { get; init; }
 }

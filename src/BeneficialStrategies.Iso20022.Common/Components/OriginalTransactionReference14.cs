@@ -24,7 +24,7 @@ public record OriginalTransactionReference14
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MessageIdentification { get; init; }
+    public Max35Text? MessageIdentification { get; init; }
 
     /// <summary>
     /// Specifies the original message name identifier to which the message refers.
@@ -34,7 +34,7 @@ public record OriginalTransactionReference14
     [IsoXmlTag("MsgNmId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MessageNameIdentification { get; init; }
+    public Max35Text? MessageNameIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the original message was created.
@@ -43,7 +43,7 @@ public record OriginalTransactionReference14
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? CreationDateTime { get; init; }
+    public ISODateTime? CreationDateTime { get; init; }
 
     /// <summary>
     /// Provides reference information to the original transaction.

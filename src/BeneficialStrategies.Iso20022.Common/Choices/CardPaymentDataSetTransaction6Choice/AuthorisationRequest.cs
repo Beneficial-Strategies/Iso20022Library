@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction6Ch
         [DisplayName("Transaction Sequence Counter")]
         [IsoXmlTag("TxSeqCntr")]
         [IsoSimpleType(IsoSimpleType.Max9NumericText)]
-        public required IsoMax9NumericText TransactionSequenceCounter { get; init; }
+        public required Max9NumericText TransactionSequenceCounter { get; init; }
 
         /// <summary>
         /// Identification of partners involved in the exchange from the merchant to the issuer, with the corresponding timestamp of their exchanges.

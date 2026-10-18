@@ -24,7 +24,7 @@ public record ECommerceData1
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Type { get; init; }
+    public required Max35Text Type { get; init; }
 
     /// <summary>
     /// Value related to a specific ecommerce type.
@@ -34,5 +34,5 @@ public record ECommerceData1
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
     [StringLength(maximumLength: 2048, MinimumLength = 1)]
-    public required IsoMax2048Text Value { get; init; }
+    public required Max2048Text Value { get; init; }
 }

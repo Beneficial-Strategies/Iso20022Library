@@ -39,7 +39,7 @@ public record CurrencyExchange6
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public required IsoBaseOneRate ExchangeRate { get; init; }
+    public required BaseOneRate ExchangeRate { get; init; }
 
     /// <summary>
     /// Unique identification to unambiguously identify the foreign exchange contract.
@@ -49,7 +49,7 @@ public record CurrencyExchange6
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max40Text)]
     [StringLength(maximumLength: 40, MinimumLength = 1)]
-    public IsoMax40Text? Description { get; init; }
+    public Max40Text? Description { get; init; }
 
     /// <summary>
     /// Currency in which the rate of exchange is expressed in a currency exchange. In the example 1GBP = xxxCUR, the unit currency is GBP.
@@ -67,7 +67,7 @@ public record CurrencyExchange6
     [IsoXmlTag("Cmnts")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Comments { get; init; }
+    public Max70Text? Comments { get; init; }
 
     /// <summary>
     /// Date and time at which an exchange rate is quoted.
@@ -76,5 +76,5 @@ public record CurrencyExchange6
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? QuotationDate { get; init; }
+    public ISODateTime? QuotationDate { get; init; }
 }

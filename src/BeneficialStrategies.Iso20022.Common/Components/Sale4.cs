@@ -22,7 +22,7 @@ public record Sale4
     [IsoId("_HAUwMVXhEfC0lMwgjvMClw")]
     [DisplayName("Summary Commodity Identification")]
     [IsoXmlTag("SummryCmmdtyId")]
-    public IsoMax35Text? SummaryCommodityIdentification { get; init; }
+    public Max35Text? SummaryCommodityIdentification { get; init; }
 
     /// <summary>
     /// Contains loyalty programme information.

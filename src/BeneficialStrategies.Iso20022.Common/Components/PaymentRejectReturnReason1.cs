@@ -30,5 +30,5 @@ public record PaymentRejectReturnReason1
     [IsoId("_RC6b6c73EemEIuVuDudp4g")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public SimpleValueList<IsoMax105Text> AdditionalInformation { get; init; } = [];
+    public SimpleValueList<Max105Text> AdditionalInformation { get; init; } = [];
 }

@@ -47,7 +47,7 @@ public record FraudulentTransactionData2
     [IsoId("_-WlrlcsGEeuNe7RtB4qFHw")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
-    public SimpleValueList<IsoMax35Text> AlternateMessageReason { get; init; } = [];
+    public SimpleValueList<Max35Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Complete or partial details of the original message identified as fraudulent.
@@ -56,5 +56,5 @@ public record FraudulentTransactionData2
     [DisplayName("Fraudulent Message")]
     [IsoXmlTag("FrdlntMsg")]
     [IsoSimpleType(IsoSimpleType.Max100KBinary)]
-    public IsoMax100KBinary? FraudulentMessage { get; init; }
+    public Max100KBinary? FraudulentMessage { get; init; }
 }

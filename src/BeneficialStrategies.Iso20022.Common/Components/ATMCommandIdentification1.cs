@@ -24,7 +24,7 @@ public record ATMCommandIdentification1
     [IsoXmlTag("Orgn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Origin { get; init; }
+    public Max35Text? Origin { get; init; }
 
     /// <summary>
     /// Unique identification of the command for the issuer of the command.
@@ -34,7 +34,7 @@ public record ATMCommandIdentification1
     [IsoXmlTag("Ref")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Reference { get; init; }
+    public Max35Text? Reference { get; init; }
 
     /// <summary>
     /// Identification or address of the host performing the command.
@@ -44,5 +44,5 @@ public record ATMCommandIdentification1
     [IsoXmlTag("Prcr")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Processor { get; init; }
+    public Max140Text? Processor { get; init; }
 }

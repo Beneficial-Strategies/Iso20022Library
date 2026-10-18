@@ -210,5 +210,5 @@ public record EntryTransaction3
     [IsoXmlTag("AddtlTxInf")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public IsoMax500Text? AdditionalTransactionInformation { get; init; }
+    public Max500Text? AdditionalTransactionInformation { get; init; }
 }

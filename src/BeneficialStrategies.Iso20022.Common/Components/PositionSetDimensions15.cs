@@ -40,7 +40,7 @@ public record PositionSetDimensions15
     [IsoXmlTag("CollPrtflId")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoMax52Text? CollateralPortfolioIdentification { get; init; }
+    public Max52Text? CollateralPortfolioIdentification { get; init; }
 
     /// <summary>
     /// Flag to identify whether the reported Securities Financing Transaction position contains abnormal values.
@@ -49,5 +49,5 @@ public record PositionSetDimensions15
     [DisplayName("Outliers Included")]
     [IsoXmlTag("OtlrsIncl")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? OutliersIncluded { get; init; }
+    public TrueFalseIndicator? OutliersIncluded { get; init; }
 }

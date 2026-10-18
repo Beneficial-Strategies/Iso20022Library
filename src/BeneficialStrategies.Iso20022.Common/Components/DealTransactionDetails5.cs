@@ -31,7 +31,7 @@ public record DealTransactionDetails5
     [DisplayName("Concentration Limit")]
     [IsoXmlTag("CncntrtnLmt")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ConcentrationLimit { get; init; }
+    public YesNoIndicator? ConcentrationLimit { get; init; }
 
     /// <summary>
     /// Identifies the number of days in which the cash investor and dealer can agree to revisit the terms of an agreement.
@@ -40,7 +40,7 @@ public record DealTransactionDetails5
     [DisplayName("Minimum Notice Period")]
     [IsoXmlTag("MinNtcePrd")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public IsoExact3NumericText? MinimumNoticePeriod { get; init; }
+    public Exact3NumericText? MinimumNoticePeriod { get; init; }
 
     /// <summary>
     /// Closing date/time or maturity date/time of the transaction.
@@ -81,7 +81,7 @@ public record DealTransactionDetails5
     [DisplayName("Spread")]
     [IsoXmlTag("Sprd")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Spread { get; init; }
+    public PercentageRate? Spread { get; init; }
 
     /// <summary>
     /// Specifies the computation method of (accrued) interest of the financial instrument.

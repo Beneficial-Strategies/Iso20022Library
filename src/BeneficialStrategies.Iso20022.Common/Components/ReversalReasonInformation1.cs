@@ -38,5 +38,5 @@ public record ReversalReasonInformation1
     [IsoId("_TPKBpNp-Ed-ak6NoX_4Aeg_157540512")]
     [DisplayName("Additional Reversal Reason Information")]
     [IsoXmlTag("AddtlRvslRsnInf")]
-    public SimpleValueList<IsoMax105Text> AdditionalReversalReasonInformation { get; init; } = [];
+    public SimpleValueList<Max105Text> AdditionalReversalReasonInformation { get; init; } = [];
 }

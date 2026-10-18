@@ -24,7 +24,7 @@ public record PortfolioTransfer4
     [IsoXmlTag("MstrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Identification assigned to the transfer of assets.
@@ -34,7 +34,7 @@ public record PortfolioTransfer4
     [IsoXmlTag("TrfInstrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransferInstructionReference { get; init; }
+    public required Max35Text TransferInstructionReference { get; init; }
 
     /// <summary>
     /// Identification of the confirmation assigned by the transferor to the transfer.
@@ -44,7 +44,7 @@ public record PortfolioTransfer4
     [IsoXmlTag("TrfConfId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransferConfirmationIdentification { get; init; }
+    public required Max35Text TransferConfirmationIdentification { get; init; }
 
     /// <summary>
     /// Date the portfolio transfer instruction was executed.
@@ -53,7 +53,7 @@ public record PortfolioTransfer4
     [DisplayName("Actual Transfer Date")]
     [IsoXmlTag("ActlTrfDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ActualTransferDate { get; init; }
+    public DateOnly? ActualTransferDate { get; init; }
 
     /// <summary>
     /// Choice of tax efficient product, general investment or pension.
@@ -94,7 +94,7 @@ public record PortfolioTransfer4
     [DisplayName("Tax Date")]
     [IsoXmlTag("TaxDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TaxDate { get; init; }
+    public DateOnly? TaxDate { get; init; }
 
     /// <summary>
     /// Payment process for the transfer of cash from the debtor to the creditor.

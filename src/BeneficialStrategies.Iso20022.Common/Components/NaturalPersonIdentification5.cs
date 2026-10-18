@@ -42,14 +42,14 @@ public record NaturalPersonIdentification5
     /// </summary>
     [DisplayName("NPI")]
     [IsoXmlTag("NPI")]
-    public IsoNPIIdentifier? NPI { get; init; }
+    public NPIIdentifier? NPI { get; init; }
 
     /// <summary>
     /// Person Name.
     /// </summary>
     [DisplayName("Person Name")]
     [IsoXmlTag("PrsnNm")]
-    public ValueList<IsoMax500Text> PersonName { get; init; } = [];
+    public ValueList<Max500Text> PersonName { get; init; } = [];
 
     /// <summary>
     /// Sector.

@@ -22,7 +22,7 @@ public record SaleItem5
     [IsoId("_JdVlMFXhEfC0lMwgjvMClw")]
     [DisplayName("Product Type")]
     [IsoXmlTag("PdctTp")]
-    public IsoMax35Text? ProductType { get; init; }
+    public Max35Text? ProductType { get; init; }
 
     /// <summary>
     /// Product code of the item.
@@ -30,7 +30,7 @@ public record SaleItem5
     [IsoId("_JdVlMlXhEfC0lMwgjvMClw")]
     [DisplayName("Product Code")]
     [IsoXmlTag("PdctCd")]
-    public IsoMax70Text? ProductCode { get; init; }
+    public Max70Text? ProductCode { get; init; }
 
     /// <summary>
     /// Contains a list of codes used to identify a product.
@@ -46,7 +46,7 @@ public record SaleItem5
     [IsoId("_JdVlNlXhEfC0lMwgjvMClw")]
     [DisplayName("Additional Product Code")]
     [IsoXmlTag("AddtlPdctCd")]
-    public IsoMax70Text? AdditionalProductCode { get; init; }
+    public Max70Text? AdditionalProductCode { get; init; }
 
     /// <summary>
     /// Additional type of codification used to identify a product.
@@ -54,7 +54,7 @@ public record SaleItem5
     [IsoId("_JdVlOFXhEfC0lMwgjvMClw")]
     [DisplayName("Additional Product Code Type")]
     [IsoXmlTag("AddtlPdctCdTp")]
-    public IsoMax35Text? AdditionalProductCodeType { get; init; }
+    public Max35Text? AdditionalProductCodeType { get; init; }
 
     /// <summary>
     /// Code discriminator between a product code and its format to uniquely identify a specific product.
@@ -62,7 +62,7 @@ public record SaleItem5
     [IsoId("_JdVlOlXhEfC0lMwgjvMClw")]
     [DisplayName("Product Code Modifier")]
     [IsoXmlTag("PdctCdModfr")]
-    public IsoDecimalNumber? ProductCodeModifier { get; init; }
+    public DecimalNumber? ProductCodeModifier { get; init; }
 
     /// <summary>
     /// Description of the product or item.
@@ -70,7 +70,7 @@ public record SaleItem5
     [IsoId("_JdVlPFXhEfC0lMwgjvMClw")]
     [DisplayName("Product Description")]
     [IsoXmlTag("PdctDesc")]
-    public IsoMax140Text? ProductDescription { get; init; }
+    public Max140Text? ProductDescription { get; init; }
 
     /// <summary>
     /// Unit of measure of the item purchased.
@@ -86,7 +86,7 @@ public record SaleItem5
     [IsoId("_JdVlQFXhEfC0lMwgjvMClw")]
     [DisplayName("Other Unit Of Measure")]
     [IsoXmlTag("OthrUnitOfMeasr")]
-    public IsoMax35Text? OtherUnitOfMeasure { get; init; }
+    public Max35Text? OtherUnitOfMeasure { get; init; }
 
     /// <summary>
     /// Quantity of product or item.
@@ -94,7 +94,7 @@ public record SaleItem5
     [IsoId("_JdVlQlXhEfC0lMwgjvMClw")]
     [DisplayName("Product Quantity")]
     [IsoXmlTag("PdctQty")]
-    public IsoDecimalNumber? ProductQuantity { get; init; }
+    public DecimalNumber? ProductQuantity { get; init; }
 
     /// <summary>
     /// Original, non-adjusted cost of one unit of the product or service before discounts and taxes.
@@ -134,7 +134,7 @@ public record SaleItem5
     [IsoId("_JdVlTFXhEfC0lMwgjvMClw")]
     [DisplayName("Insurance Indicator")]
     [IsoXmlTag("InsrncInd")]
-    public IsoTrueFalseIndicator? InsuranceIndicator { get; init; }
+    public TrueFalseIndicator? InsuranceIndicator { get; init; }
 
     /// <summary>
     /// Cost of the insurance purchased.

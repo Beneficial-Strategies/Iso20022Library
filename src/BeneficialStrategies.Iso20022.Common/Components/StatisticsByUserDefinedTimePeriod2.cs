@@ -55,5 +55,5 @@ public record StatisticsByUserDefinedTimePeriod2
     [DisplayName("Yield")]
     [IsoXmlTag("Yld")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Yield { get; init; }
+    public PercentageRate? Yield { get; init; }
 }

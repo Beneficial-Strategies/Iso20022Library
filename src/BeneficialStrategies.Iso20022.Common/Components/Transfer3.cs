@@ -24,7 +24,7 @@ public record Transfer3
     [IsoXmlTag("TrfRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransferReference { get; init; }
+    public required Max35Text TransferReference { get; init; }
 
     /// <summary>
     /// Date and time at which the securities are to be delivered or received.
@@ -49,5 +49,5 @@ public record Transfer3
     [DisplayName("Own Account Transfer Indicator")]
     [IsoXmlTag("OwnAcctTrfInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator OwnAccountTransferIndicator { get; init; }
+    public required YesNoIndicator OwnAccountTransferIndicator { get; init; }
 }

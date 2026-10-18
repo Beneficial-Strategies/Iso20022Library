@@ -29,19 +29,19 @@ public record DetailedReportStatistics7
     /// </summary>
     [DisplayName("Total Number Of Reports")]
     [IsoXmlTag("TtlNbOfRpts")]
-    public required IsoMax20PositiveNumber TotalNumberOfReports { get; init; }
+    public required Max20PositiveNumber TotalNumberOfReports { get; init; }
 
     /// <summary>
     /// Total Number Of Reports Accepted.
     /// </summary>
     [DisplayName("Total Number Of Reports Accepted")]
     [IsoXmlTag("TtlNbOfRptsAccptd")]
-    public required IsoMax20PositiveNumber TotalNumberOfReportsAccepted { get; init; }
+    public required Max20PositiveNumber TotalNumberOfReportsAccepted { get; init; }
 
     /// <summary>
     /// Total Number Of Reports Rejected.
     /// </summary>
     [DisplayName("Total Number Of Reports Rejected")]
     [IsoXmlTag("TtlNbOfRptsRjctd")]
-    public required IsoMax20PositiveNumber TotalNumberOfReportsRejected { get; init; }
+    public required Max20PositiveNumber TotalNumberOfReportsRejected { get; init; }
 }

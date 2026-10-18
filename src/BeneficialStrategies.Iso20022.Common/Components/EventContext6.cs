@@ -28,7 +28,7 @@ public record EventContext6
     /// </summary>
     [DisplayName("Sale Identification")]
     [IsoXmlTag("SaleId")]
-    public IsoMax35Text? SaleIdentification { get; init; }
+    public Max35Text? SaleIdentification { get; init; }
 
     /// <summary>
     /// Service Type.

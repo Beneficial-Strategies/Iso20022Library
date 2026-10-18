@@ -26,7 +26,7 @@ public record PointOfServiceContext4
     [DisplayName("Card Present")]
     [IsoXmlTag("CardPres")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CardPresent { get; init; }
+    public TrueFalseIndicator? CardPresent { get; init; }
 
     /// <summary>
     /// Indicates whether the transaction has been initiated in presence of the cardholder or not.
@@ -38,7 +38,7 @@ public record PointOfServiceContext4
     [DisplayName("Cardholder Present")]
     [IsoXmlTag("CrdhldrPres")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CardholderPresent { get; init; }
+    public TrueFalseIndicator? CardholderPresent { get; init; }
 
     /// <summary>
     /// Indicates whether the automated device was operated solely by the cardholder or not (for example, vending machine, automated fuel dispenser, ATM, kiosk, etc.).
@@ -50,7 +50,7 @@ public record PointOfServiceContext4
     [DisplayName("Cardholder Activated")]
     [IsoXmlTag("CrdhldrActvtd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CardholderActivated { get; init; }
+    public TrueFalseIndicator? CardholderActivated { get; init; }
 
     /// <summary>
     /// Transaction initiated through a transponder or not.
@@ -61,7 +61,7 @@ public record PointOfServiceContext4
     [DisplayName("Transponder Initiated")]
     [IsoXmlTag("TrnspndrInittd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? TransponderInitiated { get; init; }
+    public TrueFalseIndicator? TransponderInitiated { get; init; }
 
     /// <summary>
     /// Card acceptor representative in attendance at the point of service during the transaction.
@@ -74,7 +74,7 @@ public record PointOfServiceContext4
     [DisplayName("Attended Indicator")]
     [IsoXmlTag("AttnddInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? AttendedIndicator { get; init; }
+    public TrueFalseIndicator? AttendedIndicator { get; init; }
 
     /// <summary>
     /// Transaction category level on an unattended terminal.
@@ -83,7 +83,7 @@ public record PointOfServiceContext4
     [DisplayName("Unattended Level Category")]
     [IsoXmlTag("UattnddLvlCtgy")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public IsoMax35NumericText? UnattendedLevelCategory { get; init; }
+    public Max35NumericText? UnattendedLevelCategory { get; init; }
 
     /// <summary>
     /// Indicates whether the point of service is an e-commerce one or not:
@@ -96,7 +96,7 @@ public record PointOfServiceContext4
     [DisplayName("E Commerce Indicator")]
     [IsoXmlTag("EComrcInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ECommerceIndicator { get; init; }
+    public TrueFalseIndicator? ECommerceIndicator { get; init; }
 
     /// <summary>
     /// Contains electronic commerce data.
@@ -121,7 +121,7 @@ public record PointOfServiceContext4
     [DisplayName("Transit Indicator")]
     [IsoXmlTag("TrnstInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? TransitIndicator { get; init; }
+    public TrueFalseIndicator? TransitIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the point of service supports partial approval or not.
@@ -132,7 +132,7 @@ public record PointOfServiceContext4
     [DisplayName("Partial Approval Supported")]
     [IsoXmlTag("PrtlApprvlSpprtd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? PartialApprovalSupported { get; init; }
+    public TrueFalseIndicator? PartialApprovalSupported { get; init; }
 
     /// <summary>
     /// Indicates whether the authorisation was delayed due to an on-board initiated transaction.
@@ -143,7 +143,7 @@ public record PointOfServiceContext4
     [DisplayName("Delayed Authorisation Indicator")]
     [IsoXmlTag("DelydAuthstnInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? DelayedAuthorisationIndicator { get; init; }
+    public TrueFalseIndicator? DelayedAuthorisationIndicator { get; init; }
 
     /// <summary>
     /// Security characteristics of the communication link in the card acceptance process.
@@ -163,7 +163,7 @@ public record PointOfServiceContext4
     [IsoXmlTag("OthrSctyChrtcs")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherSecurityCharacteristics { get; init; }
+    public Max35Text? OtherSecurityCharacteristics { get; init; }
 
     /// <summary>
     /// Entry mode of the card data for the transaction
@@ -182,7 +182,7 @@ public record PointOfServiceContext4
     [IsoXmlTag("OthrCardDataNtryMd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherCardDataEntryMode { get; init; }
+    public Max35Text? OtherCardDataEntryMode { get; init; }
 
     /// <summary>
     /// Method used to present a QR Code at the point of service.
@@ -200,7 +200,7 @@ public record PointOfServiceContext4
     [IsoXmlTag("OthrQRCdPresntmntMd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherQRCodePresentmentMode { get; init; }
+    public Max35Text? OtherQRCodePresentmentMode { get; init; }
 
     /// <summary>
     /// Terminal has reused temporary secure stored card data.
@@ -209,7 +209,7 @@ public record PointOfServiceContext4
     [DisplayName("Temporary Secure Card Data Reused")]
     [IsoXmlTag("TempScrCardDataReusd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? TemporarySecureCardDataReused { get; init; }
+    public TrueFalseIndicator? TemporarySecureCardDataReused { get; init; }
 
     /// <summary>
     /// Storage location of payment credential (for example, Acceptor or third party wallet).
@@ -219,7 +219,7 @@ public record PointOfServiceContext4
     [IsoXmlTag("StorgLctn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? StorageLocation { get; init; }
+    public Max35Text? StorageLocation { get; init; }
 
     /// <summary>
     /// Data used to assign specific conditions at the card acceptor location and decided by bilateral agreements.

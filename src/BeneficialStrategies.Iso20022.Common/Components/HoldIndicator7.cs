@@ -23,7 +23,7 @@ public record HoldIndicator7
     [DisplayName("Indicator")]
     [IsoXmlTag("Ind")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator Indicator { get; init; }
+    public required YesNoIndicator Indicator { get; init; }
 
     /// <summary>
     /// Specifies the reason of the registration status.

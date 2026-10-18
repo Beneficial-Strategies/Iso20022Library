@@ -22,7 +22,7 @@ public record CardData16
     [IsoId("_UOv60R7iEfCkq6-p7S3J1Q")]
     [DisplayName("PAN")]
     [IsoXmlTag("PAN")]
-    public IsoMax19NumericText? PAN { get; init; }
+    public Max19NumericText? PAN { get; init; }
 
     /// <summary>
     /// To indicate whether the PAN is using ProtectedData for encryption or not.
@@ -30,7 +30,7 @@ public record CardData16
     [IsoId("_UOv62R7iEfCkq6-p7S3J1Q")]
     [DisplayName("Protected PAN")]
     [IsoXmlTag("PrtctdPAN")]
-    public IsoTrueFalseIndicator? ProtectedPAN { get; init; }
+    public TrueFalseIndicator? ProtectedPAN { get; init; }
 
     /// <summary>
     /// Distinguishes between instances of the same payment card.
@@ -38,7 +38,7 @@ public record CardData16
     [IsoId("_UOv62x7iEfCkq6-p7S3J1Q")]
     [DisplayName("Card Sequence Number")]
     [IsoXmlTag("CardSeqNb")]
-    public IsoMin2Max3NumericText? CardSequenceNumber { get; init; }
+    public Min2Max3NumericText? CardSequenceNumber { get; init; }
 
     /// <summary>
     /// Date as from which the card can be used.
@@ -46,7 +46,7 @@ public record CardData16
     [IsoId("_UOv64x7iEfCkq6-p7S3J1Q")]
     [DisplayName("Effective Date")]
     [IsoXmlTag("FctvDt")]
-    public IsoISOYearMonth? EffectiveDate { get; init; }
+    public ISOYearMonth? EffectiveDate { get; init; }
 
     /// <summary>
     /// Expiry date of the card or payment token.
@@ -54,7 +54,7 @@ public record CardData16
     [IsoId("_UOv66x7iEfCkq6-p7S3J1Q")]
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
-    public IsoISOYearMonth? ExpiryDate { get; init; }
+    public ISOYearMonth? ExpiryDate { get; init; }
 
     /// <summary>
     /// Service attached to the card as defined in ISO 7813.
@@ -62,7 +62,7 @@ public record CardData16
     [IsoId("_UOv68x7iEfCkq6-p7S3J1Q")]
     [DisplayName("Service Code")]
     [IsoXmlTag("SvcCd")]
-    public IsoExact3NumericText? ServiceCode { get; init; }
+    public Exact3NumericText? ServiceCode { get; init; }
 
     /// <summary>
     /// ISO track 1 issued from the magnetic stripe card or from the ICC.
@@ -70,7 +70,7 @@ public record CardData16
     [IsoId("_UOv6-x7iEfCkq6-p7S3J1Q")]
     [DisplayName("Track1")]
     [IsoXmlTag("Trck1")]
-    public IsoMax76Text? Track1 { get; init; }
+    public Max76Text? Track1 { get; init; }
 
     /// <summary>
     /// ISO track 2 issued from the magnetic stripe card or from the ICC.
@@ -86,7 +86,7 @@ public record CardData16
     [IsoId("_UOv7Cx7iEfCkq6-p7S3J1Q")]
     [DisplayName("Track3")]
     [IsoXmlTag("Trck3")]
-    public IsoMax104Text? Track3 { get; init; }
+    public Max104Text? Track3 { get; init; }
 
     /// <summary>
     /// Unique non-financial reference assigned to a given PAN.
@@ -94,7 +94,7 @@ public record CardData16
     [IsoId("_UOv7Ex7iEfCkq6-p7S3J1Q")]
     [DisplayName("Payment Account Reference")]
     [IsoXmlTag("PmtAcctRef")]
-    public IsoMax35Text? PaymentAccountReference { get; init; }
+    public Max35Text? PaymentAccountReference { get; init; }
 
     /// <summary>
     /// Leading digits of the PAN that identifies the card portfolio.
@@ -102,7 +102,7 @@ public record CardData16
     [IsoId("_UOv7Jx7iEfCkq6-p7S3J1Q")]
     [DisplayName("PAN Account Range")]
     [IsoXmlTag("PANAcctRg")]
-    public IsoMax19NumericText? PANAccountRange { get; init; }
+    public Max19NumericText? PANAccountRange { get; init; }
 
     /// <summary>
     /// Country code assigned to the card by the card issuer.
@@ -118,7 +118,7 @@ public record CardData16
     [IsoId("_UOv7MR7iEfCkq6-p7S3J1Q")]
     [DisplayName("Product Type")]
     [IsoXmlTag("PdctTp")]
-    public IsoMax35Text? ProductType { get; init; }
+    public Max35Text? ProductType { get; init; }
 
     /// <summary>
     /// Sub type or code of card product.
@@ -126,7 +126,7 @@ public record CardData16
     [IsoId("_UOv7Mx7iEfCkq6-p7S3J1Q")]
     [DisplayName("Product Sub Type")]
     [IsoXmlTag("PdctSubTp")]
-    public IsoMax35Text? ProductSubType { get; init; }
+    public Max35Text? ProductSubType { get; init; }
 
     /// <summary>
     /// Identifies the card portfolio.
@@ -134,7 +134,7 @@ public record CardData16
     [IsoId("_UOv7NR7iEfCkq6-p7S3J1Q")]
     [DisplayName("Portfolio Identifier")]
     [IsoXmlTag("PrtflIdr")]
-    public IsoMax35Text? PortfolioIdentifier { get; init; }
+    public Max35Text? PortfolioIdentifier { get; init; }
 
     /// <summary>
     /// Brand of the card or transaction.
@@ -142,7 +142,7 @@ public record CardData16
     [IsoId("_mmyCEB7iEfCkq6-p7S3J1Q")]
     [DisplayName("Brand")]
     [IsoXmlTag("Brnd")]
-    public IsoMax35Text? Brand { get; init; }
+    public Max35Text? Brand { get; init; }
 
     /// <summary>
     /// Account funding source applied to the transaction.
@@ -150,7 +150,7 @@ public record CardData16
     [IsoId("_ogywUB7lEfCkq6-p7S3J1Q")]
     [DisplayName("Account Funding Source")]
     [IsoXmlTag("AcctFndgSrc")]
-    public IsoMax10Text? AccountFundingSource { get; init; }
+    public Max10Text? AccountFundingSource { get; init; }
 
     /// <summary>
     /// Classification or type of the card user, such as commercial, consumer.
@@ -158,7 +158,7 @@ public record CardData16
     [IsoId("_krBGsB7nEfCkq6-p7S3J1Q")]
     [DisplayName("Segment")]
     [IsoXmlTag("Sgmt")]
-    public IsoMax10Text? Segment { get; init; }
+    public Max10Text? Segment { get; init; }
 
     /// <summary>
     /// Switch that processed the transaction.
@@ -166,7 +166,7 @@ public record CardData16
     [IsoId("_KIYSUB7jEfCkq6-p7S3J1Q")]
     [DisplayName("Scheme")]
     [IsoXmlTag("Schme")]
-    public IsoMax35Text? Scheme { get; init; }
+    public Max35Text? Scheme { get; init; }
 
     /// <summary>
     /// Date of card was issued to cardholder.
@@ -174,7 +174,7 @@ public record CardData16
     [IsoId("_rVnaYCHwEfCkq6-p7S3J1Q")]
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
-    public IsoISOYearMonth? IssueDate { get; init; }
+    public ISOYearMonth? IssueDate { get; init; }
 
     /// <summary>
     /// Reserved for private data.

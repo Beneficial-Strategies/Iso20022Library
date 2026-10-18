@@ -21,7 +21,7 @@ public record TradeDataReport2
     /// </summary>
     [DisplayName("Linked Report Identification")]
     [IsoXmlTag("LkdRptId")]
-    public IsoMax35Text? LinkedReportIdentification { get; init; }
+    public Max35Text? LinkedReportIdentification { get; init; }
 
     /// <summary>
     /// Trade Data.

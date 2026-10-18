@@ -40,7 +40,7 @@ public record DirectDebitTransaction10
     [IsoXmlTag("PreNtfctnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PreNotificationIdentification { get; init; }
+    public Max35Text? PreNotificationIdentification { get; init; }
 
     /// <summary>
     /// Date on which the creditor notifies the debtor about the amount and date on which the direct debit instruction will be presented to the debtor&apos;s agent.
@@ -49,5 +49,5 @@ public record DirectDebitTransaction10
     [DisplayName("Pre Notification Date")]
     [IsoXmlTag("PreNtfctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? PreNotificationDate { get; init; }
+    public DateOnly? PreNotificationDate { get; init; }
 }

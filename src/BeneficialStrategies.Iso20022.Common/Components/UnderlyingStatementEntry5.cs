@@ -35,7 +35,7 @@ public record UnderlyingStatementEntry5
     /// </summary>
     [DisplayName("Original Entry Reference")]
     [IsoXmlTag("OrgnlNtryRef")]
-    public IsoMax35Text? OriginalEntryReference { get; init; }
+    public Max35Text? OriginalEntryReference { get; init; }
 
     /// <summary>
     /// Original Entry Value Date.
@@ -56,12 +56,12 @@ public record UnderlyingStatementEntry5
     /// </summary>
     [DisplayName("Original Statement Identification")]
     [IsoXmlTag("OrgnlStmtId")]
-    public IsoMax35Text? OriginalStatementIdentification { get; init; }
+    public Max35Text? OriginalStatementIdentification { get; init; }
 
     /// <summary>
     /// Original UETR.
     /// </summary>
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
-    public IsoUUIDv4Identifier? OriginalUETR { get; init; }
+    public UUIDv4Identifier? OriginalUETR { get; init; }
 }

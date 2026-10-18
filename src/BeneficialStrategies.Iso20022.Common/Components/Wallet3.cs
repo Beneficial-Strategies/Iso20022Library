@@ -21,7 +21,7 @@ public record Wallet3
     /// </summary>
     [DisplayName("Account Age")]
     [IsoXmlTag("AcctAge")]
-    public IsoMax5PositiveNumber? AccountAge { get; init; }
+    public Max5PositiveNumber? AccountAge { get; init; }
 
     /// <summary>
     /// Account Country.
@@ -35,14 +35,14 @@ public record Wallet3
     /// </summary>
     [DisplayName("Account Email Age")]
     [IsoXmlTag("AcctEmailAge")]
-    public IsoMax5PositiveNumber? AccountEmailAge { get; init; }
+    public Max5PositiveNumber? AccountEmailAge { get; init; }
 
     /// <summary>
     /// Activity.
     /// </summary>
     [DisplayName("Activity")]
     [IsoXmlTag("Actvty")]
-    public IsoMax10PositiveNumber? Activity { get; init; }
+    public Max10PositiveNumber? Activity { get; init; }
 
     /// <summary>
     /// Activity Interval.
@@ -70,28 +70,28 @@ public record Wallet3
     /// </summary>
     [DisplayName("Days Since Last Activity")]
     [IsoXmlTag("DaysSncLastActvty")]
-    public IsoMax5PositiveNumber? DaysSinceLastActivity { get; init; }
+    public Max5PositiveNumber? DaysSinceLastActivity { get; init; }
 
     /// <summary>
     /// Last Wallet Change.
     /// </summary>
     [DisplayName("Last Wallet Change")]
     [IsoXmlTag("LastWlltChng")]
-    public IsoMax5PositiveNumber? LastWalletChange { get; init; }
+    public Max5PositiveNumber? LastWalletChange { get; init; }
 
     /// <summary>
     /// Other Card Data Entry Mode.
     /// </summary>
     [DisplayName("Other Card Data Entry Mode")]
     [IsoXmlTag("OthrCardDataNtryMd")]
-    public IsoMax35Text? OtherCardDataEntryMode { get; init; }
+    public Max35Text? OtherCardDataEntryMode { get; init; }
 
     /// <summary>
     /// PAN Age.
     /// </summary>
     [DisplayName("PAN Age")]
     [IsoXmlTag("PANAge")]
-    public IsoMax5PositiveNumber? PANAge { get; init; }
+    public Max5PositiveNumber? PANAge { get; init; }
 
     /// <summary>
     /// Provider.
@@ -105,21 +105,21 @@ public record Wallet3
     /// </summary>
     [DisplayName("Provider Account Score")]
     [IsoXmlTag("PrvdrAcctScore")]
-    public IsoMax5PositiveNumber? ProviderAccountScore { get; init; }
+    public Max5PositiveNumber? ProviderAccountScore { get; init; }
 
     /// <summary>
     /// Provider Device Score.
     /// </summary>
     [DisplayName("Provider Device Score")]
     [IsoXmlTag("PrvdrDvcScore")]
-    public IsoMax5PositiveNumber? ProviderDeviceScore { get; init; }
+    public Max5PositiveNumber? ProviderDeviceScore { get; init; }
 
     /// <summary>
     /// Provider Phone Score.
     /// </summary>
     [DisplayName("Provider Phone Score")]
     [IsoXmlTag("PrvdrPhneScore")]
-    public IsoMax5PositiveNumber? ProviderPhoneScore { get; init; }
+    public Max5PositiveNumber? ProviderPhoneScore { get; init; }
 
     /// <summary>
     /// Provider Risk Assessment.
@@ -133,19 +133,19 @@ public record Wallet3
     /// </summary>
     [DisplayName("Provider Risk Assessment Model Version")]
     [IsoXmlTag("PrvdrRskAssmntMdlVrsn")]
-    public IsoMax35Text? ProviderRiskAssessmentModelVersion { get; init; }
+    public Max35Text? ProviderRiskAssessmentModelVersion { get; init; }
 
     /// <summary>
     /// Suspended Cards.
     /// </summary>
     [DisplayName("Suspended Cards")]
     [IsoXmlTag("SspdCrds")]
-    public IsoMax5PositiveNumber? SuspendedCards { get; init; }
+    public Max5PositiveNumber? SuspendedCards { get; init; }
 
     /// <summary>
     /// User Account Age.
     /// </summary>
     [DisplayName("User Account Age")]
     [IsoXmlTag("UsrAcctAge")]
-    public IsoMax5PositiveNumber? UserAccountAge { get; init; }
+    public Max5PositiveNumber? UserAccountAge { get; init; }
 }

@@ -26,7 +26,7 @@ public record MessageReportHeader4
     [IsoXmlTag("MsgRptIdr")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? MessageReportIdentifier { get; init; }
+    public Max140Text? MessageReportIdentifier { get; init; }
 
     /// <summary>
     /// Details the status of the whole message that has been received.

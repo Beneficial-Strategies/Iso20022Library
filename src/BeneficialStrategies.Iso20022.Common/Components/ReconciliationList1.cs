@@ -24,7 +24,7 @@ public record ReconciliationList1
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate Date { get; init; }
+    public required DateOnly Date { get; init; }
 
     /// <summary>
     /// Reference to related documents for example to original assignment in a status response or retry.
@@ -81,7 +81,7 @@ public record ReconciliationList1
     [DisplayName("Payment Date")]
     [IsoXmlTag("PmtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate PaymentDate { get; init; }
+    public required DateOnly PaymentDate { get; init; }
 
     /// <summary>
     /// Terms of the payment.
@@ -116,7 +116,7 @@ public record ReconciliationList1
     [DisplayName("Item Count")]
     [IsoXmlTag("ItmCnt")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText ItemCount { get; init; }
+    public required Max15NumericText ItemCount { get; init; }
 
     /// <summary>
     /// Total of all individual amounts included in the list, irrespective of currencies.
@@ -125,7 +125,7 @@ public record ReconciliationList1
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? ControlSum { get; init; }
+    public DecimalNumber? ControlSum { get; init; }
 
     /// <summary>
     /// Associated free form document.
@@ -143,7 +143,7 @@ public record ReconciliationList1
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max2000Text)]
     [StringLength(maximumLength: 2000, MinimumLength = 1)]
-    public IsoMax2000Text? AdditionalInformation { get; init; }
+    public Max2000Text? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Validation status of the list.

@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification25Choice
         /// </summary>
         [IsoXmlTag("Blmbrg")]
         [IsoSimpleType(IsoSimpleType.Bloomberg2Identifier)]
-        public required IsoBloomberg2Identifier Value { get; init; }
+        public required Bloomberg2Identifier Value { get; init; }
     }
 }

@@ -32,7 +32,7 @@ public record LiquidityStressScenarioDefinition1
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max2000Text)]
     [StringLength(maximumLength: 2000, MinimumLength = 1)]
-    public required IsoMax2000Text Description { get; init; }
+    public required Max2000Text Description { get; init; }
 
     /// <summary>
     /// CCP’s internal classification of stress scenario type.
@@ -42,7 +42,7 @@ public record LiquidityStressScenarioDefinition1
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Type { get; init; }
+    public Max35Text? Type { get; init; }
 
     /// <summary>
     /// Stress currency, or if aggregate, report ‘XLL’.

@@ -30,7 +30,7 @@ public record CardAcquisitionResponse2
     [IsoId("_MkyWMwxtEeqdx6buGpCCQw")]
     [DisplayName("Payment Brand")]
     [IsoXmlTag("PmtBrnd")]
-    public SimpleValueList<IsoMax35Text> PaymentBrand { get; init; } = [];
+    public SimpleValueList<Max35Text> PaymentBrand { get; init; } = [];
 
     /// <summary>
     /// Language used to display messages to the customer.

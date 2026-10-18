@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Role7Choice
         [IsoXmlTag("Txt")]
         [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
         [StringLength(maximumLength: 350, MinimumLength = 1)]
-        public required IsoRestrictedFINXMax350Text Value { get; init; }
+        public required RestrictedFINXMax350Text Value { get; init; }
     }
 }

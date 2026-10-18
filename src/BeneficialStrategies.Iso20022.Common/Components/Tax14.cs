@@ -32,7 +32,7 @@ public record Tax14
     [IsoXmlTag("XtndedTp")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoExtended350Code ExtendedType { get; init; }
+    public required Extended350Code ExtendedType { get; init; }
 
     /// <summary>
     /// Amount of money resulting from the calculation of the tax.
@@ -49,7 +49,7 @@ public record Tax14
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Rate { get; init; }
+    public PercentageRate? Rate { get; init; }
 
     /// <summary>
     /// Country where the tax is due.
@@ -74,7 +74,7 @@ public record Tax14
     [DisplayName("Exemption Indicator")]
     [IsoXmlTag("XmptnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ExemptionIndicator { get; init; }
+    public required YesNoIndicator ExemptionIndicator { get; init; }
 
     /// <summary>
     /// Reason for a tax exemption.
@@ -92,7 +92,7 @@ public record Tax14
     [IsoXmlTag("XtndedXmptnRsn")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedExemptionReason { get; init; }
+    public Extended350Code? ExtendedExemptionReason { get; init; }
 
     /// <summary>
     /// Information used to calculate the tax.

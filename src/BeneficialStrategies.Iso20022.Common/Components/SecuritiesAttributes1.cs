@@ -22,7 +22,7 @@ public record SecuritiesAttributes1
     [IsoId("990f0523-22dd-4e09-9b3d-eddb7308c0f8")]
     [DisplayName("Unique Transaction Identifier")]
     [IsoXmlTag("UnqTxIdr")]
-    public required IsoUTIIdentifier UniqueTransactionIdentifier { get; init; }
+    public required UTIIdentifier UniqueTransactionIdentifier { get; init; }
 
     /// <summary>
     /// Amount of money for the trade.

@@ -24,7 +24,7 @@ public record CorporateActionDateSD6
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text PlaceAndName { get; init; }
+    public required Max350Text PlaceAndName { get; init; }
 
     /// <summary>
     /// Date on which called positions are moved into either a segregated account or a DTC Contra CUSIP(s).
@@ -33,5 +33,5 @@ public record CorporateActionDateSD6
     [DisplayName("Lottery Date")]
     [IsoXmlTag("LtryDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? LotteryDate { get; init; }
+    public DateOnly? LotteryDate { get; init; }
 }

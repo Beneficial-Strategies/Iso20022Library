@@ -46,7 +46,7 @@ public record Tax42
     [IsoId("c1c36ba1-exmp-0001-0004-b6e05bdf3942")]
     [DisplayName("Exemption Indicator")]
     [IsoXmlTag("XmptnInd")]
-    public required IsoYesNoIndicator ExemptionIndicator { get; init; }
+    public required YesNoIndicator ExemptionIndicator { get; init; }
 
     /// <summary>
     /// Reason for the tax exemption.

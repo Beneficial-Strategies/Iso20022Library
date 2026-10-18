@@ -88,7 +88,7 @@ public record SecuritiesSettlementTransactionReversalAdviceV12 : IOuterRecord
     [IsoXmlTag("ConfRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ConfirmationReference { get; init; }
+    public required Max35Text ConfirmationReference { get; init; }
 
     /// <summary>
     /// Identifies the chain of delivering settlement parties.

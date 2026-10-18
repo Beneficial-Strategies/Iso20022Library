@@ -32,7 +32,7 @@ public record AmountDetails1
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Contains the amount.
@@ -49,7 +49,7 @@ public record AmountDetails1
     [DisplayName("Credit Indicator")]
     [IsoXmlTag("CdtInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CreditIndicator { get; init; }
+    public TrueFalseIndicator? CreditIndicator { get; init; }
 
     /// <summary>
     /// Taxes related to the products or services.

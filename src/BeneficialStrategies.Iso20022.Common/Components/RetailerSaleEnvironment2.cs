@@ -63,7 +63,7 @@ public record RetailerSaleEnvironment2
     [DisplayName("Debit Preferred Flag")]
     [IsoXmlTag("DbtPrefrdFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? DebitPreferredFlag { get; init; }
+    public TrueFalseIndicator? DebitPreferredFlag { get; init; }
 
     /// <summary>
     /// Way of Loyalty handling.

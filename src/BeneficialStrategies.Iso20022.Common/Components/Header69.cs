@@ -32,7 +32,7 @@ public record Header69
     [IsoXmlTag("PrtcolVrsn")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
     [StringLength(maximumLength: 2048, MinimumLength = 1)]
-    public required IsoMax2048Text ProtocolVersion { get; init; }
+    public required Max2048Text ProtocolVersion { get; init; }
 
     /// <summary>
     /// Unique identification of an exchange of messages between two parties.
@@ -42,7 +42,7 @@ public record Header69
     [IsoXmlTag("XchgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ExchangeIdentification { get; init; }
+    public Max35Text? ExchangeIdentification { get; init; }
 
     /// <summary>
     /// Number of retransmission of the message. Incremented by one for each retransmission.
@@ -51,7 +51,7 @@ public record Header69
     [DisplayName("Re Transmission Counter")]
     [IsoXmlTag("ReTrnsmssnCntr")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public IsoMax3NumericText? ReTransmissionCounter { get; init; }
+    public Max3NumericText? ReTransmissionCounter { get; init; }
 
     /// <summary>
     /// Date and time at which the message was sent.
@@ -60,7 +60,7 @@ public record Header69
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// Unique identification of the partner that has initiated the exchange.

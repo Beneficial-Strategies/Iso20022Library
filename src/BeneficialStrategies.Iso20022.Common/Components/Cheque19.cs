@@ -28,14 +28,14 @@ public record Cheque19
     /// </summary>
     [DisplayName("Cheque Maturity Date")]
     [IsoXmlTag("ChqMtrtyDt")]
-    public IsoISODate? ChequeMaturityDate { get; init; }
+    public DateOnly? ChequeMaturityDate { get; init; }
 
     /// <summary>
     /// Cheque Number.
     /// </summary>
     [DisplayName("Cheque Number")]
     [IsoXmlTag("ChqNb")]
-    public IsoMax35Text? ChequeNumber { get; init; }
+    public Max35Text? ChequeNumber { get; init; }
 
     /// <summary>
     /// Cheque Type.
@@ -63,7 +63,7 @@ public record Cheque19
     /// </summary>
     [DisplayName("Forms Code")]
     [IsoXmlTag("FrmsCd")]
-    public IsoMax35Text? FormsCode { get; init; }
+    public Max35Text? FormsCode { get; init; }
 
     /// <summary>
     /// Instruction Priority.
@@ -77,26 +77,26 @@ public record Cheque19
     /// </summary>
     [DisplayName("Memo Field")]
     [IsoXmlTag("MemoFld")]
-    public SimpleValueList<IsoMax35Text> MemoField { get; init; } = [];
+    public SimpleValueList<Max35Text> MemoField { get; init; } = [];
 
     /// <summary>
     /// Print Location.
     /// </summary>
     [DisplayName("Print Location")]
     [IsoXmlTag("PrtLctn")]
-    public IsoMax35Text? PrintLocation { get; init; }
+    public Max35Text? PrintLocation { get; init; }
 
     /// <summary>
     /// Regional Clearing Zone.
     /// </summary>
     [DisplayName("Regional Clearing Zone")]
     [IsoXmlTag("RgnlClrZone")]
-    public IsoMax35Text? RegionalClearingZone { get; init; }
+    public Max35Text? RegionalClearingZone { get; init; }
 
     /// <summary>
     /// Signature.
     /// </summary>
     [DisplayName("Signature")]
     [IsoXmlTag("Sgntr")]
-    public SimpleValueList<IsoMax70Text> Signature { get; init; } = [];
+    public SimpleValueList<Max70Text> Signature { get; init; } = [];
 }

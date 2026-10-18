@@ -24,7 +24,7 @@ public record LoanData97
     [IsoXmlTag("UnqTradIdr")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public required IsoMax52Text UniqueTradeIdentifier { get; init; }
+    public required Max52Text UniqueTradeIdentifier { get; init; }
 
     /// <summary>
     /// Date on which the reportable event pertaining to the transaction and captured by the report took place.
@@ -33,7 +33,7 @@ public record LoanData97
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate EventDate { get; init; }
+    public required DateOnly EventDate { get; init; }
 
     /// <summary>
     /// Indicates the date and time when the contract was executed.
@@ -42,7 +42,7 @@ public record LoanData97
     [DisplayName("Execution Date Time")]
     [IsoXmlTag("ExctnDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime ExecutionDateTime { get; init; }
+    public required ISODateTime ExecutionDateTime { get; init; }
 
     /// <summary>
     /// Indicates whether clearing of contract has taken place.
@@ -59,7 +59,7 @@ public record LoanData97
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public IsoMICIdentifier? TradingVenue { get; init; }
+    public MICIdentifier? TradingVenue { get; init; }
 
     /// <summary>
     /// Reference to master agreement under which the counterparties concluded a documented transaction.
@@ -76,7 +76,7 @@ public record LoanData97
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ValueDate { get; init; }
+    public DateOnly? ValueDate { get; init; }
 
     /// <summary>
     /// Date on which the counterparties contractually agree the exchange of securities or commodities versus collateral for the closing leg (forward leg) of the transaction.
@@ -85,7 +85,7 @@ public record LoanData97
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? MaturityDate { get; init; }
+    public DateOnly? MaturityDate { get; init; }
 
     /// <summary>
     /// Indication whether the transaction is subject to a general collateral arrangement.
@@ -118,5 +118,5 @@ public record LoanData97
     [DisplayName("Termination Date")]
     [IsoXmlTag("TermntnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TerminationDate { get; init; }
+    public DateOnly? TerminationDate { get; init; }
 }

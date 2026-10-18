@@ -35,21 +35,21 @@ public record ServiceStartEnd3
     /// </summary>
     [DisplayName("Date And Time")]
     [IsoXmlTag("DtAndTm")]
-    public IsoISODateTime? DateAndTime { get; init; }
+    public ISODateTime? DateAndTime { get; init; }
 
     /// <summary>
     /// Journey Data.
     /// </summary>
     [DisplayName("Journey Data")]
     [IsoXmlTag("JrnyData")]
-    public IsoMax35Text? JourneyData { get; init; }
+    public Max35Text? JourneyData { get; init; }
 
     /// <summary>
     /// Journey Date And Time.
     /// </summary>
     [DisplayName("Journey Date And Time")]
     [IsoXmlTag("JrnyDtAndTm")]
-    public IsoISODateTime? JourneyDateAndTime { get; init; }
+    public ISODateTime? JourneyDateAndTime { get; init; }
 
     /// <summary>
     /// Journey Type.
@@ -63,14 +63,14 @@ public record ServiceStartEnd3
     /// </summary>
     [DisplayName("Location")]
     [IsoXmlTag("Lctn")]
-    public IsoMax35Text? Location { get; init; }
+    public Max35Text? Location { get; init; }
 
     /// <summary>
     /// Location Code.
     /// </summary>
     [DisplayName("Location Code")]
     [IsoXmlTag("LctnCd")]
-    public IsoMax35Text? LocationCode { get; init; }
+    public Max35Text? LocationCode { get; init; }
 
     /// <summary>
     /// Time Segment.

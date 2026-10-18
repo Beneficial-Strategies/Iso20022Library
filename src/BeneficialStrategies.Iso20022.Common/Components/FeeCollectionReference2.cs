@@ -35,5 +35,5 @@ public record FeeCollectionReference2
     /// </summary>
     [DisplayName("Other Assigner Entity")]
     [IsoXmlTag("OthrAssgnrNtty")]
-    public IsoMax35Text? OtherAssignerEntity { get; init; }
+    public Max35Text? OtherAssignerEntity { get; init; }
 }

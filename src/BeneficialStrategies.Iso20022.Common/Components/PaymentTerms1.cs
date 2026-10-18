@@ -24,7 +24,7 @@ public record PaymentTerms1
     [IsoXmlTag("OthrPmtTerms")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text OtherPaymentTerms { get; init; }
+    public required Max140Text OtherPaymentTerms { get; init; }
 
     /// <summary>
     /// Specifies the payment period in coded form and a number of days.
@@ -41,7 +41,7 @@ public record PaymentTerms1
     [DisplayName("Percentage")]
     [IsoXmlTag("Pctg")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate Percentage { get; init; }
+    public required PercentageRate Percentage { get; init; }
 
     /// <summary>
     /// Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.

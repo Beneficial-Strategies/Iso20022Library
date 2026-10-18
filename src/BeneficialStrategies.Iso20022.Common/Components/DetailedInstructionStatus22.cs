@@ -22,7 +22,7 @@ public record DetailedInstructionStatus22
     [IsoId("_K5kt9ajIEfCzuLlmLrhIvA")]
     [DisplayName("Single Instruction Identification")]
     [IsoXmlTag("SnglInstrId")]
-    public required IsoMax35Text SingleInstructionIdentification { get; init; }
+    public required Max35Text SingleInstructionIdentification { get; init; }
 
     /// <summary>
     /// Identification of the safekeeping account.
@@ -30,7 +30,7 @@ public record DetailedInstructionStatus22
     [IsoId("_K5kt96jIEfCzuLlmLrhIvA")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public IsoMax35Text? AccountIdentification { get; init; }
+    public Max35Text? AccountIdentification { get; init; }
 
     /// <summary>
     /// Party that legally owns the account.
@@ -46,7 +46,7 @@ public record DetailedInstructionStatus22
     [IsoId("_K5kt-6jIEfCzuLlmLrhIvA")]
     [DisplayName("Sub Account Identification")]
     [IsoXmlTag("SubAcctId")]
-    public IsoMax35Text? SubAccountIdentification { get; init; }
+    public Max35Text? SubAccountIdentification { get; init; }
 
     /// <summary>
     /// Owner of the voting rights.
@@ -70,7 +70,7 @@ public record DetailedInstructionStatus22
     [IsoId("_K5kuAajIEfCzuLlmLrhIvA")]
     [DisplayName("Standing Instruction")]
     [IsoXmlTag("StgInstr")]
-    public IsoYesNoIndicator? StandingInstruction { get; init; }
+    public YesNoIndicator? StandingInstruction { get; init; }
 
     /// <summary>
     /// Modality through which the votes that have been recorded and counted were received by the issuer, including whether this is ahead of the meeting or at the meeting.

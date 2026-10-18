@@ -23,7 +23,7 @@ public record DerivativeInstrument5
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ExpiryDate { get; init; }
+    public DateOnly? ExpiryDate { get; init; }
 
     /// <summary>
     /// Number of units of the underlying instrument represented by a single derivative contract. For a future or option on an index, the amount per index point.
@@ -32,7 +32,7 @@ public record DerivativeInstrument5
     [DisplayName("Price Multiplier")]
     [IsoXmlTag("PricMltplr")]
     [IsoSimpleType(IsoSimpleType.NonNegativeDecimalNumber)]
-    public IsoNonNegativeDecimalNumber? PriceMultiplier { get; init; }
+    public NonNegativeDecimalNumber? PriceMultiplier { get; init; }
 
     /// <summary>
     /// Choice to specify the type(s) of underlying instrument(s) that make up the financial instrument.

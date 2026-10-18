@@ -32,7 +32,7 @@ public record ATMTransaction27
     [IsoXmlTag("RcncltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReconciliationIdentification { get; init; }
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Exception occurring outside the service.
@@ -50,7 +50,7 @@ public record ATMTransaction27
     [IsoId("_57VncK5FEeWCgYcWSNgX5g")]
     [DisplayName("Exception Detail")]
     [IsoXmlTag("XcptnDtl")]
-    public SimpleValueList<IsoMax70Text> ExceptionDetail { get; init; } = [];
+    public SimpleValueList<Max70Text> ExceptionDetail { get; init; } = [];
 
     /// <summary>
     /// Balance of the captured card or epurse if available.

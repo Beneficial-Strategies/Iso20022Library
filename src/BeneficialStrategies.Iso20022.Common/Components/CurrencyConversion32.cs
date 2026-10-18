@@ -28,7 +28,7 @@ public record CurrencyConversion32
     /// </summary>
     [DisplayName("Currency Conversion Identification")]
     [IsoXmlTag("CcyConvsId")]
-    public IsoMax35Text? CurrencyConversionIdentification { get; init; }
+    public Max35Text? CurrencyConversionIdentification { get; init; }
 
     /// <summary>
     /// Declaration Details.
@@ -42,14 +42,14 @@ public record CurrencyConversion32
     /// </summary>
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
-    public required IsoPercentageRate ExchangeRate { get; init; }
+    public required PercentageRate ExchangeRate { get; init; }
 
     /// <summary>
     /// Inverted Exchange Rate.
     /// </summary>
     [DisplayName("Inverted Exchange Rate")]
     [IsoXmlTag("NvrtdXchgRate")]
-    public IsoPercentageRate? InvertedExchangeRate { get; init; }
+    public PercentageRate? InvertedExchangeRate { get; init; }
 
     /// <summary>
     /// Mark Up Details.
@@ -70,7 +70,7 @@ public record CurrencyConversion32
     /// </summary>
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
-    public IsoISODateTime? QuotationDate { get; init; }
+    public ISODateTime? QuotationDate { get; init; }
 
     /// <summary>
     /// Reference Rate.
@@ -105,5 +105,5 @@ public record CurrencyConversion32
     /// </summary>
     [DisplayName("Valid Until")]
     [IsoXmlTag("VldUntil")]
-    public IsoISODateTime? ValidUntil { get; init; }
+    public ISODateTime? ValidUntil { get; init; }
 }

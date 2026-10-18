@@ -21,7 +21,7 @@ public record FinancialInstrument105
     /// </summary>
     [DisplayName("Additional Asset")]
     [IsoXmlTag("AddtlAsst")]
-    public IsoYesNoIndicator? AdditionalAsset { get; init; }
+    public YesNoIndicator? AdditionalAsset { get; init; }
 
     /// <summary>
     /// Additional Information.
@@ -35,7 +35,7 @@ public record FinancialInstrument105
     /// </summary>
     [DisplayName("Assets Held In Own Name")]
     [IsoXmlTag("AsstsHeldInOwnNm")]
-    public IsoYesNoIndicator? AssetsHeldInOwnName { get; init; }
+    public YesNoIndicator? AssetsHeldInOwnName { get; init; }
 
     /// <summary>
     /// Average Acquisition Price.
@@ -119,14 +119,14 @@ public record FinancialInstrument105
     /// </summary>
     [DisplayName("Line Identification")]
     [IsoXmlTag("LineId")]
-    public IsoMax35Text? LineIdentification { get; init; }
+    public Max35Text? LineIdentification { get; init; }
 
     /// <summary>
     /// Not Available.
     /// </summary>
     [DisplayName("Not Available")]
     [IsoXmlTag("NotAvlbl")]
-    public IsoYesNoIndicator? NotAvailable { get; init; }
+    public YesNoIndicator? NotAvailable { get; init; }
 
     /// <summary>
     /// Original Cost.
@@ -140,14 +140,14 @@ public record FinancialInstrument105
     /// </summary>
     [DisplayName("Original Percentage Instructed")]
     [IsoXmlTag("OrgnlPctgInstd")]
-    public IsoPercentageRate? OriginalPercentageInstructed { get; init; }
+    public PercentageRate? OriginalPercentageInstructed { get; init; }
 
     /// <summary>
     /// Partial Instructed Quantity.
     /// </summary>
     [DisplayName("Partial Instructed Quantity")]
     [IsoXmlTag("PrtlInstdQty")]
-    public IsoYesNoIndicator? PartialInstructedQuantity { get; init; }
+    public YesNoIndicator? PartialInstructedQuantity { get; init; }
 
     /// <summary>
     /// Payment Details.
@@ -168,14 +168,14 @@ public record FinancialInstrument105
     /// </summary>
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
-    public IsoISODate? RequestedSettlementDate { get; init; }
+    public DateOnly? RequestedSettlementDate { get; init; }
 
     /// <summary>
     /// Requested Trade Date.
     /// </summary>
     [DisplayName("Requested Trade Date")]
     [IsoXmlTag("ReqdTradDt")]
-    public IsoISODate? RequestedTradeDate { get; init; }
+    public DateOnly? RequestedTradeDate { get; init; }
 
     /// <summary>
     /// Settlement Parties Details.
@@ -224,7 +224,7 @@ public record FinancialInstrument105
     /// </summary>
     [DisplayName("Transfer Results In Change Of Beneficial Owner")]
     [IsoXmlTag("TrfRsltsInChngOfBnfclOwnr")]
-    public IsoYesNoIndicator? TransferResultsInChangeOfBeneficialOwner { get; init; }
+    public YesNoIndicator? TransferResultsInChangeOfBeneficialOwner { get; init; }
 
     /// <summary>
     /// Transfer Type.

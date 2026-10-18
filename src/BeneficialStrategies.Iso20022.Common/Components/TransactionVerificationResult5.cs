@@ -48,7 +48,7 @@ public record TransactionVerificationResult5
     [IsoXmlTag("AddtlRslt")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public IsoMax500Text? AdditionalResult { get; init; }
+    public Max500Text? AdditionalResult { get; init; }
 
     /// <summary>
     /// Token provided to the ATM for further proof of authentication.
@@ -57,5 +57,5 @@ public record TransactionVerificationResult5
     [DisplayName("Authentication Token")]
     [IsoXmlTag("AuthntcnTkn")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public IsoMax140Binary? AuthenticationToken { get; init; }
+    public Max140Binary? AuthenticationToken { get; init; }
 }

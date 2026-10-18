@@ -42,14 +42,14 @@ public record FundSettlementParameters19
     /// </summary>
     [DisplayName("Securities Settlement System Identification")]
     [IsoXmlTag("SctiesSttlmSysId")]
-    public IsoMax35Text? SecuritiesSettlementSystemIdentification { get; init; }
+    public Max35Text? SecuritiesSettlementSystemIdentification { get; init; }
 
     /// <summary>
     /// Settlement Date.
     /// </summary>
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public IsoISODate? SettlementDate { get; init; }
+    public DateOnly? SettlementDate { get; init; }
 
     /// <summary>
     /// Settlement Place.

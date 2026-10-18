@@ -23,7 +23,7 @@ public record SystemReturnCriteria2
     [DisplayName("System Identification Indicator")]
     [IsoXmlTag("SysIdInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? SystemIdentificationIndicator { get; init; }
+    public RequestedIndicator? SystemIdentificationIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the member identification is requested.
@@ -32,7 +32,7 @@ public record SystemReturnCriteria2
     [DisplayName("Member Identification Indicator")]
     [IsoXmlTag("MmbIdInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? MemberIdentificationIndicator { get; init; }
+    public RequestedIndicator? MemberIdentificationIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the country identification is requested.
@@ -41,7 +41,7 @@ public record SystemReturnCriteria2
     [DisplayName("Country Identification Indicator")]
     [IsoXmlTag("CtryIdInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? CountryIdentificationIndicator { get; init; }
+    public RequestedIndicator? CountryIdentificationIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the account identification is requested.
@@ -50,5 +50,5 @@ public record SystemReturnCriteria2
     [DisplayName("Account Identification Indicator")]
     [IsoXmlTag("AcctIdInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? AccountIdentificationIndicator { get; init; }
+    public RequestedIndicator? AccountIdentificationIndicator { get; init; }
 }

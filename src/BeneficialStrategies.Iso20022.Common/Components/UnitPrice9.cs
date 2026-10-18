@@ -33,7 +33,7 @@ public record UnitPrice9
     [IsoXmlTag("OthrUnitOfMeasr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OtherUnitOfMeasure { get; init; }
+    public required Max35Text OtherUnitOfMeasure { get; init; }
 
     /// <summary>
     /// Price expressed as a currency and value.
@@ -50,5 +50,5 @@ public record UnitPrice9
     [DisplayName("Factor")]
     [IsoXmlTag("Fctr")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public IsoMax15NumericText? Factor { get; init; }
+    public Max15NumericText? Factor { get; init; }
 }

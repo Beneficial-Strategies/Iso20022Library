@@ -28,14 +28,14 @@ public record Terminal7
     /// </summary>
     [DisplayName("Approval Code Length")]
     [IsoXmlTag("ApprvlCdLngth")]
-    public IsoNumber? ApprovalCodeLength { get; init; }
+    public Number? ApprovalCodeLength { get; init; }
 
     /// <summary>
     /// Card Capture Capable.
     /// </summary>
     [DisplayName("Card Capture Capable")]
     [IsoXmlTag("CardCaptrCpbl")]
-    public IsoTrueFalseIndicator? CardCaptureCapable { get; init; }
+    public TrueFalseIndicator? CardCaptureCapable { get; init; }
 
     /// <summary>
     /// Cardholder Verification Capability.
@@ -50,21 +50,21 @@ public record Terminal7
     /// </summary>
     [DisplayName("Certification Identification")]
     [IsoXmlTag("CertfctnId")]
-    public IsoMax256Text? CertificationIdentification { get; init; }
+    public Max256Text? CertificationIdentification { get; init; }
 
     /// <summary>
     /// Geographic Location.
     /// </summary>
     [DisplayName("Geographic Location")]
     [IsoXmlTag("GeogcLctn")]
-    public IsoGeographicPointInDecimalDegrees? GeographicLocation { get; init; }
+    public GeographicPointInDecimalDegrees? GeographicLocation { get; init; }
 
     /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax16Text Identification { get; init; }
+    public required Max16Text Identification { get; init; }
 
     /// <summary>
     /// Integration Type.
@@ -78,7 +78,7 @@ public record Terminal7
     /// </summary>
     [DisplayName("Max Script Length")]
     [IsoXmlTag("MxScrptLngth")]
-    public IsoNumber? MaxScriptLength { get; init; }
+    public Number? MaxScriptLength { get; init; }
 
     /// <summary>
     /// Message Capability.
@@ -92,14 +92,14 @@ public record Terminal7
     /// </summary>
     [DisplayName("Off Premises")]
     [IsoXmlTag("OffPrmiss")]
-    public IsoTrueFalseIndicator? OffPremises { get; init; }
+    public TrueFalseIndicator? OffPremises { get; init; }
 
     /// <summary>
     /// On Board.
     /// </summary>
     [DisplayName("On Board")]
     [IsoXmlTag("OnBrd")]
-    public IsoTrueFalseIndicator? OnBoard { get; init; }
+    public TrueFalseIndicator? OnBoard { get; init; }
 
     /// <summary>
     /// On Line Capability.
@@ -113,21 +113,21 @@ public record Terminal7
     /// </summary>
     [DisplayName("Other PIN Entry Security Characteristic")]
     [IsoXmlTag("OthrPINNtrySctyChrtc")]
-    public IsoMax35Text? OtherPINEntrySecurityCharacteristic { get; init; }
+    public Max35Text? OtherPINEntrySecurityCharacteristic { get; init; }
 
     /// <summary>
     /// Other Type.
     /// </summary>
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Outdoor.
     /// </summary>
     [DisplayName("Outdoor")]
     [IsoXmlTag("Outdr")]
-    public IsoTrueFalseIndicator? Outdoor { get; init; }
+    public TrueFalseIndicator? Outdoor { get; init; }
 
     /// <summary>
     /// PIN Entry Security Characteristic.
@@ -141,7 +141,7 @@ public record Terminal7
     /// </summary>
     [DisplayName("PIN Length Capability")]
     [IsoXmlTag("PINLngthCpblty")]
-    public IsoNumber? PINLengthCapability { get; init; }
+    public Number? PINLengthCapability { get; init; }
 
     /// <summary>
     /// Reading Capability.
@@ -155,7 +155,7 @@ public record Terminal7
     /// </summary>
     [DisplayName("Serial Number")]
     [IsoXmlTag("SrlNb")]
-    public IsoMax35Text? SerialNumber { get; init; }
+    public Max35Text? SerialNumber { get; init; }
 
     /// <summary>
     /// Software.
@@ -169,7 +169,7 @@ public record Terminal7
     /// </summary>
     [DisplayName("Temporary Secure Storage")]
     [IsoXmlTag("TempScrStorg")]
-    public IsoTrueFalseIndicator? TemporarySecureStorage { get; init; }
+    public TrueFalseIndicator? TemporarySecureStorage { get; init; }
 
     /// <summary>
     /// Type.

@@ -31,5 +31,5 @@ public record CardSecurityInformation1
     [DisplayName("CSC Value")]
     [IsoXmlTag("CSCVal")]
     [IsoSimpleType(IsoSimpleType.Min3Max4NumericText)]
-    public IsoMin3Max4NumericText? CSCValue { get; init; }
+    public Min3Max4NumericText? CSCValue { get; init; }
 }

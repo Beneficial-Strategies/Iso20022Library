@@ -32,7 +32,7 @@ public record PointOfInteractionComponent9
     [IsoXmlTag("SubTpInf")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? SubTypeInformation { get; init; }
+    public Max70Text? SubTypeInformation { get; init; }
 
     /// <summary>
     /// Identification of the POI (Point Of Interaction) component.

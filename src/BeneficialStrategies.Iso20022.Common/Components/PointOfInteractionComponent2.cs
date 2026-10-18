@@ -32,7 +32,7 @@ public record PointOfInteractionComponent2
     [IsoXmlTag("ManfctrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ManufacturerIdentification { get; init; }
+    public Max35Text? ManufacturerIdentification { get; init; }
 
     /// <summary>
     /// Identification of a model of POI component for a given manufacturer.
@@ -42,7 +42,7 @@ public record PointOfInteractionComponent2
     [IsoXmlTag("Mdl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Model { get; init; }
+    public Max35Text? Model { get; init; }
 
     /// <summary>
     /// Version of component belonging to a given model.
@@ -52,7 +52,7 @@ public record PointOfInteractionComponent2
     [IsoXmlTag("VrsnNb")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoMax16Text? VersionNumber { get; init; }
+    public Max16Text? VersionNumber { get; init; }
 
     /// <summary>
     /// Serial number of a component.
@@ -62,7 +62,7 @@ public record PointOfInteractionComponent2
     [IsoXmlTag("SrlNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SerialNumber { get; init; }
+    public Max35Text? SerialNumber { get; init; }
 
     /// <summary>
     /// Unique approval number for a component, delivered by a certification body.
@@ -71,5 +71,5 @@ public record PointOfInteractionComponent2
     [IsoId("_LYUz5H1DEeCF8NjrBemJWQ_1109717148")]
     [DisplayName("Approval Number")]
     [IsoXmlTag("ApprvlNb")]
-    public SimpleValueList<IsoMax70Text> ApprovalNumber { get; init; } = [];
+    public SimpleValueList<Max70Text> ApprovalNumber { get; init; } = [];
 }

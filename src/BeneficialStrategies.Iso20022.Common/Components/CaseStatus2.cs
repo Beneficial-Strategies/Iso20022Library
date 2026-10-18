@@ -23,7 +23,7 @@ public record CaseStatus2
     [DisplayName("Date Time")]
     [IsoXmlTag("DtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime DateTime { get; init; }
+    public required ISODateTime DateTime { get; init; }
 
     /// <summary>
     /// Status of the case.
@@ -41,5 +41,5 @@ public record CaseStatus2
     [IsoXmlTag("Rsn")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Reason { get; init; }
+    public Max140Text? Reason { get; init; }
 }

@@ -32,5 +32,5 @@ public record ReferredDocumentInformation1
     [IsoXmlTag("RfrdDocNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReferredDocumentNumber { get; init; }
+    public Max35Text? ReferredDocumentNumber { get; init; }
 }

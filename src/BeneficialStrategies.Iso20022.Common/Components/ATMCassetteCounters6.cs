@@ -35,7 +35,7 @@ public record ATMCassetteCounters6
     /// </summary>
     [DisplayName("Current Number")]
     [IsoXmlTag("CurNb")]
-    public required IsoNumber CurrentNumber { get; init; }
+    public required Number CurrentNumber { get; init; }
 
     /// <summary>
     /// Flow Totals.
@@ -49,7 +49,7 @@ public record ATMCassetteCounters6
     /// </summary>
     [DisplayName("Initial Count")]
     [IsoXmlTag("InitlCnt")]
-    public IsoNumber? InitialCount { get; init; }
+    public Number? InitialCount { get; init; }
 
     /// <summary>
     /// Media Category.

@@ -28,7 +28,7 @@ public record Clearing7
     /// </summary>
     [DisplayName("Guaranteed Trade")]
     [IsoXmlTag("GrntedTrad")]
-    public IsoYesNoIndicator? GuaranteedTrade { get; init; }
+    public YesNoIndicator? GuaranteedTrade { get; init; }
 
     /// <summary>
     /// Non Guaranteed Trade.

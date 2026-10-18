@@ -22,7 +22,7 @@ public record InvestmentAccount81
     [IsoId("9a98d03f-96b7-46c8-88c9-7ab7e6df012c")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public required IsoMax35Text AccountIdentification { get; init; }
+    public required Max35Text AccountIdentification { get; init; }
 
     /// <summary>
     /// Name of the account.
@@ -30,7 +30,7 @@ public record InvestmentAccount81
     [IsoId("977f2f5b-5d03-429d-9b77-1eeaabb0ea89")]
     [DisplayName("Account Name")]
     [IsoXmlTag("AcctNm")]
-    public IsoMax35Text? AccountName { get; init; }
+    public Max35Text? AccountName { get; init; }
 
     /// <summary>
     /// Supplementary registration information applying to a specific block of units for dealing and reporting purposes.
@@ -38,7 +38,7 @@ public record InvestmentAccount81
     [IsoId("7c58bb59-d90a-4935-8f61-cc3dc5fd6601")]
     [DisplayName("Account Designation")]
     [IsoXmlTag("AcctDsgnt")]
-    public IsoMax35Text? AccountDesignation { get; init; }
+    public Max35Text? AccountDesignation { get; init; }
 
     /// <summary>
     /// Party that legally owns the account.

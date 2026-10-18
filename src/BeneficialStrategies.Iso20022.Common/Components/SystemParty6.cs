@@ -28,7 +28,7 @@ public record SystemParty6
     /// </summary>
     [DisplayName("Closing Date")]
     [IsoXmlTag("ClsgDt")]
-    public IsoISODate? ClosingDate { get; init; }
+    public DateOnly? ClosingDate { get; init; }
 
     /// <summary>
     /// Contact Details.
@@ -63,7 +63,7 @@ public record SystemParty6
     /// </summary>
     [DisplayName("Opening Date")]
     [IsoXmlTag("OpngDt")]
-    public IsoISODate? OpeningDate { get; init; }
+    public DateOnly? OpeningDate { get; init; }
 
     /// <summary>
     /// Party Identification.

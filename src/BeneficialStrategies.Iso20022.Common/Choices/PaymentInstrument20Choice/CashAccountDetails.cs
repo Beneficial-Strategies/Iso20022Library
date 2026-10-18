@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument20Choice
         [IsoXmlTag("AcctId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? AccountIdentification { get; init; }
+        public Max35Text? AccountIdentification { get; init; }
 
         /// <summary>
         /// Account type.

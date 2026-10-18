@@ -63,7 +63,7 @@ public record DebtorActivation5
     /// </summary>
     [DisplayName("Debtor Activation Identification")]
     [IsoXmlTag("DbtrActvtnId")]
-    public IsoMax35Text? DebtorActivationIdentification { get; init; }
+    public Max35Text? DebtorActivationIdentification { get; init; }
 
     /// <summary>
     /// Debtor Solution Provider.
@@ -77,14 +77,14 @@ public record DebtorActivation5
     /// </summary>
     [DisplayName("Dedicated Activation Code")]
     [IsoXmlTag("DdctdActvtnCd")]
-    public IsoMax35Text? DedicatedActivationCode { get; init; }
+    public Max35Text? DedicatedActivationCode { get; init; }
 
     /// <summary>
     /// Display Name.
     /// </summary>
     [DisplayName("Display Name")]
     [IsoXmlTag("DispNm")]
-    public IsoMax140Text? DisplayName { get; init; }
+    public Max140Text? DisplayName { get; init; }
 
     /// <summary>
     /// End Date.

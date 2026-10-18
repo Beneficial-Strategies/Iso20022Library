@@ -38,7 +38,7 @@ public record TravelDocument3
     [IsoId("_Cmg2VVN7EfC0lMwgjvMClw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax70Text Identification { get; init; }
+    public required Max70Text Identification { get; init; }
 
     /// <summary>
     /// Party assigning the travel document.
@@ -46,7 +46,7 @@ public record TravelDocument3
     [IsoId("_Cmg2V1N7EfC0lMwgjvMClw")]
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
-    public IsoMax70Text? Assigner { get; init; }
+    public Max70Text? Assigner { get; init; }
 
     /// <summary>
     /// Issuance date of travel document.
@@ -54,7 +54,7 @@ public record TravelDocument3
     [IsoId("_Cmg2WVN7EfC0lMwgjvMClw")]
     [DisplayName("Issuance Date")]
     [IsoXmlTag("IssncDt")]
-    public IsoISODate? IssuanceDate { get; init; }
+    public DateOnly? IssuanceDate { get; init; }
 
     /// <summary>
     /// Expiration date of travel document (if and when relevant).
@@ -62,7 +62,7 @@ public record TravelDocument3
     [IsoId("_Cmg2W1N7EfC0lMwgjvMClw")]
     [DisplayName("Expiration Date")]
     [IsoXmlTag("XprtnDt")]
-    public IsoISODate? ExpirationDate { get; init; }
+    public DateOnly? ExpirationDate { get; init; }
 
     /// <summary>
     /// Country issuing the travel document.

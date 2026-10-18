@@ -32,6 +32,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductIdentifier2Choice
         [IsoXmlTag("Idr")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text Identifier { get; init; }
+        public required Max35Text Identifier { get; init; }
     }
 }

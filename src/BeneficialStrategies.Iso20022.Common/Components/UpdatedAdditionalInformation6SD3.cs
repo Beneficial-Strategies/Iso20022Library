@@ -25,7 +25,7 @@ public record UpdatedAdditionalInformation6SD3
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Specifies the securities account to be credited.
@@ -36,7 +36,7 @@ public record UpdatedAdditionalInformation6SD3
     [IsoXmlTag("SctiesCdtAcctId")]
     [IsoSimpleType(IsoSimpleType.Max50Text)]
     [StringLength(maximumLength: 50, MinimumLength = 1)]
-    public IsoMax50Text? SecuritiesCreditAccountIdentification { get; init; }
+    public Max50Text? SecuritiesCreditAccountIdentification { get; init; }
 
     /// <summary>
     /// ISIN of Offeror&apos;s share when the corporate action event type code is TEND.
@@ -45,7 +45,7 @@ public record UpdatedAdditionalInformation6SD3
     [DisplayName("Offeror Share")]
     [IsoXmlTag("OfferrShr")]
     [IsoSimpleType(IsoSimpleType.ISINIdentifier)]
-    public IsoISINIdentifier? OfferorShare { get; init; }
+    public ISINIdentifier? OfferorShare { get; init; }
 
     /// <summary>
     /// Local code of Offeror&apos;s share when the corporate action event type code is TEND.
@@ -56,7 +56,7 @@ public record UpdatedAdditionalInformation6SD3
     [IsoXmlTag("OfferrShrLclCd")]
     [IsoSimpleType(IsoSimpleType.Max5AlphaNumericText)]
     [StringLength(maximumLength: 5, MinimumLength = 1)]
-    public IsoMax5AlphaNumericText? OfferorShareLocalCode { get; init; }
+    public Max5AlphaNumericText? OfferorShareLocalCode { get; init; }
 
     /// <summary>
     /// Name in the local language by which a party is known and which is usually used to identify that party.
@@ -66,5 +66,5 @@ public record UpdatedAdditionalInformation6SD3
     [IsoXmlTag("LclLangNm")]
     [IsoSimpleType(IsoSimpleType.Max240Text)]
     [StringLength(maximumLength: 240, MinimumLength = 1)]
-    public IsoMax240Text? LocalLanguageName { get; init; }
+    public Max240Text? LocalLanguageName { get; init; }
 }

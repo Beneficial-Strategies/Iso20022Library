@@ -23,7 +23,7 @@ public record SecuritiesInstrumentClassification2
     [DisplayName("Identifier")]
     [IsoXmlTag("Idr")]
     [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
-    public required IsoCFIOct2015Identifier Identifier { get; init; }
+    public required CFIOct2015Identifier Identifier { get; init; }
 
     /// <summary>
     /// Modification status for the record compared to the previous report.
@@ -50,5 +50,5 @@ public record SecuritiesInstrumentClassification2
     [DisplayName("Last Updated")]
     [IsoXmlTag("LastUpdtd")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? LastUpdated { get; init; }
+    public DateOnly? LastUpdated { get; init; }
 }

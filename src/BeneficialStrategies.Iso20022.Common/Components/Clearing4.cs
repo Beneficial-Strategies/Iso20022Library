@@ -40,7 +40,7 @@ public record Clearing4
     [DisplayName("Guaranteed Trade")]
     [IsoXmlTag("GrntedTrad")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? GuaranteedTrade { get; init; }
+    public YesNoIndicator? GuaranteedTrade { get; init; }
 
     /// <summary>
     /// In case of trades that are not guaranteed by the central counterparty (this is when the central counterparty has not done the novation), provides details such as the trade counterparty member identification or the trade counterparty clearing member identification.

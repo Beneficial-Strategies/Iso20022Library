@@ -21,14 +21,14 @@ public record OrganisationIdentification39
     /// </summary>
     [DisplayName("Any BIC")]
     [IsoXmlTag("AnyBIC")]
-    public IsoAnyBICDec2014Identifier? AnyBIC { get; init; }
+    public AnyBICDec2014Identifier? AnyBIC { get; init; }
 
     /// <summary>
     /// LEI.
     /// </summary>
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
-    public IsoLEIIdentifier? LEI { get; init; }
+    public LEIIdentifier? LEI { get; init; }
 
     /// <summary>
     /// Other.

@@ -22,7 +22,7 @@ public record AcquirerHostConfiguration11
     [IsoId("_tx4_RbZ_EfCUZfsQO4rYeA")]
     [DisplayName("Host Identification")]
     [IsoXmlTag("HstId")]
-    public required IsoMax35Text HostIdentification { get; init; }
+    public required Max35Text HostIdentification { get; init; }
 
     /// <summary>
     /// Types of message to sent to this host.
@@ -38,7 +38,7 @@ public record AcquirerHostConfiguration11
     [IsoId("_tx4_UbZ_EfCUZfsQO4rYeA")]
     [DisplayName("Protocol Version")]
     [IsoXmlTag("PrtcolVrsn")]
-    public IsoMax8Text? ProtocolVersion { get; init; }
+    public Max8Text? ProtocolVersion { get; init; }
 
     /// <summary>
     /// List of types that the receiver supports and that the sender could use as type of an ExternallyDefinedData message component.
@@ -46,5 +46,5 @@ public record AcquirerHostConfiguration11
     [IsoId("_tx4_V7Z_EfCUZfsQO4rYeA")]
     [DisplayName("Externally Type Supported")]
     [IsoXmlTag("XtrnlyTpSpprtd")]
-    public SimpleValueList<IsoMax1025Text> ExternallyTypeSupported { get; init; } = [];
+    public SimpleValueList<Max1025Text> ExternallyTypeSupported { get; init; } = [];
 }

@@ -24,7 +24,7 @@ public record DocumentIdentification12
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Date and time at which the document (message) was created by the sender.
@@ -49,5 +49,5 @@ public record DocumentIdentification12
     [DisplayName("Change Instruction Indicator")]
     [IsoXmlTag("ChngInstrInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ChangeInstructionIndicator { get; init; }
+    public YesNoIndicator? ChangeInstructionIndicator { get; init; }
 }

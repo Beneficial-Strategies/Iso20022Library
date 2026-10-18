@@ -42,7 +42,7 @@ public record ClearingBatchData3
     /// </summary>
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Interchange Fee Amount.
@@ -77,14 +77,14 @@ public record ClearingBatchData3
     /// </summary>
     [DisplayName("Other Method")]
     [IsoXmlTag("OthrMtd")]
-    public IsoMax35Text? OtherMethod { get; init; }
+    public Max35Text? OtherMethod { get; init; }
 
     /// <summary>
     /// Priority.
     /// </summary>
     [DisplayName("Priority")]
     [IsoXmlTag("Prty")]
-    public IsoMax35Text? Priority { get; init; }
+    public Max35Text? Priority { get; init; }
 
     /// <summary>
     /// Totals Amount.
@@ -98,7 +98,7 @@ public record ClearingBatchData3
     /// </summary>
     [DisplayName("Totals Count")]
     [IsoXmlTag("TtlsCnt")]
-    public IsoNumber? TotalsCount { get; init; }
+    public Number? TotalsCount { get; init; }
 
     /// <summary>
     /// Totals Credit Debit.

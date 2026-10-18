@@ -24,7 +24,7 @@ public record GeneralInformation3
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Indicates whether the message is sent as a request or as a response.
@@ -42,5 +42,5 @@ public record GeneralInformation3
     [IsoXmlTag("ReqRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RequestReference { get; init; }
+    public Max35Text? RequestReference { get; init; }
 }

@@ -23,7 +23,7 @@ public record RedemptionOrderConfirmation1
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator AmendmentIndicator { get; init; }
+    public required YesNoIndicator AmendmentIndicator { get; init; }
 
     /// <summary>
     /// General information related to the execution of investment fund orders.

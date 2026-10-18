@@ -23,7 +23,7 @@ public record StatusTrail6
     [DisplayName("Status Date")]
     [IsoXmlTag("StsDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime StatusDate { get; init; }
+    public required ISODateTime StatusDate { get; init; }
 
     /// <summary>
     /// Unique and unambiguous way to identify the organisation that sent the message instance.
@@ -41,7 +41,7 @@ public record StatusTrail6
     [IsoXmlTag("UsrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? UserIdentification { get; init; }
+    public Max35Text? UserIdentification { get; init; }
 
     /// <summary>
     /// Provides details on the processing status of the transaction.

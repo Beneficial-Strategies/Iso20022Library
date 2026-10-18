@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification54Choice
         [IsoXmlTag("MSISDN")]
         [IsoSimpleType(IsoSimpleType.Max16Text)]
         [StringLength(maximumLength: 16, MinimumLength = 1)]
-        public required IsoMax16Text Value { get; init; }
+        public required Max16Text Value { get; init; }
     }
 }

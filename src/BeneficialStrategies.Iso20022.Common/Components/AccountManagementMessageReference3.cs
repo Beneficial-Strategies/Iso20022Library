@@ -40,7 +40,7 @@ public record AccountManagementMessageReference3
     [IsoXmlTag("AcctApplId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountApplicationIdentification { get; init; }
+    public Max35Text? AccountApplicationIdentification { get; init; }
 
     /// <summary>
     /// Account to which the account opening is related.
@@ -50,7 +50,7 @@ public record AccountManagementMessageReference3
     [IsoXmlTag("ExstgAcctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ExistingAccountIdentification { get; init; }
+    public Max35Text? ExistingAccountIdentification { get; init; }
 
     /// <summary>
     /// Account information for which the status of an account management instruction is requested.

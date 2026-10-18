@@ -22,7 +22,7 @@ public record FinancialInstrument53
     [IsoId("_a46r4fBqEeWTAY6i--T_aA")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
-    public SimpleValueList<IsoISINOct2015Identifier> ISIN { get; init; } = [];
+    public SimpleValueList<ISINOct2015Identifier> ISIN { get; init; } = [];
 
     /// <summary>
     /// The LEI code of the issuer where the instrument is referring to an issuer rather than one single instrument.
@@ -30,5 +30,5 @@ public record FinancialInstrument53
     [IsoId("_a46r4vBqEeWTAY6i--T_aA")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
-    public SimpleValueList<IsoLEIIdentifier> LEI { get; init; } = [];
+    public SimpleValueList<LEIIdentifier> LEI { get; init; } = [];
 }

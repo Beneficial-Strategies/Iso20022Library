@@ -31,7 +31,7 @@ public record MarketMakerProfile1
     [DisplayName("Compliance")]
     [IsoXmlTag("Cmplc")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? Compliance { get; init; }
+    public YesNoIndicator? Compliance { get; init; }
 
     /// <summary>
     /// Percentage of the variation between the maximum accepted minimum and maximum value of an action.
@@ -40,7 +40,7 @@ public record MarketMakerProfile1
     [DisplayName("Maximum Spread")]
     [IsoXmlTag("MaxSprd")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? MaximumSpread { get; init; }
+    public PercentageRate? MaximumSpread { get; init; }
 
     /// <summary>
     /// Rate of discount.
@@ -49,5 +49,5 @@ public record MarketMakerProfile1
     [DisplayName("Discount")]
     [IsoXmlTag("Dscnt")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Discount { get; init; }
+    public PercentageRate? Discount { get; init; }
 }

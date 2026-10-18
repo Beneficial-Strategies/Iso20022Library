@@ -46,7 +46,7 @@ public record Fee9
     [IsoId("e26b0272-f9aa-4d43-a567-efa4171d8d74")]
     [DisplayName("Standard Rate")]
     [IsoXmlTag("StdRate")]
-    public IsoPercentageRate? StandardRate { get; init; }
+    public PercentageRate? StandardRate { get; init; }
 
     /// <summary>
     /// Discount or waiver applied to the fee (charge/commission).
@@ -70,7 +70,7 @@ public record Fee9
     [IsoId("42fb98ff-b5ba-4247-a365-3bcf2283d15d")]
     [DisplayName("Requested Rate")]
     [IsoXmlTag("ReqdRate")]
-    public IsoPercentageRate? RequestedRate { get; init; }
+    public PercentageRate? RequestedRate { get; init; }
 
     /// <summary>
     /// Reference to a sales agreement that overrides normal processing or the Service Level Agreement (SLA).
@@ -78,7 +78,7 @@ public record Fee9
     [IsoId("e779ed48-5041-4b87-9009-54680a66a524")]
     [DisplayName("Non Standard SLA Reference")]
     [IsoXmlTag("NonStdSLARef")]
-    public IsoMax35Text? NonStandardSLAReference { get; init; }
+    public Max35Text? NonStandardSLAReference { get; init; }
 
     /// <summary>
     /// Party entitled to the amount of money resulting from a fee (charge/commission).

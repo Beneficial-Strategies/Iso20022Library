@@ -39,7 +39,7 @@ public record CounterpartyData86
     [DisplayName("Triparty Agent")]
     [IsoXmlTag("TrptyAgt")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? TripartyAgent { get; init; }
+    public TrueFalseIndicator? TripartyAgent { get; init; }
 
     /// <summary>
     /// Specifies if the agent lender is involved in the securities lending transaction.
@@ -48,5 +48,5 @@ public record CounterpartyData86
     [DisplayName("Agent Lender")]
     [IsoXmlTag("AgtLndr")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? AgentLender { get; init; }
+    public TrueFalseIndicator? AgentLender { get; init; }
 }

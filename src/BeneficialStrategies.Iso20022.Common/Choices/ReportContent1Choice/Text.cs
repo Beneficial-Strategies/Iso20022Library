@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportContent1Choice
         [IsoXmlTag("Txt")]
         [IsoSimpleType(IsoSimpleType.Max10MbText)]
         [StringLength(maximumLength: 10000000, MinimumLength = 1)]
-        public required IsoMax10MbText Value { get; init; }
+        public required Max10MbText Value { get; init; }
     }
 }

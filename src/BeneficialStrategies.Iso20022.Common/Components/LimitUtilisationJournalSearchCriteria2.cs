@@ -42,7 +42,7 @@ public record LimitUtilisationJournalSearchCriteria2
     /// </summary>
     [DisplayName("Journal Activity Date")]
     [IsoXmlTag("JrnlActvtyDt")]
-    public required IsoISODate JournalActivityDate { get; init; }
+    public required DateOnly JournalActivityDate { get; init; }
 
     /// <summary>
     /// Limit Currency.

@@ -23,7 +23,7 @@ public record CustomerTypeRequest2
     [DisplayName("Requested")]
     [IsoXmlTag("Reqd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator Requested { get; init; }
+    public required RequestedIndicator Requested { get; init; }
 
     /// <summary>
     /// Specifies which type of customer identification is requested for an organisation.

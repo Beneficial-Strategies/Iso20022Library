@@ -35,7 +35,7 @@ public record CurrencyConversion29
     /// </summary>
     [DisplayName("Currency Conversion Identification")]
     [IsoXmlTag("CcyConvsId")]
-    public IsoMax35Text? CurrencyConversionIdentification { get; init; }
+    public Max35Text? CurrencyConversionIdentification { get; init; }
 
     /// <summary>
     /// Declaration Details.
@@ -49,14 +49,14 @@ public record CurrencyConversion29
     /// </summary>
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
-    public required IsoPercentageRate ExchangeRate { get; init; }
+    public required PercentageRate ExchangeRate { get; init; }
 
     /// <summary>
     /// Inverted Exchange Rate.
     /// </summary>
     [DisplayName("Inverted Exchange Rate")]
     [IsoXmlTag("NvrtdXchgRate")]
-    public IsoPercentageRate? InvertedExchangeRate { get; init; }
+    public PercentageRate? InvertedExchangeRate { get; init; }
 
     /// <summary>
     /// Mark Up Details.
@@ -77,7 +77,7 @@ public record CurrencyConversion29
     /// </summary>
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
-    public IsoISODateTime? QuotationDate { get; init; }
+    public ISODateTime? QuotationDate { get; init; }
 
     /// <summary>
     /// Resulting Amount.
@@ -105,12 +105,12 @@ public record CurrencyConversion29
     /// </summary>
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
-    public IsoISODateTime? ValidFrom { get; init; }
+    public ISODateTime? ValidFrom { get; init; }
 
     /// <summary>
     /// Valid Until.
     /// </summary>
     [DisplayName("Valid Until")]
     [IsoXmlTag("VldUntil")]
-    public IsoISODateTime? ValidUntil { get; init; }
+    public ISODateTime? ValidUntil { get; init; }
 }

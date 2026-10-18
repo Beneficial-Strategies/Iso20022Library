@@ -24,7 +24,7 @@ public record Transaction105
     [DisplayName("Transaction Type")]
     [IsoXmlTag("TxTp")]
     [IsoSimpleType(IsoSimpleType.Exact2AlphaNumericText)]
-    public required IsoExact2AlphaNumericText TransactionType { get; init; }
+    public required Exact2AlphaNumericText TransactionType { get; init; }
 
     /// <summary>
     /// Provides further granularity of purpose of TransactionType
@@ -34,7 +34,7 @@ public record Transaction105
     [IsoXmlTag("TxSubTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TransactionSubType { get; init; }
+    public Max35Text? TransactionSubType { get; init; }
 
     /// <summary>
     /// Additional functions or services to be performed in conjunction with the transaction.
@@ -52,7 +52,7 @@ public record Transaction105
     [IsoId("_EQjcst-pEeelLeeCyrjnCQ")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
-    public SimpleValueList<IsoExact4NumericText> MessageReason { get; init; } = [];
+    public SimpleValueList<Exact4NumericText> MessageReason { get; init; } = [];
 
     /// <summary>
     /// Supports message reason codes that are not defined  in external code list.
@@ -62,7 +62,7 @@ public record Transaction105
     [IsoXmlTag("AltrnMsgRsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AlternateMessageReason { get; init; }
+    public Max35Text? AlternateMessageReason { get; init; }
 
     /// <summary>
     /// Data to qualify for incentive or other related programmes.
@@ -141,7 +141,7 @@ public record Transaction105
     [IsoXmlTag("TxDesc")]
     [IsoSimpleType(IsoSimpleType.Max1000Text)]
     [StringLength(maximumLength: 1000, MinimumLength = 1)]
-    public IsoMax1000Text? TransactionDescription { get; init; }
+    public Max1000Text? TransactionDescription { get; init; }
 
     /// <summary>
     /// Contains additional data.

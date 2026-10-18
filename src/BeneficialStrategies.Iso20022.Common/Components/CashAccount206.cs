@@ -31,7 +31,7 @@ public record CashAccount206
     [DisplayName("Servicer")]
     [IsoXmlTag("Svcr")]
     [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
-    public IsoAnyBICDec2014Identifier? Servicer { get; init; }
+    public AnyBICDec2014Identifier? Servicer { get; init; }
 
     /// <summary>
     /// Additional means of identification of the account, as designated by the account servicer in agreement with the account owner.
@@ -41,5 +41,5 @@ public record CashAccount206
     [IsoXmlTag("AcctTpDesc")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountTypeDescription { get; init; }
+    public Max35Text? AccountTypeDescription { get; init; }
 }

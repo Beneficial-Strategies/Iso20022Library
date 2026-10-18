@@ -21,7 +21,7 @@ public record ScenarioDefinition2
     /// </summary>
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax2000Text? Description { get; init; }
+    public Max2000Text? Description { get; init; }
 
     /// <summary>
     /// Identification.

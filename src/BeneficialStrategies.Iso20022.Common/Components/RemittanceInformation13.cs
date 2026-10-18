@@ -24,7 +24,7 @@ public record RemittanceInformation13
     [IsoXmlTag("RmtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RemittanceIdentification { get; init; }
+    public Max35Text? RemittanceIdentification { get; init; }
 
     /// <summary>
     /// Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts&apos; receivable system, in an unstructured form.
@@ -32,7 +32,7 @@ public record RemittanceInformation13
     [IsoId("_Ka3F85RpEeazAtAtDSg0Nw")]
     [DisplayName("Unstructured")]
     [IsoXmlTag("Ustrd")]
-    public SimpleValueList<IsoMax140Text> Unstructured { get; init; } = [];
+    public SimpleValueList<Max140Text> Unstructured { get; init; } = [];
 
     /// <summary>
     /// Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts&apos; receivable system, in a structured form.

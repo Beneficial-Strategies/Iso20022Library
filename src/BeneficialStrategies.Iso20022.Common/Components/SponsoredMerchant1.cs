@@ -32,7 +32,7 @@ public record SponsoredMerchant1
     [IsoXmlTag("AddtlId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AdditionalIdentification { get; init; }
+    public Max35Text? AdditionalIdentification { get; init; }
 
     /// <summary>
     /// Contains the full name of the sponsored merchant.
@@ -42,7 +42,7 @@ public record SponsoredMerchant1
     [IsoXmlTag("CmonNm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? CommonName { get; init; }
+    public Max140Text? CommonName { get; init; }
 
     /// <summary>
     /// Address of the sponsored merchant.

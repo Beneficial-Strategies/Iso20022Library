@@ -24,7 +24,7 @@ public record OriginalPaymentInstruction11
     [IsoXmlTag("RvslPmtInfId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReversalPaymentInformationIdentification { get; init; }
+    public Max35Text? ReversalPaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original sending party, to unambiguously identify the original payment information group.
@@ -34,7 +34,7 @@ public record OriginalPaymentInstruction11
     [IsoXmlTag("OrgnlPmtInfId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OriginalPaymentInformationIdentification { get; init; }
+    public required Max35Text OriginalPaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Number of individual transactions contained in the original payment information group.
@@ -43,7 +43,7 @@ public record OriginalPaymentInstruction11
     [DisplayName("Original Number Of Transactions")]
     [IsoXmlTag("OrgnlNbOfTxs")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public IsoMax15NumericText? OriginalNumberOfTransactions { get; init; }
+    public Max15NumericText? OriginalNumberOfTransactions { get; init; }
 
     /// <summary>
     /// Total of all individual amounts included in the original payment information group, irrespective of currencies.
@@ -52,7 +52,7 @@ public record OriginalPaymentInstruction11
     [DisplayName("Original Control Sum")]
     [IsoXmlTag("OrgnlCtrlSum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? OriginalControlSum { get; init; }
+    public DecimalNumber? OriginalControlSum { get; init; }
 
     /// <summary>
     /// Identifies whether a single entry per individual transaction or a batch entry for the sum of the amounts of all transactions within the group of a message is requested.|Usage: Batch booking is used to request and not order a possible batch booking.
@@ -61,7 +61,7 @@ public record OriginalPaymentInstruction11
     [DisplayName("Batch Booking")]
     [IsoXmlTag("BtchBookg")]
     [IsoSimpleType(IsoSimpleType.BatchBookingIndicator)]
-    public IsoBatchBookingIndicator? BatchBooking { get; init; }
+    public BatchBookingIndicator? BatchBooking { get; init; }
 
     /// <summary>
     /// Indicates whether or not the reversal applies to the complete original payment information group or to individual transactions within that group.
@@ -70,7 +70,7 @@ public record OriginalPaymentInstruction11
     [DisplayName("Payment Information Reversal")]
     [IsoXmlTag("PmtInfRvsl")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? PaymentInformationReversal { get; init; }
+    public TrueFalseIndicator? PaymentInformationReversal { get; init; }
 
     /// <summary>
     /// Provides detailed information on the reversal reason.

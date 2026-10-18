@@ -22,7 +22,7 @@ public record RiskAssessment4
     [IsoId("_rcwBgRNoEfC1ZfCQz0xB3g")]
     [DisplayName("Entity Identification")]
     [IsoXmlTag("NttyId")]
-    public IsoMax35Text? EntityIdentification { get; init; }
+    public Max35Text? EntityIdentification { get; init; }
 
     /// <summary>
     /// Type of entity who assess the risk for the transaction.
@@ -46,7 +46,7 @@ public record RiskAssessment4
     [IsoId("_rcwBjRNoEfC1ZfCQz0xB3g")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public IsoMax35Text? Type { get; init; }
+    public Max35Text? Type { get; init; }
 
     /// <summary>
     /// Transaction is identified as high risk.
@@ -54,7 +54,7 @@ public record RiskAssessment4
     [IsoId("_rcwBjxNoEfC1ZfCQz0xB3g")]
     [DisplayName("High Risk Transaction")]
     [IsoXmlTag("HghRskTx")]
-    public IsoTrueFalseIndicator? HighRiskTransaction { get; init; }
+    public TrueFalseIndicator? HighRiskTransaction { get; init; }
 
     /// <summary>
     /// Reason for indicating a certain level of risk for the transaction.
@@ -62,7 +62,7 @@ public record RiskAssessment4
     [IsoId("_rcwBkRNoEfC1ZfCQz0xB3g")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public SimpleValueList<IsoMax35Text> Reason { get; init; } = [];
+    public SimpleValueList<Max35Text> Reason { get; init; } = [];
 
     /// <summary>
     /// Risk assessment result.
@@ -70,7 +70,7 @@ public record RiskAssessment4
     [IsoId("_rcwBkxNoEfC1ZfCQz0xB3g")]
     [DisplayName("Result")]
     [IsoXmlTag("Rslt")]
-    public IsoMax35Text? Result { get; init; }
+    public Max35Text? Result { get; init; }
 
     /// <summary>
     /// Conditions noted for the risk assessment.
@@ -78,7 +78,7 @@ public record RiskAssessment4
     [IsoId("_rcwBlRNoEfC1ZfCQz0xB3g")]
     [DisplayName("Condition")]
     [IsoXmlTag("Cond")]
-    public IsoATICALaxProcessing? Condition { get; init; }
+    public ATICALaxProcessing? Condition { get; init; }
 
     /// <summary>
     /// Additional details of recommended action or other recommended action.
@@ -94,7 +94,7 @@ public record RiskAssessment4
     [IsoId("_ZwQNEkVZEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -102,5 +102,5 @@ public record RiskAssessment4
     [IsoId("_ZwQNE0VZEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

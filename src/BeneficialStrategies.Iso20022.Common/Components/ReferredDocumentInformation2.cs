@@ -32,7 +32,7 @@ public record ReferredDocumentInformation2
     [IsoXmlTag("DocNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DocumentNumber { get; init; }
+    public Max35Text? DocumentNumber { get; init; }
 
     /// <summary>
     /// Date associated with the referred document, eg, date of issue.
@@ -41,7 +41,7 @@ public record ReferredDocumentInformation2
     [DisplayName("Related Date")]
     [IsoXmlTag("RltdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RelatedDate { get; init; }
+    public DateOnly? RelatedDate { get; init; }
 
     /// <summary>
     /// Amount of money and currency of a document referred to invoice to be financed.

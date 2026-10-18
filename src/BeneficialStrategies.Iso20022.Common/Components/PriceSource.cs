@@ -30,5 +30,5 @@ public record PriceSource
     [IsoXmlTag("Nrrtv")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Narrative { get; init; }
+    public Max35Text? Narrative { get; init; }
 }

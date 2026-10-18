@@ -24,7 +24,7 @@ public record AccountNotification17
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Provides details on the page number of the notification.
@@ -42,7 +42,7 @@ public record AccountNotification17
     [DisplayName("Electronic Sequence Number")]
     [IsoXmlTag("ElctrncSeqNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? ElectronicSequenceNumber { get; init; }
+    public Number? ElectronicSequenceNumber { get; init; }
 
     /// <summary>
     /// Specifies the range of identification sequence numbers, as provided in the request.
@@ -59,7 +59,7 @@ public record AccountNotification17
     [DisplayName("Legal Sequence Number")]
     [IsoXmlTag("LglSeqNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? LegalSequenceNumber { get; init; }
+    public Number? LegalSequenceNumber { get; init; }
 
     /// <summary>
     /// Date and time at which the notification was created.
@@ -68,7 +68,7 @@ public record AccountNotification17
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? CreationDateTime { get; init; }
+    public ISODateTime? CreationDateTime { get; init; }
 
     /// <summary>
     /// Range of time between a start date and an end date for which the account notification is issued.
@@ -146,5 +146,5 @@ public record AccountNotification17
     [IsoXmlTag("AddtlNtfctnInf")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public IsoMax500Text? AdditionalNotificationInformation { get; init; }
+    public Max500Text? AdditionalNotificationInformation { get; init; }
 }

@@ -21,7 +21,7 @@ public record PendingStatusReason30
     /// </summary>
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
-    public IsoRestrictedFINXMax210Text? AdditionalReasonInformation { get; init; }
+    public RestrictedFINXMax210Text? AdditionalReasonInformation { get; init; }
 
     /// <summary>
     /// Reason Code.

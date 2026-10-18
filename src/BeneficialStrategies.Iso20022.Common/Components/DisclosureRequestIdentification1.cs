@@ -24,7 +24,7 @@ public record DisclosureRequestIdentification1
     [IsoXmlTag("IssrDsclsrReqId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text IssuerDisclosureRequestIdentification { get; init; }
+    public required Max35Text IssuerDisclosureRequestIdentification { get; init; }
 
     /// <summary>
     /// Identifies the financial instrument.

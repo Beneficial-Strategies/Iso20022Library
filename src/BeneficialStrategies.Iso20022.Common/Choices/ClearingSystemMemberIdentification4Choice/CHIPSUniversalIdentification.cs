@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
         /// </summary>
         [IsoXmlTag("USCHU")]
         [IsoSimpleType(IsoSimpleType.CHIPSUniversalIdentifier)]
-        public required IsoCHIPSUniversalIdentifier Value { get; init; }
+        public required CHIPSUniversalIdentifier Value { get; init; }
     }
 }

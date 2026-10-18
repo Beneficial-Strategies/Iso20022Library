@@ -39,6 +39,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Cleared12Choice
         [DisplayName("Clearing Date Time")]
         [IsoXmlTag("ClrDtTm")]
         [IsoSimpleType(IsoSimpleType.ISODateTime)]
-        public IsoISODateTime? ClearingDateTime { get; init; }
+        public ISODateTime? ClearingDateTime { get; init; }
     }
 }

@@ -24,7 +24,7 @@ public record ReportParameters1
     [IsoXmlTag("NetPosId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text NetPositionIdentification { get; init; }
+    public required Max35Text NetPositionIdentification { get; init; }
 
     /// <summary>
     /// Date and time of the net position report.
@@ -57,7 +57,7 @@ public record ReportParameters1
     [DisplayName("Report Number")]
     [IsoXmlTag("RptNb")]
     [IsoSimpleType(IsoSimpleType.Exact5NumericText)]
-    public IsoExact5NumericText? ReportNumber { get; init; }
+    public Exact5NumericText? ReportNumber { get; init; }
 
     /// <summary>
     /// Indicates whether there is activity or information update reported in the statement.
@@ -66,5 +66,5 @@ public record ReportParameters1
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ActivityIndicator { get; init; }
+    public required YesNoIndicator ActivityIndicator { get; init; }
 }

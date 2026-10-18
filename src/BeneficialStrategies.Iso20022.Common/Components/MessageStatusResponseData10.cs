@@ -22,7 +22,7 @@ public record MessageStatusResponseData10
     [IsoId("__AT9dbZbEfCUZfsQO4rYeA")]
     [DisplayName("Exchange Identification")]
     [IsoXmlTag("XchgId")]
-    public required IsoMax35Text ExchangeIdentification { get; init; }
+    public required Max35Text ExchangeIdentification { get; init; }
 
     /// <summary>
     /// Party that has initiated the previous message.

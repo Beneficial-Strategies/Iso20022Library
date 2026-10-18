@@ -23,7 +23,7 @@ public record PublicRSAKey1
     [DisplayName("Modulus")]
     [IsoXmlTag("Mdlus")]
     [IsoSimpleType(IsoSimpleType.Max5000Binary)]
-    public required IsoMax5000Binary Modulus { get; init; }
+    public required Max5000Binary Modulus { get; init; }
 
     /// <summary>
     /// Public exponent of the RSA key.
@@ -32,5 +32,5 @@ public record PublicRSAKey1
     [DisplayName("Exponent")]
     [IsoXmlTag("Expnt")]
     [IsoSimpleType(IsoSimpleType.Max5000Binary)]
-    public required IsoMax5000Binary Exponent { get; init; }
+    public required Max5000Binary Exponent { get; init; }
 }

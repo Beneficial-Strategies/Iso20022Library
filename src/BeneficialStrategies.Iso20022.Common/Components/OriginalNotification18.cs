@@ -22,7 +22,7 @@ public record OriginalNotification18
     [IsoId("37e06ed9-cb91-4c8b-ab25-a48bc4b35052")]
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
-    public required IsoMax35Text OriginalMessageIdentification { get; init; }
+    public required Max35Text OriginalMessageIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the original message was created.
@@ -30,7 +30,7 @@ public record OriginalNotification18
     [IsoId("653e2643-cf73-4b9e-8ee6-3038a3c3e4bd")]
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
-    public IsoISODateTime? OriginalCreationDateTime { get; init; }
+    public ISODateTime? OriginalCreationDateTime { get; init; }
 
     /// <summary>
     /// Identification of the original notification.
@@ -38,7 +38,7 @@ public record OriginalNotification18
     [IsoId("164ef1a8-86b9-49f1-a4b2-d909edf21e5e")]
     [DisplayName("Original Notification Identification")]
     [IsoXmlTag("OrgnlNtfctnId")]
-    public required IsoMax35Text OriginalNotificationIdentification { get; init; }
+    public required Max35Text OriginalNotificationIdentification { get; init; }
 
     /// <summary>
     /// Indicates whether the cancellation applies to the complete original notification or to individual items within the original notification.
@@ -46,7 +46,7 @@ public record OriginalNotification18
     [IsoId("9fa15f97-147d-4a88-a3a3-169f71ac7f5f")]
     [DisplayName("Notification Cancellation")]
     [IsoXmlTag("NtfctnCxl")]
-    public IsoGroupCancellationIndicator? NotificationCancellation { get; init; }
+    public GroupCancellationIndicator? NotificationCancellation { get; init; }
 
     /// <summary>
     /// Identifies the original notification item, to which the cancellation advice refers.

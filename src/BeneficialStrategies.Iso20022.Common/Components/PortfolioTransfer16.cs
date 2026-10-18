@@ -22,7 +22,7 @@ public record PortfolioTransfer16
     [IsoId("19c4336c-4e25-47c0-bc78-6c653f6c0bbc")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Identification assigned to the transfer of assets.
@@ -30,7 +30,7 @@ public record PortfolioTransfer16
     [IsoId("e9677538-6619-451a-ad1c-30b332b9e8d6")]
     [DisplayName("Transfer Identification")]
     [IsoXmlTag("TrfId")]
-    public required IsoMax35Text TransferIdentification { get; init; }
+    public required Max35Text TransferIdentification { get; init; }
 
     /// <summary>
     /// Identification of the confirmation assigned by the transferor to the transfer.
@@ -38,7 +38,7 @@ public record PortfolioTransfer16
     [IsoId("db854119-bcdc-4cfa-b7f5-13b48a996ecb")]
     [DisplayName("Transfer Confirmation Identification")]
     [IsoXmlTag("TrfConfId")]
-    public IsoMax35Text? TransferConfirmationIdentification { get; init; }
+    public Max35Text? TransferConfirmationIdentification { get; init; }
 
     /// <summary>
     /// Choice of tax efficient product, general investment or pension.
@@ -54,7 +54,7 @@ public record PortfolioTransfer16
     [IsoId("380593db-5a47-459e-8592-ed1b12880242")]
     [DisplayName("Partial Discovery")]
     [IsoXmlTag("PrtlDscvry")]
-    public IsoYesNoIndicator? PartialDiscovery { get; init; }
+    public YesNoIndicator? PartialDiscovery { get; init; }
 
     /// <summary>
     /// Specifies whether there is cash in the account awaiting investment and the currency.
@@ -70,7 +70,7 @@ public record PortfolioTransfer16
     [IsoId("297819d9-e6b8-45f9-9fdf-703273017c30")]
     [DisplayName("Tax Date")]
     [IsoXmlTag("TaxDt")]
-    public IsoISODate? TaxDate { get; init; }
+    public DateOnly? TaxDate { get; init; }
 
     /// <summary>
     /// Asset to be transferred.

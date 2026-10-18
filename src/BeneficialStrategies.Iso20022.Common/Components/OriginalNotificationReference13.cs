@@ -56,7 +56,7 @@ public record OriginalNotificationReference13
     /// </summary>
     [DisplayName("Expected Value Date")]
     [IsoXmlTag("XpctdValDt")]
-    public IsoISODate? ExpectedValueDate { get; init; }
+    public DateOnly? ExpectedValueDate { get; init; }
 
     /// <summary>
     /// Intermediary Agent.

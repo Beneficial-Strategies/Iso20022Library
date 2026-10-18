@@ -30,7 +30,7 @@ public record CustomerAccount10
     [IsoId("_IQXAMzFKEe651u5xu3f5iw")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax70Text? Name { get; init; }
+    public Max70Text? Name { get; init; }
 
     /// <summary>
     /// Specifies the current state of an account, eg, enabled or deleted.
@@ -102,7 +102,7 @@ public record CustomerAccount10
     [IsoId("_IQXARTFKEe651u5xu3f5iw")]
     [DisplayName("Minimum Monthly Transaction Number")]
     [IsoXmlTag("MinMnthlyTxNb")]
-    public IsoMax5NumericText? MinimumMonthlyTransactionNumber { get; init; }
+    public Max5NumericText? MinimumMonthlyTransactionNumber { get; init; }
 
     /// <summary>
     /// Maximum monthly average of the number of payments (coming in and going out) over a year.
@@ -110,7 +110,7 @@ public record CustomerAccount10
     [IsoId("_IQXARzFKEe651u5xu3f5iw")]
     [DisplayName("Maximum Monthly Transaction Number")]
     [IsoXmlTag("MaxMnthlyTxNb")]
-    public IsoMax5NumericText? MaximumMonthlyTransactionNumber { get; init; }
+    public Max5NumericText? MaximumMonthlyTransactionNumber { get; init; }
 
     /// <summary>
     /// Minimum average balance, that is, sum of the end of day balances over a month divided by the number of business days in the month.
@@ -134,7 +134,7 @@ public record CustomerAccount10
     [IsoId("_IQXATTFKEe651u5xu3f5iw")]
     [DisplayName("Account Purpose")]
     [IsoXmlTag("AcctPurp")]
-    public IsoMax140Text? AccountPurpose { get; init; }
+    public Max140Text? AccountPurpose { get; init; }
 
     /// <summary>
     /// Minimum floor notification amount, that is, the value of the balance under which a notification will be sent to the account owner.

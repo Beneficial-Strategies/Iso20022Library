@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeCounterpartyRelationship1Ch
         [IsoXmlTag("Prtry")]
         [IsoSimpleType(IsoSimpleType.Max100Text)]
         [StringLength(maximumLength: 100, MinimumLength = 1)]
-        public required IsoMax100Text Value { get; init; }
+        public required Max100Text Value { get; init; }
     }
 }

@@ -31,5 +31,5 @@ public record DateCodeAndTimeFormat3
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public required IsoISOTime Time { get; init; }
+    public required ISOTime Time { get; init; }
 }

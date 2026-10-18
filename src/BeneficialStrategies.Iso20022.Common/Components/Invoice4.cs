@@ -22,7 +22,7 @@ public record Invoice4
     [IsoId("_gL9aEUhrEfCMZJtj4J7UGQ")]
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
-    public IsoMax70Text? Number { get; init; }
+    public Max70Text? Number { get; init; }
 
     /// <summary>
     /// Effective billing date.
@@ -30,7 +30,7 @@ public record Invoice4
     [IsoId("_gL9aE0hrEfCMZJtj4J7UGQ")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Contains the date and time the electronic invoice was created.
@@ -38,7 +38,7 @@ public record Invoice4
     [IsoId("_gL9aFUhrEfCMZJtj4J7UGQ")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
-    public IsoISODateTime? CreationDateTime { get; init; }
+    public ISODateTime? CreationDateTime { get; init; }
 
     /// <summary>
     /// Provides the identifier assigned by the card acceptor that best categorizes the items being purchased in a standardized commodity group.
@@ -46,7 +46,7 @@ public record Invoice4
     [IsoId("_gL9aF0hrEfCMZJtj4J7UGQ")]
     [DisplayName("Summary Commodity Identification")]
     [IsoXmlTag("SummryCmmdtyId")]
-    public IsoMax35Text? SummaryCommodityIdentification { get; init; }
+    public Max35Text? SummaryCommodityIdentification { get; init; }
 
     /// <summary>
     /// Name of the seller.
@@ -54,7 +54,7 @@ public record Invoice4
     [IsoId("_gL9aGUhrEfCMZJtj4J7UGQ")]
     [DisplayName("Seller Name")]
     [IsoXmlTag("SellrNm")]
-    public IsoMax105Text? SellerName { get; init; }
+    public Max105Text? SellerName { get; init; }
 
     /// <summary>
     /// Identification of the seller.
@@ -62,7 +62,7 @@ public record Invoice4
     [IsoId("_b3D5kUhvEfCMZJtj4J7UGQ")]
     [DisplayName("Seller Identification")]
     [IsoXmlTag("SellrId")]
-    public IsoMax35Text? SellerIdentification { get; init; }
+    public Max35Text? SellerIdentification { get; init; }
 
     /// <summary>
     /// Business name of the seller.
@@ -70,7 +70,7 @@ public record Invoice4
     [IsoId("_lzRrEkhvEfCMZJtj4J7UGQ")]
     [DisplayName("Seller Business Name")]
     [IsoXmlTag("SellrBizNm")]
-    public IsoMax35Text? SellerBusinessName { get; init; }
+    public Max35Text? SellerBusinessName { get; init; }
 
     /// <summary>
     /// Legal Corporate Name of the seller.
@@ -78,7 +78,7 @@ public record Invoice4
     [IsoId("_lzRrE0hvEfCMZJtj4J7UGQ")]
     [DisplayName("Seller Legal Corporate Name")]
     [IsoXmlTag("SellrLglCorpNm")]
-    public IsoMax99Text? SellerLegalCorporateName { get; init; }
+    public Max99Text? SellerLegalCorporateName { get; init; }
 
     /// <summary>
     /// Contains local language equivalent(s) of seller data.
@@ -110,7 +110,7 @@ public record Invoice4
     [IsoId("_gL_2U0hrEfCMZJtj4J7UGQ")]
     [DisplayName("Seller Tax Registration Identification")]
     [IsoXmlTag("SellrTaxRegnId")]
-    public IsoMax70Text? SellerTaxRegistrationIdentification { get; init; }
+    public Max70Text? SellerTaxRegistrationIdentification { get; init; }
 
     /// <summary>
     /// Additional information about the seller.
@@ -118,7 +118,7 @@ public record Invoice4
     [IsoId("_gL_2VUhrEfCMZJtj4J7UGQ")]
     [DisplayName("Seller Additional Information")]
     [IsoXmlTag("SellrAddtlInf")]
-    public IsoMax1000Text? SellerAdditionalInformation { get; init; }
+    public Max1000Text? SellerAdditionalInformation { get; init; }
 
     /// <summary>
     /// Name of the buyer.
@@ -126,7 +126,7 @@ public record Invoice4
     [IsoId("_gL_2V0hrEfCMZJtj4J7UGQ")]
     [DisplayName("Buyer Name")]
     [IsoXmlTag("BuyrNm")]
-    public IsoMax105Text? BuyerName { get; init; }
+    public Max105Text? BuyerName { get; init; }
 
     /// <summary>
     /// Identification of the buyer.
@@ -134,7 +134,7 @@ public record Invoice4
     [IsoId("_XUZKNEhwEfCMZJtj4J7UGQ")]
     [DisplayName("Buyer Identification")]
     [IsoXmlTag("BuyrId")]
-    public IsoMax35Text? BuyerIdentification { get; init; }
+    public Max35Text? BuyerIdentification { get; init; }
 
     /// <summary>
     /// Business name of the buyer.
@@ -142,7 +142,7 @@ public record Invoice4
     [IsoId("_XUZKNUhwEfCMZJtj4J7UGQ")]
     [DisplayName("Buyer Business Name")]
     [IsoXmlTag("BuyrBizNm")]
-    public IsoMax35Text? BuyerBusinessName { get; init; }
+    public Max35Text? BuyerBusinessName { get; init; }
 
     /// <summary>
     /// Legal Corporate Name of the buyer.
@@ -150,7 +150,7 @@ public record Invoice4
     [IsoId("_XUZKNkhwEfCMZJtj4J7UGQ")]
     [DisplayName("Buyer Legal Corporate Name")]
     [IsoXmlTag("BuyrLglCorpNm")]
-    public IsoMax99Text? BuyerLegalCorporateName { get; init; }
+    public Max99Text? BuyerLegalCorporateName { get; init; }
 
     /// <summary>
     /// Contains local language equivalent(s) of buyer data.
@@ -182,7 +182,7 @@ public record Invoice4
     [IsoId("_gL_2X0hrEfCMZJtj4J7UGQ")]
     [DisplayName("Buyer Tax Registration Identification")]
     [IsoXmlTag("BuyrTaxRegnId")]
-    public IsoMax70Text? BuyerTaxRegistrationIdentification { get; init; }
+    public Max70Text? BuyerTaxRegistrationIdentification { get; init; }
 
     /// <summary>
     /// Additional information about the buyer.
@@ -190,7 +190,7 @@ public record Invoice4
     [IsoId("_gL_2YUhrEfCMZJtj4J7UGQ")]
     [DisplayName("Buyer Additional Information")]
     [IsoXmlTag("BuyrAddtlInf")]
-    public IsoMax1000Text? BuyerAdditionalInformation { get; init; }
+    public Max1000Text? BuyerAdditionalInformation { get; init; }
 
     /// <summary>
     /// Contains the freight charges for the entire purchase.
@@ -222,7 +222,7 @@ public record Invoice4
     [IsoId("_kjcXskhrEfCMZJtj4J7UGQ")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -230,7 +230,7 @@ public record Invoice4
     [IsoId("_kjcXs0hrEfCMZJtj4J7UGQ")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 
     /// <summary>
     /// Line item information.

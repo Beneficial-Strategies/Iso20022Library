@@ -31,7 +31,7 @@ public record SecuritiesCurrencyIdentification2
     [DisplayName("Fractional Digit")]
     [IsoXmlTag("FrctnlDgt")]
     [IsoSimpleType(IsoSimpleType.Max1Number)]
-    public IsoMax1Number? FractionalDigit { get; init; }
+    public Max1Number? FractionalDigit { get; init; }
 
     /// <summary>
     /// Details the country name and ISO 3166 country code.
@@ -48,7 +48,7 @@ public record SecuritiesCurrencyIdentification2
     [DisplayName("Pre Euro")]
     [IsoXmlTag("PreEuro")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator PreEuro { get; init; }
+    public required TrueFalseIndicator PreEuro { get; init; }
 
     /// <summary>
     /// Modification status for the record compared to the previous report.
@@ -73,5 +73,5 @@ public record SecuritiesCurrencyIdentification2
     [DisplayName("Last Updated")]
     [IsoXmlTag("LastUpdtd")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? LastUpdated { get; init; }
+    public DateOnly? LastUpdated { get; init; }
 }

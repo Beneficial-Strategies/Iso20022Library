@@ -39,7 +39,7 @@ public record PaymentCard10
     [DisplayName("Masked PAN")]
     [IsoXmlTag("MskdPAN")]
     [IsoSimpleType(IsoSimpleType.Max30Text)]
-    public IsoMax30Text? MaskedPAN { get; init; }
+    public Max30Text? MaskedPAN { get; init; }
 
     /// <summary>
     /// Brand name of the card.
@@ -49,7 +49,7 @@ public record PaymentCard10
     [IsoXmlTag("CardBrnd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CardBrand { get; init; }
+    public Max35Text? CardBrand { get; init; }
 
     /// <summary>
     /// Type of card product.

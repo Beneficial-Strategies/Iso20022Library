@@ -23,7 +23,7 @@ public record FixingConditions1
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate TradeDate { get; init; }
+    public required DateOnly TradeDate { get; init; }
 
     /// <summary>
     /// Represents the original reference of the instruction for which the status is given, as assigned by the participant that submitted the foreign exchange trade.
@@ -33,7 +33,7 @@ public record FixingConditions1
     [IsoXmlTag("OrgtrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OriginatorReference { get; init; }
+    public required Max35Text OriginatorReference { get; init; }
 
     /// <summary>
     /// Reference common to both parties of the trade.
@@ -43,7 +43,7 @@ public record FixingConditions1
     [IsoXmlTag("CmonRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CommonReference { get; init; }
+    public Max35Text? CommonReference { get; init; }
 
     /// <summary>
     /// Reference to the identification of a previous event in the life of a trade which is amended or cancelled.
@@ -53,7 +53,7 @@ public record FixingConditions1
     [IsoXmlTag("RltdRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RelatedReference { get; init; }
+    public Max35Text? RelatedReference { get; init; }
 
     /// <summary>
     /// Currency and amount bought in a foreign exchange trade.
@@ -78,5 +78,5 @@ public record FixingConditions1
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public required IsoBaseOneRate ExchangeRate { get; init; }
+    public required BaseOneRate ExchangeRate { get; init; }
 }

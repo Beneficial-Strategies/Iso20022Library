@@ -24,7 +24,7 @@ public record MasterAgreement2
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max50Text)]
     [StringLength(maximumLength: 50, MinimumLength = 1)]
-    public IsoMax50Text? Type { get; init; }
+    public Max50Text? Type { get; init; }
 
     /// <summary>
     /// Reference to the year of the master agreement version used for the reported trade, if applicable (such as 1992, 2002, etc).
@@ -33,5 +33,5 @@ public record MasterAgreement2
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.ISORestrictedYear)]
-    public IsoISORestrictedYear? Version { get; init; }
+    public ISORestrictedYear? Version { get; init; }
 }

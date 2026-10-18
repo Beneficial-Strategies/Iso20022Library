@@ -28,7 +28,7 @@ public record AccountStatement14
     /// </summary>
     [DisplayName("Additional Statement Information")]
     [IsoXmlTag("AddtlStmtInf")]
-    public IsoMax500Text? AdditionalStatementInformation { get; init; }
+    public Max500Text? AdditionalStatementInformation { get; init; }
 
     /// <summary>
     /// Balance.
@@ -49,14 +49,14 @@ public record AccountStatement14
     /// </summary>
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
-    public IsoISODateTime? CreationDateTime { get; init; }
+    public ISODateTime? CreationDateTime { get; init; }
 
     /// <summary>
     /// Electronic Sequence Number.
     /// </summary>
     [DisplayName("Electronic Sequence Number")]
     [IsoXmlTag("ElctrncSeqNb")]
-    public IsoNumber? ElectronicSequenceNumber { get; init; }
+    public Number? ElectronicSequenceNumber { get; init; }
 
     /// <summary>
     /// Entry.
@@ -77,7 +77,7 @@ public record AccountStatement14
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Interest.
@@ -91,7 +91,7 @@ public record AccountStatement14
     /// </summary>
     [DisplayName("Legal Sequence Number")]
     [IsoXmlTag("LglSeqNb")]
-    public IsoNumber? LegalSequenceNumber { get; init; }
+    public Number? LegalSequenceNumber { get; init; }
 
     /// <summary>
     /// Related Account.

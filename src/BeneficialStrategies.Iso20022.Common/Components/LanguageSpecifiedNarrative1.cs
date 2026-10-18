@@ -32,5 +32,5 @@ public record LanguageSpecifiedNarrative1
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max8000Text)]
     [StringLength(maximumLength: 8000, MinimumLength = 1)]
-    public required IsoMax8000Text AdditionalInformation { get; init; }
+    public required Max8000Text AdditionalInformation { get; init; }
 }

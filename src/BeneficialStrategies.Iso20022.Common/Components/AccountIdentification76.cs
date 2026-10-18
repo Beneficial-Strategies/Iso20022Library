@@ -28,7 +28,7 @@ public record AccountIdentification76
     /// </summary>
     [DisplayName("Block Chain Address Or Wallet")]
     [IsoXmlTag("BlckChainAdrOrWllt")]
-    public IsoRestrictedFINXMax140Text? BlockChainAddressOrWallet { get; init; }
+    public RestrictedFINXMax140Text? BlockChainAddressOrWallet { get; init; }
 
     /// <summary>
     /// Confirmed Balance.
@@ -42,7 +42,7 @@ public record AccountIdentification76
     /// </summary>
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
-    public IsoRestrictedFINXMax35Text? SafekeepingAccount { get; init; }
+    public RestrictedFINXMax35Text? SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Safekeeping Place.

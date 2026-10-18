@@ -32,7 +32,7 @@ public record Cheque16
     [IsoXmlTag("ChqNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ChequeNumber { get; init; }
+    public Max35Text? ChequeNumber { get; init; }
 
     /// <summary>
     /// Identifies the party that ordered the issuance of the cheque.
@@ -73,7 +73,7 @@ public record Cheque16
     [DisplayName("Cheque Maturity Date")]
     [IsoXmlTag("ChqMtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ChequeMaturityDate { get; init; }
+    public DateOnly? ChequeMaturityDate { get; init; }
 
     /// <summary>
     /// Identifies, in a coded form, the cheque layout, company logo and digitised signature to be used to print the cheque, as agreed between the initiating party and the debtor&apos;s agent.
@@ -83,7 +83,7 @@ public record Cheque16
     [IsoXmlTag("FrmsCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? FormsCode { get; init; }
+    public Max35Text? FormsCode { get; init; }
 
     /// <summary>
     /// Information that needs to be printed on a cheque, used by the payer to add miscellaneous information.
@@ -104,7 +104,7 @@ public record Cheque16
     [IsoXmlTag("RgnlClrZone")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RegionalClearingZone { get; init; }
+    public Max35Text? RegionalClearingZone { get; init; }
 
     /// <summary>
     /// Specifies the print location of the cheque.
@@ -114,7 +114,7 @@ public record Cheque16
     [IsoXmlTag("PrtLctn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PrintLocation { get; init; }
+    public Max35Text? PrintLocation { get; init; }
 
     /// <summary>
     /// Signature to be used by the cheque servicer on a specific cheque to be printed.

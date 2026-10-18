@@ -78,7 +78,7 @@ public record AmendmentV04 : IOuterRecord
     /// </summary>
     [DisplayName("Message Amended")]
     [IsoXmlTag("MsgAmdd")]
-    public IsoMax100KBinary? MessageAmended { get; init; }
+    public Max100KBinary? MessageAmended { get; init; }
 
     /// <summary>
     /// National Data.
@@ -92,7 +92,7 @@ public record AmendmentV04 : IOuterRecord
     /// </summary>
     [DisplayName("Original Message")]
     [IsoXmlTag("OrgnlMsg")]
-    public IsoMax100KBinary? OriginalMessage { get; init; }
+    public Max100KBinary? OriginalMessage { get; init; }
 
     /// <summary>
     /// Originator.

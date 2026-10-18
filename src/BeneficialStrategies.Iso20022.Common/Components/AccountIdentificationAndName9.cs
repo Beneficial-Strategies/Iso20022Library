@@ -22,7 +22,7 @@ public record AccountIdentificationAndName9
     [IsoId("d4d4425a-ba60-431e-841e-607546bc6e34")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax35Text? Name { get; init; }
+    public Max35Text? Name { get; init; }
 
     /// <summary>
     /// International Bank Account Number (IBAN).
@@ -30,7 +30,7 @@ public record AccountIdentificationAndName9
     [IsoId("4043bfca-4b91-4a31-8759-d8fec6a865ef")]
     [DisplayName("IBAN")]
     [IsoXmlTag("IBAN")]
-    public IsoIBAN2007Identifier? IBAN { get; init; }
+    public IBAN2007Identifier? IBAN { get; init; }
 
     /// <summary>
     /// Block Chain Wallet where digital currencies are maintained.

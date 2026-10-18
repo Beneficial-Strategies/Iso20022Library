@@ -22,7 +22,7 @@ public record MandateRelatedInformation16
     /// </summary>
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
-    public IsoTrueFalseIndicator? AmendmentIndicator { get; init; }
+    public TrueFalseIndicator? AmendmentIndicator { get; init; }
 
     /// <summary>
     /// List of mandate elements that have been modified.
@@ -36,28 +36,28 @@ public record MandateRelatedInformation16
     /// </summary>
     [DisplayName("Date Of Signature")]
     [IsoXmlTag("DtOfSgntr")]
-    public IsoISODate? DateOfSignature { get; init; }
+    public DateOnly? DateOfSignature { get; init; }
 
     /// <summary>
     /// Additional security provisions, such as a digital signature, as provided by the debtor.
     /// </summary>
     [DisplayName("Electronic Signature")]
     [IsoXmlTag("ElctrncSgntr")]
-    public IsoMax1025Text? ElectronicSignature { get; init; }
+    public Max1025Text? ElectronicSignature { get; init; }
 
     /// <summary>
     /// Date of the final collection of a direct debit as per the mandate.
     /// </summary>
     [DisplayName("Final Collection Date")]
     [IsoXmlTag("FnlColltnDt")]
-    public IsoISODate? FinalCollectionDate { get; init; }
+    public DateOnly? FinalCollectionDate { get; init; }
 
     /// <summary>
     /// Date of the first collection of a direct debit as per the mandate.
     /// </summary>
     [DisplayName("First Collection Date")]
     [IsoXmlTag("FrstColltnDt")]
-    public IsoISODate? FirstCollectionDate { get; init; }
+    public DateOnly? FirstCollectionDate { get; init; }
 
     /// <summary>
     /// Regularity with which direct debit instructions are to be created and processed.
@@ -71,7 +71,7 @@ public record MandateRelatedInformation16
     /// </summary>
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
-    public IsoMax35Text? MandateIdentification { get; init; }
+    public Max35Text? MandateIdentification { get; init; }
 
     /// <summary>
     /// Reason for the direct debit mandate to allow the user to distinguish between different mandates for the same creditor.
@@ -85,5 +85,5 @@ public record MandateRelatedInformation16
     /// </summary>
     [DisplayName("Tracking Days")]
     [IsoXmlTag("TrckgDays")]
-    public IsoExact2NumericText? TrackingDays { get; init; }
+    public Exact2NumericText? TrackingDays { get; init; }
 }

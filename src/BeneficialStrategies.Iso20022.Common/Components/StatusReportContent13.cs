@@ -35,7 +35,7 @@ public record StatusReportContent13
     /// </summary>
     [DisplayName("Errors")]
     [IsoXmlTag("Errs")]
-    public ValueList<IsoMax140Text> Errors { get; init; } = [];
+    public ValueList<Max140Text> Errors { get; init; } = [];
 
     /// <summary>
     /// Event.
@@ -63,12 +63,12 @@ public record StatusReportContent13
     /// </summary>
     [DisplayName("POI Date Time")]
     [IsoXmlTag("POIDtTm")]
-    public required IsoISODateTime POIDateTime { get; init; }
+    public required ISODateTime POIDateTime { get; init; }
 
     /// <summary>
     /// POI Group Identification.
     /// </summary>
     [DisplayName("POI Group Identification")]
     [IsoXmlTag("POIGrpId")]
-    public ValueList<IsoMax35Text> POIGroupIdentification { get; init; } = [];
+    public ValueList<Max35Text> POIGroupIdentification { get; init; } = [];
 }

@@ -28,19 +28,19 @@ public record AmountAndDirection111
     /// </summary>
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Label.
     /// </summary>
     [DisplayName("Label")]
     [IsoXmlTag("Labl")]
-    public IsoMax70Text? Label { get; init; }
+    public Max70Text? Label { get; init; }
 
     /// <summary>
     /// Sign.
     /// </summary>
     [DisplayName("Sign")]
     [IsoXmlTag("Sgn")]
-    public IsoPlusOrMinusIndicator? Sign { get; init; }
+    public PlusOrMinusIndicator? Sign { get; init; }
 }

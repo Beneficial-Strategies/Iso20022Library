@@ -21,7 +21,7 @@ public record RegisteredContract16
     /// </summary>
     [DisplayName("Contract Registration Amendment Identification")]
     [IsoXmlTag("CtrctRegnAmdmntId")]
-    public required IsoMax35Text ContractRegistrationAmendmentIdentification { get; init; }
+    public required Max35Text ContractRegistrationAmendmentIdentification { get; init; }
 
     /// <summary>
     /// Registered Contract Amendment.

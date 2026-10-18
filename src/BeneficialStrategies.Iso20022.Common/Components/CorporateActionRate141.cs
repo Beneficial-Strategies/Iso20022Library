@@ -46,7 +46,7 @@ public record CorporateActionRate141
     [IsoId("_anrvkakeEfCG_LQaXOxwew")]
     [DisplayName("Maximum Allowed Oversubscription Rate")]
     [IsoXmlTag("MaxAllwdOvrsbcptRate")]
-    public IsoPercentage14Rate? MaximumAllowedOversubscriptionRate { get; init; }
+    public decimal? MaximumAllowedOversubscriptionRate { get; init; }
 
     /// <summary>
     /// Rate used to determine the cash consideration split across outturn settlement transactions.

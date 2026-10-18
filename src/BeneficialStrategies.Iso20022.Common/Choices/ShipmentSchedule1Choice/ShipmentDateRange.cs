@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ShipmentSchedule1Choice
         [DisplayName("Earliest Shipment Date")]
         [IsoXmlTag("EarlstShipmntDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? EarliestShipmentDate { get; init; }
+        public DateOnly? EarliestShipmentDate { get; init; }
 
         /// <summary>
         /// Latest date whereby the goods must be shipped.
@@ -32,6 +32,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ShipmentSchedule1Choice
         [DisplayName("Latest Shipment Date")]
         [IsoXmlTag("LatstShipmntDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? LatestShipmentDate { get; init; }
+        public DateOnly? LatestShipmentDate { get; init; }
     }
 }

@@ -31,6 +31,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat63Choice
         [DisplayName("Price Value")]
         [IsoXmlTag("PricVal")]
         [IsoSimpleType(IsoSimpleType.PercentageRate)]
-        public required IsoPercentageRate PriceValue { get; init; }
+        public required PercentageRate PriceValue { get; init; }
     }
 }

@@ -21,7 +21,7 @@ public record Action16
     /// </summary>
     [DisplayName("Certificate Identification")]
     [IsoXmlTag("CertId")]
-    public IsoMax70Text? CertificateIdentification { get; init; }
+    public Max70Text? CertificateIdentification { get; init; }
 
     /// <summary>
     /// Contact.
@@ -49,7 +49,7 @@ public record Action16
     /// </summary>
     [DisplayName("Destination Address")]
     [IsoXmlTag("DstnAdr")]
-    public IsoMax70Text? DestinationAddress { get; init; }
+    public Max70Text? DestinationAddress { get; init; }
 
     /// <summary>
     /// Destination Type.
@@ -77,35 +77,35 @@ public record Action16
     /// </summary>
     [DisplayName("Other Destination")]
     [IsoXmlTag("OthrDstn")]
-    public IsoMax35Text? OtherDestination { get; init; }
+    public Max35Text? OtherDestination { get; init; }
 
     /// <summary>
     /// Other Destination Type.
     /// </summary>
     [DisplayName("Other Destination Type")]
     [IsoXmlTag("OthrDstnTp")]
-    public IsoMax35Text? OtherDestinationType { get; init; }
+    public Max35Text? OtherDestinationType { get; init; }
 
     /// <summary>
     /// Other Format.
     /// </summary>
     [DisplayName("Other Format")]
     [IsoXmlTag("OthrFrmt")]
-    public IsoMax35Text? OtherFormat { get; init; }
+    public Max35Text? OtherFormat { get; init; }
 
     /// <summary>
     /// Other Type.
     /// </summary>
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Signature.
     /// </summary>
     [DisplayName("Signature")]
     [IsoXmlTag("Sgntr")]
-    public IsoMax140Binary? Signature { get; init; }
+    public Max140Binary? Signature { get; init; }
 
     /// <summary>
     /// Type.

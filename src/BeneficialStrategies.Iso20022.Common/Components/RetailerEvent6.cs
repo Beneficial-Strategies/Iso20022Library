@@ -21,7 +21,7 @@ public record RetailerEvent6
     /// </summary>
     [DisplayName("Additional Event Information")]
     [IsoXmlTag("AddtlEvtInf")]
-    public IsoMax1025Text? AdditionalEventInformation { get; init; }
+    public Max1025Text? AdditionalEventInformation { get; init; }
 
     /// <summary>
     /// Event Context.
@@ -35,7 +35,7 @@ public record RetailerEvent6
     /// </summary>
     [DisplayName("Event Time Stamp")]
     [IsoXmlTag("EvtTmStmp")]
-    public required IsoISODateTime EventTimeStamp { get; init; }
+    public required ISODateTime EventTimeStamp { get; init; }
 
     /// <summary>
     /// Event To Notify.

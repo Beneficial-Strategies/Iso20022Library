@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Entitlement1Choice
         /// </summary>
         [IsoXmlTag("EntitlmntRatio")]
         [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-        public required IsoDecimalNumber Value { get; init; }
+        public required DecimalNumber Value { get; init; }
     }
 }

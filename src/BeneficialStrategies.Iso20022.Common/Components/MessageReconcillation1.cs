@@ -32,7 +32,7 @@ public record MessageReconcillation1
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Number of transactions.
@@ -41,5 +41,5 @@ public record MessageReconcillation1
     [DisplayName("Count")]
     [IsoXmlTag("Cnt")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber Count { get; init; }
+    public required Number Count { get; init; }
 }

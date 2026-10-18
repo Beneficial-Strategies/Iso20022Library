@@ -38,7 +38,7 @@ public record OriginalDataElements5
     [IsoId("_CKgslRUOEfC_aaedwHHlmw")]
     [DisplayName("Acquirer Identification")]
     [IsoXmlTag("AcqrrId")]
-    public IsoMax11NumericText? AcquirerIdentification { get; init; }
+    public Max11NumericText? AcquirerIdentification { get; init; }
 
     /// <summary>
     /// Code identifying the sender of the original message.
@@ -46,7 +46,7 @@ public record OriginalDataElements5
     [IsoId("_CKgslxUOEfC_aaedwHHlmw")]
     [DisplayName("Sender Identification")]
     [IsoXmlTag("SndrId")]
-    public IsoMax11NumericText? SenderIdentification { get; init; }
+    public Max11NumericText? SenderIdentification { get; init; }
 
     /// <summary>
     /// Type of transaction associated with the main service.

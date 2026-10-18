@@ -25,7 +25,7 @@ public record CorporateActionCashMovements2
     [IsoXmlTag("PstngId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PostingIdentification { get; init; }
+    public Max35Text? PostingIdentification { get; init; }
 
     /// <summary>
     /// Posting date of the cash movement.

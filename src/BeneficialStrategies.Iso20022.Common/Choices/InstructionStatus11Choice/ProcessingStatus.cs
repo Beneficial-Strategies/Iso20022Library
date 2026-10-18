@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus11Choice
         [IsoXmlTag("AttndncCardNb")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? AttendanceCardNumber { get; init; }
+        public Max35Text? AttendanceCardNumber { get; init; }
 
         /// <summary>
         /// Additional information about the status.
@@ -42,6 +42,6 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus11Choice
         [IsoXmlTag("AddtlInf")]
         [IsoSimpleType(IsoSimpleType.Max350Text)]
         [StringLength(maximumLength: 350, MinimumLength = 1)]
-        public IsoMax350Text? AdditionalInformation { get; init; }
+        public Max350Text? AdditionalInformation { get; init; }
     }
 }

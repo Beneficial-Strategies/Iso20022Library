@@ -50,7 +50,7 @@ public record FundSettlementParameters18
     [IsoXmlTag("SctiesSttlmSysId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SecuritiesSettlementSystemIdentification { get; init; }
+    public Max35Text? SecuritiesSettlementSystemIdentification { get; init; }
 
     /// <summary>
     /// Chain of receiving settlement parties.

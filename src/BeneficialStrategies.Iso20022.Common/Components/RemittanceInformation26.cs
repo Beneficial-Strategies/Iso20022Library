@@ -22,7 +22,7 @@ public record RemittanceInformation26
     [IsoId("0e6013b5-9c54-427c-9d10-916f8c067660")]
     [DisplayName("Unstructured")]
     [IsoXmlTag("Ustrd")]
-    public SimpleValueList<IsoMax140Text> Unstructured { get; init; } = [];
+    public SimpleValueList<Max140Text> Unstructured { get; init; } = [];
 
     /// <summary>
     /// Information supplied to enable the matching/reconciliation of an entry, in a structured form.

@@ -24,7 +24,7 @@ public record ServiceStartEnd1
     [IsoXmlTag("Lctn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Location { get; init; }
+    public Max35Text? Location { get; init; }
 
     /// <summary>
     /// Location code assigned to an airport or to a service location (for example, CDG, YUL, etc.).
@@ -34,7 +34,7 @@ public record ServiceStartEnd1
     [IsoXmlTag("LctnCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LocationCode { get; init; }
+    public Max35Text? LocationCode { get; init; }
 
     /// <summary>
     /// Address of service.
@@ -59,7 +59,7 @@ public record ServiceStartEnd1
     [DisplayName("Date And Time")]
     [IsoXmlTag("DtAndTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? DateAndTime { get; init; }
+    public ISODateTime? DateAndTime { get; init; }
 
     /// <summary>
     /// Period of day pertaining to the service location.

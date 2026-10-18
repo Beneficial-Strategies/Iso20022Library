@@ -25,7 +25,7 @@ public record Undertaking3
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Name of undertaking such as, demand guarantee, standby letter of credit.
@@ -84,7 +84,7 @@ public record Undertaking3
     [DisplayName("Date Of Issuance")]
     [IsoXmlTag("DtOfIssnc")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate DateOfIssuance { get; init; }
+    public required DateOnly DateOfIssuance { get; init; }
 
     /// <summary>
     /// Location which is to be regarded as the place from which the undertaking is issued.
@@ -133,7 +133,7 @@ public record Undertaking3
     [DisplayName("Confirmation Indicator")]
     [IsoXmlTag("ConfInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ConfirmationIndicator { get; init; }
+    public YesNoIndicator? ConfirmationIndicator { get; init; }
 
     /// <summary>
     /// Indicates the type of party requested to add its confirmation to the undertaking.
@@ -192,7 +192,7 @@ public record Undertaking3
     [DisplayName("Multiple Demand Indicator")]
     [IsoXmlTag("MltplDmndInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? MultipleDemandIndicator { get; init; }
+    public YesNoIndicator? MultipleDemandIndicator { get; init; }
 
     /// <summary>
     /// Indicates that partial demands/drawings are not permitted.
@@ -201,7 +201,7 @@ public record Undertaking3
     [DisplayName("Partial Demand Indicator")]
     [IsoXmlTag("PrtlDmndInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PartialDemandIndicator { get; init; }
+    public YesNoIndicator? PartialDemandIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the applicant/obligor or beneficiary is responsible for payment of the confirmation charges.
@@ -242,7 +242,7 @@ public record Undertaking3
     [DisplayName("Transfer Indicator")]
     [IsoXmlTag("TrfInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? TransferIndicator { get; init; }
+    public YesNoIndicator? TransferIndicator { get; init; }
 
     /// <summary>
     /// Document or template enclosed in the undertaking directly related to the issued undertaking.

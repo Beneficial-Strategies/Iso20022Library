@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionIdentification3Choice
         [IsoXmlTag("TechRcrdId")]
         [IsoSimpleType(IsoSimpleType.Max140Text)]
         [StringLength(maximumLength: 140, MinimumLength = 1)]
-        public IsoMax140Text? TechnicalRecordIdentification { get; init; }
+        public Max140Text? TechnicalRecordIdentification { get; init; }
 
         /// <summary>
         /// Unique code identifying the reporting counterparty.
@@ -58,6 +58,6 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionIdentification3Choice
         [IsoXmlTag("CollPrtflId")]
         [IsoSimpleType(IsoSimpleType.Max52Text)]
         [StringLength(maximumLength: 52, MinimumLength = 1)]
-        public IsoMax52Text? CollateralPortfolioIdentification { get; init; }
+        public Max52Text? CollateralPortfolioIdentification { get; init; }
     }
 }

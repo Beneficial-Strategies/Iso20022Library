@@ -22,7 +22,7 @@ public record RemittanceInformation27
     [IsoId("305bf794-13c0-4e1b-9a65-52fd60523a8a")]
     [DisplayName("Remittance Identification")]
     [IsoXmlTag("RmtId")]
-    public IsoMax35Text? RemittanceIdentification { get; init; }
+    public Max35Text? RemittanceIdentification { get; init; }
 
     /// <summary>
     /// Information supplied to enable the matching/reconciliation of an entry, in an unstructured form.
@@ -30,7 +30,7 @@ public record RemittanceInformation27
     [IsoId("1a43acbe-d278-4a26-96fb-0cb5ba5a64fe")]
     [DisplayName("Unstructured")]
     [IsoXmlTag("Ustrd")]
-    public SimpleValueList<IsoMax140Text> Unstructured { get; init; } = [];
+    public SimpleValueList<Max140Text> Unstructured { get; init; } = [];
 
     /// <summary>
     /// Information supplied to enable the matching/reconciliation of an entry, in a structured form.

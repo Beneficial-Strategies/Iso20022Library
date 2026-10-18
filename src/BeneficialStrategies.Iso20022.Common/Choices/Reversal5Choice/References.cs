@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reversal5Choice
         [IsoXmlTag("MstrRef")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? MasterReference { get; init; }
+        public Max35Text? MasterReference { get; init; }
 
         /// <summary>
         /// Unique and unambiguous identifier for a transfer instruction, as assigned by the instructing party.
@@ -34,7 +34,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reversal5Choice
         [IsoXmlTag("TrfRef")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? TransferReference { get; init; }
+        public Max35Text? TransferReference { get; init; }
 
         /// <summary>
         /// Unique and unambiguous investor&apos;s identification of a transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.
@@ -44,7 +44,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reversal5Choice
         [IsoXmlTag("ClntRef")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? ClientReference { get; init; }
+        public Max35Text? ClientReference { get; init; }
 
         /// <summary>
         /// Unique and unambiguous identifier for a transfer execution, as assigned by a confirming party.
@@ -54,7 +54,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reversal5Choice
         [IsoXmlTag("TrfConfRef")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? TransferConfirmationReference { get; init; }
+        public Max35Text? TransferConfirmationReference { get; init; }
 
         /// <summary>
         /// Unambiguous identification of the transfer allocated by the counterparty.

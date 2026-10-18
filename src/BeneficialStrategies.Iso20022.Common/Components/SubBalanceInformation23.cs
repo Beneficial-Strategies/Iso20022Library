@@ -40,7 +40,7 @@ public record SubBalanceInformation23
     [IsoXmlTag("SubBalAddtlDtls")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoRestrictedFINXMax140Text? SubBalanceAdditionalDetails { get; init; }
+    public RestrictedFINXMax140Text? SubBalanceAdditionalDetails { get; init; }
 
     /// <summary>
     /// Provides additional instrument sub-balance information on all or parts of the reported financial instrument (unregistered, tax exempt, etc.).

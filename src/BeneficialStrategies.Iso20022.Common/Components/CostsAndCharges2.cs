@@ -23,7 +23,7 @@ public record CostsAndCharges2
     [DisplayName("Ex Ante Reference Date")]
     [IsoXmlTag("ExAnteRefDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ExAnteReferenceDate { get; init; }
+    public DateOnly? ExAnteReferenceDate { get; init; }
 
     /// <summary>
     /// Individual cost or charge associated with the distribution of selling of the financial instrument. This may be one-off or recurring. This may be ex ante (intended) or post ante (actual).

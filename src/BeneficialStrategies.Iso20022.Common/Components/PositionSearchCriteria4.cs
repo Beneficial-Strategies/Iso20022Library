@@ -70,7 +70,7 @@ public record PositionSearchCriteria4
     [IsoId("_Esj8vQweEfG65oVFfOF9vw")]
     [DisplayName("Return Zero Position")]
     [IsoXmlTag("RtrZeroPos")]
-    public required IsoTrueFalseIndicator ReturnZeroPosition { get; init; }
+    public required TrueFalseIndicator ReturnZeroPosition { get; init; }
 
     /// <summary>
     /// Other business parties relevant to the transaction.

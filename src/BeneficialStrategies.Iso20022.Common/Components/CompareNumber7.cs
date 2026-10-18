@@ -23,7 +23,7 @@ public record CompareNumber7
     [DisplayName("Value")]
     [IsoXmlTag("Val1")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Value1 { get; init; }
+    public Number? Value1 { get; init; }
 
     /// <summary>
     /// Information for the second side of the transaction.
@@ -32,5 +32,5 @@ public record CompareNumber7
     [DisplayName("Value")]
     [IsoXmlTag("Val2")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Value2 { get; init; }
+    public Number? Value2 { get; init; }
 }

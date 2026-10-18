@@ -35,28 +35,28 @@ public record LodgingLineItem3
     /// </summary>
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Duration.
     /// </summary>
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
-    public IsoMax4NumericText? Duration { get; init; }
+    public Max4NumericText? Duration { get; init; }
 
     /// <summary>
     /// Other Type.
     /// </summary>
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Post Check Out.
     /// </summary>
     [DisplayName("Post Check Out")]
     [IsoXmlTag("PstChckOut")]
-    public IsoTrueFalseIndicator? PostCheckOut { get; init; }
+    public TrueFalseIndicator? PostCheckOut { get; init; }
 
     /// <summary>
     /// Sub Total Amount.
@@ -77,7 +77,7 @@ public record LodgingLineItem3
     /// </summary>
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
-    public IsoISOTime? Time { get; init; }
+    public ISOTime? Time { get; init; }
 
     /// <summary>
     /// Type.

@@ -31,5 +31,5 @@ public record FrequencyPeriod1
     [DisplayName("Count Per Period")]
     [IsoXmlTag("CntPerPrd")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public required IsoDecimalNumber CountPerPeriod { get; init; }
+    public required DecimalNumber CountPerPeriod { get; init; }
 }

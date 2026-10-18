@@ -21,7 +21,7 @@ public record AbortData6
     /// </summary>
     [DisplayName("Abort Reason")]
     [IsoXmlTag("AbrtRsn")]
-    public required IsoMax140Text AbortReason { get; init; }
+    public required Max140Text AbortReason { get; init; }
 
     /// <summary>
     /// Display Output.
@@ -35,12 +35,12 @@ public record AbortData6
     /// </summary>
     [DisplayName("Exchange Identification")]
     [IsoXmlTag("XchgId")]
-    public required IsoMax35Text ExchangeIdentification { get; init; }
+    public required Max35Text ExchangeIdentification { get; init; }
 
     /// <summary>
     /// Transaction Success.
     /// </summary>
     [DisplayName("Transaction Success")]
     [IsoXmlTag("TxSucss")]
-    public IsoTrueFalseIndicator? TransactionSuccess { get; init; }
+    public TrueFalseIndicator? TransactionSuccess { get; init; }
 }

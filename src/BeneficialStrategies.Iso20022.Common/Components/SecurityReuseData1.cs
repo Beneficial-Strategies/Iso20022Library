@@ -23,7 +23,7 @@ public record SecurityReuseData1
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public required IsoISINOct2015Identifier ISIN { get; init; }
+    public required ISINOct2015Identifier ISIN { get; init; }
 
     /// <summary>
     /// Indication whether reused value is actual or estimated.

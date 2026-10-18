@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentOrigin1Choice
         /// </summary>
         [IsoXmlTag("FINMT")]
         [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-        public required IsoMax3NumericText Value { get; init; }
+        public required Max3NumericText Value { get; init; }
     }
 }

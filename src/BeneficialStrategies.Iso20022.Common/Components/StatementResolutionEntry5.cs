@@ -21,7 +21,7 @@ public record StatementResolutionEntry5
     /// </summary>
     [DisplayName("Account Servicer Reference")]
     [IsoXmlTag("AcctSvcrRef")]
-    public IsoMax35Text? AccountServicerReference { get; init; }
+    public Max35Text? AccountServicerReference { get; init; }
 
     /// <summary>
     /// Charges.
@@ -49,7 +49,7 @@ public record StatementResolutionEntry5
     /// </summary>
     [DisplayName("Original Statement Identification")]
     [IsoXmlTag("OrgnlStmtId")]
-    public IsoMax35Text? OriginalStatementIdentification { get; init; }
+    public Max35Text? OriginalStatementIdentification { get; init; }
 
     /// <summary>
     /// Purpose.
@@ -63,5 +63,5 @@ public record StatementResolutionEntry5
     /// </summary>
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
-    public IsoUUIDv4Identifier? UETR { get; init; }
+    public UUIDv4Identifier? UETR { get; init; }
 }

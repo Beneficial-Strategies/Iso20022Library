@@ -119,19 +119,19 @@ search, published algorithm references) rather than stop at "MCP has nothing." R
 
 Some ISO 20022 primitives are directly W3C XSD builtins or map one-to-one onto a W3C-defined
 concept (`xs:anyURI`, `xs:duration`, `xs:QName`, and similar). Where the .NET BCL already ships a
-type for the underlying W3C standard (e.g. something in `System.Xml`), it's fine to alias straight
-to that existing type in `GlobalUsings.cs` instead of hand-writing a new `IIsoSimpleValue<T>`
+type for the underlying W3C standard (e.g. something in `System.Xml`), it's fine to use that
+existing type directly as the member's type instead of hand-writing a new `IIsoSimpleValue<T>`
 wrapper struct — no need to reinvent parsing/validation the framework already gets right.
 
-- This can point the alias at a **class**, not just a struct — some `System.Xml` types are
-  reference types. That's fine; the ISO primitives template's "always a `readonly struct`" rule is
+- This can be a **class**, not just a struct — some `System.Xml` types are reference types.
+  That's fine; the ISO primitives template's "always a `readonly struct`" rule is
   specifically about hand-written `IIsoSimpleValue<T>` wrappers, not about this exception.
-- A type aliased this way won't implement `IIsoSimpleValue<T>` and won't throw
+- A BCL type used this way won't implement `IIsoSimpleValue<T>` and won't throw
   `Iso20022FormatException` — it relies on the BCL type's own parsing/validation/serialization
-  instead. Note that in a comment on the alias line so it's clear the type is intentionally outside
+  instead. Say so in a comment where it is used, so it's clear the type is intentionally outside
   the usual contract-test/serializer plumbing, not an oversight.
 - Still verify the mapping is actually correct for the specific ISO 20022 primitive (e.g. does the
-  BCL type's wire format match what ISO 20022 expects on the XML/JSON side?) before aliasing —
+  BCL type's wire format match what ISO 20022 expects on the XML/JSON side?) before using it —
   this exception is about not re-implementing a solved problem, not about skipping verification.
 
 #### Class-typed properties and hierarchical record equality
@@ -285,13 +285,18 @@ src/BeneficialStrategies.Iso20022.Common/       # references Primitives
 ├── Choices/             # Polymorphic choice types
 └── MessageDefinitions/  # Top-level message type files
     └── [business areas]/    # 36 business area folders (pain, pacs, camt, seev, etc.)
-
-src/Shared/PrimitiveAliases.cs   # the Iso* aliases of the primitives, linked into every project that names them
 ```
 
 The primitives live in their own assembly so that an implementer can take them without the records. Nothing in `Primitives` may
 reference `Common`: build `Primitives` alone to check. Their tests are in `BeneficialStrategies.Iso20022.Primitives.Tests` (which
-references `Common` only for `Iso20022JsonSerializerOptions`). A new alias goes in `src/Shared/PrimitiveAliases.cs`.
+references `Common` only for `Iso20022JsonSerializerOptions`). 
+
+**Primitive types are named as the specification names them.** A member is declared `public required Max35Text MessageIdentification`,
+never through an alias (there are none since #33: the `Iso*` global usings were removed). A name that
+clashes with another type is written with its namespace: a choice variant named like its type
+(`Choices.RateTypeChoice.PercentageRate` has a `Value` of type `PercentageRate`) writes
+`BeneficialStrategies.Iso20022.SimpleTypes.PercentageRate`, because the short name would silently mean the variant itself.
+`NoSelfTypedMembersTests` fails for that mistake.
 
 ### Business Area Abbreviations
 

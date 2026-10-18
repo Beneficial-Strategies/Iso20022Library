@@ -32,7 +32,7 @@ public record AcquirerProtocolParameters6
     [IsoId("_kzSYwzZ4EeOP_KvUKe29ng")]
     [DisplayName("Application Identification")]
     [IsoXmlTag("ApplId")]
-    public SimpleValueList<IsoMax35Text> ApplicationIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> ApplicationIdentification { get; init; } = [];
 
     /// <summary>
     /// Acquirer host configuration.
@@ -73,7 +73,7 @@ public record AcquirerProtocolParameters6
     [DisplayName("Reconciliation By Acquirer")]
     [IsoXmlTag("RcncltnByAcqrr")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ReconciliationByAcquirer { get; init; }
+    public TrueFalseIndicator? ReconciliationByAcquirer { get; init; }
 
     /// <summary>
     /// Indicates the reconciliation total amounts are computed per currency.
@@ -82,7 +82,7 @@ public record AcquirerProtocolParameters6
     [DisplayName("Totals Per Currency")]
     [IsoXmlTag("TtlsPerCcy")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? TotalsPerCurrency { get; init; }
+    public TrueFalseIndicator? TotalsPerCurrency { get; init; }
 
     /// <summary>
     /// Indicates that totals in reconciliation or batch must be split per group of points of interaction and card product profiles when these informations are present in the transactions.
@@ -91,7 +91,7 @@ public record AcquirerProtocolParameters6
     [DisplayName("Split Totals")]
     [IsoXmlTag("SpltTtls")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? SplitTotals { get; init; }
+    public TrueFalseIndicator? SplitTotals { get; init; }
 
     /// <summary>
     /// Indicates that response messages and an AcceptorCompletionAdvice message following an authorisation exchange must contain protected or plain card data.
@@ -100,7 +100,7 @@ public record AcquirerProtocolParameters6
     [DisplayName("Card Data Verification")]
     [IsoXmlTag("CardDataVrfctn")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CardDataVerification { get; init; }
+    public TrueFalseIndicator? CardDataVerification { get; init; }
 
     /// <summary>
     /// Send a cancellation advice for offline transactions not yet captured.
@@ -109,7 +109,7 @@ public record AcquirerProtocolParameters6
     [DisplayName("Notify Off Line Cancellation")]
     [IsoXmlTag("NtfyOffLineCxl")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? NotifyOffLineCancellation { get; init; }
+    public TrueFalseIndicator? NotifyOffLineCancellation { get; init; }
 
     /// <summary>
     /// Types of transaction to include in the batch.
@@ -134,5 +134,5 @@ public record AcquirerProtocolParameters6
     [DisplayName("Protect Card Data")]
     [IsoXmlTag("PrtctCardData")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator ProtectCardData { get; init; }
+    public required TrueFalseIndicator ProtectCardData { get; init; }
 }

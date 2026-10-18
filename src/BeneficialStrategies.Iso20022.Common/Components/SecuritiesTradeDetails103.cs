@@ -39,7 +39,7 @@ public record SecuritiesTradeDetails103
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
     [IsoSimpleType(IsoSimpleType.Max3Number)]
-    public IsoMax3Number? NumberOfDaysAccrued { get; init; }
+    public Max3Number? NumberOfDaysAccrued { get; init; }
 
     /// <summary>
     /// Provides additional settlement processing information which can not be included within the structured fields of the message.
@@ -49,5 +49,5 @@ public record SecuritiesTradeDetails103
     [IsoXmlTag("InstrPrcgAddtlDtls")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? InstructionProcessingAdditionalDetails { get; init; }
+    public RestrictedFINXMax350Text? InstructionProcessingAdditionalDetails { get; init; }
 }

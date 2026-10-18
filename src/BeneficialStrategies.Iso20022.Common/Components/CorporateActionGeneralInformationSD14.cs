@@ -24,7 +24,7 @@ public record CorporateActionGeneralInformationSD14
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text PlaceAndName { get; init; }
+    public required Max350Text PlaceAndName { get; init; }
 
     /// <summary>
     /// Unique number systemically assigned to all Lottery and Non-Lottery events announced in DTC Redemptions (REDS) Participant Terminal System (PTS)/ Particinant Browser System(PBS) function.
@@ -33,5 +33,5 @@ public record CorporateActionGeneralInformationSD14
     [DisplayName("Redemption Identification")]
     [IsoXmlTag("RedId")]
     [IsoSimpleType(IsoSimpleType.Max10NumericText)]
-    public IsoMax10NumericText? RedemptionIdentification { get; init; }
+    public Max10NumericText? RedemptionIdentification { get; init; }
 }

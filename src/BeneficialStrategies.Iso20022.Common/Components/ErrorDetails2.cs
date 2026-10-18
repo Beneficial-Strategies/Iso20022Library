@@ -32,7 +32,7 @@ public record ErrorDetails2
     [IsoXmlTag("OthrMsgErrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherMessageErrorType { get; init; }
+    public Max35Text? OtherMessageErrorType { get; init; }
 
     /// <summary>
     /// Code that identifies the specific error found.
@@ -42,7 +42,7 @@ public record ErrorDetails2
     [IsoXmlTag("ErrCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ErrorCode { get; init; }
+    public Max35Text? ErrorCode { get; init; }
 
     /// <summary>
     /// Description of the error found.
@@ -52,7 +52,7 @@ public record ErrorDetails2
     [IsoXmlTag("ErrDesc")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public IsoMax500Text? ErrorDescription { get; init; }
+    public Max500Text? ErrorDescription { get; init; }
 
     /// <summary>
     /// Data element in error.
@@ -60,5 +60,5 @@ public record ErrorDetails2
     [IsoId("_9jUPadBHEeuFC7k3JpyaRA")]
     [DisplayName("Data Element In Error")]
     [IsoXmlTag("DataElmtInErr")]
-    public SimpleValueList<IsoMax4000Text> DataElementInError { get; init; } = [];
+    public SimpleValueList<Max4000Text> DataElementInError { get; init; } = [];
 }

@@ -31,7 +31,7 @@ public record TransactionTotals5
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber Number { get; init; }
+    public required Number Number { get; init; }
 
     /// <summary>
     /// Cumulative amount of all chargeback transactions exclusive of any fees.
@@ -48,7 +48,7 @@ public record TransactionTotals5
     [DisplayName("Charge Back Number")]
     [IsoXmlTag("ChrgBckNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber ChargeBackNumber { get; init; }
+    public required Number ChargeBackNumber { get; init; }
 
     /// <summary>
     /// Cumulative amount of all reversal transactions exclusive of any fees.
@@ -65,7 +65,7 @@ public record TransactionTotals5
     [DisplayName("Reversal Number")]
     [IsoXmlTag("RvslNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber ReversalNumber { get; init; }
+    public required Number ReversalNumber { get; init; }
 
     /// <summary>
     /// Sum amount of all fees.

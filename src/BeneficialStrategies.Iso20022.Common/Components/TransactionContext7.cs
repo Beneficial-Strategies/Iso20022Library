@@ -32,7 +32,7 @@ public record TransactionContext7
     [IsoXmlTag("MrchntCtgySpcfcData")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MerchantCategorySpecificData { get; init; }
+    public Max35Text? MerchantCategorySpecificData { get; init; }
 
     /// <summary>
     /// Notifies the express consent of the customer for a given service (used in DCC, funds transfers, money lending, etc.).
@@ -43,7 +43,7 @@ public record TransactionContext7
     [DisplayName("Customer Consent")]
     [IsoXmlTag("CstmrCnsnt")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CustomerConsent { get; init; }
+    public TrueFalseIndicator? CustomerConsent { get; init; }
 
     /// <summary>
     /// PIN pad is inoperative.
@@ -54,7 +54,7 @@ public record TransactionContext7
     [DisplayName("PIN Pad Inoperative")]
     [IsoXmlTag("PINPadInprtv")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? PINPadInoperative { get; init; }
+    public TrueFalseIndicator? PINPadInoperative { get; init; }
 
     /// <summary>
     /// Indicate the PIN entry bypass.
@@ -63,7 +63,7 @@ public record TransactionContext7
     [DisplayName("PIN Entry Bypass Indicator")]
     [IsoXmlTag("PINNtryBpssInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? PINEntryBypassIndicator { get; init; }
+    public TrueFalseIndicator? PINEntryBypassIndicator { get; init; }
 
     /// <summary>
     /// Indicates a chip data fallback.
@@ -72,7 +72,7 @@ public record TransactionContext7
     [DisplayName("ICC Fallback Indicator")]
     [IsoXmlTag("ICCFllbckInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ICCFallbackIndicator { get; init; }
+    public TrueFalseIndicator? ICCFallbackIndicator { get; init; }
 
     /// <summary>
     /// A code that provides the reason of ICC fallback.
@@ -90,7 +90,7 @@ public record TransactionContext7
     [IsoXmlTag("OthrICCFllbckRsnCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherICCFallbackReasonCode { get; init; }
+    public Max35Text? OtherICCFallbackReasonCode { get; init; }
 
     /// <summary>
     /// Indicates a magnetic stripe fallback.
@@ -102,7 +102,7 @@ public record TransactionContext7
     [DisplayName("Magnetic Stripe Fallback Indicator")]
     [IsoXmlTag("MgntcStrpFllbckInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? MagneticStripeFallbackIndicator { get; init; }
+    public TrueFalseIndicator? MagneticStripeFallbackIndicator { get; init; }
 
     /// <summary>
     /// Indicates a late presentment as defined by each specific implementation.
@@ -114,7 +114,7 @@ public record TransactionContext7
     [DisplayName("Late Presentment Indicator")]
     [IsoXmlTag("LatePresntmntInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? LatePresentmentIndicator { get; init; }
+    public TrueFalseIndicator? LatePresentmentIndicator { get; init; }
 
     /// <summary>
     /// Identifies final authorisation messages for the purpose of managing open-to buy or available balance.
@@ -123,7 +123,7 @@ public record TransactionContext7
     [DisplayName("Final Authorisation Indicator")]
     [IsoXmlTag("FnlAuthstnInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? FinalAuthorisationIndicator { get; init; }
+    public TrueFalseIndicator? FinalAuthorisationIndicator { get; init; }
 
     /// <summary>
     /// Indicates a deferred delivery as defined by each specific implementation.
@@ -135,7 +135,7 @@ public record TransactionContext7
     [DisplayName("Deferred Delivery Indicator")]
     [IsoXmlTag("DfrrdDlvryInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? DeferredDeliveryIndicator { get; init; }
+    public TrueFalseIndicator? DeferredDeliveryIndicator { get; init; }
 
     /// <summary>
     /// Indicates the partial shipment.
@@ -144,7 +144,7 @@ public record TransactionContext7
     [DisplayName("Partial Shipment Indicator")]
     [IsoXmlTag("PrtlShipmntInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? PartialShipmentIndicator { get; init; }
+    public TrueFalseIndicator? PartialShipmentIndicator { get; init; }
 
     /// <summary>
     /// Indicates a delayed charge.
@@ -153,7 +153,7 @@ public record TransactionContext7
     [DisplayName("Delayed Charges Indicator")]
     [IsoXmlTag("DelydChrgsInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? DelayedChargesIndicator { get; init; }
+    public TrueFalseIndicator? DelayedChargesIndicator { get; init; }
 
     /// <summary>
     /// Indicates that the cardholder failed to arrive at the property and was therefore charged a no-show fee; property was not actually rented.
@@ -162,7 +162,7 @@ public record TransactionContext7
     [DisplayName("No Show Indicator")]
     [IsoXmlTag("NoShowInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? NoShowIndicator { get; init; }
+    public TrueFalseIndicator? NoShowIndicator { get; init; }
 
     /// <summary>
     /// Indicates a reauthorisation.
@@ -171,7 +171,7 @@ public record TransactionContext7
     [DisplayName("Reauthorisation Indicator")]
     [IsoXmlTag("ReauthstnInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ReauthorisationIndicator { get; init; }
+    public TrueFalseIndicator? ReauthorisationIndicator { get; init; }
 
     /// <summary>
     /// Indicates a resubmission.
@@ -180,7 +180,7 @@ public record TransactionContext7
     [DisplayName("Re Submission Indicator")]
     [IsoXmlTag("ReSubmissnInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ReSubmissionIndicator { get; init; }
+    public TrueFalseIndicator? ReSubmissionIndicator { get; init; }
 
     /// <summary>
     /// Identifies the transaction initiator.
@@ -197,7 +197,7 @@ public record TransactionContext7
     [DisplayName("Authentication Outage Indicator")]
     [IsoXmlTag("AuthntcnOutgInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? AuthenticationOutageIndicator { get; init; }
+    public TrueFalseIndicator? AuthenticationOutageIndicator { get; init; }
 
     /// <summary>
     /// Card programme or brand related to the transaction.
@@ -247,7 +247,7 @@ public record TransactionContext7
     [DisplayName("Capture Date")]
     [IsoXmlTag("CaptrDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? CaptureDate { get; init; }
+    public DateOnly? CaptureDate { get; init; }
 
     /// <summary>
     /// The date on which the sale or purchase is expected to occur.
@@ -256,7 +256,7 @@ public record TransactionContext7
     [DisplayName("Date Anticipated")]
     [IsoXmlTag("DtAntcptd")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DateAnticipated { get; init; }
+    public DateOnly? DateAnticipated { get; init; }
 
     /// <summary>
     /// Additional transaction context data.

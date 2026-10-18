@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification12Choice
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.RestrictedFINXMax31Text)]
         [StringLength(maximumLength: 31, MinimumLength = 1)]
-        public required IsoRestrictedFINXMax31Text Identification { get; init; }
+        public required RestrictedFINXMax31Text Identification { get; init; }
 
         /// <summary>
         /// Source of the security identification.

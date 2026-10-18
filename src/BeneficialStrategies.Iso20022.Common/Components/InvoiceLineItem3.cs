@@ -42,14 +42,14 @@ public record InvoiceLineItem3
     /// </summary>
     [DisplayName("Adjustment Reason")]
     [IsoXmlTag("AdjstmntRsn")]
-    public IsoMax35Text? AdjustmentReason { get; init; }
+    public Max35Text? AdjustmentReason { get; init; }
 
     /// <summary>
     /// Contract Number.
     /// </summary>
     [DisplayName("Contract Number")]
     [IsoXmlTag("CtrctNb")]
-    public IsoMax70Text? ContractNumber { get; init; }
+    public Max70Text? ContractNumber { get; init; }
 
     /// <summary>
     /// Credit Debit.
@@ -63,21 +63,21 @@ public record InvoiceLineItem3
     /// </summary>
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Description.
     /// </summary>
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax256Text? Description { get; init; }
+    public Max256Text? Description { get; init; }
 
     /// <summary>
     /// Insurance.
     /// </summary>
     [DisplayName("Insurance")]
     [IsoXmlTag("Insrnc")]
-    public IsoTrueFalseIndicator? Insurance { get; init; }
+    public TrueFalseIndicator? Insurance { get; init; }
 
     /// <summary>
     /// Insurance Amount.
@@ -91,63 +91,63 @@ public record InvoiceLineItem3
     /// </summary>
     [DisplayName("Medical Services")]
     [IsoXmlTag("MdclSvcs")]
-    public IsoTrueFalseIndicator? MedicalServices { get; init; }
+    public TrueFalseIndicator? MedicalServices { get; init; }
 
     /// <summary>
     /// Order Date.
     /// </summary>
     [DisplayName("Order Date")]
     [IsoXmlTag("OrdrDt")]
-    public IsoISODate? OrderDate { get; init; }
+    public DateOnly? OrderDate { get; init; }
 
     /// <summary>
     /// Other Unit Of Measure.
     /// </summary>
     [DisplayName("Other Unit Of Measure")]
     [IsoXmlTag("OthrUnitOfMeasr")]
-    public IsoMax35Text? OtherUnitOfMeasure { get; init; }
+    public Max35Text? OtherUnitOfMeasure { get; init; }
 
     /// <summary>
     /// Product Code.
     /// </summary>
     [DisplayName("Product Code")]
     [IsoXmlTag("PdctCd")]
-    public IsoMax70Text? ProductCode { get; init; }
+    public Max70Text? ProductCode { get; init; }
 
     /// <summary>
     /// Product Qualifier.
     /// </summary>
     [DisplayName("Product Qualifier")]
     [IsoXmlTag("PdctQlfr")]
-    public IsoMax35Text? ProductQualifier { get; init; }
+    public Max35Text? ProductQualifier { get; init; }
 
     /// <summary>
     /// Product Quantity.
     /// </summary>
     [DisplayName("Product Quantity")]
     [IsoXmlTag("PdctQty")]
-    public IsoDecimalNumber? ProductQuantity { get; init; }
+    public DecimalNumber? ProductQuantity { get; init; }
 
     /// <summary>
     /// Rebilling.
     /// </summary>
     [DisplayName("Rebilling")]
     [IsoXmlTag("Rbllg")]
-    public IsoTrueFalseIndicator? Rebilling { get; init; }
+    public TrueFalseIndicator? Rebilling { get; init; }
 
     /// <summary>
     /// Shipping Date.
     /// </summary>
     [DisplayName("Shipping Date")]
     [IsoXmlTag("ShppgDt")]
-    public IsoISODate? ShippingDate { get; init; }
+    public DateOnly? ShippingDate { get; init; }
 
     /// <summary>
     /// Ship To Industry Code.
     /// </summary>
     [DisplayName("Ship To Industry Code")]
     [IsoXmlTag("ShipToIndstryCd")]
-    public IsoMax50Text? ShipToIndustryCode { get; init; }
+    public Max50Text? ShipToIndustryCode { get; init; }
 
     /// <summary>
     /// Tax.
@@ -168,7 +168,7 @@ public record InvoiceLineItem3
     /// </summary>
     [DisplayName("Type Of Supply")]
     [IsoXmlTag("TpOfSpply")]
-    public IsoMax10Text? TypeOfSupply { get; init; }
+    public Max10Text? TypeOfSupply { get; init; }
 
     /// <summary>
     /// Unit Of Measure.
@@ -189,12 +189,12 @@ public record InvoiceLineItem3
     /// </summary>
     [DisplayName("VAT Invoice Reference")]
     [IsoXmlTag("VATInvcRef")]
-    public IsoMax35Text? VATInvoiceReference { get; init; }
+    public Max35Text? VATInvoiceReference { get; init; }
 
     /// <summary>
     /// Zero Cost To Customer.
     /// </summary>
     [DisplayName("Zero Cost To Customer")]
     [IsoXmlTag("ZeroCostToCstmr")]
-    public IsoTrueFalseIndicator? ZeroCostToCustomer { get; init; }
+    public TrueFalseIndicator? ZeroCostToCustomer { get; init; }
 }

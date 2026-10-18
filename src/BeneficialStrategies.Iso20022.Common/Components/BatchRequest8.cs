@@ -30,7 +30,7 @@ public record BatchRequest8
     [IsoId("_QYpNK7ZaEfCUZfsQO4rYeA")]
     [DisplayName("Remove All Flag")]
     [IsoXmlTag("RmvAllFlg")]
-    public IsoTrueFalseIndicator? RemoveAllFlag { get; init; }
+    public TrueFalseIndicator? RemoveAllFlag { get; init; }
 
     /// <summary>
     /// Content of the Batch Request message.

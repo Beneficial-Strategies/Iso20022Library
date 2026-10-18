@@ -21,7 +21,7 @@ public record IntraBalanceQueryCriteria10
     /// </summary>
     [DisplayName("Cancellation Request Identification")]
     [IsoXmlTag("CxlReqId")]
-    public ValueList<IsoMax35Text> CancellationRequestIdentification { get; init; } = [];
+    public ValueList<Max35Text> CancellationRequestIdentification { get; init; } = [];
 
     /// <summary>
     /// Cash Account.

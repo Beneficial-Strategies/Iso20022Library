@@ -23,5 +23,5 @@ public record BICIdentification1
     [DisplayName("BIC")]
     [IsoXmlTag("BIC")]
     [IsoSimpleType(IsoSimpleType.BICIdentifier)]
-    public required IsoBICIdentifier BIC { get; init; }
+    public required BICIdentifier BIC { get; init; }
 }

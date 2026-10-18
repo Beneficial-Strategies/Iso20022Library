@@ -31,7 +31,7 @@ public record Parameter6
     [DisplayName("Initialisation Vector")]
     [IsoXmlTag("InitlstnVctr")]
     [IsoSimpleType(IsoSimpleType.Max500Binary)]
-    public IsoMax500Binary? InitialisationVector { get; init; }
+    public Max500Binary? InitialisationVector { get; init; }
 
     /// <summary>
     /// Byte padding for a cypher block chaining mode encryption, if the padding is not implicit.

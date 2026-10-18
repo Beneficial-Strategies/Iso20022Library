@@ -22,7 +22,7 @@ public record TransportBySea6
     [IsoId("_W4LZwRriEeOVR9VN6fAMUg")]
     [DisplayName("Port Of Loading")]
     [IsoXmlTag("PortOfLoadng")]
-    public SimpleValueList<IsoMax35Text> PortOfLoading { get; init; } = [];
+    public SimpleValueList<Max35Text> PortOfLoading { get; init; } = [];
 
     /// <summary>
     /// Identifies the port where the goods are discharged.
@@ -43,7 +43,7 @@ public record TransportBySea6
     [IsoXmlTag("VsslNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? VesselName { get; init; }
+    public Max70Text? VesselName { get; init; }
 
     /// <summary>
     /// Identifies the party that is responsible for the conveyance of the goods from one place to another.
@@ -53,7 +53,7 @@ public record TransportBySea6
     [IsoXmlTag("SeaCrrierNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? SeaCarrierName { get; init; }
+    public Max70Text? SeaCarrierName { get; init; }
 
     /// <summary>
     /// Country in which the carrier of the goods, for example, shipping company, is located or registered.
@@ -71,7 +71,7 @@ public record TransportBySea6
     [IsoXmlTag("CrrierAgtNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? CarrierAgentName { get; init; }
+    public Max70Text? CarrierAgentName { get; init; }
 
     /// <summary>
     /// Country of registration of the carrier&apos;s (for example, shipping company&apos;s) agent that acts on behalf of the carrier and may be the issuer of transport documents relating to the underlying shipment.

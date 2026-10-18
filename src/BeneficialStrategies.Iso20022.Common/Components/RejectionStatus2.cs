@@ -32,5 +32,5 @@ public record RejectionStatus2
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AdditionalInformation { get; init; }
+    public Max35Text? AdditionalInformation { get; init; }
 }

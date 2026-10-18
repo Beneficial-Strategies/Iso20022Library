@@ -24,7 +24,7 @@ public record Customer5
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Name { get; init; }
+    public Max70Text? Name { get; init; }
 
     /// <summary>
     /// Details of the party identification.
@@ -42,7 +42,7 @@ public record Customer5
     [IsoXmlTag("CstmrFileRefNb")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? CustomerFileReferenceNumber { get; init; }
+    public Max70Text? CustomerFileReferenceNumber { get; init; }
 
     /// <summary>
     /// Age of the customer.
@@ -51,7 +51,7 @@ public record Customer5
     [DisplayName("Age")]
     [IsoXmlTag("Age")]
     [IsoSimpleType(IsoSimpleType.Max2NumericText)]
-    public IsoMax2NumericText? Age { get; init; }
+    public Max2NumericText? Age { get; init; }
 
     /// <summary>
     /// Address details of the customer.

@@ -24,7 +24,7 @@ public record Vote5
     [IsoXmlTag("IssrLabl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text IssuerLabel { get; init; }
+    public required Max35Text IssuerLabel { get; init; }
 
     /// <summary>
     /// Specifies whether a resolution is accepted or not.
@@ -33,7 +33,7 @@ public record Vote5
     [DisplayName("Accepted")]
     [IsoXmlTag("Accptd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator Accepted { get; init; }
+    public required YesNoIndicator Accepted { get; init; }
 
     /// <summary>
     /// Number of votes in favour of one resolution.
@@ -42,7 +42,7 @@ public record Vote5
     [DisplayName("For")]
     [IsoXmlTag("For")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? For { get; init; }
+    public Number? For { get; init; }
 
     /// <summary>
     /// Number of votes against one resolution.
@@ -51,7 +51,7 @@ public record Vote5
     [DisplayName("Against")]
     [IsoXmlTag("Agnst")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Against { get; init; }
+    public Number? Against { get; init; }
 
     /// <summary>
     /// Number of votes expressed as abstain.
@@ -60,7 +60,7 @@ public record Vote5
     [DisplayName("Abstain")]
     [IsoXmlTag("Abstn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Abstain { get; init; }
+    public Number? Abstain { get; init; }
 
     /// <summary>
     /// Total votes withheld, eg in the case where a shareholder wishes not to endorse the election of a board member.
@@ -69,7 +69,7 @@ public record Vote5
     [DisplayName("Withhold")]
     [IsoXmlTag("Wthhld")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Withhold { get; init; }
+    public Number? Withhold { get; init; }
 
     /// <summary>
     /// Number of votes for which no action has been taken.
@@ -78,5 +78,5 @@ public record Vote5
     [DisplayName("No Action")]
     [IsoXmlTag("NoActn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NoAction { get; init; }
+    public Number? NoAction { get; init; }
 }

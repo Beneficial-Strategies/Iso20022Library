@@ -24,7 +24,7 @@ public record SpecialProgrammeQualification1
     [IsoXmlTag("Prgrmm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Programme { get; init; }
+    public Max35Text? Programme { get; init; }
 
     /// <summary>
     /// Name and value associated with a special programme.

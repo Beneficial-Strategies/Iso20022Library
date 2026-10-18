@@ -22,7 +22,7 @@ public record SplitObligationAttributes1
     [IsoId("858010ab-86bb-42db-94fe-61f38a0df1fa")]
     [DisplayName("Obligation Identification")]
     [IsoXmlTag("OblgtnId")]
-    public required IsoMax35Text ObligationIdentification { get; init; }
+    public required Max35Text ObligationIdentification { get; init; }
 
     /// <summary>
     /// Sequence number for the split.
@@ -30,7 +30,7 @@ public record SplitObligationAttributes1
     [IsoId("8b850219-f6d1-4b1e-945e-a6582608ea4f")]
     [DisplayName("Split Sequence Number")]
     [IsoXmlTag("SpltSeqNb")]
-    public required IsoMax15NumericText SplitSequenceNumber { get; init; }
+    public required Max15NumericText SplitSequenceNumber { get; init; }
 
     /// <summary>
     /// Amount of money for the split.

@@ -24,7 +24,7 @@ public record ProprietaryStatusJustification1
     [IsoXmlTag("PrtryStsRsn")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public required IsoMax4AlphaNumericText ProprietaryStatusReason { get; init; }
+    public required Max4AlphaNumericText ProprietaryStatusReason { get; init; }
 
     /// <summary>
     /// Provides detailed information about the reason why the Target2 SSP system has rejected the transaction.
@@ -34,5 +34,5 @@ public record ProprietaryStatusJustification1
     [IsoXmlTag("Rsn")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public required IsoMax256Text Reason { get; init; }
+    public required Max256Text Reason { get; init; }
 }

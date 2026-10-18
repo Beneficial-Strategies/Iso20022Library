@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeMinimus1Choice
         [DisplayName("New Issue Permission")]
         [IsoXmlTag("NewIssePrmssn")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public required IsoYesNoIndicator NewIssuePermission { get; init; }
+        public required YesNoIndicator NewIssuePermission { get; init; }
 
         /// <summary>
         /// Percentage of the new issue profits and losses that it receives to beneficial owners that are restricted persons.
@@ -32,6 +32,6 @@ namespace BeneficialStrategies.Iso20022.Choices.DeMinimus1Choice
         [DisplayName("Percentage")]
         [IsoXmlTag("Pctg")]
         [IsoSimpleType(IsoSimpleType.PercentageRate)]
-        public IsoPercentageRate? Percentage { get; init; }
+        public PercentageRate? Percentage { get; init; }
     }
 }

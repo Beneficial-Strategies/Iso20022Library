@@ -28,49 +28,49 @@ public record PaymentCard34
     /// </summary>
     [DisplayName("Card Issuer Name")]
     [IsoXmlTag("CardIssrNm")]
-    public IsoMax35Text? CardIssuerName { get; init; }
+    public Max35Text? CardIssuerName { get; init; }
 
     /// <summary>
     /// Expiry Date.
     /// </summary>
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
-    public required IsoISOYearMonth ExpiryDate { get; init; }
+    public required ISOYearMonth ExpiryDate { get; init; }
 
     /// <summary>
     /// Holder Name.
     /// </summary>
     [DisplayName("Holder Name")]
     [IsoXmlTag("HldrNm")]
-    public required IsoMax35Text HolderName { get; init; }
+    public required Max35Text HolderName { get; init; }
 
     /// <summary>
     /// Number.
     /// </summary>
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
-    public required IsoMax35Text Number { get; init; }
+    public required Max35Text Number { get; init; }
 
     /// <summary>
     /// Security Code.
     /// </summary>
     [DisplayName("Security Code")]
     [IsoXmlTag("SctyCd")]
-    public IsoMax35Text? SecurityCode { get; init; }
+    public Max35Text? SecurityCode { get; init; }
 
     /// <summary>
     /// Sequence Number.
     /// </summary>
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
-    public IsoMax3Text? SequenceNumber { get; init; }
+    public Max3Text? SequenceNumber { get; init; }
 
     /// <summary>
     /// Start Date.
     /// </summary>
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
-    public IsoISOYearMonth? StartDate { get; init; }
+    public ISOYearMonth? StartDate { get; init; }
 
     /// <summary>
     /// Type.

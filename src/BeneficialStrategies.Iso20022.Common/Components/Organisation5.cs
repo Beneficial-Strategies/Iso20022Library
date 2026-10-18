@@ -32,7 +32,7 @@ public record Organisation5
     [IsoXmlTag("CmonNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CommonName { get; init; }
+    public Max35Text? CommonName { get; init; }
 
     /// <summary>
     /// Location category of the place where the merchant actually performed the transaction.
@@ -50,7 +50,7 @@ public record Organisation5
     [IsoXmlTag("Adr")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Address { get; init; }
+    public Max70Text? Address { get; init; }
 
     /// <summary>
     /// Country of the merchant where the transaction took place.
@@ -68,5 +68,5 @@ public record Organisation5
     [IsoXmlTag("SchmeData")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? SchemeData { get; init; }
+    public Max140Text? SchemeData { get; init; }
 }

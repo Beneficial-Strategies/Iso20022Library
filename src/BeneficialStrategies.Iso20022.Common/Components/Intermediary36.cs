@@ -31,7 +31,7 @@ public record Intermediary36
     [DisplayName("Legal Entity Identifier")]
     [IsoXmlTag("LglNttyIdr")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? LegalEntityIdentifier { get; init; }
+    public LEIIdentifier? LegalEntityIdentifier { get; init; }
 
     /// <summary>
     /// Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.
@@ -48,7 +48,7 @@ public record Intermediary36
     [DisplayName("Waived Trailer Commission Indicator")]
     [IsoXmlTag("WvdTrlrComssnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? WaivedTrailerCommissionIndicator { get; init; }
+    public YesNoIndicator? WaivedTrailerCommissionIndicator { get; init; }
 
     /// <summary>
     /// Role or function performed by the intermediary.

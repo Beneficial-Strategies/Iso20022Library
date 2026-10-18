@@ -30,5 +30,5 @@ public record LocalAmenity2
     [IsoId("_UOb9hXbhEfCmC4yYaU27Kg")]
     [DisplayName("Available Indicator")]
     [IsoXmlTag("AvlblInd")]
-    public IsoTrueFalseIndicator? AvailableIndicator { get; init; }
+    public TrueFalseIndicator? AvailableIndicator { get; init; }
 }

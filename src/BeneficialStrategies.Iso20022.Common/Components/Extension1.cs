@@ -25,7 +25,7 @@ public record Extension1
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text PlaceAndName { get; init; }
+    public required Max350Text PlaceAndName { get; init; }
 
     /// <summary>
     /// Text of the extension.
@@ -35,5 +35,5 @@ public record Extension1
     [IsoXmlTag("Txt")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text Text { get; init; }
+    public required Max350Text Text { get; init; }
 }

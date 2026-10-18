@@ -54,7 +54,7 @@ public record TMSAction14
     [IsoId("_AOesQbYFEfCUZfsQO4rYeA-tpro")]
     [DisplayName("TMS Protocol")]
     [IsoXmlTag("TMSPrtcl")]
-    public IsoMax35Text? TMSProtocol { get; init; }
+    public Max35Text? TMSProtocol { get; init; }
 
     /// <summary>
     /// Version of the TMS protocol to use to perform the maintenance action.
@@ -62,7 +62,7 @@ public record TMSAction14
     [IsoId("_AOesQbYFEfCUZfsQO4rYeA-tpvr")]
     [DisplayName("TMS Protocol Version")]
     [IsoXmlTag("TMSPrtclVrsn")]
-    public IsoMax35Text? TMSProtocolVersion { get; init; }
+    public Max35Text? TMSProtocolVersion { get; init; }
 
     /// <summary>
     /// Data set on which the action has to be performed.
@@ -86,7 +86,7 @@ public record TMSAction14
     [IsoId("_AOesQbYFEfCUZfsQO4rYeA-dlsc")]
     [DisplayName("Delegation Scope Identification")]
     [IsoXmlTag("DlgtnScopeId")]
-    public IsoMax35Text? DelegationScopeIdentification { get; init; }
+    public Max35Text? DelegationScopeIdentification { get; init; }
 
     /// <summary>
     /// This element contains all information relevant to the DelegationScopeIdentification. The format of this element is out of scope of this definition.
@@ -94,7 +94,7 @@ public record TMSAction14
     [IsoId("_AOesQbYFEfCUZfsQO4rYeA-dlsd")]
     [DisplayName("Delegation Scope Definition")]
     [IsoXmlTag("DlgtnScopeDfntn")]
-    public IsoMax3000Binary? DelegationScopeDefinition { get; init; }
+    public Max3000Binary? DelegationScopeDefinition { get; init; }
 
     /// <summary>
     /// Contains the necessary information to secure the management of the Delegation. The format of this element is out of scope of this definition.
@@ -102,7 +102,7 @@ public record TMSAction14
     [IsoId("_AOesQbYFEfCUZfsQO4rYeA-dlsp")]
     [DisplayName("Delegation Proof")]
     [IsoXmlTag("DlgtnPrf")]
-    public IsoMax5000Binary? DelegationProof { get; init; }
+    public Max5000Binary? DelegationProof { get; init; }
 
     /// <summary>
     /// Protected proof of delegation.
@@ -150,7 +150,7 @@ public record TMSAction14
     [IsoId("_AOesQbYFEfCUZfsQO4rYeA-tmch")]
     [DisplayName("TM Challenge")]
     [IsoXmlTag("TMChllng")]
-    public IsoMax140Binary? TMChallenge { get; init; }
+    public Max140Binary? TMChallenge { get; init; }
 
     /// <summary>
     /// Certificate chain for the encryption of temporary transport key of the key to inject.
@@ -158,7 +158,7 @@ public record TMSAction14
     [IsoId("_AOesQbYFEfCUZfsQO4rYeA-kecr")]
     [DisplayName("Key Encipherment Certificate")]
     [IsoXmlTag("KeyNcrptnCert")]
-    public SimpleValueList<IsoMax10KBinary> KeyEnciphermentCertificate { get; init; } = [];
+    public SimpleValueList<Max10KBinary> KeyEnciphermentCertificate { get; init; } = [];
 
     /// <summary>
     /// Action to perform in case of error on the related action in progress.
@@ -174,7 +174,7 @@ public record TMSAction14
     [IsoId("_AOesQbYFEfCUZfsQO4rYeA-adif")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public SimpleValueList<IsoMax3000Binary> AdditionalInformation { get; init; } = [];
+    public SimpleValueList<Max3000Binary> AdditionalInformation { get; init; } = [];
 
     /// <summary>
     /// Configuration of a message item.

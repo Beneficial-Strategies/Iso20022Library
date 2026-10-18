@@ -28,14 +28,14 @@ public record CardAccount17
     /// </summary>
     [DisplayName("Account Name")]
     [IsoXmlTag("AcctNm")]
-    public IsoMax70Text? AccountName { get; init; }
+    public Max70Text? AccountName { get; init; }
 
     /// <summary>
     /// Credit Reference.
     /// </summary>
     [DisplayName("Credit Reference")]
     [IsoXmlTag("CdtRef")]
-    public IsoMax35Text? CreditReference { get; init; }
+    public Max35Text? CreditReference { get; init; }
 
     /// <summary>
     /// Currency.

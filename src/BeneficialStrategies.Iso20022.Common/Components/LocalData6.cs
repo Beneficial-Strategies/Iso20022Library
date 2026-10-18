@@ -40,7 +40,7 @@ public record LocalData6
     [IsoXmlTag("MlngAdrUstrd")]
     [IsoSimpleType(IsoSimpleType.Max512Text)]
     [StringLength(maximumLength: 512, MinimumLength = 1)]
-    public IsoMax512Text? MailingAddressUnstructured { get; init; }
+    public Max512Text? MailingAddressUnstructured { get; init; }
 
     /// <summary>
     /// For cases where the card was not received, contains the local language equivalent of the postal code where the card was mailed from.
@@ -50,7 +50,7 @@ public record LocalData6
     [IsoXmlTag("MldFrPstlCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MailedFromPostalCode { get; init; }
+    public Max35Text? MailedFromPostalCode { get; init; }
 
     /// <summary>
     /// Local language equivalent of the Cardholder name.

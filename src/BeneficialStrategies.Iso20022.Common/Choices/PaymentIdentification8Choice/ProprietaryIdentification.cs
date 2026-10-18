@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification8Choice
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("PrtryId")]
-        public required IsoMax70Text Value { get; init; }
+        public required Max70Text Value { get; init; }
     }
 }

@@ -55,7 +55,7 @@ public record BonusWithdrawal1
     [DisplayName("Outstanding")]
     [IsoXmlTag("Outsdng")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? Outstanding { get; init; }
+    public YesNoIndicator? Outstanding { get; init; }
 
     /// <summary>
     /// Additional information about the monies paid out or withdrawn.

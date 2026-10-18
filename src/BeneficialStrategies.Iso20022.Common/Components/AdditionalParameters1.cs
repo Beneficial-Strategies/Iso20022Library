@@ -40,5 +40,5 @@ public record AdditionalParameters1
     [IsoXmlTag("GeoArea")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? GeographicalArea { get; init; }
+    public Max35Text? GeographicalArea { get; init; }
 }

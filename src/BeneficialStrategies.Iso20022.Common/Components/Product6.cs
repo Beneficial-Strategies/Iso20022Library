@@ -24,7 +24,7 @@ public record Product6
     [IsoXmlTag("ItmId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ItemIdentification { get; init; }
+    public Max35Text? ItemIdentification { get; init; }
 
     /// <summary>
     /// Product code of the item.
@@ -34,7 +34,7 @@ public record Product6
     [IsoXmlTag("PdctCd")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public required IsoMax70Text ProductCode { get; init; }
+    public required Max70Text ProductCode { get; init; }
 
     /// <summary>
     /// Additional product code related to the product.
@@ -44,7 +44,7 @@ public record Product6
     [IsoXmlTag("AddtlPdctCd")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AdditionalProductCode { get; init; }
+    public Max70Text? AdditionalProductCode { get; init; }
 
     /// <summary>
     /// Unit of measure of the item purchased.
@@ -61,7 +61,7 @@ public record Product6
     [DisplayName("Product Quantity")]
     [IsoXmlTag("PdctQty")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? ProductQuantity { get; init; }
+    public DecimalNumber? ProductQuantity { get; init; }
 
     /// <summary>
     /// Price per unit of product.
@@ -78,7 +78,7 @@ public record Product6
     [DisplayName("Unit Price Sign")]
     [IsoXmlTag("UnitPricSgn")]
     [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
-    public IsoPlusOrMinusIndicator? UnitPriceSign { get; init; }
+    public PlusOrMinusIndicator? UnitPriceSign { get; init; }
 
     /// <summary>
     /// Monetary value of purchased product.
@@ -95,7 +95,7 @@ public record Product6
     [DisplayName("Product Amount Sign")]
     [IsoXmlTag("PdctAmtSgn")]
     [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
-    public IsoPlusOrMinusIndicator? ProductAmountSign { get; init; }
+    public PlusOrMinusIndicator? ProductAmountSign { get; init; }
 
     /// <summary>
     /// Value added tax amount of the item included in the product amount.
@@ -113,7 +113,7 @@ public record Product6
     [IsoXmlTag("TaxTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TaxType { get; init; }
+    public Max35Text? TaxType { get; init; }
 
     /// <summary>
     /// Description of the product or item.
@@ -123,7 +123,7 @@ public record Product6
     [IsoXmlTag("PdctDesc")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? ProductDescription { get; init; }
+    public Max140Text? ProductDescription { get; init; }
 
     /// <summary>
     /// Location of the delivery of the item, for instance pump number or parking bay.
@@ -133,7 +133,7 @@ public record Product6
     [IsoXmlTag("DlvryLctn")]
     [IsoSimpleType(IsoSimpleType.Max10Text)]
     [StringLength(maximumLength: 10, MinimumLength = 1)]
-    public IsoMax10Text? DeliveryLocation { get; init; }
+    public Max10Text? DeliveryLocation { get; init; }
 
     /// <summary>
     /// Identify the method of delivery or distribution of the item.
@@ -151,7 +151,7 @@ public record Product6
     [IsoXmlTag("SaleChanl")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? SaleChannel { get; init; }
+    public Max70Text? SaleChannel { get; init; }
 
     /// <summary>
     /// Additional information related to the line item.
@@ -161,5 +161,5 @@ public record Product6
     [IsoXmlTag("AddtlPdctDesc")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? AdditionalProductDescription { get; init; }
+    public Max256Text? AdditionalProductDescription { get; init; }
 }

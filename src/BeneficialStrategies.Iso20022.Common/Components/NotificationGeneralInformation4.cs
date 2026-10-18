@@ -24,7 +24,7 @@ public record NotificationGeneralInformation4
     [IsoXmlTag("NtfctnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? NotificationIdentification { get; init; }
+    public Max35Text? NotificationIdentification { get; init; }
 
     /// <summary>
     /// Type of notification.
@@ -49,7 +49,7 @@ public record NotificationGeneralInformation4
     [DisplayName("Shareholder Rights Directive Indicator")]
     [IsoXmlTag("ShrhldrRghtsDrctvInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ShareholderRightsDirectiveIndicator { get; init; }
+    public YesNoIndicator? ShareholderRightsDirectiveIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether a specific confirmation of holding together with a participation and/or vote instruction is required by the issuer (for instance as required in the German Stock Corporation Act paragraph 67c section 3).
@@ -58,5 +58,5 @@ public record NotificationGeneralInformation4
     [DisplayName("Confirmation Of Holding Required")]
     [IsoXmlTag("ConfOfHldgReqrd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ConfirmationOfHoldingRequired { get; init; }
+    public YesNoIndicator? ConfirmationOfHoldingRequired { get; init; }
 }

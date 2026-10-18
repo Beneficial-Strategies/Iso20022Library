@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentCodeOrOther1Choice
         [IsoXmlTag("OthrPmtTerms")]
         [IsoSimpleType(IsoSimpleType.Max140Text)]
         [StringLength(maximumLength: 140, MinimumLength = 1)]
-        public required IsoMax140Text Value { get; init; }
+        public required Max140Text Value { get; init; }
     }
 }

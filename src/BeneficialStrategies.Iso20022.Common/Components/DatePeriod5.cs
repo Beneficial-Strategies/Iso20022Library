@@ -21,12 +21,12 @@ public record DatePeriod5
     /// </summary>
     [DisplayName("Current Value Date")]
     [IsoXmlTag("CurValDt")]
-    public required IsoISODate CurrentValueDate { get; init; }
+    public required DateOnly CurrentValueDate { get; init; }
 
     /// <summary>
     /// Requested Value Date.
     /// </summary>
     [DisplayName("Requested Value Date")]
     [IsoXmlTag("ReqdValDt")]
-    public required IsoISODate RequestedValueDate { get; init; }
+    public required DateOnly RequestedValueDate { get; init; }
 }

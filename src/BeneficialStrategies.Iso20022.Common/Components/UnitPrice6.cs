@@ -57,7 +57,7 @@ public record UnitPrice6
     [DisplayName("For Execution Indicator")]
     [IsoXmlTag("ForExctnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ForExecutionIndicator { get; init; }
+    public required YesNoIndicator ForExecutionIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the dividend is included, ie, cum-dividend, in the price. When the dividend is not included, the price will be ex-dividend.
@@ -66,7 +66,7 @@ public record UnitPrice6
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator CumDividendIndicator { get; init; }
+    public required YesNoIndicator CumDividendIndicator { get; init; }
 
     /// <summary>
     /// Ratio applied on the non-adjusted price.
@@ -75,7 +75,7 @@ public record UnitPrice6
     [DisplayName("Calculation Basis")]
     [IsoXmlTag("ClctnBsis")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? CalculationBasis { get; init; }
+    public PercentageRate? CalculationBasis { get; init; }
 
     /// <summary>
     /// Specifies the number of days from trade date that the counterparty on the other side of the trade should &quot;given up&quot; or divulged.
@@ -84,7 +84,7 @@ public record UnitPrice6
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NumberOfDaysAccrued { get; init; }
+    public Number? NumberOfDaysAccrued { get; init; }
 
     /// <summary>
     /// Amount included in the NAV that corresponds to gains directly or indirectly derived from interest payment in the scope of the European Directive on taxation of savings income in the form of interest payments.

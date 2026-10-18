@@ -40,7 +40,7 @@ public record AuthorisationResult16
     [IsoXmlTag("AuthstnCd")]
     [IsoSimpleType(IsoSimpleType.Min6Max8Text)]
     [StringLength(maximumLength: 8, MinimumLength = 6)]
-    public IsoMin6Max8Text? AuthorisationCode { get; init; }
+    public Min6Max8Text? AuthorisationCode { get; init; }
 
     /// <summary>
     /// Acquirer has requested a contact to the maintenance host.

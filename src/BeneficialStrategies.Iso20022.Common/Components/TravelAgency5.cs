@@ -22,7 +22,7 @@ public record TravelAgency5
     [IsoId("_6-irwUhrEfCMZJtj4J7UGQ")]
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
-    public IsoMax35Text? Code { get; init; }
+    public Max35Text? Code { get; init; }
 
     /// <summary>
     /// Assigner of the agency code.
@@ -30,7 +30,7 @@ public record TravelAgency5
     [IsoId("_6-irw0hrEfCMZJtj4J7UGQ")]
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
-    public IsoMax35Text? Assigner { get; init; }
+    public Max35Text? Assigner { get; init; }
 
     /// <summary>
     /// Contains the International Air Transport Association (IATA) code identifying the company that purchased the ticket.
@@ -38,7 +38,7 @@ public record TravelAgency5
     [IsoId("_6-irxUhrEfCMZJtj4J7UGQ")]
     [DisplayName("IATA Code")]
     [IsoXmlTag("IATACd")]
-    public IsoMax35Text? IATACode { get; init; }
+    public Max35Text? IATACode { get; init; }
 
     /// <summary>
     /// Name of the travel agency.
@@ -46,7 +46,7 @@ public record TravelAgency5
     [IsoId("_6-irx0hrEfCMZJtj4J7UGQ")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax70Text? Name { get; init; }
+    public Max70Text? Name { get; init; }
 
     /// <summary>
     /// Short name of the travel agency.
@@ -54,7 +54,7 @@ public record TravelAgency5
     [IsoId("_6-iryUhrEfCMZJtj4J7UGQ")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
-    public IsoMax35Text? ShortName { get; init; }
+    public Max35Text? ShortName { get; init; }
 
     /// <summary>
     /// Address of the travel agency.
@@ -86,7 +86,7 @@ public record TravelAgency5
     [IsoId("_tETlgkhrEfCMZJtj4J7UGQ")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -94,5 +94,5 @@ public record TravelAgency5
     [IsoId("_tETlg0hrEfCMZJtj4J7UGQ")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

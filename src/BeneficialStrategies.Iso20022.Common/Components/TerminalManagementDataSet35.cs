@@ -30,7 +30,7 @@ public record TerminalManagementDataSet35
     [IsoId("_O4bYMbYFEfCUZfsQO4rYeA-sqct")]
     [DisplayName("Sequence Counter")]
     [IsoXmlTag("SeqCntr")]
-    public IsoMax9NumericText? SequenceCounter { get; init; }
+    public Max9NumericText? SequenceCounter { get; init; }
 
     /// <summary>
     /// Indication of the last sequence in case of split messages.
@@ -38,7 +38,7 @@ public record TerminalManagementDataSet35
     [IsoId("_O4bYMbYFEfCUZfsQO4rYeA-lsqs")]
     [DisplayName("Last Sequence")]
     [IsoXmlTag("LastSeq")]
-    public IsoTrueFalseIndicator? LastSequence { get; init; }
+    public TrueFalseIndicator? LastSequence { get; init; }
 
     /// <summary>
     /// Content of the management plan.

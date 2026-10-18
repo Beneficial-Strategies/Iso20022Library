@@ -27,7 +27,7 @@ public record QualifiedPartyIdentification1
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.ID)]
-    public required IsoID Identification { get; init; }
+    public required XsdID Identification { get; init; }
 
     /// <summary>
     /// List of identifications for the same party.
@@ -63,5 +63,5 @@ public record QualifiedPartyIdentification1
     [IsoXmlTag("RoleDesc")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? RoleDescription { get; init; }
+    public Max256Text? RoleDescription { get; init; }
 }

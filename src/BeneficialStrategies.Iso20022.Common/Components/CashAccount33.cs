@@ -111,5 +111,5 @@ public record CashAccount33
     [DisplayName("Dividend Percentage")]
     [IsoXmlTag("DvddPctg")]
     [IsoSimpleType(IsoSimpleType.PercentageBoundedRate)]
-    public IsoPercentageBoundedRate? DividendPercentage { get; init; }
+    public PercentageBoundedRate? DividendPercentage { get; init; }
 }

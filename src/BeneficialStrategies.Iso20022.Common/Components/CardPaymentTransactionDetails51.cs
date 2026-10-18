@@ -87,7 +87,7 @@ public record CardPaymentTransactionDetails51
     [DisplayName("Validity Date")]
     [IsoXmlTag("VldtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ValidityDate { get; init; }
+    public DateOnly? ValidityDate { get; init; }
 
     /// <summary>
     /// Reason to process an online authorisation.
@@ -104,7 +104,7 @@ public record CardPaymentTransactionDetails51
     [DisplayName("Unattended Level Category")]
     [IsoXmlTag("UattnddLvlCtgy")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public IsoMax35NumericText? UnattendedLevelCategory { get; init; }
+    public Max35NumericText? UnattendedLevelCategory { get; init; }
 
     /// <summary>
     /// Type of cardholder account used for the transaction.
@@ -146,7 +146,7 @@ public record CardPaymentTransactionDetails51
     [IsoXmlTag("PdctCdSetId")]
     [IsoSimpleType(IsoSimpleType.Max10Text)]
     [StringLength(maximumLength: 10, MinimumLength = 1)]
-    public IsoMax10Text? ProductCodeSetIdentification { get; init; }
+    public Max10Text? ProductCodeSetIdentification { get; init; }
 
     /// <summary>
     /// Item purchased with the transaction.
@@ -164,7 +164,7 @@ public record CardPaymentTransactionDetails51
     [IsoXmlTag("DlvryLctn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DeliveryLocation { get; init; }
+    public Max35Text? DeliveryLocation { get; init; }
 
     /// <summary>
     /// In case a message is sent after the consumption of goods or service, it indicates the number of times the authorisation has been sent to the Acquirer in order to get an approval.
@@ -173,7 +173,7 @@ public record CardPaymentTransactionDetails51
     [DisplayName("Re Submission Counter")]
     [IsoXmlTag("ReSubmissnCntr")]
     [IsoSimpleType(IsoSimpleType.PositiveNumber)]
-    public IsoPositiveNumber? ReSubmissionCounter { get; init; }
+    public PositiveNumber? ReSubmissionCounter { get; init; }
 
     /// <summary>
     /// Additional information related to the transaction like an Invoice or IndustryData (for example  hospitality, lodging, transportation).
@@ -190,5 +190,5 @@ public record CardPaymentTransactionDetails51
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
     [IsoSimpleType(IsoSimpleType.Max10000Binary)]
-    public IsoMax10000Binary? ICCRelatedData { get; init; }
+    public Max10000Binary? ICCRelatedData { get; init; }
 }

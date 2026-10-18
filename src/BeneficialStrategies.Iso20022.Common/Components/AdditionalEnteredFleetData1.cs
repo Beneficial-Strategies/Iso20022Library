@@ -22,7 +22,7 @@ public record AdditionalEnteredFleetData1
     [IsoId("_CsI3gUYlEfCJpvfyM9roFQ")]
     [DisplayName("Numeric")]
     [IsoXmlTag("Nmrc")]
-    public IsoMax35NumericText? Numeric { get; init; }
+    public Max35NumericText? Numeric { get; init; }
 
     /// <summary>
     /// Key-entered alphanumeric data.
@@ -30,7 +30,7 @@ public record AdditionalEnteredFleetData1
     [IsoId("_CsI3g0YlEfCJpvfyM9roFQ")]
     [DisplayName("Alpha Numeric")]
     [IsoXmlTag("AlphaNmrc")]
-    public IsoMax350Text? AlphaNumeric { get; init; }
+    public Max350Text? AlphaNumeric { get; init; }
 
     /// <summary>
     /// Reserved for private data. The use of this data element is determined by bilateral agreement.

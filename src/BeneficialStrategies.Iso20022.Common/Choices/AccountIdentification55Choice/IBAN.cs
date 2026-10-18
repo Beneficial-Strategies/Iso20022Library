@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification55Choice
         /// </summary>
         [IsoXmlTag("IBAN")]
         [IsoSimpleType(IsoSimpleType.IBAN2007Identifier)]
-        public required IsoIBAN2007Identifier Value { get; init; }
+        public required IBAN2007Identifier Value { get; init; }
     }
 }

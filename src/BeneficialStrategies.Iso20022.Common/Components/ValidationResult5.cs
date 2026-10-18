@@ -23,7 +23,7 @@ public record ValidationResult5
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber SequenceNumber { get; init; }
+    public required Number SequenceNumber { get; init; }
 
     /// <summary>
     /// Coded identification of the matching rule that is violated.
@@ -33,7 +33,7 @@ public record ValidationResult5
     [IsoXmlTag("RuleId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text RuleIdentification { get; init; }
+    public required Max35Text RuleIdentification { get; init; }
 
     /// <summary>
     /// Detailed description of the rule.
@@ -43,7 +43,7 @@ public record ValidationResult5
     [IsoXmlTag("RuleDesc")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text RuleDescription { get; init; }
+    public required Max350Text RuleDescription { get; init; }
 
     /// <summary>
     /// Description of the element that creates the mismatch.

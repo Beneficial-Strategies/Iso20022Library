@@ -31,6 +31,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice19Choi
         [DisplayName("Sign")]
         [IsoXmlTag("Sgn")]
         [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
-        public IsoPlusOrMinusIndicator? Sign { get; init; }
+        public PlusOrMinusIndicator? Sign { get; init; }
     }
 }

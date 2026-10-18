@@ -23,7 +23,7 @@ public record CompareISINIdentifier4
     [DisplayName("Value")]
     [IsoXmlTag("Val1")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public IsoISINOct2015Identifier? Value1 { get; init; }
+    public ISINOct2015Identifier? Value1 { get; init; }
 
     /// <summary>
     /// Information for the second side of the transaction.
@@ -32,5 +32,5 @@ public record CompareISINIdentifier4
     [DisplayName("Value")]
     [IsoXmlTag("Val2")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public IsoISINOct2015Identifier? Value2 { get; init; }
+    public ISINOct2015Identifier? Value2 { get; init; }
 }

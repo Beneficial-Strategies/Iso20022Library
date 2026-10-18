@@ -23,7 +23,7 @@ public record NumberOfTransactionsPerValidationRule5
     [DisplayName("Detailed Number")]
     [IsoXmlTag("DtldNb")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText DetailedNumber { get; init; }
+    public required Max15NumericText DetailedNumber { get; init; }
 
     /// <summary>
     /// Common validation rule for all individual reports received.

@@ -28,7 +28,7 @@ public record ApplicationParameters13
     /// </summary>
     [DisplayName("Application Identification")]
     [IsoXmlTag("ApplId")]
-    public required IsoMax35Text ApplicationIdentification { get; init; }
+    public required Max35Text ApplicationIdentification { get; init; }
 
     /// <summary>
     /// Encrypted Parameters.
@@ -42,40 +42,40 @@ public record ApplicationParameters13
     /// </summary>
     [DisplayName("Offset End")]
     [IsoXmlTag("OffsetEnd")]
-    public IsoPositiveNumber? OffsetEnd { get; init; }
+    public PositiveNumber? OffsetEnd { get; init; }
 
     /// <summary>
     /// Offset Start.
     /// </summary>
     [DisplayName("Offset Start")]
     [IsoXmlTag("OffsetStart")]
-    public IsoPositiveNumber? OffsetStart { get; init; }
+    public PositiveNumber? OffsetStart { get; init; }
 
     /// <summary>
     /// Parameter Format Identifier.
     /// </summary>
     [DisplayName("Parameter Format Identifier")]
     [IsoXmlTag("ParamFrmtIdr")]
-    public IsoMax8Text? ParameterFormatIdentifier { get; init; }
+    public Max8Text? ParameterFormatIdentifier { get; init; }
 
     /// <summary>
     /// Parameters.
     /// </summary>
     [DisplayName("Parameters")]
     [IsoXmlTag("Params")]
-    public ValueList<IsoMax100KBinary> Parameters { get; init; } = [];
+    public ValueList<Max100KBinary> Parameters { get; init; } = [];
 
     /// <summary>
     /// Parameters Length.
     /// </summary>
     [DisplayName("Parameters Length")]
     [IsoXmlTag("ParamsLngth")]
-    public IsoPositiveNumber? ParametersLength { get; init; }
+    public PositiveNumber? ParametersLength { get; init; }
 
     /// <summary>
     /// Version.
     /// </summary>
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
-    public IsoMax256Text? Version { get; init; }
+    public Max256Text? Version { get; init; }
 }

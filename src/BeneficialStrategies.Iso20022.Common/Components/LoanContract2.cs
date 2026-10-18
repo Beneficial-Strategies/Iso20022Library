@@ -59,7 +59,7 @@ public record LoanContract2
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate MaturityDate { get; init; }
+    public required DateOnly MaturityDate { get; init; }
 
     /// <summary>
     /// Indicates whether the contract duration is extended or not.
@@ -68,7 +68,7 @@ public record LoanContract2
     [DisplayName("Prolongation Flag")]
     [IsoXmlTag("PrlngtnFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator ProlongationFlag { get; init; }
+    public required TrueFalseIndicator ProlongationFlag { get; init; }
 
     /// <summary>
     /// Start date of the loan contract.
@@ -77,7 +77,7 @@ public record LoanContract2
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate StartDate { get; init; }
+    public required DateOnly StartDate { get; init; }
 
     /// <summary>
     /// Currency in which the loan is being settled.
@@ -102,7 +102,7 @@ public record LoanContract2
     [DisplayName("Duration Code")]
     [IsoXmlTag("DrtnCd")]
     [IsoSimpleType(IsoSimpleType.Exact1NumericText)]
-    public required IsoExact1NumericText DurationCode { get; init; }
+    public required Exact1NumericText DurationCode { get; init; }
 
     /// <summary>
     /// Interest rate for the loan.
@@ -143,7 +143,7 @@ public record LoanContract2
     [DisplayName("Intra Company Loan")]
     [IsoXmlTag("IntraCpnyLn")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator IntraCompanyLoan { get; init; }
+    public required TrueFalseIndicator IntraCompanyLoan { get; init; }
 
     /// <summary>
     /// Details of the collateral for the loan.

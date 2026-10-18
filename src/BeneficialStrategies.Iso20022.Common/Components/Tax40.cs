@@ -28,7 +28,7 @@ public record Tax40
     /// </summary>
     [DisplayName("Exemption Indicator")]
     [IsoXmlTag("XmptnInd")]
-    public required IsoYesNoIndicator ExemptionIndicator { get; init; }
+    public required YesNoIndicator ExemptionIndicator { get; init; }
 
     /// <summary>
     /// Exemption Reason.
@@ -49,7 +49,7 @@ public record Tax40
     /// </summary>
     [DisplayName("Informative Rate")]
     [IsoXmlTag("InftvRate")]
-    public IsoPercentageRate? InformativeRate { get; init; }
+    public PercentageRate? InformativeRate { get; init; }
 
     /// <summary>
     /// Recipient Identification.

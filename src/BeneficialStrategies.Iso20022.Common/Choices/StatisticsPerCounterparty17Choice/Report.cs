@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty17Choic
         [DisplayName("Reference Date")]
         [IsoXmlTag("RefDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate ReferenceDate { get; init; }
+        public required DateOnly ReferenceDate { get; init; }
 
         /// <summary>
         /// Total number of reports sent or received.
@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty17Choic
         [DisplayName("Total Number Of Reports")]
         [IsoXmlTag("TtlNbOfRpts")]
         [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-        public required IsoMax15NumericText TotalNumberOfReports { get; init; }
+        public required Max15NumericText TotalNumberOfReports { get; init; }
 
         /// <summary>
         /// Total number of reports accepted.
@@ -41,7 +41,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty17Choic
         [DisplayName("Total Number Of Reports Accepted")]
         [IsoXmlTag("TtlNbOfRptsAccptd")]
         [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-        public required IsoMax15NumericText TotalNumberOfReportsAccepted { get; init; }
+        public required Max15NumericText TotalNumberOfReportsAccepted { get; init; }
 
         /// <summary>
         /// Total number of reports rejected.
@@ -50,7 +50,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty17Choic
         [DisplayName("Total Number Of Reports Rejected")]
         [IsoXmlTag("TtlNbOfRptsRjctd")]
         [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-        public required IsoMax15NumericText TotalNumberOfReportsRejected { get; init; }
+        public required Max15NumericText TotalNumberOfReportsRejected { get; init; }
 
         /// <summary>
         /// Total number of reports sent or received.
@@ -59,7 +59,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty17Choic
         [DisplayName("Total Number Of Transactions")]
         [IsoXmlTag("TtlNbOfTxs")]
         [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-        public required IsoMax15NumericText TotalNumberOfTransactions { get; init; }
+        public required Max15NumericText TotalNumberOfTransactions { get; init; }
 
         /// <summary>
         /// Total number of transactions accepted.

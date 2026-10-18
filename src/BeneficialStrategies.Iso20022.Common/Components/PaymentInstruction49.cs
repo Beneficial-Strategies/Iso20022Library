@@ -22,7 +22,7 @@ public record PaymentInstruction49
     [IsoId("013ca918-edca-4ef7-be52-5843ad0f8f0b")]
     [DisplayName("Payment Information Identification")]
     [IsoXmlTag("PmtInfId")]
-    public required IsoMax35Text PaymentInformationIdentification { get; init; }
+    public required Max35Text PaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Specifies the means of payment that will be used to move the amount of money.
@@ -38,7 +38,7 @@ public record PaymentInstruction49
     [IsoId("f67e8a43-687a-4596-b341-8a47d1be1df5")]
     [DisplayName("Batch Booking")]
     [IsoXmlTag("BtchBookg")]
-    public IsoBatchBookingIndicator? BatchBooking { get; init; }
+    public BatchBookingIndicator? BatchBooking { get; init; }
 
     /// <summary>
     /// Number of individual transactions contained in the payment information group.
@@ -46,7 +46,7 @@ public record PaymentInstruction49
     [IsoId("bcfe6c19-73a7-4ae7-bd54-570ec2cd6683")]
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
-    public IsoMax15NumericText? NumberOfTransactions { get; init; }
+    public Max15NumericText? NumberOfTransactions { get; init; }
 
     /// <summary>
     /// Total of all individual amounts included in the group, irrespective of currencies.
@@ -54,7 +54,7 @@ public record PaymentInstruction49
     [IsoId("fcddbeca-0ee9-481f-b0f8-e50f1847ee1b")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
-    public IsoDecimalNumber? ControlSum { get; init; }
+    public DecimalNumber? ControlSum { get; init; }
 
     /// <summary>
     /// Set of elements used to further specify the type of transaction.
@@ -70,7 +70,7 @@ public record PaymentInstruction49
     [IsoId("d03bf662-c758-406c-8201-ae0ae2165526")]
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
-    public required IsoISODate RequestedExecutionDate { get; init; }
+    public required DateOnly RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Date used for the correction of the value date of a cash pool movement that has been posted with a different value date.
@@ -78,7 +78,7 @@ public record PaymentInstruction49
     [IsoId("1895b157-f762-4de8-bcf4-1684628847c2")]
     [DisplayName("Pooling Adjustment Date")]
     [IsoXmlTag("PoolgAdjstmntDt")]
-    public IsoISODate? PoolingAdjustmentDate { get; init; }
+    public DateOnly? PoolingAdjustmentDate { get; init; }
 
     /// <summary>
     /// Party that owes an amount of money to the (ultimate) creditor.
@@ -118,7 +118,7 @@ public record PaymentInstruction49
     [IsoId("a6a75bc8-0ce3-4453-a4d9-6bd8425ec1ab")]
     [DisplayName("Instruction For Debtor Agent")]
     [IsoXmlTag("InstrForDbtrAgt")]
-    public IsoMax140Text? InstructionForDebtorAgent { get; init; }
+    public Max140Text? InstructionForDebtorAgent { get; init; }
 
     /// <summary>
     /// Ultimate party that owes an amount of money to the (ultimate) creditor.

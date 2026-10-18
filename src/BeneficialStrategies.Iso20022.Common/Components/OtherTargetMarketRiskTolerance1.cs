@@ -24,7 +24,7 @@ public record OtherTargetMarketRiskTolerance1
     [IsoXmlTag("RskTlrnceTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RiskToleranceType { get; init; }
+    public Max35Text? RiskToleranceType { get; init; }
 
     /// <summary>
     /// Choice of formats for the specification of whether the product is aimed at the type of risk tolerance.

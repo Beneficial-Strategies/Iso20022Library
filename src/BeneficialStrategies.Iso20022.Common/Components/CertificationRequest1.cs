@@ -32,7 +32,7 @@ public record CertificationRequest1
     [IsoXmlTag("KeyId")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? KeyIdentification { get; init; }
+    public Max140Text? KeyIdentification { get; init; }
 
     /// <summary>
     /// Version of the key.
@@ -42,5 +42,5 @@ public record CertificationRequest1
     [IsoXmlTag("KeyVrsn")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? KeyVersion { get; init; }
+    public Max140Text? KeyVersion { get; init; }
 }

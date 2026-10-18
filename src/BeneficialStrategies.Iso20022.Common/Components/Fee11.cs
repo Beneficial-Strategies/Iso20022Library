@@ -46,7 +46,7 @@ public record Fee11
     [IsoId("b5a18c86-a401-4f96-800e-f246db079a91")]
     [DisplayName("Standard Rate")]
     [IsoXmlTag("StdRate")]
-    public IsoPercentageRate? StandardRate { get; init; }
+    public PercentageRate? StandardRate { get; init; }
 
     /// <summary>
     /// Discount or waiver applied to the fee (charge/commission).
@@ -70,7 +70,7 @@ public record Fee11
     [IsoId("5506958c-a8a7-430f-a9b3-d190eb213f75")]
     [DisplayName("Applied Rate")]
     [IsoXmlTag("ApldRate")]
-    public IsoPercentageRate? AppliedRate { get; init; }
+    public PercentageRate? AppliedRate { get; init; }
 
     /// <summary>
     /// Reference to a sales agreement that overrides normal processing or the Service Level Agreement (SLA).
@@ -78,7 +78,7 @@ public record Fee11
     [IsoId("2da87538-6641-4a16-89df-1f38cec497f6")]
     [DisplayName("Non Standard SLA Reference")]
     [IsoXmlTag("NonStdSLARef")]
-    public IsoMax35Text? NonStandardSLAReference { get; init; }
+    public Max35Text? NonStandardSLAReference { get; init; }
 
     /// <summary>
     /// Party entitled to the amount of money resulting from a fee (charge/commission).
@@ -94,5 +94,5 @@ public record Fee11
     [IsoId("dca993a2-0ee6-4344-8ca3-62fb99779ce3")]
     [DisplayName("Informative Indicator")]
     [IsoXmlTag("InftvInd")]
-    public required IsoYesNoIndicator InformativeIndicator { get; init; }
+    public required YesNoIndicator InformativeIndicator { get; init; }
 }

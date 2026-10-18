@@ -33,7 +33,7 @@ public record EncryptedDataElement1
     [IsoXmlTag("OthrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherIdentification { get; init; }
+    public Max35Text? OtherIdentification { get; init; }
 
     /// <summary>
     /// Encrypted data element.
@@ -59,5 +59,5 @@ public record EncryptedDataElement1
     [IsoXmlTag("OthrClearTxtDataFrmt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherClearTextDataFormat { get; init; }
+    public Max35Text? OtherClearTextDataFormat { get; init; }
 }

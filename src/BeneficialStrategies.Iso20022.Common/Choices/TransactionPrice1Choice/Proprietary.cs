@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionPrice1Choice
         [IsoXmlTag("Tp")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text Type { get; init; }
+        public required Max35Text Type { get; init; }
 
         /// <summary>
         /// Proprietary price specification related to the underlying transaction.

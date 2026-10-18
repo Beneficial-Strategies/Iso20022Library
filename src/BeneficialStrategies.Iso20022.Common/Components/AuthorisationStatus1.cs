@@ -25,7 +25,7 @@ public record AuthorisationStatus1
     [DisplayName("Authorisation Indicator")]
     [IsoXmlTag("AuthstnInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? AuthorisationIndicator { get; init; }
+    public TrueFalseIndicator? AuthorisationIndicator { get; init; }
 
     /// <summary>
     /// Indicates the entity which authorised the transaction (if relevant).
@@ -43,5 +43,5 @@ public record AuthorisationStatus1
     [IsoXmlTag("OthrAuthstnNtty")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherAuthorisationEntity { get; init; }
+    public Max35Text? OtherAuthorisationEntity { get; init; }
 }

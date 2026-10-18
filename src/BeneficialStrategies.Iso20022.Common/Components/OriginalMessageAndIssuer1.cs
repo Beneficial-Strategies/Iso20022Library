@@ -24,7 +24,7 @@ public record OriginalMessageAndIssuer1
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Specifies the original message name identifier to which the message refers.
@@ -34,7 +34,7 @@ public record OriginalMessageAndIssuer1
     [IsoXmlTag("MsgNmId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MessageNameIdentification { get; init; }
+    public Max35Text? MessageNameIdentification { get; init; }
 
     /// <summary>
     /// Name of the original party that assigned the original message identification.
@@ -44,5 +44,5 @@ public record OriginalMessageAndIssuer1
     [IsoXmlTag("OrgtrNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? OriginatorName { get; init; }
+    public Max70Text? OriginatorName { get; init; }
 }

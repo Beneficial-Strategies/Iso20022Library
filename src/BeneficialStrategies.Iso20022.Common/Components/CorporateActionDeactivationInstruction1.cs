@@ -23,7 +23,7 @@ public record CorporateActionDeactivationInstruction1
     [DisplayName("Deactivation Date And Time")]
     [IsoXmlTag("DeactvtnDtAndTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime DeactivationDateAndTime { get; init; }
+    public required ISODateTime DeactivationDateAndTime { get; init; }
 
     /// <summary>
     /// Provides information about the option, when the deactivation instruction applies at the level of a corporate action option.

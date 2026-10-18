@@ -23,7 +23,7 @@ public record ATMSecurityConfiguration3
     [DisplayName("Asymmetric Encryption")]
     [IsoXmlTag("AsmmtrcNcrptn")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? AsymmetricEncryption { get; init; }
+    public TrueFalseIndicator? AsymmetricEncryption { get; init; }
 
     /// <summary>
     /// True if the security module is able to identify an asymmetric key with certificate issuer X.500 name and certificate serial number. False if a proprietary asymmetric key identifier is required.
@@ -32,7 +32,7 @@ public record ATMSecurityConfiguration3
     [DisplayName("Asymmetric Key Standard Identification")]
     [IsoXmlTag("AsmmtrcKeyStdId")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? AsymmetricKeyStandardIdentification { get; init; }
+    public TrueFalseIndicator? AsymmetricKeyStandardIdentification { get; init; }
 
     /// <summary>
     /// Asymmetric encryption algorithm the security module is able to manage.
@@ -49,7 +49,7 @@ public record ATMSecurityConfiguration3
     [DisplayName("Symmetric Transport Key")]
     [IsoXmlTag("SmmtrcTrnsprtKey")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? SymmetricTransportKey { get; init; }
+    public TrueFalseIndicator? SymmetricTransportKey { get; init; }
 
     /// <summary>
     /// Symmetric transport session key algorithm the security module is able to manage.

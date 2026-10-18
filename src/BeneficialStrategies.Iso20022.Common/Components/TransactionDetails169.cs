@@ -28,7 +28,7 @@ public record TransactionDetails169
     /// </summary>
     [DisplayName("Acknowledged Status Time Stamp")]
     [IsoXmlTag("AckdStsTmStmp")]
-    public IsoISODateTime? AcknowledgedStatusTimeStamp { get; init; }
+    public ISODateTime? AcknowledgedStatusTimeStamp { get; init; }
 
     /// <summary>
     /// Delivering Settlement Parties.
@@ -49,14 +49,14 @@ public record TransactionDetails169
     /// </summary>
     [DisplayName("Matched Status Time Stamp")]
     [IsoXmlTag("MtchdStsTmStmp")]
-    public IsoISODateTime? MatchedStatusTimeStamp { get; init; }
+    public ISODateTime? MatchedStatusTimeStamp { get; init; }
 
     /// <summary>
     /// Number Of Days Accrued.
     /// </summary>
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
-    public IsoMax3Number? NumberOfDaysAccrued { get; init; }
+    public Max3Number? NumberOfDaysAccrued { get; init; }
 
     /// <summary>
     /// Payment.
@@ -105,7 +105,7 @@ public record TransactionDetails169
     /// </summary>
     [DisplayName("Reversal Indicator")]
     [IsoXmlTag("RvslInd")]
-    public IsoYesNoIndicator? ReversalIndicator { get; init; }
+    public YesNoIndicator? ReversalIndicator { get; init; }
 
     /// <summary>
     /// Safekeeping Place.
@@ -161,7 +161,7 @@ public record TransactionDetails169
     /// </summary>
     [DisplayName("Transaction Additional Details")]
     [IsoXmlTag("TxAddtlDtls")]
-    public IsoMax350Text? TransactionAdditionalDetails { get; init; }
+    public Max350Text? TransactionAdditionalDetails { get; init; }
 
     /// <summary>
     /// Value Date.

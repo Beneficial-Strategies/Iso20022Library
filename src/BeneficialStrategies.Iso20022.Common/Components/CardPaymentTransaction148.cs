@@ -22,7 +22,7 @@ public record CardPaymentTransaction148
     [IsoId("_BYdNFbX6EfCUZfsQO4rYeA")]
     [DisplayName("Sale Reference Identification")]
     [IsoXmlTag("SaleRefId")]
-    public IsoMax35Text? SaleReferenceIdentification { get; init; }
+    public Max35Text? SaleReferenceIdentification { get; init; }
 
     /// <summary>
     /// Unique identification of the transaction assigned by the POI (Point Of Interaction).

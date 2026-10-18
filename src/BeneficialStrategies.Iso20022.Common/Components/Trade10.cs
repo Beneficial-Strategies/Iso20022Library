@@ -21,7 +21,7 @@ public record Trade10
     /// </summary>
     [DisplayName("Associated Trade Reference")]
     [IsoXmlTag("AssoctdTradRef")]
-    public ValueList<IsoMax70Text> AssociatedTradeReference { get; init; } = [];
+    public ValueList<Max70Text> AssociatedTradeReference { get; init; } = [];
 
     /// <summary>
     /// Calculated Counterparty Currency Last Quantity.
@@ -35,7 +35,7 @@ public record Trade10
     /// </summary>
     [DisplayName("Delta Indicator")]
     [IsoXmlTag("DltaInd")]
-    public IsoTrueFalseIndicator? DeltaIndicator { get; init; }
+    public TrueFalseIndicator? DeltaIndicator { get; init; }
 
     /// <summary>
     /// Execution Price.
@@ -56,14 +56,14 @@ public record Trade10
     /// </summary>
     [DisplayName("Fixing Date")]
     [IsoXmlTag("FxgDt")]
-    public IsoISODate? FixingDate { get; init; }
+    public DateOnly? FixingDate { get; init; }
 
     /// <summary>
     /// Forward Points.
     /// </summary>
     [DisplayName("Forward Points")]
     [IsoXmlTag("FwdPts")]
-    public IsoDecimalNumber? ForwardPoints { get; init; }
+    public DecimalNumber? ForwardPoints { get; init; }
 
     /// <summary>
     /// Last Quantity.
@@ -77,7 +77,7 @@ public record Trade10
     /// </summary>
     [DisplayName("Option Indicator")]
     [IsoXmlTag("OptnInd")]
-    public IsoTrueFalseIndicator? OptionIndicator { get; init; }
+    public TrueFalseIndicator? OptionIndicator { get; init; }
 
     /// <summary>
     /// Risk Amount.
@@ -98,7 +98,7 @@ public record Trade10
     /// </summary>
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public required IsoISODate SettlementDate { get; init; }
+    public required DateOnly SettlementDate { get; init; }
 
     /// <summary>
     /// Settlement Type.
@@ -119,5 +119,5 @@ public record Trade10
     /// </summary>
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
-    public required IsoISODate ValueDate { get; init; }
+    public required DateOnly ValueDate { get; init; }
 }

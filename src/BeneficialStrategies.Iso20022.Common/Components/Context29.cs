@@ -30,7 +30,7 @@ public record Context29
     [IsoId("_vfCzD2vgEfCyxsm1jzUNug")]
     [DisplayName("Merchant Category Specific Data")]
     [IsoXmlTag("MrchntCtgySpcfcData")]
-    public IsoMax35Text? MerchantCategorySpecificData { get; init; }
+    public Max35Text? MerchantCategorySpecificData { get; init; }
 
     /// <summary>
     /// Other merchant category assigned by local or national scheme.
@@ -38,7 +38,7 @@ public record Context29
     [IsoId("_vfCzEWvgEfCyxsm1jzUNug")]
     [DisplayName("Other Merchant Category")]
     [IsoXmlTag("OthrMrchntCtgy")]
-    public IsoMax35Text? OtherMerchantCategory { get; init; }
+    public Max35Text? OtherMerchantCategory { get; init; }
 
     /// <summary>
     /// A code identifying transaction conditions at the point-of-sale or point of service.
@@ -62,7 +62,7 @@ public record Context29
     [IsoId("_vfCzFWvgEfCyxsm1jzUNug")]
     [DisplayName("Delayed Charges")]
     [IsoXmlTag("DelydChrgs")]
-    public IsoTrueFalseIndicator? DelayedCharges { get; init; }
+    public TrueFalseIndicator? DelayedCharges { get; init; }
 
     /// <summary>
     /// Indicates that the cardholder failed to arrive at the property and was therefore charged a no-show fee.
@@ -70,7 +70,7 @@ public record Context29
     [IsoId("_vfCzF2vgEfCyxsm1jzUNug")]
     [DisplayName("No Show")]
     [IsoXmlTag("NoShow")]
-    public IsoTrueFalseIndicator? NoShow { get; init; }
+    public TrueFalseIndicator? NoShow { get; init; }
 
     /// <summary>
     /// Indicates a reauthorisation.
@@ -78,7 +78,7 @@ public record Context29
     [IsoId("_vfCzGWvgEfCyxsm1jzUNug")]
     [DisplayName("Reauthorisation")]
     [IsoXmlTag("Reauthstn")]
-    public IsoTrueFalseIndicator? Reauthorisation { get; init; }
+    public TrueFalseIndicator? Reauthorisation { get; init; }
 
     /// <summary>
     /// Indicates a resubmission.
@@ -86,7 +86,7 @@ public record Context29
     [IsoId("_vfCzG2vgEfCyxsm1jzUNug")]
     [DisplayName("Re Submission")]
     [IsoXmlTag("ReSubmissn")]
-    public IsoTrueFalseIndicator? ReSubmission { get; init; }
+    public TrueFalseIndicator? ReSubmission { get; init; }
 
     /// <summary>
     /// Indicates the partial shipment.
@@ -94,7 +94,7 @@ public record Context29
     [IsoId("_vfCzHWvgEfCyxsm1jzUNug")]
     [DisplayName("Partial Shipment")]
     [IsoXmlTag("PrtlShipmnt")]
-    public IsoTrueFalseIndicator? PartialShipment { get; init; }
+    public TrueFalseIndicator? PartialShipment { get; init; }
 
     /// <summary>
     /// Reserved for private data.

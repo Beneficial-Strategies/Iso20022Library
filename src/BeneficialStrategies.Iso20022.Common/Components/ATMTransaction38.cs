@@ -35,14 +35,14 @@ public record ATMTransaction38
     /// </summary>
     [DisplayName("Creditor Label")]
     [IsoXmlTag("CdtrLabl")]
-    public IsoMax35Text? CreditorLabel { get; init; }
+    public Max35Text? CreditorLabel { get; init; }
 
     /// <summary>
     /// Debtor Label.
     /// </summary>
     [DisplayName("Debtor Label")]
     [IsoXmlTag("DbtrLabl")]
-    public IsoMax35Text? DebtorLabel { get; init; }
+    public Max35Text? DebtorLabel { get; init; }
 
     /// <summary>
     /// Detailed Requested Amount.
@@ -56,21 +56,21 @@ public record ATMTransaction38
     /// </summary>
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
-    public IsoMax10000Binary? ICCRelatedData { get; init; }
+    public Max10000Binary? ICCRelatedData { get; init; }
 
     /// <summary>
     /// Instant Transfer Program.
     /// </summary>
     [DisplayName("Instant Transfer Program")]
     [IsoXmlTag("InstntTrfPrgm")]
-    public IsoMax35Text? InstantTransferProgram { get; init; }
+    public Max35Text? InstantTransferProgram { get; init; }
 
     /// <summary>
     /// Payment Reference.
     /// </summary>
     [DisplayName("Payment Reference")]
     [IsoXmlTag("PmtRef")]
-    public IsoMax35Text? PaymentReference { get; init; }
+    public Max35Text? PaymentReference { get; init; }
 
     /// <summary>
     /// Protected Account From.
@@ -91,7 +91,7 @@ public record ATMTransaction38
     /// </summary>
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
-    public IsoMax35Text? ReconciliationIdentification { get; init; }
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Recurring Transfer.
@@ -105,14 +105,14 @@ public record ATMTransaction38
     /// </summary>
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
-    public IsoISODate? RequestedExecutionDate { get; init; }
+    public DateOnly? RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Requested Receipt.
     /// </summary>
     [DisplayName("Requested Receipt")]
     [IsoXmlTag("ReqdRct")]
-    public IsoTrueFalseIndicator? RequestedReceipt { get; init; }
+    public TrueFalseIndicator? RequestedReceipt { get; init; }
 
     /// <summary>
     /// Total Requested Amount.

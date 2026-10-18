@@ -22,7 +22,7 @@ public record ForeignExchangeRate3
     [IsoId("_ylo6pTkYEem897H7zB2RJg")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
-    public required IsoBaseOneRate ExchangeRate { get; init; }
+    public required BaseOneRate ExchangeRate { get; init; }
 
     /// <summary>
     /// Currency in which the rate of exchange is expressed in a currency exchange.

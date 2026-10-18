@@ -101,7 +101,7 @@ public record ForeignExchangeTradeConfirmationRequestV01 : IOuterRecord
     [DisplayName("Query Start Number")]
     [IsoXmlTag("QryStartNb")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public required IsoMax35NumericText QueryStartNumber { get; init; }
+    public required Max35NumericText QueryStartNumber { get; init; }
 
     /// <summary>
     /// Specifies the inquiry status of the trade.

@@ -23,7 +23,7 @@ public record Rates3
     [DisplayName("Fixed")]
     [IsoXmlTag("Fxd")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Fixed { get; init; }
+    public PercentageRate? Fixed { get; init; }
 
     /// <summary>
     /// Details about the variable rate.
@@ -32,7 +32,7 @@ public record Rates3
     [DisplayName("Floating")]
     [IsoXmlTag("Fltg")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Floating { get; init; }
+    public PercentageRate? Floating { get; init; }
 
     /// <summary>
     /// Transaction by which a counterparty buys or sells securities, commodities, or guaranteed rights relating to title to securities or commodities, agreeing, respectively, to sell or to buy back securities, commodities or such guaranteed rights of the same description at a specified price on a future date, that transaction being a buy-sell back transaction for the counterparty buying the securities, commodities or guaranteed rights, and a sell-buy back transaction for the counterparty selling them, such buy-sell back transaction or sell-buy back transaction not being governed by a repurchase agreement or by a reverse-repurchase agreement.

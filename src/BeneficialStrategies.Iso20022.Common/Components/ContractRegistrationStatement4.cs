@@ -64,7 +64,7 @@ public record ContractRegistrationStatement4
     /// </summary>
     [DisplayName("Statement Identification")]
     [IsoXmlTag("StmtId")]
-    public IsoMax35Text? StatementIdentification { get; init; }
+    public Max35Text? StatementIdentification { get; init; }
 
     /// <summary>
     /// Supplementary Data.

@@ -23,7 +23,7 @@ public record ReportContent1
     [DisplayName("Report Line Sequence")]
     [IsoXmlTag("RptLineSeq")]
     [IsoSimpleType(IsoSimpleType.Max10NumericText)]
-    public IsoMax10NumericText? ReportLineSequence { get; init; }
+    public Max10NumericText? ReportLineSequence { get; init; }
 
     /// <summary>
     /// Formatted or unformatted report content.

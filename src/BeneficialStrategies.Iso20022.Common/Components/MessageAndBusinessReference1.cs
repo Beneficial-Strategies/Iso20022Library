@@ -48,5 +48,5 @@ public record MessageAndBusinessReference1
     [IsoXmlTag("TrfRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TransferReference { get; init; }
+    public Max35Text? TransferReference { get; init; }
 }

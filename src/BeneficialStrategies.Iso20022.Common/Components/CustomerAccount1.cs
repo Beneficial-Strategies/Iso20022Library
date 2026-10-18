@@ -32,7 +32,7 @@ public record CustomerAccount1
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Name { get; init; }
+    public Max70Text? Name { get; init; }
 
     /// <summary>
     /// Specifies the current state of an account, eg, enabled or deleted.
@@ -81,7 +81,7 @@ public record CustomerAccount1
     [DisplayName("Monthly Transaction Number")]
     [IsoXmlTag("MnthlyTxNb")]
     [IsoSimpleType(IsoSimpleType.Max5NumericText)]
-    public IsoMax5NumericText? MonthlyTransactionNumber { get; init; }
+    public Max5NumericText? MonthlyTransactionNumber { get; init; }
 
     /// <summary>
     /// Sum of the end of day balances over a month divided by the number of business days in the month.
@@ -99,7 +99,7 @@ public record CustomerAccount1
     [IsoXmlTag("AcctPurp")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? AccountPurpose { get; init; }
+    public Max140Text? AccountPurpose { get; init; }
 
     /// <summary>
     /// Specifies the value of the balance under which a notification will be sent to the account owner.
@@ -132,7 +132,7 @@ public record CustomerAccount1
     [DisplayName("Closing Date")]
     [IsoXmlTag("ClsgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ClosingDate { get; init; }
+    public DateOnly? ClosingDate { get; init; }
 
     /// <summary>
     /// Restriction on capability or operations allowed.

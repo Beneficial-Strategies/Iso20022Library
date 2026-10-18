@@ -43,14 +43,14 @@ public record OrganisationIdentification49
     /// </summary>
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
-    public IsoLEIIdentifier? LEI { get; init; }
+    public LEIIdentifier? LEI { get; init; }
 
     /// <summary>
     /// NPI.
     /// </summary>
     [DisplayName("NPI")]
     [IsoXmlTag("NPI")]
-    public IsoNPIIdentifier? NPI { get; init; }
+    public NPIIdentifier? NPI { get; init; }
 
     /// <summary>
     /// Organisation Name.
@@ -64,7 +64,7 @@ public record OrganisationIdentification49
     /// </summary>
     [DisplayName("Person Name")]
     [IsoXmlTag("PrsnNm")]
-    public ValueList<IsoMax500Text> PersonName { get; init; } = [];
+    public ValueList<Max500Text> PersonName { get; init; } = [];
 
     /// <summary>
     /// Registered Country.

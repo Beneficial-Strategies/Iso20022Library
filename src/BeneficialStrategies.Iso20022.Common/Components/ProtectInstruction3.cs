@@ -32,7 +32,7 @@ public record ProtectInstruction3
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.Max15Text)]
     [StringLength(maximumLength: 15, MinimumLength = 1)]
-    public IsoMax15Text? TransactionIdentification { get; init; }
+    public Max15Text? TransactionIdentification { get; init; }
 
     /// <summary>
     /// Date at which the protect instruction was created and used for cover protect validation.
@@ -41,5 +41,5 @@ public record ProtectInstruction3
     [DisplayName("Protect Date")]
     [IsoXmlTag("PrtctDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ProtectDate { get; init; }
+    public DateOnly? ProtectDate { get; init; }
 }

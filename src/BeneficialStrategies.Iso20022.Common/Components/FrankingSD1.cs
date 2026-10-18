@@ -24,7 +24,7 @@ public record FrankingSD1
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Dividend / Distribution kind where the franking information apples to.
@@ -41,7 +41,7 @@ public record FrankingSD1
     [DisplayName("Fully Franked Indicator")]
     [IsoXmlTag("FullyFrnkdInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? FullyFrankedIndicator { get; init; }
+    public YesNoIndicator? FullyFrankedIndicator { get; init; }
 
     /// <summary>
     /// Percentage of dividend that is franked.
@@ -50,7 +50,7 @@ public record FrankingSD1
     [DisplayName("Franked Percentage")]
     [IsoXmlTag("FrnkdPctg")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? FrankedPercentage { get; init; }
+    public PercentageRate? FrankedPercentage { get; init; }
 
     /// <summary>
     /// Percentage of dividend that is unfranked.
@@ -59,7 +59,7 @@ public record FrankingSD1
     [DisplayName("Unfranked Percentage")]
     [IsoXmlTag("UfrnkdPctg")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? UnfrankedPercentage { get; init; }
+    public PercentageRate? UnfrankedPercentage { get; init; }
 
     /// <summary>
     /// The corporate tax rate for the for franking credit of the dividend.
@@ -68,7 +68,7 @@ public record FrankingSD1
     [DisplayName("Corporate Tax Rate For Franking Credit")]
     [IsoXmlTag("CorpTaxRateForFrnkgCdt")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? CorporateTaxRateForFrankingCredit { get; init; }
+    public PercentageRate? CorporateTaxRateForFrankingCredit { get; init; }
 
     /// <summary>
     /// Cents amount of the dividend which has been franked at 30%.

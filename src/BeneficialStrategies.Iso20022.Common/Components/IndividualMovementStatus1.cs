@@ -24,7 +24,7 @@ public record IndividualMovementStatus1
     [IsoXmlTag("MvmntId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MovementIdentification { get; init; }
+    public Max35Text? MovementIdentification { get; init; }
 
     /// <summary>
     /// Provides information about the processing status of individual movement.

@@ -23,7 +23,7 @@ public record CalendarSearchCriteria1
     [DisplayName("Year")]
     [IsoXmlTag("Yr")]
     [IsoSimpleType(IsoSimpleType.ISOYear)]
-    public IsoISOYear? Year { get; init; }
+    public ISOYear? Year { get; init; }
 
     /// <summary>
     /// Specifies the month for which the calendar information must be returned.
@@ -32,7 +32,7 @@ public record CalendarSearchCriteria1
     [DisplayName("Month")]
     [IsoXmlTag("Mnth")]
     [IsoSimpleType(IsoSimpleType.ISOMonth)]
-    public IsoISOMonth? Month { get; init; }
+    public byte? Month { get; init; }
 
     /// <summary>
     /// Specifies the service or system for which the calendar information must be returned.

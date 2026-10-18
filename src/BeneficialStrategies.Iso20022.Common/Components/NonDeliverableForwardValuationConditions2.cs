@@ -31,7 +31,7 @@ public record NonDeliverableForwardValuationConditions2
     [DisplayName("Valuation Date")]
     [IsoXmlTag("ValtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ValuationDate { get; init; }
+    public required DateOnly ValuationDate { get; init; }
 
     /// <summary>
     /// Free format text that may contain valuation information such as the place, the time or the source of the rate.
@@ -41,7 +41,7 @@ public record NonDeliverableForwardValuationConditions2
     [IsoXmlTag("AddtlValtnInf")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? AdditionalValuationInformation { get; init; }
+    public Max140Text? AdditionalValuationInformation { get; init; }
 
     /// <summary>
     /// Party through which the settlement will take place. It may contain the BIC of a central settlement system eg CLSBUS33.

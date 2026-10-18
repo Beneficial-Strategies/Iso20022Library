@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormatChoice
         [IsoXmlTag("Issr")]
         [IsoSimpleType(IsoSimpleType.Max8Text)]
         [StringLength(maximumLength: 8, MinimumLength = 1)]
-        public required IsoMax8Text Issuer { get; init; }
+        public required Max8Text Issuer { get; init; }
 
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.
@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormatChoice
         [DisplayName("Information")]
         [IsoXmlTag("Inf")]
         [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-        public required IsoExact4AlphaNumericText Information { get; init; }
+        public required Exact4AlphaNumericText Information { get; init; }
 
         /// <summary>
         /// Additional information.
@@ -43,6 +43,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormatChoice
         [IsoXmlTag("Nrrtv")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? Narrative { get; init; }
+        public Max35Text? Narrative { get; init; }
     }
 }

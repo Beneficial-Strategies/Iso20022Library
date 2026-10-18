@@ -9,6 +9,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification46Choice
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("SCVM")]
-        public required IsoSicovamIdentifier Value { get; init; }
+        public required SicovamIdentifier Value { get; init; }
     }
 }

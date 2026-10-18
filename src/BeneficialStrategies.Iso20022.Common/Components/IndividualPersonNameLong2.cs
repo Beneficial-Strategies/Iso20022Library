@@ -32,7 +32,7 @@ public record IndividualPersonNameLong2
     [IsoXmlTag("Srnm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Surname { get; init; }
+    public required Max35Text Surname { get; init; }
 
     /// <summary>
     /// Name given at birth.
@@ -42,7 +42,7 @@ public record IndividualPersonNameLong2
     [IsoXmlTag("GvnNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? GivenName { get; init; }
+    public Max35Text? GivenName { get; init; }
 
     /// <summary>
     /// Second name of a person.
@@ -52,7 +52,7 @@ public record IndividualPersonNameLong2
     [IsoXmlTag("MddlNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MiddleName { get; init; }
+    public Max35Text? MiddleName { get; init; }
 
     /// <summary>
     /// Initial prefix for name.
@@ -62,7 +62,7 @@ public record IndividualPersonNameLong2
     [IsoXmlTag("Initls")]
     [IsoSimpleType(IsoSimpleType.Max6Text)]
     [StringLength(maximumLength: 6, MinimumLength = 1)]
-    public IsoMax6Text? Initials { get; init; }
+    public Max6Text? Initials { get; init; }
 
     /// <summary>
     /// Suffix for name.
@@ -72,7 +72,7 @@ public record IndividualPersonNameLong2
     [IsoXmlTag("NmSfx")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? NameSuffix { get; init; }
+    public Max350Text? NameSuffix { get; init; }
 
     /// <summary>
     /// Full legal name.
@@ -82,7 +82,7 @@ public record IndividualPersonNameLong2
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Name { get; init; }
+    public Max350Text? Name { get; init; }
 
     /// <summary>
     /// Date that the name was assigned.
@@ -91,7 +91,7 @@ public record IndividualPersonNameLong2
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? StartDate { get; init; }
+    public DateOnly? StartDate { get; init; }
 
     /// <summary>
     /// Date that name changed.
@@ -100,5 +100,5 @@ public record IndividualPersonNameLong2
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? EndDate { get; init; }
+    public DateOnly? EndDate { get; init; }
 }

@@ -24,7 +24,7 @@ public record PartyIdentification23
     [DisplayName("BIC Or BEI")]
     [IsoXmlTag("BICOrBEI")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public required IsoAnyBICIdentifier BICOrBEI { get; init; }
+    public required AnyBICIdentifier BICOrBEI { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.

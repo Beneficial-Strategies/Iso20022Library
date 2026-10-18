@@ -40,7 +40,7 @@ public record InterestResponse1
     [IsoXmlTag("RjctnRsnInf")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? RejectionReasonInformation { get; init; }
+    public Max140Text? RejectionReasonInformation { get; init; }
 
     /// <summary>
     /// Provides the reference to the interest payment request.
@@ -50,5 +50,5 @@ public record InterestResponse1
     [IsoXmlTag("IntrstPmtReqId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text InterestPaymentRequestIdentification { get; init; }
+    public required Max35Text InterestPaymentRequestIdentification { get; init; }
 }

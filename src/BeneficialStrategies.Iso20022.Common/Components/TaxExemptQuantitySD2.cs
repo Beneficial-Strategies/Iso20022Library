@@ -24,7 +24,7 @@ public record TaxExemptQuantitySD2
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Tax control identification.
@@ -34,7 +34,7 @@ public record TaxExemptQuantitySD2
     [IsoXmlTag("CtrlId")]
     [IsoSimpleType(IsoSimpleType.Max6Text)]
     [StringLength(maximumLength: 6, MinimumLength = 1)]
-    public required IsoMax6Text ControlIdentification { get; init; }
+    public required Max6Text ControlIdentification { get; init; }
 
     /// <summary>
     /// Elected quantity.

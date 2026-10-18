@@ -9,6 +9,6 @@ namespace BeneficialStrategies.Iso20022.Choices.RegulatoryReportingType1Choice
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Prtry")]
-        public required IsoMax35Text Value { get; init; }
+        public required Max35Text Value { get; init; }
     }
 }

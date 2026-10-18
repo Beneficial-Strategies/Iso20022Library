@@ -31,7 +31,7 @@ public record CashAccount22
     [DisplayName("Servicer")]
     [IsoXmlTag("Svcr")]
     [IsoSimpleType(IsoSimpleType.BICIdentifier)]
-    public required IsoBICIdentifier Servicer { get; init; }
+    public required BICIdentifier Servicer { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identification for the account between the account owner and the account servicer.
@@ -57,5 +57,5 @@ public record CashAccount22
     [IsoXmlTag("AcctTpDesc")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text AccountTypeDescription { get; init; }
+    public required Max35Text AccountTypeDescription { get; init; }
 }

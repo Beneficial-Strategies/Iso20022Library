@@ -23,7 +23,7 @@ public record TradeReportHeader4
     [DisplayName("Report Execution Date")]
     [IsoXmlTag("RptExctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ReportExecutionDate { get; init; }
+    public DateOnly? ReportExecutionDate { get; init; }
 
     /// <summary>
     /// Page number of the message (within the report) and continuation indicator to indicate that the report is to continue or that the message is the last page of the report.
@@ -40,7 +40,7 @@ public record TradeReportHeader4
     [DisplayName("Number Records")]
     [IsoXmlTag("NbRcrds")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber NumberRecords { get; init; }
+    public required Number NumberRecords { get; init; }
 
     /// <summary>
     /// Specifies the competent authority that requires reporting of the transaction.
@@ -48,7 +48,7 @@ public record TradeReportHeader4
     [IsoId("_hzTQhxZ6Ee27wrM4RUjLog")]
     [DisplayName("Competent Authority")]
     [IsoXmlTag("CmptntAuthrty")]
-    public SimpleValueList<IsoMax100Text> CompetentAuthority { get; init; } = [];
+    public SimpleValueList<Max100Text> CompetentAuthority { get; init; } = [];
 
     /// <summary>
     /// Identifies the new trade repository to which the derivative is transfered to.
@@ -64,5 +64,5 @@ public record TradeReportHeader4
     [IsoId("_Uu4gsCLrEe2KAJot-YBP6w")]
     [DisplayName("Reporting Purpose")]
     [IsoXmlTag("RptgPurp")]
-    public SimpleValueList<IsoMax100Text> ReportingPurpose { get; init; } = [];
+    public SimpleValueList<Max100Text> ReportingPurpose { get; init; } = [];
 }

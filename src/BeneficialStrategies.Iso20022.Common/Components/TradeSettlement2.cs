@@ -31,7 +31,7 @@ public record TradeSettlement2
     [DisplayName("Due Date")]
     [IsoXmlTag("DueDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DueDate { get; init; }
+    public DateOnly? DueDate { get; init; }
 
     /// <summary>
     /// Payable amount with currency code.
@@ -56,7 +56,7 @@ public record TradeSettlement2
     [DisplayName("Delivery Date")]
     [IsoXmlTag("DlvryDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DeliveryDate { get; init; }
+    public DateOnly? DeliveryDate { get; init; }
 
     /// <summary>
     /// Period during which delivery executed or agreed invoicing period.
@@ -82,7 +82,7 @@ public record TradeSettlement2
     [IsoXmlTag("XmptnRsnCd")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4Text? ExemptionReasonCode { get; init; }
+    public Max4Text? ExemptionReasonCode { get; init; }
 
     /// <summary>
     /// Reason for a tax exemption, if invoice or card transaction is out of tax processing.
@@ -92,7 +92,7 @@ public record TradeSettlement2
     [IsoXmlTag("XmptnRsn")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public IsoMax500Text? ExemptionReason { get; init; }
+    public Max500Text? ExemptionReason { get; init; }
 
     /// <summary>
     /// Calculated tax subtotal.

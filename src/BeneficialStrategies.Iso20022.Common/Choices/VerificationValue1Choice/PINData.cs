@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationValue1Choice
         [DisplayName("Control")]
         [IsoXmlTag("Ctrl")]
         [IsoSimpleType(IsoSimpleType.Exact1HexBinaryText)]
-        public IsoExact1HexBinaryText? Control { get; init; }
+        public Exact1HexBinaryText? Control { get; init; }
 
         /// <summary>
         /// key-set identifier is a number that uniquely identifies a group of related keys that are all different but have certain characteristics in common.
@@ -40,7 +40,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationValue1Choice
         [DisplayName("Key Set Identifier")]
         [IsoXmlTag("KeySetIdr")]
         [IsoSimpleType(IsoSimpleType.Max8NumericText)]
-        public IsoMax8NumericText? KeySetIdentifier { get; init; }
+        public Max8NumericText? KeySetIdentifier { get; init; }
 
         /// <summary>
         /// Contains Derived Info or Device ID and Transaction Counter.
@@ -51,7 +51,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationValue1Choice
         [DisplayName("Derived Information")]
         [IsoXmlTag("DrvdInf")]
         [IsoSimpleType(IsoSimpleType.Max32HexBinaryText)]
-        public IsoMax32HexBinaryText? DerivedInformation { get; init; }
+        public Max32HexBinaryText? DerivedInformation { get; init; }
 
         /// <summary>
         /// Used to select the encryption algorithm to encipher the keys contained in the associated key management data element.
@@ -61,7 +61,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationValue1Choice
         [DisplayName("Algorithm")]
         [IsoXmlTag("Algo")]
         [IsoSimpleType(IsoSimpleType.Max2NumericText)]
-        public IsoMax2NumericText? Algorithm { get; init; }
+        public Max2NumericText? Algorithm { get; init; }
 
         /// <summary>
         /// Specifies the length of the keys being transported, not the encrypting key.
@@ -71,7 +71,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationValue1Choice
         [DisplayName("Key Length")]
         [IsoXmlTag("KeyLngth")]
         [IsoSimpleType(IsoSimpleType.Max4NumericText)]
-        public IsoMax4NumericText? KeyLength { get; init; }
+        public Max4NumericText? KeyLength { get; init; }
 
         /// <summary>
         /// Mechanism used to provide key confidentiality and integrity.
@@ -81,7 +81,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationValue1Choice
         [DisplayName("Key Protection")]
         [IsoXmlTag("KeyPrtcn")]
         [IsoSimpleType(IsoSimpleType.Max2NumericText)]
-        public IsoMax2NumericText? KeyProtection { get; init; }
+        public Max2NumericText? KeyProtection { get; init; }
 
         /// <summary>
         /// Identifies a unique key set when multiple keys with the same key set identifier are used (for example, key rotation).
@@ -92,7 +92,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationValue1Choice
         [DisplayName("Key Index")]
         [IsoXmlTag("KeyIndx")]
         [IsoSimpleType(IsoSimpleType.Max5NumericText)]
-        public IsoMax5NumericText? KeyIndex { get; init; }
+        public Max5NumericText? KeyIndex { get; init; }
 
         /// <summary>
         /// As defined in ISO 9564-1.
@@ -101,7 +101,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationValue1Choice
         [DisplayName("PIN Block Format")]
         [IsoXmlTag("PINBlckFrmt")]
         [IsoSimpleType(IsoSimpleType.Max2NumericText)]
-        public required IsoMax2NumericText PINBlockFormat { get; init; }
+        public required Max2NumericText PINBlockFormat { get; init; }
 
         /// <summary>
         /// As defined in ISO 9564-1.
@@ -111,6 +111,6 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationValue1Choice
         [DisplayName("Encrypted PIN Block")]
         [IsoXmlTag("NcrptdPINBlck")]
         [IsoSimpleType(IsoSimpleType.Max16HexBinaryText)]
-        public required IsoMax16HexBinaryText EncryptedPINBlock { get; init; }
+        public required Max16HexBinaryText EncryptedPINBlock { get; init; }
     }
 }

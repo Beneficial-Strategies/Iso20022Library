@@ -21,7 +21,7 @@ public record ChargesRecord10
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public IsoMax140Text? AdditionalInformation { get; init; }
+    public Max140Text? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Amount.
@@ -49,7 +49,7 @@ public record ChargesRecord10
     /// </summary>
     [DisplayName("Charges Identification")]
     [IsoXmlTag("ChrgsId")]
-    public IsoMax35Text? ChargesIdentification { get; init; }
+    public Max35Text? ChargesIdentification { get; init; }
 
     /// <summary>
     /// Charges Requestor.
@@ -91,7 +91,7 @@ public record ChargesRecord10
     /// </summary>
     [DisplayName("Record Identification")]
     [IsoXmlTag("RcrdId")]
-    public IsoMax35Text? RecordIdentification { get; init; }
+    public Max35Text? RecordIdentification { get; init; }
 
     /// <summary>
     /// Type.

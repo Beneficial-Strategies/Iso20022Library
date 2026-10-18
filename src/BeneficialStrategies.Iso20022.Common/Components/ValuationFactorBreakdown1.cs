@@ -23,7 +23,7 @@ public record ValuationFactorBreakdown1
     [DisplayName("Valuation Factor")]
     [IsoXmlTag("ValtnFctr")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? ValuationFactor { get; init; }
+    public BaseOneRate? ValuationFactor { get; init; }
 
     /// <summary>
     /// Adjustment related to inflation applied on the liability/collateral to calculate the position.
@@ -32,7 +32,7 @@ public record ValuationFactorBreakdown1
     [DisplayName("Inflation Factor")]
     [IsoXmlTag("InfltnFctr")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? InflationFactor { get; init; }
+    public BaseOneRate? InflationFactor { get; init; }
 
     /// <summary>
     /// Haircut or margin on the security  expressed as a percentage.
@@ -41,7 +41,7 @@ public record ValuationFactorBreakdown1
     [DisplayName("Haircut")]
     [IsoXmlTag("Hrcut")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? Haircut { get; init; }
+    public BaseOneRate? Haircut { get; init; }
 
     /// <summary>
     /// Percentage that applies to price of the securities following a redemption.
@@ -50,5 +50,5 @@ public record ValuationFactorBreakdown1
     [DisplayName("Pool Factor")]
     [IsoXmlTag("PoolFctr")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? PoolFactor { get; init; }
+    public BaseOneRate? PoolFactor { get; init; }
 }

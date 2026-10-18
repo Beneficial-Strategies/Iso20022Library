@@ -48,6 +48,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementParties2Choice
         [IsoXmlTag("SctiesSttlmSys")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? SecuritiesSettlementSystem { get; init; }
+        public Max35Text? SecuritiesSettlementSystem { get; init; }
     }
 }

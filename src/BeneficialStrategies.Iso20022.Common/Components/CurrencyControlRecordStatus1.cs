@@ -24,7 +24,7 @@ public record CurrencyControlRecordStatus1
     [IsoXmlTag("RcrdId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text RecordIdentification { get; init; }
+    public required Max35Text RecordIdentification { get; init; }
 
     /// <summary>
     /// Defines the status of the reported record.
@@ -49,7 +49,7 @@ public record CurrencyControlRecordStatus1
     [DisplayName("Status Date Time")]
     [IsoXmlTag("StsDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? StatusDateTime { get; init; }
+    public ISODateTime? StatusDateTime { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identification of the document.

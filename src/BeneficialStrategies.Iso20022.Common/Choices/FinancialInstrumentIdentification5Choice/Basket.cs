@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentIdentificatio
         [DisplayName("ISIN")]
         [IsoXmlTag("ISIN")]
         [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-        public IsoISINOct2015Identifier? ISIN { get; init; }
+        public ISINOct2015Identifier? ISIN { get; init; }
 
         /// <summary>
         /// The LEI code of the issuer where the instrument is referring to an issuer rather than one single instrument.
@@ -32,6 +32,6 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentIdentificatio
         [DisplayName("LEI")]
         [IsoXmlTag("LEI")]
         [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-        public IsoLEIIdentifier? LEI { get; init; }
+        public LEIIdentifier? LEI { get; init; }
     }
 }

@@ -24,7 +24,7 @@ public record TradeData7
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Represents the original reference of the instruction for which the status is given, as assigned by the participant that submitted the foreign exchange trade.
@@ -34,7 +34,7 @@ public record TradeData7
     [IsoXmlTag("OrgtrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginatorReference { get; init; }
+    public Max35Text? OriginatorReference { get; init; }
 
     /// <summary>
     /// Reference to the unique system identification assigned to the trade by the central matching system.
@@ -44,7 +44,7 @@ public record TradeData7
     [IsoXmlTag("MtchgSysUnqRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MatchingSystemUniqueReference { get; init; }
+    public required Max35Text MatchingSystemUniqueReference { get; init; }
 
     /// <summary>
     /// Unique matching identification assigned to the trade and to the matching trade from the counterparty by the central matching system.
@@ -54,7 +54,7 @@ public record TradeData7
     [IsoXmlTag("MtchgSysMtchgRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MatchingSystemMatchingReference { get; init; }
+    public Max35Text? MatchingSystemMatchingReference { get; init; }
 
     /// <summary>
     /// Identification to the unique reference from the central settlement system that allows the removal of alleged trades once the matched status notification for the matching side has been received.
@@ -64,7 +64,7 @@ public record TradeData7
     [IsoXmlTag("MtchgSysMtchdSdRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MatchingSystemMatchedSideReference { get; init; }
+    public Max35Text? MatchingSystemMatchedSideReference { get; init; }
 
     /// <summary>
     /// Party that assigned the status to the foreign exchange or derivative trade.
@@ -74,7 +74,7 @@ public record TradeData7
     [IsoXmlTag("StsOrgtr")]
     [IsoSimpleType(IsoSimpleType.Max20Text)]
     [StringLength(maximumLength: 20, MinimumLength = 1)]
-    public IsoMax20Text? StatusOriginator { get; init; }
+    public Max20Text? StatusOriginator { get; init; }
 
     /// <summary>
     /// Specifies the new status of a trade.
@@ -99,7 +99,7 @@ public record TradeData7
     [DisplayName("Current Status Date Time")]
     [IsoXmlTag("CurStsDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? CurrentStatusDateTime { get; init; }
+    public ISODateTime? CurrentStatusDateTime { get; init; }
 
     /// <summary>
     /// Specifies the previous status of a trade.
@@ -124,7 +124,7 @@ public record TradeData7
     [DisplayName("Previous Status Date Time")]
     [IsoXmlTag("PrvsStsDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? PreviousStatusDateTime { get; init; }
+    public ISODateTime? PreviousStatusDateTime { get; init; }
 
     /// <summary>
     /// Specifies the product for which the status of the confirmation is reported.
@@ -134,7 +134,7 @@ public record TradeData7
     [IsoXmlTag("PdctTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProductType { get; init; }
+    public Max35Text? ProductType { get; init; }
 
     /// <summary>
     /// To indicate the requested CLS Settlement Session that the related trade is part of.
@@ -143,7 +143,7 @@ public record TradeData7
     [DisplayName("Settlement Session Identifier")]
     [IsoXmlTag("SttlmSsnIdr")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    public IsoExact4AlphaNumericText? SettlementSessionIdentifier { get; init; }
+    public Exact4AlphaNumericText? SettlementSessionIdentifier { get; init; }
 
     /// <summary>
     /// To indicate if the trade is split.
@@ -152,5 +152,5 @@ public record TradeData7
     [DisplayName("Split Trade Indicator")]
     [IsoXmlTag("SpltTradInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? SplitTradeIndicator { get; init; }
+    public YesNoIndicator? SplitTradeIndicator { get; init; }
 }

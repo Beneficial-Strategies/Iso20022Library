@@ -35,7 +35,7 @@ public record Trade7
     /// </summary>
     [DisplayName("Combination Deal Ticket Identification")]
     [IsoXmlTag("CmbntnDealTcktId")]
-    public IsoMax35Text? CombinationDealTicketIdentification { get; init; }
+    public Max35Text? CombinationDealTicketIdentification { get; init; }
 
     /// <summary>
     /// Contra Currency.
@@ -49,21 +49,21 @@ public record Trade7
     /// </summary>
     [DisplayName("Date And Time")]
     [IsoXmlTag("DtAndTm")]
-    public required IsoISODateTime DateAndTime { get; init; }
+    public required ISODateTime DateAndTime { get; init; }
 
     /// <summary>
     /// Date Confirmed.
     /// </summary>
     [DisplayName("Date Confirmed")]
     [IsoXmlTag("DtConfd")]
-    public IsoISODate? DateConfirmed { get; init; }
+    public DateOnly? DateConfirmed { get; init; }
 
     /// <summary>
     /// Deal Ticket Identification.
     /// </summary>
     [DisplayName("Deal Ticket Identification")]
     [IsoXmlTag("DealTcktId")]
-    public IsoMax30Text? DealTicketIdentification { get; init; }
+    public Max30Text? DealTicketIdentification { get; init; }
 
     /// <summary>
     /// Execution Type.
@@ -98,7 +98,7 @@ public record Trade7
     /// </summary>
     [DisplayName("Place Of Confirmation")]
     [IsoXmlTag("PlcOfConf")]
-    public IsoMax35Text? PlaceOfConfirmation { get; init; }
+    public Max35Text? PlaceOfConfirmation { get; init; }
 
     /// <summary>
     /// Product Identification.
@@ -126,7 +126,7 @@ public record Trade7
     /// </summary>
     [DisplayName("Symbol")]
     [IsoXmlTag("Symb")]
-    public required IsoMax35Text Symbol { get; init; }
+    public required Max35Text Symbol { get; init; }
 
     /// <summary>
     /// Target Currency Or Amount.
@@ -140,7 +140,7 @@ public record Trade7
     /// </summary>
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    public required IsoMax35Text TradeIdentification { get; init; }
+    public required Max35Text TradeIdentification { get; init; }
 
     /// <summary>
     /// Trading Currency.
@@ -168,5 +168,5 @@ public record Trade7
     /// </summary>
     [DisplayName("Transaction Time")]
     [IsoXmlTag("TxTm")]
-    public IsoISODateTime? TransactionTime { get; init; }
+    public ISODateTime? TransactionTime { get; init; }
 }

@@ -28,7 +28,7 @@ public record DriverInParty3
     /// </summary>
     [DisplayName("Age")]
     [IsoXmlTag("Age")]
-    public IsoMax2NumericText? Age { get; init; }
+    public Max2NumericText? Age { get; init; }
 
     /// <summary>
     /// Contact.
@@ -42,7 +42,7 @@ public record DriverInParty3
     /// </summary>
     [DisplayName("Date Of Birth")]
     [IsoXmlTag("DtOfBirth")]
-    public IsoISODate? DateOfBirth { get; init; }
+    public DateOnly? DateOfBirth { get; init; }
 
     /// <summary>
     /// Driver Credential.
@@ -84,7 +84,7 @@ public record DriverInParty3
     /// </summary>
     [DisplayName("License Expiration Date")]
     [IsoXmlTag("LicXprtnDt")]
-    public IsoISODate? LicenseExpirationDate { get; init; }
+    public DateOnly? LicenseExpirationDate { get; init; }
 
     /// <summary>
     /// License Form.
@@ -98,33 +98,33 @@ public record DriverInParty3
     /// </summary>
     [DisplayName("License Identification")]
     [IsoXmlTag("LicId")]
-    public IsoMax70Text? LicenseIdentification { get; init; }
+    public Max70Text? LicenseIdentification { get; init; }
 
     /// <summary>
     /// License Issuance Date.
     /// </summary>
     [DisplayName("License Issuance Date")]
     [IsoXmlTag("LicIssncDt")]
-    public IsoISODate? LicenseIssuanceDate { get; init; }
+    public DateOnly? LicenseIssuanceDate { get; init; }
 
     /// <summary>
     /// License Other Authority.
     /// </summary>
     [DisplayName("License Other Authority")]
     [IsoXmlTag("LicOthrAuthrty")]
-    public IsoMax16Text? LicenseOtherAuthority { get; init; }
+    public Max16Text? LicenseOtherAuthority { get; init; }
 
     /// <summary>
     /// License Type.
     /// </summary>
     [DisplayName("License Type")]
     [IsoXmlTag("LicTp")]
-    public IsoMax70Text? LicenseType { get; init; }
+    public Max70Text? LicenseType { get; init; }
 
     /// <summary>
     /// Name.
     /// </summary>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax70Text? Name { get; init; }
+    public Max70Text? Name { get; init; }
 }

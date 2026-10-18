@@ -24,7 +24,7 @@ public record Check1
     [IsoXmlTag("BkId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? BankIdentification { get; init; }
+    public Max35Text? BankIdentification { get; init; }
 
     /// <summary>
     /// Identification of the account linked to the check.
@@ -34,7 +34,7 @@ public record Check1
     [IsoXmlTag("AcctNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountNumber { get; init; }
+    public Max35Text? AccountNumber { get; init; }
 
     /// <summary>
     /// Identification of the check.
@@ -44,7 +44,7 @@ public record Check1
     [IsoXmlTag("ChckNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CheckNumber { get; init; }
+    public Max35Text? CheckNumber { get; init; }
 
     /// <summary>
     /// Check guarantee card number.
@@ -55,7 +55,7 @@ public record Check1
     [IsoXmlTag("ChckCardNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CheckCardNumber { get; init; }
+    public Max35Text? CheckCardNumber { get; init; }
 
     /// <summary>
     /// Track Data of the check to digitally identify the data.
@@ -81,5 +81,5 @@ public record Check1
     [IsoXmlTag("Ctry")]
     [IsoSimpleType(IsoSimpleType.Max3Text)]
     [StringLength(maximumLength: 3, MinimumLength = 1)]
-    public IsoMax3Text? Country { get; init; }
+    public Max3Text? Country { get; init; }
 }

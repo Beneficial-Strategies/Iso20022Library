@@ -22,7 +22,7 @@ public record ApplicationSpecifics2
     [IsoId("_7Hs6sRUZEfCfALVKQ4rOew")]
     [DisplayName("System User Account")]
     [IsoXmlTag("SysUsrAcct")]
-    public IsoMax140Text? SystemUserAccount { get; init; }
+    public Max140Text? SystemUserAccount { get; init; }
 
     /// <summary>
     /// Digital signature(s) of the Business Entity authorised to sign this Business File.
@@ -30,7 +30,7 @@ public record ApplicationSpecifics2
     [IsoId("_7Hs6sxUZEfCfALVKQ4rOew")]
     [DisplayName("Signature")]
     [IsoXmlTag("Sgntr")]
-    public SimpleValueList<IsoSignatureEnvelope> Signature { get; init; } = [];
+    public SimpleValueList<SignatureEnvelope> Signature { get; init; } = [];
 
     /// <summary>
     /// Total number of instances (messages) within the file.
@@ -38,5 +38,5 @@ public record ApplicationSpecifics2
     [IsoId("_7Hs6tRUZEfCfALVKQ4rOew")]
     [DisplayName("Total Number Of Business Messages")]
     [IsoXmlTag("TtlNbOfBizMsgs")]
-    public IsoNumber? TotalNumberOfBusinessMessages { get; init; }
+    public Number? TotalNumberOfBusinessMessages { get; init; }
 }

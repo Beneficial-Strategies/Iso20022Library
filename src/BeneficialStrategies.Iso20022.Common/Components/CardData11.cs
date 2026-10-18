@@ -28,7 +28,7 @@ public record CardData11
     /// </summary>
     [DisplayName("Card Sequence Number")]
     [IsoXmlTag("CardSeqNb")]
-    public IsoMin2Max3NumericText? CardSequenceNumber { get; init; }
+    public Min2Max3NumericText? CardSequenceNumber { get; init; }
 
     /// <summary>
     /// Country.
@@ -42,77 +42,77 @@ public record CardData11
     /// </summary>
     [DisplayName("Effective Date")]
     [IsoXmlTag("FctvDt")]
-    public IsoISOYearMonth? EffectiveDate { get; init; }
+    public ISOYearMonth? EffectiveDate { get; init; }
 
     /// <summary>
     /// Expiry Date.
     /// </summary>
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
-    public IsoISOYearMonth? ExpiryDate { get; init; }
+    public ISOYearMonth? ExpiryDate { get; init; }
 
     /// <summary>
     /// PAN.
     /// </summary>
     [DisplayName("PAN")]
     [IsoXmlTag("PAN")]
-    public IsoMax19NumericText? PAN { get; init; }
+    public Max19NumericText? PAN { get; init; }
 
     /// <summary>
     /// PAN Account Range.
     /// </summary>
     [DisplayName("PAN Account Range")]
     [IsoXmlTag("PANAcctRg")]
-    public IsoMax19NumericText? PANAccountRange { get; init; }
+    public Max19NumericText? PANAccountRange { get; init; }
 
     /// <summary>
     /// Payment Account Reference.
     /// </summary>
     [DisplayName("Payment Account Reference")]
     [IsoXmlTag("PmtAcctRef")]
-    public IsoMax35Text? PaymentAccountReference { get; init; }
+    public Max35Text? PaymentAccountReference { get; init; }
 
     /// <summary>
     /// Portfolio Identifier.
     /// </summary>
     [DisplayName("Portfolio Identifier")]
     [IsoXmlTag("PrtflIdr")]
-    public IsoMax35Text? PortfolioIdentifier { get; init; }
+    public Max35Text? PortfolioIdentifier { get; init; }
 
     /// <summary>
     /// Product Sub Type.
     /// </summary>
     [DisplayName("Product Sub Type")]
     [IsoXmlTag("PdctSubTp")]
-    public IsoMax35Text? ProductSubType { get; init; }
+    public Max35Text? ProductSubType { get; init; }
 
     /// <summary>
     /// Product Type.
     /// </summary>
     [DisplayName("Product Type")]
     [IsoXmlTag("PdctTp")]
-    public IsoMax35Text? ProductType { get; init; }
+    public Max35Text? ProductType { get; init; }
 
     /// <summary>
     /// Protected PAN.
     /// </summary>
     [DisplayName("Protected PAN")]
     [IsoXmlTag("PrtctdPAN")]
-    public IsoTrueFalseIndicator? ProtectedPAN { get; init; }
+    public TrueFalseIndicator? ProtectedPAN { get; init; }
 
     /// <summary>
     /// Service Code.
     /// </summary>
     [DisplayName("Service Code")]
     [IsoXmlTag("SvcCd")]
-    public IsoExact3NumericText? ServiceCode { get; init; }
+    public Exact3NumericText? ServiceCode { get; init; }
 
     /// <summary>
     /// Track1.
     /// </summary>
     [DisplayName("Track1")]
     [IsoXmlTag("Trck1")]
-    public IsoMax76Text? Track1 { get; init; }
+    public Max76Text? Track1 { get; init; }
 
     /// <summary>
     /// Track2.
@@ -126,5 +126,5 @@ public record CardData11
     /// </summary>
     [DisplayName("Track3")]
     [IsoXmlTag("Trck3")]
-    public IsoMax104Text? Track3 { get; init; }
+    public Max104Text? Track3 { get; init; }
 }

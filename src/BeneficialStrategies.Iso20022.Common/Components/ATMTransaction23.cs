@@ -32,7 +32,7 @@ public record ATMTransaction23
     [IsoXmlTag("RcncltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReconciliationIdentification { get; init; }
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Description of the transfer for the creditor.
@@ -42,7 +42,7 @@ public record ATMTransaction23
     [IsoXmlTag("CdtrLabl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CreditorLabel { get; init; }
+    public Max35Text? CreditorLabel { get; init; }
 
     /// <summary>
     /// Description of the transfer for the debtor.
@@ -52,7 +52,7 @@ public record ATMTransaction23
     [IsoXmlTag("DbtrLabl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DebtorLabel { get; init; }
+    public Max35Text? DebtorLabel { get; init; }
 
     /// <summary>
     /// Reference of the payment.
@@ -62,7 +62,7 @@ public record ATMTransaction23
     [IsoXmlTag("PmtRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PaymentReference { get; init; }
+    public Max35Text? PaymentReference { get; init; }
 
     /// <summary>
     /// Information about the source account of the transfer.
@@ -119,7 +119,7 @@ public record ATMTransaction23
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RequestedExecutionDate { get; init; }
+    public DateOnly? RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Identifies the instant transfer program.
@@ -129,7 +129,7 @@ public record ATMTransaction23
     [IsoXmlTag("InstntTrfPrgm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? InstantTransferProgram { get; init; }
+    public Max35Text? InstantTransferProgram { get; init; }
 
     /// <summary>
     /// Information for reccurring transfer or standing orders.
@@ -146,7 +146,7 @@ public record ATMTransaction23
     [DisplayName("Requested Receipt")]
     [IsoXmlTag("ReqdRct")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? RequestedReceipt { get; init; }
+    public TrueFalseIndicator? RequestedReceipt { get; init; }
 
     /// <summary>
     /// Sequence of one or more TLV data elements from the ATM application, in accordance with ISO 7816-6, not in a specific order. Present if the transaction is performed with an EMV chip card application.
@@ -155,5 +155,5 @@ public record ATMTransaction23
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
     [IsoSimpleType(IsoSimpleType.Max10000Binary)]
-    public IsoMax10000Binary? ICCRelatedData { get; init; }
+    public Max10000Binary? ICCRelatedData { get; init; }
 }

@@ -24,7 +24,7 @@ public record CorporateActionGeneralInformationSD13
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text PlaceAndName { get; init; }
+    public required Max350Text PlaceAndName { get; init; }
 
     /// <summary>
     /// DTC processing domain/ category for event types.
@@ -73,7 +73,7 @@ public record CorporateActionGeneralInformationSD13
     [DisplayName("EDS Messaging Eligibility Flag")]
     [IsoXmlTag("EDSMsggElgbltyFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? EDSMessagingEligibilityFlag { get; init; }
+    public YesNoIndicator? EDSMessagingEligibilityFlag { get; init; }
 
     /// <summary>
     /// Unique number systemically assigned to all Lottery and Non-Lottery events announced in DTC Redemptions (REDS) Participant Terminal System (PTS)/ Particinant Browser System(PBS) function.
@@ -82,7 +82,7 @@ public record CorporateActionGeneralInformationSD13
     [DisplayName("Redemption Identification")]
     [IsoXmlTag("RedId")]
     [IsoSimpleType(IsoSimpleType.Max10NumericText)]
-    public IsoMax10NumericText? RedemptionIdentification { get; init; }
+    public Max10NumericText? RedemptionIdentification { get; init; }
 
     /// <summary>
     /// Identifies events that offer instruction processing specific to foreign currency payment (FCP) elections.
@@ -91,7 +91,7 @@ public record CorporateActionGeneralInformationSD13
     [DisplayName("DTCFCP Election Flag")]
     [IsoXmlTag("DTCFCPElctnFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? DTCFCPElectionFlag { get; init; }
+    public YesNoIndicator? DTCFCPElectionFlag { get; init; }
 
     /// <summary>
     /// Indicates whether the event is being processed by DTC.
@@ -100,5 +100,5 @@ public record CorporateActionGeneralInformationSD13
     [DisplayName("Asset Servicer Processing Flag")]
     [IsoXmlTag("AsstSvcrPrcgFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AssetServicerProcessingFlag { get; init; }
+    public YesNoIndicator? AssetServicerProcessingFlag { get; init; }
 }

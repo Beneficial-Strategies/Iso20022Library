@@ -24,7 +24,7 @@ public record Pagination
     [DisplayName("Page Number")]
     [IsoXmlTag("PgNb")]
     [IsoSimpleType(IsoSimpleType.Max5NumericText)]
-    public required IsoMax5NumericText PageNumber { get; init; }
+    public required Max5NumericText PageNumber { get; init; }
 
     /// <summary>
     /// Indicates the last page.
@@ -33,5 +33,5 @@ public record Pagination
     [DisplayName("Last Page Indicator")]
     [IsoXmlTag("LastPgInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator LastPageIndicator { get; init; }
+    public required YesNoIndicator LastPageIndicator { get; init; }
 }

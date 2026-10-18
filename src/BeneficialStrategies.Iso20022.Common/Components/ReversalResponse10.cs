@@ -30,7 +30,7 @@ public record ReversalResponse10
     [IsoId("_YPk0K7YNEfCUZfsQO4rYeA")]
     [DisplayName("Sale Reference Identification")]
     [IsoXmlTag("SaleRefId")]
-    public IsoMax35Text? SaleReferenceIdentification { get; init; }
+    public Max35Text? SaleReferenceIdentification { get; init; }
 
     /// <summary>
     /// POI identification of the transaction in an unambiguous way.
@@ -46,7 +46,7 @@ public record ReversalResponse10
     [IsoId("_YPk0N7YNEfCUZfsQO4rYeA")]
     [DisplayName("POI Reconciliation Identification")]
     [IsoXmlTag("POIRcncltnId")]
-    public IsoMax35Text? POIReconciliationIdentification { get; init; }
+    public Max35Text? POIReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Identification of the transaction given by the Issuer.
@@ -54,7 +54,7 @@ public record ReversalResponse10
     [IsoId("_YPk0PbYNEfCUZfsQO4rYeA")]
     [DisplayName("Issuer Reference Data")]
     [IsoXmlTag("IssrRefData")]
-    public IsoMax140Text? IssuerReferenceData { get; init; }
+    public Max140Text? IssuerReferenceData { get; init; }
 
     /// <summary>
     /// Result of reversal transaction.

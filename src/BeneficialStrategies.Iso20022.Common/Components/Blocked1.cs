@@ -33,7 +33,7 @@ public record Blocked1
     [DisplayName("Blocked")]
     [IsoXmlTag("Blckd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator Blocked { get; init; }
+    public required YesNoIndicator Blocked { get; init; }
 
     /// <summary>
     /// Specifies the reason the account is blocked.

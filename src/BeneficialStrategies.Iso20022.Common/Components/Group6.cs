@@ -21,7 +21,7 @@ public record Group6
     /// </summary>
     [DisplayName("Group Identification")]
     [IsoXmlTag("GrpId")]
-    public required IsoMax4AlphaNumericText GroupIdentification { get; init; }
+    public required Max4AlphaNumericText GroupIdentification { get; init; }
 
     /// <summary>
     /// Party.

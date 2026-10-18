@@ -25,7 +25,7 @@ public record PaymentInstructionInformation1
     [IsoXmlTag("PmtInfId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PaymentInformationIdentification { get; init; }
+    public Max35Text? PaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Specifies the means of payment that will be used to move the amount of money.
@@ -50,7 +50,7 @@ public record PaymentInstructionInformation1
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate RequestedExecutionDate { get; init; }
+    public required DateOnly RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Date used for the correction of the value date of a cash pool movement that has been posted with a different value date.
@@ -59,7 +59,7 @@ public record PaymentInstructionInformation1
     [DisplayName("Pooling Adjustment Date")]
     [IsoXmlTag("PoolgAdjstmntDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? PoolingAdjustmentDate { get; init; }
+    public DateOnly? PoolingAdjustmentDate { get; init; }
 
     /// <summary>
     /// Party that owes an amount of money to the (ultimate) creditor.

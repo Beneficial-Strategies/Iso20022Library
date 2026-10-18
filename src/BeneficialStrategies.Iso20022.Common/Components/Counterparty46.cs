@@ -40,5 +40,5 @@ public record Counterparty46
     [DisplayName("Reporting Obligation")]
     [IsoXmlTag("RptgOblgtn")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ReportingObligation { get; init; }
+    public TrueFalseIndicator? ReportingObligation { get; init; }
 }

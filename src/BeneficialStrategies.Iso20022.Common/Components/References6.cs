@@ -65,5 +65,5 @@ public record References6
     [IsoId("_QoQ35tp-Ed-ak6NoX_4Aeg_-564165494")]
     [DisplayName("Attached Document Name")]
     [IsoXmlTag("AttchdDocNm")]
-    public SimpleValueList<IsoMax70Text> AttachedDocumentName { get; init; } = [];
+    public SimpleValueList<Max70Text> AttachedDocumentName { get; init; } = [];
 }

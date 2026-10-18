@@ -32,7 +32,7 @@ public record InvestmentFund1
     [IsoXmlTag("ClssTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClassType { get; init; }
+    public Max35Text? ClassType { get; init; }
 
     /// <summary>
     /// Number of shares outstanding for the investment fund or investment fund share class.
@@ -41,7 +41,7 @@ public record InvestmentFund1
     [DisplayName("Total Units Outstanding")]
     [IsoXmlTag("TtlUnitsOutsdng")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? TotalUnitsOutstanding { get; init; }
+    public DecimalNumber? TotalUnitsOutstanding { get; init; }
 
     /// <summary>
     /// Total transactional units (subscriptions and redemptions) which are applied to the investment fund or investment fund share class for the report period.
@@ -50,7 +50,7 @@ public record InvestmentFund1
     [DisplayName("Transactional Units")]
     [IsoXmlTag("TxnlUnits")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? TransactionalUnits { get; init; }
+    public DecimalNumber? TransactionalUnits { get; init; }
 
     /// <summary>
     /// Total value of the investment fund or investment fund share class units.

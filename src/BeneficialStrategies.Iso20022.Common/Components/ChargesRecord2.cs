@@ -39,7 +39,7 @@ public record ChargesRecord2
     [DisplayName("Charge Included Indicator")]
     [IsoXmlTag("ChrgInclInd")]
     [IsoSimpleType(IsoSimpleType.ChargeIncludedIndicator)]
-    public IsoChargeIncludedIndicator? ChargeIncludedIndicator { get; init; }
+    public ChargeIncludedIndicator? ChargeIncludedIndicator { get; init; }
 
     /// <summary>
     /// Specifies the type of charge.
@@ -56,7 +56,7 @@ public record ChargesRecord2
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Rate { get; init; }
+    public PercentageRate? Rate { get; init; }
 
     /// <summary>
     /// Specifies which party/parties will bear the charges associated with the processing of the payment transaction.

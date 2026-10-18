@@ -71,7 +71,7 @@ public record MeetingEntitlementNotificationV06 : IOuterRecord
     [IsoXmlTag("PrvsEntitlmntNtfctnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PreviousEntitlementNotificationIdentification { get; init; }
+    public Max35Text? PreviousEntitlementNotificationIdentification { get; init; }
 
     /// <summary>
     /// Set of elements that allow to identify unambiguously a meeting.

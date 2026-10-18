@@ -23,7 +23,7 @@ public record ContractSize1
     [DisplayName("Lot Size")]
     [IsoXmlTag("LotSz")]
     [IsoSimpleType(IsoSimpleType.PositiveNumber)]
-    public required IsoPositiveNumber LotSize { get; init; }
+    public required PositiveNumber LotSize { get; init; }
 
     /// <summary>
     /// Specifies the unit of underlying.

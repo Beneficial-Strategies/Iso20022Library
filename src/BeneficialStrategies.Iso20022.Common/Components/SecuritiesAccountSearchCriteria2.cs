@@ -24,7 +24,7 @@ public record SecuritiesAccountSearchCriteria2
     [IsoXmlTag("AcctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountIdentification { get; init; }
+    public Max35Text? AccountIdentification { get; init; }
 
     /// <summary>
     /// Party that services the account.
@@ -81,7 +81,7 @@ public record SecuritiesAccountSearchCriteria2
     [DisplayName("End Investor Flag")]
     [IsoXmlTag("EndInvstrFlg")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    public IsoExact4AlphaNumericText? EndInvestorFlag { get; init; }
+    public Exact4AlphaNumericText? EndInvestorFlag { get; init; }
 
     /// <summary>
     /// Defines how the price is applied to the securities account.
@@ -90,5 +90,5 @@ public record SecuritiesAccountSearchCriteria2
     [DisplayName("Pricing Scheme")]
     [IsoXmlTag("PricgSchme")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    public IsoExact4AlphaNumericText? PricingScheme { get; init; }
+    public Exact4AlphaNumericText? PricingScheme { get; init; }
 }

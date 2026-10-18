@@ -24,7 +24,7 @@ public record MeetingNotice2
     [IsoXmlTag("MtgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MeetingIdentification { get; init; }
+    public Max35Text? MeetingIdentification { get; init; }
 
     /// <summary>
     /// Identification assigned to a meeting by the issuer. It must be unique for the issuer.
@@ -34,7 +34,7 @@ public record MeetingNotice2
     [IsoXmlTag("IssrMtgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? IssuerMeetingIdentification { get; init; }
+    public Max35Text? IssuerMeetingIdentification { get; init; }
 
     /// <summary>
     /// Specifies the type of security holders meeting.
@@ -60,7 +60,7 @@ public record MeetingNotice2
     [IsoXmlTag("XtndedClssfctn")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedClassification { get; init; }
+    public Extended350Code? ExtendedClassification { get; init; }
 
     /// <summary>
     /// Official meeting announcement date.
@@ -69,7 +69,7 @@ public record MeetingNotice2
     [DisplayName("Announcement Date")]
     [IsoXmlTag("AnncmntDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? AnnouncementDate { get; init; }
+    public DateOnly? AnnouncementDate { get; init; }
 
     /// <summary>
     /// Indicates whether physical participation to a meeting is required in order to be allowed to vote.
@@ -78,7 +78,7 @@ public record MeetingNotice2
     [DisplayName("Attendance Required")]
     [IsoXmlTag("AttndncReqrd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator AttendanceRequired { get; init; }
+    public required YesNoIndicator AttendanceRequired { get; init; }
 
     /// <summary>
     /// Indicates how to order the attendance card or to give notice of attendance.
@@ -88,7 +88,7 @@ public record MeetingNotice2
     [IsoXmlTag("AttndncConfInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AttendanceConfirmationInformation { get; init; }
+    public Max350Text? AttendanceConfirmationInformation { get; init; }
 
     /// <summary>
     /// Date and time by which the beneficial owner or agent must notify of their intention to participate in a meeting. This deadline is set by an intermediary.
@@ -122,7 +122,7 @@ public record MeetingNotice2
     [IsoXmlTag("AddtlDcmnttnURLAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? AdditionalDocumentationURLAddress { get; init; }
+    public Max256Text? AdditionalDocumentationURLAddress { get; init; }
 
     /// <summary>
     /// Date and time by which security holders can propose amendments or new resolutions. This deadline is set by an intermediary.
@@ -148,7 +148,7 @@ public record MeetingNotice2
     [IsoXmlTag("RsltnPrpslThrshld")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? ResolutionProposalThreshold { get; init; }
+    public Max350Text? ResolutionProposalThreshold { get; init; }
 
     /// <summary>
     /// Specifies the minimum stake in share capital or cash value or number of security holders required to table resolutions. This minimum is expressed as a percentage.
@@ -157,7 +157,7 @@ public record MeetingNotice2
     [DisplayName("Resolution Proposal Threshold Percentage")]
     [IsoXmlTag("RsltnPrpslThrshldPctg")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? ResolutionProposalThresholdPercentage { get; init; }
+    public PercentageRate? ResolutionProposalThresholdPercentage { get; init; }
 
     /// <summary>
     /// Number of securities admitted to the vote, expressed as an amount and a currency.
@@ -174,7 +174,7 @@ public record MeetingNotice2
     [DisplayName("Total Number Of Voting Rights")]
     [IsoXmlTag("TtlNbOfVtngRghts")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? TotalNumberOfVotingRights { get; init; }
+    public Number? TotalNumberOfVotingRights { get; init; }
 
     /// <summary>
     /// Address where the information on the proxy should be sent.

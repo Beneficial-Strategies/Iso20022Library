@@ -24,7 +24,7 @@ public record CorporateActionInstructedBalanceOptionProtectInstructionSD3
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Option number of the protect instruction.
@@ -42,7 +42,7 @@ public record CorporateActionInstructedBalanceOptionProtectInstructionSD3
     [IsoXmlTag("PrtctSfkpgAcct")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINMax35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoRestrictedFINMax35Text? ProtectSafekeepingAccount { get; init; }
+    public RestrictedFINMax35Text? ProtectSafekeepingAccount { get; init; }
 
     /// <summary>
     /// Quantity of the protect instruction which has not been covered.

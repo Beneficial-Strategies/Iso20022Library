@@ -24,7 +24,7 @@ public record LetterIntent1
     [IsoXmlTag("LttrInttRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text LetterIntentReference { get; init; }
+    public required Max35Text LetterIntentReference { get; init; }
 
     /// <summary>
     /// Amount stated on the letter of intent.
@@ -41,7 +41,7 @@ public record LetterIntent1
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? StartDate { get; init; }
+    public DateOnly? StartDate { get; init; }
 
     /// <summary>
     /// End date stated on the letter of intent.
@@ -50,5 +50,5 @@ public record LetterIntent1
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? EndDate { get; init; }
+    public DateOnly? EndDate { get; init; }
 }

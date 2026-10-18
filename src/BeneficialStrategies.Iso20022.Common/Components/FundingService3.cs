@@ -21,28 +21,28 @@ public record FundingService3
     /// </summary>
     [DisplayName("Business Purpose")]
     [IsoXmlTag("BizPurp")]
-    public IsoMax500Text? BusinessPurpose { get; init; }
+    public Max500Text? BusinessPurpose { get; init; }
 
     /// <summary>
     /// Claim Assigner.
     /// </summary>
     [DisplayName("Claim Assigner")]
     [IsoXmlTag("ClmAssgnr")]
-    public IsoMax35Text? ClaimAssigner { get; init; }
+    public Max35Text? ClaimAssigner { get; init; }
 
     /// <summary>
     /// Claim Credentials.
     /// </summary>
     [DisplayName("Claim Credentials")]
     [IsoXmlTag("ClmCrdntls")]
-    public IsoMax500Text? ClaimCredentials { get; init; }
+    public Max500Text? ClaimCredentials { get; init; }
 
     /// <summary>
     /// Description.
     /// </summary>
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax256Text? Description { get; init; }
+    public Max256Text? Description { get; init; }
 
     /// <summary>
     /// Funding Source.
@@ -56,19 +56,19 @@ public record FundingService3
     /// </summary>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax35Text? Name { get; init; }
+    public Max35Text? Name { get; init; }
 
     /// <summary>
     /// Provider.
     /// </summary>
     [DisplayName("Provider")]
     [IsoXmlTag("Prvdr")]
-    public IsoMax35Text? Provider { get; init; }
+    public Max35Text? Provider { get; init; }
 
     /// <summary>
     /// Reference.
     /// </summary>
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
-    public IsoMax35Text? Reference { get; init; }
+    public Max35Text? Reference { get; init; }
 }

@@ -31,7 +31,7 @@ public record MissingMarginData2
     [DisplayName("Number Of Outstanding Derivatives")]
     [IsoXmlTag("NbOfOutsdngDerivs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber NumberOfOutstandingDerivatives { get; init; }
+    public required Number NumberOfOutstandingDerivatives { get; init; }
 
     /// <summary>
     /// Number of outstanding derivatives with no margin information.
@@ -40,7 +40,7 @@ public record MissingMarginData2
     [DisplayName("Number Of Outstanding Derivatives With No Margin Information")]
     [IsoXmlTag("NbOfOutsdngDerivsWthNoMrgnInf")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber NumberOfOutstandingDerivativesWithNoMarginInformation { get; init; }
+    public required Number NumberOfOutstandingDerivativesWithNoMarginInformation { get; init; }
 
     /// <summary>
     /// Number of outstanding derivatives with outdated margin information.
@@ -49,7 +49,7 @@ public record MissingMarginData2
     [DisplayName("Number Of Outstanding Derivatives With Outdated Margin Information")]
     [IsoXmlTag("NbOfOutsdngDerivsWthOutdtdMrgnInf")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber NumberOfOutstandingDerivativesWithOutdatedMarginInformation { get; init; }
+    public required Number NumberOfOutstandingDerivativesWithOutdatedMarginInformation { get; init; }
 
     /// <summary>
     /// Details of missing margins per transaction.

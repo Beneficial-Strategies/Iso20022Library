@@ -31,7 +31,7 @@ public record Traceability9
     [DisplayName("Trace Date Time In")]
     [IsoXmlTag("TracDtTmIn")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? TraceDateTimeIn { get; init; }
+    public ISODateTime? TraceDateTimeIn { get; init; }
 
     /// <summary>
     /// Date and time of the outgoing exchange for relaying or processing.
@@ -40,5 +40,5 @@ public record Traceability9
     [DisplayName("Trace Date Time Out")]
     [IsoXmlTag("TracDtTmOut")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? TraceDateTimeOut { get; init; }
+    public ISODateTime? TraceDateTimeOut { get; init; }
 }

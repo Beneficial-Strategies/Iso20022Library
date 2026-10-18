@@ -32,7 +32,7 @@ public record ReferredDocumentType1
     [IsoXmlTag("Prtry")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Proprietary { get; init; }
+    public required Max35Text Proprietary { get; init; }
 
     /// <summary>
     /// Identification of the issuer of the reference document type.
@@ -42,5 +42,5 @@ public record ReferredDocumentType1
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Issuer { get; init; }
+    public Max35Text? Issuer { get; init; }
 }

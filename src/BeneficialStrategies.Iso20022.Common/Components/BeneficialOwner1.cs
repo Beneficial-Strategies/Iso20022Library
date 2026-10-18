@@ -63,7 +63,7 @@ public record BeneficialOwner1
     [DisplayName("Certification Indicator")]
     [IsoXmlTag("CertfctnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? CertificationIndicator { get; init; }
+    public YesNoIndicator? CertificationIndicator { get; init; }
 
     /// <summary>
     /// Type of certification which is required.
@@ -81,7 +81,7 @@ public record BeneficialOwner1
     [IsoXmlTag("DclrtnDtls")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? DeclarationDetails { get; init; }
+    public Max350Text? DeclarationDetails { get; init; }
 
     /// <summary>
     /// Identification of the financial instrument.

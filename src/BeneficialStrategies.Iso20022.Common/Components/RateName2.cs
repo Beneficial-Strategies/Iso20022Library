@@ -24,7 +24,7 @@ public record RateName2
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax8Text)]
     [StringLength(maximumLength: 8, MinimumLength = 1)]
-    public IsoRestrictedFINXMax8Text? Issuer { get; init; }
+    public RestrictedFINXMax8Text? Issuer { get; init; }
 
     /// <summary>
     /// Rate Name specifies the reference rate or basis rate on which a variable rate is based (ex: EONIA, EURIBOR, LIBOR, FEFUND, EURREPO).
@@ -34,5 +34,5 @@ public record RateName2
     [IsoXmlTag("RateNm")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax24Text)]
     [StringLength(maximumLength: 24, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax24Text RateName { get; init; }
+    public required RestrictedFINXMax24Text RateName { get; init; }
 }

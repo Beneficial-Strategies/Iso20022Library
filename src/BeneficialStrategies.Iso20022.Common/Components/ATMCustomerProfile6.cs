@@ -21,7 +21,7 @@ public record ATMCustomerProfile6
     /// </summary>
     [DisplayName("Customer Identification")]
     [IsoXmlTag("CstmrId")]
-    public IsoMax35Text? CustomerIdentification { get; init; }
+    public Max35Text? CustomerIdentification { get; init; }
 
     /// <summary>
     /// Preferred Language.
@@ -35,7 +35,7 @@ public record ATMCustomerProfile6
     /// </summary>
     [DisplayName("Profile Reference")]
     [IsoXmlTag("PrflRef")]
-    public IsoMax35Text? ProfileReference { get; init; }
+    public Max35Text? ProfileReference { get; init; }
 
     /// <summary>
     /// Retrieval Mode.

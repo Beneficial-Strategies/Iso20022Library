@@ -21,7 +21,7 @@ public record UpdatedAdditionalInformation19
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public required IsoMax350Text AdditionalInformation { get; init; }
+    public required Max350Text AdditionalInformation { get; init; }
 
     /// <summary>
     /// Language.

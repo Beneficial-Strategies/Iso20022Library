@@ -30,7 +30,7 @@ public record FinancialInstrument107
     [IsoId("9fc43bb6-10c6-4dbc-8754-b06f4952e4bb")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax350Text? Name { get; init; }
+    public Max350Text? Name { get; init; }
 
     /// <summary>
     /// Financial Instrument Short Name (FISN) expressed in conformance with the ISO 18774 standard.
@@ -38,7 +38,7 @@ public record FinancialInstrument107
     [IsoId("7ac15529-1275-4dcb-b15c-ab5a10d42ddf")]
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
-    public IsoMax35Text? ShortName { get; init; }
+    public Max35Text? ShortName { get; init; }
 
     /// <summary>
     /// Additional information about the financial instrument to help identify the instrument.
@@ -46,7 +46,7 @@ public record FinancialInstrument107
     [IsoId("2eef025f-2727-4de8-a67e-205b9aa85b00")]
     [DisplayName("Supplementary Identification")]
     [IsoXmlTag("SplmtryId")]
-    public IsoMax35Text? SupplementaryIdentification { get; init; }
+    public Max35Text? SupplementaryIdentification { get; init; }
 
     /// <summary>
     /// Features of units offered by the fund.
@@ -54,7 +54,7 @@ public record FinancialInstrument107
     [IsoId("6872bca5-3302-4ca8-8a9a-248d7a80bb98")]
     [DisplayName("Class Type")]
     [IsoXmlTag("ClssTp")]
-    public IsoMax35Text? ClassType { get; init; }
+    public Max35Text? ClassType { get; init; }
 
     /// <summary>
     /// Form, that is, ownership, of the security.
@@ -78,7 +78,7 @@ public record FinancialInstrument107
     [IsoId("52e636cb-179f-49aa-adaa-d9e541eb8e1a")]
     [DisplayName("Product Group")]
     [IsoXmlTag("PdctGrp")]
-    public IsoMax140Text? ProductGroup { get; init; }
+    public Max140Text? ProductGroup { get; init; }
 
     /// <summary>
     /// Choice of formats for the identification of a series.

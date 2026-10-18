@@ -38,5 +38,5 @@ public record ValidationStatusInformation1
     [IsoId("_RXzedtp-Ed-ak6NoX_4Aeg_1617662894")]
     [DisplayName("Additional Status Reason Information")]
     [IsoXmlTag("AddtlStsRsnInf")]
-    public SimpleValueList<IsoMax105Text> AdditionalStatusReasonInformation { get; init; } = [];
+    public SimpleValueList<Max105Text> AdditionalStatusReasonInformation { get; init; } = [];
 }

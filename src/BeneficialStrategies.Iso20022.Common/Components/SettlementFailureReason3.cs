@@ -25,7 +25,7 @@ public record SettlementFailureReason3
     [DisplayName("Average Duration")]
     [IsoXmlTag("AvrgDrtn")]
     [IsoSimpleType(IsoSimpleType.Max2Fraction1NonNegativeNumber)]
-    public IsoMax2Fraction1NonNegativeNumber? AverageDuration { get; init; }
+    public Max2Fraction1NonNegativeNumber? AverageDuration { get; init; }
 
     /// <summary>
     /// Detailed description of the failure reasons.

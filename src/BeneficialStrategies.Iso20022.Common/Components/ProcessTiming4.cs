@@ -23,7 +23,7 @@ public record ProcessTiming4
     [DisplayName("Start Time")]
     [IsoXmlTag("StartTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? StartTime { get; init; }
+    public ISODateTime? StartTime { get; init; }
 
     /// <summary>
     /// Date and time after which the action cannot be processed.
@@ -32,7 +32,7 @@ public record ProcessTiming4
     [DisplayName("End Time")]
     [IsoXmlTag("EndTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? EndTime { get; init; }
+    public ISODateTime? EndTime { get; init; }
 
     /// <summary>
     /// Period delay between cyclic action activation in months, days, hours and minutes, leading zeros could be omitted.
@@ -41,5 +41,5 @@ public record ProcessTiming4
     [DisplayName("Period")]
     [IsoXmlTag("Prd")]
     [IsoSimpleType(IsoSimpleType.Max9NumericText)]
-    public IsoMax9NumericText? Period { get; init; }
+    public Max9NumericText? Period { get; init; }
 }

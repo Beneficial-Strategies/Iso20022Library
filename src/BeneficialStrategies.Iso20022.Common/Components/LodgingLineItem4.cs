@@ -22,7 +22,7 @@ public record LodgingLineItem4
     [IsoId("_6psxQUh4EfCMZJtj4J7UGQ")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Time of the charge for the product or service associated with the line item.
@@ -30,7 +30,7 @@ public record LodgingLineItem4
     [IsoId("_6psxQ0h4EfCMZJtj4J7UGQ")]
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
-    public IsoISOTime? Time { get; init; }
+    public ISOTime? Time { get; init; }
 
     /// <summary>
     /// Type of product or service associated with the line item.
@@ -46,7 +46,7 @@ public record LodgingLineItem4
     [IsoId("_6psxR0h4EfCMZJtj4J7UGQ")]
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Indicates whether or not the charge originated following the checkout.
@@ -54,7 +54,7 @@ public record LodgingLineItem4
     [IsoId("_6psxSUh4EfCMZJtj4J7UGQ")]
     [DisplayName("Post Check Out")]
     [IsoXmlTag("PstChckOut")]
-    public IsoTrueFalseIndicator? PostCheckOut { get; init; }
+    public TrueFalseIndicator? PostCheckOut { get; init; }
 
     /// <summary>
     /// A code to indicate the tax amount is credit or debit.
@@ -78,7 +78,7 @@ public record LodgingLineItem4
     [IsoId("_6psxT0h4EfCMZJtj4J7UGQ")]
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
-    public IsoMax4NumericText? Duration { get; init; }
+    public Max4NumericText? Duration { get; init; }
 
     /// <summary>
     /// Subtotal amount of line item.
@@ -102,7 +102,7 @@ public record LodgingLineItem4
     [IsoId("_3uoHQkh4EfCMZJtj4J7UGQ")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -110,5 +110,5 @@ public record LodgingLineItem4
     [IsoId("_3uoHQ0h4EfCMZJtj4J7UGQ")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

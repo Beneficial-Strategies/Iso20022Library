@@ -24,7 +24,7 @@ public record ShippingPackage1
     [IsoXmlTag("TrckgNb")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? TrackingNumber { get; init; }
+    public Max70Text? TrackingNumber { get; init; }
 
     /// <summary>
     /// Supplier or provider of the delivery services.
@@ -41,7 +41,7 @@ public record ShippingPackage1
     [DisplayName("Pickup Time")]
     [IsoXmlTag("PckpTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? PickupTime { get; init; }
+    public ISOTime? PickupTime { get; init; }
 
     /// <summary>
     /// Delivery information.
@@ -74,7 +74,7 @@ public record ShippingPackage1
     [DisplayName("Insurance Indicator")]
     [IsoXmlTag("InsrncInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? InsuranceIndicator { get; init; }
+    public TrueFalseIndicator? InsuranceIndicator { get; init; }
 
     /// <summary>
     /// Amount of insurance.

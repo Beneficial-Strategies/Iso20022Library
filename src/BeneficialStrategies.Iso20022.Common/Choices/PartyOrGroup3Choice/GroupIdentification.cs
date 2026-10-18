@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrGroup3Choice
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("GrpId")]
-        public required IsoMax4AlphaNumericText Value { get; init; }
+        public required Max4AlphaNumericText Value { get; init; }
     }
 }

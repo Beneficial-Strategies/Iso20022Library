@@ -32,7 +32,7 @@ public record ResultData11
     [IsoXmlTag("OthrRslt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherResult { get; init; }
+    public Max35Text? OtherResult { get; init; }
 
     /// <summary>
     /// Detailed results of the processing, conforming to ISO 8583 Response codes list.  This code list is maintained by the ISO 8583/MA (maintenance agency).
@@ -50,7 +50,7 @@ public record ResultData11
     [IsoXmlTag("OthrRsltDtls")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherResultDetails { get; init; }
+    public Max35Text? OtherResultDetails { get; init; }
 
     /// <summary>
     /// Additional result information to be conveyed.

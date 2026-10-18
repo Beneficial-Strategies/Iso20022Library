@@ -78,7 +78,7 @@ public record ForeignExchangeTradeConfirmationRequestCancellationRequestV02 : IO
     /// </summary>
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    public required IsoMax35Text TradeIdentification { get; init; }
+    public required Max35Text TradeIdentification { get; init; }
 
     /// <summary>
     /// Trading Side Identification.

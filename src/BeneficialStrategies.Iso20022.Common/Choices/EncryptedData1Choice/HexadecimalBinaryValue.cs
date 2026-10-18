@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.EncryptedData1Choice
         /// </summary>
         [IsoXmlTag("HexBinryVal")]
         [IsoSimpleType(IsoSimpleType.Max9999HexBinaryText)]
-        public required IsoMax9999HexBinaryText Value { get; init; }
+        public required Max9999HexBinaryText Value { get; init; }
     }
 }

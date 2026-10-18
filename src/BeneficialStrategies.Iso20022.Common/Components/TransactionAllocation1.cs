@@ -49,7 +49,7 @@ public record TransactionAllocation1
     /// </summary>
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
-    public required IsoMax35Text Reference { get; init; }
+    public required Max35Text Reference { get; init; }
 
     /// <summary>
     /// Related References.

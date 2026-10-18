@@ -24,7 +24,7 @@ public record CorporateActionSD20
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// DTC generated number to distinguish between the series of lotteries run against a particular redemption.
@@ -33,7 +33,7 @@ public record CorporateActionSD20
     [DisplayName("Lottery Sequence Number")]
     [IsoXmlTag("LtrySeqNb")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public IsoMax3NumericText? LotterySequenceNumber { get; init; }
+    public Max3NumericText? LotterySequenceNumber { get; init; }
 
     /// <summary>
     /// Date/time on which the lottery is run and applied to the holder&apos;s positions. This is also applicable to partial calls.
@@ -42,7 +42,7 @@ public record CorporateActionSD20
     [DisplayName("Lottery Date")]
     [IsoXmlTag("LtryDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? LotteryDate { get; init; }
+    public DateOnly? LotteryDate { get; init; }
 
     /// <summary>
     /// For Reorganization events, date at which instructions will be accepted by agent for payment.
@@ -51,5 +51,5 @@ public record CorporateActionSD20
     [DisplayName("Process To Date")]
     [IsoXmlTag("PrcToDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ProcessToDate { get; init; }
+    public DateOnly? ProcessToDate { get; init; }
 }

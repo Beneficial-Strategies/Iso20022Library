@@ -24,7 +24,7 @@ public record NameAndAddress11
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINMax35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoRestrictedFINMax35Text Name { get; init; }
+    public required RestrictedFINMax35Text Name { get; init; }
 
     /// <summary>
     /// Postal address of a party.

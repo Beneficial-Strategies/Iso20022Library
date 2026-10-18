@@ -24,7 +24,7 @@ public record PartyIdentification207
     [IsoXmlTag("Cd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Code { get; init; }
+    public Max35Text? Code { get; init; }
 
     /// <summary>
     /// Assigner of the code.
@@ -34,7 +34,7 @@ public record PartyIdentification207
     [IsoXmlTag("Assgnr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Assigner { get; init; }
+    public Max35Text? Assigner { get; init; }
 
     /// <summary>
     /// Contains the International Air Transport Association (IATA) code identifying the company that purchased the ticket.
@@ -44,7 +44,7 @@ public record PartyIdentification207
     [IsoXmlTag("IATACd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? IATACode { get; init; }
+    public Max35Text? IATACode { get; init; }
 
     /// <summary>
     /// Name of the company.
@@ -54,7 +54,7 @@ public record PartyIdentification207
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Name { get; init; }
+    public Max70Text? Name { get; init; }
 
     /// <summary>
     /// Short name of the company.
@@ -64,7 +64,7 @@ public record PartyIdentification207
     [IsoXmlTag("ShrtNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ShortName { get; init; }
+    public Max35Text? ShortName { get; init; }
 
     /// <summary>
     /// Address of the customer.

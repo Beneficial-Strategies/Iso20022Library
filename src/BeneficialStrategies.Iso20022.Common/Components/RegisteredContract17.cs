@@ -21,7 +21,7 @@ public record RegisteredContract17
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public IsoMax1025Text? AdditionalInformation { get; init; }
+    public Max1025Text? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Attachment.
@@ -49,7 +49,7 @@ public record RegisteredContract17
     /// </summary>
     [DisplayName("Original Registered Contract Identification")]
     [IsoXmlTag("OrgnlRegdCtrctId")]
-    public required IsoMax35Text OriginalRegisteredContractIdentification { get; init; }
+    public required Max35Text OriginalRegisteredContractIdentification { get; init; }
 
     /// <summary>
     /// Payment Schedule Type.
@@ -70,7 +70,7 @@ public record RegisteredContract17
     /// </summary>
     [DisplayName("Registered Contract Amendment Identification")]
     [IsoXmlTag("RegdCtrctAmdmntId")]
-    public required IsoMax35Text RegisteredContractAmendmentIdentification { get; init; }
+    public required Max35Text RegisteredContractAmendmentIdentification { get; init; }
 
     /// <summary>
     /// Supplementary Data.

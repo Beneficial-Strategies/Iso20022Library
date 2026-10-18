@@ -23,7 +23,7 @@ public record RejectionStatistics3
     [DisplayName("Total Number Of Technical Rejections")]
     [IsoXmlTag("TtlNbOfTechRjctns")]
     [IsoSimpleType(IsoSimpleType.Max20PositiveNumber)]
-    public required IsoMax20PositiveNumber TotalNumberOfTechnicalRejections { get; init; }
+    public required Max20PositiveNumber TotalNumberOfTechnicalRejections { get; init; }
 
     /// <summary>
     /// Detailed information on rejections for derivatives submitted to trade repositories and failed to pass data validations.

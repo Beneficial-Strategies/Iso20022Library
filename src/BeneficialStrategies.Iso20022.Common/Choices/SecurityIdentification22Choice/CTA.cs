@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification22Choice
         /// </summary>
         [IsoXmlTag("CTA")]
         [IsoSimpleType(IsoSimpleType.ConsolidatedTapeAssociationIdentifier)]
-        public required IsoConsolidatedTapeAssociationIdentifier Value { get; init; }
+        public required ConsolidatedTapeAssociationIdentifier Value { get; init; }
     }
 }

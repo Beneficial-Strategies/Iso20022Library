@@ -127,7 +127,7 @@ public record SecurityOption1
     [DisplayName("Temporary Financial Instrument Indicator")]
     [IsoXmlTag("TempFinInstrmInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? TemporaryFinancialInstrumentIndicator { get; init; }
+    public YesNoIndicator? TemporaryFinancialInstrumentIndicator { get; init; }
 
     /// <summary>
     /// Specifies how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.

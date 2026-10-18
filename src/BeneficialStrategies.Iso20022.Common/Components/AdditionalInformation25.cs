@@ -32,7 +32,7 @@ public record AdditionalInformation25
     [IsoXmlTag("Qry")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text Query { get; init; }
+    public required Max350Text Query { get; init; }
 
     /// <summary>
     /// Reason for the query.
@@ -42,7 +42,7 @@ public record AdditionalInformation25
     [IsoXmlTag("QryRsn")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? QueryReason { get; init; }
+    public Max350Text? QueryReason { get; init; }
 
     /// <summary>
     /// Reason the instruction was rejected.

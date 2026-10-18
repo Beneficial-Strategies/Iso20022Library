@@ -31,7 +31,7 @@ public record LoanData144
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate MaturityDate { get; init; }
+    public required DateOnly MaturityDate { get; init; }
 
     /// <summary>
     /// Unique trade Identifier (UTI) as agreed with the other counterparty.
@@ -41,7 +41,7 @@ public record LoanData144
     [IsoXmlTag("UnqTradIdr")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public required IsoMax52Text UniqueTradeIdentifier { get; init; }
+    public required Max52Text UniqueTradeIdentifier { get; init; }
 
     /// <summary>
     /// Date on which the reportable event pertaining to the transaction and captured by the report took place. In the case of action types valuation update, collateral update, reuse update, margin update, the date for which the information contained in the report is provided.
@@ -50,7 +50,7 @@ public record LoanData144
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate EventDate { get; init; }
+    public required DateOnly EventDate { get; init; }
 
     /// <summary>
     /// Indicates whether clearing of contract has taken place.
@@ -67,7 +67,7 @@ public record LoanData144
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public required IsoMICIdentifier TradingVenue { get; init; }
+    public required MICIdentifier TradingVenue { get; init; }
 
     /// <summary>
     /// Reference to master agreement under which the counterparties concluded a documented transaction.
@@ -84,7 +84,7 @@ public record LoanData144
     [DisplayName("Execution Date Time")]
     [IsoXmlTag("ExctnDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime ExecutionDateTime { get; init; }
+    public required ISODateTime ExecutionDateTime { get; init; }
 
     /// <summary>
     /// Date on which the counterparties contractually agree the exchange of securities or commodities versus collateral for the opening leg (spot leg) of the secured financing transaction. In the case of rollover of open term repurchase transactions, this is the date on which the rollover settles, even if no exchange of cash takes place.
@@ -93,7 +93,7 @@ public record LoanData144
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ValueDate { get; init; }
+    public required DateOnly ValueDate { get; init; }
 
     /// <summary>
     /// Termination date in the case of a full early termination of the reported transaction.
@@ -102,7 +102,7 @@ public record LoanData144
     [DisplayName("Termination Date")]
     [IsoXmlTag("TermntnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TerminationDate { get; init; }
+    public DateOnly? TerminationDate { get; init; }
 
     /// <summary>
     /// Indication whether the transaction is subject to a general collateral arrangement. -‘true’ shall be populated for general collateral. General collateral specifies a collateral arrangement for a repurchase transaction in which the security lender may choose the security to provide as collateral with the cash provider amongst a relatively wide range of securities meeting predefined criteria.

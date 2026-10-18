@@ -21,7 +21,7 @@ public record SecuritiesOption114
     /// </summary>
     [DisplayName("Charge Indicator")]
     [IsoXmlTag("ChrgInd")]
-    public IsoYesNoIndicator? ChargeIndicator { get; init; }
+    public YesNoIndicator? ChargeIndicator { get; init; }
 
     /// <summary>
     /// Country Of Income Source.
@@ -63,7 +63,7 @@ public record SecuritiesOption114
     /// </summary>
     [DisplayName("Estimated Price Indicator")]
     [IsoXmlTag("EstmtdPricInd")]
-    public IsoYesNoIndicator? EstimatedPriceIndicator { get; init; }
+    public YesNoIndicator? EstimatedPriceIndicator { get; init; }
 
     /// <summary>
     /// Exemption Type.
@@ -140,7 +140,7 @@ public record SecuritiesOption114
     /// </summary>
     [DisplayName("Rounding Factor")]
     [IsoXmlTag("RndgFctr")]
-    public IsoDecimalNumber? RoundingFactor { get; init; }
+    public DecimalNumber? RoundingFactor { get; init; }
 
     /// <summary>
     /// Safekeeping Place.

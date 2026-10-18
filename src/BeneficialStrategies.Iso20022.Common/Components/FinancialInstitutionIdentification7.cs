@@ -23,7 +23,7 @@ public record FinancialInstitutionIdentification7
     [DisplayName("BIC")]
     [IsoXmlTag("BIC")]
     [IsoSimpleType(IsoSimpleType.BICIdentifier)]
-    public IsoBICIdentifier? BIC { get; init; }
+    public BICIdentifier? BIC { get; init; }
 
     /// <summary>
     /// Information used to identify a member within a clearing system.
@@ -41,7 +41,7 @@ public record FinancialInstitutionIdentification7
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Name { get; init; }
+    public Max140Text? Name { get; init; }
 
     /// <summary>
     /// Information that locates and identifies a specific address, as defined by postal services.

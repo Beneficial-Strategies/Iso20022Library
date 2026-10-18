@@ -9,6 +9,6 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxType4Choice
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Prtry")]
-        public required IsoMax350Text Value { get; init; }
+        public required Max350Text Value { get; init; }
     }
 }

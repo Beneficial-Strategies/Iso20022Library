@@ -24,7 +24,7 @@ public record InvestmentFundOrderExecution1
     [IsoXmlTag("MstrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Indicates whether a confirmation amendment message will follow the confirmation cancellation instruction or not.
@@ -33,7 +33,7 @@ public record InvestmentFundOrderExecution1
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator AmendmentIndicator { get; init; }
+    public required YesNoIndicator AmendmentIndicator { get; init; }
 
     /// <summary>
     /// Reference of an order, client or deal reference.

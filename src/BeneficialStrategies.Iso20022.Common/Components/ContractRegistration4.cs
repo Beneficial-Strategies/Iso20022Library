@@ -24,7 +24,7 @@ public record ContractRegistration4
     [IsoXmlTag("CtrctRegnOpngId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ContractRegistrationOpeningIdentification { get; init; }
+    public required Max35Text ContractRegistrationOpeningIdentification { get; init; }
 
     /// <summary>
     /// Priority requested for the opening of the registered contract.
@@ -75,7 +75,7 @@ public record ContractRegistration4
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max1025Text)]
     [StringLength(maximumLength: 1025, MinimumLength = 1)]
-    public IsoMax1025Text? AdditionalInformation { get; init; }
+    public Max1025Text? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Documents provided as attachments to the contract registration request.

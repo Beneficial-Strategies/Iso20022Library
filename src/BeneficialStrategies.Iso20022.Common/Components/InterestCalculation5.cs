@@ -23,7 +23,7 @@ public record InterestCalculation5
     [DisplayName("Calculation Date")]
     [IsoXmlTag("ClctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate CalculationDate { get; init; }
+    public required DateOnly CalculationDate { get; init; }
 
     /// <summary>
     /// Provides the identification of the collateral account.
@@ -72,7 +72,7 @@ public record InterestCalculation5
     [DisplayName("Number Of Days")]
     [IsoXmlTag("NbOfDays")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NumberOfDays { get; init; }
+    public Number? NumberOfDays { get; init; }
 
     /// <summary>
     /// Specifies the percentage charged for the use of an amount of money, usually expressed at an annual rate. The interest rate is the ratio of the amount of interest paid during a certain period of time compared to the principal amount of the interest bearing financial instrument.
@@ -81,7 +81,7 @@ public record InterestCalculation5
     [DisplayName("Effective Rate")]
     [IsoXmlTag("FctvRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate EffectiveRate { get; init; }
+    public required PercentageRate EffectiveRate { get; init; }
 
     /// <summary>
     /// Specifies the percentage charged for the use of an amount of money, usually expressed at an annual rate. The interest rate is the ratio of the amount of interest paid during a certain period of time compared to the principal amount of the interest bearing financial instrument.
@@ -90,7 +90,7 @@ public record InterestCalculation5
     [DisplayName("Interest Rate")]
     [IsoXmlTag("IntrstRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? InterestRate { get; init; }
+    public PercentageRate? InterestRate { get; init; }
 
     /// <summary>
     /// Indicates the differences in interest rates.
@@ -99,7 +99,7 @@ public record InterestCalculation5
     [DisplayName("Spread")]
     [IsoXmlTag("Sprd")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Spread { get; init; }
+    public PercentageRate? Spread { get; init; }
 
     /// <summary>
     /// Specifies the amount of money representing an interest payment.

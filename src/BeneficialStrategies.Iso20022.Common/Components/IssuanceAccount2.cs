@@ -31,5 +31,5 @@ public record IssuanceAccount2
     [DisplayName("Primary Account Indicator")]
     [IsoXmlTag("PmryAcctInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator PrimaryAccountIndicator { get; init; }
+    public required YesNoIndicator PrimaryAccountIndicator { get; init; }
 }

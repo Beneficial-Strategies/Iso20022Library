@@ -24,7 +24,7 @@ public record MemoryCharacteristics1
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Total size of the memory unit.
@@ -33,7 +33,7 @@ public record MemoryCharacteristics1
     [DisplayName("Total Size")]
     [IsoXmlTag("TtlSz")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public required IsoDecimalNumber TotalSize { get; init; }
+    public required DecimalNumber TotalSize { get; init; }
 
     /// <summary>
     /// Total size of the available memory.
@@ -42,7 +42,7 @@ public record MemoryCharacteristics1
     [DisplayName("Free Size")]
     [IsoXmlTag("FreeSz")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public required IsoDecimalNumber FreeSize { get; init; }
+    public required DecimalNumber FreeSize { get; init; }
 
     /// <summary>
     /// Memory unit of the sizes.

@@ -31,7 +31,7 @@ public record BillingRate1
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate Value { get; init; }
+    public required PercentageRate Value { get; init; }
 
     /// <summary>
     /// Number of days in the statement period. ||Usage: Used along with DaysInYear for time dependent per annum rate value.
@@ -40,7 +40,7 @@ public record BillingRate1
     [DisplayName("Days In Period")]
     [IsoXmlTag("DaysInPrd")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? DaysInPeriod { get; init; }
+    public Number? DaysInPeriod { get; init; }
 
     /// <summary>
     /// Number of days in the year.||Usage: Used along with DaysInPeriod for time dependent per annum rate value.
@@ -49,5 +49,5 @@ public record BillingRate1
     [DisplayName("Days In Year")]
     [IsoXmlTag("DaysInYr")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? DaysInYear { get; init; }
+    public Number? DaysInYear { get; init; }
 }

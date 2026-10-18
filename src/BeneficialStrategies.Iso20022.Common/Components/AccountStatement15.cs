@@ -22,7 +22,7 @@ public record AccountStatement15
     [IsoId("6e3e2272-6daf-46fb-9ab6-83ff34f08155")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Provides details on the page number of the statement.
@@ -38,7 +38,7 @@ public record AccountStatement15
     [IsoId("c5f4c80a-a8f3-4d3f-881b-20bf2d990db4")]
     [DisplayName("Electronic Sequence Number")]
     [IsoXmlTag("ElctrncSeqNb")]
-    public IsoNumber? ElectronicSequenceNumber { get; init; }
+    public Number? ElectronicSequenceNumber { get; init; }
 
     /// <summary>
     /// Specifies the range of identification sequence numbers, as provided in the request.
@@ -54,7 +54,7 @@ public record AccountStatement15
     [IsoId("48e101a8-2e98-4baa-96cf-00c18c0d5a00")]
     [DisplayName("Legal Sequence Number")]
     [IsoXmlTag("LglSeqNb")]
-    public IsoNumber? LegalSequenceNumber { get; init; }
+    public Number? LegalSequenceNumber { get; init; }
 
     /// <summary>
     /// Date and time at which the statement was created.
@@ -62,7 +62,7 @@ public record AccountStatement15
     [IsoId("012b0fff-86ec-4c9d-971a-1fd7ccdfd8e1")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
-    public IsoISODateTime? CreationDateTime { get; init; }
+    public ISODateTime? CreationDateTime { get; init; }
 
     /// <summary>
     /// Range of time between a start date and an end date for which the account statement is issued.
@@ -143,5 +143,5 @@ public record AccountStatement15
     [IsoId("75366df7-0827-4c64-bc68-db0739e045ae")]
     [DisplayName("Additional Statement Information")]
     [IsoXmlTag("AddtlStmtInf")]
-    public IsoMax500Text? AdditionalStatementInformation { get; init; }
+    public Max500Text? AdditionalStatementInformation { get; init; }
 }

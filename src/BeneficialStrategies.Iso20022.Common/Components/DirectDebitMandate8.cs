@@ -70,26 +70,26 @@ public record DirectDebitMandate8
     /// </summary>
     [DisplayName("Debtor National Registration Number")]
     [IsoXmlTag("DbtrNtlRegnNb")]
-    public IsoMax35Text? DebtorNationalRegistrationNumber { get; init; }
+    public Max35Text? DebtorNationalRegistrationNumber { get; init; }
 
     /// <summary>
     /// Debtor Tax Identification Number.
     /// </summary>
     [DisplayName("Debtor Tax Identification Number")]
     [IsoXmlTag("DbtrTaxIdNb")]
-    public IsoMax35Text? DebtorTaxIdentificationNumber { get; init; }
+    public Max35Text? DebtorTaxIdentificationNumber { get; init; }
 
     /// <summary>
     /// Mandate Identification.
     /// </summary>
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
-    public IsoMax35Text? MandateIdentification { get; init; }
+    public Max35Text? MandateIdentification { get; init; }
 
     /// <summary>
     /// Registration Identification.
     /// </summary>
     [DisplayName("Registration Identification")]
     [IsoXmlTag("RegnId")]
-    public IsoMax35Text? RegistrationIdentification { get; init; }
+    public Max35Text? RegistrationIdentification { get; init; }
 }

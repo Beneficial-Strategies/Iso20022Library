@@ -42,7 +42,7 @@ public record Transaction155
     [DisplayName("Original Message")]
     [IsoXmlTag("OrgnlMsg")]
     [IsoSimpleType(IsoSimpleType.Max100KBinary)]
-    public IsoMax100KBinary? OriginalMessage { get; init; }
+    public Max100KBinary? OriginalMessage { get; init; }
 
     /// <summary>
     /// Fees not included in the transaction amount but included in the settlement.

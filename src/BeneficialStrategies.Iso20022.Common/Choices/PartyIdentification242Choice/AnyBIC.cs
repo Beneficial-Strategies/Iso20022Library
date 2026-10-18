@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification242Choice
         /// </summary>
         [IsoXmlTag("AnyBIC")]
         [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
-        public required IsoAnyBICDec2014Identifier Value { get; init; }
+        public required AnyBICDec2014Identifier Value { get; init; }
 
         /// <summary>
         /// Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.

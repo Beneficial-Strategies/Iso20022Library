@@ -63,7 +63,7 @@ public record CollateralAmount12
     [DisplayName("Interest Payment Delay")]
     [IsoXmlTag("IntrstPmtDely")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public IsoMax3NumericText? InterestPaymentDelay { get; init; }
+    public Max3NumericText? InterestPaymentDelay { get; init; }
 
     /// <summary>
     /// Value of collateral offered or sought.

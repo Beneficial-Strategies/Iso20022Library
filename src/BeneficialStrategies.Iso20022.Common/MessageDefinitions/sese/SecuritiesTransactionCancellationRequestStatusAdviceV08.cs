@@ -66,7 +66,7 @@ public record SecuritiesTransactionCancellationRequestStatusAdviceV08 : IOuterRe
     /// </summary>
     [DisplayName("Cancellation Request Reference")]
     [IsoXmlTag("CxlReqRef")]
-    public required IsoMax35Text CancellationRequestReference { get; init; }
+    public required Max35Text CancellationRequestReference { get; init; }
 
     /// <summary>
     /// Provides details on the processing status of the request.

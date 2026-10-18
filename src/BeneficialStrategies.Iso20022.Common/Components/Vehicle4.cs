@@ -24,7 +24,7 @@ public record Vehicle4
     [IsoXmlTag("Clss")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Class { get; init; }
+    public Max35Text? Class { get; init; }
 
     /// <summary>
     /// Brand or manufacturer of the vehicle.
@@ -33,7 +33,7 @@ public record Vehicle4
     [DisplayName("Make")]
     [IsoXmlTag("Make")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public IsoMax35NumericText? Make { get; init; }
+    public Max35NumericText? Make { get; init; }
 
     /// <summary>
     /// Product line of vehicle within the make.
@@ -42,7 +42,7 @@ public record Vehicle4
     [DisplayName("Model")]
     [IsoXmlTag("Mdl")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public IsoMax35NumericText? Model { get; init; }
+    public Max35NumericText? Model { get; init; }
 
     /// <summary>
     /// Registration number of vehicle.
@@ -52,5 +52,5 @@ public record Vehicle4
     [IsoXmlTag("RegnNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RegistrationNumber { get; init; }
+    public Max35Text? RegistrationNumber { get; init; }
 }

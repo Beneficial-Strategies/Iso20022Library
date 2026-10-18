@@ -32,5 +32,5 @@ public record Notification1
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text AdditionalInformation { get; init; }
+    public required Max140Text AdditionalInformation { get; init; }
 }

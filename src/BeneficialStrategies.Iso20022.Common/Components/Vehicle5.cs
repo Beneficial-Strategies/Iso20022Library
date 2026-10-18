@@ -23,7 +23,7 @@ public record Vehicle5
     [DisplayName("Vehicle Number")]
     [IsoXmlTag("VhclNb")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public IsoMax35NumericText? VehicleNumber { get; init; }
+    public Max35NumericText? VehicleNumber { get; init; }
 
     /// <summary>
     /// Number that uniquely identifies the vehicle as assigned by the vehicle manufacturer.
@@ -32,7 +32,7 @@ public record Vehicle5
     [DisplayName("Vehicle Identification Number")]
     [IsoXmlTag("VhclIdNb")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public IsoMax35NumericText? VehicleIdentificationNumber { get; init; }
+    public Max35NumericText? VehicleIdentificationNumber { get; init; }
 
     /// <summary>
     /// Fleet number.
@@ -42,7 +42,7 @@ public record Vehicle5
     [IsoXmlTag("FleetNb")]
     [IsoSimpleType(IsoSimpleType.Max10Text)]
     [StringLength(maximumLength: 10, MinimumLength = 1)]
-    public IsoMax10Text? FleetNumber { get; init; }
+    public Max10Text? FleetNumber { get; init; }
 
     /// <summary>
     /// Sub fleet number.
@@ -52,7 +52,7 @@ public record Vehicle5
     [IsoXmlTag("SubFleetNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SubFleetNumber { get; init; }
+    public Max35Text? SubFleetNumber { get; init; }
 
     /// <summary>
     /// Identification of the unit number of the vehicle in the fleet.
@@ -61,7 +61,7 @@ public record Vehicle5
     [DisplayName("Unit Number")]
     [IsoXmlTag("UnitNb")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public IsoMax35NumericText? UnitNumber { get; init; }
+    public Max35NumericText? UnitNumber { get; init; }
 
     /// <summary>
     /// Identification number assigned to the trailer.
@@ -70,7 +70,7 @@ public record Vehicle5
     [DisplayName("Trailer Number")]
     [IsoXmlTag("TrlrNb")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public IsoMax35NumericText? TrailerNumber { get; init; }
+    public Max35NumericText? TrailerNumber { get; init; }
 
     /// <summary>
     /// Registration tag of the vehicle.
@@ -80,7 +80,7 @@ public record Vehicle5
     [IsoXmlTag("VhclTag")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? VehicleTag { get; init; }
+    public Max35Text? VehicleTag { get; init; }
 
     /// <summary>
     /// Entry mode of the registration tag.
@@ -97,7 +97,7 @@ public record Vehicle5
     [DisplayName("Replacement Vehicle Indicator")]
     [IsoXmlTag("RplcmntVhclInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ReplacementVehicleIndicator { get; init; }
+    public TrueFalseIndicator? ReplacementVehicleIndicator { get; init; }
 
     /// <summary>
     /// Odometer reading value indicating the distance travelled by the vehicle (for example, car, van, pickup truck, semi-truck portion of a tractor trailer unit).
@@ -106,7 +106,7 @@ public record Vehicle5
     [DisplayName("Odometer")]
     [IsoXmlTag("Odmtr")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? Odometer { get; init; }
+    public DecimalNumber? Odometer { get; init; }
 
     /// <summary>
     /// Hubometer reading value indicating the distance travelled by the trailer (for example,  the semi-trailer portion of a tractor trailer unit).
@@ -115,7 +115,7 @@ public record Vehicle5
     [DisplayName("Hubometer")]
     [IsoXmlTag("Hbmtr")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? Hubometer { get; init; }
+    public DecimalNumber? Hubometer { get; init; }
 
     /// <summary>
     /// Identification assigned to the vehicle related to maintenance.
@@ -125,7 +125,7 @@ public record Vehicle5
     [IsoXmlTag("MntncId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MaintenanceIdentification { get; init; }
+    public Max35Text? MaintenanceIdentification { get; init; }
 
     /// <summary>
     /// Data captured from on board diagnostic systems.

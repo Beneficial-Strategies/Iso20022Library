@@ -24,7 +24,7 @@ public record RequestHandling2
     [IsoXmlTag("StsCd")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public required IsoMax4AlphaNumericText StatusCode { get; init; }
+    public required Max4AlphaNumericText StatusCode { get; init; }
 
     /// <summary>
     /// Date and time when the status was generated.
@@ -33,7 +33,7 @@ public record RequestHandling2
     [DisplayName("Status Date Time")]
     [IsoXmlTag("StsDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? StatusDateTime { get; init; }
+    public ISODateTime? StatusDateTime { get; init; }
 
     /// <summary>
     /// Description of the status, in free format text.
@@ -43,5 +43,5 @@ public record RequestHandling2
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Description { get; init; }
+    public Max140Text? Description { get; init; }
 }

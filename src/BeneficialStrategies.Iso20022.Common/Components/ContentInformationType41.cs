@@ -21,7 +21,7 @@ public record ContentInformationType41
     /// </summary>
     [DisplayName("MAC")]
     [IsoXmlTag("MAC")]
-    public required IsoMax8HexBinaryText MAC { get; init; }
+    public required Max8HexBinaryText MAC { get; init; }
 
     /// <summary>
     /// MAC Data.

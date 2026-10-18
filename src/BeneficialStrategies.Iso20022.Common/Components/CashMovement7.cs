@@ -55,7 +55,7 @@ public record CashMovement7
     [DisplayName("Collateral Movement")]
     [IsoXmlTag("CollMvmnt")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator CollateralMovement { get; init; }
+    public required YesNoIndicator CollateralMovement { get; init; }
 
     /// <summary>
     /// Indicates whether the proposed cash movements can be accepted.
@@ -64,7 +64,7 @@ public record CashMovement7
     [DisplayName("Cash Movement Approved")]
     [IsoXmlTag("CshMvmntApprvd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? CashMovementApproved { get; init; }
+    public YesNoIndicator? CashMovementApproved { get; init; }
 
     /// <summary>
     /// Indicates whether the position is fixed (post settlement).
@@ -73,7 +73,7 @@ public record CashMovement7
     [DisplayName("Position Type")]
     [IsoXmlTag("PosTp")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PositionType { get; init; }
+    public YesNoIndicator? PositionType { get; init; }
 
     /// <summary>
     /// Reference assigned by party A to the cash movement.
@@ -83,7 +83,7 @@ public record CashMovement7
     [IsoXmlTag("ClntCshMvmntId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClientCashMovementIdentification { get; init; }
+    public Max35Text? ClientCashMovementIdentification { get; init; }
 
     /// <summary>
     /// Identification assigned by the triparty-agent/service-provider to the cash movement.
@@ -93,5 +93,5 @@ public record CashMovement7
     [IsoXmlTag("TrptyAgtSvcPrvdrCshMvmntId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TripartyAgentServiceProviderCashMovementIdentification { get; init; }
+    public Max35Text? TripartyAgentServiceProviderCashMovementIdentification { get; init; }
 }

@@ -21,14 +21,14 @@ public record RemittanceLocation9
     /// </summary>
     [DisplayName("Remittance Identification")]
     [IsoXmlTag("RmtId")]
-    public IsoMax35Text? RemittanceIdentification { get; init; }
+    public Max35Text? RemittanceIdentification { get; init; }
 
     /// <summary>
     /// Remittance Location Electronic Address.
     /// </summary>
     [DisplayName("Remittance Location Electronic Address")]
     [IsoXmlTag("RmtLctnElctrncAdr")]
-    public IsoMax2048Text? RemittanceLocationElectronicAddress { get; init; }
+    public Max2048Text? RemittanceLocationElectronicAddress { get; init; }
 
     /// <summary>
     /// Remittance Location Method.

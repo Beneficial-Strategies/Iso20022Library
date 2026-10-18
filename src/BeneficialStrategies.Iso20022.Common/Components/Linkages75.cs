@@ -21,5 +21,5 @@ public record Linkages75
     /// </summary>
     [DisplayName("Securities Settlement Transaction Identification")]
     [IsoXmlTag("SctiesSttlmTxId")]
-    public required IsoMax35Text SecuritiesSettlementTransactionIdentification { get; init; }
+    public required Max35Text SecuritiesSettlementTransactionIdentification { get; init; }
 }

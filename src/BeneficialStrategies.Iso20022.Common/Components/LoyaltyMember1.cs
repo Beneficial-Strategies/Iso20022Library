@@ -24,7 +24,7 @@ public record LoyaltyMember1
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Name { get; init; }
+    public Max35Text? Name { get; init; }
 
     /// <summary>
     /// Address of the loyalty member.
@@ -42,7 +42,7 @@ public record LoyaltyMember1
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Identification { get; init; }
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Status of the loyalty programme member for the programme.
@@ -52,7 +52,7 @@ public record LoyaltyMember1
     [IsoXmlTag("MmbSts")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MemberStatus { get; init; }
+    public Max35Text? MemberStatus { get; init; }
 
     /// <summary>
     /// Expiration date of the loyalty programme.
@@ -61,7 +61,7 @@ public record LoyaltyMember1
     [DisplayName("Expiration Date")]
     [IsoXmlTag("XprtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ExpirationDate { get; init; }
+    public DateOnly? ExpirationDate { get; init; }
 
     /// <summary>
     /// Value expressed in type of value for the loyalty programme.
@@ -70,7 +70,7 @@ public record LoyaltyMember1
     [DisplayName("Loyalty Value")]
     [IsoXmlTag("LltyVal")]
     [IsoSimpleType(IsoSimpleType.Max10NumericText)]
-    public IsoMax10NumericText? LoyaltyValue { get; init; }
+    public Max10NumericText? LoyaltyValue { get; init; }
 
     /// <summary>
     /// Type of value used for the loyalty programme.
@@ -88,7 +88,7 @@ public record LoyaltyMember1
     [IsoXmlTag("OthrLltyValTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherLoyaltyValueType { get; init; }
+    public Max35Text? OtherLoyaltyValueType { get; init; }
 
     /// <summary>
     /// Value to be credited on the account of the loyalty programme member. Computed on the monetary part actually paid by the customer for the service.
@@ -97,7 +97,7 @@ public record LoyaltyMember1
     [DisplayName("Value To Credit")]
     [IsoXmlTag("ValToCdt")]
     [IsoSimpleType(IsoSimpleType.Max10NumericText)]
-    public IsoMax10NumericText? ValueToCredit { get; init; }
+    public Max10NumericText? ValueToCredit { get; init; }
 
     /// <summary>
     /// Value to be debited from the account of the loyalty programme member. Computed on the monetary part actually redeemed by the customer for the service.
@@ -106,7 +106,7 @@ public record LoyaltyMember1
     [DisplayName("Value To Debit")]
     [IsoXmlTag("ValToDbt")]
     [IsoSimpleType(IsoSimpleType.Max10NumericText)]
-    public IsoMax10NumericText? ValueToDebit { get; init; }
+    public Max10NumericText? ValueToDebit { get; init; }
 
     /// <summary>
     /// Value on the account of the loyalty programme member after credit (computation on actual payment in monetary value) and debit (redemption in loyalty value).
@@ -115,5 +115,5 @@ public record LoyaltyMember1
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
     [IsoSimpleType(IsoSimpleType.Max10NumericText)]
-    public IsoMax10NumericText? Balance { get; init; }
+    public Max10NumericText? Balance { get; init; }
 }

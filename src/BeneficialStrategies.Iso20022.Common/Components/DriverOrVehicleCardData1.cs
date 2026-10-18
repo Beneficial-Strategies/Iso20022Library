@@ -22,7 +22,7 @@ public record DriverOrVehicleCardData1
     [IsoId("_ZlxhsUYlEfCJpvfyM9roFQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax20Text? Identification { get; init; }
+    public Max20Text? Identification { get; init; }
 
     /// <summary>
     /// Reserved for private data. The use of this data element is determined by bilateral agreement.
@@ -30,7 +30,7 @@ public record DriverOrVehicleCardData1
     [IsoId("_LgaJgkYlEfCJpvfyM9roFQ")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -38,5 +38,5 @@ public record DriverOrVehicleCardData1
     [IsoId("_LgaJg0YlEfCJpvfyM9roFQ")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

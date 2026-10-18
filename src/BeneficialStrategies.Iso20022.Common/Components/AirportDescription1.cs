@@ -24,7 +24,7 @@ public record AirportDescription1
     [IsoXmlTag("Twn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Town { get; init; }
+    public required Max35Text Town { get; init; }
 
     /// <summary>
     /// Identifies the airport by its name. For example: Heathrow.
@@ -34,5 +34,5 @@ public record AirportDescription1
     [IsoXmlTag("AirprtNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AirportName { get; init; }
+    public Max35Text? AirportName { get; init; }
 }

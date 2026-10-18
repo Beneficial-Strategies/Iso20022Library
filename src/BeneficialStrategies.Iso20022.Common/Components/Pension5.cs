@@ -56,7 +56,7 @@ public record Pension5
     [IsoXmlTag("DrwdwnTrchId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DrawdownTrancheIdentification { get; init; }
+    public Max35Text? DrawdownTrancheIdentification { get; init; }
 
     /// <summary>
     /// Drawdown status of the pension.
@@ -81,7 +81,7 @@ public record Pension5
     [DisplayName("Number Of Drawdown Tranches")]
     [IsoXmlTag("NbOfDrwdwnTrnchs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NumberOfDrawdownTranches { get; init; }
+    public Number? NumberOfDrawdownTranches { get; init; }
 
     /// <summary>
     /// Estimated value of the pension policy, plan or scheme.
@@ -98,7 +98,7 @@ public record Pension5
     [DisplayName("Block Transfer")]
     [IsoXmlTag("BlckTrf")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? BlockTransfer { get; init; }
+    public YesNoIndicator? BlockTransfer { get; init; }
 
     /// <summary>
     /// When the transfer is part of a block transfer, reference to link several items.
@@ -108,7 +108,7 @@ public record Pension5
     [IsoXmlTag("BlckTrfRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? BlockTransferReference { get; init; }
+    public Max35Text? BlockTransferReference { get; init; }
 
     /// <summary>
     /// Indicates whether the tax-free cash is protected when the pension policy, plan or scheme is transferred.
@@ -117,7 +117,7 @@ public record Pension5
     [DisplayName("Tax Free Cash Protection")]
     [IsoXmlTag("TaxFreeCshPrtcn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? TaxFreeCashProtection { get; init; }
+    public YesNoIndicator? TaxFreeCashProtection { get; init; }
 
     /// <summary>
     /// Amount of cash that is tax free.
@@ -142,7 +142,7 @@ public record Pension5
     [DisplayName("Retirement Age Protection")]
     [IsoXmlTag("RtrmntAgePrtcn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? RetirementAgeProtection { get; init; }
+    public YesNoIndicator? RetirementAgeProtection { get; init; }
 
     /// <summary>
     /// Age at which the pension policy, plan or scheme holder retires.
@@ -151,7 +151,7 @@ public record Pension5
     [DisplayName("Retirement Age")]
     [IsoXmlTag("RtrmntAge")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? RetirementAge { get; init; }
+    public DecimalNumber? RetirementAge { get; init; }
 
     /// <summary>
     /// Indicates whether the pension benefits are shared.
@@ -160,7 +160,7 @@ public record Pension5
     [DisplayName("Sharing")]
     [IsoXmlTag("Shrg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? Sharing { get; init; }
+    public YesNoIndicator? Sharing { get; init; }
 
     /// <summary>
     /// Type of lump sum paid to a member of the pension policy, plan or scheme.
@@ -185,7 +185,7 @@ public record Pension5
     [DisplayName("Ring Fenced Drawdown Assets")]
     [IsoXmlTag("RingFncdDrwdwnAssts")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? RingFencedDrawdownAssets { get; init; }
+    public YesNoIndicator? RingFencedDrawdownAssets { get; init; }
 
     /// <summary>
     /// Money Purchase Annual Allowance (MPAA) details.
@@ -202,7 +202,7 @@ public record Pension5
     [DisplayName("Safeguard Benefit")]
     [IsoXmlTag("SfgrdBnft")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? SafeguardBenefit { get; init; }
+    public YesNoIndicator? SafeguardBenefit { get; init; }
 
     /// <summary>
     /// Indicates whether the pension policy, plan or scheme has non-safeguarded guaranteed benefits.
@@ -211,7 +211,7 @@ public record Pension5
     [DisplayName("Non Safeguarded Guaranteed Benefits")]
     [IsoXmlTag("NonSfgrddGrntedBnfts")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? NonSafeguardedGuaranteedBenefits { get; init; }
+    public YesNoIndicator? NonSafeguardedGuaranteedBenefits { get; init; }
 
     /// <summary>
     /// Indicates whether the pension policy, plan or scheme has lifetime allowance protection.
@@ -220,7 +220,7 @@ public record Pension5
     [DisplayName("Lifetime Allowance Protection")]
     [IsoXmlTag("LftmAllwncPrtcn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? LifetimeAllowanceProtection { get; init; }
+    public YesNoIndicator? LifetimeAllowanceProtection { get; init; }
 
     /// <summary>
     /// Indicates whether the client has any lifetime allowance protection.
@@ -229,7 +229,7 @@ public record Pension5
     [DisplayName("Client Lifetime Allowance Protection")]
     [IsoXmlTag("ClntLftmAllwncPrtcn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ClientLifetimeAllowanceProtection { get; init; }
+    public YesNoIndicator? ClientLifetimeAllowanceProtection { get; init; }
 
     /// <summary>
     /// Indicates whether a benefit crystallisation event (BCE) has occurred. This includes ‘age 75 checks’.
@@ -238,7 +238,7 @@ public record Pension5
     [DisplayName("Benefit Crystallisation Event Occurred")]
     [IsoXmlTag("BnftCrstllstnEvtOcrd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? BenefitCrystallisationEventOccurred { get; init; }
+    public YesNoIndicator? BenefitCrystallisationEventOccurred { get; init; }
 
     /// <summary>
     /// Indicates that the transfer is only in relation to underlying assets, and that the wrapper transfer will occur separately.
@@ -247,7 +247,7 @@ public record Pension5
     [DisplayName("Non Wrapper Transfer")]
     [IsoXmlTag("NonWrpprTrf")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? NonWrapperTransfer { get; init; }
+    public YesNoIndicator? NonWrapperTransfer { get; init; }
 
     /// <summary>
     /// Additional information about the pension policy, plan or scheme.

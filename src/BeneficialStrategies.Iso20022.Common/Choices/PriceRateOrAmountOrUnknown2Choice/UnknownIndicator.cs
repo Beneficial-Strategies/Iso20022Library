@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceRateOrAmountOrUnknown2Choic
         /// </summary>
         [IsoXmlTag("UknwnInd")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public required IsoYesNoIndicator Value { get; init; }
+        public required YesNoIndicator Value { get; init; }
     }
 }

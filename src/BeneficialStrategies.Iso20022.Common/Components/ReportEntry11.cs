@@ -24,7 +24,7 @@ public record ReportEntry11
     [IsoXmlTag("NtryRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? EntryReference { get; init; }
+    public Max35Text? EntryReference { get; init; }
 
     /// <summary>
     /// Amount of money in the cash entry.
@@ -49,7 +49,7 @@ public record ReportEntry11
     [DisplayName("Reversal Indicator")]
     [IsoXmlTag("RvslInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ReversalIndicator { get; init; }
+    public TrueFalseIndicator? ReversalIndicator { get; init; }
 
     /// <summary>
     /// Status of an entry on the books of the account servicer.
@@ -83,7 +83,7 @@ public record ReportEntry11
     [IsoXmlTag("AcctSvcrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountServicerReference { get; init; }
+    public Max35Text? AccountServicerReference { get; init; }
 
     /// <summary>
     /// Indicates when the booked amount of money will become available, that is can be accessed and starts generating interest. ||Usage: This type of information is used in the US and is linked to particular instruments such as cheques.|Example: When a cheque is deposited, it will be booked on the deposit day, but the amount of money will only be accessible as of the indicated availability day (according to national banking regulations).
@@ -108,7 +108,7 @@ public record ReportEntry11
     [DisplayName("Commission Waiver Indicator")]
     [IsoXmlTag("ComssnWvrInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? CommissionWaiverIndicator { get; init; }
+    public YesNoIndicator? CommissionWaiverIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the underlying transaction details are provided through a separate message, as in the case of aggregate bookings.
@@ -175,5 +175,5 @@ public record ReportEntry11
     [IsoXmlTag("AddtlNtryInf")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public IsoMax500Text? AdditionalEntryInformation { get; init; }
+    public Max500Text? AdditionalEntryInformation { get; init; }
 }

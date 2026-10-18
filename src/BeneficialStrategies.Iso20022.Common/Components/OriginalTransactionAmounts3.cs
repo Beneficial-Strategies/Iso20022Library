@@ -49,7 +49,7 @@ public record OriginalTransactionAmounts3
     /// </summary>
     [DisplayName("Cardholder Billing Effective Exchange Rate")]
     [IsoXmlTag("CrdhldrBllgFctvXchgRate")]
-    public IsoBaseOne25Rate? CardholderBillingEffectiveExchangeRate { get; init; }
+    public BaseOne25Rate? CardholderBillingEffectiveExchangeRate { get; init; }
 
     /// <summary>
     /// Currency.
@@ -77,5 +77,5 @@ public record OriginalTransactionAmounts3
     /// </summary>
     [DisplayName("Reconciliation Effective Exchange Rate")]
     [IsoXmlTag("RcncltnFctvXchgRate")]
-    public IsoBaseOne25Rate? ReconciliationEffectiveExchangeRate { get; init; }
+    public BaseOne25Rate? ReconciliationEffectiveExchangeRate { get; init; }
 }

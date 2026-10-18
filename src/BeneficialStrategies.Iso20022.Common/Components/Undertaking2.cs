@@ -71,7 +71,7 @@ public record Undertaking2
     [DisplayName("Standard Claim Document Indicator")]
     [IsoXmlTag("StdClmDocInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? StandardClaimDocumentIndicator { get; init; }
+    public YesNoIndicator? StandardClaimDocumentIndicator { get; init; }
 
     /// <summary>
     /// Additional information related to the counter-undertaking.

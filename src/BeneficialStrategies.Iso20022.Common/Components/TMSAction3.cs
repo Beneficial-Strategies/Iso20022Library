@@ -80,7 +80,7 @@ public record TMSAction3
     [DisplayName("TM Challenge")]
     [IsoXmlTag("TMChllng")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public IsoMax140Binary? TMChallenge { get; init; }
+    public Max140Binary? TMChallenge { get; init; }
 
     /// <summary>
     /// Certificate chain for the encryption of temporary transport key of the key to inject.
@@ -88,7 +88,7 @@ public record TMSAction3
     [IsoId("_8vr6rzV_EeODSIIQsYYKhw")]
     [DisplayName("Key Encipherment Certificate")]
     [IsoXmlTag("KeyNcphrmntCert")]
-    public SimpleValueList<IsoMax10KBinary> KeyEnciphermentCertificate { get; init; } = [];
+    public SimpleValueList<Max10KBinary> KeyEnciphermentCertificate { get; init; } = [];
 
     /// <summary>
     /// Action to perform in case of error on the related action in progress.

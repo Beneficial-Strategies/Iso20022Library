@@ -24,7 +24,7 @@ public record Header29
     [IsoXmlTag("PrtcolVrsn")]
     [IsoSimpleType(IsoSimpleType.Max6Text)]
     [StringLength(maximumLength: 6, MinimumLength = 1)]
-    public required IsoMax6Text ProtocolVersion { get; init; }
+    public required Max6Text ProtocolVersion { get; init; }
 
     /// <summary>
     /// Unique identification of an exchange occurrence.
@@ -33,7 +33,7 @@ public record Header29
     [DisplayName("Exchange Identification")]
     [IsoXmlTag("XchgId")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? ExchangeIdentification { get; init; }
+    public Number? ExchangeIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the file or message was created.
@@ -42,7 +42,7 @@ public record Header29
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// Unique identification of the partner that has initiated the exchange.

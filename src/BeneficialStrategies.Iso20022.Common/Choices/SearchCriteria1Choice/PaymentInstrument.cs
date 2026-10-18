@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice
         [DisplayName("Card Number")]
         [IsoXmlTag("CardNb")]
         [IsoSimpleType(IsoSimpleType.Min8Max28NumericText)]
-        public required IsoMin8Max28NumericText CardNumber { get; init; }
+        public required Min8Max28NumericText CardNumber { get; init; }
 
         /// <summary>
         /// Identifies the authority request type as a code.
@@ -43,6 +43,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice
         [IsoXmlTag("AddtlInf")]
         [IsoSimpleType(IsoSimpleType.Max500Text)]
         [StringLength(maximumLength: 500, MinimumLength = 1)]
-        public IsoMax500Text? AdditionalInformation { get; init; }
+        public Max500Text? AdditionalInformation { get; init; }
     }
 }

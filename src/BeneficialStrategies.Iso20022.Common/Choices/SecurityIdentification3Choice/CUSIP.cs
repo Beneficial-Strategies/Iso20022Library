@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification3Choice
         /// </summary>
         [IsoXmlTag("CUSIP")]
         [IsoSimpleType(IsoSimpleType.CUSIPIdentifier)]
-        public required IsoCUSIPIdentifier Value { get; init; }
+        public required CUSIPIdentifier Value { get; init; }
     }
 }

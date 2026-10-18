@@ -21,35 +21,35 @@ public record FleetLineItem6
     /// </summary>
     [DisplayName("Allowed Item")]
     [IsoXmlTag("AllwdItm")]
-    public IsoTrueFalseIndicator? AllowedItem { get; init; }
+    public TrueFalseIndicator? AllowedItem { get; init; }
 
     /// <summary>
     /// Fuel.
     /// </summary>
     [DisplayName("Fuel")]
     [IsoXmlTag("Fuel")]
-    public required IsoTrueFalseIndicator Fuel { get; init; }
+    public required TrueFalseIndicator Fuel { get; init; }
 
     /// <summary>
     /// Product Category.
     /// </summary>
     [DisplayName("Product Category")]
     [IsoXmlTag("PdctCtgy")]
-    public IsoMax35Text? ProductCategory { get; init; }
+    public Max35Text? ProductCategory { get; init; }
 
     /// <summary>
     /// Product Code.
     /// </summary>
     [DisplayName("Product Code")]
     [IsoXmlTag("PdctCd")]
-    public IsoMax15Text? ProductCode { get; init; }
+    public Max15Text? ProductCode { get; init; }
 
     /// <summary>
     /// Product Quantity.
     /// </summary>
     [DisplayName("Product Quantity")]
     [IsoXmlTag("PdctQty")]
-    public IsoDecimalNumber? ProductQuantity { get; init; }
+    public DecimalNumber? ProductQuantity { get; init; }
 
     /// <summary>
     /// Service Type.

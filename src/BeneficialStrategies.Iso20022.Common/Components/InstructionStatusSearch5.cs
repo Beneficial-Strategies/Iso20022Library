@@ -40,5 +40,5 @@ public record InstructionStatusSearch5
     [IsoXmlTag("PrtryStsRsn")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4AlphaNumericText? ProprietaryStatusReason { get; init; }
+    public Max4AlphaNumericText? ProprietaryStatusReason { get; init; }
 }

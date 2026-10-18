@@ -24,7 +24,7 @@ public record CardData1
     [DisplayName("PAN")]
     [IsoXmlTag("PAN")]
     [IsoSimpleType(IsoSimpleType.Max19NumericText)]
-    public required IsoMax19NumericText PAN { get; init; }
+    public required Max19NumericText PAN { get; init; }
 
     /// <summary>
     /// To indicate whether the PAN is using ProtectedData for encryption or not.
@@ -36,7 +36,7 @@ public record CardData1
     [DisplayName("Protected PAN Indicator")]
     [IsoXmlTag("PrtctdPANInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ProtectedPANIndicator { get; init; }
+    public TrueFalseIndicator? ProtectedPANIndicator { get; init; }
 
     /// <summary>
     /// Distinguishes between instances of the same payment card.
@@ -46,7 +46,7 @@ public record CardData1
     [DisplayName("Card Sequence Number")]
     [IsoXmlTag("CardSeqNb")]
     [IsoSimpleType(IsoSimpleType.Min2Max3NumericText)]
-    public IsoMin2Max3NumericText? CardSequenceNumber { get; init; }
+    public Min2Max3NumericText? CardSequenceNumber { get; init; }
 
     /// <summary>
     /// Date as from which the card can be used, expressed in one of the following formats: YYYY-MM-DD, YYYY-MM, YY-MM-DD.
@@ -57,7 +57,7 @@ public record CardData1
     [IsoXmlTag("FctvDt")]
     [IsoSimpleType(IsoSimpleType.Max10Text)]
     [StringLength(maximumLength: 10, MinimumLength = 1)]
-    public IsoMax10Text? EffectiveDate { get; init; }
+    public Max10Text? EffectiveDate { get; init; }
 
     /// <summary>
     /// Expiry date of the card or payment token.
@@ -67,7 +67,7 @@ public record CardData1
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
     [IsoSimpleType(IsoSimpleType.Exact4NumericText)]
-    public IsoExact4NumericText? ExpiryDate { get; init; }
+    public Exact4NumericText? ExpiryDate { get; init; }
 
     /// <summary>
     /// Service attached to the card as defined in ISO 7813.
@@ -77,7 +77,7 @@ public record CardData1
     [DisplayName("Service Code")]
     [IsoXmlTag("SvcCd")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public IsoExact3NumericText? ServiceCode { get; init; }
+    public Exact3NumericText? ServiceCode { get; init; }
 
     /// <summary>
     /// ISO track 1 issued from the magnetic stripe card or from the ICC if the magnetic stripe was not read. The format conforms to ISO 7813, removing beginning and ending sentinels and longitudinal redundancy check characters.
@@ -88,7 +88,7 @@ public record CardData1
     [IsoXmlTag("Trck1")]
     [IsoSimpleType(IsoSimpleType.Max76Text)]
     [StringLength(maximumLength: 76, MinimumLength = 1)]
-    public IsoMax76Text? Track1 { get; init; }
+    public Max76Text? Track1 { get; init; }
 
     /// <summary>
     /// ISO track 2 issued from the magnetic stripe card or from the ICC if the magnetic stripe was not read. The format  conforms to ISO 7813, removing beginning and ending sentinels and longitudinal redundancy check characters.
@@ -108,7 +108,7 @@ public record CardData1
     [IsoXmlTag("Trck3")]
     [IsoSimpleType(IsoSimpleType.Max104Text)]
     [StringLength(maximumLength: 104, MinimumLength = 1)]
-    public IsoMax104Text? Track3 { get; init; }
+    public Max104Text? Track3 { get; init; }
 
     /// <summary>
     /// Unique non-financial reference assigned to a given PAN. May be used to link the transaction activity to that PAN.
@@ -121,7 +121,7 @@ public record CardData1
     [IsoXmlTag("PmtAcctRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PaymentAccountReference { get; init; }
+    public Max35Text? PaymentAccountReference { get; init; }
 
     /// <summary>
     /// Country code assigned to the card by the card issuer.
@@ -140,7 +140,7 @@ public record CardData1
     [IsoXmlTag("CardPdctTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CardProductType { get; init; }
+    public Max35Text? CardProductType { get; init; }
 
     /// <summary>
     /// Subtype of card product.
@@ -150,7 +150,7 @@ public record CardData1
     [IsoXmlTag("CardPdctSubTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CardProductSubType { get; init; }
+    public Max35Text? CardProductSubType { get; init; }
 
     /// <summary>
     /// Identifies the card portfolio.
@@ -160,7 +160,7 @@ public record CardData1
     [IsoXmlTag("CardPrtflIdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CardPortfolioIdentifier { get; init; }
+    public Max35Text? CardPortfolioIdentifier { get; init; }
 
     /// <summary>
     /// Additional card issuer specific data.
@@ -170,5 +170,5 @@ public record CardData1
     [IsoXmlTag("AddtlCardData")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AdditionalCardData { get; init; }
+    public Max70Text? AdditionalCardData { get; init; }
 }

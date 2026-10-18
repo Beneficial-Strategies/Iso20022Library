@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification9Choice
         [IsoXmlTag("SfkpgAcct")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text SafekeepingAccount { get; init; }
+        public required Max35Text SafekeepingAccount { get; init; }
 
         /// <summary>
         /// Party that legally owns the account.

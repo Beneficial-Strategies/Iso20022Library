@@ -23,7 +23,7 @@ public record Report4
     [DisplayName("Report Number")]
     [IsoXmlTag("RptNb")]
     [IsoSimpleType(IsoSimpleType.Max5NumericText)]
-    public IsoMax5NumericText? ReportNumber { get; init; }
+    public Max5NumericText? ReportNumber { get; init; }
 
     /// <summary>
     /// Identification of the SecuritiesStatementQuery message sent to request this statement.
@@ -33,7 +33,7 @@ public record Report4
     [IsoXmlTag("QryRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? QueryReference { get; init; }
+    public Max35Text? QueryReference { get; init; }
 
     /// <summary>
     /// Unique identification of the report.
@@ -43,7 +43,7 @@ public record Report4
     [IsoXmlTag("RptId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReportIdentification { get; init; }
+    public Max35Text? ReportIdentification { get; init; }
 
     /// <summary>
     /// Date and time of the report.
@@ -116,7 +116,7 @@ public record Report4
     [DisplayName("Audited Indicator")]
     [IsoXmlTag("AudtdInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AuditedIndicator { get; init; }
+    public YesNoIndicator? AuditedIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether there is activity or an information update reported in the report.
@@ -125,5 +125,5 @@ public record Report4
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ActivityIndicator { get; init; }
+    public YesNoIndicator? ActivityIndicator { get; init; }
 }

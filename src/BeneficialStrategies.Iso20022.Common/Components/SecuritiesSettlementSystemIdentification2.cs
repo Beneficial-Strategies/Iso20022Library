@@ -24,7 +24,7 @@ public record SecuritiesSettlementSystemIdentification2
     [IsoXmlTag("SysId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text SystemIdentification { get; init; }
+    public required Max35Text SystemIdentification { get; init; }
 
     /// <summary>
     /// Name of the securities settlement system.
@@ -34,7 +34,7 @@ public record SecuritiesSettlementSystemIdentification2
     [IsoXmlTag("SysNm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? SystemName { get; init; }
+    public Max140Text? SystemName { get; init; }
 
     /// <summary>
     /// Country code for the jurisdiction in which the CSD is established.
@@ -52,7 +52,7 @@ public record SecuritiesSettlementSystemIdentification2
     [IsoXmlTag("CSDLglNm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? CSDLegalName { get; init; }
+    public Max140Text? CSDLegalName { get; init; }
 
     /// <summary>
     /// Legal entity identification of the CSD operating the securities settlement system.
@@ -61,7 +61,7 @@ public record SecuritiesSettlementSystemIdentification2
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? LEI { get; init; }
+    public LEIIdentifier? LEI { get; init; }
 
     /// <summary>
     /// Party (such as a person or a team) responsible for the report sent by the CSD.

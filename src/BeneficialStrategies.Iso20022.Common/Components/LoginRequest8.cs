@@ -22,7 +22,7 @@ public record LoginRequest8
     [IsoId("_58wHhbZcEfCUZfsQO4rYeA")]
     [DisplayName("Login Date Time")]
     [IsoXmlTag("LgnDtTm")]
-    public required IsoISODateTime LoginDateTime { get; init; }
+    public required ISODateTime LoginDateTime { get; init; }
 
     /// <summary>
     /// Information related to the software of the Sale System which manages the Sale to POI protocol.
@@ -47,7 +47,7 @@ public record LoginRequest8
     [IsoId("_58wHl7ZcEfCUZfsQO4rYeA")]
     [DisplayName("Training Mode Flag")]
     [IsoXmlTag("TrngMdFlg")]
-    public IsoTrueFalseIndicator? TrainingModeFlag { get; init; }
+    public TrueFalseIndicator? TrainingModeFlag { get; init; }
 
     /// <summary>
     /// Identification of the cashier.
@@ -55,7 +55,7 @@ public record LoginRequest8
     [IsoId("_58wHnbZcEfCUZfsQO4rYeA")]
     [DisplayName("Cashier Identification")]
     [IsoXmlTag("CshrId")]
-    public IsoMax35Text? CashierIdentification { get; init; }
+    public Max35Text? CashierIdentification { get; init; }
 
     /// <summary>
     /// Language of the cashier.
@@ -71,7 +71,7 @@ public record LoginRequest8
     [IsoId("_58wHqbZcEfCUZfsQO4rYeA")]
     [DisplayName("Shift Number")]
     [IsoXmlTag("ShftNb")]
-    public IsoMax2NumericText? ShiftNumber { get; init; }
+    public Max2NumericText? ShiftNumber { get; init; }
 
     /// <summary>
     /// Type of token replacing the PAN of a payment card to identify the payment mean of the customer.
@@ -103,7 +103,7 @@ public record LoginRequest8
     [IsoId("_58wHwbZcEfCUZfsQO4rYeA")]
     [DisplayName("Totals Group Identification")]
     [IsoXmlTag("TtlsGrpId")]
-    public IsoMax35Text? TotalsGroupIdentification { get; init; }
+    public Max35Text? TotalsGroupIdentification { get; init; }
 
     /// <summary>
     /// Message to be displayed.

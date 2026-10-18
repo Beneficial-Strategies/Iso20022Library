@@ -31,6 +31,6 @@ namespace BeneficialStrategies.Iso20022.Choices.OwnerIdentification3Choice
         [DisplayName("LEI")]
         [IsoXmlTag("LEI")]
         [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-        public IsoLEIIdentifier? LEI { get; init; }
+        public LEIIdentifier? LEI { get; init; }
     }
 }

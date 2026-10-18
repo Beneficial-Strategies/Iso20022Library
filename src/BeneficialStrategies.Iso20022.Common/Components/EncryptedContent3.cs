@@ -39,5 +39,5 @@ public record EncryptedContent3
     [DisplayName("Encrypted Data")]
     [IsoXmlTag("NcrptdData")]
     [IsoSimpleType(IsoSimpleType.Max100KBinary)]
-    public required IsoMax100KBinary EncryptedData { get; init; }
+    public required Max100KBinary EncryptedData { get; init; }
 }

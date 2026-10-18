@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CommodityDerivate2Choice
         [IsoXmlTag("Sz")]
         [IsoSimpleType(IsoSimpleType.Max25Text)]
         [StringLength(maximumLength: 25, MinimumLength = 1)]
-        public required IsoMax25Text Size { get; init; }
+        public required Max25Text Size { get; init; }
 
         /// <summary>
         /// Details the specific route or time charter average. Field to be populated when the base product field is equal to freight.
@@ -34,6 +34,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CommodityDerivate2Choice
         [IsoXmlTag("AvrgTmChrtr")]
         [IsoSimpleType(IsoSimpleType.Max25Text)]
         [StringLength(maximumLength: 25, MinimumLength = 1)]
-        public required IsoMax25Text AverageTimeCharter { get; init; }
+        public required Max25Text AverageTimeCharter { get; init; }
     }
 }

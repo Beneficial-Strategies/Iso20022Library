@@ -24,7 +24,7 @@ public record GenericIdentification93
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Entity assigning the identification (for example merchant, acceptor, acquirer, or tax authority).
@@ -41,7 +41,7 @@ public record GenericIdentification93
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
     [IsoSimpleType(IsoSimpleType.Min2Max3AlphaText)]
-    public IsoMin2Max3AlphaText? Country { get; init; }
+    public Min2Max3AlphaText? Country { get; init; }
 
     /// <summary>
     /// Name of the entity.
@@ -51,7 +51,7 @@ public record GenericIdentification93
     [IsoXmlTag("ShrtNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ShortName { get; init; }
+    public Max35Text? ShortName { get; init; }
 
     /// <summary>
     /// Access information to reach the target host.

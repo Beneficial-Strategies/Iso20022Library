@@ -22,7 +22,7 @@ public record SecuritiesTradeDetails131
     [IsoId("_NIc6hSAdEeuyDZ-ukt4YRg")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    public SimpleValueList<IsoRestrictedFINXMax52Text> TradeIdentification { get; init; } = [];
+    public SimpleValueList<RestrictedFINXMax52Text> TradeIdentification { get; init; } = [];
 
     /// <summary>
     /// Unambiguous identification of a collateral transaction as assigned by the instructing party.
@@ -30,7 +30,7 @@ public record SecuritiesTradeDetails131
     [IsoId("_NIc6iSAdEeuyDZ-ukt4YRg")]
     [DisplayName("Collateral Transaction Identification")]
     [IsoXmlTag("CollTxId")]
-    public SimpleValueList<IsoRestrictedFINXMax16Text> CollateralTransactionIdentification { get; init; } =
+    public SimpleValueList<RestrictedFINXMax16Text> CollateralTransactionIdentification { get; init; } =
         [];
 
     /// <summary>
@@ -88,7 +88,7 @@ public record SecuritiesTradeDetails131
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
     [IsoSimpleType(IsoSimpleType.Max3Number)]
-    public IsoMax3Number? NumberOfDaysAccrued { get; init; }
+    public Max3Number? NumberOfDaysAccrued { get; init; }
 
     /// <summary>
     /// Specifies additional information relative to the processing of the trade.
@@ -171,7 +171,7 @@ public record SecuritiesTradeDetails131
     [IsoXmlTag("FxAddtlDtls")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? FXAdditionalDetails { get; init; }
+    public RestrictedFINXMax350Text? FXAdditionalDetails { get; init; }
 
     /// <summary>
     /// Provides additional settlement processing information which cannot be included within the structured fields of the message.
@@ -181,5 +181,5 @@ public record SecuritiesTradeDetails131
     [IsoXmlTag("SttlmInstrPrcgAddtlDtls")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? SettlementInstructionProcessingAdditionalDetails { get; init; }
+    public RestrictedFINXMax350Text? SettlementInstructionProcessingAdditionalDetails { get; init; }
 }

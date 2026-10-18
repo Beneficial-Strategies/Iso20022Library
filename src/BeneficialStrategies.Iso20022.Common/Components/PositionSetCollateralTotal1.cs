@@ -23,7 +23,7 @@ public record PositionSetCollateralTotal1
     [DisplayName("Number Of Reports")]
     [IsoXmlTag("NbOfRpts")]
     [IsoSimpleType(IsoSimpleType.Max20PositiveNumber)]
-    public IsoMax20PositiveNumber? NumberOfReports { get; init; }
+    public Max20PositiveNumber? NumberOfReports { get; init; }
 
     /// <summary>
     /// Values of the initial margin for the portfolio.

@@ -22,7 +22,7 @@ public record VehicleRentalService4
     [IsoId("_MM6cQUhsEfCMZJtj4J7UGQ")]
     [DisplayName("Company Name")]
     [IsoXmlTag("CpnyNm")]
-    public IsoMax70Text? CompanyName { get; init; }
+    public Max70Text? CompanyName { get; init; }
 
     /// <summary>
     /// Identification of the vehicle rental company.
@@ -30,7 +30,7 @@ public record VehicleRentalService4
     [IsoId("_IlQ3xEh6EfCMZJtj4J7UGQ")]
     [DisplayName("Company Identification")]
     [IsoXmlTag("CpnyId")]
-    public IsoMax35Text? CompanyIdentification { get; init; }
+    public Max35Text? CompanyIdentification { get; init; }
 
     /// <summary>
     /// Business name of the vehicle rental company.
@@ -38,7 +38,7 @@ public record VehicleRentalService4
     [IsoId("_IlQ3xUh6EfCMZJtj4J7UGQ")]
     [DisplayName("Company Business Name")]
     [IsoXmlTag("CpnyBizNm")]
-    public IsoMax35Text? CompanyBusinessName { get; init; }
+    public Max35Text? CompanyBusinessName { get; init; }
 
     /// <summary>
     /// Legal Corporate Name of the vehicle rental company.
@@ -46,7 +46,7 @@ public record VehicleRentalService4
     [IsoId("_IlQ3xkh6EfCMZJtj4J7UGQ")]
     [DisplayName("Company Legal Corporate Name")]
     [IsoXmlTag("CpnyLglCorpNm")]
-    public IsoMax99Text? CompanyLegalCorporateName { get; init; }
+    public Max99Text? CompanyLegalCorporateName { get; init; }
 
     /// <summary>
     /// Address of the vehicle rental company.
@@ -86,7 +86,7 @@ public record VehicleRentalService4
     [IsoId("_MM6cTUhsEfCMZJtj4J7UGQ")]
     [DisplayName("Renter Name")]
     [IsoXmlTag("RntrNm")]
-    public required IsoMax105Text RenterName { get; init; }
+    public required Max105Text RenterName { get; init; }
 
     /// <summary>
     /// Corporate name of the vehicle rental customer.
@@ -94,7 +94,7 @@ public record VehicleRentalService4
     [IsoId("_MM6cT0hsEfCMZJtj4J7UGQ")]
     [DisplayName("Renter Corporate Name")]
     [IsoXmlTag("RntrCorpNm")]
-    public IsoMax70Text? RenterCorporateName { get; init; }
+    public Max70Text? RenterCorporateName { get; init; }
 
     /// <summary>
     /// Corporate identifier of the vehicle rental customer.
@@ -102,7 +102,7 @@ public record VehicleRentalService4
     [IsoId("_MM6cUUhsEfCMZJtj4J7UGQ")]
     [DisplayName("Renter Corporate Identifier")]
     [IsoXmlTag("RntrCorpIdr")]
-    public required IsoMax35Text RenterCorporateIdentifier { get; init; }
+    public required Max35Text RenterCorporateIdentifier { get; init; }
 
     /// <summary>
     /// Party assigning an identification to a vehicle rental customer.
@@ -142,7 +142,7 @@ public record VehicleRentalService4
     [IsoId("_MM6cW0hsEfCMZJtj4J7UGQ")]
     [DisplayName("Summary Commodity Identification")]
     [IsoXmlTag("SummryCmmdtyId")]
-    public IsoMax35Text? SummaryCommodityIdentification { get; init; }
+    public Max35Text? SummaryCommodityIdentification { get; init; }
 
     /// <summary>
     /// Indicates that the cardholder failed to pick up the vehicle and was therefore charged a no-show fee; vehicle was not actually rented. 
@@ -150,7 +150,7 @@ public record VehicleRentalService4
     [IsoId("_sQu4-0h-EfCMZJtj4J7UGQ")]
     [DisplayName("No Show")]
     [IsoXmlTag("NoShow")]
-    public IsoTrueFalseIndicator? NoShow { get; init; }
+    public TrueFalseIndicator? NoShow { get; init; }
 
     /// <summary>
     /// Contains the original vehicle rental agreement, invoice or contract number.
@@ -158,7 +158,7 @@ public record VehicleRentalService4
     [IsoId("_vZGYAUh-EfCMZJtj4J7UGQ")]
     [DisplayName("Rental Agreement Number")]
     [IsoXmlTag("RntlAgrmtNb")]
-    public IsoMax35Text? RentalAgreementNumber { get; init; }
+    public Max35Text? RentalAgreementNumber { get; init; }
 
     /// <summary>
     /// Contains the vehicle rental location. 
@@ -174,7 +174,7 @@ public record VehicleRentalService4
     [IsoId("_sQu4_Eh-EfCMZJtj4J7UGQ")]
     [DisplayName("Adjusted")]
     [IsoXmlTag("Adjstd")]
-    public IsoTrueFalseIndicator? Adjusted { get; init; }
+    public TrueFalseIndicator? Adjusted { get; init; }
 
     /// <summary>
     /// Used when different than rental location
@@ -190,7 +190,7 @@ public record VehicleRentalService4
     [IsoId("_sQu4_kh-EfCMZJtj4J7UGQ")]
     [DisplayName("Check Out Date")]
     [IsoXmlTag("ChckOutDt")]
-    public IsoISODate? CheckOutDate { get; init; }
+    public DateOnly? CheckOutDate { get; init; }
 
     /// <summary>
     /// Time the vehicle was picked-up by the customer.  In the case of a no-show transaction or a prepaid transaction, this contains the scheduled pickup time.
@@ -198,7 +198,7 @@ public record VehicleRentalService4
     [IsoId("_sQu4_0h-EfCMZJtj4J7UGQ")]
     [DisplayName("Check Out Time")]
     [IsoXmlTag("ChckOutTm")]
-    public IsoISOTime? CheckOutTime { get; init; }
+    public ISOTime? CheckOutTime { get; init; }
 
     /// <summary>
     /// Location to which vehicle was returned.
@@ -214,7 +214,7 @@ public record VehicleRentalService4
     [IsoId("_sQu5AEh-EfCMZJtj4J7UGQ")]
     [DisplayName("Check In Date")]
     [IsoXmlTag("ChckInDt")]
-    public IsoISODate? CheckInDate { get; init; }
+    public DateOnly? CheckInDate { get; init; }
 
     /// <summary>
     /// Time when the vehicle was returned to the rental agency.
@@ -222,7 +222,7 @@ public record VehicleRentalService4
     [IsoId("_sQu5AUh-EfCMZJtj4J7UGQ")]
     [DisplayName("Check In Time")]
     [IsoXmlTag("ChckInTm")]
-    public IsoISOTime? CheckInTime { get; init; }
+    public ISOTime? CheckInTime { get; init; }
 
     /// <summary>
     /// Duration of rental in days.
@@ -230,7 +230,7 @@ public record VehicleRentalService4
     [IsoId("_sQu5Akh-EfCMZJtj4J7UGQ")]
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
-    public IsoMax4NumericText? Duration { get; init; }
+    public Max4NumericText? Duration { get; init; }
 
     /// <summary>
     /// Contains the classification of the vehicle (for example, economy, intermediate, luxury, etc.) on invoice
@@ -238,7 +238,7 @@ public record VehicleRentalService4
     [IsoId("_sQu5A0h-EfCMZJtj4J7UGQ")]
     [DisplayName("Class Invoiced")]
     [IsoXmlTag("ClssInvcd")]
-    public IsoMax35Text? ClassInvoiced { get; init; }
+    public Max35Text? ClassInvoiced { get; init; }
 
     /// <summary>
     /// Brand or manufacturer of the vehicle on invoice.
@@ -246,7 +246,7 @@ public record VehicleRentalService4
     [IsoId("_sQu5BEh-EfCMZJtj4J7UGQ")]
     [DisplayName("Make Invoiced")]
     [IsoXmlTag("MakeInvcd")]
-    public IsoMax35NumericText? MakeInvoiced { get; init; }
+    public Max35NumericText? MakeInvoiced { get; init; }
 
     /// <summary>
     /// Product line of vehicle within the make on invoice.
@@ -254,7 +254,7 @@ public record VehicleRentalService4
     [IsoId("_sQu5BUh-EfCMZJtj4J7UGQ")]
     [DisplayName("Model Invoiced")]
     [IsoXmlTag("MdlInvcd")]
-    public IsoMax35NumericText? ModelInvoiced { get; init; }
+    public Max35NumericText? ModelInvoiced { get; init; }
 
     /// <summary>
     /// Registration number of vehicle on invoice.
@@ -262,7 +262,7 @@ public record VehicleRentalService4
     [IsoId("_sQu5Bkh-EfCMZJtj4J7UGQ")]
     [DisplayName("Registration Number Invoiced")]
     [IsoXmlTag("RegnNbInvcd")]
-    public IsoMax35Text? RegistrationNumberInvoiced { get; init; }
+    public Max35Text? RegistrationNumberInvoiced { get; init; }
 
     /// <summary>
     /// Contains the classification of the provide vehicle (for example, economy, intermediate, luxury, etc.)
@@ -270,7 +270,7 @@ public record VehicleRentalService4
     [IsoId("_sQu5B0h-EfCMZJtj4J7UGQ")]
     [DisplayName("Class Provided")]
     [IsoXmlTag("ClssPrvdd")]
-    public IsoMax35Text? ClassProvided { get; init; }
+    public Max35Text? ClassProvided { get; init; }
 
     /// <summary>
     /// Brand or manufacturer of the provided vehicle.
@@ -278,7 +278,7 @@ public record VehicleRentalService4
     [IsoId("_sQu5CEh-EfCMZJtj4J7UGQ")]
     [DisplayName("Make Provided")]
     [IsoXmlTag("MakePrvdd")]
-    public IsoMax35NumericText? MakeProvided { get; init; }
+    public Max35NumericText? MakeProvided { get; init; }
 
     /// <summary>
     /// Product line of provided vehicle within the make. 
@@ -286,7 +286,7 @@ public record VehicleRentalService4
     [IsoId("_sQu5CUh-EfCMZJtj4J7UGQ")]
     [DisplayName("Model Provided")]
     [IsoXmlTag("MdlPrvdd")]
-    public IsoMax35NumericText? ModelProvided { get; init; }
+    public Max35NumericText? ModelProvided { get; init; }
 
     /// <summary>
     /// Registration number of the provided vehicle.
@@ -294,7 +294,7 @@ public record VehicleRentalService4
     [IsoId("_sQu5Ckh-EfCMZJtj4J7UGQ")]
     [DisplayName("Registration Number Provided")]
     [IsoXmlTag("RegnNbPrvdd")]
-    public IsoMax35Text? RegistrationNumberProvided { get; init; }
+    public Max35Text? RegistrationNumberProvided { get; init; }
 
     /// <summary>
     /// Unit of measure used to compute the distance.
@@ -310,7 +310,7 @@ public record VehicleRentalService4
     [IsoId("_sQu5DEh-EfCMZJtj4J7UGQ")]
     [DisplayName("Odometer Start")]
     [IsoXmlTag("OdmtrStart")]
-    public IsoMax10NumericText? OdometerStart { get; init; }
+    public Max10NumericText? OdometerStart { get; init; }
 
     /// <summary>
     /// Odometer reading at return of rental (at the time of vehicle check-in). 
@@ -318,7 +318,7 @@ public record VehicleRentalService4
     [IsoId("_sQu5DUh-EfCMZJtj4J7UGQ")]
     [DisplayName("Odometer Return")]
     [IsoXmlTag("OdmtrRtr")]
-    public IsoMax10NumericText? OdometerReturn { get; init; }
+    public Max10NumericText? OdometerReturn { get; init; }
 
     /// <summary>
     /// Total distance expressed in unit of measure.
@@ -326,7 +326,7 @@ public record VehicleRentalService4
     [IsoId("_sQu5Dkh-EfCMZJtj4J7UGQ")]
     [DisplayName("Total Distance")]
     [IsoXmlTag("TtlDstnc")]
-    public IsoMax10NumericText? TotalDistance { get; init; }
+    public Max10NumericText? TotalDistance { get; init; }
 
     /// <summary>
     /// Maximum free miles or kilometres for the car rental period.
@@ -334,7 +334,7 @@ public record VehicleRentalService4
     [IsoId("_sQu5D0h-EfCMZJtj4J7UGQ")]
     [DisplayName("Free Distance")]
     [IsoXmlTag("FreeDstnc")]
-    public IsoMax10NumericText? FreeDistance { get; init; }
+    public Max10NumericText? FreeDistance { get; init; }
 
     /// <summary>
     /// Defines the rate in relation to a specific distance. 
@@ -358,7 +358,7 @@ public record VehicleRentalService4
     [IsoId("_sQu5E0h-EfCMZJtj4J7UGQ")]
     [DisplayName("Insurance")]
     [IsoXmlTag("Insrnc")]
-    public IsoTrueFalseIndicator? Insurance { get; init; }
+    public TrueFalseIndicator? Insurance { get; init; }
 
     /// <summary>
     /// Contains the details of additional amount for a specific vehicle rental service type. 
@@ -382,7 +382,7 @@ public record VehicleRentalService4
     [IsoId("_GAPeokhsEfCMZJtj4J7UGQ")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications. 
@@ -390,5 +390,5 @@ public record VehicleRentalService4
     [IsoId("_GAPeo0hsEfCMZJtj4J7UGQ")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

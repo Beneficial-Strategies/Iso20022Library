@@ -23,7 +23,7 @@ public record Limit1
     [DisplayName("Current")]
     [IsoXmlTag("Cur")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public required IsoMax3NumericText Current { get; init; }
+    public required Max3NumericText Current { get; init; }
 
     /// <summary>
     /// Specifies the maximum number of times an event may occur.
@@ -32,5 +32,5 @@ public record Limit1
     [DisplayName("Limit")]
     [IsoXmlTag("Lmt")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public required IsoMax3NumericText Limit { get; init; }
+    public required Max3NumericText Limit { get; init; }
 }

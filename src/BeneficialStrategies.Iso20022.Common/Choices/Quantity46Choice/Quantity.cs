@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity46Choice
         /// </summary>
         [IsoXmlTag("Qty")]
         [IsoSimpleType(IsoSimpleType.LongFraction21DecimalNumber)]
-        public required IsoLongFraction21DecimalNumber Value { get; init; }
+        public required LongFraction21DecimalNumber Value { get; init; }
     }
 }

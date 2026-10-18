@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalMandate1Choice
         [IsoXmlTag("MndtId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text MandateIdentification { get; init; }
+        public required Max35Text MandateIdentification { get; init; }
 
         /// <summary>
         /// Identification for the mandate request, as assigned by the initiating party.
@@ -34,7 +34,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalMandate1Choice
         [IsoXmlTag("MndtReqId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? MandateRequestIdentification { get; init; }
+        public Max35Text? MandateRequestIdentification { get; init; }
 
         /// <summary>
         /// Specifies the type of mandate, such as paper, electronic or scheme.

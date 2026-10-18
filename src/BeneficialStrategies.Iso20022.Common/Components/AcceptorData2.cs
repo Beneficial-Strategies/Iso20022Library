@@ -22,7 +22,7 @@ public record AcceptorData2
     [IsoId("_ROqHUSRbEfCa6bxMAKEOKg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Unique identification to the acceptor assigned by the scheme.
@@ -30,7 +30,7 @@ public record AcceptorData2
     [IsoId("_ROqHWSRbEfCa6bxMAKEOKg")]
     [DisplayName("Scheme Assigned Identification")]
     [IsoXmlTag("SchmeAssgndId")]
-    public IsoMax15AlphaNumericText? SchemeAssignedIdentification { get; init; }
+    public Max15AlphaNumericText? SchemeAssignedIdentification { get; init; }
 
     /// <summary>
     /// Business name of the acceptor.
@@ -38,7 +38,7 @@ public record AcceptorData2
     [IsoId("_ROqHWyRbEfCa6bxMAKEOKg")]
     [DisplayName("Business Name")]
     [IsoXmlTag("BizNm")]
-    public IsoMax35Text? BusinessName { get; init; }
+    public Max35Text? BusinessName { get; init; }
 
     /// <summary>
     /// Legal Corporate Name of the party.
@@ -46,7 +46,7 @@ public record AcceptorData2
     [IsoId("_ROqHXSRbEfCa6bxMAKEOKg")]
     [DisplayName("Legal Corporate Name")]
     [IsoXmlTag("LglCorpNm")]
-    public IsoMax99Text? LegalCorporateName { get; init; }
+    public Max99Text? LegalCorporateName { get; init; }
 
     /// <summary>
     /// Submitted address of the acceptor.
@@ -70,7 +70,7 @@ public record AcceptorData2
     [IsoId("_ROqHsSRbEfCa6bxMAKEOKg")]
     [DisplayName("Business Registration Identification")]
     [IsoXmlTag("BizRegnId")]
-    public IsoMax35Text? BusinessRegistrationIdentification { get; init; }
+    public Max35Text? BusinessRegistrationIdentification { get; init; }
 
     /// <summary>
     /// Contains the type of acceptor's business registration Identification.
@@ -78,7 +78,7 @@ public record AcceptorData2
     [IsoId("_e83HQSRcEfCa6bxMAKEOKg")]
     [DisplayName("Business Registration Identification Type")]
     [IsoXmlTag("BizRegnIdTp")]
-    public IsoMax35Text? BusinessRegistrationIdentificationType { get; init; }
+    public Max35Text? BusinessRegistrationIdentificationType { get; init; }
 
     /// <summary>
     /// Contains local language equivalent(s) of data in the current component.
@@ -94,7 +94,7 @@ public record AcceptorData2
     [IsoId("_ROqHtyRbEfCa6bxMAKEOKg")]
     [DisplayName("Additional Transaction Reference Number")]
     [IsoXmlTag("AddtlTxRefNb")]
-    public IsoMax70Text? AdditionalTransactionReferenceNumber { get; init; }
+    public Max70Text? AdditionalTransactionReferenceNumber { get; init; }
 
     /// <summary>
     /// Identifies a specific partnership agreement, generally between specific acceptors and issuers.
@@ -102,7 +102,7 @@ public record AcceptorData2
     [IsoId("_ROqHzSRbEfCa6bxMAKEOKg")]
     [DisplayName("Partner Identification")]
     [IsoXmlTag("PrtnrId")]
-    public IsoMax35Text? PartnerIdentification { get; init; }
+    public Max35Text? PartnerIdentification { get; init; }
 
     /// <summary>
     /// Reserved for private data. The use of this data element is determined by bilateral agreement.

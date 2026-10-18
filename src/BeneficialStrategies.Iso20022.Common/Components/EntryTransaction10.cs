@@ -219,7 +219,7 @@ public record EntryTransaction10
     [IsoXmlTag("AddtlTxInf")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public IsoMax500Text? AdditionalTransactionInformation { get; init; }
+    public Max500Text? AdditionalTransactionInformation { get; init; }
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.

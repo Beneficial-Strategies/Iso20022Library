@@ -24,7 +24,7 @@ public record Resolution4
     [IsoXmlTag("IssrLabl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text IssuerLabel { get; init; }
+    public required Max35Text IssuerLabel { get; init; }
 
     /// <summary>
     /// Free text description of the resolution.
@@ -34,7 +34,7 @@ public record Resolution4
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max1025Text)]
     [StringLength(maximumLength: 1025, MinimumLength = 1)]
-    public IsoMax1025Text? Description { get; init; }
+    public Max1025Text? Description { get; init; }
 
     /// <summary>
     /// Abbreviated description of the resolution.
@@ -44,7 +44,7 @@ public record Resolution4
     [IsoXmlTag("Titl")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Title { get; init; }
+    public Max350Text? Title { get; init; }
 
     /// <summary>
     /// Type of resolution.
@@ -61,7 +61,7 @@ public record Resolution4
     [DisplayName("For Information Only")]
     [IsoXmlTag("ForInfOnly")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ForInformationOnly { get; init; }
+    public required YesNoIndicator ForInformationOnly { get; init; }
 
     /// <summary>
     /// Impact of vote results on an agenda resolution.
@@ -86,7 +86,7 @@ public record Resolution4
     [DisplayName("Submitted By Security Holder")]
     [IsoXmlTag("SubmittdBySctyHldr")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? SubmittedBySecurityHolder { get; init; }
+    public YesNoIndicator? SubmittedBySecurityHolder { get; init; }
 
     /// <summary>
     /// Vote options allowed at the resolution level. When specified, it supersedes the vote options given for the meeting.
@@ -136,5 +136,5 @@ public record Resolution4
     [IsoXmlTag("URLAdr")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
     [StringLength(maximumLength: 2048, MinimumLength = 1)]
-    public IsoMax2048Text? URLAddress { get; init; }
+    public Max2048Text? URLAddress { get; init; }
 }

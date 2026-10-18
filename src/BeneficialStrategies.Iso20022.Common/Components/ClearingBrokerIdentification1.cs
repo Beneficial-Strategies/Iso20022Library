@@ -32,5 +32,5 @@ public record ClearingBrokerIdentification1
     [IsoXmlTag("ClrBrkrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ClearingBrokerIdentification { get; init; }
+    public required Max35Text ClearingBrokerIdentification { get; init; }
 }

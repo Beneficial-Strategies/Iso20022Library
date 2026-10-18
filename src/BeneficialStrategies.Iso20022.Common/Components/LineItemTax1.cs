@@ -39,7 +39,7 @@ public record LineItemTax1
     [DisplayName("Tax Point Date")]
     [IsoXmlTag("TaxPtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TaxPointDate { get; init; }
+    public DateOnly? TaxPointDate { get; init; }
 
     /// <summary>
     /// Rate used to calculate the amount of this tax, levy or duty.
@@ -48,7 +48,7 @@ public record LineItemTax1
     [DisplayName("Calculated Rate")]
     [IsoXmlTag("ClctdRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? CalculatedRate { get; init; }
+    public PercentageRate? CalculatedRate { get; init; }
 
     /// <summary>
     /// Code specifying the category to which this tax, levy or duty applies, such as codes for &apos;exempt from tax&apos;, &apos;standard rate&apos;, &quot;free export item - tax not charged&apos;.
@@ -58,7 +58,7 @@ public record LineItemTax1
     [IsoXmlTag("CtgyCd")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4Text? CategoryCode { get; init; }
+    public Max4Text? CategoryCode { get; init; }
 
     /// <summary>
     /// Category name, expressed as text, of the tax, levy or duty.
@@ -66,5 +66,5 @@ public record LineItemTax1
     [IsoId("_S0toJQEcEeCQm6a_G2yO_w_-1190517937")]
     [DisplayName("Category Name")]
     [IsoXmlTag("CtgyNm")]
-    public SimpleValueList<IsoMax35Text> CategoryName { get; init; } = [];
+    public SimpleValueList<Max35Text> CategoryName { get; init; } = [];
 }

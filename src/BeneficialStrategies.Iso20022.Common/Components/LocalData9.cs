@@ -32,5 +32,5 @@ public record LocalData9
     [IsoXmlTag("TxtMsg")]
     [IsoSimpleType(IsoSimpleType.Max40KText)]
     [StringLength(maximumLength: 40000, MinimumLength = 1)]
-    public required IsoMax40KText TextMessage { get; init; }
+    public required Max40KText TextMessage { get; init; }
 }

@@ -94,7 +94,7 @@ public record SecuritiesSettlementConditionModificationStatusAdviceV10 : IOuterR
     /// </summary>
     [DisplayName("Request Reference")]
     [IsoXmlTag("ReqRef")]
-    public required IsoMax35Text RequestReference { get; init; }
+    public required Max35Text RequestReference { get; init; }
 
     /// <summary>
     /// Account to or from which a securities entry is made.

@@ -32,7 +32,7 @@ public record Document12
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Issue date or date time of the document.
@@ -50,7 +50,7 @@ public record Document12
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Name { get; init; }
+    public Max140Text? Name { get; init; }
 
     /// <summary>
     /// Unique identifier for a language used in the document.
@@ -76,7 +76,7 @@ public record Document12
     [IsoXmlTag("FileNm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? FileName { get; init; }
+    public Max140Text? FileName { get; init; }
 
     /// <summary>
     /// Digital signature of the enclosed binary file.
@@ -93,5 +93,5 @@ public record Document12
     [DisplayName("Enclosure")]
     [IsoXmlTag("Nclsr")]
     [IsoSimpleType(IsoSimpleType.Max10MbBinary)]
-    public required IsoMax10MbBinary Enclosure { get; init; }
+    public required Max10MbBinary Enclosure { get; init; }
 }

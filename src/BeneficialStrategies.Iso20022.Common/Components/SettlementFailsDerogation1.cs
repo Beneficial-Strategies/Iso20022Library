@@ -23,7 +23,7 @@ public record SettlementFailsDerogation1
     [DisplayName("Eligibility Indicator")]
     [IsoXmlTag("ElgbltyInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator EligibilityIndicator { get; init; }
+    public required TrueFalseIndicator EligibilityIndicator { get; init; }
 
     /// <summary>
     /// Justification for the derogation.

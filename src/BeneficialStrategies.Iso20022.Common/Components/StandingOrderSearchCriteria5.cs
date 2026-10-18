@@ -42,28 +42,28 @@ public record StandingOrderSearchCriteria5
     /// </summary>
     [DisplayName("Key Attributes Indicator")]
     [IsoXmlTag("KeyAttrbtsInd")]
-    public IsoTrueFalseIndicator? KeyAttributesIndicator { get; init; }
+    public TrueFalseIndicator? KeyAttributesIndicator { get; init; }
 
     /// <summary>
     /// Link Set Identification.
     /// </summary>
     [DisplayName("Link Set Identification")]
     [IsoXmlTag("LkSetId")]
-    public IsoMax35Text? LinkSetIdentification { get; init; }
+    public Max35Text? LinkSetIdentification { get; init; }
 
     /// <summary>
     /// Link Set Order Identification.
     /// </summary>
     [DisplayName("Link Set Order Identification")]
     [IsoXmlTag("LkSetOrdrId")]
-    public IsoMax35Text? LinkSetOrderIdentification { get; init; }
+    public Max35Text? LinkSetOrderIdentification { get; init; }
 
     /// <summary>
     /// Link Set Order Sequence.
     /// </summary>
     [DisplayName("Link Set Order Sequence")]
     [IsoXmlTag("LkSetOrdrSeq")]
-    public IsoNumber? LinkSetOrderSequence { get; init; }
+    public Number? LinkSetOrderSequence { get; init; }
 
     /// <summary>
     /// Responsible Party.
@@ -77,7 +77,7 @@ public record StandingOrderSearchCriteria5
     /// </summary>
     [DisplayName("Standing Order Identification")]
     [IsoXmlTag("StgOrdrId")]
-    public IsoMax35Text? StandingOrderIdentification { get; init; }
+    public Max35Text? StandingOrderIdentification { get; init; }
 
     /// <summary>
     /// System Member.
@@ -105,5 +105,5 @@ public record StandingOrderSearchCriteria5
     /// </summary>
     [DisplayName("Zero Sweep Indicator")]
     [IsoXmlTag("ZeroSweepInd")]
-    public IsoTrueFalseIndicator? ZeroSweepIndicator { get; init; }
+    public TrueFalseIndicator? ZeroSweepIndicator { get; init; }
 }

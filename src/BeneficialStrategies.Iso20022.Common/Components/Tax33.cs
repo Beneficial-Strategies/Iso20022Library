@@ -32,7 +32,7 @@ public record Tax33
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Description of the tax.
@@ -42,7 +42,7 @@ public record Tax33
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Description { get; init; }
+    public Max35Text? Description { get; init; }
 
     /// <summary>
     /// Exemption for this type of tax.
@@ -53,7 +53,7 @@ public record Tax33
     [DisplayName("Tax Exemption")]
     [IsoXmlTag("TaxXmptn")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? TaxExemption { get; init; }
+    public TrueFalseIndicator? TaxExemption { get; init; }
 
     /// <summary>
     /// Reason for tax exemption.
@@ -63,7 +63,7 @@ public record Tax33
     [IsoXmlTag("TaxXmptRsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TaxExemptReason { get; init; }
+    public Max35Text? TaxExemptReason { get; init; }
 
     /// <summary>
     /// Tax amount.
@@ -80,5 +80,5 @@ public record Tax33
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Rate { get; init; }
+    public PercentageRate? Rate { get; init; }
 }

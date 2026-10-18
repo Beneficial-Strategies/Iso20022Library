@@ -39,5 +39,5 @@ public record NotificationGeneralInformation2
     [DisplayName("Shareholder Rights Directive Indicator")]
     [IsoXmlTag("ShrhldrRghtsDrctvInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ShareholderRightsDirectiveIndicator { get; init; }
+    public YesNoIndicator? ShareholderRightsDirectiveIndicator { get; init; }
 }

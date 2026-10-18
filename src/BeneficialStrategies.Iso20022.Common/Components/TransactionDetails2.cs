@@ -24,5 +24,5 @@ public record TransactionDetails2
     [IsoXmlTag("TradRef")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public required IsoMax70Text TradeReference { get; init; }
+    public required Max70Text TradeReference { get; init; }
 }

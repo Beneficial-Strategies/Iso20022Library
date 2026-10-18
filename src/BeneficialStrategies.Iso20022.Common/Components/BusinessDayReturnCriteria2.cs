@@ -23,7 +23,7 @@ public record BusinessDayReturnCriteria2
     [DisplayName("System Date Indicator")]
     [IsoXmlTag("SysDtInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? SystemDateIndicator { get; init; }
+    public RequestedIndicator? SystemDateIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the system status is requested.
@@ -32,7 +32,7 @@ public record BusinessDayReturnCriteria2
     [DisplayName("System Status Indicator")]
     [IsoXmlTag("SysStsInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? SystemStatusIndicator { get; init; }
+    public RequestedIndicator? SystemStatusIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the system currency is requested.
@@ -41,7 +41,7 @@ public record BusinessDayReturnCriteria2
     [DisplayName("System Currency Indicator")]
     [IsoXmlTag("SysCcyInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? SystemCurrencyIndicator { get; init; }
+    public RequestedIndicator? SystemCurrencyIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the closure information is requested.
@@ -50,7 +50,7 @@ public record BusinessDayReturnCriteria2
     [DisplayName("Closure Period Indicator")]
     [IsoXmlTag("ClsrPrdInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? ClosurePeriodIndicator { get; init; }
+    public RequestedIndicator? ClosurePeriodIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the events are requested.
@@ -59,7 +59,7 @@ public record BusinessDayReturnCriteria2
     [DisplayName("Event Indicator")]
     [IsoXmlTag("EvtInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? EventIndicator { get; init; }
+    public RequestedIndicator? EventIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the session period is requested.
@@ -68,7 +68,7 @@ public record BusinessDayReturnCriteria2
     [DisplayName("Session Period Indicator")]
     [IsoXmlTag("SsnPrdInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? SessionPeriodIndicator { get; init; }
+    public RequestedIndicator? SessionPeriodIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the system event type is requested.
@@ -77,5 +77,5 @@ public record BusinessDayReturnCriteria2
     [DisplayName("Event Type Indicator")]
     [IsoXmlTag("EvtTpInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? EventTypeIndicator { get; init; }
+    public RequestedIndicator? EventTypeIndicator { get; init; }
 }

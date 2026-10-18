@@ -32,5 +32,5 @@ public record CancellationReason19
     [IsoXmlTag("CorpActnEvtId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINMax16Text? CorporateActionEventIdentification { get; init; }
+    public RestrictedFINMax16Text? CorporateActionEventIdentification { get; init; }
 }

@@ -35,35 +35,35 @@ public record OptionInstructionDetails9
     /// </summary>
     [DisplayName("Cover Protect Date")]
     [IsoXmlTag("CoverPrtctDt")]
-    public IsoISODate? CoverProtectDate { get; init; }
+    public DateOnly? CoverProtectDate { get; init; }
 
     /// <summary>
     /// Customer Reference.
     /// </summary>
     [DisplayName("Customer Reference")]
     [IsoXmlTag("CstmrRef")]
-    public IsoMax50Text? CustomerReference { get; init; }
+    public Max50Text? CustomerReference { get; init; }
 
     /// <summary>
     /// Instruction Date.
     /// </summary>
     [DisplayName("Instruction Date")]
     [IsoXmlTag("InstrDt")]
-    public required IsoISODate InstructionDate { get; init; }
+    public required DateOnly InstructionDate { get; init; }
 
     /// <summary>
     /// Instruction Identification.
     /// </summary>
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
-    public required IsoMax15Text InstructionIdentification { get; init; }
+    public required Max15Text InstructionIdentification { get; init; }
 
     /// <summary>
     /// Instruction Narrative.
     /// </summary>
     [DisplayName("Instruction Narrative")]
     [IsoXmlTag("InstrNrrtv")]
-    public IsoMax350Text? InstructionNarrative { get; init; }
+    public Max350Text? InstructionNarrative { get; init; }
 
     /// <summary>
     /// Instruction Quantity.
@@ -77,7 +77,7 @@ public record OptionInstructionDetails9
     /// </summary>
     [DisplayName("Instruction Sequence Number")]
     [IsoXmlTag("InstrSeqNb")]
-    public IsoMax3NumericText? InstructionSequenceNumber { get; init; }
+    public Max3NumericText? InstructionSequenceNumber { get; init; }
 
     /// <summary>
     /// Instruction Status.
@@ -91,7 +91,7 @@ public record OptionInstructionDetails9
     /// </summary>
     [DisplayName("Protect Date")]
     [IsoXmlTag("PrtctDt")]
-    public IsoISODate? ProtectDate { get; init; }
+    public DateOnly? ProtectDate { get; init; }
 
     /// <summary>
     /// Protect Indicator.

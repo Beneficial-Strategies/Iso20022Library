@@ -21,7 +21,7 @@ public record OrderClassification2
     /// </summary>
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
-    public IsoMax50Text? OrderType { get; init; }
+    public Max50Text? OrderType { get; init; }
 
     /// <summary>
     /// Order Type Classification.

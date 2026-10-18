@@ -49,5 +49,5 @@ public record CardPaymentDataSetTransaction51
     /// </summary>
     [DisplayName("Transaction Sequence Counter")]
     [IsoXmlTag("TxSeqCntr")]
-    public required IsoMax9NumericText TransactionSequenceCounter { get; init; }
+    public required Max9NumericText TransactionSequenceCounter { get; init; }
 }

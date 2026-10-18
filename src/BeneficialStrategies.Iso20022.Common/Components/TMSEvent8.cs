@@ -23,7 +23,7 @@ public record TMSEvent8
     [DisplayName("Time Stamp")]
     [IsoXmlTag("TmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime TimeStamp { get; init; }
+    public required ISODateTime TimeStamp { get; init; }
 
     /// <summary>
     /// Final result of the processed terminal management action.
@@ -49,7 +49,7 @@ public record TMSEvent8
     [IsoXmlTag("AddtlErrInf")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AdditionalErrorInformation { get; init; }
+    public Max70Text? AdditionalErrorInformation { get; init; }
 
     /// <summary>
     /// Identification of the terminal management system (TMS) used with the action.
@@ -59,7 +59,7 @@ public record TMSEvent8
     [IsoXmlTag("TermnlMgrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TerminalManagerIdentification { get; init; }
+    public Max35Text? TerminalManagerIdentification { get; init; }
 
     /// <summary>
     /// Response  of a device request done previously.

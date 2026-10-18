@@ -25,7 +25,7 @@ public record AccountNotification6
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Identifies the account to be credited with the incoming amount of money.
@@ -74,7 +74,7 @@ public record AccountNotification6
     [DisplayName("Expected Value Date")]
     [IsoXmlTag("XpctdValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ExpectedValueDate { get; init; }
+    public DateOnly? ExpectedValueDate { get; init; }
 
     /// <summary>
     /// Party that owes an amount of money to the (ultimate) creditor.

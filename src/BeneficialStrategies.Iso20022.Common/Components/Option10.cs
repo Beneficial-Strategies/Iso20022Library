@@ -56,7 +56,7 @@ public record Option10
     [IsoXmlTag("DerivOptnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text DerivativeOptionIdentification { get; init; }
+    public required Max35Text DerivativeOptionIdentification { get; init; }
 
     /// <summary>
     /// Indicates the type of payout that will result from an in-the-money option.
@@ -89,7 +89,7 @@ public record Option10
     [DisplayName("Volatility Margin")]
     [IsoXmlTag("VoltlyMrgn")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate VolatilityMargin { get; init; }
+    public required PercentageRate VolatilityMargin { get; init; }
 
     /// <summary>
     /// Measurement of the amount of the trade values converted in the US dollars.
@@ -106,7 +106,7 @@ public record Option10
     [DisplayName("Expiry Date And Time")]
     [IsoXmlTag("XpryDtAndTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime ExpiryDateAndTime { get; init; }
+    public required ISODateTime ExpiryDateAndTime { get; init; }
 
     /// <summary>
     /// Financial center where option expires.
@@ -116,7 +116,7 @@ public record Option10
     [IsoXmlTag("XpryLctn")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public required IsoMax4AlphaNumericText ExpiryLocation { get; init; }
+    public required Max4AlphaNumericText ExpiryLocation { get; init; }
 
     /// <summary>
     /// Specifies the settlment period of the option trade.
@@ -158,5 +158,5 @@ public record Option10
     [IsoXmlTag("AddtlOptnInf")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text AdditionalOptionInformation { get; init; }
+    public required Max140Text AdditionalOptionInformation { get; init; }
 }

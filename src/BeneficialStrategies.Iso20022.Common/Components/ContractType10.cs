@@ -39,7 +39,7 @@ public record ContractType10
     [DisplayName("Product Classification")]
     [IsoXmlTag("PdctClssfctn")]
     [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
-    public IsoCFIOct2015Identifier? ProductClassification { get; init; }
+    public CFIOct2015Identifier? ProductClassification { get; init; }
 
     /// <summary>
     /// Specifies the identification of the derivative product.

@@ -24,7 +24,7 @@ public record PaymentInstrument15
     [IsoXmlTag("Ref")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Reference { get; init; }
+    public Max35Text? Reference { get; init; }
 
     /// <summary>
     /// Amount of the payment.
@@ -41,7 +41,7 @@ public record PaymentInstrument15
     [DisplayName("Payment Date")]
     [IsoXmlTag("PmtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? PaymentDate { get; init; }
+    public DateOnly? PaymentDate { get; init; }
 
     /// <summary>
     /// Payment process for the transfer of cash from the debtor to the creditor.

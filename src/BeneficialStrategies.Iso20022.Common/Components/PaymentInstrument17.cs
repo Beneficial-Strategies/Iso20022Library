@@ -31,7 +31,7 @@ public record PaymentInstrument17
     [DisplayName("Dividend Percentage")]
     [IsoXmlTag("DvddPctg")]
     [IsoSimpleType(IsoSimpleType.PercentageBoundedRate)]
-    public IsoPercentageBoundedRate? DividendPercentage { get; init; }
+    public PercentageBoundedRate? DividendPercentage { get; init; }
 
     /// <summary>
     /// Instrument that has or represents monetary value and is used to process a payment instruction for a subscription payment.

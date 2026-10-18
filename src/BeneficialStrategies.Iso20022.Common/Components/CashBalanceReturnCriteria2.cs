@@ -23,7 +23,7 @@ public record CashBalanceReturnCriteria2
     [DisplayName("Type Indicator")]
     [IsoXmlTag("TpInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator TypeIndicator { get; init; }
+    public required RequestedIndicator TypeIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the balance status is requested.
@@ -32,7 +32,7 @@ public record CashBalanceReturnCriteria2
     [DisplayName("Status Indicator")]
     [IsoXmlTag("StsInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator StatusIndicator { get; init; }
+    public required RequestedIndicator StatusIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the value date is requested.
@@ -41,7 +41,7 @@ public record CashBalanceReturnCriteria2
     [DisplayName("Value Date Indicator")]
     [IsoXmlTag("ValDtInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator ValueDateIndicator { get; init; }
+    public required RequestedIndicator ValueDateIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the processing date is requested.
@@ -50,7 +50,7 @@ public record CashBalanceReturnCriteria2
     [DisplayName("Processing Date Indicator")]
     [IsoXmlTag("PrcgDtInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator ProcessingDateIndicator { get; init; }
+    public required RequestedIndicator ProcessingDateIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the number of payment is requested.
@@ -59,5 +59,5 @@ public record CashBalanceReturnCriteria2
     [DisplayName("Number Of Payments Indicator")]
     [IsoXmlTag("NbOfPmtsInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator NumberOfPaymentsIndicator { get; init; }
+    public required RequestedIndicator NumberOfPaymentsIndicator { get; init; }
 }

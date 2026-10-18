@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.AutoExtend1Choice
         /// </summary>
         [IsoXmlTag("Days")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public required IsoNumber Value { get; init; }
+        public required Number Value { get; init; }
     }
 }

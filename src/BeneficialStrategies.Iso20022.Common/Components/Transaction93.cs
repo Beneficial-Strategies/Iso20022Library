@@ -24,7 +24,7 @@ public record Transaction93
     [IsoXmlTag("FrdTxId")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public required IsoMax70Text FraudTransactionIdentification { get; init; }
+    public required Max70Text FraudTransactionIdentification { get; init; }
 
     /// <summary>
     /// Fees not included in the transaction amount.

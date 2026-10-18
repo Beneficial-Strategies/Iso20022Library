@@ -24,7 +24,7 @@ public record RemittanceLocation1
     [IsoXmlTag("RmtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RemittanceIdentification { get; init; }
+    public Max35Text? RemittanceIdentification { get; init; }
 
     /// <summary>
     /// Specifies the method used to deliver the remittance advice information.
@@ -42,7 +42,7 @@ public record RemittanceLocation1
     [IsoXmlTag("RmtLctnElctrncAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? RemittanceLocationElectronicAddress { get; init; }
+    public Max256Text? RemittanceLocationElectronicAddress { get; init; }
 
     /// <summary>
     /// Postal address to which an agent is to send the remittance information.

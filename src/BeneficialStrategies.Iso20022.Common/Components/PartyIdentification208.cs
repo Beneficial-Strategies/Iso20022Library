@@ -24,7 +24,7 @@ public record PartyIdentification208
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public required IsoMax4Text Type { get; init; }
+    public required Max4Text Type { get; init; }
 
     /// <summary>
     /// Other type of identification.
@@ -34,7 +34,7 @@ public record PartyIdentification208
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Identification of the party.
@@ -44,7 +44,7 @@ public record PartyIdentification208
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public required IsoMax70Text Identification { get; init; }
+    public required Max70Text Identification { get; init; }
 
     /// <summary>
     /// Entity in charge of assigning an identification to a party.
@@ -54,5 +54,5 @@ public record PartyIdentification208
     [IsoXmlTag("Assgnr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Assigner { get; init; }
+    public Max35Text? Assigner { get; init; }
 }

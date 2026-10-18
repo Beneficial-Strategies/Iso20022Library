@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
         /// </summary>
         [IsoXmlTag("AUBSBs")]
         [IsoSimpleType(IsoSimpleType.SmallNetworkIdentifier)]
-        public required IsoSmallNetworkIdentifier Value { get; init; }
+        public required SmallNetworkIdentifier Value { get; init; }
     }
 }

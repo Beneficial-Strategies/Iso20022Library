@@ -38,5 +38,5 @@ public record TradeQueryExecutionFrequency3
     [IsoId("_evMXO91dEeqxpKDfBZC1vg")]
     [DisplayName("Day Of Month")]
     [IsoXmlTag("DayOfMnth")]
-    public SimpleValueList<IsoDayOfMonthNumber> DayOfMonth { get; init; } = [];
+    public SimpleValueList<DayOfMonthNumber> DayOfMonth { get; init; } = [];
 }

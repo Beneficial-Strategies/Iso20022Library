@@ -24,7 +24,7 @@ public record ISATransfer13
     [IsoXmlTag("MstrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Identification of the confirmation assigned by the transferor to the transfer.
@@ -34,7 +34,7 @@ public record ISATransfer13
     [IsoXmlTag("TrfConfId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransferConfirmationIdentification { get; init; }
+    public required Max35Text TransferConfirmationIdentification { get; init; }
 
     /// <summary>
     /// Identification assigned to the transfer of asset, typically assigned by the transferee.
@@ -44,7 +44,7 @@ public record ISATransfer13
     [IsoXmlTag("TrfInstrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransferInstructionReference { get; init; }
+    public required Max35Text TransferInstructionReference { get; init; }
 
     /// <summary>
     /// Date when the transfer instruction was executed.
@@ -53,7 +53,7 @@ public record ISATransfer13
     [DisplayName("Actual Transfer Date")]
     [IsoXmlTag("ActlTrfDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ActualTransferDate { get; init; }
+    public DateOnly? ActualTransferDate { get; init; }
 
     /// <summary>
     /// Indicates whether there is cash in the account that is awaiting investment.
@@ -78,7 +78,7 @@ public record ISATransfer13
     [DisplayName("All Other Cash")]
     [IsoXmlTag("AllOthrCsh")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator AllOtherCash { get; init; }
+    public required YesNoIndicator AllOtherCash { get; init; }
 
     /// <summary>
     /// Specifies the underlying assets for the ISA or portfolio.

@@ -31,7 +31,7 @@ public record Commission11
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Rate { get; init; }
+    public PercentageRate? Rate { get; init; }
 
     /// <summary>
     /// Service for which the commission is asked or paid.
@@ -49,7 +49,7 @@ public record Commission11
     [IsoXmlTag("XtndedTp")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedType { get; init; }
+    public Extended350Code? ExtendedType { get; init; }
 
     /// <summary>
     /// Reference to the agreement established between the fund and another party. This element, amongst others, defines the conditions of the commissions.
@@ -59,7 +59,7 @@ public record Commission11
     [IsoXmlTag("ComrclAgrmtRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CommercialAgreementReference { get; init; }
+    public Max35Text? CommercialAgreementReference { get; init; }
 
     /// <summary>
     /// Indicates if the CommercialAgreementReference is a new reference or not.
@@ -68,5 +68,5 @@ public record Commission11
     [DisplayName("New Commercial Agreement Reference Indicator")]
     [IsoXmlTag("NewComrclAgrmtRefInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? NewCommercialAgreementReferenceIndicator { get; init; }
+    public YesNoIndicator? NewCommercialAgreementReferenceIndicator { get; init; }
 }

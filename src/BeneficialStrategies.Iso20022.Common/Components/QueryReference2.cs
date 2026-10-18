@@ -24,7 +24,7 @@ public record QueryReference2
     [IsoXmlTag("QryRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text QueryReference { get; init; }
+    public required Max35Text QueryReference { get; init; }
 
     /// <summary>
     /// Name of the query.
@@ -34,5 +34,5 @@ public record QueryReference2
     [IsoXmlTag("QryNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? QueryName { get; init; }
+    public Max35Text? QueryName { get; init; }
 }

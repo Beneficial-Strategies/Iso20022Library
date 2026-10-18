@@ -56,7 +56,7 @@ public record IntraBalanceQueryCriteria12
     /// </summary>
     [DisplayName("Modification Request Identification")]
     [IsoXmlTag("ModReqId")]
-    public ValueList<IsoMax35Text> ModificationRequestIdentification { get; init; } = [];
+    public ValueList<Max35Text> ModificationRequestIdentification { get; init; } = [];
 
     /// <summary>
     /// Processing Status.

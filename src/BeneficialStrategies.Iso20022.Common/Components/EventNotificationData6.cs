@@ -35,7 +35,7 @@ public record EventNotificationData6
     /// </summary>
     [DisplayName("Maintenance Required Flag")]
     [IsoXmlTag("MntncReqrdFlg")]
-    public IsoTrueFalseIndicator? MaintenanceRequiredFlag { get; init; }
+    public TrueFalseIndicator? MaintenanceRequiredFlag { get; init; }
 
     /// <summary>
     /// Retailer Event.

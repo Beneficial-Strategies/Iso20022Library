@@ -21,14 +21,14 @@ public record HiredVehicle3
     /// </summary>
     [DisplayName("Company Name")]
     [IsoXmlTag("CpnyNm")]
-    public IsoMax70Text? CompanyName { get; init; }
+    public Max70Text? CompanyName { get; init; }
 
     /// <summary>
     /// Company Type.
     /// </summary>
     [DisplayName("Company Type")]
     [IsoXmlTag("CpnyTp")]
-    public IsoMax35Text? CompanyType { get; init; }
+    public Max35Text? CompanyType { get; init; }
 
     /// <summary>
     /// Destination Address.
@@ -42,33 +42,33 @@ public record HiredVehicle3
     /// </summary>
     [DisplayName("Destination Name And Location")]
     [IsoXmlTag("DstnNmAndLctn")]
-    public IsoMax99Text? DestinationNameAndLocation { get; init; }
+    public Max99Text? DestinationNameAndLocation { get; init; }
 
     /// <summary>
     /// Driver Identification.
     /// </summary>
     [DisplayName("Driver Identification")]
     [IsoXmlTag("DrvrId")]
-    public IsoMax35Text? DriverIdentification { get; init; }
+    public Max35Text? DriverIdentification { get; init; }
 
     /// <summary>
     /// Driver Tax Identification.
     /// </summary>
     [DisplayName("Driver Tax Identification")]
     [IsoXmlTag("DrvrTaxId")]
-    public IsoMax35Text? DriverTaxIdentification { get; init; }
+    public Max35Text? DriverTaxIdentification { get; init; }
 
     /// <summary>
     /// Type Of Vehicle.
     /// </summary>
     [DisplayName("Type Of Vehicle")]
     [IsoXmlTag("TpOfVhcl")]
-    public IsoMax35Text? TypeOfVehicle { get; init; }
+    public Max35Text? TypeOfVehicle { get; init; }
 
     /// <summary>
     /// Vehicle Identification.
     /// </summary>
     [DisplayName("Vehicle Identification")]
     [IsoXmlTag("VhclId")]
-    public IsoMax35Text? VehicleIdentification { get; init; }
+    public Max35Text? VehicleIdentification { get; init; }
 }

@@ -24,7 +24,7 @@ public record FinancialInstrument100
     [IsoXmlTag("LineId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LineIdentification { get; init; }
+    public Max35Text? LineIdentification { get; init; }
 
     /// <summary>
     /// Identification of the asset.
@@ -49,7 +49,7 @@ public record FinancialInstrument100
     [DisplayName("Partial Instructed Quantity")]
     [IsoXmlTag("PrtlInstdQty")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PartialInstructedQuantity { get; init; }
+    public YesNoIndicator? PartialInstructedQuantity { get; init; }
 
     /// <summary>
     /// Percentage rate of assets to be transferred or transferred, as originally instructed.
@@ -58,7 +58,7 @@ public record FinancialInstrument100
     [DisplayName("Original Percentage Instructed")]
     [IsoXmlTag("OrgnlPctgInstd")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? OriginalPercentageInstructed { get; init; }
+    public PercentageRate? OriginalPercentageInstructed { get; init; }
 
     /// <summary>
     /// Specifies how the financial instrument is transferred.
@@ -75,7 +75,7 @@ public record FinancialInstrument100
     [DisplayName("Additional Asset")]
     [IsoXmlTag("AddtlAsst")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AdditionalAsset { get; init; }
+    public YesNoIndicator? AdditionalAsset { get; init; }
 
     /// <summary>
     /// Indicates the asset is no longer available at the transferor party (ceding party).
@@ -84,7 +84,7 @@ public record FinancialInstrument100
     [DisplayName("Not Available")]
     [IsoXmlTag("NotAvlbl")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? NotAvailable { get; init; }
+    public YesNoIndicator? NotAvailable { get; init; }
 
     /// <summary>
     /// Security is to be converted into another security before transfer.
@@ -198,7 +198,7 @@ public record FinancialInstrument100
     [DisplayName("Requested Trade Date")]
     [IsoXmlTag("ReqdTradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RequestedTradeDate { get; init; }
+    public DateOnly? RequestedTradeDate { get; init; }
 
     /// <summary>
     /// Date on which the securities are to be exchanged at the International Central Securities Depository (ICSD) or Central Securities Depository (CSD).
@@ -207,7 +207,7 @@ public record FinancialInstrument100
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RequestedSettlementDate { get; init; }
+    public DateOnly? RequestedSettlementDate { get; init; }
 
     /// <summary>
     /// Date and time at which the transfer was executed.
@@ -264,7 +264,7 @@ public record FinancialInstrument100
     [DisplayName("Assets Held In Own Name")]
     [IsoXmlTag("AsstsHeldInOwnNm")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AssetsHeldInOwnName { get; init; }
+    public YesNoIndicator? AssetsHeldInOwnName { get; init; }
 
     /// <summary>
     /// Indicates whether the transfer results in a change of beneficial owner.
@@ -273,7 +273,7 @@ public record FinancialInstrument100
     [DisplayName("Transfer Results In Change Of Beneficial Owner")]
     [IsoXmlTag("TrfRsltsInChngOfBnfclOwnr")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? TransferResultsInChangeOfBeneficialOwner { get; init; }
+    public YesNoIndicator? TransferResultsInChangeOfBeneficialOwner { get; init; }
 
     /// <summary>
     /// Additional information about the financial instrument.

@@ -21,14 +21,14 @@ public record PaymentInstruction47
     /// </summary>
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
-    public IsoMax35Text? EndToEndIdentification { get; init; }
+    public Max35Text? EndToEndIdentification { get; init; }
 
     /// <summary>
     /// Generated Order.
     /// </summary>
     [DisplayName("Generated Order")]
     [IsoXmlTag("GnrtdOrdr")]
-    public IsoTrueFalseIndicator? GeneratedOrder { get; init; }
+    public TrueFalseIndicator? GeneratedOrder { get; init; }
 
     /// <summary>
     /// Instructed Amount.
@@ -42,7 +42,7 @@ public record PaymentInstruction47
     /// </summary>
     [DisplayName("Instruction Copy")]
     [IsoXmlTag("InstrCpy")]
-    public IsoMax20000Text? InstructionCopy { get; init; }
+    public Max20000Text? InstructionCopy { get; init; }
 
     /// <summary>
     /// Interbank Settlement Amount.
@@ -56,14 +56,14 @@ public record PaymentInstruction47
     /// </summary>
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
-    public IsoISODate? InterbankSettlementDate { get; init; }
+    public DateOnly? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Message Identification.
     /// </summary>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
-    public IsoMax35Text? MessageIdentification { get; init; }
+    public Max35Text? MessageIdentification { get; init; }
 
     /// <summary>
     /// Parties.
@@ -98,7 +98,7 @@ public record PaymentInstruction47
     /// </summary>
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
-    public IsoMax10Text? Purpose { get; init; }
+    public Max10Text? Purpose { get; init; }
 
     /// <summary>
     /// Requested Execution Date.
@@ -119,7 +119,7 @@ public record PaymentInstruction47
     /// </summary>
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
-    public IsoMax35Text? TransactionIdentification { get; init; }
+    public Max35Text? TransactionIdentification { get; init; }
 
     /// <summary>
     /// Type.

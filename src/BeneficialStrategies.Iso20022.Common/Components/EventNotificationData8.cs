@@ -30,7 +30,7 @@ public record EventNotificationData8
     [IsoId("_I94u-7ZeEfCUZfsQO4rYeA")]
     [DisplayName("Maintenance Required Flag")]
     [IsoXmlTag("MntncReqrdFlg")]
-    public IsoTrueFalseIndicator? MaintenanceRequiredFlag { get; init; }
+    public TrueFalseIndicator? MaintenanceRequiredFlag { get; init; }
 
     /// <summary>
     /// Language of the Customer.

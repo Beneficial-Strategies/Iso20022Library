@@ -28,12 +28,12 @@ public record Case6
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Reopen Case Indication.
     /// </summary>
     [DisplayName("Reopen Case Indication")]
     [IsoXmlTag("ReopCaseIndctn")]
-    public IsoYesNoIndicator? ReopenCaseIndication { get; init; }
+    public YesNoIndicator? ReopenCaseIndication { get; init; }
 }

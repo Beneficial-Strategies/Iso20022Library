@@ -55,5 +55,5 @@ public record InvoiceTotals1
     [DisplayName("Payment Due Date")]
     [IsoXmlTag("PmtDueDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate PaymentDueDate { get; init; }
+    public required DateOnly PaymentDueDate { get; init; }
 }

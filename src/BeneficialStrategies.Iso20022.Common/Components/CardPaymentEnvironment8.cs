@@ -23,7 +23,7 @@ public record CardPaymentEnvironment8
     [DisplayName("Acquirer Parameters Version")]
     [IsoXmlTag("AcqrrParamsVrsn")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime AcquirerParametersVersion { get; init; }
+    public required ISODateTime AcquirerParametersVersion { get; init; }
 
     /// <summary>
     /// Identification of the merchant requesting the diagnostic.

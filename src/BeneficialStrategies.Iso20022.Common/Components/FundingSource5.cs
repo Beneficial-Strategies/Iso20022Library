@@ -30,5 +30,5 @@ public record FundingSource5
     [IsoId("_kw7QBT_ZEfCQAqQ9lolFUg")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
-    public IsoMax35Text? Reference { get; init; }
+    public Max35Text? Reference { get; init; }
 }

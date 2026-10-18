@@ -34,7 +34,7 @@ public record Transaction99
     [IsoXmlTag("OthrNtwkMgmtTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherNetworkManagementType { get; init; }
+    public Max35Text? OtherNetworkManagementType { get; init; }
 
     /// <summary>
     /// Reason to send the message.
@@ -44,7 +44,7 @@ public record Transaction99
     [IsoId("_AECAMsWbEeiCfKAZkk6ZAQ")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
-    public SimpleValueList<IsoExact4NumericText> MessageReason { get; init; } = [];
+    public SimpleValueList<Exact4NumericText> MessageReason { get; init; } = [];
 
     /// <summary>
     /// Supports message reason codes that are not defined in external code list.
@@ -52,7 +52,7 @@ public record Transaction99
     [IsoId("_AECAM8WbEeiCfKAZkk6ZAQ")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
-    public SimpleValueList<IsoMax35Text> AlternateMessageReason { get; init; } = [];
+    public SimpleValueList<Max35Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Identification of the transaction.
@@ -69,7 +69,7 @@ public record Transaction99
     [DisplayName("Number Of Messages")]
     [IsoXmlTag("NbOfMsgs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NumberOfMessages { get; init; }
+    public Number? NumberOfMessages { get; init; }
 
     /// <summary>
     /// Maximum number of messages in the store and forward queue.
@@ -78,7 +78,7 @@ public record Transaction99
     [DisplayName("Maximum Number Of Messages")]
     [IsoXmlTag("MaxNbOfMsgs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaximumNumberOfMessages { get; init; }
+    public Number? MaximumNumberOfMessages { get; init; }
 
     /// <summary>
     /// Fees not included in the transaction amount but included in the settlement.
@@ -96,7 +96,7 @@ public record Transaction99
     [IsoXmlTag("TxDesc")]
     [IsoSimpleType(IsoSimpleType.Max1000Text)]
     [StringLength(maximumLength: 1000, MinimumLength = 1)]
-    public IsoMax1000Text? TransactionDescription { get; init; }
+    public Max1000Text? TransactionDescription { get; init; }
 
     /// <summary>
     /// Contains additional data.

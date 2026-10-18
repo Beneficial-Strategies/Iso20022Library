@@ -24,7 +24,7 @@ public record FinancialItemParameters1
     [IsoXmlTag("Idr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identifier { get; init; }
+    public required Max35Text Identifier { get; init; }
 
     /// <summary>
     /// Date of creation of the item.
@@ -33,7 +33,7 @@ public record FinancialItemParameters1
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate IssueDate { get; init; }
+    public required DateOnly IssueDate { get; init; }
 
     /// <summary>
     /// Identifier of related items, for example an assignment or an advice.

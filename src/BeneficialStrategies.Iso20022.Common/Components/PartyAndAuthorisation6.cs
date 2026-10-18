@@ -42,5 +42,5 @@ public record PartyAndAuthorisation6
     /// </summary>
     [DisplayName("Signature Order")]
     [IsoXmlTag("SgntrOrdr")]
-    public IsoMax15PlusSignedNumericText? SignatureOrder { get; init; }
+    public Max15PlusSignedNumericText? SignatureOrder { get; init; }
 }

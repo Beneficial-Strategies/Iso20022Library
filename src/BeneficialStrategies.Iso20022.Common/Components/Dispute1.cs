@@ -24,7 +24,7 @@ public record Dispute1
     [IsoXmlTag("MrgnCallReqId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MarginCallRequestIdentification { get; init; }
+    public required Max35Text MarginCallRequestIdentification { get; init; }
 
     /// <summary>
     /// Disputed amount.
@@ -41,5 +41,5 @@ public record Dispute1
     [DisplayName("Dispute Date")]
     [IsoXmlTag("DsptDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate DisputeDate { get; init; }
+    public required DateOnly DisputeDate { get; init; }
 }

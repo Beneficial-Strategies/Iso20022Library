@@ -56,5 +56,5 @@ public record ATMKeyDownloadRequest5
     /// </summary>
     [DisplayName("Host Challenge")]
     [IsoXmlTag("HstChllng")]
-    public IsoMax140Binary? HostChallenge { get; init; }
+    public Max140Binary? HostChallenge { get; init; }
 }

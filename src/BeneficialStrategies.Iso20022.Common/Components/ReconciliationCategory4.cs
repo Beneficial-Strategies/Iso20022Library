@@ -21,12 +21,12 @@ public record ReconciliationCategory4
     /// </summary>
     [DisplayName("Further Modification")]
     [IsoXmlTag("FrthrMod")]
-    public required IsoYesNoIndicator FurtherModification { get; init; }
+    public required YesNoIndicator FurtherModification { get; init; }
 
     /// <summary>
     /// Revived.
     /// </summary>
     [DisplayName("Revived")]
     [IsoXmlTag("Rvvd")]
-    public required IsoYesNoIndicator Revived { get; init; }
+    public required YesNoIndicator Revived { get; init; }
 }

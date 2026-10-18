@@ -38,7 +38,7 @@ public record FundSettlementParameters25
     [IsoId("8af0cd60-4d5c-4af7-930a-bed065e68157")]
     [DisplayName("Securities Settlement System Identification")]
     [IsoXmlTag("SctiesSttlmSysId")]
-    public IsoMax35Text? SecuritiesSettlementSystemIdentification { get; init; }
+    public Max35Text? SecuritiesSettlementSystemIdentification { get; init; }
 
     /// <summary>
     /// Chain of receiving settlement parties.

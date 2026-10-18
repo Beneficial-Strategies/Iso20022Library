@@ -38,7 +38,7 @@ public record UnderlyingStatementEntry11
     [IsoId("a5287a7c-83c2-4568-88d4-4e74e3961f03")]
     [DisplayName("Original Statement Identification")]
     [IsoXmlTag("OrgnlStmtId")]
-    public IsoMax35Text? OriginalStatementIdentification { get; init; }
+    public Max35Text? OriginalStatementIdentification { get; init; }
 
     /// <summary>
     /// Original unique reference, as assigned by the account servicer, to unambiguously identify the original entry.
@@ -46,7 +46,7 @@ public record UnderlyingStatementEntry11
     [IsoId("a8bef864-663e-4766-9286-8d7ee56f16d0")]
     [DisplayName("Original Entry Reference")]
     [IsoXmlTag("OrgnlNtryRef")]
-    public IsoMax35Text? OriginalEntryReference { get; init; }
+    public Max35Text? OriginalEntryReference { get; init; }
 
     /// <summary>
     /// Universally unique identifier to provide the original end-to-end reference of a payment transaction.
@@ -54,7 +54,7 @@ public record UnderlyingStatementEntry11
     [IsoId("9b4da188-0553-4e34-9c1c-b097599a0777")]
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
-    public IsoUUIDv4Identifier? OriginalUETR { get; init; }
+    public UUIDv4Identifier? OriginalUETR { get; init; }
 
     /// <summary>
     /// Amount of money in the cash entry.

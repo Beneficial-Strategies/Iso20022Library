@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeFrame7Choice
         /// </summary>
         [IsoXmlTag("Prepmt")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public required IsoYesNoIndicator Value { get; init; }
+        public required YesNoIndicator Value { get; init; }
     }
 }

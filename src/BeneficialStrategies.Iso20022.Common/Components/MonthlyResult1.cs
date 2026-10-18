@@ -23,7 +23,7 @@ public record MonthlyResult1
     [DisplayName("Number Of Observations")]
     [IsoXmlTag("NbOfObsrvtns")]
     [IsoSimpleType(IsoSimpleType.PositiveNumber)]
-    public required IsoPositiveNumber NumberOfObservations { get; init; }
+    public required PositiveNumber NumberOfObservations { get; init; }
 
     /// <summary>
     /// Number of times that margin coverage held against any account fell below the marked‐to‐market exposure of that member account, based on the backtesting results.
@@ -32,7 +32,7 @@ public record MonthlyResult1
     [DisplayName("Number Of Exceptions")]
     [IsoXmlTag("NbOfXcptns")]
     [IsoSimpleType(IsoSimpleType.NonNegativeNumber)]
-    public required IsoNonNegativeNumber NumberOfExceptions { get; init; }
+    public required NonNegativeNumber NumberOfExceptions { get; init; }
 
     /// <summary>
     /// Achieved coverage level.
@@ -41,7 +41,7 @@ public record MonthlyResult1
     [DisplayName("Coverage")]
     [IsoXmlTag("Cvrg")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public required IsoBaseOneRate Coverage { get; init; }
+    public required BaseOneRate Coverage { get; init; }
 
     /// <summary>
     /// Largest marked-to-market exposure on any account that exceeds the margin coverage held against that account. The difference between the size of the exposure and the margin held.

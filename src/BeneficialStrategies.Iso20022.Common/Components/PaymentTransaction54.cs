@@ -24,7 +24,7 @@ public record PaymentTransaction54
     [IsoXmlTag("CxlStsId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CancellationStatusIdentification { get; init; }
+    public Max35Text? CancellationStatusIdentification { get; init; }
 
     /// <summary>
     /// Identifies the resolved case.
@@ -42,7 +42,7 @@ public record PaymentTransaction54
     [IsoXmlTag("OrgnlInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.
@@ -52,7 +52,7 @@ public record PaymentTransaction54
     [IsoXmlTag("OrgnlEndToEndId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Specifies the status of the transaction cancellation request.
@@ -87,7 +87,7 @@ public record PaymentTransaction54
     [DisplayName("Original Requested Execution Date")]
     [IsoXmlTag("OrgnlReqdExctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? OriginalRequestedExecutionDate { get; init; }
+    public DateOnly? OriginalRequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Date at which the creditor originally requested the collection of the amount of money from the debtor.
@@ -96,7 +96,7 @@ public record PaymentTransaction54
     [DisplayName("Original Requested Collection Date")]
     [IsoXmlTag("OrgnlReqdColltnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? OriginalRequestedCollectionDate { get; init; }
+    public DateOnly? OriginalRequestedCollectionDate { get; init; }
 
     /// <summary>
     /// Key elements used to identify the original transaction that is being referred to.

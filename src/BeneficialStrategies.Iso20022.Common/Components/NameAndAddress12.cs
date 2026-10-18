@@ -24,5 +24,5 @@ public record NameAndAddress12
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax140Text Name { get; init; }
+    public required RestrictedFINXMax140Text Name { get; init; }
 }

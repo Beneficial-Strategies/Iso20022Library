@@ -24,7 +24,7 @@ public record IndividualPerson8
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Name { get; init; }
+    public required Max35Text Name { get; init; }
 
     /// <summary>
     /// First name of a person.
@@ -34,7 +34,7 @@ public record IndividualPerson8
     [IsoXmlTag("GvnNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text GivenName { get; init; }
+    public required Max35Text GivenName { get; init; }
 
     /// <summary>
     /// Specifies the terms used to formally address a person.
@@ -52,7 +52,7 @@ public record IndividualPerson8
     [IsoXmlTag("NmSfx")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? NameSuffix { get; init; }
+    public Max35Text? NameSuffix { get; init; }
 
     /// <summary>
     /// Specifies the gender of the person.
@@ -69,7 +69,7 @@ public record IndividualPerson8
     [DisplayName("Birth Date")]
     [IsoXmlTag("BirthDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? BirthDate { get; init; }
+    public DateOnly? BirthDate { get; init; }
 
     /// <summary>
     /// Number assigned by a social security agency.
@@ -79,7 +79,7 @@ public record IndividualPerson8
     [IsoXmlTag("SclSctyNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SocialSecurityNumber { get; init; }
+    public Max35Text? SocialSecurityNumber { get; init; }
 
     /// <summary>
     /// Postal address of a party.

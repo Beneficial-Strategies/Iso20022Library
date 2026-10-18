@@ -22,7 +22,7 @@ public record Wallet4
     [IsoId("_SO-dpkhyEfCMZJtj4J7UGQ")]
     [DisplayName("Provider Name")]
     [IsoXmlTag("PrvdrNm")]
-    public IsoMax70Text? ProviderName { get; init; }
+    public Max70Text? ProviderName { get; init; }
 
     /// <summary>
     /// Business name of  the wallet provider.
@@ -30,7 +30,7 @@ public record Wallet4
     [IsoId("_SO-dqEhyEfCMZJtj4J7UGQ")]
     [DisplayName("Provider Business Name")]
     [IsoXmlTag("PrvdrBizNm")]
-    public IsoMax35Text? ProviderBusinessName { get; init; }
+    public Max35Text? ProviderBusinessName { get; init; }
 
     /// <summary>
     /// Identification of  the wallet provider.
@@ -38,7 +38,7 @@ public record Wallet4
     [IsoId("_SO-dp0hyEfCMZJtj4J7UGQ")]
     [DisplayName("Provider Identification")]
     [IsoXmlTag("PrvdrId")]
-    public IsoMax35Text? ProviderIdentification { get; init; }
+    public Max35Text? ProviderIdentification { get; init; }
 
     /// <summary>
     /// Legal Corporate Name of the wallet provider.
@@ -46,7 +46,7 @@ public record Wallet4
     [IsoId("_SO-dqUhyEfCMZJtj4J7UGQ")]
     [DisplayName("Provider Legal Corporate Name")]
     [IsoXmlTag("PrvdrLglCorpNm")]
-    public IsoMax99Text? ProviderLegalCorporateName { get; init; }
+    public Max99Text? ProviderLegalCorporateName { get; init; }
 
     /// <summary>
     /// Address of  the wallet provider.
@@ -70,7 +70,7 @@ public record Wallet4
     [IsoId("_OWOjwxQXEfC1ZfCQz0xB3g")]
     [DisplayName("PAN Age")]
     [IsoXmlTag("PANAge")]
-    public IsoMax5PositiveNumber? PANAge { get; init; }
+    public Max5PositiveNumber? PANAge { get; init; }
 
     /// <summary>
     /// Number of days since the user wallet account for this user exists.
@@ -78,7 +78,7 @@ public record Wallet4
     [IsoId("_OWOjxRQXEfC1ZfCQz0xB3g")]
     [DisplayName("User Account Age")]
     [IsoXmlTag("UsrAcctAge")]
-    public IsoMax5PositiveNumber? UserAccountAge { get; init; }
+    public Max5PositiveNumber? UserAccountAge { get; init; }
 
     /// <summary>
     /// Number of days since the user created the wallet account or started using the wallet.
@@ -86,7 +86,7 @@ public record Wallet4
     [IsoId("_OWOjxxQXEfC1ZfCQz0xB3g")]
     [DisplayName("Account Age")]
     [IsoXmlTag("AcctAge")]
-    public IsoMax5PositiveNumber? AccountAge { get; init; }
+    public Max5PositiveNumber? AccountAge { get; init; }
 
     /// <summary>
     /// Number of days since the last activity on the wallet.
@@ -94,7 +94,7 @@ public record Wallet4
     [IsoId("_OWOjyRQXEfC1ZfCQz0xB3g")]
     [DisplayName("Days Since Last Activity")]
     [IsoXmlTag("DaysSncLastActvty")]
-    public IsoMax5PositiveNumber? DaysSinceLastActivity { get; init; }
+    public Max5PositiveNumber? DaysSinceLastActivity { get; init; }
 
     /// <summary>
     /// Number of transactions on this wallet within an interval.
@@ -102,7 +102,7 @@ public record Wallet4
     [IsoId("_OWOjyxQXEfC1ZfCQz0xB3g")]
     [DisplayName("Activity")]
     [IsoXmlTag("Actvty")]
-    public IsoMax10PositiveNumber? Activity { get; init; }
+    public Max10PositiveNumber? Activity { get; init; }
 
     /// <summary>
     /// Identifies the interval of the activity.
@@ -118,7 +118,7 @@ public record Wallet4
     [IsoId("_OWOjzxQXEfC1ZfCQz0xB3g")]
     [DisplayName("Last Wallet Change")]
     [IsoXmlTag("LastWlltChng")]
-    public IsoMax5PositiveNumber? LastWalletChange { get; init; }
+    public Max5PositiveNumber? LastWalletChange { get; init; }
 
     /// <summary>
     /// Number of cards suspended in the wallet.
@@ -126,7 +126,7 @@ public record Wallet4
     [IsoId("_OWOj0RQXEfC1ZfCQz0xB3g")]
     [DisplayName("Suspended Cards")]
     [IsoXmlTag("SspdCrds")]
-    public IsoMax5PositiveNumber? SuspendedCards { get; init; }
+    public Max5PositiveNumber? SuspendedCards { get; init; }
 
     /// <summary>
     /// Country of the wallet account.
@@ -150,7 +150,7 @@ public record Wallet4
     [IsoId("_OWOj2RQXEfC1ZfCQz0xB3g")]
     [DisplayName("Account Email Age")]
     [IsoXmlTag("AcctEmailAge")]
-    public IsoMax5PositiveNumber? AccountEmailAge { get; init; }
+    public Max5PositiveNumber? AccountEmailAge { get; init; }
 
     /// <summary>
     /// Wallet Provider Risk Assessment.
@@ -166,7 +166,7 @@ public record Wallet4
     [IsoId("_OWOj3RQXEfC1ZfCQz0xB3g")]
     [DisplayName("Provider Risk Assessment Model Version")]
     [IsoXmlTag("PrvdrRskAssmntMdlVrsn")]
-    public IsoMax35Text? ProviderRiskAssessmentModelVersion { get; init; }
+    public Max35Text? ProviderRiskAssessmentModelVersion { get; init; }
 
     /// <summary>
     /// A value to determine trust level of the phone number.
@@ -174,7 +174,7 @@ public record Wallet4
     [IsoId("_OWOj3xQXEfC1ZfCQz0xB3g")]
     [DisplayName("Provider Phone Score")]
     [IsoXmlTag("PrvdrPhneScore")]
-    public IsoMax5PositiveNumber? ProviderPhoneScore { get; init; }
+    public Max5PositiveNumber? ProviderPhoneScore { get; init; }
 
     /// <summary>
     /// A value to determine trust level of the device.
@@ -182,7 +182,7 @@ public record Wallet4
     [IsoId("_OWOj4RQXEfC1ZfCQz0xB3g")]
     [DisplayName("Provider Device Score")]
     [IsoXmlTag("PrvdrDvcScore")]
-    public IsoMax5PositiveNumber? ProviderDeviceScore { get; init; }
+    public Max5PositiveNumber? ProviderDeviceScore { get; init; }
 
     /// <summary>
     /// A value to determine trust level of the account.
@@ -190,7 +190,7 @@ public record Wallet4
     [IsoId("_OWOj4xQXEfC1ZfCQz0xB3g")]
     [DisplayName("Provider Account Score")]
     [IsoXmlTag("PrvdrAcctScore")]
-    public IsoMax5PositiveNumber? ProviderAccountScore { get; init; }
+    public Max5PositiveNumber? ProviderAccountScore { get; init; }
 
     /// <summary>
     /// Code indicates the reason that wallet provider assess the risk score.
@@ -198,7 +198,7 @@ public record Wallet4
     [IsoId("_OpSQ4K8eEfCnL-2fAG0ssA")]
     [DisplayName("Provider Reason Code")]
     [IsoXmlTag("PrvdrRsnCd")]
-    public IsoMax35Text? ProviderReasonCode { get; init; }
+    public Max35Text? ProviderReasonCode { get; init; }
 
     /// <summary>
     /// Reserved for private data. The use of this data element is determined by bilateral agreement.
@@ -206,7 +206,7 @@ public record Wallet4
     [IsoId("_VFnC4kVZEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications. 
@@ -214,5 +214,5 @@ public record Wallet4
     [IsoId("_VFnC40VZEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

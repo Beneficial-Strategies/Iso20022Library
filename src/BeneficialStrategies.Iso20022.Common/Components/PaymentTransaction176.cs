@@ -22,7 +22,7 @@ public record PaymentTransaction176
     [IsoId("81d4cdf0-1efc-4f36-9cc9-1b4e7931597c")]
     [DisplayName("Cancellation Identification")]
     [IsoXmlTag("CxlId")]
-    public IsoMax35Text? CancellationIdentification { get; init; }
+    public Max35Text? CancellationIdentification { get; init; }
 
     /// <summary>
     /// Set of elements to uniquely and unambiguously identify an exception or an investigation workflow.
@@ -38,7 +38,7 @@ public record PaymentTransaction176
     [IsoId("e4868d95-63ab-47b7-a38e-4e58806a20e1")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
-    public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.
@@ -46,7 +46,7 @@ public record PaymentTransaction176
     [IsoId("f57fa1c1-3d3b-440a-908c-4bc352aeb4e9")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Universally unique identifier to provide an end-to-end reference of a payment transaction.
@@ -54,7 +54,7 @@ public record PaymentTransaction176
     [IsoId("0c64b4fb-8fff-4ba5-a75e-35027cf55050")]
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
-    public IsoUUIDv4Identifier? OriginalUETR { get; init; }
+    public UUIDv4Identifier? OriginalUETR { get; init; }
 
     /// <summary>
     /// Amount of money, as provided in the original transaction, to be moved between the debtor and the creditor, before deduction of charges.
@@ -78,7 +78,7 @@ public record PaymentTransaction176
     [IsoId("cb4c92f9-e34d-4bf1-a7c9-2a00daa1cc71")]
     [DisplayName("Original Requested Collection Date")]
     [IsoXmlTag("OrgnlReqdColltnDt")]
-    public IsoISODate? OriginalRequestedCollectionDate { get; init; }
+    public DateOnly? OriginalRequestedCollectionDate { get; init; }
 
     /// <summary>
     /// Provides detailed information on the cancellation reason.

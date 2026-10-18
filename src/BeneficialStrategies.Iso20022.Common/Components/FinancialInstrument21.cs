@@ -24,7 +24,7 @@ public record FinancialInstrument21
     [IsoXmlTag("ClssTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClassType { get; init; }
+    public Max35Text? ClassType { get; init; }
 
     /// <summary>
     /// Specifies the form, that is, ownership, of the security.
@@ -50,7 +50,7 @@ public record FinancialInstrument21
     [IsoXmlTag("PdctGrp")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? ProductGroup { get; init; }
+    public Max140Text? ProductGroup { get; init; }
 
     /// <summary>
     /// Name of the umbrella fund in which financial instrument is contained.
@@ -60,7 +60,7 @@ public record FinancialInstrument21
     [IsoXmlTag("UmbrllNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? UmbrellaName { get; init; }
+    public Max35Text? UmbrellaName { get; init; }
 
     /// <summary>
     /// Currency of the investment fund class.
@@ -93,7 +93,7 @@ public record FinancialInstrument21
     [DisplayName("Dual Fund Indicator")]
     [IsoXmlTag("DualFndInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? DualFundIndicator { get; init; }
+    public YesNoIndicator? DualFundIndicator { get; init; }
 
     /// <summary>
     /// Country where the fund has legal domicile as reflected in the ISIN classification.

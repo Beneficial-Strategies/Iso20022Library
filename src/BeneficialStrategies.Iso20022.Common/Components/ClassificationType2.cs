@@ -23,7 +23,7 @@ public record ClassificationType2
     [DisplayName("Classification Financial Instrument")]
     [IsoXmlTag("ClssfctnFinInstrm")]
     [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
-    public IsoCFIOct2015Identifier? ClassificationFinancialInstrument { get; init; }
+    public CFIOct2015Identifier? ClassificationFinancialInstrument { get; init; }
 
     /// <summary>
     /// Name of the identification scheme, in a coded form as published in an external list.

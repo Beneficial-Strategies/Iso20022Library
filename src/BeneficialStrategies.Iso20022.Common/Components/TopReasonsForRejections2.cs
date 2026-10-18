@@ -22,7 +22,7 @@ public record TopReasonsForRejections2
     [IsoId("_N1g84VfdEeqZr5K1Woax-g")]
     [DisplayName("All")]
     [IsoXmlTag("All")]
-    public SimpleValueList<IsoMax35Text> All { get; init; } = [];
+    public SimpleValueList<Max35Text> All { get; init; } = [];
 
     /// <summary>
     /// Identification of the most common data field that has not passed the validation rule for derivatives which have been reported as new.
@@ -30,7 +30,7 @@ public record TopReasonsForRejections2
     [IsoId("_N1g841fdEeqZr5K1Woax-g")]
     [DisplayName("New")]
     [IsoXmlTag("New")]
-    public SimpleValueList<IsoMax35Text> New { get; init; } = [];
+    public SimpleValueList<Max35Text> New { get; init; } = [];
 
     /// <summary>
     /// Identification of the most common data field that has not passed the validation rule for derivatives which have been reported as modification.
@@ -38,5 +38,5 @@ public record TopReasonsForRejections2
     [IsoId("_N1g85VfdEeqZr5K1Woax-g")]
     [DisplayName("Modification")]
     [IsoXmlTag("Mod")]
-    public SimpleValueList<IsoMax35Text> Modification { get; init; } = [];
+    public SimpleValueList<Max35Text> Modification { get; init; } = [];
 }

@@ -42,7 +42,7 @@ public record TMSProtocolParameters1
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public required IsoMax256Text Version { get; init; }
+    public required Max256Text Version { get; init; }
 
     /// <summary>
     /// Identification of applications which may be managed by the TM, partially or globally.
@@ -50,7 +50,7 @@ public record TMSProtocolParameters1
     [IsoId("_zmYW0GpcEeS4r8z7dKyh1g")]
     [DisplayName("Application Identification")]
     [IsoXmlTag("ApplId")]
-    public SimpleValueList<IsoMax35Text> ApplicationIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> ApplicationIdentification { get; init; } = [];
 
     /// <summary>
     /// Addresses of the terminal manager host.
@@ -76,7 +76,7 @@ public record TMSProtocolParameters1
     [IsoXmlTag("POIId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? POIIdentification { get; init; }
+    public Max35Text? POIIdentification { get; init; }
 
     /// <summary>
     /// New identification of the initiating party to set in TMS messages with this terminal manager.
@@ -86,7 +86,7 @@ public record TMSProtocolParameters1
     [IsoXmlTag("InitgPtyId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? InitiatingPartyIdentification { get; init; }
+    public Max35Text? InitiatingPartyIdentification { get; init; }
 
     /// <summary>
     /// New identification of the recipient party to set in TMS messages with this terminal manager.
@@ -96,5 +96,5 @@ public record TMSProtocolParameters1
     [IsoXmlTag("RcptPtyId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RecipientPartyIdentification { get; init; }
+    public Max35Text? RecipientPartyIdentification { get; init; }
 }

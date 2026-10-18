@@ -23,7 +23,7 @@ public record AuthenticatedData2
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Version { get; init; }
+    public Number? Version { get; init; }
 
     /// <summary>
     /// Information related to the transport key.
@@ -58,5 +58,5 @@ public record AuthenticatedData2
     [DisplayName("MAC")]
     [IsoXmlTag("MAC")]
     [IsoSimpleType(IsoSimpleType.Max35Binary)]
-    public required IsoMax35Binary MAC { get; init; }
+    public required Max35Binary MAC { get; init; }
 }

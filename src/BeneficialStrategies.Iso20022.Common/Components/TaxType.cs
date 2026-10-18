@@ -24,7 +24,7 @@ public record TaxType
     [IsoXmlTag("CtgyDesc")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CategoryDescription { get; init; }
+    public Max35Text? CategoryDescription { get; init; }
 
     /// <summary>
     /// Rate used to calculate the tax.
@@ -33,7 +33,7 @@ public record TaxType
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Rate { get; init; }
+    public PercentageRate? Rate { get; init; }
 
     /// <summary>
     /// Amount of money on which the tax is based.

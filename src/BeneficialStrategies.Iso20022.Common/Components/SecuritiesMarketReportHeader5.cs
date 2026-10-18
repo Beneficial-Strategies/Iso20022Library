@@ -38,7 +38,7 @@ public record SecuritiesMarketReportHeader5
     [IsoId("_MqjLYwJ4EfGh4rQVEvIxOg")]
     [DisplayName("Submission Date Time")]
     [IsoXmlTag("SubmissnDtTm")]
-    public IsoISODateTime? SubmissionDateTime { get; init; }
+    public ISODateTime? SubmissionDateTime { get; init; }
 
     /// <summary>
     /// Page number of the message (within the report) and continuation indicator to indicate that the report is to continue or that the message is the last page of the report.
@@ -54,5 +54,5 @@ public record SecuritiesMarketReportHeader5
     [IsoId("_MqjLbwJ4EfGh4rQVEvIxOg")]
     [DisplayName("Number Records")]
     [IsoXmlTag("NbRcrds")]
-    public IsoNumber? NumberRecords { get; init; }
+    public Number? NumberRecords { get; init; }
 }

@@ -32,7 +32,7 @@ public record ClearingBatchData2
     [IsoXmlTag("OthrClrMtd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherClearingMethod { get; init; }
+    public Max35Text? OtherClearingMethod { get; init; }
 
     /// <summary>
     /// Level of priority of clearing.
@@ -42,7 +42,7 @@ public record ClearingBatchData2
     [IsoXmlTag("ClrPrty")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClearingPriority { get; init; }
+    public Max35Text? ClearingPriority { get; init; }
 
     /// <summary>
     /// Date of clearing.
@@ -51,7 +51,7 @@ public record ClearingBatchData2
     [DisplayName("Clearing Date")]
     [IsoXmlTag("ClrDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ClearingDate { get; init; }
+    public DateOnly? ClearingDate { get; init; }
 
     /// <summary>
     /// Clearing totals of the batch file.

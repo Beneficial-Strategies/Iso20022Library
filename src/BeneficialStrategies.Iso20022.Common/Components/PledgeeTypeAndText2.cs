@@ -24,7 +24,7 @@ public record PledgeeTypeAndText2
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINMax30Text)]
     [StringLength(maximumLength: 30, MinimumLength = 1)]
-    public IsoRestrictedFINMax30Text? Identification { get; init; }
+    public RestrictedFINMax30Text? Identification { get; init; }
 
     /// <summary>
     /// Entity to which the financial instruments are pledged expressed as a code.

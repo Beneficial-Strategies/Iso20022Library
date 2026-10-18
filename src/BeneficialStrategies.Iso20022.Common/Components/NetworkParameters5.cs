@@ -34,7 +34,7 @@ public record NetworkParameters5
     [IsoXmlTag("UsrNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? UserName { get; init; }
+    public Max35Text? UserName { get; init; }
 
     /// <summary>
     /// Password authenticating the client.
@@ -43,7 +43,7 @@ public record NetworkParameters5
     [DisplayName("Access Code")]
     [IsoXmlTag("AccsCd")]
     [IsoSimpleType(IsoSimpleType.Max35Binary)]
-    public IsoMax35Binary? AccessCode { get; init; }
+    public Max35Binary? AccessCode { get; init; }
 
     /// <summary>
     /// X.509 Certificate required to authenticate the server.
@@ -51,7 +51,7 @@ public record NetworkParameters5
     [IsoId("_p5GVN40PEeWRYffwL7E13A")]
     [DisplayName("Server Certificate")]
     [IsoXmlTag("SvrCert")]
-    public SimpleValueList<IsoMax10KBinary> ServerCertificate { get; init; } = [];
+    public SimpleValueList<Max10KBinary> ServerCertificate { get; init; } = [];
 
     /// <summary>
     /// Identification of the X.509 Certificates required to authenticate the server, for instance a digest of the certificate.
@@ -59,7 +59,7 @@ public record NetworkParameters5
     [IsoId("_p5GVOY0PEeWRYffwL7E13A")]
     [DisplayName("Server Certificate Identifier")]
     [IsoXmlTag("SvrCertIdr")]
-    public SimpleValueList<IsoMax140Binary> ServerCertificateIdentifier { get; init; } = [];
+    public SimpleValueList<Max140Binary> ServerCertificateIdentifier { get; init; } = [];
 
     /// <summary>
     /// X.509 Certificate required to authenticate the client.
@@ -67,7 +67,7 @@ public record NetworkParameters5
     [IsoId("_-lXv8I0PEeWRYffwL7E13A")]
     [DisplayName("Client Certificate")]
     [IsoXmlTag("ClntCert")]
-    public SimpleValueList<IsoMax10KBinary> ClientCertificate { get; init; } = [];
+    public SimpleValueList<Max10KBinary> ClientCertificate { get; init; } = [];
 
     /// <summary>
     /// Identification of the set of security elements to access the host.
@@ -77,5 +77,5 @@ public record NetworkParameters5
     [IsoXmlTag("SctyPrfl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SecurityProfile { get; init; }
+    public Max35Text? SecurityProfile { get; init; }
 }

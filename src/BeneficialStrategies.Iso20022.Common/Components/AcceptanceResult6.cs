@@ -23,7 +23,7 @@ public record AcceptanceResult6
     [DisplayName("Accepted")]
     [IsoXmlTag("Accptd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator Accepted { get; init; }
+    public required YesNoIndicator Accepted { get; init; }
 
     /// <summary>
     /// Specifies the reason for the rejection of a mandate request.
@@ -39,5 +39,5 @@ public record AcceptanceResult6
     [IsoId("_RBvu5Np-Ed-ak6NoX_4Aeg_-192674430")]
     [DisplayName("Additional Reject Reason Information")]
     [IsoXmlTag("AddtlRjctRsnInf")]
-    public SimpleValueList<IsoMax105Text> AdditionalRejectReasonInformation { get; init; } = [];
+    public SimpleValueList<Max105Text> AdditionalRejectReasonInformation { get; init; } = [];
 }

@@ -35,7 +35,7 @@ public record TemporaryServices3
     /// </summary>
     [DisplayName("Company Department")]
     [IsoXmlTag("CpnyDept")]
-    public IsoMax70Text? CompanyDepartment { get; init; }
+    public Max70Text? CompanyDepartment { get; init; }
 
     /// <summary>
     /// Company Identification.
@@ -49,14 +49,14 @@ public record TemporaryServices3
     /// </summary>
     [DisplayName("Company Name")]
     [IsoXmlTag("CpnyNm")]
-    public IsoMax70Text? CompanyName { get; init; }
+    public Max70Text? CompanyName { get; init; }
 
     /// <summary>
     /// Company Supervisor.
     /// </summary>
     [DisplayName("Company Supervisor")]
     [IsoXmlTag("CpnySprvsr")]
-    public IsoMax70Text? CompanySupervisor { get; init; }
+    public Max70Text? CompanySupervisor { get; init; }
 
     /// <summary>
     /// Discount Amount.
@@ -70,70 +70,70 @@ public record TemporaryServices3
     /// </summary>
     [DisplayName("Employee Identification")]
     [IsoXmlTag("MplyeeId")]
-    public IsoPhoneNumber? EmployeeIdentification { get; init; }
+    public PhoneNumber? EmployeeIdentification { get; init; }
 
     /// <summary>
     /// Employee Name.
     /// </summary>
     [DisplayName("Employee Name")]
     [IsoXmlTag("MplyeeNm")]
-    public IsoMax70Text? EmployeeName { get; init; }
+    public Max70Text? EmployeeName { get; init; }
 
     /// <summary>
     /// Employee Personal Identification.
     /// </summary>
     [DisplayName("Employee Personal Identification")]
     [IsoXmlTag("MplyeePrsnlId")]
-    public IsoMax35Text? EmployeePersonalIdentification { get; init; }
+    public Max35Text? EmployeePersonalIdentification { get; init; }
 
     /// <summary>
     /// Employee Professional Level.
     /// </summary>
     [DisplayName("Employee Professional Level")]
     [IsoXmlTag("MplyeePrfssnlLvl")]
-    public IsoMax35Text? EmployeeProfessionalLevel { get; init; }
+    public Max35Text? EmployeeProfessionalLevel { get; init; }
 
     /// <summary>
     /// Flat Rate Indicator.
     /// </summary>
     [DisplayName("Flat Rate Indicator")]
     [IsoXmlTag("FlatRateInd")]
-    public IsoTrueFalseIndicator? FlatRateIndicator { get; init; }
+    public TrueFalseIndicator? FlatRateIndicator { get; init; }
 
     /// <summary>
     /// Job Code.
     /// </summary>
     [DisplayName("Job Code")]
     [IsoXmlTag("JobCd")]
-    public IsoMax35Text? JobCode { get; init; }
+    public Max35Text? JobCode { get; init; }
 
     /// <summary>
     /// Job Description.
     /// </summary>
     [DisplayName("Job Description")]
     [IsoXmlTag("JobDesc")]
-    public IsoMax256Text? JobDescription { get; init; }
+    public Max256Text? JobDescription { get; init; }
 
     /// <summary>
     /// Job Duration.
     /// </summary>
     [DisplayName("Job Duration")]
     [IsoXmlTag("JobDrtn")]
-    public IsoMax5NumericText? JobDuration { get; init; }
+    public Max5NumericText? JobDuration { get; init; }
 
     /// <summary>
     /// Job End Date.
     /// </summary>
     [DisplayName("Job End Date")]
     [IsoXmlTag("JobEndDt")]
-    public IsoISODate? JobEndDate { get; init; }
+    public DateOnly? JobEndDate { get; init; }
 
     /// <summary>
     /// Job Start Date.
     /// </summary>
     [DisplayName("Job Start Date")]
     [IsoXmlTag("JobStartDt")]
-    public IsoISODate? JobStartDate { get; init; }
+    public DateOnly? JobStartDate { get; init; }
 
     /// <summary>
     /// Miscellaneous Expenses.
@@ -154,7 +154,7 @@ public record TemporaryServices3
     /// </summary>
     [DisplayName("Summary Commodity Identification")]
     [IsoXmlTag("SummryCmmdtyId")]
-    public IsoMax35Text? SummaryCommodityIdentification { get; init; }
+    public Max35Text? SummaryCommodityIdentification { get; init; }
 
     /// <summary>
     /// Tax.
@@ -168,12 +168,12 @@ public record TemporaryServices3
     /// </summary>
     [DisplayName("Time Sheet")]
     [IsoXmlTag("TmSheet")]
-    public IsoMax35Text? TimeSheet { get; init; }
+    public Max35Text? TimeSheet { get; init; }
 
     /// <summary>
     /// Week Ending.
     /// </summary>
     [DisplayName("Week Ending")]
     [IsoXmlTag("WkEndg")]
-    public IsoISODate? WeekEnding { get; init; }
+    public DateOnly? WeekEnding { get; init; }
 }

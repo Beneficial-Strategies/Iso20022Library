@@ -31,5 +31,5 @@ public record PayInScheduleItems
     [IsoId("_SVDJ0Np-Ed-ak6NoX_4Aeg_-1726696692")]
     [DisplayName("Deadline")]
     [IsoXmlTag("Ddln")]
-    public required IsoISOTime Deadline { get; init; }
+    public required ISOTime Deadline { get; init; }
 }

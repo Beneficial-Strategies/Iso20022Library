@@ -24,7 +24,7 @@ public record InvoiceIdentification1
     [IsoXmlTag("InvcNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text InvoiceNumber { get; init; }
+    public required Max35Text InvoiceNumber { get; init; }
 
     /// <summary>
     /// Date of issuance of the document.
@@ -33,5 +33,5 @@ public record InvoiceIdentification1
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate IssueDate { get; init; }
+    public required DateOnly IssueDate { get; init; }
 }

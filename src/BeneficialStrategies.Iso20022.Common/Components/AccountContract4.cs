@@ -23,7 +23,7 @@ public record AccountContract4
     [DisplayName("Target Closing Date")]
     [IsoXmlTag("TrgtClsgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TargetClosingDate { get; init; }
+    public DateOnly? TargetClosingDate { get; init; }
 
     /// <summary>
     /// Indicator that the account opening/maintenance/closing process needs to be treated urgently, that is, sooner than the terms established by the service level agreed between the account holder customer and the account servicing institution.
@@ -32,7 +32,7 @@ public record AccountContract4
     [DisplayName("Urgency Flag")]
     [IsoXmlTag("UrgcyFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? UrgencyFlag { get; init; }
+    public YesNoIndicator? UrgencyFlag { get; init; }
 
     /// <summary>
     /// Indicates removal of the account. After removal, an account will not appear anymore in reports.
@@ -41,5 +41,5 @@ public record AccountContract4
     [DisplayName("Removal Indicator")]
     [IsoXmlTag("RmvlInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? RemovalIndicator { get; init; }
+    public YesNoIndicator? RemovalIndicator { get; init; }
 }

@@ -59,7 +59,7 @@ public record Terminal3
     [DisplayName("Outdoor Indicator")]
     [IsoXmlTag("OutdrInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? OutdoorIndicator { get; init; }
+    public TrueFalseIndicator? OutdoorIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the terminal is operated on- or off-premises at the point of service.
@@ -71,7 +71,7 @@ public record Terminal3
     [DisplayName("Off Premises Indicator")]
     [IsoXmlTag("OffPrmissInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? OffPremisesIndicator { get; init; }
+    public TrueFalseIndicator? OffPremisesIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the transaction was performed on board.
@@ -82,7 +82,7 @@ public record Terminal3
     [DisplayName("On Board Indicator")]
     [IsoXmlTag("OnBrdInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? OnBoardIndicator { get; init; }
+    public TrueFalseIndicator? OnBoardIndicator { get; init; }
 
     /// <summary>
     /// Data related to the components of the POI (Point Of Interaction) performing the transactions.

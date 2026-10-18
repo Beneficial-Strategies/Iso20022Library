@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportingTransactionType3Choice
         [IsoXmlTag("TxId")]
         [IsoSimpleType(IsoSimpleType.Max52Text)]
         [StringLength(maximumLength: 52, MinimumLength = 1)]
-        public required IsoMax52Text TransactionIdentification { get; init; }
+        public required Max52Text TransactionIdentification { get; init; }
 
         /// <summary>
         /// Identification of the entity executing the transaction.
@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportingTransactionType3Choice
         [DisplayName("Executing Party")]
         [IsoXmlTag("ExctgPty")]
         [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-        public required IsoLEIIdentifier ExecutingParty { get; init; }
+        public required LEIIdentifier ExecutingParty { get; init; }
 
         /// <summary>
         /// Indicates whether the reporting party is defined as an investment firm under the local regulation or not.
@@ -42,7 +42,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportingTransactionType3Choice
         [DisplayName("Investment Party Indicator")]
         [IsoXmlTag("InvstmtPtyInd")]
         [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-        public required IsoTrueFalseIndicator InvestmentPartyIndicator { get; init; }
+        public required TrueFalseIndicator InvestmentPartyIndicator { get; init; }
 
         /// <summary>
         /// Entity submitting the transaction report to the competent authority.
@@ -51,7 +51,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportingTransactionType3Choice
         [DisplayName("Submitting Party")]
         [IsoXmlTag("SubmitgPty")]
         [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-        public required IsoLEIIdentifier SubmittingParty { get; init; }
+        public required LEIIdentifier SubmittingParty { get; init; }
 
         /// <summary>
         /// Identifies the acquirer of the legal title to the financial instrument.

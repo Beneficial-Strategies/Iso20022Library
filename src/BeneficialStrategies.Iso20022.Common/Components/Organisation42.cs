@@ -42,7 +42,7 @@ public record Organisation42
     /// </summary>
     [DisplayName("Full Legal Name")]
     [IsoXmlTag("FullLglNm")]
-    public required IsoMax350Text FullLegalName { get; init; }
+    public required Max350Text FullLegalName { get; init; }
 
     /// <summary>
     /// Legal Address.
@@ -84,7 +84,7 @@ public record Organisation42
     /// </summary>
     [DisplayName("Registration Date")]
     [IsoXmlTag("RegnDt")]
-    public IsoISODate? RegistrationDate { get; init; }
+    public DateOnly? RegistrationDate { get; init; }
 
     /// <summary>
     /// Representative Officer.
@@ -105,7 +105,7 @@ public record Organisation42
     /// </summary>
     [DisplayName("Trading Name")]
     [IsoXmlTag("TradgNm")]
-    public IsoMax350Text? TradingName { get; init; }
+    public Max350Text? TradingName { get; init; }
 
     /// <summary>
     /// Treasury Manager.

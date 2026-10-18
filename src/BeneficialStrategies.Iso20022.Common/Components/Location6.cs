@@ -28,14 +28,14 @@ public record Location6
     /// </summary>
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
-    public IsoMax35Text? Code { get; init; }
+    public Max35Text? Code { get; init; }
 
     /// <summary>
     /// Description.
     /// </summary>
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax256Text? Description { get; init; }
+    public Max256Text? Description { get; init; }
 
     /// <summary>
     /// Local Currency.
@@ -49,12 +49,12 @@ public record Location6
     /// </summary>
     [DisplayName("Local Time Zone")]
     [IsoXmlTag("LclTmZone")]
-    public IsoMax70Text? LocalTimeZone { get; init; }
+    public Max70Text? LocalTimeZone { get; init; }
 
     /// <summary>
     /// Name.
     /// </summary>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax35Text? Name { get; init; }
+    public Max35Text? Name { get; init; }
 }

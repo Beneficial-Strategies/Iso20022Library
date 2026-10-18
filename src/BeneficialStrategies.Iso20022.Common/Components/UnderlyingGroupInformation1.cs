@@ -24,7 +24,7 @@ public record UnderlyingGroupInformation1
     [IsoXmlTag("OrgnlMsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OriginalMessageIdentification { get; init; }
+    public required Max35Text OriginalMessageIdentification { get; init; }
 
     /// <summary>
     /// Specifies the original message name identifier to which the message refers.
@@ -34,7 +34,7 @@ public record UnderlyingGroupInformation1
     [IsoXmlTag("OrgnlMsgNmId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OriginalMessageNameIdentification { get; init; }
+    public required Max35Text OriginalMessageNameIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the original message was created.
@@ -43,7 +43,7 @@ public record UnderlyingGroupInformation1
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? OriginalCreationDateTime { get; init; }
+    public ISODateTime? OriginalCreationDateTime { get; init; }
 
     /// <summary>
     /// Original channel used for the delivery of the message, to allow the receiver of the request to locate the payment with greater ease.
@@ -53,5 +53,5 @@ public record UnderlyingGroupInformation1
     [IsoXmlTag("OrgnlMsgDlvryChanl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalMessageDeliveryChannel { get; init; }
+    public Max35Text? OriginalMessageDeliveryChannel { get; init; }
 }

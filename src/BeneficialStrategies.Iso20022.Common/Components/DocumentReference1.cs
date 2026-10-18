@@ -25,7 +25,7 @@ public record DocumentReference1
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Type { get; init; }
+    public Max35Text? Type { get; init; }
 
     /// <summary>
     /// Reference is a free-form text field containing customer reference information (for example, a document number).
@@ -35,5 +35,5 @@ public record DocumentReference1
     [IsoXmlTag("Ref")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Reference { get; init; }
+    public Max70Text? Reference { get; init; }
 }

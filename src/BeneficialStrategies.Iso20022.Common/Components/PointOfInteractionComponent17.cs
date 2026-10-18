@@ -49,7 +49,7 @@ public record PointOfInteractionComponent17
     /// </summary>
     [DisplayName("Probe Value")]
     [IsoXmlTag("PrbVal")]
-    public IsoMax35Binary? ProbeValue { get; init; }
+    public Max35Binary? ProbeValue { get; init; }
 
     /// <summary>
     /// Standard Compliance.
@@ -70,7 +70,7 @@ public record PointOfInteractionComponent17
     /// </summary>
     [DisplayName("Sub Type Information")]
     [IsoXmlTag("SubTpInf")]
-    public IsoMax70Text? SubTypeInformation { get; init; }
+    public Max70Text? SubTypeInformation { get; init; }
 
     /// <summary>
     /// Type.

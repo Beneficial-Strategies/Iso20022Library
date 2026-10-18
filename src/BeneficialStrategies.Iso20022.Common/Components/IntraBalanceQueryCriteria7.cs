@@ -22,7 +22,7 @@ public record IntraBalanceQueryCriteria7
     [IsoId("_sTfcQTp6EemwKdP955WBJQ")]
     [DisplayName("Cancellation Request Identification")]
     [IsoXmlTag("CxlReqId")]
-    public SimpleValueList<IsoMax35Text> CancellationRequestIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> CancellationRequestIdentification { get; init; } = [];
 
     /// <summary>
     /// Provides the status of settlement of a transaction.

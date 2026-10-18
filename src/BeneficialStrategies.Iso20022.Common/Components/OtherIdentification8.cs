@@ -22,7 +22,7 @@ public record OtherIdentification8
     [IsoId("909f5b7a-c7e5-4f04-9a76-cc0a1e2116b1")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Identifies the suffix of the security identification.
@@ -30,7 +30,7 @@ public record OtherIdentification8
     [IsoId("09b76319-d034-470a-b36f-40fa4288e19a")]
     [DisplayName("Suffix")]
     [IsoXmlTag("Sfx")]
-    public IsoMax16Text? Suffix { get; init; }
+    public Max16Text? Suffix { get; init; }
 
     /// <summary>
     /// Type of the identification.

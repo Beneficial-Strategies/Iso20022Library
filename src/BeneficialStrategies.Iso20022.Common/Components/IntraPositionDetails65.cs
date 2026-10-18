@@ -56,7 +56,7 @@ public record IntraPositionDetails65
     /// </summary>
     [DisplayName("Instruction Processing Additional Details")]
     [IsoXmlTag("InstrPrcgAddtlDtls")]
-    public IsoMax350Text? InstructionProcessingAdditionalDetails { get; init; }
+    public Max350Text? InstructionProcessingAdditionalDetails { get; init; }
 
     /// <summary>
     /// Previously Settled Quantity.

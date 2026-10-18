@@ -22,7 +22,7 @@ public record RedemptionBulkExecution06
     [IsoId("081912ea-62d8-4982-9c38-20d209d06690")]
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
-    public IsoYesNoIndicator? AmendmentIndicator { get; init; }
+    public YesNoIndicator? AmendmentIndicator { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for a group of individual orders, as assigned by the instructing party.
@@ -30,7 +30,7 @@ public record RedemptionBulkExecution06
     [IsoId("e09171d3-dca0-4944-b8e7-d1072616bf4a")]
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Market in which the advised trade transaction was executed.
@@ -46,7 +46,7 @@ public record RedemptionBulkExecution06
     [IsoId("de44ce66-d6d1-4b13-81e8-28a2bd91420c")]
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
-    public IsoISODateTime? OrderDateTime { get; init; }
+    public ISODateTime? OrderDateTime { get; init; }
 
     /// <summary>
     /// Date and time the order was received by the executing party.
@@ -54,7 +54,7 @@ public record RedemptionBulkExecution06
     [IsoId("bce5ce0c-a476-4823-9d40-39aa24b9887f")]
     [DisplayName("Received Date Time")]
     [IsoXmlTag("RcvdDtTm")]
-    public IsoISODateTime? ReceivedDateTime { get; init; }
+    public ISODateTime? ReceivedDateTime { get; init; }
 
     /// <summary>
     /// Future date at which the investor requests the order to be executed.
@@ -62,7 +62,7 @@ public record RedemptionBulkExecution06
     [IsoId("27656f65-6f00-4eea-946d-a21bc6c031a7")]
     [DisplayName("Requested Future Trade Date")]
     [IsoXmlTag("ReqdFutrTradDt")]
-    public IsoISODate? RequestedFutureTradeDate { get; init; }
+    public DateOnly? RequestedFutureTradeDate { get; init; }
 
     /// <summary>
     /// Cancellation right of the investor with respect to the investment fund order.

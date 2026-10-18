@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient3Choice
         [IsoXmlTag("KeyId")]
         [IsoSimpleType(IsoSimpleType.Max140Text)]
         [StringLength(maximumLength: 140, MinimumLength = 1)]
-        public required IsoMax140Text KeyIdentification { get; init; }
+        public required Max140Text KeyIdentification { get; init; }
 
         /// <summary>
         /// Version of the cryptographic key.
@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient3Choice
         [DisplayName("Key Version")]
         [IsoXmlTag("KeyVrsn")]
         [IsoSimpleType(IsoSimpleType.Exact10Text)]
-        public required IsoExact10Text KeyVersion { get; init; }
+        public required Exact10Text KeyVersion { get; init; }
 
         /// <summary>
         /// Identification used for derivation of a unique key from a master key provided for the data protection.
@@ -42,6 +42,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient3Choice
         [DisplayName("Derivation Identification")]
         [IsoXmlTag("DerivtnId")]
         [IsoSimpleType(IsoSimpleType.Min5Max16Binary)]
-        public IsoMin5Max16Binary? DerivationIdentification { get; init; }
+        public Min5Max16Binary? DerivationIdentification { get; init; }
     }
 }

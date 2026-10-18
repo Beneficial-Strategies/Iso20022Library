@@ -32,7 +32,7 @@ public record ATMTransaction14
     [IsoXmlTag("RcncltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReconciliationIdentification { get; init; }
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// True if a withdrawal completion advice has to be sent after the end of the transaction.
@@ -41,7 +41,7 @@ public record ATMTransaction14
     [DisplayName("Completion Required")]
     [IsoXmlTag("CmpltnReqrd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CompletionRequired { get; init; }
+    public TrueFalseIndicator? CompletionRequired { get; init; }
 
     /// <summary>
     /// Unprotected account information.
@@ -115,7 +115,7 @@ public record ATMTransaction14
     [IsoXmlTag("MixTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MixType { get; init; }
+    public Max35Text? MixType { get; init; }
 
     /// <summary>
     /// Media mix selected requested by the ATM Host.
@@ -140,7 +140,7 @@ public record ATMTransaction14
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
     [IsoSimpleType(IsoSimpleType.Max10000Binary)]
-    public IsoMax10000Binary? ICCRelatedData { get; init; }
+    public Max10000Binary? ICCRelatedData { get; init; }
 
     /// <summary>
     /// Maintenance command to perform on the ATM.

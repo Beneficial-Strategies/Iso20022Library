@@ -32,7 +32,7 @@ public record Commission12
     [IsoXmlTag("XtndedTp")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoExtended350Code ExtendedType { get; init; }
+    public required Extended350Code ExtendedType { get; init; }
 
     /// <summary>
     /// Basis upon which a commission is charged, eg, flat fee.
@@ -50,7 +50,7 @@ public record Commission12
     [IsoXmlTag("XtndedBsis")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedBasis { get; init; }
+    public Extended350Code? ExtendedBasis { get; init; }
 
     /// <summary>
     /// Commission expressed as an amount of money.
@@ -76,5 +76,5 @@ public record Commission12
     [IsoXmlTag("ComrclAgrmtRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CommercialAgreementReference { get; init; }
+    public Max35Text? CommercialAgreementReference { get; init; }
 }

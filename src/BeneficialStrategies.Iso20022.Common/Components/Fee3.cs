@@ -39,7 +39,7 @@ public record Fee3
     [DisplayName("Repaired Standard Rate")]
     [IsoXmlTag("RprdStdRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? RepairedStandardRate { get; init; }
+    public PercentageRate? RepairedStandardRate { get; init; }
 
     /// <summary>
     /// Modified value of the discount amount applied on the order (the discount amount in the original individual order that has been repaired so that the order can be accepted).
@@ -56,7 +56,7 @@ public record Fee3
     [DisplayName("Repaired Discount Rate")]
     [IsoXmlTag("RprdDscntRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? RepairedDiscountRate { get; init; }
+    public PercentageRate? RepairedDiscountRate { get; init; }
 
     /// <summary>
     /// Modified value of the requested fee (charge/commission) amount applied on the order (the requested fee (charge/commission) amount in the original individual order that has been repaired so that the order can be accepted).
@@ -73,7 +73,7 @@ public record Fee3
     [DisplayName("Repaired Requested Rate")]
     [IsoXmlTag("RprdReqdRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? RepairedRequestedRate { get; init; }
+    public PercentageRate? RepairedRequestedRate { get; init; }
 
     /// <summary>
     /// Reference to the agreement established between the fund and another party. This element, amongst others, defines the conditions of the commissions.
@@ -83,7 +83,7 @@ public record Fee3
     [IsoXmlTag("ComrclAgrmtRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CommercialAgreementReference { get; init; }
+    public Max35Text? CommercialAgreementReference { get; init; }
 
     /// <summary>
     /// Indicates if the CommercialAgreementReference is a new reference or not.
@@ -92,5 +92,5 @@ public record Fee3
     [DisplayName("New Commercial Agreement Reference Indicator")]
     [IsoXmlTag("NewComrclAgrmtRefInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? NewCommercialAgreementReferenceIndicator { get; init; }
+    public YesNoIndicator? NewCommercialAgreementReferenceIndicator { get; init; }
 }

@@ -95,7 +95,7 @@ public record CorporateActionCancellationAdviceV09 : IOuterRecord
     [IsoXmlTag("AddtlTxt")]
     [IsoSimpleType(IsoSimpleType.Max8000Text)]
     [StringLength(maximumLength: 8000, MinimumLength = 1)]
-    public IsoMax8000Text? AdditionalText { get; init; }
+    public Max8000Text? AdditionalText { get; init; }
 
     /// <summary>
     /// Party appointed to administer the event on behalf of the issuer company/offeror. The party may be contacted for more information about the event.

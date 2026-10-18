@@ -28,7 +28,7 @@ public record AcceptorConfiguration13
     /// </summary>
     [DisplayName("POI Group Identification")]
     [IsoXmlTag("POIGrpId")]
-    public ValueList<IsoMax35Text> POIGroupIdentification { get; init; } = [];
+    public ValueList<Max35Text> POIGroupIdentification { get; init; } = [];
 
     /// <summary>
     /// Terminal Manager Identification.

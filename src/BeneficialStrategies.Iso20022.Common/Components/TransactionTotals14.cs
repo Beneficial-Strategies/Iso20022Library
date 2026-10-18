@@ -35,7 +35,7 @@ public record TransactionTotals14
     /// </summary>
     [DisplayName("Checkpoint Reference")]
     [IsoXmlTag("ChckptRef")]
-    public IsoMax35Text? CheckpointReference { get; init; }
+    public Max35Text? CheckpointReference { get; init; }
 
     /// <summary>
     /// Credit Debit.
@@ -49,14 +49,14 @@ public record TransactionTotals14
     /// </summary>
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
-    public required IsoMin2Max3NumericText Currency { get; init; }
+    public required Min2Max3NumericText Currency { get; init; }
 
     /// <summary>
     /// Date.
     /// </summary>
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Financial.
@@ -70,7 +70,7 @@ public record TransactionTotals14
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax35Text? Identification { get; init; }
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Message.

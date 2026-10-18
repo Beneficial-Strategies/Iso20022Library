@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification39Choice
         /// </summary>
         [IsoXmlTag("IBAN")]
         [IsoSimpleType(IsoSimpleType.IBANIdentifier)]
-        public required IsoIBANIdentifier Value { get; init; }
+        public required IBANIdentifier Value { get; init; }
     }
 }

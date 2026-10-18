@@ -35,7 +35,7 @@ public record PartyIdentification275
     /// </summary>
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
-    public IsoMax256Text? EmailAddress { get; init; }
+    public Max256Text? EmailAddress { get; init; }
 
     /// <summary>
     /// Identification.
@@ -70,5 +70,5 @@ public record PartyIdentification275
     /// </summary>
     [DisplayName("Year Of Incorporation")]
     [IsoXmlTag("YrOfIncorprtn")]
-    public IsoISOYear? YearOfIncorporation { get; init; }
+    public ISOYear? YearOfIncorporation { get; init; }
 }

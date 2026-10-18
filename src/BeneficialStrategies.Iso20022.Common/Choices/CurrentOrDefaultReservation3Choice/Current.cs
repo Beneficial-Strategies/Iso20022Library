@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrentOrDefaultReservation3Choi
         [IsoXmlTag("RsvatnId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? ReservationIdentification { get; init; }
+        public Max35Text? ReservationIdentification { get; init; }
 
         /// <summary>
         /// Identification of a particular cash clearing system.

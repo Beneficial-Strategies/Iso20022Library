@@ -9,6 +9,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification46Choice
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("QUICK")]
-        public required IsoQUICKIdentifier Value { get; init; }
+        public required QUICKIdentifier Value { get; init; }
     }
 }

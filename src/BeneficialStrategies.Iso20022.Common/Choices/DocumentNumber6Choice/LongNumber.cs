@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentNumber6Choice
         /// </summary>
         [IsoXmlTag("LngNb")]
         [IsoSimpleType(IsoSimpleType.ISO20022MessageIdentificationText)]
-        public required IsoISO20022MessageIdentificationText Value { get; init; }
+        public required ISO20022MessageIdentificationText Value { get; init; }
     }
 }

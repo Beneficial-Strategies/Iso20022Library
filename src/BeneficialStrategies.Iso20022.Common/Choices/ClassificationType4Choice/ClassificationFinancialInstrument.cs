@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ClassificationType4Choice
         /// </summary>
         [IsoXmlTag("ClssfctnFinInstrm")]
         [IsoSimpleType(IsoSimpleType.CFIIdentifier)]
-        public required IsoCFIIdentifier Value { get; init; }
+        public required CFIIdentifier Value { get; init; }
     }
 }

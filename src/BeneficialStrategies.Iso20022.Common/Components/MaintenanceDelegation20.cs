@@ -39,7 +39,7 @@ public record MaintenanceDelegation20
     [IsoId("_s4134bYFEfCUZfsQO4rYeA")]
     [DisplayName("Partial Delegation")]
     [IsoXmlTag("PrtlDlgtn")]
-    public IsoTrueFalseIndicator? PartialDelegation { get; init; }
+    public TrueFalseIndicator? PartialDelegation { get; init; }
 
     /// <summary>
     /// Subset of the terminal estate for the delegated actions.
@@ -47,7 +47,7 @@ public record MaintenanceDelegation20
     [IsoId("_s41357YFEfCUZfsQO4rYeA")]
     [DisplayName("POI Subset")]
     [IsoXmlTag("POISubset")]
-    public SimpleValueList<IsoMax35Text> POISubset { get; init; } = [];
+    public SimpleValueList<Max35Text> POISubset { get; init; } = [];
 
     /// <summary>
     /// Information for the MTM to build or include delegated actions in the management plan of the POI.
@@ -63,7 +63,7 @@ public record MaintenanceDelegation20
     [IsoId("_s41387YFEfCUZfsQO4rYeA")]
     [DisplayName("Delegation Scope Identification")]
     [IsoXmlTag("DlgtnScpId")]
-    public IsoMax35Text? DelegationScopeIdentification { get; init; }
+    public Max35Text? DelegationScopeIdentification { get; init; }
 
     /// <summary>
     /// Contains all information relevant to the DelegationScopeIdentification.
@@ -71,7 +71,7 @@ public record MaintenanceDelegation20
     [IsoId("_s413-bYFEfCUZfsQO4rYeA")]
     [DisplayName("Delegation Scope Definition")]
     [IsoXmlTag("DlgtnScpDef")]
-    public IsoMax3000Binary? DelegationScopeDefinition { get; init; }
+    public Max3000Binary? DelegationScopeDefinition { get; init; }
 
     /// <summary>
     /// Certificate path of the terminal manager.
@@ -79,7 +79,7 @@ public record MaintenanceDelegation20
     [IsoId("_s413_7YFEfCUZfsQO4rYeA")]
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
-    public SimpleValueList<IsoMax10KBinary> Certificate { get; init; } = [];
+    public SimpleValueList<Max10KBinary> Certificate { get; init; } = [];
 
     /// <summary>
     /// Association of the TM identifier and the MTM identifier of a POI.

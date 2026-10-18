@@ -24,7 +24,7 @@ public record PartyIdentification210
     [IsoXmlTag("PrsnlId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PersonalIdentification { get; init; }
+    public Max35Text? PersonalIdentification { get; init; }
 
     /// <summary>
     /// Contains the company-provided ID associated with the individual working in a temporary capacity.
@@ -33,7 +33,7 @@ public record PartyIdentification210
     [DisplayName("Employee Identification")]
     [IsoXmlTag("MplyeeId")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? EmployeeIdentification { get; init; }
+    public PhoneNumber? EmployeeIdentification { get; init; }
 
     /// <summary>
     /// Contains the name of the individual working in a temporary capacity.
@@ -43,7 +43,7 @@ public record PartyIdentification210
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Name { get; init; }
+    public Max70Text? Name { get; init; }
 
     /// <summary>
     /// Contains the professional level of the individual working in a temporary capacity.
@@ -53,5 +53,5 @@ public record PartyIdentification210
     [IsoXmlTag("PrfssnlLvl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProfessionalLevel { get; init; }
+    public Max35Text? ProfessionalLevel { get; init; }
 }

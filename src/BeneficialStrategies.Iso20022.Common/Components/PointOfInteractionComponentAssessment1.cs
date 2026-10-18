@@ -42,7 +42,7 @@ public record PointOfInteractionComponentAssessment1
     [DisplayName("Delivery Date")]
     [IsoXmlTag("DlvryDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? DeliveryDate { get; init; }
+    public ISODateTime? DeliveryDate { get; init; }
 
     /// <summary>
     /// Date when the assessment will expire.
@@ -51,7 +51,7 @@ public record PointOfInteractionComponentAssessment1
     [DisplayName("Expiration Date")]
     [IsoXmlTag("XprtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? ExpirationDate { get; init; }
+    public ISODateTime? ExpirationDate { get; init; }
 
     /// <summary>
     /// Unique assessment number for the component.
@@ -61,5 +61,5 @@ public record PointOfInteractionComponentAssessment1
     [IsoXmlTag("Nb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Number { get; init; }
+    public required Max35Text Number { get; init; }
 }

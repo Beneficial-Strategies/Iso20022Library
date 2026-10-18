@@ -24,7 +24,7 @@ public record AdditionalInformation28
     [IsoXmlTag("AcctOwnrTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? AccountOwnerTransactionIdentification { get; init; }
+    public RestrictedFINXMax16Text? AccountOwnerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Type of instrument involved in the transactions on which the modification request should apply.
@@ -121,5 +121,5 @@ public record AdditionalInformation28
     [DisplayName("Transaction Subject To Buy In")]
     [IsoXmlTag("TxSbjtToBuyIn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? TransactionSubjectToBuyIn { get; init; }
+    public YesNoIndicator? TransactionSubjectToBuyIn { get; init; }
 }

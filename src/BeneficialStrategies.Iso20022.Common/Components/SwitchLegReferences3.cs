@@ -30,7 +30,7 @@ public record SwitchLegReferences3
     [IsoId("26ce5ad0-lgrj-0001-0002-e3e0bec8798b")]
     [DisplayName("Leg Rejection Reason")]
     [IsoXmlTag("LegRjctnRsn")]
-    public IsoMax350Text? LegRejectionReason { get; init; }
+    public Max350Text? LegRejectionReason { get; init; }
 
     /// <summary>
     /// Elements from the original individual order that have been repaired so that the order can be accepted.

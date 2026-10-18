@@ -28,7 +28,7 @@ public record PaymentSearch10
     /// </summary>
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
-    public ValueList<IsoMax35Text> EndToEndIdentification { get; init; } = [];
+    public ValueList<Max35Text> EndToEndIdentification { get; init; } = [];
 
     /// <summary>
     /// Instructed Amount.
@@ -70,14 +70,14 @@ public record PaymentSearch10
     /// </summary>
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
-    public ValueList<IsoISODate> InterbankSettlementDate { get; init; } = [];
+    public ValueList<DateOnly> InterbankSettlementDate { get; init; } = [];
 
     /// <summary>
     /// Message Identification.
     /// </summary>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
-    public ValueList<IsoMax35Text> MessageIdentification { get; init; } = [];
+    public ValueList<Max35Text> MessageIdentification { get; init; } = [];
 
     /// <summary>
     /// Parties.
@@ -140,12 +140,12 @@ public record PaymentSearch10
     /// </summary>
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
-    public ValueList<IsoMax35Text> TransactionIdentification { get; init; } = [];
+    public ValueList<Max35Text> TransactionIdentification { get; init; } = [];
 
     /// <summary>
     /// UETR.
     /// </summary>
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
-    public ValueList<IsoUUIDv4Identifier> UETR { get; init; } = [];
+    public ValueList<UUIDv4Identifier> UETR { get; init; } = [];
 }

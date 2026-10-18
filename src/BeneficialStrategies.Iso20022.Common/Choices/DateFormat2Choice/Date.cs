@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.DateFormat2Choice
         /// </summary>
         [IsoXmlTag("Dt")]
         [IsoSimpleType(IsoSimpleType.ISODateTime)]
-        public required IsoISODateTime Value { get; init; }
+        public required ISODateTime Value { get; init; }
     }
 }

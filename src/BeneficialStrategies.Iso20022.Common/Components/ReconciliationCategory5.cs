@@ -21,7 +21,7 @@ public record ReconciliationCategory5
     /// </summary>
     [DisplayName("Further Modification")]
     [IsoXmlTag("FrthrMod")]
-    public required IsoYesNoIndicator FurtherModification { get; init; }
+    public required YesNoIndicator FurtherModification { get; init; }
 
     /// <summary>
     /// Pairing.
@@ -49,7 +49,7 @@ public record ReconciliationCategory5
     /// </summary>
     [DisplayName("Revived")]
     [IsoXmlTag("Rvvd")]
-    public required IsoYesNoIndicator Revived { get; init; }
+    public required YesNoIndicator Revived { get; init; }
 
     /// <summary>
     /// Valuation Reconciliation.

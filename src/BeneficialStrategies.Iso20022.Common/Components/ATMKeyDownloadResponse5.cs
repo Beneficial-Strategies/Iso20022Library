@@ -21,7 +21,7 @@ public record ATMKeyDownloadResponse5
     /// </summary>
     [DisplayName("ATM Challenge")]
     [IsoXmlTag("ATMChllng")]
-    public IsoMax140Binary? ATMChallenge { get; init; }
+    public Max140Binary? ATMChallenge { get; init; }
 
     /// <summary>
     /// ATM Security Context.

@@ -47,5 +47,5 @@ public record CashAccount17
     [DisplayName("Correspondent Bank Identification")]
     [IsoXmlTag("CrspdtBkId")]
     [IsoSimpleType(IsoSimpleType.BICIdentifier)]
-    public required IsoBICIdentifier CorrespondentBankIdentification { get; init; }
+    public required BICIdentifier CorrespondentBankIdentification { get; init; }
 }

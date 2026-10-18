@@ -23,7 +23,7 @@ public record Report3
     [DisplayName("Report Number")]
     [IsoXmlTag("RptNb")]
     [IsoSimpleType(IsoSimpleType.Max5NumericText)]
-    public IsoMax5NumericText? ReportNumber { get; init; }
+    public Max5NumericText? ReportNumber { get; init; }
 
     /// <summary>
     /// Gives the name and the reference of the query.
@@ -41,7 +41,7 @@ public record Report3
     [IsoXmlTag("RptId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReportIdentification { get; init; }
+    public Max35Text? ReportIdentification { get; init; }
 
     /// <summary>
     /// Date of the statement.

@@ -63,7 +63,7 @@ public record CorporateAction56
     [DisplayName("Interest Accrued Number Of Days")]
     [IsoXmlTag("IntrstAcrdNbOfDays")]
     [IsoSimpleType(IsoSimpleType.Max3Number)]
-    public IsoMax3Number? InterestAccruedNumberOfDays { get; init; }
+    public Max3Number? InterestAccruedNumberOfDays { get; init; }
 
     /// <summary>
     /// Number of the coupon attached/associated with a security.
@@ -82,7 +82,7 @@ public record CorporateAction56
     [DisplayName("Certification Breakdown Indicator")]
     [IsoXmlTag("CertfctnBrkdwnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? CertificationBreakdownIndicator { get; init; }
+    public YesNoIndicator? CertificationBreakdownIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether charges apply to the holder, for instance redemption charges.
@@ -91,7 +91,7 @@ public record CorporateAction56
     [DisplayName("Charges Applied Indicator")]
     [IsoXmlTag("ChrgsApldInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ChargesAppliedIndicator { get; init; }
+    public YesNoIndicator? ChargesAppliedIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether restrictions apply to the corporate action event or not.
@@ -100,7 +100,7 @@ public record CorporateAction56
     [DisplayName("Restriction Indicator")]
     [IsoXmlTag("RstrctnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? RestrictionIndicator { get; init; }
+    public YesNoIndicator? RestrictionIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the holder is entitled to accrued interest.
@@ -109,7 +109,7 @@ public record CorporateAction56
     [DisplayName("Accrued Interest Indicator")]
     [IsoXmlTag("AcrdIntrstInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AccruedInterestIndicator { get; init; }
+    public YesNoIndicator? AccruedInterestIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether a letter of guaranteed delivery can be submitted in order to participate in the offer on full eligible position. It is not intended for use in situations arising from failed or late trades.
@@ -118,7 +118,7 @@ public record CorporateAction56
     [DisplayName("Letter Of Guaranteed Delivery Indicator")]
     [IsoXmlTag("LttrOfGrntedDlvryInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? LetterOfGuaranteedDeliveryIndicator { get; init; }
+    public YesNoIndicator? LetterOfGuaranteedDeliveryIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the announcement was initiated by the first intermediary in the custody chain in accordance with SRD II.
@@ -127,7 +127,7 @@ public record CorporateAction56
     [DisplayName("Shareholder Rights Directive Indicator")]
     [IsoXmlTag("ShrhldrRghtsDrctvInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ShareholderRightsDirectiveIndicator { get; init; }
+    public YesNoIndicator? ShareholderRightsDirectiveIndicator { get; init; }
 
     /// <summary>
     /// Specifies the conditions in which a dividend is paid.
@@ -274,7 +274,7 @@ public record CorporateAction56
     [IsoXmlTag("NewPlcOfIncorprtn")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? NewPlaceOfIncorporation { get; init; }
+    public Max350Text? NewPlaceOfIncorporation { get; init; }
 
     /// <summary>
     /// Provides additional information. This field may only be used when the information to be transmitted, cannot be coded.

@@ -22,7 +22,7 @@ public record InstalmentPlan1
     [IsoId("_dLQdIT1-EfCQAqQ9lolFUg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax70Text? Identification { get; init; }
+    public Max70Text? Identification { get; init; }
 
     /// <summary>
     /// List of plan owners. P000-P999 reserved for private use, N000-N999 reserved for national use.
@@ -38,7 +38,7 @@ public record InstalmentPlan1
     [IsoId("_dLQdJz1-EfCQAqQ9lolFUg")]
     [DisplayName("Owner Name")]
     [IsoXmlTag("OwnrNm")]
-    public IsoMax256Text? OwnerName { get; init; }
+    public Max256Text? OwnerName { get; init; }
 
     /// <summary>
     /// Contains plan registration system identifier.
@@ -46,7 +46,7 @@ public record InstalmentPlan1
     [IsoId("_dLQdKT1-EfCQAqQ9lolFUg")]
     [DisplayName("Registration System Identification")]
     [IsoXmlTag("RegnSysId")]
-    public IsoMax35Text? RegistrationSystemIdentification { get; init; }
+    public Max35Text? RegistrationSystemIdentification { get; init; }
 
     /// <summary>
     /// Instalment payment type.
@@ -54,7 +54,7 @@ public record InstalmentPlan1
     [IsoId("_dLQdKz1-EfCQAqQ9lolFUg")]
     [DisplayName("Payment Type")]
     [IsoXmlTag("PmtTp")]
-    public IsoMax35Text? PaymentType { get; init; }
+    public Max35Text? PaymentType { get; init; }
 
     /// <summary>
     /// Indicate a deferred Instalment plan.
@@ -62,7 +62,7 @@ public record InstalmentPlan1
     [IsoId("_dLQdLT1-EfCQAqQ9lolFUg")]
     [DisplayName("Deferred")]
     [IsoXmlTag("Dfrrd")]
-    public IsoTrueFalseIndicator? Deferred { get; init; }
+    public TrueFalseIndicator? Deferred { get; init; }
 
     /// <summary>
     /// Period unit between consecutive payments.
@@ -78,7 +78,7 @@ public record InstalmentPlan1
     [IsoId("_dLQdMz1-EfCQAqQ9lolFUg")]
     [DisplayName("Deferred Periods")]
     [IsoXmlTag("DfrrdPrds")]
-    public IsoNumber? DeferredPeriods { get; init; }
+    public Number? DeferredPeriods { get; init; }
 
     /// <summary>
     /// Monthly interest rate.
@@ -86,7 +86,7 @@ public record InstalmentPlan1
     [IsoId("_dLQdNT1-EfCQAqQ9lolFUg")]
     [DisplayName("Monthly Interest Rate")]
     [IsoXmlTag("MnthlyIntrstRate")]
-    public IsoBaseOneRate? MonthlyInterestRate { get; init; }
+    public BaseOneRate? MonthlyInterestRate { get; init; }
 
     /// <summary>
     /// Annual interest rate.
@@ -94,7 +94,7 @@ public record InstalmentPlan1
     [IsoId("_CkF70T1_EfCQAqQ9lolFUg")]
     [DisplayName("Annual Interest Rate")]
     [IsoXmlTag("AnlIntrstRate")]
-    public IsoBaseOneRate? AnnualInterestRate { get; init; }
+    public BaseOneRate? AnnualInterestRate { get; init; }
 
     /// <summary>
     /// Date of the first payment.
@@ -102,7 +102,7 @@ public record InstalmentPlan1
     [IsoId("_dLQdNz1-EfCQAqQ9lolFUg")]
     [DisplayName("First Payment Date")]
     [IsoXmlTag("FrstPmtDt")]
-    public IsoISODate? FirstPaymentDate { get; init; }
+    public DateOnly? FirstPaymentDate { get; init; }
 
     /// <summary>
     /// Amount of the first payment when different from the subsequent payments.
@@ -126,7 +126,7 @@ public record InstalmentPlan1
     [IsoId("_dLQdPT1-EfCQAqQ9lolFUg")]
     [DisplayName("Total Number Of Payments")]
     [IsoXmlTag("TtlNbOfPmts")]
-    public IsoNumber? TotalNumberOfPayments { get; init; }
+    public Number? TotalNumberOfPayments { get; init; }
 
     /// <summary>
     /// Currency code associated with the instalment amount. ISO 4217 "Codes for the representation of currencies and funds".
@@ -150,7 +150,7 @@ public record InstalmentPlan1
     [IsoId("_dLQdRT1-EfCQAqQ9lolFUg")]
     [DisplayName("Number Of Grace Period Units")]
     [IsoXmlTag("NbOfGracePrdUnits")]
-    public IsoMax3NumericText? NumberOfGracePeriodUnits { get; init; }
+    public Max3NumericText? NumberOfGracePeriodUnits { get; init; }
 
     /// <summary>
     /// Indicates a customer selected grace period.
@@ -158,7 +158,7 @@ public record InstalmentPlan1
     [IsoId("_dLQdRz1-EfCQAqQ9lolFUg")]
     [DisplayName("Customer Selected Grace Period")]
     [IsoXmlTag("CstmrSelctdGracePrd")]
-    public IsoTrueFalseIndicator? CustomerSelectedGracePeriod { get; init; }
+    public TrueFalseIndicator? CustomerSelectedGracePeriod { get; init; }
 
     /// <summary>
     /// Contains the amount details of an instalment plan.
@@ -182,7 +182,7 @@ public record InstalmentPlan1
     [IsoId("_aWXVYkVaEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -190,5 +190,5 @@ public record InstalmentPlan1
     [IsoId("_aWXVY0VaEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

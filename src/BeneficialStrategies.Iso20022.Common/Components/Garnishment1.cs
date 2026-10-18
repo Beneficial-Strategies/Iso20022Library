@@ -48,7 +48,7 @@ public record Garnishment1
     [IsoXmlTag("RefNb")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? ReferenceNumber { get; init; }
+    public Max140Text? ReferenceNumber { get; init; }
 
     /// <summary>
     /// Date of payment which garnishment was taken from.
@@ -57,7 +57,7 @@ public record Garnishment1
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Amount of money remitted for the referred document.
@@ -74,7 +74,7 @@ public record Garnishment1
     [DisplayName("Family Medical Insurance Indicator")]
     [IsoXmlTag("FmlyMdclInsrncInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? FamilyMedicalInsuranceIndicator { get; init; }
+    public TrueFalseIndicator? FamilyMedicalInsuranceIndicator { get; init; }
 
     /// <summary>
     /// Indicates if the employment of the person to whom the garnishment applies (that is, the ultimate debtor) has been terminated.
@@ -83,5 +83,5 @@ public record Garnishment1
     [DisplayName("Employee Termination Indicator")]
     [IsoXmlTag("MplyeeTermntnInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? EmployeeTerminationIndicator { get; init; }
+    public TrueFalseIndicator? EmployeeTerminationIndicator { get; init; }
 }

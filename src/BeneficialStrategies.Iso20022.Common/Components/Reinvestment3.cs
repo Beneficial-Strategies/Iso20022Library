@@ -39,5 +39,5 @@ public record Reinvestment3
     [DisplayName("Reinvestment Percentage")]
     [IsoXmlTag("RinvstmtPctg")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate ReinvestmentPercentage { get; init; }
+    public required PercentageRate ReinvestmentPercentage { get; init; }
 }

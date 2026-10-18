@@ -28,7 +28,7 @@ public record AuthorisationResult20
     /// </summary>
     [DisplayName("Authorisation Code")]
     [IsoXmlTag("AuthstnCd")]
-    public IsoMax8Text? AuthorisationCode { get; init; }
+    public Max8Text? AuthorisationCode { get; init; }
 
     /// <summary>
     /// Authorisation Entity.

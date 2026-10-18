@@ -24,7 +24,7 @@ public record OperationMandate4
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Channel for which the operation mandate is valid. If ApplicableChannel equals Fax, this means that a bank operation instruction sent by fax will be processed according to the mandates exchanged in this message.
@@ -43,7 +43,7 @@ public record OperationMandate4
     [DisplayName("Required Signature Number")]
     [IsoXmlTag("ReqrdSgntrNb")]
     [IsoSimpleType(IsoSimpleType.Max15PlusSignedNumericText)]
-    public required IsoMax15PlusSignedNumericText RequiredSignatureNumber { get; init; }
+    public required Max15PlusSignedNumericText RequiredSignatureNumber { get; init; }
 
     /// <summary>
     /// Indicator whether a certain order of signatures has to be respected or not.
@@ -52,7 +52,7 @@ public record OperationMandate4
     [DisplayName("Signature Order Indicator")]
     [IsoXmlTag("SgntrOrdrInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator SignatureOrderIndicator { get; init; }
+    public required YesNoIndicator SignatureOrderIndicator { get; init; }
 
     /// <summary>
     /// Holder of the mandate.
@@ -79,7 +79,7 @@ public record OperationMandate4
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? StartDate { get; init; }
+    public DateOnly? StartDate { get; init; }
 
     /// <summary>
     /// Specifies the date when the mandate stops to be valid.
@@ -88,5 +88,5 @@ public record OperationMandate4
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? EndDate { get; init; }
+    public DateOnly? EndDate { get; init; }
 }

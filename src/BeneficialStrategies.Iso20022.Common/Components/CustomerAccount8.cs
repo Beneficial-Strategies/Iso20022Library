@@ -30,7 +30,7 @@ public record CustomerAccount8
     [IsoId("_afv482bcEembdtOObkYAHQ")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax70Text? Name { get; init; }
+    public Max70Text? Name { get; init; }
 
     /// <summary>
     /// Specifies the current state of an account, eg, enabled or deleted.
@@ -86,7 +86,7 @@ public record CustomerAccount8
     [IsoId("_afv4_2bcEembdtOObkYAHQ")]
     [DisplayName("Monthly Transaction Number")]
     [IsoXmlTag("MnthlyTxNb")]
-    public IsoMax5NumericText? MonthlyTransactionNumber { get; init; }
+    public Max5NumericText? MonthlyTransactionNumber { get; init; }
 
     /// <summary>
     /// Sum of the end of day balances over a month divided by the number of business days in the month.
@@ -102,7 +102,7 @@ public record CustomerAccount8
     [IsoId("_afv5A2bcEembdtOObkYAHQ")]
     [DisplayName("Account Purpose")]
     [IsoXmlTag("AcctPurp")]
-    public IsoMax140Text? AccountPurpose { get; init; }
+    public Max140Text? AccountPurpose { get; init; }
 
     /// <summary>
     /// Specifies the value of the balance under which a notification will be sent to the account owner.
@@ -134,7 +134,7 @@ public record CustomerAccount8
     [IsoId("_afv5C2bcEembdtOObkYAHQ")]
     [DisplayName("Closing Date")]
     [IsoXmlTag("ClsgDt")]
-    public IsoISODate? ClosingDate { get; init; }
+    public DateOnly? ClosingDate { get; init; }
 
     /// <summary>
     /// Restriction on capability or operations allowed.
@@ -150,5 +150,5 @@ public record CustomerAccount8
     [IsoId("_afv5D2bcEembdtOObkYAHQ")]
     [DisplayName("Opening Date")]
     [IsoXmlTag("OpngDt")]
-    public IsoISODate? OpeningDate { get; init; }
+    public DateOnly? OpeningDate { get; init; }
 }

@@ -24,7 +24,7 @@ public record PartyIdentification25
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public required IsoMax70Text Name { get; init; }
+    public required Max70Text Name { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier, as assigned to a party using a proprietary identification scheme.
@@ -41,5 +41,5 @@ public record PartyIdentification25
     [DisplayName("BEI")]
     [IsoXmlTag("BEI")]
     [IsoSimpleType(IsoSimpleType.BEIIdentifier)]
-    public IsoBEIIdentifier? BEI { get; init; }
+    public BEIIdentifier? BEI { get; init; }
 }

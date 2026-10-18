@@ -49,14 +49,14 @@ public record RiskAssessment3
     /// </summary>
     [DisplayName("Entity Identification")]
     [IsoXmlTag("NttyId")]
-    public IsoMax35Text? EntityIdentification { get; init; }
+    public Max35Text? EntityIdentification { get; init; }
 
     /// <summary>
     /// Entity Short Name.
     /// </summary>
     [DisplayName("Entity Short Name")]
     [IsoXmlTag("NttyShrtNm")]
-    public IsoMax35Text? EntityShortName { get; init; }
+    public Max35Text? EntityShortName { get; init; }
 
     /// <summary>
     /// Entity Type.
@@ -70,21 +70,21 @@ public record RiskAssessment3
     /// </summary>
     [DisplayName("High Risk Transaction")]
     [IsoXmlTag("HghRskTx")]
-    public IsoTrueFalseIndicator? HighRiskTransaction { get; init; }
+    public TrueFalseIndicator? HighRiskTransaction { get; init; }
 
     /// <summary>
     /// Other Entity Type.
     /// </summary>
     [DisplayName("Other Entity Type")]
     [IsoXmlTag("OthrNttyTp")]
-    public IsoMax35Text? OtherEntityType { get; init; }
+    public Max35Text? OtherEntityType { get; init; }
 
     /// <summary>
     /// Reason.
     /// </summary>
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public ValueList<IsoMax35Text> Reason { get; init; } = [];
+    public ValueList<Max35Text> Reason { get; init; } = [];
 
     /// <summary>
     /// Recommendation.
@@ -98,12 +98,12 @@ public record RiskAssessment3
     /// </summary>
     [DisplayName("Result")]
     [IsoXmlTag("Rslt")]
-    public IsoMax35Text? Result { get; init; }
+    public Max35Text? Result { get; init; }
 
     /// <summary>
     /// Type.
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public IsoMax35Text? Type { get; init; }
+    public Max35Text? Type { get; init; }
 }

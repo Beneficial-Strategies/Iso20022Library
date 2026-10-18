@@ -22,7 +22,7 @@ public record ProcessingResult32
     [IsoId("_9ELPkROGEfC1ZfCQz0xB3g")]
     [DisplayName("Response Source Identification")]
     [IsoXmlTag("RspnSrcId")]
-    public IsoMax35Text? ResponseSourceIdentification { get; init; }
+    public Max35Text? ResponseSourceIdentification { get; init; }
 
     /// <summary>
     /// Type of response source.
@@ -46,7 +46,7 @@ public record ProcessingResult32
     [IsoId("_9ELPpxOGEfC1ZfCQz0xB3g")]
     [DisplayName("Response Source Name")]
     [IsoXmlTag("RspnSrcNm")]
-    public IsoMax35Text? ResponseSourceName { get; init; }
+    public Max35Text? ResponseSourceName { get; init; }
 
     /// <summary>
     /// Response code defined in ISO 8583.
@@ -62,7 +62,7 @@ public record ProcessingResult32
     [IsoId("__iG3okMHEfCQAqQ9lolFUg")]
     [DisplayName("Response Reason")]
     [IsoXmlTag("RspnRsn")]
-    public IsoMax35Text? ResponseReason { get; init; }
+    public Max35Text? ResponseReason { get; init; }
 
     /// <summary>
     /// Action to be performed based on ISO8583 Action Code.
@@ -78,7 +78,7 @@ public record ProcessingResult32
     [IsoId("_tPxO4kVbEfCQAqQ9lolFUg")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -86,5 +86,5 @@ public record ProcessingResult32
     [IsoId("_tPxO40VbEfCQAqQ9lolFUg")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

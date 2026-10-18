@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Period11Choice
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("ToDt")]
-        public required IsoISODate Value { get; init; }
+        public required DateOnly Value { get; init; }
     }
 }

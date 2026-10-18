@@ -22,7 +22,7 @@ public record HiredVehicle4
     [IsoId("_pIkHMVN4EfC0lMwgjvMClw")]
     [DisplayName("Company Type")]
     [IsoXmlTag("CpnyTp")]
-    public IsoMax35Text? CompanyType { get; init; }
+    public Max35Text? CompanyType { get; init; }
 
     /// <summary>
     /// Contains the name of the company that provided the hired vehicle services.
@@ -30,7 +30,7 @@ public record HiredVehicle4
     [IsoId("_pIkHM1N4EfC0lMwgjvMClw")]
     [DisplayName("Company Name")]
     [IsoXmlTag("CpnyNm")]
-    public IsoMax70Text? CompanyName { get; init; }
+    public Max70Text? CompanyName { get; init; }
 
     /// <summary>
     /// Contains the type of vehicle that was hired (for example, limousine, black, SUV).
@@ -38,7 +38,7 @@ public record HiredVehicle4
     [IsoId("_pIkHNVN4EfC0lMwgjvMClw")]
     [DisplayName("Type Of Vehicle")]
     [IsoXmlTag("TpOfVhcl")]
-    public IsoMax35Text? TypeOfVehicle { get; init; }
+    public Max35Text? TypeOfVehicle { get; init; }
 
     /// <summary>
     /// Contains the identifier assigned to the vehicle.
@@ -46,7 +46,7 @@ public record HiredVehicle4
     [IsoId("_pIkHN1N4EfC0lMwgjvMClw")]
     [DisplayName("Vehicle Identification")]
     [IsoXmlTag("VhclId")]
-    public IsoMax35Text? VehicleIdentification { get; init; }
+    public Max35Text? VehicleIdentification { get; init; }
 
     /// <summary>
     /// Contains the identifier assigned to the driver.
@@ -54,7 +54,7 @@ public record HiredVehicle4
     [IsoId("_pIkHOVN4EfC0lMwgjvMClw")]
     [DisplayName("Driver Identification")]
     [IsoXmlTag("DrvrId")]
-    public IsoMax35Text? DriverIdentification { get; init; }
+    public Max35Text? DriverIdentification { get; init; }
 
     /// <summary>
     /// Contains the tax identifier assigned to the driver.
@@ -62,7 +62,7 @@ public record HiredVehicle4
     [IsoId("_pIkHO1N4EfC0lMwgjvMClw")]
     [DisplayName("Driver Tax Identification")]
     [IsoXmlTag("DrvrTaxId")]
-    public IsoMax35Text? DriverTaxIdentification { get; init; }
+    public Max35Text? DriverTaxIdentification { get; init; }
 
     /// <summary>
     /// Name and location of the destination.
@@ -70,7 +70,7 @@ public record HiredVehicle4
     [IsoId("_pIkHPVN4EfC0lMwgjvMClw")]
     [DisplayName("Destination Name And Location")]
     [IsoXmlTag("DstnNmAndLctn")]
-    public IsoMax99Text? DestinationNameAndLocation { get; init; }
+    public Max99Text? DestinationNameAndLocation { get; init; }
 
     /// <summary>
     /// Specific address of the destination.

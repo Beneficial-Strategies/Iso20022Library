@@ -21,7 +21,7 @@ public record DirectDebitInstructionDetails3
     /// </summary>
     [DisplayName("Automated Direct Debit Instruction Indicator")]
     [IsoXmlTag("AutomtdDrctDbtInstrInd")]
-    public IsoYesNoIndicator? AutomatedDirectDebitInstructionIndicator { get; init; }
+    public YesNoIndicator? AutomatedDirectDebitInstructionIndicator { get; init; }
 
     /// <summary>
     /// Creditor.
@@ -35,7 +35,7 @@ public record DirectDebitInstructionDetails3
     /// </summary>
     [DisplayName("Direct Debit Transferable Indicator")]
     [IsoXmlTag("DrctDbtTrfblInd")]
-    public IsoYesNoIndicator? DirectDebitTransferableIndicator { get; init; }
+    public YesNoIndicator? DirectDebitTransferableIndicator { get; init; }
 
     /// <summary>
     /// Last Collection Currency Amount.
@@ -49,14 +49,14 @@ public record DirectDebitInstructionDetails3
     /// </summary>
     [DisplayName("Last Collection Date")]
     [IsoXmlTag("LastColltnDt")]
-    public IsoISODate? LastCollectionDate { get; init; }
+    public DateOnly? LastCollectionDate { get; init; }
 
     /// <summary>
     /// Mandate Identification.
     /// </summary>
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
-    public required IsoMax35Text MandateIdentification { get; init; }
+    public required Max35Text MandateIdentification { get; init; }
 
     /// <summary>
     /// Other Details.

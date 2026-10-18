@@ -24,7 +24,7 @@ public record TransportMeans3
     [IsoXmlTag("MdCd")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4Text? ModeCode { get; init; }
+    public Max4Text? ModeCode { get; init; }
 
     /// <summary>
     /// Unique identification of the means of transport, such as the International Maritime Organization number of a vessel.
@@ -34,7 +34,7 @@ public record TransportMeans3
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Identification { get; init; }
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Name, expressed as text, of the means of transport.
@@ -44,5 +44,5 @@ public record TransportMeans3
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Name { get; init; }
+    public Max35Text? Name { get; init; }
 }

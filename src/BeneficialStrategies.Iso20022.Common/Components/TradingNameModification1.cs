@@ -32,5 +32,5 @@ public record TradingNameModification1
     [IsoXmlTag("TradgNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text TradingName { get; init; }
+    public required Max350Text TradingName { get; init; }
 }

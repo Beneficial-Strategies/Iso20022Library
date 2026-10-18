@@ -49,35 +49,35 @@ public record AdditionalFee3
     /// </summary>
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax140Text? Description { get; init; }
+    public Max140Text? Description { get; init; }
 
     /// <summary>
     /// Descriptor.
     /// </summary>
     [DisplayName("Descriptor")]
     [IsoXmlTag("Dscrptr")]
-    public IsoMax35Text? Descriptor { get; init; }
+    public Max35Text? Descriptor { get; init; }
 
     /// <summary>
     /// Other Assigner.
     /// </summary>
     [DisplayName("Other Assigner")]
     [IsoXmlTag("OthrAssgnr")]
-    public IsoMax35Text? OtherAssigner { get; init; }
+    public Max35Text? OtherAssigner { get; init; }
 
     /// <summary>
     /// Other Type.
     /// </summary>
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Program.
     /// </summary>
     [DisplayName("Program")]
     [IsoXmlTag("Prgm")]
-    public IsoMax35Text? Program { get; init; }
+    public Max35Text? Program { get; init; }
 
     /// <summary>
     /// Reconciliation Amount.
@@ -98,7 +98,7 @@ public record AdditionalFee3
     /// </summary>
     [DisplayName("Reconciliation Effective Exchange Rate")]
     [IsoXmlTag("RcncltnFctvXchgRate")]
-    public IsoBaseOne25Rate? ReconciliationEffectiveExchangeRate { get; init; }
+    public BaseOne25Rate? ReconciliationEffectiveExchangeRate { get; init; }
 
     /// <summary>
     /// Type.

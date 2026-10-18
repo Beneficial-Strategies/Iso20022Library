@@ -23,7 +23,7 @@ public record NumberAndVolume2
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
     [IsoSimpleType(IsoSimpleType.DecimalNumberFraction5)]
-    public required IsoDecimalNumberFraction5 Number { get; init; }
+    public required DecimalNumberFraction5 Number { get; init; }
 
     /// <summary>
     /// Total volume of specific transactions executed on the reporting day.

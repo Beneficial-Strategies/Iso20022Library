@@ -30,5 +30,5 @@ public record RejectedStatusReason65
     [IsoId("_ETYKK6jVEfCzuLlmLrhIvA")]
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
-    public IsoMax350Text? AdditionalReasonInformation { get; init; }
+    public Max350Text? AdditionalReasonInformation { get; init; }
 }

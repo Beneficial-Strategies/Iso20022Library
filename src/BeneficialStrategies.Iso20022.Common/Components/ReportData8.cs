@@ -22,7 +22,7 @@ public record ReportData8
     [IsoId("_71Aq4XFWEfC68Y4jZPNEug")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax140Text? Name { get; init; }
+    public Max140Text? Name { get; init; }
 
     /// <summary>
     /// Report identification.
@@ -30,7 +30,7 @@ public record ReportData8
     [IsoId("_71Aq43FWEfC68Y4jZPNEug")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax140Text? Identification { get; init; }
+    public Max140Text? Identification { get; init; }
 
     /// <summary>
     /// Additional specific information to ID (Country, Service, etc.)
@@ -38,7 +38,7 @@ public record ReportData8
     [IsoId("_71Aq5XFWEfC68Y4jZPNEug")]
     [DisplayName("Qualifier")]
     [IsoXmlTag("Qlfr")]
-    public IsoMax70Text? Qualifier { get; init; }
+    public Max70Text? Qualifier { get; init; }
 
     /// <summary>
     /// Date of the report.
@@ -46,7 +46,7 @@ public record ReportData8
     [IsoId("_71Aq53FWEfC68Y4jZPNEug")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public IsoISODate? Date { get; init; }
+    public DateOnly? Date { get; init; }
 
     /// <summary>
     /// Time of the report.
@@ -54,7 +54,7 @@ public record ReportData8
     [IsoId("_71Aq6XFWEfC68Y4jZPNEug")]
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
-    public IsoISOTime? Time { get; init; }
+    public ISOTime? Time { get; init; }
 
     /// <summary>
     /// Contains the specific instance of the report within a specific time frame.
@@ -62,7 +62,7 @@ public record ReportData8
     [IsoId("_71Aq63FWEfC68Y4jZPNEug")]
     [DisplayName("Sequence")]
     [IsoXmlTag("Seq")]
-    public IsoMax5NumericText? Sequence { get; init; }
+    public Max5NumericText? Sequence { get; init; }
 
     /// <summary>
     /// Contains the expected total number of occurrences of the report within a specific time frame.
@@ -70,7 +70,7 @@ public record ReportData8
     [IsoId("_71Aq7XFWEfC68Y4jZPNEug")]
     [DisplayName("Total Occurrences")]
     [IsoXmlTag("TtlOcrncs")]
-    public IsoMax5NumericText? TotalOccurrences { get; init; }
+    public Max5NumericText? TotalOccurrences { get; init; }
 
     /// <summary>
     /// Report frequency.
@@ -86,7 +86,7 @@ public record ReportData8
     [IsoId("_71Aq8XFWEfC68Y4jZPNEug")]
     [DisplayName("Continuation Indicator")]
     [IsoXmlTag("ConttnInd")]
-    public IsoTrueFalseIndicator? ContinuationIndicator { get; init; }
+    public TrueFalseIndicator? ContinuationIndicator { get; init; }
 
     /// <summary>
     /// Report format.
@@ -102,7 +102,7 @@ public record ReportData8
     [IsoId("__CiW0nFWEfC68Y4jZPNEug")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -110,5 +110,5 @@ public record ReportData8
     [IsoId("__CiW03FWEfC68Y4jZPNEug")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

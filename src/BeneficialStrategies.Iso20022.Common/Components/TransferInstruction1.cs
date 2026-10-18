@@ -24,7 +24,7 @@ public record TransferInstruction1
     [DisplayName("Transfer Indicator")]
     [IsoXmlTag("TrfInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? TransferIndicator { get; init; }
+    public YesNoIndicator? TransferIndicator { get; init; }
 
     /// <summary>
     /// Specifies an additional parameter to be applied to the requested transaction schedule.
@@ -34,7 +34,7 @@ public record TransferInstruction1
     [IsoXmlTag("Cd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Code { get; init; }
+    public required Max35Text Code { get; init; }
 
     /// <summary>
     /// Specifies an additional parameter to be applied to the transaction schedule in a proprietary format.
@@ -44,7 +44,7 @@ public record TransferInstruction1
     [IsoXmlTag("Prtry")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Proprietary { get; init; }
+    public Max256Text? Proprietary { get; init; }
 
     /// <summary>
     /// The date and time at which the event specified by Code commences.
@@ -53,7 +53,7 @@ public record TransferInstruction1
     [DisplayName("Start Date Time")]
     [IsoXmlTag("StartDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? StartDateTime { get; init; }
+    public ISODateTime? StartDateTime { get; init; }
 
     /// <summary>
     /// The date on which the event specified by Code commences.
@@ -62,7 +62,7 @@ public record TransferInstruction1
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? StartDate { get; init; }
+    public DateOnly? StartDate { get; init; }
 
     /// <summary>
     /// Additional switch parameters in a free text format.
@@ -72,5 +72,5 @@ public record TransferInstruction1
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Description { get; init; }
+    public Max350Text? Description { get; init; }
 }

@@ -32,5 +32,5 @@ public record SecurityIdentification12
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoRestrictedFINXMax140Text? Description { get; init; }
+    public RestrictedFINXMax140Text? Description { get; init; }
 }

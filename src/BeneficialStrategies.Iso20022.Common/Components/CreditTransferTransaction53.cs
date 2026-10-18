@@ -24,7 +24,7 @@ public record CreditTransferTransaction53
     [IsoXmlTag("CdtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text CreditIdentification { get; init; }
+    public required Max35Text CreditIdentification { get; init; }
 
     /// <summary>
     /// Identifies whether a single entry per individual direct debit transaction or a batch entry for the sum of the amounts of all transactions within the group of a message is requested.
@@ -34,7 +34,7 @@ public record CreditTransferTransaction53
     [DisplayName("Batch Booking")]
     [IsoXmlTag("BtchBookg")]
     [IsoSimpleType(IsoSimpleType.BatchBookingIndicator)]
-    public IsoBatchBookingIndicator? BatchBooking { get; init; }
+    public BatchBookingIndicator? BatchBooking { get; init; }
 
     /// <summary>
     /// Further specifies the type of transaction.
@@ -59,7 +59,7 @@ public record CreditTransferTransaction53
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? InterbankSettlementDate { get; init; }
+    public DateOnly? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Provides information on the occurred settlement time(s) of the payment transaction.

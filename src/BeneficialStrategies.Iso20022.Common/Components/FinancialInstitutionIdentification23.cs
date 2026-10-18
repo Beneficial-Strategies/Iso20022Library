@@ -21,7 +21,7 @@ public record FinancialInstitutionIdentification23
     /// </summary>
     [DisplayName("BICFI")]
     [IsoXmlTag("BICFI")]
-    public IsoBICFIDec2014Identifier? BICFI { get; init; }
+    public BICFIDec2014Identifier? BICFI { get; init; }
 
     /// <summary>
     /// Clearing System Member Identification.
@@ -35,14 +35,14 @@ public record FinancialInstitutionIdentification23
     /// </summary>
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
-    public IsoLEIIdentifier? LEI { get; init; }
+    public LEIIdentifier? LEI { get; init; }
 
     /// <summary>
     /// Name.
     /// </summary>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax140Text? Name { get; init; }
+    public Max140Text? Name { get; init; }
 
     /// <summary>
     /// Other.

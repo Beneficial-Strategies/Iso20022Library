@@ -47,7 +47,7 @@ public record EntitlementAssessment2
     [DisplayName("Securities Blocking Period End Date")]
     [IsoXmlTag("SctiesBlckgPrdEndDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? SecuritiesBlockingPeriodEndDate { get; init; }
+    public ISODateTime? SecuritiesBlockingPeriodEndDate { get; init; }
 
     /// <summary>
     /// Date at which the positions are struck to note which parties will receive the entitlement, e.g. record date, book close date.

@@ -32,7 +32,7 @@ public record Cheque5
     [IsoXmlTag("ChqNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ChequeNumber { get; init; }
+    public Max35Text? ChequeNumber { get; init; }
 
     /// <summary>
     /// Identifies the party that ordered the issuance of the cheque.
@@ -73,7 +73,7 @@ public record Cheque5
     [DisplayName("Cheque Maturity Date")]
     [IsoXmlTag("ChqMtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ChequeMaturityDate { get; init; }
+    public DateOnly? ChequeMaturityDate { get; init; }
 
     /// <summary>
     /// Code agreed between the initiating party and the debtor&apos;s agent, that specifies the cheque layout, company logo and digitised signature to be used to print the cheque.
@@ -83,7 +83,7 @@ public record Cheque5
     [IsoXmlTag("FrmsCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? FormsCode { get; init; }
+    public Max35Text? FormsCode { get; init; }
 
     /// <summary>
     /// Information that needs to be printed on a cheque, used by the payer to add miscellaneous information.
@@ -93,7 +93,7 @@ public record Cheque5
     [IsoXmlTag("MemoFld")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MemoField { get; init; }
+    public Max35Text? MemoField { get; init; }
 
     /// <summary>
     /// Regional area in which the cheque can be cleared, when a country has no nation-wide cheque clearing organisation.
@@ -103,7 +103,7 @@ public record Cheque5
     [IsoXmlTag("RgnlClrZone")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RegionalClearingZone { get; init; }
+    public Max35Text? RegionalClearingZone { get; init; }
 
     /// <summary>
     /// Specifies the print location of the cheque.
@@ -113,5 +113,5 @@ public record Cheque5
     [IsoXmlTag("PrtLctn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PrintLocation { get; init; }
+    public Max35Text? PrintLocation { get; init; }
 }

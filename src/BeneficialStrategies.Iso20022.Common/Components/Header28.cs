@@ -23,7 +23,7 @@ public record Header28
     [DisplayName("Download Transfer")]
     [IsoXmlTag("DwnldTrf")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator DownloadTransfer { get; init; }
+    public required TrueFalseIndicator DownloadTransfer { get; init; }
 
     /// <summary>
     /// Version of file format.
@@ -33,7 +33,7 @@ public record Header28
     [IsoXmlTag("FrmtVrsn")]
     [IsoSimpleType(IsoSimpleType.Max6Text)]
     [StringLength(maximumLength: 6, MinimumLength = 1)]
-    public required IsoMax6Text FormatVersion { get; init; }
+    public required Max6Text FormatVersion { get; init; }
 
     /// <summary>
     /// Unique identification of an exchange occurrence.
@@ -42,7 +42,7 @@ public record Header28
     [DisplayName("Exchange Identification")]
     [IsoXmlTag("XchgId")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? ExchangeIdentification { get; init; }
+    public Number? ExchangeIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the file or message was created.
@@ -51,7 +51,7 @@ public record Header28
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// Unique identification of the partner that has initiated the exchange.

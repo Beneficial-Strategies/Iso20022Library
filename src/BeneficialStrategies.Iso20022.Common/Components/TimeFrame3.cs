@@ -24,7 +24,7 @@ public record TimeFrame3
     [IsoXmlTag("OthrTmFrameDesc")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? OtherTimeFrameDescription { get; init; }
+    public Max350Text? OtherTimeFrameDescription { get; init; }
 
     /// <summary>
     /// An agreed number of days before the Trade date (T) used to define standard timeframes e.g. T-1 Dealing cut off or T-2 prepayment condition||Where = T is the date that the price is applied to a transaction.
@@ -33,7 +33,7 @@ public record TimeFrame3
     [DisplayName("Trade Minus")]
     [IsoXmlTag("TMns")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? TradeMinus { get; init; }
+    public Number? TradeMinus { get; init; }
 
     /// <summary>
     /// Convention used for adjusting a date when it is not a business day.

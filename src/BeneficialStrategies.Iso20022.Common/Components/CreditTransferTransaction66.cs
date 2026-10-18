@@ -25,14 +25,14 @@ public record CreditTransferTransaction66
     /// </remarks>
     [DisplayName("Batch Booking")]
     [IsoXmlTag("BtchBookg")]
-    public IsoBatchBookingIndicator? BatchBooking { get; init; }
+    public BatchBookingIndicator? BatchBooking { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by a sending party, to unambiguously identify the credit instruction within the message.
     /// </summary>
     [DisplayName("Credit Identification")]
     [IsoXmlTag("CdtId")]
-    public required IsoMax35Text CreditIdentification { get; init; }
+    public required Max35Text CreditIdentification { get; init; }
 
     /// <summary>
     /// Financial institution that receives an amount of money from the financial institutional debtor.
@@ -96,7 +96,7 @@ public record CreditTransferTransaction66
     /// </summary>
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
-    public IsoISODate? InterbankSettlementDate { get; init; }
+    public DateOnly? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Agent between the debtor's agent and the creditor's agent.

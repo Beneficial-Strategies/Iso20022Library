@@ -30,7 +30,7 @@ public record CashNote1
     [IsoId("_NYtbUKtkEfC6tbn8zOl_iw")]
     [DisplayName("Box Reference")]
     [IsoXmlTag("BxRef")]
-    public IsoMax35Text? BoxReference { get; init; }
+    public Max35Text? BoxReference { get; init; }
 
     /// <summary>
     /// Specifies the note denomination, including the currency, such as a 50 euro note.
@@ -46,7 +46,7 @@ public record CashNote1
     [IsoId("_yn8JNOR-Ee-NFYIkYc90gw")]
     [DisplayName("Number Of Notes")]
     [IsoXmlTag("NbOfNotes")]
-    public IsoMax15NumericText? NumberOfNotes { get; init; }
+    public Max15NumericText? NumberOfNotes { get; init; }
 
     /// <summary>
     /// Specifies the total amount of money for this note denomination, that is the note denomination times the number of notes.

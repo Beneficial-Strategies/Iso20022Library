@@ -34,5 +34,5 @@ public record CardholderVerificationCapabilities1
     [IsoXmlTag("OthrCpblty")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherCapability { get; init; }
+    public Max35Text? OtherCapability { get; init; }
 }

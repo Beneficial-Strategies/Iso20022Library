@@ -23,7 +23,7 @@ public record MissingOrIncorrectData1
     [DisplayName("Anti Money Laundering Request")]
     [IsoXmlTag("AMLReq")]
     [IsoSimpleType(IsoSimpleType.AMLIndicator)]
-    public IsoAMLIndicator? AntiMoneyLaunderingRequest { get; init; }
+    public AMLIndicator? AntiMoneyLaunderingRequest { get; init; }
 
     /// <summary>
     /// Indicates the missing information.

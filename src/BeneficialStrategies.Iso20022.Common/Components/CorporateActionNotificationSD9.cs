@@ -24,7 +24,7 @@ public record CorporateActionNotificationSD9
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Date and time when DTCC (The Depository Trust and Clearing Corporation) created the announcement record.
@@ -33,7 +33,7 @@ public record CorporateActionNotificationSD9
     [DisplayName("Create Date And Time")]
     [IsoXmlTag("CretDtAndTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreateDateAndTime { get; init; }
+    public required ISODateTime CreateDateAndTime { get; init; }
 
     /// <summary>
     /// Date and time when DTCC (The Depository Trust and Clearing Corporation) last updated the announcement.
@@ -42,5 +42,5 @@ public record CorporateActionNotificationSD9
     [DisplayName("Update Date And Time")]
     [IsoXmlTag("UpdDtAndTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? UpdateDateAndTime { get; init; }
+    public ISODateTime? UpdateDateAndTime { get; init; }
 }

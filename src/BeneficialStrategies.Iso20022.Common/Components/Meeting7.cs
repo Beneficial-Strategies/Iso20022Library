@@ -49,12 +49,12 @@ public record Meeting7
     /// </summary>
     [DisplayName("Quorum Required")]
     [IsoXmlTag("QrmReqrd")]
-    public IsoYesNoIndicator? QuorumRequired { get; init; }
+    public YesNoIndicator? QuorumRequired { get; init; }
 
     /// <summary>
     /// URL Address.
     /// </summary>
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
-    public IsoMax2048Text? URLAddress { get; init; }
+    public Max2048Text? URLAddress { get; init; }
 }

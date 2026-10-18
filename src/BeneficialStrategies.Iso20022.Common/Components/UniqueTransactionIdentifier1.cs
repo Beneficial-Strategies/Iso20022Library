@@ -24,7 +24,7 @@ public record UniqueTransactionIdentifier1
     [IsoXmlTag("UnqTxIdr")]
     [IsoSimpleType(IsoSimpleType.Max105Text)]
     [StringLength(maximumLength: 105, MinimumLength = 1)]
-    public required IsoMax105Text UniqueTransactionIdentifier { get; init; }
+    public required Max105Text UniqueTransactionIdentifier { get; init; }
 
     /// <summary>
     /// Prior unique transaction identifier specifies the previous unique transaction identifier (UTI) that was created at the time the transaction was executed. This identifier can also be known as the Prior Unique Swap Identifier (PUSI).
@@ -34,5 +34,5 @@ public record UniqueTransactionIdentifier1
     [IsoXmlTag("PrrUnqTxIdr")]
     [IsoSimpleType(IsoSimpleType.Max105Text)]
     [StringLength(maximumLength: 105, MinimumLength = 1)]
-    public IsoMax105Text? PriorUniqueTransactionIdentifier { get; init; }
+    public Max105Text? PriorUniqueTransactionIdentifier { get; init; }
 }

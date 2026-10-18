@@ -32,7 +32,7 @@ public record SystemSecuritiesAccount7
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Specifies the type of the securities account.
@@ -49,7 +49,7 @@ public record SystemSecuritiesAccount7
     [DisplayName("Opening Date")]
     [IsoXmlTag("OpngDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate OpeningDate { get; init; }
+    public required DateOnly OpeningDate { get; init; }
 
     /// <summary>
     /// Legal closing date of the securities account.
@@ -58,7 +58,7 @@ public record SystemSecuritiesAccount7
     [DisplayName("Closing Date")]
     [IsoXmlTag("ClsgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ClosingDate { get; init; }
+    public DateOnly? ClosingDate { get; init; }
 
     /// <summary>
     /// Indicates whether the securities account is on hold or not.
@@ -70,7 +70,7 @@ public record SystemSecuritiesAccount7
     [DisplayName("Hold Indicator")]
     [IsoXmlTag("HldInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator HoldIndicator { get; init; }
+    public required TrueFalseIndicator HoldIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the securities account can hold a negative position in a security or not.
@@ -79,7 +79,7 @@ public record SystemSecuritiesAccount7
     [DisplayName("Negative Position")]
     [IsoXmlTag("NegPos")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator NegativePosition { get; init; }
+    public required TrueFalseIndicator NegativePosition { get; init; }
 
     /// <summary>
     /// Additional attributes defined by a central security depositary for a party.
@@ -104,7 +104,7 @@ public record SystemSecuritiesAccount7
     [DisplayName("End Investor Flag")]
     [IsoXmlTag("EndInvstrFlg")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    public IsoExact4AlphaNumericText? EndInvestorFlag { get; init; }
+    public Exact4AlphaNumericText? EndInvestorFlag { get; init; }
 
     /// <summary>
     /// Defines how the price is applied to the securities account.
@@ -113,5 +113,5 @@ public record SystemSecuritiesAccount7
     [DisplayName("Pricing Scheme")]
     [IsoXmlTag("PricgSchme")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    public IsoExact4AlphaNumericText? PricingScheme { get; init; }
+    public Exact4AlphaNumericText? PricingScheme { get; init; }
 }

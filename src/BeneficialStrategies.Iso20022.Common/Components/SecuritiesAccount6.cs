@@ -32,7 +32,7 @@ public record SecuritiesAccount6
     [IsoXmlTag("SctiesAcctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text SecuritiesAccountIdentification { get; init; }
+    public required Max35Text SecuritiesAccountIdentification { get; init; }
 
     /// <summary>
     /// Identification of the party that owns the account.
@@ -58,5 +58,5 @@ public record SecuritiesAccount6
     [IsoXmlTag("RegnDtls")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? RegistrationDetails { get; init; }
+    public Max350Text? RegistrationDetails { get; init; }
 }

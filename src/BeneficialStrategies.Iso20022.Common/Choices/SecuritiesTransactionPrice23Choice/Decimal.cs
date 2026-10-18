@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice23Choi
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("Dcml")]
-        public required IsoBaseOneRate Value { get; init; }
+        public required BaseOneRate Value { get; init; }
     }
 }

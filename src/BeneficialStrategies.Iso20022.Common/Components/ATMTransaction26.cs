@@ -40,7 +40,7 @@ public record ATMTransaction26
     [IsoXmlTag("RcncltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ReconciliationIdentification { get; init; }
+    public required Max35Text ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Result of the reconciliation.

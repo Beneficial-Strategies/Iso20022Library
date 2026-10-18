@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification23Choice
         /// </summary>
         [IsoXmlTag("Dtch")]
         [IsoSimpleType(IsoSimpleType.DutchIdentifier)]
-        public required IsoDutchIdentifier Value { get; init; }
+        public required DutchIdentifier Value { get; init; }
     }
 }

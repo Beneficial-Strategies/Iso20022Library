@@ -28,7 +28,7 @@ public record CorporateActionPreliminaryAdviceType4
     /// </summary>
     [DisplayName("Movement Preliminary Advice Identification")]
     [IsoXmlTag("MvmntPrlimryAdvcId")]
-    public IsoMax35Text? MovementPreliminaryAdviceIdentification { get; init; }
+    public Max35Text? MovementPreliminaryAdviceIdentification { get; init; }
 
     /// <summary>
     /// Type.

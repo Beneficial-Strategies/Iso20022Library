@@ -24,7 +24,7 @@ public record TaxVoucher5
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax16Text Identification { get; init; }
+    public required RestrictedFINXMax16Text Identification { get; init; }
 
     /// <summary>
     /// Date on which a dividend reinvestment purchase was completed. If there is only one bargain involved, the time it was struck needs to be included.

@@ -39,7 +39,7 @@ public record SecuritiesBalance3
     [DisplayName("Collateral Indicator")]
     [IsoXmlTag("CollInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? CollateralIndicator { get; init; }
+    public YesNoIndicator? CollateralIndicator { get; init; }
 
     /// <summary>
     /// Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).

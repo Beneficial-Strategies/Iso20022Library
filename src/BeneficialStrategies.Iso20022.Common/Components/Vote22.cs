@@ -22,7 +22,7 @@ public record Vote22
     [IsoId("_NDMF0ajIEfCzuLlmLrhIvA")]
     [DisplayName("Issuer Label")]
     [IsoXmlTag("IssrLabl")]
-    public required IsoMax35Text IssuerLabel { get; init; }
+    public required Max35Text IssuerLabel { get; init; }
 
     /// <summary>
     /// Language, title and textual description of an agenda resolution. 
@@ -150,5 +150,5 @@ public record Vote22
     [IsoId("_NDMF8ajIEfCzuLlmLrhIvA")]
     [DisplayName("Withdrawn")]
     [IsoXmlTag("Wdrwn")]
-    public IsoYesNoIndicator? Withdrawn { get; init; }
+    public YesNoIndicator? Withdrawn { get; init; }
 }

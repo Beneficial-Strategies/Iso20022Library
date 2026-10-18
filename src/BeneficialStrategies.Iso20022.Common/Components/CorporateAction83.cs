@@ -21,14 +21,14 @@ public record CorporateAction83
     /// </summary>
     [DisplayName("Acceptance Priority Level")]
     [IsoXmlTag("AccptncPrtyLvl")]
-    public IsoExact3UpperCaseAlphaNumericText? AcceptancePriorityLevel { get; init; }
+    public Exact3UpperCaseAlphaNumericText? AcceptancePriorityLevel { get; init; }
 
     /// <summary>
     /// Accrued Interest Indicator.
     /// </summary>
     [DisplayName("Accrued Interest Indicator")]
     [IsoXmlTag("AcrdIntrstInd")]
-    public IsoYesNoIndicator? AccruedInterestIndicator { get; init; }
+    public YesNoIndicator? AccruedInterestIndicator { get; init; }
 
     /// <summary>
     /// Additional Business Process Indicator.
@@ -85,7 +85,7 @@ public record CorporateAction83
     /// </summary>
     [DisplayName("Charges Applied Indicator")]
     [IsoXmlTag("ChrgsApldInd")]
-    public IsoYesNoIndicator? ChargesAppliedIndicator { get; init; }
+    public YesNoIndicator? ChargesAppliedIndicator { get; init; }
 
     /// <summary>
     /// Consent Type.
@@ -134,7 +134,7 @@ public record CorporateAction83
     /// </summary>
     [DisplayName("Forfeiture Of Interest Indicator")]
     [IsoXmlTag("FrftrOfIntrstInd")]
-    public IsoYesNoIndicator? ForfeitureOfInterestIndicator { get; init; }
+    public YesNoIndicator? ForfeitureOfInterestIndicator { get; init; }
 
     /// <summary>
     /// Information Type.
@@ -148,7 +148,7 @@ public record CorporateAction83
     /// </summary>
     [DisplayName("Interest Accrued Number Of Days")]
     [IsoXmlTag("IntrstAcrdNbOfDays")]
-    public IsoMax3Number? InterestAccruedNumberOfDays { get; init; }
+    public Max3Number? InterestAccruedNumberOfDays { get; init; }
 
     /// <summary>
     /// Intermediate Securities Distribution Type.
@@ -169,7 +169,7 @@ public record CorporateAction83
     /// </summary>
     [DisplayName("New Place Of Incorporation")]
     [IsoXmlTag("NewPlcOfIncorprtn")]
-    public IsoMax350Text? NewPlaceOfIncorporation { get; init; }
+    public Max350Text? NewPlaceOfIncorporation { get; init; }
 
     /// <summary>
     /// Notice Type.
@@ -232,7 +232,7 @@ public record CorporateAction83
     /// </summary>
     [DisplayName("Restriction Indicator")]
     [IsoXmlTag("RstrctnInd")]
-    public IsoYesNoIndicator? RestrictionIndicator { get; init; }
+    public YesNoIndicator? RestrictionIndicator { get; init; }
 
     /// <summary>
     /// Securities Quantity.

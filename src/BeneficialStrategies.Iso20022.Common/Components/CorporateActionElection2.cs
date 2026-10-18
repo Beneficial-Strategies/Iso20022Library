@@ -31,7 +31,7 @@ public record CorporateActionElection2
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public required IsoExact3NumericText OptionNumber { get; init; }
+    public required Exact3NumericText OptionNumber { get; init; }
 
     /// <summary>
     /// New instructed securities quantity after the amendment.
@@ -49,5 +49,5 @@ public record CorporateActionElection2
     [IsoXmlTag("Rsn")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Reason { get; init; }
+    public Max350Text? Reason { get; init; }
 }

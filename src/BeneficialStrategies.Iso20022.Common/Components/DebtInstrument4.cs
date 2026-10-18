@@ -23,5 +23,5 @@ public record DebtInstrument4
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate MaturityDate { get; init; }
+    public required DateOnly MaturityDate { get; init; }
 }

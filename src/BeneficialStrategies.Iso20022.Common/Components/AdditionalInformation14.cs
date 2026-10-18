@@ -24,7 +24,7 @@ public record AdditionalInformation14
     [IsoXmlTag("AcctOwnrTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? AccountOwnerTransactionIdentification { get; init; }
+    public RestrictedFINXMax16Text? AccountOwnerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Type of instrument involved in the transactions on which the modification request should apply.

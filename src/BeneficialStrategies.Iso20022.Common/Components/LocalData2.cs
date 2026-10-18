@@ -32,7 +32,7 @@ public record LocalData2
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Name { get; init; }
+    public Max70Text? Name { get; init; }
 
     /// <summary>
     /// Structured postal address in the local language.
@@ -50,7 +50,7 @@ public record LocalData2
     [IsoXmlTag("AddtlCtctInf")]
     [IsoSimpleType(IsoSimpleType.Max512Text)]
     [StringLength(maximumLength: 512, MinimumLength = 1)]
-    public IsoMax512Text? AdditionalContactInformation { get; init; }
+    public Max512Text? AdditionalContactInformation { get; init; }
 
     /// <summary>
     /// Additional local language data

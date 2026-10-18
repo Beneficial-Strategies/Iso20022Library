@@ -56,7 +56,7 @@ public record CorporateActionRate26
     [DisplayName("Maximum Allowed Oversubscription Rate")]
     [IsoXmlTag("MaxAllwdOvrsbcptRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? MaximumAllowedOversubscriptionRate { get; init; }
+    public PercentageRate? MaximumAllowedOversubscriptionRate { get; init; }
 
     /// <summary>
     /// Proportionate allocation used for the offer.
@@ -65,7 +65,7 @@ public record CorporateActionRate26
     [DisplayName("Proration Rate")]
     [IsoXmlTag("PrratnRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? ProrationRate { get; init; }
+    public PercentageRate? ProrationRate { get; init; }
 
     /// <summary>
     /// Percentage of the gross dividend rate on which tax must be paid.
@@ -82,7 +82,7 @@ public record CorporateActionRate26
     [DisplayName("Withholding Tax Rate")]
     [IsoXmlTag("WhldgTaxRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? WithholdingTaxRate { get; init; }
+    public PercentageRate? WithholdingTaxRate { get; init; }
 
     /// <summary>
     /// Rate used for additional tax that cannot be categorised.

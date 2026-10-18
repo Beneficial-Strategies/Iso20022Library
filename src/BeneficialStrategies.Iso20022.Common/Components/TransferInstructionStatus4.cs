@@ -32,5 +32,5 @@ public record TransferInstructionStatus4
     [IsoXmlTag("Rsn")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? Reason { get; init; }
+    public Max350Text? Reason { get; init; }
 }

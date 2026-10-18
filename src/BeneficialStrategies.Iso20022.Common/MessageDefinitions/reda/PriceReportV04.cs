@@ -97,7 +97,7 @@ public record PriceReportV04 : IOuterRecord
     [IsoXmlTag("PricRptId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text PriceReportIdentification { get; init; }
+    public required Max35Text PriceReportIdentification { get; init; }
 
     /// <summary>
     /// Function of the price report, that is, whether the price report is a new price report or a replacement of some kind.
@@ -115,7 +115,7 @@ public record PriceReportV04 : IOuterRecord
     [IsoXmlTag("CxlId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CancellationIdentification { get; init; }
+    public Max35Text? CancellationIdentification { get; init; }
 
     /// <summary>
     /// Information related to the price valuation of a financial instrument.

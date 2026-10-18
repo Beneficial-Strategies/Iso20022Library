@@ -40,7 +40,7 @@ public record Meeting4
     [DisplayName("Quorum Required")]
     [IsoXmlTag("QrmReqrd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator QuorumRequired { get; init; }
+    public required YesNoIndicator QuorumRequired { get; init; }
 
     /// <summary>
     /// Specifies the location where meeting will take place.

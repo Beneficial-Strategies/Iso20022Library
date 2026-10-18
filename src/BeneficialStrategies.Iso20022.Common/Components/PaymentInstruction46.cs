@@ -77,7 +77,7 @@ public record PaymentInstruction46
     /// </summary>
     [DisplayName("Payment Information Identification")]
     [IsoXmlTag("PmtInfId")]
-    public IsoMax35Text? PaymentInformationIdentification { get; init; }
+    public Max35Text? PaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Payment Method.

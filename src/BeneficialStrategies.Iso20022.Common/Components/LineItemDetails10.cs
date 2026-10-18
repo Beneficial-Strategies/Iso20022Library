@@ -24,7 +24,7 @@ public record LineItemDetails10
     [IsoXmlTag("LineItmId")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public required IsoMax70Text LineItemIdentification { get; init; }
+    public required Max70Text LineItemIdentification { get; init; }
 
     /// <summary>
     /// Specifies the quantity of goods on a line in a trade transaction.
@@ -66,7 +66,7 @@ public record LineItemDetails10
     [IsoXmlTag("PdctNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? ProductName { get; init; }
+    public Max70Text? ProductName { get; init; }
 
     /// <summary>
     /// Identifies the product of the corresponding line item.

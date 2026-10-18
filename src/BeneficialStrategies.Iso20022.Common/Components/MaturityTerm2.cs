@@ -31,5 +31,5 @@ public record MaturityTerm2
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.Max3Number)]
-    public required IsoMax3Number Value { get; init; }
+    public required Max3Number Value { get; init; }
 }

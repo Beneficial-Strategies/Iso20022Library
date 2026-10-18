@@ -23,7 +23,7 @@ public record ATMMediaMix1
     [DisplayName("Cash Unit Number")]
     [IsoXmlTag("CshUnitNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? CashUnitNumber { get; init; }
+    public Number? CashUnitNumber { get; init; }
 
     /// <summary>
     /// Number of notes or coins.
@@ -32,7 +32,7 @@ public record ATMMediaMix1
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber Number { get; init; }
+    public required Number Number { get; init; }
 
     /// <summary>
     /// Unit value.

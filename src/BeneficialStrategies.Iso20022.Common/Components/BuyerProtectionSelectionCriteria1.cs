@@ -38,7 +38,7 @@ public record BuyerProtectionSelectionCriteria1
     [IsoId("_cYPqgd-1Ee-Ned3-G07x_A")]
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
-    public IsoISINOct2015Identifier? ISIN { get; init; }
+    public ISINOct2015Identifier? ISIN { get; init; }
 
     /// <summary>
     /// Reference assigned by the account servicer to unambiguously identify a corporate action event.
@@ -46,7 +46,7 @@ public record BuyerProtectionSelectionCriteria1
     [IsoId("_pE_p9N-1Ee-Ned3-G07x_A")]
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
-    public IsoMax35Text? CorporateActionEventIdentification { get; init; }
+    public Max35Text? CorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Identification of a transaction assigned by a market infrastructure other than a central securities depository.
@@ -54,7 +54,7 @@ public record BuyerProtectionSelectionCriteria1
     [IsoId("_vO2kI9-1Ee-Ned3-G07x_A")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
-    public IsoMax35Text? MarketInfrastructureTransactionIdentification { get; init; }
+    public Max35Text? MarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of the transaction assigned by the processor of the instruction.
@@ -62,7 +62,7 @@ public record BuyerProtectionSelectionCriteria1
     [IsoId("_vO2kJN-1Ee-Ned3-G07x_A")]
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
-    public IsoMax35Text? ProcessorTransactionIdentification { get; init; }
+    public Max35Text? ProcessorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique Transaction Identifier (UTI) as agreed with the other counterparty.
@@ -70,5 +70,5 @@ public record BuyerProtectionSelectionCriteria1
     [IsoId("_vO2kJd-1Ee-Ned3-G07x_A")]
     [DisplayName("Unique Transaction Identifier")]
     [IsoXmlTag("UnqTxIdr")]
-    public IsoUTIIdentifier? UniqueTransactionIdentifier { get; init; }
+    public UTIIdentifier? UniqueTransactionIdentifier { get; init; }
 }

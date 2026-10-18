@@ -31,5 +31,5 @@ public record PositionSetMetrics11
     [DisplayName("Cash Reinvestment Rate")]
     [IsoXmlTag("CshRinvstmtRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? CashReinvestmentRate { get; init; }
+    public PercentageRate? CashReinvestmentRate { get; init; }
 }

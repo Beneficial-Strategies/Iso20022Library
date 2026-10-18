@@ -21,7 +21,7 @@ public record DetailedInstructionCancellationStatus15
     /// </summary>
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public IsoMax35Text? AccountIdentification { get; init; }
+    public Max35Text? AccountIdentification { get; init; }
 
     /// <summary>
     /// Instruction Cancellation Status.
@@ -35,12 +35,12 @@ public record DetailedInstructionCancellationStatus15
     /// </summary>
     [DisplayName("Single Instruction Cancellation Identification")]
     [IsoXmlTag("SnglInstrCxlId")]
-    public required IsoMax35Text SingleInstructionCancellationIdentification { get; init; }
+    public required Max35Text SingleInstructionCancellationIdentification { get; init; }
 
     /// <summary>
     /// Sub Account Identification.
     /// </summary>
     [DisplayName("Sub Account Identification")]
     [IsoXmlTag("SubAcctId")]
-    public IsoMax35Text? SubAccountIdentification { get; init; }
+    public Max35Text? SubAccountIdentification { get; init; }
 }

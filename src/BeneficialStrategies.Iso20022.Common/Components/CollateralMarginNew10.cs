@@ -24,7 +24,7 @@ public record CollateralMarginNew10
     [IsoXmlTag("TechRcrdId")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? TechnicalRecordIdentification { get; init; }
+    public Max140Text? TechnicalRecordIdentification { get; init; }
 
     /// <summary>
     /// Date and time of submission of the report to the trade repository.
@@ -33,7 +33,7 @@ public record CollateralMarginNew10
     [DisplayName("Reporting Date Time")]
     [IsoXmlTag("RptgDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime ReportingDateTime { get; init; }
+    public required ISODateTime ReportingDateTime { get; init; }
 
     /// <summary>
     /// Date on which the reportable event pertaining to the transaction and captured by the report took place.
@@ -42,7 +42,7 @@ public record CollateralMarginNew10
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate EventDate { get; init; }
+    public required DateOnly EventDate { get; init; }
 
     /// <summary>
     /// Set of information specific to counterparties of the reported transaction.
@@ -60,7 +60,7 @@ public record CollateralMarginNew10
     [IsoXmlTag("CollPrtflId")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public required IsoMax52Text CollateralPortfolioIdentification { get; init; }
+    public required Max52Text CollateralPortfolioIdentification { get; init; }
 
     /// <summary>
     /// Information on posted collateral and margin.

@@ -21,7 +21,7 @@ public record Instalment6
     /// </summary>
     [DisplayName("Payment Sequence Number")]
     [IsoXmlTag("PmtSeqNb")]
-    public IsoNumber? PaymentSequenceNumber { get; init; }
+    public Number? PaymentSequenceNumber { get; init; }
 
     /// <summary>
     /// Plan.

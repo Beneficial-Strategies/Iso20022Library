@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData30Choice
         [IsoXmlTag("UnqTradIdr")]
         [IsoSimpleType(IsoSimpleType.Max52Text)]
         [StringLength(maximumLength: 52, MinimumLength = 1)]
-        public required IsoMax52Text UniqueTradeIdentifier { get; init; }
+        public required Max52Text UniqueTradeIdentifier { get; init; }
 
         /// <summary>
         /// Date on which the reportable event pertaining to the transaction and captured by the report took place.
@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData30Choice
         [DisplayName("Event Date")]
         [IsoXmlTag("EvtDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate EventDate { get; init; }
+        public required DateOnly EventDate { get; init; }
 
         /// <summary>
         /// Indicates the date and time when the contract was executed.
@@ -42,7 +42,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData30Choice
         [DisplayName("Execution Date Time")]
         [IsoXmlTag("ExctnDtTm")]
         [IsoSimpleType(IsoSimpleType.ISODateTime)]
-        public required IsoISODateTime ExecutionDateTime { get; init; }
+        public required ISODateTime ExecutionDateTime { get; init; }
 
         /// <summary>
         /// Indicates whether clearing of contract has taken place.
@@ -59,7 +59,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData30Choice
         [DisplayName("Trading Venue")]
         [IsoXmlTag("TradgVn")]
         [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-        public IsoMICIdentifier? TradingVenue { get; init; }
+        public MICIdentifier? TradingVenue { get; init; }
 
         /// <summary>
         /// Reference to master agreement under which the counterparties concluded a documented transaction.
@@ -76,7 +76,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData30Choice
         [DisplayName("Value Date")]
         [IsoXmlTag("ValDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? ValueDate { get; init; }
+        public DateOnly? ValueDate { get; init; }
 
         /// <summary>
         /// Indication whether the secured financing transaction is subject to a general collateral arrangement.
@@ -93,7 +93,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData30Choice
         [DisplayName("Delivery By Value")]
         [IsoXmlTag("DlvryByVal")]
         [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-        public IsoTrueFalseIndicator? DeliveryByValue { get; init; }
+        public TrueFalseIndicator? DeliveryByValue { get; init; }
 
         /// <summary>
         /// Specifies whether the collateral is subject to a title transfer collateral arrangement, a securities interest collateral arrangement, or a securities interest with the right of use.
@@ -142,7 +142,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData30Choice
         [DisplayName("Lending Fee")]
         [IsoXmlTag("LndgFee")]
         [IsoSimpleType(IsoSimpleType.PercentageRate)]
-        public IsoPercentageRate? LendingFee { get; init; }
+        public PercentageRate? LendingFee { get; init; }
 
         /// <summary>
         /// Termination date in the case of a full early termination of the Securities Financing Transaction (SFT).
@@ -151,6 +151,6 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData30Choice
         [DisplayName("Termination Date")]
         [IsoXmlTag("TermntnDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? TerminationDate { get; init; }
+        public DateOnly? TerminationDate { get; init; }
     }
 }

@@ -24,7 +24,7 @@ public record DetailedInstructionStatus10
     [IsoXmlTag("InstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text InstructionIdentification { get; init; }
+    public required Max35Text InstructionIdentification { get; init; }
 
     /// <summary>
     /// Identifies the safekeeping account.
@@ -34,7 +34,7 @@ public record DetailedInstructionStatus10
     [IsoXmlTag("AcctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountIdentification { get; init; }
+    public Max35Text? AccountIdentification { get; init; }
 
     /// <summary>
     /// Party that legally owns the account.
@@ -52,7 +52,7 @@ public record DetailedInstructionStatus10
     [IsoXmlTag("SubAcctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SubAccountIdentification { get; init; }
+    public Max35Text? SubAccountIdentification { get; init; }
 
     /// <summary>
     /// Owner of the voting rights.
@@ -71,7 +71,7 @@ public record DetailedInstructionStatus10
     [DisplayName("Standing Instruction")]
     [IsoXmlTag("StgInstr")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator StandingInstruction { get; init; }
+    public required YesNoIndicator StandingInstruction { get; init; }
 
     /// <summary>
     /// Details of the vote.

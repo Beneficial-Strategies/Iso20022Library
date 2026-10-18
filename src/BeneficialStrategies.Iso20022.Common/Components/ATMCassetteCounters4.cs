@@ -31,7 +31,7 @@ public record ATMCassetteCounters4
     [DisplayName("Added Number")]
     [IsoXmlTag("AddedNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? AddedNumber { get; init; }
+    public Number? AddedNumber { get; init; }
 
     /// <summary>
     /// Number of removed media during servicing operations.
@@ -40,7 +40,7 @@ public record ATMCassetteCounters4
     [DisplayName("Removed Number")]
     [IsoXmlTag("RmvdNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? RemovedNumber { get; init; }
+    public Number? RemovedNumber { get; init; }
 
     /// <summary>
     /// Total number of media out of the cassette.
@@ -49,7 +49,7 @@ public record ATMCassetteCounters4
     [DisplayName("Dispensed Number")]
     [IsoXmlTag("DspnsdNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? DispensedNumber { get; init; }
+    public Number? DispensedNumber { get; init; }
 
     /// <summary>
     /// Total number of media deposited in the cassette.
@@ -58,7 +58,7 @@ public record ATMCassetteCounters4
     [DisplayName("Deposited Number")]
     [IsoXmlTag("DpstdNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? DepositedNumber { get; init; }
+    public Number? DepositedNumber { get; init; }
 
     /// <summary>
     /// Total number of recycled media from the cassette.
@@ -67,7 +67,7 @@ public record ATMCassetteCounters4
     [DisplayName("Recycled Number")]
     [IsoXmlTag("RcycldNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? RecycledNumber { get; init; }
+    public Number? RecycledNumber { get; init; }
 
     /// <summary>
     /// Total number of retracted media originating from the cassette.
@@ -76,7 +76,7 @@ public record ATMCassetteCounters4
     [DisplayName("Retracted Number")]
     [IsoXmlTag("RtrctdNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? RetractedNumber { get; init; }
+    public Number? RetractedNumber { get; init; }
 
     /// <summary>
     /// Total number of media from this cassette which are on the reject bin.
@@ -85,7 +85,7 @@ public record ATMCassetteCounters4
     [DisplayName("Rejected Number")]
     [IsoXmlTag("RjctdNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? RejectedNumber { get; init; }
+    public Number? RejectedNumber { get; init; }
 
     /// <summary>
     /// Total number of media presented to the customer.
@@ -94,5 +94,5 @@ public record ATMCassetteCounters4
     [DisplayName("Presented Number")]
     [IsoXmlTag("PresntdNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? PresentedNumber { get; init; }
+    public Number? PresentedNumber { get; init; }
 }

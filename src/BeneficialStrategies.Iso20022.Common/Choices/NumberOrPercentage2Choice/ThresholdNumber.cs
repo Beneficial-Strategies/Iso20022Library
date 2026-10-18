@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.NumberOrPercentage2Choice
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("ThrshldNb")]
-        public required IsoNumber Value { get; init; }
+        public required Number Value { get; init; }
     }
 }

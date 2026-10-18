@@ -23,7 +23,7 @@ public record TotalsPerBankTransactionCode4
     [DisplayName("Number Of Entries")]
     [IsoXmlTag("NbOfNtries")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public IsoMax15NumericText? NumberOfEntries { get; init; }
+    public Max15NumericText? NumberOfEntries { get; init; }
 
     /// <summary>
     /// Total of all individual entries included in the report.
@@ -32,7 +32,7 @@ public record TotalsPerBankTransactionCode4
     [DisplayName("Sum")]
     [IsoXmlTag("Sum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? Sum { get; init; }
+    public DecimalNumber? Sum { get; init; }
 
     /// <summary>
     /// Total debit or credit amount that is the result of the netted amounts for all debit and credit entries per bank transaction code.
@@ -49,7 +49,7 @@ public record TotalsPerBankTransactionCode4
     [DisplayName("Forecast Indicator")]
     [IsoXmlTag("FcstInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ForecastIndicator { get; init; }
+    public TrueFalseIndicator? ForecastIndicator { get; init; }
 
     /// <summary>
     /// Set of elements used to fully identify the type of underlying transaction resulting in an entry.

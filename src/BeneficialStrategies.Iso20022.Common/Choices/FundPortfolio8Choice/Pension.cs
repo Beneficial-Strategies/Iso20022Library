@@ -56,7 +56,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio8Choice
         [IsoXmlTag("DrwdwnTrchId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? DrawdownTrancheIdentification { get; init; }
+        public Max35Text? DrawdownTrancheIdentification { get; init; }
 
         /// <summary>
         /// Indicates that the transfer is only in relation to underlying assets, and that the wrapper transfer will occur separately.
@@ -65,7 +65,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio8Choice
         [DisplayName("Non Wrapper Transfer")]
         [IsoXmlTag("NonWrpprTrf")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? NonWrapperTransfer { get; init; }
+        public YesNoIndicator? NonWrapperTransfer { get; init; }
 
         /// <summary>
         /// Additional information about the pension policy, plan or scheme.

@@ -19,6 +19,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditorReferenceType2Choice
         /// Type of creditor reference, in a proprietary form.
         /// </summary>
         [IsoXmlTag("Prtry")]
-        public required IsoMax35Text Value { get; init; }
+        public required Max35Text Value { get; init; }
     }
 }

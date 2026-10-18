@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
         /// </summary>
         [IsoXmlTag("GBSC")]
         [IsoSimpleType(IsoSimpleType.UKDomesticSortCodeIdentifier)]
-        public required IsoUKDomesticSortCodeIdentifier Value { get; init; }
+        public required UKDomesticSortCodeIdentifier Value { get; init; }
     }
 }

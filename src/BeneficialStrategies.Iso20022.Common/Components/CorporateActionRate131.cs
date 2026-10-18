@@ -43,7 +43,7 @@ public record CorporateActionRate131
     /// </summary>
     [DisplayName("Maximum Allowed Oversubscription Rate")]
     [IsoXmlTag("MaxAllwdOvrsbcptRate")]
-    public IsoPercentage14Rate? MaximumAllowedOversubscriptionRate { get; init; }
+    public decimal? MaximumAllowedOversubscriptionRate { get; init; }
 
     /// <summary>
     /// Net Distribution Rate.
@@ -57,7 +57,7 @@ public record CorporateActionRate131
     /// </summary>
     [DisplayName("Proration Rate")]
     [IsoXmlTag("PrratnRate")]
-    public IsoPercentage14Rate? ProrationRate { get; init; }
+    public decimal? ProrationRate { get; init; }
 
     /// <summary>
     /// Second Level Tax.

@@ -30,5 +30,5 @@ public record InvestorTypeIdentification1
     [IsoId("_gxL3MK5qEfCUHaCK5HWOhg")]
     [DisplayName("Investor Type Identification Narrative")]
     [IsoXmlTag("InvstrTpIdNrrtv")]
-    public IsoMax1025Text? InvestorTypeIdentificationNarrative { get; init; }
+    public Max1025Text? InvestorTypeIdentificationNarrative { get; init; }
 }

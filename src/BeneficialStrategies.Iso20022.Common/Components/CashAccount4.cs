@@ -64,5 +64,5 @@ public record CashAccount4
     [IsoXmlTag("XtndedInvstmtAcctTp")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedInvestmentAccountType { get; init; }
+    public Extended350Code? ExtendedInvestmentAccountType { get; init; }
 }

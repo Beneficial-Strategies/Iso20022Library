@@ -31,6 +31,6 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeConfirmation1Choice
         [DisplayName("Time Stamp")]
         [IsoXmlTag("TmStmp")]
         [IsoSimpleType(IsoSimpleType.ISODateTime)]
-        public required IsoISODateTime TimeStamp { get; init; }
+        public required ISODateTime TimeStamp { get; init; }
     }
 }

@@ -95,7 +95,7 @@ public record TransactionDetails131
     [DisplayName("Number Of Days Accrued")]
     [IsoXmlTag("NbOfDaysAcrd")]
     [IsoSimpleType(IsoSimpleType.Max3Number)]
-    public IsoMax3Number? NumberOfDaysAccrued { get; init; }
+    public Max3Number? NumberOfDaysAccrued { get; init; }
 
     /// <summary>
     /// Amount of money that is to be/was posted to the account.
@@ -152,7 +152,7 @@ public record TransactionDetails131
     [DisplayName("Acknowledged Status Time Stamp")]
     [IsoXmlTag("AckdStsTmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? AcknowledgedStatusTimeStamp { get; init; }
+    public ISODateTime? AcknowledgedStatusTimeStamp { get; init; }
 
     /// <summary>
     /// Time stamp on when the transaction is matched.
@@ -161,7 +161,7 @@ public record TransactionDetails131
     [DisplayName("Matched Status Time Stamp")]
     [IsoXmlTag("MtchdStsTmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? MatchedStatusTimeStamp { get; init; }
+    public ISODateTime? MatchedStatusTimeStamp { get; init; }
 
     /// <summary>
     /// Identifies the chain of delivering settlement parties.
@@ -186,7 +186,7 @@ public record TransactionDetails131
     [DisplayName("Reversal Indicator")]
     [IsoXmlTag("RvslInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ReversalIndicator { get; init; }
+    public YesNoIndicator? ReversalIndicator { get; init; }
 
     /// <summary>
     /// Provides additional details on the transaction which can not be included within the structured fields of the message.
@@ -196,5 +196,5 @@ public record TransactionDetails131
     [IsoXmlTag("TxAddtlDtls")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? TransactionAdditionalDetails { get; init; }
+    public RestrictedFINXMax350Text? TransactionAdditionalDetails { get; init; }
 }

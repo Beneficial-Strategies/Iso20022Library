@@ -31,5 +31,5 @@ public record PartyAndCertificate4
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
     [IsoSimpleType(IsoSimpleType.Max10KBinary)]
-    public IsoMax10KBinary? Certificate { get; init; }
+    public Max10KBinary? Certificate { get; init; }
 }

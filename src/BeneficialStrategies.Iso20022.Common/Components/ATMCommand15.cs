@@ -21,7 +21,7 @@ public record ATMCommand15
     /// </summary>
     [DisplayName("Additional Error Information")]
     [IsoXmlTag("AddtlErrInf")]
-    public IsoMax140Text? AdditionalErrorInformation { get; init; }
+    public Max140Text? AdditionalErrorInformation { get; init; }
 
     /// <summary>
     /// Command Identification.
@@ -35,14 +35,14 @@ public record ATMCommand15
     /// </summary>
     [DisplayName("Processed Date Time")]
     [IsoXmlTag("PrcdDtTm")]
-    public required IsoISODateTime ProcessedDateTime { get; init; }
+    public required ISODateTime ProcessedDateTime { get; init; }
 
     /// <summary>
     /// Required Date Time.
     /// </summary>
     [DisplayName("Required Date Time")]
     [IsoXmlTag("ReqrdDtTm")]
-    public IsoISODateTime? RequiredDateTime { get; init; }
+    public ISODateTime? RequiredDateTime { get; init; }
 
     /// <summary>
     /// Result.

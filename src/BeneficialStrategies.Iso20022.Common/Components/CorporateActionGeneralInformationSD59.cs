@@ -35,14 +35,14 @@ public record CorporateActionGeneralInformationSD59
     /// </summary>
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Safekeeping Account.
     /// </summary>
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
-    public required IsoRestrictedFINXMax35Text SafekeepingAccount { get; init; }
+    public required RestrictedFINXMax35Text SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Security Identification.

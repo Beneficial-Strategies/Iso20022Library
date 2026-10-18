@@ -104,5 +104,5 @@ public record IntraPositionDetails53
     [IsoXmlTag("InstrPrcgAddtlDtls")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? InstructionProcessingAdditionalDetails { get; init; }
+    public RestrictedFINXMax350Text? InstructionProcessingAdditionalDetails { get; init; }
 }

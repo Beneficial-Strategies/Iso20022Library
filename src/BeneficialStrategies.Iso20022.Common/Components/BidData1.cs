@@ -22,7 +22,7 @@ public record BidData1
     [IsoId("_w2kRgGIaEfCeoPFCHQnhvA")]
     [DisplayName("Best Bid")]
     [IsoXmlTag("BestBid")]
-    public required IsoDecimalNumber BestBid { get; init; }
+    public required DecimalNumber BestBid { get; init; }
 
     /// <summary>
     /// Aggregated volume attached to the best bid.
@@ -30,5 +30,5 @@ public record BidData1
     [IsoId("_1MtyYGIaEfCeoPFCHQnhvA")]
     [DisplayName("Best Bid Volume")]
     [IsoXmlTag("BestBidVol")]
-    public required IsoDecimalNumber BestBidVolume { get; init; }
+    public required DecimalNumber BestBidVolume { get; init; }
 }

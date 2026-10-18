@@ -39,7 +39,7 @@ public record RequestDetails1
     [DisplayName("Retain Indicator")]
     [IsoXmlTag("RtnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? RetainIndicator { get; init; }
+    public YesNoIndicator? RetainIndicator { get; init; }
 
     /// <summary>
     /// Specifies the type of linkage requested.
@@ -72,7 +72,7 @@ public record RequestDetails1
     [DisplayName("Partial Settlement Indicator")]
     [IsoXmlTag("PrtlSttlmInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PartialSettlementIndicator { get; init; }
+    public YesNoIndicator? PartialSettlementIndicator { get; init; }
 
     /// <summary>
     /// Specifies whether the settlement transaction is to be settled through an RTGS or a non RTGS system.
@@ -89,7 +89,7 @@ public record RequestDetails1
     [DisplayName("Hold Indicator")]
     [IsoXmlTag("HldInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? HoldIndicator { get; init; }
+    public YesNoIndicator? HoldIndicator { get; init; }
 
     /// <summary>
     /// Specifies the matching processing change requested.

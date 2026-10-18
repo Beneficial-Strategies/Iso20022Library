@@ -25,7 +25,7 @@ public record Package1
     [IsoXmlTag("CmplxTradId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ComplexTradeIdentification { get; init; }
+    public required Max35Text ComplexTradeIdentification { get; init; }
 
     /// <summary>
     /// Indicates the traded price of the entire package in which the reported derivative transaction is a component.

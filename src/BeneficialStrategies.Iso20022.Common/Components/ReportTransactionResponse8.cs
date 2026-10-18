@@ -22,7 +22,7 @@ public record ReportTransactionResponse8
     [IsoId("_pbd4ZbYNEfCUZfsQO4rYeA")]
     [DisplayName("Report Full Size")]
     [IsoXmlTag("RptFullSz")]
-    public required IsoPositiveNumber ReportFullSize { get; init; }
+    public required PositiveNumber ReportFullSize { get; init; }
 
     /// <summary>
     /// Index of the first transaction reported in this message within the list of transactions matching the search criteria.
@@ -30,7 +30,7 @@ public record ReportTransactionResponse8
     [IsoId("_pbd4a7YNEfCUZfsQO4rYeA")]
     [DisplayName("Block Start")]
     [IsoXmlTag("BlckStart")]
-    public required IsoPositiveNumber BlockStart { get; init; }
+    public required PositiveNumber BlockStart { get; init; }
 
     /// <summary>
     /// Index of the last transaction reported in this message.
@@ -38,7 +38,7 @@ public record ReportTransactionResponse8
     [IsoId("_pbd4cbYNEfCUZfsQO4rYeA")]
     [DisplayName("Block Stop")]
     [IsoXmlTag("BlckStop")]
-    public required IsoPositiveNumber BlockStop { get; init; }
+    public required PositiveNumber BlockStop { get; init; }
 
     /// <summary>
     /// List of Transaction Report containing one Transaction Report for each transaction matching the search criteria.

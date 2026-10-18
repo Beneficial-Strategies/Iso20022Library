@@ -32,7 +32,7 @@ public record ActionMessage4
     [IsoXmlTag("Msg")]
     [IsoSimpleType(IsoSimpleType.Max20000Text)]
     [StringLength(maximumLength: 20000, MinimumLength = 1)]
-    public IsoMax20000Text? Message { get; init; }
+    public Max20000Text? Message { get; init; }
 
     /// <summary>
     /// Message content if this is a message reference or screen reference.
@@ -42,7 +42,7 @@ public record ActionMessage4
     [IsoXmlTag("Ref")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Reference { get; init; }
+    public Max35Text? Reference { get; init; }
 
     /// <summary>
     /// Device to be used.
@@ -59,5 +59,5 @@ public record ActionMessage4
     [DisplayName("Message Content Signature")]
     [IsoXmlTag("MsgCnttSgntr")]
     [IsoSimpleType(IsoSimpleType.Max35Binary)]
-    public IsoMax35Binary? MessageContentSignature { get; init; }
+    public Max35Binary? MessageContentSignature { get; init; }
 }

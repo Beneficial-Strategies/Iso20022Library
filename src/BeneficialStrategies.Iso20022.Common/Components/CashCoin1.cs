@@ -30,7 +30,7 @@ public record CashCoin1
     [IsoId("_VIIlIatkEfC6tbn8zOl_iw")]
     [DisplayName("Box Reference")]
     [IsoXmlTag("BxRef")]
-    public IsoMax35Text? BoxReference { get; init; }
+    public Max35Text? BoxReference { get; init; }
 
     /// <summary>
     /// Specifies the coin denomination, including the currency, such as a euro 50 cent coin.
@@ -46,7 +46,7 @@ public record CashCoin1
     [IsoId("_lb1etUBcEfCGo6pGJ7j7Eg")]
     [DisplayName("Number Of Coins")]
     [IsoXmlTag("NbOfCoins")]
-    public IsoMax15NumericText? NumberOfCoins { get; init; }
+    public Max15NumericText? NumberOfCoins { get; init; }
 
     /// <summary>
     /// Specifies the total amount of money for this coin denomination, that is the coin denomination times the number of coins.

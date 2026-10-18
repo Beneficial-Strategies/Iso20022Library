@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonOrOrganisation4Choice
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("LEI")]
-        public required IsoLEIIdentifier Value { get; init; }
+        public required LEIIdentifier Value { get; init; }
     }
 }

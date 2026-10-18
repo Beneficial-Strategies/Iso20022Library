@@ -24,7 +24,7 @@ public record CustomerOrder1
     [IsoXmlTag("CstmrOrdrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text CustomerOrderIdentification { get; init; }
+    public required Max35Text CustomerOrderIdentification { get; init; }
 
     /// <summary>
     /// Identification of a Sale transaction for a sequence of related POI transactions.
@@ -34,7 +34,7 @@ public record CustomerOrder1
     [IsoXmlTag("SaleRefId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text SaleReferenceIdentification { get; init; }
+    public required Max35Text SaleReferenceIdentification { get; init; }
 
     /// <summary>
     /// Specifies if a customer order is currently open.
@@ -43,7 +43,7 @@ public record CustomerOrder1
     [DisplayName("Open Order State")]
     [IsoXmlTag("OpnOrdrStat")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? OpenOrderState { get; init; }
+    public TrueFalseIndicator? OpenOrderState { get; init; }
 
     /// <summary>
     /// Date time of the beginning of an operation.
@@ -52,7 +52,7 @@ public record CustomerOrder1
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime StartDate { get; init; }
+    public required ISODateTime StartDate { get; init; }
 
     /// <summary>
     /// Date time of the end of an operation.
@@ -61,7 +61,7 @@ public record CustomerOrder1
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? EndDate { get; init; }
+    public ISODateTime? EndDate { get; init; }
 
     /// <summary>
     /// Unit of amount.
@@ -103,7 +103,7 @@ public record CustomerOrder1
     [IsoXmlTag("AccsdBy")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccessedBy { get; init; }
+    public Max35Text? AccessedBy { get; init; }
 
     /// <summary>
     /// Unqualified information related to customer order.
@@ -113,5 +113,5 @@ public record CustomerOrder1
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max1025Text)]
     [StringLength(maximumLength: 1025, MinimumLength = 1)]
-    public IsoMax1025Text? AdditionalInformation { get; init; }
+    public Max1025Text? AdditionalInformation { get; init; }
 }

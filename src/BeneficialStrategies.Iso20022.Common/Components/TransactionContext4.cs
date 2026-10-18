@@ -25,7 +25,7 @@ public record TransactionContext4
     [DisplayName("Merchant Category Code")]
     [IsoXmlTag("MrchntCtgyCd")]
     [IsoSimpleType(IsoSimpleType.Exact4NumericText)]
-    public IsoExact4NumericText? MerchantCategoryCode { get; init; }
+    public Exact4NumericText? MerchantCategoryCode { get; init; }
 
     /// <summary>
     /// Indicates a deferred delivery as defined by each specific implementation.
@@ -37,7 +37,7 @@ public record TransactionContext4
     [DisplayName("Deferred Delivery Indicator")]
     [IsoXmlTag("DfrrdDlvryInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? DeferredDeliveryIndicator { get; init; }
+    public TrueFalseIndicator? DeferredDeliveryIndicator { get; init; }
 
     /// <summary>
     /// Identifies the transaction initiator.
@@ -79,5 +79,5 @@ public record TransactionContext4
     [DisplayName("Capture Date")]
     [IsoXmlTag("CaptrDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? CaptureDate { get; init; }
+    public DateOnly? CaptureDate { get; init; }
 }

@@ -24,7 +24,7 @@ public record PensionPolicy1
     [IsoXmlTag("Idr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identifier { get; init; }
+    public required Max35Text Identifier { get; init; }
 
     /// <summary>
     /// Sub-identification of the pension policy, plan or scheme, such as a member reference.
@@ -34,7 +34,7 @@ public record PensionPolicy1
     [IsoXmlTag("SubIdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SubIdentifier { get; init; }
+    public Max35Text? SubIdentifier { get; init; }
 
     /// <summary>
     /// Additional information about the identification of the pension policy, plan or scheme.

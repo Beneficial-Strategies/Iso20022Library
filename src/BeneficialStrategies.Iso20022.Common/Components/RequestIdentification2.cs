@@ -22,7 +22,7 @@ public record RequestIdentification2
     [IsoId("_i028kVQVEfG3m41zXZkDsg")]
     [DisplayName("Original Order Reference")]
     [IsoXmlTag("OrgnlOrdrRef")]
-    public required IsoUUIDv4Identifier OriginalOrderReference { get; init; }
+    public required UUIDv4Identifier OriginalOrderReference { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the cash receiver for the cash withdrawal.
@@ -30,7 +30,7 @@ public record RequestIdentification2
     [IsoId("_i028k1QVEfG3m41zXZkDsg")]
     [DisplayName("Original Cash Receiver Reference")]
     [IsoXmlTag("OrgnlCshRcvrRef")]
-    public IsoMax35Text? OriginalCashReceiverReference { get; init; }
+    public Max35Text? OriginalCashReceiverReference { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the cash sender for the cash deposit.
@@ -38,7 +38,7 @@ public record RequestIdentification2
     [IsoId("_i028lVQVEfG3m41zXZkDsg")]
     [DisplayName("Original Cash Sender Reference")]
     [IsoXmlTag("OrgnlCshSndrRef")]
-    public IsoMax35Text? OriginalCashSenderReference { get; init; }
+    public Max35Text? OriginalCashSenderReference { get; init; }
 
     /// <summary>
     /// Total amount of all notes and coins in the original request.

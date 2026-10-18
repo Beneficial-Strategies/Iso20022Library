@@ -24,7 +24,7 @@ public record ATMService11
     [IsoXmlTag("SvcRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ServiceReference { get; init; }
+    public Max35Text? ServiceReference { get; init; }
 
     /// <summary>
     /// Codification of the type of service for the ATM.
@@ -34,7 +34,7 @@ public record ATMService11
     [IsoXmlTag("ATMSvcCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ATMServiceCode { get; init; }
+    public Max35Text? ATMServiceCode { get; init; }
 
     /// <summary>
     /// Describes the type of deposit service selected by the customer.
@@ -50,7 +50,7 @@ public record ATMService11
     [IsoId("_fdDDB63-EeWL1uap3dNhCQ")]
     [DisplayName("Service Variant Identification")]
     [IsoXmlTag("SvcVarntId")]
-    public SimpleValueList<IsoMax35Text> ServiceVariantIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> ServiceVariantIdentification { get; init; } = [];
 
     /// <summary>
     /// True if deposit with cash back transaction.
@@ -59,7 +59,7 @@ public record ATMService11
     [DisplayName("Cash Back")]
     [IsoXmlTag("CshBck")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CashBack { get; init; }
+    public TrueFalseIndicator? CashBack { get; init; }
 
     /// <summary>
     /// True if the deposit transaction is split in multiple accounts.
@@ -68,5 +68,5 @@ public record ATMService11
     [DisplayName("Multi Account")]
     [IsoXmlTag("MultiAcct")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? MultiAccount { get; init; }
+    public TrueFalseIndicator? MultiAccount { get; init; }
 }

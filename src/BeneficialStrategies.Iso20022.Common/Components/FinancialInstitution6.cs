@@ -32,5 +32,5 @@ public record FinancialInstitution6
     [IsoXmlTag("AcctNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AccountNumber { get; init; }
+    public Max35Text? AccountNumber { get; init; }
 }

@@ -24,7 +24,7 @@ public record SupportingDocument2
     [IsoXmlTag("SpprtgDocId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text SupportingDocumentIdentification { get; init; }
+    public required Max35Text SupportingDocumentIdentification { get; init; }
 
     /// <summary>
     /// Unique identification of the original query message.
@@ -34,7 +34,7 @@ public record SupportingDocument2
     [IsoXmlTag("OrgnlReqId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalRequestIdentification { get; init; }
+    public Max35Text? OriginalRequestIdentification { get; init; }
 
     /// <summary>
     /// Unique identification of the certificate for which the supporting document is provided.

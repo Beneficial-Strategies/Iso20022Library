@@ -33,7 +33,7 @@ public record ExchangeConfiguration5
     [DisplayName("Maximum Number")]
     [IsoXmlTag("MaxNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaximumNumber { get; init; }
+    public Number? MaximumNumber { get; init; }
 
     /// <summary>
     /// Maximum cumulative amount of the transactions without exchange.
@@ -66,7 +66,7 @@ public record ExchangeConfiguration5
     [DisplayName("Exchange Failed")]
     [IsoXmlTag("XchgFaild")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ExchangeFailed { get; init; }
+    public TrueFalseIndicator? ExchangeFailed { get; init; }
 
     /// <summary>
     /// Indicates that declined transaction must be exchanged.
@@ -75,5 +75,5 @@ public record ExchangeConfiguration5
     [DisplayName("Exchange Declined")]
     [IsoXmlTag("XchgDclnd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ExchangeDeclined { get; init; }
+    public TrueFalseIndicator? ExchangeDeclined { get; init; }
 }

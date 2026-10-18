@@ -22,7 +22,7 @@ public record AgentNotificationIdentificationAndStatus2
     [IsoId("_VbdKEaUfEfCnE_wCEfCqTA")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Date/time of the creation of the document.
@@ -30,7 +30,7 @@ public record AgentNotificationIdentificationAndStatus2
     [IsoId("_VbdxIaUfEfCnE_wCEfCqTA")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
-    public IsoISODateTime? CreationDateTime { get; init; }
+    public ISODateTime? CreationDateTime { get; init; }
 
     /// <summary>
     /// Status of the corporate action notification advice sent by the agent.

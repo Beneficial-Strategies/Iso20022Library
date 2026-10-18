@@ -38,5 +38,5 @@ public record TemporaryServiceChargeRate1
     [IsoId("_O_NroVXcEfC0lMwgjvMClw-hrs")]
     [DisplayName("Hours")]
     [IsoXmlTag("Hrs")]
-    public IsoMax6NumericText? Hours { get; init; }
+    public Max6NumericText? Hours { get; init; }
 }

@@ -23,7 +23,7 @@ public record DemandDocumentation1
     [DisplayName("Complete Indicator")]
     [IsoXmlTag("CmpltInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator CompleteIndicator { get; init; }
+    public required YesNoIndicator CompleteIndicator { get; init; }
 
     /// <summary>
     /// Information related to an incomplete presentation.
@@ -33,7 +33,7 @@ public record DemandDocumentation1
     [IsoXmlTag("CmpltnInf")]
     [IsoSimpleType(IsoSimpleType.Max2000Text)]
     [StringLength(maximumLength: 2000, MinimumLength = 1)]
-    public IsoMax2000Text? CompletionInformation { get; init; }
+    public Max2000Text? CompletionInformation { get; init; }
 
     /// <summary>
     /// Document or template enclosed in the demand.
@@ -51,5 +51,5 @@ public record DemandDocumentation1
     [IsoXmlTag("DmndNrrtv")]
     [IsoSimpleType(IsoSimpleType.Max20000Text)]
     [StringLength(maximumLength: 20000, MinimumLength = 1)]
-    public IsoMax20000Text? DemandNarrative { get; init; }
+    public Max20000Text? DemandNarrative { get; init; }
 }

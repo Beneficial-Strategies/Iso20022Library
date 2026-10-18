@@ -22,7 +22,7 @@ public record OriginalPaymentInstruction56
     [IsoId("a3560f2c-3a9f-43c2-8b52-4ed255ff5e9d")]
     [DisplayName("Original Payment Information Identification")]
     [IsoXmlTag("OrgnlPmtInfId")]
-    public required IsoMax35Text OriginalPaymentInformationIdentification { get; init; }
+    public required Max35Text OriginalPaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Number of individual transactions contained in the original payment information group.
@@ -30,7 +30,7 @@ public record OriginalPaymentInstruction56
     [IsoId("c0ef9d4a-4b9e-4f54-88a6-e1478d1d183a")]
     [DisplayName("Original Number Of Transactions")]
     [IsoXmlTag("OrgnlNbOfTxs")]
-    public IsoMax15NumericText? OriginalNumberOfTransactions { get; init; }
+    public Max15NumericText? OriginalNumberOfTransactions { get; init; }
 
     /// <summary>
     /// Total of all individual amounts included in the original payment information group, irrespective of currencies.
@@ -38,7 +38,7 @@ public record OriginalPaymentInstruction56
     [IsoId("b9d9e4e3-c695-4bcd-a6a6-68a30253f8a8")]
     [DisplayName("Original Control Sum")]
     [IsoXmlTag("OrgnlCtrlSum")]
-    public IsoDecimalNumber? OriginalControlSum { get; init; }
+    public DecimalNumber? OriginalControlSum { get; init; }
 
     /// <summary>
     /// Specifies the status of the payment information group.

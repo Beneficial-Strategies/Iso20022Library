@@ -24,7 +24,7 @@ public record Transaction81
     [DisplayName("Transaction Type")]
     [IsoXmlTag("TxTp")]
     [IsoSimpleType(IsoSimpleType.Exact2AlphaNumericText)]
-    public required IsoExact2AlphaNumericText TransactionType { get; init; }
+    public required Exact2AlphaNumericText TransactionType { get; init; }
 
     /// <summary>
     /// Provides further granularity of purpose of TransactionType
@@ -34,7 +34,7 @@ public record Transaction81
     [IsoXmlTag("TxSubTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TransactionSubType { get; init; }
+    public Max35Text? TransactionSubType { get; init; }
 
     /// <summary>
     /// Identification of the transaction.

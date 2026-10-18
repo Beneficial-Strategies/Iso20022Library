@@ -40,7 +40,7 @@ public record ATMTransaction11
     [IsoXmlTag("RcncltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ReconciliationIdentification { get; init; }
+    public required Max35Text ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Current totals of the ATM.
@@ -73,7 +73,7 @@ public record ATMTransaction11
     [DisplayName("Retained Card")]
     [IsoXmlTag("RtndCard")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? RetainedCard { get; init; }
+    public Number? RetainedCard { get; init; }
 
     /// <summary>
     /// Additional information about reconciliation.
@@ -83,5 +83,5 @@ public record ATMTransaction11
     [IsoXmlTag("AddtlTxInf")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? AdditionalTransactionInformation { get; init; }
+    public Max140Text? AdditionalTransactionInformation { get; init; }
 }

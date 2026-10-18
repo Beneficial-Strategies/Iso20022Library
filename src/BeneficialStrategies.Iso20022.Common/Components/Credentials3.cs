@@ -28,21 +28,21 @@ public record Credentials3
     /// </summary>
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
-    public IsoISOYearMonth? ExpiryDate { get; init; }
+    public ISOYearMonth? ExpiryDate { get; init; }
 
     /// <summary>
     /// Other Type.
     /// </summary>
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Sub Type.
     /// </summary>
     [DisplayName("Sub Type")]
     [IsoXmlTag("SubTp")]
-    public IsoMax35Text? SubType { get; init; }
+    public Max35Text? SubType { get; init; }
 
     /// <summary>
     /// Type.
@@ -56,5 +56,5 @@ public record Credentials3
     /// </summary>
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
-    public required IsoMax70Text Value { get; init; }
+    public required Max70Text Value { get; init; }
 }

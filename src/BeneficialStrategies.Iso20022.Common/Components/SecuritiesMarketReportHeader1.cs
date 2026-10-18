@@ -39,5 +39,5 @@ public record SecuritiesMarketReportHeader1
     [DisplayName("Submission Date Time")]
     [IsoXmlTag("SubmissnDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? SubmissionDateTime { get; init; }
+    public ISODateTime? SubmissionDateTime { get; init; }
 }

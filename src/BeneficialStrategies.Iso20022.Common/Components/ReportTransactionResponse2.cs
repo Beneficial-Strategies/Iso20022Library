@@ -23,7 +23,7 @@ public record ReportTransactionResponse2
     [DisplayName("Report Full Size")]
     [IsoXmlTag("RptFullSz")]
     [IsoSimpleType(IsoSimpleType.PositiveNumber)]
-    public required IsoPositiveNumber ReportFullSize { get; init; }
+    public required PositiveNumber ReportFullSize { get; init; }
 
     /// <summary>
     /// Index of the first transaction reported in this message within the list of transactions matching the search criteria.
@@ -32,7 +32,7 @@ public record ReportTransactionResponse2
     [DisplayName("Block Start")]
     [IsoXmlTag("BlckStart")]
     [IsoSimpleType(IsoSimpleType.PositiveNumber)]
-    public required IsoPositiveNumber BlockStart { get; init; }
+    public required PositiveNumber BlockStart { get; init; }
 
     /// <summary>
     /// Index of the last transaction reported in this message.
@@ -41,7 +41,7 @@ public record ReportTransactionResponse2
     [DisplayName("Block Stop")]
     [IsoXmlTag("BlckStop")]
     [IsoSimpleType(IsoSimpleType.PositiveNumber)]
-    public required IsoPositiveNumber BlockStop { get; init; }
+    public required PositiveNumber BlockStop { get; init; }
 
     /// <summary>
     /// List of Transaction Report containing one Transaction Report for each transaction matching the Search criteria. This list may be partial according to requested block.

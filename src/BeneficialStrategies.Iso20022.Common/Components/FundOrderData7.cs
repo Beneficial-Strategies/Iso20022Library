@@ -38,7 +38,7 @@ public record FundOrderData7
     [IsoId("7a196d0d-4b05-4849-9ea6-7b1fee14e879")]
     [DisplayName("Units Number")]
     [IsoXmlTag("UnitsNb")]
-    public IsoDecimalNumber? UnitsNumber { get; init; }
+    public DecimalNumber? UnitsNumber { get; init; }
 
     /// <summary>
     /// Quantity of digital tokens expressed as a number, for example, a number of blockchain tokens.
@@ -46,7 +46,7 @@ public record FundOrderData7
     [IsoId("e8d01b5a-6510-4624-b785-52be658214b0")]
     [DisplayName("Digital Token Unit")]
     [IsoXmlTag("DgtlTknUnit")]
-    public IsoMax30DecimalNumber? DigitalTokenUnit { get; init; }
+    public Max30DecimalNumber? DigitalTokenUnit { get; init; }
 
     /// <summary>
     /// Amount of money to be invested in or received from the fund.
@@ -70,7 +70,7 @@ public record FundOrderData7
     [IsoId("8a6682a7-79d2-44dc-b89c-06a69e1b9abb")]
     [DisplayName("Holdings Redemption Rate")]
     [IsoXmlTag("HldgsRedRate")]
-    public IsoPercentageRate? HoldingsRedemptionRate { get; init; }
+    public PercentageRate? HoldingsRedemptionRate { get; init; }
 
     /// <summary>
     /// Total amount of money paid /to be paid or received in exchange for the financial instrument in the individual order.

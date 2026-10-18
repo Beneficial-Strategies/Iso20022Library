@@ -23,7 +23,7 @@ public record ReservationReturnCriteria1
     [DisplayName("Start Date Time Indicator")]
     [IsoXmlTag("StartDtTmInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? StartDateTimeIndicator { get; init; }
+    public RequestedIndicator? StartDateTimeIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the reservation status is requested.
@@ -32,5 +32,5 @@ public record ReservationReturnCriteria1
     [DisplayName("Status Indicator")]
     [IsoXmlTag("StsInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? StatusIndicator { get; init; }
+    public RequestedIndicator? StatusIndicator { get; init; }
 }

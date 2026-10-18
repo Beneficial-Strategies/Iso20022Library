@@ -21,7 +21,7 @@ public record SecurityCSDLinkUpdate3
     /// </summary>
     [DisplayName("Default Link")]
     [IsoXmlTag("DfltLk")]
-    public IsoTrueFalseIndicator? DefaultLink { get; init; }
+    public TrueFalseIndicator? DefaultLink { get; init; }
 
     /// <summary>
     /// Valid To.

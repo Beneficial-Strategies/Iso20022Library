@@ -42,12 +42,12 @@ public record PartyIdentificationAndAccount230
     /// </summary>
     [DisplayName("Processing Identification")]
     [IsoXmlTag("PrcgId")]
-    public IsoMax35Text? ProcessingIdentification { get; init; }
+    public Max35Text? ProcessingIdentification { get; init; }
 
     /// <summary>
     /// Safekeeping Account.
     /// </summary>
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
-    public IsoMax35Text? SafekeepingAccount { get; init; }
+    public Max35Text? SafekeepingAccount { get; init; }
 }

@@ -86,7 +86,7 @@ public record CardPaymentTransactionDetails54
     [IsoId("_S1CoNbZjEfCUZfsQO4rYeA")]
     [DisplayName("Validity Date")]
     [IsoXmlTag("VldtyDt")]
-    public IsoISODate? ValidityDate { get; init; }
+    public DateOnly? ValidityDate { get; init; }
 
     /// <summary>
     /// Reason to process an online authorisation.
@@ -102,7 +102,7 @@ public record CardPaymentTransactionDetails54
     [IsoId("_S1CoQbZjEfCUZfsQO4rYeA")]
     [DisplayName("Unattended Level Category")]
     [IsoXmlTag("UattnddLvlCtgy")]
-    public IsoMax35NumericText? UnattendedLevelCategory { get; init; }
+    public Max35NumericText? UnattendedLevelCategory { get; init; }
 
     /// <summary>
     /// Type of cardholder account used for the transaction.
@@ -150,7 +150,7 @@ public record CardPaymentTransactionDetails54
     [IsoId("_S1CoYbZjEfCUZfsQO4rYeA")]
     [DisplayName("Product Code Set Identification")]
     [IsoXmlTag("PdctCdSetId")]
-    public IsoMax10Text? ProductCodeSetIdentification { get; init; }
+    public Max10Text? ProductCodeSetIdentification { get; init; }
 
     /// <summary>
     /// Item purchased with the transaction.
@@ -166,7 +166,7 @@ public record CardPaymentTransactionDetails54
     [IsoId("_S1CobbZjEfCUZfsQO4rYeA")]
     [DisplayName("Delivery Location")]
     [IsoXmlTag("DlvryLctn")]
-    public IsoMax35Text? DeliveryLocation { get; init; }
+    public Max35Text? DeliveryLocation { get; init; }
 
     /// <summary>
     /// In case a message is sent after the consumption of goods or service, it indicates the number of times the authorisation has been sent to the Acquirer in order to get an approval.
@@ -174,7 +174,7 @@ public record CardPaymentTransactionDetails54
     [IsoId("_S1Coc7ZjEfCUZfsQO4rYeA")]
     [DisplayName("Re Submission Counter")]
     [IsoXmlTag("ReSubmissnCntr")]
-    public IsoPositiveNumber? ReSubmissionCounter { get; init; }
+    public PositiveNumber? ReSubmissionCounter { get; init; }
 
     /// <summary>
     /// Total Number of Completion related to the authorisation of this transaction.
@@ -182,7 +182,7 @@ public record CardPaymentTransactionDetails54
     [IsoId("_S1CoebZjEfCUZfsQO4rYeA")]
     [DisplayName("Completion Sequence Number")]
     [IsoXmlTag("CmpltnSeqNb")]
-    public IsoPositiveNumber? CompletionSequenceNumber { get; init; }
+    public PositiveNumber? CompletionSequenceNumber { get; init; }
 
     /// <summary>
     /// Identification in the Sequence of the Completion related to the authorisation of this transaction.
@@ -190,7 +190,7 @@ public record CardPaymentTransactionDetails54
     [IsoId("_S1Coe7ZjEfCUZfsQO4rYeA")]
     [DisplayName("Completion Sequence Counter")]
     [IsoXmlTag("CmpltnSeqCntr")]
-    public IsoPositiveNumber? CompletionSequenceCounter { get; init; }
+    public PositiveNumber? CompletionSequenceCounter { get; init; }
 
     /// <summary>
     /// Total Amount authorised for the payment transaction when a sequence of completion is used.
@@ -214,5 +214,5 @@ public record CardPaymentTransactionDetails54
     [IsoId("_S1CohbZjEfCUZfsQO4rYeA")]
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
-    public IsoMax10000Binary? ICCRelatedData { get; init; }
+    public Max10000Binary? ICCRelatedData { get; init; }
 }

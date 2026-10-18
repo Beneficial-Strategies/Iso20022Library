@@ -33,7 +33,7 @@ public record PartyAuditTrail1
     [DisplayName("Operation Time Stamp")]
     [IsoXmlTag("OprTmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime OperationTimeStamp { get; init; }
+    public required ISODateTime OperationTimeStamp { get; init; }
 
     /// <summary>
     /// User who instructed the change.
@@ -43,7 +43,7 @@ public record PartyAuditTrail1
     [IsoXmlTag("InstgUsr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public required IsoMax256Text InstructingUser { get; init; }
+    public required Max256Text InstructingUser { get; init; }
 
     /// <summary>
     /// User who approved the change instructed by the instructing user.
@@ -53,5 +53,5 @@ public record PartyAuditTrail1
     [IsoXmlTag("ApprvgUsr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? ApprovingUser { get; init; }
+    public Max256Text? ApprovingUser { get; init; }
 }

@@ -73,7 +73,7 @@ public record AmendmentInformationDetails15
     /// </summary>
     [DisplayName("Original Final Collection Date")]
     [IsoXmlTag("OrgnlFnlColltnDt")]
-    public IsoISODate? OriginalFinalCollectionDate { get; init; }
+    public DateOnly? OriginalFinalCollectionDate { get; init; }
 
     /// <summary>
     /// Original frequency that has been modified.
@@ -87,7 +87,7 @@ public record AmendmentInformationDetails15
     /// </summary>
     [DisplayName("Original Mandate Identification")]
     [IsoXmlTag("OrgnlMndtId")]
-    public IsoMax35Text? OriginalMandateIdentification { get; init; }
+    public Max35Text? OriginalMandateIdentification { get; init; }
 
     /// <summary>
     /// Original reason for the mandate to allow the user to distinguish between different mandates for the same creditor.
@@ -101,5 +101,5 @@ public record AmendmentInformationDetails15
     /// </summary>
     [DisplayName("Original Tracking Days")]
     [IsoXmlTag("OrgnlTrckgDays")]
-    public IsoExact2NumericText? OriginalTrackingDays { get; init; }
+    public Exact2NumericText? OriginalTrackingDays { get; init; }
 }

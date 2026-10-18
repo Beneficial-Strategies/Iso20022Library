@@ -32,7 +32,7 @@ public record MovementRecord2
     /// </remarks>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Identification of a participant on behalf of which the settlement agent instructs the market infrastructure to settle the obligations using accounts held in the settlement service.
@@ -53,14 +53,14 @@ public record MovementRecord2
     /// </summary>
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
-    public IsoMax35Text? Reference { get; init; }
+    public Max35Text? Reference { get; init; }
 
     /// <summary>
     /// An index to identify the individual movement record entry.
     /// </summary>
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
-    public IsoNumber? SequenceNumber { get; init; }
+    public Number? SequenceNumber { get; init; }
 
     /// <summary>
     /// Agent in whose account the funds settle on behalf of the participant.

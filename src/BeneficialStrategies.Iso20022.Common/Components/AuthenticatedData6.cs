@@ -23,7 +23,7 @@ public record AuthenticatedData6
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Version { get; init; }
+    public Number? Version { get; init; }
 
     /// <summary>
     /// Session key or protection key identification used by the recipient.
@@ -58,5 +58,5 @@ public record AuthenticatedData6
     [DisplayName("MAC")]
     [IsoXmlTag("MAC")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public required IsoMax140Binary MAC { get; init; }
+    public required Max140Binary MAC { get; init; }
 }

@@ -40,7 +40,7 @@ public record ActionMessage2
     [IsoXmlTag("MsgCntt")]
     [IsoSimpleType(IsoSimpleType.Max20000Text)]
     [StringLength(maximumLength: 20000, MinimumLength = 1)]
-    public required IsoMax20000Text MessageContent { get; init; }
+    public required Max20000Text MessageContent { get; init; }
 
     /// <summary>
     /// Digital signature of the message.
@@ -49,5 +49,5 @@ public record ActionMessage2
     [DisplayName("Message Content Signature")]
     [IsoXmlTag("MsgCnttSgntr")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public IsoMax140Binary? MessageContentSignature { get; init; }
+    public Max140Binary? MessageContentSignature { get; init; }
 }

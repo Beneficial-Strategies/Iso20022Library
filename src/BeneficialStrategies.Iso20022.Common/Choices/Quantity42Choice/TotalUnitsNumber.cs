@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity42Choice
         /// </summary>
         [IsoXmlTag("TtlUnitsNb")]
         [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-        public required IsoDecimalNumber Value { get; init; }
+        public required DecimalNumber Value { get; init; }
     }
 }

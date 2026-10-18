@@ -35,7 +35,7 @@ public record ATMCommand17
     /// </summary>
     [DisplayName("Date Time")]
     [IsoXmlTag("DtTm")]
-    public IsoISODateTime? DateTime { get; init; }
+    public ISODateTime? DateTime { get; init; }
 
     /// <summary>
     /// Type.

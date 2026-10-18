@@ -32,5 +32,5 @@ public record Acquirer4
     [IsoXmlTag("ParamsVrsn")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public required IsoMax256Text ParametersVersion { get; init; }
+    public required Max256Text ParametersVersion { get; init; }
 }

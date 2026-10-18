@@ -34,7 +34,7 @@ public record DocumentLineInformation1
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
     [StringLength(maximumLength: 2048, MinimumLength = 1)]
-    public IsoMax2048Text? Description { get; init; }
+    public Max2048Text? Description { get; init; }
 
     /// <summary>
     /// Provides details on the amounts of the document line.

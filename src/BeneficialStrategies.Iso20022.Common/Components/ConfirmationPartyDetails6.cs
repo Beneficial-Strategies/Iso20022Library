@@ -56,7 +56,7 @@ public record ConfirmationPartyDetails6
     [IsoXmlTag("PrcgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProcessingIdentification { get; init; }
+    public Max35Text? ProcessingIdentification { get; init; }
 
     /// <summary>
     /// Provides additional information to a party identification.
@@ -81,5 +81,5 @@ public record ConfirmationPartyDetails6
     [DisplayName("Investor Protection Association Membership")]
     [IsoXmlTag("InvstrPrtcnAssoctnMmbsh")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? InvestorProtectionAssociationMembership { get; init; }
+    public YesNoIndicator? InvestorProtectionAssociationMembership { get; init; }
 }

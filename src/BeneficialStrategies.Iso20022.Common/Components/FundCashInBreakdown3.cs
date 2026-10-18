@@ -39,7 +39,7 @@ public record FundCashInBreakdown3
     [DisplayName("New Amount Indicator")]
     [IsoXmlTag("NewAmtInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? NewAmountIndicator { get; init; }
+    public YesNoIndicator? NewAmountIndicator { get; init; }
 
     /// <summary>
     /// Type of transaction that resulted in the cash-in movement, for example, subscription, switch-in.

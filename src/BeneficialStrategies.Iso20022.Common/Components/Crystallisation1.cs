@@ -24,7 +24,7 @@ public record Crystallisation1
     [IsoXmlTag("TrchId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TrancheIdentification { get; init; }
+    public required Max35Text TrancheIdentification { get; init; }
 
     /// <summary>
     /// Number of units crystallised.
@@ -33,7 +33,7 @@ public record Crystallisation1
     [DisplayName("Crystallised Units Number")]
     [IsoXmlTag("CrstllsdUnitsNb")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? CrystallisedUnitsNumber { get; init; }
+    public DecimalNumber? CrystallisedUnitsNumber { get; init; }
 
     /// <summary>
     /// Number of units uncrystallised.
@@ -42,7 +42,7 @@ public record Crystallisation1
     [DisplayName("Uncrystallised Units Number")]
     [IsoXmlTag("UcrstllsdUnitsNb")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? UncrystallisedUnitsNumber { get; init; }
+    public DecimalNumber? UncrystallisedUnitsNumber { get; init; }
 
     /// <summary>
     /// Additional information about the crystallisation.

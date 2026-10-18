@@ -23,7 +23,7 @@ public record DisputeData1
     [DisplayName("Presentment Cycle")]
     [IsoXmlTag("PresntmntCycl")]
     [IsoSimpleType(IsoSimpleType.Exact1NumericText)]
-    public IsoExact1NumericText? PresentmentCycle { get; init; }
+    public Exact1NumericText? PresentmentCycle { get; init; }
 
     /// <summary>
     /// Condition of the dispute.
@@ -33,7 +33,7 @@ public record DisputeData1
     [IsoXmlTag("DsptCond")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DisputeCondition { get; init; }
+    public Max35Text? DisputeCondition { get; init; }
 
     /// <summary>
     /// Status of dispute.
@@ -43,7 +43,7 @@ public record DisputeData1
     [IsoXmlTag("DsptSts")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DisputeStatus { get; init; }
+    public Max35Text? DisputeStatus { get; init; }
 
     /// <summary>
     /// Partial dispute indicator.
@@ -52,7 +52,7 @@ public record DisputeData1
     [DisplayName("Partial Dispute")]
     [IsoXmlTag("PrtlDspt")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PartialDispute { get; init; }
+    public YesNoIndicator? PartialDispute { get; init; }
 
     /// <summary>
     /// Reference for the dispute.
@@ -70,7 +70,7 @@ public record DisputeData1
     [IsoXmlTag("DcmnttnSts")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DocumentationStatus { get; init; }
+    public Max35Text? DocumentationStatus { get; init; }
 
     /// <summary>
     /// Additional information related to the dispute.
@@ -80,7 +80,7 @@ public record DisputeData1
     [IsoXmlTag("AddtlDsptData")]
     [IsoSimpleType(IsoSimpleType.Max1000Text)]
     [StringLength(maximumLength: 1000, MinimumLength = 1)]
-    public IsoMax1000Text? AdditionalDisputeData { get; init; }
+    public Max1000Text? AdditionalDisputeData { get; init; }
 
     /// <summary>
     /// Reason for rejecting a dispute.
@@ -88,7 +88,7 @@ public record DisputeData1
     [IsoId("_ChtPgENlEeiut6dbx3wnBg")]
     [DisplayName("Dispute Reject Reason")]
     [IsoXmlTag("DsptRjctRsn")]
-    public SimpleValueList<IsoMax35Text> DisputeRejectReason { get; init; } = [];
+    public SimpleValueList<Max35Text> DisputeRejectReason { get; init; } = [];
 
     /// <summary>
     /// Provides transaction chargeback eligibility conditions.
@@ -98,5 +98,5 @@ public record DisputeData1
     [IsoXmlTag("ChrgbckElgblty")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ChargebackEligibility { get; init; }
+    public Max35Text? ChargebackEligibility { get; init; }
 }

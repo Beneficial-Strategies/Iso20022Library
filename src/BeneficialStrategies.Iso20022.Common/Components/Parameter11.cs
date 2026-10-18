@@ -39,7 +39,7 @@ public record Parameter11
     [DisplayName("Salt Length")]
     [IsoXmlTag("SaltLngth")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber SaltLength { get; init; }
+    public required Number SaltLength { get; init; }
 
     /// <summary>
     /// Trailer field number.
@@ -48,5 +48,5 @@ public record Parameter11
     [DisplayName("Trailer Field")]
     [IsoXmlTag("TrlrFld")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? TrailerField { get; init; }
+    public Number? TrailerField { get; init; }
 }

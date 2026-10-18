@@ -35,26 +35,26 @@ public record DebitAuthorisationConfirmation3
     /// </summary>
     [DisplayName("Common Transaction Identification")]
     [IsoXmlTag("CmonTxId")]
-    public IsoMax52Text? CommonTransactionIdentification { get; init; }
+    public Max52Text? CommonTransactionIdentification { get; init; }
 
     /// <summary>
     /// Debit Authorisation.
     /// </summary>
     [DisplayName("Debit Authorisation")]
     [IsoXmlTag("DbtAuthstn")]
-    public required IsoTrueFalseIndicator DebitAuthorisation { get; init; }
+    public required TrueFalseIndicator DebitAuthorisation { get; init; }
 
     /// <summary>
     /// Reason.
     /// </summary>
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public IsoMax140Text? Reason { get; init; }
+    public Max140Text? Reason { get; init; }
 
     /// <summary>
     /// Value Date To Debit.
     /// </summary>
     [DisplayName("Value Date To Debit")]
     [IsoXmlTag("ValDtToDbt")]
-    public IsoISODate? ValueDateToDebit { get; init; }
+    public DateOnly? ValueDateToDebit { get; init; }
 }

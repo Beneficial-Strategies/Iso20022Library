@@ -40,7 +40,7 @@ public record TravelDocument1
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public required IsoMax70Text Identification { get; init; }
+    public required Max70Text Identification { get; init; }
 
     /// <summary>
     /// Party assigning the travel document.
@@ -50,7 +50,7 @@ public record TravelDocument1
     [IsoXmlTag("Assgnr")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Assigner { get; init; }
+    public Max70Text? Assigner { get; init; }
 
     /// <summary>
     /// Issuance date of travel document.
@@ -59,7 +59,7 @@ public record TravelDocument1
     [DisplayName("Issuance Date")]
     [IsoXmlTag("IssncDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? IssuanceDate { get; init; }
+    public DateOnly? IssuanceDate { get; init; }
 
     /// <summary>
     /// Expiration date of travel document (if and when relevant).
@@ -68,7 +68,7 @@ public record TravelDocument1
     [DisplayName("Expiration Date")]
     [IsoXmlTag("XprtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ExpirationDate { get; init; }
+    public DateOnly? ExpirationDate { get; init; }
 
     /// <summary>
     /// Country issuing the travel document.
@@ -77,5 +77,5 @@ public record TravelDocument1
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
     [IsoSimpleType(IsoSimpleType.Min2Max3AlphaText)]
-    public IsoMin2Max3AlphaText? Country { get; init; }
+    public Min2Max3AlphaText? Country { get; init; }
 }

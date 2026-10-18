@@ -21,7 +21,7 @@ public record KeyTransport10
     /// </summary>
     [DisplayName("Encrypted Key")]
     [IsoXmlTag("NcrptdKey")]
-    public required IsoMax5000Binary EncryptedKey { get; init; }
+    public required Max5000Binary EncryptedKey { get; init; }
 
     /// <summary>
     /// Key Encryption Algorithm.
@@ -42,5 +42,5 @@ public record KeyTransport10
     /// </summary>
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
-    public IsoNumber? Version { get; init; }
+    public Number? Version { get; init; }
 }

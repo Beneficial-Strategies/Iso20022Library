@@ -11,6 +11,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CashSettlementSystemPlace1Choice
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("LEI")]
-        public required IsoLEIIdentifier Value { get; init; }
+        public required LEIIdentifier Value { get; init; }
     }
 }

@@ -48,7 +48,7 @@ public record PointOfInteractionCapabilities5
     [DisplayName("PIN Length Capabilities")]
     [IsoXmlTag("PINLngthCpblties")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? PINLengthCapabilities { get; init; }
+    public Number? PINLengthCapabilities { get; init; }
 
     /// <summary>
     /// Maximum number of characters of the approval code the ATM is able to manage.
@@ -57,7 +57,7 @@ public record PointOfInteractionCapabilities5
     [DisplayName("Approval Code Length")]
     [IsoXmlTag("ApprvlCdLngth")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? ApprovalCodeLength { get; init; }
+    public Number? ApprovalCodeLength { get; init; }
 
     /// <summary>
     /// Maximum data length in bytes that a card issuer can return to the ICC at the terminal.
@@ -66,7 +66,7 @@ public record PointOfInteractionCapabilities5
     [DisplayName("Max Script Length")]
     [IsoXmlTag("MxScrptLngth")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaxScriptLength { get; init; }
+    public Number? MaxScriptLength { get; init; }
 
     /// <summary>
     /// True if the ATM is able to capture card.
@@ -75,5 +75,5 @@ public record PointOfInteractionCapabilities5
     [DisplayName("Card Capture Capable")]
     [IsoXmlTag("CardCaptrCpbl")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CardCaptureCapable { get; init; }
+    public TrueFalseIndicator? CardCaptureCapable { get; init; }
 }

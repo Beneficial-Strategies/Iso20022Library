@@ -23,7 +23,7 @@ public record TransactionTotals6
     [DisplayName("Authorisation")]
     [IsoXmlTag("Authstn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Authorisation { get; init; }
+    public Number? Authorisation { get; init; }
 
     /// <summary>
     /// Sum number of all reversed authorisation transactions.
@@ -32,7 +32,7 @@ public record TransactionTotals6
     [DisplayName("Authorisation Reversal")]
     [IsoXmlTag("AuthstnRvsl")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? AuthorisationReversal { get; init; }
+    public Number? AuthorisationReversal { get; init; }
 
     /// <summary>
     /// Sum number of all inquiry transactions.
@@ -41,7 +41,7 @@ public record TransactionTotals6
     [DisplayName("Inquiry")]
     [IsoXmlTag("Nqry")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Inquiry { get; init; }
+    public Number? Inquiry { get; init; }
 
     /// <summary>
     /// Sum number of all reversed inquiry transactions.
@@ -50,7 +50,7 @@ public record TransactionTotals6
     [DisplayName("Inquiry Reversal")]
     [IsoXmlTag("NqryRvsl")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? InquiryReversal { get; init; }
+    public Number? InquiryReversal { get; init; }
 
     /// <summary>
     /// Sum number of all financial presentment payment transactions processed.
@@ -59,7 +59,7 @@ public record TransactionTotals6
     [DisplayName("Payments")]
     [IsoXmlTag("Pmts")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Payments { get; init; }
+    public Number? Payments { get; init; }
 
     /// <summary>
     /// Sum number of all financial presentment payment transactions which have been reversed.
@@ -68,7 +68,7 @@ public record TransactionTotals6
     [DisplayName("Payment Reversal")]
     [IsoXmlTag("PmtRvsl")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? PaymentReversal { get; init; }
+    public Number? PaymentReversal { get; init; }
 
     /// <summary>
     /// Sum number of all financial presentment transactions processed.
@@ -77,7 +77,7 @@ public record TransactionTotals6
     [DisplayName("Transfer")]
     [IsoXmlTag("Trf")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Transfer { get; init; }
+    public Number? Transfer { get; init; }
 
     /// <summary>
     /// Sum number of all reversal transactions processed.
@@ -86,7 +86,7 @@ public record TransactionTotals6
     [DisplayName("Transfer Reversal")]
     [IsoXmlTag("TrfRvsl")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? TransferReversal { get; init; }
+    public Number? TransferReversal { get; init; }
 
     /// <summary>
     /// Sum number of all fee collection transactions.
@@ -95,5 +95,5 @@ public record TransactionTotals6
     [DisplayName("Fee Collection")]
     [IsoXmlTag("FeeColltn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? FeeCollection { get; init; }
+    public Number? FeeCollection { get; init; }
 }

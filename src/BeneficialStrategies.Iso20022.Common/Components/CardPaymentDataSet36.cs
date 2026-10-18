@@ -49,7 +49,7 @@ public record CardPaymentDataSet36
     /// </summary>
     [DisplayName("Remove Data Set")]
     [IsoXmlTag("RmvDataSet")]
-    public required IsoTrueFalseIndicator RemoveDataSet { get; init; }
+    public required TrueFalseIndicator RemoveDataSet { get; init; }
 
     /// <summary>
     /// Resumed Approval.

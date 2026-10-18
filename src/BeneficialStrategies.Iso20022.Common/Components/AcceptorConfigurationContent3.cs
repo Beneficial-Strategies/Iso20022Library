@@ -30,7 +30,7 @@ public record AcceptorConfigurationContent3
     [IsoId("_lNuAEzZ6EeOP_KvUKe29ng")]
     [DisplayName("Merchant Parameters")]
     [IsoXmlTag("MrchntParams")]
-    public SimpleValueList<IsoMax10000Binary> MerchantParameters { get; init; } = [];
+    public SimpleValueList<Max10000Binary> MerchantParameters { get; init; } = [];
 
     /// <summary>
     /// Manufacturer configuration parameters of the point of interaction.

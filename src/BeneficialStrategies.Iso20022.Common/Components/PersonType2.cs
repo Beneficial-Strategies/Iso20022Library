@@ -24,7 +24,7 @@ public record PersonType2
     [DisplayName("Date And Place Of Birth")]
     [IsoXmlTag("DtAndPlcOfBirth")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? DateAndPlaceOfBirth { get; init; }
+    public RequestedIndicator? DateAndPlaceOfBirth { get; init; }
 
     /// <summary>
     /// Address for electronic mail (e-mail) is requested.
@@ -34,7 +34,7 @@ public record PersonType2
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? EmailAddress { get; init; }
+    public RequestedIndicator? EmailAddress { get; init; }
 
     /// <summary>
     /// Unique identification of a person, as assigned by an institution, using an identification scheme is requested.

@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice23Choi
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("Yld")]
-        public required IsoPercentageRate Value { get; init; }
+        public required PercentageRate Value { get; init; }
     }
 }

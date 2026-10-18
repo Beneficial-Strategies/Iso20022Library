@@ -21,14 +21,14 @@ public record ReferredMandateDocument2
     /// </summary>
     [DisplayName("Creditor Reference")]
     [IsoXmlTag("CdtrRef")]
-    public IsoMax35Text? CreditorReference { get; init; }
+    public Max35Text? CreditorReference { get; init; }
 
     /// <summary>
     /// Number.
     /// </summary>
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
-    public IsoMax35Text? Number { get; init; }
+    public Max35Text? Number { get; init; }
 
     /// <summary>
     /// Related Date.

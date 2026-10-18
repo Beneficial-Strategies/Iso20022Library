@@ -49,5 +49,5 @@ public record ATMDepositComponent1
     /// </summary>
     [DisplayName("Sub Deposit Identification")]
     [IsoXmlTag("SubDpstId")]
-    public IsoMax70Text? SubDepositIdentification { get; init; }
+    public Max70Text? SubDepositIdentification { get; init; }
 }

@@ -30,7 +30,7 @@ public record CurrencyConversion36
     [IsoId("_QFQOu7ZoEfCUZfsQO4rYeA")]
     [DisplayName("Result Reason")]
     [IsoXmlTag("RsltRsn")]
-    public IsoMax35Text? ResultReason { get; init; }
+    public Max35Text? ResultReason { get; init; }
 
     /// <summary>
     /// Information about the conversion of currency.

@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification7Choice
         [IsoXmlTag("TxId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? TransactionIdentification { get; init; }
+        public Max35Text? TransactionIdentification { get; init; }
 
         /// <summary>
         /// Universally unique identifier to provide an end-to-end reference of a payment transaction.
@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification7Choice
         [DisplayName("UETR")]
         [IsoXmlTag("UETR")]
         [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
-        public IsoUUIDv4Identifier? UETR { get; init; }
+        public UUIDv4Identifier? UETR { get; init; }
 
         /// <summary>
         /// Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.
@@ -42,7 +42,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification7Choice
         [DisplayName("Interbank Settlement Date")]
         [IsoXmlTag("IntrBkSttlmDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate InterbankSettlementDate { get; init; }
+        public required DateOnly InterbankSettlementDate { get; init; }
 
         /// <summary>
         /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).

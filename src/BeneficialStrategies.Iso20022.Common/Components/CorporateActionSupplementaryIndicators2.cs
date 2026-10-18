@@ -22,7 +22,7 @@ public record CorporateActionSupplementaryIndicators2
     [IsoId("_xmB4dbliEfC9BsKnzSuyPg")]
     [DisplayName("Conditional Payment Applicable Indicator")]
     [IsoXmlTag("CondlPmtAplblInd")]
-    public IsoYesNoIndicator? ConditionalPaymentApplicableIndicator { get; init; }
+    public YesNoIndicator? ConditionalPaymentApplicableIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether a solicitation dealer fee applies.
@@ -30,7 +30,7 @@ public record CorporateActionSupplementaryIndicators2
     [IsoId("_xmB4ebliEfC9BsKnzSuyPg")]
     [DisplayName("Solicitation Dealer Fee Indicator")]
     [IsoXmlTag("SlctnDealrFeeInd")]
-    public IsoYesNoIndicator? SolicitationDealerFeeIndicator { get; init; }
+    public YesNoIndicator? SolicitationDealerFeeIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether shares must be surrendered to the agent.
@@ -38,7 +38,7 @@ public record CorporateActionSupplementaryIndicators2
     [IsoId("_xmB4fbliEfC9BsKnzSuyPg")]
     [DisplayName("Surrender Shares To Agent Indicator")]
     [IsoXmlTag("SrrndrShrsToAgtInd")]
-    public IsoYesNoIndicator? SurrenderSharesToAgentIndicator { get; init; }
+    public YesNoIndicator? SurrenderSharesToAgentIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether step-up privilege applies.
@@ -46,7 +46,7 @@ public record CorporateActionSupplementaryIndicators2
     [IsoId("_xmB4gbliEfC9BsKnzSuyPg")]
     [DisplayName("Step Up Privilege Indicator")]
     [IsoXmlTag("StepUpPrvlgInd")]
-    public IsoYesNoIndicator? StepUpPrivilegeIndicator { get; init; }
+    public YesNoIndicator? StepUpPrivilegeIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether rights oversubscription applies.
@@ -54,7 +54,7 @@ public record CorporateActionSupplementaryIndicators2
     [IsoId("_xmB4hbliEfC9BsKnzSuyPg")]
     [DisplayName("Rights Oversubscription Indicator")]
     [IsoXmlTag("RghtsOvrsbcptInd")]
-    public IsoYesNoIndicator? RightsOversubscriptionIndicator { get; init; }
+    public YesNoIndicator? RightsOversubscriptionIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether rights round-up privilege applies.
@@ -62,7 +62,7 @@ public record CorporateActionSupplementaryIndicators2
     [IsoId("_xmB4ibliEfC9BsKnzSuyPg")]
     [DisplayName("Rights Round Up Privilege Indicator")]
     [IsoXmlTag("RghtsRndUpPrvlgInd")]
-    public IsoYesNoIndicator? RightsRoundUpPrivilegeIndicator { get; init; }
+    public YesNoIndicator? RightsRoundUpPrivilegeIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether rights are transferable.
@@ -70,7 +70,7 @@ public record CorporateActionSupplementaryIndicators2
     [IsoId("_xmB4jbliEfC9BsKnzSuyPg")]
     [DisplayName("Rights Transferable Indicator")]
     [IsoXmlTag("RghtsTrfblInd")]
-    public IsoYesNoIndicator? RightsTransferableIndicator { get; init; }
+    public YesNoIndicator? RightsTransferableIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether escrow-to-maturity applies.
@@ -78,7 +78,7 @@ public record CorporateActionSupplementaryIndicators2
     [IsoId("_xmB4kbliEfC9BsKnzSuyPg")]
     [DisplayName("Escrow To Maturity Indicator")]
     [IsoXmlTag("EscrwToMtrtyInd")]
-    public IsoYesNoIndicator? EscrowToMaturityIndicator { get; init; }
+    public YesNoIndicator? EscrowToMaturityIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether a concurrent call applies.
@@ -86,5 +86,5 @@ public record CorporateActionSupplementaryIndicators2
     [IsoId("_xmB4lbliEfC9BsKnzSuyPg")]
     [DisplayName("Concurrent Call Indicator")]
     [IsoXmlTag("CncrrntCallInd")]
-    public IsoYesNoIndicator? ConcurrentCallIndicator { get; init; }
+    public YesNoIndicator? ConcurrentCallIndicator { get; init; }
 }

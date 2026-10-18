@@ -24,7 +24,7 @@ public record AccountIdentificationAndName6
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Name { get; init; }
+    public Max35Text? Name { get; init; }
 
     /// <summary>
     /// International Bank Account Number (IBAN) - identifier used internationally by financial institutions to uniquely identify the account of the customer. Further specifications of the format and content of the IBAN can be found in the standard ISO 13616 &quot;Banking and related financial services - International Bank Account Number (IBAN)&quot; version 1997-10-01, or later revisions.
@@ -33,7 +33,7 @@ public record AccountIdentificationAndName6
     [DisplayName("IBAN")]
     [IsoXmlTag("IBAN")]
     [IsoSimpleType(IsoSimpleType.IBAN2007Identifier)]
-    public IsoIBAN2007Identifier? IBAN { get; init; }
+    public IBAN2007Identifier? IBAN { get; init; }
 
     /// <summary>
     /// Unique identification of the account, as assigned by the account servicer, using an identification scheme.

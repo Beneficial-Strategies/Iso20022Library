@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityClassificationType3Choic
         /// </summary>
         [IsoXmlTag("CFI")]
         [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
-        public required IsoCFIOct2015Identifier Value { get; init; }
+        public required CFIOct2015Identifier Value { get; init; }
     }
 }

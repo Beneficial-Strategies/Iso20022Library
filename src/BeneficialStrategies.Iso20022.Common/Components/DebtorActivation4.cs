@@ -26,7 +26,7 @@ public record DebtorActivation4
     [IsoXmlTag("DbtrActvtnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DebtorActivationIdentification { get; init; }
+    public Max35Text? DebtorActivationIdentification { get; init; }
 
     /// <summary>
     /// Name by which the debtor is known, other than legal name, such as the name to be shown to the creditor.
@@ -36,7 +36,7 @@ public record DebtorActivation4
     [IsoXmlTag("DispNm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? DisplayName { get; init; }
+    public Max140Text? DisplayName { get; init; }
 
     /// <summary>
     /// Ultimate party that owes an amount of money to the (ultimate) creditor.
@@ -136,5 +136,5 @@ public record DebtorActivation4
     [IsoXmlTag("DdctdActvtnCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DedicatedActivationCode { get; init; }
+    public Max35Text? DedicatedActivationCode { get; init; }
 }

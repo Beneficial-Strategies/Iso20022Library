@@ -32,7 +32,7 @@ public record PaymentConditionStatus2
     /// </summary>
     [DisplayName("Early Payment")]
     [IsoXmlTag("EarlyPmt")]
-    public IsoTrueFalseIndicator? EarlyPayment { get; init; }
+    public TrueFalseIndicator? EarlyPayment { get; init; }
 
     /// <summary>
     /// Indicates if the DebtorAgent guarantees the payment, assuming a payment guarantee contract exists between the different actors.
@@ -40,5 +40,5 @@ public record PaymentConditionStatus2
     /// </summary>
     [DisplayName("Guaranteed Payment")]
     [IsoXmlTag("GrntedPmt")]
-    public IsoTrueFalseIndicator? GuaranteedPayment { get; init; }
+    public TrueFalseIndicator? GuaranteedPayment { get; init; }
 }

@@ -22,7 +22,7 @@ public record FundingService4
     [IsoId("_0Q498T_ZEfCQAqQ9lolFUg")]
     [DisplayName("Provider")]
     [IsoXmlTag("Prvdr")]
-    public IsoMax35Text? Provider { get; init; }
+    public Max35Text? Provider { get; init; }
 
     /// <summary>
     /// Name of the funding service (for example, MoneyGram, Western Union, etc.).
@@ -30,7 +30,7 @@ public record FundingService4
     [IsoId("_0Q498z_ZEfCQAqQ9lolFUg")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax35Text? Name { get; init; }
+    public Max35Text? Name { get; init; }
 
     /// <summary>
     /// Reference to the funding service.
@@ -38,7 +38,7 @@ public record FundingService4
     [IsoId("_0Q499T_ZEfCQAqQ9lolFUg")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
-    public IsoMax35Text? Reference { get; init; }
+    public Max35Text? Reference { get; init; }
 
     /// <summary>
     /// Purpose of the transfer.
@@ -46,7 +46,7 @@ public record FundingService4
     [IsoId("_0Q499z_ZEfCQAqQ9lolFUg")]
     [DisplayName("Business Purpose")]
     [IsoXmlTag("BizPurp")]
-    public IsoMax500Text? BusinessPurpose { get; init; }
+    public Max500Text? BusinessPurpose { get; init; }
 
     /// <summary>
     /// Free text that can be used between the sender and the receiver to describe the details of the transfer.
@@ -54,7 +54,7 @@ public record FundingService4
     [IsoId("_0Q49-T_ZEfCQAqQ9lolFUg")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public IsoMax256Text? Description { get; init; }
+    public Max256Text? Description { get; init; }
 
     /// <summary>
     /// Source of funding.
@@ -70,7 +70,7 @@ public record FundingService4
     [IsoId("_0Q49_T_ZEfCQAqQ9lolFUg")]
     [DisplayName("Claim Credentials")]
     [IsoXmlTag("ClmCrdntls")]
-    public IsoMax500Text? ClaimCredentials { get; init; }
+    public Max500Text? ClaimCredentials { get; init; }
 
     /// <summary>
     /// Entity issuing the claim credential.
@@ -78,7 +78,7 @@ public record FundingService4
     [IsoId("_0Q49_z_ZEfCQAqQ9lolFUg")]
     [DisplayName("Claim Assigner")]
     [IsoXmlTag("ClmAssgnr")]
-    public IsoMax35Text? ClaimAssigner { get; init; }
+    public Max35Text? ClaimAssigner { get; init; }
 
     /// <summary>
     /// Contains service processing types.
@@ -86,7 +86,7 @@ public record FundingService4
     [IsoId("_4qb7oD_aEfCQAqQ9lolFUg")]
     [DisplayName("Service Processing Type")]
     [IsoXmlTag("SvcPrcgTp")]
-    public IsoMax3Text? ServiceProcessingType { get; init; }
+    public Max3Text? ServiceProcessingType { get; init; }
 
     /// <summary>
     /// Contains date and time value indicating scheduled deferred posting for issuer.
@@ -94,5 +94,5 @@ public record FundingService4
     [IsoId("_WgUmQD_bEfCQAqQ9lolFUg")]
     [DisplayName("Deferred Date Time")]
     [IsoXmlTag("DfrrdDtTm")]
-    public IsoISODateTime? DeferredDateTime { get; init; }
+    public ISODateTime? DeferredDateTime { get; init; }
 }

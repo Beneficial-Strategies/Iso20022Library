@@ -34,7 +34,7 @@ public record Transaction151
     [IsoXmlTag("OthrBtchMgmtTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherBatchManagementType { get; init; }
+    public Max35Text? OtherBatchManagementType { get; init; }
 
     /// <summary>
     /// Identification of the batch management transaction.
@@ -62,7 +62,7 @@ public record Transaction151
     [IsoXmlTag("ColltnId")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? CollectionIdentification { get; init; }
+    public Max70Text? CollectionIdentification { get; init; }
 
     /// <summary>
     /// Identification of a batch.
@@ -73,7 +73,7 @@ public record Transaction151
     [IsoXmlTag("BtchId")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? BatchIdentification { get; init; }
+    public Max70Text? BatchIdentification { get; init; }
 
     /// <summary>
     /// Total length in bytes of the collection to be transferred.
@@ -83,7 +83,7 @@ public record Transaction151
     [DisplayName("Collection Size")]
     [IsoXmlTag("ColltnSz")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? CollectionSize { get; init; }
+    public Number? CollectionSize { get; init; }
 
     /// <summary>
     /// Identification of the original collection.
@@ -94,7 +94,7 @@ public record Transaction151
     [IsoXmlTag("OrgnlColltnId")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? OriginalCollectionIdentification { get; init; }
+    public Max70Text? OriginalCollectionIdentification { get; init; }
 
     /// <summary>
     /// Identification of the original batch to answer.
@@ -105,7 +105,7 @@ public record Transaction151
     [IsoXmlTag("OrgnlBtchId")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? OriginalBatchIdentification { get; init; }
+    public Max70Text? OriginalBatchIdentification { get; init; }
 
     /// <summary>
     /// Number of batches in the collection.
@@ -118,7 +118,7 @@ public record Transaction151
     [DisplayName("Number Of Batches In Collection")]
     [IsoXmlTag("NbOfBtchsInColltn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NumberOfBatchesInCollection { get; init; }
+    public Number? NumberOfBatchesInCollection { get; init; }
 
     /// <summary>
     /// Number of messages.
@@ -136,7 +136,7 @@ public record Transaction151
     [DisplayName("Number Of Messages")]
     [IsoXmlTag("NbOfMsgs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NumberOfMessages { get; init; }
+    public Number? NumberOfMessages { get; init; }
 
     /// <summary>
     /// Number of remaining messages in the collection.
@@ -146,7 +146,7 @@ public record Transaction151
     [DisplayName("Remaining Messages In Collection")]
     [IsoXmlTag("RmngMsgsInColltn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? RemainingMessagesInCollection { get; init; }
+    public Number? RemainingMessagesInCollection { get; init; }
 
     /// <summary>
     /// For a start of collection, sequence number of first expected message of the collection.
@@ -160,7 +160,7 @@ public record Transaction151
     [DisplayName("Message Sequence Number")]
     [IsoXmlTag("MsgSeqNb")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public IsoMax15NumericText? MessageSequenceNumber { get; init; }
+    public Max15NumericText? MessageSequenceNumber { get; init; }
 
     /// <summary>
     /// List of collection identification that should have been sent or received.
@@ -168,7 +168,7 @@ public record Transaction151
     [IsoId("_YnxPgJb1Eeuc6pwKtqbEVQ")]
     [DisplayName("Collection Identification List")]
     [IsoXmlTag("ColltnIdList")]
-    public SimpleValueList<IsoMax70Text> CollectionIdentificationList { get; init; } = [];
+    public SimpleValueList<Max70Text> CollectionIdentificationList { get; init; } = [];
 
     /// <summary>
     /// List of batch identifications of the collection.
@@ -179,7 +179,7 @@ public record Transaction151
     [IsoId("_h2rYa4dNEeuBS50MFjViNw")]
     [DisplayName("Batch Identification List")]
     [IsoXmlTag("BtchIdList")]
-    public SimpleValueList<IsoMax70Text> BatchIdentificationList { get; init; } = [];
+    public SimpleValueList<Max70Text> BatchIdentificationList { get; init; } = [];
 
     /// <summary>
     /// Identification of a specific checkpoint.
@@ -189,7 +189,7 @@ public record Transaction151
     [IsoXmlTag("ChckptId")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? CheckpointIdentification { get; init; }
+    public Max70Text? CheckpointIdentification { get; init; }
 
     /// <summary>
     /// Checksum of the series of messages or batches in the collection.
@@ -198,7 +198,7 @@ public record Transaction151
     [DisplayName("Collection Checksum")]
     [IsoXmlTag("ColltnChcksm")]
     [IsoSimpleType(IsoSimpleType.Max35Binary)]
-    public IsoMax35Binary? CollectionChecksum { get; init; }
+    public Max35Binary? CollectionChecksum { get; init; }
 
     /// <summary>
     /// Checksum of the series of messages in the batch or until a checkpoint.
@@ -207,7 +207,7 @@ public record Transaction151
     [DisplayName("Batch Checksum")]
     [IsoXmlTag("BtchChcksm")]
     [IsoSimpleType(IsoSimpleType.Max35Binary)]
-    public IsoMax35Binary? BatchChecksum { get; init; }
+    public Max35Binary? BatchChecksum { get; init; }
 
     /// <summary>
     /// Indicator to request acknowledgement.
@@ -218,7 +218,7 @@ public record Transaction151
     [DisplayName("Request Acknowledgement")]
     [IsoXmlTag("ReqAck")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? RequestAcknowledgement { get; init; }
+    public TrueFalseIndicator? RequestAcknowledgement { get; init; }
 
     /// <summary>
     /// Maximum number of messages to be sent before acknowledgement. The receiver will send an acknowledgement response every time the indicated number of messages is reached.
@@ -227,7 +227,7 @@ public record Transaction151
     [DisplayName("Messages Before Acknowledgement")]
     [IsoXmlTag("MsgsBfrAck")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MessagesBeforeAcknowledgement { get; init; }
+    public Number? MessagesBeforeAcknowledgement { get; init; }
 
     /// <summary>
     /// Indicate whether the acknowledgement is positive or not.
@@ -238,7 +238,7 @@ public record Transaction151
     [DisplayName("Positive Acknowledgement")]
     [IsoXmlTag("PostvAck")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? PositiveAcknowledgement { get; init; }
+    public TrueFalseIndicator? PositiveAcknowledgement { get; init; }
 
     /// <summary>
     /// Contains additional data.
@@ -263,5 +263,5 @@ public record Transaction151
     [DisplayName("Continuation Indicator")]
     [IsoXmlTag("ConttnInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ContinuationIndicator { get; init; }
+    public TrueFalseIndicator? ContinuationIndicator { get; init; }
 }

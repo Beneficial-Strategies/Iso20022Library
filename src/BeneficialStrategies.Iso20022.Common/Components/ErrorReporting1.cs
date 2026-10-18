@@ -24,7 +24,7 @@ public record ErrorReporting1
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Type { get; init; }
+    public required Max35Text Type { get; init; }
 
     /// <summary>
     /// Detailed description of the error.
@@ -34,5 +34,5 @@ public record ErrorReporting1
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public required IsoMax500Text Description { get; init; }
+    public required Max500Text Description { get; init; }
 }

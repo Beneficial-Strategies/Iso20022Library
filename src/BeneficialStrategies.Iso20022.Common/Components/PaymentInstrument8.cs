@@ -58,7 +58,7 @@ public record PaymentInstrument8
     [DisplayName("Cheque")]
     [IsoXmlTag("Chq")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator Cheque { get; init; }
+    public required YesNoIndicator Cheque { get; init; }
 
     /// <summary>
     /// Indicates whether the payment is done via draft.
@@ -67,5 +67,5 @@ public record PaymentInstrument8
     [DisplayName("Bankers Draft")]
     [IsoXmlTag("BkrsDrft")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator BankersDraft { get; init; }
+    public required YesNoIndicator BankersDraft { get; init; }
 }

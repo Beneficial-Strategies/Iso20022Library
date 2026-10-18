@@ -32,7 +32,7 @@ public record RentalRate1
     [IsoXmlTag("OthrPrd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherPeriod { get; init; }
+    public Max35Text? OtherPeriod { get; init; }
 
     /// <summary>
     /// Rate applied to the vehicle rental for the specified period.
@@ -49,5 +49,5 @@ public record RentalRate1
     [DisplayName("Period Count")]
     [IsoXmlTag("PrdCnt")]
     [IsoSimpleType(IsoSimpleType.Max4NumericText)]
-    public IsoMax4NumericText? PeriodCount { get; init; }
+    public Max4NumericText? PeriodCount { get; init; }
 }

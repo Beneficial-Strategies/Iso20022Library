@@ -23,7 +23,7 @@ public record Token3
     [DisplayName("Payment Token")]
     [IsoXmlTag("PmtTkn")]
     [IsoSimpleType(IsoSimpleType.Max19NumericText)]
-    public IsoMax19NumericText? PaymentToken { get; init; }
+    public Max19NumericText? PaymentToken { get; init; }
 
     /// <summary>
     /// Expiry date of the payment token.
@@ -33,7 +33,7 @@ public record Token3
     [DisplayName("Token Expiry Date")]
     [IsoXmlTag("TknXpryDt")]
     [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
-    public IsoISOYearMonth? TokenExpiryDate { get; init; }
+    public ISOYearMonth? TokenExpiryDate { get; init; }
 
     /// <summary>
     /// Identification of a party requesting a token.
@@ -42,7 +42,7 @@ public record Token3
     [DisplayName("Token Requestor Identification")]
     [IsoXmlTag("TknRqstrId")]
     [IsoSimpleType(IsoSimpleType.Max11NumericText)]
-    public IsoMax11NumericText? TokenRequestorIdentification { get; init; }
+    public Max11NumericText? TokenRequestorIdentification { get; init; }
 
     /// <summary>
     /// Supporting information for the Token Assurance Method.
@@ -52,7 +52,7 @@ public record Token3
     [IsoXmlTag("TknAssrncData")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? TokenAssuranceData { get; init; }
+    public Max140Text? TokenAssuranceData { get; init; }
 
     /// <summary>
     /// Value that allows a Token Service Provider to indicate the identification and verification performed representing the binding of the payment token to the underlying PAN and cardholder.
@@ -61,7 +61,7 @@ public record Token3
     [DisplayName("Token Assurance Method")]
     [IsoXmlTag("TknAssrncMtd")]
     [IsoSimpleType(IsoSimpleType.Max2NumericText)]
-    public IsoMax2NumericText? TokenAssuranceMethod { get; init; }
+    public Max2NumericText? TokenAssuranceMethod { get; init; }
 
     /// <summary>
     /// A reference to the token.
@@ -71,7 +71,7 @@ public record Token3
     [IsoXmlTag("TknRefId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TokenReferenceIdentification { get; init; }
+    public Max35Text? TokenReferenceIdentification { get; init; }
 
     /// <summary>
     /// Original transaction was initiated by Token.
@@ -80,7 +80,7 @@ public record Token3
     [DisplayName("Token Initiated Indicator")]
     [IsoXmlTag("TknInittdInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? TokenInitiatedIndicator { get; init; }
+    public TrueFalseIndicator? TokenInitiatedIndicator { get; init; }
 
     /// <summary>
     /// Storage location of the token.
@@ -98,7 +98,7 @@ public record Token3
     [IsoXmlTag("OthrStorgLctn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherStorageLocation { get; init; }
+    public Max35Text? OtherStorageLocation { get; init; }
 
     /// <summary>
     /// Method used to protect the token.
@@ -116,7 +116,7 @@ public record Token3
     [IsoXmlTag("OthrPrtcnMtd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherProtectionMethod { get; init; }
+    public Max35Text? OtherProtectionMethod { get; init; }
 
     /// <summary>
     /// Original token.

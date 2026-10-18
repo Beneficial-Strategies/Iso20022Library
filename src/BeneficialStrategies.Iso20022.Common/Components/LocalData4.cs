@@ -32,7 +32,7 @@ public record LocalData4
     [IsoXmlTag("ShrtNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? ShortName { get; init; }
+    public Max70Text? ShortName { get; init; }
 
     /// <summary>
     /// Legal Corporate Name of the party in the local language
@@ -42,7 +42,7 @@ public record LocalData4
     [IsoXmlTag("LglCorpNm")]
     [IsoSimpleType(IsoSimpleType.Max210Text)]
     [StringLength(maximumLength: 210, MinimumLength = 1)]
-    public IsoMax210Text? LegalCorporateName { get; init; }
+    public Max210Text? LegalCorporateName { get; init; }
 
     /// <summary>
     /// Name and location of acceptor in the local language.  May only contain name when the location is specified elsewhere.
@@ -52,7 +52,7 @@ public record LocalData4
     [IsoXmlTag("NmAndLctn")]
     [IsoSimpleType(IsoSimpleType.Max200Text)]
     [StringLength(maximumLength: 200, MinimumLength = 1)]
-    public IsoMax200Text? NameAndLocation { get; init; }
+    public Max200Text? NameAndLocation { get; init; }
 
     /// <summary>
     /// Structured postal address in the local language.
@@ -70,7 +70,7 @@ public record LocalData4
     [IsoXmlTag("AddtlAdrInf")]
     [IsoSimpleType(IsoSimpleType.Max512Text)]
     [StringLength(maximumLength: 512, MinimumLength = 1)]
-    public IsoMax512Text? AdditionalAddressInformation { get; init; }
+    public Max512Text? AdditionalAddressInformation { get; init; }
 
     /// <summary>
     /// Additional information used to facilitate contact with the card acceptor, for instance sales agent name, dispute manager name.
@@ -80,7 +80,7 @@ public record LocalData4
     [IsoXmlTag("AddtlCtctInf")]
     [IsoSimpleType(IsoSimpleType.Max512Text)]
     [StringLength(maximumLength: 512, MinimumLength = 1)]
-    public IsoMax512Text? AdditionalContactInformation { get; init; }
+    public Max512Text? AdditionalContactInformation { get; init; }
 
     /// <summary>
     /// Additional local language data

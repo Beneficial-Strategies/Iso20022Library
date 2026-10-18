@@ -22,7 +22,7 @@ public record ReportEntry16
     [IsoId("86315bce-cdfe-48d7-b8ab-5373a3ecd36b")]
     [DisplayName("Entry Reference")]
     [IsoXmlTag("NtryRef")]
-    public IsoMax35Text? EntryReference { get; init; }
+    public Max35Text? EntryReference { get; init; }
 
     /// <summary>
     /// Amount of money in the cash entry.
@@ -46,7 +46,7 @@ public record ReportEntry16
     [IsoId("cf72152b-2a95-400a-beda-0a189ba94e8a")]
     [DisplayName("Reversal Indicator")]
     [IsoXmlTag("RvslInd")]
-    public IsoTrueFalseIndicator? ReversalIndicator { get; init; }
+    public TrueFalseIndicator? ReversalIndicator { get; init; }
 
     /// <summary>
     /// Status of an entry on the books of the account servicer.
@@ -78,7 +78,7 @@ public record ReportEntry16
     [IsoId("19f0fbf3-b4d3-4f9a-b0b1-a6c9ad123297")]
     [DisplayName("Account Servicer Reference")]
     [IsoXmlTag("AcctSvcrRef")]
-    public IsoMax35Text? AccountServicerReference { get; init; }
+    public Max35Text? AccountServicerReference { get; init; }
 
     /// <summary>
     /// Indicates when the booked amount of money will become available.
@@ -102,7 +102,7 @@ public record ReportEntry16
     [IsoId("cdb94099-5ce4-42c4-90f8-e41d6ef5c659")]
     [DisplayName("Commission Waiver Indicator")]
     [IsoXmlTag("ComssnWvrInd")]
-    public IsoYesNoIndicator? CommissionWaiverIndicator { get; init; }
+    public YesNoIndicator? CommissionWaiverIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the underlying transaction details are provided through a separate message.
@@ -166,5 +166,5 @@ public record ReportEntry16
     [IsoId("2b7c8800-9304-4f13-86b7-f467034edd60")]
     [DisplayName("Additional Entry Information")]
     [IsoXmlTag("AddtlNtryInf")]
-    public IsoMax500Text? AdditionalEntryInformation { get; init; }
+    public Max500Text? AdditionalEntryInformation { get; init; }
 }

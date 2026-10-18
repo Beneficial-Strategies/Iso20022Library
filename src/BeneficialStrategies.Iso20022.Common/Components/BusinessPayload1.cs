@@ -31,5 +31,5 @@ public record BusinessPayload1
     [DisplayName("Business Content")]
     [IsoXmlTag("BizCntt")]
     [MinLength(1)]
-    public SimpleValueList<IsoLaxPayload> BusinessContent { get; init; } = [];
+    public SimpleValueList<LaxPayload> BusinessContent { get; init; } = [];
 }

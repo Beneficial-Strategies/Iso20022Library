@@ -55,7 +55,7 @@ public record IndividualPerson36
     [DisplayName("Birth Date")]
     [IsoXmlTag("BirthDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? BirthDate { get; init; }
+    public DateOnly? BirthDate { get; init; }
 
     /// <summary>
     /// Country where a person was born.
@@ -73,7 +73,7 @@ public record IndividualPerson36
     [IsoXmlTag("PrvcOfBirth")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProvinceOfBirth { get; init; }
+    public Max35Text? ProvinceOfBirth { get; init; }
 
     /// <summary>
     /// City where a person was born.
@@ -83,7 +83,7 @@ public record IndividualPerson36
     [IsoXmlTag("CityOfBirth")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CityOfBirth { get; init; }
+    public Max35Text? CityOfBirth { get; init; }
 
     /// <summary>
     /// Country of taxation of an individual person.
@@ -109,7 +109,7 @@ public record IndividualPerson36
     [IsoXmlTag("SclSctyNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SocialSecurityNumber { get; init; }
+    public Max35Text? SocialSecurityNumber { get; init; }
 
     /// <summary>
     /// Information that locates and identifies a specific address, as defined by postal services.

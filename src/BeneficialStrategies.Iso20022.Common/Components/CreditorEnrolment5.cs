@@ -28,14 +28,14 @@ public record CreditorEnrolment5
     /// </summary>
     [DisplayName("Creditor Logo")]
     [IsoXmlTag("CdtrLogo")]
-    public IsoMax10KBinary? CreditorLogo { get; init; }
+    public Max10KBinary? CreditorLogo { get; init; }
 
     /// <summary>
     /// Creditor Trading Name.
     /// </summary>
     [DisplayName("Creditor Trading Name")]
     [IsoXmlTag("CdtrTradgNm")]
-    public IsoMax140Text? CreditorTradingName { get; init; }
+    public Max140Text? CreditorTradingName { get; init; }
 
     /// <summary>
     /// Enrolment.
@@ -49,7 +49,7 @@ public record CreditorEnrolment5
     /// </summary>
     [DisplayName("Merchant Category Code")]
     [IsoXmlTag("MrchntCtgyCd")]
-    public required IsoMerchantCategoryCodeIdentifier MerchantCategoryCode { get; init; }
+    public required MerchantCategoryCodeIdentifier MerchantCategoryCode { get; init; }
 
     /// <summary>
     /// Ultimate Creditor.

@@ -22,7 +22,7 @@ public record AccountIdentification77
     [IsoId("_HUkA6a8wEfCx2aBifPEdRg")]
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
-    public IsoMax35Text? SafekeepingAccount { get; init; }
+    public Max35Text? SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Blockchain address or wallet where digital assets are maintained.
@@ -30,7 +30,7 @@ public record AccountIdentification77
     [IsoId("_HUkA8a8wEfCx2aBifPEdRg")]
     [DisplayName("Block Chain Address Or Wallet")]
     [IsoXmlTag("BlckChainAdrOrWllt")]
-    public IsoMax140Text? BlockChainAddressOrWallet { get; init; }
+    public Max140Text? BlockChainAddressOrWallet { get; init; }
 
     /// <summary>
     /// Party that legally owns the account.

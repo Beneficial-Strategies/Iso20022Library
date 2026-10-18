@@ -23,7 +23,7 @@ public record UTCOffset1
     [DisplayName("Sign")]
     [IsoXmlTag("Sgn")]
     [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
-    public required IsoPlusOrMinusIndicator Sign { get; init; }
+    public required PlusOrMinusIndicator Sign { get; init; }
 
     /// <summary>
     /// Offset of the reporting time, in hours, before or after 00: 00 hour UTC.
@@ -32,5 +32,5 @@ public record UTCOffset1
     [DisplayName("Number Of Hours")]
     [IsoXmlTag("NbOfHrs")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public required IsoISOTime NumberOfHours { get; init; }
+    public required ISOTime NumberOfHours { get; init; }
 }

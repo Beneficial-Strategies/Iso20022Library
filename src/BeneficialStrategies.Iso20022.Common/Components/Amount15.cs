@@ -39,7 +39,7 @@ public record Amount15
     [DisplayName("Effective Exchange Rate")]
     [IsoXmlTag("FctvXchgRate")]
     [IsoSimpleType(IsoSimpleType.BaseOne25Rate)]
-    public IsoBaseOne25Rate? EffectiveExchangeRate { get; init; }
+    public BaseOne25Rate? EffectiveExchangeRate { get; init; }
 
     /// <summary>
     /// Date at which the exchange rate effective.
@@ -48,7 +48,7 @@ public record Amount15
     [DisplayName("Conversion Date")]
     [IsoXmlTag("ConvsDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ConversionDate { get; init; }
+    public DateOnly? ConversionDate { get; init; }
 
     /// <summary>
     /// Time at which the exchange rate effective.
@@ -57,5 +57,5 @@ public record Amount15
     [DisplayName("Conversion Time")]
     [IsoXmlTag("ConvsTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? ConversionTime { get; init; }
+    public ISOTime? ConversionTime { get; init; }
 }

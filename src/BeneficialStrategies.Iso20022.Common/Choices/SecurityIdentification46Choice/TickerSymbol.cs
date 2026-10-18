@@ -9,6 +9,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification46Choice
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("TckrSymb")]
-        public required IsoTickerIdentifier Value { get; init; }
+        public required TickerIdentifier Value { get; init; }
     }
 }

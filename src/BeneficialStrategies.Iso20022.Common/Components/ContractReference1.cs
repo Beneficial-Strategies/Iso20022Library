@@ -32,5 +32,5 @@ public record ContractReference1
     [IsoXmlTag("Ref")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public required IsoMax500Text Reference { get; init; }
+    public required Max500Text Reference { get; init; }
 }

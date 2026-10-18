@@ -47,7 +47,7 @@ public record MandateOccurrences2
     [DisplayName("First Collection Date")]
     [IsoXmlTag("FrstColltnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? FirstCollectionDate { get; init; }
+    public DateOnly? FirstCollectionDate { get; init; }
 
     /// <summary>
     /// Date of the final collection of a direct debit as per the mandate.
@@ -56,5 +56,5 @@ public record MandateOccurrences2
     [DisplayName("Final Collection Date")]
     [IsoXmlTag("FnlColltnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? FinalCollectionDate { get; init; }
+    public DateOnly? FinalCollectionDate { get; init; }
 }

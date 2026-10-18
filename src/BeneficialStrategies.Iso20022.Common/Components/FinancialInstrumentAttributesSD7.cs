@@ -24,7 +24,7 @@ public record FinancialInstrumentAttributesSD7
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text PlaceAndName { get; init; }
+    public required Max350Text PlaceAndName { get; init; }
 
     /// <summary>
     /// Name of the issuer.
@@ -34,7 +34,7 @@ public record FinancialInstrumentAttributesSD7
     [IsoXmlTag("IssrDesc")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? IssuerDescription { get; init; }
+    public Max70Text? IssuerDescription { get; init; }
 
     /// <summary>
     /// Country of incorporation of the issuer.
@@ -51,7 +51,7 @@ public record FinancialInstrumentAttributesSD7
     [DisplayName("Primary Exchange Flag")]
     [IsoXmlTag("PmryXchgFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PrimaryExchangeFlag { get; init; }
+    public YesNoIndicator? PrimaryExchangeFlag { get; init; }
 
     /// <summary>
     /// Indicates whether the event has been registered with US Securities Exchange Commission (SEC).
@@ -60,5 +60,5 @@ public record FinancialInstrumentAttributesSD7
     [DisplayName("SEC Registered Flag")]
     [IsoXmlTag("SECRegdFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? SECRegisteredFlag { get; init; }
+    public YesNoIndicator? SECRegisteredFlag { get; init; }
 }

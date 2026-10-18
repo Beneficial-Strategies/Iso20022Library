@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatusChoice
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public required IsoMax35Text Identification { get; init; }
+        public required Max35Text Identification { get; init; }
 
         /// <summary>
         /// Party that created the case.
@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatusChoice
         [DisplayName("Creator")]
         [IsoXmlTag("Cretr")]
         [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-        public required IsoAnyBICIdentifier Creator { get; init; }
+        public required AnyBICIdentifier Creator { get; init; }
 
         /// <summary>
         /// Set to yes if the case was closed and needs to be re-opened.
@@ -42,6 +42,6 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatusChoice
         [DisplayName("Reopen Case Indication")]
         [IsoXmlTag("ReopCaseIndctn")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? ReopenCaseIndication { get; init; }
+        public YesNoIndicator? ReopenCaseIndication { get; init; }
     }
 }

@@ -35,5 +35,5 @@ public record AuctionData2
     /// </summary>
     [DisplayName("Trading Phase")]
     [IsoXmlTag("TradgPhs")]
-    public IsoMax50Text? TradingPhase { get; init; }
+    public Max50Text? TradingPhase { get; init; }
 }

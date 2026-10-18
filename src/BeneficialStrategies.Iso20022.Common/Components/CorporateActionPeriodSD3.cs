@@ -24,7 +24,7 @@ public record CorporateActionPeriodSD3
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Period during which the securities can be submitted to reorganisation deposit service at DTC (The Depository Trust Corporation). DTC &quot;first day for reorganisation deposit&quot; (start date) is the day on which security is eligible for reorganisation deposit service at DTC. DTC &quot;last day for reorganisation deposit&quot; is the last day on which securities are eligible to be submitted for reorganisation deposit service at DTC.

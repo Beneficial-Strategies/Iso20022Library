@@ -33,7 +33,7 @@ public record ExchangeConfiguration8
     [DisplayName("Maximum Number")]
     [IsoXmlTag("MaxNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaximumNumber { get; init; }
+    public Number? MaximumNumber { get; init; }
 
     /// <summary>
     /// Maximum cumulative amount of the transactions without exchange.

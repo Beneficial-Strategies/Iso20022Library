@@ -38,7 +38,7 @@ public record StatusReportContent15
     [IsoId("_Xg4RQbYEEfCUZfsQO4rYeA")]
     [DisplayName("POI Group Identification")]
     [IsoXmlTag("POIGrpId")]
-    public SimpleValueList<IsoMax35Text> POIGroupIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> POIGroupIdentification { get; init; } = [];
 
     /// <summary>
     /// Human attendance at the POI (Point Of Interaction) location during transactions.
@@ -54,7 +54,7 @@ public record StatusReportContent15
     [IsoId("_Xg4RTbYEEfCUZfsQO4rYeA")]
     [DisplayName("POI Date Time")]
     [IsoXmlTag("POIDtTm")]
-    public required IsoISODateTime POIDateTime { get; init; }
+    public required ISODateTime POIDateTime { get; init; }
 
     /// <summary>
     /// Request the terminal management system to answer with the identified data set.
@@ -78,5 +78,5 @@ public record StatusReportContent15
     [IsoId("_Xg4RX7YEEfCUZfsQO4rYeA")]
     [DisplayName("Errors")]
     [IsoXmlTag("Errs")]
-    public SimpleValueList<IsoMax140Text> Errors { get; init; } = [];
+    public SimpleValueList<Max140Text> Errors { get; init; } = [];
 }

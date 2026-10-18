@@ -71,5 +71,5 @@ public record CapitalRequirement1
     [DisplayName("Notification Buffer")]
     [IsoXmlTag("NtfctnBffr")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? NotificationBuffer { get; init; }
+    public BaseOneRate? NotificationBuffer { get; init; }
 }

@@ -23,6 +23,6 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason1Choice
         [IsoXmlTag("Desc")]
         [IsoSimpleType(IsoSimpleType.Max140Text)]
         [StringLength(maximumLength: 140, MinimumLength = 1)]
-        public required IsoMax140Text Description { get; init; }
+        public required Max140Text Description { get; init; }
     }
 }

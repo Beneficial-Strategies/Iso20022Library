@@ -24,7 +24,7 @@ public record VerificationReport1
     [IsoXmlTag("OrgnlId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OriginalIdentification { get; init; }
+    public required Max35Text OriginalIdentification { get; init; }
 
     /// <summary>
     /// Identifies whether the party and/or account information received is correct.
@@ -33,7 +33,7 @@ public record VerificationReport1
     [DisplayName("Verification")]
     [IsoXmlTag("Vrfctn")]
     [IsoSimpleType(IsoSimpleType.IdentificationVerificationIndicator)]
-    public required IsoIdentificationVerificationIndicator Verification { get; init; }
+    public required IdentificationVerificationIndicator Verification { get; init; }
 
     /// <summary>
     /// Specifies the reason why the verified identification information is incorrect.

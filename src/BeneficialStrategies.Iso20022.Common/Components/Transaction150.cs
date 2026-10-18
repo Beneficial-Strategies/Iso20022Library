@@ -33,7 +33,7 @@ public record Transaction150
     [IsoXmlTag("TxSubTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TransactionSubType { get; init; }
+    public Max35Text? TransactionSubType { get; init; }
 
     /// <summary>
     /// Attribute of the transaction.
@@ -53,7 +53,7 @@ public record Transaction150
     [IsoXmlTag("OthrTxAttr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherTransactionAttribute { get; init; }
+    public Max35Text? OtherTransactionAttribute { get; init; }
 
     /// <summary>
     /// Contains the period (expressed in minutes) within which a merchant is expected to complete the transaction.
@@ -62,7 +62,7 @@ public record Transaction150
     [DisplayName("Pre Authorisation Time Limit")]
     [IsoXmlTag("PreAuthstnTmLmt")]
     [IsoSimpleType(IsoSimpleType.Max6NumericText)]
-    public IsoMax6NumericText? PreAuthorisationTimeLimit { get; init; }
+    public Max6NumericText? PreAuthorisationTimeLimit { get; init; }
 
     /// <summary>
     /// Additional functions or services to be performed in conjunction with the transaction.
@@ -80,7 +80,7 @@ public record Transaction150
     [IsoXmlTag("AssoctdDataDstn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AssociatedDataDestination { get; init; }
+    public Max35Text? AssociatedDataDestination { get; init; }
 
     /// <summary>
     /// Data to qualify for incentive or other related programmes.
@@ -163,7 +163,7 @@ public record Transaction150
     [IsoXmlTag("TxDesc")]
     [IsoSimpleType(IsoSimpleType.Max1000Text)]
     [StringLength(maximumLength: 1000, MinimumLength = 1)]
-    public IsoMax1000Text? TransactionDescription { get; init; }
+    public Max1000Text? TransactionDescription { get; init; }
 
     /// <summary>
     /// Contains additional data.

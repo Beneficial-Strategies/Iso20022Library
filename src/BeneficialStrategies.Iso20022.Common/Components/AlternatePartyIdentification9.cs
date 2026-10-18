@@ -40,5 +40,5 @@ public record AlternatePartyIdentification9
     [IsoXmlTag("AltrnId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax30Text)]
     [StringLength(maximumLength: 30, MinimumLength = 1)]
-    public required IsoRestrictedFINXMax30Text AlternateIdentification { get; init; }
+    public required RestrictedFINXMax30Text AlternateIdentification { get; init; }
 }

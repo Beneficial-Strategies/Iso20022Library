@@ -24,7 +24,7 @@ public record RequestData1
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Description of the type of request.
@@ -34,7 +34,7 @@ public record RequestData1
     [IsoXmlTag("ReqTp")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public required IsoMax4Text RequestType { get; init; }
+    public required Max4Text RequestType { get; init; }
 
     /// <summary>
     /// Specifies the business date on which the new netting cut off(s) is (are) to be activated.
@@ -43,7 +43,7 @@ public record RequestData1
     [DisplayName("Requested Activation Date")]
     [IsoXmlTag("ReqdActvtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate RequestedActivationDate { get; init; }
+    public required DateOnly RequestedActivationDate { get; init; }
 
     /// <summary>
     /// Describes the central system servicing the request.
@@ -69,5 +69,5 @@ public record RequestData1
     [IsoXmlTag("NetSvcTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? NetServiceType { get; init; }
+    public Max35Text? NetServiceType { get; init; }
 }

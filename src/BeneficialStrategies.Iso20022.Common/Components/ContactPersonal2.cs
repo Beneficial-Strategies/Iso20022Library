@@ -22,7 +22,7 @@ public record ContactPersonal2
     [IsoId("_ZY-meSz4EfCD0_iZ8tw-zA")]
     [DisplayName("Home Phone")]
     [IsoXmlTag("HomePhne")]
-    public IsoPhoneNumber? HomePhone { get; init; }
+    public PhoneNumber? HomePhone { get; init; }
 
     /// <summary>
     /// Business phone number of contact.
@@ -30,7 +30,7 @@ public record ContactPersonal2
     [IsoId("_ZY-meyz4EfCD0_iZ8tw-zA")]
     [DisplayName("Business Phone")]
     [IsoXmlTag("BizPhne")]
-    public IsoPhoneNumber? BusinessPhone { get; init; }
+    public PhoneNumber? BusinessPhone { get; init; }
 
     /// <summary>
     /// Mobile phone number of contact.
@@ -38,7 +38,7 @@ public record ContactPersonal2
     [IsoId("_ZY-mfSz4EfCD0_iZ8tw-zA")]
     [DisplayName("Mobile Phone")]
     [IsoXmlTag("MobPhne")]
-    public IsoPhoneNumber? MobilePhone { get; init; }
+    public PhoneNumber? MobilePhone { get; init; }
 
     /// <summary>
     /// Other phone number of contact.
@@ -46,7 +46,7 @@ public record ContactPersonal2
     [IsoId("_ZY-mfyz4EfCD0_iZ8tw-zA")]
     [DisplayName("Other Phone")]
     [IsoXmlTag("OthrPhne")]
-    public IsoPhoneNumber? OtherPhone { get; init; }
+    public PhoneNumber? OtherPhone { get; init; }
 
     /// <summary>
     /// Personal email address of contact.
@@ -54,7 +54,7 @@ public record ContactPersonal2
     [IsoId("_ZY-mgSz4EfCD0_iZ8tw-zA")]
     [DisplayName("Personal Email")]
     [IsoXmlTag("PrsnlEmail")]
-    public IsoMax256Text? PersonalEmail { get; init; }
+    public Max256Text? PersonalEmail { get; init; }
 
     /// <summary>
     /// Business email address of contact.
@@ -62,7 +62,7 @@ public record ContactPersonal2
     [IsoId("_ZY-mgyz4EfCD0_iZ8tw-zA")]
     [DisplayName("Business Email")]
     [IsoXmlTag("BizEmail")]
-    public IsoMax256Text? BusinessEmail { get; init; }
+    public Max256Text? BusinessEmail { get; init; }
 
     /// <summary>
     /// Other email address of contact.
@@ -70,7 +70,7 @@ public record ContactPersonal2
     [IsoId("_ZY-mhSz4EfCD0_iZ8tw-zA")]
     [DisplayName("Other Email")]
     [IsoXmlTag("OthrEmail")]
-    public IsoMax256Text? OtherEmail { get; init; }
+    public Max256Text? OtherEmail { get; init; }
 
     /// <summary>
     /// Collection of information that identifies a home FAX number, as defined by telecom services.
@@ -78,7 +78,7 @@ public record ContactPersonal2
     [IsoId("_ZY-mhyz4EfCD0_iZ8tw-zA")]
     [DisplayName("Home Fax")]
     [IsoXmlTag("HomeFax")]
-    public IsoPhoneNumber? HomeFax { get; init; }
+    public PhoneNumber? HomeFax { get; init; }
 
     /// <summary>
     /// Collection of information that identifies a business FAX number, as defined by telecom services.
@@ -86,7 +86,7 @@ public record ContactPersonal2
     [IsoId("_ZY-miSz4EfCD0_iZ8tw-zA")]
     [DisplayName("Business Fax")]
     [IsoXmlTag("BizFax")]
-    public IsoPhoneNumber? BusinessFax { get; init; }
+    public PhoneNumber? BusinessFax { get; init; }
 
     /// <summary>
     /// Universal Resource Locator (URL) address.
@@ -94,7 +94,7 @@ public record ContactPersonal2
     [IsoId("_ZY-miyz4EfCD0_iZ8tw-zA")]
     [DisplayName("URL")]
     [IsoXmlTag("URL")]
-    public IsoMax256Text? URL { get; init; }
+    public Max256Text? URL { get; init; }
 
     /// <summary>
     /// Language of the contact.

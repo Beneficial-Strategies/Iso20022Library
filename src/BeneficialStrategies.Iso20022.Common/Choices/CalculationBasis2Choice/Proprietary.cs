@@ -11,6 +11,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CalculationBasis2Choice
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Prtry")]
-        public required IsoMax35Text Value { get; init; }
+        public required Max35Text Value { get; init; }
     }
 }

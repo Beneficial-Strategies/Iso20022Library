@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification54Choice
         /// </summary>
         [IsoXmlTag("UPIC")]
         [IsoSimpleType(IsoSimpleType.UPICIdentifier)]
-        public required IsoUPICIdentifier Value { get; init; }
+        public required UPICIdentifier Value { get; init; }
     }
 }

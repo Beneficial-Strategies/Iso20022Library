@@ -24,7 +24,7 @@ public record CaseAssignment
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Party that assigns the case to another party. This is also the sender of the message.
@@ -33,7 +33,7 @@ public record CaseAssignment
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public required IsoAnyBICIdentifier Assigner { get; init; }
+    public required AnyBICIdentifier Assigner { get; init; }
 
     /// <summary>
     /// Party that the case is assigned to. This is also the receiver of the message.
@@ -42,7 +42,7 @@ public record CaseAssignment
     [DisplayName("Assignee")]
     [IsoXmlTag("Assgne")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public required IsoAnyBICIdentifier Assignee { get; init; }
+    public required AnyBICIdentifier Assignee { get; init; }
 
     /// <summary>
     /// Date and time at which the assignment was created.
@@ -51,5 +51,5 @@ public record CaseAssignment
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 }

@@ -56,14 +56,14 @@ public record Cardholder21
     /// </summary>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax45Text? Name { get; init; }
+    public Max45Text? Name { get; init; }
 
     /// <summary>
     /// Personal Data.
     /// </summary>
     [DisplayName("Personal Data")]
     [IsoXmlTag("PrsnlData")]
-    public IsoMax70Text? PersonalData { get; init; }
+    public Max70Text? PersonalData { get; init; }
 
     /// <summary>
     /// Shipping Address.
@@ -85,7 +85,7 @@ public record Cardholder21
     /// </summary>
     [DisplayName("Trip Number")]
     [IsoXmlTag("TripNb")]
-    public IsoMax35Text? TripNumber { get; init; }
+    public Max35Text? TripNumber { get; init; }
 
     /// <summary>
     /// Vehicle.

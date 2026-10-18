@@ -32,7 +32,7 @@ public record DeviceSecureInputRequest5
     [IsoXmlTag("PINVrfctnMtd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PINVerificationMethod { get; init; }
+    public Max35Text? PINVerificationMethod { get; init; }
 
     /// <summary>
     /// Maximum time to wait for the request processing in seconds.
@@ -41,7 +41,7 @@ public record DeviceSecureInputRequest5
     [DisplayName("Maximum Waiting Time")]
     [IsoXmlTag("MaxWtgTm")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaximumWaitingTime { get; init; }
+    public Number? MaximumWaitingTime { get; init; }
 
     /// <summary>
     /// Indicates, when the user press a key, if a beep has to be generated.
@@ -50,7 +50,7 @@ public record DeviceSecureInputRequest5
     [DisplayName("Beep Key Flag")]
     [IsoXmlTag("BeepKeyFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? BeepKeyFlag { get; init; }
+    public TrueFalseIndicator? BeepKeyFlag { get; init; }
 
     /// <summary>
     /// Enciphered PIN and related information.

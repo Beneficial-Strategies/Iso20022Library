@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice
         [DisplayName("Maturity Date")]
         [IsoXmlTag("MtrtyDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate MaturityDate { get; init; }
+        public required DateOnly MaturityDate { get; init; }
 
         /// <summary>
         /// Specifies the repurchase price at maturity of the repo.
@@ -48,7 +48,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice
         [DisplayName("Counterparty")]
         [IsoXmlTag("CtrPty")]
         [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-        public required IsoLEIIdentifier Counterparty { get; init; }
+        public required LEIIdentifier Counterparty { get; init; }
 
         /// <summary>
         /// Specifies the type of repurchase agreement.
@@ -65,6 +65,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice
         [DisplayName("Triparty Agent Identification")]
         [IsoXmlTag("TrptyAgtId")]
         [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-        public IsoLEIIdentifier? TripartyAgentIdentification { get; init; }
+        public LEIIdentifier? TripartyAgentIdentification { get; init; }
     }
 }

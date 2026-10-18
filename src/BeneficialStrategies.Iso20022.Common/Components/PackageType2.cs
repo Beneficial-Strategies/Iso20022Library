@@ -31,7 +31,7 @@ public record PackageType2
     [DisplayName("Package Length")]
     [IsoXmlTag("PackgLngth")]
     [IsoSimpleType(IsoSimpleType.PositiveNumber)]
-    public IsoPositiveNumber? PackageLength { get; init; }
+    public PositiveNumber? PackageLength { get; init; }
 
     /// <summary>
     /// Place of the first following PackageBlock, beginning with 0, in the full software package identified through PackageIdentification.
@@ -40,7 +40,7 @@ public record PackageType2
     [DisplayName("Offset Start")]
     [IsoXmlTag("OffsetStart")]
     [IsoSimpleType(IsoSimpleType.PositiveNumber)]
-    public IsoPositiveNumber? OffsetStart { get; init; }
+    public PositiveNumber? OffsetStart { get; init; }
 
     /// <summary>
     /// Following place of the last following PackageBlock in the full software package identified through PackageIdentification.
@@ -49,7 +49,7 @@ public record PackageType2
     [DisplayName("Offset End")]
     [IsoXmlTag("OffsetEnd")]
     [IsoSimpleType(IsoSimpleType.PositiveNumber)]
-    public IsoPositiveNumber? OffsetEnd { get; init; }
+    public PositiveNumber? OffsetEnd { get; init; }
 
     /// <summary>
     /// Consecutive slices of the full software package identified through PackageIdentification starting with first slice at the place identified with OffsetStart and ending with the last slice at the previous place identified with OffsetEnd.

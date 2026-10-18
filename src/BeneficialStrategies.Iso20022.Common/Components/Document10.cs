@@ -47,7 +47,7 @@ public record Document10
     [DisplayName("Copy Indicator")]
     [IsoXmlTag("CpyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? CopyIndicator { get; init; }
+    public YesNoIndicator? CopyIndicator { get; init; }
 
     /// <summary>
     /// Indication whether the document must be signed.
@@ -56,5 +56,5 @@ public record Document10
     [DisplayName("Signed Indicator")]
     [IsoXmlTag("SgndInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? SignedIndicator { get; init; }
+    public YesNoIndicator? SignedIndicator { get; init; }
 }

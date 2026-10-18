@@ -23,7 +23,7 @@ public record FinancialInstitutionIdentification9
     [DisplayName("BICFI")]
     [IsoXmlTag("BICFI")]
     [IsoSimpleType(IsoSimpleType.BICFIIdentifier)]
-    public IsoBICFIIdentifier? BICFI { get; init; }
+    public BICFIIdentifier? BICFI { get; init; }
 
     /// <summary>
     /// Information used to identify a member within a clearing system.

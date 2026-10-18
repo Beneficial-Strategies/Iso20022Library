@@ -84,7 +84,7 @@ public record CorporateActionRate137
     /// </summary>
     [DisplayName("Transformation Rate")]
     [IsoXmlTag("TrfrmatnRate")]
-    public IsoPercentage14Rate? TransformationRate { get; init; }
+    public decimal? TransformationRate { get; init; }
 
     /// <summary>
     /// Withholding Tax Rate.

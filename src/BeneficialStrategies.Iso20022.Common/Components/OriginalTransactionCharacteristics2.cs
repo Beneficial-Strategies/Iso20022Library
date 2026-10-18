@@ -30,7 +30,7 @@ public record OriginalTransactionCharacteristics2
     [IsoId("_PMVJCUiTEfCMZJtj4J7UGQ")]
     [DisplayName("Transaction Sub Type")]
     [IsoXmlTag("TxSubTp")]
-    public IsoMax35Text? TransactionSubType { get; init; }
+    public Max35Text? TransactionSubType { get; init; }
 
     /// <summary>
     /// Attribute of the transaction.
@@ -54,7 +54,7 @@ public record OriginalTransactionCharacteristics2
     [IsoId("_PMVJHUiTEfCMZJtj4J7UGQ")]
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
-    public SimpleValueList<IsoMax256Text> AlternateMessageReason { get; init; } = [];
+    public SimpleValueList<Max256Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Contains the period (expressed in minutes) within which a merchant is expected to complete the transaction.
@@ -62,7 +62,7 @@ public record OriginalTransactionCharacteristics2
     [IsoId("_PMVJH0iTEfCMZJtj4J7UGQ")]
     [DisplayName("Pre Authorisation Time Limit")]
     [IsoXmlTag("PreAuthstnTmLmt")]
-    public IsoMax6NumericText? PreAuthorisationTimeLimit { get; init; }
+    public Max6NumericText? PreAuthorisationTimeLimit { get; init; }
 
     /// <summary>
     /// Transaction data related to programmes and services, content and format based on bilateral agreements.
@@ -70,7 +70,7 @@ public record OriginalTransactionCharacteristics2
     [IsoId("_PMVJJ0iTEfCMZJtj4J7UGQ")]
     [DisplayName("Transaction Description")]
     [IsoXmlTag("TxDesc")]
-    public IsoMax1000Text? TransactionDescription { get; init; }
+    public Max1000Text? TransactionDescription { get; init; }
 
     /// <summary>
     /// Reserved for private data. The use of this data element is determined by bilateral agreement.
@@ -78,7 +78,7 @@ public record OriginalTransactionCharacteristics2
     [IsoId("_DzZfskiEEfCMZJtj4J7UGQ")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -86,5 +86,5 @@ public record OriginalTransactionCharacteristics2
     [IsoId("_DzZfs0iEEfCMZJtj4J7UGQ")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

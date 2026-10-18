@@ -24,7 +24,7 @@ public record ReportParameters5
     [IsoXmlTag("RptId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ReportIdentification { get; init; }
+    public required Max35Text ReportIdentification { get; init; }
 
     /// <summary>
     /// Date (and time) at which the report was created.
@@ -57,5 +57,5 @@ public record ReportParameters5
     [DisplayName("Calculation Date")]
     [IsoXmlTag("ClctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? CalculationDate { get; init; }
+    public ISODateTime? CalculationDate { get; init; }
 }

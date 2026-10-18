@@ -38,5 +38,5 @@ public record EventContext8
     [IsoId("_ciHhobZ0EfCUZfsQO4rYeA")]
     [DisplayName("Sale Identification")]
     [IsoXmlTag("SaleId")]
-    public IsoMax35Text? SaleIdentification { get; init; }
+    public Max35Text? SaleIdentification { get; init; }
 }

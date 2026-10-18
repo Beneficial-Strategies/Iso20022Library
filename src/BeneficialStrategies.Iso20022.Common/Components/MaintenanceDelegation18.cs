@@ -21,7 +21,7 @@ public record MaintenanceDelegation18
     /// </summary>
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
-    public ValueList<IsoMax10KBinary> Certificate { get; init; } = [];
+    public ValueList<Max10KBinary> Certificate { get; init; } = [];
 
     /// <summary>
     /// Delegated Action.
@@ -35,14 +35,14 @@ public record MaintenanceDelegation18
     /// </summary>
     [DisplayName("Delegation Scope Definition")]
     [IsoXmlTag("DlgtnScpDef")]
-    public IsoMax3000Binary? DelegationScopeDefinition { get; init; }
+    public Max3000Binary? DelegationScopeDefinition { get; init; }
 
     /// <summary>
     /// Delegation Scope Identification.
     /// </summary>
     [DisplayName("Delegation Scope Identification")]
     [IsoXmlTag("DlgtnScpId")]
-    public IsoMax35Text? DelegationScopeIdentification { get; init; }
+    public Max35Text? DelegationScopeIdentification { get; init; }
 
     /// <summary>
     /// Delegation Type.
@@ -70,7 +70,7 @@ public record MaintenanceDelegation18
     /// </summary>
     [DisplayName("Partial Delegation")]
     [IsoXmlTag("PrtlDlgtn")]
-    public IsoTrueFalseIndicator? PartialDelegation { get; init; }
+    public TrueFalseIndicator? PartialDelegation { get; init; }
 
     /// <summary>
     /// POI Identification Association.
@@ -85,7 +85,7 @@ public record MaintenanceDelegation18
     /// </summary>
     [DisplayName("POI Subset")]
     [IsoXmlTag("POISubset")]
-    public ValueList<IsoMax35Text> POISubset { get; init; } = [];
+    public ValueList<Max35Text> POISubset { get; init; } = [];
 
     /// <summary>
     /// Symmetric Key.

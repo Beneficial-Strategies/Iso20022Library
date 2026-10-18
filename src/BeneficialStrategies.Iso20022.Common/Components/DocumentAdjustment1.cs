@@ -40,7 +40,7 @@ public record DocumentAdjustment1
     [IsoXmlTag("Rsn")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4Text? Reason { get; init; }
+    public Max4Text? Reason { get; init; }
 
     /// <summary>
     /// Provides further details on the document adjustment.
@@ -50,5 +50,5 @@ public record DocumentAdjustment1
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? AdditionalInformation { get; init; }
+    public Max140Text? AdditionalInformation { get; init; }
 }

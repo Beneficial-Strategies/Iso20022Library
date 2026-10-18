@@ -24,7 +24,7 @@ public record FinancialInstrumentAttributesSD16
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Indicates whether or not the newly issued securities are transferable by the agent. This flag is specific to DTC (The Depository Trust Corporation).
@@ -33,7 +33,7 @@ public record FinancialInstrumentAttributesSD16
     [DisplayName("DTC Security Transferable Flag")]
     [IsoXmlTag("DTCSctyTrfblFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? DTCSecurityTransferableFlag { get; init; }
+    public YesNoIndicator? DTCSecurityTransferableFlag { get; init; }
 
     /// <summary>
     /// Details of security that is being distributed as a result of a corporate action as declared by the issuer or offeror on the market.
@@ -66,5 +66,5 @@ public record FinancialInstrumentAttributesSD16
     [DisplayName("Baby Bond Denomination")]
     [IsoXmlTag("BabyBdDnmtn")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? BabyBondDenomination { get; init; }
+    public DecimalNumber? BabyBondDenomination { get; init; }
 }

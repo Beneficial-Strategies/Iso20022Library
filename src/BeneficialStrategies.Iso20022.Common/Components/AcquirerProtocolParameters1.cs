@@ -32,7 +32,7 @@ public record AcquirerProtocolParameters1
     [IsoId("_Ksqnwn1DEeCF8NjrBemJWQ_-2090866337")]
     [DisplayName("Application Identification")]
     [IsoXmlTag("ApplId")]
-    public SimpleValueList<IsoMax35Text> ApplicationIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> ApplicationIdentification { get; init; } = [];
 
     /// <summary>
     /// Acquirer host configuration.
@@ -73,7 +73,7 @@ public record AcquirerProtocolParameters1
     [DisplayName("Reconciliation By Acquirer")]
     [IsoXmlTag("RcncltnByAcqrr")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ReconciliationByAcquirer { get; init; }
+    public TrueFalseIndicator? ReconciliationByAcquirer { get; init; }
 
     /// <summary>
     /// Indicates the reconciliation total amounts are computed per currency.
@@ -82,7 +82,7 @@ public record AcquirerProtocolParameters1
     [DisplayName("Totals Per Currency")]
     [IsoXmlTag("TtlsPerCcy")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? TotalsPerCurrency { get; init; }
+    public TrueFalseIndicator? TotalsPerCurrency { get; init; }
 
     /// <summary>
     /// Types of transaction to include in the batch.
@@ -107,5 +107,5 @@ public record AcquirerProtocolParameters1
     [DisplayName("Protect Card Data")]
     [IsoXmlTag("PrtctCardData")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator ProtectCardData { get; init; }
+    public required TrueFalseIndicator ProtectCardData { get; init; }
 }

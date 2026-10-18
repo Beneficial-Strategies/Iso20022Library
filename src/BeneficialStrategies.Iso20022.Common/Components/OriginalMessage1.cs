@@ -24,7 +24,7 @@ public record OriginalMessage1
     [IsoXmlTag("MsgDefIdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MessageDefinitionIdentifier { get; init; }
+    public required Max35Text MessageDefinitionIdentifier { get; init; }
 
     /// <summary>
     /// Message sender specified in the original message.|
@@ -50,7 +50,7 @@ public record OriginalMessage1
     [IsoXmlTag("BizMsgIdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text BusinessMessageIdentifier { get; init; }
+    public required Max35Text BusinessMessageIdentifier { get; init; }
 
     /// <summary>
     /// Message creation date and time specified in the original message.
@@ -59,7 +59,7 @@ public record OriginalMessage1
     [DisplayName("Creation Date")]
     [IsoXmlTag("CreDt")]
     [IsoSimpleType(IsoSimpleType.ISONormalisedDateTime)]
-    public required IsoISONormalisedDateTime CreationDate { get; init; }
+    public required ISONormalisedDateTime CreationDate { get; init; }
 
     /// <summary>
     /// Indicates whether the message is a copy, a duplicate or a copy of a duplicate of a previously sent ISO 20022 message.

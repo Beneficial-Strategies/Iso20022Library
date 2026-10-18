@@ -24,7 +24,7 @@ public record OptionalDividendAccountQuantitySD3
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Beneficial owner quantity to be paid.
@@ -41,5 +41,5 @@ public record OptionalDividendAccountQuantitySD3
     [DisplayName("Number Of Accounts")]
     [IsoXmlTag("NbOfAccts")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText NumberOfAccounts { get; init; }
+    public required Max15NumericText NumberOfAccounts { get; init; }
 }

@@ -23,7 +23,7 @@ public record DocumentAmendment1
     [DisplayName("Correction Identification")]
     [IsoXmlTag("CrrctnId")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber CorrectionIdentification { get; init; }
+    public required Number CorrectionIdentification { get; init; }
 
     /// <summary>
     /// Identification of the original document being amended.
@@ -33,5 +33,5 @@ public record DocumentAmendment1
     [IsoXmlTag("OrgnlDocId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalDocumentIdentification { get; init; }
+    public Max35Text? OriginalDocumentIdentification { get; init; }
 }

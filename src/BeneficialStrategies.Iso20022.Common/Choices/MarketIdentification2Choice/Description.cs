@@ -22,6 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketIdentification2Choice
         [IsoXmlTag("Desc")]
         [IsoSimpleType(IsoSimpleType.RestrictedFINXMax30Text)]
         [StringLength(maximumLength: 30, MinimumLength = 1)]
-        public required IsoRestrictedFINXMax30Text Value { get; init; }
+        public required RestrictedFINXMax30Text Value { get; init; }
     }
 }

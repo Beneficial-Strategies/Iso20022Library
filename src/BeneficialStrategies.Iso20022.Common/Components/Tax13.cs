@@ -32,7 +32,7 @@ public record Tax13
     [IsoXmlTag("OthrTaxTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text OtherTaxType { get; init; }
+    public required Max35Text OtherTaxType { get; init; }
 
     /// <summary>
     /// Amount of money resulting from the calculation of the tax.
@@ -49,5 +49,5 @@ public record Tax13
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate Rate { get; init; }
+    public required PercentageRate Rate { get; init; }
 }

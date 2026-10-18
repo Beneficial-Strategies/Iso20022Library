@@ -41,7 +41,7 @@ public record CorporateActionSecuritiesMovement2
     [IsoXmlTag("PstngId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PostingIdentification { get; init; }
+    public Max35Text? PostingIdentification { get; init; }
 
     /// <summary>
     /// Securities quantity posted as a result of the securities movement.

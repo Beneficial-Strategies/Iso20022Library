@@ -30,7 +30,7 @@ public record AcceptorConfigurationContent1
     [IsoId("_Ksg2x31DEeCF8NjrBemJWQ_1029963495")]
     [DisplayName("Merchant Parameters")]
     [IsoXmlTag("MrchntParams")]
-    public SimpleValueList<IsoMax10000Binary> MerchantParameters { get; init; } = [];
+    public SimpleValueList<Max10000Binary> MerchantParameters { get; init; } = [];
 
     /// <summary>
     /// Acceptor parameters dedicated to a payment application of the point of interaction.

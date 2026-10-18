@@ -24,7 +24,7 @@ public record CorporateActionRateSD10
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; }
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Corresponding rate of the security being disbursed as a result of the corporate action as declared by the issuer or offeror on the market.
@@ -41,7 +41,7 @@ public record CorporateActionRateSD10
     [DisplayName("Estimated Rate Flag")]
     [IsoXmlTag("EstmtdRateFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? EstimatedRateFlag { get; init; }
+    public YesNoIndicator? EstimatedRateFlag { get; init; }
 
     /// <summary>
     /// Rate at which the fee will be charged to a DTC participant.

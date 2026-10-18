@@ -22,7 +22,7 @@ public record PaymentTransaction182
     [IsoId("_qHFm9Ze-EfCsfrvk22Hpaw")]
     [DisplayName("Reversal Identification")]
     [IsoXmlTag("RvslId")]
-    public IsoMax35Text? ReversalIdentification { get; init; }
+    public Max35Text? ReversalIdentification { get; init; }
 
     /// <summary>
     /// Provides information on the original message.
@@ -38,7 +38,7 @@ public record PaymentTransaction182
     [IsoId("_qHFm-Ze-EfCsfrvk22Hpaw")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
-    public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.
@@ -46,7 +46,7 @@ public record PaymentTransaction182
     [IsoId("_qHFm-5e-EfCsfrvk22Hpaw")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the original first instructing agent, to unambiguously identify the transaction.
@@ -54,7 +54,7 @@ public record PaymentTransaction182
     [IsoId("_qHFm_Ze-EfCsfrvk22Hpaw")]
     [DisplayName("Original Transaction Identification")]
     [IsoXmlTag("OrgnlTxId")]
-    public IsoMax35Text? OriginalTransactionIdentification { get; init; }
+    public Max35Text? OriginalTransactionIdentification { get; init; }
 
     /// <summary>
     /// Universally unique identifier to provide the original end-to-end reference of a payment transaction.
@@ -62,7 +62,7 @@ public record PaymentTransaction182
     [IsoId("_qHFm_5e-EfCsfrvk22Hpaw")]
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
-    public IsoUUIDv4Identifier? OriginalUETR { get; init; }
+    public UUIDv4Identifier? OriginalUETR { get; init; }
 
     /// <summary>
     /// Unique reference, as assigned by the original clearing system, to unambiguously identify the original instruction.
@@ -70,7 +70,7 @@ public record PaymentTransaction182
     [IsoId("_qHFnAZe-EfCsfrvk22Hpaw")]
     [DisplayName("Original Clearing System Reference")]
     [IsoXmlTag("OrgnlClrSysRef")]
-    public IsoMax35Text? OriginalClearingSystemReference { get; init; }
+    public Max35Text? OriginalClearingSystemReference { get; init; }
 
     /// <summary>
     /// Amount of money moved between the instructing agent and the instructed agent, as provided in the original instruction.
@@ -94,7 +94,7 @@ public record PaymentTransaction182
     [IsoId("_qHFnB5e-EfCsfrvk22Hpaw")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
-    public IsoISODate? InterbankSettlementDate { get; init; }
+    public DateOnly? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Indicator of the urgency or order of importance that the instructing party would like the instructed party to apply to the processing of the settlement instruction.
@@ -126,7 +126,7 @@ public record PaymentTransaction182
     [IsoId("_qHFnD5e-EfCsfrvk22Hpaw")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
-    public IsoBaseOneRate? ExchangeRate { get; init; }
+    public BaseOneRate? ExchangeRate { get; init; }
 
     /// <summary>
     /// Amount of money asked or paid as compensation for the processing of the instruction.

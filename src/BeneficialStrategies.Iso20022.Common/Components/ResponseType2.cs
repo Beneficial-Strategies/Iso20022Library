@@ -40,5 +40,5 @@ public record ResponseType2
     [IsoXmlTag("AddtlRsltInf")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? AdditionalResultInformation { get; init; }
+    public Max140Text? AdditionalResultInformation { get; init; }
 }

@@ -22,7 +22,7 @@ public record OfferData1
     [IsoId("_WgtGIGIcEfCeoPFCHQnhvA")]
     [DisplayName("Best Offer")]
     [IsoXmlTag("BestOffer")]
-    public required IsoDecimalNumber BestOffer { get; init; }
+    public required DecimalNumber BestOffer { get; init; }
 
     /// <summary>
     /// The aggregated volume attached to the best offer.
@@ -30,5 +30,5 @@ public record OfferData1
     [IsoId("_gffqgGIcEfCeoPFCHQnhvA")]
     [DisplayName("Best Offer Volume")]
     [IsoXmlTag("BestOfferVol")]
-    public required IsoDecimalNumber BestOfferVolume { get; init; }
+    public required DecimalNumber BestOfferVolume { get; init; }
 }

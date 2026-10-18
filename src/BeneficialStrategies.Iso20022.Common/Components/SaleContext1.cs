@@ -24,7 +24,7 @@ public record SaleContext1
     [IsoXmlTag("SaleId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SaleIdentification { get; init; }
+    public Max35Text? SaleIdentification { get; init; }
 
     /// <summary>
     /// Identify a sale transaction assigned by the sale system.
@@ -34,7 +34,7 @@ public record SaleContext1
     [IsoXmlTag("SaleRefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SaleReferenceNumber { get; init; }
+    public Max35Text? SaleReferenceNumber { get; init; }
 
     /// <summary>
     /// Identifier of the reconciliation between the Sale system and the POI system.
@@ -44,7 +44,7 @@ public record SaleContext1
     [IsoXmlTag("SaleRcncltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SaleReconciliationIdentification { get; init; }
+    public Max35Text? SaleReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Identification of the cashier who carried out the transaction.
@@ -54,7 +54,7 @@ public record SaleContext1
     [IsoXmlTag("CshrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CashierIdentification { get; init; }
+    public Max35Text? CashierIdentification { get; init; }
 
     /// <summary>
     /// Identifies the shift of the cashier.
@@ -63,7 +63,7 @@ public record SaleContext1
     [DisplayName("Shift Number")]
     [IsoXmlTag("ShftNb")]
     [IsoSimpleType(IsoSimpleType.Max2NumericText)]
-    public IsoMax2NumericText? ShiftNumber { get; init; }
+    public Max2NumericText? ShiftNumber { get; init; }
 
     /// <summary>
     /// Additional information associated with the sale transaction.
@@ -73,5 +73,5 @@ public record SaleContext1
     [IsoXmlTag("AddtlSaleData")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AdditionalSaleData { get; init; }
+    public Max70Text? AdditionalSaleData { get; init; }
 }

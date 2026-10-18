@@ -23,7 +23,7 @@ public record PlainCardData16
     [DisplayName("PAN")]
     [IsoXmlTag("PAN")]
     [IsoSimpleType(IsoSimpleType.Min8Max28NumericText)]
-    public required IsoMin8Max28NumericText PAN { get; init; }
+    public required Min8Max28NumericText PAN { get; init; }
 
     /// <summary>
     /// Identify a card or a payment token inside a set of cards with the same PAN or token.
@@ -32,7 +32,7 @@ public record PlainCardData16
     [DisplayName("Card Sequence Number")]
     [IsoXmlTag("CardSeqNb")]
     [IsoSimpleType(IsoSimpleType.Min2Max3NumericText)]
-    public IsoMin2Max3NumericText? CardSequenceNumber { get; init; }
+    public Min2Max3NumericText? CardSequenceNumber { get; init; }
 
     /// <summary>
     /// Date from which the card can be used, expressed either in the YYYY-MM format, or in the YYYY-MM-DD format.
@@ -42,7 +42,7 @@ public record PlainCardData16
     [IsoXmlTag("FctvDt")]
     [IsoSimpleType(IsoSimpleType.Max10Text)]
     [StringLength(maximumLength: 10, MinimumLength = 1)]
-    public IsoMax10Text? EffectiveDate { get; init; }
+    public Max10Text? EffectiveDate { get; init; }
 
     /// <summary>
     /// Expiry date of the card or the payment token expressed either in the YYYY-MM format, or in the YYYY-MM-DD format.
@@ -52,7 +52,7 @@ public record PlainCardData16
     [IsoXmlTag("XpryDt")]
     [IsoSimpleType(IsoSimpleType.Max10Text)]
     [StringLength(maximumLength: 10, MinimumLength = 1)]
-    public required IsoMax10Text ExpiryDate { get; init; }
+    public required Max10Text ExpiryDate { get; init; }
 
     /// <summary>
     /// Services attached to the card, as defined in ISO 7813.
@@ -61,7 +61,7 @@ public record PlainCardData16
     [DisplayName("Service Code")]
     [IsoXmlTag("SvcCd")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public IsoExact3NumericText? ServiceCode { get; init; }
+    public Exact3NumericText? ServiceCode { get; init; }
 
     /// <summary>
     /// ISO track 1 issued from the magnetic stripe card or from the ICC if the magnetic stripe was not read. The format is conform to ISO 7813, removing beginning and ending sentinels and longitudinal redundancy check characters.
@@ -71,7 +71,7 @@ public record PlainCardData16
     [IsoXmlTag("Trck1")]
     [IsoSimpleType(IsoSimpleType.Max76Text)]
     [StringLength(maximumLength: 76, MinimumLength = 1)]
-    public IsoMax76Text? Track1 { get; init; }
+    public Max76Text? Track1 { get; init; }
 
     /// <summary>
     /// ISO track 2 issued from the magnetic stripe card or from the ICC if the magnetic stripe was not read. The content is conform to ISO 7813, removing beginning and ending sentinels and longitudinal redundancy check characters.
@@ -81,7 +81,7 @@ public record PlainCardData16
     [IsoXmlTag("Trck2")]
     [IsoSimpleType(IsoSimpleType.Max37Text)]
     [StringLength(maximumLength: 37, MinimumLength = 1)]
-    public IsoMax37Text? Track2 { get; init; }
+    public Max37Text? Track2 { get; init; }
 
     /// <summary>
     /// ISO track 3 issued from the magnetic stripe card or from the ICC if the magnetic stripe was not read. The content is conform to ISO 4909, removing beginning and ending sentinels and longitudinal redundancy check characters.
@@ -91,5 +91,5 @@ public record PlainCardData16
     [IsoXmlTag("Trck3")]
     [IsoSimpleType(IsoSimpleType.Max104Text)]
     [StringLength(maximumLength: 104, MinimumLength = 1)]
-    public IsoMax104Text? Track3 { get; init; }
+    public Max104Text? Track3 { get; init; }
 }

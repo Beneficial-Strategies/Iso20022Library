@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.Serialization;
 ///   <item>Collection properties (<see cref="ValueList{T}"/>, <see cref="SimpleValueList{T}"/>,
 ///         <see cref="ImmutableValueList{T}"/>) serialize as JSON arrays
 ///         (<see cref="ImmutableValueListConverterFactory"/>).</item>
-///   <item><see cref="System.Xml.XmlQualifiedName"/> (the BCL type backing <c>IsoQName</c>, per
+///   <item><see cref="System.Xml.XmlQualifiedName"/> (the BCL type backing <c>System.Xml.XmlQualifiedName</c>, per
 ///         CLAUDE.md's W3C-standard exception) serializes as a single "namespace:localName" string
 ///         rather than System.Text.Json's default reflection-based object shape
 ///         (<see cref="Iso20022XmlQualifiedNameJsonConverter"/>).</item>

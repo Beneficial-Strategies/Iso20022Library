@@ -23,7 +23,7 @@ public record StrongCustomerAuthentication1
     [DisplayName("Subject To SCA")]
     [IsoXmlTag("SbjtToSCA")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? SubjectToSCA { get; init; }
+    public TrueFalseIndicator? SubjectToSCA { get; init; }
 
     /// <summary>
     /// Strong customer authentication exemption detail.
@@ -57,5 +57,5 @@ public record StrongCustomerAuthentication1
     [IsoXmlTag("RsnAuthntcnNotPrfrmd")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4Text? ReasonAuthenticationNotPerformed { get; init; }
+    public Max4Text? ReasonAuthenticationNotPerformed { get; init; }
 }

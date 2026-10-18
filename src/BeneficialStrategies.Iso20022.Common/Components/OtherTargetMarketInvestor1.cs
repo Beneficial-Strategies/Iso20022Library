@@ -24,7 +24,7 @@ public record OtherTargetMarketInvestor1
     [IsoXmlTag("InvstrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? InvestorType { get; init; }
+    public Max35Text? InvestorType { get; init; }
 
     /// <summary>
     /// Choice of formats for the specification of whether the product is aimed at the type of investor.

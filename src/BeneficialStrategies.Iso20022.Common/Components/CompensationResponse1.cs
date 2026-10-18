@@ -28,14 +28,14 @@ public record CompensationResponse1
     /// </summary>
     [DisplayName("Expected Value Date")]
     [IsoXmlTag("XpctdValDt")]
-    public IsoISODate? ExpectedValueDate { get; init; }
+    public DateOnly? ExpectedValueDate { get; init; }
 
     /// <summary>
     /// Granted.
     /// </summary>
     [DisplayName("Granted")]
     [IsoXmlTag("Grantd")]
-    public required IsoTrueFalseIndicator Granted { get; init; }
+    public required TrueFalseIndicator Granted { get; init; }
 
     /// <summary>
     /// Initial Amount.
@@ -49,7 +49,7 @@ public record CompensationResponse1
     /// </summary>
     [DisplayName("Interest Rate")]
     [IsoXmlTag("IntrstRate")]
-    public IsoPercentageRate? InterestRate { get; init; }
+    public PercentageRate? InterestRate { get; init; }
 
     /// <summary>
     /// Paid Charges.
@@ -70,5 +70,5 @@ public record CompensationResponse1
     /// </summary>
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public IsoMax140Text? Reason { get; init; }
+    public Max140Text? Reason { get; init; }
 }

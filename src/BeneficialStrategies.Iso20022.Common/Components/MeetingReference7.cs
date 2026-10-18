@@ -24,7 +24,7 @@ public record MeetingReference7
     [IsoXmlTag("MtgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MeetingIdentification { get; init; }
+    public Max35Text? MeetingIdentification { get; init; }
 
     /// <summary>
     /// Identification assigned to the meeting by the issuer. It must be unique for the issuer.
@@ -34,7 +34,7 @@ public record MeetingReference7
     [IsoXmlTag("IssrMtgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? IssuerMeetingIdentification { get; init; }
+    public Max35Text? IssuerMeetingIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the meeting will take place.
@@ -43,7 +43,7 @@ public record MeetingReference7
     [DisplayName("Meeting Date And Time")]
     [IsoXmlTag("MtgDtAndTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime MeetingDateAndTime { get; init; }
+    public required ISODateTime MeetingDateAndTime { get; init; }
 
     /// <summary>
     /// Specifies the type of meeting for which instructions are sent.

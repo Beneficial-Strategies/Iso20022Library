@@ -24,7 +24,7 @@ public record CorporateAction1
     [IsoXmlTag("Cd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Code { get; init; }
+    public Max35Text? Code { get; init; }
 
     /// <summary>
     /// Reference assigned by the account servicer to unambiguously identify a corporate action event.
@@ -34,7 +34,7 @@ public record CorporateAction1
     [IsoXmlTag("Nb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Number { get; init; }
+    public Max35Text? Number { get; init; }
 
     /// <summary>
     /// Proprietary corporate action event information.
@@ -44,5 +44,5 @@ public record CorporateAction1
     [IsoXmlTag("Prtry")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Proprietary { get; init; }
+    public Max35Text? Proprietary { get; init; }
 }

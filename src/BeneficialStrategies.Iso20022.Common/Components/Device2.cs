@@ -24,7 +24,7 @@ public record Device2
     [IsoXmlTag("Manfctr")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Manufacturer { get; init; }
+    public Max70Text? Manufacturer { get; init; }
 
     /// <summary>
     /// Manufacturer&apos;s identification of the model.
@@ -34,7 +34,7 @@ public record Device2
     [IsoXmlTag("ManfctrMdlId")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? ManufacturerModelIdentification { get; init; }
+    public Max70Text? ManufacturerModelIdentification { get; init; }
 
     /// <summary>
     /// Type of customer device.
@@ -52,7 +52,7 @@ public record Device2
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Preferred language set on the device
@@ -69,7 +69,7 @@ public record Device2
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? PhoneNumber { get; init; }
+    public PhoneNumber? PhoneNumber { get; init; }
 
     /// <summary>
     /// Geographical location of the device.
@@ -78,7 +78,7 @@ public record Device2
     [DisplayName("Geographic Location")]
     [IsoXmlTag("GeogcLctn")]
     [IsoSimpleType(IsoSimpleType.GeographicPointInDecimalDegrees)]
-    public IsoGeographicPointInDecimalDegrees? GeographicLocation { get; init; }
+    public GeographicPointInDecimalDegrees? GeographicLocation { get; init; }
 
     /// <summary>
     /// Country of the location.
@@ -96,7 +96,7 @@ public record Device2
     [IsoXmlTag("IPAdr")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? IPAddress { get; init; }
+    public Max70Text? IPAddress { get; init; }
 
     /// <summary>
     /// Electronic mail address associated with the device.
@@ -106,7 +106,7 @@ public record Device2
     [IsoXmlTag("Email")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Email { get; init; }
+    public Max256Text? Email { get; init; }
 
     /// <summary>
     /// Customer&apos;s name of the device.
@@ -116,7 +116,7 @@ public record Device2
     [IsoXmlTag("DvcNm")]
     [IsoSimpleType(IsoSimpleType.Max100Text)]
     [StringLength(maximumLength: 100, MinimumLength = 1)]
-    public IsoMax100Text? DeviceName { get; init; }
+    public Max100Text? DeviceName { get; init; }
 
     /// <summary>
     /// Customer assigned device name, normalized.
@@ -126,5 +126,5 @@ public record Device2
     [IsoXmlTag("DvcNmNrmlzd")]
     [IsoSimpleType(IsoSimpleType.Max100Text)]
     [StringLength(maximumLength: 100, MinimumLength = 1)]
-    public IsoMax100Text? DeviceNameNormalized { get; init; }
+    public Max100Text? DeviceNameNormalized { get; init; }
 }

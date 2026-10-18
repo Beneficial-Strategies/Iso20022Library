@@ -28,7 +28,7 @@ public record PositionSetDimensions16
     /// </summary>
     [DisplayName("Cleared")]
     [IsoXmlTag("Clrd")]
-    public IsoTrueFalseIndicator? Cleared { get; init; }
+    public TrueFalseIndicator? Cleared { get; init; }
 
     /// <summary>
     /// Collateral.
@@ -77,14 +77,14 @@ public record PositionSetDimensions16
     /// </summary>
     [DisplayName("Intra Group")]
     [IsoXmlTag("IntraGrp")]
-    public IsoTrueFalseIndicator? IntraGroup { get; init; }
+    public TrueFalseIndicator? IntraGroup { get; init; }
 
     /// <summary>
     /// IRS Type.
     /// </summary>
     [DisplayName("IRS Type")]
     [IsoXmlTag("IRSTp")]
-    public IsoMax52Text? IRSType { get; init; }
+    public Max52Text? IRSType { get; init; }
 
     /// <summary>
     /// Master Agreement.

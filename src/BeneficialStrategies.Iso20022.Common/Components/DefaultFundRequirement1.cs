@@ -32,7 +32,7 @@ public record DefaultFundRequirement1
     [IsoXmlTag("SvcId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ServiceIdentification { get; init; }
+    public Max35Text? ServiceIdentification { get; init; }
 
     /// <summary>
     /// Clearing member&apos;s pre-funded default fund requirement for the default fund at the central counterparty.

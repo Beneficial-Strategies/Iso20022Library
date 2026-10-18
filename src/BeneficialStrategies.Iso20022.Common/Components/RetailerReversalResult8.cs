@@ -22,7 +22,7 @@ public record RetailerReversalResult8
     [IsoId("_Ss-uRbYNEfCUZfsQO4rYeA")]
     [DisplayName("POI Reconciliation Identification")]
     [IsoXmlTag("POIRcncltnId")]
-    public IsoMax35Text? POIReconciliationIdentification { get; init; }
+    public Max35Text? POIReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Original Transaction if any linked to this reversal.

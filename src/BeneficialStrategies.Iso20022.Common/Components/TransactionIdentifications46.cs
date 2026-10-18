@@ -24,7 +24,7 @@ public record TransactionIdentifications46
     [IsoXmlTag("ClntCollInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text ClientCollateralInstructionIdentification { get; init; }
+    public required Max35Text ClientCollateralInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique reference identifying the collateral management transaction from the client&apos;s point of view. Present in case of a decrease.
@@ -34,7 +34,7 @@ public record TransactionIdentifications46
     [IsoXmlTag("ClntCollTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClientCollateralTransactionIdentification { get; init; }
+    public Max35Text? ClientCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Reference assigned to the instruction by the triparty-agent/service-provider.
@@ -44,7 +44,7 @@ public record TransactionIdentifications46
     [IsoXmlTag("TrptyAgtSvcPrvdrCollInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TripartyAgentServiceProviderCollateralInstructionIdentification { get; init; }
+    public Max35Text? TripartyAgentServiceProviderCollateralInstructionIdentification { get; init; }
 
     /// <summary>
     /// Unique reference identifying the triparty-agent/service-provider collateral management transaction from the triparty-agent&apos;s/service-provider&apos;s point of view.
@@ -54,7 +54,7 @@ public record TransactionIdentifications46
     [IsoXmlTag("TrptyAgtSvcPrvdrCollTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; }
+    public Max35Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique collateral transaction reference assigned by counterparty.
@@ -64,7 +64,7 @@ public record TransactionIdentifications46
     [IsoXmlTag("CtrPtyCollTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CounterpartyCollateralTransactionIdentification { get; init; }
+    public Max35Text? CounterpartyCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique identification (UTI) agreed upon by the two trade counterparties to identify the trade.
@@ -74,5 +74,5 @@ public record TransactionIdentifications46
     [IsoXmlTag("CmonTxId")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoMax52Text? CommonTransactionIdentification { get; init; }
+    public Max52Text? CommonTransactionIdentification { get; init; }
 }

@@ -55,7 +55,7 @@ public record SecuritiesMovement8
     [DisplayName("Collateral Movement")]
     [IsoXmlTag("CollMvmnt")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator CollateralMovement { get; init; }
+    public required YesNoIndicator CollateralMovement { get; init; }
 
     /// <summary>
     /// Indicates whether the proposed securities movements can be accepted.
@@ -64,7 +64,7 @@ public record SecuritiesMovement8
     [DisplayName("Securities Movements Approved")]
     [IsoXmlTag("SctiesMvmntsApprvd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? SecuritiesMovementsApproved { get; init; }
+    public YesNoIndicator? SecuritiesMovementsApproved { get; init; }
 
     /// <summary>
     /// Indicates whether the position is fixed (post settlement).
@@ -73,7 +73,7 @@ public record SecuritiesMovement8
     [DisplayName("Position Type")]
     [IsoXmlTag("PosTp")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PositionType { get; init; }
+    public YesNoIndicator? PositionType { get; init; }
 
     /// <summary>
     /// Account where financial instruments are maintained.
@@ -99,7 +99,7 @@ public record SecuritiesMovement8
     [IsoXmlTag("ClntSctiesMvmntId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ClientSecuritiesMovementIdentification { get; init; }
+    public Max35Text? ClientSecuritiesMovementIdentification { get; init; }
 
     /// <summary>
     /// Reference assigned by the triparty-agent/service-provider to the financial instrument movement.
@@ -109,7 +109,7 @@ public record SecuritiesMovement8
     [IsoXmlTag("TrptyAgtSvcPrvdrSctiesMvmntId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? TripartyAgentServiceProviderSecuritiesMovementIdentification { get; init; }
+    public Max35Text? TripartyAgentServiceProviderSecuritiesMovementIdentification { get; init; }
 
     /// <summary>
     /// Value of the collateral position.

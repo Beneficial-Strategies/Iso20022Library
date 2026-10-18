@@ -32,7 +32,7 @@ public record DocumentGeneralInformation3
     [IsoXmlTag("DocNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text DocumentNumber { get; init; }
+    public required Max35Text DocumentNumber { get; init; }
 
     /// <summary>
     /// Specifies the identification sequence number for a specific couple sender/receiver.
@@ -42,7 +42,7 @@ public record DocumentGeneralInformation3
     [IsoXmlTag("SndrRcvrSeqId")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? SenderReceiverSequenceIdentification { get; init; }
+    public Max140Text? SenderReceiverSequenceIdentification { get; init; }
 
     /// <summary>
     /// Issue date of the document.
@@ -51,7 +51,7 @@ public record DocumentGeneralInformation3
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? IssueDate { get; init; }
+    public DateOnly? IssueDate { get; init; }
 
     /// <summary>
     /// URL (Uniform Resource Locator) where the document can be found.
@@ -61,7 +61,7 @@ public record DocumentGeneralInformation3
     [IsoXmlTag("URL")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? URL { get; init; }
+    public Max256Text? URL { get; init; }
 
     /// <summary>
     /// Full Signature Structure without Signature itself:

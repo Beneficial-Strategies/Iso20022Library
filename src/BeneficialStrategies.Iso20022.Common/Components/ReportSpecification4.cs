@@ -22,7 +22,7 @@ public record ReportSpecification4
     [IsoId("_PcRl4tp-Ed-ak6NoX_4Aeg_1375759877")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
-    public SimpleValueList<IsoMax35Text> TransactionIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> TransactionIdentification { get; init; } = [];
 
     /// <summary>
     /// Identifies the status of the transaction by means of a code.
@@ -38,7 +38,7 @@ public record ReportSpecification4
     [IsoId("_PcRl5Np-Ed-ak6NoX_4Aeg_1375760307")]
     [DisplayName("Submitter Transaction Reference")]
     [IsoXmlTag("SubmitrTxRef")]
-    public SimpleValueList<IsoMax35Text> SubmitterTransactionReference { get; init; } = [];
+    public SimpleValueList<Max35Text> SubmitterTransactionReference { get; init; } = [];
 
     /// <summary>
     /// Specifies a list of entities for which the matching application must generate a report.

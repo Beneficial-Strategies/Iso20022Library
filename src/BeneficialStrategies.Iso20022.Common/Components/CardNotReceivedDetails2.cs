@@ -23,7 +23,7 @@ public record CardNotReceivedDetails2
     [DisplayName("Date Of Card Mailed")]
     [IsoXmlTag("DtOfCardMld")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate DateOfCardMailed { get; init; }
+    public required DateOnly DateOfCardMailed { get; init; }
 
     /// <summary>
     /// Address where card was mailed to.
@@ -41,7 +41,7 @@ public record CardNotReceivedDetails2
     [IsoXmlTag("MlngAdrUstrd")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? MailingAddressUnstructured { get; init; }
+    public Max256Text? MailingAddressUnstructured { get; init; }
 
     /// <summary>
     /// Postal code where the card was mailed from.
@@ -51,7 +51,7 @@ public record CardNotReceivedDetails2
     [IsoXmlTag("MldFrPstlCd")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public required IsoMax16Text MailedFromPostalCode { get; init; }
+    public required Max16Text MailedFromPostalCode { get; init; }
 
     /// <summary>
     /// Date of the beginning of validation of the card.
@@ -60,7 +60,7 @@ public record CardNotReceivedDetails2
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ValidFrom { get; init; }
+    public DateOnly? ValidFrom { get; init; }
 
     /// <summary>
     /// Indicates whether card provides a Card Security Code.
@@ -71,7 +71,7 @@ public record CardNotReceivedDetails2
     [DisplayName("Card Security Code Indicator")]
     [IsoXmlTag("CardSctyCdInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CardSecurityCodeIndicator { get; init; }
+    public TrueFalseIndicator? CardSecurityCodeIndicator { get; init; }
 
     /// <summary>
     /// Identifies the security capabilities of the card.

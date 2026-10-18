@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RatioFormat3Choice
         [DisplayName("Quantity")]
         [IsoXmlTag("Qty1")]
         [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-        public required IsoDecimalNumber Quantity1 { get; init; }
+        public required DecimalNumber Quantity1 { get; init; }
 
         /// <summary>
         /// Denominator of the quotient of quantities.
@@ -32,6 +32,6 @@ namespace BeneficialStrategies.Iso20022.Choices.RatioFormat3Choice
         [DisplayName("Quantity")]
         [IsoXmlTag("Qty2")]
         [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-        public required IsoDecimalNumber Quantity2 { get; init; }
+        public required DecimalNumber Quantity2 { get; init; }
     }
 }

@@ -21,7 +21,7 @@ public record OnLinePIN11
     /// </summary>
     [DisplayName("Additional Input")]
     [IsoXmlTag("AddtlInpt")]
-    public IsoMax35Text? AdditionalInput { get; init; }
+    public Max35Text? AdditionalInput { get; init; }
 
     /// <summary>
     /// Encrypted PIN Block.

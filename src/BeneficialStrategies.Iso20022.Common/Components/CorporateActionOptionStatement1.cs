@@ -22,7 +22,7 @@ public record CorporateActionOptionStatement1
     [IsoId("_-X82_N_FEe-Ned3-G07x_A")]
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
-    public required IsoExact3NumericText OptionNumber { get; init; }
+    public required Exact3NumericText OptionNumber { get; init; }
 
     /// <summary>
     /// Specifies the corporate action options available to the account owner.

@@ -38,5 +38,5 @@ public record References4
     [IsoId("_QoHt8dp-Ed-ak6NoX_4Aeg_-938129435")]
     [DisplayName("Attached Document Name")]
     [IsoXmlTag("AttchdDocNm")]
-    public SimpleValueList<IsoMax70Text> AttachedDocumentName { get; init; } = [];
+    public SimpleValueList<Max70Text> AttachedDocumentName { get; init; } = [];
 }

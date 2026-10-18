@@ -38,5 +38,5 @@ public record AcceptorDiagnosticResponse12
     [IsoId("_M0v4AbX_EfCUZfsQO4rYeA")]
     [DisplayName("Acquirer Available")]
     [IsoXmlTag("AcqrrAvlbl")]
-    public IsoTrueFalseIndicator? AcquirerAvailable { get; init; }
+    public TrueFalseIndicator? AcquirerAvailable { get; init; }
 }

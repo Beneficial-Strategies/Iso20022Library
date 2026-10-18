@@ -38,7 +38,7 @@ public record AdministrativeRequest9
     [IsoId("_qq_AkbYCEfCUZfsQO4rYeA")]
     [DisplayName("Administrative Service Identification")]
     [IsoXmlTag("AdmstvSvcId")]
-    public IsoMax20000Text? AdministrativeServiceIdentification { get; init; }
+    public Max20000Text? AdministrativeServiceIdentification { get; init; }
 
     /// <summary>
     /// Additional information incorporated as an extension to the message.

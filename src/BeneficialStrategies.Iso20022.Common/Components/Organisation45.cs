@@ -30,7 +30,7 @@ public record Organisation45
     [IsoId("_yMAxu7XxEfCUZfsQO4rYeA")]
     [DisplayName("Common Name")]
     [IsoXmlTag("CmonNm")]
-    public IsoMax70Text? CommonName { get; init; }
+    public Max70Text? CommonName { get; init; }
 
     /// <summary>
     /// Location category of the place where the merchant actually performed the transaction.
@@ -54,5 +54,5 @@ public record Organisation45
     [IsoId("_yMAxzbXxEfCUZfsQO4rYeA")]
     [DisplayName("Scheme Data")]
     [IsoXmlTag("SchmeData")]
-    public IsoMax140Text? SchemeData { get; init; }
+    public Max140Text? SchemeData { get; init; }
 }

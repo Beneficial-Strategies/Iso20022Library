@@ -40,7 +40,7 @@ public record SubBalanceInformation19
     [IsoXmlTag("SubBalAddtlDtls")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoRestrictedFINXMax140Text? SubBalanceAdditionalDetails { get; init; }
+    public RestrictedFINXMax140Text? SubBalanceAdditionalDetails { get; init; }
 
     /// <summary>
     /// Breakdown of the aggregate quantity reported into significant lots, for example, tax lots.

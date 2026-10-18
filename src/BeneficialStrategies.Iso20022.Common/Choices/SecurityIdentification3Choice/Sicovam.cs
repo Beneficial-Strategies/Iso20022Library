@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification3Choice
         /// </summary>
         [IsoXmlTag("SCVM")]
         [IsoSimpleType(IsoSimpleType.SicovamIdentifier)]
-        public required IsoSicovamIdentifier Value { get; init; }
+        public required SicovamIdentifier Value { get; init; }
     }
 }

@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.DatePeriod1Choice
         /// </summary>
         [IsoXmlTag("DtMnth")]
         [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
-        public required IsoISOYearMonth Value { get; init; }
+        public required ISOYearMonth Value { get; init; }
     }
 }

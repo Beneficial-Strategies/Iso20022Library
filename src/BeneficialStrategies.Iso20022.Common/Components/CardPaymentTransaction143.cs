@@ -21,7 +21,7 @@ public record CardPaymentTransaction143
     /// </summary>
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
-    public ValueList<IsoMax70Text> AdditionalTransactionData { get; init; } = [];
+    public ValueList<Max70Text> AdditionalTransactionData { get; init; } = [];
 
     /// <summary>
     /// Authorisation Result.
@@ -35,21 +35,21 @@ public record CardPaymentTransaction143
     /// </summary>
     [DisplayName("Card Programme Applied")]
     [IsoXmlTag("CardPrgrmmApld")]
-    public IsoMax35Text? CardProgrammeApplied { get; init; }
+    public Max35Text? CardProgrammeApplied { get; init; }
 
     /// <summary>
     /// Card Programme Proposed.
     /// </summary>
     [DisplayName("Card Programme Proposed")]
     [IsoXmlTag("CardPrgrmmPropsd")]
-    public ValueList<IsoMax35Text> CardProgrammeProposed { get; init; } = [];
+    public ValueList<Max35Text> CardProgrammeProposed { get; init; } = [];
 
     /// <summary>
     /// Customer Consent.
     /// </summary>
     [DisplayName("Customer Consent")]
     [IsoXmlTag("CstmrCnsnt")]
-    public IsoTrueFalseIndicator? CustomerConsent { get; init; }
+    public TrueFalseIndicator? CustomerConsent { get; init; }
 
     /// <summary>
     /// Failure Reason.
@@ -63,21 +63,21 @@ public record CardPaymentTransaction143
     /// </summary>
     [DisplayName("Initiator Transaction Identification")]
     [IsoXmlTag("InitrTxId")]
-    public IsoMax35Text? InitiatorTransactionIdentification { get; init; }
+    public Max35Text? InitiatorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Interchange Data.
     /// </summary>
     [DisplayName("Interchange Data")]
     [IsoXmlTag("IntrchngData")]
-    public IsoMax140Text? InterchangeData { get; init; }
+    public Max140Text? InterchangeData { get; init; }
 
     /// <summary>
     /// Merchant Category Code.
     /// </summary>
     [DisplayName("Merchant Category Code")]
     [IsoXmlTag("MrchntCtgyCd")]
-    public required IsoMin3Max4Text MerchantCategoryCode { get; init; }
+    public required Min3Max4Text MerchantCategoryCode { get; init; }
 
     /// <summary>
     /// Original Transaction.
@@ -91,28 +91,28 @@ public record CardPaymentTransaction143
     /// </summary>
     [DisplayName("Recipient Transaction Identification")]
     [IsoXmlTag("RcptTxId")]
-    public IsoMax140Text? RecipientTransactionIdentification { get; init; }
+    public Max140Text? RecipientTransactionIdentification { get; init; }
 
     /// <summary>
     /// Reconciliation Identification.
     /// </summary>
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
-    public IsoMax35Text? ReconciliationIdentification { get; init; }
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Reversal.
     /// </summary>
     [DisplayName("Reversal")]
     [IsoXmlTag("Rvsl")]
-    public IsoTrueFalseIndicator? Reversal { get; init; }
+    public TrueFalseIndicator? Reversal { get; init; }
 
     /// <summary>
     /// Sale Reference Identification.
     /// </summary>
     [DisplayName("Sale Reference Identification")]
     [IsoXmlTag("SaleRefId")]
-    public IsoMax35Text? SaleReferenceIdentification { get; init; }
+    public Max35Text? SaleReferenceIdentification { get; init; }
 
     /// <summary>
     /// Transaction Details.
@@ -133,5 +133,5 @@ public record CardPaymentTransaction143
     /// </summary>
     [DisplayName("Transaction Success")]
     [IsoXmlTag("TxSucss")]
-    public required IsoTrueFalseIndicator TransactionSuccess { get; init; }
+    public required TrueFalseIndicator TransactionSuccess { get; init; }
 }

@@ -24,7 +24,7 @@ public record ATMEquipment2
     [IsoXmlTag("Manfctr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Manufacturer { get; init; }
+    public Max35Text? Manufacturer { get; init; }
 
     /// <summary>
     /// Model of ATM.
@@ -34,7 +34,7 @@ public record ATMEquipment2
     [IsoXmlTag("Mdl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Model { get; init; }
+    public Max35Text? Model { get; init; }
 
     /// <summary>
     /// Version of the device model.
@@ -44,7 +44,7 @@ public record ATMEquipment2
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Version { get; init; }
+    public Max35Text? Version { get; init; }
 
     /// <summary>
     /// Serial number of the ATM.
@@ -54,7 +54,7 @@ public record ATMEquipment2
     [IsoXmlTag("SrlNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SerialNumber { get; init; }
+    public Max35Text? SerialNumber { get; init; }
 
     /// <summary>
     /// Provider of the firmware.
@@ -64,7 +64,7 @@ public record ATMEquipment2
     [IsoXmlTag("FrmwrPrvdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? FirmwareProvider { get; init; }
+    public Max35Text? FirmwareProvider { get; init; }
 
     /// <summary>
     /// Identification of the firmware.
@@ -74,7 +74,7 @@ public record ATMEquipment2
     [IsoXmlTag("FrmwrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? FirmwareIdentification { get; init; }
+    public Max35Text? FirmwareIdentification { get; init; }
 
     /// <summary>
     /// Version of the firmware.
@@ -84,5 +84,5 @@ public record ATMEquipment2
     [IsoXmlTag("FrmwrVrsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? FirmwareVersion { get; init; }
+    public Max35Text? FirmwareVersion { get; init; }
 }

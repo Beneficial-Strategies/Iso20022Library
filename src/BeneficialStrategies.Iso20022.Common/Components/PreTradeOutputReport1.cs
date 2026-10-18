@@ -22,7 +22,7 @@ public record PreTradeOutputReport1
     [IsoId("_4MkA8GIVEfCeoPFCHQnhvA")]
     [DisplayName("Report Identification")]
     [IsoXmlTag("RptId")]
-    public IsoMax140Text? ReportIdentification { get; init; }
+    public Max140Text? ReportIdentification { get; init; }
 
     /// <summary>
     /// Information related to the pre-trade transparency data of financial instruments.

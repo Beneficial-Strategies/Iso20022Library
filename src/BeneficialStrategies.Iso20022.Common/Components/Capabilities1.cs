@@ -31,7 +31,7 @@ public record Capabilities1
     [IsoId("_oEHoEEYZEeegp_DADCe7HQ")]
     [DisplayName("Other Card Reading Capabilities")]
     [IsoXmlTag("OthrCardRdngCpblties")]
-    public SimpleValueList<IsoMax35Text> OtherCardReadingCapabilities { get; init; } = [];
+    public SimpleValueList<Max35Text> OtherCardReadingCapabilities { get; init; } = [];
 
     /// <summary>
     /// Card writing or output capabilities of the terminal performing the transaction.
@@ -48,7 +48,7 @@ public record Capabilities1
     [IsoId("_FKeTMEYaEeegp_DADCe7HQ")]
     [DisplayName("Other Card Writing Capabilities")]
     [IsoXmlTag("OthrCardWrtgCpblties")]
-    public SimpleValueList<IsoMax35Text> OtherCardWritingCapabilities { get; init; } = [];
+    public SimpleValueList<Max35Text> OtherCardWritingCapabilities { get; init; } = [];
 
     /// <summary>
     /// Maximum number of digits that the Point of Interaction is able to accept when the cardholder enters its PIN.
@@ -58,7 +58,7 @@ public record Capabilities1
     [DisplayName("PIN Length Capabilities")]
     [IsoXmlTag("PINLngthCpblties")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? PINLengthCapabilities { get; init; }
+    public Number? PINLengthCapabilities { get; init; }
 
     /// <summary>
     /// Maximum number of characters of the approval code that the acquirer is able to manage.
@@ -68,7 +68,7 @@ public record Capabilities1
     [DisplayName("Approval Code Length")]
     [IsoXmlTag("ApprvlCdLngth")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? ApprovalCodeLength { get; init; }
+    public Number? ApprovalCodeLength { get; init; }
 
     /// <summary>
     /// Maximum data length in bytes that a card issuer can return to the ICC at the terminal.
@@ -78,7 +78,7 @@ public record Capabilities1
     [DisplayName("Max Script Length")]
     [IsoXmlTag("MxScrptLngth")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaxScriptLength { get; init; }
+    public Number? MaxScriptLength { get; init; }
 
     /// <summary>
     /// PIN pad is inoperative.
@@ -89,7 +89,7 @@ public record Capabilities1
     [DisplayName("PIN Pad Inoperative")]
     [IsoXmlTag("PINPadInprtv")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? PINPadInoperative { get; init; }
+    public TrueFalseIndicator? PINPadInoperative { get; init; }
 
     /// <summary>
     /// Indicates whether the terminal can capture cards or not.
@@ -101,7 +101,7 @@ public record Capabilities1
     [DisplayName("Card Capture Capable")]
     [IsoXmlTag("CardCaptrCpbl")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CardCaptureCapable { get; init; }
+    public TrueFalseIndicator? CardCaptureCapable { get; init; }
 
     /// <summary>
     /// Capability of the terminal to go online.

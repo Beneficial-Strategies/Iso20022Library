@@ -35,19 +35,19 @@ public record DeviceInitialisationCardReaderRequest6
     /// </summary>
     [DisplayName("Leave Card Flag")]
     [IsoXmlTag("LeavCardFlg")]
-    public IsoTrueFalseIndicator? LeaveCardFlag { get; init; }
+    public TrueFalseIndicator? LeaveCardFlag { get; init; }
 
     /// <summary>
     /// Maximum Waiting Time.
     /// </summary>
     [DisplayName("Maximum Waiting Time")]
     [IsoXmlTag("MaxWtgTm")]
-    public IsoNumber? MaximumWaitingTime { get; init; }
+    public Number? MaximumWaitingTime { get; init; }
 
     /// <summary>
     /// Warm Reset Flag.
     /// </summary>
     [DisplayName("Warm Reset Flag")]
     [IsoXmlTag("WarmRstFlg")]
-    public IsoTrueFalseIndicator? WarmResetFlag { get; init; }
+    public TrueFalseIndicator? WarmResetFlag { get; init; }
 }

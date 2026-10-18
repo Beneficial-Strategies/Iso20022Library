@@ -9,6 +9,6 @@ namespace BeneficialStrategies.Iso20022.Choices.TradingVenueIdentification4Choic
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("MktIdCd")]
-        public required IsoMICIdentifier Value { get; init; }
+        public required MICIdentifier Value { get; init; }
     }
 }

@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport31Choice
         [DisplayName("Reporting Time Stamp")]
         [IsoXmlTag("RptgTmStmp")]
         [IsoSimpleType(IsoSimpleType.ISODateTime)]
-        public IsoISODateTime? ReportingTimeStamp { get; init; }
+        public ISODateTime? ReportingTimeStamp { get; init; }
 
         /// <summary>
         /// Data specific to counterparties and related fields.
@@ -40,7 +40,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport31Choice
         [DisplayName("Event Date")]
         [IsoXmlTag("EvtDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? EventDate { get; init; }
+        public DateOnly? EventDate { get; init; }
 
         /// <summary>
         /// Choice between a Unique Transaction Identifier (UTI) or a proprietary identifier as agreed with the counterparty.
@@ -82,7 +82,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport31Choice
         [DisplayName("Counterparty Rating Trigger Indicator")]
         [IsoXmlTag("CtrPtyRatgTrggrInd")]
         [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-        public IsoTrueFalseIndicator? CounterpartyRatingTriggerIndicator { get; init; }
+        public TrueFalseIndicator? CounterpartyRatingTriggerIndicator { get; init; }
 
         /// <summary>
         /// Indicates if a counterparty rating trigger includes a threshold that increases collateral requirements when the counterparty falls below the single-A rating or equivalent.
@@ -92,7 +92,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport31Choice
         [DisplayName("Counterparty Rating Threshold Indicator")]
         [IsoXmlTag("CtrPtyRatgThrshldInd")]
         [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-        public IsoTrueFalseIndicator? CounterpartyRatingThresholdIndicator { get; init; }
+        public TrueFalseIndicator? CounterpartyRatingThresholdIndicator { get; init; }
 
         /// <summary>
         /// Specifies technical attributes of the message.

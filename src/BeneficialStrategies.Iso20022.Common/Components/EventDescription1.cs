@@ -24,7 +24,7 @@ public record EventDescription1
     [IsoXmlTag("Idr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identifier { get; init; }
+    public required Max35Text Identifier { get; init; }
 
     /// <summary>
     /// Date when event occurred.
@@ -33,7 +33,7 @@ public record EventDescription1
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? Date { get; init; }
+    public ISODateTime? Date { get; init; }
 
     /// <summary>
     /// Party to be advised.
@@ -75,7 +75,7 @@ public record EventDescription1
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max2000Text)]
     [StringLength(maximumLength: 2000, MinimumLength = 1)]
-    public required IsoMax2000Text Description { get; init; }
+    public required Max2000Text Description { get; init; }
 
     /// <summary>
     /// Reference to related document.

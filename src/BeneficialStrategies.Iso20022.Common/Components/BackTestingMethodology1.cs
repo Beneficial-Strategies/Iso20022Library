@@ -31,7 +31,7 @@ public record BackTestingMethodology1
     [DisplayName("Model Confidence Level")]
     [IsoXmlTag("MdlCnfdncLvl")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public required IsoBaseOneRate ModelConfidenceLevel { get; init; }
+    public required BaseOneRate ModelConfidenceLevel { get; init; }
 
     /// <summary>
     /// Indicates whether the CCP model calculates mark-to-market changes on fixed portfolios when backtesting.
@@ -40,7 +40,7 @@ public record BackTestingMethodology1
     [DisplayName("Variation Margin Clean Indicator")]
     [IsoXmlTag("VartnMrgnCleanInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator VariationMarginCleanIndicator { get; init; }
+    public required TrueFalseIndicator VariationMarginCleanIndicator { get; init; }
 
     /// <summary>
     /// Description of backtesting methodology.
@@ -50,5 +50,5 @@ public record BackTestingMethodology1
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max2000Text)]
     [StringLength(maximumLength: 2000, MinimumLength = 1)]
-    public IsoMax2000Text? Description { get; init; }
+    public Max2000Text? Description { get; init; }
 }

@@ -32,7 +32,7 @@ public record CorporateActionAdditionalInformation1
     [IsoXmlTag("RegnDtls")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? RegistrationDetails { get; init; }
+    public Max350Text? RegistrationDetails { get; init; }
 
     /// <summary>
     /// Identification of the receiver of outturned resources (cash/securities) in case the resources need to be delivered outside the CSD.
@@ -49,7 +49,7 @@ public record CorporateActionAdditionalInformation1
     [DisplayName("Certification Indicator")]
     [IsoXmlTag("CertfctnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? CertificationIndicator { get; init; }
+    public YesNoIndicator? CertificationIndicator { get; init; }
 
     /// <summary>
     /// Type of certification which is required.
@@ -75,5 +75,5 @@ public record CorporateActionAdditionalInformation1
     [IsoXmlTag("AddtlInstr")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AdditionalInstruction { get; init; }
+    public Max350Text? AdditionalInstruction { get; init; }
 }

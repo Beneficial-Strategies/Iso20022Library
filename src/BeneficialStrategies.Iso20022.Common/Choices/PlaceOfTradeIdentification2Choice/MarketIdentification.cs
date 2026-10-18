@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PlaceOfTradeIdentification2Choic
         /// </summary>
         [IsoXmlTag("MktId")]
         [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-        public required IsoMICIdentifier Value { get; init; }
+        public required MICIdentifier Value { get; init; }
     }
 }

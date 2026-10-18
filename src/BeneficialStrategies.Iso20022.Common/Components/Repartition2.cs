@@ -23,7 +23,7 @@ public record Repartition2
     [DisplayName("Percentage")]
     [IsoXmlTag("Pctg")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate Percentage { get; init; }
+    public required PercentageRate Percentage { get; init; }
 
     /// <summary>
     /// Security that is a sub-set of an investment fund, and is governed by the same investment fund policy, eg, dividend option or valuation currency.

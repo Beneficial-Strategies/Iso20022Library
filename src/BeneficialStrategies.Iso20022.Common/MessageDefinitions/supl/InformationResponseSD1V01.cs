@@ -55,7 +55,7 @@ public record InformationResponseSD1V01 : IOuterRecord
     [IsoXmlTag("InvstgtnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text InvestigationIdentification { get; init; }
+    public required Max35Text InvestigationIdentification { get; init; }
 
     /// <summary>
     /// Date and time of creation of the extension.
@@ -64,7 +64,7 @@ public record InformationResponseSD1V01 : IOuterRecord
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// Identifies the account servicing institution.

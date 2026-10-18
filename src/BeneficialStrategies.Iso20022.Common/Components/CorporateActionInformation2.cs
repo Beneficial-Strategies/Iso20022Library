@@ -32,7 +32,7 @@ public record CorporateActionInformation2
     [IsoXmlTag("IssrCorpActnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text IssuerCorporateActionIdentification { get; init; }
+    public required Max35Text IssuerCorporateActionIdentification { get; init; }
 
     /// <summary>
     /// Reference assigned by the (I)CSD to unambiguously identify a corporate avent.
@@ -42,7 +42,7 @@ public record CorporateActionInformation2
     [IsoXmlTag("CorpActnPrcgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CorporateActionProcessingIdentification { get; init; }
+    public Max35Text? CorporateActionProcessingIdentification { get; init; }
 
     /// <summary>
     /// Speficies the type of corporate event.

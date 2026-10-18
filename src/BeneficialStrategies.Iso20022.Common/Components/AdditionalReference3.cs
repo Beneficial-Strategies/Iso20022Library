@@ -24,7 +24,7 @@ public record AdditionalReference3
     [IsoXmlTag("Ref")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Reference { get; init; }
+    public required Max35Text Reference { get; init; }
 
     /// <summary>
     /// Issuer of the reference.
@@ -42,5 +42,5 @@ public record AdditionalReference3
     [IsoXmlTag("MsgNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MessageName { get; init; }
+    public Max35Text? MessageName { get; init; }
 }

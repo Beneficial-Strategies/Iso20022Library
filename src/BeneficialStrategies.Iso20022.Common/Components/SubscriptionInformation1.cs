@@ -23,7 +23,7 @@ public record SubscriptionInformation1
     [DisplayName("Date Of First Subscription")]
     [IsoXmlTag("DtOfFrstSbcpt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate DateOfFirstSubscription { get; init; }
+    public required DateOnly DateOfFirstSubscription { get; init; }
 
     /// <summary>
     /// Amount subscribed in the current tax year into equity (not including dividends).

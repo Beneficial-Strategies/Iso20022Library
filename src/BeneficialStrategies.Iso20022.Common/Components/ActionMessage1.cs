@@ -32,7 +32,7 @@ public record ActionMessage1
     [IsoXmlTag("MsgCntt")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public required IsoMax256Text MessageContent { get; init; }
+    public required Max256Text MessageContent { get; init; }
 
     /// <summary>
     /// Electronic signature of the message to display or print.
@@ -42,5 +42,5 @@ public record ActionMessage1
     [IsoXmlTag("MsgCnttSgntr")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? MessageContentSignature { get; init; }
+    public Max70Text? MessageContentSignature { get; init; }
 }

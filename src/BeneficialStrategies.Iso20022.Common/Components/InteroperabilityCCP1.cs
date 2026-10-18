@@ -49,5 +49,5 @@ public record InteroperabilityCCP1
     /// </summary>
     [DisplayName("Trades Cleared")]
     [IsoXmlTag("TrdsClrd")]
-    public IsoNonNegativeNumber? TradesCleared { get; init; }
+    public NonNegativeNumber? TradesCleared { get; init; }
 }

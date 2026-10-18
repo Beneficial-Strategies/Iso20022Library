@@ -30,7 +30,7 @@ public record Statement89
     [IsoId("_rlNiKQJ3EfGAP_FOfstLIw")]
     [DisplayName("Historic Data")]
     [IsoXmlTag("HstrcData")]
-    public required IsoTrueFalseIndicator HistoricData { get; init; }
+    public required TrueFalseIndicator HistoricData { get; init; }
 
     /// <summary>
     /// Type of balance on which the statement is prepared.

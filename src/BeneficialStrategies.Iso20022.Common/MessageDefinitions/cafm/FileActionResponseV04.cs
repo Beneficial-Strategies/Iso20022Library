@@ -64,7 +64,7 @@ public record FileActionResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Action Date")]
     [IsoXmlTag("ActnDt")]
-    public IsoISODate? ActionDate { get; init; }
+    public DateOnly? ActionDate { get; init; }
 
     /// <summary>
     /// Additional Fee.
@@ -120,14 +120,14 @@ public record FileActionResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("File Name")]
     [IsoXmlTag("FileNm")]
-    public IsoMax140Text? FileName { get; init; }
+    public Max140Text? FileName { get; init; }
 
     /// <summary>
     /// File Security Code.
     /// </summary>
     [DisplayName("File Security Code")]
     [IsoXmlTag("FileSctyCd")]
-    public IsoMax35Text? FileSecurityCode { get; init; }
+    public Max35Text? FileSecurityCode { get; init; }
 
     /// <summary>
     /// Format.
@@ -162,7 +162,7 @@ public record FileActionResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Life Cycle Identification")]
     [IsoXmlTag("LifeCyclId")]
-    public IsoExact15Text? LifeCycleIdentification { get; init; }
+    public Exact15Text? LifeCycleIdentification { get; init; }
 
     /// <summary>
     /// National Data.
@@ -246,7 +246,7 @@ public record FileActionResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Retrieval Reference Number")]
     [IsoXmlTag("RtrvlRefNb")]
-    public IsoExact12Text? RetrievalReferenceNumber { get; init; }
+    public Exact12Text? RetrievalReferenceNumber { get; init; }
 
     /// <summary>
     /// Security Trailer.
@@ -274,7 +274,7 @@ public record FileActionResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("System Trace Audit Number")]
     [IsoXmlTag("SysTracAudtNb")]
-    public required IsoMax12NumericText SystemTraceAuditNumber { get; init; }
+    public required Max12NumericText SystemTraceAuditNumber { get; init; }
 
     /// <summary>
     /// Terminal.
@@ -295,7 +295,7 @@ public record FileActionResponseV04 : IOuterRecord
     /// </summary>
     [DisplayName("Transmission Date Time")]
     [IsoXmlTag("TrnsmssnDtTm")]
-    public required IsoISODateTime TransmissionDateTime { get; init; }
+    public required ISODateTime TransmissionDateTime { get; init; }
 
     /// <summary>
     /// Wallet.

@@ -22,7 +22,7 @@ public record CardPaymentDataSet41
     [IsoId("__Z1PJbX3EfCUZfsQO4rYeA")]
     [DisplayName("Transaction Sequence Counter")]
     [IsoXmlTag("TxSeqCntr")]
-    public required IsoMax9NumericText TransactionSequenceCounter { get; init; }
+    public required Max9NumericText TransactionSequenceCounter { get; init; }
 
     /// <summary>
     /// Response to the capture of the transaction.

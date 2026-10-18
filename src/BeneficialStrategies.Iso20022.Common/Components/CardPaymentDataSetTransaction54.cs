@@ -22,7 +22,7 @@ public record CardPaymentDataSetTransaction54
     [IsoId("_JT3cFbYIEfCUZfsQO4rYeA")]
     [DisplayName("Transaction Sequence Counter")]
     [IsoXmlTag("TxSeqCntr")]
-    public required IsoMax9NumericText TransactionSequenceCounter { get; init; }
+    public required Max9NumericText TransactionSequenceCounter { get; init; }
 
     /// <summary>
     /// Identification of partners involved in the exchange from the merchant to the issuer.

@@ -25,7 +25,7 @@ public record MultilateralSettlementRequest3
     /// </remarks>
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
-    public required IsoMax35Text InstructionIdentification { get; init; }
+    public required Max35Text InstructionIdentification { get; init; }
 
     /// <summary>
     /// Indicator of the urgency or order of importance that the instructing agent would like the market infrastructure to apply to the processing of the instruction.
@@ -52,7 +52,7 @@ public record MultilateralSettlementRequest3
     /// </summary>
     [DisplayName("Number Of Movement Records")]
     [IsoXmlTag("NbOfMvmntRcrds")]
-    public IsoNumber? NumberOfMovementRecords { get; init; }
+    public Number? NumberOfMovementRecords { get; init; }
 
     /// <summary>
     /// Identification of the settlement cycle in the settlement service.
@@ -62,7 +62,7 @@ public record MultilateralSettlementRequest3
     /// </remarks>
     [DisplayName("Settlement Cycle")]
     [IsoXmlTag("SttlmCycl")]
-    public IsoMax35Text? SettlementCycle { get; init; }
+    public Max35Text? SettlementCycle { get; init; }
 
     /// <summary>
     /// Indicator of the urgency or order of importance that the instructing agent would like the market infrastructure to apply to the processing of the settlement instruction.

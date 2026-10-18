@@ -31,7 +31,7 @@ public record CurrencyDetails2
     [DisplayName("Numeric Code")]
     [IsoXmlTag("NmrcCd")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public IsoExact3NumericText? NumericCode { get; init; }
+    public Exact3NumericText? NumericCode { get; init; }
 
     /// <summary>
     /// Maximal number of digits after the decimal separator for the currency.
@@ -40,7 +40,7 @@ public record CurrencyDetails2
     [DisplayName("Decimal")]
     [IsoXmlTag("Dcml")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Decimal { get; init; }
+    public Number? Decimal { get; init; }
 
     /// <summary>
     /// Full name of the currency.
@@ -50,5 +50,5 @@ public record CurrencyDetails2
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Name { get; init; }
+    public Max35Text? Name { get; init; }
 }

@@ -32,7 +32,7 @@ public record ExchangeRateDetail1
     [IsoXmlTag("OthrEndPt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherEndPoint { get; init; }
+    public Max35Text? OtherEndPoint { get; init; }
 
     /// <summary>
     /// Identifies the counter currency used for currency conversion for the transaction party.
@@ -57,7 +57,7 @@ public record ExchangeRateDetail1
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.BaseOne25Rate)]
-    public IsoBaseOne25Rate? Rate { get; init; }
+    public BaseOne25Rate? Rate { get; init; }
 
     /// <summary>
     /// Identifies the type of rate.
@@ -75,7 +75,7 @@ public record ExchangeRateDetail1
     [IsoXmlTag("OthrRateTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherRateType { get; init; }
+    public Max35Text? OtherRateType { get; init; }
 
     /// <summary>
     /// Type of exchange rate agreement.
@@ -93,5 +93,5 @@ public record ExchangeRateDetail1
     [IsoXmlTag("OthrAgrmtTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherAgreementType { get; init; }
+    public Max35Text? OtherAgreementType { get; init; }
 }

@@ -23,5 +23,5 @@ public record CopyInformation3
     [DisplayName("Copy Indicator")]
     [IsoXmlTag("CpyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator CopyIndicator { get; init; }
+    public required YesNoIndicator CopyIndicator { get; init; }
 }

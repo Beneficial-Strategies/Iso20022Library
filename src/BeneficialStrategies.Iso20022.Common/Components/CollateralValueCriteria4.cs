@@ -21,7 +21,7 @@ public record CollateralValueCriteria4
     /// </summary>
     [DisplayName("Query Name")]
     [IsoXmlTag("QryNm")]
-    public IsoMax35Text? QueryName { get; init; }
+    public Max35Text? QueryName { get; init; }
 
     /// <summary>
     /// Return Criteria.

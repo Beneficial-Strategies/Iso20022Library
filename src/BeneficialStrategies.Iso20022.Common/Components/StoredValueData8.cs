@@ -35,7 +35,7 @@ public record StoredValueData8
     /// </summary>
     [DisplayName("EANUPC")]
     [IsoXmlTag("EANUPC")]
-    public IsoMax35NumericText? EANUPC { get; init; }
+    public Max35NumericText? EANUPC { get; init; }
 
     /// <summary>
     /// Host Transaction Identification.
@@ -63,14 +63,14 @@ public record StoredValueData8
     /// </summary>
     [DisplayName("Product Code")]
     [IsoXmlTag("PdctCd")]
-    public IsoMax35Text? ProductCode { get; init; }
+    public Max35Text? ProductCode { get; init; }
 
     /// <summary>
     /// Provider.
     /// </summary>
     [DisplayName("Provider")]
     [IsoXmlTag("Prvdr")]
-    public IsoMax35Text? Provider { get; init; }
+    public Max35Text? Provider { get; init; }
 
     /// <summary>
     /// Transaction Type.

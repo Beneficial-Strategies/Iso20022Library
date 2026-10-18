@@ -50,7 +50,7 @@ public record DirectDebitTransactionInformation33
     /// </summary>
     [DisplayName("Instruction For Debtor Agent")]
     [IsoXmlTag("InstrForDbtrAgt")]
-    public IsoMax210Text? InstructionForDebtorAgent { get; init; }
+    public Max210Text? InstructionForDebtorAgent { get; init; }
 
     /// <summary>
     /// Amount of money moved between the instructing agent and the instructed agent.
@@ -64,7 +64,7 @@ public record DirectDebitTransactionInformation33
     /// </summary>
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
-    public IsoISODate? InterbankSettlementDate { get; init; }
+    public DateOnly? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// References used for a payment instruction.

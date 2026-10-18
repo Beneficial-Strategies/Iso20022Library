@@ -24,7 +24,7 @@ public record CorporateActionNotificationSD1
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text PlaceAndName { get; init; }
+    public required Max350Text PlaceAndName { get; init; }
 
     /// <summary>
     /// Internal security identification as provided by the customer for the given security on the security of interest (SOI) import file.
@@ -34,7 +34,7 @@ public record CorporateActionNotificationSD1
     [IsoXmlTag("CstmrIntlSctyId")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
     [StringLength(maximumLength: 16, MinimumLength = 1)]
-    public IsoMax16Text? CustomerInternalSecurityIdentification { get; init; }
+    public Max16Text? CustomerInternalSecurityIdentification { get; init; }
 
     /// <summary>
     /// Security identifier that is used to match the customer&apos;s SOI (Security of Interest) to the GCA VS Security Cross Reference.

@@ -64,7 +64,7 @@ public record FileActionInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Action Date")]
     [IsoXmlTag("ActnDt")]
-    public IsoISODate? ActionDate { get; init; }
+    public DateOnly? ActionDate { get; init; }
 
     /// <summary>
     /// Additional Data.
@@ -85,7 +85,7 @@ public record FileActionInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Alternate Message Reason")]
     [IsoXmlTag("AltrnMsgRsn")]
-    public ValueList<IsoMax256Text> AlternateMessageReason { get; init; } = [];
+    public ValueList<Max256Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Card.
@@ -106,7 +106,7 @@ public record FileActionInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Continuation")]
     [IsoXmlTag("Conttn")]
-    public IsoTrueFalseIndicator? Continuation { get; init; }
+    public TrueFalseIndicator? Continuation { get; init; }
 
     /// <summary>
     /// Correction.
@@ -155,14 +155,14 @@ public record FileActionInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("File Name")]
     [IsoXmlTag("FileNm")]
-    public IsoMax140Text? FileName { get; init; }
+    public Max140Text? FileName { get; init; }
 
     /// <summary>
     /// File Security Code.
     /// </summary>
     [DisplayName("File Security Code")]
     [IsoXmlTag("FileSctyCd")]
-    public IsoMax35Text? FileSecurityCode { get; init; }
+    public Max35Text? FileSecurityCode { get; init; }
 
     /// <summary>
     /// Format.
@@ -197,7 +197,7 @@ public record FileActionInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Life Cycle Identification")]
     [IsoXmlTag("LifeCyclId")]
-    public IsoExact15Text? LifeCycleIdentification { get; init; }
+    public Exact15Text? LifeCycleIdentification { get; init; }
 
     /// <summary>
     /// Message Reason.
@@ -218,7 +218,7 @@ public record FileActionInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Other File Action Type")]
     [IsoXmlTag("OthrFileActnTp")]
-    public IsoMax35Text? OtherFileActionType { get; init; }
+    public Max35Text? OtherFileActionType { get; init; }
 
     /// <summary>
     /// Payee.
@@ -281,7 +281,7 @@ public record FileActionInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Retrieval Reference Number")]
     [IsoXmlTag("RtrvlRefNb")]
-    public IsoExact12Text? RetrievalReferenceNumber { get; init; }
+    public Exact12Text? RetrievalReferenceNumber { get; init; }
 
     /// <summary>
     /// Security Trailer.
@@ -316,7 +316,7 @@ public record FileActionInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("System Trace Audit Number")]
     [IsoXmlTag("SysTracAudtNb")]
-    public required IsoMax12NumericText SystemTraceAuditNumber { get; init; }
+    public required Max12NumericText SystemTraceAuditNumber { get; init; }
 
     /// <summary>
     /// Terminal.
@@ -337,14 +337,14 @@ public record FileActionInitiationV03 : IOuterRecord
     /// </summary>
     [DisplayName("Transaction Description")]
     [IsoXmlTag("TxDesc")]
-    public IsoMax1000Text? TransactionDescription { get; init; }
+    public Max1000Text? TransactionDescription { get; init; }
 
     /// <summary>
     /// Transmission Date Time.
     /// </summary>
     [DisplayName("Transmission Date Time")]
     [IsoXmlTag("TrnsmssnDtTm")]
-    public required IsoISODateTime TransmissionDateTime { get; init; }
+    public required ISODateTime TransmissionDateTime { get; init; }
 
     /// <summary>
     /// Wallet.

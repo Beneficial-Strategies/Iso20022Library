@@ -21,14 +21,14 @@ public record AcquirerHostConfiguration10
     /// </summary>
     [DisplayName("Externally Type Supported")]
     [IsoXmlTag("XtrnlyTpSpprtd")]
-    public ValueList<IsoMax1025Text> ExternallyTypeSupported { get; init; } = [];
+    public ValueList<Max1025Text> ExternallyTypeSupported { get; init; } = [];
 
     /// <summary>
     /// Host Identification.
     /// </summary>
     [DisplayName("Host Identification")]
     [IsoXmlTag("HstId")]
-    public required IsoMax35Text HostIdentification { get; init; }
+    public required Max35Text HostIdentification { get; init; }
 
     /// <summary>
     /// Message To Send.
@@ -42,5 +42,5 @@ public record AcquirerHostConfiguration10
     /// </summary>
     [DisplayName("Protocol Version")]
     [IsoXmlTag("PrtcolVrsn")]
-    public IsoMax8Text? ProtocolVersion { get; init; }
+    public Max8Text? ProtocolVersion { get; init; }
 }

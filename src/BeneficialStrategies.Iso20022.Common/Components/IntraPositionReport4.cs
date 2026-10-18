@@ -22,7 +22,7 @@ public record IntraPositionReport4
     [IsoId("_MVUMFeFiEeWIA4E9cYSxxQ")]
     [DisplayName("Query Reference")]
     [IsoXmlTag("QryRef")]
-    public IsoMax35Text? QueryReference { get; init; }
+    public Max35Text? QueryReference { get; init; }
 
     /// <summary>
     /// Reference common to all pages of a report.
@@ -30,7 +30,7 @@ public record IntraPositionReport4
     [IsoId("_MVUMHeFiEeWIA4E9cYSxxQ")]
     [DisplayName("Report Identification")]
     [IsoXmlTag("RptId")]
-    public IsoMax35Text? ReportIdentification { get; init; }
+    public Max35Text? ReportIdentification { get; init; }
 
     /// <summary>
     /// Defines the type of query.
@@ -46,5 +46,5 @@ public record IntraPositionReport4
     [IsoId("_MVUMJ-FiEeWIA4E9cYSxxQ")]
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
-    public required IsoYesNoIndicator ActivityIndicator { get; init; }
+    public required YesNoIndicator ActivityIndicator { get; init; }
 }

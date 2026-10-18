@@ -48,7 +48,7 @@ public record CashEntry2
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Identification { get; init; }
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the account servicer, to unambiguously identify the account statement.
@@ -58,7 +58,7 @@ public record CashEntry2
     [IsoXmlTag("StmtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? StatementIdentification { get; init; }
+    public Max35Text? StatementIdentification { get; init; }
 
     /// <summary>
     /// Sequential number of the statement, as assigned by the account servicer.|Usage: The sequential number is increased incrementally for each statement sent electronically.
@@ -67,7 +67,7 @@ public record CashEntry2
     [DisplayName("Account Servicer Reference")]
     [IsoXmlTag("AcctSvcrRef")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? AccountServicerReference { get; init; }
+    public Number? AccountServicerReference { get; init; }
 
     /// <summary>
     /// Further details of the entry.
@@ -75,5 +75,5 @@ public record CashEntry2
     [IsoId("_HWrCPZliEeeE1Ya-LgRsuQ")]
     [DisplayName("Additional Entry Information")]
     [IsoXmlTag("AddtlNtryInf")]
-    public SimpleValueList<IsoMax140Text> AdditionalEntryInformation { get; init; } = [];
+    public SimpleValueList<Max140Text> AdditionalEntryInformation { get; init; } = [];
 }

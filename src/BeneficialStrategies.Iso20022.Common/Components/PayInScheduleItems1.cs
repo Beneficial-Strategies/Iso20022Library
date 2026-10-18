@@ -31,5 +31,5 @@ public record PayInScheduleItems1
     [DisplayName("Deadline")]
     [IsoXmlTag("Ddln")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime Deadline { get; init; }
+    public required ISODateTime Deadline { get; init; }
 }

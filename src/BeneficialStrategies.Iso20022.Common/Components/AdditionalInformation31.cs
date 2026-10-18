@@ -21,19 +21,19 @@ public record AdditionalInformation31
     /// </summary>
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public IsoMax350Text? AdditionalData { get; init; }
+    public Max350Text? AdditionalData { get; init; }
 
     /// <summary>
     /// Alpha Numeric.
     /// </summary>
     [DisplayName("Alpha Numeric")]
     [IsoXmlTag("AlphaNmrc")]
-    public IsoMax350Text? AlphaNumeric { get; init; }
+    public Max350Text? AlphaNumeric { get; init; }
 
     /// <summary>
     /// Numeric.
     /// </summary>
     [DisplayName("Numeric")]
     [IsoXmlTag("Nmrc")]
-    public IsoMax35NumericText? Numeric { get; init; }
+    public Max35NumericText? Numeric { get; init; }
 }

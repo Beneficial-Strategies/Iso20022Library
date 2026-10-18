@@ -32,7 +32,7 @@ public record DeviceIdentification1
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; }
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Identifier of the device.
@@ -42,7 +42,7 @@ public record DeviceIdentification1
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Identification { get; init; }
+    public Max70Text? Identification { get; init; }
 
     /// <summary>
     /// Entity that assigned the identification.
@@ -52,5 +52,5 @@ public record DeviceIdentification1
     [IsoXmlTag("Assgnr")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? Assigner { get; init; }
+    public Max70Text? Assigner { get; init; }
 }

@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
         /// </summary>
         [IsoXmlTag("INIFSC")]
         [IsoSimpleType(IsoSimpleType.IndianFinancialSystemCodeIdentifier)]
-        public required IsoIndianFinancialSystemCodeIdentifier Value { get; init; }
+        public required IndianFinancialSystemCodeIdentifier Value { get; init; }
     }
 }

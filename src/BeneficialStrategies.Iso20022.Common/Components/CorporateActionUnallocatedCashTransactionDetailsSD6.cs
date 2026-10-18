@@ -56,7 +56,7 @@ public record CorporateActionUnallocatedCashTransactionDetailsSD6
     [IsoXmlTag("ContraPtcptNb")]
     [IsoSimpleType(IsoSimpleType.Max8Text)]
     [StringLength(maximumLength: 8, MinimumLength = 1)]
-    public IsoMax8Text? ContraParticipantNumber { get; init; }
+    public Max8Text? ContraParticipantNumber { get; init; }
 
     /// <summary>
     /// Date/time at which the movement was due to take place (cash and/or securities).

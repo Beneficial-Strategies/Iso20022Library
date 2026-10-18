@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.NumberCount1Choice
         /// </summary>
         [IsoXmlTag("CurInstrNb")]
         [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-        public required IsoExact3NumericText Value { get; init; }
+        public required Exact3NumericText Value { get; init; }
     }
 }

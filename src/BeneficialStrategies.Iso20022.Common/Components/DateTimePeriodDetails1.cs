@@ -23,7 +23,7 @@ public record DateTimePeriodDetails1
     [DisplayName("From Date Time")]
     [IsoXmlTag("FrDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime FromDateTime { get; init; }
+    public required ISODateTime FromDateTime { get; init; }
 
     /// <summary>
     /// Date and time at which the range ends.
@@ -32,5 +32,5 @@ public record DateTimePeriodDetails1
     [DisplayName("To Date Time")]
     [IsoXmlTag("ToDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? ToDateTime { get; init; }
+    public ISODateTime? ToDateTime { get; init; }
 }

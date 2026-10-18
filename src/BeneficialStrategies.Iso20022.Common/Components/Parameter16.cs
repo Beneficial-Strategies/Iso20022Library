@@ -35,19 +35,19 @@ public record Parameter16
     /// </summary>
     [DisplayName("OID Curve Name")]
     [IsoXmlTag("OIDCrvNm")]
-    public IsoMax140Text? OIDCurveName { get; init; }
+    public Max140Text? OIDCurveName { get; init; }
 
     /// <summary>
     /// Salt Length.
     /// </summary>
     [DisplayName("Salt Length")]
     [IsoXmlTag("SaltLngth")]
-    public IsoNumber? SaltLength { get; init; }
+    public Number? SaltLength { get; init; }
 
     /// <summary>
     /// Trailer Field.
     /// </summary>
     [DisplayName("Trailer Field")]
     [IsoXmlTag("TrlrFld")]
-    public IsoNumber? TrailerField { get; init; }
+    public Number? TrailerField { get; init; }
 }

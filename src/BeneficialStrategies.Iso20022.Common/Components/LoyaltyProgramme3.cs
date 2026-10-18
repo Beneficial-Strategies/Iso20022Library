@@ -25,7 +25,7 @@ public record LoyaltyProgramme3
     [IsoId("_bQ4QEcW2EeuhguwJmlgagQ")]
     [DisplayName("Programme Eligibility Indicator")]
     [IsoXmlTag("PrgrmmElgbltyInd")]
-    public SimpleValueList<IsoTrueFalseIndicator> ProgrammeEligibilityIndicator { get; init; } = [];
+    public SimpleValueList<TrueFalseIndicator> ProgrammeEligibilityIndicator { get; init; } = [];
 
     /// <summary>
     /// Entity issuing the loyalty programme.
@@ -35,7 +35,7 @@ public record LoyaltyProgramme3
     [IsoXmlTag("PrgrmmIssr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ProgrammeIssuer { get; init; }
+    public Max35Text? ProgrammeIssuer { get; init; }
 
     /// <summary>
     /// Details about the member of the loyalty programme

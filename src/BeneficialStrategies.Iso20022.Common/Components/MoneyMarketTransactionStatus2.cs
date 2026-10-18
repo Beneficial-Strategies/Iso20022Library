@@ -24,7 +24,7 @@ public record MoneyMarketTransactionStatus2
     [IsoXmlTag("UnqTxIdr")]
     [IsoSimpleType(IsoSimpleType.Max105Text)]
     [StringLength(maximumLength: 105, MinimumLength = 1)]
-    public IsoMax105Text? UniqueTransactionIdentifier { get; init; }
+    public Max105Text? UniqueTransactionIdentifier { get; init; }
 
     /// <summary>
     /// Internal unique transaction identifier used by the reporting agent for each transaction.
@@ -34,7 +34,7 @@ public record MoneyMarketTransactionStatus2
     [IsoXmlTag("PrtryTxId")]
     [IsoSimpleType(IsoSimpleType.Max105Text)]
     [StringLength(maximumLength: 105, MinimumLength = 1)]
-    public required IsoMax105Text ProprietaryTransactionIdentification { get; init; }
+    public required Max105Text ProprietaryTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique and unambiguous legal entity identification of the branch of the reporting agent in which the transaction has been booked.
@@ -45,7 +45,7 @@ public record MoneyMarketTransactionStatus2
     [DisplayName("Branch Identification")]
     [IsoXmlTag("BrnchId")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? BranchIdentification { get; init; }
+    public LEIIdentifier? BranchIdentification { get; init; }
 
     /// <summary>
     /// Defines status of the reported transaction.

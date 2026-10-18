@@ -23,7 +23,7 @@ public record TradeAgreement5
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate TradeDate { get; init; }
+    public required DateOnly TradeDate { get; init; }
 
     /// <summary>
     /// Reference to the identification of the notification for which the status is given, as assigned by the participant that submitted the foreign exchange trade.
@@ -33,7 +33,7 @@ public record TradeAgreement5
     [IsoXmlTag("NtfctnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text NotificationIdentification { get; init; }
+    public required Max35Text NotificationIdentification { get; init; }
 
     /// <summary>
     /// Reference common to both parties of the trade.
@@ -43,7 +43,7 @@ public record TradeAgreement5
     [IsoXmlTag("CmonRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CommonReference { get; init; }
+    public Max35Text? CommonReference { get; init; }
 
     /// <summary>
     /// Specifies the reason for the cancellation or the amendment.
@@ -53,7 +53,7 @@ public record TradeAgreement5
     [IsoXmlTag("AmdOrCclRsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AmendOrCancelReason { get; init; }
+    public Max35Text? AmendOrCancelReason { get; init; }
 
     /// <summary>
     /// Reference to the identification of a previous event in the life of a trade which is amended or cancelled.
@@ -63,7 +63,7 @@ public record TradeAgreement5
     [IsoXmlTag("RltdRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RelatedReference { get; init; }
+    public Max35Text? RelatedReference { get; init; }
 
     /// <summary>
     /// Specifies the type of underlying transaction, for example, option.
@@ -73,7 +73,7 @@ public record TradeAgreement5
     [IsoXmlTag("OprTp")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4Text? OperationType { get; init; }
+    public Max4Text? OperationType { get; init; }
 
     /// <summary>
     /// Specifies the business role between the submitter and the trade party, for example, agent (AGNT).
@@ -83,5 +83,5 @@ public record TradeAgreement5
     [IsoXmlTag("OprScp")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4Text? OperationScope { get; init; }
+    public Max4Text? OperationScope { get; init; }
 }

@@ -50,7 +50,7 @@ public record ReportQuerySearchCriteria3
     /// </summary>
     [DisplayName("Message Name Identification")]
     [IsoXmlTag("MsgNmId")]
-    public IsoMax35Text? MessageNameIdentification { get; init; }
+    public Max35Text? MessageNameIdentification { get; init; }
 
     /// <summary>
     /// Party Identification.
@@ -64,7 +64,7 @@ public record ReportQuerySearchCriteria3
     /// </summary>
     [DisplayName("Report Name")]
     [IsoXmlTag("RptNm")]
-    public IsoMax4AlphaNumericText? ReportName { get; init; }
+    public Max4AlphaNumericText? ReportName { get; init; }
 
     /// <summary>
     /// Responsible Party Identification.

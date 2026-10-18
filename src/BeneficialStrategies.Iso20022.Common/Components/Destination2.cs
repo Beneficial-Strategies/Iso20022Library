@@ -24,7 +24,7 @@ public record Destination2
     [IsoXmlTag("NmAndLctn")]
     [IsoSimpleType(IsoSimpleType.Max99Text)]
     [StringLength(maximumLength: 99, MinimumLength = 1)]
-    public IsoMax99Text? NameAndLocation { get; init; }
+    public Max99Text? NameAndLocation { get; init; }
 
     /// <summary>
     /// Specific address of the destination.

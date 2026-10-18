@@ -110,7 +110,7 @@ public record PenaltyTransactionRecord2
     [IsoId("_gnsk6KhKEfCXwLUUylXgrQ")]
     [DisplayName("Acknowledged Status Time Stamp")]
     [IsoXmlTag("AckdStsTmStmp")]
-    public IsoISODateTime? AcknowledgedStatusTimeStamp { get; init; }
+    public ISODateTime? AcknowledgedStatusTimeStamp { get; init; }
 
     /// <summary>
     /// Time stamp on when the transaction is matched.
@@ -118,7 +118,7 @@ public record PenaltyTransactionRecord2
     [IsoId("_gnsk6qhKEfCXwLUUylXgrQ")]
     [DisplayName("Matched Status Time Stamp")]
     [IsoXmlTag("MtchdStsTmStmp")]
-    public IsoISODateTime? MatchedStatusTimeStamp { get; init; }
+    public ISODateTime? MatchedStatusTimeStamp { get; init; }
 
     /// <summary>
     /// Instruction is failing.

@@ -43,7 +43,7 @@ public record TradeTransaction37
     [IsoXmlTag("RptTrckgNb")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoMax52Text? ReportTrackingNumber { get; init; }
+    public Max52Text? ReportTrackingNumber { get; init; }
 
     /// <summary>
     /// Identifies the trading platform on which the derivative transaction was executed (e.g. exchange, multilateral trading facility, swap execution facility). ||
@@ -53,7 +53,7 @@ public record TradeTransaction37
     [DisplayName("Platform Identifier")]
     [IsoXmlTag("PltfmIdr")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public IsoMICIdentifier? PlatformIdentifier { get; init; }
+    public MICIdentifier? PlatformIdentifier { get; init; }
 
     /// <summary>
     /// Identifies whether the contract results from a compression operation or not.
@@ -62,7 +62,7 @@ public record TradeTransaction37
     [DisplayName("Compression")]
     [IsoXmlTag("Cmprssn")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? Compression { get; init; }
+    public TrueFalseIndicator? Compression { get; init; }
 
     /// <summary>
     /// Indicates the price per derivative excluding, where applicable, commission and accrued interest.
@@ -100,7 +100,7 @@ public record TradeTransaction37
     [DisplayName("Delta")]
     [IsoXmlTag("Dlta")]
     [IsoSimpleType(IsoSimpleType.LongFraction19DecimalNumber)]
-    public IsoLongFraction19DecimalNumber? Delta { get; init; }
+    public LongFraction19DecimalNumber? Delta { get; init; }
 
     /// <summary>
     /// Number of units of the financial instrument, that is, the nominal value.
@@ -125,7 +125,7 @@ public record TradeTransaction37
     [DisplayName("Execution Time Stamp")]
     [IsoXmlTag("ExctnTmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? ExecutionTimeStamp { get; init; }
+    public ISODateTime? ExecutionTimeStamp { get; init; }
 
     /// <summary>
     /// Indicates the date when obligations under the contract come into effect.
@@ -134,7 +134,7 @@ public record TradeTransaction37
     [DisplayName("Effective Date")]
     [IsoXmlTag("FctvDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? EffectiveDate { get; init; }
+    public DateOnly? EffectiveDate { get; init; }
 
     /// <summary>
     /// Indicates the unadjusted date at which obligations under the derivative transaction stop being effective, as included in the confirmation.|
@@ -146,7 +146,7 @@ public record TradeTransaction37
     [DisplayName("Expiration Date")]
     [IsoXmlTag("XprtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ExpirationDate { get; init; }
+    public DateOnly? ExpirationDate { get; init; }
 
     /// <summary>
     /// Indicates the effective date of the early termination of the reported derivative transaction.
@@ -155,7 +155,7 @@ public record TradeTransaction37
     [DisplayName("Early Termination Date")]
     [IsoXmlTag("EarlyTermntnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? EarlyTerminationDate { get; init; }
+    public DateOnly? EarlyTerminationDate { get; init; }
 
     /// <summary>
     /// Indicates the unadjusted date, as per the contract, by which all transfer of cash or assets should take place and the counterparties should no longer have any outstanding obligations to each other.||
@@ -164,7 +164,7 @@ public record TradeTransaction37
     [IsoId("_Df6g33hQEeu3kecHd7QKUQ")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public SimpleValueList<IsoISODate> SettlementDate { get; init; } = [];
+    public SimpleValueList<DateOnly> SettlementDate { get; init; } = [];
 
     /// <summary>
     /// Details related to the master agreement.

@@ -23,7 +23,7 @@ public record InternalisationDataRate1
     [DisplayName("Volume Percentage")]
     [IsoXmlTag("VolPctg")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate VolumePercentage { get; init; }
+    public required PercentageRate VolumePercentage { get; init; }
 
     /// <summary>
     /// Specifies the rate, in terms of value, of the failed internalised settlement instructions compared to the total value of internalised settlement instructions performed (settled and failed) during the period covered by the report.
@@ -32,5 +32,5 @@ public record InternalisationDataRate1
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate Value { get; init; }
+    public required PercentageRate Value { get; init; }
 }

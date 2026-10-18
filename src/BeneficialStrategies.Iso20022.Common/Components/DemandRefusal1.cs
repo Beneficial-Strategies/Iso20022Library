@@ -32,7 +32,7 @@ public record DemandRefusal1
     [IsoXmlTag("AdvsgPtyRefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AdvisingPartyReferenceNumber { get; init; }
+    public Max35Text? AdvisingPartyReferenceNumber { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier assigned by the second advising party to the undertaking.
@@ -42,7 +42,7 @@ public record DemandRefusal1
     [IsoXmlTag("ScndAdvsgPtyRefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SecondAdvisingPartyReferenceNumber { get; init; }
+    public Max35Text? SecondAdvisingPartyReferenceNumber { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier assigned by the confirmer to the undertaking.
@@ -52,7 +52,7 @@ public record DemandRefusal1
     [IsoXmlTag("CnfrmrRefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ConfirmerReferenceNumber { get; init; }
+    public Max35Text? ConfirmerReferenceNumber { get; init; }
 
     /// <summary>
     /// Details related to the demand.
@@ -69,7 +69,7 @@ public record DemandRefusal1
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
     [IsoSimpleType(IsoSimpleType.Refused7Text)]
-    public required IsoRefused7Text Status { get; init; }
+    public required Refused7Text Status { get; init; }
 
     /// <summary>
     /// Details related to the discrepancies.

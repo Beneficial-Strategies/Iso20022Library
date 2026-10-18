@@ -86,7 +86,7 @@ public record SecuritiesSettlementTransactionModificationRequestStatusAdviceV07 
     /// </summary>
     [DisplayName("Modification Request Reference")]
     [IsoXmlTag("ModReqRef")]
-    public required IsoMax35Text ModificationRequestReference { get; init; }
+    public required Max35Text ModificationRequestReference { get; init; }
 
     /// <summary>
     /// Account to or from which a securities entry is made.

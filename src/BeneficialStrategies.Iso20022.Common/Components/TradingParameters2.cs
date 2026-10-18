@@ -23,7 +23,7 @@ public record TradingParameters2
     [DisplayName("Market Identification")]
     [IsoXmlTag("MktId")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public IsoMICIdentifier? MarketIdentification { get; init; }
+    public MICIdentifier? MarketIdentification { get; init; }
 
     /// <summary>
     /// Minimum quantity of securities that can be purchased without incurring a larger fee. For example, if the round lot size is 100 and the trade is for 125 shares, then 100 will be processed without a fee and the remaining 25 will incur a service fee for being an odd lot size.
@@ -75,7 +75,7 @@ public record TradingParameters2
     [DisplayName("Minimum Trading Pricing Increment")]
     [IsoXmlTag("MinTradgPricgIncrmt")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MinimumTradingPricingIncrement { get; init; }
+    public Number? MinimumTradingPricingIncrement { get; init; }
 
     /// <summary>
     /// Market(s) on which the security is listed.
@@ -84,5 +84,5 @@ public record TradingParameters2
     [DisplayName("Primary Place Of Listing Identification")]
     [IsoXmlTag("PmryPlcOfListgId")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public IsoMICIdentifier? PrimaryPlaceOfListingIdentification { get; init; }
+    public MICIdentifier? PrimaryPlaceOfListingIdentification { get; init; }
 }

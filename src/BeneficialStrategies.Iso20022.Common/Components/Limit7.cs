@@ -71,7 +71,7 @@ public record Limit7
     [DisplayName("Used Percentage")]
     [IsoXmlTag("UsdPctg")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? UsedPercentage { get; init; }
+    public PercentageRate? UsedPercentage { get; init; }
 
     /// <summary>
     /// Actual usage of the limit expressed as an amount.

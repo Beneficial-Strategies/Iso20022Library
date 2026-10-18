@@ -22,7 +22,7 @@ public record SwitchRedemptionLegExecution5
     [IsoId("f3cc386a-lgid-0001-0001-1c60f6402f94")]
     [DisplayName("Leg Identification")]
     [IsoXmlTag("LegId")]
-    public IsoMax35Text? LegIdentification { get; init; }
+    public Max35Text? LegIdentification { get; init; }
 
     /// <summary>
     /// Unique identifier for the instance of the leg execution within a switch confirmation.
@@ -30,7 +30,7 @@ public record SwitchRedemptionLegExecution5
     [IsoId("f3cc386a-lgex-0001-0002-1c60f6402f94")]
     [DisplayName("Leg Execution Identification")]
     [IsoXmlTag("LegExctnId")]
-    public IsoMax35Text? LegExecutionIdentification { get; init; }
+    public Max35Text? LegExecutionIdentification { get; init; }
 
     /// <summary>
     /// Investment fund class to which the redemption leg of the investment fund order execution is related.
@@ -54,7 +54,7 @@ public record SwitchRedemptionLegExecution5
     [IsoId("f3cc386a-hldr-0001-0005-1c60f6402f94")]
     [DisplayName("Holdings Redemption Rate")]
     [IsoXmlTag("HldgsRedRate")]
-    public IsoPercentageRate? HoldingsRedemptionRate { get; init; }
+    public PercentageRate? HoldingsRedemptionRate { get; init; }
 
     /// <summary>
     /// Amount of money paid to the investor when redeeming fund units. |Net amount = (Quantity * Price) – (Fees + Taxes).
@@ -110,7 +110,7 @@ public record SwitchRedemptionLegExecution5
     [IsoId("f3cc386a-cumd-0001-0012-1c60f6402f94")]
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
-    public required IsoYesNoIndicator CumDividendIndicator { get; init; }
+    public required YesNoIndicator CumDividendIndicator { get; init; }
 
     /// <summary>
     /// Part of the price deemed as accrued income or profit rather than capital. The interim profit amount is used for tax purposes.
@@ -182,7 +182,7 @@ public record SwitchRedemptionLegExecution5
     [IsoId("f3cc386a-phyd-0001-0021-1c60f6402f94")]
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
-    public required IsoYesNoIndicator PhysicalDeliveryIndicator { get; init; }
+    public required YesNoIndicator PhysicalDeliveryIndicator { get; init; }
 
     /// <summary>
     /// Information related to the physical delivery of the securities.
@@ -206,7 +206,7 @@ public record SwitchRedemptionLegExecution5
     [IsoId("f3cc386a-nsts-0001-0024-1c60f6402f94")]
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
-    public IsoMax350Text? NonStandardSettlementInformation { get; init; }
+    public Max350Text? NonStandardSettlementInformation { get; init; }
 
     /// <summary>
     /// Part of an investor's subscription amount that was held by the fund in order to pay incentive/performance fees at the end of the fiscal year, and is returned due to the redemption.

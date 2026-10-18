@@ -22,7 +22,7 @@ public record NetObligation4
     [IsoId("b00c0dee-d055-4a03-93b5-8d8d03304ded")]
     [DisplayName("Obligation Identification")]
     [IsoXmlTag("OblgtnId")]
-    public required IsoMax35Text ObligationIdentification { get; init; }
+    public required Max35Text ObligationIdentification { get; init; }
 
     /// <summary>
     /// Indicates whether the net obligation is a result of a previously split obligation.
@@ -30,7 +30,7 @@ public record NetObligation4
     [IsoId("4922d0a3-c10e-492a-814a-53ec74cdeedf")]
     [DisplayName("Previous Split Indicator")]
     [IsoXmlTag("PrvsSpltInd")]
-    public IsoTrueFalseIndicator? PreviousSplitIndicator { get; init; }
+    public TrueFalseIndicator? PreviousSplitIndicator { get; init; }
 
     /// <summary>
     /// Amount of the obligation.
@@ -102,7 +102,7 @@ public record NetObligation4
     [IsoId("6ccf662a-3c32-47f6-b306-42d36e364299")]
     [DisplayName("Transactions Number")]
     [IsoXmlTag("TxsNb")]
-    public IsoMax10NumericText? TransactionsNumber { get; init; }
+    public Max10NumericText? TransactionsNumber { get; init; }
 
     /// <summary>
     /// Indicates whether the net obligation is split into multiple child obligations.
@@ -110,7 +110,7 @@ public record NetObligation4
     [IsoId("ed713914-12e6-4523-84a9-d2b480e4b878")]
     [DisplayName("Split Indicator")]
     [IsoXmlTag("SpltInd")]
-    public IsoTrueFalseIndicator? SplitIndicator { get; init; }
+    public TrueFalseIndicator? SplitIndicator { get; init; }
 
     /// <summary>
     /// Number of splits for the net obligation.
@@ -118,7 +118,7 @@ public record NetObligation4
     [IsoId("510ec1b6-5ce0-43d8-9b6c-b77d410daf36")]
     [DisplayName("Total Number Of Splits")]
     [IsoXmlTag("TtlNbOfSplts")]
-    public IsoMax15NumericText? TotalNumberOfSplits { get; init; }
+    public Max15NumericText? TotalNumberOfSplits { get; init; }
 
     /// <summary>
     /// Details of the split.

@@ -39,7 +39,7 @@ public record CorporateActionElection3
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public IsoExact3NumericText? OptionNumber { get; init; }
+    public Exact3NumericText? OptionNumber { get; init; }
 
     /// <summary>
     /// Quantity of underlying securities to which this instruction applies.
@@ -64,7 +64,7 @@ public record CorporateActionElection3
     [DisplayName("Proposed Rate")]
     [IsoXmlTag("PropsdRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? ProposedRate { get; init; }
+    public PercentageRate? ProposedRate { get; init; }
 
     /// <summary>
     /// Provides information about the cash movement resulting from the election instruction.

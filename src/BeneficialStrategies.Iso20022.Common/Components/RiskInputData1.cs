@@ -32,7 +32,7 @@ public record RiskInputData1
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Type { get; init; }
+    public required Max35Text Type { get; init; }
 
     /// <summary>
     /// Value of input data for risk assessment.
@@ -42,5 +42,5 @@ public record RiskInputData1
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.Max10KText)]
     [StringLength(maximumLength: 10000, MinimumLength = 1)]
-    public required IsoMax10KText Value { get; init; }
+    public required Max10KText Value { get; init; }
 }

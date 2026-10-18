@@ -23,7 +23,7 @@ public record TaxVoucher1
     [DisplayName("Tax Voucher Rate")]
     [IsoXmlTag("TaxVchrRate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public required IsoBaseOneRate TaxVoucherRate { get; init; }
+    public required BaseOneRate TaxVoucherRate { get; init; }
 
     /// <summary>
     /// Amount of tax that have been previously paid.
@@ -72,7 +72,7 @@ public record TaxVoucher1
     [DisplayName("Tax Credit Rate")]
     [IsoXmlTag("TaxCdtRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? TaxCreditRate { get; init; }
+    public PercentageRate? TaxCreditRate { get; init; }
 
     /// <summary>
     /// Cash amount that will be withheld by a tax authority.
@@ -89,7 +89,7 @@ public record TaxVoucher1
     [DisplayName("Withholding Tax Rate")]
     [IsoXmlTag("WhldgTaxRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? WithholdingTaxRate { get; init; }
+    public PercentageRate? WithholdingTaxRate { get; init; }
 
     /// <summary>
     /// Cost per share of new shares allotted.
@@ -146,7 +146,7 @@ public record TaxVoucher1
     [DisplayName("Bargain Date")]
     [IsoXmlTag("BrgnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? BargainDate { get; init; }
+    public DateOnly? BargainDate { get; init; }
 
     /// <summary>
     /// Settlement date of the DRIP purchase transaction.
@@ -155,7 +155,7 @@ public record TaxVoucher1
     [DisplayName("Bargain Settlement Date")]
     [IsoXmlTag("BrgnSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? BargainSettlementDate { get; init; }
+    public DateOnly? BargainSettlementDate { get; init; }
 
     /// <summary>
     /// Amount of stamp duty.

@@ -31,7 +31,7 @@ public record BillingServiceParameters2
     [DisplayName("Volume")]
     [IsoXmlTag("Vol")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? Volume { get; init; }
+    public DecimalNumber? Volume { get; init; }
 
     /// <summary>
     /// Price per item or unit used to calculate the charge expressed in the pricing currency.

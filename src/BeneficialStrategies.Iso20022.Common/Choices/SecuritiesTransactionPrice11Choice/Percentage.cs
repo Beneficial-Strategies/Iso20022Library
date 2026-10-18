@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice11Choi
         /// </summary>
         [IsoXmlTag("Pctg")]
         [IsoSimpleType(IsoSimpleType.PercentageRate)]
-        public required IsoPercentageRate Value { get; init; }
+        public required PercentageRate Value { get; init; }
     }
 }

@@ -22,7 +22,7 @@ public record DiagnosisResponse2
     [IsoId("_-JB0AQ0sEeqUVL7sB4m7NA")]
     [DisplayName("Logged Sale Identification")]
     [IsoXmlTag("LggdSaleId")]
-    public SimpleValueList<IsoMax35Text> LoggedSaleIdentification { get; init; } = [];
+    public SimpleValueList<Max35Text> LoggedSaleIdentification { get; init; } = [];
 
     /// <summary>
     /// Status of the POI.

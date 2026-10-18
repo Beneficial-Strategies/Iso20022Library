@@ -32,7 +32,7 @@ public record Traceability4
     [IsoXmlTag("SeqNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SequenceNumber { get; init; }
+    public Max35Text? SequenceNumber { get; init; }
 
     /// <summary>
     /// Date and time of incoming data exchange for relaying or processing.
@@ -41,7 +41,7 @@ public record Traceability4
     [DisplayName("Trace Date Time In")]
     [IsoXmlTag("TracDtTmIn")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime TraceDateTimeIn { get; init; }
+    public required ISODateTime TraceDateTimeIn { get; init; }
 
     /// <summary>
     /// Date and time of the outgoing exchange for relaying or processing.
@@ -50,5 +50,5 @@ public record Traceability4
     [DisplayName("Trace Date Time Out")]
     [IsoXmlTag("TracDtTmOut")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime TraceDateTimeOut { get; init; }
+    public required ISODateTime TraceDateTimeOut { get; init; }
 }

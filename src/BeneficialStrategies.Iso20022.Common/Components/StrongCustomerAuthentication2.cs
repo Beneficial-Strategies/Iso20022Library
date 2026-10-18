@@ -35,14 +35,14 @@ public record StrongCustomerAuthentication2
     /// </summary>
     [DisplayName("Reason Authentication Not Performed")]
     [IsoXmlTag("RsnAuthntcnNotPrfrmd")]
-    public IsoMax4Text? ReasonAuthenticationNotPerformed { get; init; }
+    public Max4Text? ReasonAuthenticationNotPerformed { get; init; }
 
     /// <summary>
     /// Subject To SCA.
     /// </summary>
     [DisplayName("Subject To SCA")]
     [IsoXmlTag("SbjtToSCA")]
-    public IsoTrueFalseIndicator? SubjectToSCA { get; init; }
+    public TrueFalseIndicator? SubjectToSCA { get; init; }
 
     /// <summary>
     /// Waiver.

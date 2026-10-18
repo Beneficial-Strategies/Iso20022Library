@@ -31,5 +31,5 @@ public record BillingServiceParameters1
     [DisplayName("Volume")]
     [IsoXmlTag("Vol")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? Volume { get; init; }
+    public DecimalNumber? Volume { get; init; }
 }

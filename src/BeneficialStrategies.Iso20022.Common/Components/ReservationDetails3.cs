@@ -24,7 +24,7 @@ public record ReservationDetails3
     [IsoXmlTag("Sys")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4Text? System { get; init; }
+    public Max4Text? System { get; init; }
 
     /// <summary>
     /// Value that uniquely identifies the reservation.
@@ -34,7 +34,7 @@ public record ReservationDetails3
     [IsoXmlTag("RsvatnNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReservationNumber { get; init; }
+    public Max35Text? ReservationNumber { get; init; }
 
     /// <summary>
     /// System code that identifies the original reservation system used to make the reservation and purchase the ticket.
@@ -44,7 +44,7 @@ public record ReservationDetails3
     [IsoXmlTag("OrgnlSys")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
     [StringLength(maximumLength: 4, MinimumLength = 1)]
-    public IsoMax4Text? OriginalSystem { get; init; }
+    public Max4Text? OriginalSystem { get; init; }
 
     /// <summary>
     /// Value that identifies the original reservation generated during the original reservation and purchase of the ticket.
@@ -54,5 +54,5 @@ public record ReservationDetails3
     [IsoXmlTag("OrgnlRsvatnNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OriginalReservationNumber { get; init; }
+    public Max35Text? OriginalReservationNumber { get; init; }
 }

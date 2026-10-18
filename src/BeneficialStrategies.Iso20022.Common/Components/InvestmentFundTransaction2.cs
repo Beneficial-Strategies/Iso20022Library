@@ -48,7 +48,7 @@ public record InvestmentFundTransaction2
     [IsoXmlTag("MstrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Unique identifier for an order, as assigned by the sell-side. The identifier must be unique within a single trading day.
@@ -58,7 +58,7 @@ public record InvestmentFundTransaction2
     [IsoXmlTag("OrdrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OrderReference { get; init; }
+    public Max35Text? OrderReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identifier for an order execution, as assigned by a confirming party.
@@ -68,7 +68,7 @@ public record InvestmentFundTransaction2
     [IsoXmlTag("DealRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? DealReference { get; init; }
+    public Max35Text? DealReference { get; init; }
 
     /// <summary>
     /// Unique technical identifier for an instance of a leg within a switch.
@@ -78,7 +78,7 @@ public record InvestmentFundTransaction2
     [IsoXmlTag("LegId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LegIdentification { get; init; }
+    public Max35Text? LegIdentification { get; init; }
 
     /// <summary>
     /// Unique identifier for an instance of a leg execution within a switch confirmation.
@@ -88,7 +88,7 @@ public record InvestmentFundTransaction2
     [IsoXmlTag("LegExctnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LegExecutionIdentification { get; init; }
+    public Max35Text? LegExecutionIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the order was placed by the investor.
@@ -97,7 +97,7 @@ public record InvestmentFundTransaction2
     [DisplayName("Order Date Time")]
     [IsoXmlTag("OrdrDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? OrderDateTime { get; init; }
+    public ISODateTime? OrderDateTime { get; init; }
 
     /// <summary>
     /// Indicates whether the cash payment with respect to the executed order is settled.
@@ -106,7 +106,7 @@ public record InvestmentFundTransaction2
     [DisplayName("Settled Transaction Indicator")]
     [IsoXmlTag("SttldTxInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator SettledTransactionIndicator { get; init; }
+    public required YesNoIndicator SettledTransactionIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the executed order has a registered status on the books of the transfer agent.
@@ -115,7 +115,7 @@ public record InvestmentFundTransaction2
     [DisplayName("Registered Transaction Indicator")]
     [IsoXmlTag("RegdTxInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator RegisteredTransactionIndicator { get; init; }
+    public required YesNoIndicator RegisteredTransactionIndicator { get; init; }
 
     /// <summary>
     /// Number of investment funds units.
@@ -156,7 +156,7 @@ public record InvestmentFundTransaction2
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? SettlementDate { get; init; }
+    public DateOnly? SettlementDate { get; init; }
 
     /// <summary>
     /// Date and time at which a price is applied, according to the terms stated in the prospectus.
@@ -173,7 +173,7 @@ public record InvestmentFundTransaction2
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator CumDividendIndicator { get; init; }
+    public required YesNoIndicator CumDividendIndicator { get; init; }
 
     /// <summary>
     /// Indicates whether the order has been partially executed, ie, the confirmed quantity does not match the ordered quantity for a given financial instrument.
@@ -182,7 +182,7 @@ public record InvestmentFundTransaction2
     [DisplayName("Partially Executed Indicator")]
     [IsoXmlTag("PrtlyExctdInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator PartiallyExecutedIndicator { get; init; }
+    public required YesNoIndicator PartiallyExecutedIndicator { get; init; }
 
     /// <summary>
     /// Price at which the order was executed.

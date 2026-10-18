@@ -23,7 +23,7 @@ public record SecurityIdentification46
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public IsoISINOct2015Identifier? ISIN { get; init; }
+    public ISINOct2015Identifier? ISIN { get; init; }
 
     /// <summary>
     /// Identification through a unique product identifier.
@@ -41,7 +41,7 @@ public record SecurityIdentification46
     [IsoXmlTag("AltrntvInstrmId")]
     [IsoSimpleType(IsoSimpleType.Max105Text)]
     [StringLength(maximumLength: 105, MinimumLength = 1)]
-    public IsoMax105Text? AlternativeInstrumentIdentification { get; init; }
+    public Max105Text? AlternativeInstrumentIdentification { get; init; }
 
     /// <summary>
     /// Specifies a human readable description of the product.
@@ -51,5 +51,5 @@ public record SecurityIdentification46
     [IsoXmlTag("PdctDesc")]
     [IsoSimpleType(IsoSimpleType.Max1000Text)]
     [StringLength(maximumLength: 1000, MinimumLength = 1)]
-    public IsoMax1000Text? ProductDescription { get; init; }
+    public Max1000Text? ProductDescription { get; init; }
 }

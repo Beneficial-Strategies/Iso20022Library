@@ -30,7 +30,7 @@ public record IntraPositionPending12
     [IsoId("_jcirW-SlEe-qVZLXW4RRBw")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
-    public required IsoMax35Text AccountOwnerTransactionIdentification { get; init; }
+    public required Max35Text AccountOwnerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unambiguous identification of the transaction as known by the account servicer.
@@ -38,7 +38,7 @@ public record IntraPositionPending12
     [IsoId("_jcirY-SlEe-qVZLXW4RRBw")]
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
-    public IsoMax35Text? AccountServicerTransactionIdentification { get; init; }
+    public Max35Text? AccountServicerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
@@ -46,7 +46,7 @@ public record IntraPositionPending12
     [IsoId("_jcira-SlEe-qVZLXW4RRBw")]
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
-    public IsoMax35Text? MarketInfrastructureTransactionIdentification { get; init; }
+    public Max35Text? MarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification of the transaction as assigned by the processor.
@@ -54,7 +54,7 @@ public record IntraPositionPending12
     [IsoId("_jcirc-SlEe-qVZLXW4RRBw")]
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
-    public IsoMax35Text? ProcessorTransactionIdentification { get; init; }
+    public Max35Text? ProcessorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Identification assigned by the account servicer to unambiguously identify a corporate action event.
@@ -62,7 +62,7 @@ public record IntraPositionPending12
     [IsoId("_jcirdeSlEe-qVZLXW4RRBw")]
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
-    public IsoMax35Text? CorporateActionEventIdentification { get; init; }
+    public Max35Text? CorporateActionEventIdentification { get; init; }
 
     /// <summary>
     /// Collective reference identifying a set of messages.
@@ -70,7 +70,7 @@ public record IntraPositionPending12
     [IsoId("_jcirfeSlEe-qVZLXW4RRBw")]
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
-    public IsoMax35Text? PoolIdentification { get; init; }
+    public Max35Text? PoolIdentification { get; init; }
 
     /// <summary>
     /// Balance from which the securities are moving.
@@ -126,7 +126,7 @@ public record IntraPositionPending12
     [IsoId("_jcirqeSlEe-qVZLXW4RRBw")]
     [DisplayName("Status Date")]
     [IsoXmlTag("StsDt")]
-    public IsoISODateTime? StatusDate { get; init; }
+    public ISODateTime? StatusDate { get; init; }
 
     /// <summary>
     /// Time stamp on when the transaction is acknowledged.
@@ -134,7 +134,7 @@ public record IntraPositionPending12
     [IsoId("_jcjSZeSlEe-qVZLXW4RRBw")]
     [DisplayName("Acknowledged Status Time Stamp")]
     [IsoXmlTag("AckdStsTmStmp")]
-    public IsoISODateTime? AcknowledgedStatusTimeStamp { get; init; }
+    public ISODateTime? AcknowledgedStatusTimeStamp { get; init; }
 
     /// <summary>
     /// Link to another transaction that must be processed after, before or at the same time.
@@ -182,7 +182,7 @@ public record IntraPositionPending12
     [IsoId("_jcjSd-SlEe-qVZLXW4RRBw")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
-    public required IsoISODateTime CreationDateTime { get; init; }
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// Provides additional settlement processing information which can not be included within the structured fields of the message.
@@ -190,7 +190,7 @@ public record IntraPositionPending12
     [IsoId("_jcjSf-SlEe-qVZLXW4RRBw")]
     [DisplayName("Instruction Processing Additional Details")]
     [IsoXmlTag("InstrPrcgAddtlDtls")]
-    public IsoMax350Text? InstructionProcessingAdditionalDetails { get; init; }
+    public Max350Text? InstructionProcessingAdditionalDetails { get; init; }
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.

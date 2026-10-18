@@ -31,7 +31,7 @@ public record Conversion2
     [DisplayName("Total Units Number")]
     [IsoXmlTag("TtlUnitsNb")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? TotalUnitsNumber { get; init; }
+    public DecimalNumber? TotalUnitsNumber { get; init; }
 
     /// <summary>
     /// Breakdown of units of the source security.

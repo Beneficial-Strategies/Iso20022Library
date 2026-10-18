@@ -30,7 +30,7 @@ public record Account36
     [IsoId("8a170b65-f7dd-45db-a14e-30ee9905f64d")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public IsoMax35Text? AccountIdentification { get; init; }
+    public Max35Text? AccountIdentification { get; init; }
 
     /// <summary>
     /// Supplementary registration information applying to a specific block of units for dealing and reporting purposes.
@@ -38,7 +38,7 @@ public record Account36
     [IsoId("2fb556b4-281b-4625-b58f-de8ee90311c1")]
     [DisplayName("Account Designation")]
     [IsoXmlTag("AcctDsgnt")]
-    public IsoMax35Text? AccountDesignation { get; init; }
+    public Max35Text? AccountDesignation { get; init; }
 
     /// <summary>
     /// Name of the account.
@@ -46,7 +46,7 @@ public record Account36
     [IsoId("dbdfa2bd-9e0c-489d-8745-0378f06303b9")]
     [DisplayName("Account Name")]
     [IsoXmlTag("AcctNm")]
-    public IsoMax35Text? AccountName { get; init; }
+    public Max35Text? AccountName { get; init; }
 
     /// <summary>
     /// Specifies the type of securities account.

@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PledgeeFormat1Choice
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public IsoMax35Text? Value { get; init; }
+        public Max35Text? Value { get; init; }
 
         /// <summary>
         /// Entity to which the financial instruments are pledged expressed as a code.

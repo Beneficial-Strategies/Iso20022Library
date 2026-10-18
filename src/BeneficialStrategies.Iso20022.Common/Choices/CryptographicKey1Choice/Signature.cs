@@ -18,6 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CryptographicKey1Choice
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("Sgntr")]
-        public required IsoSHA256SignatureText Value { get; init; }
+        public required SHA256SignatureText Value { get; init; }
     }
 }

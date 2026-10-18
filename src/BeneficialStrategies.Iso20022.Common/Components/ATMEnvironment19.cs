@@ -35,7 +35,7 @@ public record ATMEnvironment19
     /// </summary>
     [DisplayName("ATM Manager Identification")]
     [IsoXmlTag("ATMMgrId")]
-    public IsoMax35Text? ATMManagerIdentification { get; init; }
+    public Max35Text? ATMManagerIdentification { get; init; }
 
     /// <summary>
     /// Card.

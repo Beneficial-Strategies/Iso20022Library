@@ -22,7 +22,7 @@ public record AccountReport38
     [IsoId("a56b4f10-b9bd-4240-b168-e5d3eacd01b3")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Provides details on the page number of the report.
@@ -38,7 +38,7 @@ public record AccountReport38
     [IsoId("5b1ff039-5642-4e1f-ac22-86014c598365")]
     [DisplayName("Electronic Sequence Number")]
     [IsoXmlTag("ElctrncSeqNb")]
-    public IsoNumber? ElectronicSequenceNumber { get; init; }
+    public Number? ElectronicSequenceNumber { get; init; }
 
     /// <summary>
     /// Specifies the range of identification sequence numbers, as provided in the request.
@@ -54,7 +54,7 @@ public record AccountReport38
     [IsoId("b3351a0a-2602-484c-bacc-d39758f53e7f")]
     [DisplayName("Legal Sequence Number")]
     [IsoXmlTag("LglSeqNb")]
-    public IsoNumber? LegalSequenceNumber { get; init; }
+    public Number? LegalSequenceNumber { get; init; }
 
     /// <summary>
     /// Date and time at which the report was created.
@@ -62,7 +62,7 @@ public record AccountReport38
     [IsoId("58177df5-73a1-42cd-987c-e04e5d718ac4")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
-    public IsoISODateTime? CreationDateTime { get; init; }
+    public ISODateTime? CreationDateTime { get; init; }
 
     /// <summary>
     /// Range of time between a start date and an end date for which the account report is issued.
@@ -142,5 +142,5 @@ public record AccountReport38
     [IsoId("2d3200bc-a6f6-4b5c-b89e-bd55aa4e8cd8")]
     [DisplayName("Additional Report Information")]
     [IsoXmlTag("AddtlRptInf")]
-    public IsoMax500Text? AdditionalReportInformation { get; init; }
+    public Max500Text? AdditionalReportInformation { get; init; }
 }

@@ -22,7 +22,7 @@ public record RemittanceLocationData2
     /// </summary>
     [DisplayName("Electronic Address")]
     [IsoXmlTag("ElctrncAdr")]
-    public IsoMax2048Text? ElectronicAddress { get; init; }
+    public Max2048Text? ElectronicAddress { get; init; }
 
     /// <summary>
     /// Method used to deliver the remittance advice information.

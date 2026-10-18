@@ -22,7 +22,7 @@ public record StatusTrail13
     [IsoId("7dd972d4-eb85-4450-beb5-a6daf648d90b")]
     [DisplayName("Status Date")]
     [IsoXmlTag("StsDt")]
-    public required IsoISODateTime StatusDate { get; init; }
+    public required ISODateTime StatusDate { get; init; }
 
     /// <summary>
     /// Unique and unambiguous way to identify the organisation that sent the message instance.
@@ -38,7 +38,7 @@ public record StatusTrail13
     [IsoId("42f06d21-b0b8-42f0-835d-c361ac4f825b")]
     [DisplayName("User Identification")]
     [IsoXmlTag("UsrId")]
-    public IsoMax35Text? UserIdentification { get; init; }
+    public Max35Text? UserIdentification { get; init; }
 
     /// <summary>
     /// Provides details on the processing status of the transaction.

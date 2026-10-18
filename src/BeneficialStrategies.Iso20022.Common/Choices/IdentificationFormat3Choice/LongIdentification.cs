@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationFormat3Choice
         /// </summary>
         [IsoXmlTag("LngId")]
         [IsoSimpleType(IsoSimpleType.Max30Text)]
-        public required IsoMax30Text Value { get; init; }
+        public required Max30Text Value { get; init; }
     }
 }

@@ -24,7 +24,7 @@ public record KEKIdentifier3
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Name { get; init; }
+    public Max140Text? Name { get; init; }
 
     /// <summary>
     /// Identification of the cryptographic key.
@@ -34,7 +34,7 @@ public record KEKIdentifier3
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public required IsoMax140Text Identification { get; init; }
+    public required Max140Text Identification { get; init; }
 
     /// <summary>
     /// Version of the cryptographic key.
@@ -44,7 +44,7 @@ public record KEKIdentifier3
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? Version { get; init; }
+    public Max140Text? Version { get; init; }
 
     /// <summary>
     /// Value to check the key, for instance, result of the encryption of the null binary string.
@@ -53,5 +53,5 @@ public record KEKIdentifier3
     [DisplayName("Key Check Value")]
     [IsoXmlTag("KeyChckVal")]
     [IsoSimpleType(IsoSimpleType.Max35Binary)]
-    public IsoMax35Binary? KeyCheckValue { get; init; }
+    public Max35Binary? KeyCheckValue { get; init; }
 }

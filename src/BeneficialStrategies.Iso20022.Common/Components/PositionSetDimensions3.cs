@@ -48,7 +48,7 @@ public record PositionSetDimensions3
     [IsoXmlTag("Prtfl")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoMax52Text? Portfolio { get; init; }
+    public Max52Text? Portfolio { get; init; }
 
     /// <summary>
     /// Classification according to the contract type.
@@ -123,7 +123,7 @@ public record PositionSetDimensions3
     [DisplayName("Clearing Status")]
     [IsoXmlTag("ClrSts")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ClearingStatus { get; init; }
+    public TrueFalseIndicator? ClearingStatus { get; init; }
 
     /// <summary>
     /// Indicates whether the contract was entered into as an intragroup transaction.
@@ -133,7 +133,7 @@ public record PositionSetDimensions3
     [DisplayName("Intra Group")]
     [IsoXmlTag("IntraGrp")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? IntraGroup { get; init; }
+    public TrueFalseIndicator? IntraGroup { get; init; }
 
     /// <summary>
     /// Indicates the quote base for the exchange rate.
@@ -167,7 +167,7 @@ public record PositionSetDimensions3
     [IsoXmlTag("IRSTp")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoMax52Text? IRSType { get; init; }
+    public Max52Text? IRSType { get; init; }
 
     /// <summary>
     /// Classification of seniority in case of contract on index or on a single name entity.
@@ -184,7 +184,7 @@ public record PositionSetDimensions3
     [DisplayName("Tranche")]
     [IsoXmlTag("Trch")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? Tranche { get; init; }
+    public TrueFalseIndicator? Tranche { get; init; }
 
     /// <summary>
     /// Details on the commodity asset class type.
@@ -194,5 +194,5 @@ public record PositionSetDimensions3
     [IsoXmlTag("Cmmdty")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoMax52Text? Commodity { get; init; }
+    public Max52Text? Commodity { get; init; }
 }

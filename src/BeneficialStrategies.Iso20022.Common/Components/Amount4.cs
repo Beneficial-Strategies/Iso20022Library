@@ -39,7 +39,7 @@ public record Amount4
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? ExchangeRate { get; init; }
+    public DecimalNumber? ExchangeRate { get; init; }
 
     /// <summary>
     /// Date and time at which the exchange rate has been quoted.
@@ -48,5 +48,5 @@ public record Amount4
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? QuotationDate { get; init; }
+    public ISODateTime? QuotationDate { get; init; }
 }

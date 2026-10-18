@@ -22,7 +22,7 @@ public record PaymentInstrument23
     [IsoId("d7bdf619-ac7f-46d5-b4b9-e01bf1780a88")]
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
-    public IsoMax35Text? Reference { get; init; }
+    public Max35Text? Reference { get; init; }
 
     /// <summary>
     /// Amount of the payment.
@@ -38,7 +38,7 @@ public record PaymentInstrument23
     [IsoId("f5400023-26a8-4af0-bc3e-16c62aaeaba4")]
     [DisplayName("Payment Date")]
     [IsoXmlTag("PmtDt")]
-    public IsoISODate? PaymentDate { get; init; }
+    public DateOnly? PaymentDate { get; init; }
 
     /// <summary>
     /// Payment process for the transfer of cash from the debtor to the creditor.

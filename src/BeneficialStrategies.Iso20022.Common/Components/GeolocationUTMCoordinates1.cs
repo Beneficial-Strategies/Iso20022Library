@@ -25,7 +25,7 @@ public record GeolocationUTMCoordinates1
     [IsoXmlTag("UTMZone")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text UTMZone { get; init; }
+    public required Max35Text UTMZone { get; init; }
 
     /// <summary>
     /// X-coordinate of the Universal Transverse Mercator
@@ -36,7 +36,7 @@ public record GeolocationUTMCoordinates1
     [IsoXmlTag("UTMEstwrd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text UTMEastward { get; init; }
+    public required Max35Text UTMEastward { get; init; }
 
     /// <summary>
     /// Y-coordinate of the Universal Transverse Mercator
@@ -47,5 +47,5 @@ public record GeolocationUTMCoordinates1
     [IsoXmlTag("UTMNrthwrd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text UTMNorthward { get; init; }
+    public required Max35Text UTMNorthward { get; init; }
 }

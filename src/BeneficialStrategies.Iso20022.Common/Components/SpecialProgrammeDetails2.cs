@@ -21,12 +21,12 @@ public record SpecialProgrammeDetails2
     /// </summary>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax35Text? Name { get; init; }
+    public Max35Text? Name { get; init; }
 
     /// <summary>
     /// Value.
     /// </summary>
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
-    public IsoMax256Text? Value { get; init; }
+    public Max256Text? Value { get; init; }
 }

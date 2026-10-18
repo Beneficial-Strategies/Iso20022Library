@@ -24,7 +24,7 @@ public record SettlementObligation7
     [IsoXmlTag("CSDTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CSDTransactionIdentification { get; init; }
+    public Max35Text? CSDTransactionIdentification { get; init; }
 
     /// <summary>
     /// Reference of the transaction (non settled instruction) given by the central counterparty.
@@ -34,7 +34,7 @@ public record SettlementObligation7
     [IsoXmlTag("CntrlCtrPtyTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CentralCounterpartyTransactionIdentification { get; init; }
+    public Max35Text? CentralCounterpartyTransactionIdentification { get; init; }
 
     /// <summary>
     /// Original buy-in identification number in case an event causes a generation of a new buy-in identification.
@@ -44,7 +44,7 @@ public record SettlementObligation7
     [IsoXmlTag("PrvsBuyInId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PreviousBuyInIdentification { get; init; }
+    public Max35Text? PreviousBuyInIdentification { get; init; }
 
     /// <summary>
     /// An account opened by the central counterparty in the name of the clearing member within the account structure, for settlement purposes (gives information about the clearing member account at central counterparty).
@@ -94,7 +94,7 @@ public record SettlementObligation7
     [DisplayName("Intended Settlement Date")]
     [IsoXmlTag("IntnddSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? IntendedSettlementDate { get; init; }
+    public DateOnly? IntendedSettlementDate { get; init; }
 
     /// <summary>
     /// Provides details about the security identification.
@@ -111,7 +111,7 @@ public record SettlementObligation7
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TradeDate { get; init; }
+    public DateOnly? TradeDate { get; init; }
 
     /// <summary>
     /// Provides the price of the trade.

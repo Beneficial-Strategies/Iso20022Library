@@ -24,7 +24,7 @@ public record PreviousYear1
     [DisplayName("All Previous Years")]
     [IsoXmlTag("AllPrvsYrs")]
     [IsoSimpleType(IsoSimpleType.PreviousAll)]
-    public required IsoPreviousAll AllPreviousYears { get; init; }
+    public required PreviousAll AllPreviousYears { get; init; }
 
     /// <summary>
     /// Selection of investment plans issued during previous years.
@@ -44,5 +44,5 @@ public record PreviousYear1
     [DisplayName("Cash Component Indicator")]
     [IsoXmlTag("CshCmpntInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator CashComponentIndicator { get; init; }
+    public required YesNoIndicator CashComponentIndicator { get; init; }
 }

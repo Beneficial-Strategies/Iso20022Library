@@ -28,7 +28,7 @@ public record CorporateActionOption220
     /// </summary>
     [DisplayName("Applied Option Indicator")]
     [IsoXmlTag("ApldOptnInd")]
-    public IsoYesNoIndicator? AppliedOptionIndicator { get; init; }
+    public YesNoIndicator? AppliedOptionIndicator { get; init; }
 
     /// <summary>
     /// Cash Movement Details.
@@ -42,7 +42,7 @@ public record CorporateActionOption220
     /// </summary>
     [DisplayName("Certification Breakdown Indicator")]
     [IsoXmlTag("CertfctnBrkdwnInd")]
-    public IsoYesNoIndicator? CertificationBreakdownIndicator { get; init; }
+    public YesNoIndicator? CertificationBreakdownIndicator { get; init; }
 
     /// <summary>
     /// Certification Breakdown Type.
@@ -57,14 +57,14 @@ public record CorporateActionOption220
     /// </summary>
     [DisplayName("Change Allowed Indicator")]
     [IsoXmlTag("ChngAllwdInd")]
-    public IsoYesNoIndicator? ChangeAllowedIndicator { get; init; }
+    public YesNoIndicator? ChangeAllowedIndicator { get; init; }
 
     /// <summary>
     /// Charges Applied Indicator.
     /// </summary>
     [DisplayName("Charges Applied Indicator")]
     [IsoXmlTag("ChrgsApldInd")]
-    public IsoYesNoIndicator? ChargesAppliedIndicator { get; init; }
+    public YesNoIndicator? ChargesAppliedIndicator { get; init; }
 
     /// <summary>
     /// Currency Option.
@@ -127,7 +127,7 @@ public record CorporateActionOption220
     /// </summary>
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
-    public required IsoExact3NumericText OptionNumber { get; init; }
+    public required Exact3NumericText OptionNumber { get; init; }
 
     /// <summary>
     /// Option Type.
@@ -190,5 +190,5 @@ public record CorporateActionOption220
     /// </summary>
     [DisplayName("Withdrawal Allowed Indicator")]
     [IsoXmlTag("WdrwlAllwdInd")]
-    public IsoYesNoIndicator? WithdrawalAllowedIndicator { get; init; }
+    public YesNoIndicator? WithdrawalAllowedIndicator { get; init; }
 }

@@ -31,5 +31,5 @@ public record Acquirer1
     [DisplayName("Parameters Version")]
     [IsoXmlTag("ParamsVrsn")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime ParametersVersion { get; init; }
+    public required ISODateTime ParametersVersion { get; init; }
 }

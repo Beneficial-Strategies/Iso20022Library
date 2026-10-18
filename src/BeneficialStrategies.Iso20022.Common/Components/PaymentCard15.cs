@@ -39,7 +39,7 @@ public record PaymentCard15
     [DisplayName("Masked PAN")]
     [IsoXmlTag("MskdPAN")]
     [IsoSimpleType(IsoSimpleType.Max30Text)]
-    public IsoMax30Text? MaskedPAN { get; init; }
+    public Max30Text? MaskedPAN { get; init; }
 
     /// <summary>
     /// Type of card product.
@@ -57,5 +57,5 @@ public record PaymentCard15
     [IsoXmlTag("CardPdctNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CardProductName { get; init; }
+    public Max35Text? CardProductName { get; init; }
 }

@@ -22,7 +22,7 @@ public record InvestigationRequest50
     [IsoId("8c1eae58-e02c-417a-a68b-0a13b0f70445")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
-    public required IsoMax35Text MessageIdentification { get; init; }
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the requestor, to unambiguously identify the investigation for the requestor.
@@ -30,7 +30,7 @@ public record InvestigationRequest50
     [IsoId("86168a33-e1f7-48f9-b48b-f40870076e7b")]
     [DisplayName("Requestor Investigation Identification")]
     [IsoXmlTag("RqstrInvstgtnId")]
-    public IsoMax35Text? RequestorInvestigationIdentification { get; init; }
+    public Max35Text? RequestorInvestigationIdentification { get; init; }
 
     /// <summary>
     /// Unique identification, as assigned by the responder, to unambiguously identify the investigation for the responder.
@@ -38,7 +38,7 @@ public record InvestigationRequest50
     [IsoId("b007bd45-f65c-4c6c-be8e-e3996b7348e3")]
     [DisplayName("Responder Investigation Identification")]
     [IsoXmlTag("RspndrInvstgtnId")]
-    public IsoMax35Text? ResponderInvestigationIdentification { get; init; }
+    public Max35Text? ResponderInvestigationIdentification { get; init; }
 
     /// <summary>
     /// Unique identifier to provide the end-to-end reference of an investigation.
@@ -46,7 +46,7 @@ public record InvestigationRequest50
     [IsoId("cd68ffa0-7df0-4e0f-9604-55a237572f57")]
     [DisplayName("EIR")]
     [IsoXmlTag("EIR")]
-    public IsoUUIDv4Identifier? EIR { get; init; }
+    public UUIDv4Identifier? EIR { get; init; }
 
     /// <summary>
     /// Specifies an action the responder should now take in regard to the investigation and the reason for the action.

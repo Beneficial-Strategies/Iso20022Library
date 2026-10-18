@@ -22,7 +22,7 @@ public record PassengerTransport4
     [IsoId("_FVeqYUhsEfCMZJtj4J7UGQ")]
     [DisplayName("Document Number")]
     [IsoXmlTag("DocNb")]
-    public IsoMax35Text? DocumentNumber { get; init; }
+    public Max35Text? DocumentNumber { get; init; }
 
     /// <summary>
     /// Computerised reservation system used to make the reservation and purchase the ticket.
@@ -30,7 +30,7 @@ public record PassengerTransport4
     [IsoId("_FVeqY0hsEfCMZJtj4J7UGQ")]
     [DisplayName("Reservation System")]
     [IsoXmlTag("RsvatnSys")]
-    public IsoMax4Text? ReservationSystem { get; init; }
+    public Max4Text? ReservationSystem { get; init; }
 
     /// <summary>
     /// Value that uniquely identifies the reservation.
@@ -38,7 +38,7 @@ public record PassengerTransport4
     [IsoId("_FVeqZUhsEfCMZJtj4J7UGQ")]
     [DisplayName("Reservation Number")]
     [IsoXmlTag("RsvatnNb")]
-    public IsoMax35Text? ReservationNumber { get; init; }
+    public Max35Text? ReservationNumber { get; init; }
 
     /// <summary>
     /// System code that identifies the original reservation system used to make the reservation and purchase the ticket.
@@ -46,7 +46,7 @@ public record PassengerTransport4
     [IsoId("_FVeqZ0hsEfCMZJtj4J7UGQ")]
     [DisplayName("Original Reservation System")]
     [IsoXmlTag("OrgnlRsvatnSys")]
-    public IsoMax4Text? OriginalReservationSystem { get; init; }
+    public Max4Text? OriginalReservationSystem { get; init; }
 
     /// <summary>
     /// Value that identifies the original reservation generated during the original reservation and purchase of the ticket.
@@ -54,7 +54,7 @@ public record PassengerTransport4
     [IsoId("_FVeqaUhsEfCMZJtj4J7UGQ")]
     [DisplayName("Original Reservation Number")]
     [IsoXmlTag("OrgnlRsvatnNb")]
-    public IsoMax35Text? OriginalReservationNumber { get; init; }
+    public Max35Text? OriginalReservationNumber { get; init; }
 
     /// <summary>
     /// Contains a code provided to a travel agent by a company to authorise ticket issuance.
@@ -62,7 +62,7 @@ public record PassengerTransport4
     [IsoId("_FVeqa0hsEfCMZJtj4J7UGQ")]
     [DisplayName("Travel Authorisation Code")]
     [IsoXmlTag("TrvlAuthstnCd")]
-    public IsoMax70Text? TravelAuthorisationCode { get; init; }
+    public Max70Text? TravelAuthorisationCode { get; init; }
 
     /// <summary>
     /// Name of the issuing ticket agent.
@@ -70,7 +70,7 @@ public record PassengerTransport4
     [IsoId("_FVeqbUhsEfCMZJtj4J7UGQ")]
     [DisplayName("Ticket Issuer")]
     [IsoXmlTag("TcktIssr")]
-    public IsoMax35Text? TicketIssuer { get; init; }
+    public Max35Text? TicketIssuer { get; init; }
 
     /// <summary>
     /// Indicates whether or not the ticket is open or restricted.
@@ -78,7 +78,7 @@ public record PassengerTransport4
     [IsoId("_FVeqb0hsEfCMZJtj4J7UGQ")]
     [DisplayName("Open Ticket")]
     [IsoXmlTag("OpnTckt")]
-    public IsoTrueFalseIndicator? OpenTicket { get; init; }
+    public TrueFalseIndicator? OpenTicket { get; init; }
 
     /// <summary>
     /// Contains Customer Reference Values provided for this transaction.
@@ -110,7 +110,7 @@ public record PassengerTransport4
     [IsoId("_FVeqd0hsEfCMZJtj4J7UGQ")]
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
-    public IsoMax4NumericText? Duration { get; init; }
+    public Max4NumericText? Duration { get; init; }
 
     /// <summary>
     /// Indicates whether or not insurance was purchased.
@@ -118,7 +118,7 @@ public record PassengerTransport4
     [IsoId("_FVeqeUhsEfCMZJtj4J7UGQ")]
     [DisplayName("Insurance")]
     [IsoXmlTag("Insrnc")]
-    public IsoTrueFalseIndicator? Insurance { get; init; }
+    public TrueFalseIndicator? Insurance { get; init; }
 
     /// <summary>
     /// Total amount.
@@ -134,7 +134,7 @@ public record PassengerTransport4
     [IsoId("_FVeqfUhsEfCMZJtj4J7UGQ")]
     [DisplayName("Summary Commodity Identification")]
     [IsoXmlTag("SummryCmmdtyId")]
-    public IsoMax35Text? SummaryCommodityIdentification { get; init; }
+    public Max35Text? SummaryCommodityIdentification { get; init; }
 
     /// <summary>
     /// Loyalty programme details.
@@ -174,7 +174,7 @@ public record PassengerTransport4
     [IsoId("_7p588khrEfCMZJtj4J7UGQ")]
     [DisplayName("Private Data")]
     [IsoXmlTag("PrvtData")]
-    public SimpleValueList<IsoATICALaxProcessing> PrivateData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
     /// Reserved to define data unique to the country applications.
@@ -182,5 +182,5 @@ public record PassengerTransport4
     [IsoId("_7p5880hrEfCMZJtj4J7UGQ")]
     [DisplayName("National Data")]
     [IsoXmlTag("NtlData")]
-    public SimpleValueList<IsoATICALaxProcessing> NationalData { get; init; } = [];
+    public SimpleValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 }

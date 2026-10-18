@@ -21,7 +21,7 @@ public record AcceptorDiagnosticResponse11
     /// </summary>
     [DisplayName("Acquirer Available")]
     [IsoXmlTag("AcqrrAvlbl")]
-    public IsoTrueFalseIndicator? AcquirerAvailable { get; init; }
+    public TrueFalseIndicator? AcquirerAvailable { get; init; }
 
     /// <summary>
     /// Environment.

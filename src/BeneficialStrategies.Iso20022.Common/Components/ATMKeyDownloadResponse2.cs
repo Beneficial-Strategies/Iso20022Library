@@ -39,7 +39,7 @@ public record ATMKeyDownloadResponse2
     [DisplayName("ATM Challenge")]
     [IsoXmlTag("ATMChllng")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public IsoMax140Binary? ATMChallenge { get; init; }
+    public Max140Binary? ATMChallenge { get; init; }
 
     /// <summary>
     /// Security parameters of the host downloading the key.

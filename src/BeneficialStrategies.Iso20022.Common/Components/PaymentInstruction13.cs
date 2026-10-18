@@ -23,7 +23,7 @@ public record PaymentInstruction13
     [DisplayName("Requested Execution Date Time")]
     [IsoXmlTag("ReqdExctnDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? RequestedExecutionDateTime { get; init; }
+    public ISODateTime? RequestedExecutionDateTime { get; init; }
 
     /// <summary>
     /// Type, or nature, of the payment, for example an express payment.

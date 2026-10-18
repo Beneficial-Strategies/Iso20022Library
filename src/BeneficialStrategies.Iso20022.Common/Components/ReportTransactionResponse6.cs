@@ -21,21 +21,21 @@ public record ReportTransactionResponse6
     /// </summary>
     [DisplayName("Block Start")]
     [IsoXmlTag("BlckStart")]
-    public required IsoPositiveNumber BlockStart { get; init; }
+    public required PositiveNumber BlockStart { get; init; }
 
     /// <summary>
     /// Block Stop.
     /// </summary>
     [DisplayName("Block Stop")]
     [IsoXmlTag("BlckStop")]
-    public required IsoPositiveNumber BlockStop { get; init; }
+    public required PositiveNumber BlockStop { get; init; }
 
     /// <summary>
     /// Report Full Size.
     /// </summary>
     [DisplayName("Report Full Size")]
     [IsoXmlTag("RptFullSz")]
-    public required IsoPositiveNumber ReportFullSize { get; init; }
+    public required PositiveNumber ReportFullSize { get; init; }
 
     /// <summary>
     /// Transaction Report.

@@ -32,7 +32,7 @@ public record NaturalPersonIdentification2
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max105Text)]
     [StringLength(maximumLength: 105, MinimumLength = 1)]
-    public IsoMax105Text? Name { get; init; }
+    public Max105Text? Name { get; init; }
 
     /// <summary>
     /// Indicates the domicile of the natural person.
@@ -42,5 +42,5 @@ public record NaturalPersonIdentification2
     [IsoXmlTag("Dmcl")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public IsoMax500Text? Domicile { get; init; }
+    public Max500Text? Domicile { get; init; }
 }

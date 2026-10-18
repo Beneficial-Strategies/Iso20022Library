@@ -24,7 +24,7 @@ public record TransferStatusAndReason8
     [IsoXmlTag("MstrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? MasterReference { get; init; }
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous identification of the transfer, as assigned by the instructing party.
@@ -34,7 +34,7 @@ public record TransferStatusAndReason8
     [IsoXmlTag("TrfRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransferReference { get; init; }
+    public required Max35Text TransferReference { get; init; }
 
     /// <summary>
     /// Unique and unambiguous investor&apos;s identification of the transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.
@@ -52,7 +52,7 @@ public record TransferStatusAndReason8
     [IsoXmlTag("CxlRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CancellationReference { get; init; }
+    public Max35Text? CancellationReference { get; init; }
 
     /// <summary>
     /// Type of event for which the message is sent.
@@ -102,7 +102,7 @@ public record TransferStatusAndReason8
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TradeDate { get; init; }
+    public DateOnly? TradeDate { get; init; }
 
     /// <summary>
     /// Date at which the securities are to be exchanged or were exchanged at the International Central Securities Depository (ICSD) or Central Securities Depository (CSD).
@@ -111,7 +111,7 @@ public record TransferStatusAndReason8
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? SettlementDate { get; init; }
+    public DateOnly? SettlementDate { get; init; }
 
     /// <summary>
     /// Date on which the document, for example, the application form, was sent.
@@ -120,7 +120,7 @@ public record TransferStatusAndReason8
     [DisplayName("Send Out Date")]
     [IsoXmlTag("SndOutDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? SendOutDate { get; init; }
+    public DateOnly? SendOutDate { get; init; }
 
     /// <summary>
     /// Date on which cash is available.
@@ -129,7 +129,7 @@ public record TransferStatusAndReason8
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? CashSettlementDate { get; init; }
+    public DateOnly? CashSettlementDate { get; init; }
 
     /// <summary>
     /// Number of units to be transferred.
@@ -138,7 +138,7 @@ public record TransferStatusAndReason8
     [DisplayName("Total Units Number")]
     [IsoXmlTag("TtlUnitsNb")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? TotalUnitsNumber { get; init; }
+    public DecimalNumber? TotalUnitsNumber { get; init; }
 
     /// <summary>
     /// Weighted average price of the units in the account. The average price may also be known as the average acquisition price.
@@ -210,7 +210,7 @@ public record TransferStatusAndReason8
     [IsoId("_OfS3sXp6EeuldpLtvj4F0Q")]
     [DisplayName("Query Response")]
     [IsoXmlTag("QryRspn")]
-    public SimpleValueList<IsoMax350Text> QueryResponse { get; init; } = [];
+    public SimpleValueList<Max350Text> QueryResponse { get; init; } = [];
 
     /// <summary>
     /// Party that initiates the status.

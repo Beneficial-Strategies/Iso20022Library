@@ -21,7 +21,7 @@ public record SignedData9
     /// </summary>
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
-    public ValueList<IsoMax5000Binary> Certificate { get; init; } = [];
+    public ValueList<Max5000Binary> Certificate { get; init; } = [];
 
     /// <summary>
     /// Digest Algorithm.
@@ -49,5 +49,5 @@ public record SignedData9
     /// </summary>
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
-    public IsoNumber? Version { get; init; }
+    public Number? Version { get; init; }
 }

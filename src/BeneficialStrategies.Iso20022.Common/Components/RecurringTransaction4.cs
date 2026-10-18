@@ -32,7 +32,7 @@ public record RecurringTransaction4
     [IsoXmlTag("PlanId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? PlanIdentification { get; init; }
+    public Max35Text? PlanIdentification { get; init; }
 
     /// <summary>
     /// Type of the Plan Owner.
@@ -49,7 +49,7 @@ public record RecurringTransaction4
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? SequenceNumber { get; init; }
+    public Number? SequenceNumber { get; init; }
 
     /// <summary>
     /// Period unit between consecutive payments (for example day, month, year).
@@ -66,7 +66,7 @@ public record RecurringTransaction4
     [DisplayName("Instalment Period")]
     [IsoXmlTag("InstlmtPrd")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? InstalmentPeriod { get; init; }
+    public Number? InstalmentPeriod { get; init; }
 
     /// <summary>
     /// Total number of instalment payments.
@@ -75,7 +75,7 @@ public record RecurringTransaction4
     [DisplayName("Total Number Of Payments")]
     [IsoXmlTag("TtlNbOfPmts")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? TotalNumberOfPayments { get; init; }
+    public Number? TotalNumberOfPayments { get; init; }
 
     /// <summary>
     /// Date of the first payment.
@@ -84,7 +84,7 @@ public record RecurringTransaction4
     [DisplayName("First Payment Date")]
     [IsoXmlTag("FrstPmtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? FirstPaymentDate { get; init; }
+    public DateOnly? FirstPaymentDate { get; init; }
 
     /// <summary>
     /// Cumulative amount of all the instalments.

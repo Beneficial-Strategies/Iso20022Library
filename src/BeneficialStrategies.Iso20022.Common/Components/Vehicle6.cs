@@ -28,42 +28,42 @@ public record Vehicle6
     /// </summary>
     [DisplayName("Fleet Number")]
     [IsoXmlTag("FleetNb")]
-    public IsoMax10Text? FleetNumber { get; init; }
+    public Max10Text? FleetNumber { get; init; }
 
     /// <summary>
     /// Hubometer.
     /// </summary>
     [DisplayName("Hubometer")]
     [IsoXmlTag("Hbmtr")]
-    public IsoDecimalNumber? Hubometer { get; init; }
+    public DecimalNumber? Hubometer { get; init; }
 
     /// <summary>
     /// Identification Number.
     /// </summary>
     [DisplayName("Identification Number")]
     [IsoXmlTag("IdNb")]
-    public IsoMax35NumericText? IdentificationNumber { get; init; }
+    public Max35NumericText? IdentificationNumber { get; init; }
 
     /// <summary>
     /// Maintenance Identification.
     /// </summary>
     [DisplayName("Maintenance Identification")]
     [IsoXmlTag("MntncId")]
-    public IsoMax35Text? MaintenanceIdentification { get; init; }
+    public Max35Text? MaintenanceIdentification { get; init; }
 
     /// <summary>
     /// Number.
     /// </summary>
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
-    public IsoMax35NumericText? Number { get; init; }
+    public Max35NumericText? Number { get; init; }
 
     /// <summary>
     /// Odometer.
     /// </summary>
     [DisplayName("Odometer")]
     [IsoXmlTag("Odmtr")]
-    public IsoDecimalNumber? Odometer { get; init; }
+    public DecimalNumber? Odometer { get; init; }
 
     /// <summary>
     /// On Board Diagnostics.
@@ -77,21 +77,21 @@ public record Vehicle6
     /// </summary>
     [DisplayName("Replacement")]
     [IsoXmlTag("Rplcmnt")]
-    public IsoTrueFalseIndicator? Replacement { get; init; }
+    public TrueFalseIndicator? Replacement { get; init; }
 
     /// <summary>
     /// Sub Fleet Number.
     /// </summary>
     [DisplayName("Sub Fleet Number")]
     [IsoXmlTag("SubFleetNb")]
-    public IsoMax35Text? SubFleetNumber { get; init; }
+    public Max35Text? SubFleetNumber { get; init; }
 
     /// <summary>
     /// Tag.
     /// </summary>
     [DisplayName("Tag")]
     [IsoXmlTag("Tag")]
-    public IsoMax35Text? Tag { get; init; }
+    public Max35Text? Tag { get; init; }
 
     /// <summary>
     /// Tag Entry Mode.
@@ -105,12 +105,12 @@ public record Vehicle6
     /// </summary>
     [DisplayName("Trailer Number")]
     [IsoXmlTag("TrlrNb")]
-    public IsoMax35NumericText? TrailerNumber { get; init; }
+    public Max35NumericText? TrailerNumber { get; init; }
 
     /// <summary>
     /// Unit Number.
     /// </summary>
     [DisplayName("Unit Number")]
     [IsoXmlTag("UnitNb")]
-    public IsoMax35NumericText? UnitNumber { get; init; }
+    public Max35NumericText? UnitNumber { get; init; }
 }

@@ -48,5 +48,5 @@ public record CorporateActionNarrative54
     [IsoXmlTag("EvtPrcgWebSiteAdr")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINZMax2048Text)]
     [StringLength(maximumLength: 2048, MinimumLength = 1)]
-    public IsoRestrictedFINZMax2048Text? EventProcessingWebSiteAddress { get; init; }
+    public RestrictedFINZMax2048Text? EventProcessingWebSiteAddress { get; init; }
 }

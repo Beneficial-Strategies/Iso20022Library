@@ -25,7 +25,7 @@ public record StatusReportItems2
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text TransactionIdentification { get; init; }
+    public required Max35Text TransactionIdentification { get; init; }
 
     /// <summary>
     /// Entity for which the matching application has generated a report.
@@ -53,5 +53,5 @@ public record StatusReportItems2
     [IsoXmlTag("SubSts")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? SubStatus { get; init; }
+    public Max140Text? SubStatus { get; init; }
 }

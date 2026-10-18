@@ -21,7 +21,7 @@ public record DataSetRequest6
     /// </summary>
     [DisplayName("Delegation Proof")]
     [IsoXmlTag("DlgtnProof")]
-    public IsoMax5000Binary? DelegationProof { get; init; }
+    public Max5000Binary? DelegationProof { get; init; }
 
     /// <summary>
     /// Identification.
@@ -35,7 +35,7 @@ public record DataSetRequest6
     /// </summary>
     [DisplayName("POI Challenge")]
     [IsoXmlTag("POIChllng")]
-    public IsoMax140Binary? POIChallenge { get; init; }
+    public Max140Binary? POIChallenge { get; init; }
 
     /// <summary>
     /// Protected Delegation Proof.
@@ -56,5 +56,5 @@ public record DataSetRequest6
     /// </summary>
     [DisplayName("TM Challenge")]
     [IsoXmlTag("TMChllng")]
-    public IsoMax140Binary? TMChallenge { get; init; }
+    public Max140Binary? TMChallenge { get; init; }
 }

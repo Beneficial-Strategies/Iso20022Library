@@ -56,14 +56,14 @@ public record FundReferenceDataReport5
     /// </summary>
     [DisplayName("Ex Ante Indicator")]
     [IsoXmlTag("ExAnteInd")]
-    public IsoYesNoIndicator? ExAnteIndicator { get; init; }
+    public YesNoIndicator? ExAnteIndicator { get; init; }
 
     /// <summary>
     /// Ex Post Indicator.
     /// </summary>
     [DisplayName("Ex Post Indicator")]
     [IsoXmlTag("ExPstInd")]
-    public IsoYesNoIndicator? ExPostIndicator { get; init; }
+    public YesNoIndicator? ExPostIndicator { get; init; }
 
     /// <summary>
     /// Extension.
@@ -98,14 +98,14 @@ public record FundReferenceDataReport5
     /// </summary>
     [DisplayName("General Reference Date")]
     [IsoXmlTag("GnlRefDt")]
-    public required IsoISODate GeneralReferenceDate { get; init; }
+    public required DateOnly GeneralReferenceDate { get; init; }
 
     /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax35Text? Identification { get; init; }
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Investment Restrictions.
@@ -182,7 +182,7 @@ public record FundReferenceDataReport5
     /// </summary>
     [DisplayName("Target Market Indicator")]
     [IsoXmlTag("TrgtMktInd")]
-    public IsoYesNoIndicator? TargetMarketIndicator { get; init; }
+    public YesNoIndicator? TargetMarketIndicator { get; init; }
 
     /// <summary>
     /// Valuation Dealing Characteristics.

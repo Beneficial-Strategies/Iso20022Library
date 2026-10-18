@@ -40,7 +40,7 @@ public record Meeting2
     [DisplayName("Quorum Required")]
     [IsoXmlTag("QrmReqrd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator QuorumRequired { get; init; }
+    public required YesNoIndicator QuorumRequired { get; init; }
 
     /// <summary>
     /// Specifies location where meeting will take place.
@@ -60,7 +60,7 @@ public record Meeting2
     [IsoXmlTag("QrmQty")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? QuorumQuantity { get; init; }
+    public Max35Text? QuorumQuantity { get; init; }
 
     /// <summary>
     /// Minimum quantity of securities, expressed as a percentage, required to hold a meeting.
@@ -69,5 +69,5 @@ public record Meeting2
     [DisplayName("Quorum Quantity Percentage")]
     [IsoXmlTag("QrmQtyPctg")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? QuorumQuantityPercentage { get; init; }
+    public PercentageRate? QuorumQuantityPercentage { get; init; }
 }

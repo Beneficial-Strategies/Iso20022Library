@@ -23,7 +23,7 @@ public record MarketIdentification92
     [DisplayName("Operating")]
     [IsoXmlTag("Oprg")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public required IsoMICIdentifier Operating { get; init; }
+    public required MICIdentifier Operating { get; init; }
 
     /// <summary>
     /// Segment MIC of the venue where it exists, otherwise the Operating MIC.
@@ -32,7 +32,7 @@ public record MarketIdentification92
     [DisplayName("Segment")]
     [IsoXmlTag("Sgmt")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public required IsoMICIdentifier Segment { get; init; }
+    public required MICIdentifier Segment { get; init; }
 
     /// <summary>
     /// Define the type of Market Identification Code that is being supplied.
@@ -58,7 +58,7 @@ public record MarketIdentification92
     [IsoXmlTag("InstnNm")]
     [IsoSimpleType(IsoSimpleType.Max450Text)]
     [StringLength(maximumLength: 450, MinimumLength = 1)]
-    public required IsoMax450Text InstitutionName { get; init; }
+    public required Max450Text InstitutionName { get; init; }
 
     /// <summary>
     /// Known acronym of the institution, market, or infrastructure.
@@ -68,7 +68,7 @@ public record MarketIdentification92
     [IsoXmlTag("Acrnm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Acronym { get; init; }
+    public Max35Text? Acronym { get; init; }
 
     /// <summary>
     /// City where the institution, market, or infrastructure operates.
@@ -78,7 +78,7 @@ public record MarketIdentification92
     [IsoXmlTag("City")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? City { get; init; }
+    public Max35Text? City { get; init; }
 
     /// <summary>
     /// Two character country code and country name as per ISO 3166.
@@ -96,7 +96,7 @@ public record MarketIdentification92
     [IsoXmlTag("AuthrtyNm")]
     [IsoSimpleType(IsoSimpleType.Max450Text)]
     [StringLength(maximumLength: 450, MinimumLength = 1)]
-    public IsoMax450Text? AuthorityName { get; init; }
+    public Max450Text? AuthorityName { get; init; }
 
     /// <summary>
     /// Website URI of the institution, market, or infrastructure.
@@ -106,7 +106,7 @@ public record MarketIdentification92
     [IsoXmlTag("WebSite")]
     [IsoSimpleType(IsoSimpleType.Max210Text)]
     [StringLength(maximumLength: 210, MinimumLength = 1)]
-    public IsoMax210Text? WebSite { get; init; }
+    public Max210Text? WebSite { get; init; }
 
     /// <summary>
     /// Details additional information about the market operator.
@@ -116,7 +116,7 @@ public record MarketIdentification92
     [IsoXmlTag("Note")]
     [IsoSimpleType(IsoSimpleType.Max450Text)]
     [StringLength(maximumLength: 450, MinimumLength = 1)]
-    public IsoMax450Text? Note { get; init; }
+    public Max450Text? Note { get; init; }
 
     /// <summary>
     /// Additional information to help users identify the exchange or understand a modification.
@@ -133,7 +133,7 @@ public record MarketIdentification92
     [DisplayName("Creation Date")]
     [IsoXmlTag("CreDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? CreationDate { get; init; }
+    public DateOnly? CreationDate { get; init; }
 
     /// <summary>
     /// Details the validity of the specific record.
@@ -150,7 +150,7 @@ public record MarketIdentification92
     [DisplayName("Status Date")]
     [IsoXmlTag("StsDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? StatusDate { get; init; }
+    public DateOnly? StatusDate { get; init; }
 
     /// <summary>
     /// Date when this record was last modified.
@@ -159,5 +159,5 @@ public record MarketIdentification92
     [DisplayName("Last Updated Date")]
     [IsoXmlTag("LastUpdtdDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? LastUpdatedDate { get; init; }
+    public ISODateTime? LastUpdatedDate { get; init; }
 }

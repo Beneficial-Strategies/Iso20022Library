@@ -24,7 +24,7 @@ public record MeetingReference2
     [IsoXmlTag("MtgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text MeetingIdentification { get; init; }
+    public required Max35Text MeetingIdentification { get; init; }
 
     /// <summary>
     /// Identification assigned to a meeting by the issuer. It must be unique for the issuer.
@@ -34,7 +34,7 @@ public record MeetingReference2
     [IsoXmlTag("IssrMtgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? IssuerMeetingIdentification { get; init; }
+    public Max35Text? IssuerMeetingIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the meeting will take place.
@@ -43,7 +43,7 @@ public record MeetingReference2
     [DisplayName("Meeting Date And Time")]
     [IsoXmlTag("MtgDtAndTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? MeetingDateAndTime { get; init; }
+    public ISODateTime? MeetingDateAndTime { get; init; }
 
     /// <summary>
     /// Specifies the type of meeting for which instructions are sent.
@@ -69,7 +69,7 @@ public record MeetingReference2
     [IsoXmlTag("XtndedClssfctn")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedClassification { get; init; }
+    public Extended350Code? ExtendedClassification { get; init; }
 
     /// <summary>
     /// Place of the company meeting for the scheduled meeting date.

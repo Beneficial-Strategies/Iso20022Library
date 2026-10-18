@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustification2Choic
         /// </summary>
         [IsoXmlTag("AnyInf")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public required IsoYesNoIndicator Value { get; init; }
+        public required YesNoIndicator Value { get; init; }
     }
 }

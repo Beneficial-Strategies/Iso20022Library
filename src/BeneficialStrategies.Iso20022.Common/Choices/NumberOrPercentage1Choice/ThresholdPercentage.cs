@@ -21,6 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices.NumberOrPercentage1Choice
         /// </summary>
         [IsoXmlTag("ThrshldPctg")]
         [IsoSimpleType(IsoSimpleType.PercentageRate)]
-        public required IsoPercentageRate Value { get; init; }
+        public required PercentageRate Value { get; init; }
     }
 }

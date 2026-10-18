@@ -28,7 +28,7 @@ public record ClearingControlTotals3
     /// </summary>
     [DisplayName("Count")]
     [IsoXmlTag("Cnt")]
-    public required IsoNumber Count { get; init; }
+    public required Number Count { get; init; }
 
     /// <summary>
     /// Credit Debit.

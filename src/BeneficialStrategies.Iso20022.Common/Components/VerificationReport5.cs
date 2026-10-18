@@ -21,7 +21,7 @@ public record VerificationReport5
     /// </summary>
     [DisplayName("Original Identification")]
     [IsoXmlTag("OrgnlId")]
-    public required IsoMax35Text OriginalIdentification { get; init; }
+    public required Max35Text OriginalIdentification { get; init; }
 
     /// <summary>
     /// Original Party And Account Identification.
@@ -49,5 +49,5 @@ public record VerificationReport5
     /// </summary>
     [DisplayName("Verification")]
     [IsoXmlTag("Vrfctn")]
-    public required IsoIdentificationVerificationIndicator Verification { get; init; }
+    public required IdentificationVerificationIndicator Verification { get; init; }
 }

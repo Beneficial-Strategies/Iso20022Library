@@ -28,12 +28,12 @@ public record ManagementPlanContent13
     /// </summary>
     [DisplayName("Key Encipherment Certificate")]
     [IsoXmlTag("KeyNcphrmntCert")]
-    public ValueList<IsoMax10KBinary> KeyEnciphermentCertificate { get; init; } = [];
+    public ValueList<Max10KBinary> KeyEnciphermentCertificate { get; init; } = [];
 
     /// <summary>
     /// TM Challenge.
     /// </summary>
     [DisplayName("TM Challenge")]
     [IsoXmlTag("TMChllng")]
-    public IsoMax140Binary? TMChallenge { get; init; }
+    public Max140Binary? TMChallenge { get; init; }
 }

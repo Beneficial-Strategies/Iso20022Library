@@ -42,14 +42,14 @@ public record AncillaryPurchase3
     /// </summary>
     [DisplayName("Credit Reason Code")]
     [IsoXmlTag("CdtRsnCd")]
-    public IsoMax35Text? CreditReasonCode { get; init; }
+    public Max35Text? CreditReasonCode { get; init; }
 
     /// <summary>
     /// Document Number.
     /// </summary>
     [DisplayName("Document Number")]
     [IsoXmlTag("DocNb")]
-    public IsoMax15Text? DocumentNumber { get; init; }
+    public Max15Text? DocumentNumber { get; init; }
 
     /// <summary>
     /// Fee.
@@ -63,35 +63,35 @@ public record AncillaryPurchase3
     /// </summary>
     [DisplayName("Related Document Number")]
     [IsoXmlTag("RltdDocNb")]
-    public IsoMax15Text? RelatedDocumentNumber { get; init; }
+    public Max15Text? RelatedDocumentNumber { get; init; }
 
     /// <summary>
     /// Service Category Code.
     /// </summary>
     [DisplayName("Service Category Code")]
     [IsoXmlTag("SvcCtgyCd")]
-    public IsoMax4Text? ServiceCategoryCode { get; init; }
+    public Max4Text? ServiceCategoryCode { get; init; }
 
     /// <summary>
     /// Service Provider Service Type.
     /// </summary>
     [DisplayName("Service Provider Service Type")]
     [IsoXmlTag("SvcPrvdrSvcTp")]
-    public IsoMax35Text? ServiceProviderServiceType { get; init; }
+    public Max35Text? ServiceProviderServiceType { get; init; }
 
     /// <summary>
     /// Service Sub Category Code.
     /// </summary>
     [DisplayName("Service Sub Category Code")]
     [IsoXmlTag("SvcSubCtgyCd")]
-    public IsoMax4Text? ServiceSubCategoryCode { get; init; }
+    public Max4Text? ServiceSubCategoryCode { get; init; }
 
     /// <summary>
     /// Summary Commodity Identification.
     /// </summary>
     [DisplayName("Summary Commodity Identification")]
     [IsoXmlTag("SummryCmmdtyId")]
-    public IsoMax35Text? SummaryCommodityIdentification { get; init; }
+    public Max35Text? SummaryCommodityIdentification { get; init; }
 
     /// <summary>
     /// Tax.

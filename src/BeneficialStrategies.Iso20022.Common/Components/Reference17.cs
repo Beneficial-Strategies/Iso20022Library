@@ -24,7 +24,7 @@ public record Reference17
     [IsoXmlTag("CollSbstitnReqId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text CollateralSubstitutionRequestIdentification { get; init; }
+    public required Max35Text CollateralSubstitutionRequestIdentification { get; init; }
 
     /// <summary>
     /// Identification of the collateral substitution response.
@@ -34,5 +34,5 @@ public record Reference17
     [IsoXmlTag("CollSbstitnRspnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CollateralSubstitutionResponseIdentification { get; init; }
+    public Max35Text? CollateralSubstitutionResponseIdentification { get; init; }
 }

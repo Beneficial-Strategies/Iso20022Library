@@ -23,6 +23,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Status31Choice
         [IsoXmlTag("Rsn")]
         [IsoSimpleType(IsoSimpleType.Max350Text)]
         [StringLength(maximumLength: 350, MinimumLength = 1)]
-        public IsoMax350Text? Reason { get; init; }
+        public Max350Text? Reason { get; init; }
     }
 }

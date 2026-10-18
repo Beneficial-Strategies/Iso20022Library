@@ -78,7 +78,7 @@ public record AggregateBalanceInformation45
     /// </summary>
     [DisplayName("Days Accrued")]
     [IsoXmlTag("DaysAcrd")]
-    public IsoNumber? DaysAccrued { get; init; }
+    public Number? DaysAccrued { get; init; }
 
     /// <summary>
     /// Financial Instrument Attributes.
@@ -106,7 +106,7 @@ public record AggregateBalanceInformation45
     /// </summary>
     [DisplayName("Holding Additional Details")]
     [IsoXmlTag("HldgAddtlDtls")]
-    public IsoMax350Text? HoldingAdditionalDetails { get; init; }
+    public Max350Text? HoldingAdditionalDetails { get; init; }
 
     /// <summary>
     /// Instrument Currency Amounts.

@@ -32,7 +32,7 @@ public record Incoterms2
     [IsoXmlTag("Othr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Other { get; init; }
+    public required Max35Text Other { get; init; }
 
     /// <summary>
     /// Location where the Incoterms are actioned.
@@ -42,5 +42,5 @@ public record Incoterms2
     [IsoXmlTag("Lctn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Location { get; init; }
+    public required Max35Text Location { get; init; }
 }

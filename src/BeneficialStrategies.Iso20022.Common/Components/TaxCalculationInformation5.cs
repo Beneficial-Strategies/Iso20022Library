@@ -32,5 +32,5 @@ public record TaxCalculationInformation5
     [IsoXmlTag("XtndedBsis")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoExtended350Code? ExtendedBasis { get; init; }
+    public Extended350Code? ExtendedBasis { get; init; }
 }

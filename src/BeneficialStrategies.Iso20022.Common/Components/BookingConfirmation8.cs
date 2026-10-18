@@ -38,7 +38,7 @@ public record BookingConfirmation8
     [IsoId("5507004d-f02e-484d-9ae0-2c5dd708c5bf")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
-    public IsoBaseOneRate? ExchangeRate { get; init; }
+    public BaseOneRate? ExchangeRate { get; init; }
 
     /// <summary>
     /// Account that the transaction or entry has debited or credited.
@@ -86,5 +86,5 @@ public record BookingConfirmation8
     [IsoId("d631e63f-de44-464c-9639-341a4fae7b89")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public IsoMax140Text? Reason { get; init; }
+    public Max140Text? Reason { get; init; }
 }

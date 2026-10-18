@@ -23,7 +23,7 @@ public record Security49
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public IsoISINOct2015Identifier? Identification { get; init; }
+    public ISINOct2015Identifier? Identification { get; init; }
 
     /// <summary>
     /// Classification type of the financial instrument, as per the ISO Classification of Financial Instrument (CFI) codification, that is common share with voting rights, fully paid, or registered.
@@ -32,7 +32,7 @@ public record Security49
     [DisplayName("Classification Type")]
     [IsoXmlTag("ClssfctnTp")]
     [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
-    public IsoCFIOct2015Identifier? ClassificationType { get; init; }
+    public CFIOct2015Identifier? ClassificationType { get; init; }
 
     /// <summary>
     /// Quantity or nominal amount of the security or commodity subject of the transaction.
@@ -73,7 +73,7 @@ public record Security49
     [DisplayName("Maturity")]
     [IsoXmlTag("Mtrty")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? Maturity { get; init; }
+    public DateOnly? Maturity { get; init; }
 
     /// <summary>
     /// Data on the securities issuer.
@@ -98,5 +98,5 @@ public record Security49
     [DisplayName("Exclusive Arrangement")]
     [IsoXmlTag("ExclsvArrgmnt")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ExclusiveArrangement { get; init; }
+    public TrueFalseIndicator? ExclusiveArrangement { get; init; }
 }

@@ -24,7 +24,7 @@ public record LoyaltyAccount2
     [IsoXmlTag("LltyId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? LoyaltyIdentification { get; init; }
+    public Max35Text? LoyaltyIdentification { get; init; }
 
     /// <summary>
     /// Standard or last entry mode to access the Loyalty account or card.
@@ -50,7 +50,7 @@ public record LoyaltyAccount2
     [IsoXmlTag("Brnd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Brand { get; init; }
+    public Max35Text? Brand { get; init; }
 
     /// <summary>
     /// Provider of the Loyalty Account.
@@ -60,7 +60,7 @@ public record LoyaltyAccount2
     [IsoXmlTag("Prvdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Provider { get; init; }
+    public Max35Text? Provider { get; init; }
 
     /// <summary>
     /// Owner name of an account.
@@ -70,7 +70,7 @@ public record LoyaltyAccount2
     [IsoXmlTag("OwnrNm")]
     [IsoSimpleType(IsoSimpleType.Max45Text)]
     [StringLength(maximumLength: 45, MinimumLength = 1)]
-    public IsoMax45Text? OwnerName { get; init; }
+    public Max45Text? OwnerName { get; init; }
 
     /// <summary>
     /// Unit of a Loyalty Account (Point or Currency).

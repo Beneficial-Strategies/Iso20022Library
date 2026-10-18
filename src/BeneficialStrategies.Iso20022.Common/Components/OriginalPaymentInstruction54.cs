@@ -22,7 +22,7 @@ public record OriginalPaymentInstruction54
     [IsoId("fa857e2d-2534-4dd9-aedb-e7b89532d547")]
     [DisplayName("Original Payment Information Cancellation Identification")]
     [IsoXmlTag("OrgnlPmtInfCxlId")]
-    public IsoMax35Text? OriginalPaymentInformationCancellationIdentification { get; init; }
+    public Max35Text? OriginalPaymentInformationCancellationIdentification { get; init; }
 
     /// <summary>
     /// Identifies the resolved case.
@@ -38,7 +38,7 @@ public record OriginalPaymentInstruction54
     [IsoId("811d115c-8d3a-493c-9839-dca205dac843")]
     [DisplayName("Original Payment Information Identification")]
     [IsoXmlTag("OrgnlPmtInfId")]
-    public required IsoMax35Text OriginalPaymentInformationIdentification { get; init; }
+    public required Max35Text OriginalPaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Provides information on the original message.
@@ -54,7 +54,7 @@ public record OriginalPaymentInstruction54
     [IsoId("5a4011b4-f0e4-471b-9854-91c2bb68c6db")]
     [DisplayName("Original Number Of Transactions")]
     [IsoXmlTag("OrgnlNbOfTxs")]
-    public IsoMax15NumericText? OriginalNumberOfTransactions { get; init; }
+    public Max15NumericText? OriginalNumberOfTransactions { get; init; }
 
     /// <summary>
     /// Total of all individual amounts included in the original payment information group, irrespective of currencies.
@@ -62,7 +62,7 @@ public record OriginalPaymentInstruction54
     [IsoId("85c2e206-5a00-4ecf-af6d-c6602fdd4152")]
     [DisplayName("Original Control Sum")]
     [IsoXmlTag("OrgnlCtrlSum")]
-    public IsoDecimalNumber? OriginalControlSum { get; init; }
+    public DecimalNumber? OriginalControlSum { get; init; }
 
     /// <summary>
     /// Specifies the status of a cancellation request, related to a payment information group.

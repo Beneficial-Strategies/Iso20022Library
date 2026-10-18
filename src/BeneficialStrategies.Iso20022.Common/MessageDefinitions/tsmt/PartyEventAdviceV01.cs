@@ -75,7 +75,7 @@ public record PartyEventAdviceV01 : IOuterRecord
     [DisplayName("Event Count")]
     [IsoXmlTag("EvtCnt")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public IsoMax15NumericText? EventCount { get; init; }
+    public Max15NumericText? EventCount { get; init; }
 
     /// <summary>
     /// Referenced or related business message.

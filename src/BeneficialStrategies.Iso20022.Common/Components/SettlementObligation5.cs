@@ -24,7 +24,7 @@ public record SettlementObligation5
     [IsoXmlTag("RltdSttlmOblgtnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RelatedSettlementObligationIdentification { get; init; }
+    public Max35Text? RelatedSettlementObligationIdentification { get; init; }
 
     /// <summary>
     /// Indicates the type of the obligation.
@@ -42,7 +42,7 @@ public record SettlementObligation5
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Description { get; init; }
+    public Max35Text? Description { get; init; }
 
     /// <summary>
     /// Provides the original trade date.
@@ -51,7 +51,7 @@ public record SettlementObligation5
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TradeDate { get; init; }
+    public DateOnly? TradeDate { get; init; }
 
     /// <summary>
     /// Specifies the quantity related to the settlement obligation.
@@ -92,7 +92,7 @@ public record SettlementObligation5
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate SettlementDate { get; init; }
+    public required DateOnly SettlementDate { get; init; }
 
     /// <summary>
     /// Indicates if the obligation will result in a receive or a delivery of securities.

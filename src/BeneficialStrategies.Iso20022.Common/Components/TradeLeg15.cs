@@ -38,7 +38,7 @@ public record TradeLeg15
     [IsoId("_2r9udao2EfCG2_q2WT-90w")]
     [DisplayName("Trade Leg Identification")]
     [IsoXmlTag("TradLegId")]
-    public required IsoMax35Text TradeLegIdentification { get; init; }
+    public required Max35Text TradeLegIdentification { get; init; }
 
     /// <summary>
     /// Reference assigned to the trade by the investor or the trading party. This reference will be used throughout the trade life cycle to access/update the trade details.
@@ -46,7 +46,7 @@ public record TradeLeg15
     [IsoId("_2r9ue6o2EfCG2_q2WT-90w")]
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
-    public IsoMax35Text? TradeIdentification { get; init; }
+    public Max35Text? TradeIdentification { get; init; }
 
     /// <summary>
     /// Unique reference assigned by the trading venue when the trade is executed.
@@ -54,7 +54,7 @@ public record TradeLeg15
     [IsoId("_2r9ugao2EfCG2_q2WT-90w")]
     [DisplayName("Trade Execution Identification")]
     [IsoXmlTag("TradExctnId")]
-    public IsoMax35Text? TradeExecutionIdentification { get; init; }
+    public Max35Text? TradeExecutionIdentification { get; init; }
 
     /// <summary>
     /// Unique Transaction Identifier (UTI) as agreed with the other counterparty.
@@ -62,7 +62,7 @@ public record TradeLeg15
     [IsoId("_2r9uh6o2EfCG2_q2WT-90w")]
     [DisplayName("Unique Transaction Identifier")]
     [IsoXmlTag("UnqTxIdr")]
-    public IsoUTIIdentifier? UniqueTransactionIdentifier { get; init; }
+    public UTIIdentifier? UniqueTransactionIdentifier { get; init; }
 
     /// <summary>
     /// Identifies the order sent by the final investor to an intermediary in order to initiate a trade in the former's name. This identification is then matched with the equivalent trade by the clearing.
@@ -70,7 +70,7 @@ public record TradeLeg15
     [IsoId("_2r9uiao2EfCG2_q2WT-90w")]
     [DisplayName("Order Identification")]
     [IsoXmlTag("OrdrId")]
-    public IsoMax35Text? OrderIdentification { get; init; }
+    public Max35Text? OrderIdentification { get; init; }
 
     /// <summary>
     /// Identifies the portion of assets within a determined trade that shall be allocated to different clients.
@@ -78,7 +78,7 @@ public record TradeLeg15
     [IsoId("_2r9uj6o2EfCG2_q2WT-90w")]
     [DisplayName("Allocation Identification")]
     [IsoXmlTag("AllcnId")]
-    public IsoMax35Text? AllocationIdentification { get; init; }
+    public Max35Text? AllocationIdentification { get; init; }
 
     /// <summary>
     /// Provides details about the non clearing member identification and account.
@@ -102,7 +102,7 @@ public record TradeLeg15
     [IsoId("_2r9uoao2EfCG2_q2WT-90w")]
     [DisplayName("Transaction Date And Time")]
     [IsoXmlTag("TxDtAndTm")]
-    public IsoISODateTime? TransactionDateAndTime { get; init; }
+    public ISODateTime? TransactionDateAndTime { get; init; }
 
     /// <summary>
     /// Provides the contractual settlement date.
@@ -198,7 +198,7 @@ public record TradeLeg15
     [IsoId("_2r9u46o2EfCG2_q2WT-90w")]
     [DisplayName("Derivative Related Trade")]
     [IsoXmlTag("DerivRltdTrad")]
-    public IsoYesNoIndicator? DerivativeRelatedTrade { get; init; }
+    public YesNoIndicator? DerivativeRelatedTrade { get; init; }
 
     /// <summary>
     /// Party that identifies a broker when required (for example, authorised broker or prime broker).
@@ -222,7 +222,7 @@ public record TradeLeg15
     [IsoId("_2r9u9ao2EfCG2_q2WT-90w")]
     [DisplayName("Trade Registration Origin")]
     [IsoXmlTag("TradRegnOrgn")]
-    public IsoMax35Text? TradeRegistrationOrigin { get; init; }
+    public Max35Text? TradeRegistrationOrigin { get; init; }
 
     /// <summary>
     /// Identifier of the trading participant's account at the trading venue using the venue's coding system.

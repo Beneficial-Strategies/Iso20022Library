@@ -23,7 +23,7 @@ public record Warrant4
     [DisplayName("Multiplier")]
     [IsoXmlTag("Mltplr")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? Multiplier { get; init; }
+    public BaseOneRate? Multiplier { get; init; }
 
     /// <summary>
     /// Pre-determined price at which the holder of a warrant is entitled to buy the underlying instrument.

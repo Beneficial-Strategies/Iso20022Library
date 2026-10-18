@@ -28,5 +28,5 @@ public record SettlementAgent2
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoLEIIdentifier Identification { get; init; }
+    public required LEIIdentifier Identification { get; init; }
 }

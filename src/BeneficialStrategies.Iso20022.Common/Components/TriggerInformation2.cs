@@ -32,7 +32,7 @@ public record TriggerInformation2
     [IsoXmlTag("SrcId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text SourceIdentification { get; init; }
+    public required Max35Text SourceIdentification { get; init; }
 
     /// <summary>
     /// Identification of the type of the call.
@@ -50,5 +50,5 @@ public record TriggerInformation2
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AdditionalInformation { get; init; }
+    public Max70Text? AdditionalInformation { get; init; }
 }

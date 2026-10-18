@@ -21,7 +21,7 @@ public record PaymentInstruction43
     /// </summary>
     [DisplayName("Batch Booking")]
     [IsoXmlTag("BtchBookg")]
-    public IsoBatchBookingIndicator? BatchBooking { get; init; }
+    public BatchBookingIndicator? BatchBooking { get; init; }
 
     /// <summary>
     /// Charge Bearer.
@@ -49,7 +49,7 @@ public record PaymentInstruction43
     /// </summary>
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
-    public IsoDecimalNumber? ControlSum { get; init; }
+    public DecimalNumber? ControlSum { get; init; }
 
     /// <summary>
     /// Credit Transfer Transaction Information.
@@ -92,21 +92,21 @@ public record PaymentInstruction43
     /// </summary>
     [DisplayName("Instruction For Debtor Agent")]
     [IsoXmlTag("InstrForDbtrAgt")]
-    public IsoMax140Text? InstructionForDebtorAgent { get; init; }
+    public Max140Text? InstructionForDebtorAgent { get; init; }
 
     /// <summary>
     /// Number Of Transactions.
     /// </summary>
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
-    public IsoMax15NumericText? NumberOfTransactions { get; init; }
+    public Max15NumericText? NumberOfTransactions { get; init; }
 
     /// <summary>
     /// Payment Information Identification.
     /// </summary>
     [DisplayName("Payment Information Identification")]
     [IsoXmlTag("PmtInfId")]
-    public required IsoMax35Text PaymentInformationIdentification { get; init; }
+    public required Max35Text PaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Payment Method.
@@ -127,14 +127,14 @@ public record PaymentInstruction43
     /// </summary>
     [DisplayName("Pooling Adjustment Date")]
     [IsoXmlTag("PoolgAdjstmntDt")]
-    public IsoISODate? PoolingAdjustmentDate { get; init; }
+    public DateOnly? PoolingAdjustmentDate { get; init; }
 
     /// <summary>
     /// Requested Execution Date.
     /// </summary>
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
-    public required IsoISODate RequestedExecutionDate { get; init; }
+    public required DateOnly RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Ultimate Debtor.

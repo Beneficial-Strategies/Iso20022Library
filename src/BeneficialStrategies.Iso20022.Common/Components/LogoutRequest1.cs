@@ -23,5 +23,5 @@ public record LogoutRequest1
     [DisplayName("Maintenance Allowed")]
     [IsoXmlTag("MntncAllwd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? MaintenanceAllowed { get; init; }
+    public TrueFalseIndicator? MaintenanceAllowed { get; init; }
 }

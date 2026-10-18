@@ -24,7 +24,7 @@ public record DataSetIdentification2
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Name { get; init; }
+    public Max256Text? Name { get; init; }
 
     /// <summary>
     /// Category of data set.
@@ -42,7 +42,7 @@ public record DataSetIdentification2
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? Version { get; init; }
+    public Max256Text? Version { get; init; }
 
     /// <summary>
     /// Date and time of creation of the data set.
@@ -51,5 +51,5 @@ public record DataSetIdentification2
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? CreationDateTime { get; init; }
+    public ISODateTime? CreationDateTime { get; init; }
 }

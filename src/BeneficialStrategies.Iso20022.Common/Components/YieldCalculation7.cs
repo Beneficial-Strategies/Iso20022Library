@@ -23,7 +23,7 @@ public record YieldCalculation7
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate Value { get; init; }
+    public required PercentageRate Value { get; init; }
 
     /// <summary>
     /// Specifies the type of calculation.
@@ -48,7 +48,7 @@ public record YieldCalculation7
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ValueDate { get; init; }
+    public DateOnly? ValueDate { get; init; }
 
     /// <summary>
     /// Period on which the calculation is based.
@@ -65,5 +65,5 @@ public record YieldCalculation7
     [DisplayName("Calculation Date")]
     [IsoXmlTag("ClctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? CalculationDate { get; init; }
+    public DateOnly? CalculationDate { get; init; }
 }

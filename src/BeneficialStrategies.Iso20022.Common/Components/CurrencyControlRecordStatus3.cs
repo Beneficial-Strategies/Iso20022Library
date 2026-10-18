@@ -28,7 +28,7 @@ public record CurrencyControlRecordStatus3
     /// </summary>
     [DisplayName("Record Identification")]
     [IsoXmlTag("RcrdId")]
-    public required IsoMax35Text RecordIdentification { get; init; }
+    public required Max35Text RecordIdentification { get; init; }
 
     /// <summary>
     /// Status.
@@ -42,7 +42,7 @@ public record CurrencyControlRecordStatus3
     /// </summary>
     [DisplayName("Status Date Time")]
     [IsoXmlTag("StsDtTm")]
-    public IsoISODateTime? StatusDateTime { get; init; }
+    public ISODateTime? StatusDateTime { get; init; }
 
     /// <summary>
     /// Status Reason.

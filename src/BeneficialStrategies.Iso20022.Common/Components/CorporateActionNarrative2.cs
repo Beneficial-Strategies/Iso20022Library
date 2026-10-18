@@ -24,7 +24,7 @@ public record CorporateActionNarrative2
     [IsoXmlTag("InfConds")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? InformationConditions { get; init; }
+    public Max350Text? InformationConditions { get; init; }
 
     /// <summary>
     /// Provides information conditions to the account owner that are to be complied with, eg, not open to US/Canadian residents, QIB or SIL to be provided.
@@ -34,7 +34,7 @@ public record CorporateActionNarrative2
     [IsoXmlTag("InfToCmplyWth")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? InformationToComplyWith { get; init; }
+    public Max350Text? InformationToComplyWith { get; init; }
 
     /// <summary>
     /// Provides taxation conditions that cannot be included within the structured fields of this message and has not been mentioned in the SLA.
@@ -44,7 +44,7 @@ public record CorporateActionNarrative2
     [IsoXmlTag("TaxtnConds")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? TaxationConditions { get; init; }
+    public Max350Text? TaxationConditions { get; init; }
 
     /// <summary>
     /// Provides declaration details narrative relative to the financial instrument, eg, beneficial ownership.
@@ -54,7 +54,7 @@ public record CorporateActionNarrative2
     [IsoXmlTag("DclrtnDtls")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? DeclarationDetails { get; init; }
+    public Max350Text? DeclarationDetails { get; init; }
 
     /// <summary>
     /// Provides information required for the registration.
@@ -64,7 +64,7 @@ public record CorporateActionNarrative2
     [IsoXmlTag("RegnDtls")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? RegistrationDetails { get; init; }
+    public Max350Text? RegistrationDetails { get; init; }
 
     /// <summary>
     /// Provides additional information or specifies in more detail the content of a message.
@@ -74,5 +74,5 @@ public record CorporateActionNarrative2
     [IsoXmlTag("AddtlTxt")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public IsoMax350Text? AdditionalText { get; init; }
+    public Max350Text? AdditionalText { get; init; }
 }

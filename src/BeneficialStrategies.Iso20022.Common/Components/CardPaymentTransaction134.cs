@@ -42,70 +42,70 @@ public record CardPaymentTransaction134
     /// </summary>
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
-    public ValueList<IsoMax70Text> AdditionalTransactionData { get; init; } = [];
+    public ValueList<Max70Text> AdditionalTransactionData { get; init; } = [];
 
     /// <summary>
     /// Card Programme Applied.
     /// </summary>
     [DisplayName("Card Programme Applied")]
     [IsoXmlTag("CardPrgrmmApld")]
-    public IsoMax35Text? CardProgrammeApplied { get; init; }
+    public Max35Text? CardProgrammeApplied { get; init; }
 
     /// <summary>
     /// Card Programme Proposed.
     /// </summary>
     [DisplayName("Card Programme Proposed")]
     [IsoXmlTag("CardPrgrmmPropsd")]
-    public ValueList<IsoMax35Text> CardProgrammeProposed { get; init; } = [];
+    public ValueList<Max35Text> CardProgrammeProposed { get; init; } = [];
 
     /// <summary>
     /// Customer Consent.
     /// </summary>
     [DisplayName("Customer Consent")]
     [IsoXmlTag("CstmrCnsnt")]
-    public IsoTrueFalseIndicator? CustomerConsent { get; init; }
+    public TrueFalseIndicator? CustomerConsent { get; init; }
 
     /// <summary>
     /// Initiator Transaction Identification.
     /// </summary>
     [DisplayName("Initiator Transaction Identification")]
     [IsoXmlTag("InitrTxId")]
-    public IsoMax35Text? InitiatorTransactionIdentification { get; init; }
+    public Max35Text? InitiatorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Issuer CIT Identification.
     /// </summary>
     [DisplayName("Issuer CIT Identification")]
     [IsoXmlTag("IssrCITId")]
-    public IsoMax140Text? IssuerCITIdentification { get; init; }
+    public Max140Text? IssuerCITIdentification { get; init; }
 
     /// <summary>
     /// Last Transaction Flag.
     /// </summary>
     [DisplayName("Last Transaction Flag")]
     [IsoXmlTag("LastTxFlg")]
-    public IsoTrueFalseIndicator? LastTransactionFlag { get; init; }
+    public TrueFalseIndicator? LastTransactionFlag { get; init; }
 
     /// <summary>
     /// Merchant Category Code.
     /// </summary>
     [DisplayName("Merchant Category Code")]
     [IsoXmlTag("MrchntCtgyCd")]
-    public IsoMin3Max4Text? MerchantCategoryCode { get; init; }
+    public Min3Max4Text? MerchantCategoryCode { get; init; }
 
     /// <summary>
     /// Merchant CIT Identification.
     /// </summary>
     [DisplayName("Merchant CIT Identification")]
     [IsoXmlTag("MrchntCITId")]
-    public IsoMax140Text? MerchantCITIdentification { get; init; }
+    public Max140Text? MerchantCITIdentification { get; init; }
 
     /// <summary>
     /// Merchant Reference Data.
     /// </summary>
     [DisplayName("Merchant Reference Data")]
     [IsoXmlTag("MrchntRefData")]
-    public IsoMax70Text? MerchantReferenceData { get; init; }
+    public Max70Text? MerchantReferenceData { get; init; }
 
     /// <summary>
     /// Original Transaction.
@@ -119,14 +119,14 @@ public record CardPaymentTransaction134
     /// </summary>
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
-    public IsoMax35Text? ReconciliationIdentification { get; init; }
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Sale Reference Identification.
     /// </summary>
     [DisplayName("Sale Reference Identification")]
     [IsoXmlTag("SaleRefId")]
-    public IsoMax35Text? SaleReferenceIdentification { get; init; }
+    public Max35Text? SaleReferenceIdentification { get; init; }
 
     /// <summary>
     /// Service Attribute.
@@ -140,7 +140,7 @@ public record CardPaymentTransaction134
     /// </summary>
     [DisplayName("Transaction Capture")]
     [IsoXmlTag("TxCaptr")]
-    public required IsoTrueFalseIndicator TransactionCapture { get; init; }
+    public required TrueFalseIndicator TransactionCapture { get; init; }
 
     /// <summary>
     /// Transaction Details.

@@ -31,7 +31,7 @@ public record BlockedHoldingDetails2
     [DisplayName("Partial Holding Units")]
     [IsoXmlTag("PrtlHldgUnits")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? PartialHoldingUnits { get; init; }
+    public DecimalNumber? PartialHoldingUnits { get; init; }
 
     /// <summary>
     /// When an account is blocked at the level of fund or security, this specifies the certificate number of the blocked units.
@@ -41,5 +41,5 @@ public record BlockedHoldingDetails2
     [IsoXmlTag("HldgCertNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? HoldingCertificateNumber { get; init; }
+    public Max35Text? HoldingCertificateNumber { get; init; }
 }

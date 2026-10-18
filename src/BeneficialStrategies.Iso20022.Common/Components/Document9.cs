@@ -32,7 +32,7 @@ public record Document9
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; }
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Format of the document or template, such as PDF, XML, XSLT.
@@ -49,7 +49,7 @@ public record Document9
     [DisplayName("Enclosure")]
     [IsoXmlTag("Nclsr")]
     [IsoSimpleType(IsoSimpleType.Max2MBBinary)]
-    public required IsoMax2MBBinary Enclosure { get; init; }
+    public required Max2MBBinary Enclosure { get; init; }
 
     /// <summary>
     /// Digital signature of the enclosed binary file.

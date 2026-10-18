@@ -32,7 +32,7 @@ public record OtherCollateralResponse3
     [IsoXmlTag("CollId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? CollateralIdentification { get; init; }
+    public Max35Text? CollateralIdentification { get; init; }
 
     /// <summary>
     /// Identifies the register number of the collateral deposit assigned by the central counterparty.
@@ -42,7 +42,7 @@ public record OtherCollateralResponse3
     [IsoXmlTag("AsstNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? AssetNumber { get; init; }
+    public Max35Text? AssetNumber { get; init; }
 
     /// <summary>
     /// Specifies the reason why the instruction/cancellation request has a rejected status.
@@ -60,5 +60,5 @@ public record OtherCollateralResponse3
     [IsoXmlTag("RjctnInf")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RejectionInformation { get; init; }
+    public Max35Text? RejectionInformation { get; init; }
 }

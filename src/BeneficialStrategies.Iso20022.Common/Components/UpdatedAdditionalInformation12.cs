@@ -32,7 +32,7 @@ public record UpdatedAdditionalInformation12
     [IsoXmlTag("UpdDesc")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140, MinimumLength = 1)]
-    public IsoMax140Text? UpdateDescription { get; init; }
+    public Max140Text? UpdateDescription { get; init; }
 
     /// <summary>
     /// Specifies the date at which the narrative has been updated.
@@ -41,7 +41,7 @@ public record UpdatedAdditionalInformation12
     [DisplayName("Update Date")]
     [IsoXmlTag("UpdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? UpdateDate { get; init; }
+    public DateOnly? UpdateDate { get; init; }
 
     /// <summary>
     /// Provides additional textual information.
@@ -51,5 +51,5 @@ public record UpdatedAdditionalInformation12
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350, MinimumLength = 1)]
-    public required IsoMax350Text AdditionalInformation { get; init; }
+    public required Max350Text AdditionalInformation { get; init; }
 }

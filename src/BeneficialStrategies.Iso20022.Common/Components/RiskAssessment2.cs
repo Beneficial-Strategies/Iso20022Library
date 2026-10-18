@@ -32,7 +32,7 @@ public record RiskAssessment2
     [IsoXmlTag("RskAssmntTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? RiskAssessmentType { get; init; }
+    public Max35Text? RiskAssessmentType { get; init; }
 
     /// <summary>
     /// Transaction is identified as high risk.
@@ -41,7 +41,7 @@ public record RiskAssessment2
     [DisplayName("High Risk Transaction")]
     [IsoXmlTag("HghRskTx")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? HighRiskTransaction { get; init; }
+    public TrueFalseIndicator? HighRiskTransaction { get; init; }
 
     /// <summary>
     /// Reason for indicating a certain level of risk for the transaction.
@@ -49,7 +49,7 @@ public record RiskAssessment2
     [IsoId("_hm9rRcSsEeuBjv5G5kw00g")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public SimpleValueList<IsoMax35Text> Reason { get; init; } = [];
+    public SimpleValueList<Max35Text> Reason { get; init; } = [];
 
     /// <summary>
     /// Risk assessment result.
@@ -59,7 +59,7 @@ public record RiskAssessment2
     [IsoXmlTag("Rslt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? Result { get; init; }
+    public Max35Text? Result { get; init; }
 
     /// <summary>
     /// Conditions noted for the risk assessment.
@@ -93,7 +93,7 @@ public record RiskAssessment2
     [IsoXmlTag("OthrRcmmnddActn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? OtherRecommendedAction { get; init; }
+    public Max35Text? OtherRecommendedAction { get; init; }
 
     /// <summary>
     /// Additional details of recommended action or other recommended action.
@@ -103,5 +103,5 @@ public record RiskAssessment2
     [IsoXmlTag("RcmmnddActnDtls")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256, MinimumLength = 1)]
-    public IsoMax256Text? RecommendedActionDetails { get; init; }
+    public Max256Text? RecommendedActionDetails { get; init; }
 }

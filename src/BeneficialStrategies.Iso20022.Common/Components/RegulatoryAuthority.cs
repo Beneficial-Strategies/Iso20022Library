@@ -24,7 +24,7 @@ public record RegulatoryAuthority
     [IsoXmlTag("AuthrtyNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70, MinimumLength = 1)]
-    public IsoMax70Text? AuthorityName { get; init; }
+    public Max70Text? AuthorityName { get; init; }
 
     /// <summary>
     /// Country of the entity requiring the regulatory reporting information.

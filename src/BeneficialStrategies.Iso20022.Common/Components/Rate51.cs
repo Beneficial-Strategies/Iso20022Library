@@ -38,7 +38,7 @@ public record Rate51
     [IsoId("_J-iZm63gEfCN-rGCydxGUA")]
     [DisplayName("Fiscal Stamp")]
     [IsoXmlTag("FsclStmp")]
-    public IsoPercentage14Rate? FiscalStamp { get; init; }
+    public decimal? FiscalStamp { get; init; }
 
     /// <summary>
     /// Distribution rate before tax has been deducted.
@@ -134,7 +134,7 @@ public record Rate51
     [IsoId("_J-iZs63gEfCN-rGCydxGUA")]
     [DisplayName("Tax On Profits")]
     [IsoXmlTag("TaxOnPrfts")]
-    public IsoPercentage14Rate? TaxOnProfits { get; init; }
+    public decimal? TaxOnProfits { get; init; }
 
     /// <summary>
     /// Percentage of cash that was paid in excess of actual tax obligation and was reclaimed.
@@ -142,7 +142,7 @@ public record Rate51
     [IsoId("_J-iZta3gEfCN-rGCydxGUA")]
     [DisplayName("Tax Reclaim Rate")]
     [IsoXmlTag("TaxRclmRate")]
-    public IsoPercentage14Rate? TaxReclaimRate { get; init; }
+    public decimal? TaxReclaimRate { get; init; }
 
     /// <summary>
     /// Portion of the fund distribution which represents the average accrued income included in the purchase price for units bought during the account period.

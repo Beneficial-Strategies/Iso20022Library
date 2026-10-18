@@ -49,14 +49,14 @@ public record PassengerTransport3
     /// </summary>
     [DisplayName("Document Number")]
     [IsoXmlTag("DocNb")]
-    public IsoMax35Text? DocumentNumber { get; init; }
+    public Max35Text? DocumentNumber { get; init; }
 
     /// <summary>
     /// Duration.
     /// </summary>
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
-    public IsoMax4NumericText? Duration { get; init; }
+    public Max4NumericText? Duration { get; init; }
 
     /// <summary>
     /// Hired Vehicle Details.
@@ -70,7 +70,7 @@ public record PassengerTransport3
     /// </summary>
     [DisplayName("Insurance")]
     [IsoXmlTag("Insrnc")]
-    public IsoTrueFalseIndicator? Insurance { get; init; }
+    public TrueFalseIndicator? Insurance { get; init; }
 
     /// <summary>
     /// Loyalty Programme.
@@ -84,21 +84,21 @@ public record PassengerTransport3
     /// </summary>
     [DisplayName("Open Ticket")]
     [IsoXmlTag("OpnTckt")]
-    public IsoTrueFalseIndicator? OpenTicket { get; init; }
+    public TrueFalseIndicator? OpenTicket { get; init; }
 
     /// <summary>
     /// Original Reservation Number.
     /// </summary>
     [DisplayName("Original Reservation Number")]
     [IsoXmlTag("OrgnlRsvatnNb")]
-    public IsoMax35Text? OriginalReservationNumber { get; init; }
+    public Max35Text? OriginalReservationNumber { get; init; }
 
     /// <summary>
     /// Original Reservation System.
     /// </summary>
     [DisplayName("Original Reservation System")]
     [IsoXmlTag("OrgnlRsvatnSys")]
-    public IsoMax4Text? OriginalReservationSystem { get; init; }
+    public Max4Text? OriginalReservationSystem { get; init; }
 
     /// <summary>
     /// Passenger.
@@ -112,28 +112,28 @@ public record PassengerTransport3
     /// </summary>
     [DisplayName("Reservation Number")]
     [IsoXmlTag("RsvatnNb")]
-    public IsoMax35Text? ReservationNumber { get; init; }
+    public Max35Text? ReservationNumber { get; init; }
 
     /// <summary>
     /// Reservation System.
     /// </summary>
     [DisplayName("Reservation System")]
     [IsoXmlTag("RsvatnSys")]
-    public IsoMax4Text? ReservationSystem { get; init; }
+    public Max4Text? ReservationSystem { get; init; }
 
     /// <summary>
     /// Summary Commodity Identification.
     /// </summary>
     [DisplayName("Summary Commodity Identification")]
     [IsoXmlTag("SummryCmmdtyId")]
-    public IsoMax35Text? SummaryCommodityIdentification { get; init; }
+    public Max35Text? SummaryCommodityIdentification { get; init; }
 
     /// <summary>
     /// Ticket Issuer.
     /// </summary>
     [DisplayName("Ticket Issuer")]
     [IsoXmlTag("TcktIssr")]
-    public IsoMax35Text? TicketIssuer { get; init; }
+    public Max35Text? TicketIssuer { get; init; }
 
     /// <summary>
     /// Total Amount.
@@ -147,7 +147,7 @@ public record PassengerTransport3
     /// </summary>
     [DisplayName("Travel Authorisation Code")]
     [IsoXmlTag("TrvlAuthstnCd")]
-    public IsoMax70Text? TravelAuthorisationCode { get; init; }
+    public Max70Text? TravelAuthorisationCode { get; init; }
 
     /// <summary>
     /// Trip Leg.

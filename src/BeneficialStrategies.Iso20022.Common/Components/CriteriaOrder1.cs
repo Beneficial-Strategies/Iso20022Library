@@ -24,5 +24,5 @@ public record CriteriaOrder1
     [IsoXmlTag("Trgt")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500, MinimumLength = 1)]
-    public required IsoMax500Text Target { get; init; }
+    public required Max500Text Target { get; init; }
 }

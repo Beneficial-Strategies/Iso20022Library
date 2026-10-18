@@ -47,7 +47,7 @@ public record CreditTransferTransaction82
     [IsoId("_eeABd7pXEfCPZvweyV2nEg")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
-    public IsoISODate? InterbankSettlementDate { get; init; }
+    public DateOnly? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Indicator of the urgency or order of importance for settlement processing.
@@ -79,7 +79,7 @@ public record CreditTransferTransaction82
     [IsoId("_eeABf7pXEfCPZvweyV2nEg")]
     [DisplayName("Expiry Date Time")]
     [IsoXmlTag("XpryDtTm")]
-    public IsoISODateTime? ExpiryDateTime { get; init; }
+    public ISODateTime? ExpiryDateTime { get; init; }
 
     /// <summary>
     /// Cryptographic key identifying terms agreed by agents within the payment chain pre-settlement.

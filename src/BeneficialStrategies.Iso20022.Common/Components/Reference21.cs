@@ -24,7 +24,7 @@ public record Reference21
     [IsoXmlTag("SndrCollTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SenderCollateralTransactionIdentification { get; init; }
+    public Max35Text? SenderCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique reference identifying the collateral management transaction (exposure)  from the triparty agent&apos;s point of view.
@@ -34,7 +34,7 @@ public record Reference21
     [IsoXmlTag("RcvrCollTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReceiverCollateralTransactionIdentification { get; init; }
+    public Max35Text? ReceiverCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Unique reference identifying the collateral management contract from the collateral taker&apos;s or the collateral giver&apos;s point of view.
@@ -44,7 +44,7 @@ public record Reference21
     [IsoXmlTag("SndrCollCtrctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? SenderCollateralContractIdentification { get; init; }
+    public Max35Text? SenderCollateralContractIdentification { get; init; }
 
     /// <summary>
     /// Unique reference identifying the collateral management contract from the triparty agent&apos;s point of view.
@@ -54,7 +54,7 @@ public record Reference21
     [IsoXmlTag("RcvrCollCtrctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public IsoMax35Text? ReceiverCollateralContractIdentification { get; init; }
+    public Max35Text? ReceiverCollateralContractIdentification { get; init; }
 
     /// <summary>
     /// Unique identification (UTI) agreed upon by the two trade counterparties to identify the transaction/exposure or the contract.
@@ -64,5 +64,5 @@ public record Reference21
     [IsoXmlTag("CmonTxId")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
     [StringLength(maximumLength: 52, MinimumLength = 1)]
-    public IsoMax52Text? CommonTransactionIdentification { get; init; }
+    public Max52Text? CommonTransactionIdentification { get; init; }
 }
