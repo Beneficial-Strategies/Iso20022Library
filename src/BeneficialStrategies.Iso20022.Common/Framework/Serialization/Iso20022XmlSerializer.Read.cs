@@ -254,7 +254,7 @@ public static partial class Iso20022XmlSerializer
             sink.Add(el, $"{path}/@Ccy", IssueCode.RequiredMissing, null, "Required attribute Ccy is missing.");
             ok = false;
         }
-        else if (currencyProp.PropertyType != typeof(string))
+        else
         {
             // the currency code types check their own pattern; a bad code is reported, not thrown
             try

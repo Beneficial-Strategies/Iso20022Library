@@ -50,27 +50,32 @@ public class AmountCurrencyTests
         [nameof(CurrencyAndAmount)] = typeof(CurrencyCode),
     };
 
-    // No currency identifier set in the dictionary (see #22), or not in the dictionary at all. They stay strings.
-    private static readonly string[] StillStrings =
+    // No currency identifier set in the dictionary (#22): decimal structs, not records, and no Currency property.
+    private static readonly Type[] CurrencyImplied =
     [
-        nameof(ImpliedCurrencyAndAmount),
-        nameof(ImpliedCurrencyAnd20Amount),
-        nameof(RestrictedFINImpliedCurrencyAndAmount),
-        nameof(EuroMax9Amount),
-        nameof(EuroMax15Amount),
-        nameof(Restricted15DigitCurrencyAndAmount),
-        nameof(CurrencyAnd30Amount),
+        typeof(ImpliedCurrencyAndAmount),
+        typeof(ImpliedCurrencyAnd20Amount),
+        typeof(RestrictedFINImpliedCurrencyAndAmount),
     ];
 
     private static IEnumerable<Type> AmountTypes() =>
-        typeof(ActiveCurrencyAndAmount).Assembly.GetTypes().Where(t => t.Namespace == typeof(ActiveCurrencyAndAmount).Namespace && t.IsClass);
+        typeof(ActiveCurrencyAndAmount).Assembly.GetTypes().Where(t => t.Namespace == typeof(ActiveCurrencyAndAmount).Namespace);
 
     [Fact]
     public void Every_amount_type_is_accounted_for()
     {
         var names = AmountTypes().Select(t => t.Name).Order().ToArray();
 
-        Assert.Equal(CodeSetOf.Keys.Concat(StillStrings).Order(), names);
+        Assert.Equal(CodeSetOf.Keys.Concat(CurrencyImplied.Select(t => t.Name)).Order(), names);
+    }
+
+    [Fact]
+    public void Only_the_amounts_that_name_a_currency_have_a_Currency_property()
+    {
+        foreach (var type in AmountTypes())
+            Assert.Equal(CodeSetOf.ContainsKey(type.Name), type.GetProperty("Currency") is not null);
+        foreach (var type in CurrencyImplied)
+            Assert.True(type.IsValueType, type.Name);
     }
 
     [Fact]

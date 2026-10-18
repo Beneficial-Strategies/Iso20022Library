@@ -698,17 +698,18 @@ public static partial class Iso20022XmlSerializer
     // ── Currency-and-amount helpers ────────────────────────────────────────────
 
     /// <summary>
-    /// ISO 20022 currency-and-amount types (all in the Amounts namespace) are serialized as
+    /// ISO 20022 currency-and-amount types (the records of the Amounts namespace) are serialized as
     /// <c>&lt;Tag Ccy="EUR"&gt;47250.00&lt;/Tag&gt;</c> — an XML attribute for currency and
     /// text content for the decimal amount — to match the ISO XSD simpleContent pattern.
+    /// The amounts whose currency is implied by the context are decimal structs, not records, and are
+    /// written as plain decimals like any other simple value.
     /// </summary>
-    private static bool IsAmountType(Type t) =>
-        t.Namespace == "BeneficialStrategies.Iso20022.Amounts" || HasCurrencyAndAmountProperties(t);
+    private static bool IsAmountType(Type t) => HasCurrencyAndAmountProperties(t);
 
     /// <summary>
     /// Returns true for types that carry exactly the ISO currency-and-amount property pair:
-    /// a string property tagged "Currency" and a decimal property tagged "Amount".
-    /// This catches both the canonical <c>Amounts</c>-namespace types and choice variants
+    /// a currency code property tagged "Currency" and a decimal property tagged "Amount".
+    /// This catches both the canonical <c>Amounts</c>-namespace records and choice variants
     /// such as <c>AmountType4Choice.InstructedAmount</c> that replicate the same structure.
     /// </summary>
     private static bool HasCurrencyAndAmountProperties(Type t)
@@ -718,15 +719,13 @@ public static partial class Iso20022XmlSerializer
             && props.Any(p => p.XmlTag == "Amount" && p.CoreType == typeof(decimal));
     }
 
-    // A currency is a plain string on the few amount types that have no currency code type in the
-    // specification (see the implied-currency amounts), and a currency code struct on the others.
-    private static bool IsCurrencyType(Type t) => t == typeof(string) || typeof(IIsoExternalCode).IsAssignableFrom(t);
+    private static bool IsCurrencyType(Type t) => typeof(IIsoExternalCode).IsAssignableFrom(t);
 
     private static XElement SerializeAmount(object obj, XNamespace ns, string tag)
     {
         var props = GetProps(obj.GetType());
         var currency =
-            props.First(p => p.XmlTag == "Currency").Property.GetValue(obj)?.ToString() ?? "";
+            props.First(p => p.XmlTag == "Currency").Property.GetValue(obj)!.ToString()!;
         var amount = (decimal)props.First(p => p.XmlTag == "Amount").Property.GetValue(obj)!;
         return new XElement(
             ns + tag,
@@ -744,9 +743,7 @@ public static partial class Iso20022XmlSerializer
         var currencyProp = props.First(p => p.XmlTag == "Currency").Property;
         var amountProp = props.First(p => p.XmlTag == "Amount").Property;
         var ccy = el.Attribute("Ccy")?.Value;
-        if (currencyProp.PropertyType == typeof(string))
-            currencyProp.SetValue(instance, ccy ?? "");
-        else if (string.IsNullOrEmpty(ccy))
+        if (string.IsNullOrEmpty(ccy))
             throw new InvalidOperationException($"Required attribute Ccy is missing on <{el.Name.LocalName}>.");
         else
             currencyProp.SetValue(instance, ConstructSimpleValue(currencyProp.PropertyType, ccy));

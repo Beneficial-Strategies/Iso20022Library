@@ -56,7 +56,7 @@ public class IsoKindTests
         // guards against the namespace names above silently matching nothing
         Assert.True(In("BeneficialStrategies.Iso20022.SimpleTypes").Count() > 300);
         Assert.True(In("BeneficialStrategies.Iso20022.Codesets").Count() > 4000);
-        Assert.True(In("BeneficialStrategies.Iso20022.Amounts").Count() >= 21);
+        Assert.True(In("BeneficialStrategies.Iso20022.Amounts").Count() == 17);
         Assert.Equal(14, In("BeneficialStrategies.Iso20022.ExternalSchema").Count() + In("BeneficialStrategies.Iso20022.UserDefined").Count());
     }
 

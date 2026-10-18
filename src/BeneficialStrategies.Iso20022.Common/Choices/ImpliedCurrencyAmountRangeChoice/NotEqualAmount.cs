@@ -13,23 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.ImpliedCurrencyAmountRangeChoice
     /// </summary>
     [IsoId("_PVH1Atp-Ed-ak6NoX_4Aeg_-1093710164")]
     [DisplayName("Not Equal Amount")]
-    [IsoXmlTag("NEQAmt")]
     public record NotEqualAmount : ImpliedCurrencyAmountRangeChoice_
     {
-        /// <summary>
-        /// The currency in which this amount is measured.
-        /// </summary>
-        [IsoId("_YXbjBNp-Ed-ak6NoX_4Aeg_-1934687468_Currency")]
-        [DisplayName("Implied Currency And Amount _ Currency")]
-        [IsoXmlTag("Currency")]
-        public required string Currency { get; init; }
-
-        /// <summary>
-        /// Amount of the transaction.
-        /// </summary>
-        [IsoId("_YXbjBNp-Ed-ak6NoX_4Aeg_-1934687468_Amount")]
-        [DisplayName("Implied Currency And Amount _ Amount")]
-        [IsoXmlTag("Amount")]
-        public required decimal Amount { get; init; }
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("NEQAmt")]
+        public required ImpliedCurrencyAndAmount Value { get; init; }
     }
 }

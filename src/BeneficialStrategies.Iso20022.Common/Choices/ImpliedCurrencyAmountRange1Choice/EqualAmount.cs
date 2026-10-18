@@ -13,23 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.ImpliedCurrencyAmountRange1Choic
     /// </summary>
     [IsoId("_O_mxN5lcEeeE1Ya-LgRsuQ")]
     [DisplayName("Equal Amount")]
-    [IsoXmlTag("EQAmt")]
     public record EqualAmount : ImpliedCurrencyAmountRange1Choice_
     {
-        /// <summary>
-        /// The currency in which this amount is measured.
-        /// </summary>
-        [IsoId("_YXbjBNp-Ed-ak6NoX_4Aeg_-1934687468_Currency")]
-        [DisplayName("Implied Currency And Amount _ Currency")]
-        [IsoXmlTag("Currency")]
-        public required string Currency { get; init; }
-
-        /// <summary>
-        /// Amount of the transaction.
-        /// </summary>
-        [IsoId("_YXbjBNp-Ed-ak6NoX_4Aeg_-1934687468_Amount")]
-        [DisplayName("Implied Currency And Amount _ Amount")]
-        [IsoXmlTag("Amount")]
-        public required decimal Amount { get; init; }
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("EQAmt")]
+        public required ImpliedCurrencyAndAmount Value { get; init; }
     }
 }

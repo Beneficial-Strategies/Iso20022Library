@@ -13,23 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.Amount3Choice
     /// </summary>
     [IsoId("_750Bh6MgEeCJ6YNENx4h-w_-1970472994")]
     [DisplayName("Amount Without Currency")]
-    [IsoXmlTag("AmtWthtCcy")]
     public record AmountWithoutCurrency : Amount3Choice_
     {
-        /// <summary>
-        /// The currency in which this amount is measured.
-        /// </summary>
-        [IsoId("_YXbjBNp-Ed-ak6NoX_4Aeg_-1934687468_Currency")]
-        [DisplayName("Implied Currency And Amount _ Currency")]
-        [IsoXmlTag("Currency")]
-        public required string Currency { get; init; }
-
-        /// <summary>
-        /// Amount of the transaction.
-        /// </summary>
-        [IsoId("_YXbjBNp-Ed-ak6NoX_4Aeg_-1934687468_Amount")]
-        [DisplayName("Implied Currency And Amount _ Amount")]
-        [IsoXmlTag("Amount")]
-        public required decimal Amount { get; init; }
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("AmtWthtCcy")]
+        public required ImpliedCurrencyAndAmount Value { get; init; }
     }
 }

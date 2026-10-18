@@ -13,23 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity30Cho
     /// </summary>
     [IsoId("_zSz2p_9jEea3W_f2lS_aiw")]
     [DisplayName("Monetary Value")]
-    [IsoXmlTag("MntryVal")]
     public record MonetaryValue : FinancialInstrumentQuantity30Choice_
     {
-        /// <summary>
-        /// The currency in which this amount is measured.
-        /// </summary>
-        [IsoId("_JG0mceaqEeW1iL_FRZt8bg_Currency")]
-        [DisplayName("Implied Currency And 20 Amount _ Currency")]
-        [IsoXmlTag("Currency")]
-        public required string Currency { get; init; }
-
-        /// <summary>
-        /// Amount of the transaction.
-        /// </summary>
-        [IsoId("_JG0mceaqEeW1iL_FRZt8bg_Amount")]
-        [DisplayName("Implied Currency And 20 Amount _ Amount")]
-        [IsoXmlTag("Amount")]
-        public required decimal Amount { get; init; }
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("MntryVal")]
+        public required ImpliedCurrencyAnd20Amount Value { get; init; }
     }
 }

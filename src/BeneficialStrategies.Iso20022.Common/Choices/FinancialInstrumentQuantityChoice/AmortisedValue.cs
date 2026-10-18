@@ -13,23 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantityChoic
     /// </summary>
     [IsoId("_SoH20Np-Ed-ak6NoX_4Aeg_1583790695")]
     [DisplayName("Amortised Value")]
-    [IsoXmlTag("AmtsdVal")]
     public record AmortisedValue : FinancialInstrumentQuantityChoice_
     {
-        /// <summary>
-        /// The currency in which this amount is measured.
-        /// </summary>
-        [IsoId("_YXbjBNp-Ed-ak6NoX_4Aeg_-1934687468_Currency")]
-        [DisplayName("Implied Currency And Amount _ Currency")]
-        [IsoXmlTag("Currency")]
-        public required string Currency { get; init; }
-
-        /// <summary>
-        /// Amount of the transaction.
-        /// </summary>
-        [IsoId("_YXbjBNp-Ed-ak6NoX_4Aeg_-1934687468_Amount")]
-        [DisplayName("Implied Currency And Amount _ Amount")]
-        [IsoXmlTag("Amount")]
-        public required decimal Amount { get; init; }
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("AmtsdVal")]
+        public required ImpliedCurrencyAndAmount Value { get; init; }
     }
 }

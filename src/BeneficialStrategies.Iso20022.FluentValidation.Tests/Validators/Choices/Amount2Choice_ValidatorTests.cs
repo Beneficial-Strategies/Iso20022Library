@@ -22,8 +22,7 @@ public class Amount2Choice_ValidatorTests
     {
         var value = new BeneficialStrategies.Iso20022.Choices.Amount2Choice.AmountWithoutCurrency
         {
-            Currency = "USD",
-            Amount = 100m,
+            Value = 100m,
         };
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
