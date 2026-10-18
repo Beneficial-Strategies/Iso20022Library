@@ -39,7 +39,7 @@ namespace BeneficialStrategies.Iso20022.Serialization;
 /// Reflection metadata is cached per type on first use; subsequent calls are fast.
 /// </para>
 /// </remarks>
-public static class Iso20022XmlSerializer
+public static partial class Iso20022XmlSerializer
 {
     // ── Public API ─────────────────────────────────────────────────────────────
 
@@ -185,8 +185,9 @@ public static class Iso20022XmlSerializer
         string XmlTag,
         bool IsCollection,
         Type CoreType, // element type for collections; declared type (nullable-unwrapped) otherwise
-        bool CoreIsLeaf
-    ); // whether CoreType is a primitive leaf
+        bool CoreIsLeaf, // whether CoreType is a primitive leaf
+        bool IsRequired // the property is a C# `required` member
+    );
 
     private static readonly ConcurrentDictionary<Type, PropMeta[]> PropCache = new();
 
@@ -204,7 +205,16 @@ public static class Iso20022XmlSerializer
             var declared = UnwrapNullable(prop.PropertyType);
             bool isCol = TryGetCollectionElement(declared, out var elemType);
             var core = elemType ?? declared;
-            result.Add(new PropMeta(prop, tagAttr.XmlTag, isCol, core, IsLeafType(core)));
+            result.Add(
+                new PropMeta(
+                    prop,
+                    tagAttr.XmlTag,
+                    isCol,
+                    core,
+                    IsLeafType(core),
+                    prop.GetCustomAttribute<System.Runtime.CompilerServices.RequiredMemberAttribute>() is not null
+                )
+            );
         }
         return [.. result];
     }
