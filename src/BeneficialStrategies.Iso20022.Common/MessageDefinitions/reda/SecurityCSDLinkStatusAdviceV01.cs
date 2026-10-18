@@ -28,7 +28,7 @@ public record SecurityCSDLinkStatusAdviceV01 : IOuterRecord
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
-    public const string XmlTag = "SctyCSdLkStsAdvc";
+    public const string XmlTag = "SctyCSDLkStsAdvc";
 
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.

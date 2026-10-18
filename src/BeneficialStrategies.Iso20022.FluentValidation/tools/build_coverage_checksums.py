@@ -88,6 +88,8 @@ import glob
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 FV_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))
 COMMON_ROOT = os.path.abspath(os.path.join(FV_ROOT, "..", "BeneficialStrategies.Iso20022.Common"))
+# the code sets, simple types and amounts moved to their own project (#26)
+PRIMITIVES_ROOT = os.path.abspath(os.path.join(FV_ROOT, "..", "BeneficialStrategies.Iso20022.Primitives"))
 DEFAULT_OUT = os.path.join(FV_ROOT, "coverage-checksums.json")
 
 ISOID_RE = re.compile(r'\[IsoId\("([^"]+)"\)\]')
@@ -121,7 +123,7 @@ CHECKSUM_RECORD_TYPES = {
 
 
 def build_type_to_isoid():
-    """Scan Common for every model type's own IsoId, keyed by simple type name.
+    """Scan Common and Primitives for every model type's own IsoId, keyed by simple type name.
 
     First IsoId occurrence in a file = that type's own id (true for Components/MessageDefinitions/
     single-type files, and for Codesets since the enum-level attribute always precedes every
@@ -133,8 +135,10 @@ def build_type_to_isoid():
     """
     type_to_isoid = {}
     dupes = []
-    for scan_dir in ["Components", "Choices", "Codesets", "MessageDefinitions", "Amounts", "ExternalSchema"]:
-        root = os.path.join(COMMON_ROOT, scan_dir)
+    scan = [(COMMON_ROOT, d) for d in ["Components", "Choices", "Codesets", "MessageDefinitions", "Amounts", "ExternalSchema"]]
+    scan += [(PRIMITIVES_ROOT, d) for d in ["Codesets", "SimpleTypes", "Amounts", "ExternalSchema"]]
+    for project_root, scan_dir in scan:
+        root = os.path.join(project_root, scan_dir)
         if not os.path.isdir(root):
             continue
         for dirpath, _, filenames in os.walk(root):

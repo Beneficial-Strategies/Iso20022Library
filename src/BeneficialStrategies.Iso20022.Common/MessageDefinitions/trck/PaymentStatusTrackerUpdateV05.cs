@@ -34,7 +34,7 @@ public record PaymentStatusTrackerUpdateV05 : IOuterRecord
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
-    public const string XmlTag = "PmtStsTrackerUpdt";
+    public const string XmlTag = "PmtStsTrckrUpd";
 
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.

@@ -26,17 +26,17 @@ public record DTCCCANOEligibleBalanceSD1V07 : IOuterRecord
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
-    public const string IsoIdentifier = "supl.005.001.07";
+    public const string IsoIdentifier = "supl.007.001.07";
 
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
-    public const string XmlTag = "DTCCCANOEligibleBalanceSD1";
+    public const string XmlTag = "DTCCCANOElgblBalSD1";
 
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
-    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:supl.005.001.07";
+    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:supl.007.001.07";
 
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.

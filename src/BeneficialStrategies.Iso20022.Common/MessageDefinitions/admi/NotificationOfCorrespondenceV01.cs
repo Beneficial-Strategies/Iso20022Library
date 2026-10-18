@@ -28,7 +28,7 @@ public record NotificationOfCorrespondenceV01 : IOuterRecord
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
-    public const string XmlTag = "NtfctnOfCorr";
+    public const string XmlTag = "NtfctnOfCrspdc";
 
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.

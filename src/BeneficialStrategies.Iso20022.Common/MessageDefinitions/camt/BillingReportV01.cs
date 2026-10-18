@@ -23,7 +23,7 @@ public record BillingReportV01 : IOuterRecord
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
-    public const string IsoIdentifier = "camt.090.001.01";
+    public const string IsoIdentifier = "camt.077.001.01";
 
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
@@ -33,7 +33,7 @@ public record BillingReportV01 : IOuterRecord
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
-    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:camt.090.001.01";
+    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:camt.077.001.01";
 
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
