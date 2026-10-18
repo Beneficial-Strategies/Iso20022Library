@@ -21,11 +21,11 @@ public class PaymentTransaction182ValidatorTests
     // ── ReversedInterbankSettlementAmount (required) ─────────────────────────────
 
     [Fact]
-    public void ReversedInterbankSettlementAmount_InvalidCurrency_HasValidationError()
+    public void ReversedInterbankSettlementAmount_UnsetCurrency_HasValidationError()
     {
         var msg = ValidMessage() with
         {
-            ReversedInterbankSettlementAmount = ValidMessage().ReversedInterbankSettlementAmount with { Currency = "eur" },
+            ReversedInterbankSettlementAmount = ValidMessage().ReversedInterbankSettlementAmount with { Currency = default },
         };
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "ReversedInterbankSettlementAmount.Currency");
@@ -62,11 +62,11 @@ public class PaymentTransaction182ValidatorTests
     }
 
     [Fact]
-    public void OriginalInterbankSettlementAmount_InvalidCurrency_HasValidationError()
+    public void OriginalInterbankSettlementAmount_UnsetCurrency_HasValidationError()
     {
         var msg = ValidMessage() with
         {
-            OriginalInterbankSettlementAmount = new ActiveOrHistoricCurrencyAndAmount { Currency = "US", Amount = 50m },
+            OriginalInterbankSettlementAmount = new ActiveOrHistoricCurrencyAndAmount { Currency = default, Amount = 50m },
         };
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "OriginalInterbankSettlementAmount.Currency");

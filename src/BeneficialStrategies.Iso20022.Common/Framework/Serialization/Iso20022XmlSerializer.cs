@@ -714,15 +714,19 @@ public static partial class Iso20022XmlSerializer
     private static bool HasCurrencyAndAmountProperties(Type t)
     {
         var props = GetProps(t);
-        return props.Any(p => p.XmlTag == "Currency" && p.CoreType == typeof(string))
+        return props.Any(p => p.XmlTag == "Currency" && IsCurrencyType(p.CoreType))
             && props.Any(p => p.XmlTag == "Amount" && p.CoreType == typeof(decimal));
     }
+
+    // A currency is a plain string on the few amount types that have no currency code type in the
+    // specification (see the implied-currency amounts), and a currency code struct on the others.
+    private static bool IsCurrencyType(Type t) => t == typeof(string) || typeof(IIsoExternalCode).IsAssignableFrom(t);
 
     private static XElement SerializeAmount(object obj, XNamespace ns, string tag)
     {
         var props = GetProps(obj.GetType());
         var currency =
-            props.First(p => p.XmlTag == "Currency").Property.GetValue(obj) as string ?? "";
+            props.First(p => p.XmlTag == "Currency").Property.GetValue(obj)?.ToString() ?? "";
         var amount = (decimal)props.First(p => p.XmlTag == "Amount").Property.GetValue(obj)!;
         return new XElement(
             ns + tag,
@@ -739,7 +743,13 @@ public static partial class Iso20022XmlSerializer
         var props = GetProps(type);
         var currencyProp = props.First(p => p.XmlTag == "Currency").Property;
         var amountProp = props.First(p => p.XmlTag == "Amount").Property;
-        currencyProp.SetValue(instance, el.Attribute("Ccy")?.Value ?? "");
+        var ccy = el.Attribute("Ccy")?.Value;
+        if (currencyProp.PropertyType == typeof(string))
+            currencyProp.SetValue(instance, ccy ?? "");
+        else if (string.IsNullOrEmpty(ccy))
+            throw new InvalidOperationException($"Required attribute Ccy is missing on <{el.Name.LocalName}>.");
+        else
+            currencyProp.SetValue(instance, ConstructSimpleValue(currencyProp.PropertyType, ccy));
         amountProp.SetValue(instance, decimal.Parse(el.Value, CultureInfo.InvariantCulture));
         return instance;
     }

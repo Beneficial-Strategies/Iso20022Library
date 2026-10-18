@@ -32,9 +32,9 @@ public class TransactionAllocation2ValidatorTests
     }
 
     [Fact]
-    public void Amount_InvalidCurrency_HasValidationError()
+    public void Amount_UnsetCurrency_HasValidationError()
     {
-        var msg = ValidMessage() with { Amount = ValidMessage().Amount with { Currency = "eur" } };
+        var msg = ValidMessage() with { Amount = ValidMessage().Amount with { Currency = default } };
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "Amount.Currency");
     }

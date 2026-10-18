@@ -26,11 +26,11 @@ public class DirectDebitTransactionInformation33ValidatorTests
     // ── InterbankSettlementAmount ─────────────────────────────────────────────────
 
     [Fact]
-    public void InterbankSettlementAmount_InvalidCurrency_HasValidationError()
+    public void InterbankSettlementAmount_UnsetCurrency_HasValidationError()
     {
         var msg = ValidMessage() with
         {
-            InterbankSettlementAmount = ValidMessage().InterbankSettlementAmount with { Currency = "eur" },
+            InterbankSettlementAmount = ValidMessage().InterbankSettlementAmount with { Currency = default },
         };
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "InterbankSettlementAmount.Currency");

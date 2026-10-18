@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Amount3Choice
         [IsoId("_YYB_9tp-Ed-ak6NoX_4Aeg_-1587763373_Currency")]
         [DisplayName("Active Or Historic Currency And Amount _ Currency")]
         [IsoXmlTag("Currency")]
-        public required string Currency { get; init; }
+        public required ActiveOrHistoricCurrencyCode Currency { get; init; }
 
         /// <summary>
         /// Amount of the transaction.

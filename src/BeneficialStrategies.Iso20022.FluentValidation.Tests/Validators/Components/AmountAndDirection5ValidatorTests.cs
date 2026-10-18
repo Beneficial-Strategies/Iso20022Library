@@ -24,15 +24,11 @@ public class AmountAndDirection5ValidatorTests
 
     // ── Amount.Currency ──────────────────────────────────────────────────────
 
-    [Theory]
-    [InlineData("eur")]
-    [InlineData("EU")]
-    [InlineData("EURO")]
-    [InlineData("123")]
-    [InlineData("")]
-    public void Currency_Invalid_HasValidationError(string currency)
+    [Fact]
+    public void Currency_Unset_HasValidationError()
     {
-        var msg = ValidMessage() with { Amount = ValidMessage().Amount with { Currency = currency } };
+        // a bad code cannot be built (ActiveCurrencyCode checks its pattern); an unset one still can
+        var msg = ValidMessage() with { Amount = ValidMessage().Amount with { Currency = default } };
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "Amount.Currency");
     }

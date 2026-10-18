@@ -240,17 +240,32 @@ public static partial class Iso20022XmlSerializer
         return instance;
     }
 
-    // <Amt Ccy="EUR">10.50</Amt>. The currency and amount facets are for issues #8 and #13;
-    // here only a missing attribute and text that is not a number are reported.
+    // <Amt Ccy="EUR">10.50</Amt>. The currency is checked by its code type (#8). The facets of the
+    // amount value are #13; here only text that is not a number is reported.
     private static object? ReadAmount(Type type, XElement el, string path, ReadSink sink)
     {
         var props = GetProps(type);
         var ccy = el.Attribute("Ccy")?.Value;
+        var currencyProp = props.First(p => p.XmlTag == "Currency").Property;
+        object? currency = ccy;
         var ok = true;
         if (string.IsNullOrEmpty(ccy))
         {
             sink.Add(el, $"{path}/@Ccy", IssueCode.RequiredMissing, null, "Required attribute Ccy is missing.");
             ok = false;
+        }
+        else if (currencyProp.PropertyType != typeof(string))
+        {
+            // the currency code types check their own pattern; a bad code is reported, not thrown
+            try
+            {
+                currency = Activator.CreateInstance(currencyProp.PropertyType, ccy);
+            }
+            catch (TargetInvocationException ex) when (ex.InnerException is Iso20022FormatException fmt)
+            {
+                sink.Add(el.Attribute("Ccy"), $"{path}/@Ccy", IssueCode.FacetViolation, ccy, fmt.Message);
+                ok = false;
+            }
         }
         if (!decimal.TryParse(el.Value, NumberStyles.Number, CultureInfo.InvariantCulture, out var amount))
         {
@@ -260,7 +275,7 @@ public static partial class Iso20022XmlSerializer
         if (!ok)
             return null;
         var instance = Activator.CreateInstance(type)!;
-        props.First(p => p.XmlTag == "Currency").Property.SetValue(instance, ccy);
+        currencyProp.SetValue(instance, currency);
         props.First(p => p.XmlTag == "Amount").Property.SetValue(instance, amount);
         return instance;
     }

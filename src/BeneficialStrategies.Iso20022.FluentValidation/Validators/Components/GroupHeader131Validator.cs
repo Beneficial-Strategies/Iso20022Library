@@ -90,7 +90,7 @@ public class GroupHeader131Validator : AbstractValidator<GroupHeader131>
             x => x.TotalInterbankSettlementAmount is not null,
             () =>
             {
-                RuleFor(x => x.TotalInterbankSettlementAmount!.Currency)
+                RuleFor(x => (string)x.TotalInterbankSettlementAmount!.Currency)
                     .NotEmpty()
                     .Matches(CurrencyRegex)
                     .WithMessage(

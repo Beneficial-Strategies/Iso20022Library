@@ -114,7 +114,7 @@ public class CreditTransferTransaction73Validator : AbstractValidator<CreditTran
         RuleFor(x => x.Creditor).SetValidator(partyValidator!);
 
         // ── InterbankSettlementAmount (ActiveCurrencyAndAmount, required 1..1) ───────
-        RuleFor(x => x.InterbankSettlementAmount.Currency)
+        RuleFor(x => (string)x.InterbankSettlementAmount.Currency)
             .NotEmpty()
             .Matches(CurrencyRegex)
             .WithMessage(
@@ -150,7 +150,7 @@ public class CreditTransferTransaction73Validator : AbstractValidator<CreditTran
             x => x.InstructedAmount is not null,
             () =>
             {
-                RuleFor(x => x.InstructedAmount!.Currency)
+                RuleFor(x => (string)x.InstructedAmount!.Currency)
                     .NotEmpty()
                     .Matches(CurrencyRegex)
                     .WithMessage(

@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NetDividendRateFormat31Choice
         [IsoId("_YX4O9Np-Ed-ak6NoX_4Aeg_-184934550_Currency")]
         [DisplayName("Active Currency And 13 Decimal Amount _ Currency")]
         [IsoXmlTag("Currency")]
-        public required string Currency { get; init; }
+        public required ActiveCurrencyCode Currency { get; init; }
 
         /// <summary>
         /// Amount of the transaction.

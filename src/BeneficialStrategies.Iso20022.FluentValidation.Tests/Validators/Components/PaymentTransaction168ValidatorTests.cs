@@ -22,11 +22,11 @@ public class PaymentTransaction168ValidatorTests
     }
 
     [Fact]
-    public void ReturnedInterbankSettlementAmount_InvalidCurrency_HasValidationError()
+    public void ReturnedInterbankSettlementAmount_UnsetCurrency_HasValidationError()
     {
         var msg = ValidMessage() with
         {
-            ReturnedInterbankSettlementAmount = ValidMessage().ReturnedInterbankSettlementAmount with { Currency = "eur" },
+            ReturnedInterbankSettlementAmount = ValidMessage().ReturnedInterbankSettlementAmount with { Currency = default },
         };
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "ReturnedInterbankSettlementAmount.Currency");

@@ -37,7 +37,7 @@ public class AmountAndDirection5Validator : AbstractValidator<AmountAndDirection
     public AmountAndDirection5Validator()
     {
         // ── Amount (ActiveCurrencyAndAmount, required 1..1) ──────────────────────────
-        RuleFor(x => x.Amount.Currency)
+        RuleFor(x => (string)x.Amount.Currency)
             .NotEmpty()
             .Matches(CurrencyRegex)
             .WithMessage("AmountAndDirection5.Amount.Currency must be a valid ISO 4217 three-letter currency code (e.g. EUR, USD).");

@@ -17,7 +17,7 @@ public record ActiveOrHistoricCurrencyAnd13DecimalAmount
     [IsoId("_YYB_9Np-Ed-ak6NoX_4Aeg_-771372619_Currency")]
     [DisplayName("Active Or Historic Currency And 13 Decimal Amount _ Currency")]
     [IsoXmlTag("Currency")]
-    public required string Currency { get; init; }
+    public required ActiveOrHistoricCurrencyCode Currency { get; init; }
 
     /// <summary>
     /// Amount of the transaction.

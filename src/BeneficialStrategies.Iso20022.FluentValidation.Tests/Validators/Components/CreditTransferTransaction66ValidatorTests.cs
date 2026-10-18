@@ -44,11 +44,11 @@ public class CreditTransferTransaction66ValidatorTests
     // ── TotalInterbankSettlementAmount ────────────────────────────────────────────
 
     [Fact]
-    public void TotalInterbankSettlementAmount_InvalidCurrency_HasValidationError()
+    public void TotalInterbankSettlementAmount_UnsetCurrency_HasValidationError()
     {
         var msg = ValidMessage() with
         {
-            TotalInterbankSettlementAmount = new ActiveCurrencyAndAmount { Currency = "EU", Amount = 100m },
+            TotalInterbankSettlementAmount = new ActiveCurrencyAndAmount { Currency = default, Amount = 100m },
         };
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "TotalInterbankSettlementAmount.Currency");

@@ -101,7 +101,7 @@ public class CreditTransferTransaction66Validator : AbstractValidator<CreditTran
             x => x.TotalInterbankSettlementAmount is not null,
             () =>
             {
-                RuleFor(x => x.TotalInterbankSettlementAmount!.Currency)
+                RuleFor(x => (string)x.TotalInterbankSettlementAmount!.Currency)
                     .NotEmpty()
                     .Matches(CurrencyRegex)
                     .WithMessage(

@@ -76,7 +76,7 @@ public class PaymentTransaction168Validator : AbstractValidator<PaymentTransacti
         IValidator<SupplementaryData1> supplementaryDataValidator
     )
     {
-        RuleFor(x => x.ReturnedInterbankSettlementAmount.Currency)
+        RuleFor(x => (string)x.ReturnedInterbankSettlementAmount.Currency)
             .NotEmpty()
             .Matches(CurrencyRegex)
             .WithMessage(
@@ -107,7 +107,7 @@ public class PaymentTransaction168Validator : AbstractValidator<PaymentTransacti
             x => x.ReturnedInstructedAmount is not null,
             () =>
             {
-                RuleFor(x => x.ReturnedInstructedAmount!.Currency)
+                RuleFor(x => (string)x.ReturnedInstructedAmount!.Currency)
                     .NotEmpty()
                     .Matches(CurrencyRegex)
                     .WithMessage(
@@ -123,7 +123,7 @@ public class PaymentTransaction168Validator : AbstractValidator<PaymentTransacti
             x => x.OriginalInterbankSettlementAmount is not null,
             () =>
             {
-                RuleFor(x => x.OriginalInterbankSettlementAmount!.Currency)
+                RuleFor(x => (string)x.OriginalInterbankSettlementAmount!.Currency)
                     .NotEmpty()
                     .Matches(CurrencyRegex)
                     .WithMessage(
@@ -139,7 +139,7 @@ public class PaymentTransaction168Validator : AbstractValidator<PaymentTransacti
             x => x.CompensationAmount is not null,
             () =>
             {
-                RuleFor(x => x.CompensationAmount!.Currency)
+                RuleFor(x => (string)x.CompensationAmount!.Currency)
                     .NotEmpty()
                     .Matches(CurrencyRegex)
                     .WithMessage(

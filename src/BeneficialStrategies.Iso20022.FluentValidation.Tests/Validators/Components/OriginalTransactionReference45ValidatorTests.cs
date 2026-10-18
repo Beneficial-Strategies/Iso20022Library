@@ -22,11 +22,11 @@ public class OriginalTransactionReference45ValidatorTests
     }
 
     [Fact]
-    public void InterbankSettlementAmount_InvalidCurrency_HasValidationError()
+    public void InterbankSettlementAmount_UnsetCurrency_HasValidationError()
     {
         var msg = new OriginalTransactionReference45
         {
-            InterbankSettlementAmount = new ActiveOrHistoricCurrencyAndAmount { Currency = "eur", Amount = 100m },
+            InterbankSettlementAmount = new ActiveOrHistoricCurrencyAndAmount { Currency = default, Amount = 100m },
         };
         var result = _sut.Validate(msg);
         Assert.Contains(result.Errors, e => e.PropertyName == "InterbankSettlementAmount.Currency");
