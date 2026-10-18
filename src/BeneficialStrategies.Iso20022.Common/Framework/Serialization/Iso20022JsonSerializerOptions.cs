@@ -39,9 +39,7 @@ public static class Iso20022JsonSerializerOptions
             PropertyNamingPolicy = Iso20022JsonNamingPolicy.Instance,
         };
         opts.Converters.Add(ImmutableValueListConverterFactory.Instance);
-        opts.Converters.Add(Iso20022EnumConverterFactory.Instance);
-        opts.Converters.Add(Iso20022DecimalJsonConverter.Instance);
-        opts.Converters.Add(new Iso20022XmlQualifiedNameJsonConverter());
+        Iso20022PrimitiveJsonOptions.AddConverters(opts);
         opts.MakeReadOnly();
         return opts;
     }

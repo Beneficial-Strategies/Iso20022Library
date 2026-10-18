@@ -75,10 +75,8 @@ public abstract class SimpleValueContractTests<TStruct, TValue>
         Assert.Equal(a.GetHashCode(), b.GetHashCode());
 
         // Invoke == and != via reflection — compiler cannot resolve operators on generic TStruct.
-        var opEq = typeof(TStruct).GetMethod("op_Equality",
-            BindingFlags.Public | BindingFlags.Static, [typeof(TStruct), typeof(TStruct)]);
-        var opNe = typeof(TStruct).GetMethod("op_Inequality",
-            BindingFlags.Public | BindingFlags.Static, [typeof(TStruct), typeof(TStruct)]);
+        var opEq = typeof(TStruct).GetMethod("op_Equality", BindingFlags.Public | BindingFlags.Static, null, [typeof(TStruct), typeof(TStruct)], null);
+        var opNe = typeof(TStruct).GetMethod("op_Inequality", BindingFlags.Public | BindingFlags.Static, null, [typeof(TStruct), typeof(TStruct)], null);
         Assert.NotNull(opEq);
         Assert.NotNull(opNe);
         Assert.True((bool)opEq!.Invoke(null, [a, b])!);
@@ -107,8 +105,8 @@ public abstract class SimpleValueContractTests<TStruct, TValue>
     public void JsonRoundTrip_Succeeds()
     {
         var instance = (TStruct)Activator.CreateInstance(typeof(TStruct), ValidSample)!;
-        var json = JsonSerializer.Serialize(instance, Iso20022JsonSerializerOptions.Default);
-        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default);
+        var json = JsonSerializer.Serialize(instance, Iso20022PrimitiveJsonOptions.Default);
+        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022PrimitiveJsonOptions.Default);
         Assert.Equal(instance, roundTripped);
     }
 
@@ -117,7 +115,7 @@ public abstract class SimpleValueContractTests<TStruct, TValue>
     {
         var json = $"\"{InvalidSample}\"";
         Assert.Throws<JsonException>(
-            () => JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default));
+            () => JsonSerializer.Deserialize<TStruct>(json, Iso20022PrimitiveJsonOptions.Default));
     }
 
     // ── Helpers ────────────────────────────────────────────────────────────────
@@ -149,10 +147,7 @@ public abstract class SimpleValueStringContractTests<TStruct>
     {
         var instance = (TStruct)Activator.CreateInstance(typeof(TStruct), ValidSample)!;
         // Use object.Equals via reflection to avoid compile-time operator resolution issues
-        var opEq = typeof(TStruct).GetMethod(
-            "op_Equality",
-            BindingFlags.Public | BindingFlags.Static,
-            [typeof(TStruct), typeof(string)]);
+        var opEq = typeof(TStruct).GetMethod("op_Equality", BindingFlags.Public | BindingFlags.Static, null, [typeof(TStruct), typeof(string)], null);
         Assert.NotNull(opEq); // operator ==(TStruct, string?) must exist
         Assert.True((bool)opEq!.Invoke(null, [instance, ValidSample])!);
         Assert.False((bool)opEq.Invoke(null, [instance, InvalidSample])!);
@@ -161,10 +156,7 @@ public abstract class SimpleValueStringContractTests<TStruct>
     [Fact]
     public void ImplicitConversion_StringToStruct_Succeeds()
     {
-        var op = typeof(TStruct).GetMethod(
-            "op_Implicit",
-            BindingFlags.Public | BindingFlags.Static,
-            [typeof(string)]);
+        var op = typeof(TStruct).GetMethod("op_Implicit", BindingFlags.Public | BindingFlags.Static, null, [typeof(string)], null);
         Assert.NotNull(op); // implicit operator TStruct(string) must exist
         var instance = op!.Invoke(null, [ValidSample]);
         Assert.NotNull(instance);
@@ -534,8 +526,7 @@ public abstract class SimpleValueXsdBooleanContractTests<TStruct>
     [Fact]
     public void TryCreate_Native_AlwaysSucceeds()
     {
-        var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(bool), typeof(TStruct).MakeByRefType()])!;
+        var method = typeof(TStruct).GetMethod("TryCreate", BindingFlags.Public | BindingFlags.Static, null, [typeof(bool), typeof(TStruct).MakeByRefType()], null)!;
         var args = new object?[] { true, null };
         Assert.True((bool)method.Invoke(null, args)!);
         Assert.NotNull(args[1]);
@@ -544,8 +535,7 @@ public abstract class SimpleValueXsdBooleanContractTests<TStruct>
     [Fact]
     public void TryCreate_StringValid_ReturnsTrue()
     {
-        var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var method = typeof(TStruct).GetMethod("TryCreate", BindingFlags.Public | BindingFlags.Static, null, [typeof(string), typeof(TStruct).MakeByRefType()], null)!;
         var args = new object?[] { "true", null };
         Assert.True((bool)method.Invoke(null, args)!);
         Assert.NotNull(args[1]);
@@ -554,8 +544,7 @@ public abstract class SimpleValueXsdBooleanContractTests<TStruct>
     [Fact]
     public void TryCreate_StringInvalid_ReturnsFalse()
     {
-        var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var method = typeof(TStruct).GetMethod("TryCreate", BindingFlags.Public | BindingFlags.Static, null, [typeof(string), typeof(TStruct).MakeByRefType()], null)!;
         var args = new object?[] { "maybe", null };
         Assert.False((bool)method.Invoke(null, args)!);
     }
@@ -564,9 +553,9 @@ public abstract class SimpleValueXsdBooleanContractTests<TStruct>
     public void JsonRoundTrip_Succeeds()
     {
         var instance = (TStruct)NativeCtor().Invoke([true])!;
-        var json = JsonSerializer.Serialize(instance, Iso20022JsonSerializerOptions.Default);
+        var json = JsonSerializer.Serialize(instance, Iso20022PrimitiveJsonOptions.Default);
         Assert.Equal("\"true\"", json);
-        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default);
+        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022PrimitiveJsonOptions.Default);
         Assert.Equal(instance, roundTripped);
     }
 
@@ -575,7 +564,7 @@ public abstract class SimpleValueXsdBooleanContractTests<TStruct>
     {
         const string json = "\"maybe\"";
         Assert.Throws<JsonException>(
-            () => JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default));
+            () => JsonSerializer.Deserialize<TStruct>(json, Iso20022PrimitiveJsonOptions.Default));
     }
 }
 
@@ -712,8 +701,7 @@ public abstract class SimpleValueXsdFloatingPointContractTests<TStruct, TValue>
     [Fact]
     public void TryCreate_Native_AlwaysSucceeds()
     {
-        var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(TValue), typeof(TStruct).MakeByRefType()])!;
+        var method = typeof(TStruct).GetMethod("TryCreate", BindingFlags.Public | BindingFlags.Static, null, [typeof(TValue), typeof(TStruct).MakeByRefType()], null)!;
         var args = new object?[] { FiniteSample, null };
         Assert.True((bool)method.Invoke(null, args)!);
         Assert.NotNull(args[1]);
@@ -722,8 +710,7 @@ public abstract class SimpleValueXsdFloatingPointContractTests<TStruct, TValue>
     [Fact]
     public void TryCreate_StringValid_ReturnsTrue()
     {
-        var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var method = typeof(TStruct).GetMethod("TryCreate", BindingFlags.Public | BindingFlags.Static, null, [typeof(string), typeof(TStruct).MakeByRefType()], null)!;
         var args = new object?[] { FiniteSampleWireText, null };
         Assert.True((bool)method.Invoke(null, args)!);
         Assert.NotNull(args[1]);
@@ -732,8 +719,7 @@ public abstract class SimpleValueXsdFloatingPointContractTests<TStruct, TValue>
     [Fact]
     public void TryCreate_StringInvalid_ReturnsFalse()
     {
-        var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var method = typeof(TStruct).GetMethod("TryCreate", BindingFlags.Public | BindingFlags.Static, null, [typeof(string), typeof(TStruct).MakeByRefType()], null)!;
         var args = new object?[] { "not-a-number", null };
         Assert.False((bool)method.Invoke(null, args)!);
     }
@@ -742,9 +728,9 @@ public abstract class SimpleValueXsdFloatingPointContractTests<TStruct, TValue>
     public void JsonRoundTrip_FiniteValue_Succeeds()
     {
         var instance = (TStruct)NativeCtor().Invoke([FiniteSample])!;
-        var json = JsonSerializer.Serialize(instance, Iso20022JsonSerializerOptions.Default);
+        var json = JsonSerializer.Serialize(instance, Iso20022PrimitiveJsonOptions.Default);
         Assert.Equal($"\"{FiniteSampleWireText}\"", json);
-        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default);
+        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022PrimitiveJsonOptions.Default);
         Assert.Equal(instance, roundTripped);
     }
 
@@ -752,9 +738,9 @@ public abstract class SimpleValueXsdFloatingPointContractTests<TStruct, TValue>
     public void JsonRoundTrip_PositiveInfinity_Succeeds()
     {
         var instance = (TStruct)NativeCtor().Invoke([PositiveInfinitySample])!;
-        var json = JsonSerializer.Serialize(instance, Iso20022JsonSerializerOptions.Default);
+        var json = JsonSerializer.Serialize(instance, Iso20022PrimitiveJsonOptions.Default);
         Assert.Equal("\"INF\"", json);
-        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default);
+        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022PrimitiveJsonOptions.Default);
         Assert.Equal(instance, roundTripped);
     }
 
@@ -763,7 +749,7 @@ public abstract class SimpleValueXsdFloatingPointContractTests<TStruct, TValue>
     {
         const string json = "\"not-a-number\"";
         Assert.Throws<JsonException>(
-            () => JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default));
+            () => JsonSerializer.Deserialize<TStruct>(json, Iso20022PrimitiveJsonOptions.Default));
     }
 }
 
@@ -885,8 +871,7 @@ public abstract class SimpleValueXsdGregorianScalarContractTests<TStruct, TValue
     [Fact]
     public void TryCreate_StringValid_ReturnsTrue()
     {
-        var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var method = typeof(TStruct).GetMethod("TryCreate", BindingFlags.Public | BindingFlags.Static, null, [typeof(string), typeof(TStruct).MakeByRefType()], null)!;
         var args = new object?[] { ValidNativeSampleWireCore, null };
         Assert.True((bool)method.Invoke(null, args)!);
         Assert.NotNull(args[1]);
@@ -895,8 +880,7 @@ public abstract class SimpleValueXsdGregorianScalarContractTests<TStruct, TValue
     [Fact]
     public void TryCreate_StringInvalid_ReturnsFalse()
     {
-        var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var method = typeof(TStruct).GetMethod("TryCreate", BindingFlags.Public | BindingFlags.Static, null, [typeof(string), typeof(TStruct).MakeByRefType()], null)!;
         var args = new object?[] { "not-a-value", null };
         Assert.False((bool)method.Invoke(null, args)!);
     }
@@ -905,9 +889,9 @@ public abstract class SimpleValueXsdGregorianScalarContractTests<TStruct, TValue
     public void JsonRoundTrip_NoTimezone_Succeeds()
     {
         var instance = (TStruct)NativeCtor().Invoke([ValidNativeSample, null])!;
-        var json = JsonSerializer.Serialize(instance, Iso20022JsonSerializerOptions.Default);
+        var json = JsonSerializer.Serialize(instance, Iso20022PrimitiveJsonOptions.Default);
         Assert.Equal($"\"{ValidNativeSampleWireCore}\"", json);
-        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default);
+        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022PrimitiveJsonOptions.Default);
         Assert.Equal(instance, roundTripped);
     }
 
@@ -915,9 +899,9 @@ public abstract class SimpleValueXsdGregorianScalarContractTests<TStruct, TValue
     public void JsonRoundTrip_WithTimezone_Succeeds()
     {
         var instance = (TStruct)NativeCtor().Invoke([ValidNativeSample, TimeSpan.Zero])!;
-        var json = JsonSerializer.Serialize(instance, Iso20022JsonSerializerOptions.Default);
+        var json = JsonSerializer.Serialize(instance, Iso20022PrimitiveJsonOptions.Default);
         Assert.Equal($"\"{ValidNativeSampleWireCore}Z\"", json);
-        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default);
+        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022PrimitiveJsonOptions.Default);
         Assert.Equal(instance, roundTripped);
     }
 }
@@ -1018,8 +1002,7 @@ public abstract class SimpleValueCompositeScalarContractTests<TStruct, TValue>
     [Fact]
     public void TryCreate_StringValid_ReturnsTrue()
     {
-        var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var method = typeof(TStruct).GetMethod("TryCreate", BindingFlags.Public | BindingFlags.Static, null, [typeof(string), typeof(TStruct).MakeByRefType()], null)!;
         var args = new object?[] { ValidWireText, null };
         Assert.True((bool)method.Invoke(null, args)!);
         Assert.NotNull(args[1]);
@@ -1028,8 +1011,7 @@ public abstract class SimpleValueCompositeScalarContractTests<TStruct, TValue>
     [Fact]
     public void TryCreate_StringInvalid_ReturnsFalse()
     {
-        var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var method = typeof(TStruct).GetMethod("TryCreate", BindingFlags.Public | BindingFlags.Static, null, [typeof(string), typeof(TStruct).MakeByRefType()], null)!;
         var args = new object?[] { InvalidWireText, null };
         Assert.False((bool)method.Invoke(null, args)!);
     }
@@ -1038,9 +1020,9 @@ public abstract class SimpleValueCompositeScalarContractTests<TStruct, TValue>
     public void JsonRoundTrip_Succeeds()
     {
         var instance = (TStruct)NativeCtor().Invoke([ValidNativeSample])!;
-        var json = JsonSerializer.Serialize(instance, Iso20022JsonSerializerOptions.Default);
+        var json = JsonSerializer.Serialize(instance, Iso20022PrimitiveJsonOptions.Default);
         Assert.Equal($"\"{ValidWireText}\"", json);
-        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default);
+        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022PrimitiveJsonOptions.Default);
         Assert.Equal(instance, roundTripped);
     }
 
@@ -1049,7 +1031,7 @@ public abstract class SimpleValueCompositeScalarContractTests<TStruct, TValue>
     {
         var json = $"\"{InvalidWireText}\"";
         Assert.Throws<JsonException>(
-            () => JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default));
+            () => JsonSerializer.Deserialize<TStruct>(json, Iso20022PrimitiveJsonOptions.Default));
     }
 }
 
@@ -1129,8 +1111,7 @@ public abstract class SimpleValueXsdGYearMonthContractTests<TStruct>
     [Fact]
     public void TryCreate_StringValid_ReturnsTrue()
     {
-        var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var method = typeof(TStruct).GetMethod("TryCreate", BindingFlags.Public | BindingFlags.Static, null, [typeof(string), typeof(TStruct).MakeByRefType()], null)!;
         var args = new object?[] { "2026-08", null };
         Assert.True((bool)method.Invoke(null, args)!);
         Assert.NotNull(args[1]);
@@ -1139,8 +1120,7 @@ public abstract class SimpleValueXsdGYearMonthContractTests<TStruct>
     [Fact]
     public void TryCreate_StringInvalid_ReturnsFalse()
     {
-        var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var method = typeof(TStruct).GetMethod("TryCreate", BindingFlags.Public | BindingFlags.Static, null, [typeof(string), typeof(TStruct).MakeByRefType()], null)!;
         var args = new object?[] { "not-a-value", null };
         Assert.False((bool)method.Invoke(null, args)!);
     }
@@ -1149,9 +1129,9 @@ public abstract class SimpleValueXsdGYearMonthContractTests<TStruct>
     public void JsonRoundTrip_Succeeds()
     {
         var instance = (TStruct)NativeCtor().Invoke([2026, (byte)8, TimeSpan.Zero])!;
-        var json = JsonSerializer.Serialize(instance, Iso20022JsonSerializerOptions.Default);
+        var json = JsonSerializer.Serialize(instance, Iso20022PrimitiveJsonOptions.Default);
         Assert.Equal("\"2026-08Z\"", json);
-        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default);
+        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022PrimitiveJsonOptions.Default);
         Assert.Equal(instance, roundTripped);
     }
 }
@@ -1239,8 +1219,7 @@ public abstract class SimpleValueXsdGMonthDayContractTests<TStruct>
     [Fact]
     public void TryCreate_StringValid_ReturnsTrue()
     {
-        var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var method = typeof(TStruct).GetMethod("TryCreate", BindingFlags.Public | BindingFlags.Static, null, [typeof(string), typeof(TStruct).MakeByRefType()], null)!;
         var args = new object?[] { "--08-15", null };
         Assert.True((bool)method.Invoke(null, args)!);
         Assert.NotNull(args[1]);
@@ -1249,8 +1228,7 @@ public abstract class SimpleValueXsdGMonthDayContractTests<TStruct>
     [Fact]
     public void TryCreate_StringInvalid_ReturnsFalse()
     {
-        var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var method = typeof(TStruct).GetMethod("TryCreate", BindingFlags.Public | BindingFlags.Static, null, [typeof(string), typeof(TStruct).MakeByRefType()], null)!;
         var args = new object?[] { "not-a-value", null };
         Assert.False((bool)method.Invoke(null, args)!);
     }
@@ -1259,9 +1237,9 @@ public abstract class SimpleValueXsdGMonthDayContractTests<TStruct>
     public void JsonRoundTrip_Succeeds()
     {
         var instance = (TStruct)NativeCtor().Invoke([(byte)8, (byte)15, TimeSpan.Zero])!;
-        var json = JsonSerializer.Serialize(instance, Iso20022JsonSerializerOptions.Default);
+        var json = JsonSerializer.Serialize(instance, Iso20022PrimitiveJsonOptions.Default);
         Assert.Equal("\"--08-15Z\"", json);
-        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default);
+        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022PrimitiveJsonOptions.Default);
         Assert.Equal(instance, roundTripped);
     }
 }
@@ -1346,8 +1324,7 @@ public abstract class SimpleValueXsdDurationContractTests<TStruct>
     [Fact]
     public void TryCreate_StringValid_ReturnsTrue()
     {
-        var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var method = typeof(TStruct).GetMethod("TryCreate", BindingFlags.Public | BindingFlags.Static, null, [typeof(string), typeof(TStruct).MakeByRefType()], null)!;
         var args = new object?[] { "P1Y", null };
         Assert.True((bool)method.Invoke(null, args)!);
         Assert.NotNull(args[1]);
@@ -1356,8 +1333,7 @@ public abstract class SimpleValueXsdDurationContractTests<TStruct>
     [Fact]
     public void TryCreate_StringInvalid_ReturnsFalse()
     {
-        var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var method = typeof(TStruct).GetMethod("TryCreate", BindingFlags.Public | BindingFlags.Static, null, [typeof(string), typeof(TStruct).MakeByRefType()], null)!;
         var args = new object?[] { "not-a-duration", null };
         Assert.False((bool)method.Invoke(null, args)!);
     }
@@ -1366,9 +1342,9 @@ public abstract class SimpleValueXsdDurationContractTests<TStruct>
     public void JsonRoundTrip_Succeeds()
     {
         var instance = (TStruct)StringCtor().Invoke(["P1Y2M3DT4H5M6.5S"])!;
-        var json = JsonSerializer.Serialize(instance, Iso20022JsonSerializerOptions.Default);
+        var json = JsonSerializer.Serialize(instance, Iso20022PrimitiveJsonOptions.Default);
         Assert.Equal("\"P1Y2M3DT4H5M6.5S\"", json);
-        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default);
+        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022PrimitiveJsonOptions.Default);
         Assert.Equal(instance, roundTripped);
     }
 }
@@ -1439,8 +1415,7 @@ public abstract class SimpleValueXsdBinaryContractTests<TStruct>
     [Fact]
     public void TryCreate_NativeValid_ReturnsTrue()
     {
-        var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(byte[]), typeof(TStruct).MakeByRefType()])!;
+        var method = typeof(TStruct).GetMethod("TryCreate", BindingFlags.Public | BindingFlags.Static, null, [typeof(byte[]), typeof(TStruct).MakeByRefType()], null)!;
         var args = new object?[] { ValidNativeSample, null };
         Assert.True((bool)method.Invoke(null, args)!);
         Assert.NotNull(args[1]);
@@ -1449,8 +1424,7 @@ public abstract class SimpleValueXsdBinaryContractTests<TStruct>
     [Fact]
     public void TryCreate_StringValid_ReturnsTrue()
     {
-        var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var method = typeof(TStruct).GetMethod("TryCreate", BindingFlags.Public | BindingFlags.Static, null, [typeof(string), typeof(TStruct).MakeByRefType()], null)!;
         var args = new object?[] { ValidNativeSampleWireText, null };
         Assert.True((bool)method.Invoke(null, args)!);
         Assert.NotNull(args[1]);
@@ -1459,8 +1433,7 @@ public abstract class SimpleValueXsdBinaryContractTests<TStruct>
     [Fact]
     public void TryCreate_StringInvalid_ReturnsFalse()
     {
-        var method = typeof(TStruct).GetMethod(
-            "TryCreate", BindingFlags.Public | BindingFlags.Static, [typeof(string), typeof(TStruct).MakeByRefType()])!;
+        var method = typeof(TStruct).GetMethod("TryCreate", BindingFlags.Public | BindingFlags.Static, null, [typeof(string), typeof(TStruct).MakeByRefType()], null)!;
         var args = new object?[] { InvalidWireText, null };
         Assert.False((bool)method.Invoke(null, args)!);
     }
@@ -1469,9 +1442,9 @@ public abstract class SimpleValueXsdBinaryContractTests<TStruct>
     public void JsonRoundTrip_Succeeds()
     {
         var instance = (TStruct)NativeCtor().Invoke([ValidNativeSample])!;
-        var json = JsonSerializer.Serialize(instance, Iso20022JsonSerializerOptions.Default);
+        var json = JsonSerializer.Serialize(instance, Iso20022PrimitiveJsonOptions.Default);
         Assert.Equal($"\"{ValidNativeSampleWireText}\"", json);
-        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default);
+        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022PrimitiveJsonOptions.Default);
         Assert.Equal(instance, roundTripped);
     }
 
@@ -1480,7 +1453,7 @@ public abstract class SimpleValueXsdBinaryContractTests<TStruct>
     {
         var json = $"\"{InvalidWireText}\"";
         Assert.Throws<JsonException>(
-            () => JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default));
+            () => JsonSerializer.Deserialize<TStruct>(json, Iso20022PrimitiveJsonOptions.Default));
     }
 }
 
@@ -1840,9 +1813,9 @@ public abstract class SimpleValueISOYearMonthContractTests<TStruct>
     public void JsonRoundTrip_Succeeds()
     {
         var instance = (TStruct)NativeCtor().Invoke([2026, 8])!;
-        var json = JsonSerializer.Serialize(instance, Iso20022JsonSerializerOptions.Default);
+        var json = JsonSerializer.Serialize(instance, Iso20022PrimitiveJsonOptions.Default);
         Assert.Equal("\"2026-08\"", json);
-        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default);
+        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022PrimitiveJsonOptions.Default);
         Assert.Equal(instance, roundTripped);
     }
 }
@@ -1907,9 +1880,9 @@ public abstract class SimpleValueCompositeIntContractTests<TStruct>
     public void JsonRoundTrip_Succeeds()
     {
         var instance = (TStruct)NativeCtor().Invoke([ValidNativeSample])!;
-        var json = JsonSerializer.Serialize(instance, Iso20022JsonSerializerOptions.Default);
+        var json = JsonSerializer.Serialize(instance, Iso20022PrimitiveJsonOptions.Default);
         Assert.Equal($"\"{ValidWireText}\"", json);
-        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default);
+        var roundTripped = JsonSerializer.Deserialize<TStruct>(json, Iso20022PrimitiveJsonOptions.Default);
         Assert.Equal(instance, roundTripped);
     }
 }
@@ -1987,10 +1960,10 @@ public abstract class SimpleValueNativeScalarContractTests<TStruct, TValue>
     public void JsonWritesTheWireTextAndReadsItBack()
     {
         var instance = FromNative(ValidNativeSample);
-        var json = JsonSerializer.Serialize(instance, Iso20022JsonSerializerOptions.Default);
+        var json = JsonSerializer.Serialize(instance, Iso20022PrimitiveJsonOptions.Default);
         Assert.Equal($"\"{ValidNativeSampleWire}\"", json);
-        Assert.Equal(instance, JsonSerializer.Deserialize<TStruct>(json, Iso20022JsonSerializerOptions.Default));
-        Assert.Throws<JsonException>(() => JsonSerializer.Deserialize<TStruct>("\"not-a-value\"", Iso20022JsonSerializerOptions.Default));
+        Assert.Equal(instance, JsonSerializer.Deserialize<TStruct>(json, Iso20022PrimitiveJsonOptions.Default));
+        Assert.Throws<JsonException>(() => JsonSerializer.Deserialize<TStruct>("\"not-a-value\"", Iso20022PrimitiveJsonOptions.Default));
     }
 }
 

@@ -2,7 +2,8 @@
 
   <PropertyGroup>
     <!-- TFM policy: see BeneficialStrategies.Iso20022.Common.csproj. -->
-    <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net8.0;net10.0</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <RootNamespace>BeneficialStrategies.Iso20022</RootNamespace>
@@ -20,5 +21,13 @@
     <None Include="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
+
+  <!-- netstandard2.0 (.NET Framework 4.6.1+, Mono, Unity): what the newer runtimes have in the box -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="System.Text.Json" Version="8.*" />
+    <PackageReference Include="Portable.System.DateTimeOnly" Version="8.*" />
+    <PackageReference Include="Polyfill" Version="11.*" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.Bcl.HashCode" Version="1.*" />
+  </ItemGroup>
 
 </Project>

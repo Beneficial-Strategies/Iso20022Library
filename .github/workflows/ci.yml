@@ -33,3 +33,17 @@ jobs:
       - name: Test the release tooling
         run: python3 -m unittest -q test_prepare_release
         working-directory: tools/releasing
+
+  # The netstandard2.0 build of Primitives is for .NET Framework (4.6.1 and later), Mono and Unity. Its tests run on .NET Framework 4.8,
+  # which needs Windows. (The other packages are net8.0 and net10.0 only.)
+  primitives-net48:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Test Primitives on .NET Framework 4.8
+        run: dotnet test src/BeneficialStrategies.Iso20022.Primitives.Tests -c Release -f net48

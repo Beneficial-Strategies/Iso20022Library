@@ -3,6 +3,9 @@
   <PropertyGroup>
     <!-- Mirrors the library's TFM policy so both targets actually get exercised, not just compiled — see Common.csproj. -->
     <TargetFrameworks>net8.0;net10.0</TargetFrameworks>
+    <!-- .NET Framework 4.8 runs the netstandard2.0 build of Primitives; it needs Windows (CI has a job for it) -->
+    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('Windows')) Or '$(BuildNet48)' == 'true'">$(TargetFrameworks);net48</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <RootNamespace>BeneficialStrategies.Iso20022</RootNamespace>
@@ -25,8 +28,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BeneficialStrategies.Iso20022.Primitives\BeneficialStrategies.Iso20022.Primitives.csproj" />
-    <!-- The contract tests round-trip JSON through Iso20022JsonSerializerOptions, which stays in Common (it also registers the value-list converter). -->
-    <ProjectReference Include="..\BeneficialStrategies.Iso20022.Common\BeneficialStrategies.Iso20022.Common.csproj" />
+  </ItemGroup>
+
+  <!-- the tests use reflection overloads and Index that .NET Framework lacks -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'net48'">
+    <PackageReference Include="Polyfill" Version="11.*" PrivateAssets="all" />
   </ItemGroup>
 
   <ItemGroup>
