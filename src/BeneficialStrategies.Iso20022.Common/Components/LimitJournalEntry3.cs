@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record LimitJournalEntry3
 {
     /// <summary>
-    /// Account Servicer Reference.
+    /// Journal Date.
     /// </summary>
-    [DisplayName("Account Servicer Reference")]
-    [IsoXmlTag("AcctSvcrRef")]
-    public Max35Text? AccountServicerReference { get; init; }
-
-    /// <summary>
-    /// Additional Entry Information.
-    /// </summary>
-    [DisplayName("Additional Entry Information")]
-    [IsoXmlTag("AddtlNtryInf")]
-    public Max500Text? AdditionalEntryInformation { get; init; }
-
-    /// <summary>
-    /// Amount.
-    /// </summary>
-    [DisplayName("Amount")]
-    [IsoXmlTag("Amt")]
-    public required Amount2Choice_ Amount { get; init; }
+    [DisplayName("Journal Date")]
+    [IsoXmlTag("JrnlDt")]
+    public required DateAndDateTime2Choice_ JournalDate { get; init; }
 
     /// <summary>
     /// Credit Debit Indicator.
@@ -45,11 +31,11 @@ public record LimitJournalEntry3
     public required CreditDebitCode CreditDebitIndicator { get; init; }
 
     /// <summary>
-    /// Journal Date.
+    /// Amount.
     /// </summary>
-    [DisplayName("Journal Date")]
-    [IsoXmlTag("JrnlDt")]
-    public required DateAndDateTime2Choice_ JournalDate { get; init; }
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    public required Amount2Choice_ Amount { get; init; }
 
     /// <summary>
     /// Market Infrastructure Transaction Identification.
@@ -59,6 +45,20 @@ public record LimitJournalEntry3
     public Max35Text? MarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
+    /// Transaction Identification.
+    /// </summary>
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public Max35Text? TransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Account Servicer Reference.
+    /// </summary>
+    [DisplayName("Account Servicer Reference")]
+    [IsoXmlTag("AcctSvcrRef")]
+    public Max35Text? AccountServicerReference { get; init; }
+
+    /// <summary>
     /// Processor Transaction Identification.
     /// </summary>
     [DisplayName("Processor Transaction Identification")]
@@ -66,9 +66,9 @@ public record LimitJournalEntry3
     public Max35Text? ProcessorTransactionIdentification { get; init; }
 
     /// <summary>
-    /// Transaction Identification.
+    /// Additional Entry Information.
     /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public Max35Text? TransactionIdentification { get; init; }
+    [DisplayName("Additional Entry Information")]
+    [IsoXmlTag("AddtlNtryInf")]
+    public Max500Text? AdditionalEntryInformation { get; init; }
 }

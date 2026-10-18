@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TargetMarket4
 {
     /// <summary>
-    /// Ability To Bear Losses.
+    /// Reference Date.
     /// </summary>
-    [DisplayName("Ability To Bear Losses")]
-    [IsoXmlTag("AbltyToBearLosses")]
-    public LossBearing2? AbilityToBearLosses { get; init; }
-
-    /// <summary>
-    /// Client Objectives And Needs.
-    /// </summary>
-    [DisplayName("Client Objectives And Needs")]
-    [IsoXmlTag("ClntObjctvsAndNeeds")]
-    public InvestorRequirements4? ClientObjectivesAndNeeds { get; init; }
+    [DisplayName("Reference Date")]
+    [IsoXmlTag("RefDt")]
+    public ISODate? ReferenceDate { get; init; }
 
     /// <summary>
     /// Investor Type.
@@ -45,18 +38,11 @@ public record TargetMarket4
     public InvestorKnowledge1? KnowledgeAndOrExperience { get; init; }
 
     /// <summary>
-    /// Other.
+    /// Ability To Bear Losses.
     /// </summary>
-    [DisplayName("Other")]
-    [IsoXmlTag("Othr")]
-    public ValueList<OtherTargetMarket1> Other { get; init; } = [];
-
-    /// <summary>
-    /// Reference Date.
-    /// </summary>
-    [DisplayName("Reference Date")]
-    [IsoXmlTag("RefDt")]
-    public ISODate? ReferenceDate { get; init; }
+    [DisplayName("Ability To Bear Losses")]
+    [IsoXmlTag("AbltyToBearLosses")]
+    public LossBearing2? AbilityToBearLosses { get; init; }
 
     /// <summary>
     /// Risk Tolerance.
@@ -64,4 +50,18 @@ public record TargetMarket4
     [DisplayName("Risk Tolerance")]
     [IsoXmlTag("RskTlrnce")]
     public RiskTolerance1? RiskTolerance { get; init; }
+
+    /// <summary>
+    /// Client Objectives And Needs.
+    /// </summary>
+    [DisplayName("Client Objectives And Needs")]
+    [IsoXmlTag("ClntObjctvsAndNeeds")]
+    public InvestorRequirements4? ClientObjectivesAndNeeds { get; init; }
+
+    /// <summary>
+    /// Other.
+    /// </summary>
+    [DisplayName("Other")]
+    [IsoXmlTag("Othr")]
+    public ValueList<OtherTargetMarket1> Other { get; init; } = [];
 }

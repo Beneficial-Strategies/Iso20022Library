@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record RegisteredContractJournal3
 {
     /// <summary>
-    /// Closure Date.
-    /// </summary>
-    [DisplayName("Closure Date")]
-    [IsoXmlTag("ClsrDt")]
-    public required ISODate ClosureDate { get; init; }
-
-    /// <summary>
-    /// Closure Reason.
-    /// </summary>
-    [DisplayName("Closure Reason")]
-    [IsoXmlTag("ClsrRsn")]
-    public required ContractClosureReason1Choice_ ClosureReason { get; init; }
-
-    /// <summary>
     /// Registration Agent.
     /// </summary>
     [DisplayName("Registration Agent")]
@@ -43,4 +29,18 @@ public record RegisteredContractJournal3
     [DisplayName("Unique Identification")]
     [IsoXmlTag("UnqId")]
     public DocumentIdentification28? UniqueIdentification { get; init; }
+
+    /// <summary>
+    /// Closure Date.
+    /// </summary>
+    [DisplayName("Closure Date")]
+    [IsoXmlTag("ClsrDt")]
+    public required ISODate ClosureDate { get; init; }
+
+    /// <summary>
+    /// Closure Reason.
+    /// </summary>
+    [DisplayName("Closure Reason")]
+    [IsoXmlTag("ClsrRsn")]
+    public required ContractClosureReason1Choice_ ClosureReason { get; init; }
 }

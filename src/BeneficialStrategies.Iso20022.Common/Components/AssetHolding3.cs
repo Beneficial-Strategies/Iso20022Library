@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AssetHolding3
 {
     /// <summary>
+    /// Post Haircut Value.
+    /// </summary>
+    [DisplayName("Post Haircut Value")]
+    [IsoXmlTag("PstHrcutVal")]
+    public required ActiveCurrencyAnd24Amount PostHaircutValue { get; init; }
+
+    /// <summary>
     /// Asset Type.
     /// </summary>
     [DisplayName("Asset Type")]
@@ -29,11 +36,4 @@ public record AssetHolding3
     [DisplayName("Collateral Requirement")]
     [IsoXmlTag("CollRqrmnt")]
     public required CollateralAccountType3Code CollateralRequirement { get; init; }
-
-    /// <summary>
-    /// Post Haircut Value.
-    /// </summary>
-    [DisplayName("Post Haircut Value")]
-    [IsoXmlTag("PstHrcutVal")]
-    public required ActiveCurrencyAnd24Amount PostHaircutValue { get; init; }
 }

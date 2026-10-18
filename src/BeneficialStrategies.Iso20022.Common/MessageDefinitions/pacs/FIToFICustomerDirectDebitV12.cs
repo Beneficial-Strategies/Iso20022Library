@@ -58,19 +58,19 @@ public record FIToFICustomerDirectDebitV12 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Set of characteristics shared by all individual transactions included in the message.
+    /// </summary>
+    [DisplayName("Group Header")]
+    [IsoXmlTag("GrpHdr")]
+    public required GroupHeader125 GroupHeader { get; init; }
+
+    /// <summary>
     /// Set of elements providing information specific to the individual direct debit(s).
     /// </summary>
     [DisplayName("Direct Debit Transaction Information")]
     [IsoXmlTag("DrctDbtTxInf")]
     public ValueList<DirectDebitTransactionInformation35> DirectDebitTransactionInformation { get; init; } =
         [];
-
-    /// <summary>
-    /// Set of characteristics shared by all individual transactions included in the message.
-    /// </summary>
-    [DisplayName("Group Header")]
-    [IsoXmlTag("GrpHdr")]
-    public required GroupHeader125 GroupHeader { get; init; }
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.

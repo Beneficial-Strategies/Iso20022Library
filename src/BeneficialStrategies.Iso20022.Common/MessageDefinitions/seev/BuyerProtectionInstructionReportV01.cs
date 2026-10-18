@@ -46,20 +46,6 @@ public record BuyerProtectionInstructionReportV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Corporate Action Details.
-    /// </summary>
-    [DisplayName("Corporate Action Details")]
-    [IsoXmlTag("CorpActnDtls")]
-    public ValueList<CorporateActionDetails1> CorporateActionDetails { get; init; } = [];
-
-    /// <summary>
-    /// Financial Institution Identification.
-    /// </summary>
-    [DisplayName("Financial Institution Identification")]
-    [IsoXmlTag("FIId")]
-    public required FinancialInstitutionIdentification28 FinancialInstitutionIdentification { get; init; }
-
-    /// <summary>
     /// Pagination.
     /// </summary>
     [DisplayName("Pagination")]
@@ -72,6 +58,20 @@ public record BuyerProtectionInstructionReportV01 : IOuterRecord
     [DisplayName("Statement General Details")]
     [IsoXmlTag("StmtGnlDtls")]
     public required Statement87 StatementGeneralDetails { get; init; }
+
+    /// <summary>
+    /// Financial Institution Identification.
+    /// </summary>
+    [DisplayName("Financial Institution Identification")]
+    [IsoXmlTag("FIId")]
+    public required FinancialInstitutionIdentification28 FinancialInstitutionIdentification { get; init; }
+
+    /// <summary>
+    /// Corporate Action Details.
+    /// </summary>
+    [DisplayName("Corporate Action Details")]
+    [IsoXmlTag("CorpActnDtls")]
+    public ValueList<CorporateActionDetails1> CorporateActionDetails { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

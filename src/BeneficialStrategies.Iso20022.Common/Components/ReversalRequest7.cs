@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ReversalRequest7
 {
     /// <summary>
-    /// Customer Order.
+    /// Reversal Transaction.
     /// </summary>
-    [DisplayName("Customer Order")]
-    [IsoXmlTag("CstmrOrdr")]
-    public CustomerOrder1? CustomerOrder { get; init; }
+    [DisplayName("Reversal Transaction")]
+    [IsoXmlTag("RvslTx")]
+    public PaymentTransaction165? ReversalTransaction { get; init; }
 
     /// <summary>
     /// Loyalty Data.
@@ -38,16 +38,16 @@ public record ReversalRequest7
     public required ReversalReason1Code ReversalReason { get; init; }
 
     /// <summary>
-    /// Reversal Transaction.
-    /// </summary>
-    [DisplayName("Reversal Transaction")]
-    [IsoXmlTag("RvslTx")]
-    public PaymentTransaction165? ReversalTransaction { get; init; }
-
-    /// <summary>
     /// Reversed Amount.
     /// </summary>
     [DisplayName("Reversed Amount")]
     [IsoXmlTag("RvsdAmt")]
     public ImpliedCurrencyAndAmount? ReversedAmount { get; init; }
+
+    /// <summary>
+    /// Customer Order.
+    /// </summary>
+    [DisplayName("Customer Order")]
+    [IsoXmlTag("CstmrOrdr")]
+    public CustomerOrder1? CustomerOrder { get; init; }
 }

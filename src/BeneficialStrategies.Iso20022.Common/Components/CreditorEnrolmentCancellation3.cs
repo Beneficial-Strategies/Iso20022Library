@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CreditorEnrolmentCancellation3
 {
     /// <summary>
-    /// Cancellation Reason.
-    /// </summary>
-    [DisplayName("Cancellation Reason")]
-    [IsoXmlTag("CxlRsn")]
-    public CreditorEnrolmentCancellationReason3? CancellationReason { get; init; }
-
-    /// <summary>
     /// Original Business Instruction.
     /// </summary>
     [DisplayName("Original Business Instruction")]
     [IsoXmlTag("OrgnlBizInstr")]
     public OriginalBusinessInstruction1? OriginalBusinessInstruction { get; init; }
+
+    /// <summary>
+    /// Cancellation Reason.
+    /// </summary>
+    [DisplayName("Cancellation Reason")]
+    [IsoXmlTag("CxlRsn")]
+    public CreditorEnrolmentCancellationReason3? CancellationReason { get; init; }
 
     /// <summary>
     /// Original Enrolment.

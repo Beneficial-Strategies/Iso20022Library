@@ -46,13 +46,6 @@ public record CaseStatusReportV06 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Case.
-    /// </summary>
-    [DisplayName("Case")]
-    [IsoXmlTag("Case")]
-    public required Case6 Case { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
@@ -60,11 +53,11 @@ public record CaseStatusReportV06 : IOuterRecord
     public required ReportHeader7 Header { get; init; }
 
     /// <summary>
-    /// New Assignment.
+    /// Case.
     /// </summary>
-    [DisplayName("New Assignment")]
-    [IsoXmlTag("NewAssgnmt")]
-    public CaseAssignment6? NewAssignment { get; init; }
+    [DisplayName("Case")]
+    [IsoXmlTag("Case")]
+    public required Case6 Case { get; init; }
 
     /// <summary>
     /// Status.
@@ -72,6 +65,13 @@ public record CaseStatusReportV06 : IOuterRecord
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
     public required CaseStatus2 Status { get; init; }
+
+    /// <summary>
+    /// New Assignment.
+    /// </summary>
+    [DisplayName("New Assignment")]
+    [IsoXmlTag("NewAssgnmt")]
+    public CaseAssignment6? NewAssignment { get; init; }
 
     /// <summary>
     /// Supplementary Data.

@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ItemDescription2
 {
     /// <summary>
-    /// Description.
-    /// </summary>
-    [DisplayName("Description")]
-    [IsoXmlTag("Desc")]
-    public ValueList<Max8000Text> Description { get; init; } = [];
-
-    /// <summary>
     /// Language.
     /// </summary>
     [DisplayName("Language")]
@@ -36,4 +29,11 @@ public record ItemDescription2
     [DisplayName("Title")]
     [IsoXmlTag("Titl")]
     public Max1025Text? Title { get; init; }
+
+    /// <summary>
+    /// Description.
+    /// </summary>
+    [DisplayName("Description")]
+    [IsoXmlTag("Desc")]
+    public ValueList<Max8000Text> Description { get; init; } = [];
 }

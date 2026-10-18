@@ -24,16 +24,16 @@ public record LimitCriteria7
     public Max35Text? NewQueryName { get; init; }
 
     /// <summary>
-    /// Return Criteria.
-    /// </summary>
-    [DisplayName("Return Criteria")]
-    [IsoXmlTag("RtrCrit")]
-    public LimitReturnCriteria2? ReturnCriteria { get; init; }
-
-    /// <summary>
     /// Search Criteria.
     /// </summary>
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
     public ValueList<LimitSearchCriteria7> SearchCriteria { get; init; } = [];
+
+    /// <summary>
+    /// Return Criteria.
+    /// </summary>
+    [DisplayName("Return Criteria")]
+    [IsoXmlTag("RtrCrit")]
+    public LimitReturnCriteria2? ReturnCriteria { get; init; }
 }

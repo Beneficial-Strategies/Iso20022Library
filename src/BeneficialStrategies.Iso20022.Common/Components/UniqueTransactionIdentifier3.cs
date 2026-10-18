@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record UniqueTransactionIdentifier3
 {
     /// <summary>
-    /// Prior Unique Transaction Identifier.
-    /// </summary>
-    [DisplayName("Prior Unique Transaction Identifier")]
-    [IsoXmlTag("PrrUnqTxIdr")]
-    public ValueList<UTIIdentifier> PriorUniqueTransactionIdentifier { get; init; } = [];
-
-    /// <summary>
     /// Unique Transaction Identifier.
     /// </summary>
     [DisplayName("Unique Transaction Identifier")]
     [IsoXmlTag("UnqTxIdr")]
     public required UTIIdentifier UniqueTransactionIdentifier { get; init; }
+
+    /// <summary>
+    /// Prior Unique Transaction Identifier.
+    /// </summary>
+    [DisplayName("Prior Unique Transaction Identifier")]
+    [IsoXmlTag("PrrUnqTxIdr")]
+    public ValueList<UTIIdentifier> PriorUniqueTransactionIdentifier { get; init; } = [];
 }

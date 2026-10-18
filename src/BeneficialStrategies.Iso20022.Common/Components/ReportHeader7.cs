@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ReportHeader7
 {
     /// <summary>
-    /// Date and time at which the message was created.
+    /// Point to point reference as assigned by the case assigner to unambiguously identify the case status report.
     /// </summary>
-    [DisplayName("Creation Date Time")]
-    [IsoXmlTag("CreDtTm")]
-    public required ISODateTime CreationDateTime { get; init; }
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Party reporting the status of the investigation case.
@@ -31,16 +31,16 @@ public record ReportHeader7
     public required Party50Choice_ From { get; init; }
 
     /// <summary>
-    /// Point to point reference as assigned by the case assigner to unambiguously identify the case status report.
-    /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public required Max35Text Identification { get; init; }
-
-    /// <summary>
     /// Party to which the status of the case is reported.
     /// </summary>
     [DisplayName("To")]
     [IsoXmlTag("To")]
     public required Party50Choice_ To { get; init; }
+
+    /// <summary>
+    /// Date and time at which the message was created.
+    /// </summary>
+    [DisplayName("Creation Date Time")]
+    [IsoXmlTag("CreDtTm")]
+    public required ISODateTime CreationDateTime { get; init; }
 }

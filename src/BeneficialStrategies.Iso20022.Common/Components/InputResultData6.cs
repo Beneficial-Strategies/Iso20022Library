@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record InputResultData6
 {
     /// <summary>
+    /// Input Command.
+    /// </summary>
+    [DisplayName("Input Command")]
+    [IsoXmlTag("InptCmd")]
+    public required InputCommand1Code InputCommand { get; init; }
+
+    /// <summary>
     /// Confirmed Flag.
     /// </summary>
     [DisplayName("Confirmed Flag")]
@@ -31,20 +38,6 @@ public record InputResultData6
     public Number? FunctionKey { get; init; }
 
     /// <summary>
-    /// Image Captured Signature.
-    /// </summary>
-    [DisplayName("Image Captured Signature")]
-    [IsoXmlTag("ImgCaptrdSgntr")]
-    public CapturedSignature1? ImageCapturedSignature { get; init; }
-
-    /// <summary>
-    /// Input Command.
-    /// </summary>
-    [DisplayName("Input Command")]
-    [IsoXmlTag("InptCmd")]
-    public required InputCommand1Code InputCommand { get; init; }
-
-    /// <summary>
     /// Input Message.
     /// </summary>
     [DisplayName("Input Message")]
@@ -57,4 +50,11 @@ public record InputResultData6
     [DisplayName("Password")]
     [IsoXmlTag("Pwd")]
     public ContentInformationType39? Password { get; init; }
+
+    /// <summary>
+    /// Image Captured Signature.
+    /// </summary>
+    [DisplayName("Image Captured Signature")]
+    [IsoXmlTag("ImgCaptrdSgntr")]
+    public CapturedSignature1? ImageCapturedSignature { get; init; }
 }

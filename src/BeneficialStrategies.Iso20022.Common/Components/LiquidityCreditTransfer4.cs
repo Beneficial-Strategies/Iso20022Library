@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record LiquidityCreditTransfer4
 {
     /// <summary>
+    /// Liquidity Transfer Identification.
+    /// </summary>
+    [DisplayName("Liquidity Transfer Identification")]
+    [IsoXmlTag("LqdtyTrfId")]
+    public PaymentIdentification8? LiquidityTransferIdentification { get; init; }
+
+    /// <summary>
     /// Creditor.
     /// </summary>
     [DisplayName("Creditor")]
@@ -29,6 +36,13 @@ public record LiquidityCreditTransfer4
     [DisplayName("Creditor Account")]
     [IsoXmlTag("CdtrAcct")]
     public CashAccount40? CreditorAccount { get; init; }
+
+    /// <summary>
+    /// Transferred Amount.
+    /// </summary>
+    [DisplayName("Transferred Amount")]
+    [IsoXmlTag("TrfdAmt")]
+    public required Amount2Choice_ TransferredAmount { get; init; }
 
     /// <summary>
     /// Debtor.
@@ -45,23 +59,9 @@ public record LiquidityCreditTransfer4
     public CashAccount40? DebtorAccount { get; init; }
 
     /// <summary>
-    /// Liquidity Transfer Identification.
-    /// </summary>
-    [DisplayName("Liquidity Transfer Identification")]
-    [IsoXmlTag("LqdtyTrfId")]
-    public PaymentIdentification8? LiquidityTransferIdentification { get; init; }
-
-    /// <summary>
     /// Settlement Date.
     /// </summary>
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
     public ISODate? SettlementDate { get; init; }
-
-    /// <summary>
-    /// Transferred Amount.
-    /// </summary>
-    [DisplayName("Transferred Amount")]
-    [IsoXmlTag("TrfdAmt")]
-    public required Amount2Choice_ TransferredAmount { get; init; }
 }

@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record EncryptedData2
 {
     /// <summary>
-    /// Algorithm.
-    /// </summary>
-    [DisplayName("Algorithm")]
-    [IsoXmlTag("Algo")]
-    public Max2NumericText? Algorithm { get; init; }
-
-    /// <summary>
     /// Control.
     /// </summary>
     [DisplayName("Control")]
     [IsoXmlTag("Ctrl")]
     public Exact1HexBinaryText? Control { get; init; }
+
+    /// <summary>
+    /// Key Set Identifier.
+    /// </summary>
+    [DisplayName("Key Set Identifier")]
+    [IsoXmlTag("KeySetIdr")]
+    public Max8NumericText? KeySetIdentifier { get; init; }
 
     /// <summary>
     /// Derived Information.
@@ -38,25 +38,11 @@ public record EncryptedData2
     public Max32HexBinaryText? DerivedInformation { get; init; }
 
     /// <summary>
-    /// Encrypted Element.
+    /// Algorithm.
     /// </summary>
-    [DisplayName("Encrypted Element")]
-    [IsoXmlTag("NcrptdElmt")]
-    public ValueList<EncryptedDataElement2> EncryptedElement { get; init; } = [];
-
-    /// <summary>
-    /// Encrypted Format.
-    /// </summary>
-    [DisplayName("Encrypted Format")]
-    [IsoXmlTag("NcrptdFrmt")]
-    public Max2NumericText? EncryptedFormat { get; init; }
-
-    /// <summary>
-    /// Key Index.
-    /// </summary>
-    [DisplayName("Key Index")]
-    [IsoXmlTag("KeyIndx")]
-    public Max5NumericText? KeyIndex { get; init; }
+    [DisplayName("Algorithm")]
+    [IsoXmlTag("Algo")]
+    public Max2NumericText? Algorithm { get; init; }
 
     /// <summary>
     /// Key Length.
@@ -73,11 +59,11 @@ public record EncryptedData2
     public Max2NumericText? KeyProtection { get; init; }
 
     /// <summary>
-    /// Key Set Identifier.
+    /// Key Index.
     /// </summary>
-    [DisplayName("Key Set Identifier")]
-    [IsoXmlTag("KeySetIdr")]
-    public Max8NumericText? KeySetIdentifier { get; init; }
+    [DisplayName("Key Index")]
+    [IsoXmlTag("KeyIndx")]
+    public Max5NumericText? KeyIndex { get; init; }
 
     /// <summary>
     /// Padding Method.
@@ -85,4 +71,18 @@ public record EncryptedData2
     [DisplayName("Padding Method")]
     [IsoXmlTag("PddgMtd")]
     public Max2NumericText? PaddingMethod { get; init; }
+
+    /// <summary>
+    /// Encrypted Format.
+    /// </summary>
+    [DisplayName("Encrypted Format")]
+    [IsoXmlTag("NcrptdFrmt")]
+    public Max2NumericText? EncryptedFormat { get; init; }
+
+    /// <summary>
+    /// Encrypted Element.
+    /// </summary>
+    [DisplayName("Encrypted Element")]
+    [IsoXmlTag("NcrptdElmt")]
+    public ValueList<EncryptedDataElement2> EncryptedElement { get; init; } = [];
 }

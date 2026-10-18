@@ -17,27 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record StatementResolutionEntry5
 {
     /// <summary>
-    /// Account Servicer Reference.
-    /// </summary>
-    [DisplayName("Account Servicer Reference")]
-    [IsoXmlTag("AcctSvcrRef")]
-    public Max35Text? AccountServicerReference { get; init; }
-
-    /// <summary>
-    /// Charges.
-    /// </summary>
-    [DisplayName("Charges")]
-    [IsoXmlTag("Chrgs")]
-    public ValueList<Charges15> Charges { get; init; } = [];
-
-    /// <summary>
-    /// Corrected Amount.
-    /// </summary>
-    [DisplayName("Corrected Amount")]
-    [IsoXmlTag("CrrctdAmt")]
-    public ActiveOrHistoricCurrencyAndAmount? CorrectedAmount { get; init; }
-
-    /// <summary>
     /// Original Group Information.
     /// </summary>
     [DisplayName("Original Group Information")]
@@ -52,16 +31,37 @@ public record StatementResolutionEntry5
     public Max35Text? OriginalStatementIdentification { get; init; }
 
     /// <summary>
-    /// Purpose.
-    /// </summary>
-    [DisplayName("Purpose")]
-    [IsoXmlTag("Purp")]
-    public Purpose2Choice_? Purpose { get; init; }
-
-    /// <summary>
     /// UETR.
     /// </summary>
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
     public UUIDv4Identifier? UETR { get; init; }
+
+    /// <summary>
+    /// Account Servicer Reference.
+    /// </summary>
+    [DisplayName("Account Servicer Reference")]
+    [IsoXmlTag("AcctSvcrRef")]
+    public Max35Text? AccountServicerReference { get; init; }
+
+    /// <summary>
+    /// Corrected Amount.
+    /// </summary>
+    [DisplayName("Corrected Amount")]
+    [IsoXmlTag("CrrctdAmt")]
+    public ActiveOrHistoricCurrencyAndAmount? CorrectedAmount { get; init; }
+
+    /// <summary>
+    /// Charges.
+    /// </summary>
+    [DisplayName("Charges")]
+    [IsoXmlTag("Chrgs")]
+    public ValueList<Charges15> Charges { get; init; } = [];
+
+    /// <summary>
+    /// Purpose.
+    /// </summary>
+    [DisplayName("Purpose")]
+    [IsoXmlTag("Purp")]
+    public Purpose2Choice_? Purpose { get; init; }
 }

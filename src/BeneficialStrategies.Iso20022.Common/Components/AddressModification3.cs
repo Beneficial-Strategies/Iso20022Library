@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AddressModification3
 {
     /// <summary>
-    /// Address.
-    /// </summary>
-    [DisplayName("Address")]
-    [IsoXmlTag("Adr")]
-    public required PostalAddress27 Address { get; init; }
-
-    /// <summary>
     /// Modification Code.
     /// </summary>
     [DisplayName("Modification Code")]
     [IsoXmlTag("ModCd")]
     public Modification1Code? ModificationCode { get; init; }
+
+    /// <summary>
+    /// Address.
+    /// </summary>
+    [DisplayName("Address")]
+    [IsoXmlTag("Adr")]
+    public required PostalAddress27 Address { get; init; }
 }

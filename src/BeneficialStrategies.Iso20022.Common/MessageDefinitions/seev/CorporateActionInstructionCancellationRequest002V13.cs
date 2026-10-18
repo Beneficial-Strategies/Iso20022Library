@@ -46,39 +46,11 @@ public record CorporateActionInstructionCancellationRequest002V13 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Details.
-    /// </summary>
-    [DisplayName("Account Details")]
-    [IsoXmlTag("AcctDtls")]
-    public required AccountIdentification73 AccountDetails { get; init; }
-
-    /// <summary>
-    /// Additional Information.
-    /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public CorporateActionNarrative19? AdditionalInformation { get; init; }
-
-    /// <summary>
     /// Change Instruction Indicator.
     /// </summary>
     [DisplayName("Change Instruction Indicator")]
     [IsoXmlTag("ChngInstrInd")]
     public YesNoIndicator? ChangeInstructionIndicator { get; init; }
-
-    /// <summary>
-    /// Corporate Action General Information.
-    /// </summary>
-    [DisplayName("Corporate Action General Information")]
-    [IsoXmlTag("CorpActnGnlInf")]
-    public required CorporateActionGeneralInformation187 CorporateActionGeneralInformation { get; init; }
-
-    /// <summary>
-    /// Corporate Action Instruction.
-    /// </summary>
-    [DisplayName("Corporate Action Instruction")]
-    [IsoXmlTag("CorpActnInstr")]
-    public required CorporateActionOption202 CorporateActionInstruction { get; init; }
 
     /// <summary>
     /// Instruction Identification.
@@ -88,11 +60,39 @@ public record CorporateActionInstructionCancellationRequest002V13 : IOuterRecord
     public required DocumentIdentification37 InstructionIdentification { get; init; }
 
     /// <summary>
+    /// Corporate Action General Information.
+    /// </summary>
+    [DisplayName("Corporate Action General Information")]
+    [IsoXmlTag("CorpActnGnlInf")]
+    public required CorporateActionGeneralInformation187 CorporateActionGeneralInformation { get; init; }
+
+    /// <summary>
+    /// Account Details.
+    /// </summary>
+    [DisplayName("Account Details")]
+    [IsoXmlTag("AcctDtls")]
+    public required AccountIdentification73 AccountDetails { get; init; }
+
+    /// <summary>
+    /// Corporate Action Instruction.
+    /// </summary>
+    [DisplayName("Corporate Action Instruction")]
+    [IsoXmlTag("CorpActnInstr")]
+    public required CorporateActionOption202 CorporateActionInstruction { get; init; }
+
+    /// <summary>
     /// Protect Instruction.
     /// </summary>
     [DisplayName("Protect Instruction")]
     [IsoXmlTag("PrtctInstr")]
     public ProtectInstruction7? ProtectInstruction { get; init; }
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public CorporateActionNarrative19? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Supplementary Data.

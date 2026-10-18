@@ -46,6 +46,20 @@ public record IntraBalanceMovementCancellationRequestV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Identification.
+    /// </summary>
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public DocumentIdentification51? Identification { get; init; }
+
+    /// <summary>
+    /// Transaction Identification.
+    /// </summary>
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public required References14 TransactionIdentification { get; init; }
+
+    /// <summary>
     /// Cash Account.
     /// </summary>
     [DisplayName("Cash Account")]
@@ -67,11 +81,11 @@ public record IntraBalanceMovementCancellationRequestV02 : IOuterRecord
     public BranchAndFinancialInstitutionIdentification8? CashAccountServicer { get; init; }
 
     /// <summary>
-    /// Identification.
+    /// Underlying Intra Balance.
     /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public DocumentIdentification51? Identification { get; init; }
+    [DisplayName("Underlying Intra Balance")]
+    [IsoXmlTag("UndrlygIntraBal")]
+    public IntraBalance5? UnderlyingIntraBalance { get; init; }
 
     /// <summary>
     /// Supplementary Data.
@@ -79,18 +93,4 @@ public record IntraBalanceMovementCancellationRequestV02 : IOuterRecord
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Transaction Identification.
-    /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public required References14 TransactionIdentification { get; init; }
-
-    /// <summary>
-    /// Underlying Intra Balance.
-    /// </summary>
-    [DisplayName("Underlying Intra Balance")]
-    [IsoXmlTag("UndrlygIntraBal")]
-    public IntraBalance5? UnderlyingIntraBalance { get; init; }
 }

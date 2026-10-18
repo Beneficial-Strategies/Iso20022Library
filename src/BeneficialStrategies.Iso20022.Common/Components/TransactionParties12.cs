@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TransactionParties12
 {
     /// <summary>
-    /// Creditor.
+    /// Initiating Party.
     /// </summary>
-    [DisplayName("Creditor")]
-    [IsoXmlTag("Cdtr")]
-    public Party50Choice_? Creditor { get; init; }
-
-    /// <summary>
-    /// Creditor Account.
-    /// </summary>
-    [DisplayName("Creditor Account")]
-    [IsoXmlTag("CdtrAcct")]
-    public CashAccount40? CreditorAccount { get; init; }
+    [DisplayName("Initiating Party")]
+    [IsoXmlTag("InitgPty")]
+    public Party50Choice_? InitiatingParty { get; init; }
 
     /// <summary>
     /// Debtor.
@@ -45,25 +38,25 @@ public record TransactionParties12
     public CashAccount40? DebtorAccount { get; init; }
 
     /// <summary>
-    /// Initiating Party.
+    /// Ultimate Debtor.
     /// </summary>
-    [DisplayName("Initiating Party")]
-    [IsoXmlTag("InitgPty")]
-    public Party50Choice_? InitiatingParty { get; init; }
+    [DisplayName("Ultimate Debtor")]
+    [IsoXmlTag("UltmtDbtr")]
+    public Party50Choice_? UltimateDebtor { get; init; }
 
     /// <summary>
-    /// Proprietary.
+    /// Creditor.
     /// </summary>
-    [DisplayName("Proprietary")]
-    [IsoXmlTag("Prtry")]
-    public ValueList<ProprietaryParty6> Proprietary { get; init; } = [];
+    [DisplayName("Creditor")]
+    [IsoXmlTag("Cdtr")]
+    public Party50Choice_? Creditor { get; init; }
 
     /// <summary>
-    /// Trading Party.
+    /// Creditor Account.
     /// </summary>
-    [DisplayName("Trading Party")]
-    [IsoXmlTag("TradgPty")]
-    public Party50Choice_? TradingParty { get; init; }
+    [DisplayName("Creditor Account")]
+    [IsoXmlTag("CdtrAcct")]
+    public CashAccount40? CreditorAccount { get; init; }
 
     /// <summary>
     /// Ultimate Creditor.
@@ -73,9 +66,16 @@ public record TransactionParties12
     public Party50Choice_? UltimateCreditor { get; init; }
 
     /// <summary>
-    /// Ultimate Debtor.
+    /// Trading Party.
     /// </summary>
-    [DisplayName("Ultimate Debtor")]
-    [IsoXmlTag("UltmtDbtr")]
-    public Party50Choice_? UltimateDebtor { get; init; }
+    [DisplayName("Trading Party")]
+    [IsoXmlTag("TradgPty")]
+    public Party50Choice_? TradingParty { get; init; }
+
+    /// <summary>
+    /// Proprietary.
+    /// </summary>
+    [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
+    public ValueList<ProprietaryParty6> Proprietary { get; init; } = [];
 }

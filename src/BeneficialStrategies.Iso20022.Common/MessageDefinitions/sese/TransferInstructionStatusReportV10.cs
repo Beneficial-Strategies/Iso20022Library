@@ -55,32 +55,18 @@ public record TransferInstructionStatusReportV10 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Unambiguous identification of the transfer allocated by the counterparty.
-    /// </summary>
-    [DisplayName("Counterparty Reference")]
-    [IsoXmlTag("CtrPtyRef")]
-    public AdditionalReference10? CounterpartyReference { get; init; }
-
-    /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
-    [DisplayName("Extension")]
-    [IsoXmlTag("Xtnsn")]
-    public ValueList<Extension1> Extension { get; init; } = [];
-
-    /// <summary>
-    /// Identifies the market practice to which the message conforms.
-    /// </summary>
-    [DisplayName("Market Practice Version")]
-    [IsoXmlTag("MktPrctcVrsn")]
-    public MarketPracticeVersion1? MarketPracticeVersion { get; init; }
-
-    /// <summary>
     /// Reference that uniquely identifies the message from a business application standpoint.
     /// </summary>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     public required MessageIdentification1 MessageIdentification { get; init; }
+
+    /// <summary>
+    /// Unambiguous identification of the transfer allocated by the counterparty.
+    /// </summary>
+    [DisplayName("Counterparty Reference")]
+    [IsoXmlTag("CtrPtyRef")]
+    public AdditionalReference10? CounterpartyReference { get; init; }
 
     /// <summary>
     /// Reference to the message or communication that was previously received.
@@ -95,4 +81,18 @@ public record TransferInstructionStatusReportV10 : IOuterRecord
     [DisplayName("Status Report")]
     [IsoXmlTag("StsRpt")]
     public required TransferStatusAndReason09 StatusReport { get; init; }
+
+    /// <summary>
+    /// Identifies the market practice to which the message conforms.
+    /// </summary>
+    [DisplayName("Market Practice Version")]
+    [IsoXmlTag("MktPrctcVrsn")]
+    public MarketPracticeVersion1? MarketPracticeVersion { get; init; }
+
+    /// <summary>
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// </summary>
+    [DisplayName("Extension")]
+    [IsoXmlTag("Xtnsn")]
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

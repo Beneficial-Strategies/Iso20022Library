@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record IdentificationModification5
 {
     /// <summary>
-    /// Additional Information.
-    /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public Max140Text? AdditionalInformation { get; init; }
-
-    /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
@@ -43,4 +36,11 @@ public record IdentificationModification5
     [DisplayName("Updated Party And Account Identification")]
     [IsoXmlTag("UpdtdPtyAndAcctId")]
     public required IdentificationInformation5 UpdatedPartyAndAccountIdentification { get; init; }
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public Max140Text? AdditionalInformation { get; init; }
 }

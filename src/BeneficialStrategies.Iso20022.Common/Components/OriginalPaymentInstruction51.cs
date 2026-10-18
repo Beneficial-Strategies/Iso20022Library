@@ -17,19 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record OriginalPaymentInstruction51
 {
     /// <summary>
-    /// Number Of Transactions Per Status.
+    /// Original Payment Information Identification.
     /// </summary>
-    [DisplayName("Number Of Transactions Per Status")]
-    [IsoXmlTag("NbOfTxsPerSts")]
-    public ValueList<NumberOfTransactionsPerStatus5> NumberOfTransactionsPerStatus { get; init; } =
-        [];
-
-    /// <summary>
-    /// Original Control Sum.
-    /// </summary>
-    [DisplayName("Original Control Sum")]
-    [IsoXmlTag("OrgnlCtrlSum")]
-    public DecimalNumber? OriginalControlSum { get; init; }
+    [DisplayName("Original Payment Information Identification")]
+    [IsoXmlTag("OrgnlPmtInfId")]
+    public required Max35Text OriginalPaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Original Number Of Transactions.
@@ -39,11 +31,11 @@ public record OriginalPaymentInstruction51
     public Max15NumericText? OriginalNumberOfTransactions { get; init; }
 
     /// <summary>
-    /// Original Payment Information Identification.
+    /// Original Control Sum.
     /// </summary>
-    [DisplayName("Original Payment Information Identification")]
-    [IsoXmlTag("OrgnlPmtInfId")]
-    public required Max35Text OriginalPaymentInformationIdentification { get; init; }
+    [DisplayName("Original Control Sum")]
+    [IsoXmlTag("OrgnlCtrlSum")]
+    public DecimalNumber? OriginalControlSum { get; init; }
 
     /// <summary>
     /// Payment Information Status.
@@ -58,6 +50,14 @@ public record OriginalPaymentInstruction51
     [DisplayName("Status Reason Information")]
     [IsoXmlTag("StsRsnInf")]
     public ValueList<StatusReasonInformation14> StatusReasonInformation { get; init; } = [];
+
+    /// <summary>
+    /// Number Of Transactions Per Status.
+    /// </summary>
+    [DisplayName("Number Of Transactions Per Status")]
+    [IsoXmlTag("NbOfTxsPerSts")]
+    public ValueList<NumberOfTransactionsPerStatus5> NumberOfTransactionsPerStatus { get; init; } =
+        [];
 
     /// <summary>
     /// Transaction Information And Status.

@@ -24,20 +24,6 @@ public record DetailedStatisticsPerCounterparty19
     public required ISODate ReferenceDate { get; init; }
 
     /// <summary>
-    /// Rejection Statistics.
-    /// </summary>
-    [DisplayName("Rejection Statistics")]
-    [IsoXmlTag("RjctnSttstcs")]
-    public ValueList<RejectionStatistics9> RejectionStatistics { get; init; } = [];
-
-    /// <summary>
-    /// Total Corrected Rejections.
-    /// </summary>
-    [DisplayName("Total Corrected Rejections")]
-    [IsoXmlTag("TtlCrrctdRjctns")]
-    public Max20PositiveNumber? TotalCorrectedRejections { get; init; }
-
-    /// <summary>
     /// Total Number Of Reports.
     /// </summary>
     [DisplayName("Total Number Of Reports")]
@@ -78,4 +64,18 @@ public record DetailedStatisticsPerCounterparty19
     [DisplayName("Total Number Of Transactions Rejected")]
     [IsoXmlTag("TtlNbOfTxsRjctd")]
     public required Max20PositiveNumber TotalNumberOfTransactionsRejected { get; init; }
+
+    /// <summary>
+    /// Total Corrected Rejections.
+    /// </summary>
+    [DisplayName("Total Corrected Rejections")]
+    [IsoXmlTag("TtlCrrctdRjctns")]
+    public Max20PositiveNumber? TotalCorrectedRejections { get; init; }
+
+    /// <summary>
+    /// Rejection Statistics.
+    /// </summary>
+    [DisplayName("Rejection Statistics")]
+    [IsoXmlTag("RjctnSttstcs")]
+    public ValueList<RejectionStatistics9> RejectionStatistics { get; init; } = [];
 }

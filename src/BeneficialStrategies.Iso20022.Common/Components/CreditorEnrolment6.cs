@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CreditorEnrolment6
 {
     /// <summary>
-    /// Creditor.
+    /// Enrolment.
     /// </summary>
-    [DisplayName("Creditor")]
-    [IsoXmlTag("Cdtr")]
-    public required RTPPartyIdentification2 Creditor { get; init; }
-
-    /// <summary>
-    /// Creditor Logo.
-    /// </summary>
-    [DisplayName("Creditor Logo")]
-    [IsoXmlTag("CdtrLogo")]
-    public Max10KBinary? CreditorLogo { get; init; }
+    [DisplayName("Enrolment")]
+    [IsoXmlTag("Enrlmnt")]
+    public CreditorServiceEnrolment1? Enrolment { get; init; }
 
     /// <summary>
     /// Creditor Trading Name.
@@ -38,11 +31,18 @@ public record CreditorEnrolment6
     public Max140Text? CreditorTradingName { get; init; }
 
     /// <summary>
-    /// Enrolment.
+    /// Creditor.
     /// </summary>
-    [DisplayName("Enrolment")]
-    [IsoXmlTag("Enrlmnt")]
-    public CreditorServiceEnrolment1? Enrolment { get; init; }
+    [DisplayName("Creditor")]
+    [IsoXmlTag("Cdtr")]
+    public required RTPPartyIdentification2 Creditor { get; init; }
+
+    /// <summary>
+    /// Ultimate Creditor.
+    /// </summary>
+    [DisplayName("Ultimate Creditor")]
+    [IsoXmlTag("UltmtCdtr")]
+    public RTPPartyIdentification2? UltimateCreditor { get; init; }
 
     /// <summary>
     /// Merchant Category Code.
@@ -52,9 +52,9 @@ public record CreditorEnrolment6
     public MerchantCategoryCodeIdentifier? MerchantCategoryCode { get; init; }
 
     /// <summary>
-    /// Ultimate Creditor.
+    /// Creditor Logo.
     /// </summary>
-    [DisplayName("Ultimate Creditor")]
-    [IsoXmlTag("UltmtCdtr")]
-    public RTPPartyIdentification2? UltimateCreditor { get; init; }
+    [DisplayName("Creditor Logo")]
+    [IsoXmlTag("CdtrLogo")]
+    public Max10KBinary? CreditorLogo { get; init; }
 }

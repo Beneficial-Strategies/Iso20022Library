@@ -24,48 +24,6 @@ public record Rate43
     public RateAndAmountFormat57Choice_? AdditionalTax { get; init; }
 
     /// <summary>
-    /// Applicable Rate.
-    /// </summary>
-    [DisplayName("Applicable Rate")]
-    [IsoXmlTag("AplblRate")]
-    public RateFormat24Choice_? ApplicableRate { get; init; }
-
-    /// <summary>
-    /// Charges Fees.
-    /// </summary>
-    [DisplayName("Charges Fees")]
-    [IsoXmlTag("ChrgsFees")]
-    public RateAndAmountFormat57Choice_? ChargesFees { get; init; }
-
-    /// <summary>
-    /// Deemed Rate.
-    /// </summary>
-    [DisplayName("Deemed Rate")]
-    [IsoXmlTag("DmdRate")]
-    public ValueList<RateAndAmountFormat61Choice_> DeemedRate { get; init; } = [];
-
-    /// <summary>
-    /// Early Solicitation Fee Rate.
-    /// </summary>
-    [DisplayName("Early Solicitation Fee Rate")]
-    [IsoXmlTag("EarlySlctnFeeRate")]
-    public SolicitationFeeRateFormat11Choice_? EarlySolicitationFeeRate { get; init; }
-
-    /// <summary>
-    /// Equalisation Rate.
-    /// </summary>
-    [DisplayName("Equalisation Rate")]
-    [IsoXmlTag("EqulstnRate")]
-    public RateAndAmountFormat42Choice_? EqualisationRate { get; init; }
-
-    /// <summary>
-    /// Fiscal Stamp.
-    /// </summary>
-    [DisplayName("Fiscal Stamp")]
-    [IsoXmlTag("FsclStmp")]
-    public RateFormat24Choice_? FiscalStamp { get; init; }
-
-    /// <summary>
     /// Gross Distribution Rate.
     /// </summary>
     [DisplayName("Gross Distribution Rate")]
@@ -81,11 +39,11 @@ public record Rate43
         [];
 
     /// <summary>
-    /// Net Distribution Rate.
+    /// Withholding Tax Rate.
     /// </summary>
-    [DisplayName("Net Distribution Rate")]
-    [IsoXmlTag("NetDstrbtnRate")]
-    public ValueList<NetDividendRateFormat39Choice_> NetDistributionRate { get; init; } = [];
+    [DisplayName("Withholding Tax Rate")]
+    [IsoXmlTag("WhldgTaxRate")]
+    public ValueList<RateAndAmountFormat60Choice_> WithholdingTaxRate { get; init; } = [];
 
     /// <summary>
     /// Second Level Tax.
@@ -93,6 +51,48 @@ public record Rate43
     [DisplayName("Second Level Tax")]
     [IsoXmlTag("ScndLvlTax")]
     public ValueList<RateAndAmountFormat60Choice_> SecondLevelTax { get; init; } = [];
+
+    /// <summary>
+    /// Charges Fees.
+    /// </summary>
+    [DisplayName("Charges Fees")]
+    [IsoXmlTag("ChrgsFees")]
+    public RateAndAmountFormat57Choice_? ChargesFees { get; init; }
+
+    /// <summary>
+    /// Early Solicitation Fee Rate.
+    /// </summary>
+    [DisplayName("Early Solicitation Fee Rate")]
+    [IsoXmlTag("EarlySlctnFeeRate")]
+    public SolicitationFeeRateFormat11Choice_? EarlySolicitationFeeRate { get; init; }
+
+    /// <summary>
+    /// Fiscal Stamp.
+    /// </summary>
+    [DisplayName("Fiscal Stamp")]
+    [IsoXmlTag("FsclStmp")]
+    public RateFormat24Choice_? FiscalStamp { get; init; }
+
+    /// <summary>
+    /// Third Party Incentive Rate.
+    /// </summary>
+    [DisplayName("Third Party Incentive Rate")]
+    [IsoXmlTag("ThrdPtyIncntivRate")]
+    public RateFormat26Choice_? ThirdPartyIncentiveRate { get; init; }
+
+    /// <summary>
+    /// Net Distribution Rate.
+    /// </summary>
+    [DisplayName("Net Distribution Rate")]
+    [IsoXmlTag("NetDstrbtnRate")]
+    public ValueList<NetDividendRateFormat39Choice_> NetDistributionRate { get; init; } = [];
+
+    /// <summary>
+    /// Applicable Rate.
+    /// </summary>
+    [DisplayName("Applicable Rate")]
+    [IsoXmlTag("AplblRate")]
+    public RateFormat24Choice_? ApplicableRate { get; init; }
 
     /// <summary>
     /// Solicitation Fee Rate.
@@ -130,16 +130,16 @@ public record Rate43
     public RateFormat24Choice_? TaxReclaimRate { get; init; }
 
     /// <summary>
-    /// Third Party Incentive Rate.
+    /// Equalisation Rate.
     /// </summary>
-    [DisplayName("Third Party Incentive Rate")]
-    [IsoXmlTag("ThrdPtyIncntivRate")]
-    public RateFormat26Choice_? ThirdPartyIncentiveRate { get; init; }
+    [DisplayName("Equalisation Rate")]
+    [IsoXmlTag("EqulstnRate")]
+    public RateAndAmountFormat42Choice_? EqualisationRate { get; init; }
 
     /// <summary>
-    /// Withholding Tax Rate.
+    /// Deemed Rate.
     /// </summary>
-    [DisplayName("Withholding Tax Rate")]
-    [IsoXmlTag("WhldgTaxRate")]
-    public ValueList<RateAndAmountFormat60Choice_> WithholdingTaxRate { get; init; } = [];
+    [DisplayName("Deemed Rate")]
+    [IsoXmlTag("DmdRate")]
+    public ValueList<RateAndAmountFormat61Choice_> DeemedRate { get; init; } = [];
 }

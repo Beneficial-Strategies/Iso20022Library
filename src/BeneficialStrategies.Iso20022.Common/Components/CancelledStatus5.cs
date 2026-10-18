@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CancelledStatus5
 {
     /// <summary>
-    /// Cancellation Reason.
-    /// </summary>
-    [DisplayName("Cancellation Reason")]
-    [IsoXmlTag("CxlRsn")]
-    public required CancelledStatus12Choice_ CancellationReason { get; init; }
-
-    /// <summary>
     /// Cancelled Quantity.
     /// </summary>
     [DisplayName("Cancelled Quantity")]
     [IsoXmlTag("CancQty")]
     public Quantity51Choice_? CancelledQuantity { get; init; }
+
+    /// <summary>
+    /// Cancellation Reason.
+    /// </summary>
+    [DisplayName("Cancellation Reason")]
+    [IsoXmlTag("CxlRsn")]
+    public required CancelledStatus12Choice_ CancellationReason { get; init; }
 }

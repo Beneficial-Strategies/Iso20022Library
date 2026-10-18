@@ -46,18 +46,18 @@ public record EligibleCounterpartCSDCreationRequestV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Eligible Counterpart CSD.
-    /// </summary>
-    [DisplayName("Eligible Counterpart CSD")]
-    [IsoXmlTag("ElgblCntrptCSD")]
-    public required EligibleCounterpart3 EligibleCounterpartCSD { get; init; }
-
-    /// <summary>
     /// Message Header.
     /// </summary>
     [DisplayName("Message Header")]
     [IsoXmlTag("MsgHdr")]
     public MessageHeader1? MessageHeader { get; init; }
+
+    /// <summary>
+    /// Eligible Counterpart CSD.
+    /// </summary>
+    [DisplayName("Eligible Counterpart CSD")]
+    [IsoXmlTag("ElgblCntrptCSD")]
+    public required EligibleCounterpart3 EligibleCounterpartCSD { get; init; }
 
     /// <summary>
     /// Supplementary Data.

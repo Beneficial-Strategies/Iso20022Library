@@ -46,18 +46,25 @@ public record DefaultFundContributionReportV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Identification.
+    /// </summary>
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public required DocumentIdentification11 Identification { get; init; }
+
+    /// <summary>
+    /// Report Parameters.
+    /// </summary>
+    [DisplayName("Report Parameters")]
+    [IsoXmlTag("RptParams")]
+    public required ReportParameters2 ReportParameters { get; init; }
+
+    /// <summary>
     /// Clearing Member.
     /// </summary>
     [DisplayName("Clearing Member")]
     [IsoXmlTag("ClrMmb")]
     public required PartyIdentification35Choice_ ClearingMember { get; init; }
-
-    /// <summary>
-    /// Collateral Details.
-    /// </summary>
-    [DisplayName("Collateral Details")]
-    [IsoXmlTag("CollDtls")]
-    public ValueList<Collateral3> CollateralDetails { get; init; } = [];
 
     /// <summary>
     /// Default Fund Details.
@@ -67,11 +74,11 @@ public record DefaultFundContributionReportV01 : IOuterRecord
     public ValueList<DefaultFund1> DefaultFundDetails { get; init; } = [];
 
     /// <summary>
-    /// Identification.
+    /// Collateral Details.
     /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public required DocumentIdentification11 Identification { get; init; }
+    [DisplayName("Collateral Details")]
+    [IsoXmlTag("CollDtls")]
+    public ValueList<Collateral3> CollateralDetails { get; init; } = [];
 
     /// <summary>
     /// Net Excess Or Deficit.
@@ -79,13 +86,6 @@ public record DefaultFundContributionReportV01 : IOuterRecord
     [DisplayName("Net Excess Or Deficit")]
     [IsoXmlTag("NetXcssOrDfcit")]
     public required AmountAndDirection21 NetExcessOrDeficit { get; init; }
-
-    /// <summary>
-    /// Report Parameters.
-    /// </summary>
-    [DisplayName("Report Parameters")]
-    [IsoXmlTag("RptParams")]
-    public required ReportParameters2 ReportParameters { get; init; }
 
     /// <summary>
     /// Supplementary Data.

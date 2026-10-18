@@ -17,53 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Trade10
 {
     /// <summary>
-    /// Associated Trade Reference.
-    /// </summary>
-    [DisplayName("Associated Trade Reference")]
-    [IsoXmlTag("AssoctdTradRef")]
-    public ValueList<Max70Text> AssociatedTradeReference { get; init; } = [];
-
-    /// <summary>
-    /// Calculated Counterparty Currency Last Quantity.
-    /// </summary>
-    [DisplayName("Calculated Counterparty Currency Last Quantity")]
-    [IsoXmlTag("ClctdCtrPtyCcyLastQty")]
-    public required ActiveCurrencyAndAmount CalculatedCounterpartyCurrencyLastQuantity { get; init; }
-
-    /// <summary>
-    /// Delta Indicator.
-    /// </summary>
-    [DisplayName("Delta Indicator")]
-    [IsoXmlTag("DltaInd")]
-    public TrueFalseIndicator? DeltaIndicator { get; init; }
-
-    /// <summary>
     /// Execution Price.
     /// </summary>
     [DisplayName("Execution Price")]
     [IsoXmlTag("ExctnPric")]
     public required ActiveCurrencyAnd13DecimalAmount ExecutionPrice { get; init; }
-
-    /// <summary>
-    /// Fixing Currency.
-    /// </summary>
-    [DisplayName("Fixing Currency")]
-    [IsoXmlTag("FxgCcy")]
-    public ActiveCurrencyCode? FixingCurrency { get; init; }
-
-    /// <summary>
-    /// Fixing Date.
-    /// </summary>
-    [DisplayName("Fixing Date")]
-    [IsoXmlTag("FxgDt")]
-    public ISODate? FixingDate { get; init; }
-
-    /// <summary>
-    /// Forward Points.
-    /// </summary>
-    [DisplayName("Forward Points")]
-    [IsoXmlTag("FwdPts")]
-    public DecimalNumber? ForwardPoints { get; init; }
 
     /// <summary>
     /// Last Quantity.
@@ -73,11 +31,46 @@ public record Trade10
     public required ActiveCurrencyAndAmount LastQuantity { get; init; }
 
     /// <summary>
-    /// Option Indicator.
+    /// Settlement Type.
     /// </summary>
-    [DisplayName("Option Indicator")]
-    [IsoXmlTag("OptnInd")]
-    public TrueFalseIndicator? OptionIndicator { get; init; }
+    [DisplayName("Settlement Type")]
+    [IsoXmlTag("SttlmTp")]
+    public required SettlementDate8Code SettlementType { get; init; }
+
+    /// <summary>
+    /// Settlement Date.
+    /// </summary>
+    [DisplayName("Settlement Date")]
+    [IsoXmlTag("SttlmDt")]
+    public required ISODate SettlementDate { get; init; }
+
+    /// <summary>
+    /// Valuation Rate.
+    /// </summary>
+    [DisplayName("Valuation Rate")]
+    [IsoXmlTag("ValtnRate")]
+    public required AgreedRate3 ValuationRate { get; init; }
+
+    /// <summary>
+    /// Forward Points.
+    /// </summary>
+    [DisplayName("Forward Points")]
+    [IsoXmlTag("FwdPts")]
+    public DecimalNumber? ForwardPoints { get; init; }
+
+    /// <summary>
+    /// Calculated Counterparty Currency Last Quantity.
+    /// </summary>
+    [DisplayName("Calculated Counterparty Currency Last Quantity")]
+    [IsoXmlTag("ClctdCtrPtyCcyLastQty")]
+    public required ActiveCurrencyAndAmount CalculatedCounterpartyCurrencyLastQuantity { get; init; }
+
+    /// <summary>
+    /// Value Date.
+    /// </summary>
+    [DisplayName("Value Date")]
+    [IsoXmlTag("ValDt")]
+    public required ISODate ValueDate { get; init; }
 
     /// <summary>
     /// Risk Amount.
@@ -94,30 +87,37 @@ public record Trade10
     public required SecurityIdentification18 SecurityIdentification { get; init; }
 
     /// <summary>
-    /// Settlement Date.
+    /// Fixing Currency.
     /// </summary>
-    [DisplayName("Settlement Date")]
-    [IsoXmlTag("SttlmDt")]
-    public required ISODate SettlementDate { get; init; }
+    [DisplayName("Fixing Currency")]
+    [IsoXmlTag("FxgCcy")]
+    public ActiveCurrencyCode? FixingCurrency { get; init; }
 
     /// <summary>
-    /// Settlement Type.
+    /// Fixing Date.
     /// </summary>
-    [DisplayName("Settlement Type")]
-    [IsoXmlTag("SttlmTp")]
-    public required SettlementDate8Code SettlementType { get; init; }
+    [DisplayName("Fixing Date")]
+    [IsoXmlTag("FxgDt")]
+    public ISODate? FixingDate { get; init; }
 
     /// <summary>
-    /// Valuation Rate.
+    /// Option Indicator.
     /// </summary>
-    [DisplayName("Valuation Rate")]
-    [IsoXmlTag("ValtnRate")]
-    public required AgreedRate3 ValuationRate { get; init; }
+    [DisplayName("Option Indicator")]
+    [IsoXmlTag("OptnInd")]
+    public TrueFalseIndicator? OptionIndicator { get; init; }
 
     /// <summary>
-    /// Value Date.
+    /// Delta Indicator.
     /// </summary>
-    [DisplayName("Value Date")]
-    [IsoXmlTag("ValDt")]
-    public required ISODate ValueDate { get; init; }
+    [DisplayName("Delta Indicator")]
+    [IsoXmlTag("DltaInd")]
+    public TrueFalseIndicator? DeltaIndicator { get; init; }
+
+    /// <summary>
+    /// Associated Trade Reference.
+    /// </summary>
+    [DisplayName("Associated Trade Reference")]
+    [IsoXmlTag("AssoctdTradRef")]
+    public ValueList<Max70Text> AssociatedTradeReference { get; init; } = [];
 }

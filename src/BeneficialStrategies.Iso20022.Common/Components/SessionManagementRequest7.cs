@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SessionManagementRequest7
 {
     /// <summary>
+    /// Environment.
+    /// </summary>
+    [DisplayName("Environment")]
+    [IsoXmlTag("Envt")]
+    public required CardPaymentEnvironment80 Environment { get; init; }
+
+    /// <summary>
     /// Context.
     /// </summary>
     [DisplayName("Context")]
@@ -24,18 +31,11 @@ public record SessionManagementRequest7
     public required CardPaymentContext30 Context { get; init; }
 
     /// <summary>
-    /// Diagnosis Request.
+    /// Service Content.
     /// </summary>
-    [DisplayName("Diagnosis Request")]
-    [IsoXmlTag("DgnssReq")]
-    public DiagnosisRequest1? DiagnosisRequest { get; init; }
-
-    /// <summary>
-    /// Environment.
-    /// </summary>
-    [DisplayName("Environment")]
-    [IsoXmlTag("Envt")]
-    public required CardPaymentEnvironment80 Environment { get; init; }
+    [DisplayName("Service Content")]
+    [IsoXmlTag("SvcCntt")]
+    public required RetailerService4Code ServiceContent { get; init; }
 
     /// <summary>
     /// Login Request.
@@ -52,11 +52,11 @@ public record SessionManagementRequest7
     public LogoutRequest1? LogoutRequest { get; init; }
 
     /// <summary>
-    /// Service Content.
+    /// Diagnosis Request.
     /// </summary>
-    [DisplayName("Service Content")]
-    [IsoXmlTag("SvcCntt")]
-    public required RetailerService4Code ServiceContent { get; init; }
+    [DisplayName("Diagnosis Request")]
+    [IsoXmlTag("DgnssReq")]
+    public DiagnosisRequest1? DiagnosisRequest { get; init; }
 
     /// <summary>
     /// Supplementary Data.

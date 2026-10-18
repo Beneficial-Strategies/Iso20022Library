@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PartyIdentificationAndAccount222
 {
     /// <summary>
-    /// Account Identification.
-    /// </summary>
-    [DisplayName("Account Identification")]
-    [IsoXmlTag("AcctId")]
-    public Max35Text? AccountIdentification { get; init; }
-
-    /// <summary>
     /// Party Identification.
     /// </summary>
     [DisplayName("Party Identification")]
     [IsoXmlTag("PtyId")]
     public required PartyIdentification139 PartyIdentification { get; init; }
+
+    /// <summary>
+    /// Account Identification.
+    /// </summary>
+    [DisplayName("Account Identification")]
+    [IsoXmlTag("AcctId")]
+    public Max35Text? AccountIdentification { get; init; }
 }

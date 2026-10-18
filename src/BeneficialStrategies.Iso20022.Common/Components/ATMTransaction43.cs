@@ -17,6 +17,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMTransaction43
 {
     /// <summary>
+    /// Transaction Identification.
+    /// </summary>
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public required TransactionIdentifier3 TransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Reconciliation Identification.
+    /// </summary>
+    [DisplayName("Reconciliation Identification")]
+    [IsoXmlTag("RcncltnId")]
+    public Max35Text? ReconciliationIdentification { get; init; }
+
+    /// <summary>
     /// Cardholder New PIN.
     /// </summary>
     [DisplayName("Cardholder New PIN")]
@@ -29,18 +43,4 @@ public record ATMTransaction43
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
     public Max10000Binary? ICCRelatedData { get; init; }
-
-    /// <summary>
-    /// Reconciliation Identification.
-    /// </summary>
-    [DisplayName("Reconciliation Identification")]
-    [IsoXmlTag("RcncltnId")]
-    public Max35Text? ReconciliationIdentification { get; init; }
-
-    /// <summary>
-    /// Transaction Identification.
-    /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public required TransactionIdentifier3 TransactionIdentification { get; init; }
 }

@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMConfigurationControlComponent1
 {
     /// <summary>
-    /// Action Required.
+    /// Environment.
     /// </summary>
-    [DisplayName("Action Required")]
-    [IsoXmlTag("ActnReqrd")]
-    public required ATMActionType1Code ActionRequired { get; init; }
-
-    /// <summary>
-    /// Activation Date.
-    /// </summary>
-    [DisplayName("Activation Date")]
-    [IsoXmlTag("ActvtnDt")]
-    public ISODateTime? ActivationDate { get; init; }
+    [DisplayName("Environment")]
+    [IsoXmlTag("Envt")]
+    public required ATMEnvironment7 Environment { get; init; }
 
     /// <summary>
     /// Configuration Version.
@@ -38,11 +31,11 @@ public record ATMConfigurationControlComponent1
     public Max35Text? ConfigurationVersion { get; init; }
 
     /// <summary>
-    /// Environment.
+    /// Action Required.
     /// </summary>
-    [DisplayName("Environment")]
-    [IsoXmlTag("Envt")]
-    public required ATMEnvironment7 Environment { get; init; }
+    [DisplayName("Action Required")]
+    [IsoXmlTag("ActnReqrd")]
+    public required ATMActionType1Code ActionRequired { get; init; }
 
     /// <summary>
     /// Property.
@@ -50,4 +43,11 @@ public record ATMConfigurationControlComponent1
     [DisplayName("Property")]
     [IsoXmlTag("Prprty")]
     public ValueList<ATMPropertyComponent1> Property { get; init; } = [];
+
+    /// <summary>
+    /// Activation Date.
+    /// </summary>
+    [DisplayName("Activation Date")]
+    [IsoXmlTag("ActvtnDt")]
+    public ISODateTime? ActivationDate { get; init; }
 }

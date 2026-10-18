@@ -24,6 +24,13 @@ public record CorporateActionPrice93
     public PriceFormat85Choice_? CashInLieuOfSharePrice { get; init; }
 
     /// <summary>
+    /// Indicative Or Market Price.
+    /// </summary>
+    [DisplayName("Indicative Or Market Price")]
+    [IsoXmlTag("IndctvOrMktPric")]
+    public IndicativeOrMarketPrice16Choice_? IndicativeOrMarketPrice { get; init; }
+
+    /// <summary>
     /// Cash Value For Tax.
     /// </summary>
     [DisplayName("Cash Value For Tax")]
@@ -43,11 +50,4 @@ public record CorporateActionPrice93
     [DisplayName("Generic Cash Price Received Per Product")]
     [IsoXmlTag("GncCshPricRcvdPerPdct")]
     public PriceFormat87Choice_? GenericCashPriceReceivedPerProduct { get; init; }
-
-    /// <summary>
-    /// Indicative Or Market Price.
-    /// </summary>
-    [DisplayName("Indicative Or Market Price")]
-    [IsoXmlTag("IndctvOrMktPric")]
-    public IndicativeOrMarketPrice16Choice_? IndicativeOrMarketPrice { get; init; }
 }

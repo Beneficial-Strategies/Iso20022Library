@@ -17,6 +17,15 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ContributorPublicationData1
 {
     /// <summary>
+    /// Date and time when the transaction report was received by an Approved Publication Arrangement (APA).
+    /// Usage: Only applicable for input data.
+    /// </summary>
+    [IsoId("_sCyrsKUREfCmoeslmyBN5Q")]
+    [DisplayName("Reception Date Time")]
+    [IsoXmlTag("RcptnDtTm")]
+    public ISODateTime? ReceptionDateTime { get; init; }
+
+    /// <summary>
     /// Date and time when the transaction was published by a trading venue or Approved Publication Arrangement (APA).
     /// </summary>
     [IsoId("_W28FwGIlEfCeoPFCHQnhvA")]
@@ -31,13 +40,4 @@ public record ContributorPublicationData1
     [DisplayName("Publication Venue Identification")]
     [IsoXmlTag("PblctnVnId")]
     public required MICIdentifier PublicationVenueIdentification { get; init; }
-
-    /// <summary>
-    /// Date and time when the transaction report was received by an Approved Publication Arrangement (APA).
-    /// Usage: Only applicable for input data.
-    /// </summary>
-    [IsoId("_sCyrsKUREfCmoeslmyBN5Q")]
-    [DisplayName("Reception Date Time")]
-    [IsoXmlTag("RcptnDtTm")]
-    public ISODateTime? ReceptionDateTime { get; init; }
 }

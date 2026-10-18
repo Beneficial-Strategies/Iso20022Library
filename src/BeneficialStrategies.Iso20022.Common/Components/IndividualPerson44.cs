@@ -17,46 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record IndividualPerson44
 {
     /// <summary>
-    /// Birth Date.
-    /// </summary>
-    [DisplayName("Birth Date")]
-    [IsoXmlTag("BirthDt")]
-    public ISODate? BirthDate { get; init; }
-
-    /// <summary>
-    /// Citizenship Information.
-    /// </summary>
-    [DisplayName("Citizenship Information")]
-    [IsoXmlTag("CtznshInf")]
-    public ValueList<CitizenshipInformation1> CitizenshipInformation { get; init; } = [];
-
-    /// <summary>
-    /// City Of Birth.
-    /// </summary>
-    [DisplayName("City Of Birth")]
-    [IsoXmlTag("CityOfBirth")]
-    public Max35Text? CityOfBirth { get; init; }
-
-    /// <summary>
-    /// Country And Residential Status.
-    /// </summary>
-    [DisplayName("Country And Residential Status")]
-    [IsoXmlTag("CtryAndResdtlSts")]
-    public CountryAndResidentialStatusType1? CountryAndResidentialStatus { get; init; }
-
-    /// <summary>
-    /// Country Of Birth.
-    /// </summary>
-    [DisplayName("Country Of Birth")]
-    [IsoXmlTag("CtryOfBirth")]
-    public CountryCode? CountryOfBirth { get; init; }
-
-    /// <summary>
     /// Current Name.
     /// </summary>
     [DisplayName("Current Name")]
     [IsoXmlTag("CurNm")]
     public required IndividualPersonNameLong2 CurrentName { get; init; }
+
+    /// <summary>
+    /// Previous Name.
+    /// </summary>
+    [DisplayName("Previous Name")]
+    [IsoXmlTag("PrvsNm")]
+    public ValueList<IndividualPersonNameLong2> PreviousName { get; init; } = [];
 
     /// <summary>
     /// Gender.
@@ -73,39 +45,18 @@ public record IndividualPerson44
     public LanguageCode? Language { get; init; }
 
     /// <summary>
-    /// Other Details.
+    /// Birth Date.
     /// </summary>
-    [DisplayName("Other Details")]
-    [IsoXmlTag("OthrDtls")]
-    public ValueList<TransferInstruction1> OtherDetails { get; init; } = [];
+    [DisplayName("Birth Date")]
+    [IsoXmlTag("BirthDt")]
+    public ISODate? BirthDate { get; init; }
 
     /// <summary>
-    /// Other Identification.
+    /// Country Of Birth.
     /// </summary>
-    [DisplayName("Other Identification")]
-    [IsoXmlTag("OthrId")]
-    public ValueList<GenericIdentification44> OtherIdentification { get; init; } = [];
-
-    /// <summary>
-    /// Postal Address.
-    /// </summary>
-    [DisplayName("Postal Address")]
-    [IsoXmlTag("PstlAdr")]
-    public ValueList<PostalAddress27> PostalAddress { get; init; } = [];
-
-    /// <summary>
-    /// Previous Name.
-    /// </summary>
-    [DisplayName("Previous Name")]
-    [IsoXmlTag("PrvsNm")]
-    public ValueList<IndividualPersonNameLong2> PreviousName { get; init; } = [];
-
-    /// <summary>
-    /// Primary Communication Address.
-    /// </summary>
-    [DisplayName("Primary Communication Address")]
-    [IsoXmlTag("PmryComAdr")]
-    public CommunicationAddress3? PrimaryCommunicationAddress { get; init; }
+    [DisplayName("Country Of Birth")]
+    [IsoXmlTag("CtryOfBirth")]
+    public CountryCode? CountryOfBirth { get; init; }
 
     /// <summary>
     /// Province Of Birth.
@@ -115,11 +66,25 @@ public record IndividualPerson44
     public Max35Text? ProvinceOfBirth { get; init; }
 
     /// <summary>
-    /// Secondary Communication Address.
+    /// City Of Birth.
     /// </summary>
-    [DisplayName("Secondary Communication Address")]
-    [IsoXmlTag("ScndryComAdr")]
-    public CommunicationAddress3? SecondaryCommunicationAddress { get; init; }
+    [DisplayName("City Of Birth")]
+    [IsoXmlTag("CityOfBirth")]
+    public Max35Text? CityOfBirth { get; init; }
+
+    /// <summary>
+    /// Taxation Country.
+    /// </summary>
+    [DisplayName("Taxation Country")]
+    [IsoXmlTag("TaxtnCtry")]
+    public CountryCode? TaxationCountry { get; init; }
+
+    /// <summary>
+    /// Country And Residential Status.
+    /// </summary>
+    [DisplayName("Country And Residential Status")]
+    [IsoXmlTag("CtryAndResdtlSts")]
+    public CountryAndResidentialStatusType1? CountryAndResidentialStatus { get; init; }
 
     /// <summary>
     /// Social Security Number.
@@ -129,9 +94,44 @@ public record IndividualPerson44
     public Max35Text? SocialSecurityNumber { get; init; }
 
     /// <summary>
-    /// Taxation Country.
+    /// Postal Address.
     /// </summary>
-    [DisplayName("Taxation Country")]
-    [IsoXmlTag("TaxtnCtry")]
-    public CountryCode? TaxationCountry { get; init; }
+    [DisplayName("Postal Address")]
+    [IsoXmlTag("PstlAdr")]
+    public ValueList<PostalAddress27> PostalAddress { get; init; } = [];
+
+    /// <summary>
+    /// Citizenship Information.
+    /// </summary>
+    [DisplayName("Citizenship Information")]
+    [IsoXmlTag("CtznshInf")]
+    public ValueList<CitizenshipInformation1> CitizenshipInformation { get; init; } = [];
+
+    /// <summary>
+    /// Primary Communication Address.
+    /// </summary>
+    [DisplayName("Primary Communication Address")]
+    [IsoXmlTag("PmryComAdr")]
+    public CommunicationAddress3? PrimaryCommunicationAddress { get; init; }
+
+    /// <summary>
+    /// Secondary Communication Address.
+    /// </summary>
+    [DisplayName("Secondary Communication Address")]
+    [IsoXmlTag("ScndryComAdr")]
+    public CommunicationAddress3? SecondaryCommunicationAddress { get; init; }
+
+    /// <summary>
+    /// Other Identification.
+    /// </summary>
+    [DisplayName("Other Identification")]
+    [IsoXmlTag("OthrId")]
+    public ValueList<GenericIdentification44> OtherIdentification { get; init; } = [];
+
+    /// <summary>
+    /// Other Details.
+    /// </summary>
+    [DisplayName("Other Details")]
+    [IsoXmlTag("OthrDtls")]
+    public ValueList<TransferInstruction1> OtherDetails { get; init; } = [];
 }

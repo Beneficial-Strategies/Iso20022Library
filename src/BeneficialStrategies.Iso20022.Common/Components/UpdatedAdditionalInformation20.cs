@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record UpdatedAdditionalInformation20
 {
     /// <summary>
-    /// Additional Information.
-    /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public ValueList<Max8000Text> AdditionalInformation { get; init; } = [];
-
-    /// <summary>
     /// Language.
     /// </summary>
     [DisplayName("Language")]
     [IsoXmlTag("Lang")]
     public required ISO2ALanguageCode Language { get; init; }
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public ValueList<Max8000Text> AdditionalInformation { get; init; } = [];
 }

@@ -46,6 +46,27 @@ public record MarketClaimCreationV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Transaction Reference.
+    /// </summary>
+    [DisplayName("Transaction Reference")]
+    [IsoXmlTag("TxRef")]
+    public required References25 TransactionReference { get; init; }
+
+    /// <summary>
+    /// Corporate Action General Information.
+    /// </summary>
+    [DisplayName("Corporate Action General Information")]
+    [IsoXmlTag("CorpActnGnlInf")]
+    public required CorporateActionGeneralInformation157 CorporateActionGeneralInformation { get; init; }
+
+    /// <summary>
+    /// Related Settlement Instruction Details.
+    /// </summary>
+    [DisplayName("Related Settlement Instruction Details")]
+    [IsoXmlTag("RltdSttlmInstrDtls")]
+    public required RelatedSettlementInstruction1 RelatedSettlementInstructionDetails { get; init; }
+
+    /// <summary>
     /// Account Details.
     /// </summary>
     [DisplayName("Account Details")]
@@ -60,18 +81,11 @@ public record MarketClaimCreationV02 : IOuterRecord
     public CorporateAction59? CorporateActionDetails { get; init; }
 
     /// <summary>
-    /// Corporate Action General Information.
+    /// Market Claim Type.
     /// </summary>
-    [DisplayName("Corporate Action General Information")]
-    [IsoXmlTag("CorpActnGnlInf")]
-    public required CorporateActionGeneralInformation157 CorporateActionGeneralInformation { get; init; }
-
-    /// <summary>
-    /// Delivering Settlement Parties.
-    /// </summary>
-    [DisplayName("Delivering Settlement Parties")]
-    [IsoXmlTag("DlvrgSttlmPties")]
-    public SettlementParties122? DeliveringSettlementParties { get; init; }
+    [DisplayName("Market Claim Type")]
+    [IsoXmlTag("MktClmTp")]
+    public required MarketClaimType1Code MarketClaimType { get; init; }
 
     /// <summary>
     /// Market Claim Details.
@@ -81,11 +95,11 @@ public record MarketClaimCreationV02 : IOuterRecord
     public required CorporateActionOption217 MarketClaimDetails { get; init; }
 
     /// <summary>
-    /// Market Claim Type.
+    /// Delivering Settlement Parties.
     /// </summary>
-    [DisplayName("Market Claim Type")]
-    [IsoXmlTag("MktClmTp")]
-    public required MarketClaimType1Code MarketClaimType { get; init; }
+    [DisplayName("Delivering Settlement Parties")]
+    [IsoXmlTag("DlvrgSttlmPties")]
+    public SettlementParties122? DeliveringSettlementParties { get; init; }
 
     /// <summary>
     /// Receiving Settlement Parties.
@@ -95,23 +109,9 @@ public record MarketClaimCreationV02 : IOuterRecord
     public SettlementParties122? ReceivingSettlementParties { get; init; }
 
     /// <summary>
-    /// Related Settlement Instruction Details.
-    /// </summary>
-    [DisplayName("Related Settlement Instruction Details")]
-    [IsoXmlTag("RltdSttlmInstrDtls")]
-    public required RelatedSettlementInstruction1 RelatedSettlementInstructionDetails { get; init; }
-
-    /// <summary>
     /// Supplementary Data.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Transaction Reference.
-    /// </summary>
-    [DisplayName("Transaction Reference")]
-    [IsoXmlTag("TxRef")]
-    public required References25 TransactionReference { get; init; }
 }

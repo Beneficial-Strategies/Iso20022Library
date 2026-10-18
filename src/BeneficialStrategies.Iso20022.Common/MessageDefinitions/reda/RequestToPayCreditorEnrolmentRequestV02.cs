@@ -46,11 +46,11 @@ public record RequestToPayCreditorEnrolmentRequestV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Activation Data.
+    /// Header.
     /// </summary>
-    [DisplayName("Activation Data")]
-    [IsoXmlTag("ActvtnData")]
-    public required CreditorInvoice6 ActivationData { get; init; }
+    [DisplayName("Header")]
+    [IsoXmlTag("Hdr")]
+    public required EnrolmentHeader3 Header { get; init; }
 
     /// <summary>
     /// Creditor Enrolment.
@@ -60,11 +60,11 @@ public record RequestToPayCreditorEnrolmentRequestV02 : IOuterRecord
     public ValueList<CreditorEnrolment5> CreditorEnrolment { get; init; } = [];
 
     /// <summary>
-    /// Header.
+    /// Activation Data.
     /// </summary>
-    [DisplayName("Header")]
-    [IsoXmlTag("Hdr")]
-    public required EnrolmentHeader3 Header { get; init; }
+    [DisplayName("Activation Data")]
+    [IsoXmlTag("ActvtnData")]
+    public required CreditorInvoice6 ActivationData { get; init; }
 
     /// <summary>
     /// Supplementary Data.

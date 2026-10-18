@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMTransaction30
 {
     /// <summary>
-    /// Cassette.
+    /// Type Of Operation.
     /// </summary>
-    [DisplayName("Cassette")]
-    [IsoXmlTag("Csstt")]
-    public ValueList<ATMCassette3> Cassette { get; init; } = [];
-
-    /// <summary>
-    /// Reconciliation Identification.
-    /// </summary>
-    [DisplayName("Reconciliation Identification")]
-    [IsoXmlTag("RcncltnId")]
-    public Max35Text? ReconciliationIdentification { get; init; }
+    [DisplayName("Type Of Operation")]
+    [IsoXmlTag("TpOfOpr")]
+    public required ATMOperation2Code TypeOfOperation { get; init; }
 
     /// <summary>
     /// Transaction Identification.
@@ -38,9 +31,16 @@ public record ATMTransaction30
     public TransactionIdentifier3? TransactionIdentification { get; init; }
 
     /// <summary>
-    /// Type Of Operation.
+    /// Reconciliation Identification.
     /// </summary>
-    [DisplayName("Type Of Operation")]
-    [IsoXmlTag("TpOfOpr")]
-    public required ATMOperation2Code TypeOfOperation { get; init; }
+    [DisplayName("Reconciliation Identification")]
+    [IsoXmlTag("RcncltnId")]
+    public Max35Text? ReconciliationIdentification { get; init; }
+
+    /// <summary>
+    /// Cassette.
+    /// </summary>
+    [DisplayName("Cassette")]
+    [IsoXmlTag("Csstt")]
+    public ValueList<ATMCassette3> Cassette { get; init; } = [];
 }

@@ -17,32 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CashOptionSD14
 {
     /// <summary>
-    /// Declared Cash Rate.
+    /// Place And Name.
     /// </summary>
-    [DisplayName("Declared Cash Rate")]
-    [IsoXmlTag("DclrdCshRate")]
-    public PriceFormatSD3Choice_? DeclaredCashRate { get; init; }
+    [DisplayName("Place And Name")]
+    [IsoXmlTag("PlcAndNm")]
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
-    /// Declared Fee Rate.
+    /// Payout Type.
     /// </summary>
-    [DisplayName("Declared Fee Rate")]
-    [IsoXmlTag("DclrdFeeRate")]
-    public PriceFormatSD3Choice_? DeclaredFeeRate { get; init; }
-
-    /// <summary>
-    /// Declared Gross Rate.
-    /// </summary>
-    [DisplayName("Declared Gross Rate")]
-    [IsoXmlTag("DclrdGrssRate")]
-    public PriceFormatSD3Choice_? DeclaredGrossRate { get; init; }
-
-    /// <summary>
-    /// Declared Net Rate.
-    /// </summary>
-    [DisplayName("Declared Net Rate")]
-    [IsoXmlTag("DclrdNetRate")]
-    public PriceFormatSD3Choice_? DeclaredNetRate { get; init; }
+    [DisplayName("Payout Type")]
+    [IsoXmlTag("PyoutTp")]
+    public required DTCCPayoutType5Code PayoutType { get; init; }
 
     /// <summary>
     /// DTC Pay Method.
@@ -59,13 +45,6 @@ public record CashOptionSD14
     public Max3Text? DTCPayOrder { get; init; }
 
     /// <summary>
-    /// DTCUS Tax Instruction Period.
-    /// </summary>
-    [DisplayName("DTCUS Tax Instruction Period")]
-    [IsoXmlTag("DTCUSTaxInstrPrd")]
-    public Period13? DTCUSTaxInstructionPeriod { get; init; }
-
-    /// <summary>
     /// Entitlement Calculation Method.
     /// </summary>
     [DisplayName("Entitlement Calculation Method")]
@@ -80,32 +59,11 @@ public record CashOptionSD14
     public YesNoIndicator? EstimatedRateFlag { get; init; }
 
     /// <summary>
-    /// Interest Accrued Number Of Days.
-    /// </summary>
-    [DisplayName("Interest Accrued Number Of Days")]
-    [IsoXmlTag("IntrstAcrdNbOfDays")]
-    public Max3Number? InterestAccruedNumberOfDays { get; init; }
-
-    /// <summary>
     /// NRA Tax Reportable Flag.
     /// </summary>
     [DisplayName("NRA Tax Reportable Flag")]
     [IsoXmlTag("NRATaxRptblFlg")]
     public YesNoIndicator? NRATaxReportableFlag { get; init; }
-
-    /// <summary>
-    /// Payout Type.
-    /// </summary>
-    [DisplayName("Payout Type")]
-    [IsoXmlTag("PyoutTp")]
-    public required DTCCPayoutType5Code PayoutType { get; init; }
-
-    /// <summary>
-    /// Place And Name.
-    /// </summary>
-    [DisplayName("Place And Name")]
-    [IsoXmlTag("PlcAndNm")]
-    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Protect Charge Flag.
@@ -115,9 +73,51 @@ public record CashOptionSD14
     public YesNoIndicator? ProtectChargeFlag { get; init; }
 
     /// <summary>
+    /// Declared Cash Rate.
+    /// </summary>
+    [DisplayName("Declared Cash Rate")]
+    [IsoXmlTag("DclrdCshRate")]
+    public PriceFormatSD3Choice_? DeclaredCashRate { get; init; }
+
+    /// <summary>
+    /// Declared Gross Rate.
+    /// </summary>
+    [DisplayName("Declared Gross Rate")]
+    [IsoXmlTag("DclrdGrssRate")]
+    public PriceFormatSD3Choice_? DeclaredGrossRate { get; init; }
+
+    /// <summary>
+    /// Declared Net Rate.
+    /// </summary>
+    [DisplayName("Declared Net Rate")]
+    [IsoXmlTag("DclrdNetRate")]
+    public PriceFormatSD3Choice_? DeclaredNetRate { get; init; }
+
+    /// <summary>
+    /// Declared Fee Rate.
+    /// </summary>
+    [DisplayName("Declared Fee Rate")]
+    [IsoXmlTag("DclrdFeeRate")]
+    public PriceFormatSD3Choice_? DeclaredFeeRate { get; init; }
+
+    /// <summary>
+    /// DTCUS Tax Instruction Period.
+    /// </summary>
+    [DisplayName("DTCUS Tax Instruction Period")]
+    [IsoXmlTag("DTCUSTaxInstrPrd")]
+    public Period13? DTCUSTaxInstructionPeriod { get; init; }
+
+    /// <summary>
     /// RDP Reference Number.
     /// </summary>
     [DisplayName("RDP Reference Number")]
     [IsoXmlTag("RDPRefNb")]
     public Exact32AlphaNumericText? RDPReferenceNumber { get; init; }
+
+    /// <summary>
+    /// Interest Accrued Number Of Days.
+    /// </summary>
+    [DisplayName("Interest Accrued Number Of Days")]
+    [IsoXmlTag("IntrstAcrdNbOfDays")]
+    public Max3Number? InterestAccruedNumberOfDays { get; init; }
 }

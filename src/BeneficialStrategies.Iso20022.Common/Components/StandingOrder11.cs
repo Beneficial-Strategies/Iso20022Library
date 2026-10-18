@@ -24,32 +24,11 @@ public record StandingOrder11
     public required Amount2Choice_ Amount { get; init; }
 
     /// <summary>
-    /// Associated Pool Account.
-    /// </summary>
-    [DisplayName("Associated Pool Account")]
-    [IsoXmlTag("AssoctdPoolAcct")]
-    public AccountIdentification4Choice_? AssociatedPoolAccount { get; init; }
-
-    /// <summary>
     /// Credit Debit Indicator.
     /// </summary>
     [DisplayName("Credit Debit Indicator")]
     [IsoXmlTag("CdtDbtInd")]
     public required CreditDebitCode CreditDebitIndicator { get; init; }
-
-    /// <summary>
-    /// Creditor.
-    /// </summary>
-    [DisplayName("Creditor")]
-    [IsoXmlTag("Cdtr")]
-    public BranchAndFinancialInstitutionIdentification8? Creditor { get; init; }
-
-    /// <summary>
-    /// Creditor Account.
-    /// </summary>
-    [DisplayName("Creditor Account")]
-    [IsoXmlTag("CdtrAcct")]
-    public CashAccount40? CreditorAccount { get; init; }
 
     /// <summary>
     /// Currency.
@@ -59,25 +38,25 @@ public record StandingOrder11
     public ActiveCurrencyCode? Currency { get; init; }
 
     /// <summary>
-    /// Debtor.
+    /// Type.
     /// </summary>
-    [DisplayName("Debtor")]
-    [IsoXmlTag("Dbtr")]
-    public BranchAndFinancialInstitutionIdentification8? Debtor { get; init; }
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public StandingOrderType1Choice_? Type { get; init; }
 
     /// <summary>
-    /// Debtor Account.
+    /// Associated Pool Account.
     /// </summary>
-    [DisplayName("Debtor Account")]
-    [IsoXmlTag("DbtrAcct")]
-    public CashAccount40? DebtorAccount { get; init; }
+    [DisplayName("Associated Pool Account")]
+    [IsoXmlTag("AssoctdPoolAcct")]
+    public AccountIdentification4Choice_? AssociatedPoolAccount { get; init; }
 
     /// <summary>
-    /// Execution Type.
+    /// Reference.
     /// </summary>
-    [DisplayName("Execution Type")]
-    [IsoXmlTag("ExctnTp")]
-    public ExecutionType1Choice_? ExecutionType { get; init; }
+    [DisplayName("Reference")]
+    [IsoXmlTag("Ref")]
+    public Max35Text? Reference { get; init; }
 
     /// <summary>
     /// Frequency.
@@ -85,6 +64,27 @@ public record StandingOrder11
     [DisplayName("Frequency")]
     [IsoXmlTag("Frqcy")]
     public Frequency2Code? Frequency { get; init; }
+
+    /// <summary>
+    /// Validity Period.
+    /// </summary>
+    [DisplayName("Validity Period")]
+    [IsoXmlTag("VldtyPrd")]
+    public DatePeriod3? ValidityPeriod { get; init; }
+
+    /// <summary>
+    /// System Member.
+    /// </summary>
+    [DisplayName("System Member")]
+    [IsoXmlTag("SysMmb")]
+    public BranchAndFinancialInstitutionIdentification8? SystemMember { get; init; }
+
+    /// <summary>
+    /// Responsible Party.
+    /// </summary>
+    [DisplayName("Responsible Party")]
+    [IsoXmlTag("RspnsblPty")]
+    public BranchAndFinancialInstitutionIdentification8? ResponsibleParty { get; init; }
 
     /// <summary>
     /// Link Set Identification.
@@ -108,25 +108,39 @@ public record StandingOrder11
     public Number? LinkSetOrderSequence { get; init; }
 
     /// <summary>
-    /// Reference.
+    /// Execution Type.
     /// </summary>
-    [DisplayName("Reference")]
-    [IsoXmlTag("Ref")]
-    public Max35Text? Reference { get; init; }
+    [DisplayName("Execution Type")]
+    [IsoXmlTag("ExctnTp")]
+    public ExecutionType1Choice_? ExecutionType { get; init; }
 
     /// <summary>
-    /// Responsible Party.
+    /// Creditor.
     /// </summary>
-    [DisplayName("Responsible Party")]
-    [IsoXmlTag("RspnsblPty")]
-    public BranchAndFinancialInstitutionIdentification8? ResponsibleParty { get; init; }
+    [DisplayName("Creditor")]
+    [IsoXmlTag("Cdtr")]
+    public BranchAndFinancialInstitutionIdentification8? Creditor { get; init; }
 
     /// <summary>
-    /// System Member.
+    /// Creditor Account.
     /// </summary>
-    [DisplayName("System Member")]
-    [IsoXmlTag("SysMmb")]
-    public BranchAndFinancialInstitutionIdentification8? SystemMember { get; init; }
+    [DisplayName("Creditor Account")]
+    [IsoXmlTag("CdtrAcct")]
+    public CashAccount40? CreditorAccount { get; init; }
+
+    /// <summary>
+    /// Debtor.
+    /// </summary>
+    [DisplayName("Debtor")]
+    [IsoXmlTag("Dbtr")]
+    public BranchAndFinancialInstitutionIdentification8? Debtor { get; init; }
+
+    /// <summary>
+    /// Debtor Account.
+    /// </summary>
+    [DisplayName("Debtor Account")]
+    [IsoXmlTag("DbtrAcct")]
+    public CashAccount40? DebtorAccount { get; init; }
 
     /// <summary>
     /// Totals Per Standing Order.
@@ -134,20 +148,6 @@ public record StandingOrder11
     [DisplayName("Totals Per Standing Order")]
     [IsoXmlTag("TtlsPerStgOrdr")]
     public StandingOrderTotalAmount1? TotalsPerStandingOrder { get; init; }
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public StandingOrderType1Choice_? Type { get; init; }
-
-    /// <summary>
-    /// Validity Period.
-    /// </summary>
-    [DisplayName("Validity Period")]
-    [IsoXmlTag("VldtyPrd")]
-    public DatePeriod3? ValidityPeriod { get; init; }
 
     /// <summary>
     /// Zero Sweep Indicator.

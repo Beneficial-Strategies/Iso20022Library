@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record NotificationRejectionReason2
 {
     /// <summary>
-    /// Additional Information.
-    /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public Max350Text? AdditionalInformation { get; init; }
-
-    /// <summary>
     /// Reason.
     /// </summary>
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
     public ValueList<RejectionReason6Format1Choice_> Reason { get; init; } = [];
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public Max350Text? AdditionalInformation { get; init; }
 }

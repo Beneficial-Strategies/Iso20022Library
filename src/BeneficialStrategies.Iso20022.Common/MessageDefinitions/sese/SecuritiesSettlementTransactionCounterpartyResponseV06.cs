@@ -65,18 +65,18 @@ public record SecuritiesSettlementTransactionCounterpartyResponseV06 : IOuterRec
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Provides unambiguous transaction identification information.
+    /// </summary>
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public required TransactionIdentification6 TransactionIdentification { get; init; }
+
+    /// <summary>
     /// Provides the response status related to an allegement or a counterparty&apos;s instruction.
     /// </summary>
     [DisplayName("Response Status")]
     [IsoXmlTag("RspnSts")]
     public required ResponseStatus6Choice_ ResponseStatus { get; init; }
-
-    /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 
     /// <summary>
     /// Identifies the details of the transaction.
@@ -86,9 +86,9 @@ public record SecuritiesSettlementTransactionCounterpartyResponseV06 : IOuterRec
     public TransactionDetails183? TransactionDetails { get; init; }
 
     /// <summary>
-    /// Provides unambiguous transaction identification information.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public required TransactionIdentification6 TransactionIdentification { get; init; }
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

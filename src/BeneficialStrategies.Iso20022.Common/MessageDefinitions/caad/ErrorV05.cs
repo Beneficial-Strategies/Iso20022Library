@@ -46,60 +46,11 @@ public record ErrorV05 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Additional Fee.
-    /// </summary>
-    [DisplayName("Additional Fee")]
-    [IsoXmlTag("AddtlFee")]
-    public ValueList<AdditionalFee3> AdditionalFee { get; init; } = [];
-
-    /// <summary>
-    /// Destination.
-    /// </summary>
-    [DisplayName("Destination")]
-    [IsoXmlTag("Dstn")]
-    public PartyIdentification286? Destination { get; init; }
-
-    /// <summary>
-    /// Error Detail.
-    /// </summary>
-    [DisplayName("Error Detail")]
-    [IsoXmlTag("ErrDtl")]
-    public ValueList<ErrorDetails4> ErrorDetail { get; init; } = [];
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required Header72 Header { get; init; }
-
-    /// <summary>
-    /// Jurisdiction.
-    /// </summary>
-    [DisplayName("Jurisdiction")]
-    [IsoXmlTag("Jursdctn")]
-    public Jurisdiction2? Jurisdiction { get; init; }
-
-    /// <summary>
-    /// Life Cycle Identification.
-    /// </summary>
-    [DisplayName("Life Cycle Identification")]
-    [IsoXmlTag("LifeCyclId")]
-    public Exact15Text? LifeCycleIdentification { get; init; }
-
-    /// <summary>
-    /// National Data.
-    /// </summary>
-    [DisplayName("National Data")]
-    [IsoXmlTag("NtlData")]
-    public ATICALaxProcessing? NationalData { get; init; }
-
-    /// <summary>
-    /// Original Message.
-    /// </summary>
-    [DisplayName("Original Message")]
-    [IsoXmlTag("OrgnlMsg")]
-    public Max100KBinary? OriginalMessage { get; init; }
 
     /// <summary>
     /// Originator.
@@ -109,25 +60,11 @@ public record ErrorV05 : IOuterRecord
     public PartyIdentification286? Originator { get; init; }
 
     /// <summary>
-    /// Private Data.
+    /// Sender.
     /// </summary>
-    [DisplayName("Private Data")]
-    [IsoXmlTag("PrvtData")]
-    public ATICALaxProcessing? PrivateData { get; init; }
-
-    /// <summary>
-    /// Programme.
-    /// </summary>
-    [DisplayName("Programme")]
-    [IsoXmlTag("Prgrmm")]
-    public ProgrammeMode7? Programme { get; init; }
-
-    /// <summary>
-    /// Protected Data.
-    /// </summary>
-    [DisplayName("Protected Data")]
-    [IsoXmlTag("PrtctdData")]
-    public ValueList<ProtectedData2> ProtectedData { get; init; } = [];
+    [DisplayName("Sender")]
+    [IsoXmlTag("Sndr")]
+    public PartyIdentification286? Sender { get; init; }
 
     /// <summary>
     /// Receiver.
@@ -137,39 +74,18 @@ public record ErrorV05 : IOuterRecord
     public PartyIdentification286? Receiver { get; init; }
 
     /// <summary>
-    /// Reconciliation.
+    /// Destination.
     /// </summary>
-    [DisplayName("Reconciliation")]
-    [IsoXmlTag("Rcncltn")]
-    public Reconciliation5? Reconciliation { get; init; }
+    [DisplayName("Destination")]
+    [IsoXmlTag("Dstn")]
+    public PartyIdentification286? Destination { get; init; }
 
     /// <summary>
-    /// Retrieval Reference Number.
+    /// Programme.
     /// </summary>
-    [DisplayName("Retrieval Reference Number")]
-    [IsoXmlTag("RtrvlRefNb")]
-    public Exact12Text? RetrievalReferenceNumber { get; init; }
-
-    /// <summary>
-    /// Security Trailer.
-    /// </summary>
-    [DisplayName("Security Trailer")]
-    [IsoXmlTag("SctyTrlr")]
-    public ContentInformationType41? SecurityTrailer { get; init; }
-
-    /// <summary>
-    /// Sender.
-    /// </summary>
-    [DisplayName("Sender")]
-    [IsoXmlTag("Sndr")]
-    public PartyIdentification286? Sender { get; init; }
-
-    /// <summary>
-    /// Settlement Service.
-    /// </summary>
-    [DisplayName("Settlement Service")]
-    [IsoXmlTag("SttlmSvc")]
-    public SettlementService7? SettlementService { get; init; }
+    [DisplayName("Programme")]
+    [IsoXmlTag("Prgrmm")]
+    public ProgrammeMode7? Programme { get; init; }
 
     /// <summary>
     /// System Trace Audit Number.
@@ -184,4 +100,88 @@ public record ErrorV05 : IOuterRecord
     [DisplayName("Transmission Date Time")]
     [IsoXmlTag("TrnsmssnDtTm")]
     public required ISODateTime TransmissionDateTime { get; init; }
+
+    /// <summary>
+    /// Retrieval Reference Number.
+    /// </summary>
+    [DisplayName("Retrieval Reference Number")]
+    [IsoXmlTag("RtrvlRefNb")]
+    public Exact12Text? RetrievalReferenceNumber { get; init; }
+
+    /// <summary>
+    /// Life Cycle Identification.
+    /// </summary>
+    [DisplayName("Life Cycle Identification")]
+    [IsoXmlTag("LifeCyclId")]
+    public Exact15Text? LifeCycleIdentification { get; init; }
+
+    /// <summary>
+    /// Original Message.
+    /// </summary>
+    [DisplayName("Original Message")]
+    [IsoXmlTag("OrgnlMsg")]
+    public Max100KBinary? OriginalMessage { get; init; }
+
+    /// <summary>
+    /// Error Detail.
+    /// </summary>
+    [DisplayName("Error Detail")]
+    [IsoXmlTag("ErrDtl")]
+    public ValueList<ErrorDetails4> ErrorDetail { get; init; } = [];
+
+    /// <summary>
+    /// Jurisdiction.
+    /// </summary>
+    [DisplayName("Jurisdiction")]
+    [IsoXmlTag("Jursdctn")]
+    public Jurisdiction2? Jurisdiction { get; init; }
+
+    /// <summary>
+    /// Settlement Service.
+    /// </summary>
+    [DisplayName("Settlement Service")]
+    [IsoXmlTag("SttlmSvc")]
+    public SettlementService7? SettlementService { get; init; }
+
+    /// <summary>
+    /// Additional Fee.
+    /// </summary>
+    [DisplayName("Additional Fee")]
+    [IsoXmlTag("AddtlFee")]
+    public ValueList<AdditionalFee3> AdditionalFee { get; init; } = [];
+
+    /// <summary>
+    /// Reconciliation.
+    /// </summary>
+    [DisplayName("Reconciliation")]
+    [IsoXmlTag("Rcncltn")]
+    public Reconciliation5? Reconciliation { get; init; }
+
+    /// <summary>
+    /// Protected Data.
+    /// </summary>
+    [DisplayName("Protected Data")]
+    [IsoXmlTag("PrtctdData")]
+    public ValueList<ProtectedData2> ProtectedData { get; init; } = [];
+
+    /// <summary>
+    /// Private Data.
+    /// </summary>
+    [DisplayName("Private Data")]
+    [IsoXmlTag("PrvtData")]
+    public ATICALaxProcessing? PrivateData { get; init; }
+
+    /// <summary>
+    /// National Data.
+    /// </summary>
+    [DisplayName("National Data")]
+    [IsoXmlTag("NtlData")]
+    public ATICALaxProcessing? NationalData { get; init; }
+
+    /// <summary>
+    /// Security Trailer.
+    /// </summary>
+    [DisplayName("Security Trailer")]
+    [IsoXmlTag("SctyTrlr")]
+    public ContentInformationType41? SecurityTrailer { get; init; }
 }

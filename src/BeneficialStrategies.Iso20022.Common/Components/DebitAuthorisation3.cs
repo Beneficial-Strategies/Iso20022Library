@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record DebitAuthorisation3
 {
     /// <summary>
-    /// Account.
+    /// Cancellation Reason.
     /// </summary>
-    [DisplayName("Account")]
-    [IsoXmlTag("Acct")]
-    public CashAccount40? Account { get; init; }
-
-    /// <summary>
-    /// Additional Cancellation Reason Information.
-    /// </summary>
-    [DisplayName("Additional Cancellation Reason Information")]
-    [IsoXmlTag("AddtlCxlRsnInf")]
-    public ValueList<Max140Text> AdditionalCancellationReasonInformation { get; init; } = [];
+    [DisplayName("Cancellation Reason")]
+    [IsoXmlTag("CxlRsn")]
+    public required CancellationReason33Choice_ CancellationReason { get; init; }
 
     /// <summary>
     /// Amount To Debit.
@@ -38,11 +31,11 @@ public record DebitAuthorisation3
     public ActiveOrHistoricCurrencyAndAmount? AmountToDebit { get; init; }
 
     /// <summary>
-    /// Cancellation Reason.
+    /// Account.
     /// </summary>
-    [DisplayName("Cancellation Reason")]
-    [IsoXmlTag("CxlRsn")]
-    public required CancellationReason33Choice_ CancellationReason { get; init; }
+    [DisplayName("Account")]
+    [IsoXmlTag("Acct")]
+    public CashAccount40? Account { get; init; }
 
     /// <summary>
     /// Value Date To Debit.
@@ -50,4 +43,11 @@ public record DebitAuthorisation3
     [DisplayName("Value Date To Debit")]
     [IsoXmlTag("ValDtToDbt")]
     public ISODate? ValueDateToDebit { get; init; }
+
+    /// <summary>
+    /// Additional Cancellation Reason Information.
+    /// </summary>
+    [DisplayName("Additional Cancellation Reason Information")]
+    [IsoXmlTag("AddtlCxlRsnInf")]
+    public ValueList<Max140Text> AdditionalCancellationReasonInformation { get; init; } = [];
 }

@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record DataSetIdentification11
 {
     /// <summary>
-    /// Creation Date Time.
-    /// </summary>
-    [DisplayName("Creation Date Time")]
-    [IsoXmlTag("CreDtTm")]
-    public ISODateTime? CreationDateTime { get; init; }
-
-    /// <summary>
     /// Name.
     /// </summary>
     [DisplayName("Name")]
@@ -43,4 +36,11 @@ public record DataSetIdentification11
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     public Max256Text? Version { get; init; }
+
+    /// <summary>
+    /// Creation Date Time.
+    /// </summary>
+    [DisplayName("Creation Date Time")]
+    [IsoXmlTag("CreDtTm")]
+    public ISODateTime? CreationDateTime { get; init; }
 }

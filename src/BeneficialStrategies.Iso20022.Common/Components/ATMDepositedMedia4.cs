@@ -24,6 +24,13 @@ public record ATMDepositedMedia4
     public Number? AccountSequenceNumber { get; init; }
 
     /// <summary>
+    /// Media Type.
+    /// </summary>
+    [DisplayName("Media Type")]
+    [IsoXmlTag("MdiaTp")]
+    public required ATMMediaType4Code MediaType { get; init; }
+
+    /// <summary>
     /// Media Category.
     /// </summary>
     [DisplayName("Media Category")]
@@ -36,11 +43,4 @@ public record ATMDepositedMedia4
     [DisplayName("Media Item")]
     [IsoXmlTag("MdiaItm")]
     public ValueList<ATMDepositedMediaItem1> MediaItem { get; init; } = [];
-
-    /// <summary>
-    /// Media Type.
-    /// </summary>
-    [DisplayName("Media Type")]
-    [IsoXmlTag("MdiaTp")]
-    public required ATMMediaType4Code MediaType { get; init; }
 }

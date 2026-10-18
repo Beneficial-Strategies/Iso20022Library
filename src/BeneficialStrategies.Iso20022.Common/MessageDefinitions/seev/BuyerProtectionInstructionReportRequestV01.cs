@@ -46,13 +46,6 @@ public record BuyerProtectionInstructionReportRequestV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Buyer Protection Selection Criteria.
-    /// </summary>
-    [DisplayName("Buyer Protection Selection Criteria")]
-    [IsoXmlTag("BuyrPrtcnSelctnCrit")]
-    public required BuyerProtectionSelectionCriteria1 BuyerProtectionSelectionCriteria { get; init; }
-
-    /// <summary>
     /// Query Reference.
     /// </summary>
     [DisplayName("Query Reference")]
@@ -60,6 +53,13 @@ public record BuyerProtectionInstructionReportRequestV01 : IOuterRecord
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public Max35Text? QueryReference { get; init; }
+
+    /// <summary>
+    /// Buyer Protection Selection Criteria.
+    /// </summary>
+    [DisplayName("Buyer Protection Selection Criteria")]
+    [IsoXmlTag("BuyrPrtcnSelctnCrit")]
+    public required BuyerProtectionSelectionCriteria1 BuyerProtectionSelectionCriteria { get; init; }
 
     /// <summary>
     /// Supplementary Data.

@@ -46,13 +46,6 @@ public record MarginReportV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Clearing Member.
-    /// </summary>
-    [DisplayName("Clearing Member")]
-    [IsoXmlTag("ClrMmb")]
-    public required PartyIdentification35Choice_ ClearingMember { get; init; }
-
-    /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
@@ -67,18 +60,25 @@ public record MarginReportV01 : IOuterRecord
     public required Pagination Pagination { get; init; }
 
     /// <summary>
-    /// Report Details.
-    /// </summary>
-    [DisplayName("Report Details")]
-    [IsoXmlTag("RptDtls")]
-    public ValueList<MarginReport1> ReportDetails { get; init; } = [];
-
-    /// <summary>
     /// Report Parameters.
     /// </summary>
     [DisplayName("Report Parameters")]
     [IsoXmlTag("RptParams")]
     public required ReportParameters3 ReportParameters { get; init; }
+
+    /// <summary>
+    /// Clearing Member.
+    /// </summary>
+    [DisplayName("Clearing Member")]
+    [IsoXmlTag("ClrMmb")]
+    public required PartyIdentification35Choice_ ClearingMember { get; init; }
+
+    /// <summary>
+    /// Report Details.
+    /// </summary>
+    [DisplayName("Report Details")]
+    [IsoXmlTag("RptDtls")]
+    public ValueList<MarginReport1> ReportDetails { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

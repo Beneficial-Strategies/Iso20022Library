@@ -46,13 +46,6 @@ public record FundReferenceDataReportV07 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Fund Reference Data Report Identification.
-    /// </summary>
-    [DisplayName("Fund Reference Data Report Identification")]
-    [IsoXmlTag("FndRefDataRptId")]
-    public Max35Text? FundReferenceDataReportIdentification { get; init; }
-
-    /// <summary>
     /// Message Identification.
     /// </summary>
     [DisplayName("Message Identification")]
@@ -72,6 +65,13 @@ public record FundReferenceDataReportV07 : IOuterRecord
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
     public AdditionalReference10? RelatedReference { get; init; }
+
+    /// <summary>
+    /// Fund Reference Data Report Identification.
+    /// </summary>
+    [DisplayName("Fund Reference Data Report Identification")]
+    [IsoXmlTag("FndRefDataRptId")]
+    public Max35Text? FundReferenceDataReportIdentification { get; init; }
 
     /// <summary>
     /// Report.

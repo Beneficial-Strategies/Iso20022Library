@@ -18,16 +18,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record DocumentAmount1
 {
     /// <summary>
-    /// Amount of money for the referred document.
-    /// </summary>
-    [DisplayName("Amount")]
-    [IsoXmlTag("Amt")]
-    public required ActiveOrHistoricCurrencyAndAmount Amount { get; init; }
-
-    /// <summary>
     /// Defines the type of amount.
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     public required DocumentAmountType1Choice_ Type { get; init; }
+
+    /// <summary>
+    /// Amount of money for the referred document.
+    /// </summary>
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    public required ActiveOrHistoricCurrencyAndAmount Amount { get; init; }
 }

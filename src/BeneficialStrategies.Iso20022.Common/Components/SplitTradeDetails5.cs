@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SplitTradeDetails5
 {
     /// <summary>
-    /// Agreed Rate.
-    /// </summary>
-    [DisplayName("Agreed Rate")]
-    [IsoXmlTag("AgrdRate")]
-    public AgreedRate3? AgreedRate { get; init; }
-
-    /// <summary>
     /// Status Details.
     /// </summary>
     [DisplayName("Status Details")]
@@ -36,4 +29,11 @@ public record SplitTradeDetails5
     [DisplayName("Trade Amounts")]
     [IsoXmlTag("TradAmts")]
     public required AmountsAndValueDate8 TradeAmounts { get; init; }
+
+    /// <summary>
+    /// Agreed Rate.
+    /// </summary>
+    [DisplayName("Agreed Rate")]
+    [IsoXmlTag("AgrdRate")]
+    public AgreedRate3? AgreedRate { get; init; }
 }

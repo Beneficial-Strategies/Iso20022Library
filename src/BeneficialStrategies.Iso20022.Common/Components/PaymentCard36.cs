@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PaymentCard36
 {
     /// <summary>
-    /// Card Country Code.
-    /// </summary>
-    [DisplayName("Card Country Code")]
-    [IsoXmlTag("CardCtryCd")]
-    public Max3Text? CardCountryCode { get; init; }
-
-    /// <summary>
-    /// Card Currency Code.
-    /// </summary>
-    [DisplayName("Card Currency Code")]
-    [IsoXmlTag("CardCcyCd")]
-    public Exact3AlphaNumericText? CardCurrencyCode { get; init; }
-
-    /// <summary>
     /// Card Data Entry Mode.
     /// </summary>
     [DisplayName("Card Data Entry Mode")]
@@ -45,6 +31,13 @@ public record PaymentCard36
     public TrueFalseIndicator? FallbackIndicator { get; init; }
 
     /// <summary>
+    /// Protected Card Data.
+    /// </summary>
+    [DisplayName("Protected Card Data")]
+    [IsoXmlTag("PrtctdCardData")]
+    public ContentInformationType10? ProtectedCardData { get; init; }
+
+    /// <summary>
     /// Plain Card Data.
     /// </summary>
     [DisplayName("Plain Card Data")]
@@ -52,9 +45,16 @@ public record PaymentCard36
     public PlainCardData25? PlainCardData { get; init; }
 
     /// <summary>
-    /// Protected Card Data.
+    /// Card Country Code.
     /// </summary>
-    [DisplayName("Protected Card Data")]
-    [IsoXmlTag("PrtctdCardData")]
-    public ContentInformationType10? ProtectedCardData { get; init; }
+    [DisplayName("Card Country Code")]
+    [IsoXmlTag("CardCtryCd")]
+    public Max3Text? CardCountryCode { get; init; }
+
+    /// <summary>
+    /// Card Currency Code.
+    /// </summary>
+    [DisplayName("Card Currency Code")]
+    [IsoXmlTag("CardCcyCd")]
+    public Exact3AlphaNumericText? CardCurrencyCode { get; init; }
 }

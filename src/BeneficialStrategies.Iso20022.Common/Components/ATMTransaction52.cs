@@ -17,6 +17,34 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMTransaction52
 {
     /// <summary>
+    /// Type Of Operation.
+    /// </summary>
+    [DisplayName("Type Of Operation")]
+    [IsoXmlTag("TpOfOpr")]
+    public ATMOperation2Code? TypeOfOperation { get; init; }
+
+    /// <summary>
+    /// Transaction Identification.
+    /// </summary>
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public required TransactionIdentifier3 TransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Reconciliation Identification.
+    /// </summary>
+    [DisplayName("Reconciliation Identification")]
+    [IsoXmlTag("RcncltnId")]
+    public required Max35Text ReconciliationIdentification { get; init; }
+
+    /// <summary>
+    /// Transaction Response.
+    /// </summary>
+    [DisplayName("Transaction Response")]
+    [IsoXmlTag("TxRspn")]
+    public required ResponseType12 TransactionResponse { get; init; }
+
+    /// <summary>
     /// ATM Totals.
     /// </summary>
     [DisplayName("ATM Totals")]
@@ -36,32 +64,4 @@ public record ATMTransaction52
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
     public ValueList<ATMCommand7> Command { get; init; } = [];
-
-    /// <summary>
-    /// Reconciliation Identification.
-    /// </summary>
-    [DisplayName("Reconciliation Identification")]
-    [IsoXmlTag("RcncltnId")]
-    public required Max35Text ReconciliationIdentification { get; init; }
-
-    /// <summary>
-    /// Transaction Identification.
-    /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public required TransactionIdentifier3 TransactionIdentification { get; init; }
-
-    /// <summary>
-    /// Transaction Response.
-    /// </summary>
-    [DisplayName("Transaction Response")]
-    [IsoXmlTag("TxRspn")]
-    public required ResponseType12 TransactionResponse { get; init; }
-
-    /// <summary>
-    /// Type Of Operation.
-    /// </summary>
-    [DisplayName("Type Of Operation")]
-    [IsoXmlTag("TpOfOpr")]
-    public ATMOperation2Code? TypeOfOperation { get; init; }
 }

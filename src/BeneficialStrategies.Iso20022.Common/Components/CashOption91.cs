@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CashOption91
 {
     /// <summary>
-    /// Cash Account Identification.
-    /// </summary>
-    [DisplayName("Cash Account Identification")]
-    [IsoXmlTag("CshAcctId")]
-    public CashAccountIdentification5Choice_? CashAccountIdentification { get; init; }
-
-    /// <summary>
     /// Credit Debit Indicator.
     /// </summary>
     [DisplayName("Credit Debit Indicator")]
@@ -31,18 +24,11 @@ public record CashOption91
     public required CreditDebitCode CreditDebitIndicator { get; init; }
 
     /// <summary>
-    /// Earliest Payment Date.
+    /// Cash Account Identification.
     /// </summary>
-    [DisplayName("Earliest Payment Date")]
-    [IsoXmlTag("EarlstPmtDt")]
-    public DateAndDateTime2Choice_? EarliestPaymentDate { get; init; }
-
-    /// <summary>
-    /// Entitled Amount.
-    /// </summary>
-    [DisplayName("Entitled Amount")]
-    [IsoXmlTag("EntitldAmt")]
-    public required ActiveCurrencyAndAmount EntitledAmount { get; init; }
+    [DisplayName("Cash Account Identification")]
+    [IsoXmlTag("CshAcctId")]
+    public CashAccountIdentification5Choice_? CashAccountIdentification { get; init; }
 
     /// <summary>
     /// Gross Cash Amount.
@@ -59,11 +45,18 @@ public record CashOption91
     public ActiveCurrencyAndAmount? NetCashAmount { get; init; }
 
     /// <summary>
-    /// Payment Date.
+    /// Entitled Amount.
     /// </summary>
-    [DisplayName("Payment Date")]
-    [IsoXmlTag("PmtDt")]
-    public required DateFormat43Choice_ PaymentDate { get; init; }
+    [DisplayName("Entitled Amount")]
+    [IsoXmlTag("EntitldAmt")]
+    public required ActiveCurrencyAndAmount EntitledAmount { get; init; }
+
+    /// <summary>
+    /// Withholding Tax Rate.
+    /// </summary>
+    [DisplayName("Withholding Tax Rate")]
+    [IsoXmlTag("WhldgTaxRate")]
+    public ValueList<RateAndAmountFormat40Choice_> WithholdingTaxRate { get; init; } = [];
 
     /// <summary>
     /// Withholding Tax Amount.
@@ -73,9 +66,16 @@ public record CashOption91
     public ActiveCurrencyAndAmount? WithholdingTaxAmount { get; init; }
 
     /// <summary>
-    /// Withholding Tax Rate.
+    /// Earliest Payment Date.
     /// </summary>
-    [DisplayName("Withholding Tax Rate")]
-    [IsoXmlTag("WhldgTaxRate")]
-    public ValueList<RateAndAmountFormat40Choice_> WithholdingTaxRate { get; init; } = [];
+    [DisplayName("Earliest Payment Date")]
+    [IsoXmlTag("EarlstPmtDt")]
+    public DateAndDateTime2Choice_? EarliestPaymentDate { get; init; }
+
+    /// <summary>
+    /// Payment Date.
+    /// </summary>
+    [DisplayName("Payment Date")]
+    [IsoXmlTag("PmtDt")]
+    public required DateFormat43Choice_ PaymentDate { get; init; }
 }

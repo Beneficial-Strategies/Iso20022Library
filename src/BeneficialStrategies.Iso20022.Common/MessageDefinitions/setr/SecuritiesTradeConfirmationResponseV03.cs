@@ -58,20 +58,6 @@ public record SecuritiesTradeConfirmationResponseV03 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Provides clearing member information.
-    /// </summary>
-    [DisplayName("Clearing Details")]
-    [IsoXmlTag("ClrDtls")]
-    public Clearing6? ClearingDetails { get; init; }
-
-    /// <summary>
-    /// Parties involved in the confirmation of the details of a trade.
-    /// </summary>
-    [DisplayName("Confirmation Parties")]
-    [IsoXmlTag("ConfPties")]
-    public ValueList<ConfirmationParties8> ConfirmationParties { get; init; } = [];
-
-    /// <summary>
     /// Information that unambiguously identifies an SecuritiesTradeConfirmationResponse message as known by the account owner (or the instructing party acting on its behalf).
     /// </summary>
     [DisplayName("Identification")]
@@ -91,6 +77,20 @@ public record SecuritiesTradeConfirmationResponseV03 : IOuterRecord
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
     public required StatusAndReason46 Status { get; init; }
+
+    /// <summary>
+    /// Provides clearing member information.
+    /// </summary>
+    [DisplayName("Clearing Details")]
+    [IsoXmlTag("ClrDtls")]
+    public Clearing6? ClearingDetails { get; init; }
+
+    /// <summary>
+    /// Parties involved in the confirmation of the details of a trade.
+    /// </summary>
+    [DisplayName("Confirmation Parties")]
+    [IsoXmlTag("ConfPties")]
+    public ValueList<ConfirmationParties8> ConfirmationParties { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.

@@ -46,39 +46,11 @@ public record ForeignExchangeTradeCaptureReportV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Counterparty Side Identification.
-    /// </summary>
-    [DisplayName("Counterparty Side Identification")]
-    [IsoXmlTag("CtrPtySdId")]
-    public TradePartyIdentification9? CounterpartySideIdentification { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required Header23 Header { get; init; }
-
-    /// <summary>
-    /// Last Report Requested.
-    /// </summary>
-    [DisplayName("Last Report Requested")]
-    [IsoXmlTag("LastRptReqd")]
-    public TrueFalseIndicator? LastReportRequested { get; init; }
-
-    /// <summary>
-    /// Query Reject Reason.
-    /// </summary>
-    [DisplayName("Query Reject Reason")]
-    [IsoXmlTag("QryRjctRsn")]
-    public Max35Text? QueryRejectReason { get; init; }
-
-    /// <summary>
-    /// Reference.
-    /// </summary>
-    [DisplayName("Reference")]
-    [IsoXmlTag("Ref")]
-    public AdditionalReferences2? Reference { get; init; }
 
     /// <summary>
     /// Report Identification.
@@ -88,32 +60,18 @@ public record ForeignExchangeTradeCaptureReportV02 : IOuterRecord
     public MessageIdentification1? ReportIdentification { get; init; }
 
     /// <summary>
-    /// Request Rejected.
+    /// Trading Side Identification.
     /// </summary>
-    [DisplayName("Request Rejected")]
-    [IsoXmlTag("ReqRjctd")]
-    public TrueFalseIndicator? RequestRejected { get; init; }
+    [DisplayName("Trading Side Identification")]
+    [IsoXmlTag("TradgSdId")]
+    public TradePartyIdentification9? TradingSideIdentification { get; init; }
 
     /// <summary>
-    /// Request Responder.
+    /// Counterparty Side Identification.
     /// </summary>
-    [DisplayName("Request Responder")]
-    [IsoXmlTag("ReqRspndr")]
-    public required TrueFalseIndicator RequestResponder { get; init; }
-
-    /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Total Number Trades.
-    /// </summary>
-    [DisplayName("Total Number Trades")]
-    [IsoXmlTag("TtlNbTrds")]
-    public Number? TotalNumberTrades { get; init; }
+    [DisplayName("Counterparty Side Identification")]
+    [IsoXmlTag("CtrPtySdId")]
+    public TradePartyIdentification9? CounterpartySideIdentification { get; init; }
 
     /// <summary>
     /// Trade Detail.
@@ -123,9 +81,51 @@ public record ForeignExchangeTradeCaptureReportV02 : IOuterRecord
     public Trade7? TradeDetail { get; init; }
 
     /// <summary>
-    /// Trading Side Identification.
+    /// Reference.
     /// </summary>
-    [DisplayName("Trading Side Identification")]
-    [IsoXmlTag("TradgSdId")]
-    public TradePartyIdentification9? TradingSideIdentification { get; init; }
+    [DisplayName("Reference")]
+    [IsoXmlTag("Ref")]
+    public AdditionalReferences2? Reference { get; init; }
+
+    /// <summary>
+    /// Request Responder.
+    /// </summary>
+    [DisplayName("Request Responder")]
+    [IsoXmlTag("ReqRspndr")]
+    public required TrueFalseIndicator RequestResponder { get; init; }
+
+    /// <summary>
+    /// Request Rejected.
+    /// </summary>
+    [DisplayName("Request Rejected")]
+    [IsoXmlTag("ReqRjctd")]
+    public TrueFalseIndicator? RequestRejected { get; init; }
+
+    /// <summary>
+    /// Query Reject Reason.
+    /// </summary>
+    [DisplayName("Query Reject Reason")]
+    [IsoXmlTag("QryRjctRsn")]
+    public Max35Text? QueryRejectReason { get; init; }
+
+    /// <summary>
+    /// Total Number Trades.
+    /// </summary>
+    [DisplayName("Total Number Trades")]
+    [IsoXmlTag("TtlNbTrds")]
+    public Number? TotalNumberTrades { get; init; }
+
+    /// <summary>
+    /// Last Report Requested.
+    /// </summary>
+    [DisplayName("Last Report Requested")]
+    [IsoXmlTag("LastRptReqd")]
+    public TrueFalseIndicator? LastReportRequested { get; init; }
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -24,27 +24,6 @@ public record UnderlyingStatementEntry5
     public CashAccount40? OriginalAccount { get; init; }
 
     /// <summary>
-    /// Original Entry Amount.
-    /// </summary>
-    [DisplayName("Original Entry Amount")]
-    [IsoXmlTag("OrgnlNtryAmt")]
-    public ActiveOrHistoricCurrencyAndAmount? OriginalEntryAmount { get; init; }
-
-    /// <summary>
-    /// Original Entry Reference.
-    /// </summary>
-    [DisplayName("Original Entry Reference")]
-    [IsoXmlTag("OrgnlNtryRef")]
-    public Max35Text? OriginalEntryReference { get; init; }
-
-    /// <summary>
-    /// Original Entry Value Date.
-    /// </summary>
-    [DisplayName("Original Entry Value Date")]
-    [IsoXmlTag("OrgnlNtryValDt")]
-    public DateAndDateTime2Choice_? OriginalEntryValueDate { get; init; }
-
-    /// <summary>
     /// Original Group Information.
     /// </summary>
     [DisplayName("Original Group Information")]
@@ -59,9 +38,30 @@ public record UnderlyingStatementEntry5
     public Max35Text? OriginalStatementIdentification { get; init; }
 
     /// <summary>
+    /// Original Entry Reference.
+    /// </summary>
+    [DisplayName("Original Entry Reference")]
+    [IsoXmlTag("OrgnlNtryRef")]
+    public Max35Text? OriginalEntryReference { get; init; }
+
+    /// <summary>
     /// Original UETR.
     /// </summary>
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
     public UUIDv4Identifier? OriginalUETR { get; init; }
+
+    /// <summary>
+    /// Original Entry Amount.
+    /// </summary>
+    [DisplayName("Original Entry Amount")]
+    [IsoXmlTag("OrgnlNtryAmt")]
+    public ActiveOrHistoricCurrencyAndAmount? OriginalEntryAmount { get; init; }
+
+    /// <summary>
+    /// Original Entry Value Date.
+    /// </summary>
+    [DisplayName("Original Entry Value Date")]
+    [IsoXmlTag("OrgnlNtryValDt")]
+    public DateAndDateTime2Choice_? OriginalEntryValueDate { get; init; }
 }

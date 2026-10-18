@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TokenRequestComponent4
 {
     /// <summary>
-    /// Environment.
-    /// </summary>
-    [DisplayName("Environment")]
-    [IsoXmlTag("Envt")]
-    public required CardPaymentEnvironment80 Environment { get; init; }
-
-    /// <summary>
     /// Transaction Sequence Counter.
     /// </summary>
     [DisplayName("Transaction Sequence Counter")]
     [IsoXmlTag("TxSeqCntr")]
     public required Max9NumericText TransactionSequenceCounter { get; init; }
+
+    /// <summary>
+    /// Environment.
+    /// </summary>
+    [DisplayName("Environment")]
+    [IsoXmlTag("Envt")]
+    public required CardPaymentEnvironment80 Environment { get; init; }
 }

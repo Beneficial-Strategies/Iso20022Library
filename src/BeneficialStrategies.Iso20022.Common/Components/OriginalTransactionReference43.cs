@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record OriginalTransactionReference43
 {
     /// <summary>
-    /// Creation Date Time.
-    /// </summary>
-    [DisplayName("Creation Date Time")]
-    [IsoXmlTag("CreDtTm")]
-    public ISODateTime? CreationDateTime { get; init; }
-
-    /// <summary>
     /// Message Identification.
     /// </summary>
     [DisplayName("Message Identification")]
@@ -36,6 +29,13 @@ public record OriginalTransactionReference43
     [DisplayName("Message Name Identification")]
     [IsoXmlTag("MsgNmId")]
     public Max35Text? MessageNameIdentification { get; init; }
+
+    /// <summary>
+    /// Creation Date Time.
+    /// </summary>
+    [DisplayName("Creation Date Time")]
+    [IsoXmlTag("CreDtTm")]
+    public ISODateTime? CreationDateTime { get; init; }
 
     /// <summary>
     /// Original Transaction.

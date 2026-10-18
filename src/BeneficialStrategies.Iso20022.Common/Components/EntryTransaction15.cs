@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record EntryTransaction15
 {
     /// <summary>
-    /// Additional Transaction Information.
+    /// References.
     /// </summary>
-    [DisplayName("Additional Transaction Information")]
-    [IsoXmlTag("AddtlTxInf")]
-    public Max500Text? AdditionalTransactionInformation { get; init; }
+    [DisplayName("References")]
+    [IsoXmlTag("Refs")]
+    public TransactionReferences6? References { get; init; }
 
     /// <summary>
     /// Amount.
@@ -29,6 +29,13 @@ public record EntryTransaction15
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
     public ActiveOrHistoricCurrencyAndAmount? Amount { get; init; }
+
+    /// <summary>
+    /// Credit Debit Indicator.
+    /// </summary>
+    [DisplayName("Credit Debit Indicator")]
+    [IsoXmlTag("CdtDbtInd")]
+    public CreditDebitCode? CreditDebitIndicator { get; init; }
 
     /// <summary>
     /// Amount Details.
@@ -52,20 +59,6 @@ public record EntryTransaction15
     public BankTransactionCodeStructure4? BankTransactionCode { get; init; }
 
     /// <summary>
-    /// Card Transaction.
-    /// </summary>
-    [DisplayName("Card Transaction")]
-    [IsoXmlTag("CardTx")]
-    public CardTransaction18? CardTransaction { get; init; }
-
-    /// <summary>
-    /// Cash Deposit.
-    /// </summary>
-    [DisplayName("Cash Deposit")]
-    [IsoXmlTag("CshDpst")]
-    public ValueList<CashDeposit1> CashDeposit { get; init; } = [];
-
-    /// <summary>
     /// Charges.
     /// </summary>
     [DisplayName("Charges")]
@@ -73,32 +66,25 @@ public record EntryTransaction15
     public Charges15? Charges { get; init; }
 
     /// <summary>
-    /// Credit Debit Indicator.
-    /// </summary>
-    [DisplayName("Credit Debit Indicator")]
-    [IsoXmlTag("CdtDbtInd")]
-    public CreditDebitCode? CreditDebitIndicator { get; init; }
-
-    /// <summary>
-    /// Financial Instrument Identification.
-    /// </summary>
-    [DisplayName("Financial Instrument Identification")]
-    [IsoXmlTag("FinInstrmId")]
-    public SecurityIdentification19? FinancialInstrumentIdentification { get; init; }
-
-    /// <summary>
-    /// Instruction Copy.
-    /// </summary>
-    [DisplayName("Instruction Copy")]
-    [IsoXmlTag("InstrCpy")]
-    public Max20000Text? InstructionCopy { get; init; }
-
-    /// <summary>
     /// Interest.
     /// </summary>
     [DisplayName("Interest")]
     [IsoXmlTag("Intrst")]
     public TransactionInterest4? Interest { get; init; }
+
+    /// <summary>
+    /// Related Parties.
+    /// </summary>
+    [DisplayName("Related Parties")]
+    [IsoXmlTag("RltdPties")]
+    public TransactionParties12? RelatedParties { get; init; }
+
+    /// <summary>
+    /// Related Agents.
+    /// </summary>
+    [DisplayName("Related Agents")]
+    [IsoXmlTag("RltdAgts")]
+    public TransactionAgents6? RelatedAgents { get; init; }
 
     /// <summary>
     /// Local Instrument.
@@ -122,25 +108,18 @@ public record EntryTransaction15
     public Purpose2Choice_? Purpose { get; init; }
 
     /// <summary>
-    /// References.
+    /// Related Remittance Information.
     /// </summary>
-    [DisplayName("References")]
-    [IsoXmlTag("Refs")]
-    public TransactionReferences6? References { get; init; }
+    [DisplayName("Related Remittance Information")]
+    [IsoXmlTag("RltdRmtInf")]
+    public ValueList<RemittanceLocation8> RelatedRemittanceInformation { get; init; } = [];
 
     /// <summary>
-    /// Related Agents.
+    /// Remittance Information.
     /// </summary>
-    [DisplayName("Related Agents")]
-    [IsoXmlTag("RltdAgts")]
-    public TransactionAgents6? RelatedAgents { get; init; }
-
-    /// <summary>
-    /// Related Corporate Action.
-    /// </summary>
-    [DisplayName("Related Corporate Action")]
-    [IsoXmlTag("RltdCorpActn")]
-    public CorporateAction82? RelatedCorporateAction { get; init; }
+    [DisplayName("Remittance Information")]
+    [IsoXmlTag("RmtInf")]
+    public RemittanceInformation22? RemittanceInformation { get; init; }
 
     /// <summary>
     /// Related Dates.
@@ -148,13 +127,6 @@ public record EntryTransaction15
     [DisplayName("Related Dates")]
     [IsoXmlTag("RltdDts")]
     public TransactionDates3? RelatedDates { get; init; }
-
-    /// <summary>
-    /// Related Parties.
-    /// </summary>
-    [DisplayName("Related Parties")]
-    [IsoXmlTag("RltdPties")]
-    public TransactionParties12? RelatedParties { get; init; }
 
     /// <summary>
     /// Related Price.
@@ -171,39 +143,11 @@ public record EntryTransaction15
     public ValueList<TransactionQuantities4Choice_> RelatedQuantities { get; init; } = [];
 
     /// <summary>
-    /// Related Remittance Information.
+    /// Financial Instrument Identification.
     /// </summary>
-    [DisplayName("Related Remittance Information")]
-    [IsoXmlTag("RltdRmtInf")]
-    public ValueList<RemittanceLocation8> RelatedRemittanceInformation { get; init; } = [];
-
-    /// <summary>
-    /// Remittance Information.
-    /// </summary>
-    [DisplayName("Remittance Information")]
-    [IsoXmlTag("RmtInf")]
-    public RemittanceInformation22? RemittanceInformation { get; init; }
-
-    /// <summary>
-    /// Return Information.
-    /// </summary>
-    [DisplayName("Return Information")]
-    [IsoXmlTag("RtrInf")]
-    public PaymentReturnReason8? ReturnInformation { get; init; }
-
-    /// <summary>
-    /// Safekeeping Account.
-    /// </summary>
-    [DisplayName("Safekeeping Account")]
-    [IsoXmlTag("SfkpgAcct")]
-    public SecuritiesAccount19? SafekeepingAccount { get; init; }
-
-    /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
+    [DisplayName("Financial Instrument Identification")]
+    [IsoXmlTag("FinInstrmId")]
+    public SecurityIdentification19? FinancialInstrumentIdentification { get; init; }
 
     /// <summary>
     /// Tax.
@@ -213,9 +157,65 @@ public record EntryTransaction15
     public TaxData1? Tax { get; init; }
 
     /// <summary>
+    /// Return Information.
+    /// </summary>
+    [DisplayName("Return Information")]
+    [IsoXmlTag("RtrInf")]
+    public PaymentReturnReason8? ReturnInformation { get; init; }
+
+    /// <summary>
+    /// Related Corporate Action.
+    /// </summary>
+    [DisplayName("Related Corporate Action")]
+    [IsoXmlTag("RltdCorpActn")]
+    public CorporateAction82? RelatedCorporateAction { get; init; }
+
+    /// <summary>
+    /// Safekeeping Account.
+    /// </summary>
+    [DisplayName("Safekeeping Account")]
+    [IsoXmlTag("SfkpgAcct")]
+    public SecuritiesAccount19? SafekeepingAccount { get; init; }
+
+    /// <summary>
     /// Underlying Allocation.
     /// </summary>
     [DisplayName("Underlying Allocation")]
     [IsoXmlTag("UndrlygAllcn")]
     public ValueList<TransactionAllocation1> UnderlyingAllocation { get; init; } = [];
+
+    /// <summary>
+    /// Cash Deposit.
+    /// </summary>
+    [DisplayName("Cash Deposit")]
+    [IsoXmlTag("CshDpst")]
+    public ValueList<CashDeposit1> CashDeposit { get; init; } = [];
+
+    /// <summary>
+    /// Card Transaction.
+    /// </summary>
+    [DisplayName("Card Transaction")]
+    [IsoXmlTag("CardTx")]
+    public CardTransaction18? CardTransaction { get; init; }
+
+    /// <summary>
+    /// Instruction Copy.
+    /// </summary>
+    [DisplayName("Instruction Copy")]
+    [IsoXmlTag("InstrCpy")]
+    public Max20000Text? InstructionCopy { get; init; }
+
+    /// <summary>
+    /// Additional Transaction Information.
+    /// </summary>
+    [DisplayName("Additional Transaction Information")]
+    [IsoXmlTag("AddtlTxInf")]
+    public Max500Text? AdditionalTransactionInformation { get; init; }
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

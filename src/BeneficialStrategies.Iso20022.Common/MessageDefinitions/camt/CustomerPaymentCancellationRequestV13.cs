@@ -67,16 +67,16 @@ public record CustomerPaymentCancellationRequestV13 : IOuterRecord
     public ControlData1? ControlData { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
     /// Underlying.
     /// </summary>
     [DisplayName("Underlying")]
     [IsoXmlTag("Undrlyg")]
     public ValueList<UnderlyingTransaction37> Underlying { get; init; } = [];
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

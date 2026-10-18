@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CardPaymentDataSetTransaction53
 {
     /// <summary>
-    /// Environment.
+    /// Transaction Sequence Counter.
     /// </summary>
-    [DisplayName("Environment")]
-    [IsoXmlTag("Envt")]
-    public required CardPaymentEnvironment81 Environment { get; init; }
+    [DisplayName("Transaction Sequence Counter")]
+    [IsoXmlTag("TxSeqCntr")]
+    public required Max9NumericText TransactionSequenceCounter { get; init; }
 
     /// <summary>
     /// Traceability.
@@ -29,6 +29,13 @@ public record CardPaymentDataSetTransaction53
     [DisplayName("Traceability")]
     [IsoXmlTag("Tracblt")]
     public ValueList<Traceability8> Traceability { get; init; } = [];
+
+    /// <summary>
+    /// Environment.
+    /// </summary>
+    [DisplayName("Environment")]
+    [IsoXmlTag("Envt")]
+    public required CardPaymentEnvironment81 Environment { get; init; }
 
     /// <summary>
     /// Transaction.
@@ -43,11 +50,4 @@ public record CardPaymentDataSetTransaction53
     [DisplayName("Transaction Response")]
     [IsoXmlTag("TxRspn")]
     public required CardPaymentTransaction144 TransactionResponse { get; init; }
-
-    /// <summary>
-    /// Transaction Sequence Counter.
-    /// </summary>
-    [DisplayName("Transaction Sequence Counter")]
-    [IsoXmlTag("TxSeqCntr")]
-    public required Max9NumericText TransactionSequenceCounter { get; init; }
 }

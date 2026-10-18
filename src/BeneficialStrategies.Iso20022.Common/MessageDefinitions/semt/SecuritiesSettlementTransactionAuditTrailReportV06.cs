@@ -46,20 +46,6 @@ public record SecuritiesSettlementTransactionAuditTrailReportV06 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Owner.
-    /// </summary>
-    [DisplayName("Account Owner")]
-    [IsoXmlTag("AcctOwnr")]
-    public PartyIdentification144? AccountOwner { get; init; }
-
-    /// <summary>
-    /// Block Chain Address Or Wallet.
-    /// </summary>
-    [DisplayName("Block Chain Address Or Wallet")]
-    [IsoXmlTag("BlckChainAdrOrWllt")]
-    public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
-
-    /// <summary>
     /// Pagination.
     /// </summary>
     [DisplayName("Pagination")]
@@ -74,6 +60,13 @@ public record SecuritiesSettlementTransactionAuditTrailReportV06 : IOuterRecord
     public Max35Text? QueryReference { get; init; }
 
     /// <summary>
+    /// Transaction Identification.
+    /// </summary>
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public TransactionIdentifications54? TransactionIdentification { get; init; }
+
+    /// <summary>
     /// Safekeeping Account.
     /// </summary>
     [DisplayName("Safekeeping Account")]
@@ -81,16 +74,23 @@ public record SecuritiesSettlementTransactionAuditTrailReportV06 : IOuterRecord
     public SecuritiesAccount22? SafekeepingAccount { get; init; }
 
     /// <summary>
+    /// Block Chain Address Or Wallet.
+    /// </summary>
+    [DisplayName("Block Chain Address Or Wallet")]
+    [IsoXmlTag("BlckChainAdrOrWllt")]
+    public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
+
+    /// <summary>
+    /// Account Owner.
+    /// </summary>
+    [DisplayName("Account Owner")]
+    [IsoXmlTag("AcctOwnr")]
+    public PartyIdentification144? AccountOwner { get; init; }
+
+    /// <summary>
     /// Status Trail.
     /// </summary>
     [DisplayName("Status Trail")]
     [IsoXmlTag("StsTrl")]
     public ValueList<StatusTrail12> StatusTrail { get; init; } = [];
-
-    /// <summary>
-    /// Transaction Identification.
-    /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public TransactionIdentifications54? TransactionIdentification { get; init; }
 }

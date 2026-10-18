@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TripartyCollateralAndAmount1
 {
     /// <summary>
-    /// Collateral Type.
-    /// </summary>
-    [DisplayName("Collateral Type")]
-    [IsoXmlTag("CollTp")]
-    public required CollateralType22Choice_ CollateralType { get; init; }
-
-    /// <summary>
     /// Triparty.
     /// </summary>
     [DisplayName("Triparty")]
     [IsoXmlTag("Trpty")]
     public required ActiveCurrencyAndAmount Triparty { get; init; }
+
+    /// <summary>
+    /// Collateral Type.
+    /// </summary>
+    [DisplayName("Collateral Type")]
+    [IsoXmlTag("CollTp")]
+    public required CollateralType22Choice_ CollateralType { get; init; }
 }

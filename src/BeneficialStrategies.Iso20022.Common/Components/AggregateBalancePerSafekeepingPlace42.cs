@@ -17,74 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AggregateBalancePerSafekeepingPlace42
 {
     /// <summary>
-    /// Account Base Currency Amounts.
+    /// Safekeeping Place.
     /// </summary>
-    [DisplayName("Account Base Currency Amounts")]
-    [IsoXmlTag("AcctBaseCcyAmts")]
-    public required BalanceAmounts1 AccountBaseCurrencyAmounts { get; init; }
-
-    /// <summary>
-    /// Additional Balance Breakdown.
-    /// </summary>
-    [DisplayName("Additional Balance Breakdown")]
-    [IsoXmlTag("AddtlBalBrkdwn")]
-    public ValueList<AdditionalBalanceInformation22> AdditionalBalanceBreakdown { get; init; } = [];
-
-    /// <summary>
-    /// Aggregate Balance.
-    /// </summary>
-    [DisplayName("Aggregate Balance")]
-    [IsoXmlTag("AggtBal")]
-    public required Balance17 AggregateBalance { get; init; }
-
-    /// <summary>
-    /// Alternate Reporting Currency Amounts.
-    /// </summary>
-    [DisplayName("Alternate Reporting Currency Amounts")]
-    [IsoXmlTag("AltrnRptgCcyAmts")]
-    public BalanceAmounts1? AlternateReportingCurrencyAmounts { get; init; }
-
-    /// <summary>
-    /// Balance Breakdown.
-    /// </summary>
-    [DisplayName("Balance Breakdown")]
-    [IsoXmlTag("BalBrkdwn")]
-    public ValueList<SubBalanceInformation22> BalanceBreakdown { get; init; } = [];
-
-    /// <summary>
-    /// Days Accrued.
-    /// </summary>
-    [DisplayName("Days Accrued")]
-    [IsoXmlTag("DaysAcrd")]
-    public Number? DaysAccrued { get; init; }
-
-    /// <summary>
-    /// Exposure Type.
-    /// </summary>
-    [DisplayName("Exposure Type")]
-    [IsoXmlTag("XpsrTp")]
-    public ExposureType25Choice_? ExposureType { get; init; }
-
-    /// <summary>
-    /// Foreign Exchange Details.
-    /// </summary>
-    [DisplayName("Foreign Exchange Details")]
-    [IsoXmlTag("FXDtls")]
-    public ValueList<ForeignExchangeTerms34> ForeignExchangeDetails { get; init; } = [];
-
-    /// <summary>
-    /// Holding Additional Details.
-    /// </summary>
-    [DisplayName("Holding Additional Details")]
-    [IsoXmlTag("HldgAddtlDtls")]
-    public Max350Text? HoldingAdditionalDetails { get; init; }
-
-    /// <summary>
-    /// Instrument Currency Amounts.
-    /// </summary>
-    [DisplayName("Instrument Currency Amounts")]
-    [IsoXmlTag("InstrmCcyAmts")]
-    public BalanceAmounts1? InstrumentCurrencyAmounts { get; init; }
+    [DisplayName("Safekeeping Place")]
+    [IsoXmlTag("SfkpgPlc")]
+    public required SafeKeepingPlace5 SafekeepingPlace { get; init; }
 
     /// <summary>
     /// Place Of Listing.
@@ -101,11 +38,53 @@ public record AggregateBalancePerSafekeepingPlace42
     public Pledgee3? Pledgee { get; init; }
 
     /// <summary>
+    /// Aggregate Balance.
+    /// </summary>
+    [DisplayName("Aggregate Balance")]
+    [IsoXmlTag("AggtBal")]
+    public required Balance17 AggregateBalance { get; init; }
+
+    /// <summary>
     /// Price Details.
     /// </summary>
     [DisplayName("Price Details")]
     [IsoXmlTag("PricDtls")]
     public ValueList<PriceInformation29> PriceDetails { get; init; } = [];
+
+    /// <summary>
+    /// Foreign Exchange Details.
+    /// </summary>
+    [DisplayName("Foreign Exchange Details")]
+    [IsoXmlTag("FXDtls")]
+    public ValueList<ForeignExchangeTerms34> ForeignExchangeDetails { get; init; } = [];
+
+    /// <summary>
+    /// Days Accrued.
+    /// </summary>
+    [DisplayName("Days Accrued")]
+    [IsoXmlTag("DaysAcrd")]
+    public Number? DaysAccrued { get; init; }
+
+    /// <summary>
+    /// Account Base Currency Amounts.
+    /// </summary>
+    [DisplayName("Account Base Currency Amounts")]
+    [IsoXmlTag("AcctBaseCcyAmts")]
+    public required BalanceAmounts1 AccountBaseCurrencyAmounts { get; init; }
+
+    /// <summary>
+    /// Instrument Currency Amounts.
+    /// </summary>
+    [DisplayName("Instrument Currency Amounts")]
+    [IsoXmlTag("InstrmCcyAmts")]
+    public BalanceAmounts1? InstrumentCurrencyAmounts { get; init; }
+
+    /// <summary>
+    /// Alternate Reporting Currency Amounts.
+    /// </summary>
+    [DisplayName("Alternate Reporting Currency Amounts")]
+    [IsoXmlTag("AltrnRptgCcyAmts")]
+    public BalanceAmounts1? AlternateReportingCurrencyAmounts { get; init; }
 
     /// <summary>
     /// Quantity Breakdown.
@@ -115,9 +94,30 @@ public record AggregateBalancePerSafekeepingPlace42
     public ValueList<QuantityBreakdown58> QuantityBreakdown { get; init; } = [];
 
     /// <summary>
-    /// Safekeeping Place.
+    /// Exposure Type.
     /// </summary>
-    [DisplayName("Safekeeping Place")]
-    [IsoXmlTag("SfkpgPlc")]
-    public required SafeKeepingPlace5 SafekeepingPlace { get; init; }
+    [DisplayName("Exposure Type")]
+    [IsoXmlTag("XpsrTp")]
+    public ExposureType25Choice_? ExposureType { get; init; }
+
+    /// <summary>
+    /// Balance Breakdown.
+    /// </summary>
+    [DisplayName("Balance Breakdown")]
+    [IsoXmlTag("BalBrkdwn")]
+    public ValueList<SubBalanceInformation22> BalanceBreakdown { get; init; } = [];
+
+    /// <summary>
+    /// Additional Balance Breakdown.
+    /// </summary>
+    [DisplayName("Additional Balance Breakdown")]
+    [IsoXmlTag("AddtlBalBrkdwn")]
+    public ValueList<AdditionalBalanceInformation22> AdditionalBalanceBreakdown { get; init; } = [];
+
+    /// <summary>
+    /// Holding Additional Details.
+    /// </summary>
+    [DisplayName("Holding Additional Details")]
+    [IsoXmlTag("HldgAddtlDtls")]
+    public Max350Text? HoldingAdditionalDetails { get; init; }
 }

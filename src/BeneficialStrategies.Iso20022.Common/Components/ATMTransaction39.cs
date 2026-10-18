@@ -17,53 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMTransaction39
 {
     /// <summary>
-    /// Account From.
+    /// Transaction Identification.
     /// </summary>
-    [DisplayName("Account From")]
-    [IsoXmlTag("AcctFr")]
-    public CardAccount19? AccountFrom { get; init; }
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public required TransactionIdentifier3 TransactionIdentification { get; init; }
 
     /// <summary>
-    /// Account Information.
+    /// Reconciliation Identification.
     /// </summary>
-    [DisplayName("Account Information")]
-    [IsoXmlTag("AcctInf")]
-    public ValueList<CardAccount18> AccountInformation { get; init; } = [];
-
-    /// <summary>
-    /// Account To.
-    /// </summary>
-    [DisplayName("Account To")]
-    [IsoXmlTag("AcctTo")]
-    public ValueList<CardAccount19> AccountTo { get; init; } = [];
-
-    /// <summary>
-    /// Action.
-    /// </summary>
-    [DisplayName("Action")]
-    [IsoXmlTag("Actn")]
-    public ValueList<Action7> Action { get; init; } = [];
-
-    /// <summary>
-    /// Additional Charge.
-    /// </summary>
-    [DisplayName("Additional Charge")]
-    [IsoXmlTag("AddtlChrg")]
-    public ValueList<DetailedAmount18> AdditionalCharge { get; init; } = [];
-
-    /// <summary>
-    /// Authorisation Result.
-    /// </summary>
-    [DisplayName("Authorisation Result")]
-    [IsoXmlTag("AuthstnRslt")]
-    public AuthorisationResult20? AuthorisationResult { get; init; }
-
-    /// <summary>
-    /// Command.
-    /// </summary>
-    [DisplayName("Command")]
-    [IsoXmlTag("Cmd")]
-    public ValueList<ATMCommand7> Command { get; init; } = [];
+    [DisplayName("Reconciliation Identification")]
+    [IsoXmlTag("RcncltnId")]
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Creditor Label.
@@ -80,32 +45,11 @@ public record ATMTransaction39
     public Max35Text? DebtorLabel { get; init; }
 
     /// <summary>
-    /// Detailed Requested Amount.
+    /// Transfer Identifier.
     /// </summary>
-    [DisplayName("Detailed Requested Amount")]
-    [IsoXmlTag("DtldReqdAmt")]
-    public DetailedAmount17? DetailedRequestedAmount { get; init; }
-
-    /// <summary>
-    /// ICC Related Data.
-    /// </summary>
-    [DisplayName("ICC Related Data")]
-    [IsoXmlTag("ICCRltdData")]
-    public Max10000Binary? ICCRelatedData { get; init; }
-
-    /// <summary>
-    /// Instant Transfer Program.
-    /// </summary>
-    [DisplayName("Instant Transfer Program")]
-    [IsoXmlTag("InstntTrfPrgm")]
-    public Max35Text? InstantTransferProgram { get; init; }
-
-    /// <summary>
-    /// Limits.
-    /// </summary>
-    [DisplayName("Limits")]
-    [IsoXmlTag("Lmts")]
-    public ATMTransactionAmounts6? Limits { get; init; }
+    [DisplayName("Transfer Identifier")]
+    [IsoXmlTag("TrfIdr")]
+    public Max70Text? TransferIdentifier { get; init; }
 
     /// <summary>
     /// Payment Reference.
@@ -115,11 +59,25 @@ public record ATMTransaction39
     public Max35Text? PaymentReference { get; init; }
 
     /// <summary>
-    /// Proposed Execution Date.
+    /// Transaction Response.
     /// </summary>
-    [DisplayName("Proposed Execution Date")]
-    [IsoXmlTag("PropsdExctnDt")]
-    public ISODate? ProposedExecutionDate { get; init; }
+    [DisplayName("Transaction Response")]
+    [IsoXmlTag("TxRspn")]
+    public required ResponseType12 TransactionResponse { get; init; }
+
+    /// <summary>
+    /// Action.
+    /// </summary>
+    [DisplayName("Action")]
+    [IsoXmlTag("Actn")]
+    public ValueList<Action7> Action { get; init; } = [];
+
+    /// <summary>
+    /// Account From.
+    /// </summary>
+    [DisplayName("Account From")]
+    [IsoXmlTag("AcctFr")]
+    public CardAccount19? AccountFrom { get; init; }
 
     /// <summary>
     /// Protected Account From.
@@ -129,32 +87,18 @@ public record ATMTransaction39
     public ContentInformationType10? ProtectedAccountFrom { get; init; }
 
     /// <summary>
+    /// Account To.
+    /// </summary>
+    [DisplayName("Account To")]
+    [IsoXmlTag("AcctTo")]
+    public ValueList<CardAccount19> AccountTo { get; init; } = [];
+
+    /// <summary>
     /// Protected Account To.
     /// </summary>
     [DisplayName("Protected Account To")]
     [IsoXmlTag("PrtctdAcctTo")]
     public ContentInformationType10? ProtectedAccountTo { get; init; }
-
-    /// <summary>
-    /// Reconciliation Identification.
-    /// </summary>
-    [DisplayName("Reconciliation Identification")]
-    [IsoXmlTag("RcncltnId")]
-    public Max35Text? ReconciliationIdentification { get; init; }
-
-    /// <summary>
-    /// Recurring Transfer.
-    /// </summary>
-    [DisplayName("Recurring Transfer")]
-    [IsoXmlTag("RcrngTrf")]
-    public RecurringTransaction3? RecurringTransfer { get; init; }
-
-    /// <summary>
-    /// Requested Execution Date.
-    /// </summary>
-    [DisplayName("Requested Execution Date")]
-    [IsoXmlTag("ReqdExctnDt")]
-    public ISODate? RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Total Authorised Amount.
@@ -171,23 +115,79 @@ public record ATMTransaction39
     public ImpliedCurrencyAndAmount? TotalRequestedAmount { get; init; }
 
     /// <summary>
-    /// Transaction Identification.
+    /// Detailed Requested Amount.
     /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public required TransactionIdentifier3 TransactionIdentification { get; init; }
+    [DisplayName("Detailed Requested Amount")]
+    [IsoXmlTag("DtldReqdAmt")]
+    public DetailedAmount17? DetailedRequestedAmount { get; init; }
 
     /// <summary>
-    /// Transaction Response.
+    /// Additional Charge.
     /// </summary>
-    [DisplayName("Transaction Response")]
-    [IsoXmlTag("TxRspn")]
-    public required ResponseType12 TransactionResponse { get; init; }
+    [DisplayName("Additional Charge")]
+    [IsoXmlTag("AddtlChrg")]
+    public ValueList<DetailedAmount18> AdditionalCharge { get; init; } = [];
 
     /// <summary>
-    /// Transfer Identifier.
+    /// Limits.
     /// </summary>
-    [DisplayName("Transfer Identifier")]
-    [IsoXmlTag("TrfIdr")]
-    public Max70Text? TransferIdentifier { get; init; }
+    [DisplayName("Limits")]
+    [IsoXmlTag("Lmts")]
+    public ATMTransactionAmounts6? Limits { get; init; }
+
+    /// <summary>
+    /// Requested Execution Date.
+    /// </summary>
+    [DisplayName("Requested Execution Date")]
+    [IsoXmlTag("ReqdExctnDt")]
+    public ISODate? RequestedExecutionDate { get; init; }
+
+    /// <summary>
+    /// Proposed Execution Date.
+    /// </summary>
+    [DisplayName("Proposed Execution Date")]
+    [IsoXmlTag("PropsdExctnDt")]
+    public ISODate? ProposedExecutionDate { get; init; }
+
+    /// <summary>
+    /// Instant Transfer Program.
+    /// </summary>
+    [DisplayName("Instant Transfer Program")]
+    [IsoXmlTag("InstntTrfPrgm")]
+    public Max35Text? InstantTransferProgram { get; init; }
+
+    /// <summary>
+    /// Recurring Transfer.
+    /// </summary>
+    [DisplayName("Recurring Transfer")]
+    [IsoXmlTag("RcrngTrf")]
+    public RecurringTransaction3? RecurringTransfer { get; init; }
+
+    /// <summary>
+    /// Authorisation Result.
+    /// </summary>
+    [DisplayName("Authorisation Result")]
+    [IsoXmlTag("AuthstnRslt")]
+    public AuthorisationResult20? AuthorisationResult { get; init; }
+
+    /// <summary>
+    /// ICC Related Data.
+    /// </summary>
+    [DisplayName("ICC Related Data")]
+    [IsoXmlTag("ICCRltdData")]
+    public Max10000Binary? ICCRelatedData { get; init; }
+
+    /// <summary>
+    /// Command.
+    /// </summary>
+    [DisplayName("Command")]
+    [IsoXmlTag("Cmd")]
+    public ValueList<ATMCommand7> Command { get; init; } = [];
+
+    /// <summary>
+    /// Account Information.
+    /// </summary>
+    [DisplayName("Account Information")]
+    [IsoXmlTag("AcctInf")]
+    public ValueList<CardAccount18> AccountInformation { get; init; } = [];
 }

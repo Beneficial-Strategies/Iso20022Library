@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CardAccount19
 {
     /// <summary>
-    /// Account Identifier.
+    /// Account Type.
     /// </summary>
-    [DisplayName("Account Identifier")]
-    [IsoXmlTag("AcctIdr")]
-    public AccountIdentification80Choice_? AccountIdentifier { get; init; }
+    [DisplayName("Account Type")]
+    [IsoXmlTag("AcctTp")]
+    public CardAccountType3Code? AccountType { get; init; }
 
     /// <summary>
     /// Account Name.
@@ -31,25 +31,18 @@ public record CardAccount19
     public Max70Text? AccountName { get; init; }
 
     /// <summary>
-    /// Account Type.
+    /// Currency.
     /// </summary>
-    [DisplayName("Account Type")]
-    [IsoXmlTag("AcctTp")]
-    public CardAccountType3Code? AccountType { get; init; }
+    [DisplayName("Currency")]
+    [IsoXmlTag("Ccy")]
+    public ActiveCurrencyCode? Currency { get; init; }
 
     /// <summary>
-    /// Balance After.
+    /// Account Identifier.
     /// </summary>
-    [DisplayName("Balance After")]
-    [IsoXmlTag("BalAftr")]
-    public AmountAndDirection111? BalanceAfter { get; init; }
-
-    /// <summary>
-    /// Balance Before.
-    /// </summary>
-    [DisplayName("Balance Before")]
-    [IsoXmlTag("BalBfr")]
-    public AmountAndDirection111? BalanceBefore { get; init; }
+    [DisplayName("Account Identifier")]
+    [IsoXmlTag("AcctIdr")]
+    public AccountIdentification80Choice_? AccountIdentifier { get; init; }
 
     /// <summary>
     /// Credit Reference.
@@ -59,16 +52,23 @@ public record CardAccount19
     public Max35Text? CreditReference { get; init; }
 
     /// <summary>
-    /// Currency.
-    /// </summary>
-    [DisplayName("Currency")]
-    [IsoXmlTag("Ccy")]
-    public ActiveCurrencyCode? Currency { get; init; }
-
-    /// <summary>
     /// Servicer.
     /// </summary>
     [DisplayName("Servicer")]
     [IsoXmlTag("Svcr")]
     public PartyIdentification177Choice_? Servicer { get; init; }
+
+    /// <summary>
+    /// Balance Before.
+    /// </summary>
+    [DisplayName("Balance Before")]
+    [IsoXmlTag("BalBfr")]
+    public AmountAndDirection111? BalanceBefore { get; init; }
+
+    /// <summary>
+    /// Balance After.
+    /// </summary>
+    [DisplayName("Balance After")]
+    [IsoXmlTag("BalAftr")]
+    public AmountAndDirection111? BalanceAfter { get; init; }
 }

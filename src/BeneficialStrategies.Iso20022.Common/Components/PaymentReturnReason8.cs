@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PaymentReturnReason8
 {
     /// <summary>
-    /// Additional Information.
-    /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public ValueList<Max105Text> AdditionalInformation { get; init; } = [];
-
-    /// <summary>
     /// Original Bank Transaction Code.
     /// </summary>
     [DisplayName("Original Bank Transaction Code")]
@@ -43,4 +36,11 @@ public record PaymentReturnReason8
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
     public ReturnReason5Choice_? Reason { get; init; }
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public ValueList<Max105Text> AdditionalInformation { get; init; } = [];
 }

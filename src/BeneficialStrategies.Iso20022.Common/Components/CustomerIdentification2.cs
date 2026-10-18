@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CustomerIdentification2
 {
     /// <summary>
-    /// Authority Request.
-    /// </summary>
-    [DisplayName("Authority Request")]
-    [IsoXmlTag("AuthrtyReq")]
-    public ValueList<AuthorityInvestigation2> AuthorityRequest { get; init; } = [];
-
-    /// <summary>
     /// Party.
     /// </summary>
     [DisplayName("Party")]
     [IsoXmlTag("Pty")]
     public required PartyIdentification272 Party { get; init; }
+
+    /// <summary>
+    /// Authority Request.
+    /// </summary>
+    [DisplayName("Authority Request")]
+    [IsoXmlTag("AuthrtyReq")]
+    public ValueList<AuthorityInvestigation2> AuthorityRequest { get; init; } = [];
 }

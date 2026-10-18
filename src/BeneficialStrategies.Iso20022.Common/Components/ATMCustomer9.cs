@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMCustomer9
 {
     /// <summary>
+    /// Profile.
+    /// </summary>
+    [DisplayName("Profile")]
+    [IsoXmlTag("Prfl")]
+    public ATMCustomerProfile2? Profile { get; init; }
+
+    /// <summary>
     /// Authentication Result.
     /// </summary>
     [DisplayName("Authentication Result")]
@@ -29,11 +36,4 @@ public record ATMCustomer9
     [DisplayName("Preferred Language")]
     [IsoXmlTag("PrefrdLang")]
     public LanguageCode? PreferredLanguage { get; init; }
-
-    /// <summary>
-    /// Profile.
-    /// </summary>
-    [DisplayName("Profile")]
-    [IsoXmlTag("Prfl")]
-    public ATMCustomerProfile2? Profile { get; init; }
 }

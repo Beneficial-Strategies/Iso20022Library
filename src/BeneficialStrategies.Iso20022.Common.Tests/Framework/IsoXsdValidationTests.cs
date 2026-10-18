@@ -69,9 +69,6 @@ public class IsoXsdValidationTests
         "camt.053.001.01", "camt.054.001.01", "pacs.002.001.15", "pacs.004.001.14", "pacs.008.001.13", "pacs.009.001.12", "pain.001.001.11", "pain.002.001.13",
     ];
 
-    // Written back, these are not valid: the elements of a sequence are in the wrong order (#41). Take an id out when it is fixed.
-    private static readonly string[] KnownInvalid = ["pacs.002.001.15", "pacs.004.001.14", "pacs.008.001.13", "pacs.009.001.12"];
-
     private static string Sample(string id)
     {
         var asm = typeof(IsoXsdValidationTests).Assembly;
@@ -102,11 +99,6 @@ public class IsoXsdValidationTests
 
         var written = ReadAndWriteBack(id, original);
         var problems = IsoXsd.Validate(written, schema);
-        if (KnownInvalid.Contains(id))
-        {
-            Assert.True(problems.Count > 0, $"{id} is valid now: take it out of KnownInvalid (#41).");
-            return;
-        }
         Assert.True(problems.Count == 0, $"{id} as written:" + Environment.NewLine + string.Join(Environment.NewLine, problems.Take(10)));
     }
 

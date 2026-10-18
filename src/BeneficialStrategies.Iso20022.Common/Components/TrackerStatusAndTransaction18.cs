@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TrackerStatusAndTransaction18
 {
     /// <summary>
-    /// Key elements used to identify the original transaction(s) that is being referred to.
-    /// </summary>
-    [IsoId("_PtkDdUN8Ee-QZYT2pcGFZw")]
-    [DisplayName("Transaction")]
-    [IsoXmlTag("Tx")]
-    public ValueList<TrackerPaymentTransaction14> Transaction { get; init; } = [];
-
-    /// <summary>
     /// Provides detailed information on the transaction status to be updated in the tracker.
     /// </summary>
     [IsoId("_PtkDc0N8Ee-QZYT2pcGFZw")]
     [DisplayName("Transaction Status")]
     [IsoXmlTag("TxSts")]
     public required TrackerStatus4 TransactionStatus { get; init; }
+
+    /// <summary>
+    /// Key elements used to identify the original transaction(s) that is being referred to.
+    /// </summary>
+    [IsoId("_PtkDdUN8Ee-QZYT2pcGFZw")]
+    [DisplayName("Transaction")]
+    [IsoXmlTag("Tx")]
+    public ValueList<TrackerPaymentTransaction14> Transaction { get; init; } = [];
 }

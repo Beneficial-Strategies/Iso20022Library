@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record MatchingCriteria17
 {
     /// <summary>
-    /// Contract Matching Criteria.
-    /// </summary>
-    [DisplayName("Contract Matching Criteria")]
-    [IsoXmlTag("CtrctMtchgCrit")]
-    public ContractMatchingCriteria3? ContractMatchingCriteria { get; init; }
-
-    /// <summary>
     /// Counterparty Matching Criteria.
     /// </summary>
     [DisplayName("Counterparty Matching Criteria")]
@@ -31,16 +24,23 @@ public record MatchingCriteria17
     public CounterpartyMatchingCriteria6? CounterpartyMatchingCriteria { get; init; }
 
     /// <summary>
-    /// Transaction Matching Criteria.
-    /// </summary>
-    [DisplayName("Transaction Matching Criteria")]
-    [IsoXmlTag("TxMtchgCrit")]
-    public TransactionMatchingCriteria7? TransactionMatchingCriteria { get; init; }
-
-    /// <summary>
     /// Valuation Matching Criteria.
     /// </summary>
     [DisplayName("Valuation Matching Criteria")]
     [IsoXmlTag("ValtnMtchgCrit")]
     public ValuationMatchingCriteria1? ValuationMatchingCriteria { get; init; }
+
+    /// <summary>
+    /// Contract Matching Criteria.
+    /// </summary>
+    [DisplayName("Contract Matching Criteria")]
+    [IsoXmlTag("CtrctMtchgCrit")]
+    public ContractMatchingCriteria3? ContractMatchingCriteria { get; init; }
+
+    /// <summary>
+    /// Transaction Matching Criteria.
+    /// </summary>
+    [DisplayName("Transaction Matching Criteria")]
+    [IsoXmlTag("TxMtchgCrit")]
+    public TransactionMatchingCriteria7? TransactionMatchingCriteria { get; init; }
 }

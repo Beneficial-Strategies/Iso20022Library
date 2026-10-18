@@ -24,6 +24,20 @@ public record ServiceProviderParameters4
     public required TerminalManagementAction3Code ActionType { get; init; }
 
     /// <summary>
+    /// Service Provider Identification.
+    /// </summary>
+    [DisplayName("Service Provider Identification")]
+    [IsoXmlTag("SvcPrvdrId")]
+    public ValueList<GenericIdentification176> ServiceProviderIdentification { get; init; } = [];
+
+    /// <summary>
+    /// Version.
+    /// </summary>
+    [DisplayName("Version")]
+    [IsoXmlTag("Vrsn")]
+    public required Max256Text Version { get; init; }
+
+    /// <summary>
     /// Application Identification.
     /// </summary>
     [DisplayName("Application Identification")]
@@ -43,18 +57,4 @@ public record ServiceProviderParameters4
     [DisplayName("Non Financial Action Supported")]
     [IsoXmlTag("NonFinActnSpprtd")]
     public ValueList<NonFinancialRequestType2Code> NonFinancialActionSupported { get; init; } = [];
-
-    /// <summary>
-    /// Service Provider Identification.
-    /// </summary>
-    [DisplayName("Service Provider Identification")]
-    [IsoXmlTag("SvcPrvdrId")]
-    public ValueList<GenericIdentification176> ServiceProviderIdentification { get; init; } = [];
-
-    /// <summary>
-    /// Version.
-    /// </summary>
-    [DisplayName("Version")]
-    [IsoXmlTag("Vrsn")]
-    public required Max256Text Version { get; init; }
 }

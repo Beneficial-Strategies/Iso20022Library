@@ -46,11 +46,11 @@ public record NotificationOfCaseAssignmentV06 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Assignment.
+    /// Header.
     /// </summary>
-    [DisplayName("Assignment")]
-    [IsoXmlTag("Assgnmt")]
-    public required CaseAssignment6 Assignment { get; init; }
+    [DisplayName("Header")]
+    [IsoXmlTag("Hdr")]
+    public required ReportHeader7 Header { get; init; }
 
     /// <summary>
     /// Case.
@@ -60,11 +60,11 @@ public record NotificationOfCaseAssignmentV06 : IOuterRecord
     public required Case6 Case { get; init; }
 
     /// <summary>
-    /// Header.
+    /// Assignment.
     /// </summary>
-    [DisplayName("Header")]
-    [IsoXmlTag("Hdr")]
-    public required ReportHeader7 Header { get; init; }
+    [DisplayName("Assignment")]
+    [IsoXmlTag("Assgnmt")]
+    public required CaseAssignment6 Assignment { get; init; }
 
     /// <summary>
     /// Notification.

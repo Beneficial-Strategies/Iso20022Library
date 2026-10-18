@@ -24,20 +24,6 @@ public record Compensation5
     public required ActiveCurrencyAndAmount Amount { get; init; }
 
     /// <summary>
-    /// Creditor Agent.
-    /// </summary>
-    [DisplayName("Creditor Agent")]
-    [IsoXmlTag("CdtrAgt")]
-    public required BranchAndFinancialInstitutionIdentification8 CreditorAgent { get; init; }
-
-    /// <summary>
-    /// Creditor Agent Account.
-    /// </summary>
-    [DisplayName("Creditor Agent Account")]
-    [IsoXmlTag("CdtrAgtAcct")]
-    public CashAccount40? CreditorAgentAccount { get; init; }
-
-    /// <summary>
     /// Debtor Agent.
     /// </summary>
     [DisplayName("Debtor Agent")]
@@ -50,6 +36,20 @@ public record Compensation5
     [DisplayName("Debtor Agent Account")]
     [IsoXmlTag("DbtrAgtAcct")]
     public CashAccount40? DebtorAgentAccount { get; init; }
+
+    /// <summary>
+    /// Creditor Agent.
+    /// </summary>
+    [DisplayName("Creditor Agent")]
+    [IsoXmlTag("CdtrAgt")]
+    public required BranchAndFinancialInstitutionIdentification8 CreditorAgent { get; init; }
+
+    /// <summary>
+    /// Creditor Agent Account.
+    /// </summary>
+    [DisplayName("Creditor Agent Account")]
+    [IsoXmlTag("CdtrAgtAcct")]
+    public CashAccount40? CreditorAgentAccount { get; init; }
 
     /// <summary>
     /// Reason.

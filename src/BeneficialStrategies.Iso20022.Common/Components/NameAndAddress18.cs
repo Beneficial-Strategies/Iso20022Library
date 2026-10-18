@@ -18,16 +18,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record NameAndAddress18
 {
     /// <summary>
-    /// Postal address of a party.
-    /// </summary>
-    [DisplayName("Address")]
-    [IsoXmlTag("Adr")]
-    public required PostalAddress27 Address { get; init; }
-
-    /// <summary>
     /// Name by which a party is known and is usually used to identify that party.
     /// </summary>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     public required Max140Text Name { get; init; }
+
+    /// <summary>
+    /// Postal address of a party.
+    /// </summary>
+    [DisplayName("Address")]
+    [IsoXmlTag("Adr")]
+    public required PostalAddress27 Address { get; init; }
 }

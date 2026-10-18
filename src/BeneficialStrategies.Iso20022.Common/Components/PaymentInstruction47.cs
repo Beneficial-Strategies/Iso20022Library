@@ -17,18 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PaymentInstruction47
 {
     /// <summary>
-    /// End To End Identification.
+    /// Message Identification.
     /// </summary>
-    [DisplayName("End To End Identification")]
-    [IsoXmlTag("EndToEndId")]
-    public Max35Text? EndToEndIdentification { get; init; }
+    [DisplayName("Message Identification")]
+    [IsoXmlTag("MsgId")]
+    public Max35Text? MessageIdentification { get; init; }
 
     /// <summary>
-    /// Generated Order.
+    /// Requested Execution Date.
     /// </summary>
-    [DisplayName("Generated Order")]
-    [IsoXmlTag("GnrtdOrdr")]
-    public TrueFalseIndicator? GeneratedOrder { get; init; }
+    [DisplayName("Requested Execution Date")]
+    [IsoXmlTag("ReqdExctnDt")]
+    public DateAndDateTime2Choice_? RequestedExecutionDate { get; init; }
+
+    /// <summary>
+    /// Status.
+    /// </summary>
+    [DisplayName("Status")]
+    [IsoXmlTag("Sts")]
+    public ValueList<PaymentStatus6> Status { get; init; } = [];
 
     /// <summary>
     /// Instructed Amount.
@@ -38,13 +45,6 @@ public record PaymentInstruction47
     public Amount3Choice_? InstructedAmount { get; init; }
 
     /// <summary>
-    /// Instruction Copy.
-    /// </summary>
-    [DisplayName("Instruction Copy")]
-    [IsoXmlTag("InstrCpy")]
-    public Max20000Text? InstructionCopy { get; init; }
-
-    /// <summary>
     /// Interbank Settlement Amount.
     /// </summary>
     [DisplayName("Interbank Settlement Amount")]
@@ -52,25 +52,11 @@ public record PaymentInstruction47
     public Amount2Choice_? InterbankSettlementAmount { get; init; }
 
     /// <summary>
-    /// Interbank Settlement Date.
+    /// Purpose.
     /// </summary>
-    [DisplayName("Interbank Settlement Date")]
-    [IsoXmlTag("IntrBkSttlmDt")]
-    public ISODate? InterbankSettlementDate { get; init; }
-
-    /// <summary>
-    /// Message Identification.
-    /// </summary>
-    [DisplayName("Message Identification")]
-    [IsoXmlTag("MsgId")]
-    public Max35Text? MessageIdentification { get; init; }
-
-    /// <summary>
-    /// Parties.
-    /// </summary>
-    [DisplayName("Parties")]
-    [IsoXmlTag("Pties")]
-    public PaymentTransactionParty4? Parties { get; init; }
+    [DisplayName("Purpose")]
+    [IsoXmlTag("Purp")]
+    public Max10Text? Purpose { get; init; }
 
     /// <summary>
     /// Payment Method.
@@ -94,25 +80,25 @@ public record PaymentInstruction47
     public DateTimePeriod1Choice_? ProcessingValidityTime { get; init; }
 
     /// <summary>
-    /// Purpose.
+    /// Instruction Copy.
     /// </summary>
-    [DisplayName("Purpose")]
-    [IsoXmlTag("Purp")]
-    public Max10Text? Purpose { get; init; }
+    [DisplayName("Instruction Copy")]
+    [IsoXmlTag("InstrCpy")]
+    public Max20000Text? InstructionCopy { get; init; }
 
     /// <summary>
-    /// Requested Execution Date.
+    /// Type.
     /// </summary>
-    [DisplayName("Requested Execution Date")]
-    [IsoXmlTag("ReqdExctnDt")]
-    public DateAndDateTime2Choice_? RequestedExecutionDate { get; init; }
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public PaymentType4Choice_? Type { get; init; }
 
     /// <summary>
-    /// Status.
+    /// Generated Order.
     /// </summary>
-    [DisplayName("Status")]
-    [IsoXmlTag("Sts")]
-    public ValueList<PaymentStatus6> Status { get; init; } = [];
+    [DisplayName("Generated Order")]
+    [IsoXmlTag("GnrtdOrdr")]
+    public TrueFalseIndicator? GeneratedOrder { get; init; }
 
     /// <summary>
     /// Transaction Identification.
@@ -122,9 +108,23 @@ public record PaymentInstruction47
     public Max35Text? TransactionIdentification { get; init; }
 
     /// <summary>
-    /// Type.
+    /// Interbank Settlement Date.
     /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public PaymentType4Choice_? Type { get; init; }
+    [DisplayName("Interbank Settlement Date")]
+    [IsoXmlTag("IntrBkSttlmDt")]
+    public ISODate? InterbankSettlementDate { get; init; }
+
+    /// <summary>
+    /// End To End Identification.
+    /// </summary>
+    [DisplayName("End To End Identification")]
+    [IsoXmlTag("EndToEndId")]
+    public Max35Text? EndToEndIdentification { get; init; }
+
+    /// <summary>
+    /// Parties.
+    /// </summary>
+    [DisplayName("Parties")]
+    [IsoXmlTag("Pties")]
+    public PaymentTransactionParty4? Parties { get; init; }
 }

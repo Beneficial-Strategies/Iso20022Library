@@ -46,13 +46,6 @@ public record ATMWithdrawalRequestV03 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// ATM Withdrawal Request.
-    /// </summary>
-    [DisplayName("ATM Withdrawal Request")]
-    [IsoXmlTag("ATMWdrwlReq")]
-    public ATMWithdrawalRequest3? ATMWithdrawalRequest { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
@@ -65,6 +58,13 @@ public record ATMWithdrawalRequestV03 : IOuterRecord
     [DisplayName("Protected ATM Withdrawal Request")]
     [IsoXmlTag("PrtctdATMWdrwlReq")]
     public ContentInformationType10? ProtectedATMWithdrawalRequest { get; init; }
+
+    /// <summary>
+    /// ATM Withdrawal Request.
+    /// </summary>
+    [DisplayName("ATM Withdrawal Request")]
+    [IsoXmlTag("ATMWdrwlReq")]
+    public ATMWithdrawalRequest3? ATMWithdrawalRequest { get; init; }
 
     /// <summary>
     /// Security Trailer.

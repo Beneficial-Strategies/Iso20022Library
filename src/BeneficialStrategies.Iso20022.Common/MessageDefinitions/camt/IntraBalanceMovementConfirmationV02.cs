@@ -46,6 +46,13 @@ public record IntraBalanceMovementConfirmationV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Identification.
+    /// </summary>
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public DocumentIdentification51? Identification { get; init; }
+
+    /// <summary>
     /// Additional Parameters.
     /// </summary>
     [DisplayName("Additional Parameters")]
@@ -72,13 +79,6 @@ public record IntraBalanceMovementConfirmationV02 : IOuterRecord
     [DisplayName("Cash Account Servicer")]
     [IsoXmlTag("CshAcctSvcr")]
     public BranchAndFinancialInstitutionIdentification8? CashAccountServicer { get; init; }
-
-    /// <summary>
-    /// Identification.
-    /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public DocumentIdentification51? Identification { get; init; }
 
     /// <summary>
     /// Intra Balance.

@@ -24,16 +24,16 @@ public record BlockChainAddressWallet11
     public required Max140Text Identification { get; init; }
 
     /// <summary>
-    /// Name.
-    /// </summary>
-    [DisplayName("Name")]
-    [IsoXmlTag("Nm")]
-    public Max70Text? Name { get; init; }
-
-    /// <summary>
     /// Type.
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     public GenericIdentification47? Type { get; init; }
+
+    /// <summary>
+    /// Name.
+    /// </summary>
+    [DisplayName("Name")]
+    [IsoXmlTag("Nm")]
+    public Max70Text? Name { get; init; }
 }

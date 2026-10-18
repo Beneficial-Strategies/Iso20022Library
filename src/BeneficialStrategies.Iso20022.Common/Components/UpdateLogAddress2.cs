@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record UpdateLogAddress2
 {
     /// <summary>
-    /// New.
-    /// </summary>
-    [DisplayName("New")]
-    [IsoXmlTag("New")]
-    public required PostalAddress28 New { get; init; }
-
-    /// <summary>
     /// Old.
     /// </summary>
     [DisplayName("Old")]
     [IsoXmlTag("Od")]
     public required PostalAddress28 Old { get; init; }
+
+    /// <summary>
+    /// New.
+    /// </summary>
+    [DisplayName("New")]
+    [IsoXmlTag("New")]
+    public required PostalAddress28 New { get; init; }
 }

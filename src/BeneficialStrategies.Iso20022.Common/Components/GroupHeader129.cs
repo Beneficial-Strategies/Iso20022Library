@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record GroupHeader129
 {
     /// <summary>
-    /// Creation Date Time.
-    /// </summary>
-    [DisplayName("Creation Date Time")]
-    [IsoXmlTag("CreDtTm")]
-    public required ISODateTime CreationDateTime { get; init; }
-
-    /// <summary>
     /// Message Identification.
     /// </summary>
     [DisplayName("Message Identification")]
@@ -31,11 +24,11 @@ public record GroupHeader129
     public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
-    /// Receiver.
+    /// Creation Date Time.
     /// </summary>
-    [DisplayName("Receiver")]
-    [IsoXmlTag("Rcvr")]
-    public required Party50Choice_ Receiver { get; init; }
+    [DisplayName("Creation Date Time")]
+    [IsoXmlTag("CreDtTm")]
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// Sender.
@@ -43,4 +36,11 @@ public record GroupHeader129
     [DisplayName("Sender")]
     [IsoXmlTag("Sndr")]
     public required Party50Choice_ Sender { get; init; }
+
+    /// <summary>
+    /// Receiver.
+    /// </summary>
+    [DisplayName("Receiver")]
+    [IsoXmlTag("Rcvr")]
+    public required Party50Choice_ Receiver { get; init; }
 }

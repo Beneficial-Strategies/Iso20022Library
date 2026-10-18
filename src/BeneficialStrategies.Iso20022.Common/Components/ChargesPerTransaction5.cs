@@ -17,11 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ChargesPerTransaction5
 {
     /// <summary>
-    /// Additional Information.
+    /// Charges Identification.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public Max140Text? AdditionalInformation { get; init; }
+    [DisplayName("Charges Identification")]
+    [IsoXmlTag("ChrgsId")]
+    public Max35Text? ChargesIdentification { get; init; }
+
+    /// <summary>
+    /// Total Charges Per Transaction.
+    /// </summary>
+    [DisplayName("Total Charges Per Transaction")]
+    [IsoXmlTag("TtlChrgsPerTx")]
+    public TotalCharges7? TotalChargesPerTransaction { get; init; }
 
     /// <summary>
     /// Charges Account.
@@ -38,13 +45,6 @@ public record ChargesPerTransaction5
     public BranchAndFinancialInstitutionIdentification8? ChargesAccountOwner { get; init; }
 
     /// <summary>
-    /// Charges Identification.
-    /// </summary>
-    [DisplayName("Charges Identification")]
-    [IsoXmlTag("ChrgsId")]
-    public Max35Text? ChargesIdentification { get; init; }
-
-    /// <summary>
     /// Record.
     /// </summary>
     [DisplayName("Record")]
@@ -52,9 +52,9 @@ public record ChargesPerTransaction5
     public ValueList<ChargesPerTransactionRecord5> Record { get; init; } = [];
 
     /// <summary>
-    /// Total Charges Per Transaction.
+    /// Additional Information.
     /// </summary>
-    [DisplayName("Total Charges Per Transaction")]
-    [IsoXmlTag("TtlChrgsPerTx")]
-    public TotalCharges7? TotalChargesPerTransaction { get; init; }
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public Max140Text? AdditionalInformation { get; init; }
 }

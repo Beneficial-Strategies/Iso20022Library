@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Reconciliation4
 {
     /// <summary>
-    /// Checkpoint Reference.
+    /// Identification.
     /// </summary>
-    [DisplayName("Checkpoint Reference")]
-    [IsoXmlTag("ChckptRef")]
-    public Max35Text? CheckpointReference { get; init; }
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public Max35Text? Identification { get; init; }
 
     /// <summary>
     /// Date.
@@ -31,9 +31,9 @@ public record Reconciliation4
     public ISODate? Date { get; init; }
 
     /// <summary>
-    /// Identification.
+    /// Checkpoint Reference.
     /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public Max35Text? Identification { get; init; }
+    [DisplayName("Checkpoint Reference")]
+    [IsoXmlTag("ChckptRef")]
+    public Max35Text? CheckpointReference { get; init; }
 }

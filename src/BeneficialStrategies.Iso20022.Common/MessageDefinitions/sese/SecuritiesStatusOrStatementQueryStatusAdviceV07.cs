@@ -61,32 +61,18 @@ public record SecuritiesStatusOrStatementQueryStatusAdviceV07 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Party that legally owns the account.
-    /// </summary>
-    [DisplayName("Account Owner")]
-    [IsoXmlTag("AcctOwnr")]
-    public PartyIdentification144? AccountOwner { get; init; }
-
-    /// <summary>
-    /// Blockchain address or wallet where digital assets are maintained. This is the equivalent of safekeeping account for digital assets.
-    /// </summary>
-    [DisplayName("Block Chain Address Or Wallet")]
-    [IsoXmlTag("BlckChainAdrOrWllt")]
-    public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
-
-    /// <summary>
-    /// Provides details on the processing status of the request.
-    /// </summary>
-    [DisplayName("Processing Status")]
-    [IsoXmlTag("PrcgSts")]
-    public required ProcessingStatus89Choice_ ProcessingStatus { get; init; }
-
-    /// <summary>
     /// Unambiguous identification of the query as per the account owner.
     /// </summary>
     [DisplayName("Query Details")]
     [IsoXmlTag("QryDtls")]
     public required DocumentIdentification54 QueryDetails { get; init; }
+
+    /// <summary>
+    /// Party that legally owns the account.
+    /// </summary>
+    [DisplayName("Account Owner")]
+    [IsoXmlTag("AcctOwnr")]
+    public PartyIdentification144? AccountOwner { get; init; }
 
     /// <summary>
     /// Account to or from which a securities entry is made.
@@ -96,11 +82,25 @@ public record SecuritiesStatusOrStatementQueryStatusAdviceV07 : IOuterRecord
     public SecuritiesAccount19? SafekeepingAccount { get; init; }
 
     /// <summary>
+    /// Blockchain address or wallet where digital assets are maintained. This is the equivalent of safekeeping account for digital assets.
+    /// </summary>
+    [DisplayName("Block Chain Address Or Wallet")]
+    [IsoXmlTag("BlckChainAdrOrWllt")]
+    public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
+
+    /// <summary>
     /// Details of the request.
     /// </summary>
     [DisplayName("Status Or Statement Requested")]
     [IsoXmlTag("StsOrStmtReqd")]
     public StatusOrStatement13Choice_? StatusOrStatementRequested { get; init; }
+
+    /// <summary>
+    /// Provides details on the processing status of the request.
+    /// </summary>
+    [DisplayName("Processing Status")]
+    [IsoXmlTag("PrcgSts")]
+    public required ProcessingStatus89Choice_ ProcessingStatus { get; init; }
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.

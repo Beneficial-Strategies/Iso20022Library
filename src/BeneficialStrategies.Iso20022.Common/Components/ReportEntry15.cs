@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ReportEntry15
 {
     /// <summary>
-    /// Account Servicer Reference.
+    /// Entry Reference.
     /// </summary>
-    [DisplayName("Account Servicer Reference")]
-    [IsoXmlTag("AcctSvcrRef")]
-    public Max35Text? AccountServicerReference { get; init; }
-
-    /// <summary>
-    /// Additional Entry Information.
-    /// </summary>
-    [DisplayName("Additional Entry Information")]
-    [IsoXmlTag("AddtlNtryInf")]
-    public Max500Text? AdditionalEntryInformation { get; init; }
-
-    /// <summary>
-    /// Additional Information Indicator.
-    /// </summary>
-    [DisplayName("Additional Information Indicator")]
-    [IsoXmlTag("AddtlInfInd")]
-    public MessageIdentification2? AdditionalInformationIndicator { get; init; }
+    [DisplayName("Entry Reference")]
+    [IsoXmlTag("NtryRef")]
+    public Max35Text? EntryReference { get; init; }
 
     /// <summary>
     /// Amount.
@@ -45,81 +31,11 @@ public record ReportEntry15
     public required ActiveOrHistoricCurrencyAndAmount Amount { get; init; }
 
     /// <summary>
-    /// Amount Details.
-    /// </summary>
-    [DisplayName("Amount Details")]
-    [IsoXmlTag("AmtDtls")]
-    public AmountAndCurrencyExchange4? AmountDetails { get; init; }
-
-    /// <summary>
-    /// Availability.
-    /// </summary>
-    [DisplayName("Availability")]
-    [IsoXmlTag("Avlbty")]
-    public ValueList<CashAvailability1> Availability { get; init; } = [];
-
-    /// <summary>
-    /// Bank Transaction Code.
-    /// </summary>
-    [DisplayName("Bank Transaction Code")]
-    [IsoXmlTag("BkTxCd")]
-    public required BankTransactionCodeStructure4 BankTransactionCode { get; init; }
-
-    /// <summary>
-    /// Booking Date.
-    /// </summary>
-    [DisplayName("Booking Date")]
-    [IsoXmlTag("BookgDt")]
-    public DateAndDateTime2Choice_? BookingDate { get; init; }
-
-    /// <summary>
-    /// Card Transaction.
-    /// </summary>
-    [DisplayName("Card Transaction")]
-    [IsoXmlTag("CardTx")]
-    public CardEntry5? CardTransaction { get; init; }
-
-    /// <summary>
-    /// Charges.
-    /// </summary>
-    [DisplayName("Charges")]
-    [IsoXmlTag("Chrgs")]
-    public Charges15? Charges { get; init; }
-
-    /// <summary>
-    /// Commission Waiver Indicator.
-    /// </summary>
-    [DisplayName("Commission Waiver Indicator")]
-    [IsoXmlTag("ComssnWvrInd")]
-    public YesNoIndicator? CommissionWaiverIndicator { get; init; }
-
-    /// <summary>
     /// Credit Debit Indicator.
     /// </summary>
     [DisplayName("Credit Debit Indicator")]
     [IsoXmlTag("CdtDbtInd")]
     public required CreditDebitCode CreditDebitIndicator { get; init; }
-
-    /// <summary>
-    /// Entry Details.
-    /// </summary>
-    [DisplayName("Entry Details")]
-    [IsoXmlTag("NtryDtls")]
-    public ValueList<EntryDetails14> EntryDetails { get; init; } = [];
-
-    /// <summary>
-    /// Entry Reference.
-    /// </summary>
-    [DisplayName("Entry Reference")]
-    [IsoXmlTag("NtryRef")]
-    public Max35Text? EntryReference { get; init; }
-
-    /// <summary>
-    /// Interest.
-    /// </summary>
-    [DisplayName("Interest")]
-    [IsoXmlTag("Intrst")]
-    public TransactionInterest4? Interest { get; init; }
 
     /// <summary>
     /// Reversal Indicator.
@@ -136,11 +52,11 @@ public record ReportEntry15
     public required EntryStatus1Choice_ Status { get; init; }
 
     /// <summary>
-    /// Technical Input Channel.
+    /// Booking Date.
     /// </summary>
-    [DisplayName("Technical Input Channel")]
-    [IsoXmlTag("TechInptChanl")]
-    public TechnicalInputChannel1Choice_? TechnicalInputChannel { get; init; }
+    [DisplayName("Booking Date")]
+    [IsoXmlTag("BookgDt")]
+    public DateAndDateTime2Choice_? BookingDate { get; init; }
 
     /// <summary>
     /// Value Date.
@@ -148,4 +64,88 @@ public record ReportEntry15
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     public DateAndDateTime2Choice_? ValueDate { get; init; }
+
+    /// <summary>
+    /// Account Servicer Reference.
+    /// </summary>
+    [DisplayName("Account Servicer Reference")]
+    [IsoXmlTag("AcctSvcrRef")]
+    public Max35Text? AccountServicerReference { get; init; }
+
+    /// <summary>
+    /// Availability.
+    /// </summary>
+    [DisplayName("Availability")]
+    [IsoXmlTag("Avlbty")]
+    public ValueList<CashAvailability1> Availability { get; init; } = [];
+
+    /// <summary>
+    /// Bank Transaction Code.
+    /// </summary>
+    [DisplayName("Bank Transaction Code")]
+    [IsoXmlTag("BkTxCd")]
+    public required BankTransactionCodeStructure4 BankTransactionCode { get; init; }
+
+    /// <summary>
+    /// Commission Waiver Indicator.
+    /// </summary>
+    [DisplayName("Commission Waiver Indicator")]
+    [IsoXmlTag("ComssnWvrInd")]
+    public YesNoIndicator? CommissionWaiverIndicator { get; init; }
+
+    /// <summary>
+    /// Additional Information Indicator.
+    /// </summary>
+    [DisplayName("Additional Information Indicator")]
+    [IsoXmlTag("AddtlInfInd")]
+    public MessageIdentification2? AdditionalInformationIndicator { get; init; }
+
+    /// <summary>
+    /// Amount Details.
+    /// </summary>
+    [DisplayName("Amount Details")]
+    [IsoXmlTag("AmtDtls")]
+    public AmountAndCurrencyExchange4? AmountDetails { get; init; }
+
+    /// <summary>
+    /// Charges.
+    /// </summary>
+    [DisplayName("Charges")]
+    [IsoXmlTag("Chrgs")]
+    public Charges15? Charges { get; init; }
+
+    /// <summary>
+    /// Technical Input Channel.
+    /// </summary>
+    [DisplayName("Technical Input Channel")]
+    [IsoXmlTag("TechInptChanl")]
+    public TechnicalInputChannel1Choice_? TechnicalInputChannel { get; init; }
+
+    /// <summary>
+    /// Interest.
+    /// </summary>
+    [DisplayName("Interest")]
+    [IsoXmlTag("Intrst")]
+    public TransactionInterest4? Interest { get; init; }
+
+    /// <summary>
+    /// Card Transaction.
+    /// </summary>
+    [DisplayName("Card Transaction")]
+    [IsoXmlTag("CardTx")]
+    public CardEntry5? CardTransaction { get; init; }
+
+    /// <summary>
+    /// Entry Details.
+    /// </summary>
+    [DisplayName("Entry Details")]
+    [IsoXmlTag("NtryDtls")]
+    public ValueList<EntryDetails14> EntryDetails { get; init; } = [];
+
+    /// <summary>
+    /// Additional Entry Information.
+    /// </summary>
+    [DisplayName("Additional Entry Information")]
+    [IsoXmlTag("AddtlNtryInf")]
+    public Max500Text? AdditionalEntryInformation { get; init; }
 }

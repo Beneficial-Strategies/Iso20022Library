@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PositionSetCollateralMetrics2
 {
     /// <summary>
-    /// Clean.
-    /// </summary>
-    [DisplayName("Clean")]
-    [IsoXmlTag("Clean")]
-    public PositionSetCollateralTotal2? Clean { get; init; }
-
-    /// <summary>
     /// Total.
     /// </summary>
     [DisplayName("Total")]
     [IsoXmlTag("Ttl")]
     public PositionSetCollateralTotal2? Total { get; init; }
+
+    /// <summary>
+    /// Clean.
+    /// </summary>
+    [DisplayName("Clean")]
+    [IsoXmlTag("Clean")]
+    public PositionSetCollateralTotal2? Clean { get; init; }
 }

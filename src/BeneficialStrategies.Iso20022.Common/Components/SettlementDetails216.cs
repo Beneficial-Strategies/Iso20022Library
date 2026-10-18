@@ -17,123 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SettlementDetails216
 {
     /// <summary>
-    /// Beneficial Ownership.
-    /// </summary>
-    [DisplayName("Beneficial Ownership")]
-    [IsoXmlTag("BnfclOwnrsh")]
-    public BeneficialOwnership4Choice_? BeneficialOwnership { get; init; }
-
-    /// <summary>
-    /// Block Trade.
-    /// </summary>
-    [DisplayName("Block Trade")]
-    [IsoXmlTag("BlckTrad")]
-    public BlockTrade4Choice_? BlockTrade { get; init; }
-
-    /// <summary>
-    /// Cash Clearing System.
-    /// </summary>
-    [DisplayName("Cash Clearing System")]
-    [IsoXmlTag("CshClrSys")]
-    public CashSettlementSystem4Choice_? CashClearingSystem { get; init; }
-
-    /// <summary>
-    /// CCP Eligibility.
-    /// </summary>
-    [DisplayName("CCP Eligibility")]
-    [IsoXmlTag("CCPElgblty")]
-    public CentralCounterPartyEligibility4Choice_? CCPEligibility { get; init; }
-
-    /// <summary>
-    /// Eligible For Collateral.
-    /// </summary>
-    [DisplayName("Eligible For Collateral")]
-    [IsoXmlTag("ElgblForColl")]
-    public YesNoIndicator? EligibleForCollateral { get; init; }
-
-    /// <summary>
-    /// Exposure Type.
-    /// </summary>
-    [DisplayName("Exposure Type")]
-    [IsoXmlTag("XpsrTp")]
-    public ExposureType25Choice_? ExposureType { get; init; }
-
-    /// <summary>
     /// Hold Indicator.
     /// </summary>
     [DisplayName("Hold Indicator")]
     [IsoXmlTag("HldInd")]
     public HoldIndicator6? HoldIndicator { get; init; }
-
-    /// <summary>
-    /// Legal Restrictions.
-    /// </summary>
-    [DisplayName("Legal Restrictions")]
-    [IsoXmlTag("LglRstrctns")]
-    public Restriction5Choice_? LegalRestrictions { get; init; }
-
-    /// <summary>
-    /// Letter Of Guarantee.
-    /// </summary>
-    [DisplayName("Letter Of Guarantee")]
-    [IsoXmlTag("LttrOfGrnt")]
-    public LetterOfGuarantee4Choice_? LetterOfGuarantee { get; init; }
-
-    /// <summary>
-    /// Market Client Side.
-    /// </summary>
-    [DisplayName("Market Client Side")]
-    [IsoXmlTag("MktClntSd")]
-    public MarketClientSide6Choice_? MarketClientSide { get; init; }
-
-    /// <summary>
-    /// Netting Eligibility.
-    /// </summary>
-    [DisplayName("Netting Eligibility")]
-    [IsoXmlTag("NetgElgblty")]
-    public NettingEligibility4Choice_? NettingEligibility { get; init; }
-
-    /// <summary>
-    /// Partial Settlement Indicator.
-    /// </summary>
-    [DisplayName("Partial Settlement Indicator")]
-    [IsoXmlTag("PrtlSttlmInd")]
-    public SettlementTransactionCondition5Code? PartialSettlementIndicator { get; init; }
-
-    /// <summary>
-    /// Registration.
-    /// </summary>
-    [DisplayName("Registration")]
-    [IsoXmlTag("Regn")]
-    public Registration9Choice_? Registration { get; init; }
-
-    /// <summary>
-    /// Repurchase Type.
-    /// </summary>
-    [DisplayName("Repurchase Type")]
-    [IsoXmlTag("RpTp")]
-    public RepurchaseType22Choice_? RepurchaseType { get; init; }
-
-    /// <summary>
-    /// Securities RTGS.
-    /// </summary>
-    [DisplayName("Securities RTGS")]
-    [IsoXmlTag("SctiesRTGS")]
-    public SecuritiesRTGS4Choice_? SecuritiesRTGS { get; init; }
-
-    /// <summary>
-    /// Securities Transaction Type.
-    /// </summary>
-    [DisplayName("Securities Transaction Type")]
-    [IsoXmlTag("SctiesTxTp")]
-    public required SecuritiesTransactionType44Choice_ SecuritiesTransactionType { get; init; }
-
-    /// <summary>
-    /// Settlement System Method.
-    /// </summary>
-    [DisplayName("Settlement System Method")]
-    [IsoXmlTag("SttlmSysMtd")]
-    public SettlementSystemMethod4Choice_? SettlementSystemMethod { get; init; }
 
     /// <summary>
     /// Settlement Transaction Condition.
@@ -142,6 +30,13 @@ public record SettlementDetails216
     [IsoXmlTag("SttlmTxCond")]
     public ValueList<SettlementTransactionCondition34Choice_> SettlementTransactionCondition { get; init; } =
         [];
+
+    /// <summary>
+    /// Securities Transaction Type.
+    /// </summary>
+    [DisplayName("Securities Transaction Type")]
+    [IsoXmlTag("SctiesTxTp")]
+    public required SecuritiesTransactionType44Choice_ SecuritiesTransactionType { get; init; }
 
     /// <summary>
     /// Settling Capacity.
@@ -158,9 +53,114 @@ public record SettlementDetails216
     public GenericIdentification30? StampDutyTaxBasis { get; init; }
 
     /// <summary>
+    /// Securities RTGS.
+    /// </summary>
+    [DisplayName("Securities RTGS")]
+    [IsoXmlTag("SctiesRTGS")]
+    public SecuritiesRTGS4Choice_? SecuritiesRTGS { get; init; }
+
+    /// <summary>
+    /// Registration.
+    /// </summary>
+    [DisplayName("Registration")]
+    [IsoXmlTag("Regn")]
+    public Registration9Choice_? Registration { get; init; }
+
+    /// <summary>
+    /// Beneficial Ownership.
+    /// </summary>
+    [DisplayName("Beneficial Ownership")]
+    [IsoXmlTag("BnfclOwnrsh")]
+    public BeneficialOwnership4Choice_? BeneficialOwnership { get; init; }
+
+    /// <summary>
+    /// Exposure Type.
+    /// </summary>
+    [DisplayName("Exposure Type")]
+    [IsoXmlTag("XpsrTp")]
+    public ExposureType25Choice_? ExposureType { get; init; }
+
+    /// <summary>
+    /// Cash Clearing System.
+    /// </summary>
+    [DisplayName("Cash Clearing System")]
+    [IsoXmlTag("CshClrSys")]
+    public CashSettlementSystem4Choice_? CashClearingSystem { get; init; }
+
+    /// <summary>
     /// Tax Capacity.
     /// </summary>
     [DisplayName("Tax Capacity")]
     [IsoXmlTag("TaxCpcty")]
     public TaxCapacityParty4Choice_? TaxCapacity { get; init; }
+
+    /// <summary>
+    /// Repurchase Type.
+    /// </summary>
+    [DisplayName("Repurchase Type")]
+    [IsoXmlTag("RpTp")]
+    public RepurchaseType22Choice_? RepurchaseType { get; init; }
+
+    /// <summary>
+    /// Market Client Side.
+    /// </summary>
+    [DisplayName("Market Client Side")]
+    [IsoXmlTag("MktClntSd")]
+    public MarketClientSide6Choice_? MarketClientSide { get; init; }
+
+    /// <summary>
+    /// Block Trade.
+    /// </summary>
+    [DisplayName("Block Trade")]
+    [IsoXmlTag("BlckTrad")]
+    public BlockTrade4Choice_? BlockTrade { get; init; }
+
+    /// <summary>
+    /// Legal Restrictions.
+    /// </summary>
+    [DisplayName("Legal Restrictions")]
+    [IsoXmlTag("LglRstrctns")]
+    public Restriction5Choice_? LegalRestrictions { get; init; }
+
+    /// <summary>
+    /// Settlement System Method.
+    /// </summary>
+    [DisplayName("Settlement System Method")]
+    [IsoXmlTag("SttlmSysMtd")]
+    public SettlementSystemMethod4Choice_? SettlementSystemMethod { get; init; }
+
+    /// <summary>
+    /// Netting Eligibility.
+    /// </summary>
+    [DisplayName("Netting Eligibility")]
+    [IsoXmlTag("NetgElgblty")]
+    public NettingEligibility4Choice_? NettingEligibility { get; init; }
+
+    /// <summary>
+    /// CCP Eligibility.
+    /// </summary>
+    [DisplayName("CCP Eligibility")]
+    [IsoXmlTag("CCPElgblty")]
+    public CentralCounterPartyEligibility4Choice_? CCPEligibility { get; init; }
+
+    /// <summary>
+    /// Letter Of Guarantee.
+    /// </summary>
+    [DisplayName("Letter Of Guarantee")]
+    [IsoXmlTag("LttrOfGrnt")]
+    public LetterOfGuarantee4Choice_? LetterOfGuarantee { get; init; }
+
+    /// <summary>
+    /// Partial Settlement Indicator.
+    /// </summary>
+    [DisplayName("Partial Settlement Indicator")]
+    [IsoXmlTag("PrtlSttlmInd")]
+    public SettlementTransactionCondition5Code? PartialSettlementIndicator { get; init; }
+
+    /// <summary>
+    /// Eligible For Collateral.
+    /// </summary>
+    [DisplayName("Eligible For Collateral")]
+    [IsoXmlTag("ElgblForColl")]
+    public YesNoIndicator? EligibleForCollateral { get; init; }
 }

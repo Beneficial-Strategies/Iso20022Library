@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PartyIdentification285
 {
     /// <summary>
-    /// Additional Identification.
+    /// Identification.
     /// </summary>
-    [DisplayName("Additional Identification")]
-    [IsoXmlTag("AddtlId")]
-    public ValueList<AdditionalData1> AdditionalIdentification { get; init; } = [];
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Assigner.
@@ -38,11 +38,11 @@ public record PartyIdentification285
     public ISO3NumericCountryCode? Country { get; init; }
 
     /// <summary>
-    /// Identification.
+    /// Short Name.
     /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public required Max35Text Identification { get; init; }
+    [DisplayName("Short Name")]
+    [IsoXmlTag("ShrtNm")]
+    public Max35Text? ShortName { get; init; }
 
     /// <summary>
     /// Legal Corporate Name.
@@ -52,16 +52,16 @@ public record PartyIdentification285
     public Max99Text? LegalCorporateName { get; init; }
 
     /// <summary>
+    /// Additional Identification.
+    /// </summary>
+    [DisplayName("Additional Identification")]
+    [IsoXmlTag("AddtlId")]
+    public ValueList<AdditionalData1> AdditionalIdentification { get; init; } = [];
+
+    /// <summary>
     /// Local Data.
     /// </summary>
     [DisplayName("Local Data")]
     [IsoXmlTag("LclData")]
     public ValueList<LocalData14> LocalData { get; init; } = [];
-
-    /// <summary>
-    /// Short Name.
-    /// </summary>
-    [DisplayName("Short Name")]
-    [IsoXmlTag("ShrtNm")]
-    public Max35Text? ShortName { get; init; }
 }

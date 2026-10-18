@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record OriginalTransactionReference41
 {
     /// <summary>
+    /// Interbank Settlement Amount.
+    /// </summary>
+    [DisplayName("Interbank Settlement Amount")]
+    [IsoXmlTag("IntrBkSttlmAmt")]
+    public ActiveOrHistoricCurrencyAndAmount? InterbankSettlementAmount { get; init; }
+
+    /// <summary>
     /// Amount.
     /// </summary>
     [DisplayName("Amount")]
@@ -24,32 +31,25 @@ public record OriginalTransactionReference41
     public AmountType4Choice_? Amount { get; init; }
 
     /// <summary>
-    /// Creditor.
+    /// Interbank Settlement Date.
     /// </summary>
-    [DisplayName("Creditor")]
-    [IsoXmlTag("Cdtr")]
-    public Party50Choice_? Creditor { get; init; }
+    [DisplayName("Interbank Settlement Date")]
+    [IsoXmlTag("IntrBkSttlmDt")]
+    public ISODate? InterbankSettlementDate { get; init; }
 
     /// <summary>
-    /// Creditor Account.
+    /// Requested Collection Date.
     /// </summary>
-    [DisplayName("Creditor Account")]
-    [IsoXmlTag("CdtrAcct")]
-    public CashAccount40? CreditorAccount { get; init; }
+    [DisplayName("Requested Collection Date")]
+    [IsoXmlTag("ReqdColltnDt")]
+    public ISODate? RequestedCollectionDate { get; init; }
 
     /// <summary>
-    /// Creditor Agent.
+    /// Requested Execution Date.
     /// </summary>
-    [DisplayName("Creditor Agent")]
-    [IsoXmlTag("CdtrAgt")]
-    public BranchAndFinancialInstitutionIdentification8? CreditorAgent { get; init; }
-
-    /// <summary>
-    /// Creditor Agent Account.
-    /// </summary>
-    [DisplayName("Creditor Agent Account")]
-    [IsoXmlTag("CdtrAgtAcct")]
-    public CashAccount40? CreditorAgentAccount { get; init; }
+    [DisplayName("Requested Execution Date")]
+    [IsoXmlTag("ReqdExctnDt")]
+    public DateAndDateTime2Choice_? RequestedExecutionDate { get; init; }
 
     /// <summary>
     /// Creditor Scheme Identification.
@@ -57,6 +57,48 @@ public record OriginalTransactionReference41
     [DisplayName("Creditor Scheme Identification")]
     [IsoXmlTag("CdtrSchmeId")]
     public PartyIdentification272? CreditorSchemeIdentification { get; init; }
+
+    /// <summary>
+    /// Settlement Information.
+    /// </summary>
+    [DisplayName("Settlement Information")]
+    [IsoXmlTag("SttlmInf")]
+    public SettlementInstruction15? SettlementInformation { get; init; }
+
+    /// <summary>
+    /// Payment Type Information.
+    /// </summary>
+    [DisplayName("Payment Type Information")]
+    [IsoXmlTag("PmtTpInf")]
+    public PaymentTypeInformation27? PaymentTypeInformation { get; init; }
+
+    /// <summary>
+    /// Payment Method.
+    /// </summary>
+    [DisplayName("Payment Method")]
+    [IsoXmlTag("PmtMtd")]
+    public PaymentMethod4Code? PaymentMethod { get; init; }
+
+    /// <summary>
+    /// Mandate Related Information.
+    /// </summary>
+    [DisplayName("Mandate Related Information")]
+    [IsoXmlTag("MndtRltdInf")]
+    public MandateRelatedData3Choice_? MandateRelatedInformation { get; init; }
+
+    /// <summary>
+    /// Remittance Information.
+    /// </summary>
+    [DisplayName("Remittance Information")]
+    [IsoXmlTag("RmtInf")]
+    public RemittanceInformation22? RemittanceInformation { get; init; }
+
+    /// <summary>
+    /// Ultimate Debtor.
+    /// </summary>
+    [DisplayName("Ultimate Debtor")]
+    [IsoXmlTag("UltmtDbtr")]
+    public Party50Choice_? UltimateDebtor { get; init; }
 
     /// <summary>
     /// Debtor.
@@ -87,74 +129,32 @@ public record OriginalTransactionReference41
     public CashAccount40? DebtorAgentAccount { get; init; }
 
     /// <summary>
-    /// Interbank Settlement Amount.
+    /// Creditor Agent.
     /// </summary>
-    [DisplayName("Interbank Settlement Amount")]
-    [IsoXmlTag("IntrBkSttlmAmt")]
-    public ActiveOrHistoricCurrencyAndAmount? InterbankSettlementAmount { get; init; }
+    [DisplayName("Creditor Agent")]
+    [IsoXmlTag("CdtrAgt")]
+    public BranchAndFinancialInstitutionIdentification8? CreditorAgent { get; init; }
 
     /// <summary>
-    /// Interbank Settlement Date.
+    /// Creditor Agent Account.
     /// </summary>
-    [DisplayName("Interbank Settlement Date")]
-    [IsoXmlTag("IntrBkSttlmDt")]
-    public ISODate? InterbankSettlementDate { get; init; }
+    [DisplayName("Creditor Agent Account")]
+    [IsoXmlTag("CdtrAgtAcct")]
+    public CashAccount40? CreditorAgentAccount { get; init; }
 
     /// <summary>
-    /// Mandate Related Information.
+    /// Creditor.
     /// </summary>
-    [DisplayName("Mandate Related Information")]
-    [IsoXmlTag("MndtRltdInf")]
-    public MandateRelatedData3Choice_? MandateRelatedInformation { get; init; }
+    [DisplayName("Creditor")]
+    [IsoXmlTag("Cdtr")]
+    public Party50Choice_? Creditor { get; init; }
 
     /// <summary>
-    /// Payment Method.
+    /// Creditor Account.
     /// </summary>
-    [DisplayName("Payment Method")]
-    [IsoXmlTag("PmtMtd")]
-    public PaymentMethod4Code? PaymentMethod { get; init; }
-
-    /// <summary>
-    /// Payment Type Information.
-    /// </summary>
-    [DisplayName("Payment Type Information")]
-    [IsoXmlTag("PmtTpInf")]
-    public PaymentTypeInformation27? PaymentTypeInformation { get; init; }
-
-    /// <summary>
-    /// Purpose.
-    /// </summary>
-    [DisplayName("Purpose")]
-    [IsoXmlTag("Purp")]
-    public Purpose2Choice_? Purpose { get; init; }
-
-    /// <summary>
-    /// Remittance Information.
-    /// </summary>
-    [DisplayName("Remittance Information")]
-    [IsoXmlTag("RmtInf")]
-    public RemittanceInformation22? RemittanceInformation { get; init; }
-
-    /// <summary>
-    /// Requested Collection Date.
-    /// </summary>
-    [DisplayName("Requested Collection Date")]
-    [IsoXmlTag("ReqdColltnDt")]
-    public ISODate? RequestedCollectionDate { get; init; }
-
-    /// <summary>
-    /// Requested Execution Date.
-    /// </summary>
-    [DisplayName("Requested Execution Date")]
-    [IsoXmlTag("ReqdExctnDt")]
-    public DateAndDateTime2Choice_? RequestedExecutionDate { get; init; }
-
-    /// <summary>
-    /// Settlement Information.
-    /// </summary>
-    [DisplayName("Settlement Information")]
-    [IsoXmlTag("SttlmInf")]
-    public SettlementInstruction15? SettlementInformation { get; init; }
+    [DisplayName("Creditor Account")]
+    [IsoXmlTag("CdtrAcct")]
+    public CashAccount40? CreditorAccount { get; init; }
 
     /// <summary>
     /// Ultimate Creditor.
@@ -164,11 +164,11 @@ public record OriginalTransactionReference41
     public Party50Choice_? UltimateCreditor { get; init; }
 
     /// <summary>
-    /// Ultimate Debtor.
+    /// Purpose.
     /// </summary>
-    [DisplayName("Ultimate Debtor")]
-    [IsoXmlTag("UltmtDbtr")]
-    public Party50Choice_? UltimateDebtor { get; init; }
+    [DisplayName("Purpose")]
+    [IsoXmlTag("Purp")]
+    public Purpose2Choice_? Purpose { get; init; }
 
     /// <summary>
     /// Underlying Customer Credit Transfer.

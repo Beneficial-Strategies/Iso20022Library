@@ -46,18 +46,18 @@ public record SaleToPOIAdministrativeRequestV07 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Administrative Request.
-    /// </summary>
-    [DisplayName("Administrative Request")]
-    [IsoXmlTag("AdmstvReq")]
-    public required AdministrativeRequest8 AdministrativeRequest { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required Header41 Header { get; init; }
+
+    /// <summary>
+    /// Administrative Request.
+    /// </summary>
+    [DisplayName("Administrative Request")]
+    [IsoXmlTag("AdmstvReq")]
+    public required AdministrativeRequest8 AdministrativeRequest { get; init; }
 
     /// <summary>
     /// Security Trailer.

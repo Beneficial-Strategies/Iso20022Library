@@ -17,53 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AccountStatementDetails3
 {
     /// <summary>
-    /// Acceptor Name And Location.
+    /// Transaction Date.
     /// </summary>
-    [DisplayName("Acceptor Name And Location")]
-    [IsoXmlTag("AccptrNmAndLctn")]
-    public Max99Text? AcceptorNameAndLocation { get; init; }
-
-    /// <summary>
-    /// Amount.
-    /// </summary>
-    [DisplayName("Amount")]
-    [IsoXmlTag("Amt")]
-    public ImpliedCurrencyAndAmount? Amount { get; init; }
-
-    /// <summary>
-    /// Cardholder Billing Amount.
-    /// </summary>
-    [DisplayName("Cardholder Billing Amount")]
-    [IsoXmlTag("CrdhldrBllgAmt")]
-    public ImpliedCurrencyAndAmount? CardholderBillingAmount { get; init; }
-
-    /// <summary>
-    /// Cardholder Billing Currency.
-    /// </summary>
-    [DisplayName("Cardholder Billing Currency")]
-    [IsoXmlTag("CrdhldrBllgCcy")]
-    public ISO3NumericCurrencyCode? CardholderBillingCurrency { get; init; }
-
-    /// <summary>
-    /// Credit Debit.
-    /// </summary>
-    [DisplayName("Credit Debit")]
-    [IsoXmlTag("CdtDbt")]
-    public CreditDebit3Code? CreditDebit { get; init; }
-
-    /// <summary>
-    /// Currency.
-    /// </summary>
-    [DisplayName("Currency")]
-    [IsoXmlTag("Ccy")]
-    public ISO3NumericCurrencyCode? Currency { get; init; }
-
-    /// <summary>
-    /// Long Description.
-    /// </summary>
-    [DisplayName("Long Description")]
-    [IsoXmlTag("LngDesc")]
-    public Max256Text? LongDescription { get; init; }
+    [DisplayName("Transaction Date")]
+    [IsoXmlTag("TxDt")]
+    public required ISODate TransactionDate { get; init; }
 
     /// <summary>
     /// Pending.
@@ -80,6 +38,48 @@ public record AccountStatementDetails3
     public ISODate? PostingDate { get; init; }
 
     /// <summary>
+    /// Credit Debit.
+    /// </summary>
+    [DisplayName("Credit Debit")]
+    [IsoXmlTag("CdtDbt")]
+    public CreditDebit3Code? CreditDebit { get; init; }
+
+    /// <summary>
+    /// Amount.
+    /// </summary>
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    public ImpliedCurrencyAndAmount? Amount { get; init; }
+
+    /// <summary>
+    /// Currency.
+    /// </summary>
+    [DisplayName("Currency")]
+    [IsoXmlTag("Ccy")]
+    public ISO3NumericCurrencyCode? Currency { get; init; }
+
+    /// <summary>
+    /// Cardholder Billing Amount.
+    /// </summary>
+    [DisplayName("Cardholder Billing Amount")]
+    [IsoXmlTag("CrdhldrBllgAmt")]
+    public ImpliedCurrencyAndAmount? CardholderBillingAmount { get; init; }
+
+    /// <summary>
+    /// Cardholder Billing Currency.
+    /// </summary>
+    [DisplayName("Cardholder Billing Currency")]
+    [IsoXmlTag("CrdhldrBllgCcy")]
+    public ISO3NumericCurrencyCode? CardholderBillingCurrency { get; init; }
+
+    /// <summary>
+    /// Acceptor Name And Location.
+    /// </summary>
+    [DisplayName("Acceptor Name And Location")]
+    [IsoXmlTag("AccptrNmAndLctn")]
+    public Max99Text? AcceptorNameAndLocation { get; init; }
+
+    /// <summary>
     /// Short Description.
     /// </summary>
     [DisplayName("Short Description")]
@@ -87,9 +87,9 @@ public record AccountStatementDetails3
     public Max70Text? ShortDescription { get; init; }
 
     /// <summary>
-    /// Transaction Date.
+    /// Long Description.
     /// </summary>
-    [DisplayName("Transaction Date")]
-    [IsoXmlTag("TxDt")]
-    public required ISODate TransactionDate { get; init; }
+    [DisplayName("Long Description")]
+    [IsoXmlTag("LngDesc")]
+    public Max256Text? LongDescription { get; init; }
 }

@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ProprietaryAgent5
 {
     /// <summary>
-    /// Agent.
-    /// </summary>
-    [DisplayName("Agent")]
-    [IsoXmlTag("Agt")]
-    public required BranchAndFinancialInstitutionIdentification8 Agent { get; init; }
-
-    /// <summary>
     /// Type.
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     public required Max35Text Type { get; init; }
+
+    /// <summary>
+    /// Agent.
+    /// </summary>
+    [DisplayName("Agent")]
+    [IsoXmlTag("Agt")]
+    public required BranchAndFinancialInstitutionIdentification8 Agent { get; init; }
 }

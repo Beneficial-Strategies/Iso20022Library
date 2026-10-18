@@ -17,46 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TransactionCharacteristics4
 {
     /// <summary>
-    /// Additional Data.
+    /// Transaction Type.
     /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
-
-    /// <summary>
-    /// Alternate Message Reason.
-    /// </summary>
-    [DisplayName("Alternate Message Reason")]
-    [IsoXmlTag("AltrnMsgRsn")]
-    public ValueList<Max256Text> AlternateMessageReason { get; init; } = [];
-
-    /// <summary>
-    /// Cancellation.
-    /// </summary>
-    [DisplayName("Cancellation")]
-    [IsoXmlTag("Cxl")]
-    public TrueFalseIndicator? Cancellation { get; init; }
-
-    /// <summary>
-    /// Fee Collection Cycle.
-    /// </summary>
-    [DisplayName("Fee Collection Cycle")]
-    [IsoXmlTag("FeeColltnCycl")]
-    public Exact1NumericText? FeeCollectionCycle { get; init; }
-
-    /// <summary>
-    /// Message Reason.
-    /// </summary>
-    [DisplayName("Message Reason")]
-    [IsoXmlTag("MsgRsn")]
-    public ValueList<ISO8583MessageReasonCode> MessageReason { get; init; } = [];
-
-    /// <summary>
-    /// Transaction Description.
-    /// </summary>
-    [DisplayName("Transaction Description")]
-    [IsoXmlTag("TxDesc")]
-    public Max1000Text? TransactionDescription { get; init; }
+    [DisplayName("Transaction Type")]
+    [IsoXmlTag("TxTp")]
+    public ISO8583TransactionTypeCode? TransactionType { get; init; }
 
     /// <summary>
     /// Transaction Sub Type.
@@ -66,9 +31,44 @@ public record TransactionCharacteristics4
     public Max35Text? TransactionSubType { get; init; }
 
     /// <summary>
-    /// Transaction Type.
+    /// Cancellation.
     /// </summary>
-    [DisplayName("Transaction Type")]
-    [IsoXmlTag("TxTp")]
-    public ISO8583TransactionTypeCode? TransactionType { get; init; }
+    [DisplayName("Cancellation")]
+    [IsoXmlTag("Cxl")]
+    public TrueFalseIndicator? Cancellation { get; init; }
+
+    /// <summary>
+    /// Message Reason.
+    /// </summary>
+    [DisplayName("Message Reason")]
+    [IsoXmlTag("MsgRsn")]
+    public ValueList<ISO8583MessageReasonCode> MessageReason { get; init; } = [];
+
+    /// <summary>
+    /// Alternate Message Reason.
+    /// </summary>
+    [DisplayName("Alternate Message Reason")]
+    [IsoXmlTag("AltrnMsgRsn")]
+    public ValueList<Max256Text> AlternateMessageReason { get; init; } = [];
+
+    /// <summary>
+    /// Fee Collection Cycle.
+    /// </summary>
+    [DisplayName("Fee Collection Cycle")]
+    [IsoXmlTag("FeeColltnCycl")]
+    public Exact1NumericText? FeeCollectionCycle { get; init; }
+
+    /// <summary>
+    /// Transaction Description.
+    /// </summary>
+    [DisplayName("Transaction Description")]
+    [IsoXmlTag("TxDesc")]
+    public Max1000Text? TransactionDescription { get; init; }
+
+    /// <summary>
+    /// Additional Data.
+    /// </summary>
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

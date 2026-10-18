@@ -17,11 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CardAccount21
 {
     /// <summary>
-    /// Account Identifier.
+    /// Account Sequence Number.
     /// </summary>
-    [DisplayName("Account Identifier")]
-    [IsoXmlTag("AcctIdr")]
-    public AccountIdentification80Choice_? AccountIdentifier { get; init; }
+    [DisplayName("Account Sequence Number")]
+    [IsoXmlTag("AcctSeqNb")]
+    public Number? AccountSequenceNumber { get; init; }
+
+    /// <summary>
+    /// Selection Method.
+    /// </summary>
+    [DisplayName("Selection Method")]
+    [IsoXmlTag("SelctnMtd")]
+    public AccountChoiceMethod1Code? SelectionMethod { get; init; }
+
+    /// <summary>
+    /// Selected Account Type.
+    /// </summary>
+    [DisplayName("Selected Account Type")]
+    [IsoXmlTag("SelctdAcctTp")]
+    public CardAccountType3Code? SelectedAccountType { get; init; }
 
     /// <summary>
     /// Account Name.
@@ -38,11 +52,32 @@ public record CardAccount21
     public NameAndAddress3? AccountOwner { get; init; }
 
     /// <summary>
-    /// Account Sequence Number.
+    /// Currency.
     /// </summary>
-    [DisplayName("Account Sequence Number")]
-    [IsoXmlTag("AcctSeqNb")]
-    public Number? AccountSequenceNumber { get; init; }
+    [DisplayName("Currency")]
+    [IsoXmlTag("Ccy")]
+    public ActiveCurrencyCode? Currency { get; init; }
+
+    /// <summary>
+    /// Account Identifier.
+    /// </summary>
+    [DisplayName("Account Identifier")]
+    [IsoXmlTag("AcctIdr")]
+    public AccountIdentification80Choice_? AccountIdentifier { get; init; }
+
+    /// <summary>
+    /// Credit Reference.
+    /// </summary>
+    [DisplayName("Credit Reference")]
+    [IsoXmlTag("CdtRef")]
+    public Max35Text? CreditReference { get; init; }
+
+    /// <summary>
+    /// Servicer.
+    /// </summary>
+    [DisplayName("Servicer")]
+    [IsoXmlTag("Svcr")]
+    public PartyIdentification177Choice_? Servicer { get; init; }
 
     /// <summary>
     /// Balance.
@@ -59,20 +94,6 @@ public record CardAccount21
     public TrueFalseIndicator? BalanceDisplayFlag { get; init; }
 
     /// <summary>
-    /// Credit Reference.
-    /// </summary>
-    [DisplayName("Credit Reference")]
-    [IsoXmlTag("CdtRef")]
-    public Max35Text? CreditReference { get; init; }
-
-    /// <summary>
-    /// Currency.
-    /// </summary>
-    [DisplayName("Currency")]
-    [IsoXmlTag("Ccy")]
-    public ActiveCurrencyCode? Currency { get; init; }
-
-    /// <summary>
     /// Default Account Indicator.
     /// </summary>
     [DisplayName("Default Account Indicator")]
@@ -85,25 +106,4 @@ public record CardAccount21
     [DisplayName("Limits")]
     [IsoXmlTag("Lmts")]
     public ATMTransactionAmounts11? Limits { get; init; }
-
-    /// <summary>
-    /// Selected Account Type.
-    /// </summary>
-    [DisplayName("Selected Account Type")]
-    [IsoXmlTag("SelctdAcctTp")]
-    public CardAccountType3Code? SelectedAccountType { get; init; }
-
-    /// <summary>
-    /// Selection Method.
-    /// </summary>
-    [DisplayName("Selection Method")]
-    [IsoXmlTag("SelctnMtd")]
-    public AccountChoiceMethod1Code? SelectionMethod { get; init; }
-
-    /// <summary>
-    /// Servicer.
-    /// </summary>
-    [DisplayName("Servicer")]
-    [IsoXmlTag("Svcr")]
-    public PartyIdentification177Choice_? Servicer { get; init; }
 }

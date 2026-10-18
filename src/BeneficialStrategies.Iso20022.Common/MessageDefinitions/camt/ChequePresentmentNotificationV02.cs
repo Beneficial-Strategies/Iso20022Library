@@ -46,18 +46,18 @@ public record ChequePresentmentNotificationV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Cheque.
-    /// </summary>
-    [DisplayName("Cheque")]
-    [IsoXmlTag("Chq")]
-    public ValueList<Cheque17> Cheque { get; init; } = [];
-
-    /// <summary>
     /// Group Header.
     /// </summary>
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader103 GroupHeader { get; init; }
+
+    /// <summary>
+    /// Cheque.
+    /// </summary>
+    [DisplayName("Cheque")]
+    [IsoXmlTag("Chq")]
+    public ValueList<Cheque17> Cheque { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

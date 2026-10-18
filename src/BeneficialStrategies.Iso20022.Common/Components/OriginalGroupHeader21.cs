@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record OriginalGroupHeader21
 {
     /// <summary>
-    /// Cancellation Reason Information.
+    /// Group Cancellation Identification.
     /// </summary>
-    [DisplayName("Cancellation Reason Information")]
-    [IsoXmlTag("CxlRsnInf")]
-    public ValueList<PaymentCancellationReason6> CancellationReasonInformation { get; init; } = [];
+    [DisplayName("Group Cancellation Identification")]
+    [IsoXmlTag("GrpCxlId")]
+    public Max35Text? GroupCancellationIdentification { get; init; }
 
     /// <summary>
     /// Case.
@@ -29,6 +29,34 @@ public record OriginalGroupHeader21
     [DisplayName("Case")]
     [IsoXmlTag("Case")]
     public Case6? Case { get; init; }
+
+    /// <summary>
+    /// Original Message Identification.
+    /// </summary>
+    [DisplayName("Original Message Identification")]
+    [IsoXmlTag("OrgnlMsgId")]
+    public required Max35Text OriginalMessageIdentification { get; init; }
+
+    /// <summary>
+    /// Original Message Name Identification.
+    /// </summary>
+    [DisplayName("Original Message Name Identification")]
+    [IsoXmlTag("OrgnlMsgNmId")]
+    public required Max35Text OriginalMessageNameIdentification { get; init; }
+
+    /// <summary>
+    /// Original Creation Date Time.
+    /// </summary>
+    [DisplayName("Original Creation Date Time")]
+    [IsoXmlTag("OrgnlCreDtTm")]
+    public ISODateTime? OriginalCreationDateTime { get; init; }
+
+    /// <summary>
+    /// Number Of Transactions.
+    /// </summary>
+    [DisplayName("Number Of Transactions")]
+    [IsoXmlTag("NbOfTxs")]
+    public Max15NumericText? NumberOfTransactions { get; init; }
 
     /// <summary>
     /// Control Sum.
@@ -45,37 +73,9 @@ public record OriginalGroupHeader21
     public GroupCancellationIndicator? GroupCancellation { get; init; }
 
     /// <summary>
-    /// Group Cancellation Identification.
+    /// Cancellation Reason Information.
     /// </summary>
-    [DisplayName("Group Cancellation Identification")]
-    [IsoXmlTag("GrpCxlId")]
-    public Max35Text? GroupCancellationIdentification { get; init; }
-
-    /// <summary>
-    /// Number Of Transactions.
-    /// </summary>
-    [DisplayName("Number Of Transactions")]
-    [IsoXmlTag("NbOfTxs")]
-    public Max15NumericText? NumberOfTransactions { get; init; }
-
-    /// <summary>
-    /// Original Creation Date Time.
-    /// </summary>
-    [DisplayName("Original Creation Date Time")]
-    [IsoXmlTag("OrgnlCreDtTm")]
-    public ISODateTime? OriginalCreationDateTime { get; init; }
-
-    /// <summary>
-    /// Original Message Identification.
-    /// </summary>
-    [DisplayName("Original Message Identification")]
-    [IsoXmlTag("OrgnlMsgId")]
-    public required Max35Text OriginalMessageIdentification { get; init; }
-
-    /// <summary>
-    /// Original Message Name Identification.
-    /// </summary>
-    [DisplayName("Original Message Name Identification")]
-    [IsoXmlTag("OrgnlMsgNmId")]
-    public required Max35Text OriginalMessageNameIdentification { get; init; }
+    [DisplayName("Cancellation Reason Information")]
+    [IsoXmlTag("CxlRsnInf")]
+    public ValueList<PaymentCancellationReason6> CancellationReasonInformation { get; init; } = [];
 }

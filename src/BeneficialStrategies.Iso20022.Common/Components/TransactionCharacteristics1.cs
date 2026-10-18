@@ -17,18 +17,32 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TransactionCharacteristics1
 {
     /// <summary>
-    /// Additional Data.
+    /// Transaction Type.
     /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
+    [DisplayName("Transaction Type")]
+    [IsoXmlTag("TxTp")]
+    public required ISO8583TransactionTypeCode TransactionType { get; init; }
 
     /// <summary>
-    /// Alternate Message Reason.
+    /// Transaction Sub Type.
     /// </summary>
-    [DisplayName("Alternate Message Reason")]
-    [IsoXmlTag("AltrnMsgRsn")]
-    public ValueList<Max256Text> AlternateMessageReason { get; init; } = [];
+    [DisplayName("Transaction Sub Type")]
+    [IsoXmlTag("TxSubTp")]
+    public Max35Text? TransactionSubType { get; init; }
+
+    /// <summary>
+    /// Transaction Attribute.
+    /// </summary>
+    [DisplayName("Transaction Attribute")]
+    [IsoXmlTag("TxAttr")]
+    public ValueList<TransactionAttribute2Code> TransactionAttribute { get; init; } = [];
+
+    /// <summary>
+    /// Other Transaction Attribute.
+    /// </summary>
+    [DisplayName("Other Transaction Attribute")]
+    [IsoXmlTag("OthrTxAttr")]
+    public ValueList<Max35Text> OtherTransactionAttribute { get; init; } = [];
 
     /// <summary>
     /// Cancellation.
@@ -45,11 +59,11 @@ public record TransactionCharacteristics1
     public ValueList<ISO8583MessageReasonCode> MessageReason { get; init; } = [];
 
     /// <summary>
-    /// Other Transaction Attribute.
+    /// Alternate Message Reason.
     /// </summary>
-    [DisplayName("Other Transaction Attribute")]
-    [IsoXmlTag("OthrTxAttr")]
-    public ValueList<Max35Text> OtherTransactionAttribute { get; init; } = [];
+    [DisplayName("Alternate Message Reason")]
+    [IsoXmlTag("AltrnMsgRsn")]
+    public ValueList<Max256Text> AlternateMessageReason { get; init; } = [];
 
     /// <summary>
     /// Pre Authorisation Time Limit.
@@ -59,13 +73,6 @@ public record TransactionCharacteristics1
     public Max6NumericText? PreAuthorisationTimeLimit { get; init; }
 
     /// <summary>
-    /// Transaction Attribute.
-    /// </summary>
-    [DisplayName("Transaction Attribute")]
-    [IsoXmlTag("TxAttr")]
-    public ValueList<TransactionAttribute2Code> TransactionAttribute { get; init; } = [];
-
-    /// <summary>
     /// Transaction Description.
     /// </summary>
     [DisplayName("Transaction Description")]
@@ -73,16 +80,9 @@ public record TransactionCharacteristics1
     public Max1000Text? TransactionDescription { get; init; }
 
     /// <summary>
-    /// Transaction Sub Type.
+    /// Additional Data.
     /// </summary>
-    [DisplayName("Transaction Sub Type")]
-    [IsoXmlTag("TxSubTp")]
-    public Max35Text? TransactionSubType { get; init; }
-
-    /// <summary>
-    /// Transaction Type.
-    /// </summary>
-    [DisplayName("Transaction Type")]
-    [IsoXmlTag("TxTp")]
-    public required ISO8583TransactionTypeCode TransactionType { get; init; }
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

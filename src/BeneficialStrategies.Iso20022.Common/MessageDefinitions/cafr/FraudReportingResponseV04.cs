@@ -46,81 +46,11 @@ public record FraudReportingResponseV04 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Acquirer.
-    /// </summary>
-    [DisplayName("Acquirer")]
-    [IsoXmlTag("Acqrr")]
-    public AcquirerData1? Acquirer { get; init; }
-
-    /// <summary>
-    /// Additional Fee.
-    /// </summary>
-    [DisplayName("Additional Fee")]
-    [IsoXmlTag("AddtlFee")]
-    public ValueList<AdditionalFee3> AdditionalFee { get; init; } = [];
-
-    /// <summary>
-    /// Card.
-    /// </summary>
-    [DisplayName("Card")]
-    [IsoXmlTag("Card")]
-    public CardData17? Card { get; init; }
-
-    /// <summary>
-    /// Cardholder.
-    /// </summary>
-    [DisplayName("Cardholder")]
-    [IsoXmlTag("Crdhldr")]
-    public Cardholder22? Cardholder { get; init; }
-
-    /// <summary>
-    /// Destination.
-    /// </summary>
-    [DisplayName("Destination")]
-    [IsoXmlTag("Dstn")]
-    public PartyIdentification286? Destination { get; init; }
-
-    /// <summary>
-    /// Fraud Transaction Identification.
-    /// </summary>
-    [DisplayName("Fraud Transaction Identification")]
-    [IsoXmlTag("FrdTxId")]
-    public required Max70Text FraudTransactionIdentification { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required Header72 Header { get; init; }
-
-    /// <summary>
-    /// Issuer.
-    /// </summary>
-    [DisplayName("Issuer")]
-    [IsoXmlTag("Issr")]
-    public PartyIdentification286? Issuer { get; init; }
-
-    /// <summary>
-    /// Jurisdiction.
-    /// </summary>
-    [DisplayName("Jurisdiction")]
-    [IsoXmlTag("Jursdctn")]
-    public Jurisdiction2? Jurisdiction { get; init; }
-
-    /// <summary>
-    /// National Data.
-    /// </summary>
-    [DisplayName("National Data")]
-    [IsoXmlTag("NtlData")]
-    public ATICALaxProcessing? NationalData { get; init; }
-
-    /// <summary>
-    /// Original Response Code.
-    /// </summary>
-    [DisplayName("Original Response Code")]
-    [IsoXmlTag("OrgnlRspnCd")]
-    public ISO8583ResponseCode? OriginalResponseCode { get; init; }
 
     /// <summary>
     /// Originator.
@@ -130,53 +60,11 @@ public record FraudReportingResponseV04 : IOuterRecord
     public PartyIdentification286? Originator { get; init; }
 
     /// <summary>
-    /// Private Data.
+    /// Acquirer.
     /// </summary>
-    [DisplayName("Private Data")]
-    [IsoXmlTag("PrvtData")]
-    public ATICALaxProcessing? PrivateData { get; init; }
-
-    /// <summary>
-    /// Processing Result.
-    /// </summary>
-    [DisplayName("Processing Result")]
-    [IsoXmlTag("PrcgRslt")]
-    public required ProcessingResult30 ProcessingResult { get; init; }
-
-    /// <summary>
-    /// Programme.
-    /// </summary>
-    [DisplayName("Programme")]
-    [IsoXmlTag("Prgrmm")]
-    public ProgrammeMode6? Programme { get; init; }
-
-    /// <summary>
-    /// Protected Data.
-    /// </summary>
-    [DisplayName("Protected Data")]
-    [IsoXmlTag("PrtctdData")]
-    public ValueList<ProtectedData2> ProtectedData { get; init; } = [];
-
-    /// <summary>
-    /// Receiver.
-    /// </summary>
-    [DisplayName("Receiver")]
-    [IsoXmlTag("Rcvr")]
-    public PartyIdentification286? Receiver { get; init; }
-
-    /// <summary>
-    /// Reconciliation.
-    /// </summary>
-    [DisplayName("Reconciliation")]
-    [IsoXmlTag("Rcncltn")]
-    public Reconciliation5? Reconciliation { get; init; }
-
-    /// <summary>
-    /// Security Trailer.
-    /// </summary>
-    [DisplayName("Security Trailer")]
-    [IsoXmlTag("SctyTrlr")]
-    public ContentInformationType41? SecurityTrailer { get; init; }
+    [DisplayName("Acquirer")]
+    [IsoXmlTag("Acqrr")]
+    public AcquirerData1? Acquirer { get; init; }
 
     /// <summary>
     /// Sender.
@@ -186,11 +74,46 @@ public record FraudReportingResponseV04 : IOuterRecord
     public PartyIdentification286? Sender { get; init; }
 
     /// <summary>
-    /// Settlement Service.
+    /// Card.
     /// </summary>
-    [DisplayName("Settlement Service")]
-    [IsoXmlTag("SttlmSvc")]
-    public SettlementService7? SettlementService { get; init; }
+    [DisplayName("Card")]
+    [IsoXmlTag("Card")]
+    public CardData17? Card { get; init; }
+
+    /// <summary>
+    /// Fraud Transaction Identification.
+    /// </summary>
+    [DisplayName("Fraud Transaction Identification")]
+    [IsoXmlTag("FrdTxId")]
+    public required Max70Text FraudTransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Receiver.
+    /// </summary>
+    [DisplayName("Receiver")]
+    [IsoXmlTag("Rcvr")]
+    public PartyIdentification286? Receiver { get; init; }
+
+    /// <summary>
+    /// Issuer.
+    /// </summary>
+    [DisplayName("Issuer")]
+    [IsoXmlTag("Issr")]
+    public PartyIdentification286? Issuer { get; init; }
+
+    /// <summary>
+    /// Destination.
+    /// </summary>
+    [DisplayName("Destination")]
+    [IsoXmlTag("Dstn")]
+    public PartyIdentification286? Destination { get; init; }
+
+    /// <summary>
+    /// Programme.
+    /// </summary>
+    [DisplayName("Programme")]
+    [IsoXmlTag("Prgrmm")]
+    public ProgrammeMode6? Programme { get; init; }
 
     /// <summary>
     /// Token.
@@ -198,4 +121,81 @@ public record FraudReportingResponseV04 : IOuterRecord
     [DisplayName("Token")]
     [IsoXmlTag("Tkn")]
     public Token2? Token { get; init; }
+
+    /// <summary>
+    /// Cardholder.
+    /// </summary>
+    [DisplayName("Cardholder")]
+    [IsoXmlTag("Crdhldr")]
+    public Cardholder22? Cardholder { get; init; }
+
+    /// <summary>
+    /// Jurisdiction.
+    /// </summary>
+    [DisplayName("Jurisdiction")]
+    [IsoXmlTag("Jursdctn")]
+    public Jurisdiction2? Jurisdiction { get; init; }
+
+    /// <summary>
+    /// Settlement Service.
+    /// </summary>
+    [DisplayName("Settlement Service")]
+    [IsoXmlTag("SttlmSvc")]
+    public SettlementService7? SettlementService { get; init; }
+
+    /// <summary>
+    /// Additional Fee.
+    /// </summary>
+    [DisplayName("Additional Fee")]
+    [IsoXmlTag("AddtlFee")]
+    public ValueList<AdditionalFee3> AdditionalFee { get; init; } = [];
+
+    /// <summary>
+    /// Reconciliation.
+    /// </summary>
+    [DisplayName("Reconciliation")]
+    [IsoXmlTag("Rcncltn")]
+    public Reconciliation5? Reconciliation { get; init; }
+
+    /// <summary>
+    /// Processing Result.
+    /// </summary>
+    [DisplayName("Processing Result")]
+    [IsoXmlTag("PrcgRslt")]
+    public required ProcessingResult30 ProcessingResult { get; init; }
+
+    /// <summary>
+    /// Original Response Code.
+    /// </summary>
+    [DisplayName("Original Response Code")]
+    [IsoXmlTag("OrgnlRspnCd")]
+    public ISO8583ResponseCode? OriginalResponseCode { get; init; }
+
+    /// <summary>
+    /// Protected Data.
+    /// </summary>
+    [DisplayName("Protected Data")]
+    [IsoXmlTag("PrtctdData")]
+    public ValueList<ProtectedData2> ProtectedData { get; init; } = [];
+
+    /// <summary>
+    /// Private Data.
+    /// </summary>
+    [DisplayName("Private Data")]
+    [IsoXmlTag("PrvtData")]
+    public ATICALaxProcessing? PrivateData { get; init; }
+
+    /// <summary>
+    /// National Data.
+    /// </summary>
+    [DisplayName("National Data")]
+    [IsoXmlTag("NtlData")]
+    public ATICALaxProcessing? NationalData { get; init; }
+
+    /// <summary>
+    /// Security Trailer.
+    /// </summary>
+    [DisplayName("Security Trailer")]
+    [IsoXmlTag("SctyTrlr")]
+    public ContentInformationType41? SecurityTrailer { get; init; }
 }

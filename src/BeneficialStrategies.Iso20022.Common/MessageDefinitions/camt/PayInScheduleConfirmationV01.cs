@@ -46,16 +46,16 @@ public record PayInScheduleConfirmationV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Confirmation Details.
-    /// </summary>
-    [DisplayName("Confirmation Details")]
-    [IsoXmlTag("ConfDtls")]
-    public required ConfirmationDetails1 ConfirmationDetails { get; init; }
-
-    /// <summary>
     /// Message Identification.
     /// </summary>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     public required MessageIdentification MessageIdentification { get; init; }
+
+    /// <summary>
+    /// Confirmation Details.
+    /// </summary>
+    [DisplayName("Confirmation Details")]
+    [IsoXmlTag("ConfDtls")]
+    public required ConfirmationDetails1 ConfirmationDetails { get; init; }
 }

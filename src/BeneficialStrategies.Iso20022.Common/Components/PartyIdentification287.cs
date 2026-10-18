@@ -17,11 +17,39 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PartyIdentification287
 {
     /// <summary>
-    /// Additional Data.
+    /// Financial Institution.
     /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
+    [DisplayName("Financial Institution")]
+    [IsoXmlTag("FI")]
+    public FinancialInstitution8? FinancialInstitution { get; init; }
+
+    /// <summary>
+    /// Identification.
+    /// </summary>
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public Max35Text? Identification { get; init; }
+
+    /// <summary>
+    /// Designation.
+    /// </summary>
+    [DisplayName("Designation")]
+    [IsoXmlTag("Dsgnt")]
+    public Max2NumericText? Designation { get; init; }
+
+    /// <summary>
+    /// Credentials.
+    /// </summary>
+    [DisplayName("Credentials")]
+    [IsoXmlTag("Crdntls")]
+    public ValueList<Credentials3> Credentials { get; init; } = [];
+
+    /// <summary>
+    /// Name.
+    /// </summary>
+    [DisplayName("Name")]
+    [IsoXmlTag("Nm")]
+    public CardholderName3? Name { get; init; }
 
     /// <summary>
     /// Address.
@@ -38,18 +66,18 @@ public record PartyIdentification287
     public ContactPersonal1? Contact { get; init; }
 
     /// <summary>
+    /// Nationality.
+    /// </summary>
+    [DisplayName("Nationality")]
+    [IsoXmlTag("Ntlty")]
+    public ISOMax3ACountryCode? Nationality { get; init; }
+
+    /// <summary>
     /// Country Of Birth.
     /// </summary>
     [DisplayName("Country Of Birth")]
     [IsoXmlTag("CtryOfBirth")]
     public ISOMax3ACountryCode? CountryOfBirth { get; init; }
-
-    /// <summary>
-    /// Credentials.
-    /// </summary>
-    [DisplayName("Credentials")]
-    [IsoXmlTag("Crdntls")]
-    public ValueList<Credentials3> Credentials { get; init; } = [];
 
     /// <summary>
     /// Date Of Birth.
@@ -59,25 +87,11 @@ public record PartyIdentification287
     public ISODate? DateOfBirth { get; init; }
 
     /// <summary>
-    /// Designation.
+    /// Additional Data.
     /// </summary>
-    [DisplayName("Designation")]
-    [IsoXmlTag("Dsgnt")]
-    public Max2NumericText? Designation { get; init; }
-
-    /// <summary>
-    /// Financial Institution.
-    /// </summary>
-    [DisplayName("Financial Institution")]
-    [IsoXmlTag("FI")]
-    public FinancialInstitution8? FinancialInstitution { get; init; }
-
-    /// <summary>
-    /// Identification.
-    /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public Max35Text? Identification { get; init; }
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 
     /// <summary>
     /// Local Data.
@@ -85,18 +99,4 @@ public record PartyIdentification287
     [DisplayName("Local Data")]
     [IsoXmlTag("LclData")]
     public LocalData15? LocalData { get; init; }
-
-    /// <summary>
-    /// Name.
-    /// </summary>
-    [DisplayName("Name")]
-    [IsoXmlTag("Nm")]
-    public CardholderName3? Name { get; init; }
-
-    /// <summary>
-    /// Nationality.
-    /// </summary>
-    [DisplayName("Nationality")]
-    [IsoXmlTag("Ntlty")]
-    public ISOMax3ACountryCode? Nationality { get; init; }
 }

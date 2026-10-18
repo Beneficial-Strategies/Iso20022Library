@@ -17,6 +17,27 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record InstalmentAmountDetails3
 {
     /// <summary>
+    /// Type.
+    /// </summary>
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public InstalmentAmountDetailsType3Code? Type { get; init; }
+
+    /// <summary>
+    /// Other Type.
+    /// </summary>
+    [DisplayName("Other Type")]
+    [IsoXmlTag("OthrTp")]
+    public Max35Text? OtherType { get; init; }
+
+    /// <summary>
+    /// Sub Type.
+    /// </summary>
+    [DisplayName("Sub Type")]
+    [IsoXmlTag("SubTp")]
+    public Max35Text? SubType { get; init; }
+
+    /// <summary>
     /// Amount.
     /// </summary>
     [DisplayName("Amount")]
@@ -31,30 +52,9 @@ public record InstalmentAmountDetails3
     public CreditDebit3Code? CreditDebit { get; init; }
 
     /// <summary>
-    /// Other Type.
-    /// </summary>
-    [DisplayName("Other Type")]
-    [IsoXmlTag("OthrTp")]
-    public Max35Text? OtherType { get; init; }
-
-    /// <summary>
     /// Percentage.
     /// </summary>
     [DisplayName("Percentage")]
     [IsoXmlTag("Pctg")]
     public PercentageRate? Percentage { get; init; }
-
-    /// <summary>
-    /// Sub Type.
-    /// </summary>
-    [DisplayName("Sub Type")]
-    [IsoXmlTag("SubTp")]
-    public Max35Text? SubType { get; init; }
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public InstalmentAmountDetailsType3Code? Type { get; init; }
 }

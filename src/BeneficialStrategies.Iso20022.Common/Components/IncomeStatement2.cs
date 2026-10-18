@@ -24,18 +24,11 @@ public record IncomeStatement2
     public ValueList<ClearingMemberFee1> ClearingMemberFee { get; init; } = [];
 
     /// <summary>
-    /// Net Interest Income.
+    /// Other Operating Revenue.
     /// </summary>
-    [DisplayName("Net Interest Income")]
-    [IsoXmlTag("NetIntrstIncm")]
-    public required ActiveCurrencyAndAmount NetInterestIncome { get; init; }
-
-    /// <summary>
-    /// Non Operating Expenses.
-    /// </summary>
-    [DisplayName("Non Operating Expenses")]
-    [IsoXmlTag("NonOprgExpnss")]
-    public required ActiveCurrencyAndAmount NonOperatingExpenses { get; init; }
+    [DisplayName("Other Operating Revenue")]
+    [IsoXmlTag("OthrOprgRvn")]
+    public required ActiveCurrencyAndAmount OtherOperatingRevenue { get; init; }
 
     /// <summary>
     /// Operating Expenses.
@@ -52,6 +45,13 @@ public record IncomeStatement2
     public required AmountAndDirection102 OperatingProfitOrLoss { get; init; }
 
     /// <summary>
+    /// Net Interest Income.
+    /// </summary>
+    [DisplayName("Net Interest Income")]
+    [IsoXmlTag("NetIntrstIncm")]
+    public required ActiveCurrencyAndAmount NetInterestIncome { get; init; }
+
+    /// <summary>
     /// Other Non Operating Revenue.
     /// </summary>
     [DisplayName("Other Non Operating Revenue")]
@@ -59,18 +59,11 @@ public record IncomeStatement2
     public required ActiveCurrencyAndAmount OtherNonOperatingRevenue { get; init; }
 
     /// <summary>
-    /// Other Operating Revenue.
+    /// Non Operating Expenses.
     /// </summary>
-    [DisplayName("Other Operating Revenue")]
-    [IsoXmlTag("OthrOprgRvn")]
-    public required ActiveCurrencyAndAmount OtherOperatingRevenue { get; init; }
-
-    /// <summary>
-    /// Post Tax Profit Or Loss.
-    /// </summary>
-    [DisplayName("Post Tax Profit Or Loss")]
-    [IsoXmlTag("PstTaxPrftOrLoss")]
-    public required AmountAndDirection102 PostTaxProfitOrLoss { get; init; }
+    [DisplayName("Non Operating Expenses")]
+    [IsoXmlTag("NonOprgExpnss")]
+    public required ActiveCurrencyAndAmount NonOperatingExpenses { get; init; }
 
     /// <summary>
     /// Pre Tax Profit Or Loss.
@@ -78,4 +71,11 @@ public record IncomeStatement2
     [DisplayName("Pre Tax Profit Or Loss")]
     [IsoXmlTag("PreTaxPrftOrLoss")]
     public required AmountAndDirection102 PreTaxProfitOrLoss { get; init; }
+
+    /// <summary>
+    /// Post Tax Profit Or Loss.
+    /// </summary>
+    [DisplayName("Post Tax Profit Or Loss")]
+    [IsoXmlTag("PstTaxPrftOrLoss")]
+    public required AmountAndDirection102 PostTaxProfitOrLoss { get; init; }
 }

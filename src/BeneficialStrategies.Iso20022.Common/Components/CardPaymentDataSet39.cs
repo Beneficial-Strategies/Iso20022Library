@@ -24,6 +24,20 @@ public record CardPaymentDataSet39
     public required DataSetIdentification5 DataSetIdentification { get; init; }
 
     /// <summary>
+    /// Data Set Result.
+    /// </summary>
+    [DisplayName("Data Set Result")]
+    [IsoXmlTag("DataSetRslt")]
+    public required ResponseType10 DataSetResult { get; init; }
+
+    /// <summary>
+    /// Remove Data Set.
+    /// </summary>
+    [DisplayName("Remove Data Set")]
+    [IsoXmlTag("RmvDataSet")]
+    public required TrueFalseIndicator RemoveDataSet { get; init; }
+
+    /// <summary>
     /// Data Set Initiator.
     /// </summary>
     [DisplayName("Data Set Initiator")]
@@ -31,11 +45,11 @@ public record CardPaymentDataSet39
     public GenericIdentification176? DataSetInitiator { get; init; }
 
     /// <summary>
-    /// Data Set Result.
+    /// Transaction Totals.
     /// </summary>
-    [DisplayName("Data Set Result")]
-    [IsoXmlTag("DataSetRslt")]
-    public required ResponseType10 DataSetResult { get; init; }
+    [DisplayName("Transaction Totals")]
+    [IsoXmlTag("TxTtls")]
+    public ValueList<TransactionTotals12> TransactionTotals { get; init; } = [];
 
     /// <summary>
     /// Rejected Transaction.
@@ -45,11 +59,11 @@ public record CardPaymentDataSet39
     public ValueList<CardPaymentDataSet38> RejectedTransaction { get; init; } = [];
 
     /// <summary>
-    /// Remove Data Set.
+    /// Suspended Transaction.
     /// </summary>
-    [DisplayName("Remove Data Set")]
-    [IsoXmlTag("RmvDataSet")]
-    public required TrueFalseIndicator RemoveDataSet { get; init; }
+    [DisplayName("Suspended Transaction")]
+    [IsoXmlTag("SspdTx")]
+    public ValueList<CardPaymentDataSet38> SuspendedTransaction { get; init; } = [];
 
     /// <summary>
     /// Resumed Approval.
@@ -64,18 +78,4 @@ public record CardPaymentDataSet39
     [DisplayName("Resumed Rejection")]
     [IsoXmlTag("RsmdRjctn")]
     public ValueList<CardPaymentDataSet38> ResumedRejection { get; init; } = [];
-
-    /// <summary>
-    /// Suspended Transaction.
-    /// </summary>
-    [DisplayName("Suspended Transaction")]
-    [IsoXmlTag("SspdTx")]
-    public ValueList<CardPaymentDataSet38> SuspendedTransaction { get; init; } = [];
-
-    /// <summary>
-    /// Transaction Totals.
-    /// </summary>
-    [DisplayName("Transaction Totals")]
-    [IsoXmlTag("TxTtls")]
-    public ValueList<TransactionTotals12> TransactionTotals { get; init; } = [];
 }

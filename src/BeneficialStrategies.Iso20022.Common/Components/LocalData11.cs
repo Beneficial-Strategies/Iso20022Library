@@ -17,6 +17,48 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record LocalData11
 {
     /// <summary>
+    /// Language.
+    /// </summary>
+    [DisplayName("Language")]
+    [IsoXmlTag("Lang")]
+    public required ISOMax3ALanguageCode Language { get; init; }
+
+    /// <summary>
+    /// Encoding Format.
+    /// </summary>
+    [DisplayName("Encoding Format")]
+    [IsoXmlTag("NcodgFrmt")]
+    public Max35Text? EncodingFormat { get; init; }
+
+    /// <summary>
+    /// Short Name.
+    /// </summary>
+    [DisplayName("Short Name")]
+    [IsoXmlTag("ShrtNm")]
+    public Max70Text? ShortName { get; init; }
+
+    /// <summary>
+    /// Legal Corporate Name.
+    /// </summary>
+    [DisplayName("Legal Corporate Name")]
+    [IsoXmlTag("LglCorpNm")]
+    public Max210Text? LegalCorporateName { get; init; }
+
+    /// <summary>
+    /// Name And Location.
+    /// </summary>
+    [DisplayName("Name And Location")]
+    [IsoXmlTag("NmAndLctn")]
+    public Max200Text? NameAndLocation { get; init; }
+
+    /// <summary>
+    /// Address.
+    /// </summary>
+    [DisplayName("Address")]
+    [IsoXmlTag("Adr")]
+    public LocalAddress1? Address { get; init; }
+
+    /// <summary>
     /// Additional Address.
     /// </summary>
     [DisplayName("Additional Address")]
@@ -36,46 +78,4 @@ public record LocalData11
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
     public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
-
-    /// <summary>
-    /// Address.
-    /// </summary>
-    [DisplayName("Address")]
-    [IsoXmlTag("Adr")]
-    public LocalAddress1? Address { get; init; }
-
-    /// <summary>
-    /// Encoding Format.
-    /// </summary>
-    [DisplayName("Encoding Format")]
-    [IsoXmlTag("NcodgFrmt")]
-    public Max35Text? EncodingFormat { get; init; }
-
-    /// <summary>
-    /// Language.
-    /// </summary>
-    [DisplayName("Language")]
-    [IsoXmlTag("Lang")]
-    public required ISOMax3ALanguageCode Language { get; init; }
-
-    /// <summary>
-    /// Legal Corporate Name.
-    /// </summary>
-    [DisplayName("Legal Corporate Name")]
-    [IsoXmlTag("LglCorpNm")]
-    public Max210Text? LegalCorporateName { get; init; }
-
-    /// <summary>
-    /// Name And Location.
-    /// </summary>
-    [DisplayName("Name And Location")]
-    [IsoXmlTag("NmAndLctn")]
-    public Max200Text? NameAndLocation { get; init; }
-
-    /// <summary>
-    /// Short Name.
-    /// </summary>
-    [DisplayName("Short Name")]
-    [IsoXmlTag("ShrtNm")]
-    public Max70Text? ShortName { get; init; }
 }

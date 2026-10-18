@@ -17,39 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ProcessingResult27
 {
     /// <summary>
-    /// Action.
+    /// Response Source Identification.
     /// </summary>
-    [DisplayName("Action")]
-    [IsoXmlTag("Actn")]
-    public ValueList<Action16> Action { get; init; } = [];
+    [DisplayName("Response Source Identification")]
+    [IsoXmlTag("RspnSrcId")]
+    public Max35Text? ResponseSourceIdentification { get; init; }
 
     /// <summary>
-    /// Action Required.
+    /// Response Source Type.
     /// </summary>
-    [DisplayName("Action Required")]
-    [IsoXmlTag("ActnReqrd")]
-    public TrueFalseIndicator? ActionRequired { get; init; }
+    [DisplayName("Response Source Type")]
+    [IsoXmlTag("RspnSrcTp")]
+    public PartyType26Code? ResponseSourceType { get; init; }
 
     /// <summary>
-    /// Additional Information.
+    /// Response Source Other Type.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public ValueList<AdditionalData1> AdditionalInformation { get; init; } = [];
-
-    /// <summary>
-    /// Approval Code.
-    /// </summary>
-    [DisplayName("Approval Code")]
-    [IsoXmlTag("ApprvlCd")]
-    public Exact6AlphaNumericText? ApprovalCode { get; init; }
-
-    /// <summary>
-    /// Response Code.
-    /// </summary>
-    [DisplayName("Response Code")]
-    [IsoXmlTag("RspnCd")]
-    public ISO8583ResponseCode? ResponseCode { get; init; }
+    [DisplayName("Response Source Other Type")]
+    [IsoXmlTag("RspnSrcOthrTp")]
+    public Max35Text? ResponseSourceOtherType { get; init; }
 
     /// <summary>
     /// Response Source Assigner.
@@ -66,20 +52,6 @@ public record ProcessingResult27
     public ISOMax3ACountryCode? ResponseSourceCountry { get; init; }
 
     /// <summary>
-    /// Response Source Identification.
-    /// </summary>
-    [DisplayName("Response Source Identification")]
-    [IsoXmlTag("RspnSrcId")]
-    public Max35Text? ResponseSourceIdentification { get; init; }
-
-    /// <summary>
-    /// Response Source Other Type.
-    /// </summary>
-    [DisplayName("Response Source Other Type")]
-    [IsoXmlTag("RspnSrcOthrTp")]
-    public Max35Text? ResponseSourceOtherType { get; init; }
-
-    /// <summary>
     /// Response Source Short Name.
     /// </summary>
     [DisplayName("Response Source Short Name")]
@@ -87,11 +59,18 @@ public record ProcessingResult27
     public Max35Text? ResponseSourceShortName { get; init; }
 
     /// <summary>
-    /// Response Source Type.
+    /// Response Code.
     /// </summary>
-    [DisplayName("Response Source Type")]
-    [IsoXmlTag("RspnSrcTp")]
-    public PartyType26Code? ResponseSourceType { get; init; }
+    [DisplayName("Response Code")]
+    [IsoXmlTag("RspnCd")]
+    public ISO8583ResponseCode? ResponseCode { get; init; }
+
+    /// <summary>
+    /// Approval Code.
+    /// </summary>
+    [DisplayName("Approval Code")]
+    [IsoXmlTag("ApprvlCd")]
+    public Exact6AlphaNumericText? ApprovalCode { get; init; }
 
     /// <summary>
     /// Temporary Secure Card Data Reuse Permitted.
@@ -99,4 +78,25 @@ public record ProcessingResult27
     [DisplayName("Temporary Secure Card Data Reuse Permitted")]
     [IsoXmlTag("TempScrCardDataReusePrtd")]
     public TrueFalseIndicator? TemporarySecureCardDataReusePermitted { get; init; }
+
+    /// <summary>
+    /// Action Required.
+    /// </summary>
+    [DisplayName("Action Required")]
+    [IsoXmlTag("ActnReqrd")]
+    public TrueFalseIndicator? ActionRequired { get; init; }
+
+    /// <summary>
+    /// Action.
+    /// </summary>
+    [DisplayName("Action")]
+    [IsoXmlTag("Actn")]
+    public ValueList<Action16> Action { get; init; } = [];
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public ValueList<AdditionalData1> AdditionalInformation { get; init; } = [];
 }

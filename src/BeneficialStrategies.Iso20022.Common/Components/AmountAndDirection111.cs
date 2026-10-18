@@ -24,6 +24,13 @@ public record AmountAndDirection111
     public required CurrencyAndAmount Amount { get; init; }
 
     /// <summary>
+    /// Sign.
+    /// </summary>
+    [DisplayName("Sign")]
+    [IsoXmlTag("Sgn")]
+    public PlusOrMinusIndicator? Sign { get; init; }
+
+    /// <summary>
     /// Date.
     /// </summary>
     [DisplayName("Date")]
@@ -36,11 +43,4 @@ public record AmountAndDirection111
     [DisplayName("Label")]
     [IsoXmlTag("Labl")]
     public Max70Text? Label { get; init; }
-
-    /// <summary>
-    /// Sign.
-    /// </summary>
-    [DisplayName("Sign")]
-    [IsoXmlTag("Sgn")]
-    public PlusOrMinusIndicator? Sign { get; init; }
 }

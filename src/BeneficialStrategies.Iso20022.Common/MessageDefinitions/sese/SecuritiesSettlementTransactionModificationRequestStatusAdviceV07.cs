@@ -61,32 +61,18 @@ public record SecuritiesSettlementTransactionModificationRequestStatusAdviceV07 
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Party that legally owns the account.
-    /// </summary>
-    [DisplayName("Account Owner")]
-    [IsoXmlTag("AcctOwnr")]
-    public PartyIdentification144? AccountOwner { get; init; }
-
-    /// <summary>
-    /// Blockchain address or wallet where digital assets are maintained. This is the equivalent of safekeeping account for digital assets.
-    /// </summary>
-    [DisplayName("Block Chain Address Or Wallet")]
-    [IsoXmlTag("BlckChainAdrOrWllt")]
-    public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
-
-    /// <summary>
-    /// Provides details on the processing status of the request.
-    /// </summary>
-    [DisplayName("Modification Processing Status")]
-    [IsoXmlTag("ModPrcgSts")]
-    public required ModificationProcessingStatus10Choice_ ModificationProcessingStatus { get; init; }
-
-    /// <summary>
     /// Reference to the unambiguous identification of the cancellation request as per the account owner.
     /// </summary>
     [DisplayName("Modification Request Reference")]
     [IsoXmlTag("ModReqRef")]
     public required Max35Text ModificationRequestReference { get; init; }
+
+    /// <summary>
+    /// Party that legally owns the account.
+    /// </summary>
+    [DisplayName("Account Owner")]
+    [IsoXmlTag("AcctOwnr")]
+    public PartyIdentification144? AccountOwner { get; init; }
 
     /// <summary>
     /// Account to or from which a securities entry is made.
@@ -96,11 +82,25 @@ public record SecuritiesSettlementTransactionModificationRequestStatusAdviceV07 
     public SecuritiesAccount19? SafekeepingAccount { get; init; }
 
     /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// Blockchain address or wallet where digital assets are maintained. This is the equivalent of safekeeping account for digital assets.
     /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
+    [DisplayName("Block Chain Address Or Wallet")]
+    [IsoXmlTag("BlckChainAdrOrWllt")]
+    public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
+
+    /// <summary>
+    /// Provides unambiguous transaction identification information.
+    /// </summary>
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public TransactionIdentifications33? TransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Provides details on the processing status of the request.
+    /// </summary>
+    [DisplayName("Modification Processing Status")]
+    [IsoXmlTag("ModPrcgSts")]
+    public required ModificationProcessingStatus10Choice_ ModificationProcessingStatus { get; init; }
 
     /// <summary>
     /// Identifies the details of the transaction.
@@ -110,9 +110,9 @@ public record SecuritiesSettlementTransactionModificationRequestStatusAdviceV07 
     public TransactionDetails171? TransactionDetails { get; init; }
 
     /// <summary>
-    /// Provides unambiguous transaction identification information.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public TransactionIdentifications33? TransactionIdentification { get; init; }
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -17,6 +17,34 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record GroupHeader115
 {
     /// <summary>
+    /// Message Identification.
+    /// </summary>
+    [DisplayName("Message Identification")]
+    [IsoXmlTag("MsgId")]
+    public required Max35Text MessageIdentification { get; init; }
+
+    /// <summary>
+    /// Creation Date Time.
+    /// </summary>
+    [DisplayName("Creation Date Time")]
+    [IsoXmlTag("CreDtTm")]
+    public required ISODateTime CreationDateTime { get; init; }
+
+    /// <summary>
+    /// Charges Requestor.
+    /// </summary>
+    [DisplayName("Charges Requestor")]
+    [IsoXmlTag("ChrgsRqstr")]
+    public BranchAndFinancialInstitutionIdentification8? ChargesRequestor { get; init; }
+
+    /// <summary>
+    /// Total Charges.
+    /// </summary>
+    [DisplayName("Total Charges")]
+    [IsoXmlTag("TtlChrgs")]
+    public TotalCharges7? TotalCharges { get; init; }
+
+    /// <summary>
     /// Charges Account Agent.
     /// </summary>
     [DisplayName("Charges Account Agent")]
@@ -29,32 +57,4 @@ public record GroupHeader115
     [DisplayName("Charges Account Agent Account")]
     [IsoXmlTag("ChrgsAcctAgtAcct")]
     public CashAccount40? ChargesAccountAgentAccount { get; init; }
-
-    /// <summary>
-    /// Charges Requestor.
-    /// </summary>
-    [DisplayName("Charges Requestor")]
-    [IsoXmlTag("ChrgsRqstr")]
-    public BranchAndFinancialInstitutionIdentification8? ChargesRequestor { get; init; }
-
-    /// <summary>
-    /// Creation Date Time.
-    /// </summary>
-    [DisplayName("Creation Date Time")]
-    [IsoXmlTag("CreDtTm")]
-    public required ISODateTime CreationDateTime { get; init; }
-
-    /// <summary>
-    /// Message Identification.
-    /// </summary>
-    [DisplayName("Message Identification")]
-    [IsoXmlTag("MsgId")]
-    public required Max35Text MessageIdentification { get; init; }
-
-    /// <summary>
-    /// Total Charges.
-    /// </summary>
-    [DisplayName("Total Charges")]
-    [IsoXmlTag("TtlChrgs")]
-    public TotalCharges7? TotalCharges { get; init; }
 }

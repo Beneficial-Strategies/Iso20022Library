@@ -24,18 +24,18 @@ public record DevicePrintRequest6
     public required DocumentType7Code DocumentQualifier { get; init; }
 
     /// <summary>
+    /// Response Mode.
+    /// </summary>
+    [DisplayName("Response Mode")]
+    [IsoXmlTag("RspnMd")]
+    public required ResponseMode2Code ResponseMode { get; init; }
+
+    /// <summary>
     /// Integrated Print Flag.
     /// </summary>
     [DisplayName("Integrated Print Flag")]
     [IsoXmlTag("IntgrtdPrtFlg")]
     public TrueFalseIndicator? IntegratedPrintFlag { get; init; }
-
-    /// <summary>
-    /// Output Content.
-    /// </summary>
-    [DisplayName("Output Content")]
-    [IsoXmlTag("OutptCntt")]
-    public required ActionMessage11 OutputContent { get; init; }
 
     /// <summary>
     /// Required Signature Flag.
@@ -45,9 +45,9 @@ public record DevicePrintRequest6
     public TrueFalseIndicator? RequiredSignatureFlag { get; init; }
 
     /// <summary>
-    /// Response Mode.
+    /// Output Content.
     /// </summary>
-    [DisplayName("Response Mode")]
-    [IsoXmlTag("RspnMd")]
-    public required ResponseMode2Code ResponseMode { get; init; }
+    [DisplayName("Output Content")]
+    [IsoXmlTag("OutptCntt")]
+    public required ActionMessage11 OutputContent { get; init; }
 }

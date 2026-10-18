@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AccountSubLevel24
 {
     /// <summary>
+    /// Non Disclosed Shareholding Quantity.
+    /// </summary>
+    [DisplayName("Non Disclosed Shareholding Quantity")]
+    [IsoXmlTag("NonDscldShrhldgQty")]
+    public FinancialInstrumentQuantity18Choice_? NonDisclosedShareholdingQuantity { get; init; }
+
+    /// <summary>
     /// Below Threshold Shareholding Quantity.
     /// </summary>
     [DisplayName("Below Threshold Shareholding Quantity")]
@@ -29,11 +36,4 @@ public record AccountSubLevel24
     [DisplayName("Disclosure")]
     [IsoXmlTag("Dsclsr")]
     public ValueList<AccountSubLevel25> Disclosure { get; init; } = [];
-
-    /// <summary>
-    /// Non Disclosed Shareholding Quantity.
-    /// </summary>
-    [DisplayName("Non Disclosed Shareholding Quantity")]
-    [IsoXmlTag("NonDscldShrhldgQty")]
-    public FinancialInstrumentQuantity18Choice_? NonDisclosedShareholdingQuantity { get; init; }
 }

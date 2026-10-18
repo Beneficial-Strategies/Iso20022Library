@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TemporaryServices3
 {
     /// <summary>
-    /// Additional Data.
+    /// Company Name.
     /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
-
-    /// <summary>
-    /// Charge.
-    /// </summary>
-    [DisplayName("Charge")]
-    [IsoXmlTag("Chrg")]
-    public ValueList<Amount12> Charge { get; init; } = [];
+    [DisplayName("Company Name")]
+    [IsoXmlTag("CpnyNm")]
+    public Max70Text? CompanyName { get; init; }
 
     /// <summary>
     /// Company Department.
@@ -45,13 +38,6 @@ public record TemporaryServices3
     public PartyIdentification285? CompanyIdentification { get; init; }
 
     /// <summary>
-    /// Company Name.
-    /// </summary>
-    [DisplayName("Company Name")]
-    [IsoXmlTag("CpnyNm")]
-    public Max70Text? CompanyName { get; init; }
-
-    /// <summary>
     /// Company Supervisor.
     /// </summary>
     [DisplayName("Company Supervisor")]
@@ -59,11 +45,11 @@ public record TemporaryServices3
     public Max70Text? CompanySupervisor { get; init; }
 
     /// <summary>
-    /// Discount Amount.
+    /// Employee Personal Identification.
     /// </summary>
-    [DisplayName("Discount Amount")]
-    [IsoXmlTag("DscntAmt")]
-    public ImpliedCurrencyAndAmount? DiscountAmount { get; init; }
+    [DisplayName("Employee Personal Identification")]
+    [IsoXmlTag("MplyeePrsnlId")]
+    public Max35Text? EmployeePersonalIdentification { get; init; }
 
     /// <summary>
     /// Employee Identification.
@@ -80,25 +66,11 @@ public record TemporaryServices3
     public Max70Text? EmployeeName { get; init; }
 
     /// <summary>
-    /// Employee Personal Identification.
-    /// </summary>
-    [DisplayName("Employee Personal Identification")]
-    [IsoXmlTag("MplyeePrsnlId")]
-    public Max35Text? EmployeePersonalIdentification { get; init; }
-
-    /// <summary>
     /// Employee Professional Level.
     /// </summary>
     [DisplayName("Employee Professional Level")]
     [IsoXmlTag("MplyeePrfssnlLvl")]
     public Max35Text? EmployeeProfessionalLevel { get; init; }
-
-    /// <summary>
-    /// Flat Rate Indicator.
-    /// </summary>
-    [DisplayName("Flat Rate Indicator")]
-    [IsoXmlTag("FlatRateInd")]
-    public TrueFalseIndicator? FlatRateIndicator { get; init; }
 
     /// <summary>
     /// Job Code.
@@ -115,6 +87,13 @@ public record TemporaryServices3
     public Max256Text? JobDescription { get; init; }
 
     /// <summary>
+    /// Job Start Date.
+    /// </summary>
+    [DisplayName("Job Start Date")]
+    [IsoXmlTag("JobStartDt")]
+    public ISODate? JobStartDate { get; init; }
+
+    /// <summary>
     /// Job Duration.
     /// </summary>
     [DisplayName("Job Duration")]
@@ -129,11 +108,46 @@ public record TemporaryServices3
     public ISODate? JobEndDate { get; init; }
 
     /// <summary>
-    /// Job Start Date.
+    /// Flat Rate Indicator.
     /// </summary>
-    [DisplayName("Job Start Date")]
-    [IsoXmlTag("JobStartDt")]
-    public ISODate? JobStartDate { get; init; }
+    [DisplayName("Flat Rate Indicator")]
+    [IsoXmlTag("FlatRateInd")]
+    public TrueFalseIndicator? FlatRateIndicator { get; init; }
+
+    /// <summary>
+    /// Discount Amount.
+    /// </summary>
+    [DisplayName("Discount Amount")]
+    [IsoXmlTag("DscntAmt")]
+    public ImpliedCurrencyAndAmount? DiscountAmount { get; init; }
+
+    /// <summary>
+    /// Summary Commodity Identification.
+    /// </summary>
+    [DisplayName("Summary Commodity Identification")]
+    [IsoXmlTag("SummryCmmdtyId")]
+    public Max35Text? SummaryCommodityIdentification { get; init; }
+
+    /// <summary>
+    /// Time Sheet.
+    /// </summary>
+    [DisplayName("Time Sheet")]
+    [IsoXmlTag("TmSheet")]
+    public Max35Text? TimeSheet { get; init; }
+
+    /// <summary>
+    /// Week Ending.
+    /// </summary>
+    [DisplayName("Week Ending")]
+    [IsoXmlTag("WkEndg")]
+    public ISODate? WeekEnding { get; init; }
+
+    /// <summary>
+    /// Charge.
+    /// </summary>
+    [DisplayName("Charge")]
+    [IsoXmlTag("Chrg")]
+    public ValueList<Amount12> Charge { get; init; } = [];
 
     /// <summary>
     /// Miscellaneous Expenses.
@@ -150,13 +164,6 @@ public record TemporaryServices3
     public ImpliedCurrencyAndAmount? SubtotalAmount { get; init; }
 
     /// <summary>
-    /// Summary Commodity Identification.
-    /// </summary>
-    [DisplayName("Summary Commodity Identification")]
-    [IsoXmlTag("SummryCmmdtyId")]
-    public Max35Text? SummaryCommodityIdentification { get; init; }
-
-    /// <summary>
     /// Tax.
     /// </summary>
     [DisplayName("Tax")]
@@ -164,16 +171,9 @@ public record TemporaryServices3
     public ValueList<Tax41> Tax { get; init; } = [];
 
     /// <summary>
-    /// Time Sheet.
+    /// Additional Data.
     /// </summary>
-    [DisplayName("Time Sheet")]
-    [IsoXmlTag("TmSheet")]
-    public Max35Text? TimeSheet { get; init; }
-
-    /// <summary>
-    /// Week Ending.
-    /// </summary>
-    [DisplayName("Week Ending")]
-    [IsoXmlTag("WkEndg")]
-    public ISODate? WeekEnding { get; init; }
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

@@ -46,18 +46,18 @@ public record SaleToPOIEventNotificationV07 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Event Notification.
-    /// </summary>
-    [DisplayName("Event Notification")]
-    [IsoXmlTag("EvtNtfctn")]
-    public required SystemEventNotification8 EventNotification { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required Header41 Header { get; init; }
+
+    /// <summary>
+    /// Event Notification.
+    /// </summary>
+    [DisplayName("Event Notification")]
+    [IsoXmlTag("EvtNtfctn")]
+    public required SystemEventNotification8 EventNotification { get; init; }
 
     /// <summary>
     /// Security Trailer.

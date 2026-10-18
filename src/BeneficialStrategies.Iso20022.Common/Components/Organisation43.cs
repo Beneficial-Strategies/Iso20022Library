@@ -17,25 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Organisation43
 {
     /// <summary>
-    /// Board Resolution Indicator.
+    /// Full Legal Name.
     /// </summary>
-    [DisplayName("Board Resolution Indicator")]
-    [IsoXmlTag("BrdRsltnInd")]
-    public TrueFalseIndicator? BoardResolutionIndicator { get; init; }
+    [DisplayName("Full Legal Name")]
+    [IsoXmlTag("FullLglNm")]
+    public required Max350Text FullLegalName { get; init; }
 
     /// <summary>
-    /// Business Address.
+    /// Trading Name.
     /// </summary>
-    [DisplayName("Business Address")]
-    [IsoXmlTag("BizAdr")]
-    public PostalAddress27? BusinessAddress { get; init; }
+    [DisplayName("Trading Name")]
+    [IsoXmlTag("TradgNm")]
+    public Max350Text? TradingName { get; init; }
 
     /// <summary>
-    /// Country Of Operation.
+    /// Organisation Legal Status.
     /// </summary>
-    [DisplayName("Country Of Operation")]
-    [IsoXmlTag("CtryOfOpr")]
-    public CountryCode? CountryOfOperation { get; init; }
+    [DisplayName("Organisation Legal Status")]
+    [IsoXmlTag("OrgLglSts")]
+    public OrganisationLegalStatus1Code? OrganisationLegalStatus { get; init; }
 
     /// <summary>
     /// Established Date.
@@ -45,39 +45,11 @@ public record Organisation43
     public ISODate? EstablishedDate { get; init; }
 
     /// <summary>
-    /// Full Legal Name.
+    /// Registration Number.
     /// </summary>
-    [DisplayName("Full Legal Name")]
-    [IsoXmlTag("FullLglNm")]
-    public required Max350Text FullLegalName { get; init; }
-
-    /// <summary>
-    /// Legal Address.
-    /// </summary>
-    [DisplayName("Legal Address")]
-    [IsoXmlTag("LglAdr")]
-    public PostalAddress27? LegalAddress { get; init; }
-
-    /// <summary>
-    /// Main Mandate Holder.
-    /// </summary>
-    [DisplayName("Main Mandate Holder")]
-    [IsoXmlTag("MainMndtHldr")]
-    public ValueList<PartyIdentification272> MainMandateHolder { get; init; } = [];
-
-    /// <summary>
-    /// Operational Address.
-    /// </summary>
-    [DisplayName("Operational Address")]
-    [IsoXmlTag("OprlAdr")]
-    public PostalAddress27? OperationalAddress { get; init; }
-
-    /// <summary>
-    /// Organisation Legal Status.
-    /// </summary>
-    [DisplayName("Organisation Legal Status")]
-    [IsoXmlTag("OrgLglSts")]
-    public OrganisationLegalStatus1Code? OrganisationLegalStatus { get; init; }
+    [DisplayName("Registration Number")]
+    [IsoXmlTag("RegnNb")]
+    public Max70Text? RegistrationNumber { get; init; }
 
     /// <summary>
     /// Registration Country.
@@ -94,25 +66,11 @@ public record Organisation43
     public ISODate? RegistrationDate { get; init; }
 
     /// <summary>
-    /// Registration Number.
+    /// Taxation Identification Number.
     /// </summary>
-    [DisplayName("Registration Number")]
-    [IsoXmlTag("RegnNb")]
-    public Max70Text? RegistrationNumber { get; init; }
-
-    /// <summary>
-    /// Representative Officer.
-    /// </summary>
-    [DisplayName("Representative Officer")]
-    [IsoXmlTag("RprtvOffcr")]
-    public ValueList<PartyIdentification272> RepresentativeOfficer { get; init; } = [];
-
-    /// <summary>
-    /// Sender.
-    /// </summary>
-    [DisplayName("Sender")]
-    [IsoXmlTag("Sndr")]
-    public ValueList<PartyIdentification272> Sender { get; init; } = [];
+    [DisplayName("Taxation Identification Number")]
+    [IsoXmlTag("TaxtnIdNb")]
+    public Max35Text? TaxationIdentificationNumber { get; init; }
 
     /// <summary>
     /// Taxation Country.
@@ -122,18 +80,46 @@ public record Organisation43
     public CountryCode? TaxationCountry { get; init; }
 
     /// <summary>
-    /// Taxation Identification Number.
+    /// Country Of Operation.
     /// </summary>
-    [DisplayName("Taxation Identification Number")]
-    [IsoXmlTag("TaxtnIdNb")]
-    public Max35Text? TaxationIdentificationNumber { get; init; }
+    [DisplayName("Country Of Operation")]
+    [IsoXmlTag("CtryOfOpr")]
+    public CountryCode? CountryOfOperation { get; init; }
 
     /// <summary>
-    /// Trading Name.
+    /// Board Resolution Indicator.
     /// </summary>
-    [DisplayName("Trading Name")]
-    [IsoXmlTag("TradgNm")]
-    public Max350Text? TradingName { get; init; }
+    [DisplayName("Board Resolution Indicator")]
+    [IsoXmlTag("BrdRsltnInd")]
+    public TrueFalseIndicator? BoardResolutionIndicator { get; init; }
+
+    /// <summary>
+    /// Business Address.
+    /// </summary>
+    [DisplayName("Business Address")]
+    [IsoXmlTag("BizAdr")]
+    public PostalAddress27? BusinessAddress { get; init; }
+
+    /// <summary>
+    /// Operational Address.
+    /// </summary>
+    [DisplayName("Operational Address")]
+    [IsoXmlTag("OprlAdr")]
+    public PostalAddress27? OperationalAddress { get; init; }
+
+    /// <summary>
+    /// Legal Address.
+    /// </summary>
+    [DisplayName("Legal Address")]
+    [IsoXmlTag("LglAdr")]
+    public PostalAddress27? LegalAddress { get; init; }
+
+    /// <summary>
+    /// Representative Officer.
+    /// </summary>
+    [DisplayName("Representative Officer")]
+    [IsoXmlTag("RprtvOffcr")]
+    public ValueList<PartyIdentification272> RepresentativeOfficer { get; init; } = [];
 
     /// <summary>
     /// Treasury Manager.
@@ -141,4 +127,18 @@ public record Organisation43
     [DisplayName("Treasury Manager")]
     [IsoXmlTag("TrsrMgr")]
     public PartyIdentification272? TreasuryManager { get; init; }
+
+    /// <summary>
+    /// Main Mandate Holder.
+    /// </summary>
+    [DisplayName("Main Mandate Holder")]
+    [IsoXmlTag("MainMndtHldr")]
+    public ValueList<PartyIdentification272> MainMandateHolder { get; init; } = [];
+
+    /// <summary>
+    /// Sender.
+    /// </summary>
+    [DisplayName("Sender")]
+    [IsoXmlTag("Sndr")]
+    public ValueList<PartyIdentification272> Sender { get; init; } = [];
 }

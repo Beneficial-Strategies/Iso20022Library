@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ReportParameters8
 {
     /// <summary>
-    /// Report Date And Time.
-    /// </summary>
-    [DisplayName("Report Date And Time")]
-    [IsoXmlTag("RptDtAndTm")]
-    public required DateAndDateTime2Choice_ ReportDateAndTime { get; init; }
-
-    /// <summary>
     /// Report Identification.
     /// </summary>
     [DisplayName("Report Identification")]
     [IsoXmlTag("RptId")]
     public required Max35Text ReportIdentification { get; init; }
+
+    /// <summary>
+    /// Report Date And Time.
+    /// </summary>
+    [DisplayName("Report Date And Time")]
+    [IsoXmlTag("RptDtAndTm")]
+    public required DateAndDateTime2Choice_ ReportDateAndTime { get; init; }
 }

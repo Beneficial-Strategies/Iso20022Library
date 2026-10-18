@@ -31,16 +31,16 @@ public record PaymentReceipt6
     public TrueFalseIndicator? IntegratedPrintFlag { get; init; }
 
     /// <summary>
-    /// Output Content.
-    /// </summary>
-    [DisplayName("Output Content")]
-    [IsoXmlTag("OutptCntt")]
-    public required ActionMessage11 OutputContent { get; init; }
-
-    /// <summary>
     /// Required Signature Flag.
     /// </summary>
     [DisplayName("Required Signature Flag")]
     [IsoXmlTag("ReqrdSgntrFlg")]
     public TrueFalseIndicator? RequiredSignatureFlag { get; init; }
+
+    /// <summary>
+    /// Output Content.
+    /// </summary>
+    [DisplayName("Output Content")]
+    [IsoXmlTag("OutptCntt")]
+    public required ActionMessage11 OutputContent { get; init; }
 }

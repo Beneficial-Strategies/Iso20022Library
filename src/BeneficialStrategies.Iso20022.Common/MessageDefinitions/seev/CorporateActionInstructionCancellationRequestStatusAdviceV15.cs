@@ -46,39 +46,11 @@ public record CorporateActionInstructionCancellationRequestStatusAdviceV15 : IOu
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Additional Information.
-    /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public CorporateActionNarrative10? AdditionalInformation { get; init; }
-
-    /// <summary>
-    /// Corporate Action General Information.
-    /// </summary>
-    [DisplayName("Corporate Action General Information")]
-    [IsoXmlTag("CorpActnGnlInf")]
-    public required CorporateActionGeneralInformation182 CorporateActionGeneralInformation { get; init; }
-
-    /// <summary>
-    /// Corporate Action Instruction.
-    /// </summary>
-    [DisplayName("Corporate Action Instruction")]
-    [IsoXmlTag("CorpActnInstr")]
-    public CorporateActionOption239? CorporateActionInstruction { get; init; }
-
-    /// <summary>
     /// Instruction Cancellation Request Identification.
     /// </summary>
     [DisplayName("Instruction Cancellation Request Identification")]
     [IsoXmlTag("InstrCxlReqId")]
     public DocumentIdentification9? InstructionCancellationRequestIdentification { get; init; }
-
-    /// <summary>
-    /// Instruction Cancellation Request Status.
-    /// </summary>
-    [DisplayName("Instruction Cancellation Request Status")]
-    [IsoXmlTag("InstrCxlReqSts")]
-    public ValueList<InstructionCancellationRequestStatus21Choice_> InstructionCancellationRequestStatus { get; init; } = [];
 
     /// <summary>
     /// Other Document Identification.
@@ -88,11 +60,39 @@ public record CorporateActionInstructionCancellationRequestStatusAdviceV15 : IOu
     public ValueList<DocumentIdentification33> OtherDocumentIdentification { get; init; } = [];
 
     /// <summary>
+    /// Corporate Action General Information.
+    /// </summary>
+    [DisplayName("Corporate Action General Information")]
+    [IsoXmlTag("CorpActnGnlInf")]
+    public required CorporateActionGeneralInformation182 CorporateActionGeneralInformation { get; init; }
+
+    /// <summary>
+    /// Instruction Cancellation Request Status.
+    /// </summary>
+    [DisplayName("Instruction Cancellation Request Status")]
+    [IsoXmlTag("InstrCxlReqSts")]
+    public ValueList<InstructionCancellationRequestStatus21Choice_> InstructionCancellationRequestStatus { get; init; } = [];
+
+    /// <summary>
+    /// Corporate Action Instruction.
+    /// </summary>
+    [DisplayName("Corporate Action Instruction")]
+    [IsoXmlTag("CorpActnInstr")]
+    public CorporateActionOption239? CorporateActionInstruction { get; init; }
+
+    /// <summary>
     /// Protect Instruction.
     /// </summary>
     [DisplayName("Protect Instruction")]
     [IsoXmlTag("PrtctInstr")]
     public ProtectInstruction4? ProtectInstruction { get; init; }
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public CorporateActionNarrative10? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Supplementary Data.

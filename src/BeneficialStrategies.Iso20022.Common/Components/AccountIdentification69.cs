@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AccountIdentification69
 {
     /// <summary>
-    /// Account Owner.
+    /// Safekeeping Account.
     /// </summary>
-    [DisplayName("Account Owner")]
-    [IsoXmlTag("AcctOwnr")]
-    public PartyIdentification127Choice_? AccountOwner { get; init; }
+    [DisplayName("Safekeeping Account")]
+    [IsoXmlTag("SfkpgAcct")]
+    public Max35Text? SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Block Chain Address Or Wallet.
@@ -31,11 +31,11 @@ public record AccountIdentification69
     public Max140Text? BlockChainAddressOrWallet { get; init; }
 
     /// <summary>
-    /// Safekeeping Account.
+    /// Account Owner.
     /// </summary>
-    [DisplayName("Safekeeping Account")]
-    [IsoXmlTag("SfkpgAcct")]
-    public Max35Text? SafekeepingAccount { get; init; }
+    [DisplayName("Account Owner")]
+    [IsoXmlTag("AcctOwnr")]
+    public PartyIdentification127Choice_? AccountOwner { get; init; }
 
     /// <summary>
     /// Safekeeping Place.

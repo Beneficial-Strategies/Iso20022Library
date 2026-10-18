@@ -46,16 +46,16 @@ public record BusinessFileHeaderV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Payload.
-    /// </summary>
-    [DisplayName("Payload")]
-    [IsoXmlTag("Pyld")]
-    public ValueList<LaxPayload> Payload { get; init; } = [];
-
-    /// <summary>
     /// Payload Description.
     /// </summary>
     [DisplayName("Payload Description")]
     [IsoXmlTag("PyldDesc")]
     public required PayloadDescription2 PayloadDescription { get; init; }
+
+    /// <summary>
+    /// Payload.
+    /// </summary>
+    [DisplayName("Payload")]
+    [IsoXmlTag("Pyld")]
+    public ValueList<LaxPayload> Payload { get; init; } = [];
 }

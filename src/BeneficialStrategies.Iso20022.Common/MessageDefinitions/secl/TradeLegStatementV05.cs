@@ -46,18 +46,11 @@ public record TradeLegStatementV05 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Clearing Account.
+    /// Statement Parameters.
     /// </summary>
-    [DisplayName("Clearing Account")]
-    [IsoXmlTag("ClrAcct")]
-    public SecuritiesAccount18? ClearingAccount { get; init; }
-
-    /// <summary>
-    /// Clearing Member.
-    /// </summary>
-    [DisplayName("Clearing Member")]
-    [IsoXmlTag("ClrMmb")]
-    public required PartyIdentification253Choice_ ClearingMember { get; init; }
+    [DisplayName("Statement Parameters")]
+    [IsoXmlTag("StmtParams")]
+    public required Statement86 StatementParameters { get; init; }
 
     /// <summary>
     /// Pagination.
@@ -67,18 +60,25 @@ public record TradeLegStatementV05 : IOuterRecord
     public required Pagination1 Pagination { get; init; }
 
     /// <summary>
+    /// Clearing Member.
+    /// </summary>
+    [DisplayName("Clearing Member")]
+    [IsoXmlTag("ClrMmb")]
+    public required PartyIdentification253Choice_ ClearingMember { get; init; }
+
+    /// <summary>
+    /// Clearing Account.
+    /// </summary>
+    [DisplayName("Clearing Account")]
+    [IsoXmlTag("ClrAcct")]
+    public SecuritiesAccount18? ClearingAccount { get; init; }
+
+    /// <summary>
     /// Statement Details.
     /// </summary>
     [DisplayName("Statement Details")]
     [IsoXmlTag("StmtDtls")]
     public ValueList<TradeLegStatement5> StatementDetails { get; init; } = [];
-
-    /// <summary>
-    /// Statement Parameters.
-    /// </summary>
-    [DisplayName("Statement Parameters")]
-    [IsoXmlTag("StmtParams")]
-    public required Statement86 StatementParameters { get; init; }
 
     /// <summary>
     /// Supplementary Data.

@@ -17,102 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PassengerTransport3
 {
     /// <summary>
-    /// Additional Data.
-    /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
-
-    /// <summary>
-    /// Ancillary Purchase.
-    /// </summary>
-    [DisplayName("Ancillary Purchase")]
-    [IsoXmlTag("AncllryPurchs")]
-    public ValueList<AncillaryPurchase3> AncillaryPurchase { get; init; } = [];
-
-    /// <summary>
-    /// Customer Reference.
-    /// </summary>
-    [DisplayName("Customer Reference")]
-    [IsoXmlTag("CstmrRef")]
-    public ValueList<CustomerReference1> CustomerReference { get; init; } = [];
-
-    /// <summary>
-    /// Departure.
-    /// </summary>
-    [DisplayName("Departure")]
-    [IsoXmlTag("Dprture")]
-    public DepartureOrArrival1? Departure { get; init; }
-
-    /// <summary>
     /// Document Number.
     /// </summary>
     [DisplayName("Document Number")]
     [IsoXmlTag("DocNb")]
     public Max35Text? DocumentNumber { get; init; }
-
-    /// <summary>
-    /// Duration.
-    /// </summary>
-    [DisplayName("Duration")]
-    [IsoXmlTag("Drtn")]
-    public Max4NumericText? Duration { get; init; }
-
-    /// <summary>
-    /// Hired Vehicle Details.
-    /// </summary>
-    [DisplayName("Hired Vehicle Details")]
-    [IsoXmlTag("HirdVhclDtls")]
-    public ValueList<HiredVehicle3> HiredVehicleDetails { get; init; } = [];
-
-    /// <summary>
-    /// Insurance.
-    /// </summary>
-    [DisplayName("Insurance")]
-    [IsoXmlTag("Insrnc")]
-    public TrueFalseIndicator? Insurance { get; init; }
-
-    /// <summary>
-    /// Loyalty Programme.
-    /// </summary>
-    [DisplayName("Loyalty Programme")]
-    [IsoXmlTag("LltyPrgrmm")]
-    public LoyaltyProgramme4? LoyaltyProgramme { get; init; }
-
-    /// <summary>
-    /// Open Ticket.
-    /// </summary>
-    [DisplayName("Open Ticket")]
-    [IsoXmlTag("OpnTckt")]
-    public TrueFalseIndicator? OpenTicket { get; init; }
-
-    /// <summary>
-    /// Original Reservation Number.
-    /// </summary>
-    [DisplayName("Original Reservation Number")]
-    [IsoXmlTag("OrgnlRsvatnNb")]
-    public Max35Text? OriginalReservationNumber { get; init; }
-
-    /// <summary>
-    /// Original Reservation System.
-    /// </summary>
-    [DisplayName("Original Reservation System")]
-    [IsoXmlTag("OrgnlRsvatnSys")]
-    public Max4Text? OriginalReservationSystem { get; init; }
-
-    /// <summary>
-    /// Passenger.
-    /// </summary>
-    [DisplayName("Passenger")]
-    [IsoXmlTag("Pssngr")]
-    public ValueList<Customer9> Passenger { get; init; } = [];
-
-    /// <summary>
-    /// Reservation Number.
-    /// </summary>
-    [DisplayName("Reservation Number")]
-    [IsoXmlTag("RsvatnNb")]
-    public Max35Text? ReservationNumber { get; init; }
 
     /// <summary>
     /// Reservation System.
@@ -122,25 +31,25 @@ public record PassengerTransport3
     public Max4Text? ReservationSystem { get; init; }
 
     /// <summary>
-    /// Summary Commodity Identification.
+    /// Reservation Number.
     /// </summary>
-    [DisplayName("Summary Commodity Identification")]
-    [IsoXmlTag("SummryCmmdtyId")]
-    public Max35Text? SummaryCommodityIdentification { get; init; }
+    [DisplayName("Reservation Number")]
+    [IsoXmlTag("RsvatnNb")]
+    public Max35Text? ReservationNumber { get; init; }
 
     /// <summary>
-    /// Ticket Issuer.
+    /// Original Reservation System.
     /// </summary>
-    [DisplayName("Ticket Issuer")]
-    [IsoXmlTag("TcktIssr")]
-    public Max35Text? TicketIssuer { get; init; }
+    [DisplayName("Original Reservation System")]
+    [IsoXmlTag("OrgnlRsvatnSys")]
+    public Max4Text? OriginalReservationSystem { get; init; }
 
     /// <summary>
-    /// Total Amount.
+    /// Original Reservation Number.
     /// </summary>
-    [DisplayName("Total Amount")]
-    [IsoXmlTag("TtlAmt")]
-    public ValueList<AmountDetails3> TotalAmount { get; init; } = [];
+    [DisplayName("Original Reservation Number")]
+    [IsoXmlTag("OrgnlRsvatnNb")]
+    public Max35Text? OriginalReservationNumber { get; init; }
 
     /// <summary>
     /// Travel Authorisation Code.
@@ -150,9 +59,100 @@ public record PassengerTransport3
     public Max70Text? TravelAuthorisationCode { get; init; }
 
     /// <summary>
+    /// Ticket Issuer.
+    /// </summary>
+    [DisplayName("Ticket Issuer")]
+    [IsoXmlTag("TcktIssr")]
+    public Max35Text? TicketIssuer { get; init; }
+
+    /// <summary>
+    /// Open Ticket.
+    /// </summary>
+    [DisplayName("Open Ticket")]
+    [IsoXmlTag("OpnTckt")]
+    public TrueFalseIndicator? OpenTicket { get; init; }
+
+    /// <summary>
+    /// Customer Reference.
+    /// </summary>
+    [DisplayName("Customer Reference")]
+    [IsoXmlTag("CstmrRef")]
+    public ValueList<CustomerReference1> CustomerReference { get; init; } = [];
+
+    /// <summary>
+    /// Passenger.
+    /// </summary>
+    [DisplayName("Passenger")]
+    [IsoXmlTag("Pssngr")]
+    public ValueList<Customer9> Passenger { get; init; } = [];
+
+    /// <summary>
+    /// Departure.
+    /// </summary>
+    [DisplayName("Departure")]
+    [IsoXmlTag("Dprture")]
+    public DepartureOrArrival1? Departure { get; init; }
+
+    /// <summary>
+    /// Duration.
+    /// </summary>
+    [DisplayName("Duration")]
+    [IsoXmlTag("Drtn")]
+    public Max4NumericText? Duration { get; init; }
+
+    /// <summary>
+    /// Insurance.
+    /// </summary>
+    [DisplayName("Insurance")]
+    [IsoXmlTag("Insrnc")]
+    public TrueFalseIndicator? Insurance { get; init; }
+
+    /// <summary>
+    /// Total Amount.
+    /// </summary>
+    [DisplayName("Total Amount")]
+    [IsoXmlTag("TtlAmt")]
+    public ValueList<AmountDetails3> TotalAmount { get; init; } = [];
+
+    /// <summary>
+    /// Summary Commodity Identification.
+    /// </summary>
+    [DisplayName("Summary Commodity Identification")]
+    [IsoXmlTag("SummryCmmdtyId")]
+    public Max35Text? SummaryCommodityIdentification { get; init; }
+
+    /// <summary>
+    /// Loyalty Programme.
+    /// </summary>
+    [DisplayName("Loyalty Programme")]
+    [IsoXmlTag("LltyPrgrmm")]
+    public LoyaltyProgramme4? LoyaltyProgramme { get; init; }
+
+    /// <summary>
     /// Trip Leg.
     /// </summary>
     [DisplayName("Trip Leg")]
     [IsoXmlTag("TripLeg")]
     public ValueList<TripLeg3> TripLeg { get; init; } = [];
+
+    /// <summary>
+    /// Ancillary Purchase.
+    /// </summary>
+    [DisplayName("Ancillary Purchase")]
+    [IsoXmlTag("AncllryPurchs")]
+    public ValueList<AncillaryPurchase3> AncillaryPurchase { get; init; } = [];
+
+    /// <summary>
+    /// Hired Vehicle Details.
+    /// </summary>
+    [DisplayName("Hired Vehicle Details")]
+    [IsoXmlTag("HirdVhclDtls")]
+    public ValueList<HiredVehicle3> HiredVehicleDetails { get; init; } = [];
+
+    /// <summary>
+    /// Additional Data.
+    /// </summary>
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

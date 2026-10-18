@@ -46,11 +46,18 @@ public record SecuritiesBalanceCustodyReportV12 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Base Currency Total Amounts.
+    /// Pagination.
     /// </summary>
-    [DisplayName("Account Base Currency Total Amounts")]
-    [IsoXmlTag("AcctBaseCcyTtlAmts")]
-    public TotalValueInPageAndStatement1? AccountBaseCurrencyTotalAmounts { get; init; }
+    [DisplayName("Pagination")]
+    [IsoXmlTag("Pgntn")]
+    public required Pagination1 Pagination { get; init; }
+
+    /// <summary>
+    /// Statement General Details.
+    /// </summary>
+    [DisplayName("Statement General Details")]
+    [IsoXmlTag("StmtGnlDtls")]
+    public required Statement73 StatementGeneralDetails { get; init; }
 
     /// <summary>
     /// Account Owner.
@@ -67,11 +74,11 @@ public record SecuritiesBalanceCustodyReportV12 : IOuterRecord
     public PartyIdentification136? AccountServicer { get; init; }
 
     /// <summary>
-    /// Balance For Account.
+    /// Safekeeping Account.
     /// </summary>
-    [DisplayName("Balance For Account")]
-    [IsoXmlTag("BalForAcct")]
-    public ValueList<AggregateBalanceInformation46> BalanceForAccount { get; init; } = [];
+    [DisplayName("Safekeeping Account")]
+    [IsoXmlTag("SfkpgAcct")]
+    public SecuritiesAccount26? SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Block Chain Address Or Wallet.
@@ -88,25 +95,11 @@ public record SecuritiesBalanceCustodyReportV12 : IOuterRecord
     public Intermediary44? IntermediaryInformation { get; init; }
 
     /// <summary>
-    /// Pagination.
+    /// Balance For Account.
     /// </summary>
-    [DisplayName("Pagination")]
-    [IsoXmlTag("Pgntn")]
-    public required Pagination1 Pagination { get; init; }
-
-    /// <summary>
-    /// Safekeeping Account.
-    /// </summary>
-    [DisplayName("Safekeeping Account")]
-    [IsoXmlTag("SfkpgAcct")]
-    public SecuritiesAccount26? SafekeepingAccount { get; init; }
-
-    /// <summary>
-    /// Statement General Details.
-    /// </summary>
-    [DisplayName("Statement General Details")]
-    [IsoXmlTag("StmtGnlDtls")]
-    public required Statement73 StatementGeneralDetails { get; init; }
+    [DisplayName("Balance For Account")]
+    [IsoXmlTag("BalForAcct")]
+    public ValueList<AggregateBalanceInformation46> BalanceForAccount { get; init; } = [];
 
     /// <summary>
     /// Sub Account Details.
@@ -114,4 +107,11 @@ public record SecuritiesBalanceCustodyReportV12 : IOuterRecord
     [DisplayName("Sub Account Details")]
     [IsoXmlTag("SubAcctDtls")]
     public ValueList<SubAccountIdentification71> SubAccountDetails { get; init; } = [];
+
+    /// <summary>
+    /// Account Base Currency Total Amounts.
+    /// </summary>
+    [DisplayName("Account Base Currency Total Amounts")]
+    [IsoXmlTag("AcctBaseCcyTtlAmts")]
+    public TotalValueInPageAndStatement1? AccountBaseCurrencyTotalAmounts { get; init; }
 }

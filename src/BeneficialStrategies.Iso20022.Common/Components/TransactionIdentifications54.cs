@@ -17,6 +17,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TransactionIdentifications54
 {
     /// <summary>
+    /// Trade Identification.
+    /// </summary>
+    [DisplayName("Trade Identification")]
+    [IsoXmlTag("TradId")]
+    public Max35Text? TradeIdentification { get; init; }
+
+    /// <summary>
+    /// Unique Transaction Identifier.
+    /// </summary>
+    [DisplayName("Unique Transaction Identifier")]
+    [IsoXmlTag("UnqTxIdr")]
+    public UTIIdentifier? UniqueTransactionIdentifier { get; init; }
+
+    /// <summary>
     /// Account Owner Transaction Identification.
     /// </summary>
     [DisplayName("Account Owner Transaction Identification")]
@@ -43,18 +57,4 @@ public record TransactionIdentifications54
     [DisplayName("Processor Transaction Identification")]
     [IsoXmlTag("PrcrTxId")]
     public Max35Text? ProcessorTransactionIdentification { get; init; }
-
-    /// <summary>
-    /// Trade Identification.
-    /// </summary>
-    [DisplayName("Trade Identification")]
-    [IsoXmlTag("TradId")]
-    public Max35Text? TradeIdentification { get; init; }
-
-    /// <summary>
-    /// Unique Transaction Identifier.
-    /// </summary>
-    [DisplayName("Unique Transaction Identifier")]
-    [IsoXmlTag("UnqTxIdr")]
-    public UTIIdentifier? UniqueTransactionIdentifier { get; init; }
 }

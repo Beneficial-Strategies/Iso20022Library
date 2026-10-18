@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AuthorisationResult20
 {
     /// <summary>
-    /// Action.
-    /// </summary>
-    [DisplayName("Action")]
-    [IsoXmlTag("Actn")]
-    public ValueList<Action7> Action { get; init; } = [];
-
-    /// <summary>
-    /// Authorisation Code.
-    /// </summary>
-    [DisplayName("Authorisation Code")]
-    [IsoXmlTag("AuthstnCd")]
-    public Max8Text? AuthorisationCode { get; init; }
-
-    /// <summary>
     /// Authorisation Entity.
     /// </summary>
     [DisplayName("Authorisation Entity")]
@@ -45,16 +31,30 @@ public record AuthorisationResult20
     public required ResponseType12 AuthorisationResponse { get; init; }
 
     /// <summary>
-    /// Fee To Add.
-    /// </summary>
-    [DisplayName("Fee To Add")]
-    [IsoXmlTag("FeeToAdd")]
-    public ValueList<ATMFeeComponent1> FeeToAdd { get; init; } = [];
-
-    /// <summary>
     /// Response Trace.
     /// </summary>
     [DisplayName("Response Trace")]
     [IsoXmlTag("RspnTrac")]
     public ValueList<ResponseType8> ResponseTrace { get; init; } = [];
+
+    /// <summary>
+    /// Authorisation Code.
+    /// </summary>
+    [DisplayName("Authorisation Code")]
+    [IsoXmlTag("AuthstnCd")]
+    public Max8Text? AuthorisationCode { get; init; }
+
+    /// <summary>
+    /// Action.
+    /// </summary>
+    [DisplayName("Action")]
+    [IsoXmlTag("Actn")]
+    public ValueList<Action7> Action { get; init; } = [];
+
+    /// <summary>
+    /// Fee To Add.
+    /// </summary>
+    [DisplayName("Fee To Add")]
+    [IsoXmlTag("FeeToAdd")]
+    public ValueList<ATMFeeComponent1> FeeToAdd { get; init; } = [];
 }

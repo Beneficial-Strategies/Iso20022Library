@@ -24,11 +24,11 @@ public record AcceptorCompletionAdviceResponse12
     public required CardPaymentEnvironment80 Environment { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Transaction.
     /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
+    [DisplayName("Transaction")]
+    [IsoXmlTag("Tx")]
+    public required CardPaymentTransactionAdviceResponse8 Transaction { get; init; }
 
     /// <summary>
     /// TMS Trigger.
@@ -38,9 +38,9 @@ public record AcceptorCompletionAdviceResponse12
     public TMSTrigger1? TMSTrigger { get; init; }
 
     /// <summary>
-    /// Transaction.
+    /// Supplementary Data.
     /// </summary>
-    [DisplayName("Transaction")]
-    [IsoXmlTag("Tx")]
-    public required CardPaymentTransactionAdviceResponse8 Transaction { get; init; }
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

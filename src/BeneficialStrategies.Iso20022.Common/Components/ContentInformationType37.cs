@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ContentInformationType37
 {
     /// <summary>
-    /// Authenticated Data.
-    /// </summary>
-    [DisplayName("Authenticated Data")]
-    [IsoXmlTag("AuthntcdData")]
-    public required AuthenticatedData10 AuthenticatedData { get; init; }
-
-    /// <summary>
     /// Content Type.
     /// </summary>
     [DisplayName("Content Type")]
     [IsoXmlTag("CnttTp")]
     public required ContentType2Code ContentType { get; init; }
+
+    /// <summary>
+    /// Authenticated Data.
+    /// </summary>
+    [DisplayName("Authenticated Data")]
+    [IsoXmlTag("AuthntcdData")]
+    public required AuthenticatedData10 AuthenticatedData { get; init; }
 }

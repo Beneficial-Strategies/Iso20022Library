@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record QuantityAndAccount114
 {
     /// <summary>
-    /// Cash Account.
+    /// Settlement Quantity.
     /// </summary>
-    [DisplayName("Cash Account")]
-    [IsoXmlTag("CshAcct")]
-    public CashAccountIdentification9Choice_? CashAccount { get; init; }
+    [DisplayName("Settlement Quantity")]
+    [IsoXmlTag("SttlmQty")]
+    public required FinancialInstrumentQuantity33Choice_ SettlementQuantity { get; init; }
 
     /// <summary>
     /// Denomination Choice.
@@ -29,6 +29,13 @@ public record QuantityAndAccount114
     [DisplayName("Denomination Choice")]
     [IsoXmlTag("DnmtnChc")]
     public Max210Text? DenominationChoice_ { get; init; }
+
+    /// <summary>
+    /// Cash Account.
+    /// </summary>
+    [DisplayName("Cash Account")]
+    [IsoXmlTag("CshAcct")]
+    public CashAccountIdentification9Choice_? CashAccount { get; init; }
 
     /// <summary>
     /// Quantity Breakdown.
@@ -43,11 +50,4 @@ public record QuantityAndAccount114
     [DisplayName("Safekeeping Place")]
     [IsoXmlTag("SfkpgPlc")]
     public SafeKeepingPlace5? SafekeepingPlace { get; init; }
-
-    /// <summary>
-    /// Settlement Quantity.
-    /// </summary>
-    [DisplayName("Settlement Quantity")]
-    [IsoXmlTag("SttlmQty")]
-    public required FinancialInstrumentQuantity33Choice_ SettlementQuantity { get; init; }
 }

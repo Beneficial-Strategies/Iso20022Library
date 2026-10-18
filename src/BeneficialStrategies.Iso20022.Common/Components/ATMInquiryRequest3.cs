@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMInquiryRequest3
 {
     /// <summary>
-    /// Context.
-    /// </summary>
-    [DisplayName("Context")]
-    [IsoXmlTag("Cntxt")]
-    public required ATMContext26 Context { get; init; }
-
-    /// <summary>
     /// Environment.
     /// </summary>
     [DisplayName("Environment")]
     [IsoXmlTag("Envt")]
     public required ATMEnvironment17 Environment { get; init; }
+
+    /// <summary>
+    /// Context.
+    /// </summary>
+    [DisplayName("Context")]
+    [IsoXmlTag("Cntxt")]
+    public required ATMContext26 Context { get; init; }
 
     /// <summary>
     /// Transaction.

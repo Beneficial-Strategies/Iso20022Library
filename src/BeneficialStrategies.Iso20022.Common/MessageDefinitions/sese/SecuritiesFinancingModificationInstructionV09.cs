@@ -68,11 +68,18 @@ public record SecuritiesFinancingModificationInstructionV09 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Identifies the chain of delivering settlement parties.
+    /// Securities financing transaction identification information, type (repurchase agreement, reverse repurchase agreement, securities lending or securities borrowing), modification information and other parameters.
     /// </summary>
-    [DisplayName("Delivering Settlement Parties")]
-    [IsoXmlTag("DlvrgSttlmPties")]
-    public SettlementParties127? DeliveringSettlementParties { get; init; }
+    [DisplayName("Transaction Type And Modification Additional Parameters")]
+    [IsoXmlTag("TxTpAndModAddtlParams")]
+    public required TransactionTypeAndAdditionalParameters23 TransactionTypeAndModificationAdditionalParameters { get; init; }
+
+    /// <summary>
+    /// Details of the securities financing deal.
+    /// </summary>
+    [DisplayName("Trade Details")]
+    [IsoXmlTag("TradDtls")]
+    public required SecuritiesTradeDetails100 TradeDetails { get; init; }
 
     /// <summary>
     /// Financial instrument representing a sum of rights of the investor vis-a-vis the issuer.
@@ -82,25 +89,11 @@ public record SecuritiesFinancingModificationInstructionV09 : IOuterRecord
     public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
 
     /// <summary>
-    /// Total amount of money to be paid or received in exchange for the securities at the opening of a securities financing transaction.
-    /// </summary>
-    [DisplayName("Opening Settlement Amount")]
-    [IsoXmlTag("OpngSttlmAmt")]
-    public AmountAndDirection49? OpeningSettlementAmount { get; init; }
-
-    /// <summary>
     /// Details related to the account and quantity involved in the transaction.
     /// </summary>
     [DisplayName("Quantity And Account Details")]
     [IsoXmlTag("QtyAndAcctDtls")]
     public required QuantityAndAccount119 QuantityAndAccountDetails { get; init; }
-
-    /// <summary>
-    /// Identifies the chain of receiving settlement parties.
-    /// </summary>
-    [DisplayName("Receiving Settlement Parties")]
-    [IsoXmlTag("RcvgSttlmPties")]
-    public SettlementParties127? ReceivingSettlementParties { get; init; }
 
     /// <summary>
     /// Details of the closing of the securities financing transaction.
@@ -117,23 +110,30 @@ public record SecuritiesFinancingModificationInstructionV09 : IOuterRecord
     public SettlementDetails148? SettlementParameters { get; init; }
 
     /// <summary>
+    /// Identifies the chain of delivering settlement parties.
+    /// </summary>
+    [DisplayName("Delivering Settlement Parties")]
+    [IsoXmlTag("DlvrgSttlmPties")]
+    public SettlementParties127? DeliveringSettlementParties { get; init; }
+
+    /// <summary>
+    /// Identifies the chain of receiving settlement parties.
+    /// </summary>
+    [DisplayName("Receiving Settlement Parties")]
+    [IsoXmlTag("RcvgSttlmPties")]
+    public SettlementParties127? ReceivingSettlementParties { get; init; }
+
+    /// <summary>
+    /// Total amount of money to be paid or received in exchange for the securities at the opening of a securities financing transaction.
+    /// </summary>
+    [DisplayName("Opening Settlement Amount")]
+    [IsoXmlTag("OpngSttlmAmt")]
+    public AmountAndDirection49? OpeningSettlementAmount { get; init; }
+
+    /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Details of the securities financing deal.
-    /// </summary>
-    [DisplayName("Trade Details")]
-    [IsoXmlTag("TradDtls")]
-    public required SecuritiesTradeDetails100 TradeDetails { get; init; }
-
-    /// <summary>
-    /// Securities financing transaction identification information, type (repurchase agreement, reverse repurchase agreement, securities lending or securities borrowing), modification information and other parameters.
-    /// </summary>
-    [DisplayName("Transaction Type And Modification Additional Parameters")]
-    [IsoXmlTag("TxTpAndModAddtlParams")]
-    public required TransactionTypeAndAdditionalParameters23 TransactionTypeAndModificationAdditionalParameters { get; init; }
 }

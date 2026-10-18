@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record MandateCopy4
 {
     /// <summary>
-    /// Mandate Status.
+    /// Original Message Information.
     /// </summary>
-    [DisplayName("Mandate Status")]
-    [IsoXmlTag("MndtSts")]
-    public MandateStatus1Choice_? MandateStatus { get; init; }
+    [DisplayName("Original Message Information")]
+    [IsoXmlTag("OrgnlMsgInf")]
+    public OriginalMessageInformation1? OriginalMessageInformation { get; init; }
 
     /// <summary>
     /// Original Mandate.
@@ -31,11 +31,11 @@ public record MandateCopy4
     public required OriginalMandate10Choice_ OriginalMandate { get; init; }
 
     /// <summary>
-    /// Original Message Information.
+    /// Mandate Status.
     /// </summary>
-    [DisplayName("Original Message Information")]
-    [IsoXmlTag("OrgnlMsgInf")]
-    public OriginalMessageInformation1? OriginalMessageInformation { get; init; }
+    [DisplayName("Mandate Status")]
+    [IsoXmlTag("MndtSts")]
+    public MandateStatus1Choice_? MandateStatus { get; init; }
 
     /// <summary>
     /// Supplementary Data.

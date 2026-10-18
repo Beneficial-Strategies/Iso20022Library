@@ -50,13 +50,6 @@ public record DTCCCAPSSD1V10 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Information to be extended as supplementary data to corporate action details.
-    /// </summary>
-    [DisplayName("Corporate Action Details")]
-    [IsoXmlTag("CorpActnDtls")]
-    public CorporateActionSD19? CorporateActionDetails { get; init; }
-
-    /// <summary>
     /// Information to be extended as supplementary data to corporate action general information.
     /// </summary>
     [DisplayName("Corporate Action General Information")]
@@ -69,4 +62,11 @@ public record DTCCCAPSSD1V10 : IOuterRecord
     [DisplayName("Underlying Security")]
     [IsoXmlTag("UndrlygScty")]
     public FinancialInstrumentAttributesSD20? UnderlyingSecurity { get; init; }
+
+    /// <summary>
+    /// Information to be extended as supplementary data to corporate action details.
+    /// </summary>
+    [DisplayName("Corporate Action Details")]
+    [IsoXmlTag("CorpActnDtls")]
+    public CorporateActionSD19? CorporateActionDetails { get; init; }
 }

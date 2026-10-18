@@ -46,25 +46,18 @@ public record AccountSwitchInformationResponseV06 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Switch Details.
-    /// </summary>
-    [DisplayName("Account Switch Details")]
-    [IsoXmlTag("AcctSwtchDtls")]
-    public required AccountSwitchDetails1 AccountSwitchDetails { get; init; }
-
-    /// <summary>
-    /// Direct Debit Instruction.
-    /// </summary>
-    [DisplayName("Direct Debit Instruction")]
-    [IsoXmlTag("DrctDbtInstr")]
-    public ValueList<DirectDebitInstructionDetails3> DirectDebitInstruction { get; init; } = [];
-
-    /// <summary>
     /// Message Identification.
     /// </summary>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     public required MessageIdentification1 MessageIdentification { get; init; }
+
+    /// <summary>
+    /// Account Switch Details.
+    /// </summary>
+    [DisplayName("Account Switch Details")]
+    [IsoXmlTag("AcctSwtchDtls")]
+    public required AccountSwitchDetails1 AccountSwitchDetails { get; init; }
 
     /// <summary>
     /// New Account.
@@ -86,6 +79,13 @@ public record AccountSwitchInformationResponseV06 : IOuterRecord
     [DisplayName("Payment Instruction")]
     [IsoXmlTag("PmtInstr")]
     public ValueList<PaymentInstruction49> PaymentInstruction { get; init; } = [];
+
+    /// <summary>
+    /// Direct Debit Instruction.
+    /// </summary>
+    [DisplayName("Direct Debit Instruction")]
+    [IsoXmlTag("DrctDbtInstr")]
+    public ValueList<DirectDebitInstructionDetails3> DirectDebitInstruction { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

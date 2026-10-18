@@ -57,6 +57,13 @@ public record DTCCCANOEligibleBalanceSD1V12 : IOuterRecord
     public CorporateActionGeneralInformationSD57? CorporateActionGeneralInformation { get; init; }
 
     /// <summary>
+    /// Information to be extended as supplementary data to underlying security details.
+    /// </summary>
+    [DisplayName("Underlying Security")]
+    [IsoXmlTag("UndrlygScty")]
+    public FinancialInstrumentAttributesSD21? UnderlyingSecurity { get; init; }
+
+    /// <summary>
     /// Information to be extended as supplementary data to account balance for distribution events.
     /// </summary>
     [DisplayName("Distribution Account Balance")]
@@ -76,11 +83,4 @@ public record DTCCCANOEligibleBalanceSD1V12 : IOuterRecord
     [DisplayName("Reorganisation Account Balance")]
     [IsoXmlTag("ReorgAcctBal")]
     public AccountBalanceSD12? ReorganisationAccountBalance { get; init; }
-
-    /// <summary>
-    /// Information to be extended as supplementary data to underlying security details.
-    /// </summary>
-    [DisplayName("Underlying Security")]
-    [IsoXmlTag("UndrlygScty")]
-    public FinancialInstrumentAttributesSD21? UnderlyingSecurity { get; init; }
 }

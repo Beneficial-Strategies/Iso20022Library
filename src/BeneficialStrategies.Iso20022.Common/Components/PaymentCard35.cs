@@ -17,25 +17,46 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PaymentCard35
 {
     /// <summary>
-    /// Additional Card Data.
+    /// Protected Card Data.
     /// </summary>
-    [DisplayName("Additional Card Data")]
-    [IsoXmlTag("AddtlCardData")]
-    public Max70Text? AdditionalCardData { get; init; }
+    [DisplayName("Protected Card Data")]
+    [IsoXmlTag("PrtctdCardData")]
+    public ContentInformationType40? ProtectedCardData { get; init; }
 
     /// <summary>
-    /// Allowed Product.
+    /// Private Card Data.
     /// </summary>
-    [DisplayName("Allowed Product")]
-    [IsoXmlTag("AllwdPdct")]
-    public ValueList<Max70Text> AllowedProduct { get; init; } = [];
+    [DisplayName("Private Card Data")]
+    [IsoXmlTag("PrvtCardData")]
+    public Max100KBinary? PrivateCardData { get; init; }
 
     /// <summary>
-    /// Card Brand.
+    /// Plain Card Data.
     /// </summary>
-    [DisplayName("Card Brand")]
-    [IsoXmlTag("CardBrnd")]
-    public Max35Text? CardBrand { get; init; }
+    [DisplayName("Plain Card Data")]
+    [IsoXmlTag("PlainCardData")]
+    public PlainCardData22? PlainCardData { get; init; }
+
+    /// <summary>
+    /// Payment Account Reference.
+    /// </summary>
+    [DisplayName("Payment Account Reference")]
+    [IsoXmlTag("PmtAcctRef")]
+    public Max70Text? PaymentAccountReference { get; init; }
+
+    /// <summary>
+    /// Masked PAN.
+    /// </summary>
+    [DisplayName("Masked PAN")]
+    [IsoXmlTag("MskdPAN")]
+    public Max30Text? MaskedPAN { get; init; }
+
+    /// <summary>
+    /// Issuer BIN.
+    /// </summary>
+    [DisplayName("Issuer BIN")]
+    [IsoXmlTag("IssrBIN")]
+    public Max15NumericText? IssuerBIN { get; init; }
 
     /// <summary>
     /// Card Country Code.
@@ -59,11 +80,11 @@ public record PaymentCard35
     public Max35Text? CardProductProfile { get; init; }
 
     /// <summary>
-    /// Card Product Sub Type.
+    /// Card Brand.
     /// </summary>
-    [DisplayName("Card Product Sub Type")]
-    [IsoXmlTag("CardPdctSubTp")]
-    public Max35Text? CardProductSubType { get; init; }
+    [DisplayName("Card Brand")]
+    [IsoXmlTag("CardBrnd")]
+    public Max35Text? CardBrand { get; init; }
 
     /// <summary>
     /// Card Product Type.
@@ -73,6 +94,13 @@ public record PaymentCard35
     public CardProductType1Code? CardProductType { get; init; }
 
     /// <summary>
+    /// Card Product Sub Type.
+    /// </summary>
+    [DisplayName("Card Product Sub Type")]
+    [IsoXmlTag("CardPdctSubTp")]
+    public Max35Text? CardProductSubType { get; init; }
+
+    /// <summary>
     /// International Card.
     /// </summary>
     [DisplayName("International Card")]
@@ -80,46 +108,11 @@ public record PaymentCard35
     public TrueFalseIndicator? InternationalCard { get; init; }
 
     /// <summary>
-    /// Issuer BIN.
+    /// Allowed Product.
     /// </summary>
-    [DisplayName("Issuer BIN")]
-    [IsoXmlTag("IssrBIN")]
-    public Max15NumericText? IssuerBIN { get; init; }
-
-    /// <summary>
-    /// Masked PAN.
-    /// </summary>
-    [DisplayName("Masked PAN")]
-    [IsoXmlTag("MskdPAN")]
-    public Max30Text? MaskedPAN { get; init; }
-
-    /// <summary>
-    /// Payment Account Reference.
-    /// </summary>
-    [DisplayName("Payment Account Reference")]
-    [IsoXmlTag("PmtAcctRef")]
-    public Max70Text? PaymentAccountReference { get; init; }
-
-    /// <summary>
-    /// Plain Card Data.
-    /// </summary>
-    [DisplayName("Plain Card Data")]
-    [IsoXmlTag("PlainCardData")]
-    public PlainCardData22? PlainCardData { get; init; }
-
-    /// <summary>
-    /// Private Card Data.
-    /// </summary>
-    [DisplayName("Private Card Data")]
-    [IsoXmlTag("PrvtCardData")]
-    public Max100KBinary? PrivateCardData { get; init; }
-
-    /// <summary>
-    /// Protected Card Data.
-    /// </summary>
-    [DisplayName("Protected Card Data")]
-    [IsoXmlTag("PrtctdCardData")]
-    public ContentInformationType40? ProtectedCardData { get; init; }
+    [DisplayName("Allowed Product")]
+    [IsoXmlTag("AllwdPdct")]
+    public ValueList<Max70Text> AllowedProduct { get; init; } = [];
 
     /// <summary>
     /// Service Option.
@@ -127,4 +120,11 @@ public record PaymentCard35
     [DisplayName("Service Option")]
     [IsoXmlTag("SvcOptn")]
     public Max35Text? ServiceOption { get; init; }
+
+    /// <summary>
+    /// Additional Card Data.
+    /// </summary>
+    [DisplayName("Additional Card Data")]
+    [IsoXmlTag("AddtlCardData")]
+    public Max70Text? AdditionalCardData { get; init; }
 }

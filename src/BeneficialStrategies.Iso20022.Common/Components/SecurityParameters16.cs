@@ -24,18 +24,18 @@ public record SecurityParameters16
     public required TerminalManagementAction3Code ActionType { get; init; }
 
     /// <summary>
+    /// Version.
+    /// </summary>
+    [DisplayName("Version")]
+    [IsoXmlTag("Vrsn")]
+    public required Max256Text Version { get; init; }
+
+    /// <summary>
     /// POI Challenge.
     /// </summary>
     [DisplayName("POI Challenge")]
     [IsoXmlTag("POIChllng")]
     public Max140Binary? POIChallenge { get; init; }
-
-    /// <summary>
-    /// Security Element.
-    /// </summary>
-    [DisplayName("Security Element")]
-    [IsoXmlTag("SctyElmt")]
-    public ValueList<CryptographicKey18> SecurityElement { get; init; } = [];
 
     /// <summary>
     /// TM Challenge.
@@ -45,9 +45,9 @@ public record SecurityParameters16
     public Max140Binary? TMChallenge { get; init; }
 
     /// <summary>
-    /// Version.
+    /// Security Element.
     /// </summary>
-    [DisplayName("Version")]
-    [IsoXmlTag("Vrsn")]
-    public required Max256Text Version { get; init; }
+    [DisplayName("Security Element")]
+    [IsoXmlTag("SctyElmt")]
+    public ValueList<CryptographicKey18> SecurityElement { get; init; } = [];
 }

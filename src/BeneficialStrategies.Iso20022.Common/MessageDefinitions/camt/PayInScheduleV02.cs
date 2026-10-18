@@ -53,11 +53,11 @@ public record PayInScheduleV02 : IOuterRecord
     public required PartyIdentification19Choice_ PartyIdentification { get; init; }
 
     /// <summary>
-    /// Pay In Factors.
+    /// Report Data.
     /// </summary>
-    [DisplayName("Pay In Factors")]
-    [IsoXmlTag("PayInFctrs")]
-    public PayInFactors1? PayInFactors { get; init; }
+    [DisplayName("Report Data")]
+    [IsoXmlTag("RptData")]
+    public required ReportData3 ReportData { get; init; }
 
     /// <summary>
     /// Pay In Schedule Balance.
@@ -74,9 +74,9 @@ public record PayInScheduleV02 : IOuterRecord
     public ValueList<PayInScheduleItems> PayInScheduleItem { get; init; } = [];
 
     /// <summary>
-    /// Report Data.
+    /// Pay In Factors.
     /// </summary>
-    [DisplayName("Report Data")]
-    [IsoXmlTag("RptData")]
-    public required ReportData3 ReportData { get; init; }
+    [DisplayName("Pay In Factors")]
+    [IsoXmlTag("PayInFctrs")]
+    public PayInFactors1? PayInFactors { get; init; }
 }

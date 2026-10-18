@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record EventContext6
 {
     /// <summary>
+    /// Service Type.
+    /// </summary>
+    [DisplayName("Service Type")]
+    [IsoXmlTag("SvcTp")]
+    public required RetailerService1Code ServiceType { get; init; }
+
+    /// <summary>
     /// Component Identification.
     /// </summary>
     [DisplayName("Component Identification")]
@@ -29,11 +36,4 @@ public record EventContext6
     [DisplayName("Sale Identification")]
     [IsoXmlTag("SaleId")]
     public Max35Text? SaleIdentification { get; init; }
-
-    /// <summary>
-    /// Service Type.
-    /// </summary>
-    [DisplayName("Service Type")]
-    [IsoXmlTag("SvcTp")]
-    public required RetailerService1Code ServiceType { get; init; }
 }

@@ -17,34 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record LocalData16
 {
     /// <summary>
-    /// Additional Data.
-    /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
-
-    /// <summary>
-    /// Additional Information.
-    /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public ValueList<AdditionalInformation22> AdditionalInformation { get; init; } = [];
-
-    /// <summary>
-    /// Cardholder Name.
-    /// </summary>
-    [DisplayName("Cardholder Name")]
-    [IsoXmlTag("CrdhldrNm")]
-    public CardholderName2? CardholderName { get; init; }
-
-    /// <summary>
-    /// Encoding Format.
-    /// </summary>
-    [DisplayName("Encoding Format")]
-    [IsoXmlTag("NcodgFrmt")]
-    public Max35Text? EncodingFormat { get; init; }
-
-    /// <summary>
     /// Language.
     /// </summary>
     [DisplayName("Language")]
@@ -52,11 +24,11 @@ public record LocalData16
     public required ISOMax3ALanguageCode Language { get; init; }
 
     /// <summary>
-    /// Mailed From Postal Code.
+    /// Encoding Format.
     /// </summary>
-    [DisplayName("Mailed From Postal Code")]
-    [IsoXmlTag("MldFrPstlCd")]
-    public Max35Text? MailedFromPostalCode { get; init; }
+    [DisplayName("Encoding Format")]
+    [IsoXmlTag("NcodgFrmt")]
+    public Max35Text? EncodingFormat { get; init; }
 
     /// <summary>
     /// Mailing Address.
@@ -71,4 +43,32 @@ public record LocalData16
     [DisplayName("Mailing Address Unstructured")]
     [IsoXmlTag("MlngAdrUstrd")]
     public Max512Text? MailingAddressUnstructured { get; init; }
+
+    /// <summary>
+    /// Mailed From Postal Code.
+    /// </summary>
+    [DisplayName("Mailed From Postal Code")]
+    [IsoXmlTag("MldFrPstlCd")]
+    public Max35Text? MailedFromPostalCode { get; init; }
+
+    /// <summary>
+    /// Cardholder Name.
+    /// </summary>
+    [DisplayName("Cardholder Name")]
+    [IsoXmlTag("CrdhldrNm")]
+    public CardholderName2? CardholderName { get; init; }
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public ValueList<AdditionalInformation22> AdditionalInformation { get; init; } = [];
+
+    /// <summary>
+    /// Additional Data.
+    /// </summary>
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

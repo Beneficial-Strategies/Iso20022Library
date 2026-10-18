@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PositionSetDimensions16
 {
     /// <summary>
-    /// Asset Class.
+    /// Counterparty Identification.
     /// </summary>
-    [DisplayName("Asset Class")]
-    [IsoXmlTag("AsstClss")]
-    public ProductType4Code? AssetClass { get; init; }
+    [DisplayName("Counterparty Identification")]
+    [IsoXmlTag("CtrPtyId")]
+    public TradeCounterpartyReport20? CounterpartyIdentification { get; init; }
 
     /// <summary>
-    /// Cleared.
+    /// Value Currency.
     /// </summary>
-    [DisplayName("Cleared")]
-    [IsoXmlTag("Clrd")]
-    public TrueFalseIndicator? Cleared { get; init; }
+    [DisplayName("Value Currency")]
+    [IsoXmlTag("ValCcy")]
+    public ActiveOrHistoricCurrencyCode? ValueCurrency { get; init; }
 
     /// <summary>
     /// Collateral.
@@ -38,13 +38,6 @@ public record PositionSetDimensions16
     public MarginCollateralReport4? Collateral { get; init; }
 
     /// <summary>
-    /// Commodity.
-    /// </summary>
-    [DisplayName("Commodity")]
-    [IsoXmlTag("Cmmdty")]
-    public AssetClassCommodity6Choice_? Commodity { get; init; }
-
-    /// <summary>
     /// Contract Type.
     /// </summary>
     [DisplayName("Contract Type")]
@@ -52,46 +45,18 @@ public record PositionSetDimensions16
     public FinancialInstrumentContractType2Code? ContractType { get; init; }
 
     /// <summary>
-    /// Counterparty Identification.
+    /// Asset Class.
     /// </summary>
-    [DisplayName("Counterparty Identification")]
-    [IsoXmlTag("CtrPtyId")]
-    public TradeCounterpartyReport20? CounterpartyIdentification { get; init; }
+    [DisplayName("Asset Class")]
+    [IsoXmlTag("AsstClss")]
+    public ProductType4Code? AssetClass { get; init; }
 
     /// <summary>
-    /// Credit.
+    /// Underlying Instrument.
     /// </summary>
-    [DisplayName("Credit")]
-    [IsoXmlTag("Cdt")]
-    public CreditDerivative7? Credit { get; init; }
-
-    /// <summary>
-    /// Exchange Rate Basis.
-    /// </summary>
-    [DisplayName("Exchange Rate Basis")]
-    [IsoXmlTag("XchgRateBsis")]
-    public ExchangeRateBasis1Choice_? ExchangeRateBasis { get; init; }
-
-    /// <summary>
-    /// Intra Group.
-    /// </summary>
-    [DisplayName("Intra Group")]
-    [IsoXmlTag("IntraGrp")]
-    public TrueFalseIndicator? IntraGroup { get; init; }
-
-    /// <summary>
-    /// IRS Type.
-    /// </summary>
-    [DisplayName("IRS Type")]
-    [IsoXmlTag("IRSTp")]
-    public Max52Text? IRSType { get; init; }
-
-    /// <summary>
-    /// Master Agreement.
-    /// </summary>
-    [DisplayName("Master Agreement")]
-    [IsoXmlTag("MstrAgrmt")]
-    public MasterAgreement8? MasterAgreement { get; init; }
+    [DisplayName("Underlying Instrument")]
+    [IsoXmlTag("UndrlygInstrm")]
+    public SecurityIdentification41Choice_? UnderlyingInstrument { get; init; }
 
     /// <summary>
     /// Notional Currency.
@@ -108,20 +73,6 @@ public record PositionSetDimensions16
     public ActiveOrHistoricCurrencyCode? NotionalCurrencySecondLeg { get; init; }
 
     /// <summary>
-    /// Option Type.
-    /// </summary>
-    [DisplayName("Option Type")]
-    [IsoXmlTag("OptnTp")]
-    public OptionType2Code? OptionType { get; init; }
-
-    /// <summary>
-    /// Other Payment.
-    /// </summary>
-    [DisplayName("Other Payment")]
-    [IsoXmlTag("OthrPmt")]
-    public OtherPayment6? OtherPayment { get; init; }
-
-    /// <summary>
     /// Settlement Currency.
     /// </summary>
     [DisplayName("Settlement Currency")]
@@ -136,6 +87,41 @@ public record PositionSetDimensions16
     public ActiveOrHistoricCurrencyCode? SettlementCurrencySecondLeg { get; init; }
 
     /// <summary>
+    /// Master Agreement.
+    /// </summary>
+    [DisplayName("Master Agreement")]
+    [IsoXmlTag("MstrAgrmt")]
+    public MasterAgreement8? MasterAgreement { get; init; }
+
+    /// <summary>
+    /// Cleared.
+    /// </summary>
+    [DisplayName("Cleared")]
+    [IsoXmlTag("Clrd")]
+    public TrueFalseIndicator? Cleared { get; init; }
+
+    /// <summary>
+    /// Intra Group.
+    /// </summary>
+    [DisplayName("Intra Group")]
+    [IsoXmlTag("IntraGrp")]
+    public TrueFalseIndicator? IntraGroup { get; init; }
+
+    /// <summary>
+    /// Exchange Rate Basis.
+    /// </summary>
+    [DisplayName("Exchange Rate Basis")]
+    [IsoXmlTag("XchgRateBsis")]
+    public ExchangeRateBasis1Choice_? ExchangeRateBasis { get; init; }
+
+    /// <summary>
+    /// Option Type.
+    /// </summary>
+    [DisplayName("Option Type")]
+    [IsoXmlTag("OptnTp")]
+    public OptionType2Code? OptionType { get; init; }
+
+    /// <summary>
     /// Time To Maturity.
     /// </summary>
     [DisplayName("Time To Maturity")]
@@ -143,16 +129,30 @@ public record PositionSetDimensions16
     public TimeToMaturity1Choice_? TimeToMaturity { get; init; }
 
     /// <summary>
-    /// Underlying Instrument.
+    /// IRS Type.
     /// </summary>
-    [DisplayName("Underlying Instrument")]
-    [IsoXmlTag("UndrlygInstrm")]
-    public SecurityIdentification41Choice_? UnderlyingInstrument { get; init; }
+    [DisplayName("IRS Type")]
+    [IsoXmlTag("IRSTp")]
+    public Max52Text? IRSType { get; init; }
 
     /// <summary>
-    /// Value Currency.
+    /// Credit.
     /// </summary>
-    [DisplayName("Value Currency")]
-    [IsoXmlTag("ValCcy")]
-    public ActiveOrHistoricCurrencyCode? ValueCurrency { get; init; }
+    [DisplayName("Credit")]
+    [IsoXmlTag("Cdt")]
+    public CreditDerivative7? Credit { get; init; }
+
+    /// <summary>
+    /// Commodity.
+    /// </summary>
+    [DisplayName("Commodity")]
+    [IsoXmlTag("Cmmdty")]
+    public AssetClassCommodity6Choice_? Commodity { get; init; }
+
+    /// <summary>
+    /// Other Payment.
+    /// </summary>
+    [DisplayName("Other Payment")]
+    [IsoXmlTag("OthrPmt")]
+    public OtherPayment6? OtherPayment { get; init; }
 }

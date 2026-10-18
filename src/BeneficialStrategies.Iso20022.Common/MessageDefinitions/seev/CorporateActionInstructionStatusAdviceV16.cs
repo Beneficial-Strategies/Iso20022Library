@@ -46,39 +46,11 @@ public record CorporateActionInstructionStatusAdviceV16 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Additional Information.
-    /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public CorporateActionNarrative10? AdditionalInformation { get; init; }
-
-    /// <summary>
-    /// Corporate Action General Information.
-    /// </summary>
-    [DisplayName("Corporate Action General Information")]
-    [IsoXmlTag("CorpActnGnlInf")]
-    public required CorporateActionGeneralInformation197 CorporateActionGeneralInformation { get; init; }
-
-    /// <summary>
-    /// Corporate Action Instruction.
-    /// </summary>
-    [DisplayName("Corporate Action Instruction")]
-    [IsoXmlTag("CorpActnInstr")]
-    public CorporateActionOption238? CorporateActionInstruction { get; init; }
-
-    /// <summary>
     /// Instruction Identification.
     /// </summary>
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
     public DocumentIdentification9? InstructionIdentification { get; init; }
-
-    /// <summary>
-    /// Instruction Processing Status.
-    /// </summary>
-    [DisplayName("Instruction Processing Status")]
-    [IsoXmlTag("InstrPrcgSts")]
-    public ValueList<InstructionProcessingStatus60Choice_> InstructionProcessingStatus { get; init; } = [];
 
     /// <summary>
     /// Other Document Identification.
@@ -88,11 +60,39 @@ public record CorporateActionInstructionStatusAdviceV16 : IOuterRecord
     public ValueList<DocumentIdentification33> OtherDocumentIdentification { get; init; } = [];
 
     /// <summary>
+    /// Corporate Action General Information.
+    /// </summary>
+    [DisplayName("Corporate Action General Information")]
+    [IsoXmlTag("CorpActnGnlInf")]
+    public required CorporateActionGeneralInformation197 CorporateActionGeneralInformation { get; init; }
+
+    /// <summary>
+    /// Instruction Processing Status.
+    /// </summary>
+    [DisplayName("Instruction Processing Status")]
+    [IsoXmlTag("InstrPrcgSts")]
+    public ValueList<InstructionProcessingStatus60Choice_> InstructionProcessingStatus { get; init; } = [];
+
+    /// <summary>
+    /// Corporate Action Instruction.
+    /// </summary>
+    [DisplayName("Corporate Action Instruction")]
+    [IsoXmlTag("CorpActnInstr")]
+    public CorporateActionOption238? CorporateActionInstruction { get; init; }
+
+    /// <summary>
     /// Protect Instruction.
     /// </summary>
     [DisplayName("Protect Instruction")]
     [IsoXmlTag("PrtctInstr")]
     public ProtectInstruction2? ProtectInstruction { get; init; }
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public CorporateActionNarrative10? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Supplementary Data.

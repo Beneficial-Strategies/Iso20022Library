@@ -17,32 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Customer9
 {
     /// <summary>
-    /// Address.
+    /// Name.
     /// </summary>
-    [DisplayName("Address")]
-    [IsoXmlTag("Adr")]
-    public Address2? Address { get; init; }
-
-    /// <summary>
-    /// Age.
-    /// </summary>
-    [DisplayName("Age")]
-    [IsoXmlTag("Age")]
-    public Max2NumericText? Age { get; init; }
-
-    /// <summary>
-    /// Contact.
-    /// </summary>
-    [DisplayName("Contact")]
-    [IsoXmlTag("Ctct")]
-    public ContactPersonal1? Contact { get; init; }
-
-    /// <summary>
-    /// Customer File Reference Number.
-    /// </summary>
-    [DisplayName("Customer File Reference Number")]
-    [IsoXmlTag("CstmrFileRefNb")]
-    public Max70Text? CustomerFileReferenceNumber { get; init; }
+    [DisplayName("Name")]
+    [IsoXmlTag("Nm")]
+    public Max70Text? Name { get; init; }
 
     /// <summary>
     /// Identification.
@@ -52,9 +31,30 @@ public record Customer9
     public Credentials3? Identification { get; init; }
 
     /// <summary>
-    /// Name.
+    /// Customer File Reference Number.
     /// </summary>
-    [DisplayName("Name")]
-    [IsoXmlTag("Nm")]
-    public Max70Text? Name { get; init; }
+    [DisplayName("Customer File Reference Number")]
+    [IsoXmlTag("CstmrFileRefNb")]
+    public Max70Text? CustomerFileReferenceNumber { get; init; }
+
+    /// <summary>
+    /// Age.
+    /// </summary>
+    [DisplayName("Age")]
+    [IsoXmlTag("Age")]
+    public Max2NumericText? Age { get; init; }
+
+    /// <summary>
+    /// Address.
+    /// </summary>
+    [DisplayName("Address")]
+    [IsoXmlTag("Adr")]
+    public Address2? Address { get; init; }
+
+    /// <summary>
+    /// Contact.
+    /// </summary>
+    [DisplayName("Contact")]
+    [IsoXmlTag("Ctct")]
+    public ContactPersonal1? Contact { get; init; }
 }

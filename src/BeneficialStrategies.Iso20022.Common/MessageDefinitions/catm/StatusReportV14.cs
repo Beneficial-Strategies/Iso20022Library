@@ -53,16 +53,16 @@ public record StatusReportV14 : IOuterRecord
     public required TMSHeader1 Header { get; init; }
 
     /// <summary>
-    /// Security Trailer.
-    /// </summary>
-    [DisplayName("Security Trailer")]
-    [IsoXmlTag("SctyTrlr")]
-    public ContentInformationType38? SecurityTrailer { get; init; }
-
-    /// <summary>
     /// Status Report.
     /// </summary>
     [DisplayName("Status Report")]
     [IsoXmlTag("StsRpt")]
     public required StatusReport14 StatusReport { get; init; }
+
+    /// <summary>
+    /// Security Trailer.
+    /// </summary>
+    [DisplayName("Security Trailer")]
+    [IsoXmlTag("SctyTrlr")]
+    public ContentInformationType38? SecurityTrailer { get; init; }
 }

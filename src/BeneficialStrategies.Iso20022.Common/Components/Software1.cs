@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Software1
 {
     /// <summary>
+    /// Type.
+    /// </summary>
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public SoftwareType1Code? Type { get; init; }
+
+    /// <summary>
     /// Other Type.
     /// </summary>
     [DisplayName("Other Type")]
@@ -29,13 +36,6 @@ public record Software1
     [DisplayName("Sub Type")]
     [IsoXmlTag("SubTp")]
     public Max35Text? SubType { get; init; }
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public SoftwareType1Code? Type { get; init; }
 
     /// <summary>
     /// Version.

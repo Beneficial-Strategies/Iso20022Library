@@ -17,81 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Action16
 {
     /// <summary>
-    /// Certificate Identification.
+    /// Type.
     /// </summary>
-    [DisplayName("Certificate Identification")]
-    [IsoXmlTag("CertId")]
-    public Max70Text? CertificateIdentification { get; init; }
-
-    /// <summary>
-    /// Contact.
-    /// </summary>
-    [DisplayName("Contact")]
-    [IsoXmlTag("Ctct")]
-    public ContactPersonal1? Contact { get; init; }
-
-    /// <summary>
-    /// Content.
-    /// </summary>
-    [DisplayName("Content")]
-    [IsoXmlTag("Cntt")]
-    public ValueList<AdditionalData1> Content { get; init; } = [];
-
-    /// <summary>
-    /// Destination.
-    /// </summary>
-    [DisplayName("Destination")]
-    [IsoXmlTag("Dstn")]
-    public PartyType34Code? Destination { get; init; }
-
-    /// <summary>
-    /// Destination Address.
-    /// </summary>
-    [DisplayName("Destination Address")]
-    [IsoXmlTag("DstnAdr")]
-    public Max70Text? DestinationAddress { get; init; }
-
-    /// <summary>
-    /// Destination Type.
-    /// </summary>
-    [DisplayName("Destination Type")]
-    [IsoXmlTag("DstnTp")]
-    public ActionDestination1Code? DestinationType { get; init; }
-
-    /// <summary>
-    /// Format.
-    /// </summary>
-    [DisplayName("Format")]
-    [IsoXmlTag("Frmt")]
-    public OutputFormat4Code? Format { get; init; }
-
-    /// <summary>
-    /// Language.
-    /// </summary>
-    [DisplayName("Language")]
-    [IsoXmlTag("Lang")]
-    public ISOMax3ALanguageCode? Language { get; init; }
-
-    /// <summary>
-    /// Other Destination.
-    /// </summary>
-    [DisplayName("Other Destination")]
-    [IsoXmlTag("OthrDstn")]
-    public Max35Text? OtherDestination { get; init; }
-
-    /// <summary>
-    /// Other Destination Type.
-    /// </summary>
-    [DisplayName("Other Destination Type")]
-    [IsoXmlTag("OthrDstnTp")]
-    public Max35Text? OtherDestinationType { get; init; }
-
-    /// <summary>
-    /// Other Format.
-    /// </summary>
-    [DisplayName("Other Format")]
-    [IsoXmlTag("OthrFrmt")]
-    public Max35Text? OtherFormat { get; init; }
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public ActionType14Code? Type { get; init; }
 
     /// <summary>
     /// Other Type.
@@ -101,6 +31,76 @@ public record Action16
     public Max35Text? OtherType { get; init; }
 
     /// <summary>
+    /// Destination.
+    /// </summary>
+    [DisplayName("Destination")]
+    [IsoXmlTag("Dstn")]
+    public PartyType34Code? Destination { get; init; }
+
+    /// <summary>
+    /// Other Destination.
+    /// </summary>
+    [DisplayName("Other Destination")]
+    [IsoXmlTag("OthrDstn")]
+    public Max35Text? OtherDestination { get; init; }
+
+    /// <summary>
+    /// Destination Type.
+    /// </summary>
+    [DisplayName("Destination Type")]
+    [IsoXmlTag("DstnTp")]
+    public ActionDestination1Code? DestinationType { get; init; }
+
+    /// <summary>
+    /// Other Destination Type.
+    /// </summary>
+    [DisplayName("Other Destination Type")]
+    [IsoXmlTag("OthrDstnTp")]
+    public Max35Text? OtherDestinationType { get; init; }
+
+    /// <summary>
+    /// Destination Address.
+    /// </summary>
+    [DisplayName("Destination Address")]
+    [IsoXmlTag("DstnAdr")]
+    public Max70Text? DestinationAddress { get; init; }
+
+    /// <summary>
+    /// Contact.
+    /// </summary>
+    [DisplayName("Contact")]
+    [IsoXmlTag("Ctct")]
+    public ContactPersonal1? Contact { get; init; }
+
+    /// <summary>
+    /// Format.
+    /// </summary>
+    [DisplayName("Format")]
+    [IsoXmlTag("Frmt")]
+    public OutputFormat4Code? Format { get; init; }
+
+    /// <summary>
+    /// Other Format.
+    /// </summary>
+    [DisplayName("Other Format")]
+    [IsoXmlTag("OthrFrmt")]
+    public Max35Text? OtherFormat { get; init; }
+
+    /// <summary>
+    /// Content.
+    /// </summary>
+    [DisplayName("Content")]
+    [IsoXmlTag("Cntt")]
+    public ValueList<AdditionalData1> Content { get; init; } = [];
+
+    /// <summary>
+    /// Language.
+    /// </summary>
+    [DisplayName("Language")]
+    [IsoXmlTag("Lang")]
+    public ISOMax3ALanguageCode? Language { get; init; }
+
+    /// <summary>
     /// Signature.
     /// </summary>
     [DisplayName("Signature")]
@@ -108,9 +108,9 @@ public record Action16
     public Max140Binary? Signature { get; init; }
 
     /// <summary>
-    /// Type.
+    /// Certificate Identification.
     /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public ActionType14Code? Type { get; init; }
+    [DisplayName("Certificate Identification")]
+    [IsoXmlTag("CertId")]
+    public Max70Text? CertificateIdentification { get; init; }
 }

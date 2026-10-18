@@ -50,19 +50,32 @@ public record DTCCCACOSD1V11 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Information to be extended as supplementary data to corporate action general information.
+    /// </summary>
+    [DisplayName("Corporate Action General Information")]
+    [IsoXmlTag("CorpActnGnlInf")]
+    public CorporateActionGeneralInformationSD60? CorporateActionGeneralInformation { get; init; }
+
+    /// <summary>
+    /// Information to be extended as supplementary data to underlying security details.
+    /// </summary>
+    [DisplayName("Underlying Security")]
+    [IsoXmlTag("UndrlygScty")]
+    public FinancialInstrumentAttributesSD21? UnderlyingSecurity { get; init; }
+
+    /// <summary>
+    /// Information to be extended as supplementary data to corporate action details.
+    /// </summary>
+    [DisplayName("Corporate Action Details")]
+    [IsoXmlTag("CorpActnDtls")]
+    public CorporateActionSD20? CorporateActionDetails { get; init; }
+
+    /// <summary>
     /// Information to be extended as supplementary data to account balance.
     /// </summary>
     [DisplayName("Account Balance")]
     [IsoXmlTag("AcctBal")]
     public ValueList<AccountBalanceSD14> AccountBalance { get; init; } = [];
-
-    /// <summary>
-    /// Information to be extended as supplementary data to corporate action confirmation cash movement details.
-    /// </summary>
-    [DisplayName("Corporate Action Confirmation Cash Movement Details")]
-    [IsoXmlTag("CorpActnConfCshMvmntDtls")]
-    public ValueList<CorporateActionConfirmationCashMovementDetailsSD5> CorporateActionConfirmationCashMovementDetails { get; init; } =
-        [];
 
     /// <summary>
     /// Information to be extended as supplementary data to corporate action confirmation details.
@@ -80,18 +93,12 @@ public record DTCCCACOSD1V11 : IOuterRecord
         [];
 
     /// <summary>
-    /// Information to be extended as supplementary data to corporate action details.
+    /// Information to be extended as supplementary data to corporate action confirmation cash movement details.
     /// </summary>
-    [DisplayName("Corporate Action Details")]
-    [IsoXmlTag("CorpActnDtls")]
-    public CorporateActionSD20? CorporateActionDetails { get; init; }
-
-    /// <summary>
-    /// Information to be extended as supplementary data to corporate action general information.
-    /// </summary>
-    [DisplayName("Corporate Action General Information")]
-    [IsoXmlTag("CorpActnGnlInf")]
-    public CorporateActionGeneralInformationSD60? CorporateActionGeneralInformation { get; init; }
+    [DisplayName("Corporate Action Confirmation Cash Movement Details")]
+    [IsoXmlTag("CorpActnConfCshMvmntDtls")]
+    public ValueList<CorporateActionConfirmationCashMovementDetailsSD5> CorporateActionConfirmationCashMovementDetails { get; init; } =
+        [];
 
     /// <summary>
     /// Information to be extended as supplementary data to corporate action option details.
@@ -99,11 +106,4 @@ public record DTCCCACOSD1V11 : IOuterRecord
     [DisplayName("Option Transaction Details")]
     [IsoXmlTag("OptnTxDtls")]
     public ValueList<OptionTransactionSD6> OptionTransactionDetails { get; init; } = [];
-
-    /// <summary>
-    /// Information to be extended as supplementary data to underlying security details.
-    /// </summary>
-    [DisplayName("Underlying Security")]
-    [IsoXmlTag("UndrlygScty")]
-    public FinancialInstrumentAttributesSD21? UnderlyingSecurity { get; init; }
 }

@@ -17,6 +17,27 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record FinancialReconciliation3
 {
     /// <summary>
+    /// Impact.
+    /// </summary>
+    [DisplayName("Impact")]
+    [IsoXmlTag("Impct")]
+    public required ReconciliationImpact1Code Impact { get; init; }
+
+    /// <summary>
+    /// Type.
+    /// </summary>
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public required ReconciliationCategory1Code Type { get; init; }
+
+    /// <summary>
+    /// Other Type.
+    /// </summary>
+    [DisplayName("Other Type")]
+    [IsoXmlTag("OthrTp")]
+    public Max35Text? OtherType { get; init; }
+
+    /// <summary>
     /// Amount.
     /// </summary>
     [DisplayName("Amount")]
@@ -29,25 +50,4 @@ public record FinancialReconciliation3
     [DisplayName("Count")]
     [IsoXmlTag("Cnt")]
     public required Number Count { get; init; }
-
-    /// <summary>
-    /// Impact.
-    /// </summary>
-    [DisplayName("Impact")]
-    [IsoXmlTag("Impct")]
-    public required ReconciliationImpact1Code Impact { get; init; }
-
-    /// <summary>
-    /// Other Type.
-    /// </summary>
-    [DisplayName("Other Type")]
-    [IsoXmlTag("OthrTp")]
-    public Max35Text? OtherType { get; init; }
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public required ReconciliationCategory1Code Type { get; init; }
 }

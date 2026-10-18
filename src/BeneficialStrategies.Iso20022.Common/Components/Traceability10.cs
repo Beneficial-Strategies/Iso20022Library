@@ -17,6 +17,27 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Traceability10
 {
     /// <summary>
+    /// Identification.
+    /// </summary>
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public required Max35Text Identification { get; init; }
+
+    /// <summary>
+    /// Type.
+    /// </summary>
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public PartyType17Code? Type { get; init; }
+
+    /// <summary>
+    /// Other Type.
+    /// </summary>
+    [DisplayName("Other Type")]
+    [IsoXmlTag("OthrTp")]
+    public Max35Text? OtherType { get; init; }
+
+    /// <summary>
     /// Assigner.
     /// </summary>
     [DisplayName("Assigner")]
@@ -31,6 +52,13 @@ public record Traceability10
     public ISOMax3ACountryCode? Country { get; init; }
 
     /// <summary>
+    /// Short Name.
+    /// </summary>
+    [DisplayName("Short Name")]
+    [IsoXmlTag("ShrtNm")]
+    public Max35Text? ShortName { get; init; }
+
+    /// <summary>
     /// Date Time In.
     /// </summary>
     [DisplayName("Date Time In")]
@@ -43,32 +71,4 @@ public record Traceability10
     [DisplayName("Date Time Out")]
     [IsoXmlTag("DtTmOut")]
     public ISODateTime? DateTimeOut { get; init; }
-
-    /// <summary>
-    /// Identification.
-    /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public required Max35Text Identification { get; init; }
-
-    /// <summary>
-    /// Other Type.
-    /// </summary>
-    [DisplayName("Other Type")]
-    [IsoXmlTag("OthrTp")]
-    public Max35Text? OtherType { get; init; }
-
-    /// <summary>
-    /// Short Name.
-    /// </summary>
-    [DisplayName("Short Name")]
-    [IsoXmlTag("ShrtNm")]
-    public Max35Text? ShortName { get; init; }
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public PartyType17Code? Type { get; init; }
 }

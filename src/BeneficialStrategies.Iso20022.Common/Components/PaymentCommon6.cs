@@ -17,39 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PaymentCommon6
 {
     /// <summary>
-    /// Common Status.
-    /// </summary>
-    [DisplayName("Common Status")]
-    [IsoXmlTag("CmonSts")]
-    public ValueList<PaymentStatus6> CommonStatus { get; init; } = [];
-
-    /// <summary>
-    /// Credit Debit Indicator.
-    /// </summary>
-    [DisplayName("Credit Debit Indicator")]
-    [IsoXmlTag("CdtDbtInd")]
-    public CreditDebitCode? CreditDebitIndicator { get; init; }
-
-    /// <summary>
-    /// Entry Date.
-    /// </summary>
-    [DisplayName("Entry Date")]
-    [IsoXmlTag("NtryDt")]
-    public DateAndDateTime2Choice_? EntryDate { get; init; }
-
-    /// <summary>
     /// Payment From.
     /// </summary>
     [DisplayName("Payment From")]
     [IsoXmlTag("PmtFr")]
     public System3? PaymentFrom { get; init; }
-
-    /// <summary>
-    /// Payment Method.
-    /// </summary>
-    [DisplayName("Payment Method")]
-    [IsoXmlTag("PmtMtd")]
-    public PaymentOrigin1Choice_? PaymentMethod { get; init; }
 
     /// <summary>
     /// Payment To.
@@ -59,9 +31,37 @@ public record PaymentCommon6
     public System3? PaymentTo { get; init; }
 
     /// <summary>
+    /// Common Status.
+    /// </summary>
+    [DisplayName("Common Status")]
+    [IsoXmlTag("CmonSts")]
+    public ValueList<PaymentStatus6> CommonStatus { get; init; } = [];
+
+    /// <summary>
     /// Requested Execution Date.
     /// </summary>
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
     public DateAndDateTime2Choice_? RequestedExecutionDate { get; init; }
+
+    /// <summary>
+    /// Entry Date.
+    /// </summary>
+    [DisplayName("Entry Date")]
+    [IsoXmlTag("NtryDt")]
+    public DateAndDateTime2Choice_? EntryDate { get; init; }
+
+    /// <summary>
+    /// Credit Debit Indicator.
+    /// </summary>
+    [DisplayName("Credit Debit Indicator")]
+    [IsoXmlTag("CdtDbtInd")]
+    public CreditDebitCode? CreditDebitIndicator { get; init; }
+
+    /// <summary>
+    /// Payment Method.
+    /// </summary>
+    [DisplayName("Payment Method")]
+    [IsoXmlTag("PmtMtd")]
+    public PaymentOrigin1Choice_? PaymentMethod { get; init; }
 }

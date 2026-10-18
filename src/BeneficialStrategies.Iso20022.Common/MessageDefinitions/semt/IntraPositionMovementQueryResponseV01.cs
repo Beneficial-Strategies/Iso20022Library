@@ -46,13 +46,6 @@ public record IntraPositionMovementQueryResponseV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Movements.
-    /// </summary>
-    [DisplayName("Movements")]
-    [IsoXmlTag("Mvmnts")]
-    public ValueList<IntraPositionMovements6> Movements { get; init; } = [];
-
-    /// <summary>
     /// Pagination.
     /// </summary>
     [DisplayName("Pagination")]
@@ -65,4 +58,11 @@ public record IntraPositionMovementQueryResponseV01 : IOuterRecord
     [DisplayName("Report General Details")]
     [IsoXmlTag("RptGnlDtls")]
     public required IntraPositionReport4 ReportGeneralDetails { get; init; }
+
+    /// <summary>
+    /// Movements.
+    /// </summary>
+    [DisplayName("Movements")]
+    [IsoXmlTag("Mvmnts")]
+    public ValueList<IntraPositionMovements6> Movements { get; init; } = [];
 }

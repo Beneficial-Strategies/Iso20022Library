@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Transaction161
 {
     /// <summary>
-    /// Account Owner Leg Identification.
-    /// </summary>
-    [DisplayName("Account Owner Leg Identification")]
-    [IsoXmlTag("AcctOwnrLegId")]
-    public Max35Text? AccountOwnerLegIdentification { get; init; }
-
-    /// <summary>
     /// Account Owner Transaction Identification.
     /// </summary>
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
     public required Max35Text AccountOwnerTransactionIdentification { get; init; }
-
-    /// <summary>
-    /// Account Servicer Leg Identification.
-    /// </summary>
-    [DisplayName("Account Servicer Leg Identification")]
-    [IsoXmlTag("AcctSvcrLegId")]
-    public Max35Text? AccountServicerLegIdentification { get; init; }
 
     /// <summary>
     /// Account Servicer Transaction Identification.
@@ -45,25 +31,46 @@ public record Transaction161
     public Max35Text? AccountServicerTransactionIdentification { get; init; }
 
     /// <summary>
-    /// Client Collateral Instruction Identification.
+    /// Market Infrastructure Transaction Identification.
     /// </summary>
-    [DisplayName("Client Collateral Instruction Identification")]
-    [IsoXmlTag("ClntCollInstrId")]
-    public Max35Text? ClientCollateralInstructionIdentification { get; init; }
+    [DisplayName("Market Infrastructure Transaction Identification")]
+    [IsoXmlTag("MktInfrstrctrTxId")]
+    public Max35Text? MarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
-    /// Client Reference.
+    /// Counterparty Market Infrastructure Transaction Identification.
     /// </summary>
-    [DisplayName("Client Reference")]
-    [IsoXmlTag("ClntRef")]
-    public AdditionalReference10? ClientReference { get; init; }
+    [DisplayName("Counterparty Market Infrastructure Transaction Identification")]
+    [IsoXmlTag("CtrPtyMktInfrstrctrTxId")]
+    public Max35Text? CounterpartyMarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
-    /// Client Triparty Collateral Transaction Identification.
+    /// Processor Transaction Identification.
     /// </summary>
-    [DisplayName("Client Triparty Collateral Transaction Identification")]
-    [IsoXmlTag("ClntTrptyCollTxId")]
-    public Max35Text? ClientTripartyCollateralTransactionIdentification { get; init; }
+    [DisplayName("Processor Transaction Identification")]
+    [IsoXmlTag("PrcrTxId")]
+    public Max35Text? ProcessorTransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Trade Identification.
+    /// </summary>
+    [DisplayName("Trade Identification")]
+    [IsoXmlTag("TradId")]
+    public Max35Text? TradeIdentification { get; init; }
+
+    /// <summary>
+    /// Unique Transaction Identifier.
+    /// </summary>
+    [DisplayName("Unique Transaction Identifier")]
+    [IsoXmlTag("UnqTxIdr")]
+    public UTIIdentifier? UniqueTransactionIdentifier { get; init; }
+
+    /// <summary>
+    /// Pool Identification.
+    /// </summary>
+    [DisplayName("Pool Identification")]
+    [IsoXmlTag("PoolId")]
+    public Max35Text? PoolIdentification { get; init; }
 
     /// <summary>
     /// Common Identification.
@@ -80,60 +87,25 @@ public record Transaction161
     public Max35Text? CorporateActionEventIdentification { get; init; }
 
     /// <summary>
-    /// Counterparty Market Infrastructure Transaction Identification.
+    /// Triparty Agent Service Provider Collateral Transaction Identification.
     /// </summary>
-    [DisplayName("Counterparty Market Infrastructure Transaction Identification")]
-    [IsoXmlTag("CtrPtyMktInfrstrctrTxId")]
-    public Max35Text? CounterpartyMarketInfrastructureTransactionIdentification { get; init; }
+    [DisplayName("Triparty Agent Service Provider Collateral Transaction Identification")]
+    [IsoXmlTag("TrptyAgtSvcPrvdrCollTxId")]
+    public Max35Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; }
 
     /// <summary>
-    /// Market Infrastructure Transaction Identification.
+    /// Client Triparty Collateral Transaction Identification.
     /// </summary>
-    [DisplayName("Market Infrastructure Transaction Identification")]
-    [IsoXmlTag("MktInfrstrctrTxId")]
-    public Max35Text? MarketInfrastructureTransactionIdentification { get; init; }
+    [DisplayName("Client Triparty Collateral Transaction Identification")]
+    [IsoXmlTag("ClntTrptyCollTxId")]
+    public Max35Text? ClientTripartyCollateralTransactionIdentification { get; init; }
 
     /// <summary>
-    /// Master Reference.
+    /// Client Collateral Instruction Identification.
     /// </summary>
-    [DisplayName("Master Reference")]
-    [IsoXmlTag("MstrRef")]
-    public Max35Text? MasterReference { get; init; }
-
-    /// <summary>
-    /// Pool Identification.
-    /// </summary>
-    [DisplayName("Pool Identification")]
-    [IsoXmlTag("PoolId")]
-    public Max35Text? PoolIdentification { get; init; }
-
-    /// <summary>
-    /// Processor Transaction Identification.
-    /// </summary>
-    [DisplayName("Processor Transaction Identification")]
-    [IsoXmlTag("PrcrTxId")]
-    public Max35Text? ProcessorTransactionIdentification { get; init; }
-
-    /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Trade Identification.
-    /// </summary>
-    [DisplayName("Trade Identification")]
-    [IsoXmlTag("TradId")]
-    public Max35Text? TradeIdentification { get; init; }
-
-    /// <summary>
-    /// Transaction Details.
-    /// </summary>
-    [DisplayName("Transaction Details")]
-    [IsoXmlTag("TxDtls")]
-    public TransactionDetails169? TransactionDetails { get; init; }
+    [DisplayName("Client Collateral Instruction Identification")]
+    [IsoXmlTag("ClntCollInstrId")]
+    public Max35Text? ClientCollateralInstructionIdentification { get; init; }
 
     /// <summary>
     /// Triparty Agent Service Provider Collateral Instruction Identification.
@@ -143,16 +115,44 @@ public record Transaction161
     public Max35Text? TripartyAgentServiceProviderCollateralInstructionIdentification { get; init; }
 
     /// <summary>
-    /// Triparty Agent Service Provider Collateral Transaction Identification.
+    /// Master Reference.
     /// </summary>
-    [DisplayName("Triparty Agent Service Provider Collateral Transaction Identification")]
-    [IsoXmlTag("TrptyAgtSvcPrvdrCollTxId")]
-    public Max35Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; }
+    [DisplayName("Master Reference")]
+    [IsoXmlTag("MstrRef")]
+    public Max35Text? MasterReference { get; init; }
 
     /// <summary>
-    /// Unique Transaction Identifier.
+    /// Client Reference.
     /// </summary>
-    [DisplayName("Unique Transaction Identifier")]
-    [IsoXmlTag("UnqTxIdr")]
-    public UTIIdentifier? UniqueTransactionIdentifier { get; init; }
+    [DisplayName("Client Reference")]
+    [IsoXmlTag("ClntRef")]
+    public AdditionalReference10? ClientReference { get; init; }
+
+    /// <summary>
+    /// Account Owner Leg Identification.
+    /// </summary>
+    [DisplayName("Account Owner Leg Identification")]
+    [IsoXmlTag("AcctOwnrLegId")]
+    public Max35Text? AccountOwnerLegIdentification { get; init; }
+
+    /// <summary>
+    /// Account Servicer Leg Identification.
+    /// </summary>
+    [DisplayName("Account Servicer Leg Identification")]
+    [IsoXmlTag("AcctSvcrLegId")]
+    public Max35Text? AccountServicerLegIdentification { get; init; }
+
+    /// <summary>
+    /// Transaction Details.
+    /// </summary>
+    [DisplayName("Transaction Details")]
+    [IsoXmlTag("TxDtls")]
+    public TransactionDetails169? TransactionDetails { get; init; }
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

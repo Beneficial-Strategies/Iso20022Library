@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Cheque20
 {
     /// <summary>
-    /// Amount.
+    /// Instruction Identification.
     /// </summary>
-    [DisplayName("Amount")]
-    [IsoXmlTag("Amt")]
-    public required ActiveCurrencyAndAmount Amount { get; init; }
+    [DisplayName("Instruction Identification")]
+    [IsoXmlTag("InstrId")]
+    public Max35Text? InstructionIdentification { get; init; }
 
     /// <summary>
-    /// Cheque Cancellation Or Stop Reason.
+    /// Original Instruction Identification.
     /// </summary>
-    [DisplayName("Cheque Cancellation Or Stop Reason")]
-    [IsoXmlTag("ChqCxlOrStopRsn")]
-    public ChequeCancellationReason1? ChequeCancellationOrStopReason { get; init; }
+    [DisplayName("Original Instruction Identification")]
+    [IsoXmlTag("OrgnlInstrId")]
+    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Cheque Number.
@@ -36,6 +36,34 @@ public record Cheque20
     [DisplayName("Cheque Number")]
     [IsoXmlTag("ChqNb")]
     public required Max35Text ChequeNumber { get; init; }
+
+    /// <summary>
+    /// Issue Date.
+    /// </summary>
+    [DisplayName("Issue Date")]
+    [IsoXmlTag("IsseDt")]
+    public required ISODate IssueDate { get; init; }
+
+    /// <summary>
+    /// Stale Date.
+    /// </summary>
+    [DisplayName("Stale Date")]
+    [IsoXmlTag("StlDt")]
+    public ISODate? StaleDate { get; init; }
+
+    /// <summary>
+    /// Amount.
+    /// </summary>
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    public required ActiveCurrencyAndAmount Amount { get; init; }
+
+    /// <summary>
+    /// Effective Date.
+    /// </summary>
+    [DisplayName("Effective Date")]
+    [IsoXmlTag("FctvDt")]
+    public DateAndDateTime2Choice_? EffectiveDate { get; init; }
 
     /// <summary>
     /// Drawer Agent.
@@ -52,34 +80,6 @@ public record Cheque20
     public CashAccount40? DrawerAgentAccount { get; init; }
 
     /// <summary>
-    /// Effective Date.
-    /// </summary>
-    [DisplayName("Effective Date")]
-    [IsoXmlTag("FctvDt")]
-    public DateAndDateTime2Choice_? EffectiveDate { get; init; }
-
-    /// <summary>
-    /// Instruction Identification.
-    /// </summary>
-    [DisplayName("Instruction Identification")]
-    [IsoXmlTag("InstrId")]
-    public Max35Text? InstructionIdentification { get; init; }
-
-    /// <summary>
-    /// Issue Date.
-    /// </summary>
-    [DisplayName("Issue Date")]
-    [IsoXmlTag("IsseDt")]
-    public required ISODate IssueDate { get; init; }
-
-    /// <summary>
-    /// Original Instruction Identification.
-    /// </summary>
-    [DisplayName("Original Instruction Identification")]
-    [IsoXmlTag("OrgnlInstrId")]
-    public Max35Text? OriginalInstructionIdentification { get; init; }
-
-    /// <summary>
     /// Payee.
     /// </summary>
     [DisplayName("Payee")]
@@ -94,9 +94,9 @@ public record Cheque20
     public CashAccount40? PayeeAccount { get; init; }
 
     /// <summary>
-    /// Stale Date.
+    /// Cheque Cancellation Or Stop Reason.
     /// </summary>
-    [DisplayName("Stale Date")]
-    [IsoXmlTag("StlDt")]
-    public ISODate? StaleDate { get; init; }
+    [DisplayName("Cheque Cancellation Or Stop Reason")]
+    [IsoXmlTag("ChqCxlOrStopRsn")]
+    public ChequeCancellationReason1? ChequeCancellationOrStopReason { get; init; }
 }

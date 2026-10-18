@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMTransactionAmounts10
 {
     /// <summary>
+    /// Media Type.
+    /// </summary>
+    [DisplayName("Media Type")]
+    [IsoXmlTag("MdiaTp")]
+    public required ATMMediaType4Code MediaType { get; init; }
+
+    /// <summary>
     /// Currency.
     /// </summary>
     [DisplayName("Currency")]
@@ -24,11 +31,11 @@ public record ATMTransactionAmounts10
     public ActiveCurrencyCode? Currency { get; init; }
 
     /// <summary>
-    /// Display Flag.
+    /// Minimum Number.
     /// </summary>
-    [DisplayName("Display Flag")]
-    [IsoXmlTag("DispFlg")]
-    public TrueFalseIndicator? DisplayFlag { get; init; }
+    [DisplayName("Minimum Number")]
+    [IsoXmlTag("MinNb")]
+    public Number? MinimumNumber { get; init; }
 
     /// <summary>
     /// Maximum Number.
@@ -38,16 +45,9 @@ public record ATMTransactionAmounts10
     public Number? MaximumNumber { get; init; }
 
     /// <summary>
-    /// Media Type.
+    /// Display Flag.
     /// </summary>
-    [DisplayName("Media Type")]
-    [IsoXmlTag("MdiaTp")]
-    public required ATMMediaType4Code MediaType { get; init; }
-
-    /// <summary>
-    /// Minimum Number.
-    /// </summary>
-    [DisplayName("Minimum Number")]
-    [IsoXmlTag("MinNb")]
-    public Number? MinimumNumber { get; init; }
+    [DisplayName("Display Flag")]
+    [IsoXmlTag("DispFlg")]
+    public TrueFalseIndicator? DisplayFlag { get; init; }
 }

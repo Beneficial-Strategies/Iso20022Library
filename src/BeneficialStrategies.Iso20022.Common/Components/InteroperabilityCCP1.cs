@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record InteroperabilityCCP1
 {
     /// <summary>
-    /// Asset Holding.
-    /// </summary>
-    [DisplayName("Asset Holding")]
-    [IsoXmlTag("AsstHldg")]
-    public ValueList<AssetHolding3> AssetHolding { get; init; } = [];
-
-    /// <summary>
-    /// Gross Notional Amount.
-    /// </summary>
-    [DisplayName("Gross Notional Amount")]
-    [IsoXmlTag("GrssNtnlAmt")]
-    public ValueList<ActiveCurrencyAnd24Amount> GrossNotionalAmount { get; init; } = [];
-
-    /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
@@ -50,4 +36,18 @@ public record InteroperabilityCCP1
     [DisplayName("Trades Cleared")]
     [IsoXmlTag("TrdsClrd")]
     public NonNegativeNumber? TradesCleared { get; init; }
+
+    /// <summary>
+    /// Gross Notional Amount.
+    /// </summary>
+    [DisplayName("Gross Notional Amount")]
+    [IsoXmlTag("GrssNtnlAmt")]
+    public ValueList<ActiveCurrencyAnd24Amount> GrossNotionalAmount { get; init; } = [];
+
+    /// <summary>
+    /// Asset Holding.
+    /// </summary>
+    [DisplayName("Asset Holding")]
+    [IsoXmlTag("AsstHldg")]
+    public ValueList<AssetHolding3> AssetHolding { get; init; } = [];
 }

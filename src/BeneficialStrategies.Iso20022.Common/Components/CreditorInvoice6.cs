@@ -17,11 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CreditorInvoice6
 {
     /// <summary>
-    /// Activation Request Delivery Party.
+    /// Limited Presentment Indicator.
     /// </summary>
-    [DisplayName("Activation Request Delivery Party")]
-    [IsoXmlTag("ActvtnReqDlvryPty")]
-    public required RTPPartyIdentification2 ActivationRequestDeliveryParty { get; init; }
+    [DisplayName("Limited Presentment Indicator")]
+    [IsoXmlTag("LtdPresntmntInd")]
+    public required TrueFalseIndicator LimitedPresentmentIndicator { get; init; }
+
+    /// <summary>
+    /// Customer Identification Type.
+    /// </summary>
+    [DisplayName("Customer Identification Type")]
+    [IsoXmlTag("CstmrIdTp")]
+    public CustomerTypeRequest2? CustomerIdentificationType { get; init; }
 
     /// <summary>
     /// Contract Format Type.
@@ -45,16 +52,9 @@ public record CreditorInvoice6
     public Max500Text? CreditorInstruction { get; init; }
 
     /// <summary>
-    /// Customer Identification Type.
+    /// Activation Request Delivery Party.
     /// </summary>
-    [DisplayName("Customer Identification Type")]
-    [IsoXmlTag("CstmrIdTp")]
-    public CustomerTypeRequest2? CustomerIdentificationType { get; init; }
-
-    /// <summary>
-    /// Limited Presentment Indicator.
-    /// </summary>
-    [DisplayName("Limited Presentment Indicator")]
-    [IsoXmlTag("LtdPresntmntInd")]
-    public required TrueFalseIndicator LimitedPresentmentIndicator { get; init; }
+    [DisplayName("Activation Request Delivery Party")]
+    [IsoXmlTag("ActvtnReqDlvryPty")]
+    public required RTPPartyIdentification2 ActivationRequestDeliveryParty { get; init; }
 }

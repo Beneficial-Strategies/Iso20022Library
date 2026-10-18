@@ -58,32 +58,11 @@ public record RedemptionOrderConfirmationV05 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Information provided when the message is a copy of a previous message.
-    /// </summary>
-    [DisplayName("Copy Details")]
-    [IsoXmlTag("CpyDtls")]
-    public CopyInformation5? CopyDetails { get; init; }
-
-    /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
-    [DisplayName("Extension")]
-    [IsoXmlTag("Xtnsn")]
-    public ValueList<Extension1> Extension { get; init; } = [];
-
-    /// <summary>
     /// Reference that uniquely identifies the message from a business application standpoint.
     /// </summary>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     public required MessageIdentification1 MessageIdentification { get; init; }
-
-    /// <summary>
-    /// General information related to the execution of investment fund orders.
-    /// </summary>
-    [DisplayName("Multiple Execution Details")]
-    [IsoXmlTag("MltplExctnDtls")]
-    public required RedemptionMultipleExecution6 MultipleExecutionDetails { get; init; }
 
     /// <summary>
     /// Collective reference identifying a set of messages.
@@ -105,4 +84,25 @@ public record RedemptionOrderConfirmationV05 : IOuterRecord
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
     public AdditionalReference10? RelatedReference { get; init; }
+
+    /// <summary>
+    /// General information related to the execution of investment fund orders.
+    /// </summary>
+    [DisplayName("Multiple Execution Details")]
+    [IsoXmlTag("MltplExctnDtls")]
+    public required RedemptionMultipleExecution6 MultipleExecutionDetails { get; init; }
+
+    /// <summary>
+    /// Information provided when the message is a copy of a previous message.
+    /// </summary>
+    [DisplayName("Copy Details")]
+    [IsoXmlTag("CpyDtls")]
+    public CopyInformation5? CopyDetails { get; init; }
+
+    /// <summary>
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// </summary>
+    [DisplayName("Extension")]
+    [IsoXmlTag("Xtnsn")]
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

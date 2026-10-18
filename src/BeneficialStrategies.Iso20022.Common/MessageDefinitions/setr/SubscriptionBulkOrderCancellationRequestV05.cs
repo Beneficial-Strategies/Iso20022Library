@@ -57,34 +57,11 @@ public record SubscriptionBulkOrderCancellationRequestV05 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Information provided when the message is a copy of a previous message.
-    /// </summary>
-    [DisplayName("Copy Details")]
-    [IsoXmlTag("CpyDtls")]
-    public CopyInformation5? CopyDetails { get; init; }
-
-    /// <summary>
-    /// Reference assigned to a set of orders or trades in order to link them together.
-    /// </summary>
-    [DisplayName("Master Reference")]
-    [IsoXmlTag("MstrRef")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public Max35Text? MasterReference { get; init; }
-
-    /// <summary>
     /// Reference that uniquely identifies the message from a business application standpoint.
     /// </summary>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     public required MessageIdentification1 MessageIdentification { get; init; }
-
-    /// <summary>
-    /// Identification of the individual order to be cancelled.
-    /// </summary>
-    [DisplayName("Order References")]
-    [IsoXmlTag("OrdrRefs")]
-    public ValueList<InvestmentFundOrder13> OrderReferences { get; init; } = [];
 
     /// <summary>
     /// Collective reference identifying a set of messages.
@@ -99,4 +76,27 @@ public record SubscriptionBulkOrderCancellationRequestV05 : IOuterRecord
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
     public AdditionalReference10? PreviousReference { get; init; }
+
+    /// <summary>
+    /// Reference assigned to a set of orders or trades in order to link them together.
+    /// </summary>
+    [DisplayName("Master Reference")]
+    [IsoXmlTag("MstrRef")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public Max35Text? MasterReference { get; init; }
+
+    /// <summary>
+    /// Identification of the individual order to be cancelled.
+    /// </summary>
+    [DisplayName("Order References")]
+    [IsoXmlTag("OrdrRefs")]
+    public ValueList<InvestmentFundOrder13> OrderReferences { get; init; } = [];
+
+    /// <summary>
+    /// Information provided when the message is a copy of a previous message.
+    /// </summary>
+    [DisplayName("Copy Details")]
+    [IsoXmlTag("CpyDtls")]
+    public CopyInformation5? CopyDetails { get; init; }
 }

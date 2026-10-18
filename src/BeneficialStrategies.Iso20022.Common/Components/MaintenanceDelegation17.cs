@@ -17,61 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record MaintenanceDelegation17
 {
     /// <summary>
-    /// Delegation Proof.
-    /// </summary>
-    [DisplayName("Delegation Proof")]
-    [IsoXmlTag("DlgtnProof")]
-    public Max5000Binary? DelegationProof { get; init; }
-
-    /// <summary>
-    /// Delegation Scope Definition.
-    /// </summary>
-    [DisplayName("Delegation Scope Definition")]
-    [IsoXmlTag("DlgtnScpDef")]
-    public Max3000Binary? DelegationScopeDefinition { get; init; }
-
-    /// <summary>
-    /// Delegation Scope Identification.
-    /// </summary>
-    [DisplayName("Delegation Scope Identification")]
-    [IsoXmlTag("DlgtnScpId")]
-    public Max35Text? DelegationScopeIdentification { get; init; }
-
-    /// <summary>
-    /// Delegation Type.
-    /// </summary>
-    [DisplayName("Delegation Type")]
-    [IsoXmlTag("DlgtnTp")]
-    public required TerminalManagementAction3Code DelegationType { get; init; }
-
-    /// <summary>
     /// Maintenance Service.
     /// </summary>
     [DisplayName("Maintenance Service")]
     [IsoXmlTag("MntncSvc")]
     public ValueList<DataSetCategory19Code> MaintenanceService { get; init; } = [];
-
-    /// <summary>
-    /// POI Identification Association.
-    /// </summary>
-    [DisplayName("POI Identification Association")]
-    [IsoXmlTag("POIIdAssoctn")]
-    public ValueList<MaintenanceIdentificationAssociation1> POIIdentificationAssociation { get; init; } =
-        [];
-
-    /// <summary>
-    /// POI Subset.
-    /// </summary>
-    [DisplayName("POI Subset")]
-    [IsoXmlTag("POISubset")]
-    public ValueList<Max35Text> POISubset { get; init; } = [];
-
-    /// <summary>
-    /// Protected Delegation Proof.
-    /// </summary>
-    [DisplayName("Protected Delegation Proof")]
-    [IsoXmlTag("PrtctdDlgtnProof")]
-    public ContentInformationType39? ProtectedDelegationProof { get; init; }
 
     /// <summary>
     /// Response.
@@ -86,4 +36,54 @@ public record MaintenanceDelegation17
     [DisplayName("Response Reason")]
     [IsoXmlTag("RspnRsn")]
     public Max35Text? ResponseReason { get; init; }
+
+    /// <summary>
+    /// Delegation Type.
+    /// </summary>
+    [DisplayName("Delegation Type")]
+    [IsoXmlTag("DlgtnTp")]
+    public required TerminalManagementAction3Code DelegationType { get; init; }
+
+    /// <summary>
+    /// POI Subset.
+    /// </summary>
+    [DisplayName("POI Subset")]
+    [IsoXmlTag("POISubset")]
+    public ValueList<Max35Text> POISubset { get; init; } = [];
+
+    /// <summary>
+    /// Delegation Scope Identification.
+    /// </summary>
+    [DisplayName("Delegation Scope Identification")]
+    [IsoXmlTag("DlgtnScpId")]
+    public Max35Text? DelegationScopeIdentification { get; init; }
+
+    /// <summary>
+    /// Delegation Scope Definition.
+    /// </summary>
+    [DisplayName("Delegation Scope Definition")]
+    [IsoXmlTag("DlgtnScpDef")]
+    public Max3000Binary? DelegationScopeDefinition { get; init; }
+
+    /// <summary>
+    /// Delegation Proof.
+    /// </summary>
+    [DisplayName("Delegation Proof")]
+    [IsoXmlTag("DlgtnProof")]
+    public Max5000Binary? DelegationProof { get; init; }
+
+    /// <summary>
+    /// Protected Delegation Proof.
+    /// </summary>
+    [DisplayName("Protected Delegation Proof")]
+    [IsoXmlTag("PrtctdDlgtnProof")]
+    public ContentInformationType39? ProtectedDelegationProof { get; init; }
+
+    /// <summary>
+    /// POI Identification Association.
+    /// </summary>
+    [DisplayName("POI Identification Association")]
+    [IsoXmlTag("POIIdAssoctn")]
+    public ValueList<MaintenanceIdentificationAssociation1> POIIdentificationAssociation { get; init; } =
+        [];
 }

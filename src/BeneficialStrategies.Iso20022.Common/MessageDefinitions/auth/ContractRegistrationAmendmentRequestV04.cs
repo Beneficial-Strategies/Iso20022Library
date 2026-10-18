@@ -46,18 +46,18 @@ public record ContractRegistrationAmendmentRequestV04 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Contract Registration Amendment.
-    /// </summary>
-    [DisplayName("Contract Registration Amendment")]
-    [IsoXmlTag("CtrctRegnAmdmnt")]
-    public ValueList<RegisteredContract16> ContractRegistrationAmendment { get; init; } = [];
-
-    /// <summary>
     /// Group Header.
     /// </summary>
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required CurrencyControlHeader8 GroupHeader { get; init; }
+
+    /// <summary>
+    /// Contract Registration Amendment.
+    /// </summary>
+    [DisplayName("Contract Registration Amendment")]
+    [IsoXmlTag("CtrctRegnAmdmnt")]
+    public ValueList<RegisteredContract16> ContractRegistrationAmendment { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

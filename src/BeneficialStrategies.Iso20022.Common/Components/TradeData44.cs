@@ -17,32 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TradeData44
 {
     /// <summary>
-    /// Current Settlement Date.
+    /// Originator Reference.
     /// </summary>
-    [DisplayName("Current Settlement Date")]
-    [IsoXmlTag("CurSttlmDt")]
-    public ISODate? CurrentSettlementDate { get; init; }
-
-    /// <summary>
-    /// Current Status Date Time.
-    /// </summary>
-    [DisplayName("Current Status Date Time")]
-    [IsoXmlTag("CurStsDtTm")]
-    public ISODateTime? CurrentStatusDateTime { get; init; }
-
-    /// <summary>
-    /// Matching System Matched Side Reference.
-    /// </summary>
-    [DisplayName("Matching System Matched Side Reference")]
-    [IsoXmlTag("MtchgSysMtchdSdRef")]
-    public Max35Text? MatchingSystemMatchedSideReference { get; init; }
-
-    /// <summary>
-    /// Matching System Matching Reference.
-    /// </summary>
-    [DisplayName("Matching System Matching Reference")]
-    [IsoXmlTag("MtchgSysMtchgRef")]
-    public Max35Text? MatchingSystemMatchingReference { get; init; }
+    [DisplayName("Originator Reference")]
+    [IsoXmlTag("OrgtrRef")]
+    public Max35Text? OriginatorReference { get; init; }
 
     /// <summary>
     /// Matching System Unique Reference.
@@ -52,6 +31,27 @@ public record TradeData44
     public required Max35Text MatchingSystemUniqueReference { get; init; }
 
     /// <summary>
+    /// Matching System Matching Reference.
+    /// </summary>
+    [DisplayName("Matching System Matching Reference")]
+    [IsoXmlTag("MtchgSysMtchgRef")]
+    public Max35Text? MatchingSystemMatchingReference { get; init; }
+
+    /// <summary>
+    /// Matching System Matched Side Reference.
+    /// </summary>
+    [DisplayName("Matching System Matched Side Reference")]
+    [IsoXmlTag("MtchgSysMtchdSdRef")]
+    public Max35Text? MatchingSystemMatchedSideReference { get; init; }
+
+    /// <summary>
+    /// Current Settlement Date.
+    /// </summary>
+    [DisplayName("Current Settlement Date")]
+    [IsoXmlTag("CurSttlmDt")]
+    public ISODate? CurrentSettlementDate { get; init; }
+
+    /// <summary>
     /// New Settlement Date.
     /// </summary>
     [DisplayName("New Settlement Date")]
@@ -59,11 +59,11 @@ public record TradeData44
     public ISODate? NewSettlementDate { get; init; }
 
     /// <summary>
-    /// Originator Reference.
+    /// Current Status Date Time.
     /// </summary>
-    [DisplayName("Originator Reference")]
-    [IsoXmlTag("OrgtrRef")]
-    public Max35Text? OriginatorReference { get; init; }
+    [DisplayName("Current Status Date Time")]
+    [IsoXmlTag("CurStsDtTm")]
+    public ISODateTime? CurrentStatusDateTime { get; init; }
 
     /// <summary>
     /// Product Type.
@@ -73,16 +73,16 @@ public record TradeData44
     public Max35Text? ProductType { get; init; }
 
     /// <summary>
-    /// Regulatory Reporting.
-    /// </summary>
-    [DisplayName("Regulatory Reporting")]
-    [IsoXmlTag("RgltryRptg")]
-    public RegulatoryReporting8? RegulatoryReporting { get; init; }
-
-    /// <summary>
     /// Settlement Session Identifier.
     /// </summary>
     [DisplayName("Settlement Session Identifier")]
     [IsoXmlTag("SttlmSsnIdr")]
     public Exact4AlphaNumericText? SettlementSessionIdentifier { get; init; }
+
+    /// <summary>
+    /// Regulatory Reporting.
+    /// </summary>
+    [DisplayName("Regulatory Reporting")]
+    [IsoXmlTag("RgltryRptg")]
+    public RegulatoryReporting8? RegulatoryReporting { get; init; }
 }

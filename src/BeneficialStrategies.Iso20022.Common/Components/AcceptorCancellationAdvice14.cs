@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AcceptorCancellationAdvice14
 {
     /// <summary>
-    /// Context.
-    /// </summary>
-    [DisplayName("Context")]
-    [IsoXmlTag("Cntxt")]
-    public PaymentContext30? Context { get; init; }
-
-    /// <summary>
     /// Environment.
     /// </summary>
     [DisplayName("Environment")]
     [IsoXmlTag("Envt")]
     public required CardPaymentEnvironment81 Environment { get; init; }
+
+    /// <summary>
+    /// Context.
+    /// </summary>
+    [DisplayName("Context")]
+    [IsoXmlTag("Cntxt")]
+    public PaymentContext30? Context { get; init; }
 
     /// <summary>
     /// Transaction.

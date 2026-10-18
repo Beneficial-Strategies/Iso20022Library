@@ -17,11 +17,46 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TradePartyQueryCriteria7
 {
     /// <summary>
+    /// Operator.
+    /// </summary>
+    [DisplayName("Operator")]
+    [IsoXmlTag("Oprtr")]
+    public required Operation3Code Operator { get; init; }
+
+    /// <summary>
+    /// Reporting Counterparty.
+    /// </summary>
+    [DisplayName("Reporting Counterparty")]
+    [IsoXmlTag("RptgCtrPty")]
+    public TradePartyIdentificationQuery10Choice_? ReportingCounterparty { get; init; }
+
+    /// <summary>
+    /// Other Counterparty.
+    /// </summary>
+    [DisplayName("Other Counterparty")]
+    [IsoXmlTag("OthrCtrPty")]
+    public TradePartyIdentificationQuery10Choice_? OtherCounterparty { get; init; }
+
+    /// <summary>
     /// Beneficiary.
     /// </summary>
     [DisplayName("Beneficiary")]
     [IsoXmlTag("Bnfcry")]
     public TradePartyIdentificationQuery10Choice_? Beneficiary { get; init; }
+
+    /// <summary>
+    /// Entity Responsible For Report.
+    /// </summary>
+    [DisplayName("Entity Responsible For Report")]
+    [IsoXmlTag("NttyRspnsblForRpt")]
+    public TradePartyIdentificationQuery11Choice_? EntityResponsibleForReport { get; init; }
+
+    /// <summary>
+    /// Submitting Agent.
+    /// </summary>
+    [DisplayName("Submitting Agent")]
+    [IsoXmlTag("SubmitgAgt")]
+    public TradePartyIdentificationQuery11Choice_? SubmittingAgent { get; init; }
 
     /// <summary>
     /// Broker.
@@ -43,39 +78,4 @@ public record TradePartyQueryCriteria7
     [DisplayName("Clearing Member")]
     [IsoXmlTag("ClrMmb")]
     public TradePartyIdentificationQuery10Choice_? ClearingMember { get; init; }
-
-    /// <summary>
-    /// Entity Responsible For Report.
-    /// </summary>
-    [DisplayName("Entity Responsible For Report")]
-    [IsoXmlTag("NttyRspnsblForRpt")]
-    public TradePartyIdentificationQuery11Choice_? EntityResponsibleForReport { get; init; }
-
-    /// <summary>
-    /// Operator.
-    /// </summary>
-    [DisplayName("Operator")]
-    [IsoXmlTag("Oprtr")]
-    public required Operation3Code Operator { get; init; }
-
-    /// <summary>
-    /// Other Counterparty.
-    /// </summary>
-    [DisplayName("Other Counterparty")]
-    [IsoXmlTag("OthrCtrPty")]
-    public TradePartyIdentificationQuery10Choice_? OtherCounterparty { get; init; }
-
-    /// <summary>
-    /// Reporting Counterparty.
-    /// </summary>
-    [DisplayName("Reporting Counterparty")]
-    [IsoXmlTag("RptgCtrPty")]
-    public TradePartyIdentificationQuery10Choice_? ReportingCounterparty { get; init; }
-
-    /// <summary>
-    /// Submitting Agent.
-    /// </summary>
-    [DisplayName("Submitting Agent")]
-    [IsoXmlTag("SubmitgAgt")]
-    public TradePartyIdentificationQuery11Choice_? SubmittingAgent { get; init; }
 }

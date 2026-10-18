@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ContractType15
 {
     /// <summary>
-    /// Asset Class.
-    /// </summary>
-    [DisplayName("Asset Class")]
-    [IsoXmlTag("AsstClss")]
-    public ProductType4Code? AssetClass { get; init; }
-
-    /// <summary>
     /// Contract Type.
     /// </summary>
     [DisplayName("Contract Type")]
@@ -31,18 +24,11 @@ public record ContractType15
     public FinancialInstrumentContractType2Code? ContractType { get; init; }
 
     /// <summary>
-    /// Derivative Based On Crypto Asset.
+    /// Asset Class.
     /// </summary>
-    [DisplayName("Derivative Based On Crypto Asset")]
-    [IsoXmlTag("DerivBasedOnCrptAsst")]
-    public TrueFalseIndicator? DerivativeBasedOnCryptoAsset { get; init; }
-
-    /// <summary>
-    /// Place Of Settlement.
-    /// </summary>
-    [DisplayName("Place Of Settlement")]
-    [IsoXmlTag("PlcOfSttlm")]
-    public CountryCode? PlaceOfSettlement { get; init; }
+    [DisplayName("Asset Class")]
+    [IsoXmlTag("AsstClss")]
+    public ProductType4Code? AssetClass { get; init; }
 
     /// <summary>
     /// Product Classification.
@@ -59,6 +45,27 @@ public record ContractType15
     public SecurityIdentification46? ProductIdentification { get; init; }
 
     /// <summary>
+    /// Underlying Instrument.
+    /// </summary>
+    [DisplayName("Underlying Instrument")]
+    [IsoXmlTag("UndrlygInstrm")]
+    public SecurityIdentification41Choice_? UnderlyingInstrument { get; init; }
+
+    /// <summary>
+    /// Underlying Asset Trading Platform Identifier.
+    /// </summary>
+    [DisplayName("Underlying Asset Trading Platform Identifier")]
+    [IsoXmlTag("UndrlygAsstTradgPltfmIdr")]
+    public MICIdentifier? UnderlyingAssetTradingPlatformIdentifier { get; init; }
+
+    /// <summary>
+    /// Underlying Asset Price Source.
+    /// </summary>
+    [DisplayName("Underlying Asset Price Source")]
+    [IsoXmlTag("UndrlygAsstPricSrc")]
+    public Max50Text? UnderlyingAssetPriceSource { get; init; }
+
+    /// <summary>
     /// Settlement Currency.
     /// </summary>
     [DisplayName("Settlement Currency")]
@@ -73,23 +80,16 @@ public record ContractType15
     public CurrencyExchange23? SettlementCurrencySecondLeg { get; init; }
 
     /// <summary>
-    /// Underlying Asset Price Source.
+    /// Place Of Settlement.
     /// </summary>
-    [DisplayName("Underlying Asset Price Source")]
-    [IsoXmlTag("UndrlygAsstPricSrc")]
-    public Max50Text? UnderlyingAssetPriceSource { get; init; }
+    [DisplayName("Place Of Settlement")]
+    [IsoXmlTag("PlcOfSttlm")]
+    public CountryCode? PlaceOfSettlement { get; init; }
 
     /// <summary>
-    /// Underlying Asset Trading Platform Identifier.
+    /// Derivative Based On Crypto Asset.
     /// </summary>
-    [DisplayName("Underlying Asset Trading Platform Identifier")]
-    [IsoXmlTag("UndrlygAsstTradgPltfmIdr")]
-    public MICIdentifier? UnderlyingAssetTradingPlatformIdentifier { get; init; }
-
-    /// <summary>
-    /// Underlying Instrument.
-    /// </summary>
-    [DisplayName("Underlying Instrument")]
-    [IsoXmlTag("UndrlygInstrm")]
-    public SecurityIdentification41Choice_? UnderlyingInstrument { get; init; }
+    [DisplayName("Derivative Based On Crypto Asset")]
+    [IsoXmlTag("DerivBasedOnCrptAsst")]
+    public TrueFalseIndicator? DerivativeBasedOnCryptoAsset { get; init; }
 }

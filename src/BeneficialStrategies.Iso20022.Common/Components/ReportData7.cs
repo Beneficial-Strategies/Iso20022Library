@@ -17,39 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ReportData7
 {
     /// <summary>
-    /// Additional Data.
+    /// Name.
     /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
-
-    /// <summary>
-    /// Continuation Indicator.
-    /// </summary>
-    [DisplayName("Continuation Indicator")]
-    [IsoXmlTag("ConttnInd")]
-    public TrueFalseIndicator? ContinuationIndicator { get; init; }
-
-    /// <summary>
-    /// Date.
-    /// </summary>
-    [DisplayName("Date")]
-    [IsoXmlTag("Dt")]
-    public ISODate? Date { get; init; }
-
-    /// <summary>
-    /// Format.
-    /// </summary>
-    [DisplayName("Format")]
-    [IsoXmlTag("Frmt")]
-    public OutputFormat5Code? Format { get; init; }
-
-    /// <summary>
-    /// Frequency.
-    /// </summary>
-    [DisplayName("Frequency")]
-    [IsoXmlTag("Frqcy")]
-    public Frequency17Code? Frequency { get; init; }
+    [DisplayName("Name")]
+    [IsoXmlTag("Nm")]
+    public Max140Text? Name { get; init; }
 
     /// <summary>
     /// Identification.
@@ -59,20 +31,6 @@ public record ReportData7
     public Max140Text? Identification { get; init; }
 
     /// <summary>
-    /// Name.
-    /// </summary>
-    [DisplayName("Name")]
-    [IsoXmlTag("Nm")]
-    public Max140Text? Name { get; init; }
-
-    /// <summary>
-    /// Other Format.
-    /// </summary>
-    [DisplayName("Other Format")]
-    [IsoXmlTag("OthrFrmt")]
-    public Max35Text? OtherFormat { get; init; }
-
-    /// <summary>
     /// Qualifier.
     /// </summary>
     [DisplayName("Qualifier")]
@@ -80,11 +38,11 @@ public record ReportData7
     public Max70Text? Qualifier { get; init; }
 
     /// <summary>
-    /// Sequence.
+    /// Date.
     /// </summary>
-    [DisplayName("Sequence")]
-    [IsoXmlTag("Seq")]
-    public Max5NumericText? Sequence { get; init; }
+    [DisplayName("Date")]
+    [IsoXmlTag("Dt")]
+    public ISODate? Date { get; init; }
 
     /// <summary>
     /// Time.
@@ -94,9 +52,51 @@ public record ReportData7
     public ISOTime? Time { get; init; }
 
     /// <summary>
+    /// Sequence.
+    /// </summary>
+    [DisplayName("Sequence")]
+    [IsoXmlTag("Seq")]
+    public Max5NumericText? Sequence { get; init; }
+
+    /// <summary>
     /// Total Occurrences.
     /// </summary>
     [DisplayName("Total Occurrences")]
     [IsoXmlTag("TtlOcrncs")]
     public Max5NumericText? TotalOccurrences { get; init; }
+
+    /// <summary>
+    /// Frequency.
+    /// </summary>
+    [DisplayName("Frequency")]
+    [IsoXmlTag("Frqcy")]
+    public Frequency17Code? Frequency { get; init; }
+
+    /// <summary>
+    /// Continuation Indicator.
+    /// </summary>
+    [DisplayName("Continuation Indicator")]
+    [IsoXmlTag("ConttnInd")]
+    public TrueFalseIndicator? ContinuationIndicator { get; init; }
+
+    /// <summary>
+    /// Additional Data.
+    /// </summary>
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
+
+    /// <summary>
+    /// Format.
+    /// </summary>
+    [DisplayName("Format")]
+    [IsoXmlTag("Frmt")]
+    public OutputFormat5Code? Format { get; init; }
+
+    /// <summary>
+    /// Other Format.
+    /// </summary>
+    [DisplayName("Other Format")]
+    [IsoXmlTag("OthrFrmt")]
+    public Max35Text? OtherFormat { get; init; }
 }

@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record FinancialInstrumentDetails46
 {
     /// <summary>
-    /// Closing Balance.
-    /// </summary>
-    [DisplayName("Closing Balance")]
-    [IsoXmlTag("ClsgBal")]
-    public ClosingBalance5? ClosingBalance { get; init; }
-
-    /// <summary>
     /// Financial Instrument Identification.
     /// </summary>
     [DisplayName("Financial Instrument Identification")]
@@ -38,13 +31,6 @@ public record FinancialInstrumentDetails46
     public FinancialInstrument72? InvestmentFundsFinancialInstrumentAttributes { get; init; }
 
     /// <summary>
-    /// Opening Balance.
-    /// </summary>
-    [DisplayName("Opening Balance")]
-    [IsoXmlTag("OpngBal")]
-    public OpeningBalance5? OpeningBalance { get; init; }
-
-    /// <summary>
     /// Price Details.
     /// </summary>
     [DisplayName("Price Details")]
@@ -57,6 +43,20 @@ public record FinancialInstrumentDetails46
     [DisplayName("Safekeeping Place")]
     [IsoXmlTag("SfkpgPlc")]
     public SafeKeepingPlace5? SafekeepingPlace { get; init; }
+
+    /// <summary>
+    /// Opening Balance.
+    /// </summary>
+    [DisplayName("Opening Balance")]
+    [IsoXmlTag("OpngBal")]
+    public OpeningBalance5? OpeningBalance { get; init; }
+
+    /// <summary>
+    /// Closing Balance.
+    /// </summary>
+    [DisplayName("Closing Balance")]
+    [IsoXmlTag("ClsgBal")]
+    public ClosingBalance5? ClosingBalance { get; init; }
 
     /// <summary>
     /// Transaction.

@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CashOption112
 {
     /// <summary>
-    /// Account.
-    /// </summary>
-    [DisplayName("Account")]
-    [IsoXmlTag("Acct")]
-    public Account12Choice_? Account { get; init; }
-
-    /// <summary>
     /// Credit Debit Indicator.
     /// </summary>
     [DisplayName("Credit Debit Indicator")]
@@ -31,18 +24,11 @@ public record CashOption112
     public required CreditDebitCode CreditDebitIndicator { get; init; }
 
     /// <summary>
-    /// Original Posting Date.
+    /// Account.
     /// </summary>
-    [DisplayName("Original Posting Date")]
-    [IsoXmlTag("OrgnlPstngDt")]
-    public DateAndDateTime2Choice_? OriginalPostingDate { get; init; }
-
-    /// <summary>
-    /// Posting Amount.
-    /// </summary>
-    [DisplayName("Posting Amount")]
-    [IsoXmlTag("PstngAmt")]
-    public required RestrictedFINActiveCurrencyAndAmount PostingAmount { get; init; }
+    [DisplayName("Account")]
+    [IsoXmlTag("Acct")]
+    public Account12Choice_? Account { get; init; }
 
     /// <summary>
     /// Posting Date.
@@ -52,9 +38,23 @@ public record CashOption112
     public required DateAndDateTime2Choice_ PostingDate { get; init; }
 
     /// <summary>
+    /// Original Posting Date.
+    /// </summary>
+    [DisplayName("Original Posting Date")]
+    [IsoXmlTag("OrgnlPstngDt")]
+    public DateAndDateTime2Choice_? OriginalPostingDate { get; init; }
+
+    /// <summary>
     /// Value Date.
     /// </summary>
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     public ISODate? ValueDate { get; init; }
+
+    /// <summary>
+    /// Posting Amount.
+    /// </summary>
+    [DisplayName("Posting Amount")]
+    [IsoXmlTag("PstngAmt")]
+    public required RestrictedFINActiveCurrencyAndAmount PostingAmount { get; init; }
 }

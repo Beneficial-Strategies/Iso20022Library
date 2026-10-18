@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record FundingSource4
 {
     /// <summary>
+    /// Type.
+    /// </summary>
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public FundingSourceType3Code? Type { get; init; }
+
+    /// <summary>
     /// Other Type.
     /// </summary>
     [DisplayName("Other Type")]
@@ -29,11 +36,4 @@ public record FundingSource4
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
     public Max35Text? Reference { get; init; }
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public FundingSourceType3Code? Type { get; init; }
 }

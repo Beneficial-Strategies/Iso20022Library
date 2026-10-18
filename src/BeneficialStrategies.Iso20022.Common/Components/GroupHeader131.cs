@@ -18,21 +18,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record GroupHeader131
 {
     /// <summary>
-    /// Identifies whether a single entry per individual transaction or a batch entry for the sum of the amounts of all transactions within the group of a message is requested.
+    /// Point to point reference, as assigned by the instructing party, and sent to the next party in the chain to unambiguously identify the message.
     /// </summary>
     /// <remarks>
-    /// Usage: Batch booking is used to request and not order a possible batch booking.
+    /// Usage: The instructing party has to make sure that MessageIdentification is unique per instructed party for a pre-agreed period.
     /// </remarks>
-    [DisplayName("Batch Booking")]
-    [IsoXmlTag("BtchBookg")]
-    public BatchBookingIndicator? BatchBooking { get; init; }
-
-    /// <summary>
-    /// Total of all individual amounts included in the message, irrespective of currencies.
-    /// </summary>
-    [DisplayName("Control Sum")]
-    [IsoXmlTag("CtrlSum")]
-    public DecimalNumber? ControlSum { get; init; }
+    [DisplayName("Message Identification")]
+    [IsoXmlTag("MsgId")]
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the message was created.
@@ -49,35 +42,14 @@ public record GroupHeader131
     public ISODateTime? ExpiryDateTime { get; init; }
 
     /// <summary>
-    /// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).
-    /// </summary>
-    [DisplayName("Instructed Agent")]
-    [IsoXmlTag("InstdAgt")]
-    public BranchAndFinancialInstitutionIdentification8? InstructedAgent { get; init; }
-
-    /// <summary>
-    /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).
-    /// </summary>
-    [DisplayName("Instructing Agent")]
-    [IsoXmlTag("InstgAgt")]
-    public BranchAndFinancialInstitutionIdentification8? InstructingAgent { get; init; }
-
-    /// <summary>
-    /// Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.
-    /// </summary>
-    [DisplayName("Interbank Settlement Date")]
-    [IsoXmlTag("IntrBkSttlmDt")]
-    public ISODate? InterbankSettlementDate { get; init; }
-
-    /// <summary>
-    /// Point to point reference, as assigned by the instructing party, and sent to the next party in the chain to unambiguously identify the message.
+    /// Identifies whether a single entry per individual transaction or a batch entry for the sum of the amounts of all transactions within the group of a message is requested.
     /// </summary>
     /// <remarks>
-    /// Usage: The instructing party has to make sure that MessageIdentification is unique per instructed party for a pre-agreed period.
+    /// Usage: Batch booking is used to request and not order a possible batch booking.
     /// </remarks>
-    [DisplayName("Message Identification")]
-    [IsoXmlTag("MsgId")]
-    public required Max35Text MessageIdentification { get; init; }
+    [DisplayName("Batch Booking")]
+    [IsoXmlTag("BtchBookg")]
+    public BatchBookingIndicator? BatchBooking { get; init; }
 
     /// <summary>
     /// Number of individual transactions contained in the message.
@@ -87,11 +59,25 @@ public record GroupHeader131
     public required Max15NumericText NumberOfTransactions { get; init; }
 
     /// <summary>
-    /// Set of elements used to further specify the type of transaction.
+    /// Total of all individual amounts included in the message, irrespective of currencies.
     /// </summary>
-    [DisplayName("Payment Type Information")]
-    [IsoXmlTag("PmtTpInf")]
-    public PaymentTypeInformation28? PaymentTypeInformation { get; init; }
+    [DisplayName("Control Sum")]
+    [IsoXmlTag("CtrlSum")]
+    public DecimalNumber? ControlSum { get; init; }
+
+    /// <summary>
+    /// Total amount of money moved between the instructing agent and the instructed agent.
+    /// </summary>
+    [DisplayName("Total Interbank Settlement Amount")]
+    [IsoXmlTag("TtlIntrBkSttlmAmt")]
+    public ActiveCurrencyAndAmount? TotalInterbankSettlementAmount { get; init; }
+
+    /// <summary>
+    /// Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.
+    /// </summary>
+    [DisplayName("Interbank Settlement Date")]
+    [IsoXmlTag("IntrBkSttlmDt")]
+    public ISODate? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Specifies the details on how the settlement of the transaction(s) between the instructing agent and the instructed agent is completed.
@@ -101,9 +87,23 @@ public record GroupHeader131
     public required SettlementInstruction15 SettlementInformation { get; init; }
 
     /// <summary>
-    /// Total amount of money moved between the instructing agent and the instructed agent.
+    /// Set of elements used to further specify the type of transaction.
     /// </summary>
-    [DisplayName("Total Interbank Settlement Amount")]
-    [IsoXmlTag("TtlIntrBkSttlmAmt")]
-    public ActiveCurrencyAndAmount? TotalInterbankSettlementAmount { get; init; }
+    [DisplayName("Payment Type Information")]
+    [IsoXmlTag("PmtTpInf")]
+    public PaymentTypeInformation28? PaymentTypeInformation { get; init; }
+
+    /// <summary>
+    /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).
+    /// </summary>
+    [DisplayName("Instructing Agent")]
+    [IsoXmlTag("InstgAgt")]
+    public BranchAndFinancialInstitutionIdentification8? InstructingAgent { get; init; }
+
+    /// <summary>
+    /// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).
+    /// </summary>
+    [DisplayName("Instructed Agent")]
+    [IsoXmlTag("InstdAgt")]
+    public BranchAndFinancialInstitutionIdentification8? InstructedAgent { get; init; }
 }

@@ -24,32 +24,11 @@ public record PaymentTransaction154
     public Max35Text? CancellationIdentification { get; init; }
 
     /// <summary>
-    /// Cancellation Reason Information.
-    /// </summary>
-    [DisplayName("Cancellation Reason Information")]
-    [IsoXmlTag("CxlRsnInf")]
-    public ValueList<PaymentCancellationReason6> CancellationReasonInformation { get; init; } = [];
-
-    /// <summary>
     /// Case.
     /// </summary>
     [DisplayName("Case")]
     [IsoXmlTag("Case")]
     public Case6? Case { get; init; }
-
-    /// <summary>
-    /// Original End To End Identification.
-    /// </summary>
-    [DisplayName("Original End To End Identification")]
-    [IsoXmlTag("OrgnlEndToEndId")]
-    public Max35Text? OriginalEndToEndIdentification { get; init; }
-
-    /// <summary>
-    /// Original Instructed Amount.
-    /// </summary>
-    [DisplayName("Original Instructed Amount")]
-    [IsoXmlTag("OrgnlInstdAmt")]
-    public ActiveOrHistoricCurrencyAndAmount? OriginalInstructedAmount { get; init; }
 
     /// <summary>
     /// Original Instruction Identification.
@@ -59,11 +38,25 @@ public record PaymentTransaction154
     public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
-    /// Original Requested Collection Date.
+    /// Original End To End Identification.
     /// </summary>
-    [DisplayName("Original Requested Collection Date")]
-    [IsoXmlTag("OrgnlReqdColltnDt")]
-    public ISODate? OriginalRequestedCollectionDate { get; init; }
+    [DisplayName("Original End To End Identification")]
+    [IsoXmlTag("OrgnlEndToEndId")]
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
+
+    /// <summary>
+    /// Original UETR.
+    /// </summary>
+    [DisplayName("Original UETR")]
+    [IsoXmlTag("OrgnlUETR")]
+    public UUIDv4Identifier? OriginalUETR { get; init; }
+
+    /// <summary>
+    /// Original Instructed Amount.
+    /// </summary>
+    [DisplayName("Original Instructed Amount")]
+    [IsoXmlTag("OrgnlInstdAmt")]
+    public ActiveOrHistoricCurrencyAndAmount? OriginalInstructedAmount { get; init; }
 
     /// <summary>
     /// Original Requested Execution Date.
@@ -73,18 +66,25 @@ public record PaymentTransaction154
     public DateAndDateTime2Choice_? OriginalRequestedExecutionDate { get; init; }
 
     /// <summary>
+    /// Original Requested Collection Date.
+    /// </summary>
+    [DisplayName("Original Requested Collection Date")]
+    [IsoXmlTag("OrgnlReqdColltnDt")]
+    public ISODate? OriginalRequestedCollectionDate { get; init; }
+
+    /// <summary>
+    /// Cancellation Reason Information.
+    /// </summary>
+    [DisplayName("Cancellation Reason Information")]
+    [IsoXmlTag("CxlRsnInf")]
+    public ValueList<PaymentCancellationReason6> CancellationReasonInformation { get; init; } = [];
+
+    /// <summary>
     /// Original Transaction Reference.
     /// </summary>
     [DisplayName("Original Transaction Reference")]
     [IsoXmlTag("OrgnlTxRef")]
     public OriginalTransactionReference42? OriginalTransactionReference { get; init; }
-
-    /// <summary>
-    /// Original UETR.
-    /// </summary>
-    [DisplayName("Original UETR")]
-    [IsoXmlTag("OrgnlUETR")]
-    public UUIDv4Identifier? OriginalUETR { get; init; }
 
     /// <summary>
     /// Supplementary Data.

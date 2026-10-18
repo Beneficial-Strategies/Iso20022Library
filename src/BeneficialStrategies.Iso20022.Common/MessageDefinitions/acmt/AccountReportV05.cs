@@ -46,18 +46,11 @@ public record AccountReportV05 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Servicer Identification.
+    /// References.
     /// </summary>
-    [DisplayName("Account Servicer Identification")]
-    [IsoXmlTag("AcctSvcrId")]
-    public required BranchAndFinancialInstitutionIdentification8 AccountServicerIdentification { get; init; }
-
-    /// <summary>
-    /// Digital Signature.
-    /// </summary>
-    [DisplayName("Digital Signature")]
-    [IsoXmlTag("DgtlSgntr")]
-    public ValueList<PartyAndSignature4> DigitalSignature { get; init; } = [];
+    [DisplayName("References")]
+    [IsoXmlTag("Refs")]
+    public required References5 References { get; init; }
 
     /// <summary>
     /// From.
@@ -67,6 +60,13 @@ public record AccountReportV05 : IOuterRecord
     public OrganisationIdentification39? From { get; init; }
 
     /// <summary>
+    /// Account Servicer Identification.
+    /// </summary>
+    [DisplayName("Account Servicer Identification")]
+    [IsoXmlTag("AcctSvcrId")]
+    public required BranchAndFinancialInstitutionIdentification8 AccountServicerIdentification { get; init; }
+
+    /// <summary>
     /// Organisation.
     /// </summary>
     [DisplayName("Organisation")]
@@ -74,18 +74,18 @@ public record AccountReportV05 : IOuterRecord
     public required Organisation42 Organisation { get; init; }
 
     /// <summary>
-    /// References.
-    /// </summary>
-    [DisplayName("References")]
-    [IsoXmlTag("Refs")]
-    public required References5 References { get; init; }
-
-    /// <summary>
     /// Report.
     /// </summary>
     [DisplayName("Report")]
     [IsoXmlTag("Rpt")]
     public ValueList<AccountReport36> Report { get; init; } = [];
+
+    /// <summary>
+    /// Digital Signature.
+    /// </summary>
+    [DisplayName("Digital Signature")]
+    [IsoXmlTag("DgtlSgntr")]
+    public ValueList<PartyAndSignature4> DigitalSignature { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

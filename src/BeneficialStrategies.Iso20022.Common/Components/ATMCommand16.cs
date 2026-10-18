@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMCommand16
 {
     /// <summary>
-    /// Command Identification.
-    /// </summary>
-    [DisplayName("Command Identification")]
-    [IsoXmlTag("CmdId")]
-    public ATMCommandIdentification1? CommandIdentification { get; init; }
-
-    /// <summary>
     /// Type.
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     public required ATMCommand7Code Type { get; init; }
+
+    /// <summary>
+    /// Command Identification.
+    /// </summary>
+    [DisplayName("Command Identification")]
+    [IsoXmlTag("CmdId")]
+    public ATMCommandIdentification1? CommandIdentification { get; init; }
 }

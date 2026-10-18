@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record GroupHeader130
 {
     /// <summary>
-    /// Charges Account Agent.
+    /// Message Identification.
     /// </summary>
-    [DisplayName("Charges Account Agent")]
-    [IsoXmlTag("ChrgsAcctAgt")]
-    public BranchAndFinancialInstitutionIdentification8? ChargesAccountAgent { get; init; }
-
-    /// <summary>
-    /// Charges Account Agent Account.
-    /// </summary>
-    [DisplayName("Charges Account Agent Account")]
-    [IsoXmlTag("ChrgsAcctAgtAcct")]
-    public CashAccount40? ChargesAccountAgentAccount { get; init; }
-
-    /// <summary>
-    /// Charges Requestor.
-    /// </summary>
-    [DisplayName("Charges Requestor")]
-    [IsoXmlTag("ChrgsRqstr")]
-    public BranchAndFinancialInstitutionIdentification8? ChargesRequestor { get; init; }
+    [DisplayName("Message Identification")]
+    [IsoXmlTag("MsgId")]
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Creation Date Time.
@@ -45,11 +31,11 @@ public record GroupHeader130
     public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
-    /// Message Identification.
+    /// Charges Requestor.
     /// </summary>
-    [DisplayName("Message Identification")]
-    [IsoXmlTag("MsgId")]
-    public required Max35Text MessageIdentification { get; init; }
+    [DisplayName("Charges Requestor")]
+    [IsoXmlTag("ChrgsRqstr")]
+    public BranchAndFinancialInstitutionIdentification8? ChargesRequestor { get; init; }
 
     /// <summary>
     /// Settlement Instruction.
@@ -64,4 +50,18 @@ public record GroupHeader130
     [DisplayName("Total Charges")]
     [IsoXmlTag("TtlChrgs")]
     public TotalCharges7? TotalCharges { get; init; }
+
+    /// <summary>
+    /// Charges Account Agent.
+    /// </summary>
+    [DisplayName("Charges Account Agent")]
+    [IsoXmlTag("ChrgsAcctAgt")]
+    public BranchAndFinancialInstitutionIdentification8? ChargesAccountAgent { get; init; }
+
+    /// <summary>
+    /// Charges Account Agent Account.
+    /// </summary>
+    [DisplayName("Charges Account Agent Account")]
+    [IsoXmlTag("ChrgsAcctAgtAcct")]
+    public CashAccount40? ChargesAccountAgentAccount { get; init; }
 }

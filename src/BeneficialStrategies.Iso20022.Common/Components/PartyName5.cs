@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PartyName5
 {
     /// <summary>
-    /// International.
+    /// Value.
     /// </summary>
-    [DisplayName("International")]
-    [IsoXmlTag("Intrnl")]
-    public TrueFalseIndicator? International { get; init; }
+    [DisplayName("Value")]
+    [IsoXmlTag("Val")]
+    public required Max500Text Value { get; init; }
 
     /// <summary>
     /// Language.
@@ -31,9 +31,9 @@ public record PartyName5
     public ISO2ALanguageCode? Language { get; init; }
 
     /// <summary>
-    /// Value.
+    /// International.
     /// </summary>
-    [DisplayName("Value")]
-    [IsoXmlTag("Val")]
-    public required Max500Text Value { get; init; }
+    [DisplayName("International")]
+    [IsoXmlTag("Intrnl")]
+    public TrueFalseIndicator? International { get; init; }
 }

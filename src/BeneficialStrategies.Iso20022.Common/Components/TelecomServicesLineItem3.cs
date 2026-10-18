@@ -17,39 +17,32 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TelecomServicesLineItem3
 {
     /// <summary>
-    /// Additional Data.
+    /// Start Date Time.
     /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
+    [DisplayName("Start Date Time")]
+    [IsoXmlTag("StartDtTm")]
+    public ISODate? StartDateTime { get; init; }
 
     /// <summary>
-    /// Call From City.
+    /// Time Period.
     /// </summary>
-    [DisplayName("Call From City")]
-    [IsoXmlTag("CallFrCity")]
-    public Max35Text? CallFromCity { get; init; }
+    [DisplayName("Time Period")]
+    [IsoXmlTag("TmPrd")]
+    public Max35Text? TimePeriod { get; init; }
 
     /// <summary>
-    /// Call From Country.
+    /// Duration.
     /// </summary>
-    [DisplayName("Call From Country")]
-    [IsoXmlTag("CallFrCtry")]
-    public ISOMax3ACountryCode? CallFromCountry { get; init; }
+    [DisplayName("Duration")]
+    [IsoXmlTag("Drtn")]
+    public ISOTime? Duration { get; init; }
 
     /// <summary>
-    /// Call From Country Sub Division Major.
+    /// Call From Type.
     /// </summary>
-    [DisplayName("Call From Country Sub Division Major")]
-    [IsoXmlTag("CallFrCtrySubDvsnMjr")]
-    public ISOCountrySubDivisionCode? CallFromCountrySubDivisionMajor { get; init; }
-
-    /// <summary>
-    /// Call From Country Sub Division Minor.
-    /// </summary>
-    [DisplayName("Call From Country Sub Division Minor")]
-    [IsoXmlTag("CallFrCtrySubDvsnMnr")]
-    public ISOCountrySubDivisionCode? CallFromCountrySubDivisionMinor { get; init; }
+    [DisplayName("Call From Type")]
+    [IsoXmlTag("CallFrTp")]
+    public TelephonyCallType1Code? CallFromType { get; init; }
 
     /// <summary>
     /// Call From Other Type.
@@ -66,39 +59,39 @@ public record TelecomServicesLineItem3
     public PhoneNumber? CallFromPhone { get; init; }
 
     /// <summary>
-    /// Call From Type.
+    /// Call From City.
     /// </summary>
-    [DisplayName("Call From Type")]
-    [IsoXmlTag("CallFrTp")]
-    public TelephonyCallType1Code? CallFromType { get; init; }
+    [DisplayName("Call From City")]
+    [IsoXmlTag("CallFrCity")]
+    public Max35Text? CallFromCity { get; init; }
 
     /// <summary>
-    /// Call To City.
+    /// Call From Country Sub Division Major.
     /// </summary>
-    [DisplayName("Call To City")]
-    [IsoXmlTag("CallToCity")]
-    public Max35Text? CallToCity { get; init; }
+    [DisplayName("Call From Country Sub Division Major")]
+    [IsoXmlTag("CallFrCtrySubDvsnMjr")]
+    public ISOCountrySubDivisionCode? CallFromCountrySubDivisionMajor { get; init; }
 
     /// <summary>
-    /// Call To Country.
+    /// Call From Country Sub Division Minor.
     /// </summary>
-    [DisplayName("Call To Country")]
-    [IsoXmlTag("CallToCtry")]
-    public ISOMax3ACountryCode? CallToCountry { get; init; }
+    [DisplayName("Call From Country Sub Division Minor")]
+    [IsoXmlTag("CallFrCtrySubDvsnMnr")]
+    public ISOCountrySubDivisionCode? CallFromCountrySubDivisionMinor { get; init; }
 
     /// <summary>
-    /// Call To Country Sub Division Major.
+    /// Call From Country.
     /// </summary>
-    [DisplayName("Call To Country Sub Division Major")]
-    [IsoXmlTag("CallToCtrySubDvsnMjr")]
-    public ISOCountrySubDivisionCode? CallToCountrySubDivisionMajor { get; init; }
+    [DisplayName("Call From Country")]
+    [IsoXmlTag("CallFrCtry")]
+    public ISOMax3ACountryCode? CallFromCountry { get; init; }
 
     /// <summary>
-    /// Call To Country Sub Division Minor.
+    /// Call To Type.
     /// </summary>
-    [DisplayName("Call To Country Sub Division Minor")]
-    [IsoXmlTag("CallToCtrySubDvsnMnr")]
-    public ISOCountrySubDivisionCode? CallToCountrySubDivisionMinor { get; init; }
+    [DisplayName("Call To Type")]
+    [IsoXmlTag("CallToTp")]
+    public TelephonyCallType1Code? CallToType { get; init; }
 
     /// <summary>
     /// Call To Other Type.
@@ -115,11 +108,32 @@ public record TelecomServicesLineItem3
     public PhoneNumber? CallToPhone { get; init; }
 
     /// <summary>
-    /// Call To Type.
+    /// Call To City.
     /// </summary>
-    [DisplayName("Call To Type")]
-    [IsoXmlTag("CallToTp")]
-    public TelephonyCallType1Code? CallToType { get; init; }
+    [DisplayName("Call To City")]
+    [IsoXmlTag("CallToCity")]
+    public Max35Text? CallToCity { get; init; }
+
+    /// <summary>
+    /// Call To Country Sub Division Major.
+    /// </summary>
+    [DisplayName("Call To Country Sub Division Major")]
+    [IsoXmlTag("CallToCtrySubDvsnMjr")]
+    public ISOCountrySubDivisionCode? CallToCountrySubDivisionMajor { get; init; }
+
+    /// <summary>
+    /// Call To Country Sub Division Minor.
+    /// </summary>
+    [DisplayName("Call To Country Sub Division Minor")]
+    [IsoXmlTag("CallToCtrySubDvsnMnr")]
+    public ISOCountrySubDivisionCode? CallToCountrySubDivisionMinor { get; init; }
+
+    /// <summary>
+    /// Call To Country.
+    /// </summary>
+    [DisplayName("Call To Country")]
+    [IsoXmlTag("CallToCtry")]
+    public ISOMax3ACountryCode? CallToCountry { get; init; }
 
     /// <summary>
     /// Charge.
@@ -129,27 +143,6 @@ public record TelecomServicesLineItem3
     public ValueList<Amount23> Charge { get; init; } = [];
 
     /// <summary>
-    /// Description.
-    /// </summary>
-    [DisplayName("Description")]
-    [IsoXmlTag("Desc")]
-    public Max256Text? Description { get; init; }
-
-    /// <summary>
-    /// Duration.
-    /// </summary>
-    [DisplayName("Duration")]
-    [IsoXmlTag("Drtn")]
-    public ISOTime? Duration { get; init; }
-
-    /// <summary>
-    /// Start Date Time.
-    /// </summary>
-    [DisplayName("Start Date Time")]
-    [IsoXmlTag("StartDtTm")]
-    public ISODate? StartDateTime { get; init; }
-
-    /// <summary>
     /// Tax.
     /// </summary>
     [DisplayName("Tax")]
@@ -157,16 +150,23 @@ public record TelecomServicesLineItem3
     public ValueList<Tax41> Tax { get; init; } = [];
 
     /// <summary>
-    /// Time Period.
-    /// </summary>
-    [DisplayName("Time Period")]
-    [IsoXmlTag("TmPrd")]
-    public Max35Text? TimePeriod { get; init; }
-
-    /// <summary>
     /// Total Amount.
     /// </summary>
     [DisplayName("Total Amount")]
     [IsoXmlTag("TtlAmt")]
     public ImpliedCurrencyAndAmount? TotalAmount { get; init; }
+
+    /// <summary>
+    /// Description.
+    /// </summary>
+    [DisplayName("Description")]
+    [IsoXmlTag("Desc")]
+    public Max256Text? Description { get; init; }
+
+    /// <summary>
+    /// Additional Data.
+    /// </summary>
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

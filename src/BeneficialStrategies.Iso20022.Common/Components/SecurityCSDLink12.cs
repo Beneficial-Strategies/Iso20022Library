@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SecurityCSDLink12
 {
     /// <summary>
-    /// Default Link.
-    /// </summary>
-    [DisplayName("Default Link")]
-    [IsoXmlTag("DfltLk")]
-    public TrueFalseIndicator? DefaultLink { get; init; }
-
-    /// <summary>
     /// Financial Instrument Identification.
     /// </summary>
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
     public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
-
-    /// <summary>
-    /// Issuance Account.
-    /// </summary>
-    [DisplayName("Issuance Account")]
-    [IsoXmlTag("IssncAcct")]
-    public ValueList<IssuanceAccount3> IssuanceAccount { get; init; } = [];
 
     /// <summary>
     /// Issuer Investor CSD.
@@ -45,6 +31,13 @@ public record SecurityCSDLink12
     public required IssuerOrInvestor2Choice_ IssuerInvestorCSD { get; init; }
 
     /// <summary>
+    /// Technical Issuer CSD.
+    /// </summary>
+    [DisplayName("Technical Issuer CSD")]
+    [IsoXmlTag("TechIssrCSD")]
+    public SystemPartyIdentification2Choice_? TechnicalIssuerCSD { get; init; }
+
+    /// <summary>
     /// Security Maintenance.
     /// </summary>
     [DisplayName("Security Maintenance")]
@@ -52,11 +45,18 @@ public record SecurityCSDLink12
     public required TrueFalseIndicator SecurityMaintenance { get; init; }
 
     /// <summary>
-    /// Technical Issuer CSD.
+    /// Issuance Account.
     /// </summary>
-    [DisplayName("Technical Issuer CSD")]
-    [IsoXmlTag("TechIssrCSD")]
-    public SystemPartyIdentification2Choice_? TechnicalIssuerCSD { get; init; }
+    [DisplayName("Issuance Account")]
+    [IsoXmlTag("IssncAcct")]
+    public ValueList<IssuanceAccount3> IssuanceAccount { get; init; } = [];
+
+    /// <summary>
+    /// Default Link.
+    /// </summary>
+    [DisplayName("Default Link")]
+    [IsoXmlTag("DfltLk")]
+    public TrueFalseIndicator? DefaultLink { get; init; }
 
     /// <summary>
     /// Valid From.

@@ -65,18 +65,18 @@ public record SecuritiesTransactionStatusQueryV08 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Description of the status advice requested.
+    /// </summary>
+    [DisplayName("Status Advice Requested")]
+    [IsoXmlTag("StsAdvcReqd")]
+    public required DocumentNumber22 StatusAdviceRequested { get; init; }
+
+    /// <summary>
     /// Party that legally owns the account.
     /// </summary>
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
     public PartyIdentification144? AccountOwner { get; init; }
-
-    /// <summary>
-    /// Blockchain address or wallet where digital assets are maintained. This is the equivalent of safekeeping account for digital assets.
-    /// </summary>
-    [DisplayName("Block Chain Address Or Wallet")]
-    [IsoXmlTag("BlckChainAdrOrWllt")]
-    public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
 
     /// <summary>
     /// Account to or from which a securities entry is made.
@@ -86,11 +86,11 @@ public record SecuritiesTransactionStatusQueryV08 : IOuterRecord
     public SecuritiesAccount22? SafekeepingAccount { get; init; }
 
     /// <summary>
-    /// Description of the status advice requested.
+    /// Blockchain address or wallet where digital assets are maintained. This is the equivalent of safekeeping account for digital assets.
     /// </summary>
-    [DisplayName("Status Advice Requested")]
-    [IsoXmlTag("StsAdvcReqd")]
-    public required DocumentNumber22 StatusAdviceRequested { get; init; }
+    [DisplayName("Block Chain Address Or Wallet")]
+    [IsoXmlTag("BlckChainAdrOrWllt")]
+    public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.

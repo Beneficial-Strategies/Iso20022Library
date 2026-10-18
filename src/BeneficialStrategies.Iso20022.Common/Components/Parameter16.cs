@@ -31,13 +31,6 @@ public record Parameter16
     public AlgorithmIdentification34? MaskGeneratorAlgorithm { get; init; }
 
     /// <summary>
-    /// OID Curve Name.
-    /// </summary>
-    [DisplayName("OID Curve Name")]
-    [IsoXmlTag("OIDCrvNm")]
-    public Max140Text? OIDCurveName { get; init; }
-
-    /// <summary>
     /// Salt Length.
     /// </summary>
     [DisplayName("Salt Length")]
@@ -50,4 +43,11 @@ public record Parameter16
     [DisplayName("Trailer Field")]
     [IsoXmlTag("TrlrFld")]
     public Number? TrailerField { get; init; }
+
+    /// <summary>
+    /// OID Curve Name.
+    /// </summary>
+    [DisplayName("OID Curve Name")]
+    [IsoXmlTag("OIDCrvNm")]
+    public Max140Text? OIDCurveName { get; init; }
 }

@@ -24,13 +24,6 @@ public record LimitStructure5
     public required LimitIdentification3Choice_ LimitIdentification { get; init; }
 
     /// <summary>
-    /// Limit Value Amendment.
-    /// </summary>
-    [DisplayName("Limit Value Amendment")]
-    [IsoXmlTag("LmtValAmdmnt")]
-    public Amount4Choice_? LimitValueAmendment { get; init; }
-
-    /// <summary>
     /// New Limit Value Set.
     /// </summary>
     [DisplayName("New Limit Value Set")]
@@ -43,4 +36,11 @@ public record LimitStructure5
     [DisplayName("Old Limit Value Set")]
     [IsoXmlTag("OdLmtValSet")]
     public Limit10? OldLimitValueSet { get; init; }
+
+    /// <summary>
+    /// Limit Value Amendment.
+    /// </summary>
+    [DisplayName("Limit Value Amendment")]
+    [IsoXmlTag("LmtValAmdmnt")]
+    public Amount4Choice_? LimitValueAmendment { get; init; }
 }

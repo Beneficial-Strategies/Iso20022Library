@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ContentInformationType39
 {
     /// <summary>
-    /// Authenticated Data.
-    /// </summary>
-    [DisplayName("Authenticated Data")]
-    [IsoXmlTag("AuthntcdData")]
-    public AuthenticatedData10? AuthenticatedData { get; init; }
-
-    /// <summary>
     /// Content Type.
     /// </summary>
     [DisplayName("Content Type")]
     [IsoXmlTag("CnttTp")]
     public required ContentType2Code ContentType { get; init; }
-
-    /// <summary>
-    /// Digested Data.
-    /// </summary>
-    [DisplayName("Digested Data")]
-    [IsoXmlTag("DgstdData")]
-    public DigestedData6? DigestedData { get; init; }
 
     /// <summary>
     /// Enveloped Data.
@@ -45,9 +31,23 @@ public record ContentInformationType39
     public EnvelopedData11? EnvelopedData { get; init; }
 
     /// <summary>
+    /// Authenticated Data.
+    /// </summary>
+    [DisplayName("Authenticated Data")]
+    [IsoXmlTag("AuthntcdData")]
+    public AuthenticatedData10? AuthenticatedData { get; init; }
+
+    /// <summary>
     /// Signed Data.
     /// </summary>
     [DisplayName("Signed Data")]
     [IsoXmlTag("SgndData")]
     public SignedData9? SignedData { get; init; }
+
+    /// <summary>
+    /// Digested Data.
+    /// </summary>
+    [DisplayName("Digested Data")]
+    [IsoXmlTag("DgstdData")]
+    public DigestedData6? DigestedData { get; init; }
 }

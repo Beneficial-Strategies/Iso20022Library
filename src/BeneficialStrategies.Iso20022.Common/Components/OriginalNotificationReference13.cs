@@ -38,6 +38,27 @@ public record OriginalNotificationReference13
     public BranchAndFinancialInstitutionIdentification8? AccountServicer { get; init; }
 
     /// <summary>
+    /// Related Account.
+    /// </summary>
+    [DisplayName("Related Account")]
+    [IsoXmlTag("RltdAcct")]
+    public CashAccount40? RelatedAccount { get; init; }
+
+    /// <summary>
+    /// Total Amount.
+    /// </summary>
+    [DisplayName("Total Amount")]
+    [IsoXmlTag("TtlAmt")]
+    public ActiveOrHistoricCurrencyAndAmount? TotalAmount { get; init; }
+
+    /// <summary>
+    /// Expected Value Date.
+    /// </summary>
+    [DisplayName("Expected Value Date")]
+    [IsoXmlTag("XpctdValDt")]
+    public ISODate? ExpectedValueDate { get; init; }
+
+    /// <summary>
     /// Debtor.
     /// </summary>
     [DisplayName("Debtor")]
@@ -52,13 +73,6 @@ public record OriginalNotificationReference13
     public BranchAndFinancialInstitutionIdentification8? DebtorAgent { get; init; }
 
     /// <summary>
-    /// Expected Value Date.
-    /// </summary>
-    [DisplayName("Expected Value Date")]
-    [IsoXmlTag("XpctdValDt")]
-    public ISODate? ExpectedValueDate { get; init; }
-
-    /// <summary>
     /// Intermediary Agent.
     /// </summary>
     [DisplayName("Intermediary Agent")]
@@ -71,18 +85,4 @@ public record OriginalNotificationReference13
     [DisplayName("Original Item And Status")]
     [IsoXmlTag("OrgnlItmAndSts")]
     public ValueList<OriginalItemAndStatus8> OriginalItemAndStatus { get; init; } = [];
-
-    /// <summary>
-    /// Related Account.
-    /// </summary>
-    [DisplayName("Related Account")]
-    [IsoXmlTag("RltdAcct")]
-    public CashAccount40? RelatedAccount { get; init; }
-
-    /// <summary>
-    /// Total Amount.
-    /// </summary>
-    [DisplayName("Total Amount")]
-    [IsoXmlTag("TtlAmt")]
-    public ActiveOrHistoricCurrencyAndAmount? TotalAmount { get; init; }
 }

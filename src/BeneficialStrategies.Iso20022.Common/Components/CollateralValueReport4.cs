@@ -38,14 +38,6 @@ public record CollateralValueReport4
     public BranchAndFinancialInstitutionIdentification8? CashAccountServicer { get; init; }
 
     /// <summary>
-    /// Collateral Value Report.
-    /// </summary>
-    [DisplayName("Collateral Value Report")]
-    [IsoXmlTag("CollValRpt")]
-    public ValueList<CollateralValueReportOrError6Choice_> CollateralValueReport { get; init; } =
-        [];
-
-    /// <summary>
     /// Securities Account Owner.
     /// </summary>
     [DisplayName("Securities Account Owner")]
@@ -58,4 +50,12 @@ public record CollateralValueReport4
     [DisplayName("Securities Account Servicer")]
     [IsoXmlTag("SctiesAcctSvcr")]
     public PartyIdentification136? SecuritiesAccountServicer { get; init; }
+
+    /// <summary>
+    /// Collateral Value Report.
+    /// </summary>
+    [DisplayName("Collateral Value Report")]
+    [IsoXmlTag("CollValRpt")]
+    public ValueList<CollateralValueReportOrError6Choice_> CollateralValueReport { get; init; } =
+        [];
 }

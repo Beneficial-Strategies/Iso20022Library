@@ -24,16 +24,16 @@ public record GenericIdentification190
     public required Max350Text Identification { get; init; }
 
     /// <summary>
-    /// Issuer.
-    /// </summary>
-    [DisplayName("Issuer")]
-    [IsoXmlTag("Issr")]
-    public Max35Text? Issuer { get; init; }
-
-    /// <summary>
     /// Scheme Name.
     /// </summary>
     [DisplayName("Scheme Name")]
     [IsoXmlTag("SchmeNm")]
     public Max35Text? SchemeName { get; init; }
+
+    /// <summary>
+    /// Issuer.
+    /// </summary>
+    [DisplayName("Issuer")]
+    [IsoXmlTag("Issr")]
+    public Max35Text? Issuer { get; init; }
 }

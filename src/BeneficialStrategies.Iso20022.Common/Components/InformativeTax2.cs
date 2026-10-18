@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record InformativeTax2
 {
     /// <summary>
+    /// Taxable Income Per Dividend.
+    /// </summary>
+    [DisplayName("Taxable Income Per Dividend")]
+    [IsoXmlTag("TaxblIncmPerDvdd")]
+    public ActiveCurrencyAndAmount? TaxableIncomePerDividend { get; init; }
+
+    /// <summary>
     /// EU Capital Gain.
     /// </summary>
     [DisplayName("EU Capital Gain")]
@@ -31,13 +38,6 @@ public record InformativeTax2
     public EUDividendStatusType2Choice_? EUDividendStatus { get; init; }
 
     /// <summary>
-    /// Individual Tax.
-    /// </summary>
-    [DisplayName("Individual Tax")]
-    [IsoXmlTag("IndvTax")]
-    public ValueList<Tax40> IndividualTax { get; init; } = [];
-
-    /// <summary>
     /// Percentage Of Debt Claim.
     /// </summary>
     [DisplayName("Percentage Of Debt Claim")]
@@ -45,9 +45,9 @@ public record InformativeTax2
     public PercentageRate? PercentageOfDebtClaim { get; init; }
 
     /// <summary>
-    /// Taxable Income Per Dividend.
+    /// Individual Tax.
     /// </summary>
-    [DisplayName("Taxable Income Per Dividend")]
-    [IsoXmlTag("TaxblIncmPerDvdd")]
-    public ActiveCurrencyAndAmount? TaxableIncomePerDividend { get; init; }
+    [DisplayName("Individual Tax")]
+    [IsoXmlTag("IndvTax")]
+    public ValueList<Tax40> IndividualTax { get; init; } = [];
 }

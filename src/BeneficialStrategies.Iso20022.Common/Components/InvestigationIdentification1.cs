@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record InvestigationIdentification1
 {
     /// <summary>
-    /// EIR.
-    /// </summary>
-    [DisplayName("EIR")]
-    [IsoXmlTag("EIR")]
-    public UUIDv4Identifier? EIR { get; init; }
-
-    /// <summary>
     /// Requestor Investigation Identification.
     /// </summary>
     [DisplayName("Requestor Investigation Identification")]
@@ -36,4 +29,11 @@ public record InvestigationIdentification1
     [DisplayName("Responder Investigation Identification")]
     [IsoXmlTag("RspndrInvstgtnId")]
     public Max35Text? ResponderInvestigationIdentification { get; init; }
+
+    /// <summary>
+    /// EIR.
+    /// </summary>
+    [DisplayName("EIR")]
+    [IsoXmlTag("EIR")]
+    public UUIDv4Identifier? EIR { get; init; }
 }

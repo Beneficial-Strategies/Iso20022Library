@@ -17,6 +17,27 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PositionSetAggregated4
 {
     /// <summary>
+    /// Reference Date.
+    /// </summary>
+    [DisplayName("Reference Date")]
+    [IsoXmlTag("RefDt")]
+    public required ISODate ReferenceDate { get; init; }
+
+    /// <summary>
+    /// Position Set.
+    /// </summary>
+    [DisplayName("Position Set")]
+    [IsoXmlTag("PosSet")]
+    public ValueList<PositionSet21> PositionSet { get; init; } = [];
+
+    /// <summary>
+    /// Currency Position Set.
+    /// </summary>
+    [DisplayName("Currency Position Set")]
+    [IsoXmlTag("CcyPosSet")]
+    public ValueList<PositionSet21> CurrencyPositionSet { get; init; } = [];
+
+    /// <summary>
     /// Collateral Position Set.
     /// </summary>
     [DisplayName("Collateral Position Set")]
@@ -29,25 +50,4 @@ public record PositionSetAggregated4
     [DisplayName("Currency Collateral Position Set")]
     [IsoXmlTag("CcyCollPosSet")]
     public ValueList<PositionSet22> CurrencyCollateralPositionSet { get; init; } = [];
-
-    /// <summary>
-    /// Currency Position Set.
-    /// </summary>
-    [DisplayName("Currency Position Set")]
-    [IsoXmlTag("CcyPosSet")]
-    public ValueList<PositionSet21> CurrencyPositionSet { get; init; } = [];
-
-    /// <summary>
-    /// Position Set.
-    /// </summary>
-    [DisplayName("Position Set")]
-    [IsoXmlTag("PosSet")]
-    public ValueList<PositionSet21> PositionSet { get; init; } = [];
-
-    /// <summary>
-    /// Reference Date.
-    /// </summary>
-    [DisplayName("Reference Date")]
-    [IsoXmlTag("RefDt")]
-    public required ISODate ReferenceDate { get; init; }
 }

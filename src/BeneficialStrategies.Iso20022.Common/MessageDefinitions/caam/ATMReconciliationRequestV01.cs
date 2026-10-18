@@ -46,13 +46,6 @@ public record ATMReconciliationRequestV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// ATM Reconciliation Request.
-    /// </summary>
-    [DisplayName("ATM Reconciliation Request")]
-    [IsoXmlTag("ATMRcncltnReq")]
-    public ATMReconciliationRequestComponent1? ATMReconciliationRequest { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
@@ -65,6 +58,13 @@ public record ATMReconciliationRequestV01 : IOuterRecord
     [DisplayName("Protected ATM Reconciliation Request")]
     [IsoXmlTag("PrtctdATMRcncltnReq")]
     public ContentInformationType10? ProtectedATMReconciliationRequest { get; init; }
+
+    /// <summary>
+    /// ATM Reconciliation Request.
+    /// </summary>
+    [DisplayName("ATM Reconciliation Request")]
+    [IsoXmlTag("ATMRcncltnReq")]
+    public ATMReconciliationRequestComponent1? ATMReconciliationRequest { get; init; }
 
     /// <summary>
     /// Security Trailer.

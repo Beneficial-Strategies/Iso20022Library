@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AccountLink8
 {
     /// <summary>
+    /// Securities Account.
+    /// </summary>
+    [DisplayName("Securities Account")]
+    [IsoXmlTag("SctiesAcct")]
+    public SecuritiesAccount19? SecuritiesAccount { get; init; }
+
+    /// <summary>
     /// Block Chain Address Or Wallet.
     /// </summary>
     [DisplayName("Block Chain Address Or Wallet")]
@@ -29,13 +36,6 @@ public record AccountLink8
     [DisplayName("Cash Account")]
     [IsoXmlTag("CshAcct")]
     public required CashAccount38 CashAccount { get; init; }
-
-    /// <summary>
-    /// Securities Account.
-    /// </summary>
-    [DisplayName("Securities Account")]
-    [IsoXmlTag("SctiesAcct")]
-    public SecuritiesAccount19? SecuritiesAccount { get; init; }
 
     /// <summary>
     /// Valid From.

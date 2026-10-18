@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TradeRecurrentQuery7
 {
     /// <summary>
-    /// Frequency.
-    /// </summary>
-    [DisplayName("Frequency")]
-    [IsoXmlTag("Frqcy")]
-    public ValueList<TradeQueryExecutionFrequency3> Frequency { get; init; } = [];
-
-    /// <summary>
     /// Query Type.
     /// </summary>
     [DisplayName("Query Type")]
     [IsoXmlTag("QryTp")]
     public required Max1000Text QueryType { get; init; }
+
+    /// <summary>
+    /// Frequency.
+    /// </summary>
+    [DisplayName("Frequency")]
+    [IsoXmlTag("Frqcy")]
+    public ValueList<TradeQueryExecutionFrequency3> Frequency { get; init; } = [];
 
     /// <summary>
     /// Valid Until.

@@ -53,16 +53,16 @@ public record MandateAmendmentRequestV08 : IOuterRecord
     public required GroupHeader110 GroupHeader { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
     /// Underlying Amendment Details.
     /// </summary>
     [DisplayName("Underlying Amendment Details")]
     [IsoXmlTag("UndrlygAmdmntDtls")]
     public ValueList<MandateAmendment8> UnderlyingAmendmentDetails { get; init; } = [];
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

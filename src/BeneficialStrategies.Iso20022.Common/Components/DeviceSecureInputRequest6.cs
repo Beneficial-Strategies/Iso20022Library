@@ -17,27 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record DeviceSecureInputRequest6
 {
     /// <summary>
-    /// Beep Key Flag.
-    /// </summary>
-    [DisplayName("Beep Key Flag")]
-    [IsoXmlTag("BeepKeyFlg")]
-    public TrueFalseIndicator? BeepKeyFlag { get; init; }
-
-    /// <summary>
-    /// Cardholder PIN.
-    /// </summary>
-    [DisplayName("Cardholder PIN")]
-    [IsoXmlTag("CrdhldrPIN")]
-    public OnLinePIN11? CardholderPIN { get; init; }
-
-    /// <summary>
-    /// Maximum Waiting Time.
-    /// </summary>
-    [DisplayName("Maximum Waiting Time")]
-    [IsoXmlTag("MaxWtgTm")]
-    public Number? MaximumWaitingTime { get; init; }
-
-    /// <summary>
     /// PIN Request Type.
     /// </summary>
     [DisplayName("PIN Request Type")]
@@ -50,4 +29,25 @@ public record DeviceSecureInputRequest6
     [DisplayName("PIN Verification Method")]
     [IsoXmlTag("PINVrfctnMtd")]
     public Max35Text? PINVerificationMethod { get; init; }
+
+    /// <summary>
+    /// Maximum Waiting Time.
+    /// </summary>
+    [DisplayName("Maximum Waiting Time")]
+    [IsoXmlTag("MaxWtgTm")]
+    public Number? MaximumWaitingTime { get; init; }
+
+    /// <summary>
+    /// Beep Key Flag.
+    /// </summary>
+    [DisplayName("Beep Key Flag")]
+    [IsoXmlTag("BeepKeyFlg")]
+    public TrueFalseIndicator? BeepKeyFlag { get; init; }
+
+    /// <summary>
+    /// Cardholder PIN.
+    /// </summary>
+    [DisplayName("Cardholder PIN")]
+    [IsoXmlTag("CrdhldrPIN")]
+    public OnLinePIN11? CardholderPIN { get; init; }
 }

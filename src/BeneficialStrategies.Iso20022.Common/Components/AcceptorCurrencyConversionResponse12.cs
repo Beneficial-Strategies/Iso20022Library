@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AcceptorCurrencyConversionResponse12
 {
     /// <summary>
-    /// Currency Conversion Result.
-    /// </summary>
-    [DisplayName("Currency Conversion Result")]
-    [IsoXmlTag("CcyConvsRslt")]
-    public required CurrencyConversion31 CurrencyConversionResult { get; init; }
-
-    /// <summary>
     /// Environment.
     /// </summary>
     [DisplayName("Environment")]
@@ -36,4 +29,11 @@ public record AcceptorCurrencyConversionResponse12
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
     public required CardPaymentTransaction137 Transaction { get; init; }
+
+    /// <summary>
+    /// Currency Conversion Result.
+    /// </summary>
+    [DisplayName("Currency Conversion Result")]
+    [IsoXmlTag("CcyConvsRslt")]
+    public required CurrencyConversion31 CurrencyConversionResult { get; init; }
 }

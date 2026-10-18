@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMCustomer7
 {
     /// <summary>
-    /// Authentication Result.
-    /// </summary>
-    [DisplayName("Authentication Result")]
-    [IsoXmlTag("AuthntcnRslt")]
-    public ValueList<TransactionVerificationResult5> AuthenticationResult { get; init; } = [];
-
-    /// <summary>
     /// Profile.
     /// </summary>
     [DisplayName("Profile")]
@@ -36,4 +29,11 @@ public record ATMCustomer7
     [DisplayName("Selected Language")]
     [IsoXmlTag("SelctdLang")]
     public LanguageCode? SelectedLanguage { get; init; }
+
+    /// <summary>
+    /// Authentication Result.
+    /// </summary>
+    [DisplayName("Authentication Result")]
+    [IsoXmlTag("AuthntcnRslt")]
+    public ValueList<TransactionVerificationResult5> AuthenticationResult { get; init; } = [];
 }

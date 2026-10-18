@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TotalCharges7
 {
     /// <summary>
-    /// Control Sum.
-    /// </summary>
-    [DisplayName("Control Sum")]
-    [IsoXmlTag("CtrlSum")]
-    public DecimalNumber? ControlSum { get; init; }
-
-    /// <summary>
-    /// Credit Debit Indicator.
-    /// </summary>
-    [DisplayName("Credit Debit Indicator")]
-    [IsoXmlTag("CdtDbtInd")]
-    public CreditDebitCode? CreditDebitIndicator { get; init; }
-
-    /// <summary>
     /// Number Of Charges Records.
     /// </summary>
     [DisplayName("Number Of Charges Records")]
@@ -38,9 +24,23 @@ public record TotalCharges7
     public required Max15NumericText NumberOfChargesRecords { get; init; }
 
     /// <summary>
+    /// Control Sum.
+    /// </summary>
+    [DisplayName("Control Sum")]
+    [IsoXmlTag("CtrlSum")]
+    public DecimalNumber? ControlSum { get; init; }
+
+    /// <summary>
     /// Total Charges Amount.
     /// </summary>
     [DisplayName("Total Charges Amount")]
     [IsoXmlTag("TtlChrgsAmt")]
     public ActiveCurrencyAndAmount? TotalChargesAmount { get; init; }
+
+    /// <summary>
+    /// Credit Debit Indicator.
+    /// </summary>
+    [DisplayName("Credit Debit Indicator")]
+    [IsoXmlTag("CdtDbtInd")]
+    public CreditDebitCode? CreditDebitIndicator { get; init; }
 }

@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record NotificationLocationData1
 {
     /// <summary>
-    /// Electronic Address.
-    /// </summary>
-    [DisplayName("Electronic Address")]
-    [IsoXmlTag("ElctrncAdr")]
-    public Max2048Text? ElectronicAddress { get; init; }
-
-    /// <summary>
     /// Method.
     /// </summary>
     [DisplayName("Method")]
     [IsoXmlTag("Mtd")]
     public required InvestigationLocationMethod1Code Method { get; init; }
+
+    /// <summary>
+    /// Electronic Address.
+    /// </summary>
+    [DisplayName("Electronic Address")]
+    [IsoXmlTag("ElctrncAdr")]
+    public Max2048Text? ElectronicAddress { get; init; }
 
     /// <summary>
     /// Postal Address.

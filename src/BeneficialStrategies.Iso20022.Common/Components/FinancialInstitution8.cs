@@ -17,46 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record FinancialInstitution8
 {
     /// <summary>
-    /// Additional Contact.
-    /// </summary>
-    [DisplayName("Additional Contact")]
-    [IsoXmlTag("AddtlCtct")]
-    public Max256Text? AdditionalContact { get; init; }
-
-    /// <summary>
-    /// Address.
-    /// </summary>
-    [DisplayName("Address")]
-    [IsoXmlTag("Adr")]
-    public Address2? Address { get; init; }
-
-    /// <summary>
-    /// Customer Service.
-    /// </summary>
-    [DisplayName("Customer Service")]
-    [IsoXmlTag("CstmrSvc")]
-    public Max35Text? CustomerService { get; init; }
-
-    /// <summary>
-    /// Email.
-    /// </summary>
-    [DisplayName("Email")]
-    [IsoXmlTag("Email")]
-    public Max256Text? Email { get; init; }
-
-    /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     public Max35Text? Identification { get; init; }
-
-    /// <summary>
-    /// Local Data.
-    /// </summary>
-    [DisplayName("Local Data")]
-    [IsoXmlTag("LclData")]
-    public LocalData10? LocalData { get; init; }
 
     /// <summary>
     /// Name.
@@ -66,11 +31,18 @@ public record FinancialInstitution8
     public Max70Text? Name { get; init; }
 
     /// <summary>
-    /// Phone.
+    /// Address.
     /// </summary>
-    [DisplayName("Phone")]
-    [IsoXmlTag("Phne")]
-    public Max35Text? Phone { get; init; }
+    [DisplayName("Address")]
+    [IsoXmlTag("Adr")]
+    public Address2? Address { get; init; }
+
+    /// <summary>
+    /// Email.
+    /// </summary>
+    [DisplayName("Email")]
+    [IsoXmlTag("Email")]
+    public Max256Text? Email { get; init; }
 
     /// <summary>
     /// URL.
@@ -78,4 +50,32 @@ public record FinancialInstitution8
     [DisplayName("URL")]
     [IsoXmlTag("URL")]
     public Max256Text? URL { get; init; }
+
+    /// <summary>
+    /// Phone.
+    /// </summary>
+    [DisplayName("Phone")]
+    [IsoXmlTag("Phne")]
+    public Max35Text? Phone { get; init; }
+
+    /// <summary>
+    /// Customer Service.
+    /// </summary>
+    [DisplayName("Customer Service")]
+    [IsoXmlTag("CstmrSvc")]
+    public Max35Text? CustomerService { get; init; }
+
+    /// <summary>
+    /// Additional Contact.
+    /// </summary>
+    [DisplayName("Additional Contact")]
+    [IsoXmlTag("AddtlCtct")]
+    public Max256Text? AdditionalContact { get; init; }
+
+    /// <summary>
+    /// Local Data.
+    /// </summary>
+    [DisplayName("Local Data")]
+    [IsoXmlTag("LclData")]
+    public LocalData10? LocalData { get; init; }
 }

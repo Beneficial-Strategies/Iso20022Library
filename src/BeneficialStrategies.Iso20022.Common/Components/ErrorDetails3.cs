@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ErrorDetails3
 {
     /// <summary>
-    /// Code.
+    /// Type.
     /// </summary>
-    [DisplayName("Code")]
-    [IsoXmlTag("Cd")]
-    public Max35Text? Code { get; init; }
-
-    /// <summary>
-    /// Data Element In Error.
-    /// </summary>
-    [DisplayName("Data Element In Error")]
-    [IsoXmlTag("DataElmtInErr")]
-    public ValueList<Max4000Text> DataElementInError { get; init; } = [];
-
-    /// <summary>
-    /// Description.
-    /// </summary>
-    [DisplayName("Description")]
-    [IsoXmlTag("Desc")]
-    public Max500Text? Description { get; init; }
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public required MessageError1Code Type { get; init; }
 
     /// <summary>
     /// Other Type.
@@ -45,9 +31,23 @@ public record ErrorDetails3
     public Max35Text? OtherType { get; init; }
 
     /// <summary>
-    /// Type.
+    /// Code.
     /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public required MessageError1Code Type { get; init; }
+    [DisplayName("Code")]
+    [IsoXmlTag("Cd")]
+    public Max35Text? Code { get; init; }
+
+    /// <summary>
+    /// Description.
+    /// </summary>
+    [DisplayName("Description")]
+    [IsoXmlTag("Desc")]
+    public Max500Text? Description { get; init; }
+
+    /// <summary>
+    /// Data Element In Error.
+    /// </summary>
+    [DisplayName("Data Element In Error")]
+    [IsoXmlTag("DataElmtInErr")]
+    public ValueList<Max4000Text> DataElementInError { get; init; } = [];
 }

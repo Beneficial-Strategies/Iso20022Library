@@ -24,6 +24,13 @@ public record IntraBalanceQueryCriteria10
     public ValueList<Max35Text> CancellationRequestIdentification { get; init; } = [];
 
     /// <summary>
+    /// Processing Status.
+    /// </summary>
+    [DisplayName("Processing Status")]
+    [IsoXmlTag("PrcgSts")]
+    public ValueList<CancellationProcessingStatus9Choice_> ProcessingStatus { get; init; } = [];
+
+    /// <summary>
     /// Cash Account.
     /// </summary>
     [DisplayName("Cash Account")]
@@ -45,13 +52,6 @@ public record IntraBalanceQueryCriteria10
     public BranchAndFinancialInstitutionIdentification8? CashAccountServicer { get; init; }
 
     /// <summary>
-    /// Creation Date Time.
-    /// </summary>
-    [DisplayName("Creation Date Time")]
-    [IsoXmlTag("CreDtTm")]
-    public DateAndDateTimeSearch5Choice_? CreationDateTime { get; init; }
-
-    /// <summary>
     /// Message Originator.
     /// </summary>
     [DisplayName("Message Originator")]
@@ -59,9 +59,9 @@ public record IntraBalanceQueryCriteria10
     public ValueList<SystemPartyIdentification8> MessageOriginator { get; init; } = [];
 
     /// <summary>
-    /// Processing Status.
+    /// Creation Date Time.
     /// </summary>
-    [DisplayName("Processing Status")]
-    [IsoXmlTag("PrcgSts")]
-    public ValueList<CancellationProcessingStatus9Choice_> ProcessingStatus { get; init; } = [];
+    [DisplayName("Creation Date Time")]
+    [IsoXmlTag("CreDtTm")]
+    public DateAndDateTimeSearch5Choice_? CreationDateTime { get; init; }
 }

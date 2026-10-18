@@ -53,11 +53,11 @@ public record CorporateActionNarrative002V09 : IOuterRecord
     public AccountIdentification77Choice_? AccountDetails { get; init; }
 
     /// <summary>
-    /// Additional Information.
+    /// Underlying Security.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public ValueList<RestrictedFINZMax8000Text> AdditionalInformation { get; init; } = [];
+    [DisplayName("Underlying Security")]
+    [IsoXmlTag("UndrlygScty")]
+    public SecurityIdentification20? UnderlyingSecurity { get; init; }
 
     /// <summary>
     /// Corporate Action General Information.
@@ -67,16 +67,16 @@ public record CorporateActionNarrative002V09 : IOuterRecord
     public required CorporateActionGeneralInformation102 CorporateActionGeneralInformation { get; init; }
 
     /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public ValueList<RestrictedFINZMax8000Text> AdditionalInformation { get; init; } = [];
+
+    /// <summary>
     /// Supplementary Data.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Underlying Security.
-    /// </summary>
-    [DisplayName("Underlying Security")]
-    [IsoXmlTag("UndrlygScty")]
-    public SecurityIdentification20? UnderlyingSecurity { get; init; }
 }

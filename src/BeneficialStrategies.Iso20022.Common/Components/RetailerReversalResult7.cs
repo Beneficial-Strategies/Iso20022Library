@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record RetailerReversalResult7
 {
     /// <summary>
-    /// Customer Order.
+    /// POI Reconciliation Identification.
     /// </summary>
-    [DisplayName("Customer Order")]
-    [IsoXmlTag("CstmrOrdr")]
-    public ValueList<CustomerOrder1> CustomerOrder { get; init; } = [];
+    [DisplayName("POI Reconciliation Identification")]
+    [IsoXmlTag("POIRcncltnId")]
+    public Max35Text? POIReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Original Payment Transaction.
@@ -31,9 +31,9 @@ public record RetailerReversalResult7
     public PaymentTransaction165? OriginalPaymentTransaction { get; init; }
 
     /// <summary>
-    /// POI Reconciliation Identification.
+    /// Customer Order.
     /// </summary>
-    [DisplayName("POI Reconciliation Identification")]
-    [IsoXmlTag("POIRcncltnId")]
-    public Max35Text? POIReconciliationIdentification { get; init; }
+    [DisplayName("Customer Order")]
+    [IsoXmlTag("CstmrOrdr")]
+    public ValueList<CustomerOrder1> CustomerOrder { get; init; } = [];
 }

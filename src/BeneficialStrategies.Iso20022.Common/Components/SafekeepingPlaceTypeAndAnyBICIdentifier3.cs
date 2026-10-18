@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SafekeepingPlaceTypeAndAnyBICIdentifier3
 {
     /// <summary>
-    /// Identification.
-    /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public required AnyBICDec2014Identifier Identification { get; init; }
-
-    /// <summary>
     /// Safekeeping Place Type.
     /// </summary>
     [DisplayName("Safekeeping Place Type")]
     [IsoXmlTag("SfkpgPlcTp")]
     public required SafekeepingPlace1Code SafekeepingPlaceType { get; init; }
+
+    /// <summary>
+    /// Identification.
+    /// </summary>
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public required AnyBICDec2014Identifier Identification { get; init; }
 }

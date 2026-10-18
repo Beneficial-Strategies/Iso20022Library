@@ -18,16 +18,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record RemittanceAmount4
 {
     /// <summary>
-    /// Specifies detailed information on the amount and reason of the adjustment.
-    /// </summary>
-    [DisplayName("Adjustment Amount And Reason")]
-    [IsoXmlTag("AdjstmntAmtAndRsn")]
-    public ValueList<DocumentAdjustment1> AdjustmentAmountAndReason { get; init; } = [];
-
-    /// <summary>
     /// Type and amount of money for the referred document.
     /// </summary>
     [DisplayName("Remittance Amount And Type")]
     [IsoXmlTag("RmtAmtAndTp")]
     public ValueList<DocumentAmount1> RemittanceAmountAndType { get; init; } = [];
+
+    /// <summary>
+    /// Specifies detailed information on the amount and reason of the adjustment.
+    /// </summary>
+    [DisplayName("Adjustment Amount And Reason")]
+    [IsoXmlTag("AdjstmntAmtAndRsn")]
+    public ValueList<DocumentAdjustment1> AdjustmentAmountAndReason { get; init; } = [];
 }

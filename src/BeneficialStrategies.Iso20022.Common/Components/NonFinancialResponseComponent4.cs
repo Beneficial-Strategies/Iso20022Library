@@ -24,18 +24,18 @@ public record NonFinancialResponseComponent4
     public required CardPaymentEnvironment80 Environment { get; init; }
 
     /// <summary>
-    /// Response.
-    /// </summary>
-    [DisplayName("Response")]
-    [IsoXmlTag("Rspn")]
-    public required ResponseType11 Response { get; init; }
-
-    /// <summary>
     /// Response Content.
     /// </summary>
     [DisplayName("Response Content")]
     [IsoXmlTag("RspnCntt")]
     public ValueList<NonFinancialResponseContentComponent4> ResponseContent { get; init; } = [];
+
+    /// <summary>
+    /// Response.
+    /// </summary>
+    [DisplayName("Response")]
+    [IsoXmlTag("Rspn")]
+    public required ResponseType11 Response { get; init; }
 
     /// <summary>
     /// Supplementary Data.

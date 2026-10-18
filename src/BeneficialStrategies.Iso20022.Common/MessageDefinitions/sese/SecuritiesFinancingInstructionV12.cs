@@ -64,46 +64,18 @@ public record SecuritiesFinancingInstructionV12 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Cash parties involved in the transaction if different from the securities settlement parties.
+    /// Unambiguous identification of the transaction as known by the instructing party.
     /// </summary>
-    [DisplayName("Cash Parties")]
-    [IsoXmlTag("CshPties")]
-    public CashParties41? CashParties { get; init; }
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public required Max35Text TransactionIdentification { get; init; }
 
     /// <summary>
-    /// Identifies the chain of delivering settlement parties.
+    /// Securities financing transaction identification information, type (repurchase agreement, reverse repurchase agreement, securities lending or securities borrowing) and other parameters.
     /// </summary>
-    [DisplayName("Delivering Settlement Parties")]
-    [IsoXmlTag("DlvrgSttlmPties")]
-    public SettlementParties126? DeliveringSettlementParties { get; init; }
-
-    /// <summary>
-    /// Digital Network Fee.
-    /// </summary>
-    [DisplayName("Digital Network Fee")]
-    [IsoXmlTag("DgtlNtwkFee")]
-    public NetworkFee1? DigitalNetworkFee { get; init; }
-
-    /// <summary>
-    /// Elements characterising a financial instrument.
-    /// </summary>
-    [DisplayName("Financial Instrument Attributes")]
-    [IsoXmlTag("FinInstrmAttrbts")]
-    public FinancialInstrumentAttributes111? FinancialInstrumentAttributes { get; init; }
-
-    /// <summary>
-    /// Financial instrument representing a sum of rights of the investor vis-a-vis the issuer.
-    /// </summary>
-    [DisplayName("Financial Instrument Identification")]
-    [IsoXmlTag("FinInstrmId")]
-    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
-
-    /// <summary>
-    /// Link to another transaction that must be processed after, before or at the same time.
-    /// </summary>
-    [DisplayName("Linkages")]
-    [IsoXmlTag("Lnkgs")]
-    public ValueList<Linkages64> Linkages { get; init; } = [];
+    [DisplayName("Transaction Type And Additional Parameters")]
+    [IsoXmlTag("TxTpAndAddtlParams")]
+    public required TransactionTypeAndAdditionalParameters21 TransactionTypeAndAdditionalParameters { get; init; }
 
     /// <summary>
     /// Count of the number of transactions linked.
@@ -113,25 +85,32 @@ public record SecuritiesFinancingInstructionV12 : IOuterRecord
     public NumberCount2Choice_? NumberCounts { get; init; }
 
     /// <summary>
-    /// Total amount of money to be paid or received in exchange for the securities at the opening of a securities financing transaction.
+    /// Link to another transaction that must be processed after, before or at the same time.
     /// </summary>
-    [DisplayName("Opening Settlement Amount")]
-    [IsoXmlTag("OpngSttlmAmt")]
-    public AmountAndDirection94? OpeningSettlementAmount { get; init; }
+    [DisplayName("Linkages")]
+    [IsoXmlTag("Lnkgs")]
+    public ValueList<Linkages64> Linkages { get; init; } = [];
 
     /// <summary>
-    /// Other amounts than the settlement amount.
+    /// Details of the securities financing deal.
     /// </summary>
-    [DisplayName("Other Amounts")]
-    [IsoXmlTag("OthrAmts")]
-    public OtherAmounts45? OtherAmounts { get; init; }
+    [DisplayName("Trade Details")]
+    [IsoXmlTag("TradDtls")]
+    public required SecuritiesTradeDetails116 TradeDetails { get; init; }
 
     /// <summary>
-    /// Other business parties relevant to the transaction.
+    /// Financial instrument representing a sum of rights of the investor vis-a-vis the issuer.
     /// </summary>
-    [DisplayName("Other Business Parties")]
-    [IsoXmlTag("OthrBizPties")]
-    public OtherParties43? OtherBusinessParties { get; init; }
+    [DisplayName("Financial Instrument Identification")]
+    [IsoXmlTag("FinInstrmId")]
+    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
+
+    /// <summary>
+    /// Elements characterising a financial instrument.
+    /// </summary>
+    [DisplayName("Financial Instrument Attributes")]
+    [IsoXmlTag("FinInstrmAttrbts")]
+    public FinancialInstrumentAttributes111? FinancialInstrumentAttributes { get; init; }
 
     /// <summary>
     /// Details related to the account and quantity involved in the transaction.
@@ -139,13 +118,6 @@ public record SecuritiesFinancingInstructionV12 : IOuterRecord
     [DisplayName("Quantity And Account Details")]
     [IsoXmlTag("QtyAndAcctDtls")]
     public required QuantityAndAccount117 QuantityAndAccountDetails { get; init; }
-
-    /// <summary>
-    /// Identifies the chain of receiving settlement parties.
-    /// </summary>
-    [DisplayName("Receiving Settlement Parties")]
-    [IsoXmlTag("RcvgSttlmPties")]
-    public SettlementParties126? ReceivingSettlementParties { get; init; }
 
     /// <summary>
     /// Details for the closing of the securities financing transaction.
@@ -169,30 +141,58 @@ public record SecuritiesFinancingInstructionV12 : IOuterRecord
     public StandingSettlementInstruction20? StandingSettlementInstructionDetails { get; init; }
 
     /// <summary>
+    /// Identifies the chain of delivering settlement parties.
+    /// </summary>
+    [DisplayName("Delivering Settlement Parties")]
+    [IsoXmlTag("DlvrgSttlmPties")]
+    public SettlementParties126? DeliveringSettlementParties { get; init; }
+
+    /// <summary>
+    /// Identifies the chain of receiving settlement parties.
+    /// </summary>
+    [DisplayName("Receiving Settlement Parties")]
+    [IsoXmlTag("RcvgSttlmPties")]
+    public SettlementParties126? ReceivingSettlementParties { get; init; }
+
+    /// <summary>
+    /// Cash parties involved in the transaction if different from the securities settlement parties.
+    /// </summary>
+    [DisplayName("Cash Parties")]
+    [IsoXmlTag("CshPties")]
+    public CashParties41? CashParties { get; init; }
+
+    /// <summary>
+    /// Total amount of money to be paid or received in exchange for the securities at the opening of a securities financing transaction.
+    /// </summary>
+    [DisplayName("Opening Settlement Amount")]
+    [IsoXmlTag("OpngSttlmAmt")]
+    public AmountAndDirection94? OpeningSettlementAmount { get; init; }
+
+    /// <summary>
+    /// Other amounts than the settlement amount.
+    /// </summary>
+    [DisplayName("Other Amounts")]
+    [IsoXmlTag("OthrAmts")]
+    public OtherAmounts45? OtherAmounts { get; init; }
+
+    /// <summary>
+    /// Digital Network Fee.
+    /// </summary>
+    [DisplayName("Digital Network Fee")]
+    [IsoXmlTag("DgtlNtwkFee")]
+    public NetworkFee1? DigitalNetworkFee { get; init; }
+
+    /// <summary>
+    /// Other business parties relevant to the transaction.
+    /// </summary>
+    [DisplayName("Other Business Parties")]
+    [IsoXmlTag("OthrBizPties")]
+    public OtherParties43? OtherBusinessParties { get; init; }
+
+    /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Details of the securities financing deal.
-    /// </summary>
-    [DisplayName("Trade Details")]
-    [IsoXmlTag("TradDtls")]
-    public required SecuritiesTradeDetails116 TradeDetails { get; init; }
-
-    /// <summary>
-    /// Unambiguous identification of the transaction as known by the instructing party.
-    /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public required Max35Text TransactionIdentification { get; init; }
-
-    /// <summary>
-    /// Securities financing transaction identification information, type (repurchase agreement, reverse repurchase agreement, securities lending or securities borrowing) and other parameters.
-    /// </summary>
-    [DisplayName("Transaction Type And Additional Parameters")]
-    [IsoXmlTag("TxTpAndAddtlParams")]
-    public required TransactionTypeAndAdditionalParameters21 TransactionTypeAndAdditionalParameters { get; init; }
 }

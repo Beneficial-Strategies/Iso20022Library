@@ -46,13 +46,6 @@ public record ATMPINManagementResponseV03 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// ATMPIN Management Response.
-    /// </summary>
-    [DisplayName("ATMPIN Management Response")]
-    [IsoXmlTag("ATMPINMgmtRspn")]
-    public ATMPINManagementResponse3? ATMPINManagementResponse { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
@@ -65,6 +58,13 @@ public record ATMPINManagementResponseV03 : IOuterRecord
     [DisplayName("Protected ATMPIN Management Response")]
     [IsoXmlTag("PrtctdATMPINMgmtRspn")]
     public ContentInformationType10? ProtectedATMPINManagementResponse { get; init; }
+
+    /// <summary>
+    /// ATMPIN Management Response.
+    /// </summary>
+    [DisplayName("ATMPIN Management Response")]
+    [IsoXmlTag("ATMPINMgmtRspn")]
+    public ATMPINManagementResponse3? ATMPINManagementResponse { get; init; }
 
     /// <summary>
     /// Security Trailer.

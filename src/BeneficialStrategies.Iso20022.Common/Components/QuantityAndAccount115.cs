@@ -17,11 +17,60 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record QuantityAndAccount115
 {
     /// <summary>
+    /// Settled Quantity.
+    /// </summary>
+    [DisplayName("Settled Quantity")]
+    [IsoXmlTag("SttldQty")]
+    public required Quantity51Choice_ SettledQuantity { get; init; }
+
+    /// <summary>
+    /// Previously Settled Quantity.
+    /// </summary>
+    [DisplayName("Previously Settled Quantity")]
+    [IsoXmlTag("PrevslySttldQty")]
+    public FinancialInstrumentQuantity33Choice_? PreviouslySettledQuantity { get; init; }
+
+    /// <summary>
+    /// Remaining To Be Settled Quantity.
+    /// </summary>
+    [DisplayName("Remaining To Be Settled Quantity")]
+    [IsoXmlTag("RmngToBeSttldQty")]
+    public FinancialInstrumentQuantity33Choice_? RemainingToBeSettledQuantity { get; init; }
+
+    /// <summary>
+    /// Previously Settled Amount.
+    /// </summary>
+    [DisplayName("Previously Settled Amount")]
+    [IsoXmlTag("PrevslySttldAmt")]
+    public AmountAndDirection52? PreviouslySettledAmount { get; init; }
+
+    /// <summary>
+    /// Remaining To Be Settled Amount.
+    /// </summary>
+    [DisplayName("Remaining To Be Settled Amount")]
+    [IsoXmlTag("RmngToBeSttldAmt")]
+    public AmountAndDirection52? RemainingToBeSettledAmount { get; init; }
+
+    /// <summary>
+    /// Denomination Choice.
+    /// </summary>
+    [DisplayName("Denomination Choice")]
+    [IsoXmlTag("DnmtnChc")]
+    public Max210Text? DenominationChoice_ { get; init; }
+
+    /// <summary>
     /// Account Owner.
     /// </summary>
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
     public PartyIdentification144? AccountOwner { get; init; }
+
+    /// <summary>
+    /// Safekeeping Account.
+    /// </summary>
+    [DisplayName("Safekeeping Account")]
+    [IsoXmlTag("SfkpgAcct")]
+    public SecuritiesAccount19? SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Block Chain Address Or Wallet.
@@ -38,27 +87,6 @@ public record QuantityAndAccount115
     public CashAccountIdentification9Choice_? CashAccount { get; init; }
 
     /// <summary>
-    /// Denomination Choice.
-    /// </summary>
-    [DisplayName("Denomination Choice")]
-    [IsoXmlTag("DnmtnChc")]
-    public Max210Text? DenominationChoice_ { get; init; }
-
-    /// <summary>
-    /// Previously Settled Amount.
-    /// </summary>
-    [DisplayName("Previously Settled Amount")]
-    [IsoXmlTag("PrevslySttldAmt")]
-    public AmountAndDirection52? PreviouslySettledAmount { get; init; }
-
-    /// <summary>
-    /// Previously Settled Quantity.
-    /// </summary>
-    [DisplayName("Previously Settled Quantity")]
-    [IsoXmlTag("PrevslySttldQty")]
-    public FinancialInstrumentQuantity33Choice_? PreviouslySettledQuantity { get; init; }
-
-    /// <summary>
     /// Quantity Breakdown.
     /// </summary>
     [DisplayName("Quantity Breakdown")]
@@ -66,37 +94,9 @@ public record QuantityAndAccount115
     public ValueList<QuantityBreakdown63> QuantityBreakdown { get; init; } = [];
 
     /// <summary>
-    /// Remaining To Be Settled Amount.
-    /// </summary>
-    [DisplayName("Remaining To Be Settled Amount")]
-    [IsoXmlTag("RmngToBeSttldAmt")]
-    public AmountAndDirection52? RemainingToBeSettledAmount { get; init; }
-
-    /// <summary>
-    /// Remaining To Be Settled Quantity.
-    /// </summary>
-    [DisplayName("Remaining To Be Settled Quantity")]
-    [IsoXmlTag("RmngToBeSttldQty")]
-    public FinancialInstrumentQuantity33Choice_? RemainingToBeSettledQuantity { get; init; }
-
-    /// <summary>
-    /// Safekeeping Account.
-    /// </summary>
-    [DisplayName("Safekeeping Account")]
-    [IsoXmlTag("SfkpgAcct")]
-    public SecuritiesAccount19? SafekeepingAccount { get; init; }
-
-    /// <summary>
     /// Safekeeping Place.
     /// </summary>
     [DisplayName("Safekeeping Place")]
     [IsoXmlTag("SfkpgPlc")]
     public SafeKeepingPlace5? SafekeepingPlace { get; init; }
-
-    /// <summary>
-    /// Settled Quantity.
-    /// </summary>
-    [DisplayName("Settled Quantity")]
-    [IsoXmlTag("SttldQty")]
-    public required Quantity51Choice_ SettledQuantity { get; init; }
 }

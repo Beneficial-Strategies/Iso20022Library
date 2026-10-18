@@ -46,13 +46,6 @@ public record ATMExceptionAcknowledgementV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// ATM Exception Acknowledgement.
-    /// </summary>
-    [DisplayName("ATM Exception Acknowledgement")]
-    [IsoXmlTag("ATMXcptnAck")]
-    public ATMExceptionAcknowledgement2? ATMExceptionAcknowledgement { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
@@ -65,6 +58,13 @@ public record ATMExceptionAcknowledgementV02 : IOuterRecord
     [DisplayName("Protected ATM Exception Acknowledgement")]
     [IsoXmlTag("PrtctdATMXcptnAck")]
     public ContentInformationType10? ProtectedATMExceptionAcknowledgement { get; init; }
+
+    /// <summary>
+    /// ATM Exception Acknowledgement.
+    /// </summary>
+    [DisplayName("ATM Exception Acknowledgement")]
+    [IsoXmlTag("ATMXcptnAck")]
+    public ATMExceptionAcknowledgement2? ATMExceptionAcknowledgement { get; init; }
 
     /// <summary>
     /// Security Trailer.

@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ReconciliationReport15
 {
     /// <summary>
-    /// Matching Criteria.
-    /// </summary>
-    [DisplayName("Matching Criteria")]
-    [IsoXmlTag("MtchgCrit")]
-    public required MatchingCriteria17 MatchingCriteria { get; init; }
-
-    /// <summary>
     /// Transaction Identification.
     /// </summary>
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
     public required TradeTransactionIdentification24 TransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Matching Criteria.
+    /// </summary>
+    [DisplayName("Matching Criteria")]
+    [IsoXmlTag("MtchgCrit")]
+    public required MatchingCriteria17 MatchingCriteria { get; init; }
 }

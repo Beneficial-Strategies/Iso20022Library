@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record RetailerPaymentResult6
 {
     /// <summary>
+    /// Transaction Type.
+    /// </summary>
+    [DisplayName("Transaction Type")]
+    [IsoXmlTag("TxTp")]
+    public required CardPaymentServiceType12Code TransactionType { get; init; }
+
+    /// <summary>
     /// Additional Service.
     /// </summary>
     [DisplayName("Additional Service")]
@@ -24,11 +31,25 @@ public record RetailerPaymentResult6
     public ValueList<CardPaymentServiceType9Code> AdditionalService { get; init; } = [];
 
     /// <summary>
-    /// Customer Language.
+    /// Service Attribute.
     /// </summary>
-    [DisplayName("Customer Language")]
-    [IsoXmlTag("CstmrLang")]
-    public LanguageCode? CustomerLanguage { get; init; }
+    [DisplayName("Service Attribute")]
+    [IsoXmlTag("SvcAttr")]
+    public CardPaymentServiceType14Code? ServiceAttribute { get; init; }
+
+    /// <summary>
+    /// Requested Transaction.
+    /// </summary>
+    [DisplayName("Requested Transaction")]
+    [IsoXmlTag("ReqdTx")]
+    public CardPaymentTransaction136? RequestedTransaction { get; init; }
+
+    /// <summary>
+    /// Transaction Response.
+    /// </summary>
+    [DisplayName("Transaction Response")]
+    [IsoXmlTag("TxRspn")]
+    public CardPaymentTransaction132? TransactionResponse { get; init; }
 
     /// <summary>
     /// Customer Order.
@@ -45,20 +66,6 @@ public record RetailerPaymentResult6
     public CapturedSignature1? ImageCapturedSignature { get; init; }
 
     /// <summary>
-    /// Merchant Override Flag.
-    /// </summary>
-    [DisplayName("Merchant Override Flag")]
-    [IsoXmlTag("MrchntOvrrdFlg")]
-    public TrueFalseIndicator? MerchantOverrideFlag { get; init; }
-
-    /// <summary>
-    /// Online Flag.
-    /// </summary>
-    [DisplayName("Online Flag")]
-    [IsoXmlTag("OnlnFlg")]
-    public TrueFalseIndicator? OnlineFlag { get; init; }
-
-    /// <summary>
     /// Protected Captured Signature.
     /// </summary>
     [DisplayName("Protected Captured Signature")]
@@ -66,30 +73,23 @@ public record RetailerPaymentResult6
     public ContentInformationType40? ProtectedCapturedSignature { get; init; }
 
     /// <summary>
-    /// Requested Transaction.
+    /// Merchant Override Flag.
     /// </summary>
-    [DisplayName("Requested Transaction")]
-    [IsoXmlTag("ReqdTx")]
-    public CardPaymentTransaction136? RequestedTransaction { get; init; }
+    [DisplayName("Merchant Override Flag")]
+    [IsoXmlTag("MrchntOvrrdFlg")]
+    public TrueFalseIndicator? MerchantOverrideFlag { get; init; }
 
     /// <summary>
-    /// Service Attribute.
+    /// Customer Language.
     /// </summary>
-    [DisplayName("Service Attribute")]
-    [IsoXmlTag("SvcAttr")]
-    public CardPaymentServiceType14Code? ServiceAttribute { get; init; }
+    [DisplayName("Customer Language")]
+    [IsoXmlTag("CstmrLang")]
+    public LanguageCode? CustomerLanguage { get; init; }
 
     /// <summary>
-    /// Transaction Response.
+    /// Online Flag.
     /// </summary>
-    [DisplayName("Transaction Response")]
-    [IsoXmlTag("TxRspn")]
-    public CardPaymentTransaction132? TransactionResponse { get; init; }
-
-    /// <summary>
-    /// Transaction Type.
-    /// </summary>
-    [DisplayName("Transaction Type")]
-    [IsoXmlTag("TxTp")]
-    public required CardPaymentServiceType12Code TransactionType { get; init; }
+    [DisplayName("Online Flag")]
+    [IsoXmlTag("OnlnFlg")]
+    public TrueFalseIndicator? OnlineFlag { get; init; }
 }

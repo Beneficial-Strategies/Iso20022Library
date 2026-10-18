@@ -17,25 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record EnrolmentHeader3
 {
     /// <summary>
-    /// Creation Date Time.
-    /// </summary>
-    [DisplayName("Creation Date Time")]
-    [IsoXmlTag("CreDtTm")]
-    public required ISODateTime CreationDateTime { get; init; }
-
-    /// <summary>
-    /// Initiating Party.
-    /// </summary>
-    [DisplayName("Initiating Party")]
-    [IsoXmlTag("InitgPty")]
-    public required RTPPartyIdentification2 InitiatingParty { get; init; }
-
-    /// <summary>
     /// Message Identification.
     /// </summary>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     public required Max35Text MessageIdentification { get; init; }
+
+    /// <summary>
+    /// Creation Date Time.
+    /// </summary>
+    [DisplayName("Creation Date Time")]
+    [IsoXmlTag("CreDtTm")]
+    public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// Message Originator.
@@ -50,4 +43,11 @@ public record EnrolmentHeader3
     [DisplayName("Message Recipient")]
     [IsoXmlTag("MsgRcpt")]
     public RTPPartyIdentification2? MessageRecipient { get; init; }
+
+    /// <summary>
+    /// Initiating Party.
+    /// </summary>
+    [DisplayName("Initiating Party")]
+    [IsoXmlTag("InitgPty")]
+    public required RTPPartyIdentification2 InitiatingParty { get; init; }
 }

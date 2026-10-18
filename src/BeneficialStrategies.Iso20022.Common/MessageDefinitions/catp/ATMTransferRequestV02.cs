@@ -46,13 +46,6 @@ public record ATMTransferRequestV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// ATM Transfer Request.
-    /// </summary>
-    [DisplayName("ATM Transfer Request")]
-    [IsoXmlTag("ATMTrfReq")]
-    public ATMTransferRequest2? ATMTransferRequest { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
@@ -65,6 +58,13 @@ public record ATMTransferRequestV02 : IOuterRecord
     [DisplayName("Protected ATM Transfer Request")]
     [IsoXmlTag("PrtctdATMTrfReq")]
     public ContentInformationType10? ProtectedATMTransferRequest { get; init; }
+
+    /// <summary>
+    /// ATM Transfer Request.
+    /// </summary>
+    [DisplayName("ATM Transfer Request")]
+    [IsoXmlTag("ATMTrfReq")]
+    public ATMTransferRequest2? ATMTransferRequest { get; init; }
 
     /// <summary>
     /// Security Trailer.

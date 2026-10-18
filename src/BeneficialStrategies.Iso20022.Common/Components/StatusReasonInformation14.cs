@@ -18,14 +18,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record StatusReasonInformation14
 {
     /// <summary>
-    /// Further details on the status reason.
-    /// Usage: Additional information can be used for several purposes such as the reporting of repaired information.
-    /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public ValueList<Max105Text> AdditionalInformation { get; init; } = [];
-
-    /// <summary>
     /// Party that issues the status.
     /// </summary>
     [DisplayName("Originator")]
@@ -38,4 +30,12 @@ public record StatusReasonInformation14
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
     public StatusReason6Choice_? Reason { get; init; }
+
+    /// <summary>
+    /// Further details on the status reason.
+    /// Usage: Additional information can be used for several purposes such as the reporting of repaired information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public ValueList<Max105Text> AdditionalInformation { get; init; } = [];
 }

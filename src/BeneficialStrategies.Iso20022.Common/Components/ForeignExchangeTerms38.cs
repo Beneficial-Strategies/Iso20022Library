@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ForeignExchangeTerms38
 {
     /// <summary>
-    /// Exchange Rate.
+    /// Unit Currency.
     /// </summary>
-    [DisplayName("Exchange Rate")]
-    [IsoXmlTag("XchgRate")]
-    public required BaseOne14Rate ExchangeRate { get; init; }
+    [DisplayName("Unit Currency")]
+    [IsoXmlTag("UnitCcy")]
+    public required ActiveCurrencyCode UnitCurrency { get; init; }
 
     /// <summary>
     /// Quoted Currency.
@@ -31,9 +31,9 @@ public record ForeignExchangeTerms38
     public required ActiveCurrencyCode QuotedCurrency { get; init; }
 
     /// <summary>
-    /// Unit Currency.
+    /// Exchange Rate.
     /// </summary>
-    [DisplayName("Unit Currency")]
-    [IsoXmlTag("UnitCcy")]
-    public required ActiveCurrencyCode UnitCurrency { get; init; }
+    [DisplayName("Exchange Rate")]
+    [IsoXmlTag("XchgRate")]
+    public required BaseOne14Rate ExchangeRate { get; init; }
 }

@@ -31,6 +31,13 @@ public record Meeting7
     public MeetingDateStatus2Code? DateStatus { get; init; }
 
     /// <summary>
+    /// Quorum Required.
+    /// </summary>
+    [DisplayName("Quorum Required")]
+    [IsoXmlTag("QrmReqrd")]
+    public YesNoIndicator? QuorumRequired { get; init; }
+
+    /// <summary>
     /// Location.
     /// </summary>
     [DisplayName("Location")]
@@ -43,13 +50,6 @@ public record Meeting7
     [DisplayName("Quorum Quantity")]
     [IsoXmlTag("QrmQty")]
     public QuorumQuantity2Choice_? QuorumQuantity { get; init; }
-
-    /// <summary>
-    /// Quorum Required.
-    /// </summary>
-    [DisplayName("Quorum Required")]
-    [IsoXmlTag("QrmReqrd")]
-    public YesNoIndicator? QuorumRequired { get; init; }
 
     /// <summary>
     /// URL Address.

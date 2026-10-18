@@ -17,6 +17,27 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record OriginalItem8
 {
     /// <summary>
+    /// Original Item Identification.
+    /// </summary>
+    [DisplayName("Original Item Identification")]
+    [IsoXmlTag("OrgnlItmId")]
+    public required Max35Text OriginalItemIdentification { get; init; }
+
+    /// <summary>
+    /// Original End To End Identification.
+    /// </summary>
+    [DisplayName("Original End To End Identification")]
+    [IsoXmlTag("OrgnlEndToEndId")]
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
+
+    /// <summary>
+    /// UETR.
+    /// </summary>
+    [DisplayName("UETR")]
+    [IsoXmlTag("UETR")]
+    public UUIDv4Identifier? UETR { get; init; }
+
+    /// <summary>
     /// Amount.
     /// </summary>
     [DisplayName("Amount")]
@@ -31,30 +52,9 @@ public record OriginalItem8
     public ISODate? ExpectedValueDate { get; init; }
 
     /// <summary>
-    /// Original End To End Identification.
-    /// </summary>
-    [DisplayName("Original End To End Identification")]
-    [IsoXmlTag("OrgnlEndToEndId")]
-    public Max35Text? OriginalEndToEndIdentification { get; init; }
-
-    /// <summary>
-    /// Original Item Identification.
-    /// </summary>
-    [DisplayName("Original Item Identification")]
-    [IsoXmlTag("OrgnlItmId")]
-    public required Max35Text OriginalItemIdentification { get; init; }
-
-    /// <summary>
     /// Original Item Reference.
     /// </summary>
     [DisplayName("Original Item Reference")]
     [IsoXmlTag("OrgnlItmRef")]
     public OriginalItemReference7? OriginalItemReference { get; init; }
-
-    /// <summary>
-    /// UETR.
-    /// </summary>
-    [DisplayName("UETR")]
-    [IsoXmlTag("UETR")]
-    public UUIDv4Identifier? UETR { get; init; }
 }

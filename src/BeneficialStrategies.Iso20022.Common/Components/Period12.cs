@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Period12
 {
     /// <summary>
-    /// End Date.
-    /// </summary>
-    [DisplayName("End Date")]
-    [IsoXmlTag("EndDt")]
-    public required DateFormat45Choice_ EndDate { get; init; }
-
-    /// <summary>
     /// Start Date.
     /// </summary>
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     public required DateFormat45Choice_ StartDate { get; init; }
+
+    /// <summary>
+    /// End Date.
+    /// </summary>
+    [DisplayName("End Date")]
+    [IsoXmlTag("EndDt")]
+    public required DateFormat45Choice_ EndDate { get; init; }
 }

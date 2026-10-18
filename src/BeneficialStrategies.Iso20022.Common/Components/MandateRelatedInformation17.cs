@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record MandateRelatedInformation17
 {
     /// <summary>
-    /// Date Of Signature.
-    /// </summary>
-    [DisplayName("Date Of Signature")]
-    [IsoXmlTag("DtOfSgntr")]
-    public ISODate? DateOfSignature { get; init; }
-
-    /// <summary>
     /// Mandate Identification.
     /// </summary>
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
     public required Max35Text MandateIdentification { get; init; }
+
+    /// <summary>
+    /// Date Of Signature.
+    /// </summary>
+    [DisplayName("Date Of Signature")]
+    [IsoXmlTag("DtOfSgntr")]
+    public ISODate? DateOfSignature { get; init; }
 
     /// <summary>
     /// Mandate Image.

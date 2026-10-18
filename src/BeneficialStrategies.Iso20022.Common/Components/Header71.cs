@@ -17,34 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Header71
 {
     /// <summary>
-    /// Batch Management Information.
-    /// </summary>
-    [DisplayName("Batch Management Information")]
-    [IsoXmlTag("BtchMgmtInf")]
-    public BatchManagementInformation1? BatchManagementInformation { get; init; }
-
-    /// <summary>
-    /// Creation Date Time.
-    /// </summary>
-    [DisplayName("Creation Date Time")]
-    [IsoXmlTag("CreDtTm")]
-    public required ISODateTime CreationDateTime { get; init; }
-
-    /// <summary>
-    /// Exchange Identification.
-    /// </summary>
-    [DisplayName("Exchange Identification")]
-    [IsoXmlTag("XchgId")]
-    public Max35Text? ExchangeIdentification { get; init; }
-
-    /// <summary>
-    /// Initiating Party.
-    /// </summary>
-    [DisplayName("Initiating Party")]
-    [IsoXmlTag("InitgPty")]
-    public required GenericIdentification183 InitiatingParty { get; init; }
-
-    /// <summary>
     /// Message Function.
     /// </summary>
     [DisplayName("Message Function")]
@@ -59,11 +31,11 @@ public record Header71
     public required Max2048Text ProtocolVersion { get; init; }
 
     /// <summary>
-    /// Recipient Party.
+    /// Exchange Identification.
     /// </summary>
-    [DisplayName("Recipient Party")]
-    [IsoXmlTag("RcptPty")]
-    public GenericIdentification183? RecipientParty { get; init; }
+    [DisplayName("Exchange Identification")]
+    [IsoXmlTag("XchgId")]
+    public Max35Text? ExchangeIdentification { get; init; }
 
     /// <summary>
     /// Re Transmission Counter.
@@ -73,11 +45,32 @@ public record Header71
     public Max3NumericText? ReTransmissionCounter { get; init; }
 
     /// <summary>
-    /// Traceability.
+    /// Creation Date Time.
     /// </summary>
-    [DisplayName("Traceability")]
-    [IsoXmlTag("Tracblt")]
-    public ValueList<Traceability10> Traceability { get; init; } = [];
+    [DisplayName("Creation Date Time")]
+    [IsoXmlTag("CreDtTm")]
+    public required ISODateTime CreationDateTime { get; init; }
+
+    /// <summary>
+    /// Batch Management Information.
+    /// </summary>
+    [DisplayName("Batch Management Information")]
+    [IsoXmlTag("BtchMgmtInf")]
+    public BatchManagementInformation1? BatchManagementInformation { get; init; }
+
+    /// <summary>
+    /// Initiating Party.
+    /// </summary>
+    [DisplayName("Initiating Party")]
+    [IsoXmlTag("InitgPty")]
+    public required GenericIdentification183 InitiatingParty { get; init; }
+
+    /// <summary>
+    /// Recipient Party.
+    /// </summary>
+    [DisplayName("Recipient Party")]
+    [IsoXmlTag("RcptPty")]
+    public GenericIdentification183? RecipientParty { get; init; }
 
     /// <summary>
     /// Trace Data.
@@ -85,4 +78,11 @@ public record Header71
     [DisplayName("Trace Data")]
     [IsoXmlTag("TracData")]
     public ValueList<AdditionalData1> TraceData { get; init; } = [];
+
+    /// <summary>
+    /// Traceability.
+    /// </summary>
+    [DisplayName("Traceability")]
+    [IsoXmlTag("Tracblt")]
+    public ValueList<Traceability10> Traceability { get; init; } = [];
 }

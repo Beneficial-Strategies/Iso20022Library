@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record OrderPriority1
 {
     /// <summary>
-    /// Size.
-    /// </summary>
-    [DisplayName("Size")]
-    [IsoXmlTag("Sz")]
-    public PositiveNumber? Size { get; init; }
-
-    /// <summary>
     /// Time Stamp.
     /// </summary>
     [DisplayName("Time Stamp")]
     [IsoXmlTag("TmStmp")]
     public ISODateTime? TimeStamp { get; init; }
+
+    /// <summary>
+    /// Size.
+    /// </summary>
+    [DisplayName("Size")]
+    [IsoXmlTag("Sz")]
+    public PositiveNumber? Size { get; init; }
 }

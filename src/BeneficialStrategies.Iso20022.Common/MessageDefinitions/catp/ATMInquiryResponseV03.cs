@@ -46,13 +46,6 @@ public record ATMInquiryResponseV03 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// ATM Inquiry Response.
-    /// </summary>
-    [DisplayName("ATM Inquiry Response")]
-    [IsoXmlTag("ATMNqryRspn")]
-    public ATMInquiryResponse3? ATMInquiryResponse { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
@@ -65,6 +58,13 @@ public record ATMInquiryResponseV03 : IOuterRecord
     [DisplayName("Protected ATM Inquiry Response")]
     [IsoXmlTag("PrtctdATMNqryRspn")]
     public ContentInformationType10? ProtectedATMInquiryResponse { get; init; }
+
+    /// <summary>
+    /// ATM Inquiry Response.
+    /// </summary>
+    [DisplayName("ATM Inquiry Response")]
+    [IsoXmlTag("ATMNqryRspn")]
+    public ATMInquiryResponse3? ATMInquiryResponse { get; init; }
 
     /// <summary>
     /// Security Trailer.

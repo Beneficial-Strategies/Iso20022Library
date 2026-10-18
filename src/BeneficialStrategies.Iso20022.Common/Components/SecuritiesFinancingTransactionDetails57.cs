@@ -17,25 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SecuritiesFinancingTransactionDetails57
 {
     /// <summary>
-    /// Account Owner.
+    /// Securities Financing Trade Identification.
     /// </summary>
-    [DisplayName("Account Owner")]
-    [IsoXmlTag("AcctOwnr")]
-    public PartyIdentification144? AccountOwner { get; init; }
+    [DisplayName("Securities Financing Trade Identification")]
+    [IsoXmlTag("SctiesFincgTradId")]
+    public Max35Text? SecuritiesFinancingTradeIdentification { get; init; }
 
     /// <summary>
-    /// Block Chain Address Or Wallet.
+    /// Securities Financing Unique Transaction Identifier.
     /// </summary>
-    [DisplayName("Block Chain Address Or Wallet")]
-    [IsoXmlTag("BlckChainAdrOrWllt")]
-    public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
-
-    /// <summary>
-    /// Client Triparty Collateral Transaction Identification.
-    /// </summary>
-    [DisplayName("Client Triparty Collateral Transaction Identification")]
-    [IsoXmlTag("ClntTrptyCollTxId")]
-    public Max35Text? ClientTripartyCollateralTransactionIdentification { get; init; }
+    [DisplayName("Securities Financing Unique Transaction Identifier")]
+    [IsoXmlTag("SctiesFincgUnqTxIdr")]
+    public UTIIdentifier? SecuritiesFinancingUniqueTransactionIdentifier { get; init; }
 
     /// <summary>
     /// Closing Leg Identification.
@@ -45,6 +38,13 @@ public record SecuritiesFinancingTransactionDetails57
     public Max35Text? ClosingLegIdentification { get; init; }
 
     /// <summary>
+    /// Pool Identification.
+    /// </summary>
+    [DisplayName("Pool Identification")]
+    [IsoXmlTag("PoolId")]
+    public Max35Text? PoolIdentification { get; init; }
+
+    /// <summary>
     /// Corporate Action Event Identification.
     /// </summary>
     [DisplayName("Corporate Action Event Identification")]
@@ -52,11 +52,102 @@ public record SecuritiesFinancingTransactionDetails57
     public Max35Text? CorporateActionEventIdentification { get; init; }
 
     /// <summary>
-    /// Delivering Settlement Parties.
+    /// Triparty Agent Service Provider Collateral Transaction Identification.
     /// </summary>
-    [DisplayName("Delivering Settlement Parties")]
-    [IsoXmlTag("DlvrgSttlmPties")]
-    public SettlementParties127? DeliveringSettlementParties { get; init; }
+    [DisplayName("Triparty Agent Service Provider Collateral Transaction Identification")]
+    [IsoXmlTag("TrptyAgtSvcPrvdrCollTxId")]
+    public Max35Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Client Triparty Collateral Transaction Identification.
+    /// </summary>
+    [DisplayName("Client Triparty Collateral Transaction Identification")]
+    [IsoXmlTag("ClntTrptyCollTxId")]
+    public Max35Text? ClientTripartyCollateralTransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Account Owner.
+    /// </summary>
+    [DisplayName("Account Owner")]
+    [IsoXmlTag("AcctOwnr")]
+    public PartyIdentification144? AccountOwner { get; init; }
+
+    /// <summary>
+    /// Safekeeping Account.
+    /// </summary>
+    [DisplayName("Safekeeping Account")]
+    [IsoXmlTag("SfkpgAcct")]
+    public SecuritiesAccount19? SafekeepingAccount { get; init; }
+
+    /// <summary>
+    /// Block Chain Address Or Wallet.
+    /// </summary>
+    [DisplayName("Block Chain Address Or Wallet")]
+    [IsoXmlTag("BlckChainAdrOrWllt")]
+    public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
+
+    /// <summary>
+    /// Safekeeping Place.
+    /// </summary>
+    [DisplayName("Safekeeping Place")]
+    [IsoXmlTag("SfkpgPlc")]
+    public SafeKeepingPlace5? SafekeepingPlace { get; init; }
+
+    /// <summary>
+    /// Place Of Trade.
+    /// </summary>
+    [DisplayName("Place Of Trade")]
+    [IsoXmlTag("PlcOfTrad")]
+    public PlaceOfTradeIdentification1? PlaceOfTrade { get; init; }
+
+    /// <summary>
+    /// Financial Instrument Identification.
+    /// </summary>
+    [DisplayName("Financial Instrument Identification")]
+    [IsoXmlTag("FinInstrmId")]
+    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
+
+    /// <summary>
+    /// Settlement Quantity.
+    /// </summary>
+    [DisplayName("Settlement Quantity")]
+    [IsoXmlTag("SttlmQty")]
+    public required Quantity51Choice_ SettlementQuantity { get; init; }
+
+    /// <summary>
+    /// Opening Settlement Amount.
+    /// </summary>
+    [DisplayName("Opening Settlement Amount")]
+    [IsoXmlTag("OpngSttlmAmt")]
+    public AmountAndDirection51? OpeningSettlementAmount { get; init; }
+
+    /// <summary>
+    /// Termination Transaction Amount.
+    /// </summary>
+    [DisplayName("Termination Transaction Amount")]
+    [IsoXmlTag("TermntnTxAmt")]
+    public AmountAndDirection21? TerminationTransactionAmount { get; init; }
+
+    /// <summary>
+    /// Opening Settlement Date.
+    /// </summary>
+    [DisplayName("Opening Settlement Date")]
+    [IsoXmlTag("OpngSttlmDt")]
+    public required SettlementDate19Choice_ OpeningSettlementDate { get; init; }
+
+    /// <summary>
+    /// Termination Date.
+    /// </summary>
+    [DisplayName("Termination Date")]
+    [IsoXmlTag("TermntnDt")]
+    public TerminationDate6Choice_? TerminationDate { get; init; }
+
+    /// <summary>
+    /// Trade Date.
+    /// </summary>
+    [DisplayName("Trade Date")]
+    [IsoXmlTag("TradDt")]
+    public TradeDate8Choice_? TradeDate { get; init; }
 
     /// <summary>
     /// Expected Settlement Date.
@@ -73,67 +164,11 @@ public record SecuritiesFinancingTransactionDetails57
     public DateAndDateTime2Choice_? ExpectedValueDate { get; init; }
 
     /// <summary>
-    /// Financial Instrument Identification.
-    /// </summary>
-    [DisplayName("Financial Instrument Identification")]
-    [IsoXmlTag("FinInstrmId")]
-    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
-
-    /// <summary>
-    /// Investor.
-    /// </summary>
-    [DisplayName("Investor")]
-    [IsoXmlTag("Invstr")]
-    public PartyIdentification149? Investor { get; init; }
-
-    /// <summary>
     /// Late Delivery Date.
     /// </summary>
     [DisplayName("Late Delivery Date")]
     [IsoXmlTag("LateDlvryDt")]
     public DateAndDateTime2Choice_? LateDeliveryDate { get; init; }
-
-    /// <summary>
-    /// Opening Settlement Amount.
-    /// </summary>
-    [DisplayName("Opening Settlement Amount")]
-    [IsoXmlTag("OpngSttlmAmt")]
-    public AmountAndDirection51? OpeningSettlementAmount { get; init; }
-
-    /// <summary>
-    /// Opening Settlement Date.
-    /// </summary>
-    [DisplayName("Opening Settlement Date")]
-    [IsoXmlTag("OpngSttlmDt")]
-    public required SettlementDate19Choice_ OpeningSettlementDate { get; init; }
-
-    /// <summary>
-    /// Payment.
-    /// </summary>
-    [DisplayName("Payment")]
-    [IsoXmlTag("Pmt")]
-    public required DeliveryReceiptType2Code Payment { get; init; }
-
-    /// <summary>
-    /// Place Of Trade.
-    /// </summary>
-    [DisplayName("Place Of Trade")]
-    [IsoXmlTag("PlcOfTrad")]
-    public PlaceOfTradeIdentification1? PlaceOfTrade { get; init; }
-
-    /// <summary>
-    /// Pool Identification.
-    /// </summary>
-    [DisplayName("Pool Identification")]
-    [IsoXmlTag("PoolId")]
-    public Max35Text? PoolIdentification { get; init; }
-
-    /// <summary>
-    /// Pricing Rate.
-    /// </summary>
-    [DisplayName("Pricing Rate")]
-    [IsoXmlTag("PricgRate")]
-    public RateOrName1Choice_? PricingRate { get; init; }
 
     /// <summary>
     /// Rate Change Date.
@@ -143,67 +178,11 @@ public record SecuritiesFinancingTransactionDetails57
     public DateAndDateTime2Choice_? RateChangeDate { get; init; }
 
     /// <summary>
-    /// Rate Type.
-    /// </summary>
-    [DisplayName("Rate Type")]
-    [IsoXmlTag("RateTp")]
-    public RateType35Choice_? RateType { get; init; }
-
-    /// <summary>
-    /// Receiving Settlement Parties.
-    /// </summary>
-    [DisplayName("Receiving Settlement Parties")]
-    [IsoXmlTag("RcvgSttlmPties")]
-    public SettlementParties127? ReceivingSettlementParties { get; init; }
-
-    /// <summary>
-    /// Repurchase Rate.
-    /// </summary>
-    [DisplayName("Repurchase Rate")]
-    [IsoXmlTag("RpRate")]
-    public Rate2? RepurchaseRate { get; init; }
-
-    /// <summary>
-    /// Safekeeping Account.
-    /// </summary>
-    [DisplayName("Safekeeping Account")]
-    [IsoXmlTag("SfkpgAcct")]
-    public SecuritiesAccount19? SafekeepingAccount { get; init; }
-
-    /// <summary>
-    /// Safekeeping Place.
-    /// </summary>
-    [DisplayName("Safekeeping Place")]
-    [IsoXmlTag("SfkpgPlc")]
-    public SafeKeepingPlace5? SafekeepingPlace { get; init; }
-
-    /// <summary>
-    /// Securities Financing Trade Identification.
-    /// </summary>
-    [DisplayName("Securities Financing Trade Identification")]
-    [IsoXmlTag("SctiesFincgTradId")]
-    public Max35Text? SecuritiesFinancingTradeIdentification { get; init; }
-
-    /// <summary>
     /// Securities Financing Transaction Type.
     /// </summary>
     [DisplayName("Securities Financing Transaction Type")]
     [IsoXmlTag("SctiesFincgTxTp")]
     public required SecuritiesFinancingTransactionType2Code SecuritiesFinancingTransactionType { get; init; }
-
-    /// <summary>
-    /// Securities Financing Unique Transaction Identifier.
-    /// </summary>
-    [DisplayName("Securities Financing Unique Transaction Identifier")]
-    [IsoXmlTag("SctiesFincgUnqTxIdr")]
-    public UTIIdentifier? SecuritiesFinancingUniqueTransactionIdentifier { get; init; }
-
-    /// <summary>
-    /// Securities Haircut.
-    /// </summary>
-    [DisplayName("Securities Haircut")]
-    [IsoXmlTag("SctiesHrcut")]
-    public Rate2? SecuritiesHaircut { get; init; }
 
     /// <summary>
     /// Securities Movement Type.
@@ -213,11 +192,11 @@ public record SecuritiesFinancingTransactionDetails57
     public required ReceiveDelivery1Code SecuritiesMovementType { get; init; }
 
     /// <summary>
-    /// Settlement Instruction Processing Additional Details.
+    /// Payment.
     /// </summary>
-    [DisplayName("Settlement Instruction Processing Additional Details")]
-    [IsoXmlTag("SttlmInstrPrcgAddtlDtls")]
-    public Max350Text? SettlementInstructionProcessingAdditionalDetails { get; init; }
+    [DisplayName("Payment")]
+    [IsoXmlTag("Pmt")]
+    public required DeliveryReceiptType2Code Payment { get; init; }
 
     /// <summary>
     /// Settlement Parameters.
@@ -227,18 +206,25 @@ public record SecuritiesFinancingTransactionDetails57
     public SettlementDetails170? SettlementParameters { get; init; }
 
     /// <summary>
-    /// Settlement Quantity.
+    /// Rate Type.
     /// </summary>
-    [DisplayName("Settlement Quantity")]
-    [IsoXmlTag("SttlmQty")]
-    public required Quantity51Choice_ SettlementQuantity { get; init; }
+    [DisplayName("Rate Type")]
+    [IsoXmlTag("RateTp")]
+    public RateType35Choice_? RateType { get; init; }
 
     /// <summary>
-    /// Spread.
+    /// Variable Rate Support.
     /// </summary>
-    [DisplayName("Spread")]
-    [IsoXmlTag("Sprd")]
-    public Rate2? Spread { get; init; }
+    [DisplayName("Variable Rate Support")]
+    [IsoXmlTag("VarblRateSpprt")]
+    public RateName1? VariableRateSupport { get; init; }
+
+    /// <summary>
+    /// Repurchase Rate.
+    /// </summary>
+    [DisplayName("Repurchase Rate")]
+    [IsoXmlTag("RpRate")]
+    public Rate2? RepurchaseRate { get; init; }
 
     /// <summary>
     /// Stock Loan Margin.
@@ -248,37 +234,51 @@ public record SecuritiesFinancingTransactionDetails57
     public Rate2? StockLoanMargin { get; init; }
 
     /// <summary>
-    /// Termination Date.
+    /// Securities Haircut.
     /// </summary>
-    [DisplayName("Termination Date")]
-    [IsoXmlTag("TermntnDt")]
-    public TerminationDate6Choice_? TerminationDate { get; init; }
+    [DisplayName("Securities Haircut")]
+    [IsoXmlTag("SctiesHrcut")]
+    public Rate2? SecuritiesHaircut { get; init; }
 
     /// <summary>
-    /// Termination Transaction Amount.
+    /// Pricing Rate.
     /// </summary>
-    [DisplayName("Termination Transaction Amount")]
-    [IsoXmlTag("TermntnTxAmt")]
-    public AmountAndDirection21? TerminationTransactionAmount { get; init; }
+    [DisplayName("Pricing Rate")]
+    [IsoXmlTag("PricgRate")]
+    public RateOrName1Choice_? PricingRate { get; init; }
 
     /// <summary>
-    /// Trade Date.
+    /// Spread.
     /// </summary>
-    [DisplayName("Trade Date")]
-    [IsoXmlTag("TradDt")]
-    public TradeDate8Choice_? TradeDate { get; init; }
+    [DisplayName("Spread")]
+    [IsoXmlTag("Sprd")]
+    public Rate2? Spread { get; init; }
 
     /// <summary>
-    /// Triparty Agent Service Provider Collateral Transaction Identification.
+    /// Delivering Settlement Parties.
     /// </summary>
-    [DisplayName("Triparty Agent Service Provider Collateral Transaction Identification")]
-    [IsoXmlTag("TrptyAgtSvcPrvdrCollTxId")]
-    public Max35Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; }
+    [DisplayName("Delivering Settlement Parties")]
+    [IsoXmlTag("DlvrgSttlmPties")]
+    public SettlementParties127? DeliveringSettlementParties { get; init; }
 
     /// <summary>
-    /// Variable Rate Support.
+    /// Receiving Settlement Parties.
     /// </summary>
-    [DisplayName("Variable Rate Support")]
-    [IsoXmlTag("VarblRateSpprt")]
-    public RateName1? VariableRateSupport { get; init; }
+    [DisplayName("Receiving Settlement Parties")]
+    [IsoXmlTag("RcvgSttlmPties")]
+    public SettlementParties127? ReceivingSettlementParties { get; init; }
+
+    /// <summary>
+    /// Investor.
+    /// </summary>
+    [DisplayName("Investor")]
+    [IsoXmlTag("Invstr")]
+    public PartyIdentification149? Investor { get; init; }
+
+    /// <summary>
+    /// Settlement Instruction Processing Additional Details.
+    /// </summary>
+    [DisplayName("Settlement Instruction Processing Additional Details")]
+    [IsoXmlTag("SttlmInstrPrcgAddtlDtls")]
+    public Max350Text? SettlementInstructionProcessingAdditionalDetails { get; init; }
 }

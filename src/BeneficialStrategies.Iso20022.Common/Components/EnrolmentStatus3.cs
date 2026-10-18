@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record EnrolmentStatus3
 {
     /// <summary>
-    /// Effective Enrolment Date.
-    /// </summary>
-    [DisplayName("Effective Enrolment Date")]
-    [IsoXmlTag("FctvEnrlmntDt")]
-    public DateAndDateTime2Choice_? EffectiveEnrolmentDate { get; init; }
-
-    /// <summary>
     /// Original Business Instruction.
     /// </summary>
     [DisplayName("Original Business Instruction")]
     [IsoXmlTag("OrgnlBizInstr")]
     public OriginalBusinessInstruction1? OriginalBusinessInstruction { get; init; }
-
-    /// <summary>
-    /// Original Enrolment Reference.
-    /// </summary>
-    [DisplayName("Original Enrolment Reference")]
-    [IsoXmlTag("OrgnlEnrlmntRef")]
-    public OriginalEnrolment3Choice_? OriginalEnrolmentReference { get; init; }
 
     /// <summary>
     /// Status.
@@ -50,6 +36,20 @@ public record EnrolmentStatus3
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
     public CreditorEnrolmentStatusReason3? StatusReason { get; init; }
+
+    /// <summary>
+    /// Original Enrolment Reference.
+    /// </summary>
+    [DisplayName("Original Enrolment Reference")]
+    [IsoXmlTag("OrgnlEnrlmntRef")]
+    public OriginalEnrolment3Choice_? OriginalEnrolmentReference { get; init; }
+
+    /// <summary>
+    /// Effective Enrolment Date.
+    /// </summary>
+    [DisplayName("Effective Enrolment Date")]
+    [IsoXmlTag("FctvEnrlmntDt")]
+    public DateAndDateTime2Choice_? EffectiveEnrolmentDate { get; init; }
 
     /// <summary>
     /// Supplementary Data.

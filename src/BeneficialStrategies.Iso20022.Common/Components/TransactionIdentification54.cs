@@ -17,62 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TransactionIdentification54
 {
     /// <summary>
-    /// Acquirer Reference Data.
-    /// </summary>
-    [DisplayName("Acquirer Reference Data")]
-    [IsoXmlTag("AcqrrRefData")]
-    public Max140Text? AcquirerReferenceData { get; init; }
-
-    /// <summary>
-    /// Acquirer Reference Number.
-    /// </summary>
-    [DisplayName("Acquirer Reference Number")]
-    [IsoXmlTag("AcqrrRefNb")]
-    public Max23NumericText? AcquirerReferenceNumber { get; init; }
-
-    /// <summary>
-    /// Authentication Token.
-    /// </summary>
-    [DisplayName("Authentication Token")]
-    [IsoXmlTag("AuthntcnTkn")]
-    public Max35Text? AuthenticationToken { get; init; }
-
-    /// <summary>
-    /// Authorisation Sequence Number.
-    /// </summary>
-    [DisplayName("Authorisation Sequence Number")]
-    [IsoXmlTag("AuthstnSeqNb")]
-    public Exact2NumericText? AuthorisationSequenceNumber { get; init; }
-
-    /// <summary>
-    /// Issuer Reference Data.
-    /// </summary>
-    [DisplayName("Issuer Reference Data")]
-    [IsoXmlTag("IssrRefData")]
-    public Max1000Text? IssuerReferenceData { get; init; }
-
-    /// <summary>
-    /// Life Cycle Identification.
-    /// </summary>
-    [DisplayName("Life Cycle Identification")]
-    [IsoXmlTag("LifeCyclId")]
-    public Exact15Text? LifeCycleIdentification { get; init; }
-
-    /// <summary>
-    /// Life Cycle Identification Missing.
-    /// </summary>
-    [DisplayName("Life Cycle Identification Missing")]
-    [IsoXmlTag("LifeCyclIdMssng")]
-    public Max70Text? LifeCycleIdentificationMissing { get; init; }
-
-    /// <summary>
-    /// Life Cycle Support.
-    /// </summary>
-    [DisplayName("Life Cycle Support")]
-    [IsoXmlTag("LifeCyclSpprt")]
-    public LifeCycleSupport1Code? LifeCycleSupport { get; init; }
-
-    /// <summary>
     /// Local Date.
     /// </summary>
     [DisplayName("Local Date")]
@@ -87,32 +31,11 @@ public record TransactionIdentification54
     public ISOTime? LocalTime { get; init; }
 
     /// <summary>
-    /// Other Purchase Identifier Type.
+    /// Time Zone.
     /// </summary>
-    [DisplayName("Other Purchase Identifier Type")]
-    [IsoXmlTag("OthrPurchsIdrTp")]
-    public Max35Text? OtherPurchaseIdentifierType { get; init; }
-
-    /// <summary>
-    /// Presentment Sequence Count.
-    /// </summary>
-    [DisplayName("Presentment Sequence Count")]
-    [IsoXmlTag("PresntmntSeqCnt")]
-    public Exact2NumericText? PresentmentSequenceCount { get; init; }
-
-    /// <summary>
-    /// Presentment Sequence Number.
-    /// </summary>
-    [DisplayName("Presentment Sequence Number")]
-    [IsoXmlTag("PresntmntSeqNb")]
-    public Exact2NumericText? PresentmentSequenceNumber { get; init; }
-
-    /// <summary>
-    /// Purchase Identifier.
-    /// </summary>
-    [DisplayName("Purchase Identifier")]
-    [IsoXmlTag("PurchsIdr")]
-    public Max99Text? PurchaseIdentifier { get; init; }
+    [DisplayName("Time Zone")]
+    [IsoXmlTag("TmZone")]
+    public Max70Text? TimeZone { get; init; }
 
     /// <summary>
     /// Purchase Identifier Type.
@@ -122,11 +45,25 @@ public record TransactionIdentification54
     public PurchaseIdentifierType2Code? PurchaseIdentifierType { get; init; }
 
     /// <summary>
-    /// Retrieval Reference Number.
+    /// Other Purchase Identifier Type.
     /// </summary>
-    [DisplayName("Retrieval Reference Number")]
-    [IsoXmlTag("RtrvlRefNb")]
-    public required Exact12Text RetrievalReferenceNumber { get; init; }
+    [DisplayName("Other Purchase Identifier Type")]
+    [IsoXmlTag("OthrPurchsIdrTp")]
+    public Max35Text? OtherPurchaseIdentifierType { get; init; }
+
+    /// <summary>
+    /// Purchase Identifier.
+    /// </summary>
+    [DisplayName("Purchase Identifier")]
+    [IsoXmlTag("PurchsIdr")]
+    public Max99Text? PurchaseIdentifier { get; init; }
+
+    /// <summary>
+    /// Transmission Date Time.
+    /// </summary>
+    [DisplayName("Transmission Date Time")]
+    [IsoXmlTag("TrnsmssnDtTm")]
+    public ISODateTime? TransmissionDateTime { get; init; }
 
     /// <summary>
     /// System Trace Audit Number.
@@ -136,16 +73,79 @@ public record TransactionIdentification54
     public required Max12NumericText SystemTraceAuditNumber { get; init; }
 
     /// <summary>
-    /// Time Zone.
+    /// Retrieval Reference Number.
     /// </summary>
-    [DisplayName("Time Zone")]
-    [IsoXmlTag("TmZone")]
-    public Max70Text? TimeZone { get; init; }
+    [DisplayName("Retrieval Reference Number")]
+    [IsoXmlTag("RtrvlRefNb")]
+    public required Exact12Text RetrievalReferenceNumber { get; init; }
 
     /// <summary>
-    /// Transmission Date Time.
+    /// Life Cycle Support.
     /// </summary>
-    [DisplayName("Transmission Date Time")]
-    [IsoXmlTag("TrnsmssnDtTm")]
-    public ISODateTime? TransmissionDateTime { get; init; }
+    [DisplayName("Life Cycle Support")]
+    [IsoXmlTag("LifeCyclSpprt")]
+    public LifeCycleSupport1Code? LifeCycleSupport { get; init; }
+
+    /// <summary>
+    /// Life Cycle Identification.
+    /// </summary>
+    [DisplayName("Life Cycle Identification")]
+    [IsoXmlTag("LifeCyclId")]
+    public Exact15Text? LifeCycleIdentification { get; init; }
+
+    /// <summary>
+    /// Authorisation Sequence Number.
+    /// </summary>
+    [DisplayName("Authorisation Sequence Number")]
+    [IsoXmlTag("AuthstnSeqNb")]
+    public Exact2NumericText? AuthorisationSequenceNumber { get; init; }
+
+    /// <summary>
+    /// Presentment Sequence Number.
+    /// </summary>
+    [DisplayName("Presentment Sequence Number")]
+    [IsoXmlTag("PresntmntSeqNb")]
+    public Exact2NumericText? PresentmentSequenceNumber { get; init; }
+
+    /// <summary>
+    /// Presentment Sequence Count.
+    /// </summary>
+    [DisplayName("Presentment Sequence Count")]
+    [IsoXmlTag("PresntmntSeqCnt")]
+    public Exact2NumericText? PresentmentSequenceCount { get; init; }
+
+    /// <summary>
+    /// Authentication Token.
+    /// </summary>
+    [DisplayName("Authentication Token")]
+    [IsoXmlTag("AuthntcnTkn")]
+    public Max35Text? AuthenticationToken { get; init; }
+
+    /// <summary>
+    /// Life Cycle Identification Missing.
+    /// </summary>
+    [DisplayName("Life Cycle Identification Missing")]
+    [IsoXmlTag("LifeCyclIdMssng")]
+    public Max70Text? LifeCycleIdentificationMissing { get; init; }
+
+    /// <summary>
+    /// Acquirer Reference Data.
+    /// </summary>
+    [DisplayName("Acquirer Reference Data")]
+    [IsoXmlTag("AcqrrRefData")]
+    public Max140Text? AcquirerReferenceData { get; init; }
+
+    /// <summary>
+    /// Acquirer Reference Number.
+    /// </summary>
+    [DisplayName("Acquirer Reference Number")]
+    [IsoXmlTag("AcqrrRefNb")]
+    public Max23NumericText? AcquirerReferenceNumber { get; init; }
+
+    /// <summary>
+    /// Issuer Reference Data.
+    /// </summary>
+    [DisplayName("Issuer Reference Data")]
+    [IsoXmlTag("IssrRefData")]
+    public Max1000Text? IssuerReferenceData { get; init; }
 }

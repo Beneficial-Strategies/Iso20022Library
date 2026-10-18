@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMTransaction41
 {
     /// <summary>
-    /// Command.
+    /// Transaction Identification.
     /// </summary>
-    [DisplayName("Command")]
-    [IsoXmlTag("Cmd")]
-    public ValueList<ATMCommand7> Command { get; init; } = [];
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public TransactionIdentifier3? TransactionIdentification { get; init; }
 
     /// <summary>
     /// Response.
@@ -31,9 +31,9 @@ public record ATMTransaction41
     public required Response2Code Response { get; init; }
 
     /// <summary>
-    /// Transaction Identification.
+    /// Command.
     /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public TransactionIdentifier3? TransactionIdentification { get; init; }
+    [DisplayName("Command")]
+    [IsoXmlTag("Cmd")]
+    public ValueList<ATMCommand7> Command { get; init; } = [];
 }

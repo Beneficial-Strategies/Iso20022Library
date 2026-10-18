@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CardPaymentTransaction131
 {
     /// <summary>
-    /// Currency Conversion.
-    /// </summary>
-    [DisplayName("Currency Conversion")]
-    [IsoXmlTag("CcyConvs")]
-    public CurrencyConversion31? CurrencyConversion { get; init; }
-
-    /// <summary>
-    /// POI Identification.
-    /// </summary>
-    [DisplayName("POI Identification")]
-    [IsoXmlTag("POIId")]
-    public required GenericIdentification32 POIIdentification { get; init; }
-
-    /// <summary>
     /// Sale Reference Identification.
     /// </summary>
     [DisplayName("Sale Reference Identification")]
@@ -43,4 +29,18 @@ public record CardPaymentTransaction131
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
     public required TransactionIdentifier1 TransactionIdentification { get; init; }
+
+    /// <summary>
+    /// POI Identification.
+    /// </summary>
+    [DisplayName("POI Identification")]
+    [IsoXmlTag("POIId")]
+    public required GenericIdentification32 POIIdentification { get; init; }
+
+    /// <summary>
+    /// Currency Conversion.
+    /// </summary>
+    [DisplayName("Currency Conversion")]
+    [IsoXmlTag("CcyConvs")]
+    public CurrencyConversion31? CurrencyConversion { get; init; }
 }

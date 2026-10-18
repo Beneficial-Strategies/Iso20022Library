@@ -17,32 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record UnderlyingPaymentInstruction9
 {
     /// <summary>
-    /// Original End To End Identification.
-    /// </summary>
-    [DisplayName("Original End To End Identification")]
-    [IsoXmlTag("OrgnlEndToEndId")]
-    public Max35Text? OriginalEndToEndIdentification { get; init; }
-
-    /// <summary>
     /// Original Group Information.
     /// </summary>
     [DisplayName("Original Group Information")]
     [IsoXmlTag("OrgnlGrpInf")]
     public UnderlyingGroupInformation1? OriginalGroupInformation { get; init; }
-
-    /// <summary>
-    /// Original Instructed Amount.
-    /// </summary>
-    [DisplayName("Original Instructed Amount")]
-    [IsoXmlTag("OrgnlInstdAmt")]
-    public ActiveOrHistoricCurrencyAndAmount? OriginalInstructedAmount { get; init; }
-
-    /// <summary>
-    /// Original Instruction Identification.
-    /// </summary>
-    [DisplayName("Original Instruction Identification")]
-    [IsoXmlTag("OrgnlInstrId")]
-    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
     /// Original Payment Information Identification.
@@ -52,18 +31,18 @@ public record UnderlyingPaymentInstruction9
     public Max35Text? OriginalPaymentInformationIdentification { get; init; }
 
     /// <summary>
-    /// Original Service Level.
+    /// Original Instruction Identification.
     /// </summary>
-    [DisplayName("Original Service Level")]
-    [IsoXmlTag("OrgnlSvcLvl")]
-    public ServiceLevel8Choice_? OriginalServiceLevel { get; init; }
+    [DisplayName("Original Instruction Identification")]
+    [IsoXmlTag("OrgnlInstrId")]
+    public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
-    /// Original Transaction Reference.
+    /// Original End To End Identification.
     /// </summary>
-    [DisplayName("Original Transaction Reference")]
-    [IsoXmlTag("OrgnlTxRef")]
-    public OriginalTransactionReference42? OriginalTransactionReference { get; init; }
+    [DisplayName("Original End To End Identification")]
+    [IsoXmlTag("OrgnlEndToEndId")]
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Original UETR.
@@ -73,11 +52,11 @@ public record UnderlyingPaymentInstruction9
     public UUIDv4Identifier? OriginalUETR { get; init; }
 
     /// <summary>
-    /// Requested Collection Date.
+    /// Original Instructed Amount.
     /// </summary>
-    [DisplayName("Requested Collection Date")]
-    [IsoXmlTag("ReqdColltnDt")]
-    public ISODate? RequestedCollectionDate { get; init; }
+    [DisplayName("Original Instructed Amount")]
+    [IsoXmlTag("OrgnlInstdAmt")]
+    public ActiveOrHistoricCurrencyAndAmount? OriginalInstructedAmount { get; init; }
 
     /// <summary>
     /// Requested Execution Date.
@@ -85,4 +64,25 @@ public record UnderlyingPaymentInstruction9
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
     public DateAndDateTime2Choice_? RequestedExecutionDate { get; init; }
+
+    /// <summary>
+    /// Requested Collection Date.
+    /// </summary>
+    [DisplayName("Requested Collection Date")]
+    [IsoXmlTag("ReqdColltnDt")]
+    public ISODate? RequestedCollectionDate { get; init; }
+
+    /// <summary>
+    /// Original Transaction Reference.
+    /// </summary>
+    [DisplayName("Original Transaction Reference")]
+    [IsoXmlTag("OrgnlTxRef")]
+    public OriginalTransactionReference42? OriginalTransactionReference { get; init; }
+
+    /// <summary>
+    /// Original Service Level.
+    /// </summary>
+    [DisplayName("Original Service Level")]
+    [IsoXmlTag("OrgnlSvcLvl")]
+    public ServiceLevel8Choice_? OriginalServiceLevel { get; init; }
 }

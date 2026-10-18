@@ -17,55 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Vote20
 {
     /// <summary>
-    /// Abstain.
-    /// </summary>
-    [DisplayName("Abstain")]
-    [IsoXmlTag("Abstn")]
-    public FinancialInstrumentQuantity18Choice_? Abstain { get; init; }
-
-    /// <summary>
-    /// Against.
-    /// </summary>
-    [DisplayName("Against")]
-    [IsoXmlTag("Agnst")]
-    public FinancialInstrumentQuantity18Choice_? Against { get; init; }
-
-    /// <summary>
-    /// Against Management.
-    /// </summary>
-    [DisplayName("Against Management")]
-    [IsoXmlTag("AgnstMgmt")]
-    public FinancialInstrumentQuantity18Choice_? AgainstManagement { get; init; }
-
-    /// <summary>
-    /// Blank.
-    /// </summary>
-    [DisplayName("Blank")]
-    [IsoXmlTag("Blnk")]
-    public FinancialInstrumentQuantity18Choice_? Blank { get; init; }
-
-    /// <summary>
-    /// Description.
-    /// </summary>
-    [DisplayName("Description")]
-    [IsoXmlTag("Desc")]
-    public ValueList<ItemDescription2> Description { get; init; } = [];
-
-    /// <summary>
-    /// Discretionary.
-    /// </summary>
-    [DisplayName("Discretionary")]
-    [IsoXmlTag("Dscrtnry")]
-    public FinancialInstrumentQuantity18Choice_? Discretionary { get; init; }
-
-    /// <summary>
-    /// For.
-    /// </summary>
-    [DisplayName("For")]
-    [IsoXmlTag("For")]
-    public FinancialInstrumentQuantity18Choice_? For { get; init; }
-
-    /// <summary>
     /// Issuer Label.
     /// </summary>
     [DisplayName("Issuer Label")]
@@ -73,25 +24,11 @@ public record Vote20
     public required Max35Text IssuerLabel { get; init; }
 
     /// <summary>
-    /// No Action.
+    /// Description.
     /// </summary>
-    [DisplayName("No Action")]
-    [IsoXmlTag("NoActn")]
-    public FinancialInstrumentQuantity18Choice_? NoAction { get; init; }
-
-    /// <summary>
-    /// One Year.
-    /// </summary>
-    [DisplayName("One Year")]
-    [IsoXmlTag("OneYr")]
-    public FinancialInstrumentQuantity18Choice_? OneYear { get; init; }
-
-    /// <summary>
-    /// Proprietary.
-    /// </summary>
-    [DisplayName("Proprietary")]
-    [IsoXmlTag("Prtry")]
-    public ValueList<ProprietaryVote2> Proprietary { get; init; } = [];
+    [DisplayName("Description")]
+    [IsoXmlTag("Desc")]
+    public ValueList<ItemDescription2> Description { get; init; } = [];
 
     /// <summary>
     /// Resolution Status.
@@ -108,18 +45,25 @@ public record Vote20
     public ResolutionSubStatus1Code? SubStatus { get; init; }
 
     /// <summary>
-    /// Three Years.
+    /// For.
     /// </summary>
-    [DisplayName("Three Years")]
-    [IsoXmlTag("ThreeYrs")]
-    public FinancialInstrumentQuantity18Choice_? ThreeYears { get; init; }
+    [DisplayName("For")]
+    [IsoXmlTag("For")]
+    public FinancialInstrumentQuantity18Choice_? For { get; init; }
 
     /// <summary>
-    /// Two Years.
+    /// Against.
     /// </summary>
-    [DisplayName("Two Years")]
-    [IsoXmlTag("TwoYrs")]
-    public FinancialInstrumentQuantity18Choice_? TwoYears { get; init; }
+    [DisplayName("Against")]
+    [IsoXmlTag("Agnst")]
+    public FinancialInstrumentQuantity18Choice_? Against { get; init; }
+
+    /// <summary>
+    /// Abstain.
+    /// </summary>
+    [DisplayName("Abstain")]
+    [IsoXmlTag("Abstn")]
+    public FinancialInstrumentQuantity18Choice_? Abstain { get; init; }
 
     /// <summary>
     /// Withhold.
@@ -134,4 +78,60 @@ public record Vote20
     [DisplayName("With Management")]
     [IsoXmlTag("WthMgmt")]
     public FinancialInstrumentQuantity18Choice_? WithManagement { get; init; }
+
+    /// <summary>
+    /// Against Management.
+    /// </summary>
+    [DisplayName("Against Management")]
+    [IsoXmlTag("AgnstMgmt")]
+    public FinancialInstrumentQuantity18Choice_? AgainstManagement { get; init; }
+
+    /// <summary>
+    /// Discretionary.
+    /// </summary>
+    [DisplayName("Discretionary")]
+    [IsoXmlTag("Dscrtnry")]
+    public FinancialInstrumentQuantity18Choice_? Discretionary { get; init; }
+
+    /// <summary>
+    /// One Year.
+    /// </summary>
+    [DisplayName("One Year")]
+    [IsoXmlTag("OneYr")]
+    public FinancialInstrumentQuantity18Choice_? OneYear { get; init; }
+
+    /// <summary>
+    /// Two Years.
+    /// </summary>
+    [DisplayName("Two Years")]
+    [IsoXmlTag("TwoYrs")]
+    public FinancialInstrumentQuantity18Choice_? TwoYears { get; init; }
+
+    /// <summary>
+    /// Three Years.
+    /// </summary>
+    [DisplayName("Three Years")]
+    [IsoXmlTag("ThreeYrs")]
+    public FinancialInstrumentQuantity18Choice_? ThreeYears { get; init; }
+
+    /// <summary>
+    /// No Action.
+    /// </summary>
+    [DisplayName("No Action")]
+    [IsoXmlTag("NoActn")]
+    public FinancialInstrumentQuantity18Choice_? NoAction { get; init; }
+
+    /// <summary>
+    /// Blank.
+    /// </summary>
+    [DisplayName("Blank")]
+    [IsoXmlTag("Blnk")]
+    public FinancialInstrumentQuantity18Choice_? Blank { get; init; }
+
+    /// <summary>
+    /// Proprietary.
+    /// </summary>
+    [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
+    public ValueList<ProprietaryVote2> Proprietary { get; init; } = [];
 }

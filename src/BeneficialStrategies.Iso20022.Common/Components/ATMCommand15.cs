@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMCommand15
 {
     /// <summary>
-    /// Additional Error Information.
+    /// Type.
     /// </summary>
-    [DisplayName("Additional Error Information")]
-    [IsoXmlTag("AddtlErrInf")]
-    public Max140Text? AdditionalErrorInformation { get; init; }
-
-    /// <summary>
-    /// Command Identification.
-    /// </summary>
-    [DisplayName("Command Identification")]
-    [IsoXmlTag("CmdId")]
-    public ATMCommandIdentification1? CommandIdentification { get; init; }
-
-    /// <summary>
-    /// Processed Date Time.
-    /// </summary>
-    [DisplayName("Processed Date Time")]
-    [IsoXmlTag("PrcdDtTm")]
-    public required ISODateTime ProcessedDateTime { get; init; }
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public required ATMCommand7Code Type { get; init; }
 
     /// <summary>
     /// Required Date Time.
@@ -45,6 +31,20 @@ public record ATMCommand15
     public ISODateTime? RequiredDateTime { get; init; }
 
     /// <summary>
+    /// Processed Date Time.
+    /// </summary>
+    [DisplayName("Processed Date Time")]
+    [IsoXmlTag("PrcdDtTm")]
+    public required ISODateTime ProcessedDateTime { get; init; }
+
+    /// <summary>
+    /// Command Identification.
+    /// </summary>
+    [DisplayName("Command Identification")]
+    [IsoXmlTag("CmdId")]
+    public ATMCommandIdentification1? CommandIdentification { get; init; }
+
+    /// <summary>
     /// Result.
     /// </summary>
     [DisplayName("Result")]
@@ -52,9 +52,9 @@ public record ATMCommand15
     public required TerminalManagementActionResult2Code Result { get; init; }
 
     /// <summary>
-    /// Type.
+    /// Additional Error Information.
     /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public required ATMCommand7Code Type { get; init; }
+    [DisplayName("Additional Error Information")]
+    [IsoXmlTag("AddtlErrInf")]
+    public Max140Text? AdditionalErrorInformation { get; init; }
 }

@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Credentials3
 {
     /// <summary>
-    /// Assigner.
+    /// Type.
     /// </summary>
-    [DisplayName("Assigner")]
-    [IsoXmlTag("Assgnr")]
-    public Authority1? Assigner { get; init; }
-
-    /// <summary>
-    /// Expiry Date.
-    /// </summary>
-    [DisplayName("Expiry Date")]
-    [IsoXmlTag("XpryDt")]
-    public ISOYearMonth? ExpiryDate { get; init; }
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public required ExternalAuthenticationMethod1Code Type { get; init; }
 
     /// <summary>
     /// Other Type.
@@ -45,16 +38,23 @@ public record Credentials3
     public Max35Text? SubType { get; init; }
 
     /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public required ExternalAuthenticationMethod1Code Type { get; init; }
-
-    /// <summary>
     /// Value.
     /// </summary>
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
     public required Max70Text Value { get; init; }
+
+    /// <summary>
+    /// Expiry Date.
+    /// </summary>
+    [DisplayName("Expiry Date")]
+    [IsoXmlTag("XpryDt")]
+    public ISOYearMonth? ExpiryDate { get; init; }
+
+    /// <summary>
+    /// Assigner.
+    /// </summary>
+    [DisplayName("Assigner")]
+    [IsoXmlTag("Assgnr")]
+    public Authority1? Assigner { get; init; }
 }

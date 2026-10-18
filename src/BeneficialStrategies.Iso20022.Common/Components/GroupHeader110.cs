@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record GroupHeader110
 {
     /// <summary>
-    /// Authorisation.
+    /// Message Identification.
     /// </summary>
-    [DisplayName("Authorisation")]
-    [IsoXmlTag("Authstn")]
-    public ValueList<Authorisation1Choice_> Authorisation { get; init; } = [];
+    [DisplayName("Message Identification")]
+    [IsoXmlTag("MsgId")]
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Creation Date Time.
@@ -31,18 +31,18 @@ public record GroupHeader110
     public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
+    /// Authorisation.
+    /// </summary>
+    [DisplayName("Authorisation")]
+    [IsoXmlTag("Authstn")]
+    public ValueList<Authorisation1Choice_> Authorisation { get; init; } = [];
+
+    /// <summary>
     /// Initiating Party.
     /// </summary>
     [DisplayName("Initiating Party")]
     [IsoXmlTag("InitgPty")]
     public PartyIdentification272? InitiatingParty { get; init; }
-
-    /// <summary>
-    /// Instructed Agent.
-    /// </summary>
-    [DisplayName("Instructed Agent")]
-    [IsoXmlTag("InstdAgt")]
-    public BranchAndFinancialInstitutionIdentification8? InstructedAgent { get; init; }
 
     /// <summary>
     /// Instructing Agent.
@@ -52,9 +52,9 @@ public record GroupHeader110
     public BranchAndFinancialInstitutionIdentification8? InstructingAgent { get; init; }
 
     /// <summary>
-    /// Message Identification.
+    /// Instructed Agent.
     /// </summary>
-    [DisplayName("Message Identification")]
-    [IsoXmlTag("MsgId")]
-    public required Max35Text MessageIdentification { get; init; }
+    [DisplayName("Instructed Agent")]
+    [IsoXmlTag("InstdAgt")]
+    public BranchAndFinancialInstitutionIdentification8? InstructedAgent { get; init; }
 }

@@ -46,11 +46,11 @@ public record TradeLegNotificationCancellationV05 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Cancellation Reason.
+    /// Clearing Member.
     /// </summary>
-    [DisplayName("Cancellation Reason")]
-    [IsoXmlTag("CxlRsn")]
-    public CancellationReason36Choice_? CancellationReason { get; init; }
+    [DisplayName("Clearing Member")]
+    [IsoXmlTag("ClrMmb")]
+    public required PartyIdentification253Choice_ ClearingMember { get; init; }
 
     /// <summary>
     /// Clearing Account.
@@ -58,20 +58,6 @@ public record TradeLegNotificationCancellationV05 : IOuterRecord
     [DisplayName("Clearing Account")]
     [IsoXmlTag("ClrAcct")]
     public required SecuritiesAccount18 ClearingAccount { get; init; }
-
-    /// <summary>
-    /// Clearing Details.
-    /// </summary>
-    [DisplayName("Clearing Details")]
-    [IsoXmlTag("ClrDtls")]
-    public Clearing8? ClearingDetails { get; init; }
-
-    /// <summary>
-    /// Clearing Member.
-    /// </summary>
-    [DisplayName("Clearing Member")]
-    [IsoXmlTag("ClrMmb")]
-    public required PartyIdentification253Choice_ ClearingMember { get; init; }
 
     /// <summary>
     /// Delivery Account.
@@ -88,18 +74,11 @@ public record TradeLegNotificationCancellationV05 : IOuterRecord
     public PartyIdentificationAndAccount227? NonClearingMember { get; init; }
 
     /// <summary>
-    /// Settlement Details.
+    /// Clearing Details.
     /// </summary>
-    [DisplayName("Settlement Details")]
-    [IsoXmlTag("SttlmDtls")]
-    public required Settlement2 SettlementDetails { get; init; }
-
-    /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
+    [DisplayName("Clearing Details")]
+    [IsoXmlTag("ClrDtls")]
+    public Clearing8? ClearingDetails { get; init; }
 
     /// <summary>
     /// Trade Leg Details.
@@ -107,4 +86,25 @@ public record TradeLegNotificationCancellationV05 : IOuterRecord
     [DisplayName("Trade Leg Details")]
     [IsoXmlTag("TradLegDtls")]
     public required TradeLeg14 TradeLegDetails { get; init; }
+
+    /// <summary>
+    /// Settlement Details.
+    /// </summary>
+    [DisplayName("Settlement Details")]
+    [IsoXmlTag("SttlmDtls")]
+    public required Settlement2 SettlementDetails { get; init; }
+
+    /// <summary>
+    /// Cancellation Reason.
+    /// </summary>
+    [DisplayName("Cancellation Reason")]
+    [IsoXmlTag("CxlRsn")]
+    public CancellationReason36Choice_? CancellationReason { get; init; }
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

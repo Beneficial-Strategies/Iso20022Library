@@ -46,13 +46,6 @@ public record ATMInquiryRequestV03 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// ATM Inquiry Request.
-    /// </summary>
-    [DisplayName("ATM Inquiry Request")]
-    [IsoXmlTag("ATMNqryReq")]
-    public ATMInquiryRequest3? ATMInquiryRequest { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
@@ -65,6 +58,13 @@ public record ATMInquiryRequestV03 : IOuterRecord
     [DisplayName("Protected ATM Inquiry Request")]
     [IsoXmlTag("PrtctdATMNqryReq")]
     public ContentInformationType10? ProtectedATMInquiryRequest { get; init; }
+
+    /// <summary>
+    /// ATM Inquiry Request.
+    /// </summary>
+    [DisplayName("ATM Inquiry Request")]
+    [IsoXmlTag("ATMNqryReq")]
+    public ATMInquiryRequest3? ATMInquiryRequest { get; init; }
 
     /// <summary>
     /// Security Trailer.

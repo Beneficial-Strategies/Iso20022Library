@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SpecialProgrammeQualification2
 {
     /// <summary>
-    /// Detail.
-    /// </summary>
-    [DisplayName("Detail")]
-    [IsoXmlTag("Dtl")]
-    public ValueList<SpecialProgrammeDetails2> Detail { get; init; } = [];
-
-    /// <summary>
     /// Programme.
     /// </summary>
     [DisplayName("Programme")]
     [IsoXmlTag("Prgrmm")]
     public Max35Text? Programme { get; init; }
+
+    /// <summary>
+    /// Detail.
+    /// </summary>
+    [DisplayName("Detail")]
+    [IsoXmlTag("Dtl")]
+    public ValueList<SpecialProgrammeDetails2> Detail { get; init; } = [];
 }

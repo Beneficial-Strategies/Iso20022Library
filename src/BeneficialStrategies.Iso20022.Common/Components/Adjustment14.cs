@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Adjustment14
 {
     /// <summary>
+    /// Type.
+    /// </summary>
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public Max35Text? Type { get; init; }
+
+    /// <summary>
     /// Additional Type.
     /// </summary>
     [DisplayName("Additional Type")]
     [IsoXmlTag("AddtlTp")]
     public Max35Text? AdditionalType { get; init; }
-
-    /// <summary>
-    /// Amount.
-    /// </summary>
-    [DisplayName("Amount")]
-    [IsoXmlTag("Amt")]
-    public ImpliedCurrencyAndAmount? Amount { get; init; }
 
     /// <summary>
     /// Description.
@@ -38,11 +38,18 @@ public record Adjustment14
     public Max70Text? Description { get; init; }
 
     /// <summary>
-    /// Percentage.
+    /// Reason.
     /// </summary>
-    [DisplayName("Percentage")]
-    [IsoXmlTag("Pctg")]
-    public PercentageRate? Percentage { get; init; }
+    [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
+    public Max35Text? Reason { get; init; }
+
+    /// <summary>
+    /// Promotion Eligibility.
+    /// </summary>
+    [DisplayName("Promotion Eligibility")]
+    [IsoXmlTag("PrmtnElgblty")]
+    public TrueFalseIndicator? PromotionEligibility { get; init; }
 
     /// <summary>
     /// Promotion Code.
@@ -59,13 +66,6 @@ public record Adjustment14
     public Max35Text? PromotionCouponNumber { get; init; }
 
     /// <summary>
-    /// Promotion Eligibility.
-    /// </summary>
-    [DisplayName("Promotion Eligibility")]
-    [IsoXmlTag("PrmtnElgblty")]
-    public TrueFalseIndicator? PromotionEligibility { get; init; }
-
-    /// <summary>
     /// Quantity.
     /// </summary>
     [DisplayName("Quantity")]
@@ -73,11 +73,25 @@ public record Adjustment14
     public DecimalNumber? Quantity { get; init; }
 
     /// <summary>
-    /// Reason.
+    /// Unit Price.
     /// </summary>
-    [DisplayName("Reason")]
-    [IsoXmlTag("Rsn")]
-    public Max35Text? Reason { get; init; }
+    [DisplayName("Unit Price")]
+    [IsoXmlTag("UnitPric")]
+    public ImpliedCurrencyAndAmount? UnitPrice { get; init; }
+
+    /// <summary>
+    /// Percentage.
+    /// </summary>
+    [DisplayName("Percentage")]
+    [IsoXmlTag("Pctg")]
+    public PercentageRate? Percentage { get; init; }
+
+    /// <summary>
+    /// Amount.
+    /// </summary>
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    public ImpliedCurrencyAndAmount? Amount { get; init; }
 
     /// <summary>
     /// Tax On Original Amount.
@@ -85,18 +99,4 @@ public record Adjustment14
     [DisplayName("Tax On Original Amount")]
     [IsoXmlTag("TaxOnOrgnlAmt")]
     public TrueFalseIndicator? TaxOnOriginalAmount { get; init; }
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public Max35Text? Type { get; init; }
-
-    /// <summary>
-    /// Unit Price.
-    /// </summary>
-    [DisplayName("Unit Price")]
-    [IsoXmlTag("UnitPric")]
-    public ImpliedCurrencyAndAmount? UnitPrice { get; init; }
 }

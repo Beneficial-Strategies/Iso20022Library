@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SystemParty6
 {
     /// <summary>
+    /// Party Identification.
+    /// </summary>
+    [DisplayName("Party Identification")]
+    [IsoXmlTag("PtyId")]
+    public SystemPartyIdentification9? PartyIdentification { get; init; }
+
+    /// <summary>
     /// Address.
     /// </summary>
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
     public PostalAddress28? Address { get; init; }
-
-    /// <summary>
-    /// Closing Date.
-    /// </summary>
-    [DisplayName("Closing Date")]
-    [IsoXmlTag("ClsgDt")]
-    public ISODate? ClosingDate { get; init; }
 
     /// <summary>
     /// Contact Details.
@@ -38,11 +38,32 @@ public record SystemParty6
     public ValueList<Contact14> ContactDetails { get; init; } = [];
 
     /// <summary>
-    /// Lock Status.
+    /// Opening Date.
     /// </summary>
-    [DisplayName("Lock Status")]
-    [IsoXmlTag("LckSts")]
-    public PartyLockStatus1? LockStatus { get; init; }
+    [DisplayName("Opening Date")]
+    [IsoXmlTag("OpngDt")]
+    public ISODate? OpeningDate { get; init; }
+
+    /// <summary>
+    /// Closing Date.
+    /// </summary>
+    [DisplayName("Closing Date")]
+    [IsoXmlTag("ClsgDt")]
+    public ISODate? ClosingDate { get; init; }
+
+    /// <summary>
+    /// Type.
+    /// </summary>
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public SystemPartyType1Choice_? Type { get; init; }
+
+    /// <summary>
+    /// Technical Address.
+    /// </summary>
+    [DisplayName("Technical Address")]
+    [IsoXmlTag("TechAdr")]
+    public ValueList<TechnicalIdentification2Choice_> TechnicalAddress { get; init; } = [];
 
     /// <summary>
     /// Market Specific Attribute.
@@ -59,20 +80,6 @@ public record SystemParty6
     public PartyName4? Name { get; init; }
 
     /// <summary>
-    /// Opening Date.
-    /// </summary>
-    [DisplayName("Opening Date")]
-    [IsoXmlTag("OpngDt")]
-    public ISODate? OpeningDate { get; init; }
-
-    /// <summary>
-    /// Party Identification.
-    /// </summary>
-    [DisplayName("Party Identification")]
-    [IsoXmlTag("PtyId")]
-    public SystemPartyIdentification9? PartyIdentification { get; init; }
-
-    /// <summary>
     /// Residence Type.
     /// </summary>
     [DisplayName("Residence Type")]
@@ -80,23 +87,16 @@ public record SystemParty6
     public ResidenceType1Code? ResidenceType { get; init; }
 
     /// <summary>
+    /// Lock Status.
+    /// </summary>
+    [DisplayName("Lock Status")]
+    [IsoXmlTag("LckSts")]
+    public PartyLockStatus1? LockStatus { get; init; }
+
+    /// <summary>
     /// Restriction.
     /// </summary>
     [DisplayName("Restriction")]
     [IsoXmlTag("Rstrctn")]
     public ValueList<SystemRestriction1> Restriction { get; init; } = [];
-
-    /// <summary>
-    /// Technical Address.
-    /// </summary>
-    [DisplayName("Technical Address")]
-    [IsoXmlTag("TechAdr")]
-    public ValueList<TechnicalIdentification2Choice_> TechnicalAddress { get; init; } = [];
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public SystemPartyType1Choice_? Type { get; init; }
 }

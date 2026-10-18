@@ -71,18 +71,18 @@ public record SecuritiesTransactionCancellationRequestStatusAdviceV09 : IOuterRe
     public required Max35Text CancellationRequestReference { get; init; }
 
     /// <summary>
+    /// Unambiguous identification of the transaction as known by the account servicer.
+    /// </summary>
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public TransactionIdentifications52? TransactionIdentification { get; init; }
+
+    /// <summary>
     /// Provides details on the processing status of the request.
     /// </summary>
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
     public required ProcessingStatus105Choice_ ProcessingStatus { get; init; }
-
-    /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 
     /// <summary>
     /// Identifies the details of the transaction.
@@ -92,9 +92,9 @@ public record SecuritiesTransactionCancellationRequestStatusAdviceV09 : IOuterRe
     public TransactionDetails178? TransactionDetails { get; init; }
 
     /// <summary>
-    /// Unambiguous identification of the transaction as known by the account servicer.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public TransactionIdentifications52? TransactionIdentification { get; init; }
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -17,18 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PaymentTransactionParty4
 {
     /// <summary>
-    /// Creditor.
+    /// Instructing Agent.
     /// </summary>
-    [DisplayName("Creditor")]
-    [IsoXmlTag("Cdtr")]
-    public Party50Choice_? Creditor { get; init; }
+    [DisplayName("Instructing Agent")]
+    [IsoXmlTag("InstgAgt")]
+    public BranchAndFinancialInstitutionIdentification8? InstructingAgent { get; init; }
 
     /// <summary>
-    /// Creditor Agent.
+    /// Instructed Agent.
     /// </summary>
-    [DisplayName("Creditor Agent")]
-    [IsoXmlTag("CdtrAgt")]
-    public BranchAndFinancialInstitutionIdentification8? CreditorAgent { get; init; }
+    [DisplayName("Instructed Agent")]
+    [IsoXmlTag("InstdAgt")]
+    public BranchAndFinancialInstitutionIdentification8? InstructedAgent { get; init; }
+
+    /// <summary>
+    /// Ultimate Debtor.
+    /// </summary>
+    [DisplayName("Ultimate Debtor")]
+    [IsoXmlTag("UltmtDbtr")]
+    public Party50Choice_? UltimateDebtor { get; init; }
 
     /// <summary>
     /// Debtor.
@@ -45,11 +52,11 @@ public record PaymentTransactionParty4
     public BranchAndFinancialInstitutionIdentification8? DebtorAgent { get; init; }
 
     /// <summary>
-    /// Instructed Agent.
+    /// Instructing Reimbursement Agent.
     /// </summary>
-    [DisplayName("Instructed Agent")]
-    [IsoXmlTag("InstdAgt")]
-    public BranchAndFinancialInstitutionIdentification8? InstructedAgent { get; init; }
+    [DisplayName("Instructing Reimbursement Agent")]
+    [IsoXmlTag("InstgRmbrsmntAgt")]
+    public BranchAndFinancialInstitutionIdentification8? InstructingReimbursementAgent { get; init; }
 
     /// <summary>
     /// Instructed Reimbursement Agent.
@@ -57,20 +64,6 @@ public record PaymentTransactionParty4
     [DisplayName("Instructed Reimbursement Agent")]
     [IsoXmlTag("InstdRmbrsmntAgt")]
     public BranchAndFinancialInstitutionIdentification8? InstructedReimbursementAgent { get; init; }
-
-    /// <summary>
-    /// Instructing Agent.
-    /// </summary>
-    [DisplayName("Instructing Agent")]
-    [IsoXmlTag("InstgAgt")]
-    public BranchAndFinancialInstitutionIdentification8? InstructingAgent { get; init; }
-
-    /// <summary>
-    /// Instructing Reimbursement Agent.
-    /// </summary>
-    [DisplayName("Instructing Reimbursement Agent")]
-    [IsoXmlTag("InstgRmbrsmntAgt")]
-    public BranchAndFinancialInstitutionIdentification8? InstructingReimbursementAgent { get; init; }
 
     /// <summary>
     /// Intermediary Agent1.
@@ -94,16 +87,23 @@ public record PaymentTransactionParty4
     public BranchAndFinancialInstitutionIdentification8? IntermediaryAgent3 { get; init; }
 
     /// <summary>
+    /// Creditor Agent.
+    /// </summary>
+    [DisplayName("Creditor Agent")]
+    [IsoXmlTag("CdtrAgt")]
+    public BranchAndFinancialInstitutionIdentification8? CreditorAgent { get; init; }
+
+    /// <summary>
+    /// Creditor.
+    /// </summary>
+    [DisplayName("Creditor")]
+    [IsoXmlTag("Cdtr")]
+    public Party50Choice_? Creditor { get; init; }
+
+    /// <summary>
     /// Ultimate Creditor.
     /// </summary>
     [DisplayName("Ultimate Creditor")]
     [IsoXmlTag("UltmtCdtr")]
     public Party50Choice_? UltimateCreditor { get; init; }
-
-    /// <summary>
-    /// Ultimate Debtor.
-    /// </summary>
-    [DisplayName("Ultimate Debtor")]
-    [IsoXmlTag("UltmtDbtr")]
-    public Party50Choice_? UltimateDebtor { get; init; }
 }

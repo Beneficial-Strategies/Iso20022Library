@@ -17,46 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PointOfInteractionComponent15
 {
     /// <summary>
-    /// Assessment.
+    /// Type.
     /// </summary>
-    [DisplayName("Assessment")]
-    [IsoXmlTag("Assmnt")]
-    public ValueList<PointOfInteractionComponentAssessment1> Assessment { get; init; } = [];
-
-    /// <summary>
-    /// Characteristics.
-    /// </summary>
-    [DisplayName("Characteristics")]
-    [IsoXmlTag("Chrtcs")]
-    public PointOfInteractionComponentCharacteristics10? Characteristics { get; init; }
-
-    /// <summary>
-    /// Identification.
-    /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public required PointOfInteractionComponentIdentification2 Identification { get; init; }
-
-    /// <summary>
-    /// Package.
-    /// </summary>
-    [DisplayName("Package")]
-    [IsoXmlTag("Packg")]
-    public ValueList<PackageType5> Package { get; init; } = [];
-
-    /// <summary>
-    /// Standard Compliance.
-    /// </summary>
-    [DisplayName("Standard Compliance")]
-    [IsoXmlTag("StdCmplc")]
-    public ValueList<GenericIdentification48> StandardCompliance { get; init; } = [];
-
-    /// <summary>
-    /// Status.
-    /// </summary>
-    [DisplayName("Status")]
-    [IsoXmlTag("Sts")]
-    public PointOfInteractionComponentStatus3? Status { get; init; }
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public required POIComponentType6Code Type { get; init; }
 
     /// <summary>
     /// Sub Type Information.
@@ -66,9 +31,44 @@ public record PointOfInteractionComponent15
     public Max70Text? SubTypeInformation { get; init; }
 
     /// <summary>
-    /// Type.
+    /// Identification.
     /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public required POIComponentType6Code Type { get; init; }
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public required PointOfInteractionComponentIdentification2 Identification { get; init; }
+
+    /// <summary>
+    /// Status.
+    /// </summary>
+    [DisplayName("Status")]
+    [IsoXmlTag("Sts")]
+    public PointOfInteractionComponentStatus3? Status { get; init; }
+
+    /// <summary>
+    /// Standard Compliance.
+    /// </summary>
+    [DisplayName("Standard Compliance")]
+    [IsoXmlTag("StdCmplc")]
+    public ValueList<GenericIdentification48> StandardCompliance { get; init; } = [];
+
+    /// <summary>
+    /// Characteristics.
+    /// </summary>
+    [DisplayName("Characteristics")]
+    [IsoXmlTag("Chrtcs")]
+    public PointOfInteractionComponentCharacteristics10? Characteristics { get; init; }
+
+    /// <summary>
+    /// Assessment.
+    /// </summary>
+    [DisplayName("Assessment")]
+    [IsoXmlTag("Assmnt")]
+    public ValueList<PointOfInteractionComponentAssessment1> Assessment { get; init; } = [];
+
+    /// <summary>
+    /// Package.
+    /// </summary>
+    [DisplayName("Package")]
+    [IsoXmlTag("Packg")]
+    public ValueList<PackageType5> Package { get; init; } = [];
 }

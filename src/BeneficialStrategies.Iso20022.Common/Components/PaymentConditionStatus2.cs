@@ -27,18 +27,18 @@ public record PaymentConditionStatus2
     public ActiveCurrencyAndAmount? AcceptedAmount { get; init; }
 
     /// <summary>
-    /// Indicates if the debtor will pay before the requested execution date.
-    /// Usage: When element is not present, the default value is "Not Applicable".
-    /// </summary>
-    [DisplayName("Early Payment")]
-    [IsoXmlTag("EarlyPmt")]
-    public TrueFalseIndicator? EarlyPayment { get; init; }
-
-    /// <summary>
     /// Indicates if the DebtorAgent guarantees the payment, assuming a payment guarantee contract exists between the different actors.
     /// Usage: When element is not present, the default value is "Not Applicable".
     /// </summary>
     [DisplayName("Guaranteed Payment")]
     [IsoXmlTag("GrntedPmt")]
     public TrueFalseIndicator? GuaranteedPayment { get; init; }
+
+    /// <summary>
+    /// Indicates if the debtor will pay before the requested execution date.
+    /// Usage: When element is not present, the default value is "Not Applicable".
+    /// </summary>
+    [DisplayName("Early Payment")]
+    [IsoXmlTag("EarlyPmt")]
+    public TrueFalseIndicator? EarlyPayment { get; init; }
 }

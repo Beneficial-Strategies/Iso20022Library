@@ -17,18 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record RiskAssessment3
 {
     /// <summary>
-    /// Additional Data.
+    /// Entity Identification.
     /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalRiskData1> AdditionalData { get; init; } = [];
+    [DisplayName("Entity Identification")]
+    [IsoXmlTag("NttyId")]
+    public Max35Text? EntityIdentification { get; init; }
 
     /// <summary>
-    /// Condition.
+    /// Entity Type.
     /// </summary>
-    [DisplayName("Condition")]
-    [IsoXmlTag("Cond")]
-    public ValueList<AdditionalData1> Condition { get; init; } = [];
+    [DisplayName("Entity Type")]
+    [IsoXmlTag("NttyTp")]
+    public PartyType28Code? EntityType { get; init; }
+
+    /// <summary>
+    /// Other Entity Type.
+    /// </summary>
+    [DisplayName("Other Entity Type")]
+    [IsoXmlTag("OthrNttyTp")]
+    public Max35Text? OtherEntityType { get; init; }
 
     /// <summary>
     /// Entity Assigner.
@@ -45,13 +52,6 @@ public record RiskAssessment3
     public ISO3NumericCountryCode? EntityCountry { get; init; }
 
     /// <summary>
-    /// Entity Identification.
-    /// </summary>
-    [DisplayName("Entity Identification")]
-    [IsoXmlTag("NttyId")]
-    public Max35Text? EntityIdentification { get; init; }
-
-    /// <summary>
     /// Entity Short Name.
     /// </summary>
     [DisplayName("Entity Short Name")]
@@ -59,11 +59,11 @@ public record RiskAssessment3
     public Max35Text? EntityShortName { get; init; }
 
     /// <summary>
-    /// Entity Type.
+    /// Type.
     /// </summary>
-    [DisplayName("Entity Type")]
-    [IsoXmlTag("NttyTp")]
-    public PartyType28Code? EntityType { get; init; }
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public Max35Text? Type { get; init; }
 
     /// <summary>
     /// High Risk Transaction.
@@ -73,25 +73,11 @@ public record RiskAssessment3
     public TrueFalseIndicator? HighRiskTransaction { get; init; }
 
     /// <summary>
-    /// Other Entity Type.
-    /// </summary>
-    [DisplayName("Other Entity Type")]
-    [IsoXmlTag("OthrNttyTp")]
-    public Max35Text? OtherEntityType { get; init; }
-
-    /// <summary>
     /// Reason.
     /// </summary>
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
     public ValueList<Max35Text> Reason { get; init; } = [];
-
-    /// <summary>
-    /// Recommendation.
-    /// </summary>
-    [DisplayName("Recommendation")]
-    [IsoXmlTag("Rcmmndtn")]
-    public ValueList<RecommendationAction1> Recommendation { get; init; } = [];
 
     /// <summary>
     /// Result.
@@ -101,9 +87,23 @@ public record RiskAssessment3
     public Max35Text? Result { get; init; }
 
     /// <summary>
-    /// Type.
+    /// Condition.
     /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public Max35Text? Type { get; init; }
+    [DisplayName("Condition")]
+    [IsoXmlTag("Cond")]
+    public ValueList<AdditionalData1> Condition { get; init; } = [];
+
+    /// <summary>
+    /// Recommendation.
+    /// </summary>
+    [DisplayName("Recommendation")]
+    [IsoXmlTag("Rcmmndtn")]
+    public ValueList<RecommendationAction1> Recommendation { get; init; } = [];
+
+    /// <summary>
+    /// Additional Data.
+    /// </summary>
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalRiskData1> AdditionalData { get; init; } = [];
 }

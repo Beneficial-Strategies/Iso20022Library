@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record DetailedTransactionStatistics30
 {
     /// <summary>
-    /// Total Corrected Rejections.
-    /// </summary>
-    [DisplayName("Total Corrected Rejections")]
-    [IsoXmlTag("TtlCrrctdRjctns")]
-    public Max20PositiveNumber? TotalCorrectedRejections { get; init; }
-
-    /// <summary>
     /// Total Number Of Transactions.
     /// </summary>
     [DisplayName("Total Number Of Transactions")]
@@ -43,6 +36,13 @@ public record DetailedTransactionStatistics30
     [DisplayName("Total Number Of Transactions Rejected")]
     [IsoXmlTag("TtlNbOfTxsRjctd")]
     public required Max20PositiveNumber TotalNumberOfTransactionsRejected { get; init; }
+
+    /// <summary>
+    /// Total Corrected Rejections.
+    /// </summary>
+    [DisplayName("Total Corrected Rejections")]
+    [IsoXmlTag("TtlCrrctdRjctns")]
+    public Max20PositiveNumber? TotalCorrectedRejections { get; init; }
 
     /// <summary>
     /// Transactions Rejections Reason.

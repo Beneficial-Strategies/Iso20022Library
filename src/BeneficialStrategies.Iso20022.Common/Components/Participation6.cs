@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Participation6
 {
     /// <summary>
-    /// Calculation Date.
+    /// Total Number Of Voting Rights.
     /// </summary>
-    [DisplayName("Calculation Date")]
-    [IsoXmlTag("ClctnDt")]
-    public ISODate? CalculationDate { get; init; }
+    [DisplayName("Total Number Of Voting Rights")]
+    [IsoXmlTag("TtlNbOfVtngRghts")]
+    public Number? TotalNumberOfVotingRights { get; init; }
 
     /// <summary>
     /// Percentage Of Voting Rights.
@@ -38,9 +38,9 @@ public record Participation6
     public FinancialInstrumentQuantity18Choice_? TotalNumberOfSecuritiesOutstanding { get; init; }
 
     /// <summary>
-    /// Total Number Of Voting Rights.
+    /// Calculation Date.
     /// </summary>
-    [DisplayName("Total Number Of Voting Rights")]
-    [IsoXmlTag("TtlNbOfVtngRghts")]
-    public Number? TotalNumberOfVotingRights { get; init; }
+    [DisplayName("Calculation Date")]
+    [IsoXmlTag("ClctnDt")]
+    public ISODate? CalculationDate { get; init; }
 }

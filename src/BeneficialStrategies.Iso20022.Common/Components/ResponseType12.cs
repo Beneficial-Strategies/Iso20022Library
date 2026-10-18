@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ResponseType12
 {
     /// <summary>
-    /// Additional Response Information.
-    /// </summary>
-    [DisplayName("Additional Response Information")]
-    [IsoXmlTag("AddtlRspnInf")]
-    public Max140Text? AdditionalResponseInformation { get; init; }
-
-    /// <summary>
     /// Response.
     /// </summary>
     [DisplayName("Response")]
@@ -36,4 +29,11 @@ public record ResponseType12
     [DisplayName("Response Reason")]
     [IsoXmlTag("RspnRsn")]
     public ResultDetail5Code? ResponseReason { get; init; }
+
+    /// <summary>
+    /// Additional Response Information.
+    /// </summary>
+    [DisplayName("Additional Response Information")]
+    [IsoXmlTag("AddtlRspnInf")]
+    public Max140Text? AdditionalResponseInformation { get; init; }
 }

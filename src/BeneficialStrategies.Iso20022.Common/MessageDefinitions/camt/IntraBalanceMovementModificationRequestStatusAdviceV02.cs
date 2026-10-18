@@ -46,6 +46,20 @@ public record IntraBalanceMovementModificationRequestStatusAdviceV02 : IOuterRec
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Identification.
+    /// </summary>
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public DocumentIdentification51? Identification { get; init; }
+
+    /// <summary>
+    /// Request Reference.
+    /// </summary>
+    [DisplayName("Request Reference")]
+    [IsoXmlTag("ReqRef")]
+    public required Max35Text RequestReference { get; init; }
+
+    /// <summary>
     /// Cash Account.
     /// </summary>
     [DisplayName("Cash Account")]
@@ -67,11 +81,11 @@ public record IntraBalanceMovementModificationRequestStatusAdviceV02 : IOuterRec
     public BranchAndFinancialInstitutionIdentification8? CashAccountServicer { get; init; }
 
     /// <summary>
-    /// Identification.
+    /// Request Details.
     /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public DocumentIdentification51? Identification { get; init; }
+    [DisplayName("Request Details")]
+    [IsoXmlTag("ReqDtls")]
+    public RequestDetails22? RequestDetails { get; init; }
 
     /// <summary>
     /// Processing Status.
@@ -81,18 +95,11 @@ public record IntraBalanceMovementModificationRequestStatusAdviceV02 : IOuterRec
     public required ProcessingStatus71Choice_ ProcessingStatus { get; init; }
 
     /// <summary>
-    /// Request Details.
+    /// Underlying Intra Balance.
     /// </summary>
-    [DisplayName("Request Details")]
-    [IsoXmlTag("ReqDtls")]
-    public RequestDetails22? RequestDetails { get; init; }
-
-    /// <summary>
-    /// Request Reference.
-    /// </summary>
-    [DisplayName("Request Reference")]
-    [IsoXmlTag("ReqRef")]
-    public required Max35Text RequestReference { get; init; }
+    [DisplayName("Underlying Intra Balance")]
+    [IsoXmlTag("UndrlygIntraBal")]
+    public IntraBalance5? UnderlyingIntraBalance { get; init; }
 
     /// <summary>
     /// Supplementary Data.
@@ -100,11 +107,4 @@ public record IntraBalanceMovementModificationRequestStatusAdviceV02 : IOuterRec
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Underlying Intra Balance.
-    /// </summary>
-    [DisplayName("Underlying Intra Balance")]
-    [IsoXmlTag("UndrlygIntraBal")]
-    public IntraBalance5? UnderlyingIntraBalance { get; init; }
 }

@@ -17,34 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record StatusReportContent14
 {
     /// <summary>
-    /// Attendance Context.
-    /// </summary>
-    [DisplayName("Attendance Context")]
-    [IsoXmlTag("AttndncCntxt")]
-    public AttendanceContext1Code? AttendanceContext { get; init; }
-
-    /// <summary>
-    /// Data Set Required.
-    /// </summary>
-    [DisplayName("Data Set Required")]
-    [IsoXmlTag("DataSetReqrd")]
-    public ValueList<DataSetRequest6> DataSetRequired { get; init; } = [];
-
-    /// <summary>
-    /// Errors.
-    /// </summary>
-    [DisplayName("Errors")]
-    [IsoXmlTag("Errs")]
-    public ValueList<Max140Text> Errors { get; init; } = [];
-
-    /// <summary>
-    /// Event.
-    /// </summary>
-    [DisplayName("Event")]
-    [IsoXmlTag("Evt")]
-    public ValueList<TMSEvent12> Event { get; init; } = [];
-
-    /// <summary>
     /// POI Capabilities.
     /// </summary>
     [DisplayName("POI Capabilities")]
@@ -59,6 +31,20 @@ public record StatusReportContent14
     public ValueList<PointOfInteractionComponent17> POIComponent { get; init; } = [];
 
     /// <summary>
+    /// POI Group Identification.
+    /// </summary>
+    [DisplayName("POI Group Identification")]
+    [IsoXmlTag("POIGrpId")]
+    public ValueList<Max35Text> POIGroupIdentification { get; init; } = [];
+
+    /// <summary>
+    /// Attendance Context.
+    /// </summary>
+    [DisplayName("Attendance Context")]
+    [IsoXmlTag("AttndncCntxt")]
+    public AttendanceContext1Code? AttendanceContext { get; init; }
+
+    /// <summary>
     /// POI Date Time.
     /// </summary>
     [DisplayName("POI Date Time")]
@@ -66,9 +52,23 @@ public record StatusReportContent14
     public required ISODateTime POIDateTime { get; init; }
 
     /// <summary>
-    /// POI Group Identification.
+    /// Data Set Required.
     /// </summary>
-    [DisplayName("POI Group Identification")]
-    [IsoXmlTag("POIGrpId")]
-    public ValueList<Max35Text> POIGroupIdentification { get; init; } = [];
+    [DisplayName("Data Set Required")]
+    [IsoXmlTag("DataSetReqrd")]
+    public ValueList<DataSetRequest6> DataSetRequired { get; init; } = [];
+
+    /// <summary>
+    /// Event.
+    /// </summary>
+    [DisplayName("Event")]
+    [IsoXmlTag("Evt")]
+    public ValueList<TMSEvent12> Event { get; init; } = [];
+
+    /// <summary>
+    /// Errors.
+    /// </summary>
+    [DisplayName("Errors")]
+    [IsoXmlTag("Errs")]
+    public ValueList<Max140Text> Errors { get; init; } = [];
 }

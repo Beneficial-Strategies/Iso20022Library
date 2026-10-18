@@ -17,32 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record FinancialInstrumentAttributes129
 {
     /// <summary>
-    /// Classification Type.
+    /// Financial Instrument Identification.
     /// </summary>
-    [DisplayName("Classification Type")]
-    [IsoXmlTag("ClssfctnTp")]
-    public ClassificationType32Choice_? ClassificationType { get; init; }
+    [DisplayName("Financial Instrument Identification")]
+    [IsoXmlTag("FinInstrmId")]
+    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
 
     /// <summary>
-    /// Contract Size.
+    /// Place Of Listing.
     /// </summary>
-    [DisplayName("Contract Size")]
-    [IsoXmlTag("CtrctSz")]
-    public FinancialInstrumentQuantity33Choice_? ContractSize { get; init; }
-
-    /// <summary>
-    /// Conversion Date.
-    /// </summary>
-    [DisplayName("Conversion Date")]
-    [IsoXmlTag("ConvsDt")]
-    public ISODate? ConversionDate { get; init; }
-
-    /// <summary>
-    /// Dated Date.
-    /// </summary>
-    [DisplayName("Dated Date")]
-    [IsoXmlTag("DtdDt")]
-    public ISODate? DatedDate { get; init; }
+    [DisplayName("Place Of Listing")]
+    [IsoXmlTag("PlcOfListg")]
+    public MarketIdentification3Choice_? PlaceOfListing { get; init; }
 
     /// <summary>
     /// Day Count Basis.
@@ -52,6 +38,20 @@ public record FinancialInstrumentAttributes129
     public InterestComputationMethodFormat4Choice_? DayCountBasis { get; init; }
 
     /// <summary>
+    /// Classification Type.
+    /// </summary>
+    [DisplayName("Classification Type")]
+    [IsoXmlTag("ClssfctnTp")]
+    public ClassificationType32Choice_? ClassificationType { get; init; }
+
+    /// <summary>
+    /// Option Style.
+    /// </summary>
+    [DisplayName("Option Style")]
+    [IsoXmlTag("OptnStyle")]
+    public OptionStyle8Choice_? OptionStyle { get; init; }
+
+    /// <summary>
     /// Denomination Currency.
     /// </summary>
     [DisplayName("Denomination Currency")]
@@ -59,11 +59,11 @@ public record FinancialInstrumentAttributes129
     public ActiveOrHistoricCurrencyCode? DenominationCurrency { get; init; }
 
     /// <summary>
-    /// Financial Instrument Identification.
+    /// Next Coupon Date.
     /// </summary>
-    [DisplayName("Financial Instrument Identification")]
-    [IsoXmlTag("FinInstrmId")]
-    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
+    [DisplayName("Next Coupon Date")]
+    [IsoXmlTag("NxtCpnDt")]
+    public ISODate? NextCouponDate { get; init; }
 
     /// <summary>
     /// Floating Rate Fixing Date.
@@ -73,11 +73,11 @@ public record FinancialInstrumentAttributes129
     public ISODate? FloatingRateFixingDate { get; init; }
 
     /// <summary>
-    /// Interest Rate.
+    /// Maturity Date.
     /// </summary>
-    [DisplayName("Interest Rate")]
-    [IsoXmlTag("IntrstRate")]
-    public RateFormat24Choice_? InterestRate { get; init; }
+    [DisplayName("Maturity Date")]
+    [IsoXmlTag("MtrtyDt")]
+    public ISODate? MaturityDate { get; init; }
 
     /// <summary>
     /// Issue Date.
@@ -87,25 +87,60 @@ public record FinancialInstrumentAttributes129
     public ISODate? IssueDate { get; init; }
 
     /// <summary>
-    /// Issue Price.
+    /// Next Callable Date.
     /// </summary>
-    [DisplayName("Issue Price")]
-    [IsoXmlTag("IssePric")]
-    public PriceFormat74Choice_? IssuePrice { get; init; }
+    [DisplayName("Next Callable Date")]
+    [IsoXmlTag("NxtCllblDt")]
+    public ISODate? NextCallableDate { get; init; }
 
     /// <summary>
-    /// Maturity Date.
+    /// Putable Date.
     /// </summary>
-    [DisplayName("Maturity Date")]
-    [IsoXmlTag("MtrtyDt")]
-    public ISODate? MaturityDate { get; init; }
+    [DisplayName("Putable Date")]
+    [IsoXmlTag("PutblDt")]
+    public ISODate? PutableDate { get; init; }
 
     /// <summary>
-    /// Minimum Multiple Quantity To Instruct.
+    /// Dated Date.
     /// </summary>
-    [DisplayName("Minimum Multiple Quantity To Instruct")]
-    [IsoXmlTag("MinMltplQtyToInst")]
-    public FinancialInstrumentQuantity33Choice_? MinimumMultipleQuantityToInstruct { get; init; }
+    [DisplayName("Dated Date")]
+    [IsoXmlTag("DtdDt")]
+    public ISODate? DatedDate { get; init; }
+
+    /// <summary>
+    /// Conversion Date.
+    /// </summary>
+    [DisplayName("Conversion Date")]
+    [IsoXmlTag("ConvsDt")]
+    public ISODate? ConversionDate { get; init; }
+
+    /// <summary>
+    /// Previous Factor.
+    /// </summary>
+    [DisplayName("Previous Factor")]
+    [IsoXmlTag("PrvsFctr")]
+    public RateFormat12Choice_? PreviousFactor { get; init; }
+
+    /// <summary>
+    /// Next Factor.
+    /// </summary>
+    [DisplayName("Next Factor")]
+    [IsoXmlTag("NxtFctr")]
+    public RateFormat12Choice_? NextFactor { get; init; }
+
+    /// <summary>
+    /// Interest Rate.
+    /// </summary>
+    [DisplayName("Interest Rate")]
+    [IsoXmlTag("IntrstRate")]
+    public RateFormat24Choice_? InterestRate { get; init; }
+
+    /// <summary>
+    /// Next Interest Rate.
+    /// </summary>
+    [DisplayName("Next Interest Rate")]
+    [IsoXmlTag("NxtIntrstRate")]
+    public RateFormat24Choice_? NextInterestRate { get; init; }
 
     /// <summary>
     /// Minimum Nominal Quantity.
@@ -122,58 +157,23 @@ public record FinancialInstrumentAttributes129
     public FinancialInstrumentQuantity33Choice_? MinimumQuantityToInstruct { get; init; }
 
     /// <summary>
-    /// Next Callable Date.
+    /// Minimum Multiple Quantity To Instruct.
     /// </summary>
-    [DisplayName("Next Callable Date")]
-    [IsoXmlTag("NxtCllblDt")]
-    public ISODate? NextCallableDate { get; init; }
+    [DisplayName("Minimum Multiple Quantity To Instruct")]
+    [IsoXmlTag("MinMltplQtyToInst")]
+    public FinancialInstrumentQuantity33Choice_? MinimumMultipleQuantityToInstruct { get; init; }
 
     /// <summary>
-    /// Next Coupon Date.
+    /// Contract Size.
     /// </summary>
-    [DisplayName("Next Coupon Date")]
-    [IsoXmlTag("NxtCpnDt")]
-    public ISODate? NextCouponDate { get; init; }
+    [DisplayName("Contract Size")]
+    [IsoXmlTag("CtrctSz")]
+    public FinancialInstrumentQuantity33Choice_? ContractSize { get; init; }
 
     /// <summary>
-    /// Next Factor.
+    /// Issue Price.
     /// </summary>
-    [DisplayName("Next Factor")]
-    [IsoXmlTag("NxtFctr")]
-    public RateFormat12Choice_? NextFactor { get; init; }
-
-    /// <summary>
-    /// Next Interest Rate.
-    /// </summary>
-    [DisplayName("Next Interest Rate")]
-    [IsoXmlTag("NxtIntrstRate")]
-    public RateFormat24Choice_? NextInterestRate { get; init; }
-
-    /// <summary>
-    /// Option Style.
-    /// </summary>
-    [DisplayName("Option Style")]
-    [IsoXmlTag("OptnStyle")]
-    public OptionStyle8Choice_? OptionStyle { get; init; }
-
-    /// <summary>
-    /// Place Of Listing.
-    /// </summary>
-    [DisplayName("Place Of Listing")]
-    [IsoXmlTag("PlcOfListg")]
-    public MarketIdentification3Choice_? PlaceOfListing { get; init; }
-
-    /// <summary>
-    /// Previous Factor.
-    /// </summary>
-    [DisplayName("Previous Factor")]
-    [IsoXmlTag("PrvsFctr")]
-    public RateFormat12Choice_? PreviousFactor { get; init; }
-
-    /// <summary>
-    /// Putable Date.
-    /// </summary>
-    [DisplayName("Putable Date")]
-    [IsoXmlTag("PutblDt")]
-    public ISODate? PutableDate { get; init; }
+    [DisplayName("Issue Price")]
+    [IsoXmlTag("IssePric")]
+    public PriceFormat74Choice_? IssuePrice { get; init; }
 }

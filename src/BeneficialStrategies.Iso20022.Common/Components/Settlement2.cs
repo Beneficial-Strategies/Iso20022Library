@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Settlement2
 {
     /// <summary>
-    /// Depository.
-    /// </summary>
-    [DisplayName("Depository")]
-    [IsoXmlTag("Dpstry")]
-    public PartyIdentification255Choice_? Depository { get; init; }
-
-    /// <summary>
     /// Settlement Amount.
     /// </summary>
     [DisplayName("Settlement Amount")]
     [IsoXmlTag("SttlmAmt")]
     public required AmountAndDirection27 SettlementAmount { get; init; }
+
+    /// <summary>
+    /// Depository.
+    /// </summary>
+    [DisplayName("Depository")]
+    [IsoXmlTag("Dpstry")]
+    public PartyIdentification255Choice_? Depository { get; init; }
 }

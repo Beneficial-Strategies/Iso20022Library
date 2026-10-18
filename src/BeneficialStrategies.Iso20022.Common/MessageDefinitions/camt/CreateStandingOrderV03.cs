@@ -60,16 +60,16 @@ public record CreateStandingOrderV03 : IOuterRecord
     public required StandingOrderIdentification8 StandingOrderIdentification { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
     /// Value Set.
     /// </summary>
     [DisplayName("Value Set")]
     [IsoXmlTag("ValSet")]
     public required StandingOrder10 ValueSet { get; init; }
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

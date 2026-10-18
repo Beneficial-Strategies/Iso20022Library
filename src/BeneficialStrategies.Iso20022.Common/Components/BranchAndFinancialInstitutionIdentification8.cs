@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record BranchAndFinancialInstitutionIdentification8
 {
     /// <summary>
-    /// Branch Identification.
-    /// </summary>
-    [DisplayName("Branch Identification")]
-    [IsoXmlTag("BrnchId")]
-    public BranchData5? BranchIdentification { get; init; }
-
-    /// <summary>
     /// Financial Institution Identification.
     /// </summary>
     [DisplayName("Financial Institution Identification")]
     [IsoXmlTag("FinInstnId")]
     public required FinancialInstitutionIdentification23 FinancialInstitutionIdentification { get; init; }
+
+    /// <summary>
+    /// Branch Identification.
+    /// </summary>
+    [DisplayName("Branch Identification")]
+    [IsoXmlTag("BrnchId")]
+    public BranchData5? BranchIdentification { get; init; }
 }

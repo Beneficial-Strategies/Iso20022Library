@@ -31,11 +31,11 @@ public record MessageStatusResponseData9
     public required GenericIdentification177 InitiatingParty { get; init; }
 
     /// <summary>
-    /// Repeated Card Acquisition Response.
+    /// Transaction Response.
     /// </summary>
-    [DisplayName("Repeated Card Acquisition Response")]
-    [IsoXmlTag("RpeatdCardAcqstnRspn")]
-    public CardAcquisitionResponse3? RepeatedCardAcquisitionResponse { get; init; }
+    [DisplayName("Transaction Response")]
+    [IsoXmlTag("TxRspn")]
+    public required ResponseType11 TransactionResponse { get; init; }
 
     /// <summary>
     /// Repeated Loyalty Response.
@@ -59,13 +59,6 @@ public record MessageStatusResponseData9
     public ReversalResponse9? RepeatedReversalResponse { get; init; }
 
     /// <summary>
-    /// Repeated Send Application Protocol Data Unit Card Reader Response.
-    /// </summary>
-    [DisplayName("Repeated Send Application Protocol Data Unit Card Reader Response")]
-    [IsoXmlTag("RpeatdSndApplPrtcolDataUnitCardRdrRspn")]
-    public DeviceSendApplicationProtocolDataUnitCardReaderResponse1? RepeatedSendApplicationProtocolDataUnitCardReaderResponse { get; init; }
-
-    /// <summary>
     /// Repeated Stored Value Response.
     /// </summary>
     [DisplayName("Repeated Stored Value Response")]
@@ -73,9 +66,16 @@ public record MessageStatusResponseData9
     public StoredValueResponse8? RepeatedStoredValueResponse { get; init; }
 
     /// <summary>
-    /// Transaction Response.
+    /// Repeated Card Acquisition Response.
     /// </summary>
-    [DisplayName("Transaction Response")]
-    [IsoXmlTag("TxRspn")]
-    public required ResponseType11 TransactionResponse { get; init; }
+    [DisplayName("Repeated Card Acquisition Response")]
+    [IsoXmlTag("RpeatdCardAcqstnRspn")]
+    public CardAcquisitionResponse3? RepeatedCardAcquisitionResponse { get; init; }
+
+    /// <summary>
+    /// Repeated Send Application Protocol Data Unit Card Reader Response.
+    /// </summary>
+    [DisplayName("Repeated Send Application Protocol Data Unit Card Reader Response")]
+    [IsoXmlTag("RpeatdSndApplPrtcolDataUnitCardRdrRspn")]
+    public DeviceSendApplicationProtocolDataUnitCardReaderResponse1? RepeatedSendApplicationProtocolDataUnitCardReaderResponse { get; init; }
 }

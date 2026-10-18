@@ -17,34 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TransactionTotalsSet2
 {
     /// <summary>
-    /// Acquirer Identification.
-    /// </summary>
-    [DisplayName("Acquirer Identification")]
-    [IsoXmlTag("AcqrrId")]
-    public Max35Text? AcquirerIdentification { get; init; }
-
-    /// <summary>
-    /// Brand.
-    /// </summary>
-    [DisplayName("Brand")]
-    [IsoXmlTag("Brnd")]
-    public Max35Text? Brand { get; init; }
-
-    /// <summary>
-    /// Cashier Identification.
-    /// </summary>
-    [DisplayName("Cashier Identification")]
-    [IsoXmlTag("CshrId")]
-    public Max35Text? CashierIdentification { get; init; }
-
-    /// <summary>
-    /// Loyalty Transaction Total.
-    /// </summary>
-    [DisplayName("Loyalty Transaction Total")]
-    [IsoXmlTag("LltyTxTtl")]
-    public ValueList<LoyaltyTransactionTotals1> LoyaltyTransactionTotal { get; init; } = [];
-
-    /// <summary>
     /// Payment Instrument Type.
     /// </summary>
     [DisplayName("Payment Instrument Type")]
@@ -52,11 +24,11 @@ public record TransactionTotalsSet2
     public required PaymentInstrumentType2Code PaymentInstrumentType { get; init; }
 
     /// <summary>
-    /// POI Identification.
+    /// Acquirer Identification.
     /// </summary>
-    [DisplayName("POI Identification")]
-    [IsoXmlTag("POIId")]
-    public Max35Text? POIIdentification { get; init; }
+    [DisplayName("Acquirer Identification")]
+    [IsoXmlTag("AcqrrId")]
+    public Max35Text? AcquirerIdentification { get; init; }
 
     /// <summary>
     /// Reconciliation Identification.
@@ -66,6 +38,27 @@ public record TransactionTotalsSet2
     public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
+    /// Sale Reconciliation Identification.
+    /// </summary>
+    [DisplayName("Sale Reconciliation Identification")]
+    [IsoXmlTag("SaleRcncltnId")]
+    public Max35Text? SaleReconciliationIdentification { get; init; }
+
+    /// <summary>
+    /// Brand.
+    /// </summary>
+    [DisplayName("Brand")]
+    [IsoXmlTag("Brnd")]
+    public Max35Text? Brand { get; init; }
+
+    /// <summary>
+    /// POI Identification.
+    /// </summary>
+    [DisplayName("POI Identification")]
+    [IsoXmlTag("POIId")]
+    public Max35Text? POIIdentification { get; init; }
+
+    /// <summary>
     /// Sale Identification.
     /// </summary>
     [DisplayName("Sale Identification")]
@@ -73,11 +66,11 @@ public record TransactionTotalsSet2
     public Max35Text? SaleIdentification { get; init; }
 
     /// <summary>
-    /// Sale Reconciliation Identification.
+    /// Cashier Identification.
     /// </summary>
-    [DisplayName("Sale Reconciliation Identification")]
-    [IsoXmlTag("SaleRcncltnId")]
-    public Max35Text? SaleReconciliationIdentification { get; init; }
+    [DisplayName("Cashier Identification")]
+    [IsoXmlTag("CshrId")]
+    public Max35Text? CashierIdentification { get; init; }
 
     /// <summary>
     /// Shift Number.
@@ -99,4 +92,11 @@ public record TransactionTotalsSet2
     [DisplayName("Transaction Total")]
     [IsoXmlTag("TxTtl")]
     public required TransactionTotals8 TransactionTotal { get; init; }
+
+    /// <summary>
+    /// Loyalty Transaction Total.
+    /// </summary>
+    [DisplayName("Loyalty Transaction Total")]
+    [IsoXmlTag("LltyTxTtl")]
+    public ValueList<LoyaltyTransactionTotals1> LoyaltyTransactionTotal { get; init; } = [];
 }

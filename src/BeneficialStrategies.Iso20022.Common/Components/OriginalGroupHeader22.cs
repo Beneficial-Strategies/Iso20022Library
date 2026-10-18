@@ -18,35 +18,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record OriginalGroupHeader22
 {
     /// <summary>
-    /// Specifies the status of a group of transactions.
-    /// </summary>
-    [DisplayName("Group Status")]
-    [IsoXmlTag("GrpSts")]
-    public ExternalPaymentGroupStatus1Code? GroupStatus { get; init; }
-
-    /// <summary>
-    /// Detailed information on the number of transactions for each identical transaction status.
-    /// </summary>
-    [DisplayName("Number Of Transactions Per Status")]
-    [IsoXmlTag("NbOfTxsPerSts")]
-    public ValueList<NumberOfTransactionsPerStatus5> NumberOfTransactionsPerStatus { get; init; } =
-        [];
-
-    /// <summary>
-    /// Total of all individual amounts included in the original message, irrespective of currencies.
-    /// </summary>
-    [DisplayName("Original Control Sum")]
-    [IsoXmlTag("OrgnlCtrlSum")]
-    public DecimalNumber? OriginalControlSum { get; init; }
-
-    /// <summary>
-    /// Date and time at which the original message was created.
-    /// </summary>
-    [DisplayName("Original Creation Date Time")]
-    [IsoXmlTag("OrgnlCreDtTm")]
-    public ISODateTime? OriginalCreationDateTime { get; init; }
-
-    /// <summary>
     /// Point to point reference, as assigned by the original instructing party, to unambiguously identify the original message.
     /// </summary>
     [DisplayName("Original Message Identification")]
@@ -61,6 +32,13 @@ public record OriginalGroupHeader22
     public required Max35Text OriginalMessageNameIdentification { get; init; }
 
     /// <summary>
+    /// Date and time at which the original message was created.
+    /// </summary>
+    [DisplayName("Original Creation Date Time")]
+    [IsoXmlTag("OrgnlCreDtTm")]
+    public ISODateTime? OriginalCreationDateTime { get; init; }
+
+    /// <summary>
     /// Number of individual transactions contained in the original message.
     /// </summary>
     [DisplayName("Original Number Of Transactions")]
@@ -68,9 +46,31 @@ public record OriginalGroupHeader22
     public Max15NumericText? OriginalNumberOfTransactions { get; init; }
 
     /// <summary>
+    /// Total of all individual amounts included in the original message, irrespective of currencies.
+    /// </summary>
+    [DisplayName("Original Control Sum")]
+    [IsoXmlTag("OrgnlCtrlSum")]
+    public DecimalNumber? OriginalControlSum { get; init; }
+
+    /// <summary>
+    /// Specifies the status of a group of transactions.
+    /// </summary>
+    [DisplayName("Group Status")]
+    [IsoXmlTag("GrpSts")]
+    public ExternalPaymentGroupStatus1Code? GroupStatus { get; init; }
+
+    /// <summary>
     /// Provides detailed information on the status reason.
     /// </summary>
     [DisplayName("Status Reason Information")]
     [IsoXmlTag("StsRsnInf")]
     public ValueList<StatusReasonInformation14> StatusReasonInformation { get; init; } = [];
+
+    /// <summary>
+    /// Detailed information on the number of transactions for each identical transaction status.
+    /// </summary>
+    [DisplayName("Number Of Transactions Per Status")]
+    [IsoXmlTag("NbOfTxsPerSts")]
+    public ValueList<NumberOfTransactionsPerStatus5> NumberOfTransactionsPerStatus { get; init; } =
+        [];
 }

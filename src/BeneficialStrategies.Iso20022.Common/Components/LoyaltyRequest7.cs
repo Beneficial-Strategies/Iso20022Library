@@ -24,16 +24,16 @@ public record LoyaltyRequest7
     public CustomerOrder1? CustomerOrder { get; init; }
 
     /// <summary>
-    /// Data.
-    /// </summary>
-    [DisplayName("Data")]
-    [IsoXmlTag("Data")]
-    public ValueList<LoyaltyRequestData3> Data { get; init; } = [];
-
-    /// <summary>
     /// Transaction.
     /// </summary>
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
     public required LoyaltyTransaction7 Transaction { get; init; }
+
+    /// <summary>
+    /// Data.
+    /// </summary>
+    [DisplayName("Data")]
+    [IsoXmlTag("Data")]
+    public ValueList<LoyaltyRequestData3> Data { get; init; } = [];
 }

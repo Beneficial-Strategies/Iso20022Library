@@ -24,16 +24,16 @@ public record AcceptorReconciliationResponse11
     public required CardPaymentEnvironment81 Environment { get; init; }
 
     /// <summary>
-    /// Transaction.
-    /// </summary>
-    [DisplayName("Transaction")]
-    [IsoXmlTag("Tx")]
-    public required TransactionReconciliation5 Transaction { get; init; }
-
-    /// <summary>
     /// Transaction Response.
     /// </summary>
     [DisplayName("Transaction Response")]
     [IsoXmlTag("TxRspn")]
     public required ResponseType10 TransactionResponse { get; init; }
+
+    /// <summary>
+    /// Transaction.
+    /// </summary>
+    [DisplayName("Transaction")]
+    [IsoXmlTag("Tx")]
+    public required TransactionReconciliation5 Transaction { get; init; }
 }

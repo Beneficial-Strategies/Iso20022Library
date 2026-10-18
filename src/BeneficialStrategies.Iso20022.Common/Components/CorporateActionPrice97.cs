@@ -24,18 +24,11 @@ public record CorporateActionPrice97
     public PriceFormat92Choice_? CashInLieuOfSharePrice { get; init; }
 
     /// <summary>
-    /// First Bid Increment Price.
+    /// Over Subscription Deposit Price.
     /// </summary>
-    [DisplayName("First Bid Increment Price")]
-    [IsoXmlTag("FrstBidIncrmtPric")]
-    public PriceFormat93Choice_? FirstBidIncrementPrice { get; init; }
-
-    /// <summary>
-    /// Last Bid Increment Price.
-    /// </summary>
-    [DisplayName("Last Bid Increment Price")]
-    [IsoXmlTag("LastBidIncrmtPric")]
-    public PriceFormat93Choice_? LastBidIncrementPrice { get; init; }
+    [DisplayName("Over Subscription Deposit Price")]
+    [IsoXmlTag("OverSbcptDpstPric")]
+    public PriceFormat92Choice_? OverSubscriptionDepositPrice { get; init; }
 
     /// <summary>
     /// Maximum Cash To Instruct.
@@ -43,13 +36,6 @@ public record CorporateActionPrice97
     [DisplayName("Maximum Cash To Instruct")]
     [IsoXmlTag("MaxCshToInst")]
     public PriceFormat62Choice_? MaximumCashToInstruct { get; init; }
-
-    /// <summary>
-    /// Maximum Price.
-    /// </summary>
-    [DisplayName("Maximum Price")]
-    [IsoXmlTag("MaxPric")]
-    public PriceFormat93Choice_? MaximumPrice { get; init; }
 
     /// <summary>
     /// Minimum Cash To Instruct.
@@ -66,6 +52,13 @@ public record CorporateActionPrice97
     public PriceFormat62Choice_? MinimumMultipleCashToInstruct { get; init; }
 
     /// <summary>
+    /// Maximum Price.
+    /// </summary>
+    [DisplayName("Maximum Price")]
+    [IsoXmlTag("MaxPric")]
+    public PriceFormat93Choice_? MaximumPrice { get; init; }
+
+    /// <summary>
     /// Minimum Price.
     /// </summary>
     [DisplayName("Minimum Price")]
@@ -73,9 +66,16 @@ public record CorporateActionPrice97
     public PriceFormat93Choice_? MinimumPrice { get; init; }
 
     /// <summary>
-    /// Over Subscription Deposit Price.
+    /// First Bid Increment Price.
     /// </summary>
-    [DisplayName("Over Subscription Deposit Price")]
-    [IsoXmlTag("OverSbcptDpstPric")]
-    public PriceFormat92Choice_? OverSubscriptionDepositPrice { get; init; }
+    [DisplayName("First Bid Increment Price")]
+    [IsoXmlTag("FrstBidIncrmtPric")]
+    public PriceFormat93Choice_? FirstBidIncrementPrice { get; init; }
+
+    /// <summary>
+    /// Last Bid Increment Price.
+    /// </summary>
+    [DisplayName("Last Bid Increment Price")]
+    [IsoXmlTag("LastBidIncrmtPric")]
+    public PriceFormat93Choice_? LastBidIncrementPrice { get; init; }
 }

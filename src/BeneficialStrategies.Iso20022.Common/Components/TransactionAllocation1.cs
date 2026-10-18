@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TransactionAllocation1
 {
     /// <summary>
-    /// Account.
-    /// </summary>
-    [DisplayName("Account")]
-    [IsoXmlTag("Acct")]
-    public required CashAccount40 Account { get; init; }
-
-    /// <summary>
     /// Amount.
     /// </summary>
     [DisplayName("Amount")]
@@ -36,6 +29,13 @@ public record TransactionAllocation1
     [DisplayName("Credit Debit Indicator")]
     [IsoXmlTag("CdtDbtInd")]
     public required CreditDebitCode CreditDebitIndicator { get; init; }
+
+    /// <summary>
+    /// Account.
+    /// </summary>
+    [DisplayName("Account")]
+    [IsoXmlTag("Acct")]
+    public required CashAccount40 Account { get; init; }
 
     /// <summary>
     /// Purpose.

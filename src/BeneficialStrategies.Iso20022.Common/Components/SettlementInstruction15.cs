@@ -18,27 +18,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SettlementInstruction15
 {
     /// <summary>
+    /// Method used to settle the (batch of) payment instructions.
+    /// </summary>
+    [DisplayName("Settlement Method")]
+    [IsoXmlTag("SttlmMtd")]
+    public required SettlementMethod1Code SettlementMethod { get; init; }
+
+    /// <summary>
+    /// A specific purpose account used to post debit and credit entries as a result of the transaction.
+    /// </summary>
+    [DisplayName("Settlement Account")]
+    [IsoXmlTag("SttlmAcct")]
+    public CashAccount40? SettlementAccount { get; init; }
+
+    /// <summary>
     /// Specification of a pre-agreed offering between clearing agents or the channel through which the payment instruction is processed.
     /// </summary>
     [DisplayName("Clearing System")]
     [IsoXmlTag("ClrSys")]
     public ClearingSystemIdentification3Choice_? ClearingSystem { get; init; }
-
-    /// <summary>
-    /// Agent at which the instructed agent will be reimbursed.
-    /// Usage: If InstructedReimbursementAgent contains a branch of the InstructedAgent, then the party in InstructedAgent will claim reimbursement from that branch/will be paid by that branch.
-    /// Usage: If InstructingAgent and InstructedAgent have the same reimbursement agent, then only InstructingReimbursementAgent must be used.
-    /// </summary>
-    [DisplayName("Instructed Reimbursement Agent")]
-    [IsoXmlTag("InstdRmbrsmntAgt")]
-    public BranchAndFinancialInstitutionIdentification8? InstructedReimbursementAgent { get; init; }
-
-    /// <summary>
-    /// Unambiguous identification of the account of the instructed reimbursement agent account at its servicing agent in the payment chain.
-    /// </summary>
-    [DisplayName("Instructed Reimbursement Agent Account")]
-    [IsoXmlTag("InstdRmbrsmntAgtAcct")]
-    public CashAccount40? InstructedReimbursementAgentAccount { get; init; }
 
     /// <summary>
     /// Agent through which the instructing agent will reimburse the instructed agent.
@@ -56,18 +54,20 @@ public record SettlementInstruction15
     public CashAccount40? InstructingReimbursementAgentAccount { get; init; }
 
     /// <summary>
-    /// A specific purpose account used to post debit and credit entries as a result of the transaction.
+    /// Agent at which the instructed agent will be reimbursed.
+    /// Usage: If InstructedReimbursementAgent contains a branch of the InstructedAgent, then the party in InstructedAgent will claim reimbursement from that branch/will be paid by that branch.
+    /// Usage: If InstructingAgent and InstructedAgent have the same reimbursement agent, then only InstructingReimbursementAgent must be used.
     /// </summary>
-    [DisplayName("Settlement Account")]
-    [IsoXmlTag("SttlmAcct")]
-    public CashAccount40? SettlementAccount { get; init; }
+    [DisplayName("Instructed Reimbursement Agent")]
+    [IsoXmlTag("InstdRmbrsmntAgt")]
+    public BranchAndFinancialInstitutionIdentification8? InstructedReimbursementAgent { get; init; }
 
     /// <summary>
-    /// Method used to settle the (batch of) payment instructions.
+    /// Unambiguous identification of the account of the instructed reimbursement agent account at its servicing agent in the payment chain.
     /// </summary>
-    [DisplayName("Settlement Method")]
-    [IsoXmlTag("SttlmMtd")]
-    public required SettlementMethod1Code SettlementMethod { get; init; }
+    [DisplayName("Instructed Reimbursement Agent Account")]
+    [IsoXmlTag("InstdRmbrsmntAgtAcct")]
+    public CashAccount40? InstructedReimbursementAgentAccount { get; init; }
 
     /// <summary>
     /// Agent at which the instructed agent will be reimbursed.

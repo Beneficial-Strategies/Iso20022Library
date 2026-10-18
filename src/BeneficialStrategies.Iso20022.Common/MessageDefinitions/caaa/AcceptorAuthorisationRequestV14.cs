@@ -46,18 +46,18 @@ public record AcceptorAuthorisationRequestV14 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Authorisation Request.
-    /// </summary>
-    [DisplayName("Authorisation Request")]
-    [IsoXmlTag("AuthstnReq")]
-    public required AcceptorAuthorisationRequest14 AuthorisationRequest { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required Header70 Header { get; init; }
+
+    /// <summary>
+    /// Authorisation Request.
+    /// </summary>
+    [DisplayName("Authorisation Request")]
+    [IsoXmlTag("AuthstnReq")]
+    public required AcceptorAuthorisationRequest14 AuthorisationRequest { get; init; }
 
     /// <summary>
     /// Security Trailer.

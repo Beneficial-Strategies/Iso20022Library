@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record LocalMarketAnnex6
 {
     /// <summary>
-    /// Additional Information.
-    /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
-
-    /// <summary>
-    /// Cash Settlement Details.
-    /// </summary>
-    [DisplayName("Cash Settlement Details")]
-    [IsoXmlTag("CshSttlmDtls")]
-    public ValueList<CashAccount205> CashSettlementDetails { get; init; } = [];
-
-    /// <summary>
     /// Country.
     /// </summary>
     [DisplayName("Country")]
@@ -45,13 +31,6 @@ public record LocalMarketAnnex6
     public required OrderDesk1 LocalOrderDesk { get; init; }
 
     /// <summary>
-    /// Redemption Processing Characteristics.
-    /// </summary>
-    [DisplayName("Redemption Processing Characteristics")]
-    [IsoXmlTag("RedPrcgChrtcs")]
-    public ProcessingCharacteristics10? RedemptionProcessingCharacteristics { get; init; }
-
-    /// <summary>
     /// Subscription Processing Characteristics.
     /// </summary>
     [DisplayName("Subscription Processing Characteristics")]
@@ -59,9 +38,30 @@ public record LocalMarketAnnex6
     public ProcessingCharacteristics11? SubscriptionProcessingCharacteristics { get; init; }
 
     /// <summary>
+    /// Redemption Processing Characteristics.
+    /// </summary>
+    [DisplayName("Redemption Processing Characteristics")]
+    [IsoXmlTag("RedPrcgChrtcs")]
+    public ProcessingCharacteristics10? RedemptionProcessingCharacteristics { get; init; }
+
+    /// <summary>
     /// Switch Processing Characteristics.
     /// </summary>
     [DisplayName("Switch Processing Characteristics")]
     [IsoXmlTag("SwtchPrcgChrtcs")]
     public ProcessingCharacteristics9? SwitchProcessingCharacteristics { get; init; }
+
+    /// <summary>
+    /// Cash Settlement Details.
+    /// </summary>
+    [DisplayName("Cash Settlement Details")]
+    [IsoXmlTag("CshSttlmDtls")]
+    public ValueList<CashAccount205> CashSettlementDetails { get; init; } = [];
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

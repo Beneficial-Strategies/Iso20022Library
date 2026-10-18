@@ -24,18 +24,18 @@ public record EventInformation17
     public required Max35Text CorporateActionEventIdentification { get; init; }
 
     /// <summary>
+    /// Official Corporate Action Event Identification.
+    /// </summary>
+    [DisplayName("Official Corporate Action Event Identification")]
+    [IsoXmlTag("OffclCorpActnEvtId")]
+    public Max35Text? OfficialCorporateActionEventIdentification { get; init; }
+
+    /// <summary>
     /// Event Type.
     /// </summary>
     [DisplayName("Event Type")]
     [IsoXmlTag("EvtTp")]
     public required CorporateActionEventType112Choice_ EventType { get; init; }
-
-    /// <summary>
-    /// Last Notification Identification.
-    /// </summary>
-    [DisplayName("Last Notification Identification")]
-    [IsoXmlTag("LastNtfctnId")]
-    public NotificationIdentification5? LastNotificationIdentification { get; init; }
 
     /// <summary>
     /// Mandatory Voluntary Event Type.
@@ -45,9 +45,9 @@ public record EventInformation17
     public required CorporateActionMandatoryVoluntary3Choice_ MandatoryVoluntaryEventType { get; init; }
 
     /// <summary>
-    /// Official Corporate Action Event Identification.
+    /// Last Notification Identification.
     /// </summary>
-    [DisplayName("Official Corporate Action Event Identification")]
-    [IsoXmlTag("OffclCorpActnEvtId")]
-    public Max35Text? OfficialCorporateActionEventIdentification { get; init; }
+    [DisplayName("Last Notification Identification")]
+    [IsoXmlTag("LastNtfctnId")]
+    public NotificationIdentification5? LastNotificationIdentification { get; init; }
 }

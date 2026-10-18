@@ -17,53 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AdditionalFee3
 {
     /// <summary>
-    /// Amount.
+    /// Type.
     /// </summary>
-    [DisplayName("Amount")]
-    [IsoXmlTag("Amt")]
-    public required ImpliedCurrencyAndAmount Amount { get; init; }
-
-    /// <summary>
-    /// Assigner.
-    /// </summary>
-    [DisplayName("Assigner")]
-    [IsoXmlTag("Assgnr")]
-    public PartyType32Code? Assigner { get; init; }
-
-    /// <summary>
-    /// Credit Debit.
-    /// </summary>
-    [DisplayName("Credit Debit")]
-    [IsoXmlTag("CdtDbt")]
-    public CreditDebit3Code? CreditDebit { get; init; }
-
-    /// <summary>
-    /// Currency.
-    /// </summary>
-    [DisplayName("Currency")]
-    [IsoXmlTag("Ccy")]
-    public ISO3NumericCurrencyCode? Currency { get; init; }
-
-    /// <summary>
-    /// Description.
-    /// </summary>
-    [DisplayName("Description")]
-    [IsoXmlTag("Desc")]
-    public Max140Text? Description { get; init; }
-
-    /// <summary>
-    /// Descriptor.
-    /// </summary>
-    [DisplayName("Descriptor")]
-    [IsoXmlTag("Dscrptr")]
-    public Max35Text? Descriptor { get; init; }
-
-    /// <summary>
-    /// Other Assigner.
-    /// </summary>
-    [DisplayName("Other Assigner")]
-    [IsoXmlTag("OthrAssgnr")]
-    public Max35Text? OtherAssigner { get; init; }
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public required TypeOfAmount21Code Type { get; init; }
 
     /// <summary>
     /// Other Type.
@@ -78,6 +36,34 @@ public record AdditionalFee3
     [DisplayName("Program")]
     [IsoXmlTag("Prgm")]
     public Max35Text? Program { get; init; }
+
+    /// <summary>
+    /// Descriptor.
+    /// </summary>
+    [DisplayName("Descriptor")]
+    [IsoXmlTag("Dscrptr")]
+    public Max35Text? Descriptor { get; init; }
+
+    /// <summary>
+    /// Credit Debit.
+    /// </summary>
+    [DisplayName("Credit Debit")]
+    [IsoXmlTag("CdtDbt")]
+    public CreditDebit3Code? CreditDebit { get; init; }
+
+    /// <summary>
+    /// Amount.
+    /// </summary>
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    public required ImpliedCurrencyAndAmount Amount { get; init; }
+
+    /// <summary>
+    /// Currency.
+    /// </summary>
+    [DisplayName("Currency")]
+    [IsoXmlTag("Ccy")]
+    public ISO3NumericCurrencyCode? Currency { get; init; }
 
     /// <summary>
     /// Reconciliation Amount.
@@ -101,9 +87,23 @@ public record AdditionalFee3
     public BaseOne25Rate? ReconciliationEffectiveExchangeRate { get; init; }
 
     /// <summary>
-    /// Type.
+    /// Assigner.
     /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public required TypeOfAmount21Code Type { get; init; }
+    [DisplayName("Assigner")]
+    [IsoXmlTag("Assgnr")]
+    public PartyType32Code? Assigner { get; init; }
+
+    /// <summary>
+    /// Other Assigner.
+    /// </summary>
+    [DisplayName("Other Assigner")]
+    [IsoXmlTag("OthrAssgnr")]
+    public Max35Text? OtherAssigner { get; init; }
+
+    /// <summary>
+    /// Description.
+    /// </summary>
+    [DisplayName("Description")]
+    [IsoXmlTag("Desc")]
+    public Max140Text? Description { get; init; }
 }

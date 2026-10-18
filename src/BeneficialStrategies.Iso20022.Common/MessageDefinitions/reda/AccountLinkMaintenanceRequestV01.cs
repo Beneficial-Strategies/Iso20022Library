@@ -46,13 +46,6 @@ public record AccountLinkMaintenanceRequestV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Link Identification.
-    /// </summary>
-    [DisplayName("Account Link Identification")]
-    [IsoXmlTag("AcctLkId")]
-    public required AccountLink8 AccountLinkIdentification { get; init; }
-
-    /// <summary>
     /// Message Header.
     /// </summary>
     [DisplayName("Message Header")]
@@ -60,11 +53,11 @@ public record AccountLinkMaintenanceRequestV01 : IOuterRecord
     public MessageHeader1? MessageHeader { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
+    /// Account Link Identification.
     /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
+    [DisplayName("Account Link Identification")]
+    [IsoXmlTag("AcctLkId")]
+    public required AccountLink8 AccountLinkIdentification { get; init; }
 
     /// <summary>
     /// Update.
@@ -72,4 +65,11 @@ public record AccountLinkMaintenanceRequestV01 : IOuterRecord
     [DisplayName("Update")]
     [IsoXmlTag("Upd")]
     public required AccountLinkUpdate2 Update { get; init; }
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SecurityIdentification49
 {
     /// <summary>
-    /// Alternative Instrument Identification.
-    /// </summary>
-    [DisplayName("Alternative Instrument Identification")]
-    [IsoXmlTag("AltrntvInstrmId")]
-    public GenericIdentification175? AlternativeInstrumentIdentification { get; init; }
-
-    /// <summary>
     /// ISIN.
     /// </summary>
     [DisplayName("ISIN")]
@@ -31,16 +24,23 @@ public record SecurityIdentification49
     public ISINOct2015Identifier? ISIN { get; init; }
 
     /// <summary>
-    /// Product Description.
-    /// </summary>
-    [DisplayName("Product Description")]
-    [IsoXmlTag("PdctDesc")]
-    public Max1000Text? ProductDescription { get; init; }
-
-    /// <summary>
     /// Unique Product Identifier.
     /// </summary>
     [DisplayName("Unique Product Identifier")]
     [IsoXmlTag("UnqPdctIdr")]
     public UniqueProductIdentifier2Choice_? UniqueProductIdentifier { get; init; }
+
+    /// <summary>
+    /// Alternative Instrument Identification.
+    /// </summary>
+    [DisplayName("Alternative Instrument Identification")]
+    [IsoXmlTag("AltrntvInstrmId")]
+    public GenericIdentification175? AlternativeInstrumentIdentification { get; init; }
+
+    /// <summary>
+    /// Product Description.
+    /// </summary>
+    [DisplayName("Product Description")]
+    [IsoXmlTag("PdctDesc")]
+    public Max1000Text? ProductDescription { get; init; }
 }

@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TransactionSearchCriteria11
 {
     /// <summary>
-    /// Account Entry Search.
+    /// Payment To.
     /// </summary>
-    [DisplayName("Account Entry Search")]
-    [IsoXmlTag("AcctNtrySch")]
-    public CashAccountEntrySearch8? AccountEntrySearch { get; init; }
+    [DisplayName("Payment To")]
+    [IsoXmlTag("PmtTo")]
+    public ValueList<SystemSearch5> PaymentTo { get; init; } = [];
 
     /// <summary>
     /// Payment From.
@@ -38,9 +38,9 @@ public record TransactionSearchCriteria11
     public PaymentSearch10? PaymentSearch { get; init; }
 
     /// <summary>
-    /// Payment To.
+    /// Account Entry Search.
     /// </summary>
-    [DisplayName("Payment To")]
-    [IsoXmlTag("PmtTo")]
-    public ValueList<SystemSearch5> PaymentTo { get; init; } = [];
+    [DisplayName("Account Entry Search")]
+    [IsoXmlTag("AcctNtrySch")]
+    public CashAccountEntrySearch8? AccountEntrySearch { get; init; }
 }

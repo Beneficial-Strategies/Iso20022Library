@@ -17,18 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record StatementGroup5
 {
     /// <summary>
-    /// Billing Statement.
-    /// </summary>
-    [DisplayName("Billing Statement")]
-    [IsoXmlTag("BllgStmt")]
-    public ValueList<BillingStatement5> BillingStatement { get; init; } = [];
-
-    /// <summary>
     /// Group Identification.
     /// </summary>
     [DisplayName("Group Identification")]
     [IsoXmlTag("GrpId")]
     public required Max35Text GroupIdentification { get; init; }
+
+    /// <summary>
+    /// Sender.
+    /// </summary>
+    [DisplayName("Sender")]
+    [IsoXmlTag("Sndr")]
+    public required PartyIdentification273 Sender { get; init; }
+
+    /// <summary>
+    /// Sender Individual Contact.
+    /// </summary>
+    [DisplayName("Sender Individual Contact")]
+    [IsoXmlTag("SndrIndvCtct")]
+    public ValueList<Contact13> SenderIndividualContact { get; init; } = [];
 
     /// <summary>
     /// Receiver.
@@ -45,16 +52,9 @@ public record StatementGroup5
     public ValueList<Contact13> ReceiverIndividualContact { get; init; } = [];
 
     /// <summary>
-    /// Sender.
+    /// Billing Statement.
     /// </summary>
-    [DisplayName("Sender")]
-    [IsoXmlTag("Sndr")]
-    public required PartyIdentification273 Sender { get; init; }
-
-    /// <summary>
-    /// Sender Individual Contact.
-    /// </summary>
-    [DisplayName("Sender Individual Contact")]
-    [IsoXmlTag("SndrIndvCtct")]
-    public ValueList<Contact13> SenderIndividualContact { get; init; } = [];
+    [DisplayName("Billing Statement")]
+    [IsoXmlTag("BllgStmt")]
+    public ValueList<BillingStatement5> BillingStatement { get; init; } = [];
 }

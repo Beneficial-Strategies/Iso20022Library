@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TrackerData8
 {
     /// <summary>
+    /// Confirmed Date.
+    /// </summary>
+    [DisplayName("Confirmed Date")]
+    [IsoXmlTag("ConfdDt")]
+    public DateAndDateTime2Choice_? ConfirmedDate { get; init; }
+
+    /// <summary>
     /// Confirmed Amount.
     /// </summary>
     [DisplayName("Confirmed Amount")]
@@ -24,11 +31,25 @@ public record TrackerData8
     public ActiveCurrencyAndAmount? ConfirmedAmount { get; init; }
 
     /// <summary>
-    /// Confirmed Date.
+    /// Returned Confirmed Date.
     /// </summary>
-    [DisplayName("Confirmed Date")]
-    [IsoXmlTag("ConfdDt")]
-    public DateAndDateTime2Choice_? ConfirmedDate { get; init; }
+    [DisplayName("Returned Confirmed Date")]
+    [IsoXmlTag("RtrdConfdDt")]
+    public DateAndDateTime2Choice_? ReturnedConfirmedDate { get; init; }
+
+    /// <summary>
+    /// Returned Confirmed Amount.
+    /// </summary>
+    [DisplayName("Returned Confirmed Amount")]
+    [IsoXmlTag("RtrdConfdAmt")]
+    public ActiveCurrencyAndAmount? ReturnedConfirmedAmount { get; init; }
+
+    /// <summary>
+    /// Remaining To Be Confirmed Amount.
+    /// </summary>
+    [DisplayName("Remaining To Be Confirmed Amount")]
+    [IsoXmlTag("RmngToBeConfdAmt")]
+    public ActiveCurrencyAndAmount? RemainingToBeConfirmedAmount { get; init; }
 
     /// <summary>
     /// Previously Confirmed Amount.
@@ -43,25 +64,4 @@ public record TrackerData8
     [DisplayName("Previously Confirmed Date")]
     [IsoXmlTag("PrevslyConfdDt")]
     public DateAndDateTime2Choice_? PreviouslyConfirmedDate { get; init; }
-
-    /// <summary>
-    /// Remaining To Be Confirmed Amount.
-    /// </summary>
-    [DisplayName("Remaining To Be Confirmed Amount")]
-    [IsoXmlTag("RmngToBeConfdAmt")]
-    public ActiveCurrencyAndAmount? RemainingToBeConfirmedAmount { get; init; }
-
-    /// <summary>
-    /// Returned Confirmed Amount.
-    /// </summary>
-    [DisplayName("Returned Confirmed Amount")]
-    [IsoXmlTag("RtrdConfdAmt")]
-    public ActiveCurrencyAndAmount? ReturnedConfirmedAmount { get; init; }
-
-    /// <summary>
-    /// Returned Confirmed Date.
-    /// </summary>
-    [DisplayName("Returned Confirmed Date")]
-    [IsoXmlTag("RtrdConfdDt")]
-    public DateAndDateTime2Choice_? ReturnedConfirmedDate { get; init; }
 }

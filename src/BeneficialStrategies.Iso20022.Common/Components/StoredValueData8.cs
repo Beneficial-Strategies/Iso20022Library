@@ -17,39 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record StoredValueData8
 {
     /// <summary>
+    /// Provider.
+    /// </summary>
+    [DisplayName("Provider")]
+    [IsoXmlTag("Prvdr")]
+    public Max35Text? Provider { get; init; }
+
+    /// <summary>
+    /// Transaction Type.
+    /// </summary>
+    [DisplayName("Transaction Type")]
+    [IsoXmlTag("TxTp")]
+    public required StoredValueTransactionType3Code TransactionType { get; init; }
+
+    /// <summary>
     /// Account Identification.
     /// </summary>
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
     public StoredValueAccount2? AccountIdentification { get; init; }
-
-    /// <summary>
-    /// Currency.
-    /// </summary>
-    [DisplayName("Currency")]
-    [IsoXmlTag("Ccy")]
-    public ActiveCurrencyCode? Currency { get; init; }
-
-    /// <summary>
-    /// EANUPC.
-    /// </summary>
-    [DisplayName("EANUPC")]
-    [IsoXmlTag("EANUPC")]
-    public Max35NumericText? EANUPC { get; init; }
-
-    /// <summary>
-    /// Host Transaction Identification.
-    /// </summary>
-    [DisplayName("Host Transaction Identification")]
-    [IsoXmlTag("HstTxId")]
-    public TransactionIdentifier1? HostTransactionIdentification { get; init; }
-
-    /// <summary>
-    /// Item Amount.
-    /// </summary>
-    [DisplayName("Item Amount")]
-    [IsoXmlTag("ItmAmt")]
-    public ImpliedCurrencyAndAmount? ItemAmount { get; init; }
 
     /// <summary>
     /// Original POI Transaction.
@@ -66,16 +52,30 @@ public record StoredValueData8
     public Max35Text? ProductCode { get; init; }
 
     /// <summary>
-    /// Provider.
+    /// EANUPC.
     /// </summary>
-    [DisplayName("Provider")]
-    [IsoXmlTag("Prvdr")]
-    public Max35Text? Provider { get; init; }
+    [DisplayName("EANUPC")]
+    [IsoXmlTag("EANUPC")]
+    public Max35NumericText? EANUPC { get; init; }
 
     /// <summary>
-    /// Transaction Type.
+    /// Item Amount.
     /// </summary>
-    [DisplayName("Transaction Type")]
-    [IsoXmlTag("TxTp")]
-    public required StoredValueTransactionType3Code TransactionType { get; init; }
+    [DisplayName("Item Amount")]
+    [IsoXmlTag("ItmAmt")]
+    public ImpliedCurrencyAndAmount? ItemAmount { get; init; }
+
+    /// <summary>
+    /// Currency.
+    /// </summary>
+    [DisplayName("Currency")]
+    [IsoXmlTag("Ccy")]
+    public ActiveCurrencyCode? Currency { get; init; }
+
+    /// <summary>
+    /// Host Transaction Identification.
+    /// </summary>
+    [DisplayName("Host Transaction Identification")]
+    [IsoXmlTag("HstTxId")]
+    public TransactionIdentifier1? HostTransactionIdentification { get; init; }
 }

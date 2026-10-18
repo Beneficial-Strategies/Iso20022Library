@@ -69,20 +69,6 @@ public record OrderConfirmationStatusReportV03 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
-    [DisplayName("Extension")]
-    [IsoXmlTag("Xtnsn")]
-    public ValueList<Extension1> Extension { get; init; } = [];
-
-    /// <summary>
-    /// Status report details of an individual order confirmation.
-    /// </summary>
-    [DisplayName("Individual Order Confirmation Details Report")]
-    [IsoXmlTag("IndvOrdrConfDtlsRpt")]
-    public ValueList<IndividualOrderConfirmationStatusAndReason3> IndividualOrderConfirmationDetailsReport { get; init; } = [];
-
-    /// <summary>
     /// Reference that uniquely identifies the message from a business application standpoint.
     /// </summary>
     [DisplayName("Message Identification")]
@@ -95,4 +81,18 @@ public record OrderConfirmationStatusReportV03 : IOuterRecord
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
     public References64Choice_? Reference { get; init; }
+
+    /// <summary>
+    /// Status report details of an individual order confirmation.
+    /// </summary>
+    [DisplayName("Individual Order Confirmation Details Report")]
+    [IsoXmlTag("IndvOrdrConfDtlsRpt")]
+    public ValueList<IndividualOrderConfirmationStatusAndReason3> IndividualOrderConfirmationDetailsReport { get; init; } = [];
+
+    /// <summary>
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// </summary>
+    [DisplayName("Extension")]
+    [IsoXmlTag("Xtnsn")]
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CreditorEnrolmentAmendment5
 {
     /// <summary>
-    /// Amendment.
+    /// Original Business Instruction.
     /// </summary>
-    [DisplayName("Amendment")]
-    [IsoXmlTag("Amdmnt")]
-    public required CreditorEnrolmentAmendment6 Amendment { get; init; }
+    [DisplayName("Original Business Instruction")]
+    [IsoXmlTag("OrgnlBizInstr")]
+    public OriginalBusinessInstruction1? OriginalBusinessInstruction { get; init; }
 
     /// <summary>
     /// Amendment Reason.
@@ -31,11 +31,11 @@ public record CreditorEnrolmentAmendment5
     public CreditorEnrolmentAmendmentReason3? AmendmentReason { get; init; }
 
     /// <summary>
-    /// Original Business Instruction.
+    /// Amendment.
     /// </summary>
-    [DisplayName("Original Business Instruction")]
-    [IsoXmlTag("OrgnlBizInstr")]
-    public OriginalBusinessInstruction1? OriginalBusinessInstruction { get; init; }
+    [DisplayName("Amendment")]
+    [IsoXmlTag("Amdmnt")]
+    public required CreditorEnrolmentAmendment6 Amendment { get; init; }
 
     /// <summary>
     /// Original Enrolment.

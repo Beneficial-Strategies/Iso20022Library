@@ -17,74 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMCassetteCounters5
 {
     /// <summary>
+    /// Type.
+    /// </summary>
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public required ATMCounterType3Code Type { get; init; }
+
+    /// <summary>
     /// Added Number.
     /// </summary>
     [DisplayName("Added Number")]
     [IsoXmlTag("AddedNb")]
     public Number? AddedNumber { get; init; }
-
-    /// <summary>
-    /// Deposited Amount.
-    /// </summary>
-    [DisplayName("Deposited Amount")]
-    [IsoXmlTag("DpstdAmt")]
-    public ImpliedCurrencyAndAmount? DepositedAmount { get; init; }
-
-    /// <summary>
-    /// Deposited Number.
-    /// </summary>
-    [DisplayName("Deposited Number")]
-    [IsoXmlTag("DpstdNb")]
-    public Number? DepositedNumber { get; init; }
-
-    /// <summary>
-    /// Dispensed Number.
-    /// </summary>
-    [DisplayName("Dispensed Number")]
-    [IsoXmlTag("DspnsdNb")]
-    public Number? DispensedNumber { get; init; }
-
-    /// <summary>
-    /// Initial Amount.
-    /// </summary>
-    [DisplayName("Initial Amount")]
-    [IsoXmlTag("InitlAmt")]
-    public ImpliedCurrencyAndAmount? InitialAmount { get; init; }
-
-    /// <summary>
-    /// Initial Number.
-    /// </summary>
-    [DisplayName("Initial Number")]
-    [IsoXmlTag("InitlNb")]
-    public Number? InitialNumber { get; init; }
-
-    /// <summary>
-    /// Presented Number.
-    /// </summary>
-    [DisplayName("Presented Number")]
-    [IsoXmlTag("PresntdNb")]
-    public Number? PresentedNumber { get; init; }
-
-    /// <summary>
-    /// Recycled Number.
-    /// </summary>
-    [DisplayName("Recycled Number")]
-    [IsoXmlTag("RcycldNb")]
-    public Number? RecycledNumber { get; init; }
-
-    /// <summary>
-    /// Rejected Number.
-    /// </summary>
-    [DisplayName("Rejected Number")]
-    [IsoXmlTag("RjctdNb")]
-    public Number? RejectedNumber { get; init; }
-
-    /// <summary>
-    /// Removed Amount.
-    /// </summary>
-    [DisplayName("Removed Amount")]
-    [IsoXmlTag("RmvdAmt")]
-    public ImpliedCurrencyAndAmount? RemovedAmount { get; init; }
 
     /// <summary>
     /// Removed Number.
@@ -94,11 +38,39 @@ public record ATMCassetteCounters5
     public Number? RemovedNumber { get; init; }
 
     /// <summary>
-    /// Retracted Amount.
+    /// Removed Amount.
     /// </summary>
-    [DisplayName("Retracted Amount")]
-    [IsoXmlTag("RtrctdAmt")]
-    public ImpliedCurrencyAndAmount? RetractedAmount { get; init; }
+    [DisplayName("Removed Amount")]
+    [IsoXmlTag("RmvdAmt")]
+    public ImpliedCurrencyAndAmount? RemovedAmount { get; init; }
+
+    /// <summary>
+    /// Dispensed Number.
+    /// </summary>
+    [DisplayName("Dispensed Number")]
+    [IsoXmlTag("DspnsdNb")]
+    public Number? DispensedNumber { get; init; }
+
+    /// <summary>
+    /// Deposited Number.
+    /// </summary>
+    [DisplayName("Deposited Number")]
+    [IsoXmlTag("DpstdNb")]
+    public Number? DepositedNumber { get; init; }
+
+    /// <summary>
+    /// Deposited Amount.
+    /// </summary>
+    [DisplayName("Deposited Amount")]
+    [IsoXmlTag("DpstdAmt")]
+    public ImpliedCurrencyAndAmount? DepositedAmount { get; init; }
+
+    /// <summary>
+    /// Recycled Number.
+    /// </summary>
+    [DisplayName("Recycled Number")]
+    [IsoXmlTag("RcycldNb")]
+    public Number? RecycledNumber { get; init; }
 
     /// <summary>
     /// Retracted Number.
@@ -108,9 +80,37 @@ public record ATMCassetteCounters5
     public Number? RetractedNumber { get; init; }
 
     /// <summary>
-    /// Type.
+    /// Retracted Amount.
     /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public required ATMCounterType3Code Type { get; init; }
+    [DisplayName("Retracted Amount")]
+    [IsoXmlTag("RtrctdAmt")]
+    public ImpliedCurrencyAndAmount? RetractedAmount { get; init; }
+
+    /// <summary>
+    /// Rejected Number.
+    /// </summary>
+    [DisplayName("Rejected Number")]
+    [IsoXmlTag("RjctdNb")]
+    public Number? RejectedNumber { get; init; }
+
+    /// <summary>
+    /// Presented Number.
+    /// </summary>
+    [DisplayName("Presented Number")]
+    [IsoXmlTag("PresntdNb")]
+    public Number? PresentedNumber { get; init; }
+
+    /// <summary>
+    /// Initial Number.
+    /// </summary>
+    [DisplayName("Initial Number")]
+    [IsoXmlTag("InitlNb")]
+    public Number? InitialNumber { get; init; }
+
+    /// <summary>
+    /// Initial Amount.
+    /// </summary>
+    [DisplayName("Initial Amount")]
+    [IsoXmlTag("InitlAmt")]
+    public ImpliedCurrencyAndAmount? InitialAmount { get; init; }
 }

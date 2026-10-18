@@ -17,6 +17,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record FleetTransactionDetail1
 {
     /// <summary>
+    /// Purchase Type.
+    /// </summary>
+    [DisplayName("Purchase Type")]
+    [IsoXmlTag("PurchsTp")]
+    public FleetPurchaseType1Code? PurchaseType { get; init; }
+
+    /// <summary>
+    /// Summary Commodity Identification.
+    /// </summary>
+    [DisplayName("Summary Commodity Identification")]
+    [IsoXmlTag("SummryCmmdtyId")]
+    public Max35Text? SummaryCommodityIdentification { get; init; }
+
+    /// <summary>
     /// Discount Total Amount.
     /// </summary>
     [DisplayName("Discount Total Amount")]
@@ -38,18 +52,11 @@ public record FleetTransactionDetail1
     public ImpliedCurrencyAndAmount? DiscountTotalNonFuelAmount { get; init; }
 
     /// <summary>
-    /// Purchase Type.
+    /// Total Amount.
     /// </summary>
-    [DisplayName("Purchase Type")]
-    [IsoXmlTag("PurchsTp")]
-    public FleetPurchaseType1Code? PurchaseType { get; init; }
-
-    /// <summary>
-    /// Summary Commodity Identification.
-    /// </summary>
-    [DisplayName("Summary Commodity Identification")]
-    [IsoXmlTag("SummryCmmdtyId")]
-    public Max35Text? SummaryCommodityIdentification { get; init; }
+    [DisplayName("Total Amount")]
+    [IsoXmlTag("TtlAmt")]
+    public ImpliedCurrencyAndAmount? TotalAmount { get; init; }
 
     /// <summary>
     /// Tax Total.
@@ -57,11 +64,4 @@ public record FleetTransactionDetail1
     [DisplayName("Tax Total")]
     [IsoXmlTag("TaxTtl")]
     public ValueList<Tax41> TaxTotal { get; init; } = [];
-
-    /// <summary>
-    /// Total Amount.
-    /// </summary>
-    [DisplayName("Total Amount")]
-    [IsoXmlTag("TtlAmt")]
-    public ImpliedCurrencyAndAmount? TotalAmount { get; init; }
 }

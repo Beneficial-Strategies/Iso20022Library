@@ -46,32 +46,11 @@ public record SecuritiesStatementQueryV09 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Owner.
+    /// Statement Requested.
     /// </summary>
-    [DisplayName("Account Owner")]
-    [IsoXmlTag("AcctOwnr")]
-    public PartyIdentification144? AccountOwner { get; init; }
-
-    /// <summary>
-    /// Additional Query Parameters.
-    /// </summary>
-    [DisplayName("Additional Query Parameters")]
-    [IsoXmlTag("AddtlQryParams")]
-    public ValueList<AdditionalQueryParameters15> AdditionalQueryParameters { get; init; } = [];
-
-    /// <summary>
-    /// Block Chain Address Or Wallet.
-    /// </summary>
-    [DisplayName("Block Chain Address Or Wallet")]
-    [IsoXmlTag("BlckChainAdrOrWllt")]
-    public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
-
-    /// <summary>
-    /// Safekeeping Account.
-    /// </summary>
-    [DisplayName("Safekeeping Account")]
-    [IsoXmlTag("SfkpgAcct")]
-    public SecuritiesAccount19? SafekeepingAccount { get; init; }
+    [DisplayName("Statement Requested")]
+    [IsoXmlTag("StmtReqd")]
+    public required DocumentNumber13 StatementRequested { get; init; }
 
     /// <summary>
     /// Statement General Details.
@@ -81,11 +60,32 @@ public record SecuritiesStatementQueryV09 : IOuterRecord
     public Statement83? StatementGeneralDetails { get; init; }
 
     /// <summary>
-    /// Statement Requested.
+    /// Account Owner.
     /// </summary>
-    [DisplayName("Statement Requested")]
-    [IsoXmlTag("StmtReqd")]
-    public required DocumentNumber13 StatementRequested { get; init; }
+    [DisplayName("Account Owner")]
+    [IsoXmlTag("AcctOwnr")]
+    public PartyIdentification144? AccountOwner { get; init; }
+
+    /// <summary>
+    /// Safekeeping Account.
+    /// </summary>
+    [DisplayName("Safekeeping Account")]
+    [IsoXmlTag("SfkpgAcct")]
+    public SecuritiesAccount19? SafekeepingAccount { get; init; }
+
+    /// <summary>
+    /// Block Chain Address Or Wallet.
+    /// </summary>
+    [DisplayName("Block Chain Address Or Wallet")]
+    [IsoXmlTag("BlckChainAdrOrWllt")]
+    public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
+
+    /// <summary>
+    /// Additional Query Parameters.
+    /// </summary>
+    [DisplayName("Additional Query Parameters")]
+    [IsoXmlTag("AddtlQryParams")]
+    public ValueList<AdditionalQueryParameters15> AdditionalQueryParameters { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record RentalRate2
 {
     /// <summary>
-    /// Other Period.
-    /// </summary>
-    [DisplayName("Other Period")]
-    [IsoXmlTag("OthrPrd")]
-    public Max35Text? OtherPeriod { get; init; }
-
-    /// <summary>
     /// Period.
     /// </summary>
     [DisplayName("Period")]
@@ -31,11 +24,11 @@ public record RentalRate2
     public PeriodUnit4Code? Period { get; init; }
 
     /// <summary>
-    /// Period Count.
+    /// Other Period.
     /// </summary>
-    [DisplayName("Period Count")]
-    [IsoXmlTag("PrdCnt")]
-    public Max4NumericText? PeriodCount { get; init; }
+    [DisplayName("Other Period")]
+    [IsoXmlTag("OthrPrd")]
+    public Max35Text? OtherPeriod { get; init; }
 
     /// <summary>
     /// Rate.
@@ -43,4 +36,11 @@ public record RentalRate2
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     public ImpliedCurrencyAndAmount? Rate { get; init; }
+
+    /// <summary>
+    /// Period Count.
+    /// </summary>
+    [DisplayName("Period Count")]
+    [IsoXmlTag("PrdCnt")]
+    public Max4NumericText? PeriodCount { get; init; }
 }

@@ -17,32 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record LongPaymentIdentification4
 {
     /// <summary>
-    /// End To End Identification.
+    /// Transaction Identification.
     /// </summary>
-    [DisplayName("End To End Identification")]
-    [IsoXmlTag("EndToEndId")]
-    public Max35Text? EndToEndIdentification { get; init; }
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public Max35Text? TransactionIdentification { get; init; }
 
     /// <summary>
-    /// Entry Type.
+    /// UETR.
     /// </summary>
-    [DisplayName("Entry Type")]
-    [IsoXmlTag("NtryTp")]
-    public EntryTypeIdentifier? EntryType { get; init; }
-
-    /// <summary>
-    /// Instructed Agent.
-    /// </summary>
-    [DisplayName("Instructed Agent")]
-    [IsoXmlTag("InstdAgt")]
-    public required BranchAndFinancialInstitutionIdentification8 InstructedAgent { get; init; }
-
-    /// <summary>
-    /// Instructing Agent.
-    /// </summary>
-    [DisplayName("Instructing Agent")]
-    [IsoXmlTag("InstgAgt")]
-    public required BranchAndFinancialInstitutionIdentification8 InstructingAgent { get; init; }
+    [DisplayName("UETR")]
+    [IsoXmlTag("UETR")]
+    public UUIDv4Identifier? UETR { get; init; }
 
     /// <summary>
     /// Interbank Settlement Amount.
@@ -66,16 +52,30 @@ public record LongPaymentIdentification4
     public PaymentOrigin1Choice_? PaymentMethod { get; init; }
 
     /// <summary>
-    /// Transaction Identification.
+    /// Instructing Agent.
     /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public Max35Text? TransactionIdentification { get; init; }
+    [DisplayName("Instructing Agent")]
+    [IsoXmlTag("InstgAgt")]
+    public required BranchAndFinancialInstitutionIdentification8 InstructingAgent { get; init; }
 
     /// <summary>
-    /// UETR.
+    /// Instructed Agent.
     /// </summary>
-    [DisplayName("UETR")]
-    [IsoXmlTag("UETR")]
-    public UUIDv4Identifier? UETR { get; init; }
+    [DisplayName("Instructed Agent")]
+    [IsoXmlTag("InstdAgt")]
+    public required BranchAndFinancialInstitutionIdentification8 InstructedAgent { get; init; }
+
+    /// <summary>
+    /// Entry Type.
+    /// </summary>
+    [DisplayName("Entry Type")]
+    [IsoXmlTag("NtryTp")]
+    public EntryTypeIdentifier? EntryType { get; init; }
+
+    /// <summary>
+    /// End To End Identification.
+    /// </summary>
+    [DisplayName("End To End Identification")]
+    [IsoXmlTag("EndToEndId")]
+    public Max35Text? EndToEndIdentification { get; init; }
 }

@@ -17,18 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TradeData45
 {
     /// <summary>
+    /// Message Identification.
+    /// </summary>
+    [DisplayName("Message Identification")]
+    [IsoXmlTag("MsgId")]
+    public required Max35Text MessageIdentification { get; init; }
+
+    /// <summary>
+    /// Status Originator.
+    /// </summary>
+    [DisplayName("Status Originator")]
+    [IsoXmlTag("StsOrgtr")]
+    public Max35Text? StatusOriginator { get; init; }
+
+    /// <summary>
     /// Current Status.
     /// </summary>
     [DisplayName("Current Status")]
     [IsoXmlTag("CurSts")]
     public required StatusAndSubStatus2 CurrentStatus { get; init; }
-
-    /// <summary>
-    /// Current Status Date Time.
-    /// </summary>
-    [DisplayName("Current Status Date Time")]
-    [IsoXmlTag("CurStsDtTm")]
-    public required ISODateTime CurrentStatusDateTime { get; init; }
 
     /// <summary>
     /// Current Status Sub Type.
@@ -38,11 +45,11 @@ public record TradeData45
     public StatusSubType2Code? CurrentStatusSubType { get; init; }
 
     /// <summary>
-    /// Message Identification.
+    /// Current Status Date Time.
     /// </summary>
-    [DisplayName("Message Identification")]
-    [IsoXmlTag("MsgId")]
-    public required Max35Text MessageIdentification { get; init; }
+    [DisplayName("Current Status Date Time")]
+    [IsoXmlTag("CurStsDtTm")]
+    public required ISODateTime CurrentStatusDateTime { get; init; }
 
     /// <summary>
     /// Previous Status.
@@ -71,11 +78,4 @@ public record TradeData45
     [DisplayName("Settlement Session Identifier")]
     [IsoXmlTag("SttlmSsnIdr")]
     public Exact4AlphaNumericText? SettlementSessionIdentifier { get; init; }
-
-    /// <summary>
-    /// Status Originator.
-    /// </summary>
-    [DisplayName("Status Originator")]
-    [IsoXmlTag("StsOrgtr")]
-    public Max35Text? StatusOriginator { get; init; }
 }

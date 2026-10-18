@@ -61,25 +61,25 @@ public record PortfolioTransferNotificationV09 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Party that legally owns the account.
-    /// </summary>
-    [DisplayName("Account Owner")]
-    [IsoXmlTag("AcctOwnr")]
-    public PartyIdentification144? AccountOwner { get; init; }
-
-    /// <summary>
-    /// Blockchain address or wallet where digital assets are maintained. This is the equivalent of safekeeping account for digital assets.
-    /// </summary>
-    [DisplayName("Block Chain Address Or Wallet")]
-    [IsoXmlTag("BlckChainAdrOrWllt")]
-    public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
-
-    /// <summary>
     /// Page number of the message (within a statement) and continuation indicator to indicate that the statement is to continue or that the message is the last page of the statement.
     /// </summary>
     [DisplayName("Pagination")]
     [IsoXmlTag("Pgntn")]
     public required Pagination1 Pagination { get; init; }
+
+    /// <summary>
+    /// Provides general information on the notification.
+    /// </summary>
+    [DisplayName("Statement General Details")]
+    [IsoXmlTag("StmtGnlDtls")]
+    public required Statement62 StatementGeneralDetails { get; init; }
+
+    /// <summary>
+    /// Party that legally owns the account.
+    /// </summary>
+    [DisplayName("Account Owner")]
+    [IsoXmlTag("AcctOwnr")]
+    public PartyIdentification144? AccountOwner { get; init; }
 
     /// <summary>
     /// Account to or from which a securities entry is made.
@@ -89,11 +89,11 @@ public record PortfolioTransferNotificationV09 : IOuterRecord
     public SecuritiesAccount19? SafekeepingAccount { get; init; }
 
     /// <summary>
-    /// Provides general information on the notification.
+    /// Blockchain address or wallet where digital assets are maintained. This is the equivalent of safekeeping account for digital assets.
     /// </summary>
-    [DisplayName("Statement General Details")]
-    [IsoXmlTag("StmtGnlDtls")]
-    public required Statement62 StatementGeneralDetails { get; init; }
+    [DisplayName("Block Chain Address Or Wallet")]
+    [IsoXmlTag("BlckChainAdrOrWllt")]
+    public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
 
     /// <summary>
     /// Details of the transfer.

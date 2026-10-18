@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record MandateAmendment8
 {
     /// <summary>
+    /// Original Message Information.
+    /// </summary>
+    [DisplayName("Original Message Information")]
+    [IsoXmlTag("OrgnlMsgInf")]
+    public OriginalMessageInformation1? OriginalMessageInformation { get; init; }
+
+    /// <summary>
     /// Amendment Reason.
     /// </summary>
     [DisplayName("Amendment Reason")]
@@ -36,13 +43,6 @@ public record MandateAmendment8
     [DisplayName("Original Mandate")]
     [IsoXmlTag("OrgnlMndt")]
     public required OriginalMandate10Choice_ OriginalMandate { get; init; }
-
-    /// <summary>
-    /// Original Message Information.
-    /// </summary>
-    [DisplayName("Original Message Information")]
-    [IsoXmlTag("OrgnlMsgInf")]
-    public OriginalMessageInformation1? OriginalMessageInformation { get; init; }
 
     /// <summary>
     /// Supplementary Data.

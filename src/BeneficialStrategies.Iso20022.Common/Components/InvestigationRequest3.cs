@@ -17,60 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record InvestigationRequest3
 {
     /// <summary>
-    /// EIR.
-    /// </summary>
-    [DisplayName("EIR")]
-    [IsoXmlTag("EIR")]
-    public UUIDv4Identifier? EIR { get; init; }
-
-    /// <summary>
-    /// Expected Responder.
-    /// </summary>
-    [DisplayName("Expected Responder")]
-    [IsoXmlTag("XpctdRspndr")]
-    public Party40Choice_? ExpectedResponder { get; init; }
-
-    /// <summary>
-    /// Investigation Sub Type.
-    /// </summary>
-    [DisplayName("Investigation Sub Type")]
-    [IsoXmlTag("InvstgtnSubTp")]
-    public InvestigationSubType1Choice_? InvestigationSubType { get; init; }
-
-    /// <summary>
-    /// Investigation Type.
-    /// </summary>
-    [DisplayName("Investigation Type")]
-    [IsoXmlTag("InvstgtnTp")]
-    public required InvestigationType1Choice_ InvestigationType { get; init; }
-
-    /// <summary>
     /// Message Identification.
     /// </summary>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     public required Max35Text MessageIdentification { get; init; }
-
-    /// <summary>
-    /// Request Action.
-    /// </summary>
-    [DisplayName("Request Action")]
-    [IsoXmlTag("ReqActn")]
-    public InvestigationRequestAction1? RequestAction { get; init; }
-
-    /// <summary>
-    /// Requestor.
-    /// </summary>
-    [DisplayName("Requestor")]
-    [IsoXmlTag("Rqstr")]
-    public required Party40Choice_ Requestor { get; init; }
-
-    /// <summary>
-    /// Request Originator.
-    /// </summary>
-    [DisplayName("Request Originator")]
-    [IsoXmlTag("ReqOrgtr")]
-    public Party40Choice_? RequestOriginator { get; init; }
 
     /// <summary>
     /// Requestor Investigation Identification.
@@ -80,13 +31,6 @@ public record InvestigationRequest3
     public Max35Text? RequestorInvestigationIdentification { get; init; }
 
     /// <summary>
-    /// Responder.
-    /// </summary>
-    [DisplayName("Responder")]
-    [IsoXmlTag("Rspndr")]
-    public required Party40Choice_ Responder { get; init; }
-
-    /// <summary>
     /// Responder Investigation Identification.
     /// </summary>
     [DisplayName("Responder Investigation Identification")]
@@ -94,11 +38,39 @@ public record InvestigationRequest3
     public Max35Text? ResponderInvestigationIdentification { get; init; }
 
     /// <summary>
-    /// Service Level.
+    /// EIR.
     /// </summary>
-    [DisplayName("Service Level")]
-    [IsoXmlTag("SvcLvl")]
-    public ValueList<InvestigationServiceLevel1Choice_> ServiceLevel { get; init; } = [];
+    [DisplayName("EIR")]
+    [IsoXmlTag("EIR")]
+    public UUIDv4Identifier? EIR { get; init; }
+
+    /// <summary>
+    /// Request Action.
+    /// </summary>
+    [DisplayName("Request Action")]
+    [IsoXmlTag("ReqActn")]
+    public InvestigationRequestAction1? RequestAction { get; init; }
+
+    /// <summary>
+    /// Investigation Type.
+    /// </summary>
+    [DisplayName("Investigation Type")]
+    [IsoXmlTag("InvstgtnTp")]
+    public required InvestigationType1Choice_ InvestigationType { get; init; }
+
+    /// <summary>
+    /// Investigation Sub Type.
+    /// </summary>
+    [DisplayName("Investigation Sub Type")]
+    [IsoXmlTag("InvstgtnSubTp")]
+    public InvestigationSubType1Choice_? InvestigationSubType { get; init; }
+
+    /// <summary>
+    /// Underlying Instrument.
+    /// </summary>
+    [DisplayName("Underlying Instrument")]
+    [IsoXmlTag("UndrlygInstrm")]
+    public UnderlyingInvestigationInstrument1Choice_? UnderlyingInstrument { get; init; }
 
     /// <summary>
     /// Underlying.
@@ -108,9 +80,37 @@ public record InvestigationRequest3
     public UnderlyingData2Choice_? Underlying { get; init; }
 
     /// <summary>
-    /// Underlying Instrument.
+    /// Requestor.
     /// </summary>
-    [DisplayName("Underlying Instrument")]
-    [IsoXmlTag("UndrlygInstrm")]
-    public UnderlyingInvestigationInstrument1Choice_? UnderlyingInstrument { get; init; }
+    [DisplayName("Requestor")]
+    [IsoXmlTag("Rqstr")]
+    public required Party40Choice_ Requestor { get; init; }
+
+    /// <summary>
+    /// Responder.
+    /// </summary>
+    [DisplayName("Responder")]
+    [IsoXmlTag("Rspndr")]
+    public required Party40Choice_ Responder { get; init; }
+
+    /// <summary>
+    /// Request Originator.
+    /// </summary>
+    [DisplayName("Request Originator")]
+    [IsoXmlTag("ReqOrgtr")]
+    public Party40Choice_? RequestOriginator { get; init; }
+
+    /// <summary>
+    /// Expected Responder.
+    /// </summary>
+    [DisplayName("Expected Responder")]
+    [IsoXmlTag("XpctdRspndr")]
+    public Party40Choice_? ExpectedResponder { get; init; }
+
+    /// <summary>
+    /// Service Level.
+    /// </summary>
+    [DisplayName("Service Level")]
+    [IsoXmlTag("SvcLvl")]
+    public ValueList<InvestigationServiceLevel1Choice_> ServiceLevel { get; init; } = [];
 }

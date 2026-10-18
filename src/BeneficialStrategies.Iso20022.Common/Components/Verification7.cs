@@ -17,11 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Verification7
 {
     /// <summary>
-    /// Additional Information.
+    /// Type.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public Max35Text? AdditionalInformation { get; init; }
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public ExternalAuthenticationMethod1Code? Type { get; init; }
+
+    /// <summary>
+    /// Other Type.
+    /// </summary>
+    [DisplayName("Other Type")]
+    [IsoXmlTag("OthrTp")]
+    public Max35Text? OtherType { get; init; }
+
+    /// <summary>
+    /// Sub Type.
+    /// </summary>
+    [DisplayName("Sub Type")]
+    [IsoXmlTag("SubTp")]
+    public Max35Text? SubType { get; init; }
 
     /// <summary>
     /// Entity.
@@ -38,25 +52,18 @@ public record Verification7
     public Max35Text? OtherEntity { get; init; }
 
     /// <summary>
-    /// Other Result.
-    /// </summary>
-    [DisplayName("Other Result")]
-    [IsoXmlTag("OthrRslt")]
-    public Max500Text? OtherResult { get; init; }
-
-    /// <summary>
-    /// Other Type.
-    /// </summary>
-    [DisplayName("Other Type")]
-    [IsoXmlTag("OthrTp")]
-    public Max35Text? OtherType { get; init; }
-
-    /// <summary>
     /// Result.
     /// </summary>
     [DisplayName("Result")]
     [IsoXmlTag("Rslt")]
     public Verification3Code? Result { get; init; }
+
+    /// <summary>
+    /// Other Result.
+    /// </summary>
+    [DisplayName("Other Result")]
+    [IsoXmlTag("OthrRslt")]
+    public Max500Text? OtherResult { get; init; }
 
     /// <summary>
     /// Result Details.
@@ -66,16 +73,9 @@ public record Verification7
     public ValueList<AdditionalData1> ResultDetails { get; init; } = [];
 
     /// <summary>
-    /// Sub Type.
+    /// Additional Information.
     /// </summary>
-    [DisplayName("Sub Type")]
-    [IsoXmlTag("SubTp")]
-    public Max35Text? SubType { get; init; }
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public ExternalAuthenticationMethod1Code? Type { get; init; }
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public Max35Text? AdditionalInformation { get; init; }
 }

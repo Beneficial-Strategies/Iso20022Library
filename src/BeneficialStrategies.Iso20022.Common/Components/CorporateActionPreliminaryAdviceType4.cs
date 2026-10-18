@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateActionPreliminaryAdviceType4
 {
     /// <summary>
-    /// Function.
-    /// </summary>
-    [DisplayName("Function")]
-    [IsoXmlTag("Fctn")]
-    public required CorporateActionMovementPreliminaryAdviceFunction1Code Function { get; init; }
-
-    /// <summary>
     /// Movement Preliminary Advice Identification.
     /// </summary>
     [DisplayName("Movement Preliminary Advice Identification")]
@@ -36,4 +29,11 @@ public record CorporateActionPreliminaryAdviceType4
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     public required CorporateActionPreliminaryAdviceType1Code Type { get; init; }
+
+    /// <summary>
+    /// Function.
+    /// </summary>
+    [DisplayName("Function")]
+    [IsoXmlTag("Fctn")]
+    public required CorporateActionMovementPreliminaryAdviceFunction1Code Function { get; init; }
 }

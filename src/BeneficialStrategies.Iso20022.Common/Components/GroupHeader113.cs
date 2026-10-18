@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record GroupHeader113
 {
     /// <summary>
-    /// Batch Booking.
+    /// Message Identification.
     /// </summary>
-    [DisplayName("Batch Booking")]
-    [IsoXmlTag("BtchBookg")]
-    public BatchBookingIndicator? BatchBooking { get; init; }
-
-    /// <summary>
-    /// Control Sum.
-    /// </summary>
-    [DisplayName("Control Sum")]
-    [IsoXmlTag("CtrlSum")]
-    public DecimalNumber? ControlSum { get; init; }
+    [DisplayName("Message Identification")]
+    [IsoXmlTag("MsgId")]
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Creation Date Time.
@@ -38,32 +31,11 @@ public record GroupHeader113
     public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
-    /// Instructed Agent.
+    /// Batch Booking.
     /// </summary>
-    [DisplayName("Instructed Agent")]
-    [IsoXmlTag("InstdAgt")]
-    public BranchAndFinancialInstitutionIdentification8? InstructedAgent { get; init; }
-
-    /// <summary>
-    /// Instructing Agent.
-    /// </summary>
-    [DisplayName("Instructing Agent")]
-    [IsoXmlTag("InstgAgt")]
-    public BranchAndFinancialInstitutionIdentification8? InstructingAgent { get; init; }
-
-    /// <summary>
-    /// Interbank Settlement Date.
-    /// </summary>
-    [DisplayName("Interbank Settlement Date")]
-    [IsoXmlTag("IntrBkSttlmDt")]
-    public ISODate? InterbankSettlementDate { get; init; }
-
-    /// <summary>
-    /// Message Identification.
-    /// </summary>
-    [DisplayName("Message Identification")]
-    [IsoXmlTag("MsgId")]
-    public required Max35Text MessageIdentification { get; init; }
+    [DisplayName("Batch Booking")]
+    [IsoXmlTag("BtchBookg")]
+    public BatchBookingIndicator? BatchBooking { get; init; }
 
     /// <summary>
     /// Number Of Transactions.
@@ -73,11 +45,25 @@ public record GroupHeader113
     public required Max15NumericText NumberOfTransactions { get; init; }
 
     /// <summary>
-    /// Payment Type Information.
+    /// Control Sum.
     /// </summary>
-    [DisplayName("Payment Type Information")]
-    [IsoXmlTag("PmtTpInf")]
-    public PaymentTypeInformation28? PaymentTypeInformation { get; init; }
+    [DisplayName("Control Sum")]
+    [IsoXmlTag("CtrlSum")]
+    public DecimalNumber? ControlSum { get; init; }
+
+    /// <summary>
+    /// Total Interbank Settlement Amount.
+    /// </summary>
+    [DisplayName("Total Interbank Settlement Amount")]
+    [IsoXmlTag("TtlIntrBkSttlmAmt")]
+    public ActiveCurrencyAndAmount? TotalInterbankSettlementAmount { get; init; }
+
+    /// <summary>
+    /// Interbank Settlement Date.
+    /// </summary>
+    [DisplayName("Interbank Settlement Date")]
+    [IsoXmlTag("IntrBkSttlmDt")]
+    public ISODate? InterbankSettlementDate { get; init; }
 
     /// <summary>
     /// Settlement Information.
@@ -87,9 +73,23 @@ public record GroupHeader113
     public required SettlementInstruction15 SettlementInformation { get; init; }
 
     /// <summary>
-    /// Total Interbank Settlement Amount.
+    /// Payment Type Information.
     /// </summary>
-    [DisplayName("Total Interbank Settlement Amount")]
-    [IsoXmlTag("TtlIntrBkSttlmAmt")]
-    public ActiveCurrencyAndAmount? TotalInterbankSettlementAmount { get; init; }
+    [DisplayName("Payment Type Information")]
+    [IsoXmlTag("PmtTpInf")]
+    public PaymentTypeInformation28? PaymentTypeInformation { get; init; }
+
+    /// <summary>
+    /// Instructing Agent.
+    /// </summary>
+    [DisplayName("Instructing Agent")]
+    [IsoXmlTag("InstgAgt")]
+    public BranchAndFinancialInstitutionIdentification8? InstructingAgent { get; init; }
+
+    /// <summary>
+    /// Instructed Agent.
+    /// </summary>
+    [DisplayName("Instructed Agent")]
+    [IsoXmlTag("InstdAgt")]
+    public BranchAndFinancialInstitutionIdentification8? InstructedAgent { get; init; }
 }

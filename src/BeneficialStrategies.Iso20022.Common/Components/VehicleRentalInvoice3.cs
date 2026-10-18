@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record VehicleRentalInvoice3
 {
     /// <summary>
-    /// Additional Amount.
+    /// No Show.
     /// </summary>
-    [DisplayName("Additional Amount")]
-    [IsoXmlTag("AddtlAmt")]
-    public ValueList<Amount21> AdditionalAmount { get; init; } = [];
+    [DisplayName("No Show")]
+    [IsoXmlTag("NoShow")]
+    public TrueFalseIndicator? NoShow { get; init; }
 
     /// <summary>
     /// Adjusted.
@@ -31,25 +31,11 @@ public record VehicleRentalInvoice3
     public TrueFalseIndicator? Adjusted { get; init; }
 
     /// <summary>
-    /// Charge.
+    /// Return Location.
     /// </summary>
-    [DisplayName("Charge")]
-    [IsoXmlTag("Chrg")]
-    public ValueList<RentalRate1> Charge { get; init; } = [];
-
-    /// <summary>
-    /// Check In Date.
-    /// </summary>
-    [DisplayName("Check In Date")]
-    [IsoXmlTag("ChckInDt")]
-    public ISODate? CheckInDate { get; init; }
-
-    /// <summary>
-    /// Check In Time.
-    /// </summary>
-    [DisplayName("Check In Time")]
-    [IsoXmlTag("ChckInTm")]
-    public ISOTime? CheckInTime { get; init; }
+    [DisplayName("Return Location")]
+    [IsoXmlTag("RtrLctn")]
+    public Address2? ReturnLocation { get; init; }
 
     /// <summary>
     /// Check Out Date.
@@ -66,32 +52,18 @@ public record VehicleRentalInvoice3
     public ISOTime? CheckOutTime { get; init; }
 
     /// <summary>
-    /// Class Invoiced.
+    /// Check In Date.
     /// </summary>
-    [DisplayName("Class Invoiced")]
-    [IsoXmlTag("ClssInvcd")]
-    public Max35Text? ClassInvoiced { get; init; }
+    [DisplayName("Check In Date")]
+    [IsoXmlTag("ChckInDt")]
+    public ISODate? CheckInDate { get; init; }
 
     /// <summary>
-    /// Class Provided.
+    /// Check In Time.
     /// </summary>
-    [DisplayName("Class Provided")]
-    [IsoXmlTag("ClssPrvdd")]
-    public Max35Text? ClassProvided { get; init; }
-
-    /// <summary>
-    /// Distance Rate.
-    /// </summary>
-    [DisplayName("Distance Rate")]
-    [IsoXmlTag("DstncRate")]
-    public ImpliedCurrencyAndAmount? DistanceRate { get; init; }
-
-    /// <summary>
-    /// Distance Unit.
-    /// </summary>
-    [DisplayName("Distance Unit")]
-    [IsoXmlTag("DstncUnit")]
-    public UnitOfMeasure10Code? DistanceUnit { get; init; }
+    [DisplayName("Check In Time")]
+    [IsoXmlTag("ChckInTm")]
+    public ISOTime? CheckInTime { get; init; }
 
     /// <summary>
     /// Duration.
@@ -101,18 +73,11 @@ public record VehicleRentalInvoice3
     public Max4NumericText? Duration { get; init; }
 
     /// <summary>
-    /// Free Distance.
+    /// Class Invoiced.
     /// </summary>
-    [DisplayName("Free Distance")]
-    [IsoXmlTag("FreeDstnc")]
-    public Max10NumericText? FreeDistance { get; init; }
-
-    /// <summary>
-    /// Insurance.
-    /// </summary>
-    [DisplayName("Insurance")]
-    [IsoXmlTag("Insrnc")]
-    public TrueFalseIndicator? Insurance { get; init; }
+    [DisplayName("Class Invoiced")]
+    [IsoXmlTag("ClssInvcd")]
+    public Max35Text? ClassInvoiced { get; init; }
 
     /// <summary>
     /// Make Invoiced.
@@ -122,46 +87,11 @@ public record VehicleRentalInvoice3
     public Max35NumericText? MakeInvoiced { get; init; }
 
     /// <summary>
-    /// Make Provided.
-    /// </summary>
-    [DisplayName("Make Provided")]
-    [IsoXmlTag("MakePrvdd")]
-    public Max35NumericText? MakeProvided { get; init; }
-
-    /// <summary>
     /// Model Invoiced.
     /// </summary>
     [DisplayName("Model Invoiced")]
     [IsoXmlTag("MdlInvcd")]
     public Max35NumericText? ModelInvoiced { get; init; }
-
-    /// <summary>
-    /// Model Provided.
-    /// </summary>
-    [DisplayName("Model Provided")]
-    [IsoXmlTag("MdlPrvdd")]
-    public Max35NumericText? ModelProvided { get; init; }
-
-    /// <summary>
-    /// No Show.
-    /// </summary>
-    [DisplayName("No Show")]
-    [IsoXmlTag("NoShow")]
-    public TrueFalseIndicator? NoShow { get; init; }
-
-    /// <summary>
-    /// Odometer Return.
-    /// </summary>
-    [DisplayName("Odometer Return")]
-    [IsoXmlTag("OdmtrRtr")]
-    public Max10NumericText? OdometerReturn { get; init; }
-
-    /// <summary>
-    /// Odometer Start.
-    /// </summary>
-    [DisplayName("Odometer Start")]
-    [IsoXmlTag("OdmtrStart")]
-    public Max10NumericText? OdometerStart { get; init; }
 
     /// <summary>
     /// Registration Number Invoiced.
@@ -171,6 +101,27 @@ public record VehicleRentalInvoice3
     public Max35Text? RegistrationNumberInvoiced { get; init; }
 
     /// <summary>
+    /// Class Provided.
+    /// </summary>
+    [DisplayName("Class Provided")]
+    [IsoXmlTag("ClssPrvdd")]
+    public Max35Text? ClassProvided { get; init; }
+
+    /// <summary>
+    /// Make Provided.
+    /// </summary>
+    [DisplayName("Make Provided")]
+    [IsoXmlTag("MakePrvdd")]
+    public Max35NumericText? MakeProvided { get; init; }
+
+    /// <summary>
+    /// Model Provided.
+    /// </summary>
+    [DisplayName("Model Provided")]
+    [IsoXmlTag("MdlPrvdd")]
+    public Max35NumericText? ModelProvided { get; init; }
+
+    /// <summary>
     /// Registration Number Provided.
     /// </summary>
     [DisplayName("Registration Number Provided")]
@@ -178,11 +129,53 @@ public record VehicleRentalInvoice3
     public Max35Text? RegistrationNumberProvided { get; init; }
 
     /// <summary>
-    /// Return Location.
+    /// Distance Unit.
     /// </summary>
-    [DisplayName("Return Location")]
-    [IsoXmlTag("RtrLctn")]
-    public Address2? ReturnLocation { get; init; }
+    [DisplayName("Distance Unit")]
+    [IsoXmlTag("DstncUnit")]
+    public UnitOfMeasure10Code? DistanceUnit { get; init; }
+
+    /// <summary>
+    /// Odometer Start.
+    /// </summary>
+    [DisplayName("Odometer Start")]
+    [IsoXmlTag("OdmtrStart")]
+    public Max10NumericText? OdometerStart { get; init; }
+
+    /// <summary>
+    /// Odometer Return.
+    /// </summary>
+    [DisplayName("Odometer Return")]
+    [IsoXmlTag("OdmtrRtr")]
+    public Max10NumericText? OdometerReturn { get; init; }
+
+    /// <summary>
+    /// Total Distance.
+    /// </summary>
+    [DisplayName("Total Distance")]
+    [IsoXmlTag("TtlDstnc")]
+    public Max10NumericText? TotalDistance { get; init; }
+
+    /// <summary>
+    /// Free Distance.
+    /// </summary>
+    [DisplayName("Free Distance")]
+    [IsoXmlTag("FreeDstnc")]
+    public Max10NumericText? FreeDistance { get; init; }
+
+    /// <summary>
+    /// Distance Rate.
+    /// </summary>
+    [DisplayName("Distance Rate")]
+    [IsoXmlTag("DstncRate")]
+    public ImpliedCurrencyAndAmount? DistanceRate { get; init; }
+
+    /// <summary>
+    /// Charge.
+    /// </summary>
+    [DisplayName("Charge")]
+    [IsoXmlTag("Chrg")]
+    public ValueList<RentalRate1> Charge { get; init; } = [];
 
     /// <summary>
     /// Summary Commodity Identification.
@@ -192,16 +185,23 @@ public record VehicleRentalInvoice3
     public Max35Text? SummaryCommodityIdentification { get; init; }
 
     /// <summary>
+    /// Insurance.
+    /// </summary>
+    [DisplayName("Insurance")]
+    [IsoXmlTag("Insrnc")]
+    public TrueFalseIndicator? Insurance { get; init; }
+
+    /// <summary>
+    /// Additional Amount.
+    /// </summary>
+    [DisplayName("Additional Amount")]
+    [IsoXmlTag("AddtlAmt")]
+    public ValueList<Amount21> AdditionalAmount { get; init; } = [];
+
+    /// <summary>
     /// Tax.
     /// </summary>
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
     public ValueList<Tax41> Tax { get; init; } = [];
-
-    /// <summary>
-    /// Total Distance.
-    /// </summary>
-    [DisplayName("Total Distance")]
-    [IsoXmlTag("TtlDstnc")]
-    public Max10NumericText? TotalDistance { get; init; }
 }

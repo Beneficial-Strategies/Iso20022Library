@@ -24,16 +24,16 @@ public record Transactions11
     public PaymentCommon6? PaymentCommonInformation { get; init; }
 
     /// <summary>
-    /// Transaction Report.
-    /// </summary>
-    [DisplayName("Transaction Report")]
-    [IsoXmlTag("TxRpt")]
-    public ValueList<TransactionReport8> TransactionReport { get; init; } = [];
-
-    /// <summary>
     /// Transactions Summary.
     /// </summary>
     [DisplayName("Transactions Summary")]
     [IsoXmlTag("TxsSummry")]
     public NumberAndSumOfTransactions2? TransactionsSummary { get; init; }
+
+    /// <summary>
+    /// Transaction Report.
+    /// </summary>
+    [DisplayName("Transaction Report")]
+    [IsoXmlTag("TxRpt")]
+    public ValueList<TransactionReport8> TransactionReport { get; init; } = [];
 }

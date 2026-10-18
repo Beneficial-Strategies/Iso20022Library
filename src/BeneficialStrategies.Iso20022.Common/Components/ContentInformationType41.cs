@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ContentInformationType41
 {
     /// <summary>
-    /// MAC.
-    /// </summary>
-    [DisplayName("MAC")]
-    [IsoXmlTag("MAC")]
-    public required Max8HexBinaryText MAC { get; init; }
-
-    /// <summary>
     /// MAC Data.
     /// </summary>
     [DisplayName("MAC Data")]
     [IsoXmlTag("MACData")]
     public required MACData1 MACData { get; init; }
+
+    /// <summary>
+    /// MAC.
+    /// </summary>
+    [DisplayName("MAC")]
+    [IsoXmlTag("MAC")]
+    public required Max8HexBinaryText MAC { get; init; }
 }

@@ -46,18 +46,18 @@ public record CertificateManagementResponseV07 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Certificate Management Response.
-    /// </summary>
-    [DisplayName("Certificate Management Response")]
-    [IsoXmlTag("CertMgmtRspn")]
-    public required CertificateManagementResponse3 CertificateManagementResponse { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required TMSHeader1 Header { get; init; }
+
+    /// <summary>
+    /// Certificate Management Response.
+    /// </summary>
+    [DisplayName("Certificate Management Response")]
+    [IsoXmlTag("CertMgmtRspn")]
+    public required CertificateManagementResponse3 CertificateManagementResponse { get; init; }
 
     /// <summary>
     /// Security Trailer.

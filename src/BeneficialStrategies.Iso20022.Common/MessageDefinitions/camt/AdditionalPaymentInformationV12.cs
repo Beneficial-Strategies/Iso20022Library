@@ -60,6 +60,13 @@ public record AdditionalPaymentInformationV12 : IOuterRecord
     public Case6? Case { get; init; }
 
     /// <summary>
+    /// Underlying.
+    /// </summary>
+    [DisplayName("Underlying")]
+    [IsoXmlTag("Undrlyg")]
+    public required UnderlyingTransaction8Choice_ Underlying { get; init; }
+
+    /// <summary>
     /// Information.
     /// </summary>
     [DisplayName("Information")]
@@ -72,11 +79,4 @@ public record AdditionalPaymentInformationV12 : IOuterRecord
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Underlying.
-    /// </summary>
-    [DisplayName("Underlying")]
-    [IsoXmlTag("Undrlyg")]
-    public required UnderlyingTransaction8Choice_ Underlying { get; init; }
 }

@@ -46,34 +46,6 @@ public record BuyerProtectionInstructionAllegementRemovalAdviceV01 : IOuterRecor
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Identification.
-    /// </summary>
-    [DisplayName("Account Identification")]
-    [IsoXmlTag("AcctId")]
-    public SecuritiesAccountIdentification1Choice_? AccountIdentification { get; init; }
-
-    /// <summary>
-    /// Allegement Removal Reason.
-    /// </summary>
-    [DisplayName("Allegement Removal Reason")]
-    [IsoXmlTag("AllgmtRmvlRsn")]
-    public required AllegementRemovalReason1Code AllegementRemovalReason { get; init; }
-
-    /// <summary>
-    /// Corporate Action Election.
-    /// </summary>
-    [DisplayName("Corporate Action Election")]
-    [IsoXmlTag("CorpActnElctn")]
-    public CorporateActionElection4? CorporateActionElection { get; init; }
-
-    /// <summary>
-    /// Corporate Action General Information.
-    /// </summary>
-    [DisplayName("Corporate Action General Information")]
-    [IsoXmlTag("CorpActnGnlInf")]
-    public required CorporateActionGeneralInformation195 CorporateActionGeneralInformation { get; init; }
-
-    /// <summary>
     /// Processor Transaction Identification.
     /// </summary>
     [DisplayName("Processor Transaction Identification")]
@@ -83,11 +55,39 @@ public record BuyerProtectionInstructionAllegementRemovalAdviceV01 : IOuterRecor
     public required Max35Text ProcessorTransactionIdentification { get; init; }
 
     /// <summary>
+    /// Allegement Removal Reason.
+    /// </summary>
+    [DisplayName("Allegement Removal Reason")]
+    [IsoXmlTag("AllgmtRmvlRsn")]
+    public required AllegementRemovalReason1Code AllegementRemovalReason { get; init; }
+
+    /// <summary>
+    /// Corporate Action General Information.
+    /// </summary>
+    [DisplayName("Corporate Action General Information")]
+    [IsoXmlTag("CorpActnGnlInf")]
+    public required CorporateActionGeneralInformation195 CorporateActionGeneralInformation { get; init; }
+
+    /// <summary>
     /// Related Settlement Instruction.
     /// </summary>
     [DisplayName("Related Settlement Instruction")]
     [IsoXmlTag("RltdSttlmInstr")]
     public RelatedSettlementInstruction4? RelatedSettlementInstruction { get; init; }
+
+    /// <summary>
+    /// Account Identification.
+    /// </summary>
+    [DisplayName("Account Identification")]
+    [IsoXmlTag("AcctId")]
+    public SecuritiesAccountIdentification1Choice_? AccountIdentification { get; init; }
+
+    /// <summary>
+    /// Corporate Action Election.
+    /// </summary>
+    [DisplayName("Corporate Action Election")]
+    [IsoXmlTag("CorpActnElctn")]
+    public CorporateActionElection4? CorporateActionElection { get; init; }
 
     /// <summary>
     /// Supplementary Data.

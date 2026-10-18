@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateActionGeneralInformationSD61
 {
     /// <summary>
-    /// Event Group.
-    /// </summary>
-    [DisplayName("Event Group")]
-    [IsoXmlTag("EvtGrp")]
-    public EventGroup3Code? EventGroup { get; init; }
-
-    /// <summary>
     /// Place And Name.
     /// </summary>
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
     public Max350Text? PlaceAndName { get; init; }
+
+    /// <summary>
+    /// Event Group.
+    /// </summary>
+    [DisplayName("Event Group")]
+    [IsoXmlTag("EvtGrp")]
+    public EventGroup3Code? EventGroup { get; init; }
 
     /// <summary>
     /// Sub Event Type.

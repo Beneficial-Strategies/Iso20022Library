@@ -17,18 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AggregateBalanceInformation45
 {
     /// <summary>
-    /// Account Base Currency Amounts.
+    /// Financial Instrument Identification.
     /// </summary>
-    [DisplayName("Account Base Currency Amounts")]
-    [IsoXmlTag("AcctBaseCcyAmts")]
-    public required BalanceAmounts1 AccountBaseCurrencyAmounts { get; init; }
+    [DisplayName("Financial Instrument Identification")]
+    [IsoXmlTag("FinInstrmId")]
+    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
 
     /// <summary>
-    /// Additional Balance Breakdown.
+    /// Financial Instrument Attributes.
     /// </summary>
-    [DisplayName("Additional Balance Breakdown")]
-    [IsoXmlTag("AddtlBalBrkdwn")]
-    public ValueList<AdditionalBalanceInformation22> AdditionalBalanceBreakdown { get; init; } = [];
+    [DisplayName("Financial Instrument Attributes")]
+    [IsoXmlTag("FinInstrmAttrbts")]
+    public FinancialInstrumentAttributes111? FinancialInstrumentAttributes { get; init; }
+
+    /// <summary>
+    /// Investment Funds Financial Instrument Attributes.
+    /// </summary>
+    [DisplayName("Investment Funds Financial Instrument Attributes")]
+    [IsoXmlTag("InvstmtFndsFinInstrmAttrbts")]
+    public FinancialInstrument21? InvestmentFundsFinancialInstrumentAttributes { get; init; }
 
     /// <summary>
     /// Additional Derivative Attributes.
@@ -45,11 +52,81 @@ public record AggregateBalanceInformation45
     public required Balance17 AggregateBalance { get; init; }
 
     /// <summary>
+    /// Safekeeping Place.
+    /// </summary>
+    [DisplayName("Safekeeping Place")]
+    [IsoXmlTag("SfkpgPlc")]
+    public SafeKeepingPlace5? SafekeepingPlace { get; init; }
+
+    /// <summary>
+    /// Corporate Action Option Type.
+    /// </summary>
+    [DisplayName("Corporate Action Option Type")]
+    [IsoXmlTag("CorpActnOptnTp")]
+    public CorporateActionOption5Code? CorporateActionOptionType { get; init; }
+
+    /// <summary>
+    /// Price Details.
+    /// </summary>
+    [DisplayName("Price Details")]
+    [IsoXmlTag("PricDtls")]
+    public ValueList<PriceInformation29> PriceDetails { get; init; } = [];
+
+    /// <summary>
+    /// Foreign Exchange Details.
+    /// </summary>
+    [DisplayName("Foreign Exchange Details")]
+    [IsoXmlTag("FXDtls")]
+    public ValueList<ForeignExchangeTerms34> ForeignExchangeDetails { get; init; } = [];
+
+    /// <summary>
+    /// Days Accrued.
+    /// </summary>
+    [DisplayName("Days Accrued")]
+    [IsoXmlTag("DaysAcrd")]
+    public Number? DaysAccrued { get; init; }
+
+    /// <summary>
+    /// Account Base Currency Amounts.
+    /// </summary>
+    [DisplayName("Account Base Currency Amounts")]
+    [IsoXmlTag("AcctBaseCcyAmts")]
+    public required BalanceAmounts1 AccountBaseCurrencyAmounts { get; init; }
+
+    /// <summary>
+    /// Instrument Currency Amounts.
+    /// </summary>
+    [DisplayName("Instrument Currency Amounts")]
+    [IsoXmlTag("InstrmCcyAmts")]
+    public BalanceAmounts1? InstrumentCurrencyAmounts { get; init; }
+
+    /// <summary>
     /// Alternate Reporting Currency Amounts.
     /// </summary>
     [DisplayName("Alternate Reporting Currency Amounts")]
     [IsoXmlTag("AltrnRptgCcyAmts")]
     public BalanceAmounts1? AlternateReportingCurrencyAmounts { get; init; }
+
+    /// <summary>
+    /// Quantity Breakdown.
+    /// </summary>
+    [DisplayName("Quantity Breakdown")]
+    [IsoXmlTag("QtyBrkdwn")]
+    public ValueList<QuantityBreakdown58> QuantityBreakdown { get; init; } = [];
+
+    /// <summary>
+    /// Balance Breakdown.
+    /// </summary>
+    [DisplayName("Balance Breakdown")]
+    [IsoXmlTag("BalBrkdwn")]
+    public ValueList<SubBalanceInformation22> BalanceBreakdown { get; init; } = [];
+
+    /// <summary>
+    /// Additional Balance Breakdown.
+    /// </summary>
+    [DisplayName("Additional Balance Breakdown")]
+    [IsoXmlTag("AddtlBalBrkdwn")]
+    public ValueList<AdditionalBalanceInformation22> AdditionalBalanceBreakdown { get; init; } = [];
 
     /// <summary>
     /// Balance At Safekeeping Place.
@@ -60,88 +137,11 @@ public record AggregateBalanceInformation45
         [];
 
     /// <summary>
-    /// Balance Breakdown.
-    /// </summary>
-    [DisplayName("Balance Breakdown")]
-    [IsoXmlTag("BalBrkdwn")]
-    public ValueList<SubBalanceInformation22> BalanceBreakdown { get; init; } = [];
-
-    /// <summary>
-    /// Corporate Action Option Type.
-    /// </summary>
-    [DisplayName("Corporate Action Option Type")]
-    [IsoXmlTag("CorpActnOptnTp")]
-    public CorporateActionOption5Code? CorporateActionOptionType { get; init; }
-
-    /// <summary>
-    /// Days Accrued.
-    /// </summary>
-    [DisplayName("Days Accrued")]
-    [IsoXmlTag("DaysAcrd")]
-    public Number? DaysAccrued { get; init; }
-
-    /// <summary>
-    /// Financial Instrument Attributes.
-    /// </summary>
-    [DisplayName("Financial Instrument Attributes")]
-    [IsoXmlTag("FinInstrmAttrbts")]
-    public FinancialInstrumentAttributes111? FinancialInstrumentAttributes { get; init; }
-
-    /// <summary>
-    /// Financial Instrument Identification.
-    /// </summary>
-    [DisplayName("Financial Instrument Identification")]
-    [IsoXmlTag("FinInstrmId")]
-    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
-
-    /// <summary>
-    /// Foreign Exchange Details.
-    /// </summary>
-    [DisplayName("Foreign Exchange Details")]
-    [IsoXmlTag("FXDtls")]
-    public ValueList<ForeignExchangeTerms34> ForeignExchangeDetails { get; init; } = [];
-
-    /// <summary>
     /// Holding Additional Details.
     /// </summary>
     [DisplayName("Holding Additional Details")]
     [IsoXmlTag("HldgAddtlDtls")]
     public Max350Text? HoldingAdditionalDetails { get; init; }
-
-    /// <summary>
-    /// Instrument Currency Amounts.
-    /// </summary>
-    [DisplayName("Instrument Currency Amounts")]
-    [IsoXmlTag("InstrmCcyAmts")]
-    public BalanceAmounts1? InstrumentCurrencyAmounts { get; init; }
-
-    /// <summary>
-    /// Investment Funds Financial Instrument Attributes.
-    /// </summary>
-    [DisplayName("Investment Funds Financial Instrument Attributes")]
-    [IsoXmlTag("InvstmtFndsFinInstrmAttrbts")]
-    public FinancialInstrument21? InvestmentFundsFinancialInstrumentAttributes { get; init; }
-
-    /// <summary>
-    /// Price Details.
-    /// </summary>
-    [DisplayName("Price Details")]
-    [IsoXmlTag("PricDtls")]
-    public ValueList<PriceInformation29> PriceDetails { get; init; } = [];
-
-    /// <summary>
-    /// Quantity Breakdown.
-    /// </summary>
-    [DisplayName("Quantity Breakdown")]
-    [IsoXmlTag("QtyBrkdwn")]
-    public ValueList<QuantityBreakdown58> QuantityBreakdown { get; init; } = [];
-
-    /// <summary>
-    /// Safekeeping Place.
-    /// </summary>
-    [DisplayName("Safekeeping Place")]
-    [IsoXmlTag("SfkpgPlc")]
-    public SafeKeepingPlace5? SafekeepingPlace { get; init; }
 
     /// <summary>
     /// Supplementary Data.

@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateActionPrice98
 {
     /// <summary>
+    /// Indicative Or Market Price.
+    /// </summary>
+    [DisplayName("Indicative Or Market Price")]
+    [IsoXmlTag("IndctvOrMktPric")]
+    public IndicativeOrMarketPrice18Choice_? IndicativeOrMarketPrice { get; init; }
+
+    /// <summary>
     /// Cash In Lieu Of Share Price.
     /// </summary>
     [DisplayName("Cash In Lieu Of Share Price")]
@@ -43,11 +50,4 @@ public record CorporateActionPrice98
     [DisplayName("Generic Cash Price Received Per Product")]
     [IsoXmlTag("GncCshPricRcvdPerPdct")]
     public PriceFormat94Choice_? GenericCashPriceReceivedPerProduct { get; init; }
-
-    /// <summary>
-    /// Indicative Or Market Price.
-    /// </summary>
-    [DisplayName("Indicative Or Market Price")]
-    [IsoXmlTag("IndctvOrMktPric")]
-    public IndicativeOrMarketPrice18Choice_? IndicativeOrMarketPrice { get; init; }
 }

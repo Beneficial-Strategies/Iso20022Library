@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PartyReferenceDataChange3
 {
     /// <summary>
-    /// Operation Time Stamp.
-    /// </summary>
-    [DisplayName("Operation Time Stamp")]
-    [IsoXmlTag("OprTmStmp")]
-    public required ISODateTime OperationTimeStamp { get; init; }
-
-    /// <summary>
     /// Party Identification.
     /// </summary>
     [DisplayName("Party Identification")]
@@ -36,4 +29,11 @@ public record PartyReferenceDataChange3
     [DisplayName("Record")]
     [IsoXmlTag("Rcrd")]
     public ValueList<UpdateLogPartyRecord2Choice_> Record { get; init; } = [];
+
+    /// <summary>
+    /// Operation Time Stamp.
+    /// </summary>
+    [DisplayName("Operation Time Stamp")]
+    [IsoXmlTag("OprTmStmp")]
+    public required ISODateTime OperationTimeStamp { get; init; }
 }

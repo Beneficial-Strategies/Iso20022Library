@@ -17,11 +17,32 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record LimitUtilisationJournalSearchCriteria2
 {
     /// <summary>
+    /// Limit Type.
+    /// </summary>
+    [DisplayName("Limit Type")]
+    [IsoXmlTag("LmtTp")]
+    public ValueList<LimitType4Code> LimitType { get; init; } = [];
+
+    /// <summary>
+    /// Journal Activity Date.
+    /// </summary>
+    [DisplayName("Journal Activity Date")]
+    [IsoXmlTag("JrnlActvtyDt")]
+    public required ISODate JournalActivityDate { get; init; }
+
+    /// <summary>
     /// Account Identification.
     /// </summary>
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
     public AccountIdentification4Choice_? AccountIdentification { get; init; }
+
+    /// <summary>
+    /// Limit Currency.
+    /// </summary>
+    [DisplayName("Limit Currency")]
+    [IsoXmlTag("LmtCcy")]
+    public ActiveCurrencyCode? LimitCurrency { get; init; }
 
     /// <summary>
     /// Account Owner.
@@ -36,25 +57,4 @@ public record LimitUtilisationJournalSearchCriteria2
     [DisplayName("Bilateral Limit Counterparty Identification")]
     [IsoXmlTag("BilLmtCtrPtyId")]
     public required SystemPartyIdentification8 BilateralLimitCounterpartyIdentification { get; init; }
-
-    /// <summary>
-    /// Journal Activity Date.
-    /// </summary>
-    [DisplayName("Journal Activity Date")]
-    [IsoXmlTag("JrnlActvtyDt")]
-    public required ISODate JournalActivityDate { get; init; }
-
-    /// <summary>
-    /// Limit Currency.
-    /// </summary>
-    [DisplayName("Limit Currency")]
-    [IsoXmlTag("LmtCcy")]
-    public ActiveCurrencyCode? LimitCurrency { get; init; }
-
-    /// <summary>
-    /// Limit Type.
-    /// </summary>
-    [DisplayName("Limit Type")]
-    [IsoXmlTag("LmtTp")]
-    public ValueList<LimitType4Code> LimitType { get; init; } = [];
 }

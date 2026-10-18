@@ -46,41 +46,11 @@ public record PriceReportV05 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Cancellation Identification.
-    /// </summary>
-    [DisplayName("Cancellation Identification")]
-    [IsoXmlTag("CxlId")]
-    [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35, MinimumLength = 1)]
-    public Max35Text? CancellationIdentification { get; init; }
-
-    /// <summary>
-    /// Extension.
-    /// </summary>
-    [DisplayName("Extension")]
-    [IsoXmlTag("Xtnsn")]
-    public ValueList<Extension1> Extension { get; init; } = [];
-
-    /// <summary>
-    /// Function.
-    /// </summary>
-    [DisplayName("Function")]
-    [IsoXmlTag("Fctn")]
-    public required PriceReportFunction1Code Function { get; init; }
-
-    /// <summary>
     /// Message Identification.
     /// </summary>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     public required MessageIdentification1 MessageIdentification { get; init; }
-
-    /// <summary>
-    /// Message Pagination.
-    /// </summary>
-    [DisplayName("Message Pagination")]
-    [IsoXmlTag("MsgPgntn")]
-    public required Pagination1 MessagePagination { get; init; }
 
     /// <summary>
     /// Pool Reference.
@@ -97,6 +67,20 @@ public record PriceReportV05 : IOuterRecord
     public ValueList<AdditionalReference10> PreviousReference { get; init; } = [];
 
     /// <summary>
+    /// Related Reference.
+    /// </summary>
+    [DisplayName("Related Reference")]
+    [IsoXmlTag("RltdRef")]
+    public AdditionalReference10? RelatedReference { get; init; }
+
+    /// <summary>
+    /// Message Pagination.
+    /// </summary>
+    [DisplayName("Message Pagination")]
+    [IsoXmlTag("MsgPgntn")]
+    public required Pagination1 MessagePagination { get; init; }
+
+    /// <summary>
     /// Price Report Identification.
     /// </summary>
     [DisplayName("Price Report Identification")]
@@ -106,6 +90,22 @@ public record PriceReportV05 : IOuterRecord
     public required Max35Text PriceReportIdentification { get; init; }
 
     /// <summary>
+    /// Function.
+    /// </summary>
+    [DisplayName("Function")]
+    [IsoXmlTag("Fctn")]
+    public required PriceReportFunction1Code Function { get; init; }
+
+    /// <summary>
+    /// Cancellation Identification.
+    /// </summary>
+    [DisplayName("Cancellation Identification")]
+    [IsoXmlTag("CxlId")]
+    [IsoSimpleType(IsoSimpleType.Max35Text)]
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public Max35Text? CancellationIdentification { get; init; }
+
+    /// <summary>
     /// Price Valuation Details.
     /// </summary>
     [DisplayName("Price Valuation Details")]
@@ -113,9 +113,9 @@ public record PriceReportV05 : IOuterRecord
     public ValueList<PriceValuation5> PriceValuationDetails { get; init; } = [];
 
     /// <summary>
-    /// Related Reference.
+    /// Extension.
     /// </summary>
-    [DisplayName("Related Reference")]
-    [IsoXmlTag("RltdRef")]
-    public AdditionalReference10? RelatedReference { get; init; }
+    [DisplayName("Extension")]
+    [IsoXmlTag("Xtnsn")]
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

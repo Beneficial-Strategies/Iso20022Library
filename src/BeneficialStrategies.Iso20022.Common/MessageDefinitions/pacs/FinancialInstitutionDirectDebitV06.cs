@@ -54,18 +54,18 @@ public record FinancialInstitutionDirectDebitV06 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Characteristics that apply to the credit side of the payment transaction(s) included in the message.
-    /// </summary>
-    [DisplayName("Credit Instruction")]
-    [IsoXmlTag("CdtInstr")]
-    public ValueList<CreditTransferTransaction66> CreditInstruction { get; init; } = [];
-
-    /// <summary>
     /// Common characteristics for all individual transactions included in the message.
     /// </summary>
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader119 GroupHeader { get; init; }
+
+    /// <summary>
+    /// Characteristics that apply to the credit side of the payment transaction(s) included in the message.
+    /// </summary>
+    [DisplayName("Credit Instruction")]
+    [IsoXmlTag("CdtInstr")]
+    public ValueList<CreditTransferTransaction66> CreditInstruction { get; init; } = [];
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.

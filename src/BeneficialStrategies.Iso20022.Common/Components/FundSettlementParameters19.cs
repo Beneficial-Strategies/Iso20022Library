@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record FundSettlementParameters19
 {
     /// <summary>
-    /// Delivering Side Details.
+    /// Settlement Date.
     /// </summary>
-    [DisplayName("Delivering Side Details")]
-    [IsoXmlTag("DlvrgSdDtls")]
-    public DeliveringPartiesAndAccount20? DeliveringSideDetails { get; init; }
+    [DisplayName("Settlement Date")]
+    [IsoXmlTag("SttlmDt")]
+    public ISODate? SettlementDate { get; init; }
 
     /// <summary>
-    /// Receiving Side Details.
+    /// Settlement Place.
     /// </summary>
-    [DisplayName("Receiving Side Details")]
-    [IsoXmlTag("RcvgSdDtls")]
-    public required ReceivingPartiesAndAccount20 ReceivingSideDetails { get; init; }
+    [DisplayName("Settlement Place")]
+    [IsoXmlTag("SttlmPlc")]
+    public required PartyIdentification139 SettlementPlace { get; init; }
 
     /// <summary>
     /// Safekeeping Place.
@@ -45,18 +45,12 @@ public record FundSettlementParameters19
     public Max35Text? SecuritiesSettlementSystemIdentification { get; init; }
 
     /// <summary>
-    /// Settlement Date.
+    /// Trade Transaction Condition.
     /// </summary>
-    [DisplayName("Settlement Date")]
-    [IsoXmlTag("SttlmDt")]
-    public ISODate? SettlementDate { get; init; }
-
-    /// <summary>
-    /// Settlement Place.
-    /// </summary>
-    [DisplayName("Settlement Place")]
-    [IsoXmlTag("SttlmPlc")]
-    public required PartyIdentification139 SettlementPlace { get; init; }
+    [DisplayName("Trade Transaction Condition")]
+    [IsoXmlTag("TradTxCond")]
+    public ValueList<TradeTransactionCondition8Choice_> TradeTransactionCondition { get; init; } =
+        [];
 
     /// <summary>
     /// Settlement Transaction Condition.
@@ -67,10 +61,16 @@ public record FundSettlementParameters19
         [];
 
     /// <summary>
-    /// Trade Transaction Condition.
+    /// Receiving Side Details.
     /// </summary>
-    [DisplayName("Trade Transaction Condition")]
-    [IsoXmlTag("TradTxCond")]
-    public ValueList<TradeTransactionCondition8Choice_> TradeTransactionCondition { get; init; } =
-        [];
+    [DisplayName("Receiving Side Details")]
+    [IsoXmlTag("RcvgSdDtls")]
+    public required ReceivingPartiesAndAccount20 ReceivingSideDetails { get; init; }
+
+    /// <summary>
+    /// Delivering Side Details.
+    /// </summary>
+    [DisplayName("Delivering Side Details")]
+    [IsoXmlTag("DlvrgSdDtls")]
+    public DeliveringPartiesAndAccount20? DeliveringSideDetails { get; init; }
 }

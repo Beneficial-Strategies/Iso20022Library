@@ -46,18 +46,18 @@ public record CaseStatusReportRequestV05 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Case.
-    /// </summary>
-    [DisplayName("Case")]
-    [IsoXmlTag("Case")]
-    public required Case6 Case { get; init; }
-
-    /// <summary>
     /// Request Header.
     /// </summary>
     [DisplayName("Request Header")]
     [IsoXmlTag("ReqHdr")]
     public required ReportHeader7 RequestHeader { get; init; }
+
+    /// <summary>
+    /// Case.
+    /// </summary>
+    [DisplayName("Case")]
+    [IsoXmlTag("Case")]
+    public required Case6 Case { get; init; }
 
     /// <summary>
     /// Supplementary Data.

@@ -17,11 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record RecurringTransaction6
 {
     /// <summary>
-    /// Grace Period.
+    /// Plan Identification.
     /// </summary>
-    [DisplayName("Grace Period")]
-    [IsoXmlTag("GracePrd")]
-    public ValueList<GracePeriod1> GracePeriod { get; init; } = [];
+    [DisplayName("Plan Identification")]
+    [IsoXmlTag("PlanId")]
+    public Max35Text? PlanIdentification { get; init; }
+
+    /// <summary>
+    /// Sequence Number.
+    /// </summary>
+    [DisplayName("Sequence Number")]
+    [IsoXmlTag("SeqNb")]
+    public Number? SequenceNumber { get; init; }
 
     /// <summary>
     /// Period Unit.
@@ -31,11 +38,11 @@ public record RecurringTransaction6
     public Frequency3Code? PeriodUnit { get; init; }
 
     /// <summary>
-    /// Plan Identification.
+    /// Grace Period.
     /// </summary>
-    [DisplayName("Plan Identification")]
-    [IsoXmlTag("PlanId")]
-    public Max35Text? PlanIdentification { get; init; }
+    [DisplayName("Grace Period")]
+    [IsoXmlTag("GracePrd")]
+    public ValueList<GracePeriod1> GracePeriod { get; init; } = [];
 
     /// <summary>
     /// Plan Notice.
@@ -43,11 +50,4 @@ public record RecurringTransaction6
     [DisplayName("Plan Notice")]
     [IsoXmlTag("PlanNtce")]
     public ValueList<ActionMessage11> PlanNotice { get; init; } = [];
-
-    /// <summary>
-    /// Sequence Number.
-    /// </summary>
-    [DisplayName("Sequence Number")]
-    [IsoXmlTag("SeqNb")]
-    public Number? SequenceNumber { get; init; }
 }

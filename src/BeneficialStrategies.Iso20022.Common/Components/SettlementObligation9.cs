@@ -17,19 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SettlementObligation9
 {
     /// <summary>
-    /// Additional Settlement Obligation Details.
+    /// Settlement Obligation Identification.
     /// </summary>
-    [DisplayName("Additional Settlement Obligation Details")]
-    [IsoXmlTag("AddtlSttlmOblgtnDtls")]
-    public ValueList<SettlementObligation10> AdditionalSettlementObligationDetails { get; init; } =
-        [];
-
-    /// <summary>
-    /// Clearing Account Type.
-    /// </summary>
-    [DisplayName("Clearing Account Type")]
-    [IsoXmlTag("ClrAcctTp")]
-    public ClearingAccountType1Code? ClearingAccountType { get; init; }
+    [DisplayName("Settlement Obligation Identification")]
+    [IsoXmlTag("SttlmOblgtnId")]
+    public required Max35Text SettlementObligationIdentification { get; init; }
 
     /// <summary>
     /// Financial Instrument Identification.
@@ -46,46 +38,11 @@ public record SettlementObligation9
     public required DateFormat65Choice_ IntendedSettlementDate { get; init; }
 
     /// <summary>
-    /// Payment.
-    /// </summary>
-    [DisplayName("Payment")]
-    [IsoXmlTag("Pmt")]
-    public required DeliveryReceiptType2Code Payment { get; init; }
-
-    /// <summary>
-    /// Place Of Trade.
-    /// </summary>
-    [DisplayName("Place Of Trade")]
-    [IsoXmlTag("PlcOfTrad")]
-    public required MarketIdentification84 PlaceOfTrade { get; init; }
-
-    /// <summary>
     /// Quantity.
     /// </summary>
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
     public required FinancialInstrumentQuantity1Choice_ Quantity { get; init; }
-
-    /// <summary>
-    /// Safekeeping Account.
-    /// </summary>
-    [DisplayName("Safekeeping Account")]
-    [IsoXmlTag("SfkpgAcct")]
-    public SecuritiesAccount19? SafekeepingAccount { get; init; }
-
-    /// <summary>
-    /// Safekeeping Place.
-    /// </summary>
-    [DisplayName("Safekeeping Place")]
-    [IsoXmlTag("SfkpgPlc")]
-    public SafekeepingPlaceFormat43Choice_? SafekeepingPlace { get; init; }
-
-    /// <summary>
-    /// Securities Movement Type.
-    /// </summary>
-    [DisplayName("Securities Movement Type")]
-    [IsoXmlTag("SctiesMvmntTp")]
-    public ReceiveDelivery1Code? SecuritiesMovementType { get; init; }
 
     /// <summary>
     /// Settlement Amount.
@@ -95,18 +52,11 @@ public record SettlementObligation9
     public required AmountAndDirection27 SettlementAmount { get; init; }
 
     /// <summary>
-    /// Settlement Obligation Identification.
+    /// Place Of Trade.
     /// </summary>
-    [DisplayName("Settlement Obligation Identification")]
-    [IsoXmlTag("SttlmOblgtnId")]
-    public required Max35Text SettlementObligationIdentification { get; init; }
-
-    /// <summary>
-    /// Settlement Parties.
-    /// </summary>
-    [DisplayName("Settlement Parties")]
-    [IsoXmlTag("SttlmPties")]
-    public SettlementParties38Choice_? SettlementParties { get; init; }
+    [DisplayName("Place Of Trade")]
+    [IsoXmlTag("PlcOfTrad")]
+    public required MarketIdentification84 PlaceOfTrade { get; init; }
 
     /// <summary>
     /// Trade Date.
@@ -121,4 +71,54 @@ public record SettlementObligation9
     [DisplayName("Trading Capacity")]
     [IsoXmlTag("TradgCpcty")]
     public TradingCapacity5Code? TradingCapacity { get; init; }
+
+    /// <summary>
+    /// Clearing Account Type.
+    /// </summary>
+    [DisplayName("Clearing Account Type")]
+    [IsoXmlTag("ClrAcctTp")]
+    public ClearingAccountType1Code? ClearingAccountType { get; init; }
+
+    /// <summary>
+    /// Safekeeping Place.
+    /// </summary>
+    [DisplayName("Safekeeping Place")]
+    [IsoXmlTag("SfkpgPlc")]
+    public SafekeepingPlaceFormat43Choice_? SafekeepingPlace { get; init; }
+
+    /// <summary>
+    /// Safekeeping Account.
+    /// </summary>
+    [DisplayName("Safekeeping Account")]
+    [IsoXmlTag("SfkpgAcct")]
+    public SecuritiesAccount19? SafekeepingAccount { get; init; }
+
+    /// <summary>
+    /// Securities Movement Type.
+    /// </summary>
+    [DisplayName("Securities Movement Type")]
+    [IsoXmlTag("SctiesMvmntTp")]
+    public ReceiveDelivery1Code? SecuritiesMovementType { get; init; }
+
+    /// <summary>
+    /// Payment.
+    /// </summary>
+    [DisplayName("Payment")]
+    [IsoXmlTag("Pmt")]
+    public required DeliveryReceiptType2Code Payment { get; init; }
+
+    /// <summary>
+    /// Settlement Parties.
+    /// </summary>
+    [DisplayName("Settlement Parties")]
+    [IsoXmlTag("SttlmPties")]
+    public SettlementParties38Choice_? SettlementParties { get; init; }
+
+    /// <summary>
+    /// Additional Settlement Obligation Details.
+    /// </summary>
+    [DisplayName("Additional Settlement Obligation Details")]
+    [IsoXmlTag("AddtlSttlmOblgtnDtls")]
+    public ValueList<SettlementObligation10> AdditionalSettlementObligationDetails { get; init; } =
+        [];
 }

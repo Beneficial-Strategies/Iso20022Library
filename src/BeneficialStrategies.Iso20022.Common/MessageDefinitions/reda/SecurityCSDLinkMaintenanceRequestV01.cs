@@ -60,16 +60,16 @@ public record SecurityCSDLinkMaintenanceRequestV01 : IOuterRecord
     public required SecurityCSDLink9 SecurityCSDLinkIdentification { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
     /// Update.
     /// </summary>
     [DisplayName("Update")]
     [IsoXmlTag("Upd")]
     public required SecurityCSDLinkUpdate3 Update { get; init; }
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

@@ -53,16 +53,16 @@ public record SaleToPOIMessageStatusResponseV06 : IOuterRecord
     public required Header41 Header { get; init; }
 
     /// <summary>
-    /// Security Trailer.
-    /// </summary>
-    [DisplayName("Security Trailer")]
-    [IsoXmlTag("SctyTrlr")]
-    public ContentInformationType38? SecurityTrailer { get; init; }
-
-    /// <summary>
     /// Status Response.
     /// </summary>
     [DisplayName("Status Response")]
     [IsoXmlTag("StsRspn")]
     public required MessageStatusResponse8 StatusResponse { get; init; }
+
+    /// <summary>
+    /// Security Trailer.
+    /// </summary>
+    [DisplayName("Security Trailer")]
+    [IsoXmlTag("SctyTrlr")]
+    public ContentInformationType38? SecurityTrailer { get; init; }
 }

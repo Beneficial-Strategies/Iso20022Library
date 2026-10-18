@@ -17,11 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMTransaction40
 {
     /// <summary>
-    /// Electronic Purse Balance.
+    /// Transaction Identification.
     /// </summary>
-    [DisplayName("Electronic Purse Balance")]
-    [IsoXmlTag("ElctrncPrsBal")]
-    public CurrencyAndAmount? ElectronicPurseBalance { get; init; }
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public TransactionIdentifier3? TransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Reconciliation Identification.
+    /// </summary>
+    [DisplayName("Reconciliation Identification")]
+    [IsoXmlTag("RcncltnId")]
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Exception.
@@ -38,16 +45,9 @@ public record ATMTransaction40
     public ValueList<Max70Text> ExceptionDetail { get; init; } = [];
 
     /// <summary>
-    /// Reconciliation Identification.
+    /// Electronic Purse Balance.
     /// </summary>
-    [DisplayName("Reconciliation Identification")]
-    [IsoXmlTag("RcncltnId")]
-    public Max35Text? ReconciliationIdentification { get; init; }
-
-    /// <summary>
-    /// Transaction Identification.
-    /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public TransactionIdentifier3? TransactionIdentification { get; init; }
+    [DisplayName("Electronic Purse Balance")]
+    [IsoXmlTag("ElctrncPrsBal")]
+    public CurrencyAndAmount? ElectronicPurseBalance { get; init; }
 }

@@ -17,46 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMTransaction51
 {
     /// <summary>
-    /// Additional Charge.
+    /// Transaction Identification.
     /// </summary>
-    [DisplayName("Additional Charge")]
-    [IsoXmlTag("AddtlChrg")]
-    public ValueList<DetailedAmount13> AdditionalCharge { get; init; } = [];
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public required TransactionIdentifier3 TransactionIdentification { get; init; }
 
     /// <summary>
-    /// ATM Totals.
+    /// Transaction Status.
     /// </summary>
-    [DisplayName("ATM Totals")]
-    [IsoXmlTag("ATMTtls")]
-    public ValueList<ATMTotals4> ATMTotals { get; init; } = [];
+    [DisplayName("Transaction Status")]
+    [IsoXmlTag("TxSts")]
+    public required ATMTransactionStatus1Code TransactionStatus { get; init; }
 
     /// <summary>
-    /// Authorisation Result.
+    /// Reconciliation Identification.
     /// </summary>
-    [DisplayName("Authorisation Result")]
-    [IsoXmlTag("AuthstnRslt")]
-    public AuthorisationResult20? AuthorisationResult { get; init; }
-
-    /// <summary>
-    /// Cassette.
-    /// </summary>
-    [DisplayName("Cassette")]
-    [IsoXmlTag("Csstt")]
-    public ValueList<ATMCassette3> Cassette { get; init; } = [];
-
-    /// <summary>
-    /// Detailed Requested Amount.
-    /// </summary>
-    [DisplayName("Detailed Requested Amount")]
-    [IsoXmlTag("DtldReqdAmt")]
-    public DetailedAmount16? DetailedRequestedAmount { get; init; }
-
-    /// <summary>
-    /// ICC Related Data.
-    /// </summary>
-    [DisplayName("ICC Related Data")]
-    [IsoXmlTag("ICCRltdData")]
-    public Max10000Binary? ICCRelatedData { get; init; }
+    [DisplayName("Reconciliation Identification")]
+    [IsoXmlTag("RcncltnId")]
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Incident.
@@ -73,39 +52,11 @@ public record ATMTransaction51
     public ValueList<Max70Text> IncidentDetail { get; init; } = [];
 
     /// <summary>
-    /// Receipt Printed.
+    /// Total Deposited Amount.
     /// </summary>
-    [DisplayName("Receipt Printed")]
-    [IsoXmlTag("RctPrtd")]
-    public TrueFalseIndicator? ReceiptPrinted { get; init; }
-
-    /// <summary>
-    /// Reconciliation Identification.
-    /// </summary>
-    [DisplayName("Reconciliation Identification")]
-    [IsoXmlTag("RcncltnId")]
-    public Max35Text? ReconciliationIdentification { get; init; }
-
-    /// <summary>
-    /// Requested Receipt.
-    /// </summary>
-    [DisplayName("Requested Receipt")]
-    [IsoXmlTag("ReqdRct")]
-    public TrueFalseIndicator? RequestedReceipt { get; init; }
-
-    /// <summary>
-    /// Sub Deposit.
-    /// </summary>
-    [DisplayName("Sub Deposit")]
-    [IsoXmlTag("SubDpst")]
-    public ValueList<ATMDepositComponent1> SubDeposit { get; init; } = [];
-
-    /// <summary>
-    /// To Be Reconciled Media Counters.
-    /// </summary>
-    [DisplayName("To Be Reconciled Media Counters")]
-    [IsoXmlTag("ToBeRcncldMdiaCntrs")]
-    public ValueList<ATMDepositedMedia4> ToBeReconciledMediaCounters { get; init; } = [];
+    [DisplayName("Total Deposited Amount")]
+    [IsoXmlTag("TtlDpstdAmt")]
+    public ValueList<AmountAndCurrency1> TotalDepositedAmount { get; init; } = [];
 
     /// <summary>
     /// Total Authorised Amount.
@@ -115,13 +66,6 @@ public record ATMTransaction51
     public ValueList<ImpliedCurrencyAndAmount> TotalAuthorisedAmount { get; init; } = [];
 
     /// <summary>
-    /// Total Deposited Amount.
-    /// </summary>
-    [DisplayName("Total Deposited Amount")]
-    [IsoXmlTag("TtlDpstdAmt")]
-    public ValueList<AmountAndCurrency1> TotalDepositedAmount { get; init; } = [];
-
-    /// <summary>
     /// Total Requested Amount.
     /// </summary>
     [DisplayName("Total Requested Amount")]
@@ -129,16 +73,72 @@ public record ATMTransaction51
     public ValueList<ImpliedCurrencyAndAmount> TotalRequestedAmount { get; init; } = [];
 
     /// <summary>
-    /// Transaction Identification.
+    /// Detailed Requested Amount.
     /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public required TransactionIdentifier3 TransactionIdentification { get; init; }
+    [DisplayName("Detailed Requested Amount")]
+    [IsoXmlTag("DtldReqdAmt")]
+    public DetailedAmount16? DetailedRequestedAmount { get; init; }
 
     /// <summary>
-    /// Transaction Status.
+    /// Sub Deposit.
     /// </summary>
-    [DisplayName("Transaction Status")]
-    [IsoXmlTag("TxSts")]
-    public required ATMTransactionStatus1Code TransactionStatus { get; init; }
+    [DisplayName("Sub Deposit")]
+    [IsoXmlTag("SubDpst")]
+    public ValueList<ATMDepositComponent1> SubDeposit { get; init; } = [];
+
+    /// <summary>
+    /// Additional Charge.
+    /// </summary>
+    [DisplayName("Additional Charge")]
+    [IsoXmlTag("AddtlChrg")]
+    public ValueList<DetailedAmount13> AdditionalCharge { get; init; } = [];
+
+    /// <summary>
+    /// Requested Receipt.
+    /// </summary>
+    [DisplayName("Requested Receipt")]
+    [IsoXmlTag("ReqdRct")]
+    public TrueFalseIndicator? RequestedReceipt { get; init; }
+
+    /// <summary>
+    /// Receipt Printed.
+    /// </summary>
+    [DisplayName("Receipt Printed")]
+    [IsoXmlTag("RctPrtd")]
+    public TrueFalseIndicator? ReceiptPrinted { get; init; }
+
+    /// <summary>
+    /// Authorisation Result.
+    /// </summary>
+    [DisplayName("Authorisation Result")]
+    [IsoXmlTag("AuthstnRslt")]
+    public AuthorisationResult20? AuthorisationResult { get; init; }
+
+    /// <summary>
+    /// To Be Reconciled Media Counters.
+    /// </summary>
+    [DisplayName("To Be Reconciled Media Counters")]
+    [IsoXmlTag("ToBeRcncldMdiaCntrs")]
+    public ValueList<ATMDepositedMedia4> ToBeReconciledMediaCounters { get; init; } = [];
+
+    /// <summary>
+    /// ATM Totals.
+    /// </summary>
+    [DisplayName("ATM Totals")]
+    [IsoXmlTag("ATMTtls")]
+    public ValueList<ATMTotals4> ATMTotals { get; init; } = [];
+
+    /// <summary>
+    /// Cassette.
+    /// </summary>
+    [DisplayName("Cassette")]
+    [IsoXmlTag("Csstt")]
+    public ValueList<ATMCassette3> Cassette { get; init; } = [];
+
+    /// <summary>
+    /// ICC Related Data.
+    /// </summary>
+    [DisplayName("ICC Related Data")]
+    [IsoXmlTag("ICCRltdData")]
+    public Max10000Binary? ICCRelatedData { get; init; }
 }

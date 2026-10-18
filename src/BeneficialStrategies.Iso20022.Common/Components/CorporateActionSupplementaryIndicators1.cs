@@ -24,11 +24,25 @@ public record CorporateActionSupplementaryIndicators1
     public YesNoIndicator? ConditionalPaymentApplicableIndicator { get; init; }
 
     /// <summary>
-    /// Escrow To Maturity Indicator.
+    /// Solicitation Dealer Fee Indicator.
     /// </summary>
-    [DisplayName("Escrow To Maturity Indicator")]
-    [IsoXmlTag("EscrwToMtrtyInd")]
-    public YesNoIndicator? EscrowToMaturityIndicator { get; init; }
+    [DisplayName("Solicitation Dealer Fee Indicator")]
+    [IsoXmlTag("SlctnDealrFeeInd")]
+    public YesNoIndicator? SolicitationDealerFeeIndicator { get; init; }
+
+    /// <summary>
+    /// Surrender Shares To Agent Indicator.
+    /// </summary>
+    [DisplayName("Surrender Shares To Agent Indicator")]
+    [IsoXmlTag("SrrndrShrsToAgtInd")]
+    public YesNoIndicator? SurrenderSharesToAgentIndicator { get; init; }
+
+    /// <summary>
+    /// Step Up Privilege Indicator.
+    /// </summary>
+    [DisplayName("Step Up Privilege Indicator")]
+    [IsoXmlTag("StepUpPrvlgInd")]
+    public YesNoIndicator? StepUpPrivilegeIndicator { get; init; }
 
     /// <summary>
     /// Rights Oversubscription Indicator.
@@ -52,23 +66,9 @@ public record CorporateActionSupplementaryIndicators1
     public YesNoIndicator? RightsTransferableIndicator { get; init; }
 
     /// <summary>
-    /// Solicitation Dealer Fee Indicator.
+    /// Escrow To Maturity Indicator.
     /// </summary>
-    [DisplayName("Solicitation Dealer Fee Indicator")]
-    [IsoXmlTag("SlctnDealrFeeInd")]
-    public YesNoIndicator? SolicitationDealerFeeIndicator { get; init; }
-
-    /// <summary>
-    /// Step Up Privilege Indicator.
-    /// </summary>
-    [DisplayName("Step Up Privilege Indicator")]
-    [IsoXmlTag("StepUpPrvlgInd")]
-    public YesNoIndicator? StepUpPrivilegeIndicator { get; init; }
-
-    /// <summary>
-    /// Surrender Shares To Agent Indicator.
-    /// </summary>
-    [DisplayName("Surrender Shares To Agent Indicator")]
-    [IsoXmlTag("SrrndrShrsToAgtInd")]
-    public YesNoIndicator? SurrenderSharesToAgentIndicator { get; init; }
+    [DisplayName("Escrow To Maturity Indicator")]
+    [IsoXmlTag("EscrwToMtrtyInd")]
+    public YesNoIndicator? EscrowToMaturityIndicator { get; init; }
 }

@@ -46,18 +46,18 @@ public record SaleToPOIAdministrativeResponseV07 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Administrative Response.
-    /// </summary>
-    [DisplayName("Administrative Response")]
-    [IsoXmlTag("AdmstvRspn")]
-    public required AdministrativeResponse8 AdministrativeResponse { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required Header41 Header { get; init; }
+
+    /// <summary>
+    /// Administrative Response.
+    /// </summary>
+    [DisplayName("Administrative Response")]
+    [IsoXmlTag("AdmstvRspn")]
+    public required AdministrativeResponse8 AdministrativeResponse { get; init; }
 
     /// <summary>
     /// Security Trailer.

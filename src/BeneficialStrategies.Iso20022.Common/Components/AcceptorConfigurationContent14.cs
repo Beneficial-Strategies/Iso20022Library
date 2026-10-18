@@ -17,11 +17,46 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AcceptorConfigurationContent14
 {
     /// <summary>
+    /// Replace Configuration.
+    /// </summary>
+    [DisplayName("Replace Configuration")]
+    [IsoXmlTag("RplcCfgtn")]
+    public TrueFalseIndicator? ReplaceConfiguration { get; init; }
+
+    /// <summary>
+    /// TMS Protocol Parameters.
+    /// </summary>
+    [DisplayName("TMS Protocol Parameters")]
+    [IsoXmlTag("TMSPrtcolParams")]
+    public ValueList<TMSProtocolParameters7> TMSProtocolParameters { get; init; } = [];
+
+    /// <summary>
     /// Acquirer Protocol Parameters.
     /// </summary>
     [DisplayName("Acquirer Protocol Parameters")]
     [IsoXmlTag("AcqrrPrtcolParams")]
     public ValueList<AcquirerProtocolParameters17> AcquirerProtocolParameters { get; init; } = [];
+
+    /// <summary>
+    /// Service Provider Parameters.
+    /// </summary>
+    [DisplayName("Service Provider Parameters")]
+    [IsoXmlTag("SvcPrvdrParams")]
+    public ValueList<ServiceProviderParameters4> ServiceProviderParameters { get; init; } = [];
+
+    /// <summary>
+    /// Merchant Parameters.
+    /// </summary>
+    [DisplayName("Merchant Parameters")]
+    [IsoXmlTag("MrchntParams")]
+    public ValueList<MerchantConfigurationParameters6> MerchantParameters { get; init; } = [];
+
+    /// <summary>
+    /// Terminal Parameters.
+    /// </summary>
+    [DisplayName("Terminal Parameters")]
+    [IsoXmlTag("TermnlParams")]
+    public ValueList<PaymentTerminalParameters8> TerminalParameters { get; init; } = [];
 
     /// <summary>
     /// Application Parameters.
@@ -38,18 +73,11 @@ public record AcceptorConfigurationContent14
     public ValueList<HostCommunicationParameter7> HostCommunicationParameters { get; init; } = [];
 
     /// <summary>
-    /// Merchant Parameters.
+    /// Security Parameters.
     /// </summary>
-    [DisplayName("Merchant Parameters")]
-    [IsoXmlTag("MrchntParams")]
-    public ValueList<MerchantConfigurationParameters6> MerchantParameters { get; init; } = [];
-
-    /// <summary>
-    /// Replace Configuration.
-    /// </summary>
-    [DisplayName("Replace Configuration")]
-    [IsoXmlTag("RplcCfgtn")]
-    public TrueFalseIndicator? ReplaceConfiguration { get; init; }
+    [DisplayName("Security Parameters")]
+    [IsoXmlTag("SctyParams")]
+    public ValueList<SecurityParameters16> SecurityParameters { get; init; } = [];
 
     /// <summary>
     /// Sale To POI Parameters.
@@ -59,37 +87,9 @@ public record AcceptorConfigurationContent14
     public ValueList<SaleToPOIProtocolParameter3> SaleToPOIParameters { get; init; } = [];
 
     /// <summary>
-    /// Security Parameters.
-    /// </summary>
-    [DisplayName("Security Parameters")]
-    [IsoXmlTag("SctyParams")]
-    public ValueList<SecurityParameters16> SecurityParameters { get; init; } = [];
-
-    /// <summary>
-    /// Service Provider Parameters.
-    /// </summary>
-    [DisplayName("Service Provider Parameters")]
-    [IsoXmlTag("SvcPrvdrParams")]
-    public ValueList<ServiceProviderParameters4> ServiceProviderParameters { get; init; } = [];
-
-    /// <summary>
     /// Terminal Package.
     /// </summary>
     [DisplayName("Terminal Package")]
     [IsoXmlTag("TermnlPackg")]
     public ValueList<TerminalPackageType5> TerminalPackage { get; init; } = [];
-
-    /// <summary>
-    /// Terminal Parameters.
-    /// </summary>
-    [DisplayName("Terminal Parameters")]
-    [IsoXmlTag("TermnlParams")]
-    public ValueList<PaymentTerminalParameters8> TerminalParameters { get; init; } = [];
-
-    /// <summary>
-    /// TMS Protocol Parameters.
-    /// </summary>
-    [DisplayName("TMS Protocol Parameters")]
-    [IsoXmlTag("TMSPrtcolParams")]
-    public ValueList<TMSProtocolParameters7> TMSProtocolParameters { get; init; } = [];
 }

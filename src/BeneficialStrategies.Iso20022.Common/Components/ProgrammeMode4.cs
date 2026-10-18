@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ProgrammeMode4
 {
     /// <summary>
-    /// Additional Identification.
+    /// Proposed Identification.
     /// </summary>
-    [DisplayName("Additional Identification")]
-    [IsoXmlTag("AddtlId")]
-    public ValueList<AdditionalData1> AdditionalIdentification { get; init; } = [];
+    [DisplayName("Proposed Identification")]
+    [IsoXmlTag("PropsdId")]
+    public ValueList<Max35Text> ProposedIdentification { get; init; } = [];
 
     /// <summary>
     /// Applied Identification.
@@ -31,16 +31,16 @@ public record ProgrammeMode4
     public Max35Text? AppliedIdentification { get; init; }
 
     /// <summary>
+    /// Additional Identification.
+    /// </summary>
+    [DisplayName("Additional Identification")]
+    [IsoXmlTag("AddtlId")]
+    public ValueList<AdditionalData1> AdditionalIdentification { get; init; } = [];
+
+    /// <summary>
     /// Identification Selected By.
     /// </summary>
     [DisplayName("Identification Selected By")]
     [IsoXmlTag("IdSelctdBy")]
     public PartyType20Code? IdentificationSelectedBy { get; init; }
-
-    /// <summary>
-    /// Proposed Identification.
-    /// </summary>
-    [DisplayName("Proposed Identification")]
-    [IsoXmlTag("PropsdId")]
-    public ValueList<Max35Text> ProposedIdentification { get; init; } = [];
 }

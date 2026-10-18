@@ -60,19 +60,19 @@ public record FIToFICustomerCreditTransferV14 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Set of characteristics shared by all individual transactions included in the message.
+    /// </summary>
+    [DisplayName("Group Header")]
+    [IsoXmlTag("GrpHdr")]
+    public required GroupHeader131 GroupHeader { get; init; }
+
+    /// <summary>
     /// Set of elements providing information specific to the individual credit transfer(s).
     /// </summary>
     [DisplayName("Credit Transfer Transaction Information")]
     [IsoXmlTag("CdtTrfTxInf")]
     public ValueList<CreditTransferTransaction73> CreditTransferTransactionInformation { get; init; } =
         [];
-
-    /// <summary>
-    /// Set of characteristics shared by all individual transactions included in the message.
-    /// </summary>
-    [DisplayName("Group Header")]
-    [IsoXmlTag("GrpHdr")]
-    public required GroupHeader131 GroupHeader { get; init; }
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.

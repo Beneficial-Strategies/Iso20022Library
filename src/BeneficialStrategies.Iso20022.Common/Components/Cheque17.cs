@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Cheque17
 {
     /// <summary>
-    /// Amount.
+    /// Instruction Identification.
     /// </summary>
-    [DisplayName("Amount")]
-    [IsoXmlTag("Amt")]
-    public required ActiveCurrencyAndAmount Amount { get; init; }
+    [DisplayName("Instruction Identification")]
+    [IsoXmlTag("InstrId")]
+    public Max35Text? InstructionIdentification { get; init; }
 
     /// <summary>
     /// Cheque Number.
@@ -31,34 +31,6 @@ public record Cheque17
     public required Max35Text ChequeNumber { get; init; }
 
     /// <summary>
-    /// Drawer Agent.
-    /// </summary>
-    [DisplayName("Drawer Agent")]
-    [IsoXmlTag("DrwrAgt")]
-    public BranchAndFinancialInstitutionIdentification8? DrawerAgent { get; init; }
-
-    /// <summary>
-    /// Drawer Agent Account.
-    /// </summary>
-    [DisplayName("Drawer Agent Account")]
-    [IsoXmlTag("DrwrAgtAcct")]
-    public CashAccount40? DrawerAgentAccount { get; init; }
-
-    /// <summary>
-    /// Instruction For Cheque Agent.
-    /// </summary>
-    [DisplayName("Instruction For Cheque Agent")]
-    [IsoXmlTag("InstrForChqAgt")]
-    public ValueList<InstructionForChequeAgent1> InstructionForChequeAgent { get; init; } = [];
-
-    /// <summary>
-    /// Instruction Identification.
-    /// </summary>
-    [DisplayName("Instruction Identification")]
-    [IsoXmlTag("InstrId")]
-    public Max35Text? InstructionIdentification { get; init; }
-
-    /// <summary>
     /// Issue Date.
     /// </summary>
     [DisplayName("Issue Date")]
@@ -66,18 +38,25 @@ public record Cheque17
     public required ISODate IssueDate { get; init; }
 
     /// <summary>
-    /// Payee.
+    /// Stale Date.
     /// </summary>
-    [DisplayName("Payee")]
-    [IsoXmlTag("Pyee")]
-    public required PartyIdentification272 Payee { get; init; }
+    [DisplayName("Stale Date")]
+    [IsoXmlTag("StlDt")]
+    public ISODate? StaleDate { get; init; }
 
     /// <summary>
-    /// Payee Account.
+    /// Amount.
     /// </summary>
-    [DisplayName("Payee Account")]
-    [IsoXmlTag("PyeeAcct")]
-    public CashAccount40? PayeeAccount { get; init; }
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    public required ActiveCurrencyAndAmount Amount { get; init; }
+
+    /// <summary>
+    /// Value Date.
+    /// </summary>
+    [DisplayName("Value Date")]
+    [IsoXmlTag("ValDt")]
+    public DateAndDateTime2Choice_? ValueDate { get; init; }
 
     /// <summary>
     /// Payer.
@@ -94,16 +73,37 @@ public record Cheque17
     public CashAccount40? PayerAccount { get; init; }
 
     /// <summary>
-    /// Stale Date.
+    /// Drawer Agent.
     /// </summary>
-    [DisplayName("Stale Date")]
-    [IsoXmlTag("StlDt")]
-    public ISODate? StaleDate { get; init; }
+    [DisplayName("Drawer Agent")]
+    [IsoXmlTag("DrwrAgt")]
+    public BranchAndFinancialInstitutionIdentification8? DrawerAgent { get; init; }
 
     /// <summary>
-    /// Value Date.
+    /// Drawer Agent Account.
     /// </summary>
-    [DisplayName("Value Date")]
-    [IsoXmlTag("ValDt")]
-    public DateAndDateTime2Choice_? ValueDate { get; init; }
+    [DisplayName("Drawer Agent Account")]
+    [IsoXmlTag("DrwrAgtAcct")]
+    public CashAccount40? DrawerAgentAccount { get; init; }
+
+    /// <summary>
+    /// Payee.
+    /// </summary>
+    [DisplayName("Payee")]
+    [IsoXmlTag("Pyee")]
+    public required PartyIdentification272 Payee { get; init; }
+
+    /// <summary>
+    /// Payee Account.
+    /// </summary>
+    [DisplayName("Payee Account")]
+    [IsoXmlTag("PyeeAcct")]
+    public CashAccount40? PayeeAccount { get; init; }
+
+    /// <summary>
+    /// Instruction For Cheque Agent.
+    /// </summary>
+    [DisplayName("Instruction For Cheque Agent")]
+    [IsoXmlTag("InstrForChqAgt")]
+    public ValueList<InstructionForChequeAgent1> InstructionForChequeAgent { get; init; } = [];
 }

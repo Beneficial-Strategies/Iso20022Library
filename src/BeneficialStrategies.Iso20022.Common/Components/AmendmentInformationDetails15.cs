@@ -20,6 +20,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AmendmentInformationDetails15
 {
     /// <summary>
+    /// Unique identification, as assigned by the creditor, to unambiguously identify the original mandate.
+    /// </summary>
+    [DisplayName("Original Mandate Identification")]
+    [IsoXmlTag("OrgnlMndtId")]
+    public Max35Text? OriginalMandateIdentification { get; init; }
+
+    /// <summary>
+    /// Original creditor scheme identification that has been modified.
+    /// </summary>
+    [DisplayName("Original Creditor Scheme Identification")]
+    [IsoXmlTag("OrgnlCdtrSchmeId")]
+    public PartyIdentification272? OriginalCreditorSchemeIdentification { get; init; }
+
+    /// <summary>
     /// Original creditor agent that has been modified.
     /// </summary>
     [DisplayName("Original Creditor Agent")]
@@ -32,13 +46,6 @@ public record AmendmentInformationDetails15
     [DisplayName("Original Creditor Agent Account")]
     [IsoXmlTag("OrgnlCdtrAgtAcct")]
     public CashAccount40? OriginalCreditorAgentAccount { get; init; }
-
-    /// <summary>
-    /// Original creditor scheme identification that has been modified.
-    /// </summary>
-    [DisplayName("Original Creditor Scheme Identification")]
-    [IsoXmlTag("OrgnlCdtrSchmeId")]
-    public PartyIdentification272? OriginalCreditorSchemeIdentification { get; init; }
 
     /// <summary>
     /// Original debtor that has been modified.
@@ -81,13 +88,6 @@ public record AmendmentInformationDetails15
     [DisplayName("Original Frequency")]
     [IsoXmlTag("OrgnlFrqcy")]
     public Frequency36Choice_? OriginalFrequency { get; init; }
-
-    /// <summary>
-    /// Unique identification, as assigned by the creditor, to unambiguously identify the original mandate.
-    /// </summary>
-    [DisplayName("Original Mandate Identification")]
-    [IsoXmlTag("OrgnlMndtId")]
-    public Max35Text? OriginalMandateIdentification { get; init; }
 
     /// <summary>
     /// Original reason for the mandate to allow the user to distinguish between different mandates for the same creditor.

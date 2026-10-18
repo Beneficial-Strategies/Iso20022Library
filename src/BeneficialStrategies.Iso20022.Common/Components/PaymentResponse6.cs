@@ -17,53 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PaymentResponse6
 {
     /// <summary>
-    /// Customer Order.
+    /// Sale Transaction Identification.
     /// </summary>
-    [DisplayName("Customer Order")]
-    [IsoXmlTag("CstmrOrdr")]
-    public ValueList<CustomerOrder1> CustomerOrder { get; init; } = [];
-
-    /// <summary>
-    /// Issuer Reference Data.
-    /// </summary>
-    [DisplayName("Issuer Reference Data")]
-    [IsoXmlTag("IssrRefData")]
-    public Max140Text? IssuerReferenceData { get; init; }
-
-    /// <summary>
-    /// Loyalty Result.
-    /// </summary>
-    [DisplayName("Loyalty Result")]
-    [IsoXmlTag("LltyRslt")]
-    public ValueList<LoyaltyResult3> LoyaltyResult { get; init; } = [];
-
-    /// <summary>
-    /// Payment Receipt.
-    /// </summary>
-    [DisplayName("Payment Receipt")]
-    [IsoXmlTag("PmtRct")]
-    public ValueList<PaymentReceipt6> PaymentReceipt { get; init; } = [];
-
-    /// <summary>
-    /// POI Reconciliation Identification.
-    /// </summary>
-    [DisplayName("POI Reconciliation Identification")]
-    [IsoXmlTag("POIRcncltnId")]
-    public Max35Text? POIReconciliationIdentification { get; init; }
-
-    /// <summary>
-    /// POI Transaction Identification.
-    /// </summary>
-    [DisplayName("POI Transaction Identification")]
-    [IsoXmlTag("POITxId")]
-    public required TransactionIdentifier1 POITransactionIdentification { get; init; }
-
-    /// <summary>
-    /// Retailer Payment Result.
-    /// </summary>
-    [DisplayName("Retailer Payment Result")]
-    [IsoXmlTag("RtlrPmtRslt")]
-    public required RetailerPaymentResult6 RetailerPaymentResult { get; init; }
+    [DisplayName("Sale Transaction Identification")]
+    [IsoXmlTag("SaleTxId")]
+    public required TransactionIdentifier1 SaleTransactionIdentification { get; init; }
 
     /// <summary>
     /// Sale Reference Identification.
@@ -73,9 +31,51 @@ public record PaymentResponse6
     public Max35Text? SaleReferenceIdentification { get; init; }
 
     /// <summary>
-    /// Sale Transaction Identification.
+    /// POI Transaction Identification.
     /// </summary>
-    [DisplayName("Sale Transaction Identification")]
-    [IsoXmlTag("SaleTxId")]
-    public required TransactionIdentifier1 SaleTransactionIdentification { get; init; }
+    [DisplayName("POI Transaction Identification")]
+    [IsoXmlTag("POITxId")]
+    public required TransactionIdentifier1 POITransactionIdentification { get; init; }
+
+    /// <summary>
+    /// POI Reconciliation Identification.
+    /// </summary>
+    [DisplayName("POI Reconciliation Identification")]
+    [IsoXmlTag("POIRcncltnId")]
+    public Max35Text? POIReconciliationIdentification { get; init; }
+
+    /// <summary>
+    /// Issuer Reference Data.
+    /// </summary>
+    [DisplayName("Issuer Reference Data")]
+    [IsoXmlTag("IssrRefData")]
+    public Max140Text? IssuerReferenceData { get; init; }
+
+    /// <summary>
+    /// Retailer Payment Result.
+    /// </summary>
+    [DisplayName("Retailer Payment Result")]
+    [IsoXmlTag("RtlrPmtRslt")]
+    public required RetailerPaymentResult6 RetailerPaymentResult { get; init; }
+
+    /// <summary>
+    /// Payment Receipt.
+    /// </summary>
+    [DisplayName("Payment Receipt")]
+    [IsoXmlTag("PmtRct")]
+    public ValueList<PaymentReceipt6> PaymentReceipt { get; init; } = [];
+
+    /// <summary>
+    /// Loyalty Result.
+    /// </summary>
+    [DisplayName("Loyalty Result")]
+    [IsoXmlTag("LltyRslt")]
+    public ValueList<LoyaltyResult3> LoyaltyResult { get; init; } = [];
+
+    /// <summary>
+    /// Customer Order.
+    /// </summary>
+    [DisplayName("Customer Order")]
+    [IsoXmlTag("CstmrOrdr")]
+    public ValueList<CustomerOrder1> CustomerOrder { get; init; } = [];
 }

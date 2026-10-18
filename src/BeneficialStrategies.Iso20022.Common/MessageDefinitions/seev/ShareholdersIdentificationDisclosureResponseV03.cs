@@ -46,18 +46,11 @@ public record ShareholdersIdentificationDisclosureResponseV03 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Disclosure Information.
+    /// Pagination.
     /// </summary>
-    [DisplayName("Disclosure Information")]
-    [IsoXmlTag("DsclsrInf")]
-    public required Disclosure3Choice_ DisclosureInformation { get; init; }
-
-    /// <summary>
-    /// Disclosure Response Identification.
-    /// </summary>
-    [DisplayName("Disclosure Response Identification")]
-    [IsoXmlTag("DsclsrRspnId")]
-    public required Max35Text DisclosureResponseIdentification { get; init; }
+    [DisplayName("Pagination")]
+    [IsoXmlTag("Pgntn")]
+    public Pagination1? Pagination { get; init; }
 
     /// <summary>
     /// Issuer Disclosure Request Reference.
@@ -67,11 +60,11 @@ public record ShareholdersIdentificationDisclosureResponseV03 : IOuterRecord
     public required DisclosureRequestIdentification1 IssuerDisclosureRequestReference { get; init; }
 
     /// <summary>
-    /// Pagination.
+    /// Disclosure Response Identification.
     /// </summary>
-    [DisplayName("Pagination")]
-    [IsoXmlTag("Pgntn")]
-    public Pagination1? Pagination { get; init; }
+    [DisplayName("Disclosure Response Identification")]
+    [IsoXmlTag("DsclsrRspnId")]
+    public required Max35Text DisclosureResponseIdentification { get; init; }
 
     /// <summary>
     /// Responding Intermediary.
@@ -79,6 +72,13 @@ public record ShareholdersIdentificationDisclosureResponseV03 : IOuterRecord
     [DisplayName("Responding Intermediary")]
     [IsoXmlTag("RspndgIntrmy")]
     public required PartyIdentification219 RespondingIntermediary { get; init; }
+
+    /// <summary>
+    /// Disclosure Information.
+    /// </summary>
+    [DisplayName("Disclosure Information")]
+    [IsoXmlTag("DsclsrInf")]
+    public required Disclosure3Choice_ DisclosureInformation { get; init; }
 
     /// <summary>
     /// Supplementary Data.

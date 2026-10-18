@@ -62,18 +62,11 @@ public record SecuritiesFinancingStatusAdviceV10 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Provides the matching status of an instruction as per the account servicer based on an allegement. At this time no matching took place on the market (at the CSD/ICSD).
+    /// Provides unambiguous transaction identification information.
     /// </summary>
-    [DisplayName("Inferred Matching Status")]
-    [IsoXmlTag("IfrrdMtchgSts")]
-    public MatchingStatus26Choice_? InferredMatchingStatus { get; init; }
-
-    /// <summary>
-    /// Provides the matching status of the instruction.
-    /// </summary>
-    [DisplayName("Matching Status")]
-    [IsoXmlTag("MtchgSts")]
-    public MatchingStatus26Choice_? MatchingStatus { get; init; }
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public required TransactionIdentifications53 TransactionIdentification { get; init; }
 
     /// <summary>
     /// Processing status of the transaction.
@@ -83,11 +76,18 @@ public record SecuritiesFinancingStatusAdviceV10 : IOuterRecord
     public ProcessingStatus83Choice_? ProcessingStatus { get; init; }
 
     /// <summary>
-    /// Provides the status of the repurchase agreement call request.
+    /// Provides the matching status of the instruction.
     /// </summary>
-    [DisplayName("Repo Call Request Status")]
-    [IsoXmlTag("RepoCallReqSts")]
-    public RepoCallRequestStatus7Choice_? RepoCallRequestStatus { get; init; }
+    [DisplayName("Matching Status")]
+    [IsoXmlTag("MtchgSts")]
+    public MatchingStatus26Choice_? MatchingStatus { get; init; }
+
+    /// <summary>
+    /// Provides the matching status of an instruction as per the account servicer based on an allegement. At this time no matching took place on the market (at the CSD/ICSD).
+    /// </summary>
+    [DisplayName("Inferred Matching Status")]
+    [IsoXmlTag("IfrrdMtchgSts")]
+    public MatchingStatus26Choice_? InferredMatchingStatus { get; init; }
 
     /// <summary>
     /// Provides the status of settlement of a transaction.
@@ -97,11 +97,11 @@ public record SecuritiesFinancingStatusAdviceV10 : IOuterRecord
     public SettlementStatus18Choice_? SettlementStatus { get; init; }
 
     /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// Provides the status of the repurchase agreement call request.
     /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
+    [DisplayName("Repo Call Request Status")]
+    [IsoXmlTag("RepoCallReqSts")]
+    public RepoCallRequestStatus7Choice_? RepoCallRequestStatus { get; init; }
 
     /// <summary>
     /// Identifies the details of the transaction.
@@ -111,9 +111,9 @@ public record SecuritiesFinancingStatusAdviceV10 : IOuterRecord
     public SecuritiesFinancingTransactionDetails57? TransactionDetails { get; init; }
 
     /// <summary>
-    /// Provides unambiguous transaction identification information.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public required TransactionIdentifications53 TransactionIdentification { get; init; }
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

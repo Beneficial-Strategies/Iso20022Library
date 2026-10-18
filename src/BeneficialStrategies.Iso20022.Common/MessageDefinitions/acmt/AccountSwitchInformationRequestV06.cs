@@ -46,25 +46,18 @@ public record AccountSwitchInformationRequestV06 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Switch Details.
-    /// </summary>
-    [DisplayName("Account Switch Details")]
-    [IsoXmlTag("AcctSwtchDtls")]
-    public required AccountSwitchDetails1 AccountSwitchDetails { get; init; }
-
-    /// <summary>
-    /// Balance Transfer.
-    /// </summary>
-    [DisplayName("Balance Transfer")]
-    [IsoXmlTag("BalTrf")]
-    public ValueList<BalanceTransfer7> BalanceTransfer { get; init; } = [];
-
-    /// <summary>
     /// Message Identification.
     /// </summary>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     public required MessageIdentification1 MessageIdentification { get; init; }
+
+    /// <summary>
+    /// Account Switch Details.
+    /// </summary>
+    [DisplayName("Account Switch Details")]
+    [IsoXmlTag("AcctSwtchDtls")]
+    public required AccountSwitchDetails1 AccountSwitchDetails { get; init; }
 
     /// <summary>
     /// New Account.
@@ -79,6 +72,13 @@ public record AccountSwitchInformationRequestV06 : IOuterRecord
     [DisplayName("Old Account")]
     [IsoXmlTag("OdAcct")]
     public required CashAccount43 OldAccount { get; init; }
+
+    /// <summary>
+    /// Balance Transfer.
+    /// </summary>
+    [DisplayName("Balance Transfer")]
+    [IsoXmlTag("BalTrf")]
+    public ValueList<BalanceTransfer7> BalanceTransfer { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

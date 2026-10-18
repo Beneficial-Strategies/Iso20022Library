@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AmountAndCurrency2
 {
     /// <summary>
-    /// Amount.
-    /// </summary>
-    [DisplayName("Amount")]
-    [IsoXmlTag("Amt")]
-    public ImpliedCurrencyAndAmount? Amount { get; init; }
-
-    /// <summary>
     /// Currency.
     /// </summary>
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
     public required ActiveCurrencyCode Currency { get; init; }
+
+    /// <summary>
+    /// Amount.
+    /// </summary>
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    public ImpliedCurrencyAndAmount? Amount { get; init; }
 }

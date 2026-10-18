@@ -46,18 +46,18 @@ public record CreateLimitV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Limit Data.
-    /// </summary>
-    [DisplayName("Limit Data")]
-    [IsoXmlTag("LmtData")]
-    public ValueList<LimitStructure6> LimitData { get; init; } = [];
-
-    /// <summary>
     /// Message Header.
     /// </summary>
     [DisplayName("Message Header")]
     [IsoXmlTag("MsgHdr")]
     public required MessageHeader1 MessageHeader { get; init; }
+
+    /// <summary>
+    /// Limit Data.
+    /// </summary>
+    [DisplayName("Limit Data")]
+    [IsoXmlTag("LmtData")]
+    public ValueList<LimitStructure6> LimitData { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

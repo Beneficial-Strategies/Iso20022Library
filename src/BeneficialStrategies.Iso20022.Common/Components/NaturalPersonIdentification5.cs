@@ -17,6 +17,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record NaturalPersonIdentification5
 {
     /// <summary>
+    /// Person Name.
+    /// </summary>
+    [DisplayName("Person Name")]
+    [IsoXmlTag("PrsnNm")]
+    public ValueList<Max500Text> PersonName { get; init; } = [];
+
+    /// <summary>
+    /// NPI.
+    /// </summary>
+    [DisplayName("NPI")]
+    [IsoXmlTag("NPI")]
+    public NPIIdentifier? NPI { get; init; }
+
+    /// <summary>
     /// Alternate Identification.
     /// </summary>
     [DisplayName("Alternate Identification")]
@@ -31,30 +45,16 @@ public record NaturalPersonIdentification5
     public ExternalEntitySize1Code? EntitySize { get; init; }
 
     /// <summary>
-    /// Entity Type.
-    /// </summary>
-    [DisplayName("Entity Type")]
-    [IsoXmlTag("NttyTp")]
-    public ExternalEntityType1Code? EntityType { get; init; }
-
-    /// <summary>
-    /// NPI.
-    /// </summary>
-    [DisplayName("NPI")]
-    [IsoXmlTag("NPI")]
-    public NPIIdentifier? NPI { get; init; }
-
-    /// <summary>
-    /// Person Name.
-    /// </summary>
-    [DisplayName("Person Name")]
-    [IsoXmlTag("PrsnNm")]
-    public ValueList<Max500Text> PersonName { get; init; } = [];
-
-    /// <summary>
     /// Sector.
     /// </summary>
     [DisplayName("Sector")]
     [IsoXmlTag("Sctr")]
     public ValueList<IndustrySector3Choice_> Sector { get; init; } = [];
+
+    /// <summary>
+    /// Entity Type.
+    /// </summary>
+    [DisplayName("Entity Type")]
+    [IsoXmlTag("NttyTp")]
+    public ExternalEntityType1Code? EntityType { get; init; }
 }

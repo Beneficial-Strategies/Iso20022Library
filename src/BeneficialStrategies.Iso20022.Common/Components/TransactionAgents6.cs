@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TransactionAgents6
 {
     /// <summary>
-    /// Creditor Agent.
+    /// Instructing Agent.
     /// </summary>
-    [DisplayName("Creditor Agent")]
-    [IsoXmlTag("CdtrAgt")]
-    public BranchAndFinancialInstitutionIdentification8? CreditorAgent { get; init; }
-
-    /// <summary>
-    /// Debtor Agent.
-    /// </summary>
-    [DisplayName("Debtor Agent")]
-    [IsoXmlTag("DbtrAgt")]
-    public BranchAndFinancialInstitutionIdentification8? DebtorAgent { get; init; }
-
-    /// <summary>
-    /// Delivering Agent.
-    /// </summary>
-    [DisplayName("Delivering Agent")]
-    [IsoXmlTag("DlvrgAgt")]
-    public BranchAndFinancialInstitutionIdentification8? DeliveringAgent { get; init; }
+    [DisplayName("Instructing Agent")]
+    [IsoXmlTag("InstgAgt")]
+    public BranchAndFinancialInstitutionIdentification8? InstructingAgent { get; init; }
 
     /// <summary>
     /// Instructed Agent.
@@ -45,11 +31,18 @@ public record TransactionAgents6
     public BranchAndFinancialInstitutionIdentification8? InstructedAgent { get; init; }
 
     /// <summary>
-    /// Instructing Agent.
+    /// Debtor Agent.
     /// </summary>
-    [DisplayName("Instructing Agent")]
-    [IsoXmlTag("InstgAgt")]
-    public BranchAndFinancialInstitutionIdentification8? InstructingAgent { get; init; }
+    [DisplayName("Debtor Agent")]
+    [IsoXmlTag("DbtrAgt")]
+    public BranchAndFinancialInstitutionIdentification8? DebtorAgent { get; init; }
+
+    /// <summary>
+    /// Creditor Agent.
+    /// </summary>
+    [DisplayName("Creditor Agent")]
+    [IsoXmlTag("CdtrAgt")]
+    public BranchAndFinancialInstitutionIdentification8? CreditorAgent { get; init; }
 
     /// <summary>
     /// Intermediary Agent1.
@@ -73,20 +66,6 @@ public record TransactionAgents6
     public BranchAndFinancialInstitutionIdentification8? IntermediaryAgent3 { get; init; }
 
     /// <summary>
-    /// Issuing Agent.
-    /// </summary>
-    [DisplayName("Issuing Agent")]
-    [IsoXmlTag("IssgAgt")]
-    public BranchAndFinancialInstitutionIdentification8? IssuingAgent { get; init; }
-
-    /// <summary>
-    /// Proprietary.
-    /// </summary>
-    [DisplayName("Proprietary")]
-    [IsoXmlTag("Prtry")]
-    public ValueList<ProprietaryAgent5> Proprietary { get; init; } = [];
-
-    /// <summary>
     /// Receiving Agent.
     /// </summary>
     [DisplayName("Receiving Agent")]
@@ -94,9 +73,30 @@ public record TransactionAgents6
     public BranchAndFinancialInstitutionIdentification8? ReceivingAgent { get; init; }
 
     /// <summary>
+    /// Delivering Agent.
+    /// </summary>
+    [DisplayName("Delivering Agent")]
+    [IsoXmlTag("DlvrgAgt")]
+    public BranchAndFinancialInstitutionIdentification8? DeliveringAgent { get; init; }
+
+    /// <summary>
+    /// Issuing Agent.
+    /// </summary>
+    [DisplayName("Issuing Agent")]
+    [IsoXmlTag("IssgAgt")]
+    public BranchAndFinancialInstitutionIdentification8? IssuingAgent { get; init; }
+
+    /// <summary>
     /// Settlement Place.
     /// </summary>
     [DisplayName("Settlement Place")]
     [IsoXmlTag("SttlmPlc")]
     public BranchAndFinancialInstitutionIdentification8? SettlementPlace { get; init; }
+
+    /// <summary>
+    /// Proprietary.
+    /// </summary>
+    [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
+    public ValueList<ProprietaryAgent5> Proprietary { get; init; } = [];
 }

@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record MobileData6
 {
     /// <summary>
-    /// Geolocation.
-    /// </summary>
-    [DisplayName("Geolocation")]
-    [IsoXmlTag("Glctn")]
-    public Geolocation1? Geolocation { get; init; }
-
-    /// <summary>
     /// Mobile Country Code.
     /// </summary>
     [DisplayName("Mobile Country Code")]
     [IsoXmlTag("MobCtryCd")]
     public Min2Max3AlphaText? MobileCountryCode { get; init; }
-
-    /// <summary>
-    /// Mobile Masked MSISDN.
-    /// </summary>
-    [DisplayName("Mobile Masked MSISDN")]
-    [IsoXmlTag("MobMskdMSISDN")]
-    public Max35Text? MobileMaskedMSISDN { get; init; }
 
     /// <summary>
     /// Mobile Network Code.
@@ -45,11 +31,18 @@ public record MobileData6
     public Min2Max3NumericText? MobileNetworkCode { get; init; }
 
     /// <summary>
-    /// Protected Mobile Data.
+    /// Mobile Masked MSISDN.
     /// </summary>
-    [DisplayName("Protected Mobile Data")]
-    [IsoXmlTag("PrtctdMobData")]
-    public ContentInformationType40? ProtectedMobileData { get; init; }
+    [DisplayName("Mobile Masked MSISDN")]
+    [IsoXmlTag("MobMskdMSISDN")]
+    public Max35Text? MobileMaskedMSISDN { get; init; }
+
+    /// <summary>
+    /// Geolocation.
+    /// </summary>
+    [DisplayName("Geolocation")]
+    [IsoXmlTag("Glctn")]
+    public Geolocation1? Geolocation { get; init; }
 
     /// <summary>
     /// Sensitive Mobile Data.
@@ -57,4 +50,11 @@ public record MobileData6
     [DisplayName("Sensitive Mobile Data")]
     [IsoXmlTag("SnstvMobData")]
     public SensitiveMobileData1? SensitiveMobileData { get; init; }
+
+    /// <summary>
+    /// Protected Mobile Data.
+    /// </summary>
+    [DisplayName("Protected Mobile Data")]
+    [IsoXmlTag("PrtctdMobData")]
+    public ContentInformationType40? ProtectedMobileData { get; init; }
 }

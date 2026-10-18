@@ -17,25 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AcceptorConfigurationDataSet5
 {
     /// <summary>
-    /// Configuration Scope.
-    /// </summary>
-    [DisplayName("Configuration Scope")]
-    [IsoXmlTag("CfgtnScp")]
-    public PartyType15Code? ConfigurationScope { get; init; }
-
-    /// <summary>
-    /// Content.
-    /// </summary>
-    [DisplayName("Content")]
-    [IsoXmlTag("Cntt")]
-    public required AcceptorConfigurationContent13 Content { get; init; }
-
-    /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     public required DataSetIdentification10 Identification { get; init; }
+
+    /// <summary>
+    /// Sequence Counter.
+    /// </summary>
+    [DisplayName("Sequence Counter")]
+    [IsoXmlTag("SeqCntr")]
+    public Max9NumericText? SequenceCounter { get; init; }
 
     /// <summary>
     /// Last Sequence.
@@ -52,9 +45,16 @@ public record AcceptorConfigurationDataSet5
     public ValueList<GenericIdentification176> POIIdentification { get; init; } = [];
 
     /// <summary>
-    /// Sequence Counter.
+    /// Configuration Scope.
     /// </summary>
-    [DisplayName("Sequence Counter")]
-    [IsoXmlTag("SeqCntr")]
-    public Max9NumericText? SequenceCounter { get; init; }
+    [DisplayName("Configuration Scope")]
+    [IsoXmlTag("CfgtnScp")]
+    public PartyType15Code? ConfigurationScope { get; init; }
+
+    /// <summary>
+    /// Content.
+    /// </summary>
+    [DisplayName("Content")]
+    [IsoXmlTag("Cntt")]
+    public required AcceptorConfigurationContent13 Content { get; init; }
 }

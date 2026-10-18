@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ReportingAssetBreakdown2
 {
     /// <summary>
-    /// Amount.
+    /// Reporting Asset Type.
     /// </summary>
-    [DisplayName("Amount")]
-    [IsoXmlTag("Amt")]
-    public required ActiveCurrencyAndAmount Amount { get; init; }
+    [DisplayName("Reporting Asset Type")]
+    [IsoXmlTag("RptgAsstTp")]
+    public required ProductType6Code ReportingAssetType { get; init; }
 
     /// <summary>
     /// Debt Issuer Type.
@@ -38,9 +38,9 @@ public record ReportingAssetBreakdown2
     public Max350Text? Identification { get; init; }
 
     /// <summary>
-    /// Reporting Asset Type.
+    /// Amount.
     /// </summary>
-    [DisplayName("Reporting Asset Type")]
-    [IsoXmlTag("RptgAsstTp")]
-    public required ProductType6Code ReportingAssetType { get; init; }
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    public required ActiveCurrencyAndAmount Amount { get; init; }
 }

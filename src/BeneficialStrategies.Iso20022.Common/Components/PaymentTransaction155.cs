@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PaymentTransaction155
 {
     /// <summary>
-    /// Assignee.
-    /// </summary>
-    [DisplayName("Assignee")]
-    [IsoXmlTag("Assgne")]
-    public BranchAndFinancialInstitutionIdentification8? Assignee { get; init; }
-
-    /// <summary>
-    /// Assigner.
-    /// </summary>
-    [DisplayName("Assigner")]
-    [IsoXmlTag("Assgnr")]
-    public BranchAndFinancialInstitutionIdentification8? Assigner { get; init; }
-
-    /// <summary>
     /// Cancellation Identification.
     /// </summary>
     [DisplayName("Cancellation Identification")]
@@ -38,32 +24,11 @@ public record PaymentTransaction155
     public Max35Text? CancellationIdentification { get; init; }
 
     /// <summary>
-    /// Cancellation Reason Information.
-    /// </summary>
-    [DisplayName("Cancellation Reason Information")]
-    [IsoXmlTag("CxlRsnInf")]
-    public ValueList<PaymentCancellationReason6> CancellationReasonInformation { get; init; } = [];
-
-    /// <summary>
     /// Case.
     /// </summary>
     [DisplayName("Case")]
     [IsoXmlTag("Case")]
     public Case6? Case { get; init; }
-
-    /// <summary>
-    /// Original Clearing System Reference.
-    /// </summary>
-    [DisplayName("Original Clearing System Reference")]
-    [IsoXmlTag("OrgnlClrSysRef")]
-    public Max35Text? OriginalClearingSystemReference { get; init; }
-
-    /// <summary>
-    /// Original End To End Identification.
-    /// </summary>
-    [DisplayName("Original End To End Identification")]
-    [IsoXmlTag("OrgnlEndToEndId")]
-    public Max35Text? OriginalEndToEndIdentification { get; init; }
 
     /// <summary>
     /// Original Group Information.
@@ -80,6 +45,34 @@ public record PaymentTransaction155
     public Max35Text? OriginalInstructionIdentification { get; init; }
 
     /// <summary>
+    /// Original End To End Identification.
+    /// </summary>
+    [DisplayName("Original End To End Identification")]
+    [IsoXmlTag("OrgnlEndToEndId")]
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
+
+    /// <summary>
+    /// Original Transaction Identification.
+    /// </summary>
+    [DisplayName("Original Transaction Identification")]
+    [IsoXmlTag("OrgnlTxId")]
+    public Max35Text? OriginalTransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Original UETR.
+    /// </summary>
+    [DisplayName("Original UETR")]
+    [IsoXmlTag("OrgnlUETR")]
+    public UUIDv4Identifier? OriginalUETR { get; init; }
+
+    /// <summary>
+    /// Original Clearing System Reference.
+    /// </summary>
+    [DisplayName("Original Clearing System Reference")]
+    [IsoXmlTag("OrgnlClrSysRef")]
+    public Max35Text? OriginalClearingSystemReference { get; init; }
+
+    /// <summary>
     /// Original Interbank Settlement Amount.
     /// </summary>
     [DisplayName("Original Interbank Settlement Amount")]
@@ -94,11 +87,25 @@ public record PaymentTransaction155
     public ISODate? OriginalInterbankSettlementDate { get; init; }
 
     /// <summary>
-    /// Original Transaction Identification.
+    /// Assigner.
     /// </summary>
-    [DisplayName("Original Transaction Identification")]
-    [IsoXmlTag("OrgnlTxId")]
-    public Max35Text? OriginalTransactionIdentification { get; init; }
+    [DisplayName("Assigner")]
+    [IsoXmlTag("Assgnr")]
+    public BranchAndFinancialInstitutionIdentification8? Assigner { get; init; }
+
+    /// <summary>
+    /// Assignee.
+    /// </summary>
+    [DisplayName("Assignee")]
+    [IsoXmlTag("Assgne")]
+    public BranchAndFinancialInstitutionIdentification8? Assignee { get; init; }
+
+    /// <summary>
+    /// Cancellation Reason Information.
+    /// </summary>
+    [DisplayName("Cancellation Reason Information")]
+    [IsoXmlTag("CxlRsnInf")]
+    public ValueList<PaymentCancellationReason6> CancellationReasonInformation { get; init; } = [];
 
     /// <summary>
     /// Original Transaction Reference.
@@ -106,13 +113,6 @@ public record PaymentTransaction155
     [DisplayName("Original Transaction Reference")]
     [IsoXmlTag("OrgnlTxRef")]
     public OriginalTransactionReference42? OriginalTransactionReference { get; init; }
-
-    /// <summary>
-    /// Original UETR.
-    /// </summary>
-    [DisplayName("Original UETR")]
-    [IsoXmlTag("OrgnlUETR")]
-    public UUIDv4Identifier? OriginalUETR { get; init; }
 
     /// <summary>
     /// Supplementary Data.

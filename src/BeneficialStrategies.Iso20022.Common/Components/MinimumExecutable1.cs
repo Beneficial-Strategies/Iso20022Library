@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record MinimumExecutable1
 {
     /// <summary>
-    /// First Execution Only.
-    /// </summary>
-    [DisplayName("First Execution Only")]
-    [IsoXmlTag("FrstExctnOnly")]
-    public TrueFalseIndicator? FirstExecutionOnly { get; init; }
-
-    /// <summary>
     /// Size.
     /// </summary>
     [DisplayName("Size")]
     [IsoXmlTag("Sz")]
     public FinancialInstrumentQuantity25Choice_? Size { get; init; }
+
+    /// <summary>
+    /// First Execution Only.
+    /// </summary>
+    [DisplayName("First Execution Only")]
+    [IsoXmlTag("FrstExctnOnly")]
+    public TrueFalseIndicator? FirstExecutionOnly { get; init; }
 }

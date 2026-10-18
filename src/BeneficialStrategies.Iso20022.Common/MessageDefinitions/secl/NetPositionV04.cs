@@ -46,6 +46,20 @@ public record NetPositionV04 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Report Parameters.
+    /// </summary>
+    [DisplayName("Report Parameters")]
+    [IsoXmlTag("RptParams")]
+    public required ReportParameters7 ReportParameters { get; init; }
+
+    /// <summary>
+    /// Pagination.
+    /// </summary>
+    [DisplayName("Pagination")]
+    [IsoXmlTag("Pgntn")]
+    public required Pagination1 Pagination { get; init; }
+
+    /// <summary>
     /// Clearing Member.
     /// </summary>
     [DisplayName("Clearing Member")]
@@ -65,20 +79,6 @@ public record NetPositionV04 : IOuterRecord
     [DisplayName("Net Position Report")]
     [IsoXmlTag("NetPosRpt")]
     public ValueList<NetPosition4> NetPositionReport { get; init; } = [];
-
-    /// <summary>
-    /// Pagination.
-    /// </summary>
-    [DisplayName("Pagination")]
-    [IsoXmlTag("Pgntn")]
-    public required Pagination1 Pagination { get; init; }
-
-    /// <summary>
-    /// Report Parameters.
-    /// </summary>
-    [DisplayName("Report Parameters")]
-    [IsoXmlTag("RptParams")]
-    public required ReportParameters7 ReportParameters { get; init; }
 
     /// <summary>
     /// Supplementary Data.

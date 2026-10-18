@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ReconciliationCategory4
 {
     /// <summary>
-    /// Further Modification.
-    /// </summary>
-    [DisplayName("Further Modification")]
-    [IsoXmlTag("FrthrMod")]
-    public required YesNoIndicator FurtherModification { get; init; }
-
-    /// <summary>
     /// Revived.
     /// </summary>
     [DisplayName("Revived")]
     [IsoXmlTag("Rvvd")]
     public required YesNoIndicator Revived { get; init; }
+
+    /// <summary>
+    /// Further Modification.
+    /// </summary>
+    [DisplayName("Further Modification")]
+    [IsoXmlTag("FrthrMod")]
+    public required YesNoIndicator FurtherModification { get; init; }
 }

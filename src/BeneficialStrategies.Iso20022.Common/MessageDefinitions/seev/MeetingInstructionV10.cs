@@ -46,34 +46,11 @@ public record MeetingInstructionV10 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Cancelled Instruction Identification.
+    /// Pagination.
     /// </summary>
-    [DisplayName("Cancelled Instruction Identification")]
-    [IsoXmlTag("CancInstrId")]
-    public ValueList<MeetingInstructionIdentification1> CancelledInstructionIdentification { get; init; } =
-        [];
-
-    /// <summary>
-    /// Financial Instrument Identification.
-    /// </summary>
-    [DisplayName("Financial Instrument Identification")]
-    [IsoXmlTag("FinInstrmId")]
-    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
-
-    /// <summary>
-    /// Instruction.
-    /// </summary>
-    [DisplayName("Instruction")]
-    [IsoXmlTag("Instr")]
-    public ValueList<Instruction8> Instruction { get; init; } = [];
-
-    /// <summary>
-    /// Instruction Cancellation Request Identification.
-    /// </summary>
-    [DisplayName("Instruction Cancellation Request Identification")]
-    [IsoXmlTag("InstrCxlReqId")]
-    public ValueList<MeetingInstructionCancellation1> InstructionCancellationRequestIdentification { get; init; } =
-        [];
+    [DisplayName("Pagination")]
+    [IsoXmlTag("Pgntn")]
+    public Pagination1? Pagination { get; init; }
 
     /// <summary>
     /// Meeting Instruction Identification.
@@ -90,6 +67,29 @@ public record MeetingInstructionV10 : IOuterRecord
     public required MeetingReference10 MeetingReference { get; init; }
 
     /// <summary>
+    /// Financial Instrument Identification.
+    /// </summary>
+    [DisplayName("Financial Instrument Identification")]
+    [IsoXmlTag("FinInstrmId")]
+    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
+
+    /// <summary>
+    /// Instruction Cancellation Request Identification.
+    /// </summary>
+    [DisplayName("Instruction Cancellation Request Identification")]
+    [IsoXmlTag("InstrCxlReqId")]
+    public ValueList<MeetingInstructionCancellation1> InstructionCancellationRequestIdentification { get; init; } =
+        [];
+
+    /// <summary>
+    /// Cancelled Instruction Identification.
+    /// </summary>
+    [DisplayName("Cancelled Instruction Identification")]
+    [IsoXmlTag("CancInstrId")]
+    public ValueList<MeetingInstructionIdentification1> CancelledInstructionIdentification { get; init; } =
+        [];
+
+    /// <summary>
     /// Other Document Identification.
     /// </summary>
     [DisplayName("Other Document Identification")]
@@ -97,11 +97,11 @@ public record MeetingInstructionV10 : IOuterRecord
     public ValueList<DocumentIdentification32> OtherDocumentIdentification { get; init; } = [];
 
     /// <summary>
-    /// Pagination.
+    /// Instruction.
     /// </summary>
-    [DisplayName("Pagination")]
-    [IsoXmlTag("Pgntn")]
-    public Pagination1? Pagination { get; init; }
+    [DisplayName("Instruction")]
+    [IsoXmlTag("Instr")]
+    public ValueList<Instruction8> Instruction { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

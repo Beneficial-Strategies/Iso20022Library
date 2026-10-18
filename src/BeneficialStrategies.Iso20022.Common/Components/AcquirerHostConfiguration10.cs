@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AcquirerHostConfiguration10
 {
     /// <summary>
-    /// Externally Type Supported.
-    /// </summary>
-    [DisplayName("Externally Type Supported")]
-    [IsoXmlTag("XtrnlyTpSpprtd")]
-    public ValueList<Max1025Text> ExternallyTypeSupported { get; init; } = [];
-
-    /// <summary>
     /// Host Identification.
     /// </summary>
     [DisplayName("Host Identification")]
@@ -43,4 +36,11 @@ public record AcquirerHostConfiguration10
     [DisplayName("Protocol Version")]
     [IsoXmlTag("PrtcolVrsn")]
     public Max8Text? ProtocolVersion { get; init; }
+
+    /// <summary>
+    /// Externally Type Supported.
+    /// </summary>
+    [DisplayName("Externally Type Supported")]
+    [IsoXmlTag("XtrnlyTpSpprtd")]
+    public ValueList<Max1025Text> ExternallyTypeSupported { get; init; } = [];
 }

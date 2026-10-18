@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TrackerPartyIdentification3
 {
     /// <summary>
-    /// Identification.
-    /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public TrackerParty3Choice_? Identification { get; init; }
-
-    /// <summary>
     /// Name.
     /// </summary>
     [DisplayName("Name")]
@@ -36,4 +29,11 @@ public record TrackerPartyIdentification3
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]
     public PostalAddress27? PostalAddress { get; init; }
+
+    /// <summary>
+    /// Identification.
+    /// </summary>
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public TrackerParty3Choice_? Identification { get; init; }
 }

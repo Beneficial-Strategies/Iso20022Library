@@ -17,46 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record LoginRequest6
 {
     /// <summary>
-    /// Cashier Identification.
-    /// </summary>
-    [DisplayName("Cashier Identification")]
-    [IsoXmlTag("CshrId")]
-    public Max35Text? CashierIdentification { get; init; }
-
-    /// <summary>
-    /// Cashier Language.
-    /// </summary>
-    [DisplayName("Cashier Language")]
-    [IsoXmlTag("CshrLang")]
-    public required LanguageCode CashierLanguage { get; init; }
-
-    /// <summary>
-    /// Customer Order Request.
-    /// </summary>
-    [DisplayName("Customer Order Request")]
-    [IsoXmlTag("CstmrOrdrReq")]
-    public CustomerOrderRequest1Code? CustomerOrderRequest { get; init; }
-
-    /// <summary>
     /// Login Date Time.
     /// </summary>
     [DisplayName("Login Date Time")]
     [IsoXmlTag("LgnDtTm")]
     public required ISODateTime LoginDateTime { get; init; }
-
-    /// <summary>
-    /// Output Display.
-    /// </summary>
-    [DisplayName("Output Display")]
-    [IsoXmlTag("OutptDisp")]
-    public ActionMessage11? OutputDisplay { get; init; }
-
-    /// <summary>
-    /// POI Identification.
-    /// </summary>
-    [DisplayName("POI Identification")]
-    [IsoXmlTag("POIId")]
-    public PointOfInteractionComponentIdentification2? POIIdentification { get; init; }
 
     /// <summary>
     /// Sale Software.
@@ -73,6 +38,27 @@ public record LoginRequest6
     public SaleTerminalData1? SaleTerminalData { get; init; }
 
     /// <summary>
+    /// Training Mode Flag.
+    /// </summary>
+    [DisplayName("Training Mode Flag")]
+    [IsoXmlTag("TrngMdFlg")]
+    public TrueFalseIndicator? TrainingModeFlag { get; init; }
+
+    /// <summary>
+    /// Cashier Identification.
+    /// </summary>
+    [DisplayName("Cashier Identification")]
+    [IsoXmlTag("CshrId")]
+    public Max35Text? CashierIdentification { get; init; }
+
+    /// <summary>
+    /// Cashier Language.
+    /// </summary>
+    [DisplayName("Cashier Language")]
+    [IsoXmlTag("CshrLang")]
+    public required LanguageCode CashierLanguage { get; init; }
+
+    /// <summary>
     /// Shift Number.
     /// </summary>
     [DisplayName("Shift Number")]
@@ -87,6 +73,20 @@ public record LoginRequest6
     public SaleTokenScope1Code? TokenRequestedType { get; init; }
 
     /// <summary>
+    /// Customer Order Request.
+    /// </summary>
+    [DisplayName("Customer Order Request")]
+    [IsoXmlTag("CstmrOrdrReq")]
+    public CustomerOrderRequest1Code? CustomerOrderRequest { get; init; }
+
+    /// <summary>
+    /// POI Identification.
+    /// </summary>
+    [DisplayName("POI Identification")]
+    [IsoXmlTag("POIId")]
+    public PointOfInteractionComponentIdentification2? POIIdentification { get; init; }
+
+    /// <summary>
     /// Totals Group Identification.
     /// </summary>
     [DisplayName("Totals Group Identification")]
@@ -94,9 +94,9 @@ public record LoginRequest6
     public Max35Text? TotalsGroupIdentification { get; init; }
 
     /// <summary>
-    /// Training Mode Flag.
+    /// Output Display.
     /// </summary>
-    [DisplayName("Training Mode Flag")]
-    [IsoXmlTag("TrngMdFlg")]
-    public TrueFalseIndicator? TrainingModeFlag { get; init; }
+    [DisplayName("Output Display")]
+    [IsoXmlTag("OutptDisp")]
+    public ActionMessage11? OutputDisplay { get; init; }
 }

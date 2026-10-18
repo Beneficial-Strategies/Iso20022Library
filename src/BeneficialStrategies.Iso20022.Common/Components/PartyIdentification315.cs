@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PartyIdentification315
 {
     /// <summary>
-    /// Additional Information.
-    /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public PartyTextInformation1? AdditionalInformation { get; init; }
-
-    /// <summary>
-    /// Alternate Identification.
-    /// </summary>
-    [DisplayName("Alternate Identification")]
-    [IsoXmlTag("AltrnId")]
-    public AlternatePartyIdentification7? AlternateIdentification { get; init; }
-
-    /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
@@ -45,6 +31,13 @@ public record PartyIdentification315
     public LEIIdentifier? LEI { get; init; }
 
     /// <summary>
+    /// Alternate Identification.
+    /// </summary>
+    [DisplayName("Alternate Identification")]
+    [IsoXmlTag("AltrnId")]
+    public AlternatePartyIdentification7? AlternateIdentification { get; init; }
+
+    /// <summary>
     /// Processing Date.
     /// </summary>
     [DisplayName("Processing Date")]
@@ -57,4 +50,11 @@ public record PartyIdentification315
     [DisplayName("Processing Identification")]
     [IsoXmlTag("PrcgId")]
     public Max35Text? ProcessingIdentification { get; init; }
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public PartyTextInformation1? AdditionalInformation { get; init; }
 }

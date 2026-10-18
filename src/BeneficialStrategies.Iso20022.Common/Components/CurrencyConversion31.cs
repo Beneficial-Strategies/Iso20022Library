@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CurrencyConversion31
 {
     /// <summary>
-    /// Conversion Details.
-    /// </summary>
-    [DisplayName("Conversion Details")]
-    [IsoXmlTag("ConvsDtls")]
-    public ValueList<CurrencyConversion29> ConversionDetails { get; init; } = [];
-
-    /// <summary>
     /// Result.
     /// </summary>
     [DisplayName("Result")]
@@ -36,4 +29,11 @@ public record CurrencyConversion31
     [DisplayName("Result Reason")]
     [IsoXmlTag("RsltRsn")]
     public Max35Text? ResultReason { get; init; }
+
+    /// <summary>
+    /// Conversion Details.
+    /// </summary>
+    [DisplayName("Conversion Details")]
+    [IsoXmlTag("ConvsDtls")]
+    public ValueList<CurrencyConversion29> ConversionDetails { get; init; } = [];
 }

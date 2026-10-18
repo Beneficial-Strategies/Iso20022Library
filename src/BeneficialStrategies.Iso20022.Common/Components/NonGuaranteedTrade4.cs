@@ -17,6 +17,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record NonGuaranteedTrade4
 {
     /// <summary>
+    /// Trade Counterparty Member Identification.
+    /// </summary>
+    [DisplayName("Trade Counterparty Member Identification")]
+    [IsoXmlTag("TradCtrPtyMmbId")]
+    public required PartyIdentification253Choice_ TradeCounterpartyMemberIdentification { get; init; }
+
+    /// <summary>
+    /// Trade Counterparty Clearing Member Identification.
+    /// </summary>
+    [DisplayName("Trade Counterparty Clearing Member Identification")]
+    [IsoXmlTag("TradCtrPtyClrMmbId")]
+    public required PartyIdentification253Choice_ TradeCounterpartyClearingMemberIdentification { get; init; }
+
+    /// <summary>
     /// Delivering Parties.
     /// </summary>
     [DisplayName("Delivering Parties")]
@@ -29,18 +43,4 @@ public record NonGuaranteedTrade4
     [DisplayName("Receiving Parties")]
     [IsoXmlTag("RcvgPties")]
     public ReceivingPartiesAndAccount22? ReceivingParties { get; init; }
-
-    /// <summary>
-    /// Trade Counterparty Clearing Member Identification.
-    /// </summary>
-    [DisplayName("Trade Counterparty Clearing Member Identification")]
-    [IsoXmlTag("TradCtrPtyClrMmbId")]
-    public required PartyIdentification253Choice_ TradeCounterpartyClearingMemberIdentification { get; init; }
-
-    /// <summary>
-    /// Trade Counterparty Member Identification.
-    /// </summary>
-    [DisplayName("Trade Counterparty Member Identification")]
-    [IsoXmlTag("TradCtrPtyMmbId")]
-    public required PartyIdentification253Choice_ TradeCounterpartyMemberIdentification { get; init; }
 }

@@ -17,25 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMDeviceReport4
 {
     /// <summary>
+    /// Environment.
+    /// </summary>
+    [DisplayName("Environment")]
+    [IsoXmlTag("Envt")]
+    public required ATMEnvironment6 Environment { get; init; }
+
+    /// <summary>
     /// ATM Global Status.
     /// </summary>
     [DisplayName("ATM Global Status")]
     [IsoXmlTag("ATMGblSts")]
     public required ATMStatus2 ATMGlobalStatus { get; init; }
-
-    /// <summary>
-    /// ATM Security Context.
-    /// </summary>
-    [DisplayName("ATM Security Context")]
-    [IsoXmlTag("ATMSctyCntxt")]
-    public ATMSecurityContext5? ATMSecurityContext { get; init; }
-
-    /// <summary>
-    /// Command Context.
-    /// </summary>
-    [DisplayName("Command Context")]
-    [IsoXmlTag("CmdCntxt")]
-    public ATMCommand16? CommandContext { get; init; }
 
     /// <summary>
     /// Command Result.
@@ -45,9 +38,16 @@ public record ATMDeviceReport4
     public ValueList<ATMCommand15> CommandResult { get; init; } = [];
 
     /// <summary>
-    /// Environment.
+    /// Command Context.
     /// </summary>
-    [DisplayName("Environment")]
-    [IsoXmlTag("Envt")]
-    public required ATMEnvironment6 Environment { get; init; }
+    [DisplayName("Command Context")]
+    [IsoXmlTag("CmdCntxt")]
+    public ATMCommand16? CommandContext { get; init; }
+
+    /// <summary>
+    /// ATM Security Context.
+    /// </summary>
+    [DisplayName("ATM Security Context")]
+    [IsoXmlTag("ATMSctyCntxt")]
+    public ATMSecurityContext5? ATMSecurityContext { get; init; }
 }

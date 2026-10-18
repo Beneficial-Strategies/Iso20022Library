@@ -18,21 +18,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record GroupHeader109
 {
     /// <summary>
+    /// Point to point reference, as assigned by the instructing party, and sent to the next party in the chain to unambiguously identify the message.
+    /// </summary>
+    /// <remarks>
+    /// Usage: The instructing party has to make sure that MessageIdentification is unique per instructed party for a pre-agreed period.
+    /// </remarks>
+    [DisplayName("Message Identification")]
+    [IsoXmlTag("MsgId")]
+    public required Max35Text MessageIdentification { get; init; }
+
+    /// <summary>
     /// Date and time at which the message was created.
     /// </summary>
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     public required ISODateTime CreationDateTime { get; init; }
-
-    /// <summary>
-    /// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).
-    /// </summary>
-    /// <remarks>
-    /// Usage: The instructed agent is the party receiving the status message and not the party that received the original instruction that is being reported on.
-    /// </remarks>
-    [DisplayName("Instructed Agent")]
-    [IsoXmlTag("InstdAgt")]
-    public BranchAndFinancialInstitutionIdentification8? InstructedAgent { get; init; }
 
     /// <summary>
     /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).
@@ -45,12 +45,12 @@ public record GroupHeader109
     public BranchAndFinancialInstitutionIdentification8? InstructingAgent { get; init; }
 
     /// <summary>
-    /// Point to point reference, as assigned by the instructing party, and sent to the next party in the chain to unambiguously identify the message.
+    /// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).
     /// </summary>
     /// <remarks>
-    /// Usage: The instructing party has to make sure that MessageIdentification is unique per instructed party for a pre-agreed period.
+    /// Usage: The instructed agent is the party receiving the status message and not the party that received the original instruction that is being reported on.
     /// </remarks>
-    [DisplayName("Message Identification")]
-    [IsoXmlTag("MsgId")]
-    public required Max35Text MessageIdentification { get; init; }
+    [DisplayName("Instructed Agent")]
+    [IsoXmlTag("InstdAgt")]
+    public BranchAndFinancialInstitutionIdentification8? InstructedAgent { get; init; }
 }

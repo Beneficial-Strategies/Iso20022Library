@@ -17,11 +17,137 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PaymentTransaction163
 {
     /// <summary>
+    /// Return Identification.
+    /// </summary>
+    [DisplayName("Return Identification")]
+    [IsoXmlTag("RtrId")]
+    public Max35Text? ReturnIdentification { get; init; }
+
+    /// <summary>
+    /// Original Group Information.
+    /// </summary>
+    [DisplayName("Original Group Information")]
+    [IsoXmlTag("OrgnlGrpInf")]
+    public OriginalGroupInformation29? OriginalGroupInformation { get; init; }
+
+    /// <summary>
+    /// Original Instruction Identification.
+    /// </summary>
+    [DisplayName("Original Instruction Identification")]
+    [IsoXmlTag("OrgnlInstrId")]
+    public Max35Text? OriginalInstructionIdentification { get; init; }
+
+    /// <summary>
+    /// Original End To End Identification.
+    /// </summary>
+    [DisplayName("Original End To End Identification")]
+    [IsoXmlTag("OrgnlEndToEndId")]
+    public Max35Text? OriginalEndToEndIdentification { get; init; }
+
+    /// <summary>
+    /// Original Transaction Identification.
+    /// </summary>
+    [DisplayName("Original Transaction Identification")]
+    [IsoXmlTag("OrgnlTxId")]
+    public Max35Text? OriginalTransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Original UETR.
+    /// </summary>
+    [DisplayName("Original UETR")]
+    [IsoXmlTag("OrgnlUETR")]
+    public UUIDv4Identifier? OriginalUETR { get; init; }
+
+    /// <summary>
+    /// Original Clearing System Reference.
+    /// </summary>
+    [DisplayName("Original Clearing System Reference")]
+    [IsoXmlTag("OrgnlClrSysRef")]
+    public Max35Text? OriginalClearingSystemReference { get; init; }
+
+    /// <summary>
+    /// Original Interbank Settlement Amount.
+    /// </summary>
+    [DisplayName("Original Interbank Settlement Amount")]
+    [IsoXmlTag("OrgnlIntrBkSttlmAmt")]
+    public ActiveOrHistoricCurrencyAndAmount? OriginalInterbankSettlementAmount { get; init; }
+
+    /// <summary>
+    /// Original Interbank Settlement Date.
+    /// </summary>
+    [DisplayName("Original Interbank Settlement Date")]
+    [IsoXmlTag("OrgnlIntrBkSttlmDt")]
+    public ISODate? OriginalInterbankSettlementDate { get; init; }
+
+    /// <summary>
+    /// Payment Type Information.
+    /// </summary>
+    [DisplayName("Payment Type Information")]
+    [IsoXmlTag("PmtTpInf")]
+    public PaymentTypeInformation28? PaymentTypeInformation { get; init; }
+
+    /// <summary>
+    /// Returned Interbank Settlement Amount.
+    /// </summary>
+    [DisplayName("Returned Interbank Settlement Amount")]
+    [IsoXmlTag("RtrdIntrBkSttlmAmt")]
+    public required ActiveCurrencyAndAmount ReturnedInterbankSettlementAmount { get; init; }
+
+    /// <summary>
+    /// Interbank Settlement Date.
+    /// </summary>
+    [DisplayName("Interbank Settlement Date")]
+    [IsoXmlTag("IntrBkSttlmDt")]
+    public ISODate? InterbankSettlementDate { get; init; }
+
+    /// <summary>
+    /// Settlement Priority.
+    /// </summary>
+    [DisplayName("Settlement Priority")]
+    [IsoXmlTag("SttlmPrty")]
+    public Priority3Code? SettlementPriority { get; init; }
+
+    /// <summary>
+    /// Settlement Time Indication.
+    /// </summary>
+    [DisplayName("Settlement Time Indication")]
+    [IsoXmlTag("SttlmTmIndctn")]
+    public SettlementDateTimeIndication1? SettlementTimeIndication { get; init; }
+
+    /// <summary>
+    /// Settlement Time Request.
+    /// </summary>
+    [DisplayName("Settlement Time Request")]
+    [IsoXmlTag("SttlmTmReq")]
+    public SettlementTimeRequest2? SettlementTimeRequest { get; init; }
+
+    /// <summary>
+    /// Returned Instructed Amount.
+    /// </summary>
+    [DisplayName("Returned Instructed Amount")]
+    [IsoXmlTag("RtrdInstdAmt")]
+    public ActiveOrHistoricCurrencyAndAmount? ReturnedInstructedAmount { get; init; }
+
+    /// <summary>
+    /// Exchange Rate.
+    /// </summary>
+    [DisplayName("Exchange Rate")]
+    [IsoXmlTag("XchgRate")]
+    public BaseOneRate? ExchangeRate { get; init; }
+
+    /// <summary>
     /// Agreed Rate.
     /// </summary>
     [DisplayName("Agreed Rate")]
     [IsoXmlTag("AgrdRate")]
     public CurrencyExchange26? AgreedRate { get; init; }
+
+    /// <summary>
+    /// Compensation Amount.
+    /// </summary>
+    [DisplayName("Compensation Amount")]
+    [IsoXmlTag("CompstnAmt")]
+    public ActiveOrHistoricCurrencyAndAmount? CompensationAmount { get; init; }
 
     /// <summary>
     /// Charge Bearer.
@@ -45,18 +171,11 @@ public record PaymentTransaction163
     public Max35Text? ClearingSystemReference { get; init; }
 
     /// <summary>
-    /// Compensation Amount.
+    /// Instructing Agent.
     /// </summary>
-    [DisplayName("Compensation Amount")]
-    [IsoXmlTag("CompstnAmt")]
-    public ActiveOrHistoricCurrencyAndAmount? CompensationAmount { get; init; }
-
-    /// <summary>
-    /// Exchange Rate.
-    /// </summary>
-    [DisplayName("Exchange Rate")]
-    [IsoXmlTag("XchgRate")]
-    public BaseOneRate? ExchangeRate { get; init; }
+    [DisplayName("Instructing Agent")]
+    [IsoXmlTag("InstgAgt")]
+    public BranchAndFinancialInstitutionIdentification8? InstructingAgent { get; init; }
 
     /// <summary>
     /// Instructed Agent.
@@ -66,116 +185,11 @@ public record PaymentTransaction163
     public BranchAndFinancialInstitutionIdentification8? InstructedAgent { get; init; }
 
     /// <summary>
-    /// Instructing Agent.
-    /// </summary>
-    [DisplayName("Instructing Agent")]
-    [IsoXmlTag("InstgAgt")]
-    public BranchAndFinancialInstitutionIdentification8? InstructingAgent { get; init; }
-
-    /// <summary>
-    /// Interbank Settlement Date.
-    /// </summary>
-    [DisplayName("Interbank Settlement Date")]
-    [IsoXmlTag("IntrBkSttlmDt")]
-    public ISODate? InterbankSettlementDate { get; init; }
-
-    /// <summary>
-    /// Original Clearing System Reference.
-    /// </summary>
-    [DisplayName("Original Clearing System Reference")]
-    [IsoXmlTag("OrgnlClrSysRef")]
-    public Max35Text? OriginalClearingSystemReference { get; init; }
-
-    /// <summary>
-    /// Original End To End Identification.
-    /// </summary>
-    [DisplayName("Original End To End Identification")]
-    [IsoXmlTag("OrgnlEndToEndId")]
-    public Max35Text? OriginalEndToEndIdentification { get; init; }
-
-    /// <summary>
-    /// Original Group Information.
-    /// </summary>
-    [DisplayName("Original Group Information")]
-    [IsoXmlTag("OrgnlGrpInf")]
-    public OriginalGroupInformation29? OriginalGroupInformation { get; init; }
-
-    /// <summary>
-    /// Original Instruction Identification.
-    /// </summary>
-    [DisplayName("Original Instruction Identification")]
-    [IsoXmlTag("OrgnlInstrId")]
-    public Max35Text? OriginalInstructionIdentification { get; init; }
-
-    /// <summary>
-    /// Original Interbank Settlement Amount.
-    /// </summary>
-    [DisplayName("Original Interbank Settlement Amount")]
-    [IsoXmlTag("OrgnlIntrBkSttlmAmt")]
-    public ActiveOrHistoricCurrencyAndAmount? OriginalInterbankSettlementAmount { get; init; }
-
-    /// <summary>
-    /// Original Interbank Settlement Date.
-    /// </summary>
-    [DisplayName("Original Interbank Settlement Date")]
-    [IsoXmlTag("OrgnlIntrBkSttlmDt")]
-    public ISODate? OriginalInterbankSettlementDate { get; init; }
-
-    /// <summary>
-    /// Original Transaction Identification.
-    /// </summary>
-    [DisplayName("Original Transaction Identification")]
-    [IsoXmlTag("OrgnlTxId")]
-    public Max35Text? OriginalTransactionIdentification { get; init; }
-
-    /// <summary>
-    /// Original Transaction Reference.
-    /// </summary>
-    [DisplayName("Original Transaction Reference")]
-    [IsoXmlTag("OrgnlTxRef")]
-    public OriginalTransactionReference44? OriginalTransactionReference { get; init; }
-
-    /// <summary>
-    /// Original UETR.
-    /// </summary>
-    [DisplayName("Original UETR")]
-    [IsoXmlTag("OrgnlUETR")]
-    public UUIDv4Identifier? OriginalUETR { get; init; }
-
-    /// <summary>
-    /// Payment Type Information.
-    /// </summary>
-    [DisplayName("Payment Type Information")]
-    [IsoXmlTag("PmtTpInf")]
-    public PaymentTypeInformation28? PaymentTypeInformation { get; init; }
-
-    /// <summary>
     /// Return Chain.
     /// </summary>
     [DisplayName("Return Chain")]
     [IsoXmlTag("RtrChain")]
     public TransactionParties11? ReturnChain { get; init; }
-
-    /// <summary>
-    /// Returned Instructed Amount.
-    /// </summary>
-    [DisplayName("Returned Instructed Amount")]
-    [IsoXmlTag("RtrdInstdAmt")]
-    public ActiveOrHistoricCurrencyAndAmount? ReturnedInstructedAmount { get; init; }
-
-    /// <summary>
-    /// Returned Interbank Settlement Amount.
-    /// </summary>
-    [DisplayName("Returned Interbank Settlement Amount")]
-    [IsoXmlTag("RtrdIntrBkSttlmAmt")]
-    public required ActiveCurrencyAndAmount ReturnedInterbankSettlementAmount { get; init; }
-
-    /// <summary>
-    /// Return Identification.
-    /// </summary>
-    [DisplayName("Return Identification")]
-    [IsoXmlTag("RtrId")]
-    public Max35Text? ReturnIdentification { get; init; }
 
     /// <summary>
     /// Return Reason Information.
@@ -185,25 +199,11 @@ public record PaymentTransaction163
     public ValueList<PaymentReturnReason7> ReturnReasonInformation { get; init; } = [];
 
     /// <summary>
-    /// Settlement Priority.
+    /// Original Transaction Reference.
     /// </summary>
-    [DisplayName("Settlement Priority")]
-    [IsoXmlTag("SttlmPrty")]
-    public Priority3Code? SettlementPriority { get; init; }
-
-    /// <summary>
-    /// Settlement Time Indication.
-    /// </summary>
-    [DisplayName("Settlement Time Indication")]
-    [IsoXmlTag("SttlmTmIndctn")]
-    public SettlementDateTimeIndication1? SettlementTimeIndication { get; init; }
-
-    /// <summary>
-    /// Settlement Time Request.
-    /// </summary>
-    [DisplayName("Settlement Time Request")]
-    [IsoXmlTag("SttlmTmReq")]
-    public SettlementTimeRequest2? SettlementTimeRequest { get; init; }
+    [DisplayName("Original Transaction Reference")]
+    [IsoXmlTag("OrgnlTxRef")]
+    public OriginalTransactionReference44? OriginalTransactionReference { get; init; }
 
     /// <summary>
     /// Supplementary Data.

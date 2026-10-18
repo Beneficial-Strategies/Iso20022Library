@@ -24,16 +24,16 @@ public record ReconciliationCounterpartyPairStatistics7
     public required CounterpartyData91 CounterpartyIdentification { get; init; }
 
     /// <summary>
-    /// Reconciliation Report.
-    /// </summary>
-    [DisplayName("Reconciliation Report")]
-    [IsoXmlTag("RcncltnRpt")]
-    public ValueList<ReconciliationReport15> ReconciliationReport { get; init; } = [];
-
-    /// <summary>
     /// Total Number Of Transactions.
     /// </summary>
     [DisplayName("Total Number Of Transactions")]
     [IsoXmlTag("TtlNbOfTxs")]
     public required Number TotalNumberOfTransactions { get; init; }
+
+    /// <summary>
+    /// Reconciliation Report.
+    /// </summary>
+    [DisplayName("Reconciliation Report")]
+    [IsoXmlTag("RcncltnRpt")]
+    public ValueList<ReconciliationReport15> ReconciliationReport { get; init; } = [];
 }

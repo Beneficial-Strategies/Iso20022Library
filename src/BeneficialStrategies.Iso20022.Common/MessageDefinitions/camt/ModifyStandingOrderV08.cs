@@ -53,18 +53,18 @@ public record ModifyStandingOrderV08 : IOuterRecord
     public required MessageHeader1 MessageHeader { get; init; }
 
     /// <summary>
-    /// New Standing Order Value Set.
-    /// </summary>
-    [DisplayName("New Standing Order Value Set")]
-    [IsoXmlTag("NewStgOrdrValSet")]
-    public required StandingOrder10 NewStandingOrderValueSet { get; init; }
-
-    /// <summary>
     /// Standing Order Identification.
     /// </summary>
     [DisplayName("Standing Order Identification")]
     [IsoXmlTag("StgOrdrId")]
     public required StandingOrderIdentification8 StandingOrderIdentification { get; init; }
+
+    /// <summary>
+    /// New Standing Order Value Set.
+    /// </summary>
+    [DisplayName("New Standing Order Value Set")]
+    [IsoXmlTag("NewStgOrdrValSet")]
+    public required StandingOrder10 NewStandingOrderValueSet { get; init; }
 
     /// <summary>
     /// Supplementary Data.

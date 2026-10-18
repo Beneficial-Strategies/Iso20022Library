@@ -46,18 +46,39 @@ public record ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV02 : I
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Additional Information.
-    /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation5? AdditionalInformation { get; init; }
-
-    /// <summary>
     /// Advice Acknowledgement Identification.
     /// </summary>
     [DisplayName("Advice Acknowledgement Identification")]
     [IsoXmlTag("AdvcAckId")]
     public MessageIdentification1? AdviceAcknowledgementIdentification { get; init; }
+
+    /// <summary>
+    /// Request Identification.
+    /// </summary>
+    [DisplayName("Request Identification")]
+    [IsoXmlTag("ReqId")]
+    public required MessageIdentification1 RequestIdentification { get; init; }
+
+    /// <summary>
+    /// Trade Date.
+    /// </summary>
+    [DisplayName("Trade Date")]
+    [IsoXmlTag("TradDt")]
+    public required ISODate TradeDate { get; init; }
+
+    /// <summary>
+    /// Trade Identification.
+    /// </summary>
+    [DisplayName("Trade Identification")]
+    [IsoXmlTag("TradId")]
+    public required Max35Text TradeIdentification { get; init; }
+
+    /// <summary>
+    /// Trading Mode.
+    /// </summary>
+    [DisplayName("Trading Mode")]
+    [IsoXmlTag("TradgMd")]
+    public required TradingModeType1Code TradingMode { get; init; }
 
     /// <summary>
     /// Affirmation Status.
@@ -81,11 +102,11 @@ public record ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV02 : I
     public required MarketIdentification88 MarketIdentification { get; init; }
 
     /// <summary>
-    /// Request Identification.
+    /// Additional Information.
     /// </summary>
-    [DisplayName("Request Identification")]
-    [IsoXmlTag("ReqId")]
-    public required MessageIdentification1 RequestIdentification { get; init; }
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public AdditionalInformation5? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Supplementary Data.
@@ -93,25 +114,4 @@ public record ForeignExchangeTradeConfirmationStatusAdviceAcknowledgementV02 : I
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Trade Date.
-    /// </summary>
-    [DisplayName("Trade Date")]
-    [IsoXmlTag("TradDt")]
-    public required ISODate TradeDate { get; init; }
-
-    /// <summary>
-    /// Trade Identification.
-    /// </summary>
-    [DisplayName("Trade Identification")]
-    [IsoXmlTag("TradId")]
-    public required Max35Text TradeIdentification { get; init; }
-
-    /// <summary>
-    /// Trading Mode.
-    /// </summary>
-    [DisplayName("Trading Mode")]
-    [IsoXmlTag("TradgMd")]
-    public required TradingModeType1Code TradingMode { get; init; }
 }

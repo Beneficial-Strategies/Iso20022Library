@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record OperationMandate6
 {
     /// <summary>
-    /// Applicable Channel.
+    /// Modification Code.
     /// </summary>
-    [DisplayName("Applicable Channel")]
-    [IsoXmlTag("AplblChanl")]
-    public ValueList<Channel2Choice_> ApplicableChannel { get; init; } = [];
-
-    /// <summary>
-    /// Bank Operation.
-    /// </summary>
-    [DisplayName("Bank Operation")]
-    [IsoXmlTag("BkOpr")]
-    public ValueList<BankTransactionCodeStructure4> BankOperation { get; init; } = [];
-
-    /// <summary>
-    /// End Date.
-    /// </summary>
-    [DisplayName("End Date")]
-    [IsoXmlTag("EndDt")]
-    public ISODate? EndDate { get; init; }
+    [DisplayName("Modification Code")]
+    [IsoXmlTag("ModCd")]
+    public Modification1Code? ModificationCode { get; init; }
 
     /// <summary>
     /// Identification.
@@ -45,18 +31,11 @@ public record OperationMandate6
     public required Max35Text Identification { get; init; }
 
     /// <summary>
-    /// Mandate Holder.
+    /// Applicable Channel.
     /// </summary>
-    [DisplayName("Mandate Holder")]
-    [IsoXmlTag("MndtHldr")]
-    public ValueList<PartyAndAuthorisation6> MandateHolder { get; init; } = [];
-
-    /// <summary>
-    /// Modification Code.
-    /// </summary>
-    [DisplayName("Modification Code")]
-    [IsoXmlTag("ModCd")]
-    public Modification1Code? ModificationCode { get; init; }
+    [DisplayName("Applicable Channel")]
+    [IsoXmlTag("AplblChanl")]
+    public ValueList<Channel2Choice_> ApplicableChannel { get; init; } = [];
 
     /// <summary>
     /// Required Signature Number.
@@ -73,9 +52,30 @@ public record OperationMandate6
     public required YesNoIndicator SignatureOrderIndicator { get; init; }
 
     /// <summary>
+    /// Mandate Holder.
+    /// </summary>
+    [DisplayName("Mandate Holder")]
+    [IsoXmlTag("MndtHldr")]
+    public ValueList<PartyAndAuthorisation6> MandateHolder { get; init; } = [];
+
+    /// <summary>
+    /// Bank Operation.
+    /// </summary>
+    [DisplayName("Bank Operation")]
+    [IsoXmlTag("BkOpr")]
+    public ValueList<BankTransactionCodeStructure4> BankOperation { get; init; } = [];
+
+    /// <summary>
     /// Start Date.
     /// </summary>
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     public ISODate? StartDate { get; init; }
+
+    /// <summary>
+    /// End Date.
+    /// </summary>
+    [DisplayName("End Date")]
+    [IsoXmlTag("EndDt")]
+    public ISODate? EndDate { get; init; }
 }

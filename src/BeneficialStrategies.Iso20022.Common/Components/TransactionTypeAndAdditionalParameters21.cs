@@ -17,6 +17,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TransactionTypeAndAdditionalParameters21
 {
     /// <summary>
+    /// Securities Financing Transaction Type.
+    /// </summary>
+    [DisplayName("Securities Financing Transaction Type")]
+    [IsoXmlTag("SctiesFincgTxTp")]
+    public required SecuritiesFinancingTransactionType2Code SecuritiesFinancingTransactionType { get; init; }
+
+    /// <summary>
+    /// Payment.
+    /// </summary>
+    [DisplayName("Payment")]
+    [IsoXmlTag("Pmt")]
+    public required DeliveryReceiptType2Code Payment { get; init; }
+
+    /// <summary>
     /// Common Identification.
     /// </summary>
     [DisplayName("Common Identification")]
@@ -31,23 +45,9 @@ public record TransactionTypeAndAdditionalParameters21
     public Max35Text? NonceIdentification { get; init; }
 
     /// <summary>
-    /// Payment.
-    /// </summary>
-    [DisplayName("Payment")]
-    [IsoXmlTag("Pmt")]
-    public required DeliveryReceiptType2Code Payment { get; init; }
-
-    /// <summary>
     /// Reconciliation Indicator.
     /// </summary>
     [DisplayName("Reconciliation Indicator")]
     [IsoXmlTag("RcncltnInd")]
     public YesNoIndicator? ReconciliationIndicator { get; init; }
-
-    /// <summary>
-    /// Securities Financing Transaction Type.
-    /// </summary>
-    [DisplayName("Securities Financing Transaction Type")]
-    [IsoXmlTag("SctiesFincgTxTp")]
-    public required SecuritiesFinancingTransactionType2Code SecuritiesFinancingTransactionType { get; init; }
 }

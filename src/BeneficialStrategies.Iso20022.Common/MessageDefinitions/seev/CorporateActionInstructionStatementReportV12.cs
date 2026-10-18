@@ -46,13 +46,6 @@ public record CorporateActionInstructionStatementReportV12 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account And Statement Details.
-    /// </summary>
-    [DisplayName("Account And Statement Details")]
-    [IsoXmlTag("AcctAndStmtDtls")]
-    public ValueList<AccountIdentification66> AccountAndStatementDetails { get; init; } = [];
-
-    /// <summary>
     /// Pagination.
     /// </summary>
     [DisplayName("Pagination")]
@@ -65,6 +58,13 @@ public record CorporateActionInstructionStatementReportV12 : IOuterRecord
     [DisplayName("Statement General Details")]
     [IsoXmlTag("StmtGnlDtls")]
     public required Statement72 StatementGeneralDetails { get; init; }
+
+    /// <summary>
+    /// Account And Statement Details.
+    /// </summary>
+    [DisplayName("Account And Statement Details")]
+    [IsoXmlTag("AcctAndStmtDtls")]
+    public ValueList<AccountIdentification66> AccountAndStatementDetails { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

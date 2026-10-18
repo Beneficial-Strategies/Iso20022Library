@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record LocalData14
 {
     /// <summary>
-    /// Additional Data.
+    /// Language.
     /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
+    [DisplayName("Language")]
+    [IsoXmlTag("Lang")]
+    public required ISOMax3ALanguageCode Language { get; init; }
 
     /// <summary>
     /// Encoding Format.
@@ -31,11 +31,11 @@ public record LocalData14
     public Max35Text? EncodingFormat { get; init; }
 
     /// <summary>
-    /// Language.
+    /// Short Name.
     /// </summary>
-    [DisplayName("Language")]
-    [IsoXmlTag("Lang")]
-    public required ISOMax3ALanguageCode Language { get; init; }
+    [DisplayName("Short Name")]
+    [IsoXmlTag("ShrtNm")]
+    public Max70Text? ShortName { get; init; }
 
     /// <summary>
     /// Legal Corporate Name.
@@ -45,9 +45,9 @@ public record LocalData14
     public Max210Text? LegalCorporateName { get; init; }
 
     /// <summary>
-    /// Short Name.
+    /// Additional Data.
     /// </summary>
-    [DisplayName("Short Name")]
-    [IsoXmlTag("ShrtNm")]
-    public Max70Text? ShortName { get; init; }
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

@@ -25,27 +25,6 @@ public record CashAccountEntrySearch8
         [];
 
     /// <summary>
-    /// Account Owner.
-    /// </summary>
-    [DisplayName("Account Owner")]
-    [IsoXmlTag("AcctOwnr")]
-    public PartyIdentification272? AccountOwner { get; init; }
-
-    /// <summary>
-    /// Account Servicer.
-    /// </summary>
-    [DisplayName("Account Servicer")]
-    [IsoXmlTag("AcctSvcr")]
-    public BranchAndFinancialInstitutionIdentification8? AccountServicer { get; init; }
-
-    /// <summary>
-    /// Credit Debit Indicator.
-    /// </summary>
-    [DisplayName("Credit Debit Indicator")]
-    [IsoXmlTag("CdtDbtInd")]
-    public CreditDebitCode? CreditDebitIndicator { get; init; }
-
-    /// <summary>
     /// Entry Amount.
     /// </summary>
     [DisplayName("Entry Amount")]
@@ -60,11 +39,11 @@ public record CashAccountEntrySearch8
     public ValueList<ActiveOrHistoricCurrencyCode> EntryAmountCurrency { get; init; } = [];
 
     /// <summary>
-    /// Entry Date.
+    /// Credit Debit Indicator.
     /// </summary>
-    [DisplayName("Entry Date")]
-    [IsoXmlTag("NtryDt")]
-    public ValueList<DateAndDateTimeSearch3Choice_> EntryDate { get; init; } = [];
+    [DisplayName("Credit Debit Indicator")]
+    [IsoXmlTag("CdtDbtInd")]
+    public CreditDebitCode? CreditDebitIndicator { get; init; }
 
     /// <summary>
     /// Entry Status.
@@ -72,4 +51,25 @@ public record CashAccountEntrySearch8
     [DisplayName("Entry Status")]
     [IsoXmlTag("NtrySts")]
     public ValueList<EntryStatus1Code> EntryStatus { get; init; } = [];
+
+    /// <summary>
+    /// Entry Date.
+    /// </summary>
+    [DisplayName("Entry Date")]
+    [IsoXmlTag("NtryDt")]
+    public ValueList<DateAndDateTimeSearch3Choice_> EntryDate { get; init; } = [];
+
+    /// <summary>
+    /// Account Owner.
+    /// </summary>
+    [DisplayName("Account Owner")]
+    [IsoXmlTag("AcctOwnr")]
+    public PartyIdentification272? AccountOwner { get; init; }
+
+    /// <summary>
+    /// Account Servicer.
+    /// </summary>
+    [DisplayName("Account Servicer")]
+    [IsoXmlTag("AcctSvcr")]
+    public BranchAndFinancialInstitutionIdentification8? AccountServicer { get; init; }
 }

@@ -18,32 +18,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Document15
 {
     /// <summary>
-    /// Digital signature of the enclosed binary file.
+    /// Type of document or template.
     /// </summary>
-    [DisplayName("Digital Signature")]
-    [IsoXmlTag("DgtlSgntr")]
-    public PartyAndSignature4? DigitalSignature { get; init; }
-
-    /// <summary>
-    /// Binary file representing the enclosed document or template, such as a PDF file, image file, XML file, MT message.
-    /// </summary>
-    [DisplayName("Enclosure")]
-    [IsoXmlTag("Nclsr")]
-    public required Max10MbBinary Enclosure { get; init; }
-
-    /// <summary>
-    /// Technical name of the file.
-    /// </summary>
-    [DisplayName("File Name")]
-    [IsoXmlTag("FileNm")]
-    public Max140Text? FileName { get; init; }
-
-    /// <summary>
-    /// Format of the document or template, such as PDF, XML, XSLT.
-    /// </summary>
-    [DisplayName("Format")]
-    [IsoXmlTag("Frmt")]
-    public required DocumentFormat1Choice_ Format { get; init; }
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public required DocumentType1Choice_ Type { get; init; }
 
     /// <summary>
     /// Identification of the document or template.
@@ -60,13 +39,6 @@ public record Document15
     public required DateAndDateTime2Choice_ IssueDate { get; init; }
 
     /// <summary>
-    /// Unique identifier for a language used in the document.
-    /// </summary>
-    [DisplayName("Language Code")]
-    [IsoXmlTag("LangCd")]
-    public LanguageCode? LanguageCode { get; init; }
-
-    /// <summary>
     /// Name of document or transaction, for example, tax invoice.
     /// </summary>
     [DisplayName("Name")]
@@ -74,9 +46,37 @@ public record Document15
     public Max140Text? Name { get; init; }
 
     /// <summary>
-    /// Type of document or template.
+    /// Unique identifier for a language used in the document.
     /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public required DocumentType1Choice_ Type { get; init; }
+    [DisplayName("Language Code")]
+    [IsoXmlTag("LangCd")]
+    public LanguageCode? LanguageCode { get; init; }
+
+    /// <summary>
+    /// Format of the document or template, such as PDF, XML, XSLT.
+    /// </summary>
+    [DisplayName("Format")]
+    [IsoXmlTag("Frmt")]
+    public required DocumentFormat1Choice_ Format { get; init; }
+
+    /// <summary>
+    /// Technical name of the file.
+    /// </summary>
+    [DisplayName("File Name")]
+    [IsoXmlTag("FileNm")]
+    public Max140Text? FileName { get; init; }
+
+    /// <summary>
+    /// Digital signature of the enclosed binary file.
+    /// </summary>
+    [DisplayName("Digital Signature")]
+    [IsoXmlTag("DgtlSgntr")]
+    public PartyAndSignature4? DigitalSignature { get; init; }
+
+    /// <summary>
+    /// Binary file representing the enclosed document or template, such as a PDF file, image file, XML file, MT message.
+    /// </summary>
+    [DisplayName("Enclosure")]
+    [IsoXmlTag("Nclsr")]
+    public required Max10MbBinary Enclosure { get; init; }
 }

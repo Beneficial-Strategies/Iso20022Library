@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PartyIdentificationAndAccount228
 {
     /// <summary>
-    /// Account Identification.
-    /// </summary>
-    [DisplayName("Account Identification")]
-    [IsoXmlTag("AcctId")]
-    public Max35Text? AccountIdentification { get; init; }
-
-    /// <summary>
-    /// Contact Person.
-    /// </summary>
-    [DisplayName("Contact Person")]
-    [IsoXmlTag("CtctPrsn")]
-    public ContactIdentification2? ContactPerson { get; init; }
-
-    /// <summary>
     /// Party Identification.
     /// </summary>
     [DisplayName("Party Identification")]
@@ -38,11 +24,11 @@ public record PartyIdentificationAndAccount228
     public required PartyIdentification254Choice_ PartyIdentification { get; init; }
 
     /// <summary>
-    /// Processing Date.
+    /// Account Identification.
     /// </summary>
-    [DisplayName("Processing Date")]
-    [IsoXmlTag("PrcgDt")]
-    public DateAndDateTime2Choice_? ProcessingDate { get; init; }
+    [DisplayName("Account Identification")]
+    [IsoXmlTag("AcctId")]
+    public Max35Text? AccountIdentification { get; init; }
 
     /// <summary>
     /// Processing Identification.
@@ -52,9 +38,23 @@ public record PartyIdentificationAndAccount228
     public Max35Text? ProcessingIdentification { get; init; }
 
     /// <summary>
+    /// Processing Date.
+    /// </summary>
+    [DisplayName("Processing Date")]
+    [IsoXmlTag("PrcgDt")]
+    public DateAndDateTime2Choice_? ProcessingDate { get; init; }
+
+    /// <summary>
     /// Sub Account Details.
     /// </summary>
     [DisplayName("Sub Account Details")]
     [IsoXmlTag("SubAcctDtls")]
     public SubAccount4? SubAccountDetails { get; init; }
+
+    /// <summary>
+    /// Contact Person.
+    /// </summary>
+    [DisplayName("Contact Person")]
+    [IsoXmlTag("CtctPrsn")]
+    public ContactIdentification2? ContactPerson { get; init; }
 }

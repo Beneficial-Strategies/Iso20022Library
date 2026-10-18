@@ -46,20 +46,6 @@ public record AccountSwitchRequestPaymentV06 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Switch Details.
-    /// </summary>
-    [DisplayName("Account Switch Details")]
-    [IsoXmlTag("AcctSwtchDtls")]
-    public required AccountSwitchDetails1 AccountSwitchDetails { get; init; }
-
-    /// <summary>
-    /// Credit Instruction.
-    /// </summary>
-    [DisplayName("Credit Instruction")]
-    [IsoXmlTag("CdtInstr")]
-    public required CreditTransferTransaction78 CreditInstruction { get; init; }
-
-    /// <summary>
     /// Message Identification.
     /// </summary>
     [DisplayName("Message Identification")]
@@ -67,11 +53,25 @@ public record AccountSwitchRequestPaymentV06 : IOuterRecord
     public required MessageIdentification1 MessageIdentification { get; init; }
 
     /// <summary>
+    /// Account Switch Details.
+    /// </summary>
+    [DisplayName("Account Switch Details")]
+    [IsoXmlTag("AcctSwtchDtls")]
+    public required AccountSwitchDetails1 AccountSwitchDetails { get; init; }
+
+    /// <summary>
     /// Old Account.
     /// </summary>
     [DisplayName("Old Account")]
     [IsoXmlTag("OdAcct")]
     public required CashAccount43 OldAccount { get; init; }
+
+    /// <summary>
+    /// Credit Instruction.
+    /// </summary>
+    [DisplayName("Credit Instruction")]
+    [IsoXmlTag("CdtInstr")]
+    public required CreditTransferTransaction78 CreditInstruction { get; init; }
 
     /// <summary>
     /// Supplementary Data.

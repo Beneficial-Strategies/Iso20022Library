@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record IntraBalanceMovement7
 {
     /// <summary>
-    /// Account Owner Transaction Identification.
-    /// </summary>
-    [DisplayName("Account Owner Transaction Identification")]
-    [IsoXmlTag("AcctOwnrTxId")]
-    public required Max35Text AccountOwnerTransactionIdentification { get; init; }
-
-    /// <summary>
-    /// Account Servicer Transaction Identification.
-    /// </summary>
-    [DisplayName("Account Servicer Transaction Identification")]
-    [IsoXmlTag("AcctSvcrTxId")]
-    public Max35Text? AccountServicerTransactionIdentification { get; init; }
-
-    /// <summary>
     /// Cash Account.
     /// </summary>
     [DisplayName("Cash Account")]
@@ -52,11 +38,25 @@ public record IntraBalanceMovement7
     public BranchAndFinancialInstitutionIdentification8? CashAccountServicer { get; init; }
 
     /// <summary>
-    /// Corporate Action Event Identification.
+    /// Status And Reason.
     /// </summary>
-    [DisplayName("Corporate Action Event Identification")]
-    [IsoXmlTag("CorpActnEvtId")]
-    public Max35Text? CorporateActionEventIdentification { get; init; }
+    [DisplayName("Status And Reason")]
+    [IsoXmlTag("StsAndRsn")]
+    public IntraBalanceStatusAndReason2? StatusAndReason { get; init; }
+
+    /// <summary>
+    /// Account Owner Transaction Identification.
+    /// </summary>
+    [DisplayName("Account Owner Transaction Identification")]
+    [IsoXmlTag("AcctOwnrTxId")]
+    public required Max35Text AccountOwnerTransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Account Servicer Transaction Identification.
+    /// </summary>
+    [DisplayName("Account Servicer Transaction Identification")]
+    [IsoXmlTag("AcctSvcrTxId")]
+    public Max35Text? AccountServicerTransactionIdentification { get; init; }
 
     /// <summary>
     /// Market Infrastructure Transaction Identification.
@@ -66,11 +66,11 @@ public record IntraBalanceMovement7
     public Max35Text? MarketInfrastructureTransactionIdentification { get; init; }
 
     /// <summary>
-    /// Movement Details.
+    /// Processor Transaction Identification.
     /// </summary>
-    [DisplayName("Movement Details")]
-    [IsoXmlTag("MvmntDtls")]
-    public IntraBalanceMovement6? MovementDetails { get; init; }
+    [DisplayName("Processor Transaction Identification")]
+    [IsoXmlTag("PrcrTxId")]
+    public Max35Text? ProcessorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Pool Identification.
@@ -80,16 +80,16 @@ public record IntraBalanceMovement7
     public Max35Text? PoolIdentification { get; init; }
 
     /// <summary>
-    /// Processor Transaction Identification.
+    /// Corporate Action Event Identification.
     /// </summary>
-    [DisplayName("Processor Transaction Identification")]
-    [IsoXmlTag("PrcrTxId")]
-    public Max35Text? ProcessorTransactionIdentification { get; init; }
+    [DisplayName("Corporate Action Event Identification")]
+    [IsoXmlTag("CorpActnEvtId")]
+    public Max35Text? CorporateActionEventIdentification { get; init; }
 
     /// <summary>
-    /// Status And Reason.
+    /// Movement Details.
     /// </summary>
-    [DisplayName("Status And Reason")]
-    [IsoXmlTag("StsAndRsn")]
-    public IntraBalanceStatusAndReason2? StatusAndReason { get; init; }
+    [DisplayName("Movement Details")]
+    [IsoXmlTag("MvmntDtls")]
+    public IntraBalanceMovement6? MovementDetails { get; init; }
 }

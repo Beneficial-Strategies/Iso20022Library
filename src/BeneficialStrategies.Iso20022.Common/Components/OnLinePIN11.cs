@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record OnLinePIN11
 {
     /// <summary>
-    /// Additional Input.
-    /// </summary>
-    [DisplayName("Additional Input")]
-    [IsoXmlTag("AddtlInpt")]
-    public Max35Text? AdditionalInput { get; init; }
-
-    /// <summary>
     /// Encrypted PIN Block.
     /// </summary>
     [DisplayName("Encrypted PIN Block")]
@@ -36,4 +29,11 @@ public record OnLinePIN11
     [DisplayName("PIN Format")]
     [IsoXmlTag("PINFrmt")]
     public required PINFormat3Code PINFormat { get; init; }
+
+    /// <summary>
+    /// Additional Input.
+    /// </summary>
+    [DisplayName("Additional Input")]
+    [IsoXmlTag("AddtlInpt")]
+    public Max35Text? AdditionalInput { get; init; }
 }

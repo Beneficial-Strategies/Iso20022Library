@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record NonFinancialResponseContentComponent4
 {
     /// <summary>
+    /// Non Financial Request Type.
+    /// </summary>
+    [DisplayName("Non Financial Request Type")]
+    [IsoXmlTag("NonFinReqTp")]
+    public required NonFinancialRequestType2Code NonFinancialRequestType { get; init; }
+
+    /// <summary>
     /// Acquirer Selected.
     /// </summary>
     [DisplayName("Acquirer Selected")]
@@ -24,18 +31,11 @@ public record NonFinancialResponseContentComponent4
     public Acquirer10? AcquirerSelected { get; init; }
 
     /// <summary>
-    /// Action.
+    /// Risk Management Result.
     /// </summary>
-    [DisplayName("Action")]
-    [IsoXmlTag("Actn")]
-    public ValueList<Action15> Action { get; init; } = [];
-
-    /// <summary>
-    /// Additional Response.
-    /// </summary>
-    [DisplayName("Additional Response")]
-    [IsoXmlTag("AddtlRspn")]
-    public ValueList<ExternallyDefinedData5> AdditionalResponse { get; init; } = [];
+    [DisplayName("Risk Management Result")]
+    [IsoXmlTag("RskMgmtRslt")]
+    public NonFinancialResponseRisk1Code? RiskManagementResult { get; init; }
 
     /// <summary>
     /// Instalment.
@@ -45,11 +45,18 @@ public record NonFinancialResponseContentComponent4
     public ValueList<RecurringTransaction6> Instalment { get; init; } = [];
 
     /// <summary>
-    /// Non Financial Request Type.
+    /// Additional Response.
     /// </summary>
-    [DisplayName("Non Financial Request Type")]
-    [IsoXmlTag("NonFinReqTp")]
-    public required NonFinancialRequestType2Code NonFinancialRequestType { get; init; }
+    [DisplayName("Additional Response")]
+    [IsoXmlTag("AddtlRspn")]
+    public ValueList<ExternallyDefinedData5> AdditionalResponse { get; init; } = [];
+
+    /// <summary>
+    /// Action.
+    /// </summary>
+    [DisplayName("Action")]
+    [IsoXmlTag("Actn")]
+    public ValueList<Action15> Action { get; init; } = [];
 
     /// <summary>
     /// Response.
@@ -57,11 +64,4 @@ public record NonFinancialResponseContentComponent4
     [DisplayName("Response")]
     [IsoXmlTag("Rspn")]
     public required ResponseType11 Response { get; init; }
-
-    /// <summary>
-    /// Risk Management Result.
-    /// </summary>
-    [DisplayName("Risk Management Result")]
-    [IsoXmlTag("RskMgmtRslt")]
-    public NonFinancialResponseRisk1Code? RiskManagementResult { get; init; }
 }

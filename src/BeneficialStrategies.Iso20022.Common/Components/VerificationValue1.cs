@@ -17,27 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record VerificationValue1
 {
     /// <summary>
-    /// Binary Value.
-    /// </summary>
-    [DisplayName("Binary Value")]
-    [IsoXmlTag("BinryVal")]
-    public Max5000Binary? BinaryValue { get; init; }
-
-    /// <summary>
-    /// Date Time.
-    /// </summary>
-    [DisplayName("Date Time")]
-    [IsoXmlTag("DtTm")]
-    public ISODateTime? DateTime { get; init; }
-
-    /// <summary>
-    /// Hexadecimal Binary Value.
-    /// </summary>
-    [DisplayName("Hexadecimal Binary Value")]
-    [IsoXmlTag("HexBinryVal")]
-    public Max9999HexBinaryText? HexadecimalBinaryValue { get; init; }
-
-    /// <summary>
     /// Name.
     /// </summary>
     [DisplayName("Name")]
@@ -50,6 +29,27 @@ public record VerificationValue1
     [DisplayName("Text Value")]
     [IsoXmlTag("TxtVal")]
     public Max2048Text? TextValue { get; init; }
+
+    /// <summary>
+    /// Binary Value.
+    /// </summary>
+    [DisplayName("Binary Value")]
+    [IsoXmlTag("BinryVal")]
+    public Max5000Binary? BinaryValue { get; init; }
+
+    /// <summary>
+    /// Hexadecimal Binary Value.
+    /// </summary>
+    [DisplayName("Hexadecimal Binary Value")]
+    [IsoXmlTag("HexBinryVal")]
+    public Max9999HexBinaryText? HexadecimalBinaryValue { get; init; }
+
+    /// <summary>
+    /// Date Time.
+    /// </summary>
+    [DisplayName("Date Time")]
+    [IsoXmlTag("DtTm")]
+    public ISODateTime? DateTime { get; init; }
 
     /// <summary>
     /// Validity End Date.

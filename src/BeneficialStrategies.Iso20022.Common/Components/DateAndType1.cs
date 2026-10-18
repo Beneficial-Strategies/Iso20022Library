@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record DateAndType1
 {
     /// <summary>
-    /// Date.
-    /// </summary>
-    [DisplayName("Date")]
-    [IsoXmlTag("Dt")]
-    public required ISODate Date { get; init; }
-
-    /// <summary>
     /// Type.
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     public required DateType2Choice_ Type { get; init; }
+
+    /// <summary>
+    /// Date.
+    /// </summary>
+    [DisplayName("Date")]
+    [IsoXmlTag("Dt")]
+    public required ISODate Date { get; init; }
 }

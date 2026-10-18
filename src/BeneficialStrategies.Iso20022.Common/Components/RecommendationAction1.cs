@@ -24,16 +24,16 @@ public record RecommendationAction1
     public ActionType8Code? Action { get; init; }
 
     /// <summary>
-    /// Details.
-    /// </summary>
-    [DisplayName("Details")]
-    [IsoXmlTag("Dtls")]
-    public ValueList<Max256Text> Details { get; init; } = [];
-
-    /// <summary>
     /// Other Action.
     /// </summary>
     [DisplayName("Other Action")]
     [IsoXmlTag("OthrActn")]
     public Max35Text? OtherAction { get; init; }
+
+    /// <summary>
+    /// Details.
+    /// </summary>
+    [DisplayName("Details")]
+    [IsoXmlTag("Dtls")]
+    public ValueList<Max256Text> Details { get; init; } = [];
 }

@@ -17,11 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record QuantityAndAccount119
 {
     /// <summary>
+    /// Settlement Quantity.
+    /// </summary>
+    [DisplayName("Settlement Quantity")]
+    [IsoXmlTag("SttlmQty")]
+    public required FinancialInstrumentQuantity33Choice_ SettlementQuantity { get; init; }
+
+    /// <summary>
     /// Account Owner.
     /// </summary>
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
     public PartyIdentification144? AccountOwner { get; init; }
+
+    /// <summary>
+    /// Safekeeping Account.
+    /// </summary>
+    [DisplayName("Safekeeping Account")]
+    [IsoXmlTag("SfkpgAcct")]
+    public SecuritiesAccount19? SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Block Chain Address Or Wallet.
@@ -38,23 +52,9 @@ public record QuantityAndAccount119
     public CashAccountIdentification9Choice_? CashAccount { get; init; }
 
     /// <summary>
-    /// Safekeeping Account.
-    /// </summary>
-    [DisplayName("Safekeeping Account")]
-    [IsoXmlTag("SfkpgAcct")]
-    public SecuritiesAccount19? SafekeepingAccount { get; init; }
-
-    /// <summary>
     /// Safekeeping Place.
     /// </summary>
     [DisplayName("Safekeeping Place")]
     [IsoXmlTag("SfkpgPlc")]
     public SafeKeepingPlace5? SafekeepingPlace { get; init; }
-
-    /// <summary>
-    /// Settlement Quantity.
-    /// </summary>
-    [DisplayName("Settlement Quantity")]
-    [IsoXmlTag("SttlmQty")]
-    public required FinancialInstrumentQuantity33Choice_ SettlementQuantity { get; init; }
 }

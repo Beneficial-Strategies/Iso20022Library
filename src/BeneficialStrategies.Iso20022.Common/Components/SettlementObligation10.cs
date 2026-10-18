@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SettlementObligation10
 {
     /// <summary>
-    /// Description.
+    /// Related Settlement Obligation Identification.
     /// </summary>
-    [DisplayName("Description")]
-    [IsoXmlTag("Desc")]
-    public Max35Text? Description { get; init; }
-
-    /// <summary>
-    /// Net Position Price.
-    /// </summary>
-    [DisplayName("Net Position Price")]
-    [IsoXmlTag("NetPosPric")]
-    public Price14? NetPositionPrice { get; init; }
+    [DisplayName("Related Settlement Obligation Identification")]
+    [IsoXmlTag("RltdSttlmOblgtnId")]
+    public Max35Text? RelatedSettlementObligationIdentification { get; init; }
 
     /// <summary>
     /// Obligation Type.
@@ -38,11 +31,18 @@ public record SettlementObligation10
     public ObligationType1Choice_? ObligationType { get; init; }
 
     /// <summary>
-    /// Payment.
+    /// Description.
     /// </summary>
-    [DisplayName("Payment")]
-    [IsoXmlTag("Pmt")]
-    public required DeliveryReceiptType2Code Payment { get; init; }
+    [DisplayName("Description")]
+    [IsoXmlTag("Desc")]
+    public Max35Text? Description { get; init; }
+
+    /// <summary>
+    /// Trade Date.
+    /// </summary>
+    [DisplayName("Trade Date")]
+    [IsoXmlTag("TradDt")]
+    public ISODate? TradeDate { get; init; }
 
     /// <summary>
     /// Quantity.
@@ -52,25 +52,18 @@ public record SettlementObligation10
     public required FinancialInstrumentQuantity1Choice_ Quantity { get; init; }
 
     /// <summary>
-    /// References.
+    /// Net Position Price.
     /// </summary>
-    [DisplayName("References")]
-    [IsoXmlTag("Refs")]
-    public Reference24? References { get; init; }
+    [DisplayName("Net Position Price")]
+    [IsoXmlTag("NetPosPric")]
+    public Price14? NetPositionPrice { get; init; }
 
     /// <summary>
-    /// Related Settlement Obligation Identification.
+    /// Trading Currency.
     /// </summary>
-    [DisplayName("Related Settlement Obligation Identification")]
-    [IsoXmlTag("RltdSttlmOblgtnId")]
-    public Max35Text? RelatedSettlementObligationIdentification { get; init; }
-
-    /// <summary>
-    /// Securities Movement Type.
-    /// </summary>
-    [DisplayName("Securities Movement Type")]
-    [IsoXmlTag("SctiesMvmntTp")]
-    public required ReceiveDelivery1Code SecuritiesMovementType { get; init; }
+    [DisplayName("Trading Currency")]
+    [IsoXmlTag("TradgCcy")]
+    public CurrencyCode? TradingCurrency { get; init; }
 
     /// <summary>
     /// Settlement Amount.
@@ -87,16 +80,23 @@ public record SettlementObligation10
     public required ISODate SettlementDate { get; init; }
 
     /// <summary>
-    /// Trade Date.
+    /// Securities Movement Type.
     /// </summary>
-    [DisplayName("Trade Date")]
-    [IsoXmlTag("TradDt")]
-    public ISODate? TradeDate { get; init; }
+    [DisplayName("Securities Movement Type")]
+    [IsoXmlTag("SctiesMvmntTp")]
+    public required ReceiveDelivery1Code SecuritiesMovementType { get; init; }
 
     /// <summary>
-    /// Trading Currency.
+    /// Payment.
     /// </summary>
-    [DisplayName("Trading Currency")]
-    [IsoXmlTag("TradgCcy")]
-    public CurrencyCode? TradingCurrency { get; init; }
+    [DisplayName("Payment")]
+    [IsoXmlTag("Pmt")]
+    public required DeliveryReceiptType2Code Payment { get; init; }
+
+    /// <summary>
+    /// References.
+    /// </summary>
+    [DisplayName("References")]
+    [IsoXmlTag("Refs")]
+    public Reference24? References { get; init; }
 }

@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AddendumData6
 {
     /// <summary>
-    /// Additional Data.
+    /// Sale.
     /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData2> AdditionalData { get; init; } = [];
+    [DisplayName("Sale")]
+    [IsoXmlTag("Sale")]
+    public Sale3? Sale { get; init; }
 
     /// <summary>
     /// Fleet.
@@ -38,11 +38,11 @@ public record AddendumData6
     public Invoice3? Invoice { get; init; }
 
     /// <summary>
-    /// Lodging.
+    /// Travel Agency.
     /// </summary>
-    [DisplayName("Lodging")]
-    [IsoXmlTag("Ldgg")]
-    public ValueList<Lodging4> Lodging { get; init; } = [];
+    [DisplayName("Travel Agency")]
+    [IsoXmlTag("TrvlAgcy")]
+    public ValueList<TravelAgency4> TravelAgency { get; init; } = [];
 
     /// <summary>
     /// Passenger Transport.
@@ -52,11 +52,18 @@ public record AddendumData6
     public PassengerTransport3? PassengerTransport { get; init; }
 
     /// <summary>
-    /// Sale.
+    /// Vehicle Rental.
     /// </summary>
-    [DisplayName("Sale")]
-    [IsoXmlTag("Sale")]
-    public Sale3? Sale { get; init; }
+    [DisplayName("Vehicle Rental")]
+    [IsoXmlTag("VhclRntl")]
+    public ValueList<VehicleRentalService3> VehicleRental { get; init; } = [];
+
+    /// <summary>
+    /// Lodging.
+    /// </summary>
+    [DisplayName("Lodging")]
+    [IsoXmlTag("Ldgg")]
+    public ValueList<Lodging4> Lodging { get; init; } = [];
 
     /// <summary>
     /// Shipping Data.
@@ -80,16 +87,9 @@ public record AddendumData6
     public ValueList<TemporaryServices3> TemporaryServices { get; init; } = [];
 
     /// <summary>
-    /// Travel Agency.
+    /// Additional Data.
     /// </summary>
-    [DisplayName("Travel Agency")]
-    [IsoXmlTag("TrvlAgcy")]
-    public ValueList<TravelAgency4> TravelAgency { get; init; } = [];
-
-    /// <summary>
-    /// Vehicle Rental.
-    /// </summary>
-    [DisplayName("Vehicle Rental")]
-    [IsoXmlTag("VhclRntl")]
-    public ValueList<VehicleRentalService3> VehicleRental { get; init; } = [];
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData2> AdditionalData { get; init; } = [];
 }

@@ -17,53 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CardPaymentTransaction138
 {
     /// <summary>
-    /// Additional Service.
-    /// </summary>
-    [DisplayName("Additional Service")]
-    [IsoXmlTag("AddtlSvc")]
-    public ValueList<CardPaymentServiceType9Code> AdditionalService { get; init; } = [];
-
-    /// <summary>
-    /// Card Data Entry Mode.
-    /// </summary>
-    [DisplayName("Card Data Entry Mode")]
-    [IsoXmlTag("CardDataNtryMd")]
-    public CardDataReading8Code? CardDataEntryMode { get; init; }
-
-    /// <summary>
-    /// Initiator Transaction Identification.
-    /// </summary>
-    [DisplayName("Initiator Transaction Identification")]
-    [IsoXmlTag("InitrTxId")]
-    public Max35Text? InitiatorTransactionIdentification { get; init; }
-
-    /// <summary>
-    /// POI Identification.
-    /// </summary>
-    [DisplayName("POI Identification")]
-    [IsoXmlTag("POIId")]
-    public GenericIdentification32? POIIdentification { get; init; }
-
-    /// <summary>
-    /// Recipient Transaction Identification.
-    /// </summary>
-    [DisplayName("Recipient Transaction Identification")]
-    [IsoXmlTag("RcptTxId")]
-    public Max140Text? RecipientTransactionIdentification { get; init; }
-
-    /// <summary>
     /// Sale Reference Identification.
     /// </summary>
     [DisplayName("Sale Reference Identification")]
     [IsoXmlTag("SaleRefId")]
     public Max35Text? SaleReferenceIdentification { get; init; }
-
-    /// <summary>
-    /// Service Attribute.
-    /// </summary>
-    [DisplayName("Service Attribute")]
-    [IsoXmlTag("SvcAttr")]
-    public CardPaymentServiceType15Code? ServiceAttribute { get; init; }
 
     /// <summary>
     /// Transaction Identification.
@@ -73,11 +31,25 @@ public record CardPaymentTransaction138
     public required TransactionIdentifier1 TransactionIdentification { get; init; }
 
     /// <summary>
-    /// Transaction Result.
+    /// POI Identification.
     /// </summary>
-    [DisplayName("Transaction Result")]
-    [IsoXmlTag("TxRslt")]
-    public CardPaymentTransactionResult4? TransactionResult { get; init; }
+    [DisplayName("POI Identification")]
+    [IsoXmlTag("POIId")]
+    public GenericIdentification32? POIIdentification { get; init; }
+
+    /// <summary>
+    /// Initiator Transaction Identification.
+    /// </summary>
+    [DisplayName("Initiator Transaction Identification")]
+    [IsoXmlTag("InitrTxId")]
+    public Max35Text? InitiatorTransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Recipient Transaction Identification.
+    /// </summary>
+    [DisplayName("Recipient Transaction Identification")]
+    [IsoXmlTag("RcptTxId")]
+    public Max140Text? RecipientTransactionIdentification { get; init; }
 
     /// <summary>
     /// Transaction Type.
@@ -85,4 +57,32 @@ public record CardPaymentTransaction138
     [DisplayName("Transaction Type")]
     [IsoXmlTag("TxTp")]
     public required CardPaymentServiceType12Code TransactionType { get; init; }
+
+    /// <summary>
+    /// Additional Service.
+    /// </summary>
+    [DisplayName("Additional Service")]
+    [IsoXmlTag("AddtlSvc")]
+    public ValueList<CardPaymentServiceType9Code> AdditionalService { get; init; } = [];
+
+    /// <summary>
+    /// Service Attribute.
+    /// </summary>
+    [DisplayName("Service Attribute")]
+    [IsoXmlTag("SvcAttr")]
+    public CardPaymentServiceType15Code? ServiceAttribute { get; init; }
+
+    /// <summary>
+    /// Card Data Entry Mode.
+    /// </summary>
+    [DisplayName("Card Data Entry Mode")]
+    [IsoXmlTag("CardDataNtryMd")]
+    public CardDataReading8Code? CardDataEntryMode { get; init; }
+
+    /// <summary>
+    /// Transaction Result.
+    /// </summary>
+    [DisplayName("Transaction Result")]
+    [IsoXmlTag("TxRslt")]
+    public CardPaymentTransactionResult4? TransactionResult { get; init; }
 }

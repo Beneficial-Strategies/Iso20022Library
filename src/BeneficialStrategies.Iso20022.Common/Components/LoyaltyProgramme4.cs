@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record LoyaltyProgramme4
 {
     /// <summary>
+    /// Type.
+    /// </summary>
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public Max35Text? Type { get; init; }
+
+    /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
@@ -29,11 +36,4 @@ public record LoyaltyProgramme4
     [DisplayName("Participant Identification")]
     [IsoXmlTag("PtcptId")]
     public Max70Text? ParticipantIdentification { get; init; }
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public Max35Text? Type { get; init; }
 }

@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TransactionDetails172
 {
     /// <summary>
-    /// Delivering Settlement Parties.
-    /// </summary>
-    [DisplayName("Delivering Settlement Parties")]
-    [IsoXmlTag("DlvrgSttlmPties")]
-    public SettlementParties125? DeliveringSettlementParties { get; init; }
-
-    /// <summary>
     /// Financial Instrument Identification.
     /// </summary>
     [DisplayName("Financial Instrument Identification")]
@@ -31,25 +24,11 @@ public record TransactionDetails172
     public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
 
     /// <summary>
-    /// Investor.
+    /// Trade Date.
     /// </summary>
-    [DisplayName("Investor")]
-    [IsoXmlTag("Invstr")]
-    public PartyIdentification149? Investor { get; init; }
-
-    /// <summary>
-    /// Receiving Settlement Parties.
-    /// </summary>
-    [DisplayName("Receiving Settlement Parties")]
-    [IsoXmlTag("RcvgSttlmPties")]
-    public SettlementParties125? ReceivingSettlementParties { get; init; }
-
-    /// <summary>
-    /// Settlement Amount.
-    /// </summary>
-    [DisplayName("Settlement Amount")]
-    [IsoXmlTag("SttlmAmt")]
-    public AmountAndDirection51? SettlementAmount { get; init; }
+    [DisplayName("Trade Date")]
+    [IsoXmlTag("TradDt")]
+    public TradeDate8Choice_? TradeDate { get; init; }
 
     /// <summary>
     /// Settlement Date.
@@ -66,9 +45,30 @@ public record TransactionDetails172
     public required Quantity51Choice_ SettlementQuantity { get; init; }
 
     /// <summary>
-    /// Trade Date.
+    /// Settlement Amount.
     /// </summary>
-    [DisplayName("Trade Date")]
-    [IsoXmlTag("TradDt")]
-    public TradeDate8Choice_? TradeDate { get; init; }
+    [DisplayName("Settlement Amount")]
+    [IsoXmlTag("SttlmAmt")]
+    public AmountAndDirection51? SettlementAmount { get; init; }
+
+    /// <summary>
+    /// Delivering Settlement Parties.
+    /// </summary>
+    [DisplayName("Delivering Settlement Parties")]
+    [IsoXmlTag("DlvrgSttlmPties")]
+    public SettlementParties125? DeliveringSettlementParties { get; init; }
+
+    /// <summary>
+    /// Receiving Settlement Parties.
+    /// </summary>
+    [DisplayName("Receiving Settlement Parties")]
+    [IsoXmlTag("RcvgSttlmPties")]
+    public SettlementParties125? ReceivingSettlementParties { get; init; }
+
+    /// <summary>
+    /// Investor.
+    /// </summary>
+    [DisplayName("Investor")]
+    [IsoXmlTag("Invstr")]
+    public PartyIdentification149? Investor { get; init; }
 }

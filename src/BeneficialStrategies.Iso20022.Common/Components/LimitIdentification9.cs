@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record LimitIdentification9
 {
     /// <summary>
-    /// Unique and unambiguous identification for the account between the account owner and the account servicer.
-    /// </summary>
-    [DisplayName("Account Identification")]
-    [IsoXmlTag("AcctId")]
-    public AccountIdentification4Choice_? AccountIdentification { get; init; }
-
-    /// <summary>
-    /// Owner of the account which is being queried.
-    /// </summary>
-    [DisplayName("Account Owner")]
-    [IsoXmlTag("AcctOwnr")]
-    public BranchAndFinancialInstitutionIdentification8? AccountOwner { get; init; }
-
-    /// <summary>
     /// Identification of a particular cash clearing system.
     /// </summary>
     [DisplayName("System Identification")]
@@ -43,4 +29,18 @@ public record LimitIdentification9
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     public required LimitType1Choice_ Type { get; init; }
+
+    /// <summary>
+    /// Owner of the account which is being queried.
+    /// </summary>
+    [DisplayName("Account Owner")]
+    [IsoXmlTag("AcctOwnr")]
+    public BranchAndFinancialInstitutionIdentification8? AccountOwner { get; init; }
+
+    /// <summary>
+    /// Unique and unambiguous identification for the account between the account owner and the account servicer.
+    /// </summary>
+    [DisplayName("Account Identification")]
+    [IsoXmlTag("AcctId")]
+    public AccountIdentification4Choice_? AccountIdentification { get; init; }
 }

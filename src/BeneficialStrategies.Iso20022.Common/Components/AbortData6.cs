@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AbortData6
 {
     /// <summary>
+    /// Exchange Identification.
+    /// </summary>
+    [DisplayName("Exchange Identification")]
+    [IsoXmlTag("XchgId")]
+    public required Max35Text ExchangeIdentification { get; init; }
+
+    /// <summary>
     /// Abort Reason.
     /// </summary>
     [DisplayName("Abort Reason")]
@@ -29,13 +36,6 @@ public record AbortData6
     [DisplayName("Display Output")]
     [IsoXmlTag("DispOutpt")]
     public ActionMessage11? DisplayOutput { get; init; }
-
-    /// <summary>
-    /// Exchange Identification.
-    /// </summary>
-    [DisplayName("Exchange Identification")]
-    [IsoXmlTag("XchgId")]
-    public required Max35Text ExchangeIdentification { get; init; }
 
     /// <summary>
     /// Transaction Success.

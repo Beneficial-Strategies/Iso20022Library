@@ -46,20 +46,6 @@ public record CancelTransactionV11 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Cancellation Reason.
-    /// </summary>
-    [DisplayName("Cancellation Reason")]
-    [IsoXmlTag("CxlRsn")]
-    public PaymentCancellationReason6? CancellationReason { get; init; }
-
-    /// <summary>
-    /// Cash Account.
-    /// </summary>
-    [DisplayName("Cash Account")]
-    [IsoXmlTag("CshAcct")]
-    public CashAccount40? CashAccount { get; init; }
-
-    /// <summary>
     /// Message Header.
     /// </summary>
     [DisplayName("Message Header")]
@@ -72,6 +58,20 @@ public record CancelTransactionV11 : IOuterRecord
     [DisplayName("Payment Identification")]
     [IsoXmlTag("PmtId")]
     public required PaymentIdentification8Choice_ PaymentIdentification { get; init; }
+
+    /// <summary>
+    /// Cash Account.
+    /// </summary>
+    [DisplayName("Cash Account")]
+    [IsoXmlTag("CshAcct")]
+    public CashAccount40? CashAccount { get; init; }
+
+    /// <summary>
+    /// Cancellation Reason.
+    /// </summary>
+    [DisplayName("Cancellation Reason")]
+    [IsoXmlTag("CxlRsn")]
+    public PaymentCancellationReason6? CancellationReason { get; init; }
 
     /// <summary>
     /// Supplementary Data.

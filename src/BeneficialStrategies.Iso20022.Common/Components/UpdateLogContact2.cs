@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record UpdateLogContact2
 {
     /// <summary>
-    /// New.
-    /// </summary>
-    [DisplayName("New")]
-    [IsoXmlTag("New")]
-    public required Contact14 New { get; init; }
-
-    /// <summary>
     /// Old.
     /// </summary>
     [DisplayName("Old")]
     [IsoXmlTag("Od")]
     public required Contact14 Old { get; init; }
+
+    /// <summary>
+    /// New.
+    /// </summary>
+    [DisplayName("New")]
+    [IsoXmlTag("New")]
+    public required Contact14 New { get; init; }
 }

@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CurrencyConversion29
 {
     /// <summary>
-    /// Applicable Bin Range.
-    /// </summary>
-    [DisplayName("Applicable Bin Range")]
-    [IsoXmlTag("AplblBinRg")]
-    public ValueList<BinRange1> ApplicableBinRange { get; init; } = [];
-
-    /// <summary>
-    /// Commission Details.
-    /// </summary>
-    [DisplayName("Commission Details")]
-    [IsoXmlTag("ComssnDtls")]
-    public ValueList<Commission19> CommissionDetails { get; init; } = [];
-
-    /// <summary>
     /// Currency Conversion Identification.
     /// </summary>
     [DisplayName("Currency Conversion Identification")]
@@ -38,11 +24,18 @@ public record CurrencyConversion29
     public Max35Text? CurrencyConversionIdentification { get; init; }
 
     /// <summary>
-    /// Declaration Details.
+    /// Target Currency.
     /// </summary>
-    [DisplayName("Declaration Details")]
-    [IsoXmlTag("DclrtnDtls")]
-    public ValueList<ActionMessage11> DeclarationDetails { get; init; } = [];
+    [DisplayName("Target Currency")]
+    [IsoXmlTag("TrgtCcy")]
+    public required CurrencyDetails3 TargetCurrency { get; init; }
+
+    /// <summary>
+    /// Resulting Amount.
+    /// </summary>
+    [DisplayName("Resulting Amount")]
+    [IsoXmlTag("RsltgAmt")]
+    public ImpliedCurrencyAndAmount? ResultingAmount { get; init; }
 
     /// <summary>
     /// Exchange Rate.
@@ -59,46 +52,11 @@ public record CurrencyConversion29
     public PercentageRate? InvertedExchangeRate { get; init; }
 
     /// <summary>
-    /// Mark Up Details.
-    /// </summary>
-    [DisplayName("Mark Up Details")]
-    [IsoXmlTag("MrkUpDtls")]
-    public ValueList<Commission18> MarkUpDetails { get; init; } = [];
-
-    /// <summary>
-    /// Original Amount.
-    /// </summary>
-    [DisplayName("Original Amount")]
-    [IsoXmlTag("OrgnlAmt")]
-    public OriginalAmountDetails1? OriginalAmount { get; init; }
-
-    /// <summary>
     /// Quotation Date.
     /// </summary>
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
     public ISODateTime? QuotationDate { get; init; }
-
-    /// <summary>
-    /// Resulting Amount.
-    /// </summary>
-    [DisplayName("Resulting Amount")]
-    [IsoXmlTag("RsltgAmt")]
-    public ImpliedCurrencyAndAmount? ResultingAmount { get; init; }
-
-    /// <summary>
-    /// Source Currency.
-    /// </summary>
-    [DisplayName("Source Currency")]
-    [IsoXmlTag("SrcCcy")]
-    public required CurrencyDetails2 SourceCurrency { get; init; }
-
-    /// <summary>
-    /// Target Currency.
-    /// </summary>
-    [DisplayName("Target Currency")]
-    [IsoXmlTag("TrgtCcy")]
-    public required CurrencyDetails3 TargetCurrency { get; init; }
 
     /// <summary>
     /// Valid From.
@@ -113,4 +71,46 @@ public record CurrencyConversion29
     [DisplayName("Valid Until")]
     [IsoXmlTag("VldUntil")]
     public ISODateTime? ValidUntil { get; init; }
+
+    /// <summary>
+    /// Source Currency.
+    /// </summary>
+    [DisplayName("Source Currency")]
+    [IsoXmlTag("SrcCcy")]
+    public required CurrencyDetails2 SourceCurrency { get; init; }
+
+    /// <summary>
+    /// Applicable Bin Range.
+    /// </summary>
+    [DisplayName("Applicable Bin Range")]
+    [IsoXmlTag("AplblBinRg")]
+    public ValueList<BinRange1> ApplicableBinRange { get; init; } = [];
+
+    /// <summary>
+    /// Original Amount.
+    /// </summary>
+    [DisplayName("Original Amount")]
+    [IsoXmlTag("OrgnlAmt")]
+    public OriginalAmountDetails1? OriginalAmount { get; init; }
+
+    /// <summary>
+    /// Commission Details.
+    /// </summary>
+    [DisplayName("Commission Details")]
+    [IsoXmlTag("ComssnDtls")]
+    public ValueList<Commission19> CommissionDetails { get; init; } = [];
+
+    /// <summary>
+    /// Mark Up Details.
+    /// </summary>
+    [DisplayName("Mark Up Details")]
+    [IsoXmlTag("MrkUpDtls")]
+    public ValueList<Commission18> MarkUpDetails { get; init; } = [];
+
+    /// <summary>
+    /// Declaration Details.
+    /// </summary>
+    [DisplayName("Declaration Details")]
+    [IsoXmlTag("DclrtnDtls")]
+    public ValueList<ActionMessage11> DeclarationDetails { get; init; } = [];
 }

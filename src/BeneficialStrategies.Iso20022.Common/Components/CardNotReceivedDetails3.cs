@@ -17,32 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CardNotReceivedDetails3
 {
     /// <summary>
-    /// Card Security Capability.
-    /// </summary>
-    [DisplayName("Card Security Capability")]
-    [IsoXmlTag("CardSctyCpblty")]
-    public ValueList<CardSecurityCapability1> CardSecurityCapability { get; init; } = [];
-
-    /// <summary>
-    /// Card Security Code.
-    /// </summary>
-    [DisplayName("Card Security Code")]
-    [IsoXmlTag("CardSctyCd")]
-    public TrueFalseIndicator? CardSecurityCode { get; init; }
-
-    /// <summary>
     /// Date Mailed.
     /// </summary>
     [DisplayName("Date Mailed")]
     [IsoXmlTag("DtMld")]
     public required ISODate DateMailed { get; init; }
-
-    /// <summary>
-    /// Mailed From Postal Code.
-    /// </summary>
-    [DisplayName("Mailed From Postal Code")]
-    [IsoXmlTag("MldFrPstlCd")]
-    public required Max16Text MailedFromPostalCode { get; init; }
 
     /// <summary>
     /// Mailing Address.
@@ -59,9 +38,30 @@ public record CardNotReceivedDetails3
     public Max256Text? MailingAddressUnstructured { get; init; }
 
     /// <summary>
+    /// Mailed From Postal Code.
+    /// </summary>
+    [DisplayName("Mailed From Postal Code")]
+    [IsoXmlTag("MldFrPstlCd")]
+    public required Max16Text MailedFromPostalCode { get; init; }
+
+    /// <summary>
     /// Valid From.
     /// </summary>
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
     public ISODate? ValidFrom { get; init; }
+
+    /// <summary>
+    /// Card Security Code.
+    /// </summary>
+    [DisplayName("Card Security Code")]
+    [IsoXmlTag("CardSctyCd")]
+    public TrueFalseIndicator? CardSecurityCode { get; init; }
+
+    /// <summary>
+    /// Card Security Capability.
+    /// </summary>
+    [DisplayName("Card Security Capability")]
+    [IsoXmlTag("CardSctyCpblty")]
+    public ValueList<CardSecurityCapability1> CardSecurityCapability { get; init; } = [];
 }

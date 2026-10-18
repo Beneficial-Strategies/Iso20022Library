@@ -24,39 +24,11 @@ public record CardPaymentEnvironment80
     public Acquirer10? Acquirer { get; init; }
 
     /// <summary>
-    /// Card.
+    /// Service Provider.
     /// </summary>
-    [DisplayName("Card")]
-    [IsoXmlTag("Card")]
-    public PaymentCard35? Card { get; init; }
-
-    /// <summary>
-    /// Cardholder.
-    /// </summary>
-    [DisplayName("Cardholder")]
-    [IsoXmlTag("Crdhldr")]
-    public Cardholder21? Cardholder { get; init; }
-
-    /// <summary>
-    /// Check.
-    /// </summary>
-    [DisplayName("Check")]
-    [IsoXmlTag("Chck")]
-    public Check1? Check { get; init; }
-
-    /// <summary>
-    /// Customer Device.
-    /// </summary>
-    [DisplayName("Customer Device")]
-    [IsoXmlTag("CstmrDvc")]
-    public CustomerDevice3? CustomerDevice { get; init; }
-
-    /// <summary>
-    /// Loyalty Account.
-    /// </summary>
-    [DisplayName("Loyalty Account")]
-    [IsoXmlTag("LltyAcct")]
-    public ValueList<LoyaltyAccount3> LoyaltyAccount { get; init; } = [];
+    [DisplayName("Service Provider")]
+    [IsoXmlTag("SvcPrvdr")]
+    public Acquirer10? ServiceProvider { get; init; }
 
     /// <summary>
     /// Merchant.
@@ -66,11 +38,53 @@ public record CardPaymentEnvironment80
     public Organisation41? Merchant { get; init; }
 
     /// <summary>
-    /// Merchant Token.
+    /// POI.
     /// </summary>
-    [DisplayName("Merchant Token")]
-    [IsoXmlTag("MrchntTkn")]
-    public MerchantToken2? MerchantToken { get; init; }
+    [DisplayName("POI")]
+    [IsoXmlTag("POI")]
+    public PointOfInteraction14? POI { get; init; }
+
+    /// <summary>
+    /// Card.
+    /// </summary>
+    [DisplayName("Card")]
+    [IsoXmlTag("Card")]
+    public PaymentCard35? Card { get; init; }
+
+    /// <summary>
+    /// Check.
+    /// </summary>
+    [DisplayName("Check")]
+    [IsoXmlTag("Chck")]
+    public Check1? Check { get; init; }
+
+    /// <summary>
+    /// Stored Value Account.
+    /// </summary>
+    [DisplayName("Stored Value Account")]
+    [IsoXmlTag("StordValAcct")]
+    public ValueList<StoredValueAccount2> StoredValueAccount { get; init; } = [];
+
+    /// <summary>
+    /// Loyalty Account.
+    /// </summary>
+    [DisplayName("Loyalty Account")]
+    [IsoXmlTag("LltyAcct")]
+    public ValueList<LoyaltyAccount3> LoyaltyAccount { get; init; } = [];
+
+    /// <summary>
+    /// Customer Device.
+    /// </summary>
+    [DisplayName("Customer Device")]
+    [IsoXmlTag("CstmrDvc")]
+    public CustomerDevice3? CustomerDevice { get; init; }
+
+    /// <summary>
+    /// Wallet.
+    /// </summary>
+    [DisplayName("Wallet")]
+    [IsoXmlTag("Wllt")]
+    public CustomerDevice3? Wallet { get; init; }
 
     /// <summary>
     /// Payment Token.
@@ -80,11 +94,18 @@ public record CardPaymentEnvironment80
     public Token1? PaymentToken { get; init; }
 
     /// <summary>
-    /// POI.
+    /// Merchant Token.
     /// </summary>
-    [DisplayName("POI")]
-    [IsoXmlTag("POI")]
-    public PointOfInteraction14? POI { get; init; }
+    [DisplayName("Merchant Token")]
+    [IsoXmlTag("MrchntTkn")]
+    public MerchantToken2? MerchantToken { get; init; }
+
+    /// <summary>
+    /// Cardholder.
+    /// </summary>
+    [DisplayName("Cardholder")]
+    [IsoXmlTag("Crdhldr")]
+    public Cardholder21? Cardholder { get; init; }
 
     /// <summary>
     /// Protected Cardholder Data.
@@ -99,25 +120,4 @@ public record CardPaymentEnvironment80
     [DisplayName("Sale Environment")]
     [IsoXmlTag("SaleEnvt")]
     public RetailerSaleEnvironment2? SaleEnvironment { get; init; }
-
-    /// <summary>
-    /// Service Provider.
-    /// </summary>
-    [DisplayName("Service Provider")]
-    [IsoXmlTag("SvcPrvdr")]
-    public Acquirer10? ServiceProvider { get; init; }
-
-    /// <summary>
-    /// Stored Value Account.
-    /// </summary>
-    [DisplayName("Stored Value Account")]
-    [IsoXmlTag("StordValAcct")]
-    public ValueList<StoredValueAccount2> StoredValueAccount { get; init; } = [];
-
-    /// <summary>
-    /// Wallet.
-    /// </summary>
-    [DisplayName("Wallet")]
-    [IsoXmlTag("Wllt")]
-    public CustomerDevice3? Wallet { get; init; }
 }

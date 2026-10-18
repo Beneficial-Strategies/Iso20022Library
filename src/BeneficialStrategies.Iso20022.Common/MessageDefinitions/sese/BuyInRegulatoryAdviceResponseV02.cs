@@ -61,6 +61,13 @@ public record BuyInRegulatoryAdviceResponseV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Identification of the BuyInRegulatoryAdvice message for which the response is provided.
+    /// </summary>
+    [DisplayName("Advice Reference")]
+    [IsoXmlTag("AdvcRef")]
+    public required Identification14 AdviceReference { get; init; }
+
+    /// <summary>
     /// Party that legally owns the account.
     /// </summary>
     [DisplayName("Account Owner")]
@@ -68,11 +75,11 @@ public record BuyInRegulatoryAdviceResponseV02 : IOuterRecord
     public PartyIdentification144? AccountOwner { get; init; }
 
     /// <summary>
-    /// Identification of the BuyInRegulatoryAdvice message for which the response is provided.
+    /// Account used in the original failing transaction.
     /// </summary>
-    [DisplayName("Advice Reference")]
-    [IsoXmlTag("AdvcRef")]
-    public required Identification14 AdviceReference { get; init; }
+    [DisplayName("Safekeeping Account")]
+    [IsoXmlTag("SfkpgAcct")]
+    public SecuritiesAccount19? SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Details of the buy-in.
@@ -87,13 +94,6 @@ public record BuyInRegulatoryAdviceResponseV02 : IOuterRecord
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
     public required ProcessingStatus79Choice_ ProcessingStatus { get; init; }
-
-    /// <summary>
-    /// Account used in the original failing transaction.
-    /// </summary>
-    [DisplayName("Safekeeping Account")]
-    [IsoXmlTag("SfkpgAcct")]
-    public SecuritiesAccount19? SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.

@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Vehicle6
 {
     /// <summary>
-    /// Additional Data.
+    /// Number.
     /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<Vehicle2> AdditionalData { get; init; } = [];
-
-    /// <summary>
-    /// Fleet Number.
-    /// </summary>
-    [DisplayName("Fleet Number")]
-    [IsoXmlTag("FleetNb")]
-    public Max10Text? FleetNumber { get; init; }
-
-    /// <summary>
-    /// Hubometer.
-    /// </summary>
-    [DisplayName("Hubometer")]
-    [IsoXmlTag("Hbmtr")]
-    public DecimalNumber? Hubometer { get; init; }
+    [DisplayName("Number")]
+    [IsoXmlTag("Nb")]
+    public Max35NumericText? Number { get; init; }
 
     /// <summary>
     /// Identification Number.
@@ -45,39 +31,11 @@ public record Vehicle6
     public Max35NumericText? IdentificationNumber { get; init; }
 
     /// <summary>
-    /// Maintenance Identification.
+    /// Fleet Number.
     /// </summary>
-    [DisplayName("Maintenance Identification")]
-    [IsoXmlTag("MntncId")]
-    public Max35Text? MaintenanceIdentification { get; init; }
-
-    /// <summary>
-    /// Number.
-    /// </summary>
-    [DisplayName("Number")]
-    [IsoXmlTag("Nb")]
-    public Max35NumericText? Number { get; init; }
-
-    /// <summary>
-    /// Odometer.
-    /// </summary>
-    [DisplayName("Odometer")]
-    [IsoXmlTag("Odmtr")]
-    public DecimalNumber? Odometer { get; init; }
-
-    /// <summary>
-    /// On Board Diagnostics.
-    /// </summary>
-    [DisplayName("On Board Diagnostics")]
-    [IsoXmlTag("OnBrdDgnstcs")]
-    public OnBoardDiagnostics1? OnBoardDiagnostics { get; init; }
-
-    /// <summary>
-    /// Replacement.
-    /// </summary>
-    [DisplayName("Replacement")]
-    [IsoXmlTag("Rplcmnt")]
-    public TrueFalseIndicator? Replacement { get; init; }
+    [DisplayName("Fleet Number")]
+    [IsoXmlTag("FleetNb")]
+    public Max10Text? FleetNumber { get; init; }
 
     /// <summary>
     /// Sub Fleet Number.
@@ -85,6 +43,20 @@ public record Vehicle6
     [DisplayName("Sub Fleet Number")]
     [IsoXmlTag("SubFleetNb")]
     public Max35Text? SubFleetNumber { get; init; }
+
+    /// <summary>
+    /// Unit Number.
+    /// </summary>
+    [DisplayName("Unit Number")]
+    [IsoXmlTag("UnitNb")]
+    public Max35NumericText? UnitNumber { get; init; }
+
+    /// <summary>
+    /// Trailer Number.
+    /// </summary>
+    [DisplayName("Trailer Number")]
+    [IsoXmlTag("TrlrNb")]
+    public Max35NumericText? TrailerNumber { get; init; }
 
     /// <summary>
     /// Tag.
@@ -101,16 +73,44 @@ public record Vehicle6
     public CardDataReading5Code? TagEntryMode { get; init; }
 
     /// <summary>
-    /// Trailer Number.
+    /// Replacement.
     /// </summary>
-    [DisplayName("Trailer Number")]
-    [IsoXmlTag("TrlrNb")]
-    public Max35NumericText? TrailerNumber { get; init; }
+    [DisplayName("Replacement")]
+    [IsoXmlTag("Rplcmnt")]
+    public TrueFalseIndicator? Replacement { get; init; }
 
     /// <summary>
-    /// Unit Number.
+    /// Odometer.
     /// </summary>
-    [DisplayName("Unit Number")]
-    [IsoXmlTag("UnitNb")]
-    public Max35NumericText? UnitNumber { get; init; }
+    [DisplayName("Odometer")]
+    [IsoXmlTag("Odmtr")]
+    public DecimalNumber? Odometer { get; init; }
+
+    /// <summary>
+    /// Hubometer.
+    /// </summary>
+    [DisplayName("Hubometer")]
+    [IsoXmlTag("Hbmtr")]
+    public DecimalNumber? Hubometer { get; init; }
+
+    /// <summary>
+    /// Maintenance Identification.
+    /// </summary>
+    [DisplayName("Maintenance Identification")]
+    [IsoXmlTag("MntncId")]
+    public Max35Text? MaintenanceIdentification { get; init; }
+
+    /// <summary>
+    /// On Board Diagnostics.
+    /// </summary>
+    [DisplayName("On Board Diagnostics")]
+    [IsoXmlTag("OnBrdDgnstcs")]
+    public OnBoardDiagnostics1? OnBoardDiagnostics { get; init; }
+
+    /// <summary>
+    /// Additional Data.
+    /// </summary>
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<Vehicle2> AdditionalData { get; init; } = [];
 }

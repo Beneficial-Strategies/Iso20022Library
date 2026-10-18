@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record BalanceInquiryRequest8
 {
     /// <summary>
-    /// Loyalty Account Request.
+    /// Sale Transaction Identification.
     /// </summary>
-    [DisplayName("Loyalty Account Request")]
-    [IsoXmlTag("LltyAcctReq")]
-    public LoyaltyAccountRequest3? LoyaltyAccountRequest { get; init; }
+    [DisplayName("Sale Transaction Identification")]
+    [IsoXmlTag("SaleTxId")]
+    public TransactionIdentifier1? SaleTransactionIdentification { get; init; }
 
     /// <summary>
     /// Payment Account Request.
@@ -31,11 +31,11 @@ public record BalanceInquiryRequest8
     public PaymentAccountRequest1? PaymentAccountRequest { get; init; }
 
     /// <summary>
-    /// Sale Transaction Identification.
+    /// Loyalty Account Request.
     /// </summary>
-    [DisplayName("Sale Transaction Identification")]
-    [IsoXmlTag("SaleTxId")]
-    public TransactionIdentifier1? SaleTransactionIdentification { get; init; }
+    [DisplayName("Loyalty Account Request")]
+    [IsoXmlTag("LltyAcctReq")]
+    public LoyaltyAccountRequest3? LoyaltyAccountRequest { get; init; }
 
     /// <summary>
     /// Stored Value Account Request.

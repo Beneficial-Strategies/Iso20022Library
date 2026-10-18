@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record InstructedBalance19
 {
     /// <summary>
-    /// Option Details.
+    /// Total Instructed Balance.
     /// </summary>
-    [DisplayName("Option Details")]
-    [IsoXmlTag("OptnDtls")]
-    public ValueList<InstructedCorporateActionOption20> OptionDetails { get; init; } = [];
+    [DisplayName("Total Instructed Balance")]
+    [IsoXmlTag("TtlInstdBal")]
+    public required BalanceFormat14Choice_ TotalInstructedBalance { get; init; }
 
     /// <summary>
     /// Total Accepted Instruction Balance.
@@ -38,18 +38,18 @@ public record InstructedBalance19
     public SignedQuantityFormat13? TotalCancelledInstructionBalance { get; init; }
 
     /// <summary>
-    /// Total Instructed Balance.
-    /// </summary>
-    [DisplayName("Total Instructed Balance")]
-    [IsoXmlTag("TtlInstdBal")]
-    public required BalanceFormat14Choice_ TotalInstructedBalance { get; init; }
-
-    /// <summary>
     /// Total Pending Instruction Balance.
     /// </summary>
     [DisplayName("Total Pending Instruction Balance")]
     [IsoXmlTag("TtlPdgInstrBal")]
     public SignedQuantityFormat13? TotalPendingInstructionBalance { get; init; }
+
+    /// <summary>
+    /// Total Rejected Instruction Balance.
+    /// </summary>
+    [DisplayName("Total Rejected Instruction Balance")]
+    [IsoXmlTag("TtlRjctdInstrBal")]
+    public SignedQuantityFormat13? TotalRejectedInstructionBalance { get; init; }
 
     /// <summary>
     /// Total Protect Instruction Balance.
@@ -59,9 +59,9 @@ public record InstructedBalance19
     public SignedQuantityFormat13? TotalProtectInstructionBalance { get; init; }
 
     /// <summary>
-    /// Total Rejected Instruction Balance.
+    /// Option Details.
     /// </summary>
-    [DisplayName("Total Rejected Instruction Balance")]
-    [IsoXmlTag("TtlRjctdInstrBal")]
-    public SignedQuantityFormat13? TotalRejectedInstructionBalance { get; init; }
+    [DisplayName("Option Details")]
+    [IsoXmlTag("OptnDtls")]
+    public ValueList<InstructedCorporateActionOption20> OptionDetails { get; init; } = [];
 }

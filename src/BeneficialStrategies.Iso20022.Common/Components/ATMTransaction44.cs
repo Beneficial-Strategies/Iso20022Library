@@ -17,53 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMTransaction44
 {
     /// <summary>
-    /// Account Information.
+    /// Transaction Identification.
     /// </summary>
-    [DisplayName("Account Information")]
-    [IsoXmlTag("AcctInf")]
-    public ValueList<CardAccount18> AccountInformation { get; init; } = [];
-
-    /// <summary>
-    /// Additional Charge.
-    /// </summary>
-    [DisplayName("Additional Charge")]
-    [IsoXmlTag("AddtlChrg")]
-    public ValueList<DetailedAmount13> AdditionalCharge { get; init; } = [];
-
-    /// <summary>
-    /// Authorisation Result.
-    /// </summary>
-    [DisplayName("Authorisation Result")]
-    [IsoXmlTag("AuthstnRslt")]
-    public AuthorisationResult20? AuthorisationResult { get; init; }
-
-    /// <summary>
-    /// Command.
-    /// </summary>
-    [DisplayName("Command")]
-    [IsoXmlTag("Cmd")]
-    public ValueList<ATMCommand7> Command { get; init; } = [];
-
-    /// <summary>
-    /// Completion Required.
-    /// </summary>
-    [DisplayName("Completion Required")]
-    [IsoXmlTag("CmpltnReqrd")]
-    public TrueFalseIndicator? CompletionRequired { get; init; }
-
-    /// <summary>
-    /// Deposited Media.
-    /// </summary>
-    [DisplayName("Deposited Media")]
-    [IsoXmlTag("DpstdMdia")]
-    public ValueList<ATMDepositedMedia4> DepositedMedia { get; init; } = [];
-
-    /// <summary>
-    /// ICC Related Data.
-    /// </summary>
-    [DisplayName("ICC Related Data")]
-    [IsoXmlTag("ICCRltdData")]
-    public Max10000Binary? ICCRelatedData { get; init; }
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public required TransactionIdentifier3 TransactionIdentification { get; init; }
 
     /// <summary>
     /// Reconciliation Identification.
@@ -73,11 +31,11 @@ public record ATMTransaction44
     public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
-    /// Sub Deposit.
+    /// Completion Required.
     /// </summary>
-    [DisplayName("Sub Deposit")]
-    [IsoXmlTag("SubDpst")]
-    public ValueList<ATMDepositComponent1> SubDeposit { get; init; } = [];
+    [DisplayName("Completion Required")]
+    [IsoXmlTag("CmpltnReqrd")]
+    public TrueFalseIndicator? CompletionRequired { get; init; }
 
     /// <summary>
     /// Total Authorised Amount.
@@ -94,9 +52,51 @@ public record ATMTransaction44
     public ValueList<ImpliedCurrencyAndAmount> TotalRequestedAmount { get; init; } = [];
 
     /// <summary>
-    /// Transaction Identification.
+    /// Sub Deposit.
     /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public required TransactionIdentifier3 TransactionIdentification { get; init; }
+    [DisplayName("Sub Deposit")]
+    [IsoXmlTag("SubDpst")]
+    public ValueList<ATMDepositComponent1> SubDeposit { get; init; } = [];
+
+    /// <summary>
+    /// Additional Charge.
+    /// </summary>
+    [DisplayName("Additional Charge")]
+    [IsoXmlTag("AddtlChrg")]
+    public ValueList<DetailedAmount13> AdditionalCharge { get; init; } = [];
+
+    /// <summary>
+    /// Authorisation Result.
+    /// </summary>
+    [DisplayName("Authorisation Result")]
+    [IsoXmlTag("AuthstnRslt")]
+    public AuthorisationResult20? AuthorisationResult { get; init; }
+
+    /// <summary>
+    /// ICC Related Data.
+    /// </summary>
+    [DisplayName("ICC Related Data")]
+    [IsoXmlTag("ICCRltdData")]
+    public Max10000Binary? ICCRelatedData { get; init; }
+
+    /// <summary>
+    /// Command.
+    /// </summary>
+    [DisplayName("Command")]
+    [IsoXmlTag("Cmd")]
+    public ValueList<ATMCommand7> Command { get; init; } = [];
+
+    /// <summary>
+    /// Account Information.
+    /// </summary>
+    [DisplayName("Account Information")]
+    [IsoXmlTag("AcctInf")]
+    public ValueList<CardAccount18> AccountInformation { get; init; } = [];
+
+    /// <summary>
+    /// Deposited Media.
+    /// </summary>
+    [DisplayName("Deposited Media")]
+    [IsoXmlTag("DpstdMdia")]
+    public ValueList<ATMDepositedMedia4> DepositedMedia { get; init; } = [];
 }

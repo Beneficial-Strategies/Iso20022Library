@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record StoredValueResponse7
 {
     /// <summary>
+    /// Sale Transaction Identification.
+    /// </summary>
+    [DisplayName("Sale Transaction Identification")]
+    [IsoXmlTag("SaleTxId")]
+    public TransactionIdentifier1? SaleTransactionIdentification { get; init; }
+
+    /// <summary>
     /// POI Transaction Identification.
     /// </summary>
     [DisplayName("POI Transaction Identification")]
     [IsoXmlTag("POITxId")]
     public required TransactionIdentifier1 POITransactionIdentification { get; init; }
-
-    /// <summary>
-    /// Receipt.
-    /// </summary>
-    [DisplayName("Receipt")]
-    [IsoXmlTag("Rct")]
-    public ValueList<PaymentReceipt6> Receipt { get; init; } = [];
 
     /// <summary>
     /// Result.
@@ -38,9 +38,9 @@ public record StoredValueResponse7
     public ValueList<StoredValueData7> Result { get; init; } = [];
 
     /// <summary>
-    /// Sale Transaction Identification.
+    /// Receipt.
     /// </summary>
-    [DisplayName("Sale Transaction Identification")]
-    [IsoXmlTag("SaleTxId")]
-    public TransactionIdentifier1? SaleTransactionIdentification { get; init; }
+    [DisplayName("Receipt")]
+    [IsoXmlTag("Rct")]
+    public ValueList<PaymentReceipt6> Receipt { get; init; } = [];
 }

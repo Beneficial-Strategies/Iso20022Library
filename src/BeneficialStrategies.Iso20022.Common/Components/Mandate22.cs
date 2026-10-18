@@ -17,11 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Mandate22
 {
     /// <summary>
-    /// Specifies the characteristics of the adjustment applied to the collection amount of a direct debit instruction.
+    /// Unique identification, as assigned by the responsible party (such as the creditor) or agent (such as the debtor agent), to unambiguously identify the mandate.
     /// </summary>
-    [DisplayName("Adjustment")]
-    [IsoXmlTag("Adjstmnt")]
-    public MandateAdjustment1? Adjustment { get; init; }
+    [DisplayName("Mandate Identification")]
+    [IsoXmlTag("MndtId")]
+    public Max35Text? MandateIdentification { get; init; }
+
+    /// <summary>
+    /// Identification for the mandate request, as assigned by the initiating party.
+    /// </summary>
+    [DisplayName("Mandate Request Identification")]
+    [IsoXmlTag("MndtReqId")]
+    public Max35Text? MandateRequestIdentification { get; init; }
 
     /// <summary>
     /// Specifies the transport authentication details related to the mandate.
@@ -31,11 +38,67 @@ public record Mandate22
     public MandateAuthentication1? Authentication { get; init; }
 
     /// <summary>
+    /// Specifies the type of mandate, such as paper, electronic or scheme.
+    /// </summary>
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public MandateTypeInformation2? Type { get; init; }
+
+    /// <summary>
+    /// Provides details of the duration of the mandate and occurrence of the underlying transactions.
+    /// </summary>
+    [DisplayName("Occurrences")]
+    [IsoXmlTag("Ocrncs")]
+    public MandateOccurrences5? Occurrences { get; init; }
+
+    /// <summary>
+    /// Specifies whether the direct debit instructions should be automatically re-submitted periodically when bilaterally agreed.
+    /// </summary>
+    [DisplayName("Tracking Indicator")]
+    [IsoXmlTag("TrckgInd")]
+    public required TrueFalseIndicator TrackingIndicator { get; init; }
+
+    /// <summary>
+    /// Amount different from the collection amount, as it includes the costs associated with the first debited amount.
+    /// </summary>
+    [DisplayName("First Collection Amount")]
+    [IsoXmlTag("FrstColltnAmt")]
+    public ActiveOrHistoricCurrencyAndAmount? FirstCollectionAmount { get; init; }
+
+    /// <summary>
     /// Fixed amount to be collected from the debtor's account.
     /// </summary>
     [DisplayName("Collection Amount")]
     [IsoXmlTag("ColltnAmt")]
     public ActiveOrHistoricCurrencyAndAmount? CollectionAmount { get; init; }
+
+    /// <summary>
+    /// Maximum amount that may be collected from the debtor's account, per instruction.
+    /// </summary>
+    [DisplayName("Maximum Amount")]
+    [IsoXmlTag("MaxAmt")]
+    public ActiveOrHistoricCurrencyAndAmount? MaximumAmount { get; init; }
+
+    /// <summary>
+    /// Specifies the characteristics of the adjustment applied to the collection amount of a direct debit instruction.
+    /// </summary>
+    [DisplayName("Adjustment")]
+    [IsoXmlTag("Adjstmnt")]
+    public MandateAdjustment1? Adjustment { get; init; }
+
+    /// <summary>
+    /// Provides the reason for the setup of the mandate.
+    /// </summary>
+    [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
+    public MandateSetupReason1Choice_? Reason { get; init; }
+
+    /// <summary>
+    /// Credit party that signs the mandate.
+    /// </summary>
+    [DisplayName("Creditor Scheme Identification")]
+    [IsoXmlTag("CdtrSchmeId")]
+    public PartyIdentification272? CreditorSchemeIdentification { get; init; }
 
     /// <summary>
     /// Party that signs the mandate and to whom an amount of money is due.
@@ -59,11 +122,11 @@ public record Mandate22
     public BranchAndFinancialInstitutionIdentification8? CreditorAgent { get; init; }
 
     /// <summary>
-    /// Credit party that signs the mandate.
+    /// Ultimate party to which an amount of money is due.
     /// </summary>
-    [DisplayName("Creditor Scheme Identification")]
-    [IsoXmlTag("CdtrSchmeId")]
-    public PartyIdentification272? CreditorSchemeIdentification { get; init; }
+    [DisplayName("Ultimate Creditor")]
+    [IsoXmlTag("UltmtCdtr")]
+    public PartyIdentification272? UltimateCreditor { get; init; }
 
     /// <summary>
     /// Party that signs the mandate and owes an amount of money to the (ultimate) creditor.
@@ -87,18 +150,11 @@ public record Mandate22
     public required BranchAndFinancialInstitutionIdentification8 DebtorAgent { get; init; }
 
     /// <summary>
-    /// Amount different from the collection amount, as it includes the costs associated with the first debited amount.
+    /// Ultimate party that owes an amount of money to the (ultimate) creditor.
     /// </summary>
-    [DisplayName("First Collection Amount")]
-    [IsoXmlTag("FrstColltnAmt")]
-    public ActiveOrHistoricCurrencyAndAmount? FirstCollectionAmount { get; init; }
-
-    /// <summary>
-    /// Unique identification, as assigned by the responsible party (such as the creditor) or agent (such as the debtor agent), to unambiguously identify the mandate.
-    /// </summary>
-    [DisplayName("Mandate Identification")]
-    [IsoXmlTag("MndtId")]
-    public Max35Text? MandateIdentification { get; init; }
+    [DisplayName("Ultimate Debtor")]
+    [IsoXmlTag("UltmtDbtr")]
+    public PartyIdentification272? UltimateDebtor { get; init; }
 
     /// <summary>
     /// Reference assigned by a creditor or ultimate creditor for internal usage for the mandate.
@@ -108,65 +164,9 @@ public record Mandate22
     public Max35Text? MandateReference { get; init; }
 
     /// <summary>
-    /// Identification for the mandate request, as assigned by the initiating party.
-    /// </summary>
-    [DisplayName("Mandate Request Identification")]
-    [IsoXmlTag("MndtReqId")]
-    public Max35Text? MandateRequestIdentification { get; init; }
-
-    /// <summary>
-    /// Maximum amount that may be collected from the debtor's account, per instruction.
-    /// </summary>
-    [DisplayName("Maximum Amount")]
-    [IsoXmlTag("MaxAmt")]
-    public ActiveOrHistoricCurrencyAndAmount? MaximumAmount { get; init; }
-
-    /// <summary>
-    /// Provides details of the duration of the mandate and occurrence of the underlying transactions.
-    /// </summary>
-    [DisplayName("Occurrences")]
-    [IsoXmlTag("Ocrncs")]
-    public MandateOccurrences5? Occurrences { get; init; }
-
-    /// <summary>
-    /// Provides the reason for the setup of the mandate.
-    /// </summary>
-    [DisplayName("Reason")]
-    [IsoXmlTag("Rsn")]
-    public MandateSetupReason1Choice_? Reason { get; init; }
-
-    /// <summary>
     /// Provides information to identify the underlying documents associated with the mandate.
     /// </summary>
     [DisplayName("Referred Document")]
     [IsoXmlTag("RfrdDoc")]
     public ValueList<ReferredMandateDocument2> ReferredDocument { get; init; } = [];
-
-    /// <summary>
-    /// Specifies whether the direct debit instructions should be automatically re-submitted periodically when bilaterally agreed.
-    /// </summary>
-    [DisplayName("Tracking Indicator")]
-    [IsoXmlTag("TrckgInd")]
-    public required TrueFalseIndicator TrackingIndicator { get; init; }
-
-    /// <summary>
-    /// Specifies the type of mandate, such as paper, electronic or scheme.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public MandateTypeInformation2? Type { get; init; }
-
-    /// <summary>
-    /// Ultimate party to which an amount of money is due.
-    /// </summary>
-    [DisplayName("Ultimate Creditor")]
-    [IsoXmlTag("UltmtCdtr")]
-    public PartyIdentification272? UltimateCreditor { get; init; }
-
-    /// <summary>
-    /// Ultimate party that owes an amount of money to the (ultimate) creditor.
-    /// </summary>
-    [DisplayName("Ultimate Debtor")]
-    [IsoXmlTag("UltmtDbtr")]
-    public PartyIdentification272? UltimateDebtor { get; init; }
 }

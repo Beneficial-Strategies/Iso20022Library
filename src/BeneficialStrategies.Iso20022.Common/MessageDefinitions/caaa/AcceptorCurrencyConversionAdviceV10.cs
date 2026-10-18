@@ -46,18 +46,18 @@ public record AcceptorCurrencyConversionAdviceV10 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Acceptor Currency Conversion Advice.
-    /// </summary>
-    [DisplayName("Acceptor Currency Conversion Advice")]
-    [IsoXmlTag("AccptrCcyConvsAdvc")]
-    public required AcceptorCurrencyConversionAdvice10 AcceptorCurrencyConversionAdvice { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required Header70 Header { get; init; }
+
+    /// <summary>
+    /// Acceptor Currency Conversion Advice.
+    /// </summary>
+    [DisplayName("Acceptor Currency Conversion Advice")]
+    [IsoXmlTag("AccptrCcyConvsAdvc")]
+    public required AcceptorCurrencyConversionAdvice10 AcceptorCurrencyConversionAdvice { get; init; }
 
     /// <summary>
     /// Security Trailer.

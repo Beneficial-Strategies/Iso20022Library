@@ -17,32 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PartyIdentification313
 {
     /// <summary>
-    /// Alternate Identification.
+    /// Owner Identification.
     /// </summary>
-    [DisplayName("Alternate Identification")]
-    [IsoXmlTag("AltrnId")]
-    public ValueList<AlternatePartyIdentification7> AlternateIdentification { get; init; } = [];
-
-    /// <summary>
-    /// Certification Breakdown.
-    /// </summary>
-    [DisplayName("Certification Breakdown")]
-    [IsoXmlTag("CertfctnBrkdwn")]
-    public ValueList<Max350Text> CertificationBreakdown { get; init; } = [];
-
-    /// <summary>
-    /// Certification Type.
-    /// </summary>
-    [DisplayName("Certification Type")]
-    [IsoXmlTag("CertfctnTp")]
-    public ValueList<BeneficiaryCertificationType10Choice_> CertificationType { get; init; } = [];
-
-    /// <summary>
-    /// Domicile Country.
-    /// </summary>
-    [DisplayName("Domicile Country")]
-    [IsoXmlTag("DmclCtry")]
-    public CountryCode? DomicileCountry { get; init; }
+    [DisplayName("Owner Identification")]
+    [IsoXmlTag("OwnrId")]
+    public required PartyIdentification229Choice_ OwnerIdentification { get; init; }
 
     /// <summary>
     /// LEI Identification.
@@ -50,6 +29,20 @@ public record PartyIdentification313
     [DisplayName("LEI Identification")]
     [IsoXmlTag("LEIId")]
     public LEIIdentifier? LEIIdentification { get; init; }
+
+    /// <summary>
+    /// Alternate Identification.
+    /// </summary>
+    [DisplayName("Alternate Identification")]
+    [IsoXmlTag("AltrnId")]
+    public ValueList<AlternatePartyIdentification7> AlternateIdentification { get; init; } = [];
+
+    /// <summary>
+    /// Domicile Country.
+    /// </summary>
+    [DisplayName("Domicile Country")]
+    [IsoXmlTag("DmclCtry")]
+    public CountryCode? DomicileCountry { get; init; }
 
     /// <summary>
     /// Non Domicile Country.
@@ -66,11 +59,11 @@ public record PartyIdentification313
     public required FinancialInstrumentQuantity33Choice_ OwnedSecuritiesQuantity { get; init; }
 
     /// <summary>
-    /// Owner Identification.
+    /// Certification Type.
     /// </summary>
-    [DisplayName("Owner Identification")]
-    [IsoXmlTag("OwnrId")]
-    public required PartyIdentification229Choice_ OwnerIdentification { get; init; }
+    [DisplayName("Certification Type")]
+    [IsoXmlTag("CertfctnTp")]
+    public ValueList<BeneficiaryCertificationType10Choice_> CertificationType { get; init; } = [];
 
     /// <summary>
     /// Withholding Tax Rate.
@@ -78,4 +71,11 @@ public record PartyIdentification313
     [DisplayName("Withholding Tax Rate")]
     [IsoXmlTag("WhldgTaxRate")]
     public RateAndAmountFormat57Choice_? WithholdingTaxRate { get; init; }
+
+    /// <summary>
+    /// Certification Breakdown.
+    /// </summary>
+    [DisplayName("Certification Breakdown")]
+    [IsoXmlTag("CertfctnBrkdwn")]
+    public ValueList<Max350Text> CertificationBreakdown { get; init; } = [];
 }

@@ -24,18 +24,11 @@ public record CorporateActionNarrative64
     public ValueList<UpdatedAdditionalInformation24> AdditionalText { get; init; } = [];
 
     /// <summary>
-    /// Certification Breakdown.
+    /// Narrative Version.
     /// </summary>
-    [DisplayName("Certification Breakdown")]
-    [IsoXmlTag("CertfctnBrkdwn")]
-    public ValueList<UpdatedAdditionalInformation25> CertificationBreakdown { get; init; } = [];
-
-    /// <summary>
-    /// Disclaimer.
-    /// </summary>
-    [DisplayName("Disclaimer")]
-    [IsoXmlTag("Dsclmr")]
-    public ValueList<UpdatedAdditionalInformation25> Disclaimer { get; init; } = [];
+    [DisplayName("Narrative Version")]
+    [IsoXmlTag("NrrtvVrsn")]
+    public ValueList<UpdatedAdditionalInformation24> NarrativeVersion { get; init; } = [];
 
     /// <summary>
     /// Information Conditions.
@@ -52,13 +45,6 @@ public record CorporateActionNarrative64
     public ValueList<UpdatedAdditionalInformation25> InformationToComplyWith { get; init; } = [];
 
     /// <summary>
-    /// Narrative Version.
-    /// </summary>
-    [DisplayName("Narrative Version")]
-    [IsoXmlTag("NrrtvVrsn")]
-    public ValueList<UpdatedAdditionalInformation24> NarrativeVersion { get; init; } = [];
-
-    /// <summary>
     /// Security Restriction.
     /// </summary>
     [DisplayName("Security Restriction")]
@@ -71,4 +57,18 @@ public record CorporateActionNarrative64
     [DisplayName("Taxation Conditions")]
     [IsoXmlTag("TaxtnConds")]
     public ValueList<UpdatedAdditionalInformation25> TaxationConditions { get; init; } = [];
+
+    /// <summary>
+    /// Disclaimer.
+    /// </summary>
+    [DisplayName("Disclaimer")]
+    [IsoXmlTag("Dsclmr")]
+    public ValueList<UpdatedAdditionalInformation25> Disclaimer { get; init; } = [];
+
+    /// <summary>
+    /// Certification Breakdown.
+    /// </summary>
+    [DisplayName("Certification Breakdown")]
+    [IsoXmlTag("CertfctnBrkdwn")]
+    public ValueList<UpdatedAdditionalInformation25> CertificationBreakdown { get; init; } = [];
 }

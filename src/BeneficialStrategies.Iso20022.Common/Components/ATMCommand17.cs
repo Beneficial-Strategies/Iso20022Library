@@ -17,27 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMCommand17
 {
     /// <summary>
-    /// Command Identification.
-    /// </summary>
-    [DisplayName("Command Identification")]
-    [IsoXmlTag("CmdId")]
-    public ATMCommandIdentification1? CommandIdentification { get; init; }
-
-    /// <summary>
-    /// Command Parameters.
-    /// </summary>
-    [DisplayName("Command Parameters")]
-    [IsoXmlTag("CmdParams")]
-    public ATMCommandParameters1Choice_? CommandParameters { get; init; }
-
-    /// <summary>
-    /// Date Time.
-    /// </summary>
-    [DisplayName("Date Time")]
-    [IsoXmlTag("DtTm")]
-    public ISODateTime? DateTime { get; init; }
-
-    /// <summary>
     /// Type.
     /// </summary>
     [DisplayName("Type")]
@@ -50,4 +29,25 @@ public record ATMCommand17
     [DisplayName("Urgency")]
     [IsoXmlTag("Urgcy")]
     public required TMSContactLevel2Code Urgency { get; init; }
+
+    /// <summary>
+    /// Date Time.
+    /// </summary>
+    [DisplayName("Date Time")]
+    [IsoXmlTag("DtTm")]
+    public ISODateTime? DateTime { get; init; }
+
+    /// <summary>
+    /// Command Identification.
+    /// </summary>
+    [DisplayName("Command Identification")]
+    [IsoXmlTag("CmdId")]
+    public ATMCommandIdentification1? CommandIdentification { get; init; }
+
+    /// <summary>
+    /// Command Parameters.
+    /// </summary>
+    [DisplayName("Command Parameters")]
+    [IsoXmlTag("CmdParams")]
+    public ATMCommandParameters1Choice_? CommandParameters { get; init; }
 }

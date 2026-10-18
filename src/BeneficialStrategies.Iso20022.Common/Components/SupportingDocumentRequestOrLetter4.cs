@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SupportingDocumentRequestOrLetter4
 {
     /// <summary>
-    /// Attachment.
+    /// Request Or Letter Identification.
     /// </summary>
-    [DisplayName("Attachment")]
-    [IsoXmlTag("Attchmnt")]
-    public ValueList<DocumentGeneralInformation5> Attachment { get; init; } = [];
+    [DisplayName("Request Or Letter Identification")]
+    [IsoXmlTag("ReqOrLttrId")]
+    public required Max35Text RequestOrLetterIdentification { get; init; }
 
     /// <summary>
     /// Date.
@@ -31,25 +31,11 @@ public record SupportingDocumentRequestOrLetter4
     public ISODate? Date { get; init; }
 
     /// <summary>
-    /// Description.
+    /// Sender.
     /// </summary>
-    [DisplayName("Description")]
-    [IsoXmlTag("Desc")]
-    public Max1025Text? Description { get; init; }
-
-    /// <summary>
-    /// Due Date.
-    /// </summary>
-    [DisplayName("Due Date")]
-    [IsoXmlTag("DueDt")]
-    public ISODate? DueDate { get; init; }
-
-    /// <summary>
-    /// Original References.
-    /// </summary>
-    [DisplayName("Original References")]
-    [IsoXmlTag("OrgnlRefs")]
-    public ValueList<OriginalMessage6> OriginalReferences { get; init; } = [];
+    [DisplayName("Sender")]
+    [IsoXmlTag("Sndr")]
+    public Party50Choice_? Sender { get; init; }
 
     /// <summary>
     /// Receiver.
@@ -59,25 +45,11 @@ public record SupportingDocumentRequestOrLetter4
     public Party50Choice_? Receiver { get; init; }
 
     /// <summary>
-    /// Request Or Letter Identification.
+    /// Original References.
     /// </summary>
-    [DisplayName("Request Or Letter Identification")]
-    [IsoXmlTag("ReqOrLttrId")]
-    public required Max35Text RequestOrLetterIdentification { get; init; }
-
-    /// <summary>
-    /// Response Required.
-    /// </summary>
-    [DisplayName("Response Required")]
-    [IsoXmlTag("RspnReqrd")]
-    public required TrueFalseIndicator ResponseRequired { get; init; }
-
-    /// <summary>
-    /// Sender.
-    /// </summary>
-    [DisplayName("Sender")]
-    [IsoXmlTag("Sndr")]
-    public Party50Choice_? Sender { get; init; }
+    [DisplayName("Original References")]
+    [IsoXmlTag("OrgnlRefs")]
+    public ValueList<OriginalMessage6> OriginalReferences { get; init; } = [];
 
     /// <summary>
     /// Subject.
@@ -87,16 +59,44 @@ public record SupportingDocumentRequestOrLetter4
     public required Max140Text Subject { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
     /// Type.
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     public required SupportLetterType1Choice_ Type { get; init; }
+
+    /// <summary>
+    /// Description.
+    /// </summary>
+    [DisplayName("Description")]
+    [IsoXmlTag("Desc")]
+    public Max1025Text? Description { get; init; }
+
+    /// <summary>
+    /// Response Required.
+    /// </summary>
+    [DisplayName("Response Required")]
+    [IsoXmlTag("RspnReqrd")]
+    public required TrueFalseIndicator ResponseRequired { get; init; }
+
+    /// <summary>
+    /// Due Date.
+    /// </summary>
+    [DisplayName("Due Date")]
+    [IsoXmlTag("DueDt")]
+    public ISODate? DueDate { get; init; }
+
+    /// <summary>
+    /// Attachment.
+    /// </summary>
+    [DisplayName("Attachment")]
+    [IsoXmlTag("Attchmnt")]
+    public ValueList<DocumentGeneralInformation5> Attachment { get; init; } = [];
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

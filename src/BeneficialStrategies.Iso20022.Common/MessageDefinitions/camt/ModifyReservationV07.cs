@@ -53,18 +53,18 @@ public record ModifyReservationV07 : IOuterRecord
     public required MessageHeader1 MessageHeader { get; init; }
 
     /// <summary>
-    /// New Reservation Value Set.
-    /// </summary>
-    [DisplayName("New Reservation Value Set")]
-    [IsoXmlTag("NewRsvatnValSet")]
-    public required Reservation4 NewReservationValueSet { get; init; }
-
-    /// <summary>
     /// Reservation Identification.
     /// </summary>
     [DisplayName("Reservation Identification")]
     [IsoXmlTag("RsvatnId")]
     public required CurrentOrDefaultReservation4Choice_ ReservationIdentification { get; init; }
+
+    /// <summary>
+    /// New Reservation Value Set.
+    /// </summary>
+    [DisplayName("New Reservation Value Set")]
+    [IsoXmlTag("NewRsvatnValSet")]
+    public required Reservation4 NewReservationValueSet { get; init; }
 
     /// <summary>
     /// Supplementary Data.

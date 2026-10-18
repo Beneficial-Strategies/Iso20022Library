@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TradeDateTimeQueryCriteria6
 {
     /// <summary>
-    /// Collateral Time Stamp.
+    /// Reporting Date Time.
     /// </summary>
-    [DisplayName("Collateral Time Stamp")]
-    [IsoXmlTag("CollTmStmp")]
-    public DateTimeOrBlankQuery1Choice_? CollateralTimeStamp { get; init; }
-
-    /// <summary>
-    /// Early Termination Date.
-    /// </summary>
-    [DisplayName("Early Termination Date")]
-    [IsoXmlTag("EarlyTermntnDt")]
-    public DatePeriod1? EarlyTerminationDate { get; init; }
-
-    /// <summary>
-    /// Effective Date.
-    /// </summary>
-    [DisplayName("Effective Date")]
-    [IsoXmlTag("FctvDt")]
-    public DatePeriod1? EffectiveDate { get; init; }
+    [DisplayName("Reporting Date Time")]
+    [IsoXmlTag("RptgDtTm")]
+    public DateTimePeriod1? ReportingDateTime { get; init; }
 
     /// <summary>
     /// Execution Date Time.
@@ -45,20 +31,6 @@ public record TradeDateTimeQueryCriteria6
     public DateTimePeriod1? ExecutionDateTime { get; init; }
 
     /// <summary>
-    /// Expiration Date.
-    /// </summary>
-    [DisplayName("Expiration Date")]
-    [IsoXmlTag("XprtnDt")]
-    public DateOrBlankQuery2Choice_? ExpirationDate { get; init; }
-
-    /// <summary>
-    /// Historical As Of Date.
-    /// </summary>
-    [DisplayName("Historical As Of Date")]
-    [IsoXmlTag("HstrclAsOfDt")]
-    public ISODate? HistoricalAsOfDate { get; init; }
-
-    /// <summary>
     /// Maturity Date.
     /// </summary>
     [DisplayName("Maturity Date")]
@@ -66,11 +38,11 @@ public record TradeDateTimeQueryCriteria6
     public DateOrBlankQuery2Choice_? MaturityDate { get; init; }
 
     /// <summary>
-    /// Reporting Date Time.
+    /// Effective Date.
     /// </summary>
-    [DisplayName("Reporting Date Time")]
-    [IsoXmlTag("RptgDtTm")]
-    public DateTimePeriod1? ReportingDateTime { get; init; }
+    [DisplayName("Effective Date")]
+    [IsoXmlTag("FctvDt")]
+    public DatePeriod1? EffectiveDate { get; init; }
 
     /// <summary>
     /// Valuation Date Time.
@@ -78,4 +50,32 @@ public record TradeDateTimeQueryCriteria6
     [DisplayName("Valuation Date Time")]
     [IsoXmlTag("ValtnDtTm")]
     public DateTimePeriod1? ValuationDateTime { get; init; }
+
+    /// <summary>
+    /// Expiration Date.
+    /// </summary>
+    [DisplayName("Expiration Date")]
+    [IsoXmlTag("XprtnDt")]
+    public DateOrBlankQuery2Choice_? ExpirationDate { get; init; }
+
+    /// <summary>
+    /// Early Termination Date.
+    /// </summary>
+    [DisplayName("Early Termination Date")]
+    [IsoXmlTag("EarlyTermntnDt")]
+    public DatePeriod1? EarlyTerminationDate { get; init; }
+
+    /// <summary>
+    /// Collateral Time Stamp.
+    /// </summary>
+    [DisplayName("Collateral Time Stamp")]
+    [IsoXmlTag("CollTmStmp")]
+    public DateTimeOrBlankQuery1Choice_? CollateralTimeStamp { get; init; }
+
+    /// <summary>
+    /// Historical As Of Date.
+    /// </summary>
+    [DisplayName("Historical As Of Date")]
+    [IsoXmlTag("HstrclAsOfDt")]
+    public ISODate? HistoricalAsOfDate { get; init; }
 }

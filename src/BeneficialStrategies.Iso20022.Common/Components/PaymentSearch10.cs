@@ -17,18 +17,32 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PaymentSearch10
 {
     /// <summary>
-    /// Credit Debit Indicator.
+    /// Message Identification.
     /// </summary>
-    [DisplayName("Credit Debit Indicator")]
-    [IsoXmlTag("CdtDbtInd")]
-    public CreditDebitCode? CreditDebitIndicator { get; init; }
+    [DisplayName("Message Identification")]
+    [IsoXmlTag("MsgId")]
+    public ValueList<Max35Text> MessageIdentification { get; init; } = [];
 
     /// <summary>
-    /// End To End Identification.
+    /// Requested Execution Date.
     /// </summary>
-    [DisplayName("End To End Identification")]
-    [IsoXmlTag("EndToEndId")]
-    public ValueList<Max35Text> EndToEndIdentification { get; init; } = [];
+    [DisplayName("Requested Execution Date")]
+    [IsoXmlTag("ReqdExctnDt")]
+    public ValueList<DateAndDateTimeSearch3Choice_> RequestedExecutionDate { get; init; } = [];
+
+    /// <summary>
+    /// Payment Identification.
+    /// </summary>
+    [DisplayName("Payment Identification")]
+    [IsoXmlTag("PmtId")]
+    public ValueList<PaymentIdentification8Choice_> PaymentIdentification { get; init; } = [];
+
+    /// <summary>
+    /// Status.
+    /// </summary>
+    [DisplayName("Status")]
+    [IsoXmlTag("Sts")]
+    public ValueList<InstructionStatusSearch5> Status { get; init; } = [];
 
     /// <summary>
     /// Instructed Amount.
@@ -45,11 +59,11 @@ public record PaymentSearch10
     public ValueList<ActiveOrHistoricCurrencyCode> InstructedAmountCurrency { get; init; } = [];
 
     /// <summary>
-    /// Instruction.
+    /// Credit Debit Indicator.
     /// </summary>
-    [DisplayName("Instruction")]
-    [IsoXmlTag("Instr")]
-    public ValueList<Instruction1Code> Instruction { get; init; } = [];
+    [DisplayName("Credit Debit Indicator")]
+    [IsoXmlTag("CdtDbtInd")]
+    public CreditDebitCode? CreditDebitIndicator { get; init; }
 
     /// <summary>
     /// Interbank Settlement Amount.
@@ -64,34 +78,6 @@ public record PaymentSearch10
     [DisplayName("Interbank Settlement Amount Currency")]
     [IsoXmlTag("IntrBkSttlmAmtCcy")]
     public ValueList<ActiveCurrencyCode> InterbankSettlementAmountCurrency { get; init; } = [];
-
-    /// <summary>
-    /// Interbank Settlement Date.
-    /// </summary>
-    [DisplayName("Interbank Settlement Date")]
-    [IsoXmlTag("IntrBkSttlmDt")]
-    public ValueList<ISODate> InterbankSettlementDate { get; init; } = [];
-
-    /// <summary>
-    /// Message Identification.
-    /// </summary>
-    [DisplayName("Message Identification")]
-    [IsoXmlTag("MsgId")]
-    public ValueList<Max35Text> MessageIdentification { get; init; } = [];
-
-    /// <summary>
-    /// Parties.
-    /// </summary>
-    [DisplayName("Parties")]
-    [IsoXmlTag("Pties")]
-    public PaymentTransactionParty4? Parties { get; init; }
-
-    /// <summary>
-    /// Payment Identification.
-    /// </summary>
-    [DisplayName("Payment Identification")]
-    [IsoXmlTag("PmtId")]
-    public ValueList<PaymentIdentification8Choice_> PaymentIdentification { get; init; } = [];
 
     /// <summary>
     /// Payment Method.
@@ -122,18 +108,11 @@ public record PaymentSearch10
     public ValueList<DateTimePeriod1Choice_> ProcessingValidityTime { get; init; } = [];
 
     /// <summary>
-    /// Requested Execution Date.
+    /// Instruction.
     /// </summary>
-    [DisplayName("Requested Execution Date")]
-    [IsoXmlTag("ReqdExctnDt")]
-    public ValueList<DateAndDateTimeSearch3Choice_> RequestedExecutionDate { get; init; } = [];
-
-    /// <summary>
-    /// Status.
-    /// </summary>
-    [DisplayName("Status")]
-    [IsoXmlTag("Sts")]
-    public ValueList<InstructionStatusSearch5> Status { get; init; } = [];
+    [DisplayName("Instruction")]
+    [IsoXmlTag("Instr")]
+    public ValueList<Instruction1Code> Instruction { get; init; } = [];
 
     /// <summary>
     /// Transaction Identification.
@@ -148,4 +127,25 @@ public record PaymentSearch10
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
     public ValueList<UUIDv4Identifier> UETR { get; init; } = [];
+
+    /// <summary>
+    /// Interbank Settlement Date.
+    /// </summary>
+    [DisplayName("Interbank Settlement Date")]
+    [IsoXmlTag("IntrBkSttlmDt")]
+    public ValueList<ISODate> InterbankSettlementDate { get; init; } = [];
+
+    /// <summary>
+    /// End To End Identification.
+    /// </summary>
+    [DisplayName("End To End Identification")]
+    [IsoXmlTag("EndToEndId")]
+    public ValueList<Max35Text> EndToEndIdentification { get; init; } = [];
+
+    /// <summary>
+    /// Parties.
+    /// </summary>
+    [DisplayName("Parties")]
+    [IsoXmlTag("Pties")]
+    public PaymentTransactionParty4? Parties { get; init; }
 }

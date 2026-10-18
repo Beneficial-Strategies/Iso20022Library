@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateActionRate129
 {
     /// <summary>
-    /// Additional Quantity For Existing Securities.
-    /// </summary>
-    [DisplayName("Additional Quantity For Existing Securities")]
-    [IsoXmlTag("AddtlQtyForExstgScties")]
-    public RatioFormat17Choice_? AdditionalQuantityForExistingSecurities { get; init; }
-
-    /// <summary>
     /// Additional Quantity For Subscribed Resultant Securities.
     /// </summary>
     [DisplayName("Additional Quantity For Subscribed Resultant Securities")]
@@ -31,39 +24,11 @@ public record CorporateActionRate129
     public RatioFormat17Choice_? AdditionalQuantityForSubscribedResultantSecurities { get; init; }
 
     /// <summary>
-    /// Applicable Rate.
+    /// Additional Quantity For Existing Securities.
     /// </summary>
-    [DisplayName("Applicable Rate")]
-    [IsoXmlTag("AplblRate")]
-    public RateFormat24Choice_? ApplicableRate { get; init; }
-
-    /// <summary>
-    /// Charges Fees.
-    /// </summary>
-    [DisplayName("Charges Fees")]
-    [IsoXmlTag("ChrgsFees")]
-    public RateAndAmountFormat57Choice_? ChargesFees { get; init; }
-
-    /// <summary>
-    /// Estimated Rate Indicator.
-    /// </summary>
-    [DisplayName("Estimated Rate Indicator")]
-    [IsoXmlTag("EstmtdRateInd")]
-    public YesNoIndicator? EstimatedRateIndicator { get; init; }
-
-    /// <summary>
-    /// Financial Transaction Tax Rate.
-    /// </summary>
-    [DisplayName("Financial Transaction Tax Rate")]
-    [IsoXmlTag("FinTxTaxRate")]
-    public RateFormat24Choice_? FinancialTransactionTaxRate { get; init; }
-
-    /// <summary>
-    /// Fiscal Stamp.
-    /// </summary>
-    [DisplayName("Fiscal Stamp")]
-    [IsoXmlTag("FsclStmp")]
-    public RateFormat24Choice_? FiscalStamp { get; init; }
+    [DisplayName("Additional Quantity For Existing Securities")]
+    [IsoXmlTag("AddtlQtyForExstgScties")]
+    public RatioFormat17Choice_? AdditionalQuantityForExistingSecurities { get; init; }
 
     /// <summary>
     /// New To Old.
@@ -73,11 +38,32 @@ public record CorporateActionRate129
     public RatioFormat18Choice_? NewToOld { get; init; }
 
     /// <summary>
-    /// Second Level Tax.
+    /// Transformation Rate.
     /// </summary>
-    [DisplayName("Second Level Tax")]
-    [IsoXmlTag("ScndLvlTax")]
-    public ValueList<RateAndAmountFormat56Choice_> SecondLevelTax { get; init; } = [];
+    [DisplayName("Transformation Rate")]
+    [IsoXmlTag("TrfrmatnRate")]
+    public decimal? TransformationRate { get; init; }
+
+    /// <summary>
+    /// Charges Fees.
+    /// </summary>
+    [DisplayName("Charges Fees")]
+    [IsoXmlTag("ChrgsFees")]
+    public RateAndAmountFormat57Choice_? ChargesFees { get; init; }
+
+    /// <summary>
+    /// Fiscal Stamp.
+    /// </summary>
+    [DisplayName("Fiscal Stamp")]
+    [IsoXmlTag("FsclStmp")]
+    public RateFormat24Choice_? FiscalStamp { get; init; }
+
+    /// <summary>
+    /// Applicable Rate.
+    /// </summary>
+    [DisplayName("Applicable Rate")]
+    [IsoXmlTag("AplblRate")]
+    public RateFormat24Choice_? ApplicableRate { get; init; }
 
     /// <summary>
     /// Tax Credit Rate.
@@ -87,11 +73,11 @@ public record CorporateActionRate129
     public RateFormat26Choice_? TaxCreditRate { get; init; }
 
     /// <summary>
-    /// Transformation Rate.
+    /// Financial Transaction Tax Rate.
     /// </summary>
-    [DisplayName("Transformation Rate")]
-    [IsoXmlTag("TrfrmatnRate")]
-    public decimal? TransformationRate { get; init; }
+    [DisplayName("Financial Transaction Tax Rate")]
+    [IsoXmlTag("FinTxTaxRate")]
+    public RateFormat24Choice_? FinancialTransactionTaxRate { get; init; }
 
     /// <summary>
     /// Withholding Tax Rate.
@@ -99,4 +85,18 @@ public record CorporateActionRate129
     [DisplayName("Withholding Tax Rate")]
     [IsoXmlTag("WhldgTaxRate")]
     public ValueList<RateAndAmountFormat56Choice_> WithholdingTaxRate { get; init; } = [];
+
+    /// <summary>
+    /// Second Level Tax.
+    /// </summary>
+    [DisplayName("Second Level Tax")]
+    [IsoXmlTag("ScndLvlTax")]
+    public ValueList<RateAndAmountFormat56Choice_> SecondLevelTax { get; init; } = [];
+
+    /// <summary>
+    /// Estimated Rate Indicator.
+    /// </summary>
+    [DisplayName("Estimated Rate Indicator")]
+    [IsoXmlTag("EstmtdRateInd")]
+    public YesNoIndicator? EstimatedRateIndicator { get; init; }
 }

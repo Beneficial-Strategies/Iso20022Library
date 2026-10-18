@@ -46,60 +46,11 @@ public record NetworkManagementResponseV05 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Additional Fee.
-    /// </summary>
-    [DisplayName("Additional Fee")]
-    [IsoXmlTag("AddtlFee")]
-    public ValueList<AdditionalFee4> AdditionalFee { get; init; } = [];
-
-    /// <summary>
-    /// Alternate Message Reason.
-    /// </summary>
-    [DisplayName("Alternate Message Reason")]
-    [IsoXmlTag("AltrnMsgRsn")]
-    public ValueList<Max256Text> AlternateMessageReason { get; init; } = [];
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required Header72 Header { get; init; }
-
-    /// <summary>
-    /// Jurisdiction.
-    /// </summary>
-    [DisplayName("Jurisdiction")]
-    [IsoXmlTag("Jursdctn")]
-    public Jurisdiction2? Jurisdiction { get; init; }
-
-    /// <summary>
-    /// Life Cycle Identification.
-    /// </summary>
-    [DisplayName("Life Cycle Identification")]
-    [IsoXmlTag("LifeCyclId")]
-    public Exact15Text? LifeCycleIdentification { get; init; }
-
-    /// <summary>
-    /// Maximum Number Of Messages.
-    /// </summary>
-    [DisplayName("Maximum Number Of Messages")]
-    [IsoXmlTag("MaxNbOfMsgs")]
-    public Number? MaximumNumberOfMessages { get; init; }
-
-    /// <summary>
-    /// Message Reason.
-    /// </summary>
-    [DisplayName("Message Reason")]
-    [IsoXmlTag("MsgRsn")]
-    public ValueList<ISO8583MessageReasonCode> MessageReason { get; init; } = [];
-
-    /// <summary>
-    /// National Data.
-    /// </summary>
-    [DisplayName("National Data")]
-    [IsoXmlTag("NtlData")]
-    public ValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 
     /// <summary>
     /// Network Management Type.
@@ -109,11 +60,116 @@ public record NetworkManagementResponseV05 : IOuterRecord
     public ISO8583NetworkManagementInformationCode? NetworkManagementType { get; init; }
 
     /// <summary>
+    /// Sender.
+    /// </summary>
+    [DisplayName("Sender")]
+    [IsoXmlTag("Sndr")]
+    public SenderData1? Sender { get; init; }
+
+    /// <summary>
+    /// Message Reason.
+    /// </summary>
+    [DisplayName("Message Reason")]
+    [IsoXmlTag("MsgRsn")]
+    public ValueList<ISO8583MessageReasonCode> MessageReason { get; init; } = [];
+
+    /// <summary>
+    /// Alternate Message Reason.
+    /// </summary>
+    [DisplayName("Alternate Message Reason")]
+    [IsoXmlTag("AltrnMsgRsn")]
+    public ValueList<Max256Text> AlternateMessageReason { get; init; } = [];
+
+    /// <summary>
+    /// Programme.
+    /// </summary>
+    [DisplayName("Programme")]
+    [IsoXmlTag("Prgrmm")]
+    public ProgrammeMode6? Programme { get; init; }
+
+    /// <summary>
     /// Number Of Messages.
     /// </summary>
     [DisplayName("Number Of Messages")]
     [IsoXmlTag("NbOfMsgs")]
     public Number? NumberOfMessages { get; init; }
+
+    /// <summary>
+    /// Maximum Number Of Messages.
+    /// </summary>
+    [DisplayName("Maximum Number Of Messages")]
+    [IsoXmlTag("MaxNbOfMsgs")]
+    public Number? MaximumNumberOfMessages { get; init; }
+
+    /// <summary>
+    /// System Trace Audit Number.
+    /// </summary>
+    [DisplayName("System Trace Audit Number")]
+    [IsoXmlTag("SysTracAudtNb")]
+    public required Max12NumericText SystemTraceAuditNumber { get; init; }
+
+    /// <summary>
+    /// Transmission Date Time.
+    /// </summary>
+    [DisplayName("Transmission Date Time")]
+    [IsoXmlTag("TrnsmssnDtTm")]
+    public required ISODateTime TransmissionDateTime { get; init; }
+
+    /// <summary>
+    /// Retrieval Reference Number.
+    /// </summary>
+    [DisplayName("Retrieval Reference Number")]
+    [IsoXmlTag("RtrvlRefNb")]
+    public Exact12Text? RetrievalReferenceNumber { get; init; }
+
+    /// <summary>
+    /// Life Cycle Identification.
+    /// </summary>
+    [DisplayName("Life Cycle Identification")]
+    [IsoXmlTag("LifeCyclId")]
+    public Exact15Text? LifeCycleIdentification { get; init; }
+
+    /// <summary>
+    /// Jurisdiction.
+    /// </summary>
+    [DisplayName("Jurisdiction")]
+    [IsoXmlTag("Jursdctn")]
+    public Jurisdiction2? Jurisdiction { get; init; }
+
+    /// <summary>
+    /// Settlement Service.
+    /// </summary>
+    [DisplayName("Settlement Service")]
+    [IsoXmlTag("SttlmSvc")]
+    public SettlementService7? SettlementService { get; init; }
+
+    /// <summary>
+    /// Additional Fee.
+    /// </summary>
+    [DisplayName("Additional Fee")]
+    [IsoXmlTag("AddtlFee")]
+    public ValueList<AdditionalFee4> AdditionalFee { get; init; } = [];
+
+    /// <summary>
+    /// Reconciliation.
+    /// </summary>
+    [DisplayName("Reconciliation")]
+    [IsoXmlTag("Rcncltn")]
+    public Reconciliation5? Reconciliation { get; init; }
+
+    /// <summary>
+    /// Transaction Description.
+    /// </summary>
+    [DisplayName("Transaction Description")]
+    [IsoXmlTag("TxDesc")]
+    public Max1000Text? TransactionDescription { get; init; }
+
+    /// <summary>
+    /// Processing Result.
+    /// </summary>
+    [DisplayName("Processing Result")]
+    [IsoXmlTag("PrcgRslt")]
+    public ProcessingResult30? ProcessingResult { get; init; }
 
     /// <summary>
     /// Original Response Code.
@@ -130,32 +186,11 @@ public record NetworkManagementResponseV05 : IOuterRecord
     public ValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
 
     /// <summary>
-    /// Processing Result.
+    /// National Data.
     /// </summary>
-    [DisplayName("Processing Result")]
-    [IsoXmlTag("PrcgRslt")]
-    public ProcessingResult30? ProcessingResult { get; init; }
-
-    /// <summary>
-    /// Programme.
-    /// </summary>
-    [DisplayName("Programme")]
-    [IsoXmlTag("Prgrmm")]
-    public ProgrammeMode6? Programme { get; init; }
-
-    /// <summary>
-    /// Reconciliation.
-    /// </summary>
-    [DisplayName("Reconciliation")]
-    [IsoXmlTag("Rcncltn")]
-    public Reconciliation5? Reconciliation { get; init; }
-
-    /// <summary>
-    /// Retrieval Reference Number.
-    /// </summary>
-    [DisplayName("Retrieval Reference Number")]
-    [IsoXmlTag("RtrvlRefNb")]
-    public Exact12Text? RetrievalReferenceNumber { get; init; }
+    [DisplayName("National Data")]
+    [IsoXmlTag("NtlData")]
+    public ValueList<ATICALaxProcessing> NationalData { get; init; } = [];
 
     /// <summary>
     /// Security Trailer.
@@ -163,39 +198,4 @@ public record NetworkManagementResponseV05 : IOuterRecord
     [DisplayName("Security Trailer")]
     [IsoXmlTag("SctyTrlr")]
     public ContentInformationType41? SecurityTrailer { get; init; }
-
-    /// <summary>
-    /// Sender.
-    /// </summary>
-    [DisplayName("Sender")]
-    [IsoXmlTag("Sndr")]
-    public SenderData1? Sender { get; init; }
-
-    /// <summary>
-    /// Settlement Service.
-    /// </summary>
-    [DisplayName("Settlement Service")]
-    [IsoXmlTag("SttlmSvc")]
-    public SettlementService7? SettlementService { get; init; }
-
-    /// <summary>
-    /// System Trace Audit Number.
-    /// </summary>
-    [DisplayName("System Trace Audit Number")]
-    [IsoXmlTag("SysTracAudtNb")]
-    public required Max12NumericText SystemTraceAuditNumber { get; init; }
-
-    /// <summary>
-    /// Transaction Description.
-    /// </summary>
-    [DisplayName("Transaction Description")]
-    [IsoXmlTag("TxDesc")]
-    public Max1000Text? TransactionDescription { get; init; }
-
-    /// <summary>
-    /// Transmission Date Time.
-    /// </summary>
-    [DisplayName("Transmission Date Time")]
-    [IsoXmlTag("TrnsmssnDtTm")]
-    public required ISODateTime TransmissionDateTime { get; init; }
 }

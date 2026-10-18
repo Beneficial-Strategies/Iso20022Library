@@ -46,13 +46,6 @@ public record ATMReconciliationAdviceV03 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// ATM Reconciliation Advice.
-    /// </summary>
-    [DisplayName("ATM Reconciliation Advice")]
-    [IsoXmlTag("ATMRcncltnAdvc")]
-    public ATMReconciliationAdvice3? ATMReconciliationAdvice { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
@@ -65,6 +58,13 @@ public record ATMReconciliationAdviceV03 : IOuterRecord
     [DisplayName("Protected ATM Reconciliation Advice")]
     [IsoXmlTag("PrtctdATMRcncltnAdvc")]
     public ContentInformationType10? ProtectedATMReconciliationAdvice { get; init; }
+
+    /// <summary>
+    /// ATM Reconciliation Advice.
+    /// </summary>
+    [DisplayName("ATM Reconciliation Advice")]
+    [IsoXmlTag("ATMRcncltnAdvc")]
+    public ATMReconciliationAdvice3? ATMReconciliationAdvice { get; init; }
 
     /// <summary>
     /// Security Trailer.

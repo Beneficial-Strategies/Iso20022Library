@@ -17,11 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record StandingSettlementInstruction20
 {
     /// <summary>
+    /// Settlement Standing Instruction Database.
+    /// </summary>
+    [DisplayName("Settlement Standing Instruction Database")]
+    [IsoXmlTag("SttlmStgInstrDB")]
+    public required SettlementStandingInstructionDatabase4Choice_ SettlementStandingInstructionDatabase { get; init; }
+
+    /// <summary>
     /// Counterparty.
     /// </summary>
     [DisplayName("Counterparty")]
     [IsoXmlTag("CtrPty")]
     public required Counterparty15Choice_ Counterparty { get; init; }
+
+    /// <summary>
+    /// Vendor.
+    /// </summary>
+    [DisplayName("Vendor")]
+    [IsoXmlTag("Vndr")]
+    public PartyIdentification136? Vendor { get; init; }
 
     /// <summary>
     /// Other Delivering Settlement Parties.
@@ -36,18 +50,4 @@ public record StandingSettlementInstruction20
     [DisplayName("Other Receiving Settlement Parties")]
     [IsoXmlTag("OthrRcvgSttlmPties")]
     public SettlementParties126? OtherReceivingSettlementParties { get; init; }
-
-    /// <summary>
-    /// Settlement Standing Instruction Database.
-    /// </summary>
-    [DisplayName("Settlement Standing Instruction Database")]
-    [IsoXmlTag("SttlmStgInstrDB")]
-    public required SettlementStandingInstructionDatabase4Choice_ SettlementStandingInstructionDatabase { get; init; }
-
-    /// <summary>
-    /// Vendor.
-    /// </summary>
-    [DisplayName("Vendor")]
-    [IsoXmlTag("Vndr")]
-    public PartyIdentification136? Vendor { get; init; }
 }

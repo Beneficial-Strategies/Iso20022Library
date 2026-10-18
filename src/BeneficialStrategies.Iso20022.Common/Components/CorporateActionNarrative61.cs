@@ -24,18 +24,11 @@ public record CorporateActionNarrative61
     public UpdatedAdditionalInformation22? AdditionalText { get; init; }
 
     /// <summary>
-    /// Certification Breakdown.
+    /// Narrative Version.
     /// </summary>
-    [DisplayName("Certification Breakdown")]
-    [IsoXmlTag("CertfctnBrkdwn")]
-    public UpdatedAdditionalInformation23? CertificationBreakdown { get; init; }
-
-    /// <summary>
-    /// Disclaimer.
-    /// </summary>
-    [DisplayName("Disclaimer")]
-    [IsoXmlTag("Dsclmr")]
-    public UpdatedAdditionalInformation23? Disclaimer { get; init; }
+    [DisplayName("Narrative Version")]
+    [IsoXmlTag("NrrtvVrsn")]
+    public UpdatedAdditionalInformation22? NarrativeVersion { get; init; }
 
     /// <summary>
     /// Information Conditions.
@@ -52,13 +45,6 @@ public record CorporateActionNarrative61
     public UpdatedAdditionalInformation23? InformationToComplyWith { get; init; }
 
     /// <summary>
-    /// Narrative Version.
-    /// </summary>
-    [DisplayName("Narrative Version")]
-    [IsoXmlTag("NrrtvVrsn")]
-    public UpdatedAdditionalInformation22? NarrativeVersion { get; init; }
-
-    /// <summary>
     /// Security Restriction.
     /// </summary>
     [DisplayName("Security Restriction")]
@@ -71,4 +57,18 @@ public record CorporateActionNarrative61
     [DisplayName("Taxation Conditions")]
     [IsoXmlTag("TaxtnConds")]
     public UpdatedAdditionalInformation23? TaxationConditions { get; init; }
+
+    /// <summary>
+    /// Disclaimer.
+    /// </summary>
+    [DisplayName("Disclaimer")]
+    [IsoXmlTag("Dsclmr")]
+    public UpdatedAdditionalInformation23? Disclaimer { get; init; }
+
+    /// <summary>
+    /// Certification Breakdown.
+    /// </summary>
+    [DisplayName("Certification Breakdown")]
+    [IsoXmlTag("CertfctnBrkdwn")]
+    public UpdatedAdditionalInformation23? CertificationBreakdown { get; init; }
 }

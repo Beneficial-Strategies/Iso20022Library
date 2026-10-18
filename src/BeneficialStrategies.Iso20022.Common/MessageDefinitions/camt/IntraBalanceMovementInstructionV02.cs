@@ -46,6 +46,34 @@ public record IntraBalanceMovementInstructionV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Identification.
+    /// </summary>
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public TransactionAndDocumentIdentification6? Identification { get; init; }
+
+    /// <summary>
+    /// Corporate Action Event Identification.
+    /// </summary>
+    [DisplayName("Corporate Action Event Identification")]
+    [IsoXmlTag("CorpActnEvtId")]
+    public Max35Text? CorporateActionEventIdentification { get; init; }
+
+    /// <summary>
+    /// Number Counts.
+    /// </summary>
+    [DisplayName("Number Counts")]
+    [IsoXmlTag("NbCounts")]
+    public NumberCount1Choice_? NumberCounts { get; init; }
+
+    /// <summary>
+    /// Linkages.
+    /// </summary>
+    [DisplayName("Linkages")]
+    [IsoXmlTag("Lnkgs")]
+    public ValueList<Linkages57> Linkages { get; init; } = [];
+
+    /// <summary>
     /// Cash Account.
     /// </summary>
     [DisplayName("Cash Account")]
@@ -67,39 +95,11 @@ public record IntraBalanceMovementInstructionV02 : IOuterRecord
     public BranchAndFinancialInstitutionIdentification8? CashAccountServicer { get; init; }
 
     /// <summary>
-    /// Corporate Action Event Identification.
-    /// </summary>
-    [DisplayName("Corporate Action Event Identification")]
-    [IsoXmlTag("CorpActnEvtId")]
-    public Max35Text? CorporateActionEventIdentification { get; init; }
-
-    /// <summary>
-    /// Identification.
-    /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public TransactionAndDocumentIdentification6? Identification { get; init; }
-
-    /// <summary>
     /// Intra Balance.
     /// </summary>
     [DisplayName("Intra Balance")]
     [IsoXmlTag("IntraBal")]
     public required IntraBalance5 IntraBalance { get; init; }
-
-    /// <summary>
-    /// Linkages.
-    /// </summary>
-    [DisplayName("Linkages")]
-    [IsoXmlTag("Lnkgs")]
-    public ValueList<Linkages57> Linkages { get; init; } = [];
-
-    /// <summary>
-    /// Number Counts.
-    /// </summary>
-    [DisplayName("Number Counts")]
-    [IsoXmlTag("NbCounts")]
-    public NumberCount1Choice_? NumberCounts { get; init; }
 
     /// <summary>
     /// Supplementary Data.

@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record EnableServiceRequest6
 {
     /// <summary>
-    /// Display Output.
+    /// Transaction Action.
     /// </summary>
-    [DisplayName("Display Output")]
-    [IsoXmlTag("DispOutpt")]
-    public ActionMessage11? DisplayOutput { get; init; }
+    [DisplayName("Transaction Action")]
+    [IsoXmlTag("TxActn")]
+    public required TransactionAction1Code TransactionAction { get; init; }
 
     /// <summary>
     /// Services Enabled.
@@ -31,9 +31,9 @@ public record EnableServiceRequest6
     public RetailerService2Code? ServicesEnabled { get; init; }
 
     /// <summary>
-    /// Transaction Action.
+    /// Display Output.
     /// </summary>
-    [DisplayName("Transaction Action")]
-    [IsoXmlTag("TxActn")]
-    public required TransactionAction1Code TransactionAction { get; init; }
+    [DisplayName("Display Output")]
+    [IsoXmlTag("DispOutpt")]
+    public ActionMessage11? DisplayOutput { get; init; }
 }

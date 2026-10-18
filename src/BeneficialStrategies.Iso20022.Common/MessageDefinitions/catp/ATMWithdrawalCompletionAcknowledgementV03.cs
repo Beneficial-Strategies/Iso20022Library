@@ -46,13 +46,6 @@ public record ATMWithdrawalCompletionAcknowledgementV03 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// ATM Withdrawal Completion Acknowledgement.
-    /// </summary>
-    [DisplayName("ATM Withdrawal Completion Acknowledgement")]
-    [IsoXmlTag("ATMWdrwlCmpltnAck")]
-    public ATMWithdrawalCompletionAcknowledgement3? ATMWithdrawalCompletionAcknowledgement { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
@@ -65,6 +58,13 @@ public record ATMWithdrawalCompletionAcknowledgementV03 : IOuterRecord
     [DisplayName("Protected ATM Withdrawal Completion Acknowledgement")]
     [IsoXmlTag("PrtctdATMWdrwlCmpltnAck")]
     public ContentInformationType10? ProtectedATMWithdrawalCompletionAcknowledgement { get; init; }
+
+    /// <summary>
+    /// ATM Withdrawal Completion Acknowledgement.
+    /// </summary>
+    [DisplayName("ATM Withdrawal Completion Acknowledgement")]
+    [IsoXmlTag("ATMWdrwlCmpltnAck")]
+    public ATMWithdrawalCompletionAcknowledgement3? ATMWithdrawalCompletionAcknowledgement { get; init; }
 
     /// <summary>
     /// Security Trailer.

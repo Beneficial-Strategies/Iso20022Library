@@ -17,6 +17,27 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record RetailerPaymentResult7
 {
     /// <summary>
+    /// Payment Instrument.
+    /// </summary>
+    [DisplayName("Payment Instrument")]
+    [IsoXmlTag("PmtInstrm")]
+    public ValueList<PaymentInstrumentType2Code> PaymentInstrument { get; init; } = [];
+
+    /// <summary>
+    /// Payment Type Information.
+    /// </summary>
+    [DisplayName("Payment Type Information")]
+    [IsoXmlTag("PmtTpInf")]
+    public PaymentTypeInformation26? PaymentTypeInformation { get; init; }
+
+    /// <summary>
+    /// Transaction Type.
+    /// </summary>
+    [DisplayName("Transaction Type")]
+    [IsoXmlTag("TxTp")]
+    public required CardPaymentServiceType12Code TransactionType { get; init; }
+
+    /// <summary>
     /// Additional Service.
     /// </summary>
     [DisplayName("Additional Service")]
@@ -24,11 +45,25 @@ public record RetailerPaymentResult7
     public ValueList<CardPaymentServiceType9Code> AdditionalService { get; init; } = [];
 
     /// <summary>
-    /// Customer Language.
+    /// Service Attribute.
     /// </summary>
-    [DisplayName("Customer Language")]
-    [IsoXmlTag("CstmrLang")]
-    public LanguageCode? CustomerLanguage { get; init; }
+    [DisplayName("Service Attribute")]
+    [IsoXmlTag("SvcAttr")]
+    public CardPaymentServiceType15Code? ServiceAttribute { get; init; }
+
+    /// <summary>
+    /// Requested Transaction.
+    /// </summary>
+    [DisplayName("Requested Transaction")]
+    [IsoXmlTag("ReqdTx")]
+    public PaymentTransaction165? RequestedTransaction { get; init; }
+
+    /// <summary>
+    /// Transaction Response.
+    /// </summary>
+    [DisplayName("Transaction Response")]
+    [IsoXmlTag("TxRspn")]
+    public CardPaymentTransaction144? TransactionResponse { get; init; }
 
     /// <summary>
     /// Customer Order.
@@ -45,34 +80,6 @@ public record RetailerPaymentResult7
     public CapturedSignature1? ImageCapturedSignature { get; init; }
 
     /// <summary>
-    /// Merchant Override Flag.
-    /// </summary>
-    [DisplayName("Merchant Override Flag")]
-    [IsoXmlTag("MrchntOvrrdFlg")]
-    public TrueFalseIndicator? MerchantOverrideFlag { get; init; }
-
-    /// <summary>
-    /// Online Flag.
-    /// </summary>
-    [DisplayName("Online Flag")]
-    [IsoXmlTag("OnlnFlg")]
-    public TrueFalseIndicator? OnlineFlag { get; init; }
-
-    /// <summary>
-    /// Payment Instrument.
-    /// </summary>
-    [DisplayName("Payment Instrument")]
-    [IsoXmlTag("PmtInstrm")]
-    public ValueList<PaymentInstrumentType2Code> PaymentInstrument { get; init; } = [];
-
-    /// <summary>
-    /// Payment Type Information.
-    /// </summary>
-    [DisplayName("Payment Type Information")]
-    [IsoXmlTag("PmtTpInf")]
-    public PaymentTypeInformation26? PaymentTypeInformation { get; init; }
-
-    /// <summary>
     /// Protected Captured Signature.
     /// </summary>
     [DisplayName("Protected Captured Signature")]
@@ -80,30 +87,23 @@ public record RetailerPaymentResult7
     public ContentInformationType40? ProtectedCapturedSignature { get; init; }
 
     /// <summary>
-    /// Requested Transaction.
+    /// Merchant Override Flag.
     /// </summary>
-    [DisplayName("Requested Transaction")]
-    [IsoXmlTag("ReqdTx")]
-    public PaymentTransaction165? RequestedTransaction { get; init; }
+    [DisplayName("Merchant Override Flag")]
+    [IsoXmlTag("MrchntOvrrdFlg")]
+    public TrueFalseIndicator? MerchantOverrideFlag { get; init; }
 
     /// <summary>
-    /// Service Attribute.
+    /// Customer Language.
     /// </summary>
-    [DisplayName("Service Attribute")]
-    [IsoXmlTag("SvcAttr")]
-    public CardPaymentServiceType15Code? ServiceAttribute { get; init; }
+    [DisplayName("Customer Language")]
+    [IsoXmlTag("CstmrLang")]
+    public LanguageCode? CustomerLanguage { get; init; }
 
     /// <summary>
-    /// Transaction Response.
+    /// Online Flag.
     /// </summary>
-    [DisplayName("Transaction Response")]
-    [IsoXmlTag("TxRspn")]
-    public CardPaymentTransaction144? TransactionResponse { get; init; }
-
-    /// <summary>
-    /// Transaction Type.
-    /// </summary>
-    [DisplayName("Transaction Type")]
-    [IsoXmlTag("TxTp")]
-    public required CardPaymentServiceType12Code TransactionType { get; init; }
+    [DisplayName("Online Flag")]
+    [IsoXmlTag("OnlnFlg")]
+    public TrueFalseIndicator? OnlineFlag { get; init; }
 }

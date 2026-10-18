@@ -46,32 +46,11 @@ public record AccountOpeningRequestV05 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account.
+    /// References.
     /// </summary>
-    [DisplayName("Account")]
-    [IsoXmlTag("Acct")]
-    public required CustomerAccount4 Account { get; init; }
-
-    /// <summary>
-    /// Account Servicer Identification.
-    /// </summary>
-    [DisplayName("Account Servicer Identification")]
-    [IsoXmlTag("AcctSvcrId")]
-    public required BranchAndFinancialInstitutionIdentification8 AccountServicerIdentification { get; init; }
-
-    /// <summary>
-    /// Contract Dates.
-    /// </summary>
-    [DisplayName("Contract Dates")]
-    [IsoXmlTag("CtrctDts")]
-    public AccountContract2? ContractDates { get; init; }
-
-    /// <summary>
-    /// Digital Signature.
-    /// </summary>
-    [DisplayName("Digital Signature")]
-    [IsoXmlTag("DgtlSgntr")]
-    public ValueList<PartyAndSignature4> DigitalSignature { get; init; } = [];
+    [DisplayName("References")]
+    [IsoXmlTag("Refs")]
+    public required References4 References { get; init; }
 
     /// <summary>
     /// From.
@@ -81,18 +60,32 @@ public record AccountOpeningRequestV05 : IOuterRecord
     public OrganisationIdentification39? From { get; init; }
 
     /// <summary>
-    /// Group.
+    /// Account.
     /// </summary>
-    [DisplayName("Group")]
-    [IsoXmlTag("Grp")]
-    public ValueList<Group6> Group { get; init; } = [];
+    [DisplayName("Account")]
+    [IsoXmlTag("Acct")]
+    public required CustomerAccount4 Account { get; init; }
 
     /// <summary>
-    /// Mandate.
+    /// Contract Dates.
     /// </summary>
-    [DisplayName("Mandate")]
-    [IsoXmlTag("Mndt")]
-    public ValueList<OperationMandate7> Mandate { get; init; } = [];
+    [DisplayName("Contract Dates")]
+    [IsoXmlTag("CtrctDts")]
+    public AccountContract2? ContractDates { get; init; }
+
+    /// <summary>
+    /// Underlying Master Agreement.
+    /// </summary>
+    [DisplayName("Underlying Master Agreement")]
+    [IsoXmlTag("UndrlygMstrAgrmt")]
+    public ContractDocument1? UnderlyingMasterAgreement { get; init; }
+
+    /// <summary>
+    /// Account Servicer Identification.
+    /// </summary>
+    [DisplayName("Account Servicer Identification")]
+    [IsoXmlTag("AcctSvcrId")]
+    public required BranchAndFinancialInstitutionIdentification8 AccountServicerIdentification { get; init; }
 
     /// <summary>
     /// Organisation.
@@ -102,6 +95,20 @@ public record AccountOpeningRequestV05 : IOuterRecord
     public required Organisation42 Organisation { get; init; }
 
     /// <summary>
+    /// Mandate.
+    /// </summary>
+    [DisplayName("Mandate")]
+    [IsoXmlTag("Mndt")]
+    public ValueList<OperationMandate7> Mandate { get; init; } = [];
+
+    /// <summary>
+    /// Group.
+    /// </summary>
+    [DisplayName("Group")]
+    [IsoXmlTag("Grp")]
+    public ValueList<Group6> Group { get; init; } = [];
+
+    /// <summary>
     /// Reference Account.
     /// </summary>
     [DisplayName("Reference Account")]
@@ -109,11 +116,11 @@ public record AccountOpeningRequestV05 : IOuterRecord
     public CashAccount40? ReferenceAccount { get; init; }
 
     /// <summary>
-    /// References.
+    /// Digital Signature.
     /// </summary>
-    [DisplayName("References")]
-    [IsoXmlTag("Refs")]
-    public required References4 References { get; init; }
+    [DisplayName("Digital Signature")]
+    [IsoXmlTag("DgtlSgntr")]
+    public ValueList<PartyAndSignature4> DigitalSignature { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.
@@ -121,11 +128,4 @@ public record AccountOpeningRequestV05 : IOuterRecord
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Underlying Master Agreement.
-    /// </summary>
-    [DisplayName("Underlying Master Agreement")]
-    [IsoXmlTag("UndrlygMstrAgrmt")]
-    public ContractDocument1? UnderlyingMasterAgreement { get; init; }
 }

@@ -46,11 +46,11 @@ public record AccountLinkStatusAdviceV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Link Identification.
+    /// Message Header.
     /// </summary>
-    [DisplayName("Account Link Identification")]
-    [IsoXmlTag("AcctLkId")]
-    public AccountLink8? AccountLinkIdentification { get; init; }
+    [DisplayName("Message Header")]
+    [IsoXmlTag("MsgHdr")]
+    public MessageHeader12? MessageHeader { get; init; }
 
     /// <summary>
     /// Account Link Status.
@@ -60,11 +60,11 @@ public record AccountLinkStatusAdviceV01 : IOuterRecord
     public required AccountLinkStatus1 AccountLinkStatus { get; init; }
 
     /// <summary>
-    /// Message Header.
+    /// Account Link Identification.
     /// </summary>
-    [DisplayName("Message Header")]
-    [IsoXmlTag("MsgHdr")]
-    public MessageHeader12? MessageHeader { get; init; }
+    [DisplayName("Account Link Identification")]
+    [IsoXmlTag("AcctLkId")]
+    public AccountLink8? AccountLinkIdentification { get; init; }
 
     /// <summary>
     /// Supplementary Data.

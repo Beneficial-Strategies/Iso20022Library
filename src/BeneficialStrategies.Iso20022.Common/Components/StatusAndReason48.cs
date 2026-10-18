@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record StatusAndReason48
 {
     /// <summary>
+    /// Processing Status.
+    /// </summary>
+    [DisplayName("Processing Status")]
+    [IsoXmlTag("PrcgSts")]
+    public ProcessingStatus52Choice_? ProcessingStatus { get; init; }
+
+    /// <summary>
     /// Inferred Matching Status.
     /// </summary>
     [DisplayName("Inferred Matching Status")]
@@ -29,13 +36,6 @@ public record StatusAndReason48
     [DisplayName("Matching Status")]
     [IsoXmlTag("MtchgSts")]
     public MatchingStatus24Choice_? MatchingStatus { get; init; }
-
-    /// <summary>
-    /// Processing Status.
-    /// </summary>
-    [DisplayName("Processing Status")]
-    [IsoXmlTag("PrcgSts")]
-    public ProcessingStatus52Choice_? ProcessingStatus { get; init; }
 
     /// <summary>
     /// Settlement Status.

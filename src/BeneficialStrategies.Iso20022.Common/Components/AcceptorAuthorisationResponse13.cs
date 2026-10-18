@@ -24,13 +24,6 @@ public record AcceptorAuthorisationResponse13
     public required CardPaymentEnvironment80 Environment { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
     /// Transaction.
     /// </summary>
     [DisplayName("Transaction")]
@@ -43,4 +36,11 @@ public record AcceptorAuthorisationResponse13
     [DisplayName("Transaction Response")]
     [IsoXmlTag("TxRspn")]
     public required CardPaymentTransaction132 TransactionResponse { get; init; }
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

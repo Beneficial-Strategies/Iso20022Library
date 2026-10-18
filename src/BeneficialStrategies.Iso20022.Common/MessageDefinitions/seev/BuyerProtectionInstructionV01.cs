@@ -46,20 +46,6 @@ public record BuyerProtectionInstructionV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Identification.
-    /// </summary>
-    [DisplayName("Account Identification")]
-    [IsoXmlTag("AcctId")]
-    public SecuritiesAccountIdentification1Choice_? AccountIdentification { get; init; }
-
-    /// <summary>
-    /// Corporate Action Election.
-    /// </summary>
-    [DisplayName("Corporate Action Election")]
-    [IsoXmlTag("CorpActnElctn")]
-    public required CorporateActionElection4 CorporateActionElection { get; init; }
-
-    /// <summary>
     /// Corporate Action General Information.
     /// </summary>
     [DisplayName("Corporate Action General Information")]
@@ -72,6 +58,20 @@ public record BuyerProtectionInstructionV01 : IOuterRecord
     [DisplayName("Related Settlement Instruction")]
     [IsoXmlTag("RltdSttlmInstr")]
     public required RelatedSettlementInstruction3 RelatedSettlementInstruction { get; init; }
+
+    /// <summary>
+    /// Account Identification.
+    /// </summary>
+    [DisplayName("Account Identification")]
+    [IsoXmlTag("AcctId")]
+    public SecuritiesAccountIdentification1Choice_? AccountIdentification { get; init; }
+
+    /// <summary>
+    /// Corporate Action Election.
+    /// </summary>
+    [DisplayName("Corporate Action Election")]
+    [IsoXmlTag("CorpActnElctn")]
+    public required CorporateActionElection4 CorporateActionElection { get; init; }
 
     /// <summary>
     /// Supplementary Data.

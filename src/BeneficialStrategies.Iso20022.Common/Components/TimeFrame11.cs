@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TimeFrame11
 {
     /// <summary>
-    /// Non Working Day Adjustment.
-    /// </summary>
-    [DisplayName("Non Working Day Adjustment")]
-    [IsoXmlTag("NonWorkgDayAdjstmnt")]
-    public BusinessDayConvention1Code? NonWorkingDayAdjustment { get; init; }
-
-    /// <summary>
     /// Other Time Frame Description.
     /// </summary>
     [DisplayName("Other Time Frame Description")]
@@ -31,16 +24,23 @@ public record TimeFrame11
     public Max350Text? OtherTimeFrameDescription { get; init; }
 
     /// <summary>
-    /// Refer To Order Desk.
-    /// </summary>
-    [DisplayName("Refer To Order Desk")]
-    [IsoXmlTag("RefrToOrdrDsk")]
-    public ReferToFundOrderDesk1Code? ReferToOrderDesk { get; init; }
-
-    /// <summary>
     /// Trade Plus.
     /// </summary>
     [DisplayName("Trade Plus")]
     [IsoXmlTag("TPlus")]
     public Number? TradePlus { get; init; }
+
+    /// <summary>
+    /// Non Working Day Adjustment.
+    /// </summary>
+    [DisplayName("Non Working Day Adjustment")]
+    [IsoXmlTag("NonWorkgDayAdjstmnt")]
+    public BusinessDayConvention1Code? NonWorkingDayAdjustment { get; init; }
+
+    /// <summary>
+    /// Refer To Order Desk.
+    /// </summary>
+    [DisplayName("Refer To Order Desk")]
+    [IsoXmlTag("RefrToOrdrDsk")]
+    public ReferToFundOrderDesk1Code? ReferToOrderDesk { get; init; }
 }

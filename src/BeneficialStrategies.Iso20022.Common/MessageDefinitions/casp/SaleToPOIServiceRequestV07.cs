@@ -53,16 +53,16 @@ public record SaleToPOIServiceRequestV07 : IOuterRecord
     public required Header41 Header { get; init; }
 
     /// <summary>
-    /// Security Trailer.
-    /// </summary>
-    [DisplayName("Security Trailer")]
-    [IsoXmlTag("SctyTrlr")]
-    public ContentInformationType38? SecurityTrailer { get; init; }
-
-    /// <summary>
     /// Service Request.
     /// </summary>
     [DisplayName("Service Request")]
     [IsoXmlTag("SvcReq")]
     public required ServiceRequest8 ServiceRequest { get; init; }
+
+    /// <summary>
+    /// Security Trailer.
+    /// </summary>
+    [DisplayName("Security Trailer")]
+    [IsoXmlTag("SctyTrlr")]
+    public ContentInformationType38? SecurityTrailer { get; init; }
 }

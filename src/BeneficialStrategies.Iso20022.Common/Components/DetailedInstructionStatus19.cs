@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record DetailedInstructionStatus19
 {
     /// <summary>
+    /// Single Instruction Identification.
+    /// </summary>
+    [DisplayName("Single Instruction Identification")]
+    [IsoXmlTag("SnglInstrId")]
+    public required Max35Text SingleInstructionIdentification { get; init; }
+
+    /// <summary>
     /// Account Identification.
     /// </summary>
     [DisplayName("Account Identification")]
@@ -31,18 +38,11 @@ public record DetailedInstructionStatus19
     public PartyIdentification231Choice_? AccountOwner { get; init; }
 
     /// <summary>
-    /// Modality Of Counting.
+    /// Sub Account Identification.
     /// </summary>
-    [DisplayName("Modality Of Counting")]
-    [IsoXmlTag("ModltyOfCntg")]
-    public required ModalityOfCounting1Choice_ ModalityOfCounting { get; init; }
-
-    /// <summary>
-    /// Proxy.
-    /// </summary>
-    [DisplayName("Proxy")]
-    [IsoXmlTag("Prxy")]
-    public PartyIdentification232Choice_? Proxy { get; init; }
+    [DisplayName("Sub Account Identification")]
+    [IsoXmlTag("SubAcctId")]
+    public Max35Text? SubAccountIdentification { get; init; }
 
     /// <summary>
     /// Rights Holder.
@@ -52,11 +52,11 @@ public record DetailedInstructionStatus19
     public ValueList<PartyIdentification246Choice_> RightsHolder { get; init; } = [];
 
     /// <summary>
-    /// Single Instruction Identification.
+    /// Proxy.
     /// </summary>
-    [DisplayName("Single Instruction Identification")]
-    [IsoXmlTag("SnglInstrId")]
-    public required Max35Text SingleInstructionIdentification { get; init; }
+    [DisplayName("Proxy")]
+    [IsoXmlTag("Prxy")]
+    public PartyIdentification232Choice_? Proxy { get; init; }
 
     /// <summary>
     /// Standing Instruction.
@@ -66,18 +66,11 @@ public record DetailedInstructionStatus19
     public YesNoIndicator? StandingInstruction { get; init; }
 
     /// <summary>
-    /// Sub Account Identification.
+    /// Modality Of Counting.
     /// </summary>
-    [DisplayName("Sub Account Identification")]
-    [IsoXmlTag("SubAcctId")]
-    public Max35Text? SubAccountIdentification { get; init; }
-
-    /// <summary>
-    /// Vote Per Resolution.
-    /// </summary>
-    [DisplayName("Vote Per Resolution")]
-    [IsoXmlTag("VotePerRsltn")]
-    public ValueList<Vote19> VotePerResolution { get; init; } = [];
+    [DisplayName("Modality Of Counting")]
+    [IsoXmlTag("ModltyOfCntg")]
+    public required ModalityOfCounting1Choice_ ModalityOfCounting { get; init; }
 
     /// <summary>
     /// Vote Receipt Date Time.
@@ -85,4 +78,11 @@ public record DetailedInstructionStatus19
     [DisplayName("Vote Receipt Date Time")]
     [IsoXmlTag("VoteRctDtTm")]
     public DateAndDateTime1Choice_? VoteReceiptDateTime { get; init; }
+
+    /// <summary>
+    /// Vote Per Resolution.
+    /// </summary>
+    [DisplayName("Vote Per Resolution")]
+    [IsoXmlTag("VotePerRsltn")]
+    public ValueList<Vote19> VotePerResolution { get; init; } = [];
 }

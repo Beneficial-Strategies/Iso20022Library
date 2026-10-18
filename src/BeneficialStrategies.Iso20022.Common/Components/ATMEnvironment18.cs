@@ -24,13 +24,6 @@ public record ATMEnvironment18
     public Acquirer7? Acquirer { get; init; }
 
     /// <summary>
-    /// ATM.
-    /// </summary>
-    [DisplayName("ATM")]
-    [IsoXmlTag("ATM")]
-    public required AutomatedTellerMachine12 ATM { get; init; }
-
-    /// <summary>
     /// ATM Manager Identification.
     /// </summary>
     [DisplayName("ATM Manager Identification")]
@@ -38,11 +31,18 @@ public record ATMEnvironment18
     public Max35Text? ATMManagerIdentification { get; init; }
 
     /// <summary>
-    /// Card.
+    /// Hosting Entity.
     /// </summary>
-    [DisplayName("Card")]
-    [IsoXmlTag("Card")]
-    public PaymentCard36? Card { get; init; }
+    [DisplayName("Hosting Entity")]
+    [IsoXmlTag("HstgNtty")]
+    public TerminalHosting1? HostingEntity { get; init; }
+
+    /// <summary>
+    /// ATM.
+    /// </summary>
+    [DisplayName("ATM")]
+    [IsoXmlTag("ATM")]
+    public required AutomatedTellerMachine12 ATM { get; init; }
 
     /// <summary>
     /// Customer.
@@ -52,9 +52,9 @@ public record ATMEnvironment18
     public required ATMCustomer8 Customer { get; init; }
 
     /// <summary>
-    /// Hosting Entity.
+    /// Card.
     /// </summary>
-    [DisplayName("Hosting Entity")]
-    [IsoXmlTag("HstgNtty")]
-    public TerminalHosting1? HostingEntity { get; init; }
+    [DisplayName("Card")]
+    [IsoXmlTag("Card")]
+    public PaymentCard36? Card { get; init; }
 }

@@ -17,32 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SponsoredMerchant3
 {
     /// <summary>
-    /// Additional Address.
+    /// Identification.
     /// </summary>
-    [DisplayName("Additional Address")]
-    [IsoXmlTag("AddtlAdr")]
-    public Max256Text? AdditionalAddress { get; init; }
-
-    /// <summary>
-    /// Additional Data.
-    /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
-
-    /// <summary>
-    /// Additional Identification.
-    /// </summary>
-    [DisplayName("Additional Identification")]
-    [IsoXmlTag("AddtlId")]
-    public ValueList<AdditionalData1> AdditionalIdentification { get; init; } = [];
-
-    /// <summary>
-    /// Address.
-    /// </summary>
-    [DisplayName("Address")]
-    [IsoXmlTag("Adr")]
-    public Address2? Address { get; init; }
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Assigner.
@@ -52,18 +31,25 @@ public record SponsoredMerchant3
     public Max35Text? Assigner { get; init; }
 
     /// <summary>
-    /// Common Name.
-    /// </summary>
-    [DisplayName("Common Name")]
-    [IsoXmlTag("CmonNm")]
-    public Max140Text? CommonName { get; init; }
-
-    /// <summary>
     /// Country.
     /// </summary>
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
     public ISO3NumericCountryCode? Country { get; init; }
+
+    /// <summary>
+    /// Short Name.
+    /// </summary>
+    [DisplayName("Short Name")]
+    [IsoXmlTag("ShrtNm")]
+    public Max35Text? ShortName { get; init; }
+
+    /// <summary>
+    /// Additional Identification.
+    /// </summary>
+    [DisplayName("Additional Identification")]
+    [IsoXmlTag("AddtlId")]
+    public ValueList<AdditionalData1> AdditionalIdentification { get; init; } = [];
 
     /// <summary>
     /// Foreign.
@@ -73,18 +59,11 @@ public record SponsoredMerchant3
     public TrueFalseIndicator? Foreign { get; init; }
 
     /// <summary>
-    /// Geographic Location.
+    /// Common Name.
     /// </summary>
-    [DisplayName("Geographic Location")]
-    [IsoXmlTag("GeogcLctn")]
-    public GeographicPointInDecimalDegrees? GeographicLocation { get; init; }
-
-    /// <summary>
-    /// Identification.
-    /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public required Max35Text Identification { get; init; }
+    [DisplayName("Common Name")]
+    [IsoXmlTag("CmonNm")]
+    public Max140Text? CommonName { get; init; }
 
     /// <summary>
     /// Legal Corporate Name.
@@ -94,16 +73,37 @@ public record SponsoredMerchant3
     public Max99Text? LegalCorporateName { get; init; }
 
     /// <summary>
+    /// Address.
+    /// </summary>
+    [DisplayName("Address")]
+    [IsoXmlTag("Adr")]
+    public Address2? Address { get; init; }
+
+    /// <summary>
+    /// Additional Address.
+    /// </summary>
+    [DisplayName("Additional Address")]
+    [IsoXmlTag("AddtlAdr")]
+    public Max256Text? AdditionalAddress { get; init; }
+
+    /// <summary>
+    /// Geographic Location.
+    /// </summary>
+    [DisplayName("Geographic Location")]
+    [IsoXmlTag("GeogcLctn")]
+    public GeographicPointInDecimalDegrees? GeographicLocation { get; init; }
+
+    /// <summary>
+    /// Additional Data.
+    /// </summary>
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
+
+    /// <summary>
     /// Local Data.
     /// </summary>
     [DisplayName("Local Data")]
     [IsoXmlTag("LclData")]
     public ValueList<LocalData12> LocalData { get; init; } = [];
-
-    /// <summary>
-    /// Short Name.
-    /// </summary>
-    [DisplayName("Short Name")]
-    [IsoXmlTag("ShrtNm")]
-    public Max35Text? ShortName { get; init; }
 }

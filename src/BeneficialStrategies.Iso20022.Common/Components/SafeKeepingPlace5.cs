@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SafeKeepingPlace5
 {
     /// <summary>
-    /// LEI.
-    /// </summary>
-    [DisplayName("LEI")]
-    [IsoXmlTag("LEI")]
-    public LEIIdentifier? LEI { get; init; }
-
-    /// <summary>
     /// Safekeeping Place Format.
     /// </summary>
     [DisplayName("Safekeeping Place Format")]
     [IsoXmlTag("SfkpgPlcFrmt")]
     public SafekeepingPlaceFormat41Choice_? SafekeepingPlaceFormat { get; init; }
+
+    /// <summary>
+    /// LEI.
+    /// </summary>
+    [DisplayName("LEI")]
+    [IsoXmlTag("LEI")]
+    public LEIIdentifier? LEI { get; init; }
 }

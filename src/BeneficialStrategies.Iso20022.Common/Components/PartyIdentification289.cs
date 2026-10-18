@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PartyIdentification289
 {
     /// <summary>
+    /// Party Identification.
+    /// </summary>
+    [DisplayName("Party Identification")]
+    [IsoXmlTag("PtyId")]
+    public required PartyIdentification129Choice_ PartyIdentification { get; init; }
+
+    /// <summary>
     /// Contact Person.
     /// </summary>
     [DisplayName("Contact Person")]
@@ -29,11 +36,4 @@ public record PartyIdentification289
     [DisplayName("Contact Person Address")]
     [IsoXmlTag("CtctPrsnAdr")]
     public PostalAddress1? ContactPersonAddress { get; init; }
-
-    /// <summary>
-    /// Party Identification.
-    /// </summary>
-    [DisplayName("Party Identification")]
-    [IsoXmlTag("PtyId")]
-    public required PartyIdentification129Choice_ PartyIdentification { get; init; }
 }

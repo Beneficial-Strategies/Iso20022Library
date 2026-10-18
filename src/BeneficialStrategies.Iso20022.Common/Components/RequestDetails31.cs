@@ -17,6 +17,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record RequestDetails31
 {
     /// <summary>
+    /// Reference.
+    /// </summary>
+    [DisplayName("Reference")]
+    [IsoXmlTag("Ref")]
+    public required References29 Reference { get; init; }
+
+    /// <summary>
+    /// Restriction Reference.
+    /// </summary>
+    [DisplayName("Restriction Reference")]
+    [IsoXmlTag("RstrctnRef")]
+    public ValueList<RestrictionIdentification1> RestrictionReference { get; init; } = [];
+
+    /// <summary>
     /// Automatic Borrowing.
     /// </summary>
     [DisplayName("Automatic Borrowing")]
@@ -24,11 +38,11 @@ public record RequestDetails31
     public AutomaticBorrowing7Choice_? AutomaticBorrowing { get; init; }
 
     /// <summary>
-    /// Hold Indicator.
+    /// Retain Indicator.
     /// </summary>
-    [DisplayName("Hold Indicator")]
-    [IsoXmlTag("HldInd")]
-    public HoldIndicator6? HoldIndicator { get; init; }
+    [DisplayName("Retain Indicator")]
+    [IsoXmlTag("RtnInd")]
+    public YesNoIndicator? RetainIndicator { get; init; }
 
     /// <summary>
     /// Linkage.
@@ -38,18 +52,11 @@ public record RequestDetails31
     public LinkageType3Choice_? Linkage { get; init; }
 
     /// <summary>
-    /// Linkages.
+    /// Priority.
     /// </summary>
-    [DisplayName("Linkages")]
-    [IsoXmlTag("Lnkgs")]
-    public ValueList<Linkages73> Linkages { get; init; } = [];
-
-    /// <summary>
-    /// Matching Denial.
-    /// </summary>
-    [DisplayName("Matching Denial")]
-    [IsoXmlTag("MtchgDnl")]
-    public MatchingDenied3Choice_? MatchingDenial { get; init; }
+    [DisplayName("Priority")]
+    [IsoXmlTag("Prty")]
+    public PriorityNumeric4Choice_? Priority { get; init; }
 
     /// <summary>
     /// Other Processing.
@@ -66,34 +73,6 @@ public record RequestDetails31
     public SettlementTransactionCondition5Code? PartialSettlementIndicator { get; init; }
 
     /// <summary>
-    /// Priority.
-    /// </summary>
-    [DisplayName("Priority")]
-    [IsoXmlTag("Prty")]
-    public PriorityNumeric4Choice_? Priority { get; init; }
-
-    /// <summary>
-    /// Reference.
-    /// </summary>
-    [DisplayName("Reference")]
-    [IsoXmlTag("Ref")]
-    public required References29 Reference { get; init; }
-
-    /// <summary>
-    /// Restriction Reference.
-    /// </summary>
-    [DisplayName("Restriction Reference")]
-    [IsoXmlTag("RstrctnRef")]
-    public ValueList<RestrictionIdentification1> RestrictionReference { get; init; } = [];
-
-    /// <summary>
-    /// Retain Indicator.
-    /// </summary>
-    [DisplayName("Retain Indicator")]
-    [IsoXmlTag("RtnInd")]
-    public YesNoIndicator? RetainIndicator { get; init; }
-
-    /// <summary>
     /// Securities RTGS.
     /// </summary>
     [DisplayName("Securities RTGS")]
@@ -101,9 +80,30 @@ public record RequestDetails31
     public SecuritiesRTGS4Choice_? SecuritiesRTGS { get; init; }
 
     /// <summary>
+    /// Hold Indicator.
+    /// </summary>
+    [DisplayName("Hold Indicator")]
+    [IsoXmlTag("HldInd")]
+    public HoldIndicator6? HoldIndicator { get; init; }
+
+    /// <summary>
+    /// Matching Denial.
+    /// </summary>
+    [DisplayName("Matching Denial")]
+    [IsoXmlTag("MtchgDnl")]
+    public MatchingDenied3Choice_? MatchingDenial { get; init; }
+
+    /// <summary>
     /// Unilateral Split.
     /// </summary>
     [DisplayName("Unilateral Split")]
     [IsoXmlTag("UnltrlSplt")]
     public UnilateralSplit3Choice_? UnilateralSplit { get; init; }
+
+    /// <summary>
+    /// Linkages.
+    /// </summary>
+    [DisplayName("Linkages")]
+    [IsoXmlTag("Lnkgs")]
+    public ValueList<Linkages73> Linkages { get; init; } = [];
 }

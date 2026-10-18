@@ -46,46 +46,11 @@ public record BusinessApplicationHeaderV04 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Business Message Identifier.
-    /// </summary>
-    [DisplayName("Business Message Identifier")]
-    [IsoXmlTag("BizMsgIdr")]
-    public required Max35Text BusinessMessageIdentifier { get; init; }
-
-    /// <summary>
-    /// Business Processing Date.
-    /// </summary>
-    [DisplayName("Business Processing Date")]
-    [IsoXmlTag("BizPrcgDt")]
-    public ISODateTime? BusinessProcessingDate { get; init; }
-
-    /// <summary>
-    /// Business Service.
-    /// </summary>
-    [DisplayName("Business Service")]
-    [IsoXmlTag("BizSvc")]
-    public Max35Text? BusinessService { get; init; }
-
-    /// <summary>
     /// Character Set.
     /// </summary>
     [DisplayName("Character Set")]
     [IsoXmlTag("CharSet")]
     public UnicodeChartsCode? CharacterSet { get; init; }
-
-    /// <summary>
-    /// Copy Duplicate.
-    /// </summary>
-    [DisplayName("Copy Duplicate")]
-    [IsoXmlTag("CpyDplct")]
-    public CopyDuplicate1Code? CopyDuplicate { get; init; }
-
-    /// <summary>
-    /// Creation Date.
-    /// </summary>
-    [DisplayName("Creation Date")]
-    [IsoXmlTag("CreDt")]
-    public required ISODateTime CreationDate { get; init; }
 
     /// <summary>
     /// From.
@@ -95,11 +60,18 @@ public record BusinessApplicationHeaderV04 : IOuterRecord
     public required Party51Choice_ From { get; init; }
 
     /// <summary>
-    /// Market Practice.
+    /// To.
     /// </summary>
-    [DisplayName("Market Practice")]
-    [IsoXmlTag("MktPrctc")]
-    public ImplementationSpecification1? MarketPractice { get; init; }
+    [DisplayName("To")]
+    [IsoXmlTag("To")]
+    public required Party51Choice_ To { get; init; }
+
+    /// <summary>
+    /// Business Message Identifier.
+    /// </summary>
+    [DisplayName("Business Message Identifier")]
+    [IsoXmlTag("BizMsgIdr")]
+    public required Max35Text BusinessMessageIdentifier { get; init; }
 
     /// <summary>
     /// Message Definition Identifier.
@@ -107,6 +79,41 @@ public record BusinessApplicationHeaderV04 : IOuterRecord
     [DisplayName("Message Definition Identifier")]
     [IsoXmlTag("MsgDefIdr")]
     public required Max35Text MessageDefinitionIdentifier { get; init; }
+
+    /// <summary>
+    /// Business Service.
+    /// </summary>
+    [DisplayName("Business Service")]
+    [IsoXmlTag("BizSvc")]
+    public Max35Text? BusinessService { get; init; }
+
+    /// <summary>
+    /// Market Practice.
+    /// </summary>
+    [DisplayName("Market Practice")]
+    [IsoXmlTag("MktPrctc")]
+    public ImplementationSpecification1? MarketPractice { get; init; }
+
+    /// <summary>
+    /// Creation Date.
+    /// </summary>
+    [DisplayName("Creation Date")]
+    [IsoXmlTag("CreDt")]
+    public required ISODateTime CreationDate { get; init; }
+
+    /// <summary>
+    /// Business Processing Date.
+    /// </summary>
+    [DisplayName("Business Processing Date")]
+    [IsoXmlTag("BizPrcgDt")]
+    public ISODateTime? BusinessProcessingDate { get; init; }
+
+    /// <summary>
+    /// Copy Duplicate.
+    /// </summary>
+    [DisplayName("Copy Duplicate")]
+    [IsoXmlTag("CpyDplct")]
+    public CopyDuplicate1Code? CopyDuplicate { get; init; }
 
     /// <summary>
     /// Possible Duplicate.
@@ -123,13 +130,6 @@ public record BusinessApplicationHeaderV04 : IOuterRecord
     public BusinessMessagePriorityCode? Priority { get; init; }
 
     /// <summary>
-    /// Related.
-    /// </summary>
-    [DisplayName("Related")]
-    [IsoXmlTag("Rltd")]
-    public ValueList<BusinessApplicationHeader8> Related { get; init; } = [];
-
-    /// <summary>
     /// Signature.
     /// </summary>
     [DisplayName("Signature")]
@@ -137,9 +137,9 @@ public record BusinessApplicationHeaderV04 : IOuterRecord
     public SignatureEnvelope? Signature { get; init; }
 
     /// <summary>
-    /// To.
+    /// Related.
     /// </summary>
-    [DisplayName("To")]
-    [IsoXmlTag("To")]
-    public required Party51Choice_ To { get; init; }
+    [DisplayName("Related")]
+    [IsoXmlTag("Rltd")]
+    public ValueList<BusinessApplicationHeader8> Related { get; init; } = [];
 }

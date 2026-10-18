@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CardholderAuthentication17
 {
     /// <summary>
-    /// Address Verification.
+    /// Authentication Method.
     /// </summary>
-    [DisplayName("Address Verification")]
-    [IsoXmlTag("AdrVrfctn")]
-    public AddressVerification1? AddressVerification { get; init; }
-
-    /// <summary>
-    /// Authentication Additional Information.
-    /// </summary>
-    [DisplayName("Authentication Additional Information")]
-    [IsoXmlTag("AuthntcnAddtlInf")]
-    public ExternallyDefinedData5? AuthenticationAdditionalInformation { get; init; }
+    [DisplayName("Authentication Method")]
+    [IsoXmlTag("AuthntcnMtd")]
+    public AuthenticationMethod8Code? AuthenticationMethod { get; init; }
 
     /// <summary>
     /// Authentication Exemption.
@@ -38,34 +31,6 @@ public record CardholderAuthentication17
     public Exemption1Code? AuthenticationExemption { get; init; }
 
     /// <summary>
-    /// Authentication Level.
-    /// </summary>
-    [DisplayName("Authentication Level")]
-    [IsoXmlTag("AuthntcnLvl")]
-    public Max35Text? AuthenticationLevel { get; init; }
-
-    /// <summary>
-    /// Authentication Method.
-    /// </summary>
-    [DisplayName("Authentication Method")]
-    [IsoXmlTag("AuthntcnMtd")]
-    public AuthenticationMethod8Code? AuthenticationMethod { get; init; }
-
-    /// <summary>
-    /// Authentication Result.
-    /// </summary>
-    [DisplayName("Authentication Result")]
-    [IsoXmlTag("AuthntcnRslt")]
-    public AuthenticationResult1Code? AuthenticationResult { get; init; }
-
-    /// <summary>
-    /// Authentication Type.
-    /// </summary>
-    [DisplayName("Authentication Type")]
-    [IsoXmlTag("AuthntcnTp")]
-    public Max35Text? AuthenticationType { get; init; }
-
-    /// <summary>
     /// Authentication Value.
     /// </summary>
     [DisplayName("Authentication Value")]
@@ -73,11 +38,11 @@ public record CardholderAuthentication17
     public Max5000Binary? AuthenticationValue { get; init; }
 
     /// <summary>
-    /// Cardholder Identification.
+    /// Protected Authentication Value.
     /// </summary>
-    [DisplayName("Cardholder Identification")]
-    [IsoXmlTag("CrdhldrId")]
-    public PersonIdentification15? CardholderIdentification { get; init; }
+    [DisplayName("Protected Authentication Value")]
+    [IsoXmlTag("PrtctdAuthntcnVal")]
+    public ContentInformationType40? ProtectedAuthenticationValue { get; init; }
 
     /// <summary>
     /// Cardholder On Line PIN.
@@ -87,9 +52,44 @@ public record CardholderAuthentication17
     public OnLinePIN11? CardholderOnLinePIN { get; init; }
 
     /// <summary>
-    /// Protected Authentication Value.
+    /// Cardholder Identification.
     /// </summary>
-    [DisplayName("Protected Authentication Value")]
-    [IsoXmlTag("PrtctdAuthntcnVal")]
-    public ContentInformationType40? ProtectedAuthenticationValue { get; init; }
+    [DisplayName("Cardholder Identification")]
+    [IsoXmlTag("CrdhldrId")]
+    public PersonIdentification15? CardholderIdentification { get; init; }
+
+    /// <summary>
+    /// Address Verification.
+    /// </summary>
+    [DisplayName("Address Verification")]
+    [IsoXmlTag("AdrVrfctn")]
+    public AddressVerification1? AddressVerification { get; init; }
+
+    /// <summary>
+    /// Authentication Type.
+    /// </summary>
+    [DisplayName("Authentication Type")]
+    [IsoXmlTag("AuthntcnTp")]
+    public Max35Text? AuthenticationType { get; init; }
+
+    /// <summary>
+    /// Authentication Level.
+    /// </summary>
+    [DisplayName("Authentication Level")]
+    [IsoXmlTag("AuthntcnLvl")]
+    public Max35Text? AuthenticationLevel { get; init; }
+
+    /// <summary>
+    /// Authentication Result.
+    /// </summary>
+    [DisplayName("Authentication Result")]
+    [IsoXmlTag("AuthntcnRslt")]
+    public AuthenticationResult1Code? AuthenticationResult { get; init; }
+
+    /// <summary>
+    /// Authentication Additional Information.
+    /// </summary>
+    [DisplayName("Authentication Additional Information")]
+    [IsoXmlTag("AuthntcnAddtlInf")]
+    public ExternallyDefinedData5? AuthenticationAdditionalInformation { get; init; }
 }

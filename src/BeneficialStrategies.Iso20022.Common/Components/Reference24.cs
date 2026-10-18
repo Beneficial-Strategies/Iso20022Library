@@ -17,17 +17,17 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Reference24
 {
     /// <summary>
-    /// Net Position Identification.
-    /// </summary>
-    [DisplayName("Net Position Identification")]
-    [IsoXmlTag("NetPosId")]
-    public Max35Text? NetPositionIdentification { get; init; }
-
-    /// <summary>
     /// Trade Leg Notification Identification.
     /// </summary>
     [DisplayName("Trade Leg Notification Identification")]
     [IsoXmlTag("TradLegNtfctnId")]
     public ValueList<TradeLegNotificationIdentification1Choice_> TradeLegNotificationIdentification { get; init; } =
         [];
+
+    /// <summary>
+    /// Net Position Identification.
+    /// </summary>
+    [DisplayName("Net Position Identification")]
+    [IsoXmlTag("NetPosId")]
+    public Max35Text? NetPositionIdentification { get; init; }
 }

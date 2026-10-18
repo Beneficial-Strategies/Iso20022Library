@@ -17,11 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Transaction159
 {
     /// <summary>
-    /// Account Entry.
+    /// Payment To.
     /// </summary>
-    [DisplayName("Account Entry")]
-    [IsoXmlTag("AcctNtry")]
-    public CashAccountAndEntry5? AccountEntry { get; init; }
+    [DisplayName("Payment To")]
+    [IsoXmlTag("PmtTo")]
+    public System3? PaymentTo { get; init; }
+
+    /// <summary>
+    /// Payment From.
+    /// </summary>
+    [DisplayName("Payment From")]
+    [IsoXmlTag("PmtFr")]
+    public System3? PaymentFrom { get; init; }
 
     /// <summary>
     /// Credit Debit Indicator.
@@ -38,18 +45,11 @@ public record Transaction159
     public PaymentInstruction47? Payment { get; init; }
 
     /// <summary>
-    /// Payment From.
+    /// Account Entry.
     /// </summary>
-    [DisplayName("Payment From")]
-    [IsoXmlTag("PmtFr")]
-    public System3? PaymentFrom { get; init; }
-
-    /// <summary>
-    /// Payment To.
-    /// </summary>
-    [DisplayName("Payment To")]
-    [IsoXmlTag("PmtTo")]
-    public System3? PaymentTo { get; init; }
+    [DisplayName("Account Entry")]
+    [IsoXmlTag("AcctNtry")]
+    public CashAccountAndEntry5? AccountEntry { get; init; }
 
     /// <summary>
     /// Securities Transaction References.

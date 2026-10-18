@@ -17,6 +17,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ReportingRequest7
 {
     /// <summary>
+    /// Identification.
+    /// </summary>
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public Max35Text? Identification { get; init; }
+
+    /// <summary>
+    /// Requested Message Name Identification.
+    /// </summary>
+    [DisplayName("Requested Message Name Identification")]
+    [IsoXmlTag("ReqdMsgNmId")]
+    public required Max35Text RequestedMessageNameIdentification { get; init; }
+
+    /// <summary>
     /// Account.
     /// </summary>
     [DisplayName("Account")]
@@ -38,13 +52,6 @@ public record ReportingRequest7
     public BranchAndFinancialInstitutionIdentification8? AccountServicer { get; init; }
 
     /// <summary>
-    /// Identification.
-    /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public Max35Text? Identification { get; init; }
-
-    /// <summary>
     /// Reporting Period.
     /// </summary>
     [DisplayName("Reporting Period")]
@@ -59,23 +66,16 @@ public record ReportingRequest7
     public SequenceRange1Choice_? ReportingSequence { get; init; }
 
     /// <summary>
-    /// Requested Balance Type.
-    /// </summary>
-    [DisplayName("Requested Balance Type")]
-    [IsoXmlTag("ReqdBalTp")]
-    public ValueList<BalanceType13> RequestedBalanceType { get; init; } = [];
-
-    /// <summary>
-    /// Requested Message Name Identification.
-    /// </summary>
-    [DisplayName("Requested Message Name Identification")]
-    [IsoXmlTag("ReqdMsgNmId")]
-    public required Max35Text RequestedMessageNameIdentification { get; init; }
-
-    /// <summary>
     /// Requested Transaction Type.
     /// </summary>
     [DisplayName("Requested Transaction Type")]
     [IsoXmlTag("ReqdTxTp")]
     public TransactionType2? RequestedTransactionType { get; init; }
+
+    /// <summary>
+    /// Requested Balance Type.
+    /// </summary>
+    [DisplayName("Requested Balance Type")]
+    [IsoXmlTag("ReqdBalTp")]
+    public ValueList<BalanceType13> RequestedBalanceType { get; init; } = [];
 }

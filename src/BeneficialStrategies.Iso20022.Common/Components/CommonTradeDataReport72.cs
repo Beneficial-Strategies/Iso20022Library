@@ -24,16 +24,16 @@ public record CommonTradeDataReport72
     public ContractType15? ContractData { get; init; }
 
     /// <summary>
-    /// Contract Modification.
-    /// </summary>
-    [DisplayName("Contract Modification")]
-    [IsoXmlTag("CtrctMod")]
-    public ContractModification9? ContractModification { get; init; }
-
-    /// <summary>
     /// Transaction Data.
     /// </summary>
     [DisplayName("Transaction Data")]
     [IsoXmlTag("TxData")]
     public required TradeTransaction50 TransactionData { get; init; }
+
+    /// <summary>
+    /// Contract Modification.
+    /// </summary>
+    [DisplayName("Contract Modification")]
+    [IsoXmlTag("CtrctMod")]
+    public ContractModification9? ContractModification { get; init; }
 }

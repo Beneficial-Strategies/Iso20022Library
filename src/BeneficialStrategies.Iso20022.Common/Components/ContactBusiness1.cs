@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ContactBusiness1
 {
     /// <summary>
-    /// Email.
+    /// Name.
     /// </summary>
-    [DisplayName("Email")]
-    [IsoXmlTag("Email")]
-    public Max256Text? Email { get; init; }
-
-    /// <summary>
-    /// Fax.
-    /// </summary>
-    [DisplayName("Fax")]
-    [IsoXmlTag("Fax")]
-    public PhoneNumber? Fax { get; init; }
+    [DisplayName("Name")]
+    [IsoXmlTag("Nm")]
+    public Max70Text? Name { get; init; }
 
     /// <summary>
     /// Given Name.
@@ -38,20 +31,6 @@ public record ContactBusiness1
     public Max35Text? GivenName { get; init; }
 
     /// <summary>
-    /// Language.
-    /// </summary>
-    [DisplayName("Language")]
-    [IsoXmlTag("Lang")]
-    public ISO2ALanguageCode? Language { get; init; }
-
-    /// <summary>
-    /// Last Name.
-    /// </summary>
-    [DisplayName("Last Name")]
-    [IsoXmlTag("LastNm")]
-    public Max35Text? LastName { get; init; }
-
-    /// <summary>
     /// Middle Name.
     /// </summary>
     [DisplayName("Middle Name")]
@@ -59,11 +38,11 @@ public record ContactBusiness1
     public Max35Text? MiddleName { get; init; }
 
     /// <summary>
-    /// Name.
+    /// Last Name.
     /// </summary>
-    [DisplayName("Name")]
-    [IsoXmlTag("Nm")]
-    public Max70Text? Name { get; init; }
+    [DisplayName("Last Name")]
+    [IsoXmlTag("LastNm")]
+    public Max35Text? LastName { get; init; }
 
     /// <summary>
     /// Phone.
@@ -87,9 +66,30 @@ public record ContactBusiness1
     public PhoneNumber? TollFreePhone { get; init; }
 
     /// <summary>
+    /// Email.
+    /// </summary>
+    [DisplayName("Email")]
+    [IsoXmlTag("Email")]
+    public Max256Text? Email { get; init; }
+
+    /// <summary>
+    /// Fax.
+    /// </summary>
+    [DisplayName("Fax")]
+    [IsoXmlTag("Fax")]
+    public PhoneNumber? Fax { get; init; }
+
+    /// <summary>
     /// URL.
     /// </summary>
     [DisplayName("URL")]
     [IsoXmlTag("URL")]
     public Max256Text? URL { get; init; }
+
+    /// <summary>
+    /// Language.
+    /// </summary>
+    [DisplayName("Language")]
+    [IsoXmlTag("Lang")]
+    public ISO2ALanguageCode? Language { get; init; }
 }

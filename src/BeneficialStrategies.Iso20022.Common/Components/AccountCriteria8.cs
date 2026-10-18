@@ -24,16 +24,16 @@ public record AccountCriteria8
     public Max35Text? NewQueryName { get; init; }
 
     /// <summary>
-    /// Return Criteria.
-    /// </summary>
-    [DisplayName("Return Criteria")]
-    [IsoXmlTag("RtrCrit")]
-    public CashAccountReturnCriteria5? ReturnCriteria { get; init; }
-
-    /// <summary>
     /// Search Criteria.
     /// </summary>
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
     public ValueList<CashAccountSearchCriteria8> SearchCriteria { get; init; } = [];
+
+    /// <summary>
+    /// Return Criteria.
+    /// </summary>
+    [DisplayName("Return Criteria")]
+    [IsoXmlTag("RtrCrit")]
+    public CashAccountReturnCriteria5? ReturnCriteria { get; init; }
 }

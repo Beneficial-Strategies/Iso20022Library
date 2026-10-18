@@ -24,6 +24,20 @@ public record LimitIdentification7
     public required AccountIdentification4Choice_ AccountIdentification { get; init; }
 
     /// <summary>
+    /// Type.
+    /// </summary>
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public required LimitType4Code Type { get; init; }
+
+    /// <summary>
+    /// Limit Currency.
+    /// </summary>
+    [DisplayName("Limit Currency")]
+    [IsoXmlTag("LmtCcy")]
+    public ActiveCurrencyCode? LimitCurrency { get; init; }
+
+    /// <summary>
     /// Account Owner.
     /// </summary>
     [DisplayName("Account Owner")]
@@ -36,18 +50,4 @@ public record LimitIdentification7
     [DisplayName("Bilateral Limit Counterparty Identification")]
     [IsoXmlTag("BilLmtCtrPtyId")]
     public SystemPartyIdentification8? BilateralLimitCounterpartyIdentification { get; init; }
-
-    /// <summary>
-    /// Limit Currency.
-    /// </summary>
-    [DisplayName("Limit Currency")]
-    [IsoXmlTag("LmtCcy")]
-    public ActiveCurrencyCode? LimitCurrency { get; init; }
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public required LimitType4Code Type { get; init; }
 }

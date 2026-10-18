@@ -24,6 +24,13 @@ public record SafekeepingAccount19
     public Max35Text? AccountIdentification { get; init; }
 
     /// <summary>
+    /// Block Chain Address Or Wallet.
+    /// </summary>
+    [DisplayName("Block Chain Address Or Wallet")]
+    [IsoXmlTag("BlckChainAdrOrWllt")]
+    public Max140Text? BlockChainAddressOrWallet { get; init; }
+
+    /// <summary>
     /// Account Owner.
     /// </summary>
     [DisplayName("Account Owner")]
@@ -31,11 +38,11 @@ public record SafekeepingAccount19
     public PartyIdentification231Choice_? AccountOwner { get; init; }
 
     /// <summary>
-    /// Block Chain Address Or Wallet.
+    /// Sub Account Identification.
     /// </summary>
-    [DisplayName("Block Chain Address Or Wallet")]
-    [IsoXmlTag("BlckChainAdrOrWllt")]
-    public Max140Text? BlockChainAddressOrWallet { get; init; }
+    [DisplayName("Sub Account Identification")]
+    [IsoXmlTag("SubAcctId")]
+    public Max35Text? SubAccountIdentification { get; init; }
 
     /// <summary>
     /// Instructed Balance.
@@ -45,13 +52,6 @@ public record SafekeepingAccount19
     public ValueList<HoldingBalance15> InstructedBalance { get; init; } = [];
 
     /// <summary>
-    /// Pledge Details.
-    /// </summary>
-    [DisplayName("Pledge Details")]
-    [IsoXmlTag("PldgDtls")]
-    public PledgeInformation1? PledgeDetails { get; init; }
-
-    /// <summary>
     /// Rights Holder.
     /// </summary>
     [DisplayName("Rights Holder")]
@@ -59,9 +59,9 @@ public record SafekeepingAccount19
     public ValueList<PartyIdentification246Choice_> RightsHolder { get; init; } = [];
 
     /// <summary>
-    /// Sub Account Identification.
+    /// Pledge Details.
     /// </summary>
-    [DisplayName("Sub Account Identification")]
-    [IsoXmlTag("SubAcctId")]
-    public Max35Text? SubAccountIdentification { get; init; }
+    [DisplayName("Pledge Details")]
+    [IsoXmlTag("PldgDtls")]
+    public PledgeInformation1? PledgeDetails { get; init; }
 }

@@ -46,130 +46,11 @@ public record FraudDispositionInitiationV04 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Acquirer.
-    /// </summary>
-    [DisplayName("Acquirer")]
-    [IsoXmlTag("Acqrr")]
-    public required AcquirerData1 Acquirer { get; init; }
-
-    /// <summary>
-    /// Additional Fee.
-    /// </summary>
-    [DisplayName("Additional Fee")]
-    [IsoXmlTag("AddtlFee")]
-    public ValueList<AdditionalFee3> AdditionalFee { get; init; } = [];
-
-    /// <summary>
-    /// Additional Information.
-    /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public ATICALaxProcessing? AdditionalInformation { get; init; }
-
-    /// <summary>
-    /// Card.
-    /// </summary>
-    [DisplayName("Card")]
-    [IsoXmlTag("Card")]
-    public CardData17? Card { get; init; }
-
-    /// <summary>
-    /// Cardholder.
-    /// </summary>
-    [DisplayName("Cardholder")]
-    [IsoXmlTag("Crdhldr")]
-    public Cardholder22? Cardholder { get; init; }
-
-    /// <summary>
-    /// Destination.
-    /// </summary>
-    [DisplayName("Destination")]
-    [IsoXmlTag("Dstn")]
-    public PartyIdentification286? Destination { get; init; }
-
-    /// <summary>
-    /// Fraud Disposition Status.
-    /// </summary>
-    [DisplayName("Fraud Disposition Status")]
-    [IsoXmlTag("FrdDspstnSts")]
-    public required FraudDispositionStatus3 FraudDispositionStatus { get; init; }
-
-    /// <summary>
-    /// Fraud Transaction Identification.
-    /// </summary>
-    [DisplayName("Fraud Transaction Identification")]
-    [IsoXmlTag("FrdTxId")]
-    public required Max70Text FraudTransactionIdentification { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required Header72 Header { get; init; }
-
-    /// <summary>
-    /// Issuer.
-    /// </summary>
-    [DisplayName("Issuer")]
-    [IsoXmlTag("Issr")]
-    public PartyIdentification286? Issuer { get; init; }
-
-    /// <summary>
-    /// Jurisdiction.
-    /// </summary>
-    [DisplayName("Jurisdiction")]
-    [IsoXmlTag("Jursdctn")]
-    public Jurisdiction2? Jurisdiction { get; init; }
-
-    /// <summary>
-    /// National Data.
-    /// </summary>
-    [DisplayName("National Data")]
-    [IsoXmlTag("NtlData")]
-    public ATICALaxProcessing? NationalData { get; init; }
-
-    /// <summary>
-    /// Originator.
-    /// </summary>
-    [DisplayName("Originator")]
-    [IsoXmlTag("Orgtr")]
-    public PartyIdentification286? Originator { get; init; }
-
-    /// <summary>
-    /// Private Data.
-    /// </summary>
-    [DisplayName("Private Data")]
-    [IsoXmlTag("PrvtData")]
-    public ATICALaxProcessing? PrivateData { get; init; }
-
-    /// <summary>
-    /// Programme.
-    /// </summary>
-    [DisplayName("Programme")]
-    [IsoXmlTag("Prgrmm")]
-    public ProgrammeMode6? Programme { get; init; }
-
-    /// <summary>
-    /// Protected Data.
-    /// </summary>
-    [DisplayName("Protected Data")]
-    [IsoXmlTag("PrtctdData")]
-    public ValueList<ProtectedData2> ProtectedData { get; init; } = [];
-
-    /// <summary>
-    /// Receiver.
-    /// </summary>
-    [DisplayName("Receiver")]
-    [IsoXmlTag("Rcvr")]
-    public PartyIdentification286? Receiver { get; init; }
-
-    /// <summary>
-    /// Reconciliation.
-    /// </summary>
-    [DisplayName("Reconciliation")]
-    [IsoXmlTag("Rcncltn")]
-    public Reconciliation5? Reconciliation { get; init; }
 
     /// <summary>
     /// Reported Fraud.
@@ -179,11 +60,25 @@ public record FraudDispositionInitiationV04 : IOuterRecord
     public required ReportedFraud7 ReportedFraud { get; init; }
 
     /// <summary>
-    /// Security Trailer.
+    /// Fraud Disposition Status.
     /// </summary>
-    [DisplayName("Security Trailer")]
-    [IsoXmlTag("SctyTrlr")]
-    public ContentInformationType41? SecurityTrailer { get; init; }
+    [DisplayName("Fraud Disposition Status")]
+    [IsoXmlTag("FrdDspstnSts")]
+    public required FraudDispositionStatus3 FraudDispositionStatus { get; init; }
+
+    /// <summary>
+    /// Originator.
+    /// </summary>
+    [DisplayName("Originator")]
+    [IsoXmlTag("Orgtr")]
+    public PartyIdentification286? Originator { get; init; }
+
+    /// <summary>
+    /// Acquirer.
+    /// </summary>
+    [DisplayName("Acquirer")]
+    [IsoXmlTag("Acqrr")]
+    public required AcquirerData1 Acquirer { get; init; }
 
     /// <summary>
     /// Sender.
@@ -193,11 +88,53 @@ public record FraudDispositionInitiationV04 : IOuterRecord
     public PartyIdentification286? Sender { get; init; }
 
     /// <summary>
-    /// Settlement Service.
+    /// Card.
     /// </summary>
-    [DisplayName("Settlement Service")]
-    [IsoXmlTag("SttlmSvc")]
-    public SettlementService7? SettlementService { get; init; }
+    [DisplayName("Card")]
+    [IsoXmlTag("Card")]
+    public CardData17? Card { get; init; }
+
+    /// <summary>
+    /// Fraud Transaction Identification.
+    /// </summary>
+    [DisplayName("Fraud Transaction Identification")]
+    [IsoXmlTag("FrdTxId")]
+    public required Max70Text FraudTransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Receiver.
+    /// </summary>
+    [DisplayName("Receiver")]
+    [IsoXmlTag("Rcvr")]
+    public PartyIdentification286? Receiver { get; init; }
+
+    /// <summary>
+    /// Issuer.
+    /// </summary>
+    [DisplayName("Issuer")]
+    [IsoXmlTag("Issr")]
+    public PartyIdentification286? Issuer { get; init; }
+
+    /// <summary>
+    /// Destination.
+    /// </summary>
+    [DisplayName("Destination")]
+    [IsoXmlTag("Dstn")]
+    public PartyIdentification286? Destination { get; init; }
+
+    /// <summary>
+    /// Programme.
+    /// </summary>
+    [DisplayName("Programme")]
+    [IsoXmlTag("Prgrmm")]
+    public ProgrammeMode6? Programme { get; init; }
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public ATICALaxProcessing? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Token.
@@ -205,4 +142,67 @@ public record FraudDispositionInitiationV04 : IOuterRecord
     [DisplayName("Token")]
     [IsoXmlTag("Tkn")]
     public Token2? Token { get; init; }
+
+    /// <summary>
+    /// Cardholder.
+    /// </summary>
+    [DisplayName("Cardholder")]
+    [IsoXmlTag("Crdhldr")]
+    public Cardholder22? Cardholder { get; init; }
+
+    /// <summary>
+    /// Jurisdiction.
+    /// </summary>
+    [DisplayName("Jurisdiction")]
+    [IsoXmlTag("Jursdctn")]
+    public Jurisdiction2? Jurisdiction { get; init; }
+
+    /// <summary>
+    /// Settlement Service.
+    /// </summary>
+    [DisplayName("Settlement Service")]
+    [IsoXmlTag("SttlmSvc")]
+    public SettlementService7? SettlementService { get; init; }
+
+    /// <summary>
+    /// Additional Fee.
+    /// </summary>
+    [DisplayName("Additional Fee")]
+    [IsoXmlTag("AddtlFee")]
+    public ValueList<AdditionalFee3> AdditionalFee { get; init; } = [];
+
+    /// <summary>
+    /// Reconciliation.
+    /// </summary>
+    [DisplayName("Reconciliation")]
+    [IsoXmlTag("Rcncltn")]
+    public Reconciliation5? Reconciliation { get; init; }
+
+    /// <summary>
+    /// Protected Data.
+    /// </summary>
+    [DisplayName("Protected Data")]
+    [IsoXmlTag("PrtctdData")]
+    public ValueList<ProtectedData2> ProtectedData { get; init; } = [];
+
+    /// <summary>
+    /// Private Data.
+    /// </summary>
+    [DisplayName("Private Data")]
+    [IsoXmlTag("PrvtData")]
+    public ATICALaxProcessing? PrivateData { get; init; }
+
+    /// <summary>
+    /// National Data.
+    /// </summary>
+    [DisplayName("National Data")]
+    [IsoXmlTag("NtlData")]
+    public ATICALaxProcessing? NationalData { get; init; }
+
+    /// <summary>
+    /// Security Trailer.
+    /// </summary>
+    [DisplayName("Security Trailer")]
+    [IsoXmlTag("SctyTrlr")]
+    public ContentInformationType41? SecurityTrailer { get; init; }
 }

@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMService29
 {
     /// <summary>
-    /// Limits.
-    /// </summary>
-    [DisplayName("Limits")]
-    [IsoXmlTag("Lmts")]
-    public ValueList<ATMTransactionAmounts6> Limits { get; init; } = [];
-
-    /// <summary>
     /// Service Type.
     /// </summary>
     [DisplayName("Service Type")]
@@ -36,4 +29,11 @@ public record ATMService29
     [DisplayName("Service Variant")]
     [IsoXmlTag("SvcVarnt")]
     public ValueList<ATMService18> ServiceVariant { get; init; } = [];
+
+    /// <summary>
+    /// Limits.
+    /// </summary>
+    [DisplayName("Limits")]
+    [IsoXmlTag("Lmts")]
+    public ValueList<ATMTransactionAmounts6> Limits { get; init; } = [];
 }

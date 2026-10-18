@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TransactionModification7
 {
     /// <summary>
-    /// New Payment Value Set.
-    /// </summary>
-    [DisplayName("New Payment Value Set")]
-    [IsoXmlTag("NewPmtValSet")]
-    public required PaymentInstruction33 NewPaymentValueSet { get; init; }
-
-    /// <summary>
     /// Payment Identification.
     /// </summary>
     [DisplayName("Payment Identification")]
     [IsoXmlTag("PmtId")]
     public required PaymentIdentification8Choice_ PaymentIdentification { get; init; }
+
+    /// <summary>
+    /// New Payment Value Set.
+    /// </summary>
+    [DisplayName("New Payment Value Set")]
+    [IsoXmlTag("NewPmtValSet")]
+    public required PaymentInstruction33 NewPaymentValueSet { get; init; }
 }

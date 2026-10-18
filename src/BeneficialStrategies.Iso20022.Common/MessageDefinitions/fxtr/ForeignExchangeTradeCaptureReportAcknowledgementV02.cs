@@ -53,18 +53,18 @@ public record ForeignExchangeTradeCaptureReportAcknowledgementV02 : IOuterRecord
     public MessageIdentification1? AcknowledgementIdentification { get; init; }
 
     /// <summary>
+    /// Trade Identification.
+    /// </summary>
+    [DisplayName("Trade Identification")]
+    [IsoXmlTag("TradId")]
+    public required Max35Text TradeIdentification { get; init; }
+
+    /// <summary>
     /// Deal Ticket Identification.
     /// </summary>
     [DisplayName("Deal Ticket Identification")]
     [IsoXmlTag("DealTcktId")]
     public Max35Text? DealTicketIdentification { get; init; }
-
-    /// <summary>
-    /// Reference.
-    /// </summary>
-    [DisplayName("Reference")]
-    [IsoXmlTag("Ref")]
-    public AdditionalReferences2? Reference { get; init; }
 
     /// <summary>
     /// Status.
@@ -74,16 +74,16 @@ public record ForeignExchangeTradeCaptureReportAcknowledgementV02 : IOuterRecord
     public required Status5Code Status { get; init; }
 
     /// <summary>
+    /// Reference.
+    /// </summary>
+    [DisplayName("Reference")]
+    [IsoXmlTag("Ref")]
+    public AdditionalReferences2? Reference { get; init; }
+
+    /// <summary>
     /// Supplementary Data.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Trade Identification.
-    /// </summary>
-    [DisplayName("Trade Identification")]
-    [IsoXmlTag("TradId")]
-    public required Max35Text TradeIdentification { get; init; }
 }

@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Option16
 {
     /// <summary>
-    /// Additional Option Information.
-    /// </summary>
-    [DisplayName("Additional Option Information")]
-    [IsoXmlTag("AddtlOptnInf")]
-    public required Max140Text AdditionalOptionInformation { get; init; }
-
-    /// <summary>
     /// Data.
     /// </summary>
     [DisplayName("Data")]
     [IsoXmlTag("Data")]
     public required DataType1Code Data { get; init; }
-
-    /// <summary>
-    /// Derivative Option Identification.
-    /// </summary>
-    [DisplayName("Derivative Option Identification")]
-    [IsoXmlTag("DerivOptnId")]
-    public required Max35Text DerivativeOptionIdentification { get; init; }
 
     /// <summary>
     /// Exercise Status.
@@ -52,6 +38,55 @@ public record Option16
     public required OptionStyle2Code ExerciseStyle { get; init; }
 
     /// <summary>
+    /// Option Type.
+    /// </summary>
+    [DisplayName("Option Type")]
+    [IsoXmlTag("OptnTp")]
+    public required OptionType1Code OptionType { get; init; }
+
+    /// <summary>
+    /// Derivative Option Identification.
+    /// </summary>
+    [DisplayName("Derivative Option Identification")]
+    [IsoXmlTag("DerivOptnId")]
+    public required Max35Text DerivativeOptionIdentification { get; init; }
+
+    /// <summary>
+    /// Option Payout Type.
+    /// </summary>
+    [DisplayName("Option Payout Type")]
+    [IsoXmlTag("OptnPyoutTp")]
+    public required OptionPayoutType1Code OptionPayoutType { get; init; }
+
+    /// <summary>
+    /// Valuation Rate.
+    /// </summary>
+    [DisplayName("Valuation Rate")]
+    [IsoXmlTag("ValtnRate")]
+    public required AgreedRate3 ValuationRate { get; init; }
+
+    /// <summary>
+    /// Strike Price.
+    /// </summary>
+    [DisplayName("Strike Price")]
+    [IsoXmlTag("StrkPric")]
+    public required AgreedRate3 StrikePrice { get; init; }
+
+    /// <summary>
+    /// Volatility Margin.
+    /// </summary>
+    [DisplayName("Volatility Margin")]
+    [IsoXmlTag("VoltlyMrgn")]
+    public required PercentageRate VolatilityMargin { get; init; }
+
+    /// <summary>
+    /// Risk Amount.
+    /// </summary>
+    [DisplayName("Risk Amount")]
+    [IsoXmlTag("RskAmt")]
+    public required ActiveCurrencyAndAmount RiskAmount { get; init; }
+
+    /// <summary>
     /// Expiry Date And Time.
     /// </summary>
     [DisplayName("Expiry Date And Time")]
@@ -66,25 +101,18 @@ public record Option16
     public required Max4AlphaNumericText ExpiryLocation { get; init; }
 
     /// <summary>
+    /// Settlement Type.
+    /// </summary>
+    [DisplayName("Settlement Type")]
+    [IsoXmlTag("SttlmTp")]
+    public required SettlementDate8Code SettlementType { get; init; }
+
+    /// <summary>
     /// Option Amounts.
     /// </summary>
     [DisplayName("Option Amounts")]
     [IsoXmlTag("OptnAmts")]
     public required AmountsAndValueDate4 OptionAmounts { get; init; }
-
-    /// <summary>
-    /// Option Payout Type.
-    /// </summary>
-    [DisplayName("Option Payout Type")]
-    [IsoXmlTag("OptnPyoutTp")]
-    public required OptionPayoutType1Code OptionPayoutType { get; init; }
-
-    /// <summary>
-    /// Option Type.
-    /// </summary>
-    [DisplayName("Option Type")]
-    [IsoXmlTag("OptnTp")]
-    public required OptionType1Code OptionType { get; init; }
 
     /// <summary>
     /// Premium.
@@ -94,13 +122,6 @@ public record Option16
     public required PremiumAmount3 Premium { get; init; }
 
     /// <summary>
-    /// Risk Amount.
-    /// </summary>
-    [DisplayName("Risk Amount")]
-    [IsoXmlTag("RskAmt")]
-    public required ActiveCurrencyAndAmount RiskAmount { get; init; }
-
-    /// <summary>
     /// Settlement Amount Type.
     /// </summary>
     [DisplayName("Settlement Amount Type")]
@@ -108,30 +129,9 @@ public record Option16
     public required SettlementType1Code SettlementAmountType { get; init; }
 
     /// <summary>
-    /// Settlement Type.
+    /// Additional Option Information.
     /// </summary>
-    [DisplayName("Settlement Type")]
-    [IsoXmlTag("SttlmTp")]
-    public required SettlementDate8Code SettlementType { get; init; }
-
-    /// <summary>
-    /// Strike Price.
-    /// </summary>
-    [DisplayName("Strike Price")]
-    [IsoXmlTag("StrkPric")]
-    public required AgreedRate3 StrikePrice { get; init; }
-
-    /// <summary>
-    /// Valuation Rate.
-    /// </summary>
-    [DisplayName("Valuation Rate")]
-    [IsoXmlTag("ValtnRate")]
-    public required AgreedRate3 ValuationRate { get; init; }
-
-    /// <summary>
-    /// Volatility Margin.
-    /// </summary>
-    [DisplayName("Volatility Margin")]
-    [IsoXmlTag("VoltlyMrgn")]
-    public required PercentageRate VolatilityMargin { get; init; }
+    [DisplayName("Additional Option Information")]
+    [IsoXmlTag("AddtlOptnInf")]
+    public required Max140Text AdditionalOptionInformation { get; init; }
 }

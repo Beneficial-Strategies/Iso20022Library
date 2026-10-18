@@ -46,11 +46,32 @@ public record IntraPositionMovementPostingReportV10 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Pagination.
+    /// </summary>
+    [DisplayName("Pagination")]
+    [IsoXmlTag("Pgntn")]
+    public required Pagination1 Pagination { get; init; }
+
+    /// <summary>
+    /// Statement General Details.
+    /// </summary>
+    [DisplayName("Statement General Details")]
+    [IsoXmlTag("StmtGnlDtls")]
+    public required Statement80 StatementGeneralDetails { get; init; }
+
+    /// <summary>
     /// Account Owner.
     /// </summary>
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
     public PartyIdentification127Choice_? AccountOwner { get; init; }
+
+    /// <summary>
+    /// Safekeeping Account.
+    /// </summary>
+    [DisplayName("Safekeeping Account")]
+    [IsoXmlTag("SfkpgAcct")]
+    public SecuritiesAccount19? SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Block Chain Address Or Wallet.
@@ -65,25 +86,4 @@ public record IntraPositionMovementPostingReportV10 : IOuterRecord
     [DisplayName("Financial Instrument")]
     [IsoXmlTag("FinInstrm")]
     public ValueList<FinancialInstrumentDetails47> FinancialInstrument { get; init; } = [];
-
-    /// <summary>
-    /// Pagination.
-    /// </summary>
-    [DisplayName("Pagination")]
-    [IsoXmlTag("Pgntn")]
-    public required Pagination1 Pagination { get; init; }
-
-    /// <summary>
-    /// Safekeeping Account.
-    /// </summary>
-    [DisplayName("Safekeeping Account")]
-    [IsoXmlTag("SfkpgAcct")]
-    public SecuritiesAccount19? SafekeepingAccount { get; init; }
-
-    /// <summary>
-    /// Statement General Details.
-    /// </summary>
-    [DisplayName("Statement General Details")]
-    [IsoXmlTag("StmtGnlDtls")]
-    public required Statement80 StatementGeneralDetails { get; init; }
 }

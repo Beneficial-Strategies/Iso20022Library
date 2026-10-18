@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ProprietaryParty6
 {
     /// <summary>
-    /// Party.
-    /// </summary>
-    [DisplayName("Party")]
-    [IsoXmlTag("Pty")]
-    public required Party50Choice_ Party { get; init; }
-
-    /// <summary>
     /// Type.
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     public required Max35Text Type { get; init; }
+
+    /// <summary>
+    /// Party.
+    /// </summary>
+    [DisplayName("Party")]
+    [IsoXmlTag("Pty")]
+    public required Party50Choice_ Party { get; init; }
 }

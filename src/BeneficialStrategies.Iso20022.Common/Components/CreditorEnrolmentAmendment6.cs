@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CreditorEnrolmentAmendment6
 {
     /// <summary>
-    /// Activation Data.
-    /// </summary>
-    [DisplayName("Activation Data")]
-    [IsoXmlTag("ActvtnData")]
-    public CreditorInvoice5? ActivationData { get; init; }
-
-    /// <summary>
     /// Creditor Enrolment.
     /// </summary>
     [DisplayName("Creditor Enrolment")]
     [IsoXmlTag("CdtrEnrlmnt")]
     public CreditorEnrolment6? CreditorEnrolment { get; init; }
+
+    /// <summary>
+    /// Activation Data.
+    /// </summary>
+    [DisplayName("Activation Data")]
+    [IsoXmlTag("ActvtnData")]
+    public CreditorInvoice5? ActivationData { get; init; }
 }

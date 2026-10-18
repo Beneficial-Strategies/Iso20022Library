@@ -17,25 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMDepositComponent1
 {
     /// <summary>
+    /// Sub Deposit Identification.
+    /// </summary>
+    [DisplayName("Sub Deposit Identification")]
+    [IsoXmlTag("SubDpstId")]
+    public Max70Text? SubDepositIdentification { get; init; }
+
+    /// <summary>
     /// Account Data.
     /// </summary>
     [DisplayName("Account Data")]
     [IsoXmlTag("AcctData")]
     public ValueList<CardAccount21> AccountData { get; init; } = [];
-
-    /// <summary>
-    /// Deposited Media.
-    /// </summary>
-    [DisplayName("Deposited Media")]
-    [IsoXmlTag("DpstdMdia")]
-    public ValueList<ATMDepositedMedia4> DepositedMedia { get; init; } = [];
-
-    /// <summary>
-    /// Detailed Requested Amount.
-    /// </summary>
-    [DisplayName("Detailed Requested Amount")]
-    [IsoXmlTag("DtldReqdAmt")]
-    public ValueList<DetailedAmount16> DetailedRequestedAmount { get; init; } = [];
 
     /// <summary>
     /// Protected Account Data.
@@ -45,9 +38,16 @@ public record ATMDepositComponent1
     public ValueList<ContentInformationType10> ProtectedAccountData { get; init; } = [];
 
     /// <summary>
-    /// Sub Deposit Identification.
+    /// Detailed Requested Amount.
     /// </summary>
-    [DisplayName("Sub Deposit Identification")]
-    [IsoXmlTag("SubDpstId")]
-    public Max70Text? SubDepositIdentification { get; init; }
+    [DisplayName("Detailed Requested Amount")]
+    [IsoXmlTag("DtldReqdAmt")]
+    public ValueList<DetailedAmount16> DetailedRequestedAmount { get; init; } = [];
+
+    /// <summary>
+    /// Deposited Media.
+    /// </summary>
+    [DisplayName("Deposited Media")]
+    [IsoXmlTag("DpstdMdia")]
+    public ValueList<ATMDepositedMedia4> DepositedMedia { get; init; } = [];
 }

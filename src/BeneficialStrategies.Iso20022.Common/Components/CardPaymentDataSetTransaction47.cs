@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CardPaymentDataSetTransaction47
 {
     /// <summary>
-    /// Context.
+    /// Transaction Sequence Counter.
     /// </summary>
-    [DisplayName("Context")]
-    [IsoXmlTag("Cntxt")]
-    public CardPaymentContext30? Context { get; init; }
-
-    /// <summary>
-    /// Environment.
-    /// </summary>
-    [DisplayName("Environment")]
-    [IsoXmlTag("Envt")]
-    public required CardPaymentEnvironment80 Environment { get; init; }
+    [DisplayName("Transaction Sequence Counter")]
+    [IsoXmlTag("TxSeqCntr")]
+    public required Max9NumericText TransactionSequenceCounter { get; init; }
 
     /// <summary>
     /// Traceability.
@@ -38,16 +31,23 @@ public record CardPaymentDataSetTransaction47
     public ValueList<Traceability8> Traceability { get; init; } = [];
 
     /// <summary>
+    /// Environment.
+    /// </summary>
+    [DisplayName("Environment")]
+    [IsoXmlTag("Envt")]
+    public required CardPaymentEnvironment80 Environment { get; init; }
+
+    /// <summary>
+    /// Context.
+    /// </summary>
+    [DisplayName("Context")]
+    [IsoXmlTag("Cntxt")]
+    public CardPaymentContext30? Context { get; init; }
+
+    /// <summary>
     /// Transaction.
     /// </summary>
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
     public required CardPaymentTransaction135 Transaction { get; init; }
-
-    /// <summary>
-    /// Transaction Sequence Counter.
-    /// </summary>
-    [DisplayName("Transaction Sequence Counter")]
-    [IsoXmlTag("TxSeqCntr")]
-    public required Max9NumericText TransactionSequenceCounter { get; init; }
 }

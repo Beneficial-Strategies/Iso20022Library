@@ -17,11 +17,67 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Terminal9
 {
     /// <summary>
+    /// Identification.
+    /// </summary>
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public Max16Text? Identification { get; init; }
+
+    /// <summary>
     /// Additional Identification.
     /// </summary>
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
     public ValueList<AdditionalData1> AdditionalIdentification { get; init; } = [];
+
+    /// <summary>
+    /// Type.
+    /// </summary>
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public TerminalType1Code? Type { get; init; }
+
+    /// <summary>
+    /// Other Type.
+    /// </summary>
+    [DisplayName("Other Type")]
+    [IsoXmlTag("OthrTp")]
+    public Max35Text? OtherType { get; init; }
+
+    /// <summary>
+    /// Reading Capability.
+    /// </summary>
+    [DisplayName("Reading Capability")]
+    [IsoXmlTag("RdngCpblty")]
+    public ValueList<CardReadingCapabilities1> ReadingCapability { get; init; } = [];
+
+    /// <summary>
+    /// Writing Capability.
+    /// </summary>
+    [DisplayName("Writing Capability")]
+    [IsoXmlTag("WrtgCpblty")]
+    public ValueList<CardWritingCapabilities1> WritingCapability { get; init; } = [];
+
+    /// <summary>
+    /// PIN Length Capability.
+    /// </summary>
+    [DisplayName("PIN Length Capability")]
+    [IsoXmlTag("PINLngthCpblty")]
+    public Number? PINLengthCapability { get; init; }
+
+    /// <summary>
+    /// PIN Entry Security Characteristic.
+    /// </summary>
+    [DisplayName("PIN Entry Security Characteristic")]
+    [IsoXmlTag("PINNtrySctyChrtc")]
+    public PINEntrySecurityCharacteristic1Code? PINEntrySecurityCharacteristic { get; init; }
+
+    /// <summary>
+    /// Other PIN Entry Security Characteristic.
+    /// </summary>
+    [DisplayName("Other PIN Entry Security Characteristic")]
+    [IsoXmlTag("OthrPINNtrySctyChrtc")]
+    public Max35Text? OtherPINEntrySecurityCharacteristic { get; init; }
 
     /// <summary>
     /// Approval Code Length.
@@ -31,11 +87,32 @@ public record Terminal9
     public Number? ApprovalCodeLength { get; init; }
 
     /// <summary>
+    /// Max Script Length.
+    /// </summary>
+    [DisplayName("Max Script Length")]
+    [IsoXmlTag("MxScrptLngth")]
+    public Number? MaxScriptLength { get; init; }
+
+    /// <summary>
     /// Card Capture Capable.
     /// </summary>
     [DisplayName("Card Capture Capable")]
     [IsoXmlTag("CardCaptrCpbl")]
     public TrueFalseIndicator? CardCaptureCapable { get; init; }
+
+    /// <summary>
+    /// On Line Capability.
+    /// </summary>
+    [DisplayName("On Line Capability")]
+    [IsoXmlTag("OnLineCpblty")]
+    public OnLineCapability2Code? OnLineCapability { get; init; }
+
+    /// <summary>
+    /// Message Capability.
+    /// </summary>
+    [DisplayName("Message Capability")]
+    [IsoXmlTag("MsgCpblty")]
+    public ValueList<DisplayCapabilities6> MessageCapability { get; init; } = [];
 
     /// <summary>
     /// Cardholder Verification Capability.
@@ -46,25 +123,11 @@ public record Terminal9
         [];
 
     /// <summary>
-    /// Certification Identification.
+    /// Temporary Secure Storage.
     /// </summary>
-    [DisplayName("Certification Identification")]
-    [IsoXmlTag("CertfctnId")]
-    public Max256Text? CertificationIdentification { get; init; }
-
-    /// <summary>
-    /// Geographic Location.
-    /// </summary>
-    [DisplayName("Geographic Location")]
-    [IsoXmlTag("GeogcLctn")]
-    public GeographicPointInDecimalDegrees? GeographicLocation { get; init; }
-
-    /// <summary>
-    /// Identification.
-    /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public Max16Text? Identification { get; init; }
+    [DisplayName("Temporary Secure Storage")]
+    [IsoXmlTag("TempScrStorg")]
+    public TrueFalseIndicator? TemporarySecureStorage { get; init; }
 
     /// <summary>
     /// Integration Type.
@@ -74,18 +137,18 @@ public record Terminal9
     public TerminalIntegrationCategory1Code? IntegrationType { get; init; }
 
     /// <summary>
-    /// Max Script Length.
+    /// Geographic Location.
     /// </summary>
-    [DisplayName("Max Script Length")]
-    [IsoXmlTag("MxScrptLngth")]
-    public Number? MaxScriptLength { get; init; }
+    [DisplayName("Geographic Location")]
+    [IsoXmlTag("GeogcLctn")]
+    public GeographicPointInDecimalDegrees? GeographicLocation { get; init; }
 
     /// <summary>
-    /// Message Capability.
+    /// Outdoor.
     /// </summary>
-    [DisplayName("Message Capability")]
-    [IsoXmlTag("MsgCpblty")]
-    public ValueList<DisplayCapabilities6> MessageCapability { get; init; } = [];
+    [DisplayName("Outdoor")]
+    [IsoXmlTag("Outdr")]
+    public TrueFalseIndicator? Outdoor { get; init; }
 
     /// <summary>
     /// Off Premises.
@@ -102,55 +165,6 @@ public record Terminal9
     public TrueFalseIndicator? OnBoard { get; init; }
 
     /// <summary>
-    /// On Line Capability.
-    /// </summary>
-    [DisplayName("On Line Capability")]
-    [IsoXmlTag("OnLineCpblty")]
-    public OnLineCapability2Code? OnLineCapability { get; init; }
-
-    /// <summary>
-    /// Other PIN Entry Security Characteristic.
-    /// </summary>
-    [DisplayName("Other PIN Entry Security Characteristic")]
-    [IsoXmlTag("OthrPINNtrySctyChrtc")]
-    public Max35Text? OtherPINEntrySecurityCharacteristic { get; init; }
-
-    /// <summary>
-    /// Other Type.
-    /// </summary>
-    [DisplayName("Other Type")]
-    [IsoXmlTag("OthrTp")]
-    public Max35Text? OtherType { get; init; }
-
-    /// <summary>
-    /// Outdoor.
-    /// </summary>
-    [DisplayName("Outdoor")]
-    [IsoXmlTag("Outdr")]
-    public TrueFalseIndicator? Outdoor { get; init; }
-
-    /// <summary>
-    /// PIN Entry Security Characteristic.
-    /// </summary>
-    [DisplayName("PIN Entry Security Characteristic")]
-    [IsoXmlTag("PINNtrySctyChrtc")]
-    public PINEntrySecurityCharacteristic1Code? PINEntrySecurityCharacteristic { get; init; }
-
-    /// <summary>
-    /// PIN Length Capability.
-    /// </summary>
-    [DisplayName("PIN Length Capability")]
-    [IsoXmlTag("PINLngthCpblty")]
-    public Number? PINLengthCapability { get; init; }
-
-    /// <summary>
-    /// Reading Capability.
-    /// </summary>
-    [DisplayName("Reading Capability")]
-    [IsoXmlTag("RdngCpblty")]
-    public ValueList<CardReadingCapabilities1> ReadingCapability { get; init; } = [];
-
-    /// <summary>
     /// Serial Number.
     /// </summary>
     [DisplayName("Serial Number")]
@@ -165,23 +179,9 @@ public record Terminal9
     public ValueList<Software1> Software { get; init; } = [];
 
     /// <summary>
-    /// Temporary Secure Storage.
+    /// Certification Identification.
     /// </summary>
-    [DisplayName("Temporary Secure Storage")]
-    [IsoXmlTag("TempScrStorg")]
-    public TrueFalseIndicator? TemporarySecureStorage { get; init; }
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public TerminalType1Code? Type { get; init; }
-
-    /// <summary>
-    /// Writing Capability.
-    /// </summary>
-    [DisplayName("Writing Capability")]
-    [IsoXmlTag("WrtgCpblty")]
-    public ValueList<CardWritingCapabilities1> WritingCapability { get; init; } = [];
+    [DisplayName("Certification Identification")]
+    [IsoXmlTag("CertfctnId")]
+    public Max256Text? CertificationIdentification { get; init; }
 }

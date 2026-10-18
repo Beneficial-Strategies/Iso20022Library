@@ -17,18 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TradeContract4
 {
     /// <summary>
+    /// Contract Document Identification.
+    /// </summary>
+    [DisplayName("Contract Document Identification")]
+    [IsoXmlTag("CtrctDocId")]
+    public DocumentIdentification22? ContractDocumentIdentification { get; init; }
+
+    /// <summary>
+    /// Trade Type Identification.
+    /// </summary>
+    [DisplayName("Trade Type Identification")]
+    [IsoXmlTag("TradTpId")]
+    public Max35Text? TradeTypeIdentification { get; init; }
+
+    /// <summary>
     /// Amount.
     /// </summary>
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
     public ActiveCurrencyAndAmount? Amount { get; init; }
-
-    /// <summary>
-    /// Attachment.
-    /// </summary>
-    [DisplayName("Attachment")]
-    [IsoXmlTag("Attchmnt")]
-    public ValueList<DocumentGeneralInformation5> Attachment { get; init; } = [];
 
     /// <summary>
     /// Buyer.
@@ -38,18 +45,11 @@ public record TradeContract4
     public ValueList<TradeParty6> Buyer { get; init; } = [];
 
     /// <summary>
-    /// Contract Document Identification.
+    /// Seller.
     /// </summary>
-    [DisplayName("Contract Document Identification")]
-    [IsoXmlTag("CtrctDocId")]
-    public DocumentIdentification22? ContractDocumentIdentification { get; init; }
-
-    /// <summary>
-    /// Exchange Rate Information.
-    /// </summary>
-    [DisplayName("Exchange Rate Information")]
-    [IsoXmlTag("XchgRateInf")]
-    public ExchangeRate1? ExchangeRateInformation { get; init; }
+    [DisplayName("Seller")]
+    [IsoXmlTag("Sellr")]
+    public ValueList<TradeParty6> Seller { get; init; } = [];
 
     /// <summary>
     /// Maturity Date.
@@ -59,39 +59,11 @@ public record TradeContract4
     public ISODate? MaturityDate { get; init; }
 
     /// <summary>
-    /// Payment Schedule.
-    /// </summary>
-    [DisplayName("Payment Schedule")]
-    [IsoXmlTag("PmtSchdl")]
-    public InterestPaymentDateRange1? PaymentSchedule { get; init; }
-
-    /// <summary>
     /// Prolongation Flag.
     /// </summary>
     [DisplayName("Prolongation Flag")]
     [IsoXmlTag("PrlngtnFlg")]
     public TrueFalseIndicator? ProlongationFlag { get; init; }
-
-    /// <summary>
-    /// Seller.
-    /// </summary>
-    [DisplayName("Seller")]
-    [IsoXmlTag("Sellr")]
-    public ValueList<TradeParty6> Seller { get; init; } = [];
-
-    /// <summary>
-    /// Settlement Currency.
-    /// </summary>
-    [DisplayName("Settlement Currency")]
-    [IsoXmlTag("SttlmCcy")]
-    public ActiveCurrencyCode? SettlementCurrency { get; init; }
-
-    /// <summary>
-    /// Shipment Schedule.
-    /// </summary>
-    [DisplayName("Shipment Schedule")]
-    [IsoXmlTag("ShipmntSchdl")]
-    public ShipmentSchedule2Choice_? ShipmentSchedule { get; init; }
 
     /// <summary>
     /// Start Date.
@@ -101,9 +73,37 @@ public record TradeContract4
     public ISODate? StartDate { get; init; }
 
     /// <summary>
-    /// Trade Type Identification.
+    /// Settlement Currency.
     /// </summary>
-    [DisplayName("Trade Type Identification")]
-    [IsoXmlTag("TradTpId")]
-    public Max35Text? TradeTypeIdentification { get; init; }
+    [DisplayName("Settlement Currency")]
+    [IsoXmlTag("SttlmCcy")]
+    public ActiveCurrencyCode? SettlementCurrency { get; init; }
+
+    /// <summary>
+    /// Exchange Rate Information.
+    /// </summary>
+    [DisplayName("Exchange Rate Information")]
+    [IsoXmlTag("XchgRateInf")]
+    public ExchangeRate1? ExchangeRateInformation { get; init; }
+
+    /// <summary>
+    /// Payment Schedule.
+    /// </summary>
+    [DisplayName("Payment Schedule")]
+    [IsoXmlTag("PmtSchdl")]
+    public InterestPaymentDateRange1? PaymentSchedule { get; init; }
+
+    /// <summary>
+    /// Shipment Schedule.
+    /// </summary>
+    [DisplayName("Shipment Schedule")]
+    [IsoXmlTag("ShipmntSchdl")]
+    public ShipmentSchedule2Choice_? ShipmentSchedule { get; init; }
+
+    /// <summary>
+    /// Attachment.
+    /// </summary>
+    [DisplayName("Attachment")]
+    [IsoXmlTag("Attchmnt")]
+    public ValueList<DocumentGeneralInformation5> Attachment { get; init; } = [];
 }

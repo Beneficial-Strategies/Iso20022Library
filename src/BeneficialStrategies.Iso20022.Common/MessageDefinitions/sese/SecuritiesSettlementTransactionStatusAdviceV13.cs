@@ -62,11 +62,11 @@ public record SecuritiesSettlementTransactionStatusAdviceV13 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Provides the matching status of an instruction as per the account servicer based on an allegement. At this time no matching took place on the market (at the CSD/ICSD).
+    /// Provides unambiguous transaction identification information.
     /// </summary>
-    [DisplayName("Inferred Matching Status")]
-    [IsoXmlTag("IfrrdMtchgSts")]
-    public MatchingStatus24Choice_? InferredMatchingStatus { get; init; }
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public required TransactionIdentifications47 TransactionIdentification { get; init; }
 
     /// <summary>
     /// Link to another transaction - provided for information only.
@@ -76,18 +76,25 @@ public record SecuritiesSettlementTransactionStatusAdviceV13 : IOuterRecord
     public Linkages41? Linkages { get; init; }
 
     /// <summary>
-    /// Provides the matching status of the instruction.
-    /// </summary>
-    [DisplayName("Matching Status")]
-    [IsoXmlTag("MtchgSts")]
-    public MatchingStatus24Choice_? MatchingStatus { get; init; }
-
-    /// <summary>
     /// Provides details on the processing status of the transaction.
     /// </summary>
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
     public ProcessingStatus88Choice_? ProcessingStatus { get; init; }
+
+    /// <summary>
+    /// Provides the matching status of an instruction as per the account servicer based on an allegement. At this time no matching took place on the market (at the CSD/ICSD).
+    /// </summary>
+    [DisplayName("Inferred Matching Status")]
+    [IsoXmlTag("IfrrdMtchgSts")]
+    public MatchingStatus24Choice_? InferredMatchingStatus { get; init; }
+
+    /// <summary>
+    /// Provides the matching status of the instruction.
+    /// </summary>
+    [DisplayName("Matching Status")]
+    [IsoXmlTag("MtchgSts")]
+    public MatchingStatus24Choice_? MatchingStatus { get; init; }
 
     /// <summary>
     /// Provides the status of settlement of a transaction.
@@ -97,13 +104,6 @@ public record SecuritiesSettlementTransactionStatusAdviceV13 : IOuterRecord
     public SettlementStatus30Choice_? SettlementStatus { get; init; }
 
     /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
     /// Identifies the details of the transaction.
     /// </summary>
     [DisplayName("Transaction Details")]
@@ -111,9 +111,9 @@ public record SecuritiesSettlementTransactionStatusAdviceV13 : IOuterRecord
     public TransactionDetails166? TransactionDetails { get; init; }
 
     /// <summary>
-    /// Provides unambiguous transaction identification information.
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public required TransactionIdentifications47 TransactionIdentification { get; init; }
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

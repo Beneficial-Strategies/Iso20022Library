@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SignedQuantityFormat16
 {
     /// <summary>
-    /// Quantity.
-    /// </summary>
-    [DisplayName("Quantity")]
-    [IsoXmlTag("Qty")]
-    public required FinancialInstrumentQuantity36Choice_ Quantity { get; init; }
-
-    /// <summary>
     /// Short Long Position.
     /// </summary>
     [DisplayName("Short Long Position")]
     [IsoXmlTag("ShrtLngPos")]
     public required ShortLong1Code ShortLongPosition { get; init; }
+
+    /// <summary>
+    /// Quantity.
+    /// </summary>
+    [DisplayName("Quantity")]
+    [IsoXmlTag("Qty")]
+    public required FinancialInstrumentQuantity36Choice_ Quantity { get; init; }
 }

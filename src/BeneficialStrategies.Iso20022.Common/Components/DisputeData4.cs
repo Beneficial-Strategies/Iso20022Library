@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record DisputeData4
 {
     /// <summary>
-    /// Additional Data.
+    /// Cycle.
     /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
-
-    /// <summary>
-    /// Chargeback Eligibility.
-    /// </summary>
-    [DisplayName("Chargeback Eligibility")]
-    [IsoXmlTag("ChrgbckElgblty")]
-    public Max35Text? ChargebackEligibility { get; init; }
+    [DisplayName("Cycle")]
+    [IsoXmlTag("Cycl")]
+    public Exact1NumericText? Cycle { get; init; }
 
     /// <summary>
     /// Condition.
@@ -38,18 +31,11 @@ public record DisputeData4
     public Max35Text? Condition { get; init; }
 
     /// <summary>
-    /// Cycle.
+    /// Status.
     /// </summary>
-    [DisplayName("Cycle")]
-    [IsoXmlTag("Cycl")]
-    public Exact1NumericText? Cycle { get; init; }
-
-    /// <summary>
-    /// Documentation Status.
-    /// </summary>
-    [DisplayName("Documentation Status")]
-    [IsoXmlTag("DcmnttnSts")]
-    public Max35Text? DocumentationStatus { get; init; }
+    [DisplayName("Status")]
+    [IsoXmlTag("Sts")]
+    public Max35Text? Status { get; init; }
 
     /// <summary>
     /// Partial.
@@ -66,6 +52,13 @@ public record DisputeData4
     public ValueList<DisputeReference1> Reference { get; init; } = [];
 
     /// <summary>
+    /// Documentation Status.
+    /// </summary>
+    [DisplayName("Documentation Status")]
+    [IsoXmlTag("DcmnttnSts")]
+    public Max35Text? DocumentationStatus { get; init; }
+
+    /// <summary>
     /// Reject Reason.
     /// </summary>
     [DisplayName("Reject Reason")]
@@ -73,9 +66,16 @@ public record DisputeData4
     public ValueList<Max35Text> RejectReason { get; init; } = [];
 
     /// <summary>
-    /// Status.
+    /// Chargeback Eligibility.
     /// </summary>
-    [DisplayName("Status")]
-    [IsoXmlTag("Sts")]
-    public Max35Text? Status { get; init; }
+    [DisplayName("Chargeback Eligibility")]
+    [IsoXmlTag("ChrgbckElgblty")]
+    public Max35Text? ChargebackEligibility { get; init; }
+
+    /// <summary>
+    /// Additional Data.
+    /// </summary>
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

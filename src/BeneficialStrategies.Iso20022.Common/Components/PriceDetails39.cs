@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PriceDetails39
 {
     /// <summary>
-    /// Cash In Lieu Of Share Price.
-    /// </summary>
-    [DisplayName("Cash In Lieu Of Share Price")]
-    [IsoXmlTag("CshInLieuOfShrPric")]
-    public PriceFormat74Choice_? CashInLieuOfSharePrice { get; init; }
-
-    /// <summary>
     /// Generic Cash Price Paid Per Product.
     /// </summary>
     [DisplayName("Generic Cash Price Paid Per Product")]
@@ -36,6 +29,13 @@ public record PriceDetails39
     [DisplayName("Generic Cash Price Received Per Product")]
     [IsoXmlTag("GncCshPricRcvdPerPdct")]
     public PriceFormat72Choice_? GenericCashPriceReceivedPerProduct { get; init; }
+
+    /// <summary>
+    /// Cash In Lieu Of Share Price.
+    /// </summary>
+    [DisplayName("Cash In Lieu Of Share Price")]
+    [IsoXmlTag("CshInLieuOfShrPric")]
+    public PriceFormat74Choice_? CashInLieuOfSharePrice { get; init; }
 
     /// <summary>
     /// Redemption Price.

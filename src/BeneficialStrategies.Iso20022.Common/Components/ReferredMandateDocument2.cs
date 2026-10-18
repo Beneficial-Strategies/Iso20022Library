@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ReferredMandateDocument2
 {
     /// <summary>
-    /// Creditor Reference.
+    /// Type.
     /// </summary>
-    [DisplayName("Creditor Reference")]
-    [IsoXmlTag("CdtrRef")]
-    public Max35Text? CreditorReference { get; init; }
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public DocumentType1? Type { get; init; }
 
     /// <summary>
     /// Number.
@@ -31,16 +31,16 @@ public record ReferredMandateDocument2
     public Max35Text? Number { get; init; }
 
     /// <summary>
+    /// Creditor Reference.
+    /// </summary>
+    [DisplayName("Creditor Reference")]
+    [IsoXmlTag("CdtrRef")]
+    public Max35Text? CreditorReference { get; init; }
+
+    /// <summary>
     /// Related Date.
     /// </summary>
     [DisplayName("Related Date")]
     [IsoXmlTag("RltdDt")]
     public DateAndType1? RelatedDate { get; init; }
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public DocumentType1? Type { get; init; }
 }

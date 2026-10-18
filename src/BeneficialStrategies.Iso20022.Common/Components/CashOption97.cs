@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CashOption97
 {
     /// <summary>
-    /// Account.
+    /// Credit Debit Indicator.
     /// </summary>
-    [DisplayName("Account")]
-    [IsoXmlTag("Acct")]
-    public Account9Choice_? Account { get; init; }
-
-    /// <summary>
-    /// Amount Details.
-    /// </summary>
-    [DisplayName("Amount Details")]
-    [IsoXmlTag("AmtDtls")]
-    public required CorporateActionAmounts67 AmountDetails { get; init; }
-
-    /// <summary>
-    /// Cash Parties.
-    /// </summary>
-    [DisplayName("Cash Parties")]
-    [IsoXmlTag("CshPties")]
-    public CashParties37? CashParties { get; init; }
+    [DisplayName("Credit Debit Indicator")]
+    [IsoXmlTag("CdtDbtInd")]
+    public required CreditDebitCode CreditDebitIndicator { get; init; }
 
     /// <summary>
     /// Contractual Payment Indicator.
@@ -45,39 +31,11 @@ public record CashOption97
     public Payment1Code? ContractualPaymentIndicator { get; init; }
 
     /// <summary>
-    /// Country Of Income Source.
+    /// Issuer Offeror Taxability Indicator.
     /// </summary>
-    [DisplayName("Country Of Income Source")]
-    [IsoXmlTag("CtryOfIncmSrc")]
-    public CountryCode? CountryOfIncomeSource { get; init; }
-
-    /// <summary>
-    /// Credit Debit Indicator.
-    /// </summary>
-    [DisplayName("Credit Debit Indicator")]
-    [IsoXmlTag("CdtDbtInd")]
-    public required CreditDebitCode CreditDebitIndicator { get; init; }
-
-    /// <summary>
-    /// Date Details.
-    /// </summary>
-    [DisplayName("Date Details")]
-    [IsoXmlTag("DtDtls")]
-    public required CorporateActionDate99 DateDetails { get; init; }
-
-    /// <summary>
-    /// Exemption Type.
-    /// </summary>
-    [DisplayName("Exemption Type")]
-    [IsoXmlTag("XmptnTp")]
-    public ValueList<GenericIdentification47> ExemptionType { get; init; } = [];
-
-    /// <summary>
-    /// Foreign Exchange Details.
-    /// </summary>
-    [DisplayName("Foreign Exchange Details")]
-    [IsoXmlTag("FXDtls")]
-    public ValueList<ForeignExchangeTerms27> ForeignExchangeDetails { get; init; } = [];
+    [DisplayName("Issuer Offeror Taxability Indicator")]
+    [IsoXmlTag("IssrOfferrTaxbltyInd")]
+    public IssuerOfferorTaxabilityIndicator1Choice_? IssuerOfferorTaxabilityIndicator { get; init; }
 
     /// <summary>
     /// Income Type.
@@ -87,13 +45,6 @@ public record CashOption97
     public GenericIdentification47? IncomeType { get; init; }
 
     /// <summary>
-    /// Issuer Offeror Taxability Indicator.
-    /// </summary>
-    [DisplayName("Issuer Offeror Taxability Indicator")]
-    [IsoXmlTag("IssrOfferrTaxbltyInd")]
-    public IssuerOfferorTaxabilityIndicator1Choice_? IssuerOfferorTaxabilityIndicator { get; init; }
-
-    /// <summary>
     /// Other Income Type.
     /// </summary>
     [DisplayName("Other Income Type")]
@@ -101,11 +52,60 @@ public record CashOption97
     public ValueList<GenericIdentification47> OtherIncomeType { get; init; } = [];
 
     /// <summary>
-    /// Price Details.
+    /// Exemption Type.
     /// </summary>
-    [DisplayName("Price Details")]
-    [IsoXmlTag("PricDtls")]
-    public PriceDetails33? PriceDetails { get; init; }
+    [DisplayName("Exemption Type")]
+    [IsoXmlTag("XmptnTp")]
+    public ValueList<GenericIdentification47> ExemptionType { get; init; } = [];
+
+    /// <summary>
+    /// Country Of Income Source.
+    /// </summary>
+    [DisplayName("Country Of Income Source")]
+    [IsoXmlTag("CtryOfIncmSrc")]
+    public CountryCode? CountryOfIncomeSource { get; init; }
+
+    /// <summary>
+    /// Account.
+    /// </summary>
+    [DisplayName("Account")]
+    [IsoXmlTag("Acct")]
+    public Account9Choice_? Account { get; init; }
+
+    /// <summary>
+    /// Cash Parties.
+    /// </summary>
+    [DisplayName("Cash Parties")]
+    [IsoXmlTag("CshPties")]
+    public CashParties37? CashParties { get; init; }
+
+    /// <summary>
+    /// Amount Details.
+    /// </summary>
+    [DisplayName("Amount Details")]
+    [IsoXmlTag("AmtDtls")]
+    public required CorporateActionAmounts67 AmountDetails { get; init; }
+
+    /// <summary>
+    /// Date Details.
+    /// </summary>
+    [DisplayName("Date Details")]
+    [IsoXmlTag("DtDtls")]
+    public required CorporateActionDate99 DateDetails { get; init; }
+
+    /// <summary>
+    /// Foreign Exchange Details.
+    /// </summary>
+    [DisplayName("Foreign Exchange Details")]
+    [IsoXmlTag("FXDtls")]
+    public ValueList<ForeignExchangeTerms27> ForeignExchangeDetails { get; init; } = [];
+
+    /// <summary>
+    /// Tax Voucher Details.
+    /// </summary>
+    [DisplayName("Tax Voucher Details")]
+    [IsoXmlTag("TaxVchrDtls")]
+    public TaxVoucher5? TaxVoucherDetails { get; init; }
 
     /// <summary>
     /// Rate And Amount Details.
@@ -115,9 +115,9 @@ public record CashOption97
     public Rate37? RateAndAmountDetails { get; init; }
 
     /// <summary>
-    /// Tax Voucher Details.
+    /// Price Details.
     /// </summary>
-    [DisplayName("Tax Voucher Details")]
-    [IsoXmlTag("TaxVchrDtls")]
-    public TaxVoucher5? TaxVoucherDetails { get; init; }
+    [DisplayName("Price Details")]
+    [IsoXmlTag("PricDtls")]
+    public PriceDetails33? PriceDetails { get; init; }
 }

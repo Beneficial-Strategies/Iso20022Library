@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateActionGeneralInformationSD59
 {
     /// <summary>
+    /// Place And Name.
+    /// </summary>
+    [DisplayName("Place And Name")]
+    [IsoXmlTag("PlcAndNm")]
+    public Max350Text? PlaceAndName { get; init; }
+
+    /// <summary>
     /// Event Group.
     /// </summary>
     [DisplayName("Event Group")]
@@ -31,18 +38,11 @@ public record CorporateActionGeneralInformationSD59
     public ExtendedEventType6Code? EventType { get; init; }
 
     /// <summary>
-    /// Place And Name.
+    /// Sub Event Type.
     /// </summary>
-    [DisplayName("Place And Name")]
-    [IsoXmlTag("PlcAndNm")]
-    public Max350Text? PlaceAndName { get; init; }
-
-    /// <summary>
-    /// Safekeeping Account.
-    /// </summary>
-    [DisplayName("Safekeeping Account")]
-    [IsoXmlTag("SfkpgAcct")]
-    public required RestrictedFINXMax35Text SafekeepingAccount { get; init; }
+    [DisplayName("Sub Event Type")]
+    [IsoXmlTag("SubEvtTp")]
+    public DTCCSubEventType12Code? SubEventType { get; init; }
 
     /// <summary>
     /// Security Identification.
@@ -52,11 +52,11 @@ public record CorporateActionGeneralInformationSD59
     public required SecurityIdentification20 SecurityIdentification { get; init; }
 
     /// <summary>
-    /// Sub Event Type.
+    /// Safekeeping Account.
     /// </summary>
-    [DisplayName("Sub Event Type")]
-    [IsoXmlTag("SubEvtTp")]
-    public DTCCSubEventType12Code? SubEventType { get; init; }
+    [DisplayName("Safekeeping Account")]
+    [IsoXmlTag("SfkpgAcct")]
+    public required RestrictedFINXMax35Text SafekeepingAccount { get; init; }
 
     /// <summary>
     /// Unallocated Details.

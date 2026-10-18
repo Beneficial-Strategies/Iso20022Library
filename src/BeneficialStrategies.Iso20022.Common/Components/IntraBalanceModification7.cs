@@ -38,16 +38,16 @@ public record IntraBalanceModification7
     public BranchAndFinancialInstitutionIdentification8? CashAccountServicer { get; init; }
 
     /// <summary>
-    /// Modification.
-    /// </summary>
-    [DisplayName("Modification")]
-    [IsoXmlTag("Mod")]
-    public ValueList<IntraBalanceModification8> Modification { get; init; } = [];
-
-    /// <summary>
     /// Processing Status.
     /// </summary>
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
     public ProcessingStatus71Choice_? ProcessingStatus { get; init; }
+
+    /// <summary>
+    /// Modification.
+    /// </summary>
+    [DisplayName("Modification")]
+    [IsoXmlTag("Mod")]
+    public ValueList<IntraBalanceModification8> Modification { get; init; } = [];
 }

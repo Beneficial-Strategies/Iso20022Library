@@ -17,11 +17,33 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SettlementDetails214
 {
     /// <summary>
-    /// Automatic Borrowing.
+    /// Priority.
     /// </summary>
-    [DisplayName("Automatic Borrowing")]
-    [IsoXmlTag("AutomtcBrrwg")]
-    public AutomaticBorrowing6Choice_? AutomaticBorrowing { get; init; }
+    [DisplayName("Priority")]
+    [IsoXmlTag("Prty")]
+    public PriorityNumeric4Choice_? Priority { get; init; }
+
+    /// <summary>
+    /// Securities Transaction Type.
+    /// </summary>
+    [DisplayName("Securities Transaction Type")]
+    [IsoXmlTag("SctiesTxTp")]
+    public required SecuritiesTransactionType43Choice_ SecuritiesTransactionType { get; init; }
+
+    /// <summary>
+    /// Settlement Transaction Condition.
+    /// </summary>
+    [DisplayName("Settlement Transaction Condition")]
+    [IsoXmlTag("SttlmTxCond")]
+    public ValueList<SettlementTransactionCondition34Choice_> SettlementTransactionCondition { get; init; } =
+        [];
+
+    /// <summary>
+    /// Partial Settlement Indicator.
+    /// </summary>
+    [DisplayName("Partial Settlement Indicator")]
+    [IsoXmlTag("PrtlSttlmInd")]
+    public SettlementTransactionCondition5Code? PartialSettlementIndicator { get; init; }
 
     /// <summary>
     /// Beneficial Ownership.
@@ -38,20 +60,6 @@ public record SettlementDetails214
     public BlockTrade4Choice_? BlockTrade { get; init; }
 
     /// <summary>
-    /// Cash Clearing System.
-    /// </summary>
-    [DisplayName("Cash Clearing System")]
-    [IsoXmlTag("CshClrSys")]
-    public CashSettlementSystem4Choice_? CashClearingSystem { get; init; }
-
-    /// <summary>
-    /// Cash Sub Balance Type.
-    /// </summary>
-    [DisplayName("Cash Sub Balance Type")]
-    [IsoXmlTag("CshSubBalTp")]
-    public GenericIdentification30? CashSubBalanceType { get; init; }
-
-    /// <summary>
     /// CCP Eligibility.
     /// </summary>
     [DisplayName("CCP Eligibility")]
@@ -59,11 +67,11 @@ public record SettlementDetails214
     public CentralCounterPartyEligibility4Choice_? CCPEligibility { get; init; }
 
     /// <summary>
-    /// Eligible For Collateral.
+    /// Cash Clearing System.
     /// </summary>
-    [DisplayName("Eligible For Collateral")]
-    [IsoXmlTag("ElgblForColl")]
-    public YesNoIndicator? EligibleForCollateral { get; init; }
+    [DisplayName("Cash Clearing System")]
+    [IsoXmlTag("CshClrSys")]
+    public CashSettlementSystem4Choice_? CashClearingSystem { get; init; }
 
     /// <summary>
     /// Exposure Type.
@@ -71,20 +79,6 @@ public record SettlementDetails214
     [DisplayName("Exposure Type")]
     [IsoXmlTag("XpsrTp")]
     public ExposureType25Choice_? ExposureType { get; init; }
-
-    /// <summary>
-    /// Legal Restrictions.
-    /// </summary>
-    [DisplayName("Legal Restrictions")]
-    [IsoXmlTag("LglRstrctns")]
-    public Restriction5Choice_? LegalRestrictions { get; init; }
-
-    /// <summary>
-    /// Letter Of Guarantee.
-    /// </summary>
-    [DisplayName("Letter Of Guarantee")]
-    [IsoXmlTag("LttrOfGrnt")]
-    public LetterOfGuarantee4Choice_? LetterOfGuarantee { get; init; }
 
     /// <summary>
     /// Market Client Side.
@@ -101,20 +95,6 @@ public record SettlementDetails214
     public NettingEligibility4Choice_? NettingEligibility { get; init; }
 
     /// <summary>
-    /// Partial Settlement Indicator.
-    /// </summary>
-    [DisplayName("Partial Settlement Indicator")]
-    [IsoXmlTag("PrtlSttlmInd")]
-    public SettlementTransactionCondition5Code? PartialSettlementIndicator { get; init; }
-
-    /// <summary>
-    /// Priority.
-    /// </summary>
-    [DisplayName("Priority")]
-    [IsoXmlTag("Prty")]
-    public PriorityNumeric4Choice_? Priority { get; init; }
-
-    /// <summary>
     /// Registration.
     /// </summary>
     [DisplayName("Registration")]
@@ -129,40 +109,18 @@ public record SettlementDetails214
     public RepurchaseType22Choice_? RepurchaseType { get; init; }
 
     /// <summary>
+    /// Legal Restrictions.
+    /// </summary>
+    [DisplayName("Legal Restrictions")]
+    [IsoXmlTag("LglRstrctns")]
+    public Restriction5Choice_? LegalRestrictions { get; init; }
+
+    /// <summary>
     /// Securities RTGS.
     /// </summary>
     [DisplayName("Securities RTGS")]
     [IsoXmlTag("SctiesRTGS")]
     public SecuritiesRTGS4Choice_? SecuritiesRTGS { get; init; }
-
-    /// <summary>
-    /// Securities Sub Balance Type.
-    /// </summary>
-    [DisplayName("Securities Sub Balance Type")]
-    [IsoXmlTag("SctiesSubBalTp")]
-    public GenericIdentification30? SecuritiesSubBalanceType { get; init; }
-
-    /// <summary>
-    /// Securities Transaction Type.
-    /// </summary>
-    [DisplayName("Securities Transaction Type")]
-    [IsoXmlTag("SctiesTxTp")]
-    public required SecuritiesTransactionType43Choice_ SecuritiesTransactionType { get; init; }
-
-    /// <summary>
-    /// Settlement System Method.
-    /// </summary>
-    [DisplayName("Settlement System Method")]
-    [IsoXmlTag("SttlmSysMtd")]
-    public SettlementSystemMethod4Choice_? SettlementSystemMethod { get; init; }
-
-    /// <summary>
-    /// Settlement Transaction Condition.
-    /// </summary>
-    [DisplayName("Settlement Transaction Condition")]
-    [IsoXmlTag("SttlmTxCond")]
-    public ValueList<SettlementTransactionCondition34Choice_> SettlementTransactionCondition { get; init; } =
-        [];
 
     /// <summary>
     /// Settling Capacity.
@@ -172,11 +130,11 @@ public record SettlementDetails214
     public SettlingCapacity7Choice_? SettlingCapacity { get; init; }
 
     /// <summary>
-    /// Stamp Duty Tax Basis.
+    /// Settlement System Method.
     /// </summary>
-    [DisplayName("Stamp Duty Tax Basis")]
-    [IsoXmlTag("StmpDtyTaxBsis")]
-    public GenericIdentification30? StampDutyTaxBasis { get; init; }
+    [DisplayName("Settlement System Method")]
+    [IsoXmlTag("SttlmSysMtd")]
+    public SettlementSystemMethod4Choice_? SettlementSystemMethod { get; init; }
 
     /// <summary>
     /// Tax Capacity.
@@ -184,4 +142,46 @@ public record SettlementDetails214
     [DisplayName("Tax Capacity")]
     [IsoXmlTag("TaxCpcty")]
     public TaxCapacityParty4Choice_? TaxCapacity { get; init; }
+
+    /// <summary>
+    /// Stamp Duty Tax Basis.
+    /// </summary>
+    [DisplayName("Stamp Duty Tax Basis")]
+    [IsoXmlTag("StmpDtyTaxBsis")]
+    public GenericIdentification30? StampDutyTaxBasis { get; init; }
+
+    /// <summary>
+    /// Automatic Borrowing.
+    /// </summary>
+    [DisplayName("Automatic Borrowing")]
+    [IsoXmlTag("AutomtcBrrwg")]
+    public AutomaticBorrowing6Choice_? AutomaticBorrowing { get; init; }
+
+    /// <summary>
+    /// Letter Of Guarantee.
+    /// </summary>
+    [DisplayName("Letter Of Guarantee")]
+    [IsoXmlTag("LttrOfGrnt")]
+    public LetterOfGuarantee4Choice_? LetterOfGuarantee { get; init; }
+
+    /// <summary>
+    /// Eligible For Collateral.
+    /// </summary>
+    [DisplayName("Eligible For Collateral")]
+    [IsoXmlTag("ElgblForColl")]
+    public YesNoIndicator? EligibleForCollateral { get; init; }
+
+    /// <summary>
+    /// Securities Sub Balance Type.
+    /// </summary>
+    [DisplayName("Securities Sub Balance Type")]
+    [IsoXmlTag("SctiesSubBalTp")]
+    public GenericIdentification30? SecuritiesSubBalanceType { get; init; }
+
+    /// <summary>
+    /// Cash Sub Balance Type.
+    /// </summary>
+    [DisplayName("Cash Sub Balance Type")]
+    [IsoXmlTag("CshSubBalTp")]
+    public GenericIdentification30? CashSubBalanceType { get; init; }
 }

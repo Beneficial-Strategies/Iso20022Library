@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AutomatedTellerMachine12
 {
     /// <summary>
+    /// Identification.
+    /// </summary>
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public required Max35Text Identification { get; init; }
+
+    /// <summary>
     /// Additional Identification.
     /// </summary>
     [DisplayName("Additional Identification")]
@@ -24,32 +31,18 @@ public record AutomatedTellerMachine12
     public Max35Text? AdditionalIdentification { get; init; }
 
     /// <summary>
+    /// Sequence Number.
+    /// </summary>
+    [DisplayName("Sequence Number")]
+    [IsoXmlTag("SeqNb")]
+    public Max35Text? SequenceNumber { get; init; }
+
+    /// <summary>
     /// Base Currency.
     /// </summary>
     [DisplayName("Base Currency")]
     [IsoXmlTag("BaseCcy")]
     public required ActiveCurrencyCode BaseCurrency { get; init; }
-
-    /// <summary>
-    /// Capabilities.
-    /// </summary>
-    [DisplayName("Capabilities")]
-    [IsoXmlTag("Cpblties")]
-    public PointOfInteractionCapabilities10? Capabilities { get; init; }
-
-    /// <summary>
-    /// Equipment.
-    /// </summary>
-    [DisplayName("Equipment")]
-    [IsoXmlTag("Eqpmnt")]
-    public ATMEquipment1? Equipment { get; init; }
-
-    /// <summary>
-    /// Identification.
-    /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Location.
@@ -66,9 +59,16 @@ public record AutomatedTellerMachine12
     public TransactionEnvironment2Code? LocationCategory { get; init; }
 
     /// <summary>
-    /// Sequence Number.
+    /// Capabilities.
     /// </summary>
-    [DisplayName("Sequence Number")]
-    [IsoXmlTag("SeqNb")]
-    public Max35Text? SequenceNumber { get; init; }
+    [DisplayName("Capabilities")]
+    [IsoXmlTag("Cpblties")]
+    public PointOfInteractionCapabilities10? Capabilities { get; init; }
+
+    /// <summary>
+    /// Equipment.
+    /// </summary>
+    [DisplayName("Equipment")]
+    [IsoXmlTag("Eqpmnt")]
+    public ATMEquipment1? Equipment { get; init; }
 }

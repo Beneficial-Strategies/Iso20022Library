@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record DeviceInitialisationCardReaderRequest6
 {
     /// <summary>
-    /// Display Output.
+    /// Warm Reset Flag.
     /// </summary>
-    [DisplayName("Display Output")]
-    [IsoXmlTag("DispOutpt")]
-    public ActionMessage11? DisplayOutput { get; init; }
+    [DisplayName("Warm Reset Flag")]
+    [IsoXmlTag("WarmRstFlg")]
+    public TrueFalseIndicator? WarmResetFlag { get; init; }
 
     /// <summary>
     /// Force Entry Mode.
@@ -45,9 +45,9 @@ public record DeviceInitialisationCardReaderRequest6
     public Number? MaximumWaitingTime { get; init; }
 
     /// <summary>
-    /// Warm Reset Flag.
+    /// Display Output.
     /// </summary>
-    [DisplayName("Warm Reset Flag")]
-    [IsoXmlTag("WarmRstFlg")]
-    public TrueFalseIndicator? WarmResetFlag { get; init; }
+    [DisplayName("Display Output")]
+    [IsoXmlTag("DispOutpt")]
+    public ActionMessage11? DisplayOutput { get; init; }
 }

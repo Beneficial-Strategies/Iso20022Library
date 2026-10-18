@@ -17,32 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Signer8
 {
     /// <summary>
-    /// Digest Algorithm.
+    /// Version.
     /// </summary>
-    [DisplayName("Digest Algorithm")]
-    [IsoXmlTag("DgstAlgo")]
-    public required AlgorithmIdentification36 DigestAlgorithm { get; init; }
-
-    /// <summary>
-    /// Signature.
-    /// </summary>
-    [DisplayName("Signature")]
-    [IsoXmlTag("Sgntr")]
-    public required Max3000Binary Signature { get; init; }
-
-    /// <summary>
-    /// Signature Algorithm.
-    /// </summary>
-    [DisplayName("Signature Algorithm")]
-    [IsoXmlTag("SgntrAlgo")]
-    public required AlgorithmIdentification33 SignatureAlgorithm { get; init; }
-
-    /// <summary>
-    /// Signed Attributes.
-    /// </summary>
-    [DisplayName("Signed Attributes")]
-    [IsoXmlTag("SgndAttrbts")]
-    public ValueList<GenericInformation1> SignedAttributes { get; init; } = [];
+    [DisplayName("Version")]
+    [IsoXmlTag("Vrsn")]
+    public Number? Version { get; init; }
 
     /// <summary>
     /// Signer Identification.
@@ -52,9 +31,30 @@ public record Signer8
     public Recipient13Choice_? SignerIdentification { get; init; }
 
     /// <summary>
-    /// Version.
+    /// Digest Algorithm.
     /// </summary>
-    [DisplayName("Version")]
-    [IsoXmlTag("Vrsn")]
-    public Number? Version { get; init; }
+    [DisplayName("Digest Algorithm")]
+    [IsoXmlTag("DgstAlgo")]
+    public required AlgorithmIdentification36 DigestAlgorithm { get; init; }
+
+    /// <summary>
+    /// Signed Attributes.
+    /// </summary>
+    [DisplayName("Signed Attributes")]
+    [IsoXmlTag("SgndAttrbts")]
+    public ValueList<GenericInformation1> SignedAttributes { get; init; } = [];
+
+    /// <summary>
+    /// Signature Algorithm.
+    /// </summary>
+    [DisplayName("Signature Algorithm")]
+    [IsoXmlTag("SgntrAlgo")]
+    public required AlgorithmIdentification33 SignatureAlgorithm { get; init; }
+
+    /// <summary>
+    /// Signature.
+    /// </summary>
+    [DisplayName("Signature")]
+    [IsoXmlTag("Sgntr")]
+    public required Max3000Binary Signature { get; init; }
 }

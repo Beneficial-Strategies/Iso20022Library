@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Charges15
 {
     /// <summary>
-    /// Record.
-    /// </summary>
-    [DisplayName("Record")]
-    [IsoXmlTag("Rcrd")]
-    public ValueList<ChargesRecord8> Record { get; init; } = [];
-
-    /// <summary>
     /// Total Charges And Tax Amount.
     /// </summary>
     [DisplayName("Total Charges And Tax Amount")]
     [IsoXmlTag("TtlChrgsAndTaxAmt")]
     public ActiveOrHistoricCurrencyAndAmount? TotalChargesAndTaxAmount { get; init; }
+
+    /// <summary>
+    /// Record.
+    /// </summary>
+    [DisplayName("Record")]
+    [IsoXmlTag("Rcrd")]
+    public ValueList<ChargesRecord8> Record { get; init; } = [];
 }

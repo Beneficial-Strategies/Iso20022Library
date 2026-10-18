@@ -17,11 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ChargesPerType4
 {
     /// <summary>
-    /// Additional Information.
+    /// Charges Identification.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public Max140Text? AdditionalInformation { get; init; }
+    [DisplayName("Charges Identification")]
+    [IsoXmlTag("ChrgsId")]
+    public Max35Text? ChargesIdentification { get; init; }
+
+    /// <summary>
+    /// Total Charges Per Charge Type.
+    /// </summary>
+    [DisplayName("Total Charges Per Charge Type")]
+    [IsoXmlTag("TtlChrgsPerChrgTp")]
+    public TotalCharges7? TotalChargesPerChargeType { get; init; }
 
     /// <summary>
     /// Charges Account.
@@ -38,11 +45,11 @@ public record ChargesPerType4
     public BranchAndFinancialInstitutionIdentification8? ChargesAccountOwner { get; init; }
 
     /// <summary>
-    /// Charges Identification.
+    /// Type.
     /// </summary>
-    [DisplayName("Charges Identification")]
-    [IsoXmlTag("ChrgsId")]
-    public Max35Text? ChargesIdentification { get; init; }
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public required ChargeType3Choice_ Type { get; init; }
 
     /// <summary>
     /// Record.
@@ -52,16 +59,9 @@ public record ChargesPerType4
     public ValueList<ChargesPerTypeRecord4> Record { get; init; } = [];
 
     /// <summary>
-    /// Total Charges Per Charge Type.
+    /// Additional Information.
     /// </summary>
-    [DisplayName("Total Charges Per Charge Type")]
-    [IsoXmlTag("TtlChrgsPerChrgTp")]
-    public TotalCharges7? TotalChargesPerChargeType { get; init; }
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public required ChargeType3Choice_ Type { get; init; }
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public Max140Text? AdditionalInformation { get; init; }
 }

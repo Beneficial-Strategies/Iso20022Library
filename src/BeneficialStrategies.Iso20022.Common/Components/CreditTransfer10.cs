@@ -17,32 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CreditTransfer10
 {
     /// <summary>
-    /// Creditor.
+    /// Reference.
     /// </summary>
-    [DisplayName("Creditor")]
-    [IsoXmlTag("Cdtr")]
-    public PartyIdentification139? Creditor { get; init; }
-
-    /// <summary>
-    /// Creditor Account.
-    /// </summary>
-    [DisplayName("Creditor Account")]
-    [IsoXmlTag("CdtrAcct")]
-    public required AccountIdentificationAndName5 CreditorAccount { get; init; }
-
-    /// <summary>
-    /// Creditor Agent.
-    /// </summary>
-    [DisplayName("Creditor Agent")]
-    [IsoXmlTag("CdtrAgt")]
-    public required FinancialInstitutionIdentification15 CreditorAgent { get; init; }
-
-    /// <summary>
-    /// Creditor Agent Account.
-    /// </summary>
-    [DisplayName("Creditor Agent Account")]
-    [IsoXmlTag("CdtrAgtAcct")]
-    public AccountIdentificationAndName5? CreditorAgentAccount { get; init; }
+    [DisplayName("Reference")]
+    [IsoXmlTag("Ref")]
+    public Max35Text? Reference { get; init; }
 
     /// <summary>
     /// Debtor.
@@ -101,9 +80,30 @@ public record CreditTransfer10
     public AccountIdentificationAndName5? IntermediaryAgent2Account { get; init; }
 
     /// <summary>
-    /// Reference.
+    /// Creditor Agent.
     /// </summary>
-    [DisplayName("Reference")]
-    [IsoXmlTag("Ref")]
-    public Max35Text? Reference { get; init; }
+    [DisplayName("Creditor Agent")]
+    [IsoXmlTag("CdtrAgt")]
+    public required FinancialInstitutionIdentification15 CreditorAgent { get; init; }
+
+    /// <summary>
+    /// Creditor Agent Account.
+    /// </summary>
+    [DisplayName("Creditor Agent Account")]
+    [IsoXmlTag("CdtrAgtAcct")]
+    public AccountIdentificationAndName5? CreditorAgentAccount { get; init; }
+
+    /// <summary>
+    /// Creditor.
+    /// </summary>
+    [DisplayName("Creditor")]
+    [IsoXmlTag("Cdtr")]
+    public PartyIdentification139? Creditor { get; init; }
+
+    /// <summary>
+    /// Creditor Account.
+    /// </summary>
+    [DisplayName("Creditor Account")]
+    [IsoXmlTag("CdtrAcct")]
+    public required AccountIdentificationAndName5 CreditorAccount { get; init; }
 }

@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ContractRegistrationStatementRequest3
 {
     /// <summary>
-    /// Registered Contract Identification.
+    /// Statement Request Identification.
     /// </summary>
-    [DisplayName("Registered Contract Identification")]
-    [IsoXmlTag("RegdCtrctId")]
-    public required Max35Text RegisteredContractIdentification { get; init; }
-
-    /// <summary>
-    /// Registration Agent.
-    /// </summary>
-    [DisplayName("Registration Agent")]
-    [IsoXmlTag("RegnAgt")]
-    public required BranchAndFinancialInstitutionIdentification8 RegistrationAgent { get; init; }
-
-    /// <summary>
-    /// Reporting Party.
-    /// </summary>
-    [DisplayName("Reporting Party")]
-    [IsoXmlTag("RptgPty")]
-    public required TradeParty6 ReportingParty { get; init; }
+    [DisplayName("Statement Request Identification")]
+    [IsoXmlTag("StmtReqId")]
+    public required Max35Text StatementRequestIdentification { get; init; }
 
     /// <summary>
     /// Reporting Period.
@@ -45,18 +31,32 @@ public record ContractRegistrationStatementRequest3
     public required ReportingPeriod4 ReportingPeriod { get; init; }
 
     /// <summary>
+    /// Reporting Party.
+    /// </summary>
+    [DisplayName("Reporting Party")]
+    [IsoXmlTag("RptgPty")]
+    public required TradeParty6 ReportingParty { get; init; }
+
+    /// <summary>
+    /// Registration Agent.
+    /// </summary>
+    [DisplayName("Registration Agent")]
+    [IsoXmlTag("RegnAgt")]
+    public required BranchAndFinancialInstitutionIdentification8 RegistrationAgent { get; init; }
+
+    /// <summary>
+    /// Registered Contract Identification.
+    /// </summary>
+    [DisplayName("Registered Contract Identification")]
+    [IsoXmlTag("RegdCtrctId")]
+    public required Max35Text RegisteredContractIdentification { get; init; }
+
+    /// <summary>
     /// Return Criteria.
     /// </summary>
     [DisplayName("Return Criteria")]
     [IsoXmlTag("RtrCrit")]
     public ContractRegistrationStatementCriteria1? ReturnCriteria { get; init; }
-
-    /// <summary>
-    /// Statement Request Identification.
-    /// </summary>
-    [DisplayName("Statement Request Identification")]
-    [IsoXmlTag("StmtReqId")]
-    public required Max35Text StatementRequestIdentification { get; init; }
 
     /// <summary>
     /// Supplementary Data.

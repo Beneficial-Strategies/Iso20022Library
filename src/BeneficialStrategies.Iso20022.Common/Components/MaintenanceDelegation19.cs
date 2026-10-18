@@ -17,34 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record MaintenanceDelegation19
 {
     /// <summary>
-    /// Certificate.
-    /// </summary>
-    [DisplayName("Certificate")]
-    [IsoXmlTag("Cert")]
-    public ValueList<Max10KBinary> Certificate { get; init; } = [];
-
-    /// <summary>
-    /// Delegated Action.
-    /// </summary>
-    [DisplayName("Delegated Action")]
-    [IsoXmlTag("DlgtdActn")]
-    public MaintenanceDelegateAction10? DelegatedAction { get; init; }
-
-    /// <summary>
-    /// Delegation Scope Definition.
-    /// </summary>
-    [DisplayName("Delegation Scope Definition")]
-    [IsoXmlTag("DlgtnScpDef")]
-    public Max3000Binary? DelegationScopeDefinition { get; init; }
-
-    /// <summary>
-    /// Delegation Scope Identification.
-    /// </summary>
-    [DisplayName("Delegation Scope Identification")]
-    [IsoXmlTag("DlgtnScpId")]
-    public Max35Text? DelegationScopeIdentification { get; init; }
-
-    /// <summary>
     /// Delegation Type.
     /// </summary>
     [DisplayName("Delegation Type")]
@@ -59,18 +31,46 @@ public record MaintenanceDelegation19
     public ValueList<DataSetCategory19Code> MaintenanceService { get; init; } = [];
 
     /// <summary>
-    /// Parameter Data Set.
-    /// </summary>
-    [DisplayName("Parameter Data Set")]
-    [IsoXmlTag("ParamDataSet")]
-    public AcceptorConfigurationDataSet6? ParameterDataSet { get; init; }
-
-    /// <summary>
     /// Partial Delegation.
     /// </summary>
     [DisplayName("Partial Delegation")]
     [IsoXmlTag("PrtlDlgtn")]
     public TrueFalseIndicator? PartialDelegation { get; init; }
+
+    /// <summary>
+    /// POI Subset.
+    /// </summary>
+    [DisplayName("POI Subset")]
+    [IsoXmlTag("POISubset")]
+    public ValueList<Max35Text> POISubset { get; init; } = [];
+
+    /// <summary>
+    /// Delegated Action.
+    /// </summary>
+    [DisplayName("Delegated Action")]
+    [IsoXmlTag("DlgtdActn")]
+    public MaintenanceDelegateAction10? DelegatedAction { get; init; }
+
+    /// <summary>
+    /// Delegation Scope Identification.
+    /// </summary>
+    [DisplayName("Delegation Scope Identification")]
+    [IsoXmlTag("DlgtnScpId")]
+    public Max35Text? DelegationScopeIdentification { get; init; }
+
+    /// <summary>
+    /// Delegation Scope Definition.
+    /// </summary>
+    [DisplayName("Delegation Scope Definition")]
+    [IsoXmlTag("DlgtnScpDef")]
+    public Max3000Binary? DelegationScopeDefinition { get; init; }
+
+    /// <summary>
+    /// Certificate.
+    /// </summary>
+    [DisplayName("Certificate")]
+    [IsoXmlTag("Cert")]
+    public ValueList<Max10KBinary> Certificate { get; init; } = [];
 
     /// <summary>
     /// POI Identification Association.
@@ -81,16 +81,16 @@ public record MaintenanceDelegation19
         [];
 
     /// <summary>
-    /// POI Subset.
-    /// </summary>
-    [DisplayName("POI Subset")]
-    [IsoXmlTag("POISubset")]
-    public ValueList<Max35Text> POISubset { get; init; } = [];
-
-    /// <summary>
     /// Symmetric Key.
     /// </summary>
     [DisplayName("Symmetric Key")]
     [IsoXmlTag("SmmtrcKey")]
     public ValueList<KEKIdentifier5> SymmetricKey { get; init; } = [];
+
+    /// <summary>
+    /// Parameter Data Set.
+    /// </summary>
+    [DisplayName("Parameter Data Set")]
+    [IsoXmlTag("ParamDataSet")]
+    public AcceptorConfigurationDataSet6? ParameterDataSet { get; init; }
 }

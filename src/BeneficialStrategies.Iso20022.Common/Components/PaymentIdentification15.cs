@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PaymentIdentification15
 {
     /// <summary>
-    /// Clearing System Reference.
+    /// Instruction Identification.
     /// </summary>
-    [DisplayName("Clearing System Reference")]
-    [IsoXmlTag("ClrSysRef")]
-    public Max35Text? ClearingSystemReference { get; init; }
+    [DisplayName("Instruction Identification")]
+    [IsoXmlTag("InstrId")]
+    public Max35Text? InstructionIdentification { get; init; }
 
     /// <summary>
     /// End To End Identification.
@@ -29,20 +29,6 @@ public record PaymentIdentification15
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
     public required Max35Text EndToEndIdentification { get; init; }
-
-    /// <summary>
-    /// First Agent.
-    /// </summary>
-    [DisplayName("First Agent")]
-    [IsoXmlTag("FrstAgt")]
-    public BranchAndFinancialInstitutionIdentification8? FirstAgent { get; init; }
-
-    /// <summary>
-    /// Instruction Identification.
-    /// </summary>
-    [DisplayName("Instruction Identification")]
-    [IsoXmlTag("InstrId")]
-    public Max35Text? InstructionIdentification { get; init; }
 
     /// <summary>
     /// Transaction Identification.
@@ -57,4 +43,18 @@ public record PaymentIdentification15
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
     public UUIDv4Identifier? UETR { get; init; }
+
+    /// <summary>
+    /// Clearing System Reference.
+    /// </summary>
+    [DisplayName("Clearing System Reference")]
+    [IsoXmlTag("ClrSysRef")]
+    public Max35Text? ClearingSystemReference { get; init; }
+
+    /// <summary>
+    /// First Agent.
+    /// </summary>
+    [DisplayName("First Agent")]
+    [IsoXmlTag("FrstAgt")]
+    public BranchAndFinancialInstitutionIdentification8? FirstAgent { get; init; }
 }

@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CurrencyConversion32
 {
     /// <summary>
-    /// Commission Details.
-    /// </summary>
-    [DisplayName("Commission Details")]
-    [IsoXmlTag("ComssnDtls")]
-    public ValueList<Commission19> CommissionDetails { get; init; } = [];
-
-    /// <summary>
     /// Currency Conversion Identification.
     /// </summary>
     [DisplayName("Currency Conversion Identification")]
@@ -31,11 +24,18 @@ public record CurrencyConversion32
     public Max35Text? CurrencyConversionIdentification { get; init; }
 
     /// <summary>
-    /// Declaration Details.
+    /// Target Currency.
     /// </summary>
-    [DisplayName("Declaration Details")]
-    [IsoXmlTag("DclrtnDtls")]
-    public ActionMessage5? DeclarationDetails { get; init; }
+    [DisplayName("Target Currency")]
+    [IsoXmlTag("TrgtCcy")]
+    public required CurrencyDetails2 TargetCurrency { get; init; }
+
+    /// <summary>
+    /// Resulting Amount.
+    /// </summary>
+    [DisplayName("Resulting Amount")]
+    [IsoXmlTag("RsltgAmt")]
+    public required ImpliedCurrencyAndAmount ResultingAmount { get; init; }
 
     /// <summary>
     /// Exchange Rate.
@@ -52,20 +52,6 @@ public record CurrencyConversion32
     public PercentageRate? InvertedExchangeRate { get; init; }
 
     /// <summary>
-    /// Mark Up Details.
-    /// </summary>
-    [DisplayName("Mark Up Details")]
-    [IsoXmlTag("MrkUpDtls")]
-    public ValueList<Commission18> MarkUpDetails { get; init; } = [];
-
-    /// <summary>
-    /// Original Amount.
-    /// </summary>
-    [DisplayName("Original Amount")]
-    [IsoXmlTag("OrgnlAmt")]
-    public required ImpliedCurrencyAndAmount OriginalAmount { get; init; }
-
-    /// <summary>
     /// Quotation Date.
     /// </summary>
     [DisplayName("Quotation Date")]
@@ -73,18 +59,11 @@ public record CurrencyConversion32
     public ISODateTime? QuotationDate { get; init; }
 
     /// <summary>
-    /// Reference Rate.
+    /// Valid Until.
     /// </summary>
-    [DisplayName("Reference Rate")]
-    [IsoXmlTag("RefRate")]
-    public ATMExchangeRateComponent1? ReferenceRate { get; init; }
-
-    /// <summary>
-    /// Resulting Amount.
-    /// </summary>
-    [DisplayName("Resulting Amount")]
-    [IsoXmlTag("RsltgAmt")]
-    public required ImpliedCurrencyAndAmount ResultingAmount { get; init; }
+    [DisplayName("Valid Until")]
+    [IsoXmlTag("VldUntil")]
+    public ISODateTime? ValidUntil { get; init; }
 
     /// <summary>
     /// Source Currency.
@@ -94,16 +73,37 @@ public record CurrencyConversion32
     public required CurrencyDetails2 SourceCurrency { get; init; }
 
     /// <summary>
-    /// Target Currency.
+    /// Original Amount.
     /// </summary>
-    [DisplayName("Target Currency")]
-    [IsoXmlTag("TrgtCcy")]
-    public required CurrencyDetails2 TargetCurrency { get; init; }
+    [DisplayName("Original Amount")]
+    [IsoXmlTag("OrgnlAmt")]
+    public required ImpliedCurrencyAndAmount OriginalAmount { get; init; }
 
     /// <summary>
-    /// Valid Until.
+    /// Commission Details.
     /// </summary>
-    [DisplayName("Valid Until")]
-    [IsoXmlTag("VldUntil")]
-    public ISODateTime? ValidUntil { get; init; }
+    [DisplayName("Commission Details")]
+    [IsoXmlTag("ComssnDtls")]
+    public ValueList<Commission19> CommissionDetails { get; init; } = [];
+
+    /// <summary>
+    /// Mark Up Details.
+    /// </summary>
+    [DisplayName("Mark Up Details")]
+    [IsoXmlTag("MrkUpDtls")]
+    public ValueList<Commission18> MarkUpDetails { get; init; } = [];
+
+    /// <summary>
+    /// Declaration Details.
+    /// </summary>
+    [DisplayName("Declaration Details")]
+    [IsoXmlTag("DclrtnDtls")]
+    public ActionMessage5? DeclarationDetails { get; init; }
+
+    /// <summary>
+    /// Reference Rate.
+    /// </summary>
+    [DisplayName("Reference Rate")]
+    [IsoXmlTag("RefRate")]
+    public ATMExchangeRateComponent1? ReferenceRate { get; init; }
 }

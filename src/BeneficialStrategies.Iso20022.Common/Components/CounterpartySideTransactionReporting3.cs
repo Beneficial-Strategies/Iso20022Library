@@ -17,14 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CounterpartySideTransactionReporting3
 {
     /// <summary>
-    /// Counterparty Side Unique Transaction Identifier.
-    /// </summary>
-    [DisplayName("Counterparty Side Unique Transaction Identifier")]
-    [IsoXmlTag("CtrPtySdUnqTxIdr")]
-    public ValueList<UniqueTransactionIdentifier3> CounterpartySideUniqueTransactionIdentifier { get; init; } =
-        [];
-
-    /// <summary>
     /// Reporting Jurisdiction.
     /// </summary>
     [DisplayName("Reporting Jurisdiction")]
@@ -37,4 +29,12 @@ public record CounterpartySideTransactionReporting3
     [DisplayName("Reporting Party")]
     [IsoXmlTag("RptgPty")]
     public PartyIdentification242Choice_? ReportingParty { get; init; }
+
+    /// <summary>
+    /// Counterparty Side Unique Transaction Identifier.
+    /// </summary>
+    [DisplayName("Counterparty Side Unique Transaction Identifier")]
+    [IsoXmlTag("CtrPtySdUnqTxIdr")]
+    public ValueList<UniqueTransactionIdentifier3> CounterpartySideUniqueTransactionIdentifier { get; init; } =
+        [];
 }

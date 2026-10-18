@@ -17,11 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CardData13
 {
     /// <summary>
-    /// Additional Card Data.
+    /// PAN.
     /// </summary>
-    [DisplayName("Additional Card Data")]
-    [IsoXmlTag("AddtlCardData")]
-    public ValueList<AdditionalData1> AdditionalCardData { get; init; } = [];
+    [DisplayName("PAN")]
+    [IsoXmlTag("PAN")]
+    public Max19NumericText? PAN { get; init; }
+
+    /// <summary>
+    /// Protected PAN.
+    /// </summary>
+    [DisplayName("Protected PAN")]
+    [IsoXmlTag("PrtctdPAN")]
+    public TrueFalseIndicator? ProtectedPAN { get; init; }
 
     /// <summary>
     /// Card Sequence Number.
@@ -29,13 +36,6 @@ public record CardData13
     [DisplayName("Card Sequence Number")]
     [IsoXmlTag("CardSeqNb")]
     public Min2Max3NumericText? CardSequenceNumber { get; init; }
-
-    /// <summary>
-    /// Country Code.
-    /// </summary>
-    [DisplayName("Country Code")]
-    [IsoXmlTag("CtryCd")]
-    public ISO3NumericCountryCode? CountryCode { get; init; }
 
     /// <summary>
     /// Effective Date.
@@ -52,18 +52,11 @@ public record CardData13
     public ISOYearMonth? ExpiryDate { get; init; }
 
     /// <summary>
-    /// PAN.
+    /// Track2.
     /// </summary>
-    [DisplayName("PAN")]
-    [IsoXmlTag("PAN")]
-    public Max19NumericText? PAN { get; init; }
-
-    /// <summary>
-    /// PAN Account Range.
-    /// </summary>
-    [DisplayName("PAN Account Range")]
-    [IsoXmlTag("PANAcctRg")]
-    public Max19NumericText? PANAccountRange { get; init; }
+    [DisplayName("Track2")]
+    [IsoXmlTag("Trck2")]
+    public Track2Data1Choice_? Track2 { get; init; }
 
     /// <summary>
     /// Payment Account Reference.
@@ -73,18 +66,18 @@ public record CardData13
     public Max35Text? PaymentAccountReference { get; init; }
 
     /// <summary>
-    /// Portfolio Identifier.
+    /// PAN Account Range.
     /// </summary>
-    [DisplayName("Portfolio Identifier")]
-    [IsoXmlTag("PrtflIdr")]
-    public Max35Text? PortfolioIdentifier { get; init; }
+    [DisplayName("PAN Account Range")]
+    [IsoXmlTag("PANAcctRg")]
+    public Max19NumericText? PANAccountRange { get; init; }
 
     /// <summary>
-    /// Product Sub Type.
+    /// Country Code.
     /// </summary>
-    [DisplayName("Product Sub Type")]
-    [IsoXmlTag("PdctSubTp")]
-    public Max35Text? ProductSubType { get; init; }
+    [DisplayName("Country Code")]
+    [IsoXmlTag("CtryCd")]
+    public ISO3NumericCountryCode? CountryCode { get; init; }
 
     /// <summary>
     /// Product Type.
@@ -94,16 +87,23 @@ public record CardData13
     public Max35Text? ProductType { get; init; }
 
     /// <summary>
-    /// Protected PAN.
+    /// Product Sub Type.
     /// </summary>
-    [DisplayName("Protected PAN")]
-    [IsoXmlTag("PrtctdPAN")]
-    public TrueFalseIndicator? ProtectedPAN { get; init; }
+    [DisplayName("Product Sub Type")]
+    [IsoXmlTag("PdctSubTp")]
+    public Max35Text? ProductSubType { get; init; }
 
     /// <summary>
-    /// Track2.
+    /// Portfolio Identifier.
     /// </summary>
-    [DisplayName("Track2")]
-    [IsoXmlTag("Trck2")]
-    public Track2Data1Choice_? Track2 { get; init; }
+    [DisplayName("Portfolio Identifier")]
+    [IsoXmlTag("PrtflIdr")]
+    public Max35Text? PortfolioIdentifier { get; init; }
+
+    /// <summary>
+    /// Additional Card Data.
+    /// </summary>
+    [DisplayName("Additional Card Data")]
+    [IsoXmlTag("AddtlCardData")]
+    public ValueList<AdditionalData1> AdditionalCardData { get; init; } = [];
 }

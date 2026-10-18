@@ -17,32 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMTransaction53
 {
     /// <summary>
-    /// Account Data.
+    /// Transaction Identification.
     /// </summary>
-    [DisplayName("Account Data")]
-    [IsoXmlTag("AcctData")]
-    public CardAccount17? AccountData { get; init; }
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public required TransactionIdentifier3 TransactionIdentification { get; init; }
 
     /// <summary>
-    /// Additional Charge.
+    /// Transaction Status.
     /// </summary>
-    [DisplayName("Additional Charge")]
-    [IsoXmlTag("AddtlChrg")]
-    public ValueList<DetailedAmount13> AdditionalCharge { get; init; } = [];
+    [DisplayName("Transaction Status")]
+    [IsoXmlTag("TxSts")]
+    public required ATMTransactionStatus1Code TransactionStatus { get; init; }
 
     /// <summary>
-    /// ATM Totals.
+    /// Multi Bundle.
     /// </summary>
-    [DisplayName("ATM Totals")]
-    [IsoXmlTag("ATMTtls")]
-    public ValueList<ATMTotals4> ATMTotals { get; init; } = [];
-
-    /// <summary>
-    /// Authorisation Result.
-    /// </summary>
-    [DisplayName("Authorisation Result")]
-    [IsoXmlTag("AuthstnRslt")]
-    public AuthorisationResult20? AuthorisationResult { get; init; }
+    [DisplayName("Multi Bundle")]
+    [IsoXmlTag("MultiBndl")]
+    public TrueFalseIndicator? MultiBundle { get; init; }
 
     /// <summary>
     /// Bundle Presented Amount.
@@ -52,39 +45,11 @@ public record ATMTransaction53
     public ValueList<ImpliedCurrencyAndAmount> BundlePresentedAmount { get; init; } = [];
 
     /// <summary>
-    /// Cassette.
+    /// Presented Amount Status.
     /// </summary>
-    [DisplayName("Cassette")]
-    [IsoXmlTag("Csstt")]
-    public ValueList<ATMCassette3> Cassette { get; init; } = [];
-
-    /// <summary>
-    /// Currency Conversion Result.
-    /// </summary>
-    [DisplayName("Currency Conversion Result")]
-    [IsoXmlTag("CcyConvsRslt")]
-    public CurrencyConversion32? CurrencyConversionResult { get; init; }
-
-    /// <summary>
-    /// Customer Consent.
-    /// </summary>
-    [DisplayName("Customer Consent")]
-    [IsoXmlTag("CstmrCnsnt")]
-    public TrueFalseIndicator? CustomerConsent { get; init; }
-
-    /// <summary>
-    /// Detailed Requested Amount.
-    /// </summary>
-    [DisplayName("Detailed Requested Amount")]
-    [IsoXmlTag("DtldReqdAmt")]
-    public DetailedAmount12? DetailedRequestedAmount { get; init; }
-
-    /// <summary>
-    /// ICC Related Data.
-    /// </summary>
-    [DisplayName("ICC Related Data")]
-    [IsoXmlTag("ICCRltdData")]
-    public Max10000Binary? ICCRelatedData { get; init; }
+    [DisplayName("Presented Amount Status")]
+    [IsoXmlTag("PresntdAmtSts")]
+    public required ATMTransactionStatus2Code PresentedAmountStatus { get; init; }
 
     /// <summary>
     /// Incident.
@@ -101,25 +66,18 @@ public record ATMTransaction53
     public ValueList<Max70Text> IncidentDetail { get; init; } = [];
 
     /// <summary>
-    /// Limits.
+    /// Reconciliation Identification.
     /// </summary>
-    [DisplayName("Limits")]
-    [IsoXmlTag("Lmts")]
-    public ATMTransactionAmounts6? Limits { get; init; }
+    [DisplayName("Reconciliation Identification")]
+    [IsoXmlTag("RcncltnId")]
+    public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
-    /// Multi Bundle.
+    /// Account Data.
     /// </summary>
-    [DisplayName("Multi Bundle")]
-    [IsoXmlTag("MultiBndl")]
-    public TrueFalseIndicator? MultiBundle { get; init; }
-
-    /// <summary>
-    /// Presented Amount Status.
-    /// </summary>
-    [DisplayName("Presented Amount Status")]
-    [IsoXmlTag("PresntdAmtSts")]
-    public required ATMTransactionStatus2Code PresentedAmountStatus { get; init; }
+    [DisplayName("Account Data")]
+    [IsoXmlTag("AcctData")]
+    public CardAccount17? AccountData { get; init; }
 
     /// <summary>
     /// Protected Account Data.
@@ -129,25 +87,11 @@ public record ATMTransaction53
     public ContentInformationType10? ProtectedAccountData { get; init; }
 
     /// <summary>
-    /// Receipt Printed.
+    /// Total Presented Amount.
     /// </summary>
-    [DisplayName("Receipt Printed")]
-    [IsoXmlTag("RctPrtd")]
-    public TrueFalseIndicator? ReceiptPrinted { get; init; }
-
-    /// <summary>
-    /// Reconciliation Identification.
-    /// </summary>
-    [DisplayName("Reconciliation Identification")]
-    [IsoXmlTag("RcncltnId")]
-    public Max35Text? ReconciliationIdentification { get; init; }
-
-    /// <summary>
-    /// Requested Receipt.
-    /// </summary>
-    [DisplayName("Requested Receipt")]
-    [IsoXmlTag("ReqdRct")]
-    public TrueFalseIndicator? RequestedReceipt { get; init; }
+    [DisplayName("Total Presented Amount")]
+    [IsoXmlTag("TtlPresntdAmt")]
+    public required AmountAndCurrency1 TotalPresentedAmount { get; init; }
 
     /// <summary>
     /// Total Authorised Amount.
@@ -157,13 +101,6 @@ public record ATMTransaction53
     public ImpliedCurrencyAndAmount? TotalAuthorisedAmount { get; init; }
 
     /// <summary>
-    /// Total Presented Amount.
-    /// </summary>
-    [DisplayName("Total Presented Amount")]
-    [IsoXmlTag("TtlPresntdAmt")]
-    public required AmountAndCurrency1 TotalPresentedAmount { get; init; }
-
-    /// <summary>
     /// Total Requested Amount.
     /// </summary>
     [DisplayName("Total Requested Amount")]
@@ -171,16 +108,79 @@ public record ATMTransaction53
     public ImpliedCurrencyAndAmount? TotalRequestedAmount { get; init; }
 
     /// <summary>
-    /// Transaction Identification.
+    /// Detailed Requested Amount.
     /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public required TransactionIdentifier3 TransactionIdentification { get; init; }
+    [DisplayName("Detailed Requested Amount")]
+    [IsoXmlTag("DtldReqdAmt")]
+    public DetailedAmount12? DetailedRequestedAmount { get; init; }
 
     /// <summary>
-    /// Transaction Status.
+    /// Currency Conversion Result.
     /// </summary>
-    [DisplayName("Transaction Status")]
-    [IsoXmlTag("TxSts")]
-    public required ATMTransactionStatus1Code TransactionStatus { get; init; }
+    [DisplayName("Currency Conversion Result")]
+    [IsoXmlTag("CcyConvsRslt")]
+    public CurrencyConversion32? CurrencyConversionResult { get; init; }
+
+    /// <summary>
+    /// Additional Charge.
+    /// </summary>
+    [DisplayName("Additional Charge")]
+    [IsoXmlTag("AddtlChrg")]
+    public ValueList<DetailedAmount13> AdditionalCharge { get; init; } = [];
+
+    /// <summary>
+    /// Requested Receipt.
+    /// </summary>
+    [DisplayName("Requested Receipt")]
+    [IsoXmlTag("ReqdRct")]
+    public TrueFalseIndicator? RequestedReceipt { get; init; }
+
+    /// <summary>
+    /// Receipt Printed.
+    /// </summary>
+    [DisplayName("Receipt Printed")]
+    [IsoXmlTag("RctPrtd")]
+    public TrueFalseIndicator? ReceiptPrinted { get; init; }
+
+    /// <summary>
+    /// Customer Consent.
+    /// </summary>
+    [DisplayName("Customer Consent")]
+    [IsoXmlTag("CstmrCnsnt")]
+    public TrueFalseIndicator? CustomerConsent { get; init; }
+
+    /// <summary>
+    /// Limits.
+    /// </summary>
+    [DisplayName("Limits")]
+    [IsoXmlTag("Lmts")]
+    public ATMTransactionAmounts6? Limits { get; init; }
+
+    /// <summary>
+    /// Authorisation Result.
+    /// </summary>
+    [DisplayName("Authorisation Result")]
+    [IsoXmlTag("AuthstnRslt")]
+    public AuthorisationResult20? AuthorisationResult { get; init; }
+
+    /// <summary>
+    /// ICC Related Data.
+    /// </summary>
+    [DisplayName("ICC Related Data")]
+    [IsoXmlTag("ICCRltdData")]
+    public Max10000Binary? ICCRelatedData { get; init; }
+
+    /// <summary>
+    /// ATM Totals.
+    /// </summary>
+    [DisplayName("ATM Totals")]
+    [IsoXmlTag("ATMTtls")]
+    public ValueList<ATMTotals4> ATMTotals { get; init; } = [];
+
+    /// <summary>
+    /// Cassette.
+    /// </summary>
+    [DisplayName("Cassette")]
+    [IsoXmlTag("Csstt")]
+    public ValueList<ATMCassette3> Cassette { get; init; } = [];
 }

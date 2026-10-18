@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TransactionDetails176
 {
     /// <summary>
-    /// Account Owner.
-    /// </summary>
-    [DisplayName("Account Owner")]
-    [IsoXmlTag("AcctOwnr")]
-    public PartyIdentification144? AccountOwner { get; init; }
-
-    /// <summary>
     /// Account Owner Transaction Identification.
     /// </summary>
     [DisplayName("Account Owner Transaction Identification")]
@@ -38,25 +31,11 @@ public record TransactionDetails176
     public Max35Text? AccountServicerTransactionIdentification { get; init; }
 
     /// <summary>
-    /// Block Chain Address Or Wallet.
-    /// </summary>
-    [DisplayName("Block Chain Address Or Wallet")]
-    [IsoXmlTag("BlckChainAdrOrWllt")]
-    public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
-
-    /// <summary>
     /// Market Infrastructure Transaction Identification.
     /// </summary>
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
     public Max35Text? MarketInfrastructureTransactionIdentification { get; init; }
-
-    /// <summary>
-    /// Other Transaction Identification.
-    /// </summary>
-    [DisplayName("Other Transaction Identification")]
-    [IsoXmlTag("OthrTxId")]
-    public Max35Text? OtherTransactionIdentification { get; init; }
 
     /// <summary>
     /// Processor Transaction Identification.
@@ -66,11 +45,32 @@ public record TransactionDetails176
     public Max35Text? ProcessorTransactionIdentification { get; init; }
 
     /// <summary>
+    /// Other Transaction Identification.
+    /// </summary>
+    [DisplayName("Other Transaction Identification")]
+    [IsoXmlTag("OthrTxId")]
+    public Max35Text? OtherTransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Account Owner.
+    /// </summary>
+    [DisplayName("Account Owner")]
+    [IsoXmlTag("AcctOwnr")]
+    public PartyIdentification144? AccountOwner { get; init; }
+
+    /// <summary>
     /// Safekeeping Account.
     /// </summary>
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
     public SecuritiesAccount19? SafekeepingAccount { get; init; }
+
+    /// <summary>
+    /// Block Chain Address Or Wallet.
+    /// </summary>
+    [DisplayName("Block Chain Address Or Wallet")]
+    [IsoXmlTag("BlckChainAdrOrWllt")]
+    public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; }
 
     /// <summary>
     /// Transaction Details.

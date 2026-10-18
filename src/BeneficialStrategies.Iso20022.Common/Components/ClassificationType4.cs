@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ClassificationType4
 {
     /// <summary>
-    /// Information Type.
-    /// </summary>
-    [DisplayName("Information Type")]
-    [IsoXmlTag("InfTp")]
-    public required ExternalRegulatoryInformationType1Code InformationType { get; init; }
-
-    /// <summary>
     /// Legal Framework.
     /// </summary>
     [DisplayName("Legal Framework")]
     [IsoXmlTag("LglFrmwk")]
     public ValueList<ExternalLegalFramework1Code> LegalFramework { get; init; } = [];
+
+    /// <summary>
+    /// Information Type.
+    /// </summary>
+    [DisplayName("Information Type")]
+    [IsoXmlTag("InfTp")]
+    public required ExternalRegulatoryInformationType1Code InformationType { get; init; }
 }

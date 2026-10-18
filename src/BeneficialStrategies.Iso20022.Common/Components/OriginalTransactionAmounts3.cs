@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record OriginalTransactionAmounts3
 {
     /// <summary>
+    /// Amount Qualifier.
+    /// </summary>
+    [DisplayName("Amount Qualifier")]
+    [IsoXmlTag("AmtQlfr")]
+    public TypeOfAmount22Code? AmountQualifier { get; init; }
+
+    /// <summary>
     /// Amount.
     /// </summary>
     [DisplayName("Amount")]
@@ -24,11 +31,11 @@ public record OriginalTransactionAmounts3
     public required ImpliedCurrencyAndAmount Amount { get; init; }
 
     /// <summary>
-    /// Amount Qualifier.
+    /// Currency.
     /// </summary>
-    [DisplayName("Amount Qualifier")]
-    [IsoXmlTag("AmtQlfr")]
-    public TypeOfAmount22Code? AmountQualifier { get; init; }
+    [DisplayName("Currency")]
+    [IsoXmlTag("Ccy")]
+    public required ISO3NumericCurrencyCode Currency { get; init; }
 
     /// <summary>
     /// Cardholder Billing Amount.
@@ -50,13 +57,6 @@ public record OriginalTransactionAmounts3
     [DisplayName("Cardholder Billing Effective Exchange Rate")]
     [IsoXmlTag("CrdhldrBllgFctvXchgRate")]
     public BaseOne25Rate? CardholderBillingEffectiveExchangeRate { get; init; }
-
-    /// <summary>
-    /// Currency.
-    /// </summary>
-    [DisplayName("Currency")]
-    [IsoXmlTag("Ccy")]
-    public required ISO3NumericCurrencyCode Currency { get; init; }
 
     /// <summary>
     /// Reconciliation Amount.

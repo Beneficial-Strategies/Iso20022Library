@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record LimitJournal3
 {
     /// <summary>
+    /// Limit.
+    /// </summary>
+    [DisplayName("Limit")]
+    [IsoXmlTag("Lmt")]
+    public required LimitAmount1 Limit { get; init; }
+
+    /// <summary>
     /// Journal Activity Date.
     /// </summary>
     [DisplayName("Journal Activity Date")]
@@ -29,11 +36,4 @@ public record LimitJournal3
     [DisplayName("Journal Entry")]
     [IsoXmlTag("JrnlNtry")]
     public ValueList<LimitJournalEntry3> JournalEntry { get; init; } = [];
-
-    /// <summary>
-    /// Limit.
-    /// </summary>
-    [DisplayName("Limit")]
-    [IsoXmlTag("Lmt")]
-    public required LimitAmount1 Limit { get; init; }
 }

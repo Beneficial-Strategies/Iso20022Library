@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TransactionReferences8
 {
     /// <summary>
-    /// Creditor Scheme Identification.
+    /// Payment Information Identification.
     /// </summary>
-    [DisplayName("Creditor Scheme Identification")]
-    [IsoXmlTag("CdtrSchmeId")]
-    public PartyIdentification272? CreditorSchemeIdentification { get; init; }
-
-    /// <summary>
-    /// End To End Identification.
-    /// </summary>
-    [DisplayName("End To End Identification")]
-    [IsoXmlTag("EndToEndId")]
-    public required Max35Text EndToEndIdentification { get; init; }
+    [DisplayName("Payment Information Identification")]
+    [IsoXmlTag("PmtInfId")]
+    public Max35Text? PaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Instruction Identification.
@@ -38,18 +31,11 @@ public record TransactionReferences8
     public Max35Text? InstructionIdentification { get; init; }
 
     /// <summary>
-    /// Mandate Identification.
+    /// End To End Identification.
     /// </summary>
-    [DisplayName("Mandate Identification")]
-    [IsoXmlTag("MndtId")]
-    public Max35Text? MandateIdentification { get; init; }
-
-    /// <summary>
-    /// Payment Information Identification.
-    /// </summary>
-    [DisplayName("Payment Information Identification")]
-    [IsoXmlTag("PmtInfId")]
-    public Max35Text? PaymentInformationIdentification { get; init; }
+    [DisplayName("End To End Identification")]
+    [IsoXmlTag("EndToEndId")]
+    public required Max35Text EndToEndIdentification { get; init; }
 
     /// <summary>
     /// Transaction Identification.
@@ -64,4 +50,18 @@ public record TransactionReferences8
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
     public UUIDv4Identifier? UETR { get; init; }
+
+    /// <summary>
+    /// Mandate Identification.
+    /// </summary>
+    [DisplayName("Mandate Identification")]
+    [IsoXmlTag("MndtId")]
+    public Max35Text? MandateIdentification { get; init; }
+
+    /// <summary>
+    /// Creditor Scheme Identification.
+    /// </summary>
+    [DisplayName("Creditor Scheme Identification")]
+    [IsoXmlTag("CdtrSchmeId")]
+    public PartyIdentification272? CreditorSchemeIdentification { get; init; }
 }

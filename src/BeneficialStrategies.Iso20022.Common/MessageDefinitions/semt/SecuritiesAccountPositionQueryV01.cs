@@ -46,18 +46,18 @@ public record SecuritiesAccountPositionQueryV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Search Criteria.
-    /// </summary>
-    [DisplayName("Search Criteria")]
-    [IsoXmlTag("SchCrit")]
-    public required PositionSearchCriteria4 SearchCriteria { get; init; }
-
-    /// <summary>
     /// Statement.
     /// </summary>
     [DisplayName("Statement")]
     [IsoXmlTag("Stmt")]
     public required Statement89 Statement { get; init; }
+
+    /// <summary>
+    /// Search Criteria.
+    /// </summary>
+    [DisplayName("Search Criteria")]
+    [IsoXmlTag("SchCrit")]
+    public required PositionSearchCriteria4 SearchCriteria { get; init; }
 
     /// <summary>
     /// Supplementary Data.

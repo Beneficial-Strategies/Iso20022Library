@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record DebtorActivationCancellation3
 {
     /// <summary>
+    /// Original Business Instruction.
+    /// </summary>
+    [DisplayName("Original Business Instruction")]
+    [IsoXmlTag("OrgnlBizInstr")]
+    public OriginalBusinessInstruction1? OriginalBusinessInstruction { get; init; }
+
+    /// <summary>
     /// Cancellation Reason.
     /// </summary>
     [DisplayName("Cancellation Reason")]
@@ -29,13 +36,6 @@ public record DebtorActivationCancellation3
     [DisplayName("Original Activation")]
     [IsoXmlTag("OrgnlActvtn")]
     public required OriginalActivation3Choice_ OriginalActivation { get; init; }
-
-    /// <summary>
-    /// Original Business Instruction.
-    /// </summary>
-    [DisplayName("Original Business Instruction")]
-    [IsoXmlTag("OrgnlBizInstr")]
-    public OriginalBusinessInstruction1? OriginalBusinessInstruction { get; init; }
 
     /// <summary>
     /// Supplementary Data.

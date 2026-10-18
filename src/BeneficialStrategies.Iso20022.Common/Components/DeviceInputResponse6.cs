@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record DeviceInputResponse6
 {
     /// <summary>
-    /// Input Result.
-    /// </summary>
-    [DisplayName("Input Result")]
-    [IsoXmlTag("InptRslt")]
-    public required InputResult6 InputResult { get; init; }
-
-    /// <summary>
     /// Output Result.
     /// </summary>
     [DisplayName("Output Result")]
     [IsoXmlTag("OutptRslt")]
     public OutputResult2? OutputResult { get; init; }
+
+    /// <summary>
+    /// Input Result.
+    /// </summary>
+    [DisplayName("Input Result")]
+    [IsoXmlTag("InptRslt")]
+    public required InputResult6 InputResult { get; init; }
 }

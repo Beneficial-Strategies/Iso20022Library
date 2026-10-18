@@ -46,6 +46,27 @@ public record AccountClosingAdditionalInformationRequestV04 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// References.
+    /// </summary>
+    [DisplayName("References")]
+    [IsoXmlTag("Refs")]
+    public required References3 References { get; init; }
+
+    /// <summary>
+    /// From.
+    /// </summary>
+    [DisplayName("From")]
+    [IsoXmlTag("Fr")]
+    public OrganisationIdentification39? From { get; init; }
+
+    /// <summary>
+    /// Organisation Identification.
+    /// </summary>
+    [DisplayName("Organisation Identification")]
+    [IsoXmlTag("OrgId")]
+    public required OrganisationIdentification39 OrganisationIdentification { get; init; }
+
+    /// <summary>
     /// Account Identification.
     /// </summary>
     [DisplayName("Account Identification")]
@@ -67,6 +88,13 @@ public record AccountClosingAdditionalInformationRequestV04 : IOuterRecord
     public AccountForAction1? BalanceTransferAccount { get; init; }
 
     /// <summary>
+    /// Transfer Account Servicer Identification.
+    /// </summary>
+    [DisplayName("Transfer Account Servicer Identification")]
+    [IsoXmlTag("TrfAcctSvcrId")]
+    public BranchAndFinancialInstitutionIdentification8? TransferAccountServicerIdentification { get; init; }
+
+    /// <summary>
     /// Digital Signature.
     /// </summary>
     [DisplayName("Digital Signature")]
@@ -74,37 +102,9 @@ public record AccountClosingAdditionalInformationRequestV04 : IOuterRecord
     public ValueList<PartyAndSignature4> DigitalSignature { get; init; } = [];
 
     /// <summary>
-    /// From.
-    /// </summary>
-    [DisplayName("From")]
-    [IsoXmlTag("Fr")]
-    public OrganisationIdentification39? From { get; init; }
-
-    /// <summary>
-    /// Organisation Identification.
-    /// </summary>
-    [DisplayName("Organisation Identification")]
-    [IsoXmlTag("OrgId")]
-    public required OrganisationIdentification39 OrganisationIdentification { get; init; }
-
-    /// <summary>
-    /// References.
-    /// </summary>
-    [DisplayName("References")]
-    [IsoXmlTag("Refs")]
-    public required References3 References { get; init; }
-
-    /// <summary>
     /// Supplementary Data.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Transfer Account Servicer Identification.
-    /// </summary>
-    [DisplayName("Transfer Account Servicer Identification")]
-    [IsoXmlTag("TrfAcctSvcrId")]
-    public BranchAndFinancialInstitutionIdentification8? TransferAccountServicerIdentification { get; init; }
 }

@@ -24,6 +24,13 @@ public record PaymentAccount4
     public required ActiveCurrencyCode Currency { get; init; }
 
     /// <summary>
+    /// Net Payment.
+    /// </summary>
+    [DisplayName("Net Payment")]
+    [IsoXmlTag("NetPmt")]
+    public required AmountAndDirection86 NetPayment { get; init; }
+
+    /// <summary>
     /// Gross Credits.
     /// </summary>
     [DisplayName("Gross Credits")]
@@ -43,11 +50,4 @@ public record PaymentAccount4
     [DisplayName("Late Payment Confirmation")]
     [IsoXmlTag("LatePmtConf")]
     public required Max10NumericText LatePaymentConfirmation { get; init; }
-
-    /// <summary>
-    /// Net Payment.
-    /// </summary>
-    [DisplayName("Net Payment")]
-    [IsoXmlTag("NetPmt")]
-    public required AmountAndDirection86 NetPayment { get; init; }
 }

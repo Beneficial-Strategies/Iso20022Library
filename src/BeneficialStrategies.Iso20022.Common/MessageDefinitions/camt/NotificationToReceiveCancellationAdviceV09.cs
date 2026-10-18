@@ -46,13 +46,6 @@ public record NotificationToReceiveCancellationAdviceV09 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Cancellation Reason.
-    /// </summary>
-    [DisplayName("Cancellation Reason")]
-    [IsoXmlTag("CxlRsn")]
-    public NotificationCancellationReason2? CancellationReason { get; init; }
-
-    /// <summary>
     /// Group Header.
     /// </summary>
     [DisplayName("Group Header")]
@@ -65,6 +58,13 @@ public record NotificationToReceiveCancellationAdviceV09 : IOuterRecord
     [DisplayName("Original Notification")]
     [IsoXmlTag("OrgnlNtfctn")]
     public required OriginalNotification16 OriginalNotification { get; init; }
+
+    /// <summary>
+    /// Cancellation Reason.
+    /// </summary>
+    [DisplayName("Cancellation Reason")]
+    [IsoXmlTag("CxlRsn")]
+    public NotificationCancellationReason2? CancellationReason { get; init; }
 
     /// <summary>
     /// Supplementary Data.

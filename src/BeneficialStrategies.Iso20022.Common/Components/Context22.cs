@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Context22
 {
     /// <summary>
-    /// Additional Data.
-    /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
-
-    /// <summary>
-    /// Delayed Charges.
-    /// </summary>
-    [DisplayName("Delayed Charges")]
-    [IsoXmlTag("DelydChrgs")]
-    public TrueFalseIndicator? DelayedCharges { get; init; }
-
-    /// <summary>
     /// Merchant Category Code.
     /// </summary>
     [DisplayName("Merchant Category Code")]
@@ -45,13 +31,6 @@ public record Context22
     public Max35Text? MerchantCategorySpecificData { get; init; }
 
     /// <summary>
-    /// No Show.
-    /// </summary>
-    [DisplayName("No Show")]
-    [IsoXmlTag("NoShow")]
-    public TrueFalseIndicator? NoShow { get; init; }
-
-    /// <summary>
     /// Other Merchant Category.
     /// </summary>
     [DisplayName("Other Merchant Category")]
@@ -59,11 +38,25 @@ public record Context22
     public Max35Text? OtherMerchantCategory { get; init; }
 
     /// <summary>
-    /// Partial Shipment.
+    /// Transaction Initiator.
     /// </summary>
-    [DisplayName("Partial Shipment")]
-    [IsoXmlTag("PrtlShipmnt")]
-    public TrueFalseIndicator? PartialShipment { get; init; }
+    [DisplayName("Transaction Initiator")]
+    [IsoXmlTag("TxInitr")]
+    public TransactionInitiator1Code? TransactionInitiator { get; init; }
+
+    /// <summary>
+    /// Delayed Charges.
+    /// </summary>
+    [DisplayName("Delayed Charges")]
+    [IsoXmlTag("DelydChrgs")]
+    public TrueFalseIndicator? DelayedCharges { get; init; }
+
+    /// <summary>
+    /// No Show.
+    /// </summary>
+    [DisplayName("No Show")]
+    [IsoXmlTag("NoShow")]
+    public TrueFalseIndicator? NoShow { get; init; }
 
     /// <summary>
     /// Reauthorisation.
@@ -80,9 +73,16 @@ public record Context22
     public TrueFalseIndicator? ReSubmission { get; init; }
 
     /// <summary>
-    /// Transaction Initiator.
+    /// Partial Shipment.
     /// </summary>
-    [DisplayName("Transaction Initiator")]
-    [IsoXmlTag("TxInitr")]
-    public TransactionInitiator1Code? TransactionInitiator { get; init; }
+    [DisplayName("Partial Shipment")]
+    [IsoXmlTag("PrtlShipmnt")]
+    public TrueFalseIndicator? PartialShipment { get; init; }
+
+    /// <summary>
+    /// Additional Data.
+    /// </summary>
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMService28
 {
     /// <summary>
-    /// Limits.
-    /// </summary>
-    [DisplayName("Limits")]
-    [IsoXmlTag("Lmts")]
-    public ValueList<ATMTransactionAmounts6> Limits { get; init; } = [];
-
-    /// <summary>
-    /// Preferred Withdrawal.
-    /// </summary>
-    [DisplayName("Preferred Withdrawal")]
-    [IsoXmlTag("PrefrdWdrwl")]
-    public ATMTransaction8? PreferredWithdrawal { get; init; }
-
-    /// <summary>
     /// Service Type.
     /// </summary>
     [DisplayName("Service Type")]
@@ -43,4 +29,18 @@ public record ATMService28
     [DisplayName("Service Variant")]
     [IsoXmlTag("SvcVarnt")]
     public ValueList<ATMService18> ServiceVariant { get; init; } = [];
+
+    /// <summary>
+    /// Limits.
+    /// </summary>
+    [DisplayName("Limits")]
+    [IsoXmlTag("Lmts")]
+    public ValueList<ATMTransactionAmounts6> Limits { get; init; } = [];
+
+    /// <summary>
+    /// Preferred Withdrawal.
+    /// </summary>
+    [DisplayName("Preferred Withdrawal")]
+    [IsoXmlTag("PrefrdWdrwl")]
+    public ATMTransaction8? PreferredWithdrawal { get; init; }
 }

@@ -46,18 +46,18 @@ public record AcceptorCompletionAdviceV15 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Completion Advice.
-    /// </summary>
-    [DisplayName("Completion Advice")]
-    [IsoXmlTag("CmpltnAdvc")]
-    public required AcceptorCompletionAdvice15 CompletionAdvice { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required Header70 Header { get; init; }
+
+    /// <summary>
+    /// Completion Advice.
+    /// </summary>
+    [DisplayName("Completion Advice")]
+    [IsoXmlTag("CmpltnAdvc")]
+    public required AcceptorCompletionAdvice15 CompletionAdvice { get; init; }
 
     /// <summary>
     /// Security Trailer.

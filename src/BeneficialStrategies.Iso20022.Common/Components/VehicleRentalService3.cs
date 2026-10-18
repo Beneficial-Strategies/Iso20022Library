@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record VehicleRentalService3
 {
     /// <summary>
-    /// Additional Data.
+    /// Company Name.
     /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
+    [DisplayName("Company Name")]
+    [IsoXmlTag("CpnyNm")]
+    public Max70Text? CompanyName { get; init; }
 
     /// <summary>
-    /// Additional Driver.
+    /// Company Identification.
     /// </summary>
-    [DisplayName("Additional Driver")]
-    [IsoXmlTag("AddtlDrvr")]
-    public ValueList<DriverInParty3> AdditionalDriver { get; init; } = [];
+    [DisplayName("Company Identification")]
+    [IsoXmlTag("CpnyId")]
+    public PartyIdentification285? CompanyIdentification { get; init; }
 
     /// <summary>
     /// Company Address.
@@ -45,18 +45,11 @@ public record VehicleRentalService3
     public ContactBusiness1? CompanyContact { get; init; }
 
     /// <summary>
-    /// Company Identification.
+    /// Company Type.
     /// </summary>
-    [DisplayName("Company Identification")]
-    [IsoXmlTag("CpnyId")]
-    public PartyIdentification285? CompanyIdentification { get; init; }
-
-    /// <summary>
-    /// Company Name.
-    /// </summary>
-    [DisplayName("Company Name")]
-    [IsoXmlTag("CpnyNm")]
-    public Max70Text? CompanyName { get; init; }
+    [DisplayName("Company Type")]
+    [IsoXmlTag("CpnyTp")]
+    public CarRentalActivity1Code? CompanyType { get; init; }
 
     /// <summary>
     /// Company Other Type.
@@ -66,39 +59,18 @@ public record VehicleRentalService3
     public Max35Text? CompanyOtherType { get; init; }
 
     /// <summary>
-    /// Company Type.
+    /// Renter Name.
     /// </summary>
-    [DisplayName("Company Type")]
-    [IsoXmlTag("CpnyTp")]
-    public CarRentalActivity1Code? CompanyType { get; init; }
+    [DisplayName("Renter Name")]
+    [IsoXmlTag("RntrNm")]
+    public required Max70Text RenterName { get; init; }
 
     /// <summary>
-    /// Loyalty Programme.
+    /// Renter Corporate Name.
     /// </summary>
-    [DisplayName("Loyalty Programme")]
-    [IsoXmlTag("LltyPrgrmm")]
-    public LoyaltyProgramme4? LoyaltyProgramme { get; init; }
-
-    /// <summary>
-    /// Primary Driver.
-    /// </summary>
-    [DisplayName("Primary Driver")]
-    [IsoXmlTag("PmryDrvr")]
-    public DriverInParty3? PrimaryDriver { get; init; }
-
-    /// <summary>
-    /// Rental Agreement.
-    /// </summary>
-    [DisplayName("Rental Agreement")]
-    [IsoXmlTag("RntlAgrmt")]
-    public VehicleRentalAgreement3? RentalAgreement { get; init; }
-
-    /// <summary>
-    /// Rental Invoice.
-    /// </summary>
-    [DisplayName("Rental Invoice")]
-    [IsoXmlTag("RntlInvc")]
-    public VehicleRentalInvoice3? RentalInvoice { get; init; }
+    [DisplayName("Renter Corporate Name")]
+    [IsoXmlTag("RntrCorpNm")]
+    public Max70Text? RenterCorporateName { get; init; }
 
     /// <summary>
     /// Renter Corporate Identifier.
@@ -115,18 +87,25 @@ public record VehicleRentalService3
     public CustomerAssigner1Code? RenterCorporateIdentifierAssigner { get; init; }
 
     /// <summary>
-    /// Renter Corporate Name.
+    /// Primary Driver.
     /// </summary>
-    [DisplayName("Renter Corporate Name")]
-    [IsoXmlTag("RntrCorpNm")]
-    public Max70Text? RenterCorporateName { get; init; }
+    [DisplayName("Primary Driver")]
+    [IsoXmlTag("PmryDrvr")]
+    public DriverInParty3? PrimaryDriver { get; init; }
 
     /// <summary>
-    /// Renter Name.
+    /// Additional Driver.
     /// </summary>
-    [DisplayName("Renter Name")]
-    [IsoXmlTag("RntrNm")]
-    public required Max70Text RenterName { get; init; }
+    [DisplayName("Additional Driver")]
+    [IsoXmlTag("AddtlDrvr")]
+    public ValueList<DriverInParty3> AdditionalDriver { get; init; } = [];
+
+    /// <summary>
+    /// Loyalty Programme.
+    /// </summary>
+    [DisplayName("Loyalty Programme")]
+    [IsoXmlTag("LltyPrgrmm")]
+    public LoyaltyProgramme4? LoyaltyProgramme { get; init; }
 
     /// <summary>
     /// Summary Commodity Identification.
@@ -134,4 +113,25 @@ public record VehicleRentalService3
     [DisplayName("Summary Commodity Identification")]
     [IsoXmlTag("SummryCmmdtyId")]
     public Max35Text? SummaryCommodityIdentification { get; init; }
+
+    /// <summary>
+    /// Rental Agreement.
+    /// </summary>
+    [DisplayName("Rental Agreement")]
+    [IsoXmlTag("RntlAgrmt")]
+    public VehicleRentalAgreement3? RentalAgreement { get; init; }
+
+    /// <summary>
+    /// Rental Invoice.
+    /// </summary>
+    [DisplayName("Rental Invoice")]
+    [IsoXmlTag("RntlInvc")]
+    public VehicleRentalInvoice3? RentalInvoice { get; init; }
+
+    /// <summary>
+    /// Additional Data.
+    /// </summary>
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

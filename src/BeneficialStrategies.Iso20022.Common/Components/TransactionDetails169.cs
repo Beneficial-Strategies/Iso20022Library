@@ -17,46 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TransactionDetails169
 {
     /// <summary>
-    /// Accrued Interest Amount.
+    /// Transaction Activity.
     /// </summary>
-    [DisplayName("Accrued Interest Amount")]
-    [IsoXmlTag("AcrdIntrstAmt")]
-    public AmountAndDirection21? AccruedInterestAmount { get; init; }
+    [DisplayName("Transaction Activity")]
+    [IsoXmlTag("TxActvty")]
+    public required TransactionActivity3Choice_ TransactionActivity { get; init; }
 
     /// <summary>
-    /// Acknowledged Status Time Stamp.
+    /// Settlement Transaction Or Corporate Action Event Type.
     /// </summary>
-    [DisplayName("Acknowledged Status Time Stamp")]
-    [IsoXmlTag("AckdStsTmStmp")]
-    public ISODateTime? AcknowledgedStatusTimeStamp { get; init; }
+    [DisplayName("Settlement Transaction Or Corporate Action Event Type")]
+    [IsoXmlTag("SttlmTxOrCorpActnEvtTp")]
+    public SettlementOrCorporateActionEvent35Choice_? SettlementTransactionOrCorporateActionEventType { get; init; }
 
     /// <summary>
-    /// Delivering Settlement Parties.
+    /// Securities Movement Type.
     /// </summary>
-    [DisplayName("Delivering Settlement Parties")]
-    [IsoXmlTag("DlvrgSttlmPties")]
-    public SettlementParties125? DeliveringSettlementParties { get; init; }
-
-    /// <summary>
-    /// Effective Settlement Date.
-    /// </summary>
-    [DisplayName("Effective Settlement Date")]
-    [IsoXmlTag("FctvSttlmDt")]
-    public required DateAndDateTime2Choice_ EffectiveSettlementDate { get; init; }
-
-    /// <summary>
-    /// Matched Status Time Stamp.
-    /// </summary>
-    [DisplayName("Matched Status Time Stamp")]
-    [IsoXmlTag("MtchdStsTmStmp")]
-    public ISODateTime? MatchedStatusTimeStamp { get; init; }
-
-    /// <summary>
-    /// Number Of Days Accrued.
-    /// </summary>
-    [DisplayName("Number Of Days Accrued")]
-    [IsoXmlTag("NbOfDaysAcrd")]
-    public Max3Number? NumberOfDaysAccrued { get; init; }
+    [DisplayName("Securities Movement Type")]
+    [IsoXmlTag("SctiesMvmntTp")]
+    public required ReceiveDelivery1Code SecuritiesMovementType { get; init; }
 
     /// <summary>
     /// Payment.
@@ -66,11 +45,11 @@ public record TransactionDetails169
     public required DeliveryReceiptType2Code Payment { get; init; }
 
     /// <summary>
-    /// Place Of Clearing.
+    /// Settlement Parameters.
     /// </summary>
-    [DisplayName("Place Of Clearing")]
-    [IsoXmlTag("PlcOfClr")]
-    public PlaceOfClearingIdentification2? PlaceOfClearing { get; init; }
+    [DisplayName("Settlement Parameters")]
+    [IsoXmlTag("SttlmParams")]
+    public SettlementDetails190? SettlementParameters { get; init; }
 
     /// <summary>
     /// Place Of Trade.
@@ -80,11 +59,18 @@ public record TransactionDetails169
     public PlaceOfTradeIdentification1? PlaceOfTrade { get; init; }
 
     /// <summary>
-    /// Posting Amount.
+    /// Safekeeping Place.
     /// </summary>
-    [DisplayName("Posting Amount")]
-    [IsoXmlTag("PstngAmt")]
-    public AmountAndDirection3? PostingAmount { get; init; }
+    [DisplayName("Safekeeping Place")]
+    [IsoXmlTag("SfkpgPlc")]
+    public SafeKeepingPlace5? SafekeepingPlace { get; init; }
+
+    /// <summary>
+    /// Place Of Clearing.
+    /// </summary>
+    [DisplayName("Place Of Clearing")]
+    [IsoXmlTag("PlcOfClr")]
+    public PlaceOfClearingIdentification2? PlaceOfClearing { get; init; }
 
     /// <summary>
     /// Posting Quantity.
@@ -92,6 +78,76 @@ public record TransactionDetails169
     [DisplayName("Posting Quantity")]
     [IsoXmlTag("PstngQty")]
     public required Quantity51Choice_ PostingQuantity { get; init; }
+
+    /// <summary>
+    /// Number Of Days Accrued.
+    /// </summary>
+    [DisplayName("Number Of Days Accrued")]
+    [IsoXmlTag("NbOfDaysAcrd")]
+    public Max3Number? NumberOfDaysAccrued { get; init; }
+
+    /// <summary>
+    /// Posting Amount.
+    /// </summary>
+    [DisplayName("Posting Amount")]
+    [IsoXmlTag("PstngAmt")]
+    public AmountAndDirection3? PostingAmount { get; init; }
+
+    /// <summary>
+    /// Accrued Interest Amount.
+    /// </summary>
+    [DisplayName("Accrued Interest Amount")]
+    [IsoXmlTag("AcrdIntrstAmt")]
+    public AmountAndDirection21? AccruedInterestAmount { get; init; }
+
+    /// <summary>
+    /// Trade Date.
+    /// </summary>
+    [DisplayName("Trade Date")]
+    [IsoXmlTag("TradDt")]
+    public TradeDate8Choice_? TradeDate { get; init; }
+
+    /// <summary>
+    /// Effective Settlement Date.
+    /// </summary>
+    [DisplayName("Effective Settlement Date")]
+    [IsoXmlTag("FctvSttlmDt")]
+    public required DateAndDateTime2Choice_ EffectiveSettlementDate { get; init; }
+
+    /// <summary>
+    /// Settlement Date.
+    /// </summary>
+    [DisplayName("Settlement Date")]
+    [IsoXmlTag("SttlmDt")]
+    public SettlementDate17Choice_? SettlementDate { get; init; }
+
+    /// <summary>
+    /// Value Date.
+    /// </summary>
+    [DisplayName("Value Date")]
+    [IsoXmlTag("ValDt")]
+    public DateAndDateTime2Choice_? ValueDate { get; init; }
+
+    /// <summary>
+    /// Acknowledged Status Time Stamp.
+    /// </summary>
+    [DisplayName("Acknowledged Status Time Stamp")]
+    [IsoXmlTag("AckdStsTmStmp")]
+    public ISODateTime? AcknowledgedStatusTimeStamp { get; init; }
+
+    /// <summary>
+    /// Matched Status Time Stamp.
+    /// </summary>
+    [DisplayName("Matched Status Time Stamp")]
+    [IsoXmlTag("MtchdStsTmStmp")]
+    public ISODateTime? MatchedStatusTimeStamp { get; init; }
+
+    /// <summary>
+    /// Delivering Settlement Parties.
+    /// </summary>
+    [DisplayName("Delivering Settlement Parties")]
+    [IsoXmlTag("DlvrgSttlmPties")]
+    public SettlementParties125? DeliveringSettlementParties { get; init; }
 
     /// <summary>
     /// Receiving Settlement Parties.
@@ -108,65 +164,9 @@ public record TransactionDetails169
     public YesNoIndicator? ReversalIndicator { get; init; }
 
     /// <summary>
-    /// Safekeeping Place.
-    /// </summary>
-    [DisplayName("Safekeeping Place")]
-    [IsoXmlTag("SfkpgPlc")]
-    public SafeKeepingPlace5? SafekeepingPlace { get; init; }
-
-    /// <summary>
-    /// Securities Movement Type.
-    /// </summary>
-    [DisplayName("Securities Movement Type")]
-    [IsoXmlTag("SctiesMvmntTp")]
-    public required ReceiveDelivery1Code SecuritiesMovementType { get; init; }
-
-    /// <summary>
-    /// Settlement Date.
-    /// </summary>
-    [DisplayName("Settlement Date")]
-    [IsoXmlTag("SttlmDt")]
-    public SettlementDate17Choice_? SettlementDate { get; init; }
-
-    /// <summary>
-    /// Settlement Parameters.
-    /// </summary>
-    [DisplayName("Settlement Parameters")]
-    [IsoXmlTag("SttlmParams")]
-    public SettlementDetails190? SettlementParameters { get; init; }
-
-    /// <summary>
-    /// Settlement Transaction Or Corporate Action Event Type.
-    /// </summary>
-    [DisplayName("Settlement Transaction Or Corporate Action Event Type")]
-    [IsoXmlTag("SttlmTxOrCorpActnEvtTp")]
-    public SettlementOrCorporateActionEvent35Choice_? SettlementTransactionOrCorporateActionEventType { get; init; }
-
-    /// <summary>
-    /// Trade Date.
-    /// </summary>
-    [DisplayName("Trade Date")]
-    [IsoXmlTag("TradDt")]
-    public TradeDate8Choice_? TradeDate { get; init; }
-
-    /// <summary>
-    /// Transaction Activity.
-    /// </summary>
-    [DisplayName("Transaction Activity")]
-    [IsoXmlTag("TxActvty")]
-    public required TransactionActivity3Choice_ TransactionActivity { get; init; }
-
-    /// <summary>
     /// Transaction Additional Details.
     /// </summary>
     [DisplayName("Transaction Additional Details")]
     [IsoXmlTag("TxAddtlDtls")]
     public Max350Text? TransactionAdditionalDetails { get; init; }
-
-    /// <summary>
-    /// Value Date.
-    /// </summary>
-    [DisplayName("Value Date")]
-    [IsoXmlTag("ValDt")]
-    public DateAndDateTime2Choice_? ValueDate { get; init; }
 }

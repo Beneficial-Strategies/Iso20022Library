@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ReservationIdentification4
 {
     /// <summary>
-    /// Account Identification.
-    /// </summary>
-    [DisplayName("Account Identification")]
-    [IsoXmlTag("AcctId")]
-    public AccountIdentification4Choice_? AccountIdentification { get; init; }
-
-    /// <summary>
-    /// Account Owner.
-    /// </summary>
-    [DisplayName("Account Owner")]
-    [IsoXmlTag("AcctOwnr")]
-    public BranchAndFinancialInstitutionIdentification8? AccountOwner { get; init; }
-
-    /// <summary>
     /// Reservation Identification.
     /// </summary>
     [DisplayName("Reservation Identification")]
@@ -50,4 +36,18 @@ public record ReservationIdentification4
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     public required ReservationType2Choice_ Type { get; init; }
+
+    /// <summary>
+    /// Account Owner.
+    /// </summary>
+    [DisplayName("Account Owner")]
+    [IsoXmlTag("AcctOwnr")]
+    public BranchAndFinancialInstitutionIdentification8? AccountOwner { get; init; }
+
+    /// <summary>
+    /// Account Identification.
+    /// </summary>
+    [DisplayName("Account Identification")]
+    [IsoXmlTag("AcctId")]
+    public AccountIdentification4Choice_? AccountIdentification { get; init; }
 }

@@ -17,27 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TravelAgency4
 {
     /// <summary>
-    /// Additional Data.
-    /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
-
-    /// <summary>
-    /// Address.
-    /// </summary>
-    [DisplayName("Address")]
-    [IsoXmlTag("Adr")]
-    public Address2? Address { get; init; }
-
-    /// <summary>
-    /// Assigner.
-    /// </summary>
-    [DisplayName("Assigner")]
-    [IsoXmlTag("Assgnr")]
-    public Max35Text? Assigner { get; init; }
-
-    /// <summary>
     /// Code.
     /// </summary>
     [DisplayName("Code")]
@@ -45,11 +24,11 @@ public record TravelAgency4
     public Max35Text? Code { get; init; }
 
     /// <summary>
-    /// Contact.
+    /// Assigner.
     /// </summary>
-    [DisplayName("Contact")]
-    [IsoXmlTag("Ctct")]
-    public ContactBusiness1? Contact { get; init; }
+    [DisplayName("Assigner")]
+    [IsoXmlTag("Assgnr")]
+    public Max35Text? Assigner { get; init; }
 
     /// <summary>
     /// IATA Code.
@@ -73,9 +52,30 @@ public record TravelAgency4
     public Max35Text? ShortName { get; init; }
 
     /// <summary>
+    /// Address.
+    /// </summary>
+    [DisplayName("Address")]
+    [IsoXmlTag("Adr")]
+    public Address2? Address { get; init; }
+
+    /// <summary>
+    /// Contact.
+    /// </summary>
+    [DisplayName("Contact")]
+    [IsoXmlTag("Ctct")]
+    public ContactBusiness1? Contact { get; init; }
+
+    /// <summary>
     /// Travel Package.
     /// </summary>
     [DisplayName("Travel Package")]
     [IsoXmlTag("TrvlPackg")]
     public ValueList<TravelAgencyPackage2> TravelPackage { get; init; } = [];
+
+    /// <summary>
+    /// Additional Data.
+    /// </summary>
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

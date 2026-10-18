@@ -46,39 +46,11 @@ public record CustomReportV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Additional Data.
-    /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData2> AdditionalData { get; init; } = [];
-
-    /// <summary>
-    /// Correction.
-    /// </summary>
-    [DisplayName("Correction")]
-    [IsoXmlTag("Crrctn")]
-    public CorrectionIdentification1? Correction { get; init; }
-
-    /// <summary>
-    /// Destination.
-    /// </summary>
-    [DisplayName("Destination")]
-    [IsoXmlTag("Dstn")]
-    public PartyIdentification286? Destination { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required Header71 Header { get; init; }
-
-    /// <summary>
-    /// Jurisdiction.
-    /// </summary>
-    [DisplayName("Jurisdiction")]
-    [IsoXmlTag("Jursdctn")]
-    public Jurisdiction2? Jurisdiction { get; init; }
 
     /// <summary>
     /// Originator.
@@ -88,11 +60,11 @@ public record CustomReportV02 : IOuterRecord
     public PartyIdentification286? Originator { get; init; }
 
     /// <summary>
-    /// Programme.
+    /// Sender.
     /// </summary>
-    [DisplayName("Programme")]
-    [IsoXmlTag("Prgrmm")]
-    public ValueList<ProgrammeMode5> Programme { get; init; } = [];
+    [DisplayName("Sender")]
+    [IsoXmlTag("Sndr")]
+    public PartyIdentification286? Sender { get; init; }
 
     /// <summary>
     /// Receiver.
@@ -102,11 +74,46 @@ public record CustomReportV02 : IOuterRecord
     public PartyIdentification286? Receiver { get; init; }
 
     /// <summary>
+    /// Destination.
+    /// </summary>
+    [DisplayName("Destination")]
+    [IsoXmlTag("Dstn")]
+    public PartyIdentification286? Destination { get; init; }
+
+    /// <summary>
+    /// Programme.
+    /// </summary>
+    [DisplayName("Programme")]
+    [IsoXmlTag("Prgrmm")]
+    public ValueList<ProgrammeMode5> Programme { get; init; } = [];
+
+    /// <summary>
+    /// Jurisdiction.
+    /// </summary>
+    [DisplayName("Jurisdiction")]
+    [IsoXmlTag("Jursdctn")]
+    public Jurisdiction2? Jurisdiction { get; init; }
+
+    /// <summary>
+    /// Settlement Service.
+    /// </summary>
+    [DisplayName("Settlement Service")]
+    [IsoXmlTag("SttlmSvc")]
+    public SettlementService6? SettlementService { get; init; }
+
+    /// <summary>
     /// Reconciliation.
     /// </summary>
     [DisplayName("Reconciliation")]
     [IsoXmlTag("Rcncltn")]
     public Reconciliation4? Reconciliation { get; init; }
+
+    /// <summary>
+    /// Correction.
+    /// </summary>
+    [DisplayName("Correction")]
+    [IsoXmlTag("Crrctn")]
+    public CorrectionIdentification1? Correction { get; init; }
 
     /// <summary>
     /// Report.
@@ -123,25 +130,11 @@ public record CustomReportV02 : IOuterRecord
     public ValueList<ReportContent2> ReportContent { get; init; } = [];
 
     /// <summary>
-    /// Security Trailer.
+    /// Additional Data.
     /// </summary>
-    [DisplayName("Security Trailer")]
-    [IsoXmlTag("SctyTrlr")]
-    public ContentInformationType41? SecurityTrailer { get; init; }
-
-    /// <summary>
-    /// Sender.
-    /// </summary>
-    [DisplayName("Sender")]
-    [IsoXmlTag("Sndr")]
-    public PartyIdentification286? Sender { get; init; }
-
-    /// <summary>
-    /// Settlement Service.
-    /// </summary>
-    [DisplayName("Settlement Service")]
-    [IsoXmlTag("SttlmSvc")]
-    public SettlementService6? SettlementService { get; init; }
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData2> AdditionalData { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.
@@ -149,4 +142,11 @@ public record CustomReportV02 : IOuterRecord
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
+
+    /// <summary>
+    /// Security Trailer.
+    /// </summary>
+    [DisplayName("Security Trailer")]
+    [IsoXmlTag("SctyTrlr")]
+    public ContentInformationType41? SecurityTrailer { get; init; }
 }

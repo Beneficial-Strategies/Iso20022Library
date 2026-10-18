@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SignedData9
 {
     /// <summary>
-    /// Certificate.
+    /// Version.
     /// </summary>
-    [DisplayName("Certificate")]
-    [IsoXmlTag("Cert")]
-    public ValueList<Max5000Binary> Certificate { get; init; } = [];
+    [DisplayName("Version")]
+    [IsoXmlTag("Vrsn")]
+    public Number? Version { get; init; }
 
     /// <summary>
     /// Digest Algorithm.
@@ -38,16 +38,16 @@ public record SignedData9
     public EncapsulatedContent3? EncapsulatedContent { get; init; }
 
     /// <summary>
+    /// Certificate.
+    /// </summary>
+    [DisplayName("Certificate")]
+    [IsoXmlTag("Cert")]
+    public ValueList<Max5000Binary> Certificate { get; init; } = [];
+
+    /// <summary>
     /// Signer.
     /// </summary>
     [DisplayName("Signer")]
     [IsoXmlTag("Sgnr")]
     public ValueList<Signer8> Signer { get; init; } = [];
-
-    /// <summary>
-    /// Version.
-    /// </summary>
-    [DisplayName("Version")]
-    [IsoXmlTag("Vrsn")]
-    public Number? Version { get; init; }
 }

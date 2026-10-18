@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record InvestigationReason2
 {
     /// <summary>
-    /// Additional Request Data.
+    /// Sequence.
     /// </summary>
-    [DisplayName("Additional Request Data")]
-    [IsoXmlTag("AddtlReqData")]
-    public AdditionalRequestData1Choice_? AdditionalRequestData { get; init; }
-
-    /// <summary>
-    /// Enclosed File.
-    /// </summary>
-    [DisplayName("Enclosed File")]
-    [IsoXmlTag("NclsdFile")]
-    public ValueList<Document12> EnclosedFile { get; init; } = [];
+    [DisplayName("Sequence")]
+    [IsoXmlTag("Seq")]
+    public Max3Number? Sequence { get; init; }
 
     /// <summary>
     /// Reason.
@@ -45,11 +38,11 @@ public record InvestigationReason2
     public InvestigationReasonSubType1Choice_? ReasonSubType { get; init; }
 
     /// <summary>
-    /// Related File Data.
+    /// Additional Request Data.
     /// </summary>
-    [DisplayName("Related File Data")]
-    [IsoXmlTag("RltdFileData")]
-    public ValueList<FileData1> RelatedFileData { get; init; } = [];
+    [DisplayName("Additional Request Data")]
+    [IsoXmlTag("AddtlReqData")]
+    public AdditionalRequestData1Choice_? AdditionalRequestData { get; init; }
 
     /// <summary>
     /// Related Investigation Data.
@@ -59,9 +52,16 @@ public record InvestigationReason2
     public RelatedInvestigationData1? RelatedInvestigationData { get; init; }
 
     /// <summary>
-    /// Sequence.
+    /// Enclosed File.
     /// </summary>
-    [DisplayName("Sequence")]
-    [IsoXmlTag("Seq")]
-    public Max3Number? Sequence { get; init; }
+    [DisplayName("Enclosed File")]
+    [IsoXmlTag("NclsdFile")]
+    public ValueList<Document12> EnclosedFile { get; init; } = [];
+
+    /// <summary>
+    /// Related File Data.
+    /// </summary>
+    [DisplayName("Related File Data")]
+    [IsoXmlTag("RltdFileData")]
+    public ValueList<FileData1> RelatedFileData { get; init; } = [];
 }

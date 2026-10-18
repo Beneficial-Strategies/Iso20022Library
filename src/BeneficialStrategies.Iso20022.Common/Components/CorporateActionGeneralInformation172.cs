@@ -31,6 +31,13 @@ public record CorporateActionGeneralInformation172
     public Max35Text? CorporateActionEventIdentification { get; init; }
 
     /// <summary>
+    /// Official Corporate Action Event Identification.
+    /// </summary>
+    [DisplayName("Official Corporate Action Event Identification")]
+    [IsoXmlTag("OffclCorpActnEvtId")]
+    public Max35Text? OfficialCorporateActionEventIdentification { get; init; }
+
+    /// <summary>
     /// Event Processing Type.
     /// </summary>
     [DisplayName("Event Processing Type")]
@@ -45,25 +52,18 @@ public record CorporateActionGeneralInformation172
     public required CorporateActionEventType106Choice_ EventType { get; init; }
 
     /// <summary>
-    /// Mandatory Voluntary Event Type.
-    /// </summary>
-    [DisplayName("Mandatory Voluntary Event Type")]
-    [IsoXmlTag("MndtryVlntryEvtTp")]
-    public required CorporateActionMandatoryVoluntary3Choice_ MandatoryVoluntaryEventType { get; init; }
-
-    /// <summary>
-    /// Official Corporate Action Event Identification.
-    /// </summary>
-    [DisplayName("Official Corporate Action Event Identification")]
-    [IsoXmlTag("OffclCorpActnEvtId")]
-    public Max35Text? OfficialCorporateActionEventIdentification { get; init; }
-
-    /// <summary>
     /// Sub Event Type.
     /// </summary>
     [DisplayName("Sub Event Type")]
     [IsoXmlTag("SubEvtTp")]
     public DTCCSubEventType9Code? SubEventType { get; init; }
+
+    /// <summary>
+    /// Mandatory Voluntary Event Type.
+    /// </summary>
+    [DisplayName("Mandatory Voluntary Event Type")]
+    [IsoXmlTag("MndtryVlntryEvtTp")]
+    public required CorporateActionMandatoryVoluntary3Choice_ MandatoryVoluntaryEventType { get; init; }
 
     /// <summary>
     /// Underlying Security.

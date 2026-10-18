@@ -17,11 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record LodgingRoom2
 {
     /// <summary>
-    /// Adults.
+    /// Type.
     /// </summary>
-    [DisplayName("Adults")]
-    [IsoXmlTag("Adlts")]
-    public Max3NumericText? Adults { get; init; }
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public Max35Text? Type { get; init; }
+
+    /// <summary>
+    /// Location.
+    /// </summary>
+    [DisplayName("Location")]
+    [IsoXmlTag("Lctn")]
+    public Max35Text? Location { get; init; }
 
     /// <summary>
     /// Bed Type.
@@ -29,6 +36,20 @@ public record LodgingRoom2
     [DisplayName("Bed Type")]
     [IsoXmlTag("BedTp")]
     public Max70Text? BedType { get; init; }
+
+    /// <summary>
+    /// Guests.
+    /// </summary>
+    [DisplayName("Guests")]
+    [IsoXmlTag("Gsts")]
+    public Max3NumericText? Guests { get; init; }
+
+    /// <summary>
+    /// Adults.
+    /// </summary>
+    [DisplayName("Adults")]
+    [IsoXmlTag("Adlts")]
+    public Max3NumericText? Adults { get; init; }
 
     /// <summary>
     /// Children.
@@ -43,25 +64,4 @@ public record LodgingRoom2
     [DisplayName("Daily Rate")]
     [IsoXmlTag("DalyRate")]
     public ImpliedCurrencyAndAmount? DailyRate { get; init; }
-
-    /// <summary>
-    /// Guests.
-    /// </summary>
-    [DisplayName("Guests")]
-    [IsoXmlTag("Gsts")]
-    public Max3NumericText? Guests { get; init; }
-
-    /// <summary>
-    /// Location.
-    /// </summary>
-    [DisplayName("Location")]
-    [IsoXmlTag("Lctn")]
-    public Max35Text? Location { get; init; }
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public Max35Text? Type { get; init; }
 }

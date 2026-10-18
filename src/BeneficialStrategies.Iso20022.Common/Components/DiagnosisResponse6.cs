@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record DiagnosisResponse6
 {
     /// <summary>
-    /// Host Status.
-    /// </summary>
-    [DisplayName("Host Status")]
-    [IsoXmlTag("HstSts")]
-    public ValueList<HostStatus1> HostStatus { get; init; } = [];
-
-    /// <summary>
     /// Logged Sale Identification.
     /// </summary>
     [DisplayName("Logged Sale Identification")]
@@ -36,4 +29,11 @@ public record DiagnosisResponse6
     [DisplayName("POI Status")]
     [IsoXmlTag("POISts")]
     public StatusReportContent13? POIStatus { get; init; }
+
+    /// <summary>
+    /// Host Status.
+    /// </summary>
+    [DisplayName("Host Status")]
+    [IsoXmlTag("HstSts")]
+    public ValueList<HostStatus1> HostStatus { get; init; } = [];
 }

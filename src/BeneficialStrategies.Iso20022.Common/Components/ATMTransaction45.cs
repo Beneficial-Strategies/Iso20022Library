@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMTransaction45
 {
     /// <summary>
-    /// Command.
+    /// Transaction Identification.
     /// </summary>
-    [DisplayName("Command")]
-    [IsoXmlTag("Cmd")]
-    public ValueList<ATMCommand7> Command { get; init; } = [];
-
-    /// <summary>
-    /// ICC Related Data.
-    /// </summary>
-    [DisplayName("ICC Related Data")]
-    [IsoXmlTag("ICCRltdData")]
-    public Max10000Binary? ICCRelatedData { get; init; }
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public required TransactionIdentifier3 TransactionIdentification { get; init; }
 
     /// <summary>
     /// Response.
@@ -45,9 +38,16 @@ public record ATMTransaction45
     public ResultDetail5Code? ResponseReason { get; init; }
 
     /// <summary>
-    /// Transaction Identification.
+    /// ICC Related Data.
     /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public required TransactionIdentifier3 TransactionIdentification { get; init; }
+    [DisplayName("ICC Related Data")]
+    [IsoXmlTag("ICCRltdData")]
+    public Max10000Binary? ICCRelatedData { get; init; }
+
+    /// <summary>
+    /// Command.
+    /// </summary>
+    [DisplayName("Command")]
+    [IsoXmlTag("Cmd")]
+    public ValueList<ATMCommand7> Command { get; init; } = [];
 }

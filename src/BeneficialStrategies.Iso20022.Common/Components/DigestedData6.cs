@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record DigestedData6
 {
     /// <summary>
-    /// Digest.
+    /// Version.
     /// </summary>
-    [DisplayName("Digest")]
-    [IsoXmlTag("Dgst")]
-    public required Max140Binary Digest { get; init; }
+    [DisplayName("Version")]
+    [IsoXmlTag("Vrsn")]
+    public Number? Version { get; init; }
 
     /// <summary>
     /// Digest Algorithm.
@@ -38,9 +38,9 @@ public record DigestedData6
     public required EncapsulatedContent3 EncapsulatedContent { get; init; }
 
     /// <summary>
-    /// Version.
+    /// Digest.
     /// </summary>
-    [DisplayName("Version")]
-    [IsoXmlTag("Vrsn")]
-    public Number? Version { get; init; }
+    [DisplayName("Digest")]
+    [IsoXmlTag("Dgst")]
+    public required Max140Binary Digest { get; init; }
 }

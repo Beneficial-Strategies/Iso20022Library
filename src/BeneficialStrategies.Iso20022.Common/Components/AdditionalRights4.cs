@@ -24,18 +24,18 @@ public record AdditionalRights4
     public required AdditionalRightCode1Choice_ AdditionalRight { get; init; }
 
     /// <summary>
-    /// Additional Right Deadline.
-    /// </summary>
-    [DisplayName("Additional Right Deadline")]
-    [IsoXmlTag("AddtlRghtDdln")]
-    public DateFormat58Choice_? AdditionalRightDeadline { get; init; }
-
-    /// <summary>
     /// Additional Right Information URL Address.
     /// </summary>
     [DisplayName("Additional Right Information URL Address")]
     [IsoXmlTag("AddtlRghtInfURLAdr")]
     public Max2048Text? AdditionalRightInformationURLAddress { get; init; }
+
+    /// <summary>
+    /// Additional Right Deadline.
+    /// </summary>
+    [DisplayName("Additional Right Deadline")]
+    [IsoXmlTag("AddtlRghtDdln")]
+    public DateFormat58Choice_? AdditionalRightDeadline { get; init; }
 
     /// <summary>
     /// Additional Right Market Deadline.

@@ -17,6 +17,41 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMTransaction48
 {
     /// <summary>
+    /// Transaction Identification.
+    /// </summary>
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public required TransactionIdentifier3 TransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Transaction Response.
+    /// </summary>
+    [DisplayName("Transaction Response")]
+    [IsoXmlTag("TxRspn")]
+    public required ResponseType12 TransactionResponse { get; init; }
+
+    /// <summary>
+    /// Action.
+    /// </summary>
+    [DisplayName("Action")]
+    [IsoXmlTag("Actn")]
+    public ValueList<Action7> Action { get; init; } = [];
+
+    /// <summary>
+    /// Customer Service Profile.
+    /// </summary>
+    [DisplayName("Customer Service Profile")]
+    [IsoXmlTag("CstmrSvcPrfl")]
+    public ATMCustomerProfile7? CustomerServiceProfile { get; init; }
+
+    /// <summary>
+    /// Currency Conversion.
+    /// </summary>
+    [DisplayName("Currency Conversion")]
+    [IsoXmlTag("CcyConvs")]
+    public CurrencyConversion33? CurrencyConversion { get; init; }
+
+    /// <summary>
     /// Account Information.
     /// </summary>
     [DisplayName("Account Information")]
@@ -31,46 +66,11 @@ public record ATMTransaction48
     public ValueList<ATMAccountStatement3> AccountStatementData { get; init; } = [];
 
     /// <summary>
-    /// Action.
-    /// </summary>
-    [DisplayName("Action")]
-    [IsoXmlTag("Actn")]
-    public ValueList<Action7> Action { get; init; } = [];
-
-    /// <summary>
-    /// Authorisation Result.
-    /// </summary>
-    [DisplayName("Authorisation Result")]
-    [IsoXmlTag("AuthstnRslt")]
-    public AuthorisationResult20? AuthorisationResult { get; init; }
-
-    /// <summary>
-    /// Command.
-    /// </summary>
-    [DisplayName("Command")]
-    [IsoXmlTag("Cmd")]
-    public ValueList<ATMCommand7> Command { get; init; } = [];
-
-    /// <summary>
-    /// Currency Conversion.
-    /// </summary>
-    [DisplayName("Currency Conversion")]
-    [IsoXmlTag("CcyConvs")]
-    public CurrencyConversion33? CurrencyConversion { get; init; }
-
-    /// <summary>
     /// Currency Exchange.
     /// </summary>
     [DisplayName("Currency Exchange")]
     [IsoXmlTag("CcyXchg")]
     public CurrencyConversion5? CurrencyExchange { get; init; }
-
-    /// <summary>
-    /// Customer Service Profile.
-    /// </summary>
-    [DisplayName("Customer Service Profile")]
-    [IsoXmlTag("CstmrSvcPrfl")]
-    public ATMCustomerProfile7? CustomerServiceProfile { get; init; }
 
     /// <summary>
     /// ICC Related Data.
@@ -80,16 +80,16 @@ public record ATMTransaction48
     public Max10000Binary? ICCRelatedData { get; init; }
 
     /// <summary>
-    /// Transaction Identification.
+    /// Command.
     /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public required TransactionIdentifier3 TransactionIdentification { get; init; }
+    [DisplayName("Command")]
+    [IsoXmlTag("Cmd")]
+    public ValueList<ATMCommand7> Command { get; init; } = [];
 
     /// <summary>
-    /// Transaction Response.
+    /// Authorisation Result.
     /// </summary>
-    [DisplayName("Transaction Response")]
-    [IsoXmlTag("TxRspn")]
-    public required ResponseType12 TransactionResponse { get; init; }
+    [DisplayName("Authorisation Result")]
+    [IsoXmlTag("AuthstnRslt")]
+    public AuthorisationResult20? AuthorisationResult { get; init; }
 }

@@ -58,27 +58,6 @@ public record RedemptionBulkOrderConfirmationV05 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// General information related to the execution of the orders.
-    /// </summary>
-    [DisplayName("Bulk Execution Details")]
-    [IsoXmlTag("BlkExctnDtls")]
-    public required RedemptionBulkExecution06 BulkExecutionDetails { get; init; }
-
-    /// <summary>
-    /// Information provided when the message is a copy of a previous message.
-    /// </summary>
-    [DisplayName("Copy Details")]
-    [IsoXmlTag("CpyDtls")]
-    public CopyInformation5? CopyDetails { get; init; }
-
-    /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
-    [DisplayName("Extension")]
-    [IsoXmlTag("Xtnsn")]
-    public ValueList<Extension1> Extension { get; init; } = [];
-
-    /// <summary>
     /// Reference that uniquely identifies the message from a business application standpoint.
     /// </summary>
     [DisplayName("Message Identification")]
@@ -105,4 +84,25 @@ public record RedemptionBulkOrderConfirmationV05 : IOuterRecord
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
     public AdditionalReference10? RelatedReference { get; init; }
+
+    /// <summary>
+    /// General information related to the execution of the orders.
+    /// </summary>
+    [DisplayName("Bulk Execution Details")]
+    [IsoXmlTag("BlkExctnDtls")]
+    public required RedemptionBulkExecution06 BulkExecutionDetails { get; init; }
+
+    /// <summary>
+    /// Information provided when the message is a copy of a previous message.
+    /// </summary>
+    [DisplayName("Copy Details")]
+    [IsoXmlTag("CpyDtls")]
+    public CopyInformation5? CopyDetails { get; init; }
+
+    /// <summary>
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// </summary>
+    [DisplayName("Extension")]
+    [IsoXmlTag("Xtnsn")]
+    public ValueList<Extension1> Extension { get; init; } = [];
 }

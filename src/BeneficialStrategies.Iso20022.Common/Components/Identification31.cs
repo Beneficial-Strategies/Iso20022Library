@@ -31,11 +31,25 @@ public record Identification31
     public Max35Text? AccountServicerTransactionIdentification { get; init; }
 
     /// <summary>
-    /// Basket Identification.
+    /// Market Infrastructure Transaction Identification.
     /// </summary>
-    [DisplayName("Basket Identification")]
-    [IsoXmlTag("BsktId")]
-    public Max35Text? BasketIdentification { get; init; }
+    [DisplayName("Market Infrastructure Transaction Identification")]
+    [IsoXmlTag("MktInfrstrctrTxId")]
+    public Max35Text? MarketInfrastructureTransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Counterparty Market Infrastructure Transaction Identification.
+    /// </summary>
+    [DisplayName("Counterparty Market Infrastructure Transaction Identification")]
+    [IsoXmlTag("CtrPtyMktInfrstrctrTxId")]
+    public Max35Text? CounterpartyMarketInfrastructureTransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Processor Transaction Identification.
+    /// </summary>
+    [DisplayName("Processor Transaction Identification")]
+    [IsoXmlTag("PrcrTxId")]
+    public Max35Text? ProcessorTransactionIdentification { get; init; }
 
     /// <summary>
     /// Common Identification.
@@ -45,18 +59,32 @@ public record Identification31
     public Max35Text? CommonIdentification { get; init; }
 
     /// <summary>
-    /// Corporate Action Event Identification.
+    /// Trade Identification.
     /// </summary>
-    [DisplayName("Corporate Action Event Identification")]
-    [IsoXmlTag("CorpActnEvtId")]
-    public Max35Text? CorporateActionEventIdentification { get; init; }
+    [DisplayName("Trade Identification")]
+    [IsoXmlTag("TradId")]
+    public Max35Text? TradeIdentification { get; init; }
 
     /// <summary>
-    /// Counterparty Market Infrastructure Transaction Identification.
+    /// Unique Transaction Identifier.
     /// </summary>
-    [DisplayName("Counterparty Market Infrastructure Transaction Identification")]
-    [IsoXmlTag("CtrPtyMktInfrstrctrTxId")]
-    public Max35Text? CounterpartyMarketInfrastructureTransactionIdentification { get; init; }
+    [DisplayName("Unique Transaction Identifier")]
+    [IsoXmlTag("UnqTxIdr")]
+    public UTIIdentifier? UniqueTransactionIdentifier { get; init; }
+
+    /// <summary>
+    /// Master Identification.
+    /// </summary>
+    [DisplayName("Master Identification")]
+    [IsoXmlTag("MstrId")]
+    public Max35Text? MasterIdentification { get; init; }
+
+    /// <summary>
+    /// Basket Identification.
+    /// </summary>
+    [DisplayName("Basket Identification")]
+    [IsoXmlTag("BsktId")]
+    public Max35Text? BasketIdentification { get; init; }
 
     /// <summary>
     /// Index Identification.
@@ -73,18 +101,11 @@ public record Identification31
     public Max35Text? ListIdentification { get; init; }
 
     /// <summary>
-    /// Market Infrastructure Transaction Identification.
+    /// Program Identification.
     /// </summary>
-    [DisplayName("Market Infrastructure Transaction Identification")]
-    [IsoXmlTag("MktInfrstrctrTxId")]
-    public Max35Text? MarketInfrastructureTransactionIdentification { get; init; }
-
-    /// <summary>
-    /// Master Identification.
-    /// </summary>
-    [DisplayName("Master Identification")]
-    [IsoXmlTag("MstrId")]
-    public Max35Text? MasterIdentification { get; init; }
+    [DisplayName("Program Identification")]
+    [IsoXmlTag("PrgmId")]
+    public Max35Text? ProgramIdentification { get; init; }
 
     /// <summary>
     /// Pool Identification.
@@ -94,30 +115,9 @@ public record Identification31
     public Max35Text? PoolIdentification { get; init; }
 
     /// <summary>
-    /// Processor Transaction Identification.
+    /// Corporate Action Event Identification.
     /// </summary>
-    [DisplayName("Processor Transaction Identification")]
-    [IsoXmlTag("PrcrTxId")]
-    public Max35Text? ProcessorTransactionIdentification { get; init; }
-
-    /// <summary>
-    /// Program Identification.
-    /// </summary>
-    [DisplayName("Program Identification")]
-    [IsoXmlTag("PrgmId")]
-    public Max35Text? ProgramIdentification { get; init; }
-
-    /// <summary>
-    /// Trade Identification.
-    /// </summary>
-    [DisplayName("Trade Identification")]
-    [IsoXmlTag("TradId")]
-    public Max35Text? TradeIdentification { get; init; }
-
-    /// <summary>
-    /// Unique Transaction Identifier.
-    /// </summary>
-    [DisplayName("Unique Transaction Identifier")]
-    [IsoXmlTag("UnqTxIdr")]
-    public UTIIdentifier? UniqueTransactionIdentifier { get; init; }
+    [DisplayName("Corporate Action Event Identification")]
+    [IsoXmlTag("CorpActnEvtId")]
+    public Max35Text? CorporateActionEventIdentification { get; init; }
 }

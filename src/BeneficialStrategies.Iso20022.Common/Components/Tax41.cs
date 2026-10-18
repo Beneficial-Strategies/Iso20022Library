@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Tax41
 {
     /// <summary>
-    /// Amount.
+    /// Type.
     /// </summary>
-    [DisplayName("Amount")]
-    [IsoXmlTag("Amt")]
-    public required ImpliedCurrencyAndAmount Amount { get; init; }
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public required AddendumTaxType3Code Type { get; init; }
 
     /// <summary>
-    /// Credit Debit.
+    /// Other Type.
     /// </summary>
-    [DisplayName("Credit Debit")]
-    [IsoXmlTag("CdtDbt")]
-    public CreditDebit3Code? CreditDebit { get; init; }
+    [DisplayName("Other Type")]
+    [IsoXmlTag("OthrTp")]
+    public Max35Text? OtherType { get; init; }
 
     /// <summary>
     /// Description.
@@ -52,18 +52,11 @@ public record Tax41
     public Max35Text? ExemptReason { get; init; }
 
     /// <summary>
-    /// Included In Total.
+    /// Amount.
     /// </summary>
-    [DisplayName("Included In Total")]
-    [IsoXmlTag("InclInTtl")]
-    public TrueFalseIndicator? IncludedInTotal { get; init; }
-
-    /// <summary>
-    /// Other Type.
-    /// </summary>
-    [DisplayName("Other Type")]
-    [IsoXmlTag("OthrTp")]
-    public Max35Text? OtherType { get; init; }
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    public required ImpliedCurrencyAndAmount Amount { get; init; }
 
     /// <summary>
     /// Rate.
@@ -73,9 +66,16 @@ public record Tax41
     public PercentageRate? Rate { get; init; }
 
     /// <summary>
-    /// Type.
+    /// Included In Total.
     /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public required AddendumTaxType3Code Type { get; init; }
+    [DisplayName("Included In Total")]
+    [IsoXmlTag("InclInTtl")]
+    public TrueFalseIndicator? IncludedInTotal { get; init; }
+
+    /// <summary>
+    /// Credit Debit.
+    /// </summary>
+    [DisplayName("Credit Debit")]
+    [IsoXmlTag("CdtDbt")]
+    public CreditDebit3Code? CreditDebit { get; init; }
 }

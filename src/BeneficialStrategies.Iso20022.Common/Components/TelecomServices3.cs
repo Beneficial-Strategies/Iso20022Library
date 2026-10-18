@@ -17,34 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TelecomServices3
 {
     /// <summary>
-    /// Additional Data.
-    /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
-
-    /// <summary>
-    /// Billing End.
-    /// </summary>
-    [DisplayName("Billing End")]
-    [IsoXmlTag("BllgEnd")]
-    public ISODate? BillingEnd { get; init; }
-
-    /// <summary>
-    /// Billing Event.
-    /// </summary>
-    [DisplayName("Billing Event")]
-    [IsoXmlTag("BllgEvt")]
-    public ValueList<Amount22> BillingEvent { get; init; } = [];
-
-    /// <summary>
-    /// Billing Start.
-    /// </summary>
-    [DisplayName("Billing Start")]
-    [IsoXmlTag("BllgStart")]
-    public ISODate? BillingStart { get; init; }
-
-    /// <summary>
     /// Customer Account Number.
     /// </summary>
     [DisplayName("Customer Account Number")]
@@ -66,11 +38,25 @@ public record TelecomServices3
     public PhoneNumber? CustomerPhone { get; init; }
 
     /// <summary>
-    /// Line Item.
+    /// Billing Start.
     /// </summary>
-    [DisplayName("Line Item")]
-    [IsoXmlTag("LineItm")]
-    public ValueList<TelecomServicesLineItem3> LineItem { get; init; } = [];
+    [DisplayName("Billing Start")]
+    [IsoXmlTag("BllgStart")]
+    public ISODate? BillingStart { get; init; }
+
+    /// <summary>
+    /// Billing End.
+    /// </summary>
+    [DisplayName("Billing End")]
+    [IsoXmlTag("BllgEnd")]
+    public ISODate? BillingEnd { get; init; }
+
+    /// <summary>
+    /// Billing Event.
+    /// </summary>
+    [DisplayName("Billing Event")]
+    [IsoXmlTag("BllgEvt")]
+    public ValueList<Amount22> BillingEvent { get; init; } = [];
 
     /// <summary>
     /// Total Tax.
@@ -78,4 +64,18 @@ public record TelecomServices3
     [DisplayName("Total Tax")]
     [IsoXmlTag("TtlTax")]
     public ValueList<Tax41> TotalTax { get; init; } = [];
+
+    /// <summary>
+    /// Line Item.
+    /// </summary>
+    [DisplayName("Line Item")]
+    [IsoXmlTag("LineItm")]
+    public ValueList<TelecomServicesLineItem3> LineItem { get; init; } = [];
+
+    /// <summary>
+    /// Additional Data.
+    /// </summary>
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

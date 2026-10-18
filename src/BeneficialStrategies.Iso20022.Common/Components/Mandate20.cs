@@ -17,11 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Mandate20
 {
     /// <summary>
-    /// Adjustment.
+    /// Mandate Identification.
     /// </summary>
-    [DisplayName("Adjustment")]
-    [IsoXmlTag("Adjstmnt")]
-    public MandateAdjustment1? Adjustment { get; init; }
+    [DisplayName("Mandate Identification")]
+    [IsoXmlTag("MndtId")]
+    public required Max35Text MandateIdentification { get; init; }
+
+    /// <summary>
+    /// Mandate Request Identification.
+    /// </summary>
+    [DisplayName("Mandate Request Identification")]
+    [IsoXmlTag("MndtReqId")]
+    public Max35Text? MandateRequestIdentification { get; init; }
 
     /// <summary>
     /// Authentication.
@@ -31,11 +38,67 @@ public record Mandate20
     public MandateAuthentication1? Authentication { get; init; }
 
     /// <summary>
+    /// Type.
+    /// </summary>
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public MandateTypeInformation2? Type { get; init; }
+
+    /// <summary>
+    /// Occurrences.
+    /// </summary>
+    [DisplayName("Occurrences")]
+    [IsoXmlTag("Ocrncs")]
+    public MandateOccurrences5? Occurrences { get; init; }
+
+    /// <summary>
+    /// Tracking Indicator.
+    /// </summary>
+    [DisplayName("Tracking Indicator")]
+    [IsoXmlTag("TrckgInd")]
+    public required TrueFalseIndicator TrackingIndicator { get; init; }
+
+    /// <summary>
+    /// First Collection Amount.
+    /// </summary>
+    [DisplayName("First Collection Amount")]
+    [IsoXmlTag("FrstColltnAmt")]
+    public ActiveOrHistoricCurrencyAndAmount? FirstCollectionAmount { get; init; }
+
+    /// <summary>
     /// Collection Amount.
     /// </summary>
     [DisplayName("Collection Amount")]
     [IsoXmlTag("ColltnAmt")]
     public ActiveOrHistoricCurrencyAndAmount? CollectionAmount { get; init; }
+
+    /// <summary>
+    /// Maximum Amount.
+    /// </summary>
+    [DisplayName("Maximum Amount")]
+    [IsoXmlTag("MaxAmt")]
+    public ActiveOrHistoricCurrencyAndAmount? MaximumAmount { get; init; }
+
+    /// <summary>
+    /// Adjustment.
+    /// </summary>
+    [DisplayName("Adjustment")]
+    [IsoXmlTag("Adjstmnt")]
+    public MandateAdjustment1? Adjustment { get; init; }
+
+    /// <summary>
+    /// Reason.
+    /// </summary>
+    [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
+    public MandateSetupReason1Choice_? Reason { get; init; }
+
+    /// <summary>
+    /// Creditor Scheme Identification.
+    /// </summary>
+    [DisplayName("Creditor Scheme Identification")]
+    [IsoXmlTag("CdtrSchmeId")]
+    public PartyIdentification272? CreditorSchemeIdentification { get; init; }
 
     /// <summary>
     /// Creditor.
@@ -59,11 +122,11 @@ public record Mandate20
     public BranchAndFinancialInstitutionIdentification8? CreditorAgent { get; init; }
 
     /// <summary>
-    /// Creditor Scheme Identification.
+    /// Ultimate Creditor.
     /// </summary>
-    [DisplayName("Creditor Scheme Identification")]
-    [IsoXmlTag("CdtrSchmeId")]
-    public PartyIdentification272? CreditorSchemeIdentification { get; init; }
+    [DisplayName("Ultimate Creditor")]
+    [IsoXmlTag("UltmtCdtr")]
+    public PartyIdentification272? UltimateCreditor { get; init; }
 
     /// <summary>
     /// Debtor.
@@ -87,18 +150,11 @@ public record Mandate20
     public required BranchAndFinancialInstitutionIdentification8 DebtorAgent { get; init; }
 
     /// <summary>
-    /// First Collection Amount.
+    /// Ultimate Debtor.
     /// </summary>
-    [DisplayName("First Collection Amount")]
-    [IsoXmlTag("FrstColltnAmt")]
-    public ActiveOrHistoricCurrencyAndAmount? FirstCollectionAmount { get; init; }
-
-    /// <summary>
-    /// Mandate Identification.
-    /// </summary>
-    [DisplayName("Mandate Identification")]
-    [IsoXmlTag("MndtId")]
-    public required Max35Text MandateIdentification { get; init; }
+    [DisplayName("Ultimate Debtor")]
+    [IsoXmlTag("UltmtDbtr")]
+    public PartyIdentification272? UltimateDebtor { get; init; }
 
     /// <summary>
     /// Mandate Reference.
@@ -108,65 +164,9 @@ public record Mandate20
     public Max35Text? MandateReference { get; init; }
 
     /// <summary>
-    /// Mandate Request Identification.
-    /// </summary>
-    [DisplayName("Mandate Request Identification")]
-    [IsoXmlTag("MndtReqId")]
-    public Max35Text? MandateRequestIdentification { get; init; }
-
-    /// <summary>
-    /// Maximum Amount.
-    /// </summary>
-    [DisplayName("Maximum Amount")]
-    [IsoXmlTag("MaxAmt")]
-    public ActiveOrHistoricCurrencyAndAmount? MaximumAmount { get; init; }
-
-    /// <summary>
-    /// Occurrences.
-    /// </summary>
-    [DisplayName("Occurrences")]
-    [IsoXmlTag("Ocrncs")]
-    public MandateOccurrences5? Occurrences { get; init; }
-
-    /// <summary>
-    /// Reason.
-    /// </summary>
-    [DisplayName("Reason")]
-    [IsoXmlTag("Rsn")]
-    public MandateSetupReason1Choice_? Reason { get; init; }
-
-    /// <summary>
     /// Referred Document.
     /// </summary>
     [DisplayName("Referred Document")]
     [IsoXmlTag("RfrdDoc")]
     public ValueList<ReferredMandateDocument2> ReferredDocument { get; init; } = [];
-
-    /// <summary>
-    /// Tracking Indicator.
-    /// </summary>
-    [DisplayName("Tracking Indicator")]
-    [IsoXmlTag("TrckgInd")]
-    public required TrueFalseIndicator TrackingIndicator { get; init; }
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public MandateTypeInformation2? Type { get; init; }
-
-    /// <summary>
-    /// Ultimate Creditor.
-    /// </summary>
-    [DisplayName("Ultimate Creditor")]
-    [IsoXmlTag("UltmtCdtr")]
-    public PartyIdentification272? UltimateCreditor { get; init; }
-
-    /// <summary>
-    /// Ultimate Debtor.
-    /// </summary>
-    [DisplayName("Ultimate Debtor")]
-    [IsoXmlTag("UltmtDbtr")]
-    public PartyIdentification272? UltimateDebtor { get; init; }
 }

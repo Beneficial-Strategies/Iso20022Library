@@ -46,13 +46,6 @@ public record ATMDepositResponseV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// ATM Deposit Response.
-    /// </summary>
-    [DisplayName("ATM Deposit Response")]
-    [IsoXmlTag("ATMDpstRspn")]
-    public ATMDepositResponse2? ATMDepositResponse { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
@@ -65,6 +58,13 @@ public record ATMDepositResponseV02 : IOuterRecord
     [DisplayName("Protected ATM Deposit Response")]
     [IsoXmlTag("PrtctdATMDpstRspn")]
     public ContentInformationType10? ProtectedATMDepositResponse { get; init; }
+
+    /// <summary>
+    /// ATM Deposit Response.
+    /// </summary>
+    [DisplayName("ATM Deposit Response")]
+    [IsoXmlTag("ATMDpstRspn")]
+    public ATMDepositResponse2? ATMDepositResponse { get; init; }
 
     /// <summary>
     /// Security Trailer.

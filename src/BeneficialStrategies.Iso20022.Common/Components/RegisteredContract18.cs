@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record RegisteredContract18
 {
     /// <summary>
-    /// Additional Information.
+    /// Original Contract Registration Request.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public Max1025Text? AdditionalInformation { get; init; }
+    [DisplayName("Original Contract Registration Request")]
+    [IsoXmlTag("OrgnlCtrctRegnReq")]
+    public Max35Text? OriginalContractRegistrationRequest { get; init; }
 
     /// <summary>
-    /// Amendment.
+    /// Issuer Financial Institution.
     /// </summary>
-    [DisplayName("Amendment")]
-    [IsoXmlTag("Amdmnt")]
-    public ValueList<RegisteredContractAmendment1> Amendment { get; init; } = [];
+    [DisplayName("Issuer Financial Institution")]
+    [IsoXmlTag("IssrFI")]
+    public required BranchAndFinancialInstitutionIdentification8 IssuerFinancialInstitution { get; init; }
 
     /// <summary>
     /// Contract.
@@ -45,11 +45,60 @@ public record RegisteredContract18
     public ValueList<ContractBalance1> ContractBalance { get; init; } = [];
 
     /// <summary>
+    /// Payment Schedule Type.
+    /// </summary>
+    [DisplayName("Payment Schedule Type")]
+    [IsoXmlTag("PmtSchdlTp")]
+    public PaymentScheduleType2Choice_? PaymentScheduleType { get; init; }
+
+    /// <summary>
+    /// Registered Contract Identification.
+    /// </summary>
+    [DisplayName("Registered Contract Identification")]
+    [IsoXmlTag("RegdCtrctId")]
+    public required DocumentIdentification29 RegisteredContractIdentification { get; init; }
+
+    /// <summary>
+    /// Previous Registered Contract Identification.
+    /// </summary>
+    [DisplayName("Previous Registered Contract Identification")]
+    [IsoXmlTag("PrvsRegdCtrctId")]
+    public DocumentIdentification22? PreviousRegisteredContractIdentification { get; init; }
+
+    /// <summary>
+    /// Registered Contract Journal.
+    /// </summary>
+    [DisplayName("Registered Contract Journal")]
+    [IsoXmlTag("RegdCtrctJrnl")]
+    public ValueList<RegisteredContractJournal3> RegisteredContractJournal { get; init; } = [];
+
+    /// <summary>
+    /// Amendment.
+    /// </summary>
+    [DisplayName("Amendment")]
+    [IsoXmlTag("Amdmnt")]
+    public ValueList<RegisteredContractAmendment1> Amendment { get; init; } = [];
+
+    /// <summary>
+    /// Submission.
+    /// </summary>
+    [DisplayName("Submission")]
+    [IsoXmlTag("Submissn")]
+    public required RegisteredContractCommunication1 Submission { get; init; }
+
+    /// <summary>
     /// Delivery.
     /// </summary>
     [DisplayName("Delivery")]
     [IsoXmlTag("Dlvry")]
     public required RegisteredContractCommunication1 Delivery { get; init; }
+
+    /// <summary>
+    /// Loan Principal Amount.
+    /// </summary>
+    [DisplayName("Loan Principal Amount")]
+    [IsoXmlTag("LnPrncplAmt")]
+    public ActiveCurrencyAndAmount? LoanPrincipalAmount { get; init; }
 
     /// <summary>
     /// Estimated Date Indicator.
@@ -66,58 +115,9 @@ public record RegisteredContract18
     public required TrueFalseIndicator InterCompanyLoan { get; init; }
 
     /// <summary>
-    /// Issuer Financial Institution.
+    /// Additional Information.
     /// </summary>
-    [DisplayName("Issuer Financial Institution")]
-    [IsoXmlTag("IssrFI")]
-    public required BranchAndFinancialInstitutionIdentification8 IssuerFinancialInstitution { get; init; }
-
-    /// <summary>
-    /// Loan Principal Amount.
-    /// </summary>
-    [DisplayName("Loan Principal Amount")]
-    [IsoXmlTag("LnPrncplAmt")]
-    public ActiveCurrencyAndAmount? LoanPrincipalAmount { get; init; }
-
-    /// <summary>
-    /// Original Contract Registration Request.
-    /// </summary>
-    [DisplayName("Original Contract Registration Request")]
-    [IsoXmlTag("OrgnlCtrctRegnReq")]
-    public Max35Text? OriginalContractRegistrationRequest { get; init; }
-
-    /// <summary>
-    /// Payment Schedule Type.
-    /// </summary>
-    [DisplayName("Payment Schedule Type")]
-    [IsoXmlTag("PmtSchdlTp")]
-    public PaymentScheduleType2Choice_? PaymentScheduleType { get; init; }
-
-    /// <summary>
-    /// Previous Registered Contract Identification.
-    /// </summary>
-    [DisplayName("Previous Registered Contract Identification")]
-    [IsoXmlTag("PrvsRegdCtrctId")]
-    public DocumentIdentification22? PreviousRegisteredContractIdentification { get; init; }
-
-    /// <summary>
-    /// Registered Contract Identification.
-    /// </summary>
-    [DisplayName("Registered Contract Identification")]
-    [IsoXmlTag("RegdCtrctId")]
-    public required DocumentIdentification29 RegisteredContractIdentification { get; init; }
-
-    /// <summary>
-    /// Registered Contract Journal.
-    /// </summary>
-    [DisplayName("Registered Contract Journal")]
-    [IsoXmlTag("RegdCtrctJrnl")]
-    public ValueList<RegisteredContractJournal3> RegisteredContractJournal { get; init; } = [];
-
-    /// <summary>
-    /// Submission.
-    /// </summary>
-    [DisplayName("Submission")]
-    [IsoXmlTag("Submissn")]
-    public required RegisteredContractCommunication1 Submission { get; init; }
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public Max1025Text? AdditionalInformation { get; init; }
 }

@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PointOfInteractionComponentCharacteristics10
 {
     /// <summary>
-    /// Communication.
-    /// </summary>
-    [DisplayName("Communication")]
-    [IsoXmlTag("Com")]
-    public ValueList<CommunicationCharacteristics5> Communication { get; init; } = [];
-
-    /// <summary>
     /// Memory.
     /// </summary>
     [DisplayName("Memory")]
     [IsoXmlTag("Mmry")]
     public ValueList<MemoryCharacteristics1> Memory { get; init; } = [];
+
+    /// <summary>
+    /// Communication.
+    /// </summary>
+    [DisplayName("Communication")]
+    [IsoXmlTag("Com")]
+    public ValueList<CommunicationCharacteristics5> Communication { get; init; } = [];
 
     /// <summary>
     /// Security Access Modules.
@@ -38,16 +38,16 @@ public record PointOfInteractionComponentCharacteristics10
     public Number? SecurityAccessModules { get; init; }
 
     /// <summary>
-    /// Security Element.
-    /// </summary>
-    [DisplayName("Security Element")]
-    [IsoXmlTag("SctyElmt")]
-    public ValueList<CryptographicKey18> SecurityElement { get; init; } = [];
-
-    /// <summary>
     /// Subscriber Identity Modules.
     /// </summary>
     [DisplayName("Subscriber Identity Modules")]
     [IsoXmlTag("SbcbrIdntyMdls")]
     public Number? SubscriberIdentityModules { get; init; }
+
+    /// <summary>
+    /// Security Element.
+    /// </summary>
+    [DisplayName("Security Element")]
+    [IsoXmlTag("SctyElmt")]
+    public ValueList<CryptographicKey18> SecurityElement { get; init; } = [];
 }

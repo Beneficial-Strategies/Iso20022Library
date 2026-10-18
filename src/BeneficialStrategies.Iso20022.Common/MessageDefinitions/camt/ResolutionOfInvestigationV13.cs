@@ -53,25 +53,25 @@ public record ResolutionOfInvestigationV13 : IOuterRecord
     public required CaseAssignment6 Assignment { get; init; }
 
     /// <summary>
+    /// Resolved Case.
+    /// </summary>
+    [DisplayName("Resolved Case")]
+    [IsoXmlTag("RslvdCase")]
+    public Case6? ResolvedCase { get; init; }
+
+    /// <summary>
+    /// Status.
+    /// </summary>
+    [DisplayName("Status")]
+    [IsoXmlTag("Sts")]
+    public required InvestigationStatus6Choice_ Status { get; init; }
+
+    /// <summary>
     /// Cancellation Details.
     /// </summary>
     [DisplayName("Cancellation Details")]
     [IsoXmlTag("CxlDtls")]
     public ValueList<UnderlyingTransaction32> CancellationDetails { get; init; } = [];
-
-    /// <summary>
-    /// Claim Non Receipt Details.
-    /// </summary>
-    [DisplayName("Claim Non Receipt Details")]
-    [IsoXmlTag("ClmNonRctDtls")]
-    public ClaimNonReceipt3Choice_? ClaimNonReceiptDetails { get; init; }
-
-    /// <summary>
-    /// Correction Transaction.
-    /// </summary>
-    [DisplayName("Correction Transaction")]
-    [IsoXmlTag("CrrctnTx")]
-    public CorrectiveTransaction5Choice_? CorrectionTransaction { get; init; }
 
     /// <summary>
     /// Modification Details.
@@ -81,18 +81,11 @@ public record ResolutionOfInvestigationV13 : IOuterRecord
     public PaymentTransaction157? ModificationDetails { get; init; }
 
     /// <summary>
-    /// Resolution Related Information.
+    /// Claim Non Receipt Details.
     /// </summary>
-    [DisplayName("Resolution Related Information")]
-    [IsoXmlTag("RsltnRltdInf")]
-    public ResolutionData5? ResolutionRelatedInformation { get; init; }
-
-    /// <summary>
-    /// Resolved Case.
-    /// </summary>
-    [DisplayName("Resolved Case")]
-    [IsoXmlTag("RslvdCase")]
-    public Case6? ResolvedCase { get; init; }
+    [DisplayName("Claim Non Receipt Details")]
+    [IsoXmlTag("ClmNonRctDtls")]
+    public ClaimNonReceipt3Choice_? ClaimNonReceiptDetails { get; init; }
 
     /// <summary>
     /// Statement Details.
@@ -102,11 +95,18 @@ public record ResolutionOfInvestigationV13 : IOuterRecord
     public StatementResolutionEntry5? StatementDetails { get; init; }
 
     /// <summary>
-    /// Status.
+    /// Correction Transaction.
     /// </summary>
-    [DisplayName("Status")]
-    [IsoXmlTag("Sts")]
-    public required InvestigationStatus6Choice_ Status { get; init; }
+    [DisplayName("Correction Transaction")]
+    [IsoXmlTag("CrrctnTx")]
+    public CorrectiveTransaction5Choice_? CorrectionTransaction { get; init; }
+
+    /// <summary>
+    /// Resolution Related Information.
+    /// </summary>
+    [DisplayName("Resolution Related Information")]
+    [IsoXmlTag("RsltnRltdInf")]
+    public ResolutionData5? ResolutionRelatedInformation { get; init; }
 
     /// <summary>
     /// Supplementary Data.

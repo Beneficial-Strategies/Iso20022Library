@@ -17,32 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMTransaction37
 {
     /// <summary>
-    /// Action.
+    /// Transaction Identification.
     /// </summary>
-    [DisplayName("Action")]
-    [IsoXmlTag("Actn")]
-    public ValueList<Action7> Action { get; init; } = [];
-
-    /// <summary>
-    /// Command.
-    /// </summary>
-    [DisplayName("Command")]
-    [IsoXmlTag("Cmd")]
-    public ValueList<ATMCommand7> Command { get; init; } = [];
-
-    /// <summary>
-    /// Completion Required.
-    /// </summary>
-    [DisplayName("Completion Required")]
-    [IsoXmlTag("CmpltnReqrd")]
-    public TrueFalseIndicator? CompletionRequired { get; init; }
-
-    /// <summary>
-    /// ICC Related Data.
-    /// </summary>
-    [DisplayName("ICC Related Data")]
-    [IsoXmlTag("ICCRltdData")]
-    public Max10000Binary? ICCRelatedData { get; init; }
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public required TransactionIdentifier3 TransactionIdentification { get; init; }
 
     /// <summary>
     /// Reconciliation Identification.
@@ -52,11 +31,11 @@ public record ATMTransaction37
     public Max35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
-    /// Transaction Identification.
+    /// Completion Required.
     /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public required TransactionIdentifier3 TransactionIdentification { get; init; }
+    [DisplayName("Completion Required")]
+    [IsoXmlTag("CmpltnReqrd")]
+    public TrueFalseIndicator? CompletionRequired { get; init; }
 
     /// <summary>
     /// Transaction Response.
@@ -64,4 +43,25 @@ public record ATMTransaction37
     [DisplayName("Transaction Response")]
     [IsoXmlTag("TxRspn")]
     public required ResponseType12 TransactionResponse { get; init; }
+
+    /// <summary>
+    /// Action.
+    /// </summary>
+    [DisplayName("Action")]
+    [IsoXmlTag("Actn")]
+    public ValueList<Action7> Action { get; init; } = [];
+
+    /// <summary>
+    /// ICC Related Data.
+    /// </summary>
+    [DisplayName("ICC Related Data")]
+    [IsoXmlTag("ICCRltdData")]
+    public Max10000Binary? ICCRelatedData { get; init; }
+
+    /// <summary>
+    /// Command.
+    /// </summary>
+    [DisplayName("Command")]
+    [IsoXmlTag("Cmd")]
+    public ValueList<ATMCommand7> Command { get; init; } = [];
 }

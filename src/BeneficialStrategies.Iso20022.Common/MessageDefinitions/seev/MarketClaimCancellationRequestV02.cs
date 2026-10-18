@@ -46,11 +46,18 @@ public record MarketClaimCancellationRequestV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Account Details.
+    /// Market Claim Creation Identification.
     /// </summary>
-    [DisplayName("Account Details")]
-    [IsoXmlTag("AcctDtls")]
-    public required AccountIdentification70 AccountDetails { get; init; }
+    [DisplayName("Market Claim Creation Identification")]
+    [IsoXmlTag("MktClmCreId")]
+    public required DocumentIdentification9 MarketClaimCreationIdentification { get; init; }
+
+    /// <summary>
+    /// Transaction Reference.
+    /// </summary>
+    [DisplayName("Transaction Reference")]
+    [IsoXmlTag("TxRef")]
+    public required References26 TransactionReference { get; init; }
 
     /// <summary>
     /// Corporate Action General Information.
@@ -60,11 +67,11 @@ public record MarketClaimCancellationRequestV02 : IOuterRecord
     public required CorporateActionGeneralInformation181 CorporateActionGeneralInformation { get; init; }
 
     /// <summary>
-    /// Market Claim Creation Identification.
+    /// Account Details.
     /// </summary>
-    [DisplayName("Market Claim Creation Identification")]
-    [IsoXmlTag("MktClmCreId")]
-    public required DocumentIdentification9 MarketClaimCreationIdentification { get; init; }
+    [DisplayName("Account Details")]
+    [IsoXmlTag("AcctDtls")]
+    public required AccountIdentification70 AccountDetails { get; init; }
 
     /// <summary>
     /// Supplementary Data.
@@ -72,11 +79,4 @@ public record MarketClaimCancellationRequestV02 : IOuterRecord
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Transaction Reference.
-    /// </summary>
-    [DisplayName("Transaction Reference")]
-    [IsoXmlTag("TxRef")]
-    public required References26 TransactionReference { get; init; }
 }

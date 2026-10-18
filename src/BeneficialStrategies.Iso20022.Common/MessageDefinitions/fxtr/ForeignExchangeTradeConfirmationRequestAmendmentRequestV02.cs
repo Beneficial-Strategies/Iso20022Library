@@ -46,11 +46,25 @@ public record ForeignExchangeTradeConfirmationRequestAmendmentRequestV02 : IOute
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Header.
+    /// </summary>
+    [DisplayName("Header")]
+    [IsoXmlTag("Hdr")]
+    public required Header23 Header { get; init; }
+
+    /// <summary>
     /// Amendment Request Identification.
     /// </summary>
     [DisplayName("Amendment Request Identification")]
     [IsoXmlTag("AmdmntReqId")]
     public required MessageIdentification1 AmendmentRequestIdentification { get; init; }
+
+    /// <summary>
+    /// Trading Side Identification.
+    /// </summary>
+    [DisplayName("Trading Side Identification")]
+    [IsoXmlTag("TradgSdId")]
+    public TradePartyIdentification9? TradingSideIdentification { get; init; }
 
     /// <summary>
     /// Counterparty Side Identification.
@@ -60,11 +74,11 @@ public record ForeignExchangeTradeConfirmationRequestAmendmentRequestV02 : IOute
     public TradePartyIdentification9? CounterpartySideIdentification { get; init; }
 
     /// <summary>
-    /// Header.
+    /// Trade Detail.
     /// </summary>
-    [DisplayName("Header")]
-    [IsoXmlTag("Hdr")]
-    public required Header23 Header { get; init; }
+    [DisplayName("Trade Detail")]
+    [IsoXmlTag("TradDtl")]
+    public required Trade9 TradeDetail { get; init; }
 
     /// <summary>
     /// Query Period.
@@ -93,18 +107,4 @@ public record ForeignExchangeTradeConfirmationRequestAmendmentRequestV02 : IOute
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Trade Detail.
-    /// </summary>
-    [DisplayName("Trade Detail")]
-    [IsoXmlTag("TradDtl")]
-    public required Trade9 TradeDetail { get; init; }
-
-    /// <summary>
-    /// Trading Side Identification.
-    /// </summary>
-    [DisplayName("Trading Side Identification")]
-    [IsoXmlTag("TradgSdId")]
-    public TradePartyIdentification9? TradingSideIdentification { get; init; }
 }

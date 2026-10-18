@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record LoginResponse6
 {
     /// <summary>
-    /// Output Display.
-    /// </summary>
-    [DisplayName("Output Display")]
-    [IsoXmlTag("OutptDisp")]
-    public ActionMessage11? OutputDisplay { get; init; }
-
-    /// <summary>
-    /// POI Capabilities.
-    /// </summary>
-    [DisplayName("POI Capabilities")]
-    [IsoXmlTag("POICpblties")]
-    public PointOfInteractionCapabilities9? POICapabilities { get; init; }
-
-    /// <summary>
     /// POI Date Time.
     /// </summary>
     [DisplayName("POI Date Time")]
@@ -43,4 +29,18 @@ public record LoginResponse6
     [DisplayName("POI Software")]
     [IsoXmlTag("POISftwr")]
     public ValueList<PointOfInteractionComponent15> POISoftware { get; init; } = [];
+
+    /// <summary>
+    /// POI Capabilities.
+    /// </summary>
+    [DisplayName("POI Capabilities")]
+    [IsoXmlTag("POICpblties")]
+    public PointOfInteractionCapabilities9? POICapabilities { get; init; }
+
+    /// <summary>
+    /// Output Display.
+    /// </summary>
+    [DisplayName("Output Display")]
+    [IsoXmlTag("OutptDisp")]
+    public ActionMessage11? OutputDisplay { get; init; }
 }

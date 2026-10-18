@@ -46,18 +46,18 @@ public record InformationRequestResponseV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Investigation Identification.
-    /// </summary>
-    [DisplayName("Investigation Identification")]
-    [IsoXmlTag("InvstgtnId")]
-    public required Max35Text InvestigationIdentification { get; init; }
-
-    /// <summary>
     /// Response Identification.
     /// </summary>
     [DisplayName("Response Identification")]
     [IsoXmlTag("RspnId")]
     public required Max35Text ResponseIdentification { get; init; }
+
+    /// <summary>
+    /// Investigation Identification.
+    /// </summary>
+    [DisplayName("Investigation Identification")]
+    [IsoXmlTag("InvstgtnId")]
+    public required Max35Text InvestigationIdentification { get; init; }
 
     /// <summary>
     /// Response Status.
@@ -67,18 +67,18 @@ public record InformationRequestResponseV02 : IOuterRecord
     public required StatusResponse1Code ResponseStatus { get; init; }
 
     /// <summary>
-    /// Return Indicator.
-    /// </summary>
-    [DisplayName("Return Indicator")]
-    [IsoXmlTag("RtrInd")]
-    public ValueList<ReturnIndicator2> ReturnIndicator { get; init; } = [];
-
-    /// <summary>
     /// Search Criteria.
     /// </summary>
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
     public required SearchCriteria2Choice_ SearchCriteria { get; init; }
+
+    /// <summary>
+    /// Return Indicator.
+    /// </summary>
+    [DisplayName("Return Indicator")]
+    [IsoXmlTag("RtrInd")]
+    public ValueList<ReturnIndicator2> ReturnIndicator { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

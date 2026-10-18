@@ -17,25 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record RegisteredContract19
 {
     /// <summary>
-    /// Attachment.
+    /// Registered Contract Closure Identification.
     /// </summary>
-    [DisplayName("Attachment")]
-    [IsoXmlTag("Attchmnt")]
-    public ValueList<DocumentGeneralInformation5> Attachment { get; init; } = [];
+    [DisplayName("Registered Contract Closure Identification")]
+    [IsoXmlTag("RegdCtrctClsrId")]
+    public required Max35Text RegisteredContractClosureIdentification { get; init; }
 
     /// <summary>
-    /// Cession.
+    /// Reporting Party.
     /// </summary>
-    [DisplayName("Cession")]
-    [IsoXmlTag("Cssn")]
-    public ContractCessionData2? Cession { get; init; }
+    [DisplayName("Reporting Party")]
+    [IsoXmlTag("RptgPty")]
+    public required TradeParty6 ReportingParty { get; init; }
 
     /// <summary>
-    /// Closure Reason.
+    /// Registration Agent.
     /// </summary>
-    [DisplayName("Closure Reason")]
-    [IsoXmlTag("ClsrRsn")]
-    public required ContractClosureReason1Choice_ ClosureReason { get; init; }
+    [DisplayName("Registration Agent")]
+    [IsoXmlTag("RegnAgt")]
+    public required BranchAndFinancialInstitutionIdentification8 RegistrationAgent { get; init; }
 
     /// <summary>
     /// Original Registered Contract.
@@ -52,25 +52,25 @@ public record RegisteredContract19
     public required Priority2Code Priority { get; init; }
 
     /// <summary>
-    /// Registered Contract Closure Identification.
+    /// Closure Reason.
     /// </summary>
-    [DisplayName("Registered Contract Closure Identification")]
-    [IsoXmlTag("RegdCtrctClsrId")]
-    public required Max35Text RegisteredContractClosureIdentification { get; init; }
+    [DisplayName("Closure Reason")]
+    [IsoXmlTag("ClsrRsn")]
+    public required ContractClosureReason1Choice_ ClosureReason { get; init; }
 
     /// <summary>
-    /// Registration Agent.
+    /// Cession.
     /// </summary>
-    [DisplayName("Registration Agent")]
-    [IsoXmlTag("RegnAgt")]
-    public required BranchAndFinancialInstitutionIdentification8 RegistrationAgent { get; init; }
+    [DisplayName("Cession")]
+    [IsoXmlTag("Cssn")]
+    public ContractCessionData2? Cession { get; init; }
 
     /// <summary>
-    /// Reporting Party.
+    /// Attachment.
     /// </summary>
-    [DisplayName("Reporting Party")]
-    [IsoXmlTag("RptgPty")]
-    public required TradeParty6 ReportingParty { get; init; }
+    [DisplayName("Attachment")]
+    [IsoXmlTag("Attchmnt")]
+    public ValueList<DocumentGeneralInformation5> Attachment { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

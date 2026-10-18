@@ -24,32 +24,18 @@ public record HostCommunicationParameter7
     public required TerminalManagementAction3Code ActionType { get; init; }
 
     /// <summary>
-    /// Address.
-    /// </summary>
-    [DisplayName("Address")]
-    [IsoXmlTag("Adr")]
-    public NetworkParameters7? Address { get; init; }
-
-    /// <summary>
-    /// Encoding Mode.
-    /// </summary>
-    [DisplayName("Encoding Mode")]
-    [IsoXmlTag("NcodgMd")]
-    public CAPEEncodingMode1Code? EncodingMode { get; init; }
-
-    /// <summary>
-    /// Exchange Mode.
-    /// </summary>
-    [DisplayName("Exchange Mode")]
-    [IsoXmlTag("XchgMd")]
-    public CAPEExchangeMode1Code? ExchangeMode { get; init; }
-
-    /// <summary>
     /// Host Identification.
     /// </summary>
     [DisplayName("Host Identification")]
     [IsoXmlTag("HstId")]
     public required Max35Text HostIdentification { get; init; }
+
+    /// <summary>
+    /// Address.
+    /// </summary>
+    [DisplayName("Address")]
+    [IsoXmlTag("Adr")]
+    public NetworkParameters7? Address { get; init; }
 
     /// <summary>
     /// Key.
@@ -71,4 +57,18 @@ public record HostCommunicationParameter7
     [DisplayName("Physical Interface")]
     [IsoXmlTag("PhysIntrfc")]
     public PhysicalInterfaceParameter1? PhysicalInterface { get; init; }
+
+    /// <summary>
+    /// Exchange Mode.
+    /// </summary>
+    [DisplayName("Exchange Mode")]
+    [IsoXmlTag("XchgMd")]
+    public CAPEExchangeMode1Code? ExchangeMode { get; init; }
+
+    /// <summary>
+    /// Encoding Mode.
+    /// </summary>
+    [DisplayName("Encoding Mode")]
+    [IsoXmlTag("NcodgMd")]
+    public CAPEEncodingMode1Code? EncodingMode { get; init; }
 }

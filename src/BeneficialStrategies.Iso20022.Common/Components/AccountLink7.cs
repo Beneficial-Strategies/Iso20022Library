@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AccountLink7
 {
     /// <summary>
+    /// Securities Account.
+    /// </summary>
+    [DisplayName("Securities Account")]
+    [IsoXmlTag("SctiesAcct")]
+    public SecuritiesAccount19? SecuritiesAccount { get; init; }
+
+    /// <summary>
     /// Block Chain Address Or Wallet.
     /// </summary>
     [DisplayName("Block Chain Address Or Wallet")]
@@ -31,34 +38,6 @@ public record AccountLink7
     public required CashAccount38 CashAccount { get; init; }
 
     /// <summary>
-    /// Cash Settlement Indicator.
-    /// </summary>
-    [DisplayName("Cash Settlement Indicator")]
-    [IsoXmlTag("CshSttlmInd")]
-    public required YesNoIndicator CashSettlementIndicator { get; init; }
-
-    /// <summary>
-    /// Collateralisation Indicator.
-    /// </summary>
-    [DisplayName("Collateralisation Indicator")]
-    [IsoXmlTag("CollstnInd")]
-    public required YesNoIndicator CollateralisationIndicator { get; init; }
-
-    /// <summary>
-    /// Default Indicator.
-    /// </summary>
-    [DisplayName("Default Indicator")]
-    [IsoXmlTag("DfltInd")]
-    public required YesNoIndicator DefaultIndicator { get; init; }
-
-    /// <summary>
-    /// Securities Account.
-    /// </summary>
-    [DisplayName("Securities Account")]
-    [IsoXmlTag("SctiesAcct")]
-    public SecuritiesAccount19? SecuritiesAccount { get; init; }
-
-    /// <summary>
     /// Valid From.
     /// </summary>
     [DisplayName("Valid From")]
@@ -71,4 +50,25 @@ public record AccountLink7
     [DisplayName("Valid To")]
     [IsoXmlTag("VldTo")]
     public DateAndDateTime2Choice_? ValidTo { get; init; }
+
+    /// <summary>
+    /// Default Indicator.
+    /// </summary>
+    [DisplayName("Default Indicator")]
+    [IsoXmlTag("DfltInd")]
+    public required YesNoIndicator DefaultIndicator { get; init; }
+
+    /// <summary>
+    /// Collateralisation Indicator.
+    /// </summary>
+    [DisplayName("Collateralisation Indicator")]
+    [IsoXmlTag("CollstnInd")]
+    public required YesNoIndicator CollateralisationIndicator { get; init; }
+
+    /// <summary>
+    /// Cash Settlement Indicator.
+    /// </summary>
+    [DisplayName("Cash Settlement Indicator")]
+    [IsoXmlTag("CshSttlmInd")]
+    public required YesNoIndicator CashSettlementIndicator { get; init; }
 }

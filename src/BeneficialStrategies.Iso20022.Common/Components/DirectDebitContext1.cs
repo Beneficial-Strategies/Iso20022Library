@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record DirectDebitContext1
 {
     /// <summary>
-    /// Creditor.
-    /// </summary>
-    [DisplayName("Creditor")]
-    [IsoXmlTag("Cdtr")]
-    public PartyIdentification272? Creditor { get; init; }
-
-    /// <summary>
-    /// Creditor Account.
-    /// </summary>
-    [DisplayName("Creditor Account")]
-    [IsoXmlTag("CdtrAcct")]
-    public CashAccount40? CreditorAccount { get; init; }
-
-    /// <summary>
     /// Debtor.
     /// </summary>
     [DisplayName("Debtor")]
@@ -45,11 +31,25 @@ public record DirectDebitContext1
     public CashAccount40? DebtorAccount { get; init; }
 
     /// <summary>
-    /// Mandate Related Information.
+    /// Protected Debtor Account.
     /// </summary>
-    [DisplayName("Mandate Related Information")]
-    [IsoXmlTag("MndtRltdInf")]
-    public required MandateRelatedInformation17 MandateRelatedInformation { get; init; }
+    [DisplayName("Protected Debtor Account")]
+    [IsoXmlTag("PrtctdDbtrAcct")]
+    public ContentInformationType39? ProtectedDebtorAccount { get; init; }
+
+    /// <summary>
+    /// Creditor.
+    /// </summary>
+    [DisplayName("Creditor")]
+    [IsoXmlTag("Cdtr")]
+    public PartyIdentification272? Creditor { get; init; }
+
+    /// <summary>
+    /// Creditor Account.
+    /// </summary>
+    [DisplayName("Creditor Account")]
+    [IsoXmlTag("CdtrAcct")]
+    public CashAccount40? CreditorAccount { get; init; }
 
     /// <summary>
     /// Protected Creditor Account.
@@ -59,9 +59,9 @@ public record DirectDebitContext1
     public ContentInformationType39? ProtectedCreditorAccount { get; init; }
 
     /// <summary>
-    /// Protected Debtor Account.
+    /// Mandate Related Information.
     /// </summary>
-    [DisplayName("Protected Debtor Account")]
-    [IsoXmlTag("PrtctdDbtrAcct")]
-    public ContentInformationType39? ProtectedDebtorAccount { get; init; }
+    [DisplayName("Mandate Related Information")]
+    [IsoXmlTag("MndtRltdInf")]
+    public required MandateRelatedInformation17 MandateRelatedInformation { get; init; }
 }

@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateActionRate131
 {
     /// <summary>
-    /// Additional Tax.
-    /// </summary>
-    [DisplayName("Additional Tax")]
-    [IsoXmlTag("AddtlTax")]
-    public RateAndAmountFormat67Choice_? AdditionalTax { get; init; }
-
-    /// <summary>
     /// Gross Distribution Rate.
     /// </summary>
     [DisplayName("Gross Distribution Rate")]
     [IsoXmlTag("GrssDstrbtnRate")]
     public ValueList<GrossDividendRateFormat39Choice_> GrossDistributionRate { get; init; } = [];
+
+    /// <summary>
+    /// Net Distribution Rate.
+    /// </summary>
+    [DisplayName("Net Distribution Rate")]
+    [IsoXmlTag("NetDstrbtnRate")]
+    public ValueList<NetDividendRateFormat41Choice_> NetDistributionRate { get; init; } = [];
 
     /// <summary>
     /// Gross Interest Rate Used For Payment.
@@ -46,18 +46,18 @@ public record CorporateActionRate131
     public decimal? MaximumAllowedOversubscriptionRate { get; init; }
 
     /// <summary>
-    /// Net Distribution Rate.
-    /// </summary>
-    [DisplayName("Net Distribution Rate")]
-    [IsoXmlTag("NetDstrbtnRate")]
-    public ValueList<NetDividendRateFormat41Choice_> NetDistributionRate { get; init; } = [];
-
-    /// <summary>
     /// Proration Rate.
     /// </summary>
     [DisplayName("Proration Rate")]
     [IsoXmlTag("PrratnRate")]
     public decimal? ProrationRate { get; init; }
+
+    /// <summary>
+    /// Withholding Tax Rate.
+    /// </summary>
+    [DisplayName("Withholding Tax Rate")]
+    [IsoXmlTag("WhldgTaxRate")]
+    public ValueList<RateAndAmountFormat66Choice_> WithholdingTaxRate { get; init; } = [];
 
     /// <summary>
     /// Second Level Tax.
@@ -67,17 +67,17 @@ public record CorporateActionRate131
     public ValueList<RateAndAmountFormat66Choice_> SecondLevelTax { get; init; } = [];
 
     /// <summary>
+    /// Additional Tax.
+    /// </summary>
+    [DisplayName("Additional Tax")]
+    [IsoXmlTag("AddtlTax")]
+    public RateAndAmountFormat67Choice_? AdditionalTax { get; init; }
+
+    /// <summary>
     /// Taxable Income Per Dividend Share.
     /// </summary>
     [DisplayName("Taxable Income Per Dividend Share")]
     [IsoXmlTag("TaxblIncmPerDvddShr")]
     public ValueList<RateTypeAndAmountAndStatus33> TaxableIncomePerDividendShare { get; init; } =
         [];
-
-    /// <summary>
-    /// Withholding Tax Rate.
-    /// </summary>
-    [DisplayName("Withholding Tax Rate")]
-    [IsoXmlTag("WhldgTaxRate")]
-    public ValueList<RateAndAmountFormat66Choice_> WithholdingTaxRate { get; init; } = [];
 }

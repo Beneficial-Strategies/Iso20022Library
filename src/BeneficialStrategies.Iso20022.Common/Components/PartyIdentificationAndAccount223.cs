@@ -17,11 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PartyIdentificationAndAccount223
 {
     /// <summary>
-    /// Additional Information.
+    /// Identification.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public PartyTextInformation2? AdditionalInformation { get; init; }
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public required PartyIdentification120Choice_ Identification { get; init; }
+
+    /// <summary>
+    /// LEI.
+    /// </summary>
+    [DisplayName("LEI")]
+    [IsoXmlTag("LEI")]
+    public LEIIdentifier? LEI { get; init; }
 
     /// <summary>
     /// Alternate Identification.
@@ -52,23 +59,16 @@ public record PartyIdentificationAndAccount223
     public CashAccountIdentification5Choice_? CommissionAccount { get; init; }
 
     /// <summary>
-    /// Identification.
-    /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public required PartyIdentification120Choice_ Identification { get; init; }
-
-    /// <summary>
-    /// LEI.
-    /// </summary>
-    [DisplayName("LEI")]
-    [IsoXmlTag("LEI")]
-    public LEIIdentifier? LEI { get; init; }
-
-    /// <summary>
     /// Tax Account.
     /// </summary>
     [DisplayName("Tax Account")]
     [IsoXmlTag("TaxAcct")]
     public CashAccountIdentification5Choice_? TaxAccount { get; init; }
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public PartyTextInformation2? AdditionalInformation { get; init; }
 }

@@ -17,20 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ActivationStatus3
 {
     /// <summary>
-    /// Effective Activation Date.
-    /// </summary>
-    [DisplayName("Effective Activation Date")]
-    [IsoXmlTag("FctvActvtnDt")]
-    public DateAndDateTime2Choice_? EffectiveActivationDate { get; init; }
-
-    /// <summary>
-    /// Original Activation Reference.
-    /// </summary>
-    [DisplayName("Original Activation Reference")]
-    [IsoXmlTag("OrgnlActvtnRef")]
-    public OriginalActivation3Choice_? OriginalActivationReference { get; init; }
-
-    /// <summary>
     /// Original Business Instruction.
     /// </summary>
     [DisplayName("Original Business Instruction")]
@@ -50,6 +36,20 @@ public record ActivationStatus3
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
     public DebtorActivationStatusReason3? StatusReason { get; init; }
+
+    /// <summary>
+    /// Original Activation Reference.
+    /// </summary>
+    [DisplayName("Original Activation Reference")]
+    [IsoXmlTag("OrgnlActvtnRef")]
+    public OriginalActivation3Choice_? OriginalActivationReference { get; init; }
+
+    /// <summary>
+    /// Effective Activation Date.
+    /// </summary>
+    [DisplayName("Effective Activation Date")]
+    [IsoXmlTag("FctvActvtnDt")]
+    public DateAndDateTime2Choice_? EffectiveActivationDate { get; init; }
 
     /// <summary>
     /// Supplementary Data.

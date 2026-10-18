@@ -46,6 +46,13 @@ public record IntraPositionMovementStatusAdviceV08 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Transaction Identification.
+    /// </summary>
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public required TransactionIdentifications29 TransactionIdentification { get; init; }
+
+    /// <summary>
     /// Linkage.
     /// </summary>
     [DisplayName("Linkage")]
@@ -67,13 +74,6 @@ public record IntraPositionMovementStatusAdviceV08 : IOuterRecord
     public SettlementStatus16Choice_? SettlementStatus { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
     /// Transaction Details.
     /// </summary>
     [DisplayName("Transaction Details")]
@@ -81,9 +81,9 @@ public record IntraPositionMovementStatusAdviceV08 : IOuterRecord
     public IntraPositionDetails60? TransactionDetails { get; init; }
 
     /// <summary>
-    /// Transaction Identification.
+    /// Supplementary Data.
     /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public required TransactionIdentifications29 TransactionIdentification { get; init; }
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

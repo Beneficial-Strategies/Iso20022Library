@@ -46,18 +46,18 @@ public record DeleteLimitV08 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Limit Details.
-    /// </summary>
-    [DisplayName("Limit Details")]
-    [IsoXmlTag("LmtDtls")]
-    public required LimitStructure3Choice_ LimitDetails { get; init; }
-
-    /// <summary>
     /// Message Header.
     /// </summary>
     [DisplayName("Message Header")]
     [IsoXmlTag("MsgHdr")]
     public required MessageHeader1 MessageHeader { get; init; }
+
+    /// <summary>
+    /// Limit Details.
+    /// </summary>
+    [DisplayName("Limit Details")]
+    [IsoXmlTag("LmtDtls")]
+    public required LimitStructure3Choice_ LimitDetails { get; init; }
 
     /// <summary>
     /// Supplementary Data.

@@ -46,6 +46,34 @@ public record AccountExcludedMandateMaintenanceRequestV04 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// References.
+    /// </summary>
+    [DisplayName("References")]
+    [IsoXmlTag("Refs")]
+    public required References4 References { get; init; }
+
+    /// <summary>
+    /// From.
+    /// </summary>
+    [DisplayName("From")]
+    [IsoXmlTag("Fr")]
+    public OrganisationIdentification39? From { get; init; }
+
+    /// <summary>
+    /// Contract Dates.
+    /// </summary>
+    [DisplayName("Contract Dates")]
+    [IsoXmlTag("CtrctDts")]
+    public AccountContract2? ContractDates { get; init; }
+
+    /// <summary>
+    /// Underlying Master Agreement.
+    /// </summary>
+    [DisplayName("Underlying Master Agreement")]
+    [IsoXmlTag("UndrlygMstrAgrmt")]
+    public ContractDocument1? UnderlyingMasterAgreement { get; init; }
+
+    /// <summary>
     /// Account.
     /// </summary>
     [DisplayName("Account")]
@@ -60,18 +88,18 @@ public record AccountExcludedMandateMaintenanceRequestV04 : IOuterRecord
     public required BranchAndFinancialInstitutionIdentification8 AccountServicerIdentification { get; init; }
 
     /// <summary>
+    /// Organisation.
+    /// </summary>
+    [DisplayName("Organisation")]
+    [IsoXmlTag("Org")]
+    public required OrganisationModification3 Organisation { get; init; }
+
+    /// <summary>
     /// Additional Message Information.
     /// </summary>
     [DisplayName("Additional Message Information")]
     [IsoXmlTag("AddtlMsgInf")]
     public AdditionalInformation5? AdditionalMessageInformation { get; init; }
-
-    /// <summary>
-    /// Contract Dates.
-    /// </summary>
-    [DisplayName("Contract Dates")]
-    [IsoXmlTag("CtrctDts")]
-    public AccountContract2? ContractDates { get; init; }
 
     /// <summary>
     /// Digital Signature.
@@ -81,37 +109,9 @@ public record AccountExcludedMandateMaintenanceRequestV04 : IOuterRecord
     public ValueList<PartyAndSignature4> DigitalSignature { get; init; } = [];
 
     /// <summary>
-    /// From.
-    /// </summary>
-    [DisplayName("From")]
-    [IsoXmlTag("Fr")]
-    public OrganisationIdentification39? From { get; init; }
-
-    /// <summary>
-    /// Organisation.
-    /// </summary>
-    [DisplayName("Organisation")]
-    [IsoXmlTag("Org")]
-    public required OrganisationModification3 Organisation { get; init; }
-
-    /// <summary>
-    /// References.
-    /// </summary>
-    [DisplayName("References")]
-    [IsoXmlTag("Refs")]
-    public required References4 References { get; init; }
-
-    /// <summary>
     /// Supplementary Data.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Underlying Master Agreement.
-    /// </summary>
-    [DisplayName("Underlying Master Agreement")]
-    [IsoXmlTag("UndrlygMstrAgrmt")]
-    public ContractDocument1? UnderlyingMasterAgreement { get; init; }
 }

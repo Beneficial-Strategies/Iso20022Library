@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AddendumData7
 {
     /// <summary>
-    /// Additional Data.
-    /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData2> AdditionalData { get; init; } = [];
-
-    /// <summary>
     /// Fleet Line Item.
     /// </summary>
     [DisplayName("Fleet Line Item")]
     [IsoXmlTag("FleetLineItm")]
     public ValueList<FleetLineItem6> FleetLineItem { get; init; } = [];
+
+    /// <summary>
+    /// Additional Data.
+    /// </summary>
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData2> AdditionalData { get; init; } = [];
 }

@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Clearing7
 {
     /// <summary>
+    /// Settlement Netting Eligible Code.
+    /// </summary>
+    [DisplayName("Settlement Netting Eligible Code")]
+    [IsoXmlTag("SttlmNetgElgblCd")]
+    public required NettingEligible1Code SettlementNettingEligibleCode { get; init; }
+
+    /// <summary>
     /// Clearing Segment.
     /// </summary>
     [DisplayName("Clearing Segment")]
@@ -36,11 +43,4 @@ public record Clearing7
     [DisplayName("Non Guaranteed Trade")]
     [IsoXmlTag("NonGrntedTrad")]
     public NonGuaranteedTrade4? NonGuaranteedTrade { get; init; }
-
-    /// <summary>
-    /// Settlement Netting Eligible Code.
-    /// </summary>
-    [DisplayName("Settlement Netting Eligible Code")]
-    [IsoXmlTag("SttlmNetgElgblCd")]
-    public required NettingEligible1Code SettlementNettingEligibleCode { get; init; }
 }

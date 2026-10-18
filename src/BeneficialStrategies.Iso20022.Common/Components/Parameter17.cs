@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Parameter17
 {
     /// <summary>
-    /// Digest Algorithm.
-    /// </summary>
-    [DisplayName("Digest Algorithm")]
-    [IsoXmlTag("DgstAlgo")]
-    public Algorithm26Code? DigestAlgorithm { get; init; }
-
-    /// <summary>
     /// Encryption Format.
     /// </summary>
     [DisplayName("Encryption Format")]
     [IsoXmlTag("NcrptnFrmt")]
     public EncryptionFormat2Code? EncryptionFormat { get; init; }
+
+    /// <summary>
+    /// Digest Algorithm.
+    /// </summary>
+    [DisplayName("Digest Algorithm")]
+    [IsoXmlTag("DgstAlgo")]
+    public Algorithm26Code? DigestAlgorithm { get; init; }
 
     /// <summary>
     /// Mask Generator Algorithm.

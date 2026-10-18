@@ -17,25 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SecurityIdentification47
 {
     /// <summary>
-    /// Additional Information.
+    /// Identification.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public required SecurityIdentification40 Identification { get; init; }
 
     /// <summary>
-    /// Base Currency.
+    /// Name.
     /// </summary>
-    [DisplayName("Base Currency")]
-    [IsoXmlTag("BaseCcy")]
-    public ActiveCurrencyCode? BaseCurrency { get; init; }
+    [DisplayName("Name")]
+    [IsoXmlTag("Nm")]
+    public required Max350Text Name { get; init; }
 
     /// <summary>
-    /// Classification Type.
+    /// Short Name.
     /// </summary>
-    [DisplayName("Classification Type")]
-    [IsoXmlTag("ClssfctnTp")]
-    public SecurityClassificationType2Choice_? ClassificationType { get; init; }
+    [DisplayName("Short Name")]
+    [IsoXmlTag("ShrtNm")]
+    public Max35Text? ShortName { get; init; }
 
     /// <summary>
     /// Class Type.
@@ -45,6 +45,34 @@ public record SecurityIdentification47
     public Max35Text? ClassType { get; init; }
 
     /// <summary>
+    /// Umbrella Name.
+    /// </summary>
+    [DisplayName("Umbrella Name")]
+    [IsoXmlTag("UmbrllNm")]
+    public Max35Text? UmbrellaName { get; init; }
+
+    /// <summary>
+    /// New Umbrella.
+    /// </summary>
+    [DisplayName("New Umbrella")]
+    [IsoXmlTag("NewUmbrll")]
+    public YesNoIndicator? NewUmbrella { get; init; }
+
+    /// <summary>
+    /// Classification Type.
+    /// </summary>
+    [DisplayName("Classification Type")]
+    [IsoXmlTag("ClssfctnTp")]
+    public SecurityClassificationType2Choice_? ClassificationType { get; init; }
+
+    /// <summary>
+    /// Base Currency.
+    /// </summary>
+    [DisplayName("Base Currency")]
+    [IsoXmlTag("BaseCcy")]
+    public ActiveCurrencyCode? BaseCurrency { get; init; }
+
+    /// <summary>
     /// Country Of Domicile.
     /// </summary>
     [DisplayName("Country Of Domicile")]
@@ -52,18 +80,18 @@ public record SecurityIdentification47
     public CountryCode? CountryOfDomicile { get; init; }
 
     /// <summary>
-    /// Ex Post Cost Calculation Basis.
+    /// Registered Distribution Country.
     /// </summary>
-    [DisplayName("Ex Post Cost Calculation Basis")]
-    [IsoXmlTag("ExPstCostClctnBsis")]
-    public ExPostCostCalculationBasis1Choice_? ExPostCostCalculationBasis { get; init; }
+    [DisplayName("Registered Distribution Country")]
+    [IsoXmlTag("RegdDstrbtnCtry")]
+    public ValueList<CountryCode> RegisteredDistributionCountry { get; init; } = [];
 
     /// <summary>
-    /// Identification.
+    /// Product Type.
     /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public required SecurityIdentification40 Identification { get; init; }
+    [DisplayName("Product Type")]
+    [IsoXmlTag("PdctTp")]
+    public ProductStructure1Choice_? ProductType { get; init; }
 
     /// <summary>
     /// Issuer.
@@ -80,41 +108,6 @@ public record SecurityIdentification47
     public GovernanceProcess1Choice_? IssuerProductGovernanceProcess { get; init; }
 
     /// <summary>
-    /// Leveraged Or Contingent Liability.
-    /// </summary>
-    [DisplayName("Leveraged Or Contingent Liability")]
-    [IsoXmlTag("LvrgdOrCntngntLblty")]
-    public YesNoIndicator? LeveragedOrContingentLiability { get; init; }
-
-    /// <summary>
-    /// Name.
-    /// </summary>
-    [DisplayName("Name")]
-    [IsoXmlTag("Nm")]
-    public required Max350Text Name { get; init; }
-
-    /// <summary>
-    /// New Umbrella.
-    /// </summary>
-    [DisplayName("New Umbrella")]
-    [IsoXmlTag("NewUmbrll")]
-    public YesNoIndicator? NewUmbrella { get; init; }
-
-    /// <summary>
-    /// No Retrocession Indicator.
-    /// </summary>
-    [DisplayName("No Retrocession Indicator")]
-    [IsoXmlTag("NoRtrcssnInd")]
-    public YesNoIndicator? NoRetrocessionIndicator { get; init; }
-
-    /// <summary>
-    /// Notional Or Unit Based.
-    /// </summary>
-    [DisplayName("Notional Or Unit Based")]
-    [IsoXmlTag("NtnlOrUnitBased")]
-    public NotionalOrUnitBased1Choice_? NotionalOrUnitBased { get; init; }
-
-    /// <summary>
     /// Product Category.
     /// </summary>
     [DisplayName("Product Category")]
@@ -129,11 +122,11 @@ public record SecurityIdentification47
     public Max140Text? ProductCategoryGermany { get; init; }
 
     /// <summary>
-    /// Product Type.
+    /// Notional Or Unit Based.
     /// </summary>
-    [DisplayName("Product Type")]
-    [IsoXmlTag("PdctTp")]
-    public ProductStructure1Choice_? ProductType { get; init; }
+    [DisplayName("Notional Or Unit Based")]
+    [IsoXmlTag("NtnlOrUnitBased")]
+    public NotionalOrUnitBased1Choice_? NotionalOrUnitBased { get; init; }
 
     /// <summary>
     /// Quotation Type.
@@ -143,23 +136,30 @@ public record SecurityIdentification47
     public QuotationType1Choice_? QuotationType { get; init; }
 
     /// <summary>
-    /// Registered Distribution Country.
+    /// Leveraged Or Contingent Liability.
     /// </summary>
-    [DisplayName("Registered Distribution Country")]
-    [IsoXmlTag("RegdDstrbtnCtry")]
-    public ValueList<CountryCode> RegisteredDistributionCountry { get; init; } = [];
+    [DisplayName("Leveraged Or Contingent Liability")]
+    [IsoXmlTag("LvrgdOrCntngntLblty")]
+    public YesNoIndicator? LeveragedOrContingentLiability { get; init; }
 
     /// <summary>
-    /// Short Name.
+    /// No Retrocession Indicator.
     /// </summary>
-    [DisplayName("Short Name")]
-    [IsoXmlTag("ShrtNm")]
-    public Max35Text? ShortName { get; init; }
+    [DisplayName("No Retrocession Indicator")]
+    [IsoXmlTag("NoRtrcssnInd")]
+    public YesNoIndicator? NoRetrocessionIndicator { get; init; }
 
     /// <summary>
-    /// Umbrella Name.
+    /// Ex Post Cost Calculation Basis.
     /// </summary>
-    [DisplayName("Umbrella Name")]
-    [IsoXmlTag("UmbrllNm")]
-    public Max35Text? UmbrellaName { get; init; }
+    [DisplayName("Ex Post Cost Calculation Basis")]
+    [IsoXmlTag("ExPstCostClctnBsis")]
+    public ExPostCostCalculationBasis1Choice_? ExPostCostCalculationBasis { get; init; }
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

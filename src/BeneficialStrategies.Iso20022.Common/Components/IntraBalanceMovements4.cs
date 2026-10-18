@@ -38,16 +38,16 @@ public record IntraBalanceMovements4
     public BranchAndFinancialInstitutionIdentification8? CashAccountServicer { get; init; }
 
     /// <summary>
-    /// Movement.
-    /// </summary>
-    [DisplayName("Movement")]
-    [IsoXmlTag("Mvmnt")]
-    public ValueList<IntraBalanceMovement7> Movement { get; init; } = [];
-
-    /// <summary>
     /// Status And Reason.
     /// </summary>
     [DisplayName("Status And Reason")]
     [IsoXmlTag("StsAndRsn")]
     public IntraBalanceStatusAndReason2? StatusAndReason { get; init; }
+
+    /// <summary>
+    /// Movement.
+    /// </summary>
+    [DisplayName("Movement")]
+    [IsoXmlTag("Mvmnt")]
+    public ValueList<IntraBalanceMovement7> Movement { get; init; } = [];
 }

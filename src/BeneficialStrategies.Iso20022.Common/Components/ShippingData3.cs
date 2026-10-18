@@ -17,11 +17,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ShippingData3
 {
     /// <summary>
-    /// Additional Data.
+    /// Invoice Number.
     /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
+    [DisplayName("Invoice Number")]
+    [IsoXmlTag("InvcNb")]
+    public Max70Text? InvoiceNumber { get; init; }
+
+    /// <summary>
+    /// Invoice Creation Date Time.
+    /// </summary>
+    [DisplayName("Invoice Creation Date Time")]
+    [IsoXmlTag("InvcCreDtTm")]
+    public ISODateTime? InvoiceCreationDateTime { get; init; }
+
+    /// <summary>
+    /// Service Descriptor Code.
+    /// </summary>
+    [DisplayName("Service Descriptor Code")]
+    [IsoXmlTag("SvcDscrptrCd")]
+    public Max40Text? ServiceDescriptorCode { get; init; }
 
     /// <summary>
     /// Incentive Amount.
@@ -29,6 +43,13 @@ public record ShippingData3
     [DisplayName("Incentive Amount")]
     [IsoXmlTag("IncntivAmt")]
     public ImpliedCurrencyAndAmount? IncentiveAmount { get; init; }
+
+    /// <summary>
+    /// Miscellaneous Expenses.
+    /// </summary>
+    [DisplayName("Miscellaneous Expenses")]
+    [IsoXmlTag("MiscExpnss")]
+    public ImpliedCurrencyAndAmount? MiscellaneousExpenses { get; init; }
 
     /// <summary>
     /// Insurance.
@@ -45,32 +66,25 @@ public record ShippingData3
     public ImpliedCurrencyAndAmount? InsuranceAmount { get; init; }
 
     /// <summary>
-    /// Invoice Creation Date Time.
-    /// </summary>
-    [DisplayName("Invoice Creation Date Time")]
-    [IsoXmlTag("InvcCreDtTm")]
-    public ISODateTime? InvoiceCreationDateTime { get; init; }
-
-    /// <summary>
-    /// Invoice Number.
-    /// </summary>
-    [DisplayName("Invoice Number")]
-    [IsoXmlTag("InvcNb")]
-    public Max70Text? InvoiceNumber { get; init; }
-
-    /// <summary>
-    /// Miscellaneous Expenses.
-    /// </summary>
-    [DisplayName("Miscellaneous Expenses")]
-    [IsoXmlTag("MiscExpnss")]
-    public ImpliedCurrencyAndAmount? MiscellaneousExpenses { get; init; }
-
-    /// <summary>
     /// Net Amount.
     /// </summary>
     [DisplayName("Net Amount")]
     [IsoXmlTag("NetAmt")]
     public ImpliedCurrencyAndAmount? NetAmount { get; init; }
+
+    /// <summary>
+    /// Tax.
+    /// </summary>
+    [DisplayName("Tax")]
+    [IsoXmlTag("Tax")]
+    public ValueList<Tax41> Tax { get; init; } = [];
+
+    /// <summary>
+    /// Summary Commodity Identification.
+    /// </summary>
+    [DisplayName("Summary Commodity Identification")]
+    [IsoXmlTag("SummryCmmdtyId")]
+    public Max35Text? SummaryCommodityIdentification { get; init; }
 
     /// <summary>
     /// Number Of Packages.
@@ -87,23 +101,9 @@ public record ShippingData3
     public ValueList<ShippingPackage3> Package { get; init; } = [];
 
     /// <summary>
-    /// Service Descriptor Code.
+    /// Additional Data.
     /// </summary>
-    [DisplayName("Service Descriptor Code")]
-    [IsoXmlTag("SvcDscrptrCd")]
-    public Max40Text? ServiceDescriptorCode { get; init; }
-
-    /// <summary>
-    /// Summary Commodity Identification.
-    /// </summary>
-    [DisplayName("Summary Commodity Identification")]
-    [IsoXmlTag("SummryCmmdtyId")]
-    public Max35Text? SummaryCommodityIdentification { get; init; }
-
-    /// <summary>
-    /// Tax.
-    /// </summary>
-    [DisplayName("Tax")]
-    [IsoXmlTag("Tax")]
-    public ValueList<Tax41> Tax { get; init; } = [];
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

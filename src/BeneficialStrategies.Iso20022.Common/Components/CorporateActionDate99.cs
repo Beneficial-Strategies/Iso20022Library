@@ -17,27 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateActionDate99
 {
     /// <summary>
-    /// Earliest Payment Date.
-    /// </summary>
-    [DisplayName("Earliest Payment Date")]
-    [IsoXmlTag("EarlstPmtDt")]
-    public ISODate? EarliestPaymentDate { get; init; }
-
-    /// <summary>
-    /// Foreign Exchange Rate Fixing Date.
-    /// </summary>
-    [DisplayName("Foreign Exchange Rate Fixing Date")]
-    [IsoXmlTag("FXRateFxgDt")]
-    public DateAndDateTime2Choice_? ForeignExchangeRateFixingDate { get; init; }
-
-    /// <summary>
-    /// Payment Date.
-    /// </summary>
-    [DisplayName("Payment Date")]
-    [IsoXmlTag("PmtDt")]
-    public ISODate? PaymentDate { get; init; }
-
-    /// <summary>
     /// Posting Date.
     /// </summary>
     [DisplayName("Posting Date")]
@@ -50,4 +29,25 @@ public record CorporateActionDate99
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     public ISODate? ValueDate { get; init; }
+
+    /// <summary>
+    /// Foreign Exchange Rate Fixing Date.
+    /// </summary>
+    [DisplayName("Foreign Exchange Rate Fixing Date")]
+    [IsoXmlTag("FXRateFxgDt")]
+    public DateAndDateTime2Choice_? ForeignExchangeRateFixingDate { get; init; }
+
+    /// <summary>
+    /// Earliest Payment Date.
+    /// </summary>
+    [DisplayName("Earliest Payment Date")]
+    [IsoXmlTag("EarlstPmtDt")]
+    public ISODate? EarliestPaymentDate { get; init; }
+
+    /// <summary>
+    /// Payment Date.
+    /// </summary>
+    [DisplayName("Payment Date")]
+    [IsoXmlTag("PmtDt")]
+    public ISODate? PaymentDate { get; init; }
 }

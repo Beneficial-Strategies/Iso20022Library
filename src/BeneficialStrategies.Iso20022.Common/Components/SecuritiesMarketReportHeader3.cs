@@ -17,27 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SecuritiesMarketReportHeader3
 {
     /// <summary>
-    /// ISIN.
-    /// </summary>
-    [DisplayName("ISIN")]
-    [IsoXmlTag("ISIN")]
-    public ValueList<ISINOct2015Identifier> ISIN { get; init; } = [];
-
-    /// <summary>
-    /// Message Pagination.
-    /// </summary>
-    [DisplayName("Message Pagination")]
-    [IsoXmlTag("MsgPgntn")]
-    public Pagination1? MessagePagination { get; init; }
-
-    /// <summary>
-    /// Number Records.
-    /// </summary>
-    [DisplayName("Number Records")]
-    [IsoXmlTag("NbRcrds")]
-    public Number? NumberRecords { get; init; }
-
-    /// <summary>
     /// Reporting Entity.
     /// </summary>
     [DisplayName("Reporting Entity")]
@@ -52,9 +31,30 @@ public record SecuritiesMarketReportHeader3
     public required Period11Choice_ ReportingPeriod { get; init; }
 
     /// <summary>
+    /// ISIN.
+    /// </summary>
+    [DisplayName("ISIN")]
+    [IsoXmlTag("ISIN")]
+    public ValueList<ISINOct2015Identifier> ISIN { get; init; } = [];
+
+    /// <summary>
     /// Submission Date Time.
     /// </summary>
     [DisplayName("Submission Date Time")]
     [IsoXmlTag("SubmissnDtTm")]
     public ISODateTime? SubmissionDateTime { get; init; }
+
+    /// <summary>
+    /// Message Pagination.
+    /// </summary>
+    [DisplayName("Message Pagination")]
+    [IsoXmlTag("MsgPgntn")]
+    public Pagination1? MessagePagination { get; init; }
+
+    /// <summary>
+    /// Number Records.
+    /// </summary>
+    [DisplayName("Number Records")]
+    [IsoXmlTag("NbRcrds")]
+    public Number? NumberRecords { get; init; }
 }

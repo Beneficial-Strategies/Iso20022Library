@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SessionManagementResponse7
 {
     /// <summary>
+    /// Environment.
+    /// </summary>
+    [DisplayName("Environment")]
+    [IsoXmlTag("Envt")]
+    public required CardPaymentEnvironment80 Environment { get; init; }
+
+    /// <summary>
     /// Context.
     /// </summary>
     [DisplayName("Context")]
@@ -24,18 +31,11 @@ public record SessionManagementResponse7
     public required CardPaymentContext30 Context { get; init; }
 
     /// <summary>
-    /// Diagnosis Response.
+    /// Service Content.
     /// </summary>
-    [DisplayName("Diagnosis Response")]
-    [IsoXmlTag("DgnssRspn")]
-    public DiagnosisResponse6? DiagnosisResponse { get; init; }
-
-    /// <summary>
-    /// Environment.
-    /// </summary>
-    [DisplayName("Environment")]
-    [IsoXmlTag("Envt")]
-    public required CardPaymentEnvironment80 Environment { get; init; }
+    [DisplayName("Service Content")]
+    [IsoXmlTag("SvcCntt")]
+    public required RetailerService5Code ServiceContent { get; init; }
 
     /// <summary>
     /// Login Response.
@@ -45,18 +45,18 @@ public record SessionManagementResponse7
     public LoginResponse6? LoginResponse { get; init; }
 
     /// <summary>
+    /// Diagnosis Response.
+    /// </summary>
+    [DisplayName("Diagnosis Response")]
+    [IsoXmlTag("DgnssRspn")]
+    public DiagnosisResponse6? DiagnosisResponse { get; init; }
+
+    /// <summary>
     /// Response.
     /// </summary>
     [DisplayName("Response")]
     [IsoXmlTag("Rspn")]
     public required ResponseType11 Response { get; init; }
-
-    /// <summary>
-    /// Service Content.
-    /// </summary>
-    [DisplayName("Service Content")]
-    [IsoXmlTag("SvcCntt")]
-    public required RetailerService5Code ServiceContent { get; init; }
 
     /// <summary>
     /// Supplementary Data.

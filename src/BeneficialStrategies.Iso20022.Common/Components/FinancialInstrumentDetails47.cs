@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record FinancialInstrumentDetails47
 {
     /// <summary>
-    /// Financial Instrument Attributes.
-    /// </summary>
-    [DisplayName("Financial Instrument Attributes")]
-    [IsoXmlTag("FinInstrmAttrbts")]
-    public FinancialInstrumentAttributes112? FinancialInstrumentAttributes { get; init; }
-
-    /// <summary>
     /// Financial Instrument Identification.
     /// </summary>
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
     public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
+
+    /// <summary>
+    /// Financial Instrument Attributes.
+    /// </summary>
+    [DisplayName("Financial Instrument Attributes")]
+    [IsoXmlTag("FinInstrmAttrbts")]
+    public FinancialInstrumentAttributes112? FinancialInstrumentAttributes { get; init; }
 
     /// <summary>
     /// Sub Balance.

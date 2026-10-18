@@ -17,27 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PackageType5
 {
     /// <summary>
-    /// Offset End.
-    /// </summary>
-    [DisplayName("Offset End")]
-    [IsoXmlTag("OffsetEnd")]
-    public PositiveNumber? OffsetEnd { get; init; }
-
-    /// <summary>
-    /// Offset Start.
-    /// </summary>
-    [DisplayName("Offset Start")]
-    [IsoXmlTag("OffsetStart")]
-    public PositiveNumber? OffsetStart { get; init; }
-
-    /// <summary>
-    /// Package Block.
-    /// </summary>
-    [DisplayName("Package Block")]
-    [IsoXmlTag("PackgBlck")]
-    public ValueList<ExternallyDefinedData5> PackageBlock { get; init; } = [];
-
-    /// <summary>
     /// Package Identification.
     /// </summary>
     [DisplayName("Package Identification")]
@@ -50,4 +29,25 @@ public record PackageType5
     [DisplayName("Package Length")]
     [IsoXmlTag("PackgLngth")]
     public PositiveNumber? PackageLength { get; init; }
+
+    /// <summary>
+    /// Offset Start.
+    /// </summary>
+    [DisplayName("Offset Start")]
+    [IsoXmlTag("OffsetStart")]
+    public PositiveNumber? OffsetStart { get; init; }
+
+    /// <summary>
+    /// Offset End.
+    /// </summary>
+    [DisplayName("Offset End")]
+    [IsoXmlTag("OffsetEnd")]
+    public PositiveNumber? OffsetEnd { get; init; }
+
+    /// <summary>
+    /// Package Block.
+    /// </summary>
+    [DisplayName("Package Block")]
+    [IsoXmlTag("PackgBlck")]
+    public ValueList<ExternallyDefinedData5> PackageBlock { get; init; } = [];
 }

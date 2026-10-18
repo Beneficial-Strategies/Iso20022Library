@@ -17,46 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PartyIdentification288
 {
     /// <summary>
-    /// Additional Address.
+    /// Identification.
     /// </summary>
-    [DisplayName("Additional Address")]
-    [IsoXmlTag("AddtlAdr")]
-    public Max256Text? AdditionalAddress { get; init; }
-
-    /// <summary>
-    /// Additional Contact.
-    /// </summary>
-    [DisplayName("Additional Contact")]
-    [IsoXmlTag("AddtlCtct")]
-    public Max256Text? AdditionalContact { get; init; }
-
-    /// <summary>
-    /// Additional Data.
-    /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
-
-    /// <summary>
-    /// Additional Identification.
-    /// </summary>
-    [DisplayName("Additional Identification")]
-    [IsoXmlTag("AddtlId")]
-    public ValueList<AdditionalData1> AdditionalIdentification { get; init; } = [];
-
-    /// <summary>
-    /// Additional Transaction Reference Number.
-    /// </summary>
-    [DisplayName("Additional Transaction Reference Number")]
-    [IsoXmlTag("AddtlTxRefNb")]
-    public Max70Text? AdditionalTransactionReferenceNumber { get; init; }
-
-    /// <summary>
-    /// Address.
-    /// </summary>
-    [DisplayName("Address")]
-    [IsoXmlTag("Adr")]
-    public Address2? Address { get; init; }
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public required Max35Text Identification { get; init; }
 
     /// <summary>
     /// Assigner.
@@ -66,32 +31,116 @@ public record PartyIdentification288
     public Max35Text? Assigner { get; init; }
 
     /// <summary>
-    /// Business Type.
+    /// Short Name.
     /// </summary>
-    [DisplayName("Business Type")]
-    [IsoXmlTag("BizTp")]
-    public Max35Text? BusinessType { get; init; }
+    [DisplayName("Short Name")]
+    [IsoXmlTag("ShrtNm")]
+    public Max35Text? ShortName { get; init; }
 
     /// <summary>
-    /// Business Type Provided By.
+    /// Legal Corporate Name.
     /// </summary>
-    [DisplayName("Business Type Provided By")]
-    [IsoXmlTag("BizTpPrvddBy")]
-    public Max35Text? BusinessTypeProvidedBy { get; init; }
+    [DisplayName("Legal Corporate Name")]
+    [IsoXmlTag("LglCorpNm")]
+    public Max99Text? LegalCorporateName { get; init; }
 
     /// <summary>
-    /// Certification Type.
+    /// Additional Identification.
     /// </summary>
-    [DisplayName("Certification Type")]
-    [IsoXmlTag("CertfctnTp")]
-    public Max35Text? CertificationType { get; init; }
+    [DisplayName("Additional Identification")]
+    [IsoXmlTag("AddtlId")]
+    public ValueList<AdditionalData1> AdditionalIdentification { get; init; } = [];
 
     /// <summary>
-    /// Certification Type Provided By.
+    /// Name And Location.
     /// </summary>
-    [DisplayName("Certification Type Provided By")]
-    [IsoXmlTag("CertfctnTpPrvddBy")]
-    public Max35Text? CertificationTypeProvidedBy { get; init; }
+    [DisplayName("Name And Location")]
+    [IsoXmlTag("NmAndLctn")]
+    public required Max99Text NameAndLocation { get; init; }
+
+    /// <summary>
+    /// Address.
+    /// </summary>
+    [DisplayName("Address")]
+    [IsoXmlTag("Adr")]
+    public Address2? Address { get; init; }
+
+    /// <summary>
+    /// Additional Address.
+    /// </summary>
+    [DisplayName("Additional Address")]
+    [IsoXmlTag("AddtlAdr")]
+    public Max256Text? AdditionalAddress { get; init; }
+
+    /// <summary>
+    /// Geographic Location.
+    /// </summary>
+    [DisplayName("Geographic Location")]
+    [IsoXmlTag("GeogcLctn")]
+    public GeographicPointInDecimalDegrees? GeographicLocation { get; init; }
+
+    /// <summary>
+    /// Email.
+    /// </summary>
+    [DisplayName("Email")]
+    [IsoXmlTag("Email")]
+    public Max256Text? Email { get; init; }
+
+    /// <summary>
+    /// URL.
+    /// </summary>
+    [DisplayName("URL")]
+    [IsoXmlTag("URL")]
+    public Max256Text? URL { get; init; }
+
+    /// <summary>
+    /// Phone.
+    /// </summary>
+    [DisplayName("Phone")]
+    [IsoXmlTag("Phne")]
+    public Max35Text? Phone { get; init; }
+
+    /// <summary>
+    /// Customer Service.
+    /// </summary>
+    [DisplayName("Customer Service")]
+    [IsoXmlTag("CstmrSvc")]
+    public Max35Text? CustomerService { get; init; }
+
+    /// <summary>
+    /// Additional Contact.
+    /// </summary>
+    [DisplayName("Additional Contact")]
+    [IsoXmlTag("AddtlCtct")]
+    public Max256Text? AdditionalContact { get; init; }
+
+    /// <summary>
+    /// Tax Registration Identification.
+    /// </summary>
+    [DisplayName("Tax Registration Identification")]
+    [IsoXmlTag("TaxRegnId")]
+    public Max35Text? TaxRegistrationIdentification { get; init; }
+
+    /// <summary>
+    /// Local Data.
+    /// </summary>
+    [DisplayName("Local Data")]
+    [IsoXmlTag("LclData")]
+    public ValueList<LocalData11> LocalData { get; init; } = [];
+
+    /// <summary>
+    /// Sponsored Merchant.
+    /// </summary>
+    [DisplayName("Sponsored Merchant")]
+    [IsoXmlTag("SpnsrdMrchnt")]
+    public ValueList<SponsoredMerchant3> SponsoredMerchant { get; init; } = [];
+
+    /// <summary>
+    /// Additional Transaction Reference Number.
+    /// </summary>
+    [DisplayName("Additional Transaction Reference Number")]
+    [IsoXmlTag("AddtlTxRefNb")]
+    public Max70Text? AdditionalTransactionReferenceNumber { get; init; }
 
     /// <summary>
     /// Corporate Tax Identification.
@@ -108,67 +157,18 @@ public record PartyIdentification288
     public CorporateTaxType1Code? CorporateTaxIdentificationType { get; init; }
 
     /// <summary>
-    /// Customer Service.
+    /// Business Type.
     /// </summary>
-    [DisplayName("Customer Service")]
-    [IsoXmlTag("CstmrSvc")]
-    public Max35Text? CustomerService { get; init; }
+    [DisplayName("Business Type")]
+    [IsoXmlTag("BizTp")]
+    public Max35Text? BusinessType { get; init; }
 
     /// <summary>
-    /// Email.
+    /// Business Type Provided By.
     /// </summary>
-    [DisplayName("Email")]
-    [IsoXmlTag("Email")]
-    public Max256Text? Email { get; init; }
-
-    /// <summary>
-    /// Geographic Location.
-    /// </summary>
-    [DisplayName("Geographic Location")]
-    [IsoXmlTag("GeogcLctn")]
-    public GeographicPointInDecimalDegrees? GeographicLocation { get; init; }
-
-    /// <summary>
-    /// Identification.
-    /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public required Max35Text Identification { get; init; }
-
-    /// <summary>
-    /// Legal Corporate Name.
-    /// </summary>
-    [DisplayName("Legal Corporate Name")]
-    [IsoXmlTag("LglCorpNm")]
-    public Max99Text? LegalCorporateName { get; init; }
-
-    /// <summary>
-    /// Local Data.
-    /// </summary>
-    [DisplayName("Local Data")]
-    [IsoXmlTag("LclData")]
-    public ValueList<LocalData11> LocalData { get; init; } = [];
-
-    /// <summary>
-    /// Name And Location.
-    /// </summary>
-    [DisplayName("Name And Location")]
-    [IsoXmlTag("NmAndLctn")]
-    public required Max99Text NameAndLocation { get; init; }
-
-    /// <summary>
-    /// Owner Ethnicity Type.
-    /// </summary>
-    [DisplayName("Owner Ethnicity Type")]
-    [IsoXmlTag("OwnrEthnctyTp")]
-    public Max35Text? OwnerEthnicityType { get; init; }
-
-    /// <summary>
-    /// Owner Ethnicity Type Provided By.
-    /// </summary>
-    [DisplayName("Owner Ethnicity Type Provided By")]
-    [IsoXmlTag("OwnrEthnctyTpPrvddBy")]
-    public Max35Text? OwnerEthnicityTypeProvidedBy { get; init; }
+    [DisplayName("Business Type Provided By")]
+    [IsoXmlTag("BizTpPrvddBy")]
+    public Max35Text? BusinessTypeProvidedBy { get; init; }
 
     /// <summary>
     /// Owner Type.
@@ -185,37 +185,37 @@ public record PartyIdentification288
     public Max35Text? OwnerTypeProvidedBy { get; init; }
 
     /// <summary>
-    /// Phone.
+    /// Certification Type.
     /// </summary>
-    [DisplayName("Phone")]
-    [IsoXmlTag("Phne")]
-    public Max35Text? Phone { get; init; }
+    [DisplayName("Certification Type")]
+    [IsoXmlTag("CertfctnTp")]
+    public Max35Text? CertificationType { get; init; }
 
     /// <summary>
-    /// Short Name.
+    /// Certification Type Provided By.
     /// </summary>
-    [DisplayName("Short Name")]
-    [IsoXmlTag("ShrtNm")]
-    public Max35Text? ShortName { get; init; }
+    [DisplayName("Certification Type Provided By")]
+    [IsoXmlTag("CertfctnTpPrvddBy")]
+    public Max35Text? CertificationTypeProvidedBy { get; init; }
 
     /// <summary>
-    /// Sponsored Merchant.
+    /// Owner Ethnicity Type.
     /// </summary>
-    [DisplayName("Sponsored Merchant")]
-    [IsoXmlTag("SpnsrdMrchnt")]
-    public ValueList<SponsoredMerchant3> SponsoredMerchant { get; init; } = [];
+    [DisplayName("Owner Ethnicity Type")]
+    [IsoXmlTag("OwnrEthnctyTp")]
+    public Max35Text? OwnerEthnicityType { get; init; }
 
     /// <summary>
-    /// Tax Registration Identification.
+    /// Owner Ethnicity Type Provided By.
     /// </summary>
-    [DisplayName("Tax Registration Identification")]
-    [IsoXmlTag("TaxRegnId")]
-    public Max35Text? TaxRegistrationIdentification { get; init; }
+    [DisplayName("Owner Ethnicity Type Provided By")]
+    [IsoXmlTag("OwnrEthnctyTpPrvddBy")]
+    public Max35Text? OwnerEthnicityTypeProvidedBy { get; init; }
 
     /// <summary>
-    /// URL.
+    /// Additional Data.
     /// </summary>
-    [DisplayName("URL")]
-    [IsoXmlTag("URL")]
-    public Max256Text? URL { get; init; }
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

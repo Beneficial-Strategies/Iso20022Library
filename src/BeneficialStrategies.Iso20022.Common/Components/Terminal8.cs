@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Terminal8
 {
     /// <summary>
-    /// Additional Identification.
-    /// </summary>
-    [DisplayName("Additional Identification")]
-    [IsoXmlTag("AddtlId")]
-    public ValueList<AdditionalData1> AdditionalIdentification { get; init; } = [];
-
-    /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     public required Max16Text Identification { get; init; }
+
+    /// <summary>
+    /// Additional Identification.
+    /// </summary>
+    [DisplayName("Additional Identification")]
+    [IsoXmlTag("AddtlId")]
+    public ValueList<AdditionalData1> AdditionalIdentification { get; init; } = [];
 }

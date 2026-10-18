@@ -24,6 +24,13 @@ public record ExternallyDefinedData5
     public required Max1025Text Identification { get; init; }
 
     /// <summary>
+    /// Value.
+    /// </summary>
+    [DisplayName("Value")]
+    [IsoXmlTag("Val")]
+    public Max100KBinary? Value { get; init; }
+
+    /// <summary>
     /// Protected Value.
     /// </summary>
     [DisplayName("Protected Value")]
@@ -36,11 +43,4 @@ public record ExternallyDefinedData5
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     public Max1025Text? Type { get; init; }
-
-    /// <summary>
-    /// Value.
-    /// </summary>
-    [DisplayName("Value")]
-    [IsoXmlTag("Val")]
-    public Max100KBinary? Value { get; init; }
 }

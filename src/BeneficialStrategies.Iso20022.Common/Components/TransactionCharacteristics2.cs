@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TransactionCharacteristics2
 {
     /// <summary>
-    /// Additional Data.
+    /// Transaction Type.
     /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
+    [DisplayName("Transaction Type")]
+    [IsoXmlTag("TxTp")]
+    public required ISO8583TransactionTypeCode TransactionType { get; init; }
 
     /// <summary>
-    /// Alternate Message Reason.
+    /// Transaction Sub Type.
     /// </summary>
-    [DisplayName("Alternate Message Reason")]
-    [IsoXmlTag("AltrnMsgRsn")]
-    public ValueList<Max256Text> AlternateMessageReason { get; init; } = [];
+    [DisplayName("Transaction Sub Type")]
+    [IsoXmlTag("TxSubTp")]
+    public Max35Text? TransactionSubType { get; init; }
 
     /// <summary>
     /// Cancellation.
@@ -45,6 +45,13 @@ public record TransactionCharacteristics2
     public ValueList<ISO8583MessageReasonCode> MessageReason { get; init; } = [];
 
     /// <summary>
+    /// Alternate Message Reason.
+    /// </summary>
+    [DisplayName("Alternate Message Reason")]
+    [IsoXmlTag("AltrnMsgRsn")]
+    public ValueList<Max256Text> AlternateMessageReason { get; init; } = [];
+
+    /// <summary>
     /// Transaction Description.
     /// </summary>
     [DisplayName("Transaction Description")]
@@ -52,16 +59,9 @@ public record TransactionCharacteristics2
     public Max1000Text? TransactionDescription { get; init; }
 
     /// <summary>
-    /// Transaction Sub Type.
+    /// Additional Data.
     /// </summary>
-    [DisplayName("Transaction Sub Type")]
-    [IsoXmlTag("TxSubTp")]
-    public Max35Text? TransactionSubType { get; init; }
-
-    /// <summary>
-    /// Transaction Type.
-    /// </summary>
-    [DisplayName("Transaction Type")]
-    [IsoXmlTag("TxTp")]
-    public required ISO8583TransactionTypeCode TransactionType { get; init; }
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

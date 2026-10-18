@@ -24,16 +24,16 @@ public record AccountStatementData3
     public ISODate? Date { get; init; }
 
     /// <summary>
-    /// Details.
-    /// </summary>
-    [DisplayName("Details")]
-    [IsoXmlTag("Dtls")]
-    public ValueList<AccountStatementDetails3> Details { get; init; } = [];
-
-    /// <summary>
     /// Time.
     /// </summary>
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
     public ISOTime? Time { get; init; }
+
+    /// <summary>
+    /// Details.
+    /// </summary>
+    [DisplayName("Details")]
+    [IsoXmlTag("Dtls")]
+    public ValueList<AccountStatementDetails3> Details { get; init; } = [];
 }

@@ -18,11 +18,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record DocumentLineInformation2
 {
     /// <summary>
-    /// Provides details on the amounts of the document line.
+    /// Provides identification of the document line.
     /// </summary>
-    [DisplayName("Amount")]
-    [IsoXmlTag("Amt")]
-    public RemittanceAmount4? Amount { get; init; }
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public ValueList<DocumentLineIdentification1> Identification { get; init; } = [];
 
     /// <summary>
     /// Description associated with the document line.
@@ -32,9 +32,9 @@ public record DocumentLineInformation2
     public Max2048Text? Description { get; init; }
 
     /// <summary>
-    /// Provides identification of the document line.
+    /// Provides details on the amounts of the document line.
     /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public ValueList<DocumentLineIdentification1> Identification { get; init; } = [];
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    public RemittanceAmount4? Amount { get; init; }
 }

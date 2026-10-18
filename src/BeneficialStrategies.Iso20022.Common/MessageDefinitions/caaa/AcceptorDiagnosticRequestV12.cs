@@ -46,18 +46,18 @@ public record AcceptorDiagnosticRequestV12 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Diagnostic Request.
-    /// </summary>
-    [DisplayName("Diagnostic Request")]
-    [IsoXmlTag("DgnstcReq")]
-    public required AcceptorDiagnosticRequest12 DiagnosticRequest { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required Header70 Header { get; init; }
+
+    /// <summary>
+    /// Diagnostic Request.
+    /// </summary>
+    [DisplayName("Diagnostic Request")]
+    [IsoXmlTag("DgnstcReq")]
+    public required AcceptorDiagnosticRequest12 DiagnosticRequest { get; init; }
 
     /// <summary>
     /// Security Trailer.

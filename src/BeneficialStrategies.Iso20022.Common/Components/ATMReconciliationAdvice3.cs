@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ATMReconciliationAdvice3
 {
     /// <summary>
-    /// Command Context.
+    /// Environment.
     /// </summary>
-    [DisplayName("Command Context")]
-    [IsoXmlTag("CmdCntxt")]
-    public ATMCommand9? CommandContext { get; init; }
+    [DisplayName("Environment")]
+    [IsoXmlTag("Envt")]
+    public required ATMEnvironment22 Environment { get; init; }
 
     /// <summary>
     /// Command Result.
@@ -31,11 +31,11 @@ public record ATMReconciliationAdvice3
     public ValueList<ATMCommand8> CommandResult { get; init; } = [];
 
     /// <summary>
-    /// Environment.
+    /// Command Context.
     /// </summary>
-    [DisplayName("Environment")]
-    [IsoXmlTag("Envt")]
-    public required ATMEnvironment22 Environment { get; init; }
+    [DisplayName("Command Context")]
+    [IsoXmlTag("CmdCntxt")]
+    public ATMCommand9? CommandContext { get; init; }
 
     /// <summary>
     /// Transaction.

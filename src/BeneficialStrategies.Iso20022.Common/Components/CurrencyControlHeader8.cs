@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CurrencyControlHeader8
 {
     /// <summary>
+    /// Message Identification.
+    /// </summary>
+    [DisplayName("Message Identification")]
+    [IsoXmlTag("MsgId")]
+    public required Max35Text MessageIdentification { get; init; }
+
+    /// <summary>
     /// Creation Date Time.
     /// </summary>
     [DisplayName("Creation Date Time")]
@@ -24,11 +31,11 @@ public record CurrencyControlHeader8
     public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
-    /// Forwarding Agent.
+    /// Number Of Items.
     /// </summary>
-    [DisplayName("Forwarding Agent")]
-    [IsoXmlTag("FwdgAgt")]
-    public BranchAndFinancialInstitutionIdentification8? ForwardingAgent { get; init; }
+    [DisplayName("Number Of Items")]
+    [IsoXmlTag("NbOfItms")]
+    public required Max15NumericText NumberOfItems { get; init; }
 
     /// <summary>
     /// Initiating Party.
@@ -38,16 +45,9 @@ public record CurrencyControlHeader8
     public required PartyIdentification272 InitiatingParty { get; init; }
 
     /// <summary>
-    /// Message Identification.
+    /// Forwarding Agent.
     /// </summary>
-    [DisplayName("Message Identification")]
-    [IsoXmlTag("MsgId")]
-    public required Max35Text MessageIdentification { get; init; }
-
-    /// <summary>
-    /// Number Of Items.
-    /// </summary>
-    [DisplayName("Number Of Items")]
-    [IsoXmlTag("NbOfItms")]
-    public required Max15NumericText NumberOfItems { get; init; }
+    [DisplayName("Forwarding Agent")]
+    [IsoXmlTag("FwdgAgt")]
+    public BranchAndFinancialInstitutionIdentification8? ForwardingAgent { get; init; }
 }

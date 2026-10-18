@@ -17,6 +17,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PostTradeEvent1
 {
     /// <summary>
+    /// Type.
+    /// </summary>
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public required PostTradeEventType2Choice_ Type { get; init; }
+
+    /// <summary>
     /// Original Reference.
     /// </summary>
     [DisplayName("Original Reference")]
@@ -24,18 +31,11 @@ public record PostTradeEvent1
     public required Max35Text OriginalReference { get; init; }
 
     /// <summary>
-    /// Outstanding Settlement Amount.
+    /// Underlying Liability Reference.
     /// </summary>
-    [DisplayName("Outstanding Settlement Amount")]
-    [IsoXmlTag("OutsdngSttlmAmt")]
-    public ActiveOrHistoricCurrencyAndAmount? OutstandingSettlementAmount { get; init; }
-
-    /// <summary>
-    /// Profit Or Loss.
-    /// </summary>
-    [DisplayName("Profit Or Loss")]
-    [IsoXmlTag("PrftOrLoss")]
-    public ProfitAndLossAmount2? ProfitOrLoss { get; init; }
+    [DisplayName("Underlying Liability Reference")]
+    [IsoXmlTag("UndrlygLbltyRef")]
+    public Max35Text? UnderlyingLiabilityReference { get; init; }
 
     /// <summary>
     /// Profit Or Loss Settlement Date.
@@ -45,16 +45,16 @@ public record PostTradeEvent1
     public ISODate? ProfitOrLossSettlementDate { get; init; }
 
     /// <summary>
-    /// Type.
+    /// Profit Or Loss.
     /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public required PostTradeEventType2Choice_ Type { get; init; }
+    [DisplayName("Profit Or Loss")]
+    [IsoXmlTag("PrftOrLoss")]
+    public ProfitAndLossAmount2? ProfitOrLoss { get; init; }
 
     /// <summary>
-    /// Underlying Liability Reference.
+    /// Outstanding Settlement Amount.
     /// </summary>
-    [DisplayName("Underlying Liability Reference")]
-    [IsoXmlTag("UndrlygLbltyRef")]
-    public Max35Text? UnderlyingLiabilityReference { get; init; }
+    [DisplayName("Outstanding Settlement Amount")]
+    [IsoXmlTag("OutsdngSttlmAmt")]
+    public ActiveOrHistoricCurrencyAndAmount? OutstandingSettlementAmount { get; init; }
 }

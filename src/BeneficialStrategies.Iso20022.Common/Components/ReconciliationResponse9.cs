@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ReconciliationResponse9
 {
     /// <summary>
-    /// Context.
-    /// </summary>
-    [DisplayName("Context")]
-    [IsoXmlTag("Cntxt")]
-    public required CardPaymentContext30 Context { get; init; }
-
-    /// <summary>
     /// Environment.
     /// </summary>
     [DisplayName("Environment")]
     [IsoXmlTag("Envt")]
     public required CardPaymentEnvironment80 Environment { get; init; }
+
+    /// <summary>
+    /// Context.
+    /// </summary>
+    [DisplayName("Context")]
+    [IsoXmlTag("Cntxt")]
+    public required CardPaymentContext30 Context { get; init; }
 
     /// <summary>
     /// Reconciliation Response Data.

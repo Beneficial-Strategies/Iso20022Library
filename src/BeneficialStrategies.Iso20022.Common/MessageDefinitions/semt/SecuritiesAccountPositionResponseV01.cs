@@ -46,6 +46,20 @@ public record SecuritiesAccountPositionResponseV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
+    /// Pagination.
+    /// </summary>
+    [DisplayName("Pagination")]
+    [IsoXmlTag("Pgntn")]
+    public required Pagination1 Pagination { get; init; }
+
+    /// <summary>
+    /// Report General Details.
+    /// </summary>
+    [DisplayName("Report General Details")]
+    [IsoXmlTag("RptGnlDtls")]
+    public required Statement58 ReportGeneralDetails { get; init; }
+
+    /// <summary>
     /// Account Owner.
     /// </summary>
     [DisplayName("Account Owner")]
@@ -67,20 +81,6 @@ public record SecuritiesAccountPositionResponseV01 : IOuterRecord
     public ValueList<Balance30> Balances { get; init; } = [];
 
     /// <summary>
-    /// Other Business Parties.
-    /// </summary>
-    [DisplayName("Other Business Parties")]
-    [IsoXmlTag("OthrBizPties")]
-    public OtherParties46? OtherBusinessParties { get; init; }
-
-    /// <summary>
-    /// Pagination.
-    /// </summary>
-    [DisplayName("Pagination")]
-    [IsoXmlTag("Pgntn")]
-    public required Pagination1 Pagination { get; init; }
-
-    /// <summary>
     /// Party Base Currency Total Amounts.
     /// </summary>
     [DisplayName("Party Base Currency Total Amounts")]
@@ -88,9 +88,9 @@ public record SecuritiesAccountPositionResponseV01 : IOuterRecord
     public TotalValueInPageAndStatement1? PartyBaseCurrencyTotalAmounts { get; init; }
 
     /// <summary>
-    /// Report General Details.
+    /// Other Business Parties.
     /// </summary>
-    [DisplayName("Report General Details")]
-    [IsoXmlTag("RptGnlDtls")]
-    public required Statement58 ReportGeneralDetails { get; init; }
+    [DisplayName("Other Business Parties")]
+    [IsoXmlTag("OthrBizPties")]
+    public OtherParties46? OtherBusinessParties { get; init; }
 }

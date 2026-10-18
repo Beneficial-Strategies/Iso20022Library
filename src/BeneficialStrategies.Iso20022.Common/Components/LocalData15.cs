@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record LocalData15
 {
     /// <summary>
-    /// Additional Data.
+    /// Language.
     /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
-
-    /// <summary>
-    /// Address.
-    /// </summary>
-    [DisplayName("Address")]
-    [IsoXmlTag("Adr")]
-    public LocalAddress1? Address { get; init; }
+    [DisplayName("Language")]
+    [IsoXmlTag("Lang")]
+    public required ISOMax3ALanguageCode Language { get; init; }
 
     /// <summary>
     /// Encoding Format.
@@ -38,16 +31,23 @@ public record LocalData15
     public Max35Text? EncodingFormat { get; init; }
 
     /// <summary>
-    /// Language.
-    /// </summary>
-    [DisplayName("Language")]
-    [IsoXmlTag("Lang")]
-    public required ISOMax3ALanguageCode Language { get; init; }
-
-    /// <summary>
     /// Name.
     /// </summary>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     public CardholderName2? Name { get; init; }
+
+    /// <summary>
+    /// Address.
+    /// </summary>
+    [DisplayName("Address")]
+    [IsoXmlTag("Adr")]
+    public LocalAddress1? Address { get; init; }
+
+    /// <summary>
+    /// Additional Data.
+    /// </summary>
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

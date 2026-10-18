@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record BuyInAdviceDetails2
 {
     /// <summary>
-    /// Buy In Deferral.
+    /// Reference.
     /// </summary>
-    [DisplayName("Buy In Deferral")]
-    [IsoXmlTag("BuyInDfrrl")]
-    public required BuyInDeferral1Code BuyInDeferral { get; init; }
-
-    /// <summary>
-    /// Buy In Price.
-    /// </summary>
-    [DisplayName("Buy In Price")]
-    [IsoXmlTag("BuyInPric")]
-    public RateAndAmountFormat39Choice_? BuyInPrice { get; init; }
-
-    /// <summary>
-    /// Buy In Settlement Date.
-    /// </summary>
-    [DisplayName("Buy In Settlement Date")]
-    [IsoXmlTag("BuyInSttlmDt")]
-    public DateAndDateTime2Choice_? BuyInSettlementDate { get; init; }
+    [DisplayName("Reference")]
+    [IsoXmlTag("Ref")]
+    public required References31 Reference { get; init; }
 
     /// <summary>
     /// Buy In State.
@@ -45,11 +31,11 @@ public record BuyInAdviceDetails2
     public required BuyInState1Code BuyInState { get; init; }
 
     /// <summary>
-    /// Cash Compensation Amount.
+    /// Buy In Deferral.
     /// </summary>
-    [DisplayName("Cash Compensation Amount")]
-    [IsoXmlTag("CshCompstnAmt")]
-    public AmountAndDirection102? CashCompensationAmount { get; init; }
+    [DisplayName("Buy In Deferral")]
+    [IsoXmlTag("BuyInDfrrl")]
+    public required BuyInDeferral1Code BuyInDeferral { get; init; }
 
     /// <summary>
     /// Financial Instrument Identification.
@@ -66,9 +52,23 @@ public record BuyInAdviceDetails2
     public FinancialInstrumentQuantity1Choice_? Quantity { get; init; }
 
     /// <summary>
-    /// Reference.
+    /// Buy In Price.
     /// </summary>
-    [DisplayName("Reference")]
-    [IsoXmlTag("Ref")]
-    public required References31 Reference { get; init; }
+    [DisplayName("Buy In Price")]
+    [IsoXmlTag("BuyInPric")]
+    public RateAndAmountFormat39Choice_? BuyInPrice { get; init; }
+
+    /// <summary>
+    /// Cash Compensation Amount.
+    /// </summary>
+    [DisplayName("Cash Compensation Amount")]
+    [IsoXmlTag("CshCompstnAmt")]
+    public AmountAndDirection102? CashCompensationAmount { get; init; }
+
+    /// <summary>
+    /// Buy In Settlement Date.
+    /// </summary>
+    [DisplayName("Buy In Settlement Date")]
+    [IsoXmlTag("BuyInSttlmDt")]
+    public DateAndDateTime2Choice_? BuyInSettlementDate { get; init; }
 }

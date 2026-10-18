@@ -46,81 +46,11 @@ public record ForeignExchangeTradeStatusAndDetailsNotificationV06 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Agreed Rate.
-    /// </summary>
-    [DisplayName("Agreed Rate")]
-    [IsoXmlTag("AgrdRate")]
-    public required AgreedRate3 AgreedRate { get; init; }
-
-    /// <summary>
-    /// Counterparty Side Identification.
-    /// </summary>
-    [DisplayName("Counterparty Side Identification")]
-    [IsoXmlTag("CtrPtySdId")]
-    public required TradePartyIdentification8 CounterpartySideIdentification { get; init; }
-
-    /// <summary>
-    /// Counterparty Side Settlement Instructions.
-    /// </summary>
-    [DisplayName("Counterparty Side Settlement Instructions")]
-    [IsoXmlTag("CtrPtySdSttlmInstrs")]
-    public SettlementParties120? CounterpartySideSettlementInstructions { get; init; }
-
-    /// <summary>
-    /// General Information.
-    /// </summary>
-    [DisplayName("General Information")]
-    [IsoXmlTag("GnlInf")]
-    public GeneralInformation9? GeneralInformation { get; init; }
-
-    /// <summary>
-    /// Non Deliverable Forward Conditions.
-    /// </summary>
-    [DisplayName("Non Deliverable Forward Conditions")]
-    [IsoXmlTag("NDFConds")]
-    public NonDeliverableForwardConditions2? NonDeliverableForwardConditions { get; init; }
-
-    /// <summary>
-    /// Post Trade Event.
-    /// </summary>
-    [DisplayName("Post Trade Event")]
-    [IsoXmlTag("PstTradEvt")]
-    public PostTradeEvent1? PostTradeEvent { get; init; }
-
-    /// <summary>
-    /// Regulatory Reporting.
-    /// </summary>
-    [DisplayName("Regulatory Reporting")]
-    [IsoXmlTag("RgltryRptg")]
-    public RegulatoryReporting8? RegulatoryReporting { get; init; }
-
-    /// <summary>
-    /// Split Trade Information.
-    /// </summary>
-    [DisplayName("Split Trade Information")]
-    [IsoXmlTag("SpltTradInf")]
-    public ValueList<SplitTradeDetails5> SplitTradeInformation { get; init; } = [];
-
-    /// <summary>
     /// Status Details.
     /// </summary>
     [DisplayName("Status Details")]
     [IsoXmlTag("StsDtls")]
     public required TradeData14 StatusDetails { get; init; }
-
-    /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Trade Amounts.
-    /// </summary>
-    [DisplayName("Trade Amounts")]
-    [IsoXmlTag("TradAmts")]
-    public required AmountsAndValueDate8 TradeAmounts { get; init; }
 
     /// <summary>
     /// Trade Information.
@@ -137,9 +67,79 @@ public record ForeignExchangeTradeStatusAndDetailsNotificationV06 : IOuterRecord
     public required TradePartyIdentification8 TradingSideIdentification { get; init; }
 
     /// <summary>
+    /// Counterparty Side Identification.
+    /// </summary>
+    [DisplayName("Counterparty Side Identification")]
+    [IsoXmlTag("CtrPtySdId")]
+    public required TradePartyIdentification8 CounterpartySideIdentification { get; init; }
+
+    /// <summary>
+    /// Trade Amounts.
+    /// </summary>
+    [DisplayName("Trade Amounts")]
+    [IsoXmlTag("TradAmts")]
+    public required AmountsAndValueDate8 TradeAmounts { get; init; }
+
+    /// <summary>
+    /// Agreed Rate.
+    /// </summary>
+    [DisplayName("Agreed Rate")]
+    [IsoXmlTag("AgrdRate")]
+    public required AgreedRate3 AgreedRate { get; init; }
+
+    /// <summary>
+    /// Non Deliverable Forward Conditions.
+    /// </summary>
+    [DisplayName("Non Deliverable Forward Conditions")]
+    [IsoXmlTag("NDFConds")]
+    public NonDeliverableForwardConditions2? NonDeliverableForwardConditions { get; init; }
+
+    /// <summary>
     /// Trading Side Settlement Instructions.
     /// </summary>
     [DisplayName("Trading Side Settlement Instructions")]
     [IsoXmlTag("TradgSdSttlmInstrs")]
     public SettlementParties120? TradingSideSettlementInstructions { get; init; }
+
+    /// <summary>
+    /// Counterparty Side Settlement Instructions.
+    /// </summary>
+    [DisplayName("Counterparty Side Settlement Instructions")]
+    [IsoXmlTag("CtrPtySdSttlmInstrs")]
+    public SettlementParties120? CounterpartySideSettlementInstructions { get; init; }
+
+    /// <summary>
+    /// General Information.
+    /// </summary>
+    [DisplayName("General Information")]
+    [IsoXmlTag("GnlInf")]
+    public GeneralInformation9? GeneralInformation { get; init; }
+
+    /// <summary>
+    /// Split Trade Information.
+    /// </summary>
+    [DisplayName("Split Trade Information")]
+    [IsoXmlTag("SpltTradInf")]
+    public ValueList<SplitTradeDetails5> SplitTradeInformation { get; init; } = [];
+
+    /// <summary>
+    /// Regulatory Reporting.
+    /// </summary>
+    [DisplayName("Regulatory Reporting")]
+    [IsoXmlTag("RgltryRptg")]
+    public RegulatoryReporting8? RegulatoryReporting { get; init; }
+
+    /// <summary>
+    /// Post Trade Event.
+    /// </summary>
+    [DisplayName("Post Trade Event")]
+    [IsoXmlTag("PstTradEvt")]
+    public PostTradeEvent1? PostTradeEvent { get; init; }
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

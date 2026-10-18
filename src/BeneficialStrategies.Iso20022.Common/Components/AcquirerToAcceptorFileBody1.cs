@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record AcquirerToAcceptorFileBody1
 {
     /// <summary>
-    /// Batch Transfer Response.
+    /// Completion Advice Response.
     /// </summary>
-    [DisplayName("Batch Transfer Response")]
-    [IsoXmlTag("BtchTrfRspn")]
-    public CardPaymentBatchTransferResponse11? BatchTransferResponse { get; init; }
+    [DisplayName("Completion Advice Response")]
+    [IsoXmlTag("CmpltnAdvcRspn")]
+    public AcceptorCompletionAdviceResponse12? CompletionAdviceResponse { get; init; }
 
     /// <summary>
     /// Cancellation Response.
@@ -31,9 +31,9 @@ public record AcquirerToAcceptorFileBody1
     public AcceptorCancellationAdviceResponse12? CancellationResponse { get; init; }
 
     /// <summary>
-    /// Completion Advice Response.
+    /// Batch Transfer Response.
     /// </summary>
-    [DisplayName("Completion Advice Response")]
-    [IsoXmlTag("CmpltnAdvcRspn")]
-    public AcceptorCompletionAdviceResponse12? CompletionAdviceResponse { get; init; }
+    [DisplayName("Batch Transfer Response")]
+    [IsoXmlTag("BtchTrfRspn")]
+    public CardPaymentBatchTransferResponse11? BatchTransferResponse { get; init; }
 }

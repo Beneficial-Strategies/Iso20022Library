@@ -38,31 +38,11 @@ public record MultilateralSettlementRequest3
     public Priority3Code? InstructionPriority { get; init; }
 
     /// <summary>
-    /// Credit or debit transaction contained in an individual settlement request.
+    /// Provides information on the requested settlement time(s) of the instruction.
     /// </summary>
-    /// <remarks>
-    /// Usage: The sum of all amounts (debit and credit records) should net to zero where net settlement is used.
-    /// </remarks>
-    [DisplayName("Movement Record")]
-    [IsoXmlTag("MvmntRcrd")]
-    public ValueList<MovementRecord2> MovementRecord { get; init; } = [];
-
-    /// <summary>
-    /// Indicator of the number of movement records contained in an individual settlement request.
-    /// </summary>
-    [DisplayName("Number Of Movement Records")]
-    [IsoXmlTag("NbOfMvmntRcrds")]
-    public Number? NumberOfMovementRecords { get; init; }
-
-    /// <summary>
-    /// Identification of the settlement cycle in the settlement service.
-    /// </summary>
-    /// <remarks>
-    /// Usage: The SettlementCycle is used to differentiate this multilateral settlement from other multilateral settlements where more than one occurs within a given time period.
-    /// </remarks>
-    [DisplayName("Settlement Cycle")]
-    [IsoXmlTag("SttlmCycl")]
-    public Max35Text? SettlementCycle { get; init; }
+    [DisplayName("Settlement Time Request")]
+    [IsoXmlTag("SttlmTmReq")]
+    public SettlementTimeRequest2? SettlementTimeRequest { get; init; }
 
     /// <summary>
     /// Indicator of the urgency or order of importance that the instructing agent would like the market infrastructure to apply to the processing of the settlement instruction.
@@ -75,9 +55,29 @@ public record MultilateralSettlementRequest3
     public Priority3Code? SettlementPriority { get; init; }
 
     /// <summary>
-    /// Provides information on the requested settlement time(s) of the instruction.
+    /// Identification of the settlement cycle in the settlement service.
     /// </summary>
-    [DisplayName("Settlement Time Request")]
-    [IsoXmlTag("SttlmTmReq")]
-    public SettlementTimeRequest2? SettlementTimeRequest { get; init; }
+    /// <remarks>
+    /// Usage: The SettlementCycle is used to differentiate this multilateral settlement from other multilateral settlements where more than one occurs within a given time period.
+    /// </remarks>
+    [DisplayName("Settlement Cycle")]
+    [IsoXmlTag("SttlmCycl")]
+    public Max35Text? SettlementCycle { get; init; }
+
+    /// <summary>
+    /// Indicator of the number of movement records contained in an individual settlement request.
+    /// </summary>
+    [DisplayName("Number Of Movement Records")]
+    [IsoXmlTag("NbOfMvmntRcrds")]
+    public Number? NumberOfMovementRecords { get; init; }
+
+    /// <summary>
+    /// Credit or debit transaction contained in an individual settlement request.
+    /// </summary>
+    /// <remarks>
+    /// Usage: The sum of all amounts (debit and credit records) should net to zero where net settlement is used.
+    /// </remarks>
+    [DisplayName("Movement Record")]
+    [IsoXmlTag("MvmntRcrd")]
+    public ValueList<MovementRecord2> MovementRecord { get; init; } = [];
 }

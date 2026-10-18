@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PointOfInteractionComponent16
 {
     /// <summary>
-    /// Identification.
+    /// Type.
     /// </summary>
-    [DisplayName("Identification")]
-    [IsoXmlTag("Id")]
-    public Max35Text? Identification { get; init; }
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    public required POIComponentType5Code Type { get; init; }
 
     /// <summary>
     /// Item Number.
@@ -38,16 +38,16 @@ public record PointOfInteractionComponent16
     public Max35Text? ProviderIdentification { get; init; }
 
     /// <summary>
+    /// Identification.
+    /// </summary>
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    public Max35Text? Identification { get; init; }
+
+    /// <summary>
     /// Serial Number.
     /// </summary>
     [DisplayName("Serial Number")]
     [IsoXmlTag("SrlNb")]
     public Max70Text? SerialNumber { get; init; }
-
-    /// <summary>
-    /// Type.
-    /// </summary>
-    [DisplayName("Type")]
-    [IsoXmlTag("Tp")]
-    public required POIComponentType5Code Type { get; init; }
 }

@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ManagementPlanContent12
 {
     /// <summary>
-    /// Action.
+    /// TM Challenge.
     /// </summary>
-    [DisplayName("Action")]
-    [IsoXmlTag("Actn")]
-    public ValueList<TMSAction12> Action { get; init; } = [];
+    [DisplayName("TM Challenge")]
+    [IsoXmlTag("TMChllng")]
+    public Max140Binary? TMChallenge { get; init; }
 
     /// <summary>
     /// Key Encipherment Certificate.
@@ -31,9 +31,9 @@ public record ManagementPlanContent12
     public ValueList<Max10KBinary> KeyEnciphermentCertificate { get; init; } = [];
 
     /// <summary>
-    /// TM Challenge.
+    /// Action.
     /// </summary>
-    [DisplayName("TM Challenge")]
-    [IsoXmlTag("TMChllng")]
-    public Max140Binary? TMChallenge { get; init; }
+    [DisplayName("Action")]
+    [IsoXmlTag("Actn")]
+    public ValueList<TMSAction12> Action { get; init; } = [];
 }

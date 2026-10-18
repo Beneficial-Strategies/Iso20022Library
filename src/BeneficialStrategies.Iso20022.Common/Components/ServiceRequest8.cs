@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ServiceRequest8
 {
     /// <summary>
-    /// Balance Inquiry Request.
+    /// Environment.
     /// </summary>
-    [DisplayName("Balance Inquiry Request")]
-    [IsoXmlTag("BalNqryReq")]
-    public BalanceInquiryRequest8? BalanceInquiryRequest { get; init; }
-
-    /// <summary>
-    /// Batch Request.
-    /// </summary>
-    [DisplayName("Batch Request")]
-    [IsoXmlTag("BtchReq")]
-    public BatchRequest7? BatchRequest { get; init; }
-
-    /// <summary>
-    /// Card Acquisition Request.
-    /// </summary>
-    [DisplayName("Card Acquisition Request")]
-    [IsoXmlTag("CardAcqstnReq")]
-    public CardAcquisitionRequest3? CardAcquisitionRequest { get; init; }
+    [DisplayName("Environment")]
+    [IsoXmlTag("Envt")]
+    public required CardPaymentEnvironment81 Environment { get; init; }
 
     /// <summary>
     /// Context.
@@ -45,25 +31,11 @@ public record ServiceRequest8
     public required PaymentContext30 Context { get; init; }
 
     /// <summary>
-    /// Enable Service Request.
+    /// Service Content.
     /// </summary>
-    [DisplayName("Enable Service Request")]
-    [IsoXmlTag("NblSvcReq")]
-    public EnableServiceRequest6? EnableServiceRequest { get; init; }
-
-    /// <summary>
-    /// Environment.
-    /// </summary>
-    [DisplayName("Environment")]
-    [IsoXmlTag("Envt")]
-    public required CardPaymentEnvironment81 Environment { get; init; }
-
-    /// <summary>
-    /// Loyalty Request.
-    /// </summary>
-    [DisplayName("Loyalty Request")]
-    [IsoXmlTag("LltyReq")]
-    public LoyaltyRequest7? LoyaltyRequest { get; init; }
+    [DisplayName("Service Content")]
+    [IsoXmlTag("SvcCntt")]
+    public required RetailerService2Code ServiceContent { get; init; }
 
     /// <summary>
     /// Payment Request.
@@ -80,11 +52,18 @@ public record ServiceRequest8
     public ReversalRequest7? ReversalRequest { get; init; }
 
     /// <summary>
-    /// Service Content.
+    /// Balance Inquiry Request.
     /// </summary>
-    [DisplayName("Service Content")]
-    [IsoXmlTag("SvcCntt")]
-    public required RetailerService2Code ServiceContent { get; init; }
+    [DisplayName("Balance Inquiry Request")]
+    [IsoXmlTag("BalNqryReq")]
+    public BalanceInquiryRequest8? BalanceInquiryRequest { get; init; }
+
+    /// <summary>
+    /// Loyalty Request.
+    /// </summary>
+    [DisplayName("Loyalty Request")]
+    [IsoXmlTag("LltyReq")]
+    public LoyaltyRequest7? LoyaltyRequest { get; init; }
 
     /// <summary>
     /// Stored Value Request.
@@ -92,6 +71,27 @@ public record ServiceRequest8
     [DisplayName("Stored Value Request")]
     [IsoXmlTag("StordValReq")]
     public StoredValueRequest8? StoredValueRequest { get; init; }
+
+    /// <summary>
+    /// Batch Request.
+    /// </summary>
+    [DisplayName("Batch Request")]
+    [IsoXmlTag("BtchReq")]
+    public BatchRequest7? BatchRequest { get; init; }
+
+    /// <summary>
+    /// Enable Service Request.
+    /// </summary>
+    [DisplayName("Enable Service Request")]
+    [IsoXmlTag("NblSvcReq")]
+    public EnableServiceRequest6? EnableServiceRequest { get; init; }
+
+    /// <summary>
+    /// Card Acquisition Request.
+    /// </summary>
+    [DisplayName("Card Acquisition Request")]
+    [IsoXmlTag("CardAcqstnReq")]
+    public CardAcquisitionRequest3? CardAcquisitionRequest { get; init; }
 
     /// <summary>
     /// Supplementary Data.

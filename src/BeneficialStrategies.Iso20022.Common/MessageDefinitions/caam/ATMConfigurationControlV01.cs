@@ -46,13 +46,6 @@ public record ATMConfigurationControlV01 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// ATM Configuration Control.
-    /// </summary>
-    [DisplayName("ATM Configuration Control")]
-    [IsoXmlTag("ATMCfgtnCtrl")]
-    public ATMConfigurationControlComponent1? ATMConfigurationControl { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
@@ -65,6 +58,13 @@ public record ATMConfigurationControlV01 : IOuterRecord
     [DisplayName("Protected ATM Configuration Control")]
     [IsoXmlTag("PrtctdATMCfgtnCtrl")]
     public ContentInformationType10? ProtectedATMConfigurationControl { get; init; }
+
+    /// <summary>
+    /// ATM Configuration Control.
+    /// </summary>
+    [DisplayName("ATM Configuration Control")]
+    [IsoXmlTag("ATMCfgtnCtrl")]
+    public ATMConfigurationControlComponent1? ATMConfigurationControl { get; init; }
 
     /// <summary>
     /// Security Trailer.

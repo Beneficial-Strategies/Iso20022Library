@@ -17,53 +17,32 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ReorganisationInstructionSD15
 {
     /// <summary>
-    /// Acknowledgement Details.
-    /// </summary>
-    [DisplayName("Acknowledgement Details")]
-    [IsoXmlTag("AckDtls")]
-    public CorporateActionAcknowledgementSD1? AcknowledgementDetails { get; init; }
-
-    /// <summary>
-    /// Bid Price.
-    /// </summary>
-    [DisplayName("Bid Price")]
-    [IsoXmlTag("BidPric")]
-    public PriceFormat71Choice_? BidPrice { get; init; }
-
-    /// <summary>
-    /// Certificate.
-    /// </summary>
-    [DisplayName("Certificate")]
-    [IsoXmlTag("Cert")]
-    public CorporateActionCertificateSD1? Certificate { get; init; }
-
-    /// <summary>
-    /// Contact Person.
-    /// </summary>
-    [DisplayName("Contact Person")]
-    [IsoXmlTag("CtctPrsn")]
-    public ContactIdentification5? ContactPerson { get; init; }
-
-    /// <summary>
-    /// Customer Reference Identification.
-    /// </summary>
-    [DisplayName("Customer Reference Identification")]
-    [IsoXmlTag("CstmrRefId")]
-    public Max30Text? CustomerReferenceIdentification { get; init; }
-
-    /// <summary>
-    /// Deceased Beneficial Owner Details.
-    /// </summary>
-    [DisplayName("Deceased Beneficial Owner Details")]
-    [IsoXmlTag("DcsdBnfclOwnrDtls")]
-    public DeceasedStatusSD1? DeceasedBeneficialOwnerDetails { get; init; }
-
-    /// <summary>
     /// Place And Name.
     /// </summary>
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
     public Max350Text? PlaceAndName { get; init; }
+
+    /// <summary>
+    /// Transaction Identification.
+    /// </summary>
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public Max15Text? TransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Transaction Sequence.
+    /// </summary>
+    [DisplayName("Transaction Sequence")]
+    [IsoXmlTag("TxSeq")]
+    public ValueList<InstructionsTransactionsSequence2> TransactionSequence { get; init; } = [];
+
+    /// <summary>
+    /// Transaction Identification Status.
+    /// </summary>
+    [DisplayName("Transaction Identification Status")]
+    [IsoXmlTag("TxIdSts")]
+    public DTCInstructionStatus2Code? TransactionIdentificationStatus { get; init; }
 
     /// <summary>
     /// Protect Transaction Status.
@@ -87,39 +66,39 @@ public record ReorganisationInstructionSD15
     public SecuritiesQuantitySD9? SecuritiesQuantityDetails { get; init; }
 
     /// <summary>
-    /// Shareholder Number.
+    /// Customer Reference Identification.
     /// </summary>
-    [DisplayName("Shareholder Number")]
-    [IsoXmlTag("ShrhldrNb")]
-    public RestrictedFINXMax25Text? ShareholderNumber { get; init; }
+    [DisplayName("Customer Reference Identification")]
+    [IsoXmlTag("CstmrRefId")]
+    public Max30Text? CustomerReferenceIdentification { get; init; }
 
     /// <summary>
-    /// Transaction Identification.
+    /// Acknowledgement Details.
     /// </summary>
-    [DisplayName("Transaction Identification")]
-    [IsoXmlTag("TxId")]
-    public Max15Text? TransactionIdentification { get; init; }
+    [DisplayName("Acknowledgement Details")]
+    [IsoXmlTag("AckDtls")]
+    public CorporateActionAcknowledgementSD1? AcknowledgementDetails { get; init; }
 
     /// <summary>
-    /// Transaction Identification Status.
+    /// Contact Person.
     /// </summary>
-    [DisplayName("Transaction Identification Status")]
-    [IsoXmlTag("TxIdSts")]
-    public DTCInstructionStatus2Code? TransactionIdentificationStatus { get; init; }
+    [DisplayName("Contact Person")]
+    [IsoXmlTag("CtctPrsn")]
+    public ContactIdentification5? ContactPerson { get; init; }
 
     /// <summary>
-    /// Transaction Record Number.
+    /// Warrant Subscription Charge Amount.
     /// </summary>
-    [DisplayName("Transaction Record Number")]
-    [IsoXmlTag("TxRcrdNb")]
-    public Max10NumericText? TransactionRecordNumber { get; init; }
+    [DisplayName("Warrant Subscription Charge Amount")]
+    [IsoXmlTag("WarrtSbcptChrgAmt")]
+    public RestrictedFINActiveCurrencyAndAmount? WarrantSubscriptionChargeAmount { get; init; }
 
     /// <summary>
-    /// Transaction Sequence.
+    /// Certificate.
     /// </summary>
-    [DisplayName("Transaction Sequence")]
-    [IsoXmlTag("TxSeq")]
-    public ValueList<InstructionsTransactionsSequence2> TransactionSequence { get; init; } = [];
+    [DisplayName("Certificate")]
+    [IsoXmlTag("Cert")]
+    public CorporateActionCertificateSD1? Certificate { get; init; }
 
     /// <summary>
     /// User Reference Number.
@@ -129,9 +108,30 @@ public record ReorganisationInstructionSD15
     public Max6Text? UserReferenceNumber { get; init; }
 
     /// <summary>
-    /// Warrant Subscription Charge Amount.
+    /// Deceased Beneficial Owner Details.
     /// </summary>
-    [DisplayName("Warrant Subscription Charge Amount")]
-    [IsoXmlTag("WarrtSbcptChrgAmt")]
-    public RestrictedFINActiveCurrencyAndAmount? WarrantSubscriptionChargeAmount { get; init; }
+    [DisplayName("Deceased Beneficial Owner Details")]
+    [IsoXmlTag("DcsdBnfclOwnrDtls")]
+    public DeceasedStatusSD1? DeceasedBeneficialOwnerDetails { get; init; }
+
+    /// <summary>
+    /// Transaction Record Number.
+    /// </summary>
+    [DisplayName("Transaction Record Number")]
+    [IsoXmlTag("TxRcrdNb")]
+    public Max10NumericText? TransactionRecordNumber { get; init; }
+
+    /// <summary>
+    /// Bid Price.
+    /// </summary>
+    [DisplayName("Bid Price")]
+    [IsoXmlTag("BidPric")]
+    public PriceFormat71Choice_? BidPrice { get; init; }
+
+    /// <summary>
+    /// Shareholder Number.
+    /// </summary>
+    [DisplayName("Shareholder Number")]
+    [IsoXmlTag("ShrhldrNb")]
+    public RestrictedFINXMax25Text? ShareholderNumber { get; init; }
 }

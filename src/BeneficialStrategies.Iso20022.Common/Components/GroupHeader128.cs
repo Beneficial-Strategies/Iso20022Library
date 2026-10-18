@@ -18,32 +18,19 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record GroupHeader128
 {
     /// <summary>
+    /// Point to point reference, as assigned by the instructing party, and sent to the next party in the chain to unambiguously identify the message.
+    /// Usage: The instructing party has to make sure that 'MessageIdentification' is unique per instructed party for a pre-agreed period.
+    /// </summary>
+    [DisplayName("Message Identification")]
+    [IsoXmlTag("MsgId")]
+    public required Max35Text MessageIdentification { get; init; }
+
+    /// <summary>
     /// Date and time at which the message was created.
     /// </summary>
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     public required ISODateTime CreationDateTime { get; init; }
-
-    /// <summary>
-    /// Financial institution servicing an account for the creditor.
-    /// </summary>
-    [DisplayName("Creditor Agent")]
-    [IsoXmlTag("CdtrAgt")]
-    public BranchAndFinancialInstitutionIdentification8? CreditorAgent { get; init; }
-
-    /// <summary>
-    /// Financial institution servicing an account for the debtor.
-    /// </summary>
-    [DisplayName("Debtor Agent")]
-    [IsoXmlTag("DbtrAgt")]
-    public BranchAndFinancialInstitutionIdentification8? DebtorAgent { get; init; }
-
-    /// <summary>
-    /// Financial institution that receives the instruction from the initiating party and forwards it to the next agent in the payment chain.
-    /// </summary>
-    [DisplayName("Forwarding Agent")]
-    [IsoXmlTag("FwdgAgt")]
-    public BranchAndFinancialInstitutionIdentification8? ForwardingAgent { get; init; }
 
     /// <summary>
     /// Party that initiates the status message.
@@ -53,10 +40,23 @@ public record GroupHeader128
     public PartyIdentification272? InitiatingParty { get; init; }
 
     /// <summary>
-    /// Point to point reference, as assigned by the instructing party, and sent to the next party in the chain to unambiguously identify the message.
-    /// Usage: The instructing party has to make sure that 'MessageIdentification' is unique per instructed party for a pre-agreed period.
+    /// Financial institution that receives the instruction from the initiating party and forwards it to the next agent in the payment chain.
     /// </summary>
-    [DisplayName("Message Identification")]
-    [IsoXmlTag("MsgId")]
-    public required Max35Text MessageIdentification { get; init; }
+    [DisplayName("Forwarding Agent")]
+    [IsoXmlTag("FwdgAgt")]
+    public BranchAndFinancialInstitutionIdentification8? ForwardingAgent { get; init; }
+
+    /// <summary>
+    /// Financial institution servicing an account for the debtor.
+    /// </summary>
+    [DisplayName("Debtor Agent")]
+    [IsoXmlTag("DbtrAgt")]
+    public BranchAndFinancialInstitutionIdentification8? DebtorAgent { get; init; }
+
+    /// <summary>
+    /// Financial institution servicing an account for the creditor.
+    /// </summary>
+    [DisplayName("Creditor Agent")]
+    [IsoXmlTag("CdtrAgt")]
+    public BranchAndFinancialInstitutionIdentification8? CreditorAgent { get; init; }
 }

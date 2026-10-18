@@ -31,11 +31,39 @@ public record TransactionTypeAndAdditionalParameters22
     public Max35Text? AccountServicerTransactionIdentification { get; init; }
 
     /// <summary>
+    /// Securities Financing Transaction Type.
+    /// </summary>
+    [DisplayName("Securities Financing Transaction Type")]
+    [IsoXmlTag("SctiesFincgTxTp")]
+    public required SecuritiesFinancingTransactionType2Code SecuritiesFinancingTransactionType { get; init; }
+
+    /// <summary>
+    /// Securities Movement Type.
+    /// </summary>
+    [DisplayName("Securities Movement Type")]
+    [IsoXmlTag("SctiesMvmntTp")]
+    public required ReceiveDelivery1Code SecuritiesMovementType { get; init; }
+
+    /// <summary>
+    /// Payment.
+    /// </summary>
+    [DisplayName("Payment")]
+    [IsoXmlTag("Pmt")]
+    public required DeliveryReceiptType2Code Payment { get; init; }
+
+    /// <summary>
     /// Common Identification.
     /// </summary>
     [DisplayName("Common Identification")]
     [IsoXmlTag("CmonId")]
     public Max35Text? CommonIdentification { get; init; }
+
+    /// <summary>
+    /// Pool Identification.
+    /// </summary>
+    [DisplayName("Pool Identification")]
+    [IsoXmlTag("PoolId")]
+    public Max35Text? PoolIdentification { get; init; }
 
     /// <summary>
     /// Corporate Action Event Identification.
@@ -50,32 +78,4 @@ public record TransactionTypeAndAdditionalParameters22
     [DisplayName("Nonce Identification")]
     [IsoXmlTag("NonceId")]
     public Max35Text? NonceIdentification { get; init; }
-
-    /// <summary>
-    /// Payment.
-    /// </summary>
-    [DisplayName("Payment")]
-    [IsoXmlTag("Pmt")]
-    public required DeliveryReceiptType2Code Payment { get; init; }
-
-    /// <summary>
-    /// Pool Identification.
-    /// </summary>
-    [DisplayName("Pool Identification")]
-    [IsoXmlTag("PoolId")]
-    public Max35Text? PoolIdentification { get; init; }
-
-    /// <summary>
-    /// Securities Financing Transaction Type.
-    /// </summary>
-    [DisplayName("Securities Financing Transaction Type")]
-    [IsoXmlTag("SctiesFincgTxTp")]
-    public required SecuritiesFinancingTransactionType2Code SecuritiesFinancingTransactionType { get; init; }
-
-    /// <summary>
-    /// Securities Movement Type.
-    /// </summary>
-    [DisplayName("Securities Movement Type")]
-    [IsoXmlTag("SctiesMvmntTp")]
-    public required ReceiveDelivery1Code SecuritiesMovementType { get; init; }
 }

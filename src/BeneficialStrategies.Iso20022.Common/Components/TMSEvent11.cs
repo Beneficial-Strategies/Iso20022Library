@@ -17,6 +17,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TMSEvent11
 {
     /// <summary>
+    /// Time Stamp.
+    /// </summary>
+    [DisplayName("Time Stamp")]
+    [IsoXmlTag("TmStmp")]
+    public required ISODateTime TimeStamp { get; init; }
+
+    /// <summary>
+    /// Result.
+    /// </summary>
+    [DisplayName("Result")]
+    [IsoXmlTag("Rslt")]
+    public required TerminalManagementActionResult5Code Result { get; init; }
+
+    /// <summary>
     /// Action Identification.
     /// </summary>
     [DisplayName("Action Identification")]
@@ -31,20 +45,6 @@ public record TMSEvent11
     public Max70Text? AdditionalErrorInformation { get; init; }
 
     /// <summary>
-    /// Device Response.
-    /// </summary>
-    [DisplayName("Device Response")]
-    [IsoXmlTag("DvcRspn")]
-    public DeviceResponse7? DeviceResponse { get; init; }
-
-    /// <summary>
-    /// Result.
-    /// </summary>
-    [DisplayName("Result")]
-    [IsoXmlTag("Rslt")]
-    public required TerminalManagementActionResult5Code Result { get; init; }
-
-    /// <summary>
     /// Terminal Manager Identification.
     /// </summary>
     [DisplayName("Terminal Manager Identification")]
@@ -52,9 +52,9 @@ public record TMSEvent11
     public Max35Text? TerminalManagerIdentification { get; init; }
 
     /// <summary>
-    /// Time Stamp.
+    /// Device Response.
     /// </summary>
-    [DisplayName("Time Stamp")]
-    [IsoXmlTag("TmStmp")]
-    public required ISODateTime TimeStamp { get; init; }
+    [DisplayName("Device Response")]
+    [IsoXmlTag("DvcRspn")]
+    public DeviceResponse7? DeviceResponse { get; init; }
 }

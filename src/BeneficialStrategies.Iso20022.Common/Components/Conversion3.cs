@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Conversion3
 {
     /// <summary>
-    /// Additional Information.
-    /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
-
-    /// <summary>
     /// Original Security.
     /// </summary>
     [DisplayName("Original Security")]
     [IsoXmlTag("OrgnlScty")]
     public required FinancialInstrumentIdentification5 OriginalSecurity { get; init; }
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
 }

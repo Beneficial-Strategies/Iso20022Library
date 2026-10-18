@@ -46,18 +46,25 @@ public record MarketClaimCancellationRequestStatusAdviceV03 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Corporate Action General Information.
-    /// </summary>
-    [DisplayName("Corporate Action General Information")]
-    [IsoXmlTag("CorpActnGnlInf")]
-    public required CorporateActionGeneralInformation181 CorporateActionGeneralInformation { get; init; }
-
-    /// <summary>
     /// Market Claim Cancellation Request Identification.
     /// </summary>
     [DisplayName("Market Claim Cancellation Request Identification")]
     [IsoXmlTag("MktClmCxlReqId")]
     public required DocumentIdentification9 MarketClaimCancellationRequestIdentification { get; init; }
+
+    /// <summary>
+    /// Transaction Reference.
+    /// </summary>
+    [DisplayName("Transaction Reference")]
+    [IsoXmlTag("TxRef")]
+    public required References26 TransactionReference { get; init; }
+
+    /// <summary>
+    /// Corporate Action General Information.
+    /// </summary>
+    [DisplayName("Corporate Action General Information")]
+    [IsoXmlTag("CorpActnGnlInf")]
+    public required CorporateActionGeneralInformation181 CorporateActionGeneralInformation { get; init; }
 
     /// <summary>
     /// Market Claim Cancellation Request Status.
@@ -79,11 +86,4 @@ public record MarketClaimCancellationRequestStatusAdviceV03 : IOuterRecord
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
-    /// Transaction Reference.
-    /// </summary>
-    [DisplayName("Transaction Reference")]
-    [IsoXmlTag("TxRef")]
-    public required References26 TransactionReference { get; init; }
 }

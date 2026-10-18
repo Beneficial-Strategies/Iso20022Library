@@ -17,55 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ClearingBatchData3
 {
     /// <summary>
-    /// Agent Fee Amount.
-    /// </summary>
-    [DisplayName("Agent Fee Amount")]
-    [IsoXmlTag("AgtFeeAmt")]
-    public ImpliedCurrencyAndAmount? AgentFeeAmount { get; init; }
-
-    /// <summary>
-    /// Agent Fee Credit Debit.
-    /// </summary>
-    [DisplayName("Agent Fee Credit Debit")]
-    [IsoXmlTag("AgtFeeCdtDbt")]
-    public CreditDebit3Code? AgentFeeCreditDebit { get; init; }
-
-    /// <summary>
-    /// Agent Fee Currency.
-    /// </summary>
-    [DisplayName("Agent Fee Currency")]
-    [IsoXmlTag("AgtFeeCcy")]
-    public ISO3NumericCurrencyCode? AgentFeeCurrency { get; init; }
-
-    /// <summary>
-    /// Date.
-    /// </summary>
-    [DisplayName("Date")]
-    [IsoXmlTag("Dt")]
-    public ISODate? Date { get; init; }
-
-    /// <summary>
-    /// Interchange Fee Amount.
-    /// </summary>
-    [DisplayName("Interchange Fee Amount")]
-    [IsoXmlTag("IntrchngFeeAmt")]
-    public ImpliedCurrencyAndAmount? InterchangeFeeAmount { get; init; }
-
-    /// <summary>
-    /// Interchange Fee Credit Debit.
-    /// </summary>
-    [DisplayName("Interchange Fee Credit Debit")]
-    [IsoXmlTag("IntrchngFeeCdtDbt")]
-    public CreditDebit3Code? InterchangeFeeCreditDebit { get; init; }
-
-    /// <summary>
-    /// Interchange Fee Currency.
-    /// </summary>
-    [DisplayName("Interchange Fee Currency")]
-    [IsoXmlTag("IntrchngFeeCcy")]
-    public ISO3NumericCurrencyCode? InterchangeFeeCurrency { get; init; }
-
-    /// <summary>
     /// Method.
     /// </summary>
     [DisplayName("Method")]
@@ -87,11 +38,11 @@ public record ClearingBatchData3
     public Max35Text? Priority { get; init; }
 
     /// <summary>
-    /// Totals Amount.
+    /// Date.
     /// </summary>
-    [DisplayName("Totals Amount")]
-    [IsoXmlTag("TtlsAmt")]
-    public ImpliedCurrencyAndAmount? TotalsAmount { get; init; }
+    [DisplayName("Date")]
+    [IsoXmlTag("Dt")]
+    public ISODate? Date { get; init; }
 
     /// <summary>
     /// Totals Count.
@@ -101,11 +52,11 @@ public record ClearingBatchData3
     public Number? TotalsCount { get; init; }
 
     /// <summary>
-    /// Totals Credit Debit.
+    /// Totals Amount.
     /// </summary>
-    [DisplayName("Totals Credit Debit")]
-    [IsoXmlTag("TtlsCdtDbt")]
-    public CreditDebit3Code? TotalsCreditDebit { get; init; }
+    [DisplayName("Totals Amount")]
+    [IsoXmlTag("TtlsAmt")]
+    public ImpliedCurrencyAndAmount? TotalsAmount { get; init; }
 
     /// <summary>
     /// Totals Currency.
@@ -113,4 +64,53 @@ public record ClearingBatchData3
     [DisplayName("Totals Currency")]
     [IsoXmlTag("TtlsCcy")]
     public ISO3NumericCurrencyCode? TotalsCurrency { get; init; }
+
+    /// <summary>
+    /// Totals Credit Debit.
+    /// </summary>
+    [DisplayName("Totals Credit Debit")]
+    [IsoXmlTag("TtlsCdtDbt")]
+    public CreditDebit3Code? TotalsCreditDebit { get; init; }
+
+    /// <summary>
+    /// Interchange Fee Amount.
+    /// </summary>
+    [DisplayName("Interchange Fee Amount")]
+    [IsoXmlTag("IntrchngFeeAmt")]
+    public ImpliedCurrencyAndAmount? InterchangeFeeAmount { get; init; }
+
+    /// <summary>
+    /// Interchange Fee Currency.
+    /// </summary>
+    [DisplayName("Interchange Fee Currency")]
+    [IsoXmlTag("IntrchngFeeCcy")]
+    public ISO3NumericCurrencyCode? InterchangeFeeCurrency { get; init; }
+
+    /// <summary>
+    /// Interchange Fee Credit Debit.
+    /// </summary>
+    [DisplayName("Interchange Fee Credit Debit")]
+    [IsoXmlTag("IntrchngFeeCdtDbt")]
+    public CreditDebit3Code? InterchangeFeeCreditDebit { get; init; }
+
+    /// <summary>
+    /// Agent Fee Amount.
+    /// </summary>
+    [DisplayName("Agent Fee Amount")]
+    [IsoXmlTag("AgtFeeAmt")]
+    public ImpliedCurrencyAndAmount? AgentFeeAmount { get; init; }
+
+    /// <summary>
+    /// Agent Fee Currency.
+    /// </summary>
+    [DisplayName("Agent Fee Currency")]
+    [IsoXmlTag("AgtFeeCcy")]
+    public ISO3NumericCurrencyCode? AgentFeeCurrency { get; init; }
+
+    /// <summary>
+    /// Agent Fee Credit Debit.
+    /// </summary>
+    [DisplayName("Agent Fee Credit Debit")]
+    [IsoXmlTag("AgtFeeCdtDbt")]
+    public CreditDebit3Code? AgentFeeCreditDebit { get; init; }
 }

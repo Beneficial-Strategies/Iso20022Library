@@ -17,13 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Context20
 {
     /// <summary>
-    /// Attended.
-    /// </summary>
-    [DisplayName("Attended")]
-    [IsoXmlTag("Attndd")]
-    public TrueFalseIndicator? Attended { get; init; }
-
-    /// <summary>
     /// Card Data Entry Mode.
     /// </summary>
     [DisplayName("Card Data Entry Mode")]
@@ -31,67 +24,25 @@ public record Context20
     public CardDataReading10Code? CardDataEntryMode { get; init; }
 
     /// <summary>
-    /// Cardholder Activated.
+    /// Other Card Data Entry Mode.
     /// </summary>
-    [DisplayName("Cardholder Activated")]
-    [IsoXmlTag("CrdhldrActvtd")]
-    public TrueFalseIndicator? CardholderActivated { get; init; }
+    [DisplayName("Other Card Data Entry Mode")]
+    [IsoXmlTag("OthrCardDataNtryMd")]
+    public Max35Text? OtherCardDataEntryMode { get; init; }
 
     /// <summary>
-    /// Cardholder Present.
+    /// QR Code Presentment Mode.
     /// </summary>
-    [DisplayName("Cardholder Present")]
-    [IsoXmlTag("CrdhldrPres")]
-    public TrueFalseIndicator? CardholderPresent { get; init; }
+    [DisplayName("QR Code Presentment Mode")]
+    [IsoXmlTag("QRCdPresntmntMd")]
+    public QRCodePresentmentMode1Code? QRCodePresentmentMode { get; init; }
 
     /// <summary>
-    /// Card Present.
+    /// Other QR Code Presentment Mode.
     /// </summary>
-    [DisplayName("Card Present")]
-    [IsoXmlTag("CardPres")]
-    public TrueFalseIndicator? CardPresent { get; init; }
-
-    /// <summary>
-    /// Delayed Authorisation.
-    /// </summary>
-    [DisplayName("Delayed Authorisation")]
-    [IsoXmlTag("DelydAuthstn")]
-    public TrueFalseIndicator? DelayedAuthorisation { get; init; }
-
-    /// <summary>
-    /// Delayed Charges.
-    /// </summary>
-    [DisplayName("Delayed Charges")]
-    [IsoXmlTag("DelydChrgs")]
-    public TrueFalseIndicator? DelayedCharges { get; init; }
-
-    /// <summary>
-    /// E Commerce.
-    /// </summary>
-    [DisplayName("E Commerce")]
-    [IsoXmlTag("EComrc")]
-    public TrueFalseIndicator? ECommerce { get; init; }
-
-    /// <summary>
-    /// E Commerce Data.
-    /// </summary>
-    [DisplayName("E Commerce Data")]
-    [IsoXmlTag("EComrcData")]
-    public ValueList<ECommerceData1> ECommerceData { get; init; } = [];
-
-    /// <summary>
-    /// E Commerce Indicator Applied.
-    /// </summary>
-    [DisplayName("E Commerce Indicator Applied")]
-    [IsoXmlTag("EComrcIndApld")]
-    public Max35Text? ECommerceIndicatorApplied { get; init; }
-
-    /// <summary>
-    /// E Commerce Indicator Proposed.
-    /// </summary>
-    [DisplayName("E Commerce Indicator Proposed")]
-    [IsoXmlTag("EComrcIndPropsd")]
-    public Max35Text? ECommerceIndicatorProposed { get; init; }
+    [DisplayName("Other QR Code Presentment Mode")]
+    [IsoXmlTag("OthrQRCdPresntmntMd")]
+    public Max35Text? OtherQRCodePresentmentMode { get; init; }
 
     /// <summary>
     /// Merchant Category Code.
@@ -108,27 +59,6 @@ public record Context20
     public Max35Text? MerchantCategorySpecificData { get; init; }
 
     /// <summary>
-    /// MOTO Code.
-    /// </summary>
-    [DisplayName("MOTO Code")]
-    [IsoXmlTag("MOTOCd")]
-    public MOTO2Code? MOTOCode { get; init; }
-
-    /// <summary>
-    /// No Show.
-    /// </summary>
-    [DisplayName("No Show")]
-    [IsoXmlTag("NoShow")]
-    public TrueFalseIndicator? NoShow { get; init; }
-
-    /// <summary>
-    /// Other Card Data Entry Mode.
-    /// </summary>
-    [DisplayName("Other Card Data Entry Mode")]
-    [IsoXmlTag("OthrCardDataNtryMd")]
-    public Max35Text? OtherCardDataEntryMode { get; init; }
-
-    /// <summary>
     /// Other Merchant Category.
     /// </summary>
     [DisplayName("Other Merchant Category")]
@@ -136,46 +66,116 @@ public record Context20
     public Max35Text? OtherMerchantCategory { get; init; }
 
     /// <summary>
-    /// Other QR Code Presentment Mode.
+    /// Card Present.
     /// </summary>
-    [DisplayName("Other QR Code Presentment Mode")]
-    [IsoXmlTag("OthrQRCdPresntmntMd")]
-    public Max35Text? OtherQRCodePresentmentMode { get; init; }
+    [DisplayName("Card Present")]
+    [IsoXmlTag("CardPres")]
+    public TrueFalseIndicator? CardPresent { get; init; }
 
     /// <summary>
-    /// Other Security Characteristics.
+    /// Cardholder Present.
     /// </summary>
-    [DisplayName("Other Security Characteristics")]
-    [IsoXmlTag("OthrSctyChrtcs")]
-    public Max35Text? OtherSecurityCharacteristics { get; init; }
+    [DisplayName("Cardholder Present")]
+    [IsoXmlTag("CrdhldrPres")]
+    public TrueFalseIndicator? CardholderPresent { get; init; }
 
     /// <summary>
-    /// Partial Approval Supported.
+    /// Cardholder Activated.
     /// </summary>
-    [DisplayName("Partial Approval Supported")]
-    [IsoXmlTag("PrtlApprvlSpprtd")]
-    public TrueFalseIndicator? PartialApprovalSupported { get; init; }
+    [DisplayName("Cardholder Activated")]
+    [IsoXmlTag("CrdhldrActvtd")]
+    public TrueFalseIndicator? CardholderActivated { get; init; }
 
     /// <summary>
-    /// Partial Shipment.
+    /// Transponder Initiated.
     /// </summary>
-    [DisplayName("Partial Shipment")]
-    [IsoXmlTag("PrtlShipmnt")]
-    public TrueFalseIndicator? PartialShipment { get; init; }
+    [DisplayName("Transponder Initiated")]
+    [IsoXmlTag("TrnspndrInittd")]
+    public TrueFalseIndicator? TransponderInitiated { get; init; }
 
     /// <summary>
-    /// Payment Credential Merchant Relationship.
+    /// Transit.
     /// </summary>
-    [DisplayName("Payment Credential Merchant Relationship")]
-    [IsoXmlTag("PmtCrdntlMrchntRltsh")]
-    public TrueFalseIndicator? PaymentCredentialMerchantRelationship { get; init; }
+    [DisplayName("Transit")]
+    [IsoXmlTag("Trnst")]
+    public TrueFalseIndicator? Transit { get; init; }
 
     /// <summary>
-    /// QR Code Presentment Mode.
+    /// Attended.
     /// </summary>
-    [DisplayName("QR Code Presentment Mode")]
-    [IsoXmlTag("QRCdPresntmntMd")]
-    public QRCodePresentmentMode1Code? QRCodePresentmentMode { get; init; }
+    [DisplayName("Attended")]
+    [IsoXmlTag("Attndd")]
+    public TrueFalseIndicator? Attended { get; init; }
+
+    /// <summary>
+    /// Unattended Level Category.
+    /// </summary>
+    [DisplayName("Unattended Level Category")]
+    [IsoXmlTag("UattnddLvlCtgy")]
+    public Max35NumericText? UnattendedLevelCategory { get; init; }
+
+    /// <summary>
+    /// E Commerce.
+    /// </summary>
+    [DisplayName("E Commerce")]
+    [IsoXmlTag("EComrc")]
+    public TrueFalseIndicator? ECommerce { get; init; }
+
+    /// <summary>
+    /// E Commerce Indicator Proposed.
+    /// </summary>
+    [DisplayName("E Commerce Indicator Proposed")]
+    [IsoXmlTag("EComrcIndPropsd")]
+    public Max35Text? ECommerceIndicatorProposed { get; init; }
+
+    /// <summary>
+    /// E Commerce Indicator Applied.
+    /// </summary>
+    [DisplayName("E Commerce Indicator Applied")]
+    [IsoXmlTag("EComrcIndApld")]
+    public Max35Text? ECommerceIndicatorApplied { get; init; }
+
+    /// <summary>
+    /// E Commerce Data.
+    /// </summary>
+    [DisplayName("E Commerce Data")]
+    [IsoXmlTag("EComrcData")]
+    public ValueList<ECommerceData1> ECommerceData { get; init; } = [];
+
+    /// <summary>
+    /// MOTO Code.
+    /// </summary>
+    [DisplayName("MOTO Code")]
+    [IsoXmlTag("MOTOCd")]
+    public MOTO2Code? MOTOCode { get; init; }
+
+    /// <summary>
+    /// Transaction Initiator.
+    /// </summary>
+    [DisplayName("Transaction Initiator")]
+    [IsoXmlTag("TxInitr")]
+    public TransactionInitiator1Code? TransactionInitiator { get; init; }
+
+    /// <summary>
+    /// Delayed Authorisation.
+    /// </summary>
+    [DisplayName("Delayed Authorisation")]
+    [IsoXmlTag("DelydAuthstn")]
+    public TrueFalseIndicator? DelayedAuthorisation { get; init; }
+
+    /// <summary>
+    /// Delayed Charges.
+    /// </summary>
+    [DisplayName("Delayed Charges")]
+    [IsoXmlTag("DelydChrgs")]
+    public TrueFalseIndicator? DelayedCharges { get; init; }
+
+    /// <summary>
+    /// No Show.
+    /// </summary>
+    [DisplayName("No Show")]
+    [IsoXmlTag("NoShow")]
+    public TrueFalseIndicator? NoShow { get; init; }
 
     /// <summary>
     /// Reauthorisation.
@@ -192,6 +192,20 @@ public record Context20
     public TrueFalseIndicator? ReSubmission { get; init; }
 
     /// <summary>
+    /// Partial Shipment.
+    /// </summary>
+    [DisplayName("Partial Shipment")]
+    [IsoXmlTag("PrtlShipmnt")]
+    public TrueFalseIndicator? PartialShipment { get; init; }
+
+    /// <summary>
+    /// Partial Approval Supported.
+    /// </summary>
+    [DisplayName("Partial Approval Supported")]
+    [IsoXmlTag("PrtlApprvlSpprtd")]
+    public TrueFalseIndicator? PartialApprovalSupported { get; init; }
+
+    /// <summary>
     /// Security Characteristics.
     /// </summary>
     [DisplayName("Security Characteristics")]
@@ -199,11 +213,11 @@ public record Context20
     public ValueList<SecurityCharacteristics1Code> SecurityCharacteristics { get; init; } = [];
 
     /// <summary>
-    /// Storage Location.
+    /// Other Security Characteristics.
     /// </summary>
-    [DisplayName("Storage Location")]
-    [IsoXmlTag("StorgLctn")]
-    public Max35Text? StorageLocation { get; init; }
+    [DisplayName("Other Security Characteristics")]
+    [IsoXmlTag("OthrSctyChrtcs")]
+    public Max35Text? OtherSecurityCharacteristics { get; init; }
 
     /// <summary>
     /// Temporary Secure Card Data Reused.
@@ -213,30 +227,16 @@ public record Context20
     public TrueFalseIndicator? TemporarySecureCardDataReused { get; init; }
 
     /// <summary>
-    /// Transaction Initiator.
+    /// Storage Location.
     /// </summary>
-    [DisplayName("Transaction Initiator")]
-    [IsoXmlTag("TxInitr")]
-    public TransactionInitiator1Code? TransactionInitiator { get; init; }
+    [DisplayName("Storage Location")]
+    [IsoXmlTag("StorgLctn")]
+    public Max35Text? StorageLocation { get; init; }
 
     /// <summary>
-    /// Transit.
+    /// Payment Credential Merchant Relationship.
     /// </summary>
-    [DisplayName("Transit")]
-    [IsoXmlTag("Trnst")]
-    public TrueFalseIndicator? Transit { get; init; }
-
-    /// <summary>
-    /// Transponder Initiated.
-    /// </summary>
-    [DisplayName("Transponder Initiated")]
-    [IsoXmlTag("TrnspndrInittd")]
-    public TrueFalseIndicator? TransponderInitiated { get; init; }
-
-    /// <summary>
-    /// Unattended Level Category.
-    /// </summary>
-    [DisplayName("Unattended Level Category")]
-    [IsoXmlTag("UattnddLvlCtgy")]
-    public Max35NumericText? UnattendedLevelCategory { get; init; }
+    [DisplayName("Payment Credential Merchant Relationship")]
+    [IsoXmlTag("PmtCrdntlMrchntRltsh")]
+    public TrueFalseIndicator? PaymentCredentialMerchantRelationship { get; init; }
 }

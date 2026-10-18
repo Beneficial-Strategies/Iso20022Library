@@ -17,18 +17,39 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record CorporateActionSD25
 {
     /// <summary>
-    /// Certificate Details.
+    /// Place And Name.
     /// </summary>
-    [DisplayName("Certificate Details")]
-    [IsoXmlTag("CertDtls")]
-    public ValueList<CorporateActionSD26> CertificateDetails { get; init; } = [];
+    [DisplayName("Place And Name")]
+    [IsoXmlTag("PlcAndNm")]
+    public Max350Text? PlaceAndName { get; init; }
 
     /// <summary>
-    /// Conditional Payment Applicable Flag.
+    /// Notice Type.
     /// </summary>
-    [DisplayName("Conditional Payment Applicable Flag")]
-    [IsoXmlTag("CondlPmtAplblFlg")]
-    public YesNoIndicator? ConditionalPaymentApplicableFlag { get; init; }
+    [DisplayName("Notice Type")]
+    [IsoXmlTag("NtceTp")]
+    public NoticeType1Code? NoticeType { get; init; }
+
+    /// <summary>
+    /// Event Cash Value.
+    /// </summary>
+    [DisplayName("Event Cash Value")]
+    [IsoXmlTag("EvtCshVal")]
+    public RestrictedFINActiveCurrencyAnd13DecimalAmount? EventCashValue { get; init; }
+
+    /// <summary>
+    /// Number Of Shares To Be Issued.
+    /// </summary>
+    [DisplayName("Number Of Shares To Be Issued")]
+    [IsoXmlTag("NbOfShrsToBeIssd")]
+    public DecimalNumber? NumberOfSharesToBeIssued { get; init; }
+
+    /// <summary>
+    /// Total Number Of Shares Offered.
+    /// </summary>
+    [DisplayName("Total Number Of Shares Offered")]
+    [IsoXmlTag("TtlNbOfShrsOfferd")]
+    public DecimalNumber? TotalNumberOfSharesOffered { get; init; }
 
     /// <summary>
     /// Cut Off Days.
@@ -38,13 +59,6 @@ public record CorporateActionSD25
     public Max3Number? CutOffDays { get; init; }
 
     /// <summary>
-    /// Dissenter Rights Applicable Flag.
-    /// </summary>
-    [DisplayName("Dissenter Rights Applicable Flag")]
-    [IsoXmlTag("DsstrRghtsAplblFlg")]
-    public YesNoIndicator? DissenterRightsApplicableFlag { get; init; }
-
-    /// <summary>
     /// DTC Automated Offer Program.
     /// </summary>
     [DisplayName("DTC Automated Offer Program")]
@@ -52,32 +66,46 @@ public record CorporateActionSD25
     public DTCAutoOfferProgram1Code? DTCAutomatedOfferProgram { get; init; }
 
     /// <summary>
-    /// DTC Custody Eligible Flag.
-    /// </summary>
-    [DisplayName("DTC Custody Eligible Flag")]
-    [IsoXmlTag("DTCCtdyElgblFlg")]
-    public YesNoIndicator? DTCCustodyEligibleFlag { get; init; }
-
-    /// <summary>
-    /// DTC Foreign Tax Election Flag.
-    /// </summary>
-    [DisplayName("DTC Foreign Tax Election Flag")]
-    [IsoXmlTag("DTCFrgnTaxElctnFlg")]
-    public YesNoIndicator? DTCForeignTaxElectionFlag { get; init; }
-
-    /// <summary>
-    /// DTC Instruction Lockout Indicator.
-    /// </summary>
-    [DisplayName("DTC Instruction Lockout Indicator")]
-    [IsoXmlTag("DTCInstrLckoutInd")]
-    public InstructionLockoutType1Code? DTCInstructionLockoutIndicator { get; init; }
-
-    /// <summary>
     /// DTC Recycle Cut Off Indicator.
     /// </summary>
     [DisplayName("DTC Recycle Cut Off Indicator")]
     [IsoXmlTag("DTCRcyclCutOffInd")]
     public CutOff1Code? DTCRecycleCutOffIndicator { get; init; }
+
+    /// <summary>
+    /// Long Short Payment Indicator.
+    /// </summary>
+    [DisplayName("Long Short Payment Indicator")]
+    [IsoXmlTag("LngShrtPmtInd")]
+    public AccrualPeriodType1Code? LongShortPaymentIndicator { get; init; }
+
+    /// <summary>
+    /// Oversubscription Type.
+    /// </summary>
+    [DisplayName("Oversubscription Type")]
+    [IsoXmlTag("OvrsbcptTp")]
+    public OversubscriptionType1Code? OversubscriptionType { get; init; }
+
+    /// <summary>
+    /// Conditional Payment Applicable Flag.
+    /// </summary>
+    [DisplayName("Conditional Payment Applicable Flag")]
+    [IsoXmlTag("CondlPmtAplblFlg")]
+    public YesNoIndicator? ConditionalPaymentApplicableFlag { get; init; }
+
+    /// <summary>
+    /// Solicitation Dealer Fee Flag.
+    /// </summary>
+    [DisplayName("Solicitation Dealer Fee Flag")]
+    [IsoXmlTag("SlctnDealrFeeFlg")]
+    public YesNoIndicator? SolicitationDealerFeeFlag { get; init; }
+
+    /// <summary>
+    /// DTC Custody Eligible Flag.
+    /// </summary>
+    [DisplayName("DTC Custody Eligible Flag")]
+    [IsoXmlTag("DTCCtdyElgblFlg")]
+    public YesNoIndicator? DTCCustodyEligibleFlag { get; init; }
 
     /// <summary>
     /// DTC Reorganisation Custody Eligible Flag.
@@ -94,67 +122,18 @@ public record CorporateActionSD25
     public YesNoIndicator? DTCReorganisationDepositEligibleFlag { get; init; }
 
     /// <summary>
-    /// EDS Messaging Country Code.
+    /// Surrender Shares To Agent Flag.
     /// </summary>
-    [DisplayName("EDS Messaging Country Code")]
-    [IsoXmlTag("EDSMsggCtryCd")]
-    public CountryCode? EDSMessagingCountryCode { get; init; }
+    [DisplayName("Surrender Shares To Agent Flag")]
+    [IsoXmlTag("SrrndrShrsToAgtFlg")]
+    public YesNoIndicator? SurrenderSharesToAgentFlag { get; init; }
 
     /// <summary>
-    /// Event Cash Value.
+    /// Step Up Privilege Flag.
     /// </summary>
-    [DisplayName("Event Cash Value")]
-    [IsoXmlTag("EvtCshVal")]
-    public RestrictedFINActiveCurrencyAnd13DecimalAmount? EventCashValue { get; init; }
-
-    /// <summary>
-    /// Long Short Payment Indicator.
-    /// </summary>
-    [DisplayName("Long Short Payment Indicator")]
-    [IsoXmlTag("LngShrtPmtInd")]
-    public AccrualPeriodType1Code? LongShortPaymentIndicator { get; init; }
-
-    /// <summary>
-    /// Non Exempt Allowed Indicator.
-    /// </summary>
-    [DisplayName("Non Exempt Allowed Indicator")]
-    [IsoXmlTag("NonXmptAllwdInd")]
-    public YesNoIndicator? NonExemptAllowedIndicator { get; init; }
-
-    /// <summary>
-    /// Notice Type.
-    /// </summary>
-    [DisplayName("Notice Type")]
-    [IsoXmlTag("NtceTp")]
-    public NoticeType1Code? NoticeType { get; init; }
-
-    /// <summary>
-    /// Number Of Shares To Be Issued.
-    /// </summary>
-    [DisplayName("Number Of Shares To Be Issued")]
-    [IsoXmlTag("NbOfShrsToBeIssd")]
-    public DecimalNumber? NumberOfSharesToBeIssued { get; init; }
-
-    /// <summary>
-    /// Oversubscription Type.
-    /// </summary>
-    [DisplayName("Oversubscription Type")]
-    [IsoXmlTag("OvrsbcptTp")]
-    public OversubscriptionType1Code? OversubscriptionType { get; init; }
-
-    /// <summary>
-    /// Place And Name.
-    /// </summary>
-    [DisplayName("Place And Name")]
-    [IsoXmlTag("PlcAndNm")]
-    public Max350Text? PlaceAndName { get; init; }
-
-    /// <summary>
-    /// RDP Reference Number.
-    /// </summary>
-    [DisplayName("RDP Reference Number")]
-    [IsoXmlTag("RDPRefNb")]
-    public Exact32AlphaNumericText? RDPReferenceNumber { get; init; }
+    [DisplayName("Step Up Privilege Flag")]
+    [IsoXmlTag("StepUpPrvlgFlg")]
+    public YesNoIndicator? StepUpPrivilegeFlag { get; init; }
 
     /// <summary>
     /// Rights Oversubscription Flag.
@@ -178,30 +157,51 @@ public record CorporateActionSD25
     public YesNoIndicator? RightsTransferableFlag { get; init; }
 
     /// <summary>
-    /// Solicitation Dealer Fee Flag.
+    /// Dissenter Rights Applicable Flag.
     /// </summary>
-    [DisplayName("Solicitation Dealer Fee Flag")]
-    [IsoXmlTag("SlctnDealrFeeFlg")]
-    public YesNoIndicator? SolicitationDealerFeeFlag { get; init; }
+    [DisplayName("Dissenter Rights Applicable Flag")]
+    [IsoXmlTag("DsstrRghtsAplblFlg")]
+    public YesNoIndicator? DissenterRightsApplicableFlag { get; init; }
 
     /// <summary>
-    /// Step Up Privilege Flag.
+    /// Non Exempt Allowed Indicator.
     /// </summary>
-    [DisplayName("Step Up Privilege Flag")]
-    [IsoXmlTag("StepUpPrvlgFlg")]
-    public YesNoIndicator? StepUpPrivilegeFlag { get; init; }
+    [DisplayName("Non Exempt Allowed Indicator")]
+    [IsoXmlTag("NonXmptAllwdInd")]
+    public YesNoIndicator? NonExemptAllowedIndicator { get; init; }
 
     /// <summary>
-    /// Surrender Shares To Agent Flag.
+    /// DTC Instruction Lockout Indicator.
     /// </summary>
-    [DisplayName("Surrender Shares To Agent Flag")]
-    [IsoXmlTag("SrrndrShrsToAgtFlg")]
-    public YesNoIndicator? SurrenderSharesToAgentFlag { get; init; }
+    [DisplayName("DTC Instruction Lockout Indicator")]
+    [IsoXmlTag("DTCInstrLckoutInd")]
+    public InstructionLockoutType1Code? DTCInstructionLockoutIndicator { get; init; }
 
     /// <summary>
-    /// Total Number Of Shares Offered.
+    /// Certificate Details.
     /// </summary>
-    [DisplayName("Total Number Of Shares Offered")]
-    [IsoXmlTag("TtlNbOfShrsOfferd")]
-    public DecimalNumber? TotalNumberOfSharesOffered { get; init; }
+    [DisplayName("Certificate Details")]
+    [IsoXmlTag("CertDtls")]
+    public ValueList<CorporateActionSD26> CertificateDetails { get; init; } = [];
+
+    /// <summary>
+    /// EDS Messaging Country Code.
+    /// </summary>
+    [DisplayName("EDS Messaging Country Code")]
+    [IsoXmlTag("EDSMsggCtryCd")]
+    public CountryCode? EDSMessagingCountryCode { get; init; }
+
+    /// <summary>
+    /// RDP Reference Number.
+    /// </summary>
+    [DisplayName("RDP Reference Number")]
+    [IsoXmlTag("RDPRefNb")]
+    public Exact32AlphaNumericText? RDPReferenceNumber { get; init; }
+
+    /// <summary>
+    /// DTC Foreign Tax Election Flag.
+    /// </summary>
+    [DisplayName("DTC Foreign Tax Election Flag")]
+    [IsoXmlTag("DTCFrgnTaxElctnFlg")]
+    public YesNoIndicator? DTCForeignTaxElectionFlag { get; init; }
 }

@@ -17,27 +17,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PointOfInteraction14
 {
     /// <summary>
-    /// Capabilities.
-    /// </summary>
-    [DisplayName("Capabilities")]
-    [IsoXmlTag("Cpblties")]
-    public PointOfInteractionCapabilities9? Capabilities { get; init; }
-
-    /// <summary>
-    /// Component.
-    /// </summary>
-    [DisplayName("Component")]
-    [IsoXmlTag("Cmpnt")]
-    public ValueList<PointOfInteractionComponent15> Component { get; init; } = [];
-
-    /// <summary>
-    /// Group Identification.
-    /// </summary>
-    [DisplayName("Group Identification")]
-    [IsoXmlTag("GrpId")]
-    public Max35Text? GroupIdentification { get; init; }
-
-    /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
@@ -52,11 +31,18 @@ public record PointOfInteraction14
     public Max70Text? SystemName { get; init; }
 
     /// <summary>
-    /// Terminal Integration.
+    /// Group Identification.
     /// </summary>
-    [DisplayName("Terminal Integration")]
-    [IsoXmlTag("TermnlIntgtn")]
-    public LocationCategory3Code? TerminalIntegration { get; init; }
+    [DisplayName("Group Identification")]
+    [IsoXmlTag("GrpId")]
+    public Max35Text? GroupIdentification { get; init; }
+
+    /// <summary>
+    /// Capabilities.
+    /// </summary>
+    [DisplayName("Capabilities")]
+    [IsoXmlTag("Cpblties")]
+    public PointOfInteractionCapabilities9? Capabilities { get; init; }
 
     /// <summary>
     /// Time Zone.
@@ -64,4 +50,18 @@ public record PointOfInteraction14
     [DisplayName("Time Zone")]
     [IsoXmlTag("TmZone")]
     public Max70Text? TimeZone { get; init; }
+
+    /// <summary>
+    /// Terminal Integration.
+    /// </summary>
+    [DisplayName("Terminal Integration")]
+    [IsoXmlTag("TermnlIntgtn")]
+    public LocationCategory3Code? TerminalIntegration { get; init; }
+
+    /// <summary>
+    /// Component.
+    /// </summary>
+    [DisplayName("Component")]
+    [IsoXmlTag("Cmpnt")]
+    public ValueList<PointOfInteractionComponent15> Component { get; init; } = [];
 }

@@ -46,18 +46,18 @@ public record DeleteReservationV07 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Current Reservation.
-    /// </summary>
-    [DisplayName("Current Reservation")]
-    [IsoXmlTag("CurRsvatn")]
-    public ReservationIdentification4? CurrentReservation { get; init; }
-
-    /// <summary>
     /// Message Header.
     /// </summary>
     [DisplayName("Message Header")]
     [IsoXmlTag("MsgHdr")]
     public required MessageHeader1 MessageHeader { get; init; }
+
+    /// <summary>
+    /// Current Reservation.
+    /// </summary>
+    [DisplayName("Current Reservation")]
+    [IsoXmlTag("CurRsvatn")]
+    public ReservationIdentification4? CurrentReservation { get; init; }
 
     /// <summary>
     /// Supplementary Data.

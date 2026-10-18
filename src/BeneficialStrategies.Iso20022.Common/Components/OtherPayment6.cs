@@ -24,6 +24,13 @@ public record OtherPayment6
     public ActiveOrHistoricCurrencyCode? PaymentCurrency { get; init; }
 
     /// <summary>
+    /// Payment Type.
+    /// </summary>
+    [DisplayName("Payment Type")]
+    [IsoXmlTag("PmtTp")]
+    public PaymentType5Choice_? PaymentType { get; init; }
+
+    /// <summary>
     /// Payment Date.
     /// </summary>
     [DisplayName("Payment Date")]
@@ -43,11 +50,4 @@ public record OtherPayment6
     [DisplayName("Payment Receiver")]
     [IsoXmlTag("PmtRcvr")]
     public PartyIdentification236Choice_? PaymentReceiver { get; init; }
-
-    /// <summary>
-    /// Payment Type.
-    /// </summary>
-    [DisplayName("Payment Type")]
-    [IsoXmlTag("PmtTp")]
-    public PaymentType5Choice_? PaymentType { get; init; }
 }

@@ -60,16 +60,16 @@ public record CreateReservationV03 : IOuterRecord
     public required ReservationIdentification4 ReservationIdentification { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
     /// Value Set.
     /// </summary>
     [DisplayName("Value Set")]
     [IsoXmlTag("ValSet")]
     public required Reservation4 ValueSet { get; init; }
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

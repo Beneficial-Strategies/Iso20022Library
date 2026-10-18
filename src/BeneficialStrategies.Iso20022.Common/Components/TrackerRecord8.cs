@@ -17,6 +17,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record TrackerRecord8
 {
     /// <summary>
+    /// Party Or Agent Identification.
+    /// </summary>
+    [DisplayName("Party Or Agent Identification")]
+    [IsoXmlTag("PtyOrAgtId")]
+    public TrackerPartyIdentification2? PartyOrAgentIdentification { get; init; }
+
+    /// <summary>
+    /// Interbank Settlement Amount.
+    /// </summary>
+    [DisplayName("Interbank Settlement Amount")]
+    [IsoXmlTag("IntrBkSttlmAmt")]
+    public ActiveCurrencyAndAmount? InterbankSettlementAmount { get; init; }
+
+    /// <summary>
     /// Charge Bearer.
     /// </summary>
     [DisplayName("Charge Bearer")]
@@ -36,20 +50,6 @@ public record TrackerRecord8
     [DisplayName("Exchange Rate Data")]
     [IsoXmlTag("XchgRateData")]
     public CurrencyExchange13? ExchangeRateData { get; init; }
-
-    /// <summary>
-    /// Interbank Settlement Amount.
-    /// </summary>
-    [DisplayName("Interbank Settlement Amount")]
-    [IsoXmlTag("IntrBkSttlmAmt")]
-    public ActiveCurrencyAndAmount? InterbankSettlementAmount { get; init; }
-
-    /// <summary>
-    /// Party Or Agent Identification.
-    /// </summary>
-    [DisplayName("Party Or Agent Identification")]
-    [IsoXmlTag("PtyOrAgtId")]
-    public TrackerPartyIdentification2? PartyOrAgentIdentification { get; init; }
 
     /// <summary>
     /// Processing Date Time.

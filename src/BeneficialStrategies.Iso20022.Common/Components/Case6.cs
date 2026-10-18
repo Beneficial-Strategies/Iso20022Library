@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Case6
 {
     /// <summary>
-    /// Creator.
-    /// </summary>
-    [DisplayName("Creator")]
-    [IsoXmlTag("Cretr")]
-    public required Party50Choice_ Creator { get; init; }
-
-    /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     public required Max35Text Identification { get; init; }
+
+    /// <summary>
+    /// Creator.
+    /// </summary>
+    [DisplayName("Creator")]
+    [IsoXmlTag("Cretr")]
+    public required Party50Choice_ Creator { get; init; }
 
     /// <summary>
     /// Reopen Case Indication.

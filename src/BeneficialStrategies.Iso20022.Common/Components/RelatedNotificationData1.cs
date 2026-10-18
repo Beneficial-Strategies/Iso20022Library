@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record RelatedNotificationData1
 {
     /// <summary>
-    /// Location.
-    /// </summary>
-    [DisplayName("Location")]
-    [IsoXmlTag("Lctn")]
-    public ValueList<NotificationLocationData1> Location { get; init; } = [];
-
-    /// <summary>
     /// Notification Identification.
     /// </summary>
     [DisplayName("Notification Identification")]
     [IsoXmlTag("NtfctnId")]
     public Max35Text? NotificationIdentification { get; init; }
+
+    /// <summary>
+    /// Location.
+    /// </summary>
+    [DisplayName("Location")]
+    [IsoXmlTag("Lctn")]
+    public ValueList<NotificationLocationData1> Location { get; init; } = [];
 }

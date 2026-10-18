@@ -46,11 +46,18 @@ public record CorporateActionInstructionStatusAdvice002V14 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Additional Information.
+    /// Instruction Identification.
     /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public CorporateActionNarrative19? AdditionalInformation { get; init; }
+    [DisplayName("Instruction Identification")]
+    [IsoXmlTag("InstrId")]
+    public DocumentIdentification17? InstructionIdentification { get; init; }
+
+    /// <summary>
+    /// Other Document Identification.
+    /// </summary>
+    [DisplayName("Other Document Identification")]
+    [IsoXmlTag("OthrDocId")]
+    public ValueList<DocumentIdentification34> OtherDocumentIdentification { get; init; } = [];
 
     /// <summary>
     /// Corporate Action General Information.
@@ -58,20 +65,6 @@ public record CorporateActionInstructionStatusAdvice002V14 : IOuterRecord
     [DisplayName("Corporate Action General Information")]
     [IsoXmlTag("CorpActnGnlInf")]
     public required CorporateActionGeneralInformation158 CorporateActionGeneralInformation { get; init; }
-
-    /// <summary>
-    /// Corporate Action Instruction.
-    /// </summary>
-    [DisplayName("Corporate Action Instruction")]
-    [IsoXmlTag("CorpActnInstr")]
-    public CorporateActionOption203? CorporateActionInstruction { get; init; }
-
-    /// <summary>
-    /// Instruction Identification.
-    /// </summary>
-    [DisplayName("Instruction Identification")]
-    [IsoXmlTag("InstrId")]
-    public DocumentIdentification17? InstructionIdentification { get; init; }
 
     /// <summary>
     /// Instruction Processing Status.
@@ -82,11 +75,11 @@ public record CorporateActionInstructionStatusAdvice002V14 : IOuterRecord
         [];
 
     /// <summary>
-    /// Other Document Identification.
+    /// Corporate Action Instruction.
     /// </summary>
-    [DisplayName("Other Document Identification")]
-    [IsoXmlTag("OthrDocId")]
-    public ValueList<DocumentIdentification34> OtherDocumentIdentification { get; init; } = [];
+    [DisplayName("Corporate Action Instruction")]
+    [IsoXmlTag("CorpActnInstr")]
+    public CorporateActionOption203? CorporateActionInstruction { get; init; }
 
     /// <summary>
     /// Protect Instruction.
@@ -94,6 +87,13 @@ public record CorporateActionInstructionStatusAdvice002V14 : IOuterRecord
     [DisplayName("Protect Instruction")]
     [IsoXmlTag("PrtctInstr")]
     public ProtectInstruction6? ProtectInstruction { get; init; }
+
+    /// <summary>
+    /// Additional Information.
+    /// </summary>
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public CorporateActionNarrative19? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Supplementary Data.

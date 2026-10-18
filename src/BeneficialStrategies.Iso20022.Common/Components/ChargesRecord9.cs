@@ -17,39 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ChargesRecord9
 {
     /// <summary>
-    /// Additional Information.
-    /// </summary>
-    [DisplayName("Additional Information")]
-    [IsoXmlTag("AddtlInf")]
-    public Max140Text? AdditionalInformation { get; init; }
-
-    /// <summary>
-    /// Amount.
-    /// </summary>
-    [DisplayName("Amount")]
-    [IsoXmlTag("Amt")]
-    public required ActiveCurrencyAndAmount Amount { get; init; }
-
-    /// <summary>
-    /// Charges Account Agent.
-    /// </summary>
-    [DisplayName("Charges Account Agent")]
-    [IsoXmlTag("ChrgsAcctAgt")]
-    public BranchAndFinancialInstitutionIdentification8? ChargesAccountAgent { get; init; }
-
-    /// <summary>
-    /// Charges Account Agent Account.
-    /// </summary>
-    [DisplayName("Charges Account Agent Account")]
-    [IsoXmlTag("ChrgsAcctAgtAcct")]
-    public CashAccount40? ChargesAccountAgentAccount { get; init; }
-
-    /// <summary>
     /// Charges Identification.
     /// </summary>
     [DisplayName("Charges Identification")]
     [IsoXmlTag("ChrgsId")]
     public Max35Text? ChargesIdentification { get; init; }
+
+    /// <summary>
+    /// Record Identification.
+    /// </summary>
+    [DisplayName("Record Identification")]
+    [IsoXmlTag("RcrdId")]
+    public Max35Text? RecordIdentification { get; init; }
 
     /// <summary>
     /// Charges Requestor.
@@ -59,11 +38,32 @@ public record ChargesRecord9
     public BranchAndFinancialInstitutionIdentification8? ChargesRequestor { get; init; }
 
     /// <summary>
+    /// Underlying Transaction.
+    /// </summary>
+    [DisplayName("Underlying Transaction")]
+    [IsoXmlTag("UndrlygTx")]
+    public required TransactionReferences7 UnderlyingTransaction { get; init; }
+
+    /// <summary>
+    /// Amount.
+    /// </summary>
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    public required ActiveCurrencyAndAmount Amount { get; init; }
+
+    /// <summary>
     /// Credit Debit Indicator.
     /// </summary>
     [DisplayName("Credit Debit Indicator")]
     [IsoXmlTag("CdtDbtInd")]
     public CreditDebitCode? CreditDebitIndicator { get; init; }
+
+    /// <summary>
+    /// Value Date.
+    /// </summary>
+    [DisplayName("Value Date")]
+    [IsoXmlTag("ValDt")]
+    public DateAndDateTime2Choice_? ValueDate { get; init; }
 
     /// <summary>
     /// Debtor Agent.
@@ -80,18 +80,18 @@ public record ChargesRecord9
     public CashAccount40? DebtorAgentAccount { get; init; }
 
     /// <summary>
-    /// Instruction For Instructed Agent.
+    /// Charges Account Agent.
     /// </summary>
-    [DisplayName("Instruction For Instructed Agent")]
-    [IsoXmlTag("InstrForInstdAgt")]
-    public InstructionForInstructedAgent1? InstructionForInstructedAgent { get; init; }
+    [DisplayName("Charges Account Agent")]
+    [IsoXmlTag("ChrgsAcctAgt")]
+    public BranchAndFinancialInstitutionIdentification8? ChargesAccountAgent { get; init; }
 
     /// <summary>
-    /// Record Identification.
+    /// Charges Account Agent Account.
     /// </summary>
-    [DisplayName("Record Identification")]
-    [IsoXmlTag("RcrdId")]
-    public Max35Text? RecordIdentification { get; init; }
+    [DisplayName("Charges Account Agent Account")]
+    [IsoXmlTag("ChrgsAcctAgtAcct")]
+    public CashAccount40? ChargesAccountAgentAccount { get; init; }
 
     /// <summary>
     /// Type.
@@ -101,16 +101,16 @@ public record ChargesRecord9
     public ChargeType3Choice_? Type { get; init; }
 
     /// <summary>
-    /// Underlying Transaction.
+    /// Instruction For Instructed Agent.
     /// </summary>
-    [DisplayName("Underlying Transaction")]
-    [IsoXmlTag("UndrlygTx")]
-    public required TransactionReferences7 UnderlyingTransaction { get; init; }
+    [DisplayName("Instruction For Instructed Agent")]
+    [IsoXmlTag("InstrForInstdAgt")]
+    public InstructionForInstructedAgent1? InstructionForInstructedAgent { get; init; }
 
     /// <summary>
-    /// Value Date.
+    /// Additional Information.
     /// </summary>
-    [DisplayName("Value Date")]
-    [IsoXmlTag("ValDt")]
-    public DateAndDateTime2Choice_? ValueDate { get; init; }
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    public Max140Text? AdditionalInformation { get; init; }
 }

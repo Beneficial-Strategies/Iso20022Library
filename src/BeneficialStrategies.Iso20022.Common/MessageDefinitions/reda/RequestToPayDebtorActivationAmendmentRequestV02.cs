@@ -46,18 +46,18 @@ public record RequestToPayDebtorActivationAmendmentRequestV02 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Amendment Data.
-    /// </summary>
-    [DisplayName("Amendment Data")]
-    [IsoXmlTag("AmdmntData")]
-    public ValueList<DebtorActivationAmendment5> AmendmentData { get; init; } = [];
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required ActivationHeader3 Header { get; init; }
+
+    /// <summary>
+    /// Amendment Data.
+    /// </summary>
+    [DisplayName("Amendment Data")]
+    [IsoXmlTag("AmdmntData")]
+    public ValueList<DebtorActivationAmendment5> AmendmentData { get; init; } = [];
 
     /// <summary>
     /// Supplementary Data.

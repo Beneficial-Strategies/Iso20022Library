@@ -17,16 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ExchangeRateInformation4
 {
     /// <summary>
-    /// Contract Identification.
-    /// </summary>
-    [DisplayName("Contract Identification")]
-    [IsoXmlTag("CtrctId")]
-    public Max35Text? ContractIdentification { get; init; }
-
-    /// <summary>
     /// Rate Type.
     /// </summary>
     [DisplayName("Rate Type")]
     [IsoXmlTag("RateTp")]
     public required ExchangeRateType4Code RateType { get; init; }
+
+    /// <summary>
+    /// Contract Identification.
+    /// </summary>
+    [DisplayName("Contract Identification")]
+    [IsoXmlTag("CtrctId")]
+    public Max35Text? ContractIdentification { get; init; }
 }

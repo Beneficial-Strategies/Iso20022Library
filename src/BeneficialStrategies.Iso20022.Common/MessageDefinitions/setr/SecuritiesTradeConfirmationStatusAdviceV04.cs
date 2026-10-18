@@ -56,74 +56,11 @@ public record SecuritiesTradeConfirmationStatusAdviceV04 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Provides details on the affitrmation status of a trade.
-    /// </summary>
-    [DisplayName("Affirmation Status")]
-    [IsoXmlTag("AffirmSts")]
-    public AffirmationStatus11Choice_? AffirmationStatus { get; init; }
-
-    /// <summary>
-    /// Provides details on the cancellation status of a trade.
-    /// </summary>
-    [DisplayName("Cancellation Processing Status")]
-    [IsoXmlTag("CxlPrcgSts")]
-    public CancellationProcessingStatus10Choice_? CancellationProcessingStatus { get; init; }
-
-    /// <summary>
-    /// Parties used for acting parties that applies either to the whole message or to individual sides.
-    /// </summary>
-    [DisplayName("Confirmation Parties")]
-    [IsoXmlTag("ConfPties")]
-    public ValueList<ConfirmationParties9> ConfirmationParties { get; init; } = [];
-
-    /// <summary>
-    /// Details of the trading counterparty.
-    /// </summary>
-    [DisplayName("Counterparty Trading Details")]
-    [IsoXmlTag("CtrPtyTradgDtls")]
-    public Order23? CounterpartyTradingDetails { get; init; }
-
-    /// <summary>
-    /// Identifies the chain of delivering settlement parties.
-    /// </summary>
-    [DisplayName("Delivering Settlement Parties")]
-    [IsoXmlTag("DlvrgSttlmPties")]
-    public SettlementParties121? DeliveringSettlementParties { get; init; }
-
-    /// <summary>
     /// Information that unambiguously identifies an SecuritiesTradeConfirmationStatusAdvice message as known by the account owner (or the instructing party acting on its behalf).
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     public required TransactiontIdentification4 Identification { get; init; }
-
-    /// <summary>
-    /// Provides details on the matching status of a trade.
-    /// </summary>
-    [DisplayName("Matching Status")]
-    [IsoXmlTag("MtchgSts")]
-    public MatchingStatus35Choice_? MatchingStatus { get; init; }
-
-    /// <summary>
-    /// Details of the trading party.
-    /// </summary>
-    [DisplayName("Party Trading Details")]
-    [IsoXmlTag("PtyTradgDtls")]
-    public Order23? PartyTradingDetails { get; init; }
-
-    /// <summary>
-    /// Provides the processing status of a trade.
-    /// </summary>
-    [DisplayName("Processing Status")]
-    [IsoXmlTag("PrcgSts")]
-    public ProcessingStatus98Choice_? ProcessingStatus { get; init; }
-
-    /// <summary>
-    /// Identifies the chain of receiving settlement parties.
-    /// </summary>
-    [DisplayName("Receiving Settlement Parties")]
-    [IsoXmlTag("RcvgSttlmPties")]
-    public SettlementParties121? ReceivingSettlementParties { get; init; }
 
     /// <summary>
     /// Link to another transaction that must be processed after, before or at the same time.
@@ -133,11 +70,74 @@ public record SecuritiesTradeConfirmationStatusAdviceV04 : IOuterRecord
     public ValueList<Linkages77> References { get; init; } = [];
 
     /// <summary>
+    /// Provides details on the affitrmation status of a trade.
+    /// </summary>
+    [DisplayName("Affirmation Status")]
+    [IsoXmlTag("AffirmSts")]
+    public AffirmationStatus11Choice_? AffirmationStatus { get; init; }
+
+    /// <summary>
+    /// Provides the processing status of a trade.
+    /// </summary>
+    [DisplayName("Processing Status")]
+    [IsoXmlTag("PrcgSts")]
+    public ProcessingStatus98Choice_? ProcessingStatus { get; init; }
+
+    /// <summary>
+    /// Provides details on the matching status of a trade.
+    /// </summary>
+    [DisplayName("Matching Status")]
+    [IsoXmlTag("MtchgSts")]
+    public MatchingStatus35Choice_? MatchingStatus { get; init; }
+
+    /// <summary>
     /// Provides the replacement processing status of a trade.
     /// </summary>
     [DisplayName("Replacement Processing Status")]
     [IsoXmlTag("RplcmntPrcgSts")]
     public ReplacementProcessingStatus10Choice_? ReplacementProcessingStatus { get; init; }
+
+    /// <summary>
+    /// Provides details on the cancellation status of a trade.
+    /// </summary>
+    [DisplayName("Cancellation Processing Status")]
+    [IsoXmlTag("CxlPrcgSts")]
+    public CancellationProcessingStatus10Choice_? CancellationProcessingStatus { get; init; }
+
+    /// <summary>
+    /// Details of the trading party.
+    /// </summary>
+    [DisplayName("Party Trading Details")]
+    [IsoXmlTag("PtyTradgDtls")]
+    public Order23? PartyTradingDetails { get; init; }
+
+    /// <summary>
+    /// Details of the trading counterparty.
+    /// </summary>
+    [DisplayName("Counterparty Trading Details")]
+    [IsoXmlTag("CtrPtyTradgDtls")]
+    public Order23? CounterpartyTradingDetails { get; init; }
+
+    /// <summary>
+    /// Parties used for acting parties that applies either to the whole message or to individual sides.
+    /// </summary>
+    [DisplayName("Confirmation Parties")]
+    [IsoXmlTag("ConfPties")]
+    public ValueList<ConfirmationParties9> ConfirmationParties { get; init; } = [];
+
+    /// <summary>
+    /// Identifies the chain of delivering settlement parties.
+    /// </summary>
+    [DisplayName("Delivering Settlement Parties")]
+    [IsoXmlTag("DlvrgSttlmPties")]
+    public SettlementParties121? DeliveringSettlementParties { get; init; }
+
+    /// <summary>
+    /// Identifies the chain of receiving settlement parties.
+    /// </summary>
+    [DisplayName("Receiving Settlement Parties")]
+    [IsoXmlTag("RcvgSttlmPties")]
+    public SettlementParties121? ReceivingSettlementParties { get; init; }
 
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.

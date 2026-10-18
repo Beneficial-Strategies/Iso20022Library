@@ -17,60 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record Invoice3
 {
     /// <summary>
-    /// Additional Data.
+    /// Number.
     /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
-
-    /// <summary>
-    /// Buyer Additional Information.
-    /// </summary>
-    [DisplayName("Buyer Additional Information")]
-    [IsoXmlTag("BuyrAddtlInf")]
-    public Max1000Text? BuyerAdditionalInformation { get; init; }
-
-    /// <summary>
-    /// Buyer Address.
-    /// </summary>
-    [DisplayName("Buyer Address")]
-    [IsoXmlTag("BuyrAdr")]
-    public Address2? BuyerAddress { get; init; }
-
-    /// <summary>
-    /// Buyer Contact.
-    /// </summary>
-    [DisplayName("Buyer Contact")]
-    [IsoXmlTag("BuyrCtct")]
-    public ContactBusiness1? BuyerContact { get; init; }
-
-    /// <summary>
-    /// Buyer Identification.
-    /// </summary>
-    [DisplayName("Buyer Identification")]
-    [IsoXmlTag("BuyrId")]
-    public PartyIdentification285? BuyerIdentification { get; init; }
-
-    /// <summary>
-    /// Buyer Name.
-    /// </summary>
-    [DisplayName("Buyer Name")]
-    [IsoXmlTag("BuyrNm")]
-    public Max70Text? BuyerName { get; init; }
-
-    /// <summary>
-    /// Buyer Tax Registration Identification.
-    /// </summary>
-    [DisplayName("Buyer Tax Registration Identification")]
-    [IsoXmlTag("BuyrTaxRegnId")]
-    public Max70Text? BuyerTaxRegistrationIdentification { get; init; }
-
-    /// <summary>
-    /// Creation Date Time.
-    /// </summary>
-    [DisplayName("Creation Date Time")]
-    [IsoXmlTag("CreDtTm")]
-    public ISODateTime? CreationDateTime { get; init; }
+    [DisplayName("Number")]
+    [IsoXmlTag("Nb")]
+    public Max70Text? Number { get; init; }
 
     /// <summary>
     /// Date.
@@ -80,32 +31,32 @@ public record Invoice3
     public ISODate? Date { get; init; }
 
     /// <summary>
-    /// Freight Amount.
+    /// Creation Date Time.
     /// </summary>
-    [DisplayName("Freight Amount")]
-    [IsoXmlTag("FrghtAmt")]
-    public ImpliedCurrencyAndAmount? FreightAmount { get; init; }
+    [DisplayName("Creation Date Time")]
+    [IsoXmlTag("CreDtTm")]
+    public ISODateTime? CreationDateTime { get; init; }
 
     /// <summary>
-    /// Line Item.
+    /// Summary Commodity Identification.
     /// </summary>
-    [DisplayName("Line Item")]
-    [IsoXmlTag("LineItm")]
-    public ValueList<InvoiceLineItem3> LineItem { get; init; } = [];
+    [DisplayName("Summary Commodity Identification")]
+    [IsoXmlTag("SummryCmmdtyId")]
+    public Max35Text? SummaryCommodityIdentification { get; init; }
 
     /// <summary>
-    /// Number.
+    /// Seller Name.
     /// </summary>
-    [DisplayName("Number")]
-    [IsoXmlTag("Nb")]
-    public Max70Text? Number { get; init; }
+    [DisplayName("Seller Name")]
+    [IsoXmlTag("SellrNm")]
+    public Max70Text? SellerName { get; init; }
 
     /// <summary>
-    /// Seller Additional Information.
+    /// Seller Identification.
     /// </summary>
-    [DisplayName("Seller Additional Information")]
-    [IsoXmlTag("SellrAddtlInf")]
-    public Max1000Text? SellerAdditionalInformation { get; init; }
+    [DisplayName("Seller Identification")]
+    [IsoXmlTag("SellrId")]
+    public PartyIdentification285? SellerIdentification { get; init; }
 
     /// <summary>
     /// Seller Address.
@@ -122,20 +73,6 @@ public record Invoice3
     public ContactBusiness1? SellerContact { get; init; }
 
     /// <summary>
-    /// Seller Identification.
-    /// </summary>
-    [DisplayName("Seller Identification")]
-    [IsoXmlTag("SellrId")]
-    public PartyIdentification285? SellerIdentification { get; init; }
-
-    /// <summary>
-    /// Seller Name.
-    /// </summary>
-    [DisplayName("Seller Name")]
-    [IsoXmlTag("SellrNm")]
-    public Max70Text? SellerName { get; init; }
-
-    /// <summary>
     /// Seller Tax Registration Identification.
     /// </summary>
     [DisplayName("Seller Tax Registration Identification")]
@@ -143,11 +80,67 @@ public record Invoice3
     public Max70Text? SellerTaxRegistrationIdentification { get; init; }
 
     /// <summary>
-    /// Summary Commodity Identification.
+    /// Seller Additional Information.
     /// </summary>
-    [DisplayName("Summary Commodity Identification")]
-    [IsoXmlTag("SummryCmmdtyId")]
-    public Max35Text? SummaryCommodityIdentification { get; init; }
+    [DisplayName("Seller Additional Information")]
+    [IsoXmlTag("SellrAddtlInf")]
+    public Max1000Text? SellerAdditionalInformation { get; init; }
+
+    /// <summary>
+    /// Buyer Name.
+    /// </summary>
+    [DisplayName("Buyer Name")]
+    [IsoXmlTag("BuyrNm")]
+    public Max70Text? BuyerName { get; init; }
+
+    /// <summary>
+    /// Buyer Identification.
+    /// </summary>
+    [DisplayName("Buyer Identification")]
+    [IsoXmlTag("BuyrId")]
+    public PartyIdentification285? BuyerIdentification { get; init; }
+
+    /// <summary>
+    /// Buyer Address.
+    /// </summary>
+    [DisplayName("Buyer Address")]
+    [IsoXmlTag("BuyrAdr")]
+    public Address2? BuyerAddress { get; init; }
+
+    /// <summary>
+    /// Buyer Contact.
+    /// </summary>
+    [DisplayName("Buyer Contact")]
+    [IsoXmlTag("BuyrCtct")]
+    public ContactBusiness1? BuyerContact { get; init; }
+
+    /// <summary>
+    /// Buyer Tax Registration Identification.
+    /// </summary>
+    [DisplayName("Buyer Tax Registration Identification")]
+    [IsoXmlTag("BuyrTaxRegnId")]
+    public Max70Text? BuyerTaxRegistrationIdentification { get; init; }
+
+    /// <summary>
+    /// Buyer Additional Information.
+    /// </summary>
+    [DisplayName("Buyer Additional Information")]
+    [IsoXmlTag("BuyrAddtlInf")]
+    public Max1000Text? BuyerAdditionalInformation { get; init; }
+
+    /// <summary>
+    /// Freight Amount.
+    /// </summary>
+    [DisplayName("Freight Amount")]
+    [IsoXmlTag("FrghtAmt")]
+    public ImpliedCurrencyAndAmount? FreightAmount { get; init; }
+
+    /// <summary>
+    /// Tax Total.
+    /// </summary>
+    [DisplayName("Tax Total")]
+    [IsoXmlTag("TaxTtl")]
+    public ValueList<Tax41> TaxTotal { get; init; } = [];
 
     /// <summary>
     /// Tax Reclaim Method.
@@ -157,9 +150,16 @@ public record Invoice3
     public TaxReclaimMethod1Code? TaxReclaimMethod { get; init; }
 
     /// <summary>
-    /// Tax Total.
+    /// Additional Data.
     /// </summary>
-    [DisplayName("Tax Total")]
-    [IsoXmlTag("TaxTtl")]
-    public ValueList<Tax41> TaxTotal { get; init; } = [];
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
+
+    /// <summary>
+    /// Line Item.
+    /// </summary>
+    [DisplayName("Line Item")]
+    [IsoXmlTag("LineItm")]
+    public ValueList<InvoiceLineItem3> LineItem { get; init; } = [];
 }

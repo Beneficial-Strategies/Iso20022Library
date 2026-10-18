@@ -17,25 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record PerformedTransaction6
 {
     /// <summary>
-    /// Loyalty Result.
+    /// Response.
     /// </summary>
-    [DisplayName("Loyalty Result")]
-    [IsoXmlTag("LltyRslt")]
-    public ValueList<LoyaltyResult3> LoyaltyResult { get; init; } = [];
+    [DisplayName("Response")]
+    [IsoXmlTag("Rspn")]
+    public required ResponseType11 Response { get; init; }
 
     /// <summary>
-    /// Payment Result.
+    /// Sale Transaction Identification.
     /// </summary>
-    [DisplayName("Payment Result")]
-    [IsoXmlTag("PmtRslt")]
-    public RetailerPaymentResult6? PaymentResult { get; init; }
-
-    /// <summary>
-    /// POI Reconciliation Identification.
-    /// </summary>
-    [DisplayName("POI Reconciliation Identification")]
-    [IsoXmlTag("POIRcncltnId")]
-    public Max35Text? POIReconciliationIdentification { get; init; }
+    [DisplayName("Sale Transaction Identification")]
+    [IsoXmlTag("SaleTxId")]
+    public TransactionIdentifier1? SaleTransactionIdentification { get; init; }
 
     /// <summary>
     /// POI Transaction Identification.
@@ -45,11 +38,25 @@ public record PerformedTransaction6
     public TransactionIdentifier1? POITransactionIdentification { get; init; }
 
     /// <summary>
-    /// Response.
+    /// POI Reconciliation Identification.
     /// </summary>
-    [DisplayName("Response")]
-    [IsoXmlTag("Rspn")]
-    public required ResponseType11 Response { get; init; }
+    [DisplayName("POI Reconciliation Identification")]
+    [IsoXmlTag("POIRcncltnId")]
+    public Max35Text? POIReconciliationIdentification { get; init; }
+
+    /// <summary>
+    /// Payment Result.
+    /// </summary>
+    [DisplayName("Payment Result")]
+    [IsoXmlTag("PmtRslt")]
+    public RetailerPaymentResult6? PaymentResult { get; init; }
+
+    /// <summary>
+    /// Loyalty Result.
+    /// </summary>
+    [DisplayName("Loyalty Result")]
+    [IsoXmlTag("LltyRslt")]
+    public ValueList<LoyaltyResult3> LoyaltyResult { get; init; } = [];
 
     /// <summary>
     /// Reversed Amount.
@@ -57,11 +64,4 @@ public record PerformedTransaction6
     [DisplayName("Reversed Amount")]
     [IsoXmlTag("RvsdAmt")]
     public ImpliedCurrencyAndAmount? ReversedAmount { get; init; }
-
-    /// <summary>
-    /// Sale Transaction Identification.
-    /// </summary>
-    [DisplayName("Sale Transaction Identification")]
-    [IsoXmlTag("SaleTxId")]
-    public TransactionIdentifier1? SaleTransactionIdentification { get; init; }
 }

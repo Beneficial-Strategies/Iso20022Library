@@ -46,18 +46,32 @@ public record ErrorV04 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Additional Data.
+    /// Header.
     /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData2> AdditionalData { get; init; } = [];
+    [DisplayName("Header")]
+    [IsoXmlTag("Hdr")]
+    public required Header71 Header { get; init; }
 
     /// <summary>
-    /// Additional Fee.
+    /// Originator.
     /// </summary>
-    [DisplayName("Additional Fee")]
-    [IsoXmlTag("AddtlFee")]
-    public ValueList<AdditionalFee3> AdditionalFee { get; init; } = [];
+    [DisplayName("Originator")]
+    [IsoXmlTag("Orgtr")]
+    public PartyIdentification286? Originator { get; init; }
+
+    /// <summary>
+    /// Sender.
+    /// </summary>
+    [DisplayName("Sender")]
+    [IsoXmlTag("Sndr")]
+    public PartyIdentification286? Sender { get; init; }
+
+    /// <summary>
+    /// Receiver.
+    /// </summary>
+    [DisplayName("Receiver")]
+    [IsoXmlTag("Rcvr")]
+    public PartyIdentification286? Receiver { get; init; }
 
     /// <summary>
     /// Destination.
@@ -67,25 +81,25 @@ public record ErrorV04 : IOuterRecord
     public PartyIdentification286? Destination { get; init; }
 
     /// <summary>
-    /// Error Detail.
+    /// System Trace Audit Number.
     /// </summary>
-    [DisplayName("Error Detail")]
-    [IsoXmlTag("ErrDtl")]
-    public ValueList<ErrorDetails3> ErrorDetail { get; init; } = [];
+    [DisplayName("System Trace Audit Number")]
+    [IsoXmlTag("SysTracAudtNb")]
+    public required Max12NumericText SystemTraceAuditNumber { get; init; }
 
     /// <summary>
-    /// Header.
+    /// Transmission Date Time.
     /// </summary>
-    [DisplayName("Header")]
-    [IsoXmlTag("Hdr")]
-    public required Header71 Header { get; init; }
+    [DisplayName("Transmission Date Time")]
+    [IsoXmlTag("TrnsmssnDtTm")]
+    public required ISODateTime TransmissionDateTime { get; init; }
 
     /// <summary>
-    /// Jurisdiction.
+    /// Retrieval Reference Number.
     /// </summary>
-    [DisplayName("Jurisdiction")]
-    [IsoXmlTag("Jursdctn")]
-    public Jurisdiction2? Jurisdiction { get; init; }
+    [DisplayName("Retrieval Reference Number")]
+    [IsoXmlTag("RtrvlRefNb")]
+    public Exact12Text? RetrievalReferenceNumber { get; init; }
 
     /// <summary>
     /// Life Cycle Identification.
@@ -102,53 +116,18 @@ public record ErrorV04 : IOuterRecord
     public Max100KBinary? OriginalMessage { get; init; }
 
     /// <summary>
-    /// Originator.
+    /// Error Detail.
     /// </summary>
-    [DisplayName("Originator")]
-    [IsoXmlTag("Orgtr")]
-    public PartyIdentification286? Originator { get; init; }
+    [DisplayName("Error Detail")]
+    [IsoXmlTag("ErrDtl")]
+    public ValueList<ErrorDetails3> ErrorDetail { get; init; } = [];
 
     /// <summary>
-    /// Protected Data.
+    /// Jurisdiction.
     /// </summary>
-    [DisplayName("Protected Data")]
-    [IsoXmlTag("PrtctdData")]
-    public ValueList<ProtectedData2> ProtectedData { get; init; } = [];
-
-    /// <summary>
-    /// Receiver.
-    /// </summary>
-    [DisplayName("Receiver")]
-    [IsoXmlTag("Rcvr")]
-    public PartyIdentification286? Receiver { get; init; }
-
-    /// <summary>
-    /// Reconciliation.
-    /// </summary>
-    [DisplayName("Reconciliation")]
-    [IsoXmlTag("Rcncltn")]
-    public Reconciliation4? Reconciliation { get; init; }
-
-    /// <summary>
-    /// Retrieval Reference Number.
-    /// </summary>
-    [DisplayName("Retrieval Reference Number")]
-    [IsoXmlTag("RtrvlRefNb")]
-    public Exact12Text? RetrievalReferenceNumber { get; init; }
-
-    /// <summary>
-    /// Security Trailer.
-    /// </summary>
-    [DisplayName("Security Trailer")]
-    [IsoXmlTag("SctyTrlr")]
-    public ContentInformationType41? SecurityTrailer { get; init; }
-
-    /// <summary>
-    /// Sender.
-    /// </summary>
-    [DisplayName("Sender")]
-    [IsoXmlTag("Sndr")]
-    public PartyIdentification286? Sender { get; init; }
+    [DisplayName("Jurisdiction")]
+    [IsoXmlTag("Jursdctn")]
+    public Jurisdiction2? Jurisdiction { get; init; }
 
     /// <summary>
     /// Settlement Service.
@@ -158,6 +137,34 @@ public record ErrorV04 : IOuterRecord
     public SettlementService6? SettlementService { get; init; }
 
     /// <summary>
+    /// Additional Fee.
+    /// </summary>
+    [DisplayName("Additional Fee")]
+    [IsoXmlTag("AddtlFee")]
+    public ValueList<AdditionalFee3> AdditionalFee { get; init; } = [];
+
+    /// <summary>
+    /// Reconciliation.
+    /// </summary>
+    [DisplayName("Reconciliation")]
+    [IsoXmlTag("Rcncltn")]
+    public Reconciliation4? Reconciliation { get; init; }
+
+    /// <summary>
+    /// Additional Data.
+    /// </summary>
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData2> AdditionalData { get; init; } = [];
+
+    /// <summary>
+    /// Protected Data.
+    /// </summary>
+    [DisplayName("Protected Data")]
+    [IsoXmlTag("PrtctdData")]
+    public ValueList<ProtectedData2> ProtectedData { get; init; } = [];
+
+    /// <summary>
     /// Supplementary Data.
     /// </summary>
     [DisplayName("Supplementary Data")]
@@ -165,16 +172,9 @@ public record ErrorV04 : IOuterRecord
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 
     /// <summary>
-    /// System Trace Audit Number.
+    /// Security Trailer.
     /// </summary>
-    [DisplayName("System Trace Audit Number")]
-    [IsoXmlTag("SysTracAudtNb")]
-    public required Max12NumericText SystemTraceAuditNumber { get; init; }
-
-    /// <summary>
-    /// Transmission Date Time.
-    /// </summary>
-    [DisplayName("Transmission Date Time")]
-    [IsoXmlTag("TrnsmssnDtTm")]
-    public required ISODateTime TransmissionDateTime { get; init; }
+    [DisplayName("Security Trailer")]
+    [IsoXmlTag("SctyTrlr")]
+    public ContentInformationType41? SecurityTrailer { get; init; }
 }

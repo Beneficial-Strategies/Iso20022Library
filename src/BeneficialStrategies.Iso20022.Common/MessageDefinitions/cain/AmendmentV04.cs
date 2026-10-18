@@ -46,53 +46,11 @@ public record AmendmentV04 : IOuterRecord
     public static string IsoXmlNamspace => DocumentNamespace;
 
     /// <summary>
-    /// Amended Data.
-    /// </summary>
-    [DisplayName("Amended Data")]
-    [IsoXmlTag("AmddData")]
-    public ValueList<ATICALaxProcessing> AmendedData { get; init; } = [];
-
-    /// <summary>
-    /// Destination.
-    /// </summary>
-    [DisplayName("Destination")]
-    [IsoXmlTag("Dstn")]
-    public DestinationData1? Destination { get; init; }
-
-    /// <summary>
     /// Header.
     /// </summary>
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
     public required Header72 Header { get; init; }
-
-    /// <summary>
-    /// Jurisdiction.
-    /// </summary>
-    [DisplayName("Jurisdiction")]
-    [IsoXmlTag("Jursdctn")]
-    public Jurisdiction2? Jurisdiction { get; init; }
-
-    /// <summary>
-    /// Message Amended.
-    /// </summary>
-    [DisplayName("Message Amended")]
-    [IsoXmlTag("MsgAmdd")]
-    public Max100KBinary? MessageAmended { get; init; }
-
-    /// <summary>
-    /// National Data.
-    /// </summary>
-    [DisplayName("National Data")]
-    [IsoXmlTag("NtlData")]
-    public ValueList<ATICALaxProcessing> NationalData { get; init; } = [];
-
-    /// <summary>
-    /// Original Message.
-    /// </summary>
-    [DisplayName("Original Message")]
-    [IsoXmlTag("OrgnlMsg")]
-    public Max100KBinary? OriginalMessage { get; init; }
 
     /// <summary>
     /// Originator.
@@ -102,25 +60,11 @@ public record AmendmentV04 : IOuterRecord
     public OriginatorData2? Originator { get; init; }
 
     /// <summary>
-    /// Private Data.
+    /// Sender.
     /// </summary>
-    [DisplayName("Private Data")]
-    [IsoXmlTag("PrvtData")]
-    public ValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
-
-    /// <summary>
-    /// Programme.
-    /// </summary>
-    [DisplayName("Programme")]
-    [IsoXmlTag("Prgrmm")]
-    public ValueList<ProgrammeMode6> Programme { get; init; } = [];
-
-    /// <summary>
-    /// Protected Data.
-    /// </summary>
-    [DisplayName("Protected Data")]
-    [IsoXmlTag("PrtctdData")]
-    public ValueList<EncryptedData2> ProtectedData { get; init; } = [];
+    [DisplayName("Sender")]
+    [IsoXmlTag("Sndr")]
+    public SenderData1? Sender { get; init; }
 
     /// <summary>
     /// Receiver.
@@ -130,25 +74,25 @@ public record AmendmentV04 : IOuterRecord
     public ReceiverData1? Receiver { get; init; }
 
     /// <summary>
-    /// Reconciliation.
+    /// Destination.
     /// </summary>
-    [DisplayName("Reconciliation")]
-    [IsoXmlTag("Rcncltn")]
-    public Reconciliation5? Reconciliation { get; init; }
+    [DisplayName("Destination")]
+    [IsoXmlTag("Dstn")]
+    public DestinationData1? Destination { get; init; }
 
     /// <summary>
-    /// Security Trailer.
+    /// Programme.
     /// </summary>
-    [DisplayName("Security Trailer")]
-    [IsoXmlTag("SctyTrlr")]
-    public ContentInformationType41? SecurityTrailer { get; init; }
+    [DisplayName("Programme")]
+    [IsoXmlTag("Prgrmm")]
+    public ValueList<ProgrammeMode6> Programme { get; init; } = [];
 
     /// <summary>
-    /// Sender.
+    /// Jurisdiction.
     /// </summary>
-    [DisplayName("Sender")]
-    [IsoXmlTag("Sndr")]
-    public SenderData1? Sender { get; init; }
+    [DisplayName("Jurisdiction")]
+    [IsoXmlTag("Jursdctn")]
+    public Jurisdiction2? Jurisdiction { get; init; }
 
     /// <summary>
     /// Settlement Service.
@@ -158,9 +102,65 @@ public record AmendmentV04 : IOuterRecord
     public SettlementService7? SettlementService { get; init; }
 
     /// <summary>
+    /// Reconciliation.
+    /// </summary>
+    [DisplayName("Reconciliation")]
+    [IsoXmlTag("Rcncltn")]
+    public Reconciliation5? Reconciliation { get; init; }
+
+    /// <summary>
+    /// Amended Data.
+    /// </summary>
+    [DisplayName("Amended Data")]
+    [IsoXmlTag("AmddData")]
+    public ValueList<ATICALaxProcessing> AmendedData { get; init; } = [];
+
+    /// <summary>
     /// Transaction Identification.
     /// </summary>
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
     public required TransactionIdentification59 TransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Original Message.
+    /// </summary>
+    [DisplayName("Original Message")]
+    [IsoXmlTag("OrgnlMsg")]
+    public Max100KBinary? OriginalMessage { get; init; }
+
+    /// <summary>
+    /// Message Amended.
+    /// </summary>
+    [DisplayName("Message Amended")]
+    [IsoXmlTag("MsgAmdd")]
+    public Max100KBinary? MessageAmended { get; init; }
+
+    /// <summary>
+    /// Protected Data.
+    /// </summary>
+    [DisplayName("Protected Data")]
+    [IsoXmlTag("PrtctdData")]
+    public ValueList<EncryptedData2> ProtectedData { get; init; } = [];
+
+    /// <summary>
+    /// Private Data.
+    /// </summary>
+    [DisplayName("Private Data")]
+    [IsoXmlTag("PrvtData")]
+    public ValueList<ATICALaxProcessing> PrivateData { get; init; } = [];
+
+    /// <summary>
+    /// National Data.
+    /// </summary>
+    [DisplayName("National Data")]
+    [IsoXmlTag("NtlData")]
+    public ValueList<ATICALaxProcessing> NationalData { get; init; } = [];
+
+    /// <summary>
+    /// Security Trailer.
+    /// </summary>
+    [DisplayName("Security Trailer")]
+    [IsoXmlTag("SctyTrlr")]
+    public ContentInformationType41? SecurityTrailer { get; init; }
 }

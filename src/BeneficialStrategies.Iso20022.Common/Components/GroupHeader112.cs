@@ -18,11 +18,12 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record GroupHeader112
 {
     /// <summary>
-    /// Total of all individual amounts included in the message, irrespective of currencies.
+    /// Point to point reference assigned by the instructing party and sent to the next party in the chain to unambiguously identify the message.
+    /// Usage: The instructing party has to make sure that 'MessageIdentification' is unique per instructed party for a pre-agreed period.
     /// </summary>
-    [DisplayName("Control Sum")]
-    [IsoXmlTag("CtrlSum")]
-    public DecimalNumber? ControlSum { get; init; }
+    [DisplayName("Message Identification")]
+    [IsoXmlTag("MsgId")]
+    public required Max35Text MessageIdentification { get; init; }
 
     /// <summary>
     /// Date and time at which the message was created.
@@ -32,11 +33,18 @@ public record GroupHeader112
     public required ISODateTime CreationDateTime { get; init; }
 
     /// <summary>
-    /// Financial institution that receives the instruction from the initiating party and forwards it to the next agent in the payment chain for execution.
+    /// Number of individual transactions contained in the message.
     /// </summary>
-    [DisplayName("Forwarding Agent")]
-    [IsoXmlTag("FwdgAgt")]
-    public BranchAndFinancialInstitutionIdentification8? ForwardingAgent { get; init; }
+    [DisplayName("Number Of Transactions")]
+    [IsoXmlTag("NbOfTxs")]
+    public required Max15NumericText NumberOfTransactions { get; init; }
+
+    /// <summary>
+    /// Total of all individual amounts included in the message, irrespective of currencies.
+    /// </summary>
+    [DisplayName("Control Sum")]
+    [IsoXmlTag("CtrlSum")]
+    public DecimalNumber? ControlSum { get; init; }
 
     /// <summary>
     /// Party initiating the creditor payment activation request. This can either be the creditor himself or the party that initiates the request on behalf of the creditor.
@@ -46,17 +54,9 @@ public record GroupHeader112
     public required PartyIdentification272 InitiatingParty { get; init; }
 
     /// <summary>
-    /// Point to point reference assigned by the instructing party and sent to the next party in the chain to unambiguously identify the message.
-    /// Usage: The instructing party has to make sure that 'MessageIdentification' is unique per instructed party for a pre-agreed period.
+    /// Financial institution that receives the instruction from the initiating party and forwards it to the next agent in the payment chain for execution.
     /// </summary>
-    [DisplayName("Message Identification")]
-    [IsoXmlTag("MsgId")]
-    public required Max35Text MessageIdentification { get; init; }
-
-    /// <summary>
-    /// Number of individual transactions contained in the message.
-    /// </summary>
-    [DisplayName("Number Of Transactions")]
-    [IsoXmlTag("NbOfTxs")]
-    public required Max15NumericText NumberOfTransactions { get; init; }
+    [DisplayName("Forwarding Agent")]
+    [IsoXmlTag("FwdgAgt")]
+    public BranchAndFinancialInstitutionIdentification8? ForwardingAgent { get; init; }
 }

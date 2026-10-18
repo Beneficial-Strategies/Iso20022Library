@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record ReconciliationResponseData2
 {
     /// <summary>
-    /// POI Reconciliation Identification.
-    /// </summary>
-    [DisplayName("POI Reconciliation Identification")]
-    [IsoXmlTag("POIRcncltnId")]
-    public Max35Text? POIReconciliationIdentification { get; init; }
-
-    /// <summary>
     /// Reconciliation Type.
     /// </summary>
     [DisplayName("Reconciliation Type")]
     [IsoXmlTag("RcncltnTp")]
     public required ReconciliationType1Code ReconciliationType { get; init; }
+
+    /// <summary>
+    /// POI Reconciliation Identification.
+    /// </summary>
+    [DisplayName("POI Reconciliation Identification")]
+    [IsoXmlTag("POIRcncltnId")]
+    public Max35Text? POIReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Transaction Totals.

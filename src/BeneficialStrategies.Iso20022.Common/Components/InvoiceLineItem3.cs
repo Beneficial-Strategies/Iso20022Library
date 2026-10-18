@@ -17,11 +17,109 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record InvoiceLineItem3
 {
     /// <summary>
-    /// Additional Data.
+    /// Date.
     /// </summary>
-    [DisplayName("Additional Data")]
-    [IsoXmlTag("AddtlData")]
-    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
+    [DisplayName("Date")]
+    [IsoXmlTag("Dt")]
+    public ISODate? Date { get; init; }
+
+    /// <summary>
+    /// Order Date.
+    /// </summary>
+    [DisplayName("Order Date")]
+    [IsoXmlTag("OrdrDt")]
+    public ISODate? OrderDate { get; init; }
+
+    /// <summary>
+    /// Contract Number.
+    /// </summary>
+    [DisplayName("Contract Number")]
+    [IsoXmlTag("CtrctNb")]
+    public Max70Text? ContractNumber { get; init; }
+
+    /// <summary>
+    /// Shipping Date.
+    /// </summary>
+    [DisplayName("Shipping Date")]
+    [IsoXmlTag("ShppgDt")]
+    public ISODate? ShippingDate { get; init; }
+
+    /// <summary>
+    /// Rebilling.
+    /// </summary>
+    [DisplayName("Rebilling")]
+    [IsoXmlTag("Rbllg")]
+    public TrueFalseIndicator? Rebilling { get; init; }
+
+    /// <summary>
+    /// Medical Services.
+    /// </summary>
+    [DisplayName("Medical Services")]
+    [IsoXmlTag("MdclSvcs")]
+    public TrueFalseIndicator? MedicalServices { get; init; }
+
+    /// <summary>
+    /// Ship To Industry Code.
+    /// </summary>
+    [DisplayName("Ship To Industry Code")]
+    [IsoXmlTag("ShipToIndstryCd")]
+    public Max50Text? ShipToIndustryCode { get; init; }
+
+    /// <summary>
+    /// Product Code.
+    /// </summary>
+    [DisplayName("Product Code")]
+    [IsoXmlTag("PdctCd")]
+    public Max70Text? ProductCode { get; init; }
+
+    /// <summary>
+    /// Product Qualifier.
+    /// </summary>
+    [DisplayName("Product Qualifier")]
+    [IsoXmlTag("PdctQlfr")]
+    public Max35Text? ProductQualifier { get; init; }
+
+    /// <summary>
+    /// Description.
+    /// </summary>
+    [DisplayName("Description")]
+    [IsoXmlTag("Desc")]
+    public Max256Text? Description { get; init; }
+
+    /// <summary>
+    /// Type Of Supply.
+    /// </summary>
+    [DisplayName("Type Of Supply")]
+    [IsoXmlTag("TpOfSpply")]
+    public Max10Text? TypeOfSupply { get; init; }
+
+    /// <summary>
+    /// Unit Of Measure.
+    /// </summary>
+    [DisplayName("Unit Of Measure")]
+    [IsoXmlTag("UnitOfMeasr")]
+    public UnitOfMeasure1Code? UnitOfMeasure { get; init; }
+
+    /// <summary>
+    /// Other Unit Of Measure.
+    /// </summary>
+    [DisplayName("Other Unit Of Measure")]
+    [IsoXmlTag("OthrUnitOfMeasr")]
+    public Max35Text? OtherUnitOfMeasure { get; init; }
+
+    /// <summary>
+    /// Unit Price.
+    /// </summary>
+    [DisplayName("Unit Price")]
+    [IsoXmlTag("UnitPric")]
+    public ImpliedCurrencyAndAmount? UnitPrice { get; init; }
+
+    /// <summary>
+    /// Product Quantity.
+    /// </summary>
+    [DisplayName("Product Quantity")]
+    [IsoXmlTag("PdctQty")]
+    public DecimalNumber? ProductQuantity { get; init; }
 
     /// <summary>
     /// Adjustment Amount.
@@ -45,34 +143,6 @@ public record InvoiceLineItem3
     public Max35Text? AdjustmentReason { get; init; }
 
     /// <summary>
-    /// Contract Number.
-    /// </summary>
-    [DisplayName("Contract Number")]
-    [IsoXmlTag("CtrctNb")]
-    public Max70Text? ContractNumber { get; init; }
-
-    /// <summary>
-    /// Credit Debit.
-    /// </summary>
-    [DisplayName("Credit Debit")]
-    [IsoXmlTag("CdtDbt")]
-    public CreditDebit3Code? CreditDebit { get; init; }
-
-    /// <summary>
-    /// Date.
-    /// </summary>
-    [DisplayName("Date")]
-    [IsoXmlTag("Dt")]
-    public ISODate? Date { get; init; }
-
-    /// <summary>
-    /// Description.
-    /// </summary>
-    [DisplayName("Description")]
-    [IsoXmlTag("Desc")]
-    public Max256Text? Description { get; init; }
-
-    /// <summary>
     /// Insurance.
     /// </summary>
     [DisplayName("Insurance")]
@@ -87,102 +157,11 @@ public record InvoiceLineItem3
     public ImpliedCurrencyAndAmount? InsuranceAmount { get; init; }
 
     /// <summary>
-    /// Medical Services.
-    /// </summary>
-    [DisplayName("Medical Services")]
-    [IsoXmlTag("MdclSvcs")]
-    public TrueFalseIndicator? MedicalServices { get; init; }
-
-    /// <summary>
-    /// Order Date.
-    /// </summary>
-    [DisplayName("Order Date")]
-    [IsoXmlTag("OrdrDt")]
-    public ISODate? OrderDate { get; init; }
-
-    /// <summary>
-    /// Other Unit Of Measure.
-    /// </summary>
-    [DisplayName("Other Unit Of Measure")]
-    [IsoXmlTag("OthrUnitOfMeasr")]
-    public Max35Text? OtherUnitOfMeasure { get; init; }
-
-    /// <summary>
-    /// Product Code.
-    /// </summary>
-    [DisplayName("Product Code")]
-    [IsoXmlTag("PdctCd")]
-    public Max70Text? ProductCode { get; init; }
-
-    /// <summary>
-    /// Product Qualifier.
-    /// </summary>
-    [DisplayName("Product Qualifier")]
-    [IsoXmlTag("PdctQlfr")]
-    public Max35Text? ProductQualifier { get; init; }
-
-    /// <summary>
-    /// Product Quantity.
-    /// </summary>
-    [DisplayName("Product Quantity")]
-    [IsoXmlTag("PdctQty")]
-    public DecimalNumber? ProductQuantity { get; init; }
-
-    /// <summary>
-    /// Rebilling.
-    /// </summary>
-    [DisplayName("Rebilling")]
-    [IsoXmlTag("Rbllg")]
-    public TrueFalseIndicator? Rebilling { get; init; }
-
-    /// <summary>
-    /// Shipping Date.
-    /// </summary>
-    [DisplayName("Shipping Date")]
-    [IsoXmlTag("ShppgDt")]
-    public ISODate? ShippingDate { get; init; }
-
-    /// <summary>
-    /// Ship To Industry Code.
-    /// </summary>
-    [DisplayName("Ship To Industry Code")]
-    [IsoXmlTag("ShipToIndstryCd")]
-    public Max50Text? ShipToIndustryCode { get; init; }
-
-    /// <summary>
     /// Tax.
     /// </summary>
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
     public ValueList<Tax41> Tax { get; init; } = [];
-
-    /// <summary>
-    /// Total Amount.
-    /// </summary>
-    [DisplayName("Total Amount")]
-    [IsoXmlTag("TtlAmt")]
-    public ImpliedCurrencyAndAmount? TotalAmount { get; init; }
-
-    /// <summary>
-    /// Type Of Supply.
-    /// </summary>
-    [DisplayName("Type Of Supply")]
-    [IsoXmlTag("TpOfSpply")]
-    public Max10Text? TypeOfSupply { get; init; }
-
-    /// <summary>
-    /// Unit Of Measure.
-    /// </summary>
-    [DisplayName("Unit Of Measure")]
-    [IsoXmlTag("UnitOfMeasr")]
-    public UnitOfMeasure1Code? UnitOfMeasure { get; init; }
-
-    /// <summary>
-    /// Unit Price.
-    /// </summary>
-    [DisplayName("Unit Price")]
-    [IsoXmlTag("UnitPric")]
-    public ImpliedCurrencyAndAmount? UnitPrice { get; init; }
 
     /// <summary>
     /// VAT Invoice Reference.
@@ -192,9 +171,30 @@ public record InvoiceLineItem3
     public Max35Text? VATInvoiceReference { get; init; }
 
     /// <summary>
+    /// Total Amount.
+    /// </summary>
+    [DisplayName("Total Amount")]
+    [IsoXmlTag("TtlAmt")]
+    public ImpliedCurrencyAndAmount? TotalAmount { get; init; }
+
+    /// <summary>
+    /// Credit Debit.
+    /// </summary>
+    [DisplayName("Credit Debit")]
+    [IsoXmlTag("CdtDbt")]
+    public CreditDebit3Code? CreditDebit { get; init; }
+
+    /// <summary>
     /// Zero Cost To Customer.
     /// </summary>
     [DisplayName("Zero Cost To Customer")]
     [IsoXmlTag("ZeroCostToCstmr")]
     public TrueFalseIndicator? ZeroCostToCustomer { get; init; }
+
+    /// <summary>
+    /// Additional Data.
+    /// </summary>
+    [DisplayName("Additional Data")]
+    [IsoXmlTag("AddtlData")]
+    public ValueList<AdditionalData1> AdditionalData { get; init; } = [];
 }

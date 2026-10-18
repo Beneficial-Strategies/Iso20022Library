@@ -31,13 +31,6 @@ public record PartyIdentification309
     public ClearingSystemMemberIdentification2Choice_? ClearingSystemMemberIdentification { get; init; }
 
     /// <summary>
-    /// LEI.
-    /// </summary>
-    [DisplayName("LEI")]
-    [IsoXmlTag("LEI")]
-    public LEIIdentifier? LEI { get; init; }
-
-    /// <summary>
     /// Name And Address.
     /// </summary>
     [DisplayName("Name And Address")]
@@ -50,4 +43,11 @@ public record PartyIdentification309
     [DisplayName("Proprietary Identification")]
     [IsoXmlTag("PrtryId")]
     public GenericIdentification1? ProprietaryIdentification { get; init; }
+
+    /// <summary>
+    /// LEI.
+    /// </summary>
+    [DisplayName("LEI")]
+    [IsoXmlTag("LEI")]
+    public LEIIdentifier? LEI { get; init; }
 }

@@ -17,11 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record EnvelopedData12
 {
     /// <summary>
-    /// Encrypted Content.
+    /// Version.
     /// </summary>
-    [DisplayName("Encrypted Content")]
-    [IsoXmlTag("NcrptdCntt")]
-    public EncryptedContent8? EncryptedContent { get; init; }
+    [DisplayName("Version")]
+    [IsoXmlTag("Vrsn")]
+    public Number? Version { get; init; }
 
     /// <summary>
     /// Recipient.
@@ -31,9 +31,9 @@ public record EnvelopedData12
     public ValueList<Recipient7Choice_> Recipient { get; init; } = [];
 
     /// <summary>
-    /// Version.
+    /// Encrypted Content.
     /// </summary>
-    [DisplayName("Version")]
-    [IsoXmlTag("Vrsn")]
-    public Number? Version { get; init; }
+    [DisplayName("Encrypted Content")]
+    [IsoXmlTag("NcrptdCntt")]
+    public EncryptedContent8? EncryptedContent { get; init; }
 }

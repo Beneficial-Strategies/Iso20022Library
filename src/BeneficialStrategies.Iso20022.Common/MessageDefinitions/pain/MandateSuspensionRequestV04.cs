@@ -53,16 +53,16 @@ public record MandateSuspensionRequestV04 : IOuterRecord
     public required GroupHeader110 GroupHeader { get; init; }
 
     /// <summary>
-    /// Supplementary Data.
-    /// </summary>
-    [DisplayName("Supplementary Data")]
-    [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    /// <summary>
     /// Underlying Suspension Details.
     /// </summary>
     [DisplayName("Underlying Suspension Details")]
     [IsoXmlTag("UndrlygSspnsnDtls")]
     public ValueList<MandateSuspension4> UnderlyingSuspensionDetails { get; init; } = [];
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 }

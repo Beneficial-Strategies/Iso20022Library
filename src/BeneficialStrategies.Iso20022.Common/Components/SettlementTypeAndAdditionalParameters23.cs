@@ -17,18 +17,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record SettlementTypeAndAdditionalParameters23
 {
     /// <summary>
-    /// Client Collateral Instruction Identification.
+    /// Securities Movement Type.
     /// </summary>
-    [DisplayName("Client Collateral Instruction Identification")]
-    [IsoXmlTag("ClntCollInstrId")]
-    public Max35Text? ClientCollateralInstructionIdentification { get; init; }
+    [DisplayName("Securities Movement Type")]
+    [IsoXmlTag("SctiesMvmntTp")]
+    public required ReceiveDelivery1Code SecuritiesMovementType { get; init; }
 
     /// <summary>
-    /// Client Triparty Collateral Transaction Identification.
+    /// Payment.
     /// </summary>
-    [DisplayName("Client Triparty Collateral Transaction Identification")]
-    [IsoXmlTag("ClntTrptyCollTxId")]
-    public Max35Text? ClientTripartyCollateralTransactionIdentification { get; init; }
+    [DisplayName("Payment")]
+    [IsoXmlTag("Pmt")]
+    public required DeliveryReceiptType2Code Payment { get; init; }
 
     /// <summary>
     /// Common Identification.
@@ -45,20 +45,6 @@ public record SettlementTypeAndAdditionalParameters23
     public Max35Text? CorporateActionEventIdentification { get; init; }
 
     /// <summary>
-    /// Nonce Identification.
-    /// </summary>
-    [DisplayName("Nonce Identification")]
-    [IsoXmlTag("NonceId")]
-    public Max35Text? NonceIdentification { get; init; }
-
-    /// <summary>
-    /// Payment.
-    /// </summary>
-    [DisplayName("Payment")]
-    [IsoXmlTag("Pmt")]
-    public required DeliveryReceiptType2Code Payment { get; init; }
-
-    /// <summary>
     /// Reconciliation Indicator.
     /// </summary>
     [DisplayName("Reconciliation Indicator")]
@@ -66,11 +52,25 @@ public record SettlementTypeAndAdditionalParameters23
     public YesNoIndicator? ReconciliationIndicator { get; init; }
 
     /// <summary>
-    /// Securities Movement Type.
+    /// Client Collateral Instruction Identification.
     /// </summary>
-    [DisplayName("Securities Movement Type")]
-    [IsoXmlTag("SctiesMvmntTp")]
-    public required ReceiveDelivery1Code SecuritiesMovementType { get; init; }
+    [DisplayName("Client Collateral Instruction Identification")]
+    [IsoXmlTag("ClntCollInstrId")]
+    public Max35Text? ClientCollateralInstructionIdentification { get; init; }
+
+    /// <summary>
+    /// Client Triparty Collateral Transaction Identification.
+    /// </summary>
+    [DisplayName("Client Triparty Collateral Transaction Identification")]
+    [IsoXmlTag("ClntTrptyCollTxId")]
+    public Max35Text? ClientTripartyCollateralTransactionIdentification { get; init; }
+
+    /// <summary>
+    /// Triparty Agent Service Provider Collateral Transaction Identification.
+    /// </summary>
+    [DisplayName("Triparty Agent Service Provider Collateral Transaction Identification")]
+    [IsoXmlTag("TrptyAgtSvcPrvdrCollTxId")]
+    public Max35Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; }
 
     /// <summary>
     /// Triparty Agent Service Provider Collateral Instruction Identification.
@@ -80,9 +80,9 @@ public record SettlementTypeAndAdditionalParameters23
     public Max35Text? TripartyAgentServiceProviderCollateralInstructionIdentification { get; init; }
 
     /// <summary>
-    /// Triparty Agent Service Provider Collateral Transaction Identification.
+    /// Nonce Identification.
     /// </summary>
-    [DisplayName("Triparty Agent Service Provider Collateral Transaction Identification")]
-    [IsoXmlTag("TrptyAgtSvcPrvdrCollTxId")]
-    public Max35Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; }
+    [DisplayName("Nonce Identification")]
+    [IsoXmlTag("NonceId")]
+    public Max35Text? NonceIdentification { get; init; }
 }

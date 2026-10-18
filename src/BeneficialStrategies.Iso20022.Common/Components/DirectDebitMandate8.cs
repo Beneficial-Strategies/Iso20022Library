@@ -17,25 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record DirectDebitMandate8
 {
     /// <summary>
-    /// Creditor.
+    /// Debtor Account.
     /// </summary>
-    [DisplayName("Creditor")]
-    [IsoXmlTag("Cdtr")]
-    public PartyIdentification139? Creditor { get; init; }
-
-    /// <summary>
-    /// Creditor Agent.
-    /// </summary>
-    [DisplayName("Creditor Agent")]
-    [IsoXmlTag("CdtrAgt")]
-    public FinancialInstitutionIdentification15? CreditorAgent { get; init; }
-
-    /// <summary>
-    /// Creditor Agent Branch.
-    /// </summary>
-    [DisplayName("Creditor Agent Branch")]
-    [IsoXmlTag("CdtrAgtBrnch")]
-    public BranchData4? CreditorAgentBranch { get; init; }
+    [DisplayName("Debtor Account")]
+    [IsoXmlTag("DbtrAcct")]
+    public required AccountIdentificationAndName5 DebtorAccount { get; init; }
 
     /// <summary>
     /// Debtor.
@@ -45,11 +31,25 @@ public record DirectDebitMandate8
     public PartyIdentification139? Debtor { get; init; }
 
     /// <summary>
-    /// Debtor Account.
+    /// Debtor Tax Identification Number.
     /// </summary>
-    [DisplayName("Debtor Account")]
-    [IsoXmlTag("DbtrAcct")]
-    public required AccountIdentificationAndName5 DebtorAccount { get; init; }
+    [DisplayName("Debtor Tax Identification Number")]
+    [IsoXmlTag("DbtrTaxIdNb")]
+    public Max35Text? DebtorTaxIdentificationNumber { get; init; }
+
+    /// <summary>
+    /// Debtor National Registration Number.
+    /// </summary>
+    [DisplayName("Debtor National Registration Number")]
+    [IsoXmlTag("DbtrNtlRegnNb")]
+    public Max35Text? DebtorNationalRegistrationNumber { get; init; }
+
+    /// <summary>
+    /// Creditor.
+    /// </summary>
+    [DisplayName("Creditor")]
+    [IsoXmlTag("Cdtr")]
+    public PartyIdentification139? Creditor { get; init; }
 
     /// <summary>
     /// Debtor Agent.
@@ -66,25 +66,18 @@ public record DirectDebitMandate8
     public BranchData4? DebtorAgentBranch { get; init; }
 
     /// <summary>
-    /// Debtor National Registration Number.
+    /// Creditor Agent.
     /// </summary>
-    [DisplayName("Debtor National Registration Number")]
-    [IsoXmlTag("DbtrNtlRegnNb")]
-    public Max35Text? DebtorNationalRegistrationNumber { get; init; }
+    [DisplayName("Creditor Agent")]
+    [IsoXmlTag("CdtrAgt")]
+    public FinancialInstitutionIdentification15? CreditorAgent { get; init; }
 
     /// <summary>
-    /// Debtor Tax Identification Number.
+    /// Creditor Agent Branch.
     /// </summary>
-    [DisplayName("Debtor Tax Identification Number")]
-    [IsoXmlTag("DbtrTaxIdNb")]
-    public Max35Text? DebtorTaxIdentificationNumber { get; init; }
-
-    /// <summary>
-    /// Mandate Identification.
-    /// </summary>
-    [DisplayName("Mandate Identification")]
-    [IsoXmlTag("MndtId")]
-    public Max35Text? MandateIdentification { get; init; }
+    [DisplayName("Creditor Agent Branch")]
+    [IsoXmlTag("CdtrAgtBrnch")]
+    public BranchData4? CreditorAgentBranch { get; init; }
 
     /// <summary>
     /// Registration Identification.
@@ -92,4 +85,11 @@ public record DirectDebitMandate8
     [DisplayName("Registration Identification")]
     [IsoXmlTag("RegnId")]
     public Max35Text? RegistrationIdentification { get; init; }
+
+    /// <summary>
+    /// Mandate Identification.
+    /// </summary>
+    [DisplayName("Mandate Identification")]
+    [IsoXmlTag("MndtId")]
+    public Max35Text? MandateIdentification { get; init; }
 }

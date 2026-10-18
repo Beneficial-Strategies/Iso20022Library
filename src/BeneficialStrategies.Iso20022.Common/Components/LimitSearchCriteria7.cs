@@ -17,18 +17,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public record LimitSearchCriteria7
 {
     /// <summary>
-    /// Account Identification.
+    /// System Identification.
     /// </summary>
-    [DisplayName("Account Identification")]
-    [IsoXmlTag("AcctId")]
-    public AccountIdentification4Choice_? AccountIdentification { get; init; }
-
-    /// <summary>
-    /// Account Owner.
-    /// </summary>
-    [DisplayName("Account Owner")]
-    [IsoXmlTag("AcctOwnr")]
-    public BranchAndFinancialInstitutionIdentification8? AccountOwner { get; init; }
+    [DisplayName("System Identification")]
+    [IsoXmlTag("SysId")]
+    public SystemIdentification2Choice_? SystemIdentification { get; init; }
 
     /// <summary>
     /// Bilateral Limit Counterparty Identification.
@@ -39,13 +32,6 @@ public record LimitSearchCriteria7
         [];
 
     /// <summary>
-    /// Current Limit Type.
-    /// </summary>
-    [DisplayName("Current Limit Type")]
-    [IsoXmlTag("CurLmtTp")]
-    public ValueList<LimitType1Choice_> CurrentLimitType { get; init; } = [];
-
-    /// <summary>
     /// Default Limit Type.
     /// </summary>
     [DisplayName("Default Limit Type")]
@@ -53,32 +39,25 @@ public record LimitSearchCriteria7
     public ValueList<LimitType1Choice_> DefaultLimitType { get; init; } = [];
 
     /// <summary>
-    /// Limit Amount.
+    /// Current Limit Type.
     /// </summary>
-    [DisplayName("Limit Amount")]
-    [IsoXmlTag("LmtAmt")]
-    public ActiveAmountRange3Choice_? LimitAmount { get; init; }
+    [DisplayName("Current Limit Type")]
+    [IsoXmlTag("CurLmtTp")]
+    public ValueList<LimitType1Choice_> CurrentLimitType { get; init; } = [];
 
     /// <summary>
-    /// Limit Currency.
+    /// Account Owner.
     /// </summary>
-    [DisplayName("Limit Currency")]
-    [IsoXmlTag("LmtCcy")]
-    public ActiveCurrencyCode? LimitCurrency { get; init; }
+    [DisplayName("Account Owner")]
+    [IsoXmlTag("AcctOwnr")]
+    public BranchAndFinancialInstitutionIdentification8? AccountOwner { get; init; }
 
     /// <summary>
-    /// Limit Valid As Of Date.
+    /// Account Identification.
     /// </summary>
-    [DisplayName("Limit Valid As Of Date")]
-    [IsoXmlTag("LmtVldAsOfDt")]
-    public DateAndPeriod2Choice_? LimitValidAsOfDate { get; init; }
-
-    /// <summary>
-    /// System Identification.
-    /// </summary>
-    [DisplayName("System Identification")]
-    [IsoXmlTag("SysId")]
-    public SystemIdentification2Choice_? SystemIdentification { get; init; }
+    [DisplayName("Account Identification")]
+    [IsoXmlTag("AcctId")]
+    public AccountIdentification4Choice_? AccountIdentification { get; init; }
 
     /// <summary>
     /// Used Amount.
@@ -93,4 +72,25 @@ public record LimitSearchCriteria7
     [DisplayName("Used Percentage")]
     [IsoXmlTag("UsdPctg")]
     public PercentageRange1Choice_? UsedPercentage { get; init; }
+
+    /// <summary>
+    /// Limit Currency.
+    /// </summary>
+    [DisplayName("Limit Currency")]
+    [IsoXmlTag("LmtCcy")]
+    public ActiveCurrencyCode? LimitCurrency { get; init; }
+
+    /// <summary>
+    /// Limit Amount.
+    /// </summary>
+    [DisplayName("Limit Amount")]
+    [IsoXmlTag("LmtAmt")]
+    public ActiveAmountRange3Choice_? LimitAmount { get; init; }
+
+    /// <summary>
+    /// Limit Valid As Of Date.
+    /// </summary>
+    [DisplayName("Limit Valid As Of Date")]
+    [IsoXmlTag("LmtVldAsOfDt")]
+    public DateAndPeriod2Choice_? LimitValidAsOfDate { get; init; }
 }
