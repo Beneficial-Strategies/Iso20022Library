@@ -41,6 +41,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [IsoXmlTag("LckRsn")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]
-        public Max35Text? LockReason { get; init; }
+        public SimpleValueList<Max35Text> LockReason { get; init; } = [];
     }
 }

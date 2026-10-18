@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus90Choice
     /// </summary>
     [IsoId("_ddARbDi8Eeydid5dcNPKvg")]
     [DisplayName("Repair")]
-    public record Repair : ProcessingStatus90Choice_ { }
+    public record Repair : ProcessingStatus90Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Rpr")]
+        public required RepairStatus15Choice_ Value { get; init; }
+    }
 }

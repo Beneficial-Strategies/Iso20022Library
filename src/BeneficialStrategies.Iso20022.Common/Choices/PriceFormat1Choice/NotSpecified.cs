@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat1Choice
     /// </summary>
     [IsoId("_QatkGtp-Ed-ak6NoX_4Aeg_-1046180910")]
     [DisplayName("Not Specified")]
-    public record NotSpecified : PriceFormat1Choice_ { }
+    public record NotSpecified : PriceFormat1Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("NotSpcfd")]
+        public required PriceValueType6FormatChoice_ Value { get; init; }
+    }
 }

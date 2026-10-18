@@ -61,7 +61,7 @@ public record TransactionCharacteristics7
     /// </summary>
     [IsoId("__j2rSV5-EfCoP_h9uwd39Q")]
     [DisplayName("Fee Collection Cycle")]
-    [IsoXmlTag("FeeColltnCycle")]
+    [IsoXmlTag("FeeColltnCycl")]
     public Exact1NumericText? FeeCollectionCycle { get; init; }
 
     /// <summary>

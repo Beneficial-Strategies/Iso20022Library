@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassAttributes1Choice
     /// </summary>
     [IsoId("_id4oJe94EeW7gabYEJmWIA")]
     [DisplayName("Interest")]
+    [IsoXmlTag("Intrst")]
     public record Interest : AssetClassAttributes1Choice_
     {
         /// <summary>

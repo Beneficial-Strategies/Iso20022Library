@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStatus31Choice
     /// </summary>
     [IsoId("_f99MATi8Eeydid5dcNPKvg")]
     [DisplayName("Failing")]
-    public record Failing : SettlementStatus31Choice_ { }
+    public record Failing : SettlementStatus31Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Flng")]
+        public required FailingStatus14Choice_ Value { get; init; }
+    }
 }

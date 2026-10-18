@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementOrCorporateActionEvent
     /// </summary>
     [IsoId("_--hMITqDEeWVrPy0StzzSg")]
     [DisplayName("Securities Transaction Type")]
-    public record SecuritiesTransactionType : SettlementOrCorporateActionEvent14Choice_ { }
+    public record SecuritiesTransactionType : SettlementOrCorporateActionEvent14Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("SctiesTxTp")]
+        public required SecuritiesTransactionType19Choice_ Value { get; init; }
+    }
 }

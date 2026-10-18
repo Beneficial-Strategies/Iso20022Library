@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OpeningBalance3Choice
     /// </summary>
     [IsoId("_RhgE0QgHEeSxsfb1OEDVsw")]
     [DisplayName("First Opening Balance")]
+    [IsoXmlTag("FrstOpngBal")]
     public record FirstOpeningBalance : OpeningBalance3Choice_
     {
         /// <summary>

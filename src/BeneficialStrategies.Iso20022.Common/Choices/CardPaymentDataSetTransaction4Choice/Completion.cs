@@ -31,7 +31,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction4Ch
         [IsoId("_odrHs43NEeWjkqXgn_0Imw")]
         [DisplayName("Traceability")]
         [IsoXmlTag("Tracblt")]
-        public Traceability5? Traceability { get; init; }
+        public ValueList<Traceability5> Traceability { get; init; } = [];
 
         /// <summary>
         /// Data related to the environment of the transaction in a transaction captured in batch.

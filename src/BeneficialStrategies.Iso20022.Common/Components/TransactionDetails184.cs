@@ -85,7 +85,7 @@ public record TransactionDetails184
     /// </summary>
     [IsoId("_oXVjf5aPEfC2_67yGLymgJ")]
     [DisplayName("Posting Quantity")]
-    [IsoXmlTag("PstgQty")]
+    [IsoXmlTag("PstngQty")]
     public required Quantity51Choice_ PostingQuantity { get; init; }
 
     /// <summary>
@@ -101,7 +101,7 @@ public record TransactionDetails184
     /// </summary>
     [IsoId("_oXVjf5aPEfC2_67yGLymgL")]
     [DisplayName("Posting Amount")]
-    [IsoXmlTag("PstgAmt")]
+    [IsoXmlTag("PstngAmt")]
     public AmountAndDirection3? PostingAmount { get; init; }
 
     /// <summary>
@@ -109,7 +109,7 @@ public record TransactionDetails184
     /// </summary>
     [IsoId("_oXVjf5aPEfC2_67yGLymgM")]
     [DisplayName("Digital Payment Posting Settlement")]
-    [IsoXmlTag("DgtlPmtPstgSttlm")]
+    [IsoXmlTag("DgtlPmtPstngSttlm")]
     public DigitalPaymentSettlement2? DigitalPaymentPostingSettlement { get; init; }
 
     /// <summary>

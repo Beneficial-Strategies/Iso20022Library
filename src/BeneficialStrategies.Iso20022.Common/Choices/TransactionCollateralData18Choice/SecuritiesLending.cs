@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionCollateralData18Choic
     /// </summary>
     [IsoId("_C6xitcg5Eeu4ecZgAYuz5w")]
     [DisplayName("Securities Lending")]
-    public record SecuritiesLending : TransactionCollateralData18Choice_ { }
+    public record SecuritiesLending : TransactionCollateralData18Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("SctiesLndg")]
+        public required CollateralFlag13Choice_ Value { get; init; }
+    }
 }

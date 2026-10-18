@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.Account9Choice
     /// </summary>
     [IsoId("_XY_k0Np-Ed-ak6NoX_4Aeg_-1562428108")]
     [DisplayName("Charges Account")]
-    public record ChargesAccount : Account9Choice_ { }
+    public record ChargesAccount : Account9Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("ChrgsAcct")]
+        public required CashAccountIdentification6Choice_ Value { get; init; }
+    }
 }

@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionQuantities3Choice
     /// </summary>
     [IsoId("_dNjxo3kcEei6JsZKrqN0hQ")]
     [DisplayName("Quantity")]
-    public record Quantity : TransactionQuantities3Choice_ { }
+    public record Quantity : TransactionQuantities3Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Qty")]
+        public required FinancialInstrumentQuantity1Choice_ Value { get; init; }
+    }
 }

@@ -125,7 +125,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party48Choice
         [IsoId("_EZ_HC6evEemSUcvu_mDC7w")]
         [DisplayName("Modified Postal Address")]
         [IsoXmlTag("ModfdPstlAdr")]
-        public ModificationScope34? ModifiedPostalAddress { get; init; }
+        public ValueList<ModificationScope34> ModifiedPostalAddress { get; init; } = [];
 
         /// <summary>
         /// Citizenship information to be inserted or deleted.
@@ -206,6 +206,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Party48Choice
         [IsoId("_QKVIgaevEemSUcvu_mDC7w")]
         [DisplayName("GDPR Data")]
         [IsoXmlTag("GDPRData")]
-        public GDPRData1? GDPRData { get; init; }
+        public ValueList<GDPRData1> GDPRData { get; init; } = [];
     }
 }

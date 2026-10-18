@@ -30,6 +30,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Party36Choice
         [IsoId("_pYxExeWkEeevU7McUP3D1w")]
         [DisplayName("Other")]
         [IsoXmlTag("Othr")]
-        public GenericPersonIdentification1? Other { get; init; }
+        public ValueList<GenericPersonIdentification1> Other { get; init; } = [];
     }
 }

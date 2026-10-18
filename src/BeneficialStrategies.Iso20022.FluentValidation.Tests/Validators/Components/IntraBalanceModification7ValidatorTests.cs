@@ -14,7 +14,7 @@ public class IntraBalanceModification7ValidatorTests
     private static BranchAndFinancialInstitutionIdentification8 ValidServicer() =>
         new() { FinancialInstitutionIdentification = new FinancialInstitutionIdentification23() };
 
-    private static ProcessingStatus71Choice_ ValidStatus() => new Choices.ProcessingStatus71Choice.AcknowledgedAccepted();
+    private static ProcessingStatus71Choice_ ValidStatus() => new Choices.ProcessingStatus71Choice.AcknowledgedAccepted { Value = new Choices.AcknowledgedAcceptedStatus21Choice.NoSpecifiedReason { Value = default } };
 
     private static IntraBalanceModification8 MinimalItem() => new() { RequestReference = "REQ-001" };
 

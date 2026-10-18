@@ -144,7 +144,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType4Choice
         [IsoId("_TdVCfQeFEe2fOITqoTnSLQ")]
         [DisplayName("Ratio")]
         [IsoXmlTag("Ratio")]
-        public UnderlyingRatio2? Ratio { get; init; }
+        public ValueList<UnderlyingRatio2> Ratio { get; init; } = [];
 
         /// <summary>
         /// Rating(s) of the security.
@@ -152,7 +152,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType4Choice
         [IsoId("_TdVCfweFEe2fOITqoTnSLQ")]
         [DisplayName("Rating")]
         [IsoXmlTag("Ratg")]
-        public Rating1? Rating { get; init; }
+        public ValueList<Rating1> Rating { get; init; } = [];
 
         /// <summary>
         /// Initial issue price of a financial instrument.

@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationProcessingStatus6Cho
     /// </summary>
     [IsoId("_A4HJM9okEeC60axPepSq7g_754049523")]
     [DisplayName("Cancellation Pending")]
-    public record CancellationPending : CancellationProcessingStatus6Choice_ { }
+    public record CancellationPending : CancellationProcessingStatus6Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("CxlPdg")]
+        public required CancellationReason11Choice_ Value { get; init; }
+    }
 }

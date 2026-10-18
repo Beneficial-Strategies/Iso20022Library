@@ -30,7 +30,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType14Choice
         [IsoId("_Ns3RYx5gEeWE3PufGMdJ3w")]
         [DisplayName("Linkages")]
         [IsoXmlTag("Lnkgs")]
-        public Linkages38? Linkages { get; init; }
+        public ValueList<Linkages38> Linkages { get; init; } = [];
 
         /// <summary>
         /// Details of the trade.
@@ -134,6 +134,6 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType14Choice
         [IsoId("_Ns3RfR5gEeWE3PufGMdJ3w")]
         [DisplayName("Supplementary Data")]
         [IsoXmlTag("SplmtryData")]
-        public SupplementaryData1? SupplementaryData { get; init; }
+        public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
     }
 }

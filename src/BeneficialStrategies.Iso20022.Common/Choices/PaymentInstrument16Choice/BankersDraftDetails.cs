@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument16Choice
     /// </summary>
     [IsoId("_MgQvZRdKEeK5g-3oYI0_9Q")]
     [DisplayName("Bankers Draft Details")]
+    [IsoXmlTag("BkrsDrftDtls")]
     public record BankersDraftDetails : PaymentInstrument16Choice_
     {
         /// <summary>

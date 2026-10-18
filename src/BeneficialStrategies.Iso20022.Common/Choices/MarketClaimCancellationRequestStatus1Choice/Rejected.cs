@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimCancellationRequestSt
     /// </summary>
     [IsoId("_1Tcqadx4EeqESbVR5AloZQ")]
     [DisplayName("Rejected")]
-    public record Rejected : MarketClaimCancellationRequestStatus1Choice_ { }
+    public record Rejected : MarketClaimCancellationRequestStatus1Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Rjctd")]
+        public required RejectedStatus38Choice_ Value { get; init; }
+    }
 }

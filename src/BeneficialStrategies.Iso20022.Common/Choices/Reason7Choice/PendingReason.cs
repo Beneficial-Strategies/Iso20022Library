@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason7Choice
     /// </summary>
     [IsoId("_E2DtWf4hEeCH9dkaY_DhYw")]
     [DisplayName("Pending Reason")]
-    public record PendingReason : Reason7Choice_ { }
+    public record PendingReason : Reason7Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("PdgRsn")]
+        public required PendingReason11Choice_ Value { get; init; }
+    }
 }

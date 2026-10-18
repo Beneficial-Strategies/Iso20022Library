@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.CashInOrOut3Choice
     /// </summary>
     [IsoId("_VKP1Udp-Ed-ak6NoX_4Aeg_2056585957")]
     [DisplayName("Cash Out Payment Instrument")]
-    public record CashOutPaymentInstrument : CashInOrOut3Choice_ { }
+    public record CashOutPaymentInstrument : CashInOrOut3Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("CshOutPmtInstrm")]
+        public required PaymentInstrument7Choice_ Value { get; init; }
+    }
 }

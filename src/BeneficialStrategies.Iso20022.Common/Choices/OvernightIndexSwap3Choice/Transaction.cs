@@ -132,6 +132,6 @@ namespace BeneficialStrategies.Iso20022.Choices.OvernightIndexSwap3Choice
         [IsoId("_znSW96icEeWHO_l3hf2rlA")]
         [DisplayName("Supplementary Data")]
         [IsoXmlTag("SplmtryData")]
-        public SupplementaryData1? SupplementaryData { get; init; }
+        public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
     }
 }

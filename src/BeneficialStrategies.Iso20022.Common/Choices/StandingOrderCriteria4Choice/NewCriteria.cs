@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderCriteria4Choice
         [IsoId("_ge92ldcZEeqRFcf2R4bPBw")]
         [DisplayName("Search Criteria")]
         [IsoXmlTag("SchCrit")]
-        public StandingOrderSearchCriteria4? SearchCriteria { get; init; }
+        public ValueList<StandingOrderSearchCriteria4> SearchCriteria { get; init; } = [];
 
         /// <summary>
         /// Defines the expected standing order report.

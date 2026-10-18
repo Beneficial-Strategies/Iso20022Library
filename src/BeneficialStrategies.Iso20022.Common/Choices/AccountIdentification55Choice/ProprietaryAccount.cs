@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification55Choice
     /// </summary>
     [IsoId("_e6Hl9watEe2phaVG0lYKTw")]
     [DisplayName("Proprietary Account")]
+    [IsoXmlTag("PrtryAcct")]
     public record ProprietaryAccount : AccountIdentification55Choice_
     {
         /// <summary>

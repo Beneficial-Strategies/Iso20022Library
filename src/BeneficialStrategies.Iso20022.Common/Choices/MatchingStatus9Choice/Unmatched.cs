@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingStatus9Choice
     /// </summary>
     [IsoId("_A4aEJtokEeC60axPepSq7g_-830174011")]
     [DisplayName("Unmatched")]
-    public record Unmatched : MatchingStatus9Choice_ { }
+    public record Unmatched : MatchingStatus9Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Umtchd")]
+        public required MatchingReason1Choice_ Value { get; init; }
+    }
 }

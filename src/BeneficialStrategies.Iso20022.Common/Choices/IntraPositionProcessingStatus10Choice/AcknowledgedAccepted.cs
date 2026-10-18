@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraPositionProcessingStatus10C
     /// </summary>
     [IsoId("_cdk0uzi8Eeydid5dcNPKvg")]
     [DisplayName("Acknowledged Accepted")]
-    public record AcknowledgedAccepted : IntraPositionProcessingStatus10Choice_ { }
+    public record AcknowledgedAccepted : IntraPositionProcessingStatus10Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("AckdAccptd")]
+        public required AcknowledgedAcceptedStatus25Choice_ Value { get; init; }
+    }
 }

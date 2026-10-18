@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentIdentificatio
     /// </summary>
     [IsoId("_26V3kZ3DEeuwmdq0KtnICg")]
     [DisplayName("Single")]
-    public record Single : FinancialInstrumentIdentification8Choice_ { }
+    public record Single : FinancialInstrumentIdentification8Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Sngl")]
+        public required FinancialInstrumentIdentification9Choice_ Value { get; init; }
+    }
 }

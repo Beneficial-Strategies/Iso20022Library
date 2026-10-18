@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructedOrQuantityToReceive1Ch
     /// </summary>
     [IsoId("_UHCr6tp-Ed-ak6NoX_4Aeg_-1856405230")]
     [DisplayName("Instructed Quantity")]
-    public record InstructedQuantity : InstructedOrQuantityToReceive1Choice_ { }
+    public record InstructedQuantity : InstructedOrQuantityToReceive1Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("InstdQty")]
+        public required Quantity5Choice_ Value { get; init; }
+    }
 }

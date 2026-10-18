@@ -15,5 +15,10 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralPortfolioCode5Choice
     /// </summary>
     [IsoId("_YxDO0TIDEe2fXedS_ucFOA")]
     [DisplayName("Portfolio")]
-    public record Portfolio : CollateralPortfolioCode5Choice_ { }
+    public record Portfolio : CollateralPortfolioCode5Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Prtfl")]
+        public required PortfolioCode3Choice_ Value { get; init; }
+    }
 }

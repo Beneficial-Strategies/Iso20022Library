@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity3Choice
     /// </summary>
     [IsoId("_lThdZ3vyEeanCNPcMT7sSg")]
     [DisplayName("Fertilizer")]
-    public record Fertilizer : AssetClassCommodity3Choice_ { }
+    public record Fertilizer : AssetClassCommodity3Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Frtlzr")]
+        public required AssetClassCommodityFertilizer1Choice_ Value { get; init; }
+    }
 }

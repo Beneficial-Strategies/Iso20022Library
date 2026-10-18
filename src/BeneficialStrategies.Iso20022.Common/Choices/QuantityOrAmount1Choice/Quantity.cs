@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityOrAmount1Choice
     /// </summary>
     [IsoId("_Q-K2cdp-Ed-ak6NoX_4Aeg_1486122904")]
     [DisplayName("Quantity")]
-    public record Quantity : QuantityOrAmount1Choice_ { }
+    public record Quantity : QuantityOrAmount1Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Qty")]
+        public required FinancialInstrumentQuantityChoice_ Value { get; init; }
+    }
 }

@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus5Choice
     /// </summary>
     [IsoId("_P8YAnEHREeasdbKMiqizqA")]
     [DisplayName("In Repair")]
-    public record InRepair : OrderStatus5Choice_ { }
+    public record InRepair : OrderStatus5Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("InRpr")]
+        public required InRepairStatusReason4Choice_ Value { get; init; }
+    }
 }

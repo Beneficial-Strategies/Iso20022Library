@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason1Choice
     /// </summary>
     [IsoId("_RJ8oodp-Ed-ak6NoX_4Aeg_1042217735")]
     [DisplayName("Global Rejection Reason")]
+    [IsoXmlTag("GblRjctnRsn")]
     public record GlobalRejectionReason : RejectionReason1Choice_
     {
         /// <summary>

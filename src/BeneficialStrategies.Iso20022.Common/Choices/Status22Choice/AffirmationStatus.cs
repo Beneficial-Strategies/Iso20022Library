@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.Status22Choice
     /// </summary>
     [IsoId("_8QboI5NLEeWGlc8L7oPDIg")]
     [DisplayName("Affirmation Status")]
-    public record AffirmationStatus : Status22Choice_ { }
+    public record AffirmationStatus : Status22Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("AffirmSts")]
+        public required AffirmationStatus9Choice_ Value { get; init; }
+    }
 }

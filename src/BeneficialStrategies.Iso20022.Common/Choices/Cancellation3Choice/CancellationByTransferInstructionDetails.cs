@@ -38,7 +38,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cancellation3Choice
         [IsoId("_eJJ84RgHEeKqWJINzXcn5g")]
         [DisplayName("Other Individual Investor")]
         [IsoXmlTag("OthrIndvInvstr")]
-        public IndividualPerson8? OtherIndividualInvestor { get; init; }
+        public ValueList<IndividualPerson8> OtherIndividualInvestor { get; init; } = [];
 
         /// <summary>
         /// Information identifying the primary corporate investor, eg, name and address.
@@ -62,7 +62,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cancellation3Choice
         [IsoId("_eJJ87RgHEeKqWJINzXcn5g")]
         [DisplayName("Other Corporate Investor")]
         [IsoXmlTag("OthrCorpInvstr")]
-        public Organisation4? OtherCorporateInvestor { get; init; }
+        public ValueList<Organisation4> OtherCorporateInvestor { get; init; } = [];
 
         /// <summary>
         /// Identification of an account owned by the investor at the old plan manager (account servicer).
@@ -112,6 +112,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Cancellation3Choice
         [IsoId("_eJJ9BRgHEeKqWJINzXcn5g")]
         [DisplayName("Extension")]
         [IsoXmlTag("Xtnsn")]
-        public Extension1? Extension { get; init; }
+        public ValueList<Extension1> Extension { get; init; } = [];
     }
 }

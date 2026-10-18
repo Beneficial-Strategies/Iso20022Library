@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.RepoCallRequestStatus5Choice
     /// </summary>
     [IsoId("_fHQhN_7rEeCvPoRGOxRobQ")]
     [DisplayName("Acknowledged Accepted")]
-    public record AcknowledgedAccepted : RepoCallRequestStatus5Choice_ { }
+    public record AcknowledgedAccepted : RepoCallRequestStatus5Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("AckdAccptd")]
+        public required AcknowledgedAcceptedStatus10Choice_ Value { get; init; }
+    }
 }

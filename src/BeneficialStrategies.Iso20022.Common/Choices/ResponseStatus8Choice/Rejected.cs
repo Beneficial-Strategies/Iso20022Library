@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.ResponseStatus8Choice
     /// </summary>
     [IsoId("_Vl2wKZNSEeWGlc8L7oPDIg")]
     [DisplayName("Rejected")]
-    public record Rejected : ResponseStatus8Choice_ { }
+    public record Rejected : ResponseStatus8Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Rjctd")]
+        public required RejectionStatus27Choice_ Value { get; init; }
+    }
 }

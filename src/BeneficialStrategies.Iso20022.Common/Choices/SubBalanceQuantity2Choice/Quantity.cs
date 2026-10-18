@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.SubBalanceQuantity2Choice
     /// </summary>
     [IsoId("_QZhRRNp-Ed-ak6NoX_4Aeg_-1518979180")]
     [DisplayName("Quantity")]
-    public record Quantity : SubBalanceQuantity2Choice_ { }
+    public record Quantity : SubBalanceQuantity2Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Qty")]
+        public required FinancialInstrumentQuantity1Choice_ Value { get; init; }
+    }
 }

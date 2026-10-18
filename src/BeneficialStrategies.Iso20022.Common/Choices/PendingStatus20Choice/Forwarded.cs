@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingStatus20Choice
     /// </summary>
     [IsoId("_0k3gwwlIEeGATtfOBToyew_-935306155")]
     [DisplayName("Forwarded")]
+    [IsoXmlTag("Fwdd")]
     public record Forwarded : PendingStatus20Choice_
     {
         /// <summary>

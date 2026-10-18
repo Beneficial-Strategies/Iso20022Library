@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus11Choice
     /// </summary>
     [IsoId("_htjMpxrpEeyhRdHRjakS2w")]
     [DisplayName("Pending")]
-    public record Pending : InstructionStatus11Choice_ { }
+    public record Pending : InstructionStatus11Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Pdg")]
+        public required PendingStatus55Choice_ Value { get; init; }
+    }
 }

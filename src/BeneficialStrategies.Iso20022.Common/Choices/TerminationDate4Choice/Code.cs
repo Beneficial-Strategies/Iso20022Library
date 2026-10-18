@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.TerminationDate4Choice
     /// </summary>
     [IsoId("_ZtQSHzqkEeWyoP0PbocV1Q")]
     [DisplayName("Code")]
-    public record Code : TerminationDate4Choice_ { }
+    public record Code : TerminationDate4Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Cd")]
+        public required DateCode18Choice_ Value { get; init; }
+    }
 }

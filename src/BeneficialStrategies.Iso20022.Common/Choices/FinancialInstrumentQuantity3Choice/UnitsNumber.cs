@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity3Choi
     /// </summary>
     [IsoId("_VOteoNp-Ed-ak6NoX_4Aeg_1922478109")]
     [DisplayName("Units Number")]
+    [IsoXmlTag("UnitsNb")]
     public record UnitsNumber : FinancialInstrumentQuantity3Choice_
     {
         /// <summary>

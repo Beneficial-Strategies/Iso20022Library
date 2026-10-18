@@ -55,6 +55,6 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedTransactionStatistics6Ch
         [IsoId("_yAw2WVyGEe24CqbZJK5XxA")]
         [DisplayName("Transactions Rejections Reason")]
         [IsoXmlTag("TxsRjctnsRsn")]
-        public RejectionReason71? TransactionsRejectionsReason { get; init; }
+        public ValueList<RejectionReason71> TransactionsRejectionsReason { get; init; } = [];
     }
 }

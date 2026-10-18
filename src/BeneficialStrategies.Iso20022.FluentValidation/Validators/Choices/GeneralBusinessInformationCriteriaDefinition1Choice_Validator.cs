@@ -53,10 +53,7 @@ public class GeneralBusinessInformationCriteriaDefinition1Choice_Validator
     {
         var newCriteriaVariantValidator =
             new InlineValidator<Choices.GeneralBusinessInformationCriteriaDefinition1Choice.NewCriteria>();
-        newCriteriaVariantValidator.When(
-            x => x.SearchCriteria is not null,
-            () => newCriteriaVariantValidator.RuleFor(x => x.SearchCriteria).SetValidator(searchCriteriaValidator!)
-        );
+        newCriteriaVariantValidator.RuleForEach(x => x.SearchCriteria).SetValidator(searchCriteriaValidator);
         newCriteriaVariantValidator.When(
             x => x.ReturnCriteria is not null,
             () => newCriteriaVariantValidator.RuleFor(x => x.ReturnCriteria).SetValidator(returnCriteriaValidator!)

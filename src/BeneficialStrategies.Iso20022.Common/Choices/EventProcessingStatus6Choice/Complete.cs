@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventProcessingStatus6Choice
     /// </summary>
     [IsoId("_Szi6PAVREeqjd8n6wD9JVw")]
     [DisplayName("Complete")]
+    [IsoXmlTag("Cmplt")]
     public record Complete : EventProcessingStatus6Choice_
     {
         /// <summary>

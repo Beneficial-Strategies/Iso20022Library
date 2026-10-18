@@ -66,6 +66,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Cancellation4Choice
         [IsoId("_BxFXLRXzEeOBE-jZfcm4KQ")]
         [DisplayName("Extension")]
         [IsoXmlTag("Xtnsn")]
-        public Extension1? Extension { get; init; }
+        public ValueList<Extension1> Extension { get; init; } = [];
     }
 }

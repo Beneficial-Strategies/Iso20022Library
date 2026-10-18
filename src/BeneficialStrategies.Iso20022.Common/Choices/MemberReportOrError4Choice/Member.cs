@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MemberReportOrError4Choice
         [IsoId("_jNHLI5lCEee-Zps0fZQaFQ")]
         [DisplayName("Return Address")]
         [IsoXmlTag("RtrAdr")]
-        public MemberIdentification2Choice_? ReturnAddress { get; init; }
+        public ValueList<MemberIdentification2Choice_> ReturnAddress { get; init; } = [];
 
         /// <summary>
         /// Account to or from which a cash entry is made.
@@ -40,7 +40,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MemberReportOrError4Choice
         [IsoId("_jNHLJZlCEee-Zps0fZQaFQ")]
         [DisplayName("Account")]
         [IsoXmlTag("Acct")]
-        public CashAccount24? Account { get; init; }
+        public ValueList<CashAccount24> Account { get; init; } = [];
 
         /// <summary>
         /// Nature of the relationship a member has with a system.
@@ -64,7 +64,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MemberReportOrError4Choice
         [IsoId("_jNHLK5lCEee-Zps0fZQaFQ")]
         [DisplayName("Contact Reference")]
         [IsoXmlTag("CtctRef")]
-        public ContactIdentificationAndAddress1? ContactReference { get; init; }
+        public ValueList<ContactIdentificationAndAddress1> ContactReference { get; init; } = [];
 
         /// <summary>
         /// Number, or virtual address, used for communication.

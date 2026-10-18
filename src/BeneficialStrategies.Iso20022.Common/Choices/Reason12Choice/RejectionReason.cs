@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason12Choice
     /// </summary>
     [IsoId("_C2YFxSRhEeO8sskhVI3IDA")]
     [DisplayName("Rejection Reason")]
-    public record RejectionReason : Reason12Choice_ { }
+    public record RejectionReason : Reason12Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("RjctnRsn")]
+        public required RejectionReason16Choice_ Value { get; init; }
+    }
 }

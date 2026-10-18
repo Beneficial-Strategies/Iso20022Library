@@ -62,6 +62,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralValueReportOrError5Cho
         [IsoId("_-ORAxzpvEemk2e6qGBk8IQ")]
         [DisplayName("Collateral Value Report")]
         [IsoXmlTag("CollValRpt")]
-        public CollateralValueReportOrError6Choice_? CollateralValueReport { get; init; }
+        public ValueList<CollateralValueReportOrError6Choice_> CollateralValueReport { get; init; } = [];
     }
 }

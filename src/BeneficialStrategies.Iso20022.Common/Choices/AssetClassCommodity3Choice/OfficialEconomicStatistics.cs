@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity3Choice
     /// </summary>
     [IsoId("_lThdeXvyEeanCNPcMT7sSg")]
     [DisplayName("Official Economic Statistics")]
+    [IsoXmlTag("OffclEcnmcSttstcs")]
     public record OfficialEconomicStatistics : AssetClassCommodity3Choice_
     {
         /// <summary>

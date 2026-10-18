@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.Status15Choice
     /// </summary>
     [IsoId("_EU__3SRhEeO8sskhVI3IDA")]
     [DisplayName("Matching Status")]
-    public record MatchingStatus : Status15Choice_ { }
+    public record MatchingStatus : Status15Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("MtchgSts")]
+        public required MatchingStatus19Choice_ Value { get; init; }
+    }
 }

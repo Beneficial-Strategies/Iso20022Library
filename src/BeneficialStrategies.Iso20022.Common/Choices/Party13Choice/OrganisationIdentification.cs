@@ -31,6 +31,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Party13Choice
         [IsoId("_QPiO1tp-Ed-ak6NoX_4Aeg_-1021329556")]
         [DisplayName("Other")]
         [IsoXmlTag("Othr")]
-        public GenericOrganisationIdentification1? Other { get; init; }
+        public ValueList<GenericOrganisationIdentification1> Other { get; init; } = [];
     }
 }

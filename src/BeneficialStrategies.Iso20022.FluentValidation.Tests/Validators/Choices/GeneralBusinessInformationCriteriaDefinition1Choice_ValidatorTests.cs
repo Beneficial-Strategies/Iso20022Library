@@ -32,7 +32,7 @@ public class GeneralBusinessInformationCriteriaDefinition1Choice_ValidatorTests
             new BeneficialStrategies.Iso20022.Choices.GeneralBusinessInformationCriteriaDefinition1Choice.NewCriteria
             {
                 NewQueryName = "NEW-QUERY",
-                SearchCriteria = new GeneralBusinessInformationSearchCriteria1 { Reference = ["REF-001"] },
+                SearchCriteria = [new GeneralBusinessInformationSearchCriteria1 { Reference = ["REF-001"] }],
                 ReturnCriteria = new GeneralBusinessInformationReturnCriteria1 { QualifierIndicator = true },
             };
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();

@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.EventProcessingStatus3Choice
     /// </summary>
     [IsoId("_tDTUsUGSEeWqy4niLuXETA")]
     [DisplayName("Pending")]
-    public record Pending : EventProcessingStatus3Choice_ { }
+    public record Pending : EventProcessingStatus3Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Pdg")]
+        public required PendingStatus41Choice_ Value { get; init; }
+    }
 }

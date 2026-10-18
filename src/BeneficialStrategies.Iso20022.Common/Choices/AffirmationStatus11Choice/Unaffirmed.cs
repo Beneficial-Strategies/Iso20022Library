@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.AffirmationStatus11Choice
     /// </summary>
     [IsoId("_XzM-0wd3Ee2fOITqoTnSLQ")]
     [DisplayName("Unaffirmed")]
-    public record Unaffirmed : AffirmationStatus11Choice_ { }
+    public record Unaffirmed : AffirmationStatus11Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Uaffrmd")]
+        public required AffirmationReason2Choice_ Value { get; init; }
+    }
 }

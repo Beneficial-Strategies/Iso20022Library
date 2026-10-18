@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionCancellationRequestSt
     /// </summary>
     [IsoId("_NpuVvl99Ee262vCSVgjImg")]
     [DisplayName("Accepted")]
+    [IsoXmlTag("Accptd")]
     public record Accepted : InstructionCancellationRequestStatus16Choice_
     {
         /// <summary>

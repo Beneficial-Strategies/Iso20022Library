@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionTypeStatus1Choice
     /// </summary>
     [IsoId("_RCfVwNp-Ed-ak6NoX_4Aeg_-1678428958")]
     [DisplayName("Instruction Status")]
-    public record InstructionStatus : InstructionTypeStatus1Choice_ { }
+    public record InstructionStatus : InstructionTypeStatus1Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("InstrSts")]
+        public required InstructionStatus3Choice_ Value { get; init; }
+    }
 }

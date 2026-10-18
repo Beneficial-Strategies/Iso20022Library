@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.Status1Choice
     /// </summary>
     [IsoId("_UVDSt9p-Ed-ak6NoX_4Aeg_127115433")]
     [DisplayName("Replacement Processing Status")]
-    public record ReplacementProcessingStatus : Status1Choice_ { }
+    public record ReplacementProcessingStatus : Status1Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("RplcmntPrcgSts")]
+        public required ReplacementProcessingStatus1Choice_ Value { get; init; }
+    }
 }

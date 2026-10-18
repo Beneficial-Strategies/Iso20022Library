@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity5Choice
     /// </summary>
     [IsoId("_owQIObtIEeiLRYqS-r-R-A")]
     [DisplayName("Freight")]
-    public record Freight : AssetClassCommodity5Choice_ { }
+    public record Freight : AssetClassCommodity5Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Frght")]
+        public required AssetClassCommodityFreight3Choice_ Value { get; init; }
+    }
 }

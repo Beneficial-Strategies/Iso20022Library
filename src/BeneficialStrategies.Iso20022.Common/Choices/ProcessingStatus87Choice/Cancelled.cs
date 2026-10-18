@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus87Choice
     /// </summary>
     [IsoId("_rHpw8StWEeyhipY4f42fZQ")]
     [DisplayName("Cancelled")]
-    public record Cancelled : ProcessingStatus87Choice_ { }
+    public record Cancelled : ProcessingStatus87Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Canc")]
+        public required CancellationStatus24Choice_ Value { get; init; }
+    }
 }

@@ -31,7 +31,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction8Ch
         [IsoId("_YeltYwx7Eeqdx6buGpCCQw")]
         [DisplayName("Traceability")]
         [IsoXmlTag("Tracblt")]
-        public Traceability8? Traceability { get; init; }
+        public ValueList<Traceability8> Traceability { get; init; } = [];
 
         /// <summary>
         /// Data related to the environment of the cancelled transaction captured in batch.

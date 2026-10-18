@@ -83,7 +83,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData20Choice
         [IsoId("_eX0PD6otEemdLtwzt4CWxg")]
         [DisplayName("Margin Loan Attribute")]
         [IsoXmlTag("MrgnLnAttr")]
-        public InterestRate3? MarginLoanAttribute { get; init; }
+        public ValueList<InterestRate3> MarginLoanAttribute { get; init; } = [];
 
         /// <summary>
         /// Termination date in the case of a full early termination of the SFT.

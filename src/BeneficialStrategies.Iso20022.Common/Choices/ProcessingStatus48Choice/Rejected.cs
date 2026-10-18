@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus48Choice
     /// </summary>
     [IsoId("_jnj2yTnuEeWfSKvvZlhRKg")]
     [DisplayName("Rejected")]
-    public record Rejected : ProcessingStatus48Choice_ { }
+    public record Rejected : ProcessingStatus48Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Rjctd")]
+        public required RejectionStatus21Choice_ Value { get; init; }
+    }
 }

@@ -77,7 +77,7 @@ public record TemporaryServices4
     /// </summary>
     [IsoId("_tBmaUUhsEfCMZJtj4J7UGQ-cpsv")]
     [DisplayName("Company Supervisor")]
-    [IsoXmlTag("CpnySprvisr")]
+    [IsoXmlTag("CpnySprvsr")]
     public Max70Text? CompanySupervisor { get; init; }
 
     /// <summary>
@@ -85,7 +85,7 @@ public record TemporaryServices4
     /// </summary>
     [IsoId("_tBmaUUhsEfCMZJtj4J7UGQ-eppd")]
     [DisplayName("Employee Personal Identification")]
-    [IsoXmlTag("EmplPersnlId")]
+    [IsoXmlTag("MplyeePrsnlId")]
     public Max35Text? EmployeePersonalIdentification { get; init; }
 
     /// <summary>
@@ -93,7 +93,7 @@ public record TemporaryServices4
     /// </summary>
     [IsoId("_tBmaUUhsEfCMZJtj4J7UGQ-epid")]
     [DisplayName("Employee Identification")]
-    [IsoXmlTag("EmplId")]
+    [IsoXmlTag("MplyeeId")]
     public PhoneNumber? EmployeeIdentification { get; init; }
 
     /// <summary>
@@ -101,7 +101,7 @@ public record TemporaryServices4
     /// </summary>
     [IsoId("_tBmaUUhsEfCMZJtj4J7UGQ-epnm")]
     [DisplayName("Employee Name")]
-    [IsoXmlTag("EmplNm")]
+    [IsoXmlTag("MplyeeNm")]
     public Max70Text? EmployeeName { get; init; }
 
     /// <summary>
@@ -109,7 +109,7 @@ public record TemporaryServices4
     /// </summary>
     [IsoId("_tBmaUUhsEfCMZJtj4J7UGQ-eppf")]
     [DisplayName("Employee Professional Level")]
-    [IsoXmlTag("EmplPrfssnlLvl")]
+    [IsoXmlTag("MplyeePrfssnlLvl")]
     public Max35Text? EmployeeProfessionalLevel { get; init; }
 
     /// <summary>
@@ -173,7 +173,7 @@ public record TemporaryServices4
     /// </summary>
     [IsoId("_tBmaUUhsEfCMZJtj4J7UGQ-scid")]
     [DisplayName("Summary Commodity Identification")]
-    [IsoXmlTag("SmmryCmdtyId")]
+    [IsoXmlTag("SummryCmmdtyId")]
     public Max35Text? SummaryCommodityIdentification { get; init; }
 
     /// <summary>
@@ -181,7 +181,7 @@ public record TemporaryServices4
     /// </summary>
     [IsoId("_tBmaUUhsEfCMZJtj4J7UGQ-tmsh")]
     [DisplayName("Time Sheet")]
-    [IsoXmlTag("TmSht")]
+    [IsoXmlTag("TmSheet")]
     public Max35Text? TimeSheet { get; init; }
 
     /// <summary>
@@ -197,7 +197,7 @@ public record TemporaryServices4
     /// </summary>
     [IsoId("_tBmaUUhsEfCMZJtj4J7UGQ-chrt")]
     [DisplayName("Charge Rate")]
-    [IsoXmlTag("ChrgeRate")]
+    [IsoXmlTag("ChrgRate")]
     public ValueList<TemporaryServiceChargeRate1> ChargeRate { get; init; } = [];
 
     /// <summary>
@@ -205,7 +205,7 @@ public record TemporaryServices4
     /// </summary>
     [IsoId("_tBmaUUhsEfCMZJtj4J7UGQ-msex")]
     [DisplayName("Miscellaneous Expenses")]
-    [IsoXmlTag("MscllnsXpnss")]
+    [IsoXmlTag("MiscExpnss")]
     public ValueList<Amount13> MiscellaneousExpenses { get; init; } = [];
 
     /// <summary>
@@ -213,7 +213,7 @@ public record TemporaryServices4
     /// </summary>
     [IsoId("_tBmaUUhsEfCMZJtj4J7UGQ-sbta")]
     [DisplayName("Subtotal Amount")]
-    [IsoXmlTag("SubtlAmt")]
+    [IsoXmlTag("SbttlAmt")]
     public ImpliedCurrencyAndAmount? SubtotalAmount { get; init; }
 
     /// <summary>

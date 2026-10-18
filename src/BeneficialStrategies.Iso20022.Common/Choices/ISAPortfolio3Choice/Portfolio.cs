@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ISAPortfolio3Choice
     /// </summary>
     [IsoId("_3fnhcUXfEeGY6MkiuzuPOA_-1022877665")]
     [DisplayName("Portfolio")]
+    [IsoXmlTag("Prtfl")]
     public record Portfolio : ISAPortfolio3Choice_
     {
         /// <summary>

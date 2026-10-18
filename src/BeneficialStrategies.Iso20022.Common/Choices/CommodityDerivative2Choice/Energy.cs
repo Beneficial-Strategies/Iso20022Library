@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CommodityDerivative2Choice
     /// </summary>
     [IsoId("_njM5U0-nEeiVsYLJl6hleg")]
     [DisplayName("Energy")]
+    [IsoXmlTag("Nrgy")]
     public record Energy : CommodityDerivative2Choice_
     {
         /// <summary>

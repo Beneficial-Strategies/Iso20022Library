@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus4Choice
     /// </summary>
     [IsoId("_fmnCe5M5EemKz5EOjv82iQ")]
     [DisplayName("Failed Settlement")]
-    public record FailedSettlement : TransferStatus4Choice_ { }
+    public record FailedSettlement : TransferStatus4Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("FaildSttlm")]
+        public required FailedSettlementStatus2Choice_ Value { get; init; }
+    }
 }

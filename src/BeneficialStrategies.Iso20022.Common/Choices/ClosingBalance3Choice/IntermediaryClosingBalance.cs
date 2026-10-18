@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClosingBalance3Choice
     /// </summary>
     [IsoId("__BaYUQgHEeSxsfb1OEDVsw")]
     [DisplayName("Intermediary Closing Balance")]
+    [IsoXmlTag("IntrmyClsgBal")]
     public record IntermediaryClosingBalance : ClosingBalance3Choice_
     {
         /// <summary>

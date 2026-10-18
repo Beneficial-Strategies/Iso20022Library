@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus31Cho
     /// </summary>
     [IsoId("_pZNIa7XTEeiTob_PrFFUxA")]
     [DisplayName("Accepted For Further Processing")]
-    public record AcceptedForFurtherProcessing : InstructionProcessingStatus31Choice_ { }
+    public record AcceptedForFurtherProcessing : InstructionProcessingStatus31Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("AccptdForFrthrPrcg")]
+        public required AcceptedStatus8Choice_ Value { get; init; }
+    }
 }

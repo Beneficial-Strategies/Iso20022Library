@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionCancellationRequestSt
     /// </summary>
     [IsoId("_peWYlzi7Eeydid5dcNPKvg")]
     [DisplayName("Cancellation Completed")]
-    public record CancellationCompleted : InstructionCancellationRequestStatus14Choice_ { }
+    public record CancellationCompleted : InstructionCancellationRequestStatus14Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("CxlCmpltd")]
+        public required CancelledStatus14Choice_ Value { get; init; }
+    }
 }

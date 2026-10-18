@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature4Choice
         [DisplayName("Sector")]
         [IsoXmlTag("Sctr")]
         [IsoSimpleType(IsoSimpleType.NACEDomainIdentifier)]
-        public NACEDomainIdentifier? Sector { get; init; }
+        public SimpleValueList<NACEDomainIdentifier> Sector { get; init; } = [];
 
         /// <summary>
         /// Information whether the reporting counterparty is above the clearing threshold referred to the regulation.

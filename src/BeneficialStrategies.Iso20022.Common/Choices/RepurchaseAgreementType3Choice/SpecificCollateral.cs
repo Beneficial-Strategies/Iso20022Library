@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RepurchaseAgreementType3Choice
     /// </summary>
     [IsoId("_BqvK8eoaEeadseq5W5YLvQ")]
     [DisplayName("Specific Collateral")]
+    [IsoXmlTag("SpcfcColl")]
     public record SpecificCollateral : RepurchaseAgreementType3Choice_
     {
         /// <summary>

@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraPositionProcessingStatus9Ch
     /// </summary>
     [IsoId("_ZkDCIStUEeyhipY4f42fZQ")]
     [DisplayName("Cancelled")]
-    public record Cancelled : IntraPositionProcessingStatus9Choice_ { }
+    public record Cancelled : IntraPositionProcessingStatus9Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Canc")]
+        public required CancellationStatus24Choice_ Value { get; init; }
+    }
 }

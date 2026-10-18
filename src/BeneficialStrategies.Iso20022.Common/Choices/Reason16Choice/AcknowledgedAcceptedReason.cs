@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason16Choice
     /// </summary>
     [IsoId("_kYkAfTnvEeWfSKvvZlhRKg")]
     [DisplayName("Acknowledged Accepted Reason")]
-    public record AcknowledgedAcceptedReason : Reason16Choice_ { }
+    public record AcknowledgedAcceptedReason : Reason16Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("AckdAccptdRsn")]
+        public required AcknowledgementReason12Choice_ Value { get; init; }
+    }
 }

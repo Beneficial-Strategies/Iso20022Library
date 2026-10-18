@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimCancellationRequestSt
     /// </summary>
     [IsoId("_1Tcqa9x4EeqESbVR5AloZQ")]
     [DisplayName("Pending Cancellation")]
-    public record PendingCancellation : MarketClaimCancellationRequestStatus1Choice_ { }
+    public record PendingCancellation : MarketClaimCancellationRequestStatus1Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("PdgCxl")]
+        public required PendingCancellationStatus11Choice_ Value { get; init; }
+    }
 }

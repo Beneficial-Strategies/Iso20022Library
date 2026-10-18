@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity5Choice
     /// </summary>
     [IsoId("_owQIQbtIEeiLRYqS-r-R-A")]
     [DisplayName("Paper")]
-    public record Paper : AssetClassCommodity5Choice_ { }
+    public record Paper : AssetClassCommodity5Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Ppr")]
+        public required AssetClassCommodityPaper3Choice_ Value { get; init; }
+    }
 }

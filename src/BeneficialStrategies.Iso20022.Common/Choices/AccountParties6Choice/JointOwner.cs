@@ -101,7 +101,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties6Choice
         [IsoId("_Vs-NYQjQEeS5F6qHcKOrew")]
         [DisplayName("FATCA Form Type")]
         [IsoXmlTag("FATCAFormTp")]
-        public FATCAForm1Choice_? FATCAFormType { get; init; }
+        public ValueList<FATCAForm1Choice_> FATCAFormType { get; init; } = [];
 
         /// <summary>
         /// Foreign Account Tax Compliance Act (FATCA) status of the investor.
@@ -109,6 +109,6 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties6Choice
         [IsoId("_TrvjMQjVEeS5F6qHcKOrew")]
         [DisplayName("FATCA Status")]
         [IsoXmlTag("FATCASts")]
-        public FATCAStatus1? FATCAStatus { get; init; }
+        public ValueList<FATCAStatus1> FATCAStatus { get; init; } = [];
     }
 }

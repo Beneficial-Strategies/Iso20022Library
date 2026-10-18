@@ -13,7 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
     /// </summary>
     [IsoId("_Tet_ZSGOEeW7gKYhAMEFCw")]
     [DisplayName("Clearing System Member Identification")]
-    public record ClearingSystemMemberIdentification
-        : FinancialInstitutionIdentification7Choice_
-    { }
+    public record ClearingSystemMemberIdentification : FinancialInstitutionIdentification7Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("ClrSysMmbId")]
+        public required ClearingSystemMemberIdentificationChoice_ Value { get; init; }
+    }
 }

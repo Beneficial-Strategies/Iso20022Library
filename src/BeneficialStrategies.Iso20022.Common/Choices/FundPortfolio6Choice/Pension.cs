@@ -46,7 +46,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio6Choice
         [IsoId("_7lP0dzOTEeqLMcD_sEa8Xw")]
         [DisplayName("Tax Reference")]
         [IsoXmlTag("TaxRef")]
-        public TaxReference1? TaxReference { get; init; }
+        public ValueList<TaxReference1> TaxReference { get; init; } = [];
 
         /// <summary>
         /// Reference of the drawdown.
@@ -64,6 +64,6 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio6Choice
         [IsoId("_7lP0ezOTEeqLMcD_sEa8Xw")]
         [DisplayName("Additional Information")]
         [IsoXmlTag("AddtlInf")]
-        public AdditionalInformation15? AdditionalInformation { get; init; }
+        public ValueList<AdditionalInformation15> AdditionalInformation { get; init; } = [];
     }
 }

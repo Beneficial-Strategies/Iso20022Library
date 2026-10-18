@@ -30,6 +30,6 @@ namespace BeneficialStrategies.Iso20022.Choices.DisputeNotification2Choice
         [IsoId("_da94AytOEeyOa655cLd-DQ")]
         [DisplayName("Dispute Resolution Type 1 Choice")]
         [IsoXmlTag("DsptRsltnTp1Chc")]
-        public DisputeResolutionType1Choice_? DisputeResolutionType1Choice { get; init; }
+        public ValueList<DisputeResolutionType1Choice_> DisputeResolutionType1Choice { get; init; } = [];
     }
 }

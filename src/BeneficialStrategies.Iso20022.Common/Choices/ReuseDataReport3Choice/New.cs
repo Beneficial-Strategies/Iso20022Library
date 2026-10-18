@@ -68,7 +68,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReuseDataReport3Choice
         [IsoId("_0qscG64bEemB_csI4yyKLA")]
         [DisplayName("Funding Source")]
         [IsoXmlTag("FndgSrc")]
-        public FundingSource1? FundingSource { get; init; }
+        public ValueList<FundingSource1> FundingSource { get; init; } = [];
 
         /// <summary>
         /// Additional information that can not be captured in the structured fields and/or any other specific block.
@@ -76,6 +76,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ReuseDataReport3Choice
         [IsoId("_0qscHa4bEemB_csI4yyKLA")]
         [DisplayName("Supplementary Data")]
         [IsoXmlTag("SplmtryData")]
-        public SupplementaryData1? SupplementaryData { get; init; }
+        public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
     }
 }

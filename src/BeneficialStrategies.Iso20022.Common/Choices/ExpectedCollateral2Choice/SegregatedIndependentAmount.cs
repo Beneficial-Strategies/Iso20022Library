@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExpectedCollateral2Choice
         [IsoId("__cEOMYLZEeWrrO9HojbPQA")]
         [DisplayName("Delivery")]
         [IsoXmlTag("Dlvry")]
-        public CollateralMovement9? Delivery { get; init; }
+        public ValueList<CollateralMovement9> Delivery { get; init; } = [];
 
         /// <summary>
         /// Type of collateral that will be returned and date by which the collateral movement is expected.
@@ -30,6 +30,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ExpectedCollateral2Choice
         [IsoId("__cEOM4LZEeWrrO9HojbPQA")]
         [DisplayName("Return")]
         [IsoXmlTag("Rtr")]
-        public CollateralMovement9? Return { get; init; }
+        public ValueList<CollateralMovement9> Return { get; init; } = [];
     }
 }

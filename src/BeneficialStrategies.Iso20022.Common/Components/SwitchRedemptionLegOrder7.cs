@@ -61,7 +61,7 @@ public record SwitchRedemptionLegOrder7
     /// </summary>
     [IsoId("fc3f78a9-grp1-0001-0006-df34d88caf54")]
     [DisplayName("Group1 Or2 Units")]
-    [IsoXmlTag("Grp1Or2Unts")]
+    [IsoXmlTag("Grp1Or2Units")]
     public UKTaxGroupUnit1Code? Group1Or2Units { get; init; }
 
     /// <summary>

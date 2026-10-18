@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus32Cho
     /// </summary>
     [IsoId("_mWrV0LtVEeilsanBGAzy4A")]
     [DisplayName("Covered")]
+    [IsoXmlTag("Cvrd")]
     public record Covered : InstructionProcessingStatus32Choice_
     {
         /// <summary>

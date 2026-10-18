@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingIdentification3Choice
     /// </summary>
     [IsoId("_2EZuE53DEeuwmdq0KtnICg")]
     [DisplayName("Other")]
-    public record Other : UnderlyingIdentification3Choice_ { }
+    public record Other : UnderlyingIdentification3Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Othr")]
+        public required FinancialInstrumentIdentification8Choice_ Value { get; init; }
+    }
 }

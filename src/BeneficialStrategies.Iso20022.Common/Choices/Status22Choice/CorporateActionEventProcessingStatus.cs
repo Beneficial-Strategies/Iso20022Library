@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.Status22Choice
     /// </summary>
     [IsoId("_8QboKZNLEeWGlc8L7oPDIg")]
     [DisplayName("Corporate Action Event Processing Status")]
-    public record CorporateActionEventProcessingStatus : Status22Choice_ { }
+    public record CorporateActionEventProcessingStatus : Status22Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("CorpActnEvtPrcgSts")]
+        public required CorporateActionEventProcessingStatus4Choice_ Value { get; init; }
+    }
 }

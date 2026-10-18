@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification236Choice
     /// </summary>
     [IsoId("_lqGRMMgoEeuGrNSsxk3B0A")]
     [DisplayName("Legal")]
-    public record Legal : PartyIdentification236Choice_ { }
+    public record Legal : PartyIdentification236Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Lgl")]
+        public required OrganisationIdentification15Choice_ Value { get; init; }
+    }
 }

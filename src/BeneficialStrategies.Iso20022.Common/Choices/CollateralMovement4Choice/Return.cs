@@ -62,7 +62,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralMovement4Choice
         [IsoId("_zIwuCYFvEeWtPe6Crjmeug")]
         [DisplayName("Securities Collateral")]
         [IsoXmlTag("SctiesColl")]
-        public SecuritiesCollateral5? SecuritiesCollateral { get; init; }
+        public ValueList<SecuritiesCollateral5> SecuritiesCollateral { get; init; } = [];
 
         /// <summary>
         /// Collateral type is cash.
@@ -70,7 +70,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralMovement4Choice
         [IsoId("_zIwuC4FvEeWtPe6Crjmeug")]
         [DisplayName("Cash Collateral")]
         [IsoXmlTag("CshColl")]
-        public CashCollateral2? CashCollateral { get; init; }
+        public ValueList<CashCollateral2> CashCollateral { get; init; } = [];
 
         /// <summary>
         /// Collateral type is other than securities or cash for example letter of credit.
@@ -78,6 +78,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralMovement4Choice
         [IsoId("_zIwuDYFvEeWtPe6Crjmeug")]
         [DisplayName("Other Collateral")]
         [IsoXmlTag("OthrColl")]
-        public OtherCollateral5? OtherCollateral { get; init; }
+        public ValueList<OtherCollateral5> OtherCollateral { get; init; } = [];
     }
 }

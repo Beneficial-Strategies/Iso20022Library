@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.Status22Choice
     /// </summary>
     [IsoId("_8QboPZNLEeWGlc8L7oPDIg")]
     [DisplayName("Settlement Condition Modification Status")]
-    public record SettlementConditionModificationStatus : Status22Choice_ { }
+    public record SettlementConditionModificationStatus : Status22Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("SttlmCondModSts")]
+        public required SettlementConditionModificationStatus4Choice_ Value { get; init; }
+    }
 }

@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.PairedOrTurnedQuantity4Choice
     /// </summary>
     [IsoId("_5xlnq5NLEeWGlc8L7oPDIg")]
     [DisplayName("Turned Quantity")]
-    public record TurnedQuantity : PairedOrTurnedQuantity4Choice_ { }
+    public record TurnedQuantity : PairedOrTurnedQuantity4Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("TrndQty")]
+        public required FinancialInstrumentQuantity15Choice_ Value { get; init; }
+    }
 }

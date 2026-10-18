@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus81Choice
     /// </summary>
     [IsoId("_qTGP8SAdEeuyDZ-ukt4YRg")]
     [DisplayName("Pending Processing")]
-    public record PendingProcessing : ProcessingStatus81Choice_ { }
+    public record PendingProcessing : ProcessingStatus81Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("PdgPrcg")]
+        public required PendingProcessingStatus19Choice_ Value { get; init; }
+    }
 }

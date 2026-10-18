@@ -105,6 +105,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Party47Choice
         [DisplayName("Place Of Listing")]
         [IsoXmlTag("PlcOfListg")]
         [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-        public MICIdentifier? PlaceOfListing { get; init; }
+        public SimpleValueList<MICIdentifier> PlaceOfListing { get; init; } = [];
     }
 }

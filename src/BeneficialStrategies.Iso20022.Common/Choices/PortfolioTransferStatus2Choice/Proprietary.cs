@@ -30,6 +30,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PortfolioTransferStatus2Choice
         [IsoId("_y0OagTp4EeWVrPy0StzzSg")]
         [DisplayName("Proprietary Reason")]
         [IsoXmlTag("PrtryRsn")]
-        public ProprietaryReason4? ProprietaryReason { get; init; }
+        public ValueList<ProprietaryReason4> ProprietaryReason { get; init; } = [];
     }
 }

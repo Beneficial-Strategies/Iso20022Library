@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity6Choice
     /// </summary>
     [IsoId("_1bgUERZXEe2QNcZTDeoKnQ")]
     [DisplayName("Agricultural")]
-    public record Agricultural : AssetClassCommodity6Choice_ { }
+    public record Agricultural : AssetClassCommodity6Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Agrcltrl")]
+        public required AssetClassCommodityAgricultural6Choice_ Value { get; init; }
+    }
 }

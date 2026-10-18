@@ -128,6 +128,6 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingContract3Choice
         [IsoId("_6SzUh7GIEeuSTr8k0UEM8A")]
         [DisplayName("Attachment")]
         [IsoXmlTag("Attchmnt")]
-        public DocumentGeneralInformation5? Attachment { get; init; }
+        public ValueList<DocumentGeneralInformation5> Attachment { get; init; } = [];
     }
 }

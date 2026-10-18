@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationCriteria4Choice
         [IsoId("_gv7DtdcZEeqRFcf2R4bPBw")]
         [DisplayName("Search Criteria")]
         [IsoXmlTag("SchCrit")]
-        public ReservationSearchCriteria4? SearchCriteria { get; init; }
+        public ValueList<ReservationSearchCriteria4> SearchCriteria { get; init; } = [];
 
         /// <summary>
         /// Defines the expected reservation report.

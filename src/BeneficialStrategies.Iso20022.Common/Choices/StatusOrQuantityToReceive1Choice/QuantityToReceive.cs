@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.StatusOrQuantityToReceive1Choice
     /// </summary>
     [IsoId("_UGvw8dp-Ed-ak6NoX_4Aeg_1067930324")]
     [DisplayName("Quantity To Receive")]
-    public record QuantityToReceive : StatusOrQuantityToReceive1Choice_ { }
+    public record QuantityToReceive : StatusOrQuantityToReceive1Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("QtyToRcv")]
+        public required Quantity6Choice_ Value { get; init; }
+    }
 }

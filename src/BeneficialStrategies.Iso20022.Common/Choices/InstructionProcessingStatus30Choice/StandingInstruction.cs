@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus30Cho
     /// </summary>
     [IsoId("_komx1ZwsEeazcsnODTksnQ")]
     [DisplayName("Standing Instruction")]
+    [IsoXmlTag("StgInstr")]
     public record StandingInstruction : InstructionProcessingStatus30Choice_
     {
         /// <summary>

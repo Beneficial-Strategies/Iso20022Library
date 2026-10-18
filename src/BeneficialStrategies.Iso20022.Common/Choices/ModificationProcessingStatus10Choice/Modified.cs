@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationProcessingStatus10Ch
     /// </summary>
     [IsoId("_OqjeJytWEeyhipY4f42fZQ")]
     [DisplayName("Modified")]
-    public record Modified : ModificationProcessingStatus10Choice_ { }
+    public record Modified : ModificationProcessingStatus10Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Modfd")]
+        public required ModificationStatus4Choice_ Value { get; init; }
+    }
 }

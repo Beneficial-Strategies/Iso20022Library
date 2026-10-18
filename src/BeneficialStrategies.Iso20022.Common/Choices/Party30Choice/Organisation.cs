@@ -86,7 +86,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party30Choice
         [IsoId("__dOlgUKTEeWuG5hmkcJWSQ")]
         [DisplayName("Modified Postal Address")]
         [IsoXmlTag("ModfdPstlAdr")]
-        public ModificationScope34? ModifiedPostalAddress { get; init; }
+        public ValueList<ModificationScope34> ModifiedPostalAddress { get; init; } = [];
 
         /// <summary>
         /// Type of organisation.

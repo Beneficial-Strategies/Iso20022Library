@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimProcessingStatus1Choi
     /// </summary>
     [IsoId("_YGaIgdx4EeqESbVR5AloZQ")]
     [DisplayName("Rejected")]
-    public record Rejected : MarketClaimProcessingStatus1Choice_ { }
+    public record Rejected : MarketClaimProcessingStatus1Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Rjctd")]
+        public required RejectedStatus37Choice_ Value { get; init; }
+    }
 }

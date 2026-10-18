@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.ReconciliationStatus5Choice
     /// </summary>
     [IsoId("_C1J2g__oEemm3skPVSMJQg")]
     [DisplayName("Reporting Data")]
-    public record ReportingData : ReconciliationStatus5Choice_ { }
+    public record ReportingData : ReconciliationStatus5Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("RptgData")]
+        public required ReconciliationMatchedStatus6Choice_ Value { get; init; }
+    }
 }

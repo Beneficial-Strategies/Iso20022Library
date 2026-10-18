@@ -11,6 +11,6 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedReason66Choice
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Prtry")]
-        public required GenericIdentification30 Value { get; init; }
+        public required GenericIdentification1 Value { get; init; }
     }
 }

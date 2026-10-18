@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStatus22Choice
     /// </summary>
     [IsoId("_6QBPw5NLEeWGlc8L7oPDIg")]
     [DisplayName("Pending")]
-    public record Pending : SettlementStatus22Choice_ { }
+    public record Pending : SettlementStatus22Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Pdg")]
+        public required PendingStatus50Choice_ Value { get; init; }
+    }
 }

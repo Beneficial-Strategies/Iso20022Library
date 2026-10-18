@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OpeningBalance3Choice
     /// </summary>
     [IsoId("_Szn0AQgHEeSxsfb1OEDVsw")]
     [DisplayName("Intermediary Opening Balance")]
+    [IsoXmlTag("IntrmyOpngBal")]
     public record IntermediaryOpeningBalance : OpeningBalance3Choice_
     {
         /// <summary>

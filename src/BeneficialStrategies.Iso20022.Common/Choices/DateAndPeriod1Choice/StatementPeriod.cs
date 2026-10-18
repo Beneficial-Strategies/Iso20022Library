@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.DateAndPeriod1Choice
     /// </summary>
     [IsoId("_Qqpdi9p-Ed-ak6NoX_4Aeg_-1766941598")]
     [DisplayName("Statement Period")]
-    public record StatementPeriod : DateAndPeriod1Choice_ { }
+    public record StatementPeriod : DateAndPeriod1Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("StmtPrd")]
+        public required Period2Choice_ Value { get; init; }
+    }
 }

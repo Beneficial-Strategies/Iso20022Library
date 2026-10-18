@@ -45,7 +45,7 @@ public record SwitchRedemptionLegExecution5
     /// </summary>
     [IsoId("f3cc386a-unit-0001-0004-1c60f6402f94")]
     [DisplayName("Units")]
-    [IsoXmlTag("Unts")]
+    [IsoXmlTag("Units")]
     public required Unit1Choice_ Units { get; init; }
 
     /// <summary>
@@ -133,7 +133,7 @@ public record SwitchRedemptionLegExecution5
     /// </summary>
     [IsoId("f3cc386a-grp1-0001-0015-1c60f6402f94")]
     [DisplayName("Group1 Or2 Units")]
-    [IsoXmlTag("Grp1Or2Unts")]
+    [IsoXmlTag("Grp1Or2Units")]
     public UKTaxGroupUnit1Code? Group1Or2Units { get; init; }
 
     /// <summary>

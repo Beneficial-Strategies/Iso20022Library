@@ -45,7 +45,7 @@ public record SwitchSubscriptionLegExecution5
     /// </summary>
     [IsoId("ec413d6f-unit-0001-0004-b9bb7bb30358")]
     [DisplayName("Units")]
-    [IsoXmlTag("Unts")]
+    [IsoXmlTag("Units")]
     public required Unit1Choice_ Units { get; init; }
 
     /// <summary>

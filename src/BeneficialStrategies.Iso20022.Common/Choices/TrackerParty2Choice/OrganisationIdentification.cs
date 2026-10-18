@@ -40,6 +40,6 @@ namespace BeneficialStrategies.Iso20022.Choices.TrackerParty2Choice
         [IsoId("_6emK1W48EeiU9cctagi5ow")]
         [DisplayName("Other")]
         [IsoXmlTag("Othr")]
-        public GenericOrganisationIdentification1? Other { get; init; }
+        public ValueList<GenericOrganisationIdentification1> Other { get; init; } = [];
     }
 }

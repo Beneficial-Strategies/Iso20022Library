@@ -48,6 +48,6 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty15Choic
         [IsoId("_cHFOd1ovEe23K4GXSpBSeg")]
         [DisplayName("Transaction Details")]
         [IsoXmlTag("TxDtls")]
-        public ReconciliationCounterpartyPairStatistics6? TransactionDetails { get; init; }
+        public ValueList<ReconciliationCounterpartyPairStatistics6> TransactionDetails { get; init; } = [];
     }
 }

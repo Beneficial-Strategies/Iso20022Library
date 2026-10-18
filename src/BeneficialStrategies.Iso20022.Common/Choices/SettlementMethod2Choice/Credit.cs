@@ -150,7 +150,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementMethod2Choice
         [IsoId("_7RaH_W48EeiU9cctagi5ow")]
         [DisplayName("Instruction For Creditor Agent")]
         [IsoXmlTag("InstrForCdtrAgt")]
-        public InstructionForCreditorAgent1? InstructionForCreditorAgent { get; init; }
+        public ValueList<InstructionForCreditorAgent1> InstructionForCreditorAgent { get; init; } = [];
 
         /// <summary>
         /// Underlying reason for the payment transaction.

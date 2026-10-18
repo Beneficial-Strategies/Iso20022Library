@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingStatus35Choice
     /// </summary>
     [IsoId("_2sTZ9Qd3Ee2fOITqoTnSLQ")]
     [DisplayName("Matching Alleged")]
-    public record MatchingAlleged : MatchingStatus35Choice_ { }
+    public record MatchingAlleged : MatchingStatus35Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("MtchgAllgd")]
+        public required MatchingReason5Choice_ Value { get; init; }
+    }
 }

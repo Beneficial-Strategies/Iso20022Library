@@ -45,7 +45,7 @@ public record Terminal10
     /// </summary>
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-rdcp")]
     [DisplayName("Reading Capability")]
-    [IsoXmlTag("RdgCpblty")]
+    [IsoXmlTag("RdngCpblty")]
     public SimpleValueList<CardDataReading11Code> ReadingCapability { get; init; } = [];
 
     /// <summary>
@@ -69,7 +69,7 @@ public record Terminal10
     /// </summary>
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-pnec")]
     [DisplayName("PIN Entry Capability")]
-    [IsoXmlTag("PINNtryCapblty")]
+    [IsoXmlTag("PINNtryCpblty")]
     public ISO8583PINEntryCapabilityCode? PINEntryCapability { get; init; }
 
     /// <summary>
@@ -77,7 +77,7 @@ public record Terminal10
     /// </summary>
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-acln")]
     [DisplayName("Approval Code Length")]
-    [IsoXmlTag("AprvlCdLngth")]
+    [IsoXmlTag("ApprvlCdLngth")]
     public Number? ApprovalCodeLength { get; init; }
 
     /// <summary>
@@ -125,7 +125,7 @@ public record Terminal10
     /// </summary>
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-tmss")]
     [DisplayName("Temporary Secure Storage")]
-    [IsoXmlTag("TmpryScrtStrg")]
+    [IsoXmlTag("TempScrStorg")]
     public TrueFalseIndicator? TemporarySecureStorage { get; init; }
 
     /// <summary>
@@ -133,7 +133,7 @@ public record Terminal10
     /// </summary>
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-intp")]
     [DisplayName("Integration Type")]
-    [IsoXmlTag("IntgrtnTp")]
+    [IsoXmlTag("IntgtnTp")]
     public TerminalIntegrationCategory1Code? IntegrationType { get; init; }
 
     /// <summary>
@@ -141,7 +141,7 @@ public record Terminal10
     /// </summary>
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-gelo")]
     [DisplayName("Geographic Location")]
-    [IsoXmlTag("GeoLctn")]
+    [IsoXmlTag("GeogcLctn")]
     public GeographicPointInDecimalDegreesText? GeographicLocation { get; init; }
 
     /// <summary>
@@ -157,7 +157,7 @@ public record Terminal10
     /// </summary>
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-offp")]
     [DisplayName("Off Premises")]
-    [IsoXmlTag("OffPrmss")]
+    [IsoXmlTag("OffPrmiss")]
     public TrueFalseIndicator? OffPremises { get; init; }
 
     /// <summary>
@@ -173,7 +173,7 @@ public record Terminal10
     /// </summary>
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-srnb")]
     [DisplayName("Serial Number")]
-    [IsoXmlTag("SerlNb")]
+    [IsoXmlTag("SrlNb")]
     public Max35Text? SerialNumber { get; init; }
 
     /// <summary>
@@ -197,7 +197,7 @@ public record Terminal10
     /// </summary>
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-tlen")]
     [DisplayName("Terminal Line Encryption Certified")]
-    [IsoXmlTag("TrmnlLineNcrptnCrtfd")]
+    [IsoXmlTag("TermnlLineNcrptnCertfd")]
     public TrueFalseIndicator? TerminalLineEncryptionCertified { get; init; }
 
     /// <summary>
@@ -205,7 +205,7 @@ public record Terminal10
     /// </summary>
     [IsoId("_qDGlYRQVEfC1ZfCQz0xB3g-ukpt")]
     [DisplayName("Unique Key Per Terminal Certified")]
-    [IsoXmlTag("UqKeyPerTrmnlCrtfd")]
+    [IsoXmlTag("UnqKeyPerTermnlCertfd")]
     public TrueFalseIndicator? UniqueKeyPerTerminalCertified { get; init; }
 
     /// <summary>

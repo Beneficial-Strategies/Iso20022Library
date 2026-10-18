@@ -29,7 +29,7 @@ public record TaxVoucher6
     /// </summary>
     [IsoId("_VWACAajzEfCG_LQaXOxwew-trdr")]
     [DisplayName("Tax Reclaim Documentation Reference")]
-    [IsoXmlTag("TaxRclmDocRef")]
+    [IsoXmlTag("TaxRclmDcmnttnRef")]
     public Max35Text? TaxReclaimDocumentationReference { get; init; }
 
     /// <summary>

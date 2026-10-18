@@ -80,7 +80,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status24Choice
         [IsoId("_Fx2LPTbtEead9bDRE_1DAQ")]
         [DisplayName("Leg Information")]
         [IsoXmlTag("LegInf")]
-        public SwitchLegReferences2? LegInformation { get; init; }
+        public ValueList<SwitchLegReferences2> LegInformation { get; init; } = [];
 
         /// <summary>
         /// Party that initiates the status of the order.

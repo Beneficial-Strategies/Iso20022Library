@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeConfirmation1Choice
     /// </summary>
     [IsoId("_SDySEA28EeWmAKKPnqYEVQ")]
     [DisplayName("Non Confirmed")]
+    [IsoXmlTag("NonConfd")]
     public record NonConfirmed : TradeConfirmation1Choice_
     {
         /// <summary>

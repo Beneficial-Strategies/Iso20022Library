@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimProcessingStatus1Choi
     /// </summary>
     [IsoId("_YGaIg9x4EeqESbVR5AloZQ")]
     [DisplayName("Pending")]
-    public record Pending : MarketClaimProcessingStatus1Choice_ { }
+    public record Pending : MarketClaimProcessingStatus1Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Pdg")]
+        public required PendingStatus63Choice_ Value { get; init; }
+    }
 }

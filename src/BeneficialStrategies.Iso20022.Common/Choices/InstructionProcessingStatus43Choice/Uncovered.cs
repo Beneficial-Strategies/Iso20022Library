@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus43Cho
     /// </summary>
     [IsoId("_pUH10x9QEeuFz_FaCzCLgQ")]
     [DisplayName("Uncovered")]
+    [IsoXmlTag("Ucvrd")]
     public record Uncovered : InstructionProcessingStatus43Choice_
     {
         /// <summary>

@@ -30,6 +30,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralProposal5Choice
         [IsoId("_sHMX84pIEeaNTaanBSMWmg")]
         [DisplayName("Movement Direction")]
         [IsoXmlTag("MvmntDrctn")]
-        public CollateralMovement5Choice_? MovementDirection { get; init; }
+        public ValueList<CollateralMovement5Choice_> MovementDirection { get; init; } = [];
     }
 }

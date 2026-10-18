@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionOrRepairStatus2Choice
         [IsoId("_UW1bY9p-Ed-ak6NoX_4Aeg_-268700611")]
         [DisplayName("Code")]
         [IsoXmlTag("Cd")]
-        public RejectionAndRepairReason4Choice_? Code { get; init; }
+        public ValueList<RejectionAndRepairReason4Choice_> Code { get; init; } = [];
 
         /// <summary>
         /// Provides additional reason information that cannot be provided in a structured field.

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity3Choice
     /// </summary>
     [IsoId("_lThddXvyEeanCNPcMT7sSg")]
     [DisplayName("Inflation")]
+    [IsoXmlTag("Infltn")]
     public record Inflation : AssetClassCommodity3Choice_
     {
         /// <summary>

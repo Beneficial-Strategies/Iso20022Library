@@ -12,7 +12,7 @@ public class CashSortingCriterion2ValidatorTests
     private static CashSortingCriterion2 ValidMessage() =>
         new()
         {
-            SortingCriterionType = new Choices.SortCriteria1Choice.UserDefined(),
+            SortingCriterionType = new Choices.SortCriteria1Choice.UserDefined { Value = new Choices.DataFormat1Choice.Unstructured { Value = "FORMAT" } },
             ForecastBreakdownDetails = [ValidForecastBreakdownDetail()],
         };
 

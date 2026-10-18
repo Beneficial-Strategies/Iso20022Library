@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentificationSearchCrite
     /// </summary>
     [IsoId("_g7QEuWliEeGaMcKyqKNRfQ_-950111322")]
     [DisplayName("Equal")]
-    public record Equal : AccountIdentificationSearchCriteria2Choice_ { }
+    public record Equal : AccountIdentificationSearchCriteria2Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("EQ")]
+        public required AccountIdentification4Choice_ Value { get; init; }
+    }
 }

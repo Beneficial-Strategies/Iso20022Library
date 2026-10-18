@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimProcessingStatus1Choi
     /// </summary>
     [IsoId("_YGaIhdx4EeqESbVR5AloZQ")]
     [DisplayName("Accepted For Further Processing")]
-    public record AcceptedForFurtherProcessing : MarketClaimProcessingStatus1Choice_ { }
+    public record AcceptedForFurtherProcessing : MarketClaimProcessingStatus1Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("AccptdForFrthrPrcg")]
+        public required AcceptedStatus8Choice_ Value { get; init; }
+    }
 }

@@ -62,7 +62,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate27Choice
         [IsoId("_Z_09Tcg6Eeu4ecZgAYuz5w")]
         [DisplayName("Rate Adjustment")]
         [IsoXmlTag("RateAdjstmnt")]
-        public RateAdjustment1? RateAdjustment { get; init; }
+        public ValueList<RateAdjustment1> RateAdjustment { get; init; } = [];
 
         /// <summary>
         /// Method for calculating the accrued interest on the principal amount for a fixed rate.

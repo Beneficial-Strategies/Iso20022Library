@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Derivative2Choice
     /// </summary>
     [IsoId("_Bv9MRWkwEeaLAKoEUNsD9g")]
     [DisplayName("Foreign Exchange")]
+    [IsoXmlTag("FX")]
     public record ForeignExchange : Derivative2Choice_
     {
         /// <summary>

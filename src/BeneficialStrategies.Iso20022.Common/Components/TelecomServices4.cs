@@ -45,7 +45,7 @@ public record TelecomServices4
     /// </summary>
     [IsoId("_mkgbEUhsEfCMZJtj4J7UGQ-blst")]
     [DisplayName("Billing Start")]
-    [IsoXmlTag("BlgStart")]
+    [IsoXmlTag("BllgStart")]
     public ISODate? BillingStart { get; init; }
 
     /// <summary>
@@ -53,7 +53,7 @@ public record TelecomServices4
     /// </summary>
     [IsoId("_mkgbEUhsEfCMZJtj4J7UGQ-blen")]
     [DisplayName("Billing End")]
-    [IsoXmlTag("BlgEnd")]
+    [IsoXmlTag("BllgEnd")]
     public ISODate? BillingEnd { get; init; }
 
     /// <summary>
@@ -61,7 +61,7 @@ public record TelecomServices4
     /// </summary>
     [IsoId("_mkgbEUhsEfCMZJtj4J7UGQ-blev")]
     [DisplayName("Billing Event")]
-    [IsoXmlTag("BlgEvt")]
+    [IsoXmlTag("BllgEvt")]
     public ValueList<TelecomBillingEventAmount1> BillingEvent { get; init; } = [];
 
     /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventProcessingStatus3Choice
     /// </summary>
     [IsoId("_tDTUqUGSEeWqy4niLuXETA")]
     [DisplayName("Reconciled")]
+    [IsoXmlTag("Rcncld")]
     public record Reconciled : EventProcessingStatus3Choice_
     {
         /// <summary>

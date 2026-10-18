@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraPositionProcessingStatus7Ch
     /// </summary>
     [IsoId("_4Z8pqewLEeiazoAmcoGsBQ")]
     [DisplayName("Repair")]
-    public record Repair : IntraPositionProcessingStatus7Choice_ { }
+    public record Repair : IntraPositionProcessingStatus7Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Rpr")]
+        public required RejectionOrRepairStatus29Choice_ Value { get; init; }
+    }
 }

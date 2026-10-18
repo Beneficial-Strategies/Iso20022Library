@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus3Choi
     /// </summary>
     [IsoId("_UZg79Np-Ed-ak6NoX_4Aeg_792042593")]
     [DisplayName("Generated")]
-    public record Generated : InstructionProcessingStatus3Choice_ { }
+    public record Generated : InstructionProcessingStatus3Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Gnrtd")]
+        public required GeneratedStatus1Choice_ Value { get; init; }
+    }
 }

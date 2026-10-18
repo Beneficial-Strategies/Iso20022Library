@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementParties34Choice
     /// </summary>
     [IsoId("_viBlUcg4Eeu4ecZgAYuz5w")]
     [DisplayName("Central Securities Depository Participant")]
-    public record CentralSecuritiesDepositoryParticipant : SettlementParties34Choice_ { }
+    public record CentralSecuritiesDepositoryParticipant : SettlementParties34Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("CntrlSctiesDpstryPtcpt")]
+        public required OrganisationIdentification15Choice_ Value { get; init; }
+    }
 }

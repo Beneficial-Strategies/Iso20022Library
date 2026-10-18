@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.Account8Choice
     /// </summary>
     [IsoId("_Q4z1VNp-Ed-ak6NoX_4Aeg_-1651274766")]
     [DisplayName("Tax Account")]
-    public record TaxAccount : Account8Choice_ { }
+    public record TaxAccount : Account8Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("TaxAcct")]
+        public required CashAccountIdentification5Choice_ Value { get; init; }
+    }
 }

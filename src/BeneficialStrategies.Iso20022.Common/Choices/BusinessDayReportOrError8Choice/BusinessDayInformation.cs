@@ -39,6 +39,6 @@ namespace BeneficialStrategies.Iso20022.Choices.BusinessDayReportOrError8Choice
         [IsoId("_xCzJxZlcEeeE1Ya-LgRsuQ")]
         [DisplayName("System Information Per Currency")]
         [IsoXmlTag("SysInfPerCcy")]
-        public SystemAvailabilityAndEvents2? SystemInformationPerCurrency { get; init; }
+        public ValueList<SystemAvailabilityAndEvents2> SystemInformationPerCurrency { get; init; } = [];
     }
 }

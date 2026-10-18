@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.SortCriteria1Choice
     /// </summary>
     [IsoId("_U1-1htp-Ed-ak6NoX_4Aeg_1863721996")]
     [DisplayName("User Defined")]
-    public record UserDefined : SortCriteria1Choice_ { }
+    public record UserDefined : SortCriteria1Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("UsrDfnd")]
+        public required DataFormat1Choice_ Value { get; init; }
+    }
 }

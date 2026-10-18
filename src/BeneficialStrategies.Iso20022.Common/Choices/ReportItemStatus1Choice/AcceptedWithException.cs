@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportItemStatus1Choice
     /// </summary>
     [IsoId("_TKSsQkitEeSlHoYg_EudVQ")]
     [DisplayName("Accepted With Exception")]
-    [IsoXmlTag("AccptdWthExcptn")]
+    [IsoXmlTag("AccptdWthXcptn")]
     public record AcceptedWithException : ReportItemStatus1Choice_
     {
         /// <summary>
@@ -40,6 +40,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportItemStatus1Choice
         [IsoId("_j5TZhClEEeWwYv6HydV_vw")]
         [DisplayName("Report Item")]
         [IsoXmlTag("RptItm")]
-        public ReportItem1? ReportItem { get; init; }
+        public ValueList<ReportItem1> ReportItem { get; init; } = [];
     }
 }

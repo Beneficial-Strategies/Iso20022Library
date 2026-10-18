@@ -17,7 +17,7 @@ public class SystemIdentification2Choice_ValidatorTests
     public void MarketInfrastructureIdentificationVariant_NoValidationErrors()
     {
         var value =
-            new BeneficialStrategies.Iso20022.Choices.SystemIdentification2Choice.MarketInfrastructureIdentification();
+            new BeneficialStrategies.Iso20022.Choices.SystemIdentification2Choice.MarketInfrastructureIdentification { Value = new BeneficialStrategies.Iso20022.Choices.MarketInfrastructureIdentification1Choice.Proprietary { Value = "MI" } };
         _sut.TestValidate(value).ShouldNotHaveAnyValidationErrors();
     }
 }

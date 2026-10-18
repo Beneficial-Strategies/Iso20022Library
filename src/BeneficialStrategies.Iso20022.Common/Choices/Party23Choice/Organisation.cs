@@ -75,7 +75,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party23Choice
         [IsoId("_xflo7QhFEeSUPbC7DbLJpQ")]
         [DisplayName("Tax Identification")]
         [IsoXmlTag("TaxId")]
-        public TaxIdentification2? TaxIdentification { get; init; }
+        public ValueList<TaxIdentification2> TaxIdentification { get; init; } = [];
 
         /// <summary>
         /// Number assigned by a national registration authority to an entity.

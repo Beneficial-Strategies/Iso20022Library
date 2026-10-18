@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason7Choice
     /// </summary>
     [IsoId("_E2DtRf4hEeCH9dkaY_DhYw")]
     [DisplayName("Cancellation Reason")]
-    public record CancellationReason : Reason7Choice_ { }
+    public record CancellationReason : Reason7Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("CxlRsn")]
+        public required CancellationReason9Choice_ Value { get; init; }
+    }
 }

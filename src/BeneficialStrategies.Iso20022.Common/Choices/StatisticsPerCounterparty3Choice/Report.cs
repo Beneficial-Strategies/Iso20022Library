@@ -46,6 +46,6 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty3Choice
         [IsoId("_DPXdJ82HEeqFGLkKbAvCGg")]
         [DisplayName("Competent Authority")]
         [IsoXmlTag("CmptntAuthrty")]
-        public CompetentAuthority1? CompetentAuthority { get; init; }
+        public ValueList<CompetentAuthority1> CompetentAuthority { get; init; } = [];
     }
 }

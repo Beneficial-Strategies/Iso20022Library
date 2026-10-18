@@ -45,7 +45,7 @@ public record TelecomServicesLineItem4
     /// </summary>
     [IsoId("_DK8YkUiEEfCMZJtj4J7UGQ-cftp")]
     [DisplayName("Call From Type")]
-    [IsoXmlTag("CallFrmTp")]
+    [IsoXmlTag("CallFrTp")]
     public TelephonyCallType2Code? CallFromType { get; init; }
 
     /// <summary>
@@ -53,23 +53,23 @@ public record TelecomServicesLineItem4
     /// </summary>
     [IsoId("_DK8YkUiEEfCMZJtj4J7UGQ-cfph")]
     [DisplayName("Call From Phone")]
-    [IsoXmlTag("CallFrmPhne")]
+    [IsoXmlTag("CallFrPhne")]
     public PhoneNumber? CallFromPhone { get; init; }
 
     /// <summary>
-    /// City from which the call was made.
+    /// Country from which  the call was made.
     /// </summary>
-    [IsoId("_DK8YkUiEEfCMZJtj4J7UGQ-cfcy")]
-    [DisplayName("Call From City")]
-    [IsoXmlTag("CallFrmCty")]
-    public Max35Text? CallFromCity { get; init; }
+    [IsoId("_DK8YkUiEEfCMZJtj4J7UGQ-cfco")]
+    [DisplayName("Call From Country")]
+    [IsoXmlTag("CallFrCity")]
+    public ISOMax3ACountryCode? CallFromCountry { get; init; }
 
     /// <summary>
     /// Country sub division major from which the call was made.
     /// </summary>
     [IsoId("_DK8YkUiEEfCMZJtj4J7UGQ-cfcm")]
     [DisplayName("Call From Country Sub Division Major")]
-    [IsoXmlTag("CallFrmCtrySubDvsnMjr")]
+    [IsoXmlTag("CallFrCtrySubDvsnMjr")]
     public ISOCountrySubDivisionCode? CallFromCountrySubDivisionMajor { get; init; }
 
     /// <summary>
@@ -77,16 +77,16 @@ public record TelecomServicesLineItem4
     /// </summary>
     [IsoId("_DK8YkUiEEfCMZJtj4J7UGQ-cfcn")]
     [DisplayName("Call From Country Sub Division Minor")]
-    [IsoXmlTag("CallFrmCtrySubDvsnMnr")]
+    [IsoXmlTag("CallFrCtrySubDvsnMnr")]
     public ISOCountrySubDivisionCode? CallFromCountrySubDivisionMinor { get; init; }
 
     /// <summary>
-    /// Country from which  the call was made.
+    /// City from which the call was made.
     /// </summary>
-    [IsoId("_DK8YkUiEEfCMZJtj4J7UGQ-cfco")]
-    [DisplayName("Call From Country")]
-    [IsoXmlTag("CallFrmCtry")]
-    public ISOMax3ACountryCode? CallFromCountry { get; init; }
+    [IsoId("_DK8YkUiEEfCMZJtj4J7UGQ-cfcy")]
+    [DisplayName("Call From City")]
+    [IsoXmlTag("CallFrCtry")]
+    public Max35Text? CallFromCity { get; init; }
 
     /// <summary>
     /// Contains call type values for the destination of the telephone call .
@@ -109,7 +109,7 @@ public record TelecomServicesLineItem4
     /// </summary>
     [IsoId("_DK8YkUiEEfCMZJtj4J7UGQ-ctcy")]
     [DisplayName("Call To City")]
-    [IsoXmlTag("CallToCty")]
+    [IsoXmlTag("CallToCity")]
     public Max35Text? CallToCity { get; init; }
 
     /// <summary>

@@ -41,6 +41,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification41Choice
         [IsoId("_mv1RpVo2Ee23K4GXSpBSeg")]
         [DisplayName("Constituents")]
         [IsoXmlTag("Cnsttnts")]
-        public BasketConstituents3? Constituents { get; init; }
+        public ValueList<BasketConstituents3> Constituents { get; init; } = [];
     }
 }

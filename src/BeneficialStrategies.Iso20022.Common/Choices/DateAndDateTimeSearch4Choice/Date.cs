@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.DateAndDateTimeSearch4Choice
     /// </summary>
     [IsoId("_68F8Q33sEeibM9CPDGCw0g")]
     [DisplayName("Date")]
-    public record Date : DateAndDateTimeSearch4Choice_ { }
+    public record Date : DateAndDateTimeSearch4Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Dt")]
+        public required DatePeriodSearch1Choice_ Value { get; init; }
+    }
 }

@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.NettingIdentification1Choice
     /// </summary>
     [IsoId("_P7sJ0JUwEeaYkf5FCqYMeA")]
     [DisplayName("Trade Party")]
-    public record TradeParty : NettingIdentification1Choice_ { }
+    public record TradeParty : NettingIdentification1Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("TradPty")]
+        public required PartyIdentification73Choice_ Value { get; init; }
+    }
 }

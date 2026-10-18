@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.Status8Choice
     /// </summary>
     [IsoId("_w2B750ABEeCaq78Ig8ATcA")]
     [DisplayName("Response Status")]
-    public record ResponseStatus : Status8Choice_ { }
+    public record ResponseStatus : Status8Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("RspnSts")]
+        public required ResponseStatus1Choice_ Value { get; init; }
+    }
 }

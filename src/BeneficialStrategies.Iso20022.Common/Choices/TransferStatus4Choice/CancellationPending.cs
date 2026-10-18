@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus4Choice
     /// </summary>
     [IsoId("_fmnCgZM5EemKz5EOjv82iQ")]
     [DisplayName("Cancellation Pending")]
-    public record CancellationPending : TransferStatus4Choice_ { }
+    public record CancellationPending : TransferStatus4Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("CxlPdg")]
+        public required CancellationPendingStatus7Choice_ Value { get; init; }
+    }
 }

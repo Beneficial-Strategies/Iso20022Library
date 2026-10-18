@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceQuantity4Choice
     /// </summary>
     [IsoId("_QYeIa9p-Ed-ak6NoX_4Aeg_2075430076")]
     [DisplayName("Quantity")]
-    public record Quantity : BalanceQuantity4Choice_ { }
+    public record Quantity : BalanceQuantity4Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Qty")]
+        public required Quantity6Choice_ Value { get; init; }
+    }
 }

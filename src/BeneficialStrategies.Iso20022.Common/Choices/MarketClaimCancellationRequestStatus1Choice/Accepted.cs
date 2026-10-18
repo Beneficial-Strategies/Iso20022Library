@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimCancellationRequestSt
     /// </summary>
     [IsoId("_1TcqZ9x4EeqESbVR5AloZQ")]
     [DisplayName("Accepted")]
+    [IsoXmlTag("Accptd")]
     public record Accepted : MarketClaimCancellationRequestStatus1Choice_
     {
         /// <summary>

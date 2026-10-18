@@ -13,5 +13,10 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimProcessingStatus1Choi
     /// </summary>
     [IsoId("_YGaIf9x4EeqESbVR5AloZQ")]
     [DisplayName("Cancelled")]
-    public record Cancelled : MarketClaimProcessingStatus1Choice_ { }
+    public record Cancelled : MarketClaimProcessingStatus1Choice_
+    {
+        /// <summary>Contains the main value for the container.</summary>
+        [IsoXmlTag("Canc")]
+        public required CancelledStatus12Choice_ Value { get; init; }
+    }
 }
