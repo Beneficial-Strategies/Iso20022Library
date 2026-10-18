@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Provides further details on the reference and status on the original transactions, included in the original instruction, to which the return message applies.
-/// </summary>
+/// <inheritdoc cref="IPaymentTransaction44"/>
 [IsoId("_TOBE4SHLEeK1OvoXgbVMNg")]
 [DisplayName("Payment Transaction")]
-public record PaymentTransaction44
+public partial record PaymentTransaction44
 {
-    /// <summary>
-    /// Unique identification, as assigned by an instructing party for an instructed party, to unambiguously identify the returned transaction.|Usage: The instructing party is the party sending the return message and not the party that sent the original instruction that is being returned.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction44.ReturnIdentification"/>
     [IsoId("_Tik_sSHLEeK1OvoXgbVMNg")]
     [DisplayName("Return Identification")]
     [IsoXmlTag("RtrId")]
@@ -26,17 +22,13 @@ public record PaymentTransaction44
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? ReturnIdentification { get; init; }
 
-    /// <summary>
-    /// Provides information on the original message.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction44.OriginalGroupInformation"/>
     [IsoId("_Tik_tSHLEeK1OvoXgbVMNg")]
     [DisplayName("Original Group Information")]
     [IsoXmlTag("OrgnlGrpInf")]
     public OriginalGroupInformation3? OriginalGroupInformation { get; init; }
 
-    /// <summary>
-    /// Unique identification, as assigned by the original instructing party for the original instructed party, to unambiguously identify the original instruction.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction44.OriginalInstructionIdentification"/>
     [IsoId("_Tik_vSHLEeK1OvoXgbVMNg")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
@@ -44,9 +36,7 @@ public record PaymentTransaction44
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? OriginalInstructionIdentification { get; init; }
 
-    /// <summary>
-    /// Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction44.OriginalEndToEndIdentification"/>
     [IsoId("_Tik_wSHLEeK1OvoXgbVMNg")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
@@ -54,9 +44,7 @@ public record PaymentTransaction44
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
 
-    /// <summary>
-    /// Unique identification, as assigned by the original first instructing agent, to unambiguously identify the transaction.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction44.OriginalTransactionIdentification"/>
     [IsoId("_Tik_xSHLEeK1OvoXgbVMNg")]
     [DisplayName("Original Transaction Identification")]
     [IsoXmlTag("OrgnlTxId")]
@@ -64,9 +52,7 @@ public record PaymentTransaction44
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? OriginalTransactionIdentification { get; init; }
 
-    /// <summary>
-    /// Unique reference, as assigned by the original clearing system, to unambiguously identify the original instruction.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction44.OriginalClearingSystemReference"/>
     [IsoId("_Tik_ySHLEeK1OvoXgbVMNg")]
     [DisplayName("Original Clearing System Reference")]
     [IsoXmlTag("OrgnlClrSysRef")]
@@ -74,107 +60,81 @@ public record PaymentTransaction44
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? OriginalClearingSystemReference { get; init; }
 
-    /// <summary>
-    /// Amount of money, as provided in the original transaction, to be moved between the instructing agent and the instructed agent.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction44.OriginalInterbankSettlementAmount"/>
     [IsoId("_Tik_zSHLEeK1OvoXgbVMNg")]
     [DisplayName("Original Interbank Settlement Amount")]
     [IsoXmlTag("OrgnlIntrBkSttlmAmt")]
     public ActiveOrHistoricCurrencyAndAmount? OriginalInterbankSettlementAmount { get; init; }
 
-    /// <summary>
-    /// Amount of money moved between the instructing agent and the instructed agent in the returned transaction.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction44.ReturnedInterbankSettlementAmount"/>
     [IsoId("_Tik_0SHLEeK1OvoXgbVMNg")]
     [DisplayName("Returned Interbank Settlement Amount")]
     [IsoXmlTag("RtrdIntrBkSttlmAmt")]
     public required ActiveCurrencyAndAmount ReturnedInterbankSettlementAmount { get; init; }
 
-    /// <summary>
-    /// Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.||Usage: the InterbankSettlementDate is the interbank settlement date of the return message, and not of the original instruction.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction44.InterbankSettlementDate"/>
     [IsoId("_Tik_2SHLEeK1OvoXgbVMNg")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
     public IsoISODate? InterbankSettlementDate { get; init; }
 
-    /// <summary>
-    /// Amount of money to be moved between the debtor and the creditor, before deduction of charges, in the returned transaction.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction44.ReturnedInstructedAmount"/>
     [IsoId("_Tik_4SHLEeK1OvoXgbVMNg")]
     [DisplayName("Returned Instructed Amount")]
     [IsoXmlTag("RtrdInstdAmt")]
     public ActiveOrHistoricCurrencyAndAmount? ReturnedInstructedAmount { get; init; }
 
-    /// <summary>
-    /// Factor used to convert an amount from one currency into another. This reflects the price at which one currency was bought with another currency.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction44.ExchangeRate"/>
     [IsoId("_Tik_5SHLEeK1OvoXgbVMNg")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     public IsoBaseOneRate? ExchangeRate { get; init; }
 
-    /// <summary>
-    /// Amount of money asked or paid as compensation for the processing of the instruction.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction44.CompensationAmount"/>
     [IsoId("_Tik_7SHLEeK1OvoXgbVMNg")]
     [DisplayName("Compensation Amount")]
     [IsoXmlTag("CompstnAmt")]
     public ActiveOrHistoricCurrencyAndAmount? CompensationAmount { get; init; }
 
-    /// <summary>
-    /// Specifies which party/parties will bear the charges associated with the processing of the payment transaction.||Usage: The ChargeBearer applies to the return message, not to the original instruction.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction44.ChargeBearer"/>
     [IsoId("_Tik_8SHLEeK1OvoXgbVMNg")]
     [DisplayName("Charge Bearer")]
     [IsoXmlTag("ChrgBr")]
     public ChargeBearerType1Code? ChargeBearer { get; init; }
 
-    /// <summary>
-    /// Provides information on the charges to be paid by the charge bearer(s) related to the processing of the return transaction.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction44.ChargesInformation"/>
     [IsoId("_Tik_9SHLEeK1OvoXgbVMNg")]
     [DisplayName("Charges Information")]
     [IsoXmlTag("ChrgsInf")]
     public ValueList<Charges2> ChargesInformation { get; init; } = [];
 
-    /// <summary>
-    /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).||Usage: The instructing agent is the party sending the return message and not the party that sent the original instruction that is being returned.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction44.InstructingAgent"/>
     [IsoId("_Tik_-SHLEeK1OvoXgbVMNg")]
     [DisplayName("Instructing Agent")]
     [IsoXmlTag("InstgAgt")]
     public BranchAndFinancialInstitutionIdentification5? InstructingAgent { get; init; }
 
-    /// <summary>
-    /// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).||Usage: The instructed agent is the party receiving the return message and not the party that received the original instruction that is being returned.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction44.InstructedAgent"/>
     [IsoId("_TilAASHLEeK1OvoXgbVMNg")]
     [DisplayName("Instructed Agent")]
     [IsoXmlTag("InstdAgt")]
     public BranchAndFinancialInstitutionIdentification5? InstructedAgent { get; init; }
 
-    /// <summary>
-    /// Provides detailed information on the return reason.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction44.ReturnReasonInformation"/>
     [IsoId("_TilACSHLEeK1OvoXgbVMNg")]
     [DisplayName("Return Reason Information")]
     [IsoXmlTag("RtrRsnInf")]
     public ValueList<PaymentReturnReason1> ReturnReasonInformation { get; init; } = [];
 
-    /// <summary>
-    /// Key elements used to identify the original transaction that is being referred to.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction44.OriginalTransactionReference"/>
     [IsoId("_TilADSHLEeK1OvoXgbVMNg")]
     [DisplayName("Original Transaction Reference")]
     [IsoXmlTag("OrgnlTxRef")]
     public OriginalTransactionReference16? OriginalTransactionReference { get; init; }
 
-    /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction44.SupplementaryData"/>
     [IsoId("_XNubuiHLEeK1OvoXgbVMNg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]

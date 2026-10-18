@@ -9,32 +9,24 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Further information on the reversal reason of the transaction.
-/// </summary>
+/// <inheritdoc cref="IReversalReasonInformation1"/>
 [IsoId("_TPKBodp-Ed-ak6NoX_4Aeg_157540470")]
 [DisplayName("Reversal Reason Information")]
-public record ReversalReasonInformation1
+public partial record ReversalReasonInformation1
 {
-    /// <summary>
-    /// Party issuing the reversal.
-    /// </summary>
+    /// <inheritdoc cref="IReversalReasonInformation1.ReversalOriginator"/>
     [IsoId("_TPKBotp-Ed-ak6NoX_4Aeg_157540608")]
     [DisplayName("Reversal Originator")]
     [IsoXmlTag("RvslOrgtr")]
     public PartyIdentification8? ReversalOriginator { get; init; }
 
-    /// <summary>
-    /// Specifies the reason for the reversal.
-    /// </summary>
+    /// <inheritdoc cref="IReversalReasonInformation1.ReversalReason"/>
     [IsoId("_TPKBo9p-Ed-ak6NoX_4Aeg_157540556")]
     [DisplayName("Reversal Reason")]
     [IsoXmlTag("RvslRsn")]
     public ReversalReason1Choice_? ReversalReason { get; init; }
 
-    /// <summary>
-    /// Further details on the reversal reason.
-    /// </summary>
+    /// <inheritdoc cref="IReversalReasonInformation1.AdditionalReversalReasonInformation"/>
     [IsoId("_TPKBpNp-Ed-ak6NoX_4Aeg_157540512")]
     [DisplayName("Additional Reversal Reason Information")]
     [IsoXmlTag("AddtlRvslRsnInf")]

@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Specifies the type of the document line identification.
-    /// </summary>
+    /// <inheritdoc cref="IDocumentLineType1Choice"/>
     [KnownType(typeof(DocumentLineType1Choice.Code))]
     [KnownType(typeof(DocumentLineType1Choice.Proprietary))]
     [JsonDerivedType(typeof(DocumentLineType1Choice.Code), nameof(DocumentLineType1Choice.Code))]
@@ -18,5 +16,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("__hXr4abkEeKvUvwX_r3tzA")]
     [DisplayName("Document Line Type 1 Choice")]
-    public abstract record DocumentLineType1Choice_ { }
+    public abstract partial record DocumentLineType1Choice_ { }
 }

@@ -1,0 +1,11 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Choices;
+
+/// <summary>
+/// Choice of a clearing system identifier.
+/// </summary>
+[IsoId("_TMoSENp-Ed-ak6NoX_4Aeg_-1410917193")]
+public interface IClearingSystemIdentification2Choice : IIsoChoice
+{
+}

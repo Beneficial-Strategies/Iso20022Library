@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Sets of elements to identify the status of a mandate.
-    /// </summary>
+    /// <inheritdoc cref="IMandateStatus1Choice"/>
     [KnownType(typeof(MandateStatus1Choice.Code))]
     [KnownType(typeof(MandateStatus1Choice.Proprietary))]
     [JsonDerivedType(typeof(MandateStatus1Choice.Code), nameof(MandateStatus1Choice.Code))]
@@ -18,5 +16,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_ChH7Y5nAEeao_Z127E9uYg")]
     [DisplayName("Mandate Status 1 Choice")]
-    public abstract record MandateStatus1Choice_ { }
+    public abstract partial record MandateStatus1Choice_ { }
 }

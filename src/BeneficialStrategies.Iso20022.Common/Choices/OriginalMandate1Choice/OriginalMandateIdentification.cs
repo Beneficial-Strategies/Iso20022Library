@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.OriginalMandate1Choice
 {
-    /// <summary>
-    /// Unique identification, as assigned by the creditor, to unambiguously identify the original mandate.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalMandateIdentification"/>
     [IsoId("_RD1ZlNp-Ed-ak6NoX_4Aeg_1242303052")]
     [DisplayName("Original Mandate Identification")]
-    public record OriginalMandateIdentification : OriginalMandate1Choice_
+    public partial record OriginalMandateIdentification : OriginalMandate1Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies a character string with a maximum length of 35 characters.
-        /// </summary>
+        /// <inheritdoc cref="IOriginalMandateIdentification.Value"/>
         [IsoXmlTag("OrgnlMndtId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]

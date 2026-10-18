@@ -12,23 +12,13 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pain;
 
-/// <summary>
-/// This record is an implementation of the pain.012.001.02 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// Scope
-/// The MandateAcceptanceReport message is sent from the agent of the receiver (debtor or creditor) of the MandateRequest message (initiation, amendment or cancellation) to the agent of the initiator of the MandateRequest message (debtor or creditor).
-/// A MandateAcceptanceReport message is used to confirm the acceptance or rejection of a MandateRequest message. Where acceptance is part of the full process flow, a MandateRequest message only becomes valid after a confirmation of acceptance is received through a MandateAcceptanceReport message from the agent of the receiver.
-/// Usage
-/// The MandateAcceptanceReport message can contain only one confirmation of acceptance of rejection of one specific MandateRequest message.
-/// The messages can be exchanged between debtor agent and creditor agent and between debtor agent and debtor and creditor agent and creditor.
-/// The MandateAcceptanceReport message can be used in domestic and cross-border scenarios.
-/// </summary>
+/// <inheritdoc cref="IMandateAcceptanceReportV02"/>
 [Description(
     @"Scope|The MandateAcceptanceReport message is sent from the agent of the receiver (debtor or creditor) of the MandateRequest message (initiation, amendment or cancellation) to the agent of the initiator of the MandateRequest message (debtor or creditor).|A MandateAcceptanceReport message is used to confirm the acceptance or rejection of a MandateRequest message. Where acceptance is part of the full process flow, a MandateRequest message only becomes valid after a confirmation of acceptance is received through a MandateAcceptanceReport message from the agent of the receiver.|Usage|The MandateAcceptanceReport message can contain only one confirmation of acceptance of rejection of one specific MandateRequest message.|The messages can be exchanged between debtor agent and creditor agent and between debtor agent and debtor and creditor agent and creditor.|The MandateAcceptanceReport message can be used in domestic and cross-border scenarios."
 )]
 [IsoId("_rwGZYFkyEeGeoaLUQk__nA_1820631680")]
 [DisplayName("Mandate Acceptance Report V")]
-public record MandateAcceptanceReportV02 : IOuterRecord
+public partial record MandateAcceptanceReportV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -55,25 +45,19 @@ public record MandateAcceptanceReportV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Set of characteristics to identify the message and parties playing a role in the mandate acceptance, but which are not part of the mandate.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAcceptanceReportV02.GroupHeader"/>
     [IsoId("_rwZUUFkyEeGeoaLUQk__nA_136321228")]
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader47 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Set of elements used to provide information on the acception or rejection of the mandate request.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAcceptanceReportV02.UnderlyingAcceptanceDetails"/>
     [IsoId("_rwjFUFkyEeGeoaLUQk__nA_-746912059")]
     [DisplayName("Underlying Acceptance Details")]
     [IsoXmlTag("UndrlygAccptncDtls")]
     public required MandateAcceptance2 UnderlyingAcceptanceDetails { get; init; }
 
-    /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAcceptanceReportV02.SupplementaryData"/>
     [IsoId("_rwjFUVkyEeGeoaLUQk__nA_-467468330")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]

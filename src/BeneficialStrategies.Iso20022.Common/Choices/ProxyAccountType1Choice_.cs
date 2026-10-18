@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Specifies the scheme used for the identification of an account alias.
-    /// </summary>
+    /// <inheritdoc cref="IProxyAccountType1Choice"/>
     [KnownType(typeof(ProxyAccountType1Choice.Code))]
     [KnownType(typeof(ProxyAccountType1Choice.Proprietary))]
     [JsonDerivedType(typeof(ProxyAccountType1Choice.Code), nameof(ProxyAccountType1Choice.Code))]
@@ -18,5 +16,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_dyock3h3EeidzqjNEfehPg")]
     [DisplayName("Proxy Account Type 1 Choice")]
-    public abstract record ProxyAccountType1Choice_ { }
+    public abstract partial record ProxyAccountType1Choice_ { }
 }

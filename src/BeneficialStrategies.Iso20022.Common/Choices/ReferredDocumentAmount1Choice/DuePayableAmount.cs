@@ -8,25 +8,19 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.ReferredDocumentAmount1Choice
 {
-    /// <summary>
-    /// Amount specified is the exact amount due and payable to the creditor.
-    /// </summary>
+    /// <inheritdoc cref="IDuePayableAmount"/>
     [IsoId("_QGJCQ9p-Ed-ak6NoX_4Aeg_-888106466")]
     [DisplayName("Due Payable Amount")]
     [IsoXmlTag("DuePyblAmt")]
-    public record DuePayableAmount : ReferredDocumentAmount1Choice_
+    public partial record DuePayableAmount : ReferredDocumentAmount1Choice_
     {
-        /// <summary>
-        /// The currency in which this amount is measured.
-        /// </summary>
+        /// <inheritdoc cref="IDuePayableAmount.Currency"/>
         [IsoId("_YXSZF9p-Ed-ak6NoX_4Aeg_-1352517078_Currency")]
         [DisplayName("Currency And Amount _ Currency")]
         [IsoXmlTag("Currency")]
         public required CurrencyCode Currency { get; init; }
 
-        /// <summary>
-        /// Amount of the transaction.
-        /// </summary>
+        /// <inheritdoc cref="IDuePayableAmount.Amount"/>
         [IsoId("_YXSZF9p-Ed-ak6NoX_4Aeg_-1352517078_Amount")]
         [DisplayName("Currency And Amount _ Amount")]
         [IsoXmlTag("Amount")]

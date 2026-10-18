@@ -9,38 +9,28 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Provides details on the original group, to which the message refers.
-/// </summary>
+/// <inheritdoc cref="IOriginalGroupHeader20"/>
 [IsoId("_yCJJATEyEe6g-ffJsqGiSA")]
 [Description(@"Provides details on the original group, to which the message refers.")]
 [DisplayName("Original Group Header20")]
-public record OriginalGroupHeader20
+public partial record OriginalGroupHeader20
 {
-    /// <summary>
-    /// Date and time at which the original message was created.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalGroupHeader20.OriginalCreationDateTime"/>
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
     public IsoISODateTime? OriginalCreationDateTime { get; init; }
 
-    /// <summary>
-    /// Point to point reference, as assigned by the original instructing party, to unambiguously identify the original message.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalGroupHeader20.OriginalMessageIdentification"/>
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
     public required IsoMax35Text OriginalMessageIdentification { get; init; }
 
-    /// <summary>
-    /// Specifies the original message name identifier to which the message refers.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalGroupHeader20.OriginalMessageNameIdentification"/>
     [DisplayName("Original Message Name Identification")]
     [IsoXmlTag("OrgnlMsgNmId")]
     public required IsoMax35Text OriginalMessageNameIdentification { get; init; }
 
-    /// <summary>
-    /// Provides detailed information on the reversal reason.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalGroupHeader20.ReversalReasonInformation"/>
     [DisplayName("Reversal Reason Information")]
     [IsoXmlTag("RvslRsnInf")]
     public ValueList<PaymentReversalReason10> ReversalReasonInformation { get; init; } = [];

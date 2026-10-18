@@ -1,0 +1,31 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Provides document line information.
+/// </summary>
+[IsoId("_eZxMgTE4Ee62xuUQ2zyZww")]
+public interface IDocumentLineInformation2 : IIsoComponent
+{
+    /// <summary>
+    /// Provides details on the amounts of the document line.
+    /// </summary>
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    IRemittanceAmount4? Amount { get; }
+
+    /// <summary>
+    /// Description associated with the document line.
+    /// </summary>
+    [DisplayName("Description")]
+    [IsoXmlTag("Desc")]
+    IsoMax2048Text? Description { get; }
+
+    /// <summary>
+    /// Provides identification of the document line.
+    /// </summary>
+    [DisplayName("Identification")]
+    [IsoXmlTag("Id")]
+    IEnumerable<IDocumentLineIdentification1> Identification { get; }
+}

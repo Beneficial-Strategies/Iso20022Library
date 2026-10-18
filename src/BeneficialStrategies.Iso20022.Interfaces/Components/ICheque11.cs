@@ -1,0 +1,106 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Characteristics of a cheque instruction, such as cheque type or cheque number.
+/// </summary>
+[IsoId("_-VaZd24-EeiU9cctagi5ow")]
+public interface ICheque11 : IIsoComponent
+{
+    /// <summary>
+    /// Specifies the type of cheque to be issued.
+    /// </summary>
+    [IsoId("_-fil1W4-EeiU9cctagi5ow")]
+    [DisplayName("Cheque Type")]
+    [IsoXmlTag("ChqTp")]
+    ChequeType2Code? ChequeType { get; }
+
+    /// <summary>
+    /// Unique and unambiguous identifier for a cheque as assigned by the agent.
+    /// </summary>
+    [IsoId("_-fil124-EeiU9cctagi5ow")]
+    [DisplayName("Cheque Number")]
+    [IsoXmlTag("ChqNb")]
+    IsoMax35Text? ChequeNumber { get; }
+
+    /// <summary>
+    /// Identifies the party that ordered the issuance of the cheque.
+    /// </summary>
+    [IsoId("_-fil2W4-EeiU9cctagi5ow")]
+    [DisplayName("Cheque From")]
+    [IsoXmlTag("ChqFr")]
+    INameAndAddress16? ChequeFrom { get; }
+
+    /// <summary>
+    /// Specifies the delivery method of the cheque by the debtor&apos;s agent.
+    /// </summary>
+    [IsoId("_-fil224-EeiU9cctagi5ow")]
+    [DisplayName("Delivery Method")]
+    [IsoXmlTag("DlvryMtd")]
+    IChequeDeliveryMethod1Choice? DeliveryMethod { get; }
+
+    /// <summary>
+    /// Party to whom the debtor&apos;s agent needs to send the cheque.
+    /// </summary>
+    [IsoId("_-fil3W4-EeiU9cctagi5ow")]
+    [DisplayName("Deliver To")]
+    [IsoXmlTag("DlvrTo")]
+    INameAndAddress16? DeliverTo { get; }
+
+    /// <summary>
+    /// Urgency or order of importance that the originator would like the recipient of the payment instruction to apply to the processing of the payment instruction.
+    /// </summary>
+    [IsoId("_-fil324-EeiU9cctagi5ow")]
+    [DisplayName("Instruction Priority")]
+    [IsoXmlTag("InstrPrty")]
+    Priority2Code? InstructionPriority { get; }
+
+    /// <summary>
+    /// Date when the draft becomes payable and the debtor&apos;s account is debited.
+    /// </summary>
+    [IsoId("_-fil4W4-EeiU9cctagi5ow")]
+    [DisplayName("Cheque Maturity Date")]
+    [IsoXmlTag("ChqMtrtyDt")]
+    IsoISODate? ChequeMaturityDate { get; }
+
+    /// <summary>
+    /// Identifies, in a coded form, the cheque layout, company logo and digitised signature to be used to print the cheque, as agreed between the initiating party and the debtor&apos;s agent.
+    /// </summary>
+    [IsoId("_-fil424-EeiU9cctagi5ow")]
+    [DisplayName("Forms Code")]
+    [IsoXmlTag("FrmsCd")]
+    IsoMax35Text? FormsCode { get; }
+
+    /// <summary>
+    /// Information that needs to be printed on a cheque, used by the payer to add miscellaneous information.
+    /// </summary>
+    [IsoId("_-fil5W4-EeiU9cctagi5ow")]
+    [DisplayName("Memo Field")]
+    [IsoXmlTag("MemoFld")]
+    IEnumerable<string> MemoField { get; }
+
+    /// <summary>
+    /// Regional area in which the cheque can be cleared, when a country has no nation-wide cheque clearing organisation.
+    /// </summary>
+    [IsoId("_-fil524-EeiU9cctagi5ow")]
+    [DisplayName("Regional Clearing Zone")]
+    [IsoXmlTag("RgnlClrZone")]
+    IsoMax35Text? RegionalClearingZone { get; }
+
+    /// <summary>
+    /// Specifies the print location of the cheque.
+    /// </summary>
+    [IsoId("_-fil6W4-EeiU9cctagi5ow")]
+    [DisplayName("Print Location")]
+    [IsoXmlTag("PrtLctn")]
+    IsoMax35Text? PrintLocation { get; }
+
+    /// <summary>
+    /// Signature to be used by the cheque servicer on a specific cheque to be printed.
+    /// </summary>
+    [IsoId("_-fil624-EeiU9cctagi5ow")]
+    [DisplayName("Signature")]
+    [IsoXmlTag("Sgntr")]
+    IEnumerable<string> Signature { get; }
+}

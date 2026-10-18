@@ -9,23 +9,17 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Date And Type1.
-/// </summary>
+/// <inheritdoc cref="IDateAndType1"/>
 [IsoId("_wbqsoDHxEe6BxvG014AZzQ")]
 [DisplayName("Date And Type1")]
-public record DateAndType1
+public partial record DateAndType1
 {
-    /// <summary>
-    /// Date.
-    /// </summary>
+    /// <inheritdoc cref="IDateAndType1.Date"/>
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     public required IsoISODate Date { get; init; }
 
-    /// <summary>
-    /// Type.
-    /// </summary>
+    /// <inheritdoc cref="IDateAndType1.Type"/>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     public required DateType2Choice_ Type { get; init; }

@@ -12,24 +12,13 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pain;
 
-/// <summary>
-/// This record is an implementation of the pain.002.001.08 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// Scope
-/// The CustomerPaymentStatusReport message is sent by an instructed agent to the previous party in the payment chain. It is used to inform this party about the positive or negative status of an instruction (either single or file). It is also used to report on a pending instruction.
-/// Usage
-/// The CustomerPaymentStatusReport message is exchanged between an agent and a non-financial institution customer to provide status information on instructions previously sent. Its usage will always be governed by a bilateral agreement between the agent and the non-financial institution customer.
-/// The CustomerPaymentStatusReport message can be used to provide information about the status (e.g. rejection, acceptance) of the initiation of a credit transfer, a direct debit, as well as on the initiation of other customer instructions.
-/// The CustomerPaymentStatusReport message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.
-/// The CustomerPaymentStatusReport message can be used in domestic and cross-border scenarios.
-/// The CustomerPaymentStatusReport may also be sent to the receiver of the payment in a real time payment scenario, as both sides of the transactions must be informed of the status of the transaction (e.g. either the beneficiary is credited, or the transaction is rejected).
-/// </summary>
+/// <inheritdoc cref="ICustomerPaymentStatusReportV08"/>
 [Description(
     @"Scope|The CustomerPaymentStatusReport message is sent by an instructed agent to the previous party in the payment chain. It is used to inform this party about the positive or negative status of an instruction (either single or file). It is also used to report on a pending instruction.|Usage|The CustomerPaymentStatusReport message is exchanged between an agent and a non-financial institution customer to provide status information on instructions previously sent. Its usage will always be governed by a bilateral agreement between the agent and the non-financial institution customer.|The CustomerPaymentStatusReport message can be used to provide information about the status (e.g. rejection, acceptance) of the initiation of a credit transfer, a direct debit, as well as on the initiation of other customer instructions.|The CustomerPaymentStatusReport message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.|The CustomerPaymentStatusReport message can be used in domestic and cross-border scenarios.|The CustomerPaymentStatusReport may also be sent to the receiver of the payment in a real time payment scenario, as both sides of the transactions must be informed of the status of the transaction (e.g. either the beneficiary is credited, or the transaction is rejected)."
 )]
 [IsoId("_Tx4qEWXiEeap-P22vGV91g")]
 [DisplayName("Customer Payment Status Report V")]
-public record CustomerPaymentStatusReportV08 : IOuterRecord
+public partial record CustomerPaymentStatusReportV08 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -56,33 +45,25 @@ public record CustomerPaymentStatusReportV08 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Set of characteristics shared by all individual transactions included in the status report message.
-    /// </summary>
+    /// <inheritdoc cref="ICustomerPaymentStatusReportV08.GroupHeader"/>
     [IsoId("_Tx4qHWXiEeap-P22vGV91g")]
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader52 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Original group information concerning the group of transactions, to which the status report message refers to.
-    /// </summary>
+    /// <inheritdoc cref="ICustomerPaymentStatusReportV08.OriginalGroupInformationAndStatus"/>
     [IsoId("_Tx4qH2XiEeap-P22vGV91g")]
     [DisplayName("Original Group Information And Status")]
     [IsoXmlTag("OrgnlGrpInfAndSts")]
     public required OriginalGroupHeader7 OriginalGroupInformationAndStatus { get; init; }
 
-    /// <summary>
-    /// Information concerning the original payment information, to which the status report message refers.
-    /// </summary>
+    /// <inheritdoc cref="ICustomerPaymentStatusReportV08.OriginalPaymentInformationAndStatus"/>
     [IsoId("_Tx4qIWXiEeap-P22vGV91g")]
     [DisplayName("Original Payment Information And Status")]
     [IsoXmlTag("OrgnlPmtInfAndSts")]
     public OriginalPaymentInstruction23? OriginalPaymentInformationAndStatus { get; init; }
 
-    /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
+    /// <inheritdoc cref="ICustomerPaymentStatusReportV08.SupplementaryData"/>
     [IsoId("_Tx4qI2XiEeap-P22vGV91g")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]

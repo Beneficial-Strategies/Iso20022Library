@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Set of elements that further identifies the type of local instruments being requested by the initiating party.
-    /// </summary>
+    /// <inheritdoc cref="ILocalInstrument1Choice"/>
     [KnownType(typeof(LocalInstrument1Choice.Code))]
     [KnownType(typeof(LocalInstrument1Choice.Proprietary))]
     [JsonDerivedType(typeof(LocalInstrument1Choice.Code), nameof(LocalInstrument1Choice.Code))]
@@ -18,5 +16,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_TGhDB9p-Ed-ak6NoX_4Aeg_-2017969290")]
     [DisplayName("Local Instrument 1 Choice")]
-    public abstract record LocalInstrument1Choice_ { }
+    public abstract partial record LocalInstrument1Choice_ { }
 }

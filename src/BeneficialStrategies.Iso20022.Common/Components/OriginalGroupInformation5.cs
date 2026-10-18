@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Unique and unambiguous identifier of the group of transactions as assigned by the original instructing party.
-/// </summary>
+/// <inheritdoc cref="IOriginalGroupInformation5"/>
 [IsoId("_PhVsF9p-Ed-ak6NoX_4Aeg_-330079515")]
 [DisplayName("Original Group Information")]
-public record OriginalGroupInformation5
+public partial record OriginalGroupInformation5
 {
-    /// <summary>
-    /// Point to point reference assigned by the original instructing party to unambiguously identify the original group of individual transactions.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalGroupInformation5.OriginalMessageIdentification"/>
     [IsoId("_PhVsGNp-Ed-ak6NoX_4Aeg_-330079473")]
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
@@ -26,9 +22,7 @@ public record OriginalGroupInformation5
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public required IsoMax35Text OriginalMessageIdentification { get; init; }
 
-    /// <summary>
-    /// Specifies the original message name identifier to which the message refers, eg, pacs.003.001.01 or MT103.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalGroupInformation5.OriginalMessageNameIdentification"/>
     [IsoId("_PhfdENp-Ed-ak6NoX_4Aeg_-330079430")]
     [DisplayName("Original Message Name Identification")]
     [IsoXmlTag("OrgnlMsgNmId")]
@@ -36,18 +30,14 @@ public record OriginalGroupInformation5
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public required IsoMax35Text OriginalMessageNameIdentification { get; init; }
 
-    /// <summary>
-    /// Date and time at which the original message was created.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalGroupInformation5.OriginalCreationDateTime"/>
     [IsoId("_PhfdEdp-Ed-ak6NoX_4Aeg_-1500789550")]
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
     public IsoISODateTime? OriginalCreationDateTime { get; init; }
 
-    /// <summary>
-    /// Detailed information on the reversal reason.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalGroupInformation5.ReversalReasonInformation"/>
     [IsoId("_PhfdEtp-Ed-ak6NoX_4Aeg_-330079368")]
     [DisplayName("Reversal Reason Information")]
     [IsoXmlTag("RvslRsnInf")]

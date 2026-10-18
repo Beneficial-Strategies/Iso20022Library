@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Choice of format for the document type.
-    /// </summary>
+    /// <inheritdoc cref="IDocumentType1Choice"/>
     [KnownType(typeof(DocumentType1Choice.Code))]
     [KnownType(typeof(DocumentType1Choice.Proprietary))]
     [JsonDerivedType(typeof(DocumentType1Choice.Code), nameof(DocumentType1Choice.Code))]
@@ -18,5 +16,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_iYHUw3iJEeidzqjNEfehPg")]
     [DisplayName("Document Type 1 Choice")]
-    public abstract record DocumentType1Choice_ { }
+    public abstract partial record DocumentType1Choice_ { }
 }

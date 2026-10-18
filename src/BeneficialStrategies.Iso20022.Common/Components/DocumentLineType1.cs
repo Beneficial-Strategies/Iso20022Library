@@ -9,24 +9,18 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Specifies the type of the document line identification.
-/// </summary>
+/// <inheritdoc cref="IDocumentLineType1"/>
 [IsoId("_cX4kMablEeKvUvwX_r3tzA")]
 [DisplayName("Document Line Type")]
-public record DocumentLineType1
+public partial record DocumentLineType1
 {
-    /// <summary>
-    /// Provides the type details of the referred document line identification.
-    /// </summary>
+    /// <inheritdoc cref="IDocumentLineType1.CodeOrProprietary"/>
     [IsoId("_ciKhlablEeKvUvwX_r3tzA")]
     [DisplayName("Code Or Proprietary")]
     [IsoXmlTag("CdOrPrtry")]
     public required DocumentLineType1Choice_ CodeOrProprietary { get; init; }
 
-    /// <summary>
-    /// Identification of the issuer of the reference document line identificationtype.
-    /// </summary>
+    /// <inheritdoc cref="IDocumentLineType1.Issuer"/>
     [IsoId("_ciKhmablEeKvUvwX_r3tzA")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]

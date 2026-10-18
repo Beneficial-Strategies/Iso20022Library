@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeneficialStrategies.Iso200
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeneficialStrategies.Iso20022.Primitives.Tests", "BeneficialStrategies.Iso20022.Primitives.Tests\BeneficialStrategies.Iso20022.Primitives.Tests.csproj", "{56694F68-20A7-4582-A8D2-895B92629CDA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BeneficialStrategies.Iso20022.Interfaces", "BeneficialStrategies.Iso20022.Interfaces\BeneficialStrategies.Iso20022.Interfaces.csproj", "{2BA06378-D2B1-4A3B-984C-25C30922C750}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -131,6 +133,18 @@ Global
 		{56694F68-20A7-4582-A8D2-895B92629CDA}.Release|x64.Build.0 = Release|Any CPU
 		{56694F68-20A7-4582-A8D2-895B92629CDA}.Release|x86.ActiveCfg = Release|Any CPU
 		{56694F68-20A7-4582-A8D2-895B92629CDA}.Release|x86.Build.0 = Release|Any CPU
+		{2BA06378-D2B1-4A3B-984C-25C30922C750}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BA06378-D2B1-4A3B-984C-25C30922C750}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BA06378-D2B1-4A3B-984C-25C30922C750}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2BA06378-D2B1-4A3B-984C-25C30922C750}.Debug|x64.Build.0 = Debug|Any CPU
+		{2BA06378-D2B1-4A3B-984C-25C30922C750}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2BA06378-D2B1-4A3B-984C-25C30922C750}.Debug|x86.Build.0 = Debug|Any CPU
+		{2BA06378-D2B1-4A3B-984C-25C30922C750}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BA06378-D2B1-4A3B-984C-25C30922C750}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BA06378-D2B1-4A3B-984C-25C30922C750}.Release|x64.ActiveCfg = Release|Any CPU
+		{2BA06378-D2B1-4A3B-984C-25C30922C750}.Release|x64.Build.0 = Release|Any CPU
+		{2BA06378-D2B1-4A3B-984C-25C30922C750}.Release|x86.ActiveCfg = Release|Any CPU
+		{2BA06378-D2B1-4A3B-984C-25C30922C750}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

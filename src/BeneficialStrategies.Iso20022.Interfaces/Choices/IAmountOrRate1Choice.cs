@@ -1,0 +1,11 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Choices;
+
+/// <summary>
+/// Choice between an amount or a rate.
+/// </summary>
+[IsoId("_Q-UncNp-Ed-ak6NoX_4Aeg_458279675")]
+public interface IAmountOrRate1Choice : IIsoChoice
+{
+}

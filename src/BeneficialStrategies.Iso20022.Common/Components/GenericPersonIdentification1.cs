@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Information related to an identification of a person.
-/// </summary>
+/// <inheritdoc cref="IGenericPersonIdentification1"/>
 [IsoId("_P_4pRtp-Ed-ak6NoX_4Aeg_-893603485")]
 [DisplayName("Generic Person Identification")]
-public record GenericPersonIdentification1
+public partial record GenericPersonIdentification1
 {
-    /// <summary>
-    /// Unique and unambiguous identification of a person.
-    /// </summary>
+    /// <inheritdoc cref="IGenericPersonIdentification1.Identification"/>
     [IsoId("_P_4pR9p-Ed-ak6NoX_4Aeg_-740298453")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
@@ -26,17 +22,13 @@ public record GenericPersonIdentification1
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public required IsoMax35Text Identification { get; init; }
 
-    /// <summary>
-    /// Name of the identification scheme.
-    /// </summary>
+    /// <inheritdoc cref="IGenericPersonIdentification1.SchemeName"/>
     [IsoId("_QACaQNp-Ed-ak6NoX_4Aeg_2131347934")]
     [DisplayName("Scheme Name")]
     [IsoXmlTag("SchmeNm")]
     public PersonIdentificationSchemeName1Choice_? SchemeName { get; init; }
 
-    /// <summary>
-    /// Entity that assigns the identification.
-    /// </summary>
+    /// <inheritdoc cref="IGenericPersonIdentification1.Issuer"/>
     [IsoId("_QACaQdp-Ed-ak6NoX_4Aeg_-740298392")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]

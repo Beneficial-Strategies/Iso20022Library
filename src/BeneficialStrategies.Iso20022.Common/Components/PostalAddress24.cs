@@ -9,24 +9,18 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Information that locates and identifies a specific address, as defined by postal services.
-/// </summary>
+/// <inheritdoc cref="IPostalAddress24"/>
 [IsoId("_9XYD524-EeiU9cctagi5ow")]
 [DisplayName("Postal Address")]
-public record PostalAddress24
+public partial record PostalAddress24
 {
-    /// <summary>
-    /// Identifies the nature of the postal address.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress24.AddressType"/>
     [IsoId("_9gwpY24-EeiU9cctagi5ow")]
     [DisplayName("Address Type")]
     [IsoXmlTag("AdrTp")]
     public AddressType3Choice_? AddressType { get; init; }
 
-    /// <summary>
-    /// Identification of a division of a large organisation or building.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress24.Department"/>
     [IsoId("_9gwpZW4-EeiU9cctagi5ow")]
     [DisplayName("Department")]
     [IsoXmlTag("Dept")]
@@ -34,9 +28,7 @@ public record PostalAddress24
     [StringLength(maximumLength: 70, MinimumLength = 1)]
     public IsoMax70Text? Department { get; init; }
 
-    /// <summary>
-    /// Identification of a sub-division of a large organisation or building.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress24.SubDepartment"/>
     [IsoId("_9gwpZ24-EeiU9cctagi5ow")]
     [DisplayName("Sub Department")]
     [IsoXmlTag("SubDept")]
@@ -44,9 +36,7 @@ public record PostalAddress24
     [StringLength(maximumLength: 70, MinimumLength = 1)]
     public IsoMax70Text? SubDepartment { get; init; }
 
-    /// <summary>
-    /// Name of a street or thoroughfare.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress24.StreetName"/>
     [IsoId("_9gwpaW4-EeiU9cctagi5ow")]
     [DisplayName("Street Name")]
     [IsoXmlTag("StrtNm")]
@@ -54,9 +44,7 @@ public record PostalAddress24
     [StringLength(maximumLength: 70, MinimumLength = 1)]
     public IsoMax70Text? StreetName { get; init; }
 
-    /// <summary>
-    /// Number that identifies the position of a building on a street.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress24.BuildingNumber"/>
     [IsoId("_9gwpa24-EeiU9cctagi5ow")]
     [DisplayName("Building Number")]
     [IsoXmlTag("BldgNb")]
@@ -64,9 +52,7 @@ public record PostalAddress24
     [StringLength(maximumLength: 16, MinimumLength = 1)]
     public IsoMax16Text? BuildingNumber { get; init; }
 
-    /// <summary>
-    /// Name of the building or house.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress24.BuildingName"/>
     [IsoId("_ZOcTkG5OEeiU9cctagi5ow")]
     [DisplayName("Building Name")]
     [IsoXmlTag("BldgNm")]
@@ -74,9 +60,7 @@ public record PostalAddress24
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? BuildingName { get; init; }
 
-    /// <summary>
-    /// Floor or storey within a building.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress24.Floor"/>
     [IsoId("_F1IHQ3RpEeiH1ZOt2UD8vQ")]
     [DisplayName("Floor")]
     [IsoXmlTag("Flr")]
@@ -84,9 +68,7 @@ public record PostalAddress24
     [StringLength(maximumLength: 70, MinimumLength = 1)]
     public IsoMax70Text? Floor { get; init; }
 
-    /// <summary>
-    /// Numbered box in a post office, assigned to a person or organisation, where letters are kept until called for.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress24.PostBox"/>
     [IsoId("_F1IHRHRpEeiH1ZOt2UD8vQ")]
     [DisplayName("Post Box")]
     [IsoXmlTag("PstBx")]
@@ -94,9 +76,7 @@ public record PostalAddress24
     [StringLength(maximumLength: 16, MinimumLength = 1)]
     public IsoMax16Text? PostBox { get; init; }
 
-    /// <summary>
-    /// Building room number.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress24.Room"/>
     [IsoId("_F1IHRXRpEeiH1ZOt2UD8vQ")]
     [DisplayName("Room")]
     [IsoXmlTag("Room")]
@@ -104,9 +84,7 @@ public record PostalAddress24
     [StringLength(maximumLength: 70, MinimumLength = 1)]
     public IsoMax70Text? Room { get; init; }
 
-    /// <summary>
-    /// Identifier consisting of a group of letters and/or numbers that is added to a postal address to assist the sorting of mail.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress24.PostCode"/>
     [IsoId("_9gwpbW4-EeiU9cctagi5ow")]
     [DisplayName("Post Code")]
     [IsoXmlTag("PstCd")]
@@ -114,9 +92,7 @@ public record PostalAddress24
     [StringLength(maximumLength: 16, MinimumLength = 1)]
     public IsoMax16Text? PostCode { get; init; }
 
-    /// <summary>
-    /// Name of a built-up area, with defined boundaries, and a local government.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress24.TownName"/>
     [IsoId("_9gwpb24-EeiU9cctagi5ow")]
     [DisplayName("Town Name")]
     [IsoXmlTag("TwnNm")]
@@ -124,9 +100,7 @@ public record PostalAddress24
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? TownName { get; init; }
 
-    /// <summary>
-    /// Specific location name within the town.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress24.TownLocationName"/>
     [IsoId("_rvZGQ25OEeiU9cctagi5ow")]
     [DisplayName("Town Location Name")]
     [IsoXmlTag("TwnLctnNm")]
@@ -134,9 +108,7 @@ public record PostalAddress24
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? TownLocationName { get; init; }
 
-    /// <summary>
-    /// Identifies a subdivision within a country sub-division.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress24.DistrictName"/>
     [IsoId("_rvZGRG5OEeiU9cctagi5ow")]
     [DisplayName("District Name")]
     [IsoXmlTag("DstrctNm")]
@@ -144,9 +116,7 @@ public record PostalAddress24
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? DistrictName { get; init; }
 
-    /// <summary>
-    /// Identifies a subdivision of a country such as state, region, county.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress24.CountrySubDivision"/>
     [IsoId("_9gwpcW4-EeiU9cctagi5ow")]
     [DisplayName("Country Sub Division")]
     [IsoXmlTag("CtrySubDvsn")]
@@ -154,17 +124,13 @@ public record PostalAddress24
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? CountrySubDivision { get; init; }
 
-    /// <summary>
-    /// Nation with its own government.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress24.Country"/>
     [IsoId("_9gwpc24-EeiU9cctagi5ow")]
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
     public CountryCode? Country { get; init; }
 
-    /// <summary>
-    /// Information that locates and identifies a specific address, as defined by postal services, presented in free format text.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress24.AddressLine"/>
     [IsoId("_9gwpdW4-EeiU9cctagi5ow")]
     [DisplayName("Address Line")]
     [IsoXmlTag("AdrLine")]

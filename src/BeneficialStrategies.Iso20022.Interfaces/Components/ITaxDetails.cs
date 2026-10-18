@@ -1,0 +1,26 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Set of characteristics defining the type of tax.
+/// </summary>
+[IsoId("_RvWbwNp-Ed-ak6NoX_4Aeg_-1792079217")]
+public interface ITaxDetails : IIsoComponent
+{
+    /// <summary>
+    /// Document issued by first agent on behalf of debtor to report withholding tax to taxing authority.
+    /// </summary>
+    [IsoId("_RvWbwdp-Ed-ak6NoX_4Aeg_-1514098436")]
+    [DisplayName("Certificate Identification")]
+    [IsoXmlTag("CertId")]
+    IsoMax35Text? CertificateIdentification { get; }
+
+    /// <summary>
+    /// Information on the type of tax.
+    /// </summary>
+    [IsoId("_RvWbwtp-Ed-ak6NoX_4Aeg_1885832221")]
+    [DisplayName("Tax Type")]
+    [IsoXmlTag("TaxTp")]
+    ITaxType? TaxType { get; }
+}

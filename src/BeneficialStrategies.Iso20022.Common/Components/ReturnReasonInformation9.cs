@@ -9,32 +9,24 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Set of elements used to provide information on the reason of the return of the transaction.
-/// </summary>
+/// <inheritdoc cref="IReturnReasonInformation9"/>
 [IsoId("_TQDZg9p-Ed-ak6NoX_4Aeg_-415808124")]
 [DisplayName("Return Reason Information")]
-public record ReturnReasonInformation9
+public partial record ReturnReasonInformation9
 {
-    /// <summary>
-    /// Party that issues the return.
-    /// </summary>
+    /// <inheritdoc cref="IReturnReasonInformation9.Originator"/>
     [IsoId("_TQDZhNp-Ed-ak6NoX_4Aeg_-415807751")]
     [DisplayName("Originator")]
     [IsoXmlTag("Orgtr")]
     public PartyIdentification32? Originator { get; init; }
 
-    /// <summary>
-    /// Specifies the reason for the return.
-    /// </summary>
+    /// <inheritdoc cref="IReturnReasonInformation9.Reason"/>
     [IsoId("_TQDZhdp-Ed-ak6NoX_4Aeg_-415807661")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
     public ReturnReason5Choice_? Reason { get; init; }
 
-    /// <summary>
-    /// Further details on the return reason.
-    /// </summary>
+    /// <inheritdoc cref="IReturnReasonInformation9.AdditionalInformation"/>
     [IsoId("_TQDZhtp-Ed-ak6NoX_4Aeg_-415808122")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]

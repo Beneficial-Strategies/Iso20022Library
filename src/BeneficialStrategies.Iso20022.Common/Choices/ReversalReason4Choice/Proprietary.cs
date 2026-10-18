@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.ReversalReason4Choice
 {
-    /// <summary>
-    /// Reason for the reversal, in a proprietary form.
-    /// </summary>
+    /// <inheritdoc cref="IProprietary"/>
     [IsoId("_TRGiYdp-Ed-ak6NoX_4Aeg_-340627837")]
     [DisplayName("Proprietary")]
-    public record Proprietary : ReversalReason4Choice_
+    public partial record Proprietary : ReversalReason4Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies a character string with a maximum length of 35 characters.
-        /// </summary>
+        /// <inheritdoc cref="IProprietary.Value"/>
         [IsoXmlTag("Prtry")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]

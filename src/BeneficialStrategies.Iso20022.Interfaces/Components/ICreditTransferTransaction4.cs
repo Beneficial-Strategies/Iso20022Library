@@ -1,0 +1,258 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Provide further details specific to the individual transaction(s) included in the message.
+/// </summary>
+[IsoId("_t03tglkyEeGeoaLUQk__nA_-1126231527")]
+public interface ICreditTransferTransaction4 : IIsoComponent
+{
+    /// <summary>
+    /// Set of elements used to reference a payment instruction.
+    /// </summary>
+    [IsoId("_t1BegFkyEeGeoaLUQk__nA_-188937521")]
+    [DisplayName("Payment Identification")]
+    [IsoXmlTag("PmtId")]
+    IPaymentIdentification3 PaymentIdentification { get; }
+
+    /// <summary>
+    /// Set of elements used to further specify the type of transaction.
+    /// </summary>
+    [IsoId("_t1BegVkyEeGeoaLUQk__nA_416384236")]
+    [DisplayName("Payment Type Information")]
+    [IsoXmlTag("PmtTpInf")]
+    IPaymentTypeInformation21? PaymentTypeInformation { get; }
+
+    /// <summary>
+    /// Amount of money moved between the instructing agent and the instructed agent.
+    /// </summary>
+    [IsoId("_t1BeglkyEeGeoaLUQk__nA_-996072760")]
+    [DisplayName("Interbank Settlement Amount")]
+    [IsoXmlTag("IntrBkSttlmAmt")]
+    ActiveCurrencyAndAmount InterbankSettlementAmount { get; }
+
+    /// <summary>
+    /// Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.
+    /// </summary>
+    [IsoId("_t1Beg1kyEeGeoaLUQk__nA_834850409")]
+    [DisplayName("Interbank Settlement Date")]
+    [IsoXmlTag("IntrBkSttlmDt")]
+    IsoISODate? InterbankSettlementDate { get; }
+
+    /// <summary>
+    /// Indicator of the urgency or order of importance that the instructing party would like the instructed party to apply to the processing of the settlement instruction.
+    /// </summary>
+    [IsoId("_t1LPgFkyEeGeoaLUQk__nA_-2045880265")]
+    [DisplayName("Settlement Priority")]
+    [IsoXmlTag("SttlmPrty")]
+    Priority3Code? SettlementPriority { get; }
+
+    /// <summary>
+    /// Provides information on the occurred settlement time(s) of the payment transaction.
+    /// </summary>
+    [IsoId("_t1LPgVkyEeGeoaLUQk__nA_616982832")]
+    [DisplayName("Settlement Time Indication")]
+    [IsoXmlTag("SttlmTmIndctn")]
+    ISettlementDateTimeIndication1? SettlementTimeIndication { get; }
+
+    /// <summary>
+    /// Provides information on the requested settlement time(s) of the payment instruction.
+    /// </summary>
+    [IsoId("_t1LPglkyEeGeoaLUQk__nA_999437940")]
+    [DisplayName("Settlement Time Request")]
+    [IsoXmlTag("SttlmTmReq")]
+    ISettlementTimeRequest2? SettlementTimeRequest { get; }
+
+    /// <summary>
+    /// Agent immediately prior to the instructing agent.
+    /// </summary>
+    [IsoId("_t1LPg1kyEeGeoaLUQk__nA_2077458278")]
+    [DisplayName("Previous Instructing Agent")]
+    [IsoXmlTag("PrvsInstgAgt")]
+    IBranchAndFinancialInstitutionIdentification5? PreviousInstructingAgent { get; }
+
+    /// <summary>
+    /// Unambiguous identification of the account of the previous instructing agent at its servicing agent in the payment chain.
+    /// </summary>
+    [IsoId("_t1LPhFkyEeGeoaLUQk__nA_-1456743865")]
+    [DisplayName("Previous Instructing Agent Account")]
+    [IsoXmlTag("PrvsInstgAgtAcct")]
+    ICashAccount24? PreviousInstructingAgentAccount { get; }
+
+    /// <summary>
+    /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).
+    /// </summary>
+    [IsoId("_t1UZcFkyEeGeoaLUQk__nA_427176735")]
+    [DisplayName("Instructing Agent")]
+    [IsoXmlTag("InstgAgt")]
+    IBranchAndFinancialInstitutionIdentification5? InstructingAgent { get; }
+
+    /// <summary>
+    /// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).
+    /// </summary>
+    [IsoId("_t1UZcVkyEeGeoaLUQk__nA_1187941888")]
+    [DisplayName("Instructed Agent")]
+    [IsoXmlTag("InstdAgt")]
+    IBranchAndFinancialInstitutionIdentification5? InstructedAgent { get; }
+
+    /// <summary>
+    /// Agent between the debtor&apos;s agent and the creditor&apos;s agent.||Usage: If more than one intermediary agent is present, then IntermediaryAgent1 identifies the agent between the DebtorAgent and the IntermediaryAgent2.
+    /// </summary>
+    [IsoId("_t1UZclkyEeGeoaLUQk__nA_-891800088")]
+    [DisplayName("Intermediary Agent")]
+    [IsoXmlTag("IntrmyAgt1")]
+    IBranchAndFinancialInstitutionIdentification5? IntermediaryAgent1 { get; }
+
+    /// <summary>
+    /// Unambiguous identification of the account of the intermediary agent 1 at its servicing agent in the payment chain.
+    /// </summary>
+    [IsoId("_t1UZc1kyEeGeoaLUQk__nA_1559298219")]
+    [DisplayName("Intermediary Agent 1 Account")]
+    [IsoXmlTag("IntrmyAgt1Acct")]
+    ICashAccount24? IntermediaryAgent1Account { get; }
+
+    /// <summary>
+    /// Agent between the debtor&apos;s agent and the creditor&apos;s agent.||Usage: If more than two intermediary agents are present, then IntermediaryAgent2 identifies the agent between the IntermediaryAgent1 and the IntermediaryAgent3.
+    /// </summary>
+    [IsoId("_t1UZdFkyEeGeoaLUQk__nA_2013385488")]
+    [DisplayName("Intermediary Agent")]
+    [IsoXmlTag("IntrmyAgt2")]
+    IBranchAndFinancialInstitutionIdentification5? IntermediaryAgent2 { get; }
+
+    /// <summary>
+    /// Unambiguous identification of the account of the intermediary agent 2 at its servicing agent in the payment chain.
+    /// </summary>
+    [IsoId("_t1eKcFkyEeGeoaLUQk__nA_1163311970")]
+    [DisplayName("Intermediary Agent 2 Account")]
+    [IsoXmlTag("IntrmyAgt2Acct")]
+    ICashAccount24? IntermediaryAgent2Account { get; }
+
+    /// <summary>
+    /// Agent between the debtor&apos;s agent and the creditor&apos;s agent.||Usage: If IntermediaryAgent3 is present, then it identifies the agent between the IntermediaryAgent 2 and the CreditorAgent.
+    /// </summary>
+    [IsoId("_t1eKcVkyEeGeoaLUQk__nA_-1437436306")]
+    [DisplayName("Intermediary Agent")]
+    [IsoXmlTag("IntrmyAgt3")]
+    IBranchAndFinancialInstitutionIdentification5? IntermediaryAgent3 { get; }
+
+    /// <summary>
+    /// Unambiguous identification of the account of the intermediary agent 3 at its servicing agent in the payment chain.
+    /// </summary>
+    [IsoId("_t1n7cFkyEeGeoaLUQk__nA_-359415968")]
+    [DisplayName("Intermediary Agent 3 Account")]
+    [IsoXmlTag("IntrmyAgt3Acct")]
+    ICashAccount24? IntermediaryAgent3Account { get; }
+
+    /// <summary>
+    /// Ultimate financial institution that owes an amount of money to the (ultimate) institutional creditor.
+    /// </summary>
+    [IsoId("_t1n7cVkyEeGeoaLUQk__nA_998394988")]
+    [DisplayName("Ultimate Debtor")]
+    [IsoXmlTag("UltmtDbtr")]
+    IBranchAndFinancialInstitutionIdentification5? UltimateDebtor { get; }
+
+    /// <summary>
+    /// Financial institution that owes an amount of money to the (ultimate) financial institutional creditor.
+    /// </summary>
+    [IsoId("_t1n7clkyEeGeoaLUQk__nA_1967624386")]
+    [DisplayName("Debtor")]
+    [IsoXmlTag("Dbtr")]
+    IBranchAndFinancialInstitutionIdentification5 Debtor { get; }
+
+    /// <summary>
+    /// Unambiguous identification of the account of the debtor to which a debit entry will be made as a result of the transaction.
+    /// </summary>
+    [IsoId("_t1n7c1kyEeGeoaLUQk__nA_-709163393")]
+    [DisplayName("Debtor Account")]
+    [IsoXmlTag("DbtrAcct")]
+    ICashAccount24? DebtorAccount { get; }
+
+    /// <summary>
+    /// Financial institution servicing an account for the debtor.
+    /// </summary>
+    [IsoId("_t1n7dFkyEeGeoaLUQk__nA_1893623706")]
+    [DisplayName("Debtor Agent")]
+    [IsoXmlTag("DbtrAgt")]
+    IBranchAndFinancialInstitutionIdentification5? DebtorAgent { get; }
+
+    /// <summary>
+    /// Unambiguous identification of the account of the debtor agent at its servicing agent in the payment chain.
+    /// </summary>
+    [IsoId("_t1xFYFkyEeGeoaLUQk__nA_311973648")]
+    [DisplayName("Debtor Agent Account")]
+    [IsoXmlTag("DbtrAgtAcct")]
+    ICashAccount24? DebtorAgentAccount { get; }
+
+    /// <summary>
+    /// Financial institution servicing an account for the creditor.
+    /// </summary>
+    [IsoId("_t1xFYVkyEeGeoaLUQk__nA_-1361309295")]
+    [DisplayName("Creditor Agent")]
+    [IsoXmlTag("CdtrAgt")]
+    IBranchAndFinancialInstitutionIdentification5? CreditorAgent { get; }
+
+    /// <summary>
+    /// Unambiguous identification of the account of the creditor agent at its servicing agent to which a credit entry will be made as a result of the payment transaction.
+    /// </summary>
+    [IsoId("_t162YFkyEeGeoaLUQk__nA_250814271")]
+    [DisplayName("Creditor Agent Account")]
+    [IsoXmlTag("CdtrAgtAcct")]
+    ICashAccount24? CreditorAgentAccount { get; }
+
+    /// <summary>
+    /// Financial institution that receives an amount of money from the financial institutional debtor.
+    /// </summary>
+    [IsoId("_t162YVkyEeGeoaLUQk__nA_1868993788")]
+    [DisplayName("Creditor")]
+    [IsoXmlTag("Cdtr")]
+    IBranchAndFinancialInstitutionIdentification5 Creditor { get; }
+
+    /// <summary>
+    /// Unambiguous identification of the account of the creditor to which a credit entry will be posted as a result of the payment transaction.
+    /// </summary>
+    [IsoId("_t162YlkyEeGeoaLUQk__nA_494068776")]
+    [DisplayName("Creditor Account")]
+    [IsoXmlTag("CdtrAcct")]
+    ICashAccount24? CreditorAccount { get; }
+
+    /// <summary>
+    /// Ultimate financial institution to which an amount of money is due.
+    /// </summary>
+    [IsoId("_t162Y1kyEeGeoaLUQk__nA_948156045")]
+    [DisplayName("Ultimate Creditor")]
+    [IsoXmlTag("UltmtCdtr")]
+    IBranchAndFinancialInstitutionIdentification5? UltimateCreditor { get; }
+
+    /// <summary>
+    /// Further information related to the processing of the payment instruction, provided by the initiating party, and intended for the creditor agent.
+    /// </summary>
+    [IsoId("_t162ZFkyEeGeoaLUQk__nA_2116749552")]
+    [DisplayName("Instruction For Creditor Agent")]
+    [IsoXmlTag("InstrForCdtrAgt")]
+    IEnumerable<IInstructionForCreditorAgent2> InstructionForCreditorAgent { get; }
+
+    /// <summary>
+    /// Further information related to the processing of the payment instruction that may need to be acted upon by the next agent. ||Usage: The next agent may not be the creditor agent.|The instruction can relate to a level of service, can be an instruction that has to be executed by the agent, or can be information required by the next agent.
+    /// </summary>
+    [IsoId("_t2EAUFkyEeGeoaLUQk__nA_1831788173")]
+    [DisplayName("Instruction For Next Agent")]
+    [IsoXmlTag("InstrForNxtAgt")]
+    IEnumerable<IInstructionForNextAgent1> InstructionForNextAgent { get; }
+
+    /// <summary>
+    /// Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts&apos; receivable system.
+    /// </summary>
+    [IsoId("_t2EAUVkyEeGeoaLUQk__nA_-1702413970")]
+    [DisplayName("Remittance Information")]
+    [IsoXmlTag("RmtInf")]
+    IRemittanceInformation2? RemittanceInformation { get; }
+
+    /// <summary>
+    /// Provides information on the underlying customer credit transfer for which cover is provided.
+    /// </summary>
+    [IsoId("_t2EAUlkyEeGeoaLUQk__nA_582596468")]
+    [DisplayName("Underlying Customer Credit Transfer")]
+    [IsoXmlTag("UndrlygCstmrCdtTrf")]
+    ICreditTransferTransaction3? UnderlyingCustomerCreditTransfer { get; }
+}

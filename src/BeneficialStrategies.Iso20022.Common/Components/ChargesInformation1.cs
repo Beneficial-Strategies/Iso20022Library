@@ -9,24 +9,18 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Information on the charges related to the payment transaction.
-/// </summary>
+/// <inheritdoc cref="IChargesInformation1"/>
 [IsoId("_RtjsAtp-Ed-ak6NoX_4Aeg_-450206740")]
 [DisplayName("Charges Information")]
-public record ChargesInformation1
+public partial record ChargesInformation1
 {
-    /// <summary>
-    /// Transaction charges to be paid by the charge bearer.
-    /// </summary>
+    /// <inheritdoc cref="IChargesInformation1.ChargesAmount"/>
     [IsoId("_RtjsA9p-Ed-ak6NoX_4Aeg_1765318183")]
     [DisplayName("Charges Amount")]
     [IsoXmlTag("ChrgsAmt")]
     public required CurrencyAndAmount ChargesAmount { get; init; }
 
-    /// <summary>
-    /// Party that takes the transaction charges or to which the transaction charges are due.
-    /// </summary>
+    /// <inheritdoc cref="IChargesInformation1.ChargesParty"/>
     [IsoId("_RtjsBNp-Ed-ak6NoX_4Aeg_1407518272")]
     [DisplayName("Charges Party")]
     [IsoXmlTag("ChrgsPty")]

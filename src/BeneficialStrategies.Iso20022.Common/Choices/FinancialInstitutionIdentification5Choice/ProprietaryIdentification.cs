@@ -8,17 +8,13 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentification5Choice
 {
-    /// <summary>
-    /// Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.
-    /// </summary>
+    /// <inheritdoc cref="IProprietaryIdentification"/>
     [IsoId("_TFnrIdp-Ed-ak6NoX_4Aeg_1988349475")]
     [DisplayName("Proprietary Identification")]
     [IsoXmlTag("PrtryId")]
-    public record ProprietaryIdentification : FinancialInstitutionIdentification5Choice_
+    public partial record ProprietaryIdentification : FinancialInstitutionIdentification5Choice_
     {
-        /// <summary>
-        /// Name or number assigned by an entity to enable recognition of that entity, for example, account identifier.
-        /// </summary>
+        /// <inheritdoc cref="IProprietaryIdentification.Identification"/>
         [IsoId("_P-sWctp-Ed-ak6NoX_4Aeg_1256785338")]
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
@@ -26,9 +22,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
         [StringLength(maximumLength: 35, MinimumLength = 1)]
         public required IsoMax35Text Identification { get; init; }
 
-        /// <summary>
-        /// Entity that assigns the identification.
-        /// </summary>
+        /// <inheritdoc cref="IProprietaryIdentification.Issuer"/>
         [IsoId("_P-sWc9p-Ed-ak6NoX_4Aeg_1555083105")]
         [DisplayName("Issuer")]
         [IsoXmlTag("Issr")]

@@ -9,24 +9,18 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Provides details on the amount and type of the referred document.
-/// </summary>
+/// <inheritdoc cref="IDocumentAmount1"/>
 [IsoId("_vRiGoDKzEe6dJsbzsnAdDg")]
 [Description(@"Provides details on the amount and type of the referred document.")]
 [DisplayName("Document Amount1")]
-public record DocumentAmount1
+public partial record DocumentAmount1
 {
-    /// <summary>
-    /// Amount of money for the referred document.
-    /// </summary>
+    /// <inheritdoc cref="IDocumentAmount1.Amount"/>
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
     public required ActiveOrHistoricCurrencyAndAmount Amount { get; init; }
 
-    /// <summary>
-    /// Defines the type of amount.
-    /// </summary>
+    /// <inheritdoc cref="IDocumentAmount1.Type"/>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     public required DocumentAmountType1Choice_ Type { get; init; }

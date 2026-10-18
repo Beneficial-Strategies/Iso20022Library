@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Specifies the type of document referred by the creditor.
-    /// </summary>
+    /// <inheritdoc cref="ICreditorReferenceType2Choice"/>
     [KnownType(typeof(CreditorReferenceType2Choice.Code))]
     [KnownType(typeof(CreditorReferenceType2Choice.Proprietary))]
     [JsonDerivedType(
@@ -21,5 +19,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_7zR6pTEsEe6GxLzpkVnWYg")]
     [DisplayName("Creditor Reference Type2Choice")]
-    public abstract record CreditorReferenceType2Choice_ { }
+    public abstract partial record CreditorReferenceType2Choice_ { }
 }

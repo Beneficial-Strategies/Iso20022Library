@@ -9,23 +9,17 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Document Type1.
-/// </summary>
+/// <inheritdoc cref="IDocumentType1"/>
 [IsoId("_O2EK4TE0Ee62xuUQ2zyZww")]
 [DisplayName("Document Type1")]
-public record DocumentType1
+public partial record DocumentType1
 {
-    /// <summary>
-    /// Code Or Proprietary.
-    /// </summary>
+    /// <inheritdoc cref="IDocumentType1.CodeOrProprietary"/>
     [DisplayName("Code Or Proprietary")]
     [IsoXmlTag("CdOrPrtry")]
     public required DocumentType2Choice_ CodeOrProprietary { get; init; }
 
-    /// <summary>
-    /// Issuer.
-    /// </summary>
+    /// <inheritdoc cref="IDocumentType1.Issuer"/>
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
     public IsoMax35Text? Issuer { get; init; }

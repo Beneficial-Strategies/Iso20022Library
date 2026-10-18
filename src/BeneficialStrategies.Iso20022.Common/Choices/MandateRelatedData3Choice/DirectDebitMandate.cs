@@ -8,15 +8,11 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.MandateRelatedData3Choice
 {
-    /// <summary>
-    /// Direct Debit Mandate.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitMandate"/>
     [DisplayName("Direct Debit Mandate")]
-    public record DirectDebitMandate : MandateRelatedData3Choice_
+    public partial record DirectDebitMandate : MandateRelatedData3Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// </summary>
+        /// <inheritdoc cref="IDirectDebitMandate.Value"/>
         [IsoXmlTag("DrctDbtMndt")]
         public required MandateRelatedInformation16 Value { get; init; }
     }

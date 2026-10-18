@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Specifies the reason for the reversal of the transaction.
-    /// </summary>
+    /// <inheritdoc cref="IReversalReason4Choice"/>
     [KnownType(typeof(ReversalReason4Choice.Code))]
     [KnownType(typeof(ReversalReason4Choice.Proprietary))]
     [JsonDerivedType(typeof(ReversalReason4Choice.Code), nameof(ReversalReason4Choice.Code))]
@@ -18,5 +16,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_TQ8xYNp-Ed-ak6NoX_4Aeg_-340627899")]
     [DisplayName("Reversal Reason 4 Choice")]
-    public abstract record ReversalReason4Choice_ { }
+    public abstract partial record ReversalReason4Choice_ { }
 }

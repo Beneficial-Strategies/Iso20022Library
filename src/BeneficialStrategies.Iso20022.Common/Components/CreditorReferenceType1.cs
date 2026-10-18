@@ -9,24 +9,18 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Specifies the type of the documents referred by the creditor.
-/// </summary>
+/// <inheritdoc cref="ICreditorReferenceType1"/>
 [IsoId("_T31ySNp-Ed-ak6NoX_4Aeg_96960704")]
 [DisplayName("Creditor Reference Type")]
-public record CreditorReferenceType1
+public partial record CreditorReferenceType1
 {
-    /// <summary>
-    /// Coded creditor reference type.
-    /// </summary>
+    /// <inheritdoc cref="ICreditorReferenceType1.Code"/>
     [IsoId("_T31ySdp-Ed-ak6NoX_4Aeg_96961291")]
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
     public required DocumentType3Code Code { get; init; }
 
-    /// <summary>
-    /// Creditor reference type not avilable in a coded format.
-    /// </summary>
+    /// <inheritdoc cref="ICreditorReferenceType1.Proprietary"/>
     [IsoId("_T31yStp-Ed-ak6NoX_4Aeg_96961652")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
@@ -34,9 +28,7 @@ public record CreditorReferenceType1
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public required IsoMax35Text Proprietary { get; init; }
 
-    /// <summary>
-    /// Identification of the issuer of the credit reference type.
-    /// </summary>
+    /// <inheritdoc cref="ICreditorReferenceType1.Issuer"/>
     [IsoId("_T3_jQNp-Ed-ak6NoX_4Aeg_96961712")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]

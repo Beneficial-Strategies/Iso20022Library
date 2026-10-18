@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.AddressType3Choice
 {
-    /// <summary>
-    /// Type of address expressed as a code.
-    /// </summary>
+    /// <inheritdoc cref="ICode"/>
     [IsoId("_C7IDQRb-EeiyVv5j1vf1VQ")]
     [DisplayName("Code")]
-    public record Code : AddressType3Choice_
+    public partial record Code : AddressType3Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies the type of address.
-        /// </summary>
+        /// <inheritdoc cref="ICode.Value"/>
         [IsoXmlTag("Cd")]
         public required AddressType2Code Value { get; init; }
     }

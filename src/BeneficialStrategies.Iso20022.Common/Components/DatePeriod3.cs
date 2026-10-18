@@ -9,25 +9,19 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Range of time defined by a start date and an end date.
-/// </summary>
+/// <inheritdoc cref="IDatePeriod3"/>
 [IsoId("_Lk9JgUavEemG5fbqCekzMw")]
 [DisplayName("Date Period")]
-public record DatePeriod3
+public partial record DatePeriod3
 {
-    /// <summary>
-    /// Start date of the range.
-    /// </summary>
+    /// <inheritdoc cref="IDatePeriod3.FromDate"/>
     [IsoId("_Lx7OgUavEemG5fbqCekzMw")]
     [DisplayName("From Date")]
     [IsoXmlTag("FrDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
     public required IsoISODate FromDate { get; init; }
 
-    /// <summary>
-    /// End date of the range.
-    /// </summary>
+    /// <inheritdoc cref="IDatePeriod3.ToDate"/>
     [IsoId("_Lx7Og0avEemG5fbqCekzMw")]
     [DisplayName("To Date")]
     [IsoXmlTag("ToDt")]

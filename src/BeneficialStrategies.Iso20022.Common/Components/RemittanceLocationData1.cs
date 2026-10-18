@@ -9,24 +9,18 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Provides additional details on the remittance advice.
-/// </summary>
+/// <inheritdoc cref="IRemittanceLocationData1"/>
 [IsoId("_-LRmB24-EeiU9cctagi5ow")]
 [DisplayName("Remittance Location Data")]
-public record RemittanceLocationData1
+public partial record RemittanceLocationData1
 {
-    /// <summary>
-    /// Method used to deliver the remittance advice information.
-    /// </summary>
+    /// <inheritdoc cref="IRemittanceLocationData1.Method"/>
     [IsoId("_-VaZcW4-EeiU9cctagi5ow")]
     [DisplayName("Method")]
     [IsoXmlTag("Mtd")]
     public required RemittanceLocationMethod2Code Method { get; init; }
 
-    /// <summary>
-    /// Electronic address to which an agent is to send the remittance information.
-    /// </summary>
+    /// <inheritdoc cref="IRemittanceLocationData1.ElectronicAddress"/>
     [IsoId("_-VaZc24-EeiU9cctagi5ow")]
     [DisplayName("Electronic Address")]
     [IsoXmlTag("ElctrncAdr")]
@@ -34,9 +28,7 @@ public record RemittanceLocationData1
     [StringLength(maximumLength: 2048, MinimumLength = 1)]
     public IsoMax2048Text? ElectronicAddress { get; init; }
 
-    /// <summary>
-    /// Postal address to which an agent is to send the remittance information.
-    /// </summary>
+    /// <inheritdoc cref="IRemittanceLocationData1.PostalAddress"/>
     [IsoId("_-VaZdW4-EeiU9cctagi5ow")]
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]

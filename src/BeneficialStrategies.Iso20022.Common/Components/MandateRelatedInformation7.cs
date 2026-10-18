@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Set of elements used to provide further details related to a direct debit mandate signed between the creditor and the debtor.
-/// </summary>
+/// <inheritdoc cref="IMandateRelatedInformation7"/>
 [IsoId("_TD1icdp-Ed-ak6NoX_4Aeg_621431627")]
 [DisplayName("Mandate Related Information")]
-public record MandateRelatedInformation7
+public partial record MandateRelatedInformation7
 {
-    /// <summary>
-    /// Unique identification, as assigned by the creditor, to unambiguously identify the mandate.
-    /// </summary>
+    /// <inheritdoc cref="IMandateRelatedInformation7.MandateIdentification"/>
     [IsoId("_TD1ictp-Ed-ak6NoX_4Aeg_-385375482")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
@@ -26,35 +22,27 @@ public record MandateRelatedInformation7
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? MandateIdentification { get; init; }
 
-    /// <summary>
-    /// Date on which the direct debit mandate has been signed by the debtor.
-    /// </summary>
+    /// <inheritdoc cref="IMandateRelatedInformation7.DateOfSignature"/>
     [IsoId("_TD1ic9p-Ed-ak6NoX_4Aeg_2065722825")]
     [DisplayName("Date Of Signature")]
     [IsoXmlTag("DtOfSgntr")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
     public IsoISODate? DateOfSignature { get; init; }
 
-    /// <summary>
-    /// Indicator notifying whether the underlying mandate is amended or not.
-    /// </summary>
+    /// <inheritdoc cref="IMandateRelatedInformation7.AmendmentIndicator"/>
     [IsoId("_TD1idNp-Ed-ak6NoX_4Aeg_-1786255979")]
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     public IsoTrueFalseIndicator? AmendmentIndicator { get; init; }
 
-    /// <summary>
-    /// List of mandate elements that have been modified.
-    /// </summary>
+    /// <inheritdoc cref="IMandateRelatedInformation7.AmendmentInformationDetails"/>
     [IsoId("_TD1iddp-Ed-ak6NoX_4Aeg_994649792")]
     [DisplayName("Amendment Information Details")]
     [IsoXmlTag("AmdmntInfDtls")]
     public AmendmentInformationDetails7? AmendmentInformationDetails { get; init; }
 
-    /// <summary>
-    /// Additional security provisions, such as a digital signature, as provided by the debtor.
-    /// </summary>
+    /// <inheritdoc cref="IMandateRelatedInformation7.ElectronicSignature"/>
     [IsoId("_TD1idtp-Ed-ak6NoX_4Aeg_1270618389")]
     [DisplayName("Electronic Signature")]
     [IsoXmlTag("ElctrncSgntr")]
@@ -62,27 +50,21 @@ public record MandateRelatedInformation7
     [StringLength(maximumLength: 1025, MinimumLength = 1)]
     public IsoMax1025Text? ElectronicSignature { get; init; }
 
-    /// <summary>
-    /// Date of the first collection of a direct debit as per the mandate.
-    /// </summary>
+    /// <inheritdoc cref="IMandateRelatedInformation7.FirstCollectionDate"/>
     [IsoId("_TD1id9p-Ed-ak6NoX_4Aeg_1856565415")]
     [DisplayName("First Collection Date")]
     [IsoXmlTag("FrstColltnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
     public IsoISODate? FirstCollectionDate { get; init; }
 
-    /// <summary>
-    /// Date of the final collection of a direct debit as per the mandate.
-    /// </summary>
+    /// <inheritdoc cref="IMandateRelatedInformation7.FinalCollectionDate"/>
     [IsoId("_TD1ieNp-Ed-ak6NoX_4Aeg_-2113284374")]
     [DisplayName("Final Collection Date")]
     [IsoXmlTag("FnlColltnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
     public IsoISODate? FinalCollectionDate { get; init; }
 
-    /// <summary>
-    /// Regularity with which direct debit instructions are to be created and processed.
-    /// </summary>
+    /// <inheritdoc cref="IMandateRelatedInformation7.Frequency"/>
     [IsoId("_TD_TcNp-Ed-ak6NoX_4Aeg_466783695")]
     [DisplayName("Frequency")]
     [IsoXmlTag("Frqcy")]

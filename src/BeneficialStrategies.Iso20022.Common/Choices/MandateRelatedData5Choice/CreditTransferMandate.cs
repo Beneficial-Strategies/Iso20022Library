@@ -4,12 +4,12 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.MandateRelatedData5Choice
 {
-    /// <summary>Specific credit transfer mandate data.</summary>
+    /// <inheritdoc cref="ICreditTransferMandate"/>
     [IsoId("_RH9Ek7vIEfCYYbmqNrQFSg")]
     [DisplayName("Credit Transfer Mandate")]
-    public record CreditTransferMandate : MandateRelatedData5Choice_
+    public partial record CreditTransferMandate : MandateRelatedData5Choice_
     {
-        /// <summary>Contains the main value for the container.</summary>
+        /// <inheritdoc cref="ICreditTransferMandate.Value"/>
         [IsoXmlTag("CdtTrfMndt")]
         public required CreditTransferMandateData1 Value { get; init; }
     }

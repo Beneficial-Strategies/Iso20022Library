@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemIdentification1Choice
 {
-    /// <summary>
-    /// Infrastructure through which the payment instruction is processed.
-    /// </summary>
+    /// <inheritdoc cref="IClearingSystemIdentification"/>
     [IsoId("_TMVXINp-Ed-ak6NoX_4Aeg_-843594927")]
     [DisplayName("Clearing System Identification")]
-    public record ClearingSystemIdentification : ClearingSystemIdentification1Choice_
+    public partial record ClearingSystemIdentification : ClearingSystemIdentification1Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specification of a pre-agreed offering between clearing agents or the channel through which the payment instruction is to be processed.
-        /// </summary>
+        /// <inheritdoc cref="IClearingSystemIdentification.Value"/>
         [IsoXmlTag("ClrSysId")]
         public required CashClearingSystem3Code Value { get; init; }
     }

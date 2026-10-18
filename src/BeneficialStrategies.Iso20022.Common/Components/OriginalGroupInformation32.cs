@@ -9,67 +9,49 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Provides information on the original group, to which the message refers.
-/// </summary>
+/// <inheritdoc cref="IOriginalGroupInformation32"/>
 [IsoId("_7UooETEyEe6g-ffJsqGiSA")]
 [Description(@"Provides information on the original group, to which the message refers.")]
 [DisplayName("Original Group Information32")]
-public record OriginalGroupInformation32
+public partial record OriginalGroupInformation32
 {
-    /// <summary>
-    /// Specifies the status of a group of transactions.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalGroupInformation32.GroupStatus"/>
     [DisplayName("Group Status")]
     [IsoXmlTag("GrpSts")]
     public ExternalPaymentGroupStatus1Code? GroupStatus { get; init; }
 
-    /// <summary>
-    /// Detailed information on the number of transactions for each identical transaction status.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalGroupInformation32.NumberOfTransactionsPerStatus"/>
     [DisplayName("Number Of Transactions Per Status")]
     [IsoXmlTag("NbOfTxsPerSts")]
     public ValueList<NumberOfTransactionsPerStatus5> NumberOfTransactionsPerStatus { get; init; } =
         [];
 
-    /// <summary>
-    /// Total of all individual amounts included in the original message, irrespective of currencies.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalGroupInformation32.OriginalControlSum"/>
     [DisplayName("Original Control Sum")]
     [IsoXmlTag("OrgnlCtrlSum")]
     public IsoDecimalNumber? OriginalControlSum { get; init; }
 
-    /// <summary>
-    /// Date and time at which the original message was created.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalGroupInformation32.OriginalCreationDateTime"/>
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
     public IsoISODateTime? OriginalCreationDateTime { get; init; }
 
-    /// <summary>
-    /// Point to point reference, as assigned by the original instructing party, to unambiguously identify the original message.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalGroupInformation32.OriginalMessageIdentification"/>
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
     public required IsoMax35Text OriginalMessageIdentification { get; init; }
 
-    /// <summary>
-    /// Specifies the original message name identifier to which the message refers.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalGroupInformation32.OriginalMessageNameIdentification"/>
     [DisplayName("Original Message Name Identification")]
     [IsoXmlTag("OrgnlMsgNmId")]
     public required IsoMax35Text OriginalMessageNameIdentification { get; init; }
 
-    /// <summary>
-    /// Number of individual transactions contained in the original message.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalGroupInformation32.OriginalNumberOfTransactions"/>
     [DisplayName("Original Number Of Transactions")]
     [IsoXmlTag("OrgnlNbOfTxs")]
     public IsoMax15NumericText? OriginalNumberOfTransactions { get; init; }
 
-    /// <summary>
-    /// Set of elements used to provide detailed information on the status reason.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalGroupInformation32.StatusReasonInformation"/>
     [DisplayName("Status Reason Information")]
     [IsoXmlTag("StsRsnInf")]
     public ValueList<StatusReasonInformation14> StatusReasonInformation { get; init; } = [];

@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Specifies the transport authentication details related to the mandate.
-/// </summary>
+/// <inheritdoc cref="IMandateAuthentication1"/>
 [IsoId("_HSGqsGVVEeacpJ-gG9kyUQ")]
 [DisplayName("Mandate Authentication")]
-public record MandateAuthentication1
+public partial record MandateAuthentication1
 {
-    /// <summary>
-    /// Specifies a piece of information used to authenticate a message, that is to confirm that the message came from the stated sender (its authenticity) and has not been changed in transit (its integrity).
-    /// </summary>
+    /// <inheritdoc cref="IMandateAuthentication1.MessageAuthenticationCode"/>
     [IsoId("_Tw5GoGVVEeacpJ-gG9kyUQ")]
     [DisplayName("Message Authentication Code")]
     [IsoXmlTag("MsgAuthntcnCd")]
@@ -26,18 +22,14 @@ public record MandateAuthentication1
     [StringLength(maximumLength: 16, MinimumLength = 1)]
     public IsoMax16Text? MessageAuthenticationCode { get; init; }
 
-    /// <summary>
-    /// Date when the authentication was conducted.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAuthentication1.Date"/>
     [IsoId("_Z4U-8GVVEeacpJ-gG9kyUQ")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
     public IsoISODate? Date { get; init; }
 
-    /// <summary>
-    /// Channel used to transmit the authentication information.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAuthentication1.Channel"/>
     [IsoId("_zsoqgGVVEeacpJ-gG9kyUQ")]
     [DisplayName("Channel")]
     [IsoXmlTag("Chanl")]

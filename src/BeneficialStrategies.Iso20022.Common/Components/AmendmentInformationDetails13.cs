@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Provides further details on the list of direct debit mandate elements that have been modified when the amendment indicator has been set.
-/// </summary>
+/// <inheritdoc cref="IAmendmentInformationDetails13"/>
 [IsoId("_Acqr2249EeiU9cctagi5ow")]
 [DisplayName("Amendment Information Details")]
-public record AmendmentInformationDetails13
+public partial record AmendmentInformationDetails13
 {
-    /// <summary>
-    /// Unique identification, as assigned by the creditor, to unambiguously identify the original mandate.
-    /// </summary>
+    /// <inheritdoc cref="IAmendmentInformationDetails13.OriginalMandateIdentification"/>
     [IsoId("_AlwWUW49EeiU9cctagi5ow")]
     [DisplayName("Original Mandate Identification")]
     [IsoXmlTag("OrgnlMndtId")]
@@ -26,90 +22,68 @@ public record AmendmentInformationDetails13
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? OriginalMandateIdentification { get; init; }
 
-    /// <summary>
-    /// Original creditor scheme identification that has been modified.
-    /// </summary>
+    /// <inheritdoc cref="IAmendmentInformationDetails13.OriginalCreditorSchemeIdentification"/>
     [IsoId("_AlwWU249EeiU9cctagi5ow")]
     [DisplayName("Original Creditor Scheme Identification")]
     [IsoXmlTag("OrgnlCdtrSchmeId")]
     public PartyIdentification135? OriginalCreditorSchemeIdentification { get; init; }
 
-    /// <summary>
-    /// Original creditor agent that has been modified.
-    /// </summary>
+    /// <inheritdoc cref="IAmendmentInformationDetails13.OriginalCreditorAgent"/>
     [IsoId("_AlwWVW49EeiU9cctagi5ow")]
     [DisplayName("Original Creditor Agent")]
     [IsoXmlTag("OrgnlCdtrAgt")]
     public BranchAndFinancialInstitutionIdentification6? OriginalCreditorAgent { get; init; }
 
-    /// <summary>
-    /// Original creditor agent account that has been modified.
-    /// </summary>
+    /// <inheritdoc cref="IAmendmentInformationDetails13.OriginalCreditorAgentAccount"/>
     [IsoId("_AlwWV249EeiU9cctagi5ow")]
     [DisplayName("Original Creditor Agent Account")]
     [IsoXmlTag("OrgnlCdtrAgtAcct")]
     public CashAccount38? OriginalCreditorAgentAccount { get; init; }
 
-    /// <summary>
-    /// Original debtor that has been modified.
-    /// </summary>
+    /// <inheritdoc cref="IAmendmentInformationDetails13.OriginalDebtor"/>
     [IsoId("_AlwWWW49EeiU9cctagi5ow")]
     [DisplayName("Original Debtor")]
     [IsoXmlTag("OrgnlDbtr")]
     public PartyIdentification135? OriginalDebtor { get; init; }
 
-    /// <summary>
-    /// Original debtor account that has been modified.
-    /// </summary>
+    /// <inheritdoc cref="IAmendmentInformationDetails13.OriginalDebtorAccount"/>
     [IsoId("_AlwWW249EeiU9cctagi5ow")]
     [DisplayName("Original Debtor Account")]
     [IsoXmlTag("OrgnlDbtrAcct")]
     public CashAccount38? OriginalDebtorAccount { get; init; }
 
-    /// <summary>
-    /// Original debtor agent that has been modified.
-    /// </summary>
+    /// <inheritdoc cref="IAmendmentInformationDetails13.OriginalDebtorAgent"/>
     [IsoId("_AlwWXW49EeiU9cctagi5ow")]
     [DisplayName("Original Debtor Agent")]
     [IsoXmlTag("OrgnlDbtrAgt")]
     public BranchAndFinancialInstitutionIdentification6? OriginalDebtorAgent { get; init; }
 
-    /// <summary>
-    /// Original debtor agent account that has been modified.
-    /// </summary>
+    /// <inheritdoc cref="IAmendmentInformationDetails13.OriginalDebtorAgentAccount"/>
     [IsoId("_AlwWX249EeiU9cctagi5ow")]
     [DisplayName("Original Debtor Agent Account")]
     [IsoXmlTag("OrgnlDbtrAgtAcct")]
     public CashAccount38? OriginalDebtorAgentAccount { get; init; }
 
-    /// <summary>
-    /// Original final collection date that has been modified.
-    /// </summary>
+    /// <inheritdoc cref="IAmendmentInformationDetails13.OriginalFinalCollectionDate"/>
     [IsoId("_AlwWYW49EeiU9cctagi5ow")]
     [DisplayName("Original Final Collection Date")]
     [IsoXmlTag("OrgnlFnlColltnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
     public IsoISODate? OriginalFinalCollectionDate { get; init; }
 
-    /// <summary>
-    /// Original frequency that has been modified.
-    /// </summary>
+    /// <inheritdoc cref="IAmendmentInformationDetails13.OriginalFrequency"/>
     [IsoId("_AlwWY249EeiU9cctagi5ow")]
     [DisplayName("Original Frequency")]
     [IsoXmlTag("OrgnlFrqcy")]
     public Frequency36Choice_? OriginalFrequency { get; init; }
 
-    /// <summary>
-    /// Original reason for the mandate to allow the user to distinguish between different mandates for the same creditor.
-    /// </summary>
+    /// <inheritdoc cref="IAmendmentInformationDetails13.OriginalReason"/>
     [IsoId("_AlwWZW49EeiU9cctagi5ow")]
     [DisplayName("Original Reason")]
     [IsoXmlTag("OrgnlRsn")]
     public MandateSetupReason1Choice_? OriginalReason { get; init; }
 
-    /// <summary>
-    /// Original number of tracking days that has been modified.
-    /// </summary>
+    /// <inheritdoc cref="IAmendmentInformationDetails13.OriginalTrackingDays"/>
     [IsoId("_AlwWZ249EeiU9cctagi5ow")]
     [DisplayName("Original Tracking Days")]
     [IsoXmlTag("OrgnlTrckgDays")]

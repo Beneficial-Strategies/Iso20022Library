@@ -12,24 +12,13 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pacs;
 
-/// <summary>
-/// This record is an implementation of the pacs.007.001.14 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// The FinancialInstitutionToFinancialInstitutionPaymentReversal message is sent by an agent to the next party in the payment chain. It is used to reverse a payment previously executed.
-/// </summary>
-/// <remarks>
-/// Usage
-/// The FIToFIPaymentReversal message is exchanged between agents to reverse a payment message that has been settled. The result will be a credit on the debtor account (when the reversed payment was a direct debit) or a debit on the creditor account (when the reversed payment was a credit transfer).
-/// The FIToFIPaymentReversal message may or may not be the follow-up of a payment message.
-/// The FIToFIPaymentReversal message refers to the original payment message by means of references only or by means of references and a set of elements from the original instruction.
-/// The FIToFIPaymentReversal message can be used in domestic and cross-border scenarios.
-/// </remarks>
+/// <inheritdoc cref="IFIToFIPaymentReversalV14"/>
 [Description(
     @"Scope|The FinancialInstitutionToFinancialInstitutionPaymentReversal message is sent by an agent to the next party in the payment chain. It is used to reverse a payment previously executed.|Usage|The FIToFIPaymentReversal message is exchanged between agents to reverse a payment message that has been settled. The result will be a credit on the debtor account (when the reversed payment was a direct debit) or a debit on the creditor account (when the reversed payment was a credit transfer).|The FIToFIPaymentReversal message may or may not be the follow-up of a payment message.|The FIToFIPaymentReversal message refers to the original payment message by means of references only or by means of references and a set of elements from the original instruction.|The FIToFIPaymentReversal message can be used in domestic and cross-border scenarios."
 )]
 [IsoId("_fSVgYZe9EfCsfrvk22Hpaw")]
 [DisplayName("FI To FI Payment Reversal V14")]
-public record FIToFIPaymentReversalV14 : IOuterRecord
+public partial record FIToFIPaymentReversalV14 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -56,30 +45,22 @@ public record FIToFIPaymentReversalV14 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Set of characteristics shared by all individual transactions included in the message.
-    /// </summary>
+    /// <inheritdoc cref="IFIToFIPaymentReversalV14.GroupHeader"/>
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader127 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Information concerning the original group of transactions, to which the message refers.
-    /// </summary>
+    /// <inheritdoc cref="IFIToFIPaymentReversalV14.OriginalGroupInformation"/>
     [DisplayName("Original Group Information")]
     [IsoXmlTag("OrgnlGrpInf")]
     public OriginalGroupHeader20? OriginalGroupInformation { get; init; }
 
-    /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
+    /// <inheritdoc cref="IFIToFIPaymentReversalV14.SupplementaryData"/>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 
-    /// <summary>
-    /// Information concerning the original transactions, to which the reversal message refers.
-    /// </summary>
+    /// <inheritdoc cref="IFIToFIPaymentReversalV14.TransactionInformation"/>
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
     public ValueList<PaymentTransaction182> TransactionInformation { get; init; } = [];

@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Choice of a clearing system identifier.
-    /// </summary>
+    /// <inheritdoc cref="IClearingSystemIdentification2Choice"/>
     [KnownType(typeof(ClearingSystemIdentification2Choice.Code))]
     [KnownType(typeof(ClearingSystemIdentification2Choice.Proprietary))]
     [JsonDerivedType(
@@ -21,5 +19,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_TMoSENp-Ed-ak6NoX_4Aeg_-1410917193")]
     [DisplayName("Clearing System Identification 2 Choice")]
-    public abstract record ClearingSystemIdentification2Choice_ { }
+    public abstract partial record ClearingSystemIdentification2Choice_ { }
 }

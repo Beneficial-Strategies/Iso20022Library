@@ -1,0 +1,14 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+
+namespace BeneficialStrategies.Iso20022.pacs;
+
+public partial record FIToFIPaymentStatusReportV14 : IFIToFIPaymentStatusReportV14
+{
+    IGroupHeader120 IFIToFIPaymentStatusReportV14.GroupHeader => GroupHeader;
+    IEnumerable<IOriginalGroupHeader22> IFIToFIPaymentStatusReportV14.OriginalGroupInformationAndStatus => OriginalGroupInformationAndStatus;
+    IEnumerable<ISupplementaryData1> IFIToFIPaymentStatusReportV14.SupplementaryData => SupplementaryData;
+    IEnumerable<IPaymentTransaction161> IFIToFIPaymentStatusReportV14.TransactionInformationAndStatus => TransactionInformationAndStatus;
+}

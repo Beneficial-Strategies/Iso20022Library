@@ -9,32 +9,24 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Identifies the mandate to be cancelled.
-/// </summary>
+/// <inheritdoc cref="IMandateCancellation1"/>
 [IsoId("_RBmk8tp-Ed-ak6NoX_4Aeg_-1323180575")]
 [DisplayName("Mandate Cancellation")]
-public record MandateCancellation1
+public partial record MandateCancellation1
 {
-    /// <summary>
-    /// Set of elements used to provide information on the original messsage.
-    /// </summary>
+    /// <inheritdoc cref="IMandateCancellation1.OriginalMessageInformation"/>
     [IsoId("_RBmk89p-Ed-ak6NoX_4Aeg_-383303184")]
     [DisplayName("Original Message Information")]
     [IsoXmlTag("OrgnlMsgInf")]
     public OriginalMessageInformation1? OriginalMessageInformation { get; init; }
 
-    /// <summary>
-    /// Set of elements used to provide detailed information on the cancellation reason.
-    /// </summary>
+    /// <inheritdoc cref="IMandateCancellation1.CancellationReason"/>
     [IsoId("_RBmk9Np-Ed-ak6NoX_4Aeg_-788540285")]
     [DisplayName("Cancellation Reason")]
     [IsoXmlTag("CxlRsn")]
     public required CancellationReasonInformation2 CancellationReason { get; init; }
 
-    /// <summary>
-    /// Set of elements used to provide the original mandate data.
-    /// </summary>
+    /// <inheritdoc cref="IMandateCancellation1.OriginalMandate"/>
     [IsoId("_RBmk9dp-Ed-ak6NoX_4Aeg_-378686473")]
     [DisplayName("Original Mandate")]
     [IsoXmlTag("OrgnlMndt")]

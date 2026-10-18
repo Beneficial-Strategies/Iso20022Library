@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Choice of formats for the type of address.
-    /// </summary>
+    /// <inheritdoc cref="IAddressType3Choice"/>
     [KnownType(typeof(AddressType3Choice.Code))]
     [KnownType(typeof(AddressType3Choice.Proprietary))]
     [JsonDerivedType(typeof(AddressType3Choice.Code), nameof(AddressType3Choice.Code))]
@@ -18,5 +16,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_CneugRb-EeiyVv5j1vf1VQ")]
     [DisplayName("Address Type 3 Choice")]
-    public abstract record AddressType3Choice_ { }
+    public abstract partial record AddressType3Choice_ { }
 }

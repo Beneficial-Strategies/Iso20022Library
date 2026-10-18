@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Reason for the cancellation request of the transaction.
-    /// </summary>
+    /// <inheritdoc cref="ICancellationReason1Choice"/>
     [KnownType(typeof(CancellationReason1Choice.Code))]
     [KnownType(typeof(CancellationReason1Choice.Proprietary))]
     [JsonDerivedType(
@@ -21,5 +19,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_TO3Gs9p-Ed-ak6NoX_4Aeg_-748049495")]
     [DisplayName("Cancellation Reason 1 Choice")]
-    public abstract record CancellationReason1Choice_ { }
+    public abstract partial record CancellationReason1Choice_ { }
 }

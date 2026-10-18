@@ -9,44 +9,32 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Identifies the mandate to be amended and gives details of the new mandate.
-/// </summary>
+/// <inheritdoc cref="IMandateAmendment8"/>
 [IsoId("_yLKiITEyEe6g-ffJsqGiSA")]
 [DisplayName("Mandate Amendment8")]
-public record MandateAmendment8
+public partial record MandateAmendment8
 {
-    /// <summary>
-    /// Amendment Reason.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAmendment8.AmendmentReason"/>
     [DisplayName("Amendment Reason")]
     [IsoXmlTag("AmdmntRsn")]
     public required MandateAmendmentReason3 AmendmentReason { get; init; }
 
-    /// <summary>
-    /// Mandate.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAmendment8.Mandate"/>
     [DisplayName("Mandate")]
     [IsoXmlTag("Mndt")]
     public required Mandate21 Mandate { get; init; }
 
-    /// <summary>
-    /// Original Mandate.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAmendment8.OriginalMandate"/>
     [DisplayName("Original Mandate")]
     [IsoXmlTag("OrgnlMndt")]
     public required OriginalMandate10Choice_ OriginalMandate { get; init; }
 
-    /// <summary>
-    /// Original Message Information.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAmendment8.OriginalMessageInformation"/>
     [DisplayName("Original Message Information")]
     [IsoXmlTag("OrgnlMsgInf")]
     public OriginalMessageInformation1? OriginalMessageInformation { get; init; }
 
-    /// <summary>
-    /// Supplementary Data.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAmendment8.SupplementaryData"/>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];

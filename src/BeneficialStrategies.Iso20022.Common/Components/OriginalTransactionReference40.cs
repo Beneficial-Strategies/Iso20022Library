@@ -9,142 +9,102 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Original Transaction Reference40.
-/// </summary>
+/// <inheritdoc cref="IOriginalTransactionReference40"/>
 [IsoId("_8rFsfzEsEe6GxLzpkVnWYg")]
 [DisplayName("Original Transaction Reference40")]
-public record OriginalTransactionReference40
+public partial record OriginalTransactionReference40
 {
-    /// <summary>
-    /// Amount.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalTransactionReference40.Amount"/>
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
     public AmountType4Choice_? Amount { get; init; }
 
-    /// <summary>
-    /// Creditor.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalTransactionReference40.Creditor"/>
     [DisplayName("Creditor")]
     [IsoXmlTag("Cdtr")]
     public required PartyIdentification272 Creditor { get; init; }
 
-    /// <summary>
-    /// Creditor Account.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalTransactionReference40.CreditorAccount"/>
     [DisplayName("Creditor Account")]
     [IsoXmlTag("CdtrAcct")]
     public CashAccount40? CreditorAccount { get; init; }
 
-    /// <summary>
-    /// Creditor Agent.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalTransactionReference40.CreditorAgent"/>
     [DisplayName("Creditor Agent")]
     [IsoXmlTag("CdtrAgt")]
     public required BranchAndFinancialInstitutionIdentification8 CreditorAgent { get; init; }
 
-    /// <summary>
-    /// Creditor Agent Account.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalTransactionReference40.CreditorAgentAccount"/>
     [DisplayName("Creditor Agent Account")]
     [IsoXmlTag("CdtrAgtAcct")]
     public CashAccount40? CreditorAgentAccount { get; init; }
 
-    /// <summary>
-    /// Debtor.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalTransactionReference40.Debtor"/>
     [DisplayName("Debtor")]
     [IsoXmlTag("Dbtr")]
     public PartyIdentification272? Debtor { get; init; }
 
-    /// <summary>
-    /// Debtor Account.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalTransactionReference40.DebtorAccount"/>
     [DisplayName("Debtor Account")]
     [IsoXmlTag("DbtrAcct")]
     public CashAccount40? DebtorAccount { get; init; }
 
-    /// <summary>
-    /// Debtor Agent.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalTransactionReference40.DebtorAgent"/>
     [DisplayName("Debtor Agent")]
     [IsoXmlTag("DbtrAgt")]
     public BranchAndFinancialInstitutionIdentification8? DebtorAgent { get; init; }
 
-    /// <summary>
-    /// Debtor Agent Account.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalTransactionReference40.DebtorAgentAccount"/>
     [DisplayName("Debtor Agent Account")]
     [IsoXmlTag("DbtrAgtAcct")]
     public CashAccount40? DebtorAgentAccount { get; init; }
 
-    /// <summary>
-    /// Enclosed File.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalTransactionReference40.EnclosedFile"/>
     [DisplayName("Enclosed File")]
     [IsoXmlTag("NclsdFile")]
     public ValueList<Document15> EnclosedFile { get; init; } = [];
 
-    /// <summary>
-    /// Expiry Date.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalTransactionReference40.ExpiryDate"/>
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
     public DateAndDateTime2Choice_? ExpiryDate { get; init; }
 
-    /// <summary>
-    /// Mandate Related Information.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalTransactionReference40.MandateRelatedInformation"/>
     [DisplayName("Mandate Related Information")]
     [IsoXmlTag("MndtRltdInf")]
     public CreditTransferMandateData1? MandateRelatedInformation { get; init; }
 
-    /// <summary>
-    /// Payment Condition.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalTransactionReference40.PaymentCondition"/>
     [DisplayName("Payment Condition")]
     [IsoXmlTag("PmtCond")]
     public PaymentCondition2? PaymentCondition { get; init; }
 
-    /// <summary>
-    /// Payment Method.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalTransactionReference40.PaymentMethod"/>
     [DisplayName("Payment Method")]
     [IsoXmlTag("PmtMtd")]
     public PaymentMethod4Code? PaymentMethod { get; init; }
 
-    /// <summary>
-    /// Payment Type Information.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalTransactionReference40.PaymentTypeInformation"/>
     [DisplayName("Payment Type Information")]
     [IsoXmlTag("PmtTpInf")]
     public PaymentTypeInformation29? PaymentTypeInformation { get; init; }
 
-    /// <summary>
-    /// Remittance Information.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalTransactionReference40.RemittanceInformation"/>
     [DisplayName("Remittance Information")]
     [IsoXmlTag("RmtInf")]
     public RemittanceInformation22? RemittanceInformation { get; init; }
 
-    /// <summary>
-    /// Requested Execution Date.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalTransactionReference40.RequestedExecutionDate"/>
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
     public DateAndDateTime2Choice_? RequestedExecutionDate { get; init; }
 
-    /// <summary>
-    /// Ultimate Creditor.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalTransactionReference40.UltimateCreditor"/>
     [DisplayName("Ultimate Creditor")]
     [IsoXmlTag("UltmtCdtr")]
     public PartyIdentification272? UltimateCreditor { get; init; }
 
-    /// <summary>
-    /// Ultimate Debtor.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalTransactionReference40.UltimateDebtor"/>
     [DisplayName("Ultimate Debtor")]
     [IsoXmlTag("UltmtDbtr")]
     public PartyIdentification272? UltimateDebtor { get; init; }

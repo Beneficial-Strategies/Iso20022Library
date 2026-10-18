@@ -1,0 +1,28 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+public partial record CreditTransferTransaction38 : ICreditTransferTransaction38
+{
+    IPaymentTypeInformation28? ICreditTransferTransaction38.PaymentTypeInformation => PaymentTypeInformation;
+    ISettlementDateTimeIndication1? ICreditTransferTransaction38.SettlementTimeIndication => SettlementTimeIndication;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction38.InstructingAgent => InstructingAgent;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction38.InstructedAgent => InstructedAgent;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction38.IntermediaryAgent1 => IntermediaryAgent1;
+    ICashAccount38? ICreditTransferTransaction38.IntermediaryAgent1Account => IntermediaryAgent1Account;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction38.IntermediaryAgent2 => IntermediaryAgent2;
+    ICashAccount38? ICreditTransferTransaction38.IntermediaryAgent2Account => IntermediaryAgent2Account;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction38.IntermediaryAgent3 => IntermediaryAgent3;
+    ICashAccount38? ICreditTransferTransaction38.IntermediaryAgent3Account => IntermediaryAgent3Account;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction38.CreditorAgent => CreditorAgent;
+    ICashAccount38? ICreditTransferTransaction38.CreditorAgentAccount => CreditorAgentAccount;
+    IBranchAndFinancialInstitutionIdentification6 ICreditTransferTransaction38.Creditor => Creditor;
+    ICashAccount38? ICreditTransferTransaction38.CreditorAccount => CreditorAccount;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction38.UltimateCreditor => UltimateCreditor;
+    IEnumerable<IInstructionForCreditorAgent2> ICreditTransferTransaction38.InstructionForCreditorAgent => InstructionForCreditorAgent;
+    IEnumerable<IDirectDebitTransactionInformation25> ICreditTransferTransaction38.DirectDebitTransactionInformation => DirectDebitTransactionInformation;
+    IEnumerable<ISupplementaryData1> ICreditTransferTransaction38.SupplementaryData => SupplementaryData;
+}

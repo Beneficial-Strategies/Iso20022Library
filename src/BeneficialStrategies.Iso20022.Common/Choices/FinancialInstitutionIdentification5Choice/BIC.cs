@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentification5Choice
 {
-    /// <summary>
-    /// Code allocated to a financial institution by the ISO 9362 Registration Authority as described in ISO 9362 &quot;Banking - Banking telecommunication messages - Business identifier code (BIC)&quot;.
-    /// </summary>
+    /// <inheritdoc cref="IBIC"/>
     [IsoId("_TFehN9p-Ed-ak6NoX_4Aeg_1156630060")]
     [DisplayName("BIC")]
-    public record BIC : FinancialInstitutionIdentification5Choice_
+    public partial record BIC : FinancialInstitutionIdentification5Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Code allocated to a financial institution by the ISO 9362 Registration Authority as described in ISO 9362 &quot;Banking - Banking telecommunication messages - Business identifier code (BIC)&quot;.
-        /// </summary>
+        /// <inheritdoc cref="IBIC.Value"/>
         [IsoXmlTag("BIC")]
         [IsoSimpleType(IsoSimpleType.BICIdentifier)]
         public required IsoBICIdentifier Value { get; init; }

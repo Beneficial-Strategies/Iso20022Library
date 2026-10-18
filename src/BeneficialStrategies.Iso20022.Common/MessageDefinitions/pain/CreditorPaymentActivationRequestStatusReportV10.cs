@@ -12,17 +12,13 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pain;
 
-/// <summary>
-/// This record is an implementation of the pain.014.001.10 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// The CreditorPaymentActivationRequestStatusReport message is sent by a party to the next party in the creditor payment activation request chain. It is used to inform the latter about the positive or negative status of a creditor payment activation request (either single or file).
-/// </summary>
+/// <inheritdoc cref="ICreditorPaymentActivationRequestStatusReportV10"/>
 [Description(
     @"The CreditorPaymentActivationRequestStatusReport message is sent by a party to the next party in the creditor payment activation request chain. It is used to inform the latter about the positive or negative status of a creditor payment activation request (either single or file)."
 )]
 [IsoId("_qzYDUQLFEe2X55dNQNVKfg")]
 [DisplayName("Creditor Payment Activation Request Status Report V")]
-public record CreditorPaymentActivationRequestStatusReportV10 : IOuterRecord
+public partial record CreditorPaymentActivationRequestStatusReportV10 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -49,33 +45,25 @@ public record CreditorPaymentActivationRequestStatusReportV10 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Set of characteristics shared by all individual transactions included in the message.
-    /// </summary>
+    /// <inheritdoc cref="ICreditorPaymentActivationRequestStatusReportV10.GroupHeader"/>
     [IsoId("_qzYDZQLFEe2X55dNQNVKfg")]
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader106 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Original group information concerning the group of transactions, to which the status report message refers to.
-    /// </summary>
+    /// <inheritdoc cref="ICreditorPaymentActivationRequestStatusReportV10.OriginalGroupInformationAndStatus"/>
     [IsoId("_qzYDZwLFEe2X55dNQNVKfg")]
     [DisplayName("Original Group Information And Status")]
     [IsoXmlTag("OrgnlGrpInfAndSts")]
     public required OriginalGroupInformation30 OriginalGroupInformationAndStatus { get; init; }
 
-    /// <summary>
-    /// Information concerning the original payment information, to which the status report message refers.
-    /// </summary>
+    /// <inheritdoc cref="ICreditorPaymentActivationRequestStatusReportV10.OriginalPaymentInformationAndStatus"/>
     [IsoId("_qzYDaQLFEe2X55dNQNVKfg")]
     [DisplayName("Original Payment Information And Status")]
     [IsoXmlTag("OrgnlPmtInfAndSts")]
     public OriginalPaymentInstruction46? OriginalPaymentInformationAndStatus { get; init; }
 
-    /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
+    /// <inheritdoc cref="ICreditorPaymentActivationRequestStatusReportV10.SupplementaryData"/>
     [IsoId("_qzYDawLFEe2X55dNQNVKfg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]

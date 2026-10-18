@@ -9,32 +9,24 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Further information on the cancellation reason of the transaction.
-/// </summary>
+/// <inheritdoc cref="ICancellationReasonInformation1"/>
 [IsoId("_TO3Gttp-Ed-ak6NoX_4Aeg_-436227161")]
 [DisplayName("Cancellation Reason Information")]
-public record CancellationReasonInformation1
+public partial record CancellationReasonInformation1
 {
-    /// <summary>
-    /// Party issuing the cancellation request.
-    /// </summary>
+    /// <inheritdoc cref="ICancellationReasonInformation1.CancellationOriginator"/>
     [IsoId("_TO3Gt9p-Ed-ak6NoX_4Aeg_-436226813")]
     [DisplayName("Cancellation Originator")]
     [IsoXmlTag("CxlOrgtr")]
     public PartyIdentification8? CancellationOriginator { get; init; }
 
-    /// <summary>
-    /// Specifies the reason for the cancellation.
-    /// </summary>
+    /// <inheritdoc cref="ICancellationReasonInformation1.CancellationReason"/>
     [IsoId("_TPA3sNp-Ed-ak6NoX_4Aeg_-436226866")]
     [DisplayName("Cancellation Reason")]
     [IsoXmlTag("CxlRsn")]
     public CancellationReason1Choice_? CancellationReason { get; init; }
 
-    /// <summary>
-    /// Further details on the cancellation request reason.||Usage: Additional cancellation reason information can be used to further detail the cancellation request reason.
-    /// </summary>
+    /// <inheritdoc cref="ICancellationReasonInformation1.AdditionalCancellationReasonInformation"/>
     [IsoId("_TPA3sdp-Ed-ak6NoX_4Aeg_-436227125")]
     [DisplayName("Additional Cancellation Reason Information")]
     [IsoXmlTag("AddtlCxlRsnInf")]

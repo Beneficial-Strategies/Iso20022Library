@@ -8,15 +8,11 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.References80Choice
 {
-    /// <summary>
-    /// Pool Identification.
-    /// </summary>
+    /// <inheritdoc cref="IPoolIdentification"/>
     [DisplayName("Pool Identification")]
-    public record PoolIdentification : References80Choice_
+    public partial record PoolIdentification : References80Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// </summary>
+        /// <inheritdoc cref="IPoolIdentification.Value"/>
         [IsoXmlTag("PoolId")]
         public required IsoMax35Text Value { get; init; }
     }

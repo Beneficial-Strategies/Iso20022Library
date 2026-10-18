@@ -1,0 +1,29 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+public partial record CreditTransferTransaction21 : ICreditTransferTransaction21
+{
+    IPaymentIdentification1 ICreditTransferTransaction21.PaymentIdentification => PaymentIdentification;
+    IPaymentTypeInformation19? ICreditTransferTransaction21.PaymentTypeInformation => PaymentTypeInformation;
+    IAmountType4Choice ICreditTransferTransaction21.Amount => Amount;
+    ICheque7? ICreditTransferTransaction21.ChequeInstruction => ChequeInstruction;
+    IPartyIdentification43? ICreditTransferTransaction21.UltimateDebtor => UltimateDebtor;
+    IBranchAndFinancialInstitutionIdentification5? ICreditTransferTransaction21.IntermediaryAgent1 => IntermediaryAgent1;
+    IBranchAndFinancialInstitutionIdentification5? ICreditTransferTransaction21.IntermediaryAgent2 => IntermediaryAgent2;
+    IBranchAndFinancialInstitutionIdentification5? ICreditTransferTransaction21.IntermediaryAgent3 => IntermediaryAgent3;
+    IBranchAndFinancialInstitutionIdentification5 ICreditTransferTransaction21.CreditorAgent => CreditorAgent;
+    IPartyIdentification43 ICreditTransferTransaction21.Creditor => Creditor;
+    ICashAccount24? ICreditTransferTransaction21.CreditorAccount => CreditorAccount;
+    IPartyIdentification43? ICreditTransferTransaction21.UltimateCreditor => UltimateCreditor;
+    IEnumerable<IInstructionForCreditorAgent1> ICreditTransferTransaction21.InstructionForCreditorAgent => InstructionForCreditorAgent;
+    IPurpose2Choice? ICreditTransferTransaction21.Purpose => Purpose;
+    IEnumerable<IRegulatoryReporting3> ICreditTransferTransaction21.RegulatoryReporting => RegulatoryReporting;
+    ITaxInformation3? ICreditTransferTransaction21.Tax => Tax;
+    IEnumerable<IRemittanceLocation4> ICreditTransferTransaction21.RelatedRemittanceInformation => RelatedRemittanceInformation;
+    IRemittanceInformation10? ICreditTransferTransaction21.RemittanceInformation => RemittanceInformation;
+    IEnumerable<ISupplementaryData1> ICreditTransferTransaction21.SupplementaryData => SupplementaryData;
+}

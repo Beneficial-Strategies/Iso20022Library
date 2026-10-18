@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Set of characteristics shared by all individual transactions included in the message.
-/// </summary>
+/// <inheritdoc cref="IGroupHeader87"/>
 [IsoId("_SvmQkW49EeiU9cctagi5ow")]
 [DisplayName("Group Header")]
-public record GroupHeader87
+public partial record GroupHeader87
 {
-    /// <summary>
-    /// Point to point reference assigned by the instructing party and sent to the next party in the chain to unambiguously identify the message.||Usage: The instructing party has to make sure that &apos;MessageIdentification&apos; is unique per instructed party for a pre-agreed period.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader87.MessageIdentification"/>
     [IsoId("_S5InE249EeiU9cctagi5ow")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
@@ -26,34 +22,26 @@ public record GroupHeader87
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public required IsoMax35Text MessageIdentification { get; init; }
 
-    /// <summary>
-    /// Date and time at which the status report was created by the instructing party.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader87.CreationDateTime"/>
     [IsoId("_S5InFW49EeiU9cctagi5ow")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
     public required IsoISODateTime CreationDateTime { get; init; }
 
-    /// <summary>
-    /// Party initiating the creditor payment activation request. This can either be the creditor himself or the party that initiates the request on behalf of the creditor.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader87.InitiatingParty"/>
     [IsoId("_S5InF249EeiU9cctagi5ow")]
     [DisplayName("Initiating Party")]
     [IsoXmlTag("InitgPty")]
     public required PartyIdentification135 InitiatingParty { get; init; }
 
-    /// <summary>
-    /// Financial institution servicing an account for the debtor.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader87.DebtorAgent"/>
     [IsoId("_S5InGW49EeiU9cctagi5ow")]
     [DisplayName("Debtor Agent")]
     [IsoXmlTag("DbtrAgt")]
     public BranchAndFinancialInstitutionIdentification6? DebtorAgent { get; init; }
 
-    /// <summary>
-    /// Financial institution servicing an account for the creditor.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader87.CreditorAgent"/>
     [IsoId("_S5InG249EeiU9cctagi5ow")]
     [DisplayName("Creditor Agent")]
     [IsoXmlTag("CdtrAgt")]

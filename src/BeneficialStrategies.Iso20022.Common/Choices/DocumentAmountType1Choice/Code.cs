@@ -8,16 +8,11 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.DocumentAmountType1Choice
 {
-    /// <summary>
-    /// Specifies the amount type, as published in an external referred amount code set.
-    /// </summary>
+    /// <inheritdoc cref="ICode"/>
     [DisplayName("Code")]
-    public record Code : DocumentAmountType1Choice_
+    public partial record Code : DocumentAmountType1Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies the amount type, as published in an external referred amount code set.
-        /// </summary>
+        /// <inheritdoc cref="ICode.Value"/>
         [IsoXmlTag("Cd")]
         public required ExternalDocumentAmountType1Code Value { get; init; }
     }

@@ -9,163 +9,117 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Mandate20.
-/// </summary>
+/// <inheritdoc cref="IMandate20"/>
 [IsoId("_yPqnozEyEe6g-ffJsqGiSA")]
 [DisplayName("Mandate20")]
-public record Mandate20
+public partial record Mandate20
 {
-    /// <summary>
-    /// Adjustment.
-    /// </summary>
+    /// <inheritdoc cref="IMandate20.Adjustment"/>
     [DisplayName("Adjustment")]
     [IsoXmlTag("Adjstmnt")]
     public MandateAdjustment1? Adjustment { get; init; }
 
-    /// <summary>
-    /// Authentication.
-    /// </summary>
+    /// <inheritdoc cref="IMandate20.Authentication"/>
     [DisplayName("Authentication")]
     [IsoXmlTag("Authntcn")]
     public MandateAuthentication1? Authentication { get; init; }
 
-    /// <summary>
-    /// Collection Amount.
-    /// </summary>
+    /// <inheritdoc cref="IMandate20.CollectionAmount"/>
     [DisplayName("Collection Amount")]
     [IsoXmlTag("ColltnAmt")]
     public ActiveOrHistoricCurrencyAndAmount? CollectionAmount { get; init; }
 
-    /// <summary>
-    /// Creditor.
-    /// </summary>
+    /// <inheritdoc cref="IMandate20.Creditor"/>
     [DisplayName("Creditor")]
     [IsoXmlTag("Cdtr")]
     public required PartyIdentification272 Creditor { get; init; }
 
-    /// <summary>
-    /// Creditor Account.
-    /// </summary>
+    /// <inheritdoc cref="IMandate20.CreditorAccount"/>
     [DisplayName("Creditor Account")]
     [IsoXmlTag("CdtrAcct")]
     public CashAccount40? CreditorAccount { get; init; }
 
-    /// <summary>
-    /// Creditor Agent.
-    /// </summary>
+    /// <inheritdoc cref="IMandate20.CreditorAgent"/>
     [DisplayName("Creditor Agent")]
     [IsoXmlTag("CdtrAgt")]
     public BranchAndFinancialInstitutionIdentification8? CreditorAgent { get; init; }
 
-    /// <summary>
-    /// Creditor Scheme Identification.
-    /// </summary>
+    /// <inheritdoc cref="IMandate20.CreditorSchemeIdentification"/>
     [DisplayName("Creditor Scheme Identification")]
     [IsoXmlTag("CdtrSchmeId")]
     public PartyIdentification272? CreditorSchemeIdentification { get; init; }
 
-    /// <summary>
-    /// Debtor.
-    /// </summary>
+    /// <inheritdoc cref="IMandate20.Debtor"/>
     [DisplayName("Debtor")]
     [IsoXmlTag("Dbtr")]
     public required PartyIdentification272 Debtor { get; init; }
 
-    /// <summary>
-    /// Debtor Account.
-    /// </summary>
+    /// <inheritdoc cref="IMandate20.DebtorAccount"/>
     [DisplayName("Debtor Account")]
     [IsoXmlTag("DbtrAcct")]
     public CashAccount40? DebtorAccount { get; init; }
 
-    /// <summary>
-    /// Debtor Agent.
-    /// </summary>
+    /// <inheritdoc cref="IMandate20.DebtorAgent"/>
     [DisplayName("Debtor Agent")]
     [IsoXmlTag("DbtrAgt")]
     public required BranchAndFinancialInstitutionIdentification8 DebtorAgent { get; init; }
 
-    /// <summary>
-    /// First Collection Amount.
-    /// </summary>
+    /// <inheritdoc cref="IMandate20.FirstCollectionAmount"/>
     [DisplayName("First Collection Amount")]
     [IsoXmlTag("FrstColltnAmt")]
     public ActiveOrHistoricCurrencyAndAmount? FirstCollectionAmount { get; init; }
 
-    /// <summary>
-    /// Mandate Identification.
-    /// </summary>
+    /// <inheritdoc cref="IMandate20.MandateIdentification"/>
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
     public required IsoMax35Text MandateIdentification { get; init; }
 
-    /// <summary>
-    /// Mandate Reference.
-    /// </summary>
+    /// <inheritdoc cref="IMandate20.MandateReference"/>
     [DisplayName("Mandate Reference")]
     [IsoXmlTag("MndtRef")]
     public IsoMax35Text? MandateReference { get; init; }
 
-    /// <summary>
-    /// Mandate Request Identification.
-    /// </summary>
+    /// <inheritdoc cref="IMandate20.MandateRequestIdentification"/>
     [DisplayName("Mandate Request Identification")]
     [IsoXmlTag("MndtReqId")]
     public IsoMax35Text? MandateRequestIdentification { get; init; }
 
-    /// <summary>
-    /// Maximum Amount.
-    /// </summary>
+    /// <inheritdoc cref="IMandate20.MaximumAmount"/>
     [DisplayName("Maximum Amount")]
     [IsoXmlTag("MaxAmt")]
     public ActiveOrHistoricCurrencyAndAmount? MaximumAmount { get; init; }
 
-    /// <summary>
-    /// Occurrences.
-    /// </summary>
+    /// <inheritdoc cref="IMandate20.Occurrences"/>
     [DisplayName("Occurrences")]
     [IsoXmlTag("Ocrncs")]
     public MandateOccurrences5? Occurrences { get; init; }
 
-    /// <summary>
-    /// Reason.
-    /// </summary>
+    /// <inheritdoc cref="IMandate20.Reason"/>
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
     public MandateSetupReason1Choice_? Reason { get; init; }
 
-    /// <summary>
-    /// Referred Document.
-    /// </summary>
+    /// <inheritdoc cref="IMandate20.ReferredDocument"/>
     [DisplayName("Referred Document")]
     [IsoXmlTag("RfrdDoc")]
     public ValueList<ReferredMandateDocument2> ReferredDocument { get; init; } = [];
 
-    /// <summary>
-    /// Tracking Indicator.
-    /// </summary>
+    /// <inheritdoc cref="IMandate20.TrackingIndicator"/>
     [DisplayName("Tracking Indicator")]
     [IsoXmlTag("TrckgInd")]
     public required IsoTrueFalseIndicator TrackingIndicator { get; init; }
 
-    /// <summary>
-    /// Type.
-    /// </summary>
+    /// <inheritdoc cref="IMandate20.Type"/>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     public MandateTypeInformation2? Type { get; init; }
 
-    /// <summary>
-    /// Ultimate Creditor.
-    /// </summary>
+    /// <inheritdoc cref="IMandate20.UltimateCreditor"/>
     [DisplayName("Ultimate Creditor")]
     [IsoXmlTag("UltmtCdtr")]
     public PartyIdentification272? UltimateCreditor { get; init; }
 
-    /// <summary>
-    /// Ultimate Debtor.
-    /// </summary>
+    /// <inheritdoc cref="IMandate20.UltimateDebtor"/>
     [DisplayName("Ultimate Debtor")]
     [IsoXmlTag("UltmtDbtr")]
     public PartyIdentification272? UltimateDebtor { get; init; }

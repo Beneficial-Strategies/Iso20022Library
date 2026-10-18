@@ -1,0 +1,50 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Set of elements that further details the information related to the type of payment.
+/// </summary>
+[IsoId("_TGX5Gdp-Ed-ak6NoX_4Aeg_-1770135216")]
+public interface IPaymentTypeInformation1 : IIsoComponent
+{
+    /// <summary>
+    /// Indicator of the urgency or order of importance that the instructing party would like the instructed party to apply to the processing of the instruction.
+    /// </summary>
+    [IsoId("_TGX5Gtp-Ed-ak6NoX_4Aeg_-1770135121")]
+    [DisplayName("Instruction Priority")]
+    [IsoXmlTag("InstrPrty")]
+    Priority2Code? InstructionPriority { get; }
+
+    /// <summary>
+    /// Agreement under which or rules under which the transaction should be processed.
+    /// </summary>
+    [IsoId("_TGhDANp-Ed-ak6NoX_4Aeg_-1770134172")]
+    [DisplayName("Service Level")]
+    [IsoXmlTag("SvcLvl")]
+    IServiceLevel2Choice? ServiceLevel { get; }
+
+    /// <summary>
+    /// Specifies the clearing channel to be used for the instruction.
+    /// </summary>
+    [IsoId("_TGhDAdp-Ed-ak6NoX_4Aeg_-1770135078")]
+    [DisplayName("Clearing Channel")]
+    [IsoXmlTag("ClrChanl")]
+    ClearingChannel2Code? ClearingChannel { get; }
+
+    /// <summary>
+    /// User community specific instrument.||Usage: When available, codes provided by local authorities should be used.
+    /// </summary>
+    [IsoId("_TGhDAtp-Ed-ak6NoX_4Aeg_-1770133337")]
+    [DisplayName("Local Instrument")]
+    [IsoXmlTag("LclInstrm")]
+    ILocalInstrument1Choice? LocalInstrument { get; }
+
+    /// <summary>
+    /// Specifies the high level purpose of the instruction based on a set of pre-defined categories.
+    /// </summary>
+    [IsoId("_TGhDA9p-Ed-ak6NoX_4Aeg_-1770134397")]
+    [DisplayName("Category Purpose")]
+    [IsoXmlTag("CtgyPurp")]
+    PaymentCategoryPurpose1Code? CategoryPurpose { get; }
+}

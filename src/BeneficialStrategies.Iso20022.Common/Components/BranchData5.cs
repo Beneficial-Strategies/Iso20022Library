@@ -9,37 +9,27 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Branch Data5.
-/// </summary>
+/// <inheritdoc cref="IBranchData5"/>
 [IsoId("_v0bUQTEyEe6g-ffJsqGiSA")]
 [DisplayName("Branch Data5")]
-public record BranchData5
+public partial record BranchData5
 {
-    /// <summary>
-    /// Identification.
-    /// </summary>
+    /// <inheritdoc cref="IBranchData5.Identification"/>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     public IsoMax35Text? Identification { get; init; }
 
-    /// <summary>
-    /// LEI.
-    /// </summary>
+    /// <inheritdoc cref="IBranchData5.LEI"/>
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     public IsoLEIIdentifier? LEI { get; init; }
 
-    /// <summary>
-    /// Name.
-    /// </summary>
+    /// <inheritdoc cref="IBranchData5.Name"/>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     public IsoMax140Text? Name { get; init; }
 
-    /// <summary>
-    /// Postal Address.
-    /// </summary>
+    /// <inheritdoc cref="IBranchData5.PostalAddress"/>
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]
     public PostalAddress27? PostalAddress { get; init; }

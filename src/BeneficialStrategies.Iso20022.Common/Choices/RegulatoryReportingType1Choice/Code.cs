@@ -2,12 +2,12 @@
 
 namespace BeneficialStrategies.Iso20022.Choices.RegulatoryReportingType1Choice
 {
-    /// <summary>Specifies the code.</summary>
+    /// <inheritdoc cref="ICode"/>
     [IsoId("_rJAakHeLEfCdoODv2ypKfw")]
     [DisplayName("Code")]
-    public record Code : RegulatoryReportingType1Choice_
+    public partial record Code : RegulatoryReportingType1Choice_
     {
-        /// <summary>Contains the main value for the container.</summary>
+        /// <inheritdoc cref="ICode.Value"/>
         [IsoXmlTag("Cd")]
         public required ExternalRegulatoryReportingType1Code Value { get; init; }
     }

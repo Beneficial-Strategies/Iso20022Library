@@ -1,0 +1,21 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+public partial record OriginalTransactionReference23 : IOriginalTransactionReference23
+{
+    IAmountType4Choice? IOriginalTransactionReference23.Amount => Amount;
+    IPaymentTypeInformation19? IOriginalTransactionReference23.PaymentTypeInformation => PaymentTypeInformation;
+    IRemittanceInformation11? IOriginalTransactionReference23.RemittanceInformation => RemittanceInformation;
+    IPartyIdentification43? IOriginalTransactionReference23.UltimateDebtor => UltimateDebtor;
+    IPartyIdentification43? IOriginalTransactionReference23.Debtor => Debtor;
+    ICashAccount24? IOriginalTransactionReference23.DebtorAccount => DebtorAccount;
+    IBranchAndFinancialInstitutionIdentification5? IOriginalTransactionReference23.DebtorAgent => DebtorAgent;
+    IBranchAndFinancialInstitutionIdentification5 IOriginalTransactionReference23.CreditorAgent => CreditorAgent;
+    IPartyIdentification43 IOriginalTransactionReference23.Creditor => Creditor;
+    ICashAccount24? IOriginalTransactionReference23.CreditorAccount => CreditorAccount;
+    IPartyIdentification43? IOriginalTransactionReference23.UltimateCreditor => UltimateCreditor;
+}

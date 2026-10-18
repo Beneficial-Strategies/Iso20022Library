@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Provides detailed information on the original transaction, to which the status report message refers.
-/// </summary>
+/// <inheritdoc cref="IOriginalPaymentInstruction37"/>
 [IsoId("_yhnwJ8loEem0vqvvoqYsqQ")]
 [DisplayName("Original Payment Instruction")]
-public record OriginalPaymentInstruction37
+public partial record OriginalPaymentInstruction37
 {
-    /// <summary>
-    /// Unique identification, as assigned by an instructing party for an instructed party, to unambiguously identify the reversed payment information group.|Usage: The instructing party is the party sending the reversal message and not the party that sent the original instruction that is being reversed.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalPaymentInstruction37.ReversalPaymentInformationIdentification"/>
     [IsoId("_ysDeWcloEem0vqvvoqYsqQ")]
     [DisplayName("Reversal Payment Information Identification")]
     [IsoXmlTag("RvslPmtInfId")]
@@ -26,9 +22,7 @@ public record OriginalPaymentInstruction37
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? ReversalPaymentInformationIdentification { get; init; }
 
-    /// <summary>
-    /// Unique identification, as assigned by the original sending party, to unambiguously identify the original payment information group.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalPaymentInstruction37.OriginalPaymentInformationIdentification"/>
     [IsoId("_ysDeW8loEem0vqvvoqYsqQ")]
     [DisplayName("Original Payment Information Identification")]
     [IsoXmlTag("OrgnlPmtInfId")]
@@ -36,53 +30,41 @@ public record OriginalPaymentInstruction37
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public required IsoMax35Text OriginalPaymentInformationIdentification { get; init; }
 
-    /// <summary>
-    /// Number of individual transactions contained in the original payment information group.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalPaymentInstruction37.OriginalNumberOfTransactions"/>
     [IsoId("_ysDeXcloEem0vqvvoqYsqQ")]
     [DisplayName("Original Number Of Transactions")]
     [IsoXmlTag("OrgnlNbOfTxs")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     public IsoMax15NumericText? OriginalNumberOfTransactions { get; init; }
 
-    /// <summary>
-    /// Total of all individual amounts included in the original payment information group, irrespective of currencies.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalPaymentInstruction37.OriginalControlSum"/>
     [IsoId("_ysDeX8loEem0vqvvoqYsqQ")]
     [DisplayName("Original Control Sum")]
     [IsoXmlTag("OrgnlCtrlSum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     public IsoDecimalNumber? OriginalControlSum { get; init; }
 
-    /// <summary>
-    /// Identifies whether a single entry per individual transaction or a batch entry for the sum of the amounts of all transactions within the group of a message is requested.|Usage: Batch booking is used to request and not order a possible batch booking.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalPaymentInstruction37.BatchBooking"/>
     [IsoId("_ysDeYcloEem0vqvvoqYsqQ")]
     [DisplayName("Batch Booking")]
     [IsoXmlTag("BtchBookg")]
     [IsoSimpleType(IsoSimpleType.BatchBookingIndicator)]
     public IsoBatchBookingIndicator? BatchBooking { get; init; }
 
-    /// <summary>
-    /// Indicates whether or not the reversal applies to the complete original payment information group or to individual transactions within that group.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalPaymentInstruction37.PaymentInformationReversal"/>
     [IsoId("_ysDeY8loEem0vqvvoqYsqQ")]
     [DisplayName("Payment Information Reversal")]
     [IsoXmlTag("PmtInfRvsl")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     public IsoTrueFalseIndicator? PaymentInformationReversal { get; init; }
 
-    /// <summary>
-    /// Provides detailed information on the reversal reason.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalPaymentInstruction37.ReversalReasonInformation"/>
     [IsoId("_ysDeZcloEem0vqvvoqYsqQ")]
     [DisplayName("Reversal Reason Information")]
     [IsoXmlTag("RvslRsnInf")]
     public ValueList<PaymentReversalReason9> ReversalReasonInformation { get; init; } = [];
 
-    /// <summary>
-    /// Provides information on the original transactions to which the reversal message refers.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalPaymentInstruction37.TransactionInformation"/>
     [IsoId("_ysDeZ8loEem0vqvvoqYsqQ")]
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]

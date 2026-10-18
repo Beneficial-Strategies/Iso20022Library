@@ -12,25 +12,13 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pain;
 
-/// <summary>
-/// This record is an implementation of the pain.009.001.05 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// Scope
-/// The MandateInitiationRequest message is sent by the initiator of the request to his agent. The initiator can either be the debtor or the creditor.
-/// The MandateInitiationRequest message is forwarded by the agent of the initiator to the agent of the counterparty.
-/// The MandateInitiationRequest message is used to setup the instruction that allows the debtor agent to accept instructions from the creditor, through the creditor agent, to debit the account of the debtor.
-/// Usage
-/// The MandateInitiationRequest message can contain one or more request(s) to setup a specific mandate.
-/// The messages can be exchanged between creditor and creditor agent or debtor and debtor agent and between creditor agent and debtor agent.
-/// The message can also be used by an initiating party that has authority to send the message on behalf of the creditor or debtor.
-/// The MandateInitiationRequest message can be used in domestic and cross-border scenarios.
-/// </summary>
+/// <inheritdoc cref="IMandateInitiationRequestV05"/>
 [Description(
     @"Scope|The MandateInitiationRequest message is sent by the initiator of the request to his agent. The initiator can either be the debtor or the creditor.|The MandateInitiationRequest message is forwarded by the agent of the initiator to the agent of the counterparty.|The MandateInitiationRequest message is used to setup the instruction that allows the debtor agent to accept instructions from the creditor, through the creditor agent, to debit the account of the debtor.|Usage|The MandateInitiationRequest message can contain one or more request(s) to setup a specific mandate.|The messages can be exchanged between creditor and creditor agent or debtor and debtor agent and between creditor agent and debtor agent.|The message can also be used by an initiating party that has authority to send the message on behalf of the creditor or debtor.|The MandateInitiationRequest message can be used in domestic and cross-border scenarios."
 )]
 [IsoId("_ecUrgUjuEeaVLL5QKJ4f-A")]
 [DisplayName("Mandate Initiation Request V")]
-public record MandateInitiationRequestV05 : IOuterRecord
+public partial record MandateInitiationRequestV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -57,25 +45,19 @@ public record MandateInitiationRequestV05 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Set of characteristics to identify the message and parties playing a role in the mandate initiation, but which are not part of the mandate.
-    /// </summary>
+    /// <inheritdoc cref="IMandateInitiationRequestV05.GroupHeader"/>
     [IsoId("_ecUrhUjuEeaVLL5QKJ4f-A")]
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader47 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Set of elements used to provide the details of the mandate signed between the (ultimate) creditor and the (ultimate) debtor.
-    /// </summary>
+    /// <inheritdoc cref="IMandateInitiationRequestV05.Mandate"/>
     [IsoId("_ecUrh0juEeaVLL5QKJ4f-A")]
     [DisplayName("Mandate")]
     [IsoXmlTag("Mndt")]
     public required Mandate10 Mandate { get; init; }
 
-    /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
+    /// <inheritdoc cref="IMandateInitiationRequestV05.SupplementaryData"/>
     [IsoId("_ecUriUjuEeaVLL5QKJ4f-A")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]

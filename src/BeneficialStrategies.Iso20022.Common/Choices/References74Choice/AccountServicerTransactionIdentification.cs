@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.References74Choice
 {
-    /// <summary>
-    /// Unambiguous identification of the transaction as known by the account servicer.
-    /// </summary>
+    /// <inheritdoc cref="IAccountServicerTransactionIdentification"/>
     [IsoId("_SiFNiSgaEey2k_sfZmJz4g")]
     [DisplayName("Account Servicer Transaction Identification")]
-    public record AccountServicerTransactionIdentification : References74Choice_
+    public partial record AccountServicerTransactionIdentification : References74Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies a character string with a maximum length of 35 characters.
-        /// </summary>
+        /// <inheritdoc cref="IAccountServicerTransactionIdentification.Value"/>
         [IsoXmlTag("AcctSvcrTxId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]

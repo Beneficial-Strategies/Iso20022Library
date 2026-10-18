@@ -1,0 +1,15 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+public partial record Cheque11 : ICheque11
+{
+    INameAndAddress16? ICheque11.ChequeFrom => ChequeFrom;
+    IChequeDeliveryMethod1Choice? ICheque11.DeliveryMethod => DeliveryMethod;
+    INameAndAddress16? ICheque11.DeliverTo => DeliverTo;
+    IEnumerable<string> ICheque11.MemoField => MemoField;
+    IEnumerable<string> ICheque11.Signature => Signature;
+}

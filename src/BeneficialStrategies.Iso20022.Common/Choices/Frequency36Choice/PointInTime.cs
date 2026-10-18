@@ -8,25 +8,19 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.Frequency36Choice
 {
-    /// <summary>
-    /// Specifies a frequency in terms of an exact point in time or moment within a specified period type.
-    /// </summary>
+    /// <inheritdoc cref="IPointInTime"/>
     [IsoId("_6IxUQWk2Eeanu6HLe77Rkg")]
     [DisplayName("Point In Time")]
     [IsoXmlTag("PtInTm")]
-    public record PointInTime : Frequency36Choice_
+    public partial record PointInTime : Frequency36Choice_
     {
-        /// <summary>
-        /// Period for which the number of instructions are to be created and processed.
-        /// </summary>
+        /// <inheritdoc cref="IPointInTime.Type"/>
         [IsoId("_CWY19Wk3Eeanu6HLe77Rkg")]
         [DisplayName("Type")]
         [IsoXmlTag("Tp")]
         public required Frequency6Code Type { get; init; }
 
-        /// <summary>
-        /// Further information on the exact point in time the event should take place.
-        /// </summary>
+        /// <inheritdoc cref="IPointInTime.Value"/>
         [IsoXmlTag("PtInTm")]
         [IsoSimpleType(IsoSimpleType.Exact2NumericText)]
         public required IsoExact2NumericText Value { get; init; }

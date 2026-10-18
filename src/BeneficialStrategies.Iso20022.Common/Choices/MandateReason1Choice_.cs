@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Specifies the reason for the request or status of a mandate.
-    /// </summary>
+    /// <inheritdoc cref="IMandateReason1Choice"/>
     [KnownType(typeof(MandateReason1Choice.Code))]
     [KnownType(typeof(MandateReason1Choice.Proprietary))]
     [JsonDerivedType(typeof(MandateReason1Choice.Code), nameof(MandateReason1Choice.Code))]
@@ -18,5 +16,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_TOt8xdp-Ed-ak6NoX_4Aeg_-162041513")]
     [DisplayName("Mandate Reason 1 Choice")]
-    public abstract record MandateReason1Choice_ { }
+    public abstract partial record MandateReason1Choice_ { }
 }

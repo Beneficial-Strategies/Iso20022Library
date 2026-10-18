@@ -9,40 +9,30 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Set of elements used to provide further details of the type of payment.
-/// </summary>
+/// <inheritdoc cref="IPaymentTypeInformation19"/>
 [IsoId("_TGq0Cdp-Ed-ak6NoX_4Aeg_-192814839")]
 [DisplayName("Payment Type Information")]
-public record PaymentTypeInformation19
+public partial record PaymentTypeInformation19
 {
-    /// <summary>
-    /// Indicator of the urgency or order of importance that the instructing party would like the instructed party to apply to the processing of the instruction.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTypeInformation19.InstructionPriority"/>
     [IsoId("_TGq0Ctp-Ed-ak6NoX_4Aeg_-192814807")]
     [DisplayName("Instruction Priority")]
     [IsoXmlTag("InstrPrty")]
     public Priority2Code? InstructionPriority { get; init; }
 
-    /// <summary>
-    /// Agreement under which or rules under which the transaction should be processed.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTypeInformation19.ServiceLevel"/>
     [IsoId("_TG9u8Np-Ed-ak6NoX_4Aeg_-192814402")]
     [DisplayName("Service Level")]
     [IsoXmlTag("SvcLvl")]
     public ServiceLevel8Choice_? ServiceLevel { get; init; }
 
-    /// <summary>
-    /// User community specific instrument.||Usage: This element is used to specify a local instrument, local clearing option and/or further qualify the service or service level.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTypeInformation19.LocalInstrument"/>
     [IsoId("_THHf8Np-Ed-ak6NoX_4Aeg_-192814345")]
     [DisplayName("Local Instrument")]
     [IsoXmlTag("LclInstrm")]
     public LocalInstrument2Choice_? LocalInstrument { get; init; }
 
-    /// <summary>
-    /// Specifies the high level purpose of the instruction based on a set of pre-defined categories.|Usage: This is used by the initiating party to provide information concerning the processing of the payment. It is likely to trigger special processing by any of the agents involved in the payment chain.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTypeInformation19.CategoryPurpose"/>
     [IsoId("_THHf8dp-Ed-ak6NoX_4Aeg_-449762134")]
     [DisplayName("Category Purpose")]
     [IsoXmlTag("CtgyPurp")]

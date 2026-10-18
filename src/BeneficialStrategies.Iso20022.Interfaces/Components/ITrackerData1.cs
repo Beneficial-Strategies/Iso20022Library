@@ -1,0 +1,36 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Specifies the detailed information as provided by a payment tracking system.
+/// </summary>
+[IsoId("_kOqpAIW2EeiDBOVr6AJAFA")]
+public interface ITrackerData1 : IIsoComponent
+{
+    /// <summary>
+    /// Point in time when an update to the tracking system has been confirmed.
+    /// Usage:
+    /// This date can be the point in time when an agent provides a pending status update to the tracking system or when the creditor has been credited and can use the amount of money (as confirmed to the tracking system by the creditor agent).
+    /// </summary>
+    [IsoId("_n9zF0IW5EeiDBOVr6AJAFA")]
+    [DisplayName("Confirmed Date")]
+    [IsoXmlTag("ConfdDt")]
+    IDateAndDateTime2Choice ConfirmedDate { get; }
+
+    /// <summary>
+    /// Amount of money confirmed to the tracking system by the agent.
+    /// </summary>
+    [IsoId("_se8VwIW5EeiDBOVr6AJAFA")]
+    [DisplayName("Confirmed Amount")]
+    [IsoXmlTag("ConfdAmt")]
+    ActiveCurrencyAndAmount ConfirmedAmount { get; }
+
+    /// <summary>
+    /// Provides tracker transaction information for a specific agent involved in the transaction chain.
+    /// </summary>
+    [IsoId("_x5xmwIW5EeiDBOVr6AJAFA")]
+    [DisplayName("Tracker Record")]
+    [IsoXmlTag("TrckrRcrd")]
+    IEnumerable<ITrackerRecord1> TrackerRecord { get; }
+}

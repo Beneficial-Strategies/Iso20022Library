@@ -12,23 +12,13 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pacs;
 
-/// <summary>
-/// This record is an implementation of the pacs.002.001.03 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// Scope
-/// The FinancialInstitutionToFinancialInstitutionPaymentStatusReport message is sent by an instructed agent to the previous party in the payment chain. It is used to inform this party about the positive or negative status of an instruction (either single or file). It is also used to report on a pending instruction.
-/// Usage
-/// The FIToFIPaymentStatusReport message is exchanged between agents to provide status information about instructions previously sent. Its usage will always be governed by a bilateral agreement between the agents.
-/// The FIToFIPaymentStatusReport message can be used to provide information about the status (e.g. rejection, acceptance) of a credit transfer instruction, a direct debit instruction, as well as other intra-agent instructions (for example FIToFIPaymentCancellationRequest).
-/// The FIToFIPaymentStatusReport message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.
-/// The FIToFIPaymentStatusReport message can be used in domestic and cross-border scenarios.
-/// </summary>
+/// <inheritdoc cref="IFIToFIPaymentStatusReportV03"/>
 [Description(
     @"Scope|The FinancialInstitutionToFinancialInstitutionPaymentStatusReport message is sent by an instructed agent to the previous party in the payment chain. It is used to inform this party about the positive or negative status of an instruction (either single or file). It is also used to report on a pending instruction.|Usage|The FIToFIPaymentStatusReport message is exchanged between agents to provide status information about instructions previously sent. Its usage will always be governed by a bilateral agreement between the agents.|The FIToFIPaymentStatusReport message can be used to provide information about the status (e.g. rejection, acceptance) of a credit transfer instruction, a direct debit instruction, as well as other intra-agent instructions (for example FIToFIPaymentCancellationRequest).|The FIToFIPaymentStatusReport message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.|The FIToFIPaymentStatusReport message can be used in domestic and cross-border scenarios."
 )]
 [IsoId("_elwU0dEuEd-BzquC8wXy7w_-718126476")]
 [DisplayName("FI To FI Payment Status Report V")]
-public record FIToFIPaymentStatusReportV03 : IOuterRecord
+public partial record FIToFIPaymentStatusReportV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -55,25 +45,19 @@ public record FIToFIPaymentStatusReportV03 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Set of characteristics shared by all individual transactions included in the status report message.
-    /// </summary>
+    /// <inheritdoc cref="IFIToFIPaymentStatusReportV03.GroupHeader"/>
     [IsoId("_elwU0tEuEd-BzquC8wXy7w_-717206472")]
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader37 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Original group information concerning the group of transactions, to which the status report message refers to.
-    /// </summary>
+    /// <inheritdoc cref="IFIToFIPaymentStatusReportV03.OriginalGroupInformationAndStatus"/>
     [IsoId("_elwU09EuEd-BzquC8wXy7w_-717206380")]
     [DisplayName("Original Group Information And Status")]
     [IsoXmlTag("OrgnlGrpInfAndSts")]
     public required OriginalGroupInformation20 OriginalGroupInformationAndStatus { get; init; }
 
-    /// <summary>
-    /// Information concerning the original transactions, to which the status report message refers.
-    /// </summary>
+    /// <inheritdoc cref="IFIToFIPaymentStatusReportV03.TransactionInformationAndStatus"/>
     [IsoId("_el6FwNEuEd-BzquC8wXy7w_-717206288")]
     [DisplayName("Transaction Information And Status")]
     [IsoXmlTag("TxInfAndSts")]

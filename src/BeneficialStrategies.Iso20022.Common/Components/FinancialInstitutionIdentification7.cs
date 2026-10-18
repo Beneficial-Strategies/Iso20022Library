@@ -9,33 +9,25 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Set of elements used to identify a financial institution.
-/// </summary>
+/// <inheritdoc cref="IFinancialInstitutionIdentification7"/>
 [IsoId("_TFLmRNp-Ed-ak6NoX_4Aeg_-434069114")]
 [DisplayName("Financial Institution Identification")]
-public record FinancialInstitutionIdentification7
+public partial record FinancialInstitutionIdentification7
 {
-    /// <summary>
-    /// Code allocated to a financial institution by the ISO 9362 Registration Authority as described in ISO 9362 &quot;Banking - Banking telecommunication messages - Business identifier code (BIC)&quot;.
-    /// </summary>
+    /// <inheritdoc cref="IFinancialInstitutionIdentification7.BIC"/>
     [IsoId("_TFLmRdp-Ed-ak6NoX_4Aeg_-434069112")]
     [DisplayName("BIC")]
     [IsoXmlTag("BIC")]
     [IsoSimpleType(IsoSimpleType.BICIdentifier)]
     public IsoBICIdentifier? BIC { get; init; }
 
-    /// <summary>
-    /// Information used to identify a member within a clearing system.
-    /// </summary>
+    /// <inheritdoc cref="IFinancialInstitutionIdentification7.ClearingSystemMemberIdentification"/>
     [IsoId("_TFLmRtp-Ed-ak6NoX_4Aeg_494072236")]
     [DisplayName("Clearing System Member Identification")]
     [IsoXmlTag("ClrSysMmbId")]
     public ClearingSystemMemberIdentification2? ClearingSystemMemberIdentification { get; init; }
 
-    /// <summary>
-    /// Name by which an agent is known and which is usually used to identify that agent.
-    /// </summary>
+    /// <inheritdoc cref="IFinancialInstitutionIdentification7.Name"/>
     [IsoId("_TFLmR9p-Ed-ak6NoX_4Aeg_-434068774")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
@@ -43,17 +35,13 @@ public record FinancialInstitutionIdentification7
     [StringLength(maximumLength: 140, MinimumLength = 1)]
     public IsoMax140Text? Name { get; init; }
 
-    /// <summary>
-    /// Information that locates and identifies a specific address, as defined by postal services.
-    /// </summary>
+    /// <inheritdoc cref="IFinancialInstitutionIdentification7.PostalAddress"/>
     [IsoId("_TFLmSNp-Ed-ak6NoX_4Aeg_-434068379")]
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]
     public PostalAddress6? PostalAddress { get; init; }
 
-    /// <summary>
-    /// Unique identification of an agent, as assigned by an institution, using an identification scheme.
-    /// </summary>
+    /// <inheritdoc cref="IFinancialInstitutionIdentification7.Other"/>
     [IsoId("_TFUwMNp-Ed-ak6NoX_4Aeg_-434068709")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]

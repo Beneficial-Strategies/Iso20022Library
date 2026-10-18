@@ -1,0 +1,19 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+public partial record AmendmentInformationDetails15 : IAmendmentInformationDetails15
+{
+    IBranchAndFinancialInstitutionIdentification8? IAmendmentInformationDetails15.OriginalCreditorAgent => OriginalCreditorAgent;
+    ICashAccount40? IAmendmentInformationDetails15.OriginalCreditorAgentAccount => OriginalCreditorAgentAccount;
+    IPartyIdentification272? IAmendmentInformationDetails15.OriginalCreditorSchemeIdentification => OriginalCreditorSchemeIdentification;
+    IPartyIdentification272? IAmendmentInformationDetails15.OriginalDebtor => OriginalDebtor;
+    ICashAccount40? IAmendmentInformationDetails15.OriginalDebtorAccount => OriginalDebtorAccount;
+    IBranchAndFinancialInstitutionIdentification8? IAmendmentInformationDetails15.OriginalDebtorAgent => OriginalDebtorAgent;
+    ICashAccount40? IAmendmentInformationDetails15.OriginalDebtorAgentAccount => OriginalDebtorAgentAccount;
+    IFrequency36Choice? IAmendmentInformationDetails15.OriginalFrequency => OriginalFrequency;
+    IMandateSetupReason1Choice? IAmendmentInformationDetails15.OriginalReason => OriginalReason;
+}

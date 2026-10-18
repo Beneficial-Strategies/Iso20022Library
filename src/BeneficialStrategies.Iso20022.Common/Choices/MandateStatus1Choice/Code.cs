@@ -8,19 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.MandateStatus1Choice
 {
-    /// <summary>
-    /// Status of the mandate, in a coded form as published in an external list.
-    /// </summary>
+    /// <inheritdoc cref="ICode"/>
     [IsoId("_ChH7ZJnAEeao_Z127E9uYg")]
     [DisplayName("Code")]
-    public record Code : MandateStatus1Choice_
+    public partial record Code : MandateStatus1Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies the external mandate status code in the format of character string with a maximum length of 4 characters.
-        /// The list of valid codes is an external code list published separately.
-        /// External code sets can be downloaded from www.iso20022.org.
-        /// </summary>
+        /// <inheritdoc cref="ICode.Value"/>
         [IsoXmlTag("Cd")]
         public required ExternalMandateStatus1Code Value { get; init; }
     }

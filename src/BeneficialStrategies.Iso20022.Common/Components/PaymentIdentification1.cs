@@ -9,17 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Set of elements used to provide further means of referencing a payment transaction.
-/// </summary>
+/// <inheritdoc cref="IPaymentIdentification1"/>
 [IsoId("_Prnpd9p-Ed-ak6NoX_4Aeg_1924360852")]
 [DisplayName("Payment Identification")]
-public record PaymentIdentification1
+public partial record PaymentIdentification1
 {
-    /// <summary>
-    /// Unique identification as assigned by an instructing party for an instructed party to unambiguously identify the instruction.
-    /// Usage: The instruction identification is a point to point reference that can be used between the instructing party and the instructed party to refer to the individual instruction. It can be included in several messages related to the instruction.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentIdentification1.InstructionIdentification"/>
     [IsoId("_PrnpeNp-Ed-ak6NoX_4Aeg_1924360930")]
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
@@ -27,10 +22,7 @@ public record PaymentIdentification1
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? InstructionIdentification { get; init; }
 
-    /// <summary>
-    /// Unique identification assigned by the initiating party to unambiguously identify the transaction. This identification is passed on, unchanged, throughout the entire end-to-end chain.
-    /// Usage: The end-to-end identification can be used for reconciliation or to link tasks relating to the transaction. It can be included in several messages related to the transaction.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentIdentification1.EndToEndIdentification"/>
     [IsoId("_Prnpedp-Ed-ak6NoX_4Aeg_1924360895")]
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]

@@ -1,0 +1,34 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Provides further details on the reason of the return of the transaction.
+/// </summary>
+[IsoId("_I5-c23L_EeidQ_AAdEzxQA")]
+public interface IPaymentReturnReason6 : IIsoComponent
+{
+    /// <summary>
+    /// Party that issues the return.
+    /// </summary>
+    [IsoId("_JEjVJXL_EeidQ_AAdEzxQA")]
+    [DisplayName("Originator")]
+    [IsoXmlTag("Orgtr")]
+    IPartyIdentification135? Originator { get; }
+
+    /// <summary>
+    /// Specifies the reason for the return.
+    /// </summary>
+    [IsoId("_JEjVJ3L_EeidQ_AAdEzxQA")]
+    [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
+    IReturnReason5Choice? Reason { get; }
+
+    /// <summary>
+    /// Further details on the return reason.
+    /// </summary>
+    [IsoId("_JEjVKXL_EeidQ_AAdEzxQA")]
+    [DisplayName("Additional Information")]
+    [IsoXmlTag("AddtlInf")]
+    IEnumerable<IsoMax105Text> AdditionalInformation { get; }
+}

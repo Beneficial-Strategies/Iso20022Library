@@ -12,13 +12,10 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pain;
 
-/// <summary>
-/// This record is an implementation of the pain.013.001.12 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// </summary>
+/// <inheritdoc cref="ICreditorPaymentActivationRequestV12"/>
 [IsoId("d2b0673a-1f10-4086-ad39-b4f95fef2cb5")]
 [DisplayName("Creditor Payment Activation Request V12")]
-public record CreditorPaymentActivationRequestV12 : IOuterRecord
+public partial record CreditorPaymentActivationRequestV12 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -45,23 +42,17 @@ public record CreditorPaymentActivationRequestV12 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Group Header.
-    /// </summary>
+    /// <inheritdoc cref="ICreditorPaymentActivationRequestV12.GroupHeader"/>
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader112 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Payment Information.
-    /// </summary>
+    /// <inheritdoc cref="ICreditorPaymentActivationRequestV12.PaymentInformation"/>
     [DisplayName("Payment Information")]
     [IsoXmlTag("PmtInf")]
     public ValueList<PaymentInstruction48> PaymentInformation { get; init; } = [];
 
-    /// <summary>
-    /// Supplementary Data.
-    /// </summary>
+    /// <inheritdoc cref="ICreditorPaymentActivationRequestV12.SupplementaryData"/>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];

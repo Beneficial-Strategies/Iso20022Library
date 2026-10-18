@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Specifies the type of the document referred in the remittance information.
-    /// </summary>
+    /// <inheritdoc cref="IReferredDocumentType3Choice"/>
     [KnownType(typeof(ReferredDocumentType3Choice.Code))]
     [KnownType(typeof(ReferredDocumentType3Choice.Proprietary))]
     [JsonDerivedType(
@@ -21,5 +19,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_XxL1Jx77EeSxevWRRWxNAg")]
     [DisplayName("Referred Document Type 3 Choice")]
-    public abstract record ReferredDocumentType3Choice_ { }
+    public abstract partial record ReferredDocumentType3Choice_ { }
 }

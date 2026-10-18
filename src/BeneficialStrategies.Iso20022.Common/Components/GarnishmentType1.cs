@@ -9,24 +9,18 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Specifies the type of garnishment.
-/// </summary>
+/// <inheritdoc cref="IGarnishmentType1"/>
 [IsoId("_LLLooYnnEeOORMXOfBk1Bw")]
 [DisplayName("Garnishment Type")]
-public record GarnishmentType1
+public partial record GarnishmentType1
 {
-    /// <summary>
-    /// Provides the type details of the garnishment.
-    /// </summary>
+    /// <inheritdoc cref="IGarnishmentType1.CodeOrProprietary"/>
     [IsoId("_LWYzE4nnEeOORMXOfBk1Bw")]
     [DisplayName("Code Or Proprietary")]
     [IsoXmlTag("CdOrPrtry")]
     public required GarnishmentType1Choice_ CodeOrProprietary { get; init; }
 
-    /// <summary>
-    /// Identification of the issuer of the garnishment type.
-    /// </summary>
+    /// <inheritdoc cref="IGarnishmentType1.Issuer"/>
     [IsoId("_LWYzFYnnEeOORMXOfBk1Bw")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]

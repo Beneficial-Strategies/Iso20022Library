@@ -9,135 +9,97 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Postal Address27.
-/// </summary>
+/// <inheritdoc cref="IPostalAddress27"/>
 [IsoId("_vvaRYTEyEe6g-ffJsqGiSA")]
 [DisplayName("Postal Address27")]
-public record PostalAddress27
+public partial record PostalAddress27
 {
-    /// <summary>
-    /// Address Line.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress27.AddressLine"/>
     [DisplayName("Address Line")]
     [IsoXmlTag("AdrLine")]
     public SimpleValueList<IsoMax70Text> AddressLine { get; init; } = [];
 
-    /// <summary>
-    /// Address Type.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress27.AddressType"/>
     [DisplayName("Address Type")]
     [IsoXmlTag("AdrTp")]
     public AddressType3Choice_? AddressType { get; init; }
 
-    /// <summary>
-    /// Building Name.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress27.BuildingName"/>
     [DisplayName("Building Name")]
     [IsoXmlTag("BldgNm")]
     public IsoMax140Text? BuildingName { get; init; }
 
-    /// <summary>
-    /// Building Number.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress27.BuildingNumber"/>
     [DisplayName("Building Number")]
     [IsoXmlTag("BldgNb")]
     public IsoMax16Text? BuildingNumber { get; init; }
 
-    /// <summary>
-    /// Care Of.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress27.CareOf"/>
     [DisplayName("Care Of")]
     [IsoXmlTag("CareOf")]
     public IsoMax140Text? CareOf { get; init; }
 
-    /// <summary>
-    /// Country.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress27.Country"/>
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
     public CountryCode? Country { get; init; }
 
-    /// <summary>
-    /// Country Sub Division.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress27.CountrySubDivision"/>
     [DisplayName("Country Sub Division")]
     [IsoXmlTag("CtrySubDvsn")]
     public IsoMax35Text? CountrySubDivision { get; init; }
 
-    /// <summary>
-    /// Department.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress27.Department"/>
     [DisplayName("Department")]
     [IsoXmlTag("Dept")]
     public IsoMax70Text? Department { get; init; }
 
-    /// <summary>
-    /// District Name.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress27.DistrictName"/>
     [DisplayName("District Name")]
     [IsoXmlTag("DstrctNm")]
     public IsoMax140Text? DistrictName { get; init; }
 
-    /// <summary>
-    /// Floor.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress27.Floor"/>
     [DisplayName("Floor")]
     [IsoXmlTag("Flr")]
     public IsoMax70Text? Floor { get; init; }
 
-    /// <summary>
-    /// Post Box.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress27.PostBox"/>
     [DisplayName("Post Box")]
     [IsoXmlTag("PstBx")]
     public IsoMax16Text? PostBox { get; init; }
 
-    /// <summary>
-    /// Post Code.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress27.PostCode"/>
     [DisplayName("Post Code")]
     [IsoXmlTag("PstCd")]
     public IsoMax16Text? PostCode { get; init; }
 
-    /// <summary>
-    /// Room.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress27.Room"/>
     [DisplayName("Room")]
     [IsoXmlTag("Room")]
     public IsoMax70Text? Room { get; init; }
 
-    /// <summary>
-    /// Street Name.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress27.StreetName"/>
     [DisplayName("Street Name")]
     [IsoXmlTag("StrtNm")]
     public IsoMax140Text? StreetName { get; init; }
 
-    /// <summary>
-    /// Sub Department.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress27.SubDepartment"/>
     [DisplayName("Sub Department")]
     [IsoXmlTag("SubDept")]
     public IsoMax70Text? SubDepartment { get; init; }
 
-    /// <summary>
-    /// Town Location Name.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress27.TownLocationName"/>
     [DisplayName("Town Location Name")]
     [IsoXmlTag("TwnLctnNm")]
     public IsoMax140Text? TownLocationName { get; init; }
 
-    /// <summary>
-    /// Town Name.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress27.TownName"/>
     [DisplayName("Town Name")]
     [IsoXmlTag("TwnNm")]
     public IsoMax140Text? TownName { get; init; }
 
-    /// <summary>
-    /// Unit Number.
-    /// </summary>
+    /// <inheritdoc cref="IPostalAddress27.UnitNumber"/>
     [DisplayName("Unit Number")]
     [IsoXmlTag("UnitNb")]
     public IsoMax16Text? UnitNumber { get; init; }

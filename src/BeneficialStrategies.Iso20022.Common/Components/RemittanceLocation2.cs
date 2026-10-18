@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Set of elements used to provide information on the remittance advice.
-/// </summary>
+/// <inheritdoc cref="IRemittanceLocation2"/>
 [IsoId("_QF_4Udp-Ed-ak6NoX_4Aeg_-1849801133")]
 [DisplayName("Remittance Location")]
-public record RemittanceLocation2
+public partial record RemittanceLocation2
 {
-    /// <summary>
-    /// Unique identification, as assigned by the initiating party, to unambiguously identify the remittance information sent separately from the payment instruction, such as a remittance advice.
-    /// </summary>
+    /// <inheritdoc cref="IRemittanceLocation2.RemittanceIdentification"/>
     [IsoId("_QF_4Utp-Ed-ak6NoX_4Aeg_-1849800824")]
     [DisplayName("Remittance Identification")]
     [IsoXmlTag("RmtId")]
@@ -26,17 +22,13 @@ public record RemittanceLocation2
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? RemittanceIdentification { get; init; }
 
-    /// <summary>
-    /// Method used to deliver the remittance advice information.
-    /// </summary>
+    /// <inheritdoc cref="IRemittanceLocation2.RemittanceLocationMethod"/>
     [IsoId("_QF_4U9p-Ed-ak6NoX_4Aeg_-1849801131")]
     [DisplayName("Remittance Location Method")]
     [IsoXmlTag("RmtLctnMtd")]
     public RemittanceLocationMethod2Code? RemittanceLocationMethod { get; init; }
 
-    /// <summary>
-    /// Electronic address to which an agent is to send the remittance information.
-    /// </summary>
+    /// <inheritdoc cref="IRemittanceLocation2.RemittanceLocationElectronicAddress"/>
     [IsoId("_QF_4VNp-Ed-ak6NoX_4Aeg_-1849800855")]
     [DisplayName("Remittance Location Electronic Address")]
     [IsoXmlTag("RmtLctnElctrncAdr")]
@@ -44,9 +36,7 @@ public record RemittanceLocation2
     [StringLength(maximumLength: 2048, MinimumLength = 1)]
     public IsoMax2048Text? RemittanceLocationElectronicAddress { get; init; }
 
-    /// <summary>
-    /// Postal address to which an agent is to send the remittance information.
-    /// </summary>
+    /// <inheritdoc cref="IRemittanceLocation2.RemittanceLocationPostalAddress"/>
     [IsoId("_QF_4Vdp-Ed-ak6NoX_4Aeg_-1849800718")]
     [DisplayName("Remittance Location Postal Address")]
     [IsoXmlTag("RmtLctnPstlAdr")]

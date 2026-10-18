@@ -8,19 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.CashAccountType2Choice
 {
-    /// <summary>
-    /// Account type, in a coded form.
-    /// </summary>
+    /// <inheritdoc cref="ICode"/>
     [IsoId("_sb6WgVkyEeGeoaLUQk__nA_-1937269286")]
     [DisplayName("Code")]
-    public record Code : CashAccountType2Choice_
+    public partial record Code : CashAccountType2Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies the nature, or use, of the cash account in the format of character string with a maximum length of 4 characters.
-        /// The list of valid codes is an external code list published separately.
-        /// External code sets can be downloaded from www.iso20022.org.
-        /// </summary>
+        /// <inheritdoc cref="ICode.Value"/>
         [IsoXmlTag("Cd")]
         public required ExternalCashAccountType1Code Value { get; init; }
     }

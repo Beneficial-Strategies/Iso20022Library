@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Entity requiring the regulatory reporting information.
-/// </summary>
+/// <inheritdoc cref="IRegulatoryAuthority"/>
 [IsoId("_PbYOANp-Ed-ak6NoX_4Aeg_602491363")]
 [DisplayName("Regulatory Authority")]
-public record RegulatoryAuthority
+public partial record RegulatoryAuthority
 {
-    /// <summary>
-    /// Name of the entity requiring the regulatory reporting information.
-    /// </summary>
+    /// <inheritdoc cref="IRegulatoryAuthority.AuthorityName"/>
     [IsoId("_PbYOAdp-Ed-ak6NoX_4Aeg_1073487607")]
     [DisplayName("Authority Name")]
     [IsoXmlTag("AuthrtyNm")]
@@ -26,9 +22,7 @@ public record RegulatoryAuthority
     [StringLength(maximumLength: 70, MinimumLength = 1)]
     public IsoMax70Text? AuthorityName { get; init; }
 
-    /// <summary>
-    /// Country of the entity requiring the regulatory reporting information.
-    /// </summary>
+    /// <inheritdoc cref="IRegulatoryAuthority.AuthorityCountry"/>
     [IsoId("_PbYOAtp-Ed-ak6NoX_4Aeg_1100271075")]
     [DisplayName("Authority Country")]
     [IsoXmlTag("AuthrtyCtry")]

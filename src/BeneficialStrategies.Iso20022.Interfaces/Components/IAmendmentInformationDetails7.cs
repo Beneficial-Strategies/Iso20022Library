@@ -1,0 +1,74 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Set of elements used to provide the list of direct debit mandate elements that have been modified when the amendment indicator has been set.
+/// </summary>
+[IsoId("_TDrxctp-Ed-ak6NoX_4Aeg_2077407286")]
+public interface IAmendmentInformationDetails7 : IIsoComponent
+{
+    /// <summary>
+    /// Unique identification, as assigned by the creditor, to unambiguously identify the original mandate.
+    /// </summary>
+    [IsoId("_TDrxc9p-Ed-ak6NoX_4Aeg_-1141104100")]
+    [DisplayName("Original Mandate Identification")]
+    [IsoXmlTag("OrgnlMndtId")]
+    IsoMax35Text? OriginalMandateIdentification { get; }
+
+    /// <summary>
+    /// Original creditor scheme identification that has been modified.
+    /// </summary>
+    [IsoId("_TDrxdNp-Ed-ak6NoX_4Aeg_-1266041943")]
+    [DisplayName("Original Creditor Scheme Identification")]
+    [IsoXmlTag("OrgnlCdtrSchmeId")]
+    IPartyIdentification43? OriginalCreditorSchemeIdentification { get; }
+
+    /// <summary>
+    /// Original creditor agent that has been modified.
+    /// </summary>
+    [IsoId("_TDrxddp-Ed-ak6NoX_4Aeg_-214908871")]
+    [DisplayName("Original Creditor Agent")]
+    [IsoXmlTag("OrgnlCdtrAgt")]
+    IBranchAndFinancialInstitutionIdentification5? OriginalCreditorAgent { get; }
+
+    /// <summary>
+    /// Original debtor that has been modified.
+    /// </summary>
+    [IsoId("_TDrxdtp-Ed-ak6NoX_4Aeg_1821763564")]
+    [DisplayName("Original Debtor")]
+    [IsoXmlTag("OrgnlDbtr")]
+    IPartyIdentification43? OriginalDebtor { get; }
+
+    /// <summary>
+    /// Original debtor account that has been modified.
+    /// </summary>
+    [IsoId("_TDrxd9p-Ed-ak6NoX_4Aeg_-2019116463")]
+    [DisplayName("Original Debtor Account")]
+    [IsoXmlTag("OrgnlDbtrAcct")]
+    ICashAccount16? OriginalDebtorAccount { get; }
+
+    /// <summary>
+    /// Original debtor agent that has been modified.
+    /// </summary>
+    [IsoId("_TDrxeNp-Ed-ak6NoX_4Aeg_-188193294")]
+    [DisplayName("Original Debtor Agent")]
+    [IsoXmlTag("OrgnlDbtrAgt")]
+    IBranchAndFinancialInstitutionIdentification5? OriginalDebtorAgent { get; }
+
+    /// <summary>
+    /// Original final collection date that has been modified.
+    /// </summary>
+    [IsoId("_TDrxedp-Ed-ak6NoX_4Aeg_-2120936435")]
+    [DisplayName("Original Final Collection Date")]
+    [IsoXmlTag("OrgnlFnlColltnDt")]
+    IsoISODate? OriginalFinalCollectionDate { get; }
+
+    /// <summary>
+    /// Original frequency that has been modified.
+    /// </summary>
+    [IsoId("_TD1icNp-Ed-ak6NoX_4Aeg_459131634")]
+    [DisplayName("Original Frequency")]
+    [IsoXmlTag("OrgnlFrqcy")]
+    Frequency1Code? OriginalFrequency { get; }
+}

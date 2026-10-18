@@ -9,32 +9,24 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Provides further details on the reason of the reversal of the transaction.
-/// </summary>
+/// <inheritdoc cref="IPaymentReversalReason7"/>
 [IsoId("_t3aEIVkyEeGeoaLUQk__nA_20263708")]
 [DisplayName("Payment Reversal Reason")]
-public record PaymentReversalReason7
+public partial record PaymentReversalReason7
 {
-    /// <summary>
-    /// Party that issues the reversal.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentReversalReason7.Originator"/>
     [IsoId("_t3aEIlkyEeGeoaLUQk__nA_1241275489")]
     [DisplayName("Originator")]
     [IsoXmlTag("Orgtr")]
     public PartyIdentification43? Originator { get; init; }
 
-    /// <summary>
-    /// Specifies the reason for the reversal.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentReversalReason7.Reason"/>
     [IsoId("_t3aEI1kyEeGeoaLUQk__nA_-1778414709")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
     public ReversalReason4Choice_? Reason { get; init; }
 
-    /// <summary>
-    /// Further details on the reversal reason.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentReversalReason7.AdditionalInformation"/>
     [IsoId("_t3aEJFkyEeGeoaLUQk__nA_-878513043")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]

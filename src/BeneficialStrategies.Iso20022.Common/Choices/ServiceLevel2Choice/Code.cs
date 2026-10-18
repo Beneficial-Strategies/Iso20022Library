@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.ServiceLevel2Choice
 {
-    /// <summary>
-    /// Identification of a pre-agreed level of service between the parties in a coded form.
-    /// </summary>
+    /// <inheritdoc cref="ICode"/>
     [IsoId("_QJkwwtp-Ed-ak6NoX_4Aeg_1773004320")]
     [DisplayName("Code")]
-    public record Code : ServiceLevel2Choice_
+    public partial record Code : ServiceLevel2Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies the pre-agreed level of service between the parties.
-        /// </summary>
+        /// <inheritdoc cref="ICode.Value"/>
         [IsoXmlTag("Cd")]
         public required ServiceLevel1Code Value { get; init; }
     }

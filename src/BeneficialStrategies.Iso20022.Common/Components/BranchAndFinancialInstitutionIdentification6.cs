@@ -9,24 +9,18 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Unique and unambiguous identification of a financial institution or a branch of a financial institution.
-/// </summary>
+/// <inheritdoc cref="IBranchAndFinancialInstitutionIdentification6"/>
 [IsoId("_8nO10W49EeiU9cctagi5ow")]
 [DisplayName("Branch And Financial Institution Identification")]
-public record BranchAndFinancialInstitutionIdentification6
+public partial record BranchAndFinancialInstitutionIdentification6
 {
-    /// <summary>
-    /// Unique and unambiguous identification of a financial institution, as assigned under an internationally recognised or proprietary identification scheme.
-    /// </summary>
+    /// <inheritdoc cref="IBranchAndFinancialInstitutionIdentification6.FinancialInstitutionIdentification"/>
     [IsoId("_8xXCMW49EeiU9cctagi5ow")]
     [DisplayName("Financial Institution Identification")]
     [IsoXmlTag("FinInstnId")]
     public required FinancialInstitutionIdentification18 FinancialInstitutionIdentification { get; init; }
 
-    /// <summary>
-    /// Identifies a specific branch of a financial institution.||Usage: This component should be used in case the identification information in the financial institution component does not provide identification up to branch level.
-    /// </summary>
+    /// <inheritdoc cref="IBranchAndFinancialInstitutionIdentification6.BranchIdentification"/>
     [IsoId("_8xXCM249EeiU9cctagi5ow")]
     [DisplayName("Branch Identification")]
     [IsoXmlTag("BrnchId")]

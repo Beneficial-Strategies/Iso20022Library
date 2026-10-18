@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Provides information on the original group, to which the message refers.
-/// </summary>
+/// <inheritdoc cref="IOriginalGroupHeader2"/>
 [IsoId("_sm76wFkyEeGeoaLUQk__nA_-556027435")]
 [DisplayName("Original Group Header")]
-public record OriginalGroupHeader2
+public partial record OriginalGroupHeader2
 {
-    /// <summary>
-    /// Point to point reference, as assigned by the original instructing party, to unambiguously identify the original message.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalGroupHeader2.OriginalMessageIdentification"/>
     [IsoId("_sm76wVkyEeGeoaLUQk__nA_1822588893")]
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
@@ -26,9 +22,7 @@ public record OriginalGroupHeader2
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public required IsoMax35Text OriginalMessageIdentification { get; init; }
 
-    /// <summary>
-    /// Specifies the original message name identifier to which the message refers.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalGroupHeader2.OriginalMessageNameIdentification"/>
     [IsoId("_sm76wlkyEeGeoaLUQk__nA_680297331")]
     [DisplayName("Original Message Name Identification")]
     [IsoXmlTag("OrgnlMsgNmId")]
@@ -36,18 +30,14 @@ public record OriginalGroupHeader2
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public required IsoMax35Text OriginalMessageNameIdentification { get; init; }
 
-    /// <summary>
-    /// Date and time at which the original message was created.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalGroupHeader2.OriginalCreationDateTime"/>
     [IsoId("_snYmsFkyEeGeoaLUQk__nA_-1783746796")]
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
     public IsoISODateTime? OriginalCreationDateTime { get; init; }
 
-    /// <summary>
-    /// Provides detailed information on the return reason.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalGroupHeader2.ReturnReasonInformation"/>
     [IsoId("_snYmsVkyEeGeoaLUQk__nA_322967981")]
     [DisplayName("Return Reason Information")]
     [IsoXmlTag("RtrRsnInf")]

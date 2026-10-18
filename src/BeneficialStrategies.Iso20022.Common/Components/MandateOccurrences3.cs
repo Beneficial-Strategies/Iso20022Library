@@ -9,49 +9,37 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Provides further details related to the duration of the mandate and the occurrence of the underlying transactions.
-/// </summary>
+/// <inheritdoc cref="IMandateOccurrences3"/>
 [IsoId("_vVpaUSLzEeSizvrwx7oJNQ")]
 [DisplayName("Mandate Occurrences")]
-public record MandateOccurrences3
+public partial record MandateOccurrences3
 {
-    /// <summary>
-    /// Identifies the underlying transaction sequence as either recurring or one-off.
-    /// </summary>
+    /// <inheritdoc cref="IMandateOccurrences3.SequenceType"/>
     [IsoId("_vla7syLzEeSizvrwx7oJNQ")]
     [DisplayName("Sequence Type")]
     [IsoXmlTag("SeqTp")]
     public required SequenceType2Code SequenceType { get; init; }
 
-    /// <summary>
-    /// Regularity with which instructions are to be created and processed.
-    /// </summary>
+    /// <inheritdoc cref="IMandateOccurrences3.Frequency"/>
     [IsoId("_vla7tSLzEeSizvrwx7oJNQ")]
     [DisplayName("Frequency")]
     [IsoXmlTag("Frqcy")]
     public Frequency21Choice_? Frequency { get; init; }
 
-    /// <summary>
-    /// Length of time for which the mandate remains valid.
-    /// </summary>
+    /// <inheritdoc cref="IMandateOccurrences3.Duration"/>
     [IsoId("_vla7tyLzEeSizvrwx7oJNQ")]
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
     public DatePeriodDetails1? Duration { get; init; }
 
-    /// <summary>
-    /// Date of the first collection of a direct debit as per the mandate.
-    /// </summary>
+    /// <inheritdoc cref="IMandateOccurrences3.FirstCollectionDate"/>
     [IsoId("_vla7uSLzEeSizvrwx7oJNQ")]
     [DisplayName("First Collection Date")]
     [IsoXmlTag("FrstColltnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
     public IsoISODate? FirstCollectionDate { get; init; }
 
-    /// <summary>
-    /// Date of the final collection of a direct debit as per the mandate.
-    /// </summary>
+    /// <inheritdoc cref="IMandateOccurrences3.FinalCollectionDate"/>
     [IsoId("_vla7uyLzEeSizvrwx7oJNQ")]
     [DisplayName("Final Collection Date")]
     [IsoXmlTag("FnlColltnDt")]

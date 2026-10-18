@@ -12,24 +12,13 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pain;
 
-/// <summary>
-/// This record is an implementation of the pain.018.001.02 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// Scope
-/// The MandateSuspensionRequest message is sent by the initiator of the request to its agent. The initiator can either be the debtor, debtor agent, creditor or creditor agent.
-/// A MandateSuspensionRequest message is used to request the suspension of an existing mandate until the suspension is lifted.
-/// Usage
-/// The MandateSuspensionRequest message can contain one or more suspension requests.
-/// The messages can be exchanged between creditor and creditor agent or debtor and debtor agent and between creditor agent and debtor agent.
-/// The MandateSuspensionRequest message can be used in domestic and cross-border scenarios.
-///
-/// </summary>
+/// <inheritdoc cref="IMandateSuspensionRequestV02"/>
 [Description(
     @"Scope|The MandateSuspensionRequest message is sent by the initiator of the request to its agent. The initiator can either be the debtor, debtor agent, creditor or creditor agent.|A MandateSuspensionRequest message is used to request the suspension of an existing mandate until the suspension is lifted. |Usage|The MandateSuspensionRequest message can contain one or more suspension requests.|The messages can be exchanged between creditor and creditor agent or debtor and debtor agent and between creditor agent and debtor agent.|The MandateSuspensionRequest message can be used in domestic and cross-border scenarios.|"
 )]
 [IsoId("_bf9SRW2PEei3KuUgpx7Xcw")]
 [DisplayName("Mandate Suspension Request V")]
-public record MandateSuspensionRequestV02 : IOuterRecord
+public partial record MandateSuspensionRequestV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -56,25 +45,19 @@ public record MandateSuspensionRequestV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Set of characteristics to identify the message and parties playing a role in the mandate suspension request, but which are not part of the mandate.
-    /// </summary>
+    /// <inheritdoc cref="IMandateSuspensionRequestV02.GroupHeader"/>
     [IsoId("_bf9SSW2PEei3KuUgpx7Xcw")]
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader80 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Set of elements used to provide information on the suspension request of the mandate.
-    /// </summary>
+    /// <inheritdoc cref="IMandateSuspensionRequestV02.UnderlyingSuspensionDetails"/>
     [IsoId("_bf9SS22PEei3KuUgpx7Xcw")]
     [DisplayName("Underlying Suspension Details")]
     [IsoXmlTag("UndrlygSspnsnDtls")]
     public required MandateSuspension2 UnderlyingSuspensionDetails { get; init; }
 
-    /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
+    /// <inheritdoc cref="IMandateSuspensionRequestV02.SupplementaryData"/>
     [IsoId("_bf9STW2PEei3KuUgpx7Xcw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]

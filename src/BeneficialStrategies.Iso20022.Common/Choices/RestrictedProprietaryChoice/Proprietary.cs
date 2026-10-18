@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.RestrictedProprietaryChoice
 {
-    /// <summary>
-    /// Proprietary identification of a pre-agreed level of service between the parties.
-    /// </summary>
+    /// <inheritdoc cref="IProprietary"/>
     [IsoId("_QJkwwNp-Ed-ak6NoX_4Aeg_1495592134")]
     [DisplayName("Proprietary")]
-    public record Proprietary : RestrictedProprietaryChoice_
+    public partial record Proprietary : RestrictedProprietaryChoice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies a character string with a maximum length of 35 characters.
-        /// </summary>
+        /// <inheritdoc cref="IProprietary.Value"/>
         [IsoXmlTag("Prtry")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]

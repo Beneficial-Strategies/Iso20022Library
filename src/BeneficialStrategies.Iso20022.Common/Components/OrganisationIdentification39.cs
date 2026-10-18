@@ -9,30 +9,22 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Organisation Identification39.
-/// </summary>
+/// <inheritdoc cref="IOrganisationIdentification39"/>
 [IsoId("_bKD8BTFIEe651u5xu3f5iw")]
 [DisplayName("Organisation Identification39")]
-public record OrganisationIdentification39
+public partial record OrganisationIdentification39
 {
-    /// <summary>
-    /// Any BIC.
-    /// </summary>
+    /// <inheritdoc cref="IOrganisationIdentification39.AnyBIC"/>
     [DisplayName("Any BIC")]
     [IsoXmlTag("AnyBIC")]
     public IsoAnyBICDec2014Identifier? AnyBIC { get; init; }
 
-    /// <summary>
-    /// LEI.
-    /// </summary>
+    /// <inheritdoc cref="IOrganisationIdentification39.LEI"/>
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     public IsoLEIIdentifier? LEI { get; init; }
 
-    /// <summary>
-    /// Other.
-    /// </summary>
+    /// <inheritdoc cref="IOrganisationIdentification39.Other"/>
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
     public ValueList<GenericOrganisationIdentification3> Other { get; init; } = [];

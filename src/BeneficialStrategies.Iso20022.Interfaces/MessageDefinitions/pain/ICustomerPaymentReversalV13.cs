@@ -1,0 +1,43 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.pain;
+
+/// <summary>
+/// The CustomerPaymentReversal message is sent by the initiating party to the next party in the payment chain. It is used to reverse a payment previously executed.
+/// </summary>
+/// <remarks>
+/// The CustomerPaymentReversal message is exchanged between a non-financial institution customer and an agent to reverse a CustomerDirectDebitInitiation message that has been settled. The result will be a credit on the debtor account.
+/// The CustomerPaymentReversal message refers to the original CustomerDirectDebitInitiation message by means of references only or by means of references and a set of elements from the original instruction.
+/// The CustomerPaymentReversal message can be used in domestic and cross-border scenarios.
+/// </remarks>
+[IsoId("bf413c78-37ae-4bd7-bfe4-b88659e3626d")]
+public interface ICustomerPaymentReversalV13 : IOuterRecord
+{
+    /// <summary>
+    /// Set of characteristics shared by all individual transactions included in the message.
+    /// </summary>
+    [DisplayName("Group Header")]
+    [IsoXmlTag("GrpHdr")]
+    IGroupHeader124 GroupHeader { get; }
+
+    /// <summary>
+    /// Information concerning the original group of transactions, to which the message refers.
+    /// </summary>
+    [DisplayName("Original Group Information")]
+    [IsoXmlTag("OrgnlGrpInf")]
+    IOriginalGroupHeader20 OriginalGroupInformation { get; }
+
+    /// <summary>
+    /// Information concerning the original payment information, to which the reversal message refers.
+    /// </summary>
+    [DisplayName("Original Payment Information And Reversal")]
+    [IsoXmlTag("OrgnlPmtInfAndRvsl")]
+    IEnumerable<IOriginalPaymentInstruction53> OriginalPaymentInformationAndReversal { get; }
+
+    /// <summary>
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    IEnumerable<ISupplementaryData1> SupplementaryData { get; }
+}

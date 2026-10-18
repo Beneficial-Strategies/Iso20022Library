@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.References74Choice
 {
-    /// <summary>
-    /// Unambiguous identification of a securities settlement transaction as known by the account owner (or instructing party acting on its behalf).
-    /// </summary>
+    /// <inheritdoc cref="ISecuritiesSettlementTransactionIdentification"/>
     [IsoId("_SiFNgygaEey2k_sfZmJz4g")]
     [DisplayName("Securities Settlement Transaction Identification")]
-    public record SecuritiesSettlementTransactionIdentification : References74Choice_
+    public partial record SecuritiesSettlementTransactionIdentification : References74Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies a character string with a maximum length of 35 characters.
-        /// </summary>
+        /// <inheritdoc cref="ISecuritiesSettlementTransactionIdentification.Value"/>
         [IsoXmlTag("SctiesSttlmTxId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]

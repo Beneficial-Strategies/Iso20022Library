@@ -9,32 +9,24 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Information needed due to regulatory and/or statutory requirements.
-/// </summary>
+/// <inheritdoc cref="IRegulatoryReporting10"/>
 [IsoId("_FyCZkXeKEfCdoODv2ypKfw")]
 [DisplayName("Regulatory Reporting10")]
-public record RegulatoryReporting10
+public partial record RegulatoryReporting10
 {
-    /// <summary>
-    /// Identifies whether the regulatory reporting information applies to the debit side, to the credit side or to both debit and credit sides of the transaction.
-    /// </summary>
+    /// <inheritdoc cref="IRegulatoryReporting10.DebitCreditReportingIndicator"/>
     [IsoId("_F6fK8XeKEfCdoODv2ypKfw")]
     [DisplayName("Debit Credit Reporting Indicator")]
     [IsoXmlTag("DbtCdtRptgInd")]
     public required RegulatoryReportingType1Code DebitCreditReportingIndicator { get; init; }
 
-    /// <summary>
-    /// Entity requiring the regulatory reporting information.
-    /// </summary>
+    /// <inheritdoc cref="IRegulatoryReporting10.Authority"/>
     [IsoId("_F6fK83eKEfCdoODv2ypKfw")]
     [DisplayName("Authority")]
     [IsoXmlTag("Authrty")]
     public RegulatoryAuthority2? Authority { get; init; }
 
-    /// <summary>
-    /// Set of elements used to provide details on the regulatory reporting information.
-    /// </summary>
+    /// <inheritdoc cref="IRegulatoryReporting10.Details"/>
     [IsoId("_F6fK9XeKEfCdoODv2ypKfw")]
     [DisplayName("Details")]
     [IsoXmlTag("Dtls")]

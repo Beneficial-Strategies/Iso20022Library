@@ -9,51 +9,37 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Group Header110.
-/// </summary>
+/// <inheritdoc cref="IGroupHeader110"/>
 [IsoId("_xWwCoTEyEe6g-ffJsqGiSA")]
 [DisplayName("Group Header110")]
-public record GroupHeader110
+public partial record GroupHeader110
 {
-    /// <summary>
-    /// Authorisation.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader110.Authorisation"/>
     [DisplayName("Authorisation")]
     [IsoXmlTag("Authstn")]
     public ValueList<Authorisation1Choice_> Authorisation { get; init; } = [];
 
-    /// <summary>
-    /// Creation Date Time.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader110.CreationDateTime"/>
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     public required IsoISODateTime CreationDateTime { get; init; }
 
-    /// <summary>
-    /// Initiating Party.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader110.InitiatingParty"/>
     [DisplayName("Initiating Party")]
     [IsoXmlTag("InitgPty")]
     public PartyIdentification272? InitiatingParty { get; init; }
 
-    /// <summary>
-    /// Instructed Agent.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader110.InstructedAgent"/>
     [DisplayName("Instructed Agent")]
     [IsoXmlTag("InstdAgt")]
     public BranchAndFinancialInstitutionIdentification8? InstructedAgent { get; init; }
 
-    /// <summary>
-    /// Instructing Agent.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader110.InstructingAgent"/>
     [DisplayName("Instructing Agent")]
     [IsoXmlTag("InstgAgt")]
     public BranchAndFinancialInstitutionIdentification8? InstructingAgent { get; init; }
 
-    /// <summary>
-    /// Message Identification.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader110.MessageIdentification"/>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     public required IsoMax35Text MessageIdentification { get; init; }

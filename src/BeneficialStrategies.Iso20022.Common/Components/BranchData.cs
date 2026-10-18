@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Information that locates and identifies a specific branch of a financial institution.
-/// </summary>
+/// <inheritdoc cref="IBranchData"/>
 [IsoId("_TFUwMdp-Ed-ak6NoX_4Aeg_-275983969")]
 [DisplayName("Branch Data")]
-public record BranchData
+public partial record BranchData
 {
-    /// <summary>
-    /// Unique and unambiguous identification of a branch of a financial institution.
-    /// </summary>
+    /// <inheritdoc cref="IBranchData.Identification"/>
     [IsoId("_TFUwMtp-Ed-ak6NoX_4Aeg_-242735819")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
@@ -26,9 +22,7 @@ public record BranchData
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? Identification { get; init; }
 
-    /// <summary>
-    /// Name by which a party is known and which is usually used to identify that party.
-    /// </summary>
+    /// <inheritdoc cref="IBranchData.Name"/>
     [IsoId("_TFUwM9p-Ed-ak6NoX_4Aeg_14002178")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
@@ -36,9 +30,7 @@ public record BranchData
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? Name { get; init; }
 
-    /// <summary>
-    /// Information that locates and identifies a specific address, as defined by postal services.
-    /// </summary>
+    /// <inheritdoc cref="IBranchData.PostalAddress"/>
     [IsoId("_TFUwNNp-Ed-ak6NoX_4Aeg_-1619654726")]
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]

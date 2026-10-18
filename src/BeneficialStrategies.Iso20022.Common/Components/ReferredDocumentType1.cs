@@ -9,24 +9,18 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Specifies the type of the document referred in the remittance information.
-/// </summary>
+/// <inheritdoc cref="IReferredDocumentType1"/>
 [IsoId("_T31yQdp-Ed-ak6NoX_4Aeg_788285148")]
 [DisplayName("Referred Document Type")]
-public record ReferredDocumentType1
+public partial record ReferredDocumentType1
 {
-    /// <summary>
-    /// Document type in a coded form.
-    /// </summary>
+    /// <inheritdoc cref="IReferredDocumentType1.Code"/>
     [IsoId("_T31yQtp-Ed-ak6NoX_4Aeg_1742281673")]
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
     public required DocumentType2Code Code { get; init; }
 
-    /// <summary>
-    /// Proprietary identification of the type of the remittance document.
-    /// </summary>
+    /// <inheritdoc cref="IReferredDocumentType1.Proprietary"/>
     [IsoId("_T31yQ9p-Ed-ak6NoX_4Aeg_1745976831")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
@@ -34,9 +28,7 @@ public record ReferredDocumentType1
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public required IsoMax35Text Proprietary { get; init; }
 
-    /// <summary>
-    /// Identification of the issuer of the reference document type.
-    /// </summary>
+    /// <inheritdoc cref="IReferredDocumentType1.Issuer"/>
     [IsoId("_T31yRNp-Ed-ak6NoX_4Aeg_1757060568")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]

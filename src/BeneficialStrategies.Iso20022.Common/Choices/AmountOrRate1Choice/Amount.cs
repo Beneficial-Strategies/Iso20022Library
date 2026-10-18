@@ -8,25 +8,19 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.AmountOrRate1Choice
 {
-    /// <summary>
-    /// Amount expressed as an amount of money.
-    /// </summary>
+    /// <inheritdoc cref="IAmount"/>
     [IsoId("_Q-Uncdp-Ed-ak6NoX_4Aeg_512767945")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public record Amount : AmountOrRate1Choice_
+    public partial record Amount : AmountOrRate1Choice_
     {
-        /// <summary>
-        /// The currency in which this amount is measured.
-        /// </summary>
+        /// <inheritdoc cref="IAmount.Currency"/>
         [IsoId("_YX4O9tp-Ed-ak6NoX_4Aeg_-836081793_Currency")]
         [DisplayName("Active Currency And Amount _ Currency")]
         [IsoXmlTag("Currency")]
         public required ActiveCurrencyCode Currency { get; init; }
 
-        /// <summary>
-        /// Amount of the transaction.
-        /// </summary>
+        /// <inheritdoc cref="IAmount.Value"/>
         [IsoXmlTag("Amount")]
         public required decimal Value { get; init; }
     }

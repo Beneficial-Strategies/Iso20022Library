@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.ReferredDocumentType3Choice
 {
-    /// <summary>
-    /// Document type in a coded form.
-    /// </summary>
+    /// <inheritdoc cref="ICode"/>
     [IsoId("_YCiq4x77EeSxevWRRWxNAg")]
     [DisplayName("Code")]
-    public record Code : ReferredDocumentType3Choice_
+    public partial record Code : ReferredDocumentType3Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies a type of financial or commercial document.
-        /// </summary>
+        /// <inheritdoc cref="ICode.Value"/>
         [IsoXmlTag("Cd")]
         public required DocumentType6Code Value { get; init; }
     }

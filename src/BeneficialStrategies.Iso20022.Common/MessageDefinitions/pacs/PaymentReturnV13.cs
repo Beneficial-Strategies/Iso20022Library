@@ -12,13 +12,10 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pacs;
 
-/// <summary>
-/// This record is an implementation of the pacs.004.001.13 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// </summary>
+/// <inheritdoc cref="IPaymentReturnV13"/>
 [IsoId("_R3RthzEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Payment Return V13")]
-public record PaymentReturnV13 : IOuterRecord
+public partial record PaymentReturnV13 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -45,30 +42,22 @@ public record PaymentReturnV13 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Group Header.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentReturnV13.GroupHeader"/>
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader123 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Original Group Information.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentReturnV13.OriginalGroupInformation"/>
     [DisplayName("Original Group Information")]
     [IsoXmlTag("OrgnlGrpInf")]
     public OriginalGroupHeader19? OriginalGroupInformation { get; init; }
 
-    /// <summary>
-    /// Supplementary Data.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentReturnV13.SupplementaryData"/>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 
-    /// <summary>
-    /// Transaction Information.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentReturnV13.TransactionInformation"/>
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
     public ValueList<PaymentTransaction159> TransactionInformation { get; init; } = [];

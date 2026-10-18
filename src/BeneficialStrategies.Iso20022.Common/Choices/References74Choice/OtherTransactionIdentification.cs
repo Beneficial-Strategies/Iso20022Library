@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.References74Choice
 {
-    /// <summary>
-    /// Identification of a transaction that cannot be identified using a standard reference element present in the message.
-    /// </summary>
+    /// <inheritdoc cref="IOtherTransactionIdentification"/>
     [IsoId("_SiFNsSgaEey2k_sfZmJz4g")]
     [DisplayName("Other Transaction Identification")]
-    public record OtherTransactionIdentification : References74Choice_
+    public partial record OtherTransactionIdentification : References74Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies a character string with a maximum length of 35 characters.
-        /// </summary>
+        /// <inheritdoc cref="IOtherTransactionIdentification.Value"/>
         [IsoXmlTag("OthrTxId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]

@@ -1,0 +1,14 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+public partial record MandateCopy3 : IMandateCopy3
+{
+    IOriginalMessageInformation1? IMandateCopy3.OriginalMessageInformation => OriginalMessageInformation;
+    IOriginalMandate9Choice IMandateCopy3.OriginalMandate => OriginalMandate;
+    IMandateStatus1Choice? IMandateCopy3.MandateStatus => MandateStatus;
+    IEnumerable<ISupplementaryData1> IMandateCopy3.SupplementaryData => SupplementaryData;
+}

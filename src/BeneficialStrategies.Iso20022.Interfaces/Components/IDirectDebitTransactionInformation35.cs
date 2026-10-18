@@ -1,0 +1,298 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Provides further details specific to the individual direct debit transaction(s) included in the message.
+/// </summary>
+[IsoId("a6fc8316-6307-4582-89c4-560440222204")]
+public interface IDirectDebitTransactionInformation35 : IIsoComponent
+{
+    /// <summary>
+    /// Set of elements used to reference a payment instruction.
+    /// </summary>
+    [IsoId("c41569b1-068f-4a2c-baad-8ece9c0df925")]
+    [DisplayName("Payment Identification")]
+    [IsoXmlTag("PmtId")]
+    IPaymentIdentification13 PaymentIdentification { get; }
+
+    /// <summary>
+    /// Set of elements used to further specify the type of transaction.
+    /// </summary>
+    [IsoId("81b68ed2-620e-46e6-bd06-391f9dedbbd3")]
+    [DisplayName("Payment Type Information")]
+    [IsoXmlTag("PmtTpInf")]
+    IPaymentTypeInformation27? PaymentTypeInformation { get; }
+
+    /// <summary>
+    /// Amount of money moved between the instructing agent and the instructed agent.
+    /// </summary>
+    [IsoId("35b1fa23-6b75-4bfd-95e4-de9d63efa919")]
+    [DisplayName("Interbank Settlement Amount")]
+    [IsoXmlTag("IntrBkSttlmAmt")]
+    ActiveCurrencyAndAmount InterbankSettlementAmount { get; }
+
+    /// <summary>
+    /// Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.
+    /// </summary>
+    [IsoId("d20bfd82-b557-4a7c-8b8a-20b59acabd7d")]
+    [DisplayName("Interbank Settlement Date")]
+    [IsoXmlTag("IntrBkSttlmDt")]
+    IsoISODate? InterbankSettlementDate { get; }
+
+    /// <summary>
+    /// Indicator of the urgency or order of importance that the instructing party would like the instructed party to apply to the processing of the settlement instruction.
+    /// </summary>
+    [IsoId("786ffec6-c553-40b3-9074-3fb775a21333")]
+    [DisplayName("Settlement Priority")]
+    [IsoXmlTag("SttlmPrty")]
+    Priority3Code? SettlementPriority { get; }
+
+    /// <summary>
+    /// Provides information on the occurred settlement time of the payment transaction.
+    /// </summary>
+    [IsoId("3c4ac84d-43b7-4630-b047-ea6ea1897285")]
+    [DisplayName("Settlement Time Indication")]
+    [IsoXmlTag("SttlmTmIndctn")]
+    ISettlementDateTimeIndication1? SettlementTimeIndication { get; }
+
+    /// <summary>
+    /// Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.
+    /// </summary>
+    [IsoId("1f622d67-2b68-4cac-9407-e6aabb5d5c72")]
+    [DisplayName("Instructed Amount")]
+    [IsoXmlTag("InstdAmt")]
+    ActiveOrHistoricCurrencyAndAmount? InstructedAmount { get; }
+
+    /// <summary>
+    /// Factor used to convert an amount from one currency into another.
+    /// </summary>
+    [IsoId("ef45b852-b2dc-46e2-bd6e-2816361729d3")]
+    [DisplayName("Exchange Rate")]
+    [IsoXmlTag("XchgRate")]
+    IsoBaseOneRate? ExchangeRate { get; }
+
+    /// <summary>
+    /// Specifies which party/parties will bear the charges associated with the processing of the payment transaction.
+    /// </summary>
+    [IsoId("d58dff4c-199f-45ed-a495-dff0d0a385af")]
+    [DisplayName("Charge Bearer")]
+    [IsoXmlTag("ChrgBr")]
+    ChargeBearerType1Code ChargeBearer { get; }
+
+    /// <summary>
+    /// Provides information on the charges to be paid by the charge bearer(s) related to the payment transaction.
+    /// </summary>
+    [IsoId("83f499ae-fc36-4303-843e-abc10c8d62d7")]
+    [DisplayName("Charges Information")]
+    [IsoXmlTag("ChrgsInf")]
+    IEnumerable<ICharges16> ChargesInformation { get; }
+
+    /// <summary>
+    /// Date and time at which the creditor requests that the amount of money is to be collected from the debtor.
+    /// </summary>
+    [IsoId("7ae95e44-1194-4af6-825f-4a2f4d2e2d00")]
+    [DisplayName("Requested Collection Date")]
+    [IsoXmlTag("ReqdColltnDt")]
+    IsoISODate? RequestedCollectionDate { get; }
+
+    /// <summary>
+    /// Provides information specific to the direct debit mandate.
+    /// </summary>
+    [IsoId("4fb4e0ef-67f3-4ac4-a858-25b819a67212")]
+    [DisplayName("Direct Debit Transaction")]
+    [IsoXmlTag("DrctDbtTx")]
+    IDirectDebitTransaction12? DirectDebitTransaction { get; }
+
+    /// <summary>
+    /// Party to which an amount of money is due.
+    /// </summary>
+    [IsoId("c731dbec-9ef5-4f26-bf60-d41dd764e1b7")]
+    [DisplayName("Creditor")]
+    [IsoXmlTag("Cdtr")]
+    IPartyIdentification272 Creditor { get; }
+
+    /// <summary>
+    /// Unambiguous identification of the account of the creditor to which a credit entry will be posted as a result of the payment transaction.
+    /// </summary>
+    [IsoId("407e5f0b-3e82-460b-9755-5916e3b5d142")]
+    [DisplayName("Creditor Account")]
+    [IsoXmlTag("CdtrAcct")]
+    ICashAccount40? CreditorAccount { get; }
+
+    /// <summary>
+    /// Financial institution servicing an account for the creditor.
+    /// </summary>
+    [IsoId("ca7b722b-1b72-43e1-8bbd-fc49ca4b7fea")]
+    [DisplayName("Creditor Agent")]
+    [IsoXmlTag("CdtrAgt")]
+    IBranchAndFinancialInstitutionIdentification8 CreditorAgent { get; }
+
+    /// <summary>
+    /// Unambiguous identification of the account of the creditor agent at its servicing agent to which a credit entry will be made as a result of the payment transaction.
+    /// </summary>
+    [IsoId("2fe14c5c-ac74-4305-86c4-6c4189091c0a")]
+    [DisplayName("Creditor Agent Account")]
+    [IsoXmlTag("CdtrAgtAcct")]
+    ICashAccount40? CreditorAgentAccount { get; }
+
+    /// <summary>
+    /// Ultimate party to which an amount of money is due.
+    /// </summary>
+    [IsoId("be9e306c-b830-460f-82a4-0f23c00a55de")]
+    [DisplayName("Ultimate Creditor")]
+    [IsoXmlTag("UltmtCdtr")]
+    IPartyIdentification272? UltimateCreditor { get; }
+
+    /// <summary>
+    /// Party that initiates the payment.
+    /// </summary>
+    [IsoId("8fdc83ac-eb22-4e7f-91ed-22eb1402ef1a")]
+    [DisplayName("Initiating Party")]
+    [IsoXmlTag("InitgPty")]
+    IPartyIdentification272? InitiatingParty { get; }
+
+    /// <summary>
+    /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).
+    /// </summary>
+    [IsoId("58190664-d086-43bf-9dfa-df4d9c2c490f")]
+    [DisplayName("Instructing Agent")]
+    [IsoXmlTag("InstgAgt")]
+    IBranchAndFinancialInstitutionIdentification8? InstructingAgent { get; }
+
+    /// <summary>
+    /// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).
+    /// </summary>
+    [IsoId("1038f34d-0c61-4e63-b103-bc5de3d6481c")]
+    [DisplayName("Instructed Agent")]
+    [IsoXmlTag("InstdAgt")]
+    IBranchAndFinancialInstitutionIdentification8? InstructedAgent { get; }
+
+    /// <summary>
+    /// Agent between the debtor's agent and the creditor's agent (intermediary agent 1).
+    /// </summary>
+    [IsoId("b7bc8a68-9213-4294-86ab-429e499ac74f")]
+    [DisplayName("Intermediary Agent1")]
+    [IsoXmlTag("IntrmyAgt1")]
+    IBranchAndFinancialInstitutionIdentification8? IntermediaryAgent1 { get; }
+
+    /// <summary>
+    /// Unambiguous identification of the account of the intermediary agent 1 at its servicing agent in the payment chain.
+    /// </summary>
+    [IsoId("1390241a-ec8e-4818-a148-f5a5929d0e69")]
+    [DisplayName("Intermediary Agent1 Account")]
+    [IsoXmlTag("IntrmyAgt1Acct")]
+    ICashAccount40? IntermediaryAgent1Account { get; }
+
+    /// <summary>
+    /// Agent between the debtor's agent and the creditor's agent (intermediary agent 2).
+    /// </summary>
+    [IsoId("3adcf606-f91b-41d9-8d9d-19f645cc1324")]
+    [DisplayName("Intermediary Agent2")]
+    [IsoXmlTag("IntrmyAgt2")]
+    IBranchAndFinancialInstitutionIdentification8? IntermediaryAgent2 { get; }
+
+    /// <summary>
+    /// Unambiguous identification of the account of the intermediary agent 2 at its servicing agent in the payment chain.
+    /// </summary>
+    [IsoId("28172d89-cbf7-406a-95bd-050655a9b6ca")]
+    [DisplayName("Intermediary Agent2 Account")]
+    [IsoXmlTag("IntrmyAgt2Acct")]
+    ICashAccount40? IntermediaryAgent2Account { get; }
+
+    /// <summary>
+    /// Agent between the debtor agent and creditor agent (intermediary agent 3).
+    /// </summary>
+    [IsoId("970e7593-ee5e-4589-90a1-34096f7360f9")]
+    [DisplayName("Intermediary Agent3")]
+    [IsoXmlTag("IntrmyAgt3")]
+    IBranchAndFinancialInstitutionIdentification8? IntermediaryAgent3 { get; }
+
+    /// <summary>
+    /// Unambiguous identification of the account of the intermediary agent 3 at its servicing agent in the payment chain.
+    /// </summary>
+    [IsoId("0fd6089a-ab1e-48ec-8401-76a5c52cd331")]
+    [DisplayName("Intermediary Agent3 Account")]
+    [IsoXmlTag("IntrmyAgt3Acct")]
+    ICashAccount40? IntermediaryAgent3Account { get; }
+
+    /// <summary>
+    /// Party that owes an amount of money to the (ultimate) creditor.
+    /// </summary>
+    [IsoId("82a63aae-d6fc-4604-afba-bc0a65af1389")]
+    [DisplayName("Debtor")]
+    [IsoXmlTag("Dbtr")]
+    IPartyIdentification272 Debtor { get; }
+
+    /// <summary>
+    /// Unambiguous identification of the account of the debtor to which a debit entry will be made as a result of the transaction.
+    /// </summary>
+    [IsoId("4f1b0d0e-29b0-4cf1-a411-d66cf99d9204")]
+    [DisplayName("Debtor Account")]
+    [IsoXmlTag("DbtrAcct")]
+    ICashAccount40 DebtorAccount { get; }
+
+    /// <summary>
+    /// Financial institution servicing an account for the debtor.
+    /// </summary>
+    [IsoId("da45a11d-4a7a-40c9-a894-0e1dfc6b01c8")]
+    [DisplayName("Debtor Agent")]
+    [IsoXmlTag("DbtrAgt")]
+    IBranchAndFinancialInstitutionIdentification8 DebtorAgent { get; }
+
+    /// <summary>
+    /// Unambiguous identification of the account of the debtor agent at its servicing agent in the payment chain.
+    /// </summary>
+    [IsoId("a86f1ebb-c24b-42b9-8468-75667b75d659")]
+    [DisplayName("Debtor Agent Account")]
+    [IsoXmlTag("DbtrAgtAcct")]
+    ICashAccount40? DebtorAgentAccount { get; }
+
+    /// <summary>
+    /// Ultimate party that owes an amount of money to the (ultimate) creditor.
+    /// </summary>
+    [IsoId("0a60fd1d-ce25-4407-a1a1-1d6984047e8f")]
+    [DisplayName("Ultimate Debtor")]
+    [IsoXmlTag("UltmtDbtr")]
+    IPartyIdentification272? UltimateDebtor { get; }
+
+    /// <summary>
+    /// Underlying reason for the payment transaction.
+    /// </summary>
+    [IsoId("71c50c41-5078-4f08-964e-ccccc425559b")]
+    [DisplayName("Purpose")]
+    [IsoXmlTag("Purp")]
+    IPurpose2Choice? Purpose { get; }
+
+    /// <summary>
+    /// Information needed due to regulatory and statutory requirements.
+    /// </summary>
+    [IsoId("39ded4a0-08b6-4aa9-9929-e57171a527bc")]
+    [DisplayName("Regulatory Reporting")]
+    [IsoXmlTag("RgltryRptg")]
+    IEnumerable<IRegulatoryReporting10> RegulatoryReporting { get; }
+
+    /// <summary>
+    /// Provides information related to the handling of the remittance information by any of the agents in the transaction processing chain.
+    /// </summary>
+    [IsoId("7e5b7c39-859e-44d8-a733-84d1ca59b677")]
+    [DisplayName("Related Remittance Information")]
+    [IsoXmlTag("RltdRmtInf")]
+    IEnumerable<IRemittanceLocation8> RelatedRemittanceInformation { get; }
+
+    /// <summary>
+    /// Information supplied to enable the matching of an entry with the items that the transfer is intended to settle.
+    /// </summary>
+    [IsoId("d153e855-4a0a-4034-a042-1f951073e173")]
+    [DisplayName("Remittance Information")]
+    [IsoXmlTag("RmtInf")]
+    IRemittanceInformation26? RemittanceInformation { get; }
+
+    /// <summary>
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// </summary>
+    [IsoId("e280f2eb-fb24-4e64-86f6-3caf8b8e37df")]
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    IEnumerable<ISupplementaryData1> SupplementaryData { get; }
+}

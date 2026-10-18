@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.ChequeDeliveryMethod1Choice
 {
-    /// <summary>
-    /// Specifies the delivery method of the cheque by the debtor&apos;s agent.
-    /// </summary>
+    /// <inheritdoc cref="ICode"/>
     [IsoId("_QbwF59p-Ed-ak6NoX_4Aeg_1044150030")]
     [DisplayName("Code")]
-    public record Code : ChequeDeliveryMethod1Choice_
+    public partial record Code : ChequeDeliveryMethod1Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies the method to be used in delivering a cheque to a party.
-        /// </summary>
+        /// <inheritdoc cref="ICode.Value"/>
         [IsoXmlTag("Cd")]
         public required ChequeDelivery1Code Value { get; init; }
     }

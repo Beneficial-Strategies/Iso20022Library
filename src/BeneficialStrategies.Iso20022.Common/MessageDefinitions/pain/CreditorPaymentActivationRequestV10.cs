@@ -12,17 +12,13 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pain;
 
-/// <summary>
-/// This record is an implementation of the pain.013.001.10 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// The CreditorPaymentActivationRequest message is sent by the Creditor sending party to the Debtor receiving party, directly or through agents. It is used by a Creditor to request movement of funds from the debtor account to a creditor.
-/// </summary>
+/// <inheritdoc cref="ICreditorPaymentActivationRequestV10"/>
 [Description(
     @"The CreditorPaymentActivationRequest message is sent by the Creditor sending party to the Debtor receiving party, directly or through agents. It is used by a Creditor to request movement of funds from the debtor account to a creditor."
 )]
 [IsoId("_XXWvgQLFEe2X55dNQNVKfg")]
 [DisplayName("Creditor Payment Activation Request V")]
-public record CreditorPaymentActivationRequestV10 : IOuterRecord
+public partial record CreditorPaymentActivationRequestV10 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -49,25 +45,19 @@ public record CreditorPaymentActivationRequestV10 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Set of characteristics shared by all individual transactions included in the message.
-    /// </summary>
+    /// <inheritdoc cref="ICreditorPaymentActivationRequestV10.GroupHeader"/>
     [IsoId("_XXWvkQLFEe2X55dNQNVKfg")]
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader105 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Set of characteristics that applies to the debit side of the payment transactions included in the creditor payment initiation.
-    /// </summary>
+    /// <inheritdoc cref="ICreditorPaymentActivationRequestV10.PaymentInformation"/>
     [IsoId("_XXWvkwLFEe2X55dNQNVKfg")]
     [DisplayName("Payment Information")]
     [IsoXmlTag("PmtInf")]
     public required PaymentInstruction42 PaymentInformation { get; init; }
 
-    /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
+    /// <inheritdoc cref="ICreditorPaymentActivationRequestV10.SupplementaryData"/>
     [IsoId("_XXWvlQLFEe2X55dNQNVKfg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]

@@ -1,0 +1,66 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Set of elements used to provide information on the original transactions, to which the status report message refers.
+/// </summary>
+[IsoId("_PlNfeNp-Ed-ak6NoX_4Aeg_-724783751")]
+public interface IOriginalPaymentInformation1 : IIsoComponent
+{
+    /// <summary>
+    /// Unique identification, as assigned by the original sending party, to unambiguously identify the original payment information group.
+    /// </summary>
+    [IsoId("_PlNfedp-Ed-ak6NoX_4Aeg_-724783659")]
+    [DisplayName("Original Payment Information Identification")]
+    [IsoXmlTag("OrgnlPmtInfId")]
+    IsoMax35Text OriginalPaymentInformationIdentification { get; }
+
+    /// <summary>
+    /// Number of individual transactions contained in the original payment information group.
+    /// </summary>
+    [IsoId("_PlNfetp-Ed-ak6NoX_4Aeg_-129112626")]
+    [DisplayName("Original Number Of Transactions")]
+    [IsoXmlTag("OrgnlNbOfTxs")]
+    IsoMax15NumericText? OriginalNumberOfTransactions { get; }
+
+    /// <summary>
+    /// Total of all individual amounts included in the original payment information group, irrespective of currencies.
+    /// </summary>
+    [IsoId("_PlXQcNp-Ed-ak6NoX_4Aeg_-129112378")]
+    [DisplayName("Original Control Sum")]
+    [IsoXmlTag("OrgnlCtrlSum")]
+    IsoDecimalNumber? OriginalControlSum { get; }
+
+    /// <summary>
+    /// Specifies the status of the payment information group.
+    /// </summary>
+    [IsoId("_PlXQcdp-Ed-ak6NoX_4Aeg_-724783265")]
+    [DisplayName("Payment Information Status")]
+    [IsoXmlTag("PmtInfSts")]
+    TransactionGroupStatus3Code? PaymentInformationStatus { get; }
+
+    /// <summary>
+    /// Set of elements used to provide detailed information on the status reason.
+    /// </summary>
+    [IsoId("_PlXQctp-Ed-ak6NoX_4Aeg_-724782771")]
+    [DisplayName("Status Reason Information")]
+    [IsoXmlTag("StsRsnInf")]
+    IEnumerable<IStatusReasonInformation8> StatusReasonInformation { get; }
+
+    /// <summary>
+    /// Detailed information on the number of transactions for each identical transaction status.
+    /// </summary>
+    [IsoId("_PlXQc9p-Ed-ak6NoX_4Aeg_214439013")]
+    [DisplayName("Number Of Transactions Per Status")]
+    [IsoXmlTag("NbOfTxsPerSts")]
+    IEnumerable<INumberOfTransactionsPerStatus3> NumberOfTransactionsPerStatus { get; }
+
+    /// <summary>
+    /// Set of elements used to provide information on the original transactions to which the status report message refers.
+    /// </summary>
+    [IsoId("_PlXQdNp-Ed-ak6NoX_4Aeg_1494108741")]
+    [DisplayName("Transaction Information And Status")]
+    [IsoXmlTag("TxInfAndSts")]
+    IEnumerable<IPaymentTransactionInformation25> TransactionInformationAndStatus { get; }
+}

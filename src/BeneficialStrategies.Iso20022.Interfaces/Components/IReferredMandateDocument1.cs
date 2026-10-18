@@ -1,0 +1,42 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Identifies the documents referred to in the remittance information.
+/// </summary>
+[IsoId("_p5hTAWVHEeacpJ-gG9kyUQ")]
+public interface IReferredMandateDocument1 : IIsoComponent
+{
+    /// <summary>
+    /// Specifies the type of referred document.
+    /// </summary>
+    [IsoId("_qDMMY2VHEeacpJ-gG9kyUQ")]
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    IReferredDocumentType4? Type { get; }
+
+    /// <summary>
+    /// Unique and unambiguous identification of the referred document.
+    /// </summary>
+    [IsoId("_qDMMZWVHEeacpJ-gG9kyUQ")]
+    [DisplayName("Number")]
+    [IsoXmlTag("Nb")]
+    IsoMax35Text? Number { get; }
+
+    /// <summary>
+    /// Unique and unambiguous identification as assigned by the creditor to the referred document shared with the debtor for its own reference.
+    /// </summary>
+    [IsoId("_Jec5YGVIEeacpJ-gG9kyUQ")]
+    [DisplayName("Creditor Reference")]
+    [IsoXmlTag("CdtrRef")]
+    IsoMax35Text? CreditorReference { get; }
+
+    /// <summary>
+    /// Date associated with the referred document.
+    /// </summary>
+    [IsoId("_qDMMZ2VHEeacpJ-gG9kyUQ")]
+    [DisplayName("Related Date")]
+    [IsoXmlTag("RltdDt")]
+    IsoISODate? RelatedDate { get; }
+}

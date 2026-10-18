@@ -12,13 +12,10 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pacs;
 
-/// <summary>
-/// This record is an implementation of the pacs.028.001.06 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// </summary>
+/// <inheritdoc cref="IFIToFIPaymentStatusRequestV06"/>
 [IsoId("_R3Lm2zEZEe6kQ-WGAhcVPQ")]
 [DisplayName("FI To FI Payment Status Request V06")]
-public record FIToFIPaymentStatusRequestV06 : IOuterRecord
+public partial record FIToFIPaymentStatusRequestV06 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -45,30 +42,22 @@ public record FIToFIPaymentStatusRequestV06 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Group Header.
-    /// </summary>
+    /// <inheritdoc cref="IFIToFIPaymentStatusRequestV06.GroupHeader"/>
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader109 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Original Group Information.
-    /// </summary>
+    /// <inheritdoc cref="IFIToFIPaymentStatusRequestV06.OriginalGroupInformation"/>
     [DisplayName("Original Group Information")]
     [IsoXmlTag("OrgnlGrpInf")]
     public ValueList<OriginalGroupInformation27> OriginalGroupInformation { get; init; } = [];
 
-    /// <summary>
-    /// Supplementary Data.
-    /// </summary>
+    /// <inheritdoc cref="IFIToFIPaymentStatusRequestV06.SupplementaryData"/>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 
-    /// <summary>
-    /// Transaction Information.
-    /// </summary>
+    /// <inheritdoc cref="IFIToFIPaymentStatusRequestV06.TransactionInformation"/>
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
     public ValueList<PaymentTransaction158> TransactionInformation { get; init; } = [];

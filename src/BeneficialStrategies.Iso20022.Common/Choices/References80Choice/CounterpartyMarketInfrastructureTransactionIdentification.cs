@@ -8,15 +8,11 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.References80Choice
 {
-    /// <summary>
-    /// Counterparty Market Infrastructure Transaction Identification.
-    /// </summary>
+    /// <inheritdoc cref="ICounterpartyMarketInfrastructureTransactionIdentification"/>
     [DisplayName("Counterparty Market Infrastructure Transaction Identification")]
-    public record CounterpartyMarketInfrastructureTransactionIdentification : References80Choice_
+    public partial record CounterpartyMarketInfrastructureTransactionIdentification : References80Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// </summary>
+        /// <inheritdoc cref="ICounterpartyMarketInfrastructureTransactionIdentification.Value"/>
         [IsoXmlTag("CtrPtyMktInfrstrctrTxId")]
         public required IsoMax35Text Value { get; init; }
     }

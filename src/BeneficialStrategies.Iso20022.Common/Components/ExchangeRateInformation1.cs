@@ -9,33 +9,25 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Further detailed information on the exchange rate that has been used in the payment transaction.
-/// </summary>
+/// <inheritdoc cref="IExchangeRateInformation1"/>
 [IsoId("_QLp0Ytp-Ed-ak6NoX_4Aeg_-1204184302")]
 [DisplayName("Exchange Rate Information")]
-public record ExchangeRateInformation1
+public partial record ExchangeRateInformation1
 {
-    /// <summary>
-    /// The factor used for conversion of an amount from one currency to another. This reflects the price at which one currency was bought with another currency.
-    /// </summary>
+    /// <inheritdoc cref="IExchangeRateInformation1.ExchangeRate"/>
     [IsoId("_QLp0Y9p-Ed-ak6NoX_4Aeg_-940984267")]
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
     public IsoBaseOneRate? ExchangeRate { get; init; }
 
-    /// <summary>
-    /// Specifies the type used to complete the currency exchange.
-    /// </summary>
+    /// <inheritdoc cref="IExchangeRateInformation1.RateType"/>
     [IsoId("_QLp0ZNp-Ed-ak6NoX_4Aeg_-940984241")]
     [DisplayName("Rate Type")]
     [IsoXmlTag("RateTp")]
     public ExchangeRateType1Code? RateType { get; init; }
 
-    /// <summary>
-    /// Unique and unambiguous reference to the foreign exchange contract agreed between the initiating party/creditor and the debtor agent.
-    /// </summary>
+    /// <inheritdoc cref="IExchangeRateInformation1.ContractIdentification"/>
     [IsoId("_QLp0Zdp-Ed-ak6NoX_4Aeg_-941904256")]
     [DisplayName("Contract Identification")]
     [IsoXmlTag("CtrctId")]

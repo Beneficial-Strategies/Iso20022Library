@@ -12,20 +12,13 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pain;
 
-/// <summary>
-/// The CustomerPaymentReversal message is sent by the initiating party to the next party in the payment chain. It is used to reverse a payment previously executed.
-/// </summary>
-/// <remarks>
-/// The CustomerPaymentReversal message is exchanged between a non-financial institution customer and an agent to reverse a CustomerDirectDebitInitiation message that has been settled. The result will be a credit on the debtor account.
-/// The CustomerPaymentReversal message refers to the original CustomerDirectDebitInitiation message by means of references only or by means of references and a set of elements from the original instruction.
-/// The CustomerPaymentReversal message can be used in domestic and cross-border scenarios.
-/// </remarks>
+/// <inheritdoc cref="ICustomerPaymentReversalV13"/>
 [IsoId("bf413c78-37ae-4bd7-bfe4-b88659e3626d")]
 [Description(
     @"Scope|The CustomerPaymentReversal message is sent by the initiating party to the next party in the payment chain. It is used to reverse a payment previously executed.|Usage|The CustomerPaymentReversal message is exchanged between a non-financial institution customer and an agent to reverse a CustomerDirectDebitInitiation message that has been settled. The result will be a credit on the debtor account.|The CustomerPaymentReversal message refers to the original CustomerDirectDebitInitiation message by means of references only or by means of references and a set of elements from the original instruction.|The CustomerPaymentReversal message can be used in domestic and cross-border scenarios."
 )]
 [DisplayName("Customer Payment Reversal V13")]
-public record CustomerPaymentReversalV13 : IOuterRecord
+public partial record CustomerPaymentReversalV13 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -52,31 +45,23 @@ public record CustomerPaymentReversalV13 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Set of characteristics shared by all individual transactions included in the message.
-    /// </summary>
+    /// <inheritdoc cref="ICustomerPaymentReversalV13.GroupHeader"/>
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader124 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Information concerning the original group of transactions, to which the message refers.
-    /// </summary>
+    /// <inheritdoc cref="ICustomerPaymentReversalV13.OriginalGroupInformation"/>
     [DisplayName("Original Group Information")]
     [IsoXmlTag("OrgnlGrpInf")]
     public required OriginalGroupHeader20 OriginalGroupInformation { get; init; }
 
-    /// <summary>
-    /// Information concerning the original payment information, to which the reversal message refers.
-    /// </summary>
+    /// <inheritdoc cref="ICustomerPaymentReversalV13.OriginalPaymentInformationAndReversal"/>
     [DisplayName("Original Payment Information And Reversal")]
     [IsoXmlTag("OrgnlPmtInfAndRvsl")]
     public ValueList<OriginalPaymentInstruction53> OriginalPaymentInformationAndReversal { get; init; } =
         [];
 
-    /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
+    /// <inheritdoc cref="ICustomerPaymentReversalV13.SupplementaryData"/>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];

@@ -8,15 +8,11 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.OriginalMandate10Choice
 {
-    /// <summary>
-    /// Original Mandate Identification.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalMandateIdentification"/>
     [DisplayName("Original Mandate Identification")]
-    public record OriginalMandateIdentification : OriginalMandate10Choice_
+    public partial record OriginalMandateIdentification : OriginalMandate10Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// </summary>
+        /// <inheritdoc cref="IOriginalMandateIdentification.Value"/>
         [IsoXmlTag("OrgnlMndtId")]
         public required IsoMax35Text Value { get; init; }
     }

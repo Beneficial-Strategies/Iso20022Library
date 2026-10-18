@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Specifies the mandate that is being accepted.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalMandate9Choice"/>
     [KnownType(typeof(OriginalMandate9Choice.OriginalMandateIdentification))]
     [KnownType(typeof(OriginalMandate9Choice.OriginalMandate))]
     [JsonDerivedType(
@@ -21,5 +19,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_d_uM-9cZEeqRFcf2R4bPBw")]
     [DisplayName("Original Mandate 9 Choice")]
-    public abstract record OriginalMandate9Choice_ { }
+    public abstract partial record OriginalMandate9Choice_ { }
 }

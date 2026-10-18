@@ -9,24 +9,18 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Unique and unambiguous identifier of a financial institution or a branch of a financial institution, as assigned under an internationally recognised or proprietary identification scheme.
-/// </summary>
+/// <inheritdoc cref="IBranchAndFinancialInstitutionIdentification3"/>
 [IsoId("_TFUwNdp-Ed-ak6NoX_4Aeg_-107465569")]
 [DisplayName("Branch And Financial Institution Identification")]
-public record BranchAndFinancialInstitutionIdentification3
+public partial record BranchAndFinancialInstitutionIdentification3
 {
-    /// <summary>
-    /// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme.
-    /// </summary>
+    /// <inheritdoc cref="IBranchAndFinancialInstitutionIdentification3.FinancialInstitutionIdentification"/>
     [IsoId("_TFUwNtp-Ed-ak6NoX_4Aeg_-105617941")]
     [DisplayName("Financial Institution Identification")]
     [IsoXmlTag("FinInstnId")]
     public required FinancialInstitutionIdentification5Choice_ FinancialInstitutionIdentification { get; init; }
 
-    /// <summary>
-    /// Information identifying a specific branch of a financial institution.||Usage: this component should be used in case the identification information in the financial institution component does not provide identification up to branch level.
-    /// </summary>
+    /// <inheritdoc cref="IBranchAndFinancialInstitutionIdentification3.BranchIdentification"/>
     [IsoId("_TFUwN9p-Ed-ak6NoX_4Aeg_-105616105")]
     [DisplayName("Branch Identification")]
     [IsoXmlTag("BrnchId")]

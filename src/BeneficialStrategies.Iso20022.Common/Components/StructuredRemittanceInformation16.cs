@@ -9,72 +9,54 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts&apos; receivable system, in a structured form.
-/// </summary>
+/// <inheritdoc cref="IStructuredRemittanceInformation16"/>
 [IsoId("_-5awV248EeiU9cctagi5ow")]
 [DisplayName("Structured Remittance Information")]
-public record StructuredRemittanceInformation16
+public partial record StructuredRemittanceInformation16
 {
-    /// <summary>
-    /// Provides the identification and the content of the referred document.
-    /// </summary>
+    /// <inheritdoc cref="IStructuredRemittanceInformation16.ReferredDocumentInformation"/>
     [IsoId("__Cz84248EeiU9cctagi5ow")]
     [DisplayName("Referred Document Information")]
     [IsoXmlTag("RfrdDocInf")]
     public ValueList<ReferredDocumentInformation7> ReferredDocumentInformation { get; init; } = [];
 
-    /// <summary>
-    /// Provides details on the amounts of the referred document.
-    /// </summary>
+    /// <inheritdoc cref="IStructuredRemittanceInformation16.ReferredDocumentAmount"/>
     [IsoId("__Cz85W48EeiU9cctagi5ow")]
     [DisplayName("Referred Document Amount")]
     [IsoXmlTag("RfrdDocAmt")]
     public RemittanceAmount2? ReferredDocumentAmount { get; init; }
 
-    /// <summary>
-    /// Reference information provided by the creditor to allow the identification of the underlying documents.
-    /// </summary>
+    /// <inheritdoc cref="IStructuredRemittanceInformation16.CreditorReferenceInformation"/>
     [IsoId("__Cz85248EeiU9cctagi5ow")]
     [DisplayName("Creditor Reference Information")]
     [IsoXmlTag("CdtrRefInf")]
     public CreditorReferenceInformation2? CreditorReferenceInformation { get; init; }
 
-    /// <summary>
-    /// Identification of the organisation issuing the invoice, when it is different from the creditor or ultimate creditor.
-    /// </summary>
+    /// <inheritdoc cref="IStructuredRemittanceInformation16.Invoicer"/>
     [IsoId("__Cz86W48EeiU9cctagi5ow")]
     [DisplayName("Invoicer")]
     [IsoXmlTag("Invcr")]
     public PartyIdentification135? Invoicer { get; init; }
 
-    /// <summary>
-    /// Identification of the party to whom an invoice is issued, when it is different from the debtor or ultimate debtor.
-    /// </summary>
+    /// <inheritdoc cref="IStructuredRemittanceInformation16.Invoicee"/>
     [IsoId("__Cz86248EeiU9cctagi5ow")]
     [DisplayName("Invoicee")]
     [IsoXmlTag("Invcee")]
     public PartyIdentification135? Invoicee { get; init; }
 
-    /// <summary>
-    /// Provides remittance information about a payment made for tax-related purposes.
-    /// </summary>
+    /// <inheritdoc cref="IStructuredRemittanceInformation16.TaxRemittance"/>
     [IsoId("__Cz87W48EeiU9cctagi5ow")]
     [DisplayName("Tax Remittance")]
     [IsoXmlTag("TaxRmt")]
     public TaxInformation7? TaxRemittance { get; init; }
 
-    /// <summary>
-    /// Provides remittance information about a payment for garnishment-related purposes.
-    /// </summary>
+    /// <inheritdoc cref="IStructuredRemittanceInformation16.GarnishmentRemittance"/>
     [IsoId("__Cz87248EeiU9cctagi5ow")]
     [DisplayName("Garnishment Remittance")]
     [IsoXmlTag("GrnshmtRmt")]
     public Garnishment3? GarnishmentRemittance { get; init; }
 
-    /// <summary>
-    /// Additional information, in free text form, to complement the structured remittance information.
-    /// </summary>
+    /// <inheritdoc cref="IStructuredRemittanceInformation16.AdditionalRemittanceInformation"/>
     [IsoId("__Cz88W48EeiU9cctagi5ow")]
     [DisplayName("Additional Remittance Information")]
     [IsoXmlTag("AddtlRmtInf")]

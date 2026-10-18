@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.Frequency37Choice
 {
-    /// <summary>
-    /// Frequency expressed as a proprietary code.
-    /// </summary>
+    /// <inheritdoc cref="IProprietary"/>
     [IsoId("_GlS6xGoFEearR-CA7eRZXQ")]
     [DisplayName("Proprietary")]
-    public record Proprietary : Frequency37Choice_
+    public partial record Proprietary : Frequency37Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies a character string with a maximum length of 35 characters.
-        /// </summary>
+        /// <inheritdoc cref="IProprietary.Value"/>
         [IsoXmlTag("Prtry")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]

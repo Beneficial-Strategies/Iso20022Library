@@ -8,19 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.LocalInstrument2Choice
 {
-    /// <summary>
-    /// Specifies the local instrument, as published in an external local instrument code list.
-    /// </summary>
+    /// <inheritdoc cref="ICode"/>
     [IsoId("_TF7NI9p-Ed-ak6NoX_4Aeg_365018928")]
     [DisplayName("Code")]
-    public record Code : LocalInstrument2Choice_
+    public partial record Code : LocalInstrument2Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies the external local instrument code in the format of character string with a maximum length of 35 characters.
-        /// The list of valid codes is an external code list published separately.
-        /// External code sets can be downloaded from www.iso20022.org.
-        /// </summary>
+        /// <inheritdoc cref="ICode.Value"/>
         [IsoXmlTag("Cd")]
         public required ExternalLocalInstrument1Code Value { get; init; }
     }

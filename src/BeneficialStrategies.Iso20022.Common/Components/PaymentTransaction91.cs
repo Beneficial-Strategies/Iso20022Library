@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Provides further details on the original transactions, to which the status report message refers.
-/// </summary>
+/// <inheritdoc cref="IPaymentTransaction91"/>
 [IsoId("_aeRN84tvEee-OJ-wXSj3YQ")]
 [DisplayName("Payment Transaction")]
-public record PaymentTransaction91
+public partial record PaymentTransaction91
 {
-    /// <summary>
-    /// Unique identification, as assigned by an instructing party for an instructed party, to unambiguously identify the reported status.|Usage: The instructing party is the party sending the status message and not the party that sent the original instruction that is being reported on.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction91.StatusIdentification"/>
     [IsoId("_amA0k4tvEee-OJ-wXSj3YQ")]
     [DisplayName("Status Identification")]
     [IsoXmlTag("StsId")]
@@ -26,17 +22,13 @@ public record PaymentTransaction91
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? StatusIdentification { get; init; }
 
-    /// <summary>
-    /// Point to point reference, as assigned by the original instructing party, to unambiguously identify the original message.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction91.OriginalGroupInformation"/>
     [IsoId("_amA0lYtvEee-OJ-wXSj3YQ")]
     [DisplayName("Original Group Information")]
     [IsoXmlTag("OrgnlGrpInf")]
     public OriginalGroupInformation29? OriginalGroupInformation { get; init; }
 
-    /// <summary>
-    /// Unique identification, as assigned by the original instructing party for the original instructed party, to unambiguously identify the original instruction.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction91.OriginalInstructionIdentification"/>
     [IsoId("_amA0l4tvEee-OJ-wXSj3YQ")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
@@ -44,9 +36,7 @@ public record PaymentTransaction91
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? OriginalInstructionIdentification { get; init; }
 
-    /// <summary>
-    /// Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction91.OriginalEndToEndIdentification"/>
     [IsoId("_amA0mYtvEee-OJ-wXSj3YQ")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
@@ -54,9 +44,7 @@ public record PaymentTransaction91
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
 
-    /// <summary>
-    /// Unique identification, as assigned by the original first instructing agent, to unambiguously identify the transaction.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction91.OriginalTransactionIdentification"/>
     [IsoId("_amA0m4tvEee-OJ-wXSj3YQ")]
     [DisplayName("Original Transaction Identification")]
     [IsoXmlTag("OrgnlTxId")]
@@ -64,42 +52,32 @@ public record PaymentTransaction91
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? OriginalTransactionIdentification { get; init; }
 
-    /// <summary>
-    /// Specifies the status of a transaction, in a coded form.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction91.TransactionStatus"/>
     [IsoId("_amA0nYtvEee-OJ-wXSj3YQ")]
     [DisplayName("Transaction Status")]
     [IsoXmlTag("TxSts")]
     public ExternalPaymentTransactionStatus1Code? TransactionStatus { get; init; }
 
-    /// <summary>
-    /// Provides detailed information on the status reason.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction91.StatusReasonInformation"/>
     [IsoId("_amA0n4tvEee-OJ-wXSj3YQ")]
     [DisplayName("Status Reason Information")]
     [IsoXmlTag("StsRsnInf")]
     public ValueList<StatusReasonInformation11> StatusReasonInformation { get; init; } = [];
 
-    /// <summary>
-    /// Provides information on the charges related to the processing of the rejection of the instruction.||Usage: This is passed on for information purposes only. Settlement of the charges will be done separately.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction91.ChargesInformation"/>
     [IsoId("_amA0oYtvEee-OJ-wXSj3YQ")]
     [DisplayName("Charges Information")]
     [IsoXmlTag("ChrgsInf")]
     public ValueList<Charges2> ChargesInformation { get; init; } = [];
 
-    /// <summary>
-    /// Point in time when the payment order from the initiating party meets the processing conditions of the account servicing agent. This means that the account servicing agent has received the payment order and has applied checks such as authorisation, availability of funds.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction91.AcceptanceDateTime"/>
     [IsoId("_amA0o4tvEee-OJ-wXSj3YQ")]
     [DisplayName("Acceptance Date Time")]
     [IsoXmlTag("AccptncDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
     public IsoISODateTime? AcceptanceDateTime { get; init; }
 
-    /// <summary>
-    /// Unique reference, as assigned by the account servicing institution, to unambiguously identify the instruction.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction91.AccountServicerReference"/>
     [IsoId("_amA0pYtvEee-OJ-wXSj3YQ")]
     [DisplayName("Account Servicer Reference")]
     [IsoXmlTag("AcctSvcrRef")]
@@ -107,9 +85,7 @@ public record PaymentTransaction91
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? AccountServicerReference { get; init; }
 
-    /// <summary>
-    /// Unique reference, as assigned by a clearing system, to unambiguously identify the instruction.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction91.ClearingSystemReference"/>
     [IsoId("_amA0p4tvEee-OJ-wXSj3YQ")]
     [DisplayName("Clearing System Reference")]
     [IsoXmlTag("ClrSysRef")]
@@ -117,33 +93,25 @@ public record PaymentTransaction91
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? ClearingSystemReference { get; init; }
 
-    /// <summary>
-    /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).||Usage: The instructing agent is the party sending the status message and not the party that sent the original instruction that is being reported on.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction91.InstructingAgent"/>
     [IsoId("_amA0qYtvEee-OJ-wXSj3YQ")]
     [DisplayName("Instructing Agent")]
     [IsoXmlTag("InstgAgt")]
     public BranchAndFinancialInstitutionIdentification5? InstructingAgent { get; init; }
 
-    /// <summary>
-    /// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).||Usage: The instructed agent is the party receiving the status message and not the party that received the original instruction that is being reported on.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction91.InstructedAgent"/>
     [IsoId("_amA0q4tvEee-OJ-wXSj3YQ")]
     [DisplayName("Instructed Agent")]
     [IsoXmlTag("InstdAgt")]
     public BranchAndFinancialInstitutionIdentification5? InstructedAgent { get; init; }
 
-    /// <summary>
-    /// Key elements used to identify the original transaction that is being referred to.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction91.OriginalTransactionReference"/>
     [IsoId("_amA0rYtvEee-OJ-wXSj3YQ")]
     [DisplayName("Original Transaction Reference")]
     [IsoXmlTag("OrgnlTxRef")]
     public OriginalTransactionReference27? OriginalTransactionReference { get; init; }
 
-    /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction91.SupplementaryData"/>
     [IsoId("_amA0r4tvEee-OJ-wXSj3YQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]

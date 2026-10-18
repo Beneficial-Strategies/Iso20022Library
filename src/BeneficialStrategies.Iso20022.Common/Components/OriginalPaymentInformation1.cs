@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Set of elements used to provide information on the original transactions, to which the status report message refers.
-/// </summary>
+/// <inheritdoc cref="IOriginalPaymentInformation1"/>
 [IsoId("_PlNfeNp-Ed-ak6NoX_4Aeg_-724783751")]
 [DisplayName("Original Payment Information")]
-public record OriginalPaymentInformation1
+public partial record OriginalPaymentInformation1
 {
-    /// <summary>
-    /// Unique identification, as assigned by the original sending party, to unambiguously identify the original payment information group.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalPaymentInformation1.OriginalPaymentInformationIdentification"/>
     [IsoId("_PlNfedp-Ed-ak6NoX_4Aeg_-724783659")]
     [DisplayName("Original Payment Information Identification")]
     [IsoXmlTag("OrgnlPmtInfId")]
@@ -26,52 +22,40 @@ public record OriginalPaymentInformation1
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public required IsoMax35Text OriginalPaymentInformationIdentification { get; init; }
 
-    /// <summary>
-    /// Number of individual transactions contained in the original payment information group.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalPaymentInformation1.OriginalNumberOfTransactions"/>
     [IsoId("_PlNfetp-Ed-ak6NoX_4Aeg_-129112626")]
     [DisplayName("Original Number Of Transactions")]
     [IsoXmlTag("OrgnlNbOfTxs")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     public IsoMax15NumericText? OriginalNumberOfTransactions { get; init; }
 
-    /// <summary>
-    /// Total of all individual amounts included in the original payment information group, irrespective of currencies.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalPaymentInformation1.OriginalControlSum"/>
     [IsoId("_PlXQcNp-Ed-ak6NoX_4Aeg_-129112378")]
     [DisplayName("Original Control Sum")]
     [IsoXmlTag("OrgnlCtrlSum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     public IsoDecimalNumber? OriginalControlSum { get; init; }
 
-    /// <summary>
-    /// Specifies the status of the payment information group.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalPaymentInformation1.PaymentInformationStatus"/>
     [IsoId("_PlXQcdp-Ed-ak6NoX_4Aeg_-724783265")]
     [DisplayName("Payment Information Status")]
     [IsoXmlTag("PmtInfSts")]
     public TransactionGroupStatus3Code? PaymentInformationStatus { get; init; }
 
-    /// <summary>
-    /// Set of elements used to provide detailed information on the status reason.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalPaymentInformation1.StatusReasonInformation"/>
     [IsoId("_PlXQctp-Ed-ak6NoX_4Aeg_-724782771")]
     [DisplayName("Status Reason Information")]
     [IsoXmlTag("StsRsnInf")]
     public ValueList<StatusReasonInformation8> StatusReasonInformation { get; init; } = [];
 
-    /// <summary>
-    /// Detailed information on the number of transactions for each identical transaction status.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalPaymentInformation1.NumberOfTransactionsPerStatus"/>
     [IsoId("_PlXQc9p-Ed-ak6NoX_4Aeg_214439013")]
     [DisplayName("Number Of Transactions Per Status")]
     [IsoXmlTag("NbOfTxsPerSts")]
     public ValueList<NumberOfTransactionsPerStatus3> NumberOfTransactionsPerStatus { get; init; } =
         [];
 
-    /// <summary>
-    /// Set of elements used to provide information on the original transactions to which the status report message refers.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalPaymentInformation1.TransactionInformationAndStatus"/>
     [IsoId("_PlXQdNp-Ed-ak6NoX_4Aeg_1494108741")]
     [DisplayName("Transaction Information And Status")]
     [IsoXmlTag("TxInfAndSts")]

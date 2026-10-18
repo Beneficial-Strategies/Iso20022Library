@@ -1,0 +1,25 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+public partial record Mandate14 : IMandate14
+{
+    IMandateAuthentication1? IMandate14.Authentication => Authentication;
+    IMandateTypeInformation2? IMandate14.Type => Type;
+    IMandateOccurrences4? IMandate14.Occurrences => Occurrences;
+    IMandateAdjustment1? IMandate14.Adjustment => Adjustment;
+    IMandateSetupReason1Choice? IMandate14.Reason => Reason;
+    IPartyIdentification135? IMandate14.CreditorSchemeIdentification => CreditorSchemeIdentification;
+    IPartyIdentification135? IMandate14.Creditor => Creditor;
+    ICashAccount38? IMandate14.CreditorAccount => CreditorAccount;
+    IBranchAndFinancialInstitutionIdentification6? IMandate14.CreditorAgent => CreditorAgent;
+    IPartyIdentification135? IMandate14.UltimateCreditor => UltimateCreditor;
+    IPartyIdentification135? IMandate14.Debtor => Debtor;
+    ICashAccount38? IMandate14.DebtorAccount => DebtorAccount;
+    IBranchAndFinancialInstitutionIdentification6? IMandate14.DebtorAgent => DebtorAgent;
+    IPartyIdentification135? IMandate14.UltimateDebtor => UltimateDebtor;
+    IEnumerable<IReferredMandateDocument1> IMandate14.ReferredDocument => ReferredDocument;
+}

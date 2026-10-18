@@ -9,40 +9,30 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Identifies the mandate to be amended and gives details of the new mandate.
-/// </summary>
+/// <inheritdoc cref="IMandateAmendment1"/>
 [IsoId("_RBcz9tp-Ed-ak6NoX_4Aeg_-453440412")]
 [DisplayName("Mandate Amendment")]
-public record MandateAmendment1
+public partial record MandateAmendment1
 {
-    /// <summary>
-    /// Set of elements used to provide information on the original messsage.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAmendment1.OriginalMessageInformation"/>
     [IsoId("_RBcz99p-Ed-ak6NoX_4Aeg_344631630")]
     [DisplayName("Original Message Information")]
     [IsoXmlTag("OrgnlMsgInf")]
     public OriginalMessageInformation1? OriginalMessageInformation { get; init; }
 
-    /// <summary>
-    /// Set of elements used to provide detailed information on the amendment reason.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAmendment1.AmendmentReason"/>
     [IsoId("_RBcz-Np-Ed-ak6NoX_4Aeg_-995812636")]
     [DisplayName("Amendment Reason")]
     [IsoXmlTag("AmdmntRsn")]
     public required AmendmentReasonInformation1 AmendmentReason { get; init; }
 
-    /// <summary>
-    /// Set of elements used to provide the amended mandate data.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAmendment1.Mandate"/>
     [IsoId("_RBmk8Np-Ed-ak6NoX_4Aeg_-1140806205")]
     [DisplayName("Mandate")]
     [IsoXmlTag("Mndt")]
     public required MandateInformation3 Mandate { get; init; }
 
-    /// <summary>
-    /// Set of elements used to provide the original mandate data.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAmendment1.OriginalMandate"/>
     [IsoId("_RBmk8dp-Ed-ak6NoX_4Aeg_75619015")]
     [DisplayName("Original Mandate")]
     [IsoXmlTag("OrgnlMndt")]

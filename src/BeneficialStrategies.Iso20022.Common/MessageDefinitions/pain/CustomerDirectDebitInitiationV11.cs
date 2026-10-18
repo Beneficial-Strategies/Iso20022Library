@@ -12,13 +12,10 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pain;
 
-/// <summary>
-/// This record is an implementation of the pain.008.001.11 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// </summary>
+/// <inheritdoc cref="ICustomerDirectDebitInitiationV11"/>
 [IsoId("_R3HVgTEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Customer Direct Debit Initiation V11")]
-public record CustomerDirectDebitInitiationV11 : IOuterRecord
+public partial record CustomerDirectDebitInitiationV11 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -45,23 +42,17 @@ public record CustomerDirectDebitInitiationV11 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Group Header.
-    /// </summary>
+    /// <inheritdoc cref="ICustomerDirectDebitInitiationV11.GroupHeader"/>
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader118 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Payment Information.
-    /// </summary>
+    /// <inheritdoc cref="ICustomerDirectDebitInitiationV11.PaymentInformation"/>
     [DisplayName("Payment Information")]
     [IsoXmlTag("PmtInf")]
     public ValueList<PaymentInstruction45> PaymentInformation { get; init; } = [];
 
-    /// <summary>
-    /// Supplementary Data.
-    /// </summary>
+    /// <inheritdoc cref="ICustomerDirectDebitInitiationV11.SupplementaryData"/>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];

@@ -9,40 +9,30 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Set of elements used to further detail the information related to the type of payment.
-/// </summary>
+/// <inheritdoc cref="IMandateTypeInformation2"/>
 [IsoId("_cm369kjwEeaVLL5QKJ4f-A")]
 [DisplayName("Mandate Type Information")]
-public record MandateTypeInformation2
+public partial record MandateTypeInformation2
 {
-    /// <summary>
-    /// Agreement under which or rules under which the mandate resides.
-    /// </summary>
+    /// <inheritdoc cref="IMandateTypeInformation2.ServiceLevel"/>
     [IsoId("_cvK7QUjwEeaVLL5QKJ4f-A")]
     [DisplayName("Service Level")]
     [IsoXmlTag("SvcLvl")]
     public ServiceLevel8Choice_? ServiceLevel { get; init; }
 
-    /// <summary>
-    /// User community specific instrument.|Usage: This element is used to specify a local instrument, local clearing option and/or further qualify the service or service level.
-    /// </summary>
+    /// <inheritdoc cref="IMandateTypeInformation2.LocalInstrument"/>
     [IsoId("_cvK7Q0jwEeaVLL5QKJ4f-A")]
     [DisplayName("Local Instrument")]
     [IsoXmlTag("LclInstrm")]
     public LocalInstrument2Choice_? LocalInstrument { get; init; }
 
-    /// <summary>
-    /// Specifies the high level purpose of the mandate based on a set of pre-defined categories.
-    /// </summary>
+    /// <inheritdoc cref="IMandateTypeInformation2.CategoryPurpose"/>
     [IsoId("_T6WPoUjwEeaVLL5QKJ4f-A")]
     [DisplayName("Category Purpose")]
     [IsoXmlTag("CtgyPurp")]
     public CategoryPurpose1Choice_? CategoryPurpose { get; init; }
 
-    /// <summary>
-    /// Type of direct debit instruction.
-    /// </summary>
+    /// <inheritdoc cref="IMandateTypeInformation2.Classification"/>
     [IsoId("_3MJbIGVREeacpJ-gG9kyUQ")]
     [DisplayName("Classification")]
     [IsoXmlTag("Clssfctn")]

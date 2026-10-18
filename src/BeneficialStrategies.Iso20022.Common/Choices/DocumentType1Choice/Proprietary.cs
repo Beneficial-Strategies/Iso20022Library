@@ -8,17 +8,13 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.DocumentType1Choice
 {
-    /// <summary>
-    /// Document type, in a proprietary form.
-    /// </summary>
+    /// <inheritdoc cref="IProprietary"/>
     [IsoId("_iYH70XiJEeidzqjNEfehPg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : DocumentType1Choice_
+    public partial record Proprietary : DocumentType1Choice_
     {
-        /// <summary>
-        /// Identification assigned by an institution.
-        /// </summary>
+        /// <inheritdoc cref="IProprietary.Identification"/>
         [IsoId("_QALkONp-Ed-ak6NoX_4Aeg_-1748202217")]
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
@@ -26,9 +22,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentType1Choice
         [StringLength(maximumLength: 35, MinimumLength = 1)]
         public required IsoMax35Text Identification { get; init; }
 
-        /// <summary>
-        /// Name of the identification scheme.
-        /// </summary>
+        /// <inheritdoc cref="IProprietary.SchemeName"/>
         [IsoId("_QAVVMNp-Ed-ak6NoX_4Aeg_-1748202215")]
         [DisplayName("Scheme Name")]
         [IsoXmlTag("SchmeNm")]
@@ -36,9 +30,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentType1Choice
         [StringLength(maximumLength: 35, MinimumLength = 1)]
         public IsoMax35Text? SchemeName { get; init; }
 
-        /// <summary>
-        /// Entity that assigns the identification.
-        /// </summary>
+        /// <inheritdoc cref="IProprietary.Issuer"/>
         [IsoId("_QAVVMdp-Ed-ak6NoX_4Aeg_-1748202216")]
         [DisplayName("Issuer")]
         [IsoXmlTag("Issr")]

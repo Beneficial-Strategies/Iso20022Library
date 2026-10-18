@@ -9,35 +9,25 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Specifies the details on the status of the payment conditions.
-/// </summary>
+/// <inheritdoc cref="IPaymentConditionStatus1"/>
 [IsoId("_IGiOt3VlEeiEU7thYTAN1w")]
 [DisplayName("Payment Condition Status")]
-public record PaymentConditionStatus1
+public partial record PaymentConditionStatus1
 {
-    /// <summary>
-    /// Amount accepted to be paid.
-    /// Usage:
-    /// May only be present when AmountModificationAllowed is present in the request.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentConditionStatus1.AcceptedAmount"/>
     [IsoId("_p7y48HVlEeiEU7thYTAN1w")]
     [DisplayName("Accepted Amount")]
     [IsoXmlTag("AccptdAmt")]
     public ActiveCurrencyAndAmount? AcceptedAmount { get; init; }
 
-    /// <summary>
-    /// Indicates if the DebtorAgent guarantees the payment, assuming a payment guarantee contract exists between the different actors.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentConditionStatus1.GuaranteedPayment"/>
     [IsoId("_IGiOvXVlEeiEU7thYTAN1w")]
     [DisplayName("Guaranteed Payment")]
     [IsoXmlTag("GrntedPmt")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     public required IsoTrueFalseIndicator GuaranteedPayment { get; init; }
 
-    /// <summary>
-    /// Indicates if the debtor will pay before the requested execution date.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentConditionStatus1.EarlyPayment"/>
     [IsoId("_IGiOuHVlEeiEU7thYTAN1w")]
     [DisplayName("Early Payment")]
     [IsoXmlTag("EarlyPmt")]

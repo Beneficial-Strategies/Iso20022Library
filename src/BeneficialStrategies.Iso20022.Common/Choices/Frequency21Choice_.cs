@@ -6,14 +6,12 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Choice of format for a frequency, for example, the frequency of payment.
-    /// </summary>
+    /// <inheritdoc cref="IFrequency21Choice"/>
     [KnownType(typeof(Frequency21Choice.Type))]
     [KnownType(typeof(Frequency21Choice.Period))]
     [JsonDerivedType(typeof(Frequency21Choice.Type), nameof(Frequency21Choice.Type))]
     [JsonDerivedType(typeof(Frequency21Choice.Period), nameof(Frequency21Choice.Period))]
     [IsoId("_51BdAR7yEeSxevWRRWxNAg")]
     [DisplayName("Frequency 21 Choice")]
-    public abstract record Frequency21Choice_ { }
+    public abstract partial record Frequency21Choice_ { }
 }

@@ -8,15 +8,11 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.Party52Choice
 {
-    /// <summary>
-    /// Organisation Identification.
-    /// </summary>
+    /// <inheritdoc cref="IOrganisationIdentification"/>
     [DisplayName("Organisation Identification")]
-    public record OrganisationIdentification : Party52Choice_
+    public partial record OrganisationIdentification : Party52Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// </summary>
+        /// <inheritdoc cref="IOrganisationIdentification.Value"/>
         [IsoXmlTag("OrgId")]
         public required OrganisationIdentification39 Value { get; init; }
     }

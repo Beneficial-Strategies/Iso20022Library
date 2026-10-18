@@ -9,135 +9,97 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Payment Transaction161.
-/// </summary>
+/// <inheritdoc cref="IPaymentTransaction161"/>
 [IsoId("_-Ni9oTEsEe6GxLzpkVnWYg")]
 [DisplayName("Payment Transaction161")]
-public record PaymentTransaction161
+public partial record PaymentTransaction161
 {
-    /// <summary>
-    /// Acceptance Date Time.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction161.AcceptanceDateTime"/>
     [DisplayName("Acceptance Date Time")]
     [IsoXmlTag("AccptncDtTm")]
     public IsoISODateTime? AcceptanceDateTime { get; init; }
 
-    /// <summary>
-    /// Account Servicer Reference.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction161.AccountServicerReference"/>
     [DisplayName("Account Servicer Reference")]
     [IsoXmlTag("AcctSvcrRef")]
     public IsoMax35Text? AccountServicerReference { get; init; }
 
-    /// <summary>
-    /// Charges Information.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction161.ChargesInformation"/>
     [DisplayName("Charges Information")]
     [IsoXmlTag("ChrgsInf")]
     public ValueList<Charges16> ChargesInformation { get; init; } = [];
 
-    /// <summary>
-    /// Clearing System Reference.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction161.ClearingSystemReference"/>
     [DisplayName("Clearing System Reference")]
     [IsoXmlTag("ClrSysRef")]
     public IsoMax35Text? ClearingSystemReference { get; init; }
 
-    /// <summary>
-    /// Effective Interbank Settlement Date.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction161.EffectiveInterbankSettlementDate"/>
     [DisplayName("Effective Interbank Settlement Date")]
     [IsoXmlTag("FctvIntrBkSttlmDt")]
     public DateAndDateTime2Choice_? EffectiveInterbankSettlementDate { get; init; }
 
-    /// <summary>
-    /// Instructed Agent.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction161.InstructedAgent"/>
     [DisplayName("Instructed Agent")]
     [IsoXmlTag("InstdAgt")]
     public BranchAndFinancialInstitutionIdentification8? InstructedAgent { get; init; }
 
-    /// <summary>
-    /// Instructing Agent.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction161.InstructingAgent"/>
     [DisplayName("Instructing Agent")]
     [IsoXmlTag("InstgAgt")]
     public BranchAndFinancialInstitutionIdentification8? InstructingAgent { get; init; }
 
-    /// <summary>
-    /// Original End To End Identification.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction161.OriginalEndToEndIdentification"/>
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
     public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
 
-    /// <summary>
-    /// Original Group Information.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction161.OriginalGroupInformation"/>
     [DisplayName("Original Group Information")]
     [IsoXmlTag("OrgnlGrpInf")]
     public OriginalGroupInformation29? OriginalGroupInformation { get; init; }
 
-    /// <summary>
-    /// Original Instruction Identification.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction161.OriginalInstructionIdentification"/>
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
     public IsoMax35Text? OriginalInstructionIdentification { get; init; }
 
-    /// <summary>
-    /// Original Transaction Identification.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction161.OriginalTransactionIdentification"/>
     [DisplayName("Original Transaction Identification")]
     [IsoXmlTag("OrgnlTxId")]
     public IsoMax35Text? OriginalTransactionIdentification { get; init; }
 
-    /// <summary>
-    /// Original Transaction Reference.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction161.OriginalTransactionReference"/>
     [DisplayName("Original Transaction Reference")]
     [IsoXmlTag("OrgnlTxRef")]
     public OriginalTransactionReference42? OriginalTransactionReference { get; init; }
 
-    /// <summary>
-    /// Original UETR.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction161.OriginalUETR"/>
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
     public IsoUUIDv4Identifier? OriginalUETR { get; init; }
 
-    /// <summary>
-    /// Processing Date.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction161.ProcessingDate"/>
     [DisplayName("Processing Date")]
     [IsoXmlTag("PrcgDt")]
     public DateAndDateTime2Choice_? ProcessingDate { get; init; }
 
-    /// <summary>
-    /// Status Identification.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction161.StatusIdentification"/>
     [DisplayName("Status Identification")]
     [IsoXmlTag("StsId")]
     public IsoMax35Text? StatusIdentification { get; init; }
 
-    /// <summary>
-    /// Status Reason Information.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction161.StatusReasonInformation"/>
     [DisplayName("Status Reason Information")]
     [IsoXmlTag("StsRsnInf")]
     public ValueList<StatusReasonInformation14> StatusReasonInformation { get; init; } = [];
 
-    /// <summary>
-    /// Supplementary Data.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction161.SupplementaryData"/>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 
-    /// <summary>
-    /// Transaction Status.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction161.TransactionStatus"/>
     [DisplayName("Transaction Status")]
     [IsoXmlTag("TxSts")]
     public ExternalPaymentTransactionStatus1Code? TransactionStatus { get; init; }

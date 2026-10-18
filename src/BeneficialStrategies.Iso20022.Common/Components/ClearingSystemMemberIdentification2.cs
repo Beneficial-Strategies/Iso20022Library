@@ -9,24 +9,18 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Unique identification, as assigned by a clearing system, to unambiguously identify a member of the clearing system.
-/// </summary>
+/// <inheritdoc cref="IClearingSystemMemberIdentification2"/>
 [IsoId("_TMehHNp-Ed-ak6NoX_4Aeg_151445359")]
 [DisplayName("Clearing System Member Identification")]
-public record ClearingSystemMemberIdentification2
+public partial record ClearingSystemMemberIdentification2
 {
-    /// <summary>
-    /// Specification of a pre-agreed offering between clearing agents or the channel through which the payment instruction is processed.
-    /// </summary>
+    /// <inheritdoc cref="IClearingSystemMemberIdentification2.ClearingSystemIdentification"/>
     [IsoId("_TMehHdp-Ed-ak6NoX_4Aeg_-1082144614")]
     [DisplayName("Clearing System Identification")]
     [IsoXmlTag("ClrSysId")]
     public ClearingSystemIdentification2Choice_? ClearingSystemIdentification { get; init; }
 
-    /// <summary>
-    /// Identification of a member of a clearing system.
-    /// </summary>
+    /// <inheritdoc cref="IClearingSystemMemberIdentification2.MemberIdentification"/>
     [IsoId("_TMehHtp-Ed-ak6NoX_4Aeg_151445420")]
     [DisplayName("Member Identification")]
     [IsoXmlTag("MmbId")]

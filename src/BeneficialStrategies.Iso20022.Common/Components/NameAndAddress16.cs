@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Information that locates and identifies a party.
-/// </summary>
+/// <inheritdoc cref="INameAndAddress16"/>
 [IsoId("_9MDku24-EeiU9cctagi5ow")]
 [DisplayName("Name And Address")]
-public record NameAndAddress16
+public partial record NameAndAddress16
 {
-    /// <summary>
-    /// Name by which a party is known and is usually used to identify that party.
-    /// </summary>
+    /// <inheritdoc cref="INameAndAddress16.Name"/>
     [IsoId("_9XYD424-EeiU9cctagi5ow")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
@@ -26,9 +22,7 @@ public record NameAndAddress16
     [StringLength(maximumLength: 140, MinimumLength = 1)]
     public required IsoMax140Text Name { get; init; }
 
-    /// <summary>
-    /// Postal address of a party.
-    /// </summary>
+    /// <inheritdoc cref="INameAndAddress16.Address"/>
     [IsoId("_9XYD5W4-EeiU9cctagi5ow")]
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]

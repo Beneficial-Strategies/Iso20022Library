@@ -9,73 +9,53 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Information about a document.
-/// </summary>
+/// <inheritdoc cref="IDocument15"/>
 [IsoId("_wy9ZETEyEe6g-ffJsqGiSA")]
 [Description(@"Information about a document.")]
 [DisplayName("Document15")]
-public record Document15
+public partial record Document15
 {
-    /// <summary>
-    /// Digital signature of the enclosed binary file.
-    /// </summary>
+    /// <inheritdoc cref="IDocument15.DigitalSignature"/>
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
     public PartyAndSignature4? DigitalSignature { get; init; }
 
-    /// <summary>
-    /// Binary file representing the enclosed document or template, such as a PDF file, image file, XML file, MT message.
-    /// </summary>
+    /// <inheritdoc cref="IDocument15.Enclosure"/>
     [DisplayName("Enclosure")]
     [IsoXmlTag("Nclsr")]
     public required IsoMax10MbBinary Enclosure { get; init; }
 
-    /// <summary>
-    /// Technical name of the file.
-    /// </summary>
+    /// <inheritdoc cref="IDocument15.FileName"/>
     [DisplayName("File Name")]
     [IsoXmlTag("FileNm")]
     public IsoMax140Text? FileName { get; init; }
 
-    /// <summary>
-    /// Format of the document or template, such as PDF, XML, XSLT.
-    /// </summary>
+    /// <inheritdoc cref="IDocument15.Format"/>
     [DisplayName("Format")]
     [IsoXmlTag("Frmt")]
     public required DocumentFormat1Choice_ Format { get; init; }
 
-    /// <summary>
-    /// Identification of the document or template.
-    /// </summary>
+    /// <inheritdoc cref="IDocument15.Identification"/>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     public required IsoMax35Text Identification { get; init; }
 
-    /// <summary>
-    /// Issue date or date time of the document.
-    /// </summary>
+    /// <inheritdoc cref="IDocument15.IssueDate"/>
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
     public required DateAndDateTime2Choice_ IssueDate { get; init; }
 
-    /// <summary>
-    /// Unique identifier for a language used in the document.
-    /// </summary>
+    /// <inheritdoc cref="IDocument15.LanguageCode"/>
     [DisplayName("Language Code")]
     [IsoXmlTag("LangCd")]
     public LanguageCode? LanguageCode { get; init; }
 
-    /// <summary>
-    /// Name of document or transaction, for example, tax invoice.
-    /// </summary>
+    /// <inheritdoc cref="IDocument15.Name"/>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     public IsoMax140Text? Name { get; init; }
 
-    /// <summary>
-    /// Type of document or template.
-    /// </summary>
+    /// <inheritdoc cref="IDocument15.Type"/>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     public required DocumentType1Choice_ Type { get; init; }

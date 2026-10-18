@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.MandateStatus1Choice
 {
-    /// <summary>
-    /// Name of the identification scheme, in a free text form.
-    /// </summary>
+    /// <inheritdoc cref="IProprietary"/>
     [IsoId("_ChH7ZZnAEeao_Z127E9uYg")]
     [DisplayName("Proprietary")]
-    public record Proprietary : MandateStatus1Choice_
+    public partial record Proprietary : MandateStatus1Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies a character string with a maximum length of 35 characters.
-        /// </summary>
+        /// <inheritdoc cref="IProprietary.Value"/>
         [IsoXmlTag("Prtry")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]

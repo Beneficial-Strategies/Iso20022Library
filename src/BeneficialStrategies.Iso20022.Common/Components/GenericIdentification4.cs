@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Information related to an identification, eg, party identification or account identification.
-/// </summary>
+/// <inheritdoc cref="IGenericIdentification4"/>
 [IsoId("_P-sWdNp-Ed-ak6NoX_4Aeg_-1687943043")]
 [DisplayName("Generic Identification")]
-public record GenericIdentification4
+public partial record GenericIdentification4
 {
-    /// <summary>
-    /// Identifier issued to a person for which no specific identifier has been defined.
-    /// </summary>
+    /// <inheritdoc cref="IGenericIdentification4.Identification"/>
     [IsoId("_P-sWddp-Ed-ak6NoX_4Aeg_-1304682662")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
@@ -26,9 +22,7 @@ public record GenericIdentification4
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public required IsoMax35Text Identification { get; init; }
 
-    /// <summary>
-    /// Specifies the nature of the identifier.|Usage: IdentificationType is used to specify what kind of identifier is used. It should be used in case the identifier is different from the identifiers listed in the pre-defined identifier list.
-    /// </summary>
+    /// <inheritdoc cref="IGenericIdentification4.IdentificationType"/>
     [IsoId("_P-sWdtp-Ed-ak6NoX_4Aeg_-1601134417")]
     [DisplayName("Identification Type")]
     [IsoXmlTag("IdTp")]

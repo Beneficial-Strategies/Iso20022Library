@@ -9,33 +9,25 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Period of time details related to the tax payment.
-/// </summary>
+/// <inheritdoc cref="ITaxPeriod1"/>
 [IsoId("_UQSHctp-Ed-ak6NoX_4Aeg_2034124941")]
 [DisplayName("Tax Period")]
-public record TaxPeriod1
+public partial record TaxPeriod1
 {
-    /// <summary>
-    /// Year related to the tax payment.
-    /// </summary>
+    /// <inheritdoc cref="ITaxPeriod1.Year"/>
     [IsoId("_UQSHc9p-Ed-ak6NoX_4Aeg_-1889586026")]
     [DisplayName("Year")]
     [IsoXmlTag("Yr")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
     public IsoISODate? Year { get; init; }
 
-    /// <summary>
-    /// Identification of the period related to the tax payment.
-    /// </summary>
+    /// <inheritdoc cref="ITaxPeriod1.Type"/>
     [IsoId("_UQSHdNp-Ed-ak6NoX_4Aeg_-1889586018")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     public TaxRecordPeriod1Code? Type { get; init; }
 
-    /// <summary>
-    /// Range of time between a start date and an end date for which the tax report is provided.
-    /// </summary>
+    /// <inheritdoc cref="ITaxPeriod1.FromToDate"/>
     [IsoId("_UQSHddp-Ed-ak6NoX_4Aeg_-1889585995")]
     [DisplayName("From To Date")]
     [IsoXmlTag("FrToDt")]

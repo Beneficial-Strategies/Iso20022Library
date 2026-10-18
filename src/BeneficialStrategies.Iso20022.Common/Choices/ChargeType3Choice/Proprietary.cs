@@ -8,17 +8,13 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.ChargeType3Choice
 {
-    /// <summary>
-    /// Type of charge in a proprietary form, as defined by the issuer.
-    /// </summary>
+    /// <inheritdoc cref="IProprietary"/>
     [IsoId("_tjJEU1kyEeGeoaLUQk__nA_-265813283")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : ChargeType3Choice_
+    public partial record Proprietary : ChargeType3Choice_
     {
-        /// <summary>
-        /// Name or number assigned by an entity to enable recognition of that entity, for example, account identifier.
-        /// </summary>
+        /// <inheritdoc cref="IProprietary.Identification"/>
         [IsoId("_P-sWctp-Ed-ak6NoX_4Aeg_1256785338")]
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
@@ -26,9 +22,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeType3Choice
         [StringLength(maximumLength: 35, MinimumLength = 1)]
         public required IsoMax35Text Identification { get; init; }
 
-        /// <summary>
-        /// Entity that assigns the identification.
-        /// </summary>
+        /// <inheritdoc cref="IProprietary.Issuer"/>
         [IsoId("_P-sWc9p-Ed-ak6NoX_4Aeg_1555083105")]
         [DisplayName("Issuer")]
         [IsoXmlTag("Issr")]

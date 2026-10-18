@@ -12,13 +12,10 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pacs;
 
-/// <summary>
-/// This record is an implementation of the pacs.003.001.11 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// </summary>
+/// <inheritdoc cref="IFIToFICustomerDirectDebitV11"/>
 [IsoId("_R3JxzzEZEe6kQ-WGAhcVPQ")]
 [DisplayName("FI To FI Customer Direct Debit V11")]
-public record FIToFICustomerDirectDebitV11 : IOuterRecord
+public partial record FIToFICustomerDirectDebitV11 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -45,24 +42,18 @@ public record FIToFICustomerDirectDebitV11 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Direct Debit Transaction Information.
-    /// </summary>
+    /// <inheritdoc cref="IFIToFICustomerDirectDebitV11.DirectDebitTransactionInformation"/>
     [DisplayName("Direct Debit Transaction Information")]
     [IsoXmlTag("DrctDbtTxInf")]
     public ValueList<DirectDebitTransactionInformation31> DirectDebitTransactionInformation { get; init; } =
         [];
 
-    /// <summary>
-    /// Group Header.
-    /// </summary>
+    /// <inheritdoc cref="IFIToFICustomerDirectDebitV11.GroupHeader"/>
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader125 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Supplementary Data.
-    /// </summary>
+    /// <inheritdoc cref="IFIToFICustomerDirectDebitV11.SupplementaryData"/>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];

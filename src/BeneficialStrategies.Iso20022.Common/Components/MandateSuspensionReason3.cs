@@ -9,30 +9,22 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Mandate Suspension Reason3.
-/// </summary>
+/// <inheritdoc cref="IMandateSuspensionReason3"/>
 [IsoId("_4TGJuzEyEe6g-ffJsqGiSA")]
 [DisplayName("Mandate Suspension Reason3")]
-public record MandateSuspensionReason3
+public partial record MandateSuspensionReason3
 {
-    /// <summary>
-    /// Additional Information.
-    /// </summary>
+    /// <inheritdoc cref="IMandateSuspensionReason3.AdditionalInformation"/>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
     public ValueList<IsoMax105Text> AdditionalInformation { get; init; } = [];
 
-    /// <summary>
-    /// Originator.
-    /// </summary>
+    /// <inheritdoc cref="IMandateSuspensionReason3.Originator"/>
     [DisplayName("Originator")]
     [IsoXmlTag("Orgtr")]
     public PartyIdentification272? Originator { get; init; }
 
-    /// <summary>
-    /// Reason.
-    /// </summary>
+    /// <inheritdoc cref="IMandateSuspensionReason3.Reason"/>
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
     public required MandateSuspensionReason1Choice_ Reason { get; init; }

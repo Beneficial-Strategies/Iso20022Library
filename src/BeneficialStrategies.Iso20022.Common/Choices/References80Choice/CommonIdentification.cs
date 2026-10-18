@@ -8,15 +8,11 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.References80Choice
 {
-    /// <summary>
-    /// Common Identification.
-    /// </summary>
+    /// <inheritdoc cref="ICommonIdentification"/>
     [DisplayName("Common Identification")]
-    public record CommonIdentification : References80Choice_
+    public partial record CommonIdentification : References80Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// </summary>
+        /// <inheritdoc cref="ICommonIdentification.Value"/>
         [IsoXmlTag("CmonId")]
         public required IsoMax35Text Value { get; init; }
     }

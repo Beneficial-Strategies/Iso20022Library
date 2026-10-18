@@ -1,0 +1,36 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.pain;
+
+/// <summary>
+/// This record is an implementation of the pain.013.001.04 ISO standard message type.
+/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// The CreditorPaymentActivationRequest message is sent by the Creditor sending party to the Debtor receiving party, directly or through agents. It is used to initiate a creditor payment activation request.
+/// </summary>
+[IsoId("_BK4QQU_HEeSNduMozFyRUg")]
+public interface ICreditorPaymentActivationRequestV04 : IOuterRecord
+{
+    /// <summary>
+    /// Set of characteristics shared by all individual transactions included in the message.
+    /// </summary>
+    [IsoId("_BK4QRU_HEeSNduMozFyRUg")]
+    [DisplayName("Group Header")]
+    [IsoXmlTag("GrpHdr")]
+    IGroupHeader45 GroupHeader { get; }
+
+    /// <summary>
+    /// Set of characteristics that applies to the debit side of the payment transactions included in the creditor payment initiation.
+    /// </summary>
+    [IsoId("_BK4QR0_HEeSNduMozFyRUg")]
+    [DisplayName("Payment Information")]
+    [IsoXmlTag("PmtInf")]
+    IPaymentInstruction17 PaymentInformation { get; }
+
+    /// <summary>
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// </summary>
+    [IsoId("_BK4QSU_HEeSNduMozFyRUg")]
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    ISupplementaryData1? SupplementaryData { get; }
+}

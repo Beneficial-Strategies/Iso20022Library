@@ -4,12 +4,12 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.MandateRelatedData5Choice
 {
-    /// <summary>Specific direct debit mandate data.</summary>
+    /// <inheritdoc cref="IDirectDebitMandate"/>
     [IsoId("_RH9EkbvIEfCYYbmqNrQFSg")]
     [DisplayName("Direct Debit Mandate")]
-    public record DirectDebitMandate : MandateRelatedData5Choice_
+    public partial record DirectDebitMandate : MandateRelatedData5Choice_
     {
-        /// <summary>Contains the main value for the container.</summary>
+        /// <inheritdoc cref="IDirectDebitMandate.Value"/>
         [IsoXmlTag("DrctDbtMndt")]
         public required MandateRelatedInformation16 Value { get; init; }
     }

@@ -9,24 +9,18 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Information related to a proxy  identification of the account.
-/// </summary>
+/// <inheritdoc cref="IProxyAccountIdentification1"/>
 [IsoId("_luR59Xh2EeidzqjNEfehPg")]
 [DisplayName("Proxy Account Identification")]
-public record ProxyAccountIdentification1
+public partial record ProxyAccountIdentification1
 {
-    /// <summary>
-    /// Type of the proxy identification.
-    /// </summary>
+    /// <inheritdoc cref="IProxyAccountIdentification1.Type"/>
     [IsoId("_luR59nh2EeidzqjNEfehPg")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     public ProxyAccountType1Choice_? Type { get; init; }
 
-    /// <summary>
-    /// Identification used to indicate the account identification under another specified name.
-    /// </summary>
+    /// <inheritdoc cref="IProxyAccountIdentification1.Identification"/>
     [IsoId("_luR593h2EeidzqjNEfehPg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]

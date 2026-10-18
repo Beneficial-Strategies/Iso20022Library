@@ -1,0 +1,26 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Specifies the amount with a specific type.
+/// </summary>
+[IsoId("_ts1L0VkyEeGeoaLUQk__nA_404730048")]
+public interface ITaxAmountAndType1 : IIsoComponent
+{
+    /// <summary>
+    /// Specifies the type of the amount.
+    /// </summary>
+    [IsoId("_ts1L0lkyEeGeoaLUQk__nA_1414965637")]
+    [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
+    ITaxAmountType1Choice? Type { get; }
+
+    /// <summary>
+    /// Amount of money, which has been typed.
+    /// </summary>
+    [IsoId("_ts1L01kyEeGeoaLUQk__nA_-2046327832")]
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    ActiveOrHistoricCurrencyAndAmount Amount { get; }
+}

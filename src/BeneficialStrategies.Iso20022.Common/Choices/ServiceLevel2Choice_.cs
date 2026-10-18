@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Specifies the service level of the transaction.
-    /// </summary>
+    /// <inheritdoc cref="IServiceLevel2Choice"/>
     [KnownType(typeof(ServiceLevel2Choice.Code))]
     [KnownType(typeof(ServiceLevel2Choice.Proprietary))]
     [JsonDerivedType(typeof(ServiceLevel2Choice.Code), nameof(ServiceLevel2Choice.Code))]
@@ -18,5 +16,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QJkwwdp-Ed-ak6NoX_4Aeg_913208063")]
     [DisplayName("Service Level 2 Choice")]
-    public abstract record ServiceLevel2Choice_ { }
+    public abstract partial record ServiceLevel2Choice_ { }
 }

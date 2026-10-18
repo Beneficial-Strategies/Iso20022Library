@@ -6,14 +6,12 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Specifies the type of advice requested for the transaction.
-    /// </summary>
+    /// <inheritdoc cref="IAdviceType1Choice"/>
     [KnownType(typeof(AdviceType1Choice.Code))]
     [KnownType(typeof(AdviceType1Choice.Proprietary))]
     [JsonDerivedType(typeof(AdviceType1Choice.Code), nameof(AdviceType1Choice.Code))]
     [JsonDerivedType(typeof(AdviceType1Choice.Proprietary), nameof(AdviceType1Choice.Proprietary))]
     [IsoId("_u3TXw9omEembTrt_WixjyQ")]
     [DisplayName("Advice Type 1 Choice")]
-    public abstract record AdviceType1Choice_ { }
+    public abstract partial record AdviceType1Choice_ { }
 }

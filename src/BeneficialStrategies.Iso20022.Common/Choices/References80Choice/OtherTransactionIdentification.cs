@@ -8,15 +8,11 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.References80Choice
 {
-    /// <summary>
-    /// Other Transaction Identification.
-    /// </summary>
+    /// <inheritdoc cref="IOtherTransactionIdentification"/>
     [DisplayName("Other Transaction Identification")]
-    public record OtherTransactionIdentification : References80Choice_
+    public partial record OtherTransactionIdentification : References80Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// </summary>
+        /// <inheritdoc cref="IOtherTransactionIdentification.Value"/>
         [IsoXmlTag("OthrTxId")]
         public required IsoMax35Text Value { get; init; }
     }

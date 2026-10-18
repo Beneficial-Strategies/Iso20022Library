@@ -1,0 +1,25 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+public partial record Mandate7 : IMandate7
+{
+    IEnumerable<IsoMax35Text> IMandate7.MandateIdentification => MandateIdentification;
+    IMandateTypeInformation1? IMandate7.Type => Type;
+    IMandateOccurrences3? IMandate7.Occurrences => Occurrences;
+    IMandateSetupReason1Choice? IMandate7.Reason => Reason;
+    IPartyIdentification43? IMandate7.CreditorSchemeIdentification => CreditorSchemeIdentification;
+    IPartyIdentification43 IMandate7.Creditor => Creditor;
+    ICashAccount24? IMandate7.CreditorAccount => CreditorAccount;
+    IBranchAndFinancialInstitutionIdentification5? IMandate7.CreditorAgent => CreditorAgent;
+    IPartyIdentification43? IMandate7.UltimateCreditor => UltimateCreditor;
+    IPartyIdentification43 IMandate7.Debtor => Debtor;
+    ICashAccount24? IMandate7.DebtorAccount => DebtorAccount;
+    IBranchAndFinancialInstitutionIdentification5 IMandate7.DebtorAgent => DebtorAgent;
+    IPartyIdentification43? IMandate7.UltimateDebtor => UltimateDebtor;
+    IEnumerable<IReferredDocumentInformation6> IMandate7.ReferredDocument => ReferredDocument;
+    IEnumerable<ISupplementaryData1> IMandate7.SupplementaryData => SupplementaryData;
+}

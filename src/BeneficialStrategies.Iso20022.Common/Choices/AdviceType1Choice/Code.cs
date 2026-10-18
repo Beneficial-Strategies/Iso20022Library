@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.AdviceType1Choice
 {
-    /// <summary>
-    /// Advice type, in a coded form.
-    /// </summary>
+    /// <inheritdoc cref="ICode"/>
     [IsoId("_u3TXxNomEembTrt_WixjyQ")]
     [DisplayName("Code")]
-    public record Code : AdviceType1Choice_
+    public partial record Code : AdviceType1Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies the type of advice to provide back in the report.
-        /// </summary>
+        /// <inheritdoc cref="ICode.Value"/>
         [IsoXmlTag("Cd")]
         public required AdviceType1Code Value { get; init; }
     }

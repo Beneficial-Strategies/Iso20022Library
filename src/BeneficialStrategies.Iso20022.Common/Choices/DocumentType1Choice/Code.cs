@@ -8,18 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.DocumentType1Choice
 {
-    /// <summary>
-    /// Document type, in a coded form.
-    /// </summary>
+    /// <inheritdoc cref="ICode"/>
     [IsoId("_iYH70HiJEeidzqjNEfehPg")]
     [DisplayName("Code")]
-    public record Code : DocumentType1Choice_
+    public partial record Code : DocumentType1Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies the document type as published in an external document type code list.
-        /// External code sets can be downloaded from www.iso20022.org.
-        /// </summary>
+        /// <inheritdoc cref="ICode.Value"/>
         [IsoXmlTag("Cd")]
         public required ExternalDocumentType1Code Value { get; init; }
     }

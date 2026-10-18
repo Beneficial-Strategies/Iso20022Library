@@ -8,12 +8,10 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentification5Choice
 {
-    /// <summary>
-    /// Unique and unambiguous identifier of a clearing system member, as assigned by the system or system administrator.
-    /// </summary>
+    /// <inheritdoc cref="IClearingSystemMemberIdentification"/>
     [IsoId("_TFehONp-Ed-ak6NoX_4Aeg_1156630120")]
     [DisplayName("Clearing System Member Identification")]
-    public record ClearingSystemMemberIdentification
+    public partial record ClearingSystemMemberIdentification
         : FinancialInstitutionIdentification5Choice_
     { }
 }

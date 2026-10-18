@@ -9,48 +9,36 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Identifies the mandate to be amended and gives details of the new mandate.
-/// </summary>
+/// <inheritdoc cref="IMandateAmendment7"/>
 [IsoId("_eSRVgdcZEeqRFcf2R4bPBw")]
 [DisplayName("Mandate Amendment")]
-public record MandateAmendment7
+public partial record MandateAmendment7
 {
-    /// <summary>
-    /// Provides information on the original message.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAmendment7.OriginalMessageInformation"/>
     [IsoId("_eToncdcZEeqRFcf2R4bPBw")]
     [DisplayName("Original Message Information")]
     [IsoXmlTag("OrgnlMsgInf")]
     public OriginalMessageInformation1? OriginalMessageInformation { get; init; }
 
-    /// <summary>
-    /// Provides detailed information on the amendment reason.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAmendment7.AmendmentReason"/>
     [IsoId("_eTonc9cZEeqRFcf2R4bPBw")]
     [DisplayName("Amendment Reason")]
     [IsoXmlTag("AmdmntRsn")]
     public required MandateAmendmentReason2 AmendmentReason { get; init; }
 
-    /// <summary>
-    /// Provides the amended mandate data.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAmendment7.Mandate"/>
     [IsoId("_eTonddcZEeqRFcf2R4bPBw")]
     [DisplayName("Mandate")]
     [IsoXmlTag("Mndt")]
     public required Mandate18 Mandate { get; init; }
 
-    /// <summary>
-    /// Provides the original mandate data.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAmendment7.OriginalMandate"/>
     [IsoId("_eTond9cZEeqRFcf2R4bPBw")]
     [DisplayName("Original Mandate")]
     [IsoXmlTag("OrgnlMndt")]
     public required OriginalMandate9Choice_ OriginalMandate { get; init; }
 
-    /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAmendment7.SupplementaryData"/>
     [IsoId("_eTonedcZEeqRFcf2R4bPBw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]

@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Specifies the amount type.
-    /// </summary>
+    /// <inheritdoc cref="IDiscountAmountType1Choice"/>
     [KnownType(typeof(DiscountAmountType1Choice.Code))]
     [KnownType(typeof(DiscountAmountType1Choice.Proprietary))]
     [JsonDerivedType(
@@ -21,5 +19,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_tlhp9FkyEeGeoaLUQk__nA_1969856985")]
     [DisplayName("Discount Amount Type 1 Choice")]
-    public abstract record DiscountAmountType1Choice_ { }
+    public abstract partial record DiscountAmountType1Choice_ { }
 }

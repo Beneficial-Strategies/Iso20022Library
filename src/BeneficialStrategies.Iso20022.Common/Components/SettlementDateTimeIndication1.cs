@@ -9,25 +9,19 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Information on the occurred settlement time(s) of the payment transaction.
-/// </summary>
+/// <inheritdoc cref="ISettlementDateTimeIndication1"/>
 [IsoId("_QIYeB9p-Ed-ak6NoX_4Aeg_-498720410")]
 [DisplayName("Settlement Date Time Indication")]
-public record SettlementDateTimeIndication1
+public partial record SettlementDateTimeIndication1
 {
-    /// <summary>
-    /// Date and time at which a payment has been debited at the transaction administrator. In the case of TARGET, the date and time at which the payment has been debited at the central bank, expressed in Central European Time (CET).
-    /// </summary>
+    /// <inheritdoc cref="ISettlementDateTimeIndication1.DebitDateTime"/>
     [IsoId("_QIhn4Np-Ed-ak6NoX_4Aeg_-425762310")]
     [DisplayName("Debit Date Time")]
     [IsoXmlTag("DbtDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
     public IsoISODateTime? DebitDateTime { get; init; }
 
-    /// <summary>
-    /// Date and time at which a payment has been credited at the transaction administrator. In the case of TARGET, the date and time at which the payment has been credited at the receiving central bank, expressed in Central European Time (CET).
-    /// </summary>
+    /// <inheritdoc cref="ISettlementDateTimeIndication1.CreditDateTime"/>
     [IsoId("_QIhn4dp-Ed-ak6NoX_4Aeg_-356497199")]
     [DisplayName("Credit Date Time")]
     [IsoXmlTag("CdtDtTm")]

@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Specifies the type of garnishment.
-    /// </summary>
+    /// <inheritdoc cref="IGarnishmentType1Choice"/>
     [KnownType(typeof(GarnishmentType1Choice.Code))]
     [KnownType(typeof(GarnishmentType1Choice.Proprietary))]
     [JsonDerivedType(typeof(GarnishmentType1Choice.Code), nameof(GarnishmentType1Choice.Code))]
@@ -18,5 +16,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_k8MIkYnnEeOORMXOfBk1Bw")]
     [DisplayName("Garnishment Type 1 Choice")]
-    public abstract record GarnishmentType1Choice_ { }
+    public abstract partial record GarnishmentType1Choice_ { }
 }

@@ -12,13 +12,10 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pain;
 
-/// <summary>
-/// This record is an implementation of the pain.017.001.04 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// </summary>
+/// <inheritdoc cref="IMandateCopyRequestV04"/>
 [IsoId("_R3P4bzEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Mandate Copy Request V04")]
-public record MandateCopyRequestV04 : IOuterRecord
+public partial record MandateCopyRequestV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -45,23 +42,17 @@ public record MandateCopyRequestV04 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Group Header.
-    /// </summary>
+    /// <inheritdoc cref="IMandateCopyRequestV04.GroupHeader"/>
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader110 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Supplementary Data.
-    /// </summary>
+    /// <inheritdoc cref="IMandateCopyRequestV04.SupplementaryData"/>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 
-    /// <summary>
-    /// Underlying Copy Request Details.
-    /// </summary>
+    /// <inheritdoc cref="IMandateCopyRequestV04.UnderlyingCopyRequestDetails"/>
     [DisplayName("Underlying Copy Request Details")]
     [IsoXmlTag("UndrlygCpyReqDtls")]
     public ValueList<MandateCopy4> UnderlyingCopyRequestDetails { get; init; } = [];

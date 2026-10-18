@@ -12,13 +12,10 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pain;
 
-/// <summary>
-/// This record is an implementation of the pain.009.001.08 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// </summary>
+/// <inheritdoc cref="IMandateInitiationRequestV08"/>
 [IsoId("_R3P4fzEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Mandate Initiation Request V08")]
-public record MandateInitiationRequestV08 : IOuterRecord
+public partial record MandateInitiationRequestV08 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -45,23 +42,17 @@ public record MandateInitiationRequestV08 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Group Header.
-    /// </summary>
+    /// <inheritdoc cref="IMandateInitiationRequestV08.GroupHeader"/>
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader110 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Mandate.
-    /// </summary>
+    /// <inheritdoc cref="IMandateInitiationRequestV08.Mandate"/>
     [DisplayName("Mandate")]
     [IsoXmlTag("Mndt")]
     public ValueList<Mandate23> Mandate { get; init; } = [];
 
-    /// <summary>
-    /// Supplementary Data.
-    /// </summary>
+    /// <inheritdoc cref="IMandateInitiationRequestV08.SupplementaryData"/>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];

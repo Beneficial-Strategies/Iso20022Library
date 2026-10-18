@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Choice of format for an authentication channel.
-    /// </summary>
+    /// <inheritdoc cref="IAuthenticationChannel1Choice"/>
     [KnownType(typeof(AuthenticationChannel1Choice.Code))]
     [KnownType(typeof(AuthenticationChannel1Choice.Proprietary))]
     [JsonDerivedType(
@@ -21,5 +19,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_U4Y945dgEea1K6JAcAwoVg")]
     [DisplayName("Authentication Channel 1 Choice")]
-    public abstract record AuthenticationChannel1Choice_ { }
+    public abstract partial record AuthenticationChannel1Choice_ { }
 }

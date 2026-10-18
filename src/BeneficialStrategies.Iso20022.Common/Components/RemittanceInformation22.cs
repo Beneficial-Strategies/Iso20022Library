@@ -9,26 +9,20 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system.
-/// </summary>
+/// <inheritdoc cref="IRemittanceInformation22"/>
 [IsoId("_7ql4wTEsEe6GxLzpkVnWYg")]
 [Description(
     @"Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system."
 )]
 [DisplayName("Remittance Information22")]
-public record RemittanceInformation22
+public partial record RemittanceInformation22
 {
-    /// <summary>
-    /// Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system, in a structured form.
-    /// </summary>
+    /// <inheritdoc cref="IRemittanceInformation22.Structured"/>
     [DisplayName("Structured")]
     [IsoXmlTag("Strd")]
     public ValueList<StructuredRemittanceInformation18> Structured { get; init; } = [];
 
-    /// <summary>
-    /// Information supplied to enable the matching/reconciliation of an entry with the items that the payment is intended to settle, such as commercial invoices in an accounts' receivable system, in an unstructured form.
-    /// </summary>
+    /// <inheritdoc cref="IRemittanceInformation22.Unstructured"/>
     [DisplayName("Unstructured")]
     [IsoXmlTag("Ustrd")]
     public ValueList<IsoMax140Text> Unstructured { get; init; } = [];

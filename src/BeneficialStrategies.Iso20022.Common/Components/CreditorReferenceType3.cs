@@ -9,24 +9,18 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Specifies the type of creditor reference.
-/// </summary>
+/// <inheritdoc cref="ICreditorReferenceType3"/>
 [IsoId("_7xH-hTEsEe6GxLzpkVnWYg")]
 [Description(@"Specifies the type of creditor reference.")]
 [DisplayName("Creditor Reference Type3")]
-public record CreditorReferenceType3
+public partial record CreditorReferenceType3
 {
-    /// <summary>
-    /// Coded or proprietary format creditor reference type.
-    /// </summary>
+    /// <inheritdoc cref="ICreditorReferenceType3.CodeOrProprietary"/>
     [DisplayName("Code Or Proprietary")]
     [IsoXmlTag("CdOrPrtry")]
     public required CreditorReferenceType2Choice_ CodeOrProprietary { get; init; }
 
-    /// <summary>
-    /// Entity that assigns the credit reference type.
-    /// </summary>
+    /// <inheritdoc cref="ICreditorReferenceType3.Issuer"/>
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
     public IsoMax35Text? Issuer { get; init; }

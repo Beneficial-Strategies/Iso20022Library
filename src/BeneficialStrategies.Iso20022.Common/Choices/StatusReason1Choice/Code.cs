@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.StatusReason1Choice
 {
-    /// <summary>
-    /// Reason for the status in a coded form.
-    /// </summary>
+    /// <inheritdoc cref="ICode"/>
     [IsoId("_TPA3utp-Ed-ak6NoX_4Aeg_-1029924179")]
     [DisplayName("Code")]
-    public record Code : StatusReason1Choice_
+    public partial record Code : StatusReason1Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies the reason for a transaction to be rejected or returned by an instructed agent or somebody acting on behalf of an instructed agent.
-        /// </summary>
+        /// <inheritdoc cref="ICode.Value"/>
         [IsoXmlTag("Cd")]
         public required TransactionRejectReason2Code Value { get; init; }
     }

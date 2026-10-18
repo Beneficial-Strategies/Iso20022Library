@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Cryptographic Key1Choice.
-    /// </summary>
+    /// <inheritdoc cref="ICryptographicKey1Choice"/>
     [KnownType(typeof(CryptographicKey1Choice.ILPV4))]
     [KnownType(typeof(CryptographicKey1Choice.Signature))]
     [JsonDerivedType(typeof(CryptographicKey1Choice.ILPV4), nameof(CryptographicKey1Choice.ILPV4))]
@@ -18,5 +16,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("__lk0wD6wEe-QZYT2pcGFZw")]
     [DisplayName("Cryptographic Key1Choice")]
-    public abstract record CryptographicKey1Choice_ { }
+    public abstract partial record CryptographicKey1Choice_ { }
 }

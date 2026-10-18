@@ -8,19 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.ServiceLevel8Choice
 {
-    /// <summary>
-    /// Specifies a pre-agreed service or level of service between the parties, as published in an external service level code list.
-    /// </summary>
+    /// <inheritdoc cref="ICode"/>
     [IsoId("_QJa_zdp-Ed-ak6NoX_4Aeg_1912716972")]
     [DisplayName("Code")]
-    public record Code : ServiceLevel8Choice_
+    public partial record Code : ServiceLevel8Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies the external service level code in the format of character string with a maximum length of 4 characters.
-        /// The list of valid codes is an external code list published separately.
-        /// External code sets can be downloaded from www.iso20022.org.
-        /// </summary>
+        /// <inheritdoc cref="ICode.Value"/>
         [IsoXmlTag("Cd")]
         public required ExternalServiceLevel1Code Value { get; init; }
     }

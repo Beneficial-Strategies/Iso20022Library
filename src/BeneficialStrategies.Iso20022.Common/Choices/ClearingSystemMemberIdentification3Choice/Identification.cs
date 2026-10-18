@@ -8,19 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentification3Choice
 {
-    /// <summary>
-    /// Identification for a clearing system member, identified in the list of clearing system member identifications published externally.
-    /// </summary>
+    /// <inheritdoc cref="IIdentification"/>
     [IsoId("_TMehGtp-Ed-ak6NoX_4Aeg_-1564562062")]
     [DisplayName("Identification")]
-    public record Identification : ClearingSystemMemberIdentification3Choice_
+    public partial record Identification : ClearingSystemMemberIdentification3Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies the external clearing system member code in the format of character string with a maximum length of 35 characters.
-        /// The list of valid codes is an external code list published separately.
-        /// External code sets can be downloaded from www.iso20022.org.
-        /// </summary>
+        /// <inheritdoc cref="IIdentification.Value"/>
         [IsoXmlTag("Id")]
         public required ExternalClearingSystemMemberCode Value { get; init; }
     }

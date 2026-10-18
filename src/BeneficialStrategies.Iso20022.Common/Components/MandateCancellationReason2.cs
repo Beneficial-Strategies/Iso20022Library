@@ -9,30 +9,22 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Mandate Cancellation Reason2.
-/// </summary>
+/// <inheritdoc cref="IMandateCancellationReason2"/>
 [IsoId("_5w0E6TEyEe6g-ffJsqGiSA")]
 [DisplayName("Mandate Cancellation Reason2")]
-public record MandateCancellationReason2
+public partial record MandateCancellationReason2
 {
-    /// <summary>
-    /// Additional Information.
-    /// </summary>
+    /// <inheritdoc cref="IMandateCancellationReason2.AdditionalInformation"/>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
     public ValueList<IsoMax105Text> AdditionalInformation { get; init; } = [];
 
-    /// <summary>
-    /// Originator.
-    /// </summary>
+    /// <inheritdoc cref="IMandateCancellationReason2.Originator"/>
     [DisplayName("Originator")]
     [IsoXmlTag("Orgtr")]
     public PartyIdentification272? Originator { get; init; }
 
-    /// <summary>
-    /// Reason.
-    /// </summary>
+    /// <inheritdoc cref="IMandateCancellationReason2.Reason"/>
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
     public required MandateReason1Choice_ Reason { get; init; }

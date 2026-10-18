@@ -9,40 +9,30 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Identifies the mandate, which is being accepted.
-/// </summary>
+/// <inheritdoc cref="IMandateAcceptance7"/>
 [IsoId("_bOCIcdcZEeqRFcf2R4bPBw")]
 [DisplayName("Mandate Acceptance")]
-public record MandateAcceptance7
+public partial record MandateAcceptance7
 {
-    /// <summary>
-    /// Provides information on the original message.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAcceptance7.OriginalMessageInformation"/>
     [IsoId("_bPb2o9cZEeqRFcf2R4bPBw")]
     [DisplayName("Original Message Information")]
     [IsoXmlTag("OrgnlMsgInf")]
     public OriginalMessageInformation1? OriginalMessageInformation { get; init; }
 
-    /// <summary>
-    /// Provides detailed information on the acceptance result.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAcceptance7.AcceptanceResult"/>
     [IsoId("_bPb2pdcZEeqRFcf2R4bPBw")]
     [DisplayName("Acceptance Result")]
     [IsoXmlTag("AccptncRslt")]
     public required AcceptanceResult6 AcceptanceResult { get; init; }
 
-    /// <summary>
-    /// Provides the original mandate data.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAcceptance7.OriginalMandate"/>
     [IsoId("_bPb2p9cZEeqRFcf2R4bPBw")]
     [DisplayName("Original Mandate")]
     [IsoXmlTag("OrgnlMndt")]
     public OriginalMandate8Choice_? OriginalMandate { get; init; }
 
-    /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAcceptance7.SupplementaryData"/>
     [IsoId("_bPb2qdcZEeqRFcf2R4bPBw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]

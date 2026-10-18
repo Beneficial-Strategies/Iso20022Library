@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Provides document line information.
-/// </summary>
+/// <inheritdoc cref="IDocumentLineInformation1"/>
 [IsoId("_Cy5dt6JpEeKmspP9k_hIRQ")]
 [DisplayName("Document Line Information")]
-public record DocumentLineInformation1
+public partial record DocumentLineInformation1
 {
-    /// <summary>
-    /// Provides identification of the document line.
-    /// </summary>
+    /// <inheritdoc cref="IDocumentLineInformation1.Identification"/>
     [IsoId("_ULe6IKJpEeKmspP9k_hIRQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
@@ -26,9 +22,7 @@ public record DocumentLineInformation1
 
     // ID for the above is _ULe6IKJpEeKmspP9k_hIRQ
 
-    /// <summary>
-    /// Description associated with the document line.
-    /// </summary>
+    /// <inheritdoc cref="IDocumentLineInformation1.Description"/>
     [IsoId("_huX3YKJpEeKmspP9k_hIRQ")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
@@ -36,9 +30,7 @@ public record DocumentLineInformation1
     [StringLength(maximumLength: 2048, MinimumLength = 1)]
     public IsoMax2048Text? Description { get; init; }
 
-    /// <summary>
-    /// Provides details on the amounts of the document line.
-    /// </summary>
+    /// <inheritdoc cref="IDocumentLineInformation1.Amount"/>
     [IsoId("_oMvB8KJpEeKmspP9k_hIRQ")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]

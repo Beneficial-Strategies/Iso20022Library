@@ -1,0 +1,50 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Set of elements used to provide further details related to the duration of the mandate and the occurrence of the underlying transactions.
+/// </summary>
+[IsoId("_T28aYtp-Ed-ak6NoX_4Aeg_-1799899683")]
+public interface IMandateOccurrences1 : IIsoComponent
+{
+    /// <summary>
+    /// Identifies the underlying transaction sequence as either recurring or one-off.
+    /// </summary>
+    [IsoId("_T28aY9p-Ed-ak6NoX_4Aeg_1230892211")]
+    [DisplayName("Sequence Type")]
+    [IsoXmlTag("SeqTp")]
+    SequenceType2Code SequenceType { get; }
+
+    /// <summary>
+    /// Regularity with which instructions are to be created and processed.
+    /// </summary>
+    [IsoId("_T28aZNp-Ed-ak6NoX_4Aeg_-1799899530")]
+    [DisplayName("Frequency")]
+    [IsoXmlTag("Frqcy")]
+    Frequency1Code? Frequency { get; }
+
+    /// <summary>
+    /// Length of time for which the mandate remains valid.
+    /// </summary>
+    [IsoId("_T28aZdp-Ed-ak6NoX_4Aeg_-1799899282")]
+    [DisplayName("Duration")]
+    [IsoXmlTag("Drtn")]
+    IDatePeriodDetails1? Duration { get; }
+
+    /// <summary>
+    /// Date of the first collection of a direct debit as per the mandate.
+    /// </summary>
+    [IsoId("_T28aZtp-Ed-ak6NoX_4Aeg_-1799899591")]
+    [DisplayName("First Collection Date")]
+    [IsoXmlTag("FrstColltnDt")]
+    IsoISODate? FirstCollectionDate { get; }
+
+    /// <summary>
+    /// Date of the final collection of a direct debit as per the mandate.
+    /// </summary>
+    [IsoId("_T28aZ9p-Ed-ak6NoX_4Aeg_-1799899560")]
+    [DisplayName("Final Collection Date")]
+    [IsoXmlTag("FnlColltnDt")]
+    IsoISODate? FinalCollectionDate { get; }
+}

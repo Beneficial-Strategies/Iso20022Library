@@ -12,22 +12,13 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pacs;
 
-/// <summary>
-/// This record is an implementation of the pacs.010.001.04 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// Scope:
-/// The FinancialInstitutionDirectDebit message is sent by an exchange or clearing house, or a financial institution, directly or through another agent, to the DebtorAgent. It is used to instruct the DebtorAgent to move funds from one or more debtor(s) account(s) to one or more creditor(s), where both debtor and creditor are financial institutions.
-///
-/// Usage:
-/// The FinancialInstitutionDirectDebit message is exchanged between agents and can contain one or more financial institution direct debit instruction(s) for one or more creditor(s). The FinancialInstitutionDirectDebit message can be used in domestic and cross-border scenarios.
-///
-/// </summary>
+/// <inheritdoc cref="IFinancialInstitutionDirectDebitV04"/>
 [Description(
     @"Scope:|The FinancialInstitutionDirectDebit message is sent by an exchange or clearing house, or a financial institution, directly or through another agent, to the DebtorAgent. It is used to instruct the DebtorAgent to move funds from one or more debtor(s) account(s) to one or more creditor(s), where both debtor and creditor are financial institutions.||Usage:|The FinancialInstitutionDirectDebit message is exchanged between agents and can contain one or more financial institution direct debit instruction(s) for one or more creditor(s). The FinancialInstitutionDirectDebit message can be used in domestic and cross-border scenarios.|"
 )]
 [IsoId("_LwDQLcP_Eemsic1bQcEtLA")]
 [DisplayName("Financial Institution Direct Debit V")]
-public record FinancialInstitutionDirectDebitV04 : IOuterRecord
+public partial record FinancialInstitutionDirectDebitV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -54,25 +45,19 @@ public record FinancialInstitutionDirectDebitV04 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Common characteristics for all individual transactions included in the message.
-    /// </summary>
+    /// <inheritdoc cref="IFinancialInstitutionDirectDebitV04.GroupHeader"/>
     [IsoId("_LwDQNcP_Eemsic1bQcEtLA")]
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader92 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Characteristics that apply to the credit side of the payment transaction(s) included in the message.
-    /// </summary>
+    /// <inheritdoc cref="IFinancialInstitutionDirectDebitV04.CreditInstruction"/>
     [IsoId("_LwDQN8P_Eemsic1bQcEtLA")]
     [DisplayName("Credit Instruction")]
     [IsoXmlTag("CdtInstr")]
     public required CreditTransferTransaction47 CreditInstruction { get; init; }
 
-    /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
+    /// <inheritdoc cref="IFinancialInstitutionDirectDebitV04.SupplementaryData"/>
     [IsoId("_LwDQOcP_Eemsic1bQcEtLA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]

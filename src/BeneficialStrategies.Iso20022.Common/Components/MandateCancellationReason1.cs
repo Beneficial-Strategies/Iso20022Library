@@ -9,32 +9,24 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Provides further details on the reason of the mandate cancellation request.
-/// </summary>
+/// <inheritdoc cref="IMandateCancellationReason1"/>
 [IsoId("_HSwZ2249EeiU9cctagi5ow")]
 [DisplayName("Mandate Cancellation Reason")]
-public record MandateCancellationReason1
+public partial record MandateCancellationReason1
 {
-    /// <summary>
-    /// Party that issues the cancellation request.
-    /// </summary>
+    /// <inheritdoc cref="IMandateCancellationReason1.Originator"/>
     [IsoId("_Hfkt0249EeiU9cctagi5ow")]
     [DisplayName("Originator")]
     [IsoXmlTag("Orgtr")]
     public PartyIdentification135? Originator { get; init; }
 
-    /// <summary>
-    /// Specifies the reason for the cancellation request.
-    /// </summary>
+    /// <inheritdoc cref="IMandateCancellationReason1.Reason"/>
     [IsoId("_Hfkt1W49EeiU9cctagi5ow")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
     public required MandateReason1Choice_ Reason { get; init; }
 
-    /// <summary>
-    /// Further details on the cancellation request reason.
-    /// </summary>
+    /// <inheritdoc cref="IMandateCancellationReason1.AdditionalInformation"/>
     [IsoId("_Hfkt1249EeiU9cctagi5ow")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]

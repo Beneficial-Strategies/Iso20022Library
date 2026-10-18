@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Set of characteristics shared by all individual transactions included in the message.
-/// </summary>
+/// <inheritdoc cref="IGroupHeader3"/>
 [IsoId("_Puv189p-Ed-ak6NoX_4Aeg_1445763661")]
 [DisplayName("Group Header")]
-public record GroupHeader3
+public partial record GroupHeader3
 {
-    /// <summary>
-    /// Point to point reference assigned by the instructing party and sent to the next party in the chain to unambiguously identify the message.||Usage: The instructing party has to make sure that &apos;MessageIdentification&apos; is unique per instructed party for a pre-agreed period.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader3.MessageIdentification"/>
     [IsoId("_Puv19Np-Ed-ak6NoX_4Aeg_1445763680")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
@@ -26,18 +22,14 @@ public record GroupHeader3
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public required IsoMax35Text MessageIdentification { get; init; }
 
-    /// <summary>
-    /// Date and time at which a (group of) payment instruction(s) was created by the instructing party.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader3.CreationDateTime"/>
     [IsoId("_Puv19dp-Ed-ak6NoX_4Aeg_1445763799")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
     public required IsoISODateTime CreationDateTime { get; init; }
 
-    /// <summary>
-    /// User identification or any user key that allows to check if the initiating party is allowed to initiate transactions from the account specified in the initiation.||Usage: the content is not of a technical nature, but reflects the organisational structure at the initiating side. The authorisation element can typically be used in relay scenarios, payment initiations, payment returns or payment reversals that are initiated on behalf of a different party than the initiating party.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader3.Authorisation"/>
     [IsoId("_Puv19tp-Ed-ak6NoX_4Aeg_1445764082")]
     [DisplayName("Authorisation")]
     [IsoXmlTag("Authstn")]
@@ -46,77 +38,59 @@ public record GroupHeader3
     [MaxLength(2)]
     public SimpleValueList<string> Authorisation { get; init; } = [];
 
-    /// <summary>
-    /// Identifies whether a single entry per individual transaction or a batch entry for the sum of the amounts of all transactions in the message is requested.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader3.BatchBooking"/>
     [IsoId("_Puv199p-Ed-ak6NoX_4Aeg_1445764124")]
     [DisplayName("Batch Booking")]
     [IsoXmlTag("BtchBookg")]
     [IsoSimpleType(IsoSimpleType.BatchBookingIndicator)]
     public IsoBatchBookingIndicator? BatchBooking { get; init; }
 
-    /// <summary>
-    /// Number of individual transactions contained in the message.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader3.NumberOfTransactions"/>
     [IsoId("_Puv1-Np-Ed-ak6NoX_4Aeg_1445764159")]
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     public required IsoMax15NumericText NumberOfTransactions { get; init; }
 
-    /// <summary>
-    /// Total of all individual amounts included in the message, irrespective of currencies.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader3.ControlSum"/>
     [IsoId("_Puv1-dp-Ed-ak6NoX_4Aeg_-1932144351")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     public IsoDecimalNumber? ControlSum { get; init; }
 
-    /// <summary>
-    /// Total amount of money transferred between instructing agent and instructed agent.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader3.TotalInterbankSettlementAmount"/>
     [IsoId("_Puv1-tp-Ed-ak6NoX_4Aeg_1445764177")]
     [DisplayName("Total Interbank Settlement Amount")]
     [IsoXmlTag("TtlIntrBkSttlmAmt")]
     public CurrencyAndAmount? TotalInterbankSettlementAmount { get; init; }
 
-    /// <summary>
-    /// Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader3.InterbankSettlementDate"/>
     [IsoId("_Pu5m8Np-Ed-ak6NoX_4Aeg_1445764262")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
     public IsoISODate? InterbankSettlementDate { get; init; }
 
-    /// <summary>
-    /// Specifies the details on how the settlement of the transaction(s) between the instructing agent and the instructed agent is completed.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader3.SettlementInformation"/>
     [IsoId("_Pu5m8dp-Ed-ak6NoX_4Aeg_-1429748960")]
     [DisplayName("Settlement Information")]
     [IsoXmlTag("SttlmInf")]
     public required SettlementInformation2 SettlementInformation { get; init; }
 
-    /// <summary>
-    /// Set of elements used to further specify the type of transaction.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader3.PaymentTypeInformation"/>
     [IsoId("_Pu5m8tp-Ed-ak6NoX_4Aeg_-454582771")]
     [DisplayName("Payment Type Information")]
     [IsoXmlTag("PmtTpInf")]
     public PaymentTypeInformation4? PaymentTypeInformation { get; init; }
 
-    /// <summary>
-    /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader3.InstructingAgent"/>
     [IsoId("_Pu5m89p-Ed-ak6NoX_4Aeg_1445764610")]
     [DisplayName("Instructing Agent")]
     [IsoXmlTag("InstgAgt")]
     public BranchAndFinancialInstitutionIdentification3? InstructingAgent { get; init; }
 
-    /// <summary>
-    /// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader3.InstructedAgent"/>
     [IsoId("_Pu5m9Np-Ed-ak6NoX_4Aeg_1445764341")]
     [DisplayName("Instructed Agent")]
     [IsoXmlTag("InstdAgt")]

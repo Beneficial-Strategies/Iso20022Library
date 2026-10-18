@@ -1,0 +1,13 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+public partial record PaymentTransaction42 : IPaymentTransaction42
+{
+    IEnumerable<IPaymentReversalReason7> IPaymentTransaction42.ReversalReasonInformation => ReversalReasonInformation;
+    IOriginalTransactionReference16? IPaymentTransaction42.OriginalTransactionReference => OriginalTransactionReference;
+    IEnumerable<ISupplementaryData1> IPaymentTransaction42.SupplementaryData => SupplementaryData;
+}

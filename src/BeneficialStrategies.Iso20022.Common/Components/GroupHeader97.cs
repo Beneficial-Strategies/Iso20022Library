@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Set of characteristics shared by all individual transactions included in the message.
-/// </summary>
+/// <inheritdoc cref="IGroupHeader97"/>
 [IsoId("_gh2ygdcZEeqRFcf2R4bPBw")]
 [DisplayName("Group Header")]
-public record GroupHeader97
+public partial record GroupHeader97
 {
-    /// <summary>
-    /// Point to point reference, as assigned by the instructing party, and sent to the next party in the chain to unambiguously identify the message.|Usage: The instructing party has to make sure that MessageIdentification is unique per instructed party for a pre-agreed period.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader97.MessageIdentification"/>
     [IsoId("_gjct99cZEeqRFcf2R4bPBw")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
@@ -26,18 +22,14 @@ public record GroupHeader97
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public required IsoMax35Text MessageIdentification { get; init; }
 
-    /// <summary>
-    /// Date and time at which the message was created.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader97.CreationDateTime"/>
     [IsoId("_gjct-dcZEeqRFcf2R4bPBw")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
     public required IsoISODateTime CreationDateTime { get; init; }
 
-    /// <summary>
-    /// User identification or any user key to be used to check whether the initiating party is allowed to initiate transactions from the account specified in the message.||Usage: The content is not of a technical nature, but reflects the organisational structure at the initiating side.|The authorisation element can typically be used in relay scenarios, payment initiations, payment returns or payment reversals that are initiated on behalf of a party different from the initiating party.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader97.Authorisation"/>
     [IsoId("_gjct-9cZEeqRFcf2R4bPBw")]
     [DisplayName("Authorisation")]
     [IsoXmlTag("Authstn")]
@@ -45,78 +37,60 @@ public record GroupHeader97
     [MaxLength(2)]
     public ValueList<Authorisation1Choice_> Authorisation { get; init; } = [];
 
-    /// <summary>
-    /// Identifies whether a single entry per individual transaction or a batch entry for the sum of the amounts of all transactions within the group of a message is requested.|Usage: Batch booking is used to request and not order a possible batch booking.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader97.BatchBooking"/>
     [IsoId("_gjct_dcZEeqRFcf2R4bPBw")]
     [DisplayName("Batch Booking")]
     [IsoXmlTag("BtchBookg")]
     [IsoSimpleType(IsoSimpleType.BatchBookingIndicator)]
     public IsoBatchBookingIndicator? BatchBooking { get; init; }
 
-    /// <summary>
-    /// Number of individual transactions contained in the message.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader97.NumberOfTransactions"/>
     [IsoId("_gjct_9cZEeqRFcf2R4bPBw")]
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     public required IsoMax15NumericText NumberOfTransactions { get; init; }
 
-    /// <summary>
-    /// Total of all individual amounts included in the message, irrespective of currencies.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader97.ControlSum"/>
     [IsoId("_gjcuAdcZEeqRFcf2R4bPBw")]
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     public IsoDecimalNumber? ControlSum { get; init; }
 
-    /// <summary>
-    /// Indicates whether the reversal applies to the whole group of transactions or to individual transactions within the original group.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader97.GroupReversal"/>
     [IsoId("_gjcuA9cZEeqRFcf2R4bPBw")]
     [DisplayName("Group Reversal")]
     [IsoXmlTag("GrpRvsl")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     public IsoTrueFalseIndicator? GroupReversal { get; init; }
 
-    /// <summary>
-    /// Total amount of money moved between the instructing agent and the instructed agent in the reversal message.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader97.TotalReversedInterbankSettlementAmount"/>
     [IsoId("_gjcuBdcZEeqRFcf2R4bPBw")]
     [DisplayName("Total Reversed Interbank Settlement Amount")]
     [IsoXmlTag("TtlRvsdIntrBkSttlmAmt")]
     public ActiveCurrencyAndAmount? TotalReversedInterbankSettlementAmount { get; init; }
 
-    /// <summary>
-    /// Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader97.InterbankSettlementDate"/>
     [IsoId("_gjcuB9cZEeqRFcf2R4bPBw")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
     public IsoISODate? InterbankSettlementDate { get; init; }
 
-    /// <summary>
-    /// Specifies the details on how the settlement of the transaction(s) between the instructing agent and the instructed agent is completed.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader97.SettlementInformation"/>
     [IsoId("_gjcuCdcZEeqRFcf2R4bPBw")]
     [DisplayName("Settlement Information")]
     [IsoXmlTag("SttlmInf")]
     public required SettlementInstruction11 SettlementInformation { get; init; }
 
-    /// <summary>
-    /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).||Usage: The instructing agent is the party sending the reversal message and not the party that sent the original instruction that is being reversed.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader97.InstructingAgent"/>
     [IsoId("_gjcuC9cZEeqRFcf2R4bPBw")]
     [DisplayName("Instructing Agent")]
     [IsoXmlTag("InstgAgt")]
     public BranchAndFinancialInstitutionIdentification6? InstructingAgent { get; init; }
 
-    /// <summary>
-    /// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).||Usage: The instructed agent is the party receiving the reversal message and not the party that received the original instruction that is being reversed.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader97.InstructedAgent"/>
     [IsoId("_gjcuDdcZEeqRFcf2R4bPBw")]
     [DisplayName("Instructed Agent")]
     [IsoXmlTag("InstdAgt")]

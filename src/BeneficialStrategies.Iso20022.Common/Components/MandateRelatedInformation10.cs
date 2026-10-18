@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Provides further details related to a direct debit mandate signed between the creditor and the debtor.
-/// </summary>
+/// <inheritdoc cref="IMandateRelatedInformation10"/>
 [IsoId("_m-35kR72EeSxevWRRWxNAg")]
 [DisplayName("Mandate Related Information")]
-public record MandateRelatedInformation10
+public partial record MandateRelatedInformation10
 {
-    /// <summary>
-    /// Unique identification, as assigned by the creditor, to unambiguously identify the mandate.
-    /// </summary>
+    /// <inheritdoc cref="IMandateRelatedInformation10.MandateIdentification"/>
     [IsoId("_nP8bdx72EeSxevWRRWxNAg")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
@@ -26,35 +22,27 @@ public record MandateRelatedInformation10
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? MandateIdentification { get; init; }
 
-    /// <summary>
-    /// Date on which the direct debit mandate has been signed by the debtor.
-    /// </summary>
+    /// <inheritdoc cref="IMandateRelatedInformation10.DateOfSignature"/>
     [IsoId("_nP8beR72EeSxevWRRWxNAg")]
     [DisplayName("Date Of Signature")]
     [IsoXmlTag("DtOfSgntr")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
     public IsoISODate? DateOfSignature { get; init; }
 
-    /// <summary>
-    /// Indicator notifying whether the underlying mandate is amended or not.
-    /// </summary>
+    /// <inheritdoc cref="IMandateRelatedInformation10.AmendmentIndicator"/>
     [IsoId("_nP8bex72EeSxevWRRWxNAg")]
     [DisplayName("Amendment Indicator")]
     [IsoXmlTag("AmdmntInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     public IsoTrueFalseIndicator? AmendmentIndicator { get; init; }
 
-    /// <summary>
-    /// List of mandate elements that have been modified.
-    /// </summary>
+    /// <inheritdoc cref="IMandateRelatedInformation10.AmendmentInformationDetails"/>
     [IsoId("_nP8bfR72EeSxevWRRWxNAg")]
     [DisplayName("Amendment Information Details")]
     [IsoXmlTag("AmdmntInfDtls")]
     public AmendmentInformationDetails10? AmendmentInformationDetails { get; init; }
 
-    /// <summary>
-    /// Additional security provisions, such as a digital signature, as provided by the debtor.
-    /// </summary>
+    /// <inheritdoc cref="IMandateRelatedInformation10.ElectronicSignature"/>
     [IsoId("_nP8bfx72EeSxevWRRWxNAg")]
     [DisplayName("Electronic Signature")]
     [IsoXmlTag("ElctrncSgntr")]
@@ -62,35 +50,27 @@ public record MandateRelatedInformation10
     [StringLength(maximumLength: 1025, MinimumLength = 1)]
     public IsoMax1025Text? ElectronicSignature { get; init; }
 
-    /// <summary>
-    /// Date of the first collection of a direct debit as per the mandate.
-    /// </summary>
+    /// <inheritdoc cref="IMandateRelatedInformation10.FirstCollectionDate"/>
     [IsoId("_nP8bgR72EeSxevWRRWxNAg")]
     [DisplayName("First Collection Date")]
     [IsoXmlTag("FrstColltnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
     public IsoISODate? FirstCollectionDate { get; init; }
 
-    /// <summary>
-    /// Date of the final collection of a direct debit as per the mandate.
-    /// </summary>
+    /// <inheritdoc cref="IMandateRelatedInformation10.FinalCollectionDate"/>
     [IsoId("_nP8bgx72EeSxevWRRWxNAg")]
     [DisplayName("Final Collection Date")]
     [IsoXmlTag("FnlColltnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
     public IsoISODate? FinalCollectionDate { get; init; }
 
-    /// <summary>
-    /// Regularity with which direct debit instructions are to be created and processed.
-    /// </summary>
+    /// <inheritdoc cref="IMandateRelatedInformation10.Frequency"/>
     [IsoId("_nP8bhR72EeSxevWRRWxNAg")]
     [DisplayName("Frequency")]
     [IsoXmlTag("Frqcy")]
     public Frequency21Choice_? Frequency { get; init; }
 
-    /// <summary>
-    /// Reason for the direct debit mandate to allow the user to distinguish between different mandates for the same creditor.
-    /// </summary>
+    /// <inheritdoc cref="IMandateRelatedInformation10.Reason"/>
     [IsoId("_j8KhEB73EeSxevWRRWxNAg")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]

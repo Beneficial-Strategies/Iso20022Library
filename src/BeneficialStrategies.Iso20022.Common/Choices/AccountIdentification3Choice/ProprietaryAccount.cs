@@ -8,16 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification3Choice
 {
-    /// <summary>
-    /// Account number used by financial institutions in individual countries to identify an account of a customer, but not necessarily the bank and branch of the financial institution in which the account is held.
-    /// </summary>
+    /// <inheritdoc cref="IProprietaryAccount"/>
     [IsoId("_PdwzoNp-Ed-ak6NoX_4Aeg_-1485477198")]
     [DisplayName("Proprietary Account")]
-    public record ProprietaryAccount : AccountIdentification3Choice_
+    public partial record ProprietaryAccount : AccountIdentification3Choice_
     {
-        /// <summary>
-        /// Name or number assigned by an entity to enable recognition of that entity, eg, account identifier.
-        /// </summary>
+        /// <inheritdoc cref="IProprietaryAccount.Identification"/>
         [IsoId("_P_u4QNp-Ed-ak6NoX_4Aeg_618188642")]
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]

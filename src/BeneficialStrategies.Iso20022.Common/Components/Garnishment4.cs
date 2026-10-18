@@ -9,66 +9,48 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Provides remittance information about a payment for garnishment-related purposes.
-/// </summary>
+/// <inheritdoc cref="IGarnishment4"/>
 [IsoId("_v9i0ETEyEe6g-ffJsqGiSA")]
 [Description(@"Provides remittance information about a payment for garnishment-related purposes.")]
 [DisplayName("Garnishment4")]
-public record Garnishment4
+public partial record Garnishment4
 {
-    /// <summary>
-    /// Date of payment which garnishment was taken from.
-    /// </summary>
+    /// <inheritdoc cref="IGarnishment4.Date"/>
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     public IsoISODate? Date { get; init; }
 
-    /// <summary>
-    /// Indicates if the employment of the person to whom the garnishment applies (that is, the ultimate debtor) has been terminated.
-    /// </summary>
+    /// <inheritdoc cref="IGarnishment4.EmployeeTerminationIndicator"/>
     [DisplayName("Employee Termination Indicator")]
     [IsoXmlTag("MplyeeTermntnInd")]
     public IsoTrueFalseIndicator? EmployeeTerminationIndicator { get; init; }
 
-    /// <summary>
-    /// Indicates if the person to whom the garnishment applies (that is, the ultimate debtor) has family medical insurance coverage available.
-    /// </summary>
+    /// <inheritdoc cref="IGarnishment4.FamilyMedicalInsuranceIndicator"/>
     [DisplayName("Family Medical Insurance Indicator")]
     [IsoXmlTag("FmlyMdclInsrncInd")]
     public IsoTrueFalseIndicator? FamilyMedicalInsuranceIndicator { get; init; }
 
-    /// <summary>
-    /// Ultimate party that owes an amount of money to the (ultimate) creditor, in this case, to the garnisher.
-    /// </summary>
+    /// <inheritdoc cref="IGarnishment4.Garnishee"/>
     [DisplayName("Garnishee")]
     [IsoXmlTag("Grnshee")]
     public PartyIdentification272? Garnishee { get; init; }
 
-    /// <summary>
-    /// Party on the credit side of the transaction who administers the garnishment on behalf of the ultimate beneficiary.
-    /// </summary>
+    /// <inheritdoc cref="IGarnishment4.GarnishmentAdministrator"/>
     [DisplayName("Garnishment Administrator")]
     [IsoXmlTag("GrnshmtAdmstr")]
     public PartyIdentification272? GarnishmentAdministrator { get; init; }
 
-    /// <summary>
-    /// Reference information that is specific to the agency receiving the garnishment.
-    /// </summary>
+    /// <inheritdoc cref="IGarnishment4.ReferenceNumber"/>
     [DisplayName("Reference Number")]
     [IsoXmlTag("RefNb")]
     public IsoMax140Text? ReferenceNumber { get; init; }
 
-    /// <summary>
-    /// Amount of money remitted for the referred document.
-    /// </summary>
+    /// <inheritdoc cref="IGarnishment4.RemittedAmount"/>
     [DisplayName("Remitted Amount")]
     [IsoXmlTag("RmtdAmt")]
     public ActiveOrHistoricCurrencyAndAmount? RemittedAmount { get; init; }
 
-    /// <summary>
-    /// Specifies the type of garnishment.
-    /// </summary>
+    /// <inheritdoc cref="IGarnishment4.Type"/>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     public required GarnishmentType1 Type { get; init; }

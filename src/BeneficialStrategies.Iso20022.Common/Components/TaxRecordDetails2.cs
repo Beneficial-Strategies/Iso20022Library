@@ -9,24 +9,18 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Provides information on the individual tax amount(s) per period of the tax record.
-/// </summary>
+/// <inheritdoc cref="ITaxRecordDetails2"/>
 [IsoId("_yv3kC69fEeen6L7OP7lnvg")]
 [DisplayName("Tax Record Details")]
-public record TaxRecordDetails2
+public partial record TaxRecordDetails2
 {
-    /// <summary>
-    /// Set of elements used to provide details on the period of time related to the tax payment.
-    /// </summary>
+    /// <inheritdoc cref="ITaxRecordDetails2.Period"/>
     [IsoId("_zCdv4a9fEeen6L7OP7lnvg")]
     [DisplayName("Period")]
     [IsoXmlTag("Prd")]
     public TaxPeriod2? Period { get; init; }
 
-    /// <summary>
-    /// Underlying tax amount related to the specified period.
-    /// </summary>
+    /// <inheritdoc cref="ITaxRecordDetails2.Amount"/>
     [IsoId("_zCdv469fEeen6L7OP7lnvg")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]

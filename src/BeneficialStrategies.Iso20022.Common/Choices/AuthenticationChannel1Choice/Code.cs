@@ -8,18 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.AuthenticationChannel1Choice
 {
-    /// <summary>
-    /// Authentication channel expressed as an external ISO 20022 code.
-    /// </summary>
+    /// <inheritdoc cref="ICode"/>
     [IsoId("_U4Y95ZdgEea1K6JAcAwoVg")]
     [DisplayName("Code")]
-    public record Code : AuthenticationChannel1Choice_
+    public partial record Code : AuthenticationChannel1Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies the transaction authentication channel, as published in an external authentication channel code set.
-        /// External code sets can be downloaded from www.iso20022.org.
-        /// </summary>
+        /// <inheritdoc cref="ICode.Value"/>
         [IsoXmlTag("Cd")]
         public required ExternalAuthenticationChannel1Code Value { get; init; }
     }

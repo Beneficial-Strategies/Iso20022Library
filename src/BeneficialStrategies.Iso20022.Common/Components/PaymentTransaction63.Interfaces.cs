@@ -1,0 +1,17 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+public partial record PaymentTransaction63 : IPaymentTransaction63
+{
+    IOriginalGroupInformation3? IPaymentTransaction63.OriginalGroupInformation => OriginalGroupInformation;
+    IEnumerable<IStatusReasonInformation9> IPaymentTransaction63.StatusReasonInformation => StatusReasonInformation;
+    IEnumerable<ICharges2> IPaymentTransaction63.ChargesInformation => ChargesInformation;
+    IBranchAndFinancialInstitutionIdentification5? IPaymentTransaction63.InstructingAgent => InstructingAgent;
+    IBranchAndFinancialInstitutionIdentification5? IPaymentTransaction63.InstructedAgent => InstructedAgent;
+    IOriginalTransactionReference22? IPaymentTransaction63.OriginalTransactionReference => OriginalTransactionReference;
+    IEnumerable<ISupplementaryData1> IPaymentTransaction63.SupplementaryData => SupplementaryData;
+}

@@ -9,113 +9,85 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Provides further details specific to the individual direct debit transaction(s) included in the message.
-/// </summary>
+/// <inheritdoc cref="IDirectDebitTransactionInformation27"/>
 [IsoId("_dZxnhdcZEeqRFcf2R4bPBw")]
 [DisplayName("Direct Debit Transaction Information")]
-public record DirectDebitTransactionInformation27
+public partial record DirectDebitTransactionInformation27
 {
-    /// <summary>
-    /// References used for a payment instruction.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation27.PaymentIdentification"/>
     [IsoId("_dc5Ms9cZEeqRFcf2R4bPBw")]
     [DisplayName("Payment Identification")]
     [IsoXmlTag("PmtId")]
     public required PaymentIdentification13 PaymentIdentification { get; init; }
 
-    /// <summary>
-    /// Specifies the type of transaction.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation27.PaymentTypeInformation"/>
     [IsoId("_dc5MtdcZEeqRFcf2R4bPBw")]
     [DisplayName("Payment Type Information")]
     [IsoXmlTag("PmtTpInf")]
     public PaymentTypeInformation28? PaymentTypeInformation { get; init; }
 
-    /// <summary>
-    /// Amount of money moved between the instructing agent and the instructed agent.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation27.InterbankSettlementAmount"/>
     [IsoId("_dc5Mt9cZEeqRFcf2R4bPBw")]
     [DisplayName("Interbank Settlement Amount")]
     [IsoXmlTag("IntrBkSttlmAmt")]
     public required ActiveCurrencyAndAmount InterbankSettlementAmount { get; init; }
 
-    /// <summary>
-    /// Date on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation27.InterbankSettlementDate"/>
     [IsoId("_dc5MudcZEeqRFcf2R4bPBw")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
     public IsoISODate? InterbankSettlementDate { get; init; }
 
-    /// <summary>
-    /// Indicator of the urgency or order of importance that the instructing party would like the instructed party to apply to the processing of the settlement instruction.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation27.SettlementPriority"/>
     [IsoId("_dc5Mu9cZEeqRFcf2R4bPBw")]
     [DisplayName("Settlement Priority")]
     [IsoXmlTag("SttlmPrty")]
     public Priority3Code? SettlementPriority { get; init; }
 
-    /// <summary>
-    /// Provides information on the occurred settlement time(s) of the payment transaction.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation27.SettlementTimeIndication"/>
     [IsoId("_dc5MvdcZEeqRFcf2R4bPBw")]
     [DisplayName("Settlement Time Indication")]
     [IsoXmlTag("SttlmTmIndctn")]
     public SettlementDateTimeIndication1? SettlementTimeIndication { get; init; }
 
-    /// <summary>
-    /// Provides information on the requested settlement time(s) of the payment instruction.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation27.SettlementTimeRequest"/>
     [IsoId("_dc5Mv9cZEeqRFcf2R4bPBw")]
     [DisplayName("Settlement Time Request")]
     [IsoXmlTag("SttlmTmReq")]
     public SettlementTimeRequest2? SettlementTimeRequest { get; init; }
 
-    /// <summary>
-    /// Ultimate financial institution that owes an amount of money to the (ultimate) institutional creditor.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation27.UltimateDebtor"/>
     [IsoId("_dc5MwdcZEeqRFcf2R4bPBw")]
     [DisplayName("Ultimate Debtor")]
     [IsoXmlTag("UltmtDbtr")]
     public BranchAndFinancialInstitutionIdentification6? UltimateDebtor { get; init; }
 
-    /// <summary>
-    /// Financial institution that owes an amount of money to the (ultimate) financial institutional creditor.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation27.Debtor"/>
     [IsoId("_dc5Mw9cZEeqRFcf2R4bPBw")]
     [DisplayName("Debtor")]
     [IsoXmlTag("Dbtr")]
     public required BranchAndFinancialInstitutionIdentification6 Debtor { get; init; }
 
-    /// <summary>
-    /// Unambiguous identification of the account of the debtor to which a debit entry will be made as a result of the transaction.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation27.DebtorAccount"/>
     [IsoId("_dc5MxdcZEeqRFcf2R4bPBw")]
     [DisplayName("Debtor Account")]
     [IsoXmlTag("DbtrAcct")]
     public CashAccount40? DebtorAccount { get; init; }
 
-    /// <summary>
-    /// Financial institution servicing an account for the debtor.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation27.DebtorAgent"/>
     [IsoId("_dc5Mx9cZEeqRFcf2R4bPBw")]
     [DisplayName("Debtor Agent")]
     [IsoXmlTag("DbtrAgt")]
     public BranchAndFinancialInstitutionIdentification6? DebtorAgent { get; init; }
 
-    /// <summary>
-    /// Unambiguous identification of the account of the debtor agent at its servicing agent in the payment chain.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation27.DebtorAgentAccount"/>
     [IsoId("_dc5MydcZEeqRFcf2R4bPBw")]
     [DisplayName("Debtor Agent Account")]
     [IsoXmlTag("DbtrAgtAcct")]
     public CashAccount40? DebtorAgentAccount { get; init; }
 
-    /// <summary>
-    /// Further information related to the processing of the payment instruction, that may need to be acted upon by the debtor agent, depending on agreement between debtor and the debtor agent.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation27.InstructionForDebtorAgent"/>
     [IsoId("_dc5My9cZEeqRFcf2R4bPBw")]
     [DisplayName("Instruction For Debtor Agent")]
     [IsoXmlTag("InstrForDbtrAgt")]
@@ -123,17 +95,13 @@ public record DirectDebitTransactionInformation27
     [StringLength(maximumLength: 210, MinimumLength = 1)]
     public IsoMax210Text? InstructionForDebtorAgent { get; init; }
 
-    /// <summary>
-    /// Underlying reason for the payment transaction.|Usage: Purpose is used by the end-customers, that is initiating party, (ultimate) debtor, (ultimate) creditor to provide information concerning the nature of the payment. Purpose is a content element, which is not used for processing by any of the agents involved in the payment chain.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation27.Purpose"/>
     [IsoId("_dc5MzdcZEeqRFcf2R4bPBw")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
     public Purpose2Choice_? Purpose { get; init; }
 
-    /// <summary>
-    /// Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts&apos; receivable system.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation27.RemittanceInformation"/>
     [IsoId("_dc5Mz9cZEeqRFcf2R4bPBw")]
     [DisplayName("Remittance Information")]
     [IsoXmlTag("RmtInf")]

@@ -1,0 +1,32 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.pacs;
+
+/// <summary>
+/// This record is an implementation of the pacs.008.001.13 ISO standard message type.
+/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// </summary>
+[IsoId("_ZwdzcTrDEe-thIfLZ94a1w")]
+public interface IFIToFICustomerCreditTransferV13 : IOuterRecord
+{
+    /// <summary>
+    /// Credit Transfer Transaction Information.
+    /// </summary>
+    [DisplayName("Credit Transfer Transaction Information")]
+    [IsoXmlTag("CdtTrfTxInf")]
+    IEnumerable<ICreditTransferTransaction70> CreditTransferTransactionInformation { get; }
+
+    /// <summary>
+    /// Group Header.
+    /// </summary>
+    [DisplayName("Group Header")]
+    [IsoXmlTag("GrpHdr")]
+    IGroupHeader131 GroupHeader { get; }
+
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    IEnumerable<ISupplementaryData1> SupplementaryData { get; }
+}

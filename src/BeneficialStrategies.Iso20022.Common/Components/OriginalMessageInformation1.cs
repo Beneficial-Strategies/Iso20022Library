@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Unique identification, as assigned by the original instructing party, to unambiguously identify the message.
-/// </summary>
+/// <inheritdoc cref="IOriginalMessageInformation1"/>
 [IsoId("_PgJZVdp-Ed-ak6NoX_4Aeg_1129957204")]
 [DisplayName("Original Message Information")]
-public record OriginalMessageInformation1
+public partial record OriginalMessageInformation1
 {
-    /// <summary>
-    /// Point to point reference, as assigned by the original initiating party, to unambiguously identify the original mandate request message.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalMessageInformation1.MessageIdentification"/>
     [IsoId("_PgJZVtp-Ed-ak6NoX_4Aeg_1215844112")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
@@ -26,9 +22,7 @@ public record OriginalMessageInformation1
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public required IsoMax35Text MessageIdentification { get; init; }
 
-    /// <summary>
-    /// Specifies the message name identifier to which the message refers.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalMessageInformation1.MessageNameIdentification"/>
     [IsoId("_PgJZV9p-Ed-ak6NoX_4Aeg_1215844113")]
     [DisplayName("Message Name Identification")]
     [IsoXmlTag("MsgNmId")]
@@ -36,9 +30,7 @@ public record OriginalMessageInformation1
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public required IsoMax35Text MessageNameIdentification { get; init; }
 
-    /// <summary>
-    /// Date and time at which the message was created.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalMessageInformation1.CreationDateTime"/>
     [IsoId("_PgTKQNp-Ed-ak6NoX_4Aeg_1215844134")]
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]

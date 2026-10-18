@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Details about the entity involved in the tax paid or to be paid.
-/// </summary>
+/// <inheritdoc cref="ITaxParty1"/>
 [IsoId("_PdBMxtp-Ed-ak6NoX_4Aeg_-1937885674")]
 [DisplayName("Tax Party")]
-public record TaxParty1
+public partial record TaxParty1
 {
-    /// <summary>
-    /// Tax identification number of the creditor.
-    /// </summary>
+    /// <inheritdoc cref="ITaxParty1.TaxIdentification"/>
     [IsoId("_PdBMx9p-Ed-ak6NoX_4Aeg_-1937885612")]
     [DisplayName("Tax Identification")]
     [IsoXmlTag("TaxId")]
@@ -26,9 +22,7 @@ public record TaxParty1
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? TaxIdentification { get; init; }
 
-    /// <summary>
-    /// Unique identification, as assigned by an organisation, to unambiguously identify a party.
-    /// </summary>
+    /// <inheritdoc cref="ITaxParty1.RegistrationIdentification"/>
     [IsoId("_PdBMyNp-Ed-ak6NoX_4Aeg_-1937885613")]
     [DisplayName("Registration Identification")]
     [IsoXmlTag("RegnId")]
@@ -36,9 +30,7 @@ public record TaxParty1
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? RegistrationIdentification { get; init; }
 
-    /// <summary>
-    /// Type of tax payer.
-    /// </summary>
+    /// <inheritdoc cref="ITaxParty1.TaxType"/>
     [IsoId("_PdKWsNp-Ed-ak6NoX_4Aeg_-1937885634")]
     [DisplayName("Tax Type")]
     [IsoXmlTag("TaxTp")]

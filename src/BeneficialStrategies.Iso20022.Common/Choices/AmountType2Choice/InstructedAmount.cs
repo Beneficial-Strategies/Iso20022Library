@@ -8,25 +8,19 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.AmountType2Choice
 {
-    /// <summary>
-    /// Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.
-    /// </summary>
+    /// <inheritdoc cref="IInstructedAmount"/>
     [IsoId("_Pxu4jdp-Ed-ak6NoX_4Aeg_-1148058982")]
     [DisplayName("Instructed Amount")]
     [IsoXmlTag("InstdAmt")]
-    public record InstructedAmount : AmountType2Choice_
+    public partial record InstructedAmount : AmountType2Choice_
     {
-        /// <summary>
-        /// The currency in which this amount is measured.
-        /// </summary>
+        /// <inheritdoc cref="IInstructedAmount.Currency"/>
         [IsoId("_YXSZF9p-Ed-ak6NoX_4Aeg_-1352517078_Currency")]
         [DisplayName("Currency And Amount _ Currency")]
         [IsoXmlTag("Currency")]
         public required CurrencyCode Currency { get; init; }
 
-        /// <summary>
-        /// Amount of the transaction.
-        /// </summary>
+        /// <inheritdoc cref="IInstructedAmount.Amount"/>
         [IsoId("_YXSZF9p-Ed-ak6NoX_4Aeg_-1352517078_Amount")]
         [DisplayName("Currency And Amount _ Amount")]
         [IsoXmlTag("Amount")]

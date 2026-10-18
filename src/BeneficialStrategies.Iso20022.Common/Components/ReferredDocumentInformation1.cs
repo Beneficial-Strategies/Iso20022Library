@@ -9,24 +9,18 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Structured information supplied to fully identify the documents referred to in the remittance information.
-/// </summary>
+/// <inheritdoc cref="IReferredDocumentInformation1"/>
 [IsoId("_T3sBSNp-Ed-ak6NoX_4Aeg_402190265")]
 [DisplayName("Referred Document Information")]
-public record ReferredDocumentInformation1
+public partial record ReferredDocumentInformation1
 {
-    /// <summary>
-    /// Provides the type of the referred document.
-    /// </summary>
+    /// <inheritdoc cref="IReferredDocumentInformation1.ReferredDocumentType"/>
     [IsoId("_T3sBSdp-Ed-ak6NoX_4Aeg_1319309617")]
     [DisplayName("Referred Document Type")]
     [IsoXmlTag("RfrdDocTp")]
     public ReferredDocumentType1? ReferredDocumentType { get; init; }
 
-    /// <summary>
-    /// Unique and unambiguous identification number of the referred document.
-    /// </summary>
+    /// <inheritdoc cref="IReferredDocumentInformation1.ReferredDocumentNumber"/>
     [IsoId("_T31yQNp-Ed-ak6NoX_4Aeg_402190318")]
     [DisplayName("Referred Document Number")]
     [IsoXmlTag("RfrdDocNb")]

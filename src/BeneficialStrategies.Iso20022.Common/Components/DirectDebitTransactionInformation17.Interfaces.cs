@@ -1,0 +1,38 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+public partial record DirectDebitTransactionInformation17 : IDirectDebitTransactionInformation17
+{
+    IPaymentIdentification3 IDirectDebitTransactionInformation17.PaymentIdentification => PaymentIdentification;
+    IPaymentTypeInformation25? IDirectDebitTransactionInformation17.PaymentTypeInformation => PaymentTypeInformation;
+    IEnumerable<ICharges2> IDirectDebitTransactionInformation17.ChargesInformation => ChargesInformation;
+    IDirectDebitTransaction8? IDirectDebitTransactionInformation17.DirectDebitTransaction => DirectDebitTransaction;
+    IPartyIdentification43 IDirectDebitTransactionInformation17.Creditor => Creditor;
+    ICashAccount24? IDirectDebitTransactionInformation17.CreditorAccount => CreditorAccount;
+    IBranchAndFinancialInstitutionIdentification5 IDirectDebitTransactionInformation17.CreditorAgent => CreditorAgent;
+    ICashAccount24? IDirectDebitTransactionInformation17.CreditorAgentAccount => CreditorAgentAccount;
+    IPartyIdentification43? IDirectDebitTransactionInformation17.UltimateCreditor => UltimateCreditor;
+    IPartyIdentification43? IDirectDebitTransactionInformation17.InitiatingParty => InitiatingParty;
+    IBranchAndFinancialInstitutionIdentification5? IDirectDebitTransactionInformation17.InstructingAgent => InstructingAgent;
+    IBranchAndFinancialInstitutionIdentification5? IDirectDebitTransactionInformation17.InstructedAgent => InstructedAgent;
+    IBranchAndFinancialInstitutionIdentification5? IDirectDebitTransactionInformation17.IntermediaryAgent1 => IntermediaryAgent1;
+    ICashAccount24? IDirectDebitTransactionInformation17.IntermediaryAgent1Account => IntermediaryAgent1Account;
+    IBranchAndFinancialInstitutionIdentification5? IDirectDebitTransactionInformation17.IntermediaryAgent2 => IntermediaryAgent2;
+    ICashAccount24? IDirectDebitTransactionInformation17.IntermediaryAgent2Account => IntermediaryAgent2Account;
+    IBranchAndFinancialInstitutionIdentification5? IDirectDebitTransactionInformation17.IntermediaryAgent3 => IntermediaryAgent3;
+    ICashAccount24? IDirectDebitTransactionInformation17.IntermediaryAgent3Account => IntermediaryAgent3Account;
+    IPartyIdentification43 IDirectDebitTransactionInformation17.Debtor => Debtor;
+    ICashAccount24 IDirectDebitTransactionInformation17.DebtorAccount => DebtorAccount;
+    IBranchAndFinancialInstitutionIdentification5 IDirectDebitTransactionInformation17.DebtorAgent => DebtorAgent;
+    ICashAccount24? IDirectDebitTransactionInformation17.DebtorAgentAccount => DebtorAgentAccount;
+    IPartyIdentification43? IDirectDebitTransactionInformation17.UltimateDebtor => UltimateDebtor;
+    IPurpose2Choice? IDirectDebitTransactionInformation17.Purpose => Purpose;
+    IEnumerable<IRegulatoryReporting3> IDirectDebitTransactionInformation17.RegulatoryReporting => RegulatoryReporting;
+    IEnumerable<IRemittanceLocation4> IDirectDebitTransactionInformation17.RelatedRemittanceInformation => RelatedRemittanceInformation;
+    IRemittanceInformation10? IDirectDebitTransactionInformation17.RemittanceInformation => RemittanceInformation;
+    IEnumerable<ISupplementaryData1> IDirectDebitTransactionInformation17.SupplementaryData => SupplementaryData;
+}

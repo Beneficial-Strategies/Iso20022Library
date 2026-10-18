@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Choice of identifiers for a clearing system member, as assigned by the clearing system. In some clearing systems, the accounts of the clearing system members are also assigned an identifier.
-    /// </summary>
+    /// <inheritdoc cref="IClearingSystemMemberIdentification3Choice"/>
     [KnownType(typeof(ClearingSystemMemberIdentification3Choice.Identification))]
     [KnownType(typeof(ClearingSystemMemberIdentification3Choice.Proprietary))]
     [JsonDerivedType(
@@ -21,5 +19,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_TMehGdp-Ed-ak6NoX_4Aeg_-1564562098")]
     [DisplayName("Clearing System Member Identification 3 Choice")]
-    public abstract record ClearingSystemMemberIdentification3Choice_ { }
+    public abstract partial record ClearingSystemMemberIdentification3Choice_ { }
 }

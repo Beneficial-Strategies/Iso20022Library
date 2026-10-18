@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.StatusReason6Choice
 {
-    /// <summary>
-    /// Reason for the status, in a proprietary form.
-    /// </summary>
+    /// <inheritdoc cref="IProprietary"/>
     [IsoId("_TRGiaNp-Ed-ak6NoX_4Aeg_-1877638936")]
     [DisplayName("Proprietary")]
-    public record Proprietary : StatusReason6Choice_
+    public partial record Proprietary : StatusReason6Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies a character string with a maximum length of 35 characters.
-        /// </summary>
+        /// <inheritdoc cref="IProprietary.Value"/>
         [IsoXmlTag("Prtry")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]

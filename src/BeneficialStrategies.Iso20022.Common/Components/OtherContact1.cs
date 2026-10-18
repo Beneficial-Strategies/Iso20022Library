@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Communication device number or electronic address used for communication.
-/// </summary>
+/// <inheritdoc cref="IOtherContact1"/>
 [IsoId("_6SokSZqlEeGSON8vddiWzQ_1969673172")]
 [DisplayName("Other Contact")]
-public record OtherContact1
+public partial record OtherContact1
 {
-    /// <summary>
-    /// Method used to contact the financial institution’s contact for the specific tax region.
-    /// </summary>
+    /// <inheritdoc cref="IOtherContact1.ChannelType"/>
     [IsoId("_6SokSpqlEeGSON8vddiWzQ_444512870")]
     [DisplayName("Channel Type")]
     [IsoXmlTag("ChanlTp")]
@@ -26,9 +22,7 @@ public record OtherContact1
     [StringLength(maximumLength: 4, MinimumLength = 1)]
     public required IsoMax4Text ChannelType { get; init; }
 
-    /// <summary>
-    /// Communication value such as phone number or email address.
-    /// </summary>
+    /// <inheritdoc cref="IOtherContact1.Identification"/>
     [IsoId("_6SokS5qlEeGSON8vddiWzQ_938910947")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]

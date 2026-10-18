@@ -9,40 +9,30 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Identifies the mandate, for which a copy of the details is requested.
-/// </summary>
+/// <inheritdoc cref="IMandateCopy2"/>
 [IsoId("_RSUaQW49EeiU9cctagi5ow")]
 [DisplayName("Mandate Copy")]
-public record MandateCopy2
+public partial record MandateCopy2
 {
-    /// <summary>
-    /// Provides information on the original message.
-    /// </summary>
+    /// <inheritdoc cref="IMandateCopy2.OriginalMessageInformation"/>
     [IsoId("_Rb2wwW49EeiU9cctagi5ow")]
     [DisplayName("Original Message Information")]
     [IsoXmlTag("OrgnlMsgInf")]
     public OriginalMessageInformation1? OriginalMessageInformation { get; init; }
 
-    /// <summary>
-    /// Provides the original mandate data.
-    /// </summary>
+    /// <inheritdoc cref="IMandateCopy2.OriginalMandate"/>
     [IsoId("_Rb2ww249EeiU9cctagi5ow")]
     [DisplayName("Original Mandate")]
     [IsoXmlTag("OrgnlMndt")]
     public required OriginalMandate6Choice_ OriginalMandate { get; init; }
 
-    /// <summary>
-    /// Indicates the status of the mandate.
-    /// </summary>
+    /// <inheritdoc cref="IMandateCopy2.MandateStatus"/>
     [IsoId("_Rb2wxW49EeiU9cctagi5ow")]
     [DisplayName("Mandate Status")]
     [IsoXmlTag("MndtSts")]
     public MandateStatus1Choice_? MandateStatus { get; init; }
 
-    /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
+    /// <inheritdoc cref="IMandateCopy2.SupplementaryData"/>
     [IsoId("_Rb2wx249EeiU9cctagi5ow")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]

@@ -9,31 +9,23 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Provides further details on the reason of the return of the transaction.
-/// </summary>
+/// <inheritdoc cref="IPaymentReturnReason7"/>
 [Description(@"Provides further details on the reason of the return of the transaction.")]
 [IsoId("_wrllwTEyEe6g-ffJsqGiSA")]
 [DisplayName("Payment Return Reason7")]
-public record PaymentReturnReason7
+public partial record PaymentReturnReason7
 {
-    /// <summary>
-    /// Further details on the return reason.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentReturnReason7.AdditionalInformation"/>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
     public ValueList<IsoMax105Text> AdditionalInformation { get; init; } = [];
 
-    /// <summary>
-    /// Party that issues the return.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentReturnReason7.Originator"/>
     [DisplayName("Originator")]
     [IsoXmlTag("Orgtr")]
     public PartyIdentification272? Originator { get; init; }
 
-    /// <summary>
-    /// Specifies the reason for the return.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentReturnReason7.Reason"/>
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
     public ReturnReason5Choice_? Reason { get; init; }

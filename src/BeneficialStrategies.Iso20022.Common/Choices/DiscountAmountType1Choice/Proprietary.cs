@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.DiscountAmountType1Choice
 {
-    /// <summary>
-    /// Specifies the amount type, in a free-text form.
-    /// </summary>
+    /// <inheritdoc cref="IProprietary"/>
     [IsoId("_tlra8VkyEeGeoaLUQk__nA_-32058975")]
     [DisplayName("Proprietary")]
-    public record Proprietary : DiscountAmountType1Choice_
+    public partial record Proprietary : DiscountAmountType1Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies a character string with a maximum length of 35 characters.
-        /// </summary>
+        /// <inheritdoc cref="IProprietary.Value"/>
         [IsoXmlTag("Prtry")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]

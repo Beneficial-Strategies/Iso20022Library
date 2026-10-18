@@ -1,0 +1,45 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.pain;
+
+/// <summary>
+/// The CustomerPaymentStatusReport message is sent by an instructed agent to the previous party in the payment chain. It is used to inform this party about the positive or negative status of an instruction (either single or file). It is also used to report on a pending instruction.
+/// </summary>
+/// <remarks>
+/// The CustomerPaymentStatusReport message is exchanged between an agent and a non-financial institution customer to provide status information on instructions previously sent. Its usage may be governed by a bilateral or multilateral agreement between the agent and the non-financial institution customer.
+/// The CustomerPaymentStatusReport message can be used to provide information about the status (for example a rejection, an acceptance) of the initiation of a credit transfer, a direct debit, as well as on the initiation of other customer instructions.
+/// The CustomerPaymentStatusReport message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.
+/// The CustomerPaymentStatusReport message can be used in domestic and cross-border scenarios.
+/// The CustomerPaymentStatusReport may also be sent to the receiver of the payment in a real time payment scenario, as both sides of the transactions must be informed of the status of the transaction (that is either the beneficiary is credited, or the transaction is rejected).
+/// </remarks>
+[IsoId("0a3b2906-aae5-4c8c-b5cb-4ce211d29911")]
+public interface ICustomerPaymentStatusReportV15 : IOuterRecord
+{
+    /// <summary>
+    /// Set of characteristics shared by all individual transactions included in the status report message.
+    /// </summary>
+    [DisplayName("Group Header")]
+    [IsoXmlTag("GrpHdr")]
+    IGroupHeader128 GroupHeader { get; }
+
+    /// <summary>
+    /// Original group information concerning the group of transactions, to which the status report message refers to.
+    /// </summary>
+    [DisplayName("Original Group Information And Status")]
+    [IsoXmlTag("OrgnlGrpInfAndSts")]
+    IOriginalGroupHeader22 OriginalGroupInformationAndStatus { get; }
+
+    /// <summary>
+    /// Information concerning the original payment information, to which the status report message refers.
+    /// </summary>
+    [DisplayName("Original Payment Information And Status")]
+    [IsoXmlTag("OrgnlPmtInfAndSts")]
+    IEnumerable<IOriginalPaymentInstruction56> OriginalPaymentInformationAndStatus { get; }
+
+    /// <summary>
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    IEnumerable<ISupplementaryData1> SupplementaryData { get; }
+}

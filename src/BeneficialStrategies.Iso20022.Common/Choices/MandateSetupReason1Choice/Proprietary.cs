@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.MandateSetupReason1Choice
 {
-    /// <summary>
-    /// Reason for the mandate setup, in a proprietary form.
-    /// </summary>
+    /// <inheritdoc cref="IProprietary"/>
     [IsoId("_iQq8Nz2OEeS6DKIV6SF6gw")]
     [DisplayName("Proprietary")]
-    public record Proprietary : MandateSetupReason1Choice_
+    public partial record Proprietary : MandateSetupReason1Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies a character string with a maximum length of 70characters.
-        /// </summary>
+        /// <inheritdoc cref="IProprietary.Value"/>
         [IsoXmlTag("Prtry")]
         [IsoSimpleType(IsoSimpleType.Max70Text)]
         [StringLength(maximumLength: 70, MinimumLength = 1)]

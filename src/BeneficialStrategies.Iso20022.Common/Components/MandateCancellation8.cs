@@ -9,37 +9,27 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Mandate Cancellation8.
-/// </summary>
+/// <inheritdoc cref="IMandateCancellation8"/>
 [IsoId("_5ukCITEyEe6g-ffJsqGiSA")]
 [DisplayName("Mandate Cancellation8")]
-public record MandateCancellation8
+public partial record MandateCancellation8
 {
-    /// <summary>
-    /// Cancellation Reason.
-    /// </summary>
+    /// <inheritdoc cref="IMandateCancellation8.CancellationReason"/>
     [DisplayName("Cancellation Reason")]
     [IsoXmlTag("CxlRsn")]
     public required MandateCancellationReason2 CancellationReason { get; init; }
 
-    /// <summary>
-    /// Original Mandate.
-    /// </summary>
+    /// <inheritdoc cref="IMandateCancellation8.OriginalMandate"/>
     [DisplayName("Original Mandate")]
     [IsoXmlTag("OrgnlMndt")]
     public required OriginalMandate10Choice_ OriginalMandate { get; init; }
 
-    /// <summary>
-    /// Original Message Information.
-    /// </summary>
+    /// <inheritdoc cref="IMandateCancellation8.OriginalMessageInformation"/>
     [DisplayName("Original Message Information")]
     [IsoXmlTag("OrgnlMsgInf")]
     public OriginalMessageInformation1? OriginalMessageInformation { get; init; }
 
-    /// <summary>
-    /// Supplementary Data.
-    /// </summary>
+    /// <inheritdoc cref="IMandateCancellation8.SupplementaryData"/>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];

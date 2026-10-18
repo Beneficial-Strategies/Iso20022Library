@@ -9,79 +9,57 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Payment Transaction156.
-/// </summary>
+/// <inheritdoc cref="IPaymentTransaction156"/>
 [IsoId("_9ucm5zEsEe6GxLzpkVnWYg")]
 [DisplayName("Payment Transaction156")]
-public record PaymentTransaction156
+public partial record PaymentTransaction156
 {
-    /// <summary>
-    /// Charge Bearer.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction156.ChargeBearer"/>
     [DisplayName("Charge Bearer")]
     [IsoXmlTag("ChrgBr")]
     public ChargeBearerType1Code? ChargeBearer { get; init; }
 
-    /// <summary>
-    /// Original End To End Identification.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction156.OriginalEndToEndIdentification"/>
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
     public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
 
-    /// <summary>
-    /// Original Instructed Amount.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction156.OriginalInstructedAmount"/>
     [DisplayName("Original Instructed Amount")]
     [IsoXmlTag("OrgnlInstdAmt")]
     public ActiveOrHistoricCurrencyAndAmount? OriginalInstructedAmount { get; init; }
 
-    /// <summary>
-    /// Original Instruction Identification.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction156.OriginalInstructionIdentification"/>
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
     public IsoMax35Text? OriginalInstructionIdentification { get; init; }
 
-    /// <summary>
-    /// Original Transaction Reference.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction156.OriginalTransactionReference"/>
     [DisplayName("Original Transaction Reference")]
     [IsoXmlTag("OrgnlTxRef")]
     public OriginalTransactionReference42? OriginalTransactionReference { get; init; }
 
-    /// <summary>
-    /// Original UETR.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction156.OriginalUETR"/>
     [DisplayName("Original UETR")]
     [IsoXmlTag("OrgnlUETR")]
     public IsoUUIDv4Identifier? OriginalUETR { get; init; }
 
-    /// <summary>
-    /// Reversal Identification.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction156.ReversalIdentification"/>
     [DisplayName("Reversal Identification")]
     [IsoXmlTag("RvslId")]
     public IsoMax35Text? ReversalIdentification { get; init; }
 
-    /// <summary>
-    /// Reversal Reason Information.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction156.ReversalReasonInformation"/>
     [DisplayName("Reversal Reason Information")]
     [IsoXmlTag("RvslRsnInf")]
     public ValueList<PaymentReversalReason10> ReversalReasonInformation { get; init; } = [];
 
-    /// <summary>
-    /// Reversed Instructed Amount.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction156.ReversedInstructedAmount"/>
     [DisplayName("Reversed Instructed Amount")]
     [IsoXmlTag("RvsdInstdAmt")]
     public ActiveOrHistoricCurrencyAndAmount? ReversedInstructedAmount { get; init; }
 
-    /// <summary>
-    /// Supplementary Data.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction156.SupplementaryData"/>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];

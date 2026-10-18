@@ -8,15 +8,11 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.MandateRelatedData3Choice
 {
-    /// <summary>
-    /// Credit Transfer Mandate.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferMandate"/>
     [DisplayName("Credit Transfer Mandate")]
-    public record CreditTransferMandate : MandateRelatedData3Choice_
+    public partial record CreditTransferMandate : MandateRelatedData3Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// </summary>
+        /// <inheritdoc cref="ICreditTransferMandate.Value"/>
         [IsoXmlTag("CdtTrfMndt")]
         public required CreditTransferMandateData1 Value { get; init; }
     }

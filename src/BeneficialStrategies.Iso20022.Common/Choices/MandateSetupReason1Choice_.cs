@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Specifies the reason for the setup of the mandate.
-    /// </summary>
+    /// <inheritdoc cref="IMandateSetupReason1Choice"/>
     [KnownType(typeof(MandateSetupReason1Choice.Code))]
     [KnownType(typeof(MandateSetupReason1Choice.Proprietary))]
     [JsonDerivedType(
@@ -21,5 +19,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_iQq8ND2OEeS6DKIV6SF6gw")]
     [DisplayName("Mandate Setup Reason 1 Choice")]
-    public abstract record MandateSetupReason1Choice_ { }
+    public abstract partial record MandateSetupReason1Choice_ { }
 }

@@ -1,0 +1,74 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Set of characteristics shared by all individual transactions included in the message.
+/// </summary>
+[IsoId("_I9mVkcQKEemsic1bQcEtLA")]
+public interface IGroupHeader95 : IIsoComponent
+{
+    /// <summary>
+    /// Point to point reference, as assigned by the instructing party, and sent to the next party in the chain to unambiguously identify the message.|Usage: The instructing party has to make sure that MessageIdentification is unique per instructed party for a pre-agreed period.
+    /// </summary>
+    [IsoId("_JKkakcQKEemsic1bQcEtLA")]
+    [DisplayName("Message Identification")]
+    [IsoXmlTag("MsgId")]
+    IsoMax35Text MessageIdentification { get; }
+
+    /// <summary>
+    /// Date and time at which the message was created.
+    /// </summary>
+    [IsoId("_JKkak8QKEemsic1bQcEtLA")]
+    [DisplayName("Creation Date Time")]
+    [IsoXmlTag("CreDtTm")]
+    IsoISODateTime CreationDateTime { get; }
+
+    /// <summary>
+    /// User identification or any user key to be used to check whether the initiating party is allowed to initiate transactions from the account specified in the message.||Usage: The content is not of a technical nature, but reflects the organisational structure at the initiating side.|The authorisation element can typically be used in relay scenarios, payment initiations, payment returns or payment reversals that are initiated on behalf of a party different from the initiating party.
+    /// </summary>
+    [IsoId("_JKkalcQKEemsic1bQcEtLA")]
+    [DisplayName("Authorisation")]
+    [IsoXmlTag("Authstn")]
+    IEnumerable<IAuthorisation1Choice> Authorisation { get; }
+
+    /// <summary>
+    /// Number of individual transactions contained in the message.
+    /// </summary>
+    [IsoId("_JKkal8QKEemsic1bQcEtLA")]
+    [DisplayName("Number Of Transactions")]
+    [IsoXmlTag("NbOfTxs")]
+    IsoMax15NumericText NumberOfTransactions { get; }
+
+    /// <summary>
+    /// Total of all individual amounts included in the message, irrespective of currencies.
+    /// </summary>
+    [IsoId("_JKkamcQKEemsic1bQcEtLA")]
+    [DisplayName("Control Sum")]
+    [IsoXmlTag("CtrlSum")]
+    IsoDecimalNumber? ControlSum { get; }
+
+    /// <summary>
+    /// Party that initiates the payment.||Usage: This can either be the debtor or the party that initiates the credit transfer on behalf of the debtor.
+    /// </summary>
+    [IsoId("_JKkam8QKEemsic1bQcEtLA")]
+    [DisplayName("Initiating Party")]
+    [IsoXmlTag("InitgPty")]
+    IPartyIdentification135 InitiatingParty { get; }
+
+    /// <summary>
+    /// Financial institution that receives the instruction from the initiating party and forwards it to the next agent in the payment chain for execution.
+    /// </summary>
+    [IsoId("_JKkancQKEemsic1bQcEtLA")]
+    [DisplayName("Forwarding Agent")]
+    [IsoXmlTag("FwdgAgt")]
+    IBranchAndFinancialInstitutionIdentification6? ForwardingAgent { get; }
+
+    /// <summary>
+    /// Source application or software used to initiate the payment.
+    /// </summary>
+    [IsoId("_RS7BwMQKEemsic1bQcEtLA")]
+    [DisplayName("Initiation Source")]
+    [IsoXmlTag("InitnSrc")]
+    IPaymentInitiationSource1? InitiationSource { get; }
+}

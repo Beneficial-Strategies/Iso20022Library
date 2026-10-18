@@ -8,15 +8,11 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.DocumentType2Choice
 {
-    /// <summary>
-    /// Code.
-    /// </summary>
+    /// <inheritdoc cref="ICode"/>
     [DisplayName("Code")]
-    public record Code : DocumentType2Choice_
+    public partial record Code : DocumentType2Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// </summary>
+        /// <inheritdoc cref="ICode.Value"/>
         [IsoXmlTag("Cd")]
         public required ExternalDocumentType1Code Value { get; init; }
     }

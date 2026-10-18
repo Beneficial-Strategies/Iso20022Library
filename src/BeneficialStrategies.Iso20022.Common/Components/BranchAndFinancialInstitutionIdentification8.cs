@@ -9,23 +9,17 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Branch And Financial Institution Identification8.
-/// </summary>
+/// <inheritdoc cref="IBranchAndFinancialInstitutionIdentification8"/>
 [IsoId("_vxnQ0TEyEe6g-ffJsqGiSA")]
 [DisplayName("Branch And Financial Institution Identification8")]
-public record BranchAndFinancialInstitutionIdentification8
+public partial record BranchAndFinancialInstitutionIdentification8
 {
-    /// <summary>
-    /// Branch Identification.
-    /// </summary>
+    /// <inheritdoc cref="IBranchAndFinancialInstitutionIdentification8.BranchIdentification"/>
     [DisplayName("Branch Identification")]
     [IsoXmlTag("BrnchId")]
     public BranchData5? BranchIdentification { get; init; }
 
-    /// <summary>
-    /// Financial Institution Identification.
-    /// </summary>
+    /// <inheritdoc cref="IBranchAndFinancialInstitutionIdentification8.FinancialInstitutionIdentification"/>
     [DisplayName("Financial Institution Identification")]
     [IsoXmlTag("FinInstnId")]
     public required FinancialInstitutionIdentification23 FinancialInstitutionIdentification { get; init; }

@@ -9,40 +9,30 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Identifies the mandate to be cancelled.
-/// </summary>
+/// <inheritdoc cref="IMandateCancellation4"/>
 [IsoId("_d7WRbx77EeSxevWRRWxNAg")]
 [DisplayName("Mandate Cancellation")]
-public record MandateCancellation4
+public partial record MandateCancellation4
 {
-    /// <summary>
-    /// Provides information on the original message.
-    /// </summary>
+    /// <inheritdoc cref="IMandateCancellation4.OriginalMessageInformation"/>
     [IsoId("_eMUskx77EeSxevWRRWxNAg")]
     [DisplayName("Original Message Information")]
     [IsoXmlTag("OrgnlMsgInf")]
     public OriginalMessageInformation1? OriginalMessageInformation { get; init; }
 
-    /// <summary>
-    /// Provides detailed information on the cancellation reason.
-    /// </summary>
+    /// <inheritdoc cref="IMandateCancellation4.CancellationReason"/>
     [IsoId("_eMUslR77EeSxevWRRWxNAg")]
     [DisplayName("Cancellation Reason")]
     [IsoXmlTag("CxlRsn")]
     public required PaymentCancellationReason1 CancellationReason { get; init; }
 
-    /// <summary>
-    /// Provides the original mandate data.
-    /// </summary>
+    /// <inheritdoc cref="IMandateCancellation4.OriginalMandate"/>
     [IsoId("_eMUslx77EeSxevWRRWxNAg")]
     [DisplayName("Original Mandate")]
     [IsoXmlTag("OrgnlMndt")]
     public required OriginalMandate3Choice_ OriginalMandate { get; init; }
 
-    /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
+    /// <inheritdoc cref="IMandateCancellation4.SupplementaryData"/>
     [IsoId("_eMUsmR77EeSxevWRRWxNAg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]

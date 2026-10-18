@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Information related to an identification, for example, party identification or account identification.
-/// </summary>
+/// <inheritdoc cref="IGenericIdentification3"/>
 [IsoId("_P-sWcdp-Ed-ak6NoX_4Aeg_1185673654")]
 [DisplayName("Generic Identification")]
-public record GenericIdentification3
+public partial record GenericIdentification3
 {
-    /// <summary>
-    /// Name or number assigned by an entity to enable recognition of that entity, for example, account identifier.
-    /// </summary>
+    /// <inheritdoc cref="IGenericIdentification3.Identification"/>
     [IsoId("_P-sWctp-Ed-ak6NoX_4Aeg_1256785338")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
@@ -26,9 +22,7 @@ public record GenericIdentification3
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public required IsoMax35Text Identification { get; init; }
 
-    /// <summary>
-    /// Entity that assigns the identification.
-    /// </summary>
+    /// <inheritdoc cref="IGenericIdentification3.Issuer"/>
     [IsoId("_P-sWc9p-Ed-ak6NoX_4Aeg_1555083105")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]

@@ -6,14 +6,12 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Date Type2Choice.
-    /// </summary>
+    /// <inheritdoc cref="IDateType2Choice"/>
     [KnownType(typeof(DateType2Choice.Code))]
     [KnownType(typeof(DateType2Choice.Proprietary))]
     [JsonDerivedType(typeof(DateType2Choice.Code), nameof(DateType2Choice.Code))]
     [JsonDerivedType(typeof(DateType2Choice.Proprietary), nameof(DateType2Choice.Proprietary))]
     [IsoId("_5NXe0DLNEe6C5PjOhOZ_sw")]
     [DisplayName("Date Type2Choice")]
-    public abstract record DateType2Choice_ { }
+    public abstract partial record DateType2Choice_ { }
 }

@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.ReferredDocumentType3Choice
 {
-    /// <summary>
-    /// Proprietary identification of the type of the remittance document.
-    /// </summary>
+    /// <inheritdoc cref="IProprietary"/>
     [IsoId("_YCiq5R77EeSxevWRRWxNAg")]
     [DisplayName("Proprietary")]
-    public record Proprietary : ReferredDocumentType3Choice_
+    public partial record Proprietary : ReferredDocumentType3Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies a character string with a maximum length of 35 characters.
-        /// </summary>
+        /// <inheritdoc cref="IProprietary.Value"/>
         [IsoXmlTag("Prtry")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]

@@ -8,26 +8,20 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.Party34Choice
 {
-    /// <summary>
-    /// Unique and unambiguous way to identify an organisation.
-    /// </summary>
+    /// <inheritdoc cref="IOrganisationIdentification"/>
     [IsoId("_j9Shg69UEeeJJK1oRb-jTw")]
     [DisplayName("Organisation Identification")]
     [IsoXmlTag("OrgId")]
-    public record OrganisationIdentification : Party34Choice_
+    public partial record OrganisationIdentification : Party34Choice_
     {
-        /// <summary>
-        /// Code allocated to a financial institution or non financial institution by the ISO 9362 Registration Authority as described in ISO 9362 &quot;Banking - Banking telecommunication messages - Business identifier code (BIC)&quot;.
-        /// </summary>
+        /// <inheritdoc cref="IOrganisationIdentification.AnyBIC"/>
         [IsoId("_QPiO1dp-Ed-ak6NoX_4Aeg_-589713829")]
         [DisplayName("Any BIC")]
         [IsoXmlTag("AnyBIC")]
         [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
         public IsoAnyBICIdentifier? AnyBIC { get; init; }
 
-        /// <summary>
-        /// Unique identification of an organisation, as assigned by an institution, using an identification scheme.
-        /// </summary>
+        /// <inheritdoc cref="IOrganisationIdentification.Other"/>
         [IsoId("_QPiO1tp-Ed-ak6NoX_4Aeg_-1021329556")]
         [DisplayName("Other")]
         [IsoXmlTag("Othr")]

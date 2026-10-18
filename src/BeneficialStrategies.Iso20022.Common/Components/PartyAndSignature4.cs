@@ -9,24 +9,18 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Entity involved in an activity.
-/// </summary>
+/// <inheritdoc cref="IPartyAndSignature4"/>
 [IsoId("_w1V-sTEyEe6g-ffJsqGiSA")]
 [Description(@"Entity involved in an activity.")]
 [DisplayName("Party And Signature4")]
-public record PartyAndSignature4
+public partial record PartyAndSignature4
 {
-    /// <summary>
-    /// Entity involved in an activity.
-    /// </summary>
+    /// <inheritdoc cref="IPartyAndSignature4.Party"/>
     [DisplayName("Party")]
     [IsoXmlTag("Pty")]
     public required PartyIdentification272 Party { get; init; }
 
-    /// <summary>
-    /// Signature of a party.
-    /// </summary>
+    /// <inheritdoc cref="IPartyAndSignature4.Signature"/>
     [DisplayName("Signature")]
     [IsoXmlTag("Sgntr")]
     public required SkipPayload Signature { get; init; }

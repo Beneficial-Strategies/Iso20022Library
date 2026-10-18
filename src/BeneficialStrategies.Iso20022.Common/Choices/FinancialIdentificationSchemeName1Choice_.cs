@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Sets of elements to identify a name of the organisation identification scheme.
-    /// </summary>
+    /// <inheritdoc cref="IFinancialIdentificationSchemeName1Choice"/>
     [KnownType(typeof(FinancialIdentificationSchemeName1Choice.Code))]
     [KnownType(typeof(FinancialIdentificationSchemeName1Choice.Proprietary))]
     [JsonDerivedType(
@@ -21,5 +19,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QALkMNp-Ed-ak6NoX_4Aeg_-2021925461")]
     [DisplayName("Financial Identification Scheme Name 1 Choice")]
-    public abstract record FinancialIdentificationSchemeName1Choice_ { }
+    public abstract partial record FinancialIdentificationSchemeName1Choice_ { }
 }

@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Identifies the mandate, which is being suspended.
-/// </summary>
+/// <inheritdoc cref="IMandateSuspension1"/>
 [IsoId("_IgCRoH5oEea7cqFPsAF3tQ")]
 [DisplayName("Mandate Suspension")]
-public record MandateSuspension1
+public partial record MandateSuspension1
 {
-    /// <summary>
-    /// Unique identification, as assigned by the initiating party, to unambiguously identify the suspension request.
-    /// </summary>
+    /// <inheritdoc cref="IMandateSuspension1.SuspensionRequestIdentification"/>
     [IsoId("_TNLMgJnBEeao_Z127E9uYg")]
     [DisplayName("Suspension Request Identification")]
     [IsoXmlTag("SspnsnReqId")]
@@ -26,33 +22,25 @@ public record MandateSuspension1
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public required IsoMax35Text SuspensionRequestIdentification { get; init; }
 
-    /// <summary>
-    /// Provides information on the original message.
-    /// </summary>
+    /// <inheritdoc cref="IMandateSuspension1.OriginalMessageInformation"/>
     [IsoId("_s3OtIH5oEea7cqFPsAF3tQ")]
     [DisplayName("Original Message Information")]
     [IsoXmlTag("OrgnlMsgInf")]
     public OriginalMessageInformation1? OriginalMessageInformation { get; init; }
 
-    /// <summary>
-    /// Provides detailed information on the suspension reason.
-    /// </summary>
+    /// <inheritdoc cref="IMandateSuspension1.SuspensionReason"/>
     [IsoId("_w6-2cH5oEea7cqFPsAF3tQ")]
     [DisplayName("Suspension Reason")]
     [IsoXmlTag("SspnsnRsn")]
     public required MandateSuspensionReason1 SuspensionReason { get; init; }
 
-    /// <summary>
-    /// Provides the original mandate data.
-    /// </summary>
+    /// <inheritdoc cref="IMandateSuspension1.OriginalMandate"/>
     [IsoId("_CfZIYH5pEea7cqFPsAF3tQ")]
     [DisplayName("Original Mandate")]
     [IsoXmlTag("OrgnlMndt")]
     public required OriginalMandate4Choice_ OriginalMandate { get; init; }
 
-    /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
+    /// <inheritdoc cref="IMandateSuspension1.SupplementaryData"/>
     [IsoId("_H2d6wH5pEea7cqFPsAF3tQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]

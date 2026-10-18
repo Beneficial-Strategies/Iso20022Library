@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.ReturnReason1Choice
 {
-    /// <summary>
-    /// Reason for the return not catered for by the available codes.
-    /// </summary>
+    /// <inheritdoc cref="IProprietary"/>
     [IsoId("_TOt8wNp-Ed-ak6NoX_4Aeg_191375064")]
     [DisplayName("Proprietary")]
-    public record Proprietary : ReturnReason1Choice_
+    public partial record Proprietary : ReturnReason1Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies a character string with a maximum length of 35 characters.
-        /// </summary>
+        /// <inheritdoc cref="IProprietary.Value"/>
         [IsoXmlTag("Prtry")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]

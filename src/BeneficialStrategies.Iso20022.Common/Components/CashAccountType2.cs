@@ -9,24 +9,18 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Nature or use of the account.
-/// </summary>
+/// <inheritdoc cref="ICashAccountType2"/>
 [IsoId("_T4SeN9p-Ed-ak6NoX_4Aeg_-1717865628")]
 [DisplayName("Cash Account Type")]
-public record CashAccountType2
+public partial record CashAccountType2
 {
-    /// <summary>
-    /// Account type, in a coded form.
-    /// </summary>
+    /// <inheritdoc cref="ICashAccountType2.Code"/>
     [IsoId("_T4SeONp-Ed-ak6NoX_4Aeg_-1686465493")]
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
     public required CashAccountType4Code Code { get; init; }
 
-    /// <summary>
-    /// Nature or use of the account in a proprietary form.
-    /// </summary>
+    /// <inheritdoc cref="ICashAccountType2.Proprietary"/>
     [IsoId("_T4SeOdp-Ed-ak6NoX_4Aeg_-1643987013")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]

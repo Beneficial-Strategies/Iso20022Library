@@ -1,0 +1,37 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+public partial record CreditTransferTransaction52 : ICreditTransferTransaction52
+{
+    IPartyIdentification135? ICreditTransferTransaction52.UltimateDebtor => UltimateDebtor;
+    IPartyIdentification135? ICreditTransferTransaction52.InitiatingParty => InitiatingParty;
+    IPartyIdentification135 ICreditTransferTransaction52.Debtor => Debtor;
+    ICashAccount40? ICreditTransferTransaction52.DebtorAccount => DebtorAccount;
+    IBranchAndFinancialInstitutionIdentification6 ICreditTransferTransaction52.DebtorAgent => DebtorAgent;
+    ICashAccount40? ICreditTransferTransaction52.DebtorAgentAccount => DebtorAgentAccount;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction52.PreviousInstructingAgent1 => PreviousInstructingAgent1;
+    ICashAccount40? ICreditTransferTransaction52.PreviousInstructingAgent1Account => PreviousInstructingAgent1Account;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction52.PreviousInstructingAgent2 => PreviousInstructingAgent2;
+    ICashAccount40? ICreditTransferTransaction52.PreviousInstructingAgent2Account => PreviousInstructingAgent2Account;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction52.PreviousInstructingAgent3 => PreviousInstructingAgent3;
+    ICashAccount40? ICreditTransferTransaction52.PreviousInstructingAgent3Account => PreviousInstructingAgent3Account;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction52.IntermediaryAgent1 => IntermediaryAgent1;
+    ICashAccount40? ICreditTransferTransaction52.IntermediaryAgent1Account => IntermediaryAgent1Account;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction52.IntermediaryAgent2 => IntermediaryAgent2;
+    ICashAccount40? ICreditTransferTransaction52.IntermediaryAgent2Account => IntermediaryAgent2Account;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction52.IntermediaryAgent3 => IntermediaryAgent3;
+    ICashAccount40? ICreditTransferTransaction52.IntermediaryAgent3Account => IntermediaryAgent3Account;
+    IBranchAndFinancialInstitutionIdentification6 ICreditTransferTransaction52.CreditorAgent => CreditorAgent;
+    ICashAccount40? ICreditTransferTransaction52.CreditorAgentAccount => CreditorAgentAccount;
+    IPartyIdentification135 ICreditTransferTransaction52.Creditor => Creditor;
+    ICashAccount40? ICreditTransferTransaction52.CreditorAccount => CreditorAccount;
+    IPartyIdentification135? ICreditTransferTransaction52.UltimateCreditor => UltimateCreditor;
+    IEnumerable<IInstructionForCreditorAgent3> ICreditTransferTransaction52.InstructionForCreditorAgent => InstructionForCreditorAgent;
+    IEnumerable<IInstructionForNextAgent1> ICreditTransferTransaction52.InstructionForNextAgent => InstructionForNextAgent;
+    ITaxInformation10? ICreditTransferTransaction52.Tax => Tax;
+    IRemittanceInformation21? ICreditTransferTransaction52.RemittanceInformation => RemittanceInformation;
+}

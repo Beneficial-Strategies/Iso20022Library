@@ -8,15 +8,11 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.References80Choice
 {
-    /// <summary>
-    /// Account Servicer Transaction Identification.
-    /// </summary>
+    /// <inheritdoc cref="IAccountServicerTransactionIdentification"/>
     [DisplayName("Account Servicer Transaction Identification")]
-    public record AccountServicerTransactionIdentification : References80Choice_
+    public partial record AccountServicerTransactionIdentification : References80Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// </summary>
+        /// <inheritdoc cref="IAccountServicerTransactionIdentification.Value"/>
         [IsoXmlTag("AcctSvcrTxId")]
         public required IsoMax35Text Value { get; init; }
     }

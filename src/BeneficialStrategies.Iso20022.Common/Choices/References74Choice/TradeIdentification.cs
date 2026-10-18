@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.References74Choice
 {
-    /// <summary>
-    /// Reference assigned to the trade by the investor or the trading party. This reference will be used throughout the trade life cycle to access/update the trade details.
-    /// </summary>
+    /// <inheritdoc cref="ITradeIdentification"/>
     [IsoId("_SiFNqSgaEey2k_sfZmJz4g")]
     [DisplayName("Trade Identification")]
-    public record TradeIdentification : References74Choice_
+    public partial record TradeIdentification : References74Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies a character string with a maximum length of 52 characters.
-        /// </summary>
+        /// <inheritdoc cref="ITradeIdentification.Value"/>
         [IsoXmlTag("TradId")]
         [IsoSimpleType(IsoSimpleType.Max52Text)]
         [StringLength(maximumLength: 52, MinimumLength = 1)]

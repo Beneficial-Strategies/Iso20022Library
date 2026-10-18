@@ -9,33 +9,25 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Set of elements used to provide detailed information on the number of transactions that are reported with a specific transaction status.
-/// </summary>
+/// <inheritdoc cref="INumberOfTransactionsPerStatus3"/>
 [IsoId("_Rq4LcNp-Ed-ak6NoX_4Aeg_1400369330")]
 [DisplayName("Number Of Transactions Per Status")]
-public record NumberOfTransactionsPerStatus3
+public partial record NumberOfTransactionsPerStatus3
 {
-    /// <summary>
-    /// Number of individual transactions contained in the message, detailed per status.
-    /// </summary>
+    /// <inheritdoc cref="INumberOfTransactionsPerStatus3.DetailedNumberOfTransactions"/>
     [IsoId("_Rq4Lcdp-Ed-ak6NoX_4Aeg_1400369332")]
     [DisplayName("Detailed Number Of Transactions")]
     [IsoXmlTag("DtldNbOfTxs")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     public required IsoMax15NumericText DetailedNumberOfTransactions { get; init; }
 
-    /// <summary>
-    /// Common transaction status for all individual transactions reported.
-    /// </summary>
+    /// <inheritdoc cref="INumberOfTransactionsPerStatus3.DetailedStatus"/>
     [IsoId("_Rq4Lctp-Ed-ak6NoX_4Aeg_1400369360")]
     [DisplayName("Detailed Status")]
     [IsoXmlTag("DtldSts")]
     public required TransactionIndividualStatus3Code DetailedStatus { get; init; }
 
-    /// <summary>
-    /// Total of all individual amounts included in the message, irrespective of currencies, detailed per status.
-    /// </summary>
+    /// <inheritdoc cref="INumberOfTransactionsPerStatus3.DetailedControlSum"/>
     [IsoId("_Rq4Lc9p-Ed-ak6NoX_4Aeg_1400369391")]
     [DisplayName("Detailed Control Sum")]
     [IsoXmlTag("DtldCtrlSum")]

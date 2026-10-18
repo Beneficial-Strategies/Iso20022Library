@@ -1,0 +1,17 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemIdentification1Choice;
+
+/// <summary>
+/// Infrastructure through which the payment instruction is processed.
+/// </summary>
+[IsoId("_TMVXINp-Ed-ak6NoX_4Aeg_-843594927")]
+public interface IClearingSystemIdentification : IClearingSystemIdentification1Choice, IIsoChoiceVariant
+{
+    /// <summary>
+    /// Contains the main value for the container.
+    /// Specification of a pre-agreed offering between clearing agents or the channel through which the payment instruction is to be processed.
+    /// </summary>
+    [IsoXmlTag("ClrSysId")]
+    CashClearingSystem3Code Value { get; }
+}

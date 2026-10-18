@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Choice between a date or a date and time format.
-    /// </summary>
+    /// <inheritdoc cref="IDateAndDateTime2Choice"/>
     [KnownType(typeof(DateAndDateTime2Choice.Date))]
     [KnownType(typeof(DateAndDateTime2Choice.DateTime))]
     [JsonDerivedType(typeof(DateAndDateTime2Choice.Date), nameof(DateAndDateTime2Choice.Date))]
@@ -18,5 +16,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_fGuzgZlhEeeE1Ya-LgRsuQ")]
     [DisplayName("Date And Date Time 2 Choice")]
-    public abstract record DateAndDateTime2Choice_ { }
+    public abstract partial record DateAndDateTime2Choice_ { }
 }

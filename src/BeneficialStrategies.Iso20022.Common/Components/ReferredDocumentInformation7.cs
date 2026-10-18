@@ -9,24 +9,18 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Set of elements used to identify the documents referred to in the remittance information.
-/// </summary>
+/// <inheritdoc cref="IReferredDocumentInformation7"/>
 [IsoId("_0X1uUzq4EeWZFYSPlduMhw")]
 [DisplayName("Referred Document Information")]
-public record ReferredDocumentInformation7
+public partial record ReferredDocumentInformation7
 {
-    /// <summary>
-    /// Specifies the type of referred document.
-    /// </summary>
+    /// <inheritdoc cref="IReferredDocumentInformation7.Type"/>
     [IsoId("_0feAQzq4EeWZFYSPlduMhw")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     public ReferredDocumentType4? Type { get; init; }
 
-    /// <summary>
-    /// Unique and unambiguous identification of the referred document.
-    /// </summary>
+    /// <inheritdoc cref="IReferredDocumentInformation7.Number"/>
     [IsoId("_0feARTq4EeWZFYSPlduMhw")]
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
@@ -34,18 +28,14 @@ public record ReferredDocumentInformation7
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? Number { get; init; }
 
-    /// <summary>
-    /// Date associated with the referred document.
-    /// </summary>
+    /// <inheritdoc cref="IReferredDocumentInformation7.RelatedDate"/>
     [IsoId("_0feARzq4EeWZFYSPlduMhw")]
     [DisplayName("Related Date")]
     [IsoXmlTag("RltdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
     public IsoISODate? RelatedDate { get; init; }
 
-    /// <summary>
-    /// Set of elements used to provide the content of the referred document line.
-    /// </summary>
+    /// <inheritdoc cref="IReferredDocumentInformation7.LineDetails"/>
     [IsoId("_A4iOsTq5EeWZFYSPlduMhw")]
     [DisplayName("Line Details")]
     [IsoXmlTag("LineDtls")]

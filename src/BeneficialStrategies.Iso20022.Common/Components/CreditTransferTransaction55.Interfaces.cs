@@ -1,0 +1,32 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+public partial record CreditTransferTransaction55 : ICreditTransferTransaction55
+{
+    IPaymentIdentification6 ICreditTransferTransaction55.PaymentIdentification => PaymentIdentification;
+    IPaymentTypeInformation26? ICreditTransferTransaction55.PaymentTypeInformation => PaymentTypeInformation;
+    IPaymentCondition1? ICreditTransferTransaction55.PaymentCondition => PaymentCondition;
+    IAmountType4Choice ICreditTransferTransaction55.Amount => Amount;
+    ICreditTransferMandateData1? ICreditTransferTransaction55.MandateRelatedInformation => MandateRelatedInformation;
+    ICheque11? ICreditTransferTransaction55.ChequeInstruction => ChequeInstruction;
+    IPartyIdentification135? ICreditTransferTransaction55.UltimateDebtor => UltimateDebtor;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction55.IntermediaryAgent1 => IntermediaryAgent1;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction55.IntermediaryAgent2 => IntermediaryAgent2;
+    IBranchAndFinancialInstitutionIdentification6? ICreditTransferTransaction55.IntermediaryAgent3 => IntermediaryAgent3;
+    IBranchAndFinancialInstitutionIdentification6 ICreditTransferTransaction55.CreditorAgent => CreditorAgent;
+    IPartyIdentification135 ICreditTransferTransaction55.Creditor => Creditor;
+    ICashAccount40? ICreditTransferTransaction55.CreditorAccount => CreditorAccount;
+    IPartyIdentification135? ICreditTransferTransaction55.UltimateCreditor => UltimateCreditor;
+    IEnumerable<IInstructionForCreditorAgent3> ICreditTransferTransaction55.InstructionForCreditorAgent => InstructionForCreditorAgent;
+    IPurpose2Choice? ICreditTransferTransaction55.Purpose => Purpose;
+    IEnumerable<IRegulatoryReporting3> ICreditTransferTransaction55.RegulatoryReporting => RegulatoryReporting;
+    ITaxInformation10? ICreditTransferTransaction55.Tax => Tax;
+    IEnumerable<IRemittanceLocation7> ICreditTransferTransaction55.RelatedRemittanceInformation => RelatedRemittanceInformation;
+    IRemittanceInformation21? ICreditTransferTransaction55.RemittanceInformation => RemittanceInformation;
+    IEnumerable<IDocument12> ICreditTransferTransaction55.EnclosedFile => EnclosedFile;
+    IEnumerable<ISupplementaryData1> ICreditTransferTransaction55.SupplementaryData => SupplementaryData;
+}

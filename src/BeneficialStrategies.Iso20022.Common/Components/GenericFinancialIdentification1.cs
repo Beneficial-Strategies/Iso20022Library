@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Information related to an identification of a financial institution.
-/// </summary>
+/// <inheritdoc cref="IGenericFinancialIdentification1"/>
 [IsoId("_QALkM9p-Ed-ak6NoX_4Aeg_-2141717394")]
 [DisplayName("Generic Financial Identification")]
-public record GenericFinancialIdentification1
+public partial record GenericFinancialIdentification1
 {
-    /// <summary>
-    /// Unique and unambiguous identification of a person.
-    /// </summary>
+    /// <inheritdoc cref="IGenericFinancialIdentification1.Identification"/>
     [IsoId("_QALkNNp-Ed-ak6NoX_4Aeg_-2141717392")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
@@ -26,17 +22,13 @@ public record GenericFinancialIdentification1
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public required IsoMax35Text Identification { get; init; }
 
-    /// <summary>
-    /// Name of the identification scheme.
-    /// </summary>
+    /// <inheritdoc cref="IGenericFinancialIdentification1.SchemeName"/>
     [IsoId("_QALkNdp-Ed-ak6NoX_4Aeg_-2141717054")]
     [DisplayName("Scheme Name")]
     [IsoXmlTag("SchmeNm")]
     public FinancialIdentificationSchemeName1Choice_? SchemeName { get; init; }
 
-    /// <summary>
-    /// Entity that assigns the identification.
-    /// </summary>
+    /// <inheritdoc cref="IGenericFinancialIdentification1.Issuer"/>
     [IsoId("_QALkNtp-Ed-ak6NoX_4Aeg_-2141717116")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]

@@ -9,32 +9,24 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Provides further details on the reason of the mandate cancellation request.
-/// </summary>
+/// <inheritdoc cref="IPaymentCancellationReason1"/>
 [IsoId("_t4JrBVkyEeGeoaLUQk__nA_-1435065297")]
 [DisplayName("Payment Cancellation Reason")]
-public record PaymentCancellationReason1
+public partial record PaymentCancellationReason1
 {
-    /// <summary>
-    /// Party that issues the cancellation request.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentCancellationReason1.Originator"/>
     [IsoId("_t4TcAFkyEeGeoaLUQk__nA_1434167759")]
     [DisplayName("Originator")]
     [IsoXmlTag("Orgtr")]
     public PartyIdentification43? Originator { get; init; }
 
-    /// <summary>
-    /// Specifies the reason for the cancellation request.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentCancellationReason1.Reason"/>
     [IsoId("_t4TcAVkyEeGeoaLUQk__nA_2020114785")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
     public required MandateReason1Choice_ Reason { get; init; }
 
-    /// <summary>
-    /// Further details on the cancellation request reason.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentCancellationReason1.AdditionalInformation"/>
     [IsoId("_t4TcAlkyEeGeoaLUQk__nA_463313170")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]

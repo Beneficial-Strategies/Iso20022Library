@@ -1,0 +1,34 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Further detailed information on the exchange rate that has been used in the payment transaction.
+/// </summary>
+[IsoId("_QLp0Ytp-Ed-ak6NoX_4Aeg_-1204184302")]
+public interface IExchangeRateInformation1 : IIsoComponent
+{
+    /// <summary>
+    /// The factor used for conversion of an amount from one currency to another. This reflects the price at which one currency was bought with another currency.
+    /// </summary>
+    [IsoId("_QLp0Y9p-Ed-ak6NoX_4Aeg_-940984267")]
+    [DisplayName("Exchange Rate")]
+    [IsoXmlTag("XchgRate")]
+    IsoBaseOneRate? ExchangeRate { get; }
+
+    /// <summary>
+    /// Specifies the type used to complete the currency exchange.
+    /// </summary>
+    [IsoId("_QLp0ZNp-Ed-ak6NoX_4Aeg_-940984241")]
+    [DisplayName("Rate Type")]
+    [IsoXmlTag("RateTp")]
+    ExchangeRateType1Code? RateType { get; }
+
+    /// <summary>
+    /// Unique and unambiguous reference to the foreign exchange contract agreed between the initiating party/creditor and the debtor agent.
+    /// </summary>
+    [IsoId("_QLp0Zdp-Ed-ak6NoX_4Aeg_-941904256")]
+    [DisplayName("Contract Identification")]
+    [IsoXmlTag("CtrctId")]
+    IsoMax35Text? ContractIdentification { get; }
+}

@@ -1,0 +1,13 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+
+namespace BeneficialStrategies.Iso20022.pacs;
+
+public partial record FIToFICustomerDirectDebitV07 : IFIToFICustomerDirectDebitV07
+{
+    IGroupHeader50 IFIToFICustomerDirectDebitV07.GroupHeader => GroupHeader;
+    IDirectDebitTransactionInformation21 IFIToFICustomerDirectDebitV07.DirectDebitTransactionInformation => DirectDebitTransactionInformation;
+    ISupplementaryData1? IFIToFICustomerDirectDebitV07.SupplementaryData => SupplementaryData;
+}

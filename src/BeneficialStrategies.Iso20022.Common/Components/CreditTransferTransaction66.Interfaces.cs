@@ -1,0 +1,28 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+public partial record CreditTransferTransaction66 : ICreditTransferTransaction66
+{
+    IBranchAndFinancialInstitutionIdentification8 ICreditTransferTransaction66.Creditor => Creditor;
+    ICashAccount40? ICreditTransferTransaction66.CreditorAccount => CreditorAccount;
+    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction66.CreditorAgent => CreditorAgent;
+    ICashAccount40? ICreditTransferTransaction66.CreditorAgentAccount => CreditorAgentAccount;
+    IEnumerable<IDirectDebitTransactionInformation33> ICreditTransferTransaction66.DirectDebitTransactionInformation => DirectDebitTransactionInformation;
+    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction66.InstructedAgent => InstructedAgent;
+    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction66.InstructingAgent => InstructingAgent;
+    IEnumerable<IInstructionForCreditorAgent3> ICreditTransferTransaction66.InstructionForCreditorAgent => InstructionForCreditorAgent;
+    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction66.IntermediaryAgent1 => IntermediaryAgent1;
+    ICashAccount40? ICreditTransferTransaction66.IntermediaryAgent1Account => IntermediaryAgent1Account;
+    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction66.IntermediaryAgent2 => IntermediaryAgent2;
+    ICashAccount40? ICreditTransferTransaction66.IntermediaryAgent2Account => IntermediaryAgent2Account;
+    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction66.IntermediaryAgent3 => IntermediaryAgent3;
+    ICashAccount40? ICreditTransferTransaction66.IntermediaryAgent3Account => IntermediaryAgent3Account;
+    IPaymentTypeInformation28? ICreditTransferTransaction66.PaymentTypeInformation => PaymentTypeInformation;
+    ISettlementDateTimeIndication1? ICreditTransferTransaction66.SettlementTimeIndication => SettlementTimeIndication;
+    IEnumerable<ISupplementaryData1> ICreditTransferTransaction66.SupplementaryData => SupplementaryData;
+    IBranchAndFinancialInstitutionIdentification8? ICreditTransferTransaction66.UltimateCreditor => UltimateCreditor;
+}

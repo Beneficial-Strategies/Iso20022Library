@@ -1,0 +1,18 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Information on the requested settlement time of the instruction.
+/// </summary>
+[IsoId("_QHyBEdp-Ed-ak6NoX_4Aeg_564730971")]
+public interface ISettlementTimeRequest1 : IIsoComponent
+{
+    /// <summary>
+    /// Time by which the funds must be credited, with confirmation, to the CLS Bank&apos;s account at the central bank, expressed in Central European Time (CET).
+    /// </summary>
+    [IsoId("_QHyBEtp-Ed-ak6NoX_4Aeg_605366498")]
+    [DisplayName("CLS Time")]
+    [IsoXmlTag("CLSTm")]
+    IsoISOTime CLSTime { get; }
+}

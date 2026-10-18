@@ -12,24 +12,13 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pacs;
 
-/// <summary>
-/// This record is an implementation of the pacs.003.001.10 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// Scope
-/// The FinancialInstitutionToFinancialInstitutionCustomerDirectDebit message is sent by the creditor agent to the debtor agent, directly or through other agents and/or a payment clearing and settlement system.
-/// It is used to collect funds from a debtor account for a creditor.
-/// Usage
-/// The FItoFICustomerDirectDebit message can contain one or more customer direct debit instructions.
-/// The FIToFICustomerDirectDebit message does not allow for grouping.
-/// The FItoFICustomerDirectDebit message may or may not contain mandate related information, that is extracts from a mandate, such as the MandateIdentification or DateOfSignature. The FIToFICustomerDirectDebit message must not be considered as a mandate.
-/// The FItoFICustomerDirectDebit message can be used in domestic and cross-border scenarios.
-/// </summary>
+/// <inheritdoc cref="IFIToFICustomerDirectDebitV10"/>
 [Description(
     @"Scope|The FinancialInstitutionToFinancialInstitutionCustomerDirectDebit message is sent by the creditor agent to the debtor agent, directly or through other agents and/or a payment clearing and settlement system.|It is used to collect funds from a debtor account for a creditor.|Usage|The FItoFICustomerDirectDebit message can contain one or more customer direct debit instructions.|The FIToFICustomerDirectDebit message does not allow for grouping.|The FItoFICustomerDirectDebit message may or may not contain mandate related information, that is extracts from a mandate, such as the MandateIdentification or DateOfSignature. The FIToFICustomerDirectDebit message must not be considered as a mandate.|The FItoFICustomerDirectDebit message can be used in domestic and cross-border scenarios."
 )]
 [IsoId("_8Pj8MRlUEe2Do_UtrNmb2g")]
 [DisplayName("FI To FI Customer Direct Debit V")]
-public record FIToFICustomerDirectDebitV10 : IOuterRecord
+public partial record FIToFICustomerDirectDebitV10 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -56,25 +45,19 @@ public record FIToFICustomerDirectDebitV10 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Set of characteristics shared by all individual transactions included in the message.
-    /// </summary>
+    /// <inheritdoc cref="IFIToFICustomerDirectDebitV10.GroupHeader"/>
     [IsoId("_8Pj8TxlUEe2Do_UtrNmb2g")]
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader98 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Set of elements providing information specific to the individual direct debit(s).
-    /// </summary>
+    /// <inheritdoc cref="IFIToFICustomerDirectDebitV10.DirectDebitTransactionInformation"/>
     [IsoId("_8Pj8URlUEe2Do_UtrNmb2g")]
     [DisplayName("Direct Debit Transaction Information")]
     [IsoXmlTag("DrctDbtTxInf")]
     public required DirectDebitTransactionInformation30 DirectDebitTransactionInformation { get; init; }
 
-    /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
+    /// <inheritdoc cref="IFIToFICustomerDirectDebitV10.SupplementaryData"/>
     [IsoId("_8Pj8UxlUEe2Do_UtrNmb2g")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]

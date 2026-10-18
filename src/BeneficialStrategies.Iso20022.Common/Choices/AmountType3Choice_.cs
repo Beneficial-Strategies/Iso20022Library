@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Specifies the amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.
-    /// </summary>
+    /// <inheritdoc cref="IAmountType3Choice"/>
     [KnownType(typeof(AmountType3Choice.InstructedAmount))]
     [KnownType(typeof(AmountType3Choice.EquivalentAmount))]
     [JsonDerivedType(
@@ -21,5 +19,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_P57LMNp-Ed-ak6NoX_4Aeg_326234878")]
     [DisplayName("Amount Type 3 Choice")]
-    public abstract record AmountType3Choice_ { }
+    public abstract partial record AmountType3Choice_ { }
 }

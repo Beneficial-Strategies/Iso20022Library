@@ -12,22 +12,13 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pain;
 
-/// <summary>
-/// This record is an implementation of the pain.007.001.09 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// Scope
-/// The CustomerPaymentReversal message is sent by the initiating party to the next party in the payment chain. It is used to reverse a payment previously executed.
-/// Usage
-/// The CustomerPaymentReversal message is exchanged between a non-financial institution customer and an agent to reverse a CustomerDirectDebitInitiation message that has been settled. The result will be a credit on the debtor account.
-/// The CustomerPaymentReversal message refers to the original CustomerDirectDebitInitiation message by means of references only or by means of references and a set of elements from the original instruction.
-/// The CustomerPaymentReversal message can be used in domestic and cross-border scenarios.
-/// </summary>
+/// <inheritdoc cref="ICustomerPaymentReversalV09"/>
 [Description(
     @"Scope|The CustomerPaymentReversal message is sent by the initiating party to the next party in the payment chain. It is used to reverse a payment previously executed.|Usage|The CustomerPaymentReversal message is exchanged between a non-financial institution customer and an agent to reverse a CustomerDirectDebitInitiation message that has been settled. The result will be a credit on the debtor account.|The CustomerPaymentReversal message refers to the original CustomerDirectDebitInitiation message by means of references only or by means of references and a set of elements from the original instruction.|The CustomerPaymentReversal message can be used in domestic and cross-border scenarios."
 )]
 [IsoId("_eYI_x22PEei3KuUgpx7Xcw")]
 [DisplayName("Customer Payment Reversal V")]
-public record CustomerPaymentReversalV09 : IOuterRecord
+public partial record CustomerPaymentReversalV09 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -54,33 +45,25 @@ public record CustomerPaymentReversalV09 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Set of characteristics shared by all individual transactions included in the message.
-    /// </summary>
+    /// <inheritdoc cref="ICustomerPaymentReversalV09.GroupHeader"/>
     [IsoId("_eYI_022PEei3KuUgpx7Xcw")]
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader88 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Information concerning the original group of transactions, to which the message refers.
-    /// </summary>
+    /// <inheritdoc cref="ICustomerPaymentReversalV09.OriginalGroupInformation"/>
     [IsoId("_eYI_1W2PEei3KuUgpx7Xcw")]
     [DisplayName("Original Group Information")]
     [IsoXmlTag("OrgnlGrpInf")]
     public required OriginalGroupHeader16 OriginalGroupInformation { get; init; }
 
-    /// <summary>
-    /// Information concerning the original payment information, to which the reversal message refers.
-    /// </summary>
+    /// <inheritdoc cref="ICustomerPaymentReversalV09.OriginalPaymentInformationAndReversal"/>
     [IsoId("_eYI_122PEei3KuUgpx7Xcw")]
     [DisplayName("Original Payment Information And Reversal")]
     [IsoXmlTag("OrgnlPmtInfAndRvsl")]
     public OriginalPaymentInstruction33? OriginalPaymentInformationAndReversal { get; init; }
 
-    /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
+    /// <inheritdoc cref="ICustomerPaymentReversalV09.SupplementaryData"/>
     [IsoId("_eYI_2W2PEei3KuUgpx7Xcw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]

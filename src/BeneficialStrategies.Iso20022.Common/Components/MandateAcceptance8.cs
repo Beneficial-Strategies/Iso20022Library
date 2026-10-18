@@ -9,37 +9,27 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Identifies the mandate, which is being accepted.
-/// </summary>
+/// <inheritdoc cref="IMandateAcceptance8"/>
 [IsoId("_1f7egTEyEe6g-ffJsqGiSA")]
 [DisplayName("Mandate Acceptance8")]
-public record MandateAcceptance8
+public partial record MandateAcceptance8
 {
-    /// <summary>
-    /// Acceptance Result.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAcceptance8.AcceptanceResult"/>
     [DisplayName("Acceptance Result")]
     [IsoXmlTag("AccptncRslt")]
     public required AcceptanceResult6 AcceptanceResult { get; init; }
 
-    /// <summary>
-    /// Original Mandate.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAcceptance8.OriginalMandate"/>
     [DisplayName("Original Mandate")]
     [IsoXmlTag("OrgnlMndt")]
     public OriginalMandate11Choice_? OriginalMandate { get; init; }
 
-    /// <summary>
-    /// Original Message Information.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAcceptance8.OriginalMessageInformation"/>
     [DisplayName("Original Message Information")]
     [IsoXmlTag("OrgnlMsgInf")]
     public OriginalMessageInformation1? OriginalMessageInformation { get; init; }
 
-    /// <summary>
-    /// Supplementary Data.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAcceptance8.SupplementaryData"/>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];

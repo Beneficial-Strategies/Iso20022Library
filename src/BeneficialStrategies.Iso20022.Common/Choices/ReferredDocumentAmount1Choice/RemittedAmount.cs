@@ -8,25 +8,19 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.ReferredDocumentAmount1Choice
 {
-    /// <summary>
-    /// Amount of money remitted for the referred document.
-    /// </summary>
+    /// <inheritdoc cref="IRemittedAmount"/>
     [IsoId("_QGJCRdp-Ed-ak6NoX_4Aeg_-888106457")]
     [DisplayName("Remitted Amount")]
     [IsoXmlTag("RmtdAmt")]
-    public record RemittedAmount : ReferredDocumentAmount1Choice_
+    public partial record RemittedAmount : ReferredDocumentAmount1Choice_
     {
-        /// <summary>
-        /// The currency in which this amount is measured.
-        /// </summary>
+        /// <inheritdoc cref="IRemittedAmount.Currency"/>
         [IsoId("_YXSZF9p-Ed-ak6NoX_4Aeg_-1352517078_Currency")]
         [DisplayName("Currency And Amount _ Currency")]
         [IsoXmlTag("Currency")]
         public required CurrencyCode Currency { get; init; }
 
-        /// <summary>
-        /// Amount of the transaction.
-        /// </summary>
+        /// <inheritdoc cref="IRemittedAmount.Amount"/>
         [IsoId("_YXSZF9p-Ed-ak6NoX_4Aeg_-1352517078_Amount")]
         [DisplayName("Currency And Amount _ Amount")]
         [IsoXmlTag("Amount")]

@@ -12,13 +12,10 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pain;
 
-/// <summary>
-/// This record is an implementation of the pain.010.001.08 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// </summary>
+/// <inheritdoc cref="IMandateAmendmentRequestV08"/>
 [IsoId("_R3P4TzEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Mandate Amendment Request V08")]
-public record MandateAmendmentRequestV08 : IOuterRecord
+public partial record MandateAmendmentRequestV08 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -45,23 +42,17 @@ public record MandateAmendmentRequestV08 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Group Header.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAmendmentRequestV08.GroupHeader"/>
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader110 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Supplementary Data.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAmendmentRequestV08.SupplementaryData"/>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 
-    /// <summary>
-    /// Underlying Amendment Details.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAmendmentRequestV08.UnderlyingAmendmentDetails"/>
     [DisplayName("Underlying Amendment Details")]
     [IsoXmlTag("UndrlygAmdmntDtls")]
     public ValueList<MandateAmendment8> UnderlyingAmendmentDetails { get; init; } = [];

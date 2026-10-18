@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Information that serves as a basis to debit an account.
-/// </summary>
+/// <inheritdoc cref="IMandate3"/>
 [IsoId("_tzras1kyEeGeoaLUQk__nA_1855464724")]
 [DisplayName("Mandate")]
-public record Mandate3
+public partial record Mandate3
 {
-    /// <summary>
-    /// Unique identification, as assigned by the creditor, to unambiguously identify the mandate.
-    /// </summary>
+    /// <inheritdoc cref="IMandate3.MandateIdentification"/>
     [IsoId("_tzratFkyEeGeoaLUQk__nA_110826690")]
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
@@ -26,9 +22,7 @@ public record Mandate3
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public required IsoMax35Text MandateIdentification { get; init; }
 
-    /// <summary>
-    /// Identification for the mandate request, as assigned by the initiating party.
-    /// </summary>
+    /// <inheritdoc cref="IMandate3.MandateRequestIdentification"/>
     [IsoId("_tzratVkyEeGeoaLUQk__nA_-1199352703")]
     [DisplayName("Mandate Request Identification")]
     [IsoXmlTag("MndtReqId")]
@@ -36,113 +30,85 @@ public record Mandate3
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? MandateRequestIdentification { get; init; }
 
-    /// <summary>
-    /// Specifies the type of mandate, such as paper, electronic or scheme.
-    /// </summary>
+    /// <inheritdoc cref="IMandate3.Type"/>
     [IsoId("_tz1LsFkyEeGeoaLUQk__nA_2060556197")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     public MandateTypeInformation1? Type { get; init; }
 
-    /// <summary>
-    /// Provides details of the duration of the mandate and occurrence of the underlying transactions.
-    /// </summary>
+    /// <inheritdoc cref="IMandate3.Occurrences"/>
     [IsoId("_tz1LsVkyEeGeoaLUQk__nA_1305806323")]
     [DisplayName("Occurrences")]
     [IsoXmlTag("Ocrncs")]
     public MandateOccurrences2? Occurrences { get; init; }
 
-    /// <summary>
-    /// Fixed amount to be collected from the debtor&apos;s account.
-    /// </summary>
+    /// <inheritdoc cref="IMandate3.CollectionAmount"/>
     [IsoId("_tz1LslkyEeGeoaLUQk__nA_-14233788")]
     [DisplayName("Collection Amount")]
     [IsoXmlTag("ColltnAmt")]
     public ActiveCurrencyAndAmount? CollectionAmount { get; init; }
 
-    /// <summary>
-    /// Maximum amount that may be collected from the debtor&apos;s account, per instruction.
-    /// </summary>
+    /// <inheritdoc cref="IMandate3.MaximumAmount"/>
     [IsoId("_tz1Ls1kyEeGeoaLUQk__nA_1883438696")]
     [DisplayName("Maximum Amount")]
     [IsoXmlTag("MaxAmt")]
     public ActiveCurrencyAndAmount? MaximumAmount { get; init; }
 
-    /// <summary>
-    /// Credit party that signs the mandate.
-    /// </summary>
+    /// <inheritdoc cref="IMandate3.CreditorSchemeIdentification"/>
     [IsoId("_tz1LtFkyEeGeoaLUQk__nA_1580382181")]
     [DisplayName("Creditor Scheme Identification")]
     [IsoXmlTag("CdtrSchmeId")]
     public PartyIdentification43? CreditorSchemeIdentification { get; init; }
 
-    /// <summary>
-    /// Party that signs the mandate and to whom an amount of money is due.
-    /// </summary>
+    /// <inheritdoc cref="IMandate3.Creditor"/>
     [IsoId("_tz-8sFkyEeGeoaLUQk__nA_1962837289")]
     [DisplayName("Creditor")]
     [IsoXmlTag("Cdtr")]
     public PartyIdentification43? Creditor { get; init; }
 
-    /// <summary>
-    /// Unambiguous identification of the account of the creditor to which a credit entry will be posted as a result of the payment transaction.
-    /// </summary>
+    /// <inheritdoc cref="IMandate3.CreditorAccount"/>
     [IsoId("_tz-8sVkyEeGeoaLUQk__nA_-1878042738")]
     [DisplayName("Creditor Account")]
     [IsoXmlTag("CdtrAcct")]
     public CashAccount24? CreditorAccount { get; init; }
 
-    /// <summary>
-    /// Financial institution servicing an account for the creditor.
-    /// </summary>
+    /// <inheritdoc cref="IMandate3.CreditorAgent"/>
     [IsoId("_tz-8slkyEeGeoaLUQk__nA_-1552925231")]
     [DisplayName("Creditor Agent")]
     [IsoXmlTag("CdtrAgt")]
     public BranchAndFinancialInstitutionIdentification5? CreditorAgent { get; init; }
 
-    /// <summary>
-    /// Ultimate party to which an amount of money is due.
-    /// </summary>
+    /// <inheritdoc cref="IMandate3.UltimateCreditor"/>
     [IsoId("_tz-8s1kyEeGeoaLUQk__nA_191926028")]
     [DisplayName("Ultimate Creditor")]
     [IsoXmlTag("UltmtCdtr")]
     public PartyIdentification43? UltimateCreditor { get; init; }
 
-    /// <summary>
-    /// Party that signs the mandate and owes an amount of money to the (ultimate) creditor.
-    /// </summary>
+    /// <inheritdoc cref="IMandate3.Debtor"/>
     [IsoId("_tz-8tFkyEeGeoaLUQk__nA_44123102")]
     [DisplayName("Debtor")]
     [IsoXmlTag("Dbtr")]
     public PartyIdentification43? Debtor { get; init; }
 
-    /// <summary>
-    /// Unambiguous identification of the account of the debtor, to which a debit entry will be made as a result of the transaction.
-    /// </summary>
+    /// <inheritdoc cref="IMandate3.DebtorAccount"/>
     [IsoId("_t0IGoFkyEeGeoaLUQk__nA_1401934058")]
     [DisplayName("Debtor Account")]
     [IsoXmlTag("DbtrAcct")]
     public CashAccount24? DebtorAccount { get; init; }
 
-    /// <summary>
-    /// Financial institution servicing an account for the debtor.
-    /// </summary>
+    /// <inheritdoc cref="IMandate3.DebtorAgent"/>
     [IsoId("_t0IGoVkyEeGeoaLUQk__nA_-748612815")]
     [DisplayName("Debtor Agent")]
     [IsoXmlTag("DbtrAgt")]
     public BranchAndFinancialInstitutionIdentification5? DebtorAgent { get; init; }
 
-    /// <summary>
-    /// Ultimate party that owes an amount of money to the (ultimate) creditor.
-    /// </summary>
+    /// <inheritdoc cref="IMandate3.UltimateDebtor"/>
     [IsoId("_t0IGolkyEeGeoaLUQk__nA_12152338")]
     [DisplayName("Ultimate Debtor")]
     [IsoXmlTag("UltmtDbtr")]
     public PartyIdentification43? UltimateDebtor { get; init; }
 
-    /// <summary>
-    /// Provides information to identify the underlying documents associated with the mandate.
-    /// </summary>
+    /// <inheritdoc cref="IMandate3.ReferredDocument"/>
     [IsoId("_t0IGo1kyEeGeoaLUQk__nA_-1480815348")]
     [DisplayName("Referred Document")]
     [IsoXmlTag("RfrdDoc")]

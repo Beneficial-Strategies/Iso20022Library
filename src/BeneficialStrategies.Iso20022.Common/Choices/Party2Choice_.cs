@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Choice between the identification of a person and the identification of a non-financial institution.
-    /// </summary>
+    /// <inheritdoc cref="IParty2Choice"/>
     [KnownType(typeof(Party2Choice.OrganisationIdentification))]
     [KnownType(typeof(Party2Choice.PrivateIdentification))]
     [JsonDerivedType(
@@ -21,5 +19,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RCDQ4Np-Ed-ak6NoX_4Aeg_-1691234030")]
     [DisplayName("Party 2 Choice")]
-    public abstract record Party2Choice_ { }
+    public abstract partial record Party2Choice_ { }
 }

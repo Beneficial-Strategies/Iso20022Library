@@ -9,44 +9,32 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Party Identification272.
-/// </summary>
+/// <inheritdoc cref="IPartyIdentification272"/>
 [IsoId("_vtFWJTEyEe6g-ffJsqGiSA")]
 [DisplayName("Party Identification272")]
-public record PartyIdentification272
+public partial record PartyIdentification272
 {
-    /// <summary>
-    /// Contact Details.
-    /// </summary>
+    /// <inheritdoc cref="IPartyIdentification272.ContactDetails"/>
     [DisplayName("Contact Details")]
     [IsoXmlTag("CtctDtls")]
     public Contact13? ContactDetails { get; init; }
 
-    /// <summary>
-    /// Country Of Residence.
-    /// </summary>
+    /// <inheritdoc cref="IPartyIdentification272.CountryOfResidence"/>
     [DisplayName("Country Of Residence")]
     [IsoXmlTag("CtryOfRes")]
     public CountryCode? CountryOfResidence { get; init; }
 
-    /// <summary>
-    /// Identification.
-    /// </summary>
+    /// <inheritdoc cref="IPartyIdentification272.Identification"/>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     public Party52Choice_? Identification { get; init; }
 
-    /// <summary>
-    /// Name.
-    /// </summary>
+    /// <inheritdoc cref="IPartyIdentification272.Name"/>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     public IsoMax140Text? Name { get; init; }
 
-    /// <summary>
-    /// Postal Address.
-    /// </summary>
+    /// <inheritdoc cref="IPartyIdentification272.PostalAddress"/>
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]
     public PostalAddress27? PostalAddress { get; init; }

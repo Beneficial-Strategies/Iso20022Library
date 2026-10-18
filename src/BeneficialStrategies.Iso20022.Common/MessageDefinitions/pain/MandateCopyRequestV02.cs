@@ -12,26 +12,13 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pain;
 
-/// <summary>
-/// This record is an implementation of the pain.017.001.02 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// Scope
-/// The MandateCopyRequest message is sent by the initiator of the request to his agent. The initiator can either be the debtor or the creditor.
-/// The MandateCopyRequest message is forwarded by the agent of the initiator to the agent of the counterparty.
-/// A MandateCopyRequest message is used to request a copy of an existing mandate. If accepted, the mandate copy can be sent using the MandateAcceptanceReport message.
-/// Usage
-/// The MandateCopyRequest message can contain one or more copy requests.
-/// The messages can be exchanged between creditor and creditor agent or debtor and debtor agent and between creditor agent and debtor agent.
-/// The message can also be used by an initiating party that has authority to send the message on behalf of the creditor or debtor.
-/// The MandateCopyRequest message can be used in domestic and cross-border scenarios.
-///
-/// </summary>
+/// <inheritdoc cref="IMandateCopyRequestV02"/>
 [Description(
     @"Scope|The MandateCopyRequest message is sent by the initiator of the request to his agent. The initiator can either be the debtor or the creditor.|The MandateCopyRequest message is forwarded by the agent of the initiator to the agent of the counterparty.|A MandateCopyRequest message is used to request a copy of an existing mandate. If accepted, the mandate copy can be sent using the MandateAcceptanceReport message.|Usage|The MandateCopyRequest message can contain one or more copy requests.|The messages can be exchanged between creditor and creditor agent or debtor and debtor agent and between creditor agent and debtor agent.|The message can also be used by an initiating party that has authority to send the message on behalf of the creditor or debtor.|The MandateCopyRequest message can be used in domestic and cross-border scenarios.|"
 )]
 [IsoId("_bf9SO22PEei3KuUgpx7Xcw")]
 [DisplayName("Mandate Copy Request V")]
-public record MandateCopyRequestV02 : IOuterRecord
+public partial record MandateCopyRequestV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -58,25 +45,19 @@ public record MandateCopyRequestV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Set of characteristics to identify the message and parties playing a role in the mandate copy request, but which are not part of the mandate.
-    /// </summary>
+    /// <inheritdoc cref="IMandateCopyRequestV02.GroupHeader"/>
     [IsoId("_bf9SP22PEei3KuUgpx7Xcw")]
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader80 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Set of information used to identify the mandate for which a copy is requested.
-    /// </summary>
+    /// <inheritdoc cref="IMandateCopyRequestV02.UnderlyingCopyRequestDetails"/>
     [IsoId("_bf9SQW2PEei3KuUgpx7Xcw")]
     [DisplayName("Underlying Copy Request Details")]
     [IsoXmlTag("UndrlygCpyReqDtls")]
     public required MandateCopy2 UnderlyingCopyRequestDetails { get; init; }
 
-    /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
+    /// <inheritdoc cref="IMandateCopyRequestV02.SupplementaryData"/>
     [IsoId("_bf9SQ22PEei3KuUgpx7Xcw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]

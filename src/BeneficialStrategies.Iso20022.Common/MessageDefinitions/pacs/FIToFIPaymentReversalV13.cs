@@ -12,13 +12,10 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pacs;
 
-/// <summary>
-/// This record is an implementation of the pacs.007.001.13 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// </summary>
+/// <inheritdoc cref="IFIToFIPaymentReversalV13"/>
 [IsoId("_R3KYwTEZEe6kQ-WGAhcVPQ")]
 [DisplayName("FI To FI Payment Reversal V13")]
-public record FIToFIPaymentReversalV13 : IOuterRecord
+public partial record FIToFIPaymentReversalV13 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -45,30 +42,22 @@ public record FIToFIPaymentReversalV13 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Group Header.
-    /// </summary>
+    /// <inheritdoc cref="IFIToFIPaymentReversalV13.GroupHeader"/>
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader127 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Original Group Information.
-    /// </summary>
+    /// <inheritdoc cref="IFIToFIPaymentReversalV13.OriginalGroupInformation"/>
     [DisplayName("Original Group Information")]
     [IsoXmlTag("OrgnlGrpInf")]
     public OriginalGroupHeader20? OriginalGroupInformation { get; init; }
 
-    /// <summary>
-    /// Supplementary Data.
-    /// </summary>
+    /// <inheritdoc cref="IFIToFIPaymentReversalV13.SupplementaryData"/>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 
-    /// <summary>
-    /// Transaction Information.
-    /// </summary>
+    /// <inheritdoc cref="IFIToFIPaymentReversalV13.TransactionInformation"/>
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
     public ValueList<PaymentTransaction149> TransactionInformation { get; init; } = [];

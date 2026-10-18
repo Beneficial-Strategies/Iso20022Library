@@ -12,13 +12,10 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pain;
 
-/// <summary>
-/// This record is an implementation of the pain.007.001.12 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// </summary>
+/// <inheritdoc cref="ICustomerPaymentReversalV12"/>
 [IsoId("_R3H8YTEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Customer Payment Reversal V12")]
-public record CustomerPaymentReversalV12 : IOuterRecord
+public partial record CustomerPaymentReversalV12 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -45,31 +42,23 @@ public record CustomerPaymentReversalV12 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Group Header.
-    /// </summary>
+    /// <inheritdoc cref="ICustomerPaymentReversalV12.GroupHeader"/>
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader124 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Original Group Information.
-    /// </summary>
+    /// <inheritdoc cref="ICustomerPaymentReversalV12.OriginalGroupInformation"/>
     [DisplayName("Original Group Information")]
     [IsoXmlTag("OrgnlGrpInf")]
     public required OriginalGroupHeader20 OriginalGroupInformation { get; init; }
 
-    /// <summary>
-    /// Original Payment Information And Reversal.
-    /// </summary>
+    /// <inheritdoc cref="ICustomerPaymentReversalV12.OriginalPaymentInformationAndReversal"/>
     [DisplayName("Original Payment Information And Reversal")]
     [IsoXmlTag("OrgnlPmtInfAndRvsl")]
     public ValueList<OriginalPaymentInstruction50> OriginalPaymentInformationAndReversal { get; init; } =
         [];
 
-    /// <summary>
-    /// Supplementary Data.
-    /// </summary>
+    /// <inheritdoc cref="ICustomerPaymentReversalV12.SupplementaryData"/>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];

@@ -9,104 +9,78 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Set of elements used to provide information specific to the individual direct debit transaction(s) included in the message.
-/// </summary>
+/// <inheritdoc cref="IDirectDebitTransactionInformation9"/>
 [IsoId("_P1wc49p-Ed-ak6NoX_4Aeg_1595924985")]
 [DisplayName("Direct Debit Transaction Information")]
-public record DirectDebitTransactionInformation9
+public partial record DirectDebitTransactionInformation9
 {
-    /// <summary>
-    /// Set of elements used to reference a payment instruction.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation9.PaymentIdentification"/>
     [IsoId("_P1wc5Np-Ed-ak6NoX_4Aeg_1595926335")]
     [DisplayName("Payment Identification")]
     [IsoXmlTag("PmtId")]
     public required PaymentIdentification1 PaymentIdentification { get; init; }
 
-    /// <summary>
-    /// Set of elements used to further specify the type of transaction.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation9.PaymentTypeInformation"/>
     [IsoId("_P1wc5dp-Ed-ak6NoX_4Aeg_1595925441")]
     [DisplayName("Payment Type Information")]
     [IsoXmlTag("PmtTpInf")]
     public PaymentTypeInformation20? PaymentTypeInformation { get; init; }
 
-    /// <summary>
-    /// Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation9.InstructedAmount"/>
     [IsoId("_P1wc5tp-Ed-ak6NoX_4Aeg_1595925318")]
     [DisplayName("Instructed Amount")]
     [IsoXmlTag("InstdAmt")]
     public required ActiveOrHistoricCurrencyAndAmount InstructedAmount { get; init; }
 
-    /// <summary>
-    /// Specifies which party/parties will bear the charges associated with the processing of the payment transaction.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation9.ChargeBearer"/>
     [IsoId("_P1wc59p-Ed-ak6NoX_4Aeg_1595925017")]
     [DisplayName("Charge Bearer")]
     [IsoXmlTag("ChrgBr")]
     public ChargeBearerType1Code? ChargeBearer { get; init; }
 
-    /// <summary>
-    /// Set of elements providing information specific to the direct debit mandate.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation9.DirectDebitTransaction"/>
     [IsoId("_P1wc6Np-Ed-ak6NoX_4Aeg_1595925564")]
     [DisplayName("Direct Debit Transaction")]
     [IsoXmlTag("DrctDbtTx")]
     public DirectDebitTransaction6? DirectDebitTransaction { get; init; }
 
-    /// <summary>
-    /// Ultimate party to which an amount of money is due.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation9.UltimateCreditor"/>
     [IsoId("_P15m0Np-Ed-ak6NoX_4Aeg_1595926243")]
     [DisplayName("Ultimate Creditor")]
     [IsoXmlTag("UltmtCdtr")]
     public PartyIdentification32? UltimateCreditor { get; init; }
 
-    /// <summary>
-    /// Financial institution servicing an account for the debtor.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation9.DebtorAgent"/>
     [IsoId("_P15m0dp-Ed-ak6NoX_4Aeg_1595925811")]
     [DisplayName("Debtor Agent")]
     [IsoXmlTag("DbtrAgt")]
     public required BranchAndFinancialInstitutionIdentification4 DebtorAgent { get; init; }
 
-    /// <summary>
-    /// Unambiguous identification of the account of the debtor agent at its servicing agent in the payment chain.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation9.DebtorAgentAccount"/>
     [IsoId("_P15m0tp-Ed-ak6NoX_4Aeg_1595926396")]
     [DisplayName("Debtor Agent Account")]
     [IsoXmlTag("DbtrAgtAcct")]
     public CashAccount16? DebtorAgentAccount { get; init; }
 
-    /// <summary>
-    /// Party that owes an amount of money to the (ultimate) creditor.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation9.Debtor"/>
     [IsoId("_P15m09p-Ed-ak6NoX_4Aeg_1595925965")]
     [DisplayName("Debtor")]
     [IsoXmlTag("Dbtr")]
     public required PartyIdentification32 Debtor { get; init; }
 
-    /// <summary>
-    /// Unambiguous identification of the account of the debtor to which a debit entry will be made as a result of the transaction.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation9.DebtorAccount"/>
     [IsoId("_P15m1Np-Ed-ak6NoX_4Aeg_1595926488")]
     [DisplayName("Debtor Account")]
     [IsoXmlTag("DbtrAcct")]
     public required CashAccount16 DebtorAccount { get; init; }
 
-    /// <summary>
-    /// Ultimate party that owes an amount of money to the (ultimate) creditor.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation9.UltimateDebtor"/>
     [IsoId("_P15m1dp-Ed-ak6NoX_4Aeg_1595925873")]
     [DisplayName("Ultimate Debtor")]
     [IsoXmlTag("UltmtDbtr")]
     public PartyIdentification32? UltimateDebtor { get; init; }
 
-    /// <summary>
-    /// Further information, related to the processing of the payment instruction, that may need to be acted upon by the creditor agent, depending on agreement between creditor and the creditor agent.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation9.InstructionForCreditorAgent"/>
     [IsoId("_P15m1tp-Ed-ak6NoX_4Aeg_1595925379")]
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
@@ -114,17 +88,13 @@ public record DirectDebitTransactionInformation9
     [StringLength(maximumLength: 140, MinimumLength = 1)]
     public IsoMax140Text? InstructionForCreditorAgent { get; init; }
 
-    /// <summary>
-    /// Underlying reason for the payment transaction.|Usage: Purpose is used by the end-customers, that is initiating party, (ultimate) debtor, (ultimate) creditor to provide information concerning the nature of the payment. Purpose is a content element, which is not used for processing by any of the agents involved in the payment chain.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation9.Purpose"/>
     [IsoId("_P15m19p-Ed-ak6NoX_4Aeg_1595925516")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
     public Purpose2Choice_? Purpose { get; init; }
 
-    /// <summary>
-    /// Information needed due to regulatory and statutory requirements.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation9.RegulatoryReporting"/>
     [IsoId("_P15m2Np-Ed-ak6NoX_4Aeg_1595926797")]
     [DisplayName("Regulatory Reporting")]
     [IsoXmlTag("RgltryRptg")]
@@ -132,17 +102,13 @@ public record DirectDebitTransactionInformation9
     [MaxLength(10)]
     public ValueList<RegulatoryReporting3> RegulatoryReporting { get; init; } = [];
 
-    /// <summary>
-    /// Set of elements used to provide details on the tax.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation9.Tax"/>
     [IsoId("_P2DX0Np-Ed-ak6NoX_4Aeg_1595926427")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
     public TaxInformation3? Tax { get; init; }
 
-    /// <summary>
-    /// Set of elements used to provide information related to the handling of the remittance information by any of the agents in the transaction processing chain.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation9.RelatedRemittanceInformation"/>
     [IsoId("_P2DX0dp-Ed-ak6NoX_4Aeg_1595926519")]
     [DisplayName("Related Remittance Information")]
     [IsoXmlTag("RltdRmtInf")]
@@ -150,9 +116,7 @@ public record DirectDebitTransactionInformation9
     [MaxLength(10)]
     public ValueList<RemittanceLocation2> RelatedRemittanceInformation { get; init; } = [];
 
-    /// <summary>
-    /// Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts&apos; receivable system.
-    /// </summary>
+    /// <inheritdoc cref="IDirectDebitTransactionInformation9.RemittanceInformation"/>
     [IsoId("_P2DX0tp-Ed-ak6NoX_4Aeg_1595926304")]
     [DisplayName("Remittance Information")]
     [IsoXmlTag("RmtInf")]

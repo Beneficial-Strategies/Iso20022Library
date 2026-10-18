@@ -1,0 +1,26 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentification5Choice;
+
+/// <summary>
+/// Identifies the name and address of a financial institution.
+/// </summary>
+[IsoId("_TFnrINp-Ed-ak6NoX_4Aeg_426657982")]
+public interface INameAndAddress : IFinancialInstitutionIdentification5Choice, IIsoChoiceVariant
+{
+    /// <summary>
+    /// Name by which a party is known and which is usually used to identify that party.
+    /// </summary>
+    [IsoId("_PZleQtp-Ed-ak6NoX_4Aeg_1385273243")]
+    [DisplayName("Name")]
+    [IsoXmlTag("Nm")]
+    IsoMax70Text Name { get; }
+
+    /// <summary>
+    /// Information that locates and identifies a specific address, as defined by postal services.
+    /// </summary>
+    [IsoId("_PZleQ9p-Ed-ak6NoX_4Aeg_1385275042")]
+    [DisplayName("Postal Address")]
+    [IsoXmlTag("PstlAdr")]
+    IPostalAddress1 PostalAddress { get; }
+}

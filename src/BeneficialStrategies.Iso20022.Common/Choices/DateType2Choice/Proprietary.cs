@@ -8,15 +8,11 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.DateType2Choice
 {
-    /// <summary>
-    /// Proprietary.
-    /// </summary>
+    /// <inheritdoc cref="IProprietary"/>
     [DisplayName("Proprietary")]
-    public record Proprietary : DateType2Choice_
+    public partial record Proprietary : DateType2Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// </summary>
+        /// <inheritdoc cref="IProprietary.Value"/>
         [IsoXmlTag("Prtry")]
         public required IsoMax35Text Value { get; init; }
     }

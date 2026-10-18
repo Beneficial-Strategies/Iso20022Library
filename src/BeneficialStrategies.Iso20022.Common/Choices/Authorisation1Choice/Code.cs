@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.Authorisation1Choice
 {
-    /// <summary>
-    /// Specifies the authorisation, in a coded form.
-    /// </summary>
+    /// <inheritdoc cref="ICode"/>
     [IsoId("_RD1Zl9p-Ed-ak6NoX_4Aeg_-955120142")]
     [DisplayName("Code")]
-    public record Code : Authorisation1Choice_
+    public partial record Code : Authorisation1Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies the level of approval depending on a number of factors, including payment type, threshold amount or local country or operations practice.
-        /// </summary>
+        /// <inheritdoc cref="ICode.Value"/>
         [IsoXmlTag("Cd")]
         public required Authorisation1Code Value { get; init; }
     }

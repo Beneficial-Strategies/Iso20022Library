@@ -8,25 +8,19 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.Party11Choice
 {
-    /// <summary>
-    /// Unique and unambiguous identification of a person, for example a passport.
-    /// </summary>
+    /// <inheritdoc cref="IPrivateIdentification"/>
     [IsoId("_PWnCxNp-Ed-ak6NoX_4Aeg_-6562753")]
     [DisplayName("Private Identification")]
     [IsoXmlTag("PrvtId")]
-    public record PrivateIdentification : Party11Choice_
+    public partial record PrivateIdentification : Party11Choice_
     {
-        /// <summary>
-        /// Date and place of birth of a person.
-        /// </summary>
+        /// <inheritdoc cref="IPrivateIdentification.DateAndPlaceOfBirth"/>
         [IsoId("_QENIl9p-Ed-ak6NoX_4Aeg_1634415117")]
         [DisplayName("Date And Place Of Birth")]
         [IsoXmlTag("DtAndPlcOfBirth")]
         public DateAndPlaceOfBirth? DateAndPlaceOfBirth { get; init; }
 
-        /// <summary>
-        /// Unique identification of a person, as assigned by an institution, using an identification scheme.
-        /// </summary>
+        /// <inheritdoc cref="IPrivateIdentification.Other"/>
         [IsoId("_QENImNp-Ed-ak6NoX_4Aeg_1634415136")]
         [DisplayName("Other")]
         [IsoXmlTag("Othr")]

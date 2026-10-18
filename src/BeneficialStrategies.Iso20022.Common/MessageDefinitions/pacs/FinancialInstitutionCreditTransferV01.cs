@@ -12,24 +12,13 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pacs;
 
-/// <summary>
-/// This record is an implementation of the pacs.009.001.01 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// Scope
-/// The FinancialInstitutionCreditTransfer message is sent by a debtor financial institution to a creditor financial institution, directly or through other agents and/or a payment clearing and settlement system.
-/// It is used to move funds from a debtor account to a creditor, where both debtor and creditor are financial institutions.
-/// Usage
-/// The FinancialInstitutionCreditTransfer message is exchanged between agents and can contain one or more credit transfer instructions where debtor and creditor are both financial institutions.
-/// The FinancialInstitutionCreditTransfer message does not allow for grouping: a CreditTransferTransactionInformation block must be present for each credit transfer transaction.
-/// The FinancialInstitutionCreditTransfer message can be used in domestic and cross-border scenarios.
-///
-/// </summary>
+/// <inheritdoc cref="IFinancialInstitutionCreditTransferV01"/>
 [Description(
     @"Scope|The FinancialInstitutionCreditTransfer message is sent by a debtor financial institution to a creditor financial institution, directly or through other agents and/or a payment clearing and settlement system.|It is used to move funds from a debtor account to a creditor, where both debtor and creditor are financial institutions.|Usage|The FinancialInstitutionCreditTransfer message is exchanged between agents and can contain one or more credit transfer instructions where debtor and creditor are both financial institutions.|The FinancialInstitutionCreditTransfer message does not allow for grouping: a CreditTransferTransactionInformation block must be present for each credit transfer transaction.|The FinancialInstitutionCreditTransfer message can be used in domestic and cross-border scenarios.|"
 )]
 [IsoId("_efpsyNEuEd-BzquC8wXy7w_-942514611")]
 [DisplayName("Financial Institution Credit Transfer V")]
-public record FinancialInstitutionCreditTransferV01 : IOuterRecord
+public partial record FinancialInstitutionCreditTransferV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -56,17 +45,13 @@ public record FinancialInstitutionCreditTransferV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Set of characteristics shared by all individual transactions included in the message.
-    /// </summary>
+    /// <inheritdoc cref="IFinancialInstitutionCreditTransferV01.GroupHeader"/>
     [IsoId("_efpsydEuEd-BzquC8wXy7w_-942514231")]
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader4 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Set of elements providing information specific to the individual credit transfer(s).
-    /// </summary>
+    /// <inheritdoc cref="IFinancialInstitutionCreditTransferV01.CreditTransferTransactionInformation"/>
     [IsoId("_efpsytEuEd-BzquC8wXy7w_-941594069")]
     [DisplayName("Credit Transfer Transaction Information")]
     [IsoXmlTag("CdtTrfTxInf")]

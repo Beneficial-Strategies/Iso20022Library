@@ -9,25 +9,19 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Date and place of birth of a person.
-/// </summary>
+/// <inheritdoc cref="IDateAndPlaceOfBirth"/>
 [IsoId("_QBE8Gdp-Ed-ak6NoX_4Aeg_1131681932")]
 [DisplayName("Date And Place Of Birth")]
-public record DateAndPlaceOfBirth
+public partial record DateAndPlaceOfBirth
 {
-    /// <summary>
-    /// Date on which a person is born.
-    /// </summary>
+    /// <inheritdoc cref="IDateAndPlaceOfBirth.BirthDate"/>
     [IsoId("_QBE8Gtp-Ed-ak6NoX_4Aeg_-1166836636")]
     [DisplayName("Birth Date")]
     [IsoXmlTag("BirthDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
     public required IsoISODate BirthDate { get; init; }
 
-    /// <summary>
-    /// Province where a person was born.
-    /// </summary>
+    /// <inheritdoc cref="IDateAndPlaceOfBirth.ProvinceOfBirth"/>
     [IsoId("_QBOtENp-Ed-ak6NoX_4Aeg_-5969904")]
     [DisplayName("Province Of Birth")]
     [IsoXmlTag("PrvcOfBirth")]
@@ -35,9 +29,7 @@ public record DateAndPlaceOfBirth
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? ProvinceOfBirth { get; init; }
 
-    /// <summary>
-    /// City where a person was born.
-    /// </summary>
+    /// <inheritdoc cref="IDateAndPlaceOfBirth.CityOfBirth"/>
     [IsoId("_QBOtEdp-Ed-ak6NoX_4Aeg_-893474033")]
     [DisplayName("City Of Birth")]
     [IsoXmlTag("CityOfBirth")]
@@ -45,9 +37,7 @@ public record DateAndPlaceOfBirth
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public required IsoMax35Text CityOfBirth { get; init; }
 
-    /// <summary>
-    /// Country where a person was born.
-    /// </summary>
+    /// <inheritdoc cref="IDateAndPlaceOfBirth.CountryOfBirth"/>
     [IsoId("_QBOtEtp-Ed-ak6NoX_4Aeg_8803974")]
     [DisplayName("Country Of Birth")]
     [IsoXmlTag("CtryOfBirth")]

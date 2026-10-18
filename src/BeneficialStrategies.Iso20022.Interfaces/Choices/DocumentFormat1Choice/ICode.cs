@@ -1,0 +1,18 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Choices.DocumentFormat1Choice;
+
+/// <summary>
+/// Document format.
+/// </summary>
+[IsoId("_932rtXltEeG7BsjMvd1mEw_1631851618")]
+public interface ICode : IDocumentFormat1Choice, IIsoChoiceVariant
+{
+    /// <summary>
+    /// Contains the main value for the container.
+    /// Specifies the external document format code in the format of a character string with a maximum length of 4 characters. The list of valid codes is an external code list published separately.
+    /// External code sets can be downloaded from www.iso20022.org.
+    /// </summary>
+    [IsoXmlTag("Cd")]
+    ExternalDocumentFormat1Code Value { get; }
+}

@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.References74Choice
 {
-    /// <summary>
-    /// Collective reference identifying a set of messages.
-    /// </summary>
+    /// <inheritdoc cref="IPoolIdentification"/>
     [IsoId("_SiFNmSgaEey2k_sfZmJz4g")]
     [DisplayName("Pool Identification")]
-    public record PoolIdentification : References74Choice_
+    public partial record PoolIdentification : References74Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies a character string with a maximum length of 35 characters.
-        /// </summary>
+        /// <inheritdoc cref="IPoolIdentification.Value"/>
         [IsoXmlTag("PoolId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]

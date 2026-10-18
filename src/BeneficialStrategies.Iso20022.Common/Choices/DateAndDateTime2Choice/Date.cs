@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.DateAndDateTime2Choice
 {
-    /// <summary>
-    /// Specified date.
-    /// </summary>
+    /// <inheritdoc cref="IDate"/>
     [IsoId("_fPH6gZlhEeeE1Ya-LgRsuQ")]
     [DisplayName("Date")]
-    public record Date : DateAndDateTime2Choice_
+    public partial record Date : DateAndDateTime2Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// A particular point in the progression of time in a calendar year expressed in the YYYY-MM-DD format. This representation is defined in &quot;XML Schema Part 2: Datatypes Second Edition - W3C Recommendation 28 October 2004&quot; which is aligned with ISO 8601.
-        /// </summary>
+        /// <inheritdoc cref="IDate.Value"/>
         [IsoXmlTag("Dt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
         public required IsoISODate Value { get; init; }

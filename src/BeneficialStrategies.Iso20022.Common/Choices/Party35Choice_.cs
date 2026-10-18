@@ -6,14 +6,12 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Identification of a person, an organisation or a financial institution.
-    /// </summary>
+    /// <inheritdoc cref="IParty35Choice"/>
     [KnownType(typeof(Party35Choice.Party))]
     [KnownType(typeof(Party35Choice.Agent))]
     [JsonDerivedType(typeof(Party35Choice.Party), nameof(Party35Choice.Party))]
     [JsonDerivedType(typeof(Party35Choice.Agent), nameof(Party35Choice.Agent))]
     [IsoId("_mfIvwbTREeeyuKckOGlwuA")]
     [DisplayName("Party 35 Choice")]
-    public abstract record Party35Choice_ { }
+    public abstract partial record Party35Choice_ { }
 }

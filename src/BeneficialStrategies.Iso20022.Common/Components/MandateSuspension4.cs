@@ -9,44 +9,32 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Mandate Suspension4.
-/// </summary>
+/// <inheritdoc cref="IMandateSuspension4"/>
 [IsoId("_4Q5KQTEyEe6g-ffJsqGiSA")]
 [DisplayName("Mandate Suspension4")]
-public record MandateSuspension4
+public partial record MandateSuspension4
 {
-    /// <summary>
-    /// Original Mandate.
-    /// </summary>
+    /// <inheritdoc cref="IMandateSuspension4.OriginalMandate"/>
     [DisplayName("Original Mandate")]
     [IsoXmlTag("OrgnlMndt")]
     public required OriginalMandate10Choice_ OriginalMandate { get; init; }
 
-    /// <summary>
-    /// Original Message Information.
-    /// </summary>
+    /// <inheritdoc cref="IMandateSuspension4.OriginalMessageInformation"/>
     [DisplayName("Original Message Information")]
     [IsoXmlTag("OrgnlMsgInf")]
     public OriginalMessageInformation1? OriginalMessageInformation { get; init; }
 
-    /// <summary>
-    /// Supplementary Data.
-    /// </summary>
+    /// <inheritdoc cref="IMandateSuspension4.SupplementaryData"/>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 
-    /// <summary>
-    /// Suspension Reason.
-    /// </summary>
+    /// <inheritdoc cref="IMandateSuspension4.SuspensionReason"/>
     [DisplayName("Suspension Reason")]
     [IsoXmlTag("SspnsnRsn")]
     public required MandateSuspensionReason3 SuspensionReason { get; init; }
 
-    /// <summary>
-    /// Suspension Request Identification.
-    /// </summary>
+    /// <inheritdoc cref="IMandateSuspension4.SuspensionRequestIdentification"/>
     [DisplayName("Suspension Request Identification")]
     [IsoXmlTag("SspnsnReqId")]
     public required IsoMax35Text SuspensionRequestIdentification { get; init; }

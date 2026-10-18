@@ -9,32 +9,24 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Identifies the mandate, which is being accepted.
-/// </summary>
+/// <inheritdoc cref="IMandateAcceptance1"/>
 [IsoId("_RBmk9tp-Ed-ak6NoX_4Aeg_-1832843790")]
 [DisplayName("Mandate Acceptance")]
-public record MandateAcceptance1
+public partial record MandateAcceptance1
 {
-    /// <summary>
-    /// Set of elements used to provide information on the original messsage.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAcceptance1.OriginalMessageInformation"/>
     [IsoId("_RBmk99p-Ed-ak6NoX_4Aeg_-184360758")]
     [DisplayName("Original Message Information")]
     [IsoXmlTag("OrgnlMsgInf")]
     public OriginalMessageInformation1? OriginalMessageInformation { get; init; }
 
-    /// <summary>
-    /// Set of elements used to provide detailed information on the acceptance result.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAcceptance1.AcceptanceResult"/>
     [IsoId("_RBmk-Np-Ed-ak6NoX_4Aeg_-2005150257")]
     [DisplayName("Acceptance Result")]
     [IsoXmlTag("AccptncRslt")]
     public required AcceptanceResult6 AcceptanceResult { get; init; }
 
-    /// <summary>
-    /// Set of elements used to provide the original mandate data.
-    /// </summary>
+    /// <inheritdoc cref="IMandateAcceptance1.OriginalMandate"/>
     [IsoId("_RBvu4Np-Ed-ak6NoX_4Aeg_-557460763")]
     [DisplayName("Original Mandate")]
     [IsoXmlTag("OrgnlMndt")]

@@ -9,32 +9,24 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Provides further details on the reason of the reversal of the transaction.
-/// </summary>
+/// <inheritdoc cref="IPaymentReversalReason8"/>
 [IsoId("_mvoC0bTREeeyuKckOGlwuA")]
 [DisplayName("Payment Reversal Reason")]
-public record PaymentReversalReason8
+public partial record PaymentReversalReason8
 {
-    /// <summary>
-    /// Party that issues the reversal.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentReversalReason8.Originator"/>
     [IsoId("_m3YQo7TREeeyuKckOGlwuA")]
     [DisplayName("Originator")]
     [IsoXmlTag("Orgtr")]
     public PartyIdentification125? Originator { get; init; }
 
-    /// <summary>
-    /// Specifies the reason for the reversal.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentReversalReason8.Reason"/>
     [IsoId("_m3YQpbTREeeyuKckOGlwuA")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
     public ReversalReason4Choice_? Reason { get; init; }
 
-    /// <summary>
-    /// Further details on the reversal reason.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentReversalReason8.AdditionalInformation"/>
     [IsoId("_m3YQp7TREeeyuKckOGlwuA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]

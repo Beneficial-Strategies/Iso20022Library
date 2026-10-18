@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Provides details on the original group, to which the message refers.
-/// </summary>
+/// <inheritdoc cref="IOriginalGroupHeader3"/>
 [IsoId("_sinbcFkyEeGeoaLUQk__nA_1576775271")]
 [DisplayName("Original Group Header")]
-public record OriginalGroupHeader3
+public partial record OriginalGroupHeader3
 {
-    /// <summary>
-    /// Point to point reference, as assigned by the original instructing party, to unambiguously identify the original message.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalGroupHeader3.OriginalMessageIdentification"/>
     [IsoId("_sixMcFkyEeGeoaLUQk__nA_-27077641")]
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
@@ -26,9 +22,7 @@ public record OriginalGroupHeader3
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public required IsoMax35Text OriginalMessageIdentification { get; init; }
 
-    /// <summary>
-    /// Specifies the original message name identifier to which the message refers.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalGroupHeader3.OriginalMessageNameIdentification"/>
     [IsoId("_sixMcVkyEeGeoaLUQk__nA_1981964200")]
     [DisplayName("Original Message Name Identification")]
     [IsoXmlTag("OrgnlMsgNmId")]
@@ -36,18 +30,14 @@ public record OriginalGroupHeader3
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public required IsoMax35Text OriginalMessageNameIdentification { get; init; }
 
-    /// <summary>
-    /// Date and time at which the original message was created.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalGroupHeader3.OriginalCreationDateTime"/>
     [IsoId("_sixMclkyEeGeoaLUQk__nA_101658560")]
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
     public IsoISODateTime? OriginalCreationDateTime { get; init; }
 
-    /// <summary>
-    /// Provides detailed information on the reversal reason.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalGroupHeader3.ReversalReasonInformation"/>
     [IsoId("_sixMc1kyEeGeoaLUQk__nA_-1858915827")]
     [DisplayName("Reversal Reason Information")]
     [IsoXmlTag("RvslRsnInf")]

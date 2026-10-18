@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemIdentification2Choice
 {
-    /// <summary>
-    /// Identification code for a clearing system, that has not yet been identified in the list of clearing systems.
-    /// </summary>
+    /// <inheritdoc cref="IProprietary"/>
     [IsoId("_TMoSEtp-Ed-ak6NoX_4Aeg_-1409997159")]
     [DisplayName("Proprietary")]
-    public record Proprietary : ClearingSystemIdentification2Choice_
+    public partial record Proprietary : ClearingSystemIdentification2Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies a character string with a maximum length of 35 characters.
-        /// </summary>
+        /// <inheritdoc cref="IProprietary.Value"/>
         [IsoXmlTag("Prtry")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]

@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Specifies the source used to initiate the payment (such as an application or a software).
-/// </summary>
+/// <inheritdoc cref="IPaymentInitiationSource1"/>
 [IsoId("_qBeboMQJEemsic1bQcEtLA")]
 [DisplayName("Payment Initiation Source")]
-public record PaymentInitiationSource1
+public partial record PaymentInitiationSource1
 {
-    /// <summary>
-    /// Name of the application or software used to initiate the payment.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentInitiationSource1.Name"/>
     [IsoId("_7F6NAMQJEemsic1bQcEtLA")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
@@ -26,9 +22,7 @@ public record PaymentInitiationSource1
     [StringLength(maximumLength: 140, MinimumLength = 1)]
     public required IsoMax140Text Name { get; init; }
 
-    /// <summary>
-    /// Provider of the application or software used to initiate the payment.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentInitiationSource1.Provider"/>
     [IsoId("_0kOosMQJEemsic1bQcEtLA")]
     [DisplayName("Provider")]
     [IsoXmlTag("Prvdr")]
@@ -36,9 +30,7 @@ public record PaymentInitiationSource1
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? Provider { get; init; }
 
-    /// <summary>
-    /// Version of the application or software used to initiate the payment.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentInitiationSource1.Version"/>
     [IsoId("_ADKKIMQKEemsic1bQcEtLA")]
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]

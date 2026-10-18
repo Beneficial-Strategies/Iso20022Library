@@ -1,0 +1,84 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Provides characteristics shared by all individual transactions included in the message.
+/// </summary>
+[IsoId("_5P03sTEyEe6g-ffJsqGiSA")]
+public interface IGroupHeader124 : IIsoComponent
+{
+    /// <summary>
+    /// User identification or any user key to be used to check whether the initiating party is allowed to initiate transactions from the account specified in the message.
+    /// Usage: The content is not of a technical nature, but reflects the organisational structure at the initiating side.
+    /// The authorisation element can typically be used in relay scenarios, payment initiations, payment returns or payment reversals that are initiated on behalf of a party different from the initiating party.
+    /// </summary>
+    [DisplayName("Authorisation")]
+    [IsoXmlTag("Authstn")]
+    IEnumerable<IAuthorisation1Choice> Authorisation { get; }
+
+    /// <summary>
+    /// Total of all individual amounts included in the message, irrespective of currencies.
+    /// </summary>
+    [DisplayName("Control Sum")]
+    [IsoXmlTag("CtrlSum")]
+    IsoDecimalNumber? ControlSum { get; }
+
+    /// <summary>
+    /// Date and time at which the message was created.
+    /// </summary>
+    [DisplayName("Creation Date Time")]
+    [IsoXmlTag("CreDtTm")]
+    IsoISODateTime CreationDateTime { get; }
+
+    /// <summary>
+    /// Financial institution servicing an account for the creditor.
+    /// </summary>
+    [DisplayName("Creditor Agent")]
+    [IsoXmlTag("CdtrAgt")]
+    IBranchAndFinancialInstitutionIdentification8? CreditorAgent { get; }
+
+    /// <summary>
+    /// Financial institution servicing an account for the debtor.
+    /// </summary>
+    [DisplayName("Debtor Agent")]
+    [IsoXmlTag("DbtrAgt")]
+    IBranchAndFinancialInstitutionIdentification8? DebtorAgent { get; }
+
+    /// <summary>
+    /// Financial institution that receives the instruction from the initiating party and forwards it to the next agent in the payment chain.
+    /// </summary>
+    [DisplayName("Forwarding Agent")]
+    [IsoXmlTag("FwdgAgt")]
+    IBranchAndFinancialInstitutionIdentification8? ForwardingAgent { get; }
+
+    /// <summary>
+    /// Indicates whether the reversal applies to the whole group of transactions or to individual transactions within the original group.
+    /// </summary>
+    [DisplayName("Group Reversal")]
+    [IsoXmlTag("GrpRvsl")]
+    IsoTrueFalseIndicator? GroupReversal { get; }
+
+    /// <summary>
+    /// Party that initiates the reversal message.
+    /// Usage: This can be either the creditor or a party that initiates the reversal of the direct debit on behalf of the creditor.
+    /// </summary>
+    [DisplayName("Initiating Party")]
+    [IsoXmlTag("InitgPty")]
+    IPartyIdentification272? InitiatingParty { get; }
+
+    /// <summary>
+    /// Point to point reference, as assigned by the instructing party, and sent to the next party in the chain to unambiguously identify the message.
+    /// Usage: The instructing party has to make sure that MessageIdentification is unique per instructed party for a pre-agreed period.
+    /// </summary>
+    [DisplayName("Message Identification")]
+    [IsoXmlTag("MsgId")]
+    IsoMax35Text MessageIdentification { get; }
+
+    /// <summary>
+    /// Number of individual transactions contained in the message.
+    /// </summary>
+    [DisplayName("Number Of Transactions")]
+    [IsoXmlTag("NbOfTxs")]
+    IsoMax15NumericText NumberOfTransactions { get; }
+}

@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Choice of mandate related information.
-    /// </summary>
+    /// <inheritdoc cref="IMandateRelatedData2Choice"/>
     [KnownType(typeof(MandateRelatedData2Choice.DirectDebitMandate))]
     [KnownType(typeof(MandateRelatedData2Choice.CreditTransferMandate))]
     [JsonDerivedType(
@@ -21,5 +19,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_a24zwdcZEeqRFcf2R4bPBw")]
     [DisplayName("Mandate Related Data 2 Choice")]
-    public abstract record MandateRelatedData2Choice_ { }
+    public abstract partial record MandateRelatedData2Choice_ { }
 }

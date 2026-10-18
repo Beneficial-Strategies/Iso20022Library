@@ -8,16 +8,11 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.CreditorReferenceType2Choice
 {
-    /// <summary>
-    /// Type of creditor reference, in a proprietary form.
-    /// </summary>
+    /// <inheritdoc cref="IProprietary"/>
     [DisplayName("Proprietary")]
-    public record Proprietary : CreditorReferenceType2Choice_
+    public partial record Proprietary : CreditorReferenceType2Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Type of creditor reference, in a proprietary form.
-        /// </summary>
+        /// <inheritdoc cref="IProprietary.Value"/>
         [IsoXmlTag("Prtry")]
         public required IsoMax35Text Value { get; init; }
     }

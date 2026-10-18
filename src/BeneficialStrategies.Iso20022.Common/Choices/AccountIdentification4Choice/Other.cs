@@ -8,17 +8,13 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice
 {
-    /// <summary>
-    /// Unique identification of an account, as assigned by the account servicer, using an identification scheme.
-    /// </summary>
+    /// <inheritdoc cref="IOther"/>
     [IsoId("_Pdwzo9p-Ed-ak6NoX_4Aeg_-1833657786")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public record Other : AccountIdentification4Choice_
+    public partial record Other : AccountIdentification4Choice_
     {
-        /// <summary>
-        /// Identification assigned by an institution.
-        /// </summary>
+        /// <inheritdoc cref="IOther.Identification"/>
         [IsoId("_P_u4Rtp-Ed-ak6NoX_4Aeg_2078970799")]
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
@@ -26,17 +22,13 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice
         [StringLength(maximumLength: 34, MinimumLength = 1)]
         public required IsoMax34Text Identification { get; init; }
 
-        /// <summary>
-        /// Name of the identification scheme.
-        /// </summary>
+        /// <inheritdoc cref="IOther.SchemeName"/>
         [IsoId("_P_u4R9p-Ed-ak6NoX_4Aeg_-162653838")]
         [DisplayName("Scheme Name")]
         [IsoXmlTag("SchmeNm")]
         public AccountSchemeName1Choice_? SchemeName { get; init; }
 
-        /// <summary>
-        /// Entity that assigns the identification.
-        /// </summary>
+        /// <inheritdoc cref="IOther.Issuer"/>
         [IsoId("_P_u4SNp-Ed-ak6NoX_4Aeg_-2119026269")]
         [DisplayName("Issuer")]
         [IsoXmlTag("Issr")]

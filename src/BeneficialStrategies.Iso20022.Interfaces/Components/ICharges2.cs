@@ -1,0 +1,26 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Set of elements used to provide information on the charges related to the payment transaction.
+/// </summary>
+[IsoId("_tjS1UFkyEeGeoaLUQk__nA_-1140480954")]
+public interface ICharges2 : IIsoComponent
+{
+    /// <summary>
+    /// Transaction charges to be paid by the charge bearer.
+    /// </summary>
+    [IsoId("_tjS1UVkyEeGeoaLUQk__nA_2043574923")]
+    [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
+    ActiveOrHistoricCurrencyAndAmount Amount { get; }
+
+    /// <summary>
+    /// Agent that takes the transaction charges or to which the transaction charges are due.
+    /// </summary>
+    [IsoId("_tjS1UlkyEeGeoaLUQk__nA_428608443")]
+    [DisplayName("Agent")]
+    [IsoXmlTag("Agt")]
+    IBranchAndFinancialInstitutionIdentification5 Agent { get; }
+}

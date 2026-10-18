@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Specifies the high level purpose of the instruction based on a set of pre-defined categories.|Usage: This is used by the initiating party to provide information concerning the processing of the payment. It is likely to trigger special processing by any of the agents involved in the payment chain.
-    /// </summary>
+    /// <inheritdoc cref="IMandateClassification1Choice"/>
     [KnownType(typeof(MandateClassification1Choice.Code))]
     [KnownType(typeof(MandateClassification1Choice.Proprietary))]
     [JsonDerivedType(
@@ -21,5 +19,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_JThtg2oDEearR-CA7eRZXQ")]
     [DisplayName("Mandate Classification 1 Choice")]
-    public abstract record MandateClassification1Choice_ { }
+    public abstract partial record MandateClassification1Choice_ { }
 }

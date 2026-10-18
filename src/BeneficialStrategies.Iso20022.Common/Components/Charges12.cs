@@ -9,32 +9,24 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Provides information on the charges related to the payment transaction.
-/// </summary>
+/// <inheritdoc cref="ICharges12"/>
 [IsoId("_NfldERlWEe2Do_UtrNmb2g")]
 [DisplayName("Charges")]
-public record Charges12
+public partial record Charges12
 {
-    /// <summary>
-    /// Transaction charges to be paid by the charge bearer.
-    /// </summary>
+    /// <inheritdoc cref="ICharges12.Amount"/>
     [IsoId("_NqTfUxlWEe2Do_UtrNmb2g")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
     public required ActiveOrHistoricCurrencyAndAmount Amount { get; init; }
 
-    /// <summary>
-    /// Agent that takes the transaction charges or to which the transaction charges are due.
-    /// </summary>
+    /// <inheritdoc cref="ICharges12.Agent"/>
     [IsoId("_NqTfVRlWEe2Do_UtrNmb2g")]
     [DisplayName("Agent")]
     [IsoXmlTag("Agt")]
     public required BranchAndFinancialInstitutionIdentification6 Agent { get; init; }
 
-    /// <summary>
-    /// Defines the type of charges.
-    /// </summary>
+    /// <inheritdoc cref="ICharges12.Type"/>
     [IsoId("_W6o64BlZEe2Do_UtrNmb2g")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]

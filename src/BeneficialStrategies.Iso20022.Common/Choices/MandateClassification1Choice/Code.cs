@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.MandateClassification1Choice
 {
-    /// <summary>
-    /// Category purpose, as published in an external category purpose code list.
-    /// </summary>
+    /// <inheritdoc cref="ICode"/>
     [IsoId("_JThthWoDEearR-CA7eRZXQ")]
     [DisplayName("Code")]
-    public record Code : MandateClassification1Choice_
+    public partial record Code : MandateClassification1Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies the type of direct debit amount, such as fixed or variable.
-        /// </summary>
+        /// <inheritdoc cref="ICode.Value"/>
         [IsoXmlTag("Cd")]
         public required MandateClassification1Code Value { get; init; }
     }

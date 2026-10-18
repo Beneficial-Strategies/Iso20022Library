@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Provides information on the remittance advice.
-/// </summary>
+/// <inheritdoc cref="IRemittanceLocation7"/>
 [IsoId("_-BcUm24-EeiU9cctagi5ow")]
 [DisplayName("Remittance Location")]
-public record RemittanceLocation7
+public partial record RemittanceLocation7
 {
-    /// <summary>
-    /// Unique identification, as assigned by the initiating party, to unambiguously identify the remittance information sent separately from the payment instruction, such as a remittance advice.
-    /// </summary>
+    /// <inheritdoc cref="IRemittanceLocation7.RemittanceIdentification"/>
     [IsoId("_-LRmA24-EeiU9cctagi5ow")]
     [DisplayName("Remittance Identification")]
     [IsoXmlTag("RmtId")]
@@ -26,9 +22,7 @@ public record RemittanceLocation7
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? RemittanceIdentification { get; init; }
 
-    /// <summary>
-    /// Set of elements used to provide information on the location and/or delivery of the remittance information.
-    /// </summary>
+    /// <inheritdoc cref="IRemittanceLocation7.RemittanceLocationDetails"/>
     [IsoId("_-LRmBW4-EeiU9cctagi5ow")]
     [DisplayName("Remittance Location Details")]
     [IsoXmlTag("RmtLctnDtls")]

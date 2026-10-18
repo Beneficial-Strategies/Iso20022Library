@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Information on the requested settlement time of the instruction.
-/// </summary>
+/// <inheritdoc cref="ISettlementTimeRequest1"/>
 [IsoId("_QHyBEdp-Ed-ak6NoX_4Aeg_564730971")]
 [DisplayName("Settlement Time Request")]
-public record SettlementTimeRequest1
+public partial record SettlementTimeRequest1
 {
-    /// <summary>
-    /// Time by which the funds must be credited, with confirmation, to the CLS Bank&apos;s account at the central bank, expressed in Central European Time (CET).
-    /// </summary>
+    /// <inheritdoc cref="ISettlementTimeRequest1.CLSTime"/>
     [IsoId("_QHyBEtp-Ed-ak6NoX_4Aeg_605366498")]
     [DisplayName("CLS Time")]
     [IsoXmlTag("CLSTm")]

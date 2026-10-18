@@ -9,24 +9,18 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Specifies the type of the document referred in the remittance information.
-/// </summary>
+/// <inheritdoc cref="IReferredDocumentType4"/>
 [IsoId("_Xf7GCR77EeSxevWRRWxNAg")]
 [DisplayName("Referred Document Type")]
-public record ReferredDocumentType4
+public partial record ReferredDocumentType4
 {
-    /// <summary>
-    /// Provides the type details of the referred document.
-    /// </summary>
+    /// <inheritdoc cref="IReferredDocumentType4.CodeOrProprietary"/>
     [IsoId("_XxL1Ix77EeSxevWRRWxNAg")]
     [DisplayName("Code Or Proprietary")]
     [IsoXmlTag("CdOrPrtry")]
     public required ReferredDocumentType3Choice_ CodeOrProprietary { get; init; }
 
-    /// <summary>
-    /// Identification of the issuer of the reference document type.
-    /// </summary>
+    /// <inheritdoc cref="IReferredDocumentType4.Issuer"/>
     [IsoId("_XxL1JR77EeSxevWRRWxNAg")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]

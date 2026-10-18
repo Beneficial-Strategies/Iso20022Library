@@ -9,34 +9,26 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Specifies the conditions for the execution of the payment.
-/// </summary>
+/// <inheritdoc cref="IPaymentCondition1"/>
 [IsoId("_BmRRkHVjEeiEU7thYTAN1w")]
 [DisplayName("Payment Condition")]
-public record PaymentCondition1
+public partial record PaymentCondition1
 {
-    /// <summary>
-    /// Indicates if the debtor is allowed to pay a different amount then the requested amount.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentCondition1.AmountModificationAllowed"/>
     [IsoId("_zg-VYHVjEeiEU7thYTAN1w")]
     [DisplayName("Amount Modification Allowed")]
     [IsoXmlTag("AmtModAllwd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     public required IsoTrueFalseIndicator AmountModificationAllowed { get; init; }
 
-    /// <summary>
-    /// Indicates if the debtor is allowed to pay before the requested execution date.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentCondition1.EarlyPaymentAllowed"/>
     [IsoId("_3QRRoXVjEeiEU7thYTAN1w")]
     [DisplayName("Early Payment Allowed")]
     [IsoXmlTag("EarlyPmtAllwd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
     public required IsoTrueFalseIndicator EarlyPaymentAllowed { get; init; }
 
-    /// <summary>
-    /// Penalty to be applied for a delayed payment, that is when the payment is made after the requested execution date.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentCondition1.DelayPenalty"/>
     [IsoId("_YiSE4HVkEeiEU7thYTAN1w")]
     [DisplayName("Delay Penalty")]
     [IsoXmlTag("DelyPnlty")]
@@ -44,17 +36,13 @@ public record PaymentCondition1
     [StringLength(maximumLength: 140, MinimumLength = 1)]
     public IsoMax140Text? DelayPenalty { get; init; }
 
-    /// <summary>
-    /// Discount rate applied for immediate payment upon receipt of the request.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentCondition1.ImmediatePaymentRebate"/>
     [IsoId("_jw1A8HVkEeiEU7thYTAN1w")]
     [DisplayName("Immediate Payment Rebate")]
     [IsoXmlTag("ImdtPmtRbt")]
     public AmountOrRate1Choice_? ImmediatePaymentRebate { get; init; }
 
-    /// <summary>
-    /// Indicates if a payment guarantee is requested, assuming a payment guarantee contract exists between the different actors.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentCondition1.GuaranteedPaymentRequested"/>
     [IsoId("_-63wYHVkEeiEU7thYTAN1w")]
     [DisplayName("Guaranteed Payment Requested")]
     [IsoXmlTag("GrntedPmtReqd")]

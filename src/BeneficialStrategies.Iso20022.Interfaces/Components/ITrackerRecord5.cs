@@ -1,0 +1,38 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Specifies the agent specific tracking system information of a payment transaction.
+/// </summary>
+[IsoId("_1bDllzEyEe6g-ffJsqGiSA")]
+public interface ITrackerRecord5 : IIsoComponent
+{
+    /// <summary>
+    /// Identification of an agent in the tracker.
+    /// </summary>
+    [DisplayName("Agent")]
+    [IsoXmlTag("Agt")]
+    IBranchAndFinancialInstitutionIdentification8 Agent { get; }
+
+    /// <summary>
+    /// Specifies which party/parties will bear the charges associated with the processing of the payment transaction.
+    /// </summary>
+    [DisplayName("Charge Bearer")]
+    [IsoXmlTag("ChrgBr")]
+    ChargeBearerType1Code? ChargeBearer { get; }
+
+    /// <summary>
+    /// Transaction charges to be paid by the charge bearer.
+    /// </summary>
+    [DisplayName("Charges Amount")]
+    [IsoXmlTag("ChrgsAmt")]
+    ActiveCurrencyAndAmount? ChargesAmount { get; }
+
+    /// <summary>
+    /// Provides details of the rate and the currencies used in the foreign exchange.
+    /// </summary>
+    [DisplayName("Exchange Rate Data")]
+    [IsoXmlTag("XchgRateData")]
+    ICurrencyExchange13? ExchangeRateData { get; }
+}

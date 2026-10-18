@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Set of elements used to define the tax record.
-/// </summary>
+/// <inheritdoc cref="ITaxRecord2"/>
 [IsoId("_yKFWd69fEeen6L7OP7lnvg")]
 [DisplayName("Tax Record")]
-public record TaxRecord2
+public partial record TaxRecord2
 {
-    /// <summary>
-    /// High level code to identify the type of tax details.
-    /// </summary>
+    /// <inheritdoc cref="ITaxRecord2.Type"/>
     [IsoId("_yeA_A69fEeen6L7OP7lnvg")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
@@ -26,9 +22,7 @@ public record TaxRecord2
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? Type { get; init; }
 
-    /// <summary>
-    /// Specifies the tax code as published by the tax authority.
-    /// </summary>
+    /// <inheritdoc cref="ITaxRecord2.Category"/>
     [IsoId("_yeA_Ba9fEeen6L7OP7lnvg")]
     [DisplayName("Category")]
     [IsoXmlTag("Ctgy")]
@@ -36,9 +30,7 @@ public record TaxRecord2
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? Category { get; init; }
 
-    /// <summary>
-    /// Provides further details of the category tax code.
-    /// </summary>
+    /// <inheritdoc cref="ITaxRecord2.CategoryDetails"/>
     [IsoId("_yeA_B69fEeen6L7OP7lnvg")]
     [DisplayName("Category Details")]
     [IsoXmlTag("CtgyDtls")]
@@ -46,9 +38,7 @@ public record TaxRecord2
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? CategoryDetails { get; init; }
 
-    /// <summary>
-    /// Code provided by local authority to identify the status of the party that has drawn up the settlement document.
-    /// </summary>
+    /// <inheritdoc cref="ITaxRecord2.DebtorStatus"/>
     [IsoId("_yeA_Ca9fEeen6L7OP7lnvg")]
     [DisplayName("Debtor Status")]
     [IsoXmlTag("DbtrSts")]
@@ -56,9 +46,7 @@ public record TaxRecord2
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? DebtorStatus { get; init; }
 
-    /// <summary>
-    /// Identification number of the tax report as assigned by the taxing authority.
-    /// </summary>
+    /// <inheritdoc cref="ITaxRecord2.CertificateIdentification"/>
     [IsoId("_yeA_C69fEeen6L7OP7lnvg")]
     [DisplayName("Certificate Identification")]
     [IsoXmlTag("CertId")]
@@ -66,9 +54,7 @@ public record TaxRecord2
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? CertificateIdentification { get; init; }
 
-    /// <summary>
-    /// Identifies, in a coded form, on which template the tax report is to be provided.
-    /// </summary>
+    /// <inheritdoc cref="ITaxRecord2.FormsCode"/>
     [IsoId("_yeA_Da9fEeen6L7OP7lnvg")]
     [DisplayName("Forms Code")]
     [IsoXmlTag("FrmsCd")]
@@ -76,25 +62,19 @@ public record TaxRecord2
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? FormsCode { get; init; }
 
-    /// <summary>
-    /// Set of elements used to provide details on the period of time related to the tax payment.
-    /// </summary>
+    /// <inheritdoc cref="ITaxRecord2.Period"/>
     [IsoId("_yeA_D69fEeen6L7OP7lnvg")]
     [DisplayName("Period")]
     [IsoXmlTag("Prd")]
     public TaxPeriod2? Period { get; init; }
 
-    /// <summary>
-    /// Set of elements used to provide information on the amount of the tax record.
-    /// </summary>
+    /// <inheritdoc cref="ITaxRecord2.TaxAmount"/>
     [IsoId("_yeA_Ea9fEeen6L7OP7lnvg")]
     [DisplayName("Tax Amount")]
     [IsoXmlTag("TaxAmt")]
     public TaxAmount2? TaxAmount { get; init; }
 
-    /// <summary>
-    /// Further details of the tax record.
-    /// </summary>
+    /// <inheritdoc cref="ITaxRecord2.AdditionalInformation"/>
     [IsoId("_yeA_E69fEeen6L7OP7lnvg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]

@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.Purpose1Choice
 {
-    /// <summary>
-    /// User community specific purpose.||Usage: When available, codes provided by local communities should be used.
-    /// </summary>
+    /// <inheritdoc cref="IProprietary"/>
     [IsoId("_PrK9gtp-Ed-ak6NoX_4Aeg_-607853495")]
     [DisplayName("Proprietary")]
-    public record Proprietary : Purpose1Choice_
+    public partial record Proprietary : Purpose1Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies a character string with a maximum length of 35 characters.
-        /// </summary>
+        /// <inheritdoc cref="IProprietary.Value"/>
         [IsoXmlTag("Prtry")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35, MinimumLength = 1)]

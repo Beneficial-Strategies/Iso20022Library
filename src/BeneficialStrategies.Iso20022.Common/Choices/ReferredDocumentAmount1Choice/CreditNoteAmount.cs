@@ -8,25 +8,19 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.ReferredDocumentAmount1Choice
 {
-    /// <summary>
-    /// Amount specified for the referred document is the amount of a credit note.
-    /// </summary>
+    /// <inheritdoc cref="ICreditNoteAmount"/>
     [IsoId("_QGJCRtp-Ed-ak6NoX_4Aeg_-888106456")]
     [DisplayName("Credit Note Amount")]
     [IsoXmlTag("CdtNoteAmt")]
-    public record CreditNoteAmount : ReferredDocumentAmount1Choice_
+    public partial record CreditNoteAmount : ReferredDocumentAmount1Choice_
     {
-        /// <summary>
-        /// The currency in which this amount is measured.
-        /// </summary>
+        /// <inheritdoc cref="ICreditNoteAmount.Currency"/>
         [IsoId("_YXSZF9p-Ed-ak6NoX_4Aeg_-1352517078_Currency")]
         [DisplayName("Currency And Amount _ Currency")]
         [IsoXmlTag("Currency")]
         public required CurrencyCode Currency { get; init; }
 
-        /// <summary>
-        /// Amount of the transaction.
-        /// </summary>
+        /// <inheritdoc cref="ICreditNoteAmount.Amount"/>
         [IsoId("_YXSZF9p-Ed-ak6NoX_4Aeg_-1352517078_Amount")]
         [DisplayName("Currency And Amount _ Amount")]
         [IsoXmlTag("Amount")]

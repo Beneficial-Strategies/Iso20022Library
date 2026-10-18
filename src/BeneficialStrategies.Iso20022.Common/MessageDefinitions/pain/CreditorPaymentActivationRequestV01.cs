@@ -12,19 +12,13 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pain;
 
-/// <summary>
-/// This record is an implementation of the pain.013.001.01 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// Scope
-/// This message is sent by the Creditor sending party to the Debtor receiving party, directly or through agents.
-/// It is used to initiate a creditor payment activation request.
-/// </summary>
+/// <inheritdoc cref="ICreditorPaymentActivationRequestV01"/>
 [Description(
     @"Scope|This message is sent by the Creditor sending party to the Debtor receiving party, directly or through agents.|It is used to initiate a creditor payment activation request."
 )]
 [IsoId("_GWSDldEvEd-BzquC8wXy7w_-1753887518")]
 [DisplayName("Creditor Payment Activation Request V")]
-public record CreditorPaymentActivationRequestV01 : IOuterRecord
+public partial record CreditorPaymentActivationRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -51,17 +45,13 @@ public record CreditorPaymentActivationRequestV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Set of characteristics shared by all individual transactions included in the message.
-    /// </summary>
+    /// <inheritdoc cref="ICreditorPaymentActivationRequestV01.GroupHeader"/>
     [IsoId("_GWSDltEvEd-BzquC8wXy7w_668976179")]
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader45 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Set of characteristics that applies to the debit side of the payment transactions included in the creditor payment initiation.
-    /// </summary>
+    /// <inheritdoc cref="ICreditorPaymentActivationRequestV01.PaymentInformation"/>
     [IsoId("_GWSDl9EvEd-BzquC8wXy7w_1980087289")]
     [DisplayName("Payment Information")]
     [IsoXmlTag("PmtInf")]

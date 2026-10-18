@@ -12,13 +12,10 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pain;
 
-/// <summary>
-/// This record is an implementation of the pain.014.001.11 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// </summary>
+/// <inheritdoc cref="ICreditorPaymentActivationRequestStatusReportV11"/>
 [IsoId("_R3GubzEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Creditor Payment Activation Request Status Report V11")]
-public record CreditorPaymentActivationRequestStatusReportV11 : IOuterRecord
+public partial record CreditorPaymentActivationRequestStatusReportV11 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -45,31 +42,23 @@ public record CreditorPaymentActivationRequestStatusReportV11 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Group Header.
-    /// </summary>
+    /// <inheritdoc cref="ICreditorPaymentActivationRequestStatusReportV11.GroupHeader"/>
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader111 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Original Group Information And Status.
-    /// </summary>
+    /// <inheritdoc cref="ICreditorPaymentActivationRequestStatusReportV11.OriginalGroupInformationAndStatus"/>
     [DisplayName("Original Group Information And Status")]
     [IsoXmlTag("OrgnlGrpInfAndSts")]
     public required OriginalGroupInformation32 OriginalGroupInformationAndStatus { get; init; }
 
-    /// <summary>
-    /// Original Payment Information And Status.
-    /// </summary>
+    /// <inheritdoc cref="ICreditorPaymentActivationRequestStatusReportV11.OriginalPaymentInformationAndStatus"/>
     [DisplayName("Original Payment Information And Status")]
     [IsoXmlTag("OrgnlPmtInfAndSts")]
     public ValueList<OriginalPaymentInstruction47> OriginalPaymentInformationAndStatus { get; init; } =
         [];
 
-    /// <summary>
-    /// Supplementary Data.
-    /// </summary>
+    /// <inheritdoc cref="ICreditorPaymentActivationRequestStatusReportV11.SupplementaryData"/>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];

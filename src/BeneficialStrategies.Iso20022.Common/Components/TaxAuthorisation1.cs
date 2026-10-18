@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Details of the authorised tax paying party.
-/// </summary>
+/// <inheritdoc cref="ITaxAuthorisation1"/>
 [IsoId("_Pc3bx9p-Ed-ak6NoX_4Aeg_-197973580")]
 [DisplayName("Tax Authorisation")]
-public record TaxAuthorisation1
+public partial record TaxAuthorisation1
 {
-    /// <summary>
-    /// Title or position of debtor or the debtor&apos;s authorised representative.
-    /// </summary>
+    /// <inheritdoc cref="ITaxAuthorisation1.Title"/>
     [IsoId("_Pc3byNp-Ed-ak6NoX_4Aeg_-197973519")]
     [DisplayName("Title")]
     [IsoXmlTag("Titl")]
@@ -26,9 +22,7 @@ public record TaxAuthorisation1
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? Title { get; init; }
 
-    /// <summary>
-    /// Name of the debtor or the debtor&apos;s authorised representative.
-    /// </summary>
+    /// <inheritdoc cref="ITaxAuthorisation1.Name"/>
     [IsoId("_PdBMwNp-Ed-ak6NoX_4Aeg_-197973549")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]

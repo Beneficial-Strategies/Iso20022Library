@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Unique and unambiguous identifier of the group of transactions as assigned by the original instructing party.
-/// </summary>
+/// <inheritdoc cref="IOriginalGroupInformation3"/>
 [IsoId("_PhL7Htp-Ed-ak6NoX_4Aeg_1562111657")]
 [DisplayName("Original Group Information")]
-public record OriginalGroupInformation3
+public partial record OriginalGroupInformation3
 {
-    /// <summary>
-    /// Point to point reference assigned by the original instructing party to unambiguously identify the original group of individual transactions.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalGroupInformation3.OriginalMessageIdentification"/>
     [IsoId("_PhL7H9p-Ed-ak6NoX_4Aeg_1562112141")]
     [DisplayName("Original Message Identification")]
     [IsoXmlTag("OrgnlMsgId")]
@@ -26,9 +22,7 @@ public record OriginalGroupInformation3
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public required IsoMax35Text OriginalMessageIdentification { get; init; }
 
-    /// <summary>
-    /// Specifies the original message name identifier to which the message refers, eg, pacs.003.001.01 or MT103.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalGroupInformation3.OriginalMessageNameIdentification"/>
     [IsoId("_PhVsENp-Ed-ak6NoX_4Aeg_1562112527")]
     [DisplayName("Original Message Name Identification")]
     [IsoXmlTag("OrgnlMsgNmId")]
@@ -36,9 +30,7 @@ public record OriginalGroupInformation3
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public required IsoMax35Text OriginalMessageNameIdentification { get; init; }
 
-    /// <summary>
-    /// Original date and time at which the message was created.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalGroupInformation3.OriginalCreationDateTime"/>
     [IsoId("_PhVsEdp-Ed-ak6NoX_4Aeg_-1535886012")]
     [DisplayName("Original Creation Date Time")]
     [IsoXmlTag("OrgnlCreDtTm")]

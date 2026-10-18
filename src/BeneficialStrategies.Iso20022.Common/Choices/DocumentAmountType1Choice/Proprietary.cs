@@ -8,16 +8,11 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.DocumentAmountType1Choice
 {
-    /// <summary>
-    /// Specifies the amount type, in a free-text form.
-    /// </summary>
+    /// <inheritdoc cref="IProprietary"/>
     [DisplayName("Proprietary")]
-    public record Proprietary : DocumentAmountType1Choice_
+    public partial record Proprietary : DocumentAmountType1Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies the amount type, in a free-text form.
-        /// </summary>
+        /// <inheritdoc cref="IProprietary.Value"/>
         [IsoXmlTag("Prtry")]
         public required IsoMax35Text Value { get; init; }
     }

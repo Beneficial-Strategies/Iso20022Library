@@ -9,24 +9,18 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Amount of money debited or credited on the books of an account servicer.
-/// </summary>
+/// <inheritdoc cref="IAmountAndDirection5"/>
 [IsoId("_T2Wkhdp-Ed-ak6NoX_4Aeg_-2124038249")]
 [DisplayName("Amount And Direction")]
-public record AmountAndDirection5
+public partial record AmountAndDirection5
 {
-    /// <summary>
-    /// Amount of money that is debited or credited.
-    /// </summary>
+    /// <inheritdoc cref="IAmountAndDirection5.Amount"/>
     [IsoId("_T2Wkhtp-Ed-ak6NoX_4Aeg_-2090791440")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
     public required ActiveCurrencyAndAmount Amount { get; init; }
 
-    /// <summary>
-    /// Indicates if the amount is a debited or a credited.
-    /// </summary>
+    /// <inheritdoc cref="IAmountAndDirection5.CreditDebit"/>
     [IsoId("_T2Wkh9p-Ed-ak6NoX_4Aeg_-2037226790")]
     [DisplayName("Credit Debit")]
     [IsoXmlTag("CdtDbt")]

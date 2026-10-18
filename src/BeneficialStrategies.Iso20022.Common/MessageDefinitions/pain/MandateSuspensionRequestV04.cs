@@ -12,13 +12,10 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pain;
 
-/// <summary>
-/// This record is an implementation of the pain.018.001.04 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// </summary>
+/// <inheritdoc cref="IMandateSuspensionRequestV04"/>
 [IsoId("_R3P4jTEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Mandate Suspension Request V04")]
-public record MandateSuspensionRequestV04 : IOuterRecord
+public partial record MandateSuspensionRequestV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -45,23 +42,17 @@ public record MandateSuspensionRequestV04 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Group Header.
-    /// </summary>
+    /// <inheritdoc cref="IMandateSuspensionRequestV04.GroupHeader"/>
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader110 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Supplementary Data.
-    /// </summary>
+    /// <inheritdoc cref="IMandateSuspensionRequestV04.SupplementaryData"/>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 
-    /// <summary>
-    /// Underlying Suspension Details.
-    /// </summary>
+    /// <inheritdoc cref="IMandateSuspensionRequestV04.UnderlyingSuspensionDetails"/>
     [DisplayName("Underlying Suspension Details")]
     [IsoXmlTag("UndrlygSspnsnDtls")]
     public ValueList<MandateSuspension4> UnderlyingSuspensionDetails { get; init; } = [];

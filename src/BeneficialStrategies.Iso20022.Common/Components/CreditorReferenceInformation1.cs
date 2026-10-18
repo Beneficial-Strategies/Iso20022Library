@@ -9,24 +9,18 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Structured information supplied to enable the matching, i.e. reconciliation, of a payment with the items that the payment is intended to settle, eg, commercial invoices in an accounts receivable system.
-/// </summary>
+/// <inheritdoc cref="ICreditorReferenceInformation1"/>
 [IsoId("_T3_jRNp-Ed-ak6NoX_4Aeg_1085128342")]
 [DisplayName("Creditor Reference Information")]
-public record CreditorReferenceInformation1
+public partial record CreditorReferenceInformation1
 {
-    /// <summary>
-    /// Provides the type of the creditor reference.
-    /// </summary>
+    /// <inheritdoc cref="ICreditorReferenceInformation1.CreditorReferenceType"/>
     [IsoId("_T3_jRdp-Ed-ak6NoX_4Aeg_1086051228")]
     [DisplayName("Creditor Reference Type")]
     [IsoXmlTag("CdtrRefTp")]
     public CreditorReferenceType1? CreditorReferenceType { get; init; }
 
-    /// <summary>
-    /// Unique and unambiguous reference assigned by the creditor to refer to the payment transaction.||Usage: if available, the initiating party should provide this reference in the structured remittance information, to enable reconciliation by the creditor upon receipt of the cash.||If the business context requires the use of a creditor reference or a payment remit identification, and only one identifier can be passed through the end-to-end chain, the creditor&apos;s reference or payment remittance identification should be quoted in the end-to-end transaction identification.
-    /// </summary>
+    /// <inheritdoc cref="ICreditorReferenceInformation1.CreditorReference"/>
     [IsoId("_T3_jRtp-Ed-ak6NoX_4Aeg_1086049788")]
     [DisplayName("Creditor Reference")]
     [IsoXmlTag("CdtrRef")]

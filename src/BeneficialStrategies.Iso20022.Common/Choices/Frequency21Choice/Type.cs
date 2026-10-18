@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.Frequency21Choice
 {
-    /// <summary>
-    /// Frequency expressed as an ISO 20022 code.
-    /// </summary>
+    /// <inheritdoc cref="IType"/>
     [IsoId("_6GkgAR7yEeSxevWRRWxNAg")]
     [DisplayName("Type")]
-    public record Type : Frequency21Choice_
+    public partial record Type : Frequency21Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies the regularity of an event.
-        /// </summary>
+        /// <inheritdoc cref="IType.Value"/>
         [IsoXmlTag("Tp")]
         public required Frequency6Code Value { get; init; }
     }

@@ -9,53 +9,38 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Set of characteristics shared by all individual transactions included in the message.
-/// </summary>
+/// <inheritdoc cref="IGroupHeader112"/>
 [IsoId("_yI87oTEyEe6g-ffJsqGiSA")]
 [Description(@"Set of characteristics shared by all individual transactions included in the message.")]
 [DisplayName("Group Header112")]
-public record GroupHeader112
+public partial record GroupHeader112
 {
-    /// <summary>
-    /// Total of all individual amounts included in the message, irrespective of currencies.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader112.ControlSum"/>
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
     public IsoDecimalNumber? ControlSum { get; init; }
 
-    /// <summary>
-    /// Date and time at which the message was created.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader112.CreationDateTime"/>
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     public required IsoISODateTime CreationDateTime { get; init; }
 
-    /// <summary>
-    /// Financial institution that receives the instruction from the initiating party and forwards it to the next agent in the payment chain for execution.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader112.ForwardingAgent"/>
     [DisplayName("Forwarding Agent")]
     [IsoXmlTag("FwdgAgt")]
     public BranchAndFinancialInstitutionIdentification8? ForwardingAgent { get; init; }
 
-    /// <summary>
-    /// Party initiating the creditor payment activation request. This can either be the creditor himself or the party that initiates the request on behalf of the creditor.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader112.InitiatingParty"/>
     [DisplayName("Initiating Party")]
     [IsoXmlTag("InitgPty")]
     public required PartyIdentification272 InitiatingParty { get; init; }
 
-    /// <summary>
-    /// Point to point reference assigned by the instructing party and sent to the next party in the chain to unambiguously identify the message.
-    /// Usage: The instructing party has to make sure that 'MessageIdentification' is unique per instructed party for a pre-agreed period.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader112.MessageIdentification"/>
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     public required IsoMax35Text MessageIdentification { get; init; }
 
-    /// <summary>
-    /// Number of individual transactions contained in the message.
-    /// </summary>
+    /// <inheritdoc cref="IGroupHeader112.NumberOfTransactions"/>
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
     public required IsoMax15NumericText NumberOfTransactions { get; init; }

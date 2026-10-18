@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Provides detailed information on the original transaction, to which the status report message refers.
-/// </summary>
+/// <inheritdoc cref="IOriginalPaymentInstruction45"/>
 [IsoId("_N1HoYxlWEe2Do_UtrNmb2g")]
 [DisplayName("Original Payment Instruction")]
-public record OriginalPaymentInstruction45
+public partial record OriginalPaymentInstruction45
 {
-    /// <summary>
-    /// Unique identification, as assigned by the original sending party, to unambiguously identify the original payment information group.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalPaymentInstruction45.OriginalPaymentInformationIdentification"/>
     [IsoId("_OAJziRlWEe2Do_UtrNmb2g")]
     [DisplayName("Original Payment Information Identification")]
     [IsoXmlTag("OrgnlPmtInfId")]
@@ -26,52 +22,40 @@ public record OriginalPaymentInstruction45
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public required IsoMax35Text OriginalPaymentInformationIdentification { get; init; }
 
-    /// <summary>
-    /// Number of individual transactions contained in the original payment information group.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalPaymentInstruction45.OriginalNumberOfTransactions"/>
     [IsoId("_OAJzixlWEe2Do_UtrNmb2g")]
     [DisplayName("Original Number Of Transactions")]
     [IsoXmlTag("OrgnlNbOfTxs")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
     public IsoMax15NumericText? OriginalNumberOfTransactions { get; init; }
 
-    /// <summary>
-    /// Total of all individual amounts included in the original payment information group, irrespective of currencies.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalPaymentInstruction45.OriginalControlSum"/>
     [IsoId("_OAJzjRlWEe2Do_UtrNmb2g")]
     [DisplayName("Original Control Sum")]
     [IsoXmlTag("OrgnlCtrlSum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
     public IsoDecimalNumber? OriginalControlSum { get; init; }
 
-    /// <summary>
-    /// Specifies the status of the payment information group.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalPaymentInstruction45.PaymentInformationStatus"/>
     [IsoId("_OAJzjxlWEe2Do_UtrNmb2g")]
     [DisplayName("Payment Information Status")]
     [IsoXmlTag("PmtInfSts")]
     public ExternalPaymentGroupStatus1Code? PaymentInformationStatus { get; init; }
 
-    /// <summary>
-    /// Provides detailed information on the status reason.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalPaymentInstruction45.StatusReasonInformation"/>
     [IsoId("_OAJzkRlWEe2Do_UtrNmb2g")]
     [DisplayName("Status Reason Information")]
     [IsoXmlTag("StsRsnInf")]
     public ValueList<StatusReasonInformation12> StatusReasonInformation { get; init; } = [];
 
-    /// <summary>
-    /// Detailed information on the number of transactions for each identical transaction status.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalPaymentInstruction45.NumberOfTransactionsPerStatus"/>
     [IsoId("_OAJzkxlWEe2Do_UtrNmb2g")]
     [DisplayName("Number Of Transactions Per Status")]
     [IsoXmlTag("NbOfTxsPerSts")]
     public ValueList<NumberOfTransactionsPerStatus5> NumberOfTransactionsPerStatus { get; init; } =
         [];
 
-    /// <summary>
-    /// Provides information on the original transactions to which the status report message refers.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalPaymentInstruction45.TransactionInformationAndStatus"/>
     [IsoId("_OAJzlRlWEe2Do_UtrNmb2g")]
     [DisplayName("Transaction Information And Status")]
     [IsoXmlTag("TxInfAndSts")]

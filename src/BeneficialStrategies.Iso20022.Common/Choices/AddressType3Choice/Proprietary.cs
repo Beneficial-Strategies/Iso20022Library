@@ -8,26 +8,20 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.AddressType3Choice
 {
-    /// <summary>
-    /// Type of address expressed as a proprietary code.
-    /// </summary>
+    /// <inheritdoc cref="IProprietary"/>
     [IsoId("_C7IDQxb-EeiyVv5j1vf1VQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : AddressType3Choice_
+    public partial record Proprietary : AddressType3Choice_
     {
-        /// <summary>
-        /// Proprietary information, often a code, issued by the data source scheme issuer.
-        /// </summary>
+        /// <inheritdoc cref="IProprietary.Identification"/>
         [IsoId("_P-Pqg9p-Ed-ak6NoX_4Aeg_-2101736418")]
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
         public required IsoExact4AlphaNumericText Identification { get; init; }
 
-        /// <summary>
-        /// Entity that assigns the identification.
-        /// </summary>
+        /// <inheritdoc cref="IProprietary.Issuer"/>
         [IsoId("_P-PqhNp-Ed-ak6NoX_4Aeg_1196158525")]
         [DisplayName("Issuer")]
         [IsoXmlTag("Issr")]
@@ -35,9 +29,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AddressType3Choice
         [StringLength(maximumLength: 35, MinimumLength = 1)]
         public required IsoMax35Text Issuer { get; init; }
 
-        /// <summary>
-        /// Short textual description of the scheme.
-        /// </summary>
+        /// <inheritdoc cref="IProprietary.SchemeName"/>
         [IsoId("_P-Pqhdp-Ed-ak6NoX_4Aeg_491043910")]
         [DisplayName("Scheme Name")]
         [IsoXmlTag("SchmeNm")]

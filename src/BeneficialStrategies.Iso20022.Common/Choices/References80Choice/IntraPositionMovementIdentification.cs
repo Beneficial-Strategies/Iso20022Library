@@ -8,15 +8,11 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.References80Choice
 {
-    /// <summary>
-    /// Intra Position Movement Identification.
-    /// </summary>
+    /// <inheritdoc cref="IIntraPositionMovementIdentification"/>
     [DisplayName("Intra Position Movement Identification")]
-    public record IntraPositionMovementIdentification : References80Choice_
+    public partial record IntraPositionMovementIdentification : References80Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// </summary>
+        /// <inheritdoc cref="IIntraPositionMovementIdentification.Value"/>
         [IsoXmlTag("IntraPosMvmntId")]
         public required IsoMax35Text Value { get; init; }
     }

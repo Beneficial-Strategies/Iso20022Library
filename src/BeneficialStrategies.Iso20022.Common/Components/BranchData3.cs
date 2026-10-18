@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Information that locates and identifies a specific branch of a financial institution.
-/// </summary>
+/// <inheritdoc cref="IBranchData3"/>
 [IsoId("_-2V8QW4-EeiU9cctagi5ow")]
 [DisplayName("Branch Data")]
-public record BranchData3
+public partial record BranchData3
 {
-    /// <summary>
-    /// Unique and unambiguous identification of a branch of a financial institution.
-    /// </summary>
+    /// <inheritdoc cref="IBranchData3.Identification"/>
     [IsoId("__CsWM24-EeiU9cctagi5ow")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
@@ -26,18 +22,14 @@ public record BranchData3
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? Identification { get; init; }
 
-    /// <summary>
-    /// Legal entity identification for the branch of the financial institution.
-    /// </summary>
+    /// <inheritdoc cref="IBranchData3.LEI"/>
     [IsoId("_mxjV8XRyEeiH1ZOt2UD8vQ")]
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
     public IsoLEIIdentifier? LEI { get; init; }
 
-    /// <summary>
-    /// Name by which an agent is known and which is usually used to identify that agent.
-    /// </summary>
+    /// <inheritdoc cref="IBranchData3.Name"/>
     [IsoId("__CsWNW4-EeiU9cctagi5ow")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
@@ -45,9 +37,7 @@ public record BranchData3
     [StringLength(maximumLength: 140, MinimumLength = 1)]
     public IsoMax140Text? Name { get; init; }
 
-    /// <summary>
-    /// Information that locates and identifies a specific address, as defined by postal services.
-    /// </summary>
+    /// <inheritdoc cref="IBranchData3.PostalAddress"/>
     [IsoId("__CsWN24-EeiU9cctagi5ow")]
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]

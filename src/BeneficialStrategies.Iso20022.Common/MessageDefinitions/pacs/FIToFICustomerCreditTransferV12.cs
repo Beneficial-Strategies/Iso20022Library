@@ -12,13 +12,10 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pacs;
 
-/// <summary>
-/// This record is an implementation of the pacs.008.001.12 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// </summary>
+/// <inheritdoc cref="IFIToFICustomerCreditTransferV12"/>
 [IsoId("_R3JxqTEZEe6kQ-WGAhcVPQ")]
 [DisplayName("FI To FI Customer Credit Transfer V12")]
-public record FIToFICustomerCreditTransferV12 : IOuterRecord
+public partial record FIToFICustomerCreditTransferV12 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -45,24 +42,18 @@ public record FIToFICustomerCreditTransferV12 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Credit Transfer Transaction Information.
-    /// </summary>
+    /// <inheritdoc cref="IFIToFICustomerCreditTransferV12.CreditTransferTransactionInformation"/>
     [DisplayName("Credit Transfer Transaction Information")]
     [IsoXmlTag("CdtTrfTxInf")]
     public ValueList<CreditTransferTransaction64> CreditTransferTransactionInformation { get; init; } =
         [];
 
-    /// <summary>
-    /// Group Header.
-    /// </summary>
+    /// <inheritdoc cref="IFIToFICustomerCreditTransferV12.GroupHeader"/>
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader113 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Supplementary Data.
-    /// </summary>
+    /// <inheritdoc cref="IFIToFICustomerCreditTransferV12.SupplementaryData"/>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];

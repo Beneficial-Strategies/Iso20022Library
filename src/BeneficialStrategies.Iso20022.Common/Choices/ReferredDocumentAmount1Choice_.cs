@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Nature of the amount and currency on a document referred to in the remittance section, typically either the original amount due/payable or the amount actually remitted for the referenced document.
-    /// </summary>
+    /// <inheritdoc cref="IReferredDocumentAmount1Choice"/>
     [KnownType(typeof(ReferredDocumentAmount1Choice.DuePayableAmount))]
     [KnownType(typeof(ReferredDocumentAmount1Choice.DiscountAppliedAmount))]
     [KnownType(typeof(ReferredDocumentAmount1Choice.RemittedAmount))]
@@ -36,5 +34,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QGJCQtp-Ed-ak6NoX_4Aeg_-888106501")]
     [DisplayName("Referred Document Amount 1 Choice")]
-    public abstract record ReferredDocumentAmount1Choice_ { }
+    public abstract partial record ReferredDocumentAmount1Choice_ { }
 }

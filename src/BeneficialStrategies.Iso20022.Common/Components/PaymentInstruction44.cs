@@ -9,143 +9,103 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Payment Instruction44.
-/// </summary>
+/// <inheritdoc cref="IPaymentInstruction44"/>
 [IsoId("_8tPBlzEsEe6GxLzpkVnWYg")]
 [DisplayName("Payment Instruction44")]
-public record PaymentInstruction44
+public partial record PaymentInstruction44
 {
-    /// <summary>
-    /// Batch Booking.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentInstruction44.BatchBooking"/>
     [DisplayName("Batch Booking")]
     [IsoXmlTag("BtchBookg")]
     public IsoBatchBookingIndicator? BatchBooking { get; init; }
 
-    /// <summary>
-    /// Charge Bearer.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentInstruction44.ChargeBearer"/>
     [DisplayName("Charge Bearer")]
     [IsoXmlTag("ChrgBr")]
     public ChargeBearerType1Code? ChargeBearer { get; init; }
 
-    /// <summary>
-    /// Charges Account.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentInstruction44.ChargesAccount"/>
     [DisplayName("Charges Account")]
     [IsoXmlTag("ChrgsAcct")]
     public CashAccount40? ChargesAccount { get; init; }
 
-    /// <summary>
-    /// Charges Account Agent.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentInstruction44.ChargesAccountAgent"/>
     [DisplayName("Charges Account Agent")]
     [IsoXmlTag("ChrgsAcctAgt")]
     public BranchAndFinancialInstitutionIdentification8? ChargesAccountAgent { get; init; }
 
-    /// <summary>
-    /// Control Sum.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentInstruction44.ControlSum"/>
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
     public IsoDecimalNumber? ControlSum { get; init; }
 
-    /// <summary>
-    /// Credit Transfer Transaction Information.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentInstruction44.CreditTransferTransactionInformation"/>
     [DisplayName("Credit Transfer Transaction Information")]
     [IsoXmlTag("CdtTrfTxInf")]
     public ValueList<CreditTransferTransaction61> CreditTransferTransactionInformation { get; init; } =
         [];
 
-    /// <summary>
-    /// Debtor.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentInstruction44.Debtor"/>
     [DisplayName("Debtor")]
     [IsoXmlTag("Dbtr")]
     public required PartyIdentification272 Debtor { get; init; }
 
-    /// <summary>
-    /// Debtor Account.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentInstruction44.DebtorAccount"/>
     [DisplayName("Debtor Account")]
     [IsoXmlTag("DbtrAcct")]
     public required CashAccount40 DebtorAccount { get; init; }
 
-    /// <summary>
-    /// Debtor Agent.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentInstruction44.DebtorAgent"/>
     [DisplayName("Debtor Agent")]
     [IsoXmlTag("DbtrAgt")]
     public required BranchAndFinancialInstitutionIdentification8 DebtorAgent { get; init; }
 
-    /// <summary>
-    /// Debtor Agent Account.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentInstruction44.DebtorAgentAccount"/>
     [DisplayName("Debtor Agent Account")]
     [IsoXmlTag("DbtrAgtAcct")]
     public CashAccount40? DebtorAgentAccount { get; init; }
 
-    /// <summary>
-    /// Instruction For Debtor Agent.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentInstruction44.InstructionForDebtorAgent"/>
     [DisplayName("Instruction For Debtor Agent")]
     [IsoXmlTag("InstrForDbtrAgt")]
     public IsoMax140Text? InstructionForDebtorAgent { get; init; }
 
-    /// <summary>
-    /// Number Of Transactions.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentInstruction44.NumberOfTransactions"/>
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
     public IsoMax15NumericText? NumberOfTransactions { get; init; }
 
-    /// <summary>
-    /// Payment Information Identification.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentInstruction44.PaymentInformationIdentification"/>
     [DisplayName("Payment Information Identification")]
     [IsoXmlTag("PmtInfId")]
     public required IsoMax35Text PaymentInformationIdentification { get; init; }
 
-    /// <summary>
-    /// Payment Method.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentInstruction44.PaymentMethod"/>
     [DisplayName("Payment Method")]
     [IsoXmlTag("PmtMtd")]
     public required PaymentMethod3Code PaymentMethod { get; init; }
 
-    /// <summary>
-    /// Payment Type Information.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentInstruction44.PaymentTypeInformation"/>
     [DisplayName("Payment Type Information")]
     [IsoXmlTag("PmtTpInf")]
     public PaymentTypeInformation26? PaymentTypeInformation { get; init; }
 
-    /// <summary>
-    /// Pooling Adjustment Date.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentInstruction44.PoolingAdjustmentDate"/>
     [DisplayName("Pooling Adjustment Date")]
     [IsoXmlTag("PoolgAdjstmntDt")]
     public IsoISODate? PoolingAdjustmentDate { get; init; }
 
-    /// <summary>
-    /// Requested Advice Type.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentInstruction44.RequestedAdviceType"/>
     [DisplayName("Requested Advice Type")]
     [IsoXmlTag("ReqdAdvcTp")]
     public AdviceType1? RequestedAdviceType { get; init; }
 
-    /// <summary>
-    /// Requested Execution Date.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentInstruction44.RequestedExecutionDate"/>
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
     public required DateAndDateTime2Choice_ RequestedExecutionDate { get; init; }
 
-    /// <summary>
-    /// Ultimate Debtor.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentInstruction44.UltimateDebtor"/>
     [DisplayName("Ultimate Debtor")]
     [IsoXmlTag("UltmtDbtr")]
     public PartyIdentification272? UltimateDebtor { get; init; }

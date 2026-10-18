@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Nature or use of the account.
-    /// </summary>
+    /// <inheritdoc cref="IParty34Choice"/>
     [KnownType(typeof(Party34Choice.OrganisationIdentification))]
     [KnownType(typeof(Party34Choice.PrivateIdentification))]
     [JsonDerivedType(
@@ -21,5 +19,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_jzRp6a9UEeeJJK1oRb-jTw")]
     [DisplayName("Party 34 Choice")]
-    public abstract record Party34Choice_ { }
+    public abstract partial record Party34Choice_ { }
 }

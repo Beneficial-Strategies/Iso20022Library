@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Set of elements used to identify a person or an organisation.
-/// </summary>
+/// <inheritdoc cref="IPartyIdentification43"/>
 [IsoId("_PWnCxdp-Ed-ak6NoX_4Aeg_-1518984548")]
 [DisplayName("Party Identification")]
-public record PartyIdentification43
+public partial record PartyIdentification43
 {
-    /// <summary>
-    /// Name by which a party is known and which is usually used to identify that party.
-    /// </summary>
+    /// <inheritdoc cref="IPartyIdentification43.Name"/>
     [IsoId("_PWnCxtp-Ed-ak6NoX_4Aeg_-153832746")]
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
@@ -26,33 +22,25 @@ public record PartyIdentification43
     [StringLength(maximumLength: 140, MinimumLength = 1)]
     public IsoMax140Text? Name { get; init; }
 
-    /// <summary>
-    /// Information that locates and identifies a specific address, as defined by postal services.
-    /// </summary>
+    /// <inheritdoc cref="IPartyIdentification43.PostalAddress"/>
     [IsoId("_PWnCx9p-Ed-ak6NoX_4Aeg_1607281642")]
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]
     public PostalAddress6? PostalAddress { get; init; }
 
-    /// <summary>
-    /// Unique and unambiguous identification of a party.
-    /// </summary>
+    /// <inheritdoc cref="IPartyIdentification43.Identification"/>
     [IsoId("_PWnCyNp-Ed-ak6NoX_4Aeg_-579433194")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     public Party11Choice_? Identification { get; init; }
 
-    /// <summary>
-    /// Country in which a person resides (the place of a person&apos;s home). In the case of a company, it is the country from which the affairs of that company are directed.
-    /// </summary>
+    /// <inheritdoc cref="IPartyIdentification43.CountryOfResidence"/>
     [IsoId("_PWwzwNp-Ed-ak6NoX_4Aeg_2043450764")]
     [DisplayName("Country Of Residence")]
     [IsoXmlTag("CtryOfRes")]
     public CountryCode? CountryOfResidence { get; init; }
 
-    /// <summary>
-    /// Set of elements used to indicate how to contact the party.
-    /// </summary>
+    /// <inheritdoc cref="IPartyIdentification43.ContactDetails"/>
     [IsoId("_PWwzwdp-Ed-ak6NoX_4Aeg_-92375963")]
     [DisplayName("Contact Details")]
     [IsoXmlTag("CtctDtls")]

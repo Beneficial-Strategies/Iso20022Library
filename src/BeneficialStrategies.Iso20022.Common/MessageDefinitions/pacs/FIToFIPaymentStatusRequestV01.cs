@@ -12,25 +12,13 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pacs;
 
-/// <summary>
-/// This record is an implementation of the pacs.028.001.01 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// Scope
-/// The FinancialInstitutionToFinancialInstitutionPaymentStatusRequest message is sent by the debtor agent to the creditor agent, directly or through other agents and/or a payment clearing and settlement system. It is used to request a FIToFIPaymentStatusReport message containing information on the status of a previously sent instruction.
-/// Usage
-/// The FIToFIPaymentStatusRequest message is exchanged between agents to request status information about instructions previously sent. Its usage will always be governed by a bilateral agreement between the agents.
-/// The FIToFIPaymentStatusRequest message can be used to request information about the status (e.g. rejection, acceptance) of a credit transfer instruction, a direct debit instruction, as well as other intra-agent instructions (for example FIToFIPaymentCancellationRequest).
-/// The FIToFIPaymentStatusRequest message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.
-/// The FIToFIPaymentStatusRequest message can be used in domestic and cross-border scenarios.
-///
-///
-/// </summary>
+/// <inheritdoc cref="IFIToFIPaymentStatusRequestV01"/>
 [Description(
     @"Scope|The FinancialInstitutionToFinancialInstitutionPaymentStatusRequest message is sent by the debtor agent to the creditor agent, directly or through other agents and/or a payment clearing and settlement system. It is used to request a FIToFIPaymentStatusReport message containing information on the status of a previously sent instruction. |Usage|The FIToFIPaymentStatusRequest message is exchanged between agents to request status information about instructions previously sent. Its usage will always be governed by a bilateral agreement between the agents.|The FIToFIPaymentStatusRequest message can be used to request information about the status (e.g. rejection, acceptance) of a credit transfer instruction, a direct debit instruction, as well as other intra-agent instructions (for example FIToFIPaymentCancellationRequest).|The FIToFIPaymentStatusRequest message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.|The FIToFIPaymentStatusRequest message can be used in domestic and cross-border scenarios.||"
 )]
 [IsoId("_LoikwNsDEeWisvEo70YXSQ")]
 [DisplayName("FI To FI Payment Status Request V")]
-public record FIToFIPaymentStatusRequestV01 : IOuterRecord
+public partial record FIToFIPaymentStatusRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -57,33 +45,25 @@ public record FIToFIPaymentStatusRequestV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Set of characteristics shared by all individual transactions included in the status request message.
-    /// </summary>
+    /// <inheritdoc cref="IFIToFIPaymentStatusRequestV01.GroupHeader"/>
     [IsoId("_2NBB4NsDEeWisvEo70YXSQ")]
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader53 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Original group information concerning the group of transactions, to which the status request message refers to.
-    /// </summary>
+    /// <inheritdoc cref="IFIToFIPaymentStatusRequestV01.OriginalGroupInformation"/>
     [IsoId("_EhgbMNsEEeWisvEo70YXSQ")]
     [DisplayName("Original Group Information")]
     [IsoXmlTag("OrgnlGrpInf")]
     public OriginalGroupInformation27? OriginalGroupInformation { get; init; }
 
-    /// <summary>
-    /// Information concerning the original transaction, to which the status request message refers.
-    /// </summary>
+    /// <inheritdoc cref="IFIToFIPaymentStatusRequestV01.TransactionInformation"/>
     [IsoId("_sHUHEG6ZEeaUkthD_kt0tA")]
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
     public PaymentTransaction73? TransactionInformation { get; init; }
 
-    /// <summary>
-    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
-    /// </summary>
+    /// <inheritdoc cref="IFIToFIPaymentStatusRequestV01.SupplementaryData"/>
     [IsoId("_6WwwgXNIEeaPjshkblZBVw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]

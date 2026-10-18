@@ -1,0 +1,28 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+public partial record OriginalTransactionReference27 : IOriginalTransactionReference27
+{
+    IAmountType4Choice? IOriginalTransactionReference27.Amount => Amount;
+    IDateAndDateTime2Choice? IOriginalTransactionReference27.RequestedExecutionDate => RequestedExecutionDate;
+    IPartyIdentification125? IOriginalTransactionReference27.CreditorSchemeIdentification => CreditorSchemeIdentification;
+    ISettlementInstruction4? IOriginalTransactionReference27.SettlementInformation => SettlementInformation;
+    IPaymentTypeInformation25? IOriginalTransactionReference27.PaymentTypeInformation => PaymentTypeInformation;
+    IMandateRelatedInformation12? IOriginalTransactionReference27.MandateRelatedInformation => MandateRelatedInformation;
+    IRemittanceInformation15? IOriginalTransactionReference27.RemittanceInformation => RemittanceInformation;
+    IParty35Choice? IOriginalTransactionReference27.UltimateDebtor => UltimateDebtor;
+    IParty35Choice? IOriginalTransactionReference27.Debtor => Debtor;
+    ICashAccount24? IOriginalTransactionReference27.DebtorAccount => DebtorAccount;
+    IBranchAndFinancialInstitutionIdentification5? IOriginalTransactionReference27.DebtorAgent => DebtorAgent;
+    ICashAccount24? IOriginalTransactionReference27.DebtorAgentAccount => DebtorAgentAccount;
+    IBranchAndFinancialInstitutionIdentification5? IOriginalTransactionReference27.CreditorAgent => CreditorAgent;
+    ICashAccount24? IOriginalTransactionReference27.CreditorAgentAccount => CreditorAgentAccount;
+    IParty35Choice? IOriginalTransactionReference27.Creditor => Creditor;
+    ICashAccount24? IOriginalTransactionReference27.CreditorAccount => CreditorAccount;
+    IParty35Choice? IOriginalTransactionReference27.UltimateCreditor => UltimateCreditor;
+    IPurpose2Choice? IOriginalTransactionReference27.Purpose => Purpose;
+}

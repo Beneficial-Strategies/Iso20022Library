@@ -9,198 +9,142 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Credit Transfer Transaction61.
-/// </summary>
+/// <inheritdoc cref="ICreditTransferTransaction61"/>
 [IsoId("_8vY92TEsEe6GxLzpkVnWYg")]
 [DisplayName("Credit Transfer Transaction61")]
-public record CreditTransferTransaction61
+public partial record CreditTransferTransaction61
 {
-    /// <summary>
-    /// Amount.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction61.Amount"/>
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
     public required AmountType4Choice_ Amount { get; init; }
 
-    /// <summary>
-    /// Charge Bearer.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction61.ChargeBearer"/>
     [DisplayName("Charge Bearer")]
     [IsoXmlTag("ChrgBr")]
     public ChargeBearerType1Code? ChargeBearer { get; init; }
 
-    /// <summary>
-    /// Cheque Instruction.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction61.ChequeInstruction"/>
     [DisplayName("Cheque Instruction")]
     [IsoXmlTag("ChqInstr")]
     public Cheque19? ChequeInstruction { get; init; }
 
-    /// <summary>
-    /// Creditor.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction61.Creditor"/>
     [DisplayName("Creditor")]
     [IsoXmlTag("Cdtr")]
     public PartyIdentification272? Creditor { get; init; }
 
-    /// <summary>
-    /// Creditor Account.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction61.CreditorAccount"/>
     [DisplayName("Creditor Account")]
     [IsoXmlTag("CdtrAcct")]
     public CashAccount40? CreditorAccount { get; init; }
 
-    /// <summary>
-    /// Creditor Agent.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction61.CreditorAgent"/>
     [DisplayName("Creditor Agent")]
     [IsoXmlTag("CdtrAgt")]
     public BranchAndFinancialInstitutionIdentification8? CreditorAgent { get; init; }
 
-    /// <summary>
-    /// Creditor Agent Account.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction61.CreditorAgentAccount"/>
     [DisplayName("Creditor Agent Account")]
     [IsoXmlTag("CdtrAgtAcct")]
     public CashAccount40? CreditorAgentAccount { get; init; }
 
-    /// <summary>
-    /// Exchange Rate Information.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction61.ExchangeRateInformation"/>
     [DisplayName("Exchange Rate Information")]
     [IsoXmlTag("XchgRateInf")]
     public ExchangeRate1? ExchangeRateInformation { get; init; }
 
-    /// <summary>
-    /// Instruction For Creditor Agent.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction61.InstructionForCreditorAgent"/>
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
     public ValueList<InstructionForCreditorAgent3> InstructionForCreditorAgent { get; init; } = [];
 
-    /// <summary>
-    /// Instruction For Debtor Agent.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction61.InstructionForDebtorAgent"/>
     [DisplayName("Instruction For Debtor Agent")]
     [IsoXmlTag("InstrForDbtrAgt")]
     public InstructionForDebtorAgent1? InstructionForDebtorAgent { get; init; }
 
-    /// <summary>
-    /// Intermediary Agent1.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction61.IntermediaryAgent1"/>
     [DisplayName("Intermediary Agent1")]
     [IsoXmlTag("IntrmyAgt1")]
     public BranchAndFinancialInstitutionIdentification8? IntermediaryAgent1 { get; init; }
 
-    /// <summary>
-    /// Intermediary Agent1Account.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction61.IntermediaryAgent1Account"/>
     [DisplayName("Intermediary Agent1Account")]
     [IsoXmlTag("IntrmyAgt1Acct")]
     public CashAccount40? IntermediaryAgent1Account { get; init; }
 
-    /// <summary>
-    /// Intermediary Agent2.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction61.IntermediaryAgent2"/>
     [DisplayName("Intermediary Agent2")]
     [IsoXmlTag("IntrmyAgt2")]
     public BranchAndFinancialInstitutionIdentification8? IntermediaryAgent2 { get; init; }
 
-    /// <summary>
-    /// Intermediary Agent2Account.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction61.IntermediaryAgent2Account"/>
     [DisplayName("Intermediary Agent2Account")]
     [IsoXmlTag("IntrmyAgt2Acct")]
     public CashAccount40? IntermediaryAgent2Account { get; init; }
 
-    /// <summary>
-    /// Intermediary Agent3.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction61.IntermediaryAgent3"/>
     [DisplayName("Intermediary Agent3")]
     [IsoXmlTag("IntrmyAgt3")]
     public BranchAndFinancialInstitutionIdentification8? IntermediaryAgent3 { get; init; }
 
-    /// <summary>
-    /// Intermediary Agent3Account.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction61.IntermediaryAgent3Account"/>
     [DisplayName("Intermediary Agent3Account")]
     [IsoXmlTag("IntrmyAgt3Acct")]
     public CashAccount40? IntermediaryAgent3Account { get; init; }
 
-    /// <summary>
-    /// Mandate Related Information.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction61.MandateRelatedInformation"/>
     [DisplayName("Mandate Related Information")]
     [IsoXmlTag("MndtRltdInf")]
     public CreditTransferMandateData1? MandateRelatedInformation { get; init; }
 
-    /// <summary>
-    /// Payment Identification.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction61.PaymentIdentification"/>
     [DisplayName("Payment Identification")]
     [IsoXmlTag("PmtId")]
     public required PaymentIdentification6 PaymentIdentification { get; init; }
 
-    /// <summary>
-    /// Payment Type Information.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction61.PaymentTypeInformation"/>
     [DisplayName("Payment Type Information")]
     [IsoXmlTag("PmtTpInf")]
     public PaymentTypeInformation26? PaymentTypeInformation { get; init; }
 
-    /// <summary>
-    /// Purpose.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction61.Purpose"/>
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
     public Purpose2Choice_? Purpose { get; init; }
 
-    /// <summary>
-    /// Regulatory Reporting.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction61.RegulatoryReporting"/>
     [DisplayName("Regulatory Reporting")]
     [IsoXmlTag("RgltryRptg")]
     public ValueList<RegulatoryReporting3> RegulatoryReporting { get; init; } = [];
 
-    /// <summary>
-    /// Related Remittance Information.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction61.RelatedRemittanceInformation"/>
     [DisplayName("Related Remittance Information")]
     [IsoXmlTag("RltdRmtInf")]
     public ValueList<RemittanceLocation8> RelatedRemittanceInformation { get; init; } = [];
 
-    /// <summary>
-    /// Remittance Information.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction61.RemittanceInformation"/>
     [DisplayName("Remittance Information")]
     [IsoXmlTag("RmtInf")]
     public RemittanceInformation22? RemittanceInformation { get; init; }
 
-    /// <summary>
-    /// Supplementary Data.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction61.SupplementaryData"/>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
 
-    /// <summary>
-    /// Tax.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction61.Tax"/>
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
     public TaxData1? Tax { get; init; }
 
-    /// <summary>
-    /// Ultimate Creditor.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction61.UltimateCreditor"/>
     [DisplayName("Ultimate Creditor")]
     [IsoXmlTag("UltmtCdtr")]
     public PartyIdentification272? UltimateCreditor { get; init; }
 
-    /// <summary>
-    /// Ultimate Debtor.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction61.UltimateDebtor"/>
     [DisplayName("Ultimate Debtor")]
     [IsoXmlTag("UltmtDbtr")]
     public PartyIdentification272? UltimateDebtor { get; init; }

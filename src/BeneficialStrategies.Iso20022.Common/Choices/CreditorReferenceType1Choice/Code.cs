@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.CreditorReferenceType1Choice
 {
-    /// <summary>
-    /// Type of creditor reference, in a coded form.
-    /// </summary>
+    /// <inheritdoc cref="ICode"/>
     [IsoId("_T4ItMNp-Ed-ak6NoX_4Aeg_651436918")]
     [DisplayName("Code")]
-    public record Code : CreditorReferenceType1Choice_
+    public partial record Code : CreditorReferenceType1Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies a type of financial or commercial document.
-        /// </summary>
+        /// <inheritdoc cref="ICode.Value"/>
         [IsoXmlTag("Cd")]
         public required DocumentType3Code Value { get; init; }
     }

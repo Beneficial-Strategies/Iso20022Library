@@ -9,93 +9,67 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Cheque19.
-/// </summary>
+/// <inheritdoc cref="ICheque19"/>
 [IsoId("_4oDGATEyEe6g-ffJsqGiSA")]
 [DisplayName("Cheque19")]
-public record Cheque19
+public partial record Cheque19
 {
-    /// <summary>
-    /// Cheque From.
-    /// </summary>
+    /// <inheritdoc cref="ICheque19.ChequeFrom"/>
     [DisplayName("Cheque From")]
     [IsoXmlTag("ChqFr")]
     public NameAndAddress18? ChequeFrom { get; init; }
 
-    /// <summary>
-    /// Cheque Maturity Date.
-    /// </summary>
+    /// <inheritdoc cref="ICheque19.ChequeMaturityDate"/>
     [DisplayName("Cheque Maturity Date")]
     [IsoXmlTag("ChqMtrtyDt")]
     public IsoISODate? ChequeMaturityDate { get; init; }
 
-    /// <summary>
-    /// Cheque Number.
-    /// </summary>
+    /// <inheritdoc cref="ICheque19.ChequeNumber"/>
     [DisplayName("Cheque Number")]
     [IsoXmlTag("ChqNb")]
     public IsoMax35Text? ChequeNumber { get; init; }
 
-    /// <summary>
-    /// Cheque Type.
-    /// </summary>
+    /// <inheritdoc cref="ICheque19.ChequeType"/>
     [DisplayName("Cheque Type")]
     [IsoXmlTag("ChqTp")]
     public ChequeType2Code? ChequeType { get; init; }
 
-    /// <summary>
-    /// Deliver To.
-    /// </summary>
+    /// <inheritdoc cref="ICheque19.DeliverTo"/>
     [DisplayName("Deliver To")]
     [IsoXmlTag("DlvrTo")]
     public NameAndAddress18? DeliverTo { get; init; }
 
-    /// <summary>
-    /// Delivery Method.
-    /// </summary>
+    /// <inheritdoc cref="ICheque19.DeliveryMethod"/>
     [DisplayName("Delivery Method")]
     [IsoXmlTag("DlvryMtd")]
     public ChequeDeliveryMethod1Choice_? DeliveryMethod { get; init; }
 
-    /// <summary>
-    /// Forms Code.
-    /// </summary>
+    /// <inheritdoc cref="ICheque19.FormsCode"/>
     [DisplayName("Forms Code")]
     [IsoXmlTag("FrmsCd")]
     public IsoMax35Text? FormsCode { get; init; }
 
-    /// <summary>
-    /// Instruction Priority.
-    /// </summary>
+    /// <inheritdoc cref="ICheque19.InstructionPriority"/>
     [DisplayName("Instruction Priority")]
     [IsoXmlTag("InstrPrty")]
     public Priority2Code? InstructionPriority { get; init; }
 
-    /// <summary>
-    /// Memo Field.
-    /// </summary>
+    /// <inheritdoc cref="ICheque19.MemoField"/>
     [DisplayName("Memo Field")]
     [IsoXmlTag("MemoFld")]
     public SimpleValueList<IsoMax35Text> MemoField { get; init; } = [];
 
-    /// <summary>
-    /// Print Location.
-    /// </summary>
+    /// <inheritdoc cref="ICheque19.PrintLocation"/>
     [DisplayName("Print Location")]
     [IsoXmlTag("PrtLctn")]
     public IsoMax35Text? PrintLocation { get; init; }
 
-    /// <summary>
-    /// Regional Clearing Zone.
-    /// </summary>
+    /// <inheritdoc cref="ICheque19.RegionalClearingZone"/>
     [DisplayName("Regional Clearing Zone")]
     [IsoXmlTag("RgnlClrZone")]
     public IsoMax35Text? RegionalClearingZone { get; init; }
 
-    /// <summary>
-    /// Signature.
-    /// </summary>
+    /// <inheritdoc cref="ICheque19.Signature"/>
     [DisplayName("Signature")]
     [IsoXmlTag("Sgntr")]
     public SimpleValueList<IsoMax70Text> Signature { get; init; } = [];

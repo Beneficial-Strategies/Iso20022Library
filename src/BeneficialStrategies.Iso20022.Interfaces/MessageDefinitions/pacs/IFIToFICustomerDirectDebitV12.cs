@@ -1,0 +1,41 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.pacs;
+
+/// <summary>
+/// This record is an implementation of the pacs.003.001.12 ISO standard message type.
+/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// The FinancialInstitutionToFinancialInstitutionCustomerDirectDebit message is sent by the creditor agent to the debtor agent, directly or through other agents and/or a payment clearing and settlement system.
+/// It is used to collect funds from a debtor account for a creditor.
+/// </summary>
+/// <remarks>
+/// Usage
+/// The FItoFICustomerDirectDebit message can contain one or more customer direct debit instructions.
+/// The FIToFICustomerDirectDebit message does not allow for grouping.
+/// The FItoFICustomerDirectDebit message may or may not contain mandate related information, that is extracts from a mandate, such as the MandateIdentification or DateOfSignature. The FIToFICustomerDirectDebit message must not be considered as a mandate.
+/// The FItoFICustomerDirectDebit message can be used in domestic and cross-border scenarios.
+/// </remarks>
+[IsoId("c2cf0163-0762-45bc-8280-200f601fb57e")]
+public interface IFIToFICustomerDirectDebitV12 : IOuterRecord
+{
+    /// <summary>
+    /// Set of elements providing information specific to the individual direct debit(s).
+    /// </summary>
+    [DisplayName("Direct Debit Transaction Information")]
+    [IsoXmlTag("DrctDbtTxInf")]
+    IEnumerable<IDirectDebitTransactionInformation35> DirectDebitTransactionInformation { get; }
+
+    /// <summary>
+    /// Set of characteristics shared by all individual transactions included in the message.
+    /// </summary>
+    [DisplayName("Group Header")]
+    [IsoXmlTag("GrpHdr")]
+    IGroupHeader125 GroupHeader { get; }
+
+    /// <summary>
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    IEnumerable<ISupplementaryData1> SupplementaryData { get; }
+}

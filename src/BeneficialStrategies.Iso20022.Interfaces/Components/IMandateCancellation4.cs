@@ -1,0 +1,42 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Identifies the mandate to be cancelled.
+/// </summary>
+[IsoId("_d7WRbx77EeSxevWRRWxNAg")]
+public interface IMandateCancellation4 : IIsoComponent
+{
+    /// <summary>
+    /// Provides information on the original message.
+    /// </summary>
+    [IsoId("_eMUskx77EeSxevWRRWxNAg")]
+    [DisplayName("Original Message Information")]
+    [IsoXmlTag("OrgnlMsgInf")]
+    IOriginalMessageInformation1? OriginalMessageInformation { get; }
+
+    /// <summary>
+    /// Provides detailed information on the cancellation reason.
+    /// </summary>
+    [IsoId("_eMUslR77EeSxevWRRWxNAg")]
+    [DisplayName("Cancellation Reason")]
+    [IsoXmlTag("CxlRsn")]
+    IPaymentCancellationReason1 CancellationReason { get; }
+
+    /// <summary>
+    /// Provides the original mandate data.
+    /// </summary>
+    [IsoId("_eMUslx77EeSxevWRRWxNAg")]
+    [DisplayName("Original Mandate")]
+    [IsoXmlTag("OrgnlMndt")]
+    IOriginalMandate3Choice OriginalMandate { get; }
+
+    /// <summary>
+    /// Additional information that cannot be captured in the structured elements and/or any other specific block.
+    /// </summary>
+    [IsoId("_eMUsmR77EeSxevWRRWxNAg")]
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    IEnumerable<ISupplementaryData1> SupplementaryData { get; }
+}

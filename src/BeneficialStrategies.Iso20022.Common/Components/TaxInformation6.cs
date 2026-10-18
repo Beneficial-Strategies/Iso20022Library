@@ -9,32 +9,24 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Details about tax paid, or to be paid, to the government in accordance with the law, including pre-defined parameters such as thresholds and type of account.
-/// </summary>
+/// <inheritdoc cref="ITaxInformation6"/>
 [IsoId("_zSrWJ69fEeen6L7OP7lnvg")]
 [DisplayName("Tax Information")]
-public record TaxInformation6
+public partial record TaxInformation6
 {
-    /// <summary>
-    /// Party on the credit side of the transaction to which the tax applies.
-    /// </summary>
+    /// <inheritdoc cref="ITaxInformation6.Creditor"/>
     [IsoId("_zivyc69fEeen6L7OP7lnvg")]
     [DisplayName("Creditor")]
     [IsoXmlTag("Cdtr")]
     public TaxParty1? Creditor { get; init; }
 
-    /// <summary>
-    /// Set of elements used to identify the party on the debit side of the transaction to which the tax applies.
-    /// </summary>
+    /// <inheritdoc cref="ITaxInformation6.Debtor"/>
     [IsoId("_zivyda9fEeen6L7OP7lnvg")]
     [DisplayName("Debtor")]
     [IsoXmlTag("Dbtr")]
     public TaxParty2? Debtor { get; init; }
 
-    /// <summary>
-    /// Territorial part of a country to which the tax payment is related.
-    /// </summary>
+    /// <inheritdoc cref="ITaxInformation6.AdministrationZone"/>
     [IsoId("_zivyd69fEeen6L7OP7lnvg")]
     [DisplayName("Administration Zone")]
     [IsoXmlTag("AdmstnZn")]
@@ -42,9 +34,7 @@ public record TaxInformation6
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? AdministrationZone { get; init; }
 
-    /// <summary>
-    /// Tax reference information that is specific to a taxing agency.
-    /// </summary>
+    /// <inheritdoc cref="ITaxInformation6.ReferenceNumber"/>
     [IsoId("_zivyea9fEeen6L7OP7lnvg")]
     [DisplayName("Reference Number")]
     [IsoXmlTag("RefNb")]
@@ -52,9 +42,7 @@ public record TaxInformation6
     [StringLength(maximumLength: 140, MinimumLength = 1)]
     public IsoMax140Text? ReferenceNumber { get; init; }
 
-    /// <summary>
-    /// Method used to indicate the underlying business or how the tax is paid.
-    /// </summary>
+    /// <inheritdoc cref="ITaxInformation6.Method"/>
     [IsoId("_zivye69fEeen6L7OP7lnvg")]
     [DisplayName("Method")]
     [IsoXmlTag("Mtd")]
@@ -62,43 +50,33 @@ public record TaxInformation6
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? Method { get; init; }
 
-    /// <summary>
-    /// Total amount of money on which the tax is based.
-    /// </summary>
+    /// <inheritdoc cref="ITaxInformation6.TotalTaxableBaseAmount"/>
     [IsoId("_zivyfa9fEeen6L7OP7lnvg")]
     [DisplayName("Total Taxable Base Amount")]
     [IsoXmlTag("TtlTaxblBaseAmt")]
     public ActiveOrHistoricCurrencyAndAmount? TotalTaxableBaseAmount { get; init; }
 
-    /// <summary>
-    /// Total amount of money as result of the calculation of the tax.
-    /// </summary>
+    /// <inheritdoc cref="ITaxInformation6.TotalTaxAmount"/>
     [IsoId("_zivyf69fEeen6L7OP7lnvg")]
     [DisplayName("Total Tax Amount")]
     [IsoXmlTag("TtlTaxAmt")]
     public ActiveOrHistoricCurrencyAndAmount? TotalTaxAmount { get; init; }
 
-    /// <summary>
-    /// Date by which tax is due.
-    /// </summary>
+    /// <inheritdoc cref="ITaxInformation6.Date"/>
     [IsoId("_zivyga9fEeen6L7OP7lnvg")]
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
     public IsoISODate? Date { get; init; }
 
-    /// <summary>
-    /// Sequential number of the tax report.
-    /// </summary>
+    /// <inheritdoc cref="ITaxInformation6.SequenceNumber"/>
     [IsoId("_zivyg69fEeen6L7OP7lnvg")]
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
     public IsoNumber? SequenceNumber { get; init; }
 
-    /// <summary>
-    /// Record of tax details.
-    /// </summary>
+    /// <inheritdoc cref="ITaxInformation6.Record"/>
     [IsoId("_zivyha9fEeen6L7OP7lnvg")]
     [DisplayName("Record")]
     [IsoXmlTag("Rcrd")]

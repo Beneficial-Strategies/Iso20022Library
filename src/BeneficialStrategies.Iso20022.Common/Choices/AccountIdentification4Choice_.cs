@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Specifies the unique identification of an account as assigned by the account servicer.
-    /// </summary>
+    /// <inheritdoc cref="IAccountIdentification4Choice"/>
     [KnownType(typeof(AccountIdentification4Choice.IBAN))]
     [KnownType(typeof(AccountIdentification4Choice.Other))]
     [JsonDerivedType(
@@ -21,5 +19,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Pdwzodp-Ed-ak6NoX_4Aeg_-1833658219")]
     [DisplayName("Account Identification 4 Choice")]
-    public abstract record AccountIdentification4Choice_ { }
+    public abstract partial record AccountIdentification4Choice_ { }
 }

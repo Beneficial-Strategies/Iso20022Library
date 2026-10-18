@@ -8,15 +8,11 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.CryptographicKey1Choice
 {
-    /// <summary>
-    /// ILPV4.
-    /// </summary>
+    /// <inheritdoc cref="IILPV4"/>
     [DisplayName("ILPV4")]
-    public record ILPV4 : CryptographicKey1Choice_
+    public partial record ILPV4 : CryptographicKey1Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// </summary>
+        /// <inheritdoc cref="IILPV4.Value"/>
         [IsoXmlTag("ILPV4")]
         public required IsoHexBinaryText Value { get; init; }
     }

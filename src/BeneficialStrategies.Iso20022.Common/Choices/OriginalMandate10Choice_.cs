@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Original Mandate10Choice.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalMandate10Choice"/>
     [KnownType(typeof(OriginalMandate10Choice.OriginalMandate))]
     [KnownType(typeof(OriginalMandate10Choice.OriginalMandateIdentification))]
     [JsonDerivedType(
@@ -21,5 +19,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_yNcaETEyEe6g-ffJsqGiSA")]
     [DisplayName("Original Mandate10Choice")]
-    public abstract record OriginalMandate10Choice_ { }
+    public abstract partial record OriginalMandate10Choice_ { }
 }

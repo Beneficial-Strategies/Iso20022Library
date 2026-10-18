@@ -9,51 +9,37 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Financial Institution Identification23.
-/// </summary>
+/// <inheritdoc cref="IFinancialInstitutionIdentification23"/>
 [IsoId("_v2tzSTEyEe6g-ffJsqGiSA")]
 [DisplayName("Financial Institution Identification23")]
-public record FinancialInstitutionIdentification23
+public partial record FinancialInstitutionIdentification23
 {
-    /// <summary>
-    /// BICFI.
-    /// </summary>
+    /// <inheritdoc cref="IFinancialInstitutionIdentification23.BICFI"/>
     [DisplayName("BICFI")]
     [IsoXmlTag("BICFI")]
     public IsoBICFIDec2014Identifier? BICFI { get; init; }
 
-    /// <summary>
-    /// Clearing System Member Identification.
-    /// </summary>
+    /// <inheritdoc cref="IFinancialInstitutionIdentification23.ClearingSystemMemberIdentification"/>
     [DisplayName("Clearing System Member Identification")]
     [IsoXmlTag("ClrSysMmbId")]
     public ClearingSystemMemberIdentification2? ClearingSystemMemberIdentification { get; init; }
 
-    /// <summary>
-    /// LEI.
-    /// </summary>
+    /// <inheritdoc cref="IFinancialInstitutionIdentification23.LEI"/>
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     public IsoLEIIdentifier? LEI { get; init; }
 
-    /// <summary>
-    /// Name.
-    /// </summary>
+    /// <inheritdoc cref="IFinancialInstitutionIdentification23.Name"/>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     public IsoMax140Text? Name { get; init; }
 
-    /// <summary>
-    /// Other.
-    /// </summary>
+    /// <inheritdoc cref="IFinancialInstitutionIdentification23.Other"/>
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
     public GenericFinancialIdentification1? Other { get; init; }
 
-    /// <summary>
-    /// Postal Address.
-    /// </summary>
+    /// <inheritdoc cref="IFinancialInstitutionIdentification23.PostalAddress"/>
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]
     public PostalAddress27? PostalAddress { get; init; }

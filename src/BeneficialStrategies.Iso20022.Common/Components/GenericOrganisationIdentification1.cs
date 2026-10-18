@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Information related to an identification of an organisation.
-/// </summary>
+/// <inheritdoc cref="IGenericOrganisationIdentification1"/>
 [IsoId("_QACaRdp-Ed-ak6NoX_4Aeg_-322320404")]
 [DisplayName("Generic Organisation Identification")]
-public record GenericOrganisationIdentification1
+public partial record GenericOrganisationIdentification1
 {
-    /// <summary>
-    /// Identification assigned by an institution.
-    /// </summary>
+    /// <inheritdoc cref="IGenericOrganisationIdentification1.Identification"/>
     [IsoId("_QACaRtp-Ed-ak6NoX_4Aeg_-322320394")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
@@ -26,17 +22,13 @@ public record GenericOrganisationIdentification1
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public required IsoMax35Text Identification { get; init; }
 
-    /// <summary>
-    /// Name of the identification scheme.
-    /// </summary>
+    /// <inheritdoc cref="IGenericOrganisationIdentification1.SchemeName"/>
     [IsoId("_QACaR9p-Ed-ak6NoX_4Aeg_324738129")]
     [DisplayName("Scheme Name")]
     [IsoXmlTag("SchmeNm")]
     public OrganisationIdentificationSchemeName1Choice_? SchemeName { get; init; }
 
-    /// <summary>
-    /// Entity that assigns the identification.
-    /// </summary>
+    /// <inheritdoc cref="IGenericOrganisationIdentification1.Issuer"/>
     [IsoId("_QACaSNp-Ed-ak6NoX_4Aeg_-322320342")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]

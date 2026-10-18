@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Choice between references.
-    /// </summary>
+    /// <inheritdoc cref="IReferences74Choice"/>
     [KnownType(typeof(References74Choice.SecuritiesSettlementTransactionIdentification))]
     [KnownType(typeof(References74Choice.IntraPositionMovementIdentification))]
     [KnownType(typeof(References74Choice.IntraBalanceMovementIdentification))]
@@ -63,5 +61,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_SKsBTSgaEey2k_sfZmJz4g")]
     [DisplayName("References 74 Choice")]
-    public abstract record References74Choice_ { }
+    public abstract partial record References74Choice_ { }
 }

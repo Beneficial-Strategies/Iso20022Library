@@ -9,30 +9,22 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Generic Organisation Identification3.
-/// </summary>
+/// <inheritdoc cref="IGenericOrganisationIdentification3"/>
 [IsoId("_bM2KRzFIEe651u5xu3f5iw")]
 [DisplayName("Generic Organisation Identification3")]
-public record GenericOrganisationIdentification3
+public partial record GenericOrganisationIdentification3
 {
-    /// <summary>
-    /// Identification.
-    /// </summary>
+    /// <inheritdoc cref="IGenericOrganisationIdentification3.Identification"/>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     public required IsoMax256Text Identification { get; init; }
 
-    /// <summary>
-    /// Issuer.
-    /// </summary>
+    /// <inheritdoc cref="IGenericOrganisationIdentification3.Issuer"/>
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
     public IsoMax35Text? Issuer { get; init; }
 
-    /// <summary>
-    /// Scheme Name.
-    /// </summary>
+    /// <inheritdoc cref="IGenericOrganisationIdentification3.SchemeName"/>
     [DisplayName("Scheme Name")]
     [IsoXmlTag("SchmeNm")]
     public OrganisationIdentificationSchemeName1Choice_? SchemeName { get; init; }

@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Specifies the reason for the status of the transaction.
-    /// </summary>
+    /// <inheritdoc cref="IStatusReason6Choice"/>
     [KnownType(typeof(StatusReason6Choice.Code))]
     [KnownType(typeof(StatusReason6Choice.Proprietary))]
     [JsonDerivedType(typeof(StatusReason6Choice.Code), nameof(StatusReason6Choice.Code))]
@@ -18,5 +16,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_TRGiZtp-Ed-ak6NoX_4Aeg_-1877638998")]
     [DisplayName("Status Reason 6 Choice")]
-    public abstract record StatusReason6Choice_ { }
+    public abstract partial record StatusReason6Choice_ { }
 }

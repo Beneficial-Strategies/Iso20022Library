@@ -8,18 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.ReversalReason4Choice
 {
-    /// <summary>
-    /// Reason for the reversal, as published in an external reason code list.
-    /// </summary>
+    /// <inheritdoc cref="ICode"/>
     [IsoId("_TRGiYNp-Ed-ak6NoX_4Aeg_-340627868")]
     [DisplayName("Code")]
-    public record Code : ReversalReason4Choice_
+    public partial record Code : ReversalReason4Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies the reversal reason, as published in an external reversal reason code list.
-        /// External code sets can be downloaded from www.iso20022.org.
-        /// </summary>
+        /// <inheritdoc cref="ICode.Value"/>
         [IsoXmlTag("Cd")]
         public required ExternalReversalReason1Code Value { get; init; }
     }

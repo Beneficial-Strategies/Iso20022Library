@@ -8,15 +8,11 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.References80Choice
 {
-    /// <summary>
-    /// Intra Balance Movement Identification.
-    /// </summary>
+    /// <inheritdoc cref="IIntraBalanceMovementIdentification"/>
     [DisplayName("Intra Balance Movement Identification")]
-    public record IntraBalanceMovementIdentification : References80Choice_
+    public partial record IntraBalanceMovementIdentification : References80Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// </summary>
+        /// <inheritdoc cref="IIntraBalanceMovementIdentification.Value"/>
         [IsoXmlTag("IntraBalMvmntId")]
         public required IsoMax35Text Value { get; init; }
     }

@@ -8,15 +8,11 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.CryptographicKey1Choice
 {
-    /// <summary>
-    /// Signature.
-    /// </summary>
+    /// <inheritdoc cref="ISignature"/>
     [DisplayName("Signature")]
-    public record Signature : CryptographicKey1Choice_
+    public partial record Signature : CryptographicKey1Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// </summary>
+        /// <inheritdoc cref="ISignature.Value"/>
         [IsoXmlTag("Sgntr")]
         public required IsoSHA256SignatureText Value { get; init; }
     }

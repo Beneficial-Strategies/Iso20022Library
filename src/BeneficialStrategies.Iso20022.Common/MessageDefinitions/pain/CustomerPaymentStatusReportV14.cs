@@ -12,13 +12,10 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pain;
 
-/// <summary>
-/// This record is an implementation of the pain.002.001.14 ISO standard message type.
-/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
-/// </summary>
+/// <inheritdoc cref="ICustomerPaymentStatusReportV14"/>
 [IsoId("_R3H8fTEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Customer Payment Status Report V14")]
-public record CustomerPaymentStatusReportV14 : IOuterRecord
+public partial record CustomerPaymentStatusReportV14 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
@@ -45,31 +42,23 @@ public record CustomerPaymentStatusReportV14 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
 
-    /// <summary>
-    /// Group Header.
-    /// </summary>
+    /// <inheritdoc cref="ICustomerPaymentStatusReportV14.GroupHeader"/>
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
     public required GroupHeader128 GroupHeader { get; init; }
 
-    /// <summary>
-    /// Original Group Information And Status.
-    /// </summary>
+    /// <inheritdoc cref="ICustomerPaymentStatusReportV14.OriginalGroupInformationAndStatus"/>
     [DisplayName("Original Group Information And Status")]
     [IsoXmlTag("OrgnlGrpInfAndSts")]
     public required OriginalGroupHeader22 OriginalGroupInformationAndStatus { get; init; }
 
-    /// <summary>
-    /// Original Payment Information And Status.
-    /// </summary>
+    /// <inheritdoc cref="ICustomerPaymentStatusReportV14.OriginalPaymentInformationAndStatus"/>
     [DisplayName("Original Payment Information And Status")]
     [IsoXmlTag("OrgnlPmtInfAndSts")]
     public ValueList<OriginalPaymentInstruction51> OriginalPaymentInformationAndStatus { get; init; } =
         [];
 
-    /// <summary>
-    /// Supplementary Data.
-    /// </summary>
+    /// <inheritdoc cref="ICustomerPaymentStatusReportV14.SupplementaryData"/>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];

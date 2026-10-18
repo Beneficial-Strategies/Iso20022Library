@@ -8,17 +8,13 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.OriginalMandate3Choice
 {
-    /// <summary>
-    /// Provides the original mandate data.
-    /// </summary>
+    /// <inheritdoc cref="IOriginalMandate"/>
     [IsoId("_YkloBR77EeSxevWRRWxNAg")]
     [DisplayName("Original Mandate")]
     [IsoXmlTag("OrgnlMndt")]
-    public record OriginalMandate : OriginalMandate3Choice_
+    public partial record OriginalMandate : OriginalMandate3Choice_
     {
-        /// <summary>
-        /// Unique identification, as assigned by the creditor, to unambiguously identify the mandate.
-        /// </summary>
+        /// <inheritdoc cref="IOriginalMandate.MandateIdentification"/>
         [IsoId("_Y12XJx77EeSxevWRRWxNAg")]
         [DisplayName("Mandate Identification")]
         [IsoXmlTag("MndtId")]
@@ -26,9 +22,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalMandate3Choice
         [StringLength(maximumLength: 35, MinimumLength = 1)]
         public required IsoMax35Text MandateIdentification { get; init; }
 
-        /// <summary>
-        /// Identification for the mandate request, as assigned by the initiating party.
-        /// </summary>
+        /// <inheritdoc cref="IOriginalMandate.MandateRequestIdentification"/>
         [IsoId("_Y12XKR77EeSxevWRRWxNAg")]
         [DisplayName("Mandate Request Identification")]
         [IsoXmlTag("MndtReqId")]
@@ -36,121 +30,91 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalMandate3Choice
         [StringLength(maximumLength: 35, MinimumLength = 1)]
         public IsoMax35Text? MandateRequestIdentification { get; init; }
 
-        /// <summary>
-        /// Specifies the type of mandate, such as paper, electronic or scheme.
-        /// </summary>
+        /// <inheritdoc cref="IOriginalMandate.Type"/>
         [IsoId("_Y12XKx77EeSxevWRRWxNAg")]
         [DisplayName("Type")]
         [IsoXmlTag("Tp")]
         public MandateTypeInformation1? Type { get; init; }
 
-        /// <summary>
-        /// Provides details of the duration of the mandate and occurrence of the underlying transactions.
-        /// </summary>
+        /// <inheritdoc cref="IOriginalMandate.Occurrences"/>
         [IsoId("_Y12XLR77EeSxevWRRWxNAg")]
         [DisplayName("Occurrences")]
         [IsoXmlTag("Ocrncs")]
         public MandateOccurrences3? Occurrences { get; init; }
 
-        /// <summary>
-        /// Fixed amount to be collected from the debtor&apos;s account.
-        /// </summary>
+        /// <inheritdoc cref="IOriginalMandate.CollectionAmount"/>
         [IsoId("_Y12XLx77EeSxevWRRWxNAg")]
         [DisplayName("Collection Amount")]
         [IsoXmlTag("ColltnAmt")]
         public ActiveOrHistoricCurrencyAndAmount? CollectionAmount { get; init; }
 
-        /// <summary>
-        /// Maximum amount that may be collected from the debtor&apos;s account, per instruction.
-        /// </summary>
+        /// <inheritdoc cref="IOriginalMandate.MaximumAmount"/>
         [IsoId("_Y12XMR77EeSxevWRRWxNAg")]
         [DisplayName("Maximum Amount")]
         [IsoXmlTag("MaxAmt")]
         public ActiveOrHistoricCurrencyAndAmount? MaximumAmount { get; init; }
 
-        /// <summary>
-        /// Provides the reason for the setup of the mandate.
-        /// </summary>
+        /// <inheritdoc cref="IOriginalMandate.Reason"/>
         [IsoId("_UDQxwyL0EeSizvrwx7oJNQ")]
         [DisplayName("Reason")]
         [IsoXmlTag("Rsn")]
         public MandateSetupReason1Choice_? Reason { get; init; }
 
-        /// <summary>
-        /// Credit party that signs the mandate.
-        /// </summary>
+        /// <inheritdoc cref="IOriginalMandate.CreditorSchemeIdentification"/>
         [IsoId("_Y12XMx77EeSxevWRRWxNAg")]
         [DisplayName("Creditor Scheme Identification")]
         [IsoXmlTag("CdtrSchmeId")]
         public PartyIdentification43? CreditorSchemeIdentification { get; init; }
 
-        /// <summary>
-        /// Party that signs the mandate and to whom an amount of money is due.
-        /// </summary>
+        /// <inheritdoc cref="IOriginalMandate.Creditor"/>
         [IsoId("_Y12XNR77EeSxevWRRWxNAg")]
         [DisplayName("Creditor")]
         [IsoXmlTag("Cdtr")]
         public required PartyIdentification43 Creditor { get; init; }
 
-        /// <summary>
-        /// Unambiguous identification of the account of the creditor to which a credit entry will be posted as a result of the payment transaction.
-        /// </summary>
+        /// <inheritdoc cref="IOriginalMandate.CreditorAccount"/>
         [IsoId("_Y12XNx77EeSxevWRRWxNAg")]
         [DisplayName("Creditor Account")]
         [IsoXmlTag("CdtrAcct")]
         public CashAccount24? CreditorAccount { get; init; }
 
-        /// <summary>
-        /// Financial institution servicing an account for the creditor.
-        /// </summary>
+        /// <inheritdoc cref="IOriginalMandate.CreditorAgent"/>
         [IsoId("_Y12XOR77EeSxevWRRWxNAg")]
         [DisplayName("Creditor Agent")]
         [IsoXmlTag("CdtrAgt")]
         public BranchAndFinancialInstitutionIdentification5? CreditorAgent { get; init; }
 
-        /// <summary>
-        /// Ultimate party to which an amount of money is due.
-        /// </summary>
+        /// <inheritdoc cref="IOriginalMandate.UltimateCreditor"/>
         [IsoId("_Y12XOx77EeSxevWRRWxNAg")]
         [DisplayName("Ultimate Creditor")]
         [IsoXmlTag("UltmtCdtr")]
         public PartyIdentification43? UltimateCreditor { get; init; }
 
-        /// <summary>
-        /// Party that signs the mandate and owes an amount of money to the (ultimate) creditor.
-        /// </summary>
+        /// <inheritdoc cref="IOriginalMandate.Debtor"/>
         [IsoId("_Y12XPR77EeSxevWRRWxNAg")]
         [DisplayName("Debtor")]
         [IsoXmlTag("Dbtr")]
         public required PartyIdentification43 Debtor { get; init; }
 
-        /// <summary>
-        /// Unambiguous identification of the account of the debtor, to which a debit entry will be made as a result of the transaction.
-        /// </summary>
+        /// <inheritdoc cref="IOriginalMandate.DebtorAccount"/>
         [IsoId("_Y12XPx77EeSxevWRRWxNAg")]
         [DisplayName("Debtor Account")]
         [IsoXmlTag("DbtrAcct")]
         public CashAccount24? DebtorAccount { get; init; }
 
-        /// <summary>
-        /// Financial institution servicing an account for the debtor.
-        /// </summary>
+        /// <inheritdoc cref="IOriginalMandate.DebtorAgent"/>
         [IsoId("_Y12XQR77EeSxevWRRWxNAg")]
         [DisplayName("Debtor Agent")]
         [IsoXmlTag("DbtrAgt")]
         public required BranchAndFinancialInstitutionIdentification5 DebtorAgent { get; init; }
 
-        /// <summary>
-        /// Ultimate party that owes an amount of money to the (ultimate) creditor.
-        /// </summary>
+        /// <inheritdoc cref="IOriginalMandate.UltimateDebtor"/>
         [IsoId("_Y12XQx77EeSxevWRRWxNAg")]
         [DisplayName("Ultimate Debtor")]
         [IsoXmlTag("UltmtDbtr")]
         public PartyIdentification43? UltimateDebtor { get; init; }
 
-        /// <summary>
-        /// Provides information to identify the underlying documents associated with the mandate.
-        /// </summary>
+        /// <inheritdoc cref="IOriginalMandate.ReferredDocument"/>
         [IsoId("_Y12XRR77EeSxevWRRWxNAg")]
         [DisplayName("Referred Document")]
         [IsoXmlTag("RfrdDoc")]

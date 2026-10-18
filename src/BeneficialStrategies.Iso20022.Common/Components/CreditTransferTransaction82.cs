@@ -9,313 +9,235 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Provides further details specific to the individual transaction(s) included in the message.
-/// </summary>
+/// <inheritdoc cref="ICreditTransferTransaction82"/>
 [Description(@"Provides further details specific to the individual transaction(s) included in the message.")]
 [IsoId("_eXCdsbpXEfCPZvweyV2nEg")]
 [DisplayName("Credit Transfer Transaction82")]
-public record CreditTransferTransaction82
+public partial record CreditTransferTransaction82
 {
-    /// <summary>
-    /// Set of elements used to reference a payment instruction.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.PaymentIdentification"/>
     [IsoId("_eeABcbpXEfCPZvweyV2nEg")]
     [DisplayName("Payment Identification")]
     [IsoXmlTag("PmtId")]
     public required PaymentIdentification13 PaymentIdentification { get; init; }
 
-    /// <summary>
-    /// Set of elements used to further specify the type of transaction.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.PaymentTypeInformation"/>
     [IsoId("_eeABc7pXEfCPZvweyV2nEg")]
     [DisplayName("Payment Type Information")]
     [IsoXmlTag("PmtTpInf")]
     public PaymentTypeInformation28? PaymentTypeInformation { get; init; }
 
-    /// <summary>
-    /// Amount of money moved between the instructing agent and the instructed agent.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.InterbankSettlementAmount"/>
     [IsoId("_eeABdbpXEfCPZvweyV2nEg")]
     [DisplayName("Interbank Settlement Amount")]
     [IsoXmlTag("IntrBkSttlmAmt")]
     public required ActiveCurrencyAndAmount InterbankSettlementAmount { get; init; }
 
-    /// <summary>
-    /// Date on which the amount of money ceases to be available to the agent that owes it.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.InterbankSettlementDate"/>
     [IsoId("_eeABd7pXEfCPZvweyV2nEg")]
     [DisplayName("Interbank Settlement Date")]
     [IsoXmlTag("IntrBkSttlmDt")]
     public IsoISODate? InterbankSettlementDate { get; init; }
 
-    /// <summary>
-    /// Indicator of the urgency or order of importance for settlement processing.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.SettlementPriority"/>
     [IsoId("_eeABebpXEfCPZvweyV2nEg")]
     [DisplayName("Settlement Priority")]
     [IsoXmlTag("SttlmPrty")]
     public Priority3Code? SettlementPriority { get; init; }
 
-    /// <summary>
-    /// Provides information on the occurred settlement time(s) of the payment transaction.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.SettlementTimeIndication"/>
     [IsoId("_eeABe7pXEfCPZvweyV2nEg")]
     [DisplayName("Settlement Time Indication")]
     [IsoXmlTag("SttlmTmIndctn")]
     public SettlementDateTimeIndication1? SettlementTimeIndication { get; init; }
 
-    /// <summary>
-    /// Provides information on the requested settlement time(s) of the payment instruction.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.SettlementTimeRequest"/>
     [IsoId("_eeABfbpXEfCPZvweyV2nEg")]
     [DisplayName("Settlement Time Request")]
     [IsoXmlTag("SttlmTmReq")]
     public SettlementTimeRequest2? SettlementTimeRequest { get; init; }
 
-    /// <summary>
-    /// Date and time on which the payment should be expired if it has not settled.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.ExpiryDateTime"/>
     [IsoId("_eeABf7pXEfCPZvweyV2nEg")]
     [DisplayName("Expiry Date Time")]
     [IsoXmlTag("XpryDtTm")]
     public IsoISODateTime? ExpiryDateTime { get; init; }
 
-    /// <summary>
-    /// Cryptographic key identifying terms agreed by agents within the payment chain pre-settlement.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.PaymentSignature"/>
     [IsoId("_eeABgbpXEfCPZvweyV2nEg")]
     [DisplayName("Payment Signature")]
     [IsoXmlTag("PmtSgntr")]
     public CryptographicKey1Choice_? PaymentSignature { get; init; }
 
-    /// <summary>
-    /// Agent between the debtor's agent and the instructing agent (previous instructing agent 1).
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.PreviousInstructingAgent1"/>
     [IsoId("_eeABg7pXEfCPZvweyV2nEg")]
     [DisplayName("Previous Instructing Agent1")]
     [IsoXmlTag("PrvsInstgAgt1")]
     public BranchAndFinancialInstitutionIdentification8? PreviousInstructingAgent1 { get; init; }
 
-    /// <summary>
-    /// Unambiguous identification of the account of the previous instructing agent 1.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.PreviousInstructingAgent1Account"/>
     [IsoId("_eeABhbpXEfCPZvweyV2nEg")]
     [DisplayName("Previous Instructing Agent1 Account")]
     [IsoXmlTag("PrvsInstgAgt1Acct")]
     public CashAccount40? PreviousInstructingAgent1Account { get; init; }
 
-    /// <summary>
-    /// Agent between the debtor's agent and the instructing agent (previous instructing agent 2).
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.PreviousInstructingAgent2"/>
     [IsoId("_eeABh7pXEfCPZvweyV2nEg")]
     [DisplayName("Previous Instructing Agent2")]
     [IsoXmlTag("PrvsInstgAgt2")]
     public BranchAndFinancialInstitutionIdentification8? PreviousInstructingAgent2 { get; init; }
 
-    /// <summary>
-    /// Unambiguous identification of the account of the previous instructing agent 2.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.PreviousInstructingAgent2Account"/>
     [IsoId("_eeABibpXEfCPZvweyV2nEg")]
     [DisplayName("Previous Instructing Agent2 Account")]
     [IsoXmlTag("PrvsInstgAgt2Acct")]
     public CashAccount40? PreviousInstructingAgent2Account { get; init; }
 
-    /// <summary>
-    /// Agent between the debtor's agent and the instructing agent (previous instructing agent 3).
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.PreviousInstructingAgent3"/>
     [IsoId("_eeABi7pXEfCPZvweyV2nEg")]
     [DisplayName("Previous Instructing Agent3")]
     [IsoXmlTag("PrvsInstgAgt3")]
     public BranchAndFinancialInstitutionIdentification8? PreviousInstructingAgent3 { get; init; }
 
-    /// <summary>
-    /// Unambiguous identification of the account of the previous instructing agent 3.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.PreviousInstructingAgent3Account"/>
     [IsoId("_eeABjbpXEfCPZvweyV2nEg")]
     [DisplayName("Previous Instructing Agent3 Account")]
     [IsoXmlTag("PrvsInstgAgt3Acct")]
     public CashAccount40? PreviousInstructingAgent3Account { get; init; }
 
-    /// <summary>
-    /// Agent that instructs the next party in the chain to carry out the instruction(s).
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.InstructingAgent"/>
     [IsoId("_eeABj7pXEfCPZvweyV2nEg")]
     [DisplayName("Instructing Agent")]
     [IsoXmlTag("InstgAgt")]
     public BranchAndFinancialInstitutionIdentification8? InstructingAgent { get; init; }
 
-    /// <summary>
-    /// Agent that is instructed by the previous party in the chain.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.InstructedAgent"/>
     [IsoId("_eeABkbpXEfCPZvweyV2nEg")]
     [DisplayName("Instructed Agent")]
     [IsoXmlTag("InstdAgt")]
     public BranchAndFinancialInstitutionIdentification8? InstructedAgent { get; init; }
 
-    /// <summary>
-    /// Agent between the debtor's agent and the creditor's agent (intermediary agent 1).
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.IntermediaryAgent1"/>
     [IsoId("_eeABk7pXEfCPZvweyV2nEg")]
     [DisplayName("Intermediary Agent1")]
     [IsoXmlTag("IntrmyAgt1")]
     public BranchAndFinancialInstitutionIdentification8? IntermediaryAgent1 { get; init; }
 
-    /// <summary>
-    /// Unambiguous identification of the account of the intermediary agent 1.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.IntermediaryAgent1Account"/>
     [IsoId("_eeABlbpXEfCPZvweyV2nEg")]
     [DisplayName("Intermediary Agent1 Account")]
     [IsoXmlTag("IntrmyAgt1Acct")]
     public CashAccount40? IntermediaryAgent1Account { get; init; }
 
-    /// <summary>
-    /// Agent between the debtor's agent and the creditor's agent (intermediary agent 2).
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.IntermediaryAgent2"/>
     [IsoId("_eeABl7pXEfCPZvweyV2nEg")]
     [DisplayName("Intermediary Agent2")]
     [IsoXmlTag("IntrmyAgt2")]
     public BranchAndFinancialInstitutionIdentification8? IntermediaryAgent2 { get; init; }
 
-    /// <summary>
-    /// Unambiguous identification of the account of the intermediary agent 2.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.IntermediaryAgent2Account"/>
     [IsoId("_eeABmbpXEfCPZvweyV2nEg")]
     [DisplayName("Intermediary Agent2 Account")]
     [IsoXmlTag("IntrmyAgt2Acct")]
     public CashAccount40? IntermediaryAgent2Account { get; init; }
 
-    /// <summary>
-    /// Agent between the debtor's agent and the creditor's agent (intermediary agent 3).
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.IntermediaryAgent3"/>
     [IsoId("_eeABm7pXEfCPZvweyV2nEg")]
     [DisplayName("Intermediary Agent3")]
     [IsoXmlTag("IntrmyAgt3")]
     public BranchAndFinancialInstitutionIdentification8? IntermediaryAgent3 { get; init; }
 
-    /// <summary>
-    /// Unambiguous identification of the account of the intermediary agent 3.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.IntermediaryAgent3Account"/>
     [IsoId("_eeABnbpXEfCPZvweyV2nEg")]
     [DisplayName("Intermediary Agent3 Account")]
     [IsoXmlTag("IntrmyAgt3Acct")]
     public CashAccount40? IntermediaryAgent3Account { get; init; }
 
-    /// <summary>
-    /// Ultimate financial institution that owes an amount of money to the (ultimate) institutional creditor.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.UltimateDebtor"/>
     [IsoId("_eeABn7pXEfCPZvweyV2nEg")]
     [DisplayName("Ultimate Debtor")]
     [IsoXmlTag("UltmtDbtr")]
     public BranchAndFinancialInstitutionIdentification8? UltimateDebtor { get; init; }
 
-    /// <summary>
-    /// Financial institution that owes an amount of money to the (ultimate) financial institutional creditor.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.Debtor"/>
     [IsoId("_eeABobpXEfCPZvweyV2nEg")]
     [DisplayName("Debtor")]
     [IsoXmlTag("Dbtr")]
     public required BranchAndFinancialInstitutionIdentification8 Debtor { get; init; }
 
-    /// <summary>
-    /// Unambiguous identification of the account of the debtor.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.DebtorAccount"/>
     [IsoId("_eeABo7pXEfCPZvweyV2nEg")]
     [DisplayName("Debtor Account")]
     [IsoXmlTag("DbtrAcct")]
     public CashAccount40? DebtorAccount { get; init; }
 
-    /// <summary>
-    /// Financial institution servicing an account for the debtor.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.DebtorAgent"/>
     [IsoId("_eeABpbpXEfCPZvweyV2nEg")]
     [DisplayName("Debtor Agent")]
     [IsoXmlTag("DbtrAgt")]
     public BranchAndFinancialInstitutionIdentification8? DebtorAgent { get; init; }
 
-    /// <summary>
-    /// Unambiguous identification of the account of the debtor agent.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.DebtorAgentAccount"/>
     [IsoId("_eeABp7pXEfCPZvweyV2nEg")]
     [DisplayName("Debtor Agent Account")]
     [IsoXmlTag("DbtrAgtAcct")]
     public CashAccount40? DebtorAgentAccount { get; init; }
 
-    /// <summary>
-    /// Financial institution servicing an account for the creditor.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.CreditorAgent"/>
     [IsoId("_eeABqbpXEfCPZvweyV2nEg")]
     [DisplayName("Creditor Agent")]
     [IsoXmlTag("CdtrAgt")]
     public BranchAndFinancialInstitutionIdentification8? CreditorAgent { get; init; }
 
-    /// <summary>
-    /// Unambiguous identification of the account of the creditor agent.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.CreditorAgentAccount"/>
     [IsoId("_eeABq7pXEfCPZvweyV2nEg")]
     [DisplayName("Creditor Agent Account")]
     [IsoXmlTag("CdtrAgtAcct")]
     public CashAccount40? CreditorAgentAccount { get; init; }
 
-    /// <summary>
-    /// Financial institution that receives an amount of money from the financial institutional debtor.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.Creditor"/>
     [IsoId("_eeABrbpXEfCPZvweyV2nEg")]
     [DisplayName("Creditor")]
     [IsoXmlTag("Cdtr")]
     public required BranchAndFinancialInstitutionIdentification8 Creditor { get; init; }
 
-    /// <summary>
-    /// Unambiguous identification of the account of the creditor.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.CreditorAccount"/>
     [IsoId("_eeABr7pXEfCPZvweyV2nEg")]
     [DisplayName("Creditor Account")]
     [IsoXmlTag("CdtrAcct")]
     public CashAccount40? CreditorAccount { get; init; }
 
-    /// <summary>
-    /// Ultimate financial institution to which an amount of money is due.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.UltimateCreditor"/>
     [IsoId("_eeABsbpXEfCPZvweyV2nEg")]
     [DisplayName("Ultimate Creditor")]
     [IsoXmlTag("UltmtCdtr")]
     public BranchAndFinancialInstitutionIdentification8? UltimateCreditor { get; init; }
 
-    /// <summary>
-    /// Further information related to the processing of the payment instruction, intended for the creditor agent.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.InstructionForCreditorAgent"/>
     [IsoId("_eeABs7pXEfCPZvweyV2nEg")]
     [DisplayName("Instruction For Creditor Agent")]
     [IsoXmlTag("InstrForCdtrAgt")]
     public ValueList<InstructionForCreditorAgent3> InstructionForCreditorAgent { get; init; } = [];
 
-    /// <summary>
-    /// Further information related to the processing of the payment instruction to the next agent.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.InstructionForNextAgent"/>
     [IsoId("_eeABtbpXEfCPZvweyV2nEg")]
     [DisplayName("Instruction For Next Agent")]
     [IsoXmlTag("InstrForNxtAgt")]
     public ValueList<InstructionForNextAgent1> InstructionForNextAgent { get; init; } = [];
 
-    /// <summary>
-    /// Underlying reason for the payment transaction.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.Purpose"/>
     [IsoId("_eeABt7pXEfCPZvweyV2nEg")]
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
     public Purpose2Choice_? Purpose { get; init; }
 
-    /// <summary>
-    /// Information supplied to enable the matching of an entry with the items that the transfer is intended to settle.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.RemittanceInformation"/>
     [IsoId("_eeABubpXEfCPZvweyV2nEg")]
     [DisplayName("Remittance Information")]
     [IsoXmlTag("RmtInf")]
     public RemittanceInformation2? RemittanceInformation { get; init; }
 
-    /// <summary>
-    /// Provides information on the underlying allocations that make up the payment.
-    /// </summary>
+    /// <inheritdoc cref="ICreditTransferTransaction82.UnderlyingAllocation"/>
     [IsoId("_eeABu7pXEfCPZvweyV2nEg")]
     [DisplayName("Underlying Allocation")]
     [IsoXmlTag("UndrlygAllcn")]

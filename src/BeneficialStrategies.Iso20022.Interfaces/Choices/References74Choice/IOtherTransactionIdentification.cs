@@ -1,0 +1,17 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Choices.References74Choice;
+
+/// <summary>
+/// Identification of a transaction that cannot be identified using a standard reference element present in the message.
+/// </summary>
+[IsoId("_SiFNsSgaEey2k_sfZmJz4g")]
+public interface IOtherTransactionIdentification : IReferences74Choice, IIsoChoiceVariant
+{
+    /// <summary>
+    /// Contains the main value for the container.
+    /// Specifies a character string with a maximum length of 35 characters.
+    /// </summary>
+    [IsoXmlTag("OthrTxId")]
+    IsoMax35Text Value { get; }
+}

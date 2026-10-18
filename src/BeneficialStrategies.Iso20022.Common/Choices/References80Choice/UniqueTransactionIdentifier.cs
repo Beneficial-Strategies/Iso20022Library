@@ -8,15 +8,11 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.References80Choice
 {
-    /// <summary>
-    /// Unique Transaction Identifier.
-    /// </summary>
+    /// <inheritdoc cref="IUniqueTransactionIdentifier"/>
     [DisplayName("Unique Transaction Identifier")]
-    public record UniqueTransactionIdentifier : References80Choice_
+    public partial record UniqueTransactionIdentifier : References80Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// </summary>
+        /// <inheritdoc cref="IUniqueTransactionIdentifier.Value"/>
         [IsoXmlTag("UnqTxIdr")]
         public required IsoUTIIdentifier Value { get; init; }
     }

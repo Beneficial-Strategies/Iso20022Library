@@ -9,24 +9,18 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Characteristics of a cheque instruction, such as cheque type or cheque number.
-/// </summary>
+/// <inheritdoc cref="ICheque11"/>
 [IsoId("_-VaZd24-EeiU9cctagi5ow")]
 [DisplayName("Cheque")]
-public record Cheque11
+public partial record Cheque11
 {
-    /// <summary>
-    /// Specifies the type of cheque to be issued.
-    /// </summary>
+    /// <inheritdoc cref="ICheque11.ChequeType"/>
     [IsoId("_-fil1W4-EeiU9cctagi5ow")]
     [DisplayName("Cheque Type")]
     [IsoXmlTag("ChqTp")]
     public ChequeType2Code? ChequeType { get; init; }
 
-    /// <summary>
-    /// Unique and unambiguous identifier for a cheque as assigned by the agent.
-    /// </summary>
+    /// <inheritdoc cref="ICheque11.ChequeNumber"/>
     [IsoId("_-fil124-EeiU9cctagi5ow")]
     [DisplayName("Cheque Number")]
     [IsoXmlTag("ChqNb")]
@@ -34,50 +28,38 @@ public record Cheque11
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? ChequeNumber { get; init; }
 
-    /// <summary>
-    /// Identifies the party that ordered the issuance of the cheque.
-    /// </summary>
+    /// <inheritdoc cref="ICheque11.ChequeFrom"/>
     [IsoId("_-fil2W4-EeiU9cctagi5ow")]
     [DisplayName("Cheque From")]
     [IsoXmlTag("ChqFr")]
     public NameAndAddress16? ChequeFrom { get; init; }
 
-    /// <summary>
-    /// Specifies the delivery method of the cheque by the debtor&apos;s agent.
-    /// </summary>
+    /// <inheritdoc cref="ICheque11.DeliveryMethod"/>
     [IsoId("_-fil224-EeiU9cctagi5ow")]
     [DisplayName("Delivery Method")]
     [IsoXmlTag("DlvryMtd")]
     public ChequeDeliveryMethod1Choice_? DeliveryMethod { get; init; }
 
-    /// <summary>
-    /// Party to whom the debtor&apos;s agent needs to send the cheque.
-    /// </summary>
+    /// <inheritdoc cref="ICheque11.DeliverTo"/>
     [IsoId("_-fil3W4-EeiU9cctagi5ow")]
     [DisplayName("Deliver To")]
     [IsoXmlTag("DlvrTo")]
     public NameAndAddress16? DeliverTo { get; init; }
 
-    /// <summary>
-    /// Urgency or order of importance that the originator would like the recipient of the payment instruction to apply to the processing of the payment instruction.
-    /// </summary>
+    /// <inheritdoc cref="ICheque11.InstructionPriority"/>
     [IsoId("_-fil324-EeiU9cctagi5ow")]
     [DisplayName("Instruction Priority")]
     [IsoXmlTag("InstrPrty")]
     public Priority2Code? InstructionPriority { get; init; }
 
-    /// <summary>
-    /// Date when the draft becomes payable and the debtor&apos;s account is debited.
-    /// </summary>
+    /// <inheritdoc cref="ICheque11.ChequeMaturityDate"/>
     [IsoId("_-fil4W4-EeiU9cctagi5ow")]
     [DisplayName("Cheque Maturity Date")]
     [IsoXmlTag("ChqMtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
     public IsoISODate? ChequeMaturityDate { get; init; }
 
-    /// <summary>
-    /// Identifies, in a coded form, the cheque layout, company logo and digitised signature to be used to print the cheque, as agreed between the initiating party and the debtor&apos;s agent.
-    /// </summary>
+    /// <inheritdoc cref="ICheque11.FormsCode"/>
     [IsoId("_-fil424-EeiU9cctagi5ow")]
     [DisplayName("Forms Code")]
     [IsoXmlTag("FrmsCd")]
@@ -85,9 +67,7 @@ public record Cheque11
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? FormsCode { get; init; }
 
-    /// <summary>
-    /// Information that needs to be printed on a cheque, used by the payer to add miscellaneous information.
-    /// </summary>
+    /// <inheritdoc cref="ICheque11.MemoField"/>
     [IsoId("_-fil5W4-EeiU9cctagi5ow")]
     [DisplayName("Memo Field")]
     [IsoXmlTag("MemoFld")]
@@ -96,9 +76,7 @@ public record Cheque11
     [MaxLength(2)]
     public SimpleValueList<string> MemoField { get; init; } = [];
 
-    /// <summary>
-    /// Regional area in which the cheque can be cleared, when a country has no nation-wide cheque clearing organisation.
-    /// </summary>
+    /// <inheritdoc cref="ICheque11.RegionalClearingZone"/>
     [IsoId("_-fil524-EeiU9cctagi5ow")]
     [DisplayName("Regional Clearing Zone")]
     [IsoXmlTag("RgnlClrZone")]
@@ -106,9 +84,7 @@ public record Cheque11
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? RegionalClearingZone { get; init; }
 
-    /// <summary>
-    /// Specifies the print location of the cheque.
-    /// </summary>
+    /// <inheritdoc cref="ICheque11.PrintLocation"/>
     [IsoId("_-fil6W4-EeiU9cctagi5ow")]
     [DisplayName("Print Location")]
     [IsoXmlTag("PrtLctn")]
@@ -116,9 +92,7 @@ public record Cheque11
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? PrintLocation { get; init; }
 
-    /// <summary>
-    /// Signature to be used by the cheque servicer on a specific cheque to be printed.
-    /// </summary>
+    /// <inheritdoc cref="ICheque11.Signature"/>
     [IsoId("_-fil624-EeiU9cctagi5ow")]
     [DisplayName("Signature")]
     [IsoXmlTag("Sgntr")]

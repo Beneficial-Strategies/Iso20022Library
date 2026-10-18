@@ -1,0 +1,26 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Information that locates and identifies a party.
+/// </summary>
+[IsoId("_9MDku24-EeiU9cctagi5ow")]
+public interface INameAndAddress16 : IIsoComponent
+{
+    /// <summary>
+    /// Name by which a party is known and is usually used to identify that party.
+    /// </summary>
+    [IsoId("_9XYD424-EeiU9cctagi5ow")]
+    [DisplayName("Name")]
+    [IsoXmlTag("Nm")]
+    IsoMax140Text Name { get; }
+
+    /// <summary>
+    /// Postal address of a party.
+    /// </summary>
+    [IsoId("_9XYD5W4-EeiU9cctagi5ow")]
+    [DisplayName("Address")]
+    [IsoXmlTag("Adr")]
+    IPostalAddress24 Address { get; }
+}

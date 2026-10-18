@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Nature or use of the account.
-    /// </summary>
+    /// <inheritdoc cref="ICashAccountType2Choice"/>
     [KnownType(typeof(CashAccountType2Choice.Code))]
     [KnownType(typeof(CashAccountType2Choice.Proprietary))]
     [JsonDerivedType(typeof(CashAccountType2Choice.Code), nameof(CashAccountType2Choice.Code))]
@@ -18,5 +16,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_sb6WgFkyEeGeoaLUQk__nA_1768299331")]
     [DisplayName("Cash Account Type 2 Choice")]
-    public abstract record CashAccountType2Choice_ { }
+    public abstract partial record CashAccountType2Choice_ { }
 }

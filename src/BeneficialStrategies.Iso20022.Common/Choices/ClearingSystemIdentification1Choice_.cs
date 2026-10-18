@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Information used to identify a cash clearing system.
-    /// </summary>
+    /// <inheritdoc cref="IClearingSystemIdentification1Choice"/>
     [KnownType(typeof(ClearingSystemIdentification1Choice.ClearingSystemIdentification))]
     [KnownType(typeof(ClearingSystemIdentification1Choice.Proprietary))]
     [JsonDerivedType(
@@ -21,5 +19,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_TMLmMNp-Ed-ak6NoX_4Aeg_-1061546408")]
     [DisplayName("Clearing System Identification 1 Choice")]
-    public abstract record ClearingSystemIdentification1Choice_ { }
+    public abstract partial record ClearingSystemIdentification1Choice_ { }
 }

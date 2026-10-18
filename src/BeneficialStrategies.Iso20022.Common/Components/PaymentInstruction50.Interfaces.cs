@@ -1,0 +1,21 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+public partial record PaymentInstruction50 : IPaymentInstruction50
+{
+    IAdviceType1? IPaymentInstruction50.RequestedAdviceType => RequestedAdviceType;
+    IPaymentTypeInformation29? IPaymentInstruction50.PaymentTypeInformation => PaymentTypeInformation;
+    IPartyIdentification272 IPaymentInstruction50.Creditor => Creditor;
+    ICashAccount40 IPaymentInstruction50.CreditorAccount => CreditorAccount;
+    IBranchAndFinancialInstitutionIdentification8 IPaymentInstruction50.CreditorAgent => CreditorAgent;
+    ICashAccount40? IPaymentInstruction50.CreditorAgentAccount => CreditorAgentAccount;
+    IPartyIdentification272? IPaymentInstruction50.UltimateCreditor => UltimateCreditor;
+    ICashAccount40? IPaymentInstruction50.ChargesAccount => ChargesAccount;
+    IBranchAndFinancialInstitutionIdentification8? IPaymentInstruction50.ChargesAccountAgent => ChargesAccountAgent;
+    IPartyIdentification272? IPaymentInstruction50.CreditorSchemeIdentification => CreditorSchemeIdentification;
+    IEnumerable<IDirectDebitTransactionInformation34> IPaymentInstruction50.DirectDebitTransactionInformation => DirectDebitTransactionInformation;
+}

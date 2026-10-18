@@ -1,0 +1,42 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Set of elements used to provide information on the remittance advice.
+/// </summary>
+[IsoId("_QF_4Udp-Ed-ak6NoX_4Aeg_-1849801133")]
+public interface IRemittanceLocation2 : IIsoComponent
+{
+    /// <summary>
+    /// Unique identification, as assigned by the initiating party, to unambiguously identify the remittance information sent separately from the payment instruction, such as a remittance advice.
+    /// </summary>
+    [IsoId("_QF_4Utp-Ed-ak6NoX_4Aeg_-1849800824")]
+    [DisplayName("Remittance Identification")]
+    [IsoXmlTag("RmtId")]
+    IsoMax35Text? RemittanceIdentification { get; }
+
+    /// <summary>
+    /// Method used to deliver the remittance advice information.
+    /// </summary>
+    [IsoId("_QF_4U9p-Ed-ak6NoX_4Aeg_-1849801131")]
+    [DisplayName("Remittance Location Method")]
+    [IsoXmlTag("RmtLctnMtd")]
+    RemittanceLocationMethod2Code? RemittanceLocationMethod { get; }
+
+    /// <summary>
+    /// Electronic address to which an agent is to send the remittance information.
+    /// </summary>
+    [IsoId("_QF_4VNp-Ed-ak6NoX_4Aeg_-1849800855")]
+    [DisplayName("Remittance Location Electronic Address")]
+    [IsoXmlTag("RmtLctnElctrncAdr")]
+    IsoMax2048Text? RemittanceLocationElectronicAddress { get; }
+
+    /// <summary>
+    /// Postal address to which an agent is to send the remittance information.
+    /// </summary>
+    [IsoId("_QF_4Vdp-Ed-ak6NoX_4Aeg_-1849800718")]
+    [DisplayName("Remittance Location Postal Address")]
+    [IsoXmlTag("RmtLctnPstlAdr")]
+    INameAndAddress10? RemittanceLocationPostalAddress { get; }
+}

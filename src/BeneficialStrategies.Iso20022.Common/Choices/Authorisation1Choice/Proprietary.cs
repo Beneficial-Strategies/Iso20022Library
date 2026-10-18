@@ -8,17 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.Authorisation1Choice
 {
-    /// <summary>
-    /// Specifies the authorisation, in a free text form.
-    /// </summary>
+    /// <inheritdoc cref="IProprietary"/>
     [IsoId("_RD_KkNp-Ed-ak6NoX_4Aeg_-955120080")]
     [DisplayName("Proprietary")]
-    public record Proprietary : Authorisation1Choice_
+    public partial record Proprietary : Authorisation1Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies a character string with a maximum length of 128 characters.
-        /// </summary>
+        /// <inheritdoc cref="IProprietary.Value"/>
         [IsoXmlTag("Prtry")]
         [IsoSimpleType(IsoSimpleType.Max128Text)]
         [StringLength(maximumLength: 128, MinimumLength = 1)]

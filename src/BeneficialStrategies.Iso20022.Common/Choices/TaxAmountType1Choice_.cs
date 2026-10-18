@@ -6,9 +6,7 @@ using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.Choices
 {
-    /// <summary>
-    /// Specifies the amount type.
-    /// </summary>
+    /// <inheritdoc cref="ITaxAmountType1Choice"/>
     [KnownType(typeof(TaxAmountType1Choice.Code))]
     [KnownType(typeof(TaxAmountType1Choice.Proprietary))]
     [JsonDerivedType(typeof(TaxAmountType1Choice.Code), nameof(TaxAmountType1Choice.Code))]
@@ -18,5 +16,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_tsra0lkyEeGeoaLUQk__nA_-1905418813")]
     [DisplayName("Tax Amount Type 1 Choice")]
-    public abstract record TaxAmountType1Choice_ { }
+    public abstract partial record TaxAmountType1Choice_ { }
 }

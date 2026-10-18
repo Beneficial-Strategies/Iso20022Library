@@ -9,32 +9,24 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Provides further details on the reason of the return of the transaction.
-/// </summary>
+/// <inheritdoc cref="IPaymentReturnReason4"/>
 [IsoId("_nTY3MbTREeeyuKckOGlwuA")]
 [DisplayName("Payment Return Reason")]
-public record PaymentReturnReason4
+public partial record PaymentReturnReason4
 {
-    /// <summary>
-    /// Party that issues the return.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentReturnReason4.Originator"/>
     [IsoId("_ncBOxbTREeeyuKckOGlwuA")]
     [DisplayName("Originator")]
     [IsoXmlTag("Orgtr")]
     public PartyIdentification125? Originator { get; init; }
 
-    /// <summary>
-    /// Specifies the reason for the return.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentReturnReason4.Reason"/>
     [IsoId("_ncBOx7TREeeyuKckOGlwuA")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
     public ReturnReason5Choice_? Reason { get; init; }
 
-    /// <summary>
-    /// Further details on the return reason.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentReturnReason4.AdditionalInformation"/>
     [IsoId("_ncBOybTREeeyuKckOGlwuA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]

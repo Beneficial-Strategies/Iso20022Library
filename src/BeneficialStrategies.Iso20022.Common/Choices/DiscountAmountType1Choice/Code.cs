@@ -8,19 +8,12 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 
 namespace BeneficialStrategies.Iso20022.Choices.DiscountAmountType1Choice
 {
-    /// <summary>
-    /// Specifies the amount type, in a coded form.
-    /// </summary>
+    /// <inheritdoc cref="ICode"/>
     [IsoId("_tlra8FkyEeGeoaLUQk__nA_1847720881")]
     [DisplayName("Code")]
-    public record Code : DiscountAmountType1Choice_
+    public partial record Code : DiscountAmountType1Choice_
     {
-        /// <summary>
-        /// Contains the main value for the container.
-        /// Specifies the nature, or use, of the amount in the format of character string with a maximum length of 4 characters.
-        /// The list of valid codes is an external code list published separately.
-        /// External code sets can be downloaded from www.iso20022.org.
-        /// </summary>
+        /// <inheritdoc cref="ICode.Value"/>
         [IsoXmlTag("Cd")]
         public required ExternalDiscountAmountType1Code Value { get; init; }
     }

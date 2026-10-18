@@ -9,16 +9,12 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Provides further details on the original transactions, to which the status report message refers.
-/// </summary>
+/// <inheritdoc cref="IPaymentTransaction41"/>
 [IsoId("_tQOIUFkyEeGeoaLUQk__nA_-471568924")]
 [DisplayName("Payment Transaction")]
-public record PaymentTransaction41
+public partial record PaymentTransaction41
 {
-    /// <summary>
-    /// Unique identification, as assigned by an instructing party for an instructed party, to unambiguously identify the reported status.|Usage: The instructing party is the party sending the status message and not the party that sent the original instruction that is being reported on.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction41.StatusIdentification"/>
     [IsoId("_tQOIUVkyEeGeoaLUQk__nA_-585407990")]
     [DisplayName("Status Identification")]
     [IsoXmlTag("StsId")]
@@ -26,9 +22,7 @@ public record PaymentTransaction41
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? StatusIdentification { get; init; }
 
-    /// <summary>
-    /// Unique identification, as assigned by the original instructing party for the original instructed party, to unambiguously identify the original instruction.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction41.OriginalInstructionIdentification"/>
     [IsoId("_tQXSQFkyEeGeoaLUQk__nA_-1582480343")]
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
@@ -36,9 +30,7 @@ public record PaymentTransaction41
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? OriginalInstructionIdentification { get; init; }
 
-    /// <summary>
-    /// Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction41.OriginalEndToEndIdentification"/>
     [IsoId("_tQXSQVkyEeGeoaLUQk__nA_1715414600")]
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
@@ -46,42 +38,32 @@ public record PaymentTransaction41
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
 
-    /// <summary>
-    /// Specifies the status of a transaction, in a coded form.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction41.TransactionStatus"/>
     [IsoId("_tQXSQlkyEeGeoaLUQk__nA_718342247")]
     [DisplayName("Transaction Status")]
     [IsoXmlTag("TxSts")]
     public TransactionIndividualStatus3Code? TransactionStatus { get; init; }
 
-    /// <summary>
-    /// Provides detailed information on the status reason.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction41.StatusReasonInformation"/>
     [IsoId("_tQXSQ1kyEeGeoaLUQk__nA_1487252337")]
     [DisplayName("Status Reason Information")]
     [IsoXmlTag("StsRsnInf")]
     public ValueList<StatusReasonInformation9> StatusReasonInformation { get; init; } = [];
 
-    /// <summary>
-    /// Provides information on the charges related to the processing of the rejection of the instruction.|Usage: This is passed on for information purposes only. Settlement of the charges will be done separately.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction41.ChargesInformation"/>
     [IsoId("_tQXSRFkyEeGeoaLUQk__nA_490179984")]
     [DisplayName("Charges Information")]
     [IsoXmlTag("ChrgsInf")]
     public ValueList<Charges2> ChargesInformation { get; init; } = [];
 
-    /// <summary>
-    /// Point in time when the payment order from the initiating party meets the processing conditions of the account servicing agent. This means that the account servicing agent has received the payment order and has applied checks such as authorisation, availability of funds.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction41.AcceptanceDateTime"/>
     [IsoId("_tQhDQFkyEeGeoaLUQk__nA_-506892369")]
     [DisplayName("Acceptance Date Time")]
     [IsoXmlTag("AccptncDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
     public IsoISODateTime? AcceptanceDateTime { get; init; }
 
-    /// <summary>
-    /// Unique reference, as assigned by the account servicing institution, to unambiguously identify the instruction.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction41.AccountServicerReference"/>
     [IsoId("_tQhDQVkyEeGeoaLUQk__nA_-1503964722")]
     [DisplayName("Account Servicer Reference")]
     [IsoXmlTag("AcctSvcrRef")]
@@ -89,9 +71,7 @@ public record PaymentTransaction41
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? AccountServicerReference { get; init; }
 
-    /// <summary>
-    /// Unique reference, as assigned by a clearing system, to unambiguously identify the instruction.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction41.ClearingSystemReference"/>
     [IsoId("_tQhDQlkyEeGeoaLUQk__nA_1793930221")]
     [DisplayName("Clearing System Reference")]
     [IsoXmlTag("ClrSysRef")]
@@ -99,9 +79,7 @@ public record PaymentTransaction41
     [StringLength(maximumLength: 35, MinimumLength = 1)]
     public IsoMax35Text? ClearingSystemReference { get; init; }
 
-    /// <summary>
-    /// Key elements used to identify the original transaction that is being referred to.
-    /// </summary>
+    /// <inheritdoc cref="IPaymentTransaction41.OriginalTransactionReference"/>
     [IsoId("_tQhDQ1kyEeGeoaLUQk__nA_796857868")]
     [DisplayName("Original Transaction Reference")]
     [IsoXmlTag("OrgnlTxRef")]

@@ -9,32 +9,24 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Provides further details on the settlement of the instruction.
-/// </summary>
+/// <inheritdoc cref="ISettlementInstruction8"/>
 [IsoId("_VOSH0Xh1EeidzqjNEfehPg")]
 [DisplayName("Settlement Instruction")]
-public record SettlementInstruction8
+public partial record SettlementInstruction8
 {
-    /// <summary>
-    /// Method used to settle the (batch of) payment instructions.
-    /// </summary>
+    /// <inheritdoc cref="ISettlementInstruction8.SettlementMethod"/>
     [IsoId("_VdkhB3h1EeidzqjNEfehPg")]
     [DisplayName("Settlement Method")]
     [IsoXmlTag("SttlmMtd")]
     public required SettlementMethod2Code SettlementMethod { get; init; }
 
-    /// <summary>
-    /// A specific purpose account used to post debit and credit entries as a result of the transaction.
-    /// </summary>
+    /// <inheritdoc cref="ISettlementInstruction8.SettlementAccount"/>
     [IsoId("_VdkhCXh1EeidzqjNEfehPg")]
     [DisplayName("Settlement Account")]
     [IsoXmlTag("SttlmAcct")]
     public CashAccount38? SettlementAccount { get; init; }
 
-    /// <summary>
-    /// Specification of a pre-agreed offering between clearing agents or the channel through which the payment instruction is processed.
-    /// </summary>
+    /// <inheritdoc cref="ISettlementInstruction8.ClearingSystem"/>
     [IsoId("_VdkhC3h1EeidzqjNEfehPg")]
     [DisplayName("Clearing System")]
     [IsoXmlTag("ClrSys")]

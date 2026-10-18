@@ -9,32 +9,24 @@ using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-/// <summary>
-/// Set of elements used to provide information on the amount and reason of the document adjustment.
-/// </summary>
+/// <inheritdoc cref="IDocumentAdjustment1"/>
 [IsoId("_UP-lctp-Ed-ak6NoX_4Aeg_1188294125")]
 [DisplayName("Document Adjustment")]
-public record DocumentAdjustment1
+public partial record DocumentAdjustment1
 {
-    /// <summary>
-    /// Amount of money of the document adjustment.
-    /// </summary>
+    /// <inheritdoc cref="IDocumentAdjustment1.Amount"/>
     [IsoId("_UP-lc9p-Ed-ak6NoX_4Aeg_1531842196")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
     public required ActiveOrHistoricCurrencyAndAmount Amount { get; init; }
 
-    /// <summary>
-    /// Specifies whether the adjustment must be subtracted or added to the total amount.
-    /// </summary>
+    /// <inheritdoc cref="IDocumentAdjustment1.CreditDebitIndicator"/>
     [IsoId("_UP-ldNp-Ed-ak6NoX_4Aeg_1554008423")]
     [DisplayName("Credit Debit Indicator")]
     [IsoXmlTag("CdtDbtInd")]
     public CreditDebitCode? CreditDebitIndicator { get; init; }
 
-    /// <summary>
-    /// Specifies the reason for the adjustment.
-    /// </summary>
+    /// <inheritdoc cref="IDocumentAdjustment1.Reason"/>
     [IsoId("_UP-lddp-Ed-ak6NoX_4Aeg_1641741581")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
@@ -42,9 +34,7 @@ public record DocumentAdjustment1
     [StringLength(maximumLength: 4, MinimumLength = 1)]
     public IsoMax4Text? Reason { get; init; }
 
-    /// <summary>
-    /// Provides further details on the document adjustment.
-    /// </summary>
+    /// <inheritdoc cref="IDocumentAdjustment1.AdditionalInformation"/>
     [IsoId("_UP-ldtp-Ed-ak6NoX_4Aeg_1656516606")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
