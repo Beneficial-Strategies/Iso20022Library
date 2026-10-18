@@ -2,12 +2,12 @@
 
 using System.Xml;
 using System.Xml.Linq;
-using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.UserDefined;
 
 /// <summary>
+/// The Any element without further validation processing.
 /// </summary>
-[IsoId("_jLSza-5NEeCisYr99QEiWA_-1693515579")]
-[DisplayName("Lax Processing")]
-public record LaxProcessing { }
+[IsoId("_RreBWNp-Ed-ak6NoX_4Aeg_-72452402")]
+[DisplayName("Skip Processing")]
+public record SkipProcessing { }

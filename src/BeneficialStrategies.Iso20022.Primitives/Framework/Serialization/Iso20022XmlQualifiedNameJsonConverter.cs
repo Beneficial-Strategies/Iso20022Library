@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Serialization;
 /// <c>Iso20022XmlSerializer</c>'s <c>FormatQName</c>/<c>ParseQName</c>, which must resolve against
 /// the document's in-scope namespace declarations) — the namespace, when present, is embedded
 /// directly in the string. Registered globally via
-/// <see cref="Iso20022JsonSerializerOptions"/> rather than a per-type <c>[JsonConverter]</c>
+/// <c>Iso20022JsonSerializerOptions</c> (in the BeneficialStrategies.Iso20022 package) rather than a per-type <c>[JsonConverter]</c>
 /// attribute, since <see cref="XmlQualifiedName"/> is a BCL type this library doesn't own.
 /// <para>
 /// Splits on the LAST colon when reading, not the first: <see cref="XmlQualifiedName.Name"/> is
