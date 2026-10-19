@@ -14,6 +14,7 @@ public partial record IntraBalance5 : IIntraBalance5
     IDateAndDateTime2Choice IIntraBalance5.SettlementDate => SettlementDate;
     ICashSubBalanceTypeAndQuantityBreakdown3 IIntraBalance5.BalanceFrom => BalanceFrom;
     ICashSubBalanceTypeAndQuantityBreakdown3 IIntraBalance5.BalanceTo => BalanceTo;
-    IGenericIdentification37? IIntraBalance5.CashSubBalanceIdentification => CashSubBalanceIdentification;
+    IGenericIdentification37? IIntraBalance5.CashSubBalanceIdentification =>
+        CashSubBalanceIdentification;
     IPriorityNumeric4Choice? IIntraBalance5.Priority => Priority;
 }

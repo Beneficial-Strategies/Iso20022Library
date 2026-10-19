@@ -10,9 +10,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecuritiesReferenceDataReport6 : ISecuritiesReferenceDataReport6
 {
-    ISecurityInstrumentDescription9 ISecuritiesReferenceDataReport6.FinancialInstrumentGeneralAttributes => FinancialInstrumentGeneralAttributes;
-    IEnumerable<ITradingVenueAttributes1> ISecuritiesReferenceDataReport6.TradingVenueRelatedAttributes => TradingVenueRelatedAttributes;
-    IDebtInstrument2? ISecuritiesReferenceDataReport6.DebtInstrumentAttributes => DebtInstrumentAttributes;
-    IDerivativeInstrument5? ISecuritiesReferenceDataReport6.DerivativeInstrumentAttributes => DerivativeInstrumentAttributes;
-    IRecordTechnicalData4? ISecuritiesReferenceDataReport6.TechnicalAttributes => TechnicalAttributes;
+    ISecurityInstrumentDescription9 ISecuritiesReferenceDataReport6.FinancialInstrumentGeneralAttributes =>
+        FinancialInstrumentGeneralAttributes;
+    IEnumerable<ITradingVenueAttributes1> ISecuritiesReferenceDataReport6.TradingVenueRelatedAttributes =>
+        TradingVenueRelatedAttributes;
+    IDebtInstrument2? ISecuritiesReferenceDataReport6.DebtInstrumentAttributes =>
+        DebtInstrumentAttributes;
+    IDerivativeInstrument5? ISecuritiesReferenceDataReport6.DerivativeInstrumentAttributes =>
+        DerivativeInstrumentAttributes;
+    IRecordTechnicalData4? ISecuritiesReferenceDataReport6.TechnicalAttributes =>
+        TechnicalAttributes;
 }

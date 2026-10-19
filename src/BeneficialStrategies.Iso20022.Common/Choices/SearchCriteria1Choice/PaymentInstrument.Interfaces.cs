@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice;
 
 public partial record PaymentInstrument : IPaymentInstrument
 {
-    IEnumerable<IAuthorityRequestType1> IPaymentInstrument.AuthorityRequestType => AuthorityRequestType;
+    IEnumerable<IAuthorityRequestType1> IPaymentInstrument.AuthorityRequestType =>
+        AuthorityRequestType;
 }

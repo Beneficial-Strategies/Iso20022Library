@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 
 public partial record PayInScheduleConfirmationV01 : IPayInScheduleConfirmationV01
 {
-    IMessageIdentification IPayInScheduleConfirmationV01.MessageIdentification => MessageIdentification;
+    IMessageIdentification IPayInScheduleConfirmationV01.MessageIdentification =>
+        MessageIdentification;
     IConfirmationDetails1 IPayInScheduleConfirmationV01.ConfirmationDetails => ConfirmationDetails;
 }

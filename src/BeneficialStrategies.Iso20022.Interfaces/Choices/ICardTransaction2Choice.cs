@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a acquirer globalised card transaction or an individual card transaction.
 /// </summary>
 [IsoId("_0UR2gTj3EeSz-s1QOUJaOg")]
-public interface ICardTransaction2Choice : IIsoChoice
-{
-}
+public interface ICardTransaction2Choice : IIsoChoice { }

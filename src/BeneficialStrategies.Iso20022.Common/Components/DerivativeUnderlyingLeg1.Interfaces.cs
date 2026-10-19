@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record DerivativeUnderlyingLeg1 : IDerivativeUnderlyingLeg1
 {
-    IFinancialInstrumentAttributes88 IDerivativeUnderlyingLeg1.ContractAttributes => ContractAttributes;
+    IFinancialInstrumentAttributes88 IDerivativeUnderlyingLeg1.ContractAttributes =>
+        ContractAttributes;
     IDefinedAttributes1Choice? IDerivativeUnderlyingLeg1.DefinedAttributes => DefinedAttributes;
 }

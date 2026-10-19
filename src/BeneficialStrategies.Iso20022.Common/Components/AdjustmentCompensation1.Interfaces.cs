@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record AdjustmentCompensation1 : IAdjustmentCompensation1
 {
-    IBranchAndFinancialInstitutionIdentification6? IAdjustmentCompensation1.CompensationAgent => CompensationAgent;
+    IBranchAndFinancialInstitutionIdentification6? IAdjustmentCompensation1.CompensationAgent =>
+        CompensationAgent;
     ICashAccount40? IAdjustmentCompensation1.CompensationAccount => CompensationAccount;
     IDatePeriod5? IAdjustmentCompensation1.Period => Period;
 }

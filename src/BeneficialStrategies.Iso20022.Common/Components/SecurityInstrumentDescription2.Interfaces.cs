@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecurityInstrumentDescription2 : ISecurityInstrumentDescription2
 {
-    ISecurityClassificationType1Choice? ISecurityInstrumentDescription2.ClassificationType => ClassificationType;
+    ISecurityClassificationType1Choice? ISecurityInstrumentDescription2.ClassificationType =>
+        ClassificationType;
     IPriceRateOrAmountChoice? ISecurityInstrumentDescription2.StrikePrice => StrikePrice;
 }

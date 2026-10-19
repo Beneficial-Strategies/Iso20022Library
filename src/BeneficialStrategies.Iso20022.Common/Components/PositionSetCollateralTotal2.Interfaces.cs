@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PositionSetCollateralTotal2 : IPositionSetCollateralTotal2
 {
-    IPostedMarginOrCollateral6? IPositionSetCollateralTotal2.PostedMarginOrCollateral => PostedMarginOrCollateral;
-    IReceivedMarginOrCollateral6? IPositionSetCollateralTotal2.ReceivedMarginOrCollateral => ReceivedMarginOrCollateral;
+    IPostedMarginOrCollateral6? IPositionSetCollateralTotal2.PostedMarginOrCollateral =>
+        PostedMarginOrCollateral;
+    IReceivedMarginOrCollateral6? IPositionSetCollateralTotal2.ReceivedMarginOrCollateral =>
+        ReceivedMarginOrCollateral;
 }

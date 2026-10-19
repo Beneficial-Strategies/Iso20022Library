@@ -11,10 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport31Choice;
 public partial record Correction : ICorrection
 {
     ITradeCounterpartyReport20 ICorrection.CounterpartyIdentification => CounterpartyIdentification;
-    IUniqueTransactionIdentifier2Choice? ICorrection.TransactionIdentification => TransactionIdentification;
+    IUniqueTransactionIdentifier2Choice? ICorrection.TransactionIdentification =>
+        TransactionIdentification;
     IMarginCollateralReport4 ICorrection.Collateral => Collateral;
     IPostedMarginOrCollateral6? ICorrection.PostedMarginOrCollateral => PostedMarginOrCollateral;
-    IReceivedMarginOrCollateral6? ICorrection.ReceivedMarginOrCollateral => ReceivedMarginOrCollateral;
+    IReceivedMarginOrCollateral6? ICorrection.ReceivedMarginOrCollateral =>
+        ReceivedMarginOrCollateral;
     ITechnicalAttributes6? ICorrection.TechnicalAttributes => TechnicalAttributes;
     IEnumerable<ISupplementaryData1> ICorrection.SupplementaryData => SupplementaryData;
 }

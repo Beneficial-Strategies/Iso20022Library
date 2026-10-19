@@ -12,5 +12,6 @@ public partial record TradePartyIdentificationQuery8 : ITradePartyIdentification
 {
     IEnumerable<LEIIdentifier> ITradePartyIdentificationQuery8.LEI => LEI;
     IEnumerable<AnyBICDec2014Identifier> ITradePartyIdentificationQuery8.AnyBIC => AnyBIC;
-    IEnumerable<Max50Text> ITradePartyIdentificationQuery8.ClientIdentification => ClientIdentification;
+    IEnumerable<Max50Text> ITradePartyIdentificationQuery8.ClientIdentification =>
+        ClientIdentification;
 }

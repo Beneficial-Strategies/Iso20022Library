@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData58Choice;
 
 public partial record State : IState
 {
-    IEnumerable<ICounterpartySpecificData36> IState.CounterpartySpecificData => CounterpartySpecificData;
+    IEnumerable<ICounterpartySpecificData36> IState.CounterpartySpecificData =>
+        CounterpartySpecificData;
     ICommonTradeDataReport70 IState.CommonTradeData => CommonTradeData;
     ITechnicalAttributes5? IState.TechnicalAttributes => TechnicalAttributes;
     IDisseminationData1? IState.PublicDisseminationData => PublicDisseminationData;

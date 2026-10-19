@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides details for a trade state report.
 /// </summary>
 [IsoId("_e9vysQAFEeqefbt-QjTNnA")]
-public interface ITradeStateReport2Choice : IIsoChoice
-{
-}
+public interface ITradeStateReport2Choice : IIsoChoice { }

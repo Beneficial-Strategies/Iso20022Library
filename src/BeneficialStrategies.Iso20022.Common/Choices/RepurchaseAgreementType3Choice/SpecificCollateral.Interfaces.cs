@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Choices.RepurchaseAgreementType3Choice;
 
 public partial record SpecificCollateral : ISpecificCollateral
 {
-    IFinancialInstrument59 ISpecificCollateral.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    IFinancialInstrument59 ISpecificCollateral.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
 }

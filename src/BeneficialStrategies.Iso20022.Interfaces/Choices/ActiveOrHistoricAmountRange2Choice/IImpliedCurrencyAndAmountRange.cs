@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.ActiveOrHistoricAmountRange2Choi
 /// Expresses an amount or an amount range with an explicit debit/credit indicator and where the currency is implied.
 /// </summary>
 [IsoId("_PPV2U5lcEeeE1Ya-LgRsuQ")]
-public interface IImpliedCurrencyAndAmountRange : IActiveOrHistoricAmountRange2Choice, IIsoChoiceVariant
+public interface IImpliedCurrencyAndAmountRange
+    : IActiveOrHistoricAmountRange2Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// A specified amount or amount range.

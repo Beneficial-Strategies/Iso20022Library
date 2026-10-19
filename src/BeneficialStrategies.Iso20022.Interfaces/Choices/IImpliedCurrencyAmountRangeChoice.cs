@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between ranges of values in which an amount is considered valid or a specified amount value which has to be matched or unmatched to be valid.
 /// </summary>
 [IsoId("_PU-ECtp-Ed-ak6NoX_4Aeg_847262836")]
-public interface IImpliedCurrencyAmountRangeChoice : IIsoChoice
-{
-}
+public interface IImpliedCurrencyAmountRangeChoice : IIsoChoice { }

@@ -10,15 +10,19 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ChargesPerTypeRecord6 : IChargesPerTypeRecord6
 {
-    IBranchAndFinancialInstitutionIdentification8? IChargesPerTypeRecord6.ChargesRequestor => ChargesRequestor;
+    IBranchAndFinancialInstitutionIdentification8? IChargesPerTypeRecord6.ChargesRequestor =>
+        ChargesRequestor;
     ISettlementInstruction19? IChargesPerTypeRecord6.SettlementInstruction => SettlementInstruction;
     ITransactionReferences7 IChargesPerTypeRecord6.UnderlyingTransaction => UnderlyingTransaction;
     IDateAndDateTime2Choice? IChargesPerTypeRecord6.ValueDate => ValueDate;
     IPartyIdentification272? IChargesPerTypeRecord6.Debtor => Debtor;
     ICashAccount40? IChargesPerTypeRecord6.DebtorAccount => DebtorAccount;
-    IBranchAndFinancialInstitutionIdentification8? IChargesPerTypeRecord6.DebtorAgent => DebtorAgent;
+    IBranchAndFinancialInstitutionIdentification8? IChargesPerTypeRecord6.DebtorAgent =>
+        DebtorAgent;
     ICashAccount40? IChargesPerTypeRecord6.DebtorAgentAccount => DebtorAgentAccount;
-    IBranchAndFinancialInstitutionIdentification8? IChargesPerTypeRecord6.ChargesAccountAgent => ChargesAccountAgent;
+    IBranchAndFinancialInstitutionIdentification8? IChargesPerTypeRecord6.ChargesAccountAgent =>
+        ChargesAccountAgent;
     ICashAccount40? IChargesPerTypeRecord6.ChargesAccountAgentAccount => ChargesAccountAgentAccount;
-    IInstructionForInstructedAgent1? IChargesPerTypeRecord6.InstructionForInstructedAgent => InstructionForInstructedAgent;
+    IInstructionForInstructedAgent1? IChargesPerTypeRecord6.InstructionForInstructedAgent =>
+        InstructionForInstructedAgent;
 }

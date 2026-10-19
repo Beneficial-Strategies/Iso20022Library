@@ -10,13 +10,18 @@ namespace BeneficialStrategies.Iso20022.camt;
 
 public partial record IntraBalanceMovementInstructionV01 : IIntraBalanceMovementInstructionV01
 {
-    ITransactionAndDocumentIdentification6? IIntraBalanceMovementInstructionV01.Identification => Identification;
-    IIdentification14? IIntraBalanceMovementInstructionV01.CorporateActionEventIdentification => CorporateActionEventIdentification;
+    ITransactionAndDocumentIdentification6? IIntraBalanceMovementInstructionV01.Identification =>
+        Identification;
+    IIdentification14? IIntraBalanceMovementInstructionV01.CorporateActionEventIdentification =>
+        CorporateActionEventIdentification;
     INumberCount1Choice? IIntraBalanceMovementInstructionV01.NumberCounts => NumberCounts;
     IEnumerable<ILinkages57> IIntraBalanceMovementInstructionV01.Linkages => Linkages;
     ICashAccount38 IIntraBalanceMovementInstructionV01.CashAccount => CashAccount;
-    ISystemPartyIdentification8? IIntraBalanceMovementInstructionV01.CashAccountOwner => CashAccountOwner;
-    IBranchAndFinancialInstitutionIdentification6? IIntraBalanceMovementInstructionV01.CashAccountServicer => CashAccountServicer;
+    ISystemPartyIdentification8? IIntraBalanceMovementInstructionV01.CashAccountOwner =>
+        CashAccountOwner;
+    IBranchAndFinancialInstitutionIdentification6? IIntraBalanceMovementInstructionV01.CashAccountServicer =>
+        CashAccountServicer;
     IIntraBalance5 IIntraBalanceMovementInstructionV01.IntraBalance => IntraBalance;
-    IEnumerable<ISupplementaryData1> IIntraBalanceMovementInstructionV01.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IIntraBalanceMovementInstructionV01.SupplementaryData =>
+        SupplementaryData;
 }

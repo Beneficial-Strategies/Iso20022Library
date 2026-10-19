@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Identification of a financial instrument or of a non-equity sub-class
 /// </summary>
 [IsoId("_BRbDkaaUEeqZmriXpMtonA")]
-public interface IInstrumentOrSubClassIdentification2Choice : IIsoChoice
-{
-}
+public interface IInstrumentOrSubClassIdentification2Choice : IIsoChoice { }

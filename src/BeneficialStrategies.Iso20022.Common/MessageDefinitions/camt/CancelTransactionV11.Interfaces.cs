@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 public partial record CancelTransactionV11 : ICancelTransactionV11
 {
     IMessageHeader9 ICancelTransactionV11.MessageHeader => MessageHeader;
-    IPaymentIdentification8Choice ICancelTransactionV11.PaymentIdentification => PaymentIdentification;
+    IPaymentIdentification8Choice ICancelTransactionV11.PaymentIdentification =>
+        PaymentIdentification;
     ICashAccount40? ICancelTransactionV11.CashAccount => CashAccount;
     IPaymentCancellationReason6? ICancelTransactionV11.CancellationReason => CancellationReason;
     IEnumerable<ISupplementaryData1> ICancelTransactionV11.SupplementaryData => SupplementaryData;

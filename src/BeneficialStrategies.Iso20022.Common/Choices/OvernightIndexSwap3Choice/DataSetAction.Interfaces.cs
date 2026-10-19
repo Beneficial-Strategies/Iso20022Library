@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.OvernightIndexSwap3Choice;
 
-public partial record DataSetAction : IDataSetAction
-{
-}
+public partial record DataSetAction : IDataSetAction { }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice17Choice;
 
-public partial record MonetaryValue : IMonetaryValue
-{
-}
+public partial record MonetaryValue : IMonetaryValue { }

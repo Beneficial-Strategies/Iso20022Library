@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the technical input channel.
 /// </summary>
 [IsoId("_Rpr4odp-Ed-ak6NoX_4Aeg_-1373581543")]
-public interface ITechnicalInputChannel1Choice : IIsoChoice
-{
-}
+public interface ITechnicalInputChannel1Choice : IIsoChoice { }

@@ -13,7 +13,8 @@ public partial record TradeCounterpartyReport9 : ITradeCounterpartyReport9
     ICounterparty26 ITradeCounterpartyReport9.ReportingCounterparty => ReportingCounterparty;
     ICounterparty29 ITradeCounterpartyReport9.OtherCounterparty => OtherCounterparty;
     IOrganisationIdentification9Choice? ITradeCounterpartyReport9.Broker => Broker;
-    IOrganisationIdentification9Choice? ITradeCounterpartyReport9.SubmittingAgent => SubmittingAgent;
+    IOrganisationIdentification9Choice? ITradeCounterpartyReport9.SubmittingAgent =>
+        SubmittingAgent;
     IOrganisationIdentification9Choice? ITradeCounterpartyReport9.ClearingMember => ClearingMember;
     IOrganisationIdentification9Choice? ITradeCounterpartyReport9.Beneficiary => Beneficiary;
 }

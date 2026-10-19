@@ -8,8 +8,11 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record TradeSecurityIdentificationQueryCriteria2 : ITradeSecurityIdentificationQueryCriteria2
+public partial record TradeSecurityIdentificationQueryCriteria2
+    : ITradeSecurityIdentificationQueryCriteria2
 {
-    IEnumerable<ISecurityIdentificationQueryCriteria1> ITradeSecurityIdentificationQueryCriteria2.Identification => Identification;
-    IEnumerable<ISecurityIdentificationQuery3Choice> ITradeSecurityIdentificationQueryCriteria2.UnderlyingInstrumentIdentification => UnderlyingInstrumentIdentification;
+    IEnumerable<ISecurityIdentificationQueryCriteria1> ITradeSecurityIdentificationQueryCriteria2.Identification =>
+        Identification;
+    IEnumerable<ISecurityIdentificationQuery3Choice> ITradeSecurityIdentificationQueryCriteria2.UnderlyingInstrumentIdentification =>
+        UnderlyingInstrumentIdentification;
 }

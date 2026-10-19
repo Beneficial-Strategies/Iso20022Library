@@ -10,12 +10,17 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TradePartyQueryCriteria7 : ITradePartyQueryCriteria7
 {
-    ITradePartyIdentificationQuery10Choice? ITradePartyQueryCriteria7.ReportingCounterparty => ReportingCounterparty;
-    ITradePartyIdentificationQuery10Choice? ITradePartyQueryCriteria7.OtherCounterparty => OtherCounterparty;
+    ITradePartyIdentificationQuery10Choice? ITradePartyQueryCriteria7.ReportingCounterparty =>
+        ReportingCounterparty;
+    ITradePartyIdentificationQuery10Choice? ITradePartyQueryCriteria7.OtherCounterparty =>
+        OtherCounterparty;
     ITradePartyIdentificationQuery10Choice? ITradePartyQueryCriteria7.Beneficiary => Beneficiary;
-    ITradePartyIdentificationQuery11Choice? ITradePartyQueryCriteria7.EntityResponsibleForReport => EntityResponsibleForReport;
-    ITradePartyIdentificationQuery11Choice? ITradePartyQueryCriteria7.SubmittingAgent => SubmittingAgent;
+    ITradePartyIdentificationQuery11Choice? ITradePartyQueryCriteria7.EntityResponsibleForReport =>
+        EntityResponsibleForReport;
+    ITradePartyIdentificationQuery11Choice? ITradePartyQueryCriteria7.SubmittingAgent =>
+        SubmittingAgent;
     ITradePartyIdentificationQuery11Choice? ITradePartyQueryCriteria7.Broker => Broker;
     ITradePartyIdentificationQuery11Choice? ITradePartyQueryCriteria7.CCP => CCP;
-    ITradePartyIdentificationQuery10Choice? ITradePartyQueryCriteria7.ClearingMember => ClearingMember;
+    ITradePartyIdentificationQuery10Choice? ITradePartyQueryCriteria7.ClearingMember =>
+        ClearingMember;
 }

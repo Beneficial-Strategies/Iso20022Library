@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record TransparencyDataReport11 : ITransparencyDataReport11
-{
-}
+public partial record TransparencyDataReport11 : ITransparencyDataReport11 { }

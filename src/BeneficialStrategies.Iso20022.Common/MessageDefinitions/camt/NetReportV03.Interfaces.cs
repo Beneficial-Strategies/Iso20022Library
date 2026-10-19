@@ -11,8 +11,10 @@ namespace BeneficialStrategies.Iso20022.camt;
 public partial record NetReportV03 : INetReportV03
 {
     INetReportData2 INetReportV03.NetReportData => NetReportData;
-    IPartyIdentification242Choice INetReportV03.NetServiceParticipantIdentification => NetServiceParticipantIdentification;
-    IPartyIdentification242Choice? INetReportV03.NetServiceCounterpartyIdentification => NetServiceCounterpartyIdentification;
+    IPartyIdentification242Choice INetReportV03.NetServiceParticipantIdentification =>
+        NetServiceParticipantIdentification;
+    IPartyIdentification242Choice? INetReportV03.NetServiceCounterpartyIdentification =>
+        NetServiceCounterpartyIdentification;
     IEnumerable<INetObligation3> INetReportV03.NetObligation => NetObligation;
     IEnumerable<ISupplementaryData1> INetReportV03.SupplementaryData => SupplementaryData;
 }

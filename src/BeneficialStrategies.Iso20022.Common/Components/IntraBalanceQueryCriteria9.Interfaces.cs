@@ -12,17 +12,26 @@ public partial record IntraBalanceQueryCriteria9 : IIntraBalanceQueryCriteria9
 {
     IEnumerable<IReferences36Choice> IIntraBalanceQueryCriteria9.References => References;
     IIntraBalanceQueryStatus3? IIntraBalanceQueryCriteria9.Status => Status;
-    IEnumerable<IAccountIdentificationSearchCriteria2Choice> IIntraBalanceQueryCriteria9.CashAccount => CashAccount;
-    IEnumerable<ISystemPartyIdentification8> IIntraBalanceQueryCriteria9.CashAccountOwner => CashAccountOwner;
-    IBranchAndFinancialInstitutionIdentification6? IIntraBalanceQueryCriteria9.CashAccountServicer => CashAccountServicer;
+    IEnumerable<IAccountIdentificationSearchCriteria2Choice> IIntraBalanceQueryCriteria9.CashAccount =>
+        CashAccount;
+    IEnumerable<ISystemPartyIdentification8> IIntraBalanceQueryCriteria9.CashAccountOwner =>
+        CashAccountOwner;
+    IBranchAndFinancialInstitutionIdentification6? IIntraBalanceQueryCriteria9.CashAccountServicer =>
+        CashAccountServicer;
     IEnumerable<IIntraBalanceType3> IIntraBalanceQueryCriteria9.BalanceType => BalanceType;
-    IEnumerable<IGenericIdentification37> IIntraBalanceQueryCriteria9.CashSubBalanceIdentification => CashSubBalanceIdentification;
-    IImpliedCurrencyAmountRange1Choice? IIntraBalanceQueryCriteria9.SettlementAmount => SettlementAmount;
+    IEnumerable<IGenericIdentification37> IIntraBalanceQueryCriteria9.CashSubBalanceIdentification =>
+        CashSubBalanceIdentification;
+    IImpliedCurrencyAmountRange1Choice? IIntraBalanceQueryCriteria9.SettlementAmount =>
+        SettlementAmount;
     IImpliedCurrencyAmountRange1Choice? IIntraBalanceQueryCriteria9.SettledAmount => SettledAmount;
-    IEnumerable<ActiveOrHistoricCurrencyCode> IIntraBalanceQueryCriteria9.SettlementCurrency => SettlementCurrency;
-    IDateAndDateTimeSearch5Choice? IIntraBalanceQueryCriteria9.IntendedSettlementDate => IntendedSettlementDate;
-    IDateAndDateTimeSearch5Choice? IIntraBalanceQueryCriteria9.EffectiveSettlementDate => EffectiveSettlementDate;
+    IEnumerable<ActiveOrHistoricCurrencyCode> IIntraBalanceQueryCriteria9.SettlementCurrency =>
+        SettlementCurrency;
+    IDateAndDateTimeSearch5Choice? IIntraBalanceQueryCriteria9.IntendedSettlementDate =>
+        IntendedSettlementDate;
+    IDateAndDateTimeSearch5Choice? IIntraBalanceQueryCriteria9.EffectiveSettlementDate =>
+        EffectiveSettlementDate;
     IEnumerable<IPriorityNumeric4Choice> IIntraBalanceQueryCriteria9.Priority => Priority;
-    IEnumerable<ISystemPartyIdentification8> IIntraBalanceQueryCriteria9.MessageOriginator => MessageOriginator;
+    IEnumerable<ISystemPartyIdentification8> IIntraBalanceQueryCriteria9.MessageOriginator =>
+        MessageOriginator;
     IDateAndDateTimeSearch5Choice? IIntraBalanceQueryCriteria9.CreationDateTime => CreationDateTime;
 }

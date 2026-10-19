@@ -12,5 +12,6 @@ public partial record SettlementFailsData4 : ISettlementFailsData4
 {
     ISettlementTotalData1 ISettlementFailsData4.Total => Total;
     ISettlementFailureReason3 ISettlementFailsData4.FailureReason => FailureReason;
-    ISettlementFailsDerogation1 ISettlementFailsData4.EligibleForDerogation => EligibleForDerogation;
+    ISettlementFailsDerogation1 ISettlementFailsData4.EligibleForDerogation =>
+        EligibleForDerogation;
 }

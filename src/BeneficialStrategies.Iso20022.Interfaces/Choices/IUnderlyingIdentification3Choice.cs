@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Details of the underlying of a security transaction.
 /// </summary>
 [IsoId("_1tAh1Z3DEeuwmdq0KtnICg")]
-public interface IUnderlyingIdentification3Choice : IIsoChoice
-{
-}
+public interface IUnderlyingIdentification3Choice : IIsoChoice { }

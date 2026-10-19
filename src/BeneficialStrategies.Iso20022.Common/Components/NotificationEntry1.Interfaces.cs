@@ -14,7 +14,8 @@ public partial record NotificationEntry1 : INotificationEntry1
     IDateAndDateTimeChoice? INotificationEntry1.ValueDate => ValueDate;
     IEnumerable<ICashBalanceAvailability1> INotificationEntry1.Availability => Availability;
     IBankTransactionCodeStructure1 INotificationEntry1.BankTransactionCode => BankTransactionCode;
-    IMessageIdentification2? INotificationEntry1.AdditionalInformationIndicator => AdditionalInformationIndicator;
+    IMessageIdentification2? INotificationEntry1.AdditionalInformationIndicator =>
+        AdditionalInformationIndicator;
     IEnumerable<IBatchInformation1> INotificationEntry1.Batch => Batch;
     IAmountAndCurrencyExchange2? INotificationEntry1.AmountDetails => AmountDetails;
     IEnumerable<IChargesInformation3> INotificationEntry1.Charges => Charges;

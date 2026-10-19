@@ -17,5 +17,6 @@ public partial record Cheque13 : ICheque13
     ICashAccount40? ICheque13.DrawerAgentAccount => DrawerAgentAccount;
     IPartyIdentification135 ICheque13.Payee => Payee;
     ICashAccount40? ICheque13.PayeeAccount => PayeeAccount;
-    IEnumerable<IInstructionForChequeAgent1> ICheque13.InstructionForChequeAgent => InstructionForChequeAgent;
+    IEnumerable<IInstructionForChequeAgent1> ICheque13.InstructionForChequeAgent =>
+        InstructionForChequeAgent;
 }

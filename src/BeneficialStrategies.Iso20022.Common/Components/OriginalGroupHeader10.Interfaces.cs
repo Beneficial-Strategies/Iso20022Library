@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record OriginalGroupHeader10 : IOriginalGroupHeader10
 {
     ICase4? IOriginalGroupHeader10.Case => Case;
-    IEnumerable<IPaymentCancellationReason4> IOriginalGroupHeader10.CancellationReasonInformation => CancellationReasonInformation;
+    IEnumerable<IPaymentCancellationReason4> IOriginalGroupHeader10.CancellationReasonInformation =>
+        CancellationReasonInformation;
 }

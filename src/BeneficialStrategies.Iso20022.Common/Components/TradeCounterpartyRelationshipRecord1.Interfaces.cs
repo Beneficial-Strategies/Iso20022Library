@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TradeCounterpartyRelationshipRecord1 : ITradeCounterpartyRelationshipRecord1
 {
-    ITradeCounterpartyRelationship1Choice ITradeCounterpartyRelationshipRecord1.RelationshipType => RelationshipType;
+    ITradeCounterpartyRelationship1Choice ITradeCounterpartyRelationshipRecord1.RelationshipType =>
+        RelationshipType;
 }

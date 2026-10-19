@@ -11,12 +11,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record ContractRegistrationStatement2 : IContractRegistrationStatement2
 {
     ITradeParty5 IContractRegistrationStatement2.ReportingParty => ReportingParty;
-    IBranchAndFinancialInstitutionIdentification6 IContractRegistrationStatement2.RegistrationAgent => RegistrationAgent;
+    IBranchAndFinancialInstitutionIdentification6 IContractRegistrationStatement2.RegistrationAgent =>
+        RegistrationAgent;
     IReportingPeriod4 IContractRegistrationStatement2.ReportingPeriod => ReportingPeriod;
     IRegisteredContract8 IContractRegistrationStatement2.RegisteredContract => RegisteredContract;
-    IEnumerable<ITransactionCertificate3> IContractRegistrationStatement2.TransactionJournal => TransactionJournal;
-    IEnumerable<ISupportingDocument2> IContractRegistrationStatement2.SupportingDocumentJournal => SupportingDocumentJournal;
-    IEnumerable<ISupportingDocument2> IContractRegistrationStatement2.AdditionalSupportingDocumentJournal => AdditionalSupportingDocumentJournal;
-    IEnumerable<IGenericValidationRuleIdentification1> IContractRegistrationStatement2.RegulatoryRuleValidation => RegulatoryRuleValidation;
-    IEnumerable<ISupplementaryData1> IContractRegistrationStatement2.SupplementaryData => SupplementaryData;
+    IEnumerable<ITransactionCertificate3> IContractRegistrationStatement2.TransactionJournal =>
+        TransactionJournal;
+    IEnumerable<ISupportingDocument2> IContractRegistrationStatement2.SupportingDocumentJournal =>
+        SupportingDocumentJournal;
+    IEnumerable<ISupportingDocument2> IContractRegistrationStatement2.AdditionalSupportingDocumentJournal =>
+        AdditionalSupportingDocumentJournal;
+    IEnumerable<IGenericValidationRuleIdentification1> IContractRegistrationStatement2.RegulatoryRuleValidation =>
+        RegulatoryRuleValidation;
+    IEnumerable<ISupplementaryData1> IContractRegistrationStatement2.SupplementaryData =>
+        SupplementaryData;
 }

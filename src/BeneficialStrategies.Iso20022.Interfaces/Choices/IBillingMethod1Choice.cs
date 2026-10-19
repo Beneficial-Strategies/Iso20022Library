@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between tax calculation methods A, B or D.
 /// </summary>
 [IsoId("_6P9DsZqlEeGSON8vddiWzQ_-904396180")]
-public interface IBillingMethod1Choice : IIsoChoice
-{
-}
+public interface IBillingMethod1Choice : IIsoChoice { }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification1Choice;
 
-public partial record BBAN : IBBAN
-{
-}
+public partial record BBAN : IBBAN { }

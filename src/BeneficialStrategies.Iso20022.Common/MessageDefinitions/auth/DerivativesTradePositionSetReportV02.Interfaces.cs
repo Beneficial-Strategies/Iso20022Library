@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.auth;
 
 public partial record DerivativesTradePositionSetReportV02 : IDerivativesTradePositionSetReportV02
 {
-    IPositionSetAggregated2Choice IDerivativesTradePositionSetReportV02.AggregatedPosition => AggregatedPosition;
-    IEnumerable<ISupplementaryData1> IDerivativesTradePositionSetReportV02.SupplementaryData => SupplementaryData;
+    IPositionSetAggregated2Choice IDerivativesTradePositionSetReportV02.AggregatedPosition =>
+        AggregatedPosition;
+    IEnumerable<ISupplementaryData1> IDerivativesTradePositionSetReportV02.SupplementaryData =>
+        SupplementaryData;
 }

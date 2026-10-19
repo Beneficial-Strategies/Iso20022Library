@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Limit Identification3Choice.
 /// </summary>
 [IsoId("_0T7ldTEyEe6g-ffJsqGiSA")]
-public interface ILimitIdentification3Choice : IIsoChoice
-{
-}
+public interface ILimitIdentification3Choice : IIsoChoice { }

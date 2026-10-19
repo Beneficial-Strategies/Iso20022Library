@@ -10,10 +10,12 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuredMarketReport3Choice;
 
 public partial record Transaction : ITransaction
 {
-    ICounterpartyIdentification2Choice ITransaction.CounterpartyIdentification => CounterpartyIdentification;
+    ICounterpartyIdentification2Choice ITransaction.CounterpartyIdentification =>
+        CounterpartyIdentification;
     IDateAndDateTimeChoice ITransaction.TradeDate => TradeDate;
     IRate2? ITransaction.DealRate => DealRate;
-    IFloatingRateNote2? ITransaction.FloatingRateRepurchaseAgreement => FloatingRateRepurchaseAgreement;
+    IFloatingRateNote2? ITransaction.FloatingRateRepurchaseAgreement =>
+        FloatingRateRepurchaseAgreement;
     ICollateral14 ITransaction.Collateral => Collateral;
     IEnumerable<ISupplementaryData1> ITransaction.SupplementaryData => SupplementaryData;
 }

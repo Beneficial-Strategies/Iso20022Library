@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SecurityIdentificationQueryCriteria1 : ISecurityIdentificationQueryCriteria1
 {
     IEnumerable<ISINOct2015Identifier> ISecurityIdentificationQueryCriteria1.ISIN => ISIN;
-    IEnumerable<Max52Text> ISecurityIdentificationQueryCriteria1.AlternativeInstrumentIdentification => AlternativeInstrumentIdentification;
+    IEnumerable<Max52Text> ISecurityIdentificationQueryCriteria1.AlternativeInstrumentIdentification =>
+        AlternativeInstrumentIdentification;
 }

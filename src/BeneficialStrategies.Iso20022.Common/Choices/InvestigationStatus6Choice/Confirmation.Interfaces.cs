@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatus6Choice;
 
-public partial record Confirmation : IConfirmation
-{
-}
+public partial record Confirmation : IConfirmation { }

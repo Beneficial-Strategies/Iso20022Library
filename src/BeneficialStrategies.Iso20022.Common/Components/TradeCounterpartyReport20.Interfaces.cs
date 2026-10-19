@@ -13,10 +13,15 @@ public partial record TradeCounterpartyReport20 : ITradeCounterpartyReport20
     ICounterparty45 ITradeCounterpartyReport20.ReportingCounterparty => ReportingCounterparty;
     ICounterparty46 ITradeCounterpartyReport20.OtherCounterparty => OtherCounterparty;
     IOrganisationIdentification15Choice? ITradeCounterpartyReport20.Broker => Broker;
-    IOrganisationIdentification15Choice? ITradeCounterpartyReport20.SubmittingAgent => SubmittingAgent;
+    IOrganisationIdentification15Choice? ITradeCounterpartyReport20.SubmittingAgent =>
+        SubmittingAgent;
     IPartyIdentification248Choice? ITradeCounterpartyReport20.ClearingMember => ClearingMember;
-    IEnumerable<IPartyIdentification248Choice> ITradeCounterpartyReport20.Beneficiary => Beneficiary;
-    IOrganisationIdentification15Choice? ITradeCounterpartyReport20.EntityResponsibleForReport => EntityResponsibleForReport;
-    IEnumerable<IOrganisationIdentification15Choice> ITradeCounterpartyReport20.ExecutionAgent => ExecutionAgent;
-    IEnumerable<ITradeCounterpartyRelationshipRecord1> ITradeCounterpartyReport20.RelationshipRecord => RelationshipRecord;
+    IEnumerable<IPartyIdentification248Choice> ITradeCounterpartyReport20.Beneficiary =>
+        Beneficiary;
+    IOrganisationIdentification15Choice? ITradeCounterpartyReport20.EntityResponsibleForReport =>
+        EntityResponsibleForReport;
+    IEnumerable<IOrganisationIdentification15Choice> ITradeCounterpartyReport20.ExecutionAgent =>
+        ExecutionAgent;
+    IEnumerable<ITradeCounterpartyRelationshipRecord1> ITradeCounterpartyReport20.RelationshipRecord =>
+        RelationshipRecord;
 }

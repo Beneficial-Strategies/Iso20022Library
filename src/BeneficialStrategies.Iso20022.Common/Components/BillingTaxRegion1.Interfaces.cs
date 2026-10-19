@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record BillingTaxRegion1 : IBillingTaxRegion1
 {
-    IBillingTaxIdentification1? IBillingTaxRegion1.SendingFinancialInstitution => SendingFinancialInstitution;
+    IBillingTaxIdentification1? IBillingTaxRegion1.SendingFinancialInstitution =>
+        SendingFinancialInstitution;
     IBillingMethod4? IBillingTaxRegion1.MethodC => MethodC;
     IAmountAndDirection34 IBillingTaxRegion1.SettlementAmount => SettlementAmount;
     IAmountAndDirection34 IBillingTaxRegion1.TaxDueToRegion => TaxDueToRegion;

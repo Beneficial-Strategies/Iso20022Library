@@ -13,9 +13,13 @@ public partial record ResolutionOfInvestigationV07 : IResolutionOfInvestigationV
     ICaseAssignment3 IResolutionOfInvestigationV07.Assignment => Assignment;
     ICase3? IResolutionOfInvestigationV07.ResolvedCase => ResolvedCase;
     IInvestigationStatus3Choice IResolutionOfInvestigationV07.Status => Status;
-    IEnumerable<IUnderlyingTransaction17> IResolutionOfInvestigationV07.CancellationDetails => CancellationDetails;
+    IEnumerable<IUnderlyingTransaction17> IResolutionOfInvestigationV07.CancellationDetails =>
+        CancellationDetails;
     IStatementResolutionEntry2? IResolutionOfInvestigationV07.StatementDetails => StatementDetails;
-    ICorrectiveTransaction2Choice? IResolutionOfInvestigationV07.CorrectionTransaction => CorrectionTransaction;
-    IResolutionInformation1? IResolutionOfInvestigationV07.ResolutionRelatedInformation => ResolutionRelatedInformation;
-    IEnumerable<ISupplementaryData1> IResolutionOfInvestigationV07.SupplementaryData => SupplementaryData;
+    ICorrectiveTransaction2Choice? IResolutionOfInvestigationV07.CorrectionTransaction =>
+        CorrectionTransaction;
+    IResolutionInformation1? IResolutionOfInvestigationV07.ResolutionRelatedInformation =>
+        ResolutionRelatedInformation;
+    IEnumerable<ISupplementaryData1> IResolutionOfInvestigationV07.SupplementaryData =>
+        SupplementaryData;
 }

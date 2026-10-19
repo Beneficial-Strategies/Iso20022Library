@@ -12,7 +12,8 @@ public partial record Movements : IMovements
 {
     ICashAccount38? IMovements.CashAccount => CashAccount;
     ISystemPartyIdentification8? IMovements.CashAccountOwner => CashAccountOwner;
-    IBranchAndFinancialInstitutionIdentification6? IMovements.CashAccountServicer => CashAccountServicer;
+    IBranchAndFinancialInstitutionIdentification6? IMovements.CashAccountServicer =>
+        CashAccountServicer;
     IIntraBalanceStatusAndReason2? IMovements.StatusAndReason => StatusAndReason;
     IEnumerable<IIntraBalanceMovement5> IMovements.Movement => Movement;
 }

@@ -10,7 +10,10 @@ namespace BeneficialStrategies.Iso20022.auth;
 
 public partial record FinancialInstrumentStatusReportV01 : IFinancialInstrumentStatusReportV01
 {
-    ISecuritiesMarketReportHeader5? IFinancialInstrumentStatusReportV01.ReportHeader => ReportHeader;
-    IEnumerable<IInstrumentReport1Choice> IFinancialInstrumentStatusReportV01.InstrumentReport => InstrumentReport;
-    IEnumerable<ISupplementaryData1> IFinancialInstrumentStatusReportV01.SupplementaryData => SupplementaryData;
+    ISecuritiesMarketReportHeader5? IFinancialInstrumentStatusReportV01.ReportHeader =>
+        ReportHeader;
+    IEnumerable<IInstrumentReport1Choice> IFinancialInstrumentStatusReportV01.InstrumentReport =>
+        InstrumentReport;
+    IEnumerable<ISupplementaryData1> IFinancialInstrumentStatusReportV01.SupplementaryData =>
+        SupplementaryData;
 }

@@ -8,15 +8,23 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record SettlementInternaliserFinancialInstrument1 : ISettlementInternaliserFinancialInstrument1
+public partial record SettlementInternaliserFinancialInstrument1
+    : ISettlementInternaliserFinancialInstrument1
 {
     IInternalisationData1 ISettlementInternaliserFinancialInstrument1.Equity => Equity;
-    IInternalisationData1 ISettlementInternaliserFinancialInstrument1.SovereignDebt => SovereignDebt;
+    IInternalisationData1 ISettlementInternaliserFinancialInstrument1.SovereignDebt =>
+        SovereignDebt;
     IInternalisationData1 ISettlementInternaliserFinancialInstrument1.Bond => Bond;
-    IInternalisationData1 ISettlementInternaliserFinancialInstrument1.OtherTransferableSecurities => OtherTransferableSecurities;
-    IInternalisationData1 ISettlementInternaliserFinancialInstrument1.ExchangeTradingFunds => ExchangeTradingFunds;
-    IInternalisationData1 ISettlementInternaliserFinancialInstrument1.CollectiveInvestmentUndertakings => CollectiveInvestmentUndertakings;
-    IInternalisationData1 ISettlementInternaliserFinancialInstrument1.MoneyMarketInstrument => MoneyMarketInstrument;
-    IInternalisationData1 ISettlementInternaliserFinancialInstrument1.EmissionAllowance => EmissionAllowance;
-    IInternalisationData1 ISettlementInternaliserFinancialInstrument1.OtherFinancialInstruments => OtherFinancialInstruments;
+    IInternalisationData1 ISettlementInternaliserFinancialInstrument1.OtherTransferableSecurities =>
+        OtherTransferableSecurities;
+    IInternalisationData1 ISettlementInternaliserFinancialInstrument1.ExchangeTradingFunds =>
+        ExchangeTradingFunds;
+    IInternalisationData1 ISettlementInternaliserFinancialInstrument1.CollectiveInvestmentUndertakings =>
+        CollectiveInvestmentUndertakings;
+    IInternalisationData1 ISettlementInternaliserFinancialInstrument1.MoneyMarketInstrument =>
+        MoneyMarketInstrument;
+    IInternalisationData1 ISettlementInternaliserFinancialInstrument1.EmissionAllowance =>
+        EmissionAllowance;
+    IInternalisationData1 ISettlementInternaliserFinancialInstrument1.OtherFinancialInstruments =>
+        OtherFinancialInstruments;
 }

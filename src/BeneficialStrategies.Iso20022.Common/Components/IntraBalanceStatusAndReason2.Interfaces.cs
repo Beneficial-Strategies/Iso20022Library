@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record IntraBalanceStatusAndReason2 : IIntraBalanceStatusAndReason2
 {
-    IEnumerable<IProcessingStatus67Choice> IIntraBalanceStatusAndReason2.ProcessingStatus => ProcessingStatus;
-    IEnumerable<ISettlementStatus16Choice> IIntraBalanceStatusAndReason2.SettlementStatus => SettlementStatus;
+    IEnumerable<IProcessingStatus67Choice> IIntraBalanceStatusAndReason2.ProcessingStatus =>
+        ProcessingStatus;
+    IEnumerable<ISettlementStatus16Choice> IIntraBalanceStatusAndReason2.SettlementStatus =>
+        SettlementStatus;
     IProprietaryReason4? IIntraBalanceStatusAndReason2.Settled => Settled;
 }

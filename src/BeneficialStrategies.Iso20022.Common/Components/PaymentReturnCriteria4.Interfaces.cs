@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PaymentReturnCriteria4 : IPaymentReturnCriteria4
 {
-    IInstructionStatusReturnCriteria1? IPaymentReturnCriteria4.InstructionStatusReturnCriteria => InstructionStatusReturnCriteria;
+    IInstructionStatusReturnCriteria1? IPaymentReturnCriteria4.InstructionStatusReturnCriteria =>
+        InstructionStatusReturnCriteria;
 }

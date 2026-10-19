@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies a choice of sequences.
 /// </summary>
 [IsoId("_rsIb84y3EeeGkvZr3jtnCQ")]
-public interface ISequenceRange1Choice : IIsoChoice
-{
-}
+public interface ISequenceRange1Choice : IIsoChoice { }

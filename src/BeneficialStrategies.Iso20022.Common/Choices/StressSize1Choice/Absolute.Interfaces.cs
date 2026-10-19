@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.StressSize1Choice;
 
-public partial record Absolute : IAbsolute
-{
-}
+public partial record Absolute : IAbsolute { }

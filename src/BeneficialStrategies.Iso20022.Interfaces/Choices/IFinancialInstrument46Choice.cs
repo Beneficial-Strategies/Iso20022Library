@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies underlying instruments or index a derivative has.
 /// </summary>
 [IsoId("_X1AUQ738EeWvRsMSLyTf-A")]
-public interface IFinancialInstrument46Choice : IIsoChoice
-{
-}
+public interface IFinancialInstrument46Choice : IIsoChoice { }

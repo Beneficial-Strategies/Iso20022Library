@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Account Or Business Error6Choice.
 /// </summary>
 [IsoId("_31p_xTEyEe6g-ffJsqGiSA")]
-public interface IAccountOrBusinessError6Choice : IIsoChoice
-{
-}
+public interface IAccountOrBusinessError6Choice : IIsoChoice { }

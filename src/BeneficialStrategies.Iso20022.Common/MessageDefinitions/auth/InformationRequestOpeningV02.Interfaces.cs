@@ -12,7 +12,9 @@ public partial record InformationRequestOpeningV02 : IInformationRequestOpeningV
 {
     ILegalMandate1 IInformationRequestOpeningV02.LegalMandateBasis => LegalMandateBasis;
     IDueDate1? IInformationRequestOpeningV02.DueDate => DueDate;
-    IDateOrDateTimePeriod1Choice IInformationRequestOpeningV02.InvestigationPeriod => InvestigationPeriod;
+    IDateOrDateTimePeriod1Choice IInformationRequestOpeningV02.InvestigationPeriod =>
+        InvestigationPeriod;
     ISearchCriteria2Choice IInformationRequestOpeningV02.SearchCriteria => SearchCriteria;
-    IEnumerable<ISupplementaryData1> IInformationRequestOpeningV02.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IInformationRequestOpeningV02.SupplementaryData =>
+        SupplementaryData;
 }

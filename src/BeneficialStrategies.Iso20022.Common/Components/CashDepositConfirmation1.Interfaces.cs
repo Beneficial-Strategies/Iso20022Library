@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CashDepositConfirmation1 : ICashDepositConfirmation1
 {
     ICashBreakdown1? ICashDepositConfirmation1.ValidCashDepositReceived => ValidCashDepositReceived;
-    ICashBreakdown1? ICashDepositConfirmation1.InvalidCashDepositReceived => InvalidCashDepositReceived;
+    ICashBreakdown1? ICashDepositConfirmation1.InvalidCashDepositReceived =>
+        InvalidCashDepositReceived;
 }

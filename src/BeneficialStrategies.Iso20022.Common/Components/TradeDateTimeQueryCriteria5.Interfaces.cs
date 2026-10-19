@@ -17,5 +17,6 @@ public partial record TradeDateTimeQueryCriteria5 : ITradeDateTimeQueryCriteria5
     IDateTimePeriod1? ITradeDateTimeQueryCriteria5.ValuationDateTime => ValuationDateTime;
     IDateOrBlankQuery2Choice? ITradeDateTimeQueryCriteria5.ExpirationDate => ExpirationDate;
     IDatePeriod1? ITradeDateTimeQueryCriteria5.EarlyTerminationDate => EarlyTerminationDate;
-    IDateTimeOrBlankQuery1Choice? ITradeDateTimeQueryCriteria5.CollateralTimeStamp => CollateralTimeStamp;
+    IDateTimeOrBlankQuery1Choice? ITradeDateTimeQueryCriteria5.CollateralTimeStamp =>
+        CollateralTimeStamp;
 }

@@ -10,17 +10,26 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PaymentTransactionParty4 : IPaymentTransactionParty4
 {
-    IBranchAndFinancialInstitutionIdentification8? IPaymentTransactionParty4.InstructingAgent => InstructingAgent;
-    IBranchAndFinancialInstitutionIdentification8? IPaymentTransactionParty4.InstructedAgent => InstructedAgent;
+    IBranchAndFinancialInstitutionIdentification8? IPaymentTransactionParty4.InstructingAgent =>
+        InstructingAgent;
+    IBranchAndFinancialInstitutionIdentification8? IPaymentTransactionParty4.InstructedAgent =>
+        InstructedAgent;
     IParty50Choice? IPaymentTransactionParty4.UltimateDebtor => UltimateDebtor;
     IParty50Choice? IPaymentTransactionParty4.Debtor => Debtor;
-    IBranchAndFinancialInstitutionIdentification8? IPaymentTransactionParty4.DebtorAgent => DebtorAgent;
-    IBranchAndFinancialInstitutionIdentification8? IPaymentTransactionParty4.InstructingReimbursementAgent => InstructingReimbursementAgent;
-    IBranchAndFinancialInstitutionIdentification8? IPaymentTransactionParty4.InstructedReimbursementAgent => InstructedReimbursementAgent;
-    IBranchAndFinancialInstitutionIdentification8? IPaymentTransactionParty4.IntermediaryAgent1 => IntermediaryAgent1;
-    IBranchAndFinancialInstitutionIdentification8? IPaymentTransactionParty4.IntermediaryAgent2 => IntermediaryAgent2;
-    IBranchAndFinancialInstitutionIdentification8? IPaymentTransactionParty4.IntermediaryAgent3 => IntermediaryAgent3;
-    IBranchAndFinancialInstitutionIdentification8? IPaymentTransactionParty4.CreditorAgent => CreditorAgent;
+    IBranchAndFinancialInstitutionIdentification8? IPaymentTransactionParty4.DebtorAgent =>
+        DebtorAgent;
+    IBranchAndFinancialInstitutionIdentification8? IPaymentTransactionParty4.InstructingReimbursementAgent =>
+        InstructingReimbursementAgent;
+    IBranchAndFinancialInstitutionIdentification8? IPaymentTransactionParty4.InstructedReimbursementAgent =>
+        InstructedReimbursementAgent;
+    IBranchAndFinancialInstitutionIdentification8? IPaymentTransactionParty4.IntermediaryAgent1 =>
+        IntermediaryAgent1;
+    IBranchAndFinancialInstitutionIdentification8? IPaymentTransactionParty4.IntermediaryAgent2 =>
+        IntermediaryAgent2;
+    IBranchAndFinancialInstitutionIdentification8? IPaymentTransactionParty4.IntermediaryAgent3 =>
+        IntermediaryAgent3;
+    IBranchAndFinancialInstitutionIdentification8? IPaymentTransactionParty4.CreditorAgent =>
+        CreditorAgent;
     IParty50Choice? IPaymentTransactionParty4.Creditor => Creditor;
     IParty50Choice? IPaymentTransactionParty4.UltimateCreditor => UltimateCreditor;
 }

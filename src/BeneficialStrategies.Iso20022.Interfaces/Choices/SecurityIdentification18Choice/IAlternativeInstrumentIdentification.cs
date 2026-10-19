@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification18Choice;
 /// Proprietary identification of a security assigned by an institution or organisation.
 /// </summary>
 [IsoId("_cFTZxQOJEeWs3sTa9Sj6Lg")]
-public interface IAlternativeInstrumentIdentification : ISecurityIdentification18Choice, IIsoChoiceVariant
+public interface IAlternativeInstrumentIdentification
+    : ISecurityIdentification18Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

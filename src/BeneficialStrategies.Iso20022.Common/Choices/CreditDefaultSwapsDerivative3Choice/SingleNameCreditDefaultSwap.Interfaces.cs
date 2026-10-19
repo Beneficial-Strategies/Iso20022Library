@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditDefaultSwapsDerivative3Cho
 
 public partial record SingleNameCreditDefaultSwap : ISingleNameCreditDefaultSwap
 {
-    IDerivativePartyIdentification1Choice? ISingleNameCreditDefaultSwap.ReferenceParty => ReferenceParty;
+    IDerivativePartyIdentification1Choice? ISingleNameCreditDefaultSwap.ReferenceParty =>
+        ReferenceParty;
 }

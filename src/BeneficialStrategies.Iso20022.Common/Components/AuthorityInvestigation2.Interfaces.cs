@@ -12,5 +12,6 @@ public partial record AuthorityInvestigation2 : IAuthorityInvestigation2
 {
     IAuthorityRequestType1 IAuthorityInvestigation2.Type => Type;
     IInvestigatedParties1Choice IAuthorityInvestigation2.InvestigatedRoles => InvestigatedRoles;
-    IInvestigatedParties1Choice? IAuthorityInvestigation2.AdditionalInvestigatedParties => AdditionalInvestigatedParties;
+    IInvestigatedParties1Choice? IAuthorityInvestigation2.AdditionalInvestigatedParties =>
+        AdditionalInvestigatedParties;
 }

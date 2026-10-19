@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Nature of the risk management limit defined as a choice between a coded list or a proprietary limit.
 /// </summary>
 [IsoId("_79FX8KMgEeCJ6YNENx4h-w_1397757128")]
-public interface ILimitType1Choice : IIsoChoice
-{
-}
+public interface ILimitType1Choice : IIsoChoice { }

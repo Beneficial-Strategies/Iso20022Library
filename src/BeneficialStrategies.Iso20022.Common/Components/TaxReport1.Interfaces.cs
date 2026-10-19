@@ -16,6 +16,7 @@ public partial record TaxReport1 : ITaxReport1
     ITradeSettlement2 ITaxReport1.TradeSettlement => TradeSettlement;
     IEnumerable<IPartyIdentification72> ITaxReport1.OtherParty => OtherParty;
     IEnumerable<IAdditionalInformation1> ITaxReport1.AdditionalInformation => AdditionalInformation;
-    IEnumerable<IDocumentGeneralInformation2> ITaxReport1.AdditionalReference => AdditionalReference;
+    IEnumerable<IDocumentGeneralInformation2> ITaxReport1.AdditionalReference =>
+        AdditionalReference;
     IEnumerable<ISupplementaryData1> ITaxReport1.SupplementaryData => SupplementaryData;
 }

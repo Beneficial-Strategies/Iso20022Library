@@ -12,6 +12,7 @@ public partial record TradeUpdate : ITradeUpdate
 {
     ICounterparty39? ITradeUpdate.Counterparty => Counterparty;
     IPostedMarginOrCollateral4? ITradeUpdate.PostedMarginOrCollateral => PostedMarginOrCollateral;
-    IReceivedMarginOrCollateral4? ITradeUpdate.ReceivedMarginOrCollateral => ReceivedMarginOrCollateral;
+    IReceivedMarginOrCollateral4? ITradeUpdate.ReceivedMarginOrCollateral =>
+        ReceivedMarginOrCollateral;
     IEnumerable<ISupplementaryData1> ITradeUpdate.SupplementaryData => SupplementaryData;
 }

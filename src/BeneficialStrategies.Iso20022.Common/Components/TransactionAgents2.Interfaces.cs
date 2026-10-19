@@ -11,13 +11,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record TransactionAgents2 : ITransactionAgents2
 {
     IBranchAndFinancialInstitutionIdentification4? ITransactionAgents2.DebtorAgent => DebtorAgent;
-    IBranchAndFinancialInstitutionIdentification4? ITransactionAgents2.CreditorAgent => CreditorAgent;
-    IBranchAndFinancialInstitutionIdentification4? ITransactionAgents2.IntermediaryAgent1 => IntermediaryAgent1;
-    IBranchAndFinancialInstitutionIdentification4? ITransactionAgents2.IntermediaryAgent2 => IntermediaryAgent2;
-    IBranchAndFinancialInstitutionIdentification4? ITransactionAgents2.IntermediaryAgent3 => IntermediaryAgent3;
-    IBranchAndFinancialInstitutionIdentification4? ITransactionAgents2.ReceivingAgent => ReceivingAgent;
-    IBranchAndFinancialInstitutionIdentification4? ITransactionAgents2.DeliveringAgent => DeliveringAgent;
+    IBranchAndFinancialInstitutionIdentification4? ITransactionAgents2.CreditorAgent =>
+        CreditorAgent;
+    IBranchAndFinancialInstitutionIdentification4? ITransactionAgents2.IntermediaryAgent1 =>
+        IntermediaryAgent1;
+    IBranchAndFinancialInstitutionIdentification4? ITransactionAgents2.IntermediaryAgent2 =>
+        IntermediaryAgent2;
+    IBranchAndFinancialInstitutionIdentification4? ITransactionAgents2.IntermediaryAgent3 =>
+        IntermediaryAgent3;
+    IBranchAndFinancialInstitutionIdentification4? ITransactionAgents2.ReceivingAgent =>
+        ReceivingAgent;
+    IBranchAndFinancialInstitutionIdentification4? ITransactionAgents2.DeliveringAgent =>
+        DeliveringAgent;
     IBranchAndFinancialInstitutionIdentification4? ITransactionAgents2.IssuingAgent => IssuingAgent;
-    IBranchAndFinancialInstitutionIdentification4? ITransactionAgents2.SettlementPlace => SettlementPlace;
+    IBranchAndFinancialInstitutionIdentification4? ITransactionAgents2.SettlementPlace =>
+        SettlementPlace;
     IEnumerable<IProprietaryAgent2> ITransactionAgents2.Proprietary => Proprietary;
 }

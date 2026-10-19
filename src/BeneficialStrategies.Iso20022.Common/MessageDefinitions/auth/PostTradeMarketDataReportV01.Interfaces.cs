@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.auth;
 public partial record PostTradeMarketDataReportV01 : IPostTradeMarketDataReportV01
 {
     ISecuritiesMarketReportHeader5? IPostTradeMarketDataReportV01.ReportHeader => ReportHeader;
-    IEnumerable<IPostTradeReport1Choice> IPostTradeMarketDataReportV01.PostTradeReport => PostTradeReport;
-    IEnumerable<ISupplementaryData1> IPostTradeMarketDataReportV01.SupplementaryData => SupplementaryData;
+    IEnumerable<IPostTradeReport1Choice> IPostTradeMarketDataReportV01.PostTradeReport =>
+        PostTradeReport;
+    IEnumerable<ISupplementaryData1> IPostTradeMarketDataReportV01.SupplementaryData =>
+        SupplementaryData;
 }

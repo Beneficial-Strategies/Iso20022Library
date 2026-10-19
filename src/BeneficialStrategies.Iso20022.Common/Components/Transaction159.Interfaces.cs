@@ -14,5 +14,6 @@ public partial record Transaction159 : ITransaction159
     ISystem3? ITransaction159.PaymentFrom => PaymentFrom;
     IPaymentInstruction47? ITransaction159.Payment => Payment;
     ICashAccountAndEntry5? ITransaction159.AccountEntry => AccountEntry;
-    ISecuritiesTransactionReferences1? ITransaction159.SecuritiesTransactionReferences => SecuritiesTransactionReferences;
+    ISecuritiesTransactionReferences1? ITransaction159.SecuritiesTransactionReferences =>
+        SecuritiesTransactionReferences;
 }

@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record PaymentTransactionStatus1 : IPaymentTransactionStatus1
 {
     ITransactionStatus1Choice IPaymentTransactionStatus1.Status => Status;
-    IEnumerable<IStatusReasonInformation12> IPaymentTransactionStatus1.StatusReasonInformation => StatusReasonInformation;
+    IEnumerable<IStatusReasonInformation12> IPaymentTransactionStatus1.StatusReasonInformation =>
+        StatusReasonInformation;
 }

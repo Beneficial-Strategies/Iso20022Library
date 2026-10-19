@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification6Choice;
 public partial record LongBusinessIdentification : ILongBusinessIdentification
 {
     IPaymentOrigin1Choice? ILongBusinessIdentification.PaymentMethod => PaymentMethod;
-    IBranchAndFinancialInstitutionIdentification6 ILongBusinessIdentification.InstructingAgent => InstructingAgent;
-    IBranchAndFinancialInstitutionIdentification6 ILongBusinessIdentification.InstructedAgent => InstructedAgent;
+    IBranchAndFinancialInstitutionIdentification6 ILongBusinessIdentification.InstructingAgent =>
+        InstructingAgent;
+    IBranchAndFinancialInstitutionIdentification6 ILongBusinessIdentification.InstructedAgent =>
+        InstructedAgent;
 }

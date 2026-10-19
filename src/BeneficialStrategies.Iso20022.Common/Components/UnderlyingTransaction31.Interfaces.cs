@@ -10,7 +10,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record UnderlyingTransaction31 : IUnderlyingTransaction31
 {
-    IOriginalGroupHeader14? IUnderlyingTransaction31.OriginalGroupInformationAndStatus => OriginalGroupInformationAndStatus;
-    IEnumerable<IOriginalPaymentInstruction43> IUnderlyingTransaction31.OriginalPaymentInformationAndStatus => OriginalPaymentInformationAndStatus;
-    IEnumerable<IPaymentTransaction148> IUnderlyingTransaction31.TransactionInformationAndStatus => TransactionInformationAndStatus;
+    IOriginalGroupHeader14? IUnderlyingTransaction31.OriginalGroupInformationAndStatus =>
+        OriginalGroupInformationAndStatus;
+    IEnumerable<IOriginalPaymentInstruction43> IUnderlyingTransaction31.OriginalPaymentInformationAndStatus =>
+        OriginalPaymentInformationAndStatus;
+    IEnumerable<IPaymentTransaction148> IUnderlyingTransaction31.TransactionInformationAndStatus =>
+        TransactionInformationAndStatus;
 }

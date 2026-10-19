@@ -12,11 +12,16 @@ public partial record FundCashForecast3 : IFundCashForecast3
 {
     IDateAndDateTimeChoice IFundCashForecast3.TradeDateTime => TradeDateTime;
     IDateAndDateTimeChoice? IFundCashForecast3.PreviousTradeDateTime => PreviousTradeDateTime;
-    IFinancialInstrument9 IFundCashForecast3.FinancialInstrumentDetails => FinancialInstrumentDetails;
+    IFinancialInstrument9 IFundCashForecast3.FinancialInstrumentDetails =>
+        FinancialInstrumentDetails;
     IFinancialInstrumentQuantity1? IFundCashForecast3.TotalUnitsNumber => TotalUnitsNumber;
-    IFinancialInstrumentQuantity1? IFundCashForecast3.PreviousTotalUnitsNumber => PreviousTotalUnitsNumber;
-    IEnumerable<ActiveOrHistoricCurrencyCode> IFundCashForecast3.InvestmentCurrency => InvestmentCurrency;
+    IFinancialInstrumentQuantity1? IFundCashForecast3.PreviousTotalUnitsNumber =>
+        PreviousTotalUnitsNumber;
+    IEnumerable<ActiveOrHistoricCurrencyCode> IFundCashForecast3.InvestmentCurrency =>
+        InvestmentCurrency;
     IEnumerable<ICashInForecast4> IFundCashForecast3.CashInForecastDetails => CashInForecastDetails;
-    IEnumerable<ICashOutForecast4> IFundCashForecast3.CashOutForecastDetails => CashOutForecastDetails;
-    IEnumerable<INetCashForecast2> IFundCashForecast3.NetCashForecastDetails => NetCashForecastDetails;
+    IEnumerable<ICashOutForecast4> IFundCashForecast3.CashOutForecastDetails =>
+        CashOutForecastDetails;
+    IEnumerable<INetCashForecast2> IFundCashForecast3.NetCashForecastDetails =>
+        NetCashForecastDetails;
 }

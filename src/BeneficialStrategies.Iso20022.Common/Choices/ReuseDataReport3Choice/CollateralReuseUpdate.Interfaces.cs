@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Choices.ReuseDataReport3Choice;
 public partial record CollateralReuseUpdate : ICollateralReuseUpdate
 {
     ICounterpartyData46 ICollateralReuseUpdate.CounterpartyData => CounterpartyData;
-    IEnumerable<ICollateralType12> ICollateralReuseUpdate.CollateralComponent => CollateralComponent;
+    IEnumerable<ICollateralType12> ICollateralReuseUpdate.CollateralComponent =>
+        CollateralComponent;
     IEnumerable<IFundingSource1> ICollateralReuseUpdate.FundingSource => FundingSource;
     IEnumerable<ISupplementaryData1> ICollateralReuseUpdate.SupplementaryData => SupplementaryData;
 }

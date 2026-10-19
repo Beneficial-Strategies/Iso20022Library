@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Position Set Aggregated2Choice.
 /// </summary>
 [IsoId("_jPMiIRTjEe61h9tfoUrWyw")]
-public interface IPositionSetAggregated2Choice : IIsoChoice
-{
-}
+public interface IPositionSetAggregated2Choice : IIsoChoice { }

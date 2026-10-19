@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 public partial record CreateReservationV03 : ICreateReservationV03
 {
     IMessageHeader1 ICreateReservationV03.MessageHeader => MessageHeader;
-    IReservationIdentification4 ICreateReservationV03.ReservationIdentification => ReservationIdentification;
+    IReservationIdentification4 ICreateReservationV03.ReservationIdentification =>
+        ReservationIdentification;
     IReservation4 ICreateReservationV03.ValueSet => ValueSet;
     IEnumerable<ISupplementaryData1> ICreateReservationV03.SupplementaryData => SupplementaryData;
 }

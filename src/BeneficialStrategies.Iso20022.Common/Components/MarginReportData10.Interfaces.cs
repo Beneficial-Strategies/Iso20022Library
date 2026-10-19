@@ -10,11 +10,15 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record MarginReportData10 : IMarginReportData10
 {
-    ITradeCounterpartyReport20 IMarginReportData10.CounterpartyIdentification => CounterpartyIdentification;
-    IUniqueTransactionIdentifier2Choice? IMarginReportData10.TransactionIdentification => TransactionIdentification;
+    ITradeCounterpartyReport20 IMarginReportData10.CounterpartyIdentification =>
+        CounterpartyIdentification;
+    IUniqueTransactionIdentifier2Choice? IMarginReportData10.TransactionIdentification =>
+        TransactionIdentification;
     IMarginCollateralReport5 IMarginReportData10.Collateral => Collateral;
-    IPostedMarginOrCollateral6? IMarginReportData10.PostedMarginOrCollateral => PostedMarginOrCollateral;
-    IReceivedMarginOrCollateral6? IMarginReportData10.ReceivedMarginOrCollateral => ReceivedMarginOrCollateral;
+    IPostedMarginOrCollateral6? IMarginReportData10.PostedMarginOrCollateral =>
+        PostedMarginOrCollateral;
+    IReceivedMarginOrCollateral6? IMarginReportData10.ReceivedMarginOrCollateral =>
+        ReceivedMarginOrCollateral;
     IContractModification8? IMarginReportData10.ContractModification => ContractModification;
     ITechnicalAttributes6? IMarginReportData10.TechnicalAttributes => TechnicalAttributes;
     IEnumerable<ISupplementaryData1> IMarginReportData10.SupplementaryData => SupplementaryData;

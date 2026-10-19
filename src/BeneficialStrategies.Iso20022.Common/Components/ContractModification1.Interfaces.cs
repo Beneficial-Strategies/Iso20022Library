@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record ContractModification1 : IContractModification1
-{
-}
+public partial record ContractModification1 : IContractModification1 { }

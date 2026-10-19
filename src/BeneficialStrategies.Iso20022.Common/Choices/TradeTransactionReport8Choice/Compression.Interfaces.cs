@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeTransactionReport8Choice;
 
 public partial record Compression : ICompression
 {
-    IEnumerable<ICounterpartySpecificData22> ICompression.CounterpartySpecificData => CounterpartySpecificData;
+    IEnumerable<ICounterpartySpecificData22> ICompression.CounterpartySpecificData =>
+        CounterpartySpecificData;
     ICommonTradeDataReport34 ICompression.CommonTradeData => CommonTradeData;
     ITechnicalAttributes1? ICompression.TechnicalAttributes => TechnicalAttributes;
     IEnumerable<ISupplementaryData1> ICompression.SupplementaryData => SupplementaryData;

@@ -7,6 +7,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice of a trading system report either as a new report or as a cancellation report.</summary>
 [IsoId("_9MVFoGFcEfC-1NkZ9TkdKA")]
-public interface ITradingSystemReport1Choice : IIsoChoice
-{
-}
+public interface ITradingSystemReport1Choice : IIsoChoice { }

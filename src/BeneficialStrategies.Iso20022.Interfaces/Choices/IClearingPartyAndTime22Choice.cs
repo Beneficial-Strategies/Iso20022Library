@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the central counterparty intended clearing time.
 /// </summary>
 [IsoId("_mkgZsRZOEe2QNcZTDeoKnQ")]
-public interface IClearingPartyAndTime22Choice : IIsoChoice
-{
-}
+public interface IClearingPartyAndTime22Choice : IIsoChoice { }

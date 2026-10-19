@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Order Restriction1Choice.
 /// </summary>
 [IsoId("_UVj6EGseEe25qph5Y8_eYQ")]
-public interface IOrderRestriction1Choice : IIsoChoice
-{
-}
+public interface IOrderRestriction1Choice : IIsoChoice { }

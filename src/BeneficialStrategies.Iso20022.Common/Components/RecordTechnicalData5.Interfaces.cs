@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record RecordTechnicalData5 : IRecordTechnicalData5
 {
-    IEnumerable<ExternalAuthorityExchangeReason1Code> IRecordTechnicalData5.ExchangeReason => ExchangeReason;
+    IEnumerable<ExternalAuthorityExchangeReason1Code> IRecordTechnicalData5.ExchangeReason =>
+        ExchangeReason;
 }

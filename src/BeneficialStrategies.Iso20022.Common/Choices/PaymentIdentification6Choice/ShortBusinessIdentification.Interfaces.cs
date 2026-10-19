@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification6Choice;
 
 public partial record ShortBusinessIdentification : IShortBusinessIdentification
 {
-    IBranchAndFinancialInstitutionIdentification6 IShortBusinessIdentification.InstructingAgent => InstructingAgent;
+    IBranchAndFinancialInstitutionIdentification6 IShortBusinessIdentification.InstructingAgent =>
+        InstructingAgent;
 }

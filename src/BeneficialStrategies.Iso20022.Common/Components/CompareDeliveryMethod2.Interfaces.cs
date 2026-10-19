@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record CompareDeliveryMethod2 : ICompareDeliveryMethod2
-{
-}
+public partial record CompareDeliveryMethod2 : ICompareDeliveryMethod2 { }

@@ -7,6 +7,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice between direct debit mandate and credit transfer mandate data.</summary>
 [IsoId("_MIUXY7vHEfCYYbmqNrQFSg")]
-public interface IMandateRelatedData4Choice : IIsoChoice
-{
-}
+public interface IMandateRelatedData4Choice : IIsoChoice { }

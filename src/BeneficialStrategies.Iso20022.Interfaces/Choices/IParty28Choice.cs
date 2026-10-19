@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Identification of a person, an organisation or a financial institution.
 /// </summary>
 [IsoId("_b_UWEdnSEeS--7IJLPC9lw")]
-public interface IParty28Choice : IIsoChoice
-{
-}
+public interface IParty28Choice : IIsoChoice { }

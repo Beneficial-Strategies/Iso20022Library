@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record TransactionReportOrError6Choice_ : ITransactionReportOrError6Choice
-{
-}
+public abstract partial record TransactionReportOrError6Choice_
+    : ITransactionReportOrError6Choice { }

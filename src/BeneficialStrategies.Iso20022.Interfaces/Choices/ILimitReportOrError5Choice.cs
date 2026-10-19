@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Limit Report Or Error5Choice.
 /// </summary>
 [IsoId("_5SQgoTEyEe6g-ffJsqGiSA")]
-public interface ILimitReportOrError5Choice : IIsoChoice
-{
-}
+public interface ILimitReportOrError5Choice : IIsoChoice { }

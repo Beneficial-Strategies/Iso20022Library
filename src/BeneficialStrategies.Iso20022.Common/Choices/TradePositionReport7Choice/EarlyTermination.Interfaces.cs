@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TradePositionReport7Choice;
 
 public partial record EarlyTermination : IEarlyTermination
 {
-    IEnumerable<ICounterpartySpecificData22> IEarlyTermination.CounterpartySpecificData => CounterpartySpecificData;
+    IEnumerable<ICounterpartySpecificData22> IEarlyTermination.CounterpartySpecificData =>
+        CounterpartySpecificData;
     ICommonTradeDataReport35 IEarlyTermination.CommonTradeData => CommonTradeData;
     ITechnicalAttributes1? IEarlyTermination.TechnicalAttributes => TechnicalAttributes;
     IEnumerable<ISupplementaryData1> IEarlyTermination.SupplementaryData => SupplementaryData;

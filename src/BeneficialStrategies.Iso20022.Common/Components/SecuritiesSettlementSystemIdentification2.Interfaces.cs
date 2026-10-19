@@ -8,7 +8,9 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record SecuritiesSettlementSystemIdentification2 : ISecuritiesSettlementSystemIdentification2
+public partial record SecuritiesSettlementSystemIdentification2
+    : ISecuritiesSettlementSystemIdentification2
 {
-    IEnumerable<IContact9> ISecuritiesSettlementSystemIdentification2.ResponsibleParty => ResponsibleParty;
+    IEnumerable<IContact9> ISecuritiesSettlementSystemIdentification2.ResponsibleParty =>
+        ResponsibleParty;
 }

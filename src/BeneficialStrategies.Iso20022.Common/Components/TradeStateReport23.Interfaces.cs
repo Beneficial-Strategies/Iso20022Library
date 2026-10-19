@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TradeStateReport23 : ITradeStateReport23
 {
-    IEnumerable<ICounterpartySpecificData36> ITradeStateReport23.CounterpartySpecificData => CounterpartySpecificData;
+    IEnumerable<ICounterpartySpecificData36> ITradeStateReport23.CounterpartySpecificData =>
+        CounterpartySpecificData;
     ICommonTradeDataReport72 ITradeStateReport23.CommonTradeData => CommonTradeData;
     ITechnicalAttributes5? ITradeStateReport23.TechnicalAttributes => TechnicalAttributes;
     IDisseminationData1? ITradeStateReport23.PublicDisseminationData => PublicDisseminationData;

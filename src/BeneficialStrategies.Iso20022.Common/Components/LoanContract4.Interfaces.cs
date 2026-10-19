@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record LoanContract4 : ILoanContract4
 {
-    IDocumentIdentification22 ILoanContract4.ContractDocumentIdentification => ContractDocumentIdentification;
+    IDocumentIdentification22 ILoanContract4.ContractDocumentIdentification =>
+        ContractDocumentIdentification;
     IEnumerable<ITradeParty6> ILoanContract4.Buyer => Buyer;
     IEnumerable<ITradeParty6> ILoanContract4.Seller => Seller;
     ISpecialCondition1? ILoanContract4.SpecialConditions => SpecialConditions;

@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record EndOfDayRequirement1 : IEndOfDayRequirement1
 {
-    IAmountAndDirection102? IEndOfDayRequirement1.VariationMarginRequirement => VariationMarginRequirement;
+    IAmountAndDirection102? IEndOfDayRequirement1.VariationMarginRequirement =>
+        VariationMarginRequirement;
 }

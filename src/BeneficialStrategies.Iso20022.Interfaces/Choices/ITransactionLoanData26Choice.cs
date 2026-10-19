@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Details of the loan used for financing the transaction.
 /// </summary>
 [IsoId("_388OoXz2EeurrJrNxcsszQ")]
-public interface ITransactionLoanData26Choice : IIsoChoice
-{
-}
+public interface ITransactionLoanData26Choice : IIsoChoice { }

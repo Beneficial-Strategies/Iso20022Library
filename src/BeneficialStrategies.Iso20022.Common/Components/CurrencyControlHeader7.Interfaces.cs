@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CurrencyControlHeader7 : ICurrencyControlHeader7
 {
     IPartyIdentification272 ICurrencyControlHeader7.ReceivingParty => ReceivingParty;
-    IBranchAndFinancialInstitutionIdentification8 ICurrencyControlHeader7.RegistrationAgent => RegistrationAgent;
+    IBranchAndFinancialInstitutionIdentification8 ICurrencyControlHeader7.RegistrationAgent =>
+        RegistrationAgent;
 }

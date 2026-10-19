@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Indicates the schedule or frequency of the derivative transactions.
 /// </summary>
 [IsoId("_VVI-wCJDEe2zWP9pqvmqdw")]
-public interface IQuantityOrTerm1Choice : IIsoChoice
-{
-}
+public interface IQuantityOrTerm1Choice : IIsoChoice { }

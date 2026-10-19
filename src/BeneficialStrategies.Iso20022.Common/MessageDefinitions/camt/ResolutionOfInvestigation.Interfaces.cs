@@ -13,5 +13,6 @@ public partial record ResolutionOfInvestigation : IResolutionOfInvestigation
     ICaseAssignment IResolutionOfInvestigation.Assignment => Assignment;
     ICase IResolutionOfInvestigation.ResolvedCase => ResolvedCase;
     IInvestigationStatusChoice? IResolutionOfInvestigation.Status => Status;
-    IPaymentInstructionExtract? IResolutionOfInvestigation.CorrectionTransaction => CorrectionTransaction;
+    IPaymentInstructionExtract? IResolutionOfInvestigation.CorrectionTransaction =>
+        CorrectionTransaction;
 }

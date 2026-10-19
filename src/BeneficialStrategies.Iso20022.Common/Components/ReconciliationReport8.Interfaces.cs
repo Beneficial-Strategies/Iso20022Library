@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ReconciliationReport8 : IReconciliationReport8
 {
-    ITradeTransactionIdentification19 IReconciliationReport8.TransactionIdentification => TransactionIdentification;
-    IReconciliationStatus8Choice IReconciliationReport8.ReconciliationStatus => ReconciliationStatus;
+    ITradeTransactionIdentification19 IReconciliationReport8.TransactionIdentification =>
+        TransactionIdentification;
+    IReconciliationStatus8Choice IReconciliationReport8.ReconciliationStatus =>
+        ReconciliationStatus;
 }

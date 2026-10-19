@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Defines commodity attributes of a derivative where the type is agricultural.
 /// </summary>
 [IsoId("_VQFYWw2jEeW72qLtWESimw")]
-public interface IAssetClassCommodityAgricultural1Choice : IIsoChoice
-{
-}
+public interface IAssetClassCommodityAgricultural1Choice : IIsoChoice { }

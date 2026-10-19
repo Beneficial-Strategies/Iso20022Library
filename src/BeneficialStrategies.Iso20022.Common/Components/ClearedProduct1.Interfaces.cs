@@ -12,7 +12,8 @@ public partial record ClearedProduct1 : IClearedProduct1
 {
     IEnumerable<string> IClearedProduct1.TradingVenue => TradingVenue;
     IGenericIdentification168 IClearedProduct1.CCPProductIdentification => CCPProductIdentification;
-    IGenericIdentification168? IClearedProduct1.UniversalProductIdentification => UniversalProductIdentification;
+    IGenericIdentification168? IClearedProduct1.UniversalProductIdentification =>
+        UniversalProductIdentification;
     IProduct1Choice IClearedProduct1.Product => Product;
     IOpenInterest1 IClearedProduct1.OpenInterest => OpenInterest;
 }

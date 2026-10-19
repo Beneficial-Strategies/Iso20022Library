@@ -12,13 +12,19 @@ public partial record FundCashForecast4 : IFundCashForecast4
 {
     IDateAndDateTimeChoice IFundCashForecast4.TradeDateTime => TradeDateTime;
     IDateAndDateTimeChoice? IFundCashForecast4.PreviousTradeDateTime => PreviousTradeDateTime;
-    IFinancialInstrument9 IFundCashForecast4.FinancialInstrumentDetails => FinancialInstrumentDetails;
+    IFinancialInstrument9 IFundCashForecast4.FinancialInstrumentDetails =>
+        FinancialInstrumentDetails;
     IFinancialInstrumentQuantity1? IFundCashForecast4.TotalUnitsNumber => TotalUnitsNumber;
-    IFinancialInstrumentQuantity1? IFundCashForecast4.PreviousTotalUnitsNumber => PreviousTotalUnitsNumber;
-    IEnumerable<ActiveOrHistoricCurrencyCode> IFundCashForecast4.InvestmentCurrency => InvestmentCurrency;
-    IEnumerable<INetCashForecast2> IFundCashForecast4.NetCashForecastDetails => NetCashForecastDetails;
+    IFinancialInstrumentQuantity1? IFundCashForecast4.PreviousTotalUnitsNumber =>
+        PreviousTotalUnitsNumber;
+    IEnumerable<ActiveOrHistoricCurrencyCode> IFundCashForecast4.InvestmentCurrency =>
+        InvestmentCurrency;
+    IEnumerable<INetCashForecast2> IFundCashForecast4.NetCashForecastDetails =>
+        NetCashForecastDetails;
     IEnumerable<IBreakdownByCountry1> IFundCashForecast4.BreakdownByCountry => BreakdownByCountry;
-    IEnumerable<IBreakdownByCurrency1> IFundCashForecast4.BreakdownByCurrency => BreakdownByCurrency;
+    IEnumerable<IBreakdownByCurrency1> IFundCashForecast4.BreakdownByCurrency =>
+        BreakdownByCurrency;
     IEnumerable<IBreakdownByParty1> IFundCashForecast4.BreakdownByParty => BreakdownByParty;
-    IEnumerable<IBreakdownByUserDefinedParameter1> IFundCashForecast4.BreakdownByUserDefinedParameter => BreakdownByUserDefinedParameter;
+    IEnumerable<IBreakdownByUserDefinedParameter1> IFundCashForecast4.BreakdownByUserDefinedParameter =>
+        BreakdownByUserDefinedParameter;
 }

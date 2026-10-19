@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.ExchangeRateOrPercentage1Choice;
 
-public partial record Percentage : IPercentage
-{
-}
+public partial record Percentage : IPercentage { }

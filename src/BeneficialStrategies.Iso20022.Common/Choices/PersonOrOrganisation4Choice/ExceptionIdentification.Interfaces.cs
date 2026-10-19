@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PersonOrOrganisation4Choice;
 
-public partial record ExceptionIdentification : IExceptionIdentification
-{
-}
+public partial record ExceptionIdentification : IExceptionIdentification { }

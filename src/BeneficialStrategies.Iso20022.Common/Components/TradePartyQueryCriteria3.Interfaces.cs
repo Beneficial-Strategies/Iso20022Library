@@ -10,8 +10,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TradePartyQueryCriteria3 : ITradePartyQueryCriteria3
 {
-    ITradePartyIdentificationQuery8? ITradePartyQueryCriteria3.ReportingCounterparty => ReportingCounterparty;
-    ITradePartyIdentificationQuery8? ITradePartyQueryCriteria3.OtherCounterparty => OtherCounterparty;
+    ITradePartyIdentificationQuery8? ITradePartyQueryCriteria3.ReportingCounterparty =>
+        ReportingCounterparty;
+    ITradePartyIdentificationQuery8? ITradePartyQueryCriteria3.OtherCounterparty =>
+        OtherCounterparty;
     ITradePartyIdentificationQuery8? ITradePartyQueryCriteria3.Beneficiary => Beneficiary;
     ITradePartyIdentificationQuery8? ITradePartyQueryCriteria3.SubmittingAgent => SubmittingAgent;
     ITradePartyIdentificationQuery8? ITradePartyQueryCriteria3.Broker => Broker;

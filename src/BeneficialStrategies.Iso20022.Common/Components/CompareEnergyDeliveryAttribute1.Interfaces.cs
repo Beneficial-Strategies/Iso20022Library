@@ -10,11 +10,15 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CompareEnergyDeliveryAttribute1 : ICompareEnergyDeliveryAttribute1
 {
-    IEnumerable<ICompareTimePeriod2> ICompareEnergyDeliveryAttribute1.EnergyDeliveryInterval => EnergyDeliveryInterval;
+    IEnumerable<ICompareTimePeriod2> ICompareEnergyDeliveryAttribute1.EnergyDeliveryInterval =>
+        EnergyDeliveryInterval;
     ICompareDatePeriod2? ICompareEnergyDeliveryAttribute1.EnergyDate => EnergyDate;
     ICompareDurationType1? ICompareEnergyDeliveryAttribute1.EnergyDuration => EnergyDuration;
     IEnumerable<ICompareWeekDay1> ICompareEnergyDeliveryAttribute1.EnergyWeekDay => EnergyWeekDay;
-    ICompareLongFraction19DecimalNumber1? ICompareEnergyDeliveryAttribute1.EnergyDeliveryCapacity => EnergyDeliveryCapacity;
-    ICompareEnergyQuantityUnit1? ICompareEnergyDeliveryAttribute1.EnergyQuantityUnit => EnergyQuantityUnit;
-    ICompareAmountAndDirection3? ICompareEnergyDeliveryAttribute1.EnergyPriceTimeIntervalQuantity => EnergyPriceTimeIntervalQuantity;
+    ICompareLongFraction19DecimalNumber1? ICompareEnergyDeliveryAttribute1.EnergyDeliveryCapacity =>
+        EnergyDeliveryCapacity;
+    ICompareEnergyQuantityUnit1? ICompareEnergyDeliveryAttribute1.EnergyQuantityUnit =>
+        EnergyQuantityUnit;
+    ICompareAmountAndDirection3? ICompareEnergyDeliveryAttribute1.EnergyPriceTimeIntervalQuantity =>
+        EnergyPriceTimeIntervalQuantity;
 }

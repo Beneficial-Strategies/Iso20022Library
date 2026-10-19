@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature4Choice;
 
-public partial record CentralCounterParty : ICentralCounterParty
-{
-}
+public partial record CentralCounterParty : ICentralCounterParty { }

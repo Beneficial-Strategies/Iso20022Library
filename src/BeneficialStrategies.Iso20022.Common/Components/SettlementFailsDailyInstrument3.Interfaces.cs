@@ -11,12 +11,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SettlementFailsDailyInstrument3 : ISettlementFailsDailyInstrument3
 {
     ISettlementFailsDailyTransactionType1Choice ISettlementFailsDailyInstrument3.Equity => Equity;
-    ISettlementFailsDailyTransactionType1Choice ISettlementFailsDailyInstrument3.SovereignDebt => SovereignDebt;
+    ISettlementFailsDailyTransactionType1Choice ISettlementFailsDailyInstrument3.SovereignDebt =>
+        SovereignDebt;
     ISettlementFailsDailyTransactionType1Choice ISettlementFailsDailyInstrument3.Bond => Bond;
-    ISettlementFailsDailyTransactionType1Choice ISettlementFailsDailyInstrument3.OtherTransferableSecurities => OtherTransferableSecurities;
-    ISettlementFailsDailyTransactionType1Choice ISettlementFailsDailyInstrument3.ExchangeTradedFunds => ExchangeTradedFunds;
-    ISettlementFailsDailyTransactionType1Choice ISettlementFailsDailyInstrument3.CollectiveInvestmentUndertakings => CollectiveInvestmentUndertakings;
-    ISettlementFailsDailyTransactionType1Choice ISettlementFailsDailyInstrument3.MoneyMarketInstrument => MoneyMarketInstrument;
-    ISettlementFailsDailyTransactionType1Choice ISettlementFailsDailyInstrument3.EmissionAllowance => EmissionAllowance;
+    ISettlementFailsDailyTransactionType1Choice ISettlementFailsDailyInstrument3.OtherTransferableSecurities =>
+        OtherTransferableSecurities;
+    ISettlementFailsDailyTransactionType1Choice ISettlementFailsDailyInstrument3.ExchangeTradedFunds =>
+        ExchangeTradedFunds;
+    ISettlementFailsDailyTransactionType1Choice ISettlementFailsDailyInstrument3.CollectiveInvestmentUndertakings =>
+        CollectiveInvestmentUndertakings;
+    ISettlementFailsDailyTransactionType1Choice ISettlementFailsDailyInstrument3.MoneyMarketInstrument =>
+        MoneyMarketInstrument;
+    ISettlementFailsDailyTransactionType1Choice ISettlementFailsDailyInstrument3.EmissionAllowance =>
+        EmissionAllowance;
     ISettlementFailsDailyTransactionType1Choice ISettlementFailsDailyInstrument3.Other => Other;
 }

@@ -10,9 +10,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record AmountAndCurrencyExchange3 : IAmountAndCurrencyExchange3
 {
-    IAmountAndCurrencyExchangeDetails3? IAmountAndCurrencyExchange3.InstructedAmount => InstructedAmount;
-    IAmountAndCurrencyExchangeDetails3? IAmountAndCurrencyExchange3.TransactionAmount => TransactionAmount;
-    IAmountAndCurrencyExchangeDetails3? IAmountAndCurrencyExchange3.CounterValueAmount => CounterValueAmount;
-    IAmountAndCurrencyExchangeDetails3? IAmountAndCurrencyExchange3.AnnouncedPostingAmount => AnnouncedPostingAmount;
-    IEnumerable<IAmountAndCurrencyExchangeDetails4> IAmountAndCurrencyExchange3.ProprietaryAmount => ProprietaryAmount;
+    IAmountAndCurrencyExchangeDetails3? IAmountAndCurrencyExchange3.InstructedAmount =>
+        InstructedAmount;
+    IAmountAndCurrencyExchangeDetails3? IAmountAndCurrencyExchange3.TransactionAmount =>
+        TransactionAmount;
+    IAmountAndCurrencyExchangeDetails3? IAmountAndCurrencyExchange3.CounterValueAmount =>
+        CounterValueAmount;
+    IAmountAndCurrencyExchangeDetails3? IAmountAndCurrencyExchange3.AnnouncedPostingAmount =>
+        AnnouncedPostingAmount;
+    IEnumerable<IAmountAndCurrencyExchangeDetails4> IAmountAndCurrencyExchange3.ProprietaryAmount =>
+        ProprietaryAmount;
 }

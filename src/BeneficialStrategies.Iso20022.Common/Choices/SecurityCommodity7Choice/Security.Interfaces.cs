@@ -22,6 +22,7 @@ public partial record Security : ISecurity
     ICompareUnitPrice6? ISecurity.UnitPrice => UnitPrice;
     ICompareTrueFalseIndicator3? ISecurity.ExclusiveArrangement => ExclusiveArrangement;
     ICompareAmountAndDirection2? ISecurity.MarketValue => MarketValue;
-    ICompareTrueFalseIndicator3? ISecurity.AvailableForCollateralReuse => AvailableForCollateralReuse;
+    ICompareTrueFalseIndicator3? ISecurity.AvailableForCollateralReuse =>
+        AvailableForCollateralReuse;
     IComparePercentageRate3? ISecurity.HaircutOrMargin => HaircutOrMargin;
 }

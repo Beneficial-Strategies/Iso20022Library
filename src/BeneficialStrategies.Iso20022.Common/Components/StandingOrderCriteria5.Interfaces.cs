@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record StandingOrderCriteria5 : IStandingOrderCriteria5
 {
-    IEnumerable<IStandingOrderSearchCriteria5> IStandingOrderCriteria5.SearchCriteria => SearchCriteria;
+    IEnumerable<IStandingOrderSearchCriteria5> IStandingOrderCriteria5.SearchCriteria =>
+        SearchCriteria;
     IStandingOrderReturnCriteria1? IStandingOrderCriteria5.ReturnCriteria => ReturnCriteria;
 }

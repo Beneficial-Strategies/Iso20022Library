@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record CompareMICIdentifier2 : ICompareMICIdentifier2
-{
-}
+public partial record CompareMICIdentifier2 : ICompareMICIdentifier2 { }

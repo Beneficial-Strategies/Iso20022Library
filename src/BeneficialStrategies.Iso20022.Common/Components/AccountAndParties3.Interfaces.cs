@@ -12,5 +12,6 @@ public partial record AccountAndParties3 : IAccountAndParties3
 {
     ICashAccount43 IAccountAndParties3.Identification => Identification;
     IInvestigatedParties1Choice IAccountAndParties3.InvestigatedParties => InvestigatedParties;
-    IEnumerable<IAuthorityRequestType1> IAccountAndParties3.AuthorityRequestType => AuthorityRequestType;
+    IEnumerable<IAuthorityRequestType1> IAccountAndParties3.AuthorityRequestType =>
+        AuthorityRequestType;
 }

@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionIdentification1Choice
 
 public partial record CollateralReuse : ICollateralReuse
 {
-    IOrganisationIdentification9Choice ICollateralReuse.ReportingCounterparty => ReportingCounterparty;
-    IOrganisationIdentification9Choice ICollateralReuse.ReportSubmittingEntity => ReportSubmittingEntity;
+    IOrganisationIdentification9Choice ICollateralReuse.ReportingCounterparty =>
+        ReportingCounterparty;
+    IOrganisationIdentification9Choice ICollateralReuse.ReportSubmittingEntity =>
+        ReportSubmittingEntity;
 }

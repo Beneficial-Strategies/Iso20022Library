@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between ISIN and an alternative format for the identification of a financial instrument. ISIN is the preferred format.
 /// </summary>
 [IsoId("_PNQi0YrpEeq91phomTRDDA")]
-public interface ISecurityIdentification36Choice : IIsoChoice
-{
-}
+public interface ISecurityIdentification36Choice : IIsoChoice { }

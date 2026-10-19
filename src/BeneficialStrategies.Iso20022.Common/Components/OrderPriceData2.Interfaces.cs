@@ -12,6 +12,7 @@ public partial record OrderPriceData2 : IOrderPriceData2
 {
     ISecuritiesTransactionPrice2Choice? IOrderPriceData2.LimitPrice => LimitPrice;
     ISecuritiesTransactionPrice2Choice? IOrderPriceData2.StopPrice => StopPrice;
-    ISecuritiesTransactionPrice2Choice? IOrderPriceData2.AdditionalLimitPrice => AdditionalLimitPrice;
+    ISecuritiesTransactionPrice2Choice? IOrderPriceData2.AdditionalLimitPrice =>
+        AdditionalLimitPrice;
     ISecuritiesTransactionPrice2Choice? IOrderPriceData2.PeggedPrice => PeggedPrice;
 }

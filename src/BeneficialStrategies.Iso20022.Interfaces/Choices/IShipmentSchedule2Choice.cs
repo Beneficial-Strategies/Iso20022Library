@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between earliest/latest shipment date and a shipment schedule per sub quantity of line item quantity.
 /// </summary>
 [IsoId("_z9WAAefHEeKNfc-Rw_dPYg")]
-public interface IShipmentSchedule2Choice : IIsoChoice
-{
-}
+public interface IShipmentSchedule2Choice : IIsoChoice { }

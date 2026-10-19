@@ -13,5 +13,6 @@ public partial record TotalTransactions3 : ITotalTransactions3
     INumberAndSumOfTransactions3? ITotalTransactions3.TotalEntries => TotalEntries;
     INumberAndSumOfTransactions1? ITotalTransactions3.TotalCreditEntries => TotalCreditEntries;
     INumberAndSumOfTransactions1? ITotalTransactions3.TotalDebitEntries => TotalDebitEntries;
-    IEnumerable<ITotalsPerBankTransactionCode2> ITotalTransactions3.TotalEntriesPerBankTransactionCode => TotalEntriesPerBankTransactionCode;
+    IEnumerable<ITotalsPerBankTransactionCode2> ITotalTransactions3.TotalEntriesPerBankTransactionCode =>
+        TotalEntriesPerBankTransactionCode;
 }

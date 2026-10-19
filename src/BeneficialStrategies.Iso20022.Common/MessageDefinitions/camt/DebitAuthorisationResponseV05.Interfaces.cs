@@ -13,5 +13,6 @@ public partial record DebitAuthorisationResponseV05 : IDebitAuthorisationRespons
     ICaseAssignment5 IDebitAuthorisationResponseV05.Assignment => Assignment;
     ICase5? IDebitAuthorisationResponseV05.Case => Case;
     IDebitAuthorisationConfirmation2 IDebitAuthorisationResponseV05.Confirmation => Confirmation;
-    IEnumerable<ISupplementaryData1> IDebitAuthorisationResponseV05.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IDebitAuthorisationResponseV05.SupplementaryData =>
+        SupplementaryData;
 }

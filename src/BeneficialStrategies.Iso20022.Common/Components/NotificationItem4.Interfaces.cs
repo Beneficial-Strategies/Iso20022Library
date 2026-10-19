@@ -12,12 +12,15 @@ public partial record NotificationItem4 : INotificationItem4
 {
     ICashAccount24? INotificationItem4.Account => Account;
     IParty12Choice? INotificationItem4.AccountOwner => AccountOwner;
-    IBranchAndFinancialInstitutionIdentification5? INotificationItem4.AccountServicer => AccountServicer;
+    IBranchAndFinancialInstitutionIdentification5? INotificationItem4.AccountServicer =>
+        AccountServicer;
     ICashAccount24? INotificationItem4.RelatedAccount => RelatedAccount;
     IParty12Choice? INotificationItem4.Debtor => Debtor;
     IBranchAndFinancialInstitutionIdentification5? INotificationItem4.DebtorAgent => DebtorAgent;
-    IBranchAndFinancialInstitutionIdentification5? INotificationItem4.IntermediaryAgent => IntermediaryAgent;
+    IBranchAndFinancialInstitutionIdentification5? INotificationItem4.IntermediaryAgent =>
+        IntermediaryAgent;
     IPurpose2Choice? INotificationItem4.Purpose => Purpose;
-    IRemittanceLocation2? INotificationItem4.RelatedRemittanceInformation => RelatedRemittanceInformation;
+    IRemittanceLocation2? INotificationItem4.RelatedRemittanceInformation =>
+        RelatedRemittanceInformation;
     IRemittanceInformation7? INotificationItem4.RemittanceInformation => RemittanceInformation;
 }

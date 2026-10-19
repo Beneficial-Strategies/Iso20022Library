@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record DetailedReportStatistics6 : IDetailedReportStatistics6
 {
-    IEnumerable<INumberOfTransactionsPerValidationRule6> IDetailedReportStatistics6.NumberOfReportsRejectedPerError => NumberOfReportsRejectedPerError;
+    IEnumerable<INumberOfTransactionsPerValidationRule6> IDetailedReportStatistics6.NumberOfReportsRejectedPerError =>
+        NumberOfReportsRejectedPerError;
 }

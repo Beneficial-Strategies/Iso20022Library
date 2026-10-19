@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record RegisteredContractJournal3 : IRegisteredContractJournal3
 {
-    IBranchAndFinancialInstitutionIdentification8 IRegisteredContractJournal3.RegistrationAgent => RegistrationAgent;
-    IDocumentIdentification28? IRegisteredContractJournal3.UniqueIdentification => UniqueIdentification;
+    IBranchAndFinancialInstitutionIdentification8 IRegisteredContractJournal3.RegistrationAgent =>
+        RegistrationAgent;
+    IDocumentIdentification28? IRegisteredContractJournal3.UniqueIdentification =>
+        UniqueIdentification;
     IContractClosureReason1Choice IRegisteredContractJournal3.ClosureReason => ClosureReason;
 }

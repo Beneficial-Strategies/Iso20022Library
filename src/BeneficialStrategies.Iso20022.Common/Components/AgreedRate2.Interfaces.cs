@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record AgreedRate2 : IAgreedRate2
-{
-}
+public partial record AgreedRate2 : IAgreedRate2 { }

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 public partial record CashDepositRequestV01 : ICashDepositRequestV01
 {
     IGroupHeader132 ICashDepositRequestV01.GroupHeader => GroupHeader;
-    IEnumerable<ICashDepositRequest1> ICashDepositRequestV01.CashDepositRequest => CashDepositRequest;
+    IEnumerable<ICashDepositRequest1> ICashDepositRequestV01.CashDepositRequest =>
+        CashDepositRequest;
     IEnumerable<ISupplementaryData1> ICashDepositRequestV01.SupplementaryData => SupplementaryData;
 }

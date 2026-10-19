@@ -10,9 +10,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PositionSetDimensions16 : IPositionSetDimensions16
 {
-    ITradeCounterpartyReport20? IPositionSetDimensions16.CounterpartyIdentification => CounterpartyIdentification;
+    ITradeCounterpartyReport20? IPositionSetDimensions16.CounterpartyIdentification =>
+        CounterpartyIdentification;
     IMarginCollateralReport4? IPositionSetDimensions16.Collateral => Collateral;
-    ISecurityIdentification41Choice? IPositionSetDimensions16.UnderlyingInstrument => UnderlyingInstrument;
+    ISecurityIdentification41Choice? IPositionSetDimensions16.UnderlyingInstrument =>
+        UnderlyingInstrument;
     IMasterAgreement8? IPositionSetDimensions16.MasterAgreement => MasterAgreement;
     IExchangeRateBasis1Choice? IPositionSetDimensions16.ExchangeRateBasis => ExchangeRateBasis;
     ITimeToMaturity1Choice? IPositionSetDimensions16.TimeToMaturity => TimeToMaturity;

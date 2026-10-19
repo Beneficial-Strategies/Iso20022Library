@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Choices.Product1Choice;
 
 public partial record SecuritiesFinancingTransaction : ISecuritiesFinancingTransaction
 {
-    IProductClassification1 ISecuritiesFinancingTransaction.ProductClassification => ProductClassification;
-    IRepurchaseAgreementType1Choice ISecuritiesFinancingTransaction.RepurchaseAgreementType => RepurchaseAgreementType;
+    IProductClassification1 ISecuritiesFinancingTransaction.ProductClassification =>
+        ProductClassification;
+    IRepurchaseAgreementType1Choice ISecuritiesFinancingTransaction.RepurchaseAgreementType =>
+        RepurchaseAgreementType;
 }

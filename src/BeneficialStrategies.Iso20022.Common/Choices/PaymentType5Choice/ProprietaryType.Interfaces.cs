@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PaymentType5Choice;
 
-public partial record ProprietaryType : IProprietaryType
-{
-}
+public partial record ProprietaryType : IProprietaryType { }

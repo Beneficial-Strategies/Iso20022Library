@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record InstrumentReport1Choice_ : IInstrumentReport1Choice
-{
-}
+public abstract partial record InstrumentReport1Choice_ : IInstrumentReport1Choice { }

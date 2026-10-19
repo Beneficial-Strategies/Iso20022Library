@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice defining financial instruments that are either new or have been modified.
 /// </summary>
 [IsoId("_2XCW1Hv0EeanCNPcMT7sSg")]
-public interface ISecuritiesReferenceDeltaStatusReport2Choice : IIsoChoice
-{
-}
+public interface ISecuritiesReferenceDeltaStatusReport2Choice : IIsoChoice { }

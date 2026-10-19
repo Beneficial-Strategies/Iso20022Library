@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 public partial record GetCurrencyExchangeRateV04 : IGetCurrencyExchangeRateV04
 {
     IMessageHeader1 IGetCurrencyExchangeRateV04.MessageHeader => MessageHeader;
-    ICurrencyQueryDefinition3? IGetCurrencyExchangeRateV04.CurrencyQueryDefinition => CurrencyQueryDefinition;
-    IEnumerable<ISupplementaryData1> IGetCurrencyExchangeRateV04.SupplementaryData => SupplementaryData;
+    ICurrencyQueryDefinition3? IGetCurrencyExchangeRateV04.CurrencyQueryDefinition =>
+        CurrencyQueryDefinition;
+    IEnumerable<ISupplementaryData1> IGetCurrencyExchangeRateV04.SupplementaryData =>
+        SupplementaryData;
 }

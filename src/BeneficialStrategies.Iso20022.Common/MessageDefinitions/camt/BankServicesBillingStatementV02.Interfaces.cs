@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 public partial record BankServicesBillingStatementV02 : IBankServicesBillingStatementV02
 {
     IReportHeader3 IBankServicesBillingStatementV02.ReportHeader => ReportHeader;
-    IEnumerable<IStatementGroup2> IBankServicesBillingStatementV02.BillingStatementGroup => BillingStatementGroup;
+    IEnumerable<IStatementGroup2> IBankServicesBillingStatementV02.BillingStatementGroup =>
+        BillingStatementGroup;
 }

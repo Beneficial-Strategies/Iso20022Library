@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Reservation Or Error11Choice.
 /// </summary>
 [IsoId("_6xdpkTEyEe6g-ffJsqGiSA")]
-public interface IReservationOrError11Choice : IIsoChoice
-{
-}
+public interface IReservationOrError11Choice : IIsoChoice { }

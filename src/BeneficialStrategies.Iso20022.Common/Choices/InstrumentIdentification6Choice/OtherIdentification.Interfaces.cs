@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.InstrumentIdentification6Choice;
 
-public partial record OtherIdentification : IOtherIdentification
-{
-}
+public partial record OtherIdentification : IOtherIdentification { }

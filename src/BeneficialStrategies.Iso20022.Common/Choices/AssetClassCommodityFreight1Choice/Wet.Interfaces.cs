@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFreight1Choice;
 
-public partial record Wet : IWet
-{
-}
+public partial record Wet : IWet { }

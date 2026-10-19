@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record MatchingCriteria10 : IMatchingCriteria10
 {
-    ICounterpartyMatchingCriteria4? IMatchingCriteria10.CounterpartyMatchingCriteria => CounterpartyMatchingCriteria;
+    ICounterpartyMatchingCriteria4? IMatchingCriteria10.CounterpartyMatchingCriteria =>
+        CounterpartyMatchingCriteria;
     ILoanMatchingCriteria9? IMatchingCriteria10.LoanMatchingCriteria => LoanMatchingCriteria;
-    ICollateralMatchingCriteria6? IMatchingCriteria10.CollateralMatchingCriteria => CollateralMatchingCriteria;
+    ICollateralMatchingCriteria6? IMatchingCriteria10.CollateralMatchingCriteria =>
+        CollateralMatchingCriteria;
 }

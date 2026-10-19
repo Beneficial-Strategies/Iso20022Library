@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CurrencyControlPackageStatus2 : ICurrencyControlPackageStatus2
 {
-    IEnumerable<IValidationStatusReason2> ICurrencyControlPackageStatus2.StatusReason => StatusReason;
-    IEnumerable<ICurrencyControlRecordStatus2> ICurrencyControlPackageStatus2.RecordStatus => RecordStatus;
+    IEnumerable<IValidationStatusReason2> ICurrencyControlPackageStatus2.StatusReason =>
+        StatusReason;
+    IEnumerable<ICurrencyControlRecordStatus2> ICurrencyControlPackageStatus2.RecordStatus =>
+        RecordStatus;
 }

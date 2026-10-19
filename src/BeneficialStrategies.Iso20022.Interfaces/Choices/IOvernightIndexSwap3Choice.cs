@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a reason for no activity and the overnight index swaps segment transaction details.
 /// </summary>
 [IsoId("_ypcOkaicEeWHO_l3hf2rlA")]
-public interface IOvernightIndexSwap3Choice : IIsoChoice
-{
-}
+public interface IOvernightIndexSwap3Choice : IIsoChoice { }

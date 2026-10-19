@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentificationQuery3Choice;
 
-public partial record NotAvailable : INotAvailable
-{
-}
+public partial record NotAvailable : INotAvailable { }

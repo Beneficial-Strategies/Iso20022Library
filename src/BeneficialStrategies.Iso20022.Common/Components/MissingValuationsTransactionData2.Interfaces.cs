@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record MissingValuationsTransactionData2 : IMissingValuationsTransactionData2
 {
-    ITradeTransactionIdentification24 IMissingValuationsTransactionData2.TransactionIdentification => TransactionIdentification;
+    ITradeTransactionIdentification24 IMissingValuationsTransactionData2.TransactionIdentification =>
+        TransactionIdentification;
     IAmountAndDirection106? IMissingValuationsTransactionData2.ValuationAmount => ValuationAmount;
-    IDateAndDateTime2Choice? IMissingValuationsTransactionData2.ValuationTimeStamp => ValuationTimeStamp;
+    IDateAndDateTime2Choice? IMissingValuationsTransactionData2.ValuationTimeStamp =>
+        ValuationTimeStamp;
 }

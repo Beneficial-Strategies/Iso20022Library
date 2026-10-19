@@ -12,8 +12,11 @@ public partial record OrderInstructionData2 : IOrderInstructionData2
 {
     IEnumerable<OrderStatus11Code> IOrderInstructionData2.OrderStatus => OrderStatus;
     IFinancialInstrumentQuantity25Choice? IOrderInstructionData2.InitialQuantity => InitialQuantity;
-    IFinancialInstrumentQuantity25Choice? IOrderInstructionData2.RemainingQuantity => RemainingQuantity;
-    IFinancialInstrumentQuantity25Choice? IOrderInstructionData2.DisplayedQuantity => DisplayedQuantity;
-    IFinancialInstrumentQuantity25Choice? IOrderInstructionData2.MinimumAcceptableQuantity => MinimumAcceptableQuantity;
+    IFinancialInstrumentQuantity25Choice? IOrderInstructionData2.RemainingQuantity =>
+        RemainingQuantity;
+    IFinancialInstrumentQuantity25Choice? IOrderInstructionData2.DisplayedQuantity =>
+        DisplayedQuantity;
+    IFinancialInstrumentQuantity25Choice? IOrderInstructionData2.MinimumAcceptableQuantity =>
+        MinimumAcceptableQuantity;
     IMinimumExecutable1? IOrderInstructionData2.MinimumExecutable => MinimumExecutable;
 }

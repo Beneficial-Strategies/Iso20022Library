@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record RejectedStatusReason9Choice_ : IRejectedStatusReason9Choice
-{
-}
+public abstract partial record RejectedStatusReason9Choice_ : IRejectedStatusReason9Choice { }

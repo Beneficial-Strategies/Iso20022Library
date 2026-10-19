@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.SequenceRange1Choice;
 
-public partial record NotEqualSequence : INotEqualSequence
-{
-}
+public partial record NotEqualSequence : INotEqualSequence { }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record BalanceStatus2 : IBalanceStatus2
-{
-}
+public partial record BalanceStatus2 : IBalanceStatus2 { }

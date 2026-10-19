@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record OriginalGroupInformation23 : IOriginalGroupInformation23
 {
     ICase2? IOriginalGroupInformation23.Case => Case;
-    IEnumerable<ICancellationReasonInformation3> IOriginalGroupInformation23.CancellationReasonInformation => CancellationReasonInformation;
+    IEnumerable<ICancellationReasonInformation3> IOriginalGroupInformation23.CancellationReasonInformation =>
+        CancellationReasonInformation;
 }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.OrganisationIdentification9Choice;
 
-public partial record AnyBIC : IAnyBIC
-{
-}
+public partial record AnyBIC : IAnyBIC { }

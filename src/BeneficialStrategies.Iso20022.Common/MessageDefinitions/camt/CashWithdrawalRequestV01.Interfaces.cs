@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 public partial record CashWithdrawalRequestV01 : ICashWithdrawalRequestV01
 {
     IGroupHeader133 ICashWithdrawalRequestV01.GroupHeader => GroupHeader;
-    IEnumerable<ICashWithdrawalRequest1> ICashWithdrawalRequestV01.CashWithdrawalRequest => CashWithdrawalRequest;
-    IEnumerable<ISupplementaryData1> ICashWithdrawalRequestV01.SupplementaryData => SupplementaryData;
+    IEnumerable<ICashWithdrawalRequest1> ICashWithdrawalRequestV01.CashWithdrawalRequest =>
+        CashWithdrawalRequest;
+    IEnumerable<ISupplementaryData1> ICashWithdrawalRequestV01.SupplementaryData =>
+        SupplementaryData;
 }

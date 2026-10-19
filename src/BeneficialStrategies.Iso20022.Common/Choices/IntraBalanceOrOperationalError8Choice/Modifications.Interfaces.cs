@@ -12,7 +12,8 @@ public partial record Modifications : IModifications
 {
     ICashAccount38? IModifications.CashAccount => CashAccount;
     ISystemPartyIdentification8? IModifications.CashAccountOwner => CashAccountOwner;
-    IBranchAndFinancialInstitutionIdentification6? IModifications.CashAccountServicer => CashAccountServicer;
+    IBranchAndFinancialInstitutionIdentification6? IModifications.CashAccountServicer =>
+        CashAccountServicer;
     IProcessingStatus71Choice? IModifications.ProcessingStatus => ProcessingStatus;
     IEnumerable<IIntraBalanceModification6> IModifications.Modification => Modification;
 }

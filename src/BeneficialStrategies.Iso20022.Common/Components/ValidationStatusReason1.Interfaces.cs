@@ -12,6 +12,7 @@ public partial record ValidationStatusReason1 : IValidationStatusReason1
 {
     IPartyIdentification77? IValidationStatusReason1.Originator => Originator;
     IStatusReason6Choice? IValidationStatusReason1.Reason => Reason;
-    IEnumerable<IGenericValidationRuleIdentification1> IValidationStatusReason1.ValidationRule => ValidationRule;
+    IEnumerable<IGenericValidationRuleIdentification1> IValidationStatusReason1.ValidationRule =>
+        ValidationRule;
     IEnumerable<Max105Text> IValidationStatusReason1.AdditionalInformation => AdditionalInformation;
 }

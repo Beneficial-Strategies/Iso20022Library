@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record AuctionData2 : IAuctionData2
 {
-    ISecuritiesTransactionPrice21Choice? IAuctionData2.IndicativeAuctionPrice => IndicativeAuctionPrice;
-    IFinancialInstrumentQuantity25Choice? IAuctionData2.IndicativeAuctionVolume => IndicativeAuctionVolume;
+    ISecuritiesTransactionPrice21Choice? IAuctionData2.IndicativeAuctionPrice =>
+        IndicativeAuctionPrice;
+    IFinancialInstrumentQuantity25Choice? IAuctionData2.IndicativeAuctionVolume =>
+        IndicativeAuctionVolume;
 }

@@ -10,8 +10,11 @@ namespace BeneficialStrategies.Iso20022.camt;
 
 public partial record IntraBalanceMovementQueryResponseV01 : IIntraBalanceMovementQueryResponseV01
 {
-    IDocumentIdentification51? IIntraBalanceMovementQueryResponseV01.Identification => Identification;
+    IDocumentIdentification51? IIntraBalanceMovementQueryResponseV01.Identification =>
+        Identification;
     IPagination1 IIntraBalanceMovementQueryResponseV01.Pagination => Pagination;
-    IMovementReport1 IIntraBalanceMovementQueryResponseV01.ReportGeneralDetails => ReportGeneralDetails;
-    IIntraBalanceOrOperationalError7Choice? IIntraBalanceMovementQueryResponseV01.ReportOrError => ReportOrError;
+    IMovementReport1 IIntraBalanceMovementQueryResponseV01.ReportGeneralDetails =>
+        ReportGeneralDetails;
+    IIntraBalanceOrOperationalError7Choice? IIntraBalanceMovementQueryResponseV01.ReportOrError =>
+        ReportOrError;
 }

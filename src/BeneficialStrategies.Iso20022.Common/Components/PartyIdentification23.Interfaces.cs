@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PartyIdentification23 : IPartyIdentification23
 {
-    IGenericIdentification1 IPartyIdentification23.ProprietaryIdentification => ProprietaryIdentification;
+    IGenericIdentification1 IPartyIdentification23.ProprietaryIdentification =>
+        ProprietaryIdentification;
     INameAndAddress5? IPartyIdentification23.NameAndAddress => NameAndAddress;
 }

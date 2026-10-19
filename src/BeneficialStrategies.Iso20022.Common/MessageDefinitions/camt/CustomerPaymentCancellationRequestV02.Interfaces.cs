@@ -13,6 +13,8 @@ public partial record CustomerPaymentCancellationRequestV02 : ICustomerPaymentCa
     ICaseAssignment3 ICustomerPaymentCancellationRequestV02.Assignment => Assignment;
     ICase3? ICustomerPaymentCancellationRequestV02.Case => Case;
     IControlData1? ICustomerPaymentCancellationRequestV02.ControlData => ControlData;
-    IEnumerable<IUnderlyingTransaction6> ICustomerPaymentCancellationRequestV02.Underlying => Underlying;
-    IEnumerable<ISupplementaryData1> ICustomerPaymentCancellationRequestV02.SupplementaryData => SupplementaryData;
+    IEnumerable<IUnderlyingTransaction6> ICustomerPaymentCancellationRequestV02.Underlying =>
+        Underlying;
+    IEnumerable<ISupplementaryData1> ICustomerPaymentCancellationRequestV02.SupplementaryData =>
+        SupplementaryData;
 }

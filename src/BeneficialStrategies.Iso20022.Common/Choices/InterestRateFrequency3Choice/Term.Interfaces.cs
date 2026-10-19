@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.InterestRateFrequency3Choice;
 
-public partial record Term : ITerm
-{
-}
+public partial record Term : ITerm { }

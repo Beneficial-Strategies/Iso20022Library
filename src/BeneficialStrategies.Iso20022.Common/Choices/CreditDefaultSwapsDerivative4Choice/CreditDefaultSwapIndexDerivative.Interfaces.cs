@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditDefaultSwapsDerivative4Cho
 
 public partial record CreditDefaultSwapIndexDerivative : ICreditDefaultSwapIndexDerivative
 {
-    ICreditDefaultSwapIndex3 ICreditDefaultSwapIndexDerivative.UnderlyingCreditDefaultSwapIndex => UnderlyingCreditDefaultSwapIndex;
+    ICreditDefaultSwapIndex3 ICreditDefaultSwapIndexDerivative.UnderlyingCreditDefaultSwapIndex =>
+        UnderlyingCreditDefaultSwapIndex;
 }

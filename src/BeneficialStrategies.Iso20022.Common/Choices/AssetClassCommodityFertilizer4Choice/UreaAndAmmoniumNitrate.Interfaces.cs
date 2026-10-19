@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFertilizer4Choice;
 
-public partial record UreaAndAmmoniumNitrate : IUreaAndAmmoniumNitrate
-{
-}
+public partial record UreaAndAmmoniumNitrate : IUreaAndAmmoniumNitrate { }

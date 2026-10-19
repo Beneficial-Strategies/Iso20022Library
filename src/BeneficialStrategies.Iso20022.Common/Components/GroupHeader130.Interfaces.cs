@@ -10,9 +10,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record GroupHeader130 : IGroupHeader130
 {
-    IBranchAndFinancialInstitutionIdentification8? IGroupHeader130.ChargesRequestor => ChargesRequestor;
+    IBranchAndFinancialInstitutionIdentification8? IGroupHeader130.ChargesRequestor =>
+        ChargesRequestor;
     ISettlementInstruction19? IGroupHeader130.SettlementInstruction => SettlementInstruction;
     ITotalCharges7? IGroupHeader130.TotalCharges => TotalCharges;
-    IBranchAndFinancialInstitutionIdentification8? IGroupHeader130.ChargesAccountAgent => ChargesAccountAgent;
+    IBranchAndFinancialInstitutionIdentification8? IGroupHeader130.ChargesAccountAgent =>
+        ChargesAccountAgent;
     ICashAccount40? IGroupHeader130.ChargesAccountAgentAccount => ChargesAccountAgentAccount;
 }

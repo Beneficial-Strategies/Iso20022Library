@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PercentageRange1Choice;
 
-public partial record NotEqual : INotEqual
-{
-}
+public partial record NotEqual : INotEqual { }

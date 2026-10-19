@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Asset Class Commodity Paper5Choice.
 /// </summary>
 [IsoId("_8vudMY-REe6Ojt1b3tfu9Q")]
-public interface IAssetClassCommodityPaper5Choice : IIsoChoice
-{
-}
+public interface IAssetClassCommodityPaper5Choice : IIsoChoice { }

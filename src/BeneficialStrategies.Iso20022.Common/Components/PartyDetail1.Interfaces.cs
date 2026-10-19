@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PartyDetail1 : IPartyDetail1
 {
-    ISupervisingAuthorityIdentification1Choice IPartyDetail1.SupervisingAuthority => SupervisingAuthority;
+    ISupervisingAuthorityIdentification1Choice IPartyDetail1.SupervisingAuthority =>
+        SupervisingAuthority;
     IPostalAddress6? IPartyDetail1.PostalAddress => PostalAddress;
     ICommunicationAddress7? IPartyDetail1.Contact => Contact;
 }

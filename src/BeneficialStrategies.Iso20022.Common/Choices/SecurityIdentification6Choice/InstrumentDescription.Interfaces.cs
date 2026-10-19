@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification6Choice;
 
 public partial record InstrumentDescription : IInstrumentDescription
 {
-    ISecurityClassificationType1Choice? IInstrumentDescription.ClassificationType => ClassificationType;
+    ISecurityClassificationType1Choice? IInstrumentDescription.ClassificationType =>
+        ClassificationType;
     IPriceRateOrAmountChoice? IInstrumentDescription.StrikePrice => StrikePrice;
 }

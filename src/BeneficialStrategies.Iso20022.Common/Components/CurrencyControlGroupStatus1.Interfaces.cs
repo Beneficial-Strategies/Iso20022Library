@@ -12,7 +12,8 @@ public partial record CurrencyControlGroupStatus1 : ICurrencyControlGroupStatus1
 {
     IOriginalMessage3 ICurrencyControlGroupStatus1.OriginalReferences => OriginalReferences;
     ITradeParty2 ICurrencyControlGroupStatus1.ReportingParty => ReportingParty;
-    IBranchAndFinancialInstitutionIdentification5 ICurrencyControlGroupStatus1.RegistrationAgent => RegistrationAgent;
+    IBranchAndFinancialInstitutionIdentification5 ICurrencyControlGroupStatus1.RegistrationAgent =>
+        RegistrationAgent;
     IPeriod4Choice? ICurrencyControlGroupStatus1.ReportingPeriod => ReportingPeriod;
     IEnumerable<IValidationStatusReason1> ICurrencyControlGroupStatus1.StatusReason => StatusReason;
 }

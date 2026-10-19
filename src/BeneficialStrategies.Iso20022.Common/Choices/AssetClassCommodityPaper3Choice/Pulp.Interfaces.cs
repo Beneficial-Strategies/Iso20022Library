@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityPaper3Choice;
 
-public partial record Pulp : IPulp
-{
-}
+public partial record Pulp : IPulp { }

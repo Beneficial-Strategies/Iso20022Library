@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 public partial record LimitUtilisationJournalQueryV01 : ILimitUtilisationJournalQueryV01
 {
     IMessageHeader1? ILimitUtilisationJournalQueryV01.MessageHeader => MessageHeader;
-    ILimitUtilisationJournalSearchCriteria2 ILimitUtilisationJournalQueryV01.SearchCriteria => SearchCriteria;
-    IEnumerable<ISupplementaryData1> ILimitUtilisationJournalQueryV01.SupplementaryData => SupplementaryData;
+    ILimitUtilisationJournalSearchCriteria2 ILimitUtilisationJournalQueryV01.SearchCriteria =>
+        SearchCriteria;
+    IEnumerable<ISupplementaryData1> ILimitUtilisationJournalQueryV01.SupplementaryData =>
+        SupplementaryData;
 }

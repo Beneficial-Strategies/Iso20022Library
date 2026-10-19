@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.Derivative3Choice;
 
-public partial record EmissionAllowance : IEmissionAllowance
-{
-}
+public partial record EmissionAllowance : IEmissionAllowance { }

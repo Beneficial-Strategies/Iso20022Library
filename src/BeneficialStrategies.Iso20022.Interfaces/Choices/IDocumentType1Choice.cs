@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the document type.
 /// </summary>
 [IsoId("_iYHUw3iJEeidzqjNEfehPg")]
-public interface IDocumentType1Choice : IIsoChoice
-{
-}
+public interface IDocumentType1Choice : IIsoChoice { }

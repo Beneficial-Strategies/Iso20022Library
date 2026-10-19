@@ -10,8 +10,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record RequestedModification6 : IRequestedModification6
 {
-    IPaymentTypeInformation25? IRequestedModification6.PaymentTypeInformation => PaymentTypeInformation;
-    IDateAndDateTimeChoice? IRequestedModification6.RequestedExecutionDate => RequestedExecutionDate;
+    IPaymentTypeInformation25? IRequestedModification6.PaymentTypeInformation =>
+        PaymentTypeInformation;
+    IDateAndDateTimeChoice? IRequestedModification6.RequestedExecutionDate =>
+        RequestedExecutionDate;
     IAmountType4Choice? IRequestedModification6.Amount => Amount;
     IPartyIdentification43? IRequestedModification6.UltimateDebtor => UltimateDebtor;
     IPartyIdentification43? IRequestedModification6.Debtor => Debtor;
@@ -23,7 +25,10 @@ public partial record RequestedModification6 : IRequestedModification6
     ICashAccount24? IRequestedModification6.CreditorAccount => CreditorAccount;
     IPartyIdentification43? IRequestedModification6.UltimateCreditor => UltimateCreditor;
     IPurpose2Choice? IRequestedModification6.Purpose => Purpose;
-    IEnumerable<IInstructionForNextAgent1> IRequestedModification6.InstructionForNextAgent => InstructionForNextAgent;
-    IEnumerable<IInstructionForCreditorAgent1> IRequestedModification6.InstructionForCreditorAgent => InstructionForCreditorAgent;
-    IRemittanceInformation11? IRequestedModification6.RemittanceInformation => RemittanceInformation;
+    IEnumerable<IInstructionForNextAgent1> IRequestedModification6.InstructionForNextAgent =>
+        InstructionForNextAgent;
+    IEnumerable<IInstructionForCreditorAgent1> IRequestedModification6.InstructionForCreditorAgent =>
+        InstructionForCreditorAgent;
+    IRemittanceInformation11? IRequestedModification6.RemittanceInformation =>
+        RemittanceInformation;
 }

@@ -13,7 +13,8 @@ public partial record TotalsPerBankTransactionCode5 : ITotalsPerBankTransactionC
     IAmountAndDirection35? ITotalsPerBankTransactionCode5.TotalNetEntry => TotalNetEntry;
     INumberAndSumOfTransactions1? ITotalsPerBankTransactionCode5.CreditEntries => CreditEntries;
     INumberAndSumOfTransactions1? ITotalsPerBankTransactionCode5.DebitEntries => DebitEntries;
-    IBankTransactionCodeStructure4 ITotalsPerBankTransactionCode5.BankTransactionCode => BankTransactionCode;
+    IBankTransactionCodeStructure4 ITotalsPerBankTransactionCode5.BankTransactionCode =>
+        BankTransactionCode;
     IEnumerable<ICashAvailability1> ITotalsPerBankTransactionCode5.Availability => Availability;
     IDateAndDateTime2Choice? ITotalsPerBankTransactionCode5.Date => Date;
 }

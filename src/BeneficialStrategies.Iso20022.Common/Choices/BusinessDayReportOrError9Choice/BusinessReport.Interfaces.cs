@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BusinessDayReportOrError9Choice;
 
 public partial record BusinessReport : IBusinessReport
 {
-    IEnumerable<ISystemIdentification2Choice> IBusinessReport.SystemIdentification => SystemIdentification;
+    IEnumerable<ISystemIdentification2Choice> IBusinessReport.SystemIdentification =>
+        SystemIdentification;
     IBusinessDayReportOrError10Choice IBusinessReport.BusinessDayOrError => BusinessDayOrError;
 }

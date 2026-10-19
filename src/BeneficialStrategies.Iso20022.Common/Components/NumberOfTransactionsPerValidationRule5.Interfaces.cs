@@ -8,7 +8,9 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record NumberOfTransactionsPerValidationRule5 : INumberOfTransactionsPerValidationRule5
+public partial record NumberOfTransactionsPerValidationRule5
+    : INumberOfTransactionsPerValidationRule5
 {
-    IEnumerable<IRejectionReason45> INumberOfTransactionsPerValidationRule5.ReportStatus => ReportStatus;
+    IEnumerable<IRejectionReason45> INumberOfTransactionsPerValidationRule5.ReportStatus =>
+        ReportStatus;
 }

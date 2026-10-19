@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record BilateralLimit4 : IBilateralLimit4
 {
-    IBranchAndFinancialInstitutionIdentification8 IBilateralLimit4.CounterpartyIdentification => CounterpartyIdentification;
+    IBranchAndFinancialInstitutionIdentification8 IBilateralLimit4.CounterpartyIdentification =>
+        CounterpartyIdentification;
     IAmount2Choice IBilateralLimit4.LimitAmount => LimitAmount;
     IEnumerable<ICashBalance11> IBilateralLimit4.BilateralBalance => BilateralBalance;
 }

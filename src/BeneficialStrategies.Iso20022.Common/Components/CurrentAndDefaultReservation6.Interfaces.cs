@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CurrentAndDefaultReservation6 : ICurrentAndDefaultReservation6
 {
-    IEnumerable<IReservationReport8> ICurrentAndDefaultReservation6.CurrentReservation => CurrentReservation;
-    IEnumerable<IReservationReport8> ICurrentAndDefaultReservation6.DefaultReservation => DefaultReservation;
+    IEnumerable<IReservationReport8> ICurrentAndDefaultReservation6.CurrentReservation =>
+        CurrentReservation;
+    IEnumerable<IReservationReport8> ICurrentAndDefaultReservation6.DefaultReservation =>
+        DefaultReservation;
 }

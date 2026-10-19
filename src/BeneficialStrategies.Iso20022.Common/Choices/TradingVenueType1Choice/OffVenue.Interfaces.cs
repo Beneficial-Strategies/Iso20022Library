@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.TradingVenueType1Choice;
 
-public partial record OffVenue : IOffVenue
-{
-}
+public partial record OffVenue : IOffVenue { }

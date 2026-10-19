@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SettlementFailsParticipantRange1 : ISettlementFailsParticipantRange1
 {
-    IEnumerable<ISettlementFailsParticipant1> ISettlementFailsParticipantRange1.HighestInVolume => HighestInVolume;
-    IEnumerable<ISettlementFailsParticipant1> ISettlementFailsParticipantRange1.HighestInValue => HighestInValue;
+    IEnumerable<ISettlementFailsParticipant1> ISettlementFailsParticipantRange1.HighestInVolume =>
+        HighestInVolume;
+    IEnumerable<ISettlementFailsParticipant1> ISettlementFailsParticipantRange1.HighestInValue =>
+        HighestInValue;
 }

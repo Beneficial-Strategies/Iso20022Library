@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SecuritiesTransaction3 : ISecuritiesTransaction3
 {
     IFinancialInstrumentQuantity25Choice ISecuritiesTransaction3.Quantity => Quantity;
-    IEnumerable<IDigitalTokenAmount2> ISecuritiesTransaction3.DigitalTokenQuantity => DigitalTokenQuantity;
+    IEnumerable<IDigitalTokenAmount2> ISecuritiesTransaction3.DigitalTokenQuantity =>
+        DigitalTokenQuantity;
     ISecuritiesTransactionPrice22Choice ISecuritiesTransaction3.Price => Price;
     IAmountAndDirection53? ISecuritiesTransaction3.UpFrontPayment => UpFrontPayment;
 }

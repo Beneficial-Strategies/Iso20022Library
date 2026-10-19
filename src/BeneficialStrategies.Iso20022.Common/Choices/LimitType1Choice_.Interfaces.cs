@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record LimitType1Choice_ : ILimitType1Choice
-{
-}
+public abstract partial record LimitType1Choice_ : ILimitType1Choice { }

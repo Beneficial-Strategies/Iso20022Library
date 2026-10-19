@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice structure allowing a credit default swap derivative to be defined.
 /// </summary>
 [IsoId("_xH_acSe0Eei12pGEsJIAeQ")]
-public interface ICreditDefaultSwapsDerivative4Choice : IIsoChoice
-{
-}
+public interface ICreditDefaultSwapsDerivative4Choice : IIsoChoice { }

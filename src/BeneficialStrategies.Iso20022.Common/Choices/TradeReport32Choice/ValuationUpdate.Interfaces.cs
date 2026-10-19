@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport32Choice;
 
 public partial record ValuationUpdate : IValuationUpdate
 {
-    IEnumerable<ICounterpartySpecificData36> IValuationUpdate.CounterpartySpecificData => CounterpartySpecificData;
+    IEnumerable<ICounterpartySpecificData36> IValuationUpdate.CounterpartySpecificData =>
+        CounterpartySpecificData;
     ICommonTradeDataReport69 IValuationUpdate.CommonTradeData => CommonTradeData;
     ITechnicalAttributes5? IValuationUpdate.TechnicalAttributes => TechnicalAttributes;
     IDisseminationData1? IValuationUpdate.PublicDisseminationData => PublicDisseminationData;

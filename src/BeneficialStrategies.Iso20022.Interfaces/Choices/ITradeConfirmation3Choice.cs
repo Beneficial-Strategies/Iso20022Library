@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Information regarding the confirmation of the contract.
 /// </summary>
 [IsoId("_POyMsVo3Ee23K4GXSpBSeg")]
-public interface ITradeConfirmation3Choice : IIsoChoice
-{
-}
+public interface ITradeConfirmation3Choice : IIsoChoice { }

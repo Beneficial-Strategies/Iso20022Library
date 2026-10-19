@@ -13,5 +13,6 @@ public partial record Details : IDetails
     IOrganisationIdentification15Choice? IDetails.CCP => CCP;
     IUniqueTransactionIdentifier2Choice? IDetails.ClearingIdentifier => ClearingIdentifier;
     IUniqueTransactionIdentifier2Choice? IDetails.OriginalIdentifier => OriginalIdentifier;
-    IOrganisationIdentification15Choice? IDetails.OriginalTradeRepositoryIdentifier => OriginalTradeRepositoryIdentifier;
+    IOrganisationIdentification15Choice? IDetails.OriginalTradeRepositoryIdentifier =>
+        OriginalTradeRepositoryIdentifier;
 }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Unique identification of the securities account or the cash account owned by the customer.
 /// </summary>
 [IsoId("_ma_Aj-F6EeWCAvUNsZ5u6g")]
-public interface IAccountIdentification38Choice : IIsoChoice
-{
-}
+public interface IAccountIdentification38Choice : IIsoChoice { }

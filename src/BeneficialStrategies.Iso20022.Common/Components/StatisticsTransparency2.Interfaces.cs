@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record StatisticsTransparency2 : IStatisticsTransparency2
-{
-}
+public partial record StatisticsTransparency2 : IStatisticsTransparency2 { }

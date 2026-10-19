@@ -11,8 +11,11 @@ namespace BeneficialStrategies.Iso20022.camt;
 public partial record FundEstimatedCashForecastReportV02 : IFundEstimatedCashForecastReportV02
 {
     IAdditionalReference3? IFundEstimatedCashForecastReportV02.PoolReference => PoolReference;
-    IEnumerable<IAdditionalReference3> IFundEstimatedCashForecastReportV02.PreviousReference => PreviousReference;
-    IEnumerable<IAdditionalReference3> IFundEstimatedCashForecastReportV02.RelatedReference => RelatedReference;
-    IEnumerable<IEstimatedFundCashForecast1> IFundEstimatedCashForecastReportV02.EstimatedFundCashForecastDetails => EstimatedFundCashForecastDetails;
+    IEnumerable<IAdditionalReference3> IFundEstimatedCashForecastReportV02.PreviousReference =>
+        PreviousReference;
+    IEnumerable<IAdditionalReference3> IFundEstimatedCashForecastReportV02.RelatedReference =>
+        RelatedReference;
+    IEnumerable<IEstimatedFundCashForecast1> IFundEstimatedCashForecastReportV02.EstimatedFundCashForecastDetails =>
+        EstimatedFundCashForecastDetails;
     IEnumerable<IExtension1> IFundEstimatedCashForecastReportV02.Extension => Extension;
 }

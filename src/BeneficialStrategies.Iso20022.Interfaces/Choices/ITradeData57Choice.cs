@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Reporting of position or transaction for trade lifecycle events.
 /// </summary>
 [IsoId("_xXUb4WEUEe2P-L9DBerEgA")]
-public interface ITradeData57Choice : IIsoChoice
-{
-}
+public interface ITradeData57Choice : IIsoChoice { }

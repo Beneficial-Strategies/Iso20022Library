@@ -12,5 +12,6 @@ public partial record NotificationToReceiveV08 : INotificationToReceiveV08
 {
     IGroupHeader117 INotificationToReceiveV08.GroupHeader => GroupHeader;
     IAccountNotification23 INotificationToReceiveV08.Notification => Notification;
-    IEnumerable<ISupplementaryData1> INotificationToReceiveV08.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> INotificationToReceiveV08.SupplementaryData =>
+        SupplementaryData;
 }

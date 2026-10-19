@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Transaction Quantities4Choice.
 /// </summary>
 [IsoId("_CFAMAT3qEe-thIfLZ94a1w")]
-public interface ITransactionQuantities4Choice : IIsoChoice
-{
-}
+public interface ITransactionQuantities4Choice : IIsoChoice { }

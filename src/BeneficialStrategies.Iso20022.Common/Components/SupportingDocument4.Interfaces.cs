@@ -12,9 +12,11 @@ public partial record SupportingDocument4 : ISupportingDocument4
 {
     IDocumentIdentification28 ISupportingDocument4.Certificate => Certificate;
     IPartyIdentification272 ISupportingDocument4.AccountOwner => AccountOwner;
-    IBranchAndFinancialInstitutionIdentification8 ISupportingDocument4.AccountServicer => AccountServicer;
+    IBranchAndFinancialInstitutionIdentification8 ISupportingDocument4.AccountServicer =>
+        AccountServicer;
     IDocumentAmendment1? ISupportingDocument4.Amendment => Amendment;
-    IContractRegistrationReference2Choice ISupportingDocument4.ContractReference => ContractReference;
+    IContractRegistrationReference2Choice ISupportingDocument4.ContractReference =>
+        ContractReference;
     IEnumerable<ISupportingDocumentEntry2> ISupportingDocument4.Entry => Entry;
     IEnumerable<ISupplementaryData1> ISupportingDocument4.SupplementaryData => SupplementaryData;
 }

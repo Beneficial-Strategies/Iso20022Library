@@ -12,6 +12,7 @@ public partial record SupportingDocumentEntry2 : ISupportingDocumentEntry2
 {
     IDocumentIdentification22 ISupportingDocumentEntry2.OriginalDocument => OriginalDocument;
     IShipmentAttribute2 ISupportingDocumentEntry2.ShipmentAttributes => ShipmentAttributes;
-    IDocumentEntryAmendment1? ISupportingDocumentEntry2.EntryAmendmentIdentification => EntryAmendmentIdentification;
+    IDocumentEntryAmendment1? ISupportingDocumentEntry2.EntryAmendmentIdentification =>
+        EntryAmendmentIdentification;
     IEnumerable<IDocumentGeneralInformation5> ISupportingDocumentEntry2.Attachment => Attachment;
 }

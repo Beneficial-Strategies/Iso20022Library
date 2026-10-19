@@ -10,12 +10,17 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ServiceCategoryTotals8 : IServiceCategoryTotals8
 {
-    IAccountIdentification38Choice? IServiceCategoryTotals8.AccountIdentification => AccountIdentification;
-    IAccountIdentification38Choice? IServiceCategoryTotals8.ParentAccountIdentification => ParentAccountIdentification;
-    IPartyIdentification136? IServiceCategoryTotals8.BilledCustomerIdentification => BilledCustomerIdentification;
+    IAccountIdentification38Choice? IServiceCategoryTotals8.AccountIdentification =>
+        AccountIdentification;
+    IAccountIdentification38Choice? IServiceCategoryTotals8.ParentAccountIdentification =>
+        ParentAccountIdentification;
+    IPartyIdentification136? IServiceCategoryTotals8.BilledCustomerIdentification =>
+        BilledCustomerIdentification;
     IEnumerable<IBillingTaxRecord2> IServiceCategoryTotals8.Tax => Tax;
     IAmountAndForeignExchange1 IServiceCategoryTotals8.TotalInvoiceAmount => TotalInvoiceAmount;
     IServiceCategory1Choice IServiceCategoryTotals8.ServiceCategory => ServiceCategory;
-    IEnumerable<IServiceItemTotals12> IServiceCategoryTotals8.ServiceItemTotals => ServiceItemTotals;
-    IEnumerable<IServiceItemTotals13> IServiceCategoryTotals8.ServiceItemCorrection => ServiceItemCorrection;
+    IEnumerable<IServiceItemTotals12> IServiceCategoryTotals8.ServiceItemTotals =>
+        ServiceItemTotals;
+    IEnumerable<IServiceItemTotals13> IServiceCategoryTotals8.ServiceItemCorrection =>
+        ServiceItemCorrection;
 }

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record TotalsPerBankTransactionCode4 : ITotalsPerBankTransactionCode4
 {
     IAmountAndDirection35? ITotalsPerBankTransactionCode4.TotalNetEntry => TotalNetEntry;
-    IBankTransactionCodeStructure4 ITotalsPerBankTransactionCode4.BankTransactionCode => BankTransactionCode;
+    IBankTransactionCodeStructure4 ITotalsPerBankTransactionCode4.BankTransactionCode =>
+        BankTransactionCode;
     IEnumerable<ICashAvailability1> ITotalsPerBankTransactionCode4.Availability => Availability;
 }

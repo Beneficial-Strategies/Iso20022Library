@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record DetailedStatisticsPerCounterparty19 : IDetailedStatisticsPerCounterparty19
 {
-    IEnumerable<IRejectionStatistics9> IDetailedStatisticsPerCounterparty19.RejectionStatistics => RejectionStatistics;
+    IEnumerable<IRejectionStatistics9> IDetailedStatisticsPerCounterparty19.RejectionStatistics =>
+        RejectionStatistics;
 }

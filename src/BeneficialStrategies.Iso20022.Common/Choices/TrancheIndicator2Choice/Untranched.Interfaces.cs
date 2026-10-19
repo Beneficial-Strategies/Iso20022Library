@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.TrancheIndicator2Choice;
 
-public partial record Untranched : IUntranched
-{
-}
+public partial record Untranched : IUntranched { }

@@ -11,14 +11,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record EstimatedFundCashForecast4 : IEstimatedFundCashForecast4
 {
     IDateAndDateTimeChoice IEstimatedFundCashForecast4.TradeDateTime => TradeDateTime;
-    IDateAndDateTimeChoice IEstimatedFundCashForecast4.PreviousTradeDateTime => PreviousTradeDateTime;
-    IFinancialInstrument9 IEstimatedFundCashForecast4.FinancialInstrumentDetails => FinancialInstrumentDetails;
-    IFinancialInstrumentQuantity1? IEstimatedFundCashForecast4.EstimatedTotalUnitsNumber => EstimatedTotalUnitsNumber;
-    IFinancialInstrumentQuantity1? IEstimatedFundCashForecast4.PreviousTotalUnitsNumber => PreviousTotalUnitsNumber;
-    IEnumerable<IBreakdownByParty1> IEstimatedFundCashForecast4.BreakdownByParty => BreakdownByParty;
-    IEnumerable<IBreakdownByCountry1> IEstimatedFundCashForecast4.BreakdownByCountry => BreakdownByCountry;
-    IEnumerable<IBreakdownByCurrency1> IEstimatedFundCashForecast4.BreakdownByCurrency => BreakdownByCurrency;
-    IEnumerable<IBreakdownByUserDefinedParameter1> IEstimatedFundCashForecast4.BreakdownByUserDefinedParameter => BreakdownByUserDefinedParameter;
-    IEnumerable<ActiveOrHistoricCurrencyCode> IEstimatedFundCashForecast4.InvestmentCurrency => InvestmentCurrency;
-    IEnumerable<INetCashForecast2> IEstimatedFundCashForecast4.EstimatedNetCashForecastDetails => EstimatedNetCashForecastDetails;
+    IDateAndDateTimeChoice IEstimatedFundCashForecast4.PreviousTradeDateTime =>
+        PreviousTradeDateTime;
+    IFinancialInstrument9 IEstimatedFundCashForecast4.FinancialInstrumentDetails =>
+        FinancialInstrumentDetails;
+    IFinancialInstrumentQuantity1? IEstimatedFundCashForecast4.EstimatedTotalUnitsNumber =>
+        EstimatedTotalUnitsNumber;
+    IFinancialInstrumentQuantity1? IEstimatedFundCashForecast4.PreviousTotalUnitsNumber =>
+        PreviousTotalUnitsNumber;
+    IEnumerable<IBreakdownByParty1> IEstimatedFundCashForecast4.BreakdownByParty =>
+        BreakdownByParty;
+    IEnumerable<IBreakdownByCountry1> IEstimatedFundCashForecast4.BreakdownByCountry =>
+        BreakdownByCountry;
+    IEnumerable<IBreakdownByCurrency1> IEstimatedFundCashForecast4.BreakdownByCurrency =>
+        BreakdownByCurrency;
+    IEnumerable<IBreakdownByUserDefinedParameter1> IEstimatedFundCashForecast4.BreakdownByUserDefinedParameter =>
+        BreakdownByUserDefinedParameter;
+    IEnumerable<ActiveOrHistoricCurrencyCode> IEstimatedFundCashForecast4.InvestmentCurrency =>
+        InvestmentCurrency;
+    IEnumerable<INetCashForecast2> IEstimatedFundCashForecast4.EstimatedNetCashForecastDetails =>
+        EstimatedNetCashForecastDetails;
 }

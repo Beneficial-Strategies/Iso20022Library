@@ -10,8 +10,10 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty17Choic
 
 public partial record Report : IReport
 {
-    IStatisticsPerActionType1 IReport.TotalNumberOfTransactionsAccepted => TotalNumberOfTransactionsAccepted;
-    IStatisticsPerActionType1 IReport.TotalNumberOfTransactionsRejected => TotalNumberOfTransactionsRejected;
+    IStatisticsPerActionType1 IReport.TotalNumberOfTransactionsAccepted =>
+        TotalNumberOfTransactionsAccepted;
+    IStatisticsPerActionType1 IReport.TotalNumberOfTransactionsRejected =>
+        TotalNumberOfTransactionsRejected;
     IStatisticsPerActionType1? IReport.TotalCorrectedRejections => TotalCorrectedRejections;
     IEnumerable<IRejectionStatistics8> IReport.RejectionStatistics => RejectionStatistics;
 }

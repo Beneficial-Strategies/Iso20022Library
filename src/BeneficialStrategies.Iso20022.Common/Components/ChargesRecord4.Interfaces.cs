@@ -10,12 +10,15 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ChargesRecord4 : IChargesRecord4
 {
-    IEnumerable<ITransactionReferences7> IChargesRecord4.UnderlyingTransaction => UnderlyingTransaction;
+    IEnumerable<ITransactionReferences7> IChargesRecord4.UnderlyingTransaction =>
+        UnderlyingTransaction;
     IDateAndDateTime2Choice? IChargesRecord4.ValueDate => ValueDate;
     IBranchAndFinancialInstitutionIdentification6? IChargesRecord4.DebtorAgent => DebtorAgent;
     ICashAccount40? IChargesRecord4.DebtorAgentAccount => DebtorAgentAccount;
     ICashAccount40 IChargesRecord4.ChargesAccount => ChargesAccount;
-    IBranchAndFinancialInstitutionIdentification6? IChargesRecord4.ChargesAccountOwner => ChargesAccountOwner;
+    IBranchAndFinancialInstitutionIdentification6? IChargesRecord4.ChargesAccountOwner =>
+        ChargesAccountOwner;
     IChargeType3Choice? IChargesRecord4.Type => Type;
-    IInstructionForInstructedAgent1? IChargesRecord4.InstructionForInstructedAgent => InstructionForInstructedAgent;
+    IInstructionForInstructedAgent1? IChargesRecord4.InstructionForInstructedAgent =>
+        InstructionForInstructedAgent;
 }

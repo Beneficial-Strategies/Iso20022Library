@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderOrError7Choice;
 
 public partial record Report : IReport
 {
-    IStandingOrderIdentification6 IReport.StandingOrderIdentification => StandingOrderIdentification;
+    IStandingOrderIdentification6 IReport.StandingOrderIdentification =>
+        StandingOrderIdentification;
     IStandingOrderOrError8Choice IReport.StandingOrderOrError => StandingOrderOrError;
 }

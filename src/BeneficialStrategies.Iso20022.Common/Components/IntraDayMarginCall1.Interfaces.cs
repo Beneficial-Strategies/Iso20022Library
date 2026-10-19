@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record IntraDayMarginCall1 : IIntraDayMarginCall1
 {
-    IGenericIdentification165 IIntraDayMarginCall1.MarginAccountIdentification => MarginAccountIdentification;
+    IGenericIdentification165 IIntraDayMarginCall1.MarginAccountIdentification =>
+        MarginAccountIdentification;
 }

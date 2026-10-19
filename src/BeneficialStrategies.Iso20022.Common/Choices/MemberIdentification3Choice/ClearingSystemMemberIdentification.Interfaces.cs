@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Choices.MemberIdentification3Choice;
 
 public partial record ClearingSystemMemberIdentification : IClearingSystemMemberIdentification
 {
-    IClearingSystemIdentification2Choice? IClearingSystemMemberIdentification.ClearingSystemIdentification => ClearingSystemIdentification;
+    IClearingSystemIdentification2Choice? IClearingSystemMemberIdentification.ClearingSystemIdentification =>
+        ClearingSystemIdentification;
 }

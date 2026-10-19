@@ -13,7 +13,10 @@ public partial record ResolutionOfInvestigationV14 : IResolutionOfInvestigationV
     ICaseAssignment6 IResolutionOfInvestigationV14.Assignment => Assignment;
     ICase6? IResolutionOfInvestigationV14.ResolvedCase => ResolvedCase;
     IInvestigationStatus6Choice IResolutionOfInvestigationV14.Status => Status;
-    IEnumerable<IUnderlyingTransaction35> IResolutionOfInvestigationV14.CancellationDetails => CancellationDetails;
-    IResolutionData5? IResolutionOfInvestigationV14.ResolutionRelatedInformation => ResolutionRelatedInformation;
-    IEnumerable<ISupplementaryData1> IResolutionOfInvestigationV14.SupplementaryData => SupplementaryData;
+    IEnumerable<IUnderlyingTransaction35> IResolutionOfInvestigationV14.CancellationDetails =>
+        CancellationDetails;
+    IResolutionData5? IResolutionOfInvestigationV14.ResolutionRelatedInformation =>
+        ResolutionRelatedInformation;
+    IEnumerable<ISupplementaryData1> IResolutionOfInvestigationV14.SupplementaryData =>
+        SupplementaryData;
 }

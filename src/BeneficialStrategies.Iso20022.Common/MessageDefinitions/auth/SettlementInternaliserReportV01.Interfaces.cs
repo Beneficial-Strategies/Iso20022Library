@@ -10,8 +10,11 @@ namespace BeneficialStrategies.Iso20022.auth;
 
 public partial record SettlementInternaliserReportV01 : ISettlementInternaliserReportV01
 {
-    ISettlementInternaliserReportHeader1 ISettlementInternaliserReportV01.ReportHeader => ReportHeader;
-    ISettlementInternaliser1 ISettlementInternaliserReportV01.SettlementInternaliser => SettlementInternaliser;
+    ISettlementInternaliserReportHeader1 ISettlementInternaliserReportV01.ReportHeader =>
+        ReportHeader;
+    ISettlementInternaliser1 ISettlementInternaliserReportV01.SettlementInternaliser =>
+        SettlementInternaliser;
     IEnumerable<IIssuerCSDReport1> ISettlementInternaliserReportV01.IssuerCSD => IssuerCSD;
-    IEnumerable<ISupplementaryData1> ISettlementInternaliserReportV01.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> ISettlementInternaliserReportV01.SupplementaryData =>
+        SupplementaryData;
 }

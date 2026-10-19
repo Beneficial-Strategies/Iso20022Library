@@ -8,9 +8,12 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.camt;
 
-public partial record CashDepositOrWithdrawalStatusUpdateV01 : ICashDepositOrWithdrawalStatusUpdateV01
+public partial record CashDepositOrWithdrawalStatusUpdateV01
+    : ICashDepositOrWithdrawalStatusUpdateV01
 {
     IGroupHeader134 ICashDepositOrWithdrawalStatusUpdateV01.GroupHeader => GroupHeader;
-    IEnumerable<IRequestIdentificationAndStatus1> ICashDepositOrWithdrawalStatusUpdateV01.RequestInformationAndStatus => RequestInformationAndStatus;
-    IEnumerable<ISupplementaryData1> ICashDepositOrWithdrawalStatusUpdateV01.SupplementaryData => SupplementaryData;
+    IEnumerable<IRequestIdentificationAndStatus1> ICashDepositOrWithdrawalStatusUpdateV01.RequestInformationAndStatus =>
+        RequestInformationAndStatus;
+    IEnumerable<ISupplementaryData1> ICashDepositOrWithdrawalStatusUpdateV01.SupplementaryData =>
+        SupplementaryData;
 }

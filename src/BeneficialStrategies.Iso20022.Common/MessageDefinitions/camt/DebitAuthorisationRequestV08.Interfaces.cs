@@ -14,5 +14,6 @@ public partial record DebitAuthorisationRequestV08 : IDebitAuthorisationRequestV
     ICase5? IDebitAuthorisationRequestV08.Case => Case;
     IUnderlyingTransaction6Choice IDebitAuthorisationRequestV08.Underlying => Underlying;
     IDebitAuthorisation2 IDebitAuthorisationRequestV08.Detail => Detail;
-    IEnumerable<ISupplementaryData1> IDebitAuthorisationRequestV08.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IDebitAuthorisationRequestV08.SupplementaryData =>
+        SupplementaryData;
 }

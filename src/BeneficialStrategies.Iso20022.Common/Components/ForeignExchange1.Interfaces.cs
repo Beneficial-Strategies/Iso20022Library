@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record ForeignExchange1 : IForeignExchange1
-{
-}
+public partial record ForeignExchange1 : IForeignExchange1 { }

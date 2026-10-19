@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record DetailedReconciliationStatistics2 : IDetailedReconciliationStatistics2
 {
-    IEnumerable<Max35Text> IDetailedReconciliationStatistics2.TopReasonsForPairedNonMatched => TopReasonsForPairedNonMatched;
+    IEnumerable<Max35Text> IDetailedReconciliationStatistics2.TopReasonsForPairedNonMatched =>
+        TopReasonsForPairedNonMatched;
 }

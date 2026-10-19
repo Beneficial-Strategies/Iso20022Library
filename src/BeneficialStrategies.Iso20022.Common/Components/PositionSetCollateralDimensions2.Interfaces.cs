@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PositionSetCollateralDimensions2 : IPositionSetCollateralDimensions2
 {
-    ITradeCounterpartyReport9? IPositionSetCollateralDimensions2.CounterpartyIdentification => CounterpartyIdentification;
+    ITradeCounterpartyReport9? IPositionSetCollateralDimensions2.CounterpartyIdentification =>
+        CounterpartyIdentification;
 }

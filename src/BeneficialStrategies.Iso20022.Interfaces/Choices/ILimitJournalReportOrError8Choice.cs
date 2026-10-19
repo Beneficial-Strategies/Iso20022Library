@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Limit Journal Report Or Error8Choice.
 /// </summary>
 [IsoId("_toRZlZEhEe-Goq1fIU72qA")]
-public interface ILimitJournalReportOrError8Choice : IIsoChoice
-{
-}
+public interface ILimitJournalReportOrError8Choice : IIsoChoice { }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record ReconciliationStatus5Choice_ : IReconciliationStatus5Choice
-{
-}
+public abstract partial record ReconciliationStatus5Choice_ : IReconciliationStatus5Choice { }

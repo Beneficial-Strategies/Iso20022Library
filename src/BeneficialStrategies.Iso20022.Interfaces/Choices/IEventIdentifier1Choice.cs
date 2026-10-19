@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Indicates an event identifier or post trade risk reduction identifier.
 /// </summary>
 [IsoId("_nfQOQPbfEeyInphUKJZxtQ")]
-public interface IEventIdentifier1Choice : IIsoChoice
-{
-}
+public interface IEventIdentifier1Choice : IIsoChoice { }

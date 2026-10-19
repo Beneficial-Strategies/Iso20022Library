@@ -8,9 +8,13 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.camt;
 
-public partial record IntraBalanceMovementCancellationQueryV01 : IIntraBalanceMovementCancellationQueryV01
+public partial record IntraBalanceMovementCancellationQueryV01
+    : IIntraBalanceMovementCancellationQueryV01
 {
-    IDocumentIdentification51? IIntraBalanceMovementCancellationQueryV01.Identification => Identification;
-    IIntraBalanceQueryDefinition7 IIntraBalanceMovementCancellationQueryV01.QueryDefinition => QueryDefinition;
-    IEnumerable<ISupplementaryData1> IIntraBalanceMovementCancellationQueryV01.SupplementaryData => SupplementaryData;
+    IDocumentIdentification51? IIntraBalanceMovementCancellationQueryV01.Identification =>
+        Identification;
+    IIntraBalanceQueryDefinition7 IIntraBalanceMovementCancellationQueryV01.QueryDefinition =>
+        QueryDefinition;
+    IEnumerable<ISupplementaryData1> IIntraBalanceMovementCancellationQueryV01.SupplementaryData =>
+        SupplementaryData;
 }

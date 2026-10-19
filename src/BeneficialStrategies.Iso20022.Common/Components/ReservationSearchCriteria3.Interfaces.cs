@@ -10,9 +10,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ReservationSearchCriteria3 : IReservationSearchCriteria3
 {
-    ISystemIdentification2Choice? IReservationSearchCriteria3.SystemIdentification => SystemIdentification;
-    IEnumerable<ReservationType1Code> IReservationSearchCriteria3.DefaultReservationType => DefaultReservationType;
-    IEnumerable<ReservationType1Code> IReservationSearchCriteria3.CurrentReservationType => CurrentReservationType;
-    IBranchAndFinancialInstitutionIdentification6? IReservationSearchCriteria3.AccountOwner => AccountOwner;
-    IAccountIdentification4Choice? IReservationSearchCriteria3.AccountIdentification => AccountIdentification;
+    ISystemIdentification2Choice? IReservationSearchCriteria3.SystemIdentification =>
+        SystemIdentification;
+    IEnumerable<ReservationType1Code> IReservationSearchCriteria3.DefaultReservationType =>
+        DefaultReservationType;
+    IEnumerable<ReservationType1Code> IReservationSearchCriteria3.CurrentReservationType =>
+        CurrentReservationType;
+    IBranchAndFinancialInstitutionIdentification6? IReservationSearchCriteria3.AccountOwner =>
+        AccountOwner;
+    IAccountIdentification4Choice? IReservationSearchCriteria3.AccountIdentification =>
+        AccountIdentification;
 }

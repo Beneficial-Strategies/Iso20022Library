@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentAttributes5Ch
 
 public partial record AlternateIdentification : IAlternateIdentification
 {
-    IEnumerable<IOtherIdentification1> IAlternateIdentification.OtherIdentification => OtherIdentification;
+    IEnumerable<IOtherIdentification1> IAlternateIdentification.OtherIdentification =>
+        OtherIdentification;
 }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record ReconciliationCategory5 : IReconciliationCategory5
-{
-}
+public partial record ReconciliationCategory5 : IReconciliationCategory5 { }

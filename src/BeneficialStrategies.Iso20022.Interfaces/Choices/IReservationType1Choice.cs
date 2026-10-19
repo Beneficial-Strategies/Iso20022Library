@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Defines the type of action to be performed in the request.
 /// </summary>
 [IsoId("_8JKFEKMgEeCJ6YNENx4h-w_632867546")]
-public interface IReservationType1Choice : IIsoChoice
-{
-}
+public interface IReservationType1Choice : IIsoChoice { }

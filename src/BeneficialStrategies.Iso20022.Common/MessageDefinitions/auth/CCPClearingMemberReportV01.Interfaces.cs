@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.auth;
 public partial record CCPClearingMemberReportV01 : ICCPClearingMemberReportV01
 {
     IEnumerable<IClearingMember1> ICCPClearingMemberReportV01.ClearingMember => ClearingMember;
-    IEnumerable<ISupplementaryData1> ICCPClearingMemberReportV01.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> ICCPClearingMemberReportV01.SupplementaryData =>
+        SupplementaryData;
 }

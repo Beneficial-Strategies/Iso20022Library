@@ -12,7 +12,10 @@ public partial record ContractRegistrationStatementRequest2 : IContractRegistrat
 {
     IReportingPeriod4 IContractRegistrationStatementRequest2.ReportingPeriod => ReportingPeriod;
     ITradeParty5 IContractRegistrationStatementRequest2.ReportingParty => ReportingParty;
-    IBranchAndFinancialInstitutionIdentification6 IContractRegistrationStatementRequest2.RegistrationAgent => RegistrationAgent;
-    IContractRegistrationStatementCriteria1? IContractRegistrationStatementRequest2.ReturnCriteria => ReturnCriteria;
-    IEnumerable<ISupplementaryData1> IContractRegistrationStatementRequest2.SupplementaryData => SupplementaryData;
+    IBranchAndFinancialInstitutionIdentification6 IContractRegistrationStatementRequest2.RegistrationAgent =>
+        RegistrationAgent;
+    IContractRegistrationStatementCriteria1? IContractRegistrationStatementRequest2.ReturnCriteria =>
+        ReturnCriteria;
+    IEnumerable<ISupplementaryData1> IContractRegistrationStatementRequest2.SupplementaryData =>
+        SupplementaryData;
 }

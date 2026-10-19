@@ -12,5 +12,6 @@ public partial record InvoiceTotals8 : IInvoiceTotals8
 {
     IAccountIdentification38Choice IInvoiceTotals8.AccountIdentification => AccountIdentification;
     IInvoiceTotals7 IInvoiceTotals8.InvoiceTotals => InvoiceTotals;
-    IEnumerable<IServiceCategoryTotals7> IInvoiceTotals8.ServiceCategoryTotals => ServiceCategoryTotals;
+    IEnumerable<IServiceCategoryTotals7> IInvoiceTotals8.ServiceCategoryTotals =>
+        ServiceCategoryTotals;
 }

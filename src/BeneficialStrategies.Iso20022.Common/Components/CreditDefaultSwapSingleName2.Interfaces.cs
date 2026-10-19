@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CreditDefaultSwapSingleName2 : ICreditDefaultSwapSingleName2
 {
-    IDerivativePartyIdentification1Choice? ICreditDefaultSwapSingleName2.ReferenceParty => ReferenceParty;
+    IDerivativePartyIdentification1Choice? ICreditDefaultSwapSingleName2.ReferenceParty =>
+        ReferenceParty;
 }

@@ -12,5 +12,6 @@ public partial record BankToCustomerStatementV07 : IBankToCustomerStatementV07
 {
     IGroupHeader73 IBankToCustomerStatementV07.GroupHeader => GroupHeader;
     IEnumerable<IAccountStatement8> IBankToCustomerStatementV07.Statement => Statement;
-    IEnumerable<ISupplementaryData1> IBankToCustomerStatementV07.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IBankToCustomerStatementV07.SupplementaryData =>
+        SupplementaryData;
 }

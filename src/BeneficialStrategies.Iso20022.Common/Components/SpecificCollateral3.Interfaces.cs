@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SpecificCollateral3 : ISpecificCollateral3
 {
-    IFinancialInstrument104 ISpecificCollateral3.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    IFinancialInstrument104 ISpecificCollateral3.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
 }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.DateTimePeriod1Choice;
 
-public partial record DateTimeRange : IDateTimeRange
-{
-}
+public partial record DateTimeRange : IDateTimeRange { }

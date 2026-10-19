@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Choices.OvernightIndexSwap4Choice;
 
 public partial record Transaction : ITransaction
 {
-    ICounterpartyIdentification3Choice ITransaction.CounterpartyIdentification => CounterpartyIdentification;
+    ICounterpartyIdentification3Choice ITransaction.CounterpartyIdentification =>
+        CounterpartyIdentification;
     IDateAndDateTimeChoice ITransaction.TradeDate => TradeDate;
     IEnumerable<ISupplementaryData1> ITransaction.SupplementaryData => SupplementaryData;
 }

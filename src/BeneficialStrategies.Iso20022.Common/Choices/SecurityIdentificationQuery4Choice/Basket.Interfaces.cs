@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentificationQuery4Choice;
 
-public partial record Basket : IBasket
-{
-}
+public partial record Basket : IBasket { }

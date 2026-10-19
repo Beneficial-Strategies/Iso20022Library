@@ -12,8 +12,10 @@ public partial record InvestigationReason2 : IInvestigationReason2
 {
     IInvestigationReason1Choice IInvestigationReason2.Reason => Reason;
     IInvestigationReasonSubType1Choice? IInvestigationReason2.ReasonSubType => ReasonSubType;
-    IAdditionalRequestData1Choice? IInvestigationReason2.AdditionalRequestData => AdditionalRequestData;
-    IRelatedInvestigationData1? IInvestigationReason2.RelatedInvestigationData => RelatedInvestigationData;
+    IAdditionalRequestData1Choice? IInvestigationReason2.AdditionalRequestData =>
+        AdditionalRequestData;
+    IRelatedInvestigationData1? IInvestigationReason2.RelatedInvestigationData =>
+        RelatedInvestigationData;
     IEnumerable<IDocument12> IInvestigationReason2.EnclosedFile => EnclosedFile;
     IEnumerable<IFileData1> IInvestigationReason2.RelatedFileData => RelatedFileData;
 }

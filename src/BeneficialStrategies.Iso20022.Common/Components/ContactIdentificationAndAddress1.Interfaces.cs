@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ContactIdentificationAndAddress1 : IContactIdentificationAndAddress1
 {
-    ICommunicationAddress8 IContactIdentificationAndAddress1.CommunicationAddress => CommunicationAddress;
+    ICommunicationAddress8 IContactIdentificationAndAddress1.CommunicationAddress =>
+        CommunicationAddress;
 }

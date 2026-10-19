@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// It is used to provide some or all of the members with information related to the processing of the system.
 /// </summary>
 [IsoId("_QOIUkXhdEeidzqjNEfehPg")]
-public interface IGeneralBusinessOrError7Choice : IIsoChoice
-{
-}
+public interface IGeneralBusinessOrError7Choice : IIsoChoice { }

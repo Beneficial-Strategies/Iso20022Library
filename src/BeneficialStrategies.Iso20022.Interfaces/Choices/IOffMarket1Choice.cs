@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice for specifying how the trade was executed off-market.
 /// </summary>
 [IsoId("_TCpPoNp-Ed-ak6NoX_4Aeg_2009784706")]
-public interface IOffMarket1Choice : IIsoChoice
-{
-}
+public interface IOffMarket1Choice : IIsoChoice { }

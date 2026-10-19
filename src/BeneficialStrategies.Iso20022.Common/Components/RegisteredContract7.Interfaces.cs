@@ -11,14 +11,19 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record RegisteredContract7 : IRegisteredContract7
 {
     ITradeParty5 IRegisteredContract7.ReportingParty => ReportingParty;
-    IBranchAndFinancialInstitutionIdentification6 IRegisteredContract7.RegistrationAgent => RegistrationAgent;
-    IBranchAndFinancialInstitutionIdentification6 IRegisteredContract7.IssuerFinancialInstitution => IssuerFinancialInstitution;
+    IBranchAndFinancialInstitutionIdentification6 IRegisteredContract7.RegistrationAgent =>
+        RegistrationAgent;
+    IBranchAndFinancialInstitutionIdentification6 IRegisteredContract7.IssuerFinancialInstitution =>
+        IssuerFinancialInstitution;
     IUnderlyingContract2Choice IRegisteredContract7.Contract => Contract;
     IEnumerable<IContractBalance1> IRegisteredContract7.ContractBalance => ContractBalance;
     IPaymentScheduleType1Choice? IRegisteredContract7.PaymentScheduleType => PaymentScheduleType;
-    IDocumentIdentification29 IRegisteredContract7.RegisteredContractIdentification => RegisteredContractIdentification;
-    IDocumentIdentification22? IRegisteredContract7.PreviousRegisteredContractIdentification => PreviousRegisteredContractIdentification;
-    IEnumerable<IRegisteredContractJournal2> IRegisteredContract7.RegisteredContractJournal => RegisteredContractJournal;
+    IDocumentIdentification29 IRegisteredContract7.RegisteredContractIdentification =>
+        RegisteredContractIdentification;
+    IDocumentIdentification22? IRegisteredContract7.PreviousRegisteredContractIdentification =>
+        PreviousRegisteredContractIdentification;
+    IEnumerable<IRegisteredContractJournal2> IRegisteredContract7.RegisteredContractJournal =>
+        RegisteredContractJournal;
     IEnumerable<IRegisteredContractAmendment1> IRegisteredContract7.Amendment => Amendment;
     IRegisteredContractCommunication1 IRegisteredContract7.Submission => Submission;
     IRegisteredContractCommunication1 IRegisteredContract7.Delivery => Delivery;

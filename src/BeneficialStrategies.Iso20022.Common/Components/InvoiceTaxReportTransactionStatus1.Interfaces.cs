@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record InvoiceTaxReportTransactionStatus1 : IInvoiceTaxReportTransactionStatus1
 {
-    IEnumerable<IGenericValidationRuleIdentification1> IInvoiceTaxReportTransactionStatus1.ValidationRule => ValidationRule;
-    IEnumerable<ISupplementaryData1> IInvoiceTaxReportTransactionStatus1.SupplementaryData => SupplementaryData;
+    IEnumerable<IGenericValidationRuleIdentification1> IInvoiceTaxReportTransactionStatus1.ValidationRule =>
+        ValidationRule;
+    IEnumerable<ISupplementaryData1> IInvoiceTaxReportTransactionStatus1.SupplementaryData =>
+        SupplementaryData;
 }

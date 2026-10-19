@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record DerivativePartyIdentification1Choice_ : IDerivativePartyIdentification1Choice
-{
-}
+public abstract partial record DerivativePartyIdentification1Choice_
+    : IDerivativePartyIdentification1Choice { }

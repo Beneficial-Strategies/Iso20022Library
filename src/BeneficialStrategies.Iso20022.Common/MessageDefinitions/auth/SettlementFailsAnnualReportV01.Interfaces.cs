@@ -12,5 +12,6 @@ public partial record SettlementFailsAnnualReportV01 : ISettlementFailsAnnualRep
 {
     ISettlementFailsReportHeader2 ISettlementFailsAnnualReportV01.ReportHeader => ReportHeader;
     ISettlementFailsData4 ISettlementFailsAnnualReportV01.AnnualAggregate => AnnualAggregate;
-    IEnumerable<ISupplementaryData1> ISettlementFailsAnnualReportV01.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> ISettlementFailsAnnualReportV01.SupplementaryData =>
+        SupplementaryData;
 }

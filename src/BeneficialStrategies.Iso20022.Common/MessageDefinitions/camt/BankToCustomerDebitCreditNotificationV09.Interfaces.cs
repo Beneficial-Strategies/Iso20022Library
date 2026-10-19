@@ -8,9 +8,12 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.camt;
 
-public partial record BankToCustomerDebitCreditNotificationV09 : IBankToCustomerDebitCreditNotificationV09
+public partial record BankToCustomerDebitCreditNotificationV09
+    : IBankToCustomerDebitCreditNotificationV09
 {
     IGroupHeader81 IBankToCustomerDebitCreditNotificationV09.GroupHeader => GroupHeader;
-    IEnumerable<IAccountNotification19> IBankToCustomerDebitCreditNotificationV09.Notification => Notification;
-    IEnumerable<ISupplementaryData1> IBankToCustomerDebitCreditNotificationV09.SupplementaryData => SupplementaryData;
+    IEnumerable<IAccountNotification19> IBankToCustomerDebitCreditNotificationV09.Notification =>
+        Notification;
+    IEnumerable<ISupplementaryData1> IBankToCustomerDebitCreditNotificationV09.SupplementaryData =>
+        SupplementaryData;
 }

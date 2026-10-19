@@ -13,9 +13,11 @@ public partial record BillingReport6 : IBillingReport6
     IInvoiceLegalIssue5 IBillingReport6.RegulatoryData => RegulatoryData;
     ISystemAndCurrency1? IBillingReport6.Service => Service;
     IDatePeriod2 IBillingReport6.BillingPeriod => BillingPeriod;
-    IPartyIdentification136? IBillingReport6.ResponsiblePartyIdentification => ResponsiblePartyIdentification;
+    IPartyIdentification136? IBillingReport6.ResponsiblePartyIdentification =>
+        ResponsiblePartyIdentification;
     IPartyIdentification136? IBillingReport6.PartyIdentification => PartyIdentification;
     IEnumerable<IInvoiceTotals8> IBillingReport6.AccountInvoiceTotals => AccountInvoiceTotals;
     IInvoiceTotals7? IBillingReport6.InvoiceTotals => InvoiceTotals;
-    IEnumerable<IServiceCategoryTotals8> IBillingReport6.ServiceCategoryTotals => ServiceCategoryTotals;
+    IEnumerable<IServiceCategoryTotals8> IBillingReport6.ServiceCategoryTotals =>
+        ServiceCategoryTotals;
 }

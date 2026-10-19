@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Transaction Amendment1Choice.
 /// </summary>
 [IsoId("_CsX6bJrOEeyo0KtkyUQoRg")]
-public interface ITransactionAmendment1Choice : IIsoChoice
-{
-}
+public interface ITransactionAmendment1Choice : IIsoChoice { }

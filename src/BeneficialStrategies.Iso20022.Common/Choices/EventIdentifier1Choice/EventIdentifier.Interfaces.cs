@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.EventIdentifier1Choice;
 
-public partial record EventIdentifier : IEventIdentifier
-{
-}
+public partial record EventIdentifier : IEventIdentifier { }

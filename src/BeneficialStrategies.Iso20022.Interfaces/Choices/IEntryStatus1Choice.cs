@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the status of an entry on the books of the account servicer.
 /// </summary>
 [IsoId("_DICS8IaoEeeUws0ZryHQ2w")]
-public interface IEntryStatus1Choice : IIsoChoice
-{
-}
+public interface IEntryStatus1Choice : IIsoChoice { }

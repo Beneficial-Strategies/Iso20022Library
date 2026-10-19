@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Claim Non Receipt3Choice.
 /// </summary>
 [IsoId("_2vK40TEyEe6g-ffJsqGiSA")]
-public interface IClaimNonReceipt3Choice : IIsoChoice
-{
-}
+public interface IClaimNonReceipt3Choice : IIsoChoice { }

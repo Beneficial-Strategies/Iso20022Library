@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.ExerciseDate1Choice;
 
-public partial record PendingDateApplicable : IPendingDateApplicable
-{
-}
+public partial record PendingDateApplicable : IPendingDateApplicable { }

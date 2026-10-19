@@ -10,13 +10,17 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record RegisteredContract18 : IRegisteredContract18
 {
-    IBranchAndFinancialInstitutionIdentification8 IRegisteredContract18.IssuerFinancialInstitution => IssuerFinancialInstitution;
+    IBranchAndFinancialInstitutionIdentification8 IRegisteredContract18.IssuerFinancialInstitution =>
+        IssuerFinancialInstitution;
     IUnderlyingContract4Choice IRegisteredContract18.Contract => Contract;
     IEnumerable<IContractBalance1> IRegisteredContract18.ContractBalance => ContractBalance;
     IPaymentScheduleType2Choice? IRegisteredContract18.PaymentScheduleType => PaymentScheduleType;
-    IDocumentIdentification29 IRegisteredContract18.RegisteredContractIdentification => RegisteredContractIdentification;
-    IDocumentIdentification22? IRegisteredContract18.PreviousRegisteredContractIdentification => PreviousRegisteredContractIdentification;
-    IEnumerable<IRegisteredContractJournal3> IRegisteredContract18.RegisteredContractJournal => RegisteredContractJournal;
+    IDocumentIdentification29 IRegisteredContract18.RegisteredContractIdentification =>
+        RegisteredContractIdentification;
+    IDocumentIdentification22? IRegisteredContract18.PreviousRegisteredContractIdentification =>
+        PreviousRegisteredContractIdentification;
+    IEnumerable<IRegisteredContractJournal3> IRegisteredContract18.RegisteredContractJournal =>
+        RegisteredContractJournal;
     IEnumerable<IRegisteredContractAmendment1> IRegisteredContract18.Amendment => Amendment;
     IRegisteredContractCommunication1 IRegisteredContract18.Submission => Submission;
     IRegisteredContractCommunication1 IRegisteredContract18.Delivery => Delivery;

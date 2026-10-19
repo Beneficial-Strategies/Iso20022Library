@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SettlementFailsReportHeader2 : ISettlementFailsReportHeader2
 {
     IDatePeriod2 ISettlementFailsReportHeader2.ReportingPeriod => ReportingPeriod;
-    ISecuritiesSettlementSystemIdentification2 ISettlementFailsReportHeader2.SecuritiesSettlementSystem => SecuritiesSettlementSystem;
+    ISecuritiesSettlementSystemIdentification2 ISettlementFailsReportHeader2.SecuritiesSettlementSystem =>
+        SecuritiesSettlementSystem;
 }

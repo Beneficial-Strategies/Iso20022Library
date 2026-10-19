@@ -8,13 +8,20 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.camt;
 
-public partial record IntraBalanceMovementCancellationRequestV02 : IIntraBalanceMovementCancellationRequestV02
+public partial record IntraBalanceMovementCancellationRequestV02
+    : IIntraBalanceMovementCancellationRequestV02
 {
-    IDocumentIdentification51? IIntraBalanceMovementCancellationRequestV02.Identification => Identification;
-    IReferences14 IIntraBalanceMovementCancellationRequestV02.TransactionIdentification => TransactionIdentification;
+    IDocumentIdentification51? IIntraBalanceMovementCancellationRequestV02.Identification =>
+        Identification;
+    IReferences14 IIntraBalanceMovementCancellationRequestV02.TransactionIdentification =>
+        TransactionIdentification;
     ICashAccount40 IIntraBalanceMovementCancellationRequestV02.CashAccount => CashAccount;
-    ISystemPartyIdentification8? IIntraBalanceMovementCancellationRequestV02.CashAccountOwner => CashAccountOwner;
-    IBranchAndFinancialInstitutionIdentification8? IIntraBalanceMovementCancellationRequestV02.CashAccountServicer => CashAccountServicer;
-    IIntraBalance5? IIntraBalanceMovementCancellationRequestV02.UnderlyingIntraBalance => UnderlyingIntraBalance;
-    IEnumerable<ISupplementaryData1> IIntraBalanceMovementCancellationRequestV02.SupplementaryData => SupplementaryData;
+    ISystemPartyIdentification8? IIntraBalanceMovementCancellationRequestV02.CashAccountOwner =>
+        CashAccountOwner;
+    IBranchAndFinancialInstitutionIdentification8? IIntraBalanceMovementCancellationRequestV02.CashAccountServicer =>
+        CashAccountServicer;
+    IIntraBalance5? IIntraBalanceMovementCancellationRequestV02.UnderlyingIntraBalance =>
+        UnderlyingIntraBalance;
+    IEnumerable<ISupplementaryData1> IIntraBalanceMovementCancellationRequestV02.SupplementaryData =>
+        SupplementaryData;
 }

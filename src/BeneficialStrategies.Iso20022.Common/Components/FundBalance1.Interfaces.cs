@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record FundBalance1 : IFundBalance1
 {
-    IFinancialInstrumentQuantity1? IFundBalance1.TotalUnitsFromUnitOrders => TotalUnitsFromUnitOrders;
-    IFinancialInstrumentQuantity1? IFundBalance1.TotalUnitsFromCashOrders => TotalUnitsFromCashOrders;
+    IFinancialInstrumentQuantity1? IFundBalance1.TotalUnitsFromUnitOrders =>
+        TotalUnitsFromUnitOrders;
+    IFinancialInstrumentQuantity1? IFundBalance1.TotalUnitsFromCashOrders =>
+        TotalUnitsFromCashOrders;
 }

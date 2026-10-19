@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractRegistrationReference2Ch
 /// Unique and unambiguous identification of the registered contract.
 /// </summary>
 [IsoId("_KVgWYbMmEeueudaIbClZbQ")]
-public interface IRegisteredContractIdentification : IContractRegistrationReference2Choice, IIsoChoiceVariant
+public interface IRegisteredContractIdentification
+    : IContractRegistrationReference2Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

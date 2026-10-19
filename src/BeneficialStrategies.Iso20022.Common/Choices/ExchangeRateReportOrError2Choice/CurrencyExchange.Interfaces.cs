@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.ExchangeRateReportOrError2Choice;
 
-public partial record CurrencyExchange : ICurrencyExchange
-{
-}
+public partial record CurrencyExchange : ICurrencyExchange { }

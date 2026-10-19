@@ -12,5 +12,6 @@ public partial record ModificationStatusReason3 : IModificationStatusReason3
 {
     IPartyIdentification272? IModificationStatusReason3.Originator => Originator;
     IModificationStatusReason1Choice? IModificationStatusReason3.Reason => Reason;
-    IEnumerable<Max105Text> IModificationStatusReason3.AdditionalInformation => AdditionalInformation;
+    IEnumerable<Max105Text> IModificationStatusReason3.AdditionalInformation =>
+        AdditionalInformation;
 }

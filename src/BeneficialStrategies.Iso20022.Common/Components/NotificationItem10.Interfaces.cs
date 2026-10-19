@@ -12,13 +12,17 @@ public partial record NotificationItem10 : INotificationItem10
 {
     ICashAccount40? INotificationItem10.Account => Account;
     IParty50Choice? INotificationItem10.AccountOwner => AccountOwner;
-    IBranchAndFinancialInstitutionIdentification8? INotificationItem10.AccountServicer => AccountServicer;
+    IBranchAndFinancialInstitutionIdentification8? INotificationItem10.AccountServicer =>
+        AccountServicer;
     ICashAccount40? INotificationItem10.RelatedAccount => RelatedAccount;
     IParty50Choice? INotificationItem10.Debtor => Debtor;
     IBranchAndFinancialInstitutionIdentification8? INotificationItem10.DebtorAgent => DebtorAgent;
-    IBranchAndFinancialInstitutionIdentification8? INotificationItem10.IntermediaryAgent => IntermediaryAgent;
+    IBranchAndFinancialInstitutionIdentification8? INotificationItem10.IntermediaryAgent =>
+        IntermediaryAgent;
     IPurpose2Choice? INotificationItem10.Purpose => Purpose;
-    IRemittanceLocation8? INotificationItem10.RelatedRemittanceInformation => RelatedRemittanceInformation;
+    IRemittanceLocation8? INotificationItem10.RelatedRemittanceInformation =>
+        RelatedRemittanceInformation;
     IRemittanceInformation26? INotificationItem10.RemittanceInformation => RemittanceInformation;
-    IEnumerable<ITransactionAllocation2> INotificationItem10.UnderlyingAllocation => UnderlyingAllocation;
+    IEnumerable<ITransactionAllocation2> INotificationItem10.UnderlyingAllocation =>
+        UnderlyingAllocation;
 }

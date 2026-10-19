@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatus4Choice;
 /// Indicates whether the cancellation of the assignment is confirmed or rejected.|Usage: If yes, the cancellation of the assignment is confirmed.|If no, the cancellation of the assignment is rejected and the investigation process will continue.
 /// </summary>
 [IsoId("_nbwAmYmxEeeKR__nUfxjwA")]
-public interface IAssignmentCancellationConfirmation : IInvestigationStatus4Choice, IIsoChoiceVariant
+public interface IAssignmentCancellationConfirmation
+    : IInvestigationStatus4Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

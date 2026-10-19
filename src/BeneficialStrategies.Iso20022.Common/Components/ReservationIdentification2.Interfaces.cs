@@ -10,8 +10,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ReservationIdentification2 : IReservationIdentification2
 {
-    ISystemIdentification2Choice? IReservationIdentification2.SystemIdentification => SystemIdentification;
+    ISystemIdentification2Choice? IReservationIdentification2.SystemIdentification =>
+        SystemIdentification;
     IReservationType1Choice IReservationIdentification2.Type => Type;
-    IBranchAndFinancialInstitutionIdentification6? IReservationIdentification2.AccountOwner => AccountOwner;
-    IAccountIdentification4Choice? IReservationIdentification2.AccountIdentification => AccountIdentification;
+    IBranchAndFinancialInstitutionIdentification6? IReservationIdentification2.AccountOwner =>
+        AccountOwner;
+    IAccountIdentification4Choice? IReservationIdentification2.AccountIdentification =>
+        AccountIdentification;
 }

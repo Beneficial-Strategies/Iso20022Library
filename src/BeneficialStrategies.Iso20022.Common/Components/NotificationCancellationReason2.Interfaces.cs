@@ -12,5 +12,6 @@ public partial record NotificationCancellationReason2 : INotificationCancellatio
 {
     IPartyIdentification272? INotificationCancellationReason2.Originator => Originator;
     INotificationCancellationReason1Choice? INotificationCancellationReason2.Reason => Reason;
-    IEnumerable<Max105Text> INotificationCancellationReason2.AdditionalInformation => AdditionalInformation;
+    IEnumerable<Max105Text> INotificationCancellationReason2.AdditionalInformation =>
+        AdditionalInformation;
 }

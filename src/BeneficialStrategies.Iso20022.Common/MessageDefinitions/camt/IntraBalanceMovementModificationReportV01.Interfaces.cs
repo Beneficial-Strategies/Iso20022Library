@@ -8,11 +8,16 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.camt;
 
-public partial record IntraBalanceMovementModificationReportV01 : IIntraBalanceMovementModificationReportV01
+public partial record IntraBalanceMovementModificationReportV01
+    : IIntraBalanceMovementModificationReportV01
 {
-    IDocumentIdentification51? IIntraBalanceMovementModificationReportV01.Identification => Identification;
+    IDocumentIdentification51? IIntraBalanceMovementModificationReportV01.Identification =>
+        Identification;
     IPagination1 IIntraBalanceMovementModificationReportV01.Pagination => Pagination;
-    IIntraBalanceReport5 IIntraBalanceMovementModificationReportV01.ReportGeneralDetails => ReportGeneralDetails;
-    IIntraBalanceOrOperationalError8Choice? IIntraBalanceMovementModificationReportV01.ReportOrError => ReportOrError;
-    IEnumerable<ISupplementaryData1> IIntraBalanceMovementModificationReportV01.SupplementaryData => SupplementaryData;
+    IIntraBalanceReport5 IIntraBalanceMovementModificationReportV01.ReportGeneralDetails =>
+        ReportGeneralDetails;
+    IIntraBalanceOrOperationalError8Choice? IIntraBalanceMovementModificationReportV01.ReportOrError =>
+        ReportOrError;
+    IEnumerable<ISupplementaryData1> IIntraBalanceMovementModificationReportV01.SupplementaryData =>
+        SupplementaryData;
 }

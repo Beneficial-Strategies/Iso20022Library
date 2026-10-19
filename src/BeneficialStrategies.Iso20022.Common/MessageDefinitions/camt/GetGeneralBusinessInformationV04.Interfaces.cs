@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 public partial record GetGeneralBusinessInformationV04 : IGetGeneralBusinessInformationV04
 {
     IMessageHeader1 IGetGeneralBusinessInformationV04.MessageHeader => MessageHeader;
-    IBusinessInformationQueryDefinition3? IGetGeneralBusinessInformationV04.GeneralBusinessInformationQueryDefinition => GeneralBusinessInformationQueryDefinition;
-    IEnumerable<ISupplementaryData1> IGetGeneralBusinessInformationV04.SupplementaryData => SupplementaryData;
+    IBusinessInformationQueryDefinition3? IGetGeneralBusinessInformationV04.GeneralBusinessInformationQueryDefinition =>
+        GeneralBusinessInformationQueryDefinition;
+    IEnumerable<ISupplementaryData1> IGetGeneralBusinessInformationV04.SupplementaryData =>
+        SupplementaryData;
 }

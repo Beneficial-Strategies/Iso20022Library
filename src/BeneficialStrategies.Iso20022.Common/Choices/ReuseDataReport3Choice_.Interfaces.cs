@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record ReuseDataReport3Choice_ : IReuseDataReport3Choice
-{
-}
+public abstract partial record ReuseDataReport3Choice_ : IReuseDataReport3Choice { }

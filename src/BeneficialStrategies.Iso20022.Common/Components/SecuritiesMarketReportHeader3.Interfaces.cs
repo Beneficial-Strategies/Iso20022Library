@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecuritiesMarketReportHeader3 : ISecuritiesMarketReportHeader3
 {
-    ITradingVenueIdentification1Choice ISecuritiesMarketReportHeader3.ReportingEntity => ReportingEntity;
+    ITradingVenueIdentification1Choice ISecuritiesMarketReportHeader3.ReportingEntity =>
+        ReportingEntity;
     IPeriod11Choice ISecuritiesMarketReportHeader3.ReportingPeriod => ReportingPeriod;
     IEnumerable<ISINOct2015Identifier> ISecuritiesMarketReportHeader3.ISIN => ISIN;
     IPagination1? ISecuritiesMarketReportHeader3.MessagePagination => MessagePagination;

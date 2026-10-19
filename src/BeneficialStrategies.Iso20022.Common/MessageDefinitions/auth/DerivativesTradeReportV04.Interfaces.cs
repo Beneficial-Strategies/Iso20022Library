@@ -12,5 +12,6 @@ public partial record DerivativesTradeReportV04 : IDerivativesTradeReportV04
 {
     ITradeReportHeader4 IDerivativesTradeReportV04.ReportHeader => ReportHeader;
     ITradeData59Choice IDerivativesTradeReportV04.TradeData => TradeData;
-    IEnumerable<ISupplementaryData1> IDerivativesTradeReportV04.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IDerivativesTradeReportV04.SupplementaryData =>
+        SupplementaryData;
 }

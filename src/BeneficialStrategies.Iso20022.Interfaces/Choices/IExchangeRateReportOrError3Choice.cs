@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// It is used to provide information on static data maintained by the transaction administrator and related to currency exchange details as maintained for system operations by the transaction administrator.
 /// </summary>
 [IsoId("_MkkyYNfiEeqoweZZxm4TPQ")]
-public interface IExchangeRateReportOrError3Choice : IIsoChoice
-{
-}
+public interface IExchangeRateReportOrError3Choice : IIsoChoice { }

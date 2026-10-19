@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PaymentSchemeChoice;
 
-public partial record ProprietaryInformation : IProprietaryInformation
-{
-}
+public partial record ProprietaryInformation : IProprietaryInformation { }

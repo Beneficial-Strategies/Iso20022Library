@@ -10,14 +10,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ChargesPerTransactionRecord3 : IChargesPerTransactionRecord3
 {
-    IBranchAndFinancialInstitutionIdentification8? IChargesPerTransactionRecord3.ChargesRequestor => ChargesRequestor;
-    ITransactionReferences7 IChargesPerTransactionRecord3.UnderlyingTransaction => UnderlyingTransaction;
+    IBranchAndFinancialInstitutionIdentification8? IChargesPerTransactionRecord3.ChargesRequestor =>
+        ChargesRequestor;
+    ITransactionReferences7 IChargesPerTransactionRecord3.UnderlyingTransaction =>
+        UnderlyingTransaction;
     ITotalCharges8? IChargesPerTransactionRecord3.TotalChargesPerRecord => TotalChargesPerRecord;
-    IEnumerable<IChargesBreakdown1> IChargesPerTransactionRecord3.ChargesBreakdown => ChargesBreakdown;
+    IEnumerable<IChargesBreakdown1> IChargesPerTransactionRecord3.ChargesBreakdown =>
+        ChargesBreakdown;
     IDateAndDateTime2Choice? IChargesPerTransactionRecord3.ValueDate => ValueDate;
-    IBranchAndFinancialInstitutionIdentification8? IChargesPerTransactionRecord3.DebtorAgent => DebtorAgent;
+    IBranchAndFinancialInstitutionIdentification8? IChargesPerTransactionRecord3.DebtorAgent =>
+        DebtorAgent;
     ICashAccount40? IChargesPerTransactionRecord3.DebtorAgentAccount => DebtorAgentAccount;
-    IBranchAndFinancialInstitutionIdentification8? IChargesPerTransactionRecord3.ChargesAccountAgent => ChargesAccountAgent;
-    ICashAccount40? IChargesPerTransactionRecord3.ChargesAccountAgentAccount => ChargesAccountAgentAccount;
-    IInstructionForInstructedAgent1? IChargesPerTransactionRecord3.InstructionForInstructedAgent => InstructionForInstructedAgent;
+    IBranchAndFinancialInstitutionIdentification8? IChargesPerTransactionRecord3.ChargesAccountAgent =>
+        ChargesAccountAgent;
+    ICashAccount40? IChargesPerTransactionRecord3.ChargesAccountAgentAccount =>
+        ChargesAccountAgentAccount;
+    IInstructionForInstructedAgent1? IChargesPerTransactionRecord3.InstructionForInstructedAgent =>
+        InstructionForInstructedAgent;
 }

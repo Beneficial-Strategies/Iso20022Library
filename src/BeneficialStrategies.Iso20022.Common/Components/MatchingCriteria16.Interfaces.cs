@@ -10,8 +10,12 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record MatchingCriteria16 : IMatchingCriteria16
 {
-    ICounterpartyMatchingCriteria6? IMatchingCriteria16.CounterpartyMatchingCriteria => CounterpartyMatchingCriteria;
-    IValuationMatchingCriteria1? IMatchingCriteria16.ValuationMatchingCriteria => ValuationMatchingCriteria;
-    IContractMatchingCriteria3? IMatchingCriteria16.ContractMatchingCriteria => ContractMatchingCriteria;
-    ITransactionMatchingCriteria6? IMatchingCriteria16.TransactionMatchingCriteria => TransactionMatchingCriteria;
+    ICounterpartyMatchingCriteria6? IMatchingCriteria16.CounterpartyMatchingCriteria =>
+        CounterpartyMatchingCriteria;
+    IValuationMatchingCriteria1? IMatchingCriteria16.ValuationMatchingCriteria =>
+        ValuationMatchingCriteria;
+    IContractMatchingCriteria3? IMatchingCriteria16.ContractMatchingCriteria =>
+        ContractMatchingCriteria;
+    ITransactionMatchingCriteria6? IMatchingCriteria16.TransactionMatchingCriteria =>
+        TransactionMatchingCriteria;
 }

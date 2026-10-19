@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Closure reason expressed as a code or a bilaterally agreed code.
 /// </summary>
 [IsoId("_72rN8KMgEeCJ6YNENx4h-w_-681649909")]
-public interface IClosureReason2Choice : IIsoChoice
-{
-}
+public interface IClosureReason2Choice : IIsoChoice { }

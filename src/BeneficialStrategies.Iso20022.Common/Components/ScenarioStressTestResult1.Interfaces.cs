@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record ScenarioStressTestResult1 : IScenarioStressTestResult1
 {
     IGenericIdentification168 IScenarioStressTestResult1.Identification => Identification;
-    IEnumerable<IPortfolioStressTestResult1> IScenarioStressTestResult1.PortfolioStressTestResult => PortfolioStressTestResult;
+    IEnumerable<IPortfolioStressTestResult1> IScenarioStressTestResult1.PortfolioStressTestResult =>
+        PortfolioStressTestResult;
 }

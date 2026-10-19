@@ -12,5 +12,6 @@ public partial record SystemAvailabilityAndEvents3 : ISystemAvailabilityAndEvent
 {
     ITimePeriod1? ISystemAvailabilityAndEvents3.SessionPeriod => SessionPeriod;
     IEnumerable<ISystemEvent3> ISystemAvailabilityAndEvents3.Event => Event;
-    IEnumerable<ISystemClosure2> ISystemAvailabilityAndEvents3.ClosureInformation => ClosureInformation;
+    IEnumerable<ISystemClosure2> ISystemAvailabilityAndEvents3.ClosureInformation =>
+        ClosureInformation;
 }

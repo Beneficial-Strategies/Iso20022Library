@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SupervisingAuthorityIdentification1 : ISupervisingAuthorityIdentification1
 {
-    ISupervisingAuthorityIdentification1Choice? ISupervisingAuthorityIdentification1.Identification => Identification;
+    ISupervisingAuthorityIdentification1Choice? ISupervisingAuthorityIdentification1.Identification =>
+        Identification;
 }

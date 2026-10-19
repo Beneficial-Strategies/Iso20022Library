@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Choices.RepurchaseAgreementType3Choice;
 
 public partial record GeneralCollateral : IGeneralCollateral
 {
-    IEnumerable<IFinancialInstrument59> IGeneralCollateral.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
-    IEnumerable<ISINOct2015Identifier> IGeneralCollateral.EligibleFinancialInstrumentIdentification => EligibleFinancialInstrumentIdentification;
+    IEnumerable<IFinancialInstrument59> IGeneralCollateral.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
+    IEnumerable<ISINOct2015Identifier> IGeneralCollateral.EligibleFinancialInstrumentIdentification =>
+        EligibleFinancialInstrumentIdentification;
 }

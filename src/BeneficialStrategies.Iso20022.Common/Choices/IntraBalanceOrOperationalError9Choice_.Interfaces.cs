@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record IntraBalanceOrOperationalError9Choice_ : IIntraBalanceOrOperationalError9Choice
-{
-}
+public abstract partial record IntraBalanceOrOperationalError9Choice_
+    : IIntraBalanceOrOperationalError9Choice { }

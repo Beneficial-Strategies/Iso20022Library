@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Defines commodity attributes of a derivative where the type is metal.
 /// </summary>
 [IsoId("_DnKNIU8REe2PGo0mhYCh1g")]
-public interface IAssetClassCommodityMetal2Choice : IIsoChoice
-{
-}
+public interface IAssetClassCommodityMetal2Choice : IIsoChoice { }

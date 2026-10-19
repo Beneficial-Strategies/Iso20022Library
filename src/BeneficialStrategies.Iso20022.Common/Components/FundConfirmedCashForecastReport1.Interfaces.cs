@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record FundConfirmedCashForecastReport1 : IFundConfirmedCashForecastReport1
 {
-    IEnumerable<IFundCashForecast1> IFundConfirmedCashForecastReport1.FundCashForecastDetails => FundCashForecastDetails;
+    IEnumerable<IFundCashForecast1> IFundConfirmedCashForecastReport1.FundCashForecastDetails =>
+        FundCashForecastDetails;
     IEnumerable<IExtension1> IFundConfirmedCashForecastReport1.Extension => Extension;
 }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Charge is expressed as a code or a bilaterally agreed code.
 /// </summary>
 [IsoId("_RIcz1Np-Ed-ak6NoX_4Aeg_-1267403817")]
-public interface IChargeTypeChoice : IIsoChoice
-{
-}
+public interface IChargeTypeChoice : IIsoChoice { }

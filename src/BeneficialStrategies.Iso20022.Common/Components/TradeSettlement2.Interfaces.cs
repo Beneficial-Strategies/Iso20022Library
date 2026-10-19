@@ -13,6 +13,7 @@ public partial record TradeSettlement2 : ITradeSettlement2
     ICreditorReferenceInformation2? ITradeSettlement2.PaymentReference => PaymentReference;
     ICurrencyReference3? ITradeSettlement2.InvoiceCurrencyExchange => InvoiceCurrencyExchange;
     IPeriod2? ITradeSettlement2.BillingPeriod => BillingPeriod;
-    IEnumerable<ISettlementSubTotalCalculatedTax2> ITradeSettlement2.SubTotalCalculatedTax => SubTotalCalculatedTax;
+    IEnumerable<ISettlementSubTotalCalculatedTax2> ITradeSettlement2.SubTotalCalculatedTax =>
+        SubTotalCalculatedTax;
     IEnumerable<IEarlyPayment1> ITradeSettlement2.EarlyPayments => EarlyPayments;
 }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Reason for which a cancellation is rejected.
 /// </summary>
 [IsoId("_RXptdNp-Ed-ak6NoX_4Aeg_890850288")]
-public interface IRejectedCancellationStatusReason1Choice : IIsoChoice
-{
-}
+public interface IRejectedCancellationStatusReason1Choice : IIsoChoice { }

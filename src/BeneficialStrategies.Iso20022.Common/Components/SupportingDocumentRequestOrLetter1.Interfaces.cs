@@ -12,7 +12,10 @@ public partial record SupportingDocumentRequestOrLetter1 : ISupportingDocumentRe
 {
     IParty28Choice? ISupportingDocumentRequestOrLetter1.Sender => Sender;
     IParty28Choice? ISupportingDocumentRequestOrLetter1.Receiver => Receiver;
-    IEnumerable<IOriginalMessage2> ISupportingDocumentRequestOrLetter1.OriginalReferences => OriginalReferences;
-    IEnumerable<IDocumentGeneralInformation3> ISupportingDocumentRequestOrLetter1.Attachment => Attachment;
-    IEnumerable<ISupplementaryData1> ISupportingDocumentRequestOrLetter1.SupplementaryData => SupplementaryData;
+    IEnumerable<IOriginalMessage2> ISupportingDocumentRequestOrLetter1.OriginalReferences =>
+        OriginalReferences;
+    IEnumerable<IDocumentGeneralInformation3> ISupportingDocumentRequestOrLetter1.Attachment =>
+        Attachment;
+    IEnumerable<ISupplementaryData1> ISupportingDocumentRequestOrLetter1.SupplementaryData =>
+        SupplementaryData;
 }

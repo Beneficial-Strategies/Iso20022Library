@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.ReconciliationMatchedStatus9Choice;
 
-public partial record Matched : IMatched
-{
-}
+public partial record Matched : IMatched { }

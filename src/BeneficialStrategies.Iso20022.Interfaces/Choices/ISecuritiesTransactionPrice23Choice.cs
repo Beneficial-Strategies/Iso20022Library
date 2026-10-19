@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Securities Transaction Price23Choice.
 /// </summary>
 [IsoId("_Auws0eFbEe64Zfh-zMOIZQ")]
-public interface ISecuritiesTransactionPrice23Choice : IIsoChoice
-{
-}
+public interface ISecuritiesTransactionPrice23Choice : IIsoChoice { }

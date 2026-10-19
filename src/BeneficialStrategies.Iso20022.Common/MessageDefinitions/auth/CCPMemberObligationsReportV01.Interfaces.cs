@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.auth;
 
 public partial record CCPMemberObligationsReportV01 : ICCPMemberObligationsReportV01
 {
-    IEnumerable<ISettlementAccount1> ICCPMemberObligationsReportV01.SettlementAccount => SettlementAccount;
-    IEnumerable<ISupplementaryData1> ICCPMemberObligationsReportV01.SupplementaryData => SupplementaryData;
+    IEnumerable<ISettlementAccount1> ICCPMemberObligationsReportV01.SettlementAccount =>
+        SettlementAccount;
+    IEnumerable<ISupplementaryData1> ICCPMemberObligationsReportV01.SupplementaryData =>
+        SupplementaryData;
 }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Reference of the PayInSchedule or the PayInCall being acknowledged. This is the Message Identification element from the Report Data sequence of the Pay In Schedule message or the Pay In Call message.
 /// </summary>
 [IsoId("_oIaocSzSEeKZfox_pyYpTA")]
-public interface IAcknowledgementDetails1Choice : IIsoChoice
-{
-}
+public interface IAcknowledgementDetails1Choice : IIsoChoice { }

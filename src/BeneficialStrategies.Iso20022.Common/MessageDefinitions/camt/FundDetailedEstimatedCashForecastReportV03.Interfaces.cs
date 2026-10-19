@@ -8,14 +8,21 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.camt;
 
-public partial record FundDetailedEstimatedCashForecastReportV03 : IFundDetailedEstimatedCashForecastReportV03
+public partial record FundDetailedEstimatedCashForecastReportV03
+    : IFundDetailedEstimatedCashForecastReportV03
 {
-    IMessageIdentification1 IFundDetailedEstimatedCashForecastReportV03.MessageIdentification => MessageIdentification;
-    IAdditionalReference3? IFundDetailedEstimatedCashForecastReportV03.PoolReference => PoolReference;
-    IEnumerable<IAdditionalReference3> IFundDetailedEstimatedCashForecastReportV03.PreviousReference => PreviousReference;
-    IEnumerable<IAdditionalReference3> IFundDetailedEstimatedCashForecastReportV03.RelatedReference => RelatedReference;
+    IMessageIdentification1 IFundDetailedEstimatedCashForecastReportV03.MessageIdentification =>
+        MessageIdentification;
+    IAdditionalReference3? IFundDetailedEstimatedCashForecastReportV03.PoolReference =>
+        PoolReference;
+    IEnumerable<IAdditionalReference3> IFundDetailedEstimatedCashForecastReportV03.PreviousReference =>
+        PreviousReference;
+    IEnumerable<IAdditionalReference3> IFundDetailedEstimatedCashForecastReportV03.RelatedReference =>
+        RelatedReference;
     IPagination IFundDetailedEstimatedCashForecastReportV03.MessagePagination => MessagePagination;
-    IEnumerable<IEstimatedFundCashForecast4> IFundDetailedEstimatedCashForecastReportV03.EstimatedFundCashForecastDetails => EstimatedFundCashForecastDetails;
-    INetCashForecast3? IFundDetailedEstimatedCashForecastReportV03.ConsolidatedNetCashForecast => ConsolidatedNetCashForecast;
+    IEnumerable<IEstimatedFundCashForecast4> IFundDetailedEstimatedCashForecastReportV03.EstimatedFundCashForecastDetails =>
+        EstimatedFundCashForecastDetails;
+    INetCashForecast3? IFundDetailedEstimatedCashForecastReportV03.ConsolidatedNetCashForecast =>
+        ConsolidatedNetCashForecast;
     IEnumerable<IExtension1> IFundDetailedEstimatedCashForecastReportV03.Extension => Extension;
 }

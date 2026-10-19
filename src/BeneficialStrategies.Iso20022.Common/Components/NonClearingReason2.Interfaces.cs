@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record NonClearingReason2 : INonClearingReason2
 {
-    IEnumerable<ClearingExemptionException1Code> INonClearingReason2.ClearingExemptionException => ClearingExemptionException;
+    IEnumerable<ClearingExemptionException1Code> INonClearingReason2.ClearingExemptionException =>
+        ClearingExemptionException;
 }

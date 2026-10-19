@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record FinancialInstrument59 : IFinancialInstrument59
-{
-}
+public partial record FinancialInstrument59 : IFinancialInstrument59 { }

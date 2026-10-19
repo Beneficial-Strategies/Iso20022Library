@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record TransparencyDataReport13 : ITransparencyDataReport13
 {
     INumberAndVolume2 ITransparencyDataReport13.TransactionsExecuted => TransactionsExecuted;
-    INumberAndVolume2 ITransparencyDataReport13.TransactionsExecutedExcludingPreTradeWaiver => TransactionsExecutedExcludingPreTradeWaiver;
-    INumberAndVolume2 ITransparencyDataReport13.TransactionsExecutedExcludingPostTradeLargeInScaleWaiver => TransactionsExecutedExcludingPostTradeLargeInScaleWaiver;
+    INumberAndVolume2 ITransparencyDataReport13.TransactionsExecutedExcludingPreTradeWaiver =>
+        TransactionsExecutedExcludingPreTradeWaiver;
+    INumberAndVolume2 ITransparencyDataReport13.TransactionsExecutedExcludingPostTradeLargeInScaleWaiver =>
+        TransactionsExecutedExcludingPostTradeLargeInScaleWaiver;
 }

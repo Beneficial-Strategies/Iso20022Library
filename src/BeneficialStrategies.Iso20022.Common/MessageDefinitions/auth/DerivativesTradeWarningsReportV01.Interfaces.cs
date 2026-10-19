@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.auth;
 
 public partial record DerivativesTradeWarningsReportV01 : IDerivativesTradeWarningsReportV01
 {
-    IStatisticsPerCounterparty16Choice IDerivativesTradeWarningsReportV01.WarningsStatistics => WarningsStatistics;
-    IEnumerable<ISupplementaryData1> IDerivativesTradeWarningsReportV01.SupplementaryData => SupplementaryData;
+    IStatisticsPerCounterparty16Choice IDerivativesTradeWarningsReportV01.WarningsStatistics =>
+        WarningsStatistics;
+    IEnumerable<ISupplementaryData1> IDerivativesTradeWarningsReportV01.SupplementaryData =>
+        SupplementaryData;
 }

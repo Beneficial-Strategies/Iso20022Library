@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CashOutForecast5 : ICashOutForecast5
 {
     IFinancialInstrumentQuantity1? ICashOutForecast5.SubTotalUnitsNumber => SubTotalUnitsNumber;
-    IEnumerable<IFundCashOutBreakdown3> ICashOutForecast5.CashOutBreakdownDetails => CashOutBreakdownDetails;
+    IEnumerable<IFundCashOutBreakdown3> ICashOutForecast5.CashOutBreakdownDetails =>
+        CashOutBreakdownDetails;
     IFundBalance1? ICashOutForecast5.AdditionalBalance => AdditionalBalance;
 }

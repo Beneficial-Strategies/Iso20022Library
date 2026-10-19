@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the reason for the payment compensation.
 /// </summary>
 [IsoId("_UyHYkIjYEeeDW7_wB-eK_g")]
-public interface ICompensationReason1Choice : IIsoChoice
-{
-}
+public interface ICompensationReason1Choice : IIsoChoice { }

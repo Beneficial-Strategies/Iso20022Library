@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the type of margin, for example, initial margin, variation margin, initial deposit or coupon margin.
 /// </summary>
 [IsoId("_JT728I1rEeet3cKIYK84nw")]
-public interface IMarginType2Choice : IIsoChoice
-{
-}
+public interface IMarginType2Choice : IIsoChoice { }

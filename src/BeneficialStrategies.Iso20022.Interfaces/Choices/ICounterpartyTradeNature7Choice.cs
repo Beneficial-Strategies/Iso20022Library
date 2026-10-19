@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Nature of the company activities of the reporting counterparty.
 /// </summary>
 [IsoId("_-N5Qman9EemdLtwzt4CWxg")]
-public interface ICounterpartyTradeNature7Choice : IIsoChoice
-{
-}
+public interface ICounterpartyTradeNature7Choice : IIsoChoice { }

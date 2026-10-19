@@ -15,5 +15,6 @@ public partial record Cheque15 : ICheque15
     ICashAccount40? ICheque15.DrawerAgentAccount => DrawerAgentAccount;
     IPartyIdentification135? ICheque15.Payee => Payee;
     ICashAccount40? ICheque15.PayeeAccount => PayeeAccount;
-    IChequeCancellationReason1? ICheque15.ChequeCancellationOrStopReason => ChequeCancellationOrStopReason;
+    IChequeCancellationReason1? ICheque15.ChequeCancellationOrStopReason =>
+        ChequeCancellationOrStopReason;
 }

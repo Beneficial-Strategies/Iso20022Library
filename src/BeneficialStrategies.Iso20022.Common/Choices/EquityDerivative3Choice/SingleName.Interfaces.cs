@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.EquityDerivative3Choice;
 
-public partial record SingleName : ISingleName
-{
-}
+public partial record SingleName : ISingleName { }

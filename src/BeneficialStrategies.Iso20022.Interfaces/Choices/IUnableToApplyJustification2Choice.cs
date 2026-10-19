@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the details of missing information or the complete set of available information.
 /// </summary>
 [IsoId("_T-i3M9p-Ed-ak6NoX_4Aeg_-1089125452")]
-public interface IUnableToApplyJustification2Choice : IIsoChoice
-{
-}
+public interface IUnableToApplyJustification2Choice : IIsoChoice { }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityPolypropylene4Choice;
 
-public partial record Plastic : IPlastic
-{
-}
+public partial record Plastic : IPlastic { }

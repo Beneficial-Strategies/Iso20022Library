@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.TradingVenueIdentification1Choice;
 
-public partial record NationalCompetentAuthority : INationalCompetentAuthority
-{
-}
+public partial record NationalCompetentAuthority : INationalCompetentAuthority { }

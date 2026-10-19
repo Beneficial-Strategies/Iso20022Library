@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.MemberCriteriaDefinition2Choice;
 
-public partial record QueryName : IQueryName
-{
-}
+public partial record QueryName : IQueryName { }

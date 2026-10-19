@@ -13,6 +13,8 @@ public partial record CompareOtherPayment1 : ICompareOtherPayment1
     ICompareOtherPaymentType1? ICompareOtherPayment1.OtherPaymentType => OtherPaymentType;
     ICompareAmountAndDirection3? ICompareOtherPayment1.OtherPaymentAmount => OtherPaymentAmount;
     ICompareDate3? ICompareOtherPayment1.OtherPaymentDate => OtherPaymentDate;
-    ICompareOrganisationIdentification7? ICompareOtherPayment1.OtherPaymentPayer => OtherPaymentPayer;
-    ICompareOrganisationIdentification7? ICompareOtherPayment1.OtherPaymentReceiver => OtherPaymentReceiver;
+    ICompareOrganisationIdentification7? ICompareOtherPayment1.OtherPaymentPayer =>
+        OtherPaymentPayer;
+    ICompareOrganisationIdentification7? ICompareOtherPayment1.OtherPaymentReceiver =>
+        OtherPaymentReceiver;
 }

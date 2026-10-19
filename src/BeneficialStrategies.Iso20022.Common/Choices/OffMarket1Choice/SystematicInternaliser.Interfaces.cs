@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.OffMarket1Choice;
 
-public partial record SystematicInternaliser : ISystematicInternaliser
-{
-}
+public partial record SystematicInternaliser : ISystematicInternaliser { }

@@ -8,9 +8,13 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.auth;
 
-public partial record FinancialInstrumentReportingInvalidReferenceDataReportV02 : IFinancialInstrumentReportingInvalidReferenceDataReportV02
+public partial record FinancialInstrumentReportingInvalidReferenceDataReportV02
+    : IFinancialInstrumentReportingInvalidReferenceDataReportV02
 {
-    IPeriod4Choice IFinancialInstrumentReportingInvalidReferenceDataReportV02.DatePeriod => DatePeriod;
-    IEnumerable<ISecuritiesInvalidReferenceDataReport4> IFinancialInstrumentReportingInvalidReferenceDataReportV02.FinancialInstruments => FinancialInstruments;
-    IEnumerable<ISupplementaryData1> IFinancialInstrumentReportingInvalidReferenceDataReportV02.SupplementaryData => SupplementaryData;
+    IPeriod4Choice IFinancialInstrumentReportingInvalidReferenceDataReportV02.DatePeriod =>
+        DatePeriod;
+    IEnumerable<ISecuritiesInvalidReferenceDataReport4> IFinancialInstrumentReportingInvalidReferenceDataReportV02.FinancialInstruments =>
+        FinancialInstruments;
+    IEnumerable<ISupplementaryData1> IFinancialInstrumentReportingInvalidReferenceDataReportV02.SupplementaryData =>
+        SupplementaryData;
 }

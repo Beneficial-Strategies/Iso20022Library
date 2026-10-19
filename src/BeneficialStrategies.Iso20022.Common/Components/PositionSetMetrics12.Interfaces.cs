@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record PositionSetMetrics12 : IPositionSetMetrics12
 {
     IVolumeMetrics6? IPositionSetMetrics12.VolumeMetrics => VolumeMetrics;
-    IQuantityNominalValue2Choice? IPositionSetMetrics12.QuantityOrNominalAmount => QuantityOrNominalAmount;
+    IQuantityNominalValue2Choice? IPositionSetMetrics12.QuantityOrNominalAmount =>
+        QuantityOrNominalAmount;
 }

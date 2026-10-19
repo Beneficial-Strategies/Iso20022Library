@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record UnderlyingTransaction36 : IUnderlyingTransaction36
 {
-    IOriginalGroupHeader21? IUnderlyingTransaction36.OriginalGroupInformationAndCancellation => OriginalGroupInformationAndCancellation;
-    IEnumerable<IPaymentTransaction172> IUnderlyingTransaction36.TransactionInformation => TransactionInformation;
+    IOriginalGroupHeader21? IUnderlyingTransaction36.OriginalGroupInformationAndCancellation =>
+        OriginalGroupInformationAndCancellation;
+    IEnumerable<IPaymentTransaction172> IUnderlyingTransaction36.TransactionInformation =>
+        TransactionInformation;
 }

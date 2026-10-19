@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusReason1Choice;
 
-public partial record PendingFailingSettlement : IPendingFailingSettlement
-{
-}
+public partial record PendingFailingSettlement : IPendingFailingSettlement { }

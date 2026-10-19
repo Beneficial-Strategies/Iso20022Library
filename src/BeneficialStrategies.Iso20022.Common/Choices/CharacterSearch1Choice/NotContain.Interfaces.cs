@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.CharacterSearch1Choice;
 
-public partial record NotContain : INotContain
-{
-}
+public partial record NotContain : INotContain { }

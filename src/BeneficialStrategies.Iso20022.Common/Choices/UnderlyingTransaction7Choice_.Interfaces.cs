@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record UnderlyingTransaction7Choice_ : IUnderlyingTransaction7Choice
-{
-}
+public abstract partial record UnderlyingTransaction7Choice_ : IUnderlyingTransaction7Choice { }

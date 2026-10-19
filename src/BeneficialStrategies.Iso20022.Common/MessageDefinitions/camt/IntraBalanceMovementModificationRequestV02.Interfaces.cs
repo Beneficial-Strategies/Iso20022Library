@@ -8,13 +8,20 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.camt;
 
-public partial record IntraBalanceMovementModificationRequestV02 : IIntraBalanceMovementModificationRequestV02
+public partial record IntraBalanceMovementModificationRequestV02
+    : IIntraBalanceMovementModificationRequestV02
 {
-    IDocumentIdentification51? IIntraBalanceMovementModificationRequestV02.Identification => Identification;
+    IDocumentIdentification51? IIntraBalanceMovementModificationRequestV02.Identification =>
+        Identification;
     ICashAccount40 IIntraBalanceMovementModificationRequestV02.CashAccount => CashAccount;
-    ISystemPartyIdentification8? IIntraBalanceMovementModificationRequestV02.CashAccountOwner => CashAccountOwner;
-    IBranchAndFinancialInstitutionIdentification8? IIntraBalanceMovementModificationRequestV02.CashAccountServicer => CashAccountServicer;
-    IEnumerable<IRequestDetails22> IIntraBalanceMovementModificationRequestV02.RequestDetails => RequestDetails;
-    IIntraBalance5? IIntraBalanceMovementModificationRequestV02.UnderlyingIntraBalance => UnderlyingIntraBalance;
-    IEnumerable<ISupplementaryData1> IIntraBalanceMovementModificationRequestV02.SupplementaryData => SupplementaryData;
+    ISystemPartyIdentification8? IIntraBalanceMovementModificationRequestV02.CashAccountOwner =>
+        CashAccountOwner;
+    IBranchAndFinancialInstitutionIdentification8? IIntraBalanceMovementModificationRequestV02.CashAccountServicer =>
+        CashAccountServicer;
+    IEnumerable<IRequestDetails22> IIntraBalanceMovementModificationRequestV02.RequestDetails =>
+        RequestDetails;
+    IIntraBalance5? IIntraBalanceMovementModificationRequestV02.UnderlyingIntraBalance =>
+        UnderlyingIntraBalance;
+    IEnumerable<ISupplementaryData1> IIntraBalanceMovementModificationRequestV02.SupplementaryData =>
+        SupplementaryData;
 }

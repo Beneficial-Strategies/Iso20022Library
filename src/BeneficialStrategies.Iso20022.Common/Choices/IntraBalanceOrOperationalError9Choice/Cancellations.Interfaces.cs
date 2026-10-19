@@ -12,7 +12,8 @@ public partial record Cancellations : ICancellations
 {
     ICashAccount38? ICancellations.CashAccount => CashAccount;
     ISystemPartyIdentification8? ICancellations.CashAccountOwner => CashAccountOwner;
-    IBranchAndFinancialInstitutionIdentification6? ICancellations.CashAccountServicer => CashAccountServicer;
+    IBranchAndFinancialInstitutionIdentification6? ICancellations.CashAccountServicer =>
+        CashAccountServicer;
     IProcessingStatus69Choice? ICancellations.ProcessingStatus => ProcessingStatus;
     IEnumerable<IIntraBalanceCancellation6> ICancellations.Cancellation => Cancellation;
 }

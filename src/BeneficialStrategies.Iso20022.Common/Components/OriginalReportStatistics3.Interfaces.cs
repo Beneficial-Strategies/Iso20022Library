@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record OriginalReportStatistics3 : IOriginalReportStatistics3
 {
-    IEnumerable<INumberOfRecordsPerStatus1> IOriginalReportStatistics3.NumberOfRecordsPerStatus => NumberOfRecordsPerStatus;
+    IEnumerable<INumberOfRecordsPerStatus1> IOriginalReportStatistics3.NumberOfRecordsPerStatus =>
+        NumberOfRecordsPerStatus;
 }

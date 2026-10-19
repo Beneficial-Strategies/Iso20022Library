@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionIdentification3Choice
 
 public partial record MarginReporting : IMarginReporting
 {
-    IOrganisationIdentification15Choice IMarginReporting.ReportingCounterparty => ReportingCounterparty;
+    IOrganisationIdentification15Choice IMarginReporting.ReportingCounterparty =>
+        ReportingCounterparty;
     IPartyIdentification236Choice IMarginReporting.OtherCounterparty => OtherCounterparty;
-    IOrganisationIdentification15Choice? IMarginReporting.EntityResponsibleForReport => EntityResponsibleForReport;
+    IOrganisationIdentification15Choice? IMarginReporting.EntityResponsibleForReport =>
+        EntityResponsibleForReport;
 }

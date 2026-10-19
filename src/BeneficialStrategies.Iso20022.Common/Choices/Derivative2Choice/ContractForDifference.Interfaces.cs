@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.Derivative2Choice;
 
-public partial record ContractForDifference : IContractForDifference
-{
-}
+public partial record ContractForDifference : IContractForDifference { }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record SecurityIdentification18Choice_ : ISecurityIdentification18Choice
-{
-}
+public abstract partial record SecurityIdentification18Choice_ : ISecurityIdentification18Choice { }

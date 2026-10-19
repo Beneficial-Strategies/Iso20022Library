@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.ExchangeRateBasis1Choice;
 
-public partial record CurrencyPair : ICurrencyPair
-{
-}
+public partial record CurrencyPair : ICurrencyPair { }

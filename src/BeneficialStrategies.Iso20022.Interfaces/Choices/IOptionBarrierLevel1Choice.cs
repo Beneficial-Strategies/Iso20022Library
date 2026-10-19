@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Option Barrier Level1Choice.
 /// </summary>
 [IsoId("_pVNJcNyZEe6BHYBNhkieQQ")]
-public interface IOptionBarrierLevel1Choice : IIsoChoice
-{
-}
+public interface IOptionBarrierLevel1Choice : IIsoChoice { }

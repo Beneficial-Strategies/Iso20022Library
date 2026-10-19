@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty1Choice
 public partial record Report : IReport
 {
     ITradeCounterpartyReport9 IReport.CounterpartyIdentification => CounterpartyIdentification;
-    IReconciliationStatisticsPerDerivativeContractGroup3 IReport.ReconciliationStatistics => ReconciliationStatistics;
+    IReconciliationStatisticsPerDerivativeContractGroup3 IReport.ReconciliationStatistics =>
+        ReconciliationStatistics;
     IEnumerable<ICompetentAuthority1> IReport.CompetentAuthority => CompetentAuthority;
 }

@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingContract1Choice;
 
 public partial record Loan : ILoan
 {
-    IDocumentIdentification22 ILoan.ContractDocumentIdentification => ContractDocumentIdentification;
+    IDocumentIdentification22 ILoan.ContractDocumentIdentification =>
+        ContractDocumentIdentification;
     IEnumerable<ITradeParty2> ILoan.Buyer => Buyer;
     IEnumerable<ITradeParty2> ILoan.Seller => Seller;
     ISpecialCondition1? ILoan.SpecialConditions => SpecialConditions;

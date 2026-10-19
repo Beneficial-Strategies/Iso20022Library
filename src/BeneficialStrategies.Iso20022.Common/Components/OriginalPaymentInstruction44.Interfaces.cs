@@ -11,7 +11,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record OriginalPaymentInstruction44 : IOriginalPaymentInstruction44
 {
     ICase5? IOriginalPaymentInstruction44.Case => Case;
-    IOriginalGroupInformation29? IOriginalPaymentInstruction44.OriginalGroupInformation => OriginalGroupInformation;
-    IEnumerable<IPaymentCancellationReason5> IOriginalPaymentInstruction44.CancellationReasonInformation => CancellationReasonInformation;
-    IEnumerable<IPaymentTransaction140> IOriginalPaymentInstruction44.TransactionInformation => TransactionInformation;
+    IOriginalGroupInformation29? IOriginalPaymentInstruction44.OriginalGroupInformation =>
+        OriginalGroupInformation;
+    IEnumerable<IPaymentCancellationReason5> IOriginalPaymentInstruction44.CancellationReasonInformation =>
+        CancellationReasonInformation;
+    IEnumerable<IPaymentTransaction140> IOriginalPaymentInstruction44.TransactionInformation =>
+        TransactionInformation;
 }

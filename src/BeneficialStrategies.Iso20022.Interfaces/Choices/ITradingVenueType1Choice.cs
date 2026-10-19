@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Identification of the trading venue where the transaction was executed.
 /// </summary>
 [IsoId("_MXZ-8Hy7Eeu1BeE84IrnAQ")]
-public interface ITradingVenueType1Choice : IIsoChoice
-{
-}
+public interface ITradingVenueType1Choice : IIsoChoice { }

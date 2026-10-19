@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record RegulatoryReportingNotification4 : IRegulatoryReportingNotification4
 {
     IPartyIdentification272 IRegulatoryReportingNotification4.AccountOwner => AccountOwner;
-    IBranchAndFinancialInstitutionIdentification8 IRegulatoryReportingNotification4.AccountServicer => AccountServicer;
-    IEnumerable<ITransactionCertificate4> IRegulatoryReportingNotification4.TransactionCertificate => TransactionCertificate;
+    IBranchAndFinancialInstitutionIdentification8 IRegulatoryReportingNotification4.AccountServicer =>
+        AccountServicer;
+    IEnumerable<ITransactionCertificate4> IRegulatoryReportingNotification4.TransactionCertificate =>
+        TransactionCertificate;
 }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity3Choice;
 
-public partial record OfficialEconomicStatistics : IOfficialEconomicStatistics
-{
-}
+public partial record OfficialEconomicStatistics : IOfficialEconomicStatistics { }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the details on the settlement fails split per instruction types or explicit no data report..
 /// </summary>
 [IsoId("_-9n1xTOkEeqX8uoQQ3KffQ")]
-public interface ISettlementFailsDailyInstructionType1Choice : IIsoChoice
-{
-}
+public interface ISettlementFailsDailyInstructionType1Choice : IIsoChoice { }

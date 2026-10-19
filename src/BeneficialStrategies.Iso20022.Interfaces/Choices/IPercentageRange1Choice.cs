@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between ranges of rates in which a percentage rate is considered valid or a specified percentage rate which has to be matched or unmatched to be valid.
 /// </summary>
 [IsoId("_7_BRqKMgEeCJ6YNENx4h-w_249022340")]
-public interface IPercentageRange1Choice : IIsoChoice
-{
-}
+public interface IPercentageRange1Choice : IIsoChoice { }

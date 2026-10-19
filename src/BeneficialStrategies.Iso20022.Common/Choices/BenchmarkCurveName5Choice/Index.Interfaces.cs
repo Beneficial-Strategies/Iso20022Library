@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.BenchmarkCurveName5Choice;
 
-public partial record Index : IIndex
-{
-}
+public partial record Index : IIndex { }

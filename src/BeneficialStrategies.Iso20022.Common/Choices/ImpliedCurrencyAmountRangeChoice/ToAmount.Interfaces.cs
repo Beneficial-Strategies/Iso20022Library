@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.ImpliedCurrencyAmountRangeChoice;
 
-public partial record ToAmount : IToAmount
-{
-}
+public partial record ToAmount : IToAmount { }

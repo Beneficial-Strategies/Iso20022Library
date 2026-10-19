@@ -10,9 +10,14 @@ namespace BeneficialStrategies.Iso20022.auth;
 
 public partial record CCPMemberRequirementsReportV01 : ICCPMemberRequirementsReportV01
 {
-    IEnumerable<IIntraDayRequirement1> ICCPMemberRequirementsReportV01.IntraDayRequirementAmount => IntraDayRequirementAmount;
-    IEnumerable<IIntraDayMarginCall1> ICCPMemberRequirementsReportV01.IntraDayMarginCall => IntraDayMarginCall;
-    IEnumerable<IEndOfDayRequirement2> ICCPMemberRequirementsReportV01.EndOfDayRequirement => EndOfDayRequirement;
-    IEnumerable<IDefaultFundRequirement1> ICCPMemberRequirementsReportV01.DefaultFundRequirement => DefaultFundRequirement;
-    IEnumerable<ISupplementaryData1> ICCPMemberRequirementsReportV01.SupplementaryData => SupplementaryData;
+    IEnumerable<IIntraDayRequirement1> ICCPMemberRequirementsReportV01.IntraDayRequirementAmount =>
+        IntraDayRequirementAmount;
+    IEnumerable<IIntraDayMarginCall1> ICCPMemberRequirementsReportV01.IntraDayMarginCall =>
+        IntraDayMarginCall;
+    IEnumerable<IEndOfDayRequirement2> ICCPMemberRequirementsReportV01.EndOfDayRequirement =>
+        EndOfDayRequirement;
+    IEnumerable<IDefaultFundRequirement1> ICCPMemberRequirementsReportV01.DefaultFundRequirement =>
+        DefaultFundRequirement;
+    IEnumerable<ISupplementaryData1> ICCPMemberRequirementsReportV01.SupplementaryData =>
+        SupplementaryData;
 }

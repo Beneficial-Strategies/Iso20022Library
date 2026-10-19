@@ -10,9 +10,13 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitStructure2Choice;
 
 public partial record CurrentLimitIdentification : ICurrentLimitIdentification
 {
-    ISystemIdentification2Choice? ICurrentLimitIdentification.SystemIdentification => SystemIdentification;
-    IBranchAndFinancialInstitutionIdentification6? ICurrentLimitIdentification.BilateralLimitCounterpartyIdentification => BilateralLimitCounterpartyIdentification;
+    ISystemIdentification2Choice? ICurrentLimitIdentification.SystemIdentification =>
+        SystemIdentification;
+    IBranchAndFinancialInstitutionIdentification6? ICurrentLimitIdentification.BilateralLimitCounterpartyIdentification =>
+        BilateralLimitCounterpartyIdentification;
     ILimitType1Choice ICurrentLimitIdentification.Type => Type;
-    IBranchAndFinancialInstitutionIdentification6? ICurrentLimitIdentification.AccountOwner => AccountOwner;
-    IAccountIdentification4Choice? ICurrentLimitIdentification.AccountIdentification => AccountIdentification;
+    IBranchAndFinancialInstitutionIdentification6? ICurrentLimitIdentification.AccountOwner =>
+        AccountOwner;
+    IAccountIdentification4Choice? ICurrentLimitIdentification.AccountIdentification =>
+        AccountIdentification;
 }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityPaper1Choice;
 
-public partial record ContainerBoard : IContainerBoard
-{
-}
+public partial record ContainerBoard : IContainerBoard { }

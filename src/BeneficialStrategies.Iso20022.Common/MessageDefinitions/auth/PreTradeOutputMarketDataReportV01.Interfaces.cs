@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.auth;
 public partial record PreTradeOutputMarketDataReportV01 : IPreTradeOutputMarketDataReportV01
 {
     ISecuritiesMarketReportHeader5? IPreTradeOutputMarketDataReportV01.ReportHeader => ReportHeader;
-    IEnumerable<IPreTradeOutputReport1Choice> IPreTradeOutputMarketDataReportV01.OutputDataReport => OutputDataReport;
-    IEnumerable<ISupplementaryData1> IPreTradeOutputMarketDataReportV01.SupplementaryData => SupplementaryData;
+    IEnumerable<IPreTradeOutputReport1Choice> IPreTradeOutputMarketDataReportV01.OutputDataReport =>
+        OutputDataReport;
+    IEnumerable<ISupplementaryData1> IPreTradeOutputMarketDataReportV01.SupplementaryData =>
+        SupplementaryData;
 }

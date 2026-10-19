@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record PaperCommodityRecoveredPaper3 : IPaperCommodityRecoveredPaper3
-{
-}
+public partial record PaperCommodityRecoveredPaper3 : IPaperCommodityRecoveredPaper3 { }

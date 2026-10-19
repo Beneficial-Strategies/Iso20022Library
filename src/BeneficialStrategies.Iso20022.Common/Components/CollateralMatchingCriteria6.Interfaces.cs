@@ -10,9 +10,12 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CollateralMatchingCriteria6 : ICollateralMatchingCriteria6
 {
-    ICompareTrueFalseIndicator3? ICollateralMatchingCriteria6.UncollateralisedFlag => UncollateralisedFlag;
-    ICompareTrueFalseIndicator3? ICollateralMatchingCriteria6.NetExposureCollateralisationIndicator => NetExposureCollateralisationIndicator;
+    ICompareTrueFalseIndicator3? ICollateralMatchingCriteria6.UncollateralisedFlag =>
+        UncollateralisedFlag;
+    ICompareTrueFalseIndicator3? ICollateralMatchingCriteria6.NetExposureCollateralisationIndicator =>
+        NetExposureCollateralisationIndicator;
     ICompareDate3? ICollateralMatchingCriteria6.CollateralValueDate => CollateralValueDate;
     ISecurityCommodityCash4? ICollateralMatchingCriteria6.AssetType => AssetType;
-    ICompareSecurityIdentification4? ICollateralMatchingCriteria6.BasketIdentifier => BasketIdentifier;
+    ICompareSecurityIdentification4? ICollateralMatchingCriteria6.BasketIdentifier =>
+        BasketIdentifier;
 }

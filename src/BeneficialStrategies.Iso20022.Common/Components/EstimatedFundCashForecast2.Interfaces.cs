@@ -11,11 +11,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record EstimatedFundCashForecast2 : IEstimatedFundCashForecast2
 {
     IDateAndDateTimeChoice IEstimatedFundCashForecast2.TradeDateTime => TradeDateTime;
-    IDateAndDateTimeChoice IEstimatedFundCashForecast2.PreviousTradeDateTime => PreviousTradeDateTime;
-    IFinancialInstrument5 IEstimatedFundCashForecast2.FinancialInstrumentDetails => FinancialInstrumentDetails;
-    IFinancialInstrumentQuantity1? IEstimatedFundCashForecast2.EstimatedTotalUnitsNumber => EstimatedTotalUnitsNumber;
-    IFinancialInstrumentQuantity1? IEstimatedFundCashForecast2.PreviousEstimatedTotalUnitsNumber => PreviousEstimatedTotalUnitsNumber;
-    IEnumerable<ActiveOrHistoricCurrencyCode> IEstimatedFundCashForecast2.InvestmentCurrency => InvestmentCurrency;
-    IEnumerable<ICashSortingCriterion1> IEstimatedFundCashForecast2.SortingCriteriaDetails => SortingCriteriaDetails;
-    IEnumerable<INetCashForecast1> IEstimatedFundCashForecast2.EstimatedNetCashForecastDetails => EstimatedNetCashForecastDetails;
+    IDateAndDateTimeChoice IEstimatedFundCashForecast2.PreviousTradeDateTime =>
+        PreviousTradeDateTime;
+    IFinancialInstrument5 IEstimatedFundCashForecast2.FinancialInstrumentDetails =>
+        FinancialInstrumentDetails;
+    IFinancialInstrumentQuantity1? IEstimatedFundCashForecast2.EstimatedTotalUnitsNumber =>
+        EstimatedTotalUnitsNumber;
+    IFinancialInstrumentQuantity1? IEstimatedFundCashForecast2.PreviousEstimatedTotalUnitsNumber =>
+        PreviousEstimatedTotalUnitsNumber;
+    IEnumerable<ActiveOrHistoricCurrencyCode> IEstimatedFundCashForecast2.InvestmentCurrency =>
+        InvestmentCurrency;
+    IEnumerable<ICashSortingCriterion1> IEstimatedFundCashForecast2.SortingCriteriaDetails =>
+        SortingCriteriaDetails;
+    IEnumerable<INetCashForecast1> IEstimatedFundCashForecast2.EstimatedNetCashForecastDetails =>
+        EstimatedNetCashForecastDetails;
 }

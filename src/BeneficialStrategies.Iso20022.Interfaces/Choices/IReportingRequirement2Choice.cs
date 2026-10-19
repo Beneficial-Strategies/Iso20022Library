@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Indicator whether there is a reporting requirement for both counterparties.
 /// </summary>
 [IsoId("_IUKZoV55Ee2a_-MvhEjKmA")]
-public interface IReportingRequirement2Choice : IIsoChoice
-{
-}
+public interface IReportingRequirement2Choice : IIsoChoice { }

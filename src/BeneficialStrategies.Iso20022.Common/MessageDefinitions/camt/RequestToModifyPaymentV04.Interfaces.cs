@@ -14,5 +14,6 @@ public partial record RequestToModifyPaymentV04 : IRequestToModifyPaymentV04
     ICase3 IRequestToModifyPaymentV04.Case => Case;
     IUnderlyingTransaction3Choice IRequestToModifyPaymentV04.Underlying => Underlying;
     IRequestedModification6 IRequestToModifyPaymentV04.Modification => Modification;
-    IEnumerable<ISupplementaryData1> IRequestToModifyPaymentV04.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IRequestToModifyPaymentV04.SupplementaryData =>
+        SupplementaryData;
 }

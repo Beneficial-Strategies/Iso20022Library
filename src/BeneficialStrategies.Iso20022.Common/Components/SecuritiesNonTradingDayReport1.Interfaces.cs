@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecuritiesNonTradingDayReport1 : ISecuritiesNonTradingDayReport1
 {
-    ITradingVenueIdentification1Choice ISecuritiesNonTradingDayReport1.Identification => Identification;
-    IEnumerable<ISecuritiesNonTradingDay1> ISecuritiesNonTradingDayReport1.NonWorkingDay => NonWorkingDay;
+    ITradingVenueIdentification1Choice ISecuritiesNonTradingDayReport1.Identification =>
+        Identification;
+    IEnumerable<ISecuritiesNonTradingDay1> ISecuritiesNonTradingDayReport1.NonWorkingDay =>
+        NonWorkingDay;
 }

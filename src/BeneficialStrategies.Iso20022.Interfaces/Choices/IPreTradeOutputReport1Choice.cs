@@ -7,6 +7,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Pre-trade input related data report.</summary>
 [IsoId("_OT79MGIVEfCeoPFCHQnhvA")]
-public interface IPreTradeOutputReport1Choice : IIsoChoice
-{
-}
+public interface IPreTradeOutputReport1Choice : IIsoChoice { }

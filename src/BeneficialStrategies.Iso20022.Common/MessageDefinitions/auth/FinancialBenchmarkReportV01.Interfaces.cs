@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.auth;
 
 public partial record FinancialBenchmarkReportV01 : IFinancialBenchmarkReportV01
 {
-    IEnumerable<IBenchmarkReport1Choice> IFinancialBenchmarkReportV01.BenchmarkData => BenchmarkData;
-    IEnumerable<ISupplementaryData1> IFinancialBenchmarkReportV01.SupplementaryData => SupplementaryData;
+    IEnumerable<IBenchmarkReport1Choice> IFinancialBenchmarkReportV01.BenchmarkData =>
+        BenchmarkData;
+    IEnumerable<ISupplementaryData1> IFinancialBenchmarkReportV01.SupplementaryData =>
+        SupplementaryData;
 }

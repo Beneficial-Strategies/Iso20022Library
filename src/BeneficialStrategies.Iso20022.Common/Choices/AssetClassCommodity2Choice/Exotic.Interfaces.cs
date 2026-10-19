@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity2Choice;
 
-public partial record Exotic : IExotic
-{
-}
+public partial record Exotic : IExotic { }

@@ -11,7 +11,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record ForecastParameter2 : IForecastParameter2
 {
     IReportParameter2Choice IForecastParameter2.ReportParameter => ReportParameter;
-    IEnumerable<ICashInForecast1> IForecastParameter2.CashInForecastDetails => CashInForecastDetails;
-    IEnumerable<ICashOutForecast1> IForecastParameter2.CashOutForecastDetails => CashOutForecastDetails;
-    IEnumerable<INetCashForecast1> IForecastParameter2.NetCashForecastDetails => NetCashForecastDetails;
+    IEnumerable<ICashInForecast1> IForecastParameter2.CashInForecastDetails =>
+        CashInForecastDetails;
+    IEnumerable<ICashOutForecast1> IForecastParameter2.CashOutForecastDetails =>
+        CashOutForecastDetails;
+    IEnumerable<INetCashForecast1> IForecastParameter2.NetCashForecastDetails =>
+        NetCashForecastDetails;
 }

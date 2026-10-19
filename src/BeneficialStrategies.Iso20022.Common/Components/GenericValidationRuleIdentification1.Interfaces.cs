@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record GenericValidationRuleIdentification1 : IGenericValidationRuleIdentification1
 {
-    IValidationRuleSchemeName1Choice? IGenericValidationRuleIdentification1.SchemeName => SchemeName;
+    IValidationRuleSchemeName1Choice? IGenericValidationRuleIdentification1.SchemeName =>
+        SchemeName;
 }

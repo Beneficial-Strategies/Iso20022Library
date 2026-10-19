@@ -8,10 +8,15 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.auth;
 
-public partial record RegulatoryTransactionReportCancellationStatusV01 : IRegulatoryTransactionReportCancellationStatusV01
+public partial record RegulatoryTransactionReportCancellationStatusV01
+    : IRegulatoryTransactionReportCancellationStatusV01
 {
-    IDocumentIdentification8 IRegulatoryTransactionReportCancellationStatusV01.Identification => Identification;
-    IPartyIdentification23Choice IRegulatoryTransactionReportCancellationStatusV01.ReportingInstitution => ReportingInstitution;
-    IReportStatusAndReason2 IRegulatoryTransactionReportCancellationStatusV01.ReportCancellationStatus => ReportCancellationStatus;
-    IEnumerable<ITradeTransactionStatusAndReason2> IRegulatoryTransactionReportCancellationStatusV01.IndividualTransactionCancellationStatus => IndividualTransactionCancellationStatus;
+    IDocumentIdentification8 IRegulatoryTransactionReportCancellationStatusV01.Identification =>
+        Identification;
+    IPartyIdentification23Choice IRegulatoryTransactionReportCancellationStatusV01.ReportingInstitution =>
+        ReportingInstitution;
+    IReportStatusAndReason2 IRegulatoryTransactionReportCancellationStatusV01.ReportCancellationStatus =>
+        ReportCancellationStatus;
+    IEnumerable<ITradeTransactionStatusAndReason2> IRegulatoryTransactionReportCancellationStatusV01.IndividualTransactionCancellationStatus =>
+        IndividualTransactionCancellationStatus;
 }

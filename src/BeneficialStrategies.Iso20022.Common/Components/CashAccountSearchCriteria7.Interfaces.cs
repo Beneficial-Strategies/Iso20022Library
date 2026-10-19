@@ -10,10 +10,12 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CashAccountSearchCriteria7 : ICashAccountSearchCriteria7
 {
-    IEnumerable<IAccountIdentificationSearchCriteria2Choice> ICashAccountSearchCriteria7.AccountIdentification => AccountIdentification;
+    IEnumerable<IAccountIdentificationSearchCriteria2Choice> ICashAccountSearchCriteria7.AccountIdentification =>
+        AccountIdentification;
     IEnumerable<ICashAccountType2Choice> ICashAccountSearchCriteria7.Type => Type;
     IEnumerable<ActiveOrHistoricCurrencyCode> ICashAccountSearchCriteria7.Currency => Currency;
     IEnumerable<ICashBalance12> ICashAccountSearchCriteria7.Balance => Balance;
     IPartyIdentification135? ICashAccountSearchCriteria7.AccountOwner => AccountOwner;
-    IBranchAndFinancialInstitutionIdentification6? ICashAccountSearchCriteria7.AccountServicer => AccountServicer;
+    IBranchAndFinancialInstitutionIdentification6? ICashAccountSearchCriteria7.AccountServicer =>
+        AccountServicer;
 }

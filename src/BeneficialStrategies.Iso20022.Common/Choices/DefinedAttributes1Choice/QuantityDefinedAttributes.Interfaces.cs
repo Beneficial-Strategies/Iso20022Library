@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Choices.DefinedAttributes1Choice;
 public partial record QuantityDefinedAttributes : IQuantityDefinedAttributes
 {
     IContractSize1 IQuantityDefinedAttributes.ContractSize => ContractSize;
-    IGenericIdentification165 IQuantityDefinedAttributes.UnderlyingIdentification => UnderlyingIdentification;
+    IGenericIdentification165 IQuantityDefinedAttributes.UnderlyingIdentification =>
+        UnderlyingIdentification;
 }

@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.auth;
 public partial record CCPBackTestingResultReportV01 : ICCPBackTestingResultReportV01
 {
     IEnumerable<IMonthlyResult1> ICCPBackTestingResultReportV01.MonthlyResult => MonthlyResult;
-    IEnumerable<ISupplementaryData1> ICCPBackTestingResultReportV01.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> ICCPBackTestingResultReportV01.SupplementaryData =>
+        SupplementaryData;
 }

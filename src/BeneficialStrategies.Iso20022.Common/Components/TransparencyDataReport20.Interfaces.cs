@@ -10,11 +10,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TransparencyDataReport20 : ITransparencyDataReport20
 {
-    IInstrumentOrSubClassIdentification2Choice ITransparencyDataReport20.Identification => Identification;
+    IInstrumentOrSubClassIdentification2Choice ITransparencyDataReport20.Identification =>
+        Identification;
     IPeriod4Choice? ITransparencyDataReport20.ReportingPeriod => ReportingPeriod;
-    ITonsOrCurrency2Choice? ITransparencyDataReport20.PreTradeLargeInScaleThreshold => PreTradeLargeInScaleThreshold;
-    ITonsOrCurrency2Choice? ITransparencyDataReport20.PostTradeLargeInScaleThreshold => PostTradeLargeInScaleThreshold;
-    ITonsOrCurrency2Choice? ITransparencyDataReport20.PreTradeInstrumentSizeSpecificThreshold => PreTradeInstrumentSizeSpecificThreshold;
-    ITonsOrCurrency2Choice? ITransparencyDataReport20.PostTradeInstrumentSizeSpecificThreshold => PostTradeInstrumentSizeSpecificThreshold;
+    ITonsOrCurrency2Choice? ITransparencyDataReport20.PreTradeLargeInScaleThreshold =>
+        PreTradeLargeInScaleThreshold;
+    ITonsOrCurrency2Choice? ITransparencyDataReport20.PostTradeLargeInScaleThreshold =>
+        PostTradeLargeInScaleThreshold;
+    ITonsOrCurrency2Choice? ITransparencyDataReport20.PreTradeInstrumentSizeSpecificThreshold =>
+        PreTradeInstrumentSizeSpecificThreshold;
+    ITonsOrCurrency2Choice? ITransparencyDataReport20.PostTradeInstrumentSizeSpecificThreshold =>
+        PostTradeInstrumentSizeSpecificThreshold;
     IStatisticsTransparency2? ITransparencyDataReport20.Statistics => Statistics;
 }

@@ -12,8 +12,10 @@ public partial record IntraBalanceCancellation6 : IIntraBalanceCancellation6
 {
     ICashAccount38? IIntraBalanceCancellation6.CashAccount => CashAccount;
     ISystemPartyIdentification8? IIntraBalanceCancellation6.CashAccountOwner => CashAccountOwner;
-    IBranchAndFinancialInstitutionIdentification6? IIntraBalanceCancellation6.CashAccountServicer => CashAccountServicer;
+    IBranchAndFinancialInstitutionIdentification6? IIntraBalanceCancellation6.CashAccountServicer =>
+        CashAccountServicer;
     IProcessingStatus69Choice? IIntraBalanceCancellation6.ProcessingStatus => ProcessingStatus;
-    IReferences14? IIntraBalanceCancellation6.TransactionIdentification => TransactionIdentification;
+    IReferences14? IIntraBalanceCancellation6.TransactionIdentification =>
+        TransactionIdentification;
     IIntraBalance5? IIntraBalanceCancellation6.UnderlyingIntraBalance => UnderlyingIntraBalance;
 }

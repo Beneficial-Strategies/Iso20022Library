@@ -12,7 +12,8 @@ public partial record ClearedProduct3 : IClearedProduct3
 {
     IEnumerable<MICIdentifier> IClearedProduct3.TradingVenue => TradingVenue;
     IGenericIdentification168 IClearedProduct3.CCPProductIdentification => CCPProductIdentification;
-    IGenericIdentification168? IClearedProduct3.UniversalProductIdentification => UniversalProductIdentification;
+    IGenericIdentification168? IClearedProduct3.UniversalProductIdentification =>
+        UniversalProductIdentification;
     IProduct1Choice IClearedProduct3.Product => Product;
     IOpenInterest1 IClearedProduct3.OpenInterest => OpenInterest;
     IMarginRatePortfolio1? IClearedProduct3.MarginRatePortfolio => MarginRatePortfolio;

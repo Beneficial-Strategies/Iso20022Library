@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnvironmental2Choice;
 
-public partial record Emissions : IEmissions
-{
-}
+public partial record Emissions : IEmissions { }

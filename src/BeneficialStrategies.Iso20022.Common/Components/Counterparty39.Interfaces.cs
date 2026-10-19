@@ -10,8 +10,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record Counterparty39 : ICounterparty39
 {
-    IOrganisationIdentification15Choice ICounterparty39.ReportingCounterparty => ReportingCounterparty;
+    IOrganisationIdentification15Choice ICounterparty39.ReportingCounterparty =>
+        ReportingCounterparty;
     IPartyIdentification236Choice ICounterparty39.OtherCounterparty => OtherCounterparty;
-    IOrganisationIdentification15Choice? ICounterparty39.EntityResponsibleForReport => EntityResponsibleForReport;
-    IOrganisationIdentification15Choice? ICounterparty39.ReportSubmittingEntity => ReportSubmittingEntity;
+    IOrganisationIdentification15Choice? ICounterparty39.EntityResponsibleForReport =>
+        EntityResponsibleForReport;
+    IOrganisationIdentification15Choice? ICounterparty39.ReportSubmittingEntity =>
+        ReportSubmittingEntity;
 }

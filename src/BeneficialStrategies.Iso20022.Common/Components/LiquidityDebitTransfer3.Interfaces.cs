@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record LiquidityDebitTransfer3 : ILiquidityDebitTransfer3
 {
-    IPaymentIdentification8? ILiquidityDebitTransfer3.LiquidityTransferIdentification => LiquidityTransferIdentification;
+    IPaymentIdentification8? ILiquidityDebitTransfer3.LiquidityTransferIdentification =>
+        LiquidityTransferIdentification;
     IBranchAndFinancialInstitutionIdentification6? ILiquidityDebitTransfer3.Creditor => Creditor;
     ICashAccount40? ILiquidityDebitTransfer3.CreditorAccount => CreditorAccount;
     IAmount2Choice ILiquidityDebitTransfer3.TransferredAmount => TransferredAmount;

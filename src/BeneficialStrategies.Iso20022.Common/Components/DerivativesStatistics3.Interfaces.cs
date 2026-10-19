@@ -12,6 +12,7 @@ public partial record DerivativesStatistics3 : IDerivativesStatistics3
 {
     IStatisticsPerActionType1 IDerivativesStatistics3.TotalSubmitted => TotalSubmitted;
     IStatisticsPerActionType1 IDerivativesStatistics3.TotalRejected => TotalRejected;
-    IStatisticsPerActionType1 IDerivativesStatistics3.TotalCorrectedRejections => TotalCorrectedRejections;
+    IStatisticsPerActionType1 IDerivativesStatistics3.TotalCorrectedRejections =>
+        TotalCorrectedRejections;
     ITopReasonsForRejections2 IDerivativesStatistics3.TopRejectionReasons => TopRejectionReasons;
 }

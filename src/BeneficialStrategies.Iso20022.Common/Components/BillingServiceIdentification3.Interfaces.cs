@@ -12,5 +12,6 @@ public partial record BillingServiceIdentification3 : IBillingServiceIdentificat
 {
     IBillingSubServiceIdentification1? IBillingServiceIdentification3.SubService => SubService;
     IBillingServiceCommonIdentification1? IBillingServiceIdentification3.CommonCode => CommonCode;
-    IBankTransactionCodeStructure4? IBillingServiceIdentification3.BankTransactionCode => BankTransactionCode;
+    IBankTransactionCodeStructure4? IBillingServiceIdentification3.BankTransactionCode =>
+        BankTransactionCode;
 }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Pre-agreed offering between clearing agents, or the channel through which the payment instruction is to be processed. This payment scheme can point to a specific rulebook governing the rules of clearing and settlement between two parties.
 /// </summary>
 [IsoId("_QHyBDtp-Ed-ak6NoX_4Aeg_-1186600108")]
-public interface IPaymentSchemeChoice : IIsoChoice
-{
-}
+public interface IPaymentSchemeChoice : IIsoChoice { }

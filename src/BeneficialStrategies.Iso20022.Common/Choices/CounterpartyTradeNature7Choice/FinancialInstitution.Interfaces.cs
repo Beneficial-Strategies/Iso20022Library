@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature7Choice;
 
 public partial record FinancialInstitution : IFinancialInstitution
 {
-    IEnumerable<FinancialPartySectorType2Code> IFinancialInstitution.Classification => Classification;
+    IEnumerable<FinancialPartySectorType2Code> IFinancialInstitution.Classification =>
+        Classification;
 }

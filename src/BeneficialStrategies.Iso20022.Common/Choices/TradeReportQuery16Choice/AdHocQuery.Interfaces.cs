@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReportQuery16Choice;
 public partial record AdHocQuery : IAdHocQuery
 {
     ITradePartyQueryCriteria6? IAdHocQuery.TradePartyCriteria => TradePartyCriteria;
-    ITradeSecurityIdentificationQueryCriteria3? IAdHocQuery.FinancialInstrumentCriteria => FinancialInstrumentCriteria;
+    ITradeSecurityIdentificationQueryCriteria3? IAdHocQuery.FinancialInstrumentCriteria =>
+        FinancialInstrumentCriteria;
     ITradeDateTimeQueryCriteria5? IAdHocQuery.TimeCriteria => TimeCriteria;
     ITradeAdditionalQueryCriteria9? IAdHocQuery.OtherCriteria => OtherCriteria;
 }

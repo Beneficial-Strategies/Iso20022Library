@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the status for the cancellation request of a cheque presentment.
 /// </summary>
 [IsoId("_PJJT-7tyEeq_cfXrH83Rcw")]
-public interface IChequeCancellationStatus1Choice : IIsoChoice
-{
-}
+public interface IChequeCancellationStatus1Choice : IIsoChoice { }

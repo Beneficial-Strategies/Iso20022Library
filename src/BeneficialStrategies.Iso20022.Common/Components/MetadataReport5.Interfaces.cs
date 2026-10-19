@@ -13,7 +13,8 @@ public partial record MetadataReport5 : IMetadataReport5
     IPartyIdentification260Choice? IMetadataReport5.SubmittingEntity => SubmittingEntity;
     IGenericIdentification175? IMetadataReport5.CollectionBody => CollectionBody;
     IEnumerable<IPartyIdentification260Choice> IMetadataReport5.RelatedEntity => RelatedEntity;
-    IEnumerable<ISecurityIdentification49> IMetadataReport5.RelatedProductIdentifier => RelatedProductIdentifier;
+    IEnumerable<ISecurityIdentification49> IMetadataReport5.RelatedProductIdentifier =>
+        RelatedProductIdentifier;
     IEnumerable<IClassificationType4> IMetadataReport5.RegulatoryDataType => RegulatoryDataType;
     IEnumerable<IDocument28> IMetadataReport5.RegulatoryData => RegulatoryData;
 }

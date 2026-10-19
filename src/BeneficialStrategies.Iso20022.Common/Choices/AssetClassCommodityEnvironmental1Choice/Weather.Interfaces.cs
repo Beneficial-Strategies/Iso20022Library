@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnvironmental1Choice;
 
-public partial record Weather : IWeather
-{
-}
+public partial record Weather : IWeather { }

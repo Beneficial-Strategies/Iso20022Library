@@ -10,7 +10,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record EnergySpecificAttribute9 : IEnergySpecificAttribute9
 {
-    IEnumerable<IDeliveryInterconnectionPoint1Choice> IEnergySpecificAttribute9.DeliveryPointOrZone => DeliveryPointOrZone;
-    IDeliveryInterconnectionPoint1Choice? IEnergySpecificAttribute9.InterConnectionPoint => InterConnectionPoint;
-    IEnumerable<IEnergyDeliveryAttribute10> IEnergySpecificAttribute9.DeliveryAttribute => DeliveryAttribute;
+    IEnumerable<IDeliveryInterconnectionPoint1Choice> IEnergySpecificAttribute9.DeliveryPointOrZone =>
+        DeliveryPointOrZone;
+    IDeliveryInterconnectionPoint1Choice? IEnergySpecificAttribute9.InterConnectionPoint =>
+        InterConnectionPoint;
+    IEnumerable<IEnergyDeliveryAttribute10> IEnergySpecificAttribute9.DeliveryAttribute =>
+        DeliveryAttribute;
 }

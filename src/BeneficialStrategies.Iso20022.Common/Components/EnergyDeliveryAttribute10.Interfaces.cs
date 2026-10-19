@@ -10,10 +10,12 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record EnergyDeliveryAttribute10 : IEnergyDeliveryAttribute10
 {
-    IEnumerable<ITimePeriodDetails1> IEnergyDeliveryAttribute10.DeliveryInterval => DeliveryInterval;
+    IEnumerable<ITimePeriodDetails1> IEnergyDeliveryAttribute10.DeliveryInterval =>
+        DeliveryInterval;
     IDatePeriod1? IEnergyDeliveryAttribute10.DeliveryDate => DeliveryDate;
     IEnumerable<WeekDay3Code> IEnergyDeliveryAttribute10.WeekDay => WeekDay;
     IQuantity47Choice? IEnergyDeliveryAttribute10.DeliveryCapacity => DeliveryCapacity;
     IEnergyQuantityUnit2Choice? IEnergyDeliveryAttribute10.QuantityUnit => QuantityUnit;
-    IAmountAndDirection106? IEnergyDeliveryAttribute10.PriceTimeIntervalQuantity => PriceTimeIntervalQuantity;
+    IAmountAndDirection106? IEnergyDeliveryAttribute10.PriceTimeIntervalQuantity =>
+        PriceTimeIntervalQuantity;
 }

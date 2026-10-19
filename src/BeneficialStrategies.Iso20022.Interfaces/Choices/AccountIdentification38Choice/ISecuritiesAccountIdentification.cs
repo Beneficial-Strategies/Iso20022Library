@@ -7,7 +7,9 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification38Choice;
 
 /// <summary>Unique identification of the securities account as assigned by the account servicer.</summary>
 [IsoId("_mmlMgeF6EeWCAvUNsZ5u6g")]
-public interface ISecuritiesAccountIdentification : IAccountIdentification38Choice, IIsoChoiceVariant
+public interface ISecuritiesAccountIdentification
+    : IAccountIdentification38Choice,
+        IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>
     [IsoXmlTag("SctiesAcctId")]

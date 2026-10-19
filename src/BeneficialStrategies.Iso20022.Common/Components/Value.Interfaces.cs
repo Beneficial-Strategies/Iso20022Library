@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record Value : IValue
 {
-    IEnumerable<ActiveOrHistoricCurrencyAndAmount> IValue.AlternateCurrencyItem => AlternateCurrencyItem;
+    IEnumerable<ActiveOrHistoricCurrencyAndAmount> IValue.AlternateCurrencyItem =>
+        AlternateCurrencyItem;
 }

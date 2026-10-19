@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 public partial record ReturnGeneralBusinessInformationV06 : IReturnGeneralBusinessInformationV06
 {
     IMessageHeader7 IReturnGeneralBusinessInformationV06.MessageHeader => MessageHeader;
-    IGeneralBusinessOrError7Choice IReturnGeneralBusinessInformationV06.ReportOrError => ReportOrError;
-    IEnumerable<ISupplementaryData1> IReturnGeneralBusinessInformationV06.SupplementaryData => SupplementaryData;
+    IGeneralBusinessOrError7Choice IReturnGeneralBusinessInformationV06.ReportOrError =>
+        ReportOrError;
+    IEnumerable<ISupplementaryData1> IReturnGeneralBusinessInformationV06.SupplementaryData =>
+        SupplementaryData;
 }

@@ -15,7 +15,10 @@ public partial record Fund1 : IFund1
     IDateAndDateTimeChoice? IFund1.PreviousTradeDateTime => PreviousTradeDateTime;
     IFinancialInstrumentQuantity1? IFund1.EstimatedTotalUnitsNumber => EstimatedTotalUnitsNumber;
     IFinancialInstrumentQuantity1? IFund1.PreviousTotalUnitsNumber => PreviousTotalUnitsNumber;
-    IEnumerable<ICashInOutForecast7> IFund1.EstimatedCashInForecastDetails => EstimatedCashInForecastDetails;
-    IEnumerable<ICashInOutForecast7> IFund1.EstimatedCashOutForecastDetails => EstimatedCashOutForecastDetails;
-    IEnumerable<INetCashForecast5> IFund1.EstimatedNetCashForecastDetails => EstimatedNetCashForecastDetails;
+    IEnumerable<ICashInOutForecast7> IFund1.EstimatedCashInForecastDetails =>
+        EstimatedCashInForecastDetails;
+    IEnumerable<ICashInOutForecast7> IFund1.EstimatedCashOutForecastDetails =>
+        EstimatedCashOutForecastDetails;
+    IEnumerable<INetCashForecast5> IFund1.EstimatedNetCashForecastDetails =>
+        EstimatedNetCashForecastDetails;
 }

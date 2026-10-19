@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record UnderlyingStatementEntry11 : IUnderlyingStatementEntry11
 {
     ICashAccount40? IUnderlyingStatementEntry11.OriginalAccount => OriginalAccount;
-    IOriginalGroupInformation33? IUnderlyingStatementEntry11.OriginalGroupInformation => OriginalGroupInformation;
-    IDateAndDateTime2Choice? IUnderlyingStatementEntry11.OriginalEntryValueDate => OriginalEntryValueDate;
+    IOriginalGroupInformation33? IUnderlyingStatementEntry11.OriginalGroupInformation =>
+        OriginalGroupInformation;
+    IDateAndDateTime2Choice? IUnderlyingStatementEntry11.OriginalEntryValueDate =>
+        OriginalEntryValueDate;
 }

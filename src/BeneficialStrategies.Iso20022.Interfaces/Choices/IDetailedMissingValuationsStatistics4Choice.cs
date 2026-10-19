@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Detailed information of no valuation or outdated valuation.
 /// </summary>
 [IsoId("_x0O2MVyGEe24CqbZJK5XxA")]
-public interface IDetailedMissingValuationsStatistics4Choice : IIsoChoice
-{
-}
+public interface IDetailedMissingValuationsStatistics4Choice : IIsoChoice { }

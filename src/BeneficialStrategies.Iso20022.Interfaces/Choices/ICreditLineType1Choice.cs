@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the type of the credit line provided.
 /// </summary>
 [IsoId("_2T3LxIZ5Eee8r9VKRbnJSg")]
-public interface ICreditLineType1Choice : IIsoChoice
-{
-}
+public interface ICreditLineType1Choice : IIsoChoice { }

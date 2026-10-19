@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty16Choic
 public partial record Report : IReport
 {
     IDetailedMissingValuationsStatistics4Choice IReport.MissingValuation => MissingValuation;
-    IDetailedMissingMarginInformationStatistics4Choice IReport.MissingMarginInformation => MissingMarginInformation;
+    IDetailedMissingMarginInformationStatistics4Choice IReport.MissingMarginInformation =>
+        MissingMarginInformation;
     IDetailedAbnormalValuesStatistics4Choice IReport.AbnormalValues => AbnormalValues;
 }

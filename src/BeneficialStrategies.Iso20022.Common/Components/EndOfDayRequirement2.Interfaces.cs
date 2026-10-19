@@ -10,7 +10,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record EndOfDayRequirement2 : IEndOfDayRequirement2
 {
-    IInitialMarginRequirement1 IEndOfDayRequirement2.InitialMarginRequirements => InitialMarginRequirements;
-    IAmountAndDirection102 IEndOfDayRequirement2.VariationMarginRequirements => VariationMarginRequirements;
-    IGenericIdentification165 IEndOfDayRequirement2.MarginAccountIdentification => MarginAccountIdentification;
+    IInitialMarginRequirement1 IEndOfDayRequirement2.InitialMarginRequirements =>
+        InitialMarginRequirements;
+    IAmountAndDirection102 IEndOfDayRequirement2.VariationMarginRequirements =>
+        VariationMarginRequirements;
+    IGenericIdentification165 IEndOfDayRequirement2.MarginAccountIdentification =>
+        MarginAccountIdentification;
 }

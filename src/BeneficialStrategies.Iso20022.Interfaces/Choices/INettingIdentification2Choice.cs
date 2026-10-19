@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a netting group identification or an individual trading party.
 /// </summary>
 [IsoId("_CEeXwQN1Ee2-vqzwMUAewg")]
-public interface INettingIdentification2Choice : IIsoChoice
-{
-}
+public interface INettingIdentification2Choice : IIsoChoice { }

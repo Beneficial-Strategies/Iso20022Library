@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData56Choice;
 public partial record State : IState
 {
     ITradeCounterpartyReport20 IState.CounterpartyIdentification => CounterpartyIdentification;
-    IUniqueTransactionIdentifier2Choice? IState.TransactionIdentification => TransactionIdentification;
+    IUniqueTransactionIdentifier2Choice? IState.TransactionIdentification =>
+        TransactionIdentification;
     IMarginCollateralReport4 IState.Collateral => Collateral;
     IPostedMarginOrCollateral6? IState.PostedMarginOrCollateral => PostedMarginOrCollateral;
     IReceivedMarginOrCollateral6? IState.ReceivedMarginOrCollateral => ReceivedMarginOrCollateral;

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides the identification of the reporting agent counterparty.
 /// </summary>
 [IsoId("_QmCKwXvSEeWrWYBng3OpVw")]
-public interface ICounterpartyIdentification2Choice : IIsoChoice
-{
-}
+public interface ICounterpartyIdentification2Choice : IIsoChoice { }

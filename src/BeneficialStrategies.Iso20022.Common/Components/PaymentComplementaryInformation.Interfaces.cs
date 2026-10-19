@@ -10,17 +10,23 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PaymentComplementaryInformation : IPaymentComplementaryInformation
 {
-    IRemittanceInformation3Choice? IPaymentComplementaryInformation.RemittanceChoice_ => RemittanceChoice_;
+    IRemittanceInformation3Choice? IPaymentComplementaryInformation.RemittanceChoice_ =>
+        RemittanceChoice_;
     IPartyIdentification1? IPaymentComplementaryInformation.Debtor => Debtor;
     ICashAccount3? IPaymentComplementaryInformation.DebtorAccount => DebtorAccount;
-    IBranchAndFinancialInstitutionIdentification? IPaymentComplementaryInformation.FirstAgent => FirstAgent;
+    IBranchAndFinancialInstitutionIdentification? IPaymentComplementaryInformation.FirstAgent =>
+        FirstAgent;
     IAmountType1Choice? IPaymentComplementaryInformation.Amount => Amount;
     ICashAccount3? IPaymentComplementaryInformation.NostroVostroAccount => NostroVostroAccount;
     IIntermediary1? IPaymentComplementaryInformation.Intermediary => Intermediary;
-    IBranchAndFinancialInstitutionIdentification? IPaymentComplementaryInformation.FirstSettlementAgent => FirstSettlementAgent;
-    IBranchAndFinancialInstitutionIdentification? IPaymentComplementaryInformation.LastSettlementAgent => LastSettlementAgent;
-    IBranchAndFinancialInstitutionIdentification? IPaymentComplementaryInformation.IntermediarySettlementAgent => IntermediarySettlementAgent;
+    IBranchAndFinancialInstitutionIdentification? IPaymentComplementaryInformation.FirstSettlementAgent =>
+        FirstSettlementAgent;
+    IBranchAndFinancialInstitutionIdentification? IPaymentComplementaryInformation.LastSettlementAgent =>
+        LastSettlementAgent;
+    IBranchAndFinancialInstitutionIdentification? IPaymentComplementaryInformation.IntermediarySettlementAgent =>
+        IntermediarySettlementAgent;
     IPartyIdentification1? IPaymentComplementaryInformation.Creditor => Creditor;
     ICashAccount3? IPaymentComplementaryInformation.CreditorAccount => CreditorAccount;
-    IEnumerable<string> IPaymentComplementaryInformation.SenderToReceiverInformation => SenderToReceiverInformation;
+    IEnumerable<string> IPaymentComplementaryInformation.SenderToReceiverInformation =>
+        SenderToReceiverInformation;
 }

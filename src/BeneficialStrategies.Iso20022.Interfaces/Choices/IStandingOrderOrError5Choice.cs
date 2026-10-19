@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between the standing order details or an operational error when the requested data cannot be retrieved.
 /// </summary>
 [IsoId("_CEqH124-EeiU9cctagi5ow")]
-public interface IStandingOrderOrError5Choice : IIsoChoice
-{
-}
+public interface IStandingOrderOrError5Choice : IIsoChoice { }

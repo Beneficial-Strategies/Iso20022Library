@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the type of assets subject of the transaction.
 /// </summary>
 [IsoId("_UkKfccgyEeuGrNSsxk3B0A")]
-public interface ISecurityCommodity7Choice : IIsoChoice
-{
-}
+public interface ISecurityCommodity7Choice : IIsoChoice { }

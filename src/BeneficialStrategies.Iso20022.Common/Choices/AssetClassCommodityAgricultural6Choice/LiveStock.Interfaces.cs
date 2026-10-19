@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural6Choice;
 
-public partial record LiveStock : ILiveStock
-{
-}
+public partial record LiveStock : ILiveStock { }

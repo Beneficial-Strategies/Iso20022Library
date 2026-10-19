@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides transaction type and identification information.
 /// </summary>
 [IsoId("_DD0DMK7LEemZxoEFHjN-AQ")]
-public interface ITransactionIdentification1Choice : IIsoChoice
-{
-}
+public interface ITransactionIdentification1Choice : IIsoChoice { }

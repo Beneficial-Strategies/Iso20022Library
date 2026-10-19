@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record StressItem1Choice_ : IStressItem1Choice
-{
-}
+public abstract partial record StressItem1Choice_ : IStressItem1Choice { }

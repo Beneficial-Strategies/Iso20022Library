@@ -12,7 +12,8 @@ public partial record IssuerCSDReport1 : IIssuerCSDReport1
 {
     IIssuerCSDIdentification1 IIssuerCSDReport1.Identification => Identification;
     IInternalisationData1 IIssuerCSDReport1.OverallTotal => OverallTotal;
-    ISettlementInternaliserFinancialInstrument1 IIssuerCSDReport1.FinancialInstrument => FinancialInstrument;
+    ISettlementInternaliserFinancialInstrument1 IIssuerCSDReport1.FinancialInstrument =>
+        FinancialInstrument;
     ISettlementInternaliserTransactionType1 IIssuerCSDReport1.TransactionType => TransactionType;
     ISettlementInternaliserClientType1 IIssuerCSDReport1.ClientType => ClientType;
     IInternalisationData1 IIssuerCSDReport1.TotalCashTransfer => TotalCashTransfer;

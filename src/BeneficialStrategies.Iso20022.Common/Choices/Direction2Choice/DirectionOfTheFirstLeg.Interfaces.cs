@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.Direction2Choice;
 
-public partial record DirectionOfTheFirstLeg : IDirectionOfTheFirstLeg
-{
-}
+public partial record DirectionOfTheFirstLeg : IDirectionOfTheFirstLeg { }

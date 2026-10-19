@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Defines the type of execution to be performed in the request.
 /// </summary>
 [IsoId("_75qQhqMgEeCJ6YNENx4h-w_354040007")]
-public interface IExecutionType1Choice : IIsoChoice
-{
-}
+public interface IExecutionType1Choice : IIsoChoice { }

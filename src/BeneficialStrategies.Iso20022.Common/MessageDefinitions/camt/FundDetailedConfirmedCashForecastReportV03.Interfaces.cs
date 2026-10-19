@@ -8,14 +8,21 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.camt;
 
-public partial record FundDetailedConfirmedCashForecastReportV03 : IFundDetailedConfirmedCashForecastReportV03
+public partial record FundDetailedConfirmedCashForecastReportV03
+    : IFundDetailedConfirmedCashForecastReportV03
 {
-    IMessageIdentification1 IFundDetailedConfirmedCashForecastReportV03.MessageIdentification => MessageIdentification;
-    IAdditionalReference3? IFundDetailedConfirmedCashForecastReportV03.PoolReference => PoolReference;
-    IEnumerable<IAdditionalReference3> IFundDetailedConfirmedCashForecastReportV03.PreviousReference => PreviousReference;
-    IEnumerable<IAdditionalReference3> IFundDetailedConfirmedCashForecastReportV03.RelatedReference => RelatedReference;
+    IMessageIdentification1 IFundDetailedConfirmedCashForecastReportV03.MessageIdentification =>
+        MessageIdentification;
+    IAdditionalReference3? IFundDetailedConfirmedCashForecastReportV03.PoolReference =>
+        PoolReference;
+    IEnumerable<IAdditionalReference3> IFundDetailedConfirmedCashForecastReportV03.PreviousReference =>
+        PreviousReference;
+    IEnumerable<IAdditionalReference3> IFundDetailedConfirmedCashForecastReportV03.RelatedReference =>
+        RelatedReference;
     IPagination IFundDetailedConfirmedCashForecastReportV03.MessagePagination => MessagePagination;
-    IEnumerable<IFundCashForecast4> IFundDetailedConfirmedCashForecastReportV03.FundCashForecastDetails => FundCashForecastDetails;
-    INetCashForecast3? IFundDetailedConfirmedCashForecastReportV03.ConsolidatedNetCashForecast => ConsolidatedNetCashForecast;
+    IEnumerable<IFundCashForecast4> IFundDetailedConfirmedCashForecastReportV03.FundCashForecastDetails =>
+        FundCashForecastDetails;
+    INetCashForecast3? IFundDetailedConfirmedCashForecastReportV03.ConsolidatedNetCashForecast =>
+        ConsolidatedNetCashForecast;
     IEnumerable<IExtension1> IFundDetailedConfirmedCashForecastReportV03.Extension => Extension;
 }

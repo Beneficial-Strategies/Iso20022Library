@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the risk factor, financial instrument or set of financial instruments that is stressed under a hypothetical stress scenario.
 /// </summary>
 [IsoId("_fCpTIKsvEeayv9XxdmMwKQ")]
-public interface IStressItem1Choice : IIsoChoice
-{
-}
+public interface IStressItem1Choice : IIsoChoice { }

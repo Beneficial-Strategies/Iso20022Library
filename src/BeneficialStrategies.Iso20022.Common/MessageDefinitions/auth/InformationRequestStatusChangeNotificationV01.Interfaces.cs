@@ -8,7 +8,9 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.auth;
 
-public partial record InformationRequestStatusChangeNotificationV01 : IInformationRequestStatusChangeNotificationV01
+public partial record InformationRequestStatusChangeNotificationV01
+    : IInformationRequestStatusChangeNotificationV01
 {
-    IEnumerable<ISupplementaryData1> IInformationRequestStatusChangeNotificationV01.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IInformationRequestStatusChangeNotificationV01.SupplementaryData =>
+        SupplementaryData;
 }

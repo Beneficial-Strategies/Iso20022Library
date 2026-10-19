@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of formats for the commission type.
 /// </summary>
 [IsoId("_sQfTQWW6EeSHcOWXSsMhqw")]
-public interface ICommissionType5Choice : IIsoChoice
-{
-}
+public interface ICommissionType5Choice : IIsoChoice { }

@@ -12,5 +12,6 @@ public partial record BusinessDayInformation : IBusinessDayInformation
 {
     IDateAndDateTime2Choice? IBusinessDayInformation.SystemDate => SystemDate;
     ISystemStatus3? IBusinessDayInformation.SystemStatus => SystemStatus;
-    IEnumerable<ISystemAvailabilityAndEvents3> IBusinessDayInformation.SystemInformationPerCurrency => SystemInformationPerCurrency;
+    IEnumerable<ISystemAvailabilityAndEvents3> IBusinessDayInformation.SystemInformationPerCurrency =>
+        SystemInformationPerCurrency;
 }

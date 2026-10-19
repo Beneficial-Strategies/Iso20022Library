@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.CollateralFlag10Choice;
 
-public partial record Uncollateralised : IUncollateralised
-{
-}
+public partial record Uncollateralised : IUncollateralised { }

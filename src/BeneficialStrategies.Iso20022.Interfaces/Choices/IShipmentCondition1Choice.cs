@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the shipment conditions.
 /// </summary>
 [IsoId("_TISQMLGdEeuSTr8k0UEM8A")]
-public interface IShipmentCondition1Choice : IIsoChoice
-{
-}
+public interface IShipmentCondition1Choice : IIsoChoice { }

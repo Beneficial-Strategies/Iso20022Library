@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between the specification of the data in a structured or unstructured form.
 /// </summary>
 [IsoId("_Q6vvBdp-Ed-ak6NoX_4Aeg_-2133276556")]
-public interface IDataFormat2Choice : IIsoChoice
-{
-}
+public interface IDataFormat2Choice : IIsoChoice { }

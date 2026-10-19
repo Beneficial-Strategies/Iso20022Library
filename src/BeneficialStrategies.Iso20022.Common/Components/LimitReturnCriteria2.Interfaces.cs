@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record LimitReturnCriteria2 : ILimitReturnCriteria2
-{
-}
+public partial record LimitReturnCriteria2 : ILimitReturnCriteria2 { }

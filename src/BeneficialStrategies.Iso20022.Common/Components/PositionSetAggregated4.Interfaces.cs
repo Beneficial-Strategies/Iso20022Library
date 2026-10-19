@@ -12,6 +12,8 @@ public partial record PositionSetAggregated4 : IPositionSetAggregated4
 {
     IEnumerable<IPositionSet21> IPositionSetAggregated4.PositionSet => PositionSet;
     IEnumerable<IPositionSet21> IPositionSetAggregated4.CurrencyPositionSet => CurrencyPositionSet;
-    IEnumerable<IPositionSet22> IPositionSetAggregated4.CollateralPositionSet => CollateralPositionSet;
-    IEnumerable<IPositionSet22> IPositionSetAggregated4.CurrencyCollateralPositionSet => CurrencyCollateralPositionSet;
+    IEnumerable<IPositionSet22> IPositionSetAggregated4.CollateralPositionSet =>
+        CollateralPositionSet;
+    IEnumerable<IPositionSet22> IPositionSetAggregated4.CurrencyCollateralPositionSet =>
+        CurrencyCollateralPositionSet;
 }

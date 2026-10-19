@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record MemberReportOrError7Choice_ : IMemberReportOrError7Choice
-{
-}
+public abstract partial record MemberReportOrError7Choice_ : IMemberReportOrError7Choice { }

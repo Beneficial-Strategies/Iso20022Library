@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice;
 
 public partial record RepurchaseAgreement : IRepurchaseAgreement
 {
-    IRepurchaseAgreementType3Choice IRepurchaseAgreement.RepurchaseAgreementType => RepurchaseAgreementType;
+    IRepurchaseAgreementType3Choice IRepurchaseAgreement.RepurchaseAgreementType =>
+        RepurchaseAgreementType;
 }

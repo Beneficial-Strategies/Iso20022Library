@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatus2Choice;
 
-public partial record AssignmentCancellationConfirmation : IAssignmentCancellationConfirmation
-{
-}
+public partial record AssignmentCancellationConfirmation : IAssignmentCancellationConfirmation { }

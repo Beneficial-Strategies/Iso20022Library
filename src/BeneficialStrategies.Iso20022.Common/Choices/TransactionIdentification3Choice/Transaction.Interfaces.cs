@@ -12,7 +12,8 @@ public partial record Transaction : ITransaction
 {
     IOrganisationIdentification15Choice ITransaction.ReportingCounterparty => ReportingCounterparty;
     IPartyIdentification236Choice ITransaction.OtherCounterparty => OtherCounterparty;
-    IOrganisationIdentification15Choice? ITransaction.EntityResponsibleForReport => EntityResponsibleForReport;
+    IOrganisationIdentification15Choice? ITransaction.EntityResponsibleForReport =>
+        EntityResponsibleForReport;
     IMasterAgreement7? ITransaction.MasterAgreement => MasterAgreement;
     IOrganisationIdentification15Choice? ITransaction.AgentLender => AgentLender;
     IOrganisationIdentification15Choice? ITransaction.TripartyAgent => TripartyAgent;

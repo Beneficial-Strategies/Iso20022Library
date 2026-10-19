@@ -10,8 +10,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ChargesPerTransaction3 : IChargesPerTransaction3
 {
-    ITotalCharges7? IChargesPerTransaction3.TotalChargesPerTransaction => TotalChargesPerTransaction;
-    IBranchAndFinancialInstitutionIdentification8? IChargesPerTransaction3.ChargesAccountAgent => ChargesAccountAgent;
-    ICashAccount40? IChargesPerTransaction3.ChargesAccountAgentAccount => ChargesAccountAgentAccount;
+    ITotalCharges7? IChargesPerTransaction3.TotalChargesPerTransaction =>
+        TotalChargesPerTransaction;
+    IBranchAndFinancialInstitutionIdentification8? IChargesPerTransaction3.ChargesAccountAgent =>
+        ChargesAccountAgent;
+    ICashAccount40? IChargesPerTransaction3.ChargesAccountAgentAccount =>
+        ChargesAccountAgentAccount;
     IEnumerable<IChargesPerTransactionRecord3> IChargesPerTransaction3.Record => Record;
 }

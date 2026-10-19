@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record CollateralPortfolioCode6Choice_ : ICollateralPortfolioCode6Choice
-{
-}
+public abstract partial record CollateralPortfolioCode6Choice_ : ICollateralPortfolioCode6Choice { }

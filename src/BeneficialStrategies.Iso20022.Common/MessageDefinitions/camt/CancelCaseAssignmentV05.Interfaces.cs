@@ -12,5 +12,6 @@ public partial record CancelCaseAssignmentV05 : ICancelCaseAssignmentV05
 {
     ICaseAssignment6 ICancelCaseAssignmentV05.Assignment => Assignment;
     ICase6 ICancelCaseAssignmentV05.Case => Case;
-    IEnumerable<ISupplementaryData1> ICancelCaseAssignmentV05.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> ICancelCaseAssignmentV05.SupplementaryData =>
+        SupplementaryData;
 }

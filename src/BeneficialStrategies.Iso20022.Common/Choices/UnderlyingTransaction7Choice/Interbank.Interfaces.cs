@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction7Choice;
 public partial record Interbank : IInterbank
 {
     IUnderlyingGroupInformation1? IInterbank.OriginalGroupInformation => OriginalGroupInformation;
-    IOriginalTransactionReference35? IInterbank.OriginalTransactionReference => OriginalTransactionReference;
+    IOriginalTransactionReference35? IInterbank.OriginalTransactionReference =>
+        OriginalTransactionReference;
 }

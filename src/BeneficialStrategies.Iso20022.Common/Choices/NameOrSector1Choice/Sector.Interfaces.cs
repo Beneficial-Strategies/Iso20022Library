@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.NameOrSector1Choice;
 
-public partial record Sector : ISector
-{
-}
+public partial record Sector : ISector { }

@@ -10,9 +10,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TradeTransactionIdentification24 : ITradeTransactionIdentification24
 {
-    IDateAndDateTime2Choice? ITradeTransactionIdentification24.DerivativeEventTimeStamp => DerivativeEventTimeStamp;
-    IPartyIdentification248Choice? ITradeTransactionIdentification24.OtherCounterparty => OtherCounterparty;
-    IUniqueTransactionIdentifier2Choice? ITradeTransactionIdentification24.UniqueIdentifier => UniqueIdentifier;
+    IDateAndDateTime2Choice? ITradeTransactionIdentification24.DerivativeEventTimeStamp =>
+        DerivativeEventTimeStamp;
+    IPartyIdentification248Choice? ITradeTransactionIdentification24.OtherCounterparty =>
+        OtherCounterparty;
+    IUniqueTransactionIdentifier2Choice? ITradeTransactionIdentification24.UniqueIdentifier =>
+        UniqueIdentifier;
     IMasterAgreement8? ITradeTransactionIdentification24.MasterAgreement => MasterAgreement;
-    ICollateralPortfolioCode5Choice? ITradeTransactionIdentification24.CollateralPortfolioCode => CollateralPortfolioCode;
+    ICollateralPortfolioCode5Choice? ITradeTransactionIdentification24.CollateralPortfolioCode =>
+        CollateralPortfolioCode;
 }

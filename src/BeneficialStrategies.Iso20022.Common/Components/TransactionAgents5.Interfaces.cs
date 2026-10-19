@@ -10,16 +10,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TransactionAgents5 : ITransactionAgents5
 {
-    IBranchAndFinancialInstitutionIdentification6? ITransactionAgents5.InstructingAgent => InstructingAgent;
-    IBranchAndFinancialInstitutionIdentification6? ITransactionAgents5.InstructedAgent => InstructedAgent;
+    IBranchAndFinancialInstitutionIdentification6? ITransactionAgents5.InstructingAgent =>
+        InstructingAgent;
+    IBranchAndFinancialInstitutionIdentification6? ITransactionAgents5.InstructedAgent =>
+        InstructedAgent;
     IBranchAndFinancialInstitutionIdentification6? ITransactionAgents5.DebtorAgent => DebtorAgent;
-    IBranchAndFinancialInstitutionIdentification6? ITransactionAgents5.CreditorAgent => CreditorAgent;
-    IBranchAndFinancialInstitutionIdentification6? ITransactionAgents5.IntermediaryAgent1 => IntermediaryAgent1;
-    IBranchAndFinancialInstitutionIdentification6? ITransactionAgents5.IntermediaryAgent2 => IntermediaryAgent2;
-    IBranchAndFinancialInstitutionIdentification6? ITransactionAgents5.IntermediaryAgent3 => IntermediaryAgent3;
-    IBranchAndFinancialInstitutionIdentification6? ITransactionAgents5.ReceivingAgent => ReceivingAgent;
-    IBranchAndFinancialInstitutionIdentification6? ITransactionAgents5.DeliveringAgent => DeliveringAgent;
+    IBranchAndFinancialInstitutionIdentification6? ITransactionAgents5.CreditorAgent =>
+        CreditorAgent;
+    IBranchAndFinancialInstitutionIdentification6? ITransactionAgents5.IntermediaryAgent1 =>
+        IntermediaryAgent1;
+    IBranchAndFinancialInstitutionIdentification6? ITransactionAgents5.IntermediaryAgent2 =>
+        IntermediaryAgent2;
+    IBranchAndFinancialInstitutionIdentification6? ITransactionAgents5.IntermediaryAgent3 =>
+        IntermediaryAgent3;
+    IBranchAndFinancialInstitutionIdentification6? ITransactionAgents5.ReceivingAgent =>
+        ReceivingAgent;
+    IBranchAndFinancialInstitutionIdentification6? ITransactionAgents5.DeliveringAgent =>
+        DeliveringAgent;
     IBranchAndFinancialInstitutionIdentification6? ITransactionAgents5.IssuingAgent => IssuingAgent;
-    IBranchAndFinancialInstitutionIdentification6? ITransactionAgents5.SettlementPlace => SettlementPlace;
+    IBranchAndFinancialInstitutionIdentification6? ITransactionAgents5.SettlementPlace =>
+        SettlementPlace;
     IEnumerable<IProprietaryAgent4> ITransactionAgents5.Proprietary => Proprietary;
 }

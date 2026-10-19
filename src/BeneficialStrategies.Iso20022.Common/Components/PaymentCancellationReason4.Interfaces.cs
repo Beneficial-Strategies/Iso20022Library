@@ -12,5 +12,6 @@ public partial record PaymentCancellationReason4 : IPaymentCancellationReason4
 {
     IPartyIdentification125? IPaymentCancellationReason4.Originator => Originator;
     ICancellationReason33Choice? IPaymentCancellationReason4.Reason => Reason;
-    IEnumerable<Max105Text> IPaymentCancellationReason4.AdditionalInformation => AdditionalInformation;
+    IEnumerable<Max105Text> IPaymentCancellationReason4.AdditionalInformation =>
+        AdditionalInformation;
 }

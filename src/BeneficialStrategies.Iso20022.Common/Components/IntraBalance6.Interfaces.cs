@@ -16,5 +16,6 @@ public partial record IntraBalance6 : IIntraBalance6
     IDateAndDateTime2Choice IIntraBalance6.SettlementDate => SettlementDate;
     ICashSubBalanceTypeAndQuantityBreakdown3 IIntraBalance6.BalanceFrom => BalanceFrom;
     ICashSubBalanceTypeAndQuantityBreakdown3 IIntraBalance6.BalanceTo => BalanceTo;
-    IGenericIdentification37? IIntraBalance6.CashSubBalanceIdentification => CashSubBalanceIdentification;
+    IGenericIdentification37? IIntraBalance6.CashSubBalanceIdentification =>
+        CashSubBalanceIdentification;
 }

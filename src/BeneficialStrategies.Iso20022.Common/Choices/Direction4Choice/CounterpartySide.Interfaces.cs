@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.Direction4Choice;
 
-public partial record CounterpartySide : ICounterpartySide
-{
-}
+public partial record CounterpartySide : ICounterpartySide { }

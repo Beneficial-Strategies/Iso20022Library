@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Type of relevant product classification.
 /// </summary>
 [IsoId("_POpXwAOGEeWs3sTa9Sj6Lg")]
-public interface IProductClassification1Choice : IIsoChoice
-{
-}
+public interface IProductClassification1Choice : IIsoChoice { }

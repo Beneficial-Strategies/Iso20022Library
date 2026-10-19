@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 public partial record GetBusinessDayInformationV05 : IGetBusinessDayInformationV05
 {
     IMessageHeader9 IGetBusinessDayInformationV05.MessageHeader => MessageHeader;
-    IBusinessDayQuery2? IGetBusinessDayInformationV05.BusinessDayInformationQueryDefinition => BusinessDayInformationQueryDefinition;
-    IEnumerable<ISupplementaryData1> IGetBusinessDayInformationV05.SupplementaryData => SupplementaryData;
+    IBusinessDayQuery2? IGetBusinessDayInformationV05.BusinessDayInformationQueryDefinition =>
+        BusinessDayInformationQueryDefinition;
+    IEnumerable<ISupplementaryData1> IGetBusinessDayInformationV05.SupplementaryData =>
+        SupplementaryData;
 }

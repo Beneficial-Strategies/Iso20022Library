@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 public partial record AccountReportingRequestV04 : IAccountReportingRequestV04
 {
     IGroupHeader76 IAccountReportingRequestV04.GroupHeader => GroupHeader;
-    IEnumerable<IReportingRequest4> IAccountReportingRequestV04.ReportingRequest => ReportingRequest;
-    IEnumerable<ISupplementaryData1> IAccountReportingRequestV04.SupplementaryData => SupplementaryData;
+    IEnumerable<IReportingRequest4> IAccountReportingRequestV04.ReportingRequest =>
+        ReportingRequest;
+    IEnumerable<ISupplementaryData1> IAccountReportingRequestV04.SupplementaryData =>
+        SupplementaryData;
 }

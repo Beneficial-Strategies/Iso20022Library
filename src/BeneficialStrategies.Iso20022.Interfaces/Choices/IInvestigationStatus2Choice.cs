@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the status of an investigation case.
 /// </summary>
 [IsoId("_T-P8RNp-Ed-ak6NoX_4Aeg_523812389")]
-public interface IInvestigationStatus2Choice : IIsoChoice
-{
-}
+public interface IInvestigationStatus2Choice : IIsoChoice { }

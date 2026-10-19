@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Choices.RemittanceInformation3Choice;
 
 public partial record Structured : IStructured
 {
-    IEnumerable<IReferredDocumentAmount1Choice> IStructured.ReferredDocumentAmount => ReferredDocumentAmount;
+    IEnumerable<IReferredDocumentAmount1Choice> IStructured.ReferredDocumentAmount =>
+        ReferredDocumentAmount;
     IPartyIdentification1? IStructured.Invoicer => Invoicer;
     IPartyIdentification1? IStructured.Invoicee => Invoicee;
 }

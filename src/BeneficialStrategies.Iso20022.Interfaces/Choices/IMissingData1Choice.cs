@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the missing data element.
 /// </summary>
 [IsoId("_MN6wk9jMEeq5MfBBxQig1Q")]
-public interface IMissingData1Choice : IIsoChoice
-{
-}
+public interface IMissingData1Choice : IIsoChoice { }

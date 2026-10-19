@@ -13,5 +13,6 @@ public partial record Report : IReport
     IEnumerable<IPositionSet5> IReport.PositionSet => PositionSet;
     IEnumerable<IPositionSet5> IReport.CurrencyPositionSet => CurrencyPositionSet;
     IEnumerable<IPositionSet4> IReport.CollateralPositionSet => CollateralPositionSet;
-    IEnumerable<IPositionSet4> IReport.CurrencyCollateralPositionSet => CurrencyCollateralPositionSet;
+    IEnumerable<IPositionSet4> IReport.CurrencyCollateralPositionSet =>
+        CurrencyCollateralPositionSet;
 }

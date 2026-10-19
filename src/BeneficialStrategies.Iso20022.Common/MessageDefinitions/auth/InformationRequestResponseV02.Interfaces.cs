@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.auth;
 public partial record InformationRequestResponseV02 : IInformationRequestResponseV02
 {
     ISearchCriteria2Choice IInformationRequestResponseV02.SearchCriteria => SearchCriteria;
-    IEnumerable<IReturnIndicator2> IInformationRequestResponseV02.ReturnIndicator => ReturnIndicator;
-    IEnumerable<ISupplementaryData1> IInformationRequestResponseV02.SupplementaryData => SupplementaryData;
+    IEnumerable<IReturnIndicator2> IInformationRequestResponseV02.ReturnIndicator =>
+        ReturnIndicator;
+    IEnumerable<ISupplementaryData1> IInformationRequestResponseV02.SupplementaryData =>
+        SupplementaryData;
 }

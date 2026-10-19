@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Detailed information of no margin or outdated margin information.
 /// </summary>
 [IsoId("_rqy-iVowEe23K4GXSpBSeg")]
-public interface IDetailedMissingMarginInformationStatistics4Choice : IIsoChoice
-{
-}
+public interface IDetailedMissingMarginInformationStatistics4Choice : IIsoChoice { }

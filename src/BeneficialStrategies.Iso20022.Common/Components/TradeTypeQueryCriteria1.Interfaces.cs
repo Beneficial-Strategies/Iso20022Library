@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TradeTypeQueryCriteria1 : ITradeTypeQueryCriteria1
 {
-    IEnumerable<ExposureType6Code> ITradeTypeQueryCriteria1.SecuritiesFinancingTransactionType => SecuritiesFinancingTransactionType;
-    IEnumerable<CollateralType6Code> ITradeTypeQueryCriteria1.CollateralComponentType => CollateralComponentType;
+    IEnumerable<ExposureType6Code> ITradeTypeQueryCriteria1.SecuritiesFinancingTransactionType =>
+        SecuritiesFinancingTransactionType;
+    IEnumerable<CollateralType6Code> ITradeTypeQueryCriteria1.CollateralComponentType =>
+        CollateralComponentType;
 }

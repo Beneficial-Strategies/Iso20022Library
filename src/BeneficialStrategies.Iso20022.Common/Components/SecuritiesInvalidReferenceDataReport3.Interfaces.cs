@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecuritiesInvalidReferenceDataReport3 : ISecuritiesInvalidReferenceDataReport3
 {
-    ISecuritiesReferenceDataReport5 ISecuritiesInvalidReferenceDataReport3.FinancialInstrument => FinancialInstrument;
-    IEnumerable<ISupplementaryData1> ISecuritiesInvalidReferenceDataReport3.SupplementaryData => SupplementaryData;
+    ISecuritiesReferenceDataReport5 ISecuritiesInvalidReferenceDataReport3.FinancialInstrument =>
+        FinancialInstrument;
+    IEnumerable<ISupplementaryData1> ISecuritiesInvalidReferenceDataReport3.SupplementaryData =>
+        SupplementaryData;
 }

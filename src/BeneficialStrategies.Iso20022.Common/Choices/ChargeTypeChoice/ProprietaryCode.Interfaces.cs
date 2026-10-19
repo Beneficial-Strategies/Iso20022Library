@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.ChargeTypeChoice;
 
-public partial record ProprietaryCode : IProprietaryCode
-{
-}
+public partial record ProprietaryCode : IProprietaryCode { }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record StandingOrderOrError5Choice_ : IStandingOrderOrError5Choice
-{
-}
+public abstract partial record StandingOrderOrError5Choice_ : IStandingOrderOrError5Choice { }

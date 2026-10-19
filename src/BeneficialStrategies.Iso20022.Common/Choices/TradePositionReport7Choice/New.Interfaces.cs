@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TradePositionReport7Choice;
 
 public partial record New : INew
 {
-    IEnumerable<ICounterpartySpecificData21> INew.CounterpartySpecificData => CounterpartySpecificData;
+    IEnumerable<ICounterpartySpecificData21> INew.CounterpartySpecificData =>
+        CounterpartySpecificData;
     ICommonTradeDataReport33 INew.CommonTradeData => CommonTradeData;
     ITechnicalAttributes1? INew.TechnicalAttributes => TechnicalAttributes;
     IEnumerable<ISupplementaryData1> INew.SupplementaryData => SupplementaryData;

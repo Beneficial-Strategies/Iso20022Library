@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentAttributes5Choice;
 
-public partial record Identification : IIdentification
-{
-}
+public partial record Identification : IIdentification { }

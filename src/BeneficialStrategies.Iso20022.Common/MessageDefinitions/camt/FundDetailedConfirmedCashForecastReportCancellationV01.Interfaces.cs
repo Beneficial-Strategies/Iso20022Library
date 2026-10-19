@@ -8,10 +8,15 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.camt;
 
-public partial record FundDetailedConfirmedCashForecastReportCancellationV01 : IFundDetailedConfirmedCashForecastReportCancellationV01
+public partial record FundDetailedConfirmedCashForecastReportCancellationV01
+    : IFundDetailedConfirmedCashForecastReportCancellationV01
 {
-    IAdditionalReference3? IFundDetailedConfirmedCashForecastReportCancellationV01.PoolReference => PoolReference;
-    IAdditionalReference3 IFundDetailedConfirmedCashForecastReportCancellationV01.PreviousReference => PreviousReference;
-    IEnumerable<IAdditionalReference3> IFundDetailedConfirmedCashForecastReportCancellationV01.RelatedReference => RelatedReference;
-    IFundDetailedConfirmedCashForecastReport1? IFundDetailedConfirmedCashForecastReportCancellationV01.CashForecastReportToBeCancelled => CashForecastReportToBeCancelled;
+    IAdditionalReference3? IFundDetailedConfirmedCashForecastReportCancellationV01.PoolReference =>
+        PoolReference;
+    IAdditionalReference3 IFundDetailedConfirmedCashForecastReportCancellationV01.PreviousReference =>
+        PreviousReference;
+    IEnumerable<IAdditionalReference3> IFundDetailedConfirmedCashForecastReportCancellationV01.RelatedReference =>
+        RelatedReference;
+    IFundDetailedConfirmedCashForecastReport1? IFundDetailedConfirmedCashForecastReportCancellationV01.CashForecastReportToBeCancelled =>
+        CashForecastReportToBeCancelled;
 }

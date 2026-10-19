@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.CashAvailabilityDate1Choice;
 
-public partial record ActualDate : IActualDate
-{
-}
+public partial record ActualDate : IActualDate { }

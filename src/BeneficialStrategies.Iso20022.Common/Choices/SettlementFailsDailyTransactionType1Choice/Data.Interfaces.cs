@@ -11,8 +11,10 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementFailsDailyTransactionT
 public partial record Data : IData
 {
     ISettlementFailsDailyCSD1Choice IData.SecuritiesBuyOrSell => SecuritiesBuyOrSell;
-    ISettlementFailsDailyCSD1Choice IData.CollateralManagementOperation => CollateralManagementOperation;
-    ISettlementFailsDailyCSD1Choice IData.SecuritiesLendingOrBorrowing => SecuritiesLendingOrBorrowing;
+    ISettlementFailsDailyCSD1Choice IData.CollateralManagementOperation =>
+        CollateralManagementOperation;
+    ISettlementFailsDailyCSD1Choice IData.SecuritiesLendingOrBorrowing =>
+        SecuritiesLendingOrBorrowing;
     ISettlementFailsDailyCSD1Choice IData.RepurchaseAgreement => RepurchaseAgreement;
     ISettlementFailsDailyCSD1Choice IData.Other => Other;
 }

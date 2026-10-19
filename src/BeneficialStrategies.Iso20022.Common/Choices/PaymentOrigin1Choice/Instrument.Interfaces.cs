@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PaymentOrigin1Choice;
 
-public partial record Instrument : IInstrument
-{
-}
+public partial record Instrument : IInstrument { }

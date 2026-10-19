@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementParties32Choice;
 /// Legal entity identifier of the central securities depository participant involved in the transaction.
 /// </summary>
 [IsoId("_Az7-8bQ0EemI67HK7aviyg")]
-public interface ICentralSecuritiesDepositoryParticipant : ISettlementParties32Choice, IIsoChoiceVariant
+public interface ICentralSecuritiesDepositoryParticipant
+    : ISettlementParties32Choice,
+        IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>
     [IsoXmlTag("CntrlSctiesDpstryPtcpt")]

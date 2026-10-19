@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AssetHolding1Choice;
 
-public partial record Triparty : ITriparty
-{
-}
+public partial record Triparty : ITriparty { }

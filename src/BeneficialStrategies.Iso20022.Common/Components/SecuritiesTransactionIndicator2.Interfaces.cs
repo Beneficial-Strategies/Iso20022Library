@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecuritiesTransactionIndicator2 : ISecuritiesTransactionIndicator2
 {
-    IEnumerable<ReportingWaiverType1Code> ISecuritiesTransactionIndicator2.WaiverIndicator => WaiverIndicator;
-    IEnumerable<ReportingWaiverType3Code> ISecuritiesTransactionIndicator2.OTCPostTradeIndicator => OTCPostTradeIndicator;
+    IEnumerable<ReportingWaiverType1Code> ISecuritiesTransactionIndicator2.WaiverIndicator =>
+        WaiverIndicator;
+    IEnumerable<ReportingWaiverType3Code> ISecuritiesTransactionIndicator2.OTCPostTradeIndicator =>
+        OTCPostTradeIndicator;
 }

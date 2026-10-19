@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the type of commodity.
 /// </summary>
 [IsoId("_KDl0cI16Eeet3cKIYK84nw")]
-public interface IAssetClassDetailedSubProductType1Choice : IIsoChoice
-{
-}
+public interface IAssetClassDetailedSubProductType1Choice : IIsoChoice { }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record CardholderAuthentication2 : ICardholderAuthentication2
-{
-}
+public partial record CardholderAuthentication2 : ICardholderAuthentication2 { }

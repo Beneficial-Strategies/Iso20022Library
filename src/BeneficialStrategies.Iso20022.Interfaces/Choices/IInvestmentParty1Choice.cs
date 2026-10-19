@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Identification of the investment party.
 /// </summary>
 [IsoId("_yM5zQenQEeSsIMG7XCyDQw")]
-public interface IInvestmentParty1Choice : IIsoChoice
-{
-}
+public interface IInvestmentParty1Choice : IIsoChoice { }

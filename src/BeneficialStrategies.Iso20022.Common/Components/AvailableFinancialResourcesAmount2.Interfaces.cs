@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record AvailableFinancialResourcesAmount2 : IAvailableFinancialResourcesAmount2
 {
-    IEnumerable<IReportingAssetBreakdown2> IAvailableFinancialResourcesAmount2.CCPSkinInTheGame => CCPSkinInTheGame;
+    IEnumerable<IReportingAssetBreakdown2> IAvailableFinancialResourcesAmount2.CCPSkinInTheGame =>
+        CCPSkinInTheGame;
 }

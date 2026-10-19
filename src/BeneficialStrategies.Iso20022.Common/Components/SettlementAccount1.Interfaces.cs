@@ -11,9 +11,12 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SettlementAccount1 : ISettlementAccount1
 {
     IGenericIdentification165 ISettlementAccount1.Identification => Identification;
-    IAmountAndDirection102 ISettlementAccount1.EndOfDayInitialMarginCalled => EndOfDayInitialMarginCalled;
-    IAmountAndDirection102 ISettlementAccount1.EndOfDayVariationMarginCalled => EndOfDayVariationMarginCalled;
-    IAmountAndDirection102 ISettlementAccount1.EndOfDayDefaultFundCalled => EndOfDayDefaultFundCalled;
+    IAmountAndDirection102 ISettlementAccount1.EndOfDayInitialMarginCalled =>
+        EndOfDayInitialMarginCalled;
+    IAmountAndDirection102 ISettlementAccount1.EndOfDayVariationMarginCalled =>
+        EndOfDayVariationMarginCalled;
+    IAmountAndDirection102 ISettlementAccount1.EndOfDayDefaultFundCalled =>
+        EndOfDayDefaultFundCalled;
     IAmountAndDirection102 ISettlementAccount1.EndOfDaySettlementCalled => EndOfDaySettlementCalled;
     IAmountAndDirection102 ISettlementAccount1.EndOfDayOtherCalled => EndOfDayOtherCalled;
     IAmountAndDirection102 ISettlementAccount1.EndOfDayLiquidityCalled => EndOfDayLiquidityCalled;

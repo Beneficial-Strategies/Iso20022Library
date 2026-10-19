@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record RejectionReason53 : IRejectionReason53
 {
-    ITransactionIdentification3Choice IRejectionReason53.TransactionIdentification => TransactionIdentification;
-    IEnumerable<IGenericValidationRuleIdentification1> IRejectionReason53.DetailedValidationRule => DetailedValidationRule;
+    ITransactionIdentification3Choice IRejectionReason53.TransactionIdentification =>
+        TransactionIdentification;
+    IEnumerable<IGenericValidationRuleIdentification1> IRejectionReason53.DetailedValidationRule =>
+        DetailedValidationRule;
 }

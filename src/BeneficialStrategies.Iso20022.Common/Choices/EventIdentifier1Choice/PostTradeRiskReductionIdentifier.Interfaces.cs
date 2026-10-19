@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.EventIdentifier1Choice;
 
-public partial record PostTradeRiskReductionIdentifier : IPostTradeRiskReductionIdentifier
-{
-}
+public partial record PostTradeRiskReductionIdentifier : IPostTradeRiskReductionIdentifier { }

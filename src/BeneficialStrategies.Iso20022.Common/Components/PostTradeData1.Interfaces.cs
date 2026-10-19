@@ -14,6 +14,7 @@ public partial record PostTradeData1 : IPostTradeData1
     ISecuritiesTransactionPrice26Choice? IPostTradeData1.Price => Price;
     IFinancialInstrumentQuantity25Choice? IPostTradeData1.Quantity => Quantity;
     IContributorPublicationData1 IPostTradeData1.Contributor => Contributor;
-    IConsolidatedTapeProviderData1? IPostTradeData1.ConsolidatedTapeProvider => ConsolidatedTapeProvider;
+    IConsolidatedTapeProviderData1? IPostTradeData1.ConsolidatedTapeProvider =>
+        ConsolidatedTapeProvider;
     IEnumerable<IPostTradeData1Choice> IPostTradeData1.PostTradeData => PostTradeData;
 }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides the collateral details for the secured markets.
 /// </summary>
 [IsoId("_h6SUN6idEeWHO_l3hf2rlA")]
-public interface ISecuredCollateral2Choice : IIsoChoice
-{
-}
+public interface ISecuredCollateral2Choice : IIsoChoice { }

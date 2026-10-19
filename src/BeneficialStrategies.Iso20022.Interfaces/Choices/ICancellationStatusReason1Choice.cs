@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Speficies the reason for the transaction cancellation status.
 /// </summary>
 [IsoId("_TPwel9p-Ed-ak6NoX_4Aeg_1784056923")]
-public interface ICancellationStatusReason1Choice : IIsoChoice
-{
-}
+public interface ICancellationStatusReason1Choice : IIsoChoice { }

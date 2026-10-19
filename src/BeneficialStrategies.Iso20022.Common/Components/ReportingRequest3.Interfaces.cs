@@ -12,7 +12,8 @@ public partial record ReportingRequest3 : IReportingRequest3
 {
     ICashAccount24? IReportingRequest3.Account => Account;
     IParty12Choice IReportingRequest3.AccountOwner => AccountOwner;
-    IBranchAndFinancialInstitutionIdentification5? IReportingRequest3.AccountServicer => AccountServicer;
+    IBranchAndFinancialInstitutionIdentification5? IReportingRequest3.AccountServicer =>
+        AccountServicer;
     IReportingPeriod1? IReportingRequest3.ReportingPeriod => ReportingPeriod;
     ITransactionType1? IReportingRequest3.RequestedTransactionType => RequestedTransactionType;
     IEnumerable<IBalanceType12> IReportingRequest3.RequestedBalanceType => RequestedBalanceType;

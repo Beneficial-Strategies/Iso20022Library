@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record LiquidityStressTestResult1 : ILiquidityStressTestResult1
 {
     ICoverTwoDefaulters1 ILiquidityStressTestResult1.ScenarioDefaulters => ScenarioDefaulters;
-    IEnumerable<ILiquidityRequiredAndAvailable1> ILiquidityStressTestResult1.LiquidityRequiredAndAvailable => LiquidityRequiredAndAvailable;
+    IEnumerable<ILiquidityRequiredAndAvailable1> ILiquidityStressTestResult1.LiquidityRequiredAndAvailable =>
+        LiquidityRequiredAndAvailable;
 }

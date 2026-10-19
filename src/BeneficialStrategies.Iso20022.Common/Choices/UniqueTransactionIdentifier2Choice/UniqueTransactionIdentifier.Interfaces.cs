@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.UniqueTransactionIdentifier2Choice;
 
-public partial record UniqueTransactionIdentifier : IUniqueTransactionIdentifier
-{
-}
+public partial record UniqueTransactionIdentifier : IUniqueTransactionIdentifier { }

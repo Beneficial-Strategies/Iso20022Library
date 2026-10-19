@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport32Choice;
 
 public partial record Revive : IRevive
 {
-    IEnumerable<ICounterpartySpecificData36> IRevive.CounterpartySpecificData => CounterpartySpecificData;
+    IEnumerable<ICounterpartySpecificData36> IRevive.CounterpartySpecificData =>
+        CounterpartySpecificData;
     ICommonTradeDataReport69 IRevive.CommonTradeData => CommonTradeData;
     ITechnicalAttributes5? IRevive.TechnicalAttributes => TechnicalAttributes;
     IDisseminationData1? IRevive.PublicDisseminationData => PublicDisseminationData;

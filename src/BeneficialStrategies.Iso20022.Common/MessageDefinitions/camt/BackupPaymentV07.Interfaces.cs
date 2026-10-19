@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 public partial record BackupPaymentV07 : IBackupPaymentV07
 {
     IMessageHeader1 IBackupPaymentV07.MessageHeader => MessageHeader;
-    IMessageHeader1? IBackupPaymentV07.OriginalMessageIdentification => OriginalMessageIdentification;
+    IMessageHeader1? IBackupPaymentV07.OriginalMessageIdentification =>
+        OriginalMessageIdentification;
     IPaymentInstruction13? IBackupPaymentV07.InstructionInformation => InstructionInformation;
     IAmount2Choice IBackupPaymentV07.TransferredAmount => TransferredAmount;
     ISystemMember3 IBackupPaymentV07.Creditor => Creditor;

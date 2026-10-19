@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Report of the relevant institution. The report can be either an update or a cancellation.
 /// </summary>
 [IsoId("_77i8YDbtEeeYhaZ6bvG1Xg")]
-public interface IPartyReport1Choice : IIsoChoice
-{
-}
+public interface IPartyReport1Choice : IIsoChoice { }

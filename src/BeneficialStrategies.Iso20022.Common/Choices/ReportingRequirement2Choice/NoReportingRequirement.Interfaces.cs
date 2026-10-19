@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.ReportingRequirement2Choice;
 
-public partial record NoReportingRequirement : INoReportingRequirement
-{
-}
+public partial record NoReportingRequirement : INoReportingRequirement { }

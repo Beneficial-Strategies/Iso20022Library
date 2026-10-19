@@ -11,8 +11,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record StatementGroup1 : IStatementGroup1
 {
     IPartyIdentification58 IStatementGroup1.Sender => Sender;
-    IEnumerable<IContactDetails3> IStatementGroup1.SenderIndividualContact => SenderIndividualContact;
+    IEnumerable<IContactDetails3> IStatementGroup1.SenderIndividualContact =>
+        SenderIndividualContact;
     IPartyIdentification58 IStatementGroup1.Receiver => Receiver;
-    IEnumerable<IContactDetails3> IStatementGroup1.ReceiverIndividualContact => ReceiverIndividualContact;
+    IEnumerable<IContactDetails3> IStatementGroup1.ReceiverIndividualContact =>
+        ReceiverIndividualContact;
     IEnumerable<IBillingStatement1> IStatementGroup1.BillingStatement => BillingStatement;
 }

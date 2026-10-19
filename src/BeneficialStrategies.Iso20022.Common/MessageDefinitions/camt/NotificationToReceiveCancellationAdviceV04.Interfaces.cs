@@ -8,9 +8,12 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.camt;
 
-public partial record NotificationToReceiveCancellationAdviceV04 : INotificationToReceiveCancellationAdviceV04
+public partial record NotificationToReceiveCancellationAdviceV04
+    : INotificationToReceiveCancellationAdviceV04
 {
     IGroupHeader59 INotificationToReceiveCancellationAdviceV04.GroupHeader => GroupHeader;
-    IOriginalNotification8 INotificationToReceiveCancellationAdviceV04.OriginalNotification => OriginalNotification;
-    IEnumerable<ISupplementaryData1> INotificationToReceiveCancellationAdviceV04.SupplementaryData => SupplementaryData;
+    IOriginalNotification8 INotificationToReceiveCancellationAdviceV04.OriginalNotification =>
+        OriginalNotification;
+    IEnumerable<ISupplementaryData1> INotificationToReceiveCancellationAdviceV04.SupplementaryData =>
+        SupplementaryData;
 }

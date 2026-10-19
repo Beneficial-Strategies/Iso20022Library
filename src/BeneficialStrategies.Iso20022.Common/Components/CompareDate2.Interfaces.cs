@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record CompareDate2 : ICompareDate2
-{
-}
+public partial record CompareDate2 : ICompareDate2 { }

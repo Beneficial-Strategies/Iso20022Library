@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TransparencyDataReport15 : ITransparencyDataReport15
 {
-    IEnumerable<ITransactionsBin2> ITransparencyDataReport15.AggregatedQuantitativeData => AggregatedQuantitativeData;
+    IEnumerable<ITransactionsBin2> ITransparencyDataReport15.AggregatedQuantitativeData =>
+        AggregatedQuantitativeData;
 }

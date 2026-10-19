@@ -11,8 +11,10 @@ namespace BeneficialStrategies.Iso20022.auth;
 public partial record RegulatoryTransactionReportV02 : IRegulatoryTransactionReportV02
 {
     IDocumentIdentification8 IRegulatoryTransactionReportV02.Identification => Identification;
-    IEnumerable<ITransactionDetails3> IRegulatoryTransactionReportV02.TransactionDetails => TransactionDetails;
-    IPartyIdentification23Choice IRegulatoryTransactionReportV02.ReportingInstitution => ReportingInstitution;
+    IEnumerable<ITransactionDetails3> IRegulatoryTransactionReportV02.TransactionDetails =>
+        TransactionDetails;
+    IPartyIdentification23Choice IRegulatoryTransactionReportV02.ReportingInstitution =>
+        ReportingInstitution;
     IPartyIdentification24Choice? IRegulatoryTransactionReportV02.ReportingAgent => ReportingAgent;
     IEnumerable<IExtension1> IRegulatoryTransactionReportV02.Extension => Extension;
 }

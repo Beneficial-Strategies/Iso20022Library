@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Identification of a party by a choice between a BIC or a name and address or an LEI.
 /// </summary>
 [IsoId("_JJOcQSjIEeKnA5P_jl2DUw")]
-public interface IPartyIdentification73Choice : IIsoChoice
-{
-}
+public interface IPartyIdentification73Choice : IIsoChoice { }

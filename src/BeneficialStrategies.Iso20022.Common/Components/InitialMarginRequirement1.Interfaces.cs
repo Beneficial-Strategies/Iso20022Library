@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record InitialMarginRequirement1 : IInitialMarginRequirement1
 {
-    IEnumerable<IInitialMarginExposure1> IInitialMarginRequirement1.InitialMarginExposure => InitialMarginExposure;
+    IEnumerable<IInitialMarginExposure1> IInitialMarginRequirement1.InitialMarginExposure =>
+        InitialMarginExposure;
 }

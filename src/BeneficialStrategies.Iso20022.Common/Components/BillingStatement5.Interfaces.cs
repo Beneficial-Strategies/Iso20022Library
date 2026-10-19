@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record BillingStatement5 : IBillingStatement5
 {
     IDatePeriod1 IBillingStatement5.FromToDate => FromToDate;
-    ICashAccountCharacteristics5 IBillingStatement5.AccountCharacteristics => AccountCharacteristics;
+    ICashAccountCharacteristics5 IBillingStatement5.AccountCharacteristics =>
+        AccountCharacteristics;
     IEnumerable<IBillingRate1> IBillingStatement5.RateData => RateData;
     IEnumerable<ICurrencyExchange6> IBillingStatement5.CurrencyExchange => CurrencyExchange;
     IEnumerable<IBillingBalance1> IBillingStatement5.Balance => Balance;
@@ -19,5 +20,6 @@ public partial record BillingStatement5 : IBillingStatement5
     IEnumerable<IBillingService2> IBillingStatement5.Service => Service;
     IEnumerable<IBillingTaxRegion3> IBillingStatement5.TaxRegion => TaxRegion;
     IEnumerable<IBalanceAdjustment1> IBillingStatement5.BalanceAdjustment => BalanceAdjustment;
-    IEnumerable<IBillingServiceAdjustment1> IBillingStatement5.ServiceAdjustment => ServiceAdjustment;
+    IEnumerable<IBillingServiceAdjustment1> IBillingStatement5.ServiceAdjustment =>
+        ServiceAdjustment;
 }

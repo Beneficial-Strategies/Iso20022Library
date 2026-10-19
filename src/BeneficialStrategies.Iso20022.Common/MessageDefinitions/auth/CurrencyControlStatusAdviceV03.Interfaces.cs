@@ -11,7 +11,10 @@ namespace BeneficialStrategies.Iso20022.auth;
 public partial record CurrencyControlStatusAdviceV03 : ICurrencyControlStatusAdviceV03
 {
     ICurrencyControlHeader6 ICurrencyControlStatusAdviceV03.GroupHeader => GroupHeader;
-    IEnumerable<ICurrencyControlGroupStatus2> ICurrencyControlStatusAdviceV03.GroupStatus => GroupStatus;
-    IEnumerable<ICurrencyControlPackageStatus2> ICurrencyControlStatusAdviceV03.PackageStatus => PackageStatus;
-    IEnumerable<ISupplementaryData1> ICurrencyControlStatusAdviceV03.SupplementaryData => SupplementaryData;
+    IEnumerable<ICurrencyControlGroupStatus2> ICurrencyControlStatusAdviceV03.GroupStatus =>
+        GroupStatus;
+    IEnumerable<ICurrencyControlPackageStatus2> ICurrencyControlStatusAdviceV03.PackageStatus =>
+        PackageStatus;
+    IEnumerable<ISupplementaryData1> ICurrencyControlStatusAdviceV03.SupplementaryData =>
+        SupplementaryData;
 }

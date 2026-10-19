@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ExchangeRateReportOrError3Choice
 public partial record CurrencyExchangeReport : ICurrencyExchangeReport
 {
     ICurrencySourceTarget1 ICurrencyExchangeReport.CurrencyReference => CurrencyReference;
-    IExchangeRateReportOrError4Choice ICurrencyExchangeReport.CurrencyExchangeOrError => CurrencyExchangeOrError;
+    IExchangeRateReportOrError4Choice ICurrencyExchangeReport.CurrencyExchangeOrError =>
+        CurrencyExchangeOrError;
 }

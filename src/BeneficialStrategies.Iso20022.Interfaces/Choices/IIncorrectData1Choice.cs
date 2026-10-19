@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the incorrect data type.
 /// </summary>
 [IsoId("_Dfigo9jLEeq5MfBBxQig1Q")]
-public interface IIncorrectData1Choice : IIsoChoice
-{
-}
+public interface IIncorrectData1Choice : IIsoChoice { }

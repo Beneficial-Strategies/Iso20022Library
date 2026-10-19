@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TransactionCriteria11 : ITransactionCriteria11
 {
-    IEnumerable<ITransactionSearchCriteria11> ITransactionCriteria11.SearchCriteria => SearchCriteria;
+    IEnumerable<ITransactionSearchCriteria11> ITransactionCriteria11.SearchCriteria =>
+        SearchCriteria;
     ITransactionReturnCriteria5? ITransactionCriteria11.ReturnCriteria => ReturnCriteria;
 }

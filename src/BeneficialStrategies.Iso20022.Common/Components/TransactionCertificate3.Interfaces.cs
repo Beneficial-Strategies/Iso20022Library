@@ -13,6 +13,8 @@ public partial record TransactionCertificate3 : ITransactionCertificate3
     IDocumentIdentification28 ITransactionCertificate3.Certificate => Certificate;
     ICashAccount38? ITransactionCertificate3.Account => Account;
     IDocumentAmendment1? ITransactionCertificate3.Amendment => Amendment;
-    IEnumerable<ITransactionCertificateRecord1> ITransactionCertificate3.CertificateRecord => CertificateRecord;
-    IEnumerable<ISupplementaryData1> ITransactionCertificate3.SupplementaryData => SupplementaryData;
+    IEnumerable<ITransactionCertificateRecord1> ITransactionCertificate3.CertificateRecord =>
+        CertificateRecord;
+    IEnumerable<ISupplementaryData1> ITransactionCertificate3.SupplementaryData =>
+        SupplementaryData;
 }

@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record AbnormalValuesData4 : IAbnormalValuesData4
 {
-    ICounterpartyData92 IAbnormalValuesData4.CounterpartyIdentification => CounterpartyIdentification;
-    IEnumerable<IAbnormalValuesTransactionData2> IAbnormalValuesData4.TransactionDetails => TransactionDetails;
+    ICounterpartyData92 IAbnormalValuesData4.CounterpartyIdentification =>
+        CounterpartyIdentification;
+    IEnumerable<IAbnormalValuesTransactionData2> IAbnormalValuesData4.TransactionDetails =>
+        TransactionDetails;
 }

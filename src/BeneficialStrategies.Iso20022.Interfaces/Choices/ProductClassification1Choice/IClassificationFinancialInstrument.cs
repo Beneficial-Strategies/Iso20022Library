@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductClassification1Choice;
 /// ISO 10962 classification of financial instrument (CFI).
 /// </summary>
 [IsoId("_VaiSQAOGEeWs3sTa9Sj6Lg")]
-public interface IClassificationFinancialInstrument : IProductClassification1Choice, IIsoChoiceVariant
+public interface IClassificationFinancialInstrument
+    : IProductClassification1Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record StandingOrderQuery5 : IStandingOrderQuery5
 {
-    IStandingOrderCriteria5Choice? IStandingOrderQuery5.StandingOrderCriteria => StandingOrderCriteria;
+    IStandingOrderCriteria5Choice? IStandingOrderQuery5.StandingOrderCriteria =>
+        StandingOrderCriteria;
 }

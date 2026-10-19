@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Identification of the executing party.
 /// </summary>
 [IsoId("_FVhI0ViJEea-d4CsgzjlAw")]
-public interface IExecutingParty1Choice : IIsoChoice
-{
-}
+public interface IExecutingParty1Choice : IIsoChoice { }

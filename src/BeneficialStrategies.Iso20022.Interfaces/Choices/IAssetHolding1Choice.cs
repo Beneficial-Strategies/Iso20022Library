@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Holding of financial instrument for collateral purposes.
 /// </summary>
 [IsoId("_A8xYoK_5EeaE9YROwd69hA")]
-public interface IAssetHolding1Choice : IIsoChoice
-{
-}
+public interface IAssetHolding1Choice : IIsoChoice { }

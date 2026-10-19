@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentificationQuery4Choice;
 
-public partial record UniqueProductIdentifier : IUniqueProductIdentifier
-{
-}
+public partial record UniqueProductIdentifier : IUniqueProductIdentifier { }

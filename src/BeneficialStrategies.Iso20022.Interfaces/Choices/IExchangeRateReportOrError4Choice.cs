@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Reports either on currency exchange information or on a business error.
 /// </summary>
 [IsoId("_MobXpdfiEeqoweZZxm4TPQ")]
-public interface IExchangeRateReportOrError4Choice : IIsoChoice
-{
-}
+public interface IExchangeRateReportOrError4Choice : IIsoChoice { }

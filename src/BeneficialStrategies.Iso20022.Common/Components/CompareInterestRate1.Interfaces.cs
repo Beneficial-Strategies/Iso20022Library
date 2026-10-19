@@ -13,12 +13,19 @@ public partial record CompareInterestRate1 : ICompareInterestRate1
     ICompareAmountAndDirection1? ICompareInterestRate1.MarginLoanAmount => MarginLoanAmount;
     IComparePercentageRate3? ICompareInterestRate1.FixedInterestRate => FixedInterestRate;
     ICompareInterestComputationMethod3? ICompareInterestRate1.DayCountBasis => DayCountBasis;
-    ICompareBenchmarkCurveName3? ICompareInterestRate1.FloatingInterestReferenceRate => FloatingInterestReferenceRate;
-    ICompareRateBasis3? ICompareInterestRate1.FloatingInterestRateTermUnit => FloatingInterestRateTermUnit;
-    ICompareNumber5? ICompareInterestRate1.FloatingInterestRateTermValue => FloatingInterestRateTermValue;
-    ICompareRateBasis3? ICompareInterestRate1.FloatingInterestRatePaymentFrequencyUnit => FloatingInterestRatePaymentFrequencyUnit;
-    ICompareNumber5? ICompareInterestRate1.FloatingInterestRatePaymentFrequencyValue => FloatingInterestRatePaymentFrequencyValue;
-    ICompareRateBasis3? ICompareInterestRate1.FloatingInterestRateResetFrequencyUnit => FloatingInterestRateResetFrequencyUnit;
-    ICompareNumber6? ICompareInterestRate1.FloatingInterestRateResetFrequencyValue => FloatingInterestRateResetFrequencyValue;
+    ICompareBenchmarkCurveName3? ICompareInterestRate1.FloatingInterestReferenceRate =>
+        FloatingInterestReferenceRate;
+    ICompareRateBasis3? ICompareInterestRate1.FloatingInterestRateTermUnit =>
+        FloatingInterestRateTermUnit;
+    ICompareNumber5? ICompareInterestRate1.FloatingInterestRateTermValue =>
+        FloatingInterestRateTermValue;
+    ICompareRateBasis3? ICompareInterestRate1.FloatingInterestRatePaymentFrequencyUnit =>
+        FloatingInterestRatePaymentFrequencyUnit;
+    ICompareNumber5? ICompareInterestRate1.FloatingInterestRatePaymentFrequencyValue =>
+        FloatingInterestRatePaymentFrequencyValue;
+    ICompareRateBasis3? ICompareInterestRate1.FloatingInterestRateResetFrequencyUnit =>
+        FloatingInterestRateResetFrequencyUnit;
+    ICompareNumber6? ICompareInterestRate1.FloatingInterestRateResetFrequencyValue =>
+        FloatingInterestRateResetFrequencyValue;
     ICompareDecimalNumber3? ICompareInterestRate1.BasisPointSpread => BasisPointSpread;
 }

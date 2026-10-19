@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the type of additional information.
 /// </summary>
 [IsoId("_RX8oaNp-Ed-ak6NoX_4Aeg_202651859")]
-public interface IInformationType1Choice : IIsoChoice
-{
-}
+public interface IInformationType1Choice : IIsoChoice { }

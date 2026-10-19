@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record CompareOptionStyle1 : ICompareOptionStyle1
-{
-}
+public partial record CompareOptionStyle1 : ICompareOptionStyle1 { }

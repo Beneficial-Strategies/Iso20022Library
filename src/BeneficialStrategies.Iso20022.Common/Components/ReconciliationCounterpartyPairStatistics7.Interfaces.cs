@@ -8,8 +8,11 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record ReconciliationCounterpartyPairStatistics7 : IReconciliationCounterpartyPairStatistics7
+public partial record ReconciliationCounterpartyPairStatistics7
+    : IReconciliationCounterpartyPairStatistics7
 {
-    ICounterpartyData91 IReconciliationCounterpartyPairStatistics7.CounterpartyIdentification => CounterpartyIdentification;
-    IEnumerable<IReconciliationReport15> IReconciliationCounterpartyPairStatistics7.ReconciliationReport => ReconciliationReport;
+    ICounterpartyData91 IReconciliationCounterpartyPairStatistics7.CounterpartyIdentification =>
+        CounterpartyIdentification;
+    IEnumerable<IReconciliationReport15> IReconciliationCounterpartyPairStatistics7.ReconciliationReport =>
+        ReconciliationReport;
 }

@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PendingStatusAndReason2 : IPendingStatusAndReason2
 {
-    IEnumerable<IProcessingStatus66Choice> IPendingStatusAndReason2.ProcessingStatus => ProcessingStatus;
-    IEnumerable<ISettlementStatus16Choice> IPendingStatusAndReason2.SettlementStatus => SettlementStatus;
+    IEnumerable<IProcessingStatus66Choice> IPendingStatusAndReason2.ProcessingStatus =>
+        ProcessingStatus;
+    IEnumerable<ISettlementStatus16Choice> IPendingStatusAndReason2.SettlementStatus =>
+        SettlementStatus;
 }

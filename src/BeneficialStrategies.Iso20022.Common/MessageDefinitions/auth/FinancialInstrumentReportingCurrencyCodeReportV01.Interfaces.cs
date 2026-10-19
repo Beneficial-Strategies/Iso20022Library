@@ -8,8 +8,11 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.auth;
 
-public partial record FinancialInstrumentReportingCurrencyCodeReportV01 : IFinancialInstrumentReportingCurrencyCodeReportV01
+public partial record FinancialInstrumentReportingCurrencyCodeReportV01
+    : IFinancialInstrumentReportingCurrencyCodeReportV01
 {
-    IEnumerable<ISecuritiesCurrencyIdentification2> IFinancialInstrumentReportingCurrencyCodeReportV01.CurrencyData => CurrencyData;
-    IEnumerable<ISupplementaryData1> IFinancialInstrumentReportingCurrencyCodeReportV01.SupplementaryData => SupplementaryData;
+    IEnumerable<ISecuritiesCurrencyIdentification2> IFinancialInstrumentReportingCurrencyCodeReportV01.CurrencyData =>
+        CurrencyData;
+    IEnumerable<ISupplementaryData1> IFinancialInstrumentReportingCurrencyCodeReportV01.SupplementaryData =>
+        SupplementaryData;
 }

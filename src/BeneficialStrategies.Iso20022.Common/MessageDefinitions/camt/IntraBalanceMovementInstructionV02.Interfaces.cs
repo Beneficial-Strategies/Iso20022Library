@@ -10,12 +10,16 @@ namespace BeneficialStrategies.Iso20022.camt;
 
 public partial record IntraBalanceMovementInstructionV02 : IIntraBalanceMovementInstructionV02
 {
-    ITransactionAndDocumentIdentification6? IIntraBalanceMovementInstructionV02.Identification => Identification;
+    ITransactionAndDocumentIdentification6? IIntraBalanceMovementInstructionV02.Identification =>
+        Identification;
     INumberCount1Choice? IIntraBalanceMovementInstructionV02.NumberCounts => NumberCounts;
     IEnumerable<ILinkages57> IIntraBalanceMovementInstructionV02.Linkages => Linkages;
     ICashAccount40 IIntraBalanceMovementInstructionV02.CashAccount => CashAccount;
-    ISystemPartyIdentification8? IIntraBalanceMovementInstructionV02.CashAccountOwner => CashAccountOwner;
-    IBranchAndFinancialInstitutionIdentification8? IIntraBalanceMovementInstructionV02.CashAccountServicer => CashAccountServicer;
+    ISystemPartyIdentification8? IIntraBalanceMovementInstructionV02.CashAccountOwner =>
+        CashAccountOwner;
+    IBranchAndFinancialInstitutionIdentification8? IIntraBalanceMovementInstructionV02.CashAccountServicer =>
+        CashAccountServicer;
     IIntraBalance5 IIntraBalanceMovementInstructionV02.IntraBalance => IntraBalance;
-    IEnumerable<ISupplementaryData1> IIntraBalanceMovementInstructionV02.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IIntraBalanceMovementInstructionV02.SupplementaryData =>
+        SupplementaryData;
 }

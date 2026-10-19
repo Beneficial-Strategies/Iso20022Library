@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditDefaultSwapsDerivative3Cho
 /// A credit default swap derivative on an index.
 /// </summary>
 [IsoId("_xfbL135eEea2k7EBUopqxw")]
-public interface ICreditDefaultSwapIndexDerivative : ICreditDefaultSwapsDerivative3Choice, IIsoChoiceVariant
+public interface ICreditDefaultSwapIndexDerivative
+    : ICreditDefaultSwapsDerivative3Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Derivative on a credit default swap with the ISIN code of the underlying index.

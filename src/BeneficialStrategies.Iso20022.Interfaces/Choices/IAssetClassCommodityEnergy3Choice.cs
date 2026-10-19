@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Defines commodity attributes of a derivative where the type is energy.
 /// </summary>
 [IsoId("_O6FdcU8SEe2PGo0mhYCh1g")]
-public interface IAssetClassCommodityEnergy3Choice : IIsoChoice
-{
-}
+public interface IAssetClassCommodityEnergy3Choice : IIsoChoice { }

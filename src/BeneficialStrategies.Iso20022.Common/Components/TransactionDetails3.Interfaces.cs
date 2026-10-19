@@ -10,10 +10,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TransactionDetails3 : ITransactionDetails3
 {
-    IEnumerable<Max70Text> ITransactionDetails3.AssociatedTradeReference => AssociatedTradeReference;
+    IEnumerable<Max70Text> ITransactionDetails3.AssociatedTradeReference =>
+        AssociatedTradeReference;
     IPlaceOfTradeIdentification2Choice ITransactionDetails3.PlaceOfTrade => PlaceOfTrade;
-    IFinancialInstrument15 ITransactionDetails3.FinancialInstrumentDetails => FinancialInstrumentDetails;
-    IEnumerable<IPartyIdentification24Choice> ITransactionDetails3.TransactionReportMarker => TransactionReportMarker;
+    IFinancialInstrument15 ITransactionDetails3.FinancialInstrumentDetails =>
+        FinancialInstrumentDetails;
+    IEnumerable<IPartyIdentification24Choice> ITransactionDetails3.TransactionReportMarker =>
+        TransactionReportMarker;
     IPartyIdentification11Choice ITransactionDetails3.Counterparty => Counterparty;
     IPartyIdentification23? ITransactionDetails3.Client => Client;
     IPriceRateOrAmountChoice ITransactionDetails3.ExecutedTradePrice => ExecutedTradePrice;

@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record BusinessDaySearchCriteria2 : IBusinessDaySearchCriteria2
 {
-    IEnumerable<ISystemIdentification2Choice> IBusinessDaySearchCriteria2.SystemIdentification => SystemIdentification;
+    IEnumerable<ISystemIdentification2Choice> IBusinessDaySearchCriteria2.SystemIdentification =>
+        SystemIdentification;
     IEnumerable<ActiveCurrencyCode> IBusinessDaySearchCriteria2.SystemCurrency => SystemCurrency;
     ISystemEventType2Choice? IBusinessDaySearchCriteria2.EventType => EventType;
     IDateTimePeriod1Choice? IBusinessDaySearchCriteria2.ClosurePeriod => ClosurePeriod;

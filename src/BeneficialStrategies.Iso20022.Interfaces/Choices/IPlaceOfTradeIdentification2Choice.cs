@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Indicates whether the trade was executed on or off-market.
 /// </summary>
 [IsoId("_TCfepNp-Ed-ak6NoX_4Aeg_2102299149")]
-public interface IPlaceOfTradeIdentification2Choice : IIsoChoice
-{
-}
+public interface IPlaceOfTradeIdentification2Choice : IIsoChoice { }

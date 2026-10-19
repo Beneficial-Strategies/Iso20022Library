@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification73Choice;
 public partial record PartyIdentification : IPartyIdentification
 {
     IPartyIdentification44? IPartyIdentification.AnyBIC => AnyBIC;
-    IClearingSystemIdentification2Choice? IPartyIdentification.ClearingSystemIdentification => ClearingSystemIdentification;
+    IClearingSystemIdentification2Choice? IPartyIdentification.ClearingSystemIdentification =>
+        ClearingSystemIdentification;
 }

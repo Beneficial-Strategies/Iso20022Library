@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Transaction Report Or Error7Choice.
 /// </summary>
 [IsoId("_1nF2cTEyEe6g-ffJsqGiSA")]
-public interface ITransactionReportOrError7Choice : IIsoChoice
-{
-}
+public interface ITransactionReportOrError7Choice : IIsoChoice { }

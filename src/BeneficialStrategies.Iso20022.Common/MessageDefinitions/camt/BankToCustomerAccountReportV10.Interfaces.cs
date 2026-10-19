@@ -12,5 +12,6 @@ public partial record BankToCustomerAccountReportV10 : IBankToCustomerAccountRep
 {
     IGroupHeader81 IBankToCustomerAccountReportV10.GroupHeader => GroupHeader;
     IEnumerable<IAccountReport31> IBankToCustomerAccountReportV10.Report => Report;
-    IEnumerable<ISupplementaryData1> IBankToCustomerAccountReportV10.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IBankToCustomerAccountReportV10.SupplementaryData =>
+        SupplementaryData;
 }

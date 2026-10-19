@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 public partial record CreateStandingOrderV01 : ICreateStandingOrderV01
 {
     IMessageHeader1 ICreateStandingOrderV01.MessageHeader => MessageHeader;
-    IStandingOrderIdentification4 ICreateStandingOrderV01.StandingOrderIdentification => StandingOrderIdentification;
+    IStandingOrderIdentification4 ICreateStandingOrderV01.StandingOrderIdentification =>
+        StandingOrderIdentification;
     IStandingOrder7 ICreateStandingOrderV01.ValueSet => ValueSet;
     IEnumerable<ISupplementaryData1> ICreateStandingOrderV01.SupplementaryData => SupplementaryData;
 }

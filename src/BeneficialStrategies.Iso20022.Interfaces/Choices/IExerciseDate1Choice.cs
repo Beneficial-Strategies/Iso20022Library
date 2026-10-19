@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a known exercise date and a pending date.
 /// </summary>
 [IsoId("_UR6owAbBEeqrW7Meu5r3kQ")]
-public interface IExerciseDate1Choice : IIsoChoice
-{
-}
+public interface IExerciseDate1Choice : IIsoChoice { }

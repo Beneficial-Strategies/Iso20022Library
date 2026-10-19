@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.ShipmentSchedule2Choice;
 
-public partial record ShipmentDateRange : IShipmentDateRange
-{
-}
+public partial record ShipmentDateRange : IShipmentDateRange { }

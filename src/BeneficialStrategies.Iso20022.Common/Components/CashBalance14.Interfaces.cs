@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CashBalance14 : ICashBalance14
 {
     IEnumerable<IBalanceType11Choice> ICashBalance14.Type => Type;
-    IEnumerable<IBranchAndFinancialInstitutionIdentification8> ICashBalance14.CounterpartyIdentification => CounterpartyIdentification;
+    IEnumerable<IBranchAndFinancialInstitutionIdentification8> ICashBalance14.CounterpartyIdentification =>
+        CounterpartyIdentification;
     IEnumerable<IDateAndDateTimeSearch4Choice> ICashBalance14.ValueDate => ValueDate;
     IDateAndDateTimeSearch4Choice? ICashBalance14.ProcessingDate => ProcessingDate;
 }

@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PortfolioStressTestResult1 : IPortfolioStressTestResult1
 {
-    IGenericIdentification165 IPortfolioStressTestResult1.PortfolioIdentification => PortfolioIdentification;
+    IGenericIdentification165 IPortfolioStressTestResult1.PortfolioIdentification =>
+        PortfolioIdentification;
     IAmountAndDirection102 IPortfolioStressTestResult1.StressLoss => StressLoss;
     IAmountAndDirection102? IPortfolioStressTestResult1.RawStressLoss => RawStressLoss;
 }

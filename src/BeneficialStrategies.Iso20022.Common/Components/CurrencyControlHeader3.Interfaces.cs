@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CurrencyControlHeader3 : ICurrencyControlHeader3
 {
     IParty28Choice ICurrencyControlHeader3.InitiatingParty => InitiatingParty;
-    IBranchAndFinancialInstitutionIdentification5? ICurrencyControlHeader3.ForwardingAgent => ForwardingAgent;
+    IBranchAndFinancialInstitutionIdentification5? ICurrencyControlHeader3.ForwardingAgent =>
+        ForwardingAgent;
 }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Range of time defined by a start date and an end date.
 /// </summary>
 [IsoId("_jNAKm5lPEee-Zps0fZQaFQ")]
-public interface IDatePeriod2Choice : IIsoChoice
-{
-}
+public interface IDatePeriod2Choice : IIsoChoice { }

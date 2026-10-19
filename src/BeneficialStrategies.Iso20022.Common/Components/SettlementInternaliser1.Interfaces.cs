@@ -10,10 +10,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SettlementInternaliser1 : ISettlementInternaliser1
 {
-    ISettlementInternaliserIdentification1 ISettlementInternaliser1.Identification => Identification;
+    ISettlementInternaliserIdentification1 ISettlementInternaliser1.Identification =>
+        Identification;
     IInternalisationData1 ISettlementInternaliser1.OverallTotal => OverallTotal;
-    ISettlementInternaliserFinancialInstrument1 ISettlementInternaliser1.FinancialInstrument => FinancialInstrument;
-    ISettlementInternaliserTransactionType1 ISettlementInternaliser1.TransactionType => TransactionType;
+    ISettlementInternaliserFinancialInstrument1 ISettlementInternaliser1.FinancialInstrument =>
+        FinancialInstrument;
+    ISettlementInternaliserTransactionType1 ISettlementInternaliser1.TransactionType =>
+        TransactionType;
     ISettlementInternaliserClientType1 ISettlementInternaliser1.ClientType => ClientType;
     IInternalisationData1 ISettlementInternaliser1.TotalCashTransfer => TotalCashTransfer;
 }

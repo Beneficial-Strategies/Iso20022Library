@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record OriginalNotification17 : IOriginalNotification17
 {
-    IEnumerable<IOriginalNotificationReference15> IOriginalNotification17.OriginalNotificationReference => OriginalNotificationReference;
+    IEnumerable<IOriginalNotificationReference15> IOriginalNotification17.OriginalNotificationReference =>
+        OriginalNotificationReference;
 }

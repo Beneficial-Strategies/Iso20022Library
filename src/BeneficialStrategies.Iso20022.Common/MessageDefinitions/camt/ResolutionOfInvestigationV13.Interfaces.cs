@@ -13,11 +13,17 @@ public partial record ResolutionOfInvestigationV13 : IResolutionOfInvestigationV
     ICaseAssignment6 IResolutionOfInvestigationV13.Assignment => Assignment;
     ICase6? IResolutionOfInvestigationV13.ResolvedCase => ResolvedCase;
     IInvestigationStatus6Choice IResolutionOfInvestigationV13.Status => Status;
-    IEnumerable<IUnderlyingTransaction32> IResolutionOfInvestigationV13.CancellationDetails => CancellationDetails;
-    IPaymentTransaction157? IResolutionOfInvestigationV13.ModificationDetails => ModificationDetails;
-    IClaimNonReceipt3Choice? IResolutionOfInvestigationV13.ClaimNonReceiptDetails => ClaimNonReceiptDetails;
+    IEnumerable<IUnderlyingTransaction32> IResolutionOfInvestigationV13.CancellationDetails =>
+        CancellationDetails;
+    IPaymentTransaction157? IResolutionOfInvestigationV13.ModificationDetails =>
+        ModificationDetails;
+    IClaimNonReceipt3Choice? IResolutionOfInvestigationV13.ClaimNonReceiptDetails =>
+        ClaimNonReceiptDetails;
     IStatementResolutionEntry5? IResolutionOfInvestigationV13.StatementDetails => StatementDetails;
-    ICorrectiveTransaction5Choice? IResolutionOfInvestigationV13.CorrectionTransaction => CorrectionTransaction;
-    IResolutionData5? IResolutionOfInvestigationV13.ResolutionRelatedInformation => ResolutionRelatedInformation;
-    IEnumerable<ISupplementaryData1> IResolutionOfInvestigationV13.SupplementaryData => SupplementaryData;
+    ICorrectiveTransaction5Choice? IResolutionOfInvestigationV13.CorrectionTransaction =>
+        CorrectionTransaction;
+    IResolutionData5? IResolutionOfInvestigationV13.ResolutionRelatedInformation =>
+        ResolutionRelatedInformation;
+    IEnumerable<ISupplementaryData1> IResolutionOfInvestigationV13.SupplementaryData =>
+        SupplementaryData;
 }

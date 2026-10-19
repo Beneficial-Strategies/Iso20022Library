@@ -12,5 +12,6 @@ public partial record DebitAuthorisation3 : IDebitAuthorisation3
 {
     ICancellationReason33Choice IDebitAuthorisation3.CancellationReason => CancellationReason;
     ICashAccount40? IDebitAuthorisation3.Account => Account;
-    IEnumerable<Max140Text> IDebitAuthorisation3.AdditionalCancellationReasonInformation => AdditionalCancellationReasonInformation;
+    IEnumerable<Max140Text> IDebitAuthorisation3.AdditionalCancellationReasonInformation =>
+        AdditionalCancellationReasonInformation;
 }

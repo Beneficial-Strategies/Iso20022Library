@@ -8,9 +8,12 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record GeneralBusinessInformationSearchCriteria1 : IGeneralBusinessInformationSearchCriteria1
+public partial record GeneralBusinessInformationSearchCriteria1
+    : IGeneralBusinessInformationSearchCriteria1
 {
     IEnumerable<Max35Text> IGeneralBusinessInformationSearchCriteria1.Reference => Reference;
-    IEnumerable<ICharacterSearch1Choice> IGeneralBusinessInformationSearchCriteria1.Subject => Subject;
-    IEnumerable<IInformationQualifierType1> IGeneralBusinessInformationSearchCriteria1.Qualifier => Qualifier;
+    IEnumerable<ICharacterSearch1Choice> IGeneralBusinessInformationSearchCriteria1.Subject =>
+        Subject;
+    IEnumerable<IInformationQualifierType1> IGeneralBusinessInformationSearchCriteria1.Qualifier =>
+        Qualifier;
 }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record ForeignExchangeSwap3Choice_ : IForeignExchangeSwap3Choice
-{
-}
+public abstract partial record ForeignExchangeSwap3Choice_ : IForeignExchangeSwap3Choice { }

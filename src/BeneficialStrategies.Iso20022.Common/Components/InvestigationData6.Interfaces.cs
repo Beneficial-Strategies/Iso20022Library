@@ -10,10 +10,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record InvestigationData6 : IInvestigationData6
 {
-    IInvestigationReason1Choice? IInvestigationData6.OriginalInvestigationReason => OriginalInvestigationReason;
-    IInvestigationReasonSubType1Choice? IInvestigationData6.OriginalInvestigationReasonSubType => OriginalInvestigationReasonSubType;
+    IInvestigationReason1Choice? IInvestigationData6.OriginalInvestigationReason =>
+        OriginalInvestigationReason;
+    IInvestigationReasonSubType1Choice? IInvestigationData6.OriginalInvestigationReasonSubType =>
+        OriginalInvestigationReasonSubType;
     IInvestigationDataRecord7Choice IInvestigationData6.ResponseData => ResponseData;
-    IRelatedInvestigationData1? IInvestigationData6.RelatedInvestigationData => RelatedInvestigationData;
+    IRelatedInvestigationData1? IInvestigationData6.RelatedInvestigationData =>
+        RelatedInvestigationData;
     IEnumerable<IDocument12> IInvestigationData6.EnclosedFile => EnclosedFile;
     IEnumerable<IFileData1> IInvestigationData6.RelatedFileData => RelatedFileData;
     IParty40Choice? IInvestigationData6.ResponseOriginator => ResponseOriginator;

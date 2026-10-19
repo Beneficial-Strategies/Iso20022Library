@@ -12,5 +12,6 @@ public partial record InvestigationActionReason1 : IInvestigationActionReason1
 {
     IPartyIdentification135? IInvestigationActionReason1.Originator => Originator;
     IInvestigationActionReason1Choice IInvestigationActionReason1.Reason => Reason;
-    IEnumerable<Max105Text> IInvestigationActionReason1.AdditionalInformation => AdditionalInformation;
+    IEnumerable<Max105Text> IInvestigationActionReason1.AdditionalInformation =>
+        AdditionalInformation;
 }

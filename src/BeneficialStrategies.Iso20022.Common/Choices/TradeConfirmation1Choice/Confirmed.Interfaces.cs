@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.TradeConfirmation1Choice;
 
-public partial record Confirmed : IConfirmed
-{
-}
+public partial record Confirmed : IConfirmed { }

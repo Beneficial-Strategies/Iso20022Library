@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecurityIdentification46 : ISecurityIdentification46
 {
-    IUniqueProductIdentifier2Choice? ISecurityIdentification46.UniqueProductIdentifier => UniqueProductIdentifier;
+    IUniqueProductIdentifier2Choice? ISecurityIdentification46.UniqueProductIdentifier =>
+        UniqueProductIdentifier;
 }

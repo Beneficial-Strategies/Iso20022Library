@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Search Criteria2Choice.
 /// </summary>
 [IsoId("_8U6MN248EeiU9cctagi5ow")]
-public interface ISearchCriteria2Choice : IIsoChoice
-{
-}
+public interface ISearchCriteria2Choice : IIsoChoice { }

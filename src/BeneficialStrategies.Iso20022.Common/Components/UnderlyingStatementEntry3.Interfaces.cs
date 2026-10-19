@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record UnderlyingStatementEntry3 : IUnderlyingStatementEntry3
 {
-    IOriginalGroupInformation29? IUnderlyingStatementEntry3.OriginalGroupInformation => OriginalGroupInformation;
+    IOriginalGroupInformation29? IUnderlyingStatementEntry3.OriginalGroupInformation =>
+        OriginalGroupInformation;
 }

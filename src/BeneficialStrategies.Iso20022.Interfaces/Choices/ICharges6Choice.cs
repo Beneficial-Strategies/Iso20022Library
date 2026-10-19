@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Charges6Choice.
 /// </summary>
 [IsoId("_Dn6yUT0QEe-thIfLZ94a1w")]
-public interface ICharges6Choice : IIsoChoice
-{
-}
+public interface ICharges6Choice : IIsoChoice { }

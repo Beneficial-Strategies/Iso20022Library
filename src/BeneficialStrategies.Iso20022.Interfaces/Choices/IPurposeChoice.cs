@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Underlying reason for the payment transaction, eg, a charity payment, or a commercial agreement between the creditor and the debtor.
 /// </summary>
 [IsoId("_Rbhg1dp-Ed-ak6NoX_4Aeg_1321046879")]
-public interface IPurposeChoice : IIsoChoice
-{
-}
+public interface IPurposeChoice : IIsoChoice { }

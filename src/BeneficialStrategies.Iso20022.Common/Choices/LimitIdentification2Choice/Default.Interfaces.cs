@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitIdentification2Choice;
 public partial record Default : IDefault
 {
     ISystemIdentification2Choice? IDefault.SystemIdentification => SystemIdentification;
-    IBranchAndFinancialInstitutionIdentification6? IDefault.BilateralLimitCounterpartyIdentification => BilateralLimitCounterpartyIdentification;
+    IBranchAndFinancialInstitutionIdentification6? IDefault.BilateralLimitCounterpartyIdentification =>
+        BilateralLimitCounterpartyIdentification;
     ILimitType1Choice IDefault.Type => Type;
     IBranchAndFinancialInstitutionIdentification6? IDefault.AccountOwner => AccountOwner;
     IAccountIdentification4Choice? IDefault.AccountIdentification => AccountIdentification;

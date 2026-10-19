@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.ReuseValue1Choice;
 
-public partial record Actual : IActual
-{
-}
+public partial record Actual : IActual { }

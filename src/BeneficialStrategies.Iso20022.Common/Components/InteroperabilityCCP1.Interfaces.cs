@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record InteroperabilityCCP1 : IInteroperabilityCCP1
 {
     IGenericIdentification168 IInteroperabilityCCP1.Identification => Identification;
-    IEnumerable<ActiveCurrencyAndAmount> IInteroperabilityCCP1.TotalInitialMargin => TotalInitialMargin;
-    IEnumerable<ActiveCurrencyAnd24Amount> IInteroperabilityCCP1.GrossNotionalAmount => GrossNotionalAmount;
+    IEnumerable<ActiveCurrencyAndAmount> IInteroperabilityCCP1.TotalInitialMargin =>
+        TotalInitialMargin;
+    IEnumerable<ActiveCurrencyAnd24Amount> IInteroperabilityCCP1.GrossNotionalAmount =>
+        GrossNotionalAmount;
     IEnumerable<IAssetHolding3> IInteroperabilityCCP1.AssetHolding => AssetHolding;
 }

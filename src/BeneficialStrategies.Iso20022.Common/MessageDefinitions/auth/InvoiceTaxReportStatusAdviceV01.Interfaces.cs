@@ -10,7 +10,10 @@ namespace BeneficialStrategies.Iso20022.auth;
 
 public partial record InvoiceTaxReportStatusAdviceV01 : IInvoiceTaxReportStatusAdviceV01
 {
-    IInvoiceTaxStatusReportHeader1 IInvoiceTaxReportStatusAdviceV01.StatusReportHeader => StatusReportHeader;
-    IEnumerable<IInvoiceTaxReportTransactionStatus1> IInvoiceTaxReportStatusAdviceV01.TransactionStatus => TransactionStatus;
-    IEnumerable<ISupplementaryData1> IInvoiceTaxReportStatusAdviceV01.SupplementaryData => SupplementaryData;
+    IInvoiceTaxStatusReportHeader1 IInvoiceTaxReportStatusAdviceV01.StatusReportHeader =>
+        StatusReportHeader;
+    IEnumerable<IInvoiceTaxReportTransactionStatus1> IInvoiceTaxReportStatusAdviceV01.TransactionStatus =>
+        TransactionStatus;
+    IEnumerable<ISupplementaryData1> IInvoiceTaxReportStatusAdviceV01.SupplementaryData =>
+        SupplementaryData;
 }

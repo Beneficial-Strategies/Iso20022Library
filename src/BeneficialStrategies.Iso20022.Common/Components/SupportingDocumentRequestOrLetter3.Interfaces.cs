@@ -12,8 +12,11 @@ public partial record SupportingDocumentRequestOrLetter3 : ISupportingDocumentRe
 {
     IParty40Choice? ISupportingDocumentRequestOrLetter3.Sender => Sender;
     IParty40Choice? ISupportingDocumentRequestOrLetter3.Receiver => Receiver;
-    IEnumerable<IOriginalMessage4> ISupportingDocumentRequestOrLetter3.OriginalReferences => OriginalReferences;
+    IEnumerable<IOriginalMessage4> ISupportingDocumentRequestOrLetter3.OriginalReferences =>
+        OriginalReferences;
     ISupportLetterType1Choice ISupportingDocumentRequestOrLetter3.Type => Type;
-    IEnumerable<IDocumentGeneralInformation5> ISupportingDocumentRequestOrLetter3.Attachment => Attachment;
-    IEnumerable<ISupplementaryData1> ISupportingDocumentRequestOrLetter3.SupplementaryData => SupplementaryData;
+    IEnumerable<IDocumentGeneralInformation5> ISupportingDocumentRequestOrLetter3.Attachment =>
+        Attachment;
+    IEnumerable<ISupplementaryData1> ISupportingDocumentRequestOrLetter3.SupplementaryData =>
+        SupplementaryData;
 }

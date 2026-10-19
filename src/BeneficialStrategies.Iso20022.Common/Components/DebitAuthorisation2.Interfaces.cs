@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record DebitAuthorisation2 : IDebitAuthorisation2
 {
     ICancellationReason33Choice IDebitAuthorisation2.CancellationReason => CancellationReason;
-    IEnumerable<Max105Text> IDebitAuthorisation2.AdditionalCancellationReasonInformation => AdditionalCancellationReasonInformation;
+    IEnumerable<Max105Text> IDebitAuthorisation2.AdditionalCancellationReasonInformation =>
+        AdditionalCancellationReasonInformation;
 }

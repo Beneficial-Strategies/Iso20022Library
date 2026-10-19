@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a fixed rate and a floating rate.
 /// </summary>
 [IsoId("_nYyCASc1EeaCIe3n1Gx9ug")]
-public interface IInterestRate6Choice : IIsoChoice
-{
-}
+public interface IInterestRate6Choice : IIsoChoice { }

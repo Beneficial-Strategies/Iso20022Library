@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Identifies various types of floating rates.
 /// </summary>
 [IsoId("_GQZvjQ1IEeqV4s5SpzR1dQ")]
-public interface IFloatingRateIdentification3Choice : IIsoChoice
-{
-}
+public interface IFloatingRateIdentification3Choice : IIsoChoice { }

@@ -8,8 +8,11 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.auth;
 
-public partial record SecuritiesFinancingReportingReconciliationStatusAdviceV02 : ISecuritiesFinancingReportingReconciliationStatusAdviceV02
+public partial record SecuritiesFinancingReportingReconciliationStatusAdviceV02
+    : ISecuritiesFinancingReportingReconciliationStatusAdviceV02
 {
-    ITradeData34Choice ISecuritiesFinancingReportingReconciliationStatusAdviceV02.ReconciliationData => ReconciliationData;
-    IEnumerable<ISupplementaryData1> ISecuritiesFinancingReportingReconciliationStatusAdviceV02.SupplementaryData => SupplementaryData;
+    ITradeData34Choice ISecuritiesFinancingReportingReconciliationStatusAdviceV02.ReconciliationData =>
+        ReconciliationData;
+    IEnumerable<ISupplementaryData1> ISecuritiesFinancingReportingReconciliationStatusAdviceV02.SupplementaryData =>
+        SupplementaryData;
 }

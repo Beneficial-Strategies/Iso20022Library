@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record CompareMax350Text1 : ICompareMax350Text1
-{
-}
+public partial record CompareMax350Text1 : ICompareMax350Text1 { }

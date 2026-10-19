@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction5Choice;
 
 public partial record StatementEntry : IStatementEntry
 {
-    IOriginalGroupInformation29? IStatementEntry.OriginalGroupInformation => OriginalGroupInformation;
+    IOriginalGroupInformation29? IStatementEntry.OriginalGroupInformation =>
+        OriginalGroupInformation;
 }

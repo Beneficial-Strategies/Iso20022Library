@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AdditionalRequestData1Choice;
 
-public partial record RequestNarrative : IRequestNarrative
-{
-}
+public partial record RequestNarrative : IRequestNarrative { }

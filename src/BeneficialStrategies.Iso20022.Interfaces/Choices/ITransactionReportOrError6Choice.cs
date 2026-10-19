@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between transactions and booked entries held at the transaction administrator or an operational error when the requested data cannot be retrieved.
 /// </summary>
 [IsoId("_7EaY8QKxEe2rHs6fbn9-0A")]
-public interface ITransactionReportOrError6Choice : IIsoChoice
-{
-}
+public interface ITransactionReportOrError6Choice : IIsoChoice { }

@@ -12,7 +12,8 @@ public partial record IntraBalanceModification7 : IIntraBalanceModification7
 {
     ICashAccount40? IIntraBalanceModification7.CashAccount => CashAccount;
     ISystemPartyIdentification8? IIntraBalanceModification7.CashAccountOwner => CashAccountOwner;
-    IBranchAndFinancialInstitutionIdentification8? IIntraBalanceModification7.CashAccountServicer => CashAccountServicer;
+    IBranchAndFinancialInstitutionIdentification8? IIntraBalanceModification7.CashAccountServicer =>
+        CashAccountServicer;
     IProcessingStatus71Choice? IIntraBalanceModification7.ProcessingStatus => ProcessingStatus;
     IEnumerable<IIntraBalanceModification8> IIntraBalanceModification7.Modification => Modification;
 }

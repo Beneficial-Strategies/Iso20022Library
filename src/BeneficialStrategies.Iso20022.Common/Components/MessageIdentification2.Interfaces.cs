@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record MessageIdentification2 : IMessageIdentification2
-{
-}
+public partial record MessageIdentification2 : IMessageIdentification2 { }

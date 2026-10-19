@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.DateTimeOrBlankQuery1Choice;
 
-public partial record NotReported : INotReported
-{
-}
+public partial record NotReported : INotReported { }

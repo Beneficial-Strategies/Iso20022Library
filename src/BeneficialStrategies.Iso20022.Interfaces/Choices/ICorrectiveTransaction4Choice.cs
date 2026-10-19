@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the corrective transaction on which the investigation is processed.
 /// </summary>
 [IsoId("_3bNYAXuSEeivKIBRHeTQRQ")]
-public interface ICorrectiveTransaction4Choice : IIsoChoice
-{
-}
+public interface ICorrectiveTransaction4Choice : IIsoChoice { }

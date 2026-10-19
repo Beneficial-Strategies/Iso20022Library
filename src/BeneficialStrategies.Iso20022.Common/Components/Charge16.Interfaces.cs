@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record Charge16 : ICharge16
-{
-}
+public partial record Charge16 : ICharge16 { }

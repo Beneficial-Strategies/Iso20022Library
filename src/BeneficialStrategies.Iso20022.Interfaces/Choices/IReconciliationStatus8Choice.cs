@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Indication whether the reconciliation is required.
 /// </summary>
 [IsoId("_AuXyScK3EeuFNp8LZAnorg")]
-public interface IReconciliationStatus8Choice : IIsoChoice
-{
-}
+public interface IReconciliationStatus8Choice : IIsoChoice { }

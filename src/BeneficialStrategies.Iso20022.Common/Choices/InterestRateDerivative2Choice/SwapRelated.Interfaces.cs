@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.InterestRateDerivative2Choice;
 
-public partial record SwapRelated : ISwapRelated
-{
-}
+public partial record SwapRelated : ISwapRelated { }

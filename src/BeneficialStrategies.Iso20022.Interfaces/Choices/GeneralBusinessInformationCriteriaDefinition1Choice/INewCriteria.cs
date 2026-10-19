@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneralBusinessInformationCriter
 /// Defines the criteria based on which the information is extracted.
 /// </summary>
 [IsoId("_1dxAk5lZEeeE1Ya-LgRsuQ")]
-public interface INewCriteria : IGeneralBusinessInformationCriteriaDefinition1Choice, IIsoChoiceVariant
+public interface INewCriteria
+    : IGeneralBusinessInformationCriteriaDefinition1Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Name of the query defined by the search criteria and return criteria.

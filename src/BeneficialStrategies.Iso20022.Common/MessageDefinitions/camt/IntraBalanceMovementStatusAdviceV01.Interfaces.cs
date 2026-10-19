@@ -10,13 +10,21 @@ namespace BeneficialStrategies.Iso20022.camt;
 
 public partial record IntraBalanceMovementStatusAdviceV01 : IIntraBalanceMovementStatusAdviceV01
 {
-    IDocumentIdentification51? IIntraBalanceMovementStatusAdviceV01.Identification => Identification;
-    ITransactionIdentifications24 IIntraBalanceMovementStatusAdviceV01.TransactionIdentification => TransactionIdentification;
-    IProcessingStatus67Choice? IIntraBalanceMovementStatusAdviceV01.ProcessingStatus => ProcessingStatus;
-    ISettlementStatus16Choice? IIntraBalanceMovementStatusAdviceV01.SettlementStatus => SettlementStatus;
+    IDocumentIdentification51? IIntraBalanceMovementStatusAdviceV01.Identification =>
+        Identification;
+    ITransactionIdentifications24 IIntraBalanceMovementStatusAdviceV01.TransactionIdentification =>
+        TransactionIdentification;
+    IProcessingStatus67Choice? IIntraBalanceMovementStatusAdviceV01.ProcessingStatus =>
+        ProcessingStatus;
+    ISettlementStatus16Choice? IIntraBalanceMovementStatusAdviceV01.SettlementStatus =>
+        SettlementStatus;
     ICashAccount38 IIntraBalanceMovementStatusAdviceV01.CashAccount => CashAccount;
-    ISystemPartyIdentification8? IIntraBalanceMovementStatusAdviceV01.CashAccountOwner => CashAccountOwner;
-    IBranchAndFinancialInstitutionIdentification6? IIntraBalanceMovementStatusAdviceV01.CashAccountServicer => CashAccountServicer;
-    IIntraBalance5? IIntraBalanceMovementStatusAdviceV01.UnderlyingIntraBalance => UnderlyingIntraBalance;
-    IEnumerable<ISupplementaryData1> IIntraBalanceMovementStatusAdviceV01.SupplementaryData => SupplementaryData;
+    ISystemPartyIdentification8? IIntraBalanceMovementStatusAdviceV01.CashAccountOwner =>
+        CashAccountOwner;
+    IBranchAndFinancialInstitutionIdentification6? IIntraBalanceMovementStatusAdviceV01.CashAccountServicer =>
+        CashAccountServicer;
+    IIntraBalance5? IIntraBalanceMovementStatusAdviceV01.UnderlyingIntraBalance =>
+        UnderlyingIntraBalance;
+    IEnumerable<ISupplementaryData1> IIntraBalanceMovementStatusAdviceV01.SupplementaryData =>
+        SupplementaryData;
 }

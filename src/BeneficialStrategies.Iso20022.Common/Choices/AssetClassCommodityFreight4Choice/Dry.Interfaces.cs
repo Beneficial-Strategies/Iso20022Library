@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFreight4Choice;
 
-public partial record Dry : IDry
-{
-}
+public partial record Dry : IDry { }

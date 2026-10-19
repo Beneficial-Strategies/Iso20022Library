@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the rejection reason of a claim non receipt.
 /// </summary>
 [IsoId("_LafiE4tuEee-OJ-wXSj3YQ")]
-public interface IClaimNonReceiptRejectReason1Choice : IIsoChoice
-{
-}
+public interface IClaimNonReceiptRejectReason1Choice : IIsoChoice { }

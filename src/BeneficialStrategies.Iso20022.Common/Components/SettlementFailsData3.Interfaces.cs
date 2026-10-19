@@ -12,10 +12,14 @@ public partial record SettlementFailsData3 : ISettlementFailsData3
 {
     ISettlementTotalData1 ISettlementFailsData3.Total => Total;
     ISettlementFailsParticipantRange1? ISettlementFailsData3.ParticipantInFail => ParticipantInFail;
-    IEnumerable<ISettlementFailsCurrency2> ISettlementFailsData3.FailsPerCurrency => FailsPerCurrency;
-    ISettlementFailsInstrument2? ISettlementFailsData3.FailsPerFinancialInstrumentType => FailsPerFinancialInstrumentType;
+    IEnumerable<ISettlementFailsCurrency2> ISettlementFailsData3.FailsPerCurrency =>
+        FailsPerCurrency;
+    ISettlementFailsInstrument2? ISettlementFailsData3.FailsPerFinancialInstrumentType =>
+        FailsPerFinancialInstrumentType;
     ISettlementFailsSecuritiesRange1? ISettlementFailsData3.SecuritiesInFail => SecuritiesInFail;
-    ISettlementFailsTransactionType2? ISettlementFailsData3.FailsPerTransactionType => FailsPerTransactionType;
-    ISettlementDataVolume2? ISettlementFailsData3.TotalSettlementPenalties => TotalSettlementPenalties;
+    ISettlementFailsTransactionType2? ISettlementFailsData3.FailsPerTransactionType =>
+        FailsPerTransactionType;
+    ISettlementDataVolume2? ISettlementFailsData3.TotalSettlementPenalties =>
+        TotalSettlementPenalties;
     ISettlementFailureReason3 ISettlementFailsData3.FailureReason => FailureReason;
 }

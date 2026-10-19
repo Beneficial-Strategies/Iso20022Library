@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Defines the information that is searched either implicitly by recalling a previous query or explicitly by defining the criteria.
 /// </summary>
 [IsoId("_x84MZ5lcEeeE1Ya-LgRsuQ")]
-public interface IBusinessDayCriteria3Choice : IIsoChoice
-{
-}
+public interface IBusinessDayCriteria3Choice : IIsoChoice { }

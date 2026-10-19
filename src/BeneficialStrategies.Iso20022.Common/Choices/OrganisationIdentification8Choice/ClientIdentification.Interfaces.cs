@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.OrganisationIdentification8Choice;
 
-public partial record ClientIdentification : IClientIdentification
-{
-}
+public partial record ClientIdentification : IClientIdentification { }

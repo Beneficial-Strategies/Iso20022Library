@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Defines the type of the billing balance.
 /// </summary>
 [IsoId("_6Q_lhJqlEeGSON8vddiWzQ_-1443313206")]
-public interface IBillingBalanceType1Choice : IIsoChoice
-{
-}
+public interface IBillingBalanceType1Choice : IIsoChoice { }

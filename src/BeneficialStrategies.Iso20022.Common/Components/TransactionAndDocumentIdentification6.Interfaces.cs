@@ -10,7 +10,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TransactionAndDocumentIdentification6 : ITransactionAndDocumentIdentification6
 {
-    IDateAndDateTime2Choice? ITransactionAndDocumentIdentification6.CreationDateTime => CreationDateTime;
-    IPartyIdentification136? ITransactionAndDocumentIdentification6.MessageOriginator => MessageOriginator;
-    IPartyIdentification136? ITransactionAndDocumentIdentification6.MessageRecipient => MessageRecipient;
+    IDateAndDateTime2Choice? ITransactionAndDocumentIdentification6.CreationDateTime =>
+        CreationDateTime;
+    IPartyIdentification136? ITransactionAndDocumentIdentification6.MessageOriginator =>
+        MessageOriginator;
+    IPartyIdentification136? ITransactionAndDocumentIdentification6.MessageRecipient =>
+        MessageRecipient;
 }

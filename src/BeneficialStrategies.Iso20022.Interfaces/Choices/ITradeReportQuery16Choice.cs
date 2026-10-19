@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Defines the type of the query, a recurrent or an ad-hoc query.
 /// </summary>
 [IsoId("_nktkcWE3Ee2S65ml6YCOtA")]
-public interface ITradeReportQuery16Choice : IIsoChoice
-{
-}
+public interface ITradeReportQuery16Choice : IIsoChoice { }

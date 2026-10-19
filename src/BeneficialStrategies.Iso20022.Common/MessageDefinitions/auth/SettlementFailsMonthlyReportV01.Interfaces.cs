@@ -13,5 +13,6 @@ public partial record SettlementFailsMonthlyReportV01 : ISettlementFailsMonthlyR
     ISettlementFailsReportHeader2 ISettlementFailsMonthlyReportV01.ReportHeader => ReportHeader;
     ISettlementFailsData3 ISettlementFailsMonthlyReportV01.MonthlyAggregate => MonthlyAggregate;
     IEnumerable<ISettlementFailsDailyData3> ISettlementFailsMonthlyReportV01.DailyData => DailyData;
-    IEnumerable<ISupplementaryData1> ISettlementFailsMonthlyReportV01.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> ISettlementFailsMonthlyReportV01.SupplementaryData =>
+        SupplementaryData;
 }

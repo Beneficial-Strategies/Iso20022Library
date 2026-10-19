@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record AssetClassCommodityFertilizer1Choice_ : IAssetClassCommodityFertilizer1Choice
-{
-}
+public abstract partial record AssetClassCommodityFertilizer1Choice_
+    : IAssetClassCommodityFertilizer1Choice { }

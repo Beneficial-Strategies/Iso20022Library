@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record MoneyMarketTransactionStatus2 : IMoneyMarketTransactionStatus2
 {
-    IEnumerable<IGenericValidationRuleIdentification1> IMoneyMarketTransactionStatus2.ValidationRule => ValidationRule;
-    IEnumerable<ISupplementaryData1> IMoneyMarketTransactionStatus2.SupplementaryData => SupplementaryData;
+    IEnumerable<IGenericValidationRuleIdentification1> IMoneyMarketTransactionStatus2.ValidationRule =>
+        ValidationRule;
+    IEnumerable<ISupplementaryData1> IMoneyMarketTransactionStatus2.SupplementaryData =>
+        SupplementaryData;
 }

@@ -12,5 +12,6 @@ public partial record IntraBalanceMovementQueryV02 : IIntraBalanceMovementQueryV
 {
     IDocumentIdentification51? IIntraBalanceMovementQueryV02.Identification => Identification;
     IIntraBalanceQueryDefinition11 IIntraBalanceMovementQueryV02.QueryDefinition => QueryDefinition;
-    IEnumerable<ISupplementaryData1> IIntraBalanceMovementQueryV02.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IIntraBalanceMovementQueryV02.SupplementaryData =>
+        SupplementaryData;
 }

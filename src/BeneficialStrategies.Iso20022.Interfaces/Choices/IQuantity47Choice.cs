@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the format of the quantity of delivery.
 /// </summary>
 [IsoId("_b_ddkZjgEeqkLZLH6DK3UQ")]
-public interface IQuantity47Choice : IIsoChoice
-{
-}
+public interface IQuantity47Choice : IIsoChoice { }

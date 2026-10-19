@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ReservationReport6 : IReservationReport6
 {
-    IReservationIdentification2 IReservationReport6.ReservationIdentification => ReservationIdentification;
+    IReservationIdentification2 IReservationReport6.ReservationIdentification =>
+        ReservationIdentification;
     IReservationOrError9Choice IReservationReport6.ReservationOrError => ReservationOrError;
 }

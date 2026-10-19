@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record OrganisationIdentification49 : IOrganisationIdentification49
 {
     IEnumerable<IPartyName5> IOrganisationIdentification49.OrganisationName => OrganisationName;
-    IEnumerable<IGenericOrganisationIdentification3> IOrganisationIdentification49.AlternateOrganisationIdentification => AlternateOrganisationIdentification;
+    IEnumerable<IGenericOrganisationIdentification3> IOrganisationIdentification49.AlternateOrganisationIdentification =>
+        AlternateOrganisationIdentification;
     IEnumerable<IIndustrySector3Choice> IOrganisationIdentification49.Sector => Sector;
     IEnumerable<Max500Text> IOrganisationIdentification49.PersonName => PersonName;
 }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of the type of underlying contract.
 /// </summary>
 [IsoId("_0NEsUbGIEeuSTr8k0UEM8A")]
-public interface IUnderlyingContract3Choice : IIsoChoice
-{
-}
+public interface IUnderlyingContract3Choice : IIsoChoice { }

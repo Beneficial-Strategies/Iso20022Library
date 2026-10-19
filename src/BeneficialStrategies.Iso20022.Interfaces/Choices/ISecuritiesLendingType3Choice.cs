@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Classification of the type of security.
 /// </summary>
 [IsoId("_9FMogMkbEeeiAIB1i4AlQw")]
-public interface ISecuritiesLendingType3Choice : IIsoChoice
-{
-}
+public interface ISecuritiesLendingType3Choice : IIsoChoice { }

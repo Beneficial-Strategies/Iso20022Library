@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AcknowledgementDetails1Choice;
 
-public partial record PayInScheduleReference : IPayInScheduleReference
-{
-}
+public partial record PayInScheduleReference : IPayInScheduleReference { }

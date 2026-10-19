@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification37Choice;
 
-public partial record Name : IName
-{
-}
+public partial record Name : IName { }

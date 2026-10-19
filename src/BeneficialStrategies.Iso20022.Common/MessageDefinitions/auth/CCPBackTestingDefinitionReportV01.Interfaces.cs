@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.auth;
 
 public partial record CCPBackTestingDefinitionReportV01 : ICCPBackTestingDefinitionReportV01
 {
-    IEnumerable<IBackTestingMethodology1> ICCPBackTestingDefinitionReportV01.Methodology => Methodology;
-    IEnumerable<ISupplementaryData1> ICCPBackTestingDefinitionReportV01.SupplementaryData => SupplementaryData;
+    IEnumerable<IBackTestingMethodology1> ICCPBackTestingDefinitionReportV01.Methodology =>
+        Methodology;
+    IEnumerable<ISupplementaryData1> ICCPBackTestingDefinitionReportV01.SupplementaryData =>
+        SupplementaryData;
 }

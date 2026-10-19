@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneralBusinessInformationCriter
 
 public partial record NewCriteria : INewCriteria
 {
-    IEnumerable<IGeneralBusinessInformationSearchCriteria1> INewCriteria.SearchCriteria => SearchCriteria;
+    IEnumerable<IGeneralBusinessInformationSearchCriteria1> INewCriteria.SearchCriteria =>
+        SearchCriteria;
     IGeneralBusinessInformationReturnCriteria1? INewCriteria.ReturnCriteria => ReturnCriteria;
 }

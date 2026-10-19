@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record TotalCharges8 : ITotalCharges8
-{
-}
+public partial record TotalCharges8 : ITotalCharges8 { }

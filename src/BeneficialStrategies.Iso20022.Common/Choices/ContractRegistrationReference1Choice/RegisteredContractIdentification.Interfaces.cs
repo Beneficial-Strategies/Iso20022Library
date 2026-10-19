@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.ContractRegistrationReference1Choice;
 
-public partial record RegisteredContractIdentification : IRegisteredContractIdentification
-{
-}
+public partial record RegisteredContractIdentification : IRegisteredContractIdentification { }

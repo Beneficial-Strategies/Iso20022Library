@@ -8,11 +8,17 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record SettlementInternaliserTransactionType1 : ISettlementInternaliserTransactionType1
+public partial record SettlementInternaliserTransactionType1
+    : ISettlementInternaliserTransactionType1
 {
-    IInternalisationData1 ISettlementInternaliserTransactionType1.SecuritiesBuyOrSell => SecuritiesBuyOrSell;
-    IInternalisationData1 ISettlementInternaliserTransactionType1.CollateralManagementOperation => CollateralManagementOperation;
-    IInternalisationData1 ISettlementInternaliserTransactionType1.SecuritiesLendingOrBorrowing => SecuritiesLendingOrBorrowing;
-    IInternalisationData1 ISettlementInternaliserTransactionType1.RepurchaseAgreement => RepurchaseAgreement;
-    IInternalisationData1 ISettlementInternaliserTransactionType1.OtherTransactions => OtherTransactions;
+    IInternalisationData1 ISettlementInternaliserTransactionType1.SecuritiesBuyOrSell =>
+        SecuritiesBuyOrSell;
+    IInternalisationData1 ISettlementInternaliserTransactionType1.CollateralManagementOperation =>
+        CollateralManagementOperation;
+    IInternalisationData1 ISettlementInternaliserTransactionType1.SecuritiesLendingOrBorrowing =>
+        SecuritiesLendingOrBorrowing;
+    IInternalisationData1 ISettlementInternaliserTransactionType1.RepurchaseAgreement =>
+        RepurchaseAgreement;
+    IInternalisationData1 ISettlementInternaliserTransactionType1.OtherTransactions =>
+        OtherTransactions;
 }

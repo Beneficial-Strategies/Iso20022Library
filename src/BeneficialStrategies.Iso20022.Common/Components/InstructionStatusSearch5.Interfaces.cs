@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record InstructionStatusSearch5 : IInstructionStatusSearch5
 {
-    IPaymentStatusCodeSearch2Choice? IInstructionStatusSearch5.PaymentInstructionStatus => PaymentInstructionStatus;
-    IDateTimePeriod1Choice? IInstructionStatusSearch5.PaymentInstructionStatusDateTime => PaymentInstructionStatusDateTime;
+    IPaymentStatusCodeSearch2Choice? IInstructionStatusSearch5.PaymentInstructionStatus =>
+        PaymentInstructionStatus;
+    IDateTimePeriod1Choice? IInstructionStatusSearch5.PaymentInstructionStatusDateTime =>
+        PaymentInstructionStatusDateTime;
 }

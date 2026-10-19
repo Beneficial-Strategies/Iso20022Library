@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentIdentification9Choice;
 
-public partial record ISIN : IISIN
-{
-}
+public partial record ISIN : IISIN { }

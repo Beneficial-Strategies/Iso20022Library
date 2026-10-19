@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustification2Choic
 
 public partial record MissingOrIncorrectInformation : IMissingOrIncorrectInformation
 {
-    IEnumerable<UnableToApplyMissingInformation2Code> IMissingOrIncorrectInformation.MissingInformation => MissingInformation;
-    IEnumerable<UnableToApplyIncorrectInformation3Code> IMissingOrIncorrectInformation.IncorrectInformation => IncorrectInformation;
+    IEnumerable<UnableToApplyMissingInformation2Code> IMissingOrIncorrectInformation.MissingInformation =>
+        MissingInformation;
+    IEnumerable<UnableToApplyIncorrectInformation3Code> IMissingOrIncorrectInformation.IncorrectInformation =>
+        IncorrectInformation;
 }

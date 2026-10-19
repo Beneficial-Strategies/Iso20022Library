@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record BankTransactionCodeStructure6 : IBankTransactionCodeStructure6
-{
-}
+public partial record BankTransactionCodeStructure6 : IBankTransactionCodeStructure6 { }

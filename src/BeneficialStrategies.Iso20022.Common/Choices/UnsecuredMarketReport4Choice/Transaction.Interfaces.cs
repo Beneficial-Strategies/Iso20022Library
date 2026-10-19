@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Choices.UnsecuredMarketReport4Choice;
 
 public partial record Transaction : ITransaction
 {
-    ICounterpartyIdentification3Choice ITransaction.CounterpartyIdentification => CounterpartyIdentification;
+    ICounterpartyIdentification3Choice ITransaction.CounterpartyIdentification =>
+        CounterpartyIdentification;
     IDateAndDateTimeChoice ITransaction.TradeDate => TradeDate;
     IFloatingRateNote2? ITransaction.FloatingRateNote => FloatingRateNote;
     IEnumerable<IOption12> ITransaction.CallPutOption => CallPutOption;

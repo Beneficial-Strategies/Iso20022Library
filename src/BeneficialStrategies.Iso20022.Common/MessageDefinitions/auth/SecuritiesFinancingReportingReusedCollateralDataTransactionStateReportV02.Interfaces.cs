@@ -8,8 +8,11 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.auth;
 
-public partial record SecuritiesFinancingReportingReusedCollateralDataTransactionStateReportV02 : ISecuritiesFinancingReportingReusedCollateralDataTransactionStateReportV02
+public partial record SecuritiesFinancingReportingReusedCollateralDataTransactionStateReportV02
+    : ISecuritiesFinancingReportingReusedCollateralDataTransactionStateReportV02
 {
-    ITradeData37Choice ISecuritiesFinancingReportingReusedCollateralDataTransactionStateReportV02.TradeData => TradeData;
-    IEnumerable<ISupplementaryData1> ISecuritiesFinancingReportingReusedCollateralDataTransactionStateReportV02.SupplementaryData => SupplementaryData;
+    ITradeData37Choice ISecuritiesFinancingReportingReusedCollateralDataTransactionStateReportV02.TradeData =>
+        TradeData;
+    IEnumerable<ISupplementaryData1> ISecuritiesFinancingReportingReusedCollateralDataTransactionStateReportV02.SupplementaryData =>
+        SupplementaryData;
 }

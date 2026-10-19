@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.TransactionAmendment1Choice;
 
-public partial record Other : IOther
-{
-}
+public partial record Other : IOther { }

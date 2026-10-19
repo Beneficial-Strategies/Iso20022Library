@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice for transparency calculation specific details on commodities.
 /// </summary>
 [IsoId("_nZzFsU-nEeiVsYLJl6hleg")]
-public interface ICommodityDerivative2Choice : IIsoChoice
-{
-}
+public interface ICommodityDerivative2Choice : IIsoChoice { }

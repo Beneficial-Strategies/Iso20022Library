@@ -10,12 +10,17 @@ namespace BeneficialStrategies.Iso20022.camt;
 
 public partial record FundEstimatedCashForecastReportV03 : IFundEstimatedCashForecastReportV03
 {
-    IMessageIdentification1 IFundEstimatedCashForecastReportV03.MessageIdentification => MessageIdentification;
+    IMessageIdentification1 IFundEstimatedCashForecastReportV03.MessageIdentification =>
+        MessageIdentification;
     IAdditionalReference3? IFundEstimatedCashForecastReportV03.PoolReference => PoolReference;
-    IEnumerable<IAdditionalReference3> IFundEstimatedCashForecastReportV03.PreviousReference => PreviousReference;
-    IEnumerable<IAdditionalReference3> IFundEstimatedCashForecastReportV03.RelatedReference => RelatedReference;
+    IEnumerable<IAdditionalReference3> IFundEstimatedCashForecastReportV03.PreviousReference =>
+        PreviousReference;
+    IEnumerable<IAdditionalReference3> IFundEstimatedCashForecastReportV03.RelatedReference =>
+        RelatedReference;
     IPagination IFundEstimatedCashForecastReportV03.MessagePagination => MessagePagination;
-    IEnumerable<IEstimatedFundCashForecast3> IFundEstimatedCashForecastReportV03.EstimatedFundCashForecastDetails => EstimatedFundCashForecastDetails;
-    INetCashForecast3? IFundEstimatedCashForecastReportV03.ConsolidatedNetCashForecast => ConsolidatedNetCashForecast;
+    IEnumerable<IEstimatedFundCashForecast3> IFundEstimatedCashForecastReportV03.EstimatedFundCashForecastDetails =>
+        EstimatedFundCashForecastDetails;
+    INetCashForecast3? IFundEstimatedCashForecastReportV03.ConsolidatedNetCashForecast =>
+        ConsolidatedNetCashForecast;
     IEnumerable<IExtension1> IFundEstimatedCashForecastReportV03.Extension => Extension;
 }

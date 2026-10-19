@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.auth;
 public partial record CCPAccountPositionReportV01 : ICCPAccountPositionReportV01
 {
     IEnumerable<IPositionAccount2> ICCPAccountPositionReportV01.Portfolio => Portfolio;
-    IEnumerable<ISupplementaryData1> ICCPAccountPositionReportV01.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> ICCPAccountPositionReportV01.SupplementaryData =>
+        SupplementaryData;
 }

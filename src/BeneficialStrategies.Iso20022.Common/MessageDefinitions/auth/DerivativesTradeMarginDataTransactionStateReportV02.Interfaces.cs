@@ -8,9 +8,12 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.auth;
 
-public partial record DerivativesTradeMarginDataTransactionStateReportV02 : IDerivativesTradeMarginDataTransactionStateReportV02
+public partial record DerivativesTradeMarginDataTransactionStateReportV02
+    : IDerivativesTradeMarginDataTransactionStateReportV02
 {
-    ITradeReportHeader4 IDerivativesTradeMarginDataTransactionStateReportV02.ReportHeader => ReportHeader;
+    ITradeReportHeader4 IDerivativesTradeMarginDataTransactionStateReportV02.ReportHeader =>
+        ReportHeader;
     ITradeData62Choice IDerivativesTradeMarginDataTransactionStateReportV02.TradeData => TradeData;
-    IEnumerable<ISupplementaryData1> IDerivativesTradeMarginDataTransactionStateReportV02.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IDerivativesTradeMarginDataTransactionStateReportV02.SupplementaryData =>
+        SupplementaryData;
 }

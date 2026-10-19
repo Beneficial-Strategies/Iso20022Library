@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record TradeConfirmation5 : ITradeConfirmation5
-{
-}
+public partial record TradeConfirmation5 : ITradeConfirmation5 { }

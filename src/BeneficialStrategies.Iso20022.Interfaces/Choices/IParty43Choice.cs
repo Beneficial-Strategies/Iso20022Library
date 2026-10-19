@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Nature or use of the account.
 /// </summary>
 [IsoId("_BgdrHW49EeiU9cctagi5ow")]
-public interface IParty43Choice : IIsoChoice
-{
-}
+public interface IParty43Choice : IIsoChoice { }

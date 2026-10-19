@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Information about contract status.
 /// </summary>
 [IsoId("_Ah8Gl5PuEey0rJ3Gl6WZVA")]
-public interface IClearingExceptionOrExemption3Choice : IIsoChoice
-{
-}
+public interface IClearingExceptionOrExemption3Choice : IIsoChoice { }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.TradeQueryExecutionFrequency1Choice;
 
-public partial record Monthly : IMonthly
-{
-}
+public partial record Monthly : IMonthly { }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Payment Identification8Choice.
 /// </summary>
 [IsoId("_1-XG8TEyEe6g-ffJsqGiSA")]
-public interface IPaymentIdentification8Choice : IIsoChoice
-{
-}
+public interface IPaymentIdentification8Choice : IIsoChoice { }

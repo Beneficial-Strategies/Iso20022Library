@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Trade venue related fields.
 /// </summary>
 [IsoId("_3sh9EhtGEeWhp-Wous5jzA")]
-public interface ITradingVenueIdentification1Choice : IIsoChoice
-{
-}
+public interface ITradingVenueIdentification1Choice : IIsoChoice { }

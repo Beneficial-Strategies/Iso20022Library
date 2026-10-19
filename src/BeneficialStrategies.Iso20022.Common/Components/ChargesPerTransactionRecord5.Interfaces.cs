@@ -10,16 +10,22 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ChargesPerTransactionRecord5 : IChargesPerTransactionRecord5
 {
-    IBranchAndFinancialInstitutionIdentification8? IChargesPerTransactionRecord5.ChargesRequestor => ChargesRequestor;
-    ITransactionReferences7 IChargesPerTransactionRecord5.UnderlyingTransaction => UnderlyingTransaction;
+    IBranchAndFinancialInstitutionIdentification8? IChargesPerTransactionRecord5.ChargesRequestor =>
+        ChargesRequestor;
+    ITransactionReferences7 IChargesPerTransactionRecord5.UnderlyingTransaction =>
+        UnderlyingTransaction;
     ITotalCharges8? IChargesPerTransactionRecord5.TotalChargesPerRecord => TotalChargesPerRecord;
-    IEnumerable<IChargesBreakdown1> IChargesPerTransactionRecord5.ChargesBreakdown => ChargesBreakdown;
+    IEnumerable<IChargesBreakdown1> IChargesPerTransactionRecord5.ChargesBreakdown =>
+        ChargesBreakdown;
     IDateAndDateTime2Choice? IChargesPerTransactionRecord5.ValueDate => ValueDate;
     IPartyIdentification272? IChargesPerTransactionRecord5.Debtor => Debtor;
     ICashAccount40? IChargesPerTransactionRecord5.DebtorAccount => DebtorAccount;
-    IBranchAndFinancialInstitutionIdentification8? IChargesPerTransactionRecord5.DebtorAgent => DebtorAgent;
+    IBranchAndFinancialInstitutionIdentification8? IChargesPerTransactionRecord5.DebtorAgent =>
+        DebtorAgent;
     ICashAccount40? IChargesPerTransactionRecord5.DebtorAgentAccount => DebtorAgentAccount;
     ICashAccount40? IChargesPerTransactionRecord5.ChargesAccount => ChargesAccount;
-    IBranchAndFinancialInstitutionIdentification8? IChargesPerTransactionRecord5.ChargesAccountOwner => ChargesAccountOwner;
-    IInstructionForInstructedAgent1? IChargesPerTransactionRecord5.InstructionForInstructedAgent => InstructionForInstructedAgent;
+    IBranchAndFinancialInstitutionIdentification8? IChargesPerTransactionRecord5.ChargesAccountOwner =>
+        ChargesAccountOwner;
+    IInstructionForInstructedAgent1? IChargesPerTransactionRecord5.InstructionForInstructedAgent =>
+        InstructionForInstructedAgent;
 }

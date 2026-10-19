@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport31Choice;
 public partial record Error : IError
 {
     ITradeCounterpartyReport20 IError.CounterpartyIdentification => CounterpartyIdentification;
-    IUniqueTransactionIdentifier2Choice? IError.TransactionIdentification => TransactionIdentification;
+    IUniqueTransactionIdentifier2Choice? IError.TransactionIdentification =>
+        TransactionIdentification;
     IMarginCollateralReport4 IError.Collateral => Collateral;
     IPostedMarginOrCollateral6? IError.PostedMarginOrCollateral => PostedMarginOrCollateral;
     IReceivedMarginOrCollateral6? IError.ReceivedMarginOrCollateral => ReceivedMarginOrCollateral;

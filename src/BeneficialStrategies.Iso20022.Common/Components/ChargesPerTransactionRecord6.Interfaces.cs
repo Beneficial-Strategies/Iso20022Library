@@ -10,17 +10,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ChargesPerTransactionRecord6 : IChargesPerTransactionRecord6
 {
-    IBranchAndFinancialInstitutionIdentification8? IChargesPerTransactionRecord6.ChargesRequestor => ChargesRequestor;
-    ISettlementInstruction19? IChargesPerTransactionRecord6.SettlementInstruction => SettlementInstruction;
-    ITransactionReferences7 IChargesPerTransactionRecord6.UnderlyingTransaction => UnderlyingTransaction;
+    IBranchAndFinancialInstitutionIdentification8? IChargesPerTransactionRecord6.ChargesRequestor =>
+        ChargesRequestor;
+    ISettlementInstruction19? IChargesPerTransactionRecord6.SettlementInstruction =>
+        SettlementInstruction;
+    ITransactionReferences7 IChargesPerTransactionRecord6.UnderlyingTransaction =>
+        UnderlyingTransaction;
     ITotalCharges8? IChargesPerTransactionRecord6.TotalChargesPerRecord => TotalChargesPerRecord;
-    IEnumerable<IChargesBreakdown1> IChargesPerTransactionRecord6.ChargesBreakdown => ChargesBreakdown;
+    IEnumerable<IChargesBreakdown1> IChargesPerTransactionRecord6.ChargesBreakdown =>
+        ChargesBreakdown;
     IDateAndDateTime2Choice? IChargesPerTransactionRecord6.ValueDate => ValueDate;
     IPartyIdentification272? IChargesPerTransactionRecord6.Debtor => Debtor;
     ICashAccount40? IChargesPerTransactionRecord6.DebtorAccount => DebtorAccount;
-    IBranchAndFinancialInstitutionIdentification8? IChargesPerTransactionRecord6.DebtorAgent => DebtorAgent;
+    IBranchAndFinancialInstitutionIdentification8? IChargesPerTransactionRecord6.DebtorAgent =>
+        DebtorAgent;
     ICashAccount40? IChargesPerTransactionRecord6.DebtorAgentAccount => DebtorAgentAccount;
-    IBranchAndFinancialInstitutionIdentification8? IChargesPerTransactionRecord6.ChargesAccountAgent => ChargesAccountAgent;
-    ICashAccount40? IChargesPerTransactionRecord6.ChargesAccountAgentAccount => ChargesAccountAgentAccount;
-    IInstructionForInstructedAgent1? IChargesPerTransactionRecord6.InstructionForInstructedAgent => InstructionForInstructedAgent;
+    IBranchAndFinancialInstitutionIdentification8? IChargesPerTransactionRecord6.ChargesAccountAgent =>
+        ChargesAccountAgent;
+    ICashAccount40? IChargesPerTransactionRecord6.ChargesAccountAgentAccount =>
+        ChargesAccountAgentAccount;
+    IInstructionForInstructedAgent1? IChargesPerTransactionRecord6.InstructionForInstructedAgent =>
+        InstructionForInstructedAgent;
 }

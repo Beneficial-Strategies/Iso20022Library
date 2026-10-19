@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneralBusinessInformationCriter
 /// Recalls the criteria (search and return criteria) defined in a preceding query.
 /// </summary>
 [IsoId("_1dxAkZlZEeeE1Ya-LgRsuQ")]
-public interface IQueryName : IGeneralBusinessInformationCriteriaDefinition1Choice, IIsoChoiceVariant
+public interface IQueryName
+    : IGeneralBusinessInformationCriteriaDefinition1Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

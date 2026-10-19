@@ -10,9 +10,12 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesReferenceDeltaStatusRe
 
 public partial record TerminatedRecord : ITerminatedRecord
 {
-    ISecurityInstrumentDescription9 ITerminatedRecord.FinancialInstrumentGeneralAttributes => FinancialInstrumentGeneralAttributes;
-    IEnumerable<ITradingVenueAttributes1> ITerminatedRecord.TradingVenueRelatedAttributes => TradingVenueRelatedAttributes;
+    ISecurityInstrumentDescription9 ITerminatedRecord.FinancialInstrumentGeneralAttributes =>
+        FinancialInstrumentGeneralAttributes;
+    IEnumerable<ITradingVenueAttributes1> ITerminatedRecord.TradingVenueRelatedAttributes =>
+        TradingVenueRelatedAttributes;
     IDebtInstrument2? ITerminatedRecord.DebtInstrumentAttributes => DebtInstrumentAttributes;
-    IDerivativeInstrument5? ITerminatedRecord.DerivativeInstrumentAttributes => DerivativeInstrumentAttributes;
+    IDerivativeInstrument5? ITerminatedRecord.DerivativeInstrumentAttributes =>
+        DerivativeInstrumentAttributes;
     IRecordTechnicalData4? ITerminatedRecord.TechnicalAttributes => TechnicalAttributes;
 }

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CounterpartyData76 : ICounterpartyData76
 {
-    IOrganisationIdentification9Choice ICounterpartyData76.ReportSubmittingEntity => ReportSubmittingEntity;
+    IOrganisationIdentification9Choice ICounterpartyData76.ReportSubmittingEntity =>
+        ReportSubmittingEntity;
     IEnumerable<ICounterpartyData77> ICounterpartyData76.CounterpartyData => CounterpartyData;
 }

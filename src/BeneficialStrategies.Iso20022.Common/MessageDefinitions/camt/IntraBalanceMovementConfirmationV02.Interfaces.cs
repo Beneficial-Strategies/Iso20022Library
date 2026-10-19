@@ -10,11 +10,16 @@ namespace BeneficialStrategies.Iso20022.camt;
 
 public partial record IntraBalanceMovementConfirmationV02 : IIntraBalanceMovementConfirmationV02
 {
-    IDocumentIdentification51? IIntraBalanceMovementConfirmationV02.Identification => Identification;
-    IAdditionalParameters16? IIntraBalanceMovementConfirmationV02.AdditionalParameters => AdditionalParameters;
+    IDocumentIdentification51? IIntraBalanceMovementConfirmationV02.Identification =>
+        Identification;
+    IAdditionalParameters16? IIntraBalanceMovementConfirmationV02.AdditionalParameters =>
+        AdditionalParameters;
     ICashAccount40 IIntraBalanceMovementConfirmationV02.CashAccount => CashAccount;
-    ISystemPartyIdentification8? IIntraBalanceMovementConfirmationV02.CashAccountOwner => CashAccountOwner;
-    IBranchAndFinancialInstitutionIdentification8? IIntraBalanceMovementConfirmationV02.CashAccountServicer => CashAccountServicer;
+    ISystemPartyIdentification8? IIntraBalanceMovementConfirmationV02.CashAccountOwner =>
+        CashAccountOwner;
+    IBranchAndFinancialInstitutionIdentification8? IIntraBalanceMovementConfirmationV02.CashAccountServicer =>
+        CashAccountServicer;
     IIntraBalance6 IIntraBalanceMovementConfirmationV02.IntraBalance => IntraBalance;
-    IEnumerable<ISupplementaryData1> IIntraBalanceMovementConfirmationV02.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IIntraBalanceMovementConfirmationV02.SupplementaryData =>
+        SupplementaryData;
 }

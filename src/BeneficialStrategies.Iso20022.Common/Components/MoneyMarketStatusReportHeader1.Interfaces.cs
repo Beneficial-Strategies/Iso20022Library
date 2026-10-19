@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record MoneyMarketStatusReportHeader1 : IMoneyMarketStatusReportHeader1
 {
     IDateTimePeriod1 IMoneyMarketStatusReportHeader1.ReportingPeriod => ReportingPeriod;
-    IEnumerable<IGenericValidationRuleIdentification1> IMoneyMarketStatusReportHeader1.ValidationRule => ValidationRule;
+    IEnumerable<IGenericValidationRuleIdentification1> IMoneyMarketStatusReportHeader1.ValidationRule =>
+        ValidationRule;
 }

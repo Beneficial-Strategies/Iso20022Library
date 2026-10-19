@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record FundingSource1 : IFundingSource1
-{
-}
+public partial record FundingSource1 : IFundingSource1 { }

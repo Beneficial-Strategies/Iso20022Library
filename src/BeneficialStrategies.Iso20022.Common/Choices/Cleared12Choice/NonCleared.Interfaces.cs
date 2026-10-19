@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.Cleared12Choice;
 
-public partial record NonCleared : INonCleared
-{
-}
+public partial record NonCleared : INonCleared { }

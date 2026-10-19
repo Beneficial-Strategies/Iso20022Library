@@ -11,8 +11,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record FundCashInBreakdown3 : IFundCashInBreakdown3
 {
     IFinancialInstrumentQuantity1? IFundCashInBreakdown3.UnitsNumber => UnitsNumber;
-    IInvestmentFundTransactionInType1Choice IFundCashInBreakdown3.InvestmentFundTransactionInType => InvestmentFundTransactionInType;
-    IQuantityType1Choice IFundCashInBreakdown3.OriginalOrderQuantityType => OriginalOrderQuantityType;
+    IInvestmentFundTransactionInType1Choice IFundCashInBreakdown3.InvestmentFundTransactionInType =>
+        InvestmentFundTransactionInType;
+    IQuantityType1Choice IFundCashInBreakdown3.OriginalOrderQuantityType =>
+        OriginalOrderQuantityType;
     IEnumerable<ICharge26> IFundCashInBreakdown3.ChargeDetails => ChargeDetails;
     IEnumerable<ICommission21> IFundCashInBreakdown3.CommissionDetails => CommissionDetails;
 }

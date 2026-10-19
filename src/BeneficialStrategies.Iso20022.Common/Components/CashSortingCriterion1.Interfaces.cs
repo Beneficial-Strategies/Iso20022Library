@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CashSortingCriterion1 : ICashSortingCriterion1
 {
     ISortCriteria1Choice ICashSortingCriterion1.SortingCriterionType => SortingCriterionType;
-    IEnumerable<IForecastParameter1> ICashSortingCriterion1.ForecastBreakdownDetails => ForecastBreakdownDetails;
+    IEnumerable<IForecastParameter1> ICashSortingCriterion1.ForecastBreakdownDetails =>
+        ForecastBreakdownDetails;
 }

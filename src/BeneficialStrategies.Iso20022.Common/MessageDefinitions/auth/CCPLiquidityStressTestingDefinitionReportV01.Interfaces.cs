@@ -8,8 +8,11 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.auth;
 
-public partial record CCPLiquidityStressTestingDefinitionReportV01 : ICCPLiquidityStressTestingDefinitionReportV01
+public partial record CCPLiquidityStressTestingDefinitionReportV01
+    : ICCPLiquidityStressTestingDefinitionReportV01
 {
-    IEnumerable<ILiquidityStressScenarioDefinition1> ICCPLiquidityStressTestingDefinitionReportV01.LiquidityStressScenarioDefinition => LiquidityStressScenarioDefinition;
-    IEnumerable<ISupplementaryData1> ICCPLiquidityStressTestingDefinitionReportV01.SupplementaryData => SupplementaryData;
+    IEnumerable<ILiquidityStressScenarioDefinition1> ICCPLiquidityStressTestingDefinitionReportV01.LiquidityStressScenarioDefinition =>
+        LiquidityStressScenarioDefinition;
+    IEnumerable<ISupplementaryData1> ICCPLiquidityStressTestingDefinitionReportV01.SupplementaryData =>
+        SupplementaryData;
 }

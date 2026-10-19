@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record BasketConstituents3 : IBasketConstituents3
 {
-    IInstrumentIdentification6Choice IBasketConstituents3.InstrumentIdentification => InstrumentIdentification;
+    IInstrumentIdentification6Choice IBasketConstituents3.InstrumentIdentification =>
+        InstrumentIdentification;
     IUnitOfMeasure8Choice? IBasketConstituents3.UnitOfMeasure => UnitOfMeasure;
 }

@@ -12,6 +12,8 @@ public partial record LimitUtilisationJournalReportV01 : ILimitUtilisationJourna
 {
     IMessageHeader12? ILimitUtilisationJournalReportV01.MessageHeader => MessageHeader;
     IPagination1? ILimitUtilisationJournalReportV01.Pagination => Pagination;
-    ILimitJournalReportOrError7Choice ILimitUtilisationJournalReportV01.ReportOrError => ReportOrError;
-    IEnumerable<ISupplementaryData1> ILimitUtilisationJournalReportV01.SupplementaryData => SupplementaryData;
+    ILimitJournalReportOrError7Choice ILimitUtilisationJournalReportV01.ReportOrError =>
+        ReportOrError;
+    IEnumerable<ISupplementaryData1> ILimitUtilisationJournalReportV01.SupplementaryData =>
+        SupplementaryData;
 }

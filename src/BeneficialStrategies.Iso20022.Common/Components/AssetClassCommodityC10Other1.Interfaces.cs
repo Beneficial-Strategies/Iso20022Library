@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record AssetClassCommodityC10Other1 : IAssetClassCommodityC10Other1
-{
-}
+public partial record AssetClassCommodityC10Other1 : IAssetClassCommodityC10Other1 { }

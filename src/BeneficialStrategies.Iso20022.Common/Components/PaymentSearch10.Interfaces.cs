@@ -11,17 +11,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record PaymentSearch10 : IPaymentSearch10
 {
     IEnumerable<Max35Text> IPaymentSearch10.MessageIdentification => MessageIdentification;
-    IEnumerable<IDateAndDateTimeSearch3Choice> IPaymentSearch10.RequestedExecutionDate => RequestedExecutionDate;
-    IEnumerable<IPaymentIdentification8Choice> IPaymentSearch10.PaymentIdentification => PaymentIdentification;
+    IEnumerable<IDateAndDateTimeSearch3Choice> IPaymentSearch10.RequestedExecutionDate =>
+        RequestedExecutionDate;
+    IEnumerable<IPaymentIdentification8Choice> IPaymentSearch10.PaymentIdentification =>
+        PaymentIdentification;
     IEnumerable<IInstructionStatusSearch5> IPaymentSearch10.Status => Status;
-    IEnumerable<IActiveOrHistoricAmountRange2Choice> IPaymentSearch10.InstructedAmount => InstructedAmount;
-    IEnumerable<ActiveOrHistoricCurrencyCode> IPaymentSearch10.InstructedAmountCurrency => InstructedAmountCurrency;
-    IEnumerable<IActiveAmountRange3Choice> IPaymentSearch10.InterbankSettlementAmount => InterbankSettlementAmount;
-    IEnumerable<ActiveCurrencyCode> IPaymentSearch10.InterbankSettlementAmountCurrency => InterbankSettlementAmountCurrency;
+    IEnumerable<IActiveOrHistoricAmountRange2Choice> IPaymentSearch10.InstructedAmount =>
+        InstructedAmount;
+    IEnumerable<ActiveOrHistoricCurrencyCode> IPaymentSearch10.InstructedAmountCurrency =>
+        InstructedAmountCurrency;
+    IEnumerable<IActiveAmountRange3Choice> IPaymentSearch10.InterbankSettlementAmount =>
+        InterbankSettlementAmount;
+    IEnumerable<ActiveCurrencyCode> IPaymentSearch10.InterbankSettlementAmountCurrency =>
+        InterbankSettlementAmountCurrency;
     IEnumerable<IPaymentOrigin1Choice> IPaymentSearch10.PaymentMethod => PaymentMethod;
     IEnumerable<IPaymentType4Choice> IPaymentSearch10.PaymentType => PaymentType;
     IEnumerable<IPriority1Choice> IPaymentSearch10.Priority => Priority;
-    IEnumerable<IDateTimePeriod1Choice> IPaymentSearch10.ProcessingValidityTime => ProcessingValidityTime;
+    IEnumerable<IDateTimePeriod1Choice> IPaymentSearch10.ProcessingValidityTime =>
+        ProcessingValidityTime;
     IEnumerable<Instruction1Code> IPaymentSearch10.Instruction => Instruction;
     IEnumerable<Max35Text> IPaymentSearch10.TransactionIdentification => TransactionIdentification;
     IEnumerable<UUIDv4Identifier> IPaymentSearch10.UETR => UETR;

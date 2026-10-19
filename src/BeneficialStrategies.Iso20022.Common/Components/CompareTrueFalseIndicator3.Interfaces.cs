@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record CompareTrueFalseIndicator3 : ICompareTrueFalseIndicator3
-{
-}
+public partial record CompareTrueFalseIndicator3 : ICompareTrueFalseIndicator3 { }

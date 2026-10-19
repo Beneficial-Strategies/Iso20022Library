@@ -12,10 +12,13 @@ public partial record AccountNotification26 : IAccountNotification26
 {
     ICashAccount40? IAccountNotification26.Account => Account;
     IParty50Choice? IAccountNotification26.AccountOwner => AccountOwner;
-    IBranchAndFinancialInstitutionIdentification8? IAccountNotification26.AccountServicer => AccountServicer;
+    IBranchAndFinancialInstitutionIdentification8? IAccountNotification26.AccountServicer =>
+        AccountServicer;
     ICashAccount40? IAccountNotification26.RelatedAccount => RelatedAccount;
     IParty50Choice? IAccountNotification26.Debtor => Debtor;
-    IBranchAndFinancialInstitutionIdentification8? IAccountNotification26.DebtorAgent => DebtorAgent;
-    IBranchAndFinancialInstitutionIdentification8? IAccountNotification26.IntermediaryAgent => IntermediaryAgent;
+    IBranchAndFinancialInstitutionIdentification8? IAccountNotification26.DebtorAgent =>
+        DebtorAgent;
+    IBranchAndFinancialInstitutionIdentification8? IAccountNotification26.IntermediaryAgent =>
+        IntermediaryAgent;
     IEnumerable<INotificationItem10> IAccountNotification26.Item => Item;
 }

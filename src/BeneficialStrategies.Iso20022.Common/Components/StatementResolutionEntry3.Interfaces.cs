@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record StatementResolutionEntry3 : IStatementResolutionEntry3
 {
-    IOriginalGroupInformation29? IStatementResolutionEntry3.OriginalGroupInformation => OriginalGroupInformation;
+    IOriginalGroupInformation29? IStatementResolutionEntry3.OriginalGroupInformation =>
+        OriginalGroupInformation;
     IEnumerable<ICharges3> IStatementResolutionEntry3.Charges => Charges;
     IPurpose2Choice? IStatementResolutionEntry3.Purpose => Purpose;
 }

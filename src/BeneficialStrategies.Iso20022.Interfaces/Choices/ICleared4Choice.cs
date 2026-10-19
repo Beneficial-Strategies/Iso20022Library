@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Information for the first side of the transaction.
 /// </summary>
 [IsoId("_UM6SwCUMEeeDvf1E8-5blA")]
-public interface ICleared4Choice : IIsoChoice
-{
-}
+public interface ICleared4Choice : IIsoChoice { }

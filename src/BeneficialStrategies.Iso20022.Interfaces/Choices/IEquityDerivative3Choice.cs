@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Element to define an equity instrument underlying code types.
 /// </summary>
 [IsoId("_hW-FN2lPEeaLAKoEUNsD9g")]
-public interface IEquityDerivative3Choice : IIsoChoice
-{
-}
+public interface IEquityDerivative3Choice : IIsoChoice { }

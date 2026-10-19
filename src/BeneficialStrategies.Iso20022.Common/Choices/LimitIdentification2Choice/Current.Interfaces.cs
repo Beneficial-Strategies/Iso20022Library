@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitIdentification2Choice;
 public partial record Current : ICurrent
 {
     ISystemIdentification2Choice? ICurrent.SystemIdentification => SystemIdentification;
-    IBranchAndFinancialInstitutionIdentification6? ICurrent.BilateralLimitCounterpartyIdentification => BilateralLimitCounterpartyIdentification;
+    IBranchAndFinancialInstitutionIdentification6? ICurrent.BilateralLimitCounterpartyIdentification =>
+        BilateralLimitCounterpartyIdentification;
     ILimitType1Choice ICurrent.Type => Type;
     IBranchAndFinancialInstitutionIdentification6? ICurrent.AccountOwner => AccountOwner;
     IAccountIdentification4Choice? ICurrent.AccountIdentification => AccountIdentification;

@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ClaimNonReceipt3 : IClaimNonReceipt3
 {
-    IBranchAndFinancialInstitutionIdentification8? IClaimNonReceipt3.OriginalNextAgent => OriginalNextAgent;
+    IBranchAndFinancialInstitutionIdentification8? IClaimNonReceipt3.OriginalNextAgent =>
+        OriginalNextAgent;
 }

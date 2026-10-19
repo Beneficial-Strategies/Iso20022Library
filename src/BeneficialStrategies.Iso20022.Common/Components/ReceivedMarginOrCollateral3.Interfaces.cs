@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record ReceivedMarginOrCollateral3 : IReceivedMarginOrCollateral3
-{
-}
+public partial record ReceivedMarginOrCollateral3 : IReceivedMarginOrCollateral3 { }

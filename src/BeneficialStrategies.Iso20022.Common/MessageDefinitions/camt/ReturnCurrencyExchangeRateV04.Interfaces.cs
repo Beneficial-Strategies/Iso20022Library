@@ -12,5 +12,6 @@ public partial record ReturnCurrencyExchangeRateV04 : IReturnCurrencyExchangeRat
 {
     IMessageHeader7 IReturnCurrencyExchangeRateV04.MessageHeader => MessageHeader;
     IExchangeRateReportOrError1Choice IReturnCurrencyExchangeRateV04.ReportOrError => ReportOrError;
-    IEnumerable<ISupplementaryData1> IReturnCurrencyExchangeRateV04.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IReturnCurrencyExchangeRateV04.SupplementaryData =>
+        SupplementaryData;
 }

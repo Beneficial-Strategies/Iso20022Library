@@ -10,8 +10,12 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedTransactionStatistics6Ch
 
 public partial record DetailedStatistics : IDetailedStatistics
 {
-    IStatisticsPerActionType1 IDetailedStatistics.TotalNumberOfTransactionsAccepted => TotalNumberOfTransactionsAccepted;
-    IStatisticsPerActionType1 IDetailedStatistics.TotalNumberOfTransactionsRejected => TotalNumberOfTransactionsRejected;
-    IStatisticsPerActionType1? IDetailedStatistics.TotalCorrectedRejections => TotalCorrectedRejections;
-    IEnumerable<IRejectionReason71> IDetailedStatistics.TransactionsRejectionsReason => TransactionsRejectionsReason;
+    IStatisticsPerActionType1 IDetailedStatistics.TotalNumberOfTransactionsAccepted =>
+        TotalNumberOfTransactionsAccepted;
+    IStatisticsPerActionType1 IDetailedStatistics.TotalNumberOfTransactionsRejected =>
+        TotalNumberOfTransactionsRejected;
+    IStatisticsPerActionType1? IDetailedStatistics.TotalCorrectedRejections =>
+        TotalCorrectedRejections;
+    IEnumerable<IRejectionReason71> IDetailedStatistics.TransactionsRejectionsReason =>
+        TransactionsRejectionsReason;
 }

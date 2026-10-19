@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TotalsPerBankTransactionCode2 : ITotalsPerBankTransactionCode2
 {
-    IBankTransactionCodeStructure4 ITotalsPerBankTransactionCode2.BankTransactionCode => BankTransactionCode;
-    IEnumerable<ICashBalanceAvailability2> ITotalsPerBankTransactionCode2.Availability => Availability;
+    IBankTransactionCodeStructure4 ITotalsPerBankTransactionCode2.BankTransactionCode =>
+        BankTransactionCode;
+    IEnumerable<ICashBalanceAvailability2> ITotalsPerBankTransactionCode2.Availability =>
+        Availability;
 }

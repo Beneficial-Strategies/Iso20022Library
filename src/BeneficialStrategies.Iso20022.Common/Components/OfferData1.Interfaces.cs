@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record OfferData1 : IOfferData1
-{
-}
+public partial record OfferData1 : IOfferData1 { }

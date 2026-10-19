@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record LimitIdentification7 : ILimitIdentification7
 {
-    IAccountIdentification4Choice ILimitIdentification7.AccountIdentification => AccountIdentification;
+    IAccountIdentification4Choice ILimitIdentification7.AccountIdentification =>
+        AccountIdentification;
     IPartyIdentification136 ILimitIdentification7.AccountOwner => AccountOwner;
-    ISystemPartyIdentification8? ILimitIdentification7.BilateralLimitCounterpartyIdentification => BilateralLimitCounterpartyIdentification;
+    ISystemPartyIdentification8? ILimitIdentification7.BilateralLimitCounterpartyIdentification =>
+        BilateralLimitCounterpartyIdentification;
 }

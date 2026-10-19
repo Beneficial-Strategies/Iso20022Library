@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Collateral Type22Choice.
 /// </summary>
 [IsoId("_wj3iwChKEe2H2s7qerne1w")]
-public interface ICollateralType22Choice : IIsoChoice
-{
-}
+public interface ICollateralType22Choice : IIsoChoice { }

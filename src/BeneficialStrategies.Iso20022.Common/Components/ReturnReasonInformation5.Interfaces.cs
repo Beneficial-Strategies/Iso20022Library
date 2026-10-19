@@ -10,8 +10,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ReturnReasonInformation5 : IReturnReasonInformation5
 {
-    IBankTransactionCodeStructure1? IReturnReasonInformation5.OriginalBankTransactionCode => OriginalBankTransactionCode;
+    IBankTransactionCodeStructure1? IReturnReasonInformation5.OriginalBankTransactionCode =>
+        OriginalBankTransactionCode;
     IPartyIdentification8? IReturnReasonInformation5.ReturnOriginator => ReturnOriginator;
     IReturnReason1Choice? IReturnReasonInformation5.ReturnReason => ReturnReason;
-    IEnumerable<Max105Text> IReturnReasonInformation5.AdditionalReturnReasonInformation => AdditionalReturnReasonInformation;
+    IEnumerable<Max105Text> IReturnReasonInformation5.AdditionalReturnReasonInformation =>
+        AdditionalReturnReasonInformation;
 }

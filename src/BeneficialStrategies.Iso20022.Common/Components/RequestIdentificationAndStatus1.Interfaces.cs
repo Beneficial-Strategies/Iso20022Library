@@ -10,9 +10,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record RequestIdentificationAndStatus1 : IRequestIdentificationAndStatus1
 {
-    IOriginalGroupInformation29 IRequestIdentificationAndStatus1.OriginalGroupInformation => OriginalGroupInformation;
-    IRequestIdentification1 IRequestIdentificationAndStatus1.OriginalRequestIdentification => OriginalRequestIdentification;
+    IOriginalGroupInformation29 IRequestIdentificationAndStatus1.OriginalGroupInformation =>
+        OriginalGroupInformation;
+    IRequestIdentification1 IRequestIdentificationAndStatus1.OriginalRequestIdentification =>
+        OriginalRequestIdentification;
     IRequestHandling4 IRequestIdentificationAndStatus1.RequestHandling => RequestHandling;
-    ICashDepositConfirmation1? IRequestIdentificationAndStatus1.CashDepositValidation => CashDepositValidation;
-    ICashWithdrawal1? IRequestIdentificationAndStatus1.CashWithdrawalConfirmation => CashWithdrawalConfirmation;
+    ICashDepositConfirmation1? IRequestIdentificationAndStatus1.CashDepositValidation =>
+        CashDepositValidation;
+    ICashWithdrawal1? IRequestIdentificationAndStatus1.CashWithdrawalConfirmation =>
+        CashWithdrawalConfirmation;
 }

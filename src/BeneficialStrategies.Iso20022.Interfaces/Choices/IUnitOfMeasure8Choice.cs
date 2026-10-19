@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Unit of measure in which the quantity is expressed.
 /// </summary>
 [IsoId("_D7l4ADNlEe2UWZuK9pqFtg")]
-public interface IUnitOfMeasure8Choice : IIsoChoice
-{
-}
+public interface IUnitOfMeasure8Choice : IIsoChoice { }

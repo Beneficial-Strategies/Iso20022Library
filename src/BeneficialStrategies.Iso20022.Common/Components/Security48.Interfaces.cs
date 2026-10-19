@@ -22,6 +22,7 @@ public partial record Security48 : ISecurity48
     ICompareUnitPrice6? ISecurity48.UnitPrice => UnitPrice;
     ICompareTrueFalseIndicator3? ISecurity48.ExclusiveArrangement => ExclusiveArrangement;
     ICompareAmountAndDirection2? ISecurity48.MarketValue => MarketValue;
-    ICompareTrueFalseIndicator3? ISecurity48.AvailableForCollateralReuse => AvailableForCollateralReuse;
+    ICompareTrueFalseIndicator3? ISecurity48.AvailableForCollateralReuse =>
+        AvailableForCollateralReuse;
     IComparePercentageRate3? ISecurity48.HaircutOrMargin => HaircutOrMargin;
 }

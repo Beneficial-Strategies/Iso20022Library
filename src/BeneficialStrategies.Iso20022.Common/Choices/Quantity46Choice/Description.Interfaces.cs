@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.Quantity46Choice;
 
-public partial record Description : IDescription
-{
-}
+public partial record Description : IDescription { }

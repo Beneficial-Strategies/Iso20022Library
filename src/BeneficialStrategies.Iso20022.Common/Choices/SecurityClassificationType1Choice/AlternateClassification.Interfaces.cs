@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.SecurityClassificationType1Choice;
 
-public partial record AlternateClassification : IAlternateClassification
-{
-}
+public partial record AlternateClassification : IAlternateClassification { }

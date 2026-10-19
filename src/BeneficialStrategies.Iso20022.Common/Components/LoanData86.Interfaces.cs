@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record LoanData86 : ILoanData86
-{
-}
+public partial record LoanData86 : ILoanData86 { }

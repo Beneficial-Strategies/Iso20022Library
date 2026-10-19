@@ -13,5 +13,6 @@ public partial record ProprietaryFormatInvestigationV05 : IProprietaryFormatInve
     ICaseAssignment5 IProprietaryFormatInvestigationV05.Assignment => Assignment;
     ICase5? IProprietaryFormatInvestigationV05.Case => Case;
     IProprietaryData7 IProprietaryFormatInvestigationV05.ProprietaryData => ProprietaryData;
-    IEnumerable<ISupplementaryData1> IProprietaryFormatInvestigationV05.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IProprietaryFormatInvestigationV05.SupplementaryData =>
+        SupplementaryData;
 }

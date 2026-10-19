@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Additional Request Data1Choice.
 /// </summary>
 [IsoId("_QnNBUHSHEe2bKJC9xIuWQw")]
-public interface IAdditionalRequestData1Choice : IIsoChoice
-{
-}
+public interface IAdditionalRequestData1Choice : IIsoChoice { }

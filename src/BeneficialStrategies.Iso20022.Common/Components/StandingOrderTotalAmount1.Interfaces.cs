@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record StandingOrderTotalAmount1 : IStandingOrderTotalAmount1
 {
     ITotalAmountAndCurrency1 IStandingOrderTotalAmount1.SetPredefinedOrder => SetPredefinedOrder;
-    ITotalAmountAndCurrency1 IStandingOrderTotalAmount1.PendingPredefinedOrder => PendingPredefinedOrder;
+    ITotalAmountAndCurrency1 IStandingOrderTotalAmount1.PendingPredefinedOrder =>
+        PendingPredefinedOrder;
     ITotalAmountAndCurrency1 IStandingOrderTotalAmount1.SetStandingOrder => SetStandingOrder;
-    ITotalAmountAndCurrency1 IStandingOrderTotalAmount1.PendingStandingOrder => PendingStandingOrder;
+    ITotalAmountAndCurrency1 IStandingOrderTotalAmount1.PendingStandingOrder =>
+        PendingStandingOrder;
 }

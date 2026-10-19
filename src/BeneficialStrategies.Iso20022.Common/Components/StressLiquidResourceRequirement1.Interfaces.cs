@@ -10,8 +10,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record StressLiquidResourceRequirement1 : IStressLiquidResourceRequirement1
 {
-    IAmountAndDirection102 IStressLiquidResourceRequirement1.OperationalOutflow => OperationalOutflow;
-    IAmountAndDirection102 IStressLiquidResourceRequirement1.VariationMarginPaymentObligation => VariationMarginPaymentObligation;
-    IAmountAndDirection102 IStressLiquidResourceRequirement1.SettlementOrDelivery => SettlementOrDelivery;
+    IAmountAndDirection102 IStressLiquidResourceRequirement1.OperationalOutflow =>
+        OperationalOutflow;
+    IAmountAndDirection102 IStressLiquidResourceRequirement1.VariationMarginPaymentObligation =>
+        VariationMarginPaymentObligation;
+    IAmountAndDirection102 IStressLiquidResourceRequirement1.SettlementOrDelivery =>
+        SettlementOrDelivery;
     IAmountAndDirection102 IStressLiquidResourceRequirement1.Other => Other;
 }

@@ -11,14 +11,19 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record RegisteredContract11 : IRegisteredContract11
 {
     ITradeParty5 IRegisteredContract11.ReportingParty => ReportingParty;
-    IBranchAndFinancialInstitutionIdentification6 IRegisteredContract11.RegistrationAgent => RegistrationAgent;
-    IBranchAndFinancialInstitutionIdentification6 IRegisteredContract11.IssuerFinancialInstitution => IssuerFinancialInstitution;
+    IBranchAndFinancialInstitutionIdentification6 IRegisteredContract11.RegistrationAgent =>
+        RegistrationAgent;
+    IBranchAndFinancialInstitutionIdentification6 IRegisteredContract11.IssuerFinancialInstitution =>
+        IssuerFinancialInstitution;
     IUnderlyingContract3Choice IRegisteredContract11.Contract => Contract;
     IEnumerable<IContractBalance1> IRegisteredContract11.ContractBalance => ContractBalance;
     IPaymentScheduleType2Choice? IRegisteredContract11.PaymentScheduleType => PaymentScheduleType;
-    IDocumentIdentification29 IRegisteredContract11.RegisteredContractIdentification => RegisteredContractIdentification;
-    IDocumentIdentification22? IRegisteredContract11.PreviousRegisteredContractIdentification => PreviousRegisteredContractIdentification;
-    IEnumerable<IRegisteredContractJournal2> IRegisteredContract11.RegisteredContractJournal => RegisteredContractJournal;
+    IDocumentIdentification29 IRegisteredContract11.RegisteredContractIdentification =>
+        RegisteredContractIdentification;
+    IDocumentIdentification22? IRegisteredContract11.PreviousRegisteredContractIdentification =>
+        PreviousRegisteredContractIdentification;
+    IEnumerable<IRegisteredContractJournal2> IRegisteredContract11.RegisteredContractJournal =>
+        RegisteredContractJournal;
     IEnumerable<IRegisteredContractAmendment1> IRegisteredContract11.Amendment => Amendment;
     IRegisteredContractCommunication1 IRegisteredContract11.Submission => Submission;
     IRegisteredContractCommunication1 IRegisteredContract11.Delivery => Delivery;

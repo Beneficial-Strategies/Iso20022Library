@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 public partial record NotificationToReceiveStatusReportV09 : INotificationToReceiveStatusReportV09
 {
     IGroupHeader121 INotificationToReceiveStatusReportV09.GroupHeader => GroupHeader;
-    IOriginalNotification17 INotificationToReceiveStatusReportV09.OriginalNotificationAndStatus => OriginalNotificationAndStatus;
-    IEnumerable<ISupplementaryData1> INotificationToReceiveStatusReportV09.SupplementaryData => SupplementaryData;
+    IOriginalNotification17 INotificationToReceiveStatusReportV09.OriginalNotificationAndStatus =>
+        OriginalNotificationAndStatus;
+    IEnumerable<ISupplementaryData1> INotificationToReceiveStatusReportV09.SupplementaryData =>
+        SupplementaryData;
 }

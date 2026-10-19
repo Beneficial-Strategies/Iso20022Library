@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.auth;
 
 public partial record CCPCollateralReportV01 : ICCPCollateralReportV01
 {
-    IEnumerable<ICollateralAccount4> ICCPCollateralReportV01.CollateralAccountOwner => CollateralAccountOwner;
+    IEnumerable<ICollateralAccount4> ICCPCollateralReportV01.CollateralAccountOwner =>
+        CollateralAccountOwner;
     IEnumerable<ISupplementaryData1> ICCPCollateralReportV01.SupplementaryData => SupplementaryData;
 }

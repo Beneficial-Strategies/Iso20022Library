@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.auth;
 public partial record RegulatoryMetadataReportV01 : IRegulatoryMetadataReportV01
 {
     IEnumerable<IMetadataReport5> IRegulatoryMetadataReportV01.MetadataReport => MetadataReport;
-    IEnumerable<ISupplementaryData1> IRegulatoryMetadataReportV01.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IRegulatoryMetadataReportV01.SupplementaryData =>
+        SupplementaryData;
 }

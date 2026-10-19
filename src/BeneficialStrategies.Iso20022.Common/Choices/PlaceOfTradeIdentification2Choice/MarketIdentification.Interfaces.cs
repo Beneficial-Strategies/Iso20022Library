@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PlaceOfTradeIdentification2Choice;
 
-public partial record MarketIdentification : IMarketIdentification
-{
-}
+public partial record MarketIdentification : IMarketIdentification { }

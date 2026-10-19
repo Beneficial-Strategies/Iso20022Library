@@ -14,5 +14,6 @@ public partial record AdditionalPaymentInformationV07 : IAdditionalPaymentInform
     ICase3 IAdditionalPaymentInformationV07.Case => Case;
     IUnderlyingTransaction3Choice IAdditionalPaymentInformationV07.Underlying => Underlying;
     IPaymentComplementaryInformation6 IAdditionalPaymentInformationV07.Information => Information;
-    IEnumerable<ISupplementaryData1> IAdditionalPaymentInformationV07.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IAdditionalPaymentInformationV07.SupplementaryData =>
+        SupplementaryData;
 }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the role associated with a specific party in relation to a payment instruction.
 /// </summary>
 [IsoId("_b_Ox03hiEeidzqjNEfehPg")]
-public interface IPaymentRole1Choice : IIsoChoice
-{
-}
+public interface IPaymentRole1Choice : IIsoChoice { }

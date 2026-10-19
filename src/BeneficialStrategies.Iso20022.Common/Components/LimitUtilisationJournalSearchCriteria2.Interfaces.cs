@@ -8,10 +8,13 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record LimitUtilisationJournalSearchCriteria2 : ILimitUtilisationJournalSearchCriteria2
+public partial record LimitUtilisationJournalSearchCriteria2
+    : ILimitUtilisationJournalSearchCriteria2
 {
     IEnumerable<LimitType4Code> ILimitUtilisationJournalSearchCriteria2.LimitType => LimitType;
-    IAccountIdentification4Choice? ILimitUtilisationJournalSearchCriteria2.AccountIdentification => AccountIdentification;
+    IAccountIdentification4Choice? ILimitUtilisationJournalSearchCriteria2.AccountIdentification =>
+        AccountIdentification;
     IPartyIdentification136? ILimitUtilisationJournalSearchCriteria2.AccountOwner => AccountOwner;
-    ISystemPartyIdentification8 ILimitUtilisationJournalSearchCriteria2.BilateralLimitCounterpartyIdentification => BilateralLimitCounterpartyIdentification;
+    ISystemPartyIdentification8 ILimitUtilisationJournalSearchCriteria2.BilateralLimitCounterpartyIdentification =>
+        BilateralLimitCounterpartyIdentification;
 }

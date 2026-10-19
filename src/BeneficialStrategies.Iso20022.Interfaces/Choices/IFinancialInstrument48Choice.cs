@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice to specific an instrument of type ISIN, LEI or Index.
 /// </summary>
 [IsoId("_HQWTxX5aEea2k7EBUopqxw")]
-public interface IFinancialInstrument48Choice : IIsoChoice
-{
-}
+public interface IFinancialInstrument48Choice : IIsoChoice { }

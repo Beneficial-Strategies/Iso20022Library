@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ShortPaymentIdentification4 : IShortPaymentIdentification4
 {
-    IBranchAndFinancialInstitutionIdentification8 IShortPaymentIdentification4.InstructingAgent => InstructingAgent;
+    IBranchAndFinancialInstitutionIdentification8 IShortPaymentIdentification4.InstructingAgent =>
+        InstructingAgent;
 }

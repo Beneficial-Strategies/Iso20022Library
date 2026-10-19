@@ -10,8 +10,12 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SettlementInstruction3 : ISettlementInstruction3
 {
-    IBranchAndFinancialInstitutionIdentification5? ISettlementInstruction3.InstructingReimbursementAgent => InstructingReimbursementAgent;
-    ICashAccount24? ISettlementInstruction3.InstructingReimbursementAgentAccount => InstructingReimbursementAgentAccount;
-    IBranchAndFinancialInstitutionIdentification5? ISettlementInstruction3.InstructedReimbursementAgent => InstructedReimbursementAgent;
-    ICashAccount24? ISettlementInstruction3.InstructedReimbursementAgentAccount => InstructedReimbursementAgentAccount;
+    IBranchAndFinancialInstitutionIdentification5? ISettlementInstruction3.InstructingReimbursementAgent =>
+        InstructingReimbursementAgent;
+    ICashAccount24? ISettlementInstruction3.InstructingReimbursementAgentAccount =>
+        InstructingReimbursementAgentAccount;
+    IBranchAndFinancialInstitutionIdentification5? ISettlementInstruction3.InstructedReimbursementAgent =>
+        InstructedReimbursementAgent;
+    ICashAccount24? ISettlementInstruction3.InstructedReimbursementAgentAccount =>
+        InstructedReimbursementAgentAccount;
 }

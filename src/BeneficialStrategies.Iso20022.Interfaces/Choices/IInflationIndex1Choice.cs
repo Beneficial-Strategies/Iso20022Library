@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of an inflation index identification.
 /// </summary>
 [IsoId("_ZyZ21CS2EeWsI5Sp3-B3zg")]
-public interface IInflationIndex1Choice : IIsoChoice
-{
-}
+public interface IInflationIndex1Choice : IIsoChoice { }

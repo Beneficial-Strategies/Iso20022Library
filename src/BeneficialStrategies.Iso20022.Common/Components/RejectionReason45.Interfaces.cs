@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record RejectionReason45 : IRejectionReason45
 {
-    IGenericValidationRuleIdentification1? IRejectionReason45.DetailedValidationRule => DetailedValidationRule;
+    IGenericValidationRuleIdentification1? IRejectionReason45.DetailedValidationRule =>
+        DetailedValidationRule;
 }

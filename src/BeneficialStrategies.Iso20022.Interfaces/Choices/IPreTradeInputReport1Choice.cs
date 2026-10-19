@@ -7,6 +7,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Choice of a pre-trade input report either as a new report or as a cancellation report.</summary>
 [IsoId("_EasjQGF9EfC07JR6e2JJ-w")]
-public interface IPreTradeInputReport1Choice : IIsoChoice
-{
-}
+public interface IPreTradeInputReport1Choice : IIsoChoice { }

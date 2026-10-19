@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record NotionalAmount7 : INotionalAmount7
 {
-    IEnumerable<ActiveOrHistoricCurrencyAnd19DecimalAmount> INotionalAmount7.AmountInEffect => AmountInEffect;
+    IEnumerable<ActiveOrHistoricCurrencyAnd19DecimalAmount> INotionalAmount7.AmountInEffect =>
+        AmountInEffect;
 }

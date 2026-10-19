@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty2Choice;
 
-public partial record DataSetAction : IDataSetAction
-{
-}
+public partial record DataSetAction : IDataSetAction { }

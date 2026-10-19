@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record OptionBarrierLevel1Choice_ : IOptionBarrierLevel1Choice
-{
-}
+public abstract partial record OptionBarrierLevel1Choice_ : IOptionBarrierLevel1Choice { }

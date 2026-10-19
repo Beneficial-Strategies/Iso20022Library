@@ -10,8 +10,12 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TradeAdditionalQueryCriteria6 : ITradeAdditionalQueryCriteria6
 {
-    IEnumerable<TransactionOperationType6Code> ITradeAdditionalQueryCriteria6.ActionType => ActionType;
-    ISecuritiesTradeVenueCriteria1Choice? ITradeAdditionalQueryCriteria6.ExecutionVenue => ExecutionVenue;
-    IEnumerable<PartyNatureType1Code> ITradeAdditionalQueryCriteria6.NatureOfCounterparty => NatureOfCounterparty;
-    IEnumerable<ICorporateSectorCriteria4> ITradeAdditionalQueryCriteria6.CorporateSector => CorporateSector;
+    IEnumerable<TransactionOperationType6Code> ITradeAdditionalQueryCriteria6.ActionType =>
+        ActionType;
+    ISecuritiesTradeVenueCriteria1Choice? ITradeAdditionalQueryCriteria6.ExecutionVenue =>
+        ExecutionVenue;
+    IEnumerable<PartyNatureType1Code> ITradeAdditionalQueryCriteria6.NatureOfCounterparty =>
+        NatureOfCounterparty;
+    IEnumerable<ICorporateSectorCriteria4> ITradeAdditionalQueryCriteria6.CorporateSector =>
+        CorporateSector;
 }

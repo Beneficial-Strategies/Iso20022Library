@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record ProprietaryBankTransactionCodeStructure1 : IProprietaryBankTransactionCodeStructure1
-{
-}
+public partial record ProprietaryBankTransactionCodeStructure1
+    : IProprietaryBankTransactionCodeStructure1 { }

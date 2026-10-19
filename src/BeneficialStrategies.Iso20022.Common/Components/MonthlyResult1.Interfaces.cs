@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record MonthlyResult1 : IMonthlyResult1
 {
-    IGenericIdentification165? IMonthlyResult1.LargestExceptionIdentification => LargestExceptionIdentification;
+    IGenericIdentification165? IMonthlyResult1.LargestExceptionIdentification =>
+        LargestExceptionIdentification;
 }

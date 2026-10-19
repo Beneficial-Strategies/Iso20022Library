@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.RateTypeChoice;
 
-public partial record TextualRate : ITextualRate
-{
-}
+public partial record TextualRate : ITextualRate { }

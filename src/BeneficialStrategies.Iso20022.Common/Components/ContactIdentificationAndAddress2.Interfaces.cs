@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record ContactIdentificationAndAddress2 : IContactIdentificationAndAddress2
 {
     IPaymentRole1Choice IContactIdentificationAndAddress2.Role => Role;
-    ICommunicationAddress10 IContactIdentificationAndAddress2.CommunicationAddress => CommunicationAddress;
+    ICommunicationAddress10 IContactIdentificationAndAddress2.CommunicationAddress =>
+        CommunicationAddress;
 }

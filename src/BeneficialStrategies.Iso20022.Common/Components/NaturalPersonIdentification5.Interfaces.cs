@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record NaturalPersonIdentification5 : INaturalPersonIdentification5
 {
     IEnumerable<Max500Text> INaturalPersonIdentification5.PersonName => PersonName;
-    IGenericIdentification175? INaturalPersonIdentification5.AlternateIdentification => AlternateIdentification;
+    IGenericIdentification175? INaturalPersonIdentification5.AlternateIdentification =>
+        AlternateIdentification;
     IEnumerable<IIndustrySector3Choice> INaturalPersonIdentification5.Sector => Sector;
 }

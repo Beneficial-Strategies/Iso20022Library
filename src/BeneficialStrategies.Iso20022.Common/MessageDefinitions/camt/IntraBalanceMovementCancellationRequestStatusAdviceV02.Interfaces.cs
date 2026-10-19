@@ -8,14 +8,23 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.camt;
 
-public partial record IntraBalanceMovementCancellationRequestStatusAdviceV02 : IIntraBalanceMovementCancellationRequestStatusAdviceV02
+public partial record IntraBalanceMovementCancellationRequestStatusAdviceV02
+    : IIntraBalanceMovementCancellationRequestStatusAdviceV02
 {
-    IDocumentIdentification51? IIntraBalanceMovementCancellationRequestStatusAdviceV02.Identification => Identification;
-    IReferences14 IIntraBalanceMovementCancellationRequestStatusAdviceV02.TransactionIdentification => TransactionIdentification;
-    IProcessingStatus69Choice IIntraBalanceMovementCancellationRequestStatusAdviceV02.ProcessingStatus => ProcessingStatus;
-    ICashAccount40 IIntraBalanceMovementCancellationRequestStatusAdviceV02.CashAccount => CashAccount;
-    ISystemPartyIdentification8? IIntraBalanceMovementCancellationRequestStatusAdviceV02.CashAccountOwner => CashAccountOwner;
-    IBranchAndFinancialInstitutionIdentification8? IIntraBalanceMovementCancellationRequestStatusAdviceV02.CashAccountServicer => CashAccountServicer;
-    IIntraBalance5? IIntraBalanceMovementCancellationRequestStatusAdviceV02.UnderlyingIntraBalance => UnderlyingIntraBalance;
-    IEnumerable<ISupplementaryData1> IIntraBalanceMovementCancellationRequestStatusAdviceV02.SupplementaryData => SupplementaryData;
+    IDocumentIdentification51? IIntraBalanceMovementCancellationRequestStatusAdviceV02.Identification =>
+        Identification;
+    IReferences14 IIntraBalanceMovementCancellationRequestStatusAdviceV02.TransactionIdentification =>
+        TransactionIdentification;
+    IProcessingStatus69Choice IIntraBalanceMovementCancellationRequestStatusAdviceV02.ProcessingStatus =>
+        ProcessingStatus;
+    ICashAccount40 IIntraBalanceMovementCancellationRequestStatusAdviceV02.CashAccount =>
+        CashAccount;
+    ISystemPartyIdentification8? IIntraBalanceMovementCancellationRequestStatusAdviceV02.CashAccountOwner =>
+        CashAccountOwner;
+    IBranchAndFinancialInstitutionIdentification8? IIntraBalanceMovementCancellationRequestStatusAdviceV02.CashAccountServicer =>
+        CashAccountServicer;
+    IIntraBalance5? IIntraBalanceMovementCancellationRequestStatusAdviceV02.UnderlyingIntraBalance =>
+        UnderlyingIntraBalance;
+    IEnumerable<ISupplementaryData1> IIntraBalanceMovementCancellationRequestStatusAdviceV02.SupplementaryData =>
+        SupplementaryData;
 }

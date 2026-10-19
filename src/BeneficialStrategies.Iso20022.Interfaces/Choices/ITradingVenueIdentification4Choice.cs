@@ -11,6 +11,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// ValidMICRule: Market Identification code must be an active market at the time of reporting.
 /// </remarks>
 [IsoId("_Gp0EgYTPEfClBYp_xDbOWg")]
-public interface ITradingVenueIdentification4Choice : IIsoChoice
-{
-}
+public interface ITradingVenueIdentification4Choice : IIsoChoice { }

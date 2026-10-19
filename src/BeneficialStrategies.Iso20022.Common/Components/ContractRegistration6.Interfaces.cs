@@ -13,7 +13,8 @@ public partial record ContractRegistration6 : IContractRegistration6
     IUnderlyingContract3Choice IContractRegistration6.Contract => Contract;
     IEnumerable<IContractBalance1> IContractRegistration6.ContractBalance => ContractBalance;
     IPaymentScheduleType2Choice? IContractRegistration6.PaymentScheduleType => PaymentScheduleType;
-    IEnumerable<IDocumentIdentification22> IContractRegistration6.PreviousRegistrationIdentification => PreviousRegistrationIdentification;
+    IEnumerable<IDocumentIdentification22> IContractRegistration6.PreviousRegistrationIdentification =>
+        PreviousRegistrationIdentification;
     IEnumerable<IDocumentGeneralInformation5> IContractRegistration6.Attachment => Attachment;
     IEnumerable<ISupplementaryData1> IContractRegistration6.SupplementaryData => SupplementaryData;
 }

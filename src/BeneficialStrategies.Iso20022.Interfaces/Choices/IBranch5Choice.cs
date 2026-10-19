@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the data used to identify the branch of a reporting counterparty.
 /// </summary>
 [IsoId("_BpDRkMg4Eeu4ecZgAYuz5w")]
-public interface IBranch5Choice : IIsoChoice
-{
-}
+public interface IBranch5Choice : IIsoChoice { }

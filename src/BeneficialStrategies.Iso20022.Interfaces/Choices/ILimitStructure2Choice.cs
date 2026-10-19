@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Limit details of one or more limits set by the member and managed by the transaction administrator.
 /// </summary>
 [IsoId("__lXa7249EeiU9cctagi5ow")]
-public interface ILimitStructure2Choice : IIsoChoice
-{
-}
+public interface ILimitStructure2Choice : IIsoChoice { }

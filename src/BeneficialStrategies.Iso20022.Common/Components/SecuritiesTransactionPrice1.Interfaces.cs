@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record SecuritiesTransactionPrice1 : ISecuritiesTransactionPrice1
-{
-}
+public partial record SecuritiesTransactionPrice1 : ISecuritiesTransactionPrice1 { }

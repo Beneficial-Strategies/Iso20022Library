@@ -13,8 +13,10 @@ public partial record BillingService1 : IBillingService1
     IBillingServiceParameters1 IBillingService1.ServiceDetail => ServiceDetail;
     IBillingPrice1? IBillingService1.Price => Price;
     IAmountAndDirection34 IBillingService1.OriginalChargePrice => OriginalChargePrice;
-    IAmountAndDirection34? IBillingService1.OriginalChargeSettlementAmount => OriginalChargeSettlementAmount;
-    IAmountAndDirection34? IBillingService1.BalanceRequiredAccountAmount => BalanceRequiredAccountAmount;
+    IAmountAndDirection34? IBillingService1.OriginalChargeSettlementAmount =>
+        OriginalChargeSettlementAmount;
+    IAmountAndDirection34? IBillingService1.BalanceRequiredAccountAmount =>
+        BalanceRequiredAccountAmount;
     IServiceTaxDesignation1 IBillingService1.TaxDesignation => TaxDesignation;
     IBillingMethod1Choice? IBillingService1.TaxCalculation => TaxCalculation;
 }

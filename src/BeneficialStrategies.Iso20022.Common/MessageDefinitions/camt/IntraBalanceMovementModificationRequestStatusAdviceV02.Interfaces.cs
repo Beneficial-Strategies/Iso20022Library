@@ -8,14 +8,23 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.camt;
 
-public partial record IntraBalanceMovementModificationRequestStatusAdviceV02 : IIntraBalanceMovementModificationRequestStatusAdviceV02
+public partial record IntraBalanceMovementModificationRequestStatusAdviceV02
+    : IIntraBalanceMovementModificationRequestStatusAdviceV02
 {
-    IDocumentIdentification51? IIntraBalanceMovementModificationRequestStatusAdviceV02.Identification => Identification;
-    ICashAccount40 IIntraBalanceMovementModificationRequestStatusAdviceV02.CashAccount => CashAccount;
-    ISystemPartyIdentification8? IIntraBalanceMovementModificationRequestStatusAdviceV02.CashAccountOwner => CashAccountOwner;
-    IBranchAndFinancialInstitutionIdentification8? IIntraBalanceMovementModificationRequestStatusAdviceV02.CashAccountServicer => CashAccountServicer;
-    IRequestDetails22? IIntraBalanceMovementModificationRequestStatusAdviceV02.RequestDetails => RequestDetails;
-    IProcessingStatus71Choice IIntraBalanceMovementModificationRequestStatusAdviceV02.ProcessingStatus => ProcessingStatus;
-    IIntraBalance5? IIntraBalanceMovementModificationRequestStatusAdviceV02.UnderlyingIntraBalance => UnderlyingIntraBalance;
-    IEnumerable<ISupplementaryData1> IIntraBalanceMovementModificationRequestStatusAdviceV02.SupplementaryData => SupplementaryData;
+    IDocumentIdentification51? IIntraBalanceMovementModificationRequestStatusAdviceV02.Identification =>
+        Identification;
+    ICashAccount40 IIntraBalanceMovementModificationRequestStatusAdviceV02.CashAccount =>
+        CashAccount;
+    ISystemPartyIdentification8? IIntraBalanceMovementModificationRequestStatusAdviceV02.CashAccountOwner =>
+        CashAccountOwner;
+    IBranchAndFinancialInstitutionIdentification8? IIntraBalanceMovementModificationRequestStatusAdviceV02.CashAccountServicer =>
+        CashAccountServicer;
+    IRequestDetails22? IIntraBalanceMovementModificationRequestStatusAdviceV02.RequestDetails =>
+        RequestDetails;
+    IProcessingStatus71Choice IIntraBalanceMovementModificationRequestStatusAdviceV02.ProcessingStatus =>
+        ProcessingStatus;
+    IIntraBalance5? IIntraBalanceMovementModificationRequestStatusAdviceV02.UnderlyingIntraBalance =>
+        UnderlyingIntraBalance;
+    IEnumerable<ISupplementaryData1> IIntraBalanceMovementModificationRequestStatusAdviceV02.SupplementaryData =>
+        SupplementaryData;
 }

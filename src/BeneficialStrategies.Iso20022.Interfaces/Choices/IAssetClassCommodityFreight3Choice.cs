@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Defines commodity attributes of a derivative where the type is freight.
 /// </summary>
 [IsoId("_VSOj0bv5EeiLRYqS-r-R-A")]
-public interface IAssetClassCommodityFreight3Choice : IIsoChoice
-{
-}
+public interface IAssetClassCommodityFreight3Choice : IIsoChoice { }

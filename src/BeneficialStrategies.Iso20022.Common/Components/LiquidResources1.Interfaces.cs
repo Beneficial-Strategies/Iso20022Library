@@ -11,13 +11,22 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record LiquidResources1 : ILiquidResources1
 {
     IEnumerable<ILiquidResourceInformation1> ILiquidResources1.CashDue => CashDue;
-    IEnumerable<ILiquidResourceInformation1> ILiquidResources1.FacilitiesCommittedLinesOfCredit => FacilitiesCommittedLinesOfCredit;
-    IEnumerable<ILiquidResourceInformation1> ILiquidResources1.FacilitiesCommittedRepurchaseAgreements => FacilitiesCommittedRepurchaseAgreements;
-    IEnumerable<ILiquidResourceInformation1> ILiquidResources1.FacilitiesCommittedFXSwaps => FacilitiesCommittedFXSwaps;
-    IEnumerable<ILiquidResourceInformation1> ILiquidResources1.FacilitiesOtherCommitted => FacilitiesOtherCommitted;
-    IEnumerable<ILiquidResourceInformation1> ILiquidResources1.FacilitiesUncommitted => FacilitiesUncommitted;
-    IEnumerable<ILiquidResourceInformation1> ILiquidResources1.FinancialInstrumentsCCP => FinancialInstrumentsCCP;
-    IEnumerable<ILiquidResourceInformation1> ILiquidResources1.FinancialInstrumentsTreasuryInvestments => FinancialInstrumentsTreasuryInvestments;
-    IEnumerable<ILiquidResourceInformation1> ILiquidResources1.FinancialInstrumentsDefaultersSettlementCollateral => FinancialInstrumentsDefaultersSettlementCollateral;
-    IEnumerable<ILiquidResourceInformation1> ILiquidResources1.FinancialInstrumentsDefaultersNonCashCollateral => FinancialInstrumentsDefaultersNonCashCollateral;
+    IEnumerable<ILiquidResourceInformation1> ILiquidResources1.FacilitiesCommittedLinesOfCredit =>
+        FacilitiesCommittedLinesOfCredit;
+    IEnumerable<ILiquidResourceInformation1> ILiquidResources1.FacilitiesCommittedRepurchaseAgreements =>
+        FacilitiesCommittedRepurchaseAgreements;
+    IEnumerable<ILiquidResourceInformation1> ILiquidResources1.FacilitiesCommittedFXSwaps =>
+        FacilitiesCommittedFXSwaps;
+    IEnumerable<ILiquidResourceInformation1> ILiquidResources1.FacilitiesOtherCommitted =>
+        FacilitiesOtherCommitted;
+    IEnumerable<ILiquidResourceInformation1> ILiquidResources1.FacilitiesUncommitted =>
+        FacilitiesUncommitted;
+    IEnumerable<ILiquidResourceInformation1> ILiquidResources1.FinancialInstrumentsCCP =>
+        FinancialInstrumentsCCP;
+    IEnumerable<ILiquidResourceInformation1> ILiquidResources1.FinancialInstrumentsTreasuryInvestments =>
+        FinancialInstrumentsTreasuryInvestments;
+    IEnumerable<ILiquidResourceInformation1> ILiquidResources1.FinancialInstrumentsDefaultersSettlementCollateral =>
+        FinancialInstrumentsDefaultersSettlementCollateral;
+    IEnumerable<ILiquidResourceInformation1> ILiquidResources1.FinancialInstrumentsDefaultersNonCashCollateral =>
+        FinancialInstrumentsDefaultersNonCashCollateral;
 }

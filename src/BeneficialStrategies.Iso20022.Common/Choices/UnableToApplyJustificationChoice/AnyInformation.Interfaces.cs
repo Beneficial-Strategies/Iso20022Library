@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustificationChoice;
 
-public partial record AnyInformation : IAnyInformation
-{
-}
+public partial record AnyInformation : IAnyInformation { }

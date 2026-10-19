@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.InvestmentParty1Choice;
 
-public partial record Algorithm : IAlgorithm
-{
-}
+public partial record Algorithm : IAlgorithm { }

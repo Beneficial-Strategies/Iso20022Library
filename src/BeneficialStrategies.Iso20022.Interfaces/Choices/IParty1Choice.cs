@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between the identification of a person and the identification of a non-financial institution.
 /// </summary>
 [IsoId("_Rca4t9p-Ed-ak6NoX_4Aeg_49258998")]
-public interface IParty1Choice : IIsoChoice
-{
-}
+public interface IParty1Choice : IIsoChoice { }

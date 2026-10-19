@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 
 public partial record PayInEventAcknowledgementV02 : IPayInEventAcknowledgementV02
 {
-    IAcknowledgementDetails1Choice IPayInEventAcknowledgementV02.AcknowledgementDetails => AcknowledgementDetails;
-    IEnumerable<ISupplementaryData1> IPayInEventAcknowledgementV02.SupplementaryData => SupplementaryData;
+    IAcknowledgementDetails1Choice IPayInEventAcknowledgementV02.AcknowledgementDetails =>
+        AcknowledgementDetails;
+    IEnumerable<ISupplementaryData1> IPayInEventAcknowledgementV02.SupplementaryData =>
+        SupplementaryData;
 }

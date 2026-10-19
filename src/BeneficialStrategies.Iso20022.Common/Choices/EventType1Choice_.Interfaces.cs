@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record EventType1Choice_ : IEventType1Choice
-{
-}
+public abstract partial record EventType1Choice_ : IEventType1Choice { }

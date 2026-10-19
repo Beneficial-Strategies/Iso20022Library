@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Detailed information of abnormal values.
 /// </summary>
 [IsoId("_x32K4VyGEe24CqbZJK5XxA")]
-public interface IDetailedAbnormalValuesStatistics4Choice : IIsoChoice
-{
-}
+public interface IDetailedAbnormalValuesStatistics4Choice : IIsoChoice { }

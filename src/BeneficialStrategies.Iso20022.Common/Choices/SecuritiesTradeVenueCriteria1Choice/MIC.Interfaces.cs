@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTradeVenueCriteria1Choice;
 
-public partial record MIC : IMIC
-{
-}
+public partial record MIC : IMIC { }

@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record MessageHeader12 : IMessageHeader12
 {
-    IOriginalBusinessInstruction1? IMessageHeader12.OriginalBusinessInstruction => OriginalBusinessInstruction;
+    IOriginalBusinessInstruction1? IMessageHeader12.OriginalBusinessInstruction =>
+        OriginalBusinessInstruction;
 }

@@ -8,8 +8,10 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record FundDetailedConfirmedCashForecastReport1 : IFundDetailedConfirmedCashForecastReport1
+public partial record FundDetailedConfirmedCashForecastReport1
+    : IFundDetailedConfirmedCashForecastReport1
 {
-    IEnumerable<IFundCashForecast2> IFundDetailedConfirmedCashForecastReport1.FundCashForecastDetails => FundCashForecastDetails;
+    IEnumerable<IFundCashForecast2> IFundDetailedConfirmedCashForecastReport1.FundCashForecastDetails =>
+        FundCashForecastDetails;
     IEnumerable<IExtension1> IFundDetailedConfirmedCashForecastReport1.Extension => Extension;
 }

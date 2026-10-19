@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the source used to generate the reporting.
 /// </summary>
 [IsoId("_RqIkkdp-Ed-ak6NoX_4Aeg_-1706426921")]
-public interface IReportingSource1Choice : IIsoChoice
-{
-}
+public interface IReportingSource1Choice : IIsoChoice { }

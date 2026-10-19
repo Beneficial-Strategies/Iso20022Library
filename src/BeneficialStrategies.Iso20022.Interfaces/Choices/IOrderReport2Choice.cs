@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Order Report2Choice.
 /// </summary>
 [IsoId("_nyySARAVEe6N57R8Wekj-w")]
-public interface IOrderReport2Choice : IIsoChoice
-{
-}
+public interface IOrderReport2Choice : IIsoChoice { }

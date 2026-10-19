@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.IndustrySector3Choice;
 
-public partial record RegulatoryTaxonomySector : IRegulatoryTaxonomySector
-{
-}
+public partial record RegulatoryTaxonomySector : IRegulatoryTaxonomySector { }

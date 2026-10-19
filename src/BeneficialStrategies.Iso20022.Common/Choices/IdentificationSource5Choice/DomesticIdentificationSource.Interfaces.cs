@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.IdentificationSource5Choice;
 
-public partial record DomesticIdentificationSource : IDomesticIdentificationSource
-{
-}
+public partial record DomesticIdentificationSource : IDomesticIdentificationSource { }

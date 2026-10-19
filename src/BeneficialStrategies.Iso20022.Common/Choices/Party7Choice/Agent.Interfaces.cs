@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party7Choice;
 
 public partial record Agent : IAgent
 {
-    IFinancialInstitutionIdentification7 IAgent.FinancialInstitutionIdentification => FinancialInstitutionIdentification;
+    IFinancialInstitutionIdentification7 IAgent.FinancialInstitutionIdentification =>
+        FinancialInstitutionIdentification;
     IBranchData2? IAgent.BranchIdentification => BranchIdentification;
 }

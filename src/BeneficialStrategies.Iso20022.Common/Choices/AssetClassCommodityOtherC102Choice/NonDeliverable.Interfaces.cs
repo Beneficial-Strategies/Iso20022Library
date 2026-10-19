@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityOtherC102Choice;
 
-public partial record NonDeliverable : INonDeliverable
-{
-}
+public partial record NonDeliverable : INonDeliverable { }

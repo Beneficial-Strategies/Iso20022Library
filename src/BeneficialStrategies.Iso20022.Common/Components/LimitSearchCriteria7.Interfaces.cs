@@ -10,12 +10,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record LimitSearchCriteria7 : ILimitSearchCriteria7
 {
-    ISystemIdentification2Choice? ILimitSearchCriteria7.SystemIdentification => SystemIdentification;
-    IEnumerable<IBranchAndFinancialInstitutionIdentification8> ILimitSearchCriteria7.BilateralLimitCounterpartyIdentification => BilateralLimitCounterpartyIdentification;
+    ISystemIdentification2Choice? ILimitSearchCriteria7.SystemIdentification =>
+        SystemIdentification;
+    IEnumerable<IBranchAndFinancialInstitutionIdentification8> ILimitSearchCriteria7.BilateralLimitCounterpartyIdentification =>
+        BilateralLimitCounterpartyIdentification;
     IEnumerable<ILimitType1Choice> ILimitSearchCriteria7.DefaultLimitType => DefaultLimitType;
     IEnumerable<ILimitType1Choice> ILimitSearchCriteria7.CurrentLimitType => CurrentLimitType;
-    IBranchAndFinancialInstitutionIdentification8? ILimitSearchCriteria7.AccountOwner => AccountOwner;
-    IAccountIdentification4Choice? ILimitSearchCriteria7.AccountIdentification => AccountIdentification;
+    IBranchAndFinancialInstitutionIdentification8? ILimitSearchCriteria7.AccountOwner =>
+        AccountOwner;
+    IAccountIdentification4Choice? ILimitSearchCriteria7.AccountIdentification =>
+        AccountIdentification;
     IActiveAmountRange3Choice? ILimitSearchCriteria7.UsedAmount => UsedAmount;
     IPercentageRange1Choice? ILimitSearchCriteria7.UsedPercentage => UsedPercentage;
     IActiveAmountRange3Choice? ILimitSearchCriteria7.LimitAmount => LimitAmount;

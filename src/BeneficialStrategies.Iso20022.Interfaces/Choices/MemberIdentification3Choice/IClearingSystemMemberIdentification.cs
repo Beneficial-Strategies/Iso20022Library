@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.MemberIdentification3Choice;
 /// Information used to identify a member within a clearing system.
 /// </summary>
 [IsoId("_iR9BhXSbEeiH1ZOt2UD8vQ")]
-public interface IClearingSystemMemberIdentification : IMemberIdentification3Choice, IIsoChoiceVariant
+public interface IClearingSystemMemberIdentification
+    : IMemberIdentification3Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Specification of a pre-agreed offering between clearing agents or the channel through which the payment instruction is processed.

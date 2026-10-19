@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a range of amount values with or without the currency.
 /// </summary>
 [IsoId("_OnGKkZlcEeeE1Ya-LgRsuQ")]
-public interface IActiveAmountRange3Choice : IIsoChoice
-{
-}
+public interface IActiveAmountRange3Choice : IIsoChoice { }

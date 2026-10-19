@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice to define commodity specific attributes of a derivative.
 /// </summary>
 [IsoId("_lKiggXvyEeanCNPcMT7sSg")]
-public interface IAssetClassCommodity3Choice : IIsoChoice
-{
-}
+public interface IAssetClassCommodity3Choice : IIsoChoice { }

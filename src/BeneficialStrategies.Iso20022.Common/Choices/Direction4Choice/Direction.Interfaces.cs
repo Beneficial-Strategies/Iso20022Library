@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.Direction4Choice;
 
-public partial record Direction : IDirection
-{
-}
+public partial record Direction : IDirection { }

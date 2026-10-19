@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralPortfolioCode5Choice;
 
 public partial record MarginPortfolioCode : IMarginPortfolioCode
 {
-    IPortfolioCode5Choice IMarginPortfolioCode.InitialMarginPortfolioCode => InitialMarginPortfolioCode;
-    IPortfolioCode5Choice? IMarginPortfolioCode.VariationMarginPortfolioCode => VariationMarginPortfolioCode;
+    IPortfolioCode5Choice IMarginPortfolioCode.InitialMarginPortfolioCode =>
+        InitialMarginPortfolioCode;
+    IPortfolioCode5Choice? IMarginPortfolioCode.VariationMarginPortfolioCode =>
+        VariationMarginPortfolioCode;
 }

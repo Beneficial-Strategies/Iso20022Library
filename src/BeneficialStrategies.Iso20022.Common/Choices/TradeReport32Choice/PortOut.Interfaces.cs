@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport32Choice;
 
 public partial record PortOut : IPortOut
 {
-    IEnumerable<ICounterpartySpecificData36> IPortOut.CounterpartySpecificData => CounterpartySpecificData;
+    IEnumerable<ICounterpartySpecificData36> IPortOut.CounterpartySpecificData =>
+        CounterpartySpecificData;
     ICommonTradeDataReport69 IPortOut.CommonTradeData => CommonTradeData;
     ITechnicalAttributes5? IPortOut.TechnicalAttributes => TechnicalAttributes;
     IDisseminationData1? IPortOut.PublicDisseminationData => PublicDisseminationData;

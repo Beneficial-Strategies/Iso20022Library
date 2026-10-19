@@ -8,9 +8,13 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.auth;
 
-public partial record MoneyMarketForeignExchangeSwapsStatisticalReportV02 : IMoneyMarketForeignExchangeSwapsStatisticalReportV02
+public partial record MoneyMarketForeignExchangeSwapsStatisticalReportV02
+    : IMoneyMarketForeignExchangeSwapsStatisticalReportV02
 {
-    IMoneyMarketReportHeader1 IMoneyMarketForeignExchangeSwapsStatisticalReportV02.ReportHeader => ReportHeader;
-    IForeignExchangeSwap3Choice IMoneyMarketForeignExchangeSwapsStatisticalReportV02.ForeignExchangeSwapsReport => ForeignExchangeSwapsReport;
-    IEnumerable<ISupplementaryData1> IMoneyMarketForeignExchangeSwapsStatisticalReportV02.SupplementaryData => SupplementaryData;
+    IMoneyMarketReportHeader1 IMoneyMarketForeignExchangeSwapsStatisticalReportV02.ReportHeader =>
+        ReportHeader;
+    IForeignExchangeSwap3Choice IMoneyMarketForeignExchangeSwapsStatisticalReportV02.ForeignExchangeSwapsReport =>
+        ForeignExchangeSwapsReport;
+    IEnumerable<ISupplementaryData1> IMoneyMarketForeignExchangeSwapsStatisticalReportV02.SupplementaryData =>
+        SupplementaryData;
 }

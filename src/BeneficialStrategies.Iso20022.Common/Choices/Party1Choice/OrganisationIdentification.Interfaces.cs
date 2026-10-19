@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Party1Choice;
 
 public partial record OrganisationIdentification : IOrganisationIdentification
 {
-    IGenericIdentification3? IOrganisationIdentification.ProprietaryIdentification => ProprietaryIdentification;
+    IGenericIdentification3? IOrganisationIdentification.ProprietaryIdentification =>
+        ProprietaryIdentification;
 }

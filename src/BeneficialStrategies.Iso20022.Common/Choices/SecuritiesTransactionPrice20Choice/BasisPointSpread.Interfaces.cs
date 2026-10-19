@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice20Choice;
 
-public partial record BasisPointSpread : IBasisPointSpread
-{
-}
+public partial record BasisPointSpread : IBasisPointSpread { }

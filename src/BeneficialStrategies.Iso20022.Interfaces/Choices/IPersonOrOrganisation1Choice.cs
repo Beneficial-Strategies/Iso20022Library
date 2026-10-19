@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the identification of a person or an organisation.
 /// </summary>
 [IsoId("_va6b4PPYEeS_qLctCs2aRQ")]
-public interface IPersonOrOrganisation1Choice : IIsoChoice
-{
-}
+public interface IPersonOrOrganisation1Choice : IIsoChoice { }

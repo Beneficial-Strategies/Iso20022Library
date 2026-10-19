@@ -10,8 +10,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TaxCalculation1 : ITaxCalculation1
 {
-    IEnumerable<IBillingServicesAmount3> ITaxCalculation1.TaxableServiceChargeConversion => TaxableServiceChargeConversion;
-    IAmountAndDirection34 ITaxCalculation1.TotalTaxableServiceChargeHostAmount => TotalTaxableServiceChargeHostAmount;
+    IEnumerable<IBillingServicesAmount3> ITaxCalculation1.TaxableServiceChargeConversion =>
+        TaxableServiceChargeConversion;
+    IAmountAndDirection34 ITaxCalculation1.TotalTaxableServiceChargeHostAmount =>
+        TotalTaxableServiceChargeHostAmount;
     IEnumerable<IBillingServicesTax3> ITaxCalculation1.TaxIdentification => TaxIdentification;
     IAmountAndDirection34 ITaxCalculation1.TotalTax => TotalTax;
 }

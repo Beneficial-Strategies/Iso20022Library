@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies a choice between an absolute rate and a percentage rate.
 /// </summary>
 [IsoId("_lW_QMNfvEeqoweZZxm4TPQ")]
-public interface IExchangeRateOrPercentage1Choice : IIsoChoice
-{
-}
+public interface IExchangeRateOrPercentage1Choice : IIsoChoice { }

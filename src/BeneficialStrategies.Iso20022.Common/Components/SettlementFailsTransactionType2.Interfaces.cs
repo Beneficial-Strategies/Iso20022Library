@@ -10,9 +10,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SettlementFailsTransactionType2 : ISettlementFailsTransactionType2
 {
-    ISettlementTotalData1Choice ISettlementFailsTransactionType2.SecuritiesBuyOrSell => SecuritiesBuyOrSell;
-    ISettlementTotalData1Choice ISettlementFailsTransactionType2.CollateralManagementOperation => CollateralManagementOperation;
-    ISettlementTotalData1Choice ISettlementFailsTransactionType2.SecuritiesLendingOrBorrowing => SecuritiesLendingOrBorrowing;
-    ISettlementTotalData1Choice ISettlementFailsTransactionType2.RepurchaseAgreement => RepurchaseAgreement;
+    ISettlementTotalData1Choice ISettlementFailsTransactionType2.SecuritiesBuyOrSell =>
+        SecuritiesBuyOrSell;
+    ISettlementTotalData1Choice ISettlementFailsTransactionType2.CollateralManagementOperation =>
+        CollateralManagementOperation;
+    ISettlementTotalData1Choice ISettlementFailsTransactionType2.SecuritiesLendingOrBorrowing =>
+        SecuritiesLendingOrBorrowing;
+    ISettlementTotalData1Choice ISettlementFailsTransactionType2.RepurchaseAgreement =>
+        RepurchaseAgreement;
     ISettlementTotalData1Choice ISettlementFailsTransactionType2.Other => Other;
 }

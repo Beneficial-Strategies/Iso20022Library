@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData34Choice;
 
 public partial record Report : IReport
 {
-    IEnumerable<INumberOfReportsPerStatus4> IReport.PairingReconciliationStatus => PairingReconciliationStatus;
+    IEnumerable<INumberOfReportsPerStatus4> IReport.PairingReconciliationStatus =>
+        PairingReconciliationStatus;
     IEnumerable<IReconciliationReport8> IReport.ReconciliationReport => ReconciliationReport;
     IEnumerable<ISupplementaryData1> IReport.SupplementaryData => SupplementaryData;
 }

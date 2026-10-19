@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Element is a choice between a known portfolio code and a code applicable when the code is unknown.
 /// </summary>
 [IsoId("_FQG3gHixEeqKjIYaFgh_2g")]
-public interface IPortfolioCode1Choice : IIsoChoice
-{
-}
+public interface IPortfolioCode1Choice : IIsoChoice { }

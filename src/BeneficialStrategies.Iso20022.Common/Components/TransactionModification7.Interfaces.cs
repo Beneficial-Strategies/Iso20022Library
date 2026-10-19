@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TransactionModification7 : ITransactionModification7
 {
-    IPaymentIdentification8Choice ITransactionModification7.PaymentIdentification => PaymentIdentification;
+    IPaymentIdentification8Choice ITransactionModification7.PaymentIdentification =>
+        PaymentIdentification;
     IPaymentInstruction33 ITransactionModification7.NewPaymentValueSet => NewPaymentValueSet;
 }

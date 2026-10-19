@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record DebtInstrument4 : IDebtInstrument4
-{
-}
+public partial record DebtInstrument4 : IDebtInstrument4 { }

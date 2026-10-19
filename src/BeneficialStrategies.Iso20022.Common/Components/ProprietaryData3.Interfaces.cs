@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record ProprietaryData3 : IProprietaryData3
-{
-}
+public partial record ProprietaryData3 : IProprietaryData3 { }

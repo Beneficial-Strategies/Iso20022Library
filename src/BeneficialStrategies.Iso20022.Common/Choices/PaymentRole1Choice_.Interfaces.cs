@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record PaymentRole1Choice_ : IPaymentRole1Choice
-{
-}
+public abstract partial record PaymentRole1Choice_ : IPaymentRole1Choice { }

@@ -19,12 +19,15 @@ public partial record EntryTransaction7 : IEntryTransaction7
     ITransactionParties3? IEntryTransaction7.RelatedParties => RelatedParties;
     ITransactionAgents3? IEntryTransaction7.RelatedAgents => RelatedAgents;
     IPurpose2Choice? IEntryTransaction7.Purpose => Purpose;
-    IEnumerable<IRemittanceLocation4> IEntryTransaction7.RelatedRemittanceInformation => RelatedRemittanceInformation;
+    IEnumerable<IRemittanceLocation4> IEntryTransaction7.RelatedRemittanceInformation =>
+        RelatedRemittanceInformation;
     IRemittanceInformation10? IEntryTransaction7.RemittanceInformation => RemittanceInformation;
     ITransactionDates2? IEntryTransaction7.RelatedDates => RelatedDates;
     ITransactionPrice3Choice? IEntryTransaction7.RelatedPrice => RelatedPrice;
-    IEnumerable<ITransactionQuantities2Choice> IEntryTransaction7.RelatedQuantities => RelatedQuantities;
-    ISecurityIdentification14? IEntryTransaction7.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    IEnumerable<ITransactionQuantities2Choice> IEntryTransaction7.RelatedQuantities =>
+        RelatedQuantities;
+    ISecurityIdentification14? IEntryTransaction7.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     ITaxInformation3? IEntryTransaction7.Tax => Tax;
     IPaymentReturnReason2? IEntryTransaction7.ReturnInformation => ReturnInformation;
     ICorporateAction9? IEntryTransaction7.CorporateAction => CorporateAction;

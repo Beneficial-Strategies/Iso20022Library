@@ -11,7 +11,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record InvoiceTaxStatusReportHeader1 : IInvoiceTaxStatusReportHeader1
 {
     ITaxOrganisationIdentification1? IInvoiceTaxStatusReportHeader1.TaxAuthority => TaxAuthority;
-    IMessageIdentification1 IInvoiceTaxStatusReportHeader1.MessageIdentification => MessageIdentification;
-    IMessageIdentification1 IInvoiceTaxStatusReportHeader1.OriginalMessageIdentification => OriginalMessageIdentification;
-    IEnumerable<IGenericValidationRuleIdentification1> IInvoiceTaxStatusReportHeader1.ValidationRule => ValidationRule;
+    IMessageIdentification1 IInvoiceTaxStatusReportHeader1.MessageIdentification =>
+        MessageIdentification;
+    IMessageIdentification1 IInvoiceTaxStatusReportHeader1.OriginalMessageIdentification =>
+        OriginalMessageIdentification;
+    IEnumerable<IGenericValidationRuleIdentification1> IInvoiceTaxStatusReportHeader1.ValidationRule =>
+        ValidationRule;
 }

@@ -17,8 +17,10 @@ public partial record IntraBalanceMovement6 : IIntraBalanceMovement6
     IAmount2Choice? IIntraBalanceMovement6.PreviouslySettledAmount => PreviouslySettledAmount;
     IAmount2Choice? IIntraBalanceMovement6.RemainingSettlementAmount => RemainingSettlementAmount;
     IDateAndDateTime2Choice IIntraBalanceMovement6.IntendedSettlementDate => IntendedSettlementDate;
-    IDateAndDateTime2Choice? IIntraBalanceMovement6.EffectiveSettlementDate => EffectiveSettlementDate;
-    IGenericIdentification37? IIntraBalanceMovement6.CashSubBalanceIdentification => CashSubBalanceIdentification;
+    IDateAndDateTime2Choice? IIntraBalanceMovement6.EffectiveSettlementDate =>
+        EffectiveSettlementDate;
+    IGenericIdentification37? IIntraBalanceMovement6.CashSubBalanceIdentification =>
+        CashSubBalanceIdentification;
     IEnumerable<ILinkages57> IIntraBalanceMovement6.Linkages => Linkages;
     IPriorityNumeric4Choice? IIntraBalanceMovement6.Priority => Priority;
     ISystemPartyIdentification8? IIntraBalanceMovement6.MessageOriginator => MessageOriginator;

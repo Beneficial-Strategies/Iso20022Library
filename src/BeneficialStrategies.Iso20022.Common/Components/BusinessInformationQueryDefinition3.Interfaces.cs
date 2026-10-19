@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record BusinessInformationQueryDefinition3 : IBusinessInformationQueryDefinition3
 {
-    IGeneralBusinessInformationCriteriaDefinition1Choice? IBusinessInformationQueryDefinition3.GeneralBusinessInformationCriteria => GeneralBusinessInformationCriteria;
+    IGeneralBusinessInformationCriteriaDefinition1Choice? IBusinessInformationQueryDefinition3.GeneralBusinessInformationCriteria =>
+        GeneralBusinessInformationCriteria;
 }

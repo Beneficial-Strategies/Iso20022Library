@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record TradeQueryCriteria14 : ITradeQueryCriteria14
 {
     ITradePartyQueryCriteria7? ITradeQueryCriteria14.TradePartyCriteria => TradePartyCriteria;
-    ITradeSecurityIdentificationQueryCriteria3? ITradeQueryCriteria14.FinancialInstrumentCriteria => FinancialInstrumentCriteria;
+    ITradeSecurityIdentificationQueryCriteria3? ITradeQueryCriteria14.FinancialInstrumentCriteria =>
+        FinancialInstrumentCriteria;
     ITradeDateTimeQueryCriteria6? ITradeQueryCriteria14.TimeCriteria => TimeCriteria;
     ITradeAdditionalQueryCriteria9? ITradeQueryCriteria14.OtherCriteria => OtherCriteria;
 }

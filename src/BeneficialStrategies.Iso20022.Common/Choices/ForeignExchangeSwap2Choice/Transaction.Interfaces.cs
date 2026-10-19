@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Choices.ForeignExchangeSwap2Choice;
 
 public partial record Transaction : ITransaction
 {
-    ICounterpartyIdentification2Choice ITransaction.CounterpartyIdentification => CounterpartyIdentification;
+    ICounterpartyIdentification2Choice ITransaction.CounterpartyIdentification =>
+        CounterpartyIdentification;
     IDateAndDateTimeChoice ITransaction.TradeDate => TradeDate;
     IForeignExchange1 ITransaction.ForeignExchange => ForeignExchange;
     IEnumerable<ISupplementaryData1> ITransaction.SupplementaryData => SupplementaryData;

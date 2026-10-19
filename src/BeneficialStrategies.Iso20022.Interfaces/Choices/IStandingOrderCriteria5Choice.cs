@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Standing Order Criteria5Choice.
 /// </summary>
 [IsoId("_0ob11TEyEe6g-ffJsqGiSA")]
-public interface IStandingOrderCriteria5Choice : IIsoChoice
-{
-}
+public interface IStandingOrderCriteria5Choice : IIsoChoice { }

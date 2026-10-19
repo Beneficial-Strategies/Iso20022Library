@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditDefaultSwapsDerivative3Cho
 /// A credit default swap on a single name instrument.
 /// </summary>
 [IsoId("_xfbL0X5eEea2k7EBUopqxw")]
-public interface ISingleNameCreditDefaultSwap : ICreditDefaultSwapsDerivative3Choice, IIsoChoiceVariant
+public interface ISingleNameCreditDefaultSwap
+    : ICreditDefaultSwapsDerivative3Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Reference entity of a single name credit default swap (CDS) or a derivative on single name CDS.

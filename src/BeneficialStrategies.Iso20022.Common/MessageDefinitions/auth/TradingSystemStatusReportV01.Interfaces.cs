@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.auth;
 public partial record TradingSystemStatusReportV01 : ITradingSystemStatusReportV01
 {
     ISecuritiesMarketReportHeader5? ITradingSystemStatusReportV01.ReportHeader => ReportHeader;
-    IEnumerable<ITradingSystemReport1Choice> ITradingSystemStatusReportV01.TradingSystemReport => TradingSystemReport;
-    IEnumerable<ISupplementaryData1> ITradingSystemStatusReportV01.SupplementaryData => SupplementaryData;
+    IEnumerable<ITradingSystemReport1Choice> ITradingSystemStatusReportV01.TradingSystemReport =>
+        TradingSystemReport;
+    IEnumerable<ISupplementaryData1> ITradingSystemStatusReportV01.SupplementaryData =>
+        SupplementaryData;
 }

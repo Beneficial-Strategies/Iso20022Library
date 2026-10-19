@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.SettlementDataRate1Choice;
 
-public partial record NumberOfInstructions : INumberOfInstructions
-{
-}
+public partial record NumberOfInstructions : INumberOfInstructions { }

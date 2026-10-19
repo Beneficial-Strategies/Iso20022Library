@@ -12,6 +12,7 @@ public partial record CounterpartyData77 : ICounterpartyData77
 {
     ICounterpartyIdentification4 ICounterpartyData77.ReportingCounterparty => ReportingCounterparty;
     ICounterpartyIdentification2 ICounterpartyData77.OtherCounterparty => OtherCounterparty;
-    IOrganisationIdentification9Choice? ICounterpartyData77.EntityResponsibleForReport => EntityResponsibleForReport;
+    IOrganisationIdentification9Choice? ICounterpartyData77.EntityResponsibleForReport =>
+        EntityResponsibleForReport;
     ITransactionCounterpartyData8? ICounterpartyData77.OtherPartyData => OtherPartyData;
 }

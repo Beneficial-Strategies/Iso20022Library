@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record MissingMarginTransactionData2 : IMissingMarginTransactionData2
 {
-    ITradeTransactionIdentification24 IMissingMarginTransactionData2.TransactionIdentification => TransactionIdentification;
+    ITradeTransactionIdentification24 IMissingMarginTransactionData2.TransactionIdentification =>
+        TransactionIdentification;
 }

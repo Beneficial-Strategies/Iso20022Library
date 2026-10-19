@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SecurityIdentification49 : ISecurityIdentification49
 {
-    IUniqueProductIdentifier2Choice? ISecurityIdentification49.UniqueProductIdentifier => UniqueProductIdentifier;
-    IGenericIdentification175? ISecurityIdentification49.AlternativeInstrumentIdentification => AlternativeInstrumentIdentification;
+    IUniqueProductIdentifier2Choice? ISecurityIdentification49.UniqueProductIdentifier =>
+        UniqueProductIdentifier;
+    IGenericIdentification175? ISecurityIdentification49.AlternativeInstrumentIdentification =>
+        AlternativeInstrumentIdentification;
 }

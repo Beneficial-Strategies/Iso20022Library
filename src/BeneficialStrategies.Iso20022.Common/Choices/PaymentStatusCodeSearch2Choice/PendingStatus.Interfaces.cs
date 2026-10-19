@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusCodeSearch2Choice;
 
-public partial record PendingStatus : IPendingStatus
-{
-}
+public partial record PendingStatus : IPendingStatus { }

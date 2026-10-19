@@ -10,7 +10,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record UnderlyingPaymentTransaction8 : IUnderlyingPaymentTransaction8
 {
-    IUnderlyingGroupInformation1? IUnderlyingPaymentTransaction8.OriginalGroupInformation => OriginalGroupInformation;
-    IOriginalTransactionReference42? IUnderlyingPaymentTransaction8.OriginalTransactionReference => OriginalTransactionReference;
-    IServiceLevel8Choice? IUnderlyingPaymentTransaction8.OriginalServiceLevel => OriginalServiceLevel;
+    IUnderlyingGroupInformation1? IUnderlyingPaymentTransaction8.OriginalGroupInformation =>
+        OriginalGroupInformation;
+    IOriginalTransactionReference42? IUnderlyingPaymentTransaction8.OriginalTransactionReference =>
+        OriginalTransactionReference;
+    IServiceLevel8Choice? IUnderlyingPaymentTransaction8.OriginalServiceLevel =>
+        OriginalServiceLevel;
 }

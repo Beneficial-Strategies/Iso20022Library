@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice;
 public partial record CustomerIdentification : ICustomerIdentification
 {
     IPartyIdentification43 ICustomerIdentification.Party => Party;
-    IEnumerable<IAuthorityInvestigation2> ICustomerIdentification.AuthorityRequest => AuthorityRequest;
+    IEnumerable<IAuthorityInvestigation2> ICustomerIdentification.AuthorityRequest =>
+        AuthorityRequest;
 }

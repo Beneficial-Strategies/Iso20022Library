@@ -12,14 +12,20 @@ public partial record RequestedModification : IRequestedModification
 {
     IPartyIdentification1? IRequestedModification.Debtor => Debtor;
     ICashAccount3? IRequestedModification.DebtorAccount => DebtorAccount;
-    IBranchAndFinancialInstitutionIdentification? IRequestedModification.IntermediarySettlementAgent => IntermediarySettlementAgent;
-    IBranchAndFinancialInstitutionIdentification? IRequestedModification.LastSettlementAgent => LastSettlementAgent;
+    IBranchAndFinancialInstitutionIdentification? IRequestedModification.IntermediarySettlementAgent =>
+        IntermediarySettlementAgent;
+    IBranchAndFinancialInstitutionIdentification? IRequestedModification.LastSettlementAgent =>
+        LastSettlementAgent;
     IPaymentSchemeChoice? IRequestedModification.PaymentScheme => PaymentScheme;
-    ICashAccount3? IRequestedModification.BeneficiaryInstitutionAccount => BeneficiaryInstitutionAccount;
+    ICashAccount3? IRequestedModification.BeneficiaryInstitutionAccount =>
+        BeneficiaryInstitutionAccount;
     IPartyIdentification1? IRequestedModification.Creditor => Creditor;
     ICashAccount3? IRequestedModification.CreditorAccount => CreditorAccount;
-    IRemittanceInformation3Choice? IRequestedModification.RemittanceInformation => RemittanceInformation;
+    IRemittanceInformation3Choice? IRequestedModification.RemittanceInformation =>
+        RemittanceInformation;
     IPurposeChoice? IRequestedModification.Purpose => Purpose;
-    IInstructionForFinalAgent? IRequestedModification.InstructionForFinalAgent => InstructionForFinalAgent;
-    IEnumerable<string> IRequestedModification.SenderToReceiverInformation => SenderToReceiverInformation;
+    IInstructionForFinalAgent? IRequestedModification.InstructionForFinalAgent =>
+        InstructionForFinalAgent;
+    IEnumerable<string> IRequestedModification.SenderToReceiverInformation =>
+        SenderToReceiverInformation;
 }

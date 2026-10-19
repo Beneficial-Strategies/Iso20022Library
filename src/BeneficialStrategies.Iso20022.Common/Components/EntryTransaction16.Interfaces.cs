@@ -21,17 +21,21 @@ public partial record EntryTransaction16 : IEntryTransaction16
     ILocalInstrument2Choice? IEntryTransaction16.LocalInstrument => LocalInstrument;
     IPaymentTypeInformation27? IEntryTransaction16.PaymentTypeInformation => PaymentTypeInformation;
     IPurpose2Choice? IEntryTransaction16.Purpose => Purpose;
-    IEnumerable<IRemittanceLocation8> IEntryTransaction16.RelatedRemittanceInformation => RelatedRemittanceInformation;
+    IEnumerable<IRemittanceLocation8> IEntryTransaction16.RelatedRemittanceInformation =>
+        RelatedRemittanceInformation;
     IRemittanceInformation26? IEntryTransaction16.RemittanceInformation => RemittanceInformation;
     ITransactionDates3? IEntryTransaction16.RelatedDates => RelatedDates;
     ITransactionPrice4Choice? IEntryTransaction16.RelatedPrice => RelatedPrice;
-    IEnumerable<ITransactionQuantities4Choice> IEntryTransaction16.RelatedQuantities => RelatedQuantities;
-    ISecurityIdentification19? IEntryTransaction16.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    IEnumerable<ITransactionQuantities4Choice> IEntryTransaction16.RelatedQuantities =>
+        RelatedQuantities;
+    ISecurityIdentification19? IEntryTransaction16.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
     ITaxData1? IEntryTransaction16.Tax => Tax;
     IPaymentReturnReason8? IEntryTransaction16.ReturnInformation => ReturnInformation;
     ICorporateAction82? IEntryTransaction16.RelatedCorporateAction => RelatedCorporateAction;
     ISecuritiesAccount19? IEntryTransaction16.SafekeepingAccount => SafekeepingAccount;
-    IEnumerable<ITransactionAllocation2> IEntryTransaction16.UnderlyingAllocation => UnderlyingAllocation;
+    IEnumerable<ITransactionAllocation2> IEntryTransaction16.UnderlyingAllocation =>
+        UnderlyingAllocation;
     IEnumerable<ICashDeposit1> IEntryTransaction16.CashDeposit => CashDeposit;
     ICardTransaction18? IEntryTransaction16.CardTransaction => CardTransaction;
     IEnumerable<ISupplementaryData1> IEntryTransaction16.SupplementaryData => SupplementaryData;

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TransactionReport6 : ITransactionReport6
 {
-    IPaymentIdentification6Choice ITransactionReport6.PaymentIdentification => PaymentIdentification;
+    IPaymentIdentification6Choice ITransactionReport6.PaymentIdentification =>
+        PaymentIdentification;
     ITransactionOrError5Choice ITransactionReport6.TransactionOrError => TransactionOrError;
 }

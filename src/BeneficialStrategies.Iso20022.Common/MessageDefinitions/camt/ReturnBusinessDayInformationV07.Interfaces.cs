@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 public partial record ReturnBusinessDayInformationV07 : IReturnBusinessDayInformationV07
 {
     IMessageHeader7 IReturnBusinessDayInformationV07.MessageHeader => MessageHeader;
-    IBusinessDayReportOrError9Choice IReturnBusinessDayInformationV07.ReportOrError => ReportOrError;
-    IEnumerable<ISupplementaryData1> IReturnBusinessDayInformationV07.SupplementaryData => SupplementaryData;
+    IBusinessDayReportOrError9Choice IReturnBusinessDayInformationV07.ReportOrError =>
+        ReportOrError;
+    IEnumerable<ISupplementaryData1> IReturnBusinessDayInformationV07.SupplementaryData =>
+        SupplementaryData;
 }

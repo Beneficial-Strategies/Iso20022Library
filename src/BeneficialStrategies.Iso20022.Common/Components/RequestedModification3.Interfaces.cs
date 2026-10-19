@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record RequestedModification3 : IRequestedModification3
 {
-    IPaymentTypeInformation25? IRequestedModification3.PaymentTypeInformation => PaymentTypeInformation;
+    IPaymentTypeInformation25? IRequestedModification3.PaymentTypeInformation =>
+        PaymentTypeInformation;
     IAmountType3Choice? IRequestedModification3.Amount => Amount;
     IPartyIdentification43? IRequestedModification3.UltimateDebtor => UltimateDebtor;
     IPartyIdentification43? IRequestedModification3.Debtor => Debtor;
@@ -22,7 +23,9 @@ public partial record RequestedModification3 : IRequestedModification3
     ICashAccount24? IRequestedModification3.CreditorAccount => CreditorAccount;
     IPartyIdentification43? IRequestedModification3.UltimateCreditor => UltimateCreditor;
     IPurpose2Choice? IRequestedModification3.Purpose => Purpose;
-    IEnumerable<IInstructionForNextAgent1> IRequestedModification3.InstructionForNextAgent => InstructionForNextAgent;
-    IEnumerable<IInstructionForCreditorAgent1> IRequestedModification3.InstructionForCreditorAgent => InstructionForCreditorAgent;
+    IEnumerable<IInstructionForNextAgent1> IRequestedModification3.InstructionForNextAgent =>
+        InstructionForNextAgent;
+    IEnumerable<IInstructionForCreditorAgent1> IRequestedModification3.InstructionForCreditorAgent =>
+        InstructionForCreditorAgent;
     IRemittanceInformation7? IRequestedModification3.RemittanceInformation => RemittanceInformation;
 }

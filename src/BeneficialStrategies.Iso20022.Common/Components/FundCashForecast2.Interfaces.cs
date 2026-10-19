@@ -12,10 +12,15 @@ public partial record FundCashForecast2 : IFundCashForecast2
 {
     IDateAndDateTimeChoice IFundCashForecast2.TradeDateTime => TradeDateTime;
     IDateAndDateTimeChoice? IFundCashForecast2.PreviousTradeDateTime => PreviousTradeDateTime;
-    IFinancialInstrument5 IFundCashForecast2.FinancialInstrumentDetails => FinancialInstrumentDetails;
+    IFinancialInstrument5 IFundCashForecast2.FinancialInstrumentDetails =>
+        FinancialInstrumentDetails;
     IFinancialInstrumentQuantity1? IFundCashForecast2.TotalUnitsNumber => TotalUnitsNumber;
-    IFinancialInstrumentQuantity1? IFundCashForecast2.PreviousTotalUnitsNumber => PreviousTotalUnitsNumber;
-    IEnumerable<ActiveOrHistoricCurrencyCode> IFundCashForecast2.InvestmentCurrency => InvestmentCurrency;
-    IEnumerable<ICashSortingCriterion2> IFundCashForecast2.SortingCriteriaDetails => SortingCriteriaDetails;
-    IEnumerable<INetCashForecast1> IFundCashForecast2.NetCashForecastDetails => NetCashForecastDetails;
+    IFinancialInstrumentQuantity1? IFundCashForecast2.PreviousTotalUnitsNumber =>
+        PreviousTotalUnitsNumber;
+    IEnumerable<ActiveOrHistoricCurrencyCode> IFundCashForecast2.InvestmentCurrency =>
+        InvestmentCurrency;
+    IEnumerable<ICashSortingCriterion2> IFundCashForecast2.SortingCriteriaDetails =>
+        SortingCriteriaDetails;
+    IEnumerable<INetCashForecast1> IFundCashForecast2.NetCashForecastDetails =>
+        NetCashForecastDetails;
 }

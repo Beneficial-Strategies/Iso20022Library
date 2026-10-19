@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.auth;
 public partial record CCPClearedProductReportV02 : ICCPClearedProductReportV02
 {
     IEnumerable<IClearedProduct2> ICCPClearedProductReportV02.ClearedProduct => ClearedProduct;
-    IEnumerable<ISupplementaryData1> ICCPClearedProductReportV02.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> ICCPClearedProductReportV02.SupplementaryData =>
+        SupplementaryData;
 }

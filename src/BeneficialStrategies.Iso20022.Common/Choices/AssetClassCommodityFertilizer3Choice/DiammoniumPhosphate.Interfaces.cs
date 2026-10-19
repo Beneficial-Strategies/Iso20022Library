@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFertilizer3Choice;
 
-public partial record DiammoniumPhosphate : IDiammoniumPhosphate
-{
-}
+public partial record DiammoniumPhosphate : IDiammoniumPhosphate { }

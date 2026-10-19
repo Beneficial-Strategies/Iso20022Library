@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport15Choice;
 
 public partial record Termination : ITermination
 {
-    IEnumerable<ICounterpartySpecificData29> ITermination.CounterpartySpecificData => CounterpartySpecificData;
+    IEnumerable<ICounterpartySpecificData29> ITermination.CounterpartySpecificData =>
+        CounterpartySpecificData;
     ICommonTradeDataReport49 ITermination.CommonTradeData => CommonTradeData;
     ITechnicalAttributes4? ITermination.TechnicalAttributes => TechnicalAttributes;
     IEnumerable<ISupplementaryData1> ITermination.SupplementaryData => SupplementaryData;

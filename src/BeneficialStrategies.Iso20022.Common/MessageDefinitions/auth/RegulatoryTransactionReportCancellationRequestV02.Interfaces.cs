@@ -8,12 +8,19 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.auth;
 
-public partial record RegulatoryTransactionReportCancellationRequestV02 : IRegulatoryTransactionReportCancellationRequestV02
+public partial record RegulatoryTransactionReportCancellationRequestV02
+    : IRegulatoryTransactionReportCancellationRequestV02
 {
-    IDocumentIdentification8 IRegulatoryTransactionReportCancellationRequestV02.Identification => Identification;
-    IPartyIdentification23Choice IRegulatoryTransactionReportCancellationRequestV02.ReportingInstitution => ReportingInstitution;
-    IPartyIdentification24Choice? IRegulatoryTransactionReportCancellationRequestV02.ReportingAgent => ReportingAgent;
-    IEnumerable<ITransactionDetails3> IRegulatoryTransactionReportCancellationRequestV02.CancellationByTransactionDetails => CancellationByTransactionDetails;
-    IDocumentIdentification9 IRegulatoryTransactionReportCancellationRequestV02.PreviousReference => PreviousReference;
-    IEnumerable<ITransactionDetails2> IRegulatoryTransactionReportCancellationRequestV02.CancellationByTradeReference => CancellationByTradeReference;
+    IDocumentIdentification8 IRegulatoryTransactionReportCancellationRequestV02.Identification =>
+        Identification;
+    IPartyIdentification23Choice IRegulatoryTransactionReportCancellationRequestV02.ReportingInstitution =>
+        ReportingInstitution;
+    IPartyIdentification24Choice? IRegulatoryTransactionReportCancellationRequestV02.ReportingAgent =>
+        ReportingAgent;
+    IEnumerable<ITransactionDetails3> IRegulatoryTransactionReportCancellationRequestV02.CancellationByTransactionDetails =>
+        CancellationByTransactionDetails;
+    IDocumentIdentification9 IRegulatoryTransactionReportCancellationRequestV02.PreviousReference =>
+        PreviousReference;
+    IEnumerable<ITransactionDetails2> IRegulatoryTransactionReportCancellationRequestV02.CancellationByTradeReference =>
+        CancellationByTradeReference;
 }

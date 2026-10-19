@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.auth;
 public partial record ContractRegistrationClosureRequestV01 : IContractRegistrationClosureRequestV01
 {
     ICurrencyControlHeader1 IContractRegistrationClosureRequestV01.GroupHeader => GroupHeader;
-    IEnumerable<IRegisteredContract2> IContractRegistrationClosureRequestV01.RegisteredContractClosure => RegisteredContractClosure;
-    IEnumerable<ISupplementaryData1> IContractRegistrationClosureRequestV01.SupplementaryData => SupplementaryData;
+    IEnumerable<IRegisteredContract2> IContractRegistrationClosureRequestV01.RegisteredContractClosure =>
+        RegisteredContractClosure;
+    IEnumerable<ISupplementaryData1> IContractRegistrationClosureRequestV01.SupplementaryData =>
+        SupplementaryData;
 }

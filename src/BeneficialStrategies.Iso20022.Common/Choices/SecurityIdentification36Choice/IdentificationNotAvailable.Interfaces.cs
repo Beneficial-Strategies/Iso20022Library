@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification36Choice;
 
-public partial record IdentificationNotAvailable : IIdentificationNotAvailable
-{
-}
+public partial record IdentificationNotAvailable : IIdentificationNotAvailable { }

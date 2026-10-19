@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record Receipt3 : IReceipt3
 {
-    IOriginalMessageAndIssuer1 IReceipt3.OriginalMessageIdentification => OriginalMessageIdentification;
-    IPaymentIdentification6Choice? IReceipt3.OriginalPaymentIdentification => OriginalPaymentIdentification;
+    IOriginalMessageAndIssuer1 IReceipt3.OriginalMessageIdentification =>
+        OriginalMessageIdentification;
+    IPaymentIdentification6Choice? IReceipt3.OriginalPaymentIdentification =>
+        OriginalPaymentIdentification;
     IEnumerable<IRequestHandling1> IReceipt3.RequestHandling => RequestHandling;
 }

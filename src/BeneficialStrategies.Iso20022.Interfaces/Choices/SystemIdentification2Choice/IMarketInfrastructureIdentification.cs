@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemIdentification2Choice;
 /// Clearing service selected for a transaction.
 /// </summary>
 [IsoId("_8BZ3QqMgEeCJ6YNENx4h-w_-129556950")]
-public interface IMarketInfrastructureIdentification : ISystemIdentification2Choice, IIsoChoiceVariant
+public interface IMarketInfrastructureIdentification
+    : ISystemIdentification2Choice,
+        IIsoChoiceVariant
 {
     /// <summary>Contains the main value for the container.</summary>
     [IsoXmlTag("MktInfrstrctrId")]

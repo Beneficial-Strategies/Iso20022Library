@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature9Choice;
 
-public partial record FinancialInstitution : IFinancialInstitution
-{
-}
+public partial record FinancialInstitution : IFinancialInstitution { }

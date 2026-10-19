@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.InvestigationDataRecord1Choice;
 
-public partial record ResponseNarrative : IResponseNarrative
-{
-}
+public partial record ResponseNarrative : IResponseNarrative { }

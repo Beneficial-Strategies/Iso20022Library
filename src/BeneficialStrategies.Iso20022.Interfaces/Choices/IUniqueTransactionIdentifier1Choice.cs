@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Element is a choice between a standard identifier and a proprietary code.
 /// </summary>
 [IsoId("_t08DgAxeEeuoAcnnpX2x_w")]
-public interface IUniqueTransactionIdentifier1Choice : IIsoChoice
-{
-}
+public interface IUniqueTransactionIdentifier1Choice : IIsoChoice { }

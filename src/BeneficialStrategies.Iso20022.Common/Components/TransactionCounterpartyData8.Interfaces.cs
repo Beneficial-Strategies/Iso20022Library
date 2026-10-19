@@ -11,9 +11,12 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record TransactionCounterpartyData8 : ITransactionCounterpartyData8
 {
     IOrganisationIdentification9Choice? ITransactionCounterpartyData8.Beneficiary => Beneficiary;
-    IOrganisationIdentification9Choice? ITransactionCounterpartyData8.TripartyAgent => TripartyAgent;
+    IOrganisationIdentification9Choice? ITransactionCounterpartyData8.TripartyAgent =>
+        TripartyAgent;
     IOrganisationIdentification9Choice? ITransactionCounterpartyData8.Broker => Broker;
-    IOrganisationIdentification9Choice? ITransactionCounterpartyData8.ClearingMember => ClearingMember;
-    ISettlementParties32Choice? ITransactionCounterpartyData8.SettlementParties => SettlementParties;
+    IOrganisationIdentification9Choice? ITransactionCounterpartyData8.ClearingMember =>
+        ClearingMember;
+    ISettlementParties32Choice? ITransactionCounterpartyData8.SettlementParties =>
+        SettlementParties;
     IOrganisationIdentification9Choice? ITransactionCounterpartyData8.AgentLender => AgentLender;
 }

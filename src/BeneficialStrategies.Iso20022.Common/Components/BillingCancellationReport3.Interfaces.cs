@@ -13,5 +13,6 @@ public partial record BillingCancellationReport3 : IBillingCancellationReport3
     IInvoiceLegalIssue5? IBillingCancellationReport3.RegulatoryData => RegulatoryData;
     ISystemAndCurrency1? IBillingCancellationReport3.Service => Service;
     IDatePeriod2 IBillingCancellationReport3.BillingPeriod => BillingPeriod;
-    ICancellationReason16Choice IBillingCancellationReport3.CancellationReason => CancellationReason;
+    ICancellationReason16Choice IBillingCancellationReport3.CancellationReason =>
+        CancellationReason;
 }

@@ -10,9 +10,12 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TradeAdditionalQueryCriteria3 : ITradeAdditionalQueryCriteria3
 {
-    IEnumerable<TransactionOperationType3Code> ITradeAdditionalQueryCriteria3.ActionType => ActionType;
-    ISecuritiesTradeVenueCriteria1Choice? ITradeAdditionalQueryCriteria3.ExecutionVenue => ExecutionVenue;
+    IEnumerable<TransactionOperationType3Code> ITradeAdditionalQueryCriteria3.ActionType =>
+        ActionType;
+    ISecuritiesTradeVenueCriteria1Choice? ITradeAdditionalQueryCriteria3.ExecutionVenue =>
+        ExecutionVenue;
     ICorporateSectorCriteria3? ITradeAdditionalQueryCriteria3.CorporateSector => CorporateSector;
     IEnumerable<ProductType4Code> ITradeAdditionalQueryCriteria3.AssetClass => AssetClass;
-    IProductClassificationCriteria1? ITradeAdditionalQueryCriteria3.ProductClassification => ProductClassification;
+    IProductClassificationCriteria1? ITradeAdditionalQueryCriteria3.ProductClassification =>
+        ProductClassification;
 }

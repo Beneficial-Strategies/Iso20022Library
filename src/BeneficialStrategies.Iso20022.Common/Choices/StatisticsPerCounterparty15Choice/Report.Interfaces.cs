@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty15Choic
 public partial record Report : IReport
 {
     IReportingRequirement2Choice IReport.ReconciliationCategories => ReconciliationCategories;
-    IEnumerable<IReconciliationCounterpartyPairStatistics6> IReport.TransactionDetails => TransactionDetails;
+    IEnumerable<IReconciliationCounterpartyPairStatistics6> IReport.TransactionDetails =>
+        TransactionDetails;
 }

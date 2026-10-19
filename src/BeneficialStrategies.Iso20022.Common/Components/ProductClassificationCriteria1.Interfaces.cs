@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ProductClassificationCriteria1 : IProductClassificationCriteria1
 {
-    IEnumerable<CFIOct2015Identifier> IProductClassificationCriteria1.ClassificationFinancialInstrument => ClassificationFinancialInstrument;
-    IEnumerable<Max52Text> IProductClassificationCriteria1.UniqueProductIdentifier => UniqueProductIdentifier;
+    IEnumerable<CFIOct2015Identifier> IProductClassificationCriteria1.ClassificationFinancialInstrument =>
+        ClassificationFinancialInstrument;
+    IEnumerable<Max52Text> IProductClassificationCriteria1.UniqueProductIdentifier =>
+        UniqueProductIdentifier;
 }

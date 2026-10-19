@@ -8,9 +8,13 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.auth;
 
-public partial record FinancialInstrumentReportingNonWorkingDayReportV01 : IFinancialInstrumentReportingNonWorkingDayReportV01
+public partial record FinancialInstrumentReportingNonWorkingDayReportV01
+    : IFinancialInstrumentReportingNonWorkingDayReportV01
 {
-    ISecuritiesMarketReportHeader1 IFinancialInstrumentReportingNonWorkingDayReportV01.ReportHeader => ReportHeader;
-    IEnumerable<ISecuritiesNonTradingDayReport1> IFinancialInstrumentReportingNonWorkingDayReportV01.NonWorkingDay => NonWorkingDay;
-    IEnumerable<ISupplementaryData1> IFinancialInstrumentReportingNonWorkingDayReportV01.SupplementaryData => SupplementaryData;
+    ISecuritiesMarketReportHeader1 IFinancialInstrumentReportingNonWorkingDayReportV01.ReportHeader =>
+        ReportHeader;
+    IEnumerable<ISecuritiesNonTradingDayReport1> IFinancialInstrumentReportingNonWorkingDayReportV01.NonWorkingDay =>
+        NonWorkingDay;
+    IEnumerable<ISupplementaryData1> IFinancialInstrumentReportingNonWorkingDayReportV01.SupplementaryData =>
+        SupplementaryData;
 }

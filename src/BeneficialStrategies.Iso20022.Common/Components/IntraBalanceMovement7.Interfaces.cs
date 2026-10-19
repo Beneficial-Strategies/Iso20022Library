@@ -12,7 +12,8 @@ public partial record IntraBalanceMovement7 : IIntraBalanceMovement7
 {
     ICashAccount40? IIntraBalanceMovement7.CashAccount => CashAccount;
     ISystemPartyIdentification8? IIntraBalanceMovement7.CashAccountOwner => CashAccountOwner;
-    IBranchAndFinancialInstitutionIdentification8? IIntraBalanceMovement7.CashAccountServicer => CashAccountServicer;
+    IBranchAndFinancialInstitutionIdentification8? IIntraBalanceMovement7.CashAccountServicer =>
+        CashAccountServicer;
     IIntraBalanceStatusAndReason2? IIntraBalanceMovement7.StatusAndReason => StatusAndReason;
     IIntraBalanceMovement6? IIntraBalanceMovement7.MovementDetails => MovementDetails;
 }

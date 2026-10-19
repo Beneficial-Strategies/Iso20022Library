@@ -10,7 +10,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PointOfInteractionCapabilities1 : IPointOfInteractionCapabilities1
 {
-    IEnumerable<CardDataReading1Code> IPointOfInteractionCapabilities1.CardReadingCapabilities => CardReadingCapabilities;
-    IEnumerable<CardholderVerificationCapability1Code> IPointOfInteractionCapabilities1.CardholderVerificationCapabilities => CardholderVerificationCapabilities;
-    IEnumerable<IDisplayCapabilities1> IPointOfInteractionCapabilities1.DisplayCapabilities => DisplayCapabilities;
+    IEnumerable<CardDataReading1Code> IPointOfInteractionCapabilities1.CardReadingCapabilities =>
+        CardReadingCapabilities;
+    IEnumerable<CardholderVerificationCapability1Code> IPointOfInteractionCapabilities1.CardholderVerificationCapabilities =>
+        CardholderVerificationCapabilities;
+    IEnumerable<IDisplayCapabilities1> IPointOfInteractionCapabilities1.DisplayCapabilities =>
+        DisplayCapabilities;
 }

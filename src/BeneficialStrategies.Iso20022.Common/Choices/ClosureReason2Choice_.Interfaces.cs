@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record ClosureReason2Choice_ : IClosureReason2Choice
-{
-}
+public abstract partial record ClosureReason2Choice_ : IClosureReason2Choice { }

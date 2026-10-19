@@ -13,7 +13,10 @@ public partial record StandingOrderSearchCriteria3 : IStandingOrderSearchCriteri
     IStandingOrderType1Choice? IStandingOrderSearchCriteria3.Type => Type;
     ICashAccount38? IStandingOrderSearchCriteria3.Account => Account;
     IDatePeriod2Choice? IStandingOrderSearchCriteria3.ValidityPeriod => ValidityPeriod;
-    IBranchAndFinancialInstitutionIdentification6? IStandingOrderSearchCriteria3.SystemMember => SystemMember;
-    IBranchAndFinancialInstitutionIdentification6? IStandingOrderSearchCriteria3.ResponsibleParty => ResponsibleParty;
-    IAccountIdentification4Choice? IStandingOrderSearchCriteria3.AssociatedPoolAccount => AssociatedPoolAccount;
+    IBranchAndFinancialInstitutionIdentification6? IStandingOrderSearchCriteria3.SystemMember =>
+        SystemMember;
+    IBranchAndFinancialInstitutionIdentification6? IStandingOrderSearchCriteria3.ResponsibleParty =>
+        ResponsibleParty;
+    IAccountIdentification4Choice? IStandingOrderSearchCriteria3.AssociatedPoolAccount =>
+        AssociatedPoolAccount;
 }

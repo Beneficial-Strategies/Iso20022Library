@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the format under which the payment that generated the entry was transmitted.
 /// </summary>
 [IsoId("_RIwV1Np-Ed-ak6NoX_4Aeg_1623377139")]
-public interface IPaymentOrigin1Choice : IIsoChoice
-{
-}
+public interface IPaymentOrigin1Choice : IIsoChoice { }

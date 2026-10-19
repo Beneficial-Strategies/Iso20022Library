@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record IntraDayRequirement1 : IIntraDayRequirement1
 {
-    IGenericIdentification165 IIntraDayRequirement1.MarginAccountIdentification => MarginAccountIdentification;
+    IGenericIdentification165 IIntraDayRequirement1.MarginAccountIdentification =>
+        MarginAccountIdentification;
 }

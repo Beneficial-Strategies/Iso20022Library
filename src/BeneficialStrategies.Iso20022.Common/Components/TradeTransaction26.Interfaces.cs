@@ -21,7 +21,8 @@ public partial record TradeTransaction26 : ITradeTransaction26
     IInterestRateLegs7? ITradeTransaction26.InterestRate => InterestRate;
     ICurrencyExchange10? ITradeTransaction26.Currency => Currency;
     IAssetClassCommodity2Choice? ITradeTransaction26.Commodity => Commodity;
-    IEnergySpecificAttribute5? ITradeTransaction26.EnergySpecificAttributes => EnergySpecificAttributes;
+    IEnergySpecificAttribute5? ITradeTransaction26.EnergySpecificAttributes =>
+        EnergySpecificAttributes;
     IOptionOrSwaption4? ITradeTransaction26.Option => Option;
     ICreditDerivative2? ITradeTransaction26.Credit => Credit;
 }

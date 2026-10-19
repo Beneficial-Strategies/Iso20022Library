@@ -12,18 +12,25 @@ public partial record FundCashForecast6 : IFundCashForecast6
 {
     IDateAndDateTimeChoice IFundCashForecast6.TradeDateTime => TradeDateTime;
     IDateAndDateTimeChoice? IFundCashForecast6.PreviousTradeDateTime => PreviousTradeDateTime;
-    IFinancialInstrument9 IFundCashForecast6.FinancialInstrumentDetails => FinancialInstrumentDetails;
+    IFinancialInstrument9 IFundCashForecast6.FinancialInstrumentDetails =>
+        FinancialInstrumentDetails;
     IEnumerable<ActiveOrHistoricCurrencyAndAmount> IFundCashForecast6.TotalNAV => TotalNAV;
-    IEnumerable<ActiveOrHistoricCurrencyAndAmount> IFundCashForecast6.PreviousTotalNAV => PreviousTotalNAV;
+    IEnumerable<ActiveOrHistoricCurrencyAndAmount> IFundCashForecast6.PreviousTotalNAV =>
+        PreviousTotalNAV;
     IFinancialInstrumentQuantity1? IFundCashForecast6.TotalUnitsNumber => TotalUnitsNumber;
-    IFinancialInstrumentQuantity1? IFundCashForecast6.PreviousTotalUnitsNumber => PreviousTotalUnitsNumber;
-    IEnumerable<ActiveOrHistoricCurrencyCode> IFundCashForecast6.InvestmentCurrency => InvestmentCurrency;
+    IFinancialInstrumentQuantity1? IFundCashForecast6.PreviousTotalUnitsNumber =>
+        PreviousTotalUnitsNumber;
+    IEnumerable<ActiveOrHistoricCurrencyCode> IFundCashForecast6.InvestmentCurrency =>
+        InvestmentCurrency;
     ICurrencyDesignation1? IFundCashForecast6.CurrencyStatus => CurrencyStatus;
     IUnitPrice19? IFundCashForecast6.Price => Price;
     IForeignExchangeTerms19? IFundCashForecast6.ForeignExchangeRate => ForeignExchangeRate;
     IEnumerable<IBreakdownByParty3> IFundCashForecast6.BreakdownByParty => BreakdownByParty;
     IEnumerable<IBreakdownByCountry2> IFundCashForecast6.BreakdownByCountry => BreakdownByCountry;
-    IEnumerable<IBreakdownByCurrency2> IFundCashForecast6.BreakdownByCurrency => BreakdownByCurrency;
-    IEnumerable<IBreakdownByUserDefinedParameter3> IFundCashForecast6.BreakdownByUserDefinedParameter => BreakdownByUserDefinedParameter;
-    IEnumerable<INetCashForecast4> IFundCashForecast6.NetCashForecastDetails => NetCashForecastDetails;
+    IEnumerable<IBreakdownByCurrency2> IFundCashForecast6.BreakdownByCurrency =>
+        BreakdownByCurrency;
+    IEnumerable<IBreakdownByUserDefinedParameter3> IFundCashForecast6.BreakdownByUserDefinedParameter =>
+        BreakdownByUserDefinedParameter;
+    IEnumerable<INetCashForecast4> IFundCashForecast6.NetCashForecastDetails =>
+        NetCashForecastDetails;
 }

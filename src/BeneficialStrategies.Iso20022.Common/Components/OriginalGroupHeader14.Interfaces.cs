@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record OriginalGroupHeader14 : IOriginalGroupHeader14
 {
     ICase5? IOriginalGroupHeader14.ResolvedCase => ResolvedCase;
-    IEnumerable<ICancellationStatusReason4> IOriginalGroupHeader14.CancellationStatusReasonInformation => CancellationStatusReasonInformation;
-    IEnumerable<INumberOfTransactionsPerStatus1> IOriginalGroupHeader14.NumberOfTransactionsPerCancellationStatus => NumberOfTransactionsPerCancellationStatus;
+    IEnumerable<ICancellationStatusReason4> IOriginalGroupHeader14.CancellationStatusReasonInformation =>
+        CancellationStatusReasonInformation;
+    IEnumerable<INumberOfTransactionsPerStatus1> IOriginalGroupHeader14.NumberOfTransactionsPerCancellationStatus =>
+        NumberOfTransactionsPerCancellationStatus;
 }

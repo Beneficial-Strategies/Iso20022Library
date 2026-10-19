@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Defines the type of billing compensation.
 /// </summary>
 [IsoId("_6Q_lgZqlEeGSON8vddiWzQ_2012916180")]
-public interface IBillingCompensationType1Choice : IIsoChoice
-{
-}
+public interface IBillingCompensationType1Choice : IIsoChoice { }

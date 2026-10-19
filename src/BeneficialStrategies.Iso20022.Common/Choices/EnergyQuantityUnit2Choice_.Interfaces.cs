@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record EnergyQuantityUnit2Choice_ : IEnergyQuantityUnit2Choice
-{
-}
+public abstract partial record EnergyQuantityUnit2Choice_ : IEnergyQuantityUnit2Choice { }

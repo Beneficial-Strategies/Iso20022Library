@@ -12,5 +12,6 @@ public partial record CancellationStatusReason4 : ICancellationStatusReason4
 {
     IPartyIdentification135? ICancellationStatusReason4.Originator => Originator;
     ICancellationStatusReason3Choice? ICancellationStatusReason4.Reason => Reason;
-    IEnumerable<Max105Text> ICancellationStatusReason4.AdditionalInformation => AdditionalInformation;
+    IEnumerable<Max105Text> ICancellationStatusReason4.AdditionalInformation =>
+        AdditionalInformation;
 }

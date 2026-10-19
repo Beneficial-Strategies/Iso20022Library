@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.DerivativePartyIdentification1Choice;
 
-public partial record CountrySubDivision : ICountrySubDivision
-{
-}
+public partial record CountrySubDivision : ICountrySubDivision { }

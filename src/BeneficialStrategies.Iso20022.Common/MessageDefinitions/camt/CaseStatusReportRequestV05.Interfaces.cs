@@ -12,5 +12,6 @@ public partial record CaseStatusReportRequestV05 : ICaseStatusReportRequestV05
 {
     IReportHeader7 ICaseStatusReportRequestV05.RequestHeader => RequestHeader;
     ICase6 ICaseStatusReportRequestV05.Case => Case;
-    IEnumerable<ISupplementaryData1> ICaseStatusReportRequestV05.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> ICaseStatusReportRequestV05.SupplementaryData =>
+        SupplementaryData;
 }

@@ -11,10 +11,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record PaymentTransaction75 : IPaymentTransaction75
 {
     ICase3? IPaymentTransaction75.Case => Case;
-    IOriginalGroupInformation3? IPaymentTransaction75.OriginalGroupInformation => OriginalGroupInformation;
+    IOriginalGroupInformation3? IPaymentTransaction75.OriginalGroupInformation =>
+        OriginalGroupInformation;
     IBranchAndFinancialInstitutionIdentification5? IPaymentTransaction75.Assigner => Assigner;
     IBranchAndFinancialInstitutionIdentification5? IPaymentTransaction75.Assignee => Assignee;
-    IEnumerable<IPaymentCancellationReason3> IPaymentTransaction75.CancellationReasonInformation => CancellationReasonInformation;
-    IOriginalTransactionReference24? IPaymentTransaction75.OriginalTransactionReference => OriginalTransactionReference;
+    IEnumerable<IPaymentCancellationReason3> IPaymentTransaction75.CancellationReasonInformation =>
+        CancellationReasonInformation;
+    IOriginalTransactionReference24? IPaymentTransaction75.OriginalTransactionReference =>
+        OriginalTransactionReference;
     IEnumerable<ISupplementaryData1> IPaymentTransaction75.SupplementaryData => SupplementaryData;
 }

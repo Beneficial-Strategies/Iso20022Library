@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityMetal2Choice;
 
-public partial record NonPrecious : INonPrecious
-{
-}
+public partial record NonPrecious : INonPrecious { }

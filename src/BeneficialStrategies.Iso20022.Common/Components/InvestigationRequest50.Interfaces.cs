@@ -12,12 +12,15 @@ public partial record InvestigationRequest50 : IInvestigationRequest50
 {
     IInvestigationRequestAction1? IInvestigationRequest50.RequestAction => RequestAction;
     IInvestigationType1Choice IInvestigationRequest50.InvestigationType => InvestigationType;
-    IInvestigationSubType1Choice? IInvestigationRequest50.InvestigationSubType => InvestigationSubType;
-    IUnderlyingInvestigationInstrument1Choice? IInvestigationRequest50.UnderlyingInstrument => UnderlyingInstrument;
+    IInvestigationSubType1Choice? IInvestigationRequest50.InvestigationSubType =>
+        InvestigationSubType;
+    IUnderlyingInvestigationInstrument1Choice? IInvestigationRequest50.UnderlyingInstrument =>
+        UnderlyingInstrument;
     IUnderlyingData13Choice? IInvestigationRequest50.Underlying => Underlying;
     IParty40Choice IInvestigationRequest50.Requestor => Requestor;
     IParty40Choice IInvestigationRequest50.Responder => Responder;
     IParty40Choice? IInvestigationRequest50.RequestOriginator => RequestOriginator;
     IParty40Choice? IInvestigationRequest50.ExpectedResponder => ExpectedResponder;
-    IEnumerable<IInvestigationServiceLevel1Choice> IInvestigationRequest50.ServiceLevel => ServiceLevel;
+    IEnumerable<IInvestigationServiceLevel1Choice> IInvestigationRequest50.ServiceLevel =>
+        ServiceLevel;
 }

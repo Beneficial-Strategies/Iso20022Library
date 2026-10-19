@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record ActiveOrHistoricAmountRange2Choice_ : IActiveOrHistoricAmountRange2Choice
-{
-}
+public abstract partial record ActiveOrHistoricAmountRange2Choice_
+    : IActiveOrHistoricAmountRange2Choice { }

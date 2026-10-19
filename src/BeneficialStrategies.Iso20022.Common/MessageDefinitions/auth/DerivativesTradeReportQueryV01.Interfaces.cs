@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.auth;
 
 public partial record DerivativesTradeReportQueryV01 : IDerivativesTradeReportQueryV01
 {
-    IPartyIdentification121Choice IDerivativesTradeReportQueryV01.RequestingAuthority => RequestingAuthority;
+    IPartyIdentification121Choice IDerivativesTradeReportQueryV01.RequestingAuthority =>
+        RequestingAuthority;
     ITradeReportQuery4Choice IDerivativesTradeReportQueryV01.TradeQueryData => TradeQueryData;
-    IEnumerable<ISupplementaryData1> IDerivativesTradeReportQueryV01.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IDerivativesTradeReportQueryV01.SupplementaryData =>
+        SupplementaryData;
 }

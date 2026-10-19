@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustification3Choic
 /// Indicates whether or not the referred item is a possible duplicate of a previous instruction or entry.
 /// </summary>
 [IsoId("_S_E3F0goEeaGKYpLDboHPQ")]
-public interface IPossibleDuplicateInstruction : IUnableToApplyJustification3Choice, IIsoChoiceVariant
+public interface IPossibleDuplicateInstruction
+    : IUnableToApplyJustification3Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

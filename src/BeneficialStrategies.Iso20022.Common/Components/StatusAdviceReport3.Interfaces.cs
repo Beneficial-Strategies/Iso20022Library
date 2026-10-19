@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record StatusAdviceReport3 : IStatusAdviceReport3
 {
-    IEnumerable<IGenericValidationRuleIdentification1> IStatusAdviceReport3.ValidationRule => ValidationRule;
+    IEnumerable<IGenericValidationRuleIdentification1> IStatusAdviceReport3.ValidationRule =>
+        ValidationRule;
     IOriginalReportStatistics3? IStatusAdviceReport3.Statistics => Statistics;
 }

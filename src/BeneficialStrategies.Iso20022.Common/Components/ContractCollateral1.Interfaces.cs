@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ContractCollateral1 : IContractCollateral1
 {
-    IEnumerable<ICashCollateral5> IContractCollateral1.CollateralDescription => CollateralDescription;
+    IEnumerable<ICashCollateral5> IContractCollateral1.CollateralDescription =>
+        CollateralDescription;
 }

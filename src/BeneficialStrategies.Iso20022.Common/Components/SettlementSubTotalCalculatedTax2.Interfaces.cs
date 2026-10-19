@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record SettlementSubTotalCalculatedTax2 : ISettlementSubTotalCalculatedTax2
 {
     IEnumerable<CurrencyAndAmount> ISettlementSubTotalCalculatedTax2.BasisAmount => BasisAmount;
-    IEnumerable<CurrencyAndAmount> ISettlementSubTotalCalculatedTax2.CalculatedAmount => CalculatedAmount;
-    ICurrencyReference3? ISettlementSubTotalCalculatedTax2.TaxCurrencyExchange => TaxCurrencyExchange;
+    IEnumerable<CurrencyAndAmount> ISettlementSubTotalCalculatedTax2.CalculatedAmount =>
+        CalculatedAmount;
+    ICurrencyReference3? ISettlementSubTotalCalculatedTax2.TaxCurrencyExchange =>
+        TaxCurrencyExchange;
 }

@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.camt;
 public partial record GetStandingOrderV05 : IGetStandingOrderV05
 {
     IMessageHeader4 IGetStandingOrderV05.MessageHeader => MessageHeader;
-    IStandingOrderQuery5? IGetStandingOrderV05.StandingOrderQueryDefinition => StandingOrderQueryDefinition;
+    IStandingOrderQuery5? IGetStandingOrderV05.StandingOrderQueryDefinition =>
+        StandingOrderQueryDefinition;
     IEnumerable<ISupplementaryData1> IGetStandingOrderV05.SupplementaryData => SupplementaryData;
 }

@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record UnableToApplyJustification4Choice_ : IUnableToApplyJustification4Choice
-{
-}
+public abstract partial record UnableToApplyJustification4Choice_
+    : IUnableToApplyJustification4Choice { }

@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record EarlyPayment1 : IEarlyPayment1
 {
-    IEnumerable<IEarlyPaymentsVAT1> IEarlyPayment1.EarlyPaymentTaxSpecification => EarlyPaymentTaxSpecification;
+    IEnumerable<IEarlyPaymentsVAT1> IEarlyPayment1.EarlyPaymentTaxSpecification =>
+        EarlyPaymentTaxSpecification;
 }

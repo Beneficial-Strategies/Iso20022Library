@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// References of the original instruction for which an action has been requested.
 /// </summary>
 [IsoId("_jx45V-5NEeCisYr99QEiWA_-1477565107")]
-public interface IReferences36Choice : IIsoChoice
-{
-}
+public interface IReferences36Choice : IIsoChoice { }

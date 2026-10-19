@@ -11,13 +11,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record ContractMatchingCriteria3 : IContractMatchingCriteria3
 {
     ICompareISINIdentifier2? IContractMatchingCriteria3.ISIN => ISIN;
-    ICompareUniqueProductIdentifier2? IContractMatchingCriteria3.UniqueProductIdentifier => UniqueProductIdentifier;
-    ICompareText1? IContractMatchingCriteria3.AlternativeInstrumentIdentification => AlternativeInstrumentIdentification;
-    ICompareCFIIdentifier3? IContractMatchingCriteria3.ProductClassification => ProductClassification;
-    ICompareFinancialInstrumentContractType1? IContractMatchingCriteria3.ContractType => ContractType;
+    ICompareUniqueProductIdentifier2? IContractMatchingCriteria3.UniqueProductIdentifier =>
+        UniqueProductIdentifier;
+    ICompareText1? IContractMatchingCriteria3.AlternativeInstrumentIdentification =>
+        AlternativeInstrumentIdentification;
+    ICompareCFIIdentifier3? IContractMatchingCriteria3.ProductClassification =>
+        ProductClassification;
+    ICompareFinancialInstrumentContractType1? IContractMatchingCriteria3.ContractType =>
+        ContractType;
     ICompareAssetClass1? IContractMatchingCriteria3.AssetClass => AssetClass;
-    ICompareTrueFalseIndicator3? IContractMatchingCriteria3.DerivativeBasedOnCryptoAsset => DerivativeBasedOnCryptoAsset;
-    ICompareUnderlyingInstrument3? IContractMatchingCriteria3.UnderlyingInstrument => UnderlyingInstrument;
-    ICompareActiveOrHistoricCurrencyCode1? IContractMatchingCriteria3.SettlementCurrency => SettlementCurrency;
-    ICompareActiveOrHistoricCurrencyCode1? IContractMatchingCriteria3.SettlementCurrencySecondLeg => SettlementCurrencySecondLeg;
+    ICompareTrueFalseIndicator3? IContractMatchingCriteria3.DerivativeBasedOnCryptoAsset =>
+        DerivativeBasedOnCryptoAsset;
+    ICompareUnderlyingInstrument3? IContractMatchingCriteria3.UnderlyingInstrument =>
+        UnderlyingInstrument;
+    ICompareActiveOrHistoricCurrencyCode1? IContractMatchingCriteria3.SettlementCurrency =>
+        SettlementCurrency;
+    ICompareActiveOrHistoricCurrencyCode1? IContractMatchingCriteria3.SettlementCurrencySecondLeg =>
+        SettlementCurrencySecondLeg;
 }

@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentAttributes3Ch
 
 public partial record Other : IOther
 {
-    ISecurityInstrumentDescription11 IOther.FinancialInstrumentGeneralAttributes => FinancialInstrumentGeneralAttributes;
+    ISecurityInstrumentDescription11 IOther.FinancialInstrumentGeneralAttributes =>
+        FinancialInstrumentGeneralAttributes;
     IDebtInstrument4? IOther.DebtInstrumentAttributes => DebtInstrumentAttributes;
     IDerivativeInstrument6 IOther.DerivativeInstrumentAttributes => DerivativeInstrumentAttributes;
 }

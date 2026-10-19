@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.OptionDateOrPeriod1Choice;
 
-public partial record EarliestExerciseDate : IEarliestExerciseDate
-{
-}
+public partial record EarliestExerciseDate : IEarliestExerciseDate { }

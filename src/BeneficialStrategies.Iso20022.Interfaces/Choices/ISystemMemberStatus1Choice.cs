@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the status of a member within a system.
 /// </summary>
 [IsoId("_V4OMw3hhEeidzqjNEfehPg")]
-public interface ISystemMemberStatus1Choice : IIsoChoice
-{
-}
+public interface ISystemMemberStatus1Choice : IIsoChoice { }

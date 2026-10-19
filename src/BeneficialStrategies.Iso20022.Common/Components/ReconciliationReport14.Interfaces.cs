@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ReconciliationReport14 : IReconciliationReport14
 {
-    ITradeTransactionIdentification24 IReconciliationReport14.TransactionIdentification => TransactionIdentification;
+    ITradeTransactionIdentification24 IReconciliationReport14.TransactionIdentification =>
+        TransactionIdentification;
     IMatchingCriteria16 IReconciliationReport14.MatchingCriteria => MatchingCriteria;
 }

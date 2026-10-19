@@ -13,5 +13,6 @@ public partial record TradePartyIdentificationQuery9 : ITradePartyIdentification
     IEnumerable<LEIIdentifier> ITradePartyIdentificationQuery9.LEI => LEI;
     IEnumerable<CountryCode> ITradePartyIdentificationQuery9.CountryCode => CountryCode;
     IEnumerable<AnyBICDec2014Identifier> ITradePartyIdentificationQuery9.AnyBIC => AnyBIC;
-    IEnumerable<Max50Text> ITradePartyIdentificationQuery9.ClientIdentification => ClientIdentification;
+    IEnumerable<Max50Text> ITradePartyIdentificationQuery9.ClientIdentification =>
+        ClientIdentification;
 }

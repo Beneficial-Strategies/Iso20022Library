@@ -10,13 +10,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ChargesRecord9 : IChargesRecord9
 {
-    IBranchAndFinancialInstitutionIdentification8? IChargesRecord9.ChargesRequestor => ChargesRequestor;
+    IBranchAndFinancialInstitutionIdentification8? IChargesRecord9.ChargesRequestor =>
+        ChargesRequestor;
     ITransactionReferences7 IChargesRecord9.UnderlyingTransaction => UnderlyingTransaction;
     IDateAndDateTime2Choice? IChargesRecord9.ValueDate => ValueDate;
     IBranchAndFinancialInstitutionIdentification8? IChargesRecord9.DebtorAgent => DebtorAgent;
     ICashAccount40? IChargesRecord9.DebtorAgentAccount => DebtorAgentAccount;
-    IBranchAndFinancialInstitutionIdentification8? IChargesRecord9.ChargesAccountAgent => ChargesAccountAgent;
+    IBranchAndFinancialInstitutionIdentification8? IChargesRecord9.ChargesAccountAgent =>
+        ChargesAccountAgent;
     ICashAccount40? IChargesRecord9.ChargesAccountAgentAccount => ChargesAccountAgentAccount;
     IChargeType3Choice? IChargesRecord9.Type => Type;
-    IInstructionForInstructedAgent1? IChargesRecord9.InstructionForInstructedAgent => InstructionForInstructedAgent;
+    IInstructionForInstructedAgent1? IChargesRecord9.InstructionForInstructedAgent =>
+        InstructionForInstructedAgent;
 }

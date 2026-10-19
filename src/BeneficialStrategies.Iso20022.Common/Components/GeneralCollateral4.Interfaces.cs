@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record GeneralCollateral4 : IGeneralCollateral4
 {
-    IEnumerable<IFinancialInstrument104> IGeneralCollateral4.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    IEnumerable<IFinancialInstrument104> IGeneralCollateral4.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
 }

@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CorporateSectorCriteria3 : ICorporateSectorCriteria3
 {
-    IEnumerable<FinancialPartySectorType1Code> ICorporateSectorCriteria3.FinancialInstitutionSector => FinancialInstitutionSector;
-    IEnumerable<NonFinancialPartySector1Code> ICorporateSectorCriteria3.NonFinancialInstitutionSector => NonFinancialInstitutionSector;
+    IEnumerable<FinancialPartySectorType1Code> ICorporateSectorCriteria3.FinancialInstitutionSector =>
+        FinancialInstitutionSector;
+    IEnumerable<NonFinancialPartySector1Code> ICorporateSectorCriteria3.NonFinancialInstitutionSector =>
+        NonFinancialInstitutionSector;
 }

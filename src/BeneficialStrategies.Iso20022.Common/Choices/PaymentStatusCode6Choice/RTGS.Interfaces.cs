@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusCode6Choice;
 
-public partial record RTGS : IRTGS
-{
-}
+public partial record RTGS : IRTGS { }

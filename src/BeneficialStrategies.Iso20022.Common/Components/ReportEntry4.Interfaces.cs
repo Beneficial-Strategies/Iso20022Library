@@ -14,7 +14,8 @@ public partial record ReportEntry4 : IReportEntry4
     IDateAndDateTimeChoice? IReportEntry4.ValueDate => ValueDate;
     IEnumerable<ICashBalanceAvailability2> IReportEntry4.Availability => Availability;
     IBankTransactionCodeStructure4 IReportEntry4.BankTransactionCode => BankTransactionCode;
-    IMessageIdentification2? IReportEntry4.AdditionalInformationIndicator => AdditionalInformationIndicator;
+    IMessageIdentification2? IReportEntry4.AdditionalInformationIndicator =>
+        AdditionalInformationIndicator;
     IAmountAndCurrencyExchange3? IReportEntry4.AmountDetails => AmountDetails;
     ICharges4? IReportEntry4.Charges => Charges;
     ITechnicalInputChannel1Choice? IReportEntry4.TechnicalInputChannel => TechnicalInputChannel;

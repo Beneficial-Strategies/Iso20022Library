@@ -8,9 +8,12 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.auth;
 
-public partial record ContractRegistrationStatementRequestV04 : IContractRegistrationStatementRequestV04
+public partial record ContractRegistrationStatementRequestV04
+    : IContractRegistrationStatementRequestV04
 {
     ICurrencyControlHeader8 IContractRegistrationStatementRequestV04.GroupHeader => GroupHeader;
-    IEnumerable<IContractRegistrationStatementRequest3> IContractRegistrationStatementRequestV04.StatementRequest => StatementRequest;
-    IEnumerable<ISupplementaryData1> IContractRegistrationStatementRequestV04.SupplementaryData => SupplementaryData;
+    IEnumerable<IContractRegistrationStatementRequest3> IContractRegistrationStatementRequestV04.StatementRequest =>
+        StatementRequest;
+    IEnumerable<ISupplementaryData1> IContractRegistrationStatementRequestV04.SupplementaryData =>
+        SupplementaryData;
 }

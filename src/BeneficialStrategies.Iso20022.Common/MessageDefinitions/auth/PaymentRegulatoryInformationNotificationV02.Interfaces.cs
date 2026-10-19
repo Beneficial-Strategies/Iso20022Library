@@ -8,9 +8,12 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.auth;
 
-public partial record PaymentRegulatoryInformationNotificationV02 : IPaymentRegulatoryInformationNotificationV02
+public partial record PaymentRegulatoryInformationNotificationV02
+    : IPaymentRegulatoryInformationNotificationV02
 {
     ICurrencyControlHeader5 IPaymentRegulatoryInformationNotificationV02.GroupHeader => GroupHeader;
-    IEnumerable<IRegulatoryReportingNotification2> IPaymentRegulatoryInformationNotificationV02.TransactionNotification => TransactionNotification;
-    IEnumerable<ISupplementaryData1> IPaymentRegulatoryInformationNotificationV02.SupplementaryData => SupplementaryData;
+    IEnumerable<IRegulatoryReportingNotification2> IPaymentRegulatoryInformationNotificationV02.TransactionNotification =>
+        TransactionNotification;
+    IEnumerable<ISupplementaryData1> IPaymentRegulatoryInformationNotificationV02.SupplementaryData =>
+        SupplementaryData;
 }

@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CurrencyQueryDefinition3 : ICurrencyQueryDefinition3
 {
-    ICurrencyCriteriaDefinition1Choice? ICurrencyQueryDefinition3.CurrencyCriteria => CurrencyCriteria;
+    ICurrencyCriteriaDefinition1Choice? ICurrencyQueryDefinition3.CurrencyCriteria =>
+        CurrencyCriteria;
 }

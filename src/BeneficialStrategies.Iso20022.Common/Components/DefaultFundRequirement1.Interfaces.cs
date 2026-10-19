@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record DefaultFundRequirement1 : IDefaultFundRequirement1
 {
-    IGenericIdentification165 IDefaultFundRequirement1.ClearingMemberIdentification => ClearingMemberIdentification;
+    IGenericIdentification165 IDefaultFundRequirement1.ClearingMemberIdentification =>
+        ClearingMemberIdentification;
 }

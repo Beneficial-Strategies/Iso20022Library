@@ -12,7 +12,8 @@ public partial record PayInScheduleV03 : IPayInScheduleV03
 {
     IPartyIdentification73Choice IPayInScheduleV03.PartyIdentification => PartyIdentification;
     IReportData4 IPayInScheduleV03.ReportData => ReportData;
-    IEnumerable<IBalanceStatus2> IPayInScheduleV03.PayInScheduleLongBalance => PayInScheduleLongBalance;
+    IEnumerable<IBalanceStatus2> IPayInScheduleV03.PayInScheduleLongBalance =>
+        PayInScheduleLongBalance;
     IEnumerable<IPayInScheduleItems1> IPayInScheduleV03.PayInScheduleItem => PayInScheduleItem;
     IPayInFactors1? IPayInScheduleV03.PayInFactors => PayInFactors;
     IEnumerable<ISupplementaryData1> IPayInScheduleV03.SupplementaryData => SupplementaryData;

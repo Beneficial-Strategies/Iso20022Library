@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TransactionCertificateContract1 : ITransactionCertificateContract1
 {
-    IContractRegistrationReference1Choice? ITransactionCertificateContract1.ContractReference => ContractReference;
+    IContractRegistrationReference1Choice? ITransactionCertificateContract1.ContractReference =>
+        ContractReference;
 }

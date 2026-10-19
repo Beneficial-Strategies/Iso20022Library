@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedTransactionStatistics2Ch
 
 public partial record DetailedStatistics : IDetailedStatistics
 {
-    IEnumerable<IRejectionReason53> IDetailedStatistics.TransactionsRejectionsReason => TransactionsRejectionsReason;
+    IEnumerable<IRejectionReason53> IDetailedStatistics.TransactionsRejectionsReason =>
+        TransactionsRejectionsReason;
 }

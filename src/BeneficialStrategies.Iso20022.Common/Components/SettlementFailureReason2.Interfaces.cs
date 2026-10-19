@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record SettlementFailureReason2 : ISettlementFailureReason2
-{
-}
+public partial record SettlementFailureReason2 : ISettlementFailureReason2 { }

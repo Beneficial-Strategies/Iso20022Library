@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between ways of identifying a payment instruction by its references and business identification.
 /// </summary>
 [IsoId("_5F42wAKxEe2rHs6fbn9-0A")]
-public interface IPaymentIdentification7Choice : IIsoChoice
-{
-}
+public interface IPaymentIdentification7Choice : IIsoChoice { }

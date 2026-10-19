@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PortfolioCode1Choice;
 
-public partial record Portfolio : IPortfolio
-{
-}
+public partial record Portfolio : IPortfolio { }

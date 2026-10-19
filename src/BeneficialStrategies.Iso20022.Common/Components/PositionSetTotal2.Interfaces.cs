@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record PositionSetTotal2 : IPositionSetTotal2
 {
     INotionalAmountLegs6? IPositionSetTotal2.Notional => Notional;
-    IEnumerable<ActiveOrHistoricCurrencyAnd19DecimalAmount> IPositionSetTotal2.OtherPaymentAmount => OtherPaymentAmount;
+    IEnumerable<ActiveOrHistoricCurrencyAnd19DecimalAmount> IPositionSetTotal2.OtherPaymentAmount =>
+        OtherPaymentAmount;
 }

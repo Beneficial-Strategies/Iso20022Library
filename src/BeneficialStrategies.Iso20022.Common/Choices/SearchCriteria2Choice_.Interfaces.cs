@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record SearchCriteria2Choice_ : ISearchCriteria2Choice
-{
-}
+public abstract partial record SearchCriteria2Choice_ : ISearchCriteria2Choice { }

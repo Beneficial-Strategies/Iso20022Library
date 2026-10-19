@@ -7,6 +7,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Information related to the post-trade related report.</summary>
 [IsoId("_nktjQGIoEfCeoPFCHQnhvA")]
-public interface IPostTradeData1Choice : IIsoChoice
-{
-}
+public interface IPostTradeData1Choice : IIsoChoice { }

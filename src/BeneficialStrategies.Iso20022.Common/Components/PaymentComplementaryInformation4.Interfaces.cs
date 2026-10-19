@@ -10,29 +10,44 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record PaymentComplementaryInformation4 : IPaymentComplementaryInformation4
 {
-    IPaymentTypeInformation25? IPaymentComplementaryInformation4.PaymentTypeInformation => PaymentTypeInformation;
+    IPaymentTypeInformation25? IPaymentComplementaryInformation4.PaymentTypeInformation =>
+        PaymentTypeInformation;
     IAmountType4Choice? IPaymentComplementaryInformation4.Amount => Amount;
     IPartyIdentification43? IPaymentComplementaryInformation4.UltimateDebtor => UltimateDebtor;
     IPartyIdentification43? IPaymentComplementaryInformation4.Debtor => Debtor;
     ICashAccount24? IPaymentComplementaryInformation4.DebtorAccount => DebtorAccount;
-    IBranchAndFinancialInstitutionIdentification5? IPaymentComplementaryInformation4.DebtorAgent => DebtorAgent;
+    IBranchAndFinancialInstitutionIdentification5? IPaymentComplementaryInformation4.DebtorAgent =>
+        DebtorAgent;
     ICashAccount24? IPaymentComplementaryInformation4.DebtorAgentAccount => DebtorAgentAccount;
-    ISettlementInstruction1? IPaymentComplementaryInformation4.SettlementInformation => SettlementInformation;
-    IBranchAndFinancialInstitutionIdentification5? IPaymentComplementaryInformation4.IntermediaryAgent1 => IntermediaryAgent1;
-    ICashAccount24? IPaymentComplementaryInformation4.IntermediaryAgent1Account => IntermediaryAgent1Account;
-    IBranchAndFinancialInstitutionIdentification5? IPaymentComplementaryInformation4.IntermediaryAgent2 => IntermediaryAgent2;
-    ICashAccount24? IPaymentComplementaryInformation4.IntermediaryAgent2Account => IntermediaryAgent2Account;
-    IBranchAndFinancialInstitutionIdentification5? IPaymentComplementaryInformation4.IntermediaryAgent3 => IntermediaryAgent3;
-    ICashAccount24? IPaymentComplementaryInformation4.IntermediaryAgent3Account => IntermediaryAgent3Account;
-    IBranchAndFinancialInstitutionIdentification5? IPaymentComplementaryInformation4.CreditorAgent => CreditorAgent;
+    ISettlementInstruction1? IPaymentComplementaryInformation4.SettlementInformation =>
+        SettlementInformation;
+    IBranchAndFinancialInstitutionIdentification5? IPaymentComplementaryInformation4.IntermediaryAgent1 =>
+        IntermediaryAgent1;
+    ICashAccount24? IPaymentComplementaryInformation4.IntermediaryAgent1Account =>
+        IntermediaryAgent1Account;
+    IBranchAndFinancialInstitutionIdentification5? IPaymentComplementaryInformation4.IntermediaryAgent2 =>
+        IntermediaryAgent2;
+    ICashAccount24? IPaymentComplementaryInformation4.IntermediaryAgent2Account =>
+        IntermediaryAgent2Account;
+    IBranchAndFinancialInstitutionIdentification5? IPaymentComplementaryInformation4.IntermediaryAgent3 =>
+        IntermediaryAgent3;
+    ICashAccount24? IPaymentComplementaryInformation4.IntermediaryAgent3Account =>
+        IntermediaryAgent3Account;
+    IBranchAndFinancialInstitutionIdentification5? IPaymentComplementaryInformation4.CreditorAgent =>
+        CreditorAgent;
     ICashAccount24? IPaymentComplementaryInformation4.CreditorAgentAccount => CreditorAgentAccount;
     IPartyIdentification43? IPaymentComplementaryInformation4.Creditor => Creditor;
     ICashAccount24? IPaymentComplementaryInformation4.CreditorAccount => CreditorAccount;
     IPartyIdentification43? IPaymentComplementaryInformation4.UltimateCreditor => UltimateCreditor;
     IPurpose2Choice? IPaymentComplementaryInformation4.Purpose => Purpose;
-    IBranchAndFinancialInstitutionIdentification5? IPaymentComplementaryInformation4.PreviousInstructingAgent => PreviousInstructingAgent;
-    ICashAccount24? IPaymentComplementaryInformation4.PreviousInstructingAgentAccount => PreviousInstructingAgentAccount;
-    IEnumerable<IInstructionForNextAgent1> IPaymentComplementaryInformation4.InstructionForNextAgent => InstructionForNextAgent;
-    IEnumerable<IInstructionForCreditorAgent1> IPaymentComplementaryInformation4.InstructionForCreditorAgent => InstructionForCreditorAgent;
-    IRemittanceInformation10? IPaymentComplementaryInformation4.RemittanceInformation => RemittanceInformation;
+    IBranchAndFinancialInstitutionIdentification5? IPaymentComplementaryInformation4.PreviousInstructingAgent =>
+        PreviousInstructingAgent;
+    ICashAccount24? IPaymentComplementaryInformation4.PreviousInstructingAgentAccount =>
+        PreviousInstructingAgentAccount;
+    IEnumerable<IInstructionForNextAgent1> IPaymentComplementaryInformation4.InstructionForNextAgent =>
+        InstructionForNextAgent;
+    IEnumerable<IInstructionForCreditorAgent1> IPaymentComplementaryInformation4.InstructionForCreditorAgent =>
+        InstructionForCreditorAgent;
+    IRemittanceInformation10? IPaymentComplementaryInformation4.RemittanceInformation =>
+        RemittanceInformation;
 }

@@ -13,6 +13,7 @@ public partial record OrderIdentification2 : IOrderIdentification2
     IOrderPriority1? IOrderIdentification2.Priority => Priority;
     IFinancialInstrument99Choice IOrderIdentification2.FinancialInstrument => FinancialInstrument;
     IValidityPeriod1Choice? IOrderIdentification2.ValidityPeriod => ValidityPeriod;
-    IEnumerable<IOrderRestriction1Choice> IOrderIdentification2.OrderRestriction => OrderRestriction;
+    IEnumerable<IOrderRestriction1Choice> IOrderIdentification2.OrderRestriction =>
+        OrderRestriction;
     IOrderEventType1Choice? IOrderIdentification2.EventType => EventType;
 }

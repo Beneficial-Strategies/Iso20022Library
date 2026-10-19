@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record GroupHeader134 : IGroupHeader134
-{
-}
+public partial record GroupHeader134 : IGroupHeader134 { }

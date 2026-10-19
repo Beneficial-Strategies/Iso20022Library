@@ -7,6 +7,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Agreement under which or rules under which the transaction should be processed.</summary>
 [IsoId("_DguWIIQ7Eey-Qu7YK0yj_A")]
-public interface IServiceCategory1Choice : IIsoChoice
-{
-}
+public interface IServiceCategory1Choice : IIsoChoice { }

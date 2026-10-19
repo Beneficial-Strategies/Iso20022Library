@@ -12,5 +12,6 @@ public partial record ChargesPaymentRequestV02 : IChargesPaymentRequestV02
 {
     IGroupHeader115 IChargesPaymentRequestV02.GroupHeader => GroupHeader;
     ICharges3Choice IChargesPaymentRequestV02.Charges => Charges;
-    IEnumerable<ISupplementaryData1> IChargesPaymentRequestV02.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IChargesPaymentRequestV02.SupplementaryData =>
+        SupplementaryData;
 }

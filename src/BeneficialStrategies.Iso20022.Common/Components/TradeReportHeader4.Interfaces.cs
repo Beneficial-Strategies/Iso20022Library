@@ -12,6 +12,7 @@ public partial record TradeReportHeader4 : ITradeReportHeader4
 {
     IPagination1? ITradeReportHeader4.MessagePagination => MessagePagination;
     IEnumerable<Max100Text> ITradeReportHeader4.CompetentAuthority => CompetentAuthority;
-    IOrganisationIdentification15Choice? ITradeReportHeader4.NewTradeRepositoryIdentifier => NewTradeRepositoryIdentifier;
+    IOrganisationIdentification15Choice? ITradeReportHeader4.NewTradeRepositoryIdentifier =>
+        NewTradeRepositoryIdentifier;
     IEnumerable<Max100Text> ITradeReportHeader4.ReportingPurpose => ReportingPurpose;
 }

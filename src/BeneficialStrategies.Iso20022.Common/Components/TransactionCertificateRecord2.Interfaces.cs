@@ -12,5 +12,6 @@ public partial record TransactionCertificateRecord2 : ITransactionCertificateRec
 {
     ITransactionCertificate5 ITransactionCertificateRecord2.Transaction => Transaction;
     ITransactionCertificateContract2? ITransactionCertificateRecord2.Contract => Contract;
-    IEnumerable<IDocumentGeneralInformation5> ITransactionCertificateRecord2.Attachment => Attachment;
+    IEnumerable<IDocumentGeneralInformation5> ITransactionCertificateRecord2.Attachment =>
+        Attachment;
 }

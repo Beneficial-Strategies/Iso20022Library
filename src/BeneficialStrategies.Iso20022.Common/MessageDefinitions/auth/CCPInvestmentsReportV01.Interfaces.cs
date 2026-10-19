@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.auth;
 public partial record CCPInvestmentsReportV01 : ICCPInvestmentsReportV01
 {
     IEnumerable<IInvestment1Choice> ICCPInvestmentsReportV01.Investment => Investment;
-    IEnumerable<ISupplementaryData1> ICCPInvestmentsReportV01.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> ICCPInvestmentsReportV01.SupplementaryData =>
+        SupplementaryData;
 }

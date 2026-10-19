@@ -10,9 +10,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record LimitIdentification5 : ILimitIdentification5
 {
-    ISystemIdentification2Choice? ILimitIdentification5.SystemIdentification => SystemIdentification;
-    IBranchAndFinancialInstitutionIdentification6? ILimitIdentification5.BilateralLimitCounterpartyIdentification => BilateralLimitCounterpartyIdentification;
+    ISystemIdentification2Choice? ILimitIdentification5.SystemIdentification =>
+        SystemIdentification;
+    IBranchAndFinancialInstitutionIdentification6? ILimitIdentification5.BilateralLimitCounterpartyIdentification =>
+        BilateralLimitCounterpartyIdentification;
     ILimitType1Choice ILimitIdentification5.Type => Type;
-    IBranchAndFinancialInstitutionIdentification6? ILimitIdentification5.AccountOwner => AccountOwner;
-    IAccountIdentification4Choice? ILimitIdentification5.AccountIdentification => AccountIdentification;
+    IBranchAndFinancialInstitutionIdentification6? ILimitIdentification5.AccountOwner =>
+        AccountOwner;
+    IAccountIdentification4Choice? ILimitIdentification5.AccountIdentification =>
+        AccountIdentification;
 }

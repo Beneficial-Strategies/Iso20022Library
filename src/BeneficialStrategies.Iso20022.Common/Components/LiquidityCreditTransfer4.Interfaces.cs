@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record LiquidityCreditTransfer4 : ILiquidityCreditTransfer4
 {
-    IPaymentIdentification8? ILiquidityCreditTransfer4.LiquidityTransferIdentification => LiquidityTransferIdentification;
+    IPaymentIdentification8? ILiquidityCreditTransfer4.LiquidityTransferIdentification =>
+        LiquidityTransferIdentification;
     IBranchAndFinancialInstitutionIdentification8? ILiquidityCreditTransfer4.Creditor => Creditor;
     ICashAccount40? ILiquidityCreditTransfer4.CreditorAccount => CreditorAccount;
     IAmount2Choice ILiquidityCreditTransfer4.TransferredAmount => TransferredAmount;

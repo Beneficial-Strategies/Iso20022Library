@@ -10,10 +10,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TradeTransaction50 : ITradeTransaction50
 {
-    IUniqueTransactionIdentifier2Choice? ITradeTransaction50.TransactionIdentification => TransactionIdentification;
-    IUniqueTransactionIdentifier3Choice? ITradeTransaction50.PriorTransactionIdentification => PriorTransactionIdentification;
-    IUniqueTransactionIdentifier3Choice? ITradeTransaction50.SubsequentTransactionIdentification => SubsequentTransactionIdentification;
-    ICollateralPortfolioCode6Choice? ITradeTransaction50.CollateralPortfolioCode => CollateralPortfolioCode;
+    IUniqueTransactionIdentifier2Choice? ITradeTransaction50.TransactionIdentification =>
+        TransactionIdentification;
+    IUniqueTransactionIdentifier3Choice? ITradeTransaction50.PriorTransactionIdentification =>
+        PriorTransactionIdentification;
+    IUniqueTransactionIdentifier3Choice? ITradeTransaction50.SubsequentTransactionIdentification =>
+        SubsequentTransactionIdentification;
+    ICollateralPortfolioCode6Choice? ITradeTransaction50.CollateralPortfolioCode =>
+        CollateralPortfolioCode;
     IPriceData2? ITradeTransaction50.TransactionPrice => TransactionPrice;
     INotionalAmountLegs5? ITradeTransaction50.NotionalAmount => NotionalAmount;
     INotionalQuantityLegs5? ITradeTransaction50.NotionalQuantity => NotionalQuantity;
@@ -28,7 +32,8 @@ public partial record TradeTransaction50 : ITradeTransaction50
     ICurrencyExchange22? ITradeTransaction50.Currency => Currency;
     IAssetClassCommodity7Choice? ITradeTransaction50.Commodity => Commodity;
     IOptionOrSwaption11? ITradeTransaction50.Option => Option;
-    IEnergySpecificAttribute9? ITradeTransaction50.EnergySpecificAttributes => EnergySpecificAttributes;
+    IEnergySpecificAttribute9? ITradeTransaction50.EnergySpecificAttributes =>
+        EnergySpecificAttributes;
     ICreditDerivative4? ITradeTransaction50.Credit => Credit;
     IEnumerable<IOtherPayment5> ITradeTransaction50.OtherPayment => OtherPayment;
     IPackage4? ITradeTransaction50.Package => Package;

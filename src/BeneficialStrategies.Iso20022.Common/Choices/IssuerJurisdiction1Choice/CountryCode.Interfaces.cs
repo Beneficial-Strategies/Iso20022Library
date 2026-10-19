@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.IssuerJurisdiction1Choice;
 
-public partial record CountryCode : ICountryCode
-{
-}
+public partial record CountryCode : ICountryCode { }

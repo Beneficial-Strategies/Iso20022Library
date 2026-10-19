@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CounterpartyMatchingCriteria1 : ICounterpartyMatchingCriteria1
 {
-    ICompareOrganisationIdentification1? ICounterpartyMatchingCriteria1.ReportingCounterparty => ReportingCounterparty;
-    ICompareOrganisationIdentification1? ICounterpartyMatchingCriteria1.OtherCounterparty => OtherCounterparty;
+    ICompareOrganisationIdentification1? ICounterpartyMatchingCriteria1.ReportingCounterparty =>
+        ReportingCounterparty;
+    ICompareOrganisationIdentification1? ICounterpartyMatchingCriteria1.OtherCounterparty =>
+        OtherCounterparty;
     ICompareCounterpartySide1? ICounterpartyMatchingCriteria1.CounterpartySide => CounterpartySide;
 }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Provides information about the exchange rate basis for a foreign exchange transaction.
 /// </summary>
 [IsoId("_n2_eYLppEea_jI1vMH_RbA")]
-public interface IExchangeRateBasis1Choice : IIsoChoice
-{
-}
+public interface IExchangeRateBasis1Choice : IIsoChoice { }

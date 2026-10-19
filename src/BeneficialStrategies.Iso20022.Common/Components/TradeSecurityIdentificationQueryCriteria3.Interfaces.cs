@@ -8,11 +8,16 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record TradeSecurityIdentificationQueryCriteria3 : ITradeSecurityIdentificationQueryCriteria3
+public partial record TradeSecurityIdentificationQueryCriteria3
+    : ITradeSecurityIdentificationQueryCriteria3
 {
-    IEnumerable<ISecurityIdentificationQueryCriteria1> ITradeSecurityIdentificationQueryCriteria3.Identification => Identification;
-    IEnumerable<FinancialInstrumentContractType2Code> ITradeSecurityIdentificationQueryCriteria3.ContractType => ContractType;
+    IEnumerable<ISecurityIdentificationQueryCriteria1> ITradeSecurityIdentificationQueryCriteria3.Identification =>
+        Identification;
+    IEnumerable<FinancialInstrumentContractType2Code> ITradeSecurityIdentificationQueryCriteria3.ContractType =>
+        ContractType;
     IEnumerable<IISINQueryCriteria1> ITradeSecurityIdentificationQueryCriteria3.ISIN => ISIN;
-    IEnumerable<IUPIQueryCriteria1> ITradeSecurityIdentificationQueryCriteria3.UniqueProductIdentifier => UniqueProductIdentifier;
-    IEnumerable<ISecurityIdentificationQuery4Choice> ITradeSecurityIdentificationQueryCriteria3.UnderlyingInstrumentIdentification => UnderlyingInstrumentIdentification;
+    IEnumerable<IUPIQueryCriteria1> ITradeSecurityIdentificationQueryCriteria3.UniqueProductIdentifier =>
+        UniqueProductIdentifier;
+    IEnumerable<ISecurityIdentificationQuery4Choice> ITradeSecurityIdentificationQueryCriteria3.UnderlyingInstrumentIdentification =>
+        UnderlyingInstrumentIdentification;
 }

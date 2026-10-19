@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingContract3Choice;
 
 public partial record Trade : ITrade
 {
-    IDocumentIdentification22? ITrade.ContractDocumentIdentification => ContractDocumentIdentification;
+    IDocumentIdentification22? ITrade.ContractDocumentIdentification =>
+        ContractDocumentIdentification;
     IEnumerable<ITradeParty5> ITrade.Buyer => Buyer;
     IEnumerable<ITradeParty5> ITrade.Seller => Seller;
     IExchangeRate1? ITrade.ExchangeRateInformation => ExchangeRateInformation;

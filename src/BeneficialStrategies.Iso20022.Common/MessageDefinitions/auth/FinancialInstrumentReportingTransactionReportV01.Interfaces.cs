@@ -8,8 +8,11 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.auth;
 
-public partial record FinancialInstrumentReportingTransactionReportV01 : IFinancialInstrumentReportingTransactionReportV01
+public partial record FinancialInstrumentReportingTransactionReportV01
+    : IFinancialInstrumentReportingTransactionReportV01
 {
-    IEnumerable<IReportingTransactionType1Choice> IFinancialInstrumentReportingTransactionReportV01.Transaction => Transaction;
-    IEnumerable<ISupplementaryData1> IFinancialInstrumentReportingTransactionReportV01.SupplementaryData => SupplementaryData;
+    IEnumerable<IReportingTransactionType1Choice> IFinancialInstrumentReportingTransactionReportV01.Transaction =>
+        Transaction;
+    IEnumerable<ISupplementaryData1> IFinancialInstrumentReportingTransactionReportV01.SupplementaryData =>
+        SupplementaryData;
 }

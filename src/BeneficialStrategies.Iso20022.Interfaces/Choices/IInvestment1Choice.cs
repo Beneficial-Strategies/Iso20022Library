@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the financial instrument purchased by a central counterparty using clearing member assets.
 /// </summary>
 [IsoId("_nrsigLJUEeaYqc4G3TTwhA")]
-public interface IInvestment1Choice : IIsoChoice
-{
-}
+public interface IInvestment1Choice : IIsoChoice { }

@@ -8,15 +8,23 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.camt;
 
-public partial record FundDetailedConfirmedCashForecastReportV04 : IFundDetailedConfirmedCashForecastReportV04
+public partial record FundDetailedConfirmedCashForecastReportV04
+    : IFundDetailedConfirmedCashForecastReportV04
 {
-    IMessageIdentification1 IFundDetailedConfirmedCashForecastReportV04.MessageIdentification => MessageIdentification;
-    IAdditionalReference3? IFundDetailedConfirmedCashForecastReportV04.PoolReference => PoolReference;
-    IEnumerable<IAdditionalReference3> IFundDetailedConfirmedCashForecastReportV04.PreviousReference => PreviousReference;
-    IEnumerable<IAdditionalReference3> IFundDetailedConfirmedCashForecastReportV04.RelatedReference => RelatedReference;
+    IMessageIdentification1 IFundDetailedConfirmedCashForecastReportV04.MessageIdentification =>
+        MessageIdentification;
+    IAdditionalReference3? IFundDetailedConfirmedCashForecastReportV04.PoolReference =>
+        PoolReference;
+    IEnumerable<IAdditionalReference3> IFundDetailedConfirmedCashForecastReportV04.PreviousReference =>
+        PreviousReference;
+    IEnumerable<IAdditionalReference3> IFundDetailedConfirmedCashForecastReportV04.RelatedReference =>
+        RelatedReference;
     IPagination IFundDetailedConfirmedCashForecastReportV04.MessagePagination => MessagePagination;
-    IFund4? IFundDetailedConfirmedCashForecastReportV04.FundOrSubFundDetails => FundOrSubFundDetails;
-    IEnumerable<IFundCashForecast6> IFundDetailedConfirmedCashForecastReportV04.FundCashForecastDetails => FundCashForecastDetails;
-    INetCashForecast3? IFundDetailedConfirmedCashForecastReportV04.ConsolidatedNetCashForecast => ConsolidatedNetCashForecast;
+    IFund4? IFundDetailedConfirmedCashForecastReportV04.FundOrSubFundDetails =>
+        FundOrSubFundDetails;
+    IEnumerable<IFundCashForecast6> IFundDetailedConfirmedCashForecastReportV04.FundCashForecastDetails =>
+        FundCashForecastDetails;
+    INetCashForecast3? IFundDetailedConfirmedCashForecastReportV04.ConsolidatedNetCashForecast =>
+        ConsolidatedNetCashForecast;
     IEnumerable<IExtension1> IFundDetailedConfirmedCashForecastReportV04.Extension => Extension;
 }

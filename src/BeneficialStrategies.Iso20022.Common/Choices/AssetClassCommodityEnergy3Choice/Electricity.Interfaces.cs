@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnergy3Choice;
 
-public partial record Electricity : IElectricity
-{
-}
+public partial record Electricity : IElectricity { }

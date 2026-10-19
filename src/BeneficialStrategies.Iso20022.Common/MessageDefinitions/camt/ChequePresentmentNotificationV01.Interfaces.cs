@@ -12,5 +12,6 @@ public partial record ChequePresentmentNotificationV01 : IChequePresentmentNotif
 {
     IGroupHeader103 IChequePresentmentNotificationV01.GroupHeader => GroupHeader;
     IEnumerable<ICheque13> IChequePresentmentNotificationV01.Cheque => Cheque;
-    IEnumerable<ISupplementaryData1> IChequePresentmentNotificationV01.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IChequePresentmentNotificationV01.SupplementaryData =>
+        SupplementaryData;
 }

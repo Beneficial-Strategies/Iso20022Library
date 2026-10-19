@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record StandingOrderReport3 : IStandingOrderReport3
 {
-    IStandingOrderIdentification8 IStandingOrderReport3.StandingOrderIdentification => StandingOrderIdentification;
-    IStandingOrderOrError10Choice IStandingOrderReport3.StandingOrderOrError => StandingOrderOrError;
+    IStandingOrderIdentification8 IStandingOrderReport3.StandingOrderIdentification =>
+        StandingOrderIdentification;
+    IStandingOrderOrError10Choice IStandingOrderReport3.StandingOrderOrError =>
+        StandingOrderOrError;
 }

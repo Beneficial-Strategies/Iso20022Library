@@ -12,12 +12,17 @@ public partial record OriginalItemReference3 : IOriginalItemReference3
 {
     ICashAccount24? IOriginalItemReference3.Account => Account;
     IParty12Choice? IOriginalItemReference3.AccountOwner => AccountOwner;
-    IBranchAndFinancialInstitutionIdentification5? IOriginalItemReference3.AccountServicer => AccountServicer;
+    IBranchAndFinancialInstitutionIdentification5? IOriginalItemReference3.AccountServicer =>
+        AccountServicer;
     ICashAccount24? IOriginalItemReference3.RelatedAccount => RelatedAccount;
     IParty12Choice? IOriginalItemReference3.Debtor => Debtor;
-    IBranchAndFinancialInstitutionIdentification5? IOriginalItemReference3.DebtorAgent => DebtorAgent;
-    IBranchAndFinancialInstitutionIdentification5? IOriginalItemReference3.IntermediaryAgent => IntermediaryAgent;
+    IBranchAndFinancialInstitutionIdentification5? IOriginalItemReference3.DebtorAgent =>
+        DebtorAgent;
+    IBranchAndFinancialInstitutionIdentification5? IOriginalItemReference3.IntermediaryAgent =>
+        IntermediaryAgent;
     IPurpose2Choice? IOriginalItemReference3.Purpose => Purpose;
-    IRemittanceLocation4? IOriginalItemReference3.RelatedRemittanceInformation => RelatedRemittanceInformation;
-    IRemittanceInformation10? IOriginalItemReference3.RemittanceInformation => RemittanceInformation;
+    IRemittanceLocation4? IOriginalItemReference3.RelatedRemittanceInformation =>
+        RelatedRemittanceInformation;
+    IRemittanceInformation10? IOriginalItemReference3.RemittanceInformation =>
+        RemittanceInformation;
 }

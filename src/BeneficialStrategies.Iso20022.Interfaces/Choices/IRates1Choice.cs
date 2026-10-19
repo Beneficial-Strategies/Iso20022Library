@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Type of interest rate of the loan.
 /// </summary>
 [IsoId("_4OX54Hg1EeuXJdYjLmnO3w")]
-public interface IRates1Choice : IIsoChoice
-{
-}
+public interface IRates1Choice : IIsoChoice { }

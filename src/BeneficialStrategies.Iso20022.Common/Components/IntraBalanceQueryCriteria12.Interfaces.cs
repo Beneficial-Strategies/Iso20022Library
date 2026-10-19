@@ -10,11 +10,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record IntraBalanceQueryCriteria12 : IIntraBalanceQueryCriteria12
 {
-    IEnumerable<Max35Text> IIntraBalanceQueryCriteria12.ModificationRequestIdentification => ModificationRequestIdentification;
-    IEnumerable<IModificationProcessingStatus9Choice> IIntraBalanceQueryCriteria12.ProcessingStatus => ProcessingStatus;
-    IEnumerable<IAccountIdentificationSearchCriteria2Choice> IIntraBalanceQueryCriteria12.CashAccount => CashAccount;
-    IEnumerable<ISystemPartyIdentification8> IIntraBalanceQueryCriteria12.CashAccountOwner => CashAccountOwner;
-    IBranchAndFinancialInstitutionIdentification8? IIntraBalanceQueryCriteria12.CashAccountServicer => CashAccountServicer;
-    IEnumerable<ISystemPartyIdentification8> IIntraBalanceQueryCriteria12.MessageOriginator => MessageOriginator;
-    IDateAndDateTimeSearch5Choice? IIntraBalanceQueryCriteria12.CreationDateTime => CreationDateTime;
+    IEnumerable<Max35Text> IIntraBalanceQueryCriteria12.ModificationRequestIdentification =>
+        ModificationRequestIdentification;
+    IEnumerable<IModificationProcessingStatus9Choice> IIntraBalanceQueryCriteria12.ProcessingStatus =>
+        ProcessingStatus;
+    IEnumerable<IAccountIdentificationSearchCriteria2Choice> IIntraBalanceQueryCriteria12.CashAccount =>
+        CashAccount;
+    IEnumerable<ISystemPartyIdentification8> IIntraBalanceQueryCriteria12.CashAccountOwner =>
+        CashAccountOwner;
+    IBranchAndFinancialInstitutionIdentification8? IIntraBalanceQueryCriteria12.CashAccountServicer =>
+        CashAccountServicer;
+    IEnumerable<ISystemPartyIdentification8> IIntraBalanceQueryCriteria12.MessageOriginator =>
+        MessageOriginator;
+    IDateAndDateTimeSearch5Choice? IIntraBalanceQueryCriteria12.CreationDateTime =>
+        CreationDateTime;
 }

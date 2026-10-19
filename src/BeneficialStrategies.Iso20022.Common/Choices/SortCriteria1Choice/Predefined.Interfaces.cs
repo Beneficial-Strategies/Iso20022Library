@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.SortCriteria1Choice;
 
-public partial record Predefined : IPredefined
-{
-}
+public partial record Predefined : IPredefined { }

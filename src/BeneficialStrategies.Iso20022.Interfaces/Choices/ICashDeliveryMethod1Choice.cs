@@ -7,6 +7,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 
 /// <summary>Specifies the delivery method for the cash deposit.</summary>
 [IsoId("_btJ0EOOwEe-NFYIkYc90gw")]
-public interface ICashDeliveryMethod1Choice : IIsoChoice
-{
-}
+public interface ICashDeliveryMethod1Choice : IIsoChoice { }

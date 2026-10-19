@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice of format for the type of supporting letter.
 /// </summary>
 [IsoId("_l_Ug0LbxEeu9Cp6InX88Vw")]
-public interface ISupportLetterType1Choice : IIsoChoice
-{
-}
+public interface ISupportLetterType1Choice : IIsoChoice { }

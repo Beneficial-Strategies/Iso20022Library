@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.Amount3Choice;
 
-public partial record AmountWithCurrency : IAmountWithCurrency
-{
-}
+public partial record AmountWithCurrency : IAmountWithCurrency { }

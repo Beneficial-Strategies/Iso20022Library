@@ -13,10 +13,14 @@ public partial record SettlementFailsInstrument2 : ISettlementFailsInstrument2
     ISettlementTotalData1Choice ISettlementFailsInstrument2.Equity => Equity;
     ISettlementTotalData1Choice ISettlementFailsInstrument2.SovereignDebt => SovereignDebt;
     ISettlementTotalData1Choice ISettlementFailsInstrument2.Bond => Bond;
-    ISettlementTotalData1Choice ISettlementFailsInstrument2.OtherTransferableSecurities => OtherTransferableSecurities;
-    ISettlementTotalData1Choice ISettlementFailsInstrument2.ExchangeTradedFunds => ExchangeTradedFunds;
-    ISettlementTotalData1Choice ISettlementFailsInstrument2.CollectiveInvestmentUndertakings => CollectiveInvestmentUndertakings;
-    ISettlementTotalData1Choice ISettlementFailsInstrument2.MoneyMarketInstrument => MoneyMarketInstrument;
+    ISettlementTotalData1Choice ISettlementFailsInstrument2.OtherTransferableSecurities =>
+        OtherTransferableSecurities;
+    ISettlementTotalData1Choice ISettlementFailsInstrument2.ExchangeTradedFunds =>
+        ExchangeTradedFunds;
+    ISettlementTotalData1Choice ISettlementFailsInstrument2.CollectiveInvestmentUndertakings =>
+        CollectiveInvestmentUndertakings;
+    ISettlementTotalData1Choice ISettlementFailsInstrument2.MoneyMarketInstrument =>
+        MoneyMarketInstrument;
     ISettlementTotalData1Choice ISettlementFailsInstrument2.EmissionAllowance => EmissionAllowance;
     ISettlementTotalData1Choice ISettlementFailsInstrument2.Other => Other;
 }

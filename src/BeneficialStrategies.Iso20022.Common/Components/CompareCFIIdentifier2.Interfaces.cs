@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record CompareCFIIdentifier2 : ICompareCFIIdentifier2
-{
-}
+public partial record CompareCFIIdentifier2 : ICompareCFIIdentifier2 { }

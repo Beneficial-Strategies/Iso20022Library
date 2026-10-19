@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CounterpartyIdentification11 : ICounterpartyIdentification11
 {
-    IOrganisationIdentification15Choice ICounterpartyIdentification11.Identification => Identification;
+    IOrganisationIdentification15Choice ICounterpartyIdentification11.Identification =>
+        Identification;
     ICounterpartyTradeNature7Choice? ICounterpartyIdentification11.Nature => Nature;
     IBranch5Choice? ICounterpartyIdentification11.Branch => Branch;
 }

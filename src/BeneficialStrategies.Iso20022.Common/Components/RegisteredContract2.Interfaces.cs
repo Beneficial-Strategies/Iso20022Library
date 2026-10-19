@@ -11,8 +11,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record RegisteredContract2 : IRegisteredContract2
 {
     ITradeParty2 IRegisteredContract2.ReportingParty => ReportingParty;
-    IBranchAndFinancialInstitutionIdentification5 IRegisteredContract2.RegistrationAgent => RegistrationAgent;
-    IDocumentIdentification29 IRegisteredContract2.OriginalRegisteredContract => OriginalRegisteredContract;
+    IBranchAndFinancialInstitutionIdentification5 IRegisteredContract2.RegistrationAgent =>
+        RegistrationAgent;
+    IDocumentIdentification29 IRegisteredContract2.OriginalRegisteredContract =>
+        OriginalRegisteredContract;
     IContractClosureReason1Choice IRegisteredContract2.ClosureReason => ClosureReason;
     IEnumerable<ISupplementaryData1> IRegisteredContract2.SupplementaryData => SupplementaryData;
 }

@@ -8,8 +8,11 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.auth;
 
-public partial record SecuritiesFinancingReportingMissingCollateralRequestV02 : ISecuritiesFinancingReportingMissingCollateralRequestV02
+public partial record SecuritiesFinancingReportingMissingCollateralRequestV02
+    : ISecuritiesFinancingReportingMissingCollateralRequestV02
 {
-    IEnumerable<ITradeTransactionIdentification18> ISecuritiesFinancingReportingMissingCollateralRequestV02.TransactionIdentification => TransactionIdentification;
-    IEnumerable<ISupplementaryData1> ISecuritiesFinancingReportingMissingCollateralRequestV02.SupplementaryData => SupplementaryData;
+    IEnumerable<ITradeTransactionIdentification18> ISecuritiesFinancingReportingMissingCollateralRequestV02.TransactionIdentification =>
+        TransactionIdentification;
+    IEnumerable<ISupplementaryData1> ISecuritiesFinancingReportingMissingCollateralRequestV02.SupplementaryData =>
+        SupplementaryData;
 }

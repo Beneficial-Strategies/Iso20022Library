@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityIndustrialProduct2Choice;
 
-public partial record Construction : IConstruction
-{
-}
+public partial record Construction : IConstruction { }

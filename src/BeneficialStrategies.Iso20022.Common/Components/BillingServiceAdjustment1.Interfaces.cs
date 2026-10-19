@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record BillingServiceAdjustment1 : IBillingServiceAdjustment1
 {
     IAmountAndDirection34 IBillingServiceAdjustment1.Amount => Amount;
-    IAmountAndDirection34? IBillingServiceAdjustment1.BalanceRequiredAmount => BalanceRequiredAmount;
+    IAmountAndDirection34? IBillingServiceAdjustment1.BalanceRequiredAmount =>
+        BalanceRequiredAmount;
     IBillingSubServiceIdentification1? IBillingServiceAdjustment1.SubService => SubService;
     IAmountAndDirection34? IBillingServiceAdjustment1.PriceChange => PriceChange;
     IAmountAndDirection34? IBillingServiceAdjustment1.OriginalPrice => OriginalPrice;

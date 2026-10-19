@@ -12,5 +12,6 @@ public partial record Initiation : IInitiation
 {
     IUnderlyingGroupInformation1? IInitiation.OriginalGroupInformation => OriginalGroupInformation;
     IDateAndDateTime2Choice? IInitiation.RequestedExecutionDate => RequestedExecutionDate;
-    IOriginalTransactionReference28? IInitiation.OriginalTransactionReference => OriginalTransactionReference;
+    IOriginalTransactionReference28? IInitiation.OriginalTransactionReference =>
+        OriginalTransactionReference;
 }

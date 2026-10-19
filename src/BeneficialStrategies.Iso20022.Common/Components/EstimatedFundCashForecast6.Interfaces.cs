@@ -11,17 +11,27 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record EstimatedFundCashForecast6 : IEstimatedFundCashForecast6
 {
     IDateAndDateTimeChoice IEstimatedFundCashForecast6.TradeDateTime => TradeDateTime;
-    IDateAndDateTimeChoice? IEstimatedFundCashForecast6.PreviousTradeDateTime => PreviousTradeDateTime;
-    IFinancialInstrument9 IEstimatedFundCashForecast6.FinancialInstrumentDetails => FinancialInstrumentDetails;
-    IEnumerable<ActiveOrHistoricCurrencyAndAmount> IEstimatedFundCashForecast6.EstimatedTotalNAV => EstimatedTotalNAV;
-    IEnumerable<ActiveOrHistoricCurrencyAndAmount> IEstimatedFundCashForecast6.PreviousTotalNAV => PreviousTotalNAV;
-    IFinancialInstrumentQuantity1? IEstimatedFundCashForecast6.EstimatedTotalUnitsNumber => EstimatedTotalUnitsNumber;
-    IFinancialInstrumentQuantity1? IEstimatedFundCashForecast6.PreviousTotalUnitsNumber => PreviousTotalUnitsNumber;
-    IEnumerable<ActiveOrHistoricCurrencyCode> IEstimatedFundCashForecast6.InvestmentCurrency => InvestmentCurrency;
+    IDateAndDateTimeChoice? IEstimatedFundCashForecast6.PreviousTradeDateTime =>
+        PreviousTradeDateTime;
+    IFinancialInstrument9 IEstimatedFundCashForecast6.FinancialInstrumentDetails =>
+        FinancialInstrumentDetails;
+    IEnumerable<ActiveOrHistoricCurrencyAndAmount> IEstimatedFundCashForecast6.EstimatedTotalNAV =>
+        EstimatedTotalNAV;
+    IEnumerable<ActiveOrHistoricCurrencyAndAmount> IEstimatedFundCashForecast6.PreviousTotalNAV =>
+        PreviousTotalNAV;
+    IFinancialInstrumentQuantity1? IEstimatedFundCashForecast6.EstimatedTotalUnitsNumber =>
+        EstimatedTotalUnitsNumber;
+    IFinancialInstrumentQuantity1? IEstimatedFundCashForecast6.PreviousTotalUnitsNumber =>
+        PreviousTotalUnitsNumber;
+    IEnumerable<ActiveOrHistoricCurrencyCode> IEstimatedFundCashForecast6.InvestmentCurrency =>
+        InvestmentCurrency;
     ICurrencyDesignation1? IEstimatedFundCashForecast6.CurrencyStatus => CurrencyStatus;
     IUnitPrice19? IEstimatedFundCashForecast6.Price => Price;
     IForeignExchangeTerms19? IEstimatedFundCashForecast6.ForeignExchangeRate => ForeignExchangeRate;
-    IEnumerable<ICashInForecast6> IEstimatedFundCashForecast6.EstimatedCashInForecastDetails => EstimatedCashInForecastDetails;
-    IEnumerable<ICashOutForecast6> IEstimatedFundCashForecast6.EstimatedCashOutForecastDetails => EstimatedCashOutForecastDetails;
-    IEnumerable<INetCashForecast4> IEstimatedFundCashForecast6.EstimatedNetCashForecastDetails => EstimatedNetCashForecastDetails;
+    IEnumerable<ICashInForecast6> IEstimatedFundCashForecast6.EstimatedCashInForecastDetails =>
+        EstimatedCashInForecastDetails;
+    IEnumerable<ICashOutForecast6> IEstimatedFundCashForecast6.EstimatedCashOutForecastDetails =>
+        EstimatedCashOutForecastDetails;
+    IEnumerable<INetCashForecast4> IEstimatedFundCashForecast6.EstimatedNetCashForecastDetails =>
+        EstimatedNetCashForecastDetails;
 }

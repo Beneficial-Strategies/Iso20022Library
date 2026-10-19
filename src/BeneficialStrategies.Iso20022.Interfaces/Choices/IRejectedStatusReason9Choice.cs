@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Reason for which a transaction report is rejected.
 /// </summary>
 [IsoId("_RXWyh9p-Ed-ak6NoX_4Aeg_-1456677531")]
-public interface IRejectedStatusReason9Choice : IIsoChoice
-{
-}
+public interface IRejectedStatusReason9Choice : IIsoChoice { }

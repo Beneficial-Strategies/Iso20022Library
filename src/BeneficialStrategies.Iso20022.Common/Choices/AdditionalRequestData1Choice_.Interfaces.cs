@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record AdditionalRequestData1Choice_ : IAdditionalRequestData1Choice
-{
-}
+public abstract partial record AdditionalRequestData1Choice_ : IAdditionalRequestData1Choice { }

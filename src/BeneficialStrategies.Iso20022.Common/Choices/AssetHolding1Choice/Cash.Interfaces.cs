@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AssetHolding1Choice;
 
-public partial record Cash : ICash
-{
-}
+public partial record Cash : ICash { }

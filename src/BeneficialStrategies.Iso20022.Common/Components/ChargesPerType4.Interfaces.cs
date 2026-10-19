@@ -12,7 +12,8 @@ public partial record ChargesPerType4 : IChargesPerType4
 {
     ITotalCharges7? IChargesPerType4.TotalChargesPerChargeType => TotalChargesPerChargeType;
     ICashAccount40? IChargesPerType4.ChargesAccount => ChargesAccount;
-    IBranchAndFinancialInstitutionIdentification8? IChargesPerType4.ChargesAccountOwner => ChargesAccountOwner;
+    IBranchAndFinancialInstitutionIdentification8? IChargesPerType4.ChargesAccountOwner =>
+        ChargesAccountOwner;
     IChargeType3Choice IChargesPerType4.Type => Type;
     IEnumerable<IChargesPerTypeRecord4> IChargesPerType4.Record => Record;
 }

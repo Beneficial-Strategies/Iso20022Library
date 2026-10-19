@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification118Choice;
 
-public partial record LEI : ILEI
-{
-}
+public partial record LEI : ILEI { }

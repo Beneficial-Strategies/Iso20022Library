@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the transaction type as defined in the relevant regulation or explicit no data report.
 /// </summary>
 [IsoId("_9tfhEzOYEeqBfed1bmSPqg")]
-public interface ISettlementFailsDailyTransactionType1Choice : IIsoChoice
-{
-}
+public interface ISettlementFailsDailyTransactionType1Choice : IIsoChoice { }

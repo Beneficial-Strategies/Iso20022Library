@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the billing rate identification code.
 /// </summary>
 [IsoId("_6Q10hpqlEeGSON8vddiWzQ_1451899054")]
-public interface IBillingRateIdentification1Choice : IIsoChoice
-{
-}
+public interface IBillingRateIdentification1Choice : IIsoChoice { }

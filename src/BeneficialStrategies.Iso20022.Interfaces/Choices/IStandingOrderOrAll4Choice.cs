@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Characteristics of one or all standing orders set by the member and managed by the transaction administrator.
 /// </summary>
 [IsoId("_6jk-kTEyEe6g-ffJsqGiSA")]
-public interface IStandingOrderOrAll4Choice : IIsoChoice
-{
-}
+public interface IStandingOrderOrAll4Choice : IIsoChoice { }

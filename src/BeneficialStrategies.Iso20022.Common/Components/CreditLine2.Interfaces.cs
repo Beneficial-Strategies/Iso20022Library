@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record CreditLine2 : ICreditLine2
-{
-}
+public partial record CreditLine2 : ICreditLine2 { }

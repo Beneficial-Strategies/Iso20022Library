@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.CommodityDerivative2Choice;
 
-public partial record Energy : IEnergy
-{
-}
+public partial record Energy : IEnergy { }

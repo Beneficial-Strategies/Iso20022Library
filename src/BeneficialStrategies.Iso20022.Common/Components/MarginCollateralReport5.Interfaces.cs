@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record MarginCollateralReport5 : IMarginCollateralReport5
 {
-    ICollateralPortfolioCode6Choice IMarginCollateralReport5.CollateralPortfolioCode => CollateralPortfolioCode;
+    ICollateralPortfolioCode6Choice IMarginCollateralReport5.CollateralPortfolioCode =>
+        CollateralPortfolioCode;
 }

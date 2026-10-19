@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record NonEquitySubClass1 : INonEquitySubClass1
 {
-    IEnumerable<INonEquitySubClassSegmentationCriterion1> INonEquitySubClass1.SegmentationCriteria => SegmentationCriteria;
+    IEnumerable<INonEquitySubClassSegmentationCriterion1> INonEquitySubClass1.SegmentationCriteria =>
+        SegmentationCriteria;
 }

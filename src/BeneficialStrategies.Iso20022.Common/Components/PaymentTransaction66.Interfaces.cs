@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record PaymentTransaction66 : IPaymentTransaction66
 {
     ICase3? IPaymentTransaction66.ResolvedCase => ResolvedCase;
-    IEnumerable<ICancellationStatusReason2> IPaymentTransaction66.CancellationStatusReasonInformation => CancellationStatusReasonInformation;
-    IOriginalTransactionReference22? IPaymentTransaction66.OriginalTransactionReference => OriginalTransactionReference;
+    IEnumerable<ICancellationStatusReason2> IPaymentTransaction66.CancellationStatusReasonInformation =>
+        CancellationStatusReasonInformation;
+    IOriginalTransactionReference22? IPaymentTransaction66.OriginalTransactionReference =>
+        OriginalTransactionReference;
 }

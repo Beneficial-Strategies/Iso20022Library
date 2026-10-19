@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification1Choice;
 
-public partial record UPIC : IUPIC
-{
-}
+public partial record UPIC : IUPIC { }

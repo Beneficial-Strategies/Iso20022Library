@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record DerivativeInstrument9 : IDerivativeInstrument9
 {
-    IUnderlyingIdentification3Choice IDerivativeInstrument9.UnderlyingInstrument => UnderlyingInstrument;
+    IUnderlyingIdentification3Choice IDerivativeInstrument9.UnderlyingInstrument =>
+        UnderlyingInstrument;
     ISecuritiesTransactionPrice4Choice? IDerivativeInstrument9.StrikePrice => StrikePrice;
-    IAssetClassAttributes1Choice? IDerivativeInstrument9.AssetClassSpecificAttributes => AssetClassSpecificAttributes;
+    IAssetClassAttributes1Choice? IDerivativeInstrument9.AssetClassSpecificAttributes =>
+        AssetClassSpecificAttributes;
 }

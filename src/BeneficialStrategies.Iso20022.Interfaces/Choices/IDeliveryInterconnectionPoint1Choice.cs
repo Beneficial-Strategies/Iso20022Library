@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Identification of the delivery point(s) of market area(s) or the interconnection point of a transportation contract.
 /// </summary>
 [IsoId("_pRKJ0IOrEeWqmeP8QNJBew")]
-public interface IDeliveryInterconnectionPoint1Choice : IIsoChoice
-{
-}
+public interface IDeliveryInterconnectionPoint1Choice : IIsoChoice { }

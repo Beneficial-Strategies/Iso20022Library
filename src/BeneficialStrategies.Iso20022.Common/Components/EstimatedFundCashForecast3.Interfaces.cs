@@ -11,12 +11,20 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record EstimatedFundCashForecast3 : IEstimatedFundCashForecast3
 {
     IDateAndDateTimeChoice IEstimatedFundCashForecast3.TradeDateTime => TradeDateTime;
-    IDateAndDateTimeChoice IEstimatedFundCashForecast3.PreviousTradeDateTime => PreviousTradeDateTime;
-    IFinancialInstrument9 IEstimatedFundCashForecast3.FinancialInstrumentDetails => FinancialInstrumentDetails;
-    IFinancialInstrumentQuantity1? IEstimatedFundCashForecast3.EstimatedTotalUnitsNumber => EstimatedTotalUnitsNumber;
-    IFinancialInstrumentQuantity1? IEstimatedFundCashForecast3.PreviousTotalUnitsNumber => PreviousTotalUnitsNumber;
-    IEnumerable<ActiveOrHistoricCurrencyCode> IEstimatedFundCashForecast3.InvestmentCurrency => InvestmentCurrency;
-    IEnumerable<ICashInForecast4> IEstimatedFundCashForecast3.EstimatedCashInForecastDetails => EstimatedCashInForecastDetails;
-    IEnumerable<ICashOutForecast4> IEstimatedFundCashForecast3.EstimatedCashOutForecastDetails => EstimatedCashOutForecastDetails;
-    IEnumerable<INetCashForecast2> IEstimatedFundCashForecast3.EstimatedNetCashForecastDetails => EstimatedNetCashForecastDetails;
+    IDateAndDateTimeChoice IEstimatedFundCashForecast3.PreviousTradeDateTime =>
+        PreviousTradeDateTime;
+    IFinancialInstrument9 IEstimatedFundCashForecast3.FinancialInstrumentDetails =>
+        FinancialInstrumentDetails;
+    IFinancialInstrumentQuantity1? IEstimatedFundCashForecast3.EstimatedTotalUnitsNumber =>
+        EstimatedTotalUnitsNumber;
+    IFinancialInstrumentQuantity1? IEstimatedFundCashForecast3.PreviousTotalUnitsNumber =>
+        PreviousTotalUnitsNumber;
+    IEnumerable<ActiveOrHistoricCurrencyCode> IEstimatedFundCashForecast3.InvestmentCurrency =>
+        InvestmentCurrency;
+    IEnumerable<ICashInForecast4> IEstimatedFundCashForecast3.EstimatedCashInForecastDetails =>
+        EstimatedCashInForecastDetails;
+    IEnumerable<ICashOutForecast4> IEstimatedFundCashForecast3.EstimatedCashOutForecastDetails =>
+        EstimatedCashOutForecastDetails;
+    IEnumerable<INetCashForecast2> IEstimatedFundCashForecast3.EstimatedNetCashForecastDetails =>
+        EstimatedNetCashForecastDetails;
 }

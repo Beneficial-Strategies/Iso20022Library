@@ -15,7 +15,8 @@ public partial record IntraBalancePending6 : IIntraBalancePending6
     ICashSubBalanceTypeAndQuantityBreakdown3 IIntraBalancePending6.BalanceTo => BalanceTo;
     IAmount2Choice IIntraBalancePending6.SettlementAmount => SettlementAmount;
     IDateAndDateTime2Choice IIntraBalancePending6.IntendedSettlementDate => IntendedSettlementDate;
-    IGenericIdentification37? IIntraBalancePending6.CashSubBalanceIdentification => CashSubBalanceIdentification;
+    IGenericIdentification37? IIntraBalancePending6.CashSubBalanceIdentification =>
+        CashSubBalanceIdentification;
     IEnumerable<ILinkages57> IIntraBalancePending6.Linkages => Linkages;
     IPriorityNumeric4Choice? IIntraBalancePending6.Priority => Priority;
     ISystemPartyIdentification8? IIntraBalancePending6.MessageOriginator => MessageOriginator;

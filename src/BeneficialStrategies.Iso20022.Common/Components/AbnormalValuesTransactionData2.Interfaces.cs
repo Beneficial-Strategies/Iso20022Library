@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record AbnormalValuesTransactionData2 : IAbnormalValuesTransactionData2
 {
-    ITradeTransactionIdentification24 IAbnormalValuesTransactionData2.TransactionIdentification => TransactionIdentification;
+    ITradeTransactionIdentification24 IAbnormalValuesTransactionData2.TransactionIdentification =>
+        TransactionIdentification;
     INotionalAmountLegs5? IAbnormalValuesTransactionData2.NotionalAmount => NotionalAmount;
     INotionalQuantityLegs5? IAbnormalValuesTransactionData2.NotionalQuantity => NotionalQuantity;
 }

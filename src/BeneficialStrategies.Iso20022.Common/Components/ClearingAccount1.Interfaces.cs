@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ClearingAccount1 : IClearingAccount1
 {
-    IEnumerable<ICollateralAccount5> IClearingAccount1.CollateralAccountOwner => CollateralAccountOwner;
+    IEnumerable<ICollateralAccount5> IClearingAccount1.CollateralAccountOwner =>
+        CollateralAccountOwner;
 }

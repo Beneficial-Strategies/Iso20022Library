@@ -8,9 +8,13 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.auth;
 
-public partial record FinancialInstrumentReportingEquityTradingActivityResultV01 : IFinancialInstrumentReportingEquityTradingActivityResultV01
+public partial record FinancialInstrumentReportingEquityTradingActivityResultV01
+    : IFinancialInstrumentReportingEquityTradingActivityResultV01
 {
-    ISecuritiesMarketReportHeader1 IFinancialInstrumentReportingEquityTradingActivityResultV01.ReportHeader => ReportHeader;
-    IEnumerable<ITransparencyDataReport12> IFinancialInstrumentReportingEquityTradingActivityResultV01.EquityTransparencyData => EquityTransparencyData;
-    IEnumerable<ISupplementaryData1> IFinancialInstrumentReportingEquityTradingActivityResultV01.SupplementaryData => SupplementaryData;
+    ISecuritiesMarketReportHeader1 IFinancialInstrumentReportingEquityTradingActivityResultV01.ReportHeader =>
+        ReportHeader;
+    IEnumerable<ITransparencyDataReport12> IFinancialInstrumentReportingEquityTradingActivityResultV01.EquityTransparencyData =>
+        EquityTransparencyData;
+    IEnumerable<ISupplementaryData1> IFinancialInstrumentReportingEquityTradingActivityResultV01.SupplementaryData =>
+        SupplementaryData;
 }

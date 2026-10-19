@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CashAccountCharacteristics1 : ICashAccountCharacteristics1
 {
     ICashAccount16 ICashAccountCharacteristics1.CashAccount => CashAccount;
-    IBranchAndFinancialInstitutionIdentification5? ICashAccountCharacteristics1.AccountServicer => AccountServicer;
+    IBranchAndFinancialInstitutionIdentification5? ICashAccountCharacteristics1.AccountServicer =>
+        AccountServicer;
     IParentCashAccount1? ICashAccountCharacteristics1.ParentAccount => ParentAccount;
     IAccountIdentification4Choice? ICashAccountCharacteristics1.DebitAccount => DebitAccount;
     IAccountTax1? ICashAccountCharacteristics1.Tax => Tax;

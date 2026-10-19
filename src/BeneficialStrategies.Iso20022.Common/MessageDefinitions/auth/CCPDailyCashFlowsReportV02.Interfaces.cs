@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.auth;
 
 public partial record CCPDailyCashFlowsReportV02 : ICCPDailyCashFlowsReportV02
 {
-    IEnumerable<IConcentrationAgent1> ICCPDailyCashFlowsReportV02.ConcentrationAgent => ConcentrationAgent;
+    IEnumerable<IConcentrationAgent1> ICCPDailyCashFlowsReportV02.ConcentrationAgent =>
+        ConcentrationAgent;
     IEnumerable<ISettlementAgent2> ICCPDailyCashFlowsReportV02.SettlementAgent => SettlementAgent;
-    IEnumerable<ISupplementaryData1> ICCPDailyCashFlowsReportV02.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> ICCPDailyCashFlowsReportV02.SupplementaryData =>
+        SupplementaryData;
 }

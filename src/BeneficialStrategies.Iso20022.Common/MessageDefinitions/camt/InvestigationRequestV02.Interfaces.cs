@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 public partial record InvestigationRequestV02 : IInvestigationRequestV02
 {
     IInvestigationRequest51 IInvestigationRequestV02.InvestigationRequest => InvestigationRequest;
-    IEnumerable<IInvestigationReason2> IInvestigationRequestV02.InvestigationData => InvestigationData;
-    IEnumerable<ISupplementaryData1> IInvestigationRequestV02.SupplementaryData => SupplementaryData;
+    IEnumerable<IInvestigationReason2> IInvestigationRequestV02.InvestigationData =>
+        InvestigationData;
+    IEnumerable<ISupplementaryData1> IInvestigationRequestV02.SupplementaryData =>
+        SupplementaryData;
 }

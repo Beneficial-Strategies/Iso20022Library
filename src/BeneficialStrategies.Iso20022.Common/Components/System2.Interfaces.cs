@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record System2 : ISystem2
 {
-    IMarketInfrastructureIdentification1Choice? ISystem2.SystemIdentification => SystemIdentification;
-    IBranchAndFinancialInstitutionIdentification6? ISystem2.MemberIdentification => MemberIdentification;
+    IMarketInfrastructureIdentification1Choice? ISystem2.SystemIdentification =>
+        SystemIdentification;
+    IBranchAndFinancialInstitutionIdentification6? ISystem2.MemberIdentification =>
+        MemberIdentification;
     IAccountIdentification4Choice? ISystem2.AccountIdentification => AccountIdentification;
 }

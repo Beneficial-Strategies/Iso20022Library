@@ -12,5 +12,6 @@ public partial record InvestigationResponse23 : IInvestigationResponse23
 {
     IInvestigationStatus2 IInvestigationResponse23.InvestigationStatus => InvestigationStatus;
     IParty40Choice? IInvestigationResponse23.NextResponder => NextResponder;
-    IEnumerable<IInvestigationData18> IInvestigationResponse23.InvestigationData => InvestigationData;
+    IEnumerable<IInvestigationData18> IInvestigationResponse23.InvestigationData =>
+        InvestigationData;
 }

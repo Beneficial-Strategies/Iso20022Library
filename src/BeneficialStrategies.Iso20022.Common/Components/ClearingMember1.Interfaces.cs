@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record ClearingMember1 : IClearingMember1
 {
     IPartyIdentification118Choice IClearingMember1.Identification => Identification;
-    IPartyIdentification118Choice? IClearingMember1.UltimateParentIdentification => UltimateParentIdentification;
-    IPartyIdentification118Choice? IClearingMember1.SponsoringClearingMemberIdentification => SponsoringClearingMemberIdentification;
+    IPartyIdentification118Choice? IClearingMember1.UltimateParentIdentification =>
+        UltimateParentIdentification;
+    IPartyIdentification118Choice? IClearingMember1.SponsoringClearingMemberIdentification =>
+        SponsoringClearingMemberIdentification;
     IEnumerable<IClearingAccount1> IClearingMember1.ClearingAccountOwner => ClearingAccountOwner;
 }

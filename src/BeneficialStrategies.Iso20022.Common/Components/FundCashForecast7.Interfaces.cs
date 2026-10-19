@@ -12,16 +12,22 @@ public partial record FundCashForecast7 : IFundCashForecast7
 {
     IDateAndDateTimeChoice IFundCashForecast7.TradeDateTime => TradeDateTime;
     IDateAndDateTimeChoice? IFundCashForecast7.PreviousTradeDateTime => PreviousTradeDateTime;
-    IFinancialInstrument9 IFundCashForecast7.FinancialInstrumentDetails => FinancialInstrumentDetails;
+    IFinancialInstrument9 IFundCashForecast7.FinancialInstrumentDetails =>
+        FinancialInstrumentDetails;
     IEnumerable<ActiveOrHistoricCurrencyAndAmount> IFundCashForecast7.TotalNAV => TotalNAV;
-    IEnumerable<ActiveOrHistoricCurrencyAndAmount> IFundCashForecast7.PreviousTotalNAV => PreviousTotalNAV;
+    IEnumerable<ActiveOrHistoricCurrencyAndAmount> IFundCashForecast7.PreviousTotalNAV =>
+        PreviousTotalNAV;
     IFinancialInstrumentQuantity1? IFundCashForecast7.TotalUnitsNumber => TotalUnitsNumber;
-    IFinancialInstrumentQuantity1? IFundCashForecast7.PreviousTotalUnitsNumber => PreviousTotalUnitsNumber;
-    IEnumerable<ActiveOrHistoricCurrencyCode> IFundCashForecast7.InvestmentCurrency => InvestmentCurrency;
+    IFinancialInstrumentQuantity1? IFundCashForecast7.PreviousTotalUnitsNumber =>
+        PreviousTotalUnitsNumber;
+    IEnumerable<ActiveOrHistoricCurrencyCode> IFundCashForecast7.InvestmentCurrency =>
+        InvestmentCurrency;
     ICurrencyDesignation1? IFundCashForecast7.CurrencyStatus => CurrencyStatus;
     IUnitPrice19? IFundCashForecast7.Price => Price;
     IForeignExchangeTerms19? IFundCashForecast7.ForeignExchangeRate => ForeignExchangeRate;
     IEnumerable<ICashInForecast6> IFundCashForecast7.CashInForecastDetails => CashInForecastDetails;
-    IEnumerable<ICashOutForecast6> IFundCashForecast7.CashOutForecastDetails => CashOutForecastDetails;
-    IEnumerable<INetCashForecast4> IFundCashForecast7.NetCashForecastDetails => NetCashForecastDetails;
+    IEnumerable<ICashOutForecast6> IFundCashForecast7.CashOutForecastDetails =>
+        CashOutForecastDetails;
+    IEnumerable<INetCashForecast4> IFundCashForecast7.NetCashForecastDetails =>
+        NetCashForecastDetails;
 }

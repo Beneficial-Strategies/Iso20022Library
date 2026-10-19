@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TradeTransactionStatusAndReason2 : ITradeTransactionStatusAndReason2
 {
-    IEnumerable<IRejectedCancellationStatusReason1Choice> ITradeTransactionStatusAndReason2.Rejected => Rejected;
+    IEnumerable<IRejectedCancellationStatusReason1Choice> ITradeTransactionStatusAndReason2.Rejected =>
+        Rejected;
 }

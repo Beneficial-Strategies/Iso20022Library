@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record FinancialInstitutionIdentification19 : IFinancialInstitutionIdentification19
 {
-    IClearingSystemMemberIdentification2? IFinancialInstitutionIdentification19.ClearingSystemMemberIdentification => ClearingSystemMemberIdentification;
+    IClearingSystemMemberIdentification2? IFinancialInstitutionIdentification19.ClearingSystemMemberIdentification =>
+        ClearingSystemMemberIdentification;
     IGenericFinancialIdentification1? IFinancialInstitutionIdentification19.Other => Other;
 }

@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TaxParty4 : ITaxParty4
 {
-    IEnumerable<ITaxExemptionReasonFormat1Choice> ITaxParty4.TaxExemptionReason => TaxExemptionReason;
+    IEnumerable<ITaxExemptionReasonFormat1Choice> ITaxParty4.TaxExemptionReason =>
+        TaxExemptionReason;
 }

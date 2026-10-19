@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record DocumentIdentification22 : IDocumentIdentification22
-{
-}
+public partial record DocumentIdentification22 : IDocumentIdentification22 { }

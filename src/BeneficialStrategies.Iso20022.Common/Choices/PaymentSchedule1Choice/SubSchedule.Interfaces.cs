@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PaymentSchedule1Choice;
 
-public partial record SubSchedule : ISubSchedule
-{
-}
+public partial record SubSchedule : ISubSchedule { }

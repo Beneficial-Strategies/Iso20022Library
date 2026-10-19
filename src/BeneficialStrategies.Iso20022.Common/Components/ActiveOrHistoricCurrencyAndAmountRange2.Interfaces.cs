@@ -8,7 +8,8 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record ActiveOrHistoricCurrencyAndAmountRange2 : IActiveOrHistoricCurrencyAndAmountRange2
+public partial record ActiveOrHistoricCurrencyAndAmountRange2
+    : IActiveOrHistoricCurrencyAndAmountRange2
 {
     IImpliedCurrencyAmountRange1Choice IActiveOrHistoricCurrencyAndAmountRange2.Amount => Amount;
 }

@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SystemSearch5 : ISystemSearch5
 {
-    IEnumerable<IClearingSystemIdentification3Choice> ISystemSearch5.SystemIdentification => SystemIdentification;
-    IEnumerable<IBranchAndFinancialInstitutionIdentification8> ISystemSearch5.MemberIdentification => MemberIdentification;
+    IEnumerable<IClearingSystemIdentification3Choice> ISystemSearch5.SystemIdentification =>
+        SystemIdentification;
+    IEnumerable<IBranchAndFinancialInstitutionIdentification8> ISystemSearch5.MemberIdentification =>
+        MemberIdentification;
     IAccountIdentification4Choice? ISystemSearch5.AccountIdentification => AccountIdentification;
 }

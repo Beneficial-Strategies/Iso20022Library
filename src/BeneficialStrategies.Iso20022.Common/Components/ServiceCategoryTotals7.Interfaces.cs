@@ -10,10 +10,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ServiceCategoryTotals7 : IServiceCategoryTotals7
 {
-    IPartyIdentification136? IServiceCategoryTotals7.BilledCustomerIdentification => BilledCustomerIdentification;
+    IPartyIdentification136? IServiceCategoryTotals7.BilledCustomerIdentification =>
+        BilledCustomerIdentification;
     IEnumerable<IBillingTaxRecord2> IServiceCategoryTotals7.Tax => Tax;
     IAmountAndForeignExchange1 IServiceCategoryTotals7.TotalInvoiceAmount => TotalInvoiceAmount;
     IServiceCategory1Choice IServiceCategoryTotals7.ServiceCategory => ServiceCategory;
-    IEnumerable<IServiceItemTotals10> IServiceCategoryTotals7.ServiceItemTotals => ServiceItemTotals;
-    IEnumerable<IServiceItemTotals11> IServiceCategoryTotals7.ServiceItemCorrection => ServiceItemCorrection;
+    IEnumerable<IServiceItemTotals10> IServiceCategoryTotals7.ServiceItemTotals =>
+        ServiceItemTotals;
+    IEnumerable<IServiceItemTotals11> IServiceCategoryTotals7.ServiceItemCorrection =>
+        ServiceItemCorrection;
 }

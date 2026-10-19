@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.auth;
 
 public partial record CCPInteroperabilityReportV01 : ICCPInteroperabilityReportV01
 {
-    IEnumerable<IInteroperabilityCCP1> ICCPInteroperabilityReportV01.InteroperabilityCCP => InteroperabilityCCP;
-    IEnumerable<ISupplementaryData1> ICCPInteroperabilityReportV01.SupplementaryData => SupplementaryData;
+    IEnumerable<IInteroperabilityCCP1> ICCPInteroperabilityReportV01.InteroperabilityCCP =>
+        InteroperabilityCCP;
+    IEnumerable<ISupplementaryData1> ICCPInteroperabilityReportV01.SupplementaryData =>
+        SupplementaryData;
 }

@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SettlementFailsSecurities1 : ISettlementFailsSecurities1
 {
-    ISecurityIdentification19 ISettlementFailsSecurities1.FinancialInstrumentIdentification => FinancialInstrumentIdentification;
+    ISecurityIdentification19 ISettlementFailsSecurities1.FinancialInstrumentIdentification =>
+        FinancialInstrumentIdentification;
 }

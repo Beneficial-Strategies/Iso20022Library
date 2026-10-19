@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.TimeToMaturity2Choice;
 
-public partial record Special : ISpecial
-{
-}
+public partial record Special : ISpecial { }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record TransactionLoanData9Choice_ : ITransactionLoanData9Choice
-{
-}
+public abstract partial record TransactionLoanData9Choice_ : ITransactionLoanData9Choice { }

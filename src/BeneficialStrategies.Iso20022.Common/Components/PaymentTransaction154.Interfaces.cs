@@ -11,8 +11,11 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record PaymentTransaction154 : IPaymentTransaction154
 {
     ICase6? IPaymentTransaction154.Case => Case;
-    IDateAndDateTime2Choice? IPaymentTransaction154.OriginalRequestedExecutionDate => OriginalRequestedExecutionDate;
-    IEnumerable<IPaymentCancellationReason6> IPaymentTransaction154.CancellationReasonInformation => CancellationReasonInformation;
-    IOriginalTransactionReference42? IPaymentTransaction154.OriginalTransactionReference => OriginalTransactionReference;
+    IDateAndDateTime2Choice? IPaymentTransaction154.OriginalRequestedExecutionDate =>
+        OriginalRequestedExecutionDate;
+    IEnumerable<IPaymentCancellationReason6> IPaymentTransaction154.CancellationReasonInformation =>
+        CancellationReasonInformation;
+    IOriginalTransactionReference42? IPaymentTransaction154.OriginalTransactionReference =>
+        OriginalTransactionReference;
     IEnumerable<ISupplementaryData1> IPaymentTransaction154.SupplementaryData => SupplementaryData;
 }

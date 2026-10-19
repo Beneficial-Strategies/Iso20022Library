@@ -10,8 +10,10 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TradeTransaction37 : ITradeTransaction37
 {
-    IUniqueTransactionIdentifier1Choice ITradeTransaction37.UniqueTransactionIdentifier => UniqueTransactionIdentifier;
-    IUniqueTransactionIdentifier1Choice? ITradeTransaction37.PriorUniqueTransactionIdentifier => PriorUniqueTransactionIdentifier;
+    IUniqueTransactionIdentifier1Choice ITradeTransaction37.UniqueTransactionIdentifier =>
+        UniqueTransactionIdentifier;
+    IUniqueTransactionIdentifier1Choice? ITradeTransaction37.PriorUniqueTransactionIdentifier =>
+        PriorUniqueTransactionIdentifier;
     IPriceData1? ITradeTransaction37.TransactionPrice => TransactionPrice;
     IEnumerable<INotionalAmount1> ITradeTransaction37.NotionalAmount => NotionalAmount;
     IEnumerable<INotionalQuantity1> ITradeTransaction37.NotionalQuantity => NotionalQuantity;
@@ -23,7 +25,8 @@ public partial record TradeTransaction37 : ITradeTransaction37
     IInterestRateLegs9? ITradeTransaction37.InterestRate => InterestRate;
     ICurrencyExchange17? ITradeTransaction37.Currency => Currency;
     IAssetClassCommodity2Choice? ITradeTransaction37.Commodity => Commodity;
-    IEnergySpecificAttribute6? ITradeTransaction37.EnergySpecificAttributes => EnergySpecificAttributes;
+    IEnergySpecificAttribute6? ITradeTransaction37.EnergySpecificAttributes =>
+        EnergySpecificAttributes;
     IOptionOrSwaption7? ITradeTransaction37.Option => Option;
     ICreditDerivative4? ITradeTransaction37.Credit => Credit;
     IEnumerable<IOtherPayment3> ITradeTransaction37.OtherPayment => OtherPayment;

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnvironmental3Choice;
 
-public partial record CarbonRelated : ICarbonRelated
-{
-}
+public partial record CarbonRelated : ICarbonRelated { }

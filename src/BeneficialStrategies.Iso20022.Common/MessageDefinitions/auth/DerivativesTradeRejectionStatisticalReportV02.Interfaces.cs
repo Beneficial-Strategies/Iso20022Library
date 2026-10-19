@@ -8,8 +8,11 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.auth;
 
-public partial record DerivativesTradeRejectionStatisticalReportV02 : IDerivativesTradeRejectionStatisticalReportV02
+public partial record DerivativesTradeRejectionStatisticalReportV02
+    : IDerivativesTradeRejectionStatisticalReportV02
 {
-    IStatisticsPerCounterparty3Choice IDerivativesTradeRejectionStatisticalReportV02.StatisticsPerCounterparty => StatisticsPerCounterparty;
-    IEnumerable<ISupplementaryData1> IDerivativesTradeRejectionStatisticalReportV02.SupplementaryData => SupplementaryData;
+    IStatisticsPerCounterparty3Choice IDerivativesTradeRejectionStatisticalReportV02.StatisticsPerCounterparty =>
+        StatisticsPerCounterparty;
+    IEnumerable<ISupplementaryData1> IDerivativesTradeRejectionStatisticalReportV02.SupplementaryData =>
+        SupplementaryData;
 }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural5Choice;
 
-public partial record Dairy : IDairy
-{
-}
+public partial record Dairy : IDairy { }

@@ -8,10 +8,15 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.auth;
 
-public partial record CCPIncomeStatementAndCapitalAdequacyReportV01 : ICCPIncomeStatementAndCapitalAdequacyReportV01
+public partial record CCPIncomeStatementAndCapitalAdequacyReportV01
+    : ICCPIncomeStatementAndCapitalAdequacyReportV01
 {
-    IIncomeStatement1 ICCPIncomeStatementAndCapitalAdequacyReportV01.IncomeStatement => IncomeStatement;
-    ICapitalRequirement1 ICCPIncomeStatementAndCapitalAdequacyReportV01.CapitalRequirements => CapitalRequirements;
-    IEnumerable<IHypotheticalCapitalMeasure1> ICCPIncomeStatementAndCapitalAdequacyReportV01.HypotheticalCapitalMeasure => HypotheticalCapitalMeasure;
-    IEnumerable<ISupplementaryData1> ICCPIncomeStatementAndCapitalAdequacyReportV01.SupplementaryData => SupplementaryData;
+    IIncomeStatement1 ICCPIncomeStatementAndCapitalAdequacyReportV01.IncomeStatement =>
+        IncomeStatement;
+    ICapitalRequirement1 ICCPIncomeStatementAndCapitalAdequacyReportV01.CapitalRequirements =>
+        CapitalRequirements;
+    IEnumerable<IHypotheticalCapitalMeasure1> ICCPIncomeStatementAndCapitalAdequacyReportV01.HypotheticalCapitalMeasure =>
+        HypotheticalCapitalMeasure;
+    IEnumerable<ISupplementaryData1> ICCPIncomeStatementAndCapitalAdequacyReportV01.SupplementaryData =>
+        SupplementaryData;
 }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.InvestigationResult1Choice;
 
-public partial record Result : IResult
-{
-}
+public partial record Result : IResult { }

@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record NumberOfCancellationsPerStatus1 : INumberOfCancellationsPerStatus1
-{
-}
+public partial record NumberOfCancellationsPerStatus1 : INumberOfCancellationsPerStatus1 { }

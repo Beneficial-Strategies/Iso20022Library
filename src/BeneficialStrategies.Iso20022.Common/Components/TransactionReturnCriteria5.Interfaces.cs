@@ -10,8 +10,12 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TransactionReturnCriteria5 : ITransactionReturnCriteria5
 {
-    ISystemReturnCriteria2? ITransactionReturnCriteria5.PaymentToReturnCriteria => PaymentToReturnCriteria;
-    ISystemReturnCriteria2? ITransactionReturnCriteria5.PaymentFromReturnCriteria => PaymentFromReturnCriteria;
-    IAccountCashEntryReturnCriteria3? ITransactionReturnCriteria5.AccountCashEntryReturnCriteria => AccountCashEntryReturnCriteria;
-    IPaymentReturnCriteria4? ITransactionReturnCriteria5.PaymentReturnCriteria => PaymentReturnCriteria;
+    ISystemReturnCriteria2? ITransactionReturnCriteria5.PaymentToReturnCriteria =>
+        PaymentToReturnCriteria;
+    ISystemReturnCriteria2? ITransactionReturnCriteria5.PaymentFromReturnCriteria =>
+        PaymentFromReturnCriteria;
+    IAccountCashEntryReturnCriteria3? ITransactionReturnCriteria5.AccountCashEntryReturnCriteria =>
+        AccountCashEntryReturnCriteria;
+    IPaymentReturnCriteria4? ITransactionReturnCriteria5.PaymentReturnCriteria =>
+        PaymentReturnCriteria;
 }

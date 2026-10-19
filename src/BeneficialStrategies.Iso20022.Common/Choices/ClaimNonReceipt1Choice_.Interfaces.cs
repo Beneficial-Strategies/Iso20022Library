@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record ClaimNonReceipt1Choice_ : IClaimNonReceipt1Choice
-{
-}
+public abstract partial record ClaimNonReceipt1Choice_ : IClaimNonReceipt1Choice { }

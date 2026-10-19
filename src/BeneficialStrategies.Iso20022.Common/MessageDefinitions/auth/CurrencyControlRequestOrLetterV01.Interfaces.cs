@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.auth;
 public partial record CurrencyControlRequestOrLetterV01 : ICurrencyControlRequestOrLetterV01
 {
     ICurrencyControlHeader3 ICurrencyControlRequestOrLetterV01.GroupHeader => GroupHeader;
-    IEnumerable<ISupportingDocumentRequestOrLetter1> ICurrencyControlRequestOrLetterV01.RequestOrLetter => RequestOrLetter;
-    IEnumerable<ISupplementaryData1> ICurrencyControlRequestOrLetterV01.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupportingDocumentRequestOrLetter1> ICurrencyControlRequestOrLetterV01.RequestOrLetter =>
+        RequestOrLetter;
+    IEnumerable<ISupplementaryData1> ICurrencyControlRequestOrLetterV01.SupplementaryData =>
+        SupplementaryData;
 }

@@ -8,9 +8,12 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.camt;
 
-public partial record CashDepositOrWithdrawalCancellationRequestV01 : ICashDepositOrWithdrawalCancellationRequestV01
+public partial record CashDepositOrWithdrawalCancellationRequestV01
+    : ICashDepositOrWithdrawalCancellationRequestV01
 {
     IGroupHeader134 ICashDepositOrWithdrawalCancellationRequestV01.GroupHeader => GroupHeader;
-    IEnumerable<IUnderlyingTransaction38> ICashDepositOrWithdrawalCancellationRequestV01.UnderlyingTransaction => UnderlyingTransaction;
-    IEnumerable<ISupplementaryData1> ICashDepositOrWithdrawalCancellationRequestV01.SupplementaryData => SupplementaryData;
+    IEnumerable<IUnderlyingTransaction38> ICashDepositOrWithdrawalCancellationRequestV01.UnderlyingTransaction =>
+        UnderlyingTransaction;
+    IEnumerable<ISupplementaryData1> ICashDepositOrWithdrawalCancellationRequestV01.SupplementaryData =>
+        SupplementaryData;
 }

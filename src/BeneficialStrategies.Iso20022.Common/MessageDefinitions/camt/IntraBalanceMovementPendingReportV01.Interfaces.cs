@@ -10,11 +10,15 @@ namespace BeneficialStrategies.Iso20022.camt;
 
 public partial record IntraBalanceMovementPendingReportV01 : IIntraBalanceMovementPendingReportV01
 {
-    IDocumentIdentification51? IIntraBalanceMovementPendingReportV01.Identification => Identification;
+    IDocumentIdentification51? IIntraBalanceMovementPendingReportV01.Identification =>
+        Identification;
     IPagination1 IIntraBalanceMovementPendingReportV01.Pagination => Pagination;
-    IIntraBalanceReport6 IIntraBalanceMovementPendingReportV01.ReportGeneralDetails => ReportGeneralDetails;
+    IIntraBalanceReport6 IIntraBalanceMovementPendingReportV01.ReportGeneralDetails =>
+        ReportGeneralDetails;
     ICashAccount38 IIntraBalanceMovementPendingReportV01.CashAccount => CashAccount;
-    ISystemPartyIdentification8? IIntraBalanceMovementPendingReportV01.CashAccountOwner => CashAccountOwner;
-    IBranchAndFinancialInstitutionIdentification6? IIntraBalanceMovementPendingReportV01.CashAccountServicer => CashAccountServicer;
+    ISystemPartyIdentification8? IIntraBalanceMovementPendingReportV01.CashAccountOwner =>
+        CashAccountOwner;
+    IBranchAndFinancialInstitutionIdentification6? IIntraBalanceMovementPendingReportV01.CashAccountServicer =>
+        CashAccountServicer;
     IEnumerable<IIntraBalancePending5> IIntraBalanceMovementPendingReportV01.Movements => Movements;
 }

@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record SettlementInstruction19 : ISettlementInstruction19
 {
-    IBranchAndFinancialInstitutionIdentification8 ISettlementInstruction19.CreditorAgent => CreditorAgent;
+    IBranchAndFinancialInstitutionIdentification8 ISettlementInstruction19.CreditorAgent =>
+        CreditorAgent;
     ICashAccount40? ISettlementInstruction19.CreditorAgentAccount => CreditorAgentAccount;
     IBranchAndFinancialInstitutionIdentification8? ISettlementInstruction19.Creditor => Creditor;
     ICashAccount40? ISettlementInstruction19.CreditorAccount => CreditorAccount;

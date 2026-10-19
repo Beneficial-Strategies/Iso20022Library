@@ -8,9 +8,13 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.auth;
 
-public partial record CCPAvailableFinancialResourcesReportV01 : ICCPAvailableFinancialResourcesReportV01
+public partial record CCPAvailableFinancialResourcesReportV01
+    : ICCPAvailableFinancialResourcesReportV01
 {
-    IAvailableFinancialResourcesAmount1 ICCPAvailableFinancialResourcesReportV01.AvailableFinancialResourcesAmount => AvailableFinancialResourcesAmount;
-    IReportingAssetBreakdown1? ICCPAvailableFinancialResourcesReportV01.OtherPrefundedResources => OtherPrefundedResources;
-    IEnumerable<ISupplementaryData1> ICCPAvailableFinancialResourcesReportV01.SupplementaryData => SupplementaryData;
+    IAvailableFinancialResourcesAmount1 ICCPAvailableFinancialResourcesReportV01.AvailableFinancialResourcesAmount =>
+        AvailableFinancialResourcesAmount;
+    IReportingAssetBreakdown1? ICCPAvailableFinancialResourcesReportV01.OtherPrefundedResources =>
+        OtherPrefundedResources;
+    IEnumerable<ISupplementaryData1> ICCPAvailableFinancialResourcesReportV01.SupplementaryData =>
+        SupplementaryData;
 }

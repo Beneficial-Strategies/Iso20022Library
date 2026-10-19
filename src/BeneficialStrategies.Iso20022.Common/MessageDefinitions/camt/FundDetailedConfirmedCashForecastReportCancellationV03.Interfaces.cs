@@ -8,12 +8,19 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.camt;
 
-public partial record FundDetailedConfirmedCashForecastReportCancellationV03 : IFundDetailedConfirmedCashForecastReportCancellationV03
+public partial record FundDetailedConfirmedCashForecastReportCancellationV03
+    : IFundDetailedConfirmedCashForecastReportCancellationV03
 {
-    IMessageIdentification1 IFundDetailedConfirmedCashForecastReportCancellationV03.MessageIdentification => MessageIdentification;
-    IAdditionalReference3? IFundDetailedConfirmedCashForecastReportCancellationV03.PoolReference => PoolReference;
-    IAdditionalReference3? IFundDetailedConfirmedCashForecastReportCancellationV03.PreviousReference => PreviousReference;
-    IEnumerable<IAdditionalReference3> IFundDetailedConfirmedCashForecastReportCancellationV03.RelatedReference => RelatedReference;
-    IPagination IFundDetailedConfirmedCashForecastReportCancellationV03.MessagePagination => MessagePagination;
-    IFundDetailedConfirmedCashForecastReport3? IFundDetailedConfirmedCashForecastReportCancellationV03.CashForecastReportToBeCancelled => CashForecastReportToBeCancelled;
+    IMessageIdentification1 IFundDetailedConfirmedCashForecastReportCancellationV03.MessageIdentification =>
+        MessageIdentification;
+    IAdditionalReference3? IFundDetailedConfirmedCashForecastReportCancellationV03.PoolReference =>
+        PoolReference;
+    IAdditionalReference3? IFundDetailedConfirmedCashForecastReportCancellationV03.PreviousReference =>
+        PreviousReference;
+    IEnumerable<IAdditionalReference3> IFundDetailedConfirmedCashForecastReportCancellationV03.RelatedReference =>
+        RelatedReference;
+    IPagination IFundDetailedConfirmedCashForecastReportCancellationV03.MessagePagination =>
+        MessagePagination;
+    IFundDetailedConfirmedCashForecastReport3? IFundDetailedConfirmedCashForecastReportCancellationV03.CashForecastReportToBeCancelled =>
+        CashForecastReportToBeCancelled;
 }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the aggregated data of settlement instructions or explicit no data report.
 /// </summary>
 [IsoId("_allUdx2lEeqF2P5v-Rtejg")]
-public interface ISettlementTotalData1Choice : IIsoChoice
-{
-}
+public interface ISettlementTotalData1Choice : IIsoChoice { }

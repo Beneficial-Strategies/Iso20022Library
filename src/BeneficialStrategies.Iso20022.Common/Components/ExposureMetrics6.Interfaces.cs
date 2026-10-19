@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ExposureMetrics6 : IExposureMetrics6
 {
-    IPostedMarginOrCollateral4? IExposureMetrics6.PostedMarginOrCollateral => PostedMarginOrCollateral;
+    IPostedMarginOrCollateral4? IExposureMetrics6.PostedMarginOrCollateral =>
+        PostedMarginOrCollateral;
 }

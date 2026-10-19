@@ -8,6 +8,5 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record StatisticsPerCounterparty15Choice_ : IStatisticsPerCounterparty15Choice
-{
-}
+public abstract partial record StatisticsPerCounterparty15Choice_
+    : IStatisticsPerCounterparty15Choice { }

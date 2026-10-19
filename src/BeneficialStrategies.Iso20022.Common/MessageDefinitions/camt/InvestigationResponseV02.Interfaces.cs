@@ -10,7 +10,10 @@ namespace BeneficialStrategies.Iso20022.camt;
 
 public partial record InvestigationResponseV02 : IInvestigationResponseV02
 {
-    IInvestigationResponse9 IInvestigationResponseV02.InvestigationResponse => InvestigationResponse;
-    IInvestigationRequest3 IInvestigationResponseV02.OriginalInvestigationRequest => OriginalInvestigationRequest;
-    IEnumerable<ISupplementaryData1> IInvestigationResponseV02.SupplementaryData => SupplementaryData;
+    IInvestigationResponse9 IInvestigationResponseV02.InvestigationResponse =>
+        InvestigationResponse;
+    IInvestigationRequest3 IInvestigationResponseV02.OriginalInvestigationRequest =>
+        OriginalInvestigationRequest;
+    IEnumerable<ISupplementaryData1> IInvestigationResponseV02.SupplementaryData =>
+        SupplementaryData;
 }

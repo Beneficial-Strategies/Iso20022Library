@@ -11,9 +11,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record ReservationSearchCriteria5 : IReservationSearchCriteria5
 {
     IDateTimeSearch2Choice? IReservationSearchCriteria5.DateTime => DateTime;
-    ISystemIdentification2Choice? IReservationSearchCriteria5.SystemIdentification => SystemIdentification;
-    IEnumerable<IReservationType2Choice> IReservationSearchCriteria5.DefaultReservationType => DefaultReservationType;
-    IEnumerable<IReservationType2Choice> IReservationSearchCriteria5.CurrentReservationType => CurrentReservationType;
-    IBranchAndFinancialInstitutionIdentification6? IReservationSearchCriteria5.AccountOwner => AccountOwner;
-    IAccountIdentification4Choice? IReservationSearchCriteria5.AccountIdentification => AccountIdentification;
+    ISystemIdentification2Choice? IReservationSearchCriteria5.SystemIdentification =>
+        SystemIdentification;
+    IEnumerable<IReservationType2Choice> IReservationSearchCriteria5.DefaultReservationType =>
+        DefaultReservationType;
+    IEnumerable<IReservationType2Choice> IReservationSearchCriteria5.CurrentReservationType =>
+        CurrentReservationType;
+    IBranchAndFinancialInstitutionIdentification6? IReservationSearchCriteria5.AccountOwner =>
+        AccountOwner;
+    IAccountIdentification4Choice? IReservationSearchCriteria5.AccountIdentification =>
+        AccountIdentification;
 }

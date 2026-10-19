@@ -10,9 +10,12 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record TradeTransactionIdentification4 : ITradeTransactionIdentification4
 {
-    IOrganisationIdentification9Choice ITradeTransactionIdentification4.ReportingCounterparty => ReportingCounterparty;
-    IOrganisationIdentification9Choice ITradeTransactionIdentification4.OtherCounterparty => OtherCounterparty;
+    IOrganisationIdentification9Choice ITradeTransactionIdentification4.ReportingCounterparty =>
+        ReportingCounterparty;
+    IOrganisationIdentification9Choice ITradeTransactionIdentification4.OtherCounterparty =>
+        OtherCounterparty;
     IMasterAgreement6? ITradeTransactionIdentification4.MasterAgreement => MasterAgreement;
     IOrganisationIdentification9Choice? ITradeTransactionIdentification4.AgentLender => AgentLender;
-    IOrganisationIdentification9Choice? ITradeTransactionIdentification4.TripartyAgent => TripartyAgent;
+    IOrganisationIdentification9Choice? ITradeTransactionIdentification4.TripartyAgent =>
+        TripartyAgent;
 }

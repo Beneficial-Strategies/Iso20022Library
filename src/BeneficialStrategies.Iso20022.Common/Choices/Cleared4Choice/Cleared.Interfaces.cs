@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.Cleared4Choice;
 
-public partial record Cleared : ICleared
-{
-}
+public partial record Cleared : ICleared { }

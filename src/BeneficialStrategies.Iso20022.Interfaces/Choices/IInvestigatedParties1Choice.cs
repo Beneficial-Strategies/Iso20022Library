@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Identifies the response parameters for which there is a match with the search criteria.
 /// </summary>
 [IsoId("_cRD_EzwTEeGKuZXNQxGH3g")]
-public interface IInvestigatedParties1Choice : IIsoChoice
-{
-}
+public interface IInvestigatedParties1Choice : IIsoChoice { }

@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record MissingValuationsData2 : IMissingValuationsData2
 {
-    ICounterpartyData92 IMissingValuationsData2.CounterpartyIdentification => CounterpartyIdentification;
-    IEnumerable<IMissingValuationsTransactionData2> IMissingValuationsData2.TransactionDetails => TransactionDetails;
+    ICounterpartyData92 IMissingValuationsData2.CounterpartyIdentification =>
+        CounterpartyIdentification;
+    IEnumerable<IMissingValuationsTransactionData2> IMissingValuationsData2.TransactionDetails =>
+        TransactionDetails;
 }

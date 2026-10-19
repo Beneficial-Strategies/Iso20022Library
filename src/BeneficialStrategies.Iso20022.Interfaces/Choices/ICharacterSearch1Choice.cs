@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Set of characters to be matched to be considered as valid.
 /// </summary>
 [IsoId("_F7k20ZlaEeeE1Ya-LgRsuQ")]
-public interface ICharacterSearch1Choice : IIsoChoice
-{
-}
+public interface ICharacterSearch1Choice : IIsoChoice { }

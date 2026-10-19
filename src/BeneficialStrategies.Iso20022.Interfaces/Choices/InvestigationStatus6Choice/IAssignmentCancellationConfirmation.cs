@@ -8,7 +8,9 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatus6Choice;
 /// <summary>
 /// Assignment Cancellation Confirmation.
 /// </summary>
-public interface IAssignmentCancellationConfirmation : IInvestigationStatus6Choice, IIsoChoiceVariant
+public interface IAssignmentCancellationConfirmation
+    : IInvestigationStatus6Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

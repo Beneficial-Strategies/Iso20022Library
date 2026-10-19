@@ -8,7 +8,8 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.SettlementParties34Choice;
 
-public partial record CentralSecuritiesDepositoryParticipant : ICentralSecuritiesDepositoryParticipant
+public partial record CentralSecuritiesDepositoryParticipant
+    : ICentralSecuritiesDepositoryParticipant
 {
     IOrganisationIdentification15Choice ICentralSecuritiesDepositoryParticipant.Value => Value;
 }

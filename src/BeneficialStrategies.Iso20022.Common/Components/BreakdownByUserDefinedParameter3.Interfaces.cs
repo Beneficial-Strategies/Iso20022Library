@@ -12,7 +12,10 @@ public partial record BreakdownByUserDefinedParameter3 : IBreakdownByUserDefined
 {
     IInvestmentAccount42? IBreakdownByUserDefinedParameter3.Party => Party;
     IDataFormat2Choice? IBreakdownByUserDefinedParameter3.UserDefined => UserDefined;
-    IEnumerable<ICashInForecast5> IBreakdownByUserDefinedParameter3.CashInForecast => CashInForecast;
-    IEnumerable<ICashOutForecast5> IBreakdownByUserDefinedParameter3.CashOutForecast => CashOutForecast;
-    IEnumerable<INetCashForecast4> IBreakdownByUserDefinedParameter3.NetCashForecast => NetCashForecast;
+    IEnumerable<ICashInForecast5> IBreakdownByUserDefinedParameter3.CashInForecast =>
+        CashInForecast;
+    IEnumerable<ICashOutForecast5> IBreakdownByUserDefinedParameter3.CashOutForecast =>
+        CashOutForecast;
+    IEnumerable<INetCashForecast4> IBreakdownByUserDefinedParameter3.NetCashForecast =>
+        NetCashForecast;
 }

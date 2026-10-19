@@ -8,8 +8,11 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.auth;
 
-public partial record CCPPortfolioStressTestingDefinitionReportV01 : ICCPPortfolioStressTestingDefinitionReportV01
+public partial record CCPPortfolioStressTestingDefinitionReportV01
+    : ICCPPortfolioStressTestingDefinitionReportV01
 {
-    IEnumerable<IScenarioDefinition1> ICCPPortfolioStressTestingDefinitionReportV01.ScenarioDefinition => ScenarioDefinition;
-    IEnumerable<ISupplementaryData1> ICCPPortfolioStressTestingDefinitionReportV01.SupplementaryData => SupplementaryData;
+    IEnumerable<IScenarioDefinition1> ICCPPortfolioStressTestingDefinitionReportV01.ScenarioDefinition =>
+        ScenarioDefinition;
+    IEnumerable<ISupplementaryData1> ICCPPortfolioStressTestingDefinitionReportV01.SupplementaryData =>
+        SupplementaryData;
 }

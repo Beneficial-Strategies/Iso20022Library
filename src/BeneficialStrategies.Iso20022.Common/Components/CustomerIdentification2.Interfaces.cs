@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record CustomerIdentification2 : ICustomerIdentification2
 {
     IPartyIdentification272 ICustomerIdentification2.Party => Party;
-    IEnumerable<IAuthorityInvestigation2> ICustomerIdentification2.AuthorityRequest => AuthorityRequest;
+    IEnumerable<IAuthorityInvestigation2> ICustomerIdentification2.AuthorityRequest =>
+        AuthorityRequest;
 }

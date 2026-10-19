@@ -11,9 +11,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record TransparencyDataReport14 : ITransparencyDataReport14
 {
     IPeriod4Choice? ITransparencyDataReport14.ReportingPeriod => ReportingPeriod;
-    ITonsOrCurrency2Choice? ITransparencyDataReport14.PreTradeLargeInScaleThreshold => PreTradeLargeInScaleThreshold;
-    ITonsOrCurrency2Choice? ITransparencyDataReport14.PostTradeLargeInScaleThreshold => PostTradeLargeInScaleThreshold;
-    ITonsOrCurrency2Choice? ITransparencyDataReport14.PreTradeInstrumentSizeSpecificThreshold => PreTradeInstrumentSizeSpecificThreshold;
-    ITonsOrCurrency2Choice? ITransparencyDataReport14.PostTradeInstrumentSizeSpecificThreshold => PostTradeInstrumentSizeSpecificThreshold;
+    ITonsOrCurrency2Choice? ITransparencyDataReport14.PreTradeLargeInScaleThreshold =>
+        PreTradeLargeInScaleThreshold;
+    ITonsOrCurrency2Choice? ITransparencyDataReport14.PostTradeLargeInScaleThreshold =>
+        PostTradeLargeInScaleThreshold;
+    ITonsOrCurrency2Choice? ITransparencyDataReport14.PreTradeInstrumentSizeSpecificThreshold =>
+        PreTradeInstrumentSizeSpecificThreshold;
+    ITonsOrCurrency2Choice? ITransparencyDataReport14.PostTradeInstrumentSizeSpecificThreshold =>
+        PostTradeInstrumentSizeSpecificThreshold;
     IStatisticsTransparency2? ITransparencyDataReport14.Statistics => Statistics;
 }

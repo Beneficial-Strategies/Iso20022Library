@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport32Choice;
 
 public partial record Error : IError
 {
-    IEnumerable<ICounterpartySpecificData36> IError.CounterpartySpecificData => CounterpartySpecificData;
+    IEnumerable<ICounterpartySpecificData36> IError.CounterpartySpecificData =>
+        CounterpartySpecificData;
     ICommonTradeDataReport69 IError.CommonTradeData => CommonTradeData;
     ITechnicalAttributes5? IError.TechnicalAttributes => TechnicalAttributes;
     IDisseminationData1? IError.PublicDisseminationData => PublicDisseminationData;

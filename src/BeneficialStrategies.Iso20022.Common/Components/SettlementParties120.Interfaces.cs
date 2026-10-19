@@ -13,5 +13,6 @@ public partial record SettlementParties120 : ISettlementParties120
     IPartyIdentification242Choice? ISettlementParties120.DeliveryAgent => DeliveryAgent;
     IPartyIdentification242Choice? ISettlementParties120.Intermediary => Intermediary;
     IPartyIdentification242Choice ISettlementParties120.ReceivingAgent => ReceivingAgent;
-    IPartyIdentification242Choice? ISettlementParties120.BeneficiaryInstitution => BeneficiaryInstitution;
+    IPartyIdentification242Choice? ISettlementParties120.BeneficiaryInstitution =>
+        BeneficiaryInstitution;
 }

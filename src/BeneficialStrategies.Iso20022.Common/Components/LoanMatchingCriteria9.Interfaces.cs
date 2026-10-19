@@ -25,38 +25,62 @@ public partial record LoanMatchingCriteria9 : ILoanMatchingCriteria9
     ICompareDate3? ILoanMatchingCriteria9.EarliestCallBackDate => EarliestCallBackDate;
     ICompareSpecialCollateral3? ILoanMatchingCriteria9.GeneralCollateral => GeneralCollateral;
     ICompareTrueFalseIndicator3? ILoanMatchingCriteria9.DeliveryByValue => DeliveryByValue;
-    ICompareDeliveryMethod3? ILoanMatchingCriteria9.CollateralDeliveryMethod => CollateralDeliveryMethod;
+    ICompareDeliveryMethod3? ILoanMatchingCriteria9.CollateralDeliveryMethod =>
+        CollateralDeliveryMethod;
     ICompareTrueFalseIndicator3? ILoanMatchingCriteria9.OpenTerm => OpenTerm;
     ICompareTerminationOption3? ILoanMatchingCriteria9.TerminationOption => TerminationOption;
     IComparePercentageRate3? ILoanMatchingCriteria9.FixedInterestRate => FixedInterestRate;
     ICompareInterestComputationMethod3? ILoanMatchingCriteria9.DayCountBasis => DayCountBasis;
-    ICompareBenchmarkCurveName3? ILoanMatchingCriteria9.FloatingInterestReferenceRate => FloatingInterestReferenceRate;
-    ICompareRateBasis3? ILoanMatchingCriteria9.FloatingInterestRateTermUnit => FloatingInterestRateTermUnit;
-    ICompareNumber5? ILoanMatchingCriteria9.FloatingInterestRateTermValue => FloatingInterestRateTermValue;
-    ICompareRateBasis3? ILoanMatchingCriteria9.FloatingInterestRatePaymentFrequencyUnit => FloatingInterestRatePaymentFrequencyUnit;
-    ICompareNumber5? ILoanMatchingCriteria9.FloatingInterestRatePaymentFrequencyValue => FloatingInterestRatePaymentFrequencyValue;
-    ICompareRateBasis3? ILoanMatchingCriteria9.FloatingInterestRateResetFrequencyUnit => FloatingInterestRateResetFrequencyUnit;
-    ICompareNumber6? ILoanMatchingCriteria9.FloatingInterestRateResetFrequencyValue => FloatingInterestRateResetFrequencyValue;
+    ICompareBenchmarkCurveName3? ILoanMatchingCriteria9.FloatingInterestReferenceRate =>
+        FloatingInterestReferenceRate;
+    ICompareRateBasis3? ILoanMatchingCriteria9.FloatingInterestRateTermUnit =>
+        FloatingInterestRateTermUnit;
+    ICompareNumber5? ILoanMatchingCriteria9.FloatingInterestRateTermValue =>
+        FloatingInterestRateTermValue;
+    ICompareRateBasis3? ILoanMatchingCriteria9.FloatingInterestRatePaymentFrequencyUnit =>
+        FloatingInterestRatePaymentFrequencyUnit;
+    ICompareNumber5? ILoanMatchingCriteria9.FloatingInterestRatePaymentFrequencyValue =>
+        FloatingInterestRatePaymentFrequencyValue;
+    ICompareRateBasis3? ILoanMatchingCriteria9.FloatingInterestRateResetFrequencyUnit =>
+        FloatingInterestRateResetFrequencyUnit;
+    ICompareNumber6? ILoanMatchingCriteria9.FloatingInterestRateResetFrequencyValue =>
+        FloatingInterestRateResetFrequencyValue;
     ICompareDecimalNumber3? ILoanMatchingCriteria9.BasisPointSpread => BasisPointSpread;
-    IEnumerable<ICompareInterestRate1> ILoanMatchingCriteria9.MarginLoanAttribute => MarginLoanAttribute;
-    ICompareActiveOrHistoricCurrencyAndAmount3? ILoanMatchingCriteria9.PrincipalAmountValueDateAmount => PrincipalAmountValueDateAmount;
-    ICompareActiveOrHistoricCurrencyAndAmount3? ILoanMatchingCriteria9.PrincipalAmountMaturityDateAmount => PrincipalAmountMaturityDateAmount;
+    IEnumerable<ICompareInterestRate1> ILoanMatchingCriteria9.MarginLoanAttribute =>
+        MarginLoanAttribute;
+    ICompareActiveOrHistoricCurrencyAndAmount3? ILoanMatchingCriteria9.PrincipalAmountValueDateAmount =>
+        PrincipalAmountValueDateAmount;
+    ICompareActiveOrHistoricCurrencyAndAmount3? ILoanMatchingCriteria9.PrincipalAmountMaturityDateAmount =>
+        PrincipalAmountMaturityDateAmount;
     ISecurityCommodity7Choice? ILoanMatchingCriteria9.AssetType => AssetType;
     ICompareActiveOrHistoricCurrencyAndAmount3? ILoanMatchingCriteria9.LoanValue => LoanValue;
-    IComparePercentageRate3? ILoanMatchingCriteria9.FixedRebateReferenceRate => FixedRebateReferenceRate;
-    ICompareBenchmarkCurveName3? ILoanMatchingCriteria9.FloatingRebateReferenceRate => FloatingRebateReferenceRate;
-    ICompareRateBasis3? ILoanMatchingCriteria9.FloatingRebateRateTermUnit => FloatingRebateRateTermUnit;
-    ICompareNumber6? ILoanMatchingCriteria9.FloatingRebateRateTermValue => FloatingRebateRateTermValue;
-    ICompareRateBasis3? ILoanMatchingCriteria9.FloatingRebateRatePaymentFrequencyUnit => FloatingRebateRatePaymentFrequencyUnit;
-    ICompareNumber6? ILoanMatchingCriteria9.FloatingRebateRatePaymentFrequencyValue => FloatingRebateRatePaymentFrequencyValue;
-    ICompareRateBasis3? ILoanMatchingCriteria9.FloatingRebateRateResetFrequencyUnit => FloatingRebateRateResetFrequencyUnit;
-    ICompareNumber6? ILoanMatchingCriteria9.FloatingRebateRateResetFrequencyValue => FloatingRebateRateResetFrequencyValue;
-    ICompareDecimalNumber3? ILoanMatchingCriteria9.RebateRateBasisPointSpread => RebateRateBasisPointSpread;
-    IEnumerable<IComparePercentageRate3> ILoanMatchingCriteria9.FloatingRateAdjustment => FloatingRateAdjustment;
-    IEnumerable<ICompareDate3> ILoanMatchingCriteria9.FloatingRateAdjustmentDate => FloatingRateAdjustmentDate;
+    IComparePercentageRate3? ILoanMatchingCriteria9.FixedRebateReferenceRate =>
+        FixedRebateReferenceRate;
+    ICompareBenchmarkCurveName3? ILoanMatchingCriteria9.FloatingRebateReferenceRate =>
+        FloatingRebateReferenceRate;
+    ICompareRateBasis3? ILoanMatchingCriteria9.FloatingRebateRateTermUnit =>
+        FloatingRebateRateTermUnit;
+    ICompareNumber6? ILoanMatchingCriteria9.FloatingRebateRateTermValue =>
+        FloatingRebateRateTermValue;
+    ICompareRateBasis3? ILoanMatchingCriteria9.FloatingRebateRatePaymentFrequencyUnit =>
+        FloatingRebateRatePaymentFrequencyUnit;
+    ICompareNumber6? ILoanMatchingCriteria9.FloatingRebateRatePaymentFrequencyValue =>
+        FloatingRebateRatePaymentFrequencyValue;
+    ICompareRateBasis3? ILoanMatchingCriteria9.FloatingRebateRateResetFrequencyUnit =>
+        FloatingRebateRateResetFrequencyUnit;
+    ICompareNumber6? ILoanMatchingCriteria9.FloatingRebateRateResetFrequencyValue =>
+        FloatingRebateRateResetFrequencyValue;
+    ICompareDecimalNumber3? ILoanMatchingCriteria9.RebateRateBasisPointSpread =>
+        RebateRateBasisPointSpread;
+    IEnumerable<IComparePercentageRate3> ILoanMatchingCriteria9.FloatingRateAdjustment =>
+        FloatingRateAdjustment;
+    IEnumerable<ICompareDate3> ILoanMatchingCriteria9.FloatingRateAdjustmentDate =>
+        FloatingRateAdjustmentDate;
     IComparePercentageRate3? ILoanMatchingCriteria9.LendingFee => LendingFee;
-    ICompareActiveOrHistoricCurrencyAndAmount3? ILoanMatchingCriteria9.OutstandingMarginLoanAmount => OutstandingMarginLoanAmount;
-    ICompareActiveOrHistoricCurrencyAndAmount3? ILoanMatchingCriteria9.ShortMarketValueAmount => ShortMarketValueAmount;
+    ICompareActiveOrHistoricCurrencyAndAmount3? ILoanMatchingCriteria9.OutstandingMarginLoanAmount =>
+        OutstandingMarginLoanAmount;
+    ICompareActiveOrHistoricCurrencyAndAmount3? ILoanMatchingCriteria9.ShortMarketValueAmount =>
+        ShortMarketValueAmount;
     ICompareReportingLevelType3? ILoanMatchingCriteria9.LevelType => LevelType;
     ICompareUnitOfMeasure3? ILoanMatchingCriteria9.UnitOfMeasure => UnitOfMeasure;
 }

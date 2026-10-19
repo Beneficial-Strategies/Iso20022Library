@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Reference details of the contract registration.
 /// </summary>
 [IsoId("_tyufgdM-EeSDLevdaFPXHw")]
-public interface IContractRegistrationReference1Choice : IIsoChoice
-{
-}
+public interface IContractRegistrationReference1Choice : IIsoChoice { }

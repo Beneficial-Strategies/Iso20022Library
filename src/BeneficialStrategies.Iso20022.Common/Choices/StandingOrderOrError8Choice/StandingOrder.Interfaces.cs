@@ -15,7 +15,8 @@ public partial record StandingOrder : IStandingOrder
     IAccountIdentification4Choice? IStandingOrder.AssociatedPoolAccount => AssociatedPoolAccount;
     IDatePeriod3? IStandingOrder.ValidityPeriod => ValidityPeriod;
     IBranchAndFinancialInstitutionIdentification6? IStandingOrder.SystemMember => SystemMember;
-    IBranchAndFinancialInstitutionIdentification6? IStandingOrder.ResponsibleParty => ResponsibleParty;
+    IBranchAndFinancialInstitutionIdentification6? IStandingOrder.ResponsibleParty =>
+        ResponsibleParty;
     IExecutionType1Choice? IStandingOrder.ExecutionType => ExecutionType;
     IBranchAndFinancialInstitutionIdentification6? IStandingOrder.Creditor => Creditor;
     ICashAccount40? IStandingOrder.CreditorAccount => CreditorAccount;

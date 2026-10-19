@@ -10,11 +10,15 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CashAccountEntrySearch6 : ICashAccountEntrySearch6
 {
-    IEnumerable<IAccountIdentificationSearchCriteria2Choice> ICashAccountEntrySearch6.AccountIdentification => AccountIdentification;
-    IEnumerable<IActiveOrHistoricAmountRange2Choice> ICashAccountEntrySearch6.EntryAmount => EntryAmount;
-    IEnumerable<ActiveOrHistoricCurrencyCode> ICashAccountEntrySearch6.EntryAmountCurrency => EntryAmountCurrency;
+    IEnumerable<IAccountIdentificationSearchCriteria2Choice> ICashAccountEntrySearch6.AccountIdentification =>
+        AccountIdentification;
+    IEnumerable<IActiveOrHistoricAmountRange2Choice> ICashAccountEntrySearch6.EntryAmount =>
+        EntryAmount;
+    IEnumerable<ActiveOrHistoricCurrencyCode> ICashAccountEntrySearch6.EntryAmountCurrency =>
+        EntryAmountCurrency;
     IEnumerable<EntryStatus1Code> ICashAccountEntrySearch6.EntryStatus => EntryStatus;
     IEnumerable<IDateAndDateTimeSearch3Choice> ICashAccountEntrySearch6.EntryDate => EntryDate;
     IPartyIdentification135? ICashAccountEntrySearch6.AccountOwner => AccountOwner;
-    IBranchAndFinancialInstitutionIdentification6? ICashAccountEntrySearch6.AccountServicer => AccountServicer;
+    IBranchAndFinancialInstitutionIdentification6? ICashAccountEntrySearch6.AccountServicer =>
+        AccountServicer;
 }

@@ -10,11 +10,17 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record IntraBalanceQueryCriteria7 : IIntraBalanceQueryCriteria7
 {
-    IEnumerable<Max35Text> IIntraBalanceQueryCriteria7.CancellationRequestIdentification => CancellationRequestIdentification;
-    IEnumerable<ICancellationProcessingStatus9Choice> IIntraBalanceQueryCriteria7.ProcessingStatus => ProcessingStatus;
-    IEnumerable<IAccountIdentificationSearchCriteria2Choice> IIntraBalanceQueryCriteria7.CashAccount => CashAccount;
-    IEnumerable<ISystemPartyIdentification8> IIntraBalanceQueryCriteria7.CashAccountOwner => CashAccountOwner;
-    IBranchAndFinancialInstitutionIdentification6? IIntraBalanceQueryCriteria7.CashAccountServicer => CashAccountServicer;
-    IEnumerable<ISystemPartyIdentification8> IIntraBalanceQueryCriteria7.MessageOriginator => MessageOriginator;
+    IEnumerable<Max35Text> IIntraBalanceQueryCriteria7.CancellationRequestIdentification =>
+        CancellationRequestIdentification;
+    IEnumerable<ICancellationProcessingStatus9Choice> IIntraBalanceQueryCriteria7.ProcessingStatus =>
+        ProcessingStatus;
+    IEnumerable<IAccountIdentificationSearchCriteria2Choice> IIntraBalanceQueryCriteria7.CashAccount =>
+        CashAccount;
+    IEnumerable<ISystemPartyIdentification8> IIntraBalanceQueryCriteria7.CashAccountOwner =>
+        CashAccountOwner;
+    IBranchAndFinancialInstitutionIdentification6? IIntraBalanceQueryCriteria7.CashAccountServicer =>
+        CashAccountServicer;
+    IEnumerable<ISystemPartyIdentification8> IIntraBalanceQueryCriteria7.MessageOriginator =>
+        MessageOriginator;
     IDateAndDateTimeSearch5Choice? IIntraBalanceQueryCriteria7.CreationDateTime => CreationDateTime;
 }

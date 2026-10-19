@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record VolumeCapResult1 : IVolumeCapResult1
 {
     IPeriod4Choice IVolumeCapResult1.ReportingPeriod => ReportingPeriod;
-    IEnumerable<ITradingUnderWaiversPercentage1> IVolumeCapResult1.TradingUnderWaiverBreakdown => TradingUnderWaiverBreakdown;
+    IEnumerable<ITradingUnderWaiversPercentage1> IVolumeCapResult1.TradingUnderWaiverBreakdown =>
+        TradingUnderWaiverBreakdown;
 }

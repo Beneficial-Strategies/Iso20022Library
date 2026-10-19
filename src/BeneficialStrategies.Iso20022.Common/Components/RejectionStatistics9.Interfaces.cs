@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record RejectionStatistics9 : IRejectionStatistics9
 {
-    ICounterpartyData92 IRejectionStatistics9.CounterpartyIdentification => CounterpartyIdentification;
+    ICounterpartyData92 IRejectionStatistics9.CounterpartyIdentification =>
+        CounterpartyIdentification;
     IDetailedReportStatistics7 IRejectionStatistics9.ReportStatistics => ReportStatistics;
-    IDetailedTransactionStatistics7Choice IRejectionStatistics9.DerivativeStatistics => DerivativeStatistics;
+    IDetailedTransactionStatistics7Choice IRejectionStatistics9.DerivativeStatistics =>
+        DerivativeStatistics;
 }

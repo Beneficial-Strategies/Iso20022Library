@@ -12,7 +12,9 @@ public partial record BillingSearchCriteria3 : IBillingSearchCriteria3
 {
     ISystemAndCurrency1? IBillingSearchCriteria3.Service => Service;
     IDatePeriod2? IBillingSearchCriteria3.BillingPeriod => BillingPeriod;
-    IPartyIdentification136? IBillingSearchCriteria3.ResponsiblePartyIdentification => ResponsiblePartyIdentification;
+    IPartyIdentification136? IBillingSearchCriteria3.ResponsiblePartyIdentification =>
+        ResponsiblePartyIdentification;
     IPartyIdentification136? IBillingSearchCriteria3.PartyIdentification => PartyIdentification;
-    IAccountIdentification38Choice? IBillingSearchCriteria3.AccountIdentification => AccountIdentification;
+    IAccountIdentification38Choice? IBillingSearchCriteria3.AccountIdentification =>
+        AccountIdentification;
 }

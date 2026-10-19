@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record ClearingMemberFee1 : IClearingMemberFee1
 {
-    IPartyIdentification118Choice IClearingMemberFee1.ClearingMemberIdentification => ClearingMemberIdentification;
+    IPartyIdentification118Choice IClearingMemberFee1.ClearingMemberIdentification =>
+        ClearingMemberIdentification;
 }

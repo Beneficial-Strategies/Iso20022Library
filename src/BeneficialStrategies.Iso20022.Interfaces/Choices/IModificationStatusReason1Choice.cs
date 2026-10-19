@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the reason for the transaction modification status.
 /// </summary>
 [IsoId("_L89WiYlsEeePr-EGJjGYzQ")]
-public interface IModificationStatusReason1Choice : IIsoChoice
-{
-}
+public interface IModificationStatusReason1Choice : IIsoChoice { }

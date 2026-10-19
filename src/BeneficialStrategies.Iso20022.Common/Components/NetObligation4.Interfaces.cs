@@ -10,9 +10,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record NetObligation4 : INetObligation4
 {
-    INettingIdentification2Choice INetObligation4.ParticipantNettingIdentification => ParticipantNettingIdentification;
-    INettingIdentification2Choice INetObligation4.CounterpartyNettingIdentification => CounterpartyNettingIdentification;
-    IPartyIdentification242Choice? INetObligation4.NetServiceCounterpartyIdentification => NetServiceCounterpartyIdentification;
-    ISettlementParties120? INetObligation4.CounterpartySettlementInstructions => CounterpartySettlementInstructions;
-    IEnumerable<ISplitObligationAttributes1> INetObligation4.SplitObligationData => SplitObligationData;
+    INettingIdentification2Choice INetObligation4.ParticipantNettingIdentification =>
+        ParticipantNettingIdentification;
+    INettingIdentification2Choice INetObligation4.CounterpartyNettingIdentification =>
+        CounterpartyNettingIdentification;
+    IPartyIdentification242Choice? INetObligation4.NetServiceCounterpartyIdentification =>
+        NetServiceCounterpartyIdentification;
+    ISettlementParties120? INetObligation4.CounterpartySettlementInstructions =>
+        CounterpartySettlementInstructions;
+    IEnumerable<ISplitObligationAttributes1> INetObligation4.SplitObligationData =>
+        SplitObligationData;
 }

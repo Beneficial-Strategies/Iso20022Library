@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Information on reusability of previously submitted data.
 /// </summary>
 [IsoId("_MxqLscK8EeuMhqg3CsEu6Q")]
-public interface IReuseDataReport6Choice : IIsoChoice
-{
-}
+public interface IReuseDataReport6Choice : IIsoChoice { }

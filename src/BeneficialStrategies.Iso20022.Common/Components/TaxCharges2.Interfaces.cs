@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record TaxCharges2 : ITaxCharges2
-{
-}
+public partial record TaxCharges2 : ITaxCharges2 { }

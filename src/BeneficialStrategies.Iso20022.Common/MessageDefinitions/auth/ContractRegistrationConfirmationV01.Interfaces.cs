@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.auth;
 public partial record ContractRegistrationConfirmationV01 : IContractRegistrationConfirmationV01
 {
     ICurrencyControlHeader2 IContractRegistrationConfirmationV01.GroupHeader => GroupHeader;
-    IEnumerable<IRegisteredContract4> IContractRegistrationConfirmationV01.RegisteredContract => RegisteredContract;
-    IEnumerable<ISupplementaryData1> IContractRegistrationConfirmationV01.SupplementaryData => SupplementaryData;
+    IEnumerable<IRegisteredContract4> IContractRegistrationConfirmationV01.RegisteredContract =>
+        RegisteredContract;
+    IEnumerable<ISupplementaryData1> IContractRegistrationConfirmationV01.SupplementaryData =>
+        SupplementaryData;
 }

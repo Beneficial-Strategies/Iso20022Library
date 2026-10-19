@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record BankTransactionCodeStructure4 : IBankTransactionCodeStructure4
 {
     IBankTransactionCodeStructure5? IBankTransactionCodeStructure4.Domain => Domain;
-    IProprietaryBankTransactionCodeStructure1? IBankTransactionCodeStructure4.Proprietary => Proprietary;
+    IProprietaryBankTransactionCodeStructure1? IBankTransactionCodeStructure4.Proprietary =>
+        Proprietary;
 }

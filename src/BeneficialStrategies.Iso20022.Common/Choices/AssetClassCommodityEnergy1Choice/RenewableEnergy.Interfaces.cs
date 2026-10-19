@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnergy1Choice;
 
-public partial record RenewableEnergy : IRenewableEnergy
-{
-}
+public partial record RenewableEnergy : IRenewableEnergy { }

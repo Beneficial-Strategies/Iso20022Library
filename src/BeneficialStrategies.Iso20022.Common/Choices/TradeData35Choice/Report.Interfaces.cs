@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData35Choice;
 public partial record Report : IReport
 {
     IEnumerable<IDetailedReportStatistics5> IReport.ReportStatistics => ReportStatistics;
-    IEnumerable<IDetailedTransactionStatistics2Choice> IReport.TransactionStatistics => TransactionStatistics;
+    IEnumerable<IDetailedTransactionStatistics2Choice> IReport.TransactionStatistics =>
+        TransactionStatistics;
     IEnumerable<ISupplementaryData1> IReport.SupplementaryData => SupplementaryData;
 }

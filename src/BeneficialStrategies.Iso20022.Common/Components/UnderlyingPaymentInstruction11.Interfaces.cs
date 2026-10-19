@@ -10,8 +10,12 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record UnderlyingPaymentInstruction11 : IUnderlyingPaymentInstruction11
 {
-    IUnderlyingGroupInformation1? IUnderlyingPaymentInstruction11.OriginalGroupInformation => OriginalGroupInformation;
-    IDateAndDateTime2Choice? IUnderlyingPaymentInstruction11.RequestedExecutionDate => RequestedExecutionDate;
-    IOriginalTransactionReference48? IUnderlyingPaymentInstruction11.OriginalTransactionReference => OriginalTransactionReference;
-    IServiceLevel8Choice? IUnderlyingPaymentInstruction11.OriginalServiceLevel => OriginalServiceLevel;
+    IUnderlyingGroupInformation1? IUnderlyingPaymentInstruction11.OriginalGroupInformation =>
+        OriginalGroupInformation;
+    IDateAndDateTime2Choice? IUnderlyingPaymentInstruction11.RequestedExecutionDate =>
+        RequestedExecutionDate;
+    IOriginalTransactionReference48? IUnderlyingPaymentInstruction11.OriginalTransactionReference =>
+        OriginalTransactionReference;
+    IServiceLevel8Choice? IUnderlyingPaymentInstruction11.OriginalServiceLevel =>
+        OriginalServiceLevel;
 }

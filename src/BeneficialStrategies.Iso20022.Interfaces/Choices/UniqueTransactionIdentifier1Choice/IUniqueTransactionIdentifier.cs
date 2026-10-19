@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.UniqueTransactionIdentifier1Choi
 /// Unique trade identifier (UTI) as agreed with the counterparty.
 /// </summary>
 [IsoId("_NzBwwAxfEeuoAcnnpX2x_w")]
-public interface IUniqueTransactionIdentifier : IUniqueTransactionIdentifier1Choice, IIsoChoiceVariant
+public interface IUniqueTransactionIdentifier
+    : IUniqueTransactionIdentifier1Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

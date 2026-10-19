@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural1Choice;
 
-public partial record Grain : IGrain
-{
-}
+public partial record Grain : IGrain { }

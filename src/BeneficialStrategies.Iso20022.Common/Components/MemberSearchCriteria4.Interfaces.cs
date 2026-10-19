@@ -10,7 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record MemberSearchCriteria4 : IMemberSearchCriteria4
 {
-    IEnumerable<IMemberIdentification3Choice> IMemberSearchCriteria4.Identification => Identification;
+    IEnumerable<IMemberIdentification3Choice> IMemberSearchCriteria4.Identification =>
+        Identification;
     IEnumerable<ISystemMemberType1Choice> IMemberSearchCriteria4.Type => Type;
     IEnumerable<ISystemMemberStatus1Choice> IMemberSearchCriteria4.Status => Status;
 }

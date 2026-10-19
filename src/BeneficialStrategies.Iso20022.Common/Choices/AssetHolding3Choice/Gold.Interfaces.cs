@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.AssetHolding3Choice;
 
-public partial record Gold : IGold
-{
-}
+public partial record Gold : IGold { }

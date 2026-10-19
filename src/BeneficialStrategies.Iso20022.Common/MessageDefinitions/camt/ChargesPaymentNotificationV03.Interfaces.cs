@@ -12,5 +12,6 @@ public partial record ChargesPaymentNotificationV03 : IChargesPaymentNotificatio
 {
     IGroupHeader126 IChargesPaymentNotificationV03.GroupHeader => GroupHeader;
     ICharges5Choice IChargesPaymentNotificationV03.Charges => Charges;
-    IEnumerable<ISupplementaryData1> IChargesPaymentNotificationV03.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IChargesPaymentNotificationV03.SupplementaryData =>
+        SupplementaryData;
 }

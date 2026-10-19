@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices;
 
-public abstract partial record UnitOfMeasure8Choice_ : IUnitOfMeasure8Choice
-{
-}
+public abstract partial record UnitOfMeasure8Choice_ : IUnitOfMeasure8Choice { }

@@ -14,5 +14,6 @@ public partial record NotificationOfCaseAssignmentV06 : INotificationOfCaseAssig
     ICase6 INotificationOfCaseAssignmentV06.Case => Case;
     ICaseAssignment6 INotificationOfCaseAssignmentV06.Assignment => Assignment;
     ICaseForwardingNotification3 INotificationOfCaseAssignmentV06.Notification => Notification;
-    IEnumerable<ISupplementaryData1> INotificationOfCaseAssignmentV06.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> INotificationOfCaseAssignmentV06.SupplementaryData =>
+        SupplementaryData;
 }

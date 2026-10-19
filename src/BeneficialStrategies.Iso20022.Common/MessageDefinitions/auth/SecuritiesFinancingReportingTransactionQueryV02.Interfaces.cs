@@ -8,9 +8,13 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.auth;
 
-public partial record SecuritiesFinancingReportingTransactionQueryV02 : ISecuritiesFinancingReportingTransactionQueryV02
+public partial record SecuritiesFinancingReportingTransactionQueryV02
+    : ISecuritiesFinancingReportingTransactionQueryV02
 {
-    IPartyIdentification121Choice ISecuritiesFinancingReportingTransactionQueryV02.RequestingAuthority => RequestingAuthority;
-    ITradeReportQuery13Choice ISecuritiesFinancingReportingTransactionQueryV02.TradeQueryData => TradeQueryData;
-    IEnumerable<ISupplementaryData1> ISecuritiesFinancingReportingTransactionQueryV02.SupplementaryData => SupplementaryData;
+    IPartyIdentification121Choice ISecuritiesFinancingReportingTransactionQueryV02.RequestingAuthority =>
+        RequestingAuthority;
+    ITradeReportQuery13Choice ISecuritiesFinancingReportingTransactionQueryV02.TradeQueryData =>
+        TradeQueryData;
+    IEnumerable<ISupplementaryData1> ISecuritiesFinancingReportingTransactionQueryV02.SupplementaryData =>
+        SupplementaryData;
 }

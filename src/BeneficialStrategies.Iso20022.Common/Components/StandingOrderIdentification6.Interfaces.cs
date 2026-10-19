@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record StandingOrderIdentification6 : IStandingOrderIdentification6
 {
     ICashAccount40 IStandingOrderIdentification6.Account => Account;
-    IBranchAndFinancialInstitutionIdentification6? IStandingOrderIdentification6.AccountOwner => AccountOwner;
+    IBranchAndFinancialInstitutionIdentification6? IStandingOrderIdentification6.AccountOwner =>
+        AccountOwner;
 }

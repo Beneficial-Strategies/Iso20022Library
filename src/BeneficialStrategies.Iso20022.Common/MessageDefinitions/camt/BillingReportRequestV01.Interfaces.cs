@@ -12,5 +12,6 @@ public partial record BillingReportRequestV01 : IBillingReportRequestV01
 {
     IMessageHeader9 IBillingReportRequestV01.MessageHeader => MessageHeader;
     IEnumerable<IBillingSearchCriteria3> IBillingReportRequestV01.SearchCriteria => SearchCriteria;
-    IEnumerable<ISupplementaryData1> IBillingReportRequestV01.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IBillingReportRequestV01.SupplementaryData =>
+        SupplementaryData;
 }

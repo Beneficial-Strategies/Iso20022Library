@@ -8,9 +8,13 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.auth;
 
-public partial record CurrencyControlSupportingDocumentDeliveryV03 : ICurrencyControlSupportingDocumentDeliveryV03
+public partial record CurrencyControlSupportingDocumentDeliveryV03
+    : ICurrencyControlSupportingDocumentDeliveryV03
 {
-    ICurrencyControlHeader5 ICurrencyControlSupportingDocumentDeliveryV03.GroupHeader => GroupHeader;
-    IEnumerable<ISupportingDocument3> ICurrencyControlSupportingDocumentDeliveryV03.SupportingDocument => SupportingDocument;
-    IEnumerable<ISupplementaryData1> ICurrencyControlSupportingDocumentDeliveryV03.SupplementaryData => SupplementaryData;
+    ICurrencyControlHeader5 ICurrencyControlSupportingDocumentDeliveryV03.GroupHeader =>
+        GroupHeader;
+    IEnumerable<ISupportingDocument3> ICurrencyControlSupportingDocumentDeliveryV03.SupportingDocument =>
+        SupportingDocument;
+    IEnumerable<ISupplementaryData1> ICurrencyControlSupportingDocumentDeliveryV03.SupplementaryData =>
+        SupplementaryData;
 }

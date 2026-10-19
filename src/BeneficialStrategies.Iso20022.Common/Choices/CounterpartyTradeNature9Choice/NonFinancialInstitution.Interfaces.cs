@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature9Choice;
 
 public partial record NonFinancialInstitution : INonFinancialInstitution
 {
-    INonFinancialInstitutionSector2? INonFinancialInstitution.NonFinancialInstitutionIdentifier => NonFinancialInstitutionIdentifier;
+    INonFinancialInstitutionSector2? INonFinancialInstitution.NonFinancialInstitutionIdentifier =>
+        NonFinancialInstitutionIdentifier;
 }

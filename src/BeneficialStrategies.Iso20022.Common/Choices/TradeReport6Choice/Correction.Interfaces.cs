@@ -12,6 +12,7 @@ public partial record Correction : ICorrection
 {
     ICounterparty30 ICorrection.Counterparty => Counterparty;
     IPostedMarginOrCollateral3? ICorrection.PostedMarginOrCollateral => PostedMarginOrCollateral;
-    IReceivedMarginOrCollateral3? ICorrection.ReceivedMarginOrCollateral => ReceivedMarginOrCollateral;
+    IReceivedMarginOrCollateral3? ICorrection.ReceivedMarginOrCollateral =>
+        ReceivedMarginOrCollateral;
     IEnumerable<ISupplementaryData1> ICorrection.SupplementaryData => SupplementaryData;
 }

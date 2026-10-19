@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustification4Choic
 /// Set of elements used to indicate which information is missing or incorrect.
 /// </summary>
 [IsoId("_7MMKY9jKEeq5MfBBxQig1Q")]
-public interface IMissingOrIncorrectInformation : IUnableToApplyJustification4Choice, IIsoChoiceVariant
+public interface IMissingOrIncorrectInformation
+    : IUnableToApplyJustification4Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Indicates whether the request is related to an AML (Anti Money Laundering) investigation or not.

@@ -12,5 +12,6 @@ public partial record ChequeCancellationOrStopReportV01 : IChequeCancellationOrS
 {
     IGroupHeader103 IChequeCancellationOrStopReportV01.GroupHeader => GroupHeader;
     IEnumerable<ICheque14> IChequeCancellationOrStopReportV01.Cheque => Cheque;
-    IEnumerable<ISupplementaryData1> IChequeCancellationOrStopReportV01.SupplementaryData => SupplementaryData;
+    IEnumerable<ISupplementaryData1> IChequeCancellationOrStopReportV01.SupplementaryData =>
+        SupplementaryData;
 }

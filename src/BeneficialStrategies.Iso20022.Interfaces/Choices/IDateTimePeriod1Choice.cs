@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between various date time patterns.
 /// </summary>
 [IsoId("_xLYeBZlcEeeE1Ya-LgRsuQ")]
-public interface IDateTimePeriod1Choice : IIsoChoice
-{
-}
+public interface IDateTimePeriod1Choice : IIsoChoice { }

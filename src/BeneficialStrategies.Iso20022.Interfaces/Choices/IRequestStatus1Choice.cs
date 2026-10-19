@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Request Status1Choice.
 /// </summary>
 [IsoId("_0Kkf8LqsEe68nbz8Nl_hLQ")]
-public interface IRequestStatus1Choice : IIsoChoice
-{
-}
+public interface IRequestStatus1Choice : IIsoChoice { }

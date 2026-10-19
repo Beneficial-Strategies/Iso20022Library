@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustification3Choice;
 
-public partial record PossibleDuplicateInstruction : IPossibleDuplicateInstruction
-{
-}
+public partial record PossibleDuplicateInstruction : IPossibleDuplicateInstruction { }

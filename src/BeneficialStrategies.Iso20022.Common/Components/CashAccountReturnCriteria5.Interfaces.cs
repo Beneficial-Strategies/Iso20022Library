@@ -10,6 +10,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CashAccountReturnCriteria5 : ICashAccountReturnCriteria5
 {
-    ICashBalanceReturnCriteria2? ICashAccountReturnCriteria5.MultilateralBalanceReturnCriteria => MultilateralBalanceReturnCriteria;
-    ICashBalanceReturnCriteria2? ICashAccountReturnCriteria5.BilateralBalanceReturnCriteria => BilateralBalanceReturnCriteria;
+    ICashBalanceReturnCriteria2? ICashAccountReturnCriteria5.MultilateralBalanceReturnCriteria =>
+        MultilateralBalanceReturnCriteria;
+    ICashBalanceReturnCriteria2? ICashAccountReturnCriteria5.BilateralBalanceReturnCriteria =>
+        BilateralBalanceReturnCriteria;
 }

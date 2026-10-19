@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedMissingMarginInformation
 /// Specifies the type of report activity for a specific reporting period.
 /// </summary>
 [IsoId("_rsDiwVowEe23K4GXSpBSeg")]
-public interface IDataSetAction : IDetailedMissingMarginInformationStatistics4Choice, IIsoChoiceVariant
+public interface IDataSetAction
+    : IDetailedMissingMarginInformationStatistics4Choice,
+        IIsoChoiceVariant
 {
     /// <summary>
     /// Contains the main value for the container.

@@ -11,7 +11,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record ChargesPerType3 : IChargesPerType3
 {
     ITotalCharges7? IChargesPerType3.TotalChargesPerChargeType => TotalChargesPerChargeType;
-    IBranchAndFinancialInstitutionIdentification8? IChargesPerType3.ChargesAccountAgent => ChargesAccountAgent;
+    IBranchAndFinancialInstitutionIdentification8? IChargesPerType3.ChargesAccountAgent =>
+        ChargesAccountAgent;
     ICashAccount40? IChargesPerType3.ChargesAccountAgentAccount => ChargesAccountAgentAccount;
     IChargeType3Choice IChargesPerType3.Type => Type;
     IEnumerable<IChargesPerTypeRecord3> IChargesPerType3.Record => Record;

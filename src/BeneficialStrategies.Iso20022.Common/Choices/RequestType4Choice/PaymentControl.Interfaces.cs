@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.RequestType4Choice;
 
-public partial record PaymentControl : IPaymentControl
-{
-}
+public partial record PaymentControl : IPaymentControl { }

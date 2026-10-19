@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification7Choice;
 
-public partial record QueueIdentification : IQueueIdentification
-{
-}
+public partial record QueueIdentification : IQueueIdentification { }

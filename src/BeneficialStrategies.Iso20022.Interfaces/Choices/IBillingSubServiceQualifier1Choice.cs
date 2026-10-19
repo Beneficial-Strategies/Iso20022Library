@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Specifies the qualifier for a subservice.
 /// </summary>
 [IsoId("_6PphwJqlEeGSON8vddiWzQ_1042088657")]
-public interface IBillingSubServiceQualifier1Choice : IIsoChoice
-{
-}
+public interface IBillingSubServiceQualifier1Choice : IIsoChoice { }

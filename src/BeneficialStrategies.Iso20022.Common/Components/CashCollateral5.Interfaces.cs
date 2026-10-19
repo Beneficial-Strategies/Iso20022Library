@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CashCollateral5 : ICashCollateral5
 {
-    IAccountIdentification4Choice? ICashCollateral5.CashAccountIdentification => CashAccountIdentification;
+    IAccountIdentification4Choice? ICashCollateral5.CashAccountIdentification =>
+        CashAccountIdentification;
 }

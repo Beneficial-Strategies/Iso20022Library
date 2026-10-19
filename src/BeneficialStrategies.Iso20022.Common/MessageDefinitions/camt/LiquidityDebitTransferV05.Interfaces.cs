@@ -11,6 +11,8 @@ namespace BeneficialStrategies.Iso20022.camt;
 public partial record LiquidityDebitTransferV05 : ILiquidityDebitTransferV05
 {
     IMessageHeader1 ILiquidityDebitTransferV05.MessageHeader => MessageHeader;
-    ILiquidityDebitTransfer2 ILiquidityDebitTransferV05.LiquidityDebitTransfer => LiquidityDebitTransfer;
-    IEnumerable<ISupplementaryData1> ILiquidityDebitTransferV05.SupplementaryData => SupplementaryData;
+    ILiquidityDebitTransfer2 ILiquidityDebitTransferV05.LiquidityDebitTransfer =>
+        LiquidityDebitTransfer;
+    IEnumerable<ISupplementaryData1> ILiquidityDebitTransferV05.SupplementaryData =>
+        SupplementaryData;
 }

@@ -8,8 +8,11 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record ReconciliationStatisticsPerDerivativeContractGroup3 : IReconciliationStatisticsPerDerivativeContractGroup3
+public partial record ReconciliationStatisticsPerDerivativeContractGroup3
+    : IReconciliationStatisticsPerDerivativeContractGroup3
 {
-    IReconciliationStatisticsPerDerivativeType3 IReconciliationStatisticsPerDerivativeContractGroup3.OTC => OTC;
-    IReconciliationStatisticsPerDerivativeType3 IReconciliationStatisticsPerDerivativeContractGroup3.ETD => ETD;
+    IReconciliationStatisticsPerDerivativeType3 IReconciliationStatisticsPerDerivativeContractGroup3.OTC =>
+        OTC;
+    IReconciliationStatisticsPerDerivativeType3 IReconciliationStatisticsPerDerivativeContractGroup3.ETD =>
+        ETD;
 }

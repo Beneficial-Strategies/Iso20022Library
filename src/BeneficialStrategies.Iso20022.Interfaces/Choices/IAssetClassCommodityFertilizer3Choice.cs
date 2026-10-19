@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Defines commodity attributes of a derivative where the type is fertilizer.
 /// </summary>
 [IsoId("_K19uYbv7EeiLRYqS-r-R-A")]
-public interface IAssetClassCommodityFertilizer3Choice : IIsoChoice
-{
-}
+public interface IAssetClassCommodityFertilizer3Choice : IIsoChoice { }

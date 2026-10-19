@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.ReconciliationStatus8Choice;
 
-public partial record NoReconciliationRequired : INoReconciliationRequired
-{
-}
+public partial record NoReconciliationRequired : INoReconciliationRequired { }

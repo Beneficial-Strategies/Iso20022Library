@@ -10,22 +10,30 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record RequestedModification10 : IRequestedModification10
 {
-    IPaymentTypeInformation27? IRequestedModification10.PaymentTypeInformation => PaymentTypeInformation;
-    IDateAndDateTime2Choice? IRequestedModification10.RequestedExecutionDate => RequestedExecutionDate;
-    ISettlementDateTimeIndication1? IRequestedModification10.SettlementTimeIndication => SettlementTimeIndication;
+    IPaymentTypeInformation27? IRequestedModification10.PaymentTypeInformation =>
+        PaymentTypeInformation;
+    IDateAndDateTime2Choice? IRequestedModification10.RequestedExecutionDate =>
+        RequestedExecutionDate;
+    ISettlementDateTimeIndication1? IRequestedModification10.SettlementTimeIndication =>
+        SettlementTimeIndication;
     IAmountType4Choice? IRequestedModification10.Amount => Amount;
     IPartyIdentification135? IRequestedModification10.UltimateDebtor => UltimateDebtor;
     IPartyIdentification135? IRequestedModification10.Debtor => Debtor;
     ICashAccount40? IRequestedModification10.DebtorAccount => DebtorAccount;
     ICashAccount40? IRequestedModification10.DebtorAgentAccount => DebtorAgentAccount;
-    ISettlementInstruction13? IRequestedModification10.SettlementInformation => SettlementInformation;
+    ISettlementInstruction13? IRequestedModification10.SettlementInformation =>
+        SettlementInformation;
     ICashAccount40? IRequestedModification10.CreditorAgentAccount => CreditorAgentAccount;
     IPartyIdentification135? IRequestedModification10.Creditor => Creditor;
     ICashAccount40? IRequestedModification10.CreditorAccount => CreditorAccount;
     IPartyIdentification135? IRequestedModification10.UltimateCreditor => UltimateCreditor;
     IPurpose2Choice? IRequestedModification10.Purpose => Purpose;
-    IEnumerable<IInstructionForNextAgent1> IRequestedModification10.InstructionForNextAgent => InstructionForNextAgent;
-    IEnumerable<IInstructionForCreditorAgent3> IRequestedModification10.InstructionForCreditorAgent => InstructionForCreditorAgent;
-    IEnumerable<IRemittanceLocation7> IRequestedModification10.RelatedRemittanceInformation => RelatedRemittanceInformation;
-    IRemittanceInformation21? IRequestedModification10.RemittanceInformation => RemittanceInformation;
+    IEnumerable<IInstructionForNextAgent1> IRequestedModification10.InstructionForNextAgent =>
+        InstructionForNextAgent;
+    IEnumerable<IInstructionForCreditorAgent3> IRequestedModification10.InstructionForCreditorAgent =>
+        InstructionForCreditorAgent;
+    IEnumerable<IRemittanceLocation7> IRequestedModification10.RelatedRemittanceInformation =>
+        RelatedRemittanceInformation;
+    IRemittanceInformation21? IRequestedModification10.RemittanceInformation =>
+        RemittanceInformation;
 }

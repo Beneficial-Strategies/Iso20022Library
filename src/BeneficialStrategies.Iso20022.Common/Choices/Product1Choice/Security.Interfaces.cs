@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.Product1Choice;
 
-public partial record Security : ISecurity
-{
-}
+public partial record Security : ISecurity { }

@@ -10,9 +10,12 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record RequestedModification9 : IRequestedModification9
 {
-    IPaymentTypeInformation27? IRequestedModification9.PaymentTypeInformation => PaymentTypeInformation;
-    IDateAndDateTime2Choice? IRequestedModification9.RequestedExecutionDate => RequestedExecutionDate;
-    ISettlementDateTimeIndication1? IRequestedModification9.SettlementTimeIndication => SettlementTimeIndication;
+    IPaymentTypeInformation27? IRequestedModification9.PaymentTypeInformation =>
+        PaymentTypeInformation;
+    IDateAndDateTime2Choice? IRequestedModification9.RequestedExecutionDate =>
+        RequestedExecutionDate;
+    ISettlementDateTimeIndication1? IRequestedModification9.SettlementTimeIndication =>
+        SettlementTimeIndication;
     IAmountType4Choice? IRequestedModification9.Amount => Amount;
     IPartyIdentification135? IRequestedModification9.UltimateDebtor => UltimateDebtor;
     IPartyIdentification135? IRequestedModification9.Debtor => Debtor;
@@ -24,7 +27,10 @@ public partial record RequestedModification9 : IRequestedModification9
     ICashAccount38? IRequestedModification9.CreditorAccount => CreditorAccount;
     IPartyIdentification135? IRequestedModification9.UltimateCreditor => UltimateCreditor;
     IPurpose2Choice? IRequestedModification9.Purpose => Purpose;
-    IEnumerable<IInstructionForNextAgent1> IRequestedModification9.InstructionForNextAgent => InstructionForNextAgent;
-    IEnumerable<IInstructionForCreditorAgent3> IRequestedModification9.InstructionForCreditorAgent => InstructionForCreditorAgent;
-    IRemittanceInformation16? IRequestedModification9.RemittanceInformation => RemittanceInformation;
+    IEnumerable<IInstructionForNextAgent1> IRequestedModification9.InstructionForNextAgent =>
+        InstructionForNextAgent;
+    IEnumerable<IInstructionForCreditorAgent3> IRequestedModification9.InstructionForCreditorAgent =>
+        InstructionForCreditorAgent;
+    IRemittanceInformation16? IRequestedModification9.RemittanceInformation =>
+        RemittanceInformation;
 }

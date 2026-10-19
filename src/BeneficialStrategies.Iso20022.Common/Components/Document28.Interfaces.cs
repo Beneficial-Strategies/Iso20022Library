@@ -15,7 +15,9 @@ public partial record Document28 : IDocument28
     IPeriod4Choice? IDocument28.RelatedPeriod => RelatedPeriod;
     IPeriod4Choice? IDocument28.PublicationPeriod => PublicationPeriod;
     IEnumerable<CountryCode> IDocument28.HostCountry => HostCountry;
-    IEnumerable<ISecurityIdentification49> IDocument28.RelatedProductIdentifier => RelatedProductIdentifier;
+    IEnumerable<ISecurityIdentification49> IDocument28.RelatedProductIdentifier =>
+        RelatedProductIdentifier;
     IEnumerable<IDocument26> IDocument28.DocumentReference => DocumentReference;
-    IEnumerable<IGenericIdentification190> IDocument28.RelatedRegulatoryData => RelatedRegulatoryData;
+    IEnumerable<IGenericIdentification190> IDocument28.RelatedRegulatoryData =>
+        RelatedRegulatoryData;
 }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Person Or Organisation4Choice.
 /// </summary>
 [IsoId("_gwG4sSCYEe64P8jfINlL1Q")]
-public interface IPersonOrOrganisation4Choice : IIsoChoice
-{
-}
+public interface IPersonOrOrganisation4Choice : IIsoChoice { }

@@ -8,8 +8,11 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record NumberAndSumOfTransactionsPerBankTransactionCode1 : INumberAndSumOfTransactionsPerBankTransactionCode1
+public partial record NumberAndSumOfTransactionsPerBankTransactionCode1
+    : INumberAndSumOfTransactionsPerBankTransactionCode1
 {
-    IBankTransactionCodeStructure1 INumberAndSumOfTransactionsPerBankTransactionCode1.BankTransactionCode => BankTransactionCode;
-    IEnumerable<ICashBalanceAvailability1> INumberAndSumOfTransactionsPerBankTransactionCode1.Availability => Availability;
+    IBankTransactionCodeStructure1 INumberAndSumOfTransactionsPerBankTransactionCode1.BankTransactionCode =>
+        BankTransactionCode;
+    IEnumerable<ICashBalanceAvailability1> INumberAndSumOfTransactionsPerBankTransactionCode1.Availability =>
+        Availability;
 }

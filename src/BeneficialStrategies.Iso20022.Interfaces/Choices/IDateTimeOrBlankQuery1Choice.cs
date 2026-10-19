@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a date time period or blank elements.
 /// </summary>
 [IsoId("_HY688WE4Ee2S65ml6YCOtA")]
-public interface IDateTimeOrBlankQuery1Choice : IIsoChoice
-{
-}
+public interface IDateTimeOrBlankQuery1Choice : IIsoChoice { }

@@ -13,6 +13,8 @@ public partial record FIToFIPaymentCancellationRequestV04 : IFIToFIPaymentCancel
     ICaseAssignment3 IFIToFIPaymentCancellationRequestV04.Assignment => Assignment;
     ICase3? IFIToFIPaymentCancellationRequestV04.Case => Case;
     IControlData1? IFIToFIPaymentCancellationRequestV04.ControlData => ControlData;
-    IEnumerable<IUnderlyingTransaction10> IFIToFIPaymentCancellationRequestV04.Underlying => Underlying;
-    IEnumerable<ISupplementaryData1> IFIToFIPaymentCancellationRequestV04.SupplementaryData => SupplementaryData;
+    IEnumerable<IUnderlyingTransaction10> IFIToFIPaymentCancellationRequestV04.Underlying =>
+        Underlying;
+    IEnumerable<ISupplementaryData1> IFIToFIPaymentCancellationRequestV04.SupplementaryData =>
+        SupplementaryData;
 }

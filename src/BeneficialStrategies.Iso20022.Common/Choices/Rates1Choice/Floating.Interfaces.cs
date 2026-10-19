@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Choices.Rates1Choice;
 
-public partial record Floating : IFloating
-{
-}
+public partial record Floating : IFloating { }

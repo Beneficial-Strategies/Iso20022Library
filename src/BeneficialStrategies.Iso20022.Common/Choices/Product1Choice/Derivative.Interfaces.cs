@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Product1Choice;
 public partial record Derivative : IDerivative
 {
     IDerivativeClassification1 IDerivative.DerivativeClassification => DerivativeClassification;
-    IEnumerable<IDerivativeUnderlyingLeg1> IDerivative.DerivativeUnderlyingLeg => DerivativeUnderlyingLeg;
+    IEnumerable<IDerivativeUnderlyingLeg1> IDerivative.DerivativeUnderlyingLeg =>
+        DerivativeUnderlyingLeg;
     IOption14? IDerivative.OptionAttributes => OptionAttributes;
 }

@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Choice between a new or a cancellation transaction.
 /// </summary>
 [IsoId("_W2U3kZ26Eeuwmdq0KtnICg")]
-public interface IReportingTransactionType2Choice : IIsoChoice
-{
-}
+public interface IReportingTransactionType2Choice : IIsoChoice { }

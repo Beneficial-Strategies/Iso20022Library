@@ -8,6 +8,4 @@ using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
-public partial record QueueTransactionIdentification1 : IQueueTransactionIdentification1
-{
-}
+public partial record QueueTransactionIdentification1 : IQueueTransactionIdentification1 { }

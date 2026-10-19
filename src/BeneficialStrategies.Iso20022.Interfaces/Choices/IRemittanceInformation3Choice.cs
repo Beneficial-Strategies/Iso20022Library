@@ -9,6 +9,4 @@ namespace BeneficialStrategies.Iso20022.Choices;
 /// Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, eg, commercial invoices in an accounts&apos; receivable system.
 /// </summary>
 [IsoId("_Rb1C1tp-Ed-ak6NoX_4Aeg_-609212220")]
-public interface IRemittanceInformation3Choice : IIsoChoice
-{
-}
+public interface IRemittanceInformation3Choice : IIsoChoice { }

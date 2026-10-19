@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record LiquidityRequiredAndAvailable1 : ILiquidityRequiredAndAvailable1
 {
     ILiquidResources1 ILiquidityRequiredAndAvailable1.LiquidResources => LiquidResources;
-    IStressLiquidResourceRequirement1 ILiquidityRequiredAndAvailable1.StressLiquidResourceRequirement => StressLiquidResourceRequirement;
+    IStressLiquidResourceRequirement1 ILiquidityRequiredAndAvailable1.StressLiquidResourceRequirement =>
+        StressLiquidResourceRequirement;
 }

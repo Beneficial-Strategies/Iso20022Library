@@ -10,5 +10,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 
 public partial record CurrencyReference3 : ICurrencyReference3
 {
-    IEnumerable<IExchangeRateInformation1> ICurrencyReference3.ExchangeRateInformation => ExchangeRateInformation;
+    IEnumerable<IExchangeRateInformation1> ICurrencyReference3.ExchangeRateInformation =>
+        ExchangeRateInformation;
 }

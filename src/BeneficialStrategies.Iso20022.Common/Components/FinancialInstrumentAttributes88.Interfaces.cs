@@ -11,5 +11,6 @@ namespace BeneficialStrategies.Iso20022.Components;
 public partial record FinancialInstrumentAttributes88 : IFinancialInstrumentAttributes88
 {
     IInterestRateContractTerm1? IFinancialInstrumentAttributes88.ContractTerm => ContractTerm;
-    IEnumerable<Standardisation1Code> IFinancialInstrumentAttributes88.Standardisation => Standardisation;
+    IEnumerable<Standardisation1Code> IFinancialInstrumentAttributes88.Standardisation =>
+        Standardisation;
 }
