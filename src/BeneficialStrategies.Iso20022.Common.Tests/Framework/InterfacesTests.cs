@@ -164,4 +164,17 @@ public class InterfacesTests
         }
         Assert.True(problems.Count == 0, string.Join(Environment.NewLine, problems.Take(20)));
     }
+
+    [Fact]
+    public void EveryMessageRecord_HasAnInterfaceItImplements()
+    {
+        var problems = new List<string>();
+        foreach (var record in RecordsAssembly.GetExportedTypes().Where(t => t.IsClass && typeof(IOuterRecord).IsAssignableFrom(t)))
+        {
+            var iface = Interfaces.FirstOrDefault(i => i.Name == "I" + record.Name && i.Namespace == record.Namespace);
+            if (iface is null) problems.Add($"{record.FullName}: no interface");
+            else if (!iface.IsAssignableFrom(record)) problems.Add($"{record.FullName}: does not implement {iface.Name}");
+        }
+        Assert.True(problems.Count == 0, string.Join(Environment.NewLine, problems.Take(20)));
+    }
 }
