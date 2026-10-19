@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice;
 /// Unique technical address to unambiguously identify a party for receiving messages from the executing system.
 /// </summary>
 [IsoId("_xPt7h2jNEeiRg5NzP0jkQg")]
+[IsoXmlTag("TechAdr")]
 public interface ITechnicalAddress : IUpdateLogPartyRecord1Choice, IIsoChoiceVariant
 {
     /// <summary>

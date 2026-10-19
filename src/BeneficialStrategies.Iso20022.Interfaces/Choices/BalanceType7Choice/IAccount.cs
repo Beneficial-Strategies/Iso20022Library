@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceType7Choice;
 /// Account identification.
 /// </summary>
 [IsoId("_nArEUPNBEeCuA5Tr22BnwA_-379442712")]
+[IsoXmlTag("Acct")]
 public interface IAccount : IBalanceType7Choice, IIsoChoiceVariant
 {
     /// <summary>

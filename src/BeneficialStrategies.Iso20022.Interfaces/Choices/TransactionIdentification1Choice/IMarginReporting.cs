@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionIdentification1Choice
 /// Provides identification of the marfin reporting.
 /// </summary>
 [IsoId("_pq7S4K7LEemZxoEFHjN-AQ")]
+[IsoXmlTag("MrgnRptg")]
 public interface IMarginReporting : ITransactionIdentification1Choice, IIsoChoiceVariant
 {
     /// <summary>

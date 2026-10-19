@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormat26Choice;
 /// Place of safekeeping expressed with a type and identification.
 /// </summary>
 [IsoId("_Vyh5EZqLEeWcAIE4lEkF_Q")]
+[IsoXmlTag("TpAndId")]
 public interface ITypeAndIdentification : ISafekeepingPlaceFormat26Choice, IIsoChoiceVariant
 {
     /// <summary>

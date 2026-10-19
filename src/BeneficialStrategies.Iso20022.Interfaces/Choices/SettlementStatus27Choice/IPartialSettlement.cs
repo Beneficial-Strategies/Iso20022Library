@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStatus27Choice;
 /// Part of the instruction remains unsettled.
 /// </summary>
 [IsoId("_k04SAOCbEei2UYJ62ws-Fw")]
+[IsoXmlTag("PrtlSttlm")]
 public interface IPartialSettlement : ISettlementStatus27Choice, IIsoChoiceVariant
 {
     /// <summary>

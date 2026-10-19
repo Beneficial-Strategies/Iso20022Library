@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractTerm7Choice;
 /// Transaction is  fixed term with a contractually agreed maturity date.
 /// </summary>
 [IsoId("_xsKXY65qEeuo-IflVgGqiA")]
+[IsoXmlTag("Fxd")]
 public interface IFixed : IContractTerm7Choice, IIsoChoiceVariant
 {
     /// <summary>

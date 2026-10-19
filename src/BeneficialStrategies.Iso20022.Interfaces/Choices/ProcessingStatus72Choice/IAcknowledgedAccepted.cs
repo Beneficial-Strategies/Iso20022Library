@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus72Choice;
 /// Instruction has been acknowledged by the executing party.
 /// </summary>
 [IsoId("_a2nK0eLtEeWOD7aAy2fAcA")]
+[IsoXmlTag("AckdAccptd")]
 public interface IAcknowledgedAccepted : IProcessingStatus72Choice, IIsoChoiceVariant
 {
     /// <summary>

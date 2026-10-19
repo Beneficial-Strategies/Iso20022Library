@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassDetailedSubProductType
 /// Proprietary or institution&apos;s own code that specifies the type of commodity.
 /// </summary>
 [IsoId("_b5b0oI16Eeet3cKIYK84nw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IAssetClassDetailedSubProductType1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient5Choice;
 /// Identifier of a cryptographic asymmetric key, previously exchanged between initiator and recipient.
 /// </summary>
 [IsoId("_0QOLtWi0EeS87LmvcA55sg")]
+[IsoXmlTag("KeyIdr")]
 public interface IKeyIdentifier : IRecipient5Choice, IIsoChoiceVariant
 {
     /// <summary>

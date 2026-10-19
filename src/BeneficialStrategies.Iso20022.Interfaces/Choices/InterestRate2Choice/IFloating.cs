@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate2Choice;
 /// Provides details about the variable rate.
 /// </summary>
 [IsoId("_lQ3UA-pnEeSsk6KxwbYJ9w")]
+[IsoXmlTag("Fltg")]
 public interface IFloating : IInterestRate2Choice, IIsoChoiceVariant
 {
     /// <summary>

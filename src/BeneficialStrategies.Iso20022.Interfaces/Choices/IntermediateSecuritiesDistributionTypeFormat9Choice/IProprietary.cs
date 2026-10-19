@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntermediateSecuritiesDistributi
 /// Proprietary identification of the type of intermediate security distribution.
 /// </summary>
 [IsoId("_9m7Pf_mXEeCobuMakDuHLg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary
     : IIntermediateSecuritiesDistributionTypeFormat9Choice,
         IIsoChoiceVariant

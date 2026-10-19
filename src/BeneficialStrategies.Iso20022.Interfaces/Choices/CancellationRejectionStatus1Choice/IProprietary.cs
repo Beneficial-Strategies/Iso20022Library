@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationRejectionStatus1Choi
 /// This code can be used in case another reason is required.
 /// </summary>
 [IsoId("_RCpGwdp-Ed-ak6NoX_4Aeg_1852257322")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICancellationRejectionStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

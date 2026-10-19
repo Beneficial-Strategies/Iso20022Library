@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentDirection2Choice;
 /// Payment direction expressed as a proprietary code.
 /// </summary>
 [IsoId("_Qu-j6Np-Ed-ak6NoX_4Aeg_-655797270")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IPaymentDirection2Choice, IIsoChoiceVariant
 {
     /// <summary>

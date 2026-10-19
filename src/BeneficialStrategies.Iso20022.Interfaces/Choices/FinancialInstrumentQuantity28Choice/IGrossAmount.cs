@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity28Cho
 /// Gross Amount = Quantity * Price.
 /// </summary>
 [IsoId("_ZipfAzhUEeaRwdGFv45qTQ")]
+[IsoXmlTag("GrssAmt")]
 public interface IGrossAmount : IFinancialInstrumentQuantity28Choice, IIsoChoiceVariant
 {
     /// <summary>

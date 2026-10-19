@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingData1Choice;
 /// Reference details on the underlying account.
 /// </summary>
 [IsoId("_CXmpZlRtEe23M4WgERMsYw")]
+[IsoXmlTag("Acct")]
 public interface IAccount : IUnderlyingData1Choice, IIsoChoiceVariant
 {
     /// <summary>

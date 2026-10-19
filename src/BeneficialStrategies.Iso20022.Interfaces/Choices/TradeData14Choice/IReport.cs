@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData14Choice;
 /// Information concerning the reporting at transaction level.
 /// </summary>
 [IsoId("_CpO6Y__oEemm3skPVSMJQg")]
+[IsoXmlTag("Rpt")]
 public interface IReport : ITradeData14Choice, IIsoChoiceVariant
 {
     /// <summary>

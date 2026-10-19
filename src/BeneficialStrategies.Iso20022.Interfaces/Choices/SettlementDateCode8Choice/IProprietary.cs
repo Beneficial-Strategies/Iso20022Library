@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementDateCode8Choice;
 /// Settlement date expressed as a proprietary code.
 /// </summary>
 [IsoId("_42QF-TtKEeWRTLSN0i0tng")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ISettlementDateCode8Choice, IIsoChoiceVariant
 {
     /// <summary>

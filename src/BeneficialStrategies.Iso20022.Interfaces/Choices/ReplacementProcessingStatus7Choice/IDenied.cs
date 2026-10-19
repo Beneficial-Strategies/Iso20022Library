@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReplacementProcessingStatus7Choi
 /// Replacement of the trade is denied.
 /// </summary>
 [IsoId("_A5TcA9okEeC60axPepSq7g_-1351089211")]
+[IsoXmlTag("Dnd")]
 public interface IDenied : IReplacementProcessingStatus7Choice, IIsoChoiceVariant
 {
     /// <summary>

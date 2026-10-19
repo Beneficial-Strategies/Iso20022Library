@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitIdentification2Choice;
 /// Identification of the default limit.
 /// </summary>
 [IsoId("_BIwgQ24-EeiU9cctagi5ow")]
+[IsoXmlTag("Dflt")]
 public interface IDefault : ILimitIdentification2Choice, IIsoChoiceVariant
 {
     /// <summary>

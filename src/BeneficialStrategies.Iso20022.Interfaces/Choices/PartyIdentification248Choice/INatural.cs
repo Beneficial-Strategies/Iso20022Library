@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification248Choice;
 /// Party is a natural person.
 /// </summary>
 [IsoId("_WAhpkz3YEe2uHKhHp3bXyA")]
+[IsoXmlTag("Ntrl")]
 public interface INatural : IPartyIdentification248Choice, IIsoChoiceVariant
 {
     /// <summary>

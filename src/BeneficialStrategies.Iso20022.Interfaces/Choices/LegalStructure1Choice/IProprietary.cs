@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LegalStructure1Choice;
 /// Legal structure of the financial instrument expressed as a proprietary code.
 /// </summary>
 [IsoId("_p3eAEDQeEeifw8iDiyZLmQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ILegalStructure1Choice, IIsoChoiceVariant
 {
     /// <summary>

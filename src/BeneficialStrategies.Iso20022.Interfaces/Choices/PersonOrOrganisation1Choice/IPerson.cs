@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonOrOrganisation1Choice;
 /// Identification of a person.
 /// </summary>
 [IsoId("_z1JLgPPYEeS_qLctCs2aRQ")]
+[IsoXmlTag("Prsn")]
 public interface IPerson : IPersonOrOrganisation1Choice, IIsoChoiceVariant
 {
     /// <summary>

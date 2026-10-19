@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeConfirmation1Choice;
 /// Indicates that contract was not confirmed.
 /// </summary>
 [IsoId("_SDySEA28EeWmAKKPnqYEVQ")]
+[IsoXmlTag("NonConfd")]
 public interface INonConfirmed : ITradeConfirmation1Choice, IIsoChoiceVariant
 {
     /// <summary>

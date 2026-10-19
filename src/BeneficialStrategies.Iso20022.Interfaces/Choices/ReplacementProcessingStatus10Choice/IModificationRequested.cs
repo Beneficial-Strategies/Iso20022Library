@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReplacementProcessingStatus10Cho
 /// Replacement of the trade is Modification Requested.
 /// </summary>
 [IsoId("_RhhvAweDEe2fOITqoTnSLQ")]
+[IsoXmlTag("ModReqd")]
 public interface IModificationRequested : IReplacementProcessingStatus10Choice, IIsoChoiceVariant
 {
     /// <summary>

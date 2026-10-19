@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BidRangeType1Choice;
 /// Bid range type expressed as a proprietary value.
 /// </summary>
 [IsoId("_dYWZ8O3NEeqc-LCjwLsUVg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IBidRangeType1Choice, IIsoChoiceVariant
 {
     /// <summary>

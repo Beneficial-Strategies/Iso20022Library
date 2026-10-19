@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesReferenceDeltaStatusRe
 /// Specifies instruments which have been terminated / have reached there pre-set termination data and are no longer valid instruments.
 /// </summary>
 [IsoId("_2XC94Xv0EeanCNPcMT7sSg")]
+[IsoXmlTag("TermntdRcrd")]
 public interface ITerminatedRecord : ISecuritiesReferenceDeltaStatusReport2Choice, IIsoChoiceVariant
 {
     /// <summary>

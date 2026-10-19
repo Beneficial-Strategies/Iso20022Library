@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AgentRole1FormatChoice;
 /// Proprietary code to express the role of the agent.
 /// </summary>
 [IsoId("_RlqUQNp-Ed-ak6NoX_4Aeg_338165020")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IAgentRole1FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

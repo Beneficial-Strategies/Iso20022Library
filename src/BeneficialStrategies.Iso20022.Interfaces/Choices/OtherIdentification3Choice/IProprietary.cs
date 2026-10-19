@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OtherIdentification3Choice;
 /// Type of identification expressed as a proprietary code.
 /// </summary>
 [IsoId("_1U8xUyCOEeWJd9HF2tO7BA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IOtherIdentification3Choice, IIsoChoiceVariant
 {
     /// <summary>

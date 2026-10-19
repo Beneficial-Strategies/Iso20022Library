@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RatioFormat6Choice;
 /// Ratio expressed as a quotient of amounts.
 /// </summary>
 [IsoId("_Q1-jyNp-Ed-ak6NoX_4Aeg_-1730664121")]
+[IsoXmlTag("AmtToAmt")]
 public interface IAmountToAmount : IRatioFormat6Choice, IIsoChoiceVariant
 {
     /// <summary>

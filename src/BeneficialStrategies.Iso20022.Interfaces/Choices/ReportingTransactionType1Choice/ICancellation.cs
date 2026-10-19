@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportingTransactionType1Choice;
 /// Transaction is a cancellation transaction.
 /// </summary>
 [IsoId("_J-kCE4G-EeaalK9UbuVGFw")]
+[IsoXmlTag("Cxl")]
 public interface ICancellation : IReportingTransactionType1Choice, IIsoChoiceVariant
 {
     /// <summary>

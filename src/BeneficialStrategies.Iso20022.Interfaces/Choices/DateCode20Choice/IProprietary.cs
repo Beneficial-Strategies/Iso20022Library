@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateCode20Choice;
 /// Proprietary identification of the type of date.
 /// </summary>
 [IsoId("_T9Q7OUEMEeWVgfuHGaKtRQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IDateCode20Choice, IIsoChoiceVariant
 {
     /// <summary>

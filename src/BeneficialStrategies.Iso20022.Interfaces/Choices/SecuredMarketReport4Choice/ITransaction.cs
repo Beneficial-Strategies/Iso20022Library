@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuredMarketReport4Choice;
 /// Provides the details of the secured market transaction as reported by the reporting agent.
 /// </summary>
 [IsoId("_GZo0g8EREea7jLfvGi1PDw")]
+[IsoXmlTag("Tx")]
 public interface ITransaction : ISecuredMarketReport4Choice, IIsoChoiceVariant
 {
     /// <summary>

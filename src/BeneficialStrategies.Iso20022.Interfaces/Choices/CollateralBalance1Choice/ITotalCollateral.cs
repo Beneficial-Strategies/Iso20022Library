@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralBalance1Choice;
 /// Collateral currently received (+)/delivered (-) in the base currency. This amount is after the haircut has been applied.
 /// </summary>
 [IsoId("_UnXxyNp-Ed-ak6NoX_4Aeg_-1037666527")]
+[IsoXmlTag("TtlColl")]
 public interface ITotalCollateral : ICollateralBalance1Choice, IIsoChoiceVariant
 {
     /// <summary>

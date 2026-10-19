@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceFormat6Choice;
 /// Number of units of a fund that were purchased in a previous distribution period and/or held at the beginning of a distribution period, for example Group I Units in the UK.
 /// </summary>
 [IsoId("_lHIu-Tq5EeWQ1Y7f8kds2A")]
+[IsoXmlTag("FullPrdUnits")]
 public interface IFullPeriodUnits : IBalanceFormat6Choice, IIsoChoiceVariant
 {
     /// <summary>

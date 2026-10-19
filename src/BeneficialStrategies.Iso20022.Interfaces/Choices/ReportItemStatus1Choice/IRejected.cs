@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportItemStatus1Choice;
 /// Statement is rejected.
 /// </summary>
 [IsoId("_08aRa73QEeO2FLWuu_JIqg")]
+[IsoXmlTag("Rjctd")]
 public interface IRejected : IReportItemStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

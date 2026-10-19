@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PutType3Choice;
 /// Put type expressed as a proprietary code.
 /// </summary>
 [IsoId("_buZ-M-LcEeWFtOV72FbX9w")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IPutType3Choice, IIsoChoiceVariant
 {
     /// <summary>

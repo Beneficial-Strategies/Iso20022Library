@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentificationFormatChoic
 /// Identification of the account expressed with a data source scheme, a code used within the data source scheme and the account identification.
 /// </summary>
 [IsoId("_RB5f4dp-Ed-ak6NoX_4Aeg_1770326434")]
+[IsoXmlTag("IdAsDSS")]
 public interface IIdentificationAsDSS : IAccountIdentificationFormatChoice, IIsoChoiceVariant
 {
     /// <summary>

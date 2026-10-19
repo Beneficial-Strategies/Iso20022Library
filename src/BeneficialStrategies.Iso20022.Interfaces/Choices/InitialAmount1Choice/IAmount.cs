@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InitialAmount1Choice;
 /// Amount to be paid or redeemed at the time the investment plan is created.
 /// </summary>
 [IsoId("_bXzBQCDaEeWCLu74WLgP4w")]
+[IsoXmlTag("Amt")]
 public interface IAmount : IInitialAmount1Choice, IIsoChoiceVariant
 {
     /// <summary>

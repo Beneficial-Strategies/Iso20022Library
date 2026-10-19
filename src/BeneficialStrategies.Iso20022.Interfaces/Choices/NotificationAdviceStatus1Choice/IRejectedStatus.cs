@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NotificationAdviceStatus1Choice;
 /// Provides information about the rejection status.
 /// </summary>
 [IsoId("_Ri1Ct9p-Ed-ak6NoX_4Aeg_348378582")]
+[IsoXmlTag("RjctdSts")]
 public interface IRejectedStatus : INotificationAdviceStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status24Choice;
 /// Status report details of a switch order.
 /// </summary>
 [IsoId("_bpQwZUHPEeazV4RAqPV71g")]
+[IsoXmlTag("SwtchOrdrDtlsRpt")]
 public interface ISwitchOrderDetailsReport : IStatus24Choice, IIsoChoiceVariant
 {
     /// <summary>

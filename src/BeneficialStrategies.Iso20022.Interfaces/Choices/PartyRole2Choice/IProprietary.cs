@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyRole2Choice;
 /// Role expressed as a proprietary code.
 /// </summary>
 [IsoId("_8mWasxUNEeOIaq8KyCdIDQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IPartyRole2Choice, IIsoChoiceVariant
 {
     /// <summary>

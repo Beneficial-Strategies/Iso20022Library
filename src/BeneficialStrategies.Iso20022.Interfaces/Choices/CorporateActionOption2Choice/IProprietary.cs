@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionOption2Choice;
 /// Proprietary identification of the type of corporate action options.
 /// </summary>
 [IsoId("_Q0yQ89p-Ed-ak6NoX_4Aeg_1615049847")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICorporateActionOption2Choice, IIsoChoiceVariant
 {
     /// <summary>

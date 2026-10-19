@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FailingStatus4Choice;
 /// Specifies the reason of the FailingStatus.
 /// </summary>
 [IsoId("_Fe4Y4f7rEeCvPoRGOxRobQ")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IFailingStatus4Choice, IIsoChoiceVariant
 {
     /// <summary>

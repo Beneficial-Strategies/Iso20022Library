@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus36Cho
 /// Cover protect instruction accepted but it has not fully covered the protect instruction.
 /// </summary>
 [IsoId("_U39JOf0oEeiKOe8GCUL1Lg")]
+[IsoXmlTag("Ucvrd")]
 public interface IUncovered : IInstructionProcessingStatus36Choice, IIsoChoiceVariant
 {
     /// <summary>

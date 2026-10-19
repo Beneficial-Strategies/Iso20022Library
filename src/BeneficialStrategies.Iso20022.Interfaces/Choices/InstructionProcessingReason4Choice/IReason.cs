@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingReason4Choi
 /// Specifies the reason of the InRepairStatus.
 /// </summary>
 [IsoId("_gtxGEwd3Ee2fOITqoTnSLQ")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IInstructionProcessingReason4Choice, IIsoChoiceVariant
 {
     /// <summary>

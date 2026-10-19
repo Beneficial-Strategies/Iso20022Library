@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CertifiedCharacteristics1Choice;
 /// Quantity of the goods, as proven by the certificate.
 /// </summary>
 [IsoId("_TnJq7dp-Ed-ak6NoX_4Aeg_913114272")]
+[IsoXmlTag("Qty")]
 public interface IQuantity : ICertifiedCharacteristics1Choice, IIsoChoiceVariant
 {
     /// <summary>

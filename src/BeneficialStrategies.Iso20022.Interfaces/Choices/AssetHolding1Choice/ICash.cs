@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetHolding1Choice;
 /// Value of cash collateral.
 /// </summary>
 [IsoId("_9LXRoK_6EeaE9YROwd69hA")]
+[IsoXmlTag("Csh")]
 public interface ICash : IAssetHolding1Choice, IIsoChoiceVariant
 {
     /// <summary>

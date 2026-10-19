@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OpeningClosing4Choice;
 /// Opening closing information expressed as a proprietary code.
 /// </summary>
 [IsoId("_6SXYu5NLEeWGlc8L7oPDIg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IOpeningClosing4Choice, IIsoChoiceVariant
 {
     /// <summary>

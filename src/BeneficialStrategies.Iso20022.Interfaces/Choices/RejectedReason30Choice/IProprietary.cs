@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedReason30Choice;
 /// Proprietary identification of the reason why the instruction/cancellation request has a rejected status.
 /// </summary>
 [IsoId("_eKVR28AUEembi_x1QDJfxw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRejectedReason30Choice, IIsoChoiceVariant
 {
     /// <summary>

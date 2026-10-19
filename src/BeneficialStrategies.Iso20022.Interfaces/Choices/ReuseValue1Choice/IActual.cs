@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReuseValue1Choice;
 /// Total value of the collateral reused when it can be defined at the transaction level.
 /// </summary>
 [IsoId("_RhtAUIxnEeap1-whlAlpOw")]
+[IsoXmlTag("Actl")]
 public interface IActual : IReuseValue1Choice, IIsoChoiceVariant
 {
     /// <summary>

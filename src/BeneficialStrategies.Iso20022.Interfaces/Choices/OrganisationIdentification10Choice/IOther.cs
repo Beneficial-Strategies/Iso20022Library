@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrganisationIdentification10Choi
 /// Unique identification of a counterparty, using a client code or a business identification code.
 /// </summary>
 [IsoId("_IEZpg-9IEemVGdgB8P8uQQ")]
+[IsoXmlTag("Othr")]
 public interface IOther : IOrganisationIdentification10Choice, IIsoChoiceVariant
 {
     /// <summary>

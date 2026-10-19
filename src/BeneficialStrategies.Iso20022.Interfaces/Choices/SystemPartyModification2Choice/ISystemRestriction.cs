@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice;
 /// Defines the specific processing characteristics for a party to ensure configurability of specific requirements, as prescribed by national legal and regulatory requirements and practices.
 /// </summary>
 [IsoId("_yJhSq4v-Eei289CGNqs21g")]
+[IsoXmlTag("SysRstrctn")]
 public interface ISystemRestriction : ISystemPartyModification2Choice, IIsoChoiceVariant
 {
     /// <summary>

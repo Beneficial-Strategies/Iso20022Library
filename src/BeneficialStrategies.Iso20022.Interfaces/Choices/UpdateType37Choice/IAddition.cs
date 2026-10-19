@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType37Choice;
 /// Addition of information to the securities transaction.
 /// </summary>
 [IsoId("_iPrt0SglEey2k_sfZmJz4g")]
+[IsoXmlTag("Addtn")]
 public interface IAddition : IUpdateType37Choice, IIsoChoiceVariant
 {
     /// <summary>

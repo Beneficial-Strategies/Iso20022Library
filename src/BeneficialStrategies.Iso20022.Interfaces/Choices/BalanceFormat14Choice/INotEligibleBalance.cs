@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceFormat14Choice;
 /// Provide not eligible balance information in different formats.
 /// </summary>
 [IsoId("_piui8Ti7Eeydid5dcNPKvg")]
+[IsoXmlTag("NotElgblBal")]
 public interface INotEligibleBalance : IBalanceFormat14Choice, IIsoChoiceVariant
 {
     /// <summary>

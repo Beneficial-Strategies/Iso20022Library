@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature15Choice;
 /// Indicates that counterparty is a financial institution.
 /// </summary>
 [IsoId("_1z1A8Qz1Ee2YoLD-1vFj0g")]
+[IsoXmlTag("FI")]
 public interface IFinancialInstitution : ICounterpartyTradeNature15Choice, IIsoChoiceVariant
 {
     /// <summary>

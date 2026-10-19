@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAccountOrBusinessError
 /// Business error resulting from a rejection.
 /// </summary>
 [IsoId("_yNtKMzp1Eemk2e6qGBk8IQ")]
+[IsoXmlTag("BizErr")]
 public interface IBusinessError : ISecuritiesAccountOrBusinessError3Choice, IIsoChoiceVariant
 {
     /// <summary>

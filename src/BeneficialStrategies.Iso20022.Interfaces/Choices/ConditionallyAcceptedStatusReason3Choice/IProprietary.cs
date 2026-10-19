@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConditionallyAcceptedStatusReaso
 /// Conditionally accepted reason expressed as a proprietary code.
 /// </summary>
 [IsoId("_KafWQEHaEeamVPoS58KxXA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IConditionallyAcceptedStatusReason3Choice, IIsoChoiceVariant
 {
     /// <summary>

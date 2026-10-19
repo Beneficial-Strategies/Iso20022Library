@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AmountOrRate1Choice;
 /// Amount expressed as an amount of money.
 /// </summary>
 [IsoId("_Q-Uncdp-Ed-ak6NoX_4Aeg_512767945")]
+[IsoXmlTag("Amt")]
 public interface IAmount : IAmountOrRate1Choice, IIsoChoiceVariant
 {
     /// <summary>

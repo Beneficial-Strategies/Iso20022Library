@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceQuantity14Choice;
 /// Total quantity of financial instruments of the balance.
 /// </summary>
 [IsoId("__ZNdCSp7EeyR9JrVGfaMKw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IBalanceQuantity14Choice, IIsoChoiceVariant
 {
     /// <summary>

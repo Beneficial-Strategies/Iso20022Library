@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingContract3Choice;
 /// Underlying registered contract is a commercial trade.
 /// </summary>
 [IsoId("_0ORmM7GIEeuSTr8k0UEM8A")]
+[IsoXmlTag("Trad")]
 public interface ITrade : IUnderlyingContract3Choice, IIsoChoiceVariant
 {
     /// <summary>

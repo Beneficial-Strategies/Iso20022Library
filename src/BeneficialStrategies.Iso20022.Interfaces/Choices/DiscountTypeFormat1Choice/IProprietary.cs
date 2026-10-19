@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DiscountTypeFormat1Choice;
 /// Proprietary code for specifying the type of discount.
 /// </summary>
 [IsoId("_SumZFwEcEeCQm6a_G2yO_w_639154739")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IDiscountTypeFormat1Choice, IIsoChoiceVariant
 {
     /// <summary>

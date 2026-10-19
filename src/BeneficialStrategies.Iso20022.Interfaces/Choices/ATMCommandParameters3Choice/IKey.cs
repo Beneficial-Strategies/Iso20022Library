@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMCommandParameters3Choice;
 /// Parameters to be used by the various cryptographic key commands.
 /// </summary>
 [IsoId("_htqcO12aEeekzJIz1JxYSQ")]
+[IsoXmlTag("Key")]
 public interface IKey : IATMCommandParameters3Choice, IIsoChoiceVariant
 {
     /// <summary>

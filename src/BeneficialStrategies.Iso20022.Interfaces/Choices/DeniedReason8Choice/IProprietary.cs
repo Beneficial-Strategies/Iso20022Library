@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeniedReason8Choice;
 /// Specifies the reason why the request was denied.
 /// </summary>
 [IsoId("_JJ0gOVjwEeSYweXGddZAOA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IDeniedReason8Choice, IIsoChoiceVariant
 {
     /// <summary>

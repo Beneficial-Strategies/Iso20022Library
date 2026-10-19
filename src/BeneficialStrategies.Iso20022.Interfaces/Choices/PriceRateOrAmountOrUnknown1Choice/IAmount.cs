@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceRateOrAmountOrUnknown1Choic
 /// Price expressed as a currency and value.
 /// </summary>
 [IsoId("_Wi6RYNp-Ed-ak6NoX_4Aeg_-65103586")]
+[IsoXmlTag("Amt")]
 public interface IAmount : IPriceRateOrAmountOrUnknown1Choice, IIsoChoiceVariant
 {
     /// <summary>

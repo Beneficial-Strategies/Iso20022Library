@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus2Choice;
 /// Status of the transfer is rejected.
 /// </summary>
 [IsoId("_aQ-GOSY3EeW_ZNn8gbfY7Q")]
+[IsoXmlTag("Rjctd")]
 public interface IRejected : ITransferStatus2Choice, IIsoChoiceVariant
 {
     /// <summary>

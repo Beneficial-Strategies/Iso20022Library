@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitIdentification2Choice;
 /// Identification of the current limit.
 /// </summary>
 [IsoId("_BIwgQW4-EeiU9cctagi5ow")]
+[IsoXmlTag("Cur")]
 public interface ICurrent : ILimitIdentification2Choice, IIsoChoiceVariant
 {
     /// <summary>

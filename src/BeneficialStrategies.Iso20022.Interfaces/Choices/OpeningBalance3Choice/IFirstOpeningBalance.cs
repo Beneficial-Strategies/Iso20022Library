@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OpeningBalance3Choice;
 /// Opening balance of the financial instrument in the statement.
 /// </summary>
 [IsoId("_RhgE0QgHEeSxsfb1OEDVsw")]
+[IsoXmlTag("FrstOpngBal")]
 public interface IFirstOpeningBalance : IOpeningBalance3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice;
 /// Provides details about the two leg transaction.
 /// </summary>
 [IsoId("_AYOIN9okEeC60axPepSq7g_-1464294568")]
+[IsoXmlTag("SctiesFincgDtls")]
 public interface ISecuritiesFinancingDetails : ITwoLegTransactionType1Choice, IIsoChoiceVariant
 {
     /// <summary>

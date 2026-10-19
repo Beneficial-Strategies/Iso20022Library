@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BusinessProcessType1Choice;
 /// Type of business process expressed as a proprietary code.
 /// </summary>
 [IsoId("_AcY2htokEeC60axPepSq7g_-1746463054")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IBusinessProcessType1Choice, IIsoChoiceVariant
 {
     /// <summary>

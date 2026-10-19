@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettleStyle2Choice;
 /// Settle style expressed as a proprietary code.
 /// </summary>
 [IsoId("_ra2T0-LaEeWFtOV72FbX9w")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ISettleStyle2Choice, IIsoChoiceVariant
 {
     /// <summary>

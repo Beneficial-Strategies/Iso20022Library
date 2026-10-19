@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityPolypropylene
 /// Plastic commodity derivative.
 /// </summary>
 [IsoId("_ySLgwRZZEe2QNcZTDeoKnQ")]
+[IsoXmlTag("Plstc")]
 public interface IPlastic : IAssetClassCommodityPolypropylene4Choice, IIsoChoiceVariant
 {
     /// <summary>

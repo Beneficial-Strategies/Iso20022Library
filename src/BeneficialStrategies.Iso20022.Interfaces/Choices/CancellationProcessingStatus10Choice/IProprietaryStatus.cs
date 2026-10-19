@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationProcessingStatus10Ch
 /// Provides a proprietary status and a proprietary reason of the processing status of the trade.
 /// </summary>
 [IsoId("_l0B_1wd4Ee2fOITqoTnSLQ")]
+[IsoXmlTag("PrtrySts")]
 public interface IProprietaryStatus : ICancellationProcessingStatus10Choice, IIsoChoiceVariant
 {
     /// <summary>

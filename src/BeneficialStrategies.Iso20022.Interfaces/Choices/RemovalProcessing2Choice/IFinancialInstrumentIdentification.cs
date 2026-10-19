@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RemovalProcessing2Choice;
 /// Financial instrument representing a sum of rights of the investor vis-a-vis the issuer.
 /// </summary>
 [IsoId("__ioAQRIoEeyZaPkaPAzTvQ")]
+[IsoXmlTag("FinInstrmId")]
 public interface IFinancialInstrumentIdentification : IRemovalProcessing2Choice, IIsoChoiceVariant
 {
     /// <summary>

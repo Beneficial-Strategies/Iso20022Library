@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument7Choice;
 /// Part of the investment account to or from which cash entries are made.
 /// </summary>
 [IsoId("_VKshQNp-Ed-ak6NoX_4Aeg_1301163735")]
+[IsoXmlTag("AcctDtls")]
 public interface IAccountDetails : IPaymentInstrument7Choice, IIsoChoiceVariant
 {
     /// <summary>

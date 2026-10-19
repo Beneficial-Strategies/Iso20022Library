@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionPrice4Choice;
 /// Proprietary price specification related to the underlying transaction.
 /// </summary>
 [IsoId("_-XasJbTUEee_k7HqaUKERA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ITransactionPrice4Choice, IIsoChoiceVariant
 {
     /// <summary>

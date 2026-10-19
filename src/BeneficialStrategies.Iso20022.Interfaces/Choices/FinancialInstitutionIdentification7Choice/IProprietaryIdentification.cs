@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
 /// Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.
 /// </summary>
 [IsoId("_Tet_ZyGOEeW7gKYhAMEFCw")]
+[IsoXmlTag("PrtryId")]
 public interface IProprietaryIdentification
     : IFinancialInstitutionIdentification7Choice,
         IIsoChoiceVariant

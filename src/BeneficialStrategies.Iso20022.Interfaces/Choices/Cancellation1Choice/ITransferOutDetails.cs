@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cancellation1Choice;
 /// Details of the transfer out request to cancel.
 /// </summary>
 [IsoId("_cgLd4Bg1EeK-_89we2b-bA")]
+[IsoXmlTag("TrfOutDtls")]
 public interface ITransferOutDetails : ICancellation1Choice, IIsoChoiceVariant
 {
     /// <summary>

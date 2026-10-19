@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BusinessDayReportOrError10Choice
 /// Reason the requested business information is not given.
 /// </summary>
 [IsoId("_OYVo43XyEei3jO6riKEVXg")]
+[IsoXmlTag("BizErr")]
 public interface IBusinessError : IBusinessDayReportOrError10Choice, IIsoChoiceVariant
 {
     /// <summary>

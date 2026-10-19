@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ShipmentSchedule2Choice;
 /// Specifies an earliest shipment date and a latest shipment date.
 /// </summary>
 [IsoId("_0ZWmkefHEeKNfc-Rw_dPYg")]
+[IsoXmlTag("ShipmntDtRg")]
 public interface IShipmentDateRange : IShipmentSchedule2Choice, IIsoChoiceVariant
 {
     /// <summary>

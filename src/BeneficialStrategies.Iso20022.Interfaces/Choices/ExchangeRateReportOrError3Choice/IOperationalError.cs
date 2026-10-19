@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExchangeRateReportOrError3Choice
 /// Indicates that an operational error has been issued during the processing of the related request.
 /// </summary>
 [IsoId("_Mmlkk9fiEeqoweZZxm4TPQ")]
+[IsoXmlTag("OprlErr")]
 public interface IOperationalError : IExchangeRateReportOrError3Choice, IIsoChoiceVariant
 {
     /// <summary>

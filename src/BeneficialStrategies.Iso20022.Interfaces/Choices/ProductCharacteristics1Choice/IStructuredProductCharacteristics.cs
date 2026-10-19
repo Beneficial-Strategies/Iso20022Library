@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductCharacteristics1Choice;
 /// Specifies the type of product characteristic.
 /// </summary>
 [IsoId("_RbrR1Np-Ed-ak6NoX_4Aeg_1622931729")]
+[IsoXmlTag("StrdPdctChrtcs")]
 public interface IStructuredProductCharacteristics
     : IProductCharacteristics1Choice,
         IIsoChoiceVariant

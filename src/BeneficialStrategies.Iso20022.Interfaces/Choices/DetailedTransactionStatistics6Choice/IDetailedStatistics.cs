@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedTransactionStatistics6Ch
 /// Information about number of transactions accepted and rejected and the reasons of the rejections.
 /// </summary>
 [IsoId("_x_mYs1yGEe24CqbZJK5XxA")]
+[IsoXmlTag("DtldSttstcs")]
 public interface IDetailedStatistics : IDetailedTransactionStatistics6Choice, IIsoChoiceVariant
 {
     /// <summary>

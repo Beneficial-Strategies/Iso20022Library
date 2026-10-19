@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityOrOperationalError4Choic
 /// Provides the operational error details.
 /// </summary>
 [IsoId("_P5yGs5JKEeuAlLVx8pyt3w")]
+[IsoXmlTag("OprlErr")]
 public interface IOperationalError : ISecurityOrOperationalError4Choice, IIsoChoiceVariant
 {
     /// <summary>

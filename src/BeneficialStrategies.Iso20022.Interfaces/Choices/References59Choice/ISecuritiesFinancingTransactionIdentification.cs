@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References59Choice;
 /// Unambiguous identification of the underlying securities financing transaction (not the underlying securities financing trade) as assigned by the instructing party.
 /// </summary>
 [IsoId("_8ScaE5NLEeWGlc8L7oPDIg")]
+[IsoXmlTag("SctiesFincgTxId")]
 public interface ISecuritiesFinancingTransactionIdentification
     : IReferences59Choice,
         IIsoChoiceVariant

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Channel1Choice;
 /// Submission channel expressed as a proprietary code.
 /// </summary>
 [IsoId("_93Z_wnltEeG7BsjMvd1mEw_1642923134")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IChannel1Choice, IIsoChoiceVariant
 {
     /// <summary>

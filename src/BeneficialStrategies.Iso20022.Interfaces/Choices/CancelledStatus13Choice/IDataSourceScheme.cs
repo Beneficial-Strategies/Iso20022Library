@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancelledStatus13Choice;
 /// Proprietary identification of the reason for the cancelled status.
 /// </summary>
 [IsoId("_P3gGGSY5EeW_ZNn8gbfY7Q")]
+[IsoXmlTag("DataSrcSchme")]
 public interface IDataSourceScheme : ICancelledStatus13Choice, IIsoChoiceVariant
 {
     /// <summary>

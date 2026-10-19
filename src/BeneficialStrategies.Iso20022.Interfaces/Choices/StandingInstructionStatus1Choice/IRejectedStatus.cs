@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingInstructionStatus1Choice
 /// Provides information about the rejection status.
 /// </summary>
 [IsoId("_RirRsdp-Ed-ak6NoX_4Aeg_15156423")]
+[IsoXmlTag("RjctdSts")]
 public interface IRejectedStatus : IStandingInstructionStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

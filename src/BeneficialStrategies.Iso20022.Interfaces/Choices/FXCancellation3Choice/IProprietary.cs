@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FXCancellation3Choice;
 /// Forex cancellation information expressed as a proprietary code.
 /// </summary>
 [IsoId("_Io5B6T0EEeWjqIDN7tjEjQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IFXCancellation3Choice, IIsoChoiceVariant
 {
     /// <summary>

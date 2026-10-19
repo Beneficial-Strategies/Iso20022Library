@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural5
 /// Livestock agricultural commodity derivative.
 /// </summary>
 [IsoId("_NxHXH7veEeiLRYqS-r-R-A")]
+[IsoXmlTag("LiveStock")]
 public interface ILiveStock : IAssetClassCommodityAgricultural5Choice, IIsoChoiceVariant
 {
     /// <summary>

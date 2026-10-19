@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status20Choice;
 /// Status of the order is rejected.
 /// </summary>
 [IsoId("_qrDFoyGaEeWKAaDJcYGKLw")]
+[IsoXmlTag("Rjctd")]
 public interface IRejected : IStatus20Choice, IIsoChoiceVariant
 {
     /// <summary>

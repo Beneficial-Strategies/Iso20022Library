@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionToPerform5Choice;
 /// Content of the Payment Request message.
 /// </summary>
 [IsoId("_Xt0vEXGwEe2TbaNWBpRZpQ")]
+[IsoXmlTag("PmtReq")]
 public interface IPaymentRequest : ITransactionToPerform5Choice, IIsoChoiceVariant
 {
     /// <summary>

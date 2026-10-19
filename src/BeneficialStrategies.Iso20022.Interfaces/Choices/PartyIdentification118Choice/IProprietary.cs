@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification118Choice;
 /// Unique identification of the party using a proprietary code.
 /// </summary>
 [IsoId("_9cWkAUG0EemxGPEh9hU2Xg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IPartyIdentification118Choice, IIsoChoiceVariant
 {
     /// <summary>

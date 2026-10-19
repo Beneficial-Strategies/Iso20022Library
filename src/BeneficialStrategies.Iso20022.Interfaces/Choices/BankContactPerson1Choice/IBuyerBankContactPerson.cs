@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BankContactPerson1Choice;
 /// Person to be contacted in the buyer&apos;s bank.
 /// </summary>
 [IsoId("_nYAXYDAZEeOKib24wnHaFg")]
+[IsoXmlTag("BuyrBkCtctPrsn")]
 public interface IBuyerBankContactPerson : IBankContactPerson1Choice, IIsoChoiceVariant
 {
     /// <summary>

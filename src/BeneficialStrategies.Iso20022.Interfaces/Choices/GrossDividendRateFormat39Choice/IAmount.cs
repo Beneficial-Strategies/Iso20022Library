@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GrossDividendRateFormat39Choice;
 /// Value expressed as an amount.
 /// </summary>
 [IsoId("_-lkhhgVSEeqjd8n6wD9JVw")]
+[IsoXmlTag("Amt")]
 public interface IAmount : IGrossDividendRateFormat39Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport31Choice;
 /// Indicates whether transaction was reported by mistake and need to be removed.
 /// </summary>
 [IsoId("_o0KFZVosEe23K4GXSpBSeg")]
+[IsoXmlTag("Err")]
 public interface IError : ITradeReport31Choice, IIsoChoiceVariant
 {
     /// <summary>

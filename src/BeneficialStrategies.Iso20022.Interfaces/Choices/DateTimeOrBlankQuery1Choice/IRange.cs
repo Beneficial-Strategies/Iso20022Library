@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateTimeOrBlankQuery1Choice;
 /// Indicates the date time range.
 /// </summary>
 [IsoId("_HaZjoWE4Ee2S65ml6YCOtA")]
+[IsoXmlTag("Rg")]
 public interface IRange : IDateTimeOrBlankQuery1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingCancellationReason7Choice
 /// Pending reason specified as a proprietary code.
 /// </summary>
 [IsoId("_ccJASbKjEemux5trsZcCpw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IPendingCancellationReason7Choice, IIsoChoiceVariant
 {
     /// <summary>

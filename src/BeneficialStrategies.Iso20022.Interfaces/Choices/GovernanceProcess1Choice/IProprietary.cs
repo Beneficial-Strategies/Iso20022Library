@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GovernanceProcess1Choice;
 /// Type of governance process expressed as a proprietary code.
 /// </summary>
 [IsoId("_rod9wID4Eeiw-daIkkmMqQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IGovernanceProcess1Choice, IIsoChoiceVariant
 {
     /// <summary>

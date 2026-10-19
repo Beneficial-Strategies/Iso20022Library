@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TonsOrCurrency2Choice;
 /// Total volume of specific transactions expresses in currency and amount format.
 /// </summary>
 [IsoId("_aCdOY2lSEeaLAKoEUNsD9g")]
+[IsoXmlTag("Amt")]
 public interface IAmount : ITonsOrCurrency2Choice, IIsoChoiceVariant
 {
     /// <summary>

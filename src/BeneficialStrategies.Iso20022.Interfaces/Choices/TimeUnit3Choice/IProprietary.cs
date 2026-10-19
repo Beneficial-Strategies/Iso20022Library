@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeUnit3Choice;
 /// Time unit expressed as a proprietary code.
 /// </summary>
 [IsoId("_oTL_U-LaEeWFtOV72FbX9w")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ITimeUnit3Choice, IIsoChoiceVariant
 {
     /// <summary>

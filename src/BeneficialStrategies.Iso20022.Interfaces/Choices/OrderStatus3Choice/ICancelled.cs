@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus3Choice;
 /// Status of all the orders in the order message is cancelled. This status is used for orders that have been accepted or that have been entered in an order book but that can not be executed.
 /// </summary>
 [IsoId("_vIDnY0H7EeaV3ab_pHzFIQ")]
+[IsoXmlTag("Canc")]
 public interface ICancelled : IOrderStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>

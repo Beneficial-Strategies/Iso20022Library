@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote2Choice;
 /// Instruction specifying the instructed quantity of voting rights per resolution. Split votes can be indicated. If only one type of decision is indicated, the number of votes cast must not be adjusted if the position of the voting party increases.
 /// </summary>
 [IsoId("_RDPjutp-Ed-ak6NoX_4Aeg_116941373")]
+[IsoXmlTag("VoteInstr")]
 public interface IVoteInstruction : IVote2Choice, IIsoChoiceVariant
 {
     /// <summary>

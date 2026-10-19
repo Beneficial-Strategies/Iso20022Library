@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus1Choice;
 /// Status of the transfer is in repair.
 /// </summary>
 [IsoId("_o1CqqxwkEeOIveEnnb_1-A")]
+[IsoXmlTag("InRpr")]
 public interface IInRepair : ITransferStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

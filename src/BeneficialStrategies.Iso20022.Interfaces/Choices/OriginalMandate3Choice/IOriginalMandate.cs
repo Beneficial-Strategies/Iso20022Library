@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalMandate3Choice;
 /// Provides the original mandate data.
 /// </summary>
 [IsoId("_YkloBR77EeSxevWRRWxNAg")]
+[IsoXmlTag("OrgnlMndt")]
 public interface IOriginalMandate : IOriginalMandate3Choice, IIsoChoiceVariant
 {
     /// <summary>

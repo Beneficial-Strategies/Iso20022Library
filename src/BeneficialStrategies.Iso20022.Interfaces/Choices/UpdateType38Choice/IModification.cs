@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType38Choice;
 /// Modification of information in the securities transaction.
 /// </summary>
 [IsoId("_eZThmzi8Eeydid5dcNPKvg")]
+[IsoXmlTag("Mod")]
 public interface IModification : IUpdateType38Choice, IIsoChoiceVariant
 {
     /// <summary>

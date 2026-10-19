@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExposureType23Choice;
 /// Proprietary identification of additional information about the processed instruction.
 /// </summary>
 [IsoId("_LgF2kys9EeySlt9bF77XfA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IExposureType23Choice, IIsoChoiceVariant
 {
     /// <summary>

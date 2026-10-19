@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReferredDocumentAmount1Choice;
 /// Quantity of cash resulting from the calculation of the tax.
 /// </summary>
 [IsoId("_QGJCR9p-Ed-ak6NoX_4Aeg_-888106455")]
+[IsoXmlTag("TaxAmt")]
 public interface ITaxAmount : IReferredDocumentAmount1Choice, IIsoChoiceVariant
 {
     /// <summary>

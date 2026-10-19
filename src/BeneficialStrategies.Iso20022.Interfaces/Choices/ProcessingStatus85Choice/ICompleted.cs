@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus85Choice;
 /// Modification request was completed.
 /// </summary>
 [IsoId("_n_SHMytVEeyhipY4f42fZQ")]
+[IsoXmlTag("Cmpltd")]
 public interface ICompleted : IProcessingStatus85Choice, IIsoChoiceVariant
 {
     /// <summary>

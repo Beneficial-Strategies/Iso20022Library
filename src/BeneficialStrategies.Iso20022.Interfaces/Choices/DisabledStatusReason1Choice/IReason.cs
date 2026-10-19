@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DisabledStatusReason1Choice;
 /// Reason for the disabled account status.
 /// </summary>
 [IsoId("_R5FfA0zAEeafiMTDrtSnyw")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IDisabledStatusReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

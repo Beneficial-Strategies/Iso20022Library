@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat2Choice;
 /// Price expressed as a rate, ie, percentage.
 /// </summary>
 [IsoId("_Qa2uANp-Ed-ak6NoX_4Aeg_-488464996")]
+[IsoXmlTag("Rate")]
 public interface IRate : IPriceFormat2Choice, IIsoChoiceVariant
 {
     /// <summary>

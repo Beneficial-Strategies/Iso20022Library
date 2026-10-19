@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification43Choice;
 /// Selected safekeeping accounts list to which the corporate action event applies.
 /// </summary>
 [IsoId("__2YHG_fDEeiNZp_PtLohLw")]
+[IsoXmlTag("AcctsList")]
 public interface IAccountsList : IAccountIdentification43Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty17Choic
 /// Detailed statistics per counterparty.
 /// </summary>
 [IsoId("_x82ms1yGEe24CqbZJK5XxA")]
+[IsoXmlTag("Rpt")]
 public interface IReport : IStatisticsPerCounterparty17Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdjustedBalanceTypeSD4Choice;
 /// Stock loan transaction position. Stock loan is loaned / borrowed from / to a third party.
 /// </summary>
 [IsoId("_RnUrUcSTEeeRJJtE9TSlkw")]
+[IsoXmlTag("StockLn")]
 public interface IStockLoan : IAdjustedBalanceTypeSD4Choice, IIsoChoiceVariant
 {
     /// <summary>

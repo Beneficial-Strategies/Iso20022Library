@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonIdentificationType3Choice;
 /// Person identification expressed as a proprietary code.
 /// </summary>
 [IsoId("_RjH9oNp-Ed-ak6NoX_4Aeg_-142125348")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IPersonIdentificationType3Choice, IIsoChoiceVariant
 {
     /// <summary>

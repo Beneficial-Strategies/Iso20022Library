@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalEnrolment2Choice;
 /// Provides the original enrolment data.
 /// </summary>
 [IsoId("_UZbOI-H7Eeqbls7Gk4-ckA")]
+[IsoXmlTag("OrgnlEnrlmntData")]
 public interface IOriginalEnrolmentData : IOriginalEnrolment2Choice, IIsoChoiceVariant
 {
     /// <summary>

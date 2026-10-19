@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionOrError4Choice;
 /// Reason why the requested business information is not given.
 /// </summary>
 [IsoId("_XFBYtW49EeiU9cctagi5ow")]
+[IsoXmlTag("BizErr")]
 public interface IBusinessError : ITransactionOrError4Choice, IIsoChoiceVariant
 {
     /// <summary>

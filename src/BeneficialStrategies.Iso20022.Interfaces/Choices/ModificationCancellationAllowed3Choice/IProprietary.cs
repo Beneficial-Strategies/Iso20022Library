@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationCancellationAllowed3
 /// Modification, cancellation allowed information expressed as a proprietary code.
 /// </summary>
 [IsoId("_AY9vENokEeC60axPepSq7g_-6475040")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IModificationCancellationAllowed3Choice, IIsoChoiceVariant
 {
     /// <summary>

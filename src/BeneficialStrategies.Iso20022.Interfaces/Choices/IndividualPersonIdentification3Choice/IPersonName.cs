@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IndividualPersonIdentification3C
 /// Name of the person that owns the account.
 /// </summary>
 [IsoId("_G6_504oWEeahcZ3Nzs1Qag")]
+[IsoXmlTag("PrsnNm")]
 public interface IPersonName : IIndividualPersonIdentification3Choice, IIsoChoiceVariant
 {
     /// <summary>

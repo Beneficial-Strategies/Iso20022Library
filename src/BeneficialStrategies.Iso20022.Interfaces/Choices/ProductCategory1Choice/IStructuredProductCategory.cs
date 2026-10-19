@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductCategory1Choice;
 /// Specifies the type of product category.
 /// </summary>
 [IsoId("_RbrR19p-Ed-ak6NoX_4Aeg_1854520026")]
+[IsoXmlTag("StrdPdctCtgy")]
 public interface IStructuredProductCategory : IProductCategory1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyType1Choice;
 /// Type of party expressed as a proprietary code.
 /// </summary>
 [IsoId("_92zi03ltEeG7BsjMvd1mEw_-1378237656")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IPartyType1Choice, IIsoChoiceVariant
 {
     /// <summary>

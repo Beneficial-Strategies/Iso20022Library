@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice;
 /// Specifies the opening and closing dates, as assigned by the system.
 /// </summary>
 [IsoId("_yJhSoYv-Eei289CGNqs21g")]
+[IsoXmlTag("SysPtyDt")]
 public interface ISystemPartyDate : ISystemPartyModification2Choice, IIsoChoiceVariant
 {
     /// <summary>

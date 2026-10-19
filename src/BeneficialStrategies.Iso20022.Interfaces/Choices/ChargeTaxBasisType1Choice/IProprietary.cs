@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeTaxBasisType1Choice;
 /// Securities transaction type expressed as a proprietary code.
 /// </summary>
 [IsoId("_AdIdZNokEeC60axPepSq7g_-1388856080")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IChargeTaxBasisType1Choice, IIsoChoiceVariant
 {
     /// <summary>

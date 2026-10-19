@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IncentivePremiumType2Choice;
 /// Quantity of votes per type of vote giving right to a premium.
 /// </summary>
 [IsoId("_vMYu8_NBEeqRfth943bvEA")]
+[IsoXmlTag("PerVote")]
 public interface IPerVote : IIncentivePremiumType2Choice, IIsoChoiceVariant
 {
     /// <summary>

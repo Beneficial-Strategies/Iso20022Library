@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StampDutyType1FormatChoice;
 /// Proprietary code to express the stamp duty information.
 /// </summary>
 [IsoId("_RpFbsNp-Ed-ak6NoX_4Aeg_-874099114")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IStampDutyType1FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification196Choice;
 /// Legal entity.
 /// </summary>
 [IsoId("_8gnOcDtnEemIf7eyjCwinw")]
+[IsoXmlTag("LglPrsn")]
 public interface ILegalPerson : IPartyIdentification196Choice, IIsoChoiceVariant
 {
     /// <summary>

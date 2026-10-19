@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Number2Choice;
 /// Number of maximum 35 text, with the possibility to provide an issuer for the number identification.
 /// </summary>
 [IsoId("_Qu0y5tp-Ed-ak6NoX_4Aeg_-1015124640")]
+[IsoXmlTag("Lng")]
 public interface ILong : INumber2Choice, IIsoChoiceVariant
 {
     /// <summary>

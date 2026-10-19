@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxCreditRateFormat1Choice;
 /// Number of monetary units specified in a currency.
 /// </summary>
 [IsoId("_UOVmvtp-Ed-ak6NoX_4Aeg_465503286")]
+[IsoXmlTag("Amt")]
 public interface IAmount : ITaxCreditRateFormat1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AmountOrPercentage2Choice;
 /// Specifies that the payment is for a fixed amount.
 /// </summary>
 [IsoId("_AM3MUNP9EeK0PPbKncCqzA")]
+[IsoXmlTag("Amt")]
 public interface IAmount : IAmountOrPercentage2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionToPerform4Choice;
 /// Content of the Loyalty Request message.
 /// </summary>
 [IsoId("_8yJLQ031Eey_VecAUE-C9Q")]
+[IsoXmlTag("LltyReq")]
 public interface ILoyaltyRequest : ITransactionToPerform4Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralProposalResponse2Choic
 /// Provides the collateral proposal response for the variation margin and optionaly the segregated independent amount.
 /// </summary>
 [IsoId("_vslfMWTUEeSSTJlMfOKFsA")]
+[IsoXmlTag("CollPrpsl")]
 public interface ICollateralProposal : ICollateralProposalResponse2Choice, IIsoChoiceVariant
 {
     /// <summary>

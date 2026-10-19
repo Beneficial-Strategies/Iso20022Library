@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InsuranceType2Choice;
 /// Type of insurance contract expressed as a proprietary code.
 /// </summary>
 [IsoId("_7-ZWYyGSEeWKAaDJcYGKLw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IInsuranceType2Choice, IIsoChoiceVariant
 {
     /// <summary>

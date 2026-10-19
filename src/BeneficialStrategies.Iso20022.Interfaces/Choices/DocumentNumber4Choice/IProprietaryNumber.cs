@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentNumber4Choice;
 /// Proprietary document identification.
 /// </summary>
 [IsoId("_Adb_Y9okEeC60axPepSq7g_894255196")]
+[IsoXmlTag("PrtryNb")]
 public interface IProprietaryNumber : IDocumentNumber4Choice, IIsoChoiceVariant
 {
     /// <summary>

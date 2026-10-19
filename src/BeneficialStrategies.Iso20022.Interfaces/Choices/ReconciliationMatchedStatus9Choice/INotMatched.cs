@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReconciliationMatchedStatus9Choi
 /// Indication that the reports subject of reconciliation do not match.
 /// </summary>
 [IsoId("_AxRVQ8K3EeuFNp8LZAnorg")]
+[IsoXmlTag("NotMtchd")]
 public interface INotMatched : IReconciliationMatchedStatus9Choice, IIsoChoiceVariant
 {
     /// <summary>

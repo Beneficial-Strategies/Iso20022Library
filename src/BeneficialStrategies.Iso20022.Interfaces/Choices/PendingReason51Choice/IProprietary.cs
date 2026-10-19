@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingReason51Choice;
 /// Pending reason specified as a proprietary code.
 /// </summary>
 [IsoId("_fOg6GbLLEemDyeh7tbvg1w")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IPendingReason51Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundParameters3Choice;
 /// Report parameters.
 /// </summary>
 [IsoId("_Q6l-Atp-Ed-ak6NoX_4Aeg_-886438823")]
+[IsoXmlTag("Params")]
 public interface IParameters : IFundParameters3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Product1Choice;
 /// Attributes relating to cleared securities.
 /// </summary>
 [IsoId("_QapNsLVQEeadLcJesEbkTQ")]
+[IsoXmlTag("Scty")]
 public interface ISecurity : IProduct1Choice, IIsoChoiceVariant
 {
     /// <summary>

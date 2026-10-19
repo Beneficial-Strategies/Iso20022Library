@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReplacementProcessingStatus10Cho
 /// Replacement of the trade is rejected.
 /// </summary>
 [IsoId("_RhhvAQeDEe2fOITqoTnSLQ")]
+[IsoXmlTag("Rjctd")]
 public interface IRejected : IReplacementProcessingStatus10Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GrossDividendRateFormat27Choice;
 /// Number of monetary units specified in a currency.
 /// </summary>
 [IsoId("_zJWMQ5b7Eee8S7xwGG7Veg")]
+[IsoXmlTag("Amt")]
 public interface IAmount : IGrossDividendRateFormat27Choice, IIsoChoiceVariant
 {
     /// <summary>

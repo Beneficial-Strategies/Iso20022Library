@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AffirmationStatus10Choice;
 /// Trade has been unaffirmed.
 /// </summary>
 [IsoId("_PNMLQwd3Ee2fOITqoTnSLQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IAffirmationStatus10Choice, IIsoChoiceVariant
 {
     /// <summary>

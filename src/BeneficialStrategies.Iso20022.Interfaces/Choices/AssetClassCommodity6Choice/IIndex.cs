@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity6Choice;
 /// Indicates the index type of commodities.
 /// </summary>
 [IsoId("_lKkAEE7JEe2PGo0mhYCh1g")]
+[IsoXmlTag("Indx")]
 public interface IIndex : IAssetClassCommodity6Choice, IIsoChoiceVariant
 {
     /// <summary>

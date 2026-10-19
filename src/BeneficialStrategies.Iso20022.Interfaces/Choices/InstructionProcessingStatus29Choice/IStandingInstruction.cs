@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus29Cho
 /// Standing instruction has been applied.
 /// </summary>
 [IsoId("_GxRCW4lqEeavwKddCbm3hg")]
+[IsoXmlTag("StgInstr")]
 public interface IStandingInstruction : IInstructionProcessingStatus29Choice, IIsoChoiceVariant
 {
     /// <summary>

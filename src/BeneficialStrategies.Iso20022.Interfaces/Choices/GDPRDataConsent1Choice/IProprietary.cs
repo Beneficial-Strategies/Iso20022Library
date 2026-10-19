@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GDPRDataConsent1Choice;
 /// Consent type expressed as a proprietary code.
 /// </summary>
 [IsoId("_OVaiIJTTEemC09f0MxYkRg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IGDPRDataConsent1Choice, IIsoChoiceVariant
 {
     /// <summary>

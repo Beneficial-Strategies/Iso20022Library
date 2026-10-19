@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradingPartyCapacity5Choice;
 /// Proprietary identification of additional information about the processed instruction.
 /// </summary>
 [IsoId("_10AHsMGxEeivTd4NUfCi2g")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ITradingPartyCapacity5Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice;
 /// Specifies whether the party is locked or not, and the reason for this status, when required.
 /// </summary>
 [IsoId("__edeA4v_Eei289CGNqs21g")]
+[IsoXmlTag("LckSts")]
 public interface ILockStatus : ISystemPartyModification2Choice, IIsoChoiceVariant
 {
     /// <summary>

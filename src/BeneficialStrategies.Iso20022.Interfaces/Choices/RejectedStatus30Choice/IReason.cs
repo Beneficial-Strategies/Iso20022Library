@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedStatus30Choice;
 /// Reason why the meeting instruction message or the individual meeting instruction is rejected.
 /// </summary>
 [IsoId("_AGV-erKaEemux5trsZcCpw")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IRejectedStatus30Choice, IIsoChoiceVariant
 {
     /// <summary>

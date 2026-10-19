@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountCriteria2Choice;
 /// Explicitly defines the query criteria.
 /// </summary>
 [IsoId("_4GLX1ZlaEeeE1Ya-LgRsuQ")]
+[IsoXmlTag("NewCrit")]
 public interface INewCriteria : IAccountCriteria2Choice, IIsoChoiceVariant
 {
     /// <summary>

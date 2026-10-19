@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityPaper4Choice;
 /// Newsprint commodity derivative.
 /// </summary>
 [IsoId("_FsdvMxZaEe2QNcZTDeoKnQ")]
+[IsoXmlTag("Nwsprnt")]
 public interface INewsprint : IAssetClassCommodityPaper4Choice, IIsoChoiceVariant
 {
     /// <summary>

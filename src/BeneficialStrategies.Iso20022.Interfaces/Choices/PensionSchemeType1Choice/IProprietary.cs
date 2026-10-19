@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PensionSchemeType1Choice;
 /// Type of pension policy, plan or scheme expressed as a proprietary code.
 /// </summary>
 [IsoId("_KeyXwE4OEeiQHa-q1Uephw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IPensionSchemeType1Choice, IIsoChoiceVariant
 {
     /// <summary>

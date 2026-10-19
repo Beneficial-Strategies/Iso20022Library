@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus5Choice;
 /// Status of the individual order is cancelled. This status is used for an order that has been accepted or that has been entered in an order book but that can not be executed.
 /// </summary>
 [IsoId("_3MEL0UHUEeasdbKMiqizqA")]
+[IsoXmlTag("Canc")]
 public interface ICancelled : IOrderStatus5Choice, IIsoChoiceVariant
 {
     /// <summary>

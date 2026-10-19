@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesMovementStatus1Choice;
 /// Instruction is meant to cure a cash fail, but no cash fail position exists in the transaction
 /// </summary>
 [IsoId("_VW6bQOCzEei2UYJ62ws-Fw")]
+[IsoXmlTag("Csh")]
 public interface ICash : ISecuritiesMovementStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConfirmationStatus1Choice;
 /// Status of the order confirmation is rejected.
 /// </summary>
 [IsoId("_1BFlE0hCEea8pJjypp-yMQ")]
+[IsoXmlTag("ConfRjctd")]
 public interface IConfirmationRejected : IConfirmationStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

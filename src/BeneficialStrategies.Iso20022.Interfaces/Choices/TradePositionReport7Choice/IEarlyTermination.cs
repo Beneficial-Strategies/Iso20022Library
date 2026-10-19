@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradePositionReport7Choice;
 /// Indicates that reported position is an early termination of an existing contract.
 /// </summary>
 [IsoId("_bWl_hxLBEeqctpBfTmLJnw")]
+[IsoXmlTag("EarlyTermntn")]
 public interface IEarlyTermination : ITradePositionReport7Choice, IIsoChoiceVariant
 {
     /// <summary>

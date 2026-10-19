@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient13Choice;
 /// Certificate issuer name and serial number (see ITU X.509).
 /// </summary>
 [IsoId("_h3aAUXDCEe2MCaKO5AtGsA")]
+[IsoXmlTag("IssrAndSrlNb")]
 public interface IIssuerAndSerialNumber : IRecipient13Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PurposeCode8Choice;
 /// Securities account purpose as a proprietary code.
 /// </summary>
 [IsoId("_5Wx6bJNLEeWGlc8L7oPDIg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IPurposeCode8Choice, IIsoChoiceVariant
 {
     /// <summary>

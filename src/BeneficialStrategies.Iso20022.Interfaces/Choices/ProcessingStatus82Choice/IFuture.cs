@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus82Choice;
 /// All checks relative to the instruction (except collateral) are successful.
 /// </summary>
 [IsoId("_FjyNQxIwEeydmIVkS03esw")]
+[IsoXmlTag("Futr")]
 public interface IFuture : IProcessingStatus82Choice, IIsoChoiceVariant
 {
     /// <summary>

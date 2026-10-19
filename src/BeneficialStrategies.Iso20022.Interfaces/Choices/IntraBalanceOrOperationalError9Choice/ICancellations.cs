@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraBalanceOrOperationalError9C
 /// Further details of the intrabalance cancellation transactions.
 /// </summary>
 [IsoId("_p-rkcTnfEem7JZMuWtwtsg")]
+[IsoXmlTag("Cxls")]
 public interface ICancellations : IIntraBalanceOrOperationalError9Choice, IIsoChoiceVariant
 {
     /// <summary>

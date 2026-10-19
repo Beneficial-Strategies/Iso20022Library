@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus39Cho
 /// Proprietary status related to an instruction.
 /// </summary>
 [IsoId("_Pl7SdAVSEeqjd8n6wD9JVw")]
+[IsoXmlTag("PrtrySts")]
 public interface IProprietaryStatus : IInstructionProcessingStatus39Choice, IIsoChoiceVariant
 {
     /// <summary>

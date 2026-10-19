@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status31Choice;
 /// Status of the transfer cancellation is accepted or sent to next party.
 /// </summary>
 [IsoId("_ym2jwZM6EemKz5EOjv82iQ")]
+[IsoXmlTag("Sts")]
 public interface IStatus : IStatus31Choice, IIsoChoiceVariant
 {
     /// <summary>

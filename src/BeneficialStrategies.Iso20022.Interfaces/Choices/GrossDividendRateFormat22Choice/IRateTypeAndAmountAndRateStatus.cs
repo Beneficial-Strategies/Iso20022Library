@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GrossDividendRateFormat22Choice;
 /// Specifies different formats for the gross dividend rate.
 /// </summary>
 [IsoId("_C4CraWXGEeWht50_j0HXAQ")]
+[IsoXmlTag("RateTpAndAmtAndRateSts")]
 public interface IRateTypeAndAmountAndRateStatus
     : IGrossDividendRateFormat22Choice,
         IIsoChoiceVariant

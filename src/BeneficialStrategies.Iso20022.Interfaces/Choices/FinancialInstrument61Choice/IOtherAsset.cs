@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument61Choice;
 /// Identification of another kind of asset in the holding that is not a security or cash.
 /// </summary>
 [IsoId("_mW7mFZNBEemQB_8XA98K0Q")]
+[IsoXmlTag("OthrAsst")]
 public interface IOtherAsset : IFinancialInstrument61Choice, IIsoChoiceVariant
 {
     /// <summary>

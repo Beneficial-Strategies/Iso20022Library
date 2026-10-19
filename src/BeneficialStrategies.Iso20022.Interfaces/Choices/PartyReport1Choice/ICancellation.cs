@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyReport1Choice;
 /// Cancellation of a party previously updated.
 /// </summary>
 [IsoId("_HizTYDbuEeeYhaZ6bvG1Xg")]
+[IsoXmlTag("Cxl")]
 public interface ICancellation : IPartyReport1Choice, IIsoChoiceVariant
 {
     /// <summary>

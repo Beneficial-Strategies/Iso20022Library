@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData20Choice;
 /// Details of the repurchase trade transaction.
 /// </summary>
 [IsoId("_lksD0bONEemDE9K-I5TT8Q")]
+[IsoXmlTag("RpTrad")]
 public interface IRepurchaseTrade : ITransactionLoanData20Choice, IIsoChoiceVariant
 {
     /// <summary>

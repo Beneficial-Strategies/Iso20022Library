@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification4Choice;
 /// Proprietary identification of an underlying financial instrument.
 /// </summary>
 [IsoId("_Qd1wmNp-Ed-ak6NoX_4Aeg_1865671289")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ISecurityIdentification4Choice, IIsoChoiceVariant
 {
     /// <summary>

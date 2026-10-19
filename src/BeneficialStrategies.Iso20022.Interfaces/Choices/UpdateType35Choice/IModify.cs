@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType35Choice;
 /// Set of data requested to modify a security.
 /// </summary>
 [IsoId("_QOJ0NZJKEeuAlLVx8pyt3w")]
+[IsoXmlTag("Modfy")]
 public interface IModify : IUpdateType35Choice, IIsoChoiceVariant
 {
     /// <summary>

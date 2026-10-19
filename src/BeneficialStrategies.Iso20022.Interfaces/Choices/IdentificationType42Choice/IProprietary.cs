@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationType42Choice;
 /// Type of identification is defined using a data source scheme.
 /// </summary>
 [IsoId("_nalz0R5gEeWE3PufGMdJ3w")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IIdentificationType42Choice, IIsoChoiceVariant
 {
     /// <summary>

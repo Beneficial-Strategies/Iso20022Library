@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationRight1Choice;
 /// Cancellation right expressed as a proprietary code.
 /// </summary>
 [IsoId("_MarVcThPEeaTjZWmPo-9OA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICancellationRight1Choice, IIsoChoiceVariant
 {
     /// <summary>

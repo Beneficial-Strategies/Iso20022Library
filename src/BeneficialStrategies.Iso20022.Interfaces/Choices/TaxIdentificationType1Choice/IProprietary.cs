@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxIdentificationType1Choice;
 /// Type of tax identification number expressed as a proprietary code.
 /// </summary>
 [IsoId("_5gom0AhIEeSUPbC7DbLJpQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ITaxIdentificationType1Choice, IIsoChoiceVariant
 {
     /// <summary>

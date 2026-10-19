@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LevelOfControl1Choice;
 /// Level of control expressed as a proprietary code.
 /// </summary>
 [IsoId("_SlfVkCDDEeWPMvNwVtiMsA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ILevelOfControl1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.WarrantStyle3Choice;
 /// Warrant style expressed as a proprietary code.
 /// </summary>
 [IsoId("_q6-rg-LbEeWFtOV72FbX9w")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IWarrantStyle3Choice, IIsoChoiceVariant
 {
     /// <summary>

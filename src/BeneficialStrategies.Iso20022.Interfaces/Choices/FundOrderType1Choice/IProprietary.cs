@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundOrderType1Choice;
 /// Order type expressed as a proprietary code.
 /// </summary>
 [IsoId("_RY2UiRHcEeKVqeHljBM1MQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IFundOrderType1Choice, IIsoChoiceVariant
 {
     /// <summary>

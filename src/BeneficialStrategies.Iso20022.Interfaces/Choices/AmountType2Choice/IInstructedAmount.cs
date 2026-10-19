@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AmountType2Choice;
 /// Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.
 /// </summary>
 [IsoId("_Pxu4jdp-Ed-ak6NoX_4Aeg_-1148058982")]
+[IsoXmlTag("InstdAmt")]
 public interface IInstructedAmount : IAmountType2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustification3Choic
 /// Set of elements used to indicate which information is missing or incorrect.
 /// </summary>
 [IsoId("_S_E3FUgoEeaGKYpLDboHPQ")]
+[IsoXmlTag("MssngOrIncrrctInf")]
 public interface IMissingOrIncorrectInformation
     : IUnableToApplyJustification3Choice,
         IIsoChoiceVariant

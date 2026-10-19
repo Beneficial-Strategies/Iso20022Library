@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason18Choice;
 /// Specifies the reason of the Status.
 /// </summary>
 [IsoId("_zRXpgeLtEeWOD7aAy2fAcA")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IReason18Choice, IIsoChoiceVariant
 {
     /// <summary>

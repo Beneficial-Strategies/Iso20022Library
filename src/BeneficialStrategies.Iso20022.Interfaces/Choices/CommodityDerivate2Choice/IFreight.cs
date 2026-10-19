@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CommodityDerivate2Choice;
 /// Details specific to freight derivatives.
 /// </summary>
 [IsoId("_zwLKwWlHEeaLAKoEUNsD9g")]
+[IsoXmlTag("Frght")]
 public interface IFreight : ICommodityDerivate2Choice, IIsoChoiceVariant
 {
     /// <summary>

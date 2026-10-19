@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateType73Choice;
 /// Proprietary identification of the type of net dividend rate.
 /// </summary>
 [IsoId("_skrJ383wEee5nJBZsW8MFQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRateType73Choice, IIsoChoiceVariant
 {
     /// <summary>

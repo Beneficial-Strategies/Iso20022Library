@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument12Choice;
 /// Cheque drawn by a bank on itself or its agent. A person who owes money to another buys the draft from a bank for cash and hands it to the creditor.
 /// </summary>
 [IsoId("_SBhw4dp-Ed-ak6NoX_4Aeg_-2089204831")]
+[IsoXmlTag("BkrsDrftDtls")]
 public interface IBankersDraftDetails : IPaymentInstrument12Choice, IIsoChoiceVariant
 {
     /// <summary>

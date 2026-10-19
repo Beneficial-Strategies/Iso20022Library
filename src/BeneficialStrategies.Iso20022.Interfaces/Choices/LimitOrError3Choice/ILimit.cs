@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitOrError3Choice;
 /// Requested information on the limit.
 /// </summary>
 [IsoId("_Rf2uIZlhEeeE1Ya-LgRsuQ")]
+[IsoXmlTag("Lmt")]
 public interface ILimit : ILimitOrError3Choice, IIsoChoiceVariant
 {
     /// <summary>

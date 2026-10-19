@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClassificationType33Choice;
 /// Proprietary classification of financial instrument.
 /// </summary>
 [IsoId("_chVpzZKQEeWHWpTQn1FFVg")]
+[IsoXmlTag("AltrnClssfctn")]
 public interface IAlternateClassification : IClassificationType33Choice, IIsoChoiceVariant
 {
     /// <summary>

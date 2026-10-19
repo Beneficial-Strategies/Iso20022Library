@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExemptionReason1Choice;
 /// Exemption reason expressed as a proprietary code.
 /// </summary>
 [IsoId("_tuUKIBuJEeOqSdXzJ0oydA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IExemptionReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

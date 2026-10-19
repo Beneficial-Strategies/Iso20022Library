@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusReasonCode7Choice;
 /// Defines the reason that has been used by the Target2 SSP system to reject the transaction.
 /// </summary>
 [IsoId("_Ny9Dy5lPEee-Zps0fZQaFQ")]
+[IsoXmlTag("PrtryRjctn")]
 public interface IProprietaryRejection : IPaymentStatusReasonCode7Choice, IIsoChoiceVariant
 {
     /// <summary>

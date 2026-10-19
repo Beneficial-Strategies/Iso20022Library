@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountSelection2Choice;
 /// Various investment account information used to select a specific account.
 /// </summary>
 [IsoId("_DGUog0_lEeaB8-OWTiMVrQ")]
+[IsoXmlTag("OthrAcctSelctnData")]
 public interface IOtherAccountSelectionData : IAccountSelection2Choice, IIsoChoiceVariant
 {
     /// <summary>

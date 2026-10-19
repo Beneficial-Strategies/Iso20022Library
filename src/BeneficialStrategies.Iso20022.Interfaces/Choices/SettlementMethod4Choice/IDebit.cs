@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementMethod4Choice;
 /// Specifies details of the payment to be made by the new account servicer to the old account servicer in case of a negative closing balance.
 /// </summary>
 [IsoId("_dYSZg9cZEeqRFcf2R4bPBw")]
+[IsoXmlTag("Dbt")]
 public interface IDebit : ISettlementMethod4Choice, IIsoChoiceVariant
 {
     /// <summary>

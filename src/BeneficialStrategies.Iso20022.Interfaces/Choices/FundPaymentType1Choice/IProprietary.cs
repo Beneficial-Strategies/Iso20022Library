@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPaymentType1Choice;
 /// Type of payment instrument expressed as a proprietary code.
 /// </summary>
 [IsoId("_DCXWkF8yEeicg40_9gK9vQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IFundPaymentType1Choice, IIsoChoiceVariant
 {
     /// <summary>

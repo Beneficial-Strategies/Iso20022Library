@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionCancellationRequestSt
 /// Provides status information related to a cancellation request accepted for further processing.
 /// </summary>
 [IsoId("_V5aGixn0EeyroI8qKgB7Mg")]
+[IsoXmlTag("Accptd")]
 public interface IAccepted : IInstructionCancellationRequestStatus13Choice, IIsoChoiceVariant
 {
     /// <summary>

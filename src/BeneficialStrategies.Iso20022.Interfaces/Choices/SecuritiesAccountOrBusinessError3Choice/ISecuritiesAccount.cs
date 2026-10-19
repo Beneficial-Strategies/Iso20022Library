@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAccountOrBusinessError
 /// Specifies the data requested for the securities account.
 /// </summary>
 [IsoId("_yNtKMTp1Eemk2e6qGBk8IQ")]
+[IsoXmlTag("SctiesAcct")]
 public interface ISecuritiesAccount : ISecuritiesAccountOrBusinessError3Choice, IIsoChoiceVariant
 {
     /// <summary>

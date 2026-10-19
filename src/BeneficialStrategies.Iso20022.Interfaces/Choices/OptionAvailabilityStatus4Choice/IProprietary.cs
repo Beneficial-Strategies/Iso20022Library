@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionAvailabilityStatus4Choice;
 /// Proprietary identification of the status of the option availability.
 /// </summary>
 [IsoId("_cta-L5KQEeWHWpTQn1FFVg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IOptionAvailabilityStatus4Choice, IIsoChoiceVariant
 {
     /// <summary>

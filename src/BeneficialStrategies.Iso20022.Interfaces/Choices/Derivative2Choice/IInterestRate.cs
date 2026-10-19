@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Derivative2Choice;
 /// Details specific for Interest rate.
 /// </summary>
 [IsoId("_Bv9MQ2kwEeaLAKoEUNsD9g")]
+[IsoXmlTag("IntrstRate")]
 public interface IInterestRate : IDerivative2Choice, IIsoChoiceVariant
 {
     /// <summary>

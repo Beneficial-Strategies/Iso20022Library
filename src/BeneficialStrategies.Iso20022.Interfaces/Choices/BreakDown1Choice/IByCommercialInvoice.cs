@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BreakDown1Choice;
 /// The intention to pay is based on a commercial invoice.
 /// </summary>
 [IsoId("_6n8NYBrYEeOVR9VN6fAMUg")]
+[IsoXmlTag("ByComrclInvc")]
 public interface IByCommercialInvoice : IBreakDown1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DistributionStrategy1Choice;
 /// Distribution strategy expressed as a proprietary code.
 /// </summary>
 [IsoId("_62qNMDcgEeidBoT_PugKiA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IDistributionStrategy1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConversionTypeFormat1Choice;
 /// Proprietary identification of the type of conversion.
 /// </summary>
 [IsoId("_Q36dcdp-Ed-ak6NoX_4Aeg_760654495")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IConversionTypeFormat1Choice, IIsoChoiceVariant
 {
     /// <summary>

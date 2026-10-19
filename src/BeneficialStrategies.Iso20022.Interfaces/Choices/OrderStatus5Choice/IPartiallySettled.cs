@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus5Choice;
 /// Status of the individual order is partially settled.
 /// </summary>
 [IsoId("_P8YAnUHREeasdbKMiqizqA")]
+[IsoXmlTag("PrtlySttld")]
 public interface IPartiallySettled : IOrderStatus5Choice, IIsoChoiceVariant
 {
     /// <summary>

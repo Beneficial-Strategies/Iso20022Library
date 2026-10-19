@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData26Choice;
 /// Details of the buy sell back transaction.
 /// </summary>
 [IsoId("_3-z243z2EeurrJrNxcsszQ")]
+[IsoXmlTag("BuySellBck")]
 public interface IBuySellBack : ITransactionLoanData26Choice, IIsoChoiceVariant
 {
     /// <summary>

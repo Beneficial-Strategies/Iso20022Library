@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradePositionReport7Choice;
 /// Indicates a cancellation of a wrongly submitted entire report in case the contract never came into existence or was not subject to reporting requirements but was reported to a trade repository by mistake.
 /// </summary>
 [IsoId("_bWl_ixLBEeqctpBfTmLJnw")]
+[IsoXmlTag("Err")]
 public interface IError : ITradePositionReport7Choice, IIsoChoiceVariant
 {
     /// <summary>

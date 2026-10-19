@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Product1Choice;
 /// Derivative specific attributes.
 /// </summary>
 [IsoId("_IojKYLVQEeadLcJesEbkTQ")]
+[IsoXmlTag("Deriv")]
 public interface IDerivative : IProduct1Choice, IIsoChoiceVariant
 {
     /// <summary>

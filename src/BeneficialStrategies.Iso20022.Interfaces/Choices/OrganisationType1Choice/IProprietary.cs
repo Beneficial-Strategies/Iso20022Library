@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrganisationType1Choice;
 /// Type of organisation expressed as a proprietary code.
 /// </summary>
 [IsoId("_6ArGUCCeEeWJd9HF2tO7BA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IOrganisationType1Choice, IIsoChoiceVariant
 {
     /// <summary>

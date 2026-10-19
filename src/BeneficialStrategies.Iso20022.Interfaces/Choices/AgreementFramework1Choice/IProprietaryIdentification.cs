@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AgreementFramework1Choice;
 /// Proprietary identification to specify the type of collateral agreement.
 /// </summary>
 [IsoId("_UkjHQdp-Ed-ak6NoX_4Aeg_-108105307")]
+[IsoXmlTag("PrtryId")]
 public interface IProprietaryIdentification : IAgreementFramework1Choice, IIsoChoiceVariant
 {
     /// <summary>

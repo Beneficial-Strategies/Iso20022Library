@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductIdentifier2Choice;
 /// Specifies the type of product identifier.
 /// </summary>
 [IsoId("_Rb1C0dp-Ed-ak6NoX_4Aeg_-1291805271")]
+[IsoXmlTag("StrdPdctIdr")]
 public interface IStructuredProductIdentifier : IProductIdentifier2Choice, IIsoChoiceVariant
 {
     /// <summary>

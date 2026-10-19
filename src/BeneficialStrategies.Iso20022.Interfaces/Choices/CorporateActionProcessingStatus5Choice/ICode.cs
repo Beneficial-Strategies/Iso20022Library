@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionProcessingStatus5
 /// Specifies the status of the details of the corporate action event.
 /// </summary>
 [IsoId("_JoF7gTnXEeWLJsP1cO-amg")]
+[IsoXmlTag("Cd")]
 public interface ICode : ICorporateActionProcessingStatus5Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateOrType1Choice;
 /// Pricing expressed as a rate index type or a rate name. Lookback and crystallization days.
 /// </summary>
 [IsoId("_XAtnpcIiEeuexrfMa3dl_Q")]
+[IsoXmlTag("Tp")]
 public interface IType : IRateOrType1Choice, IIsoChoiceVariant
 {
     /// <summary>

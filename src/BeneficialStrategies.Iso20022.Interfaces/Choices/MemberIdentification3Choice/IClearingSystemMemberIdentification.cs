@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MemberIdentification3Choice;
 /// Information used to identify a member within a clearing system.
 /// </summary>
 [IsoId("_iR9BhXSbEeiH1ZOt2UD8vQ")]
+[IsoXmlTag("ClrSysMmbId")]
 public interface IClearingSystemMemberIdentification
     : IMemberIdentification3Choice,
         IIsoChoiceVariant

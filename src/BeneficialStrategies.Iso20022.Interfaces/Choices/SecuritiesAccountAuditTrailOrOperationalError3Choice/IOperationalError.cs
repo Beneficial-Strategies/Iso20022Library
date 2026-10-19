@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAccountAuditTrailOrOpe
 /// Provides details about an operational error.
 /// </summary>
 [IsoId("_A6gAszp0Eemk2e6qGBk8IQ")]
+[IsoXmlTag("OprlErr")]
 public interface IOperationalError
     : ISecuritiesAccountAuditTrailOrOperationalError3Choice,
         IIsoChoiceVariant

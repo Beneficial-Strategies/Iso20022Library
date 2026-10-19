@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingInstructionCancellationS
 /// Provides information about the processing status of the cancellation request.
 /// </summary>
 [IsoId("_RirRs9p-Ed-ak6NoX_4Aeg_1145802950")]
+[IsoXmlTag("PrcdSts")]
 public interface IProcessedStatus : IStandingInstructionCancellationStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

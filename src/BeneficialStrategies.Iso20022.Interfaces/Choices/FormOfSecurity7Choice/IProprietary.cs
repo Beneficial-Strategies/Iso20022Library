@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FormOfSecurity7Choice;
 /// Form of the security expressed as a proprietary code.
 /// </summary>
 [IsoId("_5NZU2JNLEeWGlc8L7oPDIg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IFormOfSecurity7Choice, IIsoChoiceVariant
 {
     /// <summary>

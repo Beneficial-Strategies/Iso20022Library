@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferCancellationRejectedStat
 /// Reason of the rejected status.
 /// </summary>
 [IsoId("_U0fAs9p-Ed-ak6NoX_4Aeg_1742304027")]
+[IsoXmlTag("Rsn")]
 public interface IReason : ITransferCancellationRejectedStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

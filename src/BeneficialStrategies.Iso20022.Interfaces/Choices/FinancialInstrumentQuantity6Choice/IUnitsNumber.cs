@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity6Choi
 /// Quantity of investment fund units to be subscribed.
 /// </summary>
 [IsoId("_SoRAxdp-Ed-ak6NoX_4Aeg_-1931222347")]
+[IsoXmlTag("UnitsNb")]
 public interface IUnitsNumber : IFinancialInstrumentQuantity6Choice, IIsoChoiceVariant
 {
     /// <summary>

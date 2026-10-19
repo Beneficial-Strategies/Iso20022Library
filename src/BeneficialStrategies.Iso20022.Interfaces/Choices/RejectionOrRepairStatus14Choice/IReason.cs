@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionOrRepairStatus14Choice;
 /// Specifies the reason for the status.
 /// </summary>
 [IsoId("_OJVuN_4vEeClUvPNHKL9Zw")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IRejectionOrRepairStatus14Choice, IIsoChoiceVariant
 {
     /// <summary>

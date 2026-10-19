@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityClassificationType1Choic
 /// Other type of classification of the financial instrument.
 /// </summary>
 [IsoId("_Q7pG49p-Ed-ak6NoX_4Aeg_-1089755250")]
+[IsoXmlTag("AltrnClssfctn")]
 public interface IAlternateClassification : ISecurityClassificationType1Choice, IIsoChoiceVariant
 {
     /// <summary>

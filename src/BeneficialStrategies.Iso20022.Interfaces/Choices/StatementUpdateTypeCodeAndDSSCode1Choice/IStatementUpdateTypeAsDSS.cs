@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementUpdateTypeCodeAndDSSCod
 /// Update type expressed as a data source scheme and a code used within the data source scheme.
 /// </summary>
 [IsoId("_sXPbwwaUEe2-DuDrUXkg2w")]
+[IsoXmlTag("StmtUpdTpAsDSS")]
 public interface IStatementUpdateTypeAsDSS
     : IStatementUpdateTypeCodeAndDSSCode1Choice,
         IIsoChoiceVariant

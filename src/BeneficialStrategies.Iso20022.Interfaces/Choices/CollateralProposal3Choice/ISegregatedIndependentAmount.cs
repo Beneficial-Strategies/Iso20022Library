@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralProposal3Choice;
 /// Provides details about the proposal for the segregated independent amount.
 /// </summary>
 [IsoId("_P0F1U19-EeSMgPeFpRHeJw")]
+[IsoXmlTag("SgrtdIndpdntAmt")]
 public interface ISegregatedIndependentAmount : ICollateralProposal3Choice, IIsoChoiceVariant
 {
     /// <summary>

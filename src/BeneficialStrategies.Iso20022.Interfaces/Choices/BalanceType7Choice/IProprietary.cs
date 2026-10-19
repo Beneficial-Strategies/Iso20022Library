@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceType7Choice;
 /// Balance type expressed as a proprietary code.
 /// </summary>
 [IsoId("_nAhTWfNBEeCuA5Tr22BnwA_1632998448")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IBalanceType7Choice, IIsoChoiceVariant
 {
     /// <summary>

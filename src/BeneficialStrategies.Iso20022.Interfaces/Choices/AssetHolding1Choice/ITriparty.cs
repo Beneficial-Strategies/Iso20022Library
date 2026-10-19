@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetHolding1Choice;
 /// Mark-to-market pre-haircut value of triparty collateral.
 /// </summary>
 [IsoId("_0kAaQK_6EeaE9YROwd69hA")]
+[IsoXmlTag("Trpty")]
 public interface ITriparty : IAssetHolding1Choice, IIsoChoiceVariant
 {
     /// <summary>

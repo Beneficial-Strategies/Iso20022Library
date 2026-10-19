@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NotificationCancellationRequestS
 /// Provides information about the rejection status.
 /// </summary>
 [IsoId("_RiYWxdp-Ed-ak6NoX_4Aeg_891409846")]
+[IsoXmlTag("RjctdSts")]
 public interface IRejectedStatus : INotificationCancellationRequestStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

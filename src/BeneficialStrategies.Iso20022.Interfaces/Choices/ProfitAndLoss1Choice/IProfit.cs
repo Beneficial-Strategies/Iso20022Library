@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProfitAndLoss1Choice;
 /// Value of the positive amount.
 /// </summary>
 [IsoId("_Q65gCdp-Ed-ak6NoX_4Aeg_-828523579")]
+[IsoXmlTag("Prft")]
 public interface IProfit : IProfitAndLoss1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxableIncomePerShareCalculated2
 /// Taxable income per share calculated (TIS) expressed as a proprietary code.
 /// </summary>
 [IsoId("_wmTxczhgEeamLZQeccJa7w")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ITaxableIncomePerShareCalculated2Choice, IIsoChoiceVariant
 {
     /// <summary>

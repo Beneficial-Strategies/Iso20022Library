@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConfirmationType1Choice;
 /// Confirmation type expressed as a proprietary code.
 /// </summary>
 [IsoId("_vmGggUzLEeafiMTDrtSnyw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IConfirmationType1Choice, IIsoChoiceVariant
 {
     /// <summary>

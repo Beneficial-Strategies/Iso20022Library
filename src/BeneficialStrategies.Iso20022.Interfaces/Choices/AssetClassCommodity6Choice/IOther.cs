@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity6Choice;
 /// Other commodities.
 /// </summary>
 [IsoId("_1bgUKxZXEe2QNcZTDeoKnQ")]
+[IsoXmlTag("Othr")]
 public interface IOther : IAssetClassCommodity6Choice, IIsoChoiceVariant
 {
     /// <summary>

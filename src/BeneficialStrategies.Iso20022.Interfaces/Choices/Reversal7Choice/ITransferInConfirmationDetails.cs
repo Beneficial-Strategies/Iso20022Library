@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reversal7Choice;
 /// Details of the transfer in confirmation to be reversed.
 /// </summary>
 [IsoId("_3VwHYyPvEeWQjryFgN2ITg")]
+[IsoXmlTag("TrfInConfDtls")]
 public interface ITransferInConfirmationDetails : IReversal7Choice, IIsoChoiceVariant
 {
     /// <summary>

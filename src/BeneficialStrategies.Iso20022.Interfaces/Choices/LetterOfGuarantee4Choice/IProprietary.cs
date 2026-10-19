@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LetterOfGuarantee4Choice;
 /// Letter of guarantee information expressed as a proprietary code.
 /// </summary>
 [IsoId("_IUqC2TqJEeWVrPy0StzzSg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ILetterOfGuarantee4Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BeneficiaryType1Choice;
 /// Type of beneficiary expressed as a proprietary code.
 /// </summary>
 [IsoId("_69nekFNgEeijdq8ilaxyOA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IBeneficiaryType1Choice, IIsoChoiceVariant
 {
     /// <summary>

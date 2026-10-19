@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EUDividendStatusType2Choice;
 /// EU dividend status expressed as a proprietary code.
 /// </summary>
 [IsoId("_P4Aegzh8EeaH-93K5JKmzw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IEUDividendStatusType2Choice, IIsoChoiceVariant
 {
     /// <summary>

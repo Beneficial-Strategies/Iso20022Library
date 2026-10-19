@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BeneficiaryCertificationType11Ch
 /// Proprietary identification of the type of certification required.
 /// </summary>
 [IsoId("_chdlpZKQEeWHWpTQn1FFVg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IBeneficiaryCertificationType11Choice, IIsoChoiceVariant
 {
     /// <summary>

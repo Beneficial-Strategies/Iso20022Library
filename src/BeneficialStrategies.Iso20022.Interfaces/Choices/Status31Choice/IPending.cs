@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status31Choice;
 /// Status of the transfer cancellation is pending.
 /// </summary>
 [IsoId("_ym2jx5M6EemKz5EOjv82iQ")]
+[IsoXmlTag("Pdg")]
 public interface IPending : IStatus31Choice, IIsoChoiceVariant
 {
     /// <summary>

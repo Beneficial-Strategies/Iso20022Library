@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatus5Choice;
 /// Indicates a duplicated case. |Usage: When present, the case identified in the message must be closed. The case identified as duplicated (in this component) will be pursued.
 /// </summary>
 [IsoId("_NRkhp249EeiU9cctagi5ow")]
+[IsoXmlTag("DplctOf")]
 public interface IDuplicateOf : IInvestigationStatus5Choice, IIsoChoiceVariant
 {
     /// <summary>

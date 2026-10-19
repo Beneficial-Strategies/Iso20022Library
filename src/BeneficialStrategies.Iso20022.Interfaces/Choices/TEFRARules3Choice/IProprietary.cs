@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TEFRARules3Choice;
 /// TEFRA rules expressed as a proprietary code.
 /// </summary>
 [IsoId("_irPNc-LcEeWFtOV72FbX9w")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ITEFRARules3Choice, IIsoChoiceVariant
 {
     /// <summary>

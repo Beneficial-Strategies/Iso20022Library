@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ResponseStatus1Choice;
 /// Provides the status of the received collateral message (collateral claim, a collateral proposal or a proposal/request for collateral substitution) from a collateral management perspective.
 /// </summary>
 [IsoId("_UYUpJtp-Ed-ak6NoX_4Aeg_-688354435")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IResponseStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

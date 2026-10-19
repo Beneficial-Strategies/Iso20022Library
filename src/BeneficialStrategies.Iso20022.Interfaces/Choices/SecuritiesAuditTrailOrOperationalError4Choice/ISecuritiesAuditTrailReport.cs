@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAuditTrailOrOperationa
 /// Report information about securities reference data.
 /// </summary>
 [IsoId("_Ptf-MZJKEeuAlLVx8pyt3w")]
+[IsoXmlTag("SctiesAudtTrlRpt")]
 public interface ISecuritiesAuditTrailReport
     : ISecuritiesAuditTrailOrOperationalError4Choice,
         IIsoChoiceVariant

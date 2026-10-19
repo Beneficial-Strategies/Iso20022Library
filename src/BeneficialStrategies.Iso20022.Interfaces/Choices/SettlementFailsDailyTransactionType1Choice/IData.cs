@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementFailsDailyTransactionT
 /// Aggregated data of settlement instructions.
 /// </summary>
 [IsoId("_9tfhFTOYEeqBfed1bmSPqg")]
+[IsoXmlTag("Data")]
 public interface IData : ISettlementFailsDailyTransactionType1Choice, IIsoChoiceVariant
 {
     /// <summary>

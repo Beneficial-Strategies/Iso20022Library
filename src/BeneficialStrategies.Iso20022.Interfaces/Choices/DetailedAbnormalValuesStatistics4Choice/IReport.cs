@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedAbnormalValuesStatistics
 /// Detailed information on statistics per combination of counterparties.
 /// </summary>
 [IsoId("_x4ww41yGEe24CqbZJK5XxA")]
+[IsoXmlTag("Rpt")]
 public interface IReport : IDetailedAbnormalValuesStatistics4Choice, IIsoChoiceVariant
 {
     /// <summary>

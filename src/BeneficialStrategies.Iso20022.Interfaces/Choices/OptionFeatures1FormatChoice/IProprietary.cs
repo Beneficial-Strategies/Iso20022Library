@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionFeatures1FormatChoice;
 /// Proprietary code to express the feature of an option.
 /// </summary>
 [IsoId("_Rm2nF9p-Ed-ak6NoX_4Aeg_1295909868")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IOptionFeatures1FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

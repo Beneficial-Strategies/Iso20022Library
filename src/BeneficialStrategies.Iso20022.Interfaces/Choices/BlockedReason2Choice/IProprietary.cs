@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BlockedReason2Choice;
 /// Reason expressed as a proprietary code.
 /// </summary>
 [IsoId("_P2OO01r3Eea4y99eritluQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IBlockedReason2Choice, IIsoChoiceVariant
 {
     /// <summary>

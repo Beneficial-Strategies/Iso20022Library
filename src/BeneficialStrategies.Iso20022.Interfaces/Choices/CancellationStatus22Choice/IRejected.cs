@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus22Choice;
 /// Status of the order cancellation request is rejected.
 /// </summary>
 [IsoId("_0syLA0gsEeaD2L_hzZaE0w")]
+[IsoXmlTag("Rjctd")]
 public interface IRejected : ICancellationStatus22Choice, IIsoChoiceVariant
 {
     /// <summary>

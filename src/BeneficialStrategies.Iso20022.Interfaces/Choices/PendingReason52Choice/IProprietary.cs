@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingReason52Choice;
 /// Specifies the reason code why the instruction or request is pending, using a proprietary format.
 /// </summary>
 [IsoId("_xsbjIOBiEeiVRbNQx5-Vhg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IPendingReason52Choice, IIsoChoiceVariant
 {
     /// <summary>

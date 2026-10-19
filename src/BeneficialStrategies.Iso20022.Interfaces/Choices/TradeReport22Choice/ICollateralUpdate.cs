@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport22Choice;
 /// Details of the loan used for financing the transaction.
 /// </summary>
 [IsoId("_zvSse8g3EeuGrNSsxk3B0A")]
+[IsoXmlTag("CollUpd")]
 public interface ICollateralUpdate : ITradeReport22Choice, IIsoChoiceVariant
 {
     /// <summary>

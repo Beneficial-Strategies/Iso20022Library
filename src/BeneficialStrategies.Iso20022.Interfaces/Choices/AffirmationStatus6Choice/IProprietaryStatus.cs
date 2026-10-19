@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AffirmationStatus6Choice;
 /// Provides a proprietary status and a proprietary reason of the affirmation of the trade.
 /// </summary>
 [IsoId("_A55R59okEeC60axPepSq7g_1765801395")]
+[IsoXmlTag("PrtrySts")]
 public interface IProprietaryStatus : IAffirmationStatus6Choice, IIsoChoiceVariant
 {
     /// <summary>

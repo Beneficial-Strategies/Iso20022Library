@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party8Choice;
 /// Unique and unambiguous identification of a person, eg, passport.
 /// </summary>
 [IsoId("_PXDusdp-Ed-ak6NoX_4Aeg_1498810894")]
+[IsoXmlTag("PrvtId")]
 public interface IPrivateIdentification : IParty8Choice, IIsoChoiceVariant
 {
     /// <summary>

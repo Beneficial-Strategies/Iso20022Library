@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceFormat7Choice;
 /// Provides information about balance related to a corporate action.
 /// </summary>
 [IsoId("_cfsEr5KQEeWHWpTQn1FFVg")]
+[IsoXmlTag("Bal")]
 public interface IBalance : IBalanceFormat7Choice, IIsoChoiceVariant
 {
     /// <summary>

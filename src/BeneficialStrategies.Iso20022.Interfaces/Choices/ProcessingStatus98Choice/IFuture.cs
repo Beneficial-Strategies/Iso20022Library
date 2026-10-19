@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice;
 /// Trade is future.
 /// </summary>
 [IsoId("_x4XDjQarEe2phaVG0lYKTw")]
+[IsoXmlTag("Futr")]
 public interface IFuture : IProcessingStatus98Choice, IIsoChoiceVariant
 {
     /// <summary>

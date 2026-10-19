@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GlobalNote2Choice;
 /// Global note expressed as a proprietary code.
 /// </summary>
 [IsoId("_Tsvfw-LaEeWFtOV72FbX9w")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IGlobalNote2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InformationTypeFormat4Choice;
 /// Proprietary identification of the information type.
 /// </summary>
 [IsoId("_gr8cA0EGEeWVgfuHGaKtRQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IInformationTypeFormat4Choice, IIsoChoiceVariant
 {
     /// <summary>

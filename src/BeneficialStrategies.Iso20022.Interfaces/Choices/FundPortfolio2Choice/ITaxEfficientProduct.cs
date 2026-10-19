@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio2Choice;
 /// In the UK, a typical tax wrapper product is known as an &apos;ISA&apos; (Individual Savings Account).
 /// </summary>
 [IsoId("_pEam0U4aEeiQHa-q1Uephw")]
+[IsoXmlTag("TaxEffcntPdct")]
 public interface ITaxEfficientProduct : IFundPortfolio2Choice, IIsoChoiceVariant
 {
     /// <summary>

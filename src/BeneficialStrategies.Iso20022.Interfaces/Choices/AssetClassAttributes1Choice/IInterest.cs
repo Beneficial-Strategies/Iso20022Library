@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassAttributes1Choice;
 /// Asset class is a non-financial instrument of type interest rate.
 /// </summary>
 [IsoId("_id4oJe94EeW7gabYEJmWIA")]
+[IsoXmlTag("Intrst")]
 public interface IInterest : IAssetClassAttributes1Choice, IIsoChoiceVariant
 {
     /// <summary>

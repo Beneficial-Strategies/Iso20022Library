@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AirportName1Choice;
 /// Identifies an airport by its location and by its name.
 /// </summary>
 [IsoId("_SsSlJdp-Ed-ak6NoX_4Aeg_-564217545")]
+[IsoXmlTag("OthrAirprtDesc")]
 public interface IOtherAirportDescription : IAirportName1Choice, IIsoChoiceVariant
 {
     /// <summary>

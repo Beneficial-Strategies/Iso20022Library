@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Amount1Choice;
 /// Amount of increase, and currency.
 /// </summary>
 [IsoId("_95C-hXltEeG7BsjMvd1mEw_2080243605")]
+[IsoXmlTag("IncrAmt")]
 public interface IIncreaseAmount : IAmount1Choice, IIsoChoiceVariant
 {
     /// <summary>

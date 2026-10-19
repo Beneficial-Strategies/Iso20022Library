@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTradeTransactionType1C
 /// Type of commercial contract expressed as a proprietary code.
 /// </summary>
 [IsoId("_93QOxXltEeG7BsjMvd1mEw_722066215")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IUnderlyingTradeTransactionType1Choice, IIsoChoiceVariant
 {
     /// <summary>

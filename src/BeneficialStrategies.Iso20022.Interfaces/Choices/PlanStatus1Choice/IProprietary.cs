@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PlanStatus1Choice;
 /// Status of the plan expressed as a proprietary code.
 /// </summary>
 [IsoId("_8bd2cAjbEeS5F6qHcKOrew")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IPlanStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

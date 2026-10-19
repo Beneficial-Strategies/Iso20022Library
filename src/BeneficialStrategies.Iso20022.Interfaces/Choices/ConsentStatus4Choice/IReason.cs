@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConsentStatus4Choice;
 /// Reason provided for the status.
 /// </summary>
 [IsoId("_oftdyTzpEeWeNtT0s2RbkQ")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IConsentStatus4Choice, IIsoChoiceVariant
 {
     /// <summary>

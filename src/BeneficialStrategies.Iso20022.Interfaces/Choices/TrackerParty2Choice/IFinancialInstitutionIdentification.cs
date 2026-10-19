@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TrackerParty2Choice;
 /// Unique and unambiguous identification of a financial institution, as assigned under an internationally recognised or proprietary identification scheme.
 /// </summary>
 [IsoId("_5THNEWOTEeq5Ar_w98FvsA")]
+[IsoXmlTag("FinInstnId")]
 public interface IFinancialInstitutionIdentification : ITrackerParty2Choice, IIsoChoiceVariant
 {
     /// <summary>

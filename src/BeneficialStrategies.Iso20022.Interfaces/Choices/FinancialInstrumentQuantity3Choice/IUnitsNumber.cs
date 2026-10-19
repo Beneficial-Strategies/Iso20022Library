@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity3Choi
 /// Quantity of investment fund units redeemed.
 /// </summary>
 [IsoId("_VOteoNp-Ed-ak6NoX_4Aeg_1922478109")]
+[IsoXmlTag("UnitsNb")]
 public interface IUnitsNumber : IFinancialInstrumentQuantity3Choice, IIsoChoiceVariant
 {
     /// <summary>

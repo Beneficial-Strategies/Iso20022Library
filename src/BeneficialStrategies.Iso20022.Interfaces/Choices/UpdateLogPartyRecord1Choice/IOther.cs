@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice;
 /// Specifies a proprietary update type.
 /// </summary>
 [IsoId("_7aOnsWjNEeiRg5NzP0jkQg")]
+[IsoXmlTag("Othr")]
 public interface IOther : IUpdateLogPartyRecord1Choice, IIsoChoiceVariant
 {
     /// <summary>

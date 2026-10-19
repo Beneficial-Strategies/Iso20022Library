@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument9Choice;
 /// Written order on which instructions are given to an account holder (a financial institution) to pay a stated sum to a named recipient (the payee).
 /// </summary>
 [IsoId("_VK1rMtp-Ed-ak6NoX_4Aeg_-493839753")]
+[IsoXmlTag("ChqDtls")]
 public interface IChequeDetails : IPaymentInstrument9Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionProcessingStatus1
 /// Specifies the status of the details of the event.
 /// </summary>
 [IsoId("_Q1O85dp-Ed-ak6NoX_4Aeg_109671588")]
+[IsoXmlTag("EvtSts")]
 public interface IEventStatus : ICorporateActionProcessingStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

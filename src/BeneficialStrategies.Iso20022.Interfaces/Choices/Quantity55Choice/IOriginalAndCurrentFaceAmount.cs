@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity55Choice;
 /// Face amount and amortised value of security.
 /// </summary>
 [IsoId("_pfJCxzi7Eeydid5dcNPKvg")]
+[IsoXmlTag("OrgnlAndCurFaceAmt")]
 public interface IOriginalAndCurrentFaceAmount : IQuantity55Choice, IIsoChoiceVariant
 {
     /// <summary>

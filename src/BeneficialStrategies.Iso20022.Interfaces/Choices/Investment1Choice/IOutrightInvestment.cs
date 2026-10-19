@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice;
 /// Indicates that the investment was an outright purchase of a financial instrument or security as an investment.
 /// </summary>
 [IsoId("_0_ysALLnEeavNMum-T1eEA")]
+[IsoXmlTag("OutrghtInvstmt")]
 public interface IOutrightInvestment : IInvestment1Choice, IIsoChoiceVariant
 {
     /// <summary>

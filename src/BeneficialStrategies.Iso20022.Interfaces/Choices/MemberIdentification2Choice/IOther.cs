@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MemberIdentification2Choice;
 /// Unique identification of an agent, as assigned by an institution, using an identification scheme.
 /// </summary>
 [IsoId("_8Hq3WaMgEeCJ6YNENx4h-w_-1497387865")]
+[IsoXmlTag("Othr")]
 public interface IOther : IMemberIdentification2Choice, IIsoChoiceVariant
 {
     /// <summary>

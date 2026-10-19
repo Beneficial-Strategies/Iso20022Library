@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingProcessingReason8Choice;
 /// Reason for the pending status expressed as a proprietary code.
 /// </summary>
 [IsoId("_0_9CwVj1EeOnqqBHs8Gasw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IPendingProcessingReason8Choice, IIsoChoiceVariant
 {
     /// <summary>

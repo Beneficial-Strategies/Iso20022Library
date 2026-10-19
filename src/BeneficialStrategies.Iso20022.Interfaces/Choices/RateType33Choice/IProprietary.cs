@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateType33Choice;
 /// Proprietary identification of the type of rate.
 /// </summary>
 [IsoId("_0Qo4wkEIEeWVgfuHGaKtRQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRateType33Choice, IIsoChoiceVariant
 {
     /// <summary>

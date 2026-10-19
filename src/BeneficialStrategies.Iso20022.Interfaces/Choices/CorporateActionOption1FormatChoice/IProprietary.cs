@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionOption1FormatChoi
 /// Option type expressed as a prorprietary code.
 /// </summary>
 [IsoId("_RlgjQtp-Ed-ak6NoX_4Aeg_-1058861936")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICorporateActionOption1FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

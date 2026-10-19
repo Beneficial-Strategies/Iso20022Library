@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural1
 /// Grain agricultural commodity derivative.
 /// </summary>
 [IsoId("_VQFYXg2jEeW72qLtWESimw")]
+[IsoXmlTag("Grn")]
 public interface IGrain : IAssetClassCommodityAgricultural1Choice, IIsoChoiceVariant
 {
     /// <summary>

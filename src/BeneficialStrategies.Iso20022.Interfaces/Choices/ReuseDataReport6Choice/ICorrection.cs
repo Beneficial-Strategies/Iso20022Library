@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReuseDataReport6Choice;
 /// Indicates that the report is correcting the erroneous data fields of a previously submitted position.
 /// </summary>
 [IsoId("_MzHkRcK8EeuMhqg3CsEu6Q")]
+[IsoXmlTag("Crrctn")]
 public interface ICorrection : IReuseDataReport6Choice, IIsoChoiceVariant
 {
     /// <summary>

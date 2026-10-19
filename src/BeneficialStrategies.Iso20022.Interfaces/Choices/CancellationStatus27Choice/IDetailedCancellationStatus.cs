@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus27Choice;
 /// Status of individual instruction cancellation request that were received within the instruction cancellation  message identified in InstructionType/InstructionCancellationIdentification.
 /// </summary>
 [IsoId("_GQGGQMT2Eem9aZlimxVUIw")]
+[IsoXmlTag("DtldCxlSts")]
 public interface IDetailedCancellationStatus : ICancellationStatus27Choice, IIsoChoiceVariant
 {
     /// <summary>

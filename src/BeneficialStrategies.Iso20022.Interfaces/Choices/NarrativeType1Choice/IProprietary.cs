@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NarrativeType1Choice;
 /// Type of narrative expressed as a proprietary code.
 /// </summary>
 [IsoId("_93HE1HltEeG7BsjMvd1mEw_-1195510865")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : INarrativeType1Choice, IIsoChoiceVariant
 {
     /// <summary>

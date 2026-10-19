@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice;
 /// Specifies the options on how to contact the party.
 /// </summary>
 [IsoId("_J8b4wYwAEei289CGNqs21g")]
+[IsoXmlTag("CtctDtls")]
 public interface IContactDetails : ISystemPartyModification2Choice, IIsoChoiceVariant
 {
     /// <summary>

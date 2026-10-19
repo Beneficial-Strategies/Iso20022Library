@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralStatus3Choice;
 /// Proprietary status.
 /// </summary>
 [IsoId("_FCi6EOChEei2UYJ62ws-Fw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICollateralStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>

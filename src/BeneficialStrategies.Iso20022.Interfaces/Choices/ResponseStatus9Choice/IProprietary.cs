@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ResponseStatus9Choice;
 /// Specifies the status of the response with a proprietary scheme.
 /// </summary>
 [IsoId("_S5aEsLzdEeivTd4NUfCi2g")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IResponseStatus9Choice, IIsoChoiceVariant
 {
     /// <summary>

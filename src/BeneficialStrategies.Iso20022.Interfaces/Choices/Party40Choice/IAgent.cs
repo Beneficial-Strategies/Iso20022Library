@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party40Choice;
 /// Identification of a financial institution.
 /// </summary>
 [IsoId("_8U6MNW48EeiU9cctagi5ow")]
+[IsoXmlTag("Agt")]
 public interface IAgent : IParty40Choice, IIsoChoiceVariant
 {
     /// <summary>

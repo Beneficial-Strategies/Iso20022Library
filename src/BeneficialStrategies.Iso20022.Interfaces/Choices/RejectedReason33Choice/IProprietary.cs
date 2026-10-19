@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedReason33Choice;
 /// Rejected reason expressed as a proprietary code.
 /// </summary>
 [IsoId("_P7n1swVHEeq4ZaI1b_-GPA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRejectedReason33Choice, IIsoChoiceVariant
 {
     /// <summary>

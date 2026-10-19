@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraPositionProcessingStatus7Ch
 /// Specifies a choice of status for the processing of an intra-position movement.
 /// </summary>
 [IsoId("_4Z8pwewLEeiazoAmcoGsBQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IIntraPositionProcessingStatus7Choice, IIsoChoiceVariant
 {
     /// <summary>

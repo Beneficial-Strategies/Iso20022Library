@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FractionDispositionType26Choice;
 /// Proprietary identification of the type of fraction disposition.
 /// </summary>
 [IsoId("_l5IdI0EHEeWVgfuHGaKtRQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IFractionDispositionType26Choice, IIsoChoiceVariant
 {
     /// <summary>

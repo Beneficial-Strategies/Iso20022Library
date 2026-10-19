@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesQuantityOrAmount1Choic
 /// Provides information about securities quantity linked to a corporate action option.
 /// </summary>
 [IsoId("_Gql3oIlYEeavwKddCbm3hg")]
+[IsoXmlTag("SctiesQty")]
 public interface ISecuritiesQuantity : ISecuritiesQuantityOrAmount1Choice, IIsoChoiceVariant
 {
     /// <summary>

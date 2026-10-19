@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice;
 /// Trade is generated.
 /// </summary>
 [IsoId("_x4XDjwarEe2phaVG0lYKTw")]
+[IsoXmlTag("Gnrtd")]
 public interface IGenerated : IProcessingStatus98Choice, IIsoChoiceVariant
 {
     /// <summary>

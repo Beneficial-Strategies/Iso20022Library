@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountStatusUpdateInstruction1C
 /// Type of change to the account status expressed as a proprietary code.
 /// </summary>
 [IsoId("_1krUkHi5EeaRm5xIK6nGuQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IAccountStatusUpdateInstruction1Choice, IIsoChoiceVariant
 {
     /// <summary>

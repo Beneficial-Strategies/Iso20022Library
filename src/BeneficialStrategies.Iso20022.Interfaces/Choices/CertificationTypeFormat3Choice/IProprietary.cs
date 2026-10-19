@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CertificationTypeFormat3Choice;
 /// Proprietary identification of the certification format.
 /// </summary>
 [IsoId("_bmuOqUEGEeWVgfuHGaKtRQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICertificationTypeFormat3Choice, IIsoChoiceVariant
 {
     /// <summary>

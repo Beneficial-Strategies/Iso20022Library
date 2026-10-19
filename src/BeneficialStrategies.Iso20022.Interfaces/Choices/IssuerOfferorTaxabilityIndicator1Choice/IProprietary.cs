@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IssuerOfferorTaxabilityIndicator
 /// Proprietary identification to specify information regarding the issuer / offeror taxability status.
 /// </summary>
 [IsoId("_hlkcEIlzEeavwKddCbm3hg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IIssuerOfferorTaxabilityIndicator1Choice, IIsoChoiceVariant
 {
     /// <summary>

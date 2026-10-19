@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification176Choice;
 /// Name and address of a party.
 /// </summary>
 [IsoId("_43SntffWEeiNZp_PtLohLw")]
+[IsoXmlTag("NmAndAdr")]
 public interface INameAndAddress : IPartyIdentification176Choice, IIsoChoiceVariant
 {
     /// <summary>

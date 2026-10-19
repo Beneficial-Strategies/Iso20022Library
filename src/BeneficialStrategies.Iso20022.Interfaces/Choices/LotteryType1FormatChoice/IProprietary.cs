@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LotteryType1FormatChoice;
 /// Proprietary code to express the lottery type.
 /// </summary>
 [IsoId("_Rms2F9p-Ed-ak6NoX_4Aeg_-924254405")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ILotteryType1FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

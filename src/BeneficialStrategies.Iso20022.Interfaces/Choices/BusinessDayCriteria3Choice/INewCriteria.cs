@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BusinessDayCriteria3Choice;
 /// Explicitly defines the query criteria.
 /// </summary>
 [IsoId("_yFXaBZlcEeeE1Ya-LgRsuQ")]
+[IsoXmlTag("NewCrit")]
 public interface INewCriteria : IBusinessDayCriteria3Choice, IIsoChoiceVariant
 {
     /// <summary>

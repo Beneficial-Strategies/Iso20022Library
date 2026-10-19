@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementTransactionCondition18
 /// Settlement conditions expressed as a proprietary code.
 /// </summary>
 [IsoId("_ry8LWzw0EeW3QqUkIQtIUA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ISettlementTransactionCondition18Choice, IIsoChoiceVariant
 {
     /// <summary>

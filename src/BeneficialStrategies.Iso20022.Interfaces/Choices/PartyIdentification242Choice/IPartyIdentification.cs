@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification242Choice;
 /// Party Identification specified as a list of values per element.
 /// </summary>
 [IsoId("_BXmqtwN1Ee2-vqzwMUAewg")]
+[IsoXmlTag("PtyId")]
 public interface IPartyIdentification : IPartyIdentification242Choice, IIsoChoiceVariant
 {
     /// <summary>

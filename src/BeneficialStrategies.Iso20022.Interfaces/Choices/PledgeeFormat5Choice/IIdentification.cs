@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PledgeeFormat5Choice;
 /// Identification of the entity to which the financial instruments are pledged, expressed as a code and a narrative description.
 /// </summary>
 [IsoId("_YxN_49LGEeiN28wlpBQScw")]
+[IsoXmlTag("Id")]
 public interface IIdentification : IPledgeeFormat5Choice, IIsoChoiceVariant
 {
     /// <summary>

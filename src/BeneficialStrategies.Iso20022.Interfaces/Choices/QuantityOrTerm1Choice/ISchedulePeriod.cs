@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityOrTerm1Choice;
 /// Specifies the effective date and end date of the schedule for derivative transactions negotiated in non-monetary amounts with a notional quantity varying throughout the life of the transaction.
 /// </summary>
 [IsoId("_fbqi0SJDEe2zWP9pqvmqdw")]
+[IsoXmlTag("SchdlPrd")]
 public interface ISchedulePeriod : IQuantityOrTerm1Choice, IIsoChoiceVariant
 {
     /// <summary>

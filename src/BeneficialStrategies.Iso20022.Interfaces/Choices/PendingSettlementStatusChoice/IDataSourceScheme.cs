@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingSettlementStatusChoice;
 /// Proprietary identification for a reason of a specific status in the report.
 /// </summary>
 [IsoId("_U1POp9p-Ed-ak6NoX_4Aeg_-554759285")]
+[IsoXmlTag("DataSrcSchme")]
 public interface IDataSourceScheme : IPendingSettlementStatusChoice, IIsoChoiceVariant
 {
     /// <summary>

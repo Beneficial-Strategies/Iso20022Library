@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesReferenceDeltaStatusRe
 /// Specifies data that has been cancelled since the previous report.
 /// </summary>
 [IsoId("_o1S5h6WvEeqZmriXpMtonA")]
+[IsoXmlTag("CancRcrd")]
 public interface ICancelledRecord : ISecuritiesReferenceDeltaStatusReport5Choice, IIsoChoiceVariant
 {
     /// <summary>

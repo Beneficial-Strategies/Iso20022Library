@@ -11,6 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Direction4Choice;
 /// DirectionOfTheFirstLeg should be used for most swaps and swap-like contracts including interest rate swaps, credit total return swaps, and equity swaps (except for credit default swaps, variance, volatility, and correlation swaps) as well as for the foreign exchange swaps, forwards and non-deliverable forwards.
 /// </summary>
 [IsoId("_HmpucC0YEe2ZUuvBHegNNg")]
+[IsoXmlTag("Drctn")]
 public interface IDirection : IDirection4Choice, IIsoChoiceVariant
 {
     /// <summary>

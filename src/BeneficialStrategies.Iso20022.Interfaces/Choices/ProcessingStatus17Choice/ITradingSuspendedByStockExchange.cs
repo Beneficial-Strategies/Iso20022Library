@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus17Choice;
 /// Trading is suspended by the stock exchange.
 /// </summary>
 [IsoId("_A5JrBNokEeC60axPepSq7g_-1727127313")]
+[IsoXmlTag("TradgSspdByStockXchg")]
 public interface ITradingSuspendedByStockExchange : IProcessingStatus17Choice, IIsoChoiceVariant
 {
     /// <summary>

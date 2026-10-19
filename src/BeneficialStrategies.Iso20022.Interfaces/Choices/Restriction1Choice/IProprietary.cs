@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Restriction1Choice;
 /// Restrictions expressed as a proprietary code.
 /// </summary>
 [IsoId("_QvuKwdp-Ed-ak6NoX_4Aeg_2135137258")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRestriction1Choice, IIsoChoiceVariant
 {
     /// <summary>

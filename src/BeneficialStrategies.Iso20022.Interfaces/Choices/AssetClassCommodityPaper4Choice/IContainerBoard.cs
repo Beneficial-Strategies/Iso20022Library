@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityPaper4Choice;
 /// Container board commodity derivative.
 /// </summary>
 [IsoId("_FsdvMRZaEe2QNcZTDeoKnQ")]
+[IsoXmlTag("CntnrBrd")]
 public interface IContainerBoard : IAssetClassCommodityPaper4Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedStatus44Choice;
 /// Reason why the meeting instruction message or the individual meeting instruction is rejected.
 /// </summary>
 [IsoId("_iCQ4aRrpEeyhRdHRjakS2w")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IRejectedStatus44Choice, IIsoChoiceVariant
 {
     /// <summary>

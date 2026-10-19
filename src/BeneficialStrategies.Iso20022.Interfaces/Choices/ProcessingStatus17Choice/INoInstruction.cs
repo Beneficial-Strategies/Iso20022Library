@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus17Choice;
 /// Trade is in no instruction.
 /// </summary>
 [IsoId("_A4_6BNokEeC60axPepSq7g_1657464826")]
+[IsoXmlTag("NoInstr")]
 public interface INoInstruction : IProcessingStatus17Choice, IIsoChoiceVariant
 {
     /// <summary>

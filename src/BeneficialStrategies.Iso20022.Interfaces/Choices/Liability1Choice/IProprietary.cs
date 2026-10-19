@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Liability1Choice;
 /// Liability expressed as a proprietary code.
 /// </summary>
 [IsoId("_hdANUCDMEeWPMvNwVtiMsA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ILiability1Choice, IIsoChoiceVariant
 {
     /// <summary>

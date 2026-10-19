@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus49Cho
 /// Default action is taken.
 /// </summary>
 [IsoId("_piItHji7Eeydid5dcNPKvg")]
+[IsoXmlTag("DfltActn")]
 public interface IDefaultAction : IInstructionProcessingStatus49Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ImpliedCurrencyAmountRange1Choic
 /// Range of valid amount values.
 /// </summary>
 [IsoId("_O_mxNZlcEeeE1Ya-LgRsuQ")]
+[IsoXmlTag("FrToAmt")]
 public interface IFromToAmount : IImpliedCurrencyAmountRange1Choice, IIsoChoiceVariant
 {
     /// <summary>

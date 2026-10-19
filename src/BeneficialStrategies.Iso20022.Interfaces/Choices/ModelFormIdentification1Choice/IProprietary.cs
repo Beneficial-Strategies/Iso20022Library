@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModelFormIdentification1Choice;
 /// Model form identification expressed as a proprietary code.
 /// </summary>
 [IsoId("_93HE0XltEeG7BsjMvd1mEw_821489070")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IModelFormIdentification1Choice, IIsoChoiceVariant
 {
     /// <summary>

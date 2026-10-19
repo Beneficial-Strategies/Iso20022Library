@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityPaper4Choice;
 /// Pulp commodity derivative.
 /// </summary>
 [IsoId("_FsdvNRZaEe2QNcZTDeoKnQ")]
+[IsoXmlTag("Pulp")]
 public interface IPulp : IAssetClassCommodityPaper4Choice, IIsoChoiceVariant
 {
     /// <summary>

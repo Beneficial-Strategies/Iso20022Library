@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionChangeTypeFormat2
 /// Proprietary identification of the type of changes.
 /// </summary>
 [IsoId("_Qzl-JNp-Ed-ak6NoX_4Aeg_-809852625")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICorporateActionChangeTypeFormat2Choice, IIsoChoiceVariant
 {
     /// <summary>

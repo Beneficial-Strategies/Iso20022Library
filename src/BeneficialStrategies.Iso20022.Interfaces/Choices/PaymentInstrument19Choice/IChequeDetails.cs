@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument19Choice;
 /// Settlement instructions for a payment by cheque.
 /// </summary>
 [IsoId("_-mXAkyC1EeWJd9HF2tO7BA")]
+[IsoXmlTag("ChqDtls")]
 public interface IChequeDetails : IPaymentInstrument19Choice, IIsoChoiceVariant
 {
     /// <summary>

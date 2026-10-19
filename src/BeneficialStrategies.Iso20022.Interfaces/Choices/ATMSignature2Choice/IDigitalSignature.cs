@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMSignature2Choice;
 /// Digital signature of implicit data depending on the security scheme download procedure.
 /// </summary>
 [IsoId("_iFHDYbTwEeeQy4o2AayYHg")]
+[IsoXmlTag("DgtlSgntr")]
 public interface IDigitalSignature : IATMSignature2Choice, IIsoChoiceVariant
 {
     /// <summary>

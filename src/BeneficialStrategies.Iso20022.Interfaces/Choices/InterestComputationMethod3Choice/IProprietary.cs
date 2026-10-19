@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestComputationMethod3Choice
 /// Interest computation method is determined using a data source scheme.
 /// </summary>
 [IsoId("_x33Ek5EjEeakHoV5BVecAQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IInterestComputationMethod3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GrossDividendRate1Choice;
 /// Value is expressed as an amount related to an underlying securities, eg, underlying security for which an interest is paid.
 /// </summary>
 [IsoId("_UPYvkdp-Ed-ak6NoX_4Aeg_1388251896")]
+[IsoXmlTag("RateTpAmt")]
 public interface IRateTypeAmount : IGrossDividendRate1Choice, IIsoChoiceVariant
 {
     /// <summary>

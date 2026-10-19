@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProprietaryReason1Choice;
 /// Proprietary identification of the reason for the status.
 /// </summary>
 [IsoId("_u38ys1hFEeOMYfRGLS0NbA")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IProprietaryReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

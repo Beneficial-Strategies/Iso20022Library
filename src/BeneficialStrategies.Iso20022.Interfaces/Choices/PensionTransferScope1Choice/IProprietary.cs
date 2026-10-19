@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PensionTransferScope1Choice;
 /// Type of pension policy, plan or scheme transfer scope expressed as a proprietary code.
 /// </summary>
 [IsoId("_YpUYQE4YEeiQHa-q1Uephw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IPensionTransferScope1Choice, IIsoChoiceVariant
 {
     /// <summary>

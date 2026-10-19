@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SignatureType1Choice;
 /// Signature type expressed as a proprietary code.
 /// </summary>
 [IsoId("_wZVUMDoHEeabspMEjqY5TQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ISignatureType1Choice, IIsoChoiceVariant
 {
     /// <summary>

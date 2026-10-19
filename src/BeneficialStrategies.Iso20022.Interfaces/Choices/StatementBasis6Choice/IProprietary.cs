@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementBasis6Choice;
 /// Statement basis expressed as a proprietary code.
 /// </summary>
 [IsoId("_nAFOcvNBEeCuA5Tr22BnwA_454957194")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IStatementBasis6Choice, IIsoChoiceVariant
 {
     /// <summary>

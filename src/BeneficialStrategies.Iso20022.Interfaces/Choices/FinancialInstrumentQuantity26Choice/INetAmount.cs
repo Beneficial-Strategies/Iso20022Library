@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity26Cho
 /// Net Amount = Quantity * Price.
 /// </summary>
 [IsoId("_Aw-nJ0_4Eea1ZIrmU5dI3w")]
+[IsoXmlTag("NetAmt")]
 public interface INetAmount : IFinancialInstrumentQuantity26Choice, IIsoChoiceVariant
 {
     /// <summary>

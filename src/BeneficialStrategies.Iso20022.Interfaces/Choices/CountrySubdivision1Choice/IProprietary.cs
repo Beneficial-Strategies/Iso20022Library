@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CountrySubdivision1Choice;
 /// Jurisdiction expressed as a proprietary code.
 /// </summary>
 [IsoId("_93s6sHltEeG7BsjMvd1mEw_-1636816713")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICountrySubdivision1Choice, IIsoChoiceVariant
 {
     /// <summary>

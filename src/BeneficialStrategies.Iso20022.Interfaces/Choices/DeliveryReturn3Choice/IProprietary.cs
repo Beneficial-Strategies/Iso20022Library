@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeliveryReturn3Choice;
 /// Delivery return expressed as a proprietary code.
 /// </summary>
 [IsoId("_MOLBGTtEEeWRTLSN0i0tng")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IDeliveryReturn3Choice, IIsoChoiceVariant
 {
     /// <summary>

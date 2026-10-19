@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxType3Choice;
 /// Type of tax expressed as a proprietary code.
 /// </summary>
 [IsoId("_NCW8gzh7EeaH-93K5JKmzw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ITaxType3Choice, IIsoChoiceVariant
 {
     /// <summary>

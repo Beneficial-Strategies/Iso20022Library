@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemSecuritiesAccountType1Choi
 /// System securities account type, in a proprietary form.
 /// </summary>
 [IsoId("_mrKwkDp0Eemk2e6qGBk8IQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ISystemSecuritiesAccountType1Choice, IIsoChoiceVariant
 {
     /// <summary>

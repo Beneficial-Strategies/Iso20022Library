@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingStatusReason2Choice;
 /// Reason for the pending account status expressed as a proprietary code.
 /// </summary>
 [IsoId("_uHagg0zBEeafiMTDrtSnyw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IPendingStatusReason2Choice, IIsoChoiceVariant
 {
     /// <summary>

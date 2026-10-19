@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CustomerConductClassification1Ch
 /// Conduct type expressed as a proprietary code.
 /// </summary>
 [IsoId("_gifSQBdwEeKYM7Bc71nDlA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICustomerConductClassification1Choice, IIsoChoiceVariant
 {
     /// <summary>

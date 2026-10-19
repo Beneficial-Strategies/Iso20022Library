@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType36Choice;
 /// Request to replace all present data of a security.
 /// </summary>
 [IsoId("_QIOLU5JKEeuAlLVx8pyt3w")]
+[IsoXmlTag("Rplc")]
 public interface IReplace : IUpdateType36Choice, IIsoChoiceVariant
 {
     /// <summary>

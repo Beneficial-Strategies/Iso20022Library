@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice;
 /// Identifies the account as the search criteria for the financial institution to do the investigation.
 /// </summary>
 [IsoId("_Dhy-5UDHEeGUr-Tp_ntVFg")]
+[IsoXmlTag("Acct")]
 public interface IAccount : ISearchCriteria1Choice, IIsoChoiceVariant
 {
     /// <summary>

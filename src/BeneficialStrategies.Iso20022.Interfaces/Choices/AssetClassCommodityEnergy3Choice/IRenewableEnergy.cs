@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnergy3Choice
 /// Renewable energy commodity derivative.
 /// </summary>
 [IsoId("_O67yC08SEe2PGo0mhYCh1g")]
+[IsoXmlTag("RnwblNrgy")]
 public interface IRenewableEnergy : IAssetClassCommodityEnergy3Choice, IIsoChoiceVariant
 {
     /// <summary>

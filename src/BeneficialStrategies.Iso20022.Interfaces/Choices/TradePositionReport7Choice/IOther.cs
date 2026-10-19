@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradePositionReport7Choice;
 /// Indicates any other amendment to the terms or details of a previously reported position.
 /// </summary>
 [IsoId("_bWl_jRLBEeqctpBfTmLJnw")]
+[IsoXmlTag("Othr")]
 public interface IOther : ITradePositionReport7Choice, IIsoChoiceVariant
 {
     /// <summary>

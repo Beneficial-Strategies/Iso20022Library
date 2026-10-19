@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlingCapacity7Choice;
 /// Settlement capacity expressed as a proprietary code.
 /// </summary>
 [IsoId("_czIEZTqEEeWVrPy0StzzSg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ISettlingCapacity7Choice, IIsoChoiceVariant
 {
     /// <summary>

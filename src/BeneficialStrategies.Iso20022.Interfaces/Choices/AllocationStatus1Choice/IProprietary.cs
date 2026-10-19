@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AllocationStatus1Choice;
 /// Proprietary status.
 /// </summary>
 [IsoId("_xV-7AN__EeiVRbNQx5-Vhg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IAllocationStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

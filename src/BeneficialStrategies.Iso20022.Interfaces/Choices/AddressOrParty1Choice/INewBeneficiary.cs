@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AddressOrParty1Choice;
 /// New beneficiary.
 /// </summary>
 [IsoId("_-Eq_sXltEeG7BsjMvd1mEw_-1059783639")]
+[IsoXmlTag("NewBnfcry")]
 public interface INewBeneficiary : IAddressOrParty1Choice, IIsoChoiceVariant
 {
     /// <summary>

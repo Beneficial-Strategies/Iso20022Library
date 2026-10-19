@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemStatus3Choice;
 /// Status of the system, in a proprietary form.
 /// </summary>
 [IsoId("_1iyv84pbEeiaB-4Hjqs8aw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ISystemStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesMovementStatus1Choice;
 /// At least one security cannot be used as collateral because a tax event is due in the next few days.
 /// </summary>
 [IsoId("_pNlqwOCzEei2UYJ62ws-Fw")]
+[IsoXmlTag("Tax")]
 public interface ITax : ISecuritiesMovementStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

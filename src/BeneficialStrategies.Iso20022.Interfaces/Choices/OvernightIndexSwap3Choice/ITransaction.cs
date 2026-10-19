@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OvernightIndexSwap3Choice;
 /// Provides the details of the secured market transaction as reported by the reporting agent.
 /// </summary>
 [IsoId("_zLz706icEeWHO_l3hf2rlA")]
+[IsoXmlTag("Tx")]
 public interface ITransaction : IOvernightIndexSwap3Choice, IIsoChoiceVariant
 {
     /// <summary>

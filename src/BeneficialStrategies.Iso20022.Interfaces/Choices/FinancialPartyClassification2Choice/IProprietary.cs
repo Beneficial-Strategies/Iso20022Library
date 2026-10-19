@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialPartyClassification2Cho
 /// Classification of the business activities of the counterparty using a proprietary identification scheme.
 /// </summary>
 [IsoId("_IJIRcyI4Ee2zWP9pqvmqdw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IFinancialPartyClassification2Choice, IIsoChoiceVariant
 {
     /// <summary>

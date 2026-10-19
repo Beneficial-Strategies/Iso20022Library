@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClosingBalance3Choice;
 /// Closing Balance of this page only. Must be the intermediary opening balance of the next page (part of the same statement).
 /// </summary>
 [IsoId("__BaYUQgHEeSxsfb1OEDVsw")]
+[IsoXmlTag("IntrmyClsgBal")]
 public interface IIntermediaryClosingBalance : IClosingBalance3Choice, IIsoChoiceVariant
 {
     /// <summary>

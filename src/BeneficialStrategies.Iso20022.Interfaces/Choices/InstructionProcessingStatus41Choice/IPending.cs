@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus41Cho
 /// Instruction has not been completed.
 /// </summary>
 [IsoId("_4YiuDe6KEeqc-LCjwLsUVg")]
+[IsoXmlTag("Pdg")]
 public interface IPending : IInstructionProcessingStatus41Choice, IIsoChoiceVariant
 {
     /// <summary>

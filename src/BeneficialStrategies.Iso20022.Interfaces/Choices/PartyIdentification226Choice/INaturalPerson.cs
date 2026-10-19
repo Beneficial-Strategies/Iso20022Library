@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification226Choice;
 /// Private person.
 /// </summary>
 [IsoId("_nbVCNa-kEemJ1NnLPsTFaw")]
+[IsoXmlTag("NtrlPrsn")]
 public interface INaturalPerson : IPartyIdentification226Choice, IIsoChoiceVariant
 {
     /// <summary>

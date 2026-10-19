@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFertilizer3Ch
 /// Other fertilizer commodity derivative.
 /// </summary>
 [IsoId("_QbBSYLv7EeiLRYqS-r-R-A")]
+[IsoXmlTag("Othr")]
 public interface IOther : IAssetClassCommodityFertilizer3Choice, IIsoChoiceVariant
 {
     /// <summary>

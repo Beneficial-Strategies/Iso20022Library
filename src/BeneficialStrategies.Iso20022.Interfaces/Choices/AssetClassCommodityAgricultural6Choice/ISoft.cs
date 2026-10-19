@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural6
 /// Soft agricultural commodity derivative.
 /// </summary>
 [IsoId("_xG_Lo08SEe2PGo0mhYCh1g")]
+[IsoXmlTag("Soft")]
 public interface ISoft : IAssetClassCommodityAgricultural6Choice, IIsoChoiceVariant
 {
     /// <summary>

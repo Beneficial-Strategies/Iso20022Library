@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport15Choice;
 /// Indicates a compression of the reported contract.
 /// </summary>
 [IsoId("_oZRTXXg-Eeu3kecHd7QKUQ")]
+[IsoXmlTag("Cmprssn")]
 public interface ICompression : ITradeReport15Choice, IIsoChoiceVariant
 {
     /// <summary>

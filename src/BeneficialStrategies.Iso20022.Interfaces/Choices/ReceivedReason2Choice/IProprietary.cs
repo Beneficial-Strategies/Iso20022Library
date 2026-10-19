@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReceivedReason2Choice;
 /// Reason for the received status expressed as a proprietary code.
 /// </summary>
 [IsoId("_2y5Nx1j6EeOgwYxfAV02bg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IReceivedReason2Choice, IIsoChoiceVariant
 {
     /// <summary>

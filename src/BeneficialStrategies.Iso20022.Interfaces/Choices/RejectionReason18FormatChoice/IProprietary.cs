@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason18FormatChoice;
 /// Proprietary code to express the reason of a rejection of an election advice.
 /// </summary>
 [IsoId("_RoV01dp-Ed-ak6NoX_4Aeg_202927097")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRejectionReason18FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

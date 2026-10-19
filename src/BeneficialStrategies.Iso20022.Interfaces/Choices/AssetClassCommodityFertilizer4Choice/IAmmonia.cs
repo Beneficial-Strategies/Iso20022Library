@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFertilizer4Ch
 /// Ammonia fertilizer commodity derivative.
 /// </summary>
 [IsoId("_idnj8U8REe2PGo0mhYCh1g")]
+[IsoXmlTag("Ammn")]
 public interface IAmmonia : IAssetClassCommodityFertilizer4Choice, IIsoChoiceVariant
 {
     /// <summary>

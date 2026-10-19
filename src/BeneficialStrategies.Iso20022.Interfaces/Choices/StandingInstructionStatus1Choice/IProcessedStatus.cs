@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingInstructionStatus1Choice
 /// Provides information about the processing status of the request.
 /// </summary>
 [IsoId("_RirRsNp-Ed-ak6NoX_4Aeg_5921182")]
+[IsoXmlTag("PrcdSts")]
 public interface IProcessedStatus : IStandingInstructionStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

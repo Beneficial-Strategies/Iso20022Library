@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestorProfileStatus1Choice;
 /// Investor profile status expressed as a proprietary code.
 /// </summary>
 [IsoId("_vo_gACDOEeWPMvNwVtiMsA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IInvestorProfileStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

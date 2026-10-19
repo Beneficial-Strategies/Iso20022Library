@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UniqueTransactionIdentifier1Choi
 /// Frequency expressed in a proprietary notation.
 /// </summary>
 [IsoId("_yq1bcQxeEeuoAcnnpX2x_w")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IUniqueTransactionIdentifier1Choice, IIsoChoiceVariant
 {
     /// <summary>

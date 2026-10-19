@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionInformationStatus
 /// Provides information about the processing status of the advice.
 /// </summary>
 [IsoId("_RiPM09p-Ed-ak6NoX_4Aeg_-880551807")]
+[IsoXmlTag("PrcdSts")]
 public interface IProcessedStatus : ICorporateActionInformationStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

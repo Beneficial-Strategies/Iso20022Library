@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartiallySettled21Choice;
 /// Partially settled reason expressed as a proprietary code.
 /// </summary>
 [IsoId("_SSiV-UHtEeaNSo9he0Belg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IPartiallySettled21Choice, IIsoChoiceVariant
 {
     /// <summary>

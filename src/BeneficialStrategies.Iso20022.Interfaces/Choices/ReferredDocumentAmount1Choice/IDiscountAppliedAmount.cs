@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReferredDocumentAmount1Choice;
 /// Amount of money that results from the application of an agreed discount to the amount due and payable to the creditor.
 /// </summary>
 [IsoId("_QGJCRNp-Ed-ak6NoX_4Aeg_-888106465")]
+[IsoXmlTag("DscntApldAmt")]
 public interface IDiscountAppliedAmount : IReferredDocumentAmount1Choice, IIsoChoiceVariant
 {
     /// <summary>

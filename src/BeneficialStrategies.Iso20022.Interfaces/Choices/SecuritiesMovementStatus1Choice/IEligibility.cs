@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesMovementStatus1Choice;
 /// At least one security does not satisfy the eligibility criteria as defined in the triparty agreement (or in the eligibility set) for this transaction.
 /// </summary>
 [IsoId("_mZ3l8OCzEei2UYJ62ws-Fw")]
+[IsoXmlTag("Elgblty")]
 public interface IEligibility : ISecuritiesMovementStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

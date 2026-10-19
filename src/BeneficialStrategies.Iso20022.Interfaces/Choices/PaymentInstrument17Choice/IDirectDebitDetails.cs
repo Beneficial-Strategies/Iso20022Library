@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument17Choice;
 /// Settlement instructions for a payment by direct debit.
 /// </summary>
 [IsoId("_t7vvGxdHEeK5g-3oYI0_9Q")]
+[IsoXmlTag("DrctDbtDtls")]
 public interface IDirectDebitDetails : IPaymentInstrument17Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementInstructionReason1Choi
 /// Settlement instruction reason expressed as a proprietary code.
 /// </summary>
 [IsoId("_fF7OwCCsEeWJd9HF2tO7BA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ISettlementInstructionReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ElectionAmendmentStatus1Choice;
 /// Provides information about the rejection status.
 /// </summary>
 [IsoId("_RiiHx9p-Ed-ak6NoX_4Aeg_-1936329849")]
+[IsoXmlTag("RjctdSts")]
 public interface IRejectedStatus : IElectionAmendmentStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ISAPortfolio1Choice;
 /// The Individual Savings Account (ISA) is provided only by UK based financial institutions.
 /// </summary>
 [IsoId("_Ku_xm_pfEeCLMa5EIHtDrg")]
+[IsoXmlTag("ISA")]
 public interface IISA : IISAPortfolio1Choice, IIsoChoiceVariant
 {
     /// <summary>

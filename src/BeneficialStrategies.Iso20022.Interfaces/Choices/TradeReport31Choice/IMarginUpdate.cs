@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport31Choice;
 /// Indicates the report of the collateral data or of their modifications, but not the corrections of the previously reported collateral details.
 /// </summary>
 [IsoId("_o0KFY1osEe23K4GXSpBSeg")]
+[IsoXmlTag("MrgnUpd")]
 public interface IMarginUpdate : ITradeReport31Choice, IIsoChoiceVariant
 {
     /// <summary>

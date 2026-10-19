@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BenchmarkCurveName7Choice;
 /// Benchmark curve name expressed as a proprietary code.
 /// </summary>
 [IsoId("_HjJ1w-LwEeWOD7aAy2fAcA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IBenchmarkCurveName7Choice, IIsoChoiceVariant
 {
     /// <summary>

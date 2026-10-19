@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification7Choice;
 /// Identification of the payment instruction by its position in a queue managed by the clearing agent.
 /// </summary>
 [IsoId("_5uqG8wKxEe2rHs6fbn9-0A")]
+[IsoXmlTag("QId")]
 public interface IQueueIdentification : IPaymentIdentification7Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralMovement3Choice;
 /// Provides the collateral movement direction that is a return only.
 /// </summary>
 [IsoId("_QtN1s19-EeSMgPeFpRHeJw")]
+[IsoXmlTag("Rtr")]
 public interface IReturn : ICollateralMovement3Choice, IIsoChoiceVariant
 {
     /// <summary>

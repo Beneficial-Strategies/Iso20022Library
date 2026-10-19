@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party33Choice;
 /// Organised structure that is set up for a particular purpose, for example, a business, government body, department, charity, or financial institution.
 /// </summary>
 [IsoId("_52fY8UzQEea8fovz_9xSTQ")]
+[IsoXmlTag("Org")]
 public interface IOrganisation : IParty33Choice, IIsoChoiceVariant
 {
     /// <summary>

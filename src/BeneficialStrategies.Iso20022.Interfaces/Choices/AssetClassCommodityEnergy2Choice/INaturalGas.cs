@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnergy2Choice
 /// Definition of Natural Gas energy commodity derivative.
 /// </summary>
 [IsoId("_x4yAc7vsEeiLRYqS-r-R-A")]
+[IsoXmlTag("NtrlGas")]
 public interface INaturalGas : IAssetClassCommodityEnergy2Choice, IIsoChoiceVariant
 {
     /// <summary>

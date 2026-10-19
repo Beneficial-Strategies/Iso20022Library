@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingStatus28Choice;
 /// Provides the matching status of the instruction.
 /// </summary>
 [IsoId("_5xm1O5NLEeWGlc8L7oPDIg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IMatchingStatus28Choice, IIsoChoiceVariant
 {
     /// <summary>

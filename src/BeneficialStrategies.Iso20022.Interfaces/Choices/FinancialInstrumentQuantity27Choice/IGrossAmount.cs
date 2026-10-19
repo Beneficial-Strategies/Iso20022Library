@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity27Cho
 /// Gross amount = (Quantity * Price) + (Fees + Taxes).
 /// </summary>
 [IsoId("_xNYrdDhTEeaRwdGFv45qTQ")]
+[IsoXmlTag("GrssAmt")]
 public interface IGrossAmount : IFinancialInstrumentQuantity27Choice, IIsoChoiceVariant
 {
     /// <summary>

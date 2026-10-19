@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ApplicableRules1Choice;
 /// Applicable rules expressed as a proprietary code.
 /// </summary>
 [IsoId("_3OvD8FNeEeijdq8ilaxyOA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IApplicableRules1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuredCollateral2Choice;
 /// Usage: When the collateral basket is identified by an ISIN, the basket ISIN shall be reported.
 /// </summary>
 [IsoId("_iZO6BaidEeWHO_l3hf2rlA")]
+[IsoXmlTag("PoolColl")]
 public interface IPoolCollateral : ISecuredCollateral2Choice, IIsoChoiceVariant
 {
     /// <summary>

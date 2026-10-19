@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NonEligibleProceedsIndicator3Cho
 /// Proprietary identification to specify information regarding the non eligibility of the outturn resources.
 /// </summary>
 [IsoId("_M7XQo0EKEeWVgfuHGaKtRQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : INonEligibleProceedsIndicator3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashSettlementSystem1Choice;
 /// Cash settlement system expressed as a proprietary code.
 /// </summary>
 [IsoId("_QwBFsNp-Ed-ak6NoX_4Aeg_-855286490")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICashSettlementSystem1Choice, IIsoChoiceVariant
 {
     /// <summary>

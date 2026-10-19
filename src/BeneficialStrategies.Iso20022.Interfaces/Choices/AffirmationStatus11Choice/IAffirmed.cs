@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AffirmationStatus11Choice;
 /// Status of affirmation of a trade.
 /// </summary>
 [IsoId("_XzM-0Qd3Ee2fOITqoTnSLQ")]
+[IsoXmlTag("Affrmd")]
 public interface IAffirmed : IAffirmationStatus11Choice, IIsoChoiceVariant
 {
     /// <summary>

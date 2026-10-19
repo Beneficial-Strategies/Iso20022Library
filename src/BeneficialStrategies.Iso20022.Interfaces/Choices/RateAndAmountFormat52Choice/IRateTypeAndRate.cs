@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateAndAmountFormat52Choice;
 /// Value is expressed as a rate type and a percentage rate.
 /// </summary>
 [IsoId("_fFh9EpSoEeeh5JjedkaA_g")]
+[IsoXmlTag("RateTpAndRate")]
 public interface IRateTypeAndRate : IRateAndAmountFormat52Choice, IIsoChoiceVariant
 {
     /// <summary>

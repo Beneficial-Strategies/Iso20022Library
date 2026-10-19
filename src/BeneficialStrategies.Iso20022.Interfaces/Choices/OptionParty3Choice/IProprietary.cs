@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionParty3Choice;
 /// Option party expressed as a proprietary code.
 /// </summary>
 [IsoId("_m-lyA2p7EemmaZLSPtWX5A")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IOptionParty3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionStyle1Choice;
 /// Option style is defined using a data source scheme.
 /// </summary>
 [IsoId("_Q_N_UNp-Ed-ak6NoX_4Aeg_-41434346")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IOptionStyle1Choice, IIsoChoiceVariant
 {
     /// <summary>

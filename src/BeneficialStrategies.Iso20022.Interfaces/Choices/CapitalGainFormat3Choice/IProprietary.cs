@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CapitalGainFormat3Choice;
 /// Proprietary identification of the type of capital gain.
 /// </summary>
 [IsoId("_MkciSUEGEeWVgfuHGaKtRQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICapitalGainFormat3Choice, IIsoChoiceVariant
 {
     /// <summary>

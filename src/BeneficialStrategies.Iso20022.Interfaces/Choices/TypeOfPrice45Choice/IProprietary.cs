@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TypeOfPrice45Choice;
 /// Type of price expressed as a proprietary code.
 /// </summary>
 [IsoId("_8bg2j5NLEeWGlc8L7oPDIg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ITypeOfPrice45Choice, IIsoChoiceVariant
 {
     /// <summary>

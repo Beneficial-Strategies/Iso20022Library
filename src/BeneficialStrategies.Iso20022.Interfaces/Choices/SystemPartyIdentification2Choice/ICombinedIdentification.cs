@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyIdentification2Choice
 /// Identifies the party with the combined identification of both the responsible entity and the party itself.
 /// </summary>
 [IsoId("_w8OZg2c-EemvNLufWGIVOQ")]
+[IsoXmlTag("CmbndId")]
 public interface ICombinedIdentification : ISystemPartyIdentification2Choice, IIsoChoiceVariant
 {
     /// <summary>

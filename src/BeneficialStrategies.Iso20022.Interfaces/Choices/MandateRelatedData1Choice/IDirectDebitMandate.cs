@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateRelatedData1Choice;
 /// Specific direct debit mandate data.
 /// </summary>
 [IsoId("_su3YKslxEem0vqvvoqYsqQ")]
+[IsoXmlTag("DrctDbtMndt")]
 public interface IDirectDebitMandate : IMandateRelatedData1Choice, IIsoChoiceVariant
 {
     /// <summary>

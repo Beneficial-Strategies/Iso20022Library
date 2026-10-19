@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingReason3Choi
 /// Specifies the reason of the RejectedStatus.
 /// </summary>
 [IsoId("_yJDK4warEe2phaVG0lYKTw")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IInstructionProcessingReason3Choice, IIsoChoiceVariant
 {
     /// <summary>

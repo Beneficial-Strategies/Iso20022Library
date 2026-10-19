@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice;
 /// Information that locates and identifies a specific address, as defined by postal services.
 /// </summary>
 [IsoId("_yJhSqYv-Eei289CGNqs21g")]
+[IsoXmlTag("PtyAdr")]
 public interface IPartyAddress : ISystemPartyModification2Choice, IIsoChoiceVariant
 {
     /// <summary>

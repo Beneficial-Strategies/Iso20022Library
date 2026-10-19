@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Appearance3Choice;
 /// Appearance expressed as a proprietary code.
 /// </summary>
 [IsoId("_dhNzE-LxEeWOD7aAy2fAcA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IAppearance3Choice, IIsoChoiceVariant
 {
     /// <summary>

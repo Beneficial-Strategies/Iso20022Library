@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcceptedStatus9Choice;
 /// Reason for the accepted status.
 /// </summary>
 [IsoId("_cgn3_ZKQEeWHWpTQn1FFVg")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IAcceptedStatus9Choice, IIsoChoiceVariant
 {
     /// <summary>

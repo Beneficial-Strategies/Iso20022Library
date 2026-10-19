@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStandingInstructionDat
 /// Settlement standing instruction database expressed as a proprietary code.
 /// </summary>
 [IsoId("_Qt7bAdp-Ed-ak6NoX_4Aeg_78394216")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ISettlementStandingInstructionDatabase1Choice, IIsoChoiceVariant
 {
     /// <summary>

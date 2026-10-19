@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport32Choice;
 /// Re-opening of a derivative, at a trade or position level, that was cancelled with action type ‘Error’ or terminated by mistake.
 /// </summary>
 [IsoId("__fyLc2EUEe2P-L9DBerEgA")]
+[IsoXmlTag("Rvv")]
 public interface IRevive : ITradeReport32Choice, IIsoChoiceVariant
 {
     /// <summary>

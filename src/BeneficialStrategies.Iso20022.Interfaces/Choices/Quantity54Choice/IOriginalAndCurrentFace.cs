@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity54Choice;
 /// Original and current value of an asset-back instrument.
 /// </summary>
 [IsoId("_peZb-zi7Eeydid5dcNPKvg")]
+[IsoXmlTag("OrgnlAndCurFace")]
 public interface IOriginalAndCurrentFace : IQuantity54Choice, IIsoChoiceVariant
 {
     /// <summary>

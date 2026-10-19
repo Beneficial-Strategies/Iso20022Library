@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReversedStatus2Choice;
 /// Proprietary identification of the reason for the reversed status.
 /// </summary>
 [IsoId("_bUFeJSY5EeW_ZNn8gbfY7Q")]
+[IsoXmlTag("DataSrcSchme")]
 public interface IDataSourceScheme : IReversedStatus2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRateUsedForPaymentFormat
 /// Number of monetary units specified in a currency.
 /// </summary>
 [IsoId("_WTXzzUEIEeWVgfuHGaKtRQ")]
+[IsoXmlTag("Amt")]
 public interface IAmount : IInterestRateUsedForPaymentFormat8Choice, IIsoChoiceVariant
 {
     /// <summary>

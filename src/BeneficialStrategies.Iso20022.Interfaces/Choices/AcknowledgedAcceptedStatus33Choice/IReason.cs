@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcknowledgedAcceptedStatus33Choi
 /// Further information about the reason of the acknowledged accepted status.
 /// </summary>
 [IsoId("_HwRDeZwZEeqtp-LOti013g")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IAcknowledgedAcceptedStatus33Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportContent1Choice;
 /// Encrypted report content.
 /// </summary>
 [IsoId("_f3ucsMlWEeuJ35KoBRZFOg")]
+[IsoXmlTag("PrtctdData")]
 public interface IProtectedData : IReportContent1Choice, IIsoChoiceVariant
 {
     /// <summary>

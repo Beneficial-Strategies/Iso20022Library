@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventStage3Choice
 /// Corporate action event stage expressed as a proprietary code.
 /// </summary>
 [IsoId("_RhjNOTqqEeWyoP0PbocV1Q")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICorporateActionEventStage3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData58Choice;
 /// Information related to trade state reporting.
 /// </summary>
 [IsoId("_CA8442EbEe2P-L9DBerEgA")]
+[IsoXmlTag("Stat")]
 public interface IState : ITradeData58Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NotificationAdviceStatus1Choice;
 /// Provides information about the processing status of advice.
 /// </summary>
 [IsoId("_Ri1Cttp-Ed-ak6NoX_4Aeg_288350026")]
+[IsoXmlTag("PrcdSts")]
 public interface IProcessedStatus : INotificationAdviceStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus1Choice;
 /// Status of the transfer is received, accepted, sent to next party, matched, already executed, or settled.
 /// </summary>
 [IsoId("_o1CqqBwkEeOIveEnnb_1-A")]
+[IsoXmlTag("Sts")]
 public interface IStatus : ITransferStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

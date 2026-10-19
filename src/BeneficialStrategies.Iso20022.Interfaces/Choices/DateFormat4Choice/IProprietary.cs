@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateFormat4Choice;
 /// Proprietary scheme to specify a date.
 /// </summary>
 [IsoId("_RlgjRtp-Ed-ak6NoX_4Aeg_-1422001384")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IDateFormat4Choice, IIsoChoiceVariant
 {
     /// <summary>

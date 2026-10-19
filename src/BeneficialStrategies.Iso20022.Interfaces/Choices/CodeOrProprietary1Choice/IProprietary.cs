@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CodeOrProprietary1Choice;
 /// Element expressed as a proprietary code.
 /// </summary>
 [IsoId("_Qotj2Np-Ed-ak6NoX_4Aeg_1373438204")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICodeOrProprietary1Choice, IIsoChoiceVariant
 {
     /// <summary>

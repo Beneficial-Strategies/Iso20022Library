@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradingVenueIdentification1Choic
 /// Identification used where a venue does not have an already defined code type.
 /// </summary>
 [IsoId("_IkBp4Dd7EeWebbGLlGzH3g")]
+[IsoXmlTag("Othr")]
 public interface IOther : ITradingVenueIdentification1Choice, IIsoChoiceVariant
 {
     /// <summary>

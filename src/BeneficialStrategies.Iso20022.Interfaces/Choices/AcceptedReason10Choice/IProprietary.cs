@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcceptedReason10Choice;
 /// Proprietary identification of additional information about the processed instruction.
 /// </summary>
 [IsoId("_5CPg-UGUEeWqy4niLuXETA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IAcceptedReason10Choice, IIsoChoiceVariant
 {
     /// <summary>

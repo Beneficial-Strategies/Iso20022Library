@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityOrAmount2Choice;
 /// Quantity is expressed as an amount.
 /// </summary>
 [IsoId("_wXH_kweCEe2fOITqoTnSLQ")]
+[IsoXmlTag("Amt")]
 public interface IAmount : IQuantityOrAmount2Choice, IIsoChoiceVariant
 {
     /// <summary>

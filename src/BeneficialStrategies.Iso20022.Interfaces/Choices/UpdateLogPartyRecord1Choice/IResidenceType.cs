@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice;
 /// Specifies the type of residence where the party has its permanent home or principal establishment.
 /// </summary>
 [IsoId("_xPtUfmjNEeiRg5NzP0jkQg")]
+[IsoXmlTag("ResTp")]
 public interface IResidenceType : IUpdateLogPartyRecord1Choice, IIsoChoiceVariant
 {
     /// <summary>

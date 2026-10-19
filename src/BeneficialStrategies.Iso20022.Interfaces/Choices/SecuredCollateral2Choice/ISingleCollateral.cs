@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuredCollateral2Choice;
 /// Identifies the security pledged via a single ISIN.
 /// </summary>
 [IsoId("_iZO6AaidEeWHO_l3hf2rlA")]
+[IsoXmlTag("SnglColl")]
 public interface ISingleCollateral : ISecuredCollateral2Choice, IIsoChoiceVariant
 {
     /// <summary>

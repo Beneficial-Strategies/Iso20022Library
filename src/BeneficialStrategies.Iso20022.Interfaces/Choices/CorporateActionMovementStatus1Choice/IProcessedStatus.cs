@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionMovementStatus1Ch
 /// Provides information about the processing status of the movement.
 /// </summary>
 [IsoId("_RiPM1tp-Ed-ak6NoX_4Aeg_-1805228847")]
+[IsoXmlTag("PrcdSts")]
 public interface IProcessedStatus : ICorporateActionMovementStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

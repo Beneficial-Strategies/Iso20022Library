@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesBalanceType8Choice;
 /// Sub-balance expressed as a proprietary code.
 /// </summary>
 [IsoId("_5NeNHZNLEeWGlc8L7oPDIg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ISecuritiesBalanceType8Choice, IIsoChoiceVariant
 {
     /// <summary>

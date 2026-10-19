@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeFrame6Choice;
 /// Time frame expressed as a proprietary code.
 /// </summary>
 [IsoId("__pI3ADcbEeidBoT_PugKiA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ITimeFrame6Choice, IIsoChoiceVariant
 {
     /// <summary>

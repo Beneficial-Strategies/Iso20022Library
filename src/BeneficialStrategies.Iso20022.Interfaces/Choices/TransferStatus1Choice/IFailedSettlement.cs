@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus1Choice;
 /// Status of the transfer is failed settlement, that is, settlement in the International Central Securities Depository (ICSD) or Central Securities Depository (CSD) failed.
 /// </summary>
 [IsoId("_o1CqrRwkEeOIveEnnb_1-A")]
+[IsoXmlTag("FaildSttlm")]
 public interface IFailedSettlement : ITransferStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

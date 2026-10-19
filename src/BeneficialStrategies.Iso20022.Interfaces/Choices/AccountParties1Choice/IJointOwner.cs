@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties1Choice;
 /// Co-owner of the investment account when the ownership is assigned to more than one party.
 /// </summary>
 [IsoId("_5n7tpRdAEeK5g-3oYI0_9Q")]
+[IsoXmlTag("JntOwnr")]
 public interface IJointOwner : IAccountParties1Choice, IIsoChoiceVariant
 {
     /// <summary>

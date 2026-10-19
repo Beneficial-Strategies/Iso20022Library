@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CertifiedCharacteristics1Choice;
 /// Weight of the goods, as proven by the certificate.
 /// </summary>
 [IsoId("_TnJq7Np-Ed-ak6NoX_4Aeg_815222693")]
+[IsoXmlTag("Wght")]
 public interface IWeight : ICertifiedCharacteristics1Choice, IIsoChoiceVariant
 {
     /// <summary>

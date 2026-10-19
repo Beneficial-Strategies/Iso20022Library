@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventProcessingTy
 /// Proprietary code to express the type of event processing.
 /// </summary>
 [IsoId("_RmHAM9p-Ed-ak6NoX_4Aeg_-1265853549")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICorporateActionEventProcessingType1FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

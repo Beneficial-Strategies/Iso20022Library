@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralStatus3Choice;
 /// Instruction is pending.
 /// </summary>
 [IsoId("_g1stYOCgEei2UYJ62ws-Fw")]
+[IsoXmlTag("Pdg")]
 public interface IPending : ICollateralStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>

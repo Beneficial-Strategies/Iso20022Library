@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyIdentification2Choic
 /// Other identification of the counterparty through the sector and the location.
 /// </summary>
 [IsoId("_Qveap3vSEeWrWYBng3OpVw")]
+[IsoXmlTag("Othr")]
 public interface IOther : ICounterpartyIdentification2Choice, IIsoChoiceVariant
 {
     /// <summary>

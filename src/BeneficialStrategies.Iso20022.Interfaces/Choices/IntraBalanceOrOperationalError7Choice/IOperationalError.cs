@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraBalanceOrOperationalError7C
 /// Operational error resulting from a rejection.
 /// </summary>
 [IsoId("_YDGlIzneEem7JZMuWtwtsg")]
+[IsoXmlTag("OprlErr")]
 public interface IOperationalError : IIntraBalanceOrOperationalError7Choice, IIsoChoiceVariant
 {
     /// <summary>

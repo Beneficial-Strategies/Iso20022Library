@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionMandatoryVoluntar
 /// Proprietary identification of an event.
 /// </summary>
 [IsoId("_fJ6PeTndEeWLJsP1cO-amg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICorporateActionMandatoryVoluntary3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductIdentifier2Choice;
 /// Specifies the type of product identifier not present in the code list.
 /// </summary>
 [IsoId("_Rb1C0tp-Ed-ak6NoX_4Aeg_-1291805037")]
+[IsoXmlTag("OthrPdctIdr")]
 public interface IOtherProductIdentifier : IProductIdentifier2Choice, IIsoChoiceVariant
 {
     /// <summary>

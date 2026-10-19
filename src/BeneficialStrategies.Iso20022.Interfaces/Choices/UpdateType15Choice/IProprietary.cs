@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType15Choice;
 /// Indicates whether the report is complete or contains changes only.
 /// </summary>
 [IsoId("_Xt8p1TeQEeWm5uvLSn0jEw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IUpdateType15Choice, IIsoChoiceVariant
 {
     /// <summary>

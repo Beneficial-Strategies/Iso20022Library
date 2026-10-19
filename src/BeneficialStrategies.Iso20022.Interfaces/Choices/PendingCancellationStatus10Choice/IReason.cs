@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingCancellationStatus10Choic
 /// Reason why the meeting instruction cancellation request message or the individual meeting instruction cancellation request is pending.
 /// </summary>
 [IsoId("__KUE-7KiEemux5trsZcCpw")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IPendingCancellationStatus10Choice, IIsoChoiceVariant
 {
     /// <summary>

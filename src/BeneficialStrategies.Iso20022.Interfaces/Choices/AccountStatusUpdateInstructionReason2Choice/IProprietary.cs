@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountStatusUpdateInstructionRe
 /// Reason for the instruction to change the account status expressed as a proprietary code.
 /// </summary>
 [IsoId("_08pj43i8EeaRm5xIK6nGuQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IAccountStatusUpdateInstructionReason2Choice, IIsoChoiceVariant
 {
     /// <summary>

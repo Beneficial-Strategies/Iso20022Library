@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LotteryTypeFormat5Choice;
 /// Proprietary identification of the type of lottery announced.
 /// </summary>
 [IsoId("_cdS3hZKQEeWHWpTQn1FFVg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ILotteryTypeFormat5Choice, IIsoChoiceVariant
 {
     /// <summary>

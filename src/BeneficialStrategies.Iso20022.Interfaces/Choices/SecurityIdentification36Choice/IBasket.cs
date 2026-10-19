@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification36Choice;
 /// Identification of constituents for a basket of indexes.
 /// </summary>
 [IsoId("_POTEp4rpEeq91phomTRDDA")]
+[IsoXmlTag("Bskt")]
 public interface IBasket : ISecurityIdentification36Choice, IIsoChoiceVariant
 {
     /// <summary>

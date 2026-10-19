@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MeetingTypeClassification2Choice
 /// Type of meeting expressed as a proprietary code.
 /// </summary>
 [IsoId("_e0JEo67NEemG7MmivSuE5g")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IMeetingTypeClassification2Choice, IIsoChoiceVariant
 {
     /// <summary>

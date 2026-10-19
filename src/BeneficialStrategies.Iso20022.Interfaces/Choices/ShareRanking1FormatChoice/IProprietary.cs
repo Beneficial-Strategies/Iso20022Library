@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ShareRanking1FormatChoice;
 /// Proprietary code to express the share ranking.
 /// </summary>
 [IsoId("_Ro8Rxdp-Ed-ak6NoX_4Aeg_1569147870")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IShareRanking1FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

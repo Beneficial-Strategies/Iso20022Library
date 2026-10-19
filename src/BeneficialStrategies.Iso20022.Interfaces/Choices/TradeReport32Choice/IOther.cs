@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport32Choice;
 /// Indicates any other amendment to the contract.
 /// </summary>
 [IsoId("__fyLdWEUEe2P-L9DBerEgA")]
+[IsoXmlTag("Othr")]
 public interface IOther : ITradeReport32Choice, IIsoChoiceVariant
 {
     /// <summary>

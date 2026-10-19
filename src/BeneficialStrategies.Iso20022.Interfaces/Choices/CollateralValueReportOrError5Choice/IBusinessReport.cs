@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralValueReportOrError5Cho
 /// Provides information specific to the collateral value reports included in the message.
 /// </summary>
 [IsoId("_-DiXcTpvEemk2e6qGBk8IQ")]
+[IsoXmlTag("BizRpt")]
 public interface IBusinessReport : ICollateralValueReportOrError5Choice, IIsoChoiceVariant
 {
     /// <summary>

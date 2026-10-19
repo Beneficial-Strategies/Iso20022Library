@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus30Choice;
 /// Cancellation has been processed by the account servicer.
 /// </summary>
 [IsoId("_T_qoAxIwEeydmIVkS03esw")]
+[IsoXmlTag("Prcd")]
 public interface IProcessed : ICancellationStatus30Choice, IIsoChoiceVariant
 {
     /// <summary>

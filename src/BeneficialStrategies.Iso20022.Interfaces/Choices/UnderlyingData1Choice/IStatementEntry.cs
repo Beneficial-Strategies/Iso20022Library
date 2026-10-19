@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingData1Choice;
 /// Reference details on the underlying statement cash entry.
 /// </summary>
 [IsoId("_CXmpaFRtEe23M4WgERMsYw")]
+[IsoXmlTag("StmtNtry")]
 public interface IStatementEntry : IUnderlyingData1Choice, IIsoChoiceVariant
 {
     /// <summary>

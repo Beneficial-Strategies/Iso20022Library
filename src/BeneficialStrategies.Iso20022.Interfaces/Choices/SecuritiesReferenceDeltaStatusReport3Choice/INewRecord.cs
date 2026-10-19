@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesReferenceDeltaStatusRe
 /// Specifies new instruments that have been added since the previous report.
 /// </summary>
 [IsoId("_PjgBoydoEei12pGEsJIAeQ")]
+[IsoXmlTag("NewRcrd")]
 public interface INewRecord : ISecuritiesReferenceDeltaStatusReport3Choice, IIsoChoiceVariant
 {
     /// <summary>

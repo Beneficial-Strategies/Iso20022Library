@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice;
 /// Indicates that the investment is not covered by other available investment options.
 /// </summary>
 [IsoId("_MRa04LLnEeavNMum-T1eEA")]
+[IsoXmlTag("OthrInvstmts")]
 public interface IOtherInvestments : IInvestment1Choice, IIsoChoiceVariant
 {
     /// <summary>

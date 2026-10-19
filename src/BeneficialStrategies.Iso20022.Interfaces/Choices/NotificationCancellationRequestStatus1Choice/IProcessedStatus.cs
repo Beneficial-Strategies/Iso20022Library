@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NotificationCancellationRequestS
 /// Provides information about the processing status of the cancellation request.
 /// </summary>
 [IsoId("_RiYWxNp-Ed-ak6NoX_4Aeg_878482485")]
+[IsoXmlTag("PrcdSts")]
 public interface IProcessedStatus : INotificationCancellationRequestStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

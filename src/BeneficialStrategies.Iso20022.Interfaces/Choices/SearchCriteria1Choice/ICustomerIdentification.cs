@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice;
 /// Identifies a customer identification as the search criteria for the financial institution to do the investigation.
 /// </summary>
 [IsoId("_FX0FVUDHEeGUr-Tp_ntVFg")]
+[IsoXmlTag("CstmrId")]
 public interface ICustomerIdentification : ISearchCriteria1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LumpSumType1Choice;
 /// Type of lump sum expressed as a proprietary code.
 /// </summary>
 [IsoId("_HK6IkLKdEeiXL6Ccd-oU8g")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ILumpSumType1Choice, IIsoChoiceVariant
 {
     /// <summary>

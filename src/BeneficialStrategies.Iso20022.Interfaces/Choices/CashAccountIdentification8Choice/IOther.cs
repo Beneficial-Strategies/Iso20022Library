@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashAccountIdentification8Choice
 /// Unique identification of an account, as assigned by the account servicer, using an identification scheme.
 /// </summary>
 [IsoId("_lfxcBbfLEeuDTOqGwU_8EQ")]
+[IsoXmlTag("Othr")]
 public interface IOther : ICashAccountIdentification8Choice, IIsoChoiceVariant
 {
     /// <summary>

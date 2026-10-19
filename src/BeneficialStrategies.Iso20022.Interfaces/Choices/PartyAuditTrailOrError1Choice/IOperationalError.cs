@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyAuditTrailOrError1Choice;
 /// Operational error resulting from a rejection.
 /// </summary>
 [IsoId("_QqH6I59uEee7Qpz45yWJJw")]
+[IsoXmlTag("OprlErr")]
 public interface IOperationalError : IPartyAuditTrailOrError1Choice, IIsoChoiceVariant
 {
     /// <summary>

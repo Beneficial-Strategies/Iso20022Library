@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CalculationType3Choice;
 /// Calculation type expressed as a proprietary code.
 /// </summary>
 [IsoId("_M0gco-LaEeWFtOV72FbX9w")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICalculationType3Choice, IIsoChoiceVariant
 {
     /// <summary>

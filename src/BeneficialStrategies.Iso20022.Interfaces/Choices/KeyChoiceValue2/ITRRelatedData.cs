@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.KeyChoiceValue2;
 /// Data block for a TR31 or TR34 block, where the block does not contain a key (for example the TR34 unbind which contains the signed authorization data).
 /// </summary>
 [IsoId("_FjgS07TqEeeQy4o2AayYHg")]
+[IsoXmlTag("TRRltdData")]
 public interface ITRRelatedData : IKeyChoiceValue2, IIsoChoiceVariant
 {
     /// <summary>

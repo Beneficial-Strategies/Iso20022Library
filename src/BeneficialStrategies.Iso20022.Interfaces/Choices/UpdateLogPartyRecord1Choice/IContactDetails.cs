@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice;
 /// Specifies the contact details of the party.
 /// </summary>
 [IsoId("_xPt7gWjNEeiRg5NzP0jkQg")]
+[IsoXmlTag("CtctDtls")]
 public interface IContactDetails : IUpdateLogPartyRecord1Choice, IIsoChoiceVariant
 {
     /// <summary>

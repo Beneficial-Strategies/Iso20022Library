@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LegalFramework3Choice;
 /// Legal framework expressed as a proprietary code.
 /// </summary>
 [IsoId("__YvnCTqkEeWyoP0PbocV1Q")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ILegalFramework3Choice, IIsoChoiceVariant
 {
     /// <summary>

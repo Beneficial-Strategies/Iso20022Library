@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AddressType3Choice;
 /// Type of address expressed as a proprietary code.
 /// </summary>
 [IsoId("_C7IDQxb-EeiyVv5j1vf1VQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IAddressType3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateOrDateTimePeriod1Choice;
 /// Period expressed with dates.
 /// </summary>
 [IsoId("_RF6mMa6AEeexrtTFgmVD3Q")]
+[IsoXmlTag("Dt")]
 public interface IDate : IDateOrDateTimePeriod1Choice, IIsoChoiceVariant
 {
     /// <summary>

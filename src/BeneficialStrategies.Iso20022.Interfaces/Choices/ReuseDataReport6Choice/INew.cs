@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReuseDataReport6Choice;
 /// Indicates whether transaction is reported for the first time.
 /// </summary>
 [IsoId("_MzHkQcK8EeuMhqg3CsEu6Q")]
+[IsoXmlTag("New")]
 public interface INew : IReuseDataReport6Choice, IIsoChoiceVariant
 {
     /// <summary>

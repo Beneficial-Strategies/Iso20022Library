@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification41Choice;
 /// All safekeeping accounts that own an underlying financial instrument.
 /// </summary>
 [IsoId("_bcPRg7XDEeiTob_PrFFUxA")]
+[IsoXmlTag("ForAllAccts")]
 public interface IForAllAccounts : IAccountIdentification41Choice, IIsoChoiceVariant
 {
     /// <summary>

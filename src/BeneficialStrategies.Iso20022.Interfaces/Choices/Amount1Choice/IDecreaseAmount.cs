@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Amount1Choice;
 /// Amount of decrease, and currency.
 /// </summary>
 [IsoId("_l8K8WpKgEeGy0b9YqEEfSQ")]
+[IsoXmlTag("DcrAmt")]
 public interface IDecreaseAmount : IAmount1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AllegementStatus3Choice;
 /// Status of the allegement reported.
 /// </summary>
 [IsoId("_UHLhyTqhEeWyoP0PbocV1Q")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IAllegementStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>

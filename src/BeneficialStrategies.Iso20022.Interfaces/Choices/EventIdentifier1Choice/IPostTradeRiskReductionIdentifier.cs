@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventIdentifier1Choice;
 /// Specifies post trade risk reduction identifier.
 /// </summary>
 [IsoId("_tbdG8PbfEeyInphUKJZxtQ")]
+[IsoXmlTag("PstTradRskRdctnIdr")]
 public interface IPostTradeRiskReductionIdentifier : IEventIdentifier1Choice, IIsoChoiceVariant
 {
     /// <summary>

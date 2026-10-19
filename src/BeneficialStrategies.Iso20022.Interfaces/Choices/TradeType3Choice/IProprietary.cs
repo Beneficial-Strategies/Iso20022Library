@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeType3Choice;
 /// Third party reporting information expressed as a proprietary code.
 /// </summary>
 [IsoId("_AXUwUNokEeC60axPepSq7g_-1613016012")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ITradeType3Choice, IIsoChoiceVariant
 {
     /// <summary>

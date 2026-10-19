@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnergy3Choice
 /// Definition of Oil energy commodity derivative.
 /// </summary>
 [IsoId("_O67yBU8SEe2PGo0mhYCh1g")]
+[IsoXmlTag("Oil")]
 public interface IOil : IAssetClassCommodityEnergy3Choice, IIsoChoiceVariant
 {
     /// <summary>

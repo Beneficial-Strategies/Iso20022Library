@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractRegistrationReference1Ch
 /// Identification of the contract.
 /// </summary>
 [IsoId("_29C6ANM-EeSDLevdaFPXHw")]
+[IsoXmlTag("Ctrct")]
 public interface IContract : IContractRegistrationReference1Choice, IIsoChoiceVariant
 {
     /// <summary>

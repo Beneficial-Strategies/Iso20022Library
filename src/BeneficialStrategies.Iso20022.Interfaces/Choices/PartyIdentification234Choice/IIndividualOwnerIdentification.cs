@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification234Choice;
 /// Individual local country specific identification of the owner agreed between the account servicer and account owner.
 /// </summary>
 [IsoId("_F-iyOR9REeuFz_FaCzCLgQ")]
+[IsoXmlTag("IndvOwnrId")]
 public interface IIndividualOwnerIdentification : IPartyIdentification234Choice, IIsoChoiceVariant
 {
     /// <summary>

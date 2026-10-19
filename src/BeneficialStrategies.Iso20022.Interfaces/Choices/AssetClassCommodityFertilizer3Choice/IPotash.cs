@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFertilizer3Ch
 /// Potash fertilizer commodity derivative.
 /// </summary>
 [IsoId("_K_pO1bv7EeiLRYqS-r-R-A")]
+[IsoXmlTag("Ptsh")]
 public interface IPotash : IAssetClassCommodityFertilizer3Choice, IIsoChoiceVariant
 {
     /// <summary>

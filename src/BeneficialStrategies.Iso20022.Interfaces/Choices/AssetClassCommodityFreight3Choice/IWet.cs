@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFreight3Choic
 /// Wet freight commodity derivative.
 /// </summary>
 [IsoId("_VcEcU7v5EeiLRYqS-r-R-A")]
+[IsoXmlTag("Wet")]
 public interface IWet : IAssetClassCommodityFreight3Choice, IIsoChoiceVariant
 {
     /// <summary>

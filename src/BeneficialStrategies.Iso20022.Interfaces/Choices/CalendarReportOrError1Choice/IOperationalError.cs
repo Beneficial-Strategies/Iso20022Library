@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CalendarReportOrError1Choice;
 /// Indicates that an operational error has been issued during the processing of the related request.
 /// </summary>
 [IsoId("_dVcQ4om7Eeipw6hHPgB4Sw")]
+[IsoXmlTag("OprlErr")]
 public interface IOperationalError : ICalendarReportOrError1Choice, IIsoChoiceVariant
 {
     /// <summary>

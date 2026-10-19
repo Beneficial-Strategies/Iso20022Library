@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GrossDividendRateFormat35Choice;
 /// Specifies an amount and a rate status.
 /// </summary>
 [IsoId("_CCq1WeXsEemEj48jhmlA0Q")]
+[IsoXmlTag("AmtAndRateSts")]
 public interface IAmountAndRateStatus : IGrossDividendRateFormat35Choice, IIsoChoiceVariant
 {
     /// <summary>

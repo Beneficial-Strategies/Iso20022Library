@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ElectionTypeFormat1Choice;
 /// Proprietary identification of the type of election of a corporate action option.
 /// </summary>
 [IsoId("_Q3K2lNp-Ed-ak6NoX_4Aeg_1718215984")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IElectionTypeFormat1Choice, IIsoChoiceVariant
 {
     /// <summary>

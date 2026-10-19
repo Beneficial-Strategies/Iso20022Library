@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesBalanceType10FormatCho
 /// Proprietary code to express the type of securities balance.
 /// </summary>
 [IsoId("_Roygxdp-Ed-ak6NoX_4Aeg_-1171470418")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ISecuritiesBalanceType10FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

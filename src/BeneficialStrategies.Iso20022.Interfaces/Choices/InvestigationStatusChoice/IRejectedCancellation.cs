@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatusChoice;
 /// Explains the reason for rejecting a payment cancellation request.
 /// </summary>
 [IsoId("_UuYYtdp-Ed-ak6NoX_4Aeg_1934789984")]
+[IsoXmlTag("RjctdCxl")]
 public interface IRejectedCancellation : IInvestigationStatusChoice, IIsoChoiceVariant
 {
     /// <summary>

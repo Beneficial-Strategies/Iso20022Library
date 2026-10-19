@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity4Choice;
 /// Signed face amount and amortised value of security.
 /// </summary>
 [IsoId("_Qz45E9p-Ed-ak6NoX_4Aeg_-1207963739")]
+[IsoXmlTag("OrgnlAndCurFaceAmt")]
 public interface IOriginalAndCurrentFaceAmount : IQuantity4Choice, IIsoChoiceVariant
 {
     /// <summary>

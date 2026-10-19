@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural5
 /// Seafood agricultural commodity derivative.
 /// </summary>
 [IsoId("_NxHXHbveEeiLRYqS-r-R-A")]
+[IsoXmlTag("Sfd")]
 public interface ISeafood : IAssetClassCommodityAgricultural5Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentSchedule1Choice;
 /// Specifies an expected date and a due date for the payment.
 /// </summary>
 [IsoId("_BhnbcdOAEeSQ_-lmj1tzfw")]
+[IsoXmlTag("DtRg")]
 public interface IDateRange : IPaymentSchedule1Choice, IIsoChoiceVariant
 {
     /// <summary>

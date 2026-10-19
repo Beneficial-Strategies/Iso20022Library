@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConsentOrRejectionReason2Choice;
 /// Specifies the reason why the counterparty response has a rejection status.
 /// </summary>
 [IsoId("_0fzakQlIEeGATtfOBToyew_-406067479")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IConsentOrRejectionReason2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralCancellationType1Choic
 /// Provides the cancellation reason using a proprietary code.
 /// </summary>
 [IsoId("_QmxqIdp-Ed-ak6NoX_4Aeg_-418587863")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICollateralCancellationType1Choice, IIsoChoiceVariant
 {
     /// <summary>

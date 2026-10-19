@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Date3Choice;
 /// Date is determined using a data source scheme and a code.
 /// </summary>
 [IsoId("_U01FI5EhEeakHoV5BVecAQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IDate3Choice, IIsoChoiceVariant
 {
     /// <summary>

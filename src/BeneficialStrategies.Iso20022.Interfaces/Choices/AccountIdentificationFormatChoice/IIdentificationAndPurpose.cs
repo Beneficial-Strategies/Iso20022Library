@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentificationFormatChoic
 /// Identification of the account expressed with an account number and a code.
 /// </summary>
 [IsoId("_RB5f4Np-Ed-ak6NoX_4Aeg_842152344")]
+[IsoXmlTag("IdAndPurp")]
 public interface IIdentificationAndPurpose : IAccountIdentificationFormatChoice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StressSize1Choice;
 /// Absolute shift if the shift is defined as an absolute move.
 /// </summary>
 [IsoId("_rwZwcKs1Eeayv9XxdmMwKQ")]
+[IsoXmlTag("Abs")]
 public interface IAbsolute : IStressSize1Choice, IIsoChoiceVariant
 {
     /// <summary>

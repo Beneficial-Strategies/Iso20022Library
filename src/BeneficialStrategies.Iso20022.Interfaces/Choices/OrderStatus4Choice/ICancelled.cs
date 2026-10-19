@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus4Choice;
 /// Status of the switch order is cancelled. This status is used for an order that has been accepted or that has been entered in an order book but that can not be executed.
 /// </summary>
 [IsoId("_9wxHw0H8EeaV3ab_pHzFIQ")]
+[IsoXmlTag("Canc")]
 public interface ICancelled : IOrderStatus4Choice, IIsoChoiceVariant
 {
     /// <summary>

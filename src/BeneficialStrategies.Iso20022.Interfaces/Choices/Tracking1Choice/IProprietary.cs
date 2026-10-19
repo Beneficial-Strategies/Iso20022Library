@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Tracking1Choice;
 /// Tracking information expressed as a proprietary code.
 /// </summary>
 [IsoId("_QuFMAdp-Ed-ak6NoX_4Aeg_-1171599030")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ITracking1Choice, IIsoChoiceVariant
 {
     /// <summary>

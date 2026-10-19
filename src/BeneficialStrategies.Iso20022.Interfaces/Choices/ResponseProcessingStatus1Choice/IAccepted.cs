@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ResponseProcessingStatus1Choice;
 /// The received message or the multipart received report (sent with pagination in multiple messages) is accepted.
 /// </summary>
 [IsoId("_lOZu8IeUEemJ1cSJJmVYRQ")]
+[IsoXmlTag("Accptd")]
 public interface IAccepted : IResponseProcessingStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

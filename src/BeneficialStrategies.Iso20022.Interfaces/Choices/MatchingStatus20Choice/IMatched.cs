@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingStatus20Choice;
 /// Status is matched.
 /// </summary>
 [IsoId("_YnjTkSwjEeOEV5XHD-BKpw")]
+[IsoXmlTag("Mtchd")]
 public interface IMatched : IMatchingStatus20Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NetDividendRateFormat29Choice;
 /// Specifies different formats for the net dividend rate.
 /// </summary>
 [IsoId("__2jet5b7Eee8S7xwGG7Veg")]
+[IsoXmlTag("RateTpAndAmtAndRateSts")]
 public interface IRateTypeAndAmountAndRateStatus : INetDividendRateFormat29Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorrectiveTransaction3Choice;
 /// Set of elements used to reference the details of the corrective interbank payment transaction.
 /// </summary>
 [IsoId("_9GWT466UEeexrtTFgmVD3Q")]
+[IsoXmlTag("IntrBk")]
 public interface IInterbank : ICorrectiveTransaction3Choice, IIsoChoiceVariant
 {
     /// <summary>

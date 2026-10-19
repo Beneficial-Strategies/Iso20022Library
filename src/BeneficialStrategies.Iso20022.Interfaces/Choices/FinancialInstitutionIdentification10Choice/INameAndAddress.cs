@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
 /// Name and address of the party.
 /// </summary>
 [IsoId("_Rou1EWAZEeiH9-hkDDXUHA")]
+[IsoXmlTag("NmAndAdr")]
 public interface INameAndAddress : IFinancialInstitutionIdentification10Choice, IIsoChoiceVariant
 {
     /// <summary>

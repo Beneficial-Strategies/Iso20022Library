@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice;
 /// Identifies a payment instrument as the search criteria for the financial institution to do the investigation.
 /// </summary>
 [IsoId("_FACTBkJ-EeGuetKibuqsKw")]
+[IsoXmlTag("PmtInstrm")]
 public interface IPaymentInstrument : ISearchCriteria1Choice, IIsoChoiceVariant
 {
     /// <summary>

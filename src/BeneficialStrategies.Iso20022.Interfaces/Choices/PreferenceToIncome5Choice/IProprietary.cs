@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PreferenceToIncome5Choice;
 /// Preference to income expressed as a proprietary code.
 /// </summary>
 [IsoId("_4ueig-LZEeWFtOV72FbX9w")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IPreferenceToIncome5Choice, IIsoChoiceVariant
 {
     /// <summary>

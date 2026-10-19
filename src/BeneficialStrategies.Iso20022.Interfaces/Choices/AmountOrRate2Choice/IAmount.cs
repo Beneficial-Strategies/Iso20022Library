@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AmountOrRate2Choice;
 /// Amount of money in the cash entry.
 /// </summary>
 [IsoId("_AdIdYNokEeC60axPepSq7g_1830229450")]
+[IsoXmlTag("Amt")]
 public interface IAmount : IAmountOrRate2Choice, IIsoChoiceVariant
 {
     /// <summary>

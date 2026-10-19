@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReferredDocumentAmount1Choice;
 /// Amount of money remitted for the referred document.
 /// </summary>
 [IsoId("_QGJCRdp-Ed-ak6NoX_4Aeg_-888106457")]
+[IsoXmlTag("RmtdAmt")]
 public interface IRemittedAmount : IReferredDocumentAmount1Choice, IIsoChoiceVariant
 {
     /// <summary>

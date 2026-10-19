@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BeneficialOwnership5Choice;
 /// Beneficial ownership information expressed a proprietary code.
 /// </summary>
 [IsoId("_5m6A7ZNLEeWGlc8L7oPDIg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IBeneficialOwnership5Choice, IIsoChoiceVariant
 {
     /// <summary>

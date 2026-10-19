@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxCreditRateFormat9Choice;
 /// Specifies different formats for the tax credit rate.
 /// </summary>
 [IsoId("_ckCY0JKQEeWHWpTQn1FFVg")]
+[IsoXmlTag("RateTpAndAmtAndRateSts")]
 public interface IRateTypeAndAmountAndRateStatus : ITaxCreditRateFormat9Choice, IIsoChoiceVariant
 {
     /// <summary>

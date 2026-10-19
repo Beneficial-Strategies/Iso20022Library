@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Revaluation2Choice;
 /// Reevaluation is determined using a data source scheme.
 /// </summary>
 [IsoId("_AYz-EtokEeC60axPepSq7g_304236148")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRevaluation2Choice, IIsoChoiceVariant
 {
     /// <summary>

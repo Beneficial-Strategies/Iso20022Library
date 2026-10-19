@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UndertakingDocumentType1Choice;
 /// Document type expressed as a proprietary code.
 /// </summary>
 [IsoId("_93jwwnltEeG7BsjMvd1mEw_-1818982410")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IUndertakingDocumentType1Choice, IIsoChoiceVariant
 {
     /// <summary>

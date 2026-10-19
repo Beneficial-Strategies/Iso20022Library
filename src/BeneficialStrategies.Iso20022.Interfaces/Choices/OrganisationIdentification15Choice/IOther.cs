@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrganisationIdentification15Choi
 /// Unique identification of an organisation, using a client code or a business identification code.
 /// </summary>
 [IsoId("_F-FycMgoEeuGrNSsxk3B0A")]
+[IsoXmlTag("Othr")]
 public interface IOther : IOrganisationIdentification15Choice, IIsoChoiceVariant
 {
     /// <summary>

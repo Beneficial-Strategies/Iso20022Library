@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
 /// Identifies the name and (long) postal address of a financial institution.
 /// </summary>
 [IsoId("_NPGB8TfAEeaijYcl4fyXoQ")]
+[IsoXmlTag("NmAndAdr")]
 public interface INameAndAddress : IFinancialInstitutionIdentification8Choice, IIsoChoiceVariant
 {
     /// <summary>

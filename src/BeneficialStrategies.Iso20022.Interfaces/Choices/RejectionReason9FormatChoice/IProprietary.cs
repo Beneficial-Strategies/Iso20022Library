@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason9FormatChoice;
 /// Proprietary code to express the reason of a rejection of an election cancellation request.
 /// </summary>
 [IsoId("_Roovx9p-Ed-ak6NoX_4Aeg_287891056")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRejectionReason9FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

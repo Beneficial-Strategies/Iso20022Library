@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GrossDividendRateType1FormatChoi
 /// Proprietary code to express the type of gross dividend rate.
 /// </summary>
 [IsoId("_Rms2Edp-Ed-ak6NoX_4Aeg_-8475343")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IGrossDividendRateType1FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

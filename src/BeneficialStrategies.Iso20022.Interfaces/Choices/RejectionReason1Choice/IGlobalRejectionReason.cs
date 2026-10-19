@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason1Choice;
 /// Rejection reason that applies to the whole report.
 /// </summary>
 [IsoId("_RJ8oodp-Ed-ak6NoX_4Aeg_1042217735")]
+[IsoXmlTag("GblRjctnRsn")]
 public interface IGlobalRejectionReason : IRejectionReason1Choice, IIsoChoiceVariant
 {
     /// <summary>

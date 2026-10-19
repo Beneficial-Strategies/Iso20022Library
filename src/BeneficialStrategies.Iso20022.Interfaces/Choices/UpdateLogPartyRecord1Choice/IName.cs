@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice;
 /// Specifies the name by which a party is known and which is usually used to identify that party.
 /// </summary>
 [IsoId("_xPt7iGjNEeiRg5NzP0jkQg")]
+[IsoXmlTag("Nm")]
 public interface IName : IUpdateLogPartyRecord1Choice, IIsoChoiceVariant
 {
     /// <summary>

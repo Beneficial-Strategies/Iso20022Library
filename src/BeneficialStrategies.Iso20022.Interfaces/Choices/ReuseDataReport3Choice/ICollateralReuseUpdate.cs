@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReuseDataReport3Choice;
 /// Information on collateral reusability for multiple transactions.
 /// </summary>
 [IsoId("_0mq3t64bEemB_csI4yyKLA")]
+[IsoXmlTag("CollReuseUpd")]
 public interface ICollateralReuseUpdate : IReuseDataReport3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventProcessingStatus4Choice;
 /// Specifies that a corporate action event processing has been completed.
 /// </summary>
 [IsoId("_cel3-ZKQEeWHWpTQn1FFVg")]
+[IsoXmlTag("Cmplt")]
 public interface IComplete : IEventProcessingStatus4Choice, IIsoChoiceVariant
 {
     /// <summary>

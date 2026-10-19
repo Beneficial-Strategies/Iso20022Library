@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason14FormatChoice;
 /// Proprietary code to express the reason of a rejection of a movement cancellation request.
 /// </summary>
 [IsoId("_RoMq59p-Ed-ak6NoX_4Aeg_345150395")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRejectionReason14FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

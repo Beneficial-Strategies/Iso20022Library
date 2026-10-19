@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FXStandingInstruction5Choice;
 /// FX Standing instruction information expressed as a proprietary code.
 /// </summary>
 [IsoId("_5xrHF5NLEeWGlc8L7oPDIg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IFXStandingInstruction5Choice, IIsoChoiceVariant
 {
     /// <summary>

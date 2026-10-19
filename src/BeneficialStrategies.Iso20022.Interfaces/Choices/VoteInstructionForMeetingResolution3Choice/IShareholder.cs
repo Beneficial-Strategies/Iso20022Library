@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VoteInstructionForMeetingResolut
 /// Name and address of the shareholder to whom the rights to vote are transferred for resolutions added during the meeting.
 /// </summary>
 [IsoId("_n0rhBa4dEemG7MmivSuE5g")]
+[IsoXmlTag("Shrhldr")]
 public interface IShareholder : IVoteInstructionForMeetingResolution3Choice, IIsoChoiceVariant
 {
     /// <summary>

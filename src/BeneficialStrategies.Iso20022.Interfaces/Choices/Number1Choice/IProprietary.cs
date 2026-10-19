@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Number1Choice;
 /// Proprietary number format.
 /// </summary>
 [IsoId("_RdKfldp-Ed-ak6NoX_4Aeg_-1790569525")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : INumber1Choice, IIsoChoiceVariant
 {
     /// <summary>

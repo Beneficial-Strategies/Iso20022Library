@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Proxy5Choice;
 /// Proxy assignment and registration information.
 /// </summary>
 [IsoId("_iTU-wRrfEeyhRdHRjakS2w")]
+[IsoXmlTag("Prxy")]
 public interface IProxy : IProxy5Choice, IIsoChoiceVariant
 {
     /// <summary>

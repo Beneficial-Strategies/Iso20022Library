@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural5
 /// Potato agricultural commodity derivative.
 /// </summary>
 [IsoId("_NxHXFbveEeiLRYqS-r-R-A")]
+[IsoXmlTag("Ptt")]
 public interface IPotato : IAssetClassCommodityAgricultural5Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReferenceValue1Choice;
 /// Other type of reference.
 /// </summary>
 [IsoId("_rIqsMMeQEeysUoBKYz1Ytw")]
+[IsoXmlTag("Othr")]
 public interface IOther : IReferenceValue1Choice, IIsoChoiceVariant
 {
     /// <summary>

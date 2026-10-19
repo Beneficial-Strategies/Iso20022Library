@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument48Choice;
 /// Index on which the financial instrument is based.
 /// </summary>
 [IsoId("_HYrJVX5aEea2k7EBUopqxw")]
+[IsoXmlTag("Indx")]
 public interface IIndex : IFinancialInstrument48Choice, IIsoChoiceVariant
 {
     /// <summary>

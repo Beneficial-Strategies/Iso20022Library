@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice;
 /// Specifies the opening date of the party.
 /// </summary>
 [IsoId("_xPt7hGjNEeiRg5NzP0jkQg")]
+[IsoXmlTag("OpngDt")]
 public interface IOpeningDate : IUpdateLogPartyRecord1Choice, IIsoChoiceVariant
 {
     /// <summary>

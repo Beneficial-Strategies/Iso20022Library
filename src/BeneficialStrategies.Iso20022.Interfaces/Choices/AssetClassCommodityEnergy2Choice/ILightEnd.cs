@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnergy2Choice
 /// Light end energy commodity derivative.
 /// </summary>
 [IsoId("_x4yAfbvsEeiLRYqS-r-R-A")]
+[IsoXmlTag("LghtEnd")]
 public interface ILightEnd : IAssetClassCommodityEnergy2Choice, IIsoChoiceVariant
 {
     /// <summary>

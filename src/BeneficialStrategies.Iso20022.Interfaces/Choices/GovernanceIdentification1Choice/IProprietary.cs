@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GovernanceIdentification1Choice;
 /// Governance identification information expressed as a proprietary code.
 /// </summary>
 [IsoId("_929T0nltEeG7BsjMvd1mEw_524135810")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IGovernanceIdentification1Choice, IIsoChoiceVariant
 {
     /// <summary>

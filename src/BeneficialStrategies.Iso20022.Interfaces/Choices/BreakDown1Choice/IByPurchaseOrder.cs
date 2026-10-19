@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BreakDown1Choice;
 /// The intention to pay is based on a purchase order.
 /// </summary>
 [IsoId("_2goZwBrYEeOVR9VN6fAMUg")]
+[IsoXmlTag("ByPurchsOrdr")]
 public interface IByPurchaseOrder : IBreakDown1Choice, IIsoChoiceVariant
 {
     /// <summary>

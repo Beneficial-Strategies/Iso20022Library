@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalAmount1Choice;
 /// Additional amount of money paid by the investor in addition to the switch redemption amount.
 /// </summary>
 [IsoId("_uMB7QUG_EeaNEqIb_fgRZg")]
+[IsoXmlTag("AddtlCshIn")]
 public interface IAdditionalCashIn : IAdditionalAmount1Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionUnallocatedBalanc
 /// Total quantity of financial instruments of the balance.
 /// </summary>
 [IsoId("_ujGeIcSTEeeRJJtE9TSlkw")]
+[IsoXmlTag("TtlElgblBal")]
 public interface ITotalEligibleBalance
     : ICorporateActionUnallocatedBalanceSD3Choice,
         IIsoChoiceVariant

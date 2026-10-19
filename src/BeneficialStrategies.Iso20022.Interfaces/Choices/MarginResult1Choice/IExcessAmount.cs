@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarginResult1Choice;
 /// Excess amount that the central counterparty may restitute to the Clearing member.
 /// </summary>
 [IsoId("_Qk1wdtp-Ed-ak6NoX_4Aeg_253315492")]
+[IsoXmlTag("XcssAmt")]
 public interface IExcessAmount : IMarginResult1Choice, IIsoChoiceVariant
 {
     /// <summary>

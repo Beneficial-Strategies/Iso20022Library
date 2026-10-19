@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.WaivingInstruction2Choice;
 /// Type of discount or waiving expressed as a proprietary code.
 /// </summary>
 [IsoId("_PL1e81iPEeaMNZxYNthMeA")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IWaivingInstruction2Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuotationType1Choice;
 /// Type of quotation expressed as a proprietary code.
 /// </summary>
 [IsoId("_aZwzYNK4EeihtcVwfFPNlg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IQuotationType1Choice, IIsoChoiceVariant
 {
     /// <summary>

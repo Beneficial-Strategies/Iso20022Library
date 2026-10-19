@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RatioFormat15Choice;
 /// Ratio expressed as a quotient of quantities.
 /// </summary>
 [IsoId("_CTIcr_pYEeCRofvVIFrSrw")]
+[IsoXmlTag("QtyToQty")]
 public interface IQuantityToQuantity : IRatioFormat15Choice, IIsoChoiceVariant
 {
     /// <summary>

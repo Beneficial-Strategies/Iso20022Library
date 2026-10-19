@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ShipmentSchedule2Choice;
 /// Specifies a shipment schedule, ie, quantity that must be shipped no sooner than the earliest shipment date and no later than the latest shipment date.
 /// </summary>
 [IsoId("_0ZWmk-fHEeKNfc-Rw_dPYg")]
+[IsoXmlTag("ShipmntSubSchdl")]
 public interface IShipmentSubSchedule : IShipmentSchedule2Choice, IIsoChoiceVariant
 {
     /// <summary>

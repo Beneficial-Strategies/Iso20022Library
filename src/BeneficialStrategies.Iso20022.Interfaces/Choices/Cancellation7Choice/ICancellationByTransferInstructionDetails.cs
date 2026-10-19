@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cancellation7Choice;
 /// Information related to the transfer instruction to be cancelled.
 /// </summary>
 [IsoId("_l0CXoQgMEeSFYfyUKDXKaw")]
+[IsoXmlTag("CxlByTrfInstrDtls")]
 public interface ICancellationByTransferInstructionDetails : ICancellation7Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReplacementProcessingStatus8Choi
 /// Provides the processing status of the replacement request.
 /// </summary>
 [IsoId("_ncWQmTqqEeWyoP0PbocV1Q")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IReplacementProcessingStatus8Choice, IIsoChoiceVariant
 {
     /// <summary>

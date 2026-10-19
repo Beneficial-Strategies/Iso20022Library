@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeConfirmation2Choice;
 /// Indicates the type of contract confirmation.
 /// </summary>
 [IsoId("_qo0sYQFXEeaDfK-zDSyB6A")]
+[IsoXmlTag("Confd")]
 public interface IConfirmed : ITradeConfirmation2Choice, IIsoChoiceVariant
 {
     /// <summary>

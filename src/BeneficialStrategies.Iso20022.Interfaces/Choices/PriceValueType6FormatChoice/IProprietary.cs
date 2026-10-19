@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceValueType6FormatChoice;
 /// Proprietary code to express the value of a price.
 /// </summary>
 [IsoId("_RnJiAtp-Ed-ak6NoX_4Aeg_124226634")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IPriceValueType6FormatChoice, IIsoChoiceVariant
 {
     /// <summary>

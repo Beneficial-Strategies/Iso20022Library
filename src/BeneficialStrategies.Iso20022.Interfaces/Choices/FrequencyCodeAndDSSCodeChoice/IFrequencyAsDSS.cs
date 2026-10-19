@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FrequencyCodeAndDSSCodeChoice;
 /// Frequency expressed as a data source scheme and a code used within the data source scheme.
 /// </summary>
 [IsoId("_Uuhiotp-Ed-ak6NoX_4Aeg_726684116")]
+[IsoXmlTag("FrqcyAsDSS")]
 public interface IFrequencyAsDSS : IFrequencyCodeAndDSSCodeChoice, IIsoChoiceVariant
 {
     /// <summary>

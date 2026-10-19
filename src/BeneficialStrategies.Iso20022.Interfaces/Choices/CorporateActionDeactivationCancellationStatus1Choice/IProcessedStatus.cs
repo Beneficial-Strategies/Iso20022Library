@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionDeactivationCance
 /// Provides information about the processing status of the cancellation request.
 /// </summary>
 [IsoId("_RiYWwdp-Ed-ak6NoX_4Aeg_-416590020")]
+[IsoXmlTag("PrcdSts")]
 public interface IProcessedStatus
     : ICorporateActionDeactivationCancellationStatus1Choice,
         IIsoChoiceVariant

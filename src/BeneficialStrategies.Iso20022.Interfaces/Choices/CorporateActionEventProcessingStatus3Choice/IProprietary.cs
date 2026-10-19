@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventProcessingSt
 /// Status of a corporate action or the status of a payment expressed as a proprietary code.
 /// </summary>
 [IsoId("_NVdnSTqqEeWyoP0PbocV1Q")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICorporateActionEventProcessingStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExchangeRateBasis1Choice;
 /// Exchange rate basis expressed as a currency pair.
 /// </summary>
 [IsoId("_PV2OYLpqEea_jI1vMH_RbA")]
+[IsoXmlTag("CcyPair")]
 public interface ICurrencyPair : IExchangeRateBasis1Choice, IIsoChoiceVariant
 {
     /// <summary>

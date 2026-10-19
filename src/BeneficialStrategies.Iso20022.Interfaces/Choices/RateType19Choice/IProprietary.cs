@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateType19Choice;
 /// Rate is determined using a data source scheme.
 /// </summary>
 [IsoId("_GOYbktoqEeCWg-hsBVGrDA_-1425922223")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRateType19Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyAuditTrailOrError1Choice;
 /// Report information about party reference data.
 /// </summary>
 [IsoId("_QqH6IZ9uEee7Qpz45yWJJw")]
+[IsoXmlTag("PtyAudtTrlRpt")]
 public interface IPartyAuditTrailReport : IPartyAuditTrailOrError1Choice, IIsoChoiceVariant
 {
     /// <summary>

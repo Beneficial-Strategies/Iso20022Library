@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestmentFundRole2Choice;
 /// Role expressed as a proprietary code.
 /// </summary>
 [IsoId("_iug4AzhcEeaRwdGFv45qTQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IInvestmentFundRole2Choice, IIsoChoiceVariant
 {
     /// <summary>

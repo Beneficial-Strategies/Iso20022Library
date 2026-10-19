@@ -146,4 +146,22 @@ public class InterfacesTests
         }
         Assert.True(problems.Count == 0, string.Join(Environment.NewLine, problems.Take(20)));
     }
+
+    [Fact]
+    public void EveryChoiceVariantInterface_CarriesTheWrapperTagOfItsRecord()
+    {
+        // A reader that has only the interfaces finds a variant by this tag.
+        var problems = new List<string>();
+        var variants = RecordsAssembly.GetExportedTypes()
+            .Where(t => t.IsClass && typeof(IIsoChoiceVariant).IsAssignableFrom(t) && t.GetCustomAttribute<IsoXmlTagAttribute>() is not null);
+        foreach (var record in variants)
+        {
+            var wanted = record.GetCustomAttribute<IsoXmlTagAttribute>()!.XmlTag;
+            var iface = Interfaces.FirstOrDefault(i => i.Name == "I" + record.Name && i.Namespace == record.Namespace);
+            var actual = iface?.GetCustomAttribute<IsoXmlTagAttribute>()?.XmlTag;
+            if (actual != wanted)
+                problems.Add($"{record.FullName}: record <{wanted}>, interface <{actual ?? "none"}>");
+        }
+        Assert.True(problems.Count == 0, string.Join(Environment.NewLine, problems.Take(20)));
+    }
 }

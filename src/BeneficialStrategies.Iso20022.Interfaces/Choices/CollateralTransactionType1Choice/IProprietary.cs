@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralTransactionType1Choice
 /// Proprietary identification of additional information about the processed instruction.
 /// </summary>
 [IsoId("_oTiyMry1EeivTd4NUfCi2g")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICollateralTransactionType1Choice, IIsoChoiceVariant
 {
     /// <summary>

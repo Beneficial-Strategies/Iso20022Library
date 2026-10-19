@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesOrCash1Choice;
 /// Securities settlement chain parties, accounts and other details.
 /// </summary>
 [IsoId("_v5oPQDchEeOA3chqL9a4Rw")]
+[IsoXmlTag("SctiesDtls")]
 public interface ISecuritiesDetails : ISecuritiesOrCash1Choice, IIsoChoiceVariant
 {
     /// <summary>

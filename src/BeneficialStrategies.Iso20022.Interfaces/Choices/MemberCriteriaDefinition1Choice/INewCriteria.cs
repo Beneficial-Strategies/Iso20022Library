@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MemberCriteriaDefinition1Choice;
 /// Defines the criteria based on which the information is extracted.
 /// </summary>
 [IsoId("_tToNg5lVEeeE1Ya-LgRsuQ")]
+[IsoXmlTag("NewCrit")]
 public interface INewCriteria : IMemberCriteriaDefinition1Choice, IIsoChoiceVariant
 {
     /// <summary>

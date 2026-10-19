@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Product1Choice;
 /// Attributes relating to repurchase agreement cleared by the CCP.
 /// </summary>
 [IsoId("_L8Gl0LVQEeadLcJesEbkTQ")]
+[IsoXmlTag("SctiesFincgTx")]
 public interface ISecuritiesFinancingTransaction : IProduct1Choice, IIsoChoiceVariant
 {
     /// <summary>

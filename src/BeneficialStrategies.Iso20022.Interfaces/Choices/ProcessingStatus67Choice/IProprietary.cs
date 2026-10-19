@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus67Choice;
 /// Specifies a choice of status for the processing of an intra-balance movement.
 /// </summary>
 [IsoId("_XD6lQeFUEeWIA4E9cYSxxQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IProcessingStatus67Choice, IIsoChoiceVariant
 {
     /// <summary>

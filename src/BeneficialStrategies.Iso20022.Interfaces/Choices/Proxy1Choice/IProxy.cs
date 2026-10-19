@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Proxy1Choice;
 /// Specifies the elements required to assign a proxy.
 /// </summary>
 [IsoId("_RD1Zkdp-Ed-ak6NoX_4Aeg_2099927655")]
+[IsoXmlTag("Prxy")]
 public interface IProxy : IProxy1Choice, IIsoChoiceVariant
 {
     /// <summary>

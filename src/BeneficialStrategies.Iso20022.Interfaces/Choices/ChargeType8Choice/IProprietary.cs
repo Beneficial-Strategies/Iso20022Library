@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeType8Choice;
 /// Cost or charge expressed as a proprietary code.
 /// </summary>
 [IsoId("_qk_5g59BEeqxTNfi5y7ywQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IChargeType8Choice, IIsoChoiceVariant
 {
     /// <summary>

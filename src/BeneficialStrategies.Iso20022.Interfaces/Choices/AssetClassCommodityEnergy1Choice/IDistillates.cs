@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnergy1Choice
 /// Distillates energy commodity derivative.
 /// </summary>
 [IsoId("_eoZvQFrWEeWN79Bl6BUd3g")]
+[IsoXmlTag("Dstllts")]
 public interface IDistillates : IAssetClassCommodityEnergy1Choice, IIsoChoiceVariant
 {
     /// <summary>

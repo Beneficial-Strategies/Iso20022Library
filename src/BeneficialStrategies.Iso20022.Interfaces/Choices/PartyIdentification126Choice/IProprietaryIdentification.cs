@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification126Choice;
 /// Unique and unambiguous identifier, as assigned to the party using a proprietary identification scheme.
 /// </summary>
 [IsoId("_WuxzU2pVEeipaMTLlhaKMQ")]
+[IsoXmlTag("PrtryId")]
 public interface IProprietaryIdentification : IPartyIdentification126Choice, IIsoChoiceVariant
 {
     /// <summary>

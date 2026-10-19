@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrBusinessError3Choice;
 /// Specifications of a party defined within a system.
 /// </summary>
 [IsoId("_0NEVY4wXEei289CGNqs21g")]
+[IsoXmlTag("SysPty")]
 public interface ISystemParty : IPartyOrBusinessError3Choice, IIsoChoiceVariant
 {
     /// <summary>

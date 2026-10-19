@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitCriteria6Choice;
 /// Defines the criteria based on which the information is extracted.
 /// </summary>
 [IsoId("_FMyWZW4-EeiU9cctagi5ow")]
+[IsoXmlTag("NewCrit")]
 public interface INewCriteria : ILimitCriteria6Choice, IIsoChoiceVariant
 {
     /// <summary>

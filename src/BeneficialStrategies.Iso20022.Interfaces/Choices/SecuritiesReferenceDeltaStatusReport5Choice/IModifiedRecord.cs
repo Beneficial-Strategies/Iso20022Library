@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesReferenceDeltaStatusRe
 /// Specifies data that has been modified since the previous report.
 /// </summary>
 [IsoId("_o1S5gaWvEeqZmriXpMtonA")]
+[IsoXmlTag("ModfdRcrd")]
 public interface IModifiedRecord : ISecuritiesReferenceDeltaStatusReport5Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status30Choice;
 /// Proprietary status.
 /// </summary>
 [IsoId("_iE4L7_fZEeiNZp_PtLohLw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IStatus30Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeDateCode1Choice;
 /// Trade date expressed as an proprietary code.
 /// </summary>
 [IsoId("_QvaowNp-Ed-ak6NoX_4Aeg_1544421125")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ITradeDateCode1Choice, IIsoChoiceVariant
 {
     /// <summary>

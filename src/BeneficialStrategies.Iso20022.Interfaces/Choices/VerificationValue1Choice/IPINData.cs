@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationValue1Choice;
 /// ISO 8583:2003 bit 52 &amp; bit 53 or bit 50
 /// </summary>
 [IsoId("_4EhKppaNEemfCcEf5rVTyg")]
+[IsoXmlTag("PINData")]
 public interface IPINData : IVerificationValue1Choice, IIsoChoiceVariant
 {
     /// <summary>

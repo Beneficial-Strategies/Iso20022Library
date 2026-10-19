@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditDefaultSwapsDerivative4Cho
 /// A credit default swap derivative on a single name.
 /// </summary>
 [IsoId("_xSzjVSe0Eei12pGEsJIAeQ")]
+[IsoXmlTag("SnglNmCdtDfltSwpDeriv")]
 public interface ISingleNameCreditDefaultSwapDerivative
     : ICreditDefaultSwapsDerivative4Choice,
         IIsoChoiceVariant

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarginProductType1Choice;
 /// Specifies the underlying product of the margin using a proprietary format.
 /// </summary>
 [IsoId("_Qk_hdtp-Ed-ak6NoX_4Aeg_1372873102")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IMarginProductType1Choice, IIsoChoiceVariant
 {
     /// <summary>

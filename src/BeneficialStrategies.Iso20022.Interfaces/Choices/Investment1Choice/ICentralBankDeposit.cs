@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice;
 /// Indicates that the bank deposit is placed at a central bank.
 /// </summary>
 [IsoId("_UYA14LJVEeaYqc4G3TTwhA")]
+[IsoXmlTag("CntrlBkDpst")]
 public interface ICentralBankDeposit : IInvestment1Choice, IIsoChoiceVariant
 {
     /// <summary>

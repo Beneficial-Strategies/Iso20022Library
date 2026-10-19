@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BorrowingReason2Choice;
 /// Borrowing reason expressed as a proprietary code.
 /// </summary>
 [IsoId("_7dQRiZEjEeakHoV5BVecAQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IBorrowingReason2Choice, IIsoChoiceVariant
 {
     /// <summary>

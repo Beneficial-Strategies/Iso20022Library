@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRateFrequency2Choice;
 /// Frequency expressed in tenor notation.
 /// </summary>
 [IsoId("_mNON4fOFEeaS7fYULSI4_Q")]
+[IsoXmlTag("Term")]
 public interface ITerm : IInterestRateFrequency2Choice, IIsoChoiceVariant
 {
     /// <summary>

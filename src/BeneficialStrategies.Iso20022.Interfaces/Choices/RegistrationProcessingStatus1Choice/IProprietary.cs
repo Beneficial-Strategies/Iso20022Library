@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RegistrationProcessingStatus1Cho
 /// Provides the status of the registration processing.
 /// </summary>
 [IsoId("_UYUpI9p-Ed-ak6NoX_4Aeg_170456913")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRegistrationProcessingStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

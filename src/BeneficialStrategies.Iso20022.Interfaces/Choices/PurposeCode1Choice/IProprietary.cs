@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PurposeCode1Choice;
 /// Account type is defined using a data source scheme.
 /// </summary>
 [IsoId("_Q-6dUtp-Ed-ak6NoX_4Aeg_-39586438")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IPurposeCode1Choice, IIsoChoiceVariant
 {
     /// <summary>

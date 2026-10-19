@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.KeyChoiceValue2;
 /// Encrypted value of the cryptographic key.
 /// </summary>
 [IsoId("_FjgS0bTqEeeQy4o2AayYHg")]
+[IsoXmlTag("NcrptdKeyVal")]
 public interface IEncryptedKeyValue : IKeyChoiceValue2, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AllocationSatus3Choice;
 /// Provides the status of allocation of collateral to cover the instruction.
 /// </summary>
 [IsoId("_EAk7iTqqEeWyoP0PbocV1Q")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IAllocationSatus3Choice, IIsoChoiceVariant
 {
     /// <summary>

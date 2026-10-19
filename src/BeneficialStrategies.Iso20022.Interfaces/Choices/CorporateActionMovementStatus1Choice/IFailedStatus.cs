@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionMovementStatus1Ch
 /// Provides information about the settlement failure.
 /// </summary>
 [IsoId("_RiPM19p-Ed-ak6NoX_4Aeg_-1878187408")]
+[IsoXmlTag("FaildSts")]
 public interface IFailedStatus : ICorporateActionMovementStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

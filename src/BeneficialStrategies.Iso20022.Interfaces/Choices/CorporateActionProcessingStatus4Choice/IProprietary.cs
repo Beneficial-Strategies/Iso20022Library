@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionProcessingStatus4
 /// Information related to an identification, for example, party identification or account identification.
 /// </summary>
 [IsoId("_tNku8yXZEeOFIcNWlDEvdQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ICorporateActionProcessingStatus4Choice, IIsoChoiceVariant
 {
     /// <summary>

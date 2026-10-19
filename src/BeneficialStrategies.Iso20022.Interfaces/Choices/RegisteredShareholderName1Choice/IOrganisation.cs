@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RegisteredShareholderName1Choice
 /// Organised structure that is set up for a particular purpose, for example, a business, government body, department, charity, or financial institution.
 /// </summary>
 [IsoId("_yANgEFxYEeWvPv3PXpS3fw")]
+[IsoXmlTag("Org")]
 public interface IOrganisation : IRegisteredShareholderName1Choice, IIsoChoiceVariant
 {
     /// <summary>

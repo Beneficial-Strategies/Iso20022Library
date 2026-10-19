@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateAndAmountFormat20Choice;
 /// Value is expressed as a currency and amount.
 /// </summary>
 [IsoId("_S4q7GieKEeOXAt_43VmZGw")]
+[IsoXmlTag("Amt")]
 public interface IAmount : IRateAndAmountFormat20Choice, IIsoChoiceVariant
 {
     /// <summary>

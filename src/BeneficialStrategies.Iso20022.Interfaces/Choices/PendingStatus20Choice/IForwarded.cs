@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingStatus20Choice;
 /// Allegement is forwarded.
 /// </summary>
 [IsoId("_0k3gwwlIEeGATtfOBToyew_-935306155")]
+[IsoXmlTag("Fwdd")]
 public interface IForwarded : IPendingStatus20Choice, IIsoChoiceVariant
 {
     /// <summary>

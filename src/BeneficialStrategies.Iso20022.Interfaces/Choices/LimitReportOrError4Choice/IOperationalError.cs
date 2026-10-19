@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitReportOrError4Choice;
 /// Indicates that an operational error has been issued during the processing of the related request.
 /// </summary>
 [IsoId("_C3LJ424-EeiU9cctagi5ow")]
+[IsoXmlTag("OprlErr")]
 public interface IOperationalError : ILimitReportOrError4Choice, IIsoChoiceVariant
 {
     /// <summary>

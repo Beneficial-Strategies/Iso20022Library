@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationReason11Choice;
 /// Specifies the reason of the CancellationPending Status.
 /// </summary>
 [IsoId("_A0Fk0tokEeC60axPepSq7g_-754464307")]
+[IsoXmlTag("Rsn")]
 public interface IReason : ICancellationReason11Choice, IIsoChoiceVariant
 {
     /// <summary>

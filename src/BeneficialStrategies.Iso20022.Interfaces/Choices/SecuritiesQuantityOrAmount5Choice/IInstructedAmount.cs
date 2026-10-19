@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesQuantityOrAmount5Choic
 /// Cash amount to be instructed.
 /// </summary>
 [IsoId("_qY_3rffREeiNZp_PtLohLw")]
+[IsoXmlTag("InstdAmt")]
 public interface IInstructedAmount : ISecuritiesQuantityOrAmount5Choice, IIsoChoiceVariant
 {
     /// <summary>

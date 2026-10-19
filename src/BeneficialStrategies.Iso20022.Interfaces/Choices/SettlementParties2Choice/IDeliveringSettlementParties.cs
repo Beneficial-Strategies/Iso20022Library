@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementParties2Choice;
 /// Chain of parties involved in the settlement of a transaction, including receipts and deliveries, book transfers, treasury deals, or other activities, resulting in the movement of a security or amount of money from one account to another.
 /// </summary>
 [IsoId("_-an2lqMOEeCojJW5vEuTEQ_715985560")]
+[IsoXmlTag("DlvrgSttlmPties")]
 public interface IDeliveringSettlementParties : ISettlementParties2Choice, IIsoChoiceVariant
 {
     /// <summary>

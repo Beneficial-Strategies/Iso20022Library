@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice;
 /// Trade is DefaultAction.
 /// </summary>
 [IsoId("_x4XDhQarEe2phaVG0lYKTw")]
+[IsoXmlTag("DfltActn")]
 public interface IDefaultAction : IProcessingStatus98Choice, IIsoChoiceVariant
 {
     /// <summary>

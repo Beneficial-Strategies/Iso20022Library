@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice;
 /// Additional attributes defined by a central security depositary for a party.
 /// </summary>
 [IsoId("_xPt7hWjNEeiRg5NzP0jkQg")]
+[IsoXmlTag("MktSpcfcAttr")]
 public interface IMarketSpecificAttribute : IUpdateLogPartyRecord1Choice, IIsoChoiceVariant
 {
     /// <summary>

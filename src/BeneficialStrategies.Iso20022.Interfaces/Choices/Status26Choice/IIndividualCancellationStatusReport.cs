@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status26Choice;
 /// Status report details of one or more individual orders from a bulk or multiple or switch order cancellation request.
 /// </summary>
 [IsoId("_n7iik0grEeaD2L_hzZaE0w")]
+[IsoXmlTag("IndvCxlStsRpt")]
 public interface IIndividualCancellationStatusReport : IStatus26Choice, IIsoChoiceVariant
 {
     /// <summary>

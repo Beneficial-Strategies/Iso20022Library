@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SequenceRange1Choice;
 /// Particular sequence range specified between a start sequence and an end sequence.
 /// </summary>
 [IsoId("_64OLoIy3EeeGkvZr3jtnCQ")]
+[IsoXmlTag("FrToSeq")]
 public interface IFromToSequence : ISequenceRange1Choice, IIsoChoiceVariant
 {
     /// <summary>

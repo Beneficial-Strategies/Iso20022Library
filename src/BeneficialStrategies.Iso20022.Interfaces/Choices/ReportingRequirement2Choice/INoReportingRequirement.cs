@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportingRequirement2Choice;
 /// Specifies categories of statuses of a derivative when there is no reporting requirement for both counterparties.
 /// </summary>
 [IsoId("_IVUQM155Ee2a_-MvhEjKmA")]
+[IsoXmlTag("NoRptgRqrmnt")]
 public interface INoReportingRequirement : IReportingRequirement2Choice, IIsoChoiceVariant
 {
     /// <summary>

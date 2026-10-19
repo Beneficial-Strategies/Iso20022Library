@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IndividualPersonIdentificationCh
 /// Human entity, as distinguished from a corporate entity (which is sometimes referred to as an &apos;artificial person&apos;).
 /// </summary>
 [IsoId("_RE37YNp-Ed-ak6NoX_4Aeg_1465032202")]
+[IsoXmlTag("PrsnNm")]
 public interface IPersonName : IIndividualPersonIdentificationChoice, IIsoChoiceVariant
 {
     /// <summary>

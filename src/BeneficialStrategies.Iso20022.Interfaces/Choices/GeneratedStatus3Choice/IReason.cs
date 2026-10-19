@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneratedStatus3Choice;
 /// Specifies the reason of the GeneratedStatus.
 /// </summary>
 [IsoId("_1ItJwf7sEeCvPoRGOxRobQ")]
+[IsoXmlTag("Rsn")]
 public interface IReason : IGeneratedStatus3Choice, IIsoChoiceVariant
 {
     /// <summary>

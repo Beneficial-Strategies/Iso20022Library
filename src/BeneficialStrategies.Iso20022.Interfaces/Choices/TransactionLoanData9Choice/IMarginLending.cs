@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData9Choice;
 /// Details of the margin lending transaction.
 /// </summary>
 [IsoId("_pgDKsKoMEemdLtwzt4CWxg")]
+[IsoXmlTag("MrgnLndg")]
 public interface IMarginLending : ITransactionLoanData9Choice, IIsoChoiceVariant
 {
     /// <summary>

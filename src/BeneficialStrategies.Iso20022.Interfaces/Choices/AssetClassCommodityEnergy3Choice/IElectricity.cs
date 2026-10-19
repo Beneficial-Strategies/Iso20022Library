@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnergy3Choice
 /// Definition of Electricity energy commodity derivative.
 /// </summary>
 [IsoId("_O67yAU8SEe2PGo0mhYCh1g")]
+[IsoXmlTag("Elctrcty")]
 public interface IElectricity : IAssetClassCommodityEnergy3Choice, IIsoChoiceVariant
 {
     /// <summary>

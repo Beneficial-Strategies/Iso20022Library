@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient4Choice;
 /// Identification of a protection key without a session key, shared and previously exchanged between the initiator and the recipient.
 /// </summary>
 [IsoId("_N1aSpWi0EeS87LmvcA55sg")]
+[IsoXmlTag("KeyIdr")]
 public interface IKeyIdentifier : IRecipient4Choice, IIsoChoiceVariant
 {
     /// <summary>

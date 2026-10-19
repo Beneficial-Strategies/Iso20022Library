@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RepoCallRequestStatus2Choice;
 /// Proprietary status.
 /// </summary>
 [IsoId("_UWYvdtp-Ed-ak6NoX_4Aeg_1284346217")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IRepoCallRequestStatus2Choice, IIsoChoiceVariant
 {
     /// <summary>

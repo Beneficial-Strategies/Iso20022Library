@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralValueCriteriaDefinitio
 /// Explicitly defines the query criteria.
 /// </summary>
 [IsoId("__xM6gzpsEemk2e6qGBk8IQ")]
+[IsoXmlTag("NewCrit")]
 public interface INewCriteria : ICollateralValueCriteriaDefinition3Choice, IIsoChoiceVariant
 {
     /// <summary>

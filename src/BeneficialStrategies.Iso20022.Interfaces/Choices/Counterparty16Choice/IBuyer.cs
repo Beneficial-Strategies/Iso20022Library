@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Counterparty16Choice;
 /// Party that buys goods or services, or a financial instrument.
 /// </summary>
 [IsoId("_c69UzTi8Eeydid5dcNPKvg")]
+[IsoXmlTag("Buyr")]
 public interface IBuyer : ICounterparty16Choice, IIsoChoiceVariant
 {
     /// <summary>

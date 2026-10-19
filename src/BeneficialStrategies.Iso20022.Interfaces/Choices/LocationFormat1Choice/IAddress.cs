@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LocationFormat1Choice;
 /// Specifies physical address of the meeting.
 /// </summary>
 [IsoId("_RXD3mNp-Ed-ak6NoX_4Aeg_-217471735")]
+[IsoXmlTag("Adr")]
 public interface IAddress : ILocationFormat1Choice, IIsoChoiceVariant
 {
     /// <summary>

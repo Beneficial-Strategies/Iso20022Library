@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketTypeFormat1Choice;
 /// Proprietary identification of the type of market in which transactions take place.
 /// </summary>
 [IsoId("_Q4XJY9p-Ed-ak6NoX_4Aeg_1581481179")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IMarketTypeFormat1Choice, IIsoChoiceVariant
 {
     /// <summary>

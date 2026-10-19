@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundOrderType5Choice;
 /// Type of the investment fund order expressed as a proprietary code.
 /// </summary>
 [IsoId("_Ix7lo18rEeicg40_9gK9vQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IFundOrderType5Choice, IIsoChoiceVariant
 {
     /// <summary>

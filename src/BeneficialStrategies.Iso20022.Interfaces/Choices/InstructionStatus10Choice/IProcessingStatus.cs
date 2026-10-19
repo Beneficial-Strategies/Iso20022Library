@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus10Choice;
 /// Status advising on the processing of the instruction.
 /// </summary>
 [IsoId("_cBRCQ_NfEeqRfth943bvEA")]
+[IsoXmlTag("PrcgSts")]
 public interface IProcessingStatus : IInstructionStatus10Choice, IIsoChoiceVariant
 {
     /// <summary>

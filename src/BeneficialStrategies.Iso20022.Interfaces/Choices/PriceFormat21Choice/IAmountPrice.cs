@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat21Choice;
 /// Price expressed as a currency and amount.
 /// </summary>
 [IsoId("_yBTOYeEPEd-1Ktb5rVaajw")]
+[IsoXmlTag("AmtPric")]
 public interface IAmountPrice : IPriceFormat21Choice, IIsoChoiceVariant
 {
     /// <summary>

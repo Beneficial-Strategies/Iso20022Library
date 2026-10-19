@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferType2Choice;
 /// Transfer type expressed as a proprietary code.
 /// </summary>
 [IsoId("_3m40RaxWEemRcYBAkJyjkg")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ITransferType2Choice, IIsoChoiceVariant
 {
     /// <summary>

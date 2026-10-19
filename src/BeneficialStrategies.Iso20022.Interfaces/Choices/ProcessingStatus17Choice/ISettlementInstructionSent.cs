@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus17Choice;
 /// Settlement Instruction for the trade is sent.
 /// </summary>
 [IsoId("_A5JrAtokEeC60axPepSq7g_1330425296")]
+[IsoXmlTag("SttlmInstrSnt")]
 public interface ISettlementInstructionSent : IProcessingStatus17Choice, IIsoChoiceVariant
 {
     /// <summary>

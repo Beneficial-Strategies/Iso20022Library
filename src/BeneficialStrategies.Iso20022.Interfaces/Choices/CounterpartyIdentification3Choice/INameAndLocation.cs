@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyIdentification3Choic
 /// Identification of the counterparty through the name and the location.
 /// </summary>
 [IsoId("_mcwKscEcEea7jLfvGi1PDw")]
+[IsoXmlTag("NmAndLctn")]
 public interface INameAndLocation : ICounterpartyIdentification3Choice, IIsoChoiceVariant
 {
     /// <summary>

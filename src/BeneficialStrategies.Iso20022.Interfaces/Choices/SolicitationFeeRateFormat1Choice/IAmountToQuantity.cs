@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SolicitationFeeRateFormat1Choice
 /// Ratio expressed as an amount to quantity ratio.
 /// </summary>
 [IsoId("_UOMcytp-Ed-ak6NoX_4Aeg_127752237")]
+[IsoXmlTag("AmtToQty")]
 public interface IAmountToQuantity : ISolicitationFeeRateFormat1Choice, IIsoChoiceVariant
 {
     /// <summary>

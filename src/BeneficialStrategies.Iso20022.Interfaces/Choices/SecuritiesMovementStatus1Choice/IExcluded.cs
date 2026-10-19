@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesMovementStatus1Choice;
 /// At least one security has been excluded from use as collateral for all transactions in the triparty agreement (or in the eligibility set).
 /// </summary>
 [IsoId("_aHcyEOCzEei2UYJ62ws-Fw")]
+[IsoXmlTag("Excld")]
 public interface IExcluded : ISecuritiesMovementStatus1Choice, IIsoChoiceVariant
 {
     /// <summary>

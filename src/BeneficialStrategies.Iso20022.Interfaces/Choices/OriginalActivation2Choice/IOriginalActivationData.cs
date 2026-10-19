@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalActivation2Choice;
 /// Provides the full original activation data.
 /// </summary>
 [IsoId("_UPBU8-H7Eeqbls7Gk4-ckA")]
+[IsoXmlTag("OrgnlActvtnData")]
 public interface IOriginalActivationData : IOriginalActivation2Choice, IIsoChoiceVariant
 {
     /// <summary>

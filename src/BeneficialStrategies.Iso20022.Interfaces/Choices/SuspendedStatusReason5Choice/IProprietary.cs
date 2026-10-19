@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SuspendedStatusReason5Choice;
 /// Suspended reason expressed as a proprietary code.
 /// </summary>
 [IsoId("_o0mHQ0HlEea8I67lh6qdSQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : ISuspendedStatusReason5Choice, IIsoChoiceVariant
 {
     /// <summary>

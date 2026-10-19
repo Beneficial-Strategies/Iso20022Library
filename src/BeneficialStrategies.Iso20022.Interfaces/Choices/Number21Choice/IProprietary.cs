@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Number21Choice;
 /// Number of maximum 35 text, with the possibility to provide an issuer for the number identification.
 /// </summary>
 [IsoId("_AeehNdokEeC60axPepSq7g_-747606838")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : INumber21Choice, IIsoChoiceVariant
 {
     /// <summary>

@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EUCapitalGainType3Choice;
 /// Specifies whether capital gain is in the scope of the European directive on taxation of savings income in the form of interest payments (Council Directive 2003/48/EC 3 June), or an income realised upon sale, a refund or redemption of shares and units, etc.
 /// </summary>
 [IsoId("_X3dy85BhEeakHoV5BVecAQ")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IEUCapitalGainType3Choice, IIsoChoiceVariant
 {
     /// <summary>

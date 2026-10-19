@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAccountOrOperationalEr
 /// Operational error resulting from a rejection.
 /// </summary>
 [IsoId("_x4sjgzp1Eemk2e6qGBk8IQ")]
+[IsoXmlTag("OprlErr")]
 public interface IOperationalError : ISecuritiesAccountOrOperationalError3Choice, IIsoChoiceVariant
 {
     /// <summary>

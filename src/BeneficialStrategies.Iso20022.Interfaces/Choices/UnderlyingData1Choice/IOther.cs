@@ -10,6 +10,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingData1Choice;
 /// Usage: this element can be used for an investigation on any other data, such as a cheque.
 /// </summary>
 [IsoId("_CXmpalRtEe23M4WgERMsYw")]
+[IsoXmlTag("Othr")]
 public interface IOther : IUnderlyingData1Choice, IIsoChoiceVariant
 {
     /// <summary>

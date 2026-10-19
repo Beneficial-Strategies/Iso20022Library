@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormatChoice;
 /// Place of safekeeping expressed as a code and BIC.
 /// </summary>
 [IsoId("_RB5f5dp-Ed-ak6NoX_4Aeg_-334909529")]
+[IsoXmlTag("Id")]
 public interface IIdentification : ISafekeepingPlaceFormatChoice, IIsoChoiceVariant
 {
     /// <summary>

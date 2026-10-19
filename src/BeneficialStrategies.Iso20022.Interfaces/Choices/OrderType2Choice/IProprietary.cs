@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderType2Choice;
 /// Order type expressed as a proprietary code.
 /// </summary>
 [IsoId("_dOFRw1xUEeWvPv3PXpS3fw")]
+[IsoXmlTag("Prtry")]
 public interface IProprietary : IOrderType2Choice, IIsoChoiceVariant
 {
     /// <summary>

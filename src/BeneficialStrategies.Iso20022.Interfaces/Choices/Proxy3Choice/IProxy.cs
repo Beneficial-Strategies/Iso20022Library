@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Proxy3Choice;
 /// Proxy assignment and registration information.
 /// </summary>
 [IsoId("_kQJ7Ia09EemDtrWpq90Ckg")]
+[IsoXmlTag("Prxy")]
 public interface IProxy : IProxy3Choice, IIsoChoiceVariant
 {
     /// <summary>

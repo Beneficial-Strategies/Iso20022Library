@@ -9,6 +9,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus4Choice;
 /// Status of the switch order is rejected.
 /// </summary>
 [IsoId("_9wxHx0H8EeaV3ab_pHzFIQ")]
+[IsoXmlTag("Rjctd")]
 public interface IRejected : IOrderStatus4Choice, IIsoChoiceVariant
 {
     /// <summary>
