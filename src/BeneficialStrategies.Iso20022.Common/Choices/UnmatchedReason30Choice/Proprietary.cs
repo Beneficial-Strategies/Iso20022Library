@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnmatchedReason30Choice
     [IsoId("_eEnmgOCYEei2UYJ62ws-Fw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : UnmatchedReason30Choice_
+    public partial record Proprietary : UnmatchedReason30Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

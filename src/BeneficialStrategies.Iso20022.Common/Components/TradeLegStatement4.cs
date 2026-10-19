@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Vbog8YcREe-U27oWwgmhCQ")]
 [DisplayName("Trade Leg Statement4")]
-public record TradeLegStatement4
+public partial record TradeLegStatement4
 {
     /// <summary>
     /// Clearing Account.

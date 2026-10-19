@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_j-xs4UjtEe-KhcStGV4xTg")]
 [DisplayName("Trade Data45")]
-public record TradeData45
+public partial record TradeData45
 {
     /// <summary>
     /// Message Identification.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ghqtIZBvEe6TWIDarRgYow")]
 [DisplayName("Fee Collection Reference2")]
-public record FeeCollectionReference2
+public partial record FeeCollectionReference2
 {
     /// <summary>
     /// Assigner Entity.

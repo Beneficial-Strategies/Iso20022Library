@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrBusinessError4Choice
     /// System Party.
     /// </summary>
     [DisplayName("System Party")]
-    public record SystemParty : PartyOrBusinessError4Choice_
+    public partial record SystemParty : PartyOrBusinessError4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

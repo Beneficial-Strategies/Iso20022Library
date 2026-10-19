@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.caad;
 /// </summary>
 [IsoId("_LEPLMY1OEe6S0_1AaJzQCA")]
 [DisplayName("Reconciliation Initiation V04")]
-public record ReconciliationInitiationV04 : IOuterRecord
+public partial record ReconciliationInitiationV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_UpAwgNp-Ed-ak6NoX_4Aeg_-2773741")]
 [DisplayName("Buy In1")]
 [Obsolete("Obsolete per ISO 20022 specification.")]
-public record BuyIn1
+public partial record BuyIn1
 {
     /// <summary>
     /// Indicates whether the message is a warning only or a notification.

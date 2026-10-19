@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeographicLocation1Choice
     [IsoId("_hutYMIn5EeShMpas3885ww")]
     [DisplayName("Geographic Coordinates")]
     [IsoXmlTag("GeogcCordints")]
-    public record GeographicCoordinates : GeographicLocation1Choice_
+    public partial record GeographicCoordinates : GeographicLocation1Choice_
     {
         /// <summary>
         /// Latitude measured in degrees, minutes and seconds, following by &apos;N&apos; for the north and &apos;S&apos; for the south of the equator (for example 48°51&apos;29&quot; N for the Eiffel Tower latitude).

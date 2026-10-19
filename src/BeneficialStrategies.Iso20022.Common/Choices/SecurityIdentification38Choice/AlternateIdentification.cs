@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification38Choice
     /// Alternate Identification.
     /// </summary>
     [DisplayName("Alternate Identification")]
-    public record AlternateIdentification : SecurityIdentification38Choice_
+    public partial record AlternateIdentification : SecurityIdentification38Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

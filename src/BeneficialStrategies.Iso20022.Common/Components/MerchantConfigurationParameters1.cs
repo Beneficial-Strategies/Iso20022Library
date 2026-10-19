@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_m-dkUGptEeSMqvBfBY1c9A")]
 [DisplayName("Merchant Configuration Parameters")]
-public record MerchantConfigurationParameters1
+public partial record MerchantConfigurationParameters1
 {
     /// <summary>
     /// Identification of the merchant for the MTM, if the POI manages several merchants.

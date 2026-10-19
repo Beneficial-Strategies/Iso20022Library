@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mG754GqCEeSojYXQbRlLzA")]
 [DisplayName("Maintenance Identification Association")]
-public record MaintenanceIdentificationAssociation1
+public partial record MaintenanceIdentificationAssociation1
 {
     /// <summary>
     /// Identifier for the master terminal manager.

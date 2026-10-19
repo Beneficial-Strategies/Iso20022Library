@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RJDQwNp-Ed-ak6NoX_4Aeg_2070733092")]
 [DisplayName("Activity Details")]
-public record ActivityDetails1
+public partial record ActivityDetails1
 {
     /// <summary>
     /// Date and time when the activity occurred.

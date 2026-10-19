@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_cg8o6-LxEeWOD7aAy2fAcA")]
     [DisplayName("Legal Restrictions 5 Choice")]
-    public abstract record LegalRestrictions5Choice_ { }
+    public abstract partial record LegalRestrictions5Choice_ { }
 }

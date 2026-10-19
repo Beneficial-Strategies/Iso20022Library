@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_eY4Ls1K0EeOsJr32EK1NAQ")]
     [DisplayName("Party Or Currency 1 Choice")]
-    public abstract record PartyOrCurrency1Choice_ { }
+    public abstract partial record PartyOrCurrency1Choice_ { }
 }

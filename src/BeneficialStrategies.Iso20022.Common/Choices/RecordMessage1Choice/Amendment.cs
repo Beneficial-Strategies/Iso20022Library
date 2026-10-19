@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice
     /// </summary>
     [IsoId("_JgxnIFZXEeen1vB4iz5SyA")]
     [DisplayName("Amendment")]
-    public record Amendment : RecordMessage1Choice_
+    public partial record Amendment : RecordMessage1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

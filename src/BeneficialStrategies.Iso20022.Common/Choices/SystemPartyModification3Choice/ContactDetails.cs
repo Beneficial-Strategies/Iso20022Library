@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification3Choice
     /// Contact Details.
     /// </summary>
     [DisplayName("Contact Details")]
-    public record ContactDetails : SystemPartyModification3Choice_
+    public partial record ContactDetails : SystemPartyModification3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SQk5gtp-Ed-ak6NoX_4Aeg_1384086328")]
 [DisplayName("Interest Amount")]
-public record InterestAmount2
+public partial record InterestAmount2
 {
     /// <summary>
     /// Amount of money representing an interest payment.

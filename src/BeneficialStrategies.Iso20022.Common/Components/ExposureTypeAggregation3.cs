@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ml-goSs9EeySlt9bF77XfA")]
 [DisplayName("Exposure Type Aggregation")]
-public record ExposureTypeAggregation3
+public partial record ExposureTypeAggregation3
 {
     /// <summary>
     /// Specifies the underlying business area/type of trade causing the exposure.

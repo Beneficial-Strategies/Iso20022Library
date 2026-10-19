@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
     /// </summary>
     [IsoId("_yJhSp4v-Eei289CGNqs21g")]
     [DisplayName("Technical Address")]
-    public record TechnicalAddress : SystemPartyModification2Choice_
+    public partial record TechnicalAddress : SystemPartyModification2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("TechAdr")]

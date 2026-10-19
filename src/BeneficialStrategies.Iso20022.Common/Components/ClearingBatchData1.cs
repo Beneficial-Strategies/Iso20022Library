@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MCJ34FA6EeedyPuM0kK2EQ")]
 [DisplayName("Clearing Batch Data")]
-public record ClearingBatchData1
+public partial record ClearingBatchData1
 {
     /// <summary>
     /// Type of clearing method used.

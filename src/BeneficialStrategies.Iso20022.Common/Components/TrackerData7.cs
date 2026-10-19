@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_1YwfgTEyEe6g-ffJsqGiSA")]
 [Description(@"Specifies the detailed information as provided by a payment tracking system.")]
 [DisplayName("Tracker Data7")]
-public record TrackerData7
+public partial record TrackerData7
 {
     /// <summary>
     /// Point in time when an update to the tracking system has been confirmed.

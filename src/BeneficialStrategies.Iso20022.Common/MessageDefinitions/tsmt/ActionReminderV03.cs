@@ -37,7 +37,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 )]
 [IsoId("_hnA9-NE8Ed-BzquC8wXy7w_-2083336927")]
 [DisplayName("Action Reminder V")]
-public record ActionReminderV03 : IOuterRecord
+public partial record ActionReminderV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

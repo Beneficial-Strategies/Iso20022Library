@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_1iUrOzEyEe6g-ffJsqGiSA")]
     [DisplayName("Original Mandate11Choice")]
-    public abstract record OriginalMandate11Choice_ { }
+    public abstract partial record OriginalMandate11Choice_ { }
 }

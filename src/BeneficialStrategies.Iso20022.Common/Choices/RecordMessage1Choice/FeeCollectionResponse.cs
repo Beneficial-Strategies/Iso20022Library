@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice
     /// </summary>
     [IsoId("_3kH-4FZXEeen1vB4iz5SyA")]
     [DisplayName("Fee Collection Response")]
-    public record FeeCollectionResponse : RecordMessage1Choice_
+    public partial record FeeCollectionResponse : RecordMessage1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

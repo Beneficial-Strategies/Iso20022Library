@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RYGZZdp-Ed-ak6NoX_4Aeg_909721344")]
 [DisplayName("Invoice Request Information")]
-public record InvoiceRequestInformation1
+public partial record InvoiceRequestInformation1
 {
     /// <summary>
     /// General information that unambiguously identify the invoice to be financed, such as invoice type, invoice number and issue date.

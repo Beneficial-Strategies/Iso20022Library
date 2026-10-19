@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_G5i8sWp1EeSMqvBfBY1c9A")]
 [DisplayName("Acceptor Rejection")]
-public record AcceptorRejection3
+public partial record AcceptorRejection3
 {
     /// <summary>
     /// Reject reason of the request or the advice.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_s8JQ4LksEe68nbz8Nl_hLQ")]
 [DisplayName("Correspondence Notification1")]
-public record CorrespondenceNotification1
+public partial record CorrespondenceNotification1
 {
     /// <summary>
     /// Sender Notification Identification.

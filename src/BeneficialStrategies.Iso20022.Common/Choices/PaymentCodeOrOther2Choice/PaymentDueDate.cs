@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentCodeOrOther2Choice
     /// </summary>
     [IsoId("_R2KHExVgEeOrY9qSHVspCA")]
     [DisplayName("Payment Due Date")]
-    public record PaymentDueDate : PaymentCodeOrOther2Choice_
+    public partial record PaymentDueDate : PaymentCodeOrOther2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

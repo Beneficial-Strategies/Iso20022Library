@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_M9-J0Ss9EeySlt9bF77XfA")]
 [DisplayName("Transaction")]
-public record Transaction124
+public partial record Transaction124
 {
     /// <summary>
     /// Unique reference identifying the triparty collateral management transaction from the client&apos;s point of view.

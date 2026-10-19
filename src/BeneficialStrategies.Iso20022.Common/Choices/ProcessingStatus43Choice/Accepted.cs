@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus43Choice
     [IsoId("_fDHA8VhFEeOMYfRGLS0NbA")]
     [DisplayName("Accepted")]
     [IsoXmlTag("Accptd")]
-    public record Accepted : ProcessingStatus43Choice_
+    public partial record Accepted : ProcessingStatus43Choice_
     {
         /// <summary>
         /// Reason for the accepted status.

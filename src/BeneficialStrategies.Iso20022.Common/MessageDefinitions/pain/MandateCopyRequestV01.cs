@@ -31,7 +31,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 )]
 [IsoId("_fptHIG6qEeaUkthD_kt0tA")]
 [DisplayName("Mandate Copy Request V")]
-public record MandateCopyRequestV01 : IOuterRecord
+public partial record MandateCopyRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

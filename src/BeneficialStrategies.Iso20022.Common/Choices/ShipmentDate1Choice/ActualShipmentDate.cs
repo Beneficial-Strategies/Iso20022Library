@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ShipmentDate1Choice
     /// </summary>
     [IsoId("_1m5GsDATEeOKib24wnHaFg")]
     [DisplayName("Actual Shipment Date")]
-    public record ActualShipmentDate : ShipmentDate1Choice_
+    public partial record ActualShipmentDate : ShipmentDate1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

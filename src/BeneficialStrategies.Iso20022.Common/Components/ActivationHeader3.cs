@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3mBBQTEyEe6g-ffJsqGiSA")]
 [DisplayName("Activation Header3")]
-public record ActivationHeader3
+public partial record ActivationHeader3
 {
     /// <summary>
     /// Message Identification.

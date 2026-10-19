@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.supl;
 [Description(@"Supplementary data for payment message definitions.")]
 [IsoId("_ZAIu0PwLEeGHDMP28rpT3g_-1117810318")]
 [DisplayName("Payment SD 1 V")]
-public record PaymentSD1V01 : IOuterRecord
+public partial record PaymentSD1V01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

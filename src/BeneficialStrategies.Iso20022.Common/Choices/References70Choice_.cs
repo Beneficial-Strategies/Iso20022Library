@@ -23,5 +23,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_21pbMFSLEemTt7251YwCKw")]
     [DisplayName("References 70 Choice")]
-    public abstract record References70Choice_ { }
+    public abstract partial record References70Choice_ { }
 }

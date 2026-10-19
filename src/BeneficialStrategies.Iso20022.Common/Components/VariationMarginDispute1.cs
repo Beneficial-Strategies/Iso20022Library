@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UllpEdp-Ed-ak6NoX_4Aeg_-1732352034")]
 [DisplayName("Variation Margin Dispute")]
-public record VariationMarginDispute1
+public partial record VariationMarginDispute1
 {
     /// <summary>
     /// Details of the disputed instruction.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Y4YjZTE_Ee62xuUQ2zyZww")]
 [DisplayName("Party Reference Data Change3")]
-public record PartyReferenceDataChange3
+public partial record PartyReferenceDataChange3
 {
     /// <summary>
     /// Party Identification.

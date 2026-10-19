@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RX8oZdp-Ed-ak6NoX_4Aeg_1393986563")]
 [DisplayName("Agreement Clauses")]
-public record AgreementClauses1
+public partial record AgreementClauses1
 {
     /// <summary>
     /// Description of agreement clauses, given in a textual form.

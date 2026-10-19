@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice
     /// <summary>Specifies the reversal initiation message.</summary>
     [IsoId("_kNBj0W7-EfC68Y4jZPNEug")]
     [DisplayName("Reversal Initiation")]
-    public record ReversalInitiation : RecordMessage2Choice_
+    public partial record ReversalInitiation : RecordMessage2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("RvslInitn")]

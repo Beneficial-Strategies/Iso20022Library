@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TLSOQNp-Ed-ak6NoX_4Aeg_-1226899977")]
 [DisplayName("Option")]
-public record Option3
+public partial record Option3
 {
     /// <summary>
     /// Specifies the call and the put amount of the underlying foreign exchange trade.

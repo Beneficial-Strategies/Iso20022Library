@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionRateSD6Choice
     /// </summary>
     [IsoId("_1kW2YTL3EeKU9IrkkToqcw_-1173624567")]
     [DisplayName("New To Old")]
-    public record NewToOld : CorporateActionRateSD6Choice_
+    public partial record NewToOld : CorporateActionRateSD6Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("NewToOd")]

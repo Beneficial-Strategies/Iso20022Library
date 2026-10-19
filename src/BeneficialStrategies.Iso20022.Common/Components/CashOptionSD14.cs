@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_b5H9YXGyEe6S2Llv74R19w")]
 [DisplayName("Cash Option SD14")]
-public record CashOptionSD14
+public partial record CashOptionSD14
 {
     /// <summary>
     /// Place And Name.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
     /// </summary>
     [IsoId("__edeAov_Eei289CGNqs21g")]
     [DisplayName("Residence Type")]
-    public record ResidenceType : SystemPartyModification2Choice_
+    public partial record ResidenceType : SystemPartyModification2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7175Qa4AEeWL1uap3dNhCQ")]
 [DisplayName("Detailed Amount")]
-public record DetailedAmount16
+public partial record DetailedAmount16
 {
     /// <summary>
     /// Link to the account for multi-account deposit.

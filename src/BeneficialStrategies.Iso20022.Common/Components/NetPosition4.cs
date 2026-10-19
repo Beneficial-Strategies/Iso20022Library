@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_feCaAYcREe-U27oWwgmhCQ")]
 [DisplayName("Net Position4")]
-public record NetPosition4
+public partial record NetPosition4
 {
     /// <summary>
     /// Clearing Account.

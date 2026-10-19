@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(PutType3Choice.Proprietary), nameof(PutType3Choice.Proprietary))]
     [IsoId("_bj1s8eLcEeWFtOV72FbX9w")]
     [DisplayName("Put Type 3 Choice")]
-    public abstract record PutType3Choice_ { }
+    public abstract partial record PutType3Choice_ { }
 }

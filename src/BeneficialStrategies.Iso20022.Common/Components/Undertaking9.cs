@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-GKNcXltEeG7BsjMvd1mEw_-1016448236")]
 [DisplayName("Undertaking")]
-public record Undertaking9
+public partial record Undertaking9
 {
     /// <summary>
     /// Unique and unambiguous identifier assigned by the issuer to the undertaking, for example the guarantee or standby number.

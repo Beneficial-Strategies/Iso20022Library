@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_eNi0RZIOEe-HRNGM304Vlw")]
 [DisplayName("Clearing7")]
-public record Clearing7
+public partial record Clearing7
 {
     /// <summary>
     /// Settlement Netting Eligible Code.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TIc8stp-Ed-ak6NoX_4Aeg_-1119895045")]
 [DisplayName("Amounts And Value Date")]
-public record AmountsAndValueDate2
+public partial record AmountsAndValueDate2
 {
     /// <summary>
     /// Call amount and currency of a foreign exchange option trade.

@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.trck;
 )]
 [IsoId("_9-O68UN7Ee-QZYT2pcGFZw")]
 [DisplayName("Payment Status Tracker Report V03")]
-public record PaymentStatusTrackerReportV03 : IOuterRecord
+public partial record PaymentStatusTrackerReportV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

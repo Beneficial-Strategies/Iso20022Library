@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_oGnfIQufEeqw5uEXxQ9H4g")]
 [DisplayName("Merchant Configuration Parameters")]
-public record MerchantConfigurationParameters5
+public partial record MerchantConfigurationParameters5
 {
     /// <summary>
     /// Type of action for the configuration parameters.

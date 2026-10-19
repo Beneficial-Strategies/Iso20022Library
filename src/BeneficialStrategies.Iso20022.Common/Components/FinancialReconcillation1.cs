@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OeFcWcypEeiqqJhU2tqK8A")]
 [DisplayName("Financial Reconcillation")]
-public record FinancialReconcillation1
+public partial record FinancialReconcillation1
 {
     /// <summary>
     /// Reconciliation credit or debit indicator.

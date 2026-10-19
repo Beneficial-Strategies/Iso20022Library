@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YtaCdTE_Ee62xuUQ2zyZww")]
 [DisplayName("Party Audit Trail2")]
-public record PartyAuditTrail2
+public partial record PartyAuditTrail2
 {
     /// <summary>
     /// Record.

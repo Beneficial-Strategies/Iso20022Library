@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CertifiedCharacteristics2Choice
     [IsoId("_3DBVOTANEeOKib24wnHaFg")]
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
-    public record Quantity : CertifiedCharacteristics2Choice_
+    public partial record Quantity : CertifiedCharacteristics2Choice_
     {
         /// <summary>
         /// Specifies a unit of measure with a code or free text.

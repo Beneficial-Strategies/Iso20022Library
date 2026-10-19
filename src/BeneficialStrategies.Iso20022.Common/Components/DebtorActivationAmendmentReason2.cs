@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ULNL8eH7Eeqbls7Gk4-ckA")]
 [DisplayName("Debtor Activation Amendment Reason")]
-public record DebtorActivationAmendmentReason2
+public partial record DebtorActivationAmendmentReason2
 {
     /// <summary>
     /// Party that issues the amendment request.

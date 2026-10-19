@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.trea;
 )]
 [IsoId("_V5V16NE8Ed-BzquC8wXy7w_-1324281")]
 [DisplayName("Withdrawal Notification V")]
-public record WithdrawalNotificationV01 : IOuterRecord
+public partial record WithdrawalNotificationV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

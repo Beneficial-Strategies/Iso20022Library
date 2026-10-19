@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KvWMATgEEei6RvewLQWEqw")]
 [DisplayName("Processing Characteristics")]
-public record ProcessingCharacteristics5
+public partial record ProcessingCharacteristics5
 {
     /// <summary>
     /// Currency in which a redemption is accepted.

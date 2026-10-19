@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RFLdZtp-Ed-ak6NoX_4Aeg_-642511348")]
 [DisplayName("Element Identification")]
-public record ElementIdentification3
+public partial record ElementIdentification3
 {
     /// <summary>
     /// Specifies from the root of the message the complete path of the element that violated a rule.

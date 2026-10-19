@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-AylQnltEeG7BsjMvd1mEw_1908468693")]
 [DisplayName("Demand")]
-public record Demand1
+public partial record Demand1
 {
     /// <summary>
     /// Unique and unambiguous identifier assigned by the presenting party to the demand.

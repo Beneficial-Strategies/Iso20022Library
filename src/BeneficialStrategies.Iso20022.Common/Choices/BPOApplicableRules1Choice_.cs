@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_jjfsgNNqEeKdOs2hjJ_3WQ")]
     [DisplayName("BPO Applicable Rules 1 Choice")]
-    public abstract record BPOApplicableRules1Choice_ { }
+    public abstract partial record BPOApplicableRules1Choice_ { }
 }

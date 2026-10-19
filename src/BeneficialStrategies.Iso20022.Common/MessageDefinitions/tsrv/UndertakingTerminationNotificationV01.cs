@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 )]
 [IsoId("_9gdfZXltEeG7BsjMvd1mEw_-1901363318")]
 [DisplayName("Undertaking Termination Notification V")]
-public record UndertakingTerminationNotificationV01 : IOuterRecord
+public partial record UndertakingTerminationNotificationV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

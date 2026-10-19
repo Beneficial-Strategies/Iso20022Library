@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FCdpMF_6EeiNMJ262H2pWg")]
 [DisplayName("Fund Parties")]
-public record FundParties1
+public partial record FundParties1
 {
     /// <summary>
     /// Guarantor of the financial instrument. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 00080.

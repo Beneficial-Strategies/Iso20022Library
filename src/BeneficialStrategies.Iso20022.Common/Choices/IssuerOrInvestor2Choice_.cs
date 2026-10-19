@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_yVpDgWc-EemvNLufWGIVOQ")]
     [DisplayName("Issuer Or Investor2Choice")]
-    public abstract record IssuerOrInvestor2Choice_ { }
+    public abstract partial record IssuerOrInvestor2Choice_ { }
 }

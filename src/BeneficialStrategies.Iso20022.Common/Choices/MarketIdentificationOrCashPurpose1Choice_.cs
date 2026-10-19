@@ -23,5 +23,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Lc9dQEiNEeOdL6nMHefDgg")]
     [DisplayName("Market Identification Or Cash Purpose 1 Choice")]
-    public abstract record MarketIdentificationOrCashPurpose1Choice_ { }
+    public abstract partial record MarketIdentificationOrCashPurpose1Choice_ { }
 }

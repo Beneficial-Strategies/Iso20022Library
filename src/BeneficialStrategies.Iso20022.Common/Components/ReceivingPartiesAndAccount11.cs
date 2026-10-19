@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_bfyV0WpSEeSgo9vJrfSF_Q")]
 [DisplayName("Receiving Parties And Account")]
-public record ReceivingPartiesAndAccount11
+public partial record ReceivingPartiesAndAccount11
 {
     /// <summary>
     /// First party in the settlement chain. In a plain vanilla settlement, it is the Central Securities Depository where the counterparty requests to receive the financial instrument or from where the counterparty delivers the financial instruments.

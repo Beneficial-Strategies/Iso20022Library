@@ -31,5 +31,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_TMB1Itp-Ed-ak6NoX_4Aeg_-553386135")]
     [DisplayName("Premium Quote 1 Choice")]
-    public abstract record PremiumQuote1Choice_ { }
+    public abstract partial record PremiumQuote1Choice_ { }
 }

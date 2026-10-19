@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat71Choice
     /// Percentage Price.
     /// </summary>
     [DisplayName("Percentage Price")]
-    public record PercentagePrice : PriceFormat71Choice_
+    public partial record PercentagePrice : PriceFormat71Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

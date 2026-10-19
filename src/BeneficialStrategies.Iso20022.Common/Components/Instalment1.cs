@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Py7LUtp-Ed-ak6NoX_4Aeg_-550302761")]
 [DisplayName("Instalment")]
-public record Instalment1
+public partial record Instalment1
 {
     /// <summary>
     /// Specifies the progressive number of the single instalment related to an invoice.

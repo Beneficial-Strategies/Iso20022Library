@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_oxe5kWpLEeSR-ZWLvO-1dg")]
 [DisplayName("Cryptographic Key")]
-public record CryptographicKey5
+public partial record CryptographicKey5
 {
     /// <summary>
     /// Name of the cryptographic key.

@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.supl;
 )]
 [IsoId("_b_h_N-aHEei5aPS232E3Mw")]
 [DisplayName("DTCCCACOSD 1 V")]
-public record DTCCCACOSD1V07 : IOuterRecord
+public partial record DTCCCACOSD1V07 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

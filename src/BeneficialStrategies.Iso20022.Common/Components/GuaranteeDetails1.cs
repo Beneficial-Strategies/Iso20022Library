@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OTgzMzc0-AOSNFX-8224501")]
 [DisplayName("Guarantee Details")]
-public record GuaranteeDetails1
+public partial record GuaranteeDetails1
 {
     /// <summary>
     /// Party issuing the guarantee.

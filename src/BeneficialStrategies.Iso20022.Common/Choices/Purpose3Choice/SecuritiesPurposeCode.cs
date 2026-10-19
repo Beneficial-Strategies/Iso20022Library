@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Purpose3Choice
     /// </summary>
     [IsoId("_KU6yQyUOEeOgKIHGINc2Uw")]
     [DisplayName("Securities Purpose Code")]
-    public record SecuritiesPurposeCode : Purpose3Choice_
+    public partial record SecuritiesPurposeCode : Purpose3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

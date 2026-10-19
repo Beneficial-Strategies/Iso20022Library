@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice
     /// </summary>
     [IsoId("_rp5TcFZVEeen1vB4iz5SyA")]
     [DisplayName("Financial Initiation")]
-    public record FinancialInitiation : RecordMessage1Choice_
+    public partial record FinancialInitiation : RecordMessage1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

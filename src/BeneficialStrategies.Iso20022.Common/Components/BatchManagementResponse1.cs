@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kmF6AFA1EeedyPuM0kK2EQ")]
 [DisplayName("Batch Management Response")]
-public record BatchManagementResponse1
+public partial record BatchManagementResponse1
 {
     /// <summary>
     /// Environment of the batch management transaction.

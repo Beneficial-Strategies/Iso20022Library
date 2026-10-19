@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_B-239QN1Ee2-vqzwMUAewg")]
 [DisplayName("Netting Cut Off")]
-public record NettingCutOff2
+public partial record NettingCutOff2
 {
     /// <summary>
     /// Identifies the netting party or group.

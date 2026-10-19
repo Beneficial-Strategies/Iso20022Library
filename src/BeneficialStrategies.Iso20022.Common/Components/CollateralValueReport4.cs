@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zF1apTEyEe6g-ffJsqGiSA")]
 [DisplayName("Collateral Value Report4")]
-public record CollateralValueReport4
+public partial record CollateralValueReport4
 {
     /// <summary>
     /// Cash Account.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_96-4OHltEeG7BsjMvd1mEw_-1699635040")]
 [DisplayName("Presentation")]
-public record Presentation1
+public partial record Presentation1
 {
     /// <summary>
     /// Medium through which the presentation can be submitted such as paper, electronic or both.

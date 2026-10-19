@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesOrCash1Choice
     [IsoId("_v5oPQDchEeOA3chqL9a4Rw")]
     [DisplayName("Securities Details")]
     [IsoXmlTag("SctiesDtls")]
-    public record SecuritiesDetails : SecuritiesOrCash1Choice_
+    public partial record SecuritiesDetails : SecuritiesOrCash1Choice_
     {
         /// <summary>
         /// Parties through which settlement is to take place.

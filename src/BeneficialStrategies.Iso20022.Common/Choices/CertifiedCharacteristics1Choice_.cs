@@ -46,5 +46,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_TnJq6Np-Ed-ak6NoX_4Aeg_524312074")]
     [DisplayName("Certified Characteristics 1 Choice")]
-    public abstract record CertifiedCharacteristics1Choice_ { }
+    public abstract partial record CertifiedCharacteristics1Choice_ { }
 }

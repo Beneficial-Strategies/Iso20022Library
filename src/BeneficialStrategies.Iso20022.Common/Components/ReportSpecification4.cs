@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PcRl4dp-Ed-ak6NoX_4Aeg_1375759875")]
 [DisplayName("Report Specification")]
-public record ReportSpecification4
+public partial record ReportSpecification4
 {
     /// <summary>
     /// Unique identification assigned by the matching application to a transaction, for which the matching application must generate a report.

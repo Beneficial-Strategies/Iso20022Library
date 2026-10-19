@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5Q4ogaDlEe-MRKYsaX6JDg")]
 [DisplayName("ATM Cassette3")]
-public record ATMCassette3
+public partial record ATMCassette3
 {
     /// <summary>
     /// Physical Identification.

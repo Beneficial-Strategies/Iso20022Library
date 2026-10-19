@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-VpvAOKDEe2QzKqbsy1xHQ")]
 [DisplayName("FX Supplementary Data2")]
-public record FXSupplementaryData2
+public partial record FXSupplementaryData2
 {
     /// <summary>
     /// Debtor Account.

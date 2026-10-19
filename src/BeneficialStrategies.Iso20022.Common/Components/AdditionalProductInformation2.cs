@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_J8Y8UM3AEeuAE-cYsQdwHQ")]
 [DisplayName("Additional Product Information")]
-public record AdditionalProductInformation2
+public partial record AdditionalProductInformation2
 {
     /// <summary>
     /// Approach of the Autorite des Marches Financiers (AMF) recommendation 2020-03 to which the fund complies. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT V3.1) reference 01020.

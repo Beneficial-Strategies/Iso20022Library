@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(CorporateActionRateSD8Choice.NewToOld), nameof(CorporateActionRateSD8Choice.NewToOld))]
     [IsoId("_0PTbUbskEfCWCehgFzyN4w")]
     [DisplayName("Corporate Action Rate SD 8 Choice")]
-    public abstract record CorporateActionRateSD8Choice_ { }
+    public abstract partial record CorporateActionRateSD8Choice_ { }
 }

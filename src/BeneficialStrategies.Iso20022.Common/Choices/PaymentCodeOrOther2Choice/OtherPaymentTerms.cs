@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentCodeOrOther2Choice
     /// </summary>
     [IsoId("_R2KHFRVgEeOrY9qSHVspCA")]
     [DisplayName("Other Payment Terms")]
-    public record OtherPaymentTerms : PaymentCodeOrOther2Choice_
+    public partial record OtherPaymentTerms : PaymentCodeOrOther2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PreferenceToIncome5Choice
     [IsoId("_4ueig-LZEeWFtOV72FbX9w")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : PreferenceToIncome5Choice_
+    public partial record Proprietary : PreferenceToIncome5Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

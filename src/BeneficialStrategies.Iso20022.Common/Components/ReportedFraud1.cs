@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Y3VxIHbHEeef9c2nwgY9Xw")]
 [DisplayName("Reported Fraud")]
-public record ReportedFraud1
+public partial record ReportedFraud1
 {
     /// <summary>
     /// Type of fraud for which a report is established.

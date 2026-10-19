@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_qIk6YWolEeipaMTLlhaKMQ")]
 [DisplayName("Investment Fund Report Request V")]
-public record InvestmentFundReportRequestV03 : IOuterRecord
+public partial record InvestmentFundReportRequestV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

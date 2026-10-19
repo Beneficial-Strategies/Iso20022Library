@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(CallType3Choice.Proprietary), nameof(CallType3Choice.Proprietary))]
     [IsoId("_fBEo0eLcEeWFtOV72FbX9w")]
     [DisplayName("Call Type 3 Choice")]
-    public abstract record CallType3Choice_ { }
+    public abstract partial record CallType3Choice_ { }
 }

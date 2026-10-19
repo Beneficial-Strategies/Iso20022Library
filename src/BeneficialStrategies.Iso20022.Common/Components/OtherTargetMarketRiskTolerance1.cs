@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FBVAgDcYEeidBoT_PugKiA")]
 [DisplayName("Other Target Market Risk Tolerance")]
-public record OtherTargetMarketRiskTolerance1
+public partial record OtherTargetMarketRiskTolerance1
 {
     /// <summary>
     /// Type of risk tolerance.

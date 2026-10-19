@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityOrBusinessError4Choice
     [IsoId("_P7y44ZJKEeuAlLVx8pyt3w")]
     [DisplayName("Security Report")]
     [IsoXmlTag("SctyRpt")]
-    public record SecurityReport : SecurityOrBusinessError4Choice_
+    public partial record SecurityReport : SecurityOrBusinessError4Choice_
     {
         /// <summary>
         /// Way(s) of identifying the security.

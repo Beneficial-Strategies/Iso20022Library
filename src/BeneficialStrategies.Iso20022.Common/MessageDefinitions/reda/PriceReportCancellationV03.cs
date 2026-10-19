@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_ZstsytEvEd-BzquC8wXy7w_-609818463")]
 [DisplayName("Price Report Cancellation V")]
-public record PriceReportCancellationV03 : IOuterRecord
+public partial record PriceReportCancellationV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

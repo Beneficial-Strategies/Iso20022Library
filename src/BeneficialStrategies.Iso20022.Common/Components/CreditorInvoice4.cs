@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zyspBeH5Eeqbls7Gk4-ckA")]
 [DisplayName("Creditor Invoice")]
-public record CreditorInvoice4
+public partial record CreditorInvoice4
 {
     /// <summary>
     /// Indicates whether the creditor allows limited presentment of the e-invoice, that is, only the e-invoice data needed for payment initiation.

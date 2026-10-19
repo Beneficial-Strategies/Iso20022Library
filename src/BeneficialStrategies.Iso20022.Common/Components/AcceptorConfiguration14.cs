@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TYF3waEvEe-MRKYsaX6JDg")]
 [DisplayName("Acceptor Configuration14")]
-public record AcceptorConfiguration14
+public partial record AcceptorConfiguration14
 {
     /// <summary>
     /// Terminal Manager Identification.

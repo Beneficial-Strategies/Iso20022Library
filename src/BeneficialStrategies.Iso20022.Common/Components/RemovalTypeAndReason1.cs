@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_50I1UPolEeiAfJEqh4xF_Q")]
 [DisplayName("Removal Type And Reason")]
-public record RemovalTypeAndReason1
+public partial record RemovalTypeAndReason1
 {
     /// <summary>
     /// Specifies the removal processing change requested.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestmentNeed2Choice
     /// </summary>
     [IsoId("_bmAnM6DtEequlaOyi6MUhw")]
     [DisplayName("Code")]
-    public record Code : InvestmentNeed2Choice_
+    public partial record Code : InvestmentNeed2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

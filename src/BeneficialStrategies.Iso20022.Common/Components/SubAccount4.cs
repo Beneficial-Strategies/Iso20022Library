@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__mJHsWpMEeSjPYeXoHq7Ng")]
 [DisplayName("Sub Account")]
-public record SubAccount4
+public partial record SubAccount4
 {
     /// <summary>
     /// Unique and unambiguous identification for the account between the account owner and the account servicer.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dPfNQaZqEea16Jw8SEVrDQ")]
 [DisplayName("Non Deliverable Forward Conditions")]
-public record NonDeliverableForwardConditions2
+public partial record NonDeliverableForwardConditions2
 {
     /// <summary>
     /// Provides the opening information associated with an NDF trade.

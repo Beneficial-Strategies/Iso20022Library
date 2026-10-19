@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T8KRktp-Ed-ak6NoX_4Aeg_1418174558")]
 [DisplayName("Financing Date Details")]
-public record FinancingDateDetails1
+public partial record FinancingDateDetails1
 {
     /// <summary>
     /// Date on which the financing transaction has been booked in an account.

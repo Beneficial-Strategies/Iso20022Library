@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.tsin;
 )]
 [IsoId("_OTgzNDk4-AOSNFX-8224507")]
 [DisplayName("Invoice Assignment Acknowledgement V")]
-public record InvoiceAssignmentAcknowledgementV01 : IOuterRecord
+public partial record InvoiceAssignmentAcknowledgementV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

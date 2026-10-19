@@ -20,5 +20,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(ReportContent2Choice.Text), nameof(ReportContent2Choice.Text))]
     [IsoId("_ftafcY7fEe6S0_1AaJzQCA")]
     [DisplayName("Report Content2Choice")]
-    public abstract record ReportContent2Choice_ { }
+    public abstract partial record ReportContent2Choice_ { }
 }

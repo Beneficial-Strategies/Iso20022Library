@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_40olsDcNEeiIxKQErQxblg")]
 [DisplayName("Investor Knowledge")]
-public record InvestorKnowledge1
+public partial record InvestorKnowledge1
 {
     /// <summary>
     /// Specifies whether the investor is a basic investor. A basic investor has one, or more, of the following characteristics:

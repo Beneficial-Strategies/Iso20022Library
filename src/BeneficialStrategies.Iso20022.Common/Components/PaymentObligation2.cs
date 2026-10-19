@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_H7FLkdNVEeKdOs2hjJ_3WQ")]
 [DisplayName("Payment Obligation")]
-public record PaymentObligation2
+public partial record PaymentObligation2
 {
     /// <summary>
     /// Bank that has to pay under the obligation.

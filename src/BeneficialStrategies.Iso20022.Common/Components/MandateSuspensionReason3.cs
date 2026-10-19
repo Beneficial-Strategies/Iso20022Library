@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4TGJuzEyEe6g-ffJsqGiSA")]
 [DisplayName("Mandate Suspension Reason3")]
-public record MandateSuspensionReason3
+public partial record MandateSuspensionReason3
 {
     /// <summary>
     /// Originator.

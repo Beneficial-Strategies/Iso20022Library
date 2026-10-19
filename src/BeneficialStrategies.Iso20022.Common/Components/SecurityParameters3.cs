@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6u86AWpyEeSMqvBfBY1c9A")]
 [DisplayName("Security Parameters")]
-public record SecurityParameters3
+public partial record SecurityParameters3
 {
     /// <summary>
     /// Version of the security parameters.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CountrySubdivision1Choice
     [IsoId("_93s6sHltEeG7BsjMvd1mEw_-1636816713")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : CountrySubdivision1Choice_
+    public partial record Proprietary : CountrySubdivision1Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

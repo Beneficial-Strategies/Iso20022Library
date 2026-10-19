@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2NI1kSmfEeKdFJmzhTDOvQ")]
 [DisplayName("Mandate Acceptance")]
-public record MandateAcceptance3
+public partial record MandateAcceptance3
 {
     /// <summary>
     /// Provides information on the original message.

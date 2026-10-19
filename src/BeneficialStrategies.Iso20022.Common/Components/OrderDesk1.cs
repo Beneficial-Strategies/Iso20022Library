@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yxKW8F9HEeicg40_9gK9vQ")]
 [DisplayName("Order Desk")]
-public record OrderDesk1
+public partial record OrderDesk1
 {
     /// <summary>
     /// Contact information for the order desk.

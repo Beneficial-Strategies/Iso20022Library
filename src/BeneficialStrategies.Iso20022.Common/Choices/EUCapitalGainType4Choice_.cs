@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(EUCapitalGainType4Choice.Proprietary), nameof(EUCapitalGainType4Choice.Proprietary))]
     [IsoId("f26bb989-1ff2-44c7-9138-732039689e4c")]
     [DisplayName("EU Capital Gain Type 4 Choice")]
-    public abstract record EUCapitalGainType4Choice_ { }
+    public abstract partial record EUCapitalGainType4Choice_ { }
 }

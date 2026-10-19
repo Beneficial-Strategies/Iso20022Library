@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GW_GkS_5EeugIJ3Gvoevmg")]
 [DisplayName("Acquirer Host Configuration")]
-public record AcquirerHostConfiguration8
+public partial record AcquirerHostConfiguration8
 {
     /// <summary>
     /// Identification of a host.

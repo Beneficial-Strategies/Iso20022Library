@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType36Choice
     /// </summary>
     [IsoId("_QIOLUZJKEeuAlLVx8pyt3w")]
     [DisplayName("Update Type")]
-    public record UpdateType : UpdateType36Choice_
+    public partial record UpdateType : UpdateType36Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("UpdTp")]

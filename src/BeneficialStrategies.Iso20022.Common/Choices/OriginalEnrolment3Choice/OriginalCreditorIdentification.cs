@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalEnrolment3Choice
     /// Original Creditor Identification.
     /// </summary>
     [DisplayName("Original Creditor Identification")]
-    public record OriginalCreditorIdentification : OriginalEnrolment3Choice_
+    public partial record OriginalCreditorIdentification : OriginalEnrolment3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

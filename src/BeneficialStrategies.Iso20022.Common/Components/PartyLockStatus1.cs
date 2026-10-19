@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JfSv1mjMEeiRg5NzP0jkQg")]
 [DisplayName("Party Lock Status")]
-public record PartyLockStatus1
+public partial record PartyLockStatus1
 {
     /// <summary>
     /// Specifies the date from which the lock status is valid.

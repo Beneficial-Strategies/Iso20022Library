@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CertifiedCharacteristics2Choice
     /// </summary>
     [IsoId("_3DBVMzANEeOKib24wnHaFg")]
     [DisplayName("Quality")]
-    public record Quality : CertifiedCharacteristics2Choice_
+    public partial record Quality : CertifiedCharacteristics2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

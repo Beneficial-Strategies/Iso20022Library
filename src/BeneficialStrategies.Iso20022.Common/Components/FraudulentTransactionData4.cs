@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VVF_YXR3EfC68Y4jZPNEug")]
 [DisplayName("Fraudulent Transaction Data4")]
-public record FraudulentTransactionData4
+public partial record FraudulentTransactionData4
 {
     /// <summary>
     /// Indicates whether the transaction was authorised or not.

@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_rNNBm-HzEeqbls7Gk4-ckA")]
 [DisplayName("Request To Pay Creditor Enrolment Cancellation Request V")]
-public record RequestToPayCreditorEnrolmentCancellationRequestV01 : IOuterRecord
+public partial record RequestToPayCreditorEnrolmentCancellationRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

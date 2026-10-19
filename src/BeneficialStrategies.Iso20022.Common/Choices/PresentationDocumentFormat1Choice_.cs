@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_94JmoHltEeG7BsjMvd1mEw_1618190567")]
     [DisplayName("Presentation Document Format 1 Choice")]
-    public abstract record PresentationDocumentFormat1Choice_ { }
+    public abstract partial record PresentationDocumentFormat1Choice_ { }
 }

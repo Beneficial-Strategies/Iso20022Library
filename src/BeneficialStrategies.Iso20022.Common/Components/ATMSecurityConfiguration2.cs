@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Di0fIYr7EeSvuOJS0mmL0g")]
 [DisplayName("ATM Security Configuration")]
-public record ATMSecurityConfiguration2
+public partial record ATMSecurityConfiguration2
 {
     /// <summary>
     /// Maximum number of symmetric keys the security module is able to manage.

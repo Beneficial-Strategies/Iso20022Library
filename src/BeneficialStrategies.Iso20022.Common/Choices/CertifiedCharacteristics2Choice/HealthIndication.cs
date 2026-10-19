@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CertifiedCharacteristics2Choice
     /// </summary>
     [IsoId("_3DBVOzANEeOKib24wnHaFg")]
     [DisplayName("Health Indication")]
-    public record HealthIndication : CertifiedCharacteristics2Choice_
+    public partial record HealthIndication : CertifiedCharacteristics2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

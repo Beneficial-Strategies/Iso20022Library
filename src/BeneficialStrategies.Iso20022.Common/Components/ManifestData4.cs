@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zswRIcF1EfC5bNIScwOWFA")]
 [DisplayName("Manifest Data4")]
-public record ManifestData4
+public partial record ManifestData4
 {
     /// <summary>
     /// Specifies the type of items contained in the document set.

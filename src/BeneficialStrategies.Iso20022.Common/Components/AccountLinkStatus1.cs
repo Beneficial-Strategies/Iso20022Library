@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3L62cXHeEeG8t-w1mFnmhg_-127584604")]
 [DisplayName("Account Link Status")]
-public record AccountLinkStatus1
+public partial record AccountLinkStatus1
 {
     /// <summary>
     /// Status of the account link instruction.

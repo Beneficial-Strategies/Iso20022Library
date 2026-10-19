@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason1Choice
     [IsoId("_RJ8ootp-Ed-ak6NoX_4Aeg_1044987769")]
     [DisplayName("Rejected Element")]
     [IsoXmlTag("RjctdElmt")]
-    public record RejectedElement : RejectionReason1Choice_
+    public partial record RejectedElement : RejectionReason1Choice_
     {
         /// <summary>
         /// Sequence number that allows to easily identify the element that is rejected.

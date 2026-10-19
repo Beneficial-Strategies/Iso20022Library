@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UqzgRdp-Ed-ak6NoX_4Aeg_-225785581")]
 [DisplayName("Contribution")]
-public record Contribution1
+public partial record Contribution1
 {
     /// <summary>
     /// Segregation done by the central counterparty based on trading venues/products or other attributes.

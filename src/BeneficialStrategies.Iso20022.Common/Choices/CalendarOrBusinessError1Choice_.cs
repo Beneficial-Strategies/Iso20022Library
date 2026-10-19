@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_dVcQ2Im7Eeipw6hHPgB4Sw")]
     [DisplayName("Calendar Or Business Error 1 Choice")]
-    public abstract record CalendarOrBusinessError1Choice_ { }
+    public abstract partial record CalendarOrBusinessError1Choice_ { }
 }

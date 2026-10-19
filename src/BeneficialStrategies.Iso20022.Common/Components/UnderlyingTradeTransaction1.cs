@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_96PRVnltEeG7BsjMvd1mEw_-533314240")]
 [DisplayName("Underlying Trade Transaction")]
-public record UnderlyingTradeTransaction1
+public partial record UnderlyingTradeTransaction1
 {
     /// <summary>
     /// Type of underlying transaction such as a tender, order, contract.

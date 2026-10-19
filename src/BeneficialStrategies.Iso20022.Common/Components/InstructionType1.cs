@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RJpGoNp-Ed-ak6NoX_4Aeg_-1851556220")]
 [DisplayName("Instruction Type")]
-public record InstructionType1
+public partial record InstructionType1
 {
     /// <summary>
     /// Specifies whether the baseline has to be pushed to the other party or simply lodged.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ClzOYWpbEeS4r8z7dKyh1g")]
 [DisplayName("Acceptor Configuration Content")]
-public record AcceptorConfigurationContent4
+public partial record AcceptorConfigurationContent4
 {
     /// <summary>
     /// Configuration parameters of the TMS protocol between a POI and a terminal manager.

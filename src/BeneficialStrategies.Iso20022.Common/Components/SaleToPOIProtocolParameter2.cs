@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8pTf0VFMEeyApZmLzm74zA")]
 [DisplayName("Sale To POI Protocol Parameter")]
-public record SaleToPOIProtocolParameter2
+public partial record SaleToPOIProtocolParameter2
 {
     /// <summary>
     /// Type of action for the configuration parameters.

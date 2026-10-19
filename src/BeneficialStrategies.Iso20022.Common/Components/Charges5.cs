@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_D8zW4dP_EeK0PPbKncCqzA")]
 [DisplayName("Charges")]
-public record Charges5
+public partial record Charges5
 {
     /// <summary>
     /// Bank which will pay the charges.

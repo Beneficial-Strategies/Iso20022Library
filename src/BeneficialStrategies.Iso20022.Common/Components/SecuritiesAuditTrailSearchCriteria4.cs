@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QOJ0N5JKEeuAlLVx8pyt3w")]
 [DisplayName("Securities Audit Trail Search Criteria")]
-public record SecuritiesAuditTrailSearchCriteria4
+public partial record SecuritiesAuditTrailSearchCriteria4
 {
     /// <summary>
     /// Describes security to be queried.

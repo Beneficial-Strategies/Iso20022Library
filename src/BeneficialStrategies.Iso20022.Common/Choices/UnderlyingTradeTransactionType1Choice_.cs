@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_93QOw3ltEeG7BsjMvd1mEw_-521905675")]
     [DisplayName("Underlying Trade Transaction Type 1 Choice")]
-    public abstract record UnderlyingTradeTransactionType1Choice_ { }
+    public abstract partial record UnderlyingTradeTransactionType1Choice_ { }
 }

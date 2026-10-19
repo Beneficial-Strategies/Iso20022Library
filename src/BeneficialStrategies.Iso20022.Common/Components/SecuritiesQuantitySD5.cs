@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_bKYDAecnEei5aPS232E3Mw")]
 [DisplayName("Securities Quantity SD")]
-public record SecuritiesQuantitySD5
+public partial record SecuritiesQuantitySD5
 {
     /// <summary>
     /// Instruction quantity for a given transaction sequence number.

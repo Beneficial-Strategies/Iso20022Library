@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.catm;
 )]
 [IsoId("_u2Rq4Y4BEeWrZqsymMFdfg")]
 [DisplayName("Maintenance Delegation Request V")]
-public record MaintenanceDelegationRequestV02 : IOuterRecord
+public partial record MaintenanceDelegationRequestV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

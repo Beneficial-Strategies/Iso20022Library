@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_haio02liEeGaMcKyqKNRfQ_-1955007741")]
 [DisplayName("Security With Holding Tax")]
-public record SecurityWithHoldingTax1
+public partial record SecurityWithHoldingTax1
 {
     /// <summary>
     /// Value of the withholding tax as rate, amount or not specified.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_J7mlMVWXEeeiG_nL4vgKnQ")]
 [DisplayName("Key Exchange Initiation")]
-public record KeyExchangeInitiation1
+public partial record KeyExchangeInitiation1
 {
     /// <summary>
     /// Contains or describes conditions and characteristics of the transaction.

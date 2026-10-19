@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BPOApplicableRules1Choice
     /// </summary>
     [IsoId("_8mcMkNNqEeKdOs2hjJ_3WQ")]
     [DisplayName("URBPO Version")]
-    public record URBPOVersion : BPOApplicableRules1Choice_
+    public partial record URBPOVersion : BPOApplicableRules1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

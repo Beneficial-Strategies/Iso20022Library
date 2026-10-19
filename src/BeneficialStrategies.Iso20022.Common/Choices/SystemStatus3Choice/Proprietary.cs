@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemStatus3Choice
     [IsoId("_1iyv84pbEeiaB-4Hjqs8aw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : SystemStatus3Choice_
+    public partial record Proprietary : SystemStatus3Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

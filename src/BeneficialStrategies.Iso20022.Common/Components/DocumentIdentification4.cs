@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RJNBxNp-Ed-ak6NoX_4Aeg_2003796933")]
 [DisplayName("Document Identification")]
-public record DocumentIdentification4
+public partial record DocumentIdentification4
 {
     /// <summary>
     /// Identification of a set of data.

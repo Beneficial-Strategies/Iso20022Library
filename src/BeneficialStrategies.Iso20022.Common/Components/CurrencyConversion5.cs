@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S77gUYq9EeSHjtO_wHA7PQ")]
 [DisplayName("Currency Conversion")]
-public record CurrencyConversion5
+public partial record CurrencyConversion5
 {
     /// <summary>
     /// Currency from which the amount is converted (ISO 4217, 3 alphanumeric characters).

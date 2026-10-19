@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KsqnwH1DEeCF8NjrBemJWQ_748699006")]
 [DisplayName("Acquirer Protocol Parameters")]
-public record AcquirerProtocolParameters1
+public partial record AcquirerProtocolParameters1
 {
     /// <summary>
     /// Identification of the acquirer using this protocol.

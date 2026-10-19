@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_P2DX2dp-Ed-ak6NoX_4Aeg_890765236")]
 [DisplayName("Payment Transaction Information")]
-public record PaymentTransactionInformation28
+public partial record PaymentTransactionInformation28
 {
     /// <summary>
     /// Unique identification, as assigned by an instructing party for an instructed party, to unambiguously identify the reversed transaction.|Usage: The instructing party is the party sending the reversal message and not the party that sent the original instruction that is being reversed.

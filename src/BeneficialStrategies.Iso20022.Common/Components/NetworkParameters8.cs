@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RiyH4Q02EeqUVL7sB4m7NA")]
 [DisplayName("Network Parameters")]
-public record NetworkParameters8
+public partial record NetworkParameters8
 {
     /// <summary>
     /// Type of proxy.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tv6MUWpUEeSgo9vJrfSF_Q")]
 [DisplayName("Clearing")]
-public record Clearing4
+public partial record Clearing4
 {
     /// <summary>
     /// Indicates to the clearing member whether the trade is eligible for settlement netting or not.

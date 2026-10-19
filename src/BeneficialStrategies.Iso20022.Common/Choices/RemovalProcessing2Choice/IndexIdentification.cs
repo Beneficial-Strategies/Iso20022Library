@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RemovalProcessing2Choice
     [IsoId("__ioAQxIoEeyZaPkaPAzTvQ")]
     [DisplayName("Index Identification")]
     [IsoXmlTag("IndxId")]
-    public record IndexIdentification : RemovalProcessing2Choice_
+    public partial record IndexIdentification : RemovalProcessing2Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

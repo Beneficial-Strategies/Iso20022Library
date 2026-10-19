@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lpi_4RIcEeyLzJfz3xPQNA")]
 [DisplayName("Deal Transaction Details")]
-public record DealTransactionDetails6
+public partial record DealTransactionDetails6
 {
     /// <summary>
     /// Identifies the number of days in which the cash investor and dealer can agree to revisit the terms of an agreement.

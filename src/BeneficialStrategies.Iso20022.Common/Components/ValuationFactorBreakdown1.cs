@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Lh2DkDYoEeuD7rm9md9zvg")]
 [DisplayName("Valuation Factor Breakdown")]
-public record ValuationFactorBreakdown1
+public partial record ValuationFactorBreakdown1
 {
     /// <summary>
     /// Aggregated adjustment applied on the liability/collateral to calculate the position. It is the sum of the inflation, the haircut/margin and pool factors.

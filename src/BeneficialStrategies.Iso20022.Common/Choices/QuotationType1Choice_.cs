@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_QPU_sNK4EeihtcVwfFPNlg")]
     [DisplayName("Quotation Type 1 Choice")]
-    public abstract record QuotationType1Choice_ { }
+    public abstract partial record QuotationType1Choice_ { }
 }

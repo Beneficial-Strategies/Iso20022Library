@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesMovementStatus1Choice
     [IsoId("_rJ9Q0OCzEei2UYJ62ws-Fw")]
     [DisplayName("Wait")]
     [IsoXmlTag("Wait")]
-    public record Wait : SecuritiesMovementStatus1Choice_
+    public partial record Wait : SecuritiesMovementStatus1Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

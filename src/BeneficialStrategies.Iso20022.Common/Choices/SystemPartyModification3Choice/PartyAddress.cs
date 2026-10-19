@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification3Choice
     /// Party Address.
     /// </summary>
     [DisplayName("Party Address")]
-    public record PartyAddress : SystemPartyModification3Choice_
+    public partial record PartyAddress : SystemPartyModification3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

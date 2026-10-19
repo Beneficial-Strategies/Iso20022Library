@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4YmZIeLZEeWFtOV72FbX9w")]
 [DisplayName("Equity")]
-public record Equity3
+public partial record Equity3
 {
     /// <summary>
     /// Indicates the level of priority to claim on income and assets of the company in case of the payment of dividends and in the event of a bankruptcy, for example, ordinary/common stocks, preferred stocks, subordinated debt, etc.

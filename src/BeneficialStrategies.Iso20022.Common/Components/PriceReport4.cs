@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("3d9c790d-ff3d-4d0c-a885-31c66f3e7965")]
 [DisplayName("Price Report4")]
-public record PriceReport4
+public partial record PriceReport4
 {
     /// <summary>
     /// Information related to the price valuation of a financial instrument.

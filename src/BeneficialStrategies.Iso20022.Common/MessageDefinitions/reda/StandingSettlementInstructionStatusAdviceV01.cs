@@ -21,7 +21,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_5gmxoPRnEeK8G5J12Bcx2g")]
 [DisplayName("Standing Settlement Instruction Status Advice V01")]
-public record StandingSettlementInstructionStatusAdviceV01 : IOuterRecord
+public partial record StandingSettlementInstructionStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralAccountIdentificationT
     /// </summary>
     [IsoId("_vW0gOKMOEeCojJW5vEuTEQ_-102415350")]
     [DisplayName("Type")]
-    public record Type : CollateralAccountIdentificationType1Choice_
+    public partial record Type : CollateralAccountIdentificationType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Sp4ScV88Eeicg40_9gK9vQ")]
 [DisplayName("Investment Restrictions")]
-public record InvestmentRestrictions3
+public partial record InvestmentRestrictions3
 {
     /// <summary>
     /// Minimum initial quantity of securities, expressed as an amount, that must be purchased at subscription.

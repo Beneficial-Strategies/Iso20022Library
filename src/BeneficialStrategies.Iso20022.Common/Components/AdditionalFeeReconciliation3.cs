@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__aw7wY1PEe6S0_1AaJzQCA")]
 [DisplayName("Additional Fee Reconciliation3")]
-public record AdditionalFeeReconciliation3
+public partial record AdditionalFeeReconciliation3
 {
     /// <summary>
     /// Impact.

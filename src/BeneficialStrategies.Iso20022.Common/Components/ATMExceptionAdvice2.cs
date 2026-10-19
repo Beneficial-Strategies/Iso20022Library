@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BpG-caE4Ee-MRKYsaX6JDg")]
 [DisplayName("ATM Exception Advice2")]
-public record ATMExceptionAdvice2
+public partial record ATMExceptionAdvice2
 {
     /// <summary>
     /// Environment.

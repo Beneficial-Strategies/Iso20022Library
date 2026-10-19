@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_L7GM8MRrEeij-rSPpvD-Tw")]
 [DisplayName("Total Value In Page And Statement")]
-public record TotalValueInPageAndStatement5
+public partial record TotalValueInPageAndStatement5
 {
     /// <summary>
     /// Total value of exposure reported in this message.

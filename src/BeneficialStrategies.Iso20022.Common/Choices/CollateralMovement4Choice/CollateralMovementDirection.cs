@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralMovement4Choice
     [IsoId("_yckWYYFvEeWtPe6Crjmeug")]
     [DisplayName("Collateral Movement Direction")]
     [IsoXmlTag("CollMvmntDrctn")]
-    public record CollateralMovementDirection : CollateralMovement4Choice_
+    public partial record CollateralMovementDirection : CollateralMovement4Choice_
     {
         /// <summary>
         /// Provides the collateral movement direction that is a delivery only.

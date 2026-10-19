@@ -35,7 +35,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_jTvN8x62Eeu31YsWNiv_cw")]
 [DisplayName("Security Query V")]
-public record SecurityQueryV01 : IOuterRecord
+public partial record SecurityQueryV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

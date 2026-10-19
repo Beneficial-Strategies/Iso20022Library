@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 /// </summary>
 [IsoId("_1Eb9wtEtEd-BzquC8wXy7w_693848369")]
 [DisplayName("Withdrawal Notification V02")]
-public record WithdrawalNotificationV02 : IOuterRecord
+public partial record WithdrawalNotificationV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

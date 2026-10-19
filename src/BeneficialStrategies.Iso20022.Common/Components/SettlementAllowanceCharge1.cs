@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S0Q8SgEcEeCQm6a_G2yO_w_1558181804")]
 [DisplayName("Settlement Allowance Charge")]
-public record SettlementAllowanceCharge1
+public partial record SettlementAllowanceCharge1
 {
     /// <summary>
     /// Indication of whether or not this allowance charge is a charge.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RemovalProcessing2Choice
     /// </summary>
     [IsoId("__ioARRIoEeyZaPkaPAzTvQ")]
     [DisplayName("Issuer Country")]
-    public record IssuerCountry : RemovalProcessing2Choice_
+    public partial record IssuerCountry : RemovalProcessing2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

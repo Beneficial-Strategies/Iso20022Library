@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_98LLBnltEeG7BsjMvd1mEw_-980384765")]
     [DisplayName("Fixed Or Recurrent Date 1 Choice")]
-    public abstract record FixedOrRecurrentDate1Choice_ { }
+    public abstract partial record FixedOrRecurrentDate1Choice_ { }
 }

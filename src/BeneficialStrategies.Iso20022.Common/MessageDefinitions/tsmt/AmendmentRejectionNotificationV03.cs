@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 )]
 [IsoId("_kPGaiNE8Ed-BzquC8wXy7w_-267112267")]
 [DisplayName("Amendment Rejection Notification V")]
-public record AmendmentRejectionNotificationV03 : IOuterRecord
+public partial record AmendmentRejectionNotificationV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

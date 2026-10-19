@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_sIgRQVNgEeOEi5J12GuNGQ")]
 [DisplayName("Unique Transaction Identifier")]
-public record UniqueTransactionIdentifier2
+public partial record UniqueTransactionIdentifier2
 {
     /// <summary>
     /// Unique transaction identifier will be created at the time a transaction is first executed, shared with all registered entities and counterparties involved in the transaction, and used to track that particular transaction during its lifetime. This identifier can also be known as the Unique Swap Identifier (USI).

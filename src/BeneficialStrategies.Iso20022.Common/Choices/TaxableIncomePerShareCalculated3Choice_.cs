@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(TaxableIncomePerShareCalculated3Choice.Proprietary))]
     [JsonDerivedType(typeof(TaxableIncomePerShareCalculated3Choice.Code))]
     [JsonDerivedType(typeof(TaxableIncomePerShareCalculated3Choice.Proprietary))]
-    public abstract record TaxableIncomePerShareCalculated3Choice_
+    public abstract partial record TaxableIncomePerShareCalculated3Choice_
     {
     }
 }

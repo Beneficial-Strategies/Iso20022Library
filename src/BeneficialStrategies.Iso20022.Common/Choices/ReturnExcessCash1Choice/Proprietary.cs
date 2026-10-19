@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReturnExcessCash1Choice
     [IsoId("_YmFuQALpEeutW5-TpeYJhA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : ReturnExcessCash1Choice_
+    public partial record Proprietary : ReturnExcessCash1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

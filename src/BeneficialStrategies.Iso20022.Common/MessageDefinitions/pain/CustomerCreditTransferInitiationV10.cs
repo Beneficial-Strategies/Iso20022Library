@@ -35,7 +35,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 )]
 [IsoId("_LwD3L8P_Eemsic1bQcEtLA")]
 [DisplayName("Customer Credit Transfer Initiation V")]
-public record CustomerCreditTransferInitiationV10 : IOuterRecord
+public partial record CustomerCreditTransferInitiationV10 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

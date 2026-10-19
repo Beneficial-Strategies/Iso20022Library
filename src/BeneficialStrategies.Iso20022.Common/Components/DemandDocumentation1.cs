@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-Eq_uHltEeG7BsjMvd1mEw_-538829885")]
 [DisplayName("Demand Documentation")]
-public record DemandDocumentation1
+public partial record DemandDocumentation1
 {
     /// <summary>
     /// Indication as to whether the presentation is complete.

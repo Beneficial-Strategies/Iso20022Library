@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettleStyle2Choice
     /// </summary>
     [IsoId("_ra2T0eLaEeWFtOV72FbX9w")]
     [DisplayName("Code")]
-    public record Code : SettleStyle2Choice_
+    public partial record Code : SettleStyle2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

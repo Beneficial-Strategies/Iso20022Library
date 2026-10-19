@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_q61ikIv3Eei289CGNqs21g")]
 [DisplayName("Contact")]
-public record Contact5
+public partial record Contact5
 {
     /// <summary>
     /// Specifies the terms used to formally address a person.

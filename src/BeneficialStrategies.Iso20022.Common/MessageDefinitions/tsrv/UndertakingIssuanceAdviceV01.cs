@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 )]
 [IsoId("_9fkHg3ltEeG7BsjMvd1mEw_-135389308")]
 [DisplayName("Undertaking Issuance Advice V")]
-public record UndertakingIssuanceAdviceV01 : IOuterRecord
+public partial record UndertakingIssuanceAdviceV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

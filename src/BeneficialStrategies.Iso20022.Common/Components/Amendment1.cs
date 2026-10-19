@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9-jwoHltEeG7BsjMvd1mEw_-951875342")]
 [DisplayName("Amendment")]
-public record Amendment1
+public partial record Amendment1
 {
     /// <summary>
     /// Sequence number assigned by the issuer to each proposed amendment of the undertaking.

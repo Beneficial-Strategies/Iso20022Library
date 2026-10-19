@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ThfHx9p-Ed-ak6NoX_4Aeg_415673992")]
 [DisplayName("Referred Document Information")]
-public record ReferredDocumentInformation2
+public partial record ReferredDocumentInformation2
 {
     /// <summary>
     /// Specifies the type of the document, for example commercial invoice.

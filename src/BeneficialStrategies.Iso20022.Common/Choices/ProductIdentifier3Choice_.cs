@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_V3jkcEj2Ee-KhcStGV4xTg")]
     [DisplayName("Product Identifier3Choice")]
-    public abstract record ProductIdentifier3Choice_ { }
+    public abstract partial record ProductIdentifier3Choice_ { }
 }

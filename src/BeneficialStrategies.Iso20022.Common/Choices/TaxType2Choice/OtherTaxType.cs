@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxType2Choice
     /// </summary>
     [IsoId("_mO0T8BrfEeOVR9VN6fAMUg")]
     [DisplayName("Other Tax Type")]
-    public record OtherTaxType : TaxType2Choice_
+    public partial record OtherTaxType : TaxType2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_uZw2sLkyEe68nbz8Nl_hLQ")]
 [DisplayName("Related Notification Data1")]
-public record RelatedNotificationData1
+public partial record RelatedNotificationData1
 {
     /// <summary>
     /// Notification Identification.

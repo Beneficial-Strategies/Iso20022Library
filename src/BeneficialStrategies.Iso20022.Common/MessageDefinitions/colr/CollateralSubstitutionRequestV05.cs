@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 )]
 [IsoId("_J4YkgygrEeyB747fKu7_rw")]
 [DisplayName("Collateral Substitution Request V")]
-public record CollateralSubstitutionRequestV05 : IOuterRecord
+public partial record CollateralSubstitutionRequestV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

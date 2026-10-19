@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Amount1Choice
     [IsoId("_95C-hXltEeG7BsjMvd1mEw_2080243605")]
     [DisplayName("Increase Amount")]
     [IsoXmlTag("IncrAmt")]
-    public record IncreaseAmount : Amount1Choice_
+    public partial record IncreaseAmount : Amount1Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

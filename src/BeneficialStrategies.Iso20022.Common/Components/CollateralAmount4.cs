@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6b5HwM4FEeiirviLm7P0IA")]
 [DisplayName("Collateral Amount")]
-public record CollateralAmount4
+public partial record CollateralAmount4
 {
     /// <summary>
     /// Actual market value post valuation factor expressed in the collateral currency (denomination currency of the security). For cash, it is the value post haircut.

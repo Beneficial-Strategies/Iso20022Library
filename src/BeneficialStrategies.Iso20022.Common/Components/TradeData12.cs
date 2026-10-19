@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7KIJAZR3Eeak6e8_Fc5fQg")]
 [DisplayName("Trade Data")]
-public record TradeData12
+public partial record TradeData12
 {
     /// <summary>
     /// Identification of the present message assigned by the party issuing the message. This identification must be unique amongst all messages of same type sent by the same party.

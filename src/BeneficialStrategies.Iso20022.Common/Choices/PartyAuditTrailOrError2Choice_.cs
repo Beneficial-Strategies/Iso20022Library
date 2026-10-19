@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_G7GHAWjHEeiCUdTMLdZoIg")]
     [DisplayName("Party Audit Trail Or Error 2 Choice")]
-    public abstract record PartyAuditTrailOrError2Choice_ { }
+    public abstract partial record PartyAuditTrailOrError2Choice_ { }
 }

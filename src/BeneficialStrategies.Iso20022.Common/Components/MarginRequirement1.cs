@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ul4kANp-Ed-ak6NoX_4Aeg_836086296")]
 [DisplayName("Margin Requirement")]
-public record MarginRequirement1
+public partial record MarginRequirement1
 {
     /// <summary>
     /// Amount of new margin that will be delivered to one party by the other party after rounding, threshold and minimum transfer amount are taken into account.

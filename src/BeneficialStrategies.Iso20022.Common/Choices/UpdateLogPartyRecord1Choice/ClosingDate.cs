@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice
     [IsoId("_xPt7hmjNEeiRg5NzP0jkQg")]
     [DisplayName("Closing Date")]
     [IsoXmlTag("ClsgDt")]
-    public record ClosingDate : UpdateLogPartyRecord1Choice_
+    public partial record ClosingDate : UpdateLogPartyRecord1Choice_
     {
         /// <summary>
         /// Old value before the update.

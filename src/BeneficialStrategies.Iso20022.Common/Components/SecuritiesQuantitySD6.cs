@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JSKGfef6Eei5aPS232E3Mw")]
 [DisplayName("Securities Quantity SD")]
-public record SecuritiesQuantitySD6
+public partial record SecuritiesQuantitySD6
 {
     /// <summary>
     /// Quantity not fully covered.

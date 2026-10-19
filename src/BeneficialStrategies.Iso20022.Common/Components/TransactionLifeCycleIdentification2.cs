@@ -16,7 +16,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LoxEIMWaEeiCfKAZkk6ZAQ")]
 [DisplayName("Transaction Life Cycle Identification")]
-public record TransactionLifeCycleIdentification2
+public partial record TransactionLifeCycleIdentification2
 {
     /// <summary>
     /// Unique transaction identifier.

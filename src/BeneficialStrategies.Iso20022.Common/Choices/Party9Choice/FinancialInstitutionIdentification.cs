@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party9Choice
     [IsoId("_PW59tNp-Ed-ak6NoX_4Aeg_661347972")]
     [DisplayName("Financial Institution Identification")]
     [IsoXmlTag("FIId")]
-    public record FinancialInstitutionIdentification : Party9Choice_
+    public partial record FinancialInstitutionIdentification : Party9Choice_
     {
         /// <summary>
         /// Unique and unambiguous identification of a financial institution, as assigned under an internationally recognised or proprietary identification scheme.

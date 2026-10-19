@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GovernanceIdentification1Choice
     [IsoId("_929T0nltEeG7BsjMvd1mEw_524135810")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : GovernanceIdentification1Choice_
+    public partial record Proprietary : GovernanceIdentification1Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_J3BXAaX_EeynsLtPxJMJTQ")]
 [DisplayName("Close Link5")]
-public record CloseLink5
+public partial record CloseLink5
 {
     /// <summary>
     /// Identification of a security by an ISIN.

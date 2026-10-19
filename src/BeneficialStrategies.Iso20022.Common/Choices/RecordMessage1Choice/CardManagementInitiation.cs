@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice
     /// </summary>
     [IsoId("_lIFr8FZYEeen1vB4iz5SyA")]
     [DisplayName("Card Management Initiation")]
-    public record CardManagementInitiation : RecordMessage1Choice_
+    public partial record CardManagementInitiation : RecordMessage1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_F1OxV0jrEe-KhcStGV4xTg")]
 [DisplayName("Unique Transaction Identifier3")]
-public record UniqueTransactionIdentifier3
+public partial record UniqueTransactionIdentifier3
 {
     /// <summary>
     /// Unique Transaction Identifier.

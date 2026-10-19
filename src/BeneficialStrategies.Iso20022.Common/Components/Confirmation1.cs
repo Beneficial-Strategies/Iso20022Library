@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_itJLUAJ-EeS2H9l84F_isg")]
 [DisplayName("Confirmation")]
-public record Confirmation1
+public partial record Confirmation1
 {
     /// <summary>
     /// Identifies the status of the confirmation.

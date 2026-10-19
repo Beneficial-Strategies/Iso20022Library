@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Th7zwdp-Ed-ak6NoX_4Aeg_-1462438308")]
 [DisplayName("Financing Allowed Summary")]
-public record FinancingAllowedSummary1
+public partial record FinancingAllowedSummary1
 {
     /// <summary>
     /// Number of invoices/instalments financed.

@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.head;
 /// </summary>
 [IsoId("_W9-JMexMEe6M4Kz-BKMIbA")]
 [DisplayName("Business File Header V01")]
-public record BusinessFileHeaderV01 : IOuterRecord
+public partial record BusinessFileHeaderV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

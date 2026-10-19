@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_NXsPkbTkEeeQy4o2AayYHg")]
 [DisplayName("ATM Security Device")]
-public record ATMSecurityDevice2
+public partial record ATMSecurityDevice2
 {
     /// <summary>
     /// Hardware security module information, so called EPP for Encrypted PIN Pad.

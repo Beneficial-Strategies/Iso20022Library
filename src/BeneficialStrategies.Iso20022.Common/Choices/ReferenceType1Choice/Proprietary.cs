@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReferenceType1Choice
     /// </summary>
     [IsoId("_zoPjwMeUEeysUoBKYz1Ytw")]
     [DisplayName("Proprietary")]
-    public record Proprietary : ReferenceType1Choice_
+    public partial record Proprietary : ReferenceType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

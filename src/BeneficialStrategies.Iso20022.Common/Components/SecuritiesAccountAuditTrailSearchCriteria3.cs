@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0Ba1cTpzEemk2e6qGBk8IQ")]
 [DisplayName("Securities Account Audit Trail Search Criteria")]
-public record SecuritiesAccountAuditTrailSearchCriteria3
+public partial record SecuritiesAccountAuditTrailSearchCriteria3
 {
     /// <summary>
     /// Unique identification of the securities account to be queried.

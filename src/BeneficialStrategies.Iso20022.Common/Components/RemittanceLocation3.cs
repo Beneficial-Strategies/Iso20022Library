@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_duvyIaMDEeKl_NvHIICqIw")]
 [DisplayName("Remittance Location")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
-public record RemittanceLocation3
+public partial record RemittanceLocation3
 {
     /// <summary>
     /// Unique identification, as assigned by the initiating party, to unambiguously identify the remittance information sent separately from the payment instruction, such as a remittance advice.

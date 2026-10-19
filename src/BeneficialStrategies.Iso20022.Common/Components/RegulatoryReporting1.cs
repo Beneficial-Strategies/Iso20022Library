@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SEtVEyi-EeKnA5P_jl2DUw")]
 [DisplayName("Regulatory Reporting")]
-public record RegulatoryReporting1
+public partial record RegulatoryReporting1
 {
     /// <summary>
     /// Specifies the supervisory party to which the trade needs to be reported.

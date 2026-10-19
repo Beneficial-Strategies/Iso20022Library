@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 )]
 [IsoId("_CRyfkYFsEeWtPe6Crjmeug")]
 [DisplayName("Interest Payment Statement V")]
-public record InterestPaymentStatementV04 : IOuterRecord
+public partial record InterestPaymentStatementV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

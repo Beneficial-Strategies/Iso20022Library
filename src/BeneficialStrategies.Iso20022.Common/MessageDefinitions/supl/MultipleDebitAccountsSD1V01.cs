@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.supl;
 )]
 [IsoId("_F24lM9IEEe20cKCFrGj2Qw")]
 [DisplayName("Multiple Debit Accounts SD1V01")]
-public record MultipleDebitAccountsSD1V01 : IOuterRecord
+public partial record MultipleDebitAccountsSD1V01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

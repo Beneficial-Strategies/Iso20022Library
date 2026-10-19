@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QlcNadp-Ed-ak6NoX_4Aeg_1490476160")]
 [DisplayName("Report Parameters")]
-public record ReportParameters2
+public partial record ReportParameters2
 {
     /// <summary>
     /// Unique identification of the report.

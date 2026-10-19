@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditorEnrolmentAmendmentReason
     /// </summary>
     [IsoId("_yRMkLvDBEemsS_0xy2XRug")]
     [DisplayName("Proprietary")]
-    public record Proprietary : CreditorEnrolmentAmendmentReason1Choice_
+    public partial record Proprietary : CreditorEnrolmentAmendmentReason1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_SsSlI9p-Ed-ak6NoX_4Aeg_-992731401")]
     [DisplayName("Airport Name 1 Choice")]
-    public abstract record AirportName1Choice_ { }
+    public abstract partial record AirportName1Choice_ { }
 }

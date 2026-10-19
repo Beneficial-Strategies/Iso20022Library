@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Prd4dNp-Ed-ak6NoX_4Aeg_851180831")]
 [DisplayName("Payment Terms")]
-public record PaymentTerms1
+public partial record PaymentTerms1
 {
     /// <summary>
     /// Specifies payment terms not present in a code list.

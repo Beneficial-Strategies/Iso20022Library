@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RbOl4dp-Ed-ak6NoX_4Aeg_153355944")]
 [DisplayName("Comparison Result")]
-public record ComparisonResult2
+public partial record ComparisonResult2
 {
     /// <summary>
     /// Sequence number assigned to the element.

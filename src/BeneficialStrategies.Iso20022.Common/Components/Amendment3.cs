@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_999TsHltEeG7BsjMvd1mEw_-1184372634")]
 [DisplayName("Amendment")]
-public record Amendment3
+public partial record Amendment3
 {
     /// <summary>
     /// Unique and unambiguous identifier assigned by the applicant to the undertaking amendment request.

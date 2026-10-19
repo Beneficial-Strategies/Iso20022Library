@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcceptedReason8Choice
     /// </summary>
     [IsoId("_UlpKCVjpEeOnqqBHs8Gasw")]
     [DisplayName("Reason")]
-    public record Reason : AcceptedReason8Choice_
+    public partial record Reason : AcceptedReason8Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Rsn")]

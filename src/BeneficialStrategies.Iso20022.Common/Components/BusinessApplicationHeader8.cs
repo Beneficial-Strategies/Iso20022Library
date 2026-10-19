@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2aMHUTEyEe6g-ffJsqGiSA")]
 [DisplayName("Business Application Header8")]
-public record BusinessApplicationHeader8
+public partial record BusinessApplicationHeader8
 {
     /// <summary>
     /// Character Set.

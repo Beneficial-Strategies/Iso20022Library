@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentCodeOrOther1Choice
     [IsoId("_uoAOcNP8EeK0PPbKncCqzA")]
     [DisplayName("Payment Code")]
     [IsoXmlTag("PmtCd")]
-    public record PaymentCode : PaymentCodeOrOther1Choice_
+    public partial record PaymentCode : PaymentCodeOrOther1Choice_
     {
         /// <summary>
         /// Code for the payment.

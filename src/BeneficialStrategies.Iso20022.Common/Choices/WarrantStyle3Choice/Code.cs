@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.WarrantStyle3Choice
     /// </summary>
     [IsoId("_q6-rgeLbEeWFtOV72FbX9w")]
     [DisplayName("Code")]
-    public record Code : WarrantStyle3Choice_
+    public partial record Code : WarrantStyle3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

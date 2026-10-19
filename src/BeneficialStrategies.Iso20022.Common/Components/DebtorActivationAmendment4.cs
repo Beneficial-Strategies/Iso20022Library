@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UQacM-H7Eeqbls7Gk4-ckA")]
 [DisplayName("Debtor Activation Amendment")]
-public record DebtorActivationAmendment4
+public partial record DebtorActivationAmendment4
 {
     /// <summary>
     /// Specific attributes provided the debtor, as requested by the creditor, for the activation request.

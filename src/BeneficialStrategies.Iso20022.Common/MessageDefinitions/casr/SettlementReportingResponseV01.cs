@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.casr;
 )]
 [IsoId("_Xf4eFVdOEeeIAMBcVOw01w")]
 [DisplayName("Settlement Reporting Response V")]
-public record SettlementReportingResponseV01 : IOuterRecord
+public partial record SettlementReportingResponseV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

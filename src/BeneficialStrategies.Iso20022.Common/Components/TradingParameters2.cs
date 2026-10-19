@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-UQ6IZJMEeuAlLVx8pyt3w")]
 [DisplayName("Trading Parameters")]
-public record TradingParameters2
+public partial record TradingParameters2
 {
     /// <summary>
     /// Code allocated to places of trade, ie, stock exchanges, regulated markets, for example, Electronic Trading Platforms (ECN), and unregulated markets, for example, Automated Trading Systems (ATS) (MIC - ISO 3166).

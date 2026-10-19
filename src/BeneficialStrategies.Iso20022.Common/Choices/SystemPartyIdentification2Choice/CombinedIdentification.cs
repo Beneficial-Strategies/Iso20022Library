@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyIdentification2Choice
     [IsoId("_w8OZg2c-EemvNLufWGIVOQ")]
     [DisplayName("Combined Identification")]
     [IsoXmlTag("CmbndId")]
-    public record CombinedIdentification : SystemPartyIdentification2Choice_
+    public partial record CombinedIdentification : SystemPartyIdentification2Choice_
     {
         /// <summary>
         /// Unique identification to unambiguously identify the party within the system.

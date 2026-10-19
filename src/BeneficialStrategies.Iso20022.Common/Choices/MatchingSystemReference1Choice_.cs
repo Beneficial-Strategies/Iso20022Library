@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_i-a184ufEeKYr_965Eh8aQ")]
     [DisplayName("Matching System Reference 1 Choice")]
-    public abstract record MatchingSystemReference1Choice_ { }
+    public abstract partial record MatchingSystemReference1Choice_ { }
 }

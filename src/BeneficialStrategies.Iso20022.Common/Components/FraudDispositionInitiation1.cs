@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3eE4YXdgEeeKH6vrEwvLHA")]
 [DisplayName("Fraud Disposition Initiation")]
-public record FraudDispositionInitiation1
+public partial record FraudDispositionInitiation1
 {
     /// <summary>
     /// Environment of the transaction

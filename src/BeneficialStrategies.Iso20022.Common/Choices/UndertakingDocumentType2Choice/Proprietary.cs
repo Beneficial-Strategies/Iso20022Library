@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UndertakingDocumentType2Choice
     [IsoId("_we6lgzPGEeKaav-uUgD4RA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : UndertakingDocumentType2Choice_
+    public partial record Proprietary : UndertakingDocumentType2Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

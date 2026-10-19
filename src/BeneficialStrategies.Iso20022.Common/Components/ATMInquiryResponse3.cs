@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FM1k4aEtEe-MRKYsaX6JDg")]
 [DisplayName("ATM Inquiry Response3")]
-public record ATMInquiryResponse3
+public partial record ATMInquiryResponse3
 {
     /// <summary>
     /// Environment.

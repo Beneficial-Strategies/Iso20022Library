@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HZc9IRIqEeyZaPkaPAzTvQ")]
 [DisplayName("Transaction Identifications")]
-public record TransactionIdentifications45
+public partial record TransactionIdentifications45
 {
     /// <summary>
     /// Unique reference identifying the collateral management instruction from the client&apos;s point of view. Identifies the potential match.

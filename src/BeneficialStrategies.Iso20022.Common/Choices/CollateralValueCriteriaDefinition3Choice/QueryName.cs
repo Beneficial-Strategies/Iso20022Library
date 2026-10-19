@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralValueCriteriaDefinitio
     /// </summary>
     [IsoId("__xM6gTpsEemk2e6qGBk8IQ")]
     [DisplayName("Query Name")]
-    public record QueryName : CollateralValueCriteriaDefinition3Choice_
+    public partial record QueryName : CollateralValueCriteriaDefinition3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

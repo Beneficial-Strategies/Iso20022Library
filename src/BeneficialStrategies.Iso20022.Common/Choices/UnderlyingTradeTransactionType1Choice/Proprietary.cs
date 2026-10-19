@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTradeTransactionType1C
     [IsoId("_93QOxXltEeG7BsjMvd1mEw_722066215")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : UnderlyingTradeTransactionType1Choice_
+    public partial record Proprietary : UnderlyingTradeTransactionType1Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

@@ -35,7 +35,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_jTvN1x62Eeu31YsWNiv_cw")]
 [DisplayName("Security Maintenance Status Advice V")]
-public record SecurityMaintenanceStatusAdviceV01 : IOuterRecord
+public partial record SecurityMaintenanceStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

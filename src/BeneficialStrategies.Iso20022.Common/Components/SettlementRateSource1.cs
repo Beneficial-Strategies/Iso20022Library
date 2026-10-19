@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CldIUJULEeak6e8_Fc5fQg")]
 [DisplayName("Settlement Rate Source")]
-public record SettlementRateSource1
+public partial record SettlementRateSource1
 {
     /// <summary>
     /// Specifies the rate source for the non deliverable trade.

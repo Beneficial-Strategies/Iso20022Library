@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hZ8L12liEeGaMcKyqKNRfQ_-1193651870")]
 [DisplayName("Jurisdiction")]
-public record Jurisdiction1
+public partial record Jurisdiction1
 {
     /// <summary>
     /// Specifies the jurisdiction (county, state, province, city).

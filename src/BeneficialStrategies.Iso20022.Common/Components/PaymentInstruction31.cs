@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VTxdgW49EeiU9cctagi5ow")]
 [DisplayName("Payment Instruction")]
-public record PaymentInstruction31
+public partial record PaymentInstruction31
 {
     /// <summary>
     /// Reference assigned by a sending party to unambiguously identify the payment information block within the message.

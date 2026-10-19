@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PzEVSdp-Ed-ak6NoX_4Aeg_-1491388962")]
 [DisplayName("Intent To Pay")]
-public record IntentToPay1
+public partial record IntentToPay1
 {
     /// <summary>
     /// The intention to pay is based on a purchase order.

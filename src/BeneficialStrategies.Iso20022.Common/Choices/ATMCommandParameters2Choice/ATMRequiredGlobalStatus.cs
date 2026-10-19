@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMCommandParameters2Choice
     /// </summary>
     [IsoId("_qAYfsYtHEeSxlKlAGYErFg")]
     [DisplayName("ATM Required Global Status")]
-    public record ATMRequiredGlobalStatus : ATMCommandParameters2Choice_
+    public partial record ATMRequiredGlobalStatus : ATMCommandParameters2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

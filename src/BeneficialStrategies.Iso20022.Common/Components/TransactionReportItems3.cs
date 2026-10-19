@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Pcav1tp-Ed-ak6NoX_4Aeg_-340644138")]
 [DisplayName("Transaction Report Items")]
-public record TransactionReportItems3
+public partial record TransactionReportItems3
 {
     /// <summary>
     /// Unique identification assigned by the matching application to the transaction.|This identification is to be used in any communication between the parties.

@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 )]
 [IsoId("_5SjM8TooEemaN9GkhmGkfg")]
 [DisplayName("Collateral Value Query V")]
-public record CollateralValueQueryV01 : IOuterRecord
+public partial record CollateralValueQueryV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

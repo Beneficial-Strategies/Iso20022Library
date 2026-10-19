@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_bwbnYYwXEei289CGNqs21g")]
 [DisplayName("Party Data Return Criteria")]
-public record PartyDataReturnCriteria2
+public partial record PartyDataReturnCriteria2
 {
     /// <summary>
     /// Indicates whether the opening date of the party is requested.

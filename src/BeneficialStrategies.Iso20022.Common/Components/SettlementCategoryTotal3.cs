@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_stLFMZjJEe6OBt2eQPMPsQ")]
 [DisplayName("Settlement Category Total3")]
-public record SettlementCategoryTotal3
+public partial record SettlementCategoryTotal3
 {
     /// <summary>
     /// Count.

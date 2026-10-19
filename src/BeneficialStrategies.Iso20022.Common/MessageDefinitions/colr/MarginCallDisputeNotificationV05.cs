@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 )]
 [IsoId("_J4YkdSgrEeyB747fKu7_rw")]
 [DisplayName("Margin Call Dispute Notification V")]
-public record MarginCallDisputeNotificationV05 : IOuterRecord
+public partial record MarginCallDisputeNotificationV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5Ns1Qa4MEeWZgJQOa6iKCQ")]
 [DisplayName("ATM Cassette Counters")]
-public record ATMCassetteCounters4
+public partial record ATMCassetteCounters4
 {
     /// <summary>
     /// Type of counters.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S2DgsaE6Ee-MRKYsaX6JDg")]
 [DisplayName("Management Plan13")]
-public record ManagementPlan13
+public partial record ManagementPlan13
 {
     /// <summary>
     /// POI Identification.

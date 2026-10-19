@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1ahuN5a-EeuPNt5jNVou1A")]
 [DisplayName("Cash Movement")]
-public record CashMovement5
+public partial record CashMovement5
 {
     /// <summary>
     /// Specifies whether the cash amount is to be delivered or received.

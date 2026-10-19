@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_m1pTcQ00EeqUVL7sB4m7NA")]
 [DisplayName("Maintenance Delegation Request")]
-public record MaintenanceDelegationRequest6
+public partial record MaintenanceDelegationRequest6
 {
     /// <summary>
     /// Terminal manager identification.

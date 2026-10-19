@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Pw59aYcSEe-U27oWwgmhCQ")]
 [DisplayName("Reference24")]
-public record Reference24
+public partial record Reference24
 {
     /// <summary>
     /// Trade Leg Notification Identification.

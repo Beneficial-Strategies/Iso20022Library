@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_nfxmIDciEeidBoT_PugKiA")]
 [DisplayName("Costs And Charges")]
-public record CostsAndCharges1
+public partial record CostsAndCharges1
 {
     /// <summary>
     /// Reference date applicable to all ex ante cost and charge disclosures. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 07160.

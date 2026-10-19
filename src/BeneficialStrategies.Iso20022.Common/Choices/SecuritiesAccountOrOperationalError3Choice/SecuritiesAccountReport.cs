@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAccountOrOperationalEr
     [IsoId("_x4sjgTp1Eemk2e6qGBk8IQ")]
     [DisplayName("Securities Account Report")]
     [IsoXmlTag("SctiesAcctRpt")]
-    public record SecuritiesAccountReport : SecuritiesAccountOrOperationalError3Choice_
+    public partial record SecuritiesAccountReport : SecuritiesAccountOrOperationalError3Choice_
     {
         /// <summary>
         /// Unique and unambiguous identification for the system security account.

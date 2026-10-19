@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VAaxMH7pEeGudZE4UaJCHQ")]
 [DisplayName("Undertaking")]
-public record Undertaking10
+public partial record Undertaking10
 {
     /// <summary>
     /// Details related to the requested new amount for the counter-undertaking.

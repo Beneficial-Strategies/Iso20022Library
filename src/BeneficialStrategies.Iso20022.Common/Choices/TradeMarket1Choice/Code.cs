@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeMarket1Choice
     /// </summary>
     [IsoId("_NzE0NzQ4-AOSNFX-5096945")]
     [DisplayName("Code")]
-    public record Code : TradeMarket1Choice_
+    public partial record Code : TradeMarket1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

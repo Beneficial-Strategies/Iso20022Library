@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_t1jau4xnEeKdxfnzD2sqyA")]
 [DisplayName("Withdrawal Reason")]
-public record WithdrawalReason1
+public partial record WithdrawalReason1
 {
     /// <summary>
     /// Withdrawal reason expressed as a code.

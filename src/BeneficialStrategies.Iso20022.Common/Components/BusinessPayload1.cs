@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XT0h88PAEfCvjKJD91zEUA")]
 [DisplayName("Business Payload1")]
-public record BusinessPayload1
+public partial record BusinessPayload1
 {
     /// <summary>
     /// Manifest that describes the related items or attachments.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hl9VYZb4Eee4htziCyV8eA")]
 [DisplayName("Message Reference")]
-public record MessageReference1
+public partial record MessageReference1
 {
     /// <summary>
     /// Unambiguous reference to a previous message having a business relevance with this message.

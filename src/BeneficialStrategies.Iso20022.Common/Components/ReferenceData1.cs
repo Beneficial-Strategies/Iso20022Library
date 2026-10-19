@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_e_ODIbMbEe-OHY85tcOC5w")]
 [DisplayName("Reference Data1")]
-public record ReferenceData1
+public partial record ReferenceData1
 {
     /// <summary>
     /// Type.

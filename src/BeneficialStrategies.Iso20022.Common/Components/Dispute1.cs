@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ulb4Ftp-Ed-ak6NoX_4Aeg_1250324083")]
 [DisplayName("Dispute")]
-public record Dispute1
+public partial record Dispute1
 {
     /// <summary>
     /// Unique identification for the margin call request.

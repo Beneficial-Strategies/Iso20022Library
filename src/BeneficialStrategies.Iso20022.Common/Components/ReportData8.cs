@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7yb4AXFWEfC68Y4jZPNEug")]
 [DisplayName("Report Data8")]
-public record ReportData8
+public partial record ReportData8
 {
     /// <summary>
     /// Name of the report.

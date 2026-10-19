@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_nn0a4exNEe6M4Kz-BKMIbA")]
 [DisplayName("Payload Data2")]
-public record PayloadData2
+public partial record PayloadData2
 {
     /// <summary>
     /// Payload Identifier.

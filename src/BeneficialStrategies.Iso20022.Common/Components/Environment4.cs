@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Mm3j8VA5EeedyPuM0kK2EQ")]
 [DisplayName("Environment")]
-public record Environment4
+public partial record Environment4
 {
     /// <summary>
     /// Originator of the message.

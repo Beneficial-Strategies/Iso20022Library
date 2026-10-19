@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CertifiedCharacteristics1Choice
     /// </summary>
     [IsoId("_TnJq6dp-Ed-ak6NoX_4Aeg_568642879")]
     [DisplayName("Origin")]
-    public record Origin : CertifiedCharacteristics1Choice_
+    public partial record Origin : CertifiedCharacteristics1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

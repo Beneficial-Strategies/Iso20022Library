@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_w9W9hYm5Eeipw6hHPgB4Sw")]
 [DisplayName("Calendar Search Criteria")]
-public record CalendarSearchCriteria1
+public partial record CalendarSearchCriteria1
 {
     /// <summary>
     /// Specifies the year for which the calendar information must be returned.

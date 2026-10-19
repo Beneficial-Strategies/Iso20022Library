@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Standardisation3Choice
     /// </summary>
     [IsoId("_PnpgwWp7EemmaZLSPtWX5A")]
     [DisplayName("Code")]
-    public record Code : Standardisation3Choice_
+    public partial record Code : Standardisation3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

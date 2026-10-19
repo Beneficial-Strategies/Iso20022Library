@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.caam;
 /// </summary>
 [IsoId("_z73KUaFCEe-MRKYsaX6JDg")]
 [DisplayName("ATM Exception Advice V02")]
-public record ATMExceptionAdviceV02 : IOuterRecord
+public partial record ATMExceptionAdviceV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

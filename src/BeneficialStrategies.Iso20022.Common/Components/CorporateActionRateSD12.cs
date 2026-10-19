@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mX1VMLskEfCWCehgFzyN4w")]
 [DisplayName("Corporate Action Rate SD12")]
-public record CorporateActionRateSD12
+public partial record CorporateActionRateSD12
 {
     /// <summary>
     /// Unambiguous reference to the location/name of a document.

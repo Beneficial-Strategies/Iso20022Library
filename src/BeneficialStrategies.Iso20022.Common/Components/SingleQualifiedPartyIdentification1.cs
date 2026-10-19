@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OTgzMjUx-AOSNFX-8224494")]
 [DisplayName("Single Qualified Party Identification")]
-public record SingleQualifiedPartyIdentification1
+public partial record SingleQualifiedPartyIdentification1
 {
     /// <summary>
     /// Party identification recognisable by parties in the trade.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateOrName4Choice
     [IsoId("_KwKzkxIlEeyLzJfz3xPQNA")]
     [DisplayName("Rate Index Details")]
     [IsoXmlTag("RateIndxDtls")]
-    public record RateIndexDetails : RateOrName4Choice_
+    public partial record RateIndexDetails : RateOrName4Choice_
     {
         /// <summary>
         /// Specifies the rate type as an index type or by its name.

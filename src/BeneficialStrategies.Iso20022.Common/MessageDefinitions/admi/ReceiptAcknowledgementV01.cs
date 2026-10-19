@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.admi;
 )]
 [IsoId("_4MJ7oZb3Eee4htziCyV8eA")]
 [DisplayName("Receipt Acknowledgement V")]
-public record ReceiptAcknowledgementV01 : IOuterRecord
+public partial record ReceiptAcknowledgementV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Qm7bJdp-Ed-ak6NoX_4Aeg_926398968")]
     [DisplayName("Agreed Amount 1 Choice")]
-    public abstract record AgreedAmount1Choice_ { }
+    public abstract partial record AgreedAmount1Choice_ { }
 }

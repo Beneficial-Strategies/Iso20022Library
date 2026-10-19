@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CertifiedCharacteristics2Choice
     /// </summary>
     [IsoId("_3DBVPTANEeOKib24wnHaFg")]
     [DisplayName("Phytosanitary Indication")]
-    public record PhytosanitaryIndication : CertifiedCharacteristics2Choice_
+    public partial record PhytosanitaryIndication : CertifiedCharacteristics2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

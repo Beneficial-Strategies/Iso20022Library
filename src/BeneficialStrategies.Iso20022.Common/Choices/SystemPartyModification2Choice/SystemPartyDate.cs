@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
     [IsoId("_yJhSoYv-Eei289CGNqs21g")]
     [DisplayName("System Party Date")]
     [IsoXmlTag("SysPtyDt")]
-    public record SystemPartyDate : SystemPartyModification2Choice_
+    public partial record SystemPartyDate : SystemPartyModification2Choice_
     {
         /// <summary>
         /// Specifies the opening date of the party.

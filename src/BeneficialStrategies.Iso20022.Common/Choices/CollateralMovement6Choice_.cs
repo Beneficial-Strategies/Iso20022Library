@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_6IUJJSqREeyR9JrVGfaMKw")]
     [DisplayName("Collateral Movement 6 Choice")]
-    public abstract record CollateralMovement6Choice_ { }
+    public abstract partial record CollateralMovement6Choice_ { }
 }

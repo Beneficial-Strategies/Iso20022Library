@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_buLRmTQbEeifw8iDiyZLmQ")]
 [DisplayName("Security Identification")]
-public record SecurityIdentification36
+public partial record SecurityIdentification36
 {
     /// <summary>
     /// Identification of the security, typically by an ISIN.

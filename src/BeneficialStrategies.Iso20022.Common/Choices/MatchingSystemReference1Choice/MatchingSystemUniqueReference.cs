@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingSystemReference1Choice
     /// </summary>
     [IsoId("_0rPdA4ufEeKYr_965Eh8aQ")]
     [DisplayName("Matching System Unique Reference")]
-    public record MatchingSystemUniqueReference : MatchingSystemReference1Choice_
+    public partial record MatchingSystemUniqueReference : MatchingSystemReference1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

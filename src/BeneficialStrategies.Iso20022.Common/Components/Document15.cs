@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_wy9ZETEyEe6g-ffJsqGiSA")]
 [Description(@"Information about a document.")]
 [DisplayName("Document15")]
-public record Document15
+public partial record Document15
 {
     /// <summary>
     /// Type of document or template.

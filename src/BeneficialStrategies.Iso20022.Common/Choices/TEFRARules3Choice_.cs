@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(TEFRARules3Choice.Proprietary), nameof(TEFRARules3Choice.Proprietary))]
     [IsoId("_ighyQeLcEeWFtOV72FbX9w")]
     [DisplayName("TEFRA Rules 3 Choice")]
-    public abstract record TEFRARules3Choice_ { }
+    public abstract partial record TEFRARules3Choice_ { }
 }

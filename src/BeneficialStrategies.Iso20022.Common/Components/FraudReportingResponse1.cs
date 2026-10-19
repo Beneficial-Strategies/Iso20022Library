@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_sJuzIXdcEeeKH6vrEwvLHA")]
 [DisplayName("Fraud Reporting Response")]
-public record FraudReportingResponse1
+public partial record FraudReportingResponse1
 {
     /// <summary>
     /// Environment of the transaction.

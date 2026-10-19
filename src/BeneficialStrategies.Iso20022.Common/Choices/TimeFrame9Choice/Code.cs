@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeFrame9Choice
     /// </summary>
     [IsoId("_Uz2OgcztEeq1WLK5fVzKiQ")]
     [DisplayName("Code")]
-    public record Code : TimeFrame9Choice_
+    public partial record Code : TimeFrame9Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_g00XsVdPEeeIAMBcVOw01w")]
 [DisplayName("Settlement Reporting Response")]
-public record SettlementReportingResponse1
+public partial record SettlementReportingResponse1
 {
     /// <summary>
     /// Environment of the transaction.

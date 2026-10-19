@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_l5A6kC_9EeOKib24wnHaFg")]
 [DisplayName("Account Role")]
-public record AccountRole1
+public partial record AccountRole1
 {
     /// <summary>
     /// Account owner/user identification and contact information.

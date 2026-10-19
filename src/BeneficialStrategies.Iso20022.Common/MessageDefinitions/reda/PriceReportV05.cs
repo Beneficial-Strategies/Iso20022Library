@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("74011c13-f378-449b-98f8-1b323e24a79b")]
 [DisplayName("Price Report V05")]
-public record PriceReportV05 : IOuterRecord
+public partial record PriceReportV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

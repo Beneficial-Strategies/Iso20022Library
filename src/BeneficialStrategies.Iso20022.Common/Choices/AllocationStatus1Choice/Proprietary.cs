@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AllocationStatus1Choice
     [IsoId("_xV-7AN__EeiVRbNQx5-Vhg")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : AllocationStatus1Choice_
+    public partial record Proprietary : AllocationStatus1Choice_
     {
         /// <summary>
         /// Proprietary identification of the status related to an instruction.

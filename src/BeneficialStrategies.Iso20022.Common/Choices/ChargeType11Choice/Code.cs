@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeType11Choice
     /// <summary>Charge type expressed as an ISO 20022 code.</summary>
     [IsoId("5a3cebb8-65c3-40ef-bfa3-3432dc08561b")]
     [DisplayName("Code")]
-    public record Code : ChargeType11Choice_
+    public partial record Code : ChargeType11Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Cd")]

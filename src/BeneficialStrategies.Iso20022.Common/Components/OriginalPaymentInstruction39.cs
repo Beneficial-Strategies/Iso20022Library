@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_X2XekQbPEeqF8ePC1fs2Gg")]
 [DisplayName("Original Payment Instruction")]
-public record OriginalPaymentInstruction39
+public partial record OriginalPaymentInstruction39
 {
     /// <summary>
     /// Unique identification, as assigned by the original sending party, to unambiguously identify the original payment information group.

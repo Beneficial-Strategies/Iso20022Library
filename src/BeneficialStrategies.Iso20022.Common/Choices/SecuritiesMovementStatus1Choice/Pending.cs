@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesMovementStatus1Choice
     [IsoId("_fj4lkOCzEei2UYJ62ws-Fw")]
     [DisplayName("Pending")]
     [IsoXmlTag("Pdg")]
-    public record Pending : SecuritiesMovementStatus1Choice_
+    public partial record Pending : SecuritiesMovementStatus1Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

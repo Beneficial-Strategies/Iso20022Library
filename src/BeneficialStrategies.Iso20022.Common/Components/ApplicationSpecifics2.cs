@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7G4bURUZEfCfALVKQ4rOew")]
 [DisplayName("Application Specifics2")]
-public record ApplicationSpecifics2
+public partial record ApplicationSpecifics2
 {
     /// <summary>
     /// Account of a user of the receiving business application and defined in the static data of the receiving business application.

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification38Choice
     /// CTA.
     /// </summary>
     [DisplayName("CTA")]
-    public record CTA : SecurityIdentification38Choice_
+    public partial record CTA : SecurityIdentification38Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

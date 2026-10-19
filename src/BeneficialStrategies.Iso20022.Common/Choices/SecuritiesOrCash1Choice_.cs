@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_xeOrADcgEeOA3chqL9a4Rw")]
     [DisplayName("Securities Or Cash 1 Choice")]
-    public abstract record SecuritiesOrCash1Choice_ { }
+    public abstract partial record SecuritiesOrCash1Choice_ { }
 }

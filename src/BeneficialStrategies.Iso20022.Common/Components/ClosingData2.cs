@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_THtV2Np-Ed-ak6NoX_4Aeg_855669497")]
 [DisplayName("Closing Data")]
-public record ClosingData2
+public partial record ClosingData2
 {
     /// <summary>
     /// Date at which the trading parties have agreed on a valuation rate for a non deliverable trade.

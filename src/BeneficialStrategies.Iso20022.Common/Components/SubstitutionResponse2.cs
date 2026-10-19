@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_E7FbAStJEeyOa655cLd-DQ")]
 [DisplayName("Substitution Response")]
-public record SubstitutionResponse2
+public partial record SubstitutionResponse2
 {
     /// <summary>
     /// Indicates if the substitution request was accepted or rejected.

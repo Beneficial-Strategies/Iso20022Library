@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Yy18KTE_Ee62xuUQ2zyZww")]
 [DisplayName("Update Log Contact2")]
-public record UpdateLogContact2
+public partial record UpdateLogContact2
 {
     /// <summary>
     /// Old.

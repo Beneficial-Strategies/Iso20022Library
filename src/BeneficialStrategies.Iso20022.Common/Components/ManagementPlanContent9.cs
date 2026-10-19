@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6nd0USi5Eeurkfo6MpvKDA")]
 [DisplayName("Management Plan Content")]
-public record ManagementPlanContent9
+public partial record ManagementPlanContent9
 {
     /// <summary>
     /// Terminal manager challenge for cryptographic key injection.

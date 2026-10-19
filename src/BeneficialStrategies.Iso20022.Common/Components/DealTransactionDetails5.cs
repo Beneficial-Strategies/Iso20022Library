@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_udySIRIbEeyLzJfz3xPQNA")]
 [DisplayName("Deal Transaction Details")]
-public record DealTransactionDetails5
+public partial record DealTransactionDetails5
 {
     /// <summary>
     /// Place at which the instrument was traded.

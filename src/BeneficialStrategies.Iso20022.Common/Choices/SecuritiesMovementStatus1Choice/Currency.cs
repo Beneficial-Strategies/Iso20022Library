@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesMovementStatus1Choice
     [IsoId("_Xrr6QOCzEei2UYJ62ws-Fw")]
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
-    public record Currency : SecuritiesMovementStatus1Choice_
+    public partial record Currency : SecuritiesMovementStatus1Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

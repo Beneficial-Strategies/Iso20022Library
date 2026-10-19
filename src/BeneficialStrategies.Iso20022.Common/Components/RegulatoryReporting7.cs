@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VB4PMQNwEe2-vqzwMUAewg")]
 [DisplayName("Regulatory Reporting")]
-public record RegulatoryReporting7
+public partial record RegulatoryReporting7
 {
     /// <summary>
     /// Regulatory transaction reporting information from the Trading Side party.

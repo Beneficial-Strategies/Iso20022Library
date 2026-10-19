@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_EIZxODgzEeKfZIj_SwVRwA")]
 [DisplayName("Postal Address")]
-public record PostalAddress12
+public partial record PostalAddress12
 {
     /// <summary>
     /// Name of a built-up area, with defined boundaries, and a local government.|.

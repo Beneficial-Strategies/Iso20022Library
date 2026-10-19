@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AEhcceH5Eeqbls7Gk4-ckA")]
 [DisplayName("Customer Type Request")]
-public record CustomerTypeRequest2
+public partial record CustomerTypeRequest2
 {
     /// <summary>
     /// Indicates whether the customer identification is required by the creditor or not.

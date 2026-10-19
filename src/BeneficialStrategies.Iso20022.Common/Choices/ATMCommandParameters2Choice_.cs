@@ -41,5 +41,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_pz3tsYtHEeSxlKlAGYErFg")]
     [DisplayName("ATM Command Parameters 2 Choice")]
-    public abstract record ATMCommandParameters2Choice_ { }
+    public abstract partial record ATMCommandParameters2Choice_ { }
 }

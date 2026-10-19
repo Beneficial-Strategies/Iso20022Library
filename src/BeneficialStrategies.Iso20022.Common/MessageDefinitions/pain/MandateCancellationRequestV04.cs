@@ -30,7 +30,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 )]
 [IsoId("_Ie2IVRPeEeSVo-TFVwFHvA")]
 [DisplayName("Mandate Cancellation Request V")]
-public record MandateCancellationRequestV04 : IOuterRecord
+public partial record MandateCancellationRequestV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

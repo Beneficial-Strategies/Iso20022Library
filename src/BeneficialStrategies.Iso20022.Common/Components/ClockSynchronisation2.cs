@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QciVYdqbEeearpaEPXv9UA")]
 [DisplayName("Clock Synchronisation")]
-public record ClockSynchronisation2
+public partial record ClockSynchronisation2
 {
     /// <summary>
     /// Name of the time zone where is located the POI (Point Of Interaction), as definined by the IANA (Internet Assigned Number Authority) time zone data base.

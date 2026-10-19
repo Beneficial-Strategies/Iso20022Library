@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralBalance1Choice
     [IsoId("_UnXxyNp-Ed-ak6NoX_4Aeg_-1037666527")]
     [DisplayName("Total Collateral")]
     [IsoXmlTag("TtlColl")]
-    public record TotalCollateral : CollateralBalance1Choice_
+    public partial record TotalCollateral : CollateralBalance1Choice_
     {
         /// <summary>
         /// The currency in which this amount is measured.

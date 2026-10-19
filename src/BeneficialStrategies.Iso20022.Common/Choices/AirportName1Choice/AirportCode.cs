@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AirportName1Choice
     /// </summary>
     [IsoId("_SsSlJNp-Ed-ak6NoX_4Aeg_-939167147")]
     [DisplayName("Airport Code")]
-    public record AirportCode : AirportName1Choice_
+    public partial record AirportCode : AirportName1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

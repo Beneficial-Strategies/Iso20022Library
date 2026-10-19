@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeFrame5Choice
     /// </summary>
     [IsoId("_UAew7tp-Ed-ak6NoX_4Aeg_-814719026")]
     [DisplayName("Prepayment")]
-    public record Prepayment : TimeFrame5Choice_
+    public partial record Prepayment : TimeFrame5Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

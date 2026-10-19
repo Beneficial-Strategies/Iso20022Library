@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_9beRS6MPEeCojJW5vEuTEQ_-1338603652")]
     [DisplayName("Margin Call Result 2 Choice")]
-    public abstract record MarginCallResult2Choice_ { }
+    public abstract partial record MarginCallResult2Choice_ { }
 }

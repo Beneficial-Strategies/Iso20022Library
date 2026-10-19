@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_4klZMIn4EeShMpas3885ww")]
     [DisplayName("Geographic Location 1 Choice")]
-    public abstract record GeographicLocation1Choice_ { }
+    public abstract partial record GeographicLocation1Choice_ { }
 }

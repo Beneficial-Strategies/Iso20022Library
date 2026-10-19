@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9yCXl3ltEeG7BsjMvd1mEw_167324952")]
 [DisplayName("Communication Channel")]
-public record CommunicationChannel1
+public partial record CommunicationChannel1
 {
     /// <summary>
     /// Method by which the original undertaking or proposed amendment is to be made available.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestmentNeed1Choice
     [IsoId("_cMcC8DcdEeidBoT_PugKiA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : InvestmentNeed1Choice_
+    public partial record Proprietary : InvestmentNeed1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

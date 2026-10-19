@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_StVuAtp-Ed-ak6NoX_4Aeg_971240882")]
 [DisplayName("Single Transport")]
-public record SingleTransport5
+public partial record SingleTransport5
 {
     /// <summary>
     /// Information related to the transportation of goods by air.

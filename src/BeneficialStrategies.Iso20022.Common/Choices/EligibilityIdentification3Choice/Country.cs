@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EligibilityIdentification3Choice
     /// <summary>Country code used to identify the issuance country to be defined as eligible.</summary>
     [IsoId("_xHPWsWc-EemvNLufWGIVOQ")]
     [DisplayName("Country")]
-    public record Country : EligibilityIdentification3Choice_
+    public partial record Country : EligibilityIdentification3Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Ctry")]

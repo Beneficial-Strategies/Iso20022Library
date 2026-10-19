@@ -11,5 +11,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(KeyValue3Choice.TRRelatedData), nameof(KeyValue3Choice.TRRelatedData))]
     [IsoId("_PYTUscPzEfCTf8R2j0RpdQ")]
     [DisplayName("Key Value 3 Choice")]
-    public abstract record KeyValue3Choice_ { }
+    public abstract partial record KeyValue3Choice_ { }
 }

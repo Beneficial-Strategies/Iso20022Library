@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_aqrfIY1PEe6S0_1AaJzQCA")]
 [DisplayName("Financial Reconciliation3")]
-public record FinancialReconciliation3
+public partial record FinancialReconciliation3
 {
     /// <summary>
     /// Impact.

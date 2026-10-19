@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JuPnQcX8EeexPc-mfUU5zQ")]
 [DisplayName("Deceased Status SD")]
-public record DeceasedStatusSD1
+public partial record DeceasedStatusSD1
 {
     /// <summary>
     /// Name by which the beneficial owner is known.

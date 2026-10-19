@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.remt;
 )]
 [IsoId("_pmmdrTqxEeWZFYSPlduMhw")]
 [DisplayName("Remittance Advice V")]
-public record RemittanceAdviceV02 : IOuterRecord
+public partial record RemittanceAdviceV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

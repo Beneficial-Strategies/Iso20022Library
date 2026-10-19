@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tpLf84FvEeWtPe6Crjmeug")]
 [DisplayName("Securities Collateral")]
-public record SecuritiesCollateral5
+public partial record SecuritiesCollateral5
 {
     /// <summary>
     /// Provides the identification of the proposed collateral.

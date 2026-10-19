@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MKVgwWRPEeqImsG9JNoSQw")]
 [DisplayName("Tracker Header")]
-public record TrackerHeader5
+public partial record TrackerHeader5
 {
     /// <summary>
     /// Point to point reference, as assigned by the tracker informing party and sent by the tracker to unambiguously identify the message.

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentScenario1Choice
     /// Code.
     /// </summary>
     [DisplayName("Code")]
-    public record Code : PaymentScenario1Choice_
+    public partial record Code : PaymentScenario1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

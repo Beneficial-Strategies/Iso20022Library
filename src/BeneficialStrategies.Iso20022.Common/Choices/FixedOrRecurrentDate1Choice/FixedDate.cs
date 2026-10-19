@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FixedOrRecurrentDate1Choice
     /// </summary>
     [IsoId("_98U8AHltEeG7BsjMvd1mEw_-1492206303")]
     [DisplayName("Fixed Date")]
-    public record FixedDate : FixedOrRecurrentDate1Choice_
+    public partial record FixedDate : FixedOrRecurrentDate1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

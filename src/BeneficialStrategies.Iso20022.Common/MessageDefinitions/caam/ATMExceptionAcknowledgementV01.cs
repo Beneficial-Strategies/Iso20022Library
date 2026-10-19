@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.caam;
 )]
 [IsoId("_YFLI0K5GEeWCgYcWSNgX5g")]
 [DisplayName("ATM Exception Acknowledgement V")]
-public record ATMExceptionAcknowledgementV01 : IOuterRecord
+public partial record ATMExceptionAcknowledgementV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

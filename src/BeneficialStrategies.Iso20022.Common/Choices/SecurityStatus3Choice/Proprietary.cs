@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityStatus3Choice
     [IsoId("_GHDbQ-LcEeWFtOV72FbX9w")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : SecurityStatus3Choice_
+    public partial record Proprietary : SecurityStatus3Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

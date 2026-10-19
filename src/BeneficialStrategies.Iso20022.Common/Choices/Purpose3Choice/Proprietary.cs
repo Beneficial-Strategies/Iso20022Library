@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Purpose3Choice
     [IsoId("_KU6yRSUOEeOgKIHGINc2Uw")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : Purpose3Choice_
+    public partial record Proprietary : Purpose3Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

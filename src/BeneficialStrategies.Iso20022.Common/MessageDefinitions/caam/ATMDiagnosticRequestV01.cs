@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.caam;
 )]
 [IsoId("_eF4ZkItoEeSDLd7nI4Quzw")]
 [DisplayName("ATM Diagnostic Request V")]
-public record ATMDiagnosticRequestV01 : IOuterRecord
+public partial record ATMDiagnosticRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_1kNFZjL3EeKU9IrkkToqcw_1911646277")]
     [DisplayName("Corporate Action Rate SD 6 Choice")]
-    public abstract record CorporateActionRateSD6Choice_ { }
+    public abstract partial record CorporateActionRateSD6Choice_ { }
 }

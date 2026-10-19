@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_eqOMIIn8EeShMpas3885ww")]
 [DisplayName("ATM Equipment")]
-public record ATMEquipment1
+public partial record ATMEquipment1
 {
     /// <summary>
     /// ATM Manufacturer.

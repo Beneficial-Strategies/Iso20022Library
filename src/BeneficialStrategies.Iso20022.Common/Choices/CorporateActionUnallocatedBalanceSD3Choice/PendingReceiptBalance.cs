@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionUnallocatedBalanc
     [IsoId("_ujGedcSTEeeRJJtE9TSlkw")]
     [DisplayName("Pending Receipt Balance")]
     [IsoXmlTag("PdgRctBal")]
-    public record PendingReceiptBalance : CorporateActionUnallocatedBalanceSD3Choice_
+    public partial record PendingReceiptBalance : CorporateActionUnallocatedBalanceSD3Choice_
     {
         /// <summary>
         /// Sign of the quantity of security.

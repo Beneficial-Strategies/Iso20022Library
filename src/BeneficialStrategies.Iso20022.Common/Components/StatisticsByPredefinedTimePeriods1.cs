@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VZS989p-Ed-ak6NoX_4Aeg_-616872931")]
 [DisplayName("Statistics By Predefined Time Periods")]
-public record StatisticsByPredefinedTimePeriods1
+public partial record StatisticsByPredefinedTimePeriods1
 {
     /// <summary>
     /// Highest price for the referenced period.

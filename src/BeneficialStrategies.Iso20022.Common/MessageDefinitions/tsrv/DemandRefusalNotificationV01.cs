@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 )]
 [IsoId("_9iijAHltEeG7BsjMvd1mEw_2131850524")]
 [DisplayName("Demand Refusal Notification V")]
-public record DemandRefusalNotificationV01 : IOuterRecord
+public partial record DemandRefusalNotificationV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

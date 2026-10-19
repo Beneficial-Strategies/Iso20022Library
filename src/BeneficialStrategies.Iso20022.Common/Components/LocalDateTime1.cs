@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4KU98GpuEeSMqvBfBY1c9A")]
 [DisplayName("Local Date Time")]
-public record LocalDateTime1
+public partial record LocalDateTime1
 {
     /// <summary>
     /// Date time of the beginning of the period (inclusive).

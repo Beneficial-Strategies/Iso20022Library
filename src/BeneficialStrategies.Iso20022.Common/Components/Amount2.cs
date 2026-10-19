@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_STHQJdp-Ed-ak6NoX_4Aeg_-1176417681")]
 [DisplayName("Amount")]
-public record Amount2
+public partial record Amount2
 {
     /// <summary>
     /// Amount expressed in the original currency.

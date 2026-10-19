@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MS6w6ZJOEeuAlLVx8pyt3w")]
 [DisplayName("Debt")]
-public record Debt5
+public partial record Debt5
 {
     /// <summary>
     /// Currency of the payment.

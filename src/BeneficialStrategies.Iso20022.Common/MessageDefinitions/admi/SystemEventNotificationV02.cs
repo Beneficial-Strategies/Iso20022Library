@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.admi;
 )]
 [IsoId("_pgC-EU7TEeSGH6dwL1uJcg")]
 [DisplayName("System Event Notification V")]
-public record SystemEventNotificationV02 : IOuterRecord
+public partial record SystemEventNotificationV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

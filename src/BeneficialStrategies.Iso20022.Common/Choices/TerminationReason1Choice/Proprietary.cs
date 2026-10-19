@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TerminationReason1Choice
     [IsoId("_932rs3ltEeG7BsjMvd1mEw_-3634845")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : TerminationReason1Choice_
+    public partial record Proprietary : TerminationReason1Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

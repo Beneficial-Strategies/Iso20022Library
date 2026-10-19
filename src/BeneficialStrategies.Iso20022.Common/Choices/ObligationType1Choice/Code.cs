@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ObligationType1Choice
     /// </summary>
     [IsoId("_QmCDQNp-Ed-ak6NoX_4Aeg_1786808611")]
     [DisplayName("Code")]
-    public record Code : ObligationType1Choice_
+    public partial record Code : ObligationType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OTaGxxlWEe2Do_UtrNmb2g")]
 [DisplayName("Payment Transaction")]
-public record PaymentTransaction145
+public partial record PaymentTransaction145
 {
     /// <summary>
     /// Unique identification, as assigned by an instructing party for an instructed party, to unambiguously identify the reported status.|Usage: The instructing party is the party sending the status message and not the party that sent the original instruction that is being reported on.

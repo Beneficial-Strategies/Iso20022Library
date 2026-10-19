@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(RejectedReason8Choice.Reason), nameof(RejectedReason8Choice.Reason))]
     [IsoId("_tg-hCVj7EeOgwYxfAV02bg")]
     [DisplayName("Rejected Reason 8 Choice")]
-    public abstract record RejectedReason8Choice_ { }
+    public abstract partial record RejectedReason8Choice_ { }
 }

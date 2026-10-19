@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_F8MPEeLcEeWFtOV72FbX9w")]
     [DisplayName("Security Status 3 Choice")]
-    public abstract record SecurityStatus3Choice_ { }
+    public abstract partial record SecurityStatus3Choice_ { }
 }

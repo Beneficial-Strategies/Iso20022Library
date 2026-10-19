@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EUDividendStatusType3Choice
     /// <summary>Trade conditions expressed as an extended code.</summary>
     [IsoId("c652129c-d9b2-41eb-98a2-a58616695ba5")]
     [DisplayName("Proprietary")]
-    public record Proprietary : EUDividendStatusType3Choice_
+    public partial record Proprietary : EUDividendStatusType3Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("Prtry")]

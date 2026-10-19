@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CalculationType3Choice
     /// </summary>
     [IsoId("_M0gcoeLaEeWFtOV72FbX9w")]
     [DisplayName("Code")]
-    public record Code : CalculationType3Choice_
+    public partial record Code : CalculationType3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

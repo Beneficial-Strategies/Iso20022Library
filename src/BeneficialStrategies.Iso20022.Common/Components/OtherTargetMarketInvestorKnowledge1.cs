@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_pd4osDcOEeiIxKQErQxblg")]
 [DisplayName("Other Target Market Investor Knowledge")]
-public record OtherTargetMarketInvestorKnowledge1
+public partial record OtherTargetMarketInvestorKnowledge1
 {
     /// <summary>
     /// Type of investor knowledge and experience.

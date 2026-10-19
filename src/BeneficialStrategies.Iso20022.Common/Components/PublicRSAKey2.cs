@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_uH2O4Y4SEeW6h7rGyYlyTg")]
 [DisplayName("Public RSA Key")]
-public record PublicRSAKey2
+public partial record PublicRSAKey2
 {
     /// <summary>
     /// Asymmetric cryptographic algorithm.

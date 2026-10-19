@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vG-yEbDEEe-g3p7goNrabg")]
 [DisplayName("Eligible Security5")]
-public record EligibleSecurity5
+public partial record EligibleSecurity5
 {
     /// <summary>
     /// Identification of a security by an ISIN.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_jltcEJ9VEeqxTNfi5y7ywQ")]
     [DisplayName("Notional Or Unit Based 1 Choice")]
-    public abstract record NotionalOrUnitBased1Choice_ { }
+    public abstract partial record NotionalOrUnitBased1Choice_ { }
 }

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PostTradeEventType2Choice
     /// Proprietary.
     /// </summary>
     [DisplayName("Proprietary")]
-    public record Proprietary : PostTradeEventType2Choice_
+    public partial record Proprietary : PostTradeEventType2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

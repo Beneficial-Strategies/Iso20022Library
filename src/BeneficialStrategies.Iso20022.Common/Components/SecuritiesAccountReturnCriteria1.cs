@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_X5rHEeX3EeWawO9uAAThyQ")]
 [DisplayName("Securities Account Return Criteria")]
-public record SecuritiesAccountReturnCriteria1
+public partial record SecuritiesAccountReturnCriteria1
 {
     /// <summary>
     /// Indicates whether the identification of the account is requested.

@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 )]
 [IsoId("_KgkR8oHHEeSY3ulMDfpmvA")]
 [DisplayName("Foreign Exchange Trade Capture Report Request V")]
-public record ForeignExchangeTradeCaptureReportRequestV01 : IOuterRecord
+public partial record ForeignExchangeTradeCaptureReportRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

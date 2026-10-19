@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.tsin;
 )]
 [IsoId("_OTgzNDYz-AOSNFX-8224506")]
 [DisplayName("Party Registration And Guarantee Request V")]
-public record PartyRegistrationAndGuaranteeRequestV01 : IOuterRecord
+public partial record PartyRegistrationAndGuaranteeRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

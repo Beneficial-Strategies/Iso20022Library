@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yGuHATEyEe6g-ffJsqGiSA")]
 [DisplayName("Enrolment Header3")]
-public record EnrolmentHeader3
+public partial record EnrolmentHeader3
 {
     /// <summary>
     /// Message Identification.

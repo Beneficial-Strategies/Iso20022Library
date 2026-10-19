@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2025-04-24 snapshot. No removal date recorded.")]
 [IsoId("_Qfn5Qtp-Ed-ak6NoX_4Aeg_-214178771")]
 [DisplayName("Unit Price")]
-public record UnitPrice9
+public partial record UnitPrice9
 {
     /// <summary>
     /// Specifies the unit of measurement. For example, kilo, tons.

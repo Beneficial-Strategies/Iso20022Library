@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3ZkX25IOEe-HRNGM304Vlw")]
 [DisplayName("Receiving Parties And Account22")]
-public record ReceivingPartiesAndAccount22
+public partial record ReceivingPartiesAndAccount22
 {
     /// <summary>
     /// Depository.

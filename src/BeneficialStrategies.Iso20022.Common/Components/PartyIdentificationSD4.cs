@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1VTtwjL3EeKU9IrkkToqcw_-1706678617")]
 [DisplayName("Party Identification SD")]
-public record PartyIdentificationSD4
+public partial record PartyIdentificationSD4
 {
     /// <summary>
     /// Identifies a contact person by a name, a given name and an address.

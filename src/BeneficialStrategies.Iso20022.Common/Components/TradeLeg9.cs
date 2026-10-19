@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_bBw7kS6SEeSQQqw1BT_aMg")]
 [DisplayName("Trade Leg")]
-public record TradeLeg9
+public partial record TradeLeg9
 {
     /// <summary>
     /// Margin account where the negotiation and liquidation risks will be calculated.

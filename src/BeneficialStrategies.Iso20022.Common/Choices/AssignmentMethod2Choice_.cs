@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_hJG-heLaEeWFtOV72FbX9w")]
     [DisplayName("Assignment Method 2 Choice")]
-    public abstract record AssignmentMethod2Choice_ { }
+    public abstract partial record AssignmentMethod2Choice_ { }
 }

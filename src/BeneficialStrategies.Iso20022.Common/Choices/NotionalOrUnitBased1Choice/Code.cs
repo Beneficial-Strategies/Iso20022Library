@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NotionalOrUnitBased1Choice
     /// </summary>
     [IsoId("_EltSQJ9WEeqxTNfi5y7ywQ")]
     [DisplayName("Code")]
-    public record Code : NotionalOrUnitBased1Choice_
+    public partial record Code : NotionalOrUnitBased1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tLDxcVeWEe6G45fhJISx6Q")]
 [DisplayName("Tracker Data8")]
-public record TrackerData8
+public partial record TrackerData8
 {
     /// <summary>
     /// Confirmed Date.

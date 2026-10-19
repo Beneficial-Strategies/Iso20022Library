@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_CZNtMbDEEe-g3p7goNrabg")]
 [DisplayName("Eligible Counterpart CSD Status Advice V01")]
-public record EligibleCounterpartCSDStatusAdviceV01 : IOuterRecord
+public partial record EligibleCounterpartCSDStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

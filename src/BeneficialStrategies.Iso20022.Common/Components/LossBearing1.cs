@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VPJpEDcPEeiIxKQErQxblg")]
 [DisplayName("Loss Bearing")]
-public record LossBearing1
+public partial record LossBearing1
 {
     /// <summary>
     /// Specifies whether the product is compatible with a client who cannot bear loss of capital. Minor losses especially due to costs are possible. For a negative target (no), the product should not be sold to investors that cannot bear losses. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 03010. In EMT v2, this is known as Compatible With Clients Who Can Not Bear Capital Loss.

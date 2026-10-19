@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralValueCriteriaDefinitio
     /// New Criteria.
     /// </summary>
     [DisplayName("New Criteria")]
-    public record NewCriteria : CollateralValueCriteriaDefinition4Choice_
+    public partial record NewCriteria : CollateralValueCriteriaDefinition4Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

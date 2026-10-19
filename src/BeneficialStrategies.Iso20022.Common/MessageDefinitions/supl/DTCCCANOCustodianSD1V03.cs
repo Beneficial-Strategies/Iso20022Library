@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.supl;
 )]
 [IsoId("_1LBwZjL3EeKU9IrkkToqcw_-1345555435")]
 [DisplayName("DTCCCANO Custodian SD 1 V")]
-public record DTCCCANOCustodianSD1V03 : IOuterRecord
+public partial record DTCCCANOCustodianSD1V03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

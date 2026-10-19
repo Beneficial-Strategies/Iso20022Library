@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementUnitType3Choice
     [IsoId("_d8mHg-LxEeWOD7aAy2fAcA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : SettlementUnitType3Choice_
+    public partial record Proprietary : SettlementUnitType3Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hAr8AALpEeutW5-TpeYJhA")]
 [DisplayName("Return Excess Cash")]
-public record ReturnExcessCash1
+public partial record ReturnExcessCash1
 {
     /// <summary>
     /// Identifies the return excess cash type.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_pgqcMa4uEeWLdt0vLARX2Q")]
 [DisplayName("Detailed Amount")]
-public record DetailedAmount17
+public partial record DetailedAmount17
 {
     /// <summary>
     /// Amount to be transferred from the source account to the destination account.

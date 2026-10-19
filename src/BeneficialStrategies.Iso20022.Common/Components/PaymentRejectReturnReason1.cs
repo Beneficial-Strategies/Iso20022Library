@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Q4Lykc73EemEIuVuDudp4g")]
 [DisplayName("Payment Reject Return Reason")]
-public record PaymentRejectReturnReason1
+public partial record PaymentRejectReturnReason1
 {
     /// <summary>
     /// Specifies the reason for the return.

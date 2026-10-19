@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_qBeboMQJEemsic1bQcEtLA")]
 [DisplayName("Payment Initiation Source")]
-public record PaymentInitiationSource1
+public partial record PaymentInitiationSource1
 {
     /// <summary>
     /// Name of the application or software used to initiate the payment.

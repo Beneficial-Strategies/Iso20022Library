@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vWhlQ6MOEeCojJW5vEuTEQ_1855607436")]
 [DisplayName("Collateral Amount")]
-public record CollateralAmount1
+public partial record CollateralAmount1
 {
     /// <summary>
     /// Specifies the total amount of the collateral in the collateral currency.

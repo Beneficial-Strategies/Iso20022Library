@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.trea;
 )]
 [IsoId("_HQD4WNE8Ed-BzquC8wXy7w_-1614590929")]
 [DisplayName("Amend Foreign Exchange Option V")]
-public record AmendForeignExchangeOptionV02 : IOuterRecord
+public partial record AmendForeignExchangeOptionV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_16JIcEj8Ee-KhcStGV4xTg")]
     [DisplayName("Calculation Agent1Choice")]
-    public abstract record CalculationAgent1Choice_ { }
+    public abstract partial record CalculationAgent1Choice_ { }
 }

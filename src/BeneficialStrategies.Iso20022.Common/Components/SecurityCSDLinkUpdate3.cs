@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_DAcycZ2KEe6LRZBwAQprDA")]
 [DisplayName("Security CSD Link Update3")]
-public record SecurityCSDLinkUpdate3
+public partial record SecurityCSDLinkUpdate3
 {
     /// <summary>
     /// Default Link.

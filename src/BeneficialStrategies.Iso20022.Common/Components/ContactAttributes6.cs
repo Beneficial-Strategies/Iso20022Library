@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_bqpfQboKEeq5Lv5RTGDs7Q")]
 [DisplayName("Contact Attributes")]
-public record ContactAttributes6
+public partial record ContactAttributes6
 {
     /// <summary>
     /// Name of the party.

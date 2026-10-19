@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_7jLUES9dEeS94oXWDaBauA")]
 [DisplayName("Report")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record Report5
+public partial record Report5
 {
     /// <summary>
     /// Provides the identification for the non-clearing member. This is mandatory if the clearing member identification equals a general clearing member.

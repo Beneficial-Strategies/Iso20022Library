@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-DLK5XltEeG7BsjMvd1mEw_1047822406")]
 [DisplayName("Undertaking Status Advice")]
-public record UndertakingStatusAdvice1
+public partial record UndertakingStatusAdvice1
 {
     /// <summary>
     /// Details related to the party that initiated the report.

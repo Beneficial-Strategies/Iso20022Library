@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9KVakSqPEeyR9JrVGfaMKw")]
 [DisplayName("Block Chain Address Wallet")]
-public record BlockChainAddressWallet5
+public partial record BlockChainAddressWallet5
 {
     /// <summary>
     /// Unique identification of the collateral account.

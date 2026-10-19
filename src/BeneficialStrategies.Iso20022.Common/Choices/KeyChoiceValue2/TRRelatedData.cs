@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.KeyChoiceValue2
     [IsoId("_FjgS07TqEeeQy4o2AayYHg")]
     [DisplayName("TR Related Data")]
     [IsoXmlTag("TRRltdData")]
-    public record TRRelatedData : KeyChoiceValue2_
+    public partial record TRRelatedData : KeyChoiceValue2_
     {
         /// <summary>
         /// Specific TR34 command where the TRBlock is a TR34 block.

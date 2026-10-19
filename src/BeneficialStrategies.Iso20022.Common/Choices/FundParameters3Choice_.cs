@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Q6l-ANp-Ed-ak6NoX_4Aeg_36568283")]
     [DisplayName("Fund Parameters 3 Choice")]
-    public abstract record FundParameters3Choice_ { }
+    public abstract partial record FundParameters3Choice_ { }
 }

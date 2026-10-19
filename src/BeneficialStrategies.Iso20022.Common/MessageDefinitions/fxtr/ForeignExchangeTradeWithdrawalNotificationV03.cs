@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 )]
 [IsoId("_K7tXYS53EeKwTrPDLMbLxA")]
 [DisplayName("Foreign Exchange Trade Withdrawal Notification V")]
-public record ForeignExchangeTradeWithdrawalNotificationV03 : IOuterRecord
+public partial record ForeignExchangeTradeWithdrawalNotificationV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

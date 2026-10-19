@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.caad;
 /// </summary>
 [IsoId("_xH5gsY7cEe6S0_1AaJzQCA")]
 [DisplayName("Administrative Response V02")]
-public record AdministrativeResponseV02 : IOuterRecord
+public partial record AdministrativeResponseV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

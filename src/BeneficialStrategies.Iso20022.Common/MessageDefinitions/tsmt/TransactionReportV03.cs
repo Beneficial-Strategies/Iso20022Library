@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 )]
 [IsoId("_2UxmeNE8Ed-BzquC8wXy7w_-1389761233")]
 [DisplayName("Transaction Report V")]
-public record TransactionReportV03 : IOuterRecord
+public partial record TransactionReportV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

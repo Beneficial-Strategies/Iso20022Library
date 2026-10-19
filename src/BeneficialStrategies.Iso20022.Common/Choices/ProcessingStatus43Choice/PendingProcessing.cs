@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus43Choice
     [IsoId("_fDHA81hFEeOMYfRGLS0NbA")]
     [DisplayName("Pending Processing")]
     [IsoXmlTag("PdgPrcg")]
-    public record PendingProcessing : ProcessingStatus43Choice_
+    public partial record PendingProcessing : ProcessingStatus43Choice_
     {
         /// <summary>
         /// Reason for the pending status.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_x_qKMeFREe6zNorB_Q2tDg")]
 [DisplayName("Account Link7")]
-public record AccountLink7
+public partial record AccountLink7
 {
     /// <summary>
     /// Securities Account.

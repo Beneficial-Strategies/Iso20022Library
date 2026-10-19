@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrCurrency1Choice
     /// </summary>
     [IsoId("_n9oL79QiEeKvJeoOII0e7w")]
     [DisplayName("Settlement Currency")]
-    public record SettlementCurrency : PartyOrCurrency1Choice_
+    public partial record SettlementCurrency : PartyOrCurrency1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityOrBusinessError4Choice
     [IsoId("_P7y445JKEeuAlLVx8pyt3w")]
     [DisplayName("Business Error")]
     [IsoXmlTag("BizErr")]
-    public record BusinessError : SecurityOrBusinessError4Choice_
+    public partial record BusinessError : SecurityOrBusinessError4Choice_
     {
         /// <summary>
         /// Way(s) of identifying the security.

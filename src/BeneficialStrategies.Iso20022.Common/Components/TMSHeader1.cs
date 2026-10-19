@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ROuPdwuhEeqw5uEXxQ9H4g")]
 [DisplayName("TMS Header")]
-public record TMSHeader1
+public partial record TMSHeader1
 {
     /// <summary>
     /// Indicates if the file transfer is a download or an upload.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Zacc8XI0Ee299ZbWCkdR_w")]
 [DisplayName("Certificate Management Response")]
-public record CertificateManagementResponse3
+public partial record CertificateManagementResponse3
 {
     /// <summary>
     /// Identification of the terminal or system using the certificate management service.

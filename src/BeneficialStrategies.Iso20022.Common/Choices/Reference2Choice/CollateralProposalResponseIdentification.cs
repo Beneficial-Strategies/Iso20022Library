@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reference2Choice
     /// </summary>
     [IsoId("_TYW3kqerEeCq2KR6DaC1kQ_-2112953758")]
     [DisplayName("Collateral Proposal Response Identification")]
-    public record CollateralProposalResponseIdentification : Reference2Choice_
+    public partial record CollateralProposalResponseIdentification : Reference2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

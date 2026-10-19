@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XogS0DcfEeidBoT_PugKiA")]
 [DisplayName("Distribution Strategy")]
-public record DistributionStrategy1
+public partial record DistributionStrategy1
 {
     /// <summary>
     /// Specifies to whom the product can be sold on an execution-only basis. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 06010.

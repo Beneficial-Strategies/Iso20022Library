@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fYHrwWpyEeSMqvBfBY1c9A")]
 [DisplayName("Host Communication Parameter")]
-public record HostCommunicationParameter3
+public partial record HostCommunicationParameter3
 {
     /// <summary>
     /// Identification of the host.

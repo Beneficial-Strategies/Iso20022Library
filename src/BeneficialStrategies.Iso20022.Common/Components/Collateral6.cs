@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-dm5JqMOEeCojJW5vEuTEQ_455413091")]
 [DisplayName("Collateral")]
-public record Collateral6
+public partial record Collateral6
 {
     /// <summary>
     /// Value of the collateral after deduction of a percentage (the haircut) that reflects the perceived risk associated with holding this collateral.

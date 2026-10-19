@@ -17,5 +17,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(UpdateType35Choice.Modify), nameof(UpdateType35Choice.Modify))]
     [IsoId("_QMJpmZJKEeuAlLVx8pyt3w")]
     [DisplayName("Update Type 35 Choice")]
-    public abstract record UpdateType35Choice_ { }
+    public abstract partial record UpdateType35Choice_ { }
 }

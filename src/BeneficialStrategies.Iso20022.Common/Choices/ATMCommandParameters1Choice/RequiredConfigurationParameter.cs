@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMCommandParameters1Choice
     [IsoId("_43VMQIqLEeSRT5rEzcAHEw")]
     [DisplayName("Required Configuration Parameter")]
     [IsoXmlTag("ReqrdCfgtnParam")]
-    public record RequiredConfigurationParameter : ATMCommandParameters1Choice_
+    public partial record RequiredConfigurationParameter : ATMCommandParameters1Choice_
     {
         /// <summary>
         /// Type of the ATM configuration.

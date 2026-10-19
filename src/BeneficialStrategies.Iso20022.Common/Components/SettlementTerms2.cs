@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QIrY5tp-Ed-ak6NoX_4Aeg_739233613")]
 [DisplayName("Settlement Terms")]
-public record SettlementTerms2
+public partial record SettlementTerms2
 {
     /// <summary>
     /// Financial institution that receives the payment transaction on behalf of an account owner, and posts the transaction into the account.

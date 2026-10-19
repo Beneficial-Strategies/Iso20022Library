@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TJMjldp-Ed-ak6NoX_4Aeg_1219011122")]
 [DisplayName("Settlement Data")]
-public record SettlementData2
+public partial record SettlementData2
 {
     /// <summary>
     /// Unique reference supplied by the trade processing system.

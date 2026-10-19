@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingSystemReference1Choice
     /// </summary>
     [IsoId("_2ajeg4ufEeKYr_965Eh8aQ")]
     [DisplayName("Related Reference")]
-    public record RelatedReference : MatchingSystemReference1Choice_
+    public partial record RelatedReference : MatchingSystemReference1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssignmentMethod2Choice
     /// </summary>
     [IsoId("_hT0ZceLaEeWFtOV72FbX9w")]
     [DisplayName("Code")]
-    public record Code : AssignmentMethod2Choice_
+    public partial record Code : AssignmentMethod2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

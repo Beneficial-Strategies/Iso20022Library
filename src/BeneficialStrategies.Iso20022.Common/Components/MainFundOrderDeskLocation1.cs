@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SsJbPdp-Ed-ak6NoX_4Aeg_2033258756")]
 [DisplayName("Main Fund Order Desk Location")]
-public record MainFundOrderDeskLocation1
+public partial record MainFundOrderDeskLocation1
 {
     /// <summary>
     /// Country in which it is authorised to commercialise the fund.

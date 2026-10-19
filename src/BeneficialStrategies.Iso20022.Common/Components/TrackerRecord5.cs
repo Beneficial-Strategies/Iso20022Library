@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_1bDllzEyEe6g-ffJsqGiSA")]
 [Description(@"Specifies the agent specific tracking system information of a payment transaction.")]
 [DisplayName("Tracker Record5")]
-public record TrackerRecord5
+public partial record TrackerRecord5
 {
     /// <summary>
     /// Identification of an agent in the tracker.

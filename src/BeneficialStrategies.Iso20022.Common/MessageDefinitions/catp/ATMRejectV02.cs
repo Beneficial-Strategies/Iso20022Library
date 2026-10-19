@@ -20,7 +20,7 @@ namespace BeneficialStrategies.Iso20022.catp;
 [Description(@"The ATMReject message is sent by any entity to reject a received message.")]
 [IsoId("_EnCvca42EeWpsoxRhdX-8A")]
 [DisplayName("ATM Reject V")]
-public record ATMRejectV02 : IOuterRecord
+public partial record ATMRejectV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

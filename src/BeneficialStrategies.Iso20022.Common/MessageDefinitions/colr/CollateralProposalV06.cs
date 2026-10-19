@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 )]
 [IsoId("_J4YkVygrEeyB747fKu7_rw")]
 [DisplayName("Collateral Proposal V")]
-public record CollateralProposalV06 : IOuterRecord
+public partial record CollateralProposalV06 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_rNNBueHzEeqbls7Gk4-ckA")]
 [DisplayName("Request To Pay Debtor Activation Amendment Request V")]
-public record RequestToPayDebtorActivationAmendmentRequestV01 : IOuterRecord
+public partial record RequestToPayDebtorActivationAmendmentRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -34,7 +34,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_jTv05R62Eeu31YsWNiv_cw")]
 [DisplayName("Security Report V")]
-public record SecurityReportV01 : IOuterRecord
+public partial record SecurityReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

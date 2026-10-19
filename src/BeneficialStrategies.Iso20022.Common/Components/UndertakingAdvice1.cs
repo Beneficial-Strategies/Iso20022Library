@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-AMvZnltEeG7BsjMvd1mEw_-927366247")]
 [DisplayName("Undertaking Advice")]
-public record UndertakingAdvice1
+public partial record UndertakingAdvice1
 {
     /// <summary>
     /// Contents of the related UndertakingIssuance message.

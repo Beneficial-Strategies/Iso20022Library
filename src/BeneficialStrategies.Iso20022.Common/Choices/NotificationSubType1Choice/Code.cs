@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NotificationSubType1Choice
     /// Code.
     /// </summary>
     [DisplayName("Code")]
-    public record Code : NotificationSubType1Choice_
+    public partial record Code : NotificationSubType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

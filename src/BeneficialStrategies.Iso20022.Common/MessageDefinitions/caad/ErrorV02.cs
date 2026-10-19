@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.caad;
 )]
 [IsoId("_ow6JocsZEeizUq4cFQ71-Q")]
 [DisplayName("Error V")]
-public record ErrorV02 : IOuterRecord
+public partial record ErrorV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

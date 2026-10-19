@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UnhiwNp-Ed-ak6NoX_4Aeg_-540863751")]
 [DisplayName("Collateral Cancellation Reason")]
-public record CollateralCancellationReason1
+public partial record CollateralCancellationReason1
 {
     /// <summary>
     /// Allows to provides additional information on the cancellation reason.

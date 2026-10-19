@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Dic7UasgEe-ug9Puyq4nEw")]
 [DisplayName("ATM Customer9")]
-public record ATMCustomer9
+public partial record ATMCustomer9
 {
     /// <summary>
     /// Profile.

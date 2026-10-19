@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VZJM-tp-Ed-ak6NoX_4Aeg_16395281")]
 [DisplayName("Statistics By User Defined Time Period")]
-public record StatisticsByUserDefinedTimePeriod1
+public partial record StatisticsByUserDefinedTimePeriod1
 {
     /// <summary>
     /// Reference period for the valuation.

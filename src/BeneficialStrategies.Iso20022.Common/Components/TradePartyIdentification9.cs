@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ul5uAXfaEe2I4Iip2NEM0A")]
 [DisplayName("Trade Party Identification9")]
-public record TradePartyIdentification9
+public partial record TradePartyIdentification9
 {
     /// <summary>
     /// Fund Information.

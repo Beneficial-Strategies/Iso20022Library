@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_7lZ_IOB9Eei2UYJ62ws-Fw")]
     [DisplayName("Matching Status 33 Choice")]
-    public abstract record MatchingStatus33Choice_ { }
+    public abstract partial record MatchingStatus33Choice_ { }
 }

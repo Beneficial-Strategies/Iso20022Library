@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VjYuyYcREe-U27oWwgmhCQ")]
 [DisplayName("Trade Leg12")]
-public record TradeLeg12
+public partial record TradeLeg12
 {
     /// <summary>
     /// Margin Account.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_x-0e8Wc-EemvNLufWGIVOQ")]
 [DisplayName("Security CSD Link")]
-public record SecurityCSDLink7
+public partial record SecurityCSDLink7
 {
     /// <summary>
     /// Defines the date since when the CSD is linked to the security.

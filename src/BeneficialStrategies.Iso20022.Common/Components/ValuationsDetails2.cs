@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LuJTafGMEei2UYJ62ws-Fw")]
 [DisplayName("Valuations Details")]
-public record ValuationsDetails2
+public partial record ValuationsDetails2
 {
     /// <summary>
     /// Securities collateral position valuation amounts.

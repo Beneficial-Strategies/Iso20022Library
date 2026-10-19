@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kOqpAIW2EeiDBOVr6AJAFA")]
 [DisplayName("Tracker Data")]
-public record TrackerData1
+public partial record TrackerData1
 {
     /// <summary>
     /// Point in time when an update to the tracking system has been confirmed.

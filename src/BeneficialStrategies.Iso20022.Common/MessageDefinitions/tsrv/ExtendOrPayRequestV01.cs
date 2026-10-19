@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 )]
 [IsoId("_9hNGQnltEeG7BsjMvd1mEw_-1297539311")]
 [DisplayName("Extend Or Pay Request V")]
-public record ExtendOrPayRequestV01 : IOuterRecord
+public partial record ExtendOrPayRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

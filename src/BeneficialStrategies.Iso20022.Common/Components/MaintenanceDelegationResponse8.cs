@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rxklAZB4Ee6FLLjWp95ntQ")]
 [DisplayName("Maintenance Delegation Response8")]
-public record MaintenanceDelegationResponse8
+public partial record MaintenanceDelegationResponse8
 {
     /// <summary>
     /// TM Identification.

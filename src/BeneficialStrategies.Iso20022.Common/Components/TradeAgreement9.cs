@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_U6W0USNfEeKkK9gFRqAdSA")]
 [DisplayName("Trade Agreement")]
-public record TradeAgreement9
+public partial record TradeAgreement9
 {
     /// <summary>
     /// Date on which the trading parties agreed on the trade.

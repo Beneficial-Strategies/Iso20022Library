@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_Wb5bQJ9XEeqxTNfi5y7ywQ")]
     [DisplayName("Ex Post Cost Calculation Basis 1 Choice")]
-    public abstract record ExPostCostCalculationBasis1Choice_ { }
+    public abstract partial record ExPostCostCalculationBasis1Choice_ { }
 }

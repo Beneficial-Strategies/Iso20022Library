@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RFLdYdp-Ed-ak6NoX_4Aeg_-1930823301")]
 [DisplayName("Validation Result")]
-public record ValidationResult3
+public partial record ValidationResult3
 {
     /// <summary>
     /// Sequential number assigned to the error.

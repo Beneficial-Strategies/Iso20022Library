@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_udWnMK4DEeWL1uap3dNhCQ")]
 [DisplayName("ATM Deposited Media")]
-public record ATMDepositedMedia2
+public partial record ATMDepositedMedia2
 {
     /// <summary>
     /// Number of deposit media.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_qJOe4StEEeySlt9bF77XfA")]
 [DisplayName("Securities Movement")]
-public record SecuritiesMovement8
+public partial record SecuritiesMovement8
 {
     /// <summary>
     /// Specifies whether the quantity of financial instrument are to be delivered or received

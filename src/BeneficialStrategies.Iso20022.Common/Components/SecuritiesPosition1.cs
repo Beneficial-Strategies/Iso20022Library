@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jKPqh-5NEeCisYr99QEiWA_1769802046")]
 [DisplayName("Securities Position")]
-public record SecuritiesPosition1
+public partial record SecuritiesPosition1
 {
     /// <summary>
     /// Specifies the type of a position or a balance, such as earmarked or delivered.

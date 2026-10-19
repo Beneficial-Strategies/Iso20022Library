@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WGD8Ya14EeWMg5rOByfExw")]
 [DisplayName("ATM Customer Profile")]
-public record ATMCustomerProfile4
+public partial record ATMCustomerProfile4
 {
     /// <summary>
     /// Describes the main way customer information was collected to build up the customer menu and to provide the service.

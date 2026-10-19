@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_CZNGNbDEEe-g3p7goNrabg")]
 [DisplayName("Eligible Counterpart CSD Creation Request V01")]
-public record EligibleCounterpartCSDCreationRequestV01 : IOuterRecord
+public partial record EligibleCounterpartCSDCreationRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

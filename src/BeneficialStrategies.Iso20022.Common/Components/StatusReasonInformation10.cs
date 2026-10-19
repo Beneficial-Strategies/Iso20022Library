@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kpLGou5NEeCisYr99QEiWA_743644615")]
 [DisplayName("Status Reason Information")]
-public record StatusReasonInformation10
+public partial record StatusReasonInformation10
 {
     /// <summary>
     /// Specifies the reason for the status report.

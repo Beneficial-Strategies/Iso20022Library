@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ToDCxNp-Ed-ak6NoX_4Aeg_1044270844")]
 [DisplayName("Report Line")]
-public record ReportLine2
+public partial record ReportLine2
 {
     /// <summary>
     /// Unique identification assigned by the matching application to the transaction.

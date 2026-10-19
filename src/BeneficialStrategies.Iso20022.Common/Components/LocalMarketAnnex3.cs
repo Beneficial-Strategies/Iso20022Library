@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_s5NpkTfeEei6RvewLQWEqw")]
 [DisplayName("Local Market Annex")]
-public record LocalMarketAnnex3
+public partial record LocalMarketAnnex3
 {
     /// <summary>
     /// Country of the local fund order desk.

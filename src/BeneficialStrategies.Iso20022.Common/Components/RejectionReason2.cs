@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UsSuA9p-Ed-ak6NoX_4Aeg_-521235445")]
 [DisplayName("Rejection Reason")]
-public record RejectionReason2
+public partial record RejectionReason2
 {
     /// <summary>
     /// Reason of the rejection provided by the rejecting party.

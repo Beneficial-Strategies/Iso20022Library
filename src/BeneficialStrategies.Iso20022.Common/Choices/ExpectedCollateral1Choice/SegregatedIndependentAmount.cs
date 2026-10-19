@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExpectedCollateral1Choice
     [IsoId("_QmevNNp-Ed-ak6NoX_4Aeg_1398356900")]
     [DisplayName("Segregated Independent Amount")]
     [IsoXmlTag("SgrtdIndpdntAmt")]
-    public record SegregatedIndependentAmount : ExpectedCollateral1Choice_
+    public partial record SegregatedIndependentAmount : ExpectedCollateral1Choice_
     {
         /// <summary>
         /// Type of collateral that will be delivered.

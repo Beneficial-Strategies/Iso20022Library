@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__IPYsa4aEeW_TaP-ygI0SQ")]
 [DisplayName("ATMPIN Management Response")]
-public record ATMPINManagementResponse2
+public partial record ATMPINManagementResponse2
 {
     /// <summary>
     /// Environment of the PIN management transaction.

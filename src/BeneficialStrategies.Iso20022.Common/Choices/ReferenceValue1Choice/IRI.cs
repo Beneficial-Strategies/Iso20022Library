@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReferenceValue1Choice
     /// </summary>
     [IsoId("_yqrhkMePEeysUoBKYz1Ytw")]
     [DisplayName("IRI")]
-    public record IRI : ReferenceValue1Choice_
+    public partial record IRI : ReferenceValue1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

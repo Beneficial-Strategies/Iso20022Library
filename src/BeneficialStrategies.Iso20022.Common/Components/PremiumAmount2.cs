@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TJMjkNp-Ed-ak6NoX_4Aeg_-1139165617")]
 [DisplayName("Premium Amount")]
-public record PremiumAmount2
+public partial record PremiumAmount2
 {
     /// <summary>
     /// Specifies the calculation method of the premium amount.

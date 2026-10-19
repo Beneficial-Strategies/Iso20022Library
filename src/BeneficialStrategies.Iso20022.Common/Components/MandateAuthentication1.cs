@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HSGqsGVVEeacpJ-gG9kyUQ")]
 [DisplayName("Mandate Authentication")]
-public record MandateAuthentication1
+public partial record MandateAuthentication1
 {
     /// <summary>
     /// Specifies a piece of information used to authenticate a message, that is to confirm that the message came from the stated sender (its authenticity) and has not been changed in transit (its integrity).

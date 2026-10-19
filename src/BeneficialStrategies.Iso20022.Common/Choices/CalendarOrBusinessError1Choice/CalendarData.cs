@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CalendarOrBusinessError1Choice
     [IsoId("_dVcQ2Ym7Eeipw6hHPgB4Sw")]
     [DisplayName("Calendar Data")]
     [IsoXmlTag("CalData")]
-    public record CalendarData : CalendarOrBusinessError1Choice_
+    public partial record CalendarData : CalendarOrBusinessError1Choice_
     {
         /// <summary>
         /// Date for which the calendar information is provided.

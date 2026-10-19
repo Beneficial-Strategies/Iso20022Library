@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PDS2gWp7EemmaZLSPtWX5A")]
 [DisplayName("Derivative")]
-public record Derivative4
+public partial record Derivative4
 {
     /// <summary>
     /// Parameters for contracts which obligate the buyer to receive and the seller to deliver in the future the assets specified at an agreed price.

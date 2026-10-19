@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TJDZotp-Ed-ak6NoX_4Aeg_1796808068")]
 [DisplayName("Fund Identification")]
-public record FundIdentification2
+public partial record FundIdentification2
 {
     /// <summary>
     /// Identification of the investment fund.

@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.canm;
 /// </summary>
 [IsoId("_22kJYZgAEe6OBt2eQPMPsQ")]
 [DisplayName("Key Exchange Initiation V04")]
-public record KeyExchangeInitiationV04 : IOuterRecord
+public partial record KeyExchangeInitiationV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

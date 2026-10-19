@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BGwWoY4YEeW6h7rGyYlyTg")]
 [DisplayName("Response Type")]
-public record ResponseType6
+public partial record ResponseType6
 {
     /// <summary>
     /// Response of the terminal manager.

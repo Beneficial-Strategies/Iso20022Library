@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QETUpZJKEeuAlLVx8pyt3w")]
 [DisplayName("Securities Search Criteria")]
-public record SecuritiesSearchCriteria4
+public partial record SecuritiesSearchCriteria4
 {
     /// <summary>
     /// Way(s) of identifying the security.

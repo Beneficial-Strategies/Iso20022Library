@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditorEnrolmentStatusReason2Ch
     /// </summary>
     [IsoId("_fW_fZOIxEeqbls7Gk4-ckA")]
     [DisplayName("Code")]
-    public record Code : CreditorEnrolmentStatusReason2Choice_
+    public partial record Code : CreditorEnrolmentStatusReason2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

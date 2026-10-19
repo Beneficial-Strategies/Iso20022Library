@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-BiMJnltEeG7BsjMvd1mEw_711014268")]
 [DisplayName("Discrepancy")]
-public record Discrepancy1
+public partial record Discrepancy1
 {
     /// <summary>
     /// Identification of the discrepancy.

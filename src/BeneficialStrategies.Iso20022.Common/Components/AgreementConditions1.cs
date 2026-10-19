@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_bedvoJUTEea7vKctaoIyEQ")]
 [DisplayName("Agreement Conditions")]
-public record AgreementConditions1
+public partial record AgreementConditions1
 {
     /// <summary>
     /// Specifies the type of agreement.

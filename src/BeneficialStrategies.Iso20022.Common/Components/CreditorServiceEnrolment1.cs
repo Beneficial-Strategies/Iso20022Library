@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BcQ8kEWOEempSe_3C1a9EQ")]
 [DisplayName("Creditor Service Enrolment")]
-public record CreditorServiceEnrolment1
+public partial record CreditorServiceEnrolment1
 {
     /// <summary>
     /// Start date when the creditor enrolment becomes effective.

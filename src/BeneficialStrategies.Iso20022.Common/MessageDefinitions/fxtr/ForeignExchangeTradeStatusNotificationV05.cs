@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 )]
 [IsoId("_7QPkkTJzEeOd1OidA-8_VQ")]
 [DisplayName("Foreign Exchange Trade Status Notification V")]
-public record ForeignExchangeTradeStatusNotificationV05 : IOuterRecord
+public partial record ForeignExchangeTradeStatusNotificationV05 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

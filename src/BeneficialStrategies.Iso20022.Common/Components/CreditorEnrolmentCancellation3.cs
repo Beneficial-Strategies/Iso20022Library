@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0hm1ETEyEe6g-ffJsqGiSA")]
 [DisplayName("Creditor Enrolment Cancellation3")]
-public record CreditorEnrolmentCancellation3
+public partial record CreditorEnrolmentCancellation3
 {
     /// <summary>
     /// Original Business Instruction.

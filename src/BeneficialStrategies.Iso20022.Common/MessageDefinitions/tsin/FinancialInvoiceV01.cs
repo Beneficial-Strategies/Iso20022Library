@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.tsin;
 )]
 [IsoId("_BU_0In1LEeCF8NjrBemJWQ_-1866907401")]
 [DisplayName("Financial Invoice V")]
-public record FinancialInvoiceV01 : IOuterRecord
+public partial record FinancialInvoiceV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

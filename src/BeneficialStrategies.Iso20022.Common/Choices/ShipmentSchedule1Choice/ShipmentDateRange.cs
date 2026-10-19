@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ShipmentSchedule1Choice
     [IsoId("_RcH9wNp-Ed-ak6NoX_4Aeg_-446017170")]
     [DisplayName("Shipment Date Range")]
     [IsoXmlTag("ShipmntDtRg")]
-    public record ShipmentDateRange : ShipmentSchedule1Choice_
+    public partial record ShipmentDateRange : ShipmentSchedule1Choice_
     {
         /// <summary>
         /// Earliest date whereby the goods must be shipped.

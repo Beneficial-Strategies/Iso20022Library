@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.cafr;
 /// </summary>
 [IsoId("_Q2GsgROIEfC1ZfCQz0xB3g")]
 [DisplayName("Fraud Disposition Response V04")]
-public record FraudDispositionResponseV04 : IOuterRecord
+public partial record FraudDispositionResponseV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

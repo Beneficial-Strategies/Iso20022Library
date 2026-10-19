@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party49Choice
     [IsoId("_dbeBY-EpEemRzcIkmUETeA")]
     [DisplayName("Organisation Identification")]
     [IsoXmlTag("OrgId")]
-    public record OrganisationIdentification : Party49Choice_
+    public partial record OrganisationIdentification : Party49Choice_
     {
         /// <summary>
         /// Business identification code of the organisation.

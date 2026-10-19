@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Y41SoA7zEeuZI5Sr_GAcuA")]
 [DisplayName("Option Conditions")]
-public record OptionConditions1
+public partial record OptionConditions1
 {
     /// <summary>
     /// Number of the condition.

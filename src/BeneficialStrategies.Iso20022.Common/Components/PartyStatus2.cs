@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7_fcO1hLEeih3fUfzR38Ig")]
 [DisplayName("Party Status")]
-public record PartyStatus2
+public partial record PartyStatus2
 {
     /// <summary>
     /// Status of the party maintenance instruction.

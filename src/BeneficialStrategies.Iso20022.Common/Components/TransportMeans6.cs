@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2vnszzckEeSaC-PiOaz_KQ")]
 [DisplayName("Transport Means")]
-public record TransportMeans6
+public partial record TransportMeans6
 {
     /// <summary>
     /// Moving of goods or people from one place to another by vehicle.

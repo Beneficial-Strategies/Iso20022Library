@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeFrame7Choice
     /// </summary>
     [IsoId("_5-mysTgDEei6RvewLQWEqw")]
     [DisplayName("Trade Plus")]
-    public record TradePlus : TimeFrame7Choice_
+    public partial record TradePlus : TimeFrame7Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

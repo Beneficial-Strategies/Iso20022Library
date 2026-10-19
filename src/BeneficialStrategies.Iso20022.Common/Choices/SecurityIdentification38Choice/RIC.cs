@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification38Choice
     /// RIC.
     /// </summary>
     [DisplayName("RIC")]
-    public record RIC : SecurityIdentification38Choice_
+    public partial record RIC : SecurityIdentification38Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

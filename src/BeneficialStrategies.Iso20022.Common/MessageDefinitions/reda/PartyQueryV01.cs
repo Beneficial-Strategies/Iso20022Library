@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_6z5WgZeSEeen_cyMrluY4w")]
 [DisplayName("Party Query V")]
-public record PartyQueryV01 : IOuterRecord
+public partial record PartyQueryV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

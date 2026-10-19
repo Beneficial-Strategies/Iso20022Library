@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reference3Choice
     /// </summary>
     [IsoId("_d0qV5gLyEeutW5-TpeYJhA")]
     [DisplayName("Interest Payment Statement Identification")]
-    public record InterestPaymentStatementIdentification : Reference3Choice_
+    public partial record InterestPaymentStatementIdentification : Reference3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

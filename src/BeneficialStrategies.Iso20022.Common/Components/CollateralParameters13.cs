@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MOvFUSs9EeySlt9bF77XfA")]
 [DisplayName("Collateral Parameters")]
-public record CollateralParameters13
+public partial record CollateralParameters13
 {
     /// <summary>
     /// Specifies the type of collateral instruction.

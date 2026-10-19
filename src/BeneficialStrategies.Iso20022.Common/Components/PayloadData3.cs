@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_b5oVIRUZEfCfALVKQ4rOew")]
 [DisplayName("Payload Data3")]
-public record PayloadData3
+public partial record PayloadData3
 {
     /// <summary>
     /// Identifier unique within the sender of the file and assigned by the sender of the file.

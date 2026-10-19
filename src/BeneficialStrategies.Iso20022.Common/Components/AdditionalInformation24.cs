@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2xhasLzhEeivTd4NUfCi2g")]
 [DisplayName("Additional Information")]
-public record AdditionalInformation24
+public partial record AdditionalInformation24
 {
     /// <summary>
     /// Provides additional information on the collateral instruction.

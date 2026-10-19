@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification99Choice
     [IsoId("_-6Y-VWz9EeWv_oZ1Y01DUQ")]
     [DisplayName("Any BIC")]
     [IsoXmlTag("AnyBIC")]
-    public record AnyBIC : PartyIdentification99Choice_
+    public partial record AnyBIC : PartyIdentification99Choice_
     {
         /// <summary>
         /// Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 &quot;Banking - Banking telecommunication messages - Business identifier code (BIC)&quot;.

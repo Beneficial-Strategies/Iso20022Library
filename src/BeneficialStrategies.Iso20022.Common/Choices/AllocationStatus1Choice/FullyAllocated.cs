@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AllocationStatus1Choice
     [IsoId("_cFIB8N_-EeiVRbNQx5-Vhg")]
     [DisplayName("Fully Allocated")]
     [IsoXmlTag("FullyAllctd")]
-    public record FullyAllocated : AllocationStatus1Choice_
+    public partial record FullyAllocated : AllocationStatus1Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

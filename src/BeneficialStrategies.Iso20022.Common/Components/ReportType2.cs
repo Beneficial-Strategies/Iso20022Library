@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RJ8op9p-Ed-ak6NoX_4Aeg_44495022")]
 [DisplayName("Report Type")]
-public record ReportType2
+public partial record ReportType2
 {
     /// <summary>
     /// Specifies whether the report is precalculated or current.

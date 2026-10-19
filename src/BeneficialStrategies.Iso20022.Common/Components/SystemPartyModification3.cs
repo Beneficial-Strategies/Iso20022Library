@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Y6_ygTE_Ee62xuUQ2zyZww")]
 [DisplayName("System Party Modification3")]
-public record SystemPartyModification3
+public partial record SystemPartyModification3
 {
     /// <summary>
     /// Scope Indication.

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductIdentifier3Choice
     /// Underlying Product Identifier.
     /// </summary>
     [DisplayName("Underlying Product Identifier")]
-    public record UnderlyingProductIdentifier : ProductIdentifier3Choice_
+    public partial record UnderlyingProductIdentifier : ProductIdentifier3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

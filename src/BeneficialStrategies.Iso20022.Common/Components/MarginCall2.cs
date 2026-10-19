@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_gfK1AILVEeWrrO9HojbPQA")]
 [DisplayName("Margin Call")]
-public record MarginCall2
+public partial record MarginCall2
 {
     /// <summary>
     /// Provides additional information on the collateral account of the party delivering/receiving the collateral.

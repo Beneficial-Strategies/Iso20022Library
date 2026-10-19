@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XXfF4Ss-EeySlt9bF77XfA")]
 [DisplayName("Collateral Parties")]
-public record CollateralParties8
+public partial record CollateralParties8
 {
     /// <summary>
     /// Instructing party sending the collateral instruction.

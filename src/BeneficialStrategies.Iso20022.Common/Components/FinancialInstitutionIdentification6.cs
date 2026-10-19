@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QE8vddp-Ed-ak6NoX_4Aeg_-1605328291")]
 [DisplayName("Financial Institution Identification")]
-public record FinancialInstitutionIdentification6
+public partial record FinancialInstitutionIdentification6
 {
     /// <summary>
     /// Unique and unambiguous identifier of a clearing system member, as assigned by the system or system administrator.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_H9e0cWA5EeSMf75YyPqG7w")]
 [DisplayName("Securities Collateral")]
-public record SecuritiesCollateral2
+public partial record SecuritiesCollateral2
 {
     /// <summary>
     /// Identifies the register number of the collateral deposit assigned by the central counterparty.

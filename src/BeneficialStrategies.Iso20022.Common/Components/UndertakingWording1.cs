@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_94chlnltEeG7BsjMvd1mEw_-1148576989")]
 [DisplayName("Undertaking Wording")]
-public record UndertakingWording1
+public partial record UndertakingWording1
 {
     /// <summary>
     /// Wording template for the undertaking content made available for use with certain governance rules or made available by particular institutions.

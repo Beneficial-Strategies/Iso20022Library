@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AFlH0StNEeyOa655cLd-DQ")]
 [DisplayName("Interest Amount")]
-public record InterestAmount4
+public partial record InterestAmount4
 {
     /// <summary>
     /// Indicates whether the interest request is new or updated.

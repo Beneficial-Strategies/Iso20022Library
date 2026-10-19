@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeUnit3Choice
     [IsoId("_oTL_U-LaEeWFtOV72FbX9w")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : TimeUnit3Choice_
+    public partial record Proprietary : TimeUnit3Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

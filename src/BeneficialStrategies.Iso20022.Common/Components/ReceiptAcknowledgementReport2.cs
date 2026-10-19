@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WhpTYZb4Eee4htziCyV8eA")]
 [DisplayName("Receipt Acknowledgement Report")]
-public record ReceiptAcknowledgementReport2
+public partial record ReceiptAcknowledgementReport2
 {
     /// <summary>
     /// Reference of the request.

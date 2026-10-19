@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.admi;
 )]
 [IsoId("_Zy71kRnXEeKKXqHkeUjBbw")]
 [DisplayName("Static Data Report V")]
-public record StaticDataReportV02 : IOuterRecord
+public partial record StaticDataReportV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PremiumQuote1Choice
     /// </summary>
     [IsoId("_TMLmINp-Ed-ak6NoX_4Aeg_-1664649532")]
     [DisplayName("Percentage Of Call Amount")]
-    public record PercentageOfCallAmount : PremiumQuote1Choice_
+    public partial record PercentageOfCallAmount : PremiumQuote1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

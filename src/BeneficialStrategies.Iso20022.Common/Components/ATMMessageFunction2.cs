@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_nymwQa1wEeWMg5rOByfExw")]
 [DisplayName("ATM Message Function")]
-public record ATMMessageFunction2
+public partial record ATMMessageFunction2
 {
     /// <summary>
     /// Type of requested function.

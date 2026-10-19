@@ -27,7 +27,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 )]
 [IsoId("_LwD3S8P_Eemsic1bQcEtLA")]
 [DisplayName("Customer Payment Reversal V")]
-public record CustomerPaymentReversalV10 : IOuterRecord
+public partial record CustomerPaymentReversalV10 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

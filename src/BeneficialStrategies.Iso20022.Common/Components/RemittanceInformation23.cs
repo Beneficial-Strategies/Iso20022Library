@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9FAoQTEsEe6GxLzpkVnWYg")]
 [DisplayName("Remittance Information23")]
-public record RemittanceInformation23
+public partial record RemittanceInformation23
 {
     /// <summary>
     /// Remittance Identification.

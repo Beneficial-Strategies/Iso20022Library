@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OTgzMzU2-AOSNFX-8224501")]
 [DisplayName("Financing Agreement Item")]
-public record FinancingAgreementItem1
+public partial record FinancingAgreementItem1
 {
     /// <summary>
     /// Parameters related to the context of the item.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mzk7cZ8_Ee-nbM0aSPcoiQ")]
 [DisplayName("ATM Command14")]
-public record ATMCommand14
+public partial record ATMCommand14
 {
     /// <summary>
     /// Type.

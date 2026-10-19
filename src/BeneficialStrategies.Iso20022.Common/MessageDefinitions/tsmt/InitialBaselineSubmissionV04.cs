@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 )]
 [IsoId("_7DK6cdNTEeK-v49t1oWkNA")]
 [DisplayName("Initial Baseline Submission V")]
-public record InitialBaselineSubmissionV04 : IOuterRecord
+public partial record InitialBaselineSubmissionV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

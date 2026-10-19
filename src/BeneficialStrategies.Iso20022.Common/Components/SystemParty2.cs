@@ -16,7 +16,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kmC6Ie5NEeCisYr99QEiWA_-1914948225")]
 [DisplayName("System Party")]
-public record SystemParty2
+public partial record SystemParty2
 {
     /// <summary>
     /// Specifies the opening date of the party.

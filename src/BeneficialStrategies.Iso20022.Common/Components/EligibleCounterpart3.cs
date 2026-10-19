@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_wlhJsWc-EemvNLufWGIVOQ")]
 [DisplayName("Eligible Counterpart3")]
-public record EligibleCounterpart3
+public partial record EligibleCounterpart3
 {
     /// <summary>
     /// Unique business identifier code used to identify the party providing the eligible counterpart information.

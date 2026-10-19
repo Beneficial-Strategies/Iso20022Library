@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GtUHkJ2oEe-4seDr3Li2Ew")]
 [DisplayName("ATM Exchange Rate Component1")]
-public record ATMExchangeRateComponent1
+public partial record ATMExchangeRateComponent1
 {
     /// <summary>
     /// Exchange Rate.

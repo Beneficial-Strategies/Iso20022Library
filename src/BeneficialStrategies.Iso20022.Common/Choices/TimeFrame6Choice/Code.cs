@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeFrame6Choice
     /// </summary>
     [IsoId("_-0Bz8DcbEeidBoT_PugKiA")]
     [DisplayName("Code")]
-    public record Code : TimeFrame6Choice_
+    public partial record Code : TimeFrame6Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

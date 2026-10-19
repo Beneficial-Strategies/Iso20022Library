@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dnyOAGpbEeS4r8z7dKyh1g")]
 [DisplayName("TMS Protocol Parameters")]
-public record TMSProtocolParameters1
+public partial record TMSProtocolParameters1
 {
     /// <summary>
     /// Identification of the master terminal manager or the terminal manager.

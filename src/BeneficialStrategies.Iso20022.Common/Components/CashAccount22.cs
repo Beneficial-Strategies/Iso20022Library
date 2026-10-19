@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SOMT6Np-Ed-ak6NoX_4Aeg_-1967253219")]
 [DisplayName("Cash Account")]
-public record CashAccount22
+public partial record CashAccount22
 {
     /// <summary>
     /// Medium of exchange of value.

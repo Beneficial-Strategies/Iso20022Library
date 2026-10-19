@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jUZEwV84Eeicg40_9gK9vQ")]
 [DisplayName("Processing Characteristics")]
-public record ProcessingCharacteristics6
+public partial record ProcessingCharacteristics6
 {
     /// <summary>
     /// Currency in which a switch is accepted.

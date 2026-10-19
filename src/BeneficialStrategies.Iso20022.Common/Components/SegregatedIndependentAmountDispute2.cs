@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dCiJ4StOEeyOa655cLd-DQ")]
 [DisplayName("Segregated Independent Amount Dispute")]
-public record SegregatedIndependentAmountDispute2
+public partial record SegregatedIndependentAmountDispute2
 {
     /// <summary>
     /// Details of the disputed instruction.

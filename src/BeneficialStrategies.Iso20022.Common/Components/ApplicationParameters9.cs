@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_12koAQufEeqw5uEXxQ9H4g")]
 [DisplayName("Application Parameters")]
-public record ApplicationParameters9
+public partial record ApplicationParameters9
 {
     /// <summary>
     /// Type of action for the configuration parameters.

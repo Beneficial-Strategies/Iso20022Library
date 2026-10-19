@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DisputeNotification2Choice
     [IsoId("_KkjLoStOEeyOa655cLd-DQ")]
     [DisplayName("Dispute Notification Details")]
     [IsoXmlTag("DsptNtfctnDtls")]
-    public record DisputeNotificationDetails : DisputeNotification2Choice_
+    public partial record DisputeNotificationDetails : DisputeNotification2Choice_
     {
         /// <summary>
         /// Provides the dispute notification details for the variation margin.

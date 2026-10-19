@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_m0KpUUhpEeOdL6nMHefDgg")]
 [DisplayName("Generic Identification")]
-public record GenericIdentification49
+public partial record GenericIdentification49
 {
     /// <summary>
     /// Identifier issued to a person or an institution for which no other specific identifier has been defined.

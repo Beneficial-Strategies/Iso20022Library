@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xjhx0Si9Eeurkfo6MpvKDA")]
 [DisplayName("Maintenance Delegate Action")]
-public record MaintenanceDelegateAction6
+public partial record MaintenanceDelegateAction6
 {
     /// <summary>
     /// Flag to indicate that the delegated actions have to be included in a periodic sequence of actions.

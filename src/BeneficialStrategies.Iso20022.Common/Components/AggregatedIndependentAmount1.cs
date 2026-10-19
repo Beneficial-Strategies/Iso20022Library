@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UlI9I9p-Ed-ak6NoX_4Aeg_1735271850")]
 [DisplayName("Aggregated Independent Amount")]
-public record AggregatedIndependentAmount1
+public partial record AggregatedIndependentAmount1
 {
     /// <summary>
     /// Total independent amount defined in the confirmations of individual trades.

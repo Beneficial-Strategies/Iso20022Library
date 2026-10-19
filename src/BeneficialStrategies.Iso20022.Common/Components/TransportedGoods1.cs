@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SpnEn9p-Ed-ak6NoX_4Aeg_-1297466325")]
 [DisplayName("Transported Goods")]
-public record TransportedGoods1
+public partial record TransportedGoods1
 {
     /// <summary>
     /// Reference to the purchase order of the underlying transaction.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice
     /// </summary>
     [IsoId("_Dd9wIFZXEeen1vB4iz5SyA")]
     [DisplayName("Error")]
-    public record Error : RecordMessage1Choice_
+    public partial record Error : RecordMessage1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Qki1hNp-Ed-ak6NoX_4Aeg_1044109408")]
 [DisplayName("Interest Response")]
-public record InterestResponse1
+public partial record InterestResponse1
 {
     /// <summary>
     /// Provides the type of the response, either accepted or rejected.

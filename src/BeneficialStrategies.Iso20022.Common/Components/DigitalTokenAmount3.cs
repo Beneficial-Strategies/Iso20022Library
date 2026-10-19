@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jxqSYUj3Ee-KhcStGV4xTg")]
 [DisplayName("Digital Token Amount3")]
-public record DigitalTokenAmount3
+public partial record DigitalTokenAmount3
 {
     /// <summary>
     /// Identifier.

@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.admi;
 )]
 [IsoId("_8LH5WNE9Ed-BzquC8wXy7w_-1942533103")]
 [DisplayName("Message Reject V")]
-public record MessageRejectV01 : IOuterRecord
+public partial record MessageRejectV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

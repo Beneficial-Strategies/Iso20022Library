@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_94TXpnltEeG7BsjMvd1mEw_101008065")]
 [DisplayName("Governance Rules")]
-public record GovernanceRules1
+public partial record GovernanceRules1
 {
     /// <summary>
     /// Identification of the governance rules.

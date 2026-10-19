@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_c6IB0TWAEeODSIIQsYYKhw")]
 [DisplayName("Management Plan Content")]
-public record ManagementPlanContent3
+public partial record ManagementPlanContent3
 {
     /// <summary>
     /// Terminal management action to be performed by the point of interaction (POI).

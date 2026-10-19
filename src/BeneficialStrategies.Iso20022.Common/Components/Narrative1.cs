@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_94mSknltEeG7BsjMvd1mEw_1059061696")]
 [DisplayName("Narrative")]
-public record Narrative1
+public partial record Narrative1
 {
     /// <summary>
     /// Type of term or condition.

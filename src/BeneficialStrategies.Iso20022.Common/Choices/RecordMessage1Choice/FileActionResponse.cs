@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice
     /// </summary>
     [IsoId("_freuwFZXEeen1vB4iz5SyA")]
     [DisplayName("File Action Response")]
-    public record FileActionResponse : RecordMessage1Choice_
+    public partial record FileActionResponse : RecordMessage1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

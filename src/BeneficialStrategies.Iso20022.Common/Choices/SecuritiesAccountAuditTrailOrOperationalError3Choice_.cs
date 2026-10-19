@@ -25,5 +25,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_AvnmYTp0Eemk2e6qGBk8IQ")]
     [DisplayName("Securities Account Audit Trail Or Operational Error 3 Choice")]
-    public abstract record SecuritiesAccountAuditTrailOrOperationalError3Choice_ { }
+    public abstract partial record SecuritiesAccountAuditTrailOrOperationalError3Choice_ { }
 }

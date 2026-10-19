@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-Br9JnltEeG7BsjMvd1mEw_1678341433")]
 [DisplayName("Undertaking Demand Withdrawal")]
-public record UndertakingDemandWithdrawal1
+public partial record UndertakingDemandWithdrawal1
 {
     /// <summary>
     /// Details related to the identification of the undertaking.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_dF_PpeLxEeWOD7aAy2fAcA")]
     [DisplayName("Investor Restriction Type 3 Choice")]
-    public abstract record InvestorRestrictionType3Choice_ { }
+    public abstract partial record InvestorRestrictionType3Choice_ { }
 }

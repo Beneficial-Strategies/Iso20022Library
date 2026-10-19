@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.cafc;
 )]
 [IsoId("_q5bNFFaHEeeFltjJxERUxw")]
 [DisplayName("Fee Collection Initiation V")]
-public record FeeCollectionInitiationV01 : IOuterRecord
+public partial record FeeCollectionInitiationV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_YNzVUTE_Ee62xuUQ2zyZww")]
     [DisplayName("Party Or Operational Error4Choice")]
-    public abstract record PartyOrOperationalError4Choice_ { }
+    public abstract partial record PartyOrOperationalError4Choice_ { }
 }

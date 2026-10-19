@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_916yAnltEeG7BsjMvd1mEw_562975782")]
 [DisplayName("Undertaking")]
-public record Undertaking2
+public partial record Undertaking2
 {
     /// <summary>
     /// Undertaking name.

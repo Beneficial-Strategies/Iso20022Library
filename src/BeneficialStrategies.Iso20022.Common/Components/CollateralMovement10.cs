@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_r4UOdYpIEeaNTaanBSMWmg")]
 [DisplayName("Collateral Movement")]
-public record CollateralMovement10
+public partial record CollateralMovement10
 {
     /// <summary>
     /// Provides the call amount that is agreed and that will result in a collateral movement.

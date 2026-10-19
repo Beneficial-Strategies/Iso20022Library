@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5LPDsWSzEeifFbri5DlfYA")]
 [DisplayName("Party Name")]
-public record PartyName4
+public partial record PartyName4
 {
     /// <summary>
     /// Specifies the date from which the party name is valid.

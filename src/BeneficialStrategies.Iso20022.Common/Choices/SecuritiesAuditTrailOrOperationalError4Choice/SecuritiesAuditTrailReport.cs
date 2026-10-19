@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAuditTrailOrOperationa
     [IsoId("_Ptf-MZJKEeuAlLVx8pyt3w")]
     [DisplayName("Securities Audit Trail Report")]
     [IsoXmlTag("SctiesAudtTrlRpt")]
-    public record SecuritiesAuditTrailReport : SecuritiesAuditTrailOrOperationalError4Choice_
+    public partial record SecuritiesAuditTrailReport : SecuritiesAuditTrailOrOperationalError4Choice_
     {
         /// <summary>
         /// Identifies the returned securities reference data or error information.

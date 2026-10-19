@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ShipmentSchedule1Choice
     [IsoId("_RcH9wdp-Ed-ak6NoX_4Aeg_-444169830")]
     [DisplayName("Shipment Sub Schedule")]
     [IsoXmlTag("ShipmntSubSchdl")]
-    public record ShipmentSubSchedule : ShipmentSchedule1Choice_
+    public partial record ShipmentSubSchedule : ShipmentSchedule1Choice_
     {
         /// <summary>
         /// Sub quantity that must be shipped no sooner than the earliest shipment date and no later than the latest shipment date.

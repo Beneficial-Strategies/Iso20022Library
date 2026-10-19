@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MQGoMTckEeSaC-PiOaz_KQ")]
 [DisplayName("Line Item")]
-public record LineItem15
+public partial record LineItem15
 {
     /// <summary>
     /// Reference to the purchase order of the underlying transaction.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5NSE0aE7Ee-MRKYsaX6JDg")]
 [DisplayName("Status Report Data Set Request6")]
-public record StatusReportDataSetRequest6
+public partial record StatusReportDataSetRequest6
 {
     /// <summary>
     /// Identification.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_W-n0EY4TEeW6h7rGyYlyTg")]
 [DisplayName("Relative Distinguished Name")]
-public record RelativeDistinguishedName2
+public partial record RelativeDistinguishedName2
 {
     /// <summary>
     /// Type of attribute of a distinguished name (see X.500).

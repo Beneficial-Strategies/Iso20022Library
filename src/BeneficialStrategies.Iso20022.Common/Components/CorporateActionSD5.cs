@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1VdexDL3EeKU9IrkkToqcw_-1325892976")]
 [DisplayName("Corporate Action SD")]
-public record CorporateActionSD5
+public partial record CorporateActionSD5
 {
     /// <summary>
     /// Unique identification or serial number that is assigned and affixed by an issuer or transfer agent to each securities certificate.

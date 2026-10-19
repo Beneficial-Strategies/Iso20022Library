@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.caad;
 /// </summary>
 [IsoId("_qYCEEROHEfC1ZfCQz0xB3g")]
 [DisplayName("Batch Management Initiation V04")]
-public record BatchManagementInitiationV04 : IOuterRecord
+public partial record BatchManagementInitiationV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

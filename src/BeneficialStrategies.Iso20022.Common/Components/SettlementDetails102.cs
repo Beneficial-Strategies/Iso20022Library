@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_t-54W4FvEeWtPe6Crjmeug")]
 [DisplayName("Settlement Details")]
-public record SettlementDetails102
+public partial record SettlementDetails102
 {
     /// <summary>
     /// Indicates the date as known by the two parties to be used for matching purposes when settlement of securities occurs.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_NqgTwaE4Ee-MRKYsaX6JDg")]
 [DisplayName("ATM Transfer Request2")]
-public record ATMTransferRequest2
+public partial record ATMTransferRequest2
 {
     /// <summary>
     /// Environment.

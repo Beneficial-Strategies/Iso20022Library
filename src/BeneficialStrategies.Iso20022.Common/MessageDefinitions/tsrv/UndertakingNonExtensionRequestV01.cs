@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 )]
 [IsoId("_9gmpVXltEeG7BsjMvd1mEw_634999527")]
 [DisplayName("Undertaking Non Extension Request V")]
-public record UndertakingNonExtensionRequestV01 : IOuterRecord
+public partial record UndertakingNonExtensionRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

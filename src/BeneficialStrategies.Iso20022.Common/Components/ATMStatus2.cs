@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_inj9QZ9bEe-nbM0aSPcoiQ")]
 [DisplayName("ATM Status2")]
-public record ATMStatus2
+public partial record ATMStatus2
 {
     /// <summary>
     /// Current Status.

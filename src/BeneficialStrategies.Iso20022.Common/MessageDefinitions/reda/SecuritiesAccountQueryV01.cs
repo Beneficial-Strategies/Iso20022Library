@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_KAu-wZ2fEem_Be8NuxvF7Q")]
 [DisplayName("Securities Account Query V")]
-public record SecuritiesAccountQueryV01 : IOuterRecord
+public partial record SecuritiesAccountQueryV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

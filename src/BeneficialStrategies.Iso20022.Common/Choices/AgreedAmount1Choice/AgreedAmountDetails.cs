@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AgreedAmount1Choice
     [IsoId("_Qm7bJtp-Ed-ak6NoX_4Aeg_-1292111974")]
     [DisplayName("Agreed Amount Details")]
     [IsoXmlTag("AgrdAmtDtls")]
-    public record AgreedAmountDetails : AgreedAmount1Choice_
+    public partial record AgreedAmountDetails : AgreedAmount1Choice_
     {
         /// <summary>
         /// Provides details about the agreed amount for the variation margin.

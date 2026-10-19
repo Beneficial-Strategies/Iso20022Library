@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_uhMgIaE8Ee-MRKYsaX6JDg")]
 [DisplayName("Status Report14")]
-public record StatusReport14
+public partial record StatusReport14
 {
     /// <summary>
     /// POI Identification.

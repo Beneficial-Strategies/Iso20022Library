@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_aNbsAXInEe299ZbWCkdR_w")]
 [DisplayName("Acceptor Configuration Data Set")]
-public record AcceptorConfigurationDataSet4
+public partial record AcceptorConfigurationDataSet4
 {
     /// <summary>
     /// Identification of the data set transferred.

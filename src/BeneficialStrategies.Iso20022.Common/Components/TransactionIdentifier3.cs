@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AV-gMZ9XEe-nbM0aSPcoiQ")]
 [DisplayName("Transaction Identifier3")]
-public record TransactionIdentifier3
+public partial record TransactionIdentifier3
 {
     /// <summary>
     /// Transaction Date Time.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VMLvAtp-Ed-ak6NoX_4Aeg_-1276327629")]
 [DisplayName("Calculation Basis")]
-public record CalculationBasis1
+public partial record CalculationBasis1
 {
     /// <summary>
     /// Structured format.

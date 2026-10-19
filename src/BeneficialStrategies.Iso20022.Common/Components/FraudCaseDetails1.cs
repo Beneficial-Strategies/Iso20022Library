@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_08BmYcZdEeiCDcGzDHI_9Q")]
 [DisplayName("Fraud Case Details")]
-public record FraudCaseDetails1
+public partial record FraudCaseDetails1
 {
     /// <summary>
     /// Type of market segment of confirmed fraud.

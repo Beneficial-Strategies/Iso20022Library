@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_FJs0oWwLEe6Mn47rYvO6fQ")]
 [Description(@"Specifies the details on the status of the payment conditions.")]
 [DisplayName("Payment Condition Status2")]
-public record PaymentConditionStatus2
+public partial record PaymentConditionStatus2
 {
     /// <summary>
     /// Amount accepted to be paid.

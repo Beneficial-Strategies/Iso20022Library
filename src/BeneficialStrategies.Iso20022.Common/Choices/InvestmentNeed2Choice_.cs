@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_bO8yEaDtEequlaOyi6MUhw")]
     [DisplayName("Investment Need 2 Choice")]
-    public abstract record InvestmentNeed2Choice_ { }
+    public abstract partial record InvestmentNeed2Choice_ { }
 }

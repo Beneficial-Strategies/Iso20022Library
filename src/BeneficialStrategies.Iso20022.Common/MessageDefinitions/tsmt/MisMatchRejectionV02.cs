@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 )]
 [IsoId("_scq46NE8Ed-BzquC8wXy7w_1101360695")]
 [DisplayName("Mis Match Rejection V")]
-public record MisMatchRejectionV02 : IOuterRecord
+public partial record MisMatchRejectionV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

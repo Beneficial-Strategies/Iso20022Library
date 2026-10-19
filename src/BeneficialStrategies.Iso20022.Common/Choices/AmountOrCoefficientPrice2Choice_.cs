@@ -17,5 +17,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(AmountOrCoefficientPrice2Choice.Coefficient), nameof(AmountOrCoefficientPrice2Choice.Coefficient))]
     [IsoId("_Muj3AWejEeqY_MU7lK4HCA")]
     [DisplayName("AmountOrCoefficientPrice2Choice")]
-    public abstract record AmountOrCoefficientPrice2Choice_ { }
+    public abstract partial record AmountOrCoefficientPrice2Choice_ { }
 }

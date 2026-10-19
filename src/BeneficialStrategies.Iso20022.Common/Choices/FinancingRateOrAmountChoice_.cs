@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_RXzecNp-Ed-ak6NoX_4Aeg_-2069508751")]
     [DisplayName("Financing Rate Or Amount Choice")]
-    public abstract record FinancingRateOrAmountChoice_ { }
+    public abstract partial record FinancingRateOrAmountChoice_ { }
 }

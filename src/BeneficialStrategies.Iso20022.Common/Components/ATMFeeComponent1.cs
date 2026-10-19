@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8wDXwJ2oEe-4seDr3Li2Ew")]
 [DisplayName("ATM Fee Component1")]
-public record ATMFeeComponent1
+public partial record ATMFeeComponent1
 {
     /// <summary>
     /// Amount.

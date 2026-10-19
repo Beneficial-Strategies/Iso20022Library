@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LegalStructure1Choice
     [IsoId("_p3eAEDQeEeifw8iDiyZLmQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : LegalStructure1Choice_
+    public partial record Proprietary : LegalStructure1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

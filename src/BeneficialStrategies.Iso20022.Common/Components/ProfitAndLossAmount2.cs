@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KhTLAYe5Ee-ZMOT1CLcLaw")]
 [DisplayName("Profit And Loss Amount2")]
-public record ProfitAndLossAmount2
+public partial record ProfitAndLossAmount2
 {
     /// <summary>
     /// Amount.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZQh2YE95EeePXdaAO32Uew")]
 [DisplayName("Destination")]
-public record Destination1
+public partial record Destination1
 {
     /// <summary>
     /// Identification of the destination of the transaction.

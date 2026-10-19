@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice
     /// <summary>Specifies the financial initiation message.</summary>
     [IsoId("_kNBjrW7-EfC68Y4jZPNEug")]
     [DisplayName("Financial Initiation")]
-    public record FinancialInitiation : RecordMessage2Choice_
+    public partial record FinancialInitiation : RecordMessage2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("FinInitn")]

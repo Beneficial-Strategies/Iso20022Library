@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Uo3mk9p-Ed-ak6NoX_4Aeg_392375521")]
 [DisplayName("Buy In")]
-public record BuyIn3
+public partial record BuyIn3
 {
     /// <summary>
     /// Indicates the reference of the BuyInNotification message.

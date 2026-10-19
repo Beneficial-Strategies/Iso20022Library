@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TWaNoaDrEe-MRKYsaX6JDg")]
 [DisplayName("Card Account21")]
-public record CardAccount21
+public partial record CardAccount21
 {
     /// <summary>
     /// Account Sequence Number.

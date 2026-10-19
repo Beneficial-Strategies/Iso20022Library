@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_US8LoeH7Eeqbls7Gk4-ckA")]
 [DisplayName("Enrolment Header")]
-public record EnrolmentHeader2
+public partial record EnrolmentHeader2
 {
     /// <summary>
     /// Point to point reference assigned by the instructing party and sent to the next party in the chain to unambiguously identify the message.

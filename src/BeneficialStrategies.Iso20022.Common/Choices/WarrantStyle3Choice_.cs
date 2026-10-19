@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_qwaaSeLbEeWFtOV72FbX9w")]
     [DisplayName("Warrant Style 3 Choice")]
-    public abstract record WarrantStyle3Choice_ { }
+    public abstract partial record WarrantStyle3Choice_ { }
 }

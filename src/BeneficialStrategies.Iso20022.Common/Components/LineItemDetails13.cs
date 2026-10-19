@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_krToMTcjEeSaC-PiOaz_KQ")]
 [DisplayName("Line Item Details")]
-public record LineItemDetails13
+public partial record LineItemDetails13
 {
     /// <summary>
     /// Identification assigned to a line item.

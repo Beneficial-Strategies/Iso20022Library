@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 /// </summary>
 [IsoId("_7l6XgcQUEe2pvZQ_33Qz1Q")]
 [DisplayName("Fund Reference Data Report V07")]
-public record FundReferenceDataReportV07 : IOuterRecord
+public partial record FundReferenceDataReportV07 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

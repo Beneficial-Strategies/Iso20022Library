@@ -26,7 +26,7 @@ namespace BeneficialStrategies.Iso20022.trea;
 )]
 [IsoId("_NMokeNE8Ed-BzquC8wXy7w_-2015071704")]
 [DisplayName("Create Foreign Exchange Option V")]
-public record CreateForeignExchangeOptionV02 : IOuterRecord
+public partial record CreateForeignExchangeOptionV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

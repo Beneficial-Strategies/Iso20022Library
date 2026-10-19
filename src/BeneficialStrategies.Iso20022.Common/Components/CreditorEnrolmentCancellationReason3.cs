@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0j0bmTEyEe6g-ffJsqGiSA")]
 [DisplayName("Creditor Enrolment Cancellation Reason3")]
-public record CreditorEnrolmentCancellationReason3
+public partial record CreditorEnrolmentCancellationReason3
 {
     /// <summary>
     /// Originator.

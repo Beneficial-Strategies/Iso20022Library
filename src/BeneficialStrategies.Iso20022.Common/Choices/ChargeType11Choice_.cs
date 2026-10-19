@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(ChargeType11Choice.Proprietary), nameof(ChargeType11Choice.Proprietary))]
     [IsoId("5be61446-0952-4f87-ab7f-d2e9bfdfe947")]
     [DisplayName("Charge Type 11 Choice")]
-    public abstract record ChargeType11Choice_ { }
+    public abstract partial record ChargeType11Choice_ { }
 }

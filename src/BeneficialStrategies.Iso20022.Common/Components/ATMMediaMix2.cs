@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SOOfEYq4EeSIDtZ76p6McQ")]
 [DisplayName("ATM Media Mix")]
-public record ATMMediaMix2
+public partial record ATMMediaMix2
 {
     /// <summary>
     /// Number of notes or coins.

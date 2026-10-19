@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralValueReportOrError5Cho
     [IsoId("_-DiXcTpvEemk2e6qGBk8IQ")]
     [DisplayName("Business Report")]
     [IsoXmlTag("BizRpt")]
-    public record BusinessReport : CollateralValueReportOrError5Choice_
+    public partial record BusinessReport : CollateralValueReportOrError5Choice_
     {
         /// <summary>
         /// Unique identification, as assigned by the account servicer, to unambiguously identify the account on which information is requested.

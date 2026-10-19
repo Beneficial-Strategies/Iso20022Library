@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RbFb8tp-Ed-ak6NoX_4Aeg_-1237479550")]
 [DisplayName("Time Out Result")]
-public record TimeOutResult2
+public partial record TimeOutResult2
 {
     /// <summary>
     /// Specifies the status of the transaction if no action is taken by the user.

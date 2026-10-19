@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7K5rcWpMEeSR-ZWLvO-1dg")]
 [DisplayName("TMS Event")]
-public record TMSEvent3
+public partial record TMSEvent3
 {
     /// <summary>
     /// Date time of the terminal management action performed by the point of interaction.

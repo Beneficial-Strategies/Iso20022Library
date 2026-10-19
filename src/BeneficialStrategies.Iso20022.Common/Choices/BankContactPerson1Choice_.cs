@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_eCkSADAZEeOKib24wnHaFg")]
     [DisplayName("Bank Contact Person 1 Choice")]
-    public abstract record BankContactPerson1Choice_ { }
+    public abstract partial record BankContactPerson1Choice_ { }
 }

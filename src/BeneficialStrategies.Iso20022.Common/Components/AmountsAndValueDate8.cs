@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_j4qSSUj3Ee-KhcStGV4xTg")]
 [DisplayName("Amounts And Value Date8")]
-public record AmountsAndValueDate8
+public partial record AmountsAndValueDate8
 {
     /// <summary>
     /// Trading Side Buy Amount.

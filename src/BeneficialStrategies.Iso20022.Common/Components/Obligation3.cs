@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cSBe4WNeEeSLD8nyfZcLzQ")]
 [DisplayName("Obligation")]
-public record Obligation3
+public partial record Obligation3
 {
     /// <summary>
     /// Defines one of the entities associated with the collateral agreement.

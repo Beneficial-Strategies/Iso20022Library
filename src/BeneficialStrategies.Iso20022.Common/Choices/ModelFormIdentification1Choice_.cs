@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_929T03ltEeG7BsjMvd1mEw_-115804936")]
     [DisplayName("Model Form Identification 1 Choice")]
-    public abstract record ModelFormIdentification1Choice_ { }
+    public abstract partial record ModelFormIdentification1Choice_ { }
 }

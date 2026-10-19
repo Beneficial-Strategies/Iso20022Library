@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jj99EDcQEeiIxKQErQxblg")]
 [DisplayName("Other Target Market Loss Bearing")]
-public record OtherTargetMarketLossBearing1
+public partial record OtherTargetMarketLossBearing1
 {
     /// <summary>
     /// Type of loss bearing.

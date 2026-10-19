@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_97bkJnltEeG7BsjMvd1mEw_1224258578")]
 [DisplayName("Presentation")]
-public record Presentation2
+public partial record Presentation2
 {
     /// <summary>
     /// Party, other than beneficiary, forwarding the documents.

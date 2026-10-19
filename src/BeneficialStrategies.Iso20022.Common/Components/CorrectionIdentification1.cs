@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_H32DoJb3Eeuc6pwKtqbEVQ")]
 [DisplayName("Correction Identification")]
-public record CorrectionIdentification1
+public partial record CorrectionIdentification1
 {
     /// <summary>
     /// Indicates the message contains an updated version of a message that was previously sent.

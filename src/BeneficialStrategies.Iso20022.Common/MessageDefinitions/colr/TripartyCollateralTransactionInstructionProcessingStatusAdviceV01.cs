@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.colr;
 )]
 [IsoId("_2uaNCys7EeySlt9bF77XfA")]
 [DisplayName("Triparty Collateral Transaction Instruction Processing Status Advice V")]
-public record TripartyCollateralTransactionInstructionProcessingStatusAdviceV01 : IOuterRecord
+public partial record TripartyCollateralTransactionInstructionProcessingStatusAdviceV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

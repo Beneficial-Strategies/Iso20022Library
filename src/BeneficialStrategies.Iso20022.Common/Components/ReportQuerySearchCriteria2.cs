@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3b6DFZb6Eee4htziCyV8eA")]
 [DisplayName("Report Query Search Criteria")]
-public record ReportQuerySearchCriteria2
+public partial record ReportQuerySearchCriteria2
 {
     /// <summary>
     /// Unique and unambiguous identification for the account between the account owner and the account servicer.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4Q5KQTEyEe6g-ffJsqGiSA")]
 [DisplayName("Mandate Suspension4")]
-public record MandateSuspension4
+public partial record MandateSuspension4
 {
     /// <summary>
     /// Suspension Request Identification.

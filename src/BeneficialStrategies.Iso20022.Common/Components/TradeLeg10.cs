@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LpIEAS6aEeSQQqw1BT_aMg")]
 [DisplayName("Trade Leg")]
-public record TradeLeg10
+public partial record TradeLeg10
 {
     /// <summary>
     /// Unambiguous identification of the transaction (that is the trade leg) as know by the instructing party.

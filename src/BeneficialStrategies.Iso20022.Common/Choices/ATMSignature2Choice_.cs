@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_h8fS4bTwEeeQy4o2AayYHg")]
     [DisplayName("ATM Signature 2 Choice")]
-    public abstract record ATMSignature2Choice_ { }
+    public abstract partial record ATMSignature2Choice_ { }
 }

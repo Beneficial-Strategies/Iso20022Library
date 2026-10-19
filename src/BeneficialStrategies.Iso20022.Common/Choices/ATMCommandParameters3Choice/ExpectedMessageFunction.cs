@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMCommandParameters3Choice
     /// </summary>
     [IsoId("_htqcM12aEeekzJIz1JxYSQ")]
     [DisplayName("Expected Message Function")]
-    public record ExpectedMessageFunction : ATMCommandParameters3Choice_
+    public partial record ExpectedMessageFunction : ATMCommandParameters3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

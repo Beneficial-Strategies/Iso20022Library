@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XPWq4IqdEeS4a4abTJTSSw")]
 [DisplayName("ATM Totals")]
-public record ATMTotals1
+public partial record ATMTotals1
 {
     /// <summary>
     /// Type of media inside the cassette.

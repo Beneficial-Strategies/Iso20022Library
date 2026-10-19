@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType35Choice
     [IsoId("_QOJ0NZJKEeuAlLVx8pyt3w")]
     [DisplayName("Modify")]
     [IsoXmlTag("Modfy")]
-    public record Modify : UpdateType35Choice_
+    public partial record Modify : UpdateType35Choice_
     {
         /// <summary>
         /// Provides additional details about the financial instrument.

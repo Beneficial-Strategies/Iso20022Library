@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice
     /// <summary>Specifies the fee collection response message.</summary>
     [IsoId("_kNBjp27-EfC68Y4jZPNEug")]
     [DisplayName("Fee Collection Response")]
-    public record FeeCollectionResponse : RecordMessage2Choice_
+    public partial record FeeCollectionResponse : RecordMessage2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("FeeColltnRspn")]

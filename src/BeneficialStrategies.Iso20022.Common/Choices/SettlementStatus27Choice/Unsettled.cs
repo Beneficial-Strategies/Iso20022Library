@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStatus27Choice
     [IsoId("_5g9fgOCbEei2UYJ62ws-Fw")]
     [DisplayName("Unsettled")]
     [IsoXmlTag("Usttld")]
-    public record Unsettled : SettlementStatus27Choice_
+    public partial record Unsettled : SettlementStatus27Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

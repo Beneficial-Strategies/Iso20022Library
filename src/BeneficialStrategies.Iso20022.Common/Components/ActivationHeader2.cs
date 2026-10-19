@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UUIee-H7Eeqbls7Gk4-ckA")]
 [DisplayName("Activation Header")]
-public record ActivationHeader2
+public partial record ActivationHeader2
 {
     /// <summary>
     /// Point to point reference assigned by the instructing party and sent to the next party in the chain to unambiguously identify the message.

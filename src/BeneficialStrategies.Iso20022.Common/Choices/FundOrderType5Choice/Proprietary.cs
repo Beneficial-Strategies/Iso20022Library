@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundOrderType5Choice
     [IsoId("_Ix7lo18rEeicg40_9gK9vQ")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : FundOrderType5Choice_
+    public partial record Proprietary : FundOrderType5Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

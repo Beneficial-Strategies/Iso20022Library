@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9wj-QI4UEeW6h7rGyYlyTg")]
 [DisplayName("Point Of Interaction")]
-public record PointOfInteraction6
+public partial record PointOfInteraction6
 {
     /// <summary>
     /// Identifier of the terminal manufacturer.

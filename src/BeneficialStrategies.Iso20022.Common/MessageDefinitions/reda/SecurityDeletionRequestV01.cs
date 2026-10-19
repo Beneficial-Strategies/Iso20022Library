@@ -36,7 +36,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_jTumsR62Eeu31YsWNiv_cw")]
 [DisplayName("Security Deletion Request V")]
-public record SecurityDeletionRequestV01 : IOuterRecord
+public partial record SecurityDeletionRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

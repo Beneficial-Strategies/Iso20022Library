@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dxXmUJXXEeaYkf5FCqYMeA")]
 [DisplayName("Cut Off Data")]
-public record CutOffData1
+public partial record CutOffData1
 {
     /// <summary>
     /// Describes the participant receiving the net report.

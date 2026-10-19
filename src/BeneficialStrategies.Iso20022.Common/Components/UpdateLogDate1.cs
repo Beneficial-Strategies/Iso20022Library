@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Zi5Hk2jSEeiRg5NzP0jkQg")]
 [DisplayName("Update Log Date")]
-public record UpdateLogDate1
+public partial record UpdateLogDate1
 {
     /// <summary>
     /// Old value before the update.

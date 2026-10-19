@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_NaoWsaByEe-mUP79iiSLcw")]
 [DisplayName("ATM Context25")]
-public record ATMContext25
+public partial record ATMContext25
 {
     /// <summary>
     /// Session Reference.

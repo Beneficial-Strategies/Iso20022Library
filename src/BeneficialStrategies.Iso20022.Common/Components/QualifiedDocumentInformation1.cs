@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OTgzMjA0-AOSNFX-8224491")]
 [DisplayName("Qualified Document Information")]
-public record QualifiedDocumentInformation1
+public partial record QualifiedDocumentInformation1
 {
     /// <summary>
     /// Local identification to be used in IDREFs in this message.

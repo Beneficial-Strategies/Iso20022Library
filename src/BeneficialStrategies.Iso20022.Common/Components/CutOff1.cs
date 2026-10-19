@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WkhLEJVIEeaYkf5FCqYMeA")]
 [DisplayName("Cut Off")]
-public record CutOff1
+public partial record CutOff1
 {
     /// <summary>
     /// Identification for the updated netting cut off.

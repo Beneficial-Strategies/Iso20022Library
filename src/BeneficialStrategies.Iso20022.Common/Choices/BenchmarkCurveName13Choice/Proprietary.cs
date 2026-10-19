@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BenchmarkCurveName13Choice
     [IsoId("_hUVZgxIkEeyLzJfz3xPQNA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : BenchmarkCurveName13Choice_
+    public partial record Proprietary : BenchmarkCurveName13Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

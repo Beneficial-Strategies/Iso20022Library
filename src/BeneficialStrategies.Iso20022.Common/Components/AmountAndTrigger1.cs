@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-GTXZnltEeG7BsjMvd1mEw_-1985688302")]
 [DisplayName("Amount And Trigger")]
-public record AmountAndTrigger1
+public partial record AmountAndTrigger1
 {
     /// <summary>
     /// Identification of the amount and trigger details.

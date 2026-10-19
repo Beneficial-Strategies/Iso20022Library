@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LegalStructure1Choice
     /// </summary>
     [IsoId("_nv7r0DQeEeifw8iDiyZLmQ")]
     [DisplayName("Code")]
-    public record Code : LegalStructure1Choice_
+    public partial record Code : LegalStructure1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

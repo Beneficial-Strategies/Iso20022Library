@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 )]
 [IsoId("_eYI_222PEei3KuUgpx7Xcw")]
 [DisplayName("Customer Direct Debit Initiation V")]
-public record CustomerDirectDebitInitiationV08 : IOuterRecord
+public partial record CustomerDirectDebitInitiationV08 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

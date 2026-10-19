@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_oxDxcDceEeOA3chqL9a4Rw")]
 [DisplayName("Effective Date")]
-public record EffectiveDate1
+public partial record EffectiveDate1
 {
     /// <summary>
     /// Date on which the SSI is effective. If the SSI is effective on a future date, then the date must be provided.

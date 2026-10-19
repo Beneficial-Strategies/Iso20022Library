@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_DRJNLFuDEe29lKnE5APnfA")]
 [DisplayName("Calendar Report V")]
-public record CalendarReportV02 : IOuterRecord
+public partial record CalendarReportV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

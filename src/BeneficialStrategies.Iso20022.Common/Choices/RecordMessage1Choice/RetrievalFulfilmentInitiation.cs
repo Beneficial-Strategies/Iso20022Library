@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice
     /// </summary>
     [IsoId("_Ai2cQRs9EeqrvK3udMUsNQ")]
     [DisplayName("Retrieval Fulfilment Initiation")]
-    public record RetrievalFulfilmentInitiation : RecordMessage1Choice_
+    public partial record RetrievalFulfilmentInitiation : RecordMessage1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

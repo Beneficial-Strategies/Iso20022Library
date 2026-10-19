@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_99Ns1nltEeG7BsjMvd1mEw_340413416")]
 [DisplayName("Trigger")]
-public record Trigger1
+public partial record Trigger1
 {
     /// <summary>
     /// Details related to the date on which a variation is effective.

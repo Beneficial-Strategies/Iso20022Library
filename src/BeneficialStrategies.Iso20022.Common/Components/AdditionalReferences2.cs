@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-rEYgSpvEe2NrplE7WhvBA")]
 [DisplayName("Additional References2")]
-public record AdditionalReferences2
+public partial record AdditionalReferences2
 {
     /// <summary>
     /// Reference.

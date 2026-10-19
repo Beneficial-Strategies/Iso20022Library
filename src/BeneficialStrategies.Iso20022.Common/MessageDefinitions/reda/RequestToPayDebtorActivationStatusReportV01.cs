@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_rNNB1-HzEeqbls7Gk4-ckA")]
 [DisplayName("Request To Pay Debtor Activation Status Report V")]
-public record RequestToPayDebtorActivationStatusReportV01 : IOuterRecord
+public partial record RequestToPayDebtorActivationStatusReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

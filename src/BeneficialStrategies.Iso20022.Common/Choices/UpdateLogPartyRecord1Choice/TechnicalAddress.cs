@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice
     [IsoId("_xPt7h2jNEeiRg5NzP0jkQg")]
     [DisplayName("Technical Address")]
     [IsoXmlTag("TechAdr")]
-    public record TechnicalAddress : UpdateLogPartyRecord1Choice_
+    public partial record TechnicalAddress : UpdateLogPartyRecord1Choice_
     {
         /// <summary>
         /// Old value before the update.

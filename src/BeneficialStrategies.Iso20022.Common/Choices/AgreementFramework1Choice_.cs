@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_UkZWTNp-Ed-ak6NoX_4Aeg_863321778")]
     [DisplayName("Agreement Framework 1 Choice")]
-    public abstract record AgreementFramework1Choice_ { }
+    public abstract partial record AgreementFramework1Choice_ { }
 }

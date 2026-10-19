@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_EUbjsaazEe-s1ZClExRjdw")]
 [DisplayName("Plain Card Data25")]
-public record PlainCardData25
+public partial record PlainCardData25
 {
     /// <summary>
     /// PAN.

@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_Ra7q9tp-Ed-ak6NoX_4Aeg_-898612372")]
 [DisplayName("Status Report Items")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record StatusReportItems2
+public partial record StatusReportItems2
 {
     /// <summary>
     /// Unique identification assigned by the matching application to the transaction.|This identification is to be used in any communication between the parties.

@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_9zFgdXltEeG7BsjMvd1mEw_1035435998")]
 [DisplayName("Undertaking")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2018-09-08.")]
-public record Undertaking4
+public partial record Undertaking4
 {
     /// <summary>
     /// Name of the requested local undertaking such as, demand guarantee, standby letter of credit, surety.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_pUzXoe3uEe6nAu63uIo75Q")]
 [DisplayName("Instrument Leg7")]
-public record InstrumentLeg7
+public partial record InstrumentLeg7
 {
     /// <summary>
     /// Leg Side.

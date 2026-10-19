@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeLegNotificationIdentificati
     /// Unique Transaction Identifier.
     /// </summary>
     [DisplayName("Unique Transaction Identifier")]
-    public record UniqueTransactionIdentifier : TradeLegNotificationIdentification1Choice_
+    public partial record UniqueTransactionIdentifier : TradeLegNotificationIdentification1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

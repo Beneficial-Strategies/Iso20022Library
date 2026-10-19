@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2db_MIW5EeiDBOVr6AJAFA")]
 [DisplayName("Tracker Record")]
-public record TrackerRecord1
+public partial record TrackerRecord1
 {
     /// <summary>
     /// Identification of an agent in the tracker.

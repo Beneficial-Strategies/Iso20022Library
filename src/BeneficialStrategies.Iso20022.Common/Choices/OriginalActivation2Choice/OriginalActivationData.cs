@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalActivation2Choice
     [IsoId("_UPBU8-H7Eeqbls7Gk4-ckA")]
     [DisplayName("Original Activation Data")]
     [IsoXmlTag("OrgnlActvtnData")]
-    public record OriginalActivationData : OriginalActivation2Choice_
+    public partial record OriginalActivationData : OriginalActivation2Choice_
     {
         /// <summary>
         /// Unique identification, as assigned by the initiating party, to unambiguously identify the activation.

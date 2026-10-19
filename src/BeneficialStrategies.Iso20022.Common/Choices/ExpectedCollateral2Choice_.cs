@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_-UW_QYLZEeWrrO9HojbPQA")]
     [DisplayName("Expected Collateral 2 Choice")]
-    public abstract record ExpectedCollateral2Choice_ { }
+    public abstract partial record ExpectedCollateral2Choice_ { }
 }

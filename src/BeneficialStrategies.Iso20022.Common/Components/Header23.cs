@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_d7nnwAJXEeS2H9l84F_isg")]
 [DisplayName("Header")]
-public record Header23
+public partial record Header23
 {
     /// <summary>
     /// Version of file format.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_URmu5eH7Eeqbls7Gk4-ckA")]
 [DisplayName("Debtor Activation")]
-public record DebtorActivation4
+public partial record DebtorActivation4
 {
     /// <summary>
     /// Unique identification, as assigned by the initiating party, to unambiguously identify the activation.

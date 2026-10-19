@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AgreementFramework1Choice
     /// </summary>
     [IsoId("_UkjHQNp-Ed-ak6NoX_4Aeg_-1888228410")]
     [DisplayName("Agreement Framework")]
-    public record AgreementFramework : AgreementFramework1Choice_
+    public partial record AgreementFramework : AgreementFramework1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

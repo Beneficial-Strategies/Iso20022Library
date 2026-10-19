@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_RaVOCNp-Ed-ak6NoX_4Aeg_1564459654")]
 [DisplayName("Line Item")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record LineItem8
+public partial record LineItem8
 {
     /// <summary>
     /// Calculated information about the goods of the underlying transaction.

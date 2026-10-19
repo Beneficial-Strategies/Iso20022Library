@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 )]
 [IsoId("_9hy8JXltEeG7BsjMvd1mEw_-944920037")]
 [DisplayName("Trade Status Report V")]
-public record TradeStatusReportV01 : IOuterRecord
+public partial record TradeStatusReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(TimeHorizon1Choice.TimeFrame), nameof(TimeHorizon1Choice.TimeFrame))]
     [IsoId("_t5CX0DcuEeidBoT_PugKiA")]
     [DisplayName("Time Horizon 1 Choice")]
-    public abstract record TimeHorizon1Choice_ { }
+    public abstract partial record TimeHorizon1Choice_ { }
 }

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IdzH4FetEe6G45fhJISx6Q")]
 [DisplayName("Related Transaction Data1")]
-public record RelatedTransactionData1
+public partial record RelatedTransactionData1
 {
     /// <summary>
     /// Master UETR.

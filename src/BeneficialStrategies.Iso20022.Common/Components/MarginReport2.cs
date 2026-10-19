@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_-eDlF6MOEeCojJW5vEuTEQ_-651188683")]
 [DisplayName("Margin Report")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record MarginReport2
+public partial record MarginReport2
 {
     /// <summary>
     /// Specifies if the margin is related to equities or fixed income.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Eg5TJmqZEema8a4DGUe7Lw")]
 [DisplayName("Error")]
-public record Error1
+public partial record Error1
 {
     /// <summary>
     /// Contains or describes conditions and characteristics of the transaction.

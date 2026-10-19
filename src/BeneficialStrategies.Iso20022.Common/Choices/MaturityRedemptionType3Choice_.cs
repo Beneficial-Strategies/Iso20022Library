@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_d8mHheLxEeWOD7aAy2fAcA")]
     [DisplayName("Maturity Redemption Type 3 Choice")]
-    public abstract record MaturityRedemptionType3Choice_ { }
+    public abstract partial record MaturityRedemptionType3Choice_ { }
 }

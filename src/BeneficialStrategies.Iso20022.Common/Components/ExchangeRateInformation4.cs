@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BpTJsOKHEe2QzKqbsy1xHQ")]
 [DisplayName("Exchange Rate Information4")]
-public record ExchangeRateInformation4
+public partial record ExchangeRateInformation4
 {
     /// <summary>
     /// Rate Type.

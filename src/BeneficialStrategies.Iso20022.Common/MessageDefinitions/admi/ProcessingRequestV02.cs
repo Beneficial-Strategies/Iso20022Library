@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.admi;
 )]
 [IsoId("_1MsY4QR4Ee29PP19jELcvQ")]
 [DisplayName("Processing Request V")]
-public record ProcessingRequestV02 : IOuterRecord
+public partial record ProcessingRequestV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

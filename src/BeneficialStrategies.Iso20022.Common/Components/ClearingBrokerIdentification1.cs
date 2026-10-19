@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KYvvc4uZEeKYr_965Eh8aQ")]
 [DisplayName("Clearing Broker Identification")]
-public record ClearingBrokerIdentification1
+public partial record ClearingBrokerIdentification1
 {
     /// <summary>
     /// Distinguishes the client leg from the central counterparty (CCP) leg in the clearing broker identification.

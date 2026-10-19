@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralProposalResponse4Choic
     [IsoId("_wFtHkytIEeyOa655cLd-DQ")]
     [DisplayName("Segregated Independent Amount")]
     [IsoXmlTag("SgrtdIndpdntAmt")]
-    public record SegregatedIndependentAmount : CollateralProposalResponse4Choice_
+    public partial record SegregatedIndependentAmount : CollateralProposalResponse4Choice_
     {
         /// <summary>
         /// Unique identifier for a collateral proposal.

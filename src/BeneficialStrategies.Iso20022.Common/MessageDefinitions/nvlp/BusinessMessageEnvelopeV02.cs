@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.nvlp;
 /// </summary>
 [IsoId("_HcxQAbMcEe-OHY85tcOC5w")]
 [DisplayName("Business Message Envelope V02")]
-public record BusinessMessageEnvelopeV02 : IOuterRecord
+public partial record BusinessMessageEnvelopeV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

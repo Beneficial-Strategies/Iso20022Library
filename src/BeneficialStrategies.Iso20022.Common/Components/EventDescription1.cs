@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OTgzMjAx-AOSNFX-8224490")]
 [DisplayName("Event Description")]
-public record EventDescription1
+public partial record EventDescription1
 {
     /// <summary>
     /// Identification of the event.

@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_dEWFES6XEeSQQqw1BT_aMg")]
 [DisplayName("Trade Leg Statement")]
 [Obsolete("Marked obsolete in the ISO 20022 2026-06-26 snapshot. Removal date: 2016-09-08.")]
-public record TradeLegStatement3
+public partial record TradeLegStatement3
 {
     /// <summary>
     /// Identifies the clearing member account at the Central counterparty through which the trade must be cleared (sometimes called position account).

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lvDzgnFwEemaN4ndAVY1ZQ")]
 [DisplayName("Generic Person Type")]
-public record GenericPersonType1
+public partial record GenericPersonType1
 {
     /// <summary>
     /// Specifies whether the private type for the customer identification is requested or not.

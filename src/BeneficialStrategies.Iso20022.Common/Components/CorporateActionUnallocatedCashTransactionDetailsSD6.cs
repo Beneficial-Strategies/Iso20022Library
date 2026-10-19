@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_O8s7cMMPEee-Vv_OVx0uAQ")]
 [DisplayName("Corporate Action Unallocated Cash Transaction Details SD")]
-public record CorporateActionUnallocatedCashTransactionDetailsSD6
+public partial record CorporateActionUnallocatedCashTransactionDetailsSD6
 {
     /// <summary>
     /// Indicates whether the value is a debit or a credit.

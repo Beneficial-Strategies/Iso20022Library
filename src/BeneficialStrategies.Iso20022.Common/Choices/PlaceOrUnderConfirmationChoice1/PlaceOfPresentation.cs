@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PlaceOrUnderConfirmationChoice1
     [IsoId("_97kuE3ltEeG7BsjMvd1mEw_-1053470050")]
     [DisplayName("Place Of Presentation")]
     [IsoXmlTag("PlcOfPresntn")]
-    public record PlaceOfPresentation : PlaceOrUnderConfirmationChoice1_
+    public partial record PlaceOfPresentation : PlaceOrUnderConfirmationChoice1_
     {
         /// <summary>
         /// Place of the presentation.

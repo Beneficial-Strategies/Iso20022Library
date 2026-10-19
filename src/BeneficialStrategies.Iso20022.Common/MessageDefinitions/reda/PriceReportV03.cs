@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_ZtdTrNEvEd-BzquC8wXy7w_1235947940")]
 [DisplayName("Price Report V")]
-public record PriceReportV03 : IOuterRecord
+public partial record PriceReportV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

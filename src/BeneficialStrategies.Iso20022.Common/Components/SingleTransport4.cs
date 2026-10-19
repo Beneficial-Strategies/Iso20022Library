@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_StL9Btp-Ed-ak6NoX_4Aeg_616484036")]
 [DisplayName("Single Transport")]
-public record SingleTransport4
+public partial record SingleTransport4
 {
     /// <summary>
     /// Moving of goods or people from one place to another by vehicle.

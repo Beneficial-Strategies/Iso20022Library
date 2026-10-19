@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus30Choice
     [IsoId("_T_qoAxIwEeydmIVkS03esw")]
     [DisplayName("Processed")]
     [IsoXmlTag("Prcd")]
-    public record Processed : CancellationStatus30Choice_
+    public partial record Processed : CancellationStatus30Choice_
     {
         /// <summary>
         /// Proprietary identification of the reason related to a status.

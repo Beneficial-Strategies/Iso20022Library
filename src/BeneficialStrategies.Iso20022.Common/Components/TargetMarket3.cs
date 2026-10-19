@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XXkGEc0SEeuAE-cYsQdwHQ")]
 [DisplayName("Target Market")]
-public record TargetMarket3
+public partial record TargetMarket3
 {
     /// <summary>
     /// Date to which the target market data refers. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 01000.

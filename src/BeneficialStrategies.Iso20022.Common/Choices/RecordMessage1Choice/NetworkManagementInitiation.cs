@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice
     /// </summary>
     [IsoId("_czvUcRs8EeqrvK3udMUsNQ")]
     [DisplayName("Network Management Initiation")]
-    public record NetworkManagementInitiation : RecordMessage1Choice_
+    public partial record NetworkManagementInitiation : RecordMessage1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

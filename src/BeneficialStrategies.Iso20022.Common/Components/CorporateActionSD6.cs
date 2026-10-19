@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1RIYZTL3EeKU9IrkkToqcw_-395277893")]
 [DisplayName("Corporate Action SD")]
-public record CorporateActionSD6
+public partial record CorporateActionSD6
 {
     /// <summary>
     /// Status of the fields of lottery record.

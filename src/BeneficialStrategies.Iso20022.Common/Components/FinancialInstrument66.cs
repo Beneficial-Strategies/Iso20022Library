@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SOTuYTf4Eei6RvewLQWEqw")]
 [DisplayName("Financial Instrument")]
-public record FinancialInstrument66
+public partial record FinancialInstrument66
 {
     /// <summary>
     /// Indicates whether it is possible to hold bearer units/shares in this class in certified form.

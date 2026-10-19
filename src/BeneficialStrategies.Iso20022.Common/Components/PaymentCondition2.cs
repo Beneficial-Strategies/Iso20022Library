@@ -15,7 +15,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 [IsoId("_4N9WwTFNEe6e4MbXgPVc4A")]
 [Description(@"Specifies the conditions for the execution of the payment.")]
 [DisplayName("Payment Condition2")]
-public record PaymentCondition2
+public partial record PaymentCondition2
 {
     /// <summary>
     /// Indicates if the debtor is allowed to pay a different amount then the requested amount.

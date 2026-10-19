@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ULVjoZ-wEe-nbM0aSPcoiQ")]
 [DisplayName("Automated Teller Machine11")]
-public record AutomatedTellerMachine11
+public partial record AutomatedTellerMachine11
 {
     /// <summary>
     /// Identification.

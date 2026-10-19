@@ -17,5 +17,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(ReferenceValue1Choice.Other), nameof(ReferenceValue1Choice.Other))]
     [IsoId("_Q6wqUMePEeysUoBKYz1Ytw")]
     [DisplayName("Reference Value 1 Choice")]
-    public abstract record ReferenceValue1Choice_ { }
+    public abstract partial record ReferenceValue1Choice_ { }
 }

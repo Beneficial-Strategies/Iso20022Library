@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.admi;
 /// </summary>
 [IsoId("_9C_8iNE9Ed-BzquC8wXy7w_-8125339")]
 [DisplayName("System Event Notification V01")]
-public record SystemEventNotificationV01 : IOuterRecord
+public partial record SystemEventNotificationV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

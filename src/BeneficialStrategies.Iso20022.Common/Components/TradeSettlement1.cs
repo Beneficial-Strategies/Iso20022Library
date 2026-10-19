@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TB-BBQEcEeCQm6a_G2yO_w_1181239925")]
 [DisplayName("Trade Settlement")]
-public record TradeSettlement1
+public partial record TradeSettlement1
 {
     /// <summary>
     /// Monetary value that is an exact amount due and payable, such as the amount due to the creditor.

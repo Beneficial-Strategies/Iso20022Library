@@ -26,5 +26,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_D01G0N_-EeiVRbNQx5-Vhg")]
     [DisplayName("Allocation Status 1 Choice")]
-    public abstract record AllocationStatus1Choice_ { }
+    public abstract partial record AllocationStatus1Choice_ { }
 }

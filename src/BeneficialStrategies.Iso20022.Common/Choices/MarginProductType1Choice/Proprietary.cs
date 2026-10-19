@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarginProductType1Choice
     [IsoId("_Qk_hdtp-Ed-ak6NoX_4Aeg_1372873102")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : MarginProductType1Choice_
+    public partial record Proprietary : MarginProductType1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

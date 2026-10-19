@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Vf_Uu249EeiU9cctagi5ow")]
 [DisplayName("Credit Transfer Transaction")]
-public record CreditTransferTransaction35
+public partial record CreditTransferTransaction35
 {
     /// <summary>
     /// Set of elements used to reference a payment instruction.

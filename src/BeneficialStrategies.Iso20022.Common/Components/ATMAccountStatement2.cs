@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_O9ETgYq8EeSHjtO_wHA7PQ")]
 [DisplayName("ATM Account Statement")]
-public record ATMAccountStatement2
+public partial record ATMAccountStatement2
 {
     /// <summary>
     /// Date of the transaction.

@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.caam;
 )]
 [IsoId("_ZgfQ4ItqEeSDLd7nI4Quzw")]
 [DisplayName("Host To ATM Request V")]
-public record HostToATMRequestV01 : IOuterRecord
+public partial record HostToATMRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

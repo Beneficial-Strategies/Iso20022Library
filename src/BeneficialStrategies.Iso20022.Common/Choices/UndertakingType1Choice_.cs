@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_92qY6HltEeG7BsjMvd1mEw_72990354")]
     [DisplayName("Undertaking Type 1 Choice")]
-    public abstract record UndertakingType1Choice_ { }
+    public abstract partial record UndertakingType1Choice_ { }
 }

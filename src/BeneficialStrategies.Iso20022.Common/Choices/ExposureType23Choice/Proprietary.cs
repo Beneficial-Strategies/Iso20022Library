@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExposureType23Choice
     [IsoId("_LgF2kys9EeySlt9bF77XfA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : ExposureType23Choice_
+    public partial record Proprietary : ExposureType23Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

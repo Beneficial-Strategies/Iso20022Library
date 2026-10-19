@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hH4hcK4wEeWpsoxRhdX-8A")]
 [DisplayName("Recurring Transaction")]
-public record RecurringTransaction3
+public partial record RecurringTransaction3
 {
     /// <summary>
     /// Date of first transfer.

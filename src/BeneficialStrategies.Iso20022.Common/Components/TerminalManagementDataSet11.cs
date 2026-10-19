@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_qEJuETZ7EeOP_KvUKe29ng")]
 [DisplayName("Terminal Management Data Set")]
-public record TerminalManagementDataSet11
+public partial record TerminalManagementDataSet11
 {
     /// <summary>
     /// Identification of the data set transferred.

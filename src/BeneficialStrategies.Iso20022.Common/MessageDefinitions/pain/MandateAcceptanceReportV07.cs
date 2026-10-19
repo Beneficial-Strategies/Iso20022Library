@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 )]
 [IsoId("_rUYODdcBEeq_l4BJLVUF2Q")]
 [DisplayName("Mandate Acceptance Report V")]
-public record MandateAcceptanceReportV07 : IOuterRecord
+public partial record MandateAcceptanceReportV07 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

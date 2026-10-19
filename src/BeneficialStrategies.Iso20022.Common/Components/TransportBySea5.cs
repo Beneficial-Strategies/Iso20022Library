@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IIXFodQxEeK0PPbKncCqzA")]
 [DisplayName("Transport By Sea")]
-public record TransportBySea5
+public partial record TransportBySea5
 {
     /// <summary>
     /// Identifies the port where the goods are loaded on board the ship.

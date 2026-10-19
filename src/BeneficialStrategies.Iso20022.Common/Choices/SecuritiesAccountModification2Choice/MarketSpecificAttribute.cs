@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAccountModification2Ch
     [IsoId("_8IwThTp0Eemk2e6qGBk8IQ")]
     [DisplayName("Market Specific Attribute")]
     [IsoXmlTag("MktSpcfcAttr")]
-    public record MarketSpecificAttribute : SecuritiesAccountModification2Choice_
+    public partial record MarketSpecificAttribute : SecuritiesAccountModification2Choice_
     {
         /// <summary>
         /// Specifies the name of the market-specific attribute.

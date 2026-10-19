@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.supl;
 )]
 [IsoId("_NmExYNH3Ee20cKCFrGj2Qw")]
 [DisplayName("Multiple Foreign Exchange SD1V01")]
-public record MultipleForeignExchangeSD1V01 : IOuterRecord
+public partial record MultipleForeignExchangeSD1V01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

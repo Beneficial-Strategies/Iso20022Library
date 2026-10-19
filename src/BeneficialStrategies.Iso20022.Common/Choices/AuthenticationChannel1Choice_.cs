@@ -21,5 +21,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_U4Y945dgEea1K6JAcAwoVg")]
     [DisplayName("Authentication Channel 1 Choice")]
-    public abstract record AuthenticationChannel1Choice_ { }
+    public abstract partial record AuthenticationChannel1Choice_ { }
 }

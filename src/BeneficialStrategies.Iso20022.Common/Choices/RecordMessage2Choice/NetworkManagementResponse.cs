@@ -5,7 +5,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage2Choice
     /// <summary>Specifies the network management response message.</summary>
     [IsoId("_kNBjw27-EfC68Y4jZPNEug")]
     [DisplayName("Network Management Response")]
-    public record NetworkManagementResponse : RecordMessage2Choice_
+    public partial record NetworkManagementResponse : RecordMessage2Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("NtwkMgmtRspn")]

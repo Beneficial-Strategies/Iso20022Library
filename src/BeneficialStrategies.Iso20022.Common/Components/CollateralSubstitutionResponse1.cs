@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QnhRANp-Ed-ak6NoX_4Aeg_1142450106")]
 [DisplayName("Collateral Substitution Response")]
-public record CollateralSubstitutionResponse1
+public partial record CollateralSubstitutionResponse1
 {
     /// <summary>
     /// Reference to the collateral substitution request identification.

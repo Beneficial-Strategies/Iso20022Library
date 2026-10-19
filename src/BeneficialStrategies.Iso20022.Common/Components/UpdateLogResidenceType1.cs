@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hgYlw2jWEeiRg5NzP0jkQg")]
 [DisplayName("Update Log Residence Type")]
-public record UpdateLogResidenceType1
+public partial record UpdateLogResidenceType1
 {
     /// <summary>
     /// Old value before the update.

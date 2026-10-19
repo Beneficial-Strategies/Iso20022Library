@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Q24J86-yEeGNi5z8K_XPKQ")]
 [DisplayName("Reported Amount")]
-public record ReportedAmount1
+public partial record ReportedAmount1
 {
     /// <summary>
     /// Identification of the reported amount.

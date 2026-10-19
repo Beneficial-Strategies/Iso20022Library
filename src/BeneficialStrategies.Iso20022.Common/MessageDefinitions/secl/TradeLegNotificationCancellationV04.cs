@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.secl;
 /// </summary>
 [IsoId("_YZ-MWYcPEe-m68RYMhvgvg")]
 [DisplayName("Trade Leg Notification Cancellation V04")]
-public record TradeLegNotificationCancellationV04 : IOuterRecord
+public partial record TradeLegNotificationCancellationV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

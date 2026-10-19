@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HSwZ2249EeiU9cctagi5ow")]
 [DisplayName("Mandate Cancellation Reason")]
-public record MandateCancellationReason1
+public partial record MandateCancellationReason1
 {
     /// <summary>
     /// Party that issues the cancellation request.

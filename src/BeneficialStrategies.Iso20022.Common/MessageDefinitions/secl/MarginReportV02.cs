@@ -35,7 +35,7 @@ namespace BeneficialStrategies.Iso20022.secl;
 )]
 [IsoId("_-hxndaMOEeCojJW5vEuTEQ_-1836673720")]
 [DisplayName("Margin Report V")]
-public record MarginReportV02 : IOuterRecord
+public partial record MarginReportV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2LOxkTANEeOKib24wnHaFg")]
 [DisplayName("Certificate Data Set")]
-public record CertificateDataSet2
+public partial record CertificateDataSet2
 {
     /// <summary>
     /// Identifies the certificate data set.

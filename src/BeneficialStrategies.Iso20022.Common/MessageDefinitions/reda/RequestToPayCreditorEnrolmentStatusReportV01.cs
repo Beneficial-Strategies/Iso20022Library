@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_rNNBr-HzEeqbls7Gk4-ckA")]
 [DisplayName("Request To Pay Creditor Enrolment Status Report V")]
-public record RequestToPayCreditorEnrolmentStatusReportV01 : IOuterRecord
+public partial record RequestToPayCreditorEnrolmentStatusReportV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

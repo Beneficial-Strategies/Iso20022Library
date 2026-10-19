@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_iMh2EF8-Eeicg40_9gK9vQ")]
 [DisplayName("Investment Plan Characteristics")]
-public record InvestmentPlanCharacteristics1
+public partial record InvestmentPlanCharacteristics1
 {
     /// <summary>
     /// Type of investment plan.

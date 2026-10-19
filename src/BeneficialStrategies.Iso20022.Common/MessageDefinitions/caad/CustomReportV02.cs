@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.caad;
 /// </summary>
 [IsoId("_iXdVwY7dEe6S0_1AaJzQCA")]
 [DisplayName("Custom Report V02")]
-public record CustomReportV02 : IOuterRecord
+public partial record CustomReportV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

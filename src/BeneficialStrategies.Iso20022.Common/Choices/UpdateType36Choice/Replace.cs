@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType36Choice
     [IsoId("_QIOLU5JKEeuAlLVx8pyt3w")]
     [DisplayName("Replace")]
     [IsoXmlTag("Rplc")]
-    public record Replace : UpdateType36Choice_
+    public partial record Replace : UpdateType36Choice_
     {
         /// <summary>
         /// Provides additional details about the financial instrument.

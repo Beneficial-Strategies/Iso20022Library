@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hrK_ERreEeOVR9VN6fAMUg")]
 [DisplayName("Charge")]
-public record Charge24
+public partial record Charge24
 {
     /// <summary>
     /// Identifies whether the freight charges associated with the goods are &quot;prepaid&quot; or &quot;collect&quot;.

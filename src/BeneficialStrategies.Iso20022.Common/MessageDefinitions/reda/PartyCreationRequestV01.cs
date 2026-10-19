@@ -22,7 +22,7 @@ namespace BeneficialStrategies.Iso20022.reda;
 )]
 [IsoId("_lfqucZeTEeen_cyMrluY4w")]
 [DisplayName("Party Creation Request V")]
-public record PartyCreationRequestV01 : IOuterRecord
+public partial record PartyCreationRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

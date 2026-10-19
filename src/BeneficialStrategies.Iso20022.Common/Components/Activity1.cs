@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RI5fxdp-Ed-ak6NoX_4Aeg_156972015")]
 [DisplayName("Activity")]
-public record Activity1
+public partial record Activity1
 {
     /// <summary>
     /// Name of the message associated with the activity.

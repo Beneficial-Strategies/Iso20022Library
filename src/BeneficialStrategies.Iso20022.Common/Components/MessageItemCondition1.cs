@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_K86DNH1DEeCF8NjrBemJWQ_-909229730")]
 [DisplayName("Message Item Condition")]
-public record MessageItemCondition1
+public partial record MessageItemCondition1
 {
     /// <summary>
     /// Unique identification of the message and the message item.

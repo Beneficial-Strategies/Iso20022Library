@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dqcAheLxEeWOD7aAy2fAcA")]
 [DisplayName("Settlement Information")]
-public record SettlementInformation17
+public partial record SettlementInformation17
 {
     /// <summary>
     /// Choice between formats for the quantity of security.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TechnicalIdentification2Choice
     /// </summary>
     [IsoId("_YD53kb11Eeiut6mmSKzDFQ")]
     [DisplayName("BICFI")]
-    public record BICFI : TechnicalIdentification2Choice_
+    public partial record BICFI : TechnicalIdentification2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

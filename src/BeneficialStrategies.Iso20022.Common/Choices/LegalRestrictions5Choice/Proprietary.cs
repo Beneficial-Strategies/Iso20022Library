@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LegalRestrictions5Choice
     [IsoId("_cp37Y-LxEeWOD7aAy2fAcA")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : LegalRestrictions5Choice_
+    public partial record Proprietary : LegalRestrictions5Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AuthenticationChannel1Choice
     /// </summary>
     [IsoId("_U4Y95JdgEea1K6JAcAwoVg")]
     [DisplayName("Proprietary")]
-    public record Proprietary : AuthenticationChannel1Choice_
+    public partial record Proprietary : AuthenticationChannel1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

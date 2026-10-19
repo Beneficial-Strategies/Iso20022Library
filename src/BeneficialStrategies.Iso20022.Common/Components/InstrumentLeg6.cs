@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Na1yQQ8qEeSFHsNYty4C9Q")]
 [DisplayName("Instrument Leg")]
-public record InstrumentLeg6
+public partial record InstrumentLeg6
 {
     /// <summary>
     /// Coded list to specify the side of the trade leg.

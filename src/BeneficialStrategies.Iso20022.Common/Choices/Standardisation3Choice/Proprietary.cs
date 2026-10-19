@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Standardisation3Choice
     [IsoId("_Pnpgw2p7EemmaZLSPtWX5A")]
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
-    public record Proprietary : Standardisation3Choice_
+    public partial record Proprietary : Standardisation3Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ci6pUTAREeugIJ3Gvoevmg")]
 [DisplayName("Acquirer Protocol Exchange Behavior")]
-public record AcquirerProtocolExchangeBehavior2
+public partial record AcquirerProtocolExchangeBehavior2
 {
     /// <summary>
     /// Mode for the financial capture of the transaction by the acquirer.

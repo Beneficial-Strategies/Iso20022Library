@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_sTptYM7wEemEIuVuDudp4g")]
 [DisplayName("Tracker Status")]
-public record TrackerStatus1
+public partial record TrackerStatus1
 {
     /// <summary>
     /// Specifies the status of a transaction, in a coded form.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashAccountIdentification8Choice
     [IsoId("_lfxcBbfLEeuDTOqGwU_8EQ")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public record Other : CashAccountIdentification8Choice_
+    public partial record Other : CashAccountIdentification8Choice_
     {
         /// <summary>
         /// Identification assigned by an institution.

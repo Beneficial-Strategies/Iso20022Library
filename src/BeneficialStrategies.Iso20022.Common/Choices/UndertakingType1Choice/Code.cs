@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UndertakingType1Choice
     /// </summary>
     [IsoId("_92qY6XltEeG7BsjMvd1mEw_-924081999")]
     [DisplayName("Code")]
-    public record Code : UndertakingType1Choice_
+    public partial record Code : UndertakingType1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification80Choice
     /// BBAN.
     /// </summary>
     [DisplayName("BBAN")]
-    public record BBAN : AccountIdentification80Choice_
+    public partial record BBAN : AccountIdentification80Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

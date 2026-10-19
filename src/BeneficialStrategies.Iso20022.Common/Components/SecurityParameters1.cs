@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fY5xUCm2EeKIjpr--01h3Q")]
 [DisplayName("Security Parameters")]
-public record SecurityParameters1
+public partial record SecurityParameters1
 {
     /// <summary>
     /// Point of interaction challenge for cryptographic key injection.

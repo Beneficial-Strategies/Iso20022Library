@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord2Choice
     /// Contact Details.
     /// </summary>
     [DisplayName("Contact Details")]
-    public record ContactDetails : UpdateLogPartyRecord2Choice_
+    public partial record ContactDetails : UpdateLogPartyRecord2Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

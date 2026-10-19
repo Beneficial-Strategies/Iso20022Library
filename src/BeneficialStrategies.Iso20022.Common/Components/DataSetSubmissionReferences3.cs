@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RaCTE9p-Ed-ak6NoX_4Aeg_204942196")]
 [DisplayName("Data Set Submission References")]
-public record DataSetSubmissionReferences3
+public partial record DataSetSubmissionReferences3
 {
     /// <summary>
     /// Unique identification assigned by the matching application to the transaction.|This identification is to be used in any communication between the parties.

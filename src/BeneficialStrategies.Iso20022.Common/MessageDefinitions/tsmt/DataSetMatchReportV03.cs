@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 )]
 [IsoId("_m1ZuaNE8Ed-BzquC8wXy7w_-439674056")]
 [DisplayName("Data Set Match Report V")]
-public record DataSetMatchReportV03 : IOuterRecord
+public partial record DataSetMatchReportV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

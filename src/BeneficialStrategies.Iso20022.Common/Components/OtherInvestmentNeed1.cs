@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_II3KcDceEeidBoT_PugKiA")]
 [DisplayName("Other Investment Need")]
-public record OtherInvestmentNeed1
+public partial record OtherInvestmentNeed1
 {
     /// <summary>
     /// Type of return profile.

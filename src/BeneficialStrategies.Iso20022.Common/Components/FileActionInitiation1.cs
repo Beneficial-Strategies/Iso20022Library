@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_d6jqgFEDEee94_dUz-hvgw")]
 [DisplayName("File Action Initiation")]
-public record FileActionInitiation1
+public partial record FileActionInitiation1
 {
     /// <summary>
     /// Environment of the file action transaction.

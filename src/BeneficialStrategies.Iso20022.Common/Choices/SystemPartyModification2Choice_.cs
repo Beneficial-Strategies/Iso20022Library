@@ -61,5 +61,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_x87oIYv-Eei289CGNqs21g")]
     [DisplayName("System Party Modification 2 Choice")]
-    public abstract record SystemPartyModification2Choice_ { }
+    public abstract partial record SystemPartyModification2Choice_ { }
 }

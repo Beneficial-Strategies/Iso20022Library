@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_gX5CYMLYEei34K_Q744LyA")]
 [DisplayName("Collateral Amount")]
-public record CollateralAmount12
+public partial record CollateralAmount12
 {
     /// <summary>
     /// Amount of the principal.

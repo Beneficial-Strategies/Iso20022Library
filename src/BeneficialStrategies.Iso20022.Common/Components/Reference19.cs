@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ql4SRdp-Ed-ak6NoX_4Aeg_1999754651")]
 [DisplayName("Reference")]
-public record Reference19
+public partial record Reference19
 {
     /// <summary>
     /// Reference allocated by the central counterparty - central counterpatry trade leg reference identification that uniquely identifies the trade.

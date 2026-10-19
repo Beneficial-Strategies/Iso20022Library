@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KfQr8SgtEeyB747fKu7_rw")]
 [DisplayName("Obligation")]
-public record Obligation11
+public partial record Obligation11
 {
     /// <summary>
     /// One of the entities associated with the collateral agreement and type of the CCP membership type where the counterparty is a CCP.

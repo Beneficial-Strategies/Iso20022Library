@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_umTNkAMfEeujMs2LsB3mMw")]
 [DisplayName("Strong Customer Authentication")]
-public record StrongCustomerAuthentication1
+public partial record StrongCustomerAuthentication1
 {
     /// <summary>
     /// Boolean flag indicating whether the transaction is subject to Strong Customer Authentication requirements (True) or not (False).

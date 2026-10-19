@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.catm;
 )]
 [IsoId("_EQjhgI4KEeW6h7rGyYlyTg")]
 [DisplayName("Certificate Management Request V")]
-public record CertificateManagementRequestV01 : IOuterRecord
+public partial record CertificateManagementRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

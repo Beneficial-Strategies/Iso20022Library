@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CnJABQN1Ee2-vqzwMUAewg")]
 [DisplayName("Request Data")]
-public record RequestData2
+public partial record RequestData2
 {
     /// <summary>
     /// Unique identification of the message.

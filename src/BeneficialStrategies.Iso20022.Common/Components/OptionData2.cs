@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_U8r6ddp-Ed-ak6NoX_4Aeg_254982681")]
 [DisplayName("Option Data")]
-public record OptionData2
+public partial record OptionData2
 {
     /// <summary>
     /// Date at which the trading parties have agreed on an option trade.

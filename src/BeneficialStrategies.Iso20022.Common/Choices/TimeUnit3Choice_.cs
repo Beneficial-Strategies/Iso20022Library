@@ -15,5 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(TimeUnit3Choice.Proprietary), nameof(TimeUnit3Choice.Proprietary))]
     [IsoId("_oIB4MeLaEeWFtOV72FbX9w")]
     [DisplayName("Time Unit 3 Choice")]
-    public abstract record TimeUnit3Choice_ { }
+    public abstract partial record TimeUnit3Choice_ { }
 }

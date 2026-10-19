@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_63iJ8CY9Ee6m8LTtAzU6hA")]
 [DisplayName("Value For Money1")]
-public record ValueForMoney1
+public partial record ValueForMoney1
 {
     /// <summary>
     /// EMT Data Reporting VFMUK.

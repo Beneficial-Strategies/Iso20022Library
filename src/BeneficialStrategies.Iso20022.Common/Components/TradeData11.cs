@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KCvS0VBgEeOenoknK_-H2g")]
 [DisplayName("Trade Data")]
-public record TradeData11
+public partial record TradeData11
 {
     /// <summary>
     /// Represents the original reference of the instruction for which the status is given, as assigned by the participant that submitted the foreign exchange trade.

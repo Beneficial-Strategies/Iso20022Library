@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.cafm;
 /// </summary>
 [IsoId("_G0myYROIEfC1ZfCQz0xB3g")]
 [DisplayName("File Action Response V04")]
-public record FileActionResponseV04 : IOuterRecord
+public partial record FileActionResponseV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

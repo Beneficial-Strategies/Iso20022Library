@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketIdentificationOrCashPurpos
     [IsoId("_kz-v4EiNEeOdL6nMHefDgg")]
     [DisplayName("Settlement Instruction Market Identification")]
     [IsoXmlTag("SttlmInstrMktId")]
-    public record SettlementInstructionMarketIdentification
+    public partial record SettlementInstructionMarketIdentification
         : MarketIdentificationOrCashPurpose1Choice_
     {
         /// <summary>

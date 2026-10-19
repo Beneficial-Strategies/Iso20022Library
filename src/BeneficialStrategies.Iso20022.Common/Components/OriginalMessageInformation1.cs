@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PgJZVdp-Ed-ak6NoX_4Aeg_1129957204")]
 [DisplayName("Original Message Information")]
-public record OriginalMessageInformation1
+public partial record OriginalMessageInformation1
 {
     /// <summary>
     /// Point to point reference, as assigned by the original initiating party, to unambiguously identify the original mandate request message.

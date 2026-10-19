@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1gx98jL3EeKU9IrkkToqcw_762356637")]
 [DisplayName("Financial Instrument Attributes SD")]
-public record FinancialInstrumentAttributesSD4
+public partial record FinancialInstrumentAttributesSD4
 {
     /// <summary>
     /// Security identification that a CSD (for example in the US - DTC, The Depository Trust Corporation) will distribute as part of the entitlement. This can be the DTC contra CUSIP in cases where the payout security is a contra CUSIP.

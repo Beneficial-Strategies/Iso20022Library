@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice
     [IsoId("_xPt7iWjNEeiRg5NzP0jkQg")]
     [DisplayName("Lock Status")]
     [IsoXmlTag("LckSts")]
-    public record LockStatus : UpdateLogPartyRecord1Choice_
+    public partial record LockStatus : UpdateLogPartyRecord1Choice_
     {
         /// <summary>
         /// Old value before the update.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrCurrency1Choice
     [IsoId("_o-ev0lhDEeOMYfRGLS0NbA")]
     [DisplayName("Depository")]
     [IsoXmlTag("Dpstry")]
-    public record Depository : PartyOrCurrency1Choice_
+    public partial record Depository : PartyOrCurrency1Choice_
     {
         /// <summary>
         /// Identification of the party.

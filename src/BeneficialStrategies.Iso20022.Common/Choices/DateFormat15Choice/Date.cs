@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateFormat15Choice
     /// </summary>
     [IsoId("_QmL0Qdp-Ed-ak6NoX_4Aeg_-415883940")]
     [DisplayName("Date")]
-    public record Date : DateFormat15Choice_
+    public partial record Date : DateFormat15Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

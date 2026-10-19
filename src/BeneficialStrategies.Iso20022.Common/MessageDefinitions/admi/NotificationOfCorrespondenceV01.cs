@@ -18,7 +18,7 @@ namespace BeneficialStrategies.Iso20022.admi;
 /// </summary>
 [IsoId("_BKsckLknEe68nbz8Nl_hLQ")]
 [DisplayName("Notification Of Correspondence V01")]
-public record NotificationOfCorrespondenceV01 : IOuterRecord
+public partial record NotificationOfCorrespondenceV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarginCallResult2Choice
     [IsoId("_9boCQaMPEeCojJW5vEuTEQ_377211286")]
     [DisplayName("Margin Call Amount")]
     [IsoXmlTag("MrgnCallAmt")]
-    public record MarginCallAmount : MarginCallResult2Choice_
+    public partial record MarginCallAmount : MarginCallResult2Choice_
     {
         /// <summary>
         /// Amount payable by party B to party A.

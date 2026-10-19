@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-EXduHltEeG7BsjMvd1mEw_-57311934")]
 [DisplayName("Beneficiary")]
-public record Beneficiary1
+public partial record Beneficiary1
 {
     /// <summary>
     /// New beneficiary address, or new beneficiary name and address.

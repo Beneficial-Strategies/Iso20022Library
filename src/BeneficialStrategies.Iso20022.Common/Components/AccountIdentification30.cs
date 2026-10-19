@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_puErAEVnEeS9ytE0W9bgkQ")]
 [DisplayName("Account Identification")]
-public record AccountIdentification30
+public partial record AccountIdentification30
 {
     /// <summary>
     /// Specifies the type of account.

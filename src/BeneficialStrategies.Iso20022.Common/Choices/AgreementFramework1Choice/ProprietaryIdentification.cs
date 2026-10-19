@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AgreementFramework1Choice
     [IsoId("_UkjHQdp-Ed-ak6NoX_4Aeg_-108105307")]
     [DisplayName("Proprietary Identification")]
     [IsoXmlTag("PrtryId")]
-    public record ProprietaryIdentification : AgreementFramework1Choice_
+    public partial record ProprietaryIdentification : AgreementFramework1Choice_
     {
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.

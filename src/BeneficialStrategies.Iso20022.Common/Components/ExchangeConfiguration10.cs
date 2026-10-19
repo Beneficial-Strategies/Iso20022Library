@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZTaVgTATEeugIJ3Gvoevmg")]
 [DisplayName("Exchange Configuration")]
-public record ExchangeConfiguration10
+public partial record ExchangeConfiguration10
 {
     /// <summary>
     /// Exchange policy between parties.

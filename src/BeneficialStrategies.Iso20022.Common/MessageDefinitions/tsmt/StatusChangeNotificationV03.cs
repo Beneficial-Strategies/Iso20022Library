@@ -30,7 +30,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 )]
 [IsoId("_vbs12NE8Ed-BzquC8wXy7w_-1030664392")]
 [DisplayName("Status Change Notification V")]
-public record StatusChangeNotificationV03 : IOuterRecord
+public partial record StatusChangeNotificationV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

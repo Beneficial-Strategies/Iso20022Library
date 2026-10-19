@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateStatus1Choice
     /// </summary>
     [IsoId("_ChH7ZJnAEeao_Z127E9uYg")]
     [DisplayName("Code")]
-    public record Code : MandateStatus1Choice_
+    public partial record Code : MandateStatus1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

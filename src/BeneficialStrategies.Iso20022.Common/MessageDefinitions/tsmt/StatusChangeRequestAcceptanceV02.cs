@@ -28,7 +28,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 )]
 [IsoId("_v33NZ9E8Ed-BzquC8wXy7w_-1262525653")]
 [DisplayName("Status Change Request Acceptance V")]
-public record StatusChangeRequestAcceptanceV02 : IOuterRecord
+public partial record StatusChangeRequestAcceptanceV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

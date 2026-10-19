@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralBalance1Choice
     [IsoId("_UnXxydp-Ed-ak6NoX_4Aeg_1050208503")]
     [DisplayName("Collateral Details")]
     [IsoXmlTag("CollDtls")]
-    public record CollateralDetails : CollateralBalance1Choice_
+    public partial record CollateralDetails : CollateralBalance1Choice_
     {
         /// <summary>
         /// Provides details about the collateral held, in transit or that still needs to be agreed by both parties, against the variation margin.

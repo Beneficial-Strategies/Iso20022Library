@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_q6sQAcQXEe2pvZQ_33Qz1Q")]
 [DisplayName("Target Market4")]
-public record TargetMarket4
+public partial record TargetMarket4
 {
     /// <summary>
     /// Reference Date.

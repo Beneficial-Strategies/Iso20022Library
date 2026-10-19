@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalMandate8Choice
     /// </summary>
     [IsoId("_bQuQEdcZEeqRFcf2R4bPBw")]
     [DisplayName("Original Mandate Identification")]
-    public record OriginalMandateIdentification : OriginalMandate8Choice_
+    public partial record OriginalMandateIdentification : OriginalMandate8Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

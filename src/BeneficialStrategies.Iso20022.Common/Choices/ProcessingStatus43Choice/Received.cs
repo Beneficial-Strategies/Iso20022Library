@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus43Choice
     [IsoId("_T_H5oVhGEeOMYfRGLS0NbA")]
     [DisplayName("Received")]
     [IsoXmlTag("Rcvd")]
-    public record Received : ProcessingStatus43Choice_
+    public partial record Received : ProcessingStatus43Choice_
     {
         /// <summary>
         /// Reason for the received status.

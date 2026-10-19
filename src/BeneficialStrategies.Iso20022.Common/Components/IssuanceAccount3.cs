@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FBrNIeFTEe6zNorB_Q2tDg")]
 [DisplayName("Issuance Account3")]
-public record IssuanceAccount3
+public partial record IssuanceAccount3
 {
     /// <summary>
     /// Issuance Account.

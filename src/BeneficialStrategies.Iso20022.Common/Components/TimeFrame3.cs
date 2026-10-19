@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UAoh4Np-Ed-ak6NoX_4Aeg_-1899090252")]
 [DisplayName("Time Frame")]
-public record TimeFrame3
+public partial record TimeFrame3
 {
     /// <summary>
     /// Specifies a description of any other TimeFrame that may be used for the DealingCutOffTimeFrame.

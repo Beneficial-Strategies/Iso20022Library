@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyAuditTrailOrError3Choice
     /// Operational Error.
     /// </summary>
     [DisplayName("Operational Error")]
-    public record OperationalError : PartyAuditTrailOrError3Choice_
+    public partial record OperationalError : PartyAuditTrailOrError3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

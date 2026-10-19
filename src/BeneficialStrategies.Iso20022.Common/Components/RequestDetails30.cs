@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6f_egQR4Ee29PP19jELcvQ")]
 [DisplayName("Request Details")]
-public record RequestDetails30
+public partial record RequestDetails30
 {
     /// <summary>
     /// Type of data being requested, for example, a sub-member BIC.

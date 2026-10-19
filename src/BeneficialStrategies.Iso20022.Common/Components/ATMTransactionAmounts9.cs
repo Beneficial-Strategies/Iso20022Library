@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OVrpka-XEeWJvLRJ8PsD_w")]
 [DisplayName("ATM Transaction Amounts")]
-public record ATMTransactionAmounts9
+public partial record ATMTransactionAmounts9
 {
     /// <summary>
     /// Type of media.

@@ -30,7 +30,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 )]
 [IsoId("_GYN9SdEvEd-BzquC8wXy7w_93398652")]
 [DisplayName("Mandate Initiation Request V")]
-public record MandateInitiationRequestV01 : IOuterRecord
+public partial record MandateInitiationRequestV01 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

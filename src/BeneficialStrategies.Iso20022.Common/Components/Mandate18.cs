@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_eTone9cZEeqRFcf2R4bPBw")]
 [DisplayName("Mandate")]
-public record Mandate18
+public partial record Mandate18
 {
     /// <summary>
     /// Unique identification, as assigned by the responsible party (such as the creditor) or agent (such as the debtor agent), to unambiguously identify the mandate.

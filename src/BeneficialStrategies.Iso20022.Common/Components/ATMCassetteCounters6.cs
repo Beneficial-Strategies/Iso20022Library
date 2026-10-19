@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_a2OAYaDmEe-MRKYsaX6JDg")]
 [DisplayName("ATM Cassette Counters6")]
-public record ATMCassetteCounters6
+public partial record ATMCassetteCounters6
 {
     /// <summary>
     /// Unit Value.

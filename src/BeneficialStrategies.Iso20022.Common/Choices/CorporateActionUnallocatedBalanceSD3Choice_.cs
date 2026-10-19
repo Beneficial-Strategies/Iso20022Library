@@ -46,5 +46,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_uTU8wcSTEeeRJJtE9TSlkw")]
     [DisplayName("Corporate Action Unallocated Balance SD 3 Choice")]
-    public abstract record CorporateActionUnallocatedBalanceSD3Choice_ { }
+    public abstract partial record CorporateActionUnallocatedBalanceSD3Choice_ { }
 }

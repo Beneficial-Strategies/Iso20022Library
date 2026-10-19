@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_nXyMUIt0EeSLQutgI1Ulfw")]
 [DisplayName("ATM Reconciliation Acknowledgement")]
-public record ATMReconciliationAcknowledgement1
+public partial record ATMReconciliationAcknowledgement1
 {
     /// <summary>
     /// ATM information.

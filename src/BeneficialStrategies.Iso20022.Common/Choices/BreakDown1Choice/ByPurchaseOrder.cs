@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BreakDown1Choice
     [IsoId("_2goZwBrYEeOVR9VN6fAMUg")]
     [DisplayName("By Purchase Order")]
     [IsoXmlTag("ByPurchsOrdr")]
-    public record ByPurchaseOrder : BreakDown1Choice_
+    public partial record ByPurchaseOrder : BreakDown1Choice_
     {
         /// <summary>
         /// Unique identification of the purchase order, assigned by the buyer.

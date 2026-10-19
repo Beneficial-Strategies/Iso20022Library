@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1hE44DL3EeKU9IrkkToqcw_-385014275")]
 [DisplayName("Corporate Action Rate SD")]
-public record CorporateActionRateSD2
+public partial record CorporateActionRateSD2
 {
     /// <summary>
     /// Receipts quantity (base) of the American or Global Depository Receipt(s) per ordinary share(s) ratio.

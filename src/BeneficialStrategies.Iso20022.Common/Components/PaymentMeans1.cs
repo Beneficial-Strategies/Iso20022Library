@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TCRjCAEcEeCQm6a_G2yO_w_-1888332883")]
 [DisplayName("Payment Means")]
-public record PaymentMeans1
+public partial record PaymentMeans1
 {
     /// <summary>
     /// Type, or nature, of the payment, eg, express payment.

@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yUI4ITEyEe6g-ffJsqGiSA")]
 [DisplayName("Mandate Amendment Reason3")]
-public record MandateAmendmentReason3
+public partial record MandateAmendmentReason3
 {
     /// <summary>
     /// Party that issues the amendment request.

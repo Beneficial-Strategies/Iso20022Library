@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 )]
 [IsoId("_nsFeyNE8Ed-BzquC8wXy7w_1762924909")]
 [DisplayName("Delta Report V")]
-public record DeltaReportV03 : IOuterRecord
+public partial record DeltaReportV03 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

@@ -24,7 +24,7 @@ namespace BeneficialStrategies.Iso20022.pain;
 )]
 [IsoId("_r_AYEFkyEeGeoaLUQk__nA_-2103829610")]
 [DisplayName("Creditor Payment Activation Request Status Report V")]
-public record CreditorPaymentActivationRequestStatusReportV02 : IOuterRecord
+public partial record CreditorPaymentActivationRequestStatusReportV02 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

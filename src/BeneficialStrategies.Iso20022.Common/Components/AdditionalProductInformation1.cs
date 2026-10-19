@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Z1vAIM2rEeuAE-cYsQdwHQ")]
 [DisplayName("Additional Product Information")]
-public record AdditionalProductInformation1
+public partial record AdditionalProductInformation1
 {
     /// <summary>
     /// Category of fund product.  When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT V3.1) reference 09000.

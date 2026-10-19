@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_y8Q3kJ2qEe-4seDr3Li2Ew")]
 [DisplayName("ATM Deposit Component1")]
-public record ATMDepositComponent1
+public partial record ATMDepositComponent1
 {
     /// <summary>
     /// Sub Deposit Identification.

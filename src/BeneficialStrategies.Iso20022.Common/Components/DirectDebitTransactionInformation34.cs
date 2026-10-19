@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("ef49b2c4-35cf-4b49-8961-2811120821b6")]
 [DisplayName("Direct Debit Transaction Information34")]
-public record DirectDebitTransactionInformation34
+public partial record DirectDebitTransactionInformation34
 {
     /// <summary>
     /// Set of elements used to reference a payment instruction.

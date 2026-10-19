@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DisputeNotification1Choice
     [IsoId("_QmU-NNp-Ed-ak6NoX_4Aeg_-640077576")]
     [DisplayName("Segregated Independent Amount Dispute Details")]
     [IsoXmlTag("SgrtdIndpdntAmtDsptDtls")]
-    public record SegregatedIndependentAmountDisputeDetails : DisputeNotification1Choice_
+    public partial record SegregatedIndependentAmountDisputeDetails : DisputeNotification1Choice_
     {
         /// <summary>
         /// Details of the disputed instruction.

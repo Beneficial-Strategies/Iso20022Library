@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_K5-REY4AEeWRwov1g9WL_A")]
 [DisplayName("Security Parameters")]
-public record SecurityParameters6
+public partial record SecurityParameters6
 {
     /// <summary>
     /// Type of action for the configuration parameters.

@@ -18,5 +18,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_f3PLYID4Eeiw-daIkkmMqQ")]
     [DisplayName("Governance Process 1 Choice")]
-    public abstract record GovernanceProcess1Choice_ { }
+    public abstract partial record GovernanceProcess1Choice_ { }
 }

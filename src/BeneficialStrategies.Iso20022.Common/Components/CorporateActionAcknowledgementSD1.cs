@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_uuvg0MVsEeeprYdSN88o0Q")]
 [DisplayName("Corporate Action Acknowledgement SD")]
-public record CorporateActionAcknowledgementSD1
+public partial record CorporateActionAcknowledgementSD1
 {
     /// <summary>
     /// Indicates whether the participant agrees to all terms of the event.

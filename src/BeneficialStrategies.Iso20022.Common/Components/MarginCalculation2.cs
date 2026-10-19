@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-d50FKMOEeCojJW5vEuTEQ_1366752768")]
 [DisplayName("Margin Calculation")]
-public record MarginCalculation2
+public partial record MarginCalculation2
 {
     /// <summary>
     /// Provides details about the security identification.

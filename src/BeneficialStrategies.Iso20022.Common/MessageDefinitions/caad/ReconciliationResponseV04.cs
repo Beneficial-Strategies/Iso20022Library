@@ -19,7 +19,7 @@ namespace BeneficialStrategies.Iso20022.caad;
 /// </summary>
 [IsoId("_o_Fc8Y7QEe6S0_1AaJzQCA")]
 [DisplayName("Reconciliation Response V04")]
-public record ReconciliationResponseV04 : IOuterRecord
+public partial record ReconciliationResponseV04 : IOuterRecord
 {
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.

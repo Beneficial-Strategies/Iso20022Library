@@ -7,7 +7,7 @@ namespace BeneficialStrategies.Iso20022.Choices.KeyValue3Choice
     /// <summary>Data block for a TR31 or TR34 block where the block does not contain a key.</summary>
     [IsoId("_Pa-OM8PzEfCTf8R2j0RpdQ")]
     [DisplayName("TR Related Data")]
-    public record TRRelatedData : KeyValue3Choice_
+    public partial record TRRelatedData : KeyValue3Choice_
     {
         /// <summary>Contains the main value for the container.</summary>
         [IsoXmlTag("TRRltdData")]

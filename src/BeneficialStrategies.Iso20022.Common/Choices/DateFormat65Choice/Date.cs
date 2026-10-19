@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateFormat65Choice
     /// Date.
     /// </summary>
     [DisplayName("Date")]
-    public record Date : DateFormat65Choice_
+    public partial record Date : DateFormat65Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

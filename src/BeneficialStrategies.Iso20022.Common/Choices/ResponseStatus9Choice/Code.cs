@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ResponseStatus9Choice
     /// </summary>
     [IsoId("_OIky8LzdEeivTd4NUfCi2g")]
     [DisplayName("Code")]
-    public record Code : ResponseStatus9Choice_
+    public partial record Code : ResponseStatus9Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

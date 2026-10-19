@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RecordMessage1Choice
     /// </summary>
     [IsoId("_6pwM0Rs6EeqrvK3udMUsNQ")]
     [DisplayName("Addendum Response")]
-    public record AddendumResponse : RecordMessage1Choice_
+    public partial record AddendumResponse : RecordMessage1Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

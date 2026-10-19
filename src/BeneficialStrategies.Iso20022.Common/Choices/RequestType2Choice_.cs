@@ -23,5 +23,5 @@ namespace BeneficialStrategies.Iso20022.Choices
     )]
     [IsoId("_76G8cqMgEeCJ6YNENx4h-w_-156360077")]
     [DisplayName("Request Type 2 Choice")]
-    public abstract record RequestType2Choice_ { }
+    public abstract partial record RequestType2Choice_ { }
 }

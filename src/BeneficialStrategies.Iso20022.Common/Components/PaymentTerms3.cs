@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TCHyDQEcEeCQm6a_G2yO_w_-1177730425")]
 [DisplayName("Payment Terms")]
-public record PaymentTerms3
+public partial record PaymentTerms3
 {
     /// <summary>
     /// Due date specified for the payment terms.

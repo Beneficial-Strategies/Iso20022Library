@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification3Choice
     /// System Party Date.
     /// </summary>
     [DisplayName("System Party Date")]
-    public record SystemPartyDate : SystemPartyModification3Choice_
+    public partial record SystemPartyDate : SystemPartyModification3Choice_
     {
         /// <summary>
         /// Contains the main value for the container.

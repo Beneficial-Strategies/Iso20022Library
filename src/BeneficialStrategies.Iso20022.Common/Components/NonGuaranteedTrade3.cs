@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_C9INcWpUEeSgo9vJrfSF_Q")]
 [DisplayName("Non Guaranteed Trade")]
-public record NonGuaranteedTrade3
+public partial record NonGuaranteedTrade3
 {
     /// <summary>
     /// External identification of the member who is the market counterpart member of the current trade leg (in case of non guarantee trades, this field allows buyer and seller to identify each other).

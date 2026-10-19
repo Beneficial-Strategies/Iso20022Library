@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_P57LM9p-Ed-ak6NoX_4Aeg_853564482")]
 [DisplayName("Equivalent Amount")]
-public record EquivalentAmount2
+public partial record EquivalentAmount2
 {
     /// <summary>
     /// Amount of money to be moved between debtor and creditor, before deduction of charges, expressed in the currency of the debtor&apos;s account, and to be moved in a different currency.|Usage: The first agent will convert the equivalent amount into the amount to be moved.
